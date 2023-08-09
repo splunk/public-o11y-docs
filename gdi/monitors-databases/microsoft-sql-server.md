@@ -51,13 +51,13 @@ receivers:
     ...  # Additional config
 ```
 
-Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
+Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
 ```
 service:
   pipelines:
     metrics:
-      receivers: [smartagent/telegraf/sqlserver]
+      receivers: [smartagent/sqlserver]
 ```
 
 ### Example: Microsoft SQL Server receiver
@@ -67,7 +67,7 @@ The following is an example of a Microsoft SQL Server receiver configuration:
 ```yaml
 receivers:
   smartagent/sqlserver:
-     type: telegraf/sqlserver
+     type: telegraf/sqserver
      host: <host_name>
      port: 1433
      userID: <user_id>
@@ -86,7 +86,7 @@ The following table shows the configuration options for the Microsoft SQL Server
 | `userID` | no | `string` | UserID used to access the SQL Server instance. |
 | `password` | no | `string` | Password used to access the SQL Server instance. |
 | `appName` | no | `string` | The app name used by the monitor when connecting to the SQLServer. (**default:** `signalfxagent`) |
-| `queryVersion` | no | `integer` | The version of queries to use when accessing the cluster. Refer to the documentation for the Microsoft SQL Server Telegraf Plugin, provided by Influxdata. (**default:** `2`) |
+| `queryVersion` | no | `integer` | The version of queries to use when accessing the cluster. See the documentation for the Microsoft SQL Server Telegraf Plugin, provided by Influxdata. (**default:** `2`) |
 | `azureDB` | no | `bool` | Whether the database is a Microsoft Azure database. (**default:** `false`) |
 | `excludedQueries` | no | `list of strings` | Queries to exclude. Possible values are `PerformanceCounters`, `WaitStatsCategorized`, `DatabaseIO`, `DatabaseProperties`, `CPUHistory`, `DatabaseSize`, `DatabaseStats`, `MemoryClerk` `VolumeSpace`, and `PerformanceMetrics`. |
 | `log` | no | `unsigned integer` | Log level to use when accessing the database (**default:** `1`) |
@@ -113,10 +113,10 @@ In some Windows-based SQL Server instances, TCP/IP has been deactivated by defau
 
 1. Verify agent configurations are correct.
 
-2. In your SQL Server instance, activate TCP/IP. To do this, select **Start** > **Administrative Tools** > **Computer Management**.
+2. In your SQL Server instance, activate TCP/IP. To do this, select **Start**, then **Administrative Tools**, then **Computer Management**.
 
-3. In the `Computer Management` sidebar, select **Services and Applications** > **SQL Server Configuration Manager** > **SQL Server Network Configuration**.
+3. In the `Computer Management` sidebar, select **Services and Applications**, then **SQL Server Configuration Manager**, then **SQL Server Network Configuration**.
 
 4. Select **Protocols for `<YOUR SQL SERVER NAME>`**.
 
-5. In the protocol list to the right, right-click the **TCP/IP** protocol and select **Enable**.
+5. In the protocol list, right-click the **TCP/IP** protocol and select **Enable**.

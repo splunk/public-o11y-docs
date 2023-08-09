@@ -44,7 +44,7 @@ Indexing a span tag means APM automatically generates :new-page-ref:`troubleshoo
 .. raw:: html
 
   <embed>
-    <h2>Use cases for indexed span tags and Troubleshooting MetricSets</h2>
+    <h2>Scenarios for indexed span tags and Troubleshooting MetricSets</h2>
   </embed>
 
 

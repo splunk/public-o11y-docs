@@ -40,7 +40,7 @@ receivers:
     ...  # Additional config
 ```
 
-Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
+Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
 ```
 service:
@@ -91,7 +91,6 @@ Error: Error initializing Docker client: protocol not available
 ```
 
 edit the configuration and replace `unix:///var/run/docker.sock` with `npipe:////.//pipe//docker_engine`.
-
 
 
 

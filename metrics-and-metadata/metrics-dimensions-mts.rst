@@ -35,7 +35,7 @@ Splunk Observability Cloud data comes enriched with additional metadata:
     - APM metric, span
     - Key-value pair
 
-* To find and edit your metadata, use the Metadata Catalogue. Learn more at :ref:`metadata-catalog`. 
+* To find and edit your metadata, use the Metadata Catalogue. Learn more at :ref:`metrics-finder-and-metadata-catalog`. 
 * To link metadata to other resources, see how in :ref:`link-metadata-to-content`.
 
 For more tools to leverage your data, see:

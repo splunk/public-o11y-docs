@@ -42,7 +42,7 @@ From the Splunk RUM overview dashboard, select :guilabel:`See all` on the Crashe
 To learn more about Tag Spotlight, see:
 
 * :ref:`apm-tag-spotlight-overview` for an orientation to Tag Spotlight
-* :ref:`troubleshoot-tag-spotlight` for a specific use case leveraging Tag Spotlight. 
+* :ref:`troubleshoot-tag-spotlight` for a specific scenario leveraging Tag Spotlight. 
 
 
 
@@ -72,7 +72,7 @@ Learn more
 ===========================================================
 
 * For more examples on how you can use Tag Spotlight, see :ref:`troubleshoot-tag-spotlight`.
-* To learn more about monitoring errors in Splunk RUM for browser, see the use case :ref:`rum-identify-span-problems`.
+* To learn more about monitoring errors in Splunk RUM for browser, see the scenario :ref:`rum-identify-span-problems`.
 * For examples on working with tags, see :ref:`rum-tag-search`
 
 

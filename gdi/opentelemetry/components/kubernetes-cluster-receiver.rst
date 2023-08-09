@@ -99,16 +99,15 @@ The following table shows the configuration options for the MongoDB Atlas:
    <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/k8s_cluster.yaml"></div>
 
 Metrics
-=================
+=====================
 
-The following table shows the legacy metrics that are available for this
-integration. See :ref:`legacy-otel-mappings` for the Splunk Distribution of OpenTelemetry Collector equivalents.
-
-.. note:: The SignalFx exporter excludes some available metrics by default. Learn more about default metric filters in :ref:`list-excluded-metrics`.
+The following metrics, resource attributes, and attributes are available.
 
 .. raw:: html
 
-   <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/kubernetes/cluster/metadata.yaml"></div>
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/k8sclusterreceiver.yaml"></div>
+
+.. include:: /_includes/activate-deactivate-native-metrics.rst
 
 Troubleshooting
 ======================

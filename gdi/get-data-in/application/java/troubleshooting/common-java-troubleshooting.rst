@@ -7,7 +7,7 @@ Troubleshoot Java instrumentation for Splunk Observability Cloud
 .. meta::
    :description: If your instrumented Java application is not sending data to Splunk Observability Cloud, or data is missing, follow these steps to identify and resolve the issue.
 
-When you instrument a Java application using the Splunk Distribution of OpenTelemetry Java and you don't see your data in Observability Cloud, follow these troubleshooting steps.
+When you instrument a Java application using the Splunk Distribution of OpenTelemetry Java and you don't see your data in Splunk Observability Cloud, follow these troubleshooting steps.
 
 .. _basic-java-troubleshooting:
 
@@ -110,46 +110,10 @@ To troubleshoot the lack of connectivity between the OTLP exporter and the OTel 
 #. Check that the OTLP gRPC receiver is activated in the OTel Collector and plugged into the traces pipeline.
 #. Check that the OTel Collector points to the following address: ``http://<host>:4317``. Verify that your URL is correct.
 
-Channel pipeline error
--------------------------------------------------------------------
-
-If you're seeing the following error in your logs, it might mean that the Java agent is trying to send trace data to the Splunk ingest API endpoint, which is not yet supported by OTLP:
-
-.. code-block:: bash
-
-   [grpc-default-executor-1] ERROR io.opentelemetry.exporter.otlp.trace.OtlpGrpcSpanExporter - Failed to export spans. Server is UNAVAILABLE. Make sure your collector is running and reachable from this network. Full error message:UNAVAILABLE: io exception
-   Channel Pipeline: [SslHandler#0, ProtocolNegotiators$ClientTlsHandler#0, WriteBufferingAndExceptionHandler#0, DefaultChannelPipeline$TailContext#0]
-
-To solve this issue, use the Jaeger exporter instead. See :ref:`trace-exporters-settings-java`.
-
-Jaeger can't export spans
-------------------------------------------------------
-
-The following warnings in your logs mean that the Java agent can't send trace data to the OTel Collector, the Smart Agent (now deprecated), or Splunk Cloud Platform using the Jaeger exporter:
-
-.. code-block:: bash
-
-   [BatchSpanProcessor_WorkerThread-1] WARN io.opentelemetry.exporter.jaeger.thrift.JaegerThriftSpanExporter - Failed to export spans
-   io.jaegertracing.internal.exceptions.SenderException: Could not send 8 spans
-      at io.jaegertracing.thrift.internal.senders.HttpSender.send(HttpSender.java:69)
-      ...
-   Caused by: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:9080
-      at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:265)
-      ...
-   Caused by: java.net.ConnectException: Connection refused (Connection refused)
-      ...
-
-To troubleshoot the lack of connectivity between Jaeger and Splunk Observability Cloud, try the following steps:
-
-1. Make sure that ``otel.exporter.jaeger.endpoint`` points to an OpenTelemetry Collector or Smart Agent instance, or to the Splunk Ingest URL. See :new-page:`Send data measurements <https://dev.splunk.com/observability/docs/apibasics/send_data_basics#Send-data-measurements>` in the Splunk Developer documentation.
-2. Check that the OpenTelemetry Collector or Smart Agent instance is configured and running.
-3. Check that the Jaeger Thrift HTTP receiver is activated and plugged into the traces pipeline. See :ref:`otel-exposed-endpoints`.
-4. Check that the endpoint is correct. The OpenTelemetry Collector or Smart Agent use different ports and paths by default. For the Jaeger receiver, the OTel Collector uses ``http://<host>:14268/api/traces``, while the Smart Agent uses ``http://<host>:9080/v1/trace``.
-
 401 error when sending spans
 --------------------------------------------------------
 
-If you send traces directly to Observability Cloud and receive a 401 error code, the authentication token specified in ``SPLUNK_ACCESS_TOKEN`` is invalid. The following are possible reasons:
+If you send traces directly to Splunk Observability Cloud and receive a 401 error code, the authentication token specified in ``SPLUNK_ACCESS_TOKEN`` is invalid. The following are possible reasons:
 
 - The value is null.
 - The value is not a well-formed token.
@@ -240,8 +204,8 @@ To fix this, deactivate JSM or add the following block to the JSM policy file:
       permission java.security.AllPermission;
    };
 
-AlwaysOn Profiling data and logs don't appear in Observability Cloud
---------------------------------------------------------------------
+AlwaysOn Profiling data and logs don't appear in Splunk Observability Cloud
+----------------------------------------------------------------------------
 
 Collector configuration issues might prevent AlwaysOn Profiling data and logs from appearing in Splunk Observability Cloud.
 
@@ -257,25 +221,28 @@ The following snippet contains a sample ``profiling`` pipeline:
 
    receivers:
      otlp:
-        protocols:
-           grpc:
+       protocols:
+         grpc:
 
    exporters:
-     splunk_hec:
-        token: "${SFX_TOKEN}"
-        endpoint: "https://ingest.${SFX_REALM}.signalfx.com/v1/log"
-     logging/info:
-        verbosity: normal
+     # Profiling
+     splunk_hec/profiling:
+       token: "${SPLUNK_ACCESS_TOKEN}"
+       endpoint: "${SPLUNK_INGEST_URL}/v1/log"
+       log_data_enabled: false
 
    processors:
      batch:
+     memory_limiter:
+       check_interval: 2s
+       limit_mib: ${SPLUNK_MEMORY_LIMIT_MIB}
 
    service:
      pipelines:
-        profiling:
-           receivers: [otlp]
-           processors: [batch]
-           exporters: [logging/info, splunk_hec]
+       logs/profiling:
+         receivers: [otlp]
+         processors: [memory_limiter, batch]
+         exporters: [splunk_hec, splunk_hec/profiling]
 
 .. _disable-java-agent-logs:
 

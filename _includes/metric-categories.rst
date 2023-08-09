@@ -31,7 +31,7 @@
 
    * - 7
      - | Bundled 
-       | Additional metrics sent through Infrastructure Monitoring public cloud integrations that are not attributed to specific hosts or containers.
+       | In host-based subscription plans, additional metrics sent through Infrastructure Monitoring public cloud integrations that are not attributed to specific hosts or containers.
 
    * - 8
      - APM hosts

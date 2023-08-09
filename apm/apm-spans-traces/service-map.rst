@@ -11,11 +11,11 @@ The service map, located in Splunk APM :guilabel:`Explore` view, displays the de
 
 You can use the service map to identify dependencies, performance bottlenecks, and error propagation. 
 
-For a detailed use case involving the service map, see :ref:`service-map`. 
+For a detailed scenario involving the service map, see :ref:`service-map`. 
 
 The following screenshot shows an example service map: 
 
-..  image:: /_images/apm/spans-traces/service-map.png
+..  image:: /_images/apm/spans-traces/service-map-01.png
     :width: 95%
     :alt: This screenshot shows an example of the service map in Splunk APM Explore view.
 
@@ -27,7 +27,7 @@ Use these steps to access the service map in Splunk APM:
 
 #. Log into Splunk Observability Cloud. 
 #. Select the :guilabel:`APM` icon in the navigation bar. 
-#. Select the :guilabel:`Explore` tab in the APM Landing Page. The Explore view opens, with the service map in the center. 
+#. Select :guilabel:`Explore` on the APM Landing Page. The Explore view opens, with the service map in the center. 
 
 Using the service map, you can do the following: 
 
@@ -37,7 +37,7 @@ Using the service map, you can do the following:
 * Use the :guilabel:`Breakdown` selector to break the service's activity down by any indexed span tag. See :ref:`service-map-breakdowns` to learn more.
 * Select any chart in this view to show example traces that match the parameters of the chart.  
 
-You can also use the service map as a starting point for monitoring or troubleshooting use cases:
+You can also use the service map as a starting point for monitoring or troubleshooting scenarios:
 
 * To get real-time monitoring insights on the service, select :guilabel:`View Dashboard` in the side panel to view the built-in service dashboard. See :ref:`apm-dashboards` to learn more.
 * To do more extensive troubleshooting, select the :guilabel:`Tag Spotlight` tab in the side panel to open Tag Spotlight. See :ref:`apm-tag-spotlight` to learn more.
@@ -50,20 +50,20 @@ Perform breakdowns in the service map
 
 The following screenshot shows an example service map in which the ``paymentservice`` node is broken down by endpoint, showing that errors with the payment service are occurring in the ``/Charge`` endpoint. 
 
-..  image:: /_images/apm/spans-traces/service-map-breakdown.png
+..  image:: /_images/apm/spans-traces/service-map-02-breakdown.png
     :width: 95%
     :alt: This screenshot shows an example of the service map in Splunk APM Explore view. The ``paymentservice`` node is broken down by endpoint, showing that errors with that service are arising in the ``/Charge`` endpoint.
 
-The following screenshot shows the same service map with an additional breakdown on the ``checkoutservice`` by endpoint. This shows that the errors occurring in the ``/Charge`` endpoint of the ``paymentservice`` are actually originating in the ``/placeOrder`` endpoint of the ``checkoutservice``. 
+The following screenshot shows the same service map with an additional breakdown on the ``checkoutservice`` by endpoint. This shows that the errors occurring in the ``/Charge`` endpoint of the ``paymentservice`` originate in the ``/placeOrder`` endpoint of the ``checkoutservice``. 
 
-..  image:: /_images/apm/spans-traces/service-map-second- breakdown.png
+..  image:: /_images/apm/spans-traces/service-map-03-breakdown.png
     :width: 95%
     :alt: This screenshot shows an example of the service map in Splunk APM Explore view. The ``paymentservice`` and ``checkoutservice`` nodes are broken down by endpoint.
 
 To breakdown the service map:
 
 #. Select a service you're interested in. 
-#. In the service tab, select :guilabel:`Breakdown` and select an option from the menu. This breaks down your view of the service by the feature you select. For example, select :guilabel:`Endpoint > Latency (P90)` to break the service node down into its endpoints, ranked from highest to lowest by 90th percentile latency. If there are more than 5 breakdown values, the breakdown shows the top 5 and groups the remainder into a node labeled :guilabel:`<other>`.
+#. In the service tab, select :guilabel:`Breakdown` and select an option from the menu. This breaks down your view of the service by the feature you select. For example, select :guilabel:`Endpoint` then :guilabel:`Latency (P90)` to break the service node down into its endpoints, ranked from highest to lowest by 90th percentile latency. If there are more than 5 breakdown values, the breakdown shows the top 5 and groups the remainder into a node labeled :guilabel:`<other>`.
 #. (Optional) Select a node within the breakdown to further break down the visualization by another feature. 
 
 Share your view of the service map

@@ -6,7 +6,7 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `kubernetes-proxy` monitor type to export Prometheus metrics from the [kube-proxy](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-proxy) metrics in Prometheus format. 
 
-The integration queries path `/metrics` by default when no path is configured, and converts the Prometheus metric types to Splunk Observability Cloud metric types as described [here](../prometheus-exporter/prometheus-exporter.md).
+The integration queries path `/metrics` by default when no path is configured, and converts the Prometheus metric types to Splunk Observability Cloud metric types as described [here](../monitors-monitoring/prometheus-exporter.md).
 
 This monitor type is available on Kubernetes, Linux, and Windows.
 
@@ -35,7 +35,7 @@ receivers:
     ... # Additional config
 ```
 
-Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
+Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
 ```
 service:
@@ -58,7 +58,7 @@ receivers:
       metric_source: kubernetes-proxy
 ```
 
-The OpenTelemetry Collector has a Kubernetes observer (`k8sobserver`) that can be implemented as an extension to discover networked endpoints, such as a Kubernetes pod. Using this observer assumes that the OpenTelemetry Collector is deployed in Agent mode, where it is running on each individual node or host instance.
+The OpenTelemetry Collector has a Kubernetes observer (`k8sobserver`) that can be implemented as an extension to discover networked endpoints, such as a Kubernetes pod. Using this observer assumes that the OpenTelemetry Collector is deployed in host monitoring (agent) mode, where it is running on each individual node or host instance.
 
 To use the observer, you must create a receiver creator instance with an associated rule. For example:
 

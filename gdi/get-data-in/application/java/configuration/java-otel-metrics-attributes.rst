@@ -7,9 +7,9 @@ Metrics and attributes collected by the Splunk OTel Java agent
 .. meta:: 
   :description: The Splunk Distribution of OpenTelemetry Java collects the following application metrics data and WebEngine attributes. You can also collect custom metrics through Micrometer.
 
-The agent of the Splunk Distribution of OpenTelemetry Java collects the following application metrics data and attributes in addition to all that the upstream OpenTelemetry agent collects.
+The agent of the Splunk Distribution of OpenTelemetry Java collects the following application metrics data and attributes in addition to all that the upstream OpenTelemetry agent collects. To learn about the different metric types, see :ref:`metric-types`.
 
-To learn about the different metric types, see :ref:`metric-types`.
+.. caution:: This feature is experimental, and exported metric data and configuration properties might change. See more in :new-page:`GitHub <https://github.com/signalfx/splunk-otel-java/blob/main/docs/metrics.md#metrics-and-attributes/>`.
 
 .. _enable-otel-metrics:
 
@@ -17,8 +17,6 @@ Activate metrics collection
 ====================================================
 
 To collect Java application and Java Virtual Machine metrics, see :ref:`enable_automatic_metric_collection`.
-
-.. note:: Application metrics collection is an experimental feature subject to future changes.
 
 .. _java-otel-metrics:
 
@@ -422,61 +420,3 @@ The Splunk Distribution of OpenTelemetry Java captures data about the applicatio
     - Version of the application server.
 
 For a list of supported application servers, see the OpenTelemetry documentation at https://github.com/open-telemetry/opentelemetry-java-instrumentation/blob/main/docs/supported-libraries.md#application-servers.
-
-.. _java-otel-custom-metrics:
-
-Send custom Java application metrics
-========================================================
-
-The Splunk Distribution of OpenTelemetry Java agent detects if the instrumented application is using Micrometer and injects a special ``MeterRegistry`` implementation that lets the agent collect user-defined meters.
-
-Follow these steps to activate custom application metrics:
-
-- :ref:`add-micrometer-dep`
-- :ref:`add-meter-registry`
-
-.. _add-micrometer-dep:
-
-Add the micrometer-core dependency
-------------------------------------------------------
-
-To export custom metrics through the Java agent, add a dependency on the ``micrometer-core`` library with version 1.5 and higher:
-
-.. tabs::
-
-  .. code-tab:: xml Maven
-
-      <dependency>
-        <groupId>io.micrometer</groupId>
-        <artifactId>micrometer-core</artifactId>
-        <version>1.7.5</version>
-      </dependency>
-
-  .. code-tab:: java Gradle
-
-      implementation("io.micrometer:micrometer-core:1.7.5")
-
-.. _add-meter-registry:
-
-Register each custom meter
----------------------------------------------------
-
-You must register each custom meter in the global ``Metrics.globalRegistry`` instance provided by the Micrometer library. You can use one of meter factory methods provided by the ``Metrics`` class, or use meter builders and reference the ``Metrics.globalRegistry`` directly, as in the following example:
-
-.. code:: java
-
-  class MyClass {
-  Counter myCounter = Metrics.counter("my_custom_counter");
-    Timer myTimer = Timer.builder("my_custom_timer").register(Metrics.globalRegistry);
-
-    int foo() {
-      myCounter.increment();
-      return myTimer.record(this::fooImpl);
-    }
-
-    private int fooImpl() {
-       // ...
-    }
-  }
-
-For more information on the Micrometer API, see the Micrometer official documentation.

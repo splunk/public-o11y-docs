@@ -2,11 +2,11 @@
 .. _aggregate-drop-use-case:
 
 ****************************************************************************************************
-Use case: Combine aggregation and dropping rules to control your metric cardinality and volume
+Scenario: Combine aggregation and dropping rules to control your metric cardinality and volume
 ****************************************************************************************************
 
 .. meta::
-    :description: Aggregation and dropping use case for metrics pipeline management.
+    :description: Aggregation and dropping scenario for metrics pipeline management.
 
 |hr|
 
@@ -16,7 +16,7 @@ Use case: Combine aggregation and dropping rules to control your metric cardinal
 
 
 
-The following use case features an example from Buttercup Games, a fictitious e-commerce company.
+The following scenario features an example from Buttercup Games, a fictitious e-commerce company.
 
 Background
 ===============

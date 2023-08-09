@@ -4,7 +4,7 @@
 Configure the Splunk Distribution of OTel JS for Splunk Observability Cloud
 ***************************************************************************
 
-.. meta:: 
+.. meta::
    :description: Configure the Splunk Distribution of OpenTelemetry JS to suit your instrumentation needs, like correlating traces with logs, activating exporters, and more.
 
 You can configure the Splunk Distribution of OpenTelemetry JS to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started.
@@ -62,7 +62,7 @@ General settings
 
 The following settings are specific to the Splunk Distribution of OpenTelemetry JS:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
 
    * - Environment variable
@@ -73,13 +73,46 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
      - The name of your organization's realm, for example, ``us0``. When you set the realm, telemetry is sent directly to the ingest endpoint of Splunk Observability Cloud, bypassing the Splunk Distribution of OpenTelemetry Collector.
    * - ``SPLUNK_ACCESS_TOKEN``
      - ``accessToken``
-     - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Required if you need to send data to the Observability Cloud ingest endpoint. See :ref:`admin-tokens`.
+     - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Required if you need to send data to the Splunk Observability Cloud ingest endpoint. See :ref:`admin-tokens`.
+   * - ``OTEL_INSTRUMENTATION_COMMON_DEFAULT_ENABLED``
+     - ``d``
+     - Whether to load all the embedded instrumentations. The default value is ``true``. You can use  
    * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
      - ``tracing.serverTimingEnabled``
      - Activates the addition of server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-nodejs`. The default value is ``true``.
    * - ``OTEL_LOG_LEVEL``
-     - ``logLevel`` 
+     - ``logLevel``
      - Log level for the OpenTelemetry diagnostic console logger. To activate debug logging, set the ``debug`` value. Available values are ``error``, ``info``, ``debug``, and ``verbose``. The default value is ``none``.
+
+.. _instrumentation-configuration-nodejs:
+
+Instrumentations configuration
+=======================================================
+
+The following settings control which instrumentations are activated:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Environment variable
+     - Argument to ``start()``
+     - Description
+   * - ``OTEL_INSTRUMENTATION_COMMON_DEFAULT_ENABLED``
+     -
+     - Whether to activate all the embedded instrumentations. The default value is ``true``. When you set this setting to ``false``, use ``OTEL_INSTRUMENTATION_<NAME>_ENABLED=true`` to selectively turn on instrumentations.
+   * - ``OTEL_INSTRUMENTATION_<NAME>_ENABLED``
+     -
+     - When set to ``true``, this setting activates a specific instrumentation, as defined by replacing ``<NAME>`` with the name of the instrumentation. The name isn't case sensitive. For a complete list of available instrumentations, see :ref:`Requirements <nodes-requirements>`.
+
+For example, to turn off all default instrumentations and only turn on the ``bunyan`` instrumentation, set the following environment variables:
+
+.. code-block:: shell
+
+   export OTEL_INSTRUMENTATION_COMMON_DEFAULT_ENABLED=true
+   export OTEL_INSTRUMENTATION_BUNYAN_ENABLED=true
+
+The previous settings only apply to instrumentations loaded by the Splunk Distribution of OpenTelemetry JS by default. When using the programmatic API to supply a list of user-specified instrumentations, they have no effect.
+
 
 .. _trace-configuration-nodejs:
 
@@ -88,7 +121,7 @@ Trace configuration
 
 The following settings control tracing limits and attributes:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
 
    * - Environment variable
@@ -102,7 +135,7 @@ The following settings control tracing limits and attributes:
      - Name of the service or application you're instrumenting. Takes precedence over the service name defined in the ``OTEL_RESOURCE_ATTRIBUTES`` variable.
    * - ``OTEL_RESOURCE_ATTRIBUTES``
      - Not applicable
-     - Comma-separated list of resource attributes added to every reported span. For example, ``key1=val1,key2=val2``. 
+     - Comma-separated list of resource attributes added to every reported span. For example, ``key1=val1,key2=val2``.
    * - ``OTEL_SPAN_ATTRIBUTE_COUNT_LIMIT``
      - Not applicable
      - Maximum number of attributes per span. Default value is unlimited.
@@ -126,17 +159,17 @@ Exporters configuration
 
 The following settings control trace exporters and their endpoints:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
 
    * - Environment variable
      - Argument to ``start()``
      - Description
    * - ``OTEL_TRACES_EXPORTER``
-     - ``traces.tracesExporter``
+     - ``tracing.spanExporterFactory``
      - Comma-separated list of trace exporters to use. The default value is ``otlp``. To output to the console, set the variable to ``console``.
    * - ``OTEL_METRICS_EXPORTER``
-     - ``metrics.metricReaderFactory`` 
+     - ``metrics.metricReaderFactory``
      - Comma-separated list of metrics exporter to use. The default value is ``otlp``. To output to the console, set the variable to ``console``.
    * - ``OTEL_EXPORTER_OTLP_METRICS_PROTOCOL``
      - ``metrics.metricReaderFactory``
@@ -177,7 +210,7 @@ Propagators configuration
 
 The following settings control trace propagation:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
 
    * - Environment variable
@@ -194,7 +227,7 @@ For backward compatibility with the SignalFx Tracing Library for Node.js, use th
    .. code-tab:: shell Linux
 
       export OTEL_PROPAGATORS=b3multi
-   
+
    .. code-tab:: shell Windows PowerShell
 
       $env:OTEL_PROPAGATORS=b3multi
@@ -206,7 +239,7 @@ Node.js settings for AlwaysOn Profiling
 
 The following settings control the AlwaysOn Profiling feature for the Node.js agent:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :width: 100%
 
@@ -247,7 +280,7 @@ Metrics configuration
 
 The following settings activate runtime metrics collection:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
 
    * - Environment variable
@@ -271,7 +304,7 @@ The following settings activate runtime metrics collection:
    * - ``SPLUNK_RUNTIME_METRICS_COLLECTION_INTERVAL``
      - ``metrics.runtimeMetricsCollectionIntervalMillis``
      - The interval, in milliseconds, during which garbage collection and event loop statistics are collected. After collection, the values become available to the metric exporter. The default value is ``5000``.
-   * - ``SPLUNK_DEBUG_METRICS_ENABLED`` 
+   * - ``SPLUNK_DEBUG_METRICS_ENABLED``
      - ``metrics.debugMetricsEnabled``
      - Activates the collection and export of internal debug metrics for troubleshooting. The default value is ``false``. Debug metrics are only sent if the ``SPLUNK_METRICS_ENABLED`` environment variable is set to ``true``. For more information, see :ref:`nodejs-otel-debug-metrics`.
    * - None
@@ -305,9 +338,9 @@ To connect Real User Monitoring (RUM) requests from mobile and web applications 
 .. tabs::
 
    .. code-tab:: shell Linux
-   
+
       export SPLUNK_TRACE_RESPONSE_HEADER_ENABLED=true
-   
+
    .. code-tab:: shell Windows PowerShell
 
       $env:SPLUNK_TRACE_RESPONSE_HEADER_ENABLED=true

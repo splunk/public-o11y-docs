@@ -7,7 +7,7 @@ Troubleshoot .NET instrumentation for Splunk Observability Cloud
 .. meta::
    :description: If your instrumented .NET application is not sending data to Splunk Observability Cloud, or data is missing, follow these steps to identify and resolve the issue.
 
-When you instrument a .NET application using the SignalFx Instrumentation for .NET and you don't see your data in Observability Cloud, follow these troubleshooting steps.
+When you instrument a .NET application using the SignalFx Instrumentation for .NET and you don't see your data in Splunk Observability Cloud, follow these troubleshooting steps.
 
 .. _enable-dotnet-debug-logging:
 
@@ -54,7 +54,7 @@ You can change the default location by updating the ``SIGNALFX_TRACE_LOG_DIRECTO
 
 .. note:: Activate debug logging only when needed. Debug mode requires more resources.
 
-Traces don't appear in Observability Cloud
+Traces don't appear in Splunk Observability Cloud
 ==================================================================
 
 If traces from your instrumented application or service are not available in Splunk Observability Cloud, verify the OpenTelemetry Collector configuration:
@@ -64,7 +64,7 @@ If traces from your instrumented application or service are not available in Spl
 * Make sure that the ``access_token`` and ``endpoint`` fields are configured.
 * Check that the traces pipeline is configured to use the ``zipkin`` receiver and ``sapm`` exporter.
 
-Metrics don't appear in Observability Cloud
+Metrics don't appear in Splunk Observability Cloud
 ==================================================================
 
 If metrics from your instrumented application or service are not available in Splunk Observability Cloud, make sure that the following conditions are true:
@@ -136,8 +136,8 @@ To use AlwaysOn Profiling, upgrade your .NET version to .NET Core 3.1 or .NET 5.
 
 None of the .NET Framework versions is supported.
 
-AlwaysOn Profiling data and logs don't appear in Observability Cloud
---------------------------------------------------------------------
+AlwaysOn Profiling data and logs don't appear in Splunk Observability Cloud
+------------------------------------------------------------------------------
 
 Collector configuration issues might prevent AlwaysOn Profiling data and logs from appearing in Splunk Observability Cloud.
 
@@ -154,25 +154,28 @@ The following snippet contains a sample ``profiling`` pipeline:
 
    receivers:
      otlp:
-        protocols:
-           grpc:
+       protocols:
+         grpc:
 
    exporters:
-     splunk_hec:
-        token: "${SFX_TOKEN}"
-        endpoint: "https://ingest.${SFX_REALM}.signalfx.com/v1/log"
-     logging/info:
-        verbosity: normal
+     # Profiling
+     splunk_hec/profiling:
+       token: "${SPLUNK_ACCESS_TOKEN}"
+       endpoint: "${SPLUNK_INGEST_URL}/v1/log"
+       log_data_enabled: false
 
    processors:
      batch:
+     memory_limiter:
+       check_interval: 2s
+       limit_mib: ${SPLUNK_MEMORY_LIMIT_MIB}
 
    service:
      pipelines:
-        profiling:
-           receivers: [otlp]
-           processors: [batch]
-           exporters: [logging/info, splunk_hec]
+       logs/profiling:
+         receivers: [otlp]
+         processors: [memory_limiter, batch]
+         exporters: [splunk_hec, splunk_hec/profiling]
 
 Loss of profiling data or gaps in profiling data
 -------------------------------------------------------------

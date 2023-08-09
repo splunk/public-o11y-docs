@@ -16,7 +16,12 @@ Use these steps to navigate to :guilabel:`Trace Search`:
    
    .. note:: Select :guilabel:`Switch to Trace Analyzer` to use the new Trace Analyzer to search traces and identify patterns in the full-fidelity trace data without prior knowledge of which tags are relevant. Trace Analyzer is available to all Splunk Observability Cloud users that use Splunk APM. See :ref:`trace-analyzer` for more info.
 
-#. Use the filter bar at the top of the list to narrow the list by environment, workflow, services, and tags. If you select multiple items in a filter, they are treated with an AND Boolean operator. For example, if you select multiple services in the service filter, only traces containing spans from ALL of the selected services appear in the results. 
+#. (Optional) Use the filter bar at the top of the list to narrow the list of traces. If you select multiple items in a filter, they are treated with an AND Boolean operator. For example, if you select multiple services in the service filter, only traces containing spans from ALL of the selected services appear in the results. The following filter options are available: 
+    * Time range
+    * Environment
+    * Workflow
+    * Services
+    * Tags
 #. (Optional) Select a minimum or maximum trace duration and toggle the :guilabel:`Errors Only` switch to include only traces containing errors in your search. 
 #. (Optional) Select the header of the :guilabel:`Start time` or :guilabel:`Duration` column to sort your traces by that field. 
 
@@ -24,7 +29,7 @@ While Splunk APM runs the search, a time chart provides visual feedback on the t
 
 The following animated gif demonstrates how to select a time range in the chart: 
 
-.. image:: /_images/apm/spans-traces/trace-search.gif
+.. image:: /_images/apm/spans-traces/trace-search-time-selection.gif
    :alt: This animated gif shows a user making a selection within the interactive trace search chart. 
 
 .. note:: The :guilabel:`Timestamp` column displays the time zone set in your profile. By default, the time zone is automatically detected from your browser. If you want to change to a different time zone to match the experience of a teammate in another time zone, navigate to :guilabel:`Account Settings` and make a selection in the :guilabel:`Time Zone` field. 

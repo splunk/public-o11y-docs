@@ -26,11 +26,11 @@ Instrument your Android applications to get Real User Monitoring (RUM) data into
 
 To generate all the basic installation commands for your environment and application, use the Android Instrumentation guided setup. To access the Android Instrumentation guided setup, follow these steps:
 
-#. Log in to Observability Cloud.
+#. Log in to Splunk Observability Cloud.
 
 #. Open the :new-page:`Android Instrumentation guided setup <https://login.signalfx.com/#/gdi/scripted/android/step-1?category=use-case-user-experience&gdiState=%7B"integrationId":"android"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the left navigation menu, select :menuselection:`Data Management`. 
+   #. In the navigation menu, select :menuselection:`Data Management`. 
 
    #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 

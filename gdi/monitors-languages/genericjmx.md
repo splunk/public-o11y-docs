@@ -27,20 +27,40 @@ This integration is only available on Kubernetes and Linux.
 
 To activate this integration, add the following to your Collector configuration:
 
-```
+```yaml
 receivers:
   smartagent/genericjmx:
     type: collectd/genericjmx
     ...  # Additional config
 ```
 
-Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
+Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
-```
+```yaml
 service:
   pipelines:
     metrics:
       receivers: [smartagent/genericjmx]
+```
+
+### Advanced configuration example
+
+See the following example:
+
+```yaml
+receivers:
+  smartagent/genericjmx:
+    type: collectd/genericjmx
+    host: my-java-app
+    port: 7099
+    mBeanDefinitions:
+      threading:
+        objectName: java.lang:type=Threading
+        values:
+          type: gauge
+          table: false
+          instancePrefix: jvm.threads.count
+          attribute: ThreadCount
 ```
 
 ### Configuration settings

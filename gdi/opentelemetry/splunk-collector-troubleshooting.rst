@@ -19,10 +19,10 @@ Collector or td-agent service isn't working
 
 If either the Collector or td-agent services are not installed and configured, check these things to fix the issue:
 
-* Check that the OS is supported. See :new-page:`Operating System <https://opentelemetry.io/docs/reference/specification/resource/semantic_conventions/os/>` for more information.
-* Check that systemd is installed (if using Linux).
-* Check that your platform is not running in a containerized environment.
-* Check the installation logs for more details.
+* Check that the OS is supported. See :ref:`otel-requirements` and :new-page:`OpenTelemetry's Operating System <https://opentelemetry.io/docs/reference/specification/resource/semantic_conventions/os/>` for more information
+* Check that systemd is installed (if using Linux), as explained in :ref:`otel-install-linux`
+* Check that your platform is not running in a containerized environment
+* Check the installation logs for more details
 
 Collector exits or restarts
 -----------------------------------------
@@ -31,8 +31,8 @@ The collector might exit or restart for the following reasons:
 
 * Memory pressure due to a missing or misconfigured ``memory_limiter`` processor
 * Improperly sized for load
-* Improperly configured. For example, a queue size configured higher than available memory.
-* Infrastructure resource limits. For example, Kubernetes.
+* Improperly configured. For example, a queue size configured higher than available memory
+* Infrastructure resource limits. For example, Kubernetes
 
 Restart the Splunk Distribution of OpenTelemetry Collector and check the configuration.
 
@@ -45,6 +45,8 @@ In this case, the ``NO_WINDOWS_SERVICE=1`` environment variable must be set to f
 
 Collector is experiencing data issues
 ============================================
+
+You can monitor internal Collector metrics tracking parameters such as data loss or CPU resources in Splunk Observability Cloud's default dashboards at :guilabel:`Dashboards > OpenTelemetry Collector > OpenTelemetry Collector`. To learn more about these metrics, see :new-page:`Monitoring <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/monitoring.md>` in the OpenTelemetry GitHub repo.
 
 The Collector might experience the issues described in this section.
 
@@ -63,7 +65,7 @@ The collector might not receive data for the following reasons:
 
 * Network configuration issues
 * Receiver configuration issues
-* The receiver is defined in the receivers section, but not activated in any pipelines.
+* The receiver is defined in the receivers section, but not activated in any pipelines
 * The client configuration is incorrect
 
 Check the logs and :new-page:`Troubleshooting zPages <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md#zpages>` in the OpenTelemetry project GitHub repositories for more information. Note that Splunk only provides best-effort support for the upstream OpenTelemetry Collector. 
@@ -81,7 +83,7 @@ Collector can't export data
 
 The collector might be unable to export data for the following reasons:
 
-* Network configuration issues, such as firewall, DNS, or proxy support.
+* Network configuration issues, such as firewall, DNS, or proxy support
 * Incorrect exporter configuration
 * Incorrect credentials
 * The destination is unavailable
@@ -92,10 +94,10 @@ Check the logs and :new-page:`Troubleshooting zPages <https://github.com/open-te
 
 .. _collector-gateway-metrics-issue:
 
-Metrics and metadata not available in Gateway mode
-============================================================
+Metrics and metadata not available in data forwarding (gateway) mode
+=============================================================================
 
-If you don't see metrics and metadata after manually deploying the Collector in Gateway mode, the agent configuration might be lacking pipelines that use the SignalFx exporter. Follow these steps to review the configuration:
+If you don't see metrics and metadata after manually deploying the Collector in data forwarding (gateway) mode, the agent configuration might be lacking pipelines that use the SignalFx exporter. Follow these steps to review the configuration:
 
 #. Make sure that your Gateway can listen to requests on ports 6060 and 9943.
 
@@ -165,13 +167,41 @@ You can then pipe the output to ``grep`` (Linux) or ``Select-String`` (Windows) 
 You're getting a "bind: address already in use" error message
 ==================================================================================
 
-If you see an error message such as "bind: address already in use", another resource is already using the port that the current configuration requires. This resource could be another application, or a tracing tool such as Jaeger or Zipkin.
+If you see an error message such as "bind: address already in use", another resource is already using the port that the current configuration requires. This resource could be another application, or a tracing tool such as Jaeger or Zipkin. You can modify the configuration to use another port. 
 
-You can modify the configuration to use another port. You can modify any of these endpoints or ports:
+You can modify any of these endpoints or ports:
 
 * Receiver endpoint
 * Extensions endpoint
 * Metrics address (if port 8888)
+
+Conflicts with port 8888
+-----------------------------------
+
+If you encounter a conflict with port 8888, you will need to change to port 8889, making adjustments in these two areas:
+
+1. Add telemetry configuration under the service section:
+
+.. code-block:: yaml
+
+      service:
+        telemetry:
+          metrics:
+            address: ":8889"
+
+
+2. Update the port for ``receivers.prometheus/internal`` from 8888 to 8889:
+
+.. code-block:: yaml
+
+      receivers:
+        prometheus/internal:
+          config:
+            scrape_configs:
+            - job_name: 'otel-collector'
+              scrape_interval: 10s
+              static_configs:
+              - targets: ['0.0.0.0:8889']
 
 If you see this error message on Kubernetes and you're using Helm charts, modify the configuration by updating the chart values for both configuration and exposed ports.
 

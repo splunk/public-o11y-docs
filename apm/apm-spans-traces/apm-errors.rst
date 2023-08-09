@@ -137,7 +137,7 @@ However, depending on your application’s logic, a ``4xx`` status code might re
 
 .. _alert-401s:
 
-Example use case: Alert on the rate of ``401`` errors for a service
+Example scenario: Alert on the rate of ``401`` errors for a service
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For example, if Kai wants to alert on the rate of ``401`` errors returned by a given service, they do the following:

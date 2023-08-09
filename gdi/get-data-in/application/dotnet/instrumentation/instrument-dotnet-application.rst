@@ -16,10 +16,10 @@ Generate customized instructions using the guided setup
 
 To generate all the basic installation commands for your environment and application, use the .NET guided setup. To access the .NET guided setup, follow these steps:
 
-#. Log in to Observability Cloud.
+#. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`.NET guided setup <https://login.signalfx.com/#/gdi/scripted/dotnet-tracing/step-1?category=product-apm&gdiState=%7B"integrationId":"dotnet-tracing"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the left navigation menu, select :menuselection:`Data Management`. 
+   #. In the navigation menu, select :menuselection:`Data Management`. 
 
    #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 
@@ -117,7 +117,7 @@ Follow these steps to automatically instrument your application:
 
 #. Run your application.
 
-If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-troubleshooting`.  
+If no data appears in APM, see :ref:`common-dotnet-troubleshooting`.  
 
 If you need to add custom attributes to spans or want to manually generate spans, instrument your .NET application or service manually. See :ref:`dotnet-manual-instrumentation`.
 
@@ -226,15 +226,9 @@ Instrument an application in Azure App Service
 
 To instrument an application or service in Azure App Service, follow these steps:
 
-#. Select your application in App Service.
+#. Find and install the :strong:`SignalFx .NET Tracing` extension in your application. See :new-page:`Adding Extensions to Web Apps in Azure App Service <https://microsoft.github.io/AzureTipsAndTricks/blog/tip21.html>` in the Azure documentation for more information.
 
-#. Go to :guilabel:`Development Tools > Extensions`.
-
-#. Find and install the :strong:`SignalFx .NET Tracing` extension.
-
-#. Go to :guilabel:`Settings > Configuration`.
-
-#. Select :strong:`New application setting` to add the following settings:
+#. Add the following application settings. See :new-page:`Configure Apps <https://learn.microsoft.com/en-us/azure/app-service/configure-common>` in the Azure documentation for more information.
 
    .. list-table::
       :header-rows: 1
@@ -246,13 +240,13 @@ To instrument an application or service in Azure App Service, follow these steps
       * - ``SIGNALFX_ACCESS_TOKEN``
         - Your Splunk access token. To obtain an access token, see :ref:`admin-api-access-tokens`.
       * - ``SIGNALFX_REALM``
-        - ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, open the left navigation menu in Observability Cloud, select :menuselection:`Settings`, and select your username. The realm name appears in the :guilabel:`Organizations` section.
+        - ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, open the navigation menu in Splunk Observability Cloud, select :menuselection:`Settings`, and select your username. The realm name appears in the :guilabel:`Organizations` section.
       * - ``SIGNALFX_SERVICE_NAME``
         - The name of your service or application.
       * - ``SIGNALFX_ENV``
         - The name of your environment where you're instrumenting the application.
 
-#. Restart the application in App Service.
+#. Restart the application.
 
 .. note:: To reduce latency and benefit from OTel Collector features, set the endpoint URL to a Collector instance running in Azure VM over an Azure VNet.
 
@@ -273,7 +267,7 @@ When instrumenting an Azure WebJob in App Service, add the following settings. R
       * - ``SIGNALFX_ACCESS_TOKEN``
         - Your Splunk access token. To obtain an access token, see :ref:`admin-api-access-tokens`.
       * - ``SIGNALFX_REALM``
-        - ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, open the left navigation menu in Observability Cloud, select :menuselection:`Settings`, and select your username. The realm name appears in the :guilabel:`Organizations` section.
+        - ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, open the navigation menu in Splunk Observability Cloud, select :menuselection:`Settings`, and select your username. The realm name appears in the :guilabel:`Organizations` section.
       * - ``SIGNALFX_SERVICE_NAME``
         - The name of your service or application.
       * - ``SIGNALFX_ENV``
@@ -350,12 +344,12 @@ The following example shows how to update a deployment to expose environment var
 
 .. _export-directly-to-olly-cloud-dotnet:
 
-Send data directly to Observability Cloud
+Send data directly to Splunk Observability Cloud
 --------------------------------------------------------------------
 
 By default, the instrumentation sends all telemetry to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
-To bypass the OTel Collector and send data directly to Observability Cloud, set the following environment variables:
+To bypass the OTel Collector and send data directly to Splunk Observability Cloud, set the following environment variables:
 
 .. tabs::
 
@@ -371,9 +365,9 @@ To bypass the OTel Collector and send data directly to Observability Cloud, set 
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-#. Open the left navigation menu in Observability Cloud.
+#. Open the navigation menu in Splunk Observability Cloud.
 #. Select :menuselection:`Settings`.
 #. Select your username. 
 

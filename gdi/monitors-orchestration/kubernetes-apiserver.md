@@ -36,7 +36,7 @@ To activate this integration, add the following to your Collector configuration:
       ... # Additional config
 ```
 
-Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
+Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
 ```
 service:
@@ -61,7 +61,7 @@ receivers:
       metric_source: kubernetes-apiserver
 ```
 
-The OpenTelemetry Collector has a Kubernetes observer (`k8sobserver`) that can be implemented as an extension to discover networked endpoints, such as a Kubernetes pod. Using this observer assumes that the OpenTelemetry Collector is deployed in Agent mode, where it is running on each individual node or host instance.
+The OpenTelemetry Collector has a Kubernetes observer (`k8sobserver`) that can be implemented as an extension to discover networked endpoints, such as a Kubernetes pod. Using this observer assumes that the OpenTelemetry Collector is deployed in host monitoring (agent) mode, where it is running on each individual node or host instance.
 
 To use the observer, create a receiver creator instance with an associated rule. For example:
 

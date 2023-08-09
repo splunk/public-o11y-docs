@@ -14,18 +14,19 @@ sys.path.insert(0, os.path.join(os.path.abspath('.'), '_ext'))
 from assetminify import final_conf_includes
 
 extensions = [
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.todo',
-    'sphinx.ext.ifconfig',
     'sphinx_copybutton',
     'notfound.extension',
-    'toggle',
     'newpage',
     'github',
+    'optimizer',
     'myst_parser',
     'sphinx_tabs.tabs',
     'olly_on_git_hub'
 ]
+
+html_context = {
+    'search': 'search.html'
+}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -92,6 +93,13 @@ copybutton_prompt_text = r">>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: 
 copybutton_prompt_is_regexp = True
 copybutton_copy_empty_lines = False
 copybutton_line_continuation_character = "\\"
+
+# Link Checker settings
+
+linkcheck_anchors = False
+linkcheck_workers = 3
+linkcheck_exclude_documents = [r'_.*', r'\.github', r'myst_parser', r'tests']
+linkcheck_ignore = [r'https://ingest.*',r'https://app.*',r'https://login.*',r'.*\<.*',r'https://api.*',r'https://rum-ingest.*',r'https://proxy.*',r'https://example.*', r'https://domain.com.*', r'.*domain/path.*', r'.*signalfx.com.*', r'.*your_realm.*', r'.*your_domain.*']
 
 # ROLES AND MACROS
 #######################
