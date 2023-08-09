@@ -42,7 +42,7 @@ To collect data with the Collector and the UF:
 
     * Configure the :new-page:`UF <https://docs.splunk.com/Documentation/Forwarder/latest/Forwarder/Configuretheuniversalforwarder>`.
 
-#. Run the following command to skip installation of the plugins and dependencies for the Collector:
+#. Run the following command to install the Collector:
 
    .. code-block:: bash
 
