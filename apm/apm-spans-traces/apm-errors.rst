@@ -63,10 +63,10 @@ The following table provides an overview of how HTTP status codes are treated in
 How does Splunk APM handle gRPC status codes?
 ===============================================
 
-To determine if a gRPC span counts towards the error rate for a service, the Splunk Distribution of the OpenTelemetry Collector looks at the ``span.status`` as set by OpenTelemetry specification. Specfically, the following logic is applied:
+To determine if a gRPC span counts towards the error rate for a service, the Splunk Distribution of the OpenTelemetry Collector looks at the ``span.status`` as set by OpenTelemetry specification. Specifically, the following logic is applied:
 
-* For client-side spans (``span.kind = CLIENT``), all non-OK, client-received status codes (``rpc.grpc.status_codes``) set ``span.status`` to ``Error``.
-* For server-side spans (``span.kind = SERVER``), the following gRPC status codes (``rpc.grpc.status_codes``) set ``span.status`` to ``Error``: 
+* For client-side spans (``span.kind = CLIENT``), all non-OK, client-received status codes (``rpc.grpc.status_code``) set ``span.status`` to ``Error``.
+* For server-side spans (``span.kind = SERVER``), the following gRPC status codes (``rpc.grpc.status_code``) set ``span.status`` to ``Error``: 
 
    * ``UNKNOWN``
    * ``UNIMPLEMENTED``
