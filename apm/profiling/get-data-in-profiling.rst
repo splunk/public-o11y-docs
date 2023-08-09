@@ -191,14 +191,14 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-dotnet`.
 
-.. _profiling-gateway-setup:
+.. _profiling-gateway-deployment:
 
-Activate AlwaysOn Profiling in a gateway set up
+Activate AlwaysOn Profiling in a gateway deployment
 --------------------------------------------------
 
-If you need to set up AlwaysOn Profiling with a collector as a gateway similar to the following, follow these steps to set this up. 
+If you need to set up AlwaysOn Profiling with a collector in data forwarding (gateway) mode similar to the following, follow these steps to set this up. 
 
-:strong:`Example gateway setup`
+:strong:`Example gateway deployment`
 
 :strong:`(\1)` Instrumentation Agent to  :strong:`(2)` Collector in host monitoring (agent) mode to :strong:`(3)` Collector in data forwarding (gateway) mode to :strong:`(4)` Splunk Observability Cloud
 
