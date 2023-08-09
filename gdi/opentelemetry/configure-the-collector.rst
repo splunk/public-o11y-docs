@@ -71,7 +71,7 @@ To define multiple config files simultaneously use:
 
 Use the Fluentd receiver to collect logs. Common sources such as filelog, journald, and Windows Event Viewer are included in the installation. See :ref:`fluentd-receiver` for more information.
 
-.. note:: If you don't have a Log Observer entitlement or don't wish to collect logs for the target host, use the ``--without-fluentd`` option to skip the installation of Fluentd when installing the Collector. 
+.. note:: If you have a Log Observer entitlement or wish to collect logs for the target host with Fluentd, use the ``--with-fluentd`` option to also install Fluentd when installing the Collector.
 
 .. raw:: html
 
