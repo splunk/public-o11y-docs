@@ -138,6 +138,13 @@ If no data appears in APM, see :ref:`common-dotnet-otel-troubleshooting`.
 
 .. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your .NET application or service manually. See :ref:`dotnet-otel-manual-instrumentation`.
 
+.. _configure-otel-dotnet:
+
+Configure the instrumentation
+---------------------------------------------
+
+For advanced configuration of the .NET automatic instrumentation, like changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
+
 .. _otel-dotnet-nuget-pkg:
 
 Install the OpenTelemetry .NET instrumentation using the NuGet packages
@@ -161,7 +168,7 @@ To automatically instrument your application using the NuGet packages, add the `
 
    dotnet add [<PROJECT>] package Splunk.OpenTelemetry.AutoInstrumentation --prerelease
 
-If the build fails and prompts you to add missing instrumentation packages, add the recommended instrumentation package or skip the instrumentation of the listed package by adding it to the ``SkippedInstrumentation`` property. For example:
+If the build fails and prompts you to add missing instrumentation packages, add the instrumentation package or skip the instrumentation of the listed package by adding it to the ``SkippedInstrumentation`` property. For example:
 
 .. code-block:: xml
 
@@ -169,13 +176,15 @@ If the build fails and prompts you to add missing instrumentation packages, add 
       <SkippedInstrumentations>MongoDB.Driver.Core;StackExchange.Redis</SkippedInstrumentations>
    </PropertyGroup>
 
-You can also set the ``SkippedInstrumentation`` property from the terminal. Escape the ``;`` separator ``%3B``. For example:
+You can also set the ``SkippedInstrumentation`` property from the terminal. Rewrite the ``;`` separator as ``%3B``. For example:
 
 .. code-block:: powershell
 
    dotnet build -p:SkippedInstrumentations=StackExchange.Redis%3BMongoDB.Driver.Core
 
-To distribute the appropriate native runtime components with your .NET application, specify a Runtime Identifier (RID) to build the application using ``dotnet build`` or ``dotnet publish``. Both self-contained and framework-dependent applications are compatible with automatic instrumentation. See :new-page:`.NET application publishing overview <https://learn.microsoft.com/en-us/dotnet/core/deploying/>` in the .NET documentation for more information.
+To distribute the appropriate native runtime components with your .NET application, specify a Runtime Identifier (RID) to build the application using ``dotnet build`` or ``dotnet publish``. 
+
+Both self-contained and framework-dependent applications are compatible with automatic instrumentation. See :new-page:`.NET application publishing overview <https://learn.microsoft.com/en-us/dotnet/core/deploying/>` in the .NET documentation for more information.
 
 Run the instrumented application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -192,12 +201,6 @@ If you run the application using the ``dotnet`` CLI, add ``dotnet`` after the sc
 
 The script passes all the command-line parameters you provide to the application.
 
-.. _configure-otel-dotnet:
-
-Configure the instrumentation
----------------------------------------------
-
-For advanced configuration of the .NET automatic instrumentation, like changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
 
 .. _windows-offline-install-otel-dotnet:
 
