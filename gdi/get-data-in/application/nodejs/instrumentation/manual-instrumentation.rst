@@ -26,17 +26,16 @@ To send custom traces to Splunk Observability Cloud, add the required dependenci
    const {
       SemanticResourceAttributes,
    } = require('@opentelemetry/semantic-conventions');
-   const { WebTracerProvider } = require('@opentelemetry/sdk-trace-web');
-   const {
-      ConsoleSpanExporter,
-      BatchSpanProcessor,
-   } = require('@opentelemetry/sdk-trace-base');
+   const { ConsoleSpanExporter } = require('@opentelemetry/sdk-trace-base');
 
    // All fields are optional.
    start({
-     // Takes preference over OTEL_SERVICE_NAME environment variable
-     serviceName: 'my-service'
-     },
+      // Takes preference over OTEL_SERVICE_NAME environment variable
+      serviceName: 'my-service',
+      tracing: {
+         spanExporterFactory: () => [new ConsoleSpanExporter()],
+         tracerConfig: { resource: new Resource({ [SemanticResourceAttributes.SERVICE_VERSION]: '0.1.0' }) }
+      },
    });
 
    const resource = Resource.default().merge(
@@ -46,9 +45,6 @@ To send custom traces to Splunk Observability Cloud, add the required dependenci
       }),
    );
 
-   const provider = new WebTracerProvider({
-      resource: resource,
-   });
    const exporter = new ConsoleSpanExporter();
    const processor = new BatchSpanProcessor(exporter);
    provider.addSpanProcessor(processor);
@@ -76,13 +72,13 @@ After you've created a tracer, create spans. For example:
 .. code-block:: javascript
 
    function rollTheDice(rolls, min, max) {
-      // Create a span. A span must be closed.
+      // Creates a span
       return tracer.startActiveSpan('rollTheDice', (span) => {
          const result = [];
          for (let i = 0; i < rolls; i++) {
             result.push(rollOnce(min, max));
          }
-         // Be sure to end the span!
+         // Ends the span
          span.end();
          return result;
       });
