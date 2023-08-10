@@ -51,7 +51,7 @@ Configure the Prometheus receiver with Apache Flink:
             static_configs:
                - targets: ['0.0.0.0:9249']
 
-Next, enable the ``metrics`` pipeline:
+Next, activate the ``metrics`` pipeline:
 
 .. code:: yaml
 
