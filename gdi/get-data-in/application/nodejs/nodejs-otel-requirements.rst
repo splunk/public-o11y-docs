@@ -9,6 +9,8 @@ Splunk OTel JS compatibility and requirements
 
 Meet these requirements to instrument Node.js applications for Splunk Observability Cloud using the Splunk Distribution of OpenTelemetry JS.
 
+.. note:: For front-end applications built using JavaScript libraries like React, use Splunk Real User Monitoring (RUM) for Browser. See :ref:`browser-rum-gdi`.
+
 .. _nodes-requirements:
 
 Ensure you have supported Node.js and library versions
@@ -175,6 +177,7 @@ The Splunk Distribution of OpenTelemetry JS instruments the following libraries 
 For a complete list, see :new-page:`the plugins folder <https://github.com/open-telemetry/opentelemetry-js-contrib/tree/main/plugins/node>` in the OpenTelemetry upstream repository on GitHub. To use any additional instrumentation, install it using npm before running your application.
 
 .. note:: If you're using a Node.js version lower than 14, use the :new-page:`SignalFx Tracing Library for Node.js <https://github.com/signalfx/signalfx-nodejs-tracing>`.
+
 
 .. _nodejs-otel-connector-requirement:
 
