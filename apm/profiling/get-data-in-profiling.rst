@@ -196,7 +196,7 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 Activate AlwaysOn Profiling in a gateway deployment
 ----------------------------------------------------
 
-If you need to set up AlwaysOn Profiling with a collector in data forwarding (gateway) mode similar to the following, follow these steps to set this up. 
+If you need to set up AlwaysOn Profiling with a collector in data forwarding (gateway) mode similar to the following example gateway setup, follow the subsequent steps. 
 
 :strong:`Example gateway deployment`
 
