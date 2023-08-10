@@ -113,6 +113,8 @@ Sample annotations include:
 * ``instrumentation.opentelemetry.io/inject-nodejs: "true"``
 * ``instrumentation.opentelemetry.io/inject-python: "true"``
 
+.. note:: .NET automatic instrumentation is not compatible with Alpine-based images.
+
 4. Check out the results at Splunk Observability APM
 ------------------------------------------------------------
 
