@@ -166,7 +166,7 @@ Configure collection interval and counters
 
 You can configure the collection interval and which performance counters you want to scrape. For example:
 
-.. code-block:: yaml
+.. code-block::
 
    windowsperfcounters:
    collection_interval: <duration> # default = "1m"
