@@ -1,7 +1,7 @@
 .. _prometheus:
 
 ********************************************************************************
-Configure application exporters and receivers for monitoring
+Configure application exporters and receivers with Prometheus metrics
 ********************************************************************************
 
 .. meta::
