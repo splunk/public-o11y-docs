@@ -196,14 +196,15 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 Activate AlwaysOn Profiling in a gateway deployment
 ----------------------------------------------------
 
-If you need to set up AlwaysOn Profiling with a collector in data forwarding (gateway) mode similar to the following example gateway setup, follow the subsequent steps. 
+If you need to set up AlwaysOn Profiling with a collector in data forwarding (gateway) mode similar to the following example gateway deployment, follow the subsequent steps. 
 
 :strong:`Example gateway deployment`
 
 :strong:`(\1)` Instrumentation Agent to  :strong:`(2)` Collector in host monitoring (agent) mode to :strong:`(3)` Collector in data forwarding (gateway) mode to :strong:`(4)` Splunk Observability Cloud
 
-#. Point the instrumentation agent to the OTLP gRPC receiver for the collector in host monitoring (agent) mode :strong:`(2)`. This should be the same host and port that the collector in host monitoring (agent) mode :strong:`(2)` is running on.
-#. The collector in host monitoring (agent) mode :strong:`(2)` configuration:
+#. Point the instrumentation agent to the OTLP gRPC receiver for the collector in host monitoring (agent) mode :strong:`(2)`. The OTLP gRPC receiver must be running on the same host and port that the collector in host monitoring (agent) mode :strong:`(2)` is running on.
+#. Configure the collector in host monitoring (agent) mode :strong:`(2)` with the following components:
+
    #. An OTLP gRPC receiver
    #. An OTLP exporter pointed at the collector in data forwarding (gateway) mode :strong:`(3)`
    #. A logs pipeline that connects the receiver and the exporter, for example:
