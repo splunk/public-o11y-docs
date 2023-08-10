@@ -117,11 +117,26 @@ To find default dashboards for GCP services, select :strong:`Navigation menu > D
 Explore built-in content
 ------------------------------
 
-Observability Cloud collects data from many cloud services. To see all of the navigators provided for data collected in your organization, go to the Infrastructure page. To see all the pre-built dashboards for data collected in your organization, select :strong:`Dashboards > Built-in`.
+Observability Cloud collects data from many cloud services: 
+
+* To see all of the navigators provided for data collected in your organization, go to the Infrastructure page. 
+* To see all the pre-built dashboards for data collected in your organization, select :strong:`Dashboards > Built-in`.
+
+Keep in mind the constraints for GCP Compute Engine and GCP Kubernetes Engine content described in the next sections.
+
+See GCP Compute Engine content 
++++++++++++++++++++++++++++++++++++
 
 GCP Compute Engine instances are powered by their respective public cloud service as well as the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`. You need both for all the charts to display data in the built-in dashboards.
 
 - If you have only the public cloud service configured, you can see all the cards representing the services where data come from, but some charts in the built-in dashboards for GCP Compute Engine instances display no data.
 - If you have only the public cloud service and the Smart Agent (deprecated) configured, some charts in the built-in dashboards for GCP Compute Engine instances display no data. 
 
-.. caution:: Splunk Observability Cloud needs inbound access to your private GKE clusters if you want to monitor them using built-in dashboards. 
+See GCP Kubernetes Engine content 
++++++++++++++++++++++++++++++++++++
+
+In order to populate GCP Kubernetes Engine navigators and dashboards, Splunk Observability Cloud needs access to the control plain endpoint of your Kubernetes cluster to be able to display data. 
+
+If you have a private GKE cluster, refer to the :new-page:`official Google documentation on setting up limited access to the public control plane endpoint <https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#public_cp>`, and reach out to Support to obtain the IP ranges that you need to authorize.
+
+Alternatively, you can collect Kubernetes data using the OpenTelemetry Collector for Kubernetes and use the provided dashboards and navigators. Learn more at :ref:`get-started-k8s`.
