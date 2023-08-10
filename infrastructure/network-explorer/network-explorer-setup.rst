@@ -576,7 +576,7 @@ Enable an internal metric
 Example
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-In the following example, all HTTP metrics along with certain individual TCP and UDP metrics are disabled. All DNS metrics are collected.
+In the following example, all HTTP metrics along with certain individual TCP and UDP metrics are deactivated. All DNS metrics are collected.
 
     .. code-block:: yaml
 
