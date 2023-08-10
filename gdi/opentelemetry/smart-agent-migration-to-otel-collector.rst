@@ -35,7 +35,7 @@ The benefits of using the Collector are:
 * Open standard based on OpenTelemetry.
 * Support for new features such as code profiling.
 * Ability to correlate data between different views within Splunk Observability Cloud with :ref:`Related Content <get-started-relatedcontent>`.
-* Fluentd for log collection, disabled by default for Linux and Windows.
+* Fluentd for log collection, deactivated by default for Linux and Windows.
 
 .. raw:: html
 
