@@ -18,6 +18,7 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     install-the-collector.rst
     configure-the-collector.rst
     Zero config auto instrumentation <zero-config.rst>
+    Discover metric sources automatically <discovery-mode.rst>
     Use the Universal Forwarder <collector-with-the-uf.rst>
     Troubleshooting <troubleshooting.rst>
     Commands reference <otel-commands.rst>
@@ -34,6 +35,8 @@ The OpenTelemetry Collector has a core version and a contributions version. The 
 The Splunk Distribution of OpenTelemetry Collector is a distribution of the OpenTelemetry Collector. The distribution is a project that bundles components from OpenTelemetry Core, OpenTelemetry Contrib, and other sources to provide data collection for multiple source platforms. The customizations in the Splunk distribution include these features:
 
 * Better defaults for Splunk products
+* Discovery mode for metric sources
+* Zero configuration auto instrumentation
 * Fluentd for log capture
 * Tools to support migration from SignalFx products
 
@@ -43,8 +46,9 @@ The Splunk Distribution of OpenTelemetry Collector is a distribution of the Open
 
 To get started with the Collector, see :ref:`opentelemetry-resources`:
 
-#. Check the :ref:`prerequisites and requirements <otel-requirements>`.
+#. Check the :ref:`requirements <otel-requirements>`.
 #. :ref:`otel-install-platform`. Get instructions for installing the Collector on a variety of platforms. Or use :ref:`our guided install <collector-guided-install>`.
+#. Learn about the discovery mode. See :ref:`discovery_mode`.
 #. Learn about the available :ref:`configuration options <otel-configuration>`. 
 #. :ref:`otel-troubleshooting`. Try these troubleshooting techniques and learn how to open a support request.
 
@@ -52,4 +56,4 @@ For more information:
 
 - See :ref:`otel-components` for a description of the components the Collector supports.
 - Use :ref:`collector-remove-data` to strip data out of your telemetry, including PII.
-- Read :ref:`otel-collector-use-case`.
+- Read :ref:`otel-collector-scenario`.

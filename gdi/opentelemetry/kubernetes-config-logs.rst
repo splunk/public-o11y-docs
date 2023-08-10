@@ -52,7 +52,7 @@ The following example shows how to add logs from Kubernetes host machines:
     extraVolumes:
       - name: audit-log
         hostPath:
-        path: /var/log/kubernetes/apiserver
+          path: /var/log/kubernetes/apiserver
 
 Process multi-line logs
 ===========================================================================
@@ -96,7 +96,7 @@ The Splunk Distribution of OpenTelemetry Collector for Kubernetes can collect jo
           priority: info
       # Optional: Route journald logs to a separate Splunk Index by specifying the index
       # value. Make sure the index exists in Splunk and is configured to receive HEC
-      # traffic (not applicable to Observability Cloud).
+      # traffic (not applicable to Splunk Observability Cloud).
       index: ""
 
 Manage log ingestion using annotations
@@ -104,7 +104,7 @@ Manage log ingestion using annotations
 
 The following annotations for log ingestion management are supported: 
 
-* Use the ``splunk.com/index`` annotation on pods and/or namespaces to indicate which Splunk platform indexes you want to send logs to. Pod annotation will take precedence over namespace annotation when both are annotated. 
+* Use the ``splunk.com/index`` annotation on pods or namespaces to indicate which Splunk platform indexes you want to send logs to. Pod annotation will take precedence over namespace annotation when both are annotated. 
 
   * For example, to send logs from the ``kube-system`` namespace to the ``k8s_events`` index, use the command: 
   
@@ -112,11 +112,11 @@ The following annotations for log ingestion management are supported:
 
     kubectl annotate namespace kube-system splunk.com/index=k8s_events
 
-* Filter logs using pod and/or namespace annotations:
+* Filter logs using pod or namespace annotations:
 
-  * If ``logsCollection.containers.useSplunkIncludeAnnotation`` is ``false`` (default value), set the ``splunk.com/exclude`` annotation to ``true`` on pods and/or namespaces to exclude their logs from being ingested.
+  * If ``logsCollection.containers.useSplunkIncludeAnnotation`` is ``false`` (default value), set the ``splunk.com/exclude`` annotation to ``true`` on pods or namespaces to exclude their logs from being ingested.
   
-  * If ``logsCollection.containers.useSplunkIncludeAnnotation`` is ``true``, set the ``splunk.com/include`` annotation to ``true`` on pods and/or namespaces to only ingest their logs. All other logs will be ignored.
+  * If ``logsCollection.containers.useSplunkIncludeAnnotation`` is ``true``, set the ``splunk.com/include`` annotation to ``true`` on pods or namespaces to only ingest their logs. All other logs will be ignored.
 
 * Use the ``splunk.com/sourcetype`` annotation on a pod to overwrite the ``sourcetype`` field. If not set, it will default to ``kube:container:CONTAINER_NAME``.
 

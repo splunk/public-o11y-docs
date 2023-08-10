@@ -7,25 +7,14 @@ Metrics and attributes collected by the Splunk Distribution of OTel Go
 .. meta:: 
    :description: The Splunk Distribution of OpenTelemetry Go collects the following metrics.
 
-The Splunk Distribution of OpenTelemetry Go collects runtime and custom metrics. 
+The Splunk Distribution of OpenTelemetry Go collects runtime and custom metrics. To learn about the different metric types, see :ref:`metric-types`. 
 
-To learn about the different metric types, see :ref:`metric-types`.
-
-.. note:: Runtime and trace metrics collection is an experimental feature subject to future changes.
-
-.. _enable-golang-metrics:
-
-Activate metrics collection
-====================================================
-
-To collect Go metrics, see :ref:`enable_automatic_metric_collection_golang`.
+For custom metrics instrumentation and instrument types, see :ref:`custom-metrics-go`.
 
 .. _golang-otel-runtime-metrics:
 
 Runtime metrics
 ================================================
-
-.. caution:: The OpenTelemetry Go runtime instrumentation is experimental. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on a best-effort basis.
 
 The following runtime metrics are automatically collected and exported:
 
@@ -85,8 +74,6 @@ The following runtime metrics are automatically collected and exported:
 Connection pool metrics
 ================================================
 
-.. caution:: The OpenTelemetry Go runtime instrumentation is experimental. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on a best-effort basis.
-
 The Splunk Distribution of OpenTelemetry Go instruments several connection pool implementations:
 
 - ``splunksql``
@@ -106,13 +93,13 @@ Each of the connection pools reports a subset of the following metrics:
   * - Metric
     - Type
     - Description
-  * - ``db.client.connections.usage``
+  * - ``db.client.connections.usage`` (Experimental)
     - Gauge
     - Number of connections that are currently in the state described by the ``state`` attribute.
-  * - ``db.client.connections.max``
+  * - ``db.client.connections.max`` (Experimental)
     - Gauge
     - Maximum number of open connections allowed.
-  * - ``db.client.connections.wait_time``
+  * - ``db.client.connections.wait_time`` (Experimental)
     - Timer
     - Time it took to obtain an open connection from the pool.
 
@@ -125,7 +112,7 @@ The following attributes are available:
 
   * - Tag
     - Value
-  * - ``pool.name``
+  * - ``pool.name`` (Experimental)
     - Name of the connection pool. Applies to all connection pool metrics.
-  * - ``state``
+  * - ``state`` (Experimental)
     - State of the connection. Can be ``idle`` or ``used``. Only applies to the ``db.client.connections.usage`` metric.

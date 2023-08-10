@@ -1,7 +1,7 @@
 .. _auto-instrumentation-java-operator:
 
 *************************************************************************************************************
-Use case: Instrument your Java apps using the Splunk Collector and Kubernetes Operator  
+Scenario: Arnau instruments Java apps using the Splunk Collector and Kubernetes Operator  
 *************************************************************************************************************
 
 .. meta::
@@ -9,9 +9,9 @@ Use case: Instrument your Java apps using the Splunk Collector and Kubernetes Op
 
 Spring Clinic Microservices, a fictitious company, wants to use the OTel Collector and the upstream Kubernetes Operator to auto-instrument their Java applications. The final architecture will look as shown in the diagram below:
 
-.. image:: /_images/collector/auto-instrumentation-op-java-2.png
-   :width: 80%
-   :alt: Java app auto instrumentation diagram.
+.. image:: /_images/collector/auto-instrumentation-op-java-architecture.png
+   :width: 90%
+   :alt: Java app auto instrumentation architecture diagram.
 
 To do so, Arnau, their DevOps manager, proceeds to:
 

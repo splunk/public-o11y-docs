@@ -8,7 +8,7 @@ Troubleshoot your AWS connection
    :description: Resolve AWS policy and permissions conflicts in Splunk Observability Cloud.
 
 
-If you have a problem connecting Splunk Observability Cloud to your Amazon Web Services (AWS) account, it is most likely caused by conflicts between policies and permissions. See also :ref:`aws-ts-logs` for specific log troubleshooting.   
+If you experience issues when connecting Splunk Observability Cloud to your Amazon Web Services (AWS) account, they might be caused by conflicts between policies and permissions. See :ref:`aws-ts-logs` for specific log troubleshooting and :ref:`aws-ts-metric-streams` for issues specific to Metric Streams.   
 
 .. caution:: Splunk is not responsible for data availability, and it can take up to several minutes (or longer, depending on your configuration) from the time you connect until you start seeing valid data from your account. 
 
@@ -77,18 +77,18 @@ Once integrated with your Amazon Web Services account, Splunk Observability Clou
 
 .. _aws-ts-namespace-metrics:
 
-Metrics and/or tags for a particular namespace are not displayed
+Metrics and tags for a particular namespace are not displayed
 ==================================================================================
 
-Metrics and/or tags for a particular namespace are not displayed as expected.
+Metrics and tags for a particular namespace are not displayed as expected.
 
 Causes
 ^^^^^^^^
 
-If you use the AWS Organizations' :new-page:`Service control policies <https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html>` and/or :new-page:`Permission boundaries for IAM entities <https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html>`, they 
-might impact the AWS IAM policy you're using to connect to Observability Cloud. 
+If you use the AWS Organizations' :new-page:`Service control policies <https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html>` or :new-page:`Permission boundaries for IAM entities <https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html>`, they 
+might impact the AWS IAM policy you're using to connect to Splunk Observability Cloud. 
 
-If you modified the default IAM policy while setting up an integration between Observability Cloud and AWS, then your IAM policy does not list namespaces that were removed as not needed for the original integration, and as a result Observability Cloud ignores metrics for those namespaces.
+If you modified the default IAM policy while setting up an integration between Splunk Observability Cloud and AWS, then your IAM policy does not list namespaces that were removed as not needed for the original integration, and as a result, Splunk Observability Cloud ignores metrics for those namespaces.
 
 Solution
 ^^^^^^^^^
@@ -123,7 +123,7 @@ To do so, follow these steps:
 
 .. code-block:: none
 
-   curl --request GET https://api..signalfx.com/v2/integration/ \
+   curl --request GET https://api.<realm>.signalfx.com/v2/integration?type=AWSCloudWatch&offset=0&limit=50&orderBy=-lastUpdated
    --header "X-SF-TOKEN:" \
    --header "Content-Type:application/json" > integration.json
 
@@ -231,7 +231,7 @@ You'll get something similar to:
 
 .. code-block:: none
 
-   curl --request PUT https://api..signalfx.com/v2/integration/integration-id \
+   curl --request PUT https://api.<realm>.signalfx.com/v2/integration/<integration-id>
    --header "X-SF-TOKEN:" \
    --header "Content-Type:application/json" \
    --data "@integration.json" 

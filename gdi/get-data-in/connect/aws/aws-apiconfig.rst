@@ -21,7 +21,7 @@ To connect Splunk Observability Cloud to your AWS account, complete the followin
 Create an AWS connection 
 =====================================================
 
-To connect Splunk Observability Cloud to AWS through the Observability Cloud API, open your command-line interface and perform the following steps:
+To connect Splunk Observability Cloud to AWS through the Splunk Observability Cloud API, open your command-line interface and perform the following steps:
 
 #. :ref:`Create an external AWS ID <aws-api-create-id>`
 #. :ref:`Create an AWS policy and IAM role <aws-api-create-policy-role>`
@@ -99,7 +99,7 @@ To collect AWS data, review the permissions in this document:
 
 .. _aws-iam-policy-required:
 
-Required permissions in Observability Cloud 
+Required permissions in Splunk Observability Cloud 
 ---------------------------------------------------------------------
 
 Regardless of the services you want to use, you need the following permissions:
@@ -113,7 +113,7 @@ Regardless of the services you want to use, you need the following permissions:
 Permissions for the CloudWatch API
 -----------------------------------------------------------
 
-Besides the :ref:`required permissions <aws-iam-policy-required>`, include these permissions to allow Observability Cloud to collect AWS metrics using the CloudWatch API:
+Besides the :ref:`required permissions <aws-iam-policy-required>`, include these permissions to allow Splunk Observability Cloud to collect AWS metrics using the CloudWatch API:
 
 * ``cloudwatch:GetMetricData``
 * ``cloudwatch:ListMetrics``
@@ -145,7 +145,7 @@ For example:
 Permissions for Metric Streams
 -----------------------------------------------------------
 
-Besides the :ref:`required permissions <aws-iam-policy-required>`, include these permissions to allow Observability Cloud to collect AWS metrics using CloudWatch Metric Streams:
+Besides the :ref:`required permissions <aws-iam-policy-required>`, include these permissions to allow Splunk Observability Cloud to collect AWS metrics using CloudWatch Metric Streams:
 
 - ``"cloudwatch:DeleteMetricStream"``
 - ``"cloudwatch:GetMetricStream"``
@@ -169,15 +169,15 @@ For example:
       "Effect": "Allow",
       "Action": [
         "cloudwatch:GetMetricStream",       
-        "cloudwatch:ListMetrics"
+        "cloudwatch:ListMetrics",
         "cloudwatch:ListMetricStreams",
         "cloudwatch:PutMetricStream",
         "cloudwatch:DeleteMetricStream",
         "cloudwatch:StartMetricStreams",
-        "cloudwatch:StopMetricStreams"
+        "cloudwatch:StopMetricStreams",
         "ec2:DescribeRegions",
         "organizations:DescribeOrganization",
-        "tag:GetResources",
+        "tag:GetResources"
       ],
       "Resource": "*"
     },
@@ -197,9 +197,9 @@ For example:
 Permissions for tag and properties collection
 ---------------------------------------------------------------------------------------
 
-On top of the required permissions, you also need to include the specific permissions for the services you use in your AWS IAM policy to allow Observability Cloud to collect specific AWS tags and properties. You'll be able to use Infrastructure Monitoring :ref:`to filter metrics based on those tags and properties <aws-filter>`.
+On top of the required permissions, you also need to include the specific permissions for the services you use in your AWS IAM policy to allow Splunk Observability Cloud to collect specific AWS tags and properties. You'll be able to use Infrastructure Monitoring :ref:`to filter metrics based on those tags and properties <aws-filter>`.
 
-These are these permissions to allow Observability Cloud to collect AWS tags and properties:
+These are these permissions to allow Splunk Observability Cloud to collect AWS tags and properties:
 
 - ``"apigateway:GET"``
 - ``"autoscaling:DescribeAutoScalingGroups"``
@@ -238,12 +238,12 @@ These are these permissions to allow Observability Cloud to collect AWS tags and
 - ``"es:DescribeElasticsearchDomain"``
 - ``"es:ListDomainNames"``
 - ``"kinesis:DescribeStream"``
-- ``"kinesis:DescribeStream"``
 - ``"kinesis:ListShards"``
 - ``"kinesis:ListStreams"``
-- ``"kinesis:ListStreams"``
 - ``"kinesis:ListTagsForStream"``
-- ``"kinesis:ListTagsForStream"``
+- ``“kinesisanalytics:DescribeApplication”``
+- ``“kinesisanalytics:ListApplications”``
+- ``"kinesisanalytics:ListTagsForResource"``
 - ``"lambda:GetAlias"``
 - ``"lambda:ListFunctions"``
 - ``"lambda:ListTags"``
@@ -262,6 +262,8 @@ These are these permissions to allow Observability Cloud to collect AWS tags and
 - ``"sqs:ListQueueTags"``
 - ``"tag:GetResources"``
 - ``"workspaces:DescribeWorkspaces"``
+
+.. note:: Cassandra permissions are declared as a separate object. See the example below.
 
 Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Action`` array of the :ref:`AWS IAM policy JSON <review-aws-iam-policy>`. For example:
 
@@ -317,8 +319,9 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
           "kinesis:ListShards",
           "kinesis:ListStreams",
           "kinesis:ListTagsForStream",
-          "kinesisanalytics:ListApplications",
           "kinesisanalytics:DescribeApplication",
+          "kinesisanalytics:ListApplications",
+          "kinesisanalytics:ListTagsForResource",
           "lambda:GetAlias",
           "lambda:ListFunctions",
           "lambda:ListTags",
@@ -348,6 +351,20 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
           "workspaces:DescribeWorkspaces"
         ],
         "Resource": "*"
+      },
+      {
+        "Effect": "Allow",
+        "Action": [
+          "cassandra:Select"
+        ],
+        "Resource": [
+          "arn:aws:cassandra:*:*:/keyspace/system/table/local",
+          "arn:aws:cassandra:*:*:/keyspace/system/table/peers",
+          "arn:aws:cassandra:*:*:/keyspace/system_schema/*",
+          "arn:aws:cassandra:*:*:/keyspace/system_schema_mcs/table/tags",
+          "arn:aws:cassandra:*:*:/keyspace/system_schema_mcs/table/tables",
+          "arn:aws:cassandra:*:*:/keyspace/system_schema_mcs/table/columns"
+        ]
       }
     ]
   }
@@ -357,7 +374,7 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
 Permissions for log collection
 ----------------------------------------
 
-These are the permissions to allow Observability Cloud to collect AWS logs. Include those related to your service in your IAM policy.
+These are the permissions to allow Splunk Observability Cloud to collect AWS logs. Include those related to your service in your IAM policy.
 
 - ``"cloudfront:GetDistributionConfig"``
 - ``"cloudfront:ListDistributions"``
@@ -384,7 +401,7 @@ These are the permissions to allow Observability Cloud to collect AWS logs. Incl
 Permissions for usage collection and reports
 ------------------------------------------------------
 
-Include these permissions to allow Observability Cloud to collect AWS usage data and reports:
+Include these permissions to allow Splunk Observability Cloud to collect AWS usage data and reports:
 
 - ``"ec2:DescribeRegions"``
 - ``"organizations:DescribeOrganization"``
@@ -438,7 +455,7 @@ To activate CloudWatch Metric Streams as an alternative to traditional API polli
 #. Set the ``enabled`` field to ``true``.
 #. Submit a PUT request to the ``https://api.<realm>.signalfx.com/v2/integration/<integration-id>`` endpoint to save your updated settings.
 
-.. caution:: CloudWatch Metric Streams doesn't support filtering based on resource tags.   
+.. caution:: CloudWatch Metric Streams supports filtering by namespace and metric name but doesn't support filtering based on resource tags.   
 
 Next, to complete the activation of Metric Streams:
 
@@ -453,6 +470,18 @@ This creates:
 - The IAM role that allows Kinesis Firehose to write the S3 bucket.
 
 See :new-page:`Create an AWS integration using an external ID and ARN <https://dev.splunk.com/observability/docs/integrations/aws_integration_overview/#Create-an-AWS-integration-using-an-external-ID-and-ARN>` in the Splunk developer documentation for syntax examples.
+
+Deactivate Metric Streams
+------------------------------------------------------
+
+To deactivate Metric Streams, follow these steps:
+
+#. Submit a GET request to ``https://api.<realm>.signalfx.com/v2/integration/<integration-id>`` to retrieve your current settings. Make sure to substitute your own realm and integration ID in the URL.
+#. Set the ``metricStreamsSyncState`` field to ``CANCELLING``.
+#. Wait for Splunk Observability Cloud to clean up. This can take up to 15 minutes. 
+
+  * If Splunk Observability Cloud sets ``metricStreamsSyncState`` to ``DISABLED``, Metric Streams has been deactivated sucessfully.
+  * If Splunk Observability Cloud sets ``metricStreamsSyncState`` to ``CANCELLATION_FAILED``, try again, or refer to :ref:`aws-ts-metric-streams`.
 
 .. _metricstreams_cloudformation:
 
@@ -475,7 +504,7 @@ To collect log data from any CloudWatch log group, perform the following steps:
 #. Update your AWS integration using the ``curl -X PUT`` request to set the ``logsSyncState`` field value to ``ENABLED``.
 #. Review the :ref:`required permissions for logs <aws-iam-policy-logs>`.
 
-Observability Cloud synchronizes AWS integration settings with the logging configuration information on your AWS customer account every 5 minutes, adding triggers for newly-added services, and deleting triggers from regions or services removed from the integration.
+Splunk Observability Cloud synchronizes AWS integration settings with the logging configuration information on your AWS customer account every 5 minutes, adding triggers for newly-added services, and deleting triggers from regions or services removed from the integration.
 
 See Splunk developer documentation about :new-page:`POST /integration <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-create-integration>` for more examples of the request format.
 

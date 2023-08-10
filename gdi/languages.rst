@@ -11,12 +11,12 @@ Configure application receivers for languages
    :maxdepth: 4
    :hidden:
 
-   monitors/asp-dot-net
-   monitors/expvar
-   monitors/genericjmx
-   java-monitor/java-monitor
-   jmx/jmx
-   monitors/microsoft-dotnet
+   monitors-languages/asp-dot-net
+   monitors-languages/expvar
+   monitors-languages/genericjmx
+   monitors-languages/java-monitor
+   monitors-languages/jmx
+   monitors-languages/microsoft-dotnet
 
 These application receivers gather metrics from their associated language-related applications and the hosts the applications are running on.
 

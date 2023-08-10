@@ -11,31 +11,31 @@ Configure application receivers for databases
    :maxdepth: 4
    :hidden:
 
-   monitors/apache-couchdb
-   monitors/apache-kafka
-   monitors/apache-spark
-   monitors/cassandra
-   monitors/consul
+   monitors-databases/apache-couchdb
+   monitors-databases/apache-spark
+   monitors-databases/cassandra
+   monitors-databases/consul
    opentelemetry/components/databricks-receiver
-   monitors/etcd
-   monitors/exec-input
-   hadoop/hadoop
-   logparser/telegraf-logparser
-   logstash/logstash
-   microsoft-sql-server/microsoft-sql-server
-   mongodb/mongodb
-   mongodb-atlas/mongodb-atlas
+   monitors-databases/etcd
+   monitors-databases/exec-input
+   monitors-databases/hadoop
+   monitors-databases/hadoopjmx
+   monitors-databases/logparser
+   monitors-databases/logstash
+   monitors-databases/microsoft-sql-server
+   monitors-databases/mongodb
+   monitors-databases/mongodb-atlas
    opentelemetry/components/mongodb-atlas-receiver
-   mysql/mysql
+   monitors-databases/mysql
    opentelemetry/components/oracledb-receiver
-   postgresql/postgresql
-   redis/redis
-   sap-hana/hana
-   sql/sql
+   monitors-databases/postgresql
+   monitors-databases/redis
+   monitors-databases/sap-hana
+   monitors-databases/sql
 
 These application receivers gather metrics from their associated database-related applications and the hosts the applications are running on.
 
-* :ref:`kafka`
+* :ref:`apache-couchdb`
 * :ref:`spark`
 * :ref:`cassandra`
 * :ref:`consul`
@@ -43,6 +43,7 @@ These application receivers gather metrics from their associated database-relate
 * :ref:`etcd`
 * :ref:`exec-input`
 * :ref:`hadoop`
+* :ref:`hadoopjmx`
 * :ref:`telegraf-logparser`
 * :ref:`logstash`
 * :ref:`microsoft-sql-server`

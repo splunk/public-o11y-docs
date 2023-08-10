@@ -11,15 +11,15 @@ Configure application receivers for networks
    :maxdepth: 4
    :hidden:
 
-   monitors/aws-appmesh
-   monitors/dns
-   logstash-tcp/logstash
-   net-io/net-io
-   ntp/ntp
-   protocols/protocols
-   snmp/snmp
-   statsd/statsd
-   traefik/traefik
+   monitors-network/aws-appmesh
+   monitors-network/dns
+   monitors-network/logstash-tcp
+   monitors-network/net-io
+   monitors-network/network-protocols
+   monitors-network/ntp
+   monitors-network/snmp
+   monitors-network/statsd
+   monitors-network/traefik
 
 These application receivers gather metrics from their associated network-related applications and the hosts the applications are running on.
 
@@ -27,8 +27,8 @@ These application receivers gather metrics from their associated network-related
 * :ref:`dns`
 * :ref:`logstash-tcp`
 * :ref:`net-io`
-* :ref:`ntp`
 * :ref:`protocols`
+* :ref:`ntp`
 * :ref:`snmp`
 * :ref:`statsd`
 * :ref:`traefik`

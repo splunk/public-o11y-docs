@@ -243,6 +243,98 @@ You can exclude or include logs using resource attributes or OTTL conditions. Fo
        log_record:
          - 'attributes["test"] == "pass"'
 
+Filter Kubernetes elements
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can exclude or include Kubernetes elements, such as containers, pods, nodes, namespaces, or clusters, with the following configuration:
+
+.. code-block:: yaml 
+
+  agent:
+    config:
+      processors:
+        # Exclude specific metrics from containers named 'containerXName' or 'containerYName'
+        filter/exclude_metrics_from_container:
+          metrics:
+            exclude:
+              match_type: regexp
+              resource_attributes:
+                - key: k8s.container.name
+                  value: '^(containerXName|containerYName)$'
+        
+        # Exclude logs from pods named 'podNameX'
+        filter/exclude_logs_from_pod:
+          logs:
+            exclude:
+              match_type: regexp
+              resource_attributes:
+                - key: k8s.pod.name
+                  value: '^(podNameX)$'
+        
+        # Exclude logs from nodes named 'nodeNameX'
+        filter/exclude_logs_from_node:
+          logs:
+            exclude:
+              match_type: regexp
+              resource_attributes:
+                - key: k8s.node.name
+                  value: '^(nodeNameX)$'
+        
+        # Exclude spans from traces for services housed in containers named 'containerXName' or 'containerYName'
+        filter/exclude_spans_from_traces_from_container:
+          spans:
+            exclude:
+              match_type: regexp
+              attributes:
+                - key: k8s.container.name
+                  value: '^(containerXName|containerYName)$'
+        
+        # Exclude all telemetry data (metrics, logs, traces) from a namespace named 'namespaceX'
+        filter/exclude_all_telemetry_data_from_namespace:
+          logs:
+            exclude:
+              match_type: regexp
+              resource_attributes:
+                - key: k8s.namespace.name
+                  value: '^(namespaceX)$'
+          metrics:
+            exclude:
+              match_type: regexp
+              resource_attributes:
+                - key: k8s.namespace.name
+                  value: '^(namespaceX)$'
+          traces:
+            span:
+              - 'attributes["k8s.namespace.name"] != "namespaceX"'
+        
+        # Exclude metrics from a cluster named 'clusterX'
+        filter/exclude_metrics_from_cluster:
+          metrics:
+            exclude:
+              match_type: regexp
+              resource_attributes:
+                - key: k8s.cluster.name
+                  value: '^(clusterX)$'
+
+After setting up the processors, configure the pipelines:
+
+.. code-block:: yaml 
+  
+      # Define the data processing pipelines for logs, metrics, and traces
+      service:
+        pipelines:
+          logs:
+            processors:
+              - memory_limiter
+              - k8sattributes
+              - filter/logs
+              - batch
+              - resourcedetection
+              - resource
+              - resource/logs
+              - filter/exclude_logs_from_pod
+              - filter/exclude_logs_from_node
+
 .. _ottl-syntax:
 
 Drop telemetry using OTTL conditions

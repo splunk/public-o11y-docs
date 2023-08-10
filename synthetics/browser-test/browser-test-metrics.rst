@@ -136,11 +136,11 @@ Performance timing metrics capture information about how long it takes resources
 
    * - First CPU idle
      - ``synthetics.first_cpu_idle.time.ms``
-     - Time until the page is minimally interactive and will respond to user input in a reasonable amount of time. See :new-page:`What Interactivity Metrics Does Rigor Offer? <https://help.rigor.com/hc/en-us/articles/360011039573>` to learn more about how this metric is calculated. 
+     - Time until the page is minimally interactive and will respond to user input in a reasonable amount of time. See "What Interactivity Metrics Does Rigor Offer?" in the Rigor knowledge base to learn more about how this metric is calculated. 
 
    * - Time to interactive
      - ``synthetics.tti.time.ms``
-     - Time until the page is first expected to be usable and will respond to user input quickly. See :new-page:`What Interactivity Metrics Does Rigor Offer? <https://help.rigor.com/hc/en-us/articles/360011039573>` to learn more about how this metric is calculated. 
+     - Time until the page is first expected to be usable and will respond to user input quickly. See "What Interactivity Metrics Does Rigor Offer?" in the Rigor knowledge base to learn more about how this metric is calculated. 
      
    * - Onload time
      - ``synthetics.onload.time.ms``
@@ -233,15 +233,15 @@ Resource and error count metrics capture information about the number and types 
    
    * - Client error count
      - ``synthetics.resource_request.error.count``
-     - Number of client responses with a status code between 400 and 499. The error type is indicated in the ``content_type`` dimension. 
+     - Number of client responses with a status code between 400 and 499. The error type is indicated in the ``http.status_code_type`` dimension. 
 
    * - Connection error count
      - ``synthetics.resource_request.error.count``
-     - Number of connection responses where the status code is 504 or 0 (a request aborted by the browser). The error type is indicated in the ``content_type`` dimension. 
+     - Number of connection responses where the status code is 504 or 0 (a request aborted by the browser). The error type is indicated in the ``http.status_code_type`` dimension. 
 
    * - Server error count 
      - ``synthetics.resource_request.error.count``
-     - Number of server responses where the status code is 500 or higher (excluding 504). The error type is indicated in the ``content_type`` dimension. 
+     - Number of server responses where the status code is 500 or higher (excluding 504). The error type is indicated in the ``http.status_code_type`` dimension. 
 
    * - Error count
      - ``synthetics.resource_request.error.count``

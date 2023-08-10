@@ -14,10 +14,10 @@ Generate customized instructions using the guided setup
 
 To generate all the basic installation commands for your environment and application, use the Java guided setup. To access the Java guided setup, follow these steps:
 
-#. Log in to Observability Cloud.
+#. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`Java guided setup <https://login.signalfx.com/#/gdi/scripted/java-tracing/step-1?gdiState=%7B"integrationId":"java-tracing"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the left navigation menu, select :menuselection:`Data Management`. 
+   #. In the navigation menu, select :menuselection:`Data Management`. 
 
    #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 
@@ -105,7 +105,7 @@ Follow these steps to automatically instrument your application using the Java a
 
    .. note:: If your application runs on a supported Java server, see :ref:`java-servers-instructions`.
 
-If no data appears in :strong:`Observability > APM`, see :ref:`common-java-troubleshooting`.
+If no data appears in APM, see :ref:`common-java-troubleshooting`.
 
 If you need to add custom attributes to spans or want to manually generate spans, instrument your Java application or service manually. See :ref:`java-manual-instrumentation`.
 
@@ -233,12 +233,12 @@ Use ``ENV`` commands to set environment variables for the Java agent. To activat
 
 .. _export-directly-to-olly-cloud-java:
 
-Send data directly to Observability Cloud
+Send data directly to Splunk Observability Cloud
 -----------------------------------------------------------
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
-If you need to send data directly to Observability Cloud, set the following environment variables:
+If you need to send data directly to Splunk Observability Cloud, set the following environment variables:
 
 .. tabs::
 
@@ -254,9 +254,9 @@ If you need to send data directly to Observability Cloud, set the following envi
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-#. Open the left navigation menu in Observability Cloud.
+#. Open the navigation menu in Splunk Observability Cloud.
 #. Select :menuselection:`Settings`.
 #. Select your username. 
 
@@ -272,3 +272,25 @@ Instrument Lambda functions
 -----------------------------------------------------------
 
 You can instrument AWS Lambda functions using the Splunk OpenTelemetry Lambda Layer. See :ref:`instrument-aws-lambda-functions` for more information. 
+
+.. _upgrade-java-instrumentation:
+
+Upgrade the Splunk Distribution of OpenTelemetry Java
+============================================================
+
+New releases of the Splunk Distribution of OpenTelemetry Java happen after a new upstream release, or when new features and enhancements are available.
+
+Upgrade to each new version of the Splunk Distribution of OpenTelemetry Java after it's released. To find out about new releases, watch the GitHub repository at :new-page:`https://github.com/signalfx/splunk-otel-java/releases <https://github.com/signalfx/splunk-otel-java/releases>`
+
+.. note:: See the :new-page:`versioning document <https://github.com/signalfx/splunk-otel-java/blob/main/VERSIONING.md>` in GitHub to learn more about version numbers. Major versions contain a large number of changes, which might result in increased risk to your production environment. Minor version changes indicate common releases, which contain a modest number of changes Patch releases are infrequent and contain specific fixes or enhancements.
+
+Best practices for upgrades
+-------------------------------------
+
+To reduce the risk of issues with an upgrade, do the following:
+
+- Read the release notes and changelog for each release to determine if the release has changes that might affect your environment. Pay attention to mentions of libraries, frameworks, and tools that your software uses.
+- Never put untested code into production. Verify that the new build works in a staging or pre-production environment before promoting it to production. Don't use snapshot builds in production.
+- Use canary instances. Let the canaries operate with the code before releasing the code to production. Run the canaries for at least a few hours, and preferably for a few days.
+- Minimize the number of dependencies, including instrumentation, that change in a given release. Determining the root cause of a problem after upgrading multiple dependencies at the same time can be difficult.
+- Pin version numbers in your build pipeline. Don't use the ``latest`` URL in automated processes.

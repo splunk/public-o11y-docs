@@ -14,10 +14,10 @@ Generate customized instructions using the guided setup
 
 To generate all the basic installation commands for your environment and application, use the Go guided setup. To access the Go guided setup, follow these steps:
 
-#. Log in to Observability Cloud.
+#. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`Go guided setup <https://login.signalfx.com/#/gdi/scripted/go-tracing/step-1?category=product-apm&gdiState=%7B"integrationId":"go-tracing"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the left navigation menu, select :menuselection:`Data Management`. 
+   #. In the navigation menu, select :menuselection:`Data Management`. 
 
    #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 
@@ -113,28 +113,9 @@ Follow these steps to instrument your application using the Go instrumentation:
 
 #. (Optional) To link APM and RUM data, activate the HTTP instrumentation. See :ref:`server-trace-information-go`.
 
-If no data appears in :strong:`Observability > APM`, see :ref:`common-go-troubleshooting`.
+If no data appears in APM, see :ref:`common-go-troubleshooting`.
 
 .. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your Go application or service manually. See :ref:`go-manual-instrumentation`.
-
-.. _enable_automatic_metric_collection_golang:
-
-Activate metrics collection
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. caution:: The OpenTelemetry Go Metrics API is a release candidate. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on best-effort basis.
-
-To activate automatic runtime metric collection, you need to set the ``OTLP_METRICS_EXPORTER`` environment variable.
-
-.. tabs::
-
-   .. code-tab:: bash Linux
-
-      export OTLP_METRICS_EXPORTER=otlp
-
-   .. code-tab:: shell Windows PowerShell
-
-      $env:OTLP_METRICS_EXPORTER=otlp
 
 .. _kubernetes_go:
 
@@ -171,12 +152,12 @@ The following example shows how to update a deployment to expose environment var
 
 .. _export-directly-to-olly-cloud-go:
 
-Send data directly to Observability Cloud
+Send data directly to Splunk Observability Cloud
 --------------------------------------------------------------------
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
-If you need to send data directly to Observability Cloud, set the following environment variables:
+If you need to send data directly to Splunk Observability Cloud, set the following environment variables:
 
 .. tabs::
 
@@ -192,9 +173,9 @@ If you need to send data directly to Observability Cloud, set the following envi
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-#. Open the left navigation menu in Observability Cloud.
+#. Open the navigation menu in Splunk Observability Cloud.
 #. Select :menuselection:`Settings`.
 #. Select your username. 
 

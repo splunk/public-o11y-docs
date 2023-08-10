@@ -12,7 +12,7 @@ The batch processor is an OpenTelemetry Collector component that batches and com
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the batch processor in all the predefined pipelines when deployed in agent or gateway modes. See :ref:`otel-deployment-mode` for more information.
+By default, the Splunk Distribution of OpenTelemetry Collector includes the batch processor in all the predefined pipelines when deployed in host monitoring (agent) or data forwarding (gateway) modes. See :ref:`otel-deployment-mode` for more information.
 
 To ensure that batching happens after data sampling and filtering, add the batch processor after the ``memory_limiter`` processor and other sampling processors.
 
@@ -34,6 +34,26 @@ The following example shows how to configure the batch processor to send batches
      batch/custom:
        send_batch_size: 5000
        timeout: 15s
+
+Batching by metadata
+--------------------------------
+
+Starting from version 0.78 of the OpenTelemetry Collector, you can batch telemetry based on metadata. For example:
+
+.. code-block:: yaml
+
+   processors:
+     batch:
+       # batch data by tenant-id
+       metadata_keys:
+       - tenant_id
+       
+       # limit to 10 batcher processes before raising errors
+       metadata_cardinality_limit: 10
+
+To use metadata as batching criteria, add the ``include_metadata: true`` setting to your receivers's configuration, so that the batch processor can use the available metadata keys.
+
+.. caution:: Batching by metadata can increase memory consumption, as each metadata combination triggers the allocation of a new background task in the Collector. The maximum number of distinct combinations is defined using the ``metadata_cardinality_limit`` setting, which defaults to ``1000``.
 
 Settings
 ======================

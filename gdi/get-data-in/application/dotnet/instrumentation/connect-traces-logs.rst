@@ -7,7 +7,7 @@ Connect .NET trace data with logs for Splunk Observability Cloud
 .. meta::
    :description: Configure .NET logging libraries to include tracing attributes provided automatically by the SignalFx Instrumentation for .NET.
 
-You can configure logging libraries to include tracing attributes provided automatically by the SignalFx Instrumentation for .NET. Use the metadata to correlate traces with log events and explore logs in Splunk Observability Cloud.
+You can configure logging libraries to include tracing attributes provided automatically by the SignalFx Instrumentation for .NET. Use the metadata to correlate traces with log events and explore logs in Splunk.
 
 .. _dotnet-traces-logs-requirements:
 
@@ -157,8 +157,6 @@ See :ref:`logs-processors` for more information on how to define log transformat
 
 ILogger
 -------------------------
-
-
 
 When using the ``NetEscapades.Extensions.Logging.RollingFile`` package, activate the ``IncludeScopes`` option and use the ``json`` formatter. For example:
 
