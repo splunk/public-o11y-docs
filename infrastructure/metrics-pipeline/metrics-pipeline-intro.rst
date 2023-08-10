@@ -173,10 +173,9 @@ Avoid these aggregation issues by using the following options:
 Data dropping rules
 ===============================================================================
 
-When you have a new aggregated metric, you might no longer have any scenario for the original unaggregated data. You
+When you have a new aggregated metric, you might no longer need the original unaggregated data. You
 can also drop a metric without adding an aggregation rule. Data dropping rules let you discard any data you don't want
 to monitor, so you can save storage space and reduce cardinality.
-When you have a new aggregated metric, you might no longer have any scenario for the original unaggregated data. You can also drop a metric without adding an aggregation rule. Data dropping rules let you discard any data you don't want to monitor, so you can save storage space, reduce cardinality, and :ref:`lower your bills <data-dropping-billing>`.
 
 .. note::
     - You must be an admin to drop data.
@@ -189,12 +188,10 @@ Example
 Once you have new aggregated metrics created by aggregation rules, you can drop the raw unaggregated data for
 ``http.server.duration``.
 
-scenario for metrics pipeline management
+Scenario for metrics pipeline management
 ===============================================================================
 
-See the following scenario for metrics pipeline management:
-
-* :ref:`aggregate-drop-use-case`
+See :ref:`aggregate-drop-use-case`.
 
 Create your first metric rules
 ===============================================================================
