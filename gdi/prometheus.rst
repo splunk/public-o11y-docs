@@ -20,12 +20,14 @@ Configure application exporters and receivers for monitoring
    monitors-prometheus/prometheus-node
    monitors-prometheus/prometheus-velero
 
-You can use the OpenTelementry native :ref:`prometheus-receiver` to gather metrics from any service that can export their existing metrics as Prometheus metrics, such as EXAMPLES HERE.
-
-See a complete list of third-party applications compatible with Prometheus in :new-page:`Prometheus' official documentation <https://prometheus.io/docs/instrumenting/exporters/>`.
+You can use the OpenTelementry native :ref:`prometheus-receiver` to gather metrics from any software, tool or service that exposes metrics in the Prometheus format, such as Ansible Tower (AWX), CockroachDB, Docker Daemon, Doorman, Etcd, Flink, Grafana, PATROL, Traefik, or Zipkin. 
 
 * :ref:`prometheus-generic`
 * :ref:`prometheus-receiver`
+* See a complete list of third-party applications compatible with Prometheus in :new-page:`Prometheus' official documentation <https://prometheus.io/docs/instrumenting/exporters/>`. 
+
+Splunk Observability Cloud also offers the following Prometheus integrations:
+
 * :ref:`prometheus-exporter`
 * :ref:`prometheus-go`
 * :ref:`prometheus-nginx-ingress`

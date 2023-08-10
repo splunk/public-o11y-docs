@@ -1,7 +1,7 @@
 .. _prometheus-generic:
 
 *************************************************************
-Integrate with apps compatible with Prometheus
+Integrate with apps exposing Prometheus metrics
 *************************************************************
 
 .. meta::
