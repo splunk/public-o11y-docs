@@ -137,6 +137,6 @@ See GCP Kubernetes Engine content
 
 In order to populate GCP Kubernetes Engine navigators and dashboards, Splunk Observability Cloud needs access to the control plain endpoint of your Kubernetes cluster to be able to display data. 
 
-If you have a private GKE cluster, refer to the :new-page:`official Google documentation on setting up limited access to the public control plane endpoint <https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#public_cp>`, and reach out to Support to obtain the IP ranges that you need to authorize.
+If you have a private GKE cluster, refer to the :new-page:`official Google documentation on setting up limited access to the public control plane endpoint<https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#public_cp>`, and reach out to Support to obtain the IP ranges that you need to authorize.
 
-Alternatively, you can collect Kubernetes data using the OpenTelemetry Collector for Kubernetes and use the provided dashboards and navigators. Learn more at :ref:`get-started-k8s`.
+Alternatively, you can collect Kubernetes data using the OpenTelemetry Collector for Kubernetes and use the provided dashboards and navigators. Learn more at :ref:`get-started-k8s` and :ref:`infrastructure-k8s`.
