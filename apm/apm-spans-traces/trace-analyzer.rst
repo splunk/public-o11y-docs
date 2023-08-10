@@ -28,7 +28,7 @@ To explore your trace data, use the following controls:
     :width: 95%
     :alt: Elements of the Trace Analyzer user interface
 
-#. Filters for time range, environment, workflow, and services, as well as custom filters.
+#. Filters for time range, environment, workflow, services, and tags.
 #. Minimum and maximum trace duration and trace search by ID.
 #. Real time chart of traces with total and errors.
 #. Table view of traces and group metrics with tag grouping. 

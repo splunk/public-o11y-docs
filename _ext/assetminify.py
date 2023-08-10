@@ -24,8 +24,6 @@ def pushassets():
    asset_includes('signalfx-includes.css',"yes")
    asset_includes('signalfx-includes.js',"yes")
    asset_includes('jsonpull-splunk.js',"yes")
-   asset_includes('toggle-sections.js',"yes")
-   asset_includes('toggle-sections.css',"yes")
    asset_includes('customjs.js',"yes")
    asset_includes('yaml-splunk.js',"no")
    asset_includes('showdown.min.js',"no")

@@ -19,6 +19,7 @@ Instrument browser-based web applications for Splunk RUM
    Instrumentation-specific data <browser-rum-instrumentations>
    Errors collected by Browser RUM <browser-rum-errors>
    Browser RUM API reference <browser-rum-api-reference>
+   Troubleshooting <troubleshooting>
 
 Instrument your browser-based web applications to get Real User Monitoring (RUM) data into Splunk Observability Cloud. With Splunk RUM, you can gain insight about the performance and health of your front-end apps, including single-page applications and mobile WebViews.
 
@@ -55,3 +56,4 @@ For detailed installation instructions and requirements, see :ref:`browser-rum-i
 * Learn which errors the Browser RUM agent collects. See :ref:`browser-rum-data-js-errors`
 * :ref:`configure-browser-instrumentation`.
 * :ref:`manual-rum-browser-instrumentation`.
+* :ref:`common-browser-troubleshooting`

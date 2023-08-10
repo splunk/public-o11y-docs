@@ -149,10 +149,10 @@ To create custom metrics, follow the steps depending on the type of metric instr
                r = requests.get(
                   "http://weather/data/city", timeout=options.timeout_millis / 10**3
                )
-            for metadata in r.json():
-               yield Temperature(
-                     metadata["temperature"], {"city.name": metadata["temperature"]}
-               )
+                for metadata in r.json():
+                   yield Temperature(
+                         metadata["temperature"], {"city.name": metadata["temperature"]}
+                   )
 
       3. Create an instrument to take asynchronous measurements:
 

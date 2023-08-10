@@ -46,7 +46,7 @@
 <script
         defer
         onload="renderSplunkSearchUiComponent()"
-        src="https://d38eume8qu1hmc.cloudfront.net/1.1.26/search.js"
+        src="https://d38eume8qu1hmc.cloudfront.net/1.1.30/search.js"
         type="text/javascript">
 </script>
 <script>
@@ -106,7 +106,16 @@
             analytics,
             analyticsConfig: {
                 applicationName: "docs-o11y" // Please follow up with search team to have your own app created
-            }
+            },
+            initialFilters: [
+                {
+                    "name": "source_name_s",
+                    "value": [
+                        "Docs_Observability"
+                    ],
+                    "type": "any"
+                }
+            ]
         };
     };
 

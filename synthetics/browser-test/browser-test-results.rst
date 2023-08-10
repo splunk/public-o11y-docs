@@ -154,7 +154,7 @@ Using the waterfall chart, you can do the following:
 
 Filmstrip
 -----------
-:strong:`Available in the Enterprise Edition.`
+:strong:`Available in Enterprise Edition.`
 
 The filmstrip offers a screenshot of site performance at specific intervals on a timeline, so that you can see how the page responds in real time. By default, the filmstrip provides a screenshot and the time in milliseconds for every visual change as the page loads. You can also use the interval selector to view screenshots for every 100 milliseconds, 500 milliseconds, and 1 second. 
 
@@ -164,7 +164,7 @@ Within the filmstrip, you can use the :guilabel:`Download Screen Captures` butto
 
 Video
 -------
-:strong:`Available in the Enterprise Edition.`
+:strong:`Available in Enterprise Edition.`
 
 In the filmstrip view, you can also view a video of the site loading in real time. This lets you see exactly what a user trying to load your site from the location and device of a particular test run would experience. You can use the :guilabel:`Download Video` button to download this video as an .mp4 file for later reference.  
 

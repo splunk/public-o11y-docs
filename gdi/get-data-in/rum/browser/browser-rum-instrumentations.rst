@@ -42,7 +42,7 @@ The Browser RUM agent collects the following data using the ``documentLoad`` ins
 
 The following annotations are collected from the navigation timings, as specified by the W3C specification for the ``PerformanceNavigationTiming`` interface:
 
-.. list-table:: 
+.. list-table::
    :widths: 20 80
    :header-rows: 1
 
