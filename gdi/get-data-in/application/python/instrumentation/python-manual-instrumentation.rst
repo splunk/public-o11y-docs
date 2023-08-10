@@ -153,9 +153,6 @@ To create custom metrics, follow the steps depending on the type of metric instr
                    yield Temperature(
                          metadata["temperature"], {"city.name": metadata["temperature"]}
                    )
-               yield Temperature(
-                     metadata["temperature"], {"city.name": metadata["temperature"]}
-               )
 
       3. Create an instrument to take asynchronous measurements:
 
