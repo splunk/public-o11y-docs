@@ -14,9 +14,9 @@ Meet these requirements to instrument Go applications for Splunk Observability C
 Supported libraries and frameworks
 =================================================
 
-You should be able to use the instrumentation libraries listed in `OpenTelemetry Registry <https://opentelemetry.io/ecosystem/registry/?language=go&component=instrumentation>`.
+You can use any of the instrumentation libraries listed in the :new-page:`OpenTelemetry Registry <https://opentelemetry.io/ecosystem/registry/?language=go&component=instrumentation>`.
 
-Below you can find instrumentations supported by Splunk. Check the documentation of each instrumentation package to learn how to activate it.
+The following table lists all the instrumentations supported by Splunk. Check the documentation of each instrumentation package to learn how to activate it.
 
 .. list-table:: 
    :header-rows: 1
