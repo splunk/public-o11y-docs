@@ -271,7 +271,7 @@ After the configuration file is updated, restart the Smart Agent.
 You can then use the ``sfxagent.datapoints_sent`` and ``sfxagent.trace_spans_sent`` metrics to estimate the number of data points and spans being sent to Splunk Observability Cloud respectively. You can plot them on a dashboard and filter based on dimensions to ascertain the total per cluster or host.
 
 .. note::
-   The sizing recommendation for logs also accounts for td-agent (Fluentd) that is bundled with the Collector.
+   The sizing recommendation for logs also accounts for td-agent (Fluentd) that can be activated with the Collector.
 
 If a Collector handles both trace and metric data, then both must be accounted for when sizing. For example, 7.5K spans per second plus 10K data points per second would require 1 CPU core.
 
@@ -298,7 +298,7 @@ Configure ``ballastextension`` and the ``memory_limiter`` processor on every Col
 
 .. _deploy-non-prod-updated-config:
 
-6. Deploy the Collector to the non-production environment using the updated configuration file
+1. Deploy the Collector to the non-production environment using the updated configuration file
 ===================================================================================================
 
 Complete the necessary updates and translation of the configuration file, and restart the Collector on the non-production environment using the updated file.

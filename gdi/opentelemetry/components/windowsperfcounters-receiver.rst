@@ -21,7 +21,7 @@ Get started
 Follow these steps to configure and activate the component:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
-   
+
    - :ref:`otel-install-linux`
    - :ref:`otel-install-windows`
    - :ref:`otel-install-k8s`
@@ -61,10 +61,135 @@ configuration file. For example:
          receivers:
            - windowsperfcounters
 
-To collect metrics from Windows performance counters, you need to define metrics using the ``metrics`` field as in the example. You can then reference the metrics you defined from the ``counters.metric`` fields. 
+To collect metrics from Windows performance counters, you need to define metrics using the ``metrics`` field as in the example. You can then reference the metrics you defined from the ``counters.metric`` fields.
 
-Metrics can be of type ``sum`` or ``gauge``. Sum metrics support the ``aggregation`` and ``monotonic`` fields.
+Metric format
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+
+To report metrics in a specific format, define the metric and reference it in the corresponding counter, along with any applicable attributes. Metrics can be of type ``sum`` or ``gauge``. Sum metrics support the ``aggregation`` and ``monotonic`` fields.
+
+
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+
+   - 
+
+      - Field
+      - Description
+      - Value
+      - Default
+   - 
+
+      - ``name``
+      - Metric key or name
+      - String
+      - Name of the counter
+   - 
+
+      - ``description``
+      - Description of the metric or measurement
+      - String
+      - 
+   - 
+
+      - ``unit``
+      - Unit of measurement
+      - String
+      - ``1``
+   - 
+
+      - ``sum``
+      - Representation of a sum metric
+      - Sum configuration
+      - 
+   - 
+
+      - ``gauge``
+      - Representation of a gauge metric
+      - Gauge configuration
+      - 
+
+The following settings apply to sum metrics:
+
+.. list-table::
+   :header-rows: 1
+
+   - 
+
+      - Field
+      - Description
+      - Value
+      - Default
+   - 
+
+      - ``aggregation``
+      - Type of aggregation temporality for the metric
+      - ``cumulative`` or ``delta``
+      - 
+   - 
+
+      - ``monotonic``
+      - Whether the metric value can decrease
+      - ``false``
+      - 
+
+The following settings apply to gauge metrics:
+
+The ``gauge`` configuration doesn't accept settings. The following example emits the ``Memory/Committed Bytes`` counter as the ``bytes.committed`` metric:
+
+.. code:: yaml
+
+   receivers:
+     windowsperfcounters:
+       metrics:
+         bytes.committed:
+           description: the number of bytes committed to memory
+           unit: By
+           gauge:
+       collection_interval: 30s
+       perfcounters:
+       - object: Memory
+         counters:
+           - name: Committed Bytes
+             metric: bytes.committed
+
+   service:
+     pipelines:
+       metrics:
+         receivers: [windowsperfcounters]
+
+
+Configure collection interval and counters
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can configure the collection interval and which performance counters you want to scrape. For example:
+
+.. code-block::
+
+   windowsperfcounters:
+   collection_interval: <duration> # default = "1m"
+   initial_delay: <duration> # default = "1s"
+   metrics:
+      <metric name>:
+         description: <description>
+         unit: <unit type>
+         gauge:
+      <metric name>:
+         description: <description>
+         unit: <unit type>
+         sum:
+         aggregation: <cumulative or delta>
+         monotonic: <true or false>
+   perfcounters:
+      - object: <object name>
+         instances: [<instance name>]*
+         counters:
+         - name: <counter name>
+            metric: <metric name>
+            attributes:
+               <key>: <value>
 
 Scrape at different collection intervals
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
