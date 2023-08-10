@@ -15,7 +15,7 @@ Introduction to service level objective (SLO) management in Splunk Observability
 
 Service level objective (SLO) management is a service level monitoring experience that helps you align your business needs with your engineering reliability goals.
 
-While you have always been able to use the data in Splunk Observability Cloud to monitor, troubleshoot, and optimize your services, including applications and infrastructure, SLO management provides a quantitative way to track the reliability and performance of your services. This allows teams to make the right investment trade-offs between product development and operational work.
+While you have always been able to use the data in Splunk Observability Cloud to monitor, troubleshoot, and optimize your services, SLO management provides a quantitative way to track the reliability and performance of your services. This allows teams to make the right investment trade-offs between product development and operational work.
 
 What is service level monitoring?
 =============================================

@@ -26,7 +26,7 @@ Edit an SLO
 #. On the :strong:`Service Level Objectives (SLOs)` page, select the more icon (|more|) next to the SLO you want to edit.
 #. In the actions menu, select :menuselection:`Edit`.
 #. Make changes to the SLO on the editing screen.
-#. Save your changes.
+#. Select :guilabel:`Save` to save your changes.
 
 Delete an SLO
 ================================
