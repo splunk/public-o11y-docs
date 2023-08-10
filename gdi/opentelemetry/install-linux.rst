@@ -164,12 +164,13 @@ If the td-agent package is upgraded after initial installation, you might need t
       sudo systemctl restart td-agent
 
 
-If you already installed Fluentd on a host, install the Splunk OTel Collector without Fluentd using the ``--without-fluentd`` option. For more information, see :ref:`otel-configuration`. 
+If you already installed Fluentd on a host, install the Collector without Fluentd using the ``--without-fluentd`` option. For more information, see :ref:`otel-configuration`. 
 
 .. _configure-auto-instrumentation:
 
 Configure automatic instrumentation for Java
 --------------------------------------------
+
 You can also automatically instrument your Java applications along with the Collector installation. Auto instrumentation removes the need to install and configure the Java agent separately. See :ref:`auto-instrumentation-java` for the installation instructions. For more information on Java instrumentation, see :ref:`get-started-java`. 
 
 .. _linux-deployments:
