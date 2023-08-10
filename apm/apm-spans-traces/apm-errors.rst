@@ -26,7 +26,7 @@ Each :term:`span` in Splunk APM captures a single operation. Splunk APM consider
 
 A span is considered an error span when any of the following conditions are met: 
 
-* The span's ``span.status``, set through OpenTelemetry instrumentation, is ``Error``. See the OpenTelemetry :new-page:`Tracing API specification <https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#set-status>` to learn more about the ``span.status``. 
+* The span's ``span.status`` is ``Error``. ``span.status`` is set in Splunk Distribution of the OpenTelemetry Collector. See the OpenTelemetry :new-page:`Tracing API specification <https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#set-status>` to learn more about the ``span.status``. 
   
    * See :ref:`apm-http-status` to learn which ``http.status_code`` tag values set ``span.status`` to ``error`` in the Splunk Distribution of the OpenTelemetry Collector.
    * See :ref:`apm-grpc-status` to learn which ``rpc.grpc.status_code`` tag values set ``span.status`` to ``error`` in the Splunk Distribution of the OpenTelemetry Collector.
