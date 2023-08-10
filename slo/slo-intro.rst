@@ -48,7 +48,7 @@ The following table defines key concepts in service level monitoring.
     
     * - Error budget
       - A measurement of how your SLI performs relative to your SLO over a period of time. Error budget measures the difference between actual and desired performance. It determines how unreliable your service might be during this period and serves as a signal when you need to take corrective action.
-      - Our service can respond to 1% of requests in >100 ms over a 7 day period
+      - Our service can respond to 1% of requests in >100 ms over a 7 day period.
 
     * - Burn rate 
       - A unitless measurement of how quickly a service consumes the error budget during the compliance window of the SLO. Burn rate makes the SLO and error budget actionable, showing service owners when a current incident is serious enough to page an on-call responder.
