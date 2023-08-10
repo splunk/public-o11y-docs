@@ -52,7 +52,7 @@ You can activate debug logging to obtain more information about the issue:
 
 You can change the default location by updating the ``SIGNALFX_TRACE_LOG_DIRECTORY`` environment variable. See :ref:`dotnet-debug-logging-settings` for more information and settings.
 
-..note:: If you've enabled debug logging and restarted the application, but you don't find any logs in the previous locations, check that other APM agents aren't running or aren't installed on the host. Multiple APM agents might prevent the SignalFx Instrumentation for .NET from instrumenting the application. 
+.. note:: If you've enabled debug logging and restarted the application, but you don't find any logs in the previous locations, check that other APM agents aren't running or aren't installed on the host. Multiple APM agents might prevent the SignalFx Instrumentation for .NET from instrumenting the application. 
 
 .. caution:: Activate debug logging only when needed. Debug mode requires more resources.
 
