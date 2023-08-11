@@ -21,6 +21,7 @@ extensions = [
     'optimizer',
     'myst_parser',
     'sphinx_tabs.tabs',
+    'sphinxcontrib.mermaid',
     'olly_on_git_hub'
 ]
 
@@ -94,7 +95,10 @@ copybutton_prompt_is_regexp = True
 copybutton_copy_empty_lines = False
 copybutton_line_continuation_character = "\\"
 
-# Link Checker settings
+graphviz_output_format = 'svg'
+nbsphinx_requirejs_path = ''
+mermaid_version=""
+mermaid_output_format = "png"
 
 linkcheck_anchors = False
 linkcheck_workers = 3

@@ -39,8 +39,44 @@ Default pipelines for logs
 
 The following diagram shows the default logs pipeline:
 
-.. image:: /_images/collector/pipeline-logs.png
-  :alt: Default logs pipeline.  
+.. mermaid:: 
+
+   flowchart LR
+      %% LR indicates the direction (left-to-right)
+
+      %% You can define classes to style nodes and other elements
+      classDef receiver fill:#00FF00
+      classDef processor fill:#FF9900
+      classDef exporter fill:#FF33FF
+
+      %% Each subgraph determines what's in each category
+      subgraph Receivers
+         direction LR
+         logs/signalfx/signalfx/in:::receiver
+         logs/signalfx/smartagent/processlist:::receiver
+         logs/fluentforward:::receiver
+         logs/otlp:::receiver
+      end
+
+      subgraph Processor
+         direction LR
+         logs/signalfx/memory_limiter:::processor --> logs/signalfx/batch:::processor --> logs/signalfx/resourcedetection:::processor
+         logs/memory_limiter:::processor --> logs/batch:::processor --> logs/resourcedetection:::processor
+      end
+
+      subgraph Exporters
+         direction LR
+         logs/signalfx/signalfx/out:::exporter
+         logs/splunk_hec:::exporter
+      end
+
+      %% Connections beyond categories are added later
+      logs/signalfx/signalfx/in --> logs/signalfx/memory_limiter
+      logs/signalfx/resourcedetection --> logs/signalfx/signalfx/out
+      logs/signalfx/smartagent/processlist --> logs/signalfx/memory_limiter
+      logs/fluentforward --> logs/memory_limiter
+      logs/resourcedetection --> logs/splunk_hec
+      logs/otlp --> logs/memory_limiter
 
 Learn more about these receivers:
 
