@@ -44,10 +44,11 @@ The following pre-requisites apply:
       <h3>Select a role for your GCP service account<a name="gcp-one" class="headerlink" href="#gcp-one" title="Permalink to this headline">¶</a></h3>
    </embed>
 
-* If you want to use the :strong:`Project Viewer` role, skip to :ref:`Configure GCP <gcp-two>`. Choosing this role ensures that any functionality update implemented in Infrastructure Monitoring doesn't require changes to your GCP setup.
-* If you want to use a role with more restrictive permissions than those available to Project Viewer, make sure your selected role has sufficient permissions to connect to Infrastructure Monitoring. If your GCP service account role has insufficient permissions, you'll get an error message when trying to connect to Infrastructure Monitoring. Review and activate any missing permissions, or change the role to Project Viewer.
+If you use GCP's :strong:`Project Viewer` role, you won't require any changes to your GCP setup to use Splunk Observability Cloud, and any update will be applied automatically. 
 
-The following table specifies the permissions required for GCP integrations.
+If you want to use a more restrictive role than Project Viewer, make sure your selected role has sufficient permissions to connect to Observability Cloud, otherwise you'll get an error message when trying to connect. Review and activate any missing permissions, or change the role to Project Viewer.
+
+The following table specifies the permissions required for GCP integrations:
 
 .. list-table::
    :header-rows: 1
