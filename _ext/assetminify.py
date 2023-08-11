@@ -25,7 +25,6 @@ def pushassets():
    asset_includes('signalfx-includes.js',"yes")
    asset_includes('jsonpull-splunk.js',"yes")
    asset_includes('customjs.js',"yes")
-   asset_includes('mermaid.js', "yes")
    asset_includes('yaml-splunk.js',"no")
    asset_includes('showdown.min.js',"no")
    return final_conf_includes
