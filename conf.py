@@ -98,7 +98,6 @@ copybutton_line_continuation_character = "\\"
 graphviz_output_format = 'svg'
 nbsphinx_requirejs_path = ''
 mermaid_version=""
-mermaid_output_format = "png"
 
 linkcheck_anchors = False
 linkcheck_workers = 3
