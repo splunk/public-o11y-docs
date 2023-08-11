@@ -31,6 +31,7 @@ Follow these steps to set up a Browser test:
 #. To add steps and synthetic transactions to your Browser test, select :guilabel:`Edit steps or synthetic transactions`. See :ref:`add-transactions` to learn more. 
 #. As you build your test, you can use :guilabel:`Try now` to check that the configuration of your test is valid. Run results aren't stored. For more, see :ref:`try-now`. 
 #. (Optional) Add a wait time before a step executes. See, :ref:`browser-wait-times`.
+#, (Optional) 
 #. Save your test. 
 
 
@@ -125,9 +126,9 @@ When activated, this feature is used to enforce the validation of expired, inval
 .. note::
  When testing pre-production environments that have self-signed or invalid certificates, it's best to leave SSL/TLS validation feature deactivated. 
 
-.. _browser-exclude:
 
 
+.. _browser-wait-times:
 
 Wait times 
 ---------------------
@@ -149,20 +150,15 @@ The following image shows how to configure a test to go to a URL, wait for 10 se
    :alt: This image shows a browser test with three steps: go to url, wait 20 seconds, then log in. 
 
 
-.. _browser-wait-times:
-
-
+.. _collect-interactive-metrics:
 
 Collect interactive metrics
 ---------------------------------
-These are the type of interactive metrics Splunk Synthetic Monitoring collects: 
+Interactive metrics are on by default. You can turn off interactive metrics in advanced settings to speed up test durations. If you turn of interactive metrics then some metrics might be missing from your test. These are the type of interactive metrics Splunk Synthetic Monitoring collects: 
 
 * First CPU idle: Time until the page is minimally interactive and responds to user input.
-* Time to interactive: Time from the start of the first request until receiving the first byte of the first non-redirect request. ``3xx`` redirects will increase this time. This metric is available for HTTP Uptime tests, but not Port Uptime tests.
+* Time to interactive: Time from the start of the first request until receiving the first byte of the first non-redirect request. ``3xx`` redirects increases this time. This metric is available for HTTP Uptime tests, but not Port Uptime tests.
 * Lighthouse score: A weighted aggregation of several Browser test metric values calculated using v6 of the Lighthouse scoring algorithm. See :new-page:`https://web.dev/vitals/` in the Google developer documentation to learn more about Lighthouse scoring.
-
-.. _collect-interactive-metrics:
-
 
 Example
 ==================
