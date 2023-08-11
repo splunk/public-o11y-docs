@@ -14,7 +14,9 @@ Meet these requirements to instrument Go applications for Splunk Observability C
 Supported libraries and frameworks
 =================================================
 
-The Splunk Distribution of OpenTelemetry Go can instrument the following libraries. Check the documentation of each instrumentation package to learn how to activate it.
+You can use any of the instrumentation libraries listed in the :new-page:`OpenTelemetry Registry <https://opentelemetry.io/ecosystem/registry/?language=go&component=instrumentation>`.
+
+The following table lists all the instrumentations supported by Splunk. Check the documentation of each instrumentation package to learn how to activate it.
 
 .. list-table:: 
    :header-rows: 1
@@ -25,38 +27,14 @@ The Splunk Distribution of OpenTelemetry Go can instrument the following librari
      - Instrumentation package
    * - database/sql
      - :new-page:`splunksql <https://pkg.go.dev/github.com/signalfx/splunk-otel-go/instrumentation/database/sql/splunksql/>`
-   * - host
-     - :new-page:`host <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/host>`
-   * - net/http
-     - :new-page:`otelhttp <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp>`
-   * - net/http/httptrace
-     - :new-page:`httptrace <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/net/http/httptrace/otelhttptrace>`
-   * - runtime
-     - :new-page:`runtime <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/runtime/>`
-   * - github.com/aws/aws-sdk-go-v2
-     - :new-page:`otelaws <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/github.com/aws/aws-sdk-go-v2/otelaws>`
-   * - github.com/bradfitz/gomemcache
-     - :new-page:`otelmemcache <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/github.com/bradfitz/gomemcache/memcache/otelmemcache>`
    * - github.com/confluentinc/confluent-kafka-go/kafka
      - :new-page:`splunkkafka <https://pkg.go.dev/github.com/signalfx/splunk-otel-go/instrumentation/github.com/confluentinc/confluent-kafka-go/kafka/splunkkafka>`
    * - github.com/confluentinc/confluent-kafka-go/v2/kafka
      - :new-page:`splunkkafka <https://pkg.go.dev/github.com/signalfx/splunk-otel-go/instrumentation/github.com/confluentinc/confluent-kafka-go/v2/kafka/splunkkafka>`
-   * - github.com/emicklei/go-restful
-     - :new-page:`otelrestful <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/github.com/emicklei/go-restful/otelrestful>`
-   * - github.com/gin-gonic/gin
-     - :new-page:`otelgin <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/github.com/gin-gonic/gin/otelgin>`
    * - github.com/go-chi/chi
      - :new-page:`splunkchi <https://pkg.go.dev/github.com/signalfx/splunk-otel-go/instrumentation/github.com/go-chi/chi/splunkchi>`
-   * - github.com/go-kit/kit
-     - :new-page:`otelkit <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/github.com/go-kit/kit/otelkit>`
-   * - github.com/go-sql-driver/mysql
-     - :new-page:`splunkmysql <https://pkg.go.dev/github.com/signalfx/splunk-otel-go/instrumentation/github.com/go-sql-driver/mysql/splunkmysql>`
-   * - github.com/gocql/gocql
-     - :new-page:`otelgocql <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/github.com/gocql/gocql/otelgocql>`
    * - github.com/gomodule/redigo
      - :new-page:`splunkredigo <https://pkg.go.dev/github.com/signalfx/splunk-otel-go/instrumentation/github.com/gomodule/redigo/splunkredigo>`
-   * - github.com/gorilla/mux
-     - :new-page:`otelmux <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/github.com/gorilla/mux/otelmux>`
    * - github.com/graph-gophers/graphql-go
      - :new-page:`splunkgraphql <https://pkg.go.dev/github.com/signalfx/splunk-otel-go/instrumentation/github.com/graph-gophers/graphql-go/splunkgraphql>`
    * - github.com/jackc/pgx
@@ -67,26 +45,16 @@ The Splunk Distribution of OpenTelemetry Go can instrument the following librari
      - :new-page:`splunksqlx <https://pkg.go.dev/github.com/signalfx/splunk-otel-go/instrumentation/github.com/jmoiron/sqlx/splunksqlx>`
    * - github.com/julienschmidt/httprouter
      - :new-page:`splunkhttprouter <https://pkg.go.dev/github.com/signalfx/splunk-otel-go/instrumentation/github.com/julienschmidt/httprouter/splunkhttprouter/>`
-   * - github.com/labstack/echo
-     - :new-page:`otelecho <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/github.com/labstack/echo/otelecho>`
    * - github.com/lib/pq
      - :new-page:`splunkpq <https://pkg.go.dev/github.com/signalfx/splunk-otel-go/instrumentation/github.com/lib/pq/splunkpq>`
    * - github.com/miekg/dns
      - :new-page:`splunkdns <https://pkg.go.dev/github.com/signalfx/splunk-otel-go/instrumentation/github.com/miekg/dns/splunkdns>`
    * - gopkg.in/olivere/elastic
      - :new-page:`splunkelastic <https://pkg.go.dev/github.com/signalfx/splunk-otel-go/instrumentation/gopkg.in/olivere/elastic/splunkelastic>`
-   * - github.com/Shopify/sarama
-     - :new-page:`otelsarama <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/github.com/Shopify/sarama/otelsarama>`
    * - github.com/syndtr/goleveldb/leveldb
      - :new-page:`splunkleveldb <https://pkg.go.dev/github.com/signalfx/splunk-otel-go/instrumentation/github.com/syndtr/goleveldb/leveldb/splunkleveldb/>`
    * - github.com/tidwall/buntdb
      - :new-page:`splunkbuntdb <https://pkg.go.dev/github.com/signalfx/splunk-otel-go/instrumentation/github.com/tidwall/buntdb/splunkbuntdb>`
-   * - go.mongodb.org/mongo-driver
-     - :new-page:`otelmongo <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/go.mongodb.org/mongo-driver/mongo/otelmongo>`
-   * - google.golang.org/grpc
-     - :new-page:`otelgrpc <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc>`
-   * - gopkg.in/macaron.v1
-     - :new-page:`otelmacaron <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/gopkg.in/macaron.v1/otelmacaron>`
    * - k8s.io/client-go
      - :new-page:`splunkclient-go <https://pkg.go.dev/github.com/signalfx/splunk-otel-go/instrumentation/k8s.io/client-go/splunkclient-go>`
 

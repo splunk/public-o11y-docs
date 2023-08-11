@@ -34,7 +34,7 @@ The following image shows the architecture for the standalone mode:
 Host monitoring (agent) mode deployed with the installer script or Helm chart
 --------------------------------------------------------------------------------------
 
-The default configurations for the :ref:`Linux installer script <otel-install-linux>`, :ref:`Windows installer script <otel-install-windows>`, and for certain :ref:`Helm charts <otel-install-k8s>` deploy the Collector with Fluentd.
+The default configurations for the :ref:`Linux installer script <otel-install-linux>`, :ref:`Windows installer script <otel-install-windows>`, and for certain :ref:`Helm charts <otel-install-k8s>` deploy the Collector without Fluentd.
 
 The architecure looks as follows:
 

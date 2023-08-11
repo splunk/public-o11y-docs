@@ -7,30 +7,45 @@ Monitor Google Cloud Platform services
 .. meta::
   :description: Get started monitoring GCP infrastructure resources with Splunk Observability Cloud.
 
-You can monitor the following :ref:`Google Cloud Platform (GCP) services <gcp-integrations>` in Splunk Observability Cloud, which provides infrastructure monitoring features using Google Cloud Operations. See the Google Cloud documentation for more information.
+You can monitor the following :ref:`Google Cloud Platform (GCP) services <gcp-integrations>` in Splunk Observability Cloud, which provides infrastructure monitoring features using Google Cloud Operations. See the official Google Cloud documentation for more information.
 
-You can also export and monitor data from these sources running in your GCP environment, as described in the table.
+About GCP data
+===========================================
+
+.. _gcp-unique-id:
+
+Uniquely identifying Google Cloud Platform resources
+------------------------------------------------------------
+
+All of the metrics that the StackDriver integration sends contain a dimension called ``gcp_id``. The value of this dimension starts with the project ID that contains the resource followed by ``_`` (underscore) and then other properties specific to that resource. If you install collectd on a Compute Engine instance using the :new-page:`standard install script <https://github.com/signalfx/signalfx-collectd-installer>` this dimension is automatically added.
+
+The simplest way to manually send metrics with this dimension to discover the unique ID value is to find a time series that contains this dimension using the Metadata Catalog. The time series should contain other dimensions that give a more friendly identification to the underlying GCP resource.
+
+Dimensions
+------------------------------------------------------------
+
+The metric time series (MTS) associated with GCP metrics have the following generic dimensions, common to all services:
 
 .. list-table::
   :header-rows: 1
-  :widths: 30, 20, 50
+  :width: 100
 
-  * - :strong:`Get data in`
-    - :strong:`Monitor`
+  * - :strong:`Dimension name`
     - :strong:`Description`
 
-  * - :ref:`get-started-k8s`
-    - :ref:`infrastructure-k8s`
-    - Collect metrics and logs from Kubernetes clusters running in Google Compute Engine (GCE) or Google Kubernetes Engine (GKE) instances.
+  * - ``gcp_id``
+    - unique identifier for GCP objects
 
-  * - - :ref:`get-started-linux`
-      - :ref:`get-started-windows`
-    - :ref:`infrastructure-hosts`
-    - Collect metrics and logs from Linux and Windows hosts running in GCE instances.
+  * - ``project_id``
+    - project ID of the monitored resource
 
-  * - :ref:`get-started-application`
-    - :ref:`get-started-apm`
-    - Collect application metrics and spans running in hosts or Kubernetes clusters.
+  * - ``monitored_resource``
+    - name of the monitored resource
+
+  * - ``service``
+    - service to which the metric belongs
+
+Moreover, each service also has a dimension that identifies the resource to which the metric belongs to. For example, the ``instance_id`` dimension identifies compute instances, and the ``bucket_name`` dimension identifies storage buckets.
 
 .. _monitor-gcp-services:
 
@@ -62,60 +77,66 @@ Follow these steps to analyze problems with GCP services from the Infrastructure
 
   7. Select a specific instance you want to investigate further to view all the metadata and key metrics for the instance. For every instance, Observability Cloud provides a default dashboard. Analyze all the available metadata about the cloud service the instance is running in, the instance itself, and any custom tags associated with the instance. The default dashboard provides metric time series (MTS) for key metrics.
 
+.. _monitor-gcp-sources:
+
+Monitor data from other sources
+=====================================================
+
+You can also export and monitor data from these sources running in your GCP environment, as described in the table.
+
+.. list-table::
+  :header-rows: 1
+  :widths: 30, 20, 50
+
+  * - :strong:`Get data in`
+    - :strong:`Monitor`
+    - :strong:`Description`
+
+  * - :ref:`get-started-k8s`
+    - :ref:`infrastructure-k8s`
+    - Collect metrics and logs from Kubernetes clusters running in Google Compute Engine (GCE) or Google Kubernetes Engine (GKE) instances.
+
+  * - - :ref:`get-started-linux`
+      - :ref:`get-started-windows`
+    - :ref:`infrastructure-hosts`
+    - Collect metrics and logs from Linux and Windows hosts running in GCE instances.
+
+  * - :ref:`get-started-application`
+    - :ref:`get-started-apm`
+    - Collect application metrics and spans running in hosts or Kubernetes clusters.
+
 .. _gcp-dashboards:
 
 Use default dashboards to monitor GCP services
 =====================================================
 
-Splunk Observability Cloud provides default dashboards for supported GCP services. Default dashboards are available in dashboard groups based on the GCP service that a dashboard represents data for.
+Splunk Observability Cloud provides default dashboards for supported GCP services, available in dashboard groups based on the GCP service the dashboard represents data for.
 
 To find default dashboards for GCP services, select :strong:`Navigation menu > Dashboards` and search for the GCP service you want to view dashboards for.
 
 Explore built-in content
 ------------------------------
 
-Observability Cloud collects data from many cloud services. To see all of the navigators provided for data collected in your organization, go to the Infrastructure page. To see all the pre-built dashboards for data collected in your organization, select :strong:`Dashboards > Built-in`.
+Observability Cloud collects data from many cloud services: 
 
-.. note::
+* To see all of the navigators provided for data collected in your organization, go to the Infrastructure page. 
+* To see all the pre-built dashboards for data collected in your organization, select :strong:`Dashboards > Built-in`.
 
-  GCP Compute Engine instances are powered by their respective public cloud service as well as the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`. You need both for all the charts to display data in the built-in dashboards.
+Keep in mind the constraints for GCP Compute Engine and GCP Kubernetes Engine content described in the next sections.
 
-  - If you have only the public cloud service and the Smart Agent (now deprecated) configured, some charts in the built-in dashboards for GCP Compute Engine instances display no data.
-  - If you have only the public cloud service configured, you can see all the cards representing the services where data come from, but some charts in the built-in dashboards for GCP Compute Engine instances display no data.
-  - If you have only Smart Agent configured, GCP Compute Engine instance navigator isn't available.
+See GCP Compute Engine content 
++++++++++++++++++++++++++++++++++++
 
-.. _gcp-unique-id:
+GCP Compute Engine instances are powered by their respective public cloud service as well as the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`. You need both for all the charts to display data in the built-in dashboards.
 
-Uniquely identifying Google Cloud Platform resources
-=============================================================================
+- If you have only the public cloud service configured, you can see all the cards representing the services where data come from, but some charts in the built-in dashboards for GCP Compute Engine instances display no data.
+- If you have only the public cloud service and the Smart Agent (deprecated) configured, some charts in the built-in dashboards for GCP Compute Engine instances display no data. 
 
-All of the metrics that the StackDriver integration sends contain a dimension called ``gcp_id``. The value of this dimension starts with the project ID that contains the resource followed by ``_`` (underscore) and then other properties specific to that resource. If you install collectd on a Compute Engine instance using the :new-page:`standard install script <https://github.com/signalfx/signalfx-collectd-installer>` this dimension is automatically added.
+See GCP Kubernetes Engine content 
++++++++++++++++++++++++++++++++++++
 
-The simplest way to manually send metrics with this dimension to discover the unique ID value is to find a time series that contains this dimension using the Metadata Catalog. The time series should contain other dimensions that give a more friendly identification to the underlying GCP resource.
+In order to populate GCP Kubernetes Engine navigators and dashboards, Splunk Observability Cloud needs access to the control plain endpoint of your Kubernetes cluster to be able to display data. 
 
-Dimensions
-===========================================
+If you have a private GKE cluster, refer to the :new-page:`official Google documentation on setting up limited access to the public control plane endpoint<https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#public_cp>`, and reach out to Support to obtain the IP ranges that you need to authorize.
 
-The metric time series (MTS) associated with GCP metrics have the following generic dimensions, common to all services:
-
-.. list-table::
-  :header-rows: 1
-  :width: 100
-
-  * - :strong:`Dimension name`
-    - :strong:`Description`
-
-  * - ``gcp_id``
-    - unique identifier for GCP objects
-
-  * - ``project_id``
-    - project ID of the monitored resource
-
-  * - ``monitored_resource``
-    - name of the monitored resource
-
-  * - ``service``
-    - service to which the metric belongs
-
-Moreover, each service also has a dimension that identifies the resource to which the metric belongs to. For example, the ``instance_id`` dimension identifies compute instances, and the ``bucket_name`` dimension identifies storage buckets.
-
+Alternatively, you can collect Kubernetes data using the OpenTelemetry Collector for Kubernetes and use the provided dashboards and navigators. Learn more at :ref:`get-started-k8s` and :ref:`infrastructure-k8s`.
