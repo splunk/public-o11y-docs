@@ -117,16 +117,17 @@ receivers:
     type: gitlab
     host: localhost
     port: 9229
-exporters:
-  logging:
+
+# ... Other sections
+
 service:
   pipelines:
     metrics:
       receivers:
         - smartagent/gitlab-sidekiq
         - smartagent/gitlab-workhorse
-      exporters:
-        - logging
+
+# ... Other sections
 ```
 
 ### Configuration options

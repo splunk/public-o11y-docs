@@ -13,6 +13,7 @@ Components
     :hidden:
 
     components/attributes-processor
+    components/basic-auth-extension
     components/batch-processor
     components/databricks-receiver
     components/filter-processor
@@ -298,6 +299,8 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
 
    * - Name
      - Description
+   * - :ref:`basic-auth-extension` (``basicauth``)
+     - Implements both ``configauth.ServerAuthenticator`` and ``configauth.ClientAuthenticator`` to authenticate clients and servers using basic authentication. The authenticator type has to be set to ``basicauth``.      
    * - ``docker_observer``
      - Detects and reports container endpoints discovered through the Docker API. Only containers that are in the state of ``Running`` and not ``Paused`` emit endpoints.
    * - ``ecs_observer``

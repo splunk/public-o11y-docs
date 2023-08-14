@@ -1,11 +1,11 @@
 .. _splunk-otel-azure:
 
-************************************************************
-Instrument Azure functions for Splunk Observability Cloud
-************************************************************
+***********************************************************************
+Instrument .NET Azure functions for Splunk Observability Cloud
+***********************************************************************
 
 .. meta::
-   :description: Learn how to instrument your Azure functions to export spans to Splunk Observability Cloud. Both in-process and isolated functions are supported.
+   :description: Learn how to instrument your .NET Azure functions to export spans to Splunk Observability Cloud. Both in-process and isolated functions are supported.
 
 By instrumenting .NET Azure functions you can send spans to Splunk Observability Cloud every time your functions run. You can instrument both isolated worker process and in-process functions.
 

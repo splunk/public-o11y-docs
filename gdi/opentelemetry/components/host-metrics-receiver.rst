@@ -304,6 +304,10 @@ process scraper
 
    <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/processscraper.yaml"></div>
 
+
+.. include:: /_includes/gdi/default-translation-metrics.rst
+
+
 Resource attributes
 --------------------------
 

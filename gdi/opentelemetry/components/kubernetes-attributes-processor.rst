@@ -314,6 +314,17 @@ The following table shows the configuration options for the Kubernetes attribute
 
    <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/processor/k8sattributes.yaml"></div>
 
+Metrics
+=====================
+
+The following metrics, resource attributes, and attributes are available.
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/k8sattributesprocessor.yaml"></div>
+
+.. include:: /_includes/activate-deactivate-native-metrics.rst
+
 Known limitations
 =======================
 

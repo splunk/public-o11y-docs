@@ -50,6 +50,8 @@ If you see a message such as "2021-03-17 02:14:44 +0000 [debug]: #0 connect new 
 Collector isn't configured properly
 =========================================
 
+.. note:: Fluentd is part of the Splunk Distribution of OpenTelemetry Collector, but deactivated by default for Linux and Windows. To activate it, use the ``--with-fluentd`` option when installing the Collector for Linux, or the ``with_fluentd = 1`` option when installing the Collector for Windows.
+
 Do the following to check the Collector configuration:
 
 #. Go to ``http://localhost:55679/debug/tracez`` to check zPages for samples. You might need to configure the endpoint.
@@ -59,6 +61,7 @@ Do the following to check the Collector configuration:
 
 Test the Collector by sending synthetic data
 ==================================================================================
+
 You can manually generate logs. By default, Fluentd monitors journald and /var/log/syslog.log for events.
 
 .. code-block:: bash
