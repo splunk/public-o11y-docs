@@ -154,7 +154,7 @@ The following image shows how to configure a test to go to a URL, wait for 10 se
 
 Collect interactive metrics
 ---------------------------------
-Interactive metrics are on by default. You can turn off interactive metrics in advanced settings to speed up test durations. If you turn of interactive metrics then some metrics might be missing from your test. These are the type of interactive metrics Splunk Synthetic Monitoring collects: 
+Interactive metrics are on by default. You can turn off interactive metrics in advanced settings to speed up test durations. If you turn off interactive metrics then some metrics might be missing from your test. These are the type of interactive metrics Splunk Synthetic Monitoring collects: 
 
 * First CPU idle: Time until the page is minimally interactive and responds to user input.
 * Time to interactive: Time from the start of the first request until receiving the first byte of the first non-redirect request. ``3xx`` redirects increases this time. This metric is available for HTTP Uptime tests, but not Port Uptime tests.
