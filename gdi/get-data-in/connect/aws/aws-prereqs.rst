@@ -22,7 +22,9 @@ In AWS you manage access by creating policies and attaching them to IAM identiti
 
 For most AWS regions, use :guilabel:`External ID` to authenticate. Follow these steps: 
 
-* An :strong:`External ID` for Splunk Observability Cloud. An external ID is a random string used to establish a trust relationship between Splunk Observability Cloud and your AWS account. It's automatically generated for you when you create a new AWS integration in Splunk Observability Cloud. See :new-page:`How to use an external ID when granting access to your AWS resources to a third party <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html>` in AWS documentation.
+* An :strong:`External ID` for Splunk Observability Cloud. An external ID is a random string used to establish a trust relationship between Splunk Observability Cloud and your AWS account. It's automatically generated for you when you create a new AWS integration in Splunk Observability Cloud. 
+  * To learn how to create an External ID, see :new-page:`How to use an external ID when granting access to your AWS resources to a third party <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html>` in AWS documentation. 
+  * You can also create an External ID using the API. See :ref:`aws-api-create-id`.
 * An :ref:`Identity and Access Management (IAM) policy <aws-iam-policy>`. 
 * An :ref:`AWS IAM role <aws-iam-role>`. 
 
@@ -36,7 +38,7 @@ Splunk Observability Cloud refers to an IAM policy to collect data from every su
 To create a new AWS IAM policy, follow these steps:
 
 #. Log into your Amazon Web Services account and look for the :guilabel:`Identity and Access Management (IAM)` service.
-#. Create a new policy. In the :strong:`JSON` tab, replace the placeholder JSON with the pertinent AWS IAM policy JSON. Guided setup provides this policy in the :guilabel:`Prepare AWS Account` step. See also some :ref:`policy examples <aws-api-create-policy-role>`.
+#. Create a new policy. In the :strong:`JSON` tab, replace the placeholder JSON with the pertinent AWS IAM policy JSON. Guided setup provides this policy in the :guilabel:`Prepare AWS Account` step. See also some :ref:`policy examples <review-aws-iam-policy>`.
 #. Follow the instructions to complete the process and create the policy.
 
 .. :note:: The default AWS IAM policy supports metrics and log collection. To learn how to add support for CloudWatch Metric Streams, see :ref:`aws-wizard-metricstreams`.
