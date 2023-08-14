@@ -25,13 +25,19 @@ Set up a Browser test
 Follow these steps to set up a Browser test:
 
 #. From the landing page of Splunk Observability Cloud, navigate to Splunk Synthetic Monitoring. 
+
 #. Under Tests, select :guilabel:`Add New Test` and select :guilabel:`Browser Test` from the drop-down list. The test creation view opens. 
+
 #. In the :guilabel:`Name` field, enter a name for your test. 
+
 #. In the :guilabel:`Go to URL` field, enter the URL for the page you want to test, including ``http`` or ``https``.
+
 #. To add steps and synthetic transactions to your Browser test, select :guilabel:`Edit steps or synthetic transactions`. See :ref:`add-transactions` to learn more. 
+
 #. As you build your test, you can use :guilabel:`Try now` to check that the configuration of your test is valid. Run results aren't stored. For more, see :ref:`try-now`. 
+
 #. (Optional) Add a wait time before a step executes. See, :ref:`browser-wait-times`.
-#. (Optional) 
+
 #. Save your test. 
 
 
