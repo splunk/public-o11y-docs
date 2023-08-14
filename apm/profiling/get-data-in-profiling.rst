@@ -207,15 +207,25 @@ If you need to set up AlwaysOn Profiling with a collector in data forwarding (ga
 
    #. An OTLP gRPC receiver
    #. An OTLP exporter pointed at the collector in data forwarding (gateway) mode :strong:`(3)`
-   #. A logs pipeline that connects the receiver and the exporter, for example:
+   #. A logs pipeline that connects the receiver and the exporter. See the default agent config with the necessary adjustment to use to send to a gateway on GitHub: :newpage:`https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml#L195-L204`.`
+      For example:
 
    .. code-block:: yaml
 
-      #exporters: [splunk_hec, splunk_hec/profiling]
-      # Use instead when sending to gateway
-      exporters: [otlp]
+      service:
+         pipelines:
+            logs:
+               receivers: [fluentforward, otlp]
+               processors:
+               - memory_limiter
+               - batch
+               - resourcedetection
+               #- resource/add_environment
+               #exporters: [splunk_hec, splunk_hec/profiling]
+               # Use instead when sending to gateway
+               exporters: [otlp]
 
-#. The collector in data forwarding (gateway) mode :strong:`(3)` default configuration: 
+#. The collector in data forwarding (gateway) mode :strong:`(3)` with the following components:
       #. An OTLP gRPC receiver
       #. A splunk_hec exporter
       #. A logs pipeline that connects the receiver and the exporter
