@@ -47,7 +47,7 @@ To activate this integration, add the following to your Collector configuration:
 ```
 receivers:
   smartagent/sqlserver:
-    type: telegraf/sqserver
+    type: telegraf/sqlserver
     ...  # Additional config
 ```
 
