@@ -35,7 +35,7 @@ These features help you browse the logs table:
 
   #. You can customize the logs table display by adjusting the column width or dragging and dropping columns to a new order.
 
-
+.. image::
 .. |Settings| image:: /_images/logs/log-observer-raw-log-gear-icon.png
                :width: 20
                :alt: Settings icon
