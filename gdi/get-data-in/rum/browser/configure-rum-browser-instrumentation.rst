@@ -45,7 +45,7 @@ Use the following settings to configure the Browser RUM agent:
      - Description
    * - ``realm``
      - String
-     - The name of your organization's realm, for example, ``us0``. To find the realm name of your account, open the navigation menu in Observability Cloud, select :menuselection:`Settings`, and then select your username. The realm name appears in the :guilabel:`Organizations` section.
+     - The name of your organization's realm, for example, ``us0``. To find the realm name of your account, open the navigation menu in Splunk Observability Cloud, select :menuselection:`Settings`, and then select your username. The realm name appears in the :guilabel:`Organizations` section.
    * - ``rumAccessToken``
      - String (required)
      - RUM token that authorizes the agent to send telemetry data to Splunk Observability Cloud. To generate a RUM access token, see :ref:`rum-access-token`.
@@ -118,7 +118,7 @@ To activate or deactivate specific Browser RUM instrumentations, compose and pas
 
 The following table contains all the properties supported by the ``instrumentations`` option:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 20 10 70
 
@@ -142,7 +142,7 @@ The following table contains all the properties supported by the ``instrumentati
      - Activates the collection of user interactions, such as clicks or key presses. See :ref:`browser-rum-data-user-interactions`.
    * - ``interactions.eventNames``
      - 
-     - Array of DOM events that the instrumentation captures as user interactions. You can access the default values by accessing the ``SplunkRum.DEFAULT_AUTO_INSTRUMENTED_EVENT_NAMES`` property. 
+     - Array of DOM events that the instrumentation captures as user interactions. You can access the default values by accessing the ``SplunkRum.DEFAULT_AUTO_INSTRUMENTED_EVENT_NAMES`` property.
    * - ``longtask``
      - ``true``
      - Activates the collection of long tasks. See :ref:`browser-rum-data-long-tasks`.

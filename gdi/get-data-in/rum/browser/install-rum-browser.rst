@@ -26,7 +26,15 @@ The Browser RUM agent supports the following browser versions:
 
 All your pages, assets, and requests must be securely loaded over the HTTPS protocol.
 
-.. note:: Splunk APM is not required to instrument Splunk RUM for Browser. 
+.. note:: Splunk APM is not required to instrument Splunk RUM for Browser.
+
+Decide which version to run in your environment
+=======================================================
+
+Latest updates automatically apply whenever Splunk RUM releases a new version. In preproduction, use ``latest`` to try out the most recent version of Splunk RUM.
+
+In production environments, use the pinned version which was previously tested in preproduction and update the production version on a monthly cycle.
+
 
 .. _rum-browser-install:
 
@@ -41,10 +49,12 @@ Select one of the following methods to instrument your web application:
 * :ref:`rum-browser-install-self-hosted`
 * :ref:`rum-browser-install-npm`
 
-:strong:`Tip:` To generate all the installation commands for your environment and application, use the Browser Instrumentation guided setup. To access the Browser Instrumentation guided setup, follow these steps:
+.. Note:: To generate all the installation commands for your environment and application, use the Browser Instrumentation guided setup.
 
-#. Log in to Observability Cloud.
-#. In the navigation menu, select :menuselection:`Data Management`. 
+To access the Browser Instrumentation guided setup, follow these steps:
+
+#. Log in to Splunk Observability Cloud.
+#. In the navigation menu, select :menuselection:`Data Management`.
 #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 #. In the integration filter menu, select :guilabel:`By Use Case`.
 #. Select the :guilabel:`Monitor user experience` use case.
@@ -64,12 +74,12 @@ Follow these steps to instrument your application with the CDN:
 
    .. code-block:: html
 
-      /*
+      <!--//
 
       IMPORTANT: Replace the <version> placeholder in the src URL with a
       version from https://github.com/signalfx/splunk-otel-js-web/releases
 
-      */
+      //-->
       <script src="https://cdn.signalfx.com/o11y-gdi-rum/<version>/splunk-otel-web.js" crossorigin="anonymous"></script>
       <script>
          SplunkRum.init({
@@ -83,11 +93,11 @@ Follow these steps to instrument your application with the CDN:
 
    * In the URL of the script, replace ``<version>`` with a version from the :new-page:`Releases page in GitHub <https://github.com/signalfx/splunk-otel-js-web/releases>`.
 
-   * ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+   * ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
 
-         1. Open the navigation menu in Observability Cloud.
+         1. Open the navigation menu in Splunk Observability Cloud.
          2. Select :menuselection:`Settings`.
-         3. Select your username. 
+         3. Select your username.
 
       The realm name appears in the :guilabel:`Organizations` section.
 
@@ -127,7 +137,7 @@ Follow these steps to instrument your application using a self-hosted script:
          });
       </script>
 
-   * ``realm`` is the Observability Cloud realm, for example, ``us0``. See :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
+   * ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. See :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
    * To generate a RUM access token, see :ref:`rum-access-token`.
 
 #. Add the snippet to the head section of every page you want to monitor in your application.
@@ -162,14 +172,14 @@ Follow these steps to instrument and configure Splunk RUM using npm:
          deploymentEnvironment: '<your_environment_name>'
       });
 
-   * ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+   * ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
 
-         1. Open the navigation menu in Observability Cloud.
+         1. Open the navigation menu in Splunk Observability Cloud.
          2. Select :menuselection:`Settings`.
-         3. Select your username. 
+         3. Select your username.
 
       The realm name appears in the :guilabel:`Organizations` section.
-      
+
    * To generate a RUM access token, see :ref:`rum-access-token`.
 
 #. Import or require the ``splunk-instrumentation.js`` file before other files to ensure that the instrumentation runs before the application code.
@@ -232,7 +242,7 @@ Splunk RUM uses server timing to calculate the response time between the front e
 
 By default, the Splunk Distributions of OpenTelemetry already send the ``Server-Timing`` header. The header links spans from the browser with back-end spans and traces.
 
-The APM environment variable for controlling the ``Server-Timing`` header  is ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED=true``. Set ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED=true`` to link to Splunk APM. 
+The APM environment variable for controlling the ``Server-Timing`` header  is ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED=true``. Set ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED=true`` to link to Splunk APM.
 
 To create a header manually, see :ref:`browser-server-trace-context`.
 

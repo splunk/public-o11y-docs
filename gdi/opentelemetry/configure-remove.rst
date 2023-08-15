@@ -7,9 +7,9 @@ Control data to ingest using the Collector
 .. meta::
       :description: Remove data prior to ingestion with the Splunk Distribution of OpenTelemetry Collector / Pre-ingest data removal.
 
-Depending on its configuration, the Splunk Distribution of OpenTelemetry Collector can forward a wide range of telemetry, such as metrics, traces, or logs, to the Observability Cloud ingest endpoints. For certain scenarios, some of this data can be redundant, unnecessary, or sensitive, causing technical complications, increased cost, or legal issues. 
+Depending on its configuration, the Splunk Distribution of OpenTelemetry Collector can forward a wide range of telemetry, such as metrics, traces, or logs, to the Splunk Observability Cloud ingest endpoints. For certain scenarios, some of this data can be redundant, unnecessary, or sensitive, causing technical complications, increased cost, or legal issues. 
 
-To address these situations, the Collector comes with options to process the data you're receiving to modify or delete unwanted elements before they're ingested by Observability Cloud. For example, you can use the :ref:`attributes processor <attributes-processor>` to edit or remove any unwanted data.
+To address these situations, the Collector comes with options to process the data you're receiving to modify or delete unwanted elements before they're ingested by Splunk Observability Cloud. For example, you can use the :ref:`attributes processor <attributes-processor>` to edit or remove any unwanted data.
 
 Scenarios: Remove dimensions using the attributes processor
 ==============================================================================

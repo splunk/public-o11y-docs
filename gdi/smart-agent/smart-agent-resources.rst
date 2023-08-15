@@ -7,8 +7,7 @@ Install and configure the SignalFx Smart Agent
 .. meta::
    :description: The SignalFx Smart Agent provides automatic service discovery, configuration, and metrics collection for a variety of environments. The Smart Agent is deprecated as part of the release of Splunk Observability Cloud.
 
-.. note::
-   The SignalFx Smart Agent is deprecated and will reach end of support on June 30th, 2023. Note that this only affects the agent; Smart Agent receivers bundled in the Splunk Open Telemetry Collector are not deprecated. For details, see the :new-page:`Deprecation Notice <https://github.com/signalfx/signalfx-agent/blob/main/docs/smartagent-deprecation-notice.md>`.
+.. note:: The SignalFx Smart Agent has reached End of Support. While the agent can capture and export telemetry to Splunk Observability Cloud, Splunk no longer provides any support, feature updates, security, or bug fixes. Such requests are not bound by any SLAs.
 
 The SignalFx Smart Agent gathers host performance, application, and service-level metrics from both containerized and non-container environments. This page provides a complete list of Smart Agent resources. Use your browser's search function to quickly find what you're looking for.
 
@@ -23,16 +22,16 @@ The agent has three main components:
 
 * Monitors that collect metrics, events, and dimension properties from the host and applications. For a list of supported monitors and their configurations, see :new-page:`monitor configuration <https://github.com/signalfx/signalfx-agent/blob/main/docs/monitor-config.md>`.
 
-* The writer that sends the metrics, events, and dimension updates collected by monitors to Splunk Observability Cloud. The writer collects metrics emitted by configured monitors and sends them to Observability Cloud on a regular basis. You can configure :new-page:`writer settings <https://github.com/signalfx/signalfx-agent/blob/main/docs/config-schema.md#writer>` in the configuration schema.
+* The writer that sends the metrics, events, and dimension updates collected by monitors to Splunk Observability Cloud. The writer collects metrics emitted by configured monitors and sends them to Splunk Observability Cloud on a regular basis. You can configure :new-page:`writer settings <https://github.com/signalfx/signalfx-agent/blob/main/docs/config-schema.md#writer>` in the configuration schema.
 
 Use cases
 ===================================
 
 The Smart Agent gathers metrics using monitors, including Python-based plugins such as Mongo, Redis, and Docker. See :ref:`supported-data-sources` for a list of data source integrations.
 
-Use the Smart Agent to integrate with cloud services, including Amazon Web Services, Microsoft Azure, Google Cloud Platform, and Kubernetes environments. See :ref:`get-started-connect`. Next, log in to Observability Cloud to view the incoming metrics in :ref:`dashboards` and :ref:`data-visualization-charts`.
+Use the Smart Agent to integrate with cloud services, including Amazon Web Services, Microsoft Azure, Google Cloud Platform, and Kubernetes environments. See :ref:`get-started-connect`. Next, log in to Splunk Observability Cloud to view the incoming metrics in :ref:`dashboards` and :ref:`data-visualization-charts`.
 
-Check out the health of your network and nodes using navigators. Some features of Observability Cloud such as :ref:`related content <get-started-relatedcontent>` do not work with the Smart Agent. To learn more, see :ref:`use-navigators-imm`.
+Check out the health of your network and nodes using navigators. Some features of Splunk Observability Cloud such as :ref:`related content <get-started-relatedcontent>` do not work with the Smart Agent. To learn more, see :ref:`use-navigators-imm`.
 
 The Smart Agent also supports receiving and sending trace data. See :ref:`apm-download-traces`.
 

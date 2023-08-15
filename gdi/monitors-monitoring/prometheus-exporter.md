@@ -29,16 +29,19 @@ This monitor is available on Kubernetes, Linux, and Windows.
 
 To activate this integration, add the following to your Collector configuration:
 
-```
+```yaml
 receivers:
   smartagent/prometheus-exporter:
     type: prometheus-exporter
+    discoveryRule: port >= 9100 && port <= 9500 && container_image =~ "exporter"
+    extraDimensions:
+       metric_source: prometheus    
     ...  # Additional config
 ```
 
 Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
-```
+```yaml
 service:
   pipelines:
     metrics:

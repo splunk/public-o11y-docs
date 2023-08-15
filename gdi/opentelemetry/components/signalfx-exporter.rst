@@ -9,14 +9,14 @@ SignalFx exporter
 
 .. caution:: The SignalFx exporter creates and excludes metrics by default. Read on to understand which metrics are created, which ones are filtered out, and learn how to modify this behavior.
 
-The SignalFx exporter allows the OpenTelemetry Collector to send metrics and events to SignalFx endpoints. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
+The SignalFx exporter is a native OTel component that allows the OpenTelemetry Collector to send metrics and events to SignalFx endpoints. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
-.. note:: For information on the receiver, see :ref:`signalfx-receiver`.
+.. note:: While the SignalFx Smart Agent has reached End of Support, OTel native components such as the Smart Agent receiver, the SignalFx receiver, and the SignalFx exporter are available and supported. For information on the receivers, see :ref:`smartagent-receiver`: and :ref:`signalfx-receiver`.
 
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the SignalFx exporter in the ``traces``, ``metrics``, and ``logs/signalfx`` pipelines when deploying in agent mode. See :ref:`otel-deployment-mode` for more information.
+By default, the Splunk Distribution of OpenTelemetry Collector includes the SignalFx exporter in the ``traces``, ``metrics``, and ``logs/signalfx`` pipelines when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information.
 
 Sample configurations
 ----------------------
@@ -273,50 +273,9 @@ Translation rules currently allow the following actions:
 * ``rename_metrics``: Replaces a given metric name with specified one.
 * ``split_metric``: Splits a given metric into multiple new ones for a specified dimension.
 
-Default translation rules and generated metrics
-----------------------------------------------------------
+.. _default-translation-rules-sfx-exporter:
 
-The SignalFx exporter uses the translation rules defined in :new-page:`translation/constants.go <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/exporter/signalfxexporter/internal/translation/constants.go>` by default. The default rules create metrics which are reported directly to Infrastructure Monitoring. If you want to change any of their attributes or values, you need to either modify the translation rules or their constituent host metrics.
-
-By default, the SignalFx exporter creates the following aggregated metrics from the :ref:`host-metrics-receiver`:
-
-* ``cpu.idle``
-* ``cpu.interrupt``
-* ``cpu.nice``
-* ``cpu.num_processors``
-* ``cpu.softirq``
-* ``cpu.steal``
-* ``cpu.system``
-* ``cpu.user``
-* ``cpu.utilization``
-* ``cpu.utilization_per_core``
-* ``cpu.wait``
-* ``disk.summary_utilization``
-* ``disk.utilization``
-* ``disk_ops.pending``
-* ``disk_ops.total``
-* ``memory.total``
-* ``memory.utilization``
-* ``network.total``
-* ``process.cpu_time_seconds``
-* ``system.disk.io.total``
-* ``system.disk.operations.total``
-* ``system.network.io.total``
-* ``system.network.packets.total``
-* ``vmpage_io.memory.in``
-* ``vmpage_io.memory.out``
-* ``vmpage_io.swap.in``
-* ``vmpage_io.swap.out``
-
-In addition to the aggregated metrics, the default rules make available the following "per core" custom hostmetrics. The CPU number is assigned to the dimension ``cpu``:
-
-* ``cpu.interrupt``
-* ``cpu.nice``
-* ``cpu.softirq``
-* ``cpu.steal``
-* ``cpu.system``
-* ``cpu.user``
-* ``cpu.wait``
+.. include:: /_includes/gdi/default-translation-metrics.rst
 
 Settings
 ======================

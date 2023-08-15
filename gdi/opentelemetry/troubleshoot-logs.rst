@@ -50,6 +50,8 @@ If you see a message such as "2021-03-17 02:14:44 +0000 [debug]: #0 connect new 
 Collector isn't configured properly
 =========================================
 
+.. note:: Fluentd is part of the Splunk Distribution of OpenTelemetry Collector, but deactivated by default for Linux and Windows. To activate it, use the ``--with-fluentd`` option when installing the Collector for Linux, or the ``with_fluentd = 1`` option when installing the Collector for Windows.
+
 Do the following to check the Collector configuration:
 
 #. Go to ``http://localhost:55679/debug/tracez`` to check zPages for samples. You might need to configure the endpoint.
@@ -59,6 +61,7 @@ Do the following to check the Collector configuration:
 
 Test the Collector by sending synthetic data
 ==================================================================================
+
 You can manually generate logs. By default, Fluentd monitors journald and /var/log/syslog.log for events.
 
 .. code-block:: bash
@@ -72,21 +75,20 @@ You can manually generate logs. By default, Fluentd monitors journald and /var/l
 
 .. _unwanted_profiling_logs:
 
-Unwanted profiling logs appearing in Observability Cloud
+Unwanted profiling logs appearing in Splunk Observability Cloud
 ==================================================================================
 
-By default, the Splunk Distribution of the OpenTelemetry Collector sends AlwaysOn Profiling data through a ``logs`` pipeline that uses the Splunk HEC exporter.
-
-To send logs to Splunk Observability Cloud without AlwaysOn Profiling data, see :ref:`no_profiling_data`.
+By default, the Splunk Distribution of the OpenTelemetry Collector sends AlwaysOn Profiling data using the Splunk HEC exporter. See :ref:`no_profiling_data` for more information.
 
 .. _disable_log_collection:
 
 Exclude log data in the Collector
 ==================================================================================
 
-By default, the Splunk Distribution of the OpenTelemetry Collector collects and send logs to Observability Cloud through a logs pipeline that uses the Splunk HEC exporter. See :ref:`splunk-hec-exporter` for more information.
+Depending on its configuration, the Splunk Distribution of the OpenTelemetry Collector might collect and send logs to Splunk Observability Cloud through a ``logs`` pipeline that uses the Splunk HEC exporter. 
 
-To avoid sending log data through the Collector to Splunk Observability Cloud, see :ref:`exclude-log-data`.
+To turn off logs colletion, see :ref:`exclude-log-data` for more information.
+
 
 Send logs from the Collector to Splunk Cloud Platform or Enterprise
 ==================================================================================

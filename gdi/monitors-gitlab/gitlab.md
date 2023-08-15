@@ -30,7 +30,7 @@ This monitor type is available on Kubernetes, Linux, and Windows using GitLab ve
 
 ## GitLab configuration
 
-Follow the instructions on [Monitoring GitLab with Prometheus](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html) to configure the GitLab Prometheus exporters to expose metric endpoint targets. For the GitLab Runner monitoring configuration, see [GitLab Runner monitoring](https://docs.gitlab.com/runner/monitoring/README.html).
+Follow the instructions on [Monitoring GitLab with Prometheus](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html) to configure the GitLab Prometheus exporters to expose metric endpoint targets. For the GitLab Runner monitoring configuration, see [GitLab Runner monitoring](https://docs.gitlab.com/runner/monitoring/).
 
 If you configue GitLab by editing `/etc/gitlab/gitlab.rb`, you need to run the command `gitlab-ctl reconfigure` for the changes to take effect.
 
@@ -117,16 +117,17 @@ receivers:
     type: gitlab
     host: localhost
     port: 9229
-exporters:
-  logging:
+
+# ... Other sections
+
 service:
   pipelines:
     metrics:
       receivers:
         - smartagent/gitlab-sidekiq
         - smartagent/gitlab-workhorse
-      exporters:
-        - logging
+
+# ... Other sections
 ```
 
 ### Configuration options

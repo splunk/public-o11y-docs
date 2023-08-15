@@ -54,6 +54,33 @@ service:
       receivers: [smartagent/systemd]
 ```
 
+### Advanced examples
+
+The following is an excerpt of a YAML configuration for monitoring the state of `docker` and `ubuntu-fan` services:
+
+```yaml
+receivers:
+  smartagent/systemd:
+    type: collectd/systemd
+    intervalSeconds: 10
+    services:
+      - docker
+      - ubuntu-fan
+```
+
+By default, the `gauge.substate.running` metrics, which indicates whether a service is running or not, is the only metric reported. Configure additional metrics using the `sendActiveState`, `sendSubState`, and `sendLoadState` configuration flags, as shown in the following example:
+
+```yaml
+receivers:
+  smartagent/systemd:
+    type: collectd/systemd
+    intervalSeconds: 10
+    services:
+      - docker
+      - ubuntu-fan
+    sendActiveState: true
+```
+
 ### Configuration settings
 
 The following table shows the configuration options for this monitor:

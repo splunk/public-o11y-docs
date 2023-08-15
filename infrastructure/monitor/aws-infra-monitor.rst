@@ -394,7 +394,7 @@ Observability Cloud retrieves AWS metrics with two methods:
    - First, the list of metrics is retrieved with ``ListMetrics``. 
    - Next, data points are fetched with ``GetMetricData``. Note that the ``GetMetricStatistics`` API is deprecated, see more in :ref:`aws-api-notice`.  
 
-Learn more at :ref:`Evaluate your data ingest needs and costs <prep-for-aws-integration>`.
+Learn more at :ref:`get-started-aws`.
 
 AWS pricing 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

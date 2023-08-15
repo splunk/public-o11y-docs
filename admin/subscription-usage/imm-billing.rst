@@ -90,7 +90,7 @@ If you are approaching or over your limit in any area, you have a few options av
 * Monitor fewer hosts, send in fewer custom metrics, and so forth. 
 * Reevaluate the size your subscription, increasing your limits to match your need for hosts, containers, custom metrics, or high-resolution metrics.
 * If you have Enterprise Edition, you can manage costs associated with sending in data by setting limits on access tokens. See :ref:`admin-manage-usage` for more information.
-* If you have a Standard Edition pricing plan, you can upgrade your subscription to the Enterprise Edition, which includes support for monitoring more containers, custom metrics, and high-resolution metrics per host. 
+* If you have a Standard Edition pricing plan, you can upgrade your subscription to Enterprise Edition, which includes support for monitoring more containers, custom metrics, and high-resolution metrics per host. 
 * Purchase support for increasing your limits on any of these items. 
   
 To get help with understanding which option is best for your organization, contact :ref:`support`.

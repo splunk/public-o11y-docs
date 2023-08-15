@@ -13,6 +13,7 @@ Components
     :hidden:
 
     components/attributes-processor
+    components/basic-auth-extension
     components/batch-processor
     components/databricks-receiver
     components/filter-processor
@@ -50,6 +51,8 @@ You can activate components by configuring :ref:`pipelines <otel-data-processing
 
 The Splunk Distribution of OpenTelemetry Collector includes and supports the following components.
 
+.. note:: The following lists might not contain all the latest additions. For a complete list of Collector components, including components that aren't included in the Splunk Distribution of OpenTelemetry Collector, see the ``opentelemetry-contrib`` repository in GitHub.
+
 .. _collector-components-receivers:
 
 .. raw:: html
@@ -81,6 +84,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`databricks_receiver` (``databricks``)
      - Uses the Databricks API to generate metrics about the operation of a Databricks instance.
      - Metrics
+   * - ``discovery``
+     - Wraps the receiver creator to facilitate the discovery of metric collection targets. See :ref:`discovery_mode`.
+     - Logs
    * - ``filelog``
      - Tails and parses logs from files.
      - Logs
@@ -172,7 +178,6 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
      - Receives spans from Zipkin versions 1 and 2.
      - Traces
 
-.. note:: The previous list might not contain all the latest additions. For a complete list of Collector components, including components that aren't included in the Splunk Distribution of OpenTelemetry Collector, see the ``opentelemetry-contrib`` repository in GitHub.
 
 .. _collector-components-processors:
 
@@ -233,7 +238,6 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
      - Modifies telemetry based on OpenTelemetry Transformation Language functions.
      - Metrics, logs, traces
 
-.. note:: The previous list might not contain all the latest additions. For a complete list of Collector components, including components that aren't included in the Splunk Distribution of OpenTelemetry Collector, see the ``opentelemetry-contrib`` repository in GitHub.
 
 .. _collector-components-exporters:
 .. _otel-exporters:
@@ -280,8 +284,6 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
      - Sends telemetry to a Splunk HEC endpoint. 
      - Metrics, logs, traces
 
-.. note:: The previous list might not contain all the latest additions. For a complete list of Collector components, including components that aren't included in the Splunk Distribution of OpenTelemetry Collector, see the ``opentelemetry-contrib`` repository in GitHub.
-
 .. _collector-components-extensions:
 
 .. raw:: html
@@ -297,6 +299,8 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
 
    * - Name
      - Description
+   * - :ref:`basic-auth-extension` (``basicauth``)
+     - Implements both ``configauth.ServerAuthenticator`` and ``configauth.ClientAuthenticator`` to authenticate clients and servers using basic authentication. The authenticator type has to be set to ``basicauth``.      
    * - ``docker_observer``
      - Detects and reports container endpoints discovered through the Docker API. Only containers that are in the state of ``Running`` and not ``Paused`` emit endpoints.
    * - ``ecs_observer``
@@ -320,7 +324,6 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``zpages``
      - Activates an extension that serves zPages, an HTTP endpoint that provides live data for debugging different components.
 
-.. note:: The previous list might not contain all the latest additions. For a complete list of Collector components, including components that aren't included in the Splunk Distribution of OpenTelemetry Collector, see the ``opentelemetry-contrib`` repository in GitHub.
 
 .. raw:: html
 
