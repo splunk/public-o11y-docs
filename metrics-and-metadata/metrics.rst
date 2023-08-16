@@ -17,6 +17,68 @@ A :ref:`metric time series (MTS) <metric-time-series>` contains all the data poi
       :width: 100%
       :alt: This diagram shows a collection of data points that make up an MTS.
 
+.. mermaid:: 
+  
+  flowchart LR
+       %% LR indicates the direction (left-to-right)
+
+       %% You can define classes to style nodes and other elements
+       classDef name fill:#00FF00
+       classDef type fill:#FF9900
+       classDef value fill:#FF33FF
+       classDef timestamp fill:#FF09
+
+       %% Each subgraph determines what's in each category
+       subgraph Metric time series
+
+        subgraph dp0[Data point 1]
+          direction LR
+          name0(name):::name-->name0.v(cpu.utilization)
+          type0(type):::type-->type0.v(gauge)
+          value0(value):::value-->value0.v(.85)
+
+
+        subgraph dimensions0[Dimensions]
+            k0(hostname)-->v0(server1)
+            k1(location)-->v1(Tokyo)
+        end
+
+          timestamp0(timestamp):::timestamp-->timestamp0.v(1557225030000)
+
+        end
+
+        subgraph dp1[Data point 2]
+            direction LR
+          name1(name):::name-->name1.v(cpu.utilization)
+          type1(type):::type-->type1.v(gauge)
+          value1(value):::value-->value1.v(.9)
+
+
+        subgraph dimensions1[Dimensions]
+            k2(hostname)-->v2(server1)
+            k3(location)-->v3(Tokyo)
+        end
+
+          timestamp1(timestamp):::timestamp-->timestamp1.v(1557225030100)         
+
+        end
+
+        subgraph dp2[Data point 3]
+            direction LR
+          name2(name):::name-->name2.v(cpu.utilization)
+          type2(type):::type-->type2.v(gauge)
+          value2(value):::value-->value2.v(.7)
+
+
+          subgraph dimensions2[Dimensions]
+            k4(hostname)-->v4(server1)
+            k5(location)-->v5[Tokyo]
+            
+          end
+          timestamp2(timestamp):::timestamp-->timestamp2.v(1557225030200)    
+   
+        end
+      end
 .. _metrics:
 
 Metrics
