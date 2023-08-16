@@ -79,6 +79,7 @@ A :ref:`metric time series (MTS) <metric-time-series>` contains all the data poi
    
         end
       end
+      
 .. _metrics:
 
 Metrics
