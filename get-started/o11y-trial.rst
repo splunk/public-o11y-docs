@@ -42,16 +42,23 @@ You can also expand the left-hand navigation menu to show the full names of the 
 Guided onboarding
 =========================
 
+There are 5 steps to the guided onboarding:
+#. Preparing the prerequisites.
+#. Install OpenTelemetry.
+#. Install the Hipster Shop into your local cluster.
+#. Create traffic by exploring the Hipster Shop. Clicking around the Hipster Shop site will generate traces and metrics for you to view in Splunk Observability Cloud.
+#. Explore the results in Application Performance Monitoring (APM).
 
 
 Pre-Requisites
 ---------------------
 
-Please install and have functioning versions of:
+To run the demo environment, install and have functioning versions of:
 
 Docker - Install Docker if needed. See :new-page:`https://docs.docker.com/engine/install`
 minikube - Install and configure minikube. See :new-page:`https://minikube.sigs.k8s.io/docs/start`
 Helm - Install Helm version 3.0 or higher. See :new-page:`https://helm.sh/docs/intro/install/`
-GSED - GNU implementations of the stream editor. gnu-sed is used in the configuration script for the kubernetes manifests. See :new-page:`https://formulae.brew.sh/formula/gnu-sed``
+GSED - GNU implementations of the stream editor. gnu-sed is used in the configuration script for the kubernetes manifests. See :new-page:`https://formulae.brew.sh/formula/gnu-sed`
 
-The Hipster Shop cluster you are running will need at minimum 4gb or memory. 
+The Hipster Shop cluster requires a minimum 4 GB of memory. 
+
