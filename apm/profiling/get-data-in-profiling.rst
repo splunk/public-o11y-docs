@@ -200,6 +200,11 @@ If you need to set up AlwaysOn Profiling with a collector in data forwarding (ga
 
 :strong:`Example gateway deployment`
 
+.. mermaid::
+
+   graph LR
+       (\1) Instrumentation Agent[Square Rect] --> (2) Collector in host monitoring (agent) mode[Square Rect] --> (3) Collector in data forwarding (gateway) mode[Square Rect] --> (4) Splunk Observability Cloud[Square Rect] 
+
 :strong:`(\1)` Instrumentation Agent to  :strong:`(2)` Collector in host monitoring (agent) mode to :strong:`(3)` Collector in data forwarding (gateway) mode to :strong:`(4)` Splunk Observability Cloud
 
 #. Point the instrumentation agent to the OTLP gRPC receiver for the collector in host monitoring (agent) mode :strong:`(2)`. The OTLP gRPC receiver must be running on the same host and port that the collector in host monitoring (agent) mode :strong:`(2)` is running on.
