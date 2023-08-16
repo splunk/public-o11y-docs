@@ -62,3 +62,10 @@ GSED - GNU implementations of the stream editor. gnu-sed is used in the configur
 
 The Hipster Shop cluster requires a minimum 4 GB of memory. 
 
+To install the OpenTelemetry collector, you'll need to know:
+
+- Your Splunk Observability Cloud realm. To locate your realm, see :new-page:`View your realm and org info <https://docs.splunk.com/Observability/admin/references/organizations.html>`
+- Your Splunk Observability Cloud access token. 
+
+
+To install the Hipster shop demo locally, you'll need your Real User Management (RUM) token. For instructions, see :ref:`rum-access-token`.
