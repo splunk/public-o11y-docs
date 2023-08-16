@@ -212,7 +212,7 @@ If you need to set up AlwaysOn Profiling with a collector in data forwarding (ga
 
    #. An OTLP gRPC receiver
    #. An OTLP exporter pointed at the collector in data forwarding (gateway) mode :strong:`(3)`
-   #. A logs pipeline that connects the receiver and the exporter. See the default agent config with the necessary adjustment to use to send to a gateway on GitHub: :newpage:`https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml#L195-L204`.git `
+   #. A logs pipeline that connects the receiver and the exporter. See the default agent config with the necessary adjustment to use to send to a gateway on GitHub: :new-page:`https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml#L195-L204`.git `
       For example:
 
    .. code-block:: yaml
