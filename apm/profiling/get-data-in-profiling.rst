@@ -203,7 +203,7 @@ If you need to set up AlwaysOn Profiling with a collector in data forwarding (ga
 .. mermaid::
 
    flowchart LR
-       1. Instrumentation Agent -->2. Collector in host monitoring (agent) mode -->3. Collector in data forwarding (gateway)  mode -->4. Splunk Observability Cloud
+      Instrumentation Agent-->2. Collector in host monitoring (agent) mode
 
 :strong:`(\1)` Instrumentation Agent to  :strong:`(2)` Collector in host monitoring (agent) mode to :strong:`(3)` Collector in data forwarding (gateway) mode to :strong:`(4)` Splunk Observability Cloud
 
