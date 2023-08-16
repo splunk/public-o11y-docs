@@ -26,5 +26,7 @@ There are many resources available to help you learn more about Splunk Observabi
     - See the :new-page:`Splunk Lantern home page <https://lantern.splunk.com/>` or the :new-page:`Observability content <https://lantern.splunk.com/Observability>`
   * - Splunk Support Portal offers access to Knowledgebase articles, system status and other resources.
     - See :new-page:`Support Portal <https://splunk.my.site.com/customer/s/?_ga=2.222168080.960367240.1692026943-1043003789.1692026943&_gl=1*1o2ncww*_ga*MTA0MzAwMzc4OS4xNjkyMDI2OTQz*_ga_GS7YF8S63Y*MTY5MjIwOTc5OC4xNS4xLjE2OTIyMTUwNTguMC4wLjA.*_ga_5EPM2P39FV*MTY5MjIwOTc5OC4xOC4xLjE2OTIyMTUwNTkuMC4wLjA.&_gac=1.192804312.1692038955.Cj0KCQjwoeemBhCfARIsADR2QCvOPVQXEAYp52hJTcUBHd3GbEAdyWPt_lUzolQ54Ko9M-S4SH-YGokaAtKcEALw_wcB>` 
+  * - Splunk Blogs offers articles written by Splunk experts
+    - See :new-page:`Splunk Blogs <https://www.splunk.com/en_us/blog>`
 
 
