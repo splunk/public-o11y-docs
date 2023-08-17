@@ -55,6 +55,7 @@ A :ref:`metric time series (MTS) <metric-time-series>` contains all the data poi
 
 
             subgraph dimensions0[Dimensions]
+              direction LR
               k0(hostname):::host-->v0(server1):::host
               k1(location):::location-->v1(Tokyo):::location
             end
@@ -72,6 +73,7 @@ A :ref:`metric time series (MTS) <metric-time-series>` contains all the data poi
 
 
             subgraph dimensions1[Dimensions]
+              direction LR
               k2(hostname):::host-->v2(server1):::host
               k3(location):::location-->v3(Tokyo):::location
               
@@ -88,6 +90,7 @@ A :ref:`metric time series (MTS) <metric-time-series>` contains all the data poi
 
 
             subgraph dimensions2[Dimensions]
+              direction LR
               k4(hostname):::host-->v4(server1):::host
               k5(location):::location-->v5(Tokyo):::location
               
