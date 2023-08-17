@@ -120,4 +120,16 @@ The following table shows you what you can do with detectors, events, alerts, an
      - :ref:`linking-detectors`
 
 
-|br|
+
+.. mermaid::
+
+  flowchart TB
+      direction LR
+      MTS --> Condition
+      subgraph Detector
+        direction LR
+        Condition --> Met?
+      end
+      Met? -- yes --> Alert
+      Met? -- no --> MTS
+      Alert --> MTS
