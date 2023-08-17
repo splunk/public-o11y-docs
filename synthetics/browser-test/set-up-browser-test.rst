@@ -9,7 +9,8 @@ Set up a Browser test
     :description: Learn how to set up a Browser test in Splunk Synthetic Monitoring.
 
 
-A Browser test lets you monitor the user experience for a single page or a multi-step user flow by running a synthetic test of the URLs you provide. Use this type of test to monitor conversion paths or any path that requires multiple steps or runs JavaScript. 
+A Browser test lets you monitor the user experience for a single page or a multi-step user flow by running a synthetic test of the URLs you provide. Use this type of test to monitor conversion paths or any path that requires multiple steps or runs JavaScript. For an example, see :ref:`browser-test-scenario`.
+
 
 For each page checked in a Browser test, Splunk Synthetic Monitoring captures an HTTP Archive (HAR) file, represented in a waterfall chart, which illustrates the performance of specific resources within the page. Browser tests also capture a set of 40+ metrics. See :ref:`waterfall-chart` and :ref:`browser-metrics` to learn more.
 
@@ -44,8 +45,8 @@ For complex user flows that involve many steps, such as 30 to 50 steps, using a 
 .. Note:: Viewport is automatically set, so if you have a step to set the viewport, this step won’t appear in the test configuration. 
 
 
-words
---------------
+Import a JSON file 
+----------------------------
 
 Follow these steps to import a JSON file from Google Chrome Recorder to your browser test. 
 
@@ -65,7 +66,7 @@ Follow these steps to import a JSON file from Google Chrome Recorder to your bro
 #. Save your changes.  
 
 
-Troublehsoot unsupported steps
+Troubleshoot unsupported steps
 ------------------------------------------
 If your recording contains unsupported steps, you need to reformat the step to fit one of the following types of step that Splunk Synthetic Monitoring supports for Chrome Puppeteer: 
 
@@ -74,8 +75,40 @@ If your recording contains unsupported steps, you need to reformat the step to f
 * Navigate 
 * Wait for element 
 
+.. list-table::
+   :header-rows: 1
+   :widths: 50 50 
 
+   * - :strong:`Chrome puppeteer step name and snippet`
+     - :strong:`Synthetic step name and snippet`
 
+   * - Navigate:
+
+         .. code-block:: javascript
+
+               {
+               "type": "navigate",
+               "url": "www.buttercupgames.com",
+               "assertedEvents": [
+                  {
+                     "type": "navigation",
+                     "url": "www.buttercupgames.com",
+                     "title": "Online Boutique"
+                  }
+               ]
+               }
+
+     - Go to url:
+         .. code-block:: javascript
+
+               {
+               "name": "Go to URL",
+               "type": "go_to_url",
+               "url": "www.buttercupgames.com",
+               "wait_for_nav": true
+               }
+
+   
 
 View your Browser test
 ====================================
@@ -85,9 +118,7 @@ Now that you created and saved a test, check whether it’s collecting data as e
 #. From the :guilabel:`Tests` list, select the three-dot :guilabel:`Actions` menu and select :guilabel:`Play` arrow icon to manually trigger a live run of the test, or wait for at least one duration of the test frequency you set so that the test has time to run and collect data. 
 #. Select the test you’re interested in to open the :guilabel:`Test history` view, where you can view visualizations of recent test results and metrics.
 
-Interpret your Browser test results
-======================================
-See :ref:`browser-test-results` to learn more about Browser test results. 
+#. See :ref:`browser-test-results` to learn more about Browser test results. 
 
 
 Edit your Browser test
@@ -99,9 +130,6 @@ To edit your Browser test, do the following:
 #. Select :guilabel:`Edit test` to edit your test configuration.
 
 If you change the name of your test or the name of a synthetic transaction, it may take up to 20 minutes for the updated name to appear in your charts and detectors.
-
-
-
 
 .. _browser-adv-setting:
 
@@ -116,9 +144,6 @@ There are many reasons why you might want to configure advanced settings for you
 * Testing out a CDN. For example, you might want to load the HTML page in the browser, but rewrite the hosts for some or all requests to a new host.
 * Filtering out requests from analytics on the back end by sending a specific header in the requests.
 * Running a test on a pre-production site that has a self-signed certificate.
-
-
-
 
 
 .. _browser-cookies:
@@ -168,9 +193,7 @@ When activated, this feature is used to enforce the validation of expired, inval
 .. note::
  When testing pre-production environments that have self-signed or invalid certificates, it's best to leave SSL/TLS validation feature deactivated. 
 
-.. _browser-exclude:
-
-
+.. _browser-wait-times:
 
 Wait times 
 ---------------------
@@ -192,11 +215,8 @@ The following image shows how to configure a test to go to a URL, wait for 10 se
    :alt: This image shows a browser test with three steps: go to url, wait 20 seconds, then log in. 
 
 
-.. _browser-wait-times:
 
 
-Example
-==================
-For an example, see  :ref:`browser-test-scenario`.
+
 
 
