@@ -73,6 +73,12 @@ Data you send from your services to Observability Cloud can have high cardinalit
 sending in your data before you send it, aggregation lets you summarize your data in Observability Cloud based on
 dimensions you consider important.
 
+.. mermaid::
+
+   flowchart LR
+   Raw[(Incoming raw MTS)] ---|MPM|ChooseDimensions{"`Choose MTS to aggregate`"} ---|Perform aggregation|CreateNew("`New aggregated MTS with rolled-up
+   metrics`") ---|Keep or drop raw MTS|OriginalMTS[(Kept MTS and new MTS)]
+
 By selecting specific dimensions to keep, you can aggregate your data points into a new metric with fewer dimensions,
 creating a specific view of dimensions that are important. You can then obtain a more simplified and concentrated view
 of your data when you don’t need to view metrics across all dimensions.
