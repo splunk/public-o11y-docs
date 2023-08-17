@@ -9,7 +9,7 @@ Learn more about Splunk Observability Cloud
 
 
 
-There are many resources available to help you learn more about Splunk Observability Cloud. 
+There are many resources available to help you learn more about Splunk Observability Cloud or connect with other observabilty practitioners. 
 
 .. list-table::
   :header-rows: 1
