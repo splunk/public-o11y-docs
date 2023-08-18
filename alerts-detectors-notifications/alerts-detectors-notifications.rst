@@ -120,16 +120,19 @@ The following table shows you what you can do with detectors, events, alerts, an
      - :ref:`linking-detectors`
 
 
+Conceptual diagram: relationship between alerts and detectors
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. mermaid::
 
-  flowchart TB
-      direction LR
-      MTS --> Condition
-      subgraph Detector
-        direction LR
-        Condition --> Met?
-      end
-      Met? -- yes --> Alert
-      Met? -- no --> MTS
-      Alert --> MTS
+  flowchart LR
+    subgraph Detector
+    A[Signal] --> B[Alert condition]
+    B --> C{Condition met}
+    end
+    C --> Alert
+    C --> Event
+    C --> Notification
+    
+Conceptual diagram: creating a detector
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
