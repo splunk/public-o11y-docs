@@ -4,8 +4,6 @@
 Use built-in alert conditions in Splunk APM
 ************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn about the built-in alert conditions in Splunk APM. 
 
@@ -17,10 +15,10 @@ When creating rules in detectors to specify conditions that can trigger alerts, 
 
   For general information about alerts and detectors in Splunk Observability Cloud, see :ref:`get-started-detectoralert`. 
 
-Alert conditions for latency detectors
-========================================
+Alert conditions for request rate detectors
+=============================================
 
-The following table summarizes the available built-in alert conditions for latency detectors in Splunk APM. These conditions appear under Alert condition after you select :guilabel:`Service Latency` or :guilabel:`Workflow Duration` under Alert signal when you're creating a detector. 
+These are the built-in alert conditions for request rate detectors that are available in Splunk APM. 
 
 .. list-table::
    :header-rows: 1
@@ -31,22 +29,23 @@ The following table summarizes the available built-in alert conditions for laten
      - :strong:`Example`
 
    * - :ref:`static-threshold`
-     - Alerts when latency goes above a static threshold, relative to a specified percentile, for a specified period of time.
-     - The 90th percentile of latency is above 500ms for 100% of 5 seconds.
+     - Alerts when the request rate goes above a specified percentage for a minimum number of requests.
+     - The request rate over the last 10 minutes is above 10% across at least 50 requests.
 
    * - :ref:`sudden-change`
-     - Alerts when latency during a recent time window anomalously spikes compared to the preceding time window. Anomaly can be defined through number of deviations from norm or percentage change of signal.
-     - Latency in the last 10 minutes is more than 5 deviations above the norm established in the preceding 1 hour; The 50th percentile of latency in the last 10 minutes is more than 30% above latency of the preceding 1 hour.
+     - Alerts when there is a sudden increase in request rate.
+     - The request rate over the last 5 minutes is over 5% larger than the request rate of the preceding 1 hour across at least 100 requests.
 
    * - :ref:`hist-anomaly`
-     - Alerts when latency anomalously spikes compared to the same periods in the past (for cyclical or seasonal data). Anomaly can be defined through number of deviations from historical norm or percentage change compared to historical norm.
-     - Latency in the last 10 minutes is more than 5 deviations above its historical norm, cyclical over 1‑week periods; The 90th percentile of latency in the last 10 minutes is more than 30% above its historical norm, cyclical over 1‑week periods.
-
+     - Alerts when request rate anomalously spikes compared to the same periods in the past (for cyclical or seasonal data). An anomaly is either the number of deviations from historical norm or percentage change compared to historical norm.
+     - Request rate in the last 10 minutes is more than 5 deviations above its historical norm, cyclical over 1‑week periods; The 90th percentile of request rate in the last 10 minutes is more than 30% above its historical norm, cyclical over 1‑week periods.
 
 Alert conditions for error rate detectors
-==========================================
 
-The following table summarizes the available built-in alert conditions for error rate detectors in Splunk APM. These conditions appear under Alert condition after you select :guilabel:`Service Error Rate` or :guilabel:`Workflow Error Rate` under Alert signal when you're creating a detector. 
+==========================================
+These are the built-in alert conditions for error rate detectors that are available in Splunk APM. 
+
+These conditions appear under Alert condition after you select :guilabel:`Service Error Rate` or :guilabel:`Workflow Error Rate` under Alert signal when you're creating a detector. 
 
 .. list-table::
    :header-rows: 1
@@ -63,3 +62,33 @@ The following table summarizes the available built-in alert conditions for error
    * - :ref:`sudden-change`
      - Alerts when there is a sudden increase in error rate.
      - The error rate over the last 5 minutes is over 5% larger than the error rate of the preceding 1 hour across at least 100 requests.
+
+Alert conditions for latency detectors
+========================================
+
+These are the built-in alert conditions for latency detectors that are available in Splunk APM. 
+
+These conditions appear under Alert condition after you select :guilabel:`Service Latency` or :guilabel:`Workflow Duration` under Alert signal when you're creating a detector. 
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20,30,40
+
+   * - :strong:`Condition`
+     - :strong:`Description`
+     - :strong:`Example`
+
+   * - :ref:`static-threshold`
+     - Alerts when latency goes above a static threshold, relative to a specified percentile, for a specified period of time.
+     - The 90th percentile of latency is above 500ms for 100% of 5 seconds.
+
+   * - :ref:`sudden-change`
+     - Alerts when latency during a recent time window anomalously spikes compared to the preceding time window. An anomaly is either the number of deviations from norm or percentage change of signal.
+     - Latency in the last 10 minutes is more than 5 deviations above the norm established in the preceding 1 hour; The 50th percentile of latency in the last 10 minutes is more than 30% above latency of the preceding 1 hour.
+
+   * - :ref:`hist-anomaly`
+     - Alerts when latency anomalously spikes compared to the same periods in the past (for cyclical or seasonal data). An anomaly is either the number of deviations from historical norm or percentage change compared to historical norm.
+     - Latency in the last 10 minutes is more than 5 deviations above its historical norm, cyclical over 1‑week periods; The 90th percentile of latency in the last 10 minutes is more than 30% above its historical norm, cyclical over 1‑week periods.
+
+
+
