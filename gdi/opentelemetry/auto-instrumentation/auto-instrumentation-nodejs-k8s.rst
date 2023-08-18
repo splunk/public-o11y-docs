@@ -1,5 +1,5 @@
-.. _auto-instrumentation-nodejs-linux:
+.. _auto-instrumentation-nodejs-k8s:
 
 *****************************************************************************
-Zero Configuration Auto Instrumentation for Linux Node.js Applications
+Zero Configuration Auto Instrumentation for Kubernetes Node.js Applications
 *****************************************************************************
