@@ -7,25 +7,20 @@ Create detectors to trigger alerts
 .. meta::
    :description: How to create detectors to trigger alerts.
 
-A :term:`detector` monitors signals on a plot line, as on a chart, and triggers alert events and clear events based on conditions you define in rules. You can think of a detector as a chart that can trigger alerts when a signal's value crosses specified thresholds defined in alert rules.
+A :term:`detector` monitors signals on a plot line and triggers alert events and clear events based on conditions you define in the detector rules. Think of a detector as a chart that triggers alerts when a signal's value crosses specified thresholds defined in alert rules.
+
+Detectors are made up of alert rules. When you create an alert rule you can select various built-in alert conditions to define thresholds that trigger alerts. See :ref:`condition-reference`. When a detector determines that the conditions for a rule are met, it triggers an alert, creates an event, and sends notifications, if specified. Detectors can send notifications through email, as well as through other systems, such as Slack, or by using a webhook. To learn more, see :ref:`admin-notifs-index`.
+
+You can find active alerts, existing detectors, and muting rules under :guilabel:Alerts & Detectors. You can find events in the Events Feed, available within any dashboard.
 
 Create detectors
 =============================================================================
 
-The main steps involved in creating a detector are:
+The high-level steps for creating a detector are:
 
 1. Choose :ref:`how to create the detector <how-to-create-detector>`.
 
-2. Add :ref:`alert rules <build-rules>` to the detector that specify when alerts must be triggered.
-
-Alert rules are also called build rules. They use settings you specify for :ref:`condition-reference` to define thresholds that trigger alerts. When a detector determines that the conditions for a rule are met, it triggers an alert, creates an event, and sends notifications, if specified. 
-
-Detectors can send notifications through email, as well as through other systems, such as Slack, or by using a webhook. To learn more, see :ref:`admin-notifs-index`.
-
-You can find active alerts and existing detectors in tabs on the Alerts page. Find events in the Events sidebar, available from within any dashboard.
-
-When you configure alert settings in a detector rule, an alert preview appears. The alert preview can help you adjust your settings as you create the detector, but also helps when you are editing existing detectors. To learn more, see :ref:`preview-detector-alerts`.
-
+2. Add :ref:`alert rules <build-rules>` to the detector to specify when to trigger alerts.
 
 .. _how-to-create-detector:
 
@@ -38,7 +33,7 @@ There are several ways to create a detector.
 
 - Customize AutoDetect detectors. See :ref:`autodetect-customize`.
 
--  Start from the Detector tab to create detectors that are based on what you are currently viewing, such as a chart or the Infrastructure Navigator. See :ref:`create-detector-from-chart`.
+-  Start from the Detector tab to create detectors based on what you are currently viewing, such as a chart or the Infrastructure Navigator. See :ref:`create-detector-from-chart`.
 
 -  Create a detector from a chart to preselect one of the chart signals as the signal to be monitored. See :ref:`create-detector-from-chart`.
 
@@ -51,9 +46,13 @@ There are several ways to create a detector.
 Clone an existing detector
 -------------------------------------------------------------------
 
-You can see a list of existing detectors in the Detectors tab on the Alerts page. If you see one that represents a good starting point for a detector you want to create, you can open it and then select :menuselection:`Clone` from the detector's actions menu (|more|) to save it as a new detector.
+You can see a list of existing detectors in the :guilabel:`Detectors` tab under Alerts & Detectors. 
 
-After cloning and saving the new detector, see :ref:`build-rules`.
+1. Look for a detector that is similar to the detector you want to create. 
+2. Select the detector.
+3. Select :menuselection:`Clone` from the actions menu (|more|).
+
+Next, see :ref:`build-rules`.
 
 .. _create-detector-from-chart:
 
@@ -106,45 +105,40 @@ Using the API to create a detector provides a number of capabilities that are no
 
 .. _build-rules:
 
-Build detector rules
+Create alert rules for your detector
 =============================================================================
 
--  In the Alert Signal tab, you select one or more signals to monitor for unusual behavior. To learn more, see :ref:`alert-signal`.
-
--  In the :ref:`Alert condition <alert-condition>` and :ref:`Alert settings <alert-settings>` tabs, you specify criteria for triggering an alert.
-
-.. note:: If you don't see the Alert Signal, Alert Condition, or Alert Settings tabs, you are viewing a detector created using the API. For more information, see :ref:`v2-detector-SignalFlow`.
-
--  In the :ref:`Alert message <alert-message>` and :ref:`Alert recipients <alert-recipients>` tabs, you specify who can receive notifications, and add notes that are included in the notifications.
-
--  In the :ref:`Activate <activate-detector>` tab, you name the rule and enable the detector.
+1. On the :guilabel:`Alert signal` tab, select one or more signals to monitor for unusual behavior. To learn more, see :ref:`alert-signal`.
+2. On the :guilabel:`Alert condition` tab, select the alert condition. See :ref:`Alert condition <alert-condition>`.:abbr:
+3. On the :guilabel:`Alert settings` tab, complete the alert condition using the settings available. The settings that are available are based on your selection on the :guilabel:`Alert condition` tab. See :ref:`Alert settings <alert-settings>`.
+4. On the :guilabel:`Alert message` tab, select the alert severity, customize the alert message, and a runbook or tip. See :ref:`Alert message <alert-message>`.
+5. On the :guilabel:`Alert recipients` tab, add recipients who you want to receive a notification through email or other third-party integration. See :ref:`Alert recipients <alert-recipients>`.
+6. On the tab, you name the rule and activate the detector. See :ref:`Activate <activate-detector>`.
 
 After you activate the detector, it begins monitoring the signal immediately. When the signal meets the specified criteria, the detector triggers alerts, creates events, and sends the specified message to the alert recipients.
+
+.. note:: If you don't see the Alert signal, Alert condition, or Alert settings tabs, you are viewing a detector created through the API. For more information, see :ref:`v2-detector-SignalFlow`.
 
 .. _alert-signal:
 
 Select alert signals
 -------------------------------------------------------------------
 
-In the :strong:`Alert signal` tab, define the signal to monitor by entering a metric and corresponding analytics.
+On the :strong:`Alert signal` tab, define the signal to monitor by entering a metric and corresponding analytics.
 
-.. note:: If you don't see an Alert signal tab, you are viewing a detector that was created using the API; signals are defined in the :ref:`SignalFlow tab<v2-detector-signalflow>`.
-
-If you are creating a detector from scratch, you must first specify the signal or signals you want to monitor. Specifying a signal for a detector is similar to specifying a signal in a chart in the Plot Editor tab in the Chart Builder. When you start typing, a list of metrics and events displays. Select the metric you want to monitor, then add any filters or analytics. To learn more, see :ref:`specify-signal`
+If you are creating a detector from scratch, you have to first select the signals you want to monitor. Selecting a signal for a detector is similar to selecting a signal in a chart in the Chart Builder. Enter a metric and select the metric you want to monitor from the list. Add filters or analytics. To learn more, see :ref:`specify-signal`
 
 If you want to add more signals, select :guilabel:`Add Metric or Event` or :guilabel:`Add Formula`. Note that you can add events to be displayed on the chart, but you cannot select an event as the signal to be monitored.
 
-.. note:: If you are creating a detector :ref:`from a chart<create-detector-from-chart>` or by :ref:`cloning a detector<clone-detector>`, you might not need to add any new signals. However, if you do add new signals to the detector, the signals is not added to the original chart or detector.
+.. note:: If you are creating a detector :ref:`from a chart<create-detector-from-chart>` or by :ref:`cloning a detector<clone-detector>`, you might not need to add new signals. However, if you do add new signals to the detector, the signals you add are not added to the original chart or detector.
 
 .. _compound-conditions:
 
-If the detector has multiple signals, you can choose whether to monitor one or more signals.
+If the detector has multiple signals, select what signal you want to alert on. 
 
--  To monitor one signal, select the bell icon for the :strong:`Detector` menu to specify which signal you want to monitor. A blue bell indicates the signal that is being monitored.
+-  To monitor one signal, select the bell icon in the :guilabel:`Alert on` column to select which signal you want to monitor. A blue bell indicates the signal that is being monitored.
 
--  To create compound conditions based on the values of more than one signal, for example, signal A is higher than ``x`` OR signal B is higher than ``y``, select the multiple signals icon. This option is available only if the alert condition is a Custom Threshold.
-
-Continue to the next tab to select a condition for the detector's rule.
+-  To create compound conditions based on the values of more than one signal, for example, signal A is higher than ``x`` OR signal B is higher than ``y``, select the :guilabel:`Monitor multiple signals` double-bells icon. When you select to monitor multiple signals your alert condition is changed to :guilablel:`Custom Threshold`.
 
 .. _alert-condition:
 
