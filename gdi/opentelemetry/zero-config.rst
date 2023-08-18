@@ -28,7 +28,7 @@ The following packages are available:
 
 - :ref:`auto-instrumentation-java`
 - :ref:`auto-instrumentation-dotnet`
-- :ref:`_auto-instrumentation-nodejs`
+- :ref:`auto-instrumentation-nodejs`
 
 .. note:: You can also install the Collector with the Kubernetes Operator for Auto Instrumentation. See :ref:`Install the Collector with the Kubernetes Operator <auto-instrumentation-operator>` for more information.
 
