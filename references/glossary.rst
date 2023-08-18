@@ -43,11 +43,11 @@ D
 .. glossary::
 
    detector
-      A detector monitors a signal for conditions or issues that you care about.
+      A detector monitors a signal for conditions that you care about.
 
-      Those conditions or issues are expressed as one or more rules that trigger an alert when the conditions in the rules are met. Individual rules in a detector are labeled according to criticality: Info, Warning, Minor, Major, and Critical.
+      Those conditions are expressed as one or more rules that trigger an alert when the conditions in the rules are met. Individual rules in a detector are labeled according to criticality: Info, Warning, Minor, Major, and Critical.
 
-      For example, a detector that monitors the latency of an API call may go into a critical state when the latency is significantly higher than normal, as defined in the detector rules.
+      For example, a detector that monitors the latency of an API call triggers a critical alert when the latency is significantly higher than normal, as defined in the detector rules.
 
       For more information, see :ref:`get-started-detectoralert`.
 
