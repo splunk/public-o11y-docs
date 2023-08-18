@@ -18,7 +18,7 @@ When creating rules in detectors to specify conditions that can trigger alerts, 
 Alert conditions for request rate detectors
 =============================================
 
-These are the built-in alert conditions for request rate detectors that are available in Splunk APM. 
+These are the built-in alert conditions for request rate detectors that are available in Splunk APM detectors. These conditions are available when you select :guilabel:`Request rate - Service/Endpoint`, :guilabel:`Request rate - Service`, or :guilabel:`Request rate - Workflow` when you create an APM detector.  
 
 .. list-table::
    :header-rows: 1
@@ -41,11 +41,8 @@ These are the built-in alert conditions for request rate detectors that are avai
      - Request rate in the last 10 minutes is more than 5 deviations above its historical norm, cyclical over 1‑week periods; The 90th percentile of request rate in the last 10 minutes is more than 30% above its historical norm, cyclical over 1‑week periods.
 
 Alert conditions for error rate detectors
-
 ==========================================
-These are the built-in alert conditions for error rate detectors that are available in Splunk APM. 
-
-These conditions appear under Alert condition after you select :guilabel:`Service Error Rate` or :guilabel:`Workflow Error Rate` under Alert signal when you're creating a detector. 
+These are the built-in alert conditions for error rate detectors that are available in Splunk APM detectors. These conditions are available when you select :guilabel:`Error rate - Service/Endpoint`, :guilabel:`Error rate - Service`, or :guilabel:`Error rate - Workflow` when you create an APM detector. 
 
 .. list-table::
    :header-rows: 1
@@ -66,9 +63,7 @@ These conditions appear under Alert condition after you select :guilabel:`Servic
 Alert conditions for latency detectors
 ========================================
 
-These are the built-in alert conditions for latency detectors that are available in Splunk APM. 
-
-These conditions appear under Alert condition after you select :guilabel:`Service Latency` or :guilabel:`Workflow Duration` under Alert signal when you're creating a detector. 
+These are the built-in alert conditions for latency detectors that are available in Splunk APM detectors. These conditions are available when you select :guilabel:`Latency - Service/Endpoint`, :guilabel:`Latency - Service`, or :guilabel:`Latency - Workflow` when you create an APM detector. 
 
 .. list-table::
    :header-rows: 1
