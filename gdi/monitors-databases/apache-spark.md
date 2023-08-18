@@ -83,7 +83,7 @@ The following table shows the configuration options for this integration:
 
 These are the metrics available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/spark/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/collectd/spark/metadata.yaml"></div>  
 
 ### Notes
 

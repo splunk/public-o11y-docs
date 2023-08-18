@@ -123,7 +123,7 @@ The following table shows the configuration options for this monitor:
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/haproxy/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/haproxy/metadata.yaml"></div>
 
 ### Notes
 

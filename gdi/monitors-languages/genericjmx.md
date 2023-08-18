@@ -109,7 +109,7 @@ The **nested** `values` configuration object has the following fields:
 
 ## Metrics
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/genericjmx/metadata.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/collectd/genericjmx/metadata.yaml"></div>
 
 ### Notes
 
