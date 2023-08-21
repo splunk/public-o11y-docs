@@ -34,6 +34,17 @@ If you're experiencing issues streaming metrics, check the following:
 
 * In the AWS S3 bucket used by Kinesis Firehose, check if there are any records that could not be delivered to Splunk Observability Cloud.
 
+How can I track invalid Metric Streams?
+====================================================================================================
+
+Observability Cloud provides out-of-the-box navigators and dashboards to help you track invalid or faulty Metric Streams, including:
+
+* Streams without a matching AWS integration on the Observability side.
+* Streams from a disabled integration or Metric Stream feature.
+
+To learn more about built-in content, see :ref:`built-in-dashboards`.
+
+
 How does Metric Streams clean-up work? How can I try to clean up Metric Streams again?
 ====================================================================================================
 
