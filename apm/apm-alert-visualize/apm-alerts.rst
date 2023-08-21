@@ -12,17 +12,36 @@ You can use detectors to dynamically monitor request rate, error rate and latenc
 Create a APM detector
 ========================
 
-You can create an APM detector from anywhere within Splunk Observability Cloud using the create menu.
-
-Entry points for creating APM detectors
-------------------------------------------
 There are several entry points for creating APM detectors.
 
-* From the Splunk Observability Cloud create menu
-* From a APM dashboard
-* From Tag Spotlight in Splunk APM
-* From the landing page in Splunk APM
-* From the service map in Splunk APM
+From the Splunk Observability Cloud create menu
+-------------------------------------------------
+
+#. Select the plus icon to open the create menu in Splunk Observability Cloud.
+#. Select :guilabel:`APM Detector`.
+#. See :ref:`detector-steps` to complete your detector configuration.
+
+From a dashboard
+--------------------
+
+To create an APM detector from Splunk APM dashboards, select the bell icon within a specific chart in the dashboard and select :guilabel:`New detector from chart`. See :ref:`detector-steps` to complete your detector configuration.
+
+From Tag Spotlight in Splunk APM
+----------------------------------
+
+To create an APM detector from Tag Spotlight in Splunk APM, select the 3-dot menu from the Tag Spotlight menu bar and select :guilabel:`Create Detector`. See :ref:`detector-steps` to complete your detector configuration.
+
+From the landing page in Splunk APM
+--------------------------------------
+
+To create an APM detector from the landing page in Splunk APM, select the 3-dot icon to open the :guilabel:`More`` menu in the metric charts for services and Business Workflows and select :guilabel:`Create Detector`. See :ref:`detector-steps` to complete your detector configuration.
+
+From the service map in Splunk APM
+------------------------------------
+
+To create an APM detector from the service map in Splunk APM, select a service from the service map. Then, select the 3-dot icon in the panel for the service and select :guilabel:`Create Detector`. See :ref:`detector-steps` to complete your detector configuration.
+
+.. _detector-steps:
 
 Steps to create a detector
 -----------------------------
