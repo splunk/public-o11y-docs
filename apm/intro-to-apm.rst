@@ -67,7 +67,7 @@ The following table provides an overview of what you can do with Splunk APM:
     - Tag Spotlight
     - :ref:`apm-tag-spotlight`
 
-  * - Search and filter full-fidelity trace data to troubleshoot issues. Run ad-hoc aggregations on trace data to identify problems across any tag or attribute. View patterns in your traces to understand how latency or errors impact specific customer groups.
+  * - Search and filter full-fidelity trace data to troubleshoot issues. Run aggregations as needed on trace data to identify problems across any tag or attribute. View patterns in your traces to understand how latency or errors impact specific customer groups.
     - Trace Analyzer
     - :ref:`trace-analyzer`
 

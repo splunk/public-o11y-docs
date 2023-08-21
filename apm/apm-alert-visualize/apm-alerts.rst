@@ -7,7 +7,9 @@ Configure detectors and alerts in Splunk APM
 .. meta::
    :description: Learn about options for detectors and alerts in Splunk APM. 
 
-You can use detectors to dynamically monitor request rate, error rate and latency in the services you are tracing with Splunk APM. APM detectors use built-in algorithms to generate alerts about sudden spikes, historical anomalies, or a static threshold in your APM metrics or Business Workflows. AutoDetect detectors are also available. See :ref:`autodetect` for more information.
+You can use detectors to dynamically monitor request rate, error rate and latency in the services you are tracing with Splunk APM. APM detectors use built-in algorithms to generate alerts about sudden spikes, historical anomalies, or a static threshold in your APM metrics or Business Workflows. See :ref:`alert-conditions-apm` for more information about alert conditions. 
+
+You can also use AutoDetect detectors that are available by default for service latency, error rate, and request rate. See :ref:`autodetect` for more information.
 
 Create a APM detector
 ========================
@@ -69,7 +71,7 @@ Steps to create a detector
 Follow these steps to create a detector for Splunk APM:
 
 #. Name your detector.
-#. Select the metric that is of interest to you. The following metrics are available to you:
+#. Select the metric that is of interest to you. The following metrics are available. See :ref:`alert-conditions-apm` for more information about alert conditions.
     #. Request rate for a workflow, service, or endpoint.
     #. Error rate for a workflow, service, or endpoint.
     #. Latency for a workflow, service, or endpoint.
