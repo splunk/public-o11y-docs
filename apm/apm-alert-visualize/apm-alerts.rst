@@ -19,6 +19,10 @@ From the Splunk Observability Cloud create menu
 
 #. Select the plus icon to open the create menu in Splunk Observability Cloud.
 #. Select :guilabel:`APM Detector`.
+.. image:: /_images/apm/apm-detectors-alerts/new-detector-create-menu.png
+   :width: 99%
+   :alt: Screenshot of the create menu in Splunk Observability Cloud.
+
 #. See :ref:`detector-steps` to complete your detector configuration.
 
 From a dashboard
