@@ -85,7 +85,7 @@ The gauge and counter metrics are collected from PCF Platform apps and platform 
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/cloudfoundry/metadata.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/cloudfoundry/metadata.yaml"></div>
 
 ### Notes
 

@@ -80,7 +80,7 @@ The **nested** `dimensions` configuration object has the following fields:
 
 Do not configure the monitor for memstats metrics because they are standard metrics provided by default. The following metrics are also available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/expvar/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/expvar/metadata.yaml"></div>
 
 ### Notes
 
