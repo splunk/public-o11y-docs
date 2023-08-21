@@ -7,7 +7,7 @@ Use built-in alert conditions in Splunk APM
 .. meta::
    :description: Learn about the built-in alert conditions in Splunk APM. 
 
-When creating rules in detectors to specify conditions that can trigger alerts, Splunk APM provides built-in conditions that detect common problem scenarios. Many of these alert conditions provide more powerful ways of monitoring signals than the standard practice of comparing a signal to a static threshold.
+When creating rules in detectors to specify conditions that can trigger alerts, Splunk APM provides built-in conditions that detect common problem scenarios. Many of these alert conditions provide more powerful ways of monitoring signals than the standard practice of comparing a signal to a static threshold. See :ref:`apm-alerts` for steps to configure and APM detector.
 
 .. note:: 
 
@@ -18,7 +18,7 @@ When creating rules in detectors to specify conditions that can trigger alerts, 
 Alert conditions for request rate detectors
 =============================================
 
-These are the built-in alert conditions for request rate detectors that are available in Splunk APM detectors. These conditions are available when you select :guilabel:`Request rate - Service/Endpoint`, :guilabel:`Request rate - Service`, or :guilabel:`Request rate - Workflow` when you create an APM detector.  
+These are the built-in alert conditions for request rate detectors that are available in Splunk APM detectors. These conditions are available when you select :guilabel:`Request rate - Service/Endpoint`, :guilabel:`Request rate - Service`, or :guilabel:`Request rate - Workflow` when you create an APM detector. See :ref:`apm-alerts` for steps to configure and APM detector.
 
 .. list-table::
    :header-rows: 1
@@ -42,7 +42,7 @@ These are the built-in alert conditions for request rate detectors that are avai
 
 Alert conditions for error rate detectors
 ==========================================
-These are the built-in alert conditions for error rate detectors that are available in Splunk APM detectors. These conditions are available when you select :guilabel:`Error rate - Service/Endpoint`, :guilabel:`Error rate - Service`, or :guilabel:`Error rate - Workflow` when you create an APM detector. 
+These are the built-in alert conditions for error rate detectors that are available in Splunk APM detectors. These conditions are available when you select :guilabel:`Error rate - Service/Endpoint`, :guilabel:`Error rate - Service`, or :guilabel:`Error rate - Workflow` when you create an APM detector. See :ref:`apm-alerts` for steps to configure and APM detector.
 
 .. list-table::
    :header-rows: 1
@@ -63,7 +63,7 @@ These are the built-in alert conditions for error rate detectors that are availa
 Alert conditions for latency detectors
 ========================================
 
-These are the built-in alert conditions for latency detectors that are available in Splunk APM detectors. These conditions are available when you select :guilabel:`Latency - Service/Endpoint`, :guilabel:`Latency - Service`, or :guilabel:`Latency - Workflow` when you create an APM detector. 
+These are the built-in alert conditions for latency detectors that are available in Splunk APM detectors. These conditions are available when you select :guilabel:`Latency - Service/Endpoint`, :guilabel:`Latency - Service`, or :guilabel:`Latency - Workflow` when you create an APM detector. See :ref:`apm-alerts` for steps to configure and APM detector.
 
 .. list-table::
    :header-rows: 1

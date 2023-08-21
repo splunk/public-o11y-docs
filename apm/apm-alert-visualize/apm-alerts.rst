@@ -19,31 +19,47 @@ From the Splunk Observability Cloud create menu
 
 #. Select the plus icon to open the create menu in Splunk Observability Cloud.
 #. Select :guilabel:`APM Detector`.
-.. image:: /_images/apm/apm-detectors-alerts/new-detector-create-menu.png
-   :width: 99%
-   :alt: Screenshot of the create menu in Splunk Observability Cloud.
-
 #. See :ref:`detector-steps` to complete your detector configuration.
+
+.. image:: /_images/apm/apm-detectors/new-detector-create-menu.png
+  :width: 30%
+  :alt: Screenshot of the create menu in Splunk Observability Cloud.
 
 From a dashboard
 --------------------
 
 To create an APM detector from Splunk APM dashboards, select the bell icon within a specific chart in the dashboard and select :guilabel:`New detector from chart`. See :ref:`detector-steps` to complete your detector configuration.
 
+.. image:: /_images/apm/apm-detectors/new-detector-from-chart.png
+  :width: 30%
+  :alt: Screenshot of the create menu in Splunk Observability Cloud.
+
 From Tag Spotlight in Splunk APM
 ----------------------------------
 
 To create an APM detector from Tag Spotlight in Splunk APM, select the 3-dot menu from the Tag Spotlight menu bar and select :guilabel:`Create Detector`. See :ref:`detector-steps` to complete your detector configuration.
+
+.. image:: /_images/apm/apm-detectors/new-detector-from-tag-spotlight.png
+  :width: 30%
+  :alt: Screenshot of the create menu in Splunk Observability Cloud.
 
 From the landing page in Splunk APM
 --------------------------------------
 
 To create an APM detector from the landing page in Splunk APM, select the 3-dot icon to open the :guilabel:`More`` menu in the metric charts for services and Business Workflows and select :guilabel:`Create Detector`. See :ref:`detector-steps` to complete your detector configuration.
 
+.. image:: /_images/apm/apm-detectors/new-detector-landing-page.png
+  :width: 30%
+  :alt: Screenshot of the create menu in Splunk Observability Cloud.
+
 From the service map in Splunk APM
 ------------------------------------
 
 To create an APM detector from the service map in Splunk APM, select a service from the service map. Then, select the 3-dot icon in the panel for the service and select :guilabel:`Create Detector`. See :ref:`detector-steps` to complete your detector configuration.
+
+.. image:: /_images/apm/apm-detectors/new-detector-service-map.png
+  :width: 45%
+  :alt: Screenshot of the create menu in Splunk Observability Cloud.
 
 .. _detector-steps:
 
