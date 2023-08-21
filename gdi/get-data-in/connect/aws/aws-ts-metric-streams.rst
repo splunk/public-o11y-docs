@@ -46,7 +46,6 @@ To access these dashboards, go to :guilabel:`Dashboards > Organization metrics >
 
 To learn more about built-in content, see :ref:`built-in-dashboards`.
 
-
 How does Metric Streams clean-up work? How can I try to clean up Metric Streams again?
 ====================================================================================================
 
