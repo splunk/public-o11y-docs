@@ -53,7 +53,7 @@ The following table provides an overview of what you can do with Splunk APM:
     - AlwaysOn Profiling
     - :ref:`profiling-scenario-landingpage`
 
-  * - Use autodetect to alert on sudden changes in your request, error and duration (RED) metrics to stay on top of your services' performance. Use custom detectors to alert with custom error and duration metrics.
+  * - Use autodetect to alert on sudden changes in your request, error, and duration (RED) metrics to stay on top of your services' performance. Use custom detectors to alert with custom error and duration metrics.
     - Detectors and alerts
     - :ref:`Detectors and alerts<apm-alerts>`
 
