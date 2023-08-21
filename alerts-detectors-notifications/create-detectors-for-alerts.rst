@@ -20,7 +20,7 @@ The high-level steps for creating a detector are:
 
 1. Choose :ref:`how to create the detector <how-to-create-detector>`.
 
-2. Add :ref:`alert rules <build-rules>` to the detector to specify when to trigger alerts.
+2. Create :ref:`alert rules <build-rules>` to the detector to specify when to trigger alerts.
 
 .. _how-to-create-detector:
 
