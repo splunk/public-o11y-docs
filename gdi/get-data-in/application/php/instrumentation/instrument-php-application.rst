@@ -35,7 +35,7 @@ Install the SignalFx Tracing Library for PHP manually
 Follow these instructions to install the SignalFx Tracing Library for PHP:
 
 - :ref:`install-php-instrumentation`
-- :ref:`configure-otel-dotnet`
+- :ref:`advanced-php-configuration`
 
 .. _install-php-instrumentation:
 

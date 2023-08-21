@@ -61,7 +61,7 @@ The following table shows the configuration options for the collectd/df monitor:
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/collectd-df/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/collectd/df/metadata.yaml"></div>
 
 ### Notes
 
