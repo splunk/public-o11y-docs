@@ -42,6 +42,8 @@ Observability Cloud provides out-of-the-box navigators and dashboards to help yo
 * Streams without a matching AWS integration on the Observability side.
 * Streams from a disabled integration or Metric Stream feature.
 
+To access these dashboards, go to :guilabel:`Dashboards > Organization metrics > Cloud integrations`, and look for :guilabel:`Invalid AWS CloudWatch Metric Streams`. 
+
 To learn more about built-in content, see :ref:`built-in-dashboards`.
 
 
