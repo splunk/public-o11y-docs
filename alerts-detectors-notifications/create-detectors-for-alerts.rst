@@ -148,11 +148,11 @@ After you have selected the alert condition, continue to the next tab to specify
 Specify alert settings
 -------------------------------------------------------------------
 
-On the :strong:`Alert settings` tab, you specify the settings that trigger an alert. The available settings vary depending on the alert condition you selected. See :ref:`condition-reference` for the settings available for each built-in condition.
+On the :strong:`Alert settings` tab, specify the settings that trigger an alert. The available settings vary depending on the alert condition you selected. See :ref:`condition-reference` for the settings available for each built-in condition.
 
 If you are using the Custom Threshold condition, you can select :guilabel:`Add another condition` to create compound conditions using AND and OR operators. For more information about compound conditions, see :ref:`custom-threshold`.
 
-In the chart, you see a preview of the alerts that are triggered based on the settings you selected. For more information on using the preview, see :ref:`preview-detector-alerts`.
+In the chart, use a preview of the alerts that are triggered based on the settings you selected. For more information on using the preview, see :ref:`preview-detector-alerts`.
 
 After you have specified settings for triggering alerts, continue to the next tab to create a message that is sent when the alert is triggered.
 
@@ -163,7 +163,7 @@ After you have specified settings for triggering alerts, continue to the next ta
 Alert messages
 -------------------------------------------------------------------
 
-On the :strong:`Alert message` tab, you specify the severity of the alert and the information you want to include in the notification message.
+On the :strong:`Alert message` tab, specify the severity of the alert and the information you want to include in the notification message.
 
 .. _severity:
 
