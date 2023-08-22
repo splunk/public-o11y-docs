@@ -135,8 +135,6 @@ If the detector has multiple signals, select what signal you want to alert on.
 Select alert conditions
 -------------------------------------------------------------------
 
-.. note:: If you don't see an Alert condition tab, you are viewing a detector that was created using the API; alert conditions are defined in the :ref:`SignalFlow tab<v2-detector-signalflow>`.
-
 On the :strong:`Alert condition` tab, select the type of condition that triggers an alert. If you want to create compound conditions using AND or OR operators on the Alert settings tab, you must use the Custom Threshold condition. This applies whether you are monitoring a single signal or multiple signals.
 
 See :ref:`condition-reference` for the list of the available built-in alert conditions for Infrastructure Monitoring and Custom Metrics detectors.
