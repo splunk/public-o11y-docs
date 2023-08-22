@@ -1,4 +1,4 @@
-.. _create-detectors:
+.. _alert-message-variables-ref:
 
 Alert message variables reference
 ************************************
@@ -209,7 +209,7 @@ The following tables describe the additional variables you can use when creating
 
 
    *  - {{inputs.hours_left.value}}
-      - Number of hours left before reaching empty or capacity
+      - Number of hours remaining before reaching empty or capacity
 
    *  - {{event_annotations.fire_forecast_ahead}}
       - Threshold for triggering alert, in hours
