@@ -237,8 +237,60 @@ If your recording contains unsupported steps, you need to reformat the step to f
                   "wait_for_nav": false,
                   "selector_type": "css",
                   "selector": "body,#homepage_product_brand-sku-launch,css-4t2fjl,.eanm77i0"
-                  }
+               }
 
+   * - Wait for Element - Visible false:
+
+         .. code-block:: javascript
+
+            {
+               "type": "waitForElement",
+               "selectors": [
+                  [
+                     "body",
+                     "#homepage_slideshow_skincare_brand-sku-launch_farmacy_FY233003_broadcast_us_rwd_banner_060923",
+                     ".css-4t2fjl",
+                     ".eanm77i0"
+                  ]
+               ],
+               "visible": true
+            }
+
+
+     - Assert_element_not_present:
+
+         .. code-block:: javascript
+
+              {
+                  "name": "",
+                  "type": "assert_element_not_present",
+                  "wait_for_nav": false,
+                  "selector_type": "css",
+                  "selector": "body,#homepage_slideshow_skincare_brand-sku-launch_farmacy_FY233003_broadcast_us_rwd_banner_060923,.css-4t2fjl,.eanm77i0"
+                  }
+   * - Custom step:
+
+         .. code-block:: javascript
+
+            {
+               "type": "customStep",
+               "timeout": 5000,
+               "target": "main",
+               "name": "customParam",
+               "parameters": {}
+            }
+
+
+     - run_javascript:
+
+         .. code-block:: javascript
+
+            {
+               "name": "Unsupported step customStep",
+               "type": "run_javascript",
+               "value": "",
+               "wait_for_nav": false
+            }
 
 
 
