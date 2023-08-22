@@ -87,7 +87,7 @@ Follow these steps to automatically instrument your application:
 
 #. Restart your server.
 
-Next, deploy the PHP instrumentation in your environment. See :ref:`deploy-php` for more informatio.
+Next, deploy the PHP instrumentation in your environment. See :ref:`deploy-php` for more information.
 
 .. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your PHP application or service manually. See :ref:`php-manual-instrumentation`.
 
