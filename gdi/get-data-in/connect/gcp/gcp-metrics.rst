@@ -22,7 +22,7 @@ Available GCP metrics
 All metrics of supported services are included by default. 
 
 * Check the list of supported GCP services in Splunk Observability Cloud at :ref:`gcp-integrations`.
-* For a detailed list of the available Google Cloud Monitoring metrics, see the official Google documentation at :new-page:`Google Cloud metrics <https://cloud.google.com/monitoring/api/metrics_gcp>`. 
+* For a detailed list of the available Google Cloud Monitoring metrics, including services not supported out-of-the-box, see the official Google documentation at :new-page:`Google Cloud metrics <https://cloud.google.com/monitoring/api/metrics_gcp>`. 
 * To track and understand your consumption, see :ref:`monitor-imm-billing-usage`.
 
 Organization metrics
