@@ -137,7 +137,7 @@ Select alert conditions
 
 On the :strong:`Alert condition` tab, select the type of condition that triggers an alert. If you want to create compound conditions using AND or OR operators on the Alert settings tab, you must use the Custom Threshold condition. This applies whether you are monitoring a single signal or multiple signals.
 
-Splunk Infrastructure Monitoring and Splunk APM provide several built-in alert conditions. See :ref:`condition-reference` for the list of the available built-in alert conditions for Infrastructure Monitoring and Custom Metrics detectors.
+See :ref:`condition-reference` for the list of the available built-in alert conditions for Infrastructure Monitoring and Custom Metrics detectors.
 
 After you have selected the alert condition, continue to the next tab to specify the settings that trigger alerts.
 
