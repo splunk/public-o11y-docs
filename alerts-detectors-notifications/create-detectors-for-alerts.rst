@@ -68,6 +68,8 @@ Follow these steps to create the detector:
 
 After you create a detector from a chart, a :ref:`link to the new detector<link-detector-to-chart>` is automatically added to the chart.
 
+.. note:: You can also create a detector from a chart for Splunk APM in APM dashboards. See :ref:`apm-alerts` for steps to create an APM Detector.
+
 .. _create-detector-from-scratch:
 
 Create a detector from scratch
