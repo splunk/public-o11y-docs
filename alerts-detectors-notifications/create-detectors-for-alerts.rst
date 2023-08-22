@@ -128,6 +128,8 @@ If the detector has multiple signals, select what signal you want to alert on.
 
 -  To create compound conditions based on the values of more than one signal, for example, signal A is higher than ``x`` OR signal B is higher than ``y``, select the :guilabel:`Monitor multiple signals` double-bells icon. When you select to monitor multiple signals your alert condition is changed to :guilabel:`Custom Threshold`.
 
+.. note:: If you don't see the Alert signal tab, you are viewing a detector created through the API. For more information, see :ref:`v2-detector-SignalFlow`.
+
 .. _alert-condition:
 
 Select alert conditions
@@ -141,14 +143,14 @@ See :ref:`condition-reference` for the list of the available built-in alert cond
 
 After you have selected the alert condition, continue to the next tab to specify the settings that trigger alerts.
 
+.. note:: If you don't see the Alert condition tab, you are viewing a detector created through the API. For more information, see :ref:`v2-detector-SignalFlow`.
+
 .. _alert-settings:
 
 Specify alert settings
 -------------------------------------------------------------------
 
 On the :strong:`Alert settings` tab, you specify the settings that trigger an alert.
-
-.. note:: If you don't see an Alert settings tab, you are viewing a detector that was created using the API; alert settings are defined in the :ref:`SignalFlow tab<v2-detector-signalflow>`.
 
 The available settings vary depending on the alert condition you selected.
 
@@ -157,6 +159,8 @@ The available settings vary depending on the alert condition you selected.
 In the chart, you see a preview of the alerts that are triggered based on the settings you selected. For more information on using the preview, see :ref:`preview-detector-alerts`.
 
 After you have specified settings for triggering alerts, continue to the next tab to create a message that is sent when the alert is triggered.
+
+.. note:: If you don't see the Alert settings tab, you are viewing a detector that was created using the API; alert settings are defined in the :ref:`SignalFlow tab<v2-detector-signalflow>`.
 
 .. _alert-message:
 
