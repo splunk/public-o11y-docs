@@ -87,6 +87,8 @@ Follow these steps to automatically instrument your application:
 
 #. Restart your server.
 
+Next, deploy the PHP instrumentation in your environment. See :ref:`deploy-php` for more informatio.
+
 .. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your PHP application or service manually. See :ref:`php-manual-instrumentation`.
 
 .. _php-ini-config:
@@ -104,10 +106,12 @@ You can use the ``signalfx-setup.php`` script to set INI file options without ha
    
 This is useful for options common to all PHP services running in the system, like endpoints.
 
-.. _deploy_php:
+.. _deploy-php:
 
 Deploy the PHP instrumentation in your environment
 =====================================================
+
+You can deploy the PHP instrumentation in Docker, Kubernetes, or send data directly to Splunk Observability Cloud. See the following sections for more information.
 
 .. _docker_php:
 
@@ -139,6 +143,8 @@ You can deploy the PHP instrumentation using Docker. Follow these steps to get s
 #. Add a command to run the newly created shell script at the end of the Dockerfile.
 
 #. Rebuild the container using ``docker build``.
+
+Next, configure the PHP instrumentation for Splunk Observability Cloud. See :ref:`advanced-php-configuration` for more information.
 
 .. caution:: Make sure to deactivate the ``Xdebug`` extension, as it's not compatible with the PHP instrumentation.
 
@@ -175,6 +181,8 @@ The following example shows how to update a deployment to expose environment var
                   - name: SIGNALFX_TRACE_GLOBAL_TAGS
                     value: "deployment.environment:<my_environment>"
 
+Next, configure the PHP instrumentation for Splunk Observability Cloud. See :ref:`advanced-php-configuration` for more information.
+
 .. _export-directly-to-olly-cloud-php:
 
 Send data directly to Splunk Observability Cloud
@@ -205,5 +213,7 @@ In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, f
 #. Select your username. 
 
 The realm name appears in the :guilabel:`Organizations` section.
+
+Next, configure the PHP instrumentation for Splunk Observability Cloud. See :ref:`advanced-php-configuration` for more information.
 
 .. note:: For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
