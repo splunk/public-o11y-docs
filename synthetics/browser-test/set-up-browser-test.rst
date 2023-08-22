@@ -108,6 +108,43 @@ If your recording contains unsupported steps, you need to reformat the step to f
                "wait_for_nav": true
                }
 
+   * - Click with navigation:
+
+         .. code-block:: javascript
+
+               {
+               "type": "click",
+               "target": "main",
+               "selectors": [
+                  [
+                     "div:nth-of-type(2) > div:nth-of-type(2) a > div"
+                  ],
+                  [
+                     "xpath//html/body/main/div/div/div[2]/div[2]/div/a/div"
+                  ]
+               ],
+               "offsetY": 211,
+               "offsetX": 164,
+               "assertedEvents": [
+                  {
+                     "type": "navigation",
+                     "url": "www.buttercupgames.com/product/66VCHSJNUP",
+                     "title": ""
+                  }
+               ]
+
+     - Click:
+         .. code-block:: javascript
+
+               {
+                  "name": "",
+                  "type": "click_element",
+                  "selector_type": "css",
+                  "selector": "div:nth-of-type(2) > div:nth-of-type(2) a > div",
+                  "wait_for_nav": true
+               }
+
+
    
 
 View your Browser test
