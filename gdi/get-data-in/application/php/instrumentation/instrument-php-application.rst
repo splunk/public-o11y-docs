@@ -94,7 +94,7 @@ Next, deploy the PHP instrumentation in your environment. See :ref:`deploy-php` 
 .. _php-ini-config:
 
 INI file settings
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------
 
 If you don't set any environment variable, the library extracts default values from the INI file. The prefix for settings defined using environment variables that start with ``SIGNALFX_TRACE_`` is ``signalfx.trace.``. For all other environment variables that start with ``SIGNALFX_`` the prefix is ``signalfx.``.
 
