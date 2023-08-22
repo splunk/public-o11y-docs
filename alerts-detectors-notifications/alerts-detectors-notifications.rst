@@ -90,6 +90,7 @@ The boxes represent objects relating to the detector, and the diamonds represent
       B[Alert rule] --> A
       end
       A -- yes --> D{Detector triggered}
+      A -- no --> E{Detector not triggered}
       D --> Alert
       D --> Event
       D --> Notifications
