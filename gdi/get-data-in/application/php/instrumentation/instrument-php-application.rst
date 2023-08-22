@@ -34,12 +34,13 @@ Install the SignalFx Tracing Library for PHP manually
 
 Follow these instructions to install the SignalFx Tracing Library for PHP:
 
-- :ref:`install-php-instrumentation`
-- :ref:`advanced-php-configuration`
+#. :ref:`install-php-instrumentation`
+#. :ref:`deploy-php`
+#. :ref:`advanced-php-configuration`
 
 .. _install-php-instrumentation:
 
-Instrument a PHP application
+Instrument your PHP application
 ------------------------------------------
 
 Follow these steps to automatically instrument your application:
@@ -103,6 +104,11 @@ You can use the ``signalfx-setup.php`` script to set INI file options without ha
    
 This is useful for options common to all PHP services running in the system, like endpoints.
 
+.. _deploy_php:
+
+Deploy the PHP instrumentation in your environment
+=====================================================
+
 .. _docker_php:
 
 Deploy the PHP instrumentation in Docker
@@ -134,7 +140,7 @@ You can deploy the PHP instrumentation using Docker. Follow these steps to get s
 
 #. Rebuild the container using ``docker build``.
 
-.. caution:: Make sure to deactivate the ``Xdebug`` extension completely, as it's not compatible with the PHP instrumentation.
+.. caution:: Make sure to deactivate the ``Xdebug`` extension, as it's not compatible with the PHP instrumentation.
 
 .. _kubernetes_php:
 
