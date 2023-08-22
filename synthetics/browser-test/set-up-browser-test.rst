@@ -144,6 +144,103 @@ If your recording contains unsupported steps, you need to reformat the step to f
                   "wait_for_nav": true
                }
 
+   * - Click without navigation:
+
+         .. code-block:: javascript
+
+               {
+               "type": "click",
+               "target": "main",
+               "selectors": [
+                  [
+                     "div:nth-of-type(2) > div:nth-of-type(2) a > div"
+                  ],
+                  [
+                     "xpath//html/body/main/div/div/div[2]/div[2]/div/a/div"
+                  ]
+               ],
+               "offsetY": 211,
+               "offsetX": 164,
+               "assertedEvents": []
+               }
+
+
+
+     - Click:
+         .. code-block:: javascript
+
+               {
+                  "name": "",
+                  "type": "click_element",
+                  "selector_type": "css",
+                  "selector": "div:nth-of-type(2) > div:nth-of-type(2) a > div",
+                  "wait_for_nav": false
+               }
+
+   * - Change:
+
+         .. code-block:: javascript
+
+               {
+                  "type": "change",
+                  "value": "5",
+                  "selectors": [
+                     [
+                        "#quantity"
+                     ],
+                     [
+                        "xpath///*[@id=\"quantity\"]"
+                     ]
+                  ],
+                  "target": "main"
+                  }
+
+
+     - enter_value:
+         .. code-block:: javascript
+
+              {
+                  "name": "",
+                  "type": "enter_value",
+                  "selector_type": "id",
+                  "selector": "quantity",
+                  "option_selector_type": "index",
+                  "option_selector": "5",
+                  "wait_for_nav": false
+                  }
+
+   * - Wait for element:
+
+         .. code-block:: javascript
+
+              {
+                  "type": "waitForElement",
+                  "selectors": [
+                     [
+                        "body",
+                        "#homepage_product_brand-sku-launch",
+                        ".css-4t2fjl",
+                        ".eanm77i0"
+                     ]
+                  ]
+                  }
+
+
+
+     - assert_element_present:
+
+         .. code-block:: javascript
+
+              {
+                  "name": "",
+                  "type": "assert_element_present",
+                  "wait_for_nav": false,
+                  "selector_type": "css",
+                  "selector": "body,#homepage_product_brand-sku-launch,css-4t2fjl,.eanm77i0"
+                  }
+
+
+
 
    
 
