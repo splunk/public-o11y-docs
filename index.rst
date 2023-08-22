@@ -499,6 +499,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   alerts-detectors-notifications/alert-message-variables-reference
+
+.. toctree::
+   :maxdepth:   3
+
 .. toctree::
    :caption: Application Performance Monitoring
    :maxdepth:   3
