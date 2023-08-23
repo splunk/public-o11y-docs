@@ -120,11 +120,17 @@ You can override the default configuration values used to connect to the control
 Run the container in non-root user mode
 ==================================================
 
-Collecting logs often requires reading log files owned by the root user. By default, the container runs with ``securityContext.runAsUser = 0``, which gives the root user permission to read those files. 
+Collecting logs often requires reading log files that are owned by the root user. By default, the container runs with `securityContext.runAsUser = 0` which gives the `root` user permission to read those files.
+To run the container in `non-root` user mode, set `.agent.securityContext`. The log data permissions will be adjusted to match the securityContext configurations. For instance:
 
-To run the container in non-root user mode, set ``.agent.securityContext`` to ``20000``, which makes the container to run the required file system operations as UID and GID ``20000``. You can use any other UID and GUI.
+.. code-block:: yaml
 
-.. note:: Setting the ``containerRuntime:`` parameter to ``cri-o`` did not work during internal testing for logs collection.
+agent:
+  securityContext:
+     runAsUser: 20000
+     runAsGroup: 20000
+
+.. note:: Running the collector agent for log collection in non-root mode is not currently supported in CRI-O and OpenShift environments at this time, for more details see the :new-page:`related GitHub feature request issue <https://github.com/signalfx/splunk-otel-collector-chart/issues/891>`.
 
 Use the Network Explorer to collect telemetry
 ==================================================

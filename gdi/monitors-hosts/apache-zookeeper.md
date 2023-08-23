@@ -58,7 +58,7 @@ The following table shows the configuration options for the Apache Zookeeper mon
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/zookeeper/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/collectd/zookeeper/metadata.yaml"></div>
 
 ### Notes
 
