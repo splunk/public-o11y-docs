@@ -128,7 +128,7 @@ If your recording contains unsupported steps, you need to reformat the step to f
                "assertedEvents": [
                   {
                      "type": "navigation",
-                     "url": "www.buttercupgames.com/product/66VCHSJNUP",
+                     "url": "www.buttercupgames.com/product/example",
                      "title": ""
                   }
                ]
@@ -218,7 +218,7 @@ If your recording contains unsupported steps, you need to reformat the step to f
                   "selectors": [
                      [
                         "body",
-                        "#homepage_product_brand-sku-launch",
+                        "#homepage_product_brand-example",
                         ".css-4t2fjl",
                         ".eanm77i0"
                      ]
@@ -236,7 +236,7 @@ If your recording contains unsupported steps, you need to reformat the step to f
                   "type": "assert_element_present",
                   "wait_for_nav": false,
                   "selector_type": "css",
-                  "selector": "body,#homepage_product_brand-sku-launch,css-4t2fjl,.eanm77i0"
+                  "selector": "body,#homepage_product_brand-example"
                }
 
    * - Wait for Element - Visible false:
@@ -248,7 +248,7 @@ If your recording contains unsupported steps, you need to reformat the step to f
                "selectors": [
                   [
                      "body",
-                     "#homepage_slideshow_skincare_brand-sku-launch_farmacy_FY233003_broadcast_us_rwd_banner_060923",
+                     "#homepage_product_brand-example",
                      ".css-4t2fjl",
                      ".eanm77i0"
                   ]
@@ -266,7 +266,7 @@ If your recording contains unsupported steps, you need to reformat the step to f
                   "type": "assert_element_not_present",
                   "wait_for_nav": false,
                   "selector_type": "css",
-                  "selector": "body,#homepage_slideshow_skincare_brand-sku-launch_farmacy_FY233003_broadcast_us_rwd_banner_060923,.css-4t2fjl,.eanm77i0"
+                  "selector": "body,#homepage_product_brand-example"
                   }
    * - Custom step:
 
