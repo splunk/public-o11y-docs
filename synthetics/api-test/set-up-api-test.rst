@@ -15,7 +15,7 @@ Set up an API test
 Follow these steps to set up an API test:
 
 #. From the landing page of Splunk Observability Cloud, navigate to Splunk Synthetic Monitoring. 
-#. Under Tests, select :guilabel:`Add new test` and select :guilabel:`API test` from the drop-down list. The test creation view opens. 
+#. Under Tests, select :guilabel:`Add new test` and select :guilabel:`API test` from the list. The test creation view opens. 
 #. In the :guilabel:`Name` field, enter a name for your test. 
 #. Beside :guilabel:`Steps`, select :guilabel:`Add requests` to add requests to your API test. The requests setup page opens. 
 #. Add as many requests as you would like to include in your test, including setup and validation steps. 
