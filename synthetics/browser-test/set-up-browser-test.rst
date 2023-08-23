@@ -59,7 +59,7 @@ Follow these steps to import a JSON file from Google Chrome Recorder to your bro
 
 :strong:`Steps`
 
-#. In Splunk Synthetic Monitoring, Select Edit on the browser test to open the test configuration panel.
+#. In Splunk Synthetic Monitoring, Select Edit on the Browser test to open the test configuration panel.
 #. Select Import.
 #. Upload the JSON generated from Google Chrome recorder. 
 #. If a step is not supported, you need to edit or delete the step. 
