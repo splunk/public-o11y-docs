@@ -93,7 +93,7 @@ The boxes represent objects relating to the detector, and the diamonds represent
       A -- no --> E{Detector not triggered}
       D --> Alert
       D --> Event
-      D --> F["Notifications (optional)"]
+      D -.-> F["Notifications (optional)"]
     
 
 What you can do with alerts and detectors
