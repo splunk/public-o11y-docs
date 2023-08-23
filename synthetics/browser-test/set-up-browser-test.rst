@@ -9,7 +9,7 @@ Set up a Browser test
     :description: Learn how to set up a Browser test in Splunk Synthetic Monitoring.
 
 
-A Browser test lets you monitor the user experience for a single page or a multi-step user flow by running a synthetic test of the URLs you provide. Use this type of test to monitor conversion paths or any path that requires multiple steps or runs JavaScript. For an example, see :ref:`browser-test-scenario`.
+Use a Browser test to monitor the user experience for a single page or a multi-step user flow by running a synthetic test of the URLs you provide. Use this type of test to monitor conversion paths or any path that requires multiple steps or runs JavaScript. For an example, see :ref:`browser-test-scenario`.
 
 
 For each page checked in a Browser test, Splunk Synthetic Monitoring captures an HTTP Archive (HAR) file, represented in a waterfall chart, which illustrates the performance of specific resources within the page. Browser tests also capture a set of 40+ metrics. See :ref:`waterfall-chart` and :ref:`browser-metrics` to learn more.
@@ -52,14 +52,14 @@ Follow these steps to import a JSON file from Google Chrome Recorder to your bro
 
 :strong:`Prerequisites`
 
-* In Google Chrome Recorder select either CSS, or XPATH for Selector type to record.
+* In Google Chrome Recorder select either CSS or XPATH for Selector type to record.
 
-* Chrome script importer supports navigation in one tab only. Your navigation can’t span multiple tabs at the same time. 
+* Chrome script importer supports navigation in one tab only. Your navigation can’t span multiple tabs.
 
 
 :strong:`Steps`
 
-#. In Splunk Synthetic Monitoring, Select Edit on the Browser test to open the test configuration panel.
+#. In Splunk Synthetic Monitoring, Select :guilabel:`Edit` on the Browser test to open the test configuration panel.
 #. Select Import.
 #. Upload the JSON generated from Google Chrome recorder. 
 #. If a step is not supported, you need to edit or delete the step. 
@@ -68,7 +68,7 @@ Follow these steps to import a JSON file from Google Chrome Recorder to your bro
 
 Troubleshoot unsupported steps
 ------------------------------------------
-If your recording contains unsupported steps, you need to reformat the step to fit one of the following types of step that Splunk Synthetic Monitoring supports for Chrome Puppeteer: 
+If your recording contains unsupported steps, you need to reformat the step to fit one of the following types of steps that Splunk Synthetic Monitoring supports for Chrome Puppeteer: 
 
 * Click 
 * Change 
@@ -98,7 +98,7 @@ If your recording contains unsupported steps, you need to reformat the step to f
                ]
                }
 
-     - Go to url:
+     - Go to URL:
          .. code-block:: javascript
 
                {
@@ -291,8 +291,6 @@ If your recording contains unsupported steps, you need to reformat the step to f
                "value": "",
                "wait_for_nav": false
             }
-
-
 
    
 
