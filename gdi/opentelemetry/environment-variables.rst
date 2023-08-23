@@ -35,12 +35,27 @@ Splunk-specific environment variables are listed on the table below:
     *   - ``SPLUNK_API_URL`` 
         - The Splunk API URL. For example, https://api.us0.signalfx.com
         - Yes
+    *   - ``SPLUNK_BALLAST_SIZE_MIB`` 
+        - TBDT
+        - No
     *   - ``SPLUNK_BUNDLE_DIR`` 
         - The path to the Smart Agent bundle. For example, /usr/lib/splunk-otel-collector/agent-bundle
         - Yes
     *   - ``SPLUNK_COLLECTD_DIR``
         - The path to the collectd config directory for the Smart Agent. For example, /usr/lib/splunk-otel-collector/agent-bundle/run/collectd
         - Yes
+    *   - ``SPLUNK_CONFIG`` 
+        - TBD
+        - No
+    *   - ``SPLUNK_CONFIG_DIR`` 
+        - TBD
+        - No
+    *   - ``SPLUNK_DEBUG_CONFIG_SERVER`` 
+        - TBD
+        - No
+    *   - ``SPLUNK_CONFIG_YAML`` 
+        - TBD
+        - No
     *   - ``SPLUNK_HEC_TOKEN`` 
         - The Splunk HEC authentication token
         - Yes
@@ -53,6 +68,16 @@ Splunk-specific environment variables are listed on the table below:
     *   - ``SPLUNK_LISTEN_INTERFACE`` 
         - The network interface the agent receivers listen on
         - Yes
+    *   - ``SPLUNK_MEMORY_LIMIT_MIB`` 
+        - TBD
+        - No
+    *   - ``SPLUNK_MEMORY_TOTAL_MIB`` 
+        - TBD
+        - No
+    *   - ``SPLUNK_REALM`` 
+        - Your Splunk realm
+        - No
     *   - ``SPLUNK_TRACE_URL`` 
         - The Splunk trace endpoint URL. For example, https://ingest.us0.signalfx.com/v2/trace
         - Yes
+
