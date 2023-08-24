@@ -1,7 +1,7 @@
 .. _supported-data-sources:
 
 ********************************************************************************
-Supported integrations
+Supported integrations in Splunk Observability Cloud
 ********************************************************************************
 
 .. meta::
