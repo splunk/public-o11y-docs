@@ -15,6 +15,8 @@ When a detector determines that the conditions for a rule are met, it triggers a
 
 You can find active alerts, existing detectors, and muting rules under :guilabel:`Alerts & Detectors`. You can also find alerts in the Events Feed, available within any dashboard.
 
+.. note:: This topic covers Splunk Observability Cloud Infrastructure and Custom Metrics detectors. To learn about Splunk APM detectors, visit :ref:`apm-alerts`.
+
 Create detectors
 =============================================================================
 
@@ -30,8 +32,6 @@ Choose how to create a detector
 =============================================================================
 
 There are several ways to create a detector.
-
-.. note:: To create a detector for Splunk APM, see :ref:`apm-alerts`.
 
 * You can clone an existing detector if you have existing detectors that you want to modify. See :ref:`clone-detector`
 * You can customize AutoDetect detectors. See :ref:`autodetect-customize`.
@@ -68,16 +68,12 @@ Follow these steps to create the detector:
 
 After you create a detector from a chart, a :ref:`link to the new detector<link-detector-to-chart>` is automatically added to the chart.
 
-.. note:: You can also create a detector from a chart for Splunk APM in APM dashboards. See :ref:`apm-alerts` for steps to create an APM Detector.
-
 .. _create-detector-from-scratch:
 
 Create a detector from scratch
 -------------------------------------------------------------------
 
 To create a new detector for Infrastructure or Custom Metrics from scratch, you can either select :guilabel:`New Detector` under Alerts & Detectors, or select :menuselection:`Custom Detector` from the create menu on the navigation bar. Enter a detector name and then select :guilabel:`Create Alert Rule` to proceed to the alert rule builder. For instructions on building the rule, see :ref:`build-rules`.
-
-.. note:: See :ref:`apm-alerts` for steps to create an APM Detector.
 
 .. _create-via-api:
 
@@ -90,13 +86,15 @@ Using the API to create a detector provides a number of capabilities that are no
 
 -  For information on using the UI to edit detectors created using the API, see :ref:`v2-detector-signalflow`.
 
-.. note:: If a detector display includes a SignalFlow tab, you are viewing a detector created programmatically using the :new-page:`Observability Cloud Detectors API <https://dev.splunk.com/observability/reference/api/detectors/latest>`. If you are familiar with that API, you can use the detector display to view and edit the detector code and make changes to the detector rules.
+.. note:: If a detector display includes a SignalFlow tab, you are viewing a detector created programmatically using the :new-page:`Splunk Observability Cloud Detectors API <https://dev.splunk.com/observability/reference/api/detectors/latest>`. If you are familiar with that API, you can use the detector display to view and edit the detector code and make changes to the detector rules.
 
 
 .. _build-rules:
 
 Create alert rules for your detector
 =============================================================================
+
+To configure a new alert rule for your detector, follow these steps:
 
 1. On the :guilabel:`Alert signal` tab, select one or more signals to monitor for unusual behavior. To learn more, see :ref:`alert-signal`.
 2. On the :guilabel:`Alert condition` tab, select the alert condition. See :ref:`Alert condition <alert-condition>`.
@@ -252,7 +250,7 @@ Select :guilabel:`Activate Alert Rule` to save the detector and begin monitoring
 Edit detectors through the SignalFlow tab
 ----------------------------------------------------------------------------------
 
-.. note:: This section assumes you are familiar with the :new-page:`Observability Cloud Detectors API <https://dev.splunk.com/observability/reference/api/detectors/latest>`.
+.. note:: This section assumes you are familiar with the :new-page:`Splunk Observability Cloud Detectors API <https://dev.splunk.com/observability/reference/api/detectors/latest>`.
 
 If you are modifying a detector that was created using the API, you can add and edit detector rules using the SignalFlow tab. The SignalFlow program text replaces the Alert signal, Alert condition, and Alert settings tabs that are used when creating and editing detectors using the UI.
 
@@ -317,24 +315,37 @@ If you didn't enter a name while creating a detector, you will be prompted to ad
 
 .. _manage-rules:
 
-Manage detector rules
+Manage alert rules
 =============================================================================
 
-On the Alert Rules tab of a detector, you can use the actions menu (|more|) menu for a rule to do any of the following.
-
--  Disable/enable
-
-   If a detector has multiple rules, such as different rules for different severity levels, you might want to specify which ones to enable or disable. Disabling a rule prevents it from generating any events or sending any notifications. This option is commonly used after the detector has been activated for a while, to decrease or increase the number of alerts the detector is triggering.
+On the :guilabel:`Alert Rules` tab of a detector, you can use the actions menu (|more|) menu for a rule to disable, enable, clone, or delete an alert rule.
 
    .. note:: The options to clone or delete rules are not available for detectors created using the API.
 
--  Clone
+.. _disable-enable-rules:
 
-   As with plot lines on charts, you can clone rules. This option is commonly used to create rules with slightly different settings from each other, such as specifying a different value for the `Alert condition` property or changing the severity level of an alert.
+Disable/enable alert rules
+---------------------------------
 
--  Delete
+   If a detector has multiple rules, such as different rules for different severity levels, you might want to specify which ones to enable or disable. Disabling a rule prevents it from generating any events or sending any notifications. This option is commonly used after the detector has been activated for a while, to decrease or increase the number of alerts the detector is triggering.
+
+
+
+.. _clone-rules:
+
+Clone alert rules
+-------------------------
+
+   As with plot lines on charts, you can clone rules. This option is commonly used to create rules with slightly different settings from each other, such as specifying a different value for the :strong:`Alert condition` property or changing the severity level of an alert.
+
+.. _delete-rules:
+
+Delete alert rules
+-------------------------
 
    Use this option to remove a rule from the detector.
+
+.. _set-detector-permissions:
 
 Set detector permissions
 =============================================================================
