@@ -39,7 +39,7 @@ To create an external AWS ID, open your command-line interface and use the follo
     -H 'accept: application/json, text/plain, */*' \
     -H 'x-sf-token: <USER_API_ACCESS_TOKEN>' \
     -H 'content-type: application/json' \
-    --data-raw '{"name":"AWS-connection-name","type":"AWSCloudWatch","authMethod":"ExternalId","pollRate":300000,"services":[],"regions":[]}'
+    --data-raw '{"name":"AWS-connection-name","type":"AWSCloudWatch","authMethod":"ExternalId","pollRate":300000,"services":[],"regions":["us-east-1", "us-east-2", "us-west-1", "us-west-2"]}'
 
 Your system response looks something like this:
 
@@ -53,7 +53,7 @@ Your system response looks something like this:
   "importCloudWatch" : false,
   "name" : "AWS",
   "pollRate" : 300000,
-  "regions" : [ ],
+  "regions" : [ "us-east-1", "us-east-2", "us-west-1", "us-west-2" ],
   "roleArn" : null,
   "services" : [ ],
   "type" : "AWSCloudWatch"
@@ -402,10 +402,10 @@ Configure your setup
 Provide the ARN role to the Infrastructure Monitoring component of Splunk Observability Cloud. You can also configure your connection to support any of the following use cases:
 
 - Collect metrics for selected regions and services using the CloudWatch API.
-- Collect metrics for all regions and all services using the CloudWatch API.
+- Collect metrics for all services using the CloudWatch API.
 - Collect metrics using CloudWatch Metric Streams by itself or together with log collection.
 
-The following example shows how to collect metrics from all regions and services by leaving the regions and services values unspecified.
+The following example shows how to collect metrics from selected regions and all services by leaving the services value unspecified.
 
 .. code-block:: none
 
@@ -431,7 +431,7 @@ The following example shows how to collect metrics from all regions and services
       "lastUpdatedByName" : null,
       "name" : "AWS-connection-name",
       "pollRate" : 300000,
-      "regions" : [ ],
+      "regions" : [ "us-east-1", "us-east-2", "us-west-1", "us-west-2" ],
       "roleArn" : "<your-aws-iam-role-arn>",
       "services" : [ ],
       "sfxAwsAccountArn" : "arn:aws:iam::134183635603:root",
