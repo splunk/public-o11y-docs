@@ -79,19 +79,18 @@ Performance metrics capture information about how long it takes resources on the
      - Time until the page and all of its subresources are ready
 
    * - First CPU idle
-     - Time until the page is minimally interactive and will respond to user input in a reasonable amount of time. See "What Interactivity Metrics Does Rigor Offer?" in the Rigor documentation to learn more about how this metric is calculated. 
-
+     - Time until the page is minimally interactive and will respond to user input in a reasonable amount of time. 
    * - Time to interactive
-     - Time until the page is first expected to be usable and will respond to user input quickly. See "What Interactivity Metrics Does Rigor Offer?" in the Rigor documentation to learn more about how this metric is calculated. 
+     - Time until the page is first expected to be usable and will respond to user input quickly. 
      
    * - Onload time
      - Time until the page has loaded. This corresponds to the browser load event.
 
    * - Visually complete time
-     - Time until all above-the-fold content has finished rendering. See :strong:`Monitoring the UX with Start Render, Visually Complete, and Speed Index <LINK>` on the Rigor blog to learn more about how this metric works. 
+     - Time until all above-the-fold content has finished rendering. 
 
    * - Speed index
-     - A calculated metric that represents how quickly the page renders above-the-fold content. See :strong:`Monitoring the UX with Start Render, Visually Complete, and Speed Index <LINK>` on the Rigor blog to learn more about how this metric works. 
+     - A calculated metric that represents how quickly the page renders above-the-fold content. 
 
    * - Fully loaded time
      - Time until there is 1.5 seconds of network inactivity after onload, waiting up to a maximum of 5 seconds. If onload is never reached, this metric represents the time from the start of the first request to the time at which the last request finishes. The last request to finish is not always the last request started.

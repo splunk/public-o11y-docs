@@ -468,6 +468,11 @@
      -
      -
 
+   * - :ref:`Prometheus - any app exposing Prometheus metrics <prometheus-generic>`
+     - :strong:`X`
+     -
+     -
+
    * - :ref:`Prometheus exporter <prometheus-exporter>`
      - :strong:`X`
      -

@@ -37,7 +37,7 @@ Organizations that complete the integration of Splunk Cloud Platform and Splunk 
 
 How to set up the Unified Identity
 ==========================================================================================
-Splunk Cloud Platform customers who want to purchase Splunk Observability Cloud must inform their Splunk sales representative that they want to purchase Splunk Observability Cloud or start a trial. The sales representative initiates a Splunk Observability Cloud trial that is already integrated with their Splunk Cloud Platform instance. Turn on token authentication to allow Splunk Observability Cloud to view your Splunk Cloud Platform logs. See :new-page:`Enable or disable token authentication <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>`` to learn how.
+Splunk Cloud Platform customers who want to purchase Splunk Observability Cloud must inform their Splunk sales representative that they want to purchase Splunk Observability Cloud or start a trial. The sales representative initiates a Splunk Observability Cloud trial that is already integrated with their Splunk Cloud Platform instance. Turn on token authentication to allow Splunk Observability Cloud to view your Splunk Cloud Platform logs. See :new-page:`Enable or disable token authentication <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how.
 
 Only one Splunk Cloud Platform instance can be paired with one Splunk Observability Cloud instance at a time. The integration is a 1:1 mapping of one ad-hoc Splunk Cloud Search Head Unit with one Splunk Observability Cloud instance. Customers with multiple Splunk Observability Cloud organizations must choose one to pair with the chosen Splunk Cloud Platform instance.
 
@@ -62,9 +62,6 @@ The integration automatically maps Splunk Cloud Platform roles to the following 
 
    * - user
      - power
-
-   * - N/A
-     - usage
 
 
 The mapping process is defined by the system, and a user cannot change it at provisioning time or after. 

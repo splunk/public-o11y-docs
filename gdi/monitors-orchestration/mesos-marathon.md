@@ -61,7 +61,7 @@ The following table shows the configuration options for the Mesos Marathon monit
 The following metrics are available for this integration:
 
 <!--- using type="marathon" adds a duplicate, non-table-formatted list of metrics at the bottom -->
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/marathon/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/collectd/marathon/metadata.yaml"></div>
 
 ### Notes
 

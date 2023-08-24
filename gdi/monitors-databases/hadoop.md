@@ -65,7 +65,7 @@ The following table shows the configuration options for this integration:
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/hadoop/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/collectd/hadoop/metadata.yaml"></div>
 
 ### Notes
 

@@ -23,7 +23,7 @@ The following table shows the configuration options for this monitor:
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/disk/metadata.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/collectd/disk/metadata.yaml"></div>
 
 ### Notes
 
