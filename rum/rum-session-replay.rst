@@ -7,7 +7,7 @@ Session replay in Splunk RUM
 
 Replay a session to take a look at exactly what the user experienced and make informed decisions about what to do next. Sessions have a maximum duration of four hours. 
 
-.. note:: Customer is responsible for using Splunk Observability Cloud in compliance with applicable laws, including but not limited to providing notice to and obtaining any necessary consent form individuals whose data will be collected Customer's use of the services. 
+.. note:: Customer is responsible for using Splunk Observability Cloud in compliance with applicable laws, including but not limited to providing notice to and obtaining any necessary consent form individuals whose data will be collected by Customer's use of the services. 
 
 
 Use cases
