@@ -302,17 +302,6 @@ looks like this on the :strong:`Alert Rules` tab:
 
 For more information about editing detector options on the :strong:`Alert Rules` tab, see :ref:`alert-message`, :ref:`alert-recipients`, and :ref:`activate-detector`.
 
-
-.. _name-detector:
-
-Name the detector
-=============================================================================
-
-Add a name for the detector in the Detector name field. The text you enter here is displayed as the detector name on the Detectors tab on the Alerts page. You can also provide additional descriptive text below the name, such as to clarify the purpose of the detector for other people.
-
-If you didn't enter a name while creating a detector, you will be prompted to add a name when you save the detector.
-
-
 .. _manage-rules:
 
 Manage alert rules
@@ -350,10 +339,5 @@ Delete alert rules
 Set detector permissions
 =============================================================================
 
-|hr|
-
-:strong:`Available in Enterprise Edition`
-
-|hr|
-
-To protect detectors from being edited or deleted by other members of your organization, you can specify which users and teams have permissions for them. For more information, see :ref:`about-permissions`.
+To protect detectors from being edited or deleted by other members of your organization, you can specify which users and teams have permissions for them. 
+For more information, see :ref:`detector-manage-permissions`.
