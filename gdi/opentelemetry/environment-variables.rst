@@ -51,7 +51,7 @@ Splunk-specific environment variables are listed on the table below:
         - Specifies your custom configuration file. This is useful in environments where access to the underlying file system is not readily available
         - No
     *   - ``SPLUNK_DEBUG_CONFIG_SERVER`` 
-        - By default, the Collector provides a sensitive value-redacting, local config server listening at http://localhost:55554/debug/configz/effective, which is helpful in troubleshooting. To disable it, set ``SPLUNK_DEBUG_CONFIG_SERVER`` to any value other than ``true``. To set the desired port to listen to, use ``SPLUNK_DEBUG_CONFIG_SERVER_PORT``.
+        - By default, the Collector provides a sensitive value-redacting, local config server listening at http://localhost:55554/debug/configz/effective, which is helpful in troubleshooting. To disable it, set ``SPLUNK_DEBUG_CONFIG_SERVER`` to any value other than ``true``. To set the desired port to listen to, use ``SPLUNK_DEBUG_CONFIG_SERVER_PORT``
         - No
     *   - ``SPLUNK_HEC_TOKEN`` 
         - The Splunk HEC authentication token
@@ -69,7 +69,7 @@ Splunk-specific environment variables are listed on the table below:
         - Use it to set the memory limit for the ``memory_limiter`` processor. 512 MiB by default 
         - No
     *   - ``SPLUNK_MEMORY_TOTAL_MIB`` 
-        - Total memory in MIB to allocate to the Collector
+        - Total memory in MiB to allocate to the Collector
         - No
     *   - ``SPLUNK_REALM`` 
         - Your Splunk realm
