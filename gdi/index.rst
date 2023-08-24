@@ -1,7 +1,7 @@
 .. _monitor-data-sources:
 
 ********************************************************************************
-Available host and application monitors
+Available host and application monitors in Splunk Observability Cloud
 ********************************************************************************
 
 .. meta::
@@ -29,14 +29,14 @@ Available host and application monitors
 
   Note that this only affects the agent; Smart Agent integrations and application receivers are available and supported through the Splunk Distribution of OpenTelemetry Collector. Native OpenTelemetry receivers are supported as well.
 
-To find an integration for your application or service, see the alphabetical listing of receivers on this page, or use the menu to browse for receivers by application category. 
+To find an integration for your application or service, see the alphabetical listing of receivers on this page, or use the navigation menu to browse for receivers by application category. 
 
-If available, you can use native OpenTelemetry components instead of Smart Agent application receivers to send data to Observability Cloud. For instance, you can use the OpenTelementry native :ref:`prometheus-receiver` to gather metrics from any software, tool or service that exposes metrics in the Prometheus format, such as Ansible Tower (AWX), CockroachDB, Docker Daemon, Doorman, Etcd, Flink, Grafana, PATROL, Traefik, or Zipkin. 
+If available, you can use native OpenTelemetry components instead of Smart Agent application receivers to send data to Splunk Observability Cloud. For instance, you can use the OpenTelementry native Prometheus receiver to gather metrics from any software, tool, or service that exposes metrics in the Prometheus format, such as Ansible Tower (AWX), CockroachDB, Docker Daemon, Doorman, Etcd, Flink, Grafana, PATROL, Traefik, or Zipkin. For more information, see :ref:`prometheus-receiver`.
 
-* See how to install the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
-* To see native OpenTelemetry receivers, refer to :ref:`otel-components`. 
-* Note that metrics collected using this configuration are custom metrics: they're not supported by built-in content, and charges might apply. See more at :ref:`metrics-landing`.
+* To install the Splunk Distribution of OpenTelemetry Collector, see :ref:`otel-intro`.
+* To see native OpenTelemetry receivers, see :ref:`otel-components`. 
+* To learn about metrics, see :ref:`metrics-landing`.
 
-You can also use Smart Agent application receivers and monitors with the Collector and the :ref:`Smart Agent receiver <smartagent-receiver>`, a native OpenTelemetry component, to send data to Splunk Observability Cloud.
+You can also use Smart Agent application receivers and monitors with the Collector and the Smart Agent receiver, a native OpenTelemetry component, to send data to Splunk Observability Cloud. For more information, see :ref:`Smart Agent receiver <smartagent-receiver>`.
 
 .. include:: /_includes/application-receiver-table.rst
