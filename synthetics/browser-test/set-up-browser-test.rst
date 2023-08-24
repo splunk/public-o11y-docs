@@ -82,11 +82,13 @@ If your recording contains unsupported steps, you need to reformat the step to f
 * Navigate 
 * Wait for element 
 
+The following table outlines how Google Chrome puppeteer steps names and code snippets map to their counterparts in Splunk Synthetic Monitoring. These examples use Buttercup Games, a fictitious game company.
+
 .. list-table::
    :header-rows: 1
    :widths: 50 50 
 
-   * - :strong:`Chrome puppeteer step name and snippet`
+   * - :strong:`Google Chrome puppeteer step name and snippet`
      - :strong:`Synthetic step name and snippet`
 
    * - Navigate:
@@ -100,7 +102,7 @@ If your recording contains unsupported steps, you need to reformat the step to f
                   {
                      "type": "navigation",
                      "url": "www.buttercupgames.com",
-                     "title": "Online Boutique"
+                     "title": "Buttercup Games"
                   }
                ]
                }
@@ -136,7 +138,7 @@ If your recording contains unsupported steps, you need to reformat the step to f
                   {
                      "type": "navigation",
                      "url": "www.buttercupgames.com/product/example",
-                     "title": ""
+                     "title": "Buttercup Games"
                   }
                ]
 
