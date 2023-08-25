@@ -39,7 +39,7 @@ Splunk-specific environment variables are listed on the table below:
         - Use it to set the ballast size for the Collector explicitly instead of the value calculated from ``SPLUNK_MEMORY_LIMIT_MIB``. Set it to 1/3 to 1/2 of the configured memory
         - No
     *   - ``SPLUNK_BUNDLE_DIR`` 
-        - The path to the Smart Agent bundle. For example, /usr/lib/splunk-otel-collector/agent-bundle
+        - The path to the Smart Agent bundle. For example, ``/usr/lib/splunk-otel-collector/agent-bundle``
         - Yes
     *   - ``SPLUNK_COLLECTD_DIR``
         - The path to the collectd config directory for the Smart Agent. For example, /usr/lib/splunk-otel-collector/agent-bundle/run/collectd
