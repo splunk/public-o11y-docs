@@ -78,4 +78,4 @@ Splunk-specific environment variables are listed on the table below:
         - The Splunk trace endpoint URL. For example, https://ingest.us0.signalfx.com/v2/trace
         - Yes
 
-``SPLUNK_*_URL`` environment variabless are automatically derived from ``SPLUNK_REALM``. For example, ``SPLUNK_INGEST_URL`` = https://ingest.SPLUNK_REALM.signalfx.com.
+``SPLUNK_*_URL`` environment variables are automatically derived from ``SPLUNK_REALM``. For example, ``SPLUNK_INGEST_URL`` = https://ingest.SPLUNK_REALM.signalfx.com.
