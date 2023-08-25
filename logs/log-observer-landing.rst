@@ -33,7 +33,6 @@ Splunk Log Observer
     infinite
     timestamp
     limits
-    lo-transition
 
 
 
