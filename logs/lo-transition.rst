@@ -1,4 +1,4 @@
-.. _logs-lo-transition:
+.. _lo-transition:
 
 *****************************************************************
 Splunk Log Observer transition
