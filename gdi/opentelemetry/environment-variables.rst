@@ -63,7 +63,7 @@ Splunk-specific environment variables are listed on the table below:
         - The Splunk ingest URL. For example, https://ingest.us0.signalfx.com
         - Yes
     *   - ``SPLUNK_LISTEN_INTERFACE`` 
-        - The network interface the agent receivers listen on
+        - The network interface the agent receivers listen on. ``0.0.0.0`` by default
         - Yes
     *   - ``SPLUNK_MEMORY_LIMIT_MIB`` 
         - Use it to set the memory limit for the ``memory_limiter`` processor. 512 MiB by default 
@@ -78,3 +78,4 @@ Splunk-specific environment variables are listed on the table below:
         - The Splunk trace endpoint URL. For example, https://ingest.us0.signalfx.com/v2/trace
         - Yes
 
+``SPLUNK_*_URL`` environment variabless are automatically derived from ``SPLUNK_REALM``. For example, ``SPLUNK_INGEST_URL`` = https://ingest.SPLUNK_REALM.signalfx.com.
