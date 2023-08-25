@@ -12,6 +12,7 @@ Splunk Log Observer
     :hidden:
 
 
+    lo-transition
     get-started-logs
     logs
     timeline
@@ -32,7 +33,11 @@ Splunk Log Observer
     infinite
     timestamp
     limits
+    lo-transition
 
+
+
+.. note:: Customers with a Splunk Log Observer entitlement in Splunk Observability Cloud must transition from .
 
 
 - :ref:`get-started-logs`
