@@ -15,7 +15,7 @@ When a detector determines that the conditions for a rule are met, it triggers a
 
 You can find active alerts, existing detectors, and muting rules under :guilabel:`Alerts & Detectors`. You can also find alerts in the Events Feed, available within any dashboard.
 
-.. note:: This topic covers Splunk Observability Cloud Infrastructure and Custom Metrics detectors. To learn about Splunk APM detectors, visit :ref:`apm-alerts`.
+.. note:: This topic covers Infrastructure and Custom Metrics detectors. You can create a Splunk APM detector to monitor request rates, error rates, and latency for your service. To learn more about Splunk APM detectors, visit :ref:`apm-alerts`.
 
 Create detectors
 =============================================================================
