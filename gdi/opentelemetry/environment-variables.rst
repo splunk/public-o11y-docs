@@ -42,7 +42,7 @@ Splunk-specific environment variables are listed on the table below:
         - The path to the Smart Agent bundle. For example, ``/usr/lib/splunk-otel-collector/agent-bundle``
         - Yes
     *   - ``SPLUNK_COLLECTD_DIR``
-        - The path to the collectd config directory for the Smart Agent. For example, /usr/lib/splunk-otel-collector/agent-bundle/run/collectd
+        - The path to the collectd config directory for the Smart Agent. For example, ``/usr/lib/splunk-otel-collector/agent-bundle/run/collectd``
         - Yes
     *   - ``SPLUNK_CONFIG`` 
         - Destination path of the Collector custom configuration file 
