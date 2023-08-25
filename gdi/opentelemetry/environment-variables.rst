@@ -48,7 +48,7 @@ Splunk-specific environment variables are listed on the table below:
         - Destination path of the Collector custom configuration file 
         - No
     *   - ``SPLUNK_CONFIG_YAML`` 
-        - Specifies your custom configuration file. This is useful in environments where access to the underlying file system is not readily available
+        - Specifies your custom configuration YAML. This is useful in environments where access to the underlying file system is not readily available
         - No
     *   - ``SPLUNK_DEBUG_CONFIG_SERVER`` 
         - By default, the Collector provides a sensitive value-redacting, local config server listening at http://localhost:55554/debug/configz/effective, which is helpful in troubleshooting. To disable it, set ``SPLUNK_DEBUG_CONFIG_SERVER`` to any value other than ``true``. To set the desired port to listen to, use ``SPLUNK_DEBUG_CONFIG_SERVER_PORT``
