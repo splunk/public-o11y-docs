@@ -7,7 +7,7 @@ Manage the logs pipeline
 .. meta::
    :description: Manage the logs pipeline with log processing rules, log metricization rules, and Infinite Logging rules. Customize your pipeline.
 
-.. note:: Log Observer customers must transition from Log Observer to Log Observer Connect by the January 2024. With Log Observer Connect, you can ingest more logs from a wider variety of data sources, enjoy a more advanced logs pipeline, and expand into security logging. See :ref:`lo-transition` to learn how. Only customers with a Splunk Log Observer entitlement can manage the Splunk Observability Cloud logs pipeline. 
+.. note:: Log Observer customers must transition from Log Observer to Log Observer Connect by January 2024. With Log Observer Connect, you can ingest more logs from a wider variety of data sources, enjoy a more advanced logs pipeline, and expand into security logging. See :ref:`lo-transition` to learn how. Only customers with a Splunk Log Observer entitlement can manage the Splunk Observability Cloud logs pipeline. 
 
 Add value to your raw logs by customizing your pipeline. The pipeline is a set of rules that execute sequentially. 
 
