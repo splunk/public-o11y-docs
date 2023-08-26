@@ -10,7 +10,7 @@ Splunk Log Observer transition
 
 Log Observer is transitioning to Log Observer Connect in January 2024. Log Observer customers can now leverage the Splunk platform (Splunk Cloud Platform and Splunk Enterprise), the market leader in log and data analytics, as well as Splunk Observability Cloud, a leader in observability products. Migrating from Log Observer to the Splunk platform for logging does not have any impact on the powerful solution built around the correlation of logs, metrics, and traces in Splunk Observability Cloud.
 
-To transition to Splunk Log Observer Connect, customers must take the following actions:
+To transition to Splunk Log Observer Connect, you must take the following actions:
 
 1. Reach out to your Splunk Regional Sales Manager to request assistance with the transition. The deadline is October 31, 2023.
 
