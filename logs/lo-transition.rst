@@ -18,6 +18,6 @@ To transition to Splunk Log Observer Connect, you must take the following action
 
 3. Set up an HEC token to forward or mirror your existing Log Observer logs to Splunk Cloud Platform. Contact your Splunk representative for specific instructions.
 
-After completing the preceding steps, for thirty days you will be able to store data in both Log Observer and your Splunk platform instance. During the 30 day window you can verify that the data in your Splunk platform instance from Log Observer Connect matches with the Log Observer data. There is no disruption to your functionality during this time. Your logs pipeline management settings continue to work normally. 
+After completing the preceding steps, you will be able to store data in both Log Observer and your Splunk platform instance for 30 days. During the 30-day window you can verify that the data in your Splunk platform instance from Log Observer Connect matches the Log Observer data. There is no disruption to your functionality during this time. Your logs pipeline management settings continue to work normally. 
 
 By January 2024, all Log Observer customers must transition to Log Observer Connect where they can ingest more logs from a wider variety of data sources, enjoy a more advanced logs pipeline, and expand into security logging among other advantages.
