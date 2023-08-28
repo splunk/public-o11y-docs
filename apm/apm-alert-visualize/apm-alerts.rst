@@ -76,7 +76,7 @@ Follow these steps to create a detector for Splunk APM:
     #. Error rate for a workflow, service, or endpoint.
     #. Latency for a workflow, service, or endpoint.
 #. Set the condition for your alert: :guilabel:`Static threshold`, :guilabel:`Sudden change`, or :guilabel:`Historic anomaly`. See :ref:`alert-conditions-apm` for more information about alert conditions.
-#. Select the scope of your alert. You can select specific environments, services, and endpoints.
+#. Select the scope of your alert. You can select specific environments, workflows, services, and endpoints.
 #. Select the severity of the alert.
 #. Configure your alert details:
     #. See :ref:`static-threshold`  to review options for the static threshold condition.
