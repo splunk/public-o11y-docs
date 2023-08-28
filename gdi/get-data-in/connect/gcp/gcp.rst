@@ -15,7 +15,7 @@ Connect to Google Cloud Platform
 
 With a Google Cloud Platform (GCP) integration in Splunk Observability Cloud, you can track your Google Cloud Monitoring metrics and monitor your GCP services in one place. To configure a GCP integration with Splunk Infrastructure Monitoring, check the prerequisites and follow the instructions on this document. You can also :ref:`use the API <gcp-api>` to connect to GCP. 
 
-For the list of the GCP services available in Splunk Observability Cloud, see the list of :ref:`supported integrations <gcp-integrations>`. 
+For the list of the GCP services available in Splunk Observability Cloud by default, see the list of :ref:`supported integrations <gcp-integrations>`. 
 
 .. _gcp-prerequisites:
 
@@ -44,10 +44,11 @@ The following pre-requisites apply:
       <h3>Select a role for your GCP service account<a name="gcp-one" class="headerlink" href="#gcp-one" title="Permalink to this headline">¶</a></h3>
    </embed>
 
-* If you want to use the :strong:`Project Viewer` role, skip to :ref:`Configure GCP <gcp-two>`. Choosing this role ensures that any functionality update implemented in Infrastructure Monitoring doesn't require changes to your GCP setup.
-* If you want to use a role with more restrictive permissions than those available to Project Viewer, make sure your selected role has sufficient permissions to connect to Infrastructure Monitoring. If your GCP service account role has insufficient permissions, you'll get an error message when trying to connect to Infrastructure Monitoring. Review and activate any missing permissions, or change the role to Project Viewer.
+If you use GCP's :strong:`Project Viewer` role, you won't require any changes to your GCP setup to use Splunk Observability Cloud, and any update will be applied automatically. 
 
-The following table specifies the permissions required for GCP integrations.
+If you want to use a more restrictive role than Project Viewer, make sure your selected role has sufficient permissions to connect to Observability Cloud, otherwise you'll get an error message when trying to connect. Review and activate any missing permissions, or change the role to Project Viewer.
+
+The following table specifies the permissions required for GCP integrations:
 
 .. list-table::
    :header-rows: 1
@@ -156,7 +157,7 @@ To monitor multiple GCP projects with the integration you have two options:
       <h3>Start the integration<a name="gcp-three" class="headerlink" href="#gcp-three" title="Permalink to this headline">¶</a></h3>
    </embed>
 
-By default, all available services are monitored, and any new services added later are also monitored. When you set integration parameters, you can choose to import metrics from a subset of the available services.
+By default, all supported services are monitored, and any new services added later are also monitored. When you set integration parameters, you can choose to import metrics from a subset of the available services.
 
 #. Log in to Splunk Observability Cloud. 
 #. Open the :new-page:`Google Cloud Platform guided setup <https://login.signalfx.com/#/integrations/gcp>`. Optionally, you can navigate to the guided setup on your own:
@@ -180,7 +181,10 @@ By default, all available services are monitored, and any new services added lat
 #.  Select the rate (in seconds) at which you want Splunk Observability Cloud to poll GCP for metric data, with 1 minute as the minimum unit, and 10 minutes as the maximum unit. For example, a value of 300 polls metrics once every 5 minutes. 
 #. Optional: 
 
-   - List any additional GCP service domain names that you want to monitor, using commas to separate domain names in the :strong:`Custom Metric Type Domains` field. For examples of custom metric type domain syntax, see :new-page:`Custom metric type domain examples <https://dev.splunk.com/observability/docs/integrations/gcp_integration_overview#Custom-metric-type-domain-examples>` in the Splunk developer documentation.
+   - List any additional GCP service domain names that you want to monitor, using commas to separate domain names in the :strong:`Custom Metric Type Domains` field. 
+      
+      - For example, to obtain Apigee metrics, add ``apigee.googleapis.com``.
+      - To learn about custom metric type domain syntax, see :new-page:`Custom metric type domain examples <https://dev.splunk.com/observability/docs/integrations/gcp_integration_overview#Custom-metric-type-domain-examples>` in the Splunk developer documentation.
 
    - If you select Compute Engine as one of the services to monitor, you can enter a comma-separated list of Compute Engine Instance metadata keys to send as properties. These metadata keys are sent as properties named ``gcp_metadata_<metadata-key>``.
 
