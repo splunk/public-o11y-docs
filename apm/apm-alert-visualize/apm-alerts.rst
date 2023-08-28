@@ -71,10 +71,7 @@ Steps to create a detector
 Follow these steps to create a detector for Splunk APM:
 
 #. Name your detector.
-#. Select the metric that is of interest to you. The following metrics are available. See :ref:`alert-conditions-apm` for more information about alert metrics.
-    #. Request rate for a workflow, service, or endpoint.
-    #. Error rate for a workflow, service, or endpoint.
-    #. Latency for a workflow, service, or endpoint.
+#. Select your metric. You can select request rate, error rate, or latency for a workflow, service, or endpoint.
 #. Set the condition for your alert: :guilabel:`Static threshold`, :guilabel:`Sudden change`, or :guilabel:`Historic anomaly`. See :ref:`alert-conditions-apm` for more information about alert conditions.
 #. Select the scope of your alert. You can select specific environments, workflows, services, and endpoints.
 #. Select the severity of the alert.
