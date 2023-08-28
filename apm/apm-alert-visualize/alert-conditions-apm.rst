@@ -1,8 +1,7 @@
 .. _alert-conditions-apm:
 
-************************************************
-Use built-in alert conditions in Splunk APM
-************************************************
+Use built-in alert metrics and conditions in Splunk APM
+**********************************************************
 
 .. meta::
    :description: Learn about the built-in alert conditions in Splunk APM. 
@@ -15,10 +14,10 @@ When creating rules in detectors to specify conditions that can trigger alerts, 
 
   For general information about alerts and detectors in Splunk Observability Cloud, see :ref:`get-started-detectoralert`. 
 
-Alert conditions for request rate detectors
+Alert conditions for request rate metrics
 =============================================
 
-These are the built-in alert conditions for request rate detectors that are available in Splunk APM detectors. These conditions are available when you select :guilabel:`Request rate - Service/Endpoint`, :guilabel:`Request rate - Service`, or :guilabel:`Request rate - Workflow` when you create an APM detector. See :ref:`apm-alerts` for steps to configure and APM detector.
+These are the built-in alert conditions for request rate metrics that are available in Splunk APM detectors. These conditions are available when you select :guilabel:`Request rate - Service/Endpoint`, :guilabel:`Request rate - Service`, or :guilabel:`Request rate - Workflow` when you create an APM detector. See :ref:`apm-alerts` for steps to configure and APM detector.
 
 .. list-table::
    :header-rows: 1
@@ -40,9 +39,9 @@ These are the built-in alert conditions for request rate detectors that are avai
      - Alerts when request rate anomalously spikes compared to the same periods in the past (for cyclical or seasonal data). An anomaly is either the number of deviations from historical norm or percentage change compared to historical norm.
      - Request rate in the last 10 minutes is more than 5 deviations above its historical norm, cyclical over 1‑week periods; The 90th percentile of request rate in the last 10 minutes is more than 30% above its historical norm, cyclical over 1‑week periods.
 
-Alert conditions for error rate detectors
+Alert conditions for error rate metrics
 ==========================================
-These are the built-in alert conditions for error rate detectors that are available in Splunk APM detectors. These conditions are available when you select :guilabel:`Error rate - Service/Endpoint`, :guilabel:`Error rate - Service`, or :guilabel:`Error rate - Workflow` when you create an APM detector. See :ref:`apm-alerts` for steps to configure and APM detector.
+These are the built-in alert conditions for error rate metrics that are available in Splunk APM detectors. These conditions are available when you select :guilabel:`Error rate - Service/Endpoint`, :guilabel:`Error rate - Service`, or :guilabel:`Error rate - Workflow` when you create an APM detector. See :ref:`apm-alerts` for steps to configure and APM detector.
 
 .. list-table::
    :header-rows: 1
@@ -60,10 +59,10 @@ These are the built-in alert conditions for error rate detectors that are availa
      - Alerts when there is a sudden increase in error rate.
      - The error rate over the last 5 minutes is over 5% larger than the error rate of the preceding 1 hour across at least 100 requests.
 
-Alert conditions for latency detectors
+Alert conditions for latency metrics
 ========================================
 
-These are the built-in alert conditions for latency detectors that are available in Splunk APM detectors. These conditions are available when you select :guilabel:`Latency - Service/Endpoint`, :guilabel:`Latency - Service`, or :guilabel:`Latency - Workflow` when you create an APM detector. See :ref:`apm-alerts` for steps to configure and APM detector.
+These are the built-in alert conditions for latency detectors that are available in Splunk APM metrics. These conditions are available when you select :guilabel:`Latency - Service/Endpoint`, :guilabel:`Latency - Service`, or :guilabel:`Latency - Workflow` when you create an APM detector. See :ref:`apm-alerts` for steps to configure and APM detector.
 
 .. list-table::
    :header-rows: 1
