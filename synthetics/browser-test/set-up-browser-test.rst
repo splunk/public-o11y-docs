@@ -44,54 +44,51 @@ Follow these steps to set up a Browser test:
 
 .. include:: /_includes/synthetics/configure-test.rst
 
-Import a JSON file generated from Google Chrome recorder
+Import a JSON file generated from Google Chrome Recorder
 ============================================================
 
-For complex user flows that involve many steps, such as 30 to 50 steps, using a recording simplifies the test creation process by automatically importing the steps rather than adding each individual interaction you want to track. Upload a Google Chrome Recorder to import steps for a browser test. For steps on how to make a Google Chrome recording, see :new-page:`Record, replay, and measure user flows <https://developer.chrome.com/docs/devtools/recorder/>` in the Chrome Developer user guide in Google documentation. 
-
-.. Note:: Viewport is automatically set, so if you have a step to set the viewport, this step won’t appear in the test configuration. 
+To simplify the test creation process, make a screen recording using Google Chrome Recorder. Then, import the JSON file to Splunk Synthetic Monitoring to automatically import the steps in the workflow instead of adding each individual interaction you want to track. Screen recordings are especially helpful for complex user flows, or tests that have a large number of steps. 
 
 
-Import a JSON file 
-----------------------------
+Create a Google Chrome Recorder JSON file
+--------------------------------------------------------
 
-Follow these steps to import a JSON file from Google Chrome Recorder to your browser test. 
+For steps on how to make a Google Chrome recording, see :new-page:`Record, replay, and measure user flows <https://developer.chrome.com/docs/devtools/recorder/>` in the Chrome Developer user guide in Google documentation. 
 
-:strong:`Prerequisites`
+:strong:`Requirements`
 
 * In Google Chrome Recorder select either CSS or XPATH for Selector type to record.
 
-* Chrome script importer supports navigation in one tab only. Your navigation can’t span multiple tabs.
+* Browser tests run in one Browser tab only. Your screen recording can't span multiple tabs. 
+
+Import a Google Chrome Recorder JSON file 
+--------------------------------------------------------
+
+.. Note:: Viewport is automatically set, so if you have a step to set the viewport, this step won’t appear in the test configuration. 
+
+Follow these steps to import a JSON file from Google Chrome Recorder to a new or existing Browser test.
 
 
-:strong:`Steps`
-
-#. In Splunk Synthetic Monitoring, Select :guilabel:`Edit` on the Browser test to open the test configuration panel.
+#. In Splunk Synthetic Monitoring, Select :guilabel:`Edit` on the Browser test to open the test configuration page.
 #. Select Import.
-#. Upload the JSON generated from Google Chrome recorder. 
-#. If a step is not supported, you need to edit or delete the step. 
+#. Upload the Google Chrome Recorder JSON file.
+#. If a step is not supported, you need to edit or delete the step in the test configuration page. 
+#. (Optional) Add a name to each step. 
 #. Save your changes.  
 
 
 Troubleshoot unsupported steps
 ------------------------------------------
-If your recording contains unsupported steps, you need to reformat the step to fit one of the following types of steps that Splunk Synthetic Monitoring supports for Chrome Puppeteer: 
-
-* Click 
-* Change 
-* Navigate 
-* Wait for element 
-
-The following table outlines how Google Chrome puppeteer steps names and code snippets map to their counterparts in Splunk Synthetic Monitoring. These examples use Buttercup Games, a fictitious game company.
+If your recording contains unsupported steps, you need to edit the step to reformat it into one of the supported Synthetic Browser step types. The following table shows how Google Chrome Recorder steps names and code snippets map to their counterparts in Splunk Synthetic Browser tests. These examples use Buttercup Games, a fictitious game company.
 
 .. list-table::
    :header-rows: 1
    :widths: 50 50 
 
-   * - :strong:`Google Chrome puppeteer step name and snippet`
-     - :strong:`Synthetic step name and snippet`
+   * - :strong:`Google Chrome Recorder snippet`
+     - :strong:`Synthetic snippet`
 
-   * - Navigate:
+   * - ``navigate``:
 
          .. code-block:: javascript
 
@@ -107,7 +104,7 @@ The following table outlines how Google Chrome puppeteer steps names and code sn
                ]
                }
 
-     - Go to URL:
+     - ``go_to_url`` :
          .. code-block:: javascript
 
                {
@@ -117,7 +114,7 @@ The following table outlines how Google Chrome puppeteer steps names and code sn
                "wait_for_nav": true
                }
 
-   * - Click with navigation:
+   * - ``click`` with resulting navigation:
 
          .. code-block:: javascript
 
@@ -142,7 +139,7 @@ The following table outlines how Google Chrome puppeteer steps names and code sn
                   }
                ]
 
-     - Click:
+     - ``click_element`` with resulting navigation:
          .. code-block:: javascript
 
                {
@@ -153,7 +150,7 @@ The following table outlines how Google Chrome puppeteer steps names and code sn
                   "wait_for_nav": true
                }
 
-   * - Click without navigation:
+   * - ``click`` without resulting navigation:
 
          .. code-block:: javascript
 
@@ -175,7 +172,7 @@ The following table outlines how Google Chrome puppeteer steps names and code sn
 
 
 
-     - Click:
+     - ``click_element`` without resulting navigation:
          .. code-block:: javascript
 
                {
@@ -186,7 +183,7 @@ The following table outlines how Google Chrome puppeteer steps names and code sn
                   "wait_for_nav": false
                }
 
-   * - Change:
+   * - ``change``:
 
          .. code-block:: javascript
 
@@ -205,7 +202,7 @@ The following table outlines how Google Chrome puppeteer steps names and code sn
                   }
 
 
-     - enter_value:
+     - ``enter_value``:
          .. code-block:: javascript
 
               {
@@ -218,7 +215,7 @@ The following table outlines how Google Chrome puppeteer steps names and code sn
                   "wait_for_nav": false
                   }
 
-   * - Wait for element:
+   * - ``waitForElement``:
 
          .. code-block:: javascript
 
@@ -236,7 +233,7 @@ The following table outlines how Google Chrome puppeteer steps names and code sn
 
 
 
-     - assert_element_present:
+     - ``assert_element_present``:
 
          .. code-block:: javascript
 
@@ -248,7 +245,7 @@ The following table outlines how Google Chrome puppeteer steps names and code sn
                   "selector": "body,#homepage_product_brand-example"
                }
 
-   * - Wait for Element - Visible false:
+   * - ``waitForElement`` visible false:
 
          .. code-block:: javascript
 
@@ -266,7 +263,7 @@ The following table outlines how Google Chrome puppeteer steps names and code sn
             }
 
 
-     - Assert_element_not_present:
+     - ``assert_element_not_present``:
 
          .. code-block:: javascript
 
@@ -277,7 +274,7 @@ The following table outlines how Google Chrome puppeteer steps names and code sn
                   "selector_type": "css",
                   "selector": "body,#homepage_product_brand-example"
                   }
-   * - Custom step:
+   * - ``customStep``:
 
          .. code-block:: javascript
 
@@ -290,7 +287,7 @@ The following table outlines how Google Chrome puppeteer steps names and code sn
             }
 
 
-     - run_javascript:
+     - ``run_javascript``:
 
          .. code-block:: javascript
 
