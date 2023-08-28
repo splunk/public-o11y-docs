@@ -164,12 +164,18 @@ The following resource detectors are available:
    * - Detector ID
      - Description
      - Attributes
+     - Status / Maturity level
+     - Support level
    * - ``AZUREAPPSERVICE``
      - Azure App Service detector.
      - ``azure.app.service.stamp``, ``cloud.platform``, ``cloud.provider``, ``cloud.resource_id``, ``cloud.region``, ``deployment.environment``, ``host.id``, ``service.instance.id``, ``service.name``
+     - Experimental
+     - Community-support
    * - ``CONTAINER``
      - Container detector. For example, Docker or Podman containers.
      - ``container.id``
+     - Experimental
+     - Community-support
 
 .. _dotnet-otel-instrumentation-settings:
 

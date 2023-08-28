@@ -38,60 +38,98 @@ Traces instrumentations
 
    * - Library
      - Supported versions
+     - Status / Maturity level
+     - Support level
      - Instrumentation ID
    * - ASP.NET Framework (.NET Framework) |br| MVC / WebApi (Only integrated pipeline mode supported)
      - See :ref:`dotnet-otel-versions`
+     - Experimental
+     - Community-support
      - ``ASPNET``
    * - ASP.NET Core
      - See :ref:`dotnet-otel-versions`
+     - Experimental
+     - Community-support
      - ``ASPNETCORE``
    * - Azure SDK |br| (Not supported on .NET Framework)
      - ``Azure.`` prefixed packages, released after October 1, 2021
+     - Experimental
+     - Vendor-support
      - ``AZURE``
    * - Elastic.Clients.Elasticsearch
      - 8.0.0 and higher
+     - Experimental
+     - Vendor-support
      - ``ELASTICSEARCH``
    * - Microsoft.EntityFrameworkCore |br| (Not supported on .NET Framework)
      - 6.0.12 and higher
+     - Experimental
+     - Community-support
      - ``ENTITYFRAMEWORKCORE``
    * - GraphQL |br| (Not supported on .NET Framework)
      - 7.5.0 and higher
+     - Experimental
+     - Vendor-support
      - ``GRAPHQL``
    * - Grpc.Net.Client
      - 2.52.0 to 3.0.0
+     - Experimental
+     - Community-support
      - ``GRPCNETCLIENT``
    * - System.Net.Http.HttpClient and |br| System.Net.HttpWebRequest
      - See :ref:`dotnet-otel-versions`
+     - Experimental
+     - Community-support
      - ``HTTPCLIENT``
    * - MassTransit |br| (Not supported on .NET Framework)
      - 8.0.0 and higher
+     - Experimental
+     - Vendor-support
      - ``MASSTRANSIT``
    * - MongoDB.Driver.Core |br| (Not supported on .NET Framework)
      - 2.13.3 to 3.0.0
+     - Experimental
+     - Vendor-support
      - ``MONGODB``
    * - MySqlConnector
      - 2.0.0 and higher
+     - Experimental
+     - Vendor-support
      - ``MYSQLCONNECTOR``  
    * - MySql.Data |br| (Not supported on .NET Framework)
      - 6.10.7 to 8.0.32
+     - Experimental
+     - Vendor-support
      - ``MYSQLDATA``
    * - Npgsql
      - 6.0.0 and higher
+     - Experimental
+     - Vendor-support
      - ``NPGSQL``
    * - NServiceBus
      - 8.0.0 and higher
+     - Experimental
+     - Vendor-support
      - ``NSERVICEBUS``
    * - Microsoft.Data.SqlClient and |br| System.Data.SqlClient
      - Version 3.* is not supported on .NET Framework
+     - Experimental
+     - Community-support
      - ``SQLCLIENT``
    * - Quartz |br| (Not supported on .NET Framework 4.7.1 and lower)
      - 3.4.0 and higher
+     - Experimental
+     - Community-support
      - ``QUARTZ``
    * - StackExchange.Redis |br| (Not supported on .NET Framework)
      - 2.0.405 to 3.0.0
+     - Experimental
+     - Community-support
      - ``STACKEXCHANGEREDIS``
    * - System.ServiceModel |br| (Not supported on .NET Framework)
      - 4.7.0 and higher |br| of ``System.ServiceModel.Primitives``
+     - Experimental
+     - Community-support
      - ``WCFCLIENT`` for client side instrumentation and |br| ``WCFSERVICE`` for service side instrumentation
 
 
@@ -105,24 +143,38 @@ Metrics instrumentations
 
    * - Library
      - Supported versions
+     - Status
+     - Support level
      - Instrumentation ID
    * - ASP.NET Framework
      - See :ref:`dotnet-otel-versions`
+     - Experimental
+     - Community-support
      - ``ASPNET`` |br| (Requires the trace instrumentation)
    * - ASP.NET Core
      - See :ref:`dotnet-otel-versions`
+     - Experimental
+     - Community-support
      - ``ASPNETCORE`` |br| (Automatically activates ``Microsoft.AspNetCore.Hosting.HttpRequestIn`` spans.)
    * - System.Net.Http.HttpClient and |br| System.Net.HttpWebRequest
      - See :ref:`dotnet-otel-versions`
+     - Experimental
+     - Community-support
      - ``HTTPCLIENT``
    * - OpenTelemetry.Instrumentation.Runtime
      - See :ref:`dotnet-otel-versions`
+     - Experimental
+     - Community-support
      - ``NETRUNTIME``
    * - NServiceBus
      - 8.0.0 and higher
+     - Experimental
+     - Vendor-support
      - ``NSERVICEBUS``
    * - OpenTelemetry.Instrumentation.Process
      - See :ref:`dotnet-otel-versions`
+     - Experimental
+     - Community-support
      - ``PROCESS``
 
 Logs instrumentations
@@ -134,10 +186,14 @@ Logs instrumentations
    :header-rows: 1
 
    * - Library
+     - Status
+     - Support level
      - Supported versions
      - Instrumentation ID
    * - Microsoft.Extensions.Logging 6.0.0 and higher |br| (Not supported on .NET Framework)
      - 6.0.0 and higher
+     - Experimental
+     - Community-support
      - ``ILOGGER`` |br| (Requires the trace instrumentation)
 
 .. _dotnet-otel-collector-requirement:
