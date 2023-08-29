@@ -32,12 +32,15 @@ To send custom traces to Splunk Observability Cloud, add the required dependenci
    function randomNumber() {
      return tracer.startActiveSpan('make-random', (span) => {
        const result = Math.random() * 42;
+       span.setAttribute('random-result', result);
        span.end();
        return result;
      });
    }
 
-   console.log(randomNumber());
+   setInterval(() => {
+     console.log(randomNumber());
+   }, 1000);
    
 
 .. note:: For more examples of manual instrumentation, see :new-page:`Manual instrumentation <https://opentelemetry.io/docs/instrumentation/js/manual/>` in the OpenTelemetry official documentation.
