@@ -6,7 +6,7 @@ Use built-in alert metrics and conditions in Splunk APM
 .. meta::
    :description: Learn about the built-in alert conditions in Splunk APM. 
 
-Use the built-in alert conditions for Splunk APM metrics to create alert rules that trigger alerts for common problem scenarios. Using these alert conditions you can dial in your monitoring signals beyond the standard practice of comparing a signal to a static threshold. See :ref:`apm-alerts` for steps to configure and APM detector.
+Use the built-in alert conditions for Splunk APM metrics to create alert rules that trigger alerts for common problem scenarios. Using these alert conditions, you can dial in your monitoring signals beyond the standard practice of comparing a signal to a static threshold. See :ref:`apm-alerts` for steps to configure and APM detector.
 
 .. note:: 
 
