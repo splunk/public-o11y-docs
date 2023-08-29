@@ -1,7 +1,7 @@
 .. _instrument-nodejs-applications:
 
 ***************************************************************
-Instrument a Node application for Splunk Observability Cloud
+Instrument your Node application for Splunk Observability Cloud
 ***************************************************************
 
 .. meta::

@@ -35,7 +35,7 @@ To install and activate an instrumentation library manually:
 
 .. _instrument-ruby-rails:
 
-Instrument a Rails application
+Instrument your Rails application
 =======================================================
 
 To instrument a Ruby on Rails application, follow these steps:

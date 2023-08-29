@@ -1,7 +1,7 @@
 .. _instrument-php-applications:
 
 ***************************************************************************
-Instrument a PHP application for Splunk Observability Cloud
+Instrument your PHP application for Splunk Observability Cloud
 ***************************************************************************
 
 .. meta::
@@ -19,7 +19,7 @@ To generate all the basic installation commands for your environment and applica
 #. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`PHP guided setup <https://login.signalfx.com/#/gdi/scripted/php-tracing/step-1?category=product-apm&gdiState=%7B"integrationId":"php-tracing"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the navigation menu, select :menuselection:`Data Management`. 
+   #. In the navigation menu, select :menuselection:`Data Management`.
 
    #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 
