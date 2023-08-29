@@ -16,73 +16,29 @@ Instrumenting applications automatically using the agent of the Splunk Distribut
 Custom traces
 =====================================
 
-To send custom traces to Splunk Observability Cloud, add the required dependencies:
+To send custom traces to Splunk Observability Cloud, add the required dependencies and setup tracing:
 
 .. code-block:: javascript
 
    const { start } = require('@splunk/otel');
    const opentelemetry = require('@opentelemetry/api');
-   const { Resource } = require('@opentelemetry/resources');
-   const {
-      SemanticResourceAttributes,
-   } = require('@opentelemetry/semantic-conventions');
-   const { ConsoleSpanExporter } = require('@opentelemetry/sdk-trace-base');
 
-   // All fields are optional.
    start({
-      // Takes preference over OTEL_SERVICE_NAME environment variable
-      serviceName: 'my-service',
-      tracing: {
-         spanExporterFactory: () => [new ConsoleSpanExporter()],
-         tracerConfig: { resource: new Resource({ [SemanticResourceAttributes.SERVICE_VERSION]: '0.1.0' }) }
-      },
+     serviceName: 'my-service',
    });
 
-   const resource = Resource.default().merge(
-      new Resource({
-         [SemanticResourceAttributes.SERVICE_NAME]: 'service-name-here',
-         [SemanticResourceAttributes.SERVICE_VERSION]: '0.1.0',
-      }),
-   );
+   const tracer = opentelemetry.trace.getTracer('example-app', '0.1.0');
 
-   const exporter = new ConsoleSpanExporter();
-   const processor = new BatchSpanProcessor(exporter);
-   provider.addSpanProcessor(processor);
-
-   provider.register();
-
-Create a tracer
-----------------------------------------------------
-
-Create or acquire a tracer anywhere in your application:
-
-.. code-block:: javascript
-
-   const tracer = opentelemetry.trace.getTracer(
-      // Uniquely identify instrumentation scope
-      '<name-of-scope>',
-      '<version of scope>',
-   );
-
-Create spans
----------------------------------------------
-
-After you've created a tracer, create spans. For example:
-
-.. code-block:: javascript
-
-   function rollTheDice(rolls, min, max) {
-      // Creates a span
-      return tracer.startActiveSpan('rollTheDice', (span) => {
-         const result = [];
-         for (let i = 0; i < rolls; i++) {
-            result.push(rollOnce(min, max));
-         }
-         // Ends the span
-         span.end();
-         return result;
-      });
+   function randomNumber() {
+     return tracer.startActiveSpan('make-random', (span) => {
+       const result = Math.random() * 42;
+       span.end();
+       return result;
+     });
    }
+
+   console.log(randomNumber());
+   
 
 .. note:: For more examples of manual instrumentation, see :new-page:`Manual instrumentation <https://opentelemetry.io/docs/instrumentation/js/manual/>` in the OpenTelemetry official documentation.
 
