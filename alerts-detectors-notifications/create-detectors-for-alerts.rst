@@ -33,7 +33,7 @@ Choose how to create a detector
 
 There are several ways to create a detector.
 
-* You can clone an existing detector if you have existing detectors that you want to modify. See :ref:`clone-detector`
+* You can clone an existing detector if you have existing detectors that you want to modify. See :ref:`clone-detector`.
 * You can customize AutoDetect detectors. See :ref:`autodetect-customize`.
 * Start from the Detector tab to create detectors based on what you are currently viewing, such as a chart or the Infrastructure Navigator. See :ref:`create-detector-from-chart`.
 * Create a detector from a dashboard chart to preselect one of the chart signals as the signal to be monitored. See :ref:`create-detector-from-chart`.
@@ -114,7 +114,7 @@ Select alert signals
 
 On the :strong:`Alert signal` tab, define the signal to monitor by entering a metric and corresponding analytics.
 
-If you are creating a detector from scratch, you have to first select the signals you want to monitor. Selecting a signal for a detector is similar to selecting a signal in a chart in the Chart Builder. Enter a metric and select the metric you want to monitor from the list. Add filters or analytics. To learn more, see :ref:`specify-signal`
+If you are creating a detector from scratch, you have to first select the signals you want to monitor. Selecting a signal for a detector is similar to selecting a signal in a chart in the Chart Builder. Enter a metric and select the metric you want to monitor from the list. Add filters or analytics. To learn more, see :ref:`specify-signal`.
 
 If you want to add more signals, select :guilabel:`Add Metric or Event` or :guilabel:`Add Formula`. Note that you can add events to be displayed on the chart, but you cannot select an event as the signal to be monitored.
 
