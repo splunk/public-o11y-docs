@@ -5,13 +5,13 @@ Instrument .NET applications for Splunk Observability Cloud (OpenTelemetry)
 ***************************************************************************
 
 .. meta::
-   :description: Instrument a .NET application to export spans and metrics to Splunk Observability Cloud.
+   :description: Instrument your .NET application to export spans and metrics to Splunk Observability Cloud.
 
 .. toctree::
    :hidden:
 
    Requirements <dotnet-requirements>
-   Instrument a .NET application <instrumentation/instrument-dotnet-application>
+   Instrument your .NET application <instrumentation/instrument-dotnet-application>
    Configure the .NET instrumentation <configuration/advanced-dotnet-configuration>
    Metrics and attributes <configuration/dotnet-metrics-attributes>
    Manual instrumentation <instrumentation/manual-dotnet-instrumentation>

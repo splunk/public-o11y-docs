@@ -1,7 +1,7 @@
 .. _supported-data-sources:
 
 ********************************************************************************
-Supported integrations
+Supported integrations in Splunk Observability Cloud
 ********************************************************************************
 
 .. meta::
@@ -679,7 +679,9 @@ To learn about GCP and Splunk Observability Cloud, read the following:
 * :ref:`gcp-logs`
 * :ref:`infrastructure-gcp`
 
-The following GCP services send metrics to Infrastructure Monitoring:
+Observability Cloud supports certain services by default, but you can add any other GCP service you need to monitor, as explained in :ref:`step 8 of Start the integration <gcp-three>`. 
+
+The following GCP services send metrics to Infrastructure Monitoring out-of-the-box:
 
 .. list-table::
   :header-rows: 1
@@ -796,7 +798,7 @@ To learn about Azure and Splunk Observability Cloud, read the following:
 * :ref:`ingest-azure-log-data`
 * :ref:`infrastructure-azure`
 
-The following Azure services send metrics to Infrastructure Monitoring:
+The following Azure services send metrics to Infrastructure Monitoring out-of-the-box:
 
 .. list-table::
   :header-rows: 1
