@@ -1,7 +1,7 @@
 .. _instrument-go-applications:
 
 ***************************************************************
-Instrument a Go application for Splunk Observability Cloud
+Instrument your Go application for Splunk Observability Cloud
 ***************************************************************
 
 .. meta::
