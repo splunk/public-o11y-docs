@@ -13,6 +13,7 @@ Configure the Collector
     :hidden:
 
     configure-the-collector-ootb.rst
+    environment-variables.rst
     linux-config.rst
     kubernetes-config.rst
     kubernetes-config-advanced.rst

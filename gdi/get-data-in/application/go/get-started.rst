@@ -12,7 +12,7 @@ Instrument Go applications for Splunk Observability Cloud
    :hidden:
 
    Requirements <go-otel-requirements>
-   Instrument a Go application <instrumentation/instrument-go-application>
+   Instrument your Go application <instrumentation/instrument-go-application>
    Connect trace data with logs <instrumentation/connect-traces-logs>
    Configure the Go instrumentation <configuration/advanced-go-otel-configuration>
    Metrics and attributes <configuration/go-otel-metrics>
