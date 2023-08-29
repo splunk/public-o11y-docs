@@ -16,7 +16,7 @@ Instrumenting applications automatically using the agent of the Splunk Distribut
 Custom traces
 =====================================
 
-To send custom traces to Splunk Observability Cloud, add the required dependencies and setup tracing:
+To send custom traces to Splunk Observability Cloud, add the required dependencies and configure tracing:
 
 .. code-block:: javascript
 
