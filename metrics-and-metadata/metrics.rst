@@ -20,86 +20,87 @@ A :ref:`metric time series (MTS) <metric-time-series>` contains all the data poi
 .. mermaid:: 
 
   %%{
-  init: {
-    'theme': 'base',
-    'themeVariables': {
-      'primaryColor': '#FFFFFF',
-      'primaryTextColor': '#000000',
-      'primaryBorderColor': '#000000',
-      'nodeBorder':'#000000',
-      'lineColor': '#000000',
+    init: {
+      'theme': 'base',
+      'themeVariables': {
+        'primaryColor': '#FFFFFF',
+        'primaryTextColor': '#000000',
+        'primaryBorderColor': '#000000',
+        'nodeBorder':'#000000',
+        'lineColor': '#000000',
+      }
     }
-  }
-}%%
+  }%%
 
 
-flowchart LR
-       %% LR indicates the direction (left-to-right)
+  flowchart LR
+      %% LR indicates the direction (left-to-right)
 
-       %% You can define classes to style nodes and other elements
-       classDef name fill:#BFFFFF
-       classDef type fill:#ffdda6
-       classDef value fill:#fff7a1
-       classDef timestamp fill:#dedeff
-       classDef host fill:#BFFFBF
-       classDef location fill:#FFBFBF
+      %% You can define classes to style nodes and other elements
+      classDef name fill:#BFFFFF
+      classDef type fill:#ffdda6
+      classDef value fill:#fff7a1
+      classDef timestamp fill:#dedeff
+      classDef host fill:#BFFFBF
+      classDef location fill:#FFBFBF
 
-       %% Each subgraph determines what's in each category
-       subgraph Metric time series
+      %% Each subgraph determines what's in each category
+      subgraph Metric time series
+      direction LR
+      dp0-->dp1-->dp2
+
+      subgraph dp0[Data point 1]
         direction LR
-        dp0-->dp1-->dp2
-
-        subgraph dp0[Data point 1]
+        name0(name: cpu.utilization):::name
+        type0(type: gauge):::type
+        value0(value: .85):::value
+        
+        subgraph dimensions0[Dimensions]
           direction LR
-          name0(name: cpu.utilization):::name
-          type0(type: gauge):::type
-          value0(value: .85):::value
-          
-          subgraph dimensions0[Dimensions]
-            direction LR
-            k0(hostname: server1):::host
-            k1(location: Tokyo):::location
-          end
-
-          timestamp0(timestamp: 1557225030000):::timestamp
-
-
+          k0(hostname: server1):::host
+          k1(location: Tokyo):::location
         end
 
-        subgraph dp1[Data point 2]
-          direction LR
-          name1(name: cpu.utilization):::name
-          type1(type: gauge):::type
-          value1(value: .9):::value
+        timestamp0(timestamp: 1557225030000):::timestamp
 
 
-          subgraph dimensions1[Dimensions]
-            direction LR
-            k2(hostname: server1):::host
-            k3(location: Tokyo):::location
-            
-          end
-          timestamp1(timestamp: 1557225030100):::timestamp
-
-        end
-
-        subgraph dp2[Data point 3]
-            direction LR
-          name2(name: cpu.utilization):::name
-          type2(type: gauge):::type
-          value2(value: .7):::value
-
-
-          subgraph dimensions2[Dimensions]
-            direction LR
-            k4(hostname: server1):::host
-            k5(location: Tokyo):::location
-            
-          end
-          timestamp2(timestamp: 1557225030200):::timestamp
-   
-        end
       end
+
+      subgraph dp1[Data point 2]
+        direction LR
+        name1(name: cpu.utilization):::name
+        type1(type: gauge):::type
+        value1(value: .9):::value
+
+
+        subgraph dimensions1[Dimensions]
+          direction LR
+          k2(hostname: server1):::host
+          k3(location: Tokyo):::location
+          
+        end
+        timestamp1(timestamp: 1557225030100):::timestamp
+
+      end
+
+      subgraph dp2[Data point 3]
+          direction LR
+        name2(name: cpu.utilization):::name
+        type2(type: gauge):::type
+        value2(value: .7):::value
+
+
+        subgraph dimensions2[Dimensions]
+          direction LR
+          k4(hostname: server1):::host
+          k5(location: Tokyo):::location
+          
+        end
+        timestamp2(timestamp: 1557225030200):::timestamp
+  
+      end
+  end
+
 
 .. _metrics:
 
