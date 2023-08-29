@@ -21,8 +21,8 @@ These are the built-in alert conditions that are available in Splunk APM detecto
    :widths: 10,30,30,30
 
    * - :strong:`Condition`
-     - :strong:`Metrics available`
      - :strong:`Description`
+     - :strong:`Metrics available`
      - :strong:`Example`
 
    * - :ref:`static-threshold`
