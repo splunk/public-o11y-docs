@@ -47,7 +47,7 @@ A :ref:`metric time series (MTS) <metric-time-series>` contains all the data poi
       %% Each subgraph determines what's in each category
       subgraph Metric time series
       direction LR
-      dp0-->dp1-->dp2
+      dp0~~~dp1~~~dp2
 
       subgraph dp0[Data point 1]
         direction LR
