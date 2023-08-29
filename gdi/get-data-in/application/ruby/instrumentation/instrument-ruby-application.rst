@@ -1,7 +1,7 @@
 .. _instrument-ruby-applications:
 
 ***************************************************************
-Instrument a Ruby application for Splunk Observability Cloud
+Instrument your Ruby application for Splunk Observability Cloud
 ***************************************************************
 
 .. meta::
