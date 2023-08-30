@@ -37,7 +37,7 @@ The following dimensions are automatically added to all metrics exported by the 
   * - ``service.name``
     - Value of the ``service.name`` resource attribute.
   * - ``process.pid``
-    - The Java process identifier (PID).
+    - The .NET process identifier (PID).
   * - ``container.id``
     - Identifier of the container, if applicable.
   * - ``host.name``
