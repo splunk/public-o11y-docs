@@ -72,7 +72,7 @@ Number of successful jobs, number of logged-in users, and number of warnings are
 Observability Cloud applies the SignalFlow ``delta()`` function to data points for cumulative counter metrics. When you specify a ten second resolution for a line graph plot, and Observability Cloud is receiving data for the metric every second, each point on the line represents the change between the first data point received and
 the 10th data point received. As a result, you don't have to create custom SignalFlow to apply the ``delta()`` function, and the plot line represents variations.
 
-.. _bucket-histograms:
+.. _histograms:
 
 Explicit bucket histograms
 =============================================================================
