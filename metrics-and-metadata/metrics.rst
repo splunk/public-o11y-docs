@@ -37,6 +37,7 @@ A :ref:`metric time series (MTS) <metric-time-series>` contains all the data poi
       %% LR indicates the direction (left-to-right)
 
       %% You can define classes to style nodes and other elements
+      classDef default fill:#FFFFFF,stroke:#000
       classDef name fill:#BFFFFF
       classDef type fill:#ffdda6
       classDef value fill:#fff7a1
