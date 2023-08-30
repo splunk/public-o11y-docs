@@ -18,6 +18,39 @@ To activate the collection of .NET runtime and trace metrics, see :ref:`dotnet-m
 
 .. note:: NetRuntime metrics are always collected if memory profiling is activated.
 
+.. _default_app_metrics-dotnet:
+
+Default metric dimensions
+====================================================
+
+The following dimensions are automatically added to all metrics exported by the agent:
+
+.. list-table::
+  :header-rows: 1
+  :widths: 40 60
+  :width: 100%
+
+  * - Dimension
+    - Description
+  * - ``deployment.environment``
+    - Value of the ``deployment.environment`` resource attribute, if present.
+  * - ``service.name``
+    - Value of the ``service.name`` resource attribute.
+  * - ``process.pid``
+    - The Java process identifier (PID).
+  * - ``container.id``
+    - Identifier of the container, if applicable.
+  * - ``host.name``
+    - Name of the host.
+  * - ``telemetry.sdk.name``
+    - Name of the SDK, set to ``signalfx-dotnet-tracing``.
+  * - ``telemetry.sdk.language``
+    - Language of the SDK, set to ``dotnet``.
+  * - ``telemetry.sdk.version``
+    - Version of the SDK.
+  * - ``splunk.distro.version``
+    - Version of the Splunk distribution.
+
 .. _dotnet-runtime-metrics:
 
 .NET runtime metrics
