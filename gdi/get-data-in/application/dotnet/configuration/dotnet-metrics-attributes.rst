@@ -33,9 +33,9 @@ The following dimensions are automatically added to all metrics exported by the 
   * - Dimension
     - Description
   * - ``deployment.environment``
-    - Value of the ``deployment.environment`` resource attribute, if present.
+    - Deployment environment, if present.
   * - ``service.name``
-    - Value of the ``service.name`` resource attribute.
+    - Name of the service.
   * - ``process.pid``
     - The .NET process identifier (PID).
   * - ``container.id``
