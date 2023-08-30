@@ -81,6 +81,11 @@ When discovery mode can't access a discovered service to extract metric data, it
 
 .. note:: The Linux installation script of the Collector supports the ``--discovery`` option. When turning on discovery mode through the installation script, the resulting configuration is applied directly to the ``metrics`` pipeline.
 
+   .. code-block:: bash
+
+      curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+      sudo sh /tmp/splunk-otel-collector.sh --realm <realm> – <token> --mode agent --deployment-environment test --discovery
+
 .. _custom-discovery-props:
 
 Configure or fix discovery properties
