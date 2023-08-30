@@ -12,11 +12,6 @@ In Splunk Observability Cloud, metric data consists of a numerical measurement c
 
 A :ref:`metric time series (MTS) <metric-time-series>` contains all the data points that have the same metric name, metric type, and set of dimensions. Observability Cloud automatically creates MTS from incoming data points. For example, the following data points for the ``cpu.utilization`` metric with the same ``"hostname":"server1"`` and ``"location":"Tokyo"`` dimensions, but with different values and timestamps, make up a single MTS.
 
-
-    .. image:: /_images/images-metrics/MTS-diagram.png
-      :width: 100%
-      :alt: This diagram shows a collection of data points that make up an MTS.
-
 .. mermaid:: 
 
   %%{
