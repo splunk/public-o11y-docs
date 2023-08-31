@@ -19,6 +19,7 @@ Analyze services with span tags and MetricSets in Splunk APM
    index-tag-tips
    cmms
    troubleshoot-mms
+   migrate-apm-custom-reporting
 
 
 Use span tags to add additional context about the operations that spans represent, so that you can drill deeply into service performance.
