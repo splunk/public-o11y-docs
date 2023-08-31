@@ -230,7 +230,4 @@ After you connect Splunk Observability Cloud with AWS, you can use Observability
 - See the AWS official documentation for a list of the available AWS resources.
 - See :ref:`how to leverage data from integration with AWS <aws-post-install>` for more information.
 
-Troubleshooting
-==================
-
 .. include:: /_includes/troubleshooting-steps.rst
