@@ -84,7 +84,7 @@ When discovery mode can't access a discovered service to extract metric data, it
    .. code-block:: bash
 
       curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
-      sudo sh /tmp/splunk-otel-collector.sh --realm <realm> – <token> --mode agent --deployment-environment test --discovery
+      sudo sh /tmp/splunk-otel-collector.sh --realm <realm> – <token> --mode agent --discovery
 
 .. _custom-discovery-props:
 
