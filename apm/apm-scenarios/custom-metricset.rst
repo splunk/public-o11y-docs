@@ -70,4 +70,3 @@ Learn more
 * See :ref:`Track service performance using dashboards in Splunk APM<apm-dashboards>` for more information about monitoring services in APM dashboards.
 * See :ref:`Create charts in Splunk Observability Cloud<create-charts>` for more information about creating charts.
 * See :ref:`Create and customize dashboards<dashboard-create-customize>` for more information about creating dashboards.
-* See :ref:`Configure detectors and alerts in Splunk APM<apm-alerts>` for more information about creating alerts.

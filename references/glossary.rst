@@ -16,9 +16,9 @@ A
       An agent is a deployment method where an instance of the :term:`Splunk Distribution of OpenTelemetry Collector` runs with the application or on the same host as the application. For example, when you configure the :term:`Splunk Distribution of OpenTelemetry Collector` for Linux, Kubernetes, or Windows, you are using the agent deployment method.
 
    alert
-      An alert is triggered when the conditions for a detector rule are met. For example, a detector monitoring the number of requests served by an application may have a rule that produces an alert if the number is below a static threshold, for example, 20 requests per minute, and/or above a calculated one, for example, the mean + 3 standard deviations of the number of requests per minute over the past hour.
+      An alert is triggered when the conditions for a detector rule are met. For example, a detector monitoring the number of application requests has a rule that produces an alert if the number is below a static threshold, for example, 20 requests per minute, and/or above a calculated one, for example, the mean + 3 standard deviations above the number of requests per minute over the past hour.
 
-      When an alert is triggered, the detector also creates an :term:`event` and may optionally send a :term:`notification`. All currently active alerts can be viewed from the Alerts page.
+      When an alert is triggered, the detector also creates an :term:`event` and might optionally send a :term:`notification`. All currently active alerts can be viewed under Alerts & Detectors 
 
    analytics
       Analytics are the mathematical functions that can be applied to a collection of data points. For a full list of analytics that can be applied in Splunk Infrastructure Monitoring, see the :ref:`analytics-ref`.
@@ -43,11 +43,11 @@ D
 .. glossary::
 
    detector
-      A detector monitors a signal for conditions or issues that you care about.
+      A detector monitors a signal for conditions that you care about.
 
-      Those conditions or issues are expressed as one or more rules that trigger an alert when the conditions in the rules are met. Individual rules in a detector are labeled according to criticality: Info, Warning, Minor, Major, and Critical.
+      Those conditions are expressed as one or more rules that trigger an alert when the conditions in the rules are met. Individual rules in a detector are labeled according to criticality: Info, Warning, Minor, Major, and Critical.
 
-      For example, a detector that monitors the latency of an API call may go into a critical state when the latency is significantly higher than normal, as defined in the detector rules.
+      For example, a detector that monitors the latency of an API call triggers a critical alert when the latency is significantly higher than normal, as defined in the detector rules.
 
       For more information, see :ref:`get-started-detectoralert`.
 

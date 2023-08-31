@@ -1,7 +1,7 @@
 .. _instrument-dotnet-applications:
 
 ***************************************************************************
-Instrument a .NET application for Splunk Observability Cloud
+ .NET application for Splunk Observability Cloud
 ***************************************************************************
 
 .. meta::
@@ -42,7 +42,7 @@ Follow these instructions to install the SignalFx Instrumentation for .NET:
 
 .. _install-dotnet-instrumentation:
 
-Instrument a .NET application
+Instrument your .NET application
 --------------------------------------------------------------------
 
 Follow these steps to automatically instrument your application:
@@ -147,7 +147,7 @@ See :ref:`dotnet-metrics-attributes` for more information about the metrics coll
 
 .. _instrument-windows-service:
 
-Instrument a Windows service running a .NET application
+Instrument your Windows service running a .NET application
 --------------------------------------------------------------------
 
 To instrument a Windows service, install the instrumentation and set the following environment variables:
@@ -170,7 +170,7 @@ For more information on the default service name, see :ref:`dotnet-default-servi
 
 .. _instrument-aspnet-iis:
 
-Instrument an ASP.NET application deployed on IIS
+Instrument your ASP.NET application deployed on IIS
 --------------------------------------------------------------------
 
 To instrument an ASP.NET application running on IIS, install the instrumentation and edit the web.config file to add the following settings. See :ref:`configuration-methods-dotnet` for more information.
@@ -221,7 +221,7 @@ To instrument an ASP.NET application running on IIS, install the instrumentation
 
 .. _instrument-azure-app:
 
-Instrument an application in Azure App Service
+Instrument your application in Azure App Service
 --------------------------------------------------------------------
 
 To instrument an application or service in Azure App Service, follow these steps:
@@ -252,7 +252,7 @@ To instrument an application or service in Azure App Service, follow these steps
 
 .. _instrument-azure-webjobs:
 
-Instrument a background task in Azure App Service
+Instrument your background task in Azure App Service
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When instrumenting an Azure WebJob in App Service, add the following settings. Replace ``<extension-version>`` in system paths with the version of the .NET instrumentation, for example, ``v0.2.0``:

@@ -499,6 +499,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   alerts-detectors-notifications/alert-message-variables-reference
+
+.. toctree::
+   :maxdepth:   3
+
 .. toctree::
    :caption: Application Performance Monitoring
    :maxdepth:   3
@@ -689,6 +694,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    rum/RUM-metrics
+
+.. toctree::
+   :maxdepth:   3
+   
+   rum/rum-session-replay
 
 .. toctree::
    :maxdepth:   3

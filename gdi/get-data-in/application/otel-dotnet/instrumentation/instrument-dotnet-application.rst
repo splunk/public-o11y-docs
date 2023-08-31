@@ -1,8 +1,8 @@
 .. _instrument-otel-dotnet-applications:
 
-****************************************************************************
-Instrument a .NET application for Splunk Observability Cloud (OpenTelemetry)
-****************************************************************************
+*******************************************************************************
+Instrument your .NET application for Splunk Observability Cloud (OpenTelemetry)
+*******************************************************************************
 
 .. meta::
    :description: The Splunk Distribution of OpenTelemetry .NET automatically instruments .NET applications, Windows services running .NET applications, and ASP.NET applications deployed on IIS. Follow these steps to get started.
@@ -39,7 +39,7 @@ To install the distribution using the official NuGet packages, see :ref:`otel-do
 
 .. _install-dotnet-otel-instrumentation:
 
-Instrument a .NET application
+Instrument your .NET application
 ---------------------------------------------
 
 Follow these steps to automatically instrument your application:
@@ -159,7 +159,7 @@ Use the NuGet package in the following scenarios:
 3. You want to facilitate developer experimentation with automatic instrumentation through NuGet packages.
 4. You need to solve version conflicts between the dependencies used by the application and the automatic instrumentation.
 
-Instrument an application using the NuGet packages
+Instrument your application using the NuGet packages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To automatically instrument your application using the NuGet packages, add the ``Splunk.OpenTelemetry.AutoInstrumentation`` package to your project. For example:
