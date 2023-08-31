@@ -38,8 +38,8 @@ To access the migration impact report, follow these steps:
 2. In the navigation menu, select **Settings** and then select **Subscription Usage**.
 3. Select the **Usage Reports** link on the **Infrastructure Monitoring** tab. 
 4. Navigate to **View detailed usage reports**.
-4. Select the **OpenTelemetry Migration** tab.
-5. Select **Download** to open the report as a comma-separated values file.
+5. Select the **OpenTelemetry Migration** tab.
+6. Select **Download** to open the report as a comma-separated values file.
 
 ### What is flagged for update in translation
 
