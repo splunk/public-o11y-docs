@@ -37,6 +37,7 @@ To access the migration impact report, follow these steps:
 1. Log in to Splunk Observability Cloud.
 2. In the navigation menu, select **Settings** and then select **Subscription Usage**.
 3. Select the **Usage Reports** link on the **Infrastructure Monitoring** tab. 
+4. Navigate to **View detailed usage reports**.
 4. Select the **OpenTelemetry Migration** tab.
 5. Select **Download** to open the report as a comma-separated values file.
 
@@ -99,6 +100,20 @@ Flagged items that need to be modified include the following (as listed in the r
 - Aggregates that use Smart Agent dimensions.
 
 While the migration impact report highlights items that need revising because they use legacy syntax or conventions, it also pairs those items with the OTel-based metrics and dimensions that you can use as substitutes for them.
+
+.. _conflicting-mapped-semantics:
+
+#### Conflicting semantics
+
+If you emit 2 or more metrics which could be mapped to one another the system won't be able to distinguish them and it might cause various side-effects such as duplicated alerts or inconsistent dimensions in results.
+
+This can happen if you have both Smart Agent and OpenTelemetry Collector running on the same host, and it can also happen if you included 2 equivalent dimensions on the same metric, like `host` and `host.name`. Because of the mapping you are expected to only provide the OpenTelemetry semantics (or legacy semantics during the transition).
+
+Semantics collissions on ingested data apply per MTS, ie. you can send OpenTelemetry metrics from host A, and legacy metrics from host B. You also can send metric `container_fs_usage_bytes` and `k8s.container.name` from the same host as these will be different MTSes.
+
+The same rule applies to querying (in charts and detectors) where you are expected to only query by the OpenTelemetry semantics or legacy semantics within the same `data()` invocation, regardless if metrics you're querying are aligned with legacy or OpenTelemetry semantics. In this situation we might produce duplicated MTSes from non-duplicated ingested data.
+
+This can happen if you write a query such as `data("container.image.name", filter=(filter("host", "<host-id>") OR filter("host.name", "<host-id>")))`.
 
 ## OpenTelemetry values and their legacy equivalents
 
