@@ -36,7 +36,7 @@ These are the types of metrics and their default rollups in Splunk Observability
     - Delta 
   * - :ref:`Explicit bucket histograms <histograms>`
     - Represent a distribution of measurements or metrics, with complete percentile data available. Data is distributed into equally sized intervals or "buckets".
-    - Histogram
+    - Average
 
 For example, Observability Cloud applies the SignalFlow ``average()`` function to data points for gauge metrics. When you specify a 10-second resolution for a line graph plot, and Observability Cloud is receiving data for the metric every second, each point in the line represents the average of 10 data points.
 
