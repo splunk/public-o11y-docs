@@ -26,7 +26,7 @@ iOS demo app
 
 The splunk-otel-ios library includes a demo application called Demo Boutique. 
 
-To access the sample app,  see :new-page:`Demo Boutique <https://github.com/signalfx/tracing-examples/tree/main/ios/Demo%20Boutique>` in tracing-examples/iOS on GitHub. 
+To access the sample app, see :new-page:`Demo Boutique <https://github.com/signalfx/tracing-examples/tree/main/ios/Demo%20Boutique>` in tracing-examples/iOS on GitHub. 
 
 To use the demo app, open :code:`Demo Boutique.xcodeproj` in Xcode and run the Demo Boutique application.
 
