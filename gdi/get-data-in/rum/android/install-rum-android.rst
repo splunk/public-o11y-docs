@@ -111,6 +111,7 @@ Follow these steps to install the Android RUM agent using Maven Central:
             // Set the desired version of the RUM agent.
             // See available releases: https://github.com/signalfx/splunk-otel-android/releases
             implementation("com.splunk:splunk-otel-android:+")
+            implementation("com.splunk:opentelemetry-android-instrumentation:+")
          //...
          }
 
@@ -121,6 +122,7 @@ Follow these steps to install the Android RUM agent using Maven Central:
             // Set the desired version of the RUM agent.
             // See available releases: https://github.com/signalfx/splunk-otel-android/releases
             implementation 'com.splunk:splunk-otel-android:+'
+            implementation 'com.splunk:opentelemetry-android-instrumentation:+'
          //...
          }
 
@@ -151,6 +153,8 @@ Follow these steps to install the Android RUM agent using Maven Central:
                               .put(StandardAttributes.APP_VERSION, "<version_of_app>")
                               .build()
                      )
+                     // Turn off instrumentation of background processes
+                     .disableBackgroundTaskReporting(BuildConfig.APPLICATION_ID)
                      // Activates debug logging if needed
                      //.enableDebug()
                      .build(this);
@@ -161,7 +165,7 @@ Follow these steps to install the Android RUM agent using Maven Central:
 
          1. Open the navigation menu in Splunk Observability Cloud.
          2. Select :menuselection:`Settings`.
-         3. Select your username. 
+         3. Select your username.
 
       The realm name appears in the :guilabel:`Organizations` section.
 

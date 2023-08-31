@@ -64,13 +64,15 @@ Background tasks might introduce unwanted or noisy data to your instrumented app
          super.onCreate();
 
          SplunkRum.builder()
-                  .setApplicationName("Android Demo App")
-                  .setRumAccessToken("<token>")
-                  .setDeploymentEnvironment("demo")
-                  .disableBackgroundTaskReporting(BuildConfig.APPLICATION_ID)
-                  .build(this);
+
+            // Other Settings
+            // ...
+
+            // Turn off instrumentation of background processes
+            .disableBackgroundTaskReporting(BuildConfig.APPLICATION_ID)
+            .build(this);
+         }
       }
-   }
 
 .. _gzip-android-issue:
 
