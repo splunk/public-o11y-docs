@@ -55,7 +55,7 @@ Background tasks are introducing noise in the data
 Background tasks might introduce unwanted or noisy data to your instrumented application. To deactivate instrumentation for a background task, pass the application ID of the task to the ``disableBackgroundTaskReporting()`` method. For example:
 
 .. code-block:: java
-   :emphasize-lines: 11
+   :emphasize-lines: 12,13
 
    public class SampleApplication extends Application {
 
@@ -69,7 +69,7 @@ Background tasks might introduce unwanted or noisy data to your instrumented app
             // ...
 
             // Turn off instrumentation of background processes
-            .disableBackgroundTaskReporting(BuildConfig.APPLICATION_ID)
+            .disableBackgroundTaskReporting(BuildConfig.<id_of_application>)
             .build(this);
          }
       }

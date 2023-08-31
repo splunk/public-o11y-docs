@@ -154,7 +154,7 @@ Follow these steps to install the Android RUM agent using Maven Central:
                               .build()
                      )
                      // Turn off instrumentation of background processes
-                     .disableBackgroundTaskReporting(BuildConfig.APPLICATION_ID)
+                     .disableBackgroundTaskReporting(BuildConfig.<id_of_application>)
                      // Activates debug logging if needed
                      //.enableDebug()
                      .build(this);

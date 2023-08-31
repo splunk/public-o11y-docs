@@ -25,7 +25,7 @@ To configure the Android RUM agent, pass the settings by preparing a ``Config`` 
             .setApplicationName("<name_of_app>")
             .setRealm("<realm>"")
             .setRumAccessToken("<rumAccessToken>")
-            .disableBackgroundTaskReporting(BuildConfig.APPLICATION_ID)
+            .disableBackgroundTaskReporting(BuildConfig.<id_of_application>)
             .build(this);
       }
    }
