@@ -44,7 +44,7 @@ Check that your data is coming in
 
 Follow these steps to check that your data is in your Splunk RUM for Mobile instance:
 
-:strong:`Preparation`
+:strong:`Prerequisites`
 
 To start sending data to Splunk RUM, you need to first have user activity on your application.
 
