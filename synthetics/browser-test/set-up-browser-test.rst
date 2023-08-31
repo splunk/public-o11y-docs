@@ -64,7 +64,7 @@ For steps on how to make a Google Chrome recording, see :new-page:`Record, repla
 Import a Google Chrome Recorder JSON file 
 --------------------------------------------------------
 
-.. Note:: Included within recordings from Google Chrome Recorder is the specific viewport size of the browser window used in the recording. When imported, this recorded viewport is not imported into the Synthetics Browser test. Check that the Synthetics Browser test Device selection accurately represents the viewport size used by the recorded browser window.
+.. Note:: Included within recordings from Google Chrome Recorder is the specific viewport size of the browser window used in the recording. When imported, this recorded viewport is not imported into the Synthetics Browser test. Check that the Synthetics Browser test device selection accurately represents the viewport size used by the recorded browser window.
 
 
 Follow these steps to import a JSON file from Google Chrome Recorder to a new or existing Browser test.
@@ -106,6 +106,7 @@ If your recording contains unsupported steps, you need to edit the step to refor
                }
 
      - ``go_to_url`` :
+     
          .. code-block:: javascript
 
                {
