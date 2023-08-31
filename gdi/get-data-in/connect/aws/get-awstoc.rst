@@ -135,11 +135,22 @@ Choose the connection method that best matches your needs:
   * - :ref:`Splunk Terraform <terraform-config>`
     - Use this connection method if you already manage your infrastructure as code by deploying through Terraform.
 
-See also the :new-page:`Splunk add-on for Amazon Kinesis Firehose <https://docs.splunk.com/Documentation/AddOns/latest/Firehose/ConfigureFirehose>`.
-
 .. caution:: Splunk is not responsible for data availability, and it can take up to several minutes (or longer, depending on your configuration) from the time you connect until you start seeing valid data from your account.
 
 If you can't connect AWS to Splunk Observability Cloud, see :ref:`Troubleshoot your AWS connection <aws-troubleshooting>`.
+
+.. _aws-connection-options-more:
+
+.. raw:: html
+
+  <embed>
+    <h3>More options to connect with AWS</h3>
+  </embed>  
+
+Observability Cloud also offers you the following options to connect to AWS:
+
+* :ref:`aws-privatelink`.
+* The :new-page:`Splunk add-on for Amazon Kinesis Firehose <https://docs.splunk.com/Documentation/AddOns/latest/Firehose/ConfigureFirehose>`.  
 
 .. _aws-collector:
 
