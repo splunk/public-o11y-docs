@@ -29,6 +29,8 @@ PrivateLink availability and service name
 Availability of PrivateLink Across AWS Regions
 --------------------------------------------------
 
+The following table shows the different endpoint URLS for each AWS region.
+
 .. list-table::
   :header-rows: 1
   :width: 100
@@ -40,35 +42,97 @@ Availability of PrivateLink Across AWS Regions
     - Backfill endpoint URL
     - Stream endpoint URL
 
+  * - ap-northeast-1
+    - :new-page:`private-ingest.jp0.signalfx.com <http://private-ingest.jp0.signalfx.com/>`
+    - :new-page:`private-api.jp0.signalfx.com <http://private-api.jp0.signalfx.com/>`
+    - :new-page:`private-backfill.jp0.signalfx.com <http://private-backfill.jp0.signalfx.com/>`
+    - :new-page:`private-stream.jp0.signalfx.com <http://private-stream.jp0.signalfx.com/>`
+
   * - ap-southeast-2
     - :new-page:`private-ingest.au0.signalfx.com <http://private-ingest.au0.signalfx.com/>`
     - :new-page:`private-api.au0.signalfx.com <http://private-api.au0.signalfx.com/>`
     - :new-page:`private-backfill.au0.signalfx.com <http://private-backfill.au0.signalfx.com/>`
     - :new-page:`private-stream.au0.signalfx.com <http://private-stream.au0.signalfx.com/>`
 
-  * - ap-southeast-2
-    - Ingest endpoint URL
-    - API endpoint URL
-    - Backfill endpoint URL
-    - Stream endpoint URL
+  * - eu-west-1
+    - :new-page:`private-ingest.eu0.signalfx.com <http://private-ingest.eu0.signalfx.com/>`
+    - :new-page:`private-api.eu0.signalfx.com <http://private-api.eu0.signalfx.com/>`
+    - :new-page:`private-backfill.eu0.signalfx.com <http://private-backfill.eu0.signalfx.com/>`
+    - :new-page:`private-stream.eu0.signalfx.com <http://private-stream.eu0.signalfx.com/>`
 
+  * - us-east-1
+    - :new-page:`private-ingest.us0.signalfx.com <http://private-ingest.us0.signalfx.com/>`
+    - :new-page:`private-api.us0.signalfx.com <http://private-api.us0.signalfx.com/>`
+    - :new-page:`private-backfill.us0.signalfx.com <http://private-backfill.us0.signalfx.com/>`
+    - :new-page:`private-stream.us0.signalfx.com <http://private-stream.us0.signalfx.com/>`
 
-Step 1: Create a VPC endpoint
+  * - us-west-2
+    - :new-page:`private-ingest.us1.signalfx.com <http://private-ingest.us1.signalfx.com/>`
+    - :new-page:`private-api.us1.signalfx.com <http://private-api.us1.signalfx.com/>`
+    - :new-page:`private-backfill.us1.signalfx.com <http://private-backfill.us1.signalfx.com/>`
+    - :new-page:`private-stream.us1.signalfx.com <http://private-stream.us1.signalfx.com/>`
+
+PrivateLink Service Name Across AWS Regions
 --------------------------------------------------
 
+The following table shows the PrivateLink service name for each AWS region.
 
-Configure AWS PrivateLink with VPC peering configured
+.. list-table::
+  :header-rows: 1
+  :width: 100
+  :widths: 20, 20, 20, 20, 20
+
+  * - AWS region
+    - Ingest endpoint service name
+    - API endpoint service name
+    - Backfill endpoint service name
+    - Stream endpoint service name
+
+  * - ap-northeast-1
+    - com.amazonaws.vpce.ap-northeast-1.vpce-svc-086c8167a74323e5a
+    - com.amazonaws.vpce.ap-northeast-1.vpce-svc-06e1951072fcabaaa
+    - TBC
+    - TBC
+
+  * - ap-southeast-2
+    - com.amazonaws.vpce.ap-southeast-2.vpce-svc-01e4e31c294754b6e
+    - com.amazonaws.vpce.ap-southeast-2.vpce-svc-0d1d69a0b1bf003cd
+    - TBC
+    - TBC
+
+  * - eu-west-1
+    - com.amazonaws.vpce.eu-west-1.vpce-svc-01c194b2265ecb86e
+    - com.amazonaws.vpce.eu-west-1.vpce-svc-07b08296ff84e17a0
+    - TBC
+    - TBC
+
+  * - us-east-1
+    - com.amazonaws.vpce.us-east-1.vpce-svc-0336437d577075951
+    - com.amazonaws.vpce.us-east-1.vpce-svc-089b68950f5be1c22
+    - TBC
+    - TBC
+
+  * - us-west-2
+    - com.amazonaws.vpce.us-west-2.vpce-svc-06376c4a9be288ee9
+    - com.amazonaws.vpce.us-west-2.vpce-svc-0da2bbb45fa4c3a6b
+    - TBC
+    - TBC
+
+Benefits: AWS PrivateLink with VPC peering configured
 =================================================================
 
+Let's examine a scenario where your source region, or region generating your data, is ``ap-south-1`` and your destination region, or region where you have established your VPC connection and want to receive data, is ``us-east-1``. 
 
+In this context, you need to establish a VPC endpoint within your :strong:`destination region` ``us-east-1``. By activating PrivateLinkin in this region, you obtain a seamless, secure, and private channel to access AWS services available in the your source region, ``ap-south-1``. This arrangement ensures that communication between the two VPCs occurs through an internal network, removing the necessity of routing traffic over the public Internet.
 
-Let's examine a scenario where the customer's source region is ap-south-1(the region generating their data), and their destination region is us-east-1 (where the customer has established a VPC connection). The customer intends to transmit data to o11y's us-east-1 region.
-
-In this context, it is advisable to establish a VPC Endpoint within the customer's destination region us-east-1. Activating PrivateLink within this region offers a secure and private channel to access AWS services available in the customer's source region ap-south-1. This arrangement ensures that communication between the two VPCs occurs through an internal network, removing the necessity of routing traffic over the public internet.
-
-Through the implementation of PrivateLink in the customer's destination region, a seamless and secure linkage is established between the two regions. This enhancement bolsters data integrity and security, aligning with the goal of optimizing inter-region communication while upholding stringent data protection standards.
+This enhancement bolsters data integrity and security, aligning with the goal of optimizing inter-region communication while upholding stringent data protection standards.
 
 Learn more at AWS official documentation :new-page:`Two VPCs peered together <https://docs.aws.amazon.com/vpc/latest/peering/peering-configurations-full-access.html#two-vpcs-full-access>`.
+
+Configure your AWS PrivateLink VPC endpoints
+=================================================================
+
+Follow these steps to create, use, and manage your VPC endpoints:
 
 Step 1: Create a VPC endpoint
 --------------------------------------------------
