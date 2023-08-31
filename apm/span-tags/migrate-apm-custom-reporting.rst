@@ -38,13 +38,16 @@ The following table covers the http attributes that changed from version 1.0 to 
 Considerations before upgrading
 ===================================
 
-As of August 7, 2023, Splunk APM began populating the new attributes with data. Thirteen months of data was also backfilled into these new attributes on this date. So, default functionality in APM will be unaffected. 
-
-If you use any of the affected attributes in custom reporting in APM you'll need to follow the migration steps. Custom reporting in APM includes the following:
+If you use any of the affected attributes in custom reporting in APM you'll need to follow the migration steps before upgrading to Version 2.0 of the agent of the Splunk Distribution of OpenTelemetry Java . Custom reporting in APM includes the following:
 
 * Tag Spotlight
 * Custom charts and dashboards, that is, charts and dashboards you create. Built-in APM dashboards will be unaffected.
 * Detectors 
+
+Time your upgrade
+-------------------
+
+As of August 7, 2023, Splunk APM began populating the new attributes with data. Thirteen months of data was also backfilled into these new attributes on this date. Because the data is automatically migrated, you can complete the following migration steps and then upgrade whenever the timing is right for your organization. 
 
 Migration steps
 ===================
@@ -54,5 +57,5 @@ Migration steps
    #. MMS are used in the APM landing page and the dashboards. See :ref:`cmms` for steps to generate MMS.
 #. Update your charts and dashboards to use the new indexed tags. See :ref:`dashboard-create-customize` and :ref:`create-charts`.
 #. Create new detectors to use the new indexed tags. See :ref:`apm-alerts` for steps to create an APM detector. 
-#. (Optional) Once you have updated your charts, dashboards, and detectors to use the new tags and have confirmed that all are working as expected you will likely want to unindex the old tags.
+#. (Optional) Once you have updated your charts, dashboards, and detectors to use the new tags and have confirmed that all are working as expected you will likely want to unindex the old tags. 
 
