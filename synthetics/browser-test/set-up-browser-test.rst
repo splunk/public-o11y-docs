@@ -47,7 +47,7 @@ Follow these steps to set up a Browser test:
 Import a JSON file generated from Google Chrome Recorder
 ============================================================
 
-To simplify the test creation process, make a screen recording using Google Chrome Recorder. Then, import the JSON file to Splunk Synthetic Monitoring to automatically import the steps in the workflow instead of adding each individual interaction you want to track. Screen recordings are especially helpful for complex user flows, or tests that have a large number of steps. 
+To simplify the test creation process, make a recording using Google Chrome Recorder. Then, import the JSON file to Splunk Synthetic Monitoring to automatically import the steps in the workflow instead of adding each individual interaction you want to track. Recordings are especially helpful for complex user flows, or tests that have a large number of steps. 
 
 
 Create a Google Chrome Recorder JSON file
@@ -57,19 +57,20 @@ For steps on how to make a Google Chrome recording, see :new-page:`Record, repla
 
 :strong:`Requirements`
 
-* In Google Chrome Recorder select either CSS or XPATH for Selector type to record.
+* In Google Chrome Recorder, select either CSS or XPATH for Selector type to record.
 
-* Browser tests run in one Browser tab only. Your screen recording can't span multiple tabs. 
+* Browser tests run in one Browser tab only. Your recording can't span multiple tabs. 
 
 Import a Google Chrome Recorder JSON file 
 --------------------------------------------------------
 
-.. Note:: Viewport is automatically set, so if you have a step to set the viewport, this step won’t appear in the test configuration. 
+.. Note:: Included within recordings from Google Chrome Recorder is the specific viewport size of the browser window used in the recording. When imported, this recorded viewport is not imported into the Synthetics Browser test. Check that the Synthetics Browser test Device selection accurately represents the viewport size used by the recorded browser window.
+
 
 Follow these steps to import a JSON file from Google Chrome Recorder to a new or existing Browser test.
 
 
-#. In Splunk Synthetic Monitoring, Select :guilabel:`Edit` on the Browser test to open the test configuration page.
+#. In Splunk Synthetic Monitoring, select :guilabel:`Edit` on an existing Browser test to open the test configuration page, or create a new test. 
 #. Select Import.
 #. Upload the Google Chrome Recorder JSON file.
 #. If a step is not supported, you need to edit or delete the step in the test configuration page. 
@@ -79,7 +80,7 @@ Follow these steps to import a JSON file from Google Chrome Recorder to a new or
 
 Troubleshoot unsupported steps
 ------------------------------------------
-If your recording contains unsupported steps, you need to edit the step to reformat it into one of the supported Synthetic Browser step types. The following table shows how Google Chrome Recorder steps names and code snippets map to their counterparts in Splunk Synthetic Browser tests. These examples use Buttercup Games, a fictitious game company.
+If your recording contains unsupported steps, you need to edit the step to reformat it into one of the supported Synthetic Browser step types. The following table shows how Google Chrome Recorder step names and code snippets map to their counterparts in Splunk Synthetic Browser tests. These examples use Buttercup Games, a fictitious game company.
 
 .. list-table::
    :header-rows: 1
@@ -140,6 +141,7 @@ If your recording contains unsupported steps, you need to edit the step to refor
                ]
 
      - ``click_element`` with resulting navigation:
+
          .. code-block:: javascript
 
                {
@@ -173,6 +175,7 @@ If your recording contains unsupported steps, you need to edit the step to refor
 
 
      - ``click_element`` without resulting navigation:
+
          .. code-block:: javascript
 
                {
@@ -203,6 +206,7 @@ If your recording contains unsupported steps, you need to edit the step to refor
 
 
      - ``enter_value``:
+
          .. code-block:: javascript
 
               {
@@ -224,7 +228,7 @@ If your recording contains unsupported steps, you need to edit the step to refor
                   "selectors": [
                      [
                         "body",
-                        "#homepage_product_brand-example",
+                        "#homepage_example",
                         ".css-4t2fjl",
                         ".eanm77i0"
                      ]
@@ -242,7 +246,7 @@ If your recording contains unsupported steps, you need to edit the step to refor
                   "type": "assert_element_present",
                   "wait_for_nav": false,
                   "selector_type": "css",
-                  "selector": "body,#homepage_product_brand-example"
+                  "selector": "body,#homepage_example, .css-4t2fjl, .eanm77i0"
                }
 
    * - ``waitForElement`` visible false:
@@ -259,7 +263,7 @@ If your recording contains unsupported steps, you need to edit the step to refor
                      ".eanm77i0"
                   ]
                ],
-               "visible": true
+               "visible": false
             }
 
 
