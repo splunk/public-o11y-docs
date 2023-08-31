@@ -43,6 +43,14 @@ The following dimensions are automatically added to all metrics exported by the 
     - Description
   * - ``deployment.environment``
     - Value of the ``deployment.environment`` resource attribute, if present.
+  * - ``service.name``
+    - Name of the service.
+  * - ``telemetry.sdk.name``
+    - Name of the SDK, set to ``opentelemetry``.
+  * - ``telemetry.sdk.language``
+    - Language of the SDK, set to ``python``.
+  * - ``telemetry.sdk.version``
+    - Version of the SDK. 
 
 .. _python-supported-libraries:
 
@@ -50,6 +58,18 @@ Supported libraries
 -------------------------------------
 
 The agent collects the following metrics through the following supported libraries: 
+
+.. list-table::
+  :header-rows: 1
+  :widths: 45 20 50
+  :width: 100%
+
+  * - Library/Framework
+    - Instrumentation
+    - Supported versions
+  * - Pyramid
+    - ``pyramid-metrics-splunk``
+    - Pyramid version 1.7 or higher
 
 
 .. _python-otel-runtime-metrics:
