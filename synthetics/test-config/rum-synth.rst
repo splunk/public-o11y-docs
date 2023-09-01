@@ -1,7 +1,7 @@
 .. _rum-synth:
 
 ********************************************************************************
-Review Web Vitals for Synthetics tests in Splunk RUM 
+Review Web Vitals for Synthetics tests with Splunk RUM 
 ********************************************************************************
 
 .. meta::
