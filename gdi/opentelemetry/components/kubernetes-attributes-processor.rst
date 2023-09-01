@@ -200,7 +200,7 @@ You can change this list by adding a ``metadata`` section. For example:
          - k8s.node.name
          - k8s.pod.start_time
 
-.. caution:: Make sure that default attributes, such as ``k8s.pod.name``, are always extracted, as they're required for Splunk Observability Cloud capabilities, such as Kuberbetes navigator, Related Content, and accurate subscription usage.
+.. caution:: Make sure that default attributes, such as ``k8s.pod.name``, are always extracted, as they're required for Splunk Observability Cloud capabilities, such as Kubernetes navigator, Related Content, and accurate subscription usage.
 
 The following container level attributes require additional attributes to identify a container in a pod:
 
