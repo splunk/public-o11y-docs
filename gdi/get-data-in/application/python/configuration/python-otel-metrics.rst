@@ -67,9 +67,19 @@ The agent collects the following metrics through the following supported librari
   * - Library/Framework
     - Instrumentation
     - Supported versions
+  * - Django
+    - ``opentelemetry-instrumentation-django``
+    - Django version 1.10 or higher
+  * - Flask
+    - ``opentelemetry-instrumentation-flask``
+    - Flask version 1.0 or higher
   * - Pyramid
-    - ``pyramid-metrics-splunk``
+    - ``opentelemetry-instrumentation-pyramid``
     - Pyramid version 1.7 or higher
+  * - Tornado
+    - ``opentelemetry-instrumentation-tornado``
+    - Tornado version 5.1.1 or higher
+
 
 
 .. _python-otel-runtime-metrics:
