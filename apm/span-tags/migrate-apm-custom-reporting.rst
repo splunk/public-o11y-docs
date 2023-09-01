@@ -38,7 +38,7 @@ The following table covers the http attributes that changed from version 1.0 to 
 Considerations before upgrading
 ===================================
 
-If you use any of the affected attributes in custom reporting in APM you'll need to follow the migration steps before upgrading to Version 2.0 of the agent of the Splunk Distribution of OpenTelemetry Java . Custom reporting in APM includes the following:
+If you use any of the affected attributes in custom reporting in APM, follow the migration steps before upgrading to version 2.0 of the agent of the Splunk Distribution of OpenTelemetry Java. Custom reporting in APM includes the following:
 
 * Tag Spotlight
 * Custom charts and dashboards, that is, charts and dashboards you create. Built-in APM dashboards will be unaffected.
