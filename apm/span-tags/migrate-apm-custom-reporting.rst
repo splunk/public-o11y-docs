@@ -11,7 +11,7 @@ Version 2.0 of the agent from the Splunk Distribution of OpenTelemetry Java incl
 HTTP semantic convention changes
 ===================================
 
-The following table covers the http attributes that changed from version 1.0 to version 2.0 in the agent of the Splunk Distribution of OpenTelemetry Java.
+The following table covers the HTTP attributes that changed from version 1.0 to version 2.0 in the agent of the Splunk Distribution of OpenTelemetry Java.
 
 .. list-table:: 
    :header-rows: 1
@@ -53,8 +53,8 @@ Migration steps
 ===================
 
 #. Index the new attributes as tags to generate either Troubleshooting Metric Sets (TMS) or Monitoring Metric Sets (MMS).
-   #. TMS are used in the service map and Tag Spotlight. See :ref:`apm-index-span-tags` for steps to generate TMS.
-   #. MMS are used in the APM landing page and the dashboards. See :ref:`cmms` for steps to generate MMS.
+    #. TMS are used in the service map and Tag Spotlight. See :ref:`apm-index-span-tags` for steps to generate TMS.
+    #. MMS are used in the APM landing page and the dashboards. See :ref:`cmms` for steps to generate MMS.
 #. Update your charts and dashboards to use the new indexed tags. See :ref:`dashboard-create-customize` and :ref:`create-charts`.
 #. Create new detectors to use the new indexed tags. See :ref:`apm-alerts` for steps to create an APM detector. 
 #. (Optional) After you have updated your charts, dashboards, and detectors to use the new tags and have confirmed that all are working as expected, unindex the old tags. 
