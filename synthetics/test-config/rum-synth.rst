@@ -1,14 +1,14 @@
 .. _rum-synth:
 
 ********************************************************************************
-Splunk RUM metrics integration 
+Review Web Vitals for Synthetics tests in Splunk RUM 
 ********************************************************************************
 
 .. meta::
     :description: Learn how to integrate Splunk RUM with Splunk Synthetic Monitoring.
 
 
-Splunk Synthetic Monitoring automatically collects Web Vitals for Browser tests. If you also want to measure Web Vital metrics against your run results, then integrate with Splunk RUM. Web vitals capture key metrics that affect user experience and assess the overall performance of your site. Many businesses rely on search engines for users to discover their sites. Google uses Web Vitals to determine page ranking. 
+Splunk Synthetic Monitoring automatically collects Web Vitals for Browser tests. If you also want to measure Web Vital metrics against your run results, then integrate Splunk Synthetic Monitoring with Splunk RUM. Web Vitals capture key metrics that affect user experience and assess the overall performance of your site. Many businesses rely on search engines for users to discover their sites. Google uses Web Vitals to determine page ranking. 
 
 .. list-table::
    :header-rows: 1
@@ -51,9 +51,9 @@ Web Vitals are a great way of measuring if your tests are actually capturing the
 
 Example
 ------------------
-The site reliability engineering (SRE) team at the fictitious Buttercup Games company sets up tests to monitor the checkout workflow for their online store using an API test. For steps on how they setup their API test, see :ref:`api-test-scenario`. The SRE team wants to determine the health of the API test by run location. The data centers for Buttercup Games are in Johannesburg and the web vitals for the local tests reflect optimal performance. 
+The site reliability engineering (SRE) team at the fictitious Buttercup Games company sets up tests to monitor the checkout workflow for their online store using an API test. For steps on how they setup their API test, see :ref:`api-test-scenario`. The SRE team wants to determine the health of the API test by run location. The data centers for Buttercup Games are in Johannesburg and the Web Vitals for the local tests reflect optimal performance. 
 
-Using the RUM integration, the SRE team can compared web vitals by global results and found that the LCP really lagged. 
+Using the RUM integration, the SRE team can compared Web Vitals by global results and found that the LCP really lagged. 
 
 .. image:: /_images/rum/web-vital-example.png
       :width: 30%
