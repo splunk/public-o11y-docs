@@ -57,5 +57,5 @@ Migration steps
    #. MMS are used in the APM landing page and the dashboards. See :ref:`cmms` for steps to generate MMS.
 #. Update your charts and dashboards to use the new indexed tags. See :ref:`dashboard-create-customize` and :ref:`create-charts`.
 #. Create new detectors to use the new indexed tags. See :ref:`apm-alerts` for steps to create an APM detector. 
-#. (Optional) Once you have updated your charts, dashboards, and detectors to use the new tags and have confirmed that all are working as expected you will likely want to unindex the old tags. 
+#. (Optional) After you have updated your charts, dashboards, and detectors to use the new tags and have confirmed that all are working as expected, unindex the old tags. 
 
