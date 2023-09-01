@@ -4,7 +4,7 @@ Migrate APM custom reporting to OpenTelemetry Java Agent 2.0
 *****************************************************************
 
 .. meta:: 
-   :description: Steps to migrate your APM custom reporting to support upgrade to version 2.0 of the agent of the Splunk Distribution of OpenTelemetry Java.
+   :description: Steps to migrate your APM custom reporting to support upgrade to version 2.0 of Splunk OpenTelemetry Java agent.
 
 Version 2.0 of the agent of the Splunk Distribution of OpenTelemetry Java includes breaking changes to http semantic conventions. If you want to upgrade to version 2.0, you'll need to consider these breaking changes.
 
