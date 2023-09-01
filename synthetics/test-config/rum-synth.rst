@@ -24,12 +24,14 @@ Splunk Synthetic Monitoring automatically collects Web Vitals for Browser tests.
    * - First input delay (FID)
      - Measures the time from when a user first interacts with a web page to the time when the browser responds to that interaction.
    * - Total blocking time (TBT)
-     - TBT is collected from a synthetic test, while FID is collected from real user data. They measure the same metric: time taken by the page to become interactive and responsiveness to the user.
+     - Measures the time it takes a page to become interactive and responsive for a user. 
+       TBT is collected from a synthetic test, while FID is collected from real user data. They are considered equivalent to each other because they measure the same metric.
+
 
 
 Prerequisites 
 =================
-You need to instrument your browser application with Splunk RUM. See, :ref:`browser-rum-gdi`.
+To measure Web Vital metrics against your run results, you need to instrument your browser application with Splunk RUM. See, :ref:`browser-rum-gdi`.
 
 View Web Vitals for your run results 
 ==========================================
