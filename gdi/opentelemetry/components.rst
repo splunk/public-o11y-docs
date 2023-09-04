@@ -268,7 +268,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
      - Metrics, logs, traces
    * - :ref:`otlp-exporter` (``otlp``)
      - Exports data through gRPC using the OTLP format. By default, this exporter requires TLS and provides queued retry capabilities. 
-     - Metrics, traces
+     - Metrics, logs, traces
    * - ``otlphttp``
      - Exports traces and metrics in OTLP format over the HTTP protocol. 
      - Metrics, traces
