@@ -12,12 +12,16 @@ The OTLP exporter sends metrics, traces, and logs through gRPC using the OTLP fo
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the OTLP receiver in all data pipelines to send metrics, traces, and logs. It's configured with the ``tls > insecure`` setting set to ``true``.
+By default, the Splunk Distribution of OpenTelemetry Collector includes the OTLP receiver in all data pipelines to send metrics, traces, and logs. It's configured with the ``tls: insecure`` setting set to ``true``.
 
 The following settings are required:
 
-* ``endpoint``. host:port to which the exporter is going to send OTLP trace data, using the gRPC protocol. The valid syntax is described here. If a scheme of https is used then client transport security is enabled and overrides the insecure setting.
-* ``tls``. See TLS Configuration Settings for the full set of available options.
+* ``endpoint``. Port to which the exporter is going to send OTLP data, using the gRPC protocol. 
+  * gRPC supports DNS as the default name-system. To learn more about the valid name syntax, see :new-page:`gRCP Name Resolution <https://github.com/grpc/grpc/blob/master/doc/naming.md>`. 
+  * If you're using a scheme of ``https``, then client transport security is enabled and overrides the ``insecure`` setting.
+
+* ``tls``. See :ref:`TLS Configuration Settings <otlp-exporter-settings>` for the full set of available options. 
+  * Mutual TLS (mTLS) is also supported. See more at :new-page:`TLS/mTLS configuration <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/configtls/README.md#tls--mtls-configuration>`.
 
 Sample configurations
 --------------------------------
@@ -45,6 +49,8 @@ By default, gzip compression is enabled. See compression comparison for details 
     otlp:
       ...
       compression: none
+
+.. _otlp-exporter-settings:
 
 Settings
 ======================
