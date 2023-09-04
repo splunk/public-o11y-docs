@@ -17,11 +17,13 @@ By default, the Splunk Distribution of OpenTelemetry Collector includes the OTLP
 The following settings are required:
 
 * ``endpoint``. Port to which the exporter is going to send OTLP data, using the gRPC protocol. 
-  * gRPC supports DNS as the default name-system. To learn more about the valid name syntax, see :new-page:`gRCP Name Resolution <https://github.com/grpc/grpc/blob/master/doc/naming.md>`. 
+  
+  * gRPC supports DNS as the default name-system. To learn more about the valid name syntax, see :new-page:`gRCP Name Resolution <https://github.com/grpc/grpc/blob/master/doc/naming.md>` in GitHub. 
   * If you're using a scheme of ``https``, then client transport security is enabled and overrides the ``insecure`` setting.
 
-* ``tls``. See :ref:`TLS Configuration Settings <otlp-exporter-settings>` for the full set of available options. 
-  * Mutual TLS (mTLS) is also supported. See more at :new-page:`TLS/mTLS configuration <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/configtls/README.md#tls--mtls-configuration>`.
+* ``tls``. See :ref:`TLS Configuration Settings <otlp-exporter-settings>` in this document for the full set of available options. 
+
+  * Mutual TLS (mTLS) is also supported. See more at :new-page:`TLS/mTLS configuration <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/configtls/README.md#tls--mtls-configuration>` in GitHub.
 
 Sample configurations
 --------------------------------
