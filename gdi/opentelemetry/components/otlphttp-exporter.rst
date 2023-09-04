@@ -39,7 +39,7 @@ The following settings are optional:
 
 * ``tls``. See :ref:`TLS Configuration Settings <otlphttp-exporter-settings>` in this document for the full set of available options. 
 
-* ``timeout``. ``30s`` by default. HTTP request time limit. For details see https://golang.org/pkg/net/http/#Client
+* ``timeout``. ``30s`` by default. HTTP request time limit. For details see :new-page:`https://golang.org/pkg/net/http/#Client`.
 
 * ``read_buffer_size``. ``0`` by default. ReadBufferSize for HTTP client.
 
