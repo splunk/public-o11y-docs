@@ -7,14 +7,14 @@ OTLP/HTTP exporter
 .. meta::
       :description: The OTLP/HTTP exporter allows the OpenTelemetry Collector to send metrics and traces logs via HTTP using the OTLP format. Read on to learn how to configure the component.
 
-The OTLP/HTTP exporter sends metrics and traces via HTTP using the OTLP format. 
-
-This exporter is not included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector.
+The OTLP/HTTP exporter sends metrics and traces via HTTP using the OTLP format. See :ref:`otel-data-processing` for more information.
 
 Get started
 ======================
 
-The following settings are required:
+The OTLP/HTTP exporter is not included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector.
+
+If you want to add it, the following settings are required:
 
 * ``endpoint``. The target base URL to send data to, for example ``https://example.com:4318``. No default value. 
 
@@ -56,18 +56,6 @@ This is a sample configuration for the exporter:
     otlphttp:
       endpoint: https://example.com:4318
 
-Configure gzip compression
---------------------------------
-
-By default, gzip compression is enabled. To disable it, use the following configuration:
-
-.. code-block:: yaml
-
-  exporters:
-    otlphttp:
-      ...
-      compression: none
-
 Detailed sample configuration
 --------------------------------
 
@@ -100,6 +88,18 @@ This is a detailed configuration example:
     header1: 234
     another: "somevalue"
   compression: gzip
+
+Configure gzip compression
+--------------------------------
+
+By default, gzip compression is enabled. To disable it, use the following configuration:
+
+.. code-block:: yaml
+
+  exporters:
+    otlphttp:
+      ...
+      compression: none
 
 .. _otlphttp-exporter-settings:
 

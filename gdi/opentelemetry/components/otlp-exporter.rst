@@ -7,12 +7,14 @@ OTLP exporter
 .. meta::
       :description: The OTLP exporter allows the OpenTelemetry Collector to send metrics, traces, and logs through gRCP using the OTLP format. Read on to learn how to configure the component.
 
-The OTLP exporter sends metrics, traces, and logs through gRPC using the OTLP format. By default, this exporter requires TLS and provides queued retry capabilities. 
+The OTLP exporter sends metrics, traces, and logs through gRPC using the OTLP format. See :ref:`otel-data-processing` for more information.
+
+By default, this exporter requires TLS and provides queued retry capabilities. 
 
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the OTLP receiver in all data pipelines to send metrics, traces, and logs. It's configured with the ``tls: insecure`` setting set to ``true``.
+The OTLP exporter is included in the Splunk Distribution of OpenTelemetry Collector default configuration for all data pipelines: ``metrics``, ``traces``, and ``logs``. It's configured with the ``tls: insecure`` setting set to ``true``.
 
 The following settings are required:
 
