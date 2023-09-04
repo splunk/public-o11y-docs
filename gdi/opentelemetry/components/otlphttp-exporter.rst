@@ -5,9 +5,9 @@ OTLP/HTTP exporter
 *************************
 
 .. meta::
-      :description: The OTLP/HTTP exporter allows the OpenTelemetry Collector to send metrics and traces logs via HTTP using the OTLP format. Read on to learn how to configure the component.
+      :description: The OTLP/HTTP exporter allows the OpenTelemetry Collector to send metrics, traces, and logs via HTTP using the OTLP format. Read on to learn how to configure the component.
 
-The OTLP/HTTP exporter sends metrics and traces via HTTP using the OTLP format. See :ref:`otel-data-processing` for more information.
+The OTLP/HTTP exporter sends metrics, traces, and logs via HTTP using the OTLP format. See :ref:`otel-data-processing` for more information.
 
 Get started
 ======================
