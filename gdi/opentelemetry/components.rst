@@ -25,6 +25,7 @@ Components
     components/logging-exporter
     components/mongodb-atlas-receiver
     components/oracledb-receiver
+    components/otlp-exporter    
     components/postgresql-receiver
     components/prometheus-receiver
     components/receiver-creator-receiver
@@ -265,7 +266,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`logging-exporter` (``logging``)
      - Exports data to the console. By default, ``logging`` doesn't send its output to Windows Event Viewer. Run the Splunk Distribution of OpenTelemetry Collector directly from the PowerShell terminal to send output to the Windows Event Viewer.
      - Metrics, logs, traces
-   * - ``otlp``
+   * - :ref:`otlp-exporter` (``otlp``)
      - Exports data through gRPC using the OTLP format. By default, this exporter requires TLS and provides queued retry capabilities. 
      - Metrics, traces
    * - ``otlphttp``
