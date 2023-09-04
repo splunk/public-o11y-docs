@@ -18,6 +18,7 @@ The following settings are required:
 
 * ``endpoint``. Port to which the exporter is going to send OTLP data, using the gRPC protocol. 
   
+  * No default value. 
   * gRPC supports DNS as the default name-system. To learn more about the valid name syntax, see :new-page:`gRCP Name Resolution <https://github.com/grpc/grpc/blob/master/doc/naming.md>` in GitHub. 
   * If you're using a scheme of ``https``, then client transport security is enabled and overrides the ``insecure`` setting.
 
@@ -43,7 +44,10 @@ This is a sample configuration for the exporter:
       tls:
         insecure: true
 
-By default, gzip compression is enabled. See compression comparison for details benchmark information. To disable, configure as follows:
+Configure gzip compression
+--------------------------------
+
+By default, gzip compression is enabled. To disable it, use the following configuration:
 
 .. code-block:: yaml
 
