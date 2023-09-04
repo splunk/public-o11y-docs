@@ -63,7 +63,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
   </embed>
 
 .. list-table::
-   :widths: 25 50 15
+   :widths: 25 55 20
    :header-rows: 1
    :width: 100%
 
@@ -189,7 +189,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
   </embed>
 
 .. list-table::
-   :widths: 25 50 25
+   :widths: 25 55 20
    :header-rows: 1
    :width: 100%
 
@@ -250,7 +250,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
   </embed>
 
 .. list-table::
-   :widths: 25 50 25
+   :widths: 25 55 20
    :header-rows: 1
    :width: 100%
 
