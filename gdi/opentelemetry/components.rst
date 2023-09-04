@@ -25,7 +25,8 @@ Components
     components/logging-exporter
     components/mongodb-atlas-receiver
     components/oracledb-receiver
-    components/otlp-exporter    
+    components/otlp-exporter
+    components/otlphttp-exporter            
     components/postgresql-receiver
     components/prometheus-receiver
     components/receiver-creator-receiver
@@ -269,7 +270,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`otlp-exporter` (``otlp``)
      - Exports data through gRPC using the OTLP format. By default, this exporter requires TLS and provides queued retry capabilities. 
      - Metrics, logs, traces
-   * - ``otlphttp``
+   * - :ref:`otlphttp-exporter` (``otlphttp``)
      - Exports traces and metrics in OTLP format over the HTTP protocol. 
      - Metrics, traces
    * - :ref:`splunk-apm-exporter` (``sapm``)
