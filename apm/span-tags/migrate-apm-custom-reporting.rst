@@ -64,7 +64,7 @@ To determine if your APM experience will be affect by upgrading, follow these st
 
 Start by determine if you are indexing the affected tags as custom tags in Splunk APM.
 
-#. Go to :guilabel:`Settings`` then :guilabel:`APM MetricSets`. You must have the admin role to access APM MetricSets. 
+#. Go to :guilabel:`Settings` then :guilabel:`APM MetricSets`. You must have the admin role to access APM MetricSets. 
 #. Cross-reference the list of new tags with the tags indexed in the APM MetricSets list. See :ref:`http-semantic-convention-changes`.
     #. If 1 or more affected tags are listed on APM MetricSets page, determine if each tag is indexed as a a Troubleshooting MetricSet (TMS) or a Monitoring MetricSet (MMS). 
     #. If you are not indexing any of the affected tags, no migration action is needed. But do make a note to use new HTTP conventions going forward. 
@@ -104,7 +104,7 @@ Update your charts and dashboards to use the new indexed tags
 To update charts or dashboards that reference old tags, follow these steps.
 
 #.  For each affected chart, select :guilabel:`Chart actions` then :guilabel:`open`.
-#. Go to plot builder, edit the filter to reference to the new tag. Or, select :guilabel:`View SignalFlow` to edit the `filter()`` function to reference the new tag.
+#. Go to plot builder, edit the filter to reference to the new tag. Or, select :guilabel:`View SignalFlow` to edit the `filter()` function to reference the new tag.
 
 See :ref:`dashboard-create-customize` and :ref:`create-charts`.
 
@@ -128,7 +128,7 @@ Delete MetricSets that use the old tags
 
 After you have updated your charts, dashboards, and detectors to use the new tags and have confirmed that all are working as expected, delete the old tags.
 
-#. Go to :guilabel:`Settings`` then :guilabel:`APM MetricSets`. You must have the admin role to access APM MetricSets. 
+#. Go to :guilabel:`Settings` then :guilabel:`APM MetricSets`. You must have the admin role to access APM MetricSets. 
 #. Select :guilabel:`Delete the MetricSet configuration` (trash can icon) to delete the tag and the corresponding MetricSets.
 
 .. _new-tags-reporting: 
