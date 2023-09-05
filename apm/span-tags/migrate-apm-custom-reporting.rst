@@ -80,7 +80,7 @@ Migration steps
 #. :ref:`Index the new attributes as tags to generate Troubleshooting Metric Sets (TMS) or Monitoring Metric Sets (MMS).<index-new-attributes>`
 #. :ref:`Update your charts and dashboards that used the deprecated tags to use the new indexed tags.<update-charts-dashboards>`
 #. :ref:`Update your APM detectors to use the new indexed tags.<update-detectors>`
-#. :ref:`(Optional) Delete the old tags.<unindex-old-tags>`
+#. :ref:`(Optional) Delete the old tags.<delete-old-tags>`
 #. :ref:`Only use the new tags for future reporting.<new-tags-reporting>`
 
 .. _index-new-attributes: 
