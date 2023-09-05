@@ -8,6 +8,8 @@ Migrate APM custom reporting to OpenTelemetry Java Agent 2.0
 
 Version 2.0 of the agent from the Splunk Distribution of OpenTelemetry Java includes breaking changes to HTTP semantic conventions. While the release of version 2.0 is still to be determined, this guide provides you with the migration information you need to migrate well in advance of upgrading so you can ensure your Splunk APM experience is unaffected. If you plan to upgrade to version 2.0, consider these breaking changes.
 
+.. _http-semantic-convention-changes:
+
 HTTP semantic convention changes
 ===================================
 
@@ -63,7 +65,7 @@ To determine if your APM experience will be affect by upgrading, follow these st
 Start by determine if you are indexing the affected tags as custom tags in Splunk APM.
 
 #. Go to :guilabel:`Settings`` then :guilabel:`APM MetricSets`. You must have the admin role to access APM MetricSets. 
-#. Cross-reference the list of affected tags here with the tags indexed in the APM MetricSets list.
+#. Cross-reference the list of new tags with the tags indexed in the APM MetricSets list. See :ref:`http-semantic-convention-changes`.
     #. If 1 or more affected tags are listed on APM MetricSets page, determine if each tag is indexed as a a Troubleshooting MetricSet (TMS) or a Monitoring MetricSet (MMS). 
     #. If you are not indexing any of the affected tags, no migration action is needed. But do make a note to use new HTTP conventions going forward. 
 
@@ -78,7 +80,7 @@ Migration steps
 #. :ref:`Index the new attributes as tags to generate Troubleshooting Metric Sets (TMS) or Monitoring Metric Sets (MMS).<index-new-attributes>`
 #. :ref:`Update your charts and dashboards that used the deprecated tags to use the new indexed tags.<update-charts-dashboards>`
 #. :ref:`Update your APM detectors to use the new indexed tags.<update-detectors>`
-#. :ref:`(Optional) Unindex the old tags.<unindex-old-tags>`
+#. :ref:`(Optional) Delete the old tags.<unindex-old-tags>`
 #. :ref:`Only use the new tags for future reporting.<new-tags-reporting>`
 
 .. _index-new-attributes: 
@@ -119,12 +121,15 @@ To update your APM detectors follow these steps.
 
 See :ref:`apm-alerts` for steps to create an APM detector. 
 
-.. _unindex-old-tags: 
+.. _delete-old-tags: 
 
-Unindex the old tags
------------------------
+Delete MetricSets that use the old tags
+----------------------------------------
 
-After you have updated your charts, dashboards, and detectors to use the new tags and have confirmed that all are working as expected, unindex the old tags.
+After you have updated your charts, dashboards, and detectors to use the new tags and have confirmed that all are working as expected, delete the old tags.
+
+#. Go to :guilabel:`Settings`` then :guilabel:`APM MetricSets`. You must have the admin role to access APM MetricSets. 
+#. Select :guilabel:`Delete the MetricSet configuration` (trash can icon) to delete the tag and the corresponding MetricSets.
 
 .. _new-tags-reporting: 
 
