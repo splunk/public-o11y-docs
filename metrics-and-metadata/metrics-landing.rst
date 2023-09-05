@@ -37,12 +37,14 @@ To learn about metrics, metric metadata and events in the Splunk Cloud Observabi
       <h2>Metrics by source</h2>
    </embed>
 
-For metrics from specific data sources, refer to:
+For metrics from specific data sources, see:
 
 * :ref:`monitor-services-hosts`
 * :ref:`apm-metricsets`  
 * :ref:`RUM-metrics`
-* :ref:`Synthetics metrics <synth-metrics>`
+* :ref:`browser-metrics`
+* :ref:`uptime-metrics`
+* :ref:`api-test-metrics`
 * :ref:`org-metrics`
 
 .. _metrics-tools:
