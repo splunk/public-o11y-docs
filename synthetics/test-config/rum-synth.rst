@@ -1,7 +1,7 @@
 .. _rum-synth:
 
 ********************************************************************************
-Review Web Vitals for Synthetics tests with Splunk RUM 
+Compare run results to Web Vitals
 ********************************************************************************
 
 .. meta::
@@ -27,25 +27,33 @@ Splunk Synthetic Monitoring automatically collects Web Vitals for Browser tests.
      - Measures the time it takes a page to become interactive and responsive for a user. 
        TBT is collected from a synthetic test, while FID is collected from real user data. They are considered equivalent to each other because they measure the same metric.
 
-
-
 Prerequisites 
-=================
+===================
 To measure Web Vital metrics against your run results, you need to instrument your browser application with Splunk RUM. See, :ref:`browser-rum-gdi`.
 
-View Web Vitals for your run results 
-==========================================
-Navigate to the run results page for the test you're interested in monitoring. The metrics panel for each run result lists Web Vitals, performance timing, and other metrics. Each Web Vital shows how your metrics compare to the acceptable range. 
- 
-For example, this image shows the acceptable ranges for TBT. Select the flash light icon to open the sessions in Tag Spotlight in Splunk RUM. The visit count represents the number of users and synthetic tests that have interacted with the normalized URL specified in the test.  
 
-.. image:: /_images/rum/TBT-range.png
-      :width: 30%
-      :alt: Shows range of typical performance for TBT times that are poor(greater than 300 ms), need to be improved(between 100-300ms), or good (less than 100 ms). 
+
+
+Compare Web Vitals for your run results 
+==========================================
+Follow these steps to compare run results to Web Vitals. 
+
+Steps
+-------------
+#. In Splunk Synthetic Monitoring, navigate to the run results page for the test you're interested in monitoring. The metrics panel for each run result lists Web Vitals, performance timing, and other metrics. Each Web Vital shows how your metrics compare to the acceptable range. 
+
+  * Good: < 100 ms
+  * Improve: 100 ms - 300 ms
+  * Poor: > 300 ms
+#. Select the flashlight icon to open the sessions in Tag Spotlight.
+#. Review the visits count to find the number of users and synthetic tests that have interacted with the normalized URL specified in the test.
+
 
 Compare latency of a test by run location 
 ====================================================================================
-Web Vitals are a great way of measuring if your tests are actually capturing the performance you expect. Suppose you want to compare the latency of your tests by run location. Open the run results of your test. In the metrics panel, select the filter icon to open the run location options dialog box. 
+Web Vitals are a great way of measuring if your tests are actually capturing the performance you expect, such as if you want to compare the latency of your tests by run location. Open the run results of your test. 
+
+#. In Splunk Syntehtic Monitoring, open open the run location options dialog box. 
 
 .. image:: /_images/rum/rum-synth-filter.png
       :width: 30%
@@ -71,8 +79,6 @@ To investigate which regions are experiencing poor performance, the SRE team sel
 See also 
 =========
 
-To learn more about:
-
-* Web Vitals, see :new-page:`https://web.dev/vitals/` in the Google developer documentation
-* What kind of use cases you can solve with Splunk RUM, see :ref:`scenario-landingpage`
-* Tag Spotlight, see :ref:`error-aggregates`
+* See :new-page:`https://web.dev/vitals/` in the Google developer documentation to learn more about Web Vitals.
+* See :ref:`scenario-landingpage` to learn about what kind of problems you can solve with Splunk RUM.
+* See :ref:`error-aggregates` to learn more about Tag Spotlight. 
