@@ -7,15 +7,21 @@ Free trial of Splunk Observability Cloud
 .. meta::
     :description: About the free trial available for Splunk Observability Cloud.
 
+
+Hipster shop, the Splunk Observability Cloud trial shop, will be deployed to a local minikube cluster as a set of Docker containers that will provide metrics and traces. To setup our minikube cluster and opentelemetry collector you'll also need Helm and gsed installed for the automation to configure the cluster.
+
 You can try out Splunk Observability Cloud for 14 days, absolutely free. You can explore the trial in 2 ways:
-- Use the sample data in a pre-instrumented environment.
+- Use the sample data in a pre-instrumented environment (Hipster shop).
 - Use your own data by instrumenting your applications with OpenTelemetry.
 
 For an introduction to Splunk Observability Cloud products, see :ref:`welcome`.
 
 For information about how these products can be used together to address real-life scenarios, see :ref:`get-started-scenario`.
 
-If this is your first experience with Splunk Observability Cloud, here's how you can sign up for your free trial.
+Sign up for the trial
+===========================
+
+If this is your first experience with Splunk Observability Cloud, here's how you can sign up for your free trial. The trial requires you to configure a minikube environment to act as a  
 
 #. Navigate to :new-page:`https://www.splunk.com/en_us/download/o11y-cloud-free-trial.html` <https://www.splunk.com/en_us/download/o11y-cloud-free-trial.html>. 
 #. In the free trial sign-up window, select the location closest to the region you are in. Options include: United States, Europe, Asia Pacific (Australia), Asia Pacific (Japan). Click :guilabel:`Next`.
@@ -35,9 +41,15 @@ What you'll see when you sign in
    :width: 80%
    :alt: Free trial first sign-in view
 
-When you first sign in, you see your user Home page. You can show onboarding content by selecting the action menu (|menu|) in the upper right-hand corner. This will display helpful videos and links on most pages to help you get started.
+When you first sign in, you see your user Home page. You can show onboarding content by selecting the action menu (|more|) in the upper right-hand corner. This will display helpful videos and links on most pages to help you get started.
 
 You can also expand the left-hand navigation menu to show the full names of the sections instead of the icons only, by selecting the double angle brackets in the bottom left-hand corner.
+
+.. image:: /_images/get-started/trial1.png
+   :width: 80%
+   :alt: The right-angle brackets in the bottom, left corner of the UI expands the navigation menu.
+
+
 
 Guided onboarding
 =========================
