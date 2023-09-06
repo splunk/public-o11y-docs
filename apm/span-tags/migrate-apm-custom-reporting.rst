@@ -60,19 +60,19 @@ If you use any of the deprecated tags in custom reporting in APM and want to ens
 Assess if you will be affected by upgrading
 ----------------------------------------------
 
-To determine if your APM experience will be affect by upgrading, follow these steps.
+To determine if your APM experience will be affected by upgrading, follow these steps.
 
-Start by determine if you are indexing the affected tags as custom tags in Splunk APM.
+Start by determining if you are indexing the affected tags as custom tags in Splunk APM.
 
 #. Go to :guilabel:`Settings` then :guilabel:`APM MetricSets`. You must have the admin role to access APM MetricSets. 
 #. Cross-reference the list of new tags with the tags indexed in the APM MetricSets list. See :ref:`http-semantic-convention-changes`.
-    #. If 1 or more affected tags are listed on APM MetricSets page, determine if each tag is indexed as a a Troubleshooting MetricSet (TMS) or a Monitoring MetricSet (MMS). 
+    #. If 1 or more affected tags are listed on APM MetricSets page, determine if each tag is indexed as just a Troubleshooting MetricSet (TMS) or as a Monitoring MetricSet (MMS) as well.
     #. If you are not indexing any of the affected tags, no migration action is needed. But do make a note to use new HTTP conventions going forward. 
 
 Time your upgrade
 ========================
 
-As of August 7, 2023, Splunk APM began populating the new attributes with data. Depending on your historical reporting needs, choose a date to upgrade that is right for your organization. 
+As of August 7, 2023, Splunk APM began populating the new attributes with data. Depending on your historical reporting needs, choose a date to upgrade that is right for your organization. You can follow the migration steps before or after upgrading, but the old tags will no longer receive new data after you upgrade.
 
 Migration steps
 ===================
@@ -104,7 +104,7 @@ Update your charts and dashboards to use the new indexed tags
 To update charts or dashboards that reference old tags, follow these steps.
 
 #.  For each affected chart, select :guilabel:`Chart actions` then :guilabel:`open`.
-#. Go to plot builder, edit the filter to reference to the new tag. Or, select :guilabel:`View SignalFlow` to edit the `filter()` function to reference the new tag.
+#. Go to plot builder, edit the filter to change references from the old tag to the new tag. Or, select :guilabel:`View SignalFlow` to edit the `filter()` function to reference the new tag.
 
 See :ref:`dashboard-create-customize` and :ref:`create-charts`.
 
@@ -117,7 +117,7 @@ To update your APM detectors follow these steps.
 
 #. Go to :guilabel:`Alerts & Detectors` then :guilabel:`Detectors`.
 #. For each affected detector, select the detector then select :guilabel:`Signals`.
-#. Change the filter to reference new tag name.
+#. Change the filter to reference the new tag name.
 
 See :ref:`apm-alerts` for steps to create an APM detector. 
 
