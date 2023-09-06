@@ -4,6 +4,9 @@
 Set up Splunk RUM for mobile and browser applications
 *******************************************************************************
 
+.. meta::
+   :description:  Directions about how to get data in to Splunk Real User Monitoring (RUM). Instrument your applications and check that data is coming in. 
+
 Follow these steps to instrument your mobile and browser applications and get data into Splunk Real User Monitoring (RUM).
 
 .. _rum-access-token:

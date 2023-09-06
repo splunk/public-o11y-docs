@@ -5,6 +5,9 @@
 Alert on Splunk RUM data 
 ************************************************
 
+.. meta::
+   :description: Learn how to use the Infrastructure Monitoring platform to 
+
 Splunk RUM leverages the Infrastructure Monitoring platform to create detectors and alerts. Configure detectors to alert on your Splunk RUM metrics so that you can monitor and take timely action on alerts associated with your application. 
 
 How alerts work in Splunk RUM

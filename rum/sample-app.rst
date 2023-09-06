@@ -4,8 +4,10 @@
 Experiment with the demo applications for Splunk RUM for Mobile 
 *******************************************************************************
 
-There are two demo applications for you to explore for RUM for Mobile.  
+.. meta::
+   :description: Use the Android or iOS demo application to explore Splunk RUM for Mobile. Access the Splunk RUM for Mobile apps on Github. 
 
+There are two demo applications for you to explore for RUM for Mobile.  
 
 Android demo app 
 ===================

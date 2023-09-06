@@ -5,7 +5,8 @@
 Write custom rules for URL grouping in Splunk RUM
 *********************************************************************
 
-Splunk RUM automatically groups URLs together based on default rules that capture errors and metrics, such as page load and route change duration, JavaScript errors, back-end errors, and Web vitals to name a few. 
+.. meta::
+   :description: Splunk RUM automatically groups URLs together based on default rules that capture errors and metrics, such as page load and route change duration, JavaScript errors, back-end errors, and Web vitals to name a few. 
 
 What are custom rules in Splunk RUM?
 ================================================
