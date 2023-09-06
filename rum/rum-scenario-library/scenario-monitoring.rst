@@ -9,7 +9,6 @@ Scenario: Kai identifies performance bottlenecks with Splunk RUM for Browser
 
 The following scenario features Buttercup Industries, a fictitious e-commerce company.
 
-
 About this scenario
 ================================
 

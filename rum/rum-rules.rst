@@ -8,6 +8,8 @@ Write custom rules for URL grouping in Splunk RUM
 .. meta::
    :description: Write custom rules to group URLs based on criteria that matches your business specifications, and organize data to match your business needs. Group URLs by both path and domain. 
 
+Splunk RUM automatically groups URLs together based on default rules that capture errors and metrics, such as page load and route change duration, JavaScript errors, back-end errors, and Web vitals. 
+
 What are custom rules in Splunk RUM?
 ================================================
 
