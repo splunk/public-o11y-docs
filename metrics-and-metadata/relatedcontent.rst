@@ -5,9 +5,9 @@ Related Content in Splunk Observability Cloud
 *****************************************************************
 
 .. meta::
-   :description: Ensure metadata keys are correct to activate full Related Content functionality.
+   :description: Ensure metadata keys are correct to enable full Related Content functionality.
 
-Related Content automatically correlates data between different views within Splunk Observability Cloud by presenting related data at the bottom of the view.
+The Related Content feature automatically correlates data between different views within Splunk Observability Cloud by presenting related data at the bottom of the screen.
 
 Select tiles in the Related Content bar to seamlessly navigate from one view to another in Observability Cloud. The following animation shows a user navigating from APM to Infrastructure Monitoring to Log Observer.
 
@@ -20,25 +20,25 @@ In the preceding example, the user navigates through the following sequence:
 
    In the Related Content bar at the bottom of the screen, the user sees a tile showing related EC2 instances and selects it.
 
-2. Observability Cloud takes the user to Infrastructure where they select the first EC2 instance because it shows the highest CPU utilization. 
+2. Observability Cloud takes the user to Infrastructure where they click the first EC2 instance because it shows the highest CPU utilization. 
 
-   In the Related Content bar, the user sees a tile showing logs related to the EC2 instance, so they select it.
+   In the Related Content bar, the user sees a tile showing logs related to the EC2 instance, so they click it.
 
 3. Observability Cloud takes them to Log Observer where they can drill down into the related logs to find the root cause of the problem.
 
-.. note::  Related Content is different from data links, a separate capability, which dynamically transfers contextual information about the property you're viewing to the resource, helping you get to relevant information faster. To learn more about data links, see :ref:`apm-create-data-links`.
+.. note::  Related Content is different from data links, a separate capability, which lets you dynamically transfer contextual information about the property you're viewing to the resource, helping you get to relevant information faster. To learn more about data links, see :ref:`apm-create-data-links`.
 
 Prerequisites
 =================================================================
 
 Related Content relies on specific metadata that allow APM, Infrastructure Monitoring, and Log Observer to pass filters around Observability Cloud. 
 
-The following sections list the metadata key names required to activate Related Content for each view in Observability Cloud. If your data does not have the field names listed here, Observability Cloud cannot correlate your related data.
+The following sections list the metadata key names required to enable Related Content for each view in Observability Cloud. If your data does not have the field names listed here, Observability Cloud cannot correlate your related data.
 
 APM
 -----------------------------------------------------------------
 
-The following APM span tags are required to activate Related Content:
+The following APM span tags are required to enable Related Content:
 
 - ``service.name``
 - ``deployment.environment``
@@ -50,7 +50,7 @@ To learn more about deployment environments in Splunk APM, see :ref:`apm-environ
 Infrastructure Monitoring
 -----------------------------------------------------------------
 
-The following Infrastructure Monitoring metadata keys are required to activate Related Content:
+The following Infrastructure Monitoring metadata keys are required to enable Related Content:
 
 - ``host.name``
 - ``k8s.cluster.name``
@@ -65,7 +65,7 @@ The Splunk Distribution of OpenTelemetry Collector already provides the Infrastr
 Log Observer
 -----------------------------------------------------------------
 
-The following metadata keys are required to activate Related Content for Log Observer:
+The following metadata keys are required to enable Related Content for Log Observer:
 
 - ``service.name``
 - ``deployment.environment``
@@ -73,10 +73,10 @@ The following metadata keys are required to activate Related Content for Log Obs
 - ``trace_id``
 - ``span_id``
 
-Activate Related Content
+Enable Related Content
 =================================================================
 
-See :ref:`get-started-enablerelatedcontent` to learn how you can make any necessary updates to metadata key names to activate Related Content in Observability Cloud.
+See :ref:`get-started-enablerelatedcontent` to learn how you can make any necessary updates to metadata key names to enable Related Content in Observability Cloud.
 
 Where can I see Related Content?
 =================================================================
