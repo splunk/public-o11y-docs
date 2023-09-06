@@ -20,13 +20,13 @@ In the preceding example, the user navigates through the following sequence:
 
    In the Related Content bar at the bottom of the screen, the user sees a tile showing related EC2 instances and selects it.
 
-2. Observability Cloud takes the user to Infrastructure where they click the first EC2 instance because it shows the highest CPU utilization. 
+2. Observability Cloud takes the user to Infrastructure where they select the first EC2 instance because it shows the highest CPU utilization. 
 
-   In the Related Content bar, the user sees a tile showing logs related to the EC2 instance, so they click it.
+   In the Related Content bar, the user sees a tile showing logs related to the EC2 instance, so they select it.
 
 3. Observability Cloud takes them to Log Observer where they can drill down into the related logs to find the root cause of the problem.
 
-.. note::  Related Content is different from data links, a separate capability, which lets you dynamically transfer contextual information about the property you're viewing to the resource, helping you get to relevant information faster. To learn more about data links, see :ref:`apm-create-data-links`.
+.. note::  Related Content is different from data links, a separate capability, which dynamically transfers contextual information about the property you're viewing to the resource, helping you get to relevant information faster. To learn more about data links, see :ref:`apm-create-data-links`.
 
 Prerequisites
 =================================================================

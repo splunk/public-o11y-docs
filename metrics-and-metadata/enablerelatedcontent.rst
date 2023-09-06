@@ -3,7 +3,7 @@
 *****************************************************************
 Activate Related Content in Splunk Observability Cloud
 *****************************************************************
-Observability Cloud uses OpenTelemetry to correlate telemetry types. To enable this ability, your telemetry field names or metadata key names must exactly match the metadata key names used by OpenTelemetry and Splunk Observability Cloud.
+Observability Cloud uses OpenTelemetry to correlate telemetry types. To activate this ability, your telemetry field names or metadata key names must exactly match the metadata key names used by OpenTelemetry and Splunk Observability Cloud.
 
 When you deploy Splunk Distribution of Open Telemetry Collector to send your telemetry data to Observability Cloud, your metadata key names are automatically mapped correctly. When you do not use the Splunk Distribution of OpenTelemetry Collector, your telemetry data might have metadata key names that are not consistent with those used by Observability Cloud and OpenTelemetry. In that case, you must change your metadata key names.
 
@@ -14,13 +14,13 @@ For example, say Observability Cloud receives the following telemetry data:
 
 - Splunk Log Observer receives a log with the metadata key ``trace.id:2b78e7c951497655``
 
-Although these refer to the same trace ID value, the log and the trace cannot be correlated in Observability Cloud because the field names, ``trace_id`` and ``trace.id`` do not match. In this case, rename your log metadata key ``trace.id`` to ``trace_id`` using the field copy processor in Logs Pipeline Management. Alternatively, you can re-instrument your log collection to make metadata key names align. When the field names in APM and Log Observer match, the trace and the log with the same trace ID value can be correlated in Observability Cloud. Then when you are viewing the trace in APM, you can click directly into the log with the same trace ID value and view the correlated log in Log Observer.
+Although these refer to the same trace ID value, the log and the trace cannot be correlated in Observability Cloud because the field names, ``trace_id`` and ``trace.id`` do not match. In this case, rename your log metadata key ``trace.id`` to ``trace_id`` using the field copy processor in Logs Pipeline Management. Alternatively, you can re-instrument your log collection to make metadata key names align. When the field names in APM and Log Observer match, the trace and the log with the same trace ID value can be correlated in Observability Cloud. Then when you are viewing the trace in APM, you can select directly into the log with the same trace ID value and view the correlated log in Log Observer.
 
 How to change your metadata key names
 =================================================================
 Metrics and traces
 -----------------------------------------------------------------
-Use the Splunk Distribution of OpenTelemetry Collector to ensure that your metrics and traces have the metadata key names required to use Observability Cloud's Related Content feature. If you did not use the Collector and your metrics or traces do not include the required metadata key names, you can instrument your applications and serverless functions to include them. See the following pages to learn how:
+Use the Splunk Distribution of OpenTelemetry Collector to ensure that your metrics and traces have the metadata key names required to use Related Content. If you did not use the Collector and your metrics or traces do not include the required metadata key names, you can instrument your applications and serverless functions to include them. See the following pages to learn how:
 
 - :ref:`get-started-application`
 
@@ -51,7 +51,7 @@ Leverage Related Content for pod-specific Kubernetes data
 -----------------------------------------------------------------
 For a Related Content tile in APM to link to data for a specific Kubernetes pod (k8s.pod.name), you must first filter on a specific Kubernetes cluster (k8s.cluster.name). APM cannot guarantee an accurate Related Content Kubernetes pod destination in Infrastructure Monitoring without both values because Kubernetes pod names are not required to be unique across clusters.
 
-For example, consider a scenario in which Related Content needs to return data for a Kubernetes pod named :strong:`Pod-B`. As shown the following diagram, a Kubernetes implementation can have multiple pods with the same name. For Related Content to return the data for the correct :strong:`Pod-B`, you must also provide the name of the Kubernetes cluster the pod resides in. In this case, that name would be either :strong:`Cluster-West` or :strong:`Cluster-East`. This combination of filtering on cluster and pod names creates the unique combination that Related Content needs to link to the correct pod data in Infrastructure Monitoring.
+For example, consider a scenario in which Related Content needs to return data for a Kubernetes pod named :strong:`Pod-B`. As shown the following diagram, a Kubernetes implementation can have multiple pods with the same name. For Related Content to return the data for the correct :strong:`Pod-B`, you must also provide the name of the Kubernetes cluster the pod resides in. In this case, that name is either :strong:`Cluster-West` or :strong:`Cluster-East`. This combination of filtering on cluster and pod names creates the unique combination that Related Content needs to link to the correct pod data in Infrastructure Monitoring.
 
 .. source in figma: https://www.figma.com/file/sOEa3q92WJxB4uWb3Poftg/related-content-apm-k8s-constraint?node-id=0%3A1
 
