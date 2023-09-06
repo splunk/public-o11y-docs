@@ -4,6 +4,9 @@
 Scenario: Kai identifies performance bottlenecks with Splunk RUM for Browser
 ******************************************************************************
 
+.. meta::
+  :description: An example scenario of how to use Splunk RUM for Browser to monitor and identify the metrics that contribute to website performance, and troubleshoot slow website load times. 
+
 The following scenario features Buttercup Industries, a fictitious e-commerce company.
 
 
@@ -47,11 +50,11 @@ To monitor the Web Vitals, Kai follows these steps:
         :width: 100%
         :alt: This image shows the application summary dashboard in Splunk RUM for Browser. 
 
-3. Kai clicks on the LCP metric to see more in Tag Spotlight.
+2. Kai clicks on the LCP metric to see more in Tag Spotlight.
 
     * Kai can also get to Tag Spotlight by clicking into any metric in the Overview page. In Tag Spotlight Kai can filter session aggregates by endpoint, pages, environments, operation, and more.
 
-4. In Tag Spotlight, Kai sees that the P99 loading time for the site is abnormally slow, 53.86s for Chrome users! 
+3. In Tag Spotlight, Kai sees that the P99 loading time for the site is abnormally slow, 53.86s for Chrome users! 
    
     * This image shows the Browser metric in Tag Spotlight. As the width of the bars in the chart indicate, Chrome has the most users.
 

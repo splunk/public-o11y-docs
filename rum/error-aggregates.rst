@@ -5,7 +5,7 @@ Error monitoring and crash aggregation in Tag spotlight
 ******************************************************************************************
 
 .. meta::
-   :description: Group errors together in Splunk RUM and use the Tag spotlight to understand application crashes and drill into errors to see associated stack trace, error message, and more. 
+   :description: Group errors together in Splunk RUM and use the Tag spotlight to understand application crashes and drill into errors to see associated stack traces and error messages. 
 
 Errors are aggregated based on the stack trace. The error stack trace contains the error type and error message in the body of the stack trace. The following table outlines the different ways errors are grouped together depending on the situation. 
 
