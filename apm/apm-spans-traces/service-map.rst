@@ -66,6 +66,16 @@ To breakdown the service map:
 #. In the service tab, select :guilabel:`Breakdown` and select an option from the menu. This breaks down your view of the service by the feature you select. For example, select :guilabel:`Endpoint` then :guilabel:`Latency (P90)` to break the service node down into its endpoints, ranked from highest to lowest by 90th percentile latency. If there are more than 5 breakdown values, the breakdown shows the top 5 and groups the remainder into a node labeled :guilabel:`<other>`.
 #. (Optional) Select a node within the breakdown to further break down the visualization by another feature. 
 
+Activate Related Content for your service map
+==============================================
+
+Related Content automatically correlates data between different views within Splunk Observability Cloud by presenting related data at the bottom of the view.
+
+When activated you can select tiles in the Related Content bar to seamlessly navigate from one view to another in Observability Cloud. The following animation shows a user navigating from APM to Infrastructure Monitoring to Log Observer. See :ref:`get-started-relatedcontent` for steps to turn on related content. 
+
+..  image:: /_images/get-started/Related1.gif
+    :alt: Using Related Content in Observability Cloud.
+
 Share your view of the service map
 ======================================
 To share your view of the service map with a colleague, copy and share the URL. Your current filter selections are preserved in the URL.

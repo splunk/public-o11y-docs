@@ -1,7 +1,7 @@
-.. _get-started-enablerelatedcontent:
+.. _get-started-activaterelatedcontent:
 
 *****************************************************************
-Enable Related Content in Splunk Observability Cloud
+Activate Related Content in Splunk Observability Cloud
 *****************************************************************
 Observability Cloud uses OpenTelemetry to correlate telemetry types. To enable this ability, your telemetry field names or metadata key names must exactly match the metadata key names used by OpenTelemetry and Splunk Observability Cloud.
 
@@ -40,7 +40,7 @@ Splunk APM
 =================================================================
 To ensure full functionality of Related Content, do not change any of the metadata key names or span tags provided by the Splunk Distribution of OpenTelemetry Collector. To learn more about span tags in Splunk APM, see :ref:`apm-traces-spans`.
 
-The Splunk Distribution of OpenTelemetry Collector provides the following APM span tags that enable Related Content:
+The Splunk Distribution of OpenTelemetry Collector provides the following APM span tags that activate Related Content:
 
 - ``service.name``
 - ``deployment.environment`` 
@@ -64,7 +64,7 @@ Splunk Infrastructure Monitoring
 =================================================================
 To ensure full functionality of Related Content, do not change any of the metadata key names provided by the Splunk Distribution of OpenTelemetry Collector.
 
-The Splunk Distribution of OpenTelemetry Collector provides the following Infrastructure Monitoring metadata keys that enable Related Content:
+The Splunk Distribution of OpenTelemetry Collector provides the following Infrastructure Monitoring metadata keys that activate Related Content:
 
 - ``host.name``
 - ``k8s.cluster.name``
@@ -78,10 +78,10 @@ The Splunk Distribution of OpenTelemetry Collector provides the following Infras
 
 Splunk Log Observer
 =================================================================
-To ensure full functionality of both Log Observer and Related Content, confirm that your log events fields are correctly mapped. Correct log field mappings enable built-in log filtering, embed logs in APM and
-Infrastructure Monitoring functionality, and enable fast searches as well as the Related Content bar.
+To ensure full functionality of both Log Observer and Related Content, confirm that your log events fields are correctly mapped. Correct log field mappings activate built-in log filtering, embed logs in APM and
+Infrastructure Monitoring functionality, and activate fast searches as well as the Related Content bar.
 
-The following key names are required to enable Related Content for Log Observer:
+The following key names are required to activate Related Content for Log Observer:
 
 - ``service.name``
 - ``deployment.environment``
