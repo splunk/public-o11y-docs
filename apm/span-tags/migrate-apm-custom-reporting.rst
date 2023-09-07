@@ -117,10 +117,10 @@ See :ref:`dashboard-create-customize` and :ref:`create-charts`.
 
 .. _update-detectors: 
 
-Update your APM detectors to use the new indexed tags
+Update your detectors to use the new indexed tags
 -------------------------------------------------------
 
-To update your APM detectors follow these steps.
+To update your detectors follow these steps.
 
 #. Go to :guilabel:`Alerts & Detectors` then :guilabel:`Detectors`.
 #. For each affected detector, select the detector then select :guilabel:`Signals`.
