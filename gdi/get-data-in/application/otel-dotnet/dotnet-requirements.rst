@@ -73,7 +73,7 @@ Traces instrumentations
      - 2.0.0 and higher
      - ``MYSQLCONNECTOR``  
    * - MySql.Data |br| (Not supported on .NET Framework)
-     - 6.10.7 to 8.0.32
+     - 8.1.0 and higher
      - ``MYSQLDATA``
    * - Npgsql
      - 6.0.0 and higher
