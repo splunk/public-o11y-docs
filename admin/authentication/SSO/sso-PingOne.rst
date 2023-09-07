@@ -18,6 +18,23 @@ Before you begin configuring the OneLogin SSO integration, ensure you have compl
 
 To set up your PingOne SSO integration, follow these steps:
 
+#. Navigate to ``https://{realm}.signalfx.com/#/integrations/pingone``
+
+   #. Select :guilabel:`New Integration`.
+   #. Copy the value of the system-supplied :guilabel:`Integration ID` so you can use it in a next step.
+   #. If you want to display a name on the SSO login page, enter a value for :guilabel:`Name`. This name appears on the SSO login page for custom domains.
+   #. If you want to display a name on the SSO login page, select :guilabel:`Show on login page`.
+#. Navigate to your PingOne console page. For example, navigate to ``https://console.pingone.com/?env=envId``
+#. Select :guilabel:`Connections` from the left menu
+#. Select :guilabel:`Applications` from the child menu
+#. To add a SAML application for the login, select the :guilabel:`+` icon.
+Choose an Application Name e.g. “Splunk Observability SAML”
+Select “SAML Application” under “Application Type”
+Click “Configure”
+Choose “Manually Enter” under “SAML Configuration”
+
+
+
 Open a browser tab or window for Observability Cloud, and another for PingOne.
 
 In Observability Cloud, do the following:
