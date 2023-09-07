@@ -15,6 +15,7 @@ Splunk Log Observer
 
 
     lo-transition
+    forward-logs
     get-started-logs
     logs
     timeline
@@ -41,6 +42,8 @@ Splunk Log Observer
 
 
 - :ref:`lo-transition`
+
+- :ref:`forward-logs`
 
 - :ref:`get-started-logs`
 
