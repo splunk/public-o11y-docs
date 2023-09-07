@@ -102,3 +102,82 @@ Container level metrics and attributes (dimensions in IM)
     - Container ``memory_request``
     - LINK HERE
     - Yes
+
+Pod level metrics and attributes (dimensions in IM)
+----------------------------------------------------------------------------
+
+.. list-table::
+  :widths: 30 30 30 10
+  :width: 100
+  :header-rows: 1
+
+  * - Metric name
+    - Metric description
+    - Attributes
+    - Dropped?
+
+  * - ``k8s.pod.cpu.time``
+    - Pod CPU time
+    - 
+    - Yes
+
+  * - ``k8s.pod.cpu.utilization``
+    - Pod CPU utilization
+    - 
+    - Yes
+
+  * - ``k8s.pod.filesystem.available``
+    - Pod filesystem available
+    - 
+    - Yes
+
+  * - ``k8s.pod.filesystem.capacity``
+    - Pod filesystem capacity
+    - 
+    - Yes
+
+  * - ``k8s.pod.filesystem.usage``
+    - Pod filesystem usage
+    - 
+    - Yes
+
+  * - ``k8s.pod.memory.available``
+    - Pod memory available
+    - 
+    - Yes
+
+  * - ``k8s.pod.memory.page_faults``
+    - Pod memory ``page_faults`
+    - 
+    - Yes
+
+  * - ``k8s.pod.memory.major_page_faults``
+    - Pod memory ``major_page_faults`
+    - 
+    - Yes
+
+  * - ``k8s.pod.memory.rss``
+    - Pod memory rss
+    - 
+    - Yes
+
+  * - ``k8s.pod.memory.usage``
+    - Pod memory usage
+    - 
+    - Yes
+
+  * - ``k8s.pod.memory.working_set``
+    - Pod memory ``working_set``
+    - 
+    - Yes
+
+  * - ``k8s.pod.network.errors``
+    - Pod network errors
+    - LINKS HERE
+    - No
+
+  * - ``k8s.pod.network.io``
+    - Pod network IO
+    - LINKS HERE
+    - No
+
