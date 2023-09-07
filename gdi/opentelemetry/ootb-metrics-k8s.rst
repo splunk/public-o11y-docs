@@ -152,7 +152,7 @@ Pod level metrics and attributes (dimensions in IM)
     - Yes
 
   * - ``k8s.pod.memory.major_page_faults``
-    - Pod memory ``major_page_faults`
+    - Pod memory ``major_page_faults``
     - 
     - Yes
 
@@ -225,7 +225,7 @@ Node level metrics and attributes (dimensions in IM)
     - Yes
 
   * - ``k8s.node.memory.page_faults``
-    - Node memory ``page_faults`
+    - Node memory ``page_faults``
     - 
     - Yes
 
