@@ -14,7 +14,7 @@ By default, this exporter requires TLS and provides queued retry capabilities.
 Get started
 ======================
 
-The OTLP exporter is included in the Splunk Distribution of OpenTelemetry Collector default configuration for all data pipelines: ``metrics``, ``traces``, and ``logs``. It's configured with the ``tls: insecure`` setting set to ``true``.
+The OTLP exporter is included in the Splunk Distribution of OpenTelemetry Collector default configuration in host monitoring (agent) mode for all data pipelines: ``metrics``, ``traces``, and ``logs``. Learn more in :ref:`otel-configuration-ootb` and :ref:`otel-deployment-mode`.
 
 The following settings are required:
 
@@ -26,6 +26,7 @@ The following settings are required:
 
 * ``tls``. See :ref:`TLS Configuration Settings <otlp-exporter-settings>` in this document for the full set of available options. 
 
+  * By default, ``tls: insecure`` is set to ``true``. 
   * Mutual TLS (mTLS) is also supported. See more at :new-page:`TLS/mTLS configuration <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/configtls/README.md#tls--mtls-configuration>` in GitHub.
 
 Sample configurations
