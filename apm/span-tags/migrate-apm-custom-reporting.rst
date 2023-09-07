@@ -1,28 +1,28 @@
 .. _migrate-apm-custom-reporting: 
 
-Migrate APM custom reporting to OpenTelemetry Java Agent 2.0
-*****************************************************************
+Migrate APM custom reporting to OpenTelemetry Java and .Net Agent 2.0
+*************************************************************************
 
 .. meta:: 
-   :description: Steps to migrate your APM custom reporting to support upgrade to version 2.0 of Splunk OpenTelemetry Java agent.
+   :description: Steps to migrate your APM custom reporting to support upgrade to version 2.0 of Splunk OpenTelemetry Java and .NET agents.
 
-Version 2.0 of the agent from the Splunk Distribution of OpenTelemetry Java includes breaking changes to HTTP semantic conventions. While the release of version 2.0 is still to be determined, this guide provides you with the migration information you need to migrate well in advance of upgrading so you can ensure your Splunk APM experience is unaffected. If you plan to upgrade to version 2.0, consider these breaking changes.
+Version 2.0 of the agents from the Splunk Distribution of OpenTelemetry Java and .NET includes breaking changes to HTTP semantic conventions. While the release of version 2.0 is still to be determined, this guide provides you with the migration information you need to migrate well in advance of upgrading so you can ensure your Splunk APM experience is unaffected. 
 
 .. _http-semantic-convention-changes:
 
 HTTP semantic convention changes
 ===================================
 
-The following table covers the HTTP attributes that changed from version 1.0 to version 2.0 in the agent of the Splunk Distribution of OpenTelemetry Java.
+The following table covers the HTTP OTel attributes that changed from version 1.0 to version 2.0 in the agent of the Splunk Distribution of OpenTelemetry Java.
 
 .. list-table:: 
    :header-rows: 1
 
-   * - Version 1.0 attribute
-     - Version 2.0 attribute
+   * - Version 1.0 OTel attribute
+     - Version 2.0 OTel attribute
      - Why the change
    * - ``http.method``
-       (The HTTP method attribute is stored as a system tag by default. So, you don't need to index this tag to use it as a TMS or MMS. The corresponding Troubleshooting MetricSet (TMS) is HTTP Method and its corresponding Monitoring MetricSet is sf_httpMethod.)
+       (The HTTP method attribute is stored as a system tag by default in Splunk Observability Cloud. You don't need to index this tag to use it as a TMS or MMS.)
      - ``http.request.method``
      - Consistent namespacing.
    * - ``http.status_code``
