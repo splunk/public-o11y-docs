@@ -42,7 +42,6 @@ You can also use the service map as a starting point for monitoring or troublesh
 * To get real-time monitoring insights on the service, select :guilabel:`View Dashboard` in the side panel to view the built-in service dashboard. See :ref:`apm-dashboards` to learn more.
 * To do more extensive troubleshooting, select the :guilabel:`Tag Spotlight` tab in the side panel to open Tag Spotlight. See :ref:`apm-tag-spotlight` to learn more.
 
-
 .. _service-map-breakdowns:
 
 Perform breakdowns in the service map
@@ -65,6 +64,16 @@ To breakdown the service map:
 #. Select a service you're interested in. 
 #. In the service tab, select :guilabel:`Breakdown` and select an option from the menu. This breaks down your view of the service by the feature you select. For example, select :guilabel:`Endpoint` then :guilabel:`Latency (P90)` to break the service node down into its endpoints, ranked from highest to lowest by 90th percentile latency. If there are more than 5 breakdown values, the breakdown shows the top 5 and groups the remainder into a node labeled :guilabel:`<other>`.
 #. (Optional) Select a node within the breakdown to further break down the visualization by another feature. 
+
+Configure Related Content for your service map
+==============================================
+
+You can configure specific metadata to activate Related Content in your service map. Related Content automatically correlates data between APM, Infrastructure Monitoring, and Log Observer to pass filters around Observability Cloud.
+
+When configured, you can select tiles in the Related Content bar to seamlessly navigate from one view to another in Observability Cloud. The following animation shows a user navigating from APM to Infrastructure Monitoring to Log Observer. See :ref:`get-started-relatedcontent` for information about how to configure related content to display in your service map. 
+
+..  image:: /_images/get-started/Related1.gif
+    :alt: Using Related Content in Observability Cloud.
 
 Share your view of the service map
 ======================================
