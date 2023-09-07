@@ -21,7 +21,8 @@ The following table covers the HTTP attributes that changed from version 1.0 to 
    * - Version 1.0 attribute
      - Version 2.0 attribute
      - Why the change
-   * - ``http.method``*
+   * - ``http.method``
+       (The HTTP method attribute is stored as a system tag by default. So, you don't need to index this tag to use it as a TMS or MMS. The corresponding Troubleshooting MetricSet (TMS) is HTTP Method and its corresponding Monitoring MetricSet is sf_httpMethod.)
      - ``http.request.method``
      - Consistent namespacing.
    * - ``http.status_code``
@@ -45,10 +46,8 @@ The following table covers the HTTP attributes that changed from version 1.0 to 
    * - ``http.client_ip``
      - ``http.forwarded.for``
      - 
-* - * HTTP Method (sf_httpMethod) is a System field that is normalized and automatically stored.
-     -
-     - 
-* The HTTP method attribute is stored as a system tag by default. The corresponding Troubleshooting MetricSet (TMS) is HTTP Method and its corresponding Monitoring MetricSet is sf_httpMethod. So, you don't need to index this tag to use it as a TMS or MMS.
+
+\* The HTTP method attribute is stored as a system tag by default. So, you don't need to index this tag to use it as a TMS or MMS. The corresponding Troubleshooting MetricSet (TMS) is HTTP Method and its corresponding Monitoring MetricSet is sf_httpMethod. 
 
 How to determine if your Splunk APM experience might be affected
 ===================================================================
