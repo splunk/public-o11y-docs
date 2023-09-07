@@ -45,7 +45,7 @@ The following table covers the HTTP OTel attributes that changed from version 1.
      - Avoids separate fields for various URL types and simplifies telemetry correlation across different URL types for example, \ftp://, \ssh://, \file://, \data://, and so on.
    * - ``http.client_ip``
      - ``http.forwarded.for``
-     - 
+     - Updated to reflect latest attribute definition.
 
 \* The HTTP method attribute is stored as a system tag by default. So, you don't need to index this tag to use it as a TMS or MMS. The corresponding Troubleshooting MetricSet (TMS) is HTTP Method and its corresponding Monitoring MetricSet is sf_httpMethod. 
 
@@ -69,7 +69,7 @@ Start by determining if you are indexing the affected tags as custom tags in Spl
 
 #. Go to :guilabel:`Settings` then :guilabel:`APM MetricSets`. You must have the admin role to access APM MetricSets. 
 #. Cross-reference the list of new tags with the tags indexed in the APM MetricSets list. See :ref:`http-semantic-convention-changes`.
-    #. If 1 or more affected tags are listed on APM MetricSets page, determine if each tag is indexed as just a Troubleshooting MetricSet (TMS) or as a Monitoring MetricSet (MMS) as well.
+    #. If 1 or more affected tags are listed on APM MetricSets page, determine if each tag is indexed as only a Troubleshooting MetricSet (TMS) or as a Monitoring MetricSet (MMS) as well.
     #. If you are not indexing any of the affected tags, no migration action is needed. But do make a note to use new HTTP conventions going forward. 
 
 Time your upgrade
