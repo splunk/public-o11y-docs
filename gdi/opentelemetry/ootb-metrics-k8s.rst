@@ -147,7 +147,7 @@ Pod level metrics and attributes (dimensions in IM)
     - Yes
 
   * - ``k8s.pod.memory.page_faults``
-    - Pod memory ``page_faults`
+    - Pod memory ``page_faults``
     - 
     - Yes
 
@@ -181,3 +181,130 @@ Pod level metrics and attributes (dimensions in IM)
     - LINKS HERE
     - No
 
+Node level metrics and attributes (dimensions in IM)
+----------------------------------------------------------------------------
+
+.. list-table::
+  :widths: 30 30 30 10
+  :width: 100
+  :header-rows: 1
+
+  * - Metric name
+    - Metric description
+    - Attributes
+    - Dropped?
+
+  * - ``k8s.node.cpu.time``
+    - Node CPU time
+    - 
+    - Yes
+
+  * - ``k8s.node.cpu.utilization``
+    - Node CPU utilization
+    - 
+    - Yes
+
+  * - ``k8s.node.filesystem.available``
+    - Node filesystem available
+    - 
+    - Yes
+
+  * - ``k8s.node.filesystem.capacity``
+    - Node filesystem capacity
+    - 
+    - Yes
+
+  * - ``k8s.node.filesystem.usage``
+    - Node filesystem usage
+    - 
+    - Yes
+
+  * - ``k8s.node.memory.available``
+    - Node memory available
+    - 
+    - Yes
+
+  * - ``k8s.node.memory.page_faults``
+    - Node memory ``page_faults`
+    - 
+    - Yes
+
+  * - ``k8s.node.memory.major_page_faults``
+    - Node memory ``major_page_faults``
+    - 
+    - Yes
+
+  * - ``k8s.node.memory.rss``
+    - Node memory rss
+    - 
+    - Yes
+
+  * - ``k8s.node.memory.usage``
+    - Node memory usage
+    - 
+    - Yes
+
+  * - ``k8s.node.memory.working_set``
+    - Node memory ``working_set``
+    - 
+    - Yes
+
+  * - ``k8s.node.network.errors``
+    - Node network errors
+    - LINKS HERE
+    - Yes
+
+  * - ``k8s.node.network.io``
+    - Node network IO
+    - LINKS HERE
+    - Yes
+
+  * - ``system.cpu.time``
+    - System CPU time
+    - 
+    - Yes
+
+  * - ``system.cpu.utilization``
+    - Percentage of CPU time broken down by different states
+    - LINKS HERE
+    - No
+
+  * - ``system.filesystem.usage``
+    - Filesystem bytes used
+    - LINKS HERE
+    - No
+
+  * - ``system.filesystem.utilization``
+    - Fraction of filesystem bytes used
+    - LINKS HERE
+    - No
+
+  * - ``system.cpu.load_average.1m``
+    - Average CPU Load over 1 minute
+    - 
+    - No
+
+  * - ``system.cpu.load_average.5m``
+    - Average CPU Load over 5 minutes
+    - 
+    - No
+
+  * - ``system.cpu.load_average.15m``
+    - Average CPU Load over 15 minutes
+    - 
+    - No
+
+  * - ``system.memory.usage``
+    - Bytes of memory in use
+    - * ``state``
+    - No
+
+  * - ``system.memory.utilization``
+    - Percentage of memory bytes in use
+    - * ``state``
+    - No
+
+  * - ``system.paging.utilization``
+    - Swap (Unix) or pagefile (Windows) utilization
+    - 
+    - No
