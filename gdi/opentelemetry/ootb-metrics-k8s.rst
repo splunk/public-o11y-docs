@@ -308,3 +308,107 @@ Node level metrics and attributes (dimensions in IM)
     - Swap (Unix) or pagefile (Windows) utilization
     - 
     - No
+
+Volume level metrics and attributes (dimensions in IM)
+----------------------------------------------------------------------------
+
+.. list-table::
+  :widths: 30 30 30 10
+  :width: 100
+  :header-rows: 1
+
+  * - Metric name
+    - Metric description
+    - Attributes
+    - Dropped?
+
+  * - ``k8s.volume.available``
+    - The number of available bytes in the volume
+    - LINK HERE
+    - No
+
+  * - ``k8s.volume.capacity``
+    - The number of capacity bytes in the volume
+    - LINK HERE
+    - No
+
+Internal metrics
+----------------------------------------------------------------------------
+
+NEW DOC
+https://splunk.atlassian.net/browse/O11YDOCS-5412
+
+Standard resource attributes
+----------------------------------------------------------------------------
+
+.. list-table::
+  :widths: 40 20 40 
+  :width: 100
+  :header-rows: 1
+
+  * - Name
+    - Type 
+    - Description
+
+  * - ``k8s.node.name``
+    - string
+    - The name of the node
+
+  * - ``k8s.pod.uid``
+    - string
+    - The UID of the pod
+
+  * - ``k8s.pod.name``
+    - string
+    - The name of the pod
+
+  * - ``k8s.namespace.name``
+    - string
+    - The name of the namespace that the pod is running in
+
+  * - ``k8s.container.name``
+    - string
+    - Container name used by container runtime
+
+  * - ``container.id``
+    - string
+    - Container id used to identify container
+
+  * - ``k8s.volume.name``
+    - string
+    - The name of the volume
+
+  * - ``k8s.volume.type``
+    - string
+    - The type of the volume
+
+  * - ``k8s.persistentvolumeclaim.name``
+    - string
+    - The name of the Persistent Volume Claim
+
+  * - ``aws.volume.id``
+    - string
+    - The id of the AWS Volume
+
+  * - ``fs.type``
+    - string
+    - The filesystem type of the volume
+
+  * - ``partition``
+    - string
+    - The partition in the volume
+
+  * - ``gce.pd.name``
+    - string
+    - The name of the persistent disk in GCE
+
+  * - ``glusterfs.endpoints.name``
+    - string
+    - The endpoint name that details Glusterfs topology
+
+  * - ``glusterfs.path``
+    - string
+    - Glusterfs volume path
+
+
+
