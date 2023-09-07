@@ -52,7 +52,7 @@ For more details about Troubleshooting MetricSets, see :ref:`apm-index-tag-tips`
 Monitoring MetricSets
 =====================
 
-Metric time series that power Splunk APM’s real-time monitoring capabilities, including charts, dashboards, and detectors. See :ref:`metric-time-series` to learn more. MMS power the real-time APM landing page and the dashboard view. MMS are also the metrics that detectors monitor and use to generate alerts. 
+Monitoring MetricSets are metric time series that power Splunk APM’s real-time monitoring capabilities, including charts, dashboards, and detectors. See :ref:`metric-time-series` to learn more. MMS power the real-time APM landing page and the dashboard view. MMS are also the metrics that detectors monitor and use to generate alerts. 
 
 Available MMS metrics
 -----------------------
