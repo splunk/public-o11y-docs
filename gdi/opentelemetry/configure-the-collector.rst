@@ -21,7 +21,7 @@ Configure the Collector
     windows-config.rst
     other-configuration-sources.rst
     data-processing.rst
-    ootnb-metrics-k8s.rst
+    ootb-metrics-k8s.rst
     tags.rst
     Remove data pre-ingest <configure-remove.rst>
 
