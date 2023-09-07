@@ -177,12 +177,16 @@ Pod level metrics and attributes
 
   * - ``k8s.pod.network.errors``
     - Pod network errors
-    - LINKS HERE
+    - * ``interface``. See :ref:`kubelet-stats-receiver`
+      * ``direction``. See :ref:`kubelet-stats-receiver`
+      * :ref:`ootb-metrics-k8s-attributes`
     - No
 
   * - ``k8s.pod.network.io``
     - Pod network IO
-    - LINKS HERE
+    - * ``interface``. See :ref:`kubelet-stats-receiver`
+      * ``direction``. See :ref:`kubelet-stats-receiver`
+      * :ref:`ootb-metrics-k8s-attributes`
     - No
 
 Node level metrics and attributes 
