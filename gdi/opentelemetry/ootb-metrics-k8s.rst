@@ -259,12 +259,16 @@ Node level metrics and attributes
 
   * - ``k8s.node.network.errors``
     - Node network errors
-    - LINKS HERE
+    - * ``interface``. See :ref:`kubelet-stats-receiver`
+      * ``direction``. See :ref:`kubelet-stats-receiver`
+      * :ref:`ootb-metrics-k8s-attributes`
     - Yes
 
   * - ``k8s.node.network.io``
     - Node network IO
-    - LINKS HERE
+    - * ``interface``. See :ref:`kubelet-stats-receiver`
+      * ``direction``. See :ref:`kubelet-stats-receiver`
+      * :ref:`ootb-metrics-k8s-attributes`
     - Yes
 
   * - ``system.cpu.time``
@@ -274,17 +278,28 @@ Node level metrics and attributes
 
   * - ``system.cpu.utilization``
     - Percentage of CPU time broken down by different states
-    - LINKS HERE
+    - * ``cpu``. See :ref:`host-metrics-receiver`
+      * ``state``. See :ref:`host-metrics-receiver`
+      * :ref:`ootb-metrics-k8s-attributes`
     - No
 
   * - ``system.filesystem.usage``
     - Filesystem bytes used
-    - LINKS HERE
+    - * ``device``. See :ref:`host-metrics-receiver`
+      * ``mode``. See :ref:`host-metrics-receiver`
+      * ``mountpoint``. See :ref:`host-metrics-receiver`
+      * ``type``. See :ref:`host-metrics-receiver`
+      * ``state``. See :ref:`host-metrics-receiver`      
+      * :ref:`ootb-metrics-k8s-attributes`
     - No
 
   * - ``system.filesystem.utilization``
     - Fraction of filesystem bytes used
-    - LINKS HERE
+    - * ``device``. See :ref:`host-metrics-receiver`
+      * ``mode``. See :ref:`host-metrics-receiver`
+      * ``mountpoint``. See :ref:`host-metrics-receiver`
+      * ``type``. See :ref:`host-metrics-receiver`
+      * :ref:`ootb-metrics-k8s-attributes`
     - No
 
   * - ``system.cpu.load_average.1m``
@@ -304,12 +319,12 @@ Node level metrics and attributes
 
   * - ``system.memory.usage``
     - Bytes of memory in use
-    - * ``state``
+    - ``state``. See :ref:`host-metrics-receiver`     
     - No
 
   * - ``system.memory.utilization``
     - Percentage of memory bytes in use
-    - * ``state``
+    - ``state``. See :ref:`host-metrics-receiver`   
     - No
 
   * - ``system.paging.utilization``
@@ -332,12 +347,12 @@ Volume level metrics and attributes
 
   * - ``k8s.volume.available``
     - The number of available bytes in the volume
-    - LINK HERE
+    - :ref:`ootb-metrics-k8s-attributes`
     - No
 
   * - ``k8s.volume.capacity``
     - The number of capacity bytes in the volume
-    - LINK HERE
+    - :ref:`ootb-metrics-k8s-attributes`
     - No
 
 Internal metrics
