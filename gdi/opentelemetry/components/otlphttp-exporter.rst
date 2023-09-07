@@ -9,6 +9,8 @@ OTLP/HTTP exporter
 
 The OTLP/HTTP exporter sends metrics, traces, and logs via HTTP using the OTLP format (``application/x-protobuf`` content-type). See :ref:`otel-data-processing` for more information.
 
+For information on the OTLP exporter, see :ref:`otlp-exporter`.
+
 Get started
 ======================
 

@@ -11,6 +11,8 @@ The OTLP exporter sends metrics, traces, and logs through gRPC using the OTLP fo
 
 By default, this exporter requires TLS and provides queued retry capabilities. 
 
+For information on the OTLP/HTTP exporter, see :ref:`otlphttp-exporter`.
+
 Get started
 ======================
 
