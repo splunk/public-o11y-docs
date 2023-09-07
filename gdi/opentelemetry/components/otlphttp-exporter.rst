@@ -92,7 +92,7 @@ This is a detailed configuration example:
 Configure gzip compression
 --------------------------------
 
-By default, gzip compression is enabled. To disable it, use the following configuration:
+By default, gzip compression is enabled. To turn it off, use the following configuration:
 
 .. code-block:: yaml
 
