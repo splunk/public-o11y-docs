@@ -45,7 +45,7 @@ Traces instrumentations
    * - ASP.NET Core
      - See :ref:`dotnet-otel-versions`
      - ``ASPNETCORE``
-   * - Azure SDK |br| (Not supported on .NET Framework)
+   * - Azure SDK
      - ``Azure.`` prefixed packages, released after October 1, 2021
      - ``AZURE``
    * - Elastic.Clients.Elasticsearch
@@ -90,7 +90,7 @@ Traces instrumentations
    * - StackExchange.Redis |br| (Not supported on .NET Framework)
      - 2.0.405 to 3.0.0
      - ``STACKEXCHANGEREDIS``
-   * - System.ServiceModel |br| (Not supported on .NET Framework)
+   * - System.ServiceModel |br| (Service side not supported on .NET)
      - 4.7.0 and higher |br| of ``System.ServiceModel.Primitives``
      - ``WCFCLIENT`` for client side instrumentation and |br| ``WCFSERVICE`` for service side instrumentation
 
