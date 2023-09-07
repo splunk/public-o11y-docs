@@ -93,6 +93,7 @@ Index the new attributes as tags to generate Troubleshooting Metric Sets (TMS) o
 
 For each affected tag you are indexing, generate its new corresponding tag as an APM MetricSet.
 
+#. Go to :guilabel:`Settings` then :guilabel:`APM MetricSets`. You must have the admin role to access APM MetricSets. 
 #. Create a new APM MetricSet using the new tag name, set as a TMS. 
 #. If the old tag was also used as an MMS, configure the new tag as an MMS. 
 #. Use new tag name going forward. See :ref:`update-charts-dashboards` and :ref:`update-detectors`.
