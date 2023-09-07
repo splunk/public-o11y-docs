@@ -18,7 +18,7 @@ The OTLP exporter is included in the Splunk Distribution of OpenTelemetry Collec
 
 The following settings are required:
 
-* ``endpoint``. Port to which the exporter is going to send OTLP data, using the gRPC protocol. 
+* ``endpoint``. Address to which the exporter is going to send OTLP data, using the gRPC protocol. 
   
   * No default value. 
   * gRPC supports DNS as the default name-system. To learn more about the valid name syntax, see :new-page:`gRCP Name Resolution <https://github.com/grpc/grpc/blob/master/doc/naming.md>` in GitHub. 
