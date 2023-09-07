@@ -22,7 +22,6 @@ The following table covers the HTTP OTel attributes that changed from version 1.
      - Version 2.0 OTel attribute
      - Why the change
    * - ``http.method``
-       (The HTTP method attribute is stored as a system tag by default in Splunk Observability Cloud. You don't need to index this tag to use it as a TMS or MMS.)
      - ``http.request.method``
      - Consistent namespacing.
    * - ``http.status_code``
@@ -47,8 +46,6 @@ The following table covers the HTTP OTel attributes that changed from version 1.
      - ``http.forwarded.for``
      - Updated to reflect latest attribute definition.
 
-\* The HTTP method attribute is stored as a system tag by default. So, you don't need to index this tag to use it as a TMS or MMS. The corresponding Troubleshooting MetricSet (TMS) is HTTP Method and its corresponding Monitoring MetricSet is sf_httpMethod. 
-
 How to determine if your Splunk APM experience might be affected
 ===================================================================
 
@@ -66,6 +63,9 @@ Assess if you will be affected by upgrading
 To determine if your APM experience will be affected by upgrading, follow these steps.
 
 Start by determining if you are indexing the affected tags as custom tags in Splunk APM.
+
+.. _note: 
+    The HTTP method attribute is stored as a system tag by default in Splunk Observability Cloud. You don't need to index the HTTP method attribute to use it as a Troubleshooting MetricSet (TMS) or Monitoring MetricSet (MMS).
 
 #. Go to :guilabel:`Settings` then :guilabel:`APM MetricSets`. You must have the admin role to access APM MetricSets. 
 #. Cross-reference the list of new tags with the tags indexed in the APM MetricSets list. See :ref:`http-semantic-convention-changes`.
@@ -90,6 +90,9 @@ Migration steps
 
 Index the new attributes as tags to generate Troubleshooting Metric Sets (TMS) or Monitoring Metric Sets (MMS)
 ----------------------------------------------------------------------------------------------------------------
+
+.. _note: 
+    The HTTP method attribute is stored as a system tag by default in Splunk Observability Cloud. You don't need to index the HTTP method attribute to use it as a Troubleshooting MetricSet (TMS) or Monitoring MetricSet (MMS).
 
 For each affected tag you are indexing, generate its new corresponding tag as an APM MetricSet.
 
