@@ -8,15 +8,19 @@ Collected metrics and dimensions for Kubernetes
       :description: Out-of-the-box metrics obtained with the Collector for Kubernetes.
 
 
-If you're using the default configuration of the Collector for Kubernetes, you will obtain the following metrics at the end of the defined pipelines.
+The following sections list the collected metrics when you use the default configuration for the Collector for Kubernetes in host monitoring (agent) mode.
 
-Out-of-the-box metrics
-========================================================
+.. caution:: In the Collector, data is processed as configured in your pipelines. Therefore, metrics first imported by receivers might be dropped further into the pipeline by other components, such as the SignalFx exporter. Check the details in the tables below. 
 
-.. caution:: Metrics imported using receivers might be dropped further into the pipeline by other components, such as the SignalFx exporter. Check the details in the tables below. 
+See more at:
 
-Container level metrics and attributes (dimensions in IM)
-----------------------------------------------------------------------------
+* :ref:`otel-configuration-ootb`
+* :ref:`otel-deployment-mode`
+* :ref:`otel-data-processing`
+* :ref:`signalfx-exporter`
+
+Container level metrics and attributes
+============================================================================
 
 .. list-table::
   :widths: 30 30 30 10
@@ -70,41 +74,41 @@ Container level metrics and attributes (dimensions in IM)
 
   * - ``container.filesystem.available``
     - Container filesystem available
-    - LINK HERE
+    - :ref:`ootb-metrics-k8s-attributes`
     - Yes
 
   * - ``container.filesystem.capacity``
     - Container filesystem capacity
-    - LINK HERE
+    - :ref:`ootb-metrics-k8s-attributes`
     - Yes
 
   * - ``container.filesystem.usage``
     - Container filesystem usage
-    - LINK HERE
+    - :ref:`ootb-metrics-k8s-attributes`
     - Yes
 
   * - ``k8s.container.cpu_limit``
     - Container ``cpu_limit``
-    - LINK HERE
+    - :ref:`ootb-metrics-k8s-attributes`
     - Yes
 
   * - ``k8s.container.cpu_request``
     - Container ``cpu_request``
-    - LINK HERE
+    - :ref:`ootb-metrics-k8s-attributes`
     - Yes
 
   * - ``k8s.container.memory_limit``
     - Container ``memory_limit``
-    - LINK HERE
+    - :ref:`ootb-metrics-k8s-attributes`
     - Yes
 
   * - ``k8s.container.memory_request``
     - Container ``memory_request``
-    - LINK HERE
+    - :ref:`ootb-metrics-k8s-attributes`
     - Yes
 
-Pod level metrics and attributes (dimensions in IM)
-----------------------------------------------------------------------------
+Pod level metrics and attributes 
+============================================================================
 
 .. list-table::
   :widths: 30 30 30 10
@@ -181,8 +185,8 @@ Pod level metrics and attributes (dimensions in IM)
     - LINKS HERE
     - No
 
-Node level metrics and attributes (dimensions in IM)
-----------------------------------------------------------------------------
+Node level metrics and attributes 
+============================================================================
 
 .. list-table::
   :widths: 30 30 30 10
@@ -309,8 +313,8 @@ Node level metrics and attributes (dimensions in IM)
     - 
     - No
 
-Volume level metrics and attributes (dimensions in IM)
-----------------------------------------------------------------------------
+Volume level metrics and attributes 
+============================================================================
 
 .. list-table::
   :widths: 30 30 30 10
@@ -333,13 +337,15 @@ Volume level metrics and attributes (dimensions in IM)
     - No
 
 Internal metrics
-----------------------------------------------------------------------------
+============================================================================
 
 NEW DOC
 https://splunk.atlassian.net/browse/O11YDOCS-5412
 
+.. _ootb-metrics-k8s-attributes:
+
 Standard resource attributes
-----------------------------------------------------------------------------
+============================================================================
 
 .. list-table::
   :widths: 40 20 40 
