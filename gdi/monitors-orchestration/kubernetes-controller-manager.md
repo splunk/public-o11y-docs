@@ -10,7 +10,7 @@ This monitor is deprecated in favor of the `prometheus-exporter` monitor. See {r
 ```
 
 The monitor queries path `/metrics` by default when no path is configured. It converts
-the Prometheus metric types to Splunk Observability Cloud metric types as described in the documentation for <a class="external" href="../monitors-prometheus/prometheus-exporter.md" target="_blank">prometheus-exporter</a> All Prometheus labels are converted directly to Infrastructure Monitoring dimensions. 
+the Prometheus metric types to Splunk Observability Cloud metric types as described in the documentation for {ref}`prometheus-exporter`. All Prometheus labels are converted directly to Infrastructure Monitoring dimensions. 
 
 ## Configuration settings
 
