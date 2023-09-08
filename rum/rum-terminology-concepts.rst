@@ -5,7 +5,7 @@ Key concepts in Splunk RUM
 ******************************************************
 
 .. meta::
-   :description: Learn about important terminology and concepts in Splunk RUM for Browser 
+   :description: Definitions, examples, and key concepts for terms in Splunk RUM for Browser and Splunk RUM for Mobile. 
 
 This topic introduces important terminology and concepts in Splunk RUM for Browser and Splunk RUM for Mobile. Each key concept is linked to an example. 
 

@@ -5,8 +5,7 @@ Scenario: Kai identifies errors in browser spans
 *****************************************************************
 
 .. meta::
-  :description: Identify problems in your spans
-
+  :description: An example scenario of how to use Splunk RUM for Browser to monitor errors, such as JavaScript console errors or resource errors.
 
 The following scenario features Buttercup Industries, a fictitious e-commerce company.
 

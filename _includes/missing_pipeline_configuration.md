@@ -20,4 +20,4 @@ service:
       exporters: [otlp, jaeger, zipkin]
 ```
 
-See [How the OpenTelemetry Collector uses pipelines to process data](https://docs.splunk.com/observability/gdi/opentelemetry/data-processing.html#common-processing-scenarios) for more information. 
+See {ref}`otel-data-processing` for more information. 

@@ -4,6 +4,9 @@
 Splunk RUM custom dashboards 
 ************************************************************
 
+.. meta::
+   :description: Create custom dashboards in Splunk RUM to track application metrics that are most relevant to your business. 
+
 Create a custom dashboard for any Splunk RUM metric. 
 
 

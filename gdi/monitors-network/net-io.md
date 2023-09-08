@@ -47,7 +47,7 @@ The following table shows the configuration options for the `net-io` integration
 
 | Option | Required | Type | Description |
 | --- | --- | --- | --- |
-| `interfaces` | no | `list of strings` | The network interfaces to send metrics about. This is an [overridable set](https://docs.splunk.com/Observability/gdi/smart-agent/smart-agent-resources.html#filtering-data-using-the-smart-agent). (**default:** `[* !/^lo\d*$/ !/^docker.*/ !/^t(un|ap)\d*$/ !/^veth.*$/ !/^Loopback*/]`) |
+| `interfaces` | no | `list of strings` | The network interfaces to send metrics about. This is an {ref}`overridable set <filtering-smart-agent>`. (**default:** `[* !/^lo\d*$/ !/^docker.*/ !/^t(un|ap)\d*$/ !/^veth.*$/ !/^Loopback*/]`) |
 
 On Linux hosts, this monitor relies on the `/proc` filesystem. If the underlying host's `/proc` file system is mounted somewhere other than `/proc`, specify the path using the top-level configuration `procPath`.
 
