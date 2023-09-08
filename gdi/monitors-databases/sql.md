@@ -86,12 +86,12 @@ Please be sure to use the correct connection string syntax based on the driver y
 
 This is the list of the drivers currently supported:
 
-- <a class="external" href="https://github.com/SAP/go-hdb" target="_blank">`hana`</a>.
-- <a class="external" href="https://pkg.go.dev/github.com/denisenkom/go-mssqldb" target="_blank">`sqlserver`</a>.
-- <a class="external" href="https://pkg.go.dev/github.com/go-sql-driver/mysql" target="_blank">`mysql`</a>.
-- <a class="external" href="https://pkg.go.dev/github.com/jackc/pgx" target="_blank">`postgres`</a>.
-- <a class="external" href="https://pkg.go.dev/github.com/lib/pq" target="_blank">`pq`</a>.
-- <a class="external" href="https://pkg.go.dev/github.com/snowflakedb/gosnowflake" target="_blank">`snowflake`</a>.
+- <a class="external" href="https://github.com/SAP/go-hdb" target="_blank">hana</a>.
+- <a class="external" href="https://pkg.go.dev/github.com/denisenkom/go-mssqldb" target="_blank">sqlserver</a>.
+- <a class="external" href="https://pkg.go.dev/github.com/go-sql-driver/mysql" target="_blank">mysql</a>.
+- <a class="external" href="https://pkg.go.dev/github.com/jackc/pgx" target="_blank">postgres</a>.
+- <a class="external" href="https://pkg.go.dev/github.com/lib/pq" target="_blank">pq</a>.
+- <a class="external" href="https://pkg.go.dev/github.com/snowflakedb/gosnowflake" target="_blank">snowflake</a>.
 
 ### Parameterized connection string
 
@@ -117,7 +117,7 @@ smartagent/sql:
 
 To configure the agents to collect Snowflake performance and usage metrics, do the following:
 
-1. Copy the `pkg/sql/snowflake-metrics.yaml` file from the `sql` monitor repo into the same location as your `agent.yaml` file. For example, `/etc/splunk`. Find the latest version of `snowflake-metrics.yaml` <a class="external" href="https://github.com/splunk/observability-content-contrib/blob/main/dashboards-and-dashboard-groups/snowflakedb/Configuration/snowflake-metrics.yaml" target="_blank">in our GitHub repo</a>..
+1. Copy the `pkg/sql/snowflake-metrics.yaml` file from the `sql` monitor repo into the same location as your `agent.yaml` file. For example, `/etc/splunk`. Find the latest version of `snowflake-metrics.yaml` <a class="external" href="https://github.com/splunk/observability-content-contrib/blob/main/dashboards-and-dashboard-groups/snowflakedb/Configuration/snowflake-metrics.yaml" target="_blank">in our GitHub repo</a>.
 2. Configure the SQL monitor as follows:
 
 ```yaml

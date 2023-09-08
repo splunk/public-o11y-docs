@@ -8,7 +8,7 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the 
 
 This integration is available on Kubernetes, Linux, and Windows. 
 
-This integration requires access to <a class="external" href="https://kubernetes.io/docs/concepts/overview/components/#kube-apiserver" target="_blank">kube-apiserver pods</a>. to be able to access certain pods in the control plane. Since several Kubernetes-as-a-service distributions don't expose the control plane pods to the end user, metric collection might not be possible in these cases. 
+This integration requires access to <a class="external" href="https://kubernetes.io/docs/concepts/overview/components/#kube-apiserver" target="_blank">kube-apiserver pods</a> to be able to access certain pods in the control plane. Since several Kubernetes-as-a-service distributions don't expose the control plane pods to the end user, metric collection might not be possible in these cases. 
 
 ## Benefits
 
@@ -45,7 +45,7 @@ service:
       receivers: [smartagent/kubernetes-apiserver]
 ```
 
-See the <a class="external" href="https://github.com/signalfx/splunk-otel-collector/tree/main/examples/kubernetes-yaml" target="_blank">kubernetes-yaml examples</a>. in GitHub for the Agent and Gateway YAML files.
+See the <a class="external" href="https://github.com/signalfx/splunk-otel-collector/tree/main/examples/kubernetes-yaml" target="_blank">kubernetes-yaml examples</a> in GitHub for the Agent and Gateway YAML files.
 
 ### Example: Kubernetes observer 
 

@@ -29,7 +29,7 @@ Follow these steps to collect metrics with the Heroku buildpack for the Splunk D
    
    **_Note:_** Running `heroku` command outside of project directories results in unexpected behavior.
 
-2. Configure the Heroku app to expose Dyno metadata, which is required by Splunk OpenTelemetry Connector to set global dimensions such as `app_name`, `app_id` and `dyno_id`. See <a class="external" href="https://devcenter.heroku.com/articles/dyno-metadata" target="_blank">here</a>. for more information.
+2. Configure the Heroku app to expose Dyno metadata, which is required by Splunk OpenTelemetry Connector to set global dimensions such as `app_name`, `app_id` and `dyno_id`. See <a class="external" href="https://devcenter.heroku.com/articles/dyno-metadata" target="_blank">here</a> for more information.
    
    ``` bash
    heroku labs:enable runtime-dyno-metadata
@@ -85,7 +85,7 @@ Use the following environment variables to configure the Heroku buildpack.
 | Environment Variable      | Required | Default                                             | Description                                                                                                                |
 | ----------------------    | -------- | -------                                             | -------------------------------------------------------------------------                                                  |
 | `SPLUNK_ACCESS_TOKEN`     | Yes      |                                                     | Splunk access token. |
-| `SPLUNK_REALM`            | Yes      |                                                     | <a class="external" href="https://dev.splunk.com/observability/docs/realms_in_endpoints/" target="_blank">Splunk realm</a>..                                            |
+| `SPLUNK_REALM`            | Yes      |                                                     | <a class="external" href="https://dev.splunk.com/observability/docs/realms_in_endpoints/" target="_blank">Splunk realm</a>                                            |
 | `SPLUNK_API_URL`          | No       | `https://api.SPLUNK_REALM.signalfx.com`             | The Splunk API base URL.                                                                                                   |
 | `SPLUNK_CONFIG`           | No       | `/app/config.yaml`                                  | The configuration to use. `/app/.splunk/config.yaml` used if default not found.                                            |
 | `SPLUNK_INGEST_URL`       | No       | `https://ingest.SPLUNK_REALM.signalfx.com`          | The Splunk Infrastructure Monitoring base URL.                                                                             |

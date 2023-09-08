@@ -68,7 +68,7 @@ with the value of the `metricPrefix` configuration field described in the follow
 causes the monitor to remove this specified prefix. If you don't specify a value for the `prefix` field, it
 defaults to `envoy`.
 
-To learn more, see the <a class="external" href="https://www.envoyproxy.io/docs/envoy/latest/api/api" target="_blank">Envoy API reference</a>..
+To learn more, see the <a class="external" href="https://www.envoyproxy.io/docs/envoy/latest/api/api" target="_blank">Envoy API reference</a>.
 
 The following table shows the configuration options for this monitor:
 

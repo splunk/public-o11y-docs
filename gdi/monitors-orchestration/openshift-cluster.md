@@ -33,7 +33,7 @@ Follow these steps to deploy this integration:
         helm install --set cloudProvider=' ' --set distribution='openshift' --set splunkObservability.accessToken='******' --set            clusterName='cluster1' --namespace='namespace1' --set splunkObservability.realm='us0' --set gateway.enabled='false' --generate-name splunk-otel-collector-chart/splunk-otel-collector
         ```
    
-      Find more information in our <a class="external" href="https://github.com/signalfx/splunk-otel-collector-chart" target="_blank">GitHub repos</a>..
+      Find more information in our <a class="external" href="https://github.com/signalfx/splunk-otel-collector-chart" target="_blank">GitHub repos</a>.
 
    - {ref}`Install on Linux <otel-install-linux>`
    

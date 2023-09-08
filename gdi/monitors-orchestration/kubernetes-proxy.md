@@ -4,9 +4,9 @@
 
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the Kubernetes proxy monitor. See benefits, install, configuration, and metrics">
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `kubernetes-proxy` monitor type to export Prometheus metrics from the <a class="external" href="https://kubernetes.io/docs/reference/command-line-tools-reference/kube-proxy" target="_blank">kube-proxy</a>. metrics in Prometheus format. 
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `kubernetes-proxy` monitor type to export Prometheus metrics from the <a class="external" href="https://kubernetes.io/docs/reference/command-line-tools-reference/kube-proxy" target="_blank">kube-proxy</a> metrics in Prometheus format. 
 
-The integration queries path `/metrics` by default when no path is configured, and converts the Prometheus metric types to Splunk Observability Cloud metric types as described <a class="external" href="../monitors-prometheus/prometheus-exporter.md" target="_blank">here</a>..
+The integration queries path `/metrics` by default when no path is configured, and converts the Prometheus metric types to Splunk Observability Cloud metric types as described <a class="external" href="../monitors-prometheus/prometheus-exporter.md" target="_blank">here</a>.
 
 This monitor type is available on Kubernetes, Linux, and Windows.
 
