@@ -89,7 +89,7 @@ Error exporting profiling data Error: 14 UNAVAILABLE: No connection established
 Check the following configurations:
 
 #. The ``OTEL_EXPORTER_OTLP_ENDPOINT`` is correctly set to the host and port where the OTEL collector is running.
-#. The OTEL collector is running and the port is open.
+#. The OTEL collector is running, the port is open and accessible from the host where the profiled application is running.
 #. The receiver for OTLP/gRPC is turned on in the OTEL collector configuration.
 #. The profiling pipeline is turned on in OTEL collector configuration. 
 
