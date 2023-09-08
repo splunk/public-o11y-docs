@@ -22,7 +22,7 @@ For example, if you track CPU utilization for your Kubernetes pod, your analytic
 Whether you're using the Smart Agent or the Collector, your original dashboards and detectors function the same way. 
 
 - Infrastructure Navigator views use the mapping service to show both old collection data and new collection data.
-- After you've migrated to the Collector, see <a href="https://docs.splunk.com/Observability/metrics-and-metadata/metrics-finder-metadata-catalog.html" target="_blank">Use the Metric Finder and Metadata Catalog</a> to learn how to use the Metric Finder and Metadata Catalog to find, view, and edit information about the metadata in your system.
+- After you've migrated to the Collector, see {ref}`metrics-finder-and-metadata-catalog` to learn how to use the Metric Finder and Metadata Catalog to find, view, and edit information about the metadata in your system.
 
 ## Obtain the migration impact report
 
