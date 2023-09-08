@@ -26,7 +26,7 @@ Each :term:`span` in Splunk APM captures a single operation. Splunk APM consider
 
 A span is considered an error span when any of the following conditions are met: 
 
-* The span's ``span.status`` is ``Error``. ``span.status`` is set in Splunk Distribution of the OpenTelemetry Collector. See the OpenTelemetry :new-page:`Tracing API specification <https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#set-status>` to learn more about the ``span.status``. 
+* The ``otel.status_code`` field for the span is ``ERROR``. ``otel.status_code`` is set in Splunk Distribution of the OpenTelemetry Collector using the native OTel field ``span.status``. See the :new-page:`OpenTelemetry Transformation to non-OTLP Formats<https://opentelemetry.io/docs/specs/otel/common/mapping-to-non-otlp/#span-status>` to learn more about ``otel.status_code``. See the OpenTelemetry :new-page:`Tracing API specification <https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#set-status>` to learn more about ``span.status``. 
   
    * See :ref:`apm-http-status` to learn which ``http.status_code`` tag values set ``span.status`` to ``error`` in the Splunk Distribution of the OpenTelemetry Collector.
    * See :ref:`apm-grpc-status` to learn which ``rpc.grpc.status_code`` tag values set ``span.status`` to ``error`` in the Splunk Distribution of the OpenTelemetry Collector.
@@ -49,14 +49,14 @@ The following table provides an overview of how HTTP status codes are treated in
      - :strong:`Server-side spans` ``span.kind = SERVER``
      - :strong:`Client-side spans` ``span.kind = CLIENT``
    * - ``1xx``, ``2xx``, and ``3xx``
-     - ``span.status`` is unset, unless there's another error in the span. 
-     - ``span.status`` is unset, unless there's another error in the span. 
+     - ``otel.status_code`` is unset, unless there's another error in the span. 
+     - ``otel.status_code`` is unset, unless there's another error in the span. 
    * - ``4xx``
-     - Not considered a server-side error; ``span.status`` unset. See :ref:`4xx-error-logic` to learn more.
-     - Counted as a client error; ``span.status`` set to ``Error``.
+     - Not considered a server-side error; ``otel.status_code`` unset. See :ref:`4xx-error-logic` to learn more.
+     - Counted as a client error; ``otel.status_code`` set to ``ERROR``.
    * - ``5xx`` 
-     - ``span.status`` set to ``Error``. See :ref:`5xx-error-logic` to learn more. 
-     - ``span.status`` set to ``Error``. See :ref:`5xx-error-logic` to learn more. 
+     - ``otel.status_code`` set to ``ERROR``. See :ref:`5xx-error-logic` to learn more. 
+     - ``otel.status_code`` set to ``ERROR``. See :ref:`5xx-error-logic` to learn more. 
 
 .. _apm-grpc-status:
 
@@ -65,8 +65,8 @@ How does Splunk APM handle gRPC status codes?
 
 To determine if a gRPC span counts towards the error rate for a service, the Splunk Distribution of the OpenTelemetry Collector looks at the ``span.status`` as set by OpenTelemetry specification. Specifically, the following logic is applied:
 
-* For client-side spans (``span.kind = CLIENT``), all non-OK, client-received status codes (``rpc.grpc.status_code``) set ``span.status`` to ``Error``.
-* For server-side spans (``span.kind = SERVER``), the following gRPC status codes (``rpc.grpc.status_code``) set ``span.status`` to ``Error``: 
+* For client-side spans (``span.kind = CLIENT``), all non-OK, client-received status codes (``rpc.grpc.status_code``) set ``otel.status_code`` to ``ERROR``.
+* For server-side spans (``span.kind = SERVER``), the following gRPC status codes (``rpc.grpc.status_code``) set ``otel.status_code`` to ``ERROR``: 
 
    * ``UNKNOWN``
    * ``UNIMPLEMENTED``
