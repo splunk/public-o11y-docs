@@ -84,7 +84,7 @@ Use the following environment variables to configure the Heroku buildpack.
 
 | Environment Variable      | Required | Default                                             | Description                                                                                                                |
 | ----------------------    | -------- | -------                                             | -------------------------------------------------------------------------                                                  |
-| `SPLUNK_ACCESS_TOKEN`     | Yes      |                                                     | [Splunk access token](https://docs.splunk.com/Observability/admin/authentication-tokens/org-tokens.html#admin-org-tokens). |
+| `SPLUNK_ACCESS_TOKEN`     | Yes      |                                                     | Splunk access token. |
 | `SPLUNK_REALM`            | Yes      |                                                     | [Splunk realm](https://dev.splunk.com/observability/docs/realms_in_endpoints/).                                            |
 | `SPLUNK_API_URL`          | No       | `https://api.SPLUNK_REALM.signalfx.com`             | The Splunk API base URL.                                                                                                   |
 | `SPLUNK_CONFIG`           | No       | `/app/config.yaml`                                  | The configuration to use. `/app/.splunk/config.yaml` used if default not found.                                            |

@@ -37,4 +37,4 @@ For example, if you discover that the pod lasts 5 minutes before it gets killed:
 
 How long does it take for the pod to be killed due to memory limit? Check the logs at the time of the issue to see if there are any obvious repeating errors.
 
-Gather additional [support information](https://docs.splunk.com/Observability/gdi/opentelemetry/support-checklist.html#nav-Gather-information-to-open-a-support-request), including your end-to-end architecture information.
+Gather additional support information, including your end-to-end architecture information. See {ref}`otel-support-checklist`.
