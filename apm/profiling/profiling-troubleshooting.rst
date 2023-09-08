@@ -88,7 +88,10 @@ Error exporting profiling data Error: 14 UNAVAILABLE: No connection established
 
 Check the following configurations:
 
-#. The ``OTEL_EXPORTER_OTLP_ENDPOINT`` is correctly set to the host and port where the OTEL collector is running.
+#. The profiling exporting endpoint is correctly set to the host and port where the OTEL collector is running.
+   - If the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable or ````splunk.profiler.logs-endpoint`` system property is set, this value is used.
+   - Otherwise, if the ``OTEL_EXPORTER_OTLP_ENDPOINT`` environment variable or ``otel.exporter.otlp.endpoint`` system property is set, this value is used.
+   - Finally, if neither is set, the default value of ``http://localhost:4317``
 #. The OTEL collector is running, the port is open and accessible from the host where the profiled application is running.
 #. The receiver for OTLP/gRPC is turned on in the OTEL collector configuration.
 #. The profiling pipeline is turned on in OTEL collector configuration. 
