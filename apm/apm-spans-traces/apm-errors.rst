@@ -51,7 +51,7 @@ The following table provides an overview of how HTTP status codes are used to se
 How OpenTelemetry handles gRPC status codes
 -----------------------------------------------
 
-To determine if a gRPC span counts towards the error rate for a service, the Splunk Distribution of the OpenTelemetry Collector looks at the ``span.status`` as set by OpenTelemetry instrumentation. Specifically, the following logic is applied by the instrumentation in accordance with OpenTelemetry semantic conventions:
+To determine if a gRPC span counts towards the error rate for a service, the Splunk Distribution of the OpenTelemetry Collector looks at the ``span.status`` as set by OpenTelemetry instrumentation. The following logic is applied by the instrumentation in accordance with OpenTelemetry semantic conventions:
 
 * For client-side spans (``span.kind = CLIENT``), all non-OK, client-received status codes (``rpc.grpc.status_code``) set ``span.status`` to ``error``.
 * For server-side spans (``span.kind = SERVER``), the following gRPC status codes (``rpc.grpc.status_code``) set ``span.status`` to ``error``: 
@@ -96,7 +96,7 @@ To help you identify the root cause of an error, Splunk APM differentiates betwe
 
 ..  image:: /_images/apm/apm-errors/tag-spotlight-errors.png
     :width: 95%
-    :alt: This screenshot shows the graph of requests and errors for paymentservice in Tag Spotlight. Total errors are represented by a light pink area plot on the graph, and root cause errors are shown in darker pink. 
+    :alt: This screenshot shows the graph of requests and errors for paymentservice in Tag Spotlight. Total errors have a light pink area plot on the graph, and root cause errors are darker pink. 
 
 When a particular span (operation) within a trace results in an error, the error can propagate through other spans in the trace. Any span determined to contain an error based on the criteria described in :ref:`apm-error-detection` is an error span. Splunk APM designates the originating error of a chain of error spans as the :strong:`root cause error`. 
 
