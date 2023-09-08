@@ -206,23 +206,14 @@ If you need to set up AlwaysOn Profiling with a collector in data forwarding (ga
 .. mermaid::
 
    flowchart LR
-   Raw[(Incoming raw MTS)] ---|MPM|ChooseDimensions{"`Choose MTS to aggregate`"} ---|Perform aggregation|CreateNew("`New aggregated MTS with rolled-up
-   metrics`") ---|Keep or drop raw MTS|OriginalMTS[(Kept MTS and new MTS)]
+   instrumentation["`**(1)** Instrumentation agent`"] --> collector["`**(2)** Collector in host (agent) monitoring mode`"] --> datacollector["`**(3)** Collector in data forwarding (gateway) mode`"] --> SOC["`**(4)** Splunk Observability Cloud`"]
 
-.. mermaid::
-
-   flowchart LR
-   [Instrumentation Agent]-->[Collector in host monitoring (agent) mode]
-
-:strong:`(\1)` Instrumentation Agent to  :strong:`(2)` Collector in host monitoring (agent) mode to :strong:`(3)` Collector in data forwarding (gateway) mode to :strong:`(4)` Splunk Observability Cloud
-
-#. Point the instrumentation agent to the OTLP gRPC receiver for the collector in host monitoring (agent) mode :strong:`(2)`. The OTLP gRPC receiver must be running on the same host and port that the collector in host monitoring (agent) mode :strong:`(2)` is running on.
+#. Point the instrumentation agent to the OTLP gRPC receiver for the collector in host monitoring (agent) mode :strong:`(2)`. The OTLP gRPC receiver must be running on the same host and port as the collector in host monitoring (agent) mode :strong:`(2)`.
 #. Configure the collector in host monitoring (agent) mode :strong:`(2)` with the following components:
 
    #. An OTLP gRPC receiver
    #. An OTLP exporter pointed at the collector in data forwarding (gateway) mode :strong:`(3)`
-   #. A logs pipeline that connects the receiver and the exporter. See the default agent config with the necessary adjustment to use to send to a gateway on GitHub: :new-page:`https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml#L195-L204`.git `
-      For example:
+   #. A logs pipeline that connects the receiver and the exporter. See the default agent config with the necessary adjustment to send to a gateway on GitHub: :new-page:`https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml#L195-L204`. For example:
 
    .. code-block:: yaml
 
