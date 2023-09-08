@@ -5,7 +5,7 @@
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Logstash monitor. See benefits, install, configuration, and metrics">
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `logstash` monitor type to monitor the health and performance of Logstash deployments through
-Logstash [Monitoring APIs](https://www.elastic.co/guide/en/logstash/current/monitoring-logstash.html).
+Logstash <a class="external" href="https://www.elastic.co/guide/en/logstash/current/monitoring-logstash.html" target="_blank">Monitoring APIs</a>..
 
 ## Installation
 

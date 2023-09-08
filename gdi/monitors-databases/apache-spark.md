@@ -63,7 +63,7 @@ service:
       receivers: [smartagent/collectd_spark_worker]
 ```
 
-**Note:** The names `collectd_spark_master` and `collectd_spark_worker` are for identification purposes only and don't affect functionality. You can use either name in your configuration, but you need to select distinct monitor configurations and discovery rules for master and worker processes. For the master configuration, see the `isMaster` field in the [Configuration settings](#configuration-settings) section.
+**Note:** The names `collectd_spark_master` and `collectd_spark_worker` are for identification purposes only and don't affect functionality. You can use either name in your configuration, but you need to select distinct monitor configurations and discovery rules for master and worker processes. For the master configuration, see the `isMaster` field in the <a class="external" href="#configuration-settings" target="_blank">Configuration settings</a>. section.
 
 ## Configuration settings
 

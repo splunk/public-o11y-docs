@@ -2,7 +2,7 @@
 
 If you receive high memory usage or out of memory warnings, do the following before opening a support case:
 
-1. Verify that you have installed the latest version of the [Splunk Distribution of OpenTelemetry Collector for Kubernetes](https://github.com/signalfx/splunk-otel-collector-chart/releases).
+1. Verify that you have installed the latest version of the <a class="external" href="https://github.com/signalfx/splunk-otel-collector-chart/releases" target="_blank">Splunk Distribution of OpenTelemetry Collector for Kubernetes</a>..
 2. Add or change the `memory_limiter` processor in your configuration file. For example:
    ```
    processors:

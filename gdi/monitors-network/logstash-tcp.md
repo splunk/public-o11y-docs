@@ -4,9 +4,9 @@
 
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the Logstash TCP monitor. See benefits, install, configuration, and metrics">
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `logstash-tcp` monitor type to monitor the health and performance of Logstash deployments through Logstash Monitoring APIs. It fetches events from the [logstash tcp output plugin](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-tcp.html) operating in either `server` or `client` mode and converts them to data points. 
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `logstash-tcp` monitor type to monitor the health and performance of Logstash deployments through Logstash Monitoring APIs. It fetches events from the <a class="external" href="https://www.elastic.co/guide/en/logstash/current/plugins-outputs-tcp.html" target="_blank">logstash tcp output plugin</a>. operating in either `server` or `client` mode and converts them to data points. 
 
-This integration is meant to be used in conjunction with the Logstash [Metrics filter plugin](https://www.elastic.co/guide/en/logstash/current/plugins-filters-metrics.html) that turns events into metrics. You can only use autodiscovery when this monitor is in `client` mode.
+This integration is meant to be used in conjunction with the Logstash <a class="external" href="https://www.elastic.co/guide/en/logstash/current/plugins-filters-metrics.html" target="_blank">Metrics filter plugin</a>. that turns events into metrics. You can only use autodiscovery when this monitor is in `client` mode.
 
 This receiver is available on Linux and Windows.
 

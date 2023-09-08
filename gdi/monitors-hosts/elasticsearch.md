@@ -111,7 +111,7 @@ monitors:
 
 ```
 
-The `enableEnhancedNodeIndicesStats` option takes a list of index stats groups for which enhanced stats will be collected. See [Nodes stats API](https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-nodes-stats.html) for a comprehensive list of all available groups.
+The `enableEnhancedNodeIndicesStats` option takes a list of index stats groups for which enhanced stats will be collected. See <a class="external" href="https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-nodes-stats.html" target="_blank">Nodes stats API</a>. for a comprehensive list of all available groups.
 
 Note that the `enableEnhancedIndexStatsForIndexGroups` configuration option is similar to the `enableEnhancedNodeIndicesStats` configuration option, but for index level stats.
 
