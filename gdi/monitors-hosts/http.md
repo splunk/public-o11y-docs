@@ -30,7 +30,7 @@ Configure the following options to change the behavior of the request done on th
 * Configure the `requestBody` option to provide a body to the request. The form of this body depends on the `Content-Type` header. For example, `{"foo":"bar"}` with `Content-Type: application/json`.
 * Configure the `noRedirects:false` option to stop the URL from following redirects. The default value is `true`.
 
-See [configuration examples](#configuration) for different request behaviors.
+See <a class="external" href="#configuration" target="_blank">configuration examples</a> for different request behaviors.
 
 The following configuration options change the resulting values:
 
