@@ -104,7 +104,10 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
       - To use CPU profiling, activate the ``splunk.profiler.enabled`` system property, or set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
       - Activate Memory profiling by setting the ``splunk.profiler.memory.enabled`` system property or the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true``. To activate memory profiling, the ``splunk.profiler.enabled`` property must be set to ``true``.
-      - Check OTLP the endpoint in the ``splunk.profiler.logs-endpoint`` system property or the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable:
+      - Check that the profiling data exporting OTLP endpoint is set correctly:
+         - Profiling-specific endpoint is configured via ``splunk.profiler.logs-endpoint`` system property or the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable.
+         - If that is not set, then the generic OTLP endpoint is used, configured via ``otel.exporter.otlp.endpoint`` system property or the ``OTEL_EXPORTER_OTLP_ENDPOINT`` environment variable.
+         - If that is not set either, it defaults to `http://localhost:4317`.
          -  For non-Kubernetes deployments, the OTLP endpoint has to point to http://${COLLECTOR_IP}:4317. If the collector and the profiled application run on the same host, then use http://localhost:4317. Otherwise, make sure there are no firewall rules blocking access to port 4317 from the profiled host to the collector host.
          -  For Kubernetes deployments, the OTLP endpoint has to point to ``http://$(K8S_NODE_IP):4317`` where ``K8S_NODE_IP`` is fetched from the Kubernetes downstream API by setting this on the application pod:
         
