@@ -247,7 +247,7 @@ div.sphinxsidebar hr {
 
 a {
     color: #004B6B;
-    /* text-decoration: underline; */
+    text-decoration: none !important;
 }
 
 a:hover {
