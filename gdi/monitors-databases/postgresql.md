@@ -19,7 +19,7 @@ The following table shows the configuration options for the `postgresql` integra
 | `host` | no | `string` |  |
 | `port` | no | `integer` |  (**default:** `0`) |
 | `masterDBName` | no | `string` | The "master" database to which the agent first connects to query the list of databases available in the server.  This database should be accessible to the user specified with `connectionString` and `params` below, and that user should have permission to query `pg_database`.  If you want to filter which databases are monitored, use the `databases` option below. (**default:** `postgres`) |
-| `connectionString` | no | `string` | See [Connection String Parameters](https://godoc.org/github.com/lib/pq#hdr-Connection_String_Parameters). |
+| `connectionString` | no | `string` | See <a class="external" href="https://godoc.org/github.com/lib/pq#hdr-Connection_String_Parameters" target="_blank">Connection String Parameters</a> |
 | `params` | no | `map of strings` | Parameters to the connection string that can be templated into the connection string with the syntax `{{.key}}`. |
 | `databases` | no | `list of strings` | List of databases to send database-specific metrics about. If omitted, metrics about all databases will be sent.  This is an {ref}`overridable set <filtering-smart-agent>`. (**default:** `[*]`) |
 | `databasePollIntervalSeconds` | no | `integer` | How frequently to poll for new/deleted databases in the DB server. Defaults to the same as `intervalSeconds` if not set. (**default:** `0`) |
