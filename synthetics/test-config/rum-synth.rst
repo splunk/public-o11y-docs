@@ -1,7 +1,7 @@
 .. _rum-synth:
 
 ********************************************************************************
-Compare run results to Web Vitals
+Compare run results to Web Vitals with Splunk RUM
 ********************************************************************************
 
 .. meta::
@@ -63,7 +63,7 @@ Example
 ------------------
 The site reliability engineering (SRE) team at the fictitious Buttercup Games company sets up tests to monitor the checkout workflow for their online store using an API test. For steps on how they setup their API test, see :ref:`api-test-scenario`. The SRE team wants to determine the health of the API test by run location. The data centers for Buttercup Games are in Johannesburg and the Web Vitals for the local tests reflect optimal performance. 
 
-Using the RUM integration, the SRE team can compared Web Vitals by global results and found that the LCP really lagged. 
+Using the RUM integration, the SRE team compared Web Vitals by global results and found that the LCP really lagged. 
 
 .. image:: /_images/rum/web-vital-example.png
       :width: 30%
