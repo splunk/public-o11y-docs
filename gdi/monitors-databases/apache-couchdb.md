@@ -18,9 +18,9 @@ This integration is only available on Kubernetes and Linux.
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform.
    - {ref}`Install on Kubernetes <otel-install-k8s>`
    - {ref}`Install on Linux <otel-install-linux>`
-2. Download [collectd-couchdb](https://github.com/signalfx/collectd-couchdb) in GitHub.
+2. Download <a class="external" href="https://github.com/signalfx/collectd-couchdb" target="_blank">collectd-couchdb</a> in GitHub.
 3. Move the `couchdb_plugin.py` file to `/usr/share/collectd/collectd-couchdb`.
-4. Modify the [sample configuration file](https://github.com/signalfx/integrations/blob/master/collectd-couchdb/10-couchdb.conf) for the plugin in `/etc/collectd/managed_config` according to the [Configuration](#configuration) section.
+4. Modify the <a class="external" href="[#configuration](https://github.com/signalfx/integrations/blob/master/collectd-couchdb/10-couchdb.conf" target="_blank">sample configuration file</a> for the plugin in `/etc/collectd/managed_config` according to the configuration section.
 5. Install the Python requirements:
 
    ```

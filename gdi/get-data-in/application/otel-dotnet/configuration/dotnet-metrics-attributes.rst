@@ -51,6 +51,9 @@ The Splunk Distribution of OpenTelemetry .NET can collect the following runtime 
    * - ``process.runtime.dotnet.gc.committed_memory.size``
      - Gauge
      - Amount of committed virtual memory for the managed GC heap, as observed during the last garbage collection. Only available for .NET 6 and higher.
+   * - ``process.runtime.dotnet.gc.duration``
+     - Cumulative counter
+     - The total amount of time paused in GC since the process start. Only available for .NET 7 and higher.
    * - ``process.runtime.dotnet.monitor.lock_contention.count``
      - Cumulative counter
      - Contentions count when trying to acquire a monitor lock since the process started.

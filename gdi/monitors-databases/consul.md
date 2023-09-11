@@ -6,15 +6,15 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Consul datastore monitor type to monitor Consul datastores and collect metrics from the following endpoints:
 
-- [/agent/self](https://www.consul.io/api/agent.html#read-configuration)
-- [/agent/metrics](https://www.consul.io/api/agent.html#view-metrics)
-- [/catalog/nodes](https://www.consul.io/api/catalog.html#list-nodes)
-- [/catalog/node/:node](https://www.consul.io/api/catalog.html#list-services-for-node)
-- [/status/leader](https://www.consul.io/api/status.html#get-raft-leader)
-- [/status/peers](https://www.consul.io/api/status.html#list-raft-peers)
-- [/coordinate/datacenters](https://www.consul.io/api/coordinate.html#read-wan-coordinates)
-- [/coordinate/nodes](https://www.consul.io/api/coordinate#read-lan-coordinates-for-all-nodes)
-- [/health/state/any](https://www.consul.io/api/health.html#list-checks-in-state)
+- <a class="external" href="https://www.consul.io/api/agent.html#read-configuration" target="_blank">/agent/self</a>.
+- <a class="external" href="https://www.consul.io/api/agent.html#view-metrics" target="_blank">/agent/metrics</a>.
+- <a class="external" href="https://www.consul.io/api/catalog.html#list-nodes" target="_blank">/catalog/nodes</a>.
+- <a class="external" href="https://www.consul.io/api/catalog.html#list-services-for-node" target="_blank">/catalog/node/:node</a>.
+- <a class="external" href="https://www.consul.io/api/status.html#get-raft-leader" target="_blank">/status/leader</a>.
+- <a class="external" href="https://www.consul.io/api/status.html#list-raft-peers" target="_blank">/status/peers</a>.
+- <a class="external" href="https://www.consul.io/api/coordinate.html#read-wan-coordinates" target="_blank">/coordinate/datacenters</a>.
+- <a class="external" href="https://www.consul.io/api/coordinate#read-lan-coordinates-for-all-nodes" target="_blank">/coordinate/nodes</a>.
+- <a class="external" href="https://www.consul.io/api/health.html#list-checks-in-state" target="_blank">/health/state/any</a>.
 
 This integration is only available on Kubernetes and Linux. 
 

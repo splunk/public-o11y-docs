@@ -5,6 +5,9 @@
 Scenario: Kai creates custom events and monitor a single page application
 ******************************************************************************
 
+.. meta::
+  :description: An example scenario of how to use Splunk RUM to monitor key metrics for a single-page application.
+
 The following scenario features Buttercup Industries, a fictitious e-commerce company.
 
 About this scenario

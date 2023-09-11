@@ -5,7 +5,7 @@ Introduction to Splunk RUM
 ************************************************
 
 .. meta::
-   :description: With Splunk Real User Monitoring, you can gain insight about the performance and health of the front-end user experience of your application.
+   :description: Learn more about how Splunk Real Using Monitoring (RUM) can help you monitor front-end user experience of applications, identify errors, and troubleshoot long resource response times.
 
 With Splunk Real User Monitoring (RUM), you can gain insight about the performance and health of the front-end user experience of your application. Splunk RUM offers two solutions:
 

@@ -7,7 +7,7 @@
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `jaeger-grpc` monitor type to run a gRPC server that listens for Jaeger trace batches and forwards them to Splunk Observability Cloud (or the configured ingest host in the `writer` section of the agent config). By default, the server listens on localhost port `14250`, but can be configured to anything.
 
 ```{note}
-If you're using OpenTelemetry, consider using the native OpenTelemetry Jaeger receiver. To learn more, see [the Jaeger receiver documentation in GitHub](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver/jaegerreceiver).
+If you're using OpenTelemetry, consider using the native OpenTelemetry Jaeger receiver. To learn more, see <a class="external" href="https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver/jaegerreceiver" target="_blank">the Jaeger receiver documentation in GitHub</a>.
 ```
 
 ## Benefits
