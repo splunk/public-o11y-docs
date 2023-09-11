@@ -5,11 +5,20 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 <!-- Google Analytics -->
 
-<!-- OneTrust Cookies Consent Notice start for docs.splunk.com -->
-<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="8ce8262c-a59d-4265-a12b-e2462f788bf4" ></script>
 <script type="text/javascript">
-function OptanonWrapper() { }
+    if (window.location.hostname === 'docs.splunk.com') {
+
+        let script = document.createElement('script');
+        script.src = 'https://cdn.cookielaw.org/scripttemplates/otSDKStub.js';
+        script.type = 'text/javascript';
+        script.charset = 'UTF-8';
+        script.setAttribute('data-domain-script', '8ce8262c-a59d-4265-a12b-e2462f788bf4');
+        document.head.appendChild(script);
+        function OptanonWrapper() { }
+
+    }
 </script>
+
 <!-- OneTrust Cookies Consent Notice end for docs.splunk.com -->
 
 
@@ -23,8 +32,9 @@ function OptanonWrapper() { }
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPV7TP"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-
-
+<!--
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.3.0/mermaid.min.js" integrity="sha512-FwnznVYc+d1qqPe2F+6IxQCa5j/3kCqUUgkJfMjP5r71sHNuDvQYn5h/aUkVwkh+Gihu5licMvcItyF06s5uRw==" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
+-->
 <!-- Hotjar Tracking Code for https://docs.splunk.com/observability/ -->
 <script>
     (function(h,o,t,j,a,r){

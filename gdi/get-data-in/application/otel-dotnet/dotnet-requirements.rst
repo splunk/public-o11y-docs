@@ -51,7 +51,7 @@ Traces instrumentations
      - Experimental
      - Community support
      - ``ASPNETCORE``
-   * - Azure SDK |br| (Not supported on .NET Framework)
+   * - Azure SDK
      - ``Azure.`` prefixed packages, released after October 1, 2021
      - Experimental
      - Vendor support
@@ -97,7 +97,7 @@ Traces instrumentations
      - Vendor support
      - ``MYSQLCONNECTOR``  
    * - MySql.Data |br| (Not supported on .NET Framework)
-     - 6.10.7 to 8.0.32
+     - 8.1.0 and higher
      - Experimental
      - Vendor support
      - ``MYSQLDATA``
@@ -126,7 +126,7 @@ Traces instrumentations
      - Experimental
      - Community support
      - ``STACKEXCHANGEREDIS``
-   * - System.ServiceModel |br| (Not supported on .NET Framework)
+   * - System.ServiceModel |br| (Service side not supported on .NET)
      - 4.7.0 and higher |br| of ``System.ServiceModel.Primitives``
      - Experimental
      - Community support

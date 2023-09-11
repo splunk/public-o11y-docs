@@ -243,6 +243,8 @@ You can exclude or include logs using resource attributes or OTTL conditions. Fo
        log_record:
          - 'attributes["test"] == "pass"'
 
+.. _filter-processor-kubernetes:
+
 Filter Kubernetes elements
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

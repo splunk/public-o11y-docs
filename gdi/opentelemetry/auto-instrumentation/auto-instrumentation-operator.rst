@@ -42,15 +42,15 @@ Deploy the :ref:`Collector for Kubernetes with the Helm chart <helm-chart>` with
 Ingest traces
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In order to be properly ingest trace telemetry data, the attribute ``environment`` must be on board the exported traces. There are two ways to set this attribute:
+To ingest trace telemetry data, the attribute ``environment`` must be on board the exported traces. There are two ways to set this attribute:
 
 * Use the `values.yaml` optional environment configuration.
 * Use the Instrumentation spec with the environment variable ``OTEL_RESOURCE_ATTRIBUTES``.
 
-Add certifications
+Add certificates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The Operator requires certain TLS cerificates to work. If a certification manager (or any other TLS certificate source) is not available in the cluster, then you'll need to deploy it using ``certmanager.enabled=true``. You can use the following commands to run these steps.
+The Operator requires certain TLS cerificates to work. If a certification manager (or any other TLS certificate source) is not available in the cluster, then you need to deploy it using ``certmanager.enabled=true``. You can use the following commands to run these steps.
 
 .. code-block:: yaml
 
@@ -96,7 +96,7 @@ Run the following to verify the resources are deployed correctly:
 
 You can add an ``instrumentation.opentelemetry.io/inject-{instrumentation_library}`` annotation to the following:
 
-* Namespace: All pods within that namespace will be instrumented.
+* Namespace: All pods within that namespace _alert-signal instrumented.
 * Pod Spec Objects: PodSpec objects that are available as part of Deployment, Statefulset, or other resources can be annotated.
 
 Instrumentation annotations can have the following values:
@@ -113,6 +113,8 @@ Sample annotations include:
 * ``instrumentation.opentelemetry.io/inject-nodejs: "true"``
 * ``instrumentation.opentelemetry.io/inject-python: "true"``
 
+.. note:: .NET automatic instrumentation is not compatible with Alpine-based images.
+
 4. Check out the results at Splunk Observability APM
 ------------------------------------------------------------
 
@@ -123,4 +125,4 @@ Learn more
 
 * See :ref:`auto-instrumentation-java-operator`.
 * To learn more about how Auto Instrumentation works in Splunk Observability Cloud, see :new-page:`more detailed documentation in GH <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/auto-instrumentation-install.md#how-does-auto-instrumentation-work>`.
-* Refer to :new-page:`the operator pattern in the Kubernetes documentation <https://kubernetes.io/docs/concepts/extend-kubernetes/operator/>` for more information.
+* See :new-page:`the operator pattern in the Kubernetes documentation <https://kubernetes.io/docs/concepts/extend-kubernetes/operator/>` for more information.

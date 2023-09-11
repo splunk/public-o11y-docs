@@ -4,14 +4,47 @@
 Manually instrument Node applications for Splunk Observability Cloud
 ********************************************************************
 
-.. meta:: 
-   :description: Manually instrument your Node application when you need to add custom attributes to spans or want to manually generate spans and metrics. Keep reading to learn how to manually instrument your Node application for Splunk Observability Cloud. 
+.. meta::
+   :description: Manually instrument your Node application when you need to add custom attributes to spans or want to manually generate spans and metrics. Keep reading to learn how to manually instrument your Node application for Splunk Observability Cloud.
 
 Instrumenting applications automatically using the agent of the Splunk Distribution of OpenTelemetry Node covers most needs. Manually instrumenting your application is only necessary when, for example, you need to add custom attributes to spans or need to manually generate spans.
 
-For instructions on how to manually instrument Java applications, see the Manual instrumentation docs in the OpenTelemetry official documentation at :new-page:`https://opentelemetry.io/docs/instrumentation/js/manual/ <https://opentelemetry.io/docs/instrumentation/js/manual/>`.
-
 .. note:: Manual OTel instrumentation is fully compatible with Splunk automatic Node.js instrumentation and is fully supported by Splunk.
+
+.. _nodejs-otel-custom-traces:
+
+Custom traces
+=====================================
+
+To send custom traces to Splunk Observability Cloud, add the required dependencies and configure tracing:
+
+.. code-block:: javascript
+
+   const { start } = require('@splunk/otel');
+   const opentelemetry = require('@opentelemetry/api');
+
+   start({
+     serviceName: 'my-service',
+   });
+
+   const tracer = opentelemetry.trace.getTracer('example-app', '0.1.0');
+
+   function randomNumber() {
+     return tracer.startActiveSpan('make-random', (span) => {
+       const result = Math.random() * 42;
+       span.setAttribute('random-result', result);
+       span.end();
+       return result;
+     });
+   }
+
+   setInterval(() => {
+     console.log(randomNumber());
+   }, 1000);
+   
+
+.. note:: For more examples of manual instrumentation, see :new-page:`Manual instrumentation <https://opentelemetry.io/docs/instrumentation/js/manual/>` in the OpenTelemetry official documentation.
+
 
 .. _nodejs-otel-custom-metrics:
 

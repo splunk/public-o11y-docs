@@ -4,14 +4,14 @@
 
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the nagios monitor. See benefits, install, configuration, and metrics">
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Nagios monitor type to run existing Nagios status check scripts through the Collector, which acts as the Nagios Remote Plugin Executor (NRPE) or the Simple Network Management Protocol (SNMP) exec directive, and send the [state](https://nagios-plugins.org/doc/guidelines.html#AEN78) of the check, depending on the exit code of the command. 
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Nagios monitor type to run existing Nagios status check scripts through the Collector, which acts as the Nagios Remote Plugin Executor (NRPE) or the Simple Network Management Protocol (SNMP) exec directive, and send the <a class="external" href="https://nagios-plugins.org/doc/guidelines.html#AEN78" target="_blank">state</a> of the check, depending on the exit code of the command. 
 
-This integration is similar to the [telegraf/exec monitor configured with dataFormat:nagios integration](https://docs.splunk.com/Observability/gdi/exec/telegraf-exec.html), with the following exceptions:
+This integration is similar to the telegraf/exec monitor configured with dataFormat:nagios integration, with the following exceptions:
 
 - It does not retrieve perfdata metrics. This integration only retrieves the state of the script for alerting purposes.
 - It overrides the state if the exit code `== 0`, but the output string starts with `warn`, `crit`, or `unkn` (not case-sensitive).
 
-This integration adds more context to the status check state by using [events](https://docs.splunk.com/Observability/alerts-detectors-notifications/view-data-events.html#events-intro). In addition to the `state` metric, it also sends an event that includes the output and the error caught from the command execution.
+This integration adds more context to the status check state by using events. In addition to the `state` metric, it also sends an event that includes the output and the error caught from the command execution.
 
 Using this integration should make troubleshooting more efficient and let you remain in Splunk Observability Cloud without connecting to your Linux or Windows machine in case of an abnormal state to understand what is happening. Using this integration also lets you create a dashboard that is familiar to Nagios users.
 

@@ -1,7 +1,7 @@
 .. _instrument-java-applications:
 
 ***************************************************************************
-Instrument a Java application for Splunk Observability Cloud
+Instrument your Java application for Splunk Observability Cloud
 ***************************************************************************
 
 .. meta::

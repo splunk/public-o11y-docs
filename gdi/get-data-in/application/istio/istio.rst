@@ -87,10 +87,10 @@ For example:
                sampling: 100
                zipkin:
                   address: $(HOST_IP):9411
-            custom_tags:
-               environment.deployment:
-                  literal:
-                     value: dev
+               custom_tags:
+                  environment.deployment:
+                     literal:
+                        value: dev
 
 To activate the new configuration, run:
 
@@ -137,10 +137,10 @@ For example:
                sampling: 100
                zipkin:
                   address: $(HOST_IP):9411
-            custom_tags:
-               environment.deployment:
-                  literal:
-                     value: dev
+               custom_tags:
+                  environment.deployment:
+                     literal:
+                        value: dev
 
 For more information on how to configure Istio see the Istio distributed tracing installation documentation.
 
