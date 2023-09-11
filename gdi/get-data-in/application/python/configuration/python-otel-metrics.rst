@@ -18,8 +18,6 @@ Activate metrics collection
 
 The Splunk Distribution of OpenTelemetry Python collects metrics by default. To deactivate metrics collection, update your environment variable:
 
-.. code_block:: python
-
 .. _python-app-metrics:
 
 Application metrics
