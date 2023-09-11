@@ -50,7 +50,7 @@ The following dimensions are automatically added to all metrics exported by the 
   * - ``telemetry.sdk.language``
     - Language of the SDK, set to ``python``.
   * - ``telemetry.sdk.version``
-    - Version of the SDK. 
+    - Version of the OpenTelemetry SDK. 
 
 .. _python-supported-libraries:
 
