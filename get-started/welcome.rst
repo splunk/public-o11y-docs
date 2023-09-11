@@ -43,7 +43,7 @@ The following diagram provides an overview of the Splunk Observability Cloud arc
       classDef default fill:#FFFFFF, stroke:#000
       log-->splunkPlatform[(Splunk platform)]-->logObserver[(Log Observer Connect)]-->analytics
       
-      subgraph o11yArchitecture[&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSplunk Observability Cloud Architecture]
+      subgraph o11yArchitecture[Splunk Observability Cloud Architecture]
       direction LR
         data-->otel-->ingestion-->processingRetention-->analytics
 
@@ -53,9 +53,6 @@ The following diagram provides an overview of the Splunk Observability Cloud arc
             disTrace(Distributed traces)
             metric(Metrics)
         end 
-
-
-
         
         subgraph otel[OpenTelemetry Collector]
             direction LR
@@ -67,7 +64,8 @@ The following diagram provides an overview of the Splunk Observability Cloud arc
         subgraph ingestion[Ingestion]
             direction LR 
             traceAssembly(Trace assembly)
-            quantizer(Quantizer)
+            quantizer(Quantizer)---rollups(Rollups)
+            quantizer---lagAdjust(Dynamic lag adjustment)
             metadataExtraction(Metadata extraction)
         end
 
@@ -88,8 +86,6 @@ The following diagram provides an overview of the Splunk Observability Cloud arc
         end
 
       end
-
-
 
 To learn more about Observability Cloud's data model, refer to :ref:`data-model`.
 
