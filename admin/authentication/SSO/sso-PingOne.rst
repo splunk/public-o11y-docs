@@ -1,5 +1,3 @@
-.. _configure-sso-using-pingone:
-
 .. _sso-ping-one:
 
 *********************************************************************
@@ -35,30 +33,30 @@ Next, in PingOne connect a SAML application to the PingOne integration instance 
 steps:
 
 #. Navigate to your PingOne console page. For example, navigate to ``https://console.pingone.com/?env=envId``
-#. Select :guilabel:`Connections` from the left menu
-#. Select :guilabel:`Applications` from the child menu
+#. Select :guilabel:`Connections` from the side menu.
+#. Select :guilabel:`Applications` from the menu.
 #. To add a SAML application for the login, select the :guilabel:`+` icon.
 #. Enter an application name. For example, enter "Splunk Observability SAML".
 #. In :guilabel:`Application Type`, select :guilabel:`SAML Application`.
 #. Select :guilabel:`Configure`
 #. In :guilabel:`SAML Configuration`, select :guilabel:`Manually Enter`.
-#. In :guilabel:`ACS URLs`, enter an ACS URL that contains the following information:
+#. In :guilabel:`ACS URLs`, enter an Assertion Consumer Service (ACS) URL that contains the following information:
 
    * The realm for your organization
    * From the previous step, the integration ID for the PingOne integration
 
-   The URL format is ``https://api.<REALM>.signalfx.com/v1/saml/acs/<INTEGRATION_ID>
+   The URL format is ``https://api.<REALM>.signalfx.com/v1/saml/acs/<INTEGRATION_ID>``
 
-   For example, enter ```https://api.example0.signalfx.com/v1/saml/acs/XXXXYYZZ
+   For example, enter ``https://api.example0.signalfx.com/v1/saml/acs/XXXXYYZZ``
 
 #. For Entity ID, enter a URL to the ACS URL, but with a different ending path segment
 
    For example, enter ``https://api.example0.signalfx.com/v1/saml/metadata``.
 
 #. Select :guilabel:`Save`
-#. Select your newly created application,  then select :guilabel:`Configuration` from the sidebar.
+#. Select your newly created application, then select :guilabel:`Configuration` from the sidebar.
 #. Select :guilabel:`Download Metadata`.
-#. Select :guilabel:`Download Signing Certificate`, then select :guilabel:`X509 PEM.crt`.
+#. Select :guilabel:`Download Signing Certificate`, then select the Privacy Enhanced Mail (PEM) file with the name ``X509 PEM.crt``.
 
 Enter the PingOne connection information Observability Cloud
 ===============================================================================
@@ -66,7 +64,7 @@ Enter the PingOne connection information Observability Cloud
 In Observability Cloud, update the integration instance with the information from PingOne. Follow these steps:
 
 #. In Observability Cloud, open the new PingOne integration instance you created in the previous section.
-#. In :guilabel:`Certificate`, select :guilabel:`Upload File`, then select the X509 PEM.crt file
+#. In :guilabel:`Certificate`, select :guilabel:`Upload File`, then select the PEM file with the name ``X509 PEM.crt``.
 #. In :guilabel:`Metadata`, select the metadata file you downloaded in a previous step.
 #. Select :guilabel:`Save`.
 
@@ -88,6 +86,6 @@ set up the data mapping from PingOne to Observability Cloud, follow these steps:
 #. Select :guilabel:`Save`
 #. To enable the new PingOne SAML application, toggle the switch at the top of the page.
 
-To learn more about mapping Observability Cloud data fields to PingOne data fields, see the section :ref:`saml-user-information` in the topic :ref:`sso-generic`.
+To learn more about mapping Observability Cloud data fields to PingOne data fields, see the :ref:`saml-user-information` section in the :ref:`sso-generic` topic.
 
 .. include:: /_includes/troubleshooting-steps.rst

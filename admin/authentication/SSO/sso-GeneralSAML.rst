@@ -42,9 +42,9 @@ Information required for generic SAML SSO integrations
 * ``User.email``: User's email address
 * ``PersonImmutableID``: A unique identifier for this user
 
-:strong:`ACS URL`
+:strong:`Assertion Consumer Service (ACS) URL`
 
-* Some ACS URLs include realm information. To learn more, see :ref:`Note about realms<about-realms>`.
+* Some Assertion Consumer Service (ACS) URLs include realm information. To learn more, see :ref:`Note about realms<about-realms>`.
 * The ACS URL includes an integration ID that's unique for each integration.
 * The SAML page displays this ID.
 
