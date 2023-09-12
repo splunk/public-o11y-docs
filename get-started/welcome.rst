@@ -17,77 +17,7 @@ Splunk Observability Cloud provides full-fidelity monitoring and troubleshooting
 
 Choose from :ref:`over 100 supported open standards-based integrations <supported-data-sources>` with common data sources to get data from your on-premise and cloud infrastructure, applications and services, and user interfaces into Observability Cloud.
 
-When you send data from each layer of your full-stack environment to Observability Cloud, it transforms raw metrics, traces, and logs into actionable insights in the form of dashboards, visualizations, alerts, and more.
-
-The following diagram provides an overview of the Splunk Observability Cloud architecture.
-
-.. mermaid::
-
-  %%{
-    init: {
-      'theme': 'base',
-      'themeVariables': {
-        'primaryColor': '#FFFFFF',
-        'primaryTextColor': '#000000',
-        'primaryBorderColor': '#000000',
-        'nodeBorder':'#000000',
-        'lineColor': '#000000',
-      }
-    }
-  }%%
-
-  flowchart LR
-      %% LR indicates the direction (left-to-right)
-
-      %% You can define classes to style nodes and oth
-      classDef default fill:#FFFFFF, stroke:#000
-      log-->splunkPlatform[(Splunk platform)]-->logObserver[(Log Observer Connect)]-->analytics
-      
-      subgraph o11yArchitecture[Splunk Observability Cloud Architecture]
-      direction LR
-        data-->otel-->ingestion-->processingRetention-->analytics
-
-        subgraph data[Data sources]
-            direction LR
-            log(Logs)
-            disTrace(Distributed traces)
-            metric(Metrics)
-        end 
-        
-        subgraph otel[OpenTelemetry Collector]
-            direction LR
-            aggregate((aggregate))
-            parse((parse, extract, enrich))
-            delete((delete))
-        end
-
-        subgraph ingestion[Ingestion]
-            direction LR 
-            traceAssembly(Trace assembly)
-            quantizer(Quantizer)---rollups(Rollups)
-            quantizer---lagAdjust(Dynamic lag adjustment)
-            metadataExtraction(Metadata extraction)
-        end
-
-        subgraph processingRetention[Processing and retention]
-            direction LR 
-            indexStorage(Indexing and storage)
-            traceMetricization(Trace metricization)
-        end
-
-        subgraph analytics[Analytics]
-            direction LR 
-            traceAnalyis(Tracing analysis)
-            predictiveAnalysis(Predictive analytics)
-            incidentAnalysis(Incident analysis)
-            anommalyDetection(Anomaly detection)
-            signalflow(SignalFlow)
-            historicalBaseline(Historical baselines)
-        end
-
-      end
-
-To learn more about Observability Cloud's data model, refer to :ref:`data-model`.
+When you send data from each layer of your full-stack environment to Observability Cloud, it transforms raw metrics, traces, and logs into actionable insights in the form of dashboards, visualizations, alerts, and more. To learn more about Observability Cloud's data model, refer to :ref:`data-model`.
 
 Splunk Observability Cloud's suite of products and features allow you to quickly and intelligently respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward.
 
