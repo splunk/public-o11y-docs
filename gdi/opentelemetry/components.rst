@@ -43,6 +43,7 @@ Components
     components/splunk-hec-receiver
     components/transform-processor
     components/windowsperfcounters-receiver
+    components/zpages-extension    
 
 The OpenTelemetry Collector includes the following component types:
 
@@ -325,7 +326,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
      - Activates the golang ``net/http/pprof`` endpoint, which is used to collect performance profiles and investigate issues with a service.
    * - ``smartagent``
      - Provides a mechanism to set configuration options that are applicable to all instances of the Smart Agent receiver. Allows to migrate your existing Smart Agent configuration to the Splunk Distribution of OpenTelemetry Collector. 
-   * - ``zpages``
+   * - :ref:`zpages-extension` (``zpages``) 
      - Activates an extension that serves zPages, an HTTP endpoint that provides live data for debugging different components.
 
 

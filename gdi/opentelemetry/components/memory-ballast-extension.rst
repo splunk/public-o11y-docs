@@ -65,7 +65,7 @@ This configuration uses 20% of the total memory for the ballast:
 Settings
 ======================
 
-The following table shows the configuration options for the ``health_check`` extension:
+The following table shows the configuration options for the Memory Ballast extension:
 
 .. raw:: html
 
