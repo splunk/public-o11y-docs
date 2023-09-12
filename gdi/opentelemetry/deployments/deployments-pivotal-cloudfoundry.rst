@@ -15,7 +15,13 @@ There are three deployment options:
 
 * :ref:`otel-pcf-buildpack`: This integration installs and runs the Collector as a sidecar to your app. In this configuration, the Collector runs in the same container as the app.
 
-* :ref:`otel-pcf-tile`: The Tanzu Tile is a packaged release of the Collector that can be integrated into Pivotal Ops Manager. The Tanzu Tile allows you to download, install, run, configure, and update the Collector from the Ops Manager. Note that only Tanzu Application Service (TAS) versions 3 and 4 are supported.
+* :ref:`otel-pcf-tile`: The Tanzu Tile is a packaged release of the Collector that can be integrated into Pivotal Ops Manager. The Tanzu Tile allows you to download, install, run, configure, and update the Collector from the Ops Manager. 
+  
+  Note that only the following are supported:
+
+    * Tanzu Application Service (TAS) versions 3 and 4
+    * VMware Tanzu Operations Manager version 3
+    * Stemcells (Ubuntu Jammy) version 1.222
 
 .. _otel-pcf-bosch:
 .. _pivotal-cloud-foundry:
@@ -238,7 +244,11 @@ Tanzu Tile
 
 The Tanzu tile uses the :ref:`otel-pcf-bosch` to deploy the Collector as a nozzle to :new-page:`Loggregator Firehose <https://docs.pivotal.io/tiledev/2-2/nozzle.html>`.
 
-Note that only Tanzu Application Service (TAS) versions 3 and 4 are supported.
+Note that only the following services are supported:
+
+  * Tanzu Application Service (TAS) versions 3 and 4
+  * VMware Tanzu Operations Manager version 3
+  * Stemcells (Ubuntu Jammy) version 1.222
 
 Dependencies
 ----------------------------------
