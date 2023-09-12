@@ -23,6 +23,8 @@ To connect Observability Cloud to AWS using PrivateLink, make sure you have:
 * An active AWS account.
 * Basic understanding of VPC concepts and networking principles.
 
+.. _aws-privatelink-regions-names:
+
 PrivateLink availability and service name
 ==================================================
 
@@ -147,11 +149,7 @@ To create a VPC endpoint, follow these steps:
 
 3. Select :guilabel:`Create Endpoint`, and then :guilabel:`Other endpoint` services.
 
-4. Verify the service name. To do so, work with your Splunk support team to:
-
-  * Enable PrivateLink support for your AWS account in the specific realm.
-  * Get your PrivateLink service name for your Observability realm.
-  * Include your customer account numbers in the allow list of the Observability realm VPC endpoint.
+4. Enter and verify the service name based on the AWS region where you're configuring the VPC endpoint. Identify the service name using the tables in :ref:`PrivateLink availability and service name <aws-privatelink-regions-names>`.
 
 5. Select the VPC in which you want to create the endpoint. Make sure the default VPC's region is the same as the region in which you're creating the endpoint.
 
@@ -167,11 +165,11 @@ To create a VPC endpoint, follow these steps:
 
 9. Review the configuration details and select :guilabel:`Create Endpoint`.
 
-Step 2: Use a VPC endpoint
+Step 2: Determine the VPC endpoint ID
 --------------------------------------------------
 
-#. Identify the endpoint service associated with the VPC endpoint you established.
-#. Test your application or service to ensure it successfully accesses the AWS service through the VPC endpoint.
+#. Navigate to the Amazon VPC service within the specific region where you have created the VPC endpoint and look for the :guilabel:`VPC endpoint ID`.
+#. Once identified, :ref:`contact Support <aws-privatelink-support>` and request being added to the allow list. 
 
 Step 3: Manage your VPC endpoints
 --------------------------------------------------
@@ -229,5 +227,7 @@ After you connect Splunk Observability Cloud with AWS, you can use Observability
 
 - See the AWS official documentation for a list of the available AWS resources.
 - See :ref:`how to leverage data from integration with AWS <aws-post-install>` for more information.
+
+.. _aws-privatelink-support:
 
 .. include:: /_includes/troubleshooting-steps.rst
