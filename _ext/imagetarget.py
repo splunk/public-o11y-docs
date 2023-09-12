@@ -79,9 +79,18 @@ class imagetarget(Directive):
                 messages.append(data)       # data is a system message
             del self.options['target']
         set_classes(self.options)
-        imagetarget_node = nodes.imagetarget(self.block_text, **self.options)
+        imagetarget_node = nodes.image(self.block_text, **self.options)
         if reference_node:
             reference_node += imagetarget_node
             return messages + [reference_node]
         else:
             return messages + [imagetarget_node]
+        
+def setup(app):
+    app.add_directive("imagetarget", imagetarget)
+
+    return {
+        'version': '1.0',
+        'parallel_read_safe': True,
+        'parallel_write_safe': True,
+    }
