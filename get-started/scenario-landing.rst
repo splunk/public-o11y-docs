@@ -72,8 +72,10 @@ This is the collection of scenarios available for Splunk Observability Cloud.
     - :ref:`ii-scenario-week-by-week`
   * - :ref:`Incident Intelligence scheduling <ii-scenarios-schedules>`
     - :ref:`ii-scenario-day-by-day`
-  * - Infrastructure Monitoring
+  * - :ref:`Infrastructure Monitoring <apm-scenarios-intro>`
     - :ref:`troubleshoot-k8s-nav-scenario`
+  * - :ref:`Infrastructure Monitoring <apm-scenarios-intro>`
+    - :ref:`aggregate-drop-use-case`
   * - :ref:`Infrastructure Monitoring\: Network Explorer <network-explorer-scenarios>`
     - :ref:`find-network-error`
   * - :ref:`Infrastructure Monitoring\: Network Explorer <network-explorer-scenarios>`
@@ -100,3 +102,4 @@ This is the collection of scenarios available for Splunk Observability Cloud.
     - :ref:`uptime-test-scenario`
   * - :ref:`Log Observer <logs-intro-logconnect>`
     - :ref:`logs-LOconnect-scenario`
+
