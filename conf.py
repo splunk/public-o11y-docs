@@ -23,7 +23,7 @@ extensions = [
     'sphinx_tabs.tabs',
     'olly_on_git_hub',
     'sphinxcontrib.images',
-    'imagetarget'
+    'imagetarget',
     'sphinxcontrib.mermaid'
 ]
 
