@@ -21,7 +21,7 @@ There are three deployment options:
 
     * Tanzu Application Service (TAS) versions 3 and 4
     * VMware Tanzu Operations Manager version 3
-    * Stemcells (Ubuntu Jammy) version 1.222
+    * Stemcells (Ubuntu Jammy) version 1.148
 
 .. _otel-pcf-bosch:
 .. _pivotal-cloud-foundry:
