@@ -7,6 +7,7 @@ Splunk Observability Cloud architecture
 .. meta::
    :description: Overview of the architecture of Splunk Observability Cloud
 
+Splunk Observability Cloud is built on top of OpenTelemetry and uses it as the default way of getting data in, which gives you a open standards-based set of instrumentation across all your data types.
 
 .. mermaid::
 
@@ -30,7 +31,7 @@ Splunk Observability Cloud architecture
       classDef default fill:#FFFFFF, stroke:#000
       log-->splunkPlatform[(Splunk platform)]-->logObserver[(Log Observer Connect)]-->analytics
       
-      subgraph o11yArchitecture[Splunk Observability Cloud Architecture]
+      subgraph o11yArchitecture[&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSplunk Observability Cloud Architecture]
       direction LR
         data-->otel-->ingestion-->processingRetention-->analytics
 
