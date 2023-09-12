@@ -34,7 +34,7 @@ On the target host or container, check the value in ``memory.limit_in_bytes`` to
 
 * If ``memory.limit_in_bytes`` is a positive value other than ``9223372036854771712`` (``0x7FFFFFFFFFFFF000``), the value for ``ballast_size`` is calculated with the formula 
 
-  ``ballast_size`` = ``memory.limit_in_bytes`` * ``size_in_percentage`` / 100. 
+  ``ballast_size`` = ``size_in_percentage`` * ``memory.limit_in_bytes`` / 100 
 
 * If ``memory.limit_in_bytes`` is ``9223372036854771712`` (``0x7FFFFFFFFFFFF000``), no memory limit has been set for the Collector process or the running container in cgroup, and the value for ``ballast_size`` is calculated with the formula 
   
