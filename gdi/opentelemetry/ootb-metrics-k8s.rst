@@ -24,7 +24,7 @@ Container level metrics and attributes
 
 .. list-table::
   :widths: 30 30 30 10
-  :width: 100
+  :width: 100%
   :header-rows: 1
 
   * - Metric name
@@ -112,7 +112,7 @@ Pod level metrics and attributes
 
 .. list-table::
   :widths: 30 30 30 10
-  :width: 100
+  :width: 100%
   :header-rows: 1
 
   * - Metric name
@@ -194,7 +194,7 @@ Node level metrics and attributes
 
 .. list-table::
   :widths: 30 30 30 10
-  :width: 100
+  :width: 100%
   :header-rows: 1
 
   * - Metric name
@@ -337,7 +337,7 @@ Volume level metrics and attributes
 
 .. list-table::
   :widths: 30 30 30 10
-  :width: 100
+  :width: 100%
   :header-rows: 1
 
   * - Metric name
@@ -368,7 +368,7 @@ Standard resource attributes
 
 .. list-table::
   :widths: 40 20 40 
-  :width: 100
+  :width: 100%
   :header-rows: 1
 
   * - Name
