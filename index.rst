@@ -572,7 +572,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Key concepts <infrastructure/terms-concepts>
 
 .. toctree::
-   :maxdepth:   2
+   :maxdepth:   3
 
    Quick start tutorial <infrastructure/quickstart-imm>
 
@@ -585,7 +585,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    infrastructure/infrastructure
-
 
 .. toctree::
    :maxdepth:   3
