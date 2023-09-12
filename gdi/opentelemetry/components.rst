@@ -310,7 +310,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
      - Uses the ECS and EC2 API to discover Prometheus scrape targets from all running tasks and filter them based on service names, task definitions, and container labels. Only compatible with the Prometheus receiver.
    * - ``file_storage``
      - Persists state to the local file system. Requires read and write access to a diectory.
-   * - :ref:`healthcheck-extension` (``health_check``)
+   * - :ref:`health-check-extension` (``health_check``)
      - Activates an HTTP URL that can be probed to check the status of the OpenTelemetry Collector. You can also use this extension as a liveness or readiness probe on Kubernetes.
    * - ``http_forwarder``
      - Accepts HTTP requests and optionally adds headers and forwards them. The RequestURIs of the original requests are preserved by the extension. 
