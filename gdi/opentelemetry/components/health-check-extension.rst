@@ -1,7 +1,7 @@
 .. _health-check-extension:
 
 ****************************
-Health check extension
+Health Check extension
 ****************************
 
 .. meta::
@@ -24,7 +24,7 @@ The following settings are required:
 Check the Collector's pipeline
 -----------------------------------------
 
-Optionally, you can use the configuration parameter ``check_collector_pipeline`` to enable health check for the Collector pipeline. If activated, you can monitor the number of times that components failed to send data to their destination. 
+Optionally, you can use the configuration parameter ``check_collector_pipeline`` to enable Health Check for the Collector pipelines. If activated, you can monitor the number of times that components failed to send data to their destination. 
 
 Note that it only supports exporter failures, but not receivers or processors.
 
