@@ -1,8 +1,8 @@
 .. _python-otel-metrics:
 
-**************************************************************************
-Metrics and attributes collected by the Splunk Distribution of OTel Python
-**************************************************************************
+*************************************************************************************
+Metrics and attributes collected by the Splunk Distribution of OpenTelemetry Python
+*************************************************************************************
 
 .. meta::
    :description: The Splunk Distribution of OpenTelemetry Python collects the following runtime and custom metrics.
