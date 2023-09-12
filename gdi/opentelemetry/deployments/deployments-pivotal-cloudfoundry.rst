@@ -23,7 +23,7 @@ There are three deployment options:
     * VMware Tanzu Operations Manager version 3
     * Stemcells (Ubuntu Jammy) version 1.148
 
-  Tile version 0.78.1 only support TAS version 2.
+  Tile version 0.78.1 only supports TAS version 2.
 
 .. _otel-pcf-bosch:
 .. _pivotal-cloud-foundry:
@@ -252,7 +252,7 @@ Note that the Tanzu tile version 0.81 or higher supports the following services:
   * VMware Tanzu Operations Manager version 3
   * Stemcells (Ubuntu Jammy) version 1.148
 
-Tile version 0.78.1 only support TAS version 2.
+Tile version 0.78.1 only supports TAS version 2.
 
 Dependencies
 ----------------------------------
