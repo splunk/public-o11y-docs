@@ -266,7 +266,7 @@ Run the following command to create the XCFramework:
 
 4. Import the XCFramework into your project
 
-Open your project in Xcode and drag the SplunkOtel.xcframework file into the project navigator. This automatically imports the framework.
+Open your project in Xcode and drag the SplunkOtel.xcframework file into the project navigator. This automatically imports the framework. Go into the General tab in any targets using the framework and set their Embed property to Embed & Sign.
 
 .. _integrate-ios-apm-traces:
 
