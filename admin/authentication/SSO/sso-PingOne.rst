@@ -58,7 +58,7 @@ steps:
 #. Select :guilabel:`Download Metadata`.
 #. Select :guilabel:`Download Signing Certificate`, then select the Privacy Enhanced Mail (PEM) file with the name ``X509 PEM.crt``.
 
-Enter the PingOne connection information Observability Cloud
+Enter the PingOne connection information in Observability Cloud
 ===============================================================================
 
 In Observability Cloud, update the integration instance with the information from PingOne. Follow these steps:
