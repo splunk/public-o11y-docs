@@ -49,7 +49,7 @@ steps:
 
    For example, enter ``https://api.example0.signalfx.com/v1/saml/acs/XXXXYYZZ``
 
-#. For Entity ID, enter a URL to the ACS URL, but with a different ending path segment
+#. For :guilabel:`Entity ID`, enter a URL to the ACS URL, but with a different ending path segment
 
    For example, enter ``https://api.example0.signalfx.com/v1/saml/metadata``.
 
