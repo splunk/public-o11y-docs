@@ -30,82 +30,82 @@ Container level metrics and attributes
   * - Metric name
     - Metric description
     - Attributes
-    - Dropped?
+    - Kept?
 
   * - ``container.cpu.utilization``
     - Container CPU utilization
     - 
-    - Yes
+    - No
 
   * - ``container.cpu.time``
     - Container CPU time
     - 
-    - Yes
+    - No
 
   * - ``container.memory.available``
     - Container memory available
     - 
-    - Yes
+    - No
 
   * - ``container.memory.usage``
     - Container memory usage
     - 
-    - Yes
+    - No
 
   * - ``container.memory.rss``
     - Container memory rss
     - 
-    - Yes
+    - No
 
   * - ``container.memory.working_set``
     - Container memory ``working_set``
     - 
-    - Yes
+    - No
 
   * - ``container.memory.page_faults``
     - Container memory ``page_faults``
     - 
-    - Yes
+    - No
 
   * - ``container.memory.major_page_faults``
     - Container memory ``major_page_faults``
     - 
-    - Yes
+    - No
 
   * - ``container.filesystem.available``
     - Container filesystem available
     - :ref:`ootb-metrics-k8s-attributes`
-    - Yes
+    - No
 
   * - ``container.filesystem.capacity``
     - Container filesystem capacity
     - :ref:`ootb-metrics-k8s-attributes`
-    - Yes
+    - No
 
   * - ``container.filesystem.usage``
     - Container filesystem usage
     - :ref:`ootb-metrics-k8s-attributes`
-    - Yes
+    - No
 
   * - ``k8s.container.cpu_limit``
     - Container ``cpu_limit``
     - :ref:`ootb-metrics-k8s-attributes`
-    - Yes
+    - No
 
   * - ``k8s.container.cpu_request``
     - Container ``cpu_request``
     - :ref:`ootb-metrics-k8s-attributes`
-    - Yes
+    - No
 
   * - ``k8s.container.memory_limit``
     - Container ``memory_limit``
     - :ref:`ootb-metrics-k8s-attributes`
-    - Yes
+    - No
 
   * - ``k8s.container.memory_request``
     - Container ``memory_request``
     - :ref:`ootb-metrics-k8s-attributes`
-    - Yes
+    - No
 
 Pod level metrics and attributes 
 ============================================================================
@@ -118,76 +118,76 @@ Pod level metrics and attributes
   * - Metric name
     - Metric description
     - Attributes
-    - Dropped?
+    - Kept?
 
   * - ``k8s.pod.cpu.time``
     - Pod CPU time
     - 
-    - Yes
+    - No
 
   * - ``k8s.pod.cpu.utilization``
     - Pod CPU utilization
     - 
-    - Yes
+    - No
 
   * - ``k8s.pod.filesystem.available``
     - Pod filesystem available
     - 
-    - Yes
+    - No
 
   * - ``k8s.pod.filesystem.capacity``
     - Pod filesystem capacity
     - 
-    - Yes
+    - No
 
   * - ``k8s.pod.filesystem.usage``
     - Pod filesystem usage
     - 
-    - Yes
+    - No
 
   * - ``k8s.pod.memory.available``
     - Pod memory available
     - 
-    - Yes
+    - No
 
   * - ``k8s.pod.memory.page_faults``
     - Pod memory ``page_faults``
     - 
-    - Yes
+    - No
 
   * - ``k8s.pod.memory.major_page_faults``
     - Pod memory ``major_page_faults``
     - 
-    - Yes
+    - No
 
   * - ``k8s.pod.memory.rss``
     - Pod memory rss
     - 
-    - Yes
+    - No
 
   * - ``k8s.pod.memory.usage``
     - Pod memory usage
     - 
-    - Yes
+    - No
 
   * - ``k8s.pod.memory.working_set``
     - Pod memory ``working_set``
     - 
-    - Yes
+    - No
 
   * - ``k8s.pod.network.errors``
     - Pod network errors
     - * ``interface``. See :ref:`kubelet-stats-receiver`
       * ``direction``. See :ref:`kubelet-stats-receiver`
       * :ref:`ootb-metrics-k8s-attributes`
-    - No
+    - **Yes**
 
   * - ``k8s.pod.network.io``
     - Pod network IO
     - * ``interface``. See :ref:`kubelet-stats-receiver`
       * ``direction``. See :ref:`kubelet-stats-receiver`
       * :ref:`ootb-metrics-k8s-attributes`
-    - No
+    - **Yes**
 
 Node level metrics and attributes 
 ============================================================================
@@ -200,88 +200,88 @@ Node level metrics and attributes
   * - Metric name
     - Metric description
     - Attributes
-    - Dropped?
+    - Kept?
 
   * - ``k8s.node.cpu.time``
     - Node CPU time
     - 
-    - Yes
+    - No
 
   * - ``k8s.node.cpu.utilization``
     - Node CPU utilization
     - 
-    - Yes
+    - No
 
   * - ``k8s.node.filesystem.available``
     - Node filesystem available
     - 
-    - Yes
+    - No
 
   * - ``k8s.node.filesystem.capacity``
     - Node filesystem capacity
     - 
-    - Yes
+    - No
 
   * - ``k8s.node.filesystem.usage``
     - Node filesystem usage
     - 
-    - Yes
+    - No
 
   * - ``k8s.node.memory.available``
     - Node memory available
     - 
-    - Yes
+    - No
 
   * - ``k8s.node.memory.page_faults``
     - Node memory ``page_faults``
     - 
-    - Yes
+    - No
 
   * - ``k8s.node.memory.major_page_faults``
     - Node memory ``major_page_faults``
     - 
-    - Yes
+    - No
 
   * - ``k8s.node.memory.rss``
     - Node memory rss
     - 
-    - Yes
+    - No
 
   * - ``k8s.node.memory.usage``
     - Node memory usage
     - 
-    - Yes
+    - No
 
   * - ``k8s.node.memory.working_set``
     - Node memory ``working_set``
     - 
-    - Yes
+    - No
 
   * - ``k8s.node.network.errors``
     - Node network errors
     - * ``interface``. See :ref:`kubelet-stats-receiver`
       * ``direction``. See :ref:`kubelet-stats-receiver`
       * :ref:`ootb-metrics-k8s-attributes`
-    - Yes
+    - No
 
   * - ``k8s.node.network.io``
     - Node network IO
     - * ``interface``. See :ref:`kubelet-stats-receiver`
       * ``direction``. See :ref:`kubelet-stats-receiver`
       * :ref:`ootb-metrics-k8s-attributes`
-    - Yes
+    - No
 
   * - ``system.cpu.time``
     - System CPU time
     - 
-    - Yes
+    - No
 
   * - ``system.cpu.utilization``
     - Percentage of CPU time broken down by different states
     - * ``cpu``. See :ref:`host-metrics-receiver`
       * ``state``. See :ref:`host-metrics-receiver`
       * :ref:`ootb-metrics-k8s-attributes`
-    - No
+    - **Yes**
 
   * - ``system.filesystem.usage``
     - Filesystem bytes used
@@ -291,7 +291,7 @@ Node level metrics and attributes
       * ``type``. See :ref:`host-metrics-receiver`
       * ``state``. See :ref:`host-metrics-receiver`      
       * :ref:`ootb-metrics-k8s-attributes`
-    - No
+    - **Yes**
 
   * - ``system.filesystem.utilization``
     - Fraction of filesystem bytes used
@@ -300,37 +300,37 @@ Node level metrics and attributes
       * ``mountpoint``. See :ref:`host-metrics-receiver`
       * ``type``. See :ref:`host-metrics-receiver`
       * :ref:`ootb-metrics-k8s-attributes`
-    - No
+    - **Yes**
 
   * - ``system.cpu.load_average.1m``
     - Average CPU Load over 1 minute
     - 
-    - No
+    - **Yes**
 
   * - ``system.cpu.load_average.5m``
     - Average CPU Load over 5 minutes
     - 
-    - No
+    - **Yes**
 
   * - ``system.cpu.load_average.15m``
     - Average CPU Load over 15 minutes
     - 
-    - No
+    - **Yes**
 
   * - ``system.memory.usage``
     - Bytes of memory in use
     - ``state``. See :ref:`host-metrics-receiver`     
-    - No
+    - **Yes**
 
   * - ``system.memory.utilization``
     - Percentage of memory bytes in use
     - ``state``. See :ref:`host-metrics-receiver`   
-    - No
+    - **Yes**
 
   * - ``system.paging.utilization``
     - Swap (Unix) or pagefile (Windows) utilization
     - 
-    - No
+    - **Yes**
 
 Volume level metrics and attributes 
 ============================================================================
@@ -343,17 +343,17 @@ Volume level metrics and attributes
   * - Metric name
     - Metric description
     - Attributes
-    - Dropped?
+    - Kept?
 
   * - ``k8s.volume.available``
     - The number of available bytes in the volume
     - :ref:`ootb-metrics-k8s-attributes`
-    - No
+    - **Yes**
 
   * - ``k8s.volume.capacity``
     - The number of capacity bytes in the volume
     - :ref:`ootb-metrics-k8s-attributes`
-    - No
+    - **Yes**
 
 Internal metrics
 ============================================================================
