@@ -50,7 +50,7 @@ The Splunk OpenTelemetry Lambda Layer supports the following runtimes in AWS Lam
 - Python 3.8 and 3.9
 - Node.js 14 and higher
 - Ruby 2.7
-- Go 1.18
+- Go 1.19
 
 The Lambda Layer requires 49 MB on-disk in standard x86_64 systems.
 
