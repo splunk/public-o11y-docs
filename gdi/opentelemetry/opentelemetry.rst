@@ -37,7 +37,7 @@ The Splunk Distribution of OpenTelemetry Collector is a distribution of the Open
 * Better defaults for Splunk products
 * Discovery mode for metric sources
 * Zero configuration auto instrumentation
-* Fluentd for log capture
+* Fluentd for log capture, deactivated by default
 * Tools to support migration from SignalFx products
 
 .. note::

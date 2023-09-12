@@ -207,7 +207,7 @@ The following snippet shows how to create a workflow span:
    const tracer = trace.getTracer('appModuleLoader');
    const span = tracer.startSpan('test.module.load', {
    attributes: {
-      'workflow.id': 1,
+
       'workflow.name': 'test.module.load'
    }
    });
@@ -225,7 +225,6 @@ To activate error collection for workflow spans, add the ``error`` and ``error.m
    const tracer = trace.getTracer('appModuleLoader');
    const span = tracer.startSpan('test.module.load', {
    attributes: {
-      'workflow.id': 1,
       'workflow.name': 'test.module.load',
       'error': true,
       'error.message': 'Custom workflow error message'

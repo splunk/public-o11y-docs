@@ -499,6 +499,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   alerts-detectors-notifications/alert-message-variables-reference
+
+.. toctree::
+   :maxdepth:   3
+
 .. toctree::
    :caption: Application Performance Monitoring
    :maxdepth:   3
@@ -692,6 +697,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
 .. toctree::
    :maxdepth:   3
+   
+   rum/rum-session-replay
+
+.. toctree::
+   :maxdepth:   3
 
    rum/sample-app
 
@@ -724,17 +734,17 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Use a browser test to test a webpage TOGGLE <synthetics/browser-test/browser-test>
+   Use a Browser test to test a webpage TOGGLE <synthetics/browser-test/browser-test>
 
 .. toctree::
    :maxdepth:   3
 
-   Use an Uptime Test to test port or HTTP uptime TOGGLE <synthetics/uptime-test/uptime-test>
+   Use an Uptime test to test port or HTTP uptime TOGGLE <synthetics/uptime-test/uptime-test>
 
 .. toctree::
    :maxdepth:   3
 
-   Use an API Test to test an endpoint TOGGLE <synthetics/api-test/api-test>
+   Use an API test to test an endpoint TOGGLE <synthetics/api-test/api-test>
 
 .. toctree::
    :maxdepth:   3

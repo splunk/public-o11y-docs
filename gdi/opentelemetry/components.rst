@@ -13,6 +13,7 @@ Components
     :hidden:
 
     components/attributes-processor
+    components/basic-auth-extension
     components/batch-processor
     components/databricks-receiver
     components/filter-processor
@@ -24,6 +25,8 @@ Components
     components/logging-exporter
     components/mongodb-atlas-receiver
     components/oracledb-receiver
+    components/otlp-exporter
+    components/otlphttp-exporter            
     components/postgresql-receiver
     components/prometheus-receiver
     components/receiver-creator-receiver
@@ -61,7 +64,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
   </embed>
 
 .. list-table::
-   :widths: 25 50 15
+   :widths: 25 55 20
    :header-rows: 1
    :width: 100%
 
@@ -187,7 +190,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
   </embed>
 
 .. list-table::
-   :widths: 25 50 25
+   :widths: 25 55 20
    :header-rows: 1
    :width: 100%
 
@@ -248,7 +251,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
   </embed>
 
 .. list-table::
-   :widths: 25 50 25
+   :widths: 25 55 20
    :header-rows: 1
    :width: 100%
 
@@ -264,12 +267,12 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`logging-exporter` (``logging``)
      - Exports data to the console. By default, ``logging`` doesn't send its output to Windows Event Viewer. Run the Splunk Distribution of OpenTelemetry Collector directly from the PowerShell terminal to send output to the Windows Event Viewer.
      - Metrics, logs, traces
-   * - ``otlp``
+   * - :ref:`otlp-exporter` (``otlp``)
      - Exports data through gRPC using the OTLP format. By default, this exporter requires TLS and provides queued retry capabilities. 
-     - Metrics, traces
-   * - ``otlphttp``
-     - Exports traces and metrics in OTLP format over the HTTP protocol. 
-     - Metrics, traces
+     - Metrics, logs, traces
+   * - :ref:`otlphttp-exporter` (``otlphttp``)
+     - Exports data in OTLP format over the HTTP protocol. 
+     - Metrics, logs, traces
    * - :ref:`splunk-apm-exporter` (``sapm``)
      - Allows the Splunk Distribution of OpenTelemetry Collector to export traces from multiple nodes or services in a single batch. 
      - Traces  
@@ -298,6 +301,8 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
 
    * - Name
      - Description
+   * - :ref:`basic-auth-extension` (``basicauth``)
+     - Implements both ``configauth.ServerAuthenticator`` and ``configauth.ClientAuthenticator`` to authenticate clients and servers using basic authentication. The authenticator type has to be set to ``basicauth``.      
    * - ``docker_observer``
      - Detects and reports container endpoints discovered through the Docker API. Only containers that are in the state of ``Running`` and not ``Paused`` emit endpoints.
    * - ``ecs_observer``

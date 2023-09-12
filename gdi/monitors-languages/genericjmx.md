@@ -4,7 +4,7 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the GenericJMX monitor. See benefits, install, configuration, and metrics">
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `genericjmx` monitor to expose metrics on Java Management Extensions (JMX), a generic framework to provide and query management information. The interface is used by the Java Virtual Machine (JVM) to provide information about the memory used and threads. For a more flexible alternative, use [the JMX monitor](https://docs.splunk.com/Observability/gdi/jmx/jmx.html).
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `genericjmx` monitor to expose metrics on Java Management Extensions (JMX), a generic framework to provide and query management information. The interface is used by the Java Virtual Machine (JVM) to provide information about the memory used and threads. For a more flexible alternative, use {ref}`the JMX monitor <genericjmx>`.
 
 This integration is only available on Kubernetes and Linux.
 
@@ -109,7 +109,7 @@ The **nested** `values` configuration object has the following fields:
 
 ## Metrics
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/genericjmx/metadata.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/collectd/genericjmx/metadata.yaml"></div>
 
 ### Notes
 

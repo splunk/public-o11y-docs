@@ -31,7 +31,7 @@ This method of integrating with Slack replaces a prior design. Slack integration
 To create a Slack integration in Observability Cloud:
 
 #. Log in to Splunk Observability Cloud.
-#. Open the :new-page:`OpsGenie guided setup <https://login.signalfx.com/#/integrations/opsgenie>`. Optionally, you can navigate to the guided setup on your own:
+#. Open the :new-page:`Slack guided setup <https://login.signalfx.com/#/integrations/slack>`. Optionally, you can navigate to the guided setup on your own:
 
    #. In the left navigation menu, select :menuselection:`Data Management`.
 

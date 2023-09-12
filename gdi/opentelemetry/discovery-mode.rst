@@ -79,7 +79,12 @@ The ``--dry-run`` option ensures that the resulting configuration isn't applied 
 
 When discovery mode can't access a discovered service to extract metric data, it provides instructions and the original log error message. In the example, discovery mode can't authenticate to the discovered PostgreSQL server due to missing or incorrect credentials, which you can provide through custom discovery properties. See :ref:`custom-discovery-props`.
 
-.. note:: The Linux installation script of the Collector supports the ``--discovery`` option. When turning on discovery mode through the installation script, the resulting configuration is applied directly to the ``metrics`` pipeline.
+.. note:: The Linux installation script of the Collector supports the ``--discovery`` option. When turning on discovery mode through the installation script, the resulting configuration is applied directly to the ``metrics`` pipeline. For example:
+
+   .. code-block:: bash
+
+      curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+      sudo sh /tmp/splunk-otel-collector.sh --realm <realm> – <token> --mode agent --discovery
 
 .. _custom-discovery-props:
 

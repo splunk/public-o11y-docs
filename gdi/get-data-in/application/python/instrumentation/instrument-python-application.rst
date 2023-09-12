@@ -1,8 +1,8 @@
 .. _instrument-python-applications:
 
-***************************************************************
-Instrument a Python application for Splunk Observability Cloud
-***************************************************************
+**********************************************************************
+Instrument your Python application for Splunk Observability Cloud
+**********************************************************************
 
 .. meta::
    :description: The Splunk OpenTelemetry Python agent can automatically instrument your Python application or service. Follow these steps to get started.

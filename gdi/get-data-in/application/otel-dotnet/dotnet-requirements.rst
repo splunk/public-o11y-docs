@@ -45,6 +45,9 @@ Traces instrumentations
    * - ASP.NET Core
      - See :ref:`dotnet-otel-versions`
      - ``ASPNETCORE``
+   * - Azure SDK
+     - ``Azure.`` prefixed packages, released after October 1, 2021
+     - ``AZURE``
    * - Elastic.Clients.Elasticsearch
      - 8.0.0 and higher
      - ``ELASTICSEARCH``
@@ -55,7 +58,7 @@ Traces instrumentations
      - 7.5.0 and higher
      - ``GRAPHQL``
    * - Grpc.Net.Client
-     - 2.43.0 to 3.0.0
+     - 2.52.0 to 3.0.0
      - ``GRPCNETCLIENT``
    * - System.Net.Http.HttpClient and |br| System.Net.HttpWebRequest
      - See :ref:`dotnet-otel-versions`
@@ -70,7 +73,7 @@ Traces instrumentations
      - 2.0.0 and higher
      - ``MYSQLCONNECTOR``  
    * - MySql.Data |br| (Not supported on .NET Framework)
-     - 6.10.7 to 8.0.32
+     - 8.1.0 and higher
      - ``MYSQLDATA``
    * - Npgsql
      - 6.0.0 and higher
@@ -87,7 +90,7 @@ Traces instrumentations
    * - StackExchange.Redis |br| (Not supported on .NET Framework)
      - 2.0.405 to 3.0.0
      - ``STACKEXCHANGEREDIS``
-   * - System.ServiceModel |br| (Not supported on .NET Framework)
+   * - System.ServiceModel |br| (Service side not supported on .NET)
      - 4.7.0 and higher |br| of ``System.ServiceModel.Primitives``
      - ``WCFCLIENT`` for client side instrumentation and |br| ``WCFSERVICE`` for service side instrumentation
 

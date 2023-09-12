@@ -47,7 +47,7 @@ To activate this integration, add the following to your Collector configuration:
 ```
 receivers:
   smartagent/sqlserver:
-    type: sqlserver
+    type: telegraf/sqlserver
     ...  # Additional config
 ```
 
@@ -67,7 +67,7 @@ The following is an example of a Microsoft SQL Server receiver configuration:
 ```yaml
 receivers:
   smartagent/sqlserver:
-     type: sqlserver
+     type: telegraf/sqserver
      host: <host_name>
      port: 1433
      userID: <user_id>

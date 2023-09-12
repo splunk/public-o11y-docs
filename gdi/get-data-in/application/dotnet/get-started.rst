@@ -6,13 +6,13 @@ Instrument .NET applications for Splunk Observability Cloud
 
 
 .. meta::
-   :description: Instrument a .NET application to export metrics and spans to Splunk Observability Cloud.
+   :description: Instrument your .NET application to export metrics and spans to Splunk Observability Cloud.
 
 .. toctree::
    :hidden:
 
    Requirements <dotnet-requirements>
-   Instrument a .NET application <instrumentation/instrument-dotnet-application>
+   Instrument your .NET application <instrumentation/instrument-dotnet-application>
    Connect trace data with logs <instrumentation/connect-traces-logs>
    Configure the .NET instrumentation <configuration/advanced-dotnet-configuration>
    Metrics and attributes <configuration/dotnet-metrics-attributes>

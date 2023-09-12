@@ -14,12 +14,8 @@ sys.path.insert(0, os.path.join(os.path.abspath('.'), '_ext'))
 from assetminify import final_conf_includes
 
 extensions = [
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.todo',
-    'sphinx.ext.ifconfig',
     'sphinx_copybutton',
     'notfound.extension',
-    'toggle',
     'newpage',
     'github',
     'optimizer',
@@ -28,6 +24,7 @@ extensions = [
     'olly_on_git_hub',
     'sphinxcontrib.images',
     'imagetarget'
+    'sphinxcontrib.mermaid'
 ]
 
 html_context = {
@@ -100,7 +97,9 @@ copybutton_prompt_is_regexp = True
 copybutton_copy_empty_lines = False
 copybutton_line_continuation_character = "\\"
 
-# Link Checker settings
+graphviz_output_format = 'svg'
+nbsphinx_requirejs_path = ''
+mermaid_version=""
 
 linkcheck_anchors = False
 linkcheck_workers = 3

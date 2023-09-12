@@ -4,7 +4,7 @@
 # HAProxy
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the HAProxy monitor. See benefits, install, configuration, and metrics">
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the HAProxy monitor type to monitor an [HAProxy](http://www.haproxy.org/) instance. This monitor requires HAProxy 1.5+.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the HAProxy monitor type to monitor an <a class="external" href="http://www.haproxy.org/" target="_blank">HAProxy</a> instance. This monitor requires HAProxy 1.5+.
 
 ## Benefits
 
@@ -123,7 +123,7 @@ The following table shows the configuration options for this monitor:
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/haproxy/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/haproxy/metadata.yaml"></div>
 
 ### Notes
 

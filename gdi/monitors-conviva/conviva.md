@@ -9,7 +9,7 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the 
 This integration uses version 2.4 of the Conviva Experience Insights REST APIs. 
 
 Only `Live` conviva metrics listed on the
-[Conviva Developer Community](https://community.conviva.com/site/global/apis_data/experience_insights_api/index.gsp#metrics) page are supported. All metrics are gauges. The Conviva metrics are converted to Splunk Observability Cloud metrics with dimensions named account and filter. The account dimension is the name of the Conviva account and the filter dimension is the name of the Conviva filter applied to the metric. In the case of MetricLenses, the constituent MetricLens metrics and MetricLens dimensions are included. The values of the MetricLens dimensions are derived from the values of the associated MetricLens dimension entities.
+<a class="external" href="https://community.conviva.com/site/global/apis_data/experience_insights_api/index.gsp#metrics" target="_blank">Conviva Developer Community</a> page are supported. All metrics are gauges. The Conviva metrics are converted to Splunk Observability Cloud metrics with dimensions named account and filter. The account dimension is the name of the Conviva account and the filter dimension is the name of the Conviva filter applied to the metric. In the case of MetricLenses, the constituent MetricLens metrics and MetricLens dimensions are included. The values of the MetricLens dimensions are derived from the values of the associated MetricLens dimension entities.
 
 ## Benefits
 

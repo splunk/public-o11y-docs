@@ -12,7 +12,7 @@ Instrument Python applications for Splunk Observability Cloud
    :hidden:
 
    Requirements <python-otel-requirements>
-   Instrument a Python application <instrumentation/instrument-python-application>
+   Instrument your Python application <instrumentation/instrument-python-application>
    Connect trace data with logs <instrumentation/connect-traces-logs>
    Configure the Python agent <configuration/advanced-python-otel-configuration>
    Manual instrumentation <instrumentation/python-manual-instrumentation>
