@@ -1,19 +1,25 @@
 .. _migrate-apm-custom-reporting: 
 
-Migrate APM custom reporting to OpenTelemetry Java and .Net Agent 2.0
+Migrate APM custom reporting to OpenTelemetry Java and .NET Agent 2.0
 *************************************************************************
 
 .. meta:: 
-   :description: Steps to migrate your APM custom reporting to support upgrade to version 2.0 of Splunk OpenTelemetry Java and .NET agents.
+   :description: Steps to migrate your APM custom reporting to support update to version 2.0 of Splunk OpenTelemetry Java and .NET agents.
 
-Version 2.0 of the agents from the Splunk Distribution of OpenTelemetry Java and .NET includes breaking changes to HTTP semantic conventions. While the release of version 2.0 is still to be determined, this guide provides you with the migration information you need to migrate well in advance of upgrading so you can ensure your Splunk APM experience is unaffected. 
+Version 2.0 the Splunk Distribution of OpenTelemetry Java and .NET agents includes breaking changes to HTTP semantic conventions. While the release of version 2.0 is to be determined, you can migrate to affected attributes in advance of updating so you can ensure your Splunk APM experience is unaffected.
+
+If you continue to use deprecated OTel attributes, the following aspects of custom reporting in APM are affected by updating to version 2.0 of the Splunk Distribution of OpenTelemetry Java and .NET agents:
+
+* Tag Spotlight
+* Custom charts and dashboards that you created
+* Detectors
 
 .. _http-semantic-convention-changes:
 
 HTTP semantic convention changes
 ===================================
 
-The following table covers the HTTP OTel attributes that changed from version 1.0 to version 2.0 in the agent of the Splunk Distribution of OpenTelemetry Java.
+The following table covers the HTTP OpenTelemetry (OTel) attributes that changed from version 1.0 to version 2.0 in the Splunk Distribution of OpenTelemetry Java and .NET agents.
 
 .. list-table:: 
    :header-rows: 1
@@ -23,68 +29,61 @@ The following table covers the HTTP OTel attributes that changed from version 1.
      - Why the change
    * - ``http.method``
      - ``http.request.method``
-     - Consistent namespacing.
+     - Updated for consistent namespacing.
    * - ``http.status_code``
      - ``http.response.status_code``
-     - Consistent namespacing.
+     - Updated for consistent namespacing.
    * - ``http.request_content_length``
      - ``http.request.body.size``
-     - Consistent namespacing.
+     - Updated for consistent namespacing.
    * - ``http.response_content_length``
      - ``http.response.body.size``
-     - Consistent namespacing.
+     - Updated for consistent namespacing.
    * - ``http.url``
      - ``url.full``
-     - Avoids separate fields for various URL types and simplifies telemetry correlation across different URL types for example, \ftp://, \ssh://, \file://, \data://, and so on.
+     - Updated to avoid separate fields for various URL types and simplify telemetry correlation across different URL types like \ftp://, \ssh://, \file://, \data://, and so on.
    * - ``http.target``
      - ``url.path`` and ``url.query``
-     - Avoids separate fields for various URL types and simplifies telemetry correlation across different URL types for example, \ftp://, \ssh://, \file://, \data://, and so on.
+     - Updated to avoid separate fields for various URL types and simplify telemetry correlation across different URL types like \ftp://, \ssh://, \file://, \data://, and so on.
    * - ``http.scheme``
      - ``url.scheme``
-     - Avoids separate fields for various URL types and simplifies telemetry correlation across different URL types for example, \ftp://, \ssh://, \file://, \data://, and so on.
+     - Updated to avoid separate fields for various URL types and simplify telemetry correlation across different URL types like \ftp://, \ssh://, \file://, \data://, and so on.
    * - ``http.client_ip``
      - ``http.forwarded.for``
-     - Updated to reflect latest attribute definition.
+     - Updated to reflect the latest attribute definition.
 
-How to determine if your Splunk APM experience might be affected
-===================================================================
+Assess if you're affected by updating
+=========================================
 
-There are several aspects of custom reporting in APM that will be affected if you use the deprecated tags. Custom reporting in APM includes the following:
-
-* Tag Spotlight
-* Custom charts and dashboards, that is, charts and dashboards you create. Built-in APM dashboards are unaffected.
-* Detectors 
-
-If you use any of the deprecated tags in custom reporting in APM and want to ensure your custom reporting is unaffected, follow the migration steps before upgrading to version 2.0 of the agent of the Splunk Distribution of OpenTelemetry Java. 
-
-Assess if you will be affected by upgrading
-----------------------------------------------
-
-To determine if your APM experience will be affected by upgrading, follow these steps.
-
-Start by determining if you are indexing the affected tags as custom tags in Splunk APM.
+To determine if your APM experience is affected by the update check whether you are indexing the affected OTel attributes as custom tags in Splunk APM:
 
 .. note:: 
    The HTTP method attribute is stored as a system tag by default in Splunk Observability Cloud. You don't need to index the HTTP method attribute to use it as a Troubleshooting MetricSet (TMS) or Monitoring MetricSet (MMS).
 
-#. Go to :guilabel:`Settings` then :guilabel:`APM MetricSets`. You must have the admin role to access APM MetricSets. 
-#. Cross-reference the list of new tags with the tags indexed in the APM MetricSets list. See :ref:`http-semantic-convention-changes`.
-    #. If 1 or more affected tags are listed on APM MetricSets page, determine if each tag is indexed as only a Troubleshooting MetricSet (TMS) or as a Monitoring MetricSet (MMS) as well.
-    #. If you are not indexing any of the affected tags, no migration action is needed. But do make a note to use new HTTP conventions going forward. 
+#. Go to :guilabel:`Settings`, then :guilabel:`APM MetricSets`. You must have the admin role to access APM MetricSets. 
+#. Cross-reference the tags indexed in the APM MetricSets list with the list of new OTel attributes. See :ref:`http-semantic-convention-changes`.
+    #. If 1 or more affected tags are listed on the APM MetricSets page, determine if each tag is indexed as only a Troubleshooting MetricSet (TMS) or as a Monitoring MetricSet (MMS) as well. Then, see the :ref:`migration-steps` section for more information.
+    #. If you are not indexing any of the affected tags, you do not need to take action to migrate tags. Ensure you use the new HTTP conventions going forward. 
 
-Time your upgrade
-========================
-
-As of August 7, 2023, Splunk APM began populating the new attributes with data. Depending on your historical reporting needs, choose a date to upgrade that is right for your organization. You can follow the migration steps before or after upgrading, but the old tags will no longer receive new data after you upgrade.
+.. _migration-steps: 
 
 Migration steps
 ===================
 
+If you determine that you need to migrate, follow these steps:
+
+#. :ref:`time-your-update`
 #. :ref:`Index the new attributes as tags to generate Troubleshooting Metric Sets (TMS) or Monitoring Metric Sets (MMS).<index-new-attributes>`
-#. :ref:`Update your charts and dashboards that used the deprecated tags to use the new indexed tags.<update-charts-dashboards>`
+#. :ref:`Update your charts and dashboards to use the new indexed tags.<update-charts-dashboards>`
 #. :ref:`Update your APM detectors to use the new indexed tags.<update-detectors>`
-#. :ref:`(Optional) Delete the old tags.<delete-old-tags>`
-#. :ref:`Only use the new tags for future reporting.<new-tags-reporting>`
+#. :ref:`(Optional) Delete MetricSets that use the deprecated attributes as tags.<delete-old-tags>`
+
+.. _time-your-update: 
+
+Time your update
+-----------------------
+
+As of August 7, 2023, Splunk APM began populating the new attributes with data. Depending on your historical reporting needs, choose a date to update that is right for your organization. You can follow the migration steps before or after updating, but the old tags will no longer receive new data after you update.
 
 .. _index-new-attributes: 
 
@@ -96,51 +95,40 @@ Index the new attributes as tags to generate Troubleshooting Metric Sets (TMS) o
 
 For each affected tag you are indexing, generate its new corresponding tag as an APM MetricSet.
 
-#. Go to :guilabel:`Settings` then :guilabel:`APM MetricSets`. You must have the admin role to access APM MetricSets. 
-#. Create a new APM MetricSet using the new tag name, set as a TMS. 
-#. If the old tag was also used as an MMS, configure the new tag as an MMS. 
-#. Use new tag name going forward. See :ref:`update-charts-dashboards` and :ref:`update-detectors`.
-
-See :ref:`apm-index-span-tags` for steps to generate TMS. See :ref:`cmms` for steps to generate MMS.
+#. Go to :guilabel:`Settings`, then :guilabel:`APM MetricSets`. You must have the admin role to access APM MetricSets. 
+#. Create a new APM MetricSet using the OTel attribute as a tag and set it as a TMS. See :ref:`apm-index-span-tags` for steps to generate TMS. 
+#. If the old tag was also used as an MMS, configure the new tag as an MMS. See :ref:`cmms` for steps to generate MMS.
+#. Use the new tag name going forward. See :ref:`update-charts-dashboards` and :ref:`update-detectors`.
 
 .. _update-charts-dashboards: 
 
 Update your charts and dashboards to use the new indexed tags
 -----------------------------------------------------------------
 
-To update charts or dashboards that reference old tags, follow these steps.
+To update charts or dashboards that reference the deprecated attributes as tags, follow these steps.
 
-#.  For each affected chart, select :guilabel:`Chart actions` then :guilabel:`open`.
-#. Go to plot builder, edit the filter to change references from the old tag to the new tag. Or, select :guilabel:`View SignalFlow` to edit the `filter()` function to reference the new tag.
-
-See :ref:`dashboard-create-customize` and :ref:`create-charts`.
+#.  For each affected chart, select :guilabel:`Chart actions`, then :guilabel:`Open`.
+#. Go to the plot builder and edit the filter to change the reference to the new tag. Or, select :guilabel:`View SignalFlow` to edit the ``filter()`` function to reference the new tag.
 
 .. _update-detectors: 
 
 Update your detectors to use the new indexed tags
 -------------------------------------------------------
 
-To update your detectors follow these steps.
+To update your detectors, follow these steps.
 
-#. Go to :guilabel:`Alerts & Detectors` then :guilabel:`Detectors`.
-#. For each affected detector, select the detector then select :guilabel:`Signals`.
+#. Go to :guilabel:`Alerts & Detectors`, then :guilabel:`Detectors`.
+#. For each affected detector, select the detector, then select :guilabel:`Signals`.
 #. Change the filter to reference the new tag name.
-
-See :ref:`apm-alerts` for steps to create an APM detector. 
 
 .. _delete-old-tags: 
 
-Delete MetricSets that use the old tags
-----------------------------------------
+(Optional) Delete MetricSets that use the deprecated attributes as tags
+----------------------------------------------------------------------------
 
-After you have updated your charts, dashboards, and detectors to use the new tags and have confirmed that all are working as expected, delete the old tags.
+After you have updated your charts, dashboards, and detectors to use the new attributes and have confirmed that all are working as expected, delete the tags that use the deprecated attributes. Deleting the tags that use the deprecated attributes reduces your organization's cardinality and also reduces potential user confusion.
 
-#. Go to :guilabel:`Settings` then :guilabel:`APM MetricSets`. You must have the admin role to access APM MetricSets. 
+#. Go to :guilabel:`Settings`, then :guilabel:`APM MetricSets`. You must have the admin role to access APM MetricSets. 
 #. Select :guilabel:`Delete the MetricSet configuration` (trash can icon) to delete the tag and the corresponding MetricSets.
 
-.. _new-tags-reporting: 
-
-Use the new tags for future reporting
---------------------------------------------
-
-Only use the new tags for future reporting.
+After you delete the MetricSets that use the old attributes, use only the new tags for future reporting.
