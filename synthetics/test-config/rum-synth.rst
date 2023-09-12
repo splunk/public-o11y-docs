@@ -45,8 +45,11 @@ Steps
   * Good: < 100 ms
   * Improve: 100 ms - 300 ms
   * Poor: > 300 ms
+  
 #. Select the flashlight icon to open the sessions in Tag Spotlight.
+
 #. Review the visits count to find the number of users and synthetic tests that have interacted with the normalized URL specified in the test.
+
 
 
 Compare latency of a test by run location 
