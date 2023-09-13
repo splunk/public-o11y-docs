@@ -71,14 +71,15 @@ To install the package using the installer script, follow these steps:
 
   & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
 
-.. note:: If needed, activate TLS in PowerShell using the following command: 
+.. note:: If needed, activate TLS in PowerShell using the following command:
   
    ``[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12``
+
 
 Configure memory allocation
 ----------------------------------
 
-To configure memory allocation, use the ``memory`` parameter. 
+To configure memory allocation, use the ``memory`` parameter.
 
 By default, the Collector is configured to use 512 MB (500 x 2^20 bytes) of memory. To increase this setting to allocate more memory, replace ``SPLUNK_MEMORY_TOTAL_MIB`` with the desired integer value.
 
@@ -140,49 +141,19 @@ After any configuration modification, apply the changes by restarting the system
 Start the Collector executable manually 
 -------------------------------------------
 
-If you experience unexpected start failures, try to start the Collector executable manually. 
+If you experience unexpected start failures, try to start the Collector executable manually.
 
-To do so, run the following PowerShell command as an Admin:  
+To do so, run the following PowerShell command as an Admin:
 
 .. code-block:: PowerShell
 
   & 'C:\Program Files\Splunk\OpenTelemetry Collector\otelcol.exe' --config 'C:\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml'
 
-.. _windows-deployments:
-
-Deployments
-===============================
-Splunk offers the configuration management options described in this section.
-
-.. _windows-ansible:
-
-Ansible
---------------------------
-Splunk provides an Ansible role that installs the package configured to collect data (metrics, traces, and logs) from Windows machines and send that data to Splunk Observability Cloud. See :ref:`deployment-windows-ansible` for the instructions to download and customize the role.
-
-.. _windows-chef:
-
-Chef 
-----------------
-Splunk provides a cookbook to install the Collector using Chef. See :ref:`deployments-chef` for the installation instructions.
-
-.. _windows-nomad:
-
-Nomad 
------------------
-Use Nomad to deploy the Collector. To learn how to install Nomad, see :ref:`deployments-nomad`.
-
-.. _windows-puppet:
-
-Puppet
--------------------------------
-Splunk provides a Puppet module to install and configure the package. A module is a collection of resources, classes, files, definition, and templates. To learn how to download and customize the module, see :ref:`deployment-windows-puppet`.
-
 
 .. _otel-installer-options-windows:
 
 Options of the installer script for Windows
-==============================================
+====================================================
 
 The Windows installer script supports the following options:
 
@@ -204,10 +175,10 @@ The Windows installer script supports the following options:
      - Total memory in MIB to allocate to the Collector. Automatically calculates the ballast size. See :ref:`otel-sizing` for more information.
      - ``512``
    * - ``mode``
-     - Configure the collector service to run in agent or gateway mode.
+     - Configure the Collectorservice to run in agent or gateway mode.
      - ``agent``
    * - ``network_interface``
-     - The network interface the collector receivers listen on.
+     - The network interface the Collectorreceivers listen on.
      - ``0.0.0.0``
    * - ``ingest_url``
      - Set the base ingest URL explicitly instead of the URL inferred from the specified realm.
@@ -246,7 +217,7 @@ The Windows installer script supports the following options:
      - The package stage to install from [``test``, ``beta``, ``release``].
      - ``release``
    * - ``collector_msi_url``
-     - Specify the URL to the Splunk OpenTelemetry Collector MSI package to install. If specified, the ``-collector_version`` and ``-stage`` parameters are ignored.
+     - When installing the Collector, instead of downloading the package, use this local path to a Splunk OpenTelemetry Collector MSI package. If specified, the ``-collector_version`` and ``-stage`` parameters are ignored.
      - ``https://dl.signalfx.com/splunk-otel-collector/`` |br| ``msi/release/splunk-otel-collector-<version>-amd64.msi``
    * - ``fluentd_msi_url``
      - Specify the URL to the Fluentd MSI package to install.
@@ -254,6 +225,40 @@ The Windows installer script supports the following options:
    * - ``msi_path``
      - Specify a local path to a Splunk OpenTelemetry Collector MSI package to install instead of downloading the package. If specified, the ``-collector_version`` and ``-stage`` parameters will be ignored.
      -
+
+
+
+
+.. _windows-deployments:
+
+Deployments
+===============================
+Splunk offers the configuration management options described in this section.
+
+.. _windows-ansible:
+
+Ansible
+--------------------------
+Splunk provides an Ansible role that installs the package configured to collect data (metrics, traces, and logs) from Windows machines and send that data to Splunk Observability Cloud. See :ref:`deployment-windows-ansible` for the instructions to download and customize the role.
+
+.. _windows-chef:
+
+Chef 
+----------------
+Splunk provides a cookbook to install the Collector using Chef. See :ref:`deployments-chef` for the installation instructions.
+
+.. _windows-nomad:
+
+Nomad 
+-----------------
+Use Nomad to deploy the Collector. To learn how to install Nomad, see :ref:`deployments-nomad`.
+
+.. _windows-puppet:
+
+Puppet
+-------------------------------
+Splunk provides a Puppet module to install and configure the package. A module is a collection of resources, classes, files, definition, and templates. To learn how to download and customize the module, see :ref:`deployment-windows-puppet`.
+
 
 Next steps
 ==================================
