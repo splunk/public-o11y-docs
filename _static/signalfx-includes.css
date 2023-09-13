@@ -72,7 +72,7 @@ a.image-reference {
     text-align:center;
 }
 
-table.align-default, table.docutils {
+table.align-default, table.docutils, table.monitor-stats {
   width: 100%;
   table-layout:fixed;
   }
