@@ -39,7 +39,7 @@ Splunk Observability Cloud is built on top of OpenTelemetry and uses it as the d
 
       log-->splunkPlatform[(Splunk platform)]:::platform-->logObserver[(Log Observer Connect)]:::loc-->analytics
       
-      subgraph o11yArchitecture[Splunk Observability Cloud Architecture]
+      subgraph o11yArchitecture[&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSplunk Observability Cloud Architecture]
       direction LR
         data-->otel-->ingestion
         ingestion-->processingRetention-->analytics
