@@ -185,7 +185,7 @@ These are the Collector's internal metrics:
     - 
     - 
 
-  * - ``otelcol_processor_batch_timeout_trigger_send ``
+  * - ``otelcol_processor_batch_timeout_trigger_send``
     - 
     - 
 
