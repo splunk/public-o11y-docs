@@ -78,7 +78,7 @@ Splunk Observability Cloud is built on top of OpenTelemetry and uses it as the d
             direction LR 
             indexStorage(Indexing and storage)
             traceMetricization(Trace metricization)
-            metricsManagement(Metrics routing and management)
+            metricsManagement(Metrics routing and storage)
         end
 
         class analytics analyticsColor
