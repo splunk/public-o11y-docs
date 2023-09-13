@@ -132,7 +132,7 @@ Note the following:
 
 After any configuration modification, run ``sudo systemctl restart td-agent`` to restart the td-agent service.
 
-If the td-agent package is upgraded after initial installation, you might need to set the Linux capabilities for the new version by performing the following steps for td-agent versions 4.1 or later:
+If the td-agent package is upgraded after initial installation, you might need to set the Linux capabilities for the new version by performing the following steps for td-agent versions 4.1 or higher:
 
 #. Check for the activated capabilities:
 
@@ -154,14 +154,14 @@ If the td-agent package is upgraded after initial installation, you might need t
       sudo systemctl restart td-agent
 
 
-If you already installed Fluentd on a host, install the Collector without Fluentd using the ``--without-fluentd`` option. For more information, see :ref:`otel-configuration`. 
+If you already installed Fluentd on a host, install the Collector without Fluentd using the ``--without-fluentd`` option. For more information, see :ref:`otel-configuration`.
 
 .. _configure-auto-instrumentation:
 
 Configure automatic instrumentation for Java
 --------------------------------------------
 
-You can also automatically instrument your Java applications along with the Collector installation. Auto instrumentation removes the need to install and configure the Java agent separately. See :ref:`auto-instrumentation-java` for the installation instructions. For more information on Java instrumentation, see :ref:`get-started-java`. 
+You can also automatically instrument your Java applications along with the Collector installation. Auto instrumentation removes the need to install and configure the Java agent separately. See :ref:`auto-instrumentation-java` for the installation instructions. For more information on Java instrumentation, see :ref:`get-started-java`.
 
 .. _linux-deployments:
 
@@ -213,7 +213,7 @@ The Splunk Distribution of OpenTelemetry Collector for Heroku is a buildpack for
 
 Nomad 
 -----------------
-Use Nomad to to deploy the Collector. See :ref:`deployments-nomad` for the installation instructions.
+Use Nomad to deploy the Collector. See :ref:`deployments-nomad` for the installation instructions.
 
 .. _linux-pcf:
 
@@ -223,7 +223,7 @@ Pivotal Cloud Foundry
 You can use one of these three options to deploy the Collector with Pivotal Cloud Foundry (PCF):
 
 * Collector standalone deployment.
-* Collector as a sidecar to your app. 
+* Collector as a sidecar to your app.
 * Tanzu Tile.
 
 See more in :ref:`deployments-pivotal-cloudfoundry`.
@@ -299,19 +299,19 @@ The Linux installer script supports the following options:
      - Set the group for the splunk-otel-collector service. The option creates the group if it doesn`` t exist.
      - ``$default_service_group``
    * - ``--service-user <user>``
-     - Set the user for the splunk-otel-collector service. The option creates the user if it doesn`t exist. 
+     - Set the user for the splunk-otel-collector service. The option creates the user if it doesn`t exist.
      - ``$default_service_user``
    * - ``--skip-collector-repo``
-     - By default, the scripts creates an apt, yum, or zypper repo definition file to download the collector package from ``$repo_base``. Use this option to skip the previous step and use a preconfigured repo on the target system that provides the splunk-otel-collector deb or rpm package.
-     - 
+     - By default, the scripts creates an apt, yum, or zypper repo definition file to download the collector package from ``$repo_base``. Use this option to skip the previous step and use a configured repo on the target system that provides the splunk-otel-collector deb or rpm package.
+     -
    * - ``--skip-fluentd-repo``
-     - By default, the scripts creates an apt, yum, or zypper repo definition file to download the fluentd package from ``$td_agent_repo_base``. Use this option to skip the previous step and use a preconfigured repo on the target system that provides the splunk-otel-collector deb or rpm package.
-     - 
+     - By default, the scripts creates an apt, yum, or zypper repo definition file to download the fluentd package from ``$td_agent_repo_base``. Use this option to skip the previous step and use a configured repo on the target system that provides the splunk-otel-collector deb or rpm package.
+     -
    * - ``--test``
      - Use the test package repo.
      - Not applicable
    * - ``--trace-url <url>``
-     - Set the trace endpoint URL explicitly instead of the endpoint inferred from the specified realm. 
+     - Set the trace endpoint URL explicitly instead of the endpoint inferred from the specified realm.
      - ``https://ingest.REALM.signalfx.com/v2/trace``
    * - ``--uninstall``
      - Removes the Splunk OpenTelemetry Collector for Linux.
@@ -332,7 +332,7 @@ The Linux installer script supports the following options:
      - Specify ``--no-generate-service-name`` to prevent the preloader from setting the ``OTEL_SERVICE_NAME`` environment variable. Only applicable if the ``--with-instrumentation`` option is also specified.
      - ``--generate-service-name``
    * - ``--[activate|disable]-telemetry``
-     - Activate or deactivate the instrumentation preloader from sending the ``splunk.linux-autoinstr.executions``  metric to the Collector. Only applicable if the ``--with-instrumentation``  option is also specified. The default value is 
+     - Activate or deactivate the instrumentation preloader from sending the ``splunk.linux-autoinstr.executions``  metric to the Collector. Only applicable if the ``--with-instrumentation``  option is also specified.
      - ``--activate-telemetry``
    * - ``--[activate|disable]-profiler``
      - Activate or deactivate AlwaysOn CPU Profiling. Only applicable if the ``--with-instrumentation``  option is also specified.
@@ -344,7 +344,7 @@ The Linux installer script supports the following options:
      - Activate or deactivate exporting Micrometer metrics. Only applicable if the ``--with-instrumentation``  option is also specified.
      - ``--disable-metrics``
    * - ``--instrumentation-version``
-     - The splunk-otel-auto-instrumentation package version to install. Only applicable if the ``--with-instrumentation``  option is also specified.
+     - The package version to install. Only applicable if the ``--with-instrumentation``  option is also specified.
      - ``$default_instrumentation_version``
    * - ``--``
      - Use ``--``  if the access token starts with ``-`` .
