@@ -89,13 +89,13 @@ The following runtime metrics are automatically collected and exported:
    * - Metric
      - Type
      - Description
-   * - ``process.runtime.memory``
+   * - ``process.runtime.cpython.memory``
      - Counter
      - Memory used by the Python runtime.
-   * - ``process.runtime.cpu.time``
+   * - ``process.runtime.cpython.cpu_time``
      - Cumulative counter
      - CPU time used by the Python runtime.
-   * - ``process.runtime.gc_count``
+   * - ``process.runtime.cpython.gc_count``
      - Cumulative counter
      - Garbage collections executed by the Python runtime.
 
