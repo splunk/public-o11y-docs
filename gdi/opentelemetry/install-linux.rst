@@ -212,7 +212,7 @@ The Linux installer script supports the following options:
      - Total memory in MIB to allocate to the Collector. This option automatically calculates the ballast size. See :ref:`otel-sizing` for more information.
      - ``$default_memory_size``
    * - ``--mode <agent|gateway>``
-     - Configure the Collector service to run in agent or gateway mode. See :ref:`otel-deployment-mode` for more information.
+     - Configure the Collector service to run in host monitoring (``agent``) or data forwarding (``gateway``) mode. See :ref:`otel-deployment-mode` for more information.
      - ``agent``
    * - ``--listen-interface <ip>``
      - Network interface the Collector receivers listen on.

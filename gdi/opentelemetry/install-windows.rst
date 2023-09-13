@@ -175,7 +175,7 @@ The Windows installer script supports the following options:
      - Total memory in MIB to allocate to the Collector. Automatically calculates the ballast size. See :ref:`otel-sizing` for more information.
      - ``512``
    * - ``mode``
-     - Configure the Collectorservice to run in agent or gateway mode.
+     - Configure the Collectorservice to run in host monitoring (``agent``) or data forwarding (``gateway``).
      - ``agent``
    * - ``network_interface``
      - The network interface the Collectorreceivers listen on.
