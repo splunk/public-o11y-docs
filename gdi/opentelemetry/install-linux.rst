@@ -46,7 +46,7 @@ To install the package using the installer script, follow these steps:
 .. code-block:: bash
 
    curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh;
-   sudo sh /tmp/splunk-otel-collector.sh --realm SPLUNK_REALM --memory SPLUNK_MEMORY_TOTAL_MIB -- SPLUNK_ACCESS_TOKEN
+   sudo sh /tmp/splunk-otel-collector.sh --realm $SPLUNK_REALM --memory $SPLUNK_MEMORY_TOTAL_MIB -- $SPLUNK_ACCESS_TOKEN
 
 .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host with Fluentd, use the ``--with-fluentd`` option to also install Fluentd when installing the Collector.
 
@@ -68,8 +68,8 @@ To configure memory allocation, change the ``--memory`` parameter. By default, t
 .. code-block:: bash
 
    curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh;
-   sudo sh /tmp/splunk-otel-collector.sh --realm SPLUNK_REALM --memory SPLUNK_MEMORY_TOTAL_MIB \
-       -- SPLUNK_ACCESS_TOKEN
+   sudo sh /tmp/splunk-otel-collector.sh --realm $SPLUNK_REALM --memory $SPLUNK_MEMORY_TOTAL_MIB \
+       -- $SPLUNK_ACCESS_TOKEN
 
 Configure proxy settings
 ----------------------------------
@@ -87,8 +87,8 @@ To skip these steps and use configured repos on the target system that provide t
 .. code-block:: bash
 
    curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
-   sudo sh /tmp/splunk-otel-collector.sh --realm SPLUNK_REALM --skip-collector-repo --skip-fluentd-repo \
-    -- SPLUNK_ACCESS_TOKEN
+   sudo sh /tmp/splunk-otel-collector.sh --realm $SPLUNK_REALM --skip-collector-repo --skip-fluentd-repo \
+    -- $SPLUNK_ACCESS_TOKEN
 
 .. _fluentd-manual-config-linux:
 
@@ -100,7 +100,7 @@ Fluentd is turned off by default. To install Fluentd for log collection, run the
 .. code-block:: bash
 
    curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
-   sudo sh /tmp/splunk-otel-collector.sh --with-fluentd --realm SPLUNK_REALM -- SPLUNK_ACCESS_TOKEN
+   sudo sh /tmp/splunk-otel-collector.sh --with-fluentd --realm $SPLUNK_REALM -- $SPLUNK_ACCESS_TOKEN
 
 When turned on, the Fluentd service is configured by default to collect and forward log events with the ``@SPLUNK`` label to the Collector, which then sends these events to the HEC ingest endpoint determined by the ``--realm <SPLUNK_REALM>`` option. For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
 
