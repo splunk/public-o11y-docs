@@ -258,7 +258,7 @@ The Linux installer script supports the following options:
    * - ``--api-url <url>``
      - Set the API endpoint URL explicitly instead of using the endpoint inferred from the specified realm. The default value is ``https://api.REALM.signalfx.com``.
    * - ``--ballast <ballast size>``
-     - Set the ballast size explicitly instead of the value calculated using the ``--memory`` option. See :ref:`sizing` for more information.
+     - Set the ballast size explicitly instead of the value calculated using the ``--memory`` option. See :ref:`otel-sizing` for more information.
    * - ``--beta``
      - Use the beta package repository.
    * - ``--collector-config <path>``
@@ -274,7 +274,7 @@ The Linux installer script supports the following options:
    * - ``--ingest-url <url>``
      - Set the ingest endpoint URL explicitly instead of using the endpoint inferred from the specified realm. The default value is ``https://ingest.REALM.signalfx.com``.
    * - ``--memory <memory size>``
-     - Total memory in MIB to allocate to the Collector. This option automatically calculates the ballast size. The default value is defined by ``$default_memory_size``. See :ref:`sizing` for more information.
+     - Total memory in MIB to allocate to the Collector. This option automatically calculates the ballast size. The default value is defined by ``$default_memory_size``. See :ref:`otel-sizing` for more information.
    * - ``--mode <agent|gateway>``
      - Configure the Collector service to run in agent or gateway mode. The default value is ``agent``. See :ref:`otel-deployment-mode` for more information.
    * - ``--listen-interface <ip>``
