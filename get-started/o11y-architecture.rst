@@ -20,7 +20,7 @@ Splunk Observability Cloud is built on top of OpenTelemetry and uses it as the d
         'primaryBorderColor': '#000000',
         'nodeBorder':'#000000',
         'lineColor': '#000000',
-        'fontSize': '22px'
+        'fontSize': '22px',
       }
     }
   }%%
