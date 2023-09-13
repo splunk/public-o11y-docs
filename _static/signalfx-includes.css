@@ -72,15 +72,14 @@ a.image-reference {
     text-align:center;
 }
 
-table.docutils {
-width: 100%;
-table-layout:fixed;
-}
-
 table.align-default {
   width: 100%;
   table-layout:fixed;
   }
+
+span.pre {
+  white-space:normal;
+}
 
 /* Making heading levels more different
 Originals are in signalfx-alabaster.css */
