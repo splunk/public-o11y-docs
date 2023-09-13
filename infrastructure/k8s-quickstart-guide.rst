@@ -10,8 +10,6 @@ This quick start tutorial walks you through the following steps to start monitor
 
 :strong:`Step 2`: :ref:`Monitor <navigators-imqs>` your Kubernetes cluster using out-of-the-box navigators.
 
-For example, you can access :ref:`this Hosts navigator <https://app.signalfx.com/#/infra/entity/datacenter%20hosts?endTime=now&startTime=-3h?>` to monitor all hosts where you’ve installed the Splunk Distribution of OpenTelemetry Collector
-
 :strong:`Step 3`: :ref:`Activate an out-of-the-box detector to issue alerts <alerts-imqs>` that help you stay informed about the condition of your infrastructure.
 
 .. _install-collector-for-k8s:
@@ -129,13 +127,13 @@ After installing the Collector, explore your cluster's data using the Kubernetes
 2. In the left navigation menu, select :guilabel:`Infrastructure`.
 3. In the :guilabel:`Containers` section, select :guilabel:`Kubernetes`. The Kubernetes navigator displays.
 
-To filter the data shown in the navigator to a specific cluster, such as the one you installed the Splunk Distribution of OpenTelemetry Collector in, set the :guilabel:`Cluster` value to the cluster name you provided in :ref:`quickstart-imm/gdi-infrastructure-imqs`.
+To filter the data shown in the navigator to a specific cluster, such as the one you installed the Splunk Distribution of OpenTelemetry Collector in, set the :guilabel:`Cluster` value to the cluster name you provided in :ref:`gdi-infrastructure-imqs`.
 
 For more details about the data displayed in the Kubernetes navigator, see :ref:`Use the Kubernetes navigator <use-the-k8s-navigator>`.
 
 Splunk Observability Cloud also provides :ref:`built-in (out of the box) dashboards <dashboards>` that you can use to explore your Kubernetes data. To access these dashboards, open the navigation :guilabel:`Menu` and select :guilabel:`Dashboards`. The Dashboards page displays. Search for :guilabel:`Kubernetes`. The :guilabel:`Kubernetes` dashboard group displays. Select a link to access a relevant dashboard.
 
-To narrow the scope of the data shown in the navigator, such as to only the data received from the connection you made, select :guilabel:`Add Filter` and select a key and value that uniquely identify your connection. For example, you can select :guilabel:`subscription_id = <your subscription ID>`, where the subscription ID value is the one associated with a subscription you provided in :ref:`quickstart-imm/gdi-cloud-imqs`. Select :guilabel:`Apply Filter`.
+To narrow the scope of the data shown in the navigator, such as to only the data received from the connection you made, select :guilabel:`Add Filter` and select a key and value that uniquely identify your connection. For example, you can select :guilabel:`subscription_id = <your subscription ID>`, where the subscription ID value is the one associated with a subscription you provided in :ref:`gdi-infrastructure-imqs`. Select :guilabel:`Apply Filter`.
 
 Splunk Observability Cloud also provides :ref:`built-in (out of the box) dashboards <dashboards>` that you can use to explore your Microsoft Azure data. To access these dashboards, open the navigation Menu and select Dashboards. The Dashboards page displays. Search for Azure. Several Microsoft Azure dashboard groups display. Select a link to access a relevant dashboard.
 
@@ -150,7 +148,7 @@ To create an alert, you first create a detector that monitors data for condition
 
 This task describes how to create a detector directly from a chart in a navigator or dashboard covered in :ref:`Step 3: Monitor your platform and cloud infrastructure <navigators-imqs>`.
 
-1. Access the chart you want to create a detector from. This example creates a detector based on the :guilabel:`Memory Used %` chart in the :ref:`Monitor Windows Server and Linux hosts using the Hosts navigator <quickstart-imm/host-navigator-imqs>`.
+1. Access the chart you want to create a detector from. This example creates a detector based on the :guilabel:`Memory Used %` chart in the :ref:`Monitor Windows Server and Linux hosts using the Hosts navigator <host-navigator-imqs>`.
 2. Select the :guilabel:`Get Alerts` icon in the upper right of a chart. For some chart data, there are built-in templates that make it easy for you create detectors for useful alert conditions. For example, for the :guilabel:`Memory Used %` chart, we provide a :guilabel:`Memory utilization % greater than historical norm` detector template.
 
 This detector sends an alert when memory usage for the last 10 minutes was significantly higher than normal, as compared to the last 24 hours.
@@ -158,7 +156,7 @@ This detector sends an alert when memory usage for the last 10 minutes was signi
 3. The :guilabel:`New Detector` panel displays. Select :guilabel:`Add Recipients` to add an email, :ref:`Splunk Observability Cloud team <admin-manage-teams>`, or :ref:`webhook <webhook>` that you want to receive the alert.
 4. Select :guilabel:`Activate`. When the data condition is met, Splunk Observability Cloud sends a notification to designated recipients and displays alerts on the Alerts page.
 
-For more details about alerts and detectors, see :ref:`alerts-detectors-notifications`.
+For more details about alerts and detectors, see :ref:`Introduction to alerts and detectors in Splunk Observability Cloud <get-started-detectoralert>`.
 
 .. _k8s-next-steps:
 
@@ -171,4 +169,4 @@ Next steps
 * Now that you have infrastructure data flowing into Splunk Observability Cloud, consider :ref:`instrumenting an application <get-started-application>` to send spans and traces to :ref:`Splunk Application Performance Monitoring (APM) <get-started-apm>`, where you can access dashboards like this one for your services and business workflows.
   Splunk Observability Cloud provides tools that help you instrument applications written in Java, .NET, Node.js, Python, Ruby, and PHP.
 * Explore :ref:`even more data sources <supported-data-sources>` that you can monitor using Splunk Observability Cloud, such as Apache Zookeeper, Cassandra, Docker, Heroku, Jenkins, and Redis.
-* To coordinate team efforts in Splunk Observability Cloud, see :ref:`<admin-manage-teams>`.
+* To coordinate team efforts in Splunk Observability Cloud, see :ref:`Create and manage teams in Splunk Observability Cloud <admin-manage-teams>`.
