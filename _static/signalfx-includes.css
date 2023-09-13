@@ -72,6 +72,11 @@ a.image-reference {
     text-align:center;
 }
 
+.monitor-stats {
+  width: 100%;
+  table-layout:fixed;
+}
+
 /* Making heading levels more different
 Originals are in signalfx-alabaster.css */
 
