@@ -358,8 +358,7 @@ Volume level metrics and attributes
 Internal metrics
 ============================================================================
 
-NEW DOC
-https://splunk.atlassian.net/browse/O11YDOCS-5412
+To see the Collector's internal metrics, refer to :ref:`metrics-internal`.
 
 .. _ootb-metrics-k8s-attributes:
 
