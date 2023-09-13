@@ -189,55 +189,76 @@ The Windows installer script supports the following options:
 .. list-table::
    :header-rows: 1
    :width: 100%
-   :widths: 40 60
+   :widths: 30 40 30
 
    * - Option
      - Description
+     - Default value
    * - ``access_token``
      - The token used to send metric data to Splunk.
+     -
    * - ``realm``
-     - The Splunk realm to use. The default value is ``us0``. The ingest, API, trace, and HEC endpoint URLs are automatically created using this value.
+     - The Splunk realm to use. The ingest, API, trace, and HEC endpoint URLs are automatically created using this value.
+     - ``us0``
    * - ``memory``
-     - Total memory in MIB to allocate to the Collector. Automatically calculates the ballast size. The default value is ``512``. See :ref:`otel-sizing` for more information.
+     - Total memory in MIB to allocate to the Collector. Automatically calculates the ballast size. See :ref:`otel-sizing` for more information.
+     - ``512``
    * - ``mode``
-     - Configure the collector service to run in agent or gateway mode. The default value is ``agent``.
+     - Configure the collector service to run in agent or gateway mode.
+     - ``agent``
    * - ``network_interface``
-     - The network interface the collector receivers listen on. The default value is ``0.0.0.0``.
+     - The network interface the collector receivers listen on.
+     - ``0.0.0.0``
    * - ``ingest_url``
-     - Set the base ingest URL explicitly instead of the URL inferred from the specified realm. The default value is ``https://ingest.REALM.signalfx.com``.
+     - Set the base ingest URL explicitly instead of the URL inferred from the specified realm.
+     - ``https://ingest.REALM.signalfx.com``
    * - ``api_url``
-     - Set the base API URL explicitly instead of the URL inferred from the specified realm. The default value is ``https://api.REALM.signalfx.com``.
+     - Set the base API URL explicitly instead of the URL inferred from the specified realm.
+     - ``https://api.REALM.signalfx.com``
    * - ``trace_url``
-     - Set the trace endpoint URL explicitly instead of the endpoint inferred from the specified realm. The default value is ``https://ingest.REALM.signalfx.com/v2/trace``.
+     - Set the trace endpoint URL explicitly instead of the endpoint inferred from the specified realm.
+     - ``https://ingest.REALM.signalfx.com/v2/trace``
    * - ``hec_url``
-     - Set the HEC endpoint URL explicitly instead of the endpoint inferred from the specified realm. The default value is ``https://ingest.REALM.signalfx.com/v1/log``.
+     - Set the HEC endpoint URL explicitly instead of the endpoint inferred from the specified realm.
+     - ``https://ingest.REALM.signalfx.com/v1/log``
    * - ``hec_token``
      - Set the HEC token if it's different than the specified Splunk access token.
+     -
    * - ``with_fluentd``
-     - Whether to install and configure fluentd to forward log events to the collector. The default value is ``$false``. See :ref:`fluentd-manual-config-windows` for more information.
+     - Whether to install and configure fluentd to forward log events to the collector. See :ref:`fluentd-manual-config-windows` for more information.
+     - ``$false``
    * - ``with_dotnet_instrumentation``
-     - Whether to install and configure .NET tracing to forward .NET application traces to the local collector. The default values is ``$false``.
+     - Whether to install and configure .NET tracing to forward .NET application traces to the local collector.
+     - ``$false``
    * - ``deployment_env``
      - A system-wide environment tag used by .NET instrumentation. Sets the ``SIGNALFX_ENV`` environment variable. Ignored if ``-with_dotnet_instrumentation`` is set to ``false``.
+     -
    * - ``bundle_dir``
-     - The location of your Smart Agent bundle for monitor functionality. The default value is ``C:\Program Files\Splunk\OpenTelemetry Collector\agent-bundle``.
+     - The location of your Smart Agent bundle for monitor functionality.
+     - ``C:\Program Files\Splunk\OpenTelemetry Collector\agent-bundle``
    * - ``insecure``
-     - If true then certificates aren't checked when downloading resources. Defaults to ``$false``.
+     - If true then certificates aren't checked when downloading resources.
+     - ``$false``
    * - ``collector_version``
-     - Specify a specific version of the Collector to install.  Defaults to the latest version available.
+     - Specify a specific version of the Collector to install.
+     - Latest version available
    * - ``stage``
-     - The package stage to install from [``test``, ``beta``, ``release``]. Defaults to ``release``.
+     - The package stage to install from [``test``, ``beta``, ``release``].
+     - ``release``
    * - ``collector_msi_url``
-     - Specify the URL to the Splunk OpenTelemetry Collector MSI package to install The default value is ``https://dl.signalfx.com/splunk-otel-collector/`` |br| ``msi/release/splunk-otel-collector-<version>-amd64.msi``. If specified, the ``-collector_version`` and ``-stage`` parameters are ignored.
+     - Specify the URL to the Splunk OpenTelemetry Collector MSI package to install. If specified, the ``-collector_version`` and ``-stage`` parameters are ignored.
+     - ``https://dl.signalfx.com/splunk-otel-collector/`` |br| ``msi/release/splunk-otel-collector-<version>-amd64.msi``
    * - ``fluentd_msi_url``
-     - Specify the URL to the Fluentd MSI package to install The default value is ``https://packages.treasuredata.com/4/windows/td-agent-4.1.0-x64.msi``.
+     - Specify the URL to the Fluentd MSI package to install.
+     - ``https://packages.treasuredata.com/4/windows/td-agent-4.1.0-x64.msi``
    * - ``msi_path``
      - Specify a local path to a Splunk OpenTelemetry Collector MSI package to install instead of downloading the package. If specified, the ``-collector_version`` and ``-stage`` parameters will be ignored.
+     -
 
 Next steps
 ==================================
 
-Once you have installed the package, you can perform these actions:
+After you have installed the package, you can do the following:
 
 * :ref:`use-navigators-imm`.
 * View logs and errors in the Windows Event Viewer. Search for "view logs and errors" on :new-page:`Microsoft documentation site <https://docs.microsoft.com/en-us/>` for more information.
