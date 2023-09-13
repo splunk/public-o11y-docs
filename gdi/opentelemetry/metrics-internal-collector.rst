@@ -1,4 +1,4 @@
-.. _metrics-ootb-k8s:
+.. _metrics-internal-collector:
 
 ****************************************************************
 Internal metrics of the Collector

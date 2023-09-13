@@ -358,7 +358,7 @@ Volume level metrics and attributes
 Internal metrics
 ============================================================================
 
-To see the Collector's internal metrics, refer to :ref:`metrics-internal`.
+To see the Collector's internal metrics, refer to :ref:`metrics-internal-collector`.
 
 .. _ootb-metrics-k8s-attributes:
 

@@ -21,7 +21,7 @@ Configure the Collector
     windows-config.rst
     other-configuration-sources.rst
     data-processing.rst
-    Internal metrics <metrics-internal.rst>
+    Internal metrics <metrics-internal-collector.rst>
     Default Kubernetes metrics <metrics-ootb-k8s.rst>
     tags.rst
     Remove data pre-ingest <configure-remove.rst>
