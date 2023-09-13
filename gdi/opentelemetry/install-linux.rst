@@ -196,7 +196,7 @@ The Linux installer script supports the following options:
      -
    * - ``--collector-version <version>``
      - The Collector package version to install.
-     - ``$default_collector_version``
+     - ``latest``
    * - ``--discovery``
      - Activate discovery mode on Collector startup. See :ref:`discovery_mode` for more information.
      - Deactivated
@@ -211,22 +211,22 @@ The Linux installer script supports the following options:
      - ``https://ingest.REALM.signalfx.com``
    * - ``--memory <memory size>``
      - Total memory in MIB to allocate to the Collector. This option automatically calculates the ballast size. See :ref:`otel-sizing` for more information.
-     - ``$default_memory_size``
+     - ``512``
    * - ``--mode <agent|gateway>``
      - Configure the Collector service to run in host monitoring (``agent``) or data forwarding (``gateway``) mode. See :ref:`otel-deployment-mode` for more information.
      - ``agent``
    * - ``--listen-interface <ip>``
      - Network interface the Collector receivers listen on.
-     - ``$default_listen_interface``
+     - ``0.0.0.0``
    * - ``--realm <us0|us1|eu0|...>``
      - The Splunk realm to use. The ingest, API, trace, and HEC endpoint URLs are automatically generated using this value.
-     - ``$default_realm``
+     - ``us0``
    * - ``--service-group <group>``
      - Set the group for the splunk-otel-collector service. The option creates the group if it doesn't exist.
-     - ``$default_service_group``
+     - ``splunk-otel-collector``
    * - ``--service-user <user>``
-     - Set the user for the splunk-otel-collector service. The option creates the user if it doesn`t exist.
-     - ``$default_service_user``
+     - Set the user for the splunk-otel-collector service. The option creates the user if it doesn't exist.
+     - ``splunk-otel-collector``
    * - ``--skip-collector-repo``
      - By default, the scripts create an apt, yum, or zypper repo definition file to download the Collector package from ``$repo_base``. Use this option to skip the previous step and use a configured repo on the target system that provides the splunk-otel-collector deb or rpm package.
      -
@@ -257,21 +257,21 @@ The Linux installer script supports the following options:
    * - ``--[no-]generate-service-name``
      - Specify ``--no-generate-service-name`` to prevent the preloader from setting the ``OTEL_SERVICE_NAME`` environment variable. Only applicable if the ``--with-instrumentation`` option is also specified.
      - ``--generate-service-name``
-   * - ``--[activate|disable]-telemetry``
+   * - ``--[enable|disable]-telemetry``
      - Activate or deactivate the instrumentation preloader from sending the ``splunk.linux-autoinstr.executions``  metric to the Collector. Only applicable if the ``--with-instrumentation``  option is also specified.
-     - ``--activate-telemetry``
-   * - ``--[activate|disable]-profiler``
+     - ``--enable-telemetry``
+   * - ``--[enable|disable]-profiler``
      - Activate or deactivate AlwaysOn CPU Profiling. Only applicable if the ``--with-instrumentation``  option is also specified.
      - ``--disable-profiler``
-   * - ``--[activate|disable]-profiler-memory``
+   * - ``--[enable|disable]-profiler-memory``
      - Activate or deactivate AlwaysOn Memory Profiling. Only applicable if the ``--with-instrumentation``  option is also specified.
      - ``--disable-profiler-memory``
-   * - ``--[activate|disable]-metrics``
+   * - ``--[enable|disable]-metrics``
      - Activate or deactivate exporting Micrometer metrics. Only applicable if the ``--with-instrumentation``  option is also specified.
      - ``--disable-metrics``
    * - ``--instrumentation-version``
      - The package version to install. Only applicable if the ``--with-instrumentation``  option is also specified.
-     - ``$default_instrumentation_version``
+     - ``latest``
    * - ``--``
      - Use ``--``  if the access token starts with ``-`` .
      - Not applicable
