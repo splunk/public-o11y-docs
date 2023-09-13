@@ -15,6 +15,15 @@ AWS PrivateLink connects your Virtual Private Cloud (VPC) to your AWS services, 
   :width: 80%
   :alt: AWS Private Link schema.
 
+
+.. mermaid:: 
+
+  graph LR
+    A[Square Rect] -- Link text --> B((Circle))
+    A --> C(Round Rect)
+    B --> D{Rhombus}
+    C --> D  
+
 Prerequisites
 ==================================================
 
