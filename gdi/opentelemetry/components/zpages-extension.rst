@@ -7,9 +7,9 @@ zPages extension
 .. meta::
       :description: Use the zPages extension to activate an extension that serves zPages, an HTTP endpoint that provides live data for debugging different components
 
-The zPages extension enables an extension that serves zPages, an HTTP endpoint that provides live data for debugging different components that were properly instrumented for such. All core exporters and receivers provide some zPage instrumentation.
+The zPages extension serves zPages, an HTTP endpoint that provides live data for debugging different components, if they were properly instrumented for such. zPages are useful for in-process diagnostics without having to depend on any backend to examine traces or metrics.
 
-zPages are useful for in-process diagnostics without having to depend on any backend to examine traces or metrics.
+All core exporters and receivers provide some zPage instrumentation.
 
 Get started
 ======================
@@ -33,66 +33,54 @@ This is a configuration example for the extension:
 
   extensions:
     zpages:
-
-
+      endpoint: "localhost:56888"
 
 Exposed zPages routes
 --------------------------------
 
-The collector exposes the following zPage routes:
+The Collector exposes the following zPage routes:
 
 ServiceZ
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-ServiceZ gives an overview of the collector services and quick access to the pipelinez, extensionz, and featurez zPages. The page also provides build and runtime information.
+ServiceZ gives an overview of the Collector services, and provides quick access to the pipelinez, extensionz, and featurez zPages. The page also provides build and runtime information.
 
-Example URL: http://localhost:55679/debug/servicez
+For example, :new-page:`http://localhost:55679/debug/servicez <http://localhost:55679/debug/servicez>`.
 
 PipelineZ
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-PipelineZ brings insight on the running pipelines running in the collector. You can find information on type, if data is mutated and the receivers, processors and exporters that are used for each pipeline.
+PipelineZ brings insight on the active pipelines running in the Collector. You can find information on type, whether data is mutated, and the receivers, processors and exporters that are used for each pipeline.
 
-Example URL: http://localhost:55679/debug/pipelinez
+For example, :new-page:`http://localhost:55679/debug/pipelinez <http://localhost:55679/debug/pipelinez>`.
 
 ExtensionZ
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-ExtensionZ shows the extensions that are active in the collector.
+ExtensionZ shows the extensions that are active in the Collector.
 
-Example URL: http://localhost:55679/debug/extensionz
+For example, :new-page:`http://localhost:55679/debug/extensionz <http://localhost:55679/debug/extensionz>`.
 
 FeatureZ
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 FeatureZ lists the feature gates available along with their current status and description.
 
-Example URL: http://localhost:55679/debug/featurez
+For example, :new-page:`http://localhost:55679/debug/featurez <http://localhost:55679/debug/featurez>`.
 
 TraceZ
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The TraceZ route is available to examine and bucketize spans by latency buckets for example
+The TraceZ route examines and sorts spans by latency buckets like 0us, 10us, 100us, 1ms, 10ms, 100ms, 1s, 10s, or 1m. They also allow you to quickly examine error samples.
 
-(0us, 10us, 100us, 1ms, 10ms, 100ms, 1s, 10s, 1m] They also allow you to quickly examine error samples
-
-Example URL: http://localhost:55679/debug/tracez
+For example, :new-page:`http://localhost:55679/debug/tracez <http://localhost:55679/debug/tracez>`.
 
 RpcZ
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The Rpcz route is available to help examine statistics of remote procedure calls (RPCs) that are properly instrumented. For example when using gRPC
+The Rpcz route helps examine statistics of remote procedure calls (RPCs) that are properly instrumented, such as gRPC.
 
-Example URL: http://localhost:55679/debug/rpcz
-
-
-
-
-
-
-
-
-
+For example, :new-page:`http://localhost:55679/debug/rpcz <http://localhost:55679/debug/rpcz>`.
 
 .. _zpages-extension-settings:
 
