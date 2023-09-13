@@ -27,14 +27,25 @@ Splunk Observability Cloud is built on top of OpenTelemetry and uses it as the d
   flowchart LR
       %% LR indicates the direction (left-to-right)
 
-      %% You can define classes to style nodes and oth
-      classDef default fill:#FFFFFF, stroke:#000
-      log-->splunkPlatform[(Splunk platform)]-->logObserver[(Log Observer Connect)]-->analytics
-      
-      subgraph o11yArchitecture[&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSplunk Observability Cloud Architecture]
-      direction LR
-        data-->otel-->ingestion-->processingRetention-->analytics
 
+      classDef default fill:#FFFFFF, stroke:#000
+      classDef platform fill:#acd1a4, stroke:#000
+      classDef loc fill:#fdf8a4, stroke:#000
+      classDef dataColor fill:#d9d9d9, stroke:#000
+      classDef otelColor fill:#afcedb, stroke:#000
+      classDef ingestionColor fill:#fbc477, stroke:#000
+      classDef processingColor fill:#fab9b4, stroke:#000
+      classDef analyticsColor fill:#f999cb, stroke:#000
+
+      log-->splunkPlatform[(Splunk platform)]:::platform-->logObserver[(Log Observer Connect)]:::loc-->analytics
+      
+      subgraph o11yArchitecture[Splunk Observability Cloud Architecture]
+      direction LR
+        data-->otel-->ingestion
+        ingestion-->processingRetention-->analytics
+
+        class data dataColor
+        
         subgraph data[Data sources]
             direction LR
             log(Logs)
@@ -42,12 +53,16 @@ Splunk Observability Cloud is built on top of OpenTelemetry and uses it as the d
             metric(Metrics)
         end 
         
+        class otel otelColor
+
         subgraph otel[OpenTelemetry Collector]
             direction LR
             aggregate((aggregate))
             parse((parse, extract, enrich))
             delete((delete))
         end
+
+        class ingestion ingestionColor
 
         subgraph ingestion[Ingestion]
             direction LR 
@@ -57,11 +72,15 @@ Splunk Observability Cloud is built on top of OpenTelemetry and uses it as the d
             metadataExtraction(Metadata extraction)
         end
 
+        class processingRetention processingColor
+
         subgraph processingRetention[Processing and retention]
             direction LR 
             indexStorage(Indexing and storage)
             traceMetricization(Trace metricization)
         end
+
+        class analytics analyticsColor
 
         subgraph analytics[Analytics]
             direction LR 
