@@ -4,22 +4,22 @@
 Quickstart guide: monitor your Kubernetes environment with Splunk Observability Cloud
 *********************************************************************************************
 
-This quick start tutorial walks you through the following steps to start monitoring your Kubernetes platform using :ref:`Splunk Observability Cloud <get-started-infrastructure>` and related features in under 20 minutes!
+This quick start tutorial walks you through the following steps to start monitoring your Kubernetes platform using :ref:`Splunk Observability Cloud <get-started-infrastructure>` and related features in under 20 minutes.
 
-:strong:`Step 1`: Install the Splunk Distribution of OpenTelemetry Collector for Kubernetes  (5 minutes)
+:strong:`Step 1`: Install the Splunk Distribution of OpenTelemetry Collector for Kubernetes 
 
-:strong:`Step 2`: :ref:`Monitor <navigators-imqs>` your Kubernetes cluster using out-of-the-box navigators. (10 minutes)
+:strong:`Step 2`: :ref:`Monitor <navigators-imqs>` your Kubernetes cluster using out-of-the-box navigators.
 
-For example, you can access this Hosts navigator to monitor all hosts where you’ve installed the Splunk Distribution of OpenTelemetry Collector
+For example, you can access :ref:`this Hosts navigator <https://app.signalfx.com/#/infra/entity/datacenter%20hosts?endTime=now&startTime=-3h?>` to monitor all hosts where you’ve installed the Splunk Distribution of OpenTelemetry Collector
 
-:strong:`Step 3`: :ref:`Activate an out-of-the-box detector to issue alerts <alerts-imqs>` that help you stay informed about the condition of your infrastructure. (2 minutes)
+:strong:`Step 3`: :ref:`Activate an out-of-the-box detector to issue alerts <alerts-imqs>` that help you stay informed about the condition of your infrastructure.
 
 .. _install-collector-for-k8s:
 
 Step 1: Install the Collector and get Kubernetes data into Splunk Observability Cloud
 ======================================================================================
 
-In this step, you’ll install the Splunk Distribution of OpenTelemetry Collector in a Kubernetes cluster to start getting platform infrastructure data into Splunk Observability Cloud.
+Install the Splunk Distribution of OpenTelemetry Collector in a Kubernetes cluster to start getting platform infrastructure data into Splunk Observability Cloud.
 After this data starts flowing into Splunk Observability Cloud, you can:
 
 * :ref:`Monitor your platform infrastructure data using navigators <navigators-imqs>`
@@ -33,12 +33,9 @@ Prerequisites
   For more details about creating organization access tokens, see :ref:`admin-org-tokens`.
 * You must have systemd and cURL installed.
 
-.. 
-  FIXME: Low image quality 
-
 .. image:: /_images/gdi/k8s-wizard-config.png
   :width: 100%
-  :alt: This screenshot displays the installation setup wizard for the OpenTelemetry Collector for Kubernetes.
+  :alt: Installation setup wizard for the OpenTelemetry Collector for Kubernetes.
 
 
 .. note::
@@ -54,7 +51,7 @@ To get Kubernetes data into Splunk Observability Cloud:
 1. Log in to Splunk Observability Cloud
 2. Select the :guilabel:`Add Integration` button or, in the left navigation menu, select :guilabel:`Data Management` to open the Integrate Your Data page.
 3. In the :guilabel:`Splunk OpenTelemetry Collector` menu, select the :guilabel:`Kubernetes` button to launch the quick install wizard.
-4. Select Kubernetes from the platform drop-down menu and enter the values applicable to your environment to configure the Collector instance.
+4. Select Kubernetes from the platform menu and enter the values applicable to your environment to configure the Collector instance.
 
 .. list-table::
   :widths: 50 50
@@ -95,12 +92,12 @@ Step 2: Monitor your Kubernetes cluster and your Cloud infrastructure
 ========================================================================
 
 Now that you have data about your infrastructure, such as platform hosts, Kubernetes clusters, and cloud provider services, flowing into Splunk Observability Cloud, 
-you can use out-of-the-box navigators to explore your data.
+you can use default navigators to explore your data.
 
 Prerequisites
 -----------------------
 
-Navigators display only if Splunk Infrastructure Monitoring is receiving data from your source.
+Navigators appear only if Splunk Infrastructure Monitoring is receiving data from your source.
 
 For example, even if a guided setup you used in :ref:`install-collector-for-k8s` or :ref:`monitor-k8s-cluster` provided confirmation of a valid connection, the navigators don’t display unless your host, Kubernetes cluster, or cloud provider service is actively sending data to Splunk Infrastructure Monitoring.
 
@@ -111,15 +108,17 @@ Tips for working with navigators
 
 Navigators are primarily composed of charts.
 
+Using charts, you can view details about your metrics and visualize metric time series. 
+
 * Hover over a chart to see details about specific metric time series.
 * Select within a chart to see the data table for a given time period.
 * Select a chart title in the top left of a chart to display the full chart along with more chart options, such as a plot editor and the ability to change the chart’s visualization type to area, column, or histogram, for example.
 
-* Every chart has a :guilabel:`Chart Actions` menu. Select the more (⋯) icon in the upper right of a chart to open the menu and view available actions. For example, you can share the chart, download it as an image, or export it as a CSV (comma-separated values) file.
+* Every chart has a :guilabel:`Chart Actions` menu. Select the |more| icon in the upper right of a chart to open the menu and view available actions. For example, you can share the chart, download it as an image, or export it as a comma-separated values (CSV) file.
 
-For more details about using navigators, see Use navigators in Splunk Infrastructure Monitoring.
+For more details about using navigators, see :ref:`Use navigators in Splunk Infrastructure Monitoring <use-navigators-imm>`.
 
-For more details about working with charts, see Charts in Splunk Observability Cloud.
+For more details about working with charts, see :ref:`Charts in Splunk Observability Cloud <data-visualization-charts>`.
 
 Monitor Kubernetes clusters using the Kubernetes navigator
 ----------------------------------------------------------------
@@ -142,10 +141,10 @@ Splunk Observability Cloud also provides :ref:`built-in (out of the box) dashboa
 
 .. _activate-ootb-detector:
 
-Step 3: Activate an out-of-the-box detector to issue alerts
+Step 3: Activate a detector to issue alerts
 ==================================================================================
 
-Now that you have data flowing into Splunk Observability Cloud and you can explore that data using navigators and dashboards, let’s set up an alert that can help keep you informed about certain conditions in your data.
+Now that you have data flowing into Splunk Observability Cloud and you can explore that data using navigators and dashboards, you can set up an alert that can help keep you informed about certain conditions in your data.
 
 To create an alert, you first create a detector that monitors data for conditions you want to be alerted about. When a condition you want to be alerted about is met, the detector issues an alert.
 
@@ -166,10 +165,10 @@ For more details about alerts and detectors, see :ref:`alerts-detectors-notifica
 Next steps
 =============================
 
-* Now that you’ve seen some out-of-the-box visualizations, want to create your own dashboards and share them with your team? See :ref:`Create and customize dashboards <dashboard-create-customize>` and :ref:`Best practices for creating dashboards <dashboards-best-practices>` in Splunk Observability Cloud.
+* To create your own dashboards and share them with your team, see :ref:`Create and customize dashboards <dashboard-create-customize>` and :ref:`Best practices for creating dashboards <dashboards-best-practices>` in Splunk Observability Cloud.
 * Use :ref:`Related Content <get-started-relatedcontent>` to jump between components of Splunk Observability Cloud by selecting related data.
 * [ADD MPM]
 * Now that you have infrastructure data flowing into Splunk Observability Cloud, consider :ref:`instrumenting an application <get-started-application>` to send spans and traces to :ref:`Splunk Application Performance Monitoring (APM) <get-started-apm>`, where you can access dashboards like this one for your services and business workflows.
-  We provide tools that help you instrument applications written in Java, .NET, Node.js, Python, Ruby, and PHP.
+  Splunk Observability Cloud provides tools that help you instrument applications written in Java, .NET, Node.js, Python, Ruby, and PHP.
 * Explore :ref:`even more data sources <supported-data-sources>` that you can monitor using Splunk Observability Cloud, such as Apache Zookeeper, Cassandra, Docker, Heroku, Jenkins, and Redis.
-* Interested in coordinating team efforts in Splunk Observability Cloud using team alerts and dashboards? See :ref:`<admin-manage-teams>`.
+* To coordinate team efforts in Splunk Observability Cloud, see :ref:`<admin-manage-teams>`.
