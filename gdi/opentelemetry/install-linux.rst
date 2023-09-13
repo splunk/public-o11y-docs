@@ -7,7 +7,7 @@ Install the Collector for Linux with the installer script
 .. meta::
       :description: Describes how to install the Splunk Distribution of OpenTelemetry Collector for Linux using the script or deployment tools.
 
-The Splunk Distribution of OpenTelemetry Collector for Linux is a package that provides integrated collection and forwarding for all data types. 
+The Splunk Distribution of OpenTelemetry Collector for Linux is a package that provides integrated collection and forwarding for all data types.
 
 Install the package using one of these methods:
 
@@ -25,7 +25,7 @@ The following Linux distributions and versions are supported:
 * Amazon Linux: 2, 2023. Log collection with Fluentd is not currently supported for Amazon Linux 2023.
 * CentOS, Red Hat, or Oracle: 7, 8, 9
 * Debian: 9, 10, 11
-* SUSE: 12, 15 for versions v0.34.0 or higher. Log collection with Fluentd is not currently supported.
+* SUSE: 12, 15 for version 0.34.0 or higher. Log collection with Fluentd is not currently supported.
 * Ubuntu: 16.04, 18.04, 20.04, and 22.04
 
 The installer script deploys and configures these elements:
@@ -36,7 +36,7 @@ The installer script deploys and configures these elements:
 To install the package using the installer script, follow these steps:
 
 #. Ensure you have systemd, ``curl`` and ``sudo`` installed.
-#. Download and execute the installer script.
+#. Download and run the installer script.
 #. Replace the following variables for your environment:
 
 * ``SPLUNK_REALM``: This is the Realm to send data to. The default is ``us0``. See :new-page:`realms <https://dev.splunk.com/observability/docs/realms_in_endpoints/>`.
@@ -48,17 +48,7 @@ To install the package using the installer script, follow these steps:
    curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh;
    sudo sh /tmp/splunk-otel-collector.sh --realm SPLUNK_REALM --memory SPLUNK_MEMORY_TOTAL_MIB -- SPLUNK_ACCESS_TOKEN
 
-.. note:: If you have a Log Observer entitlement or wish to collect logs for the target host with Fluentd, use the ``--with-fluentd`` option to also install Fluentd when installing the Collector.
-
-Run additional script options
--------------------------------------------
-
-To display additional configuration options supported by the script, use the ``-h`` flag.
-
-.. code-block:: bash
-
-   curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh;
-   sh /tmp/splunk-otel-collector.sh -h
+.. note:: If you have a Log Observer entitlement or want to collect logs for the target host with Fluentd, use the ``--with-fluentd`` option to also install Fluentd when installing the Collector.
 
 Configure memory allocation
 ----------------------------------
@@ -69,14 +59,14 @@ To configure memory allocation, change the ``--memory`` parameter. By default, t
 
    curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh;
    sudo sh /tmp/splunk-otel-collector.sh --realm SPLUNK_REALM --memory SPLUNK_MEMORY_TOTAL_MIB \
-       -- SPLUNK_ACCESS_TOKEN
+      -- SPLUNK_ACCESS_TOKEN
 
 Configure proxy settings
 ----------------------------------
 
 To configure proxy settings to install and run the OpenTelemetry Collector, see :ref:`configure-proxy-collector`.
 
-Use configured repos 
+Use configured repos
 --------------------------------
 
 By default, apt/yum/zypper repo definition files are created to download the package and Fluentd deb/rpm packages from
@@ -88,7 +78,7 @@ To skip these steps and use configured repos on the target system that provide t
 
    curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
    sudo sh /tmp/splunk-otel-collector.sh --realm SPLUNK_REALM --skip-collector-repo --skip-fluentd-repo \
-    -- SPLUNK_ACCESS_TOKEN
+   -- SPLUNK_ACCESS_TOKEN
 
 .. _fluentd-manual-config-linux:
 
@@ -149,7 +139,7 @@ If the td-agent package is upgraded after initial installation, you might need t
    .. code-block:: bash
 
       sudo /opt/td-agent/bin/fluent-cap-ctl --get -f /opt/td-agent/bin/ruby
-      Capabilities in '/opt/td-agent/bin/ruby',
+      Capabilities in `` /opt/td-agent/bin/ruby`` ,
       Effective:   dac_override, dac_read_search
       Inheritable: dac_override, dac_read_search
       Permitted:   dac_override, dac_read_search
@@ -250,10 +240,95 @@ Salt
 ---------------
 Splunk provides a Salt formula to install and configure the Collector. See :ref:`deployments-salt` for the instructions.
 
+
+.. _otel-installer-options-linux:
+
+Options of the installer script for Linux
+==============================================
+
+The Linux installer script supports the following options:
+
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 40 60
+
+   * - Option
+     - Description
+   * - ``--api-url <url>``
+     - Set the API endpoint URL explicitly instead of using the endpoint inferred from the specified realm. The default value is ``https://api.REALM.signalfx.com``.
+   * - ``--ballast <ballast size>``
+     - Set the ballast size explicitly instead of the value calculated using the ``--memory`` option. See :ref:`sizing` for more information.
+   * - ``--beta``
+     - Use the beta package repository.
+   * - ``--collector-config <path>``
+     -  Set the path to an existing custom configuration file for the Collector service instead of using the default configuration file provided by the Collector package based on the ``--mode <agent|gateway>`` option. If the specified file requires custom environment variables, you can manually add both the variables and values to ``$collector_env_path`` after installation. Restart the collector service with the ``sudo systemctl restart splunk-otel-collector`` command for the changes to take effect.
+   * - ``--collector-version <version>``
+     - The Collector package version to install. The default value is defined by ``$default_collector_version``.
+   * - ``--discovery``
+     - Activate discovery mode on Collector startup. Deactivated by default. See :ref:`discovery_mode` for more information.
+   * - ``--hec-token <token>``
+     - Set the HEC token if it`` s different than the specified ``access_token``.
+   * - ``--hec-url <url>``
+     -  Set the HEC endpoint URL explicitly instead of using the endpoint inferred from the specified realm. The default value is ``https://ingest.REALM.signalfx.com/v1/log``.
+   * - ``--ingest-url <url>``
+     - Set the ingest endpoint URL explicitly instead of using the endpoint inferred from the specified realm. The default value is ``https://ingest.REALM.signalfx.com``.
+   * - ``--memory <memory size>``
+     - Total memory in MIB to allocate to the Collector. This option automatically calculates the ballast size. The default value is defined by ``$default_memory_size``. See :ref:`sizing` for more information.
+   * - ``--mode <agent|gateway>``
+     - Configure the Collector service to run in agent or gateway mode. The default value is ``agent``. See :ref:`otel-deployment-mode` for more information.
+   * - ``--listen-interface <ip>``
+     - Network interface the Collector receivers listen on. The default value is defined by ``$default_listen_interface``.
+   * - ``--realm <us0|us1|eu0|...>``
+     - The Splunk realm to use. The ingest, API, trace, and HEC endpoint URLs are automatically generated using this value. The default value is defined by ``$default_realm``.
+   * - ``--service-group <group>``
+     - Set the group for the splunk-otel-collector service. The option creates the group if it doesn`` t exist. The default value is defined by ``$default_service_group``.
+   * - ``--service-user <user>``
+     - Set the user for the splunk-otel-collector service. The option creates the user if it doesn`` t exist. The default value is defined by ``$default_service_user``.
+   * - ``--skip-collector-repo``
+     - By default, the scripts creates an apt, yum, or zypper repo definition file to download the collector package from ``$repo_base``. Use this option to skip the previous step and use a preconfigured repo on the target system that provides the splunk-otel-collector deb or rpm package.
+   * - ``--skip-fluentd-repo``
+     - By default, the scripts creates an apt, yum, or zypper repo definition file to download the fluentd package from ``$td_agent_repo_base``. Use this option to skip the previous step and use a preconfigured repo on the target system that provides the splunk-otel-collector deb or rpm package.
+   * - ``--test``
+     - Use the test package repo.
+   * - ``--trace-url <url>``
+     - Set the trace endpoint URL explicitly instead of the endpoint inferred from the specified realm. The default value is ``https://ingest.REALM.signalfx.com/v2/trace``.
+   * - ``--uninstall``
+     - Removes the Splunk OpenTelemetry Collector for Linux.
+   * - ``--with[out]-fluentd``
+     - Whether to install and configure fluentd to forward log events to the Collector. The default value is ``--without-fluentd``. See :ref:`fluentd-manual-config-linux` for more information.
+   * - ``--with[out]-instrumentation``
+     - Whether to install and configure the splunk-otel-auto-instrumentation package. The default value is ``--without-instrumentation``. See :ref:`zero-config` for more information.
+   * - ``--deployment-environment <value>``
+     - Set the ``deployment.environment`` resource attribute to the specified value. Only applicable if the ``--with-instrumentation`` option is also specified. The default value is empty.
+   * - ``--service-name <name>``
+     - Override the autogenerated service names for all instrumented Java applications on this host with ``<name>``. Only applicable if the ``--with-instrumentation`` option is also specified. The default value is empty.
+   * - ``--[no-]generate-service-name``
+     - Specify ``--no-generate-service-name`` to prevent the preloader from setting the ``OTEL_SERVICE_NAME`` environment variable. Only applicable if the ``--with-instrumentation`` option is also specified. The default value is ``--generate-service-name``.
+   * - ``--[activate|disable]-telemetry``
+     - Activate or deactivate the instrumentation preloader from sending the ``splunk.linux-autoinstr.executions``  metric to the Collector. Only applicable if the ``--with-instrumentation``  option is also specified. The default value is ``--activate-telemetry``.
+   * - ``--[activate|disable]-profiler``
+     - Activate or deactivate AlwaysOn CPU Profiling. Only applicable if the ``--with-instrumentation``  option is also specified. The default value is ``--disable-profiler``.
+   * - ``--[activate|disable]-profiler-memory``
+     - Activate or deactivate AlwaysOn Memory Profiling. Only applicable if the ``--with-instrumentation``  option is also specified. The default value is ``--disable-profiler-memory``.
+   * - ``--[activate|disable]-metrics``
+     - Activate or deactivate exporting Micrometer metrics. Only applicable if the ``--with-instrumentation``  option is also specified. The default value is ``--disable-metrics``.
+   * - ``--instrumentation-version``
+     - The splunk-otel-auto-instrumentation package version to install. Only applicable if the ``--with-instrumentation``  option is also specified. The default value is defined by ``$default_instrumentation_version``.
+   * - ``--``
+     - Use ``--``  if the access token starts with ``-`` .
+
+To display all the configuration options supported by the script, use the ``-h`` flag.
+
+.. code-block:: bash
+
+   curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh;
+   sh /tmp/splunk-otel-collector.sh -h
+
 Next steps
 ==================================
 
-After you've installed the package, you can perform these actions:
+After you`` ve installed the package, you can perform these actions:
 
 * :ref:`Configure the Collector <otel-configuration>`.
 * Use :ref:`Infrastructure Monitoring <get-started-infrastructure>` to track the health of your infrastructure.
