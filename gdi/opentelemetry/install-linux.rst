@@ -296,7 +296,7 @@ The Linux installer script supports the following options:
      - The Splunk realm to use. The ingest, API, trace, and HEC endpoint URLs are automatically generated using this value.
      - ``$default_realm``
    * - ``--service-group <group>``
-     - Set the group for the splunk-otel-collector service. The option creates the group if it doesn`` t exist.
+     - Set the group for the splunk-otel-collector service. The option creates the group if it doesn't exist.
      - ``$default_service_group``
    * - ``--service-user <user>``
      - Set the user for the splunk-otel-collector service. The option creates the user if it doesn`t exist.
