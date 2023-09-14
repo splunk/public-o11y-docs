@@ -11,13 +11,6 @@ The Splunk Distribution of OpenTelemetry Python collects runtime and custom metr
 
 For examples of custom metrics instrumentation and instrument types, see :ref:`custom-metrics-python`.
 
-.. _activate-python-metrics:
-
-Activate metrics collection
-=================================
-
-The Splunk Distribution of OpenTelemetry Python collects metrics by default. To deactivate metrics collection, update your environment variable:
-
 .. _python-app-metrics:
 
 Application metrics
