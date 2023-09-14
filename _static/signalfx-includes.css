@@ -72,10 +72,20 @@ a.image-reference {
     text-align:center;
 }
 
-table.align-default, table.docutils, table.monitor-stats {
+ul.monitor-metrics, ul.monitor-attr {
+  padding-left:1rem;
+}
+
+table.docutils {
   width: 100%;
   table-layout:fixed;
   }
+
+table.monitor-stats {
+    width: 100%;
+    table-layout:fixed;
+    word-wrap: break-word;
+    }
 
 span.pre {
   white-space:normal;
