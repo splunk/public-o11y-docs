@@ -14,10 +14,8 @@ Meet the following requirements to instrument .NET applications for Splunk Obser
 Ensure you are using supported .NET versions
 ==============================================================
 
-The Splunk Distribution of OpenTelemetry .NET supports the following .NET versions:
+.. include:: /_includes/requirements/dotnet.rst
 
-- .NET 6.0 and higher
-- .NET Framework 4.6.2 and higher
 
 .. _supported-dotnet-otel-libraries:
 

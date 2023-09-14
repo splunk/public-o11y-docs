@@ -21,7 +21,7 @@ The following sections describe the minimum requirements of the Splunk OTel Java
 Minimum requirements for production deployments
 =================================================================
 
-.. include:: /_includes/gdi/java-requirements.rst
+.. include:: /_includes/requirements/java.rst
 
 
 .. _java-overhead-guidelines:
