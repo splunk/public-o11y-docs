@@ -80,7 +80,48 @@ To skip these steps and use configured repos on the target system that provide t
    curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
    sudo sh /tmp/splunk-otel-collector.sh --realm $SPLUNK_REALM --skip-collector-repo --skip-fluentd-repo \
     -- $SPLUNK_ACCESS_TOKEN
-    
+
+Upgrade the Collector
+--------------------------------
+
+To upgrade the Collector, run the following commands on your system (requires ``root`` privileges):
+
+* Debian:
+
+  .. code-block:: bash
+
+     sudo apt-get update
+     sudo apt-get install --only-upgrade splunk-otel-collector
+
+  Note: If the default configuration files in ``/etc/otel/collector`` have been modified after initial installation, you
+  may be prompted to keep the existing files or overwrite the files from the new Collector package.
+
+* RPM:
+
+  * ``yum``
+
+    .. code-block:: bash
+
+       sudo yum upgrade splunk-otel-collector
+
+  * ``dnf``
+
+    .. code-block:: bash
+
+       sudo dnf upgrade splunk-otel-collector
+
+  * ``zypper``
+
+    .. code-block:: bash
+
+       sudo zypper refresh
+       sudo zypper update splunk-otel-collector
+
+  Note: If the default configuration files in ``/etc/otel/collector`` have been modified after initial installation, the
+  existing files will be preserved and the files from the new Collector package may be installed with a ``.rpmnew``
+  extension.
+
+
 
 .. _fluentd-manual-config-linux:
 
@@ -141,7 +182,7 @@ If the td-agent package is upgraded after initial installation, you might need t
    .. code-block:: bash
 
       sudo /opt/td-agent/bin/fluent-cap-ctl --get -f /opt/td-agent/bin/ruby
-      Capabilities in `` /opt/td-agent/bin/ruby`` ,
+      Capabilities in '/opt/td-agent/bin/ruby' ,
       Effective:   dac_override, dac_read_search
       Inheritable: dac_override, dac_read_search
       Permitted:   dac_override, dac_read_search
