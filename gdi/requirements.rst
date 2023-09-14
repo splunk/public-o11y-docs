@@ -7,9 +7,7 @@ Compatibility and requirements for Splunk Observability Cloud
 .. meta::
    :description: Splunk Observability Cloud's compatibility and requirements, including infrastructure monitoring agents and application and user monitoring instrumentation compatibility information.
 
-You can get infrastructure, application, and user experience data into Splunk Observability Cloud from a variety of monitored and instrumented sources.
-
-Check the following requirements to learn which operating systems, languages, and frameworks are compatible with Splunk Observability Cloud.
+You can get infrastructure, application, and user experience data into Splunk Observability Cloud from a variety of monitored and instrumented sources. Check the following requirements to learn which operating systems, languages, and frameworks are compatible with Splunk Observability Cloud.
 
 Infrastructure monitoring (IMM)
 ==================================================
