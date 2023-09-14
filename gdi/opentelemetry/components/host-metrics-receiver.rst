@@ -311,16 +311,6 @@ paging scraper
 For more information, see the :new-page:`paging scraper documentation <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/pagingscraper/documentation.md>` in GitHub.
 
 
-processes scraper
---------------------------
-
-.. raw:: html
-
-   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/processesscraper.yaml"></div>
-
-For more information, see the :new-page:`processes scraper documentation <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/processesscraper/documentation.md>` in GitHub.
-
-
 process scraper
 --------------------------
 
@@ -329,6 +319,16 @@ process scraper
    <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/processscraper.yaml"></div>
 
 For more information, see the :new-page:`process scraper documentation <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/processscraper/documentation.md>` in GitHub.
+
+
+processes scraper
+--------------------------
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/processesscraper.yaml"></div>
+
+For more information, see the :new-page:`processes scraper documentation <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/processesscraper/documentation.md>` in GitHub.
 
 
 .. include:: /_includes/gdi/default-translation-metrics.rst

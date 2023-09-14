@@ -4,7 +4,7 @@
 Welcome
 **********
 
-.. image:: _images/get-started/o11y-user-doc-hero-banner-v2.svg
+.. imagetarget:: _images/get-started/o11y-user-doc-hero-banner-v2.svg
    :alt: Welcome
    :width: 97.3%
    :target: https://docs.splunk.com/Observability/get-started/o11y.html#nav-Get-started
@@ -17,8 +17,8 @@ The first step toward observability is getting relevant data into Splunk Observa
 
 .. rst-class:: newcard
 
-:strong:`Get data in`
-Learn how to get data in from each layer in your stack :ref:`get-started-get-data-in`
+:strong:`Compatibility and requirements`
+Systems and languages you can use with Splunk Observability Cloud :ref:`requirements`
 
 .. rst-class:: newcard
 
@@ -321,6 +321,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    gdi/get-data-in/get-data-in
+
+.. toctree::
+   :maxdepth:   3
+
+   Compatibility and requirements <gdi/requirements>
 
 .. toctree::
    :maxdepth:   3

@@ -181,6 +181,7 @@ Use single value charts
 Choose this chart type when you want to see a single number in a large font that represents the current value of a single data point on a plot line. If the time period is in the past, the number represents the value of the metric near the end of the time period.
 
   .. image:: /_images/data-visualization/charts/single-value-chart.png
+     :width: 50%
      :alt: This screenshot shows a single value chart illustrating the number of hosts with the Splunk Distribution of OpenTelemetry Collector installed.
 
 .. caution::
@@ -251,6 +252,7 @@ Use text charts
 Use text charts when you want to place a text note on the dashboard instead of displaying metrics.
 
   .. image:: /_images/data-visualization/charts/text-chart.png
+     :width: 50%
      :alt: This screenshot shows a text chart illustrating how you can this chart type to provide relevant instructional text on a dashboard.
 
 To learn more about text charts, see :ref:`text-charts`.
