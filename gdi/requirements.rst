@@ -7,32 +7,43 @@ Compatibility and requirements for Splunk Observability Cloud
 .. meta::
    :description: Splunk Observability Cloud's compatibility and requirements, including infrastructure monitoring agents and application and user monitoring instrumentation compatibility information.
 
-Splunk Observability Cloud
+You can get infrastructure, application, and user experience data into Splunk Observability Cloud from a variety of monitored and instrumented sources.
+
+Check the following requirements to learn which operating systems, languages, and frameworks are compatible with Splunk Observability Cloud.
 
 Infrastructure monitoring (IMM)
 ==================================================
 
-Splunk Distribution of OpenTelemetry Collector
---------------------------------------------------
+The Splunk Distribution of OpenTelemetry Collector supports the following operating systems and services.
 
 Linux
-^^^^^^^^^^^^^^^^^^^^
+------------------------------------------------------------
 
 .. include:: /_includes/requirements/collector-linux.rst
 
 See :ref:`get-started-linux` for more information.
 
 Windows
-^^^^^^^^^^^^^^^^^^^^
+------------------------------------------------------------
 
 .. include:: /_includes/requirements/collector-windows.rst
 
 See :ref:`get-started-windows` for more information.
 
 
+Available host and application monitors
+-------------------------------------------------------------
+
+The following host and application monitors are available. Refer to each service for detailed compatibility and requirements information.
+
+.. include:: /_includes/application-receiver-table.rst
+
 
 Application monitoring (APM)
 ==================================================
+
+The Splunk distributions of OpenTelemetry instrumentation supports the following languages and runtimes.
+
 
 Java
 ------------------------------------------
@@ -92,7 +103,6 @@ PHP
 See :ref:`php-requirements` for more information.
 
 
-
 AWS Lambda functions
 ------------------------------------------
 
@@ -102,19 +112,10 @@ See :ref:`instrument-aws-lambda-functions` for more information.
 
 
 
-Istio
-------------------------------------------
-
-.. include:: /_includes/requirements/istio.rst
-
-See :ref:`get-started-istio` for more information.
-
-
-
-
 Real user monitoring (RUM)
 ==================================================
 
+The Splunk distributions of OpenTelemetry instrumentation supports the following platforms and frameworks.
 
 
 Android
@@ -151,5 +152,7 @@ React Native
 See :ref:`react-rum-install` for more information.
 
 
+Support
+======================
 
-
+.. include:: /_includes/troubleshooting-components.rst
