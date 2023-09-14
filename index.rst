@@ -325,7 +325,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   gdi/get-data-in/requirements
+   gdi/requirements
 
 .. toctree::
    :maxdepth:   3

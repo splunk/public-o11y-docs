@@ -7,7 +7,10 @@ Compatibility and requirements for Splunk Observability Cloud
 .. meta::
    :description: Splunk Observability Cloud's compatibility and requirements, including infrastructure monitoring agents and application and user monitoring instrumentation compatibility information.
 
-Splunk Observability Cloud 
+Splunk Observability Cloud
+
+Infrastructure monitoring (IMM)
+==================================================
 
 Splunk Distribution of OpenTelemetry Collector
 --------------------------------------------------
@@ -26,6 +29,10 @@ Windows
 
 See :ref:`get-started-windows` for more information.
 
+
+
+Application monitoring (APM)
+==================================================
 
 Java
 ------------------------------------------
@@ -86,12 +93,27 @@ See :ref:`php-requirements` for more information.
 
 
 
+AWS Lambda functions
+------------------------------------------
+
+.. include:: /_includes/requirements/lambda.rst
+
+See :ref:`instrument-aws-lambda-functions` for more information.
+
+
+
 Istio
 ------------------------------------------
 
 .. include:: /_includes/requirements/istio.rst
 
 See :ref:`get-started-istio` for more information.
+
+
+
+
+Real user monitoring (RUM)
+==================================================
 
 
 
@@ -129,10 +151,5 @@ React Native
 See :ref:`react-rum-install` for more information.
 
 
-AWS Lambda functions
-------------------------------------------
 
-.. include:: /_includes/requirements/lambda.rst
-
-See :ref:`instrument-aws-lambda-functions` for more information.
 
