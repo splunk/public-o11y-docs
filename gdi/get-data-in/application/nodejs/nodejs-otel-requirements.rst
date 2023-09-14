@@ -16,7 +16,7 @@ Meet these requirements to instrument Node.js applications for Splunk Observabil
 Ensure you have supported Node.js and library versions
 ==============================================================
 
-The Splunk Distribution of OpenTelemetry JS requires Node.js 14 and higher. To activate AlwaysOn Profiling, you need Node.js 16 or higher.
+.. include:: /_includes/requirements/nodejs.rst
 
 The Splunk Distribution of OpenTelemetry JS instruments the following libraries and packages:
 
