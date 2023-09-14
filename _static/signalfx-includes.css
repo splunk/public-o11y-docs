@@ -212,9 +212,9 @@ color:#0B599D !important;
 text-decoration:none;
 }
 
-a:hover {
-opacity:0.5;
-text-decoration:none;
+a.reference:hover {
+opacity: .5;
+text-decoration: none;
 }
 
 a:active {
