@@ -4,6 +4,10 @@
 Create custom events
 ********************************
 
+.. meta::
+   :description: Use custom events to capture metrics (errors, page loads, and core web vitals) specific to your organization's use cases, such as understanding drop off rates during a checkout workflow. 
+
+   
 Create custom events to capture meaningful metrics about customer journeys and user behavior on your site. Custom events support filtering by tags and the ability to add custom attributes.  
 
 How custom events can add value to your organization  

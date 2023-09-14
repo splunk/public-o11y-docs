@@ -41,7 +41,7 @@ Splunk APM is an Application Performance Monitoring solution that collects every
      - A set of metric time series capturing the values of key indicators over time, such as request rate, error rate and durations, calculated based on your traces and spans in Splunk APM. 
 
    * - :ref:`Monitoring MetricSets (MMS)<mms-concept>`
-     - Metric time series that power Splunk APM’s real-time monitoring capabilities, including charts, dashboards, and detectors.
+     - Metric time series that power the real-time monitoring capabilities in Splunk APM, including charts, dashboards, and detectors.
 
    * - :ref:`operation<operation-concept>`
      - A specific action performed by a service. 

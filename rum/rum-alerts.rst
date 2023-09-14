@@ -5,6 +5,9 @@
 Alert on Splunk RUM data 
 ************************************************
 
+.. meta::
+   :description: Configure alerts for your Splunk RUM metrics to monitor and and take timely actions in response to metric data. You can alert on data such as RUM browser data, iOS RUM data, and Android data.
+
 Splunk RUM leverages the Infrastructure Monitoring platform to create detectors and alerts. Configure detectors to alert on your Splunk RUM metrics so that you can monitor and take timely action on alerts associated with your application. 
 
 How alerts work in Splunk RUM

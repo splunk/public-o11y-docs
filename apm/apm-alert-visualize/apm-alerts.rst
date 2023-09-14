@@ -4,43 +4,81 @@
 Configure detectors and alerts in Splunk APM
 *********************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn about options for detectors and alerts in Splunk APM. 
 
-You can use detectors to dynamically monitor error rate and latency in the services you are tracing with Splunk APM. APM detectors use built-in algorithms to generate alerts about sudden spikes and historical anomalies in your APM metrics or Business Workflows. AutoDetect detectors are also available.
+You can use detectors to dynamically monitor request rate, error rate, and latency in the services you are tracing with Splunk APM. APM detectors use built-in algorithms to generate alerts about sudden spikes, historical anomalies, or a static threshold in your APM metrics or Business Workflows. See :ref:`alert-conditions-apm` for more information about alert conditions. 
 
-You can set up an APM detector from the Detector menu on any chart with APM metrics, so that you get alerted about changes in data that matter most to you. 
+You can also use AutoDetect detectors that are available by default for service latency, error rate, and request rate. See :ref:`autodetect` for more information.
 
-.. list-table::
-   :header-rows: 1
-   :widths: 20 80
-   
-   * - :strong:`Feature`
-     - :strong:`Description`
-   
-   * - Detectors 
-     - Detectors are powered by Monitoring MetricSets. APM provides a set of MMS by default see :ref:`apm-metricsets`. You you can create MMS with custom dimensions to monitor a specific subset of your data. To create a custom MMS on a specific span tag, index the span tag first.
+Create an APM detector
+========================
 
-       * :ref:`get-started-detectoralert`
-       * :ref:`create-detectors`
-       * :ref:`autodetect-list`
-       * :ref:`view-detectors`
+There are several entry points for creating APM detectors.
 
-   * - Alerts 
-     - The built-in alert conditions for detectors in Splunk APM are slightly different than the set of built-in alert conditions for detectors in Splunk Infrastructure Monitoring. To see the list of built-in alert conditions and their definitions in Splunk APM, see :ref:`alert-conditions-apm`.
+From the Splunk Observability Cloud create menu
+-------------------------------------------------
 
-   * - Monitoring MetricSets 
-     - 
-       * :ref:`apm-index-span-tags`
-       * :ref:`cmms`
-       * :ref:`troubleshoot-mms`
+#. Select the plus icon to open the create menu (plus sign) on the navigation bar.
+#. Select :guilabel:`APM Detector`.
+#. See :ref:`detector-steps` to complete your detector configuration.
 
+.. image:: /_images/apm/apm-detectors/new-detector-create-menu.png
+  :width: 30%
+  :alt: Screenshot of the create menu in Splunk Observability Cloud.
 
+From a dashboard
+--------------------
 
+To create an APM detector from Splunk APM dashboards, select the bell icon within a specific chart in the dashboard and select :guilabel:`New detector from chart`. See :ref:`detector-steps` to complete your detector configuration.
 
+.. image:: /_images/apm/apm-detectors/new-detector-from-chart.png
+  :width: 30%
+  :alt: Screenshot of the create menu in Splunk Observability Cloud.
 
-  
+From Tag Spotlight in Splunk APM
+----------------------------------
 
+To create an APM detector from Tag Spotlight in Splunk APM, select the 3-dot menu from the Tag Spotlight menu bar and select :guilabel:`Create Detector`. See :ref:`detector-steps` to complete your detector configuration.
+
+.. image:: /_images/apm/apm-detectors/new-detector-from-tag-spotlight.png
+  :width: 30%
+  :alt: Screenshot of the create menu in Splunk Observability Cloud.
+
+From the landing page in Splunk APM
+--------------------------------------
+
+To create an APM detector from the landing page in Splunk APM, select the 3-dot icon to open the :guilabel:`More` menu in the metric charts for services and Business Workflows under the APM Overview and select :guilabel:`Create Detector`. See :ref:`detector-steps` to complete your detector configuration.
+
+.. image:: /_images/apm/apm-detectors/new-detector-landing-page.png
+  :width: 30%
+  :alt: Screenshot of the create menu in Splunk Observability Cloud.
+
+From the service map in Splunk APM
+------------------------------------
+
+To create an APM detector from the service map in Splunk APM, select a service from the service map. Then, select the 3-dot icon in the panel for the service and select :guilabel:`Create Detector`. See :ref:`detector-steps` to complete your detector configuration.
+
+.. image:: /_images/apm/apm-detectors/new-detector-service-map.png
+  :width: 45%
+  :alt: Screenshot of the create menu in Splunk Observability Cloud.
+
+.. _detector-steps:
+
+Steps to create a detector
+-----------------------------
+
+Follow these steps to create a detector for Splunk APM:
+
+#. Name your detector.
+#. Select your metric. You can select request rate, error rate, or latency for a workflow, service, or endpoint.
+#. Set the condition for your alert: :guilabel:`Static threshold`, :guilabel:`Sudden change`, or :guilabel:`Historic anomaly`. See :ref:`alert-conditions-apm` for more information about alert conditions.
+#. Select the scope of your alert. You can select specific environments, workflows, services, and endpoints.
+#. Configure your alert details:
+    #. See :ref:`static-threshold`  to review options for the static threshold condition.
+    #. See :ref:`sudden-change` to review options for the static threshold condition.
+    #. See :ref:`hist-anomaly` to review options for the static threshold condition.
+#. Select the alert severity. See :ref:`severity` for more information about alert severity.
+#. (Optional) Share your alert with others by integrating with your team's incident response tool and add a link to your runbook.
+#. Select :guilabel:`Activate`.
 

@@ -30,7 +30,7 @@ To generate all the basic installation commands for your environment and applica
 
 #. Open the :new-page:`Android Instrumentation guided setup <https://login.signalfx.com/#/gdi/scripted/android/step-1?category=use-case-user-experience&gdiState=%7B"integrationId":"android"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the navigation menu, select :menuselection:`Data Management`. 
+   #. In the navigation menu, select :menuselection:`Data Management`.
 
    #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 

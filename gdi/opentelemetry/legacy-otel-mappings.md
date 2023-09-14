@@ -22,7 +22,7 @@ For example, if you track CPU utilization for your Kubernetes pod, your analytic
 Whether you're using the Smart Agent or the Collector, your original dashboards and detectors function the same way. 
 
 - Infrastructure Navigator views use the mapping service to show both old collection data and new collection data.
-- After you've migrated to the Collector, see <a href="https://docs.splunk.com/Observability/metrics-and-metadata/metrics-finder-metadata-catalog.html" target="_blank">Use the Metric Finder and Metadata Catalog</a> to learn how to use the Metric Finder and Metadata Catalog to find, view, and edit information about the metadata in your system.
+- After you've migrated to the Collector, see {ref}`metrics-finder-and-metadata-catalog` to learn how to use the Metric Finder and Metadata Catalog to find, view, and edit information about the metadata in your system.
 
 ## Obtain the migration impact report
 
@@ -37,8 +37,9 @@ To access the migration impact report, follow these steps:
 1. Log in to Splunk Observability Cloud.
 2. In the navigation menu, select **Settings** and then select **Subscription Usage**.
 3. Select the **Usage Reports** link on the **Infrastructure Monitoring** tab. 
-4. Select the **OpenTelemetry Migration** tab.
-5. Select **Download** to open the report as a comma-separated values file.
+4. Navigate to **View detailed usage reports**.
+5. Select the **OpenTelemetry Migration** tab.
+6. Select **Download** to open the report as a comma-separated values file.
 
 ### What is flagged for update in translation
 
@@ -99,6 +100,19 @@ Flagged items that need to be modified include the following (as listed in the r
 - Aggregates that use Smart Agent dimensions.
 
 While the migration impact report highlights items that need revising because they use legacy syntax or conventions, it also pairs those items with the OTel-based metrics and dimensions that you can use as substitutes for them.
+
+#### Conflicting semantics
+
+If you emit 2 or more metrics which could be mapped to one another, the system won't be able to distinguish them and it might cause various side-effects such as duplicated alerts or inconsistent dimensions in results.
+
+This can happen: 
+
+* If you have both the Smart Agent and OpenTelemetry Collector running on the same host.
+* If you included 2 equivalent dimensions on the same metric, like `host` and `host.name`. Because of the mapping you are expected to only provide the OpenTelemetry semantics or the legacy semantics during the transition.
+
+Semantics collission on ingested data apply only per MTS. This means you can send OpenTelemetry metrics from host A, and legacy metrics from host B. You also can send the metrics `container_fs_usage_bytes` and `k8s.container.name` from the same host, since these will be different MTSs.
+
+The same rule applies to querying in charts and detectors, where you are expected to only query by the OpenTelemetry semantics or by legacy semantics within the same `data()` invocation, regardless of the metrics you're querying are aligned with legacy or OpenTelemetry semantics. In this situation Observability Cloud might produce duplicated MTSs from non-duplicated ingested data. For example, this might happen if you write a query such as `data("container.image.name", filter=(filter("host", "<host-id>") OR filter("host.name", "<host-id>")))`.
 
 ## OpenTelemetry values and their legacy equivalents
 
