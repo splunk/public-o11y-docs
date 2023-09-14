@@ -12,12 +12,7 @@ The Splunk Distribution of OpenTelemetry Collector is a package that provides in
 Supported versions
 =====================
 
-The Collector supports the following Linux distributions and versions:
-
-- Amazon Linux: 2
-- CentOS / Red Hat / Oracle: 7, 8
-- Debian: 9, 10, 11
-- Ubuntu: 16.04, 18.04, 20.04, 22.04
+.. include:: /_includes/requirements/collector-linux.rst
 
 Get started
 ===================
