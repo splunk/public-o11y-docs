@@ -189,8 +189,10 @@ Deploy the Java agent in Kubernetes
 
 To deploy the Java agent in Kubernetes, follow these steps:
 
-- :ref:`docker_java_agent`
-- :ref:`configure_kubernetes_java`
+1. :ref:`docker_java_agent`
+
+2. :ref:`configure_kubernetes_java`
+
 
 .. _docker_java_agent:
 
@@ -208,12 +210,14 @@ To deploy the Java agent in Docker, edit the Dockerfile for your application ima
 
 Use ``ENV`` commands to set environment variables for the Java agent. To activate metrics or profiling, add the required ``-Dotel`` argument to the ``ENTRYPOINT`` list.
 
+When you deploy the Java agent with your application build, you ensure that the Java agent is launched with tracing.
+
 .. _configure_kubernetes_java:
 
 Configure Kubernetes to run the agent
 -----------------------------------------------------------
 
-To deploy the Java agent in Kubernetes, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
+To configure your application in Kubernetes to use the Java agent, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
 
 The following example shows how to update a deployment to expose environment variables by adding the agent configuration under the ``.spec.template.spec.containers.env`` section:
 
