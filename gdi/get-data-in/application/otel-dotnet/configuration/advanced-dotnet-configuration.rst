@@ -284,7 +284,7 @@ By default, the Splunk Distribution of OpenTelemetry .NET retrieves the service 
 
 #. If the entry assembly is not available, the instrumentation tries to use the current process name. The process name can be ``dotnet`` if launched directly using an assembly. For example, ``dotnet InstrumentedApp.dll``.
 
-If all the steps fail, the service name defaults to ``unknown_service``. 
+If all the steps fail, the service name defaults to ``unknown_service``.
 
 .. note:: To override the default service name, set the ``OTEL_SERVICE_NAME`` environment variable.
 
