@@ -5,7 +5,7 @@ zPages extension
 ****************************
 
 .. meta::
-      :description: Use the zPages extension to activate an extension that serves zPages, an HTTP endpoint that provides live data for debugging different components
+      :description: Use the zPages extension to activate an extension that serves zPages, an HTTP endpoint that provides live data for debugging different components.
 
 The zPages extension serves zPages, an HTTP endpoint that provides live data for debugging different components, if they were properly instrumented for such. zPages are useful for in-process diagnostics without having to depend on any backend to examine traces or metrics.
 
