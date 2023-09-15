@@ -208,7 +208,7 @@ To deploy the Java agent in Docker, edit the Dockerfile for your application ima
 
 Use ``ENV`` commands to set environment variables for the Java agent. To activate metrics or profiling, add the required ``-Dotel`` argument to the ``ENTRYPOINT`` list.
 
-.. _docker_java_agent:
+.. _configure_kubernetes_java:
 
 Configure Kubernetes to run the agent
 -----------------------------------------------------------
