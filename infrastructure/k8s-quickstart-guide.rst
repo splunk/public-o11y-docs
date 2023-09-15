@@ -1,8 +1,11 @@
 .. _k8s-quickstart-guide:
 
 *********************************************************************************************
-Quickstart guide: monitor your Kubernetes environment with Splunk Observability Cloud
+Quick start guide: monitor your Kubernetes environment with Splunk Observability Cloud
 *********************************************************************************************
+
+.. meta::
+  :description: This topic provides an onboarding tutorial that walks you through setting up the Splunk Distribution of OpenTelemetry Collector in a Kubernetes cluster and visualizing your Kubernetes cluster data using Splunk Observability Cloud.
 
 This quick start tutorial walks you through the following steps to start monitoring your Kubernetes platform using :ref:`Splunk Observability Cloud <get-started-infrastructure>` and related features in under 20 minutes.
 
@@ -57,29 +60,33 @@ To get Kubernetes data into Splunk Observability Cloud:
 
   * - Field
     - Description
-  * - Mode
-    - Select the deployment mode for your Collector instance.
-  * - Environment
-    - Name of the environment that you're deploying the Collector in.
+  * - Splunk Access Token
+    - Select the access token you want to use to authenticate the connection between Splunk Observability Cloud and your infrastructure platform. 
   * - Cluster name
     - Enter a name that allows you to uniquely identify your Kubernetes cluster in Spunk Observability Cloud. This name should correspond to the 
       name of the cluster in which you're installing the Splunk Distribution of the OpenTelemetry Collector.
   * - Provider
     - Select the location of the Kubernetes cluster where you are installing the Splunk Distribution of the OpenTelemetry Collector:
-      * Amazon Web Services
-      * Microsoft Azure
-      * Google Cloud Platform
-      * Other
+        * Amazon Web Services
+        * Microsoft Azure
+        * Google Cloud Platform
+        * Other
+  * - Add gateway
+    - Determine whether to add the gateway component to the Splunk Distribution of OpenTelemetry Collector.
+        * Select :guilabel:`Yes` if you want to run the Collector as a standalone service in a container or as a separate deployment. Typically, gateway mode is deployed per cluster, data center, or region.
+        * Select :guilabel:`No` if you want to run the Splunk Distribution of OpenTelemetry Collector with the application or on the same host as the application you want to instrument and monitor. This is the most common scenario.
+
+      For more details, see :ref:`Collector deployment modes <otel-deployment-mode>`.
   * - Distribution
     - Select the Kubernetes distribution you're running from the drop-down menu, or :guilabel:`Other` if your distribution is not listed.
   * - Log Collection
-    - NBED
-  * - Auto Instrumentation
-    - NBED
+    - This field applies only if you have purchased Splunk Log Observer and are running the Splunk Distribution of OpenTelemetry Collector in host monitoring (agent) mode.
+      
+      By default, Splunk Observability Cloud free trials do not include Splunk Log Observer. If you want to try out Splunk Log Observer, you can :new-page:`register for a free trial <https://www.splunk.com/en_us/form/log-observer-early-access-program.html>`.
+          * Select :guilabel:`Yes` to enable the Splunk Distribution of OpenTelemetry Collector to collect logs from your infrastructure platform and send them to Splunk Log Observer.
+          * Select :guilabel:`No` if you don’t want to collect logs.
   * - Profiling
-    - Activate or deactivate profiling. See more at NBED.
-  * - Splunk Access Token
-    - Select the access token you want to use to authenticate the connection between Splunk Observability Cloud and your infrastructure platform. 
+    - Activate or deactivate profiling. To learn more about Profiling, see :ref:`Introduction to Profiling in Splunk APM <profiling-intro>`.
 
 5. Select :guilabel:`Next`. The Install Integration screen displays. Based on your entries on the Configure Integration screen, the guided setup provides commands that you can copy and paste to 
 install the Splunk Distribution of OpenTelemetry Collector on your selected platform.
