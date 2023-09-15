@@ -12,7 +12,7 @@ The Memory Ballast extension enables applications to configure memory ballast fo
 Get started
 ======================
 
-The following settings can be configured:
+You can configure the following settings for the extension:
 
 * ``size_mib``. The memory ballast size, in MiB. 
 

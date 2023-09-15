@@ -16,6 +16,7 @@ Components
     components/basic-auth-extension
     components/batch-processor
     components/databricks-receiver
+    components/filelog-receiver   
     components/filter-processor
     components/fluentd-receiver
     components/health-check-extension
@@ -92,7 +93,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``discovery``
      - Wraps the receiver creator to facilitate the discovery of metric collection targets. See :ref:`discovery_mode`.
      - Logs
-   * - ``filelog``
+   * - :ref:`filelog-receiver` (``filelog``)
      - Tails and parses logs from files.
      - Logs
    * - :ref:`fluentd-receiver` (``fluentforward``)
