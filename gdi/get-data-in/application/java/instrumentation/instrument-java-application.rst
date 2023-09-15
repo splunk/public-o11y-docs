@@ -281,7 +281,7 @@ For more information on the ingest API endpoints, see :new-page:`Send APM traces
 .. _instrument_aws_lambda_functions:
 
 Instrument Lambda functions
------------------------------------------------------------
+==========================================================
 
 You can instrument AWS Lambda functions using the Splunk OpenTelemetry Lambda Layer. See :ref:`instrument-aws-lambda-functions` for more information.
 
