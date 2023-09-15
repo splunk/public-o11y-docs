@@ -36,7 +36,7 @@ Check compatibility and requirements
 
 The Splunk Distribution of OpenTelemetry .NET supports the all major logging libraries that use the Microsoft.Extensions.Logging library, like Log4Net, NLog, Serilog, and others.
 
-.. note:: Automatic log to trace correlation only works for .NET applications. For .NET Framework use manual correlation. See :ref:`manual-otel-dotnet-correlation`.
+.. note:: Automatic log to trace correlation only works for .NET applications. For .NET Framework use manual correlation. See :ref:`manual-trace-logs-correlation-otel`.
 
 .. _dotnet-otel-enable-log-correlation:
 
