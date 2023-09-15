@@ -44,7 +44,7 @@ $(document).ready(function () {
             "<tr>\n" +
             "<th class='metric-name'>Metric Name</th>\n" +
             "<th class='metric-desc'>Description</th>\n" +
-            "<th class='metric-type'>Type TEST</th>\n" +
+            "<th class='metric-type'>Type</th>\n" +
             "</tr>\n" +
             "</thead>");
 
