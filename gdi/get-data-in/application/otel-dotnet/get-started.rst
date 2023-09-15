@@ -13,6 +13,7 @@ Instrument .NET applications for Splunk Observability Cloud (OpenTelemetry)
    Requirements <dotnet-requirements>
    Instrument your .NET application <instrumentation/instrument-dotnet-application>
    Configure the .NET instrumentation <configuration/advanced-dotnet-configuration>
+   Connect trace data with logs <instrumentation/connect-traces-logs>
    Metrics and attributes <configuration/dotnet-metrics-attributes>
    Manual instrumentation <instrumentation/manual-dotnet-instrumentation>
    Troubleshoot the .NET instrumentation <troubleshooting/common-dotnet-troubleshooting>
