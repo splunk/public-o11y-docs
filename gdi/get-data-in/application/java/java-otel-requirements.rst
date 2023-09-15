@@ -25,7 +25,7 @@ For custom metrics support, you must use MicroMeter 1.5 and higher. See :ref:`ja
 Ensure you are using compatible Java and JVM versions
 ==============================================================
 
-.. include:: /_includes/gdi/java-requirements.rst
+.. include:: /_includes/requirements/java.rst
 
 .. _java-otel-connector-requirement:
 

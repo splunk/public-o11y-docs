@@ -4,6 +4,9 @@
 Splunk RUM dashboards 
 ******************************************************************************
 
+.. meta::
+   :description: Create dashboards in Splunk RUM for both web and mobile metrics data. Build custom dashboards or use pre-built dashboards for alerts and detectors, web and mobile metrics, and more.
+
 .. toctree::
    :hidden:
 

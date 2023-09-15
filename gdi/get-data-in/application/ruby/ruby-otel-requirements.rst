@@ -21,7 +21,8 @@ The Splunk Distribution of OpenTelemetry Ruby instruments numerous libraries and
 Ensure you have supported Ruby and library versions
 ==============================================================
 
-The agent of the Splunk Distribution of OpenTelemetry Ruby is compatible with Ruby 2.6 and higher.
+.. include:: /_includes/requirements/ruby.rst
+
 
 .. _ruby-otel-connector-requirement:
 

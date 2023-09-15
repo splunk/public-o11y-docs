@@ -4,6 +4,9 @@
 Splunk RUM built-in dashboards 
 ************************************************************
 
+.. meta::
+  :description: Learn about the dashboards available in Splunk RUM. Dashboards offer charts, metrics, and aggregation data about your applications. 
+
 Built-in dashboards offer charts, metrics, and aggregations about your applications. 
 
 .. list-table::

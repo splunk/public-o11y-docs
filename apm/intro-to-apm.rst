@@ -53,9 +53,11 @@ The following table provides an overview of what you can do with Splunk APM:
     - AlwaysOn Profiling
     - :ref:`profiling-scenario-landingpage`
 
-  * - Use autodetect to alert on sudden changes in your request, error and duration (RED) metrics to stay on top of your services' performance. Use custom detectors to alert with custom error and duration metrics.
+  * - Use detectors to alert on sudden changes in your request, error, and duration (RED) metrics to stay on top of your services' performance. There are autodetect detectors that are configured by default for service latency, error rate, and request rate. There are also built-in conditions available for you to configure detectors for the changes in performance metrics that matter most to you. 
     - Detectors and alerts
-    - :ref:`Detectors and alerts<apm-alerts>`
+    - * :ref:`apm-alerts`
+      * :ref:`autodetect`
+      * :ref:`alert-conditions-apm`
 
   * - Index span tags to break down and analyze application performance along any dimension, so that you can customize views like Tag Spotlight to your particular needs.
     - Span tags
@@ -65,7 +67,7 @@ The following table provides an overview of what you can do with Splunk APM:
     - Tag Spotlight
     - :ref:`apm-tag-spotlight`
 
-  * - Search and filter full-fidelity trace data to troubleshoot issues. Run ad-hoc aggregations on trace data to identify problems across any tag or attribute. View patterns in your traces to understand how latency or errors impact specific customer groups.
+  * - Search and filter full-fidelity trace data to troubleshoot issues. Run aggregations as needed on trace data to identify problems across any tag or attribute. View patterns in your traces to understand how latency or errors impact specific customer groups.
     - Trace Analyzer
     - :ref:`trace-analyzer`
 

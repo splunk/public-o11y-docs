@@ -4,9 +4,9 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Prometheus Exporter monitor. See benefits, install, configuration, and metrics">
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `prometheus-exporter` monitor type to read all metric types from a [Prometheus Exporter](https://prometheus.io/docs/instrumenting/exporters/) endpoint. 
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `prometheus-exporter` monitor type to read all metric types from a <a class="external" href="https://prometheus.io/docs/instrumenting/exporters/" target="_blank">Prometheus Exporter</a> endpoint. 
 
-A Prometheus Exporter is a piece of software that fetches statistics from another, non-Prometheus system, and turns them into Prometheus metrics. For a description of the Prometheus metric types, see [Metric Types](https://prometheus.io/docs/concepts/metric_types/).
+A Prometheus Exporter is a piece of software that fetches statistics from another, non-Prometheus system, and turns them into Prometheus metrics. For a description of the Prometheus metric types, see <a class="external" href="https://prometheus.io/docs/concepts/metric_types/" target="_blank">Metric Types</a>.
 
 This monitor is available on Kubernetes, Linux, and Windows.
 
@@ -58,7 +58,7 @@ The following table shows the configuration options for the `prometheus-exporter
 
 | Option | Required | Type | Description |
 | --- | --- | --- | --- |
-| `httpTimeout` | no | `int64` | HTTP timeout duration for both read and writes. This should be a duration string that is accepted by [func ParseDuration](https://golang.org/pkg/time/#ParseDuration) (**default:** `10s`) |
+| `httpTimeout` | no | `int64` | HTTP timeout duration for both read and writes. This should be a duration string that is accepted by <a class="external" href="https://golang.org/pkg/time/#ParseDuration) (**default:** `10s`" target="_blank">func ParseDuration</a> |
 | `username` | no | `string` | Basic Auth username to use on each request, if any. |
 | `password` | no | `string` | Basic Auth password to use on each request, if any. |
 | `useHTTPS` | no | `bool` | If `true`, the agent will connect to the server using HTTPS instead of plain HTTP. (**default:** `false`) |

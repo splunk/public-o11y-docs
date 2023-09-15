@@ -11,7 +11,7 @@ If you're instrumenting a Python application or service that uses Django or uWSG
 
 .. _django-instrumentation:
 
-Instrument a Django application
+Instrument your Django application
 ========================================
 
 To automatically instrument Django applications, set the ``DJANGO_SETTINGS_MODULE`` environment variable to the same value in manage.py or wsgi.py. 
@@ -32,7 +32,7 @@ For example, if your manage.py file sets the environment variable to mydjangopro
 
 .. _uwsgi-instrumentation:
 
-Instrument a uWSGI application
+Instrument your uWSGI application
 ========================================
 
 When using uWSGI, you must configure tracing as a response to the ``post_fork`` signal:

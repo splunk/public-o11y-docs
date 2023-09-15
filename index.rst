@@ -4,7 +4,7 @@
 Welcome
 **********
 
-.. image:: _images/get-started/o11y-user-doc-hero-banner-v2.svg
+.. imagetarget:: _images/get-started/o11y-user-doc-hero-banner-v2.svg
    :alt: Welcome
    :width: 97.3%
    :target: https://docs.splunk.com/Observability/get-started/o11y.html#nav-Get-started
@@ -17,8 +17,8 @@ The first step toward observability is getting relevant data into Splunk Observa
 
 .. rst-class:: newcard
 
-:strong:`Get data in`
-Learn how to get data in from each layer in your stack :ref:`get-started-get-data-in`
+:strong:`Compatibility and requirements`
+Systems and languages you can use with Splunk Observability Cloud :ref:`requirements`
 
 .. rst-class:: newcard
 
@@ -325,6 +325,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Compatibility and requirements <gdi/requirements>
+
+.. toctree::
+   :maxdepth:   3
+
    gdi/get-data-in/integrations
 
 .. toctree::
@@ -495,6 +500,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Built-in alert conditions TOGGLE <alerts-detectors-notifications/alert-condition-reference/index>
+
+.. toctree::
+   :maxdepth:   3
+
+   alerts-detectors-notifications/alert-message-variables-reference
 
 .. toctree::
    :maxdepth:   3
@@ -692,6 +702,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
 .. toctree::
    :maxdepth:   3
+   
+   rum/rum-session-replay
+
+.. toctree::
+   :maxdepth:   3
 
    rum/sample-app
 
@@ -724,17 +739,17 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Use a browser test to test a webpage TOGGLE <synthetics/browser-test/browser-test>
+   Use a Browser test to test a webpage TOGGLE <synthetics/browser-test/browser-test>
 
 .. toctree::
    :maxdepth:   3
 
-   Use an Uptime Test to test port or HTTP uptime TOGGLE <synthetics/uptime-test/uptime-test>
+   Use an Uptime test to test port or HTTP uptime TOGGLE <synthetics/uptime-test/uptime-test>
 
 .. toctree::
    :maxdepth:   3
 
-   Use an API Test to test an endpoint TOGGLE <synthetics/api-test/api-test>
+   Use an API test to test an endpoint TOGGLE <synthetics/api-test/api-test>
 
 .. toctree::
    :maxdepth:   3

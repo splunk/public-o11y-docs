@@ -21,8 +21,8 @@ The Splunk Distribution of OpenTelemetry Python instruments numerous libraries a
 Ensure you have supported Python and library versions
 ==============================================================
 
-The agent of the Splunk Distribution of OpenTelemetry Python is compatible with Python 3.7 and higher.
-
+.. include:: /_includes/requirements/python.rst
+   
 .. _python-otel-connector-requirement:
 
 Install and configure the Splunk Distribution of OpenTelemetry Collector
