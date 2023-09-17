@@ -42,6 +42,7 @@ Components
     components/splunk-apm-exporter
     components/splunk-hec-exporter
     components/splunk-hec-receiver
+    components/syslog-receiver      
     components/transform-processor
     components/windowsperfcounters-receiver
     components/zpages-extension    
@@ -168,7 +169,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``statsd``
      - Collects StatsD messages to generate metrics.
      - Metrics
-   * - ``syslog``
+   * - :ref:`syslog-receiver` (``syslog``)
      - Parses syslog messages received over TCP or UDP.
      - Logs
    * - ``tcplog``

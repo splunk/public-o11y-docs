@@ -12,41 +12,89 @@ The Filelog receiver tails and parses logs from files. The supported pipeline ty
 Get started
 ======================
 
-Keep the following in mind when using the Filelog receiver 
+The Filelog receiver uses operators to process logs into a desired format. Each operator fulfills a single responsibility, such as reading lines from a file, or parsing JSON from a field. You need to chain operators together in a pipeline to achieve your desired result.
 
+For instance, you can read lines from a file using the ``file_input`` operator. From there, you can send the results of this operation to a ``regex_parser`` operator that creates fields based on a regex pattern. Next, you can send the results to a ``file_output`` operator to write each line to a file on disk.
 
-An entry is the base representation of log data as it moves through a pipeline. All operators either create, modify, or consume entries.
-A field is used to reference values in an entry.
-A common expression syntax is used in several operators. For example, expressions can be used to filter or route entries.
-Parsers with Embedded Operations
-Many parsers operators can be configured to embed certain followup operations such as timestamp and severity parsing. For more information, see complex parsers.
+.. note:: The Filelog receiver can read files that are being rotated.
+
+Data in the Filelog receiver
+--------------------------------------------------------------------------
+
+All operators either create, modify, or consume :strong:`entries`. 
+
+* An entry is the base representation of log data as it moves through a pipeline. 
+* A field is used to reference values in an entry.
+* A common expression syntax is used in several operators. For example, expressions can be used to filter or route entries.
 
 All time parameters must have the unit of time specified. For example, ``200ms``, ``1s``, or ``1m``.
 
-The Filelog receiver can read files that are being rotated.
+Types of operators
+--------------------------------------------------------------------------
 
-How does the Filelog receiver work?
----------------------------------------------
+These are the type of operators available:
 
-The Filelog receiver uses operators 
+* ``bytesize``
+* ``entry``
+* ``expression``
+* ``field``
+* ``on_error``
+* ``parsers``
+* ``pipeline``
+* ``scope_name``
+* ``severity``
+* ``timestamp``
+* ``trace``
 
-Each operator performs a simple responsibility, such as parsing a timestamp or JSON. Chain together operators to process logs into a desired format.
+.. note:: For more information, see the the GitHub entry on operators at :new-page:`Operators <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/pkg/stanza/docs/operators/README.md#what-is-an-operator>`.
 
-Every operator has a type.
-Every operator can be given a unique id. If you use the same type of operator more than once in a pipeline, you must specify an id. Otherwise, the id defaults to the value of type.
-Operators will output to the next operator in the pipeline. The last operator in the pipeline will emit from the receiver. Optionally, the output parameter can be used to specify the id of another operator to which logs will be passed directly.
-Only parsers and general purpose operators should be used.
+How to use operators
+--------------------------------------------------------------------------
 
+The following applies to operators:
 
+* You can give a unique Id to each operator. 
 
-Parse header metadata 
+  * If you use the same type of operator more than once in a pipeline, you must specify an Id. 
+  * Otherwise, the Id defaults to the value of type.
+
+* An operator outputs to the next operator in the pipeline. 
+
+  * The last operator in the pipeline emits from the receiver. 
+  * Optionally, the output parameter can be used to specify the Id of another operator, and logs will be passed there directly.
+  
+Parser operators 
 --------------------------------------------
 
-To enable header metadata parsing, the filelog.allowHeaderMetadataParsing feature gate must be set, and start_at must be beginning.
+Use parser operators to isolate values from a string. There are two classes of parsers, simple and complex.
 
-If set, the file input operator will attempt to read a header from the start of the file. Each header line must match the header.pattern pattern. Each line is emitted into a pipeline defined by header.metadata_operators. Any attributes on the resultant entry from the embedded pipeline will be merged with the attributes from previous lines (attribute collisions will be resolved with an upsert strategy). After all header lines are read, the final merged header attributes will be present on every log line that is emitted for the file.
+Parse header metadata 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The header lines are not emitted by the receiver.
+To enable header metadata parsing, set the ``filelog.allowHeaderMetadataParsing`` feature, and set ``start_at`` at the beginning. If set, the file input operator attempts to read a header from the start of the file. 
+
+The following applies:
+
+* Each header line must match the ``header.pattern`` pattern. 
+* Each line is emitted into a pipeline defined by ``header.metadata_operators``. 
+* Any attributes on the resultant entry from the embedded pipeline are merged with the attributes from previous lines. If attribute collisions happen, they are resolved with an upsert strategy. 
+* After all header lines are read, the final merged header attributes are present on every log line that is emitted for the file.
+
+The receiver does not emit header lines.
+
+Parsers with embedded operations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Many parsing operators can be configured to embed certain follow-up operations such as timestamp and severity parsing. 
+
+For more information, see the the GitHub entry on complex parsers at :new-page:`Parsers <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/pkg/stanza/docs/types/parsers.md#complex-parsers>`.
+
+Multiline configuration
+--------------------------------------------
+
+If set, the multiline configuration block instructs the ``file_input`` operator to split log entries on a pattern other than new lines.
+
+The multiline configuration block must contain ``line_start_pattern`` or ``line_end_pattern``. These are Regex patterns that match either the beginning of a new log entry, or the end of a log entry.   
 
 Supported encodings
 ----------------------
@@ -124,6 +172,33 @@ The receiver reads logs from the simple.log file, such as:
 ``2023-06-19 05:20:50 ERROR This is a test error message``
 ``2023-06-20 12:50:00 DEBUG This is a test debug message``
 
+Send logs to Splunk Cloud
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Use the following configuration to send logs to Splunk Cloud.
+
+.. code-block:: yaml
+
+  receivers:
+    filelog:
+      include: [/home/ubuntu/arlogs/*.log]
+      logs:
+        receivers: [filelog, otlp]
+        processors:
+        - memory_limiter
+        - batch
+        - resourcedetection
+        #- resource/add_environment
+        exporters: [splunk_hec]
+
+  exporters:
+    # Logs
+    splunk_hec:
+      token: "${SPLUNK_HEC_TOKEN}"
+      endpoint: "${SPLUNK_HEC_URL}"
+      source: "otel"
+      sourcetype: "otel"
+
 Settings
 ======================
 
@@ -134,13 +209,6 @@ The following table shows the configuration options for the Filelog receiver:
 .. raw:: html
 
   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/filelog.yaml"></div>
-
-Multiline configuration
---------------------------------------------
-
-If set, the multiline configuration block instructs the ``file_input`` operator to split log entries on a pattern other than new lines.
-
-The multiline configuration block must contain ``line_start_pattern`` or ``line_end_pattern``. These are Regex patterns that match either the beginning of a new log entry, or the end of a log entry.   
 
 Troubleshooting
 ======================
