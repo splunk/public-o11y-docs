@@ -109,9 +109,6 @@ Filtering can be very useful here, because exporters tend to be verbose.
 
 ## Troubleshooting
 
-```{include} /_includes/troubleshooting.md
-```
-
 ### Log contains the error `net/http: HTTP/1.x transport connection broken: malformed HTTP response`
 
 Solution: Activate HTTPS with `useHTTPS`.
@@ -119,6 +116,13 @@ Solution: Activate HTTPS with `useHTTPS`.
 ### Log contains the error `forbidden: User \"system:anonymous\" cannot get path \"/metrics\"`
 
 Solution: Activate `useServiceAccount` and make sure the service account that the Splunk Distribution of OpenTelemetry Collector is running with has the necessary permissions.
+
+### Get help
+
+```{include} /_includes/troubleshooting.md
+```
+
+
 
 
 
