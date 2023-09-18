@@ -50,7 +50,7 @@ Check compatibility and requirements
 
 .. note:: Automatic log to trace correlation only works for .NET applications. For .NET Framework use manual correlation. See :ref:`manual-trace-logs-correlation-otel`.
 
-``Microsoft.Extensions.Logging`` versions ``6.0.0`` and above are supported.
+``Microsoft.Extensions.Logging`` version ``6.0.0`` and higher are supported.
 
 .. _dotnet-otel-enable-log-correlation:
 
@@ -70,7 +70,7 @@ If you need to turn off logs enrichment and export, set any of the following env
 Trace metadata in log statements
 ===================================================
 
-Individual log records, if exported inside scope of an active activity, will contain trace context information:
+Individual log records, if exported inside the scope of an active activity, contain the following trace context information:
 
 * ``TraceId``
 * ``SpanId``
@@ -90,8 +90,8 @@ Logs produced by application have constant set of OpenTelemetry resource attribu
 Additionally, the instrumentation adds the following attributes:
 
 * ``service.name``, as defined by the ``OTEL_SERVICE_NAME`` environment variable
-* any attribute configured with ``OTEL_RESOURCE_ATTRIBUTES`` environment variable
-* any attribute added by configured resource detectors (e.g ``container.id``)
+* Any attribute configured using the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable
+* Any attribute added by configured resource detectors, like ``container.id``
 
 .. _manual-trace-logs-correlation-otel:
 
@@ -103,12 +103,10 @@ You can configure logging libraries to include tracing attributes in logs writte
 ``NLog``
 ----------------------------------------------------
 
-You can use :new-page:`NLog.DiagnosticSource <https://www.nuget.org/packages/NLog.DiagnosticSource>`,
-see :new-page:`documentation <https://github.com/NLog/NLog.DiagnosticSource>`.
+You can use :new-page:`NLog.DiagnosticSource <https://www.nuget.org/packages/NLog.DiagnosticSource>`. See the :new-page:`NLog official documentation <https://github.com/NLog/NLog.DiagnosticSource>` for more information.
 
 ``Serilog``
 -----------------------------------------------
 
-You can use one of available enrichers, e.g :new-page:`Serilog.Enrichers.Span <https://www.nuget.org/packages/Serilog.Enrichers.Span>`
-or create your own :new-page:`enricher <https://github.com/serilog/serilog/wiki/Enrichment>`
+You can use one of the available enrichers, like :new-page:`Serilog.Enrichers.Span <https://www.nuget.org/packages/Serilog.Enrichers.Span>` or create your own :new-page:`enricher <https://github.com/serilog/serilog/wiki/Enrichment>`
 to add trace context as properties to log events.
