@@ -79,7 +79,7 @@ Individual log records, if exported inside the scope of an active activity, cont
 :new-page:`OpenTelemetry resource <https://github.com/open-telemetry/opentelemetry-specification/tree/4f23dce407b6fcaba34a049df7c3d41cdd58cb77/specification/resource/semantic_conventions>`
 describes entity producing telemetry, e.g logs.
 
-Logs produced by application have constant set of OpenTelemetry resource attributes always added to them:
+Logs produced by an application always have the following set of OpenTelemetry resource attributes:
 
 * ``telemetry.sdk.name``` with constant value of ``opentelemetry``
 * ``telemetry.sdk.language`` with constant value of ``dotnet``
