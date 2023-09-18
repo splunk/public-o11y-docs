@@ -23,6 +23,21 @@ Instrument back-end applications to send spans to Splunk APM
 
 Instrument your back-end services and applications to send metrics and traces to Splunk Observability Cloud.
 
+.. mermaid::
+
+   flowchart LR
+    subgraph "OpenTelemetry APM Instrumentation"
+    A["Back-end applications (Go, Python, Ruby, ...)"]
+    B["Serverless functions (AWS Lambda)"]
+    end
+
+    A -- "traces, metrics, logs" --> O
+
+    O["Splunk Distribution of OpenTelemetry Collector"]
+    O --> M["Splunk APM"]
+
+    B -- "traces, metrics, logs" --> M
+
 You can instrument applications in each of these languages using official Splunk instrumentation:
 
 - :ref:`Java <get-started-java>`

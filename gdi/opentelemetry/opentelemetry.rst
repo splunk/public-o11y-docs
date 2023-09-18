@@ -25,27 +25,24 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     
 The OpenTelemetry Collector uses pipelines to receive, process, and export trace data with components known as receivers, processors, and exporters. You can also add extensions that provide OpenTelemetry Collector with additional functionality, such as diagnostics and health checks.
 
-flowchart LR
-    Systems
-    Services
-    UIs
+.. mermaid::
 
+  flowchart LR
     subgraph "Splunk Distribution of OpenTelemetry Collector"
     receivers
     processors
     exporters
     end
 
-    Systems --> receivers
-    Services --> receivers
-    UIs --> receivers
+    Infrastructure -- "traces, metrics, logs" --> receivers
+    B["Backend services"] -- "traces, metrics, logs" --> receivers
+    C["Frontend experiences"] -- "traces, metrics, logs" --> receivers
 
     receivers --> processors
     processors --> exporters
 
-    
-
-    exporters --> B["Splunk Observability Cloud"]
+    exporters --> S["Splunk Observability Cloud"]
+    exporters --> P["Splunk Platform"]
     
 The OpenTelemetry Collector has a core version and a contributions version. The core version provides receivers, processors, and exporters for general use. The contributions version provides receivers, processors, and exporters for specific vendors and use cases.
 
