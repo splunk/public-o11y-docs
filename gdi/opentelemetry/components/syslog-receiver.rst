@@ -46,23 +46,30 @@ You can configure many parsing operators to embed certain follow-up operations s
 
 For more information, see the the GitHub entry on complex parsers at :new-page:`Parsers <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/pkg/stanza/docs/types/parsers.md#complex-parsers>`.
 
-Configuration
+Configure your connection
 --------------------------------
 
-TCP configuration
+Use the following fields to configure your connection. For more details, see the section :ref:`syslog-receiver-settings`.
+
+Configure TCP
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can use the following fields to configure the Syslog receiver with a TCP connection:
 
 * ``listen_address``. A listening address with the format ``<ip>:<port>``. :strong:`Required`.
 * ``max_buffer_size``.	Maximum size of buffer that can be allocated while reading a TCP input. ``1024kib`` by default.
+
 * ``tls``. Optional TLS configuration for the ``tcp_input`` operator:
+  
   *  ``cert_file``.	Path to the TLS certificate you want to use for TLS required connections.
+  
   * ``key_file``.	Path to the TLS key you want to use for TLS required connections.
+  
   * ``ca_file``.	Path to the CA certificate. For a client this verifies the server certificate. For a server this verifies client certificates. If empty, it uses the system's root CA.
+  
   * ``client_ca_file``. Optional. Path to the TLS certificate the server will use to verify a client certificate. This sets the ClientCAs and ClientAuth to RequireAndVerifyClientCert in the TLSConfig. Please refer to :new-page:`godoc.org/crypto/tls#Config` for more information.
 
-UDP configuration
+Configure UDP
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The following field is required:
@@ -98,6 +105,8 @@ This example shows how to configure logs received via UDP:
         listen_address: "0.0.0.0:54526"
       protocol: rfc3164
       location: UTC
+
+.. _syslog-receiver-settings:
 
 Settings
 ======================
