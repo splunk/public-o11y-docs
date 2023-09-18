@@ -4,7 +4,7 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the OpenShift cluster monitor. See benefits, install, configuration, and metrics">
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `openshift-cluster` monitor type to collect cluster-level metrics from the Kubernetes API server, which includes all metrics from the [kubernetes-cluster monitor](https://docs.splunk.com/Observability/gdi/kubernetes-cluster/kubernetes-cluster.html#nav-Kubernetes-cluster) with additional OpenShift-specific metrics. You only need to use the `openshift-cluster` monitor for OpenShift deployments, as it incorporates the `kubernetes-cluster` monitor automatically.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `openshift-cluster` monitor type to collect cluster-level metrics from the Kubernetes API server, which includes all metrics from {ref}`kubernetes-cluster` with additional OpenShift-specific metrics. You only need to use the `openshift-cluster` monitor for OpenShift deployments, as it incorporates the `kubernetes-cluster` monitor automatically.
 
 This monitor is available on Kubernetes, Linux, and Windows.
 
@@ -33,7 +33,7 @@ Follow these steps to deploy this integration:
         helm install --set cloudProvider=' ' --set distribution='openshift' --set splunkObservability.accessToken='******' --set            clusterName='cluster1' --namespace='namespace1' --set splunkObservability.realm='us0' --set gateway.enabled='false' --generate-name splunk-otel-collector-chart/splunk-otel-collector
         ```
    
-      Find more information in our [GitHub repos](https://github.com/signalfx/splunk-otel-collector-chart).
+      Find more information in our <a class="external" href="https://github.com/signalfx/splunk-otel-collector-chart" target="_blank">GitHub repos</a>.
 
    - {ref}`Install on Linux <otel-install-linux>`
    

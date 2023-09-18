@@ -24,8 +24,8 @@ Linux
 ------------------------
 Currently, we support the following Linux distributions and versions:
 
-* Amazon Linux: 2
-* CentOS, Red Hat, Oracle: 7, 8
+* Amazon Linux: 2, 2023. Log collection with Fluentd isn't supported for Amazon Linux 2023.
+* CentOS, Red Hat, Oracle: 7, 8, 9
 * Debian: 9, 10, 11
 * SUSE: 12, 15 (Note: Only for Collector versions 0.34.0 or higher. Log collection with Fluentd not currently supported.)
 * Ubuntu: 18.04, 20.04, 22.04
@@ -103,7 +103,7 @@ For Linux, the formula accepts the attributes described in the following table:
      - ``splunk-otel-collector``
    * - ``install_fluentd``
      - Whether to install or manage Fluentd and dependencies for log collection. On Linux, the dependencies include ``capng_c`` for activating Linux capabilities, ``fluent-plugin-systemd`` for systemd journal log collection, and the required libraries and development tools.
-     - ``true``
+     - ``false``
    * - ``td_agent_version``
      -  Version of the td-agent (Fluentd) package to install 
      -  ``3.7.1-0`` for Debian 9 and ``4.3.0`` for other distros

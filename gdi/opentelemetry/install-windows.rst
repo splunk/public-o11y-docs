@@ -57,7 +57,7 @@ depending on the installation method:
 Installer script
 ==========================
 
-The installer script is available for Windows 64-bit environments, and deploys and configures the Splunk Distribution of OpenTelemetry Collector for Windows and Fluentd (using the td-agent).
+The installer script is available for Windows 64-bit environments, and deploys and configures the Splunk Distribution of OpenTelemetry Collector for Windows and Fluentd through the td-agent, which is deactivated by default.
 
 To install the package using the installer script, follow these steps:
 
@@ -71,14 +71,15 @@ To install the package using the installer script, follow these steps:
 
   & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
 
-.. note:: If needed, activate TLS in PowerShell using the following command: 
+.. note:: If needed, activate TLS in PowerShell using the following command:
   
    ``[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12``
+
 
 Configure memory allocation
 ----------------------------------
 
-To configure memory allocation, use the ``memory`` parameter. 
+To configure memory allocation, use the ``memory`` parameter.
 
 By default, the Collector is configured to use 512 MB (500 x 2^20 bytes) of memory. To increase this setting to allocate more memory, replace ``SPLUNK_MEMORY_TOTAL_MIB`` with the desired integer value.
 
@@ -99,7 +100,13 @@ To configure proxy settings to install and run the OpenTelemetry Collector, see 
 Configure fluentd for log collection
 -------------------------------------------
 
-By default, the installation configures the fluentd service to forward log events with the ``@SPLUNK`` label and
+If you have a Log Observer entitlement or wish to collect logs for the target host with Fluentd, use the ``with_fluentd = 1`` option to also install Fluentd when installing the Collector. For example:
+
+.. code-block:: PowerShell
+
+  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"; with_fluentd = 1}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
+
+When activated, the Fluentd service is configured by default to collect and forward log events with the ``@SPLUNK`` label to the Collector, which then
 send these events to the HEC ingest endpoint determined by the ``realm = "<SPLUNK_REALM>"`` option.
 For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
 
@@ -134,13 +141,93 @@ After any configuration modification, apply the changes by restarting the system
 Start the Collector executable manually 
 -------------------------------------------
 
-If you experience unexpected start failures, try to start the Collector executable manually. 
+If you experience unexpected start failures, try to start the Collector executable manually.
 
-To do so, run the following PowerShell command as an Admin:  
+To do so, run the following PowerShell command as an Admin:
 
 .. code-block:: PowerShell
 
   & 'C:\Program Files\Splunk\OpenTelemetry Collector\otelcol.exe' --config 'C:\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml'
+
+
+.. _otel-installer-options-windows:
+
+Options of the installer script for Windows
+====================================================
+
+The Windows installer script supports the following options:
+
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 30 40 30
+
+   * - Option
+     - Description
+     - Default value
+   * - ``access_token``
+     - The token used to send metric data to Splunk.
+     -
+   * - ``realm``
+     - The Splunk realm to use. The ingest, API, trace, and HEC endpoint URLs are automatically created using this value.
+     - ``us0``
+   * - ``memory``
+     - Total memory in MIB to allocate to the Collector. Automatically calculates the ballast size. See :ref:`otel-sizing` for more information.
+     - ``512``
+   * - ``mode``
+     - Configure the Collectorservice to run in host monitoring (``agent``) or data forwarding (``gateway``).
+     - ``agent``
+   * - ``network_interface``
+     - The network interface the Collectorreceivers listen on.
+     - ``0.0.0.0``
+   * - ``ingest_url``
+     - Set the base ingest URL explicitly instead of the URL inferred from the specified realm.
+     - ``https://ingest.REALM.signalfx.com``
+   * - ``api_url``
+     - Set the base API URL explicitly instead of the URL inferred from the specified realm.
+     - ``https://api.REALM.signalfx.com``
+   * - ``trace_url``
+     - Set the trace endpoint URL explicitly instead of the endpoint inferred from the specified realm.
+     - ``https://ingest.REALM.signalfx.com/v2/trace``
+   * - ``hec_url``
+     - Set the HEC endpoint URL explicitly instead of the endpoint inferred from the specified realm.
+     - ``https://ingest.REALM.signalfx.com/v1/log``
+   * - ``hec_token``
+     - Set the HEC token if it's different than the specified Splunk access token.
+     -
+   * - ``with_fluentd``
+     - Whether to install and configure fluentd to forward log events to the collector. See :ref:`fluentd-manual-config-windows` for more information.
+     - ``$false``
+   * - ``with_dotnet_instrumentation``
+     - Whether to install and configure .NET tracing to forward .NET application traces to the local collector.
+     - ``$false``
+   * - ``deployment_env``
+     - A system-wide environment tag used by .NET instrumentation. Sets the ``SIGNALFX_ENV`` environment variable. Ignored if ``-with_dotnet_instrumentation`` is set to ``false``.
+     -
+   * - ``bundle_dir``
+     - The location of your Smart Agent bundle for monitor functionality.
+     - ``C:\Program Files\Splunk\OpenTelemetry Collector\agent-bundle``
+   * - ``insecure``
+     - If true then certificates aren't checked when downloading resources.
+     - ``$false``
+   * - ``collector_version``
+     - Specify a specific version of the Collector to install.
+     - Latest version available
+   * - ``stage``
+     - The package stage to install from [``test``, ``beta``, ``release``].
+     - ``release``
+   * - ``collector_msi_url``
+     - When installing the Collector, instead of downloading the package, use this local path to a Splunk OpenTelemetry Collector MSI package. If specified, the ``-collector_version`` and ``-stage`` parameters are ignored.
+     - ``https://dl.signalfx.com/splunk-otel-collector/`` |br| ``msi/release/splunk-otel-collector-<version>-amd64.msi``
+   * - ``fluentd_msi_url``
+     - Specify the URL to the Fluentd MSI package to install.
+     - ``https://packages.treasuredata.com/4/windows/td-agent-4.1.0-x64.msi``
+   * - ``msi_path``
+     - Specify a local path to a Splunk OpenTelemetry Collector MSI package to install instead of downloading the package. If specified, the ``-collector_version`` and ``-stage`` parameters will be ignored.
+     -
+
+
+
 
 .. _windows-deployments:
 
@@ -172,10 +259,11 @@ Puppet
 -------------------------------
 Splunk provides a Puppet module to install and configure the package. A module is a collection of resources, classes, files, definition, and templates. To learn how to download and customize the module, see :ref:`deployment-windows-puppet`.
 
+
 Next steps
 ==================================
 
-Once you have installed the package, you can perform these actions:
+After you have installed the package, you can do the following:
 
 * :ref:`use-navigators-imm`.
 * View logs and errors in the Windows Event Viewer. Search for "view logs and errors" on :new-page:`Microsoft documentation site <https://docs.microsoft.com/en-us/>` for more information.

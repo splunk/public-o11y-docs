@@ -4,8 +4,6 @@
 Track service performance using dashboards in Splunk APM
 ************************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn how to use built-in dashboards in Splunk APM to help you see problems occurring in real time.
 
@@ -27,7 +25,7 @@ To view host and Kubernetes metrics in your dashboards, you need to have a Splun
   See :ref:`monitor-services` for a scenario involving built-in dashboards in Splunk APM. 
 
 You can customize built-in dashboards to present the information you’re most interested in, or build your own from scratch. To learn more, see :ref:`apm-custom-dashboards`.
- 
+
 You can also create detectors directly from dashboards to receive alerts on the problems that matter most to you. See :ref:`apm-detector-from-dashboard` to learn how. 
 
 Navigate to dashboards in Splunk APM
@@ -84,10 +82,8 @@ The dashboard editor provides a lot of customization options for your charts, bu
 Create a detector from a dashboard
 ===================================
 
-To create a detector from a dashboard, select the bell icon within a specific chart in the dashboard and select :guilabel:`New Detector From Chart`. 
+To create a detector from a dashboard, select the bell icon within a specific chart in the dashboard and select :guilabel:`New detector from chart`. 
 
 If you don't have write permissions on the dashboard you're viewing, a Detector Linking pop-up informs you the detector is not linked directly to the dashboard. You can select :guilabel:`Ok` to proceed, or save a copy of the dashboard to gain write permissions so that you can create a linked detector based on your new dashboard. To learn more about linking detectors, see :ref:`linking-detectors`. 
 
-In the New Detector window, enter a name for your detector and select :guilabel:`Create Alert Rule`. The Alert Rule guided setup opens. Follow the steps in the guided setup to configure your detector, or see :ref:`create-detectors` for more information. 
-
-To learn more about creating detectors from charts, see :ref:`create-detector-from-chart`.
+In the New APM Detector window, enter a name for your detector and follow the steps in the guided setup to configure your detector, or see :ref:`apm-alerts` for more information. 

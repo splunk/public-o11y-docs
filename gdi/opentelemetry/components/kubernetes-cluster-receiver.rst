@@ -7,7 +7,7 @@ Kubernetes cluster receiver
 .. meta::
       :description: The Kubernetes cluster receiver allows the Splunk Distribution of OpenTelemetry Collector to collect cluster metrics from Kubernetes through its monitoring API.
 
-The Kubernetes cluster receiver collects cluster metrics using the Kubernetes API server. You can use a single instance of this receiver to monitor an entire Kubernetes cluster. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
+The Kubernetes cluster receiver collects cluster metrics using the Kubernetes API server. You can use a single instance of this receiver to monitor an entire Kubernetes cluster. The supported pipeline type is ``metrics``. To filter in or out other Kubernetes elements, such as containers, pods, nodes, namespaces, or clusters, use the Filter processor instead. Learn more at :ref:`filter-processor`. See :ref:`otel-data-processing` for more information on the different types of pipelines.
 
 Kubernetes version 1.21 and higher is compatible with the Kubernetes navigator. Using lower versions of Kubernetes is not supported for this receiver and might result in the navigator not displaying all clusters.
 
@@ -99,15 +99,15 @@ The following table shows the configuration options for the MongoDB Atlas:
    <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/k8s_cluster.yaml"></div>
 
 Metrics
-=================
+=====================
 
-For this integration you can query the legacy metrics shown in the table. See :ref:`legacy-otel-mappings` for the originating OpenTelemetry semantic value of each metric that the receiver component reports.
-
-.. note:: The SignalFx exporter excludes some available metrics by default. Learn more about default metric filters in :ref:`list-excluded-metrics`.
+The following metrics, resource attributes, and attributes are available.
 
 .. raw:: html
 
-   <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/kubernetes/cluster/metadata.yaml"></div>
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/k8sclusterreceiver.yaml"></div>
+
+.. include:: /_includes/activate-deactivate-native-metrics.rst
 
 Troubleshooting
 ======================

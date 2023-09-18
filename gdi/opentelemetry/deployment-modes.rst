@@ -34,7 +34,7 @@ The following image shows the architecture for the standalone mode:
 Host monitoring (agent) mode deployed with the installer script or Helm chart
 --------------------------------------------------------------------------------------
 
-The default configurations for the :ref:`Linux installer script <otel-install-linux>`, :ref:`Windows installer script <otel-install-windows>`, and for certain :ref:`Helm charts <otel-install-k8s>` deploy the Collector with Fluentd.
+The default configurations for the :ref:`Linux installer script <otel-install-linux>`, :ref:`Windows installer script <otel-install-windows>`, and for certain :ref:`Helm charts <otel-install-k8s>` deploy the Collector without Fluentd.
 
 The architecure looks as follows:
 
@@ -175,7 +175,7 @@ Gateway configuration
 Change the following sections of the :new-page:`data forwarding (gateway) mode configuration file <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/gateway_config.yaml>`:
 
 * Make sure that the receivers match the exporters in the agent configuration.
-* Make sure that the Collector in data forwarding (gateway) mode can listen to requests on ports 6060 and 9943.
+* Set the Collector in data forwarding (gateway) mode to listen to requests on ports 4317, 6060 and 9943.
 * Update the ``SPLUNK_GATEWAY_URL`` environment variable to ``https://api.${SPLUNK_REALM}.signalfx.com``.
 
 To set the Collector in data forwarding (gateway) mode to receiving data from an agent, use the following configuration:

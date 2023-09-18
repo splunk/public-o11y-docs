@@ -41,7 +41,7 @@ You have two ways to send AWS data to Splunk Observability Cloud:
 * Through :ref:`API polling <aws-api-polling>` at specified intervals. 
 * Using :ref:`CloudWatch Metric Streams <aws-metricstreams>`. 
 
-.. caution:: CloudWatch Metric Streams doesn't support filtering based on resource tags. 
+.. caution:: CloudWatch Metric Streams supports filtering by namespace and metric name but doesn't support filtering based on resource tags.
 
 .. _aws-api-polling:
 
@@ -139,6 +139,24 @@ See also the :new-page:`Splunk add-on for Amazon Kinesis Firehose <https://docs.
 .. caution:: Splunk is not responsible for data availability, and it can take up to several minutes (or longer, depending on your configuration) from the time you connect until you start seeing valid data from your account.
 
 If you can't connect AWS to Splunk Observability Cloud, see :ref:`Troubleshoot your AWS connection <aws-troubleshooting>`.
+
+.. _aws-collector:
+
+.. raw:: html
+
+  <embed>
+    <h2>Install the Splunk Distribution of OpenTelemetry Collector<a name="install-splunk-otel-collector" class="headerlink" href="#install-splunk-otel-collector" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
+To take advantage of the full benefits of the Splunk Observability Cloud platform, install the :ref:`OpenTelemetry Collector <otel-intro>`, since it offers a higher degree of customization than the AWS integration.
+
+You can track the degree of OpenTelemetry enablement in your AWS integrations by going to :guilabel:`Data Management > AWS`.
+
+..  image:: /_images/gdi/aws-collector-insights.jpg
+  :width: 100%
+  :alt: Amount of AWS entities with the Collector installed.
+
+Select the :guilabel:`OpenTelemetry Enabled` button to see whether the Collector is installed on each AWS EC2 instance. This will help you identify the instances that still need to be instrumented. For instances that are successfully instrumented, you can see which version of the Collector is deployed.
 
 .. _after-aws-integration:
 

@@ -30,10 +30,12 @@ To use Network Explorer with Kubernetes, you must meet the following requirement
       - Network Explorer is supported in Kubernetes-based environments on Linux hosts. Use Helm-based management.
       
     * - Operating system
-      - RedHat Linux versions 7.6 or higher, Ubuntu versions 16.04 or higher, Debian Stretch+, Amazon Linux 2, Google COS
+      - RedHat Linux versions 7.6 or higher, Ubuntu versions 16.04 or higher, Debian Stretch+, Amazon Linux 2, Google COS 
 
     * - Kubernetes version
       - Network Explorer is supported on all active releases of Kubernetes. For more information, see :new-page:`Releases <https://kubernetes.io/releases/>` in the Kubernetes documentation. 
+
+.. note:: Network Explorer is not compatible with GKE Autopilot clusters.
 
 To use Network Explorer with OpenShift, you must meet the following requirements.
 
@@ -576,7 +578,7 @@ Enable an internal metric
 Example
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-In the following example, all HTTP metrics along with certain individual TCP and UDP metrics are disabled. All DNS metrics are collected.
+In the following example, all HTTP metrics along with certain individual TCP and UDP metrics are deactivated. All DNS metrics are collected.
 
     .. code-block:: yaml
 

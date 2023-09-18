@@ -13,17 +13,22 @@ Components
     :hidden:
 
     components/attributes-processor
+    components/basic-auth-extension
     components/batch-processor
     components/databricks-receiver
     components/filter-processor
     components/fluentd-receiver
+    components/health-check-extension
     components/host-metrics-receiver
     components/kubelet-stats-receiver
     components/kubernetes-attributes-processor
     components/kubernetes-cluster-receiver
     components/logging-exporter
+    components/memory-ballast-extension   
     components/mongodb-atlas-receiver
     components/oracledb-receiver
+    components/otlp-exporter
+    components/otlphttp-exporter            
     components/postgresql-receiver
     components/prometheus-receiver
     components/receiver-creator-receiver
@@ -38,6 +43,7 @@ Components
     components/splunk-hec-receiver
     components/transform-processor
     components/windowsperfcounters-receiver
+    components/zpages-extension    
 
 The OpenTelemetry Collector includes the following component types:
 
@@ -61,7 +67,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
   </embed>
 
 .. list-table::
-   :widths: 25 50 15
+   :widths: 25 55 20
    :header-rows: 1
    :width: 100%
 
@@ -187,7 +193,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
   </embed>
 
 .. list-table::
-   :widths: 25 50 25
+   :widths: 25 55 20
    :header-rows: 1
    :width: 100%
 
@@ -248,7 +254,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
   </embed>
 
 .. list-table::
-   :widths: 25 50 25
+   :widths: 25 55 20
    :header-rows: 1
    :width: 100%
 
@@ -264,12 +270,12 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`logging-exporter` (``logging``)
      - Exports data to the console. By default, ``logging`` doesn't send its output to Windows Event Viewer. Run the Splunk Distribution of OpenTelemetry Collector directly from the PowerShell terminal to send output to the Windows Event Viewer.
      - Metrics, logs, traces
-   * - ``otlp``
+   * - :ref:`otlp-exporter` (``otlp``)
      - Exports data through gRPC using the OTLP format. By default, this exporter requires TLS and provides queued retry capabilities. 
-     - Metrics, traces
-   * - ``otlphttp``
-     - Exports traces and metrics in OTLP format over the HTTP protocol. 
-     - Metrics, traces
+     - Metrics, logs, traces
+   * - :ref:`otlphttp-exporter` (``otlphttp``)
+     - Exports data in OTLP format over the HTTP protocol. 
+     - Metrics, logs, traces
    * - :ref:`splunk-apm-exporter` (``sapm``)
      - Allows the Splunk Distribution of OpenTelemetry Collector to export traces from multiple nodes or services in a single batch. 
      - Traces  
@@ -298,13 +304,15 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
 
    * - Name
      - Description
+   * - :ref:`basic-auth-extension` (``basicauth``)
+     - Implements both ``configauth.ServerAuthenticator`` and ``configauth.ClientAuthenticator`` to authenticate clients and servers using basic authentication. The authenticator type has to be set to ``basicauth``.      
    * - ``docker_observer``
      - Detects and reports container endpoints discovered through the Docker API. Only containers that are in the state of ``Running`` and not ``Paused`` emit endpoints.
    * - ``ecs_observer``
      - Uses the ECS and EC2 API to discover Prometheus scrape targets from all running tasks and filter them based on service names, task definitions, and container labels. Only compatible with the Prometheus receiver.
    * - ``file_storage``
      - Persists state to the local file system. Requires read and write access to a diectory.
-   * - ``health_check``
+   * - :ref:`health-check-extension` (``health_check``)
      - Activates an HTTP URL that can be probed to check the status of the OpenTelemetry Collector. You can also use this extension as a liveness or readiness probe on Kubernetes.
    * - ``http_forwarder``
      - Accepts HTTP requests and optionally adds headers and forwards them. The RequestURIs of the original requests are preserved by the extension. 
@@ -312,13 +320,13 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
      - Looks at the current host for listening network endpoints. Uses the /proc file system and requires the ``SYS_PTRACE`` and ``DAC_READ_SEARCH`` capabilities so that it can determine what processes own the listening sockets. See :ref:`receiver-creator-receiver` for more information.
    * - ``k8s_observer``
      - Uses the Kubernetes API to discover pods running on the local node. See :ref:`receiver-creator-receiver` for more information.
-   * - ``memory_ballast``
+   * - :ref:`memory-ballast-extension` (``memory_ballast``)
      - Configures the memory ballast for the Collector process, either as a size in megabytes or as a size expressed as a percentage of the total memory. Sufficient ballast enhances the stability of Collector deployments.
    * - ``pprof``
      - Activates the golang ``net/http/pprof`` endpoint, which is used to collect performance profiles and investigate issues with a service.
    * - ``smartagent``
      - Provides a mechanism to set configuration options that are applicable to all instances of the Smart Agent receiver. Allows to migrate your existing Smart Agent configuration to the Splunk Distribution of OpenTelemetry Collector. 
-   * - ``zpages``
+   * - :ref:`zpages-extension` (``zpages``) 
      - Activates an extension that serves zPages, an HTTP endpoint that provides live data for debugging different components.
 
 

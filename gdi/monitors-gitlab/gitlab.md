@@ -6,14 +6,14 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the GitLab monitor type to monitor GitLab. 
 
-GitLab is bundled with [Prometheus exporters](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html), which can be configured to export performance metrics of itself and of the bundled software that GitLab depends on. These exporters publish Prometheus metrics at endpoints that are scraped by this monitor type.
+GitLab is bundled with <a class="external" href="https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html" target="_blank">Prometheus exporters</a>, which can be configured to export performance metrics of itself and of the bundled software that GitLab depends on. These exporters publish Prometheus metrics at endpoints that are scraped by this monitor type.
 
 This integration allows you to monitor the following:
 
 * Gitaly and Gitaly Cluster: Gitaly is a git remote procedure call (RPC) service for handling all git calls made by GitLab. This monitor scrapes the Gitlab Gitaly git RPC server.
-* GitLab Runner: GitLab Runner can be monitored using Prometheus. See the GitLab Runner documentation on [GitLab Docs](https://docs.gitlab.com/) for more information.
+* GitLab Runner: GitLab Runner can be monitored using Prometheus. See the GitLab Runner documentation on <a class="external" href="https://docs.gitlab.com/" target="_blank">GitLab Docs</a> for more information.
 * GitLab Sidekiq: It scrapes the Gitlab Sidekiq Prometheus Exporter. 
-* GitLab Unicorn server: It comes with a Prometheus exporter. The IP address of the container or host needs to be allowed for the collector to access the endpoint. See the `IP allowlist` documentation on [GitLab Docs](https://docs.gitlab.com/) for more information.  
+* GitLab Unicorn server: It comes with a Prometheus exporter. The IP address of the container or host needs to be allowed for the collector to access the endpoint. See the `IP allowlist` documentation on <a class="external" href="https://docs.gitlab.com/" target="_blank">GitLab Docs</a> for more information.  
 * GitLab Workhorse: The GitLab service that handles slow HTTP requests. Workhorse includes a built-in Prometheus exporter that this monitor hits to gather metrics. 
 
 This monitor type is available on Kubernetes, Linux, and Windows using GitLab version 9.3 or higher.
@@ -30,7 +30,7 @@ This monitor type is available on Kubernetes, Linux, and Windows using GitLab ve
 
 ## GitLab configuration
 
-Follow the instructions on [Monitoring GitLab with Prometheus](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html) to configure the GitLab Prometheus exporters to expose metric endpoint targets. For the GitLab Runner monitoring configuration, see [GitLab Runner monitoring](https://docs.gitlab.com/runner/monitoring/).
+Follow the instructions on <a class="external" href="https://docs.gitlab.com/runner/monitoring/" target="_blank">Monitoring GitLab with Prometheus](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html) to configure the GitLab Prometheus exporters to expose metric endpoint targets. For the GitLab Runner monitoring configuration, see [GitLab Runner monitoring</a>.
 
 If you configue GitLab by editing `/etc/gitlab/gitlab.rb`, you need to run the command `gitlab-ctl reconfigure` for the changes to take effect.
 
@@ -40,17 +40,17 @@ The following table shows some of the Prometheus endpoint targets with links to 
 
 | Monitor type    |     Reference                          | Default port | Standard path |
 |-----------------------|------------------------------------------|---------------|---------------|
-| `gitlab-exporter` | [GitLab exporter](https://docs.gitlab.com/ee/administration/monitoring/prometheus/gitlab_exporter.html) | 9168 | /metrics |
+| `gitlab-exporter` | <a class="external" href="https://docs.gitlab.com/ee/administration/monitoring/prometheus/gitlab_exporter.html" target="_blank">GitLab exporter</a> | 9168 | /metrics |
 | `gitlab-gitaly` | Gitaly and Gitaly Cluster | 9236 | /metrics |
 | `gitlab-runner` | GitLab Runner | 9252 | /metrics |
 | `gitlab-sidekiq` | GitLab SideKiq | 8082 | /metrics |
 | `gitlab-unicorn` | GitLab Unicorn | 8080 | /-/metrics |
 | `gitlab-workhorse` | GitLab Workhorse | 9229 | /metrics |
-| `prometheus/nginx-vts` | [Monitoring GitLab with Prometheus](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html) | 8060 | /metrics |
-| `prometheus/node` | [Node exporter](https://docs.gitlab.com/ee/administration/monitoring/prometheus/node_exporter.html) | 9100 | /metrics |
-| `prometheus/postgres` | [PostgreSQL Server Exporter](https://docs.gitlab.com/ee/administration/monitoring/prometheus/postgres_exporter.html) | 9187 | /metrics |
-| `prometheus/prometheus` | [Monitoring GitLab with Prometheus](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html) | 9090 | /metrics |
-| `prometheus/redis` | [Redis exporter](https://docs.gitlab.com/ee/administration/monitoring/prometheus/redis_exporter.html) | 9121 | /metrics |
+| `prometheus/nginx-vts` | <a class="external" href="https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html" target="_blank">Monitoring GitLab with Prometheus</a> | 8060 | /metrics |
+| `prometheus/node` | <a class="external" href="https://docs.gitlab.com/ee/administration/monitoring/prometheus/node_exporter.html" target="_blank">Node exporter</a> | 9100 | /metrics |
+| `prometheus/postgres` | <a class="external" href="https://docs.gitlab.com/ee/administration/monitoring/prometheus/postgres_exporter.html" target="_blank">PostgreSQL Server Exporter</a> | 9187 | /metrics |
+| `prometheus/prometheus` | <a class="external" href="https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html" target="_blank">Monitoring GitLab with Prometheus</a> | 9090 | /metrics |
+| `prometheus/redis` | <a class="external" href="https://docs.gitlab.com/ee/administration/monitoring/prometheus/redis_exporter.html" target="_blank">Redis exporter</a> | 9121 | /metrics |
 
 <br>
 
@@ -117,16 +117,17 @@ receivers:
     type: gitlab
     host: localhost
     port: 9229
-exporters:
-  logging:
+
+# ... Other sections
+
 service:
   pipelines:
     metrics:
       receivers:
         - smartagent/gitlab-sidekiq
         - smartagent/gitlab-workhorse
-      exporters:
-        - logging
+
+# ... Other sections
 ```
 
 ### Configuration options
@@ -135,7 +136,7 @@ The following table shows the configuration options for this monitor:
 
 | Option | Required | Type | Description |
 | --- | --- | --- | --- |
-| `httpTimeout` | no | `int64` | HTTP timeout duration for both read and writes. This should be a duration string that is accepted by [ParseDuration](https://golang.org/pkg/time/#ParseDuration). The default value is `10s`. |
+| `httpTimeout` | no | `int64` | HTTP timeout duration for both read and writes. This should be a duration string that is accepted by <a class="external" href="https://golang.org/pkg/time/#ParseDuration" target="_blank">ParseDuration</a> The default value is `10s`. |
 | `username` | no | `string` | Basic Auth username to use on each request, if any. |
 | `password` | no | `string` | Basic Auth password to use on each request, if any. |
 | `useHTTPS` | no | `bool` | If `true`, the collector will connect to the server using HTTPS instead of plain HTTP. The default value is `false`.|

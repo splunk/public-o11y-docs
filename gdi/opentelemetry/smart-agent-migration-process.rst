@@ -8,7 +8,7 @@ Migration process from the Smart Agent to the Splunk Distribution of the OpenTel
    :description: Describes the process of migrating from the SignalFX Smart Agent to the Splunk Distribution of OpenTelemetry Collector.
 
 .. note::
-   Using this content assumes that you're running the SignalFx SmartAgent in the Kubernetes, Linux, or Windows environments and want to migrate to the Splunk Distribution of OpenTelemetry Collector to collect telemetry data. Note that you cannot use both agents simultaneously on the same host.
+   Using this content assumes that you're running the SignalFx SmartAgent in the Kubernetes, Linux, or Windows environments and want to migrate to the Splunk Distribution of OpenTelemetry Collector to collect telemetry data. Note that you cannot use both agents simultaneously on the same host. See more details about this in the section :strong:`Conflicting semantics` in :ref:`Mapping service and migration impact report <legacy-otel-mappings>`.
 
 Do the following steps to migrate from the Smart Agent to the Collector:
 
@@ -271,7 +271,7 @@ After the configuration file is updated, restart the Smart Agent.
 You can then use the ``sfxagent.datapoints_sent`` and ``sfxagent.trace_spans_sent`` metrics to estimate the number of data points and spans being sent to Splunk Observability Cloud respectively. You can plot them on a dashboard and filter based on dimensions to ascertain the total per cluster or host.
 
 .. note::
-   The sizing recommendation for logs also accounts for td-agent (Fluentd) that is bundled with the Collector.
+   The sizing recommendation for logs also accounts for td-agent (Fluentd) that can be activated with the Collector.
 
 If a Collector handles both trace and metric data, then both must be accounted for when sizing. For example, 7.5K spans per second plus 10K data points per second would require 1 CPU core.
 
@@ -298,7 +298,7 @@ Configure ``ballastextension`` and the ``memory_limiter`` processor on every Col
 
 .. _deploy-non-prod-updated-config:
 
-6. Deploy the Collector to the non-production environment using the updated configuration file
+1. Deploy the Collector to the non-production environment using the updated configuration file
 ===================================================================================================
 
 Complete the necessary updates and translation of the configuration file, and restart the Collector on the non-production environment using the updated file.
@@ -367,4 +367,4 @@ After uninstalling the Smart Agent, :ref:`deploy the Collector to a production h
 
 After verifying with one host, deploy the Collector with the same configuration to the rest of the hosts.
 
-.. include:: /_includes/troubleshooting-steps.rst
+.. include:: /_includes/troubleshooting-components.rst

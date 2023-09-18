@@ -33,7 +33,7 @@ The **nested** `kubernetesAPI` configuration object has the following fields:
 
 ## Metrics
 
-The following table shows the legacy metrics that are available for this integration. See [OpenTelemetry values and their legacy equivalents](https://docs.splunk.com/Observability/gdi/opentelemetry/legacy-otel-mappings.html#opentelemetry-values-and-their-legacy-equivalents) for the Splunk Distribution of OpenTelemetry Collector equivalents.
+The following table shows the legacy metrics that are available for this integration. See {ref}`legacy-otel-mappings` for the Splunk Distribution of OpenTelemetry Collector equivalents.
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/kubernetes/cluster/metadata.yaml"></div>
 

@@ -59,7 +59,7 @@ The following table shows the configuration options for this integration:
 | `customDimensions` | no   | `map of strings`  | This object specifies custom dimensions to add at the connection level.  |
 | `mBeansToCollect`  | no  | `list of strings`  | This array specifies a list of the MBeans defined in `mBeanDefinitions` that you want to collect. If you don't provide the array, the monitor collects all defined MBeans.   |
 | `mBeansToOmit`     | no   | `list of strings` | This array specifies a list of the MBeans defined in `mBeanDefinitions` that you want to omit. Use this list when you want to omit only a few MBeans from the default list.  |
-| `mBeanDefinitions` | no    | `map of objects` (see the following table for details) | This object specifies how to map JMX MBean values to metrics.  Cassandra comes pre-loaded with a set of mappings. Any mappings that you add in this option are merged with the pre-loaded ones. To learn more, see [https://collectd.org/documentation/manpages/collectd-java.5.shtml#genericjmx_plugin](https://collectd.org/documentation/manpages/collectd-java.5.shtml#genericjmx_plugin). |
+| `mBeanDefinitions` | no    | `map of objects` (see the following table for details) | This object specifies how to map JMX MBean values to metrics.  Cassandra comes pre-loaded with a set of mappings. Any mappings that you add in this option are merged with the pre-loaded ones. To learn more, see <a class="external" href="https://collectd.org/documentation/manpages/collectd-java.5.shtml#genericjmx_plugin" target="_blank">https://collectd.org/documentation/manpages/collectd-java.5.shtml#genericjmx_plugin</a> |
 
 
 The `mBeanDefinitions` configuration option has the following fields:
@@ -88,7 +88,7 @@ The `values` configuration option has the following fields:
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/cassandra/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/collectd/cassandra/metadata.yaml"></div>
 
 ### Notes
 

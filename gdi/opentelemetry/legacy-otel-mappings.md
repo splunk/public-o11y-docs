@@ -1,6 +1,6 @@
 (legacy-otel-mappings)=
 
-# Mapping service and mapping report
+# Mapping service and migration impact report
 
 <meta name="Description" content="Documentation on the legacy SignalFX Smart Agent and OpenTelemetry Collector mappings in Splunk Observability Cloud">
 
@@ -22,23 +22,24 @@ For example, if you track CPU utilization for your Kubernetes pod, your analytic
 Whether you're using the Smart Agent or the Collector, your original dashboards and detectors function the same way. 
 
 - Infrastructure Navigator views use the mapping service to show both old collection data and new collection data.
-- After you've migrated to the Collector, read <a href="https://docs.splunk.com/Observability/metrics-and-metadata/metrics-finder-metadata-catalog.html" target="_blank">Use the Metric Finder and Metadata Catalog</a> to learn how to use the Metric Finder and Metadata Catalog to find, view, and edit information about the metadata in your system.
+- After you've migrated to the Collector, see {ref}`metrics-finder-and-metadata-catalog` to learn how to use the Metric Finder and Metadata Catalog to find, view, and edit information about the metadata in your system.
 
-## Obtain the transition mapping report
+## Obtain the migration impact report
 
-The **Mapping and OTel Transition Impact Report** explains how the transition from Smart Agent to OpenTelemetry affects some of the variables and saved filters in the following dashboards, charts, and detectors.
+The **OpenTelemetry Migration Impact Report** explains how the transition from Smart Agent to OpenTelemetry affects some of the variables and saved filters in the following dashboards, charts, and detectors.
 
-The mapping impact report also tells you where to find whatever subset of your content calls functions with Smart Agent names, so that you can update that content either by hand or programmatically to complete your transition to open telemetry.
+The migration impact report also tells you where to find whatever subset of your content calls functions with Smart Agent names, so that you can update that content either by hand or programmatically to complete your transition to open telemetry.
 
-### Access the transition report
+### Access the migration impact report
 
-To access the migration transition impact report, follow these steps:
+To access the migration impact report, follow these steps:
 
 1. Log in to Splunk Observability Cloud.
-2. In the navigation menu, select **Settings** and then select **Billing and Usage**.
-3. Click the **View detailed usage reports** link.
-4. Select the **OpenTelemetry Migration** tab.
-5. Click **Download** to open the report as a comma-separated values file.
+2. In the navigation menu, select **Settings** and then select **Subscription Usage**.
+3. Select the **Usage Reports** link on the **Infrastructure Monitoring** tab. 
+4. Navigate to **View detailed usage reports**.
+5. Select the **OpenTelemetry Migration** tab.
+6. Select **Download** to open the report as a comma-separated values file.
 
 ### What is flagged for update in translation
 
@@ -49,15 +50,15 @@ The report is specific to your computing environment. It flags the following ite
 - Filters that use Smart Agent dimensions
 - Aggregates that use Smart Agent dimensions
 
-The mapping impact report also shows which OpenTelemetry metrics and dimensions work well as replacements for specific Smart Agent metrics and dimensions, with the important exception of wildcards not supported by OpenTelemetry.
+The migration impact report also shows which OpenTelemetry metrics and dimensions work well as replacements for specific Smart Agent metrics and dimensions, with the important exception of wildcards not supported by OpenTelemetry.
 
-### Interpret the mapping impact report
+### Interpret the migration impact report
 
-The Mapping and OTel Transition Impact Report summarizes the scope of component name change associated with your migration to open telemetry. It assesses your data set to list the tokens currently used as metric, dimension, property or tag names, and highlights migration rules that could generate conflict between old and new equivalence groups.
+The OpenTelemetry Migration Impact Report summarizes the scope of component name change associated with your migration to open telemetry. It assesses your dataset to list the tokens currently used as metric, dimension, property or tag names, and highlights migration rules that can generate conflict between old and new equivalence groups.
 
 The report explains when migration from an old MTS to a new MTS will trigger detectors, and which detectors those are. For example, heartbeat detectors working with un-aggregated MTS are affected by design, but if a heartbeat detector is working with a dimension that continues across the transition to OTel, then the mapping service ensures continuity so that you do not have to restart that detector.
 
-The mapping transition impact report assesses migration effects across three categories:
+The migration impact report assesses migration effects across three categories:
 
 - Data object types
 - Team responsibilities
@@ -73,7 +74,7 @@ To resolve this issue, explicitly filter or group by dimensions so that Mapping 
 
 #### Data object type information
 
-The mapping impact report explains migration impacts within your organization to the following object types:
+The migration impact report explains migration impacts within your organization to the following object types:
 
 - Dashboards
 - Charts
@@ -83,13 +84,13 @@ The report shows how many objects of each type are affected, and includes tables
 
 #### Team information
 
-The mapping impact report extracts information from your data set about stakeholders, meaning the people who created object types or are affected by changes to them because they're on email lists of employees to be notified in the event of, for example, a detector being triggered by a critical alert condition.
+The migration impact report extracts information from your dataset about stakeholders, meaning the people who created object types or are affected by changes to them because they're on email lists of employees to be notified in the event of, for example, a detector being triggered by a critical alert condition.
 
 When applicable, the report shows the names of teams linked to particular detectors. The report also identifies people or teams linked to particular dashboard groups.
 
 #### Migration mitigation steps
 
-The mapping impact report explains what effect migration will have on the content highlighted in it, so that you can modify that content as needed to ensure a smoother transition.
+The migration impact report explains what effect migration will have on the content highlighted in it, so that you can modify that content as needed to ensure a smoother transition.
 
 Flagged items that need to be modified include the following (as listed in the report):
 
@@ -98,11 +99,24 @@ Flagged items that need to be modified include the following (as listed in the r
 - Filters that use Smart Agent dimensions.
 - Aggregates that use Smart Agent dimensions.
 
-While the mapping impact report highlights items that need revising because they use legacy syntax or conventions, it also pairs those items with the OTel-based metrics and dimensions that you can use as substitutes for them.
+While the migration impact report highlights items that need revising because they use legacy syntax or conventions, it also pairs those items with the OTel-based metrics and dimensions that you can use as substitutes for them.
+
+#### Conflicting semantics
+
+If you emit 2 or more metrics which could be mapped to one another, the system won't be able to distinguish them and it might cause various side-effects such as duplicated alerts or inconsistent dimensions in results.
+
+This can happen: 
+
+* If you have both the Smart Agent and OpenTelemetry Collector running on the same host.
+* If you included 2 equivalent dimensions on the same metric, like `host` and `host.name`. Because of the mapping you are expected to only provide the OpenTelemetry semantics or the legacy semantics during the transition.
+
+Semantics collission on ingested data apply only per MTS. This means you can send OpenTelemetry metrics from host A, and legacy metrics from host B. You also can send the metrics `container_fs_usage_bytes` and `k8s.container.name` from the same host, since these will be different MTSs.
+
+The same rule applies to querying in charts and detectors, where you are expected to only query by the OpenTelemetry semantics or by legacy semantics within the same `data()` invocation, regardless of the metrics you're querying are aligned with legacy or OpenTelemetry semantics. In this situation Observability Cloud might produce duplicated MTSs from non-duplicated ingested data. For example, this might happen if you write a query such as `data("container.image.name", filter=(filter("host", "<host-id>") OR filter("host.name", "<host-id>")))`.
 
 ## OpenTelemetry values and their legacy equivalents
 
-Refer to the following table for OpenTelemetry values and their legacy equivalents:
+See the following table for OpenTelemetry values and their legacy equivalents:
 
 | **Legacy semantics** | **OpenTelemetry semantics** |
 |---|---|

@@ -5,13 +5,13 @@ Instrument PHP applications for Splunk Observability Cloud
 ***********************************************************
 
 .. meta::
-   :description: Instrument a PHP application to export metrics and spans to Splunk Observability Cloud.
+   :description: Instrument your PHP application to export metrics and spans to Splunk Observability Cloud.
 
 .. toctree::
    :hidden:
 
    Requirements <php-requirements>
-   Instrument a PHP application <instrumentation/instrument-php-application>
+   Instrument your PHP application <instrumentation/instrument-php-application>
    Configure the PHP instrumentation <configuration/advanced-php-configuration>
    Manual instrumentation <instrumentation/php-manual-instrumentation>
 

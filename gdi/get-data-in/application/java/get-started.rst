@@ -11,7 +11,7 @@ Instrument Java applications for Splunk Observability Cloud
    :hidden:
 
    Requirements <java-otel-requirements>
-   Instrument a Java application <instrumentation/instrument-java-application>
+   Instrument your Java application <instrumentation/instrument-java-application>
    Instructions for app servers <instrumentation/java-servers-instructions>
    Metrics and attributes <configuration/java-otel-metrics-attributes>
    Connect trace data with logs <instrumentation/connect-traces-logs>

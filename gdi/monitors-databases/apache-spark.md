@@ -63,7 +63,7 @@ service:
       receivers: [smartagent/collectd_spark_worker]
 ```
 
-**Note:** The names `collectd_spark_master` and `collectd_spark_worker` are for identification purposes only and don't affect functionality. You can use either name in your configuration, but you need to select distinct monitor configurations and discovery rules for master and worker processes. For the master configuration, see the `isMaster` field in the [Configuration settings](#configuration-settings) section.
+**Note:** The names `collectd_spark_master` and `collectd_spark_worker` are for identification purposes only and don't affect functionality. You can use either name in your configuration, but you need to select distinct monitor configurations and discovery rules for master and worker processes. For the master configuration, see the `isMaster` field in the configuration settings section.
 
 ## Configuration settings
 
@@ -83,7 +83,7 @@ The following table shows the configuration options for this integration:
 
 These are the metrics available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/spark/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/collectd/spark/metadata.yaml"></div>  
 
 ### Notes
 

@@ -13,6 +13,7 @@ Configure the Collector
     :hidden:
 
     configure-the-collector-ootb.rst
+    environment-variables.rst
     linux-config.rst
     kubernetes-config.rst
     kubernetes-config-advanced.rst
@@ -71,7 +72,7 @@ To define multiple config files simultaneously use:
 
 Use the Fluentd receiver to collect logs. Common sources such as filelog, journald, and Windows Event Viewer are included in the installation. See :ref:`fluentd-receiver` for more information.
 
-.. note:: If you don't have a Log Observer entitlement or don't wish to collect logs for the target host, use the ``--without-fluentd`` option to skip the installation of Fluentd when installing the Collector. 
+.. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance. 
 
 .. raw:: html
 

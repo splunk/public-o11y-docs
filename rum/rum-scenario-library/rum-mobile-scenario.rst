@@ -5,6 +5,8 @@
 Scenario: Kai finds the root cause of a user reported error in Splunk RUM for Mobile  
 *************************************************************************************
 
+.. meta::
+  :description: An example scenario of how to use Splunk RUM for Mobile to find the root cause of issues reported by app users using filters, Tag Spotlight, and User sessions.
 
 The following scenario features Buttercup Industries, a fictitious e-commerce company.
 

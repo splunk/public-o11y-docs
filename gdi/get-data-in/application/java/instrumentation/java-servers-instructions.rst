@@ -169,10 +169,10 @@ WebSphere Traditional
 
 Open the WebSphere Admin Console and follow these steps:
 
-#. Navigate to :guilabel:`Servers`, then :guilabel:` Server type`.
+#. Navigate to :guilabel:`Servers`, then :guilabel:`Server type`.
 #. Select :guilabel:`WebSphere application servers`.
 #. Select the desired server.
-#. Navigate to :guilabel:`Java and Process Management`, then :guilabel:` Process Definition`.
+#. Navigate to :guilabel:`Java and Process Management`, then :guilabel:`Process Definition`.
 #. Select :guilabel:`Java Virtual Machine`.
 #. In the :guilabel:`Generic JVM arguments` field, enter the path to Splunk Java agent:
 

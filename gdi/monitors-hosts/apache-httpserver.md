@@ -97,7 +97,7 @@ After you've set up the Collector, follow these steps to configure the Apache we
 
 These metrics are available for this integration.
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/apache/metadata.yaml"></div>  
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/collectd/apache/metadata.yaml"></div>  
 
 ### Notes
 

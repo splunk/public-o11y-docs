@@ -21,7 +21,7 @@ To connect Splunk Observability Cloud to your AWS account, complete the followin
 Create an AWS connection 
 =====================================================
 
-To connect Splunk Observability Cloud to AWS through the Splunk Observability Cloud API, open your command-line interface and perform the following steps:
+To connect Splunk Observability Cloud to AWS through the Splunk Observability Cloud API, perform the following steps:
 
 #. :ref:`Create an external AWS ID <aws-api-create-id>`
 #. :ref:`Create an AWS policy and IAM role <aws-api-create-policy-role>`
@@ -31,7 +31,7 @@ To connect Splunk Observability Cloud to AWS through the Splunk Observability Cl
 Create an external AWS ID
 ---------------------------------------------------------------------
 
-Use the ``-X`` flag on a POST request to create an AWS connection that generates an external ID:
+To create an external AWS ID, open your command-line interface and use the following command to create an AWS connection that generates an external ID:
 
 .. code-block:: none
 
@@ -69,19 +69,7 @@ In the system response, note the following:
 Create an AWS policy and IAM role
 ---------------------------------------------------------------------
 
-To create an AWS policy and an AWS IAM (Identity and Access Management) role with a unique Amazon Resource Name (ARN), use a PUT request with the ``externalId`` value generated in the previous step.
-
-The following example shows a PUT request for collecting data from two regions and three AWS services. The regions involved are ``us-west-1`` and ``us-east-1``. Services are identified by the ``namespace`` tag.
-
-.. code-block:: none
-
-  curl -X PUT 'https://app.<realm>.signalfx.com/v2/integration/E78gbtjBcAA' \
-    -H 'accept: application/json, text/plain, */*' \
-    -H 'x-sf-token: <USER_API_ACCESS_TOKEN>' \
-    -H 'content-type: application/json' \
-    --data-raw '{"authMethod": "ExternalId", "created": 1628082281828, "creator": "E73pzL5BUAI", "customCloudWatchNamespaces": null, "enableCheckLargeVolume": false, "enabled": true, "externalId": "<externalId>", "id": "<id>", "importCloudWatch": true, "largeVolume": false, "lastUpdated": 1628090302516, "lastUpdatedBy": "<id>", "name": "AWS", "pollRate": 300000, "regions": ["us-west-1", "us-east-1"], "roleArn": "<your-aws-iam-role-arn>", "services": [], "sfxAwsAccountArn": "arn:aws:iam::134183635603:root", "syncLoadBalancerTargetGroupTags": false, "type": "AWSCloudWatch", "key": null, "token": null, "namedToken": "Default", "namespaceSyncRules": [{"namespace": "AWS/S3"}, {"namespace": "AWS/EC2"}, {"namespace": "AWS/ApplicationELB"}]}'
-
-For further information and more examples on how to integrate AWS monitoring with Splunk Observability Cloud, see :new-page:`our developer documentation <https://dev.splunk.com/observability/docs/integrations/aws_integration_overview#Integrate-AWS-monitoring-with-Splunk-Observability-Cloud>`.
+To create an AWS policy and an AWS IAM (Identity and Access Management) role with a unique Amazon Resource Name (ARN), go to the AWS console and follow the instructions in :ref:`aws-authentication`. Use the ``externalId`` value generated in the previous step.
 
 .. _review-aws-iam-policy:
 
@@ -421,11 +409,35 @@ The following example shows how to collect metrics from all regions and services
 
 .. code-block:: none
 
-  curl -X PUT 'https://app.<realm>.signalfx.com/v2/integration/E78gbtjBcAA' \
+  curl -X PUT 'https://app.<realm>.signalfx.com/v2/integration/<IntegrationID>' \
     -H 'accept: application/json, text/plain, */*' \
     -H 'x-sf-token: <USER_API_ACCESS_TOKEN>' \
     -H 'content-type: application/json' \
-    --data-raw '{"authMethod": "ExternalId", "created": 1628082281828, "creator": "E73pzL5BUAI", "customCloudWatchNamespaces": null, "enableCheckLargeVolume": false, "enabled": true, "externalId": "jobcimfczlkhwxlqwbum", "id": "E78gbtjBcAA", "importCloudWatch": true, "largeVolume": false, "lastUpdated": 1628090302516, "lastUpdatedBy": "E73pzL5BUAI", "name": "AWS", "pollRate": 300000, "regions": [], "roleArn": "<your-aws-iam-role-arn>", "services": [], "sfxAwsAccountArn": "arn:aws:iam::134183635603:root", "syncLoadBalancerTargetGroupTags": false, "type": "AWSCloudWatch", "key": null, "token": null, "namedToken": "Default", "namespaceSyncRules": []}'
+    --data-raw '{
+      "authMethod" : "ExternalId",
+      "created" : 1690856052734,
+      "createdByName" : null,
+      "creator" : "FVaMfXTAIAA",
+      "customCloudWatchNamespaces" : null,
+      "enableAwsUsage" : false,
+      "enableCheckLargeVolume" : false,
+      "enabled" : true,
+      "externalId" : "bqvguakfajpzxgqobzvd",
+      "id" : "F2aURjcAAAI",
+      "importCloudWatch" : true,
+      "largeVolume" : false,
+      "lastUpdated" : 1690856052734,
+      "lastUpdatedBy" : "FVaMfXTAIAA",
+      "lastUpdatedByName" : null,
+      "name" : "AWS-connection-name",
+      "pollRate" : 300000,
+      "regions" : [ ],
+      "roleArn" : "<your-aws-iam-role-arn>",
+      "services" : [ ],
+      "sfxAwsAccountArn" : "arn:aws:iam::134183635603:root",
+      "syncCustomNamespacesOnly" : false,
+      "syncLoadBalancerTargetGroupTags" : false,
+      "type" : "AWSCloudWatch"}'
 
 .. _aws-configure-api-polling:
 
@@ -455,7 +467,7 @@ To activate CloudWatch Metric Streams as an alternative to traditional API polli
 #. Set the ``enabled`` field to ``true``.
 #. Submit a PUT request to the ``https://api.<realm>.signalfx.com/v2/integration/<integration-id>`` endpoint to save your updated settings.
 
-.. caution:: CloudWatch Metric Streams doesn't support filtering based on resource tags.   
+.. caution:: CloudWatch Metric Streams supports filtering by namespace and metric name but doesn't support filtering based on resource tags.   
 
 Next, to complete the activation of Metric Streams:
 

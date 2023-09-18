@@ -14,18 +14,17 @@ sys.path.insert(0, os.path.join(os.path.abspath('.'), '_ext'))
 from assetminify import final_conf_includes
 
 extensions = [
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.todo',
-    'sphinx.ext.ifconfig',
     'sphinx_copybutton',
     'notfound.extension',
-    'toggle',
     'newpage',
     'github',
     'optimizer',
     'myst_parser',
     'sphinx_tabs.tabs',
-    'olly_on_git_hub'
+    'olly_on_git_hub',
+    'sphinxcontrib.images',
+    'imagetarget',
+    'sphinxcontrib.mermaid'
 ]
 
 html_context = {
@@ -98,12 +97,20 @@ copybutton_prompt_is_regexp = True
 copybutton_copy_empty_lines = False
 copybutton_line_continuation_character = "\\"
 
-# Link Checker settings
+graphviz_output_format = 'svg'
+nbsphinx_requirejs_path = ''
+mermaid_version=""
 
 linkcheck_anchors = False
 linkcheck_workers = 3
 linkcheck_exclude_documents = [r'_.*', r'\.github', r'myst_parser', r'tests']
 linkcheck_ignore = [r'https://ingest.*',r'https://app.*',r'https://login.*',r'.*\<.*',r'https://api.*',r'https://rum-ingest.*',r'https://proxy.*',r'https://example.*', r'https://domain.com.*', r'.*domain/path.*', r'.*signalfx.com.*', r'.*your_realm.*', r'.*your_domain.*']
+
+# Image settings
+
+images_config = {
+    'override_image_directive': True
+}
 
 # ROLES AND MACROS
 #######################
@@ -125,7 +132,7 @@ rst_prolog = """
 
    ⋮
 
-.. |takeshift| image:: /_images/incident-intelligence/Incident-intelligence-take-shift-icon.png
+.. |takeshift| imagetarget:: /_images/incident-intelligence/Incident-intelligence-take-shift-icon.png
    :alt: Take shift
    :class: inline-image
 
