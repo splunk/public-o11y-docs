@@ -59,11 +59,7 @@ Activate log correlation
 
 The instrumentation turns on automatic log to trace correlation by default.
 
-If you need to turn off logs enrichment and export, set any of the following environment variables to ``false``:
-
-- ``OTEL_DOTNET_AUTO_LOGS_ENABLED``
-- ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED``
-- ``OTEL_DOTNET_AUTO_LOGS_ILOGGER_INSTRUMENTATION_ENABLED``
+If you need to turn off logs enrichment and export, set the value of ``OTEL_DOTNET_AUTO_LOGS_ENABLED`` environment variable to ``false``.
 
 .. _dotnet-otel-include-trace-data:
 
@@ -76,7 +72,7 @@ Individual log records, if exported inside the scope of an active activity, cont
 * ``SpanId``
 * ``TraceFlags``
 
-Logs produced by an application always have the following set of OpenTelemetry `resource attributes <https://github.com/open-telemetry/opentelemetry-specification/tree/4f23dce407b6fcaba34a049df7c3d41cdd58cb77/specification/resource/semantic_conventions>`:
+Logs produced by an application always have the following set of OpenTelemetry :new-page:`resource attributes <https://github.com/open-telemetry/opentelemetry-specification/tree/4f23dce407b6fcaba34a049df7c3d41cdd58cb77/specification/resource/semantic_conventions>`:
 
 * ``telemetry.sdk.name``` with constant value of ``opentelemetry``
 * ``telemetry.sdk.language`` with constant value of ``dotnet``
