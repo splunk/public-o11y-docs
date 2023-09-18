@@ -158,7 +158,7 @@ For more information about dashboard window transformations, see :new-page:`Dash
     
     You can't apply dashboard window transformations to detectors. When you create a new detector from a chart that uses dashboard window transformation, the transformation window is updated to the closest match to the current time window of the dashboard. 
      
-    For example, the current time window of a dashboard is ``09/01/2023 09:25:42 am to 09/02/2023 09:25:42 am``. When you create a new detector from a chart in this dashboard, the transformation window becomes ``Past day (-1d)``.
+    For example, the current time window of a dashboard is ``09/01/2023 09:25:00 am to 09/02/2023 07:30:00 am``. When you create a new detector from a chart in this dashboard, the transformation window becomes ``Past day (-1d)``.
 
 
 .. _other-functions:
