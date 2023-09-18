@@ -76,10 +76,7 @@ Individual log records, if exported inside the scope of an active activity, cont
 * ``SpanId``
 * ``TraceFlags``
 
-:new-page:`OpenTelemetry resource <https://github.com/open-telemetry/opentelemetry-specification/tree/4f23dce407b6fcaba34a049df7c3d41cdd58cb77/specification/resource/semantic_conventions>`
-describes entity producing telemetry, e.g logs.
-
-Logs produced by an application always have the following set of OpenTelemetry resource attributes:
+Logs produced by an application always have the following set of OpenTelemetry `resource attributes <https://github.com/open-telemetry/opentelemetry-specification/tree/4f23dce407b6fcaba34a049df7c3d41cdd58cb77/specification/resource/semantic_conventions>`:
 
 * ``telemetry.sdk.name``` with constant value of ``opentelemetry``
 * ``telemetry.sdk.language`` with constant value of ``dotnet``
