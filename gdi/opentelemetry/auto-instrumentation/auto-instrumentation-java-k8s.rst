@@ -174,4 +174,4 @@ Run this command to see the logs for one of the pods:
 
 - You can also follow the :ref:`steps to troubleshoot the Java agent<basic-java-troubleshooting>`.
 
-.. include:: /_includes/troubleshooting-steps.rst
+.. include:: /_includes/troubleshooting-components.rst
