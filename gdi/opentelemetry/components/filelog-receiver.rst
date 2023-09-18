@@ -18,50 +18,30 @@ For instance, you can read lines from a file using the ``file_input`` operator. 
 
 .. note:: The Filelog receiver can read files that are being rotated.
 
-Data in the Filelog receiver
---------------------------------------------------------------------------
-
 All operators either create, modify, or consume :strong:`entries`. 
 
 * An entry is the base representation of log data as it moves through a pipeline. 
 * A field is used to reference values in an entry.
 * A common expression syntax is used in several operators. For example, expressions can be used to filter or route entries.
 
-All time parameters must have the unit of time specified. For example, ``200ms``, ``1s``, or ``1m``.
-
-Types of operators
+Available operators
 --------------------------------------------------------------------------
 
-These are the type of operators available:
-
-* ``bytesize``
-* ``entry``
-* ``expression``
-* ``field``
-* ``on_error``
-* ``parsers``
-* ``pipeline``
-* ``scope_name``
-* ``severity``
-* ``timestamp``
-* ``trace``
-
-.. note:: For more information, see the the GitHub entry on operators at :new-page:`Operators <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/pkg/stanza/docs/operators/README.md#what-is-an-operator>`.
-
-How to use operators
---------------------------------------------------------------------------
+For a complete list of available operators, see :new-page:`What operators are available? <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/pkg/stanza/docs/operators/README.md#what-operators-are-available>` in GitHub.
 
 The following applies to operators:
+
+* Each operator has a ``type``.
 
 * You can give a unique Id to each operator. 
 
   * If you use the same type of operator more than once in a pipeline, you must specify an Id. 
-  * Otherwise, the Id defaults to the value of type.
+  * Otherwise, the Id defaults to the value of ``type``.
 
 * An operator outputs to the next operator in the pipeline. 
 
   * The last operator in the pipeline emits from the receiver. 
-  * Optionally, the output parameter can be used to specify the Id of another operator, and logs will be passed there directly.
+  * Optionally, you can use the output parameter to specify the Id of another operator to pass logs there directly.
   
 Parser operators 
 --------------------------------------------
@@ -85,7 +65,7 @@ The receiver does not emit header lines.
 Parsers with embedded operations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Many parsing operators can be configured to embed certain follow-up operations such as timestamp and severity parsing. 
+You can configure many parsing operators to embed certain follow-up operations such as timestamp and severity parsing. 
 
 For more information, see the the GitHub entry on complex parsers at :new-page:`Parsers <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/pkg/stanza/docs/types/parsers.md#complex-parsers>`.
 
