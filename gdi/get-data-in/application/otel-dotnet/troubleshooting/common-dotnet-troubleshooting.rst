@@ -9,8 +9,6 @@ Troubleshoot .NET instrumentation for Splunk Observability Cloud
 
 When you instrument a .NET application using the Splunk Distribution of OpenTelemetry .NET and you don't see your data in Splunk Observability Cloud, follow these troubleshooting steps.
 
-.. caution:: This is a beta distribution. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on best-effort basis.
-
 .. _enable-dotnet-otel-debug-logging:
 
 General troubleshooting
@@ -39,7 +37,7 @@ Activate debug logging
 
 You can activate debug logging to obtain more information about the issue:
 
-#. Set the ``OTEL_LOG_LEVEL`` environment variable to ``debug`` before starting your instrumented application. 
+#. Set the ``OTEL_LOG_LEVEL`` environment variable to ``debug`` before starting your instrumented application.
 
 #. Run your application or service and generate some activity.
 
