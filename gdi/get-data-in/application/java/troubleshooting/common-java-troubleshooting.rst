@@ -257,4 +257,4 @@ To run the Java agent in silent mode, add the following argument:
    
    -Dotel.javaagent.logging=none
 
-.. include:: /_includes/troubleshooting-steps.rst
+.. include:: /_includes/troubleshooting-components.rst

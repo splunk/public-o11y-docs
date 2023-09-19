@@ -138,4 +138,4 @@ For example:
 
 For more information on how to configure Istio see the Istio distributed tracing installation documentation.
 
-.. include:: /_includes/troubleshooting-steps.rst
+.. include:: /_includes/troubleshooting-components.rst

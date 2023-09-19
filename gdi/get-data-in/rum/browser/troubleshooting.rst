@@ -137,4 +137,4 @@ If you think Browser RUM might be causing issues in your website or breaking exi
         xhr: false,
       }
 
-.. include:: /_includes/troubleshooting-steps.rst
+.. include:: /_includes/troubleshooting-components.rst
