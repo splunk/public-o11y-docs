@@ -112,7 +112,7 @@ Other less common encodings are supported on a best-effort basis. See the list o
 Sample configurations
 --------------------------------
 
-See a few configuration samples in the sections below. You can find more examples in the GitHub repository :new-page:`splunk-otel-collextor/examples <https://github.com/signalfx/splunk-otel-collector/tree/main/examples>`.
+See a few configuration samples in the following sections. You can find more examples in the GitHub repository :new-page:`splunk-otel-collextor/examples <https://github.com/signalfx/splunk-otel-collector/tree/main/examples>`.
 
 Json files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
