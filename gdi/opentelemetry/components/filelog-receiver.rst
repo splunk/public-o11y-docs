@@ -114,7 +114,7 @@ Sample configurations
 
 See a few configuration samples in the following sections. You can find more examples in the GitHub repository :new-page:`splunk-otel-collextor/examples <https://github.com/signalfx/splunk-otel-collector/tree/main/examples>`.
 
-Json files
+JSON files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This example shows how to tail a simple json file:
