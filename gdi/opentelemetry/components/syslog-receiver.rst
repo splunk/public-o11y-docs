@@ -74,7 +74,7 @@ Configure UDP
 
 The following field is required:
 
-* ``listen_address``. A listening address with the format ``<ip>:<port>``.
+* ``listen_address``: A listening address with the format ``<ip>:<port>``.
 
 Sample configurations
 --------------------------------
