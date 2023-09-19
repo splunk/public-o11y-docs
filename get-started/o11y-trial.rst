@@ -37,7 +37,7 @@ What you'll see when you sign in
 ====================================
 
 
-.. image:: /_images/admin/trial-exp.png
+.. image:: /_images/admin/get-started/trial-exp.png
    :width: 80%
    :alt: Free trial first sign-in view
 
