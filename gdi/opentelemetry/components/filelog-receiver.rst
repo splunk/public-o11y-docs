@@ -133,7 +133,7 @@ This example shows how to tail a simple JSON file:
 Plaintext files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This example shows how to tail a plaintext file. 
+This example shows how to tail a plaintext file:
 
 .. code-block:: yaml
 
