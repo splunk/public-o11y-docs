@@ -13,7 +13,7 @@ Use service-centric views for a complete view of your service performance
    :description: Learn how to use service-centric views in Splunk APM for a complete view of your service performance.
 
 
-Service owners can use the service-centric view for their service in Splunk APM to get a complete view of their service performance. To access service-centric views, select a service from the APM landing page.
+Service owners can use the service-centric view in Splunk APM to get a complete view of their service performance. To access service-centric views, select a service from the APM landing page.
 
 Use the service metrics to monitor the performance of your service
 =====================================================================
@@ -28,23 +28,22 @@ Use the following sections to monitor the performance of your service.
 
       :strong:`Availability service-level objective (SLO)`
 
-      The availablity service-level objective (SLO) is configured by default to show the percentage your service was available in the last 30 days. The chart shows successful and unsuccessful reques
+      The availablity service-level objective (SLO) shows the percentage of time your service was available in the last 30 days. The chart shows successful and unsuccessful requests.
 
       :strong:`Dependency map`
 
-      The dependency map shows the immediate upstream and downstream dependencies for the service you are viewing. 
-
+      The dependency map shows the immediate upstream and downstream dependencies for the service you are viewing.
       :strong:`Request rate`
 
-      The request rate chart shows streaming request data for the service. The blue dot in the right corner of the chart indicates the data is streaming, that is, no refresh is required.
+      The request rate chart shows streaming request data for the service. The blue dot on the chart indicates the data is streaming, that is, no refresh is required.
 
       :strong:`Requests latency distribution`
 
-      The request latency distribution chart shows p50, p90, and p99 latency data for the service. The blue dot in the right corner of the chart indicates the data is streaming, that is, no refresh is required.
+      The request latency distribution chart shows p50, p90, and p99 latency data for the service. The blue dot on the chart indicates the data is streaming, that is, no refresh is required.
 
       :strong:`Error rate`
 
-      The error rate chart shows streaming error data for the service. The blue dot in the right corner of the chart indicates the data is streaming, that is, no refresh is required.
+      The error rate chart shows streaming error data for the service. The blue dot on the chart indicates the data is streaming, that is, no refresh is required.
 
       :strong:`Dependency time`
 
@@ -62,31 +61,31 @@ Use the following sections to monitor the performance of your service.
 Overview
 ------------
 
-      Use the following metrics in the :guilabel:`Overview` section to monitor the perfromance of your service.
+Use the following metrics in the :guilabel:`Overview` section to monitor the performance of your service.
 
-      :strong:`Availability service-level objective (SLO)`
+:strong:`Availability service-level objective (SLO)`
 
-      The availablity service-level objective (SLO) is configured by default to show the percentage your service was available in the last 30 days. The chart shows successful and unsuccessful reques
+The availablity service-level objective (SLO) shows the percentage of time your service was available in the last 30 days. The chart shows successful and unsuccessful requests.
 
-      :strong:`Dependency map`
+:strong:`Dependency map`
 
-      The dependency map shows the immediate upstream and downstream dependencies for the service you are viewing. 
+The dependency map shows the immediate upstream and downstream dependencies for the service you are viewing. 
 
-      :strong:`Request rate`
+:strong:`Request rate`
 
-      The request rate chart shows streaming request data for the service. The blue dot in the right corner of the chart indicates the data is streaming, that is, no refresh is required.
+The request rate chart shows streaming request data for the service. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
 
-      :strong:`Requests latency distribution`
+:strong:`Requests latency distribution`
 
-      The request latency distribution chart shows p50, p90, and p99 latency data for the service. The blue dot in the right corner of the chart indicates the data is streaming, that is, no refresh is required.
+The request latency distribution chart shows p50, p90, and p99 latency data for the service. The blue dot on the chart indicates the data is streaming, that is, you don't need to refresh to see new data.
 
-      :strong:`Error rate`
+:strong:`Error rate`
 
-      The error rate chart shows streaming error data for the service. The blue dot in the right corner of the chart indicates the data is streaming, that is, no refresh is required.
+The error rate chart shows streaming error data for the service. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
 
-      :strong:`Dependency time`
+:strong:`Dependency time`
 
-      :strong:`Top endpoints`
+:strong:`Top endpoints`
 
 Logs
 ------------
