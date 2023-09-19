@@ -205,50 +205,29 @@ Use the following configuration to truncate logs and send them to Splunk Enterpr
 .. github:: yaml
   :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/examples/otel-logs-truncate-splunk/otel-collector-config.yml
 
-exporters:
-  splunk_hec/logs:
-    # Splunk HTTP Event Collector token.
-    token: "00000000-0000-0000-0000-0000000000000"
-    # URL to a Splunk instance to send data to.
-    endpoint: "https://splunk:8088/services/collector"
-    # Optional Splunk source: https://docs.splunk.com/Splexicon:Source
-    source: "output"
-    # Splunk index, optional name of the Splunk index targeted.
-    index: "logs"
-    # Maximum HTTP connections to use simultaneously when sending data. Defaults to 100.
-    max_connections: 20
-    # Whether to disable gzip compression over HTTP. Defaults to false.
-    disable_compression: false
-    # HTTP timeout when sending data. Defaults to 10s.
-    timeout: 10s
-    # Whether to skip checking the certificate of the HEC endpoint when sending data over HTTPS. Defaults to false.
-    # For this demo, we use a self-signed certificate on the Splunk docker instance, so this flag is set to true.
-    tls:
-      insecure_skip_verify: true
+Collect and sanitize logs, and send them to Splunk Enterprise
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-processors:
-  batch:
-  transform:
-    log_statements:
-      - context: log
-        statements:
-          - set(body, Substring(body,0, 10))
+Use the following configuration to sanitize logs and send them to Splunk Enterprise.
 
-extensions:
-  health_check:
-    endpoint: 0.0.0.0:13133
-  pprof:
-    endpoint: :1888
-  zpages:
-    endpoint: :55679
+.. github:: yaml
+  :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/examples/otel-logs-sanitization-splunk/otel-collector-config.yml
 
-service:
-  extensions: [ pprof, zpages, health_check ]
-  pipelines:
-    logs:
-      receivers: [ filelog ]
-      processors: [ batch, transform ]
-      exporters: [ splunk_hec/logs ]    
+Route logs to different indexes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Use the following configuration to route logs to different Splunk indexes.
+
+.. github:: yaml
+  :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/examples/otel-logs-processor-splunk/otel-collector-config.yml
+
+Route logs to different indexes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This example showcases how the Collector collects data from files and sends it to Splunk Enterprise, associating each source with a different source type. The source type is a default field that identifies the structure of an event, and determines how Splunk Enterprise formats the data during the indexing process.
+
+.. github:: yaml
+  :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/examples/otel-logs-with-sourcetypes-splunk/otel-collector-config.yml
 
 Settings
 ======================
