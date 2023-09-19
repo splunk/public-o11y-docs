@@ -12,7 +12,7 @@ The ``health_check`` extension allows you to enable an HTTP URL that can be prob
 Get started
 ======================
 
-The following settings are required:
+The following settings are required to configure the extension:
 
 * ``endpoint``. Address to publish the health check status. ``0.0.0.0:13133`` by default. 
 * ``path``. Path to be configured for the health check server. ``"/"`` by default. 

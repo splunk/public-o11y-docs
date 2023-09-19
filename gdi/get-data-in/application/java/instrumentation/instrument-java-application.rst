@@ -190,16 +190,16 @@ Deploy the Java agent in Kubernetes
 To deploy the Java agent in Kubernetes, follow these steps:
 
 1. :ref:`docker_java_agent`
-
 2. :ref:`configure_kubernetes_java`
-
 
 .. _docker_java_agent:
 
 Deploy the Java agent in Docker
 -----------------------------------------------------------
 
-To deploy the Java agent in Docker, edit the Dockerfile for your application image to add the following commands:
+To deploy the Java agent in Docker, do the following:
+
+1. Edit the Dockerfile for your application image to add the following commands:
 
 .. code-block:: docker
 
@@ -208,7 +208,7 @@ To deploy the Java agent in Docker, edit the Dockerfile for your application ima
    # Modifies the entry point
    ENTRYPOINT ["java","-javaagent:splunk-otel-javaagent.jar","-jar","./<myapp>.jar"]
 
-Use ``ENV`` commands to set environment variables for the Java agent. To activate metrics or profiling, add the required ``-Dotel`` argument to the ``ENTRYPOINT`` list.
+2. Use ``ENV`` commands to set environment variables for the Java agent. To activate metrics or profiling, add the required ``-Dotel`` argument to the ``ENTRYPOINT`` list.
 
 When you deploy the Java agent with your application build, you ensure that the Java agent is launched with tracing.
 

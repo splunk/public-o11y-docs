@@ -129,4 +129,4 @@ Avoid SQLite redefinition errors
 
 If you're using another tool that uses SQLite, like WCDB, try replacing the ``use_frameworks!`` line in your Podfile with ``use_modular_headers!``.
 
-.. include:: /_includes/troubleshooting-steps.rst
+.. include:: /_includes/troubleshooting-components.rst

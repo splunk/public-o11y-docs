@@ -30,6 +30,7 @@ Be prepared to provide the domain for the ID/email address that your users provi
 .. note::  You can only use one type of ``PersonImmutableID`` for each generic SAML integration you create. If you create a second generic SAML integration using the same ``PersonImmutableID``, you must deactivate the first one and delete its users. Until you do so, users will not be able to use the same type of ID to log in to the organization. For example, if the first integration uses the  ``emailId`` as the PersonImmutableID, you can't use ``emailId`` in a second integration. 
    For details on how to use the API to delete users, see :new-page:`Delete/organization/member <https://dev.splunk.com/observability/reference/api/organizations/latest#endpoint-delete-member-using-id>`.
 
+.. _saml-user-information:
 
 Information required for generic SAML SSO integrations
 ----------------------------------------------------------------
@@ -41,9 +42,9 @@ Information required for generic SAML SSO integrations
 * ``User.email``: User's email address
 * ``PersonImmutableID``: A unique identifier for this user
 
-:strong:`ACS URL`
+:strong:`Assertion Consumer Service (ACS) URL`
 
-* Some ACS URLs include realm information. To learn more, see :ref:`Note about realms<about-realms>`.
+* Some Assertion Consumer Service (ACS) URLs include realm information. To learn more, see :ref:`Note about realms<about-realms>`.
 * The ACS URL includes an integration ID that's unique for each integration.
 * The SAML page displays this ID.
 
@@ -121,4 +122,4 @@ Once you have a custom URL configured, your users can continue to log in using t
 
 Observability Cloud generates a password for users you create in generic SAML SSO. If the generic SAML login portal is unavailable, Observability Cloud users can use the reset password link on the Observability Cloud login page to get native Observability Cloud credentials.
 
-.. include:: /_includes/troubleshooting-steps.rst
+.. include:: /_includes/troubleshooting-components.rst

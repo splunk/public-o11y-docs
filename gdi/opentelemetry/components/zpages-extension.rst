@@ -14,7 +14,7 @@ All core exporters and receivers provide some zPage instrumentation.
 Get started
 ======================
 
-The following settings are required:
+The following settings are required to configure the extension:
 
 * ``endpoint``. Specifies the HTTP endpoint that serves zPages. 
   
