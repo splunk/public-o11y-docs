@@ -24,7 +24,7 @@ Sign up for the trial
 If this is your first experience with Splunk Observability Cloud, here's how you can sign up for your free trial. The trial requires you to configure a minikube environment to act as a  
 
 #. Navigate to :new-page:`https://www.splunk.com/en_us/download/o11y-cloud-free-trial.html`. 
-#. In the free trial sign-up window, select the location closest to the region you are in. Options include: United States, Europe, Asia Pacific (Australia), Asia Pacific (Japan). Click :guilabel:`Next`.
+#. In the free trial sign-up window, select the location closest to the region you are in. Options include: United States, Europe, Asia Pacific (Australia), Asia Pacific (Japan). Select :guilabel:`Next`.
 #. Enter your contact information. Note:
     - The name and email address is used to create the first user on the system and is granted the admin role automatically.
     - The company name is used to name the organization. Select a name which describes your account as well as its function. For example, ACME Dev platform.
