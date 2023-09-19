@@ -28,21 +28,22 @@ The OpenTelemetry Collector uses pipelines to receive, process, and export trace
 .. mermaid::
 
   flowchart LR
-    subgraph "Splunk Distribution of OpenTelemetry Collector"
+    subgraph "\nSplunk Distribution of OpenTelemetry Collector"
     receivers
     processors
     exporters
+    extensions
     end
 
     Infrastructure -- "traces, metrics, logs" --> receivers
-    B["Backend services"] -- "traces, metrics, logs" --> receivers
-    C["Frontend experiences"] -- "traces, metrics, logs" --> receivers
+    B["Back-end services"] -- "traces, metrics, logs" --> receivers
+    C["Front-end experiences"] -- "traces, metrics, logs" --> receivers
 
     receivers --> processors
     processors --> exporters
 
     exporters --> S["Splunk Observability Cloud"]
-    exporters --> P["Splunk Platform"]
+    exporters --> P["Splunk Cloud Platform"]
     
 The OpenTelemetry Collector has a core version and a contributions version. The core version provides receivers, processors, and exporters for general use. The contributions version provides receivers, processors, and exporters for specific vendors and use cases.
 

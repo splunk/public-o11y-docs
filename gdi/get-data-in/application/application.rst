@@ -26,17 +26,23 @@ Instrument your back-end services and applications to send metrics and traces to
 .. mermaid::
 
    flowchart LR
-    subgraph "OpenTelemetry APM Instrumentation"
-    A["Back-end applications (Go, Python, Ruby, ...)"]
-    B["Serverless functions (AWS Lambda)"]
-    end
+      subgraph "\nOpenTelemetry APM Instrumentation"
 
-    A -- "traces, metrics, logs" --> O
 
-    O["Splunk Distribution of OpenTelemetry Collector"]
-    O --> M["Splunk APM"]
+      A["Back-end applications
+      (Go, Python, Ruby, ...)"]
+      B["Serverless functions 
+      (AWS Lambda, Azure, GCP)"]
+      end
 
-    B -- "traces, metrics, logs" --> M
+      A -- "traces, metrics, logs" --> O
+
+      O["Splunk Distribution of 
+      OpenTelemetry Collector"]
+      O --> M["Splunk APM"]
+
+      A -- "traces, metrics, logs (API)" --> M
+      B -- "traces, metrics, logs (API)" --> M
 
 You can instrument applications in each of these languages using official Splunk instrumentation:
 
