@@ -84,7 +84,7 @@ See a few configuration samples in the following section. You can find more exam
 Sample TCP configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This example shows how to configure logs received via TCP:
+This example shows how to configure logs received using TCP:
 
 .. code-block:: yaml
 
