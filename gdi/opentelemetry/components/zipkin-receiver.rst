@@ -39,7 +39,7 @@ See :ref:`zipkin-receiver-settings` for more details.
 The following settings are configurable:
 
 * ``endpoint``: ``host:port`` on which the receiver is going to receive data. ``0.0.0.0:9411`` by default.
-* ``parse_string_tags``: If enabled, the receiver attempts to parse string tags or binary annotations into int/bool/float. ``false``by default.
+* ``parse_string_tags``: If enabled, the receiver attempts to parse string tags or binary annotations into int/bool/float. ``false`` by default.
 
 Additional settings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
