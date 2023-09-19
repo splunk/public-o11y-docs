@@ -117,7 +117,7 @@ See a few configuration samples in the following sections. You can find more exa
 JSON files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This example shows how to tail a simple json file:
+This example shows how to tail a simple JSON file:
 
 .. code-block:: yaml
 
