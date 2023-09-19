@@ -250,6 +250,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Free and paid courses <get-started/education-resources>
+
+.. toctree::
+   :maxdepth:   3
+
    Support <get-started/support>
 
 .. toctree::
