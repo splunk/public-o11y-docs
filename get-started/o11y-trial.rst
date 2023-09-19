@@ -30,7 +30,7 @@ If this is your first experience with Splunk Observability Cloud, here's how you
     - The name and email address is used to create the first user on the system and is granted the admin role automatically.
     - The company name is used to name the organization. Select a name which describes your account as well as its function. For example, ACME Dev platform.
 #. Agree to the terms and conditions and select :guilabel:`Start Free Trial`.
-#. You will receive an email with a link to sign in to your org. If this takes longer than 10 minutes, check your spam folder.
+#. You will receive an email with a link to sign in to your org. If this takes longer than ten minutes, check your spam folder.
     #. In the email, select :guilabel:`Verify` or paste the link into your browser. 
     #. Create your password and select :guilabel:`Sign in Now`.
 
@@ -42,7 +42,7 @@ What you'll see when you sign in
    :width: 80%
    :alt: Free trial first sign-in view
 
-When you first sign in, you see your user Home page. You can show onboarding content by selecting the action menu (|more|) in the upper right-hand corner. This will display helpful videos and links on most pages to help you get started.
+When you first sign in, you see your Home page. You can show onboarding content by selecting the action menu (|more|) in the upper right-hand corner. This will display helpful videos and links on most pages to help you get started.
 
 You can also expand the left-hand navigation menu to show the full names of the sections instead of the icons only, by selecting the double angle brackets in the bottom left-hand corner.
 
