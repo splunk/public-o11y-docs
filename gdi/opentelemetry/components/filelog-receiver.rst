@@ -51,7 +51,7 @@ Use parser operators to isolate values from a string. There are two classes of p
 Parse header metadata 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To enable header metadata parsing, set the ``filelog.allowHeaderMetadataParsing`` feature, and set ``start_at`` at the beginning. If set, the file input operator attempts to read a header from the start of the file. 
+To turn on header metadata parsing, set the ``filelog.allowHeaderMetadataParsing`` feature, and set ``start_at`` at the beginning. If set, the file input operator attempts to read a header from the start of the file. 
 
 The following applies:
 
