@@ -1,4 +1,4 @@
-.. _get-started-o11y:
+.. _o11y-trial:
 
 ******************************************************
 Free trial of Splunk Observability Cloud
