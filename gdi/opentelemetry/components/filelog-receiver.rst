@@ -197,7 +197,7 @@ Use the following configuration to send logs to Splunk Cloud:
         value: EXPR(body.parsed.before + "XXX-XXX-XXXX" + body.parsed.after)
 
 
-Collect and truncate logs, and send them to Splunk Enterprise
+Send truncated logs to Splunk Enterprise
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Use the following configuration to truncate logs and send them to Splunk Enterprise.
