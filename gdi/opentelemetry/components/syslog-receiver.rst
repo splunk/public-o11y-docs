@@ -97,7 +97,7 @@ This example shows how to configure logs received via TCP:
 Sample UDP configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This example shows how to configure logs received via UDP:
+This example shows how to configure logs received using UDP:
 
 .. code-block:: yaml
 
