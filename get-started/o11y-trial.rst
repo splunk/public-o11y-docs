@@ -30,8 +30,8 @@ If this is your first experience with Splunk Observability Cloud, here's how you
     - The company name is used to name the organization. Select a name which describes your account as well as its function. For example, ACME Dev platform.
 #. Agree to the terms and conditions and select :guilabel:`Start Free Trial`.
 #. You will receive an email with a link to sign in to your org. If this takes longer than 10 minutes, check your spam folder.
-   #. In the email, select :guilabel:`Verify` or paste the link into your browser. 
-   #. Create your password and select :guilabel:`Sign in Now`.
+    #. In the email, select :guilabel:`Verify` or paste the link into your browser. 
+    #. Create your password and select :guilabel:`Sign in Now`.
 
 What you'll see when you sign in
 ====================================
@@ -68,10 +68,10 @@ Pre-Requisites
 
 To run the demo environment, install and have functioning versions of:
 
-- Docker - Install Docker if needed. See :new-page:`https://docs.docker.com/engine/install`
-- minikube - Install and configure minikube. See :new-page:`https://minikube.sigs.k8s.io/docs/start`
-- Helm - Install Helm version 3.0 or higher. See :new-page:`https://helm.sh/docs/intro/install/`
-- GSED - GNU implementations of the stream editor. gnu-sed is used in the configuration script for the kubernetes manifests. - See :new-page:`https://formulae.brew.sh/formula/gnu-sed`
+- Docker: Install Docker if needed. See :new-page:`https://docs.docker.com/engine/install`
+- minikube: Install and configure minikube. See :new-page:`https://minikube.sigs.k8s.io/docs/start`
+- Helm: Install Helm version 3.0 or higher. See :new-page:`https://helm.sh/docs/intro/install/`
+- GSED: GNU implementations of the stream editor. gnu-sed is used in the configuration script for the kubernetes manifests. - See :new-page:`https://formulae.brew.sh/formula/gnu-sed`
 - The Hipster Shop cluster requires a minimum 4 GB of memory. 
 
 
