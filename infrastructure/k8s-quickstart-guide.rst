@@ -5,9 +5,9 @@ Quick start guide: monitor your Kubernetes environment with Splunk Observability
 *********************************************************************************************
 
 .. meta::
-  :description: This topic provides an onboarding tutorial that walks you through setting up the Splunk Distribution of OpenTelemetry Collector in a Kubernetes cluster and visualizing your Kubernetes cluster data using Splunk Observability Cloud.
+  :description: Deploy the Splunk Distribution of OpenTelemetry Collector in a Kubernetes cluster and visualize your Kubernetes cluster data using Splunk Observability Cloud.
 
-This quick start tutorial walks you through the following steps to start monitoring your Kubernetes platform using :ref:`Splunk Observability Cloud <get-started-infrastructure>` and related features in under 20 minutes.
+Deploy the Splunk Distribution of OpenTelemetry Collector in a Kubernetes cluster and start monitoring your Kubernetes platform using :ref:`Splunk Observability Cloud <get-started-infrastructure>`.
 
 :strong:`Step 1`: Install the Splunk Distribution of OpenTelemetry Collector for Kubernetes 
 
@@ -30,14 +30,14 @@ Prerequisites
 ---------------------------------------
 
 * You must be an administrator in Splunk Observability Cloud.
-* You must have an access token for the Splunk Observability Cloud organization you want to get data into. If you are using a free trial account, an access token named Default has already been created for you and you can use it to complete this task. 
+* You must have an access token for the Splunk Observability Cloud organization you want to get data into. If you are using a free trial account, use the :guilabel:`Default` access token to complete this task. 
   For more details about creating organization access tokens, see :ref:`admin-org-tokens`.
 * You must have systemd and cURL installed.
 
 .. note::
     
     To help ensure a seamless flow from this task to :ref:`monitor-k8s-cluster`, make sure that your infrastructure host or cluster is generating data that can be received by Splunk Observability Cloud. 
-    For example, even if a guided setup you use in this task provides a confirmation of a valid connection, the navigators won’t display unless your infrastructure is actively sending data to Splunk Infrastructure Monitoring.
+    For example, even if a guided setup you use in this task provides a confirmation of a valid connection, the navigators don't appear unless your infrastructure is actively sending data to Splunk Infrastructure Monitoring.
 
 .. _get-k8s-data-in:
 
@@ -93,7 +93,7 @@ install the Splunk Distribution of OpenTelemetry Collector on your selected plat
 
 .. _monitor-k8s-cluster:
 
-Step 2: Monitor your Kubernetes cluster and your Cloud infrastructure
+Step 2: Monitor your Kubernetes cluster and your cloud infrastructure
 ========================================================================
 
 Now that you have data about your infrastructure, such as platform hosts, Kubernetes clusters, and cloud provider services, flowing into Splunk Observability Cloud, 
