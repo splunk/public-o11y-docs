@@ -12,11 +12,62 @@ The Filelog receiver tails and parses logs from files. The supported pipeline ty
 Get started
 ======================
 
+Follow these steps to configure and activate the component:
+
+1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+
+  - :ref:`otel-install-linux`
+  - :ref:`otel-install-windows`
+  - :ref:`otel-install-k8s`
+
+2. Configure the Filelog receiver as described in the next section.
+3. Restart the Collector.
+
+Sample configurations
+--------------------------------
+
+To activate the Filelog receiver, add ``filelog`` to the ``receivers`` section of your configuration file, as in the following sample configurations. 
+
+This example shows how to tail a simple JSON file:
+
+.. code-block:: yaml
+
+  receivers:
+    filelog:
+      include: [ /var/log/myservice/*.json ]
+      operators:
+        - type: json_parser
+          timestamp:
+            parse_from: attributes.time
+            layout: '%Y-%m-%d %H:%M:%S'
+
+This example shows how to tail a plaintext file:
+
+.. code-block:: yaml
+
+  receivers:
+    filelog:
+      include: [ /simple.log ]
+      operators:
+        - type: regex_parser
+          regex: '^(?P<time>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) (?P<sev>[A-Z]*) (?P<msg>.*)$'
+          timestamp:
+            parse_from: attributes.time
+            layout: '%Y-%m-%d %H:%M:%S'
+          severity:
+            parse_from: attributes.sev
+
+The receiver reads logs from the simple.log file, such as:
+
+``2023-06-19 05:20:50 ERROR This is a test error message``
+``2023-06-20 12:50:00 DEBUG This is a test debug message``
+
+Use operators to format logs
+--------------------------------------------
+
 The Filelog receiver uses operators to process logs into a desired format. Each operator fulfills a single responsibility, such as reading lines from a file, or parsing JSON from a field. You need to chain operators together in a pipeline to achieve your desired result.
 
 For instance, you can read lines from a file using the ``file_input`` operator. From there, you can send the results of this operation to a ``regex_parser`` operator that creates fields based on a regex pattern. Next, you can send the results to a ``file_output`` operator to write each line to a file on disk.
-
-.. note:: The Filelog receiver can read files that are being rotated.
 
 All operators either create, modify, or consume :strong:`entries`. 
 
@@ -109,50 +160,10 @@ The Filelog receiver supports the following encodings:
 	
 Other less common encodings are supported on a best-effort basis. See the list of available encodings in :new-page:`https://www.iana.org/assignments/character-sets/character-sets.xhtml <https://www.iana.org/assignments/character-sets/character-sets.xhtml>`.
 
-Sample configurations
+Advanced configurations
 --------------------------------
 
-See a few configuration samples in the following sections. You can find more examples in the GitHub repository :new-page:`splunk-otel-collextor/examples <https://github.com/signalfx/splunk-otel-collector/tree/main/examples>`.
-
-JSON files
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-This example shows how to tail a simple JSON file:
-
-.. code-block:: yaml
-
-  receivers:
-    filelog:
-      include: [ /var/log/myservice/*.json ]
-      operators:
-        - type: json_parser
-          timestamp:
-            parse_from: attributes.time
-            layout: '%Y-%m-%d %H:%M:%S'
-
-Plaintext files
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-This example shows how to tail a plaintext file:
-
-.. code-block:: yaml
-
-  receivers:
-    filelog:
-      include: [ /simple.log ]
-      operators:
-        - type: regex_parser
-          regex: '^(?P<time>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) (?P<sev>[A-Z]*) (?P<msg>.*)$'
-          timestamp:
-            parse_from: attributes.time
-            layout: '%Y-%m-%d %H:%M:%S'
-          severity:
-            parse_from: attributes.sev
-
-The receiver reads logs from the simple.log file, such as:
-
-``2023-06-19 05:20:50 ERROR This is a test error message``
-``2023-06-20 12:50:00 DEBUG This is a test debug message``
+See a few configuration examples in the following sections. You can find more examples in the GitHub repository :new-page:`splunk-otel-collextor/examples <https://github.com/signalfx/splunk-otel-collector/tree/main/examples>`.
 
 Send logs to Splunk Cloud
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -205,7 +216,7 @@ Use the following configuration to truncate logs and send them to Splunk Enterpr
 .. github:: yaml
   :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/examples/otel-logs-truncate-splunk/otel-collector-config.yml
 
-Collect and sanitize logs, and send them to Splunk Enterprise
+Send sanitized logs to Splunk Enterprise
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Use the following configuration to sanitize logs and send them to Splunk Enterprise.
