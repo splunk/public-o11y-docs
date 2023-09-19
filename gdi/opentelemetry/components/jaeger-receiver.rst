@@ -26,31 +26,69 @@ Follow these steps to configure and activate the component:
 Sample configurations
 --------------------------------
 
-To activate the Jaeger receiver, add ``syslog`` to the ``receivers`` section of your configuration file, as in the following sample configurations. See :ref:`syslog-receiver-settings` for more details.
+To activate the Jaeger receiver, add ``jaeger`` to the ``receivers`` section of your configuration file, as in the following sample configurations. By default, the Jaeger receiver doesn't serve any protocol. You must name a protocol under the ``protocols`` object to start the receiver. 
+
+See :ref:`jaeger-receiver-settings` for more details.
 
 .. code-block:: yaml
 
   receivers:
-    syslog:
+    jaeger:
+      protocols:
+        grpc:
+    jaeger/withendpoint:
+      protocols:
+        grpc:
+          endpoint: 0.0.0.0:14260
 
-This example shows how to configure logs received using TCP:
+Supported protocols
+-----------------------------------------------
+
+The Jaeger receiver supports the following protocols: 
+
+* ``grpc``. ``0.0.0.0:14250`` is the default endpoint.
+* ``thrift_binary``. ``0.0.0.0:6832`` is the default endpoint.
+* ``thrift_compact``. ``0.0.0.0:6831`` is the default endpoint.
+* ``thrift_http``. ``0.0.0.0:14268`` is the default endpoint.
+
+Optionally, you can configure an ``endpoint``.
+
+Advanced configuration
+-----------------------------------------------
+
+Use the UDP protocols, currently ``thrift_binary`` and ``thrift_compact``, to set additional server options:
+
+* ``queue_size``:  Sets the maximum of not yet handled requests for the server. ``1000`` by default.
+* ``max_packet_size``: Sets the maximum UDP packet size. ``65_000`` by default.
+* ``workers``: Sets the number of workers consuming the server queue. ``10`` by default.
+* ``socket_buffer_size``: Sets the buffer size of the connection socket, in bytes. ``0`` by default (no buffer). 
+
+For example:
 
 .. code-block:: yaml
 
-  receivers:
-    syslog:
-      tcp:
-        listen_address: "0.0.0.0:54526"
-      protocol: rfc5424
+  protocols:
+    thrift_binary:
+      endpoint: 0.0.0.0:6832
+      queue_size: 5_000
+      max_packet_size: 131_072
+      workers: 50
+      socket_buffer_size: 8_388_608
 
+Helper files
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Several helper files are leveraged to provide additional capabilities automatically:
 
-Advanced configurations
---------------------------------
+* gRPC settings, including CORS
+* TLS and mTLS settings
 
-You can find more examples in the GitHub repository :new-page:`splunk-otel-collextor/examples <https://github.com/signalfx/splunk-otel-collector/tree/main/examples>`.
+Remote sampling
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. _syslog-receiver-settings:
+Since version 0.61.0, remote sampling is no longer supported. Instead, since version 0.59.0, use the ``jaegerremotesapmpling`` extension instead.
+
+.. _jaeger-receiver-settings:
 
 Settings
 ======================
