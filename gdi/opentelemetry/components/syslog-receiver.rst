@@ -67,7 +67,7 @@ You can use the following fields to configure the Syslog receiver with a TCP con
   
   * ``ca_file``.	Path to the CA certificate. For a client this verifies the server certificate. For a server this verifies client certificates. If empty, it uses the system's root CA.
   
-  * ``client_ca_file``. Optional. Path to the TLS certificate the server will use to verify a client certificate. This sets the ClientCAs and ClientAuth to RequireAndVerifyClientCert in the TLSConfig. Please refer to :new-page:`godoc.org/crypto/tls#Config` for more information.
+  * ``client_ca_file``. Optional. Path to the TLS certificate the server uses to verify a client certificate. This sets the ClientCAs and ClientAuth to RequireAndVerifyClientCert in the TLSConfig. See :new-page:`godoc.org/crypto/tls#Config` for more information.
 
 Configure UDP
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
