@@ -250,7 +250,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Free trial experience <get-started/_o11y-trial>
+   Free trial experience <get-started/o11y-trial>
 
 .. toctree::
    :maxdepth:   3
