@@ -55,6 +55,7 @@ Guided onboarding
 =========================
 
 There are 5 steps to the guided onboarding:
+
 #. Preparing the prerequisites.
 #. Install OpenTelemetry.
 #. Install the Hipster Shop into your local cluster.
