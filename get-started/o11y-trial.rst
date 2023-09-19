@@ -67,17 +67,20 @@ Pre-Requisites
 
 To run the demo environment, install and have functioning versions of:
 
-Docker - Install Docker if needed. See :new-page:`https://docs.docker.com/engine/install`
-minikube - Install and configure minikube. See :new-page:`https://minikube.sigs.k8s.io/docs/start`
-Helm - Install Helm version 3.0 or higher. See :new-page:`https://helm.sh/docs/intro/install/`
-GSED - GNU implementations of the stream editor. gnu-sed is used in the configuration script for the kubernetes manifests. See :new-page:`https://formulae.brew.sh/formula/gnu-sed`
+- Docker - Install Docker if needed. See :new-page:`https://docs.docker.com/engine/install`
+- minikube - Install and configure minikube. See :new-page:`https://minikube.sigs.k8s.io/docs/start`
+- Helm - Install Helm version 3.0 or higher. See :new-page:`https://helm.sh/docs/intro/install/`
+- GSED - GNU implementations of the stream editor. gnu-sed is used in the configuration script for the kubernetes manifests. - See :new-page:`https://formulae.brew.sh/formula/gnu-sed`
+- The Hipster Shop cluster requires a minimum 4 GB of memory. 
 
-The Hipster Shop cluster requires a minimum 4 GB of memory. 
 
 To install the OpenTelemetry collector, you'll need to know:
 
 - Your Splunk Observability Cloud realm. To locate your realm, see :new-page:`View your realm and org info <https://docs.splunk.com/Observability/admin/references/organizations.html>`
-- Your Splunk Observability Cloud access token. 
+- Your Splunk Observability Cloud access token. For details, see :ref:`admin-org-tokens`.
 
 
 To install the Hipster shop demo locally, you'll need your Real User Management (RUM) token. For instructions, see :ref:`rum-access-token`.
+
+Once you have installed and configured the Hipster Shop environment, you can generate traffic and explore the results in your Splunk Observability Cloud trial organization.
+
