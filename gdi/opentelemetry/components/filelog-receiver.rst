@@ -200,7 +200,7 @@ Use the following configuration to send logs to Splunk Cloud:
 Send truncated logs to Splunk Enterprise
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Use the following configuration to truncate logs and send them to Splunk Enterprise.
+Use the following configuration to truncate logs and send them to Splunk Enterprise:
 
 .. github:: yaml
   :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/examples/otel-logs-truncate-splunk/otel-collector-config.yml
