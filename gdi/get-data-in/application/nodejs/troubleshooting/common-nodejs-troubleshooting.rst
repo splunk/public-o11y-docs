@@ -188,4 +188,4 @@ The following snippet contains a sample ``profiling`` pipeline:
          processors: [memory_limiter, batch]
          exporters: [splunk_hec, splunk_hec/profiling]
 
-.. include:: /_includes/troubleshooting-steps.rst
+.. include:: /_includes/troubleshooting-components.rst

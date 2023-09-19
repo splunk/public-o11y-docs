@@ -347,4 +347,4 @@ If you activate auto instrumentation and you see an error message or you do not 
 
 - You can also follow the :ref:`steps to activate trace and troubleshoot the Java agent<basic-java-troubleshooting>`.
 
-.. include:: /_includes/troubleshooting-steps.rst
+.. include:: /_includes/troubleshooting-components.rst
