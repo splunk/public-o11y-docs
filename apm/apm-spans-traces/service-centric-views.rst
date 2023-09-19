@@ -4,13 +4,7 @@
 
 .. admonition:: Preview: Service-centric views
 
-    Preview features described in this document are provided by Splunk to you "as is" 
-    without any warranties, maintenance and support, or service-level commitments. 
-    Splunk makes this preview feature available in its sole discretion and may 
-    discontinue it at any time. These documents are not yet publicly available and 
-    we ask that you keep such information confidential. Use of preview features is 
-    subject to the :new-page:`Splunk Pre-Release Agreement for Hosted Services 
-    <https://www.splunk.com/en_us/legal/pre-release-agreement-for-hosted-services.html>`.
+    Preview features described in this document are provided by Splunk to you "as is" without any warranties, maintenance and support, or service-level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it at any time. These documents are not yet publicly available and we ask that you keep such information confidential. Use of preview features is subject to the :new-page:`Splunk Pre-Release Agreement for Hosted Services <https://www.splunk.com/en_us/legal/pre-release-agreement-for-hosted-services.html>`.
     
 Use service-centric views for a complete view of your service performance 
 *****************************************************************************
@@ -18,6 +12,113 @@ Use service-centric views for a complete view of your service performance
 .. meta::
    :description: Learn how to use service-centric views in Splunk APM for a complete view of your service performance.
 
-Access service-centric view for a specific service
-======================================================
+
+Service owners can use the service-centric view for their service in Splunk APM to get a complete view of their service performance. To access service-centric views, select a service from the APM landing page.
+
+Use the service metrics to monitor the performance of your service
+=====================================================================
+
+Use the following sections to monitor the performance of your service.
+
+.. tabs::
+
+   .. group-tab:: Overview
+
+      Use the following metrics in the :guilabel:`Overview` section to monitor the performance of your service.
+
+      :strong:`Availability service-level objective (SLO)`
+
+      The availablity service-level objective (SLO) is configured by default to show the percentage your service was available in the last 30 days. The chart shows successful and unsuccessful reques
+
+      :strong:`Dependency map`
+
+      The dependency map shows the immediate upstream and downstream dependencies for the service you are viewing. 
+
+      :strong:`Request rate`
+
+      The request rate chart shows streaming request data for the service. The blue dot in the right corner of the chart indicates the data is streaming, that is, no refresh is required.
+
+      :strong:`Requests latency distribution`
+
+      The request latency distribution chart shows p50, p90, and p99 latency data for the service. The blue dot in the right corner of the chart indicates the data is streaming, that is, no refresh is required.
+
+      :strong:`Error rate`
+
+      The error rate chart shows streaming error data for the service. The blue dot in the right corner of the chart indicates the data is streaming, that is, no refresh is required.
+
+      :strong:`Dependency time`
+
+      :strong:`Top endpoints`
+
+   .. group-tab:: Logs
+
+      By default, the :guilabel:`Logs` section shows unhandled, exception, traceback or stacktrace logs. 
+
+   .. group-tab:: Runtime
+
+   .. group-tab:: Infrastructure
+
+
+Overview
+------------
+
+      Use the following metrics in the :guilabel:`Overview` section to monitor the perfromance of your service.
+
+      :strong:`Availability service-level objective (SLO)`
+
+      The availablity service-level objective (SLO) is configured by default to show the percentage your service was available in the last 30 days. The chart shows successful and unsuccessful reques
+
+      :strong:`Dependency map`
+
+      The dependency map shows the immediate upstream and downstream dependencies for the service you are viewing. 
+
+      :strong:`Request rate`
+
+      The request rate chart shows streaming request data for the service. The blue dot in the right corner of the chart indicates the data is streaming, that is, no refresh is required.
+
+      :strong:`Requests latency distribution`
+
+      The request latency distribution chart shows p50, p90, and p99 latency data for the service. The blue dot in the right corner of the chart indicates the data is streaming, that is, no refresh is required.
+
+      :strong:`Error rate`
+
+      The error rate chart shows streaming error data for the service. The blue dot in the right corner of the chart indicates the data is streaming, that is, no refresh is required.
+
+      :strong:`Dependency time`
+
+      :strong:`Top endpoints`
+
+Logs
+------------
+
+By default, the :guilabel:`Logs` section shows unhandled, exception, traceback or stacktrace logs. 
+
+Runtime
+-------------
+
+Infrastructure
+----------------
+
+Navigate to the Tag Spotlight view for your service
+=====================================================
+
+Select :guilabel:`Tag Spotlight` to navigate to the Tag Spotlight view filtered for your service. See :ref:`apm-tag-spotlight` to learn more about Tag Spotlight.
+
+Navigate to the code profiling view for your service
+=====================================================
+
+Select :guilabel:`Code profiling` to navigate to the code profiling view of AlwaysOn Profiling filtered for your service. See :ref:`profiling-intro` to learn more about AlwaysOn Profiling.
+
+
+Navigate to the memory profiling view for your service
+=======================================================
+
+Select :guilabel:`Memory profiling` to navigate to memory profiling view of AlwaysOn Profiling filtered for your service. See :ref:`profiling-intro` to learn more about AlwaysOn Profiling.
+
+
+
+
+
+
+
 
