@@ -21,6 +21,7 @@ Components
     components/fluentd-receiver
     components/health-check-extension
     components/host-metrics-receiver
+    components/jaeger-receiver    
     components/kubelet-stats-receiver
     components/kubernetes-attributes-processor
     components/kubernetes-cluster-receiver
@@ -103,7 +104,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`host-metrics-receiver` (``hostmetrics``)
      - Generates system metrics from various sources. Use this receiver when deploying the Collector as an agent. 
      - Metrics
-   * - ``jaeger``
+   * - :ref:`jaeger-receiver` (``jaeger``)
      - Receives trace data in Jaeger format.
      - Traces
    * - ``journald``
