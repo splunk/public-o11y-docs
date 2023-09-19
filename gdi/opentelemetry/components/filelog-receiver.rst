@@ -157,7 +157,7 @@ The receiver reads logs from the simple.log file, such as:
 Send logs to Splunk Cloud
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Use the following configuration to send logs to Splunk Cloud.
+Use the following configuration to send logs to Splunk Cloud:
 
 .. code-block:: yaml
 
