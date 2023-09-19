@@ -46,6 +46,7 @@ Components
     components/syslog-receiver      
     components/transform-processor
     components/windowsperfcounters-receiver
+    components/zipkin-receiver 
     components/zpages-extension    
 
 The OpenTelemetry Collector includes the following component types:
@@ -182,7 +183,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`windowsperfcounters-receiver` (``windowsperfcounters``) (Windows only)
      - Collects the configured system, application, or custom performance counter data from the Windows Registry.
      - Metrics
-   * - ``zipkin``
+   * - :ref:`zipkin-receiver` (``zipkin``)
      - Receives spans from Zipkin versions 1 and 2.
      - Traces
 

@@ -75,25 +75,25 @@ For example:
       workers: 50
       socket_buffer_size: 8_388_608
 
-Helper files
+Additional settings 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Several helper files are leveraged to provide additional capabilities automatically:
+The Jaeger receiver uses helper files for additional capabilities:
 
-* gRPC settings, including CORS
-* TLS and mTLS settings
+* gRPC settings, including CORS. See more in GitHub at :new-page:`gRPC Configuration Settings <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/configgrpc/README.md>`
+* TLS and mTLS settings. Learn more in GitHub at :new-page:`TLS Configuration Settings <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/configtls/README.md>`.
 
 Remote sampling
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------------------
 
-Since version 0.61.0, remote sampling is no longer supported. Instead, since version 0.59.0, use the ``jaegerremotesapmpling`` extension instead.
+Since version 0.61.0, remote sampling is no longer supported. Instead, since version 0.59.0, use the ``jaegerremotesapmpling`` extension for remote sampling.
 
 .. _jaeger-receiver-settings:
 
 Settings
 ======================
 
-The following table shows the configuration options for the Syslog receiver:
+The following table shows the configuration options for the Jaeger receiver:
 
 .. raw:: html
 
