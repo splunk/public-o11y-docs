@@ -221,7 +221,7 @@ Use the following configuration to route logs to different Splunk indexes.
 .. github:: yaml
   :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/examples/otel-logs-processor-splunk/otel-collector-config.yml
 
-Route logs to different indexes
+Associate log sources with source types 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This example showcases how the Collector collects data from files and sends it to Splunk Enterprise, associating each source with a different source type. The source type is a default field that identifies the structure of an event, and determines how Splunk Enterprise formats the data during the indexing process.
