@@ -5,7 +5,7 @@ Education classes for Splunk Observability Cloud
 *****************************************************
 
 .. meta::
-   :description: Where to learn more about Splunk Observability Cloud: education classes, online resources, and more.
+   :description: Where to learn more about Splunk Observability Cloud with frer and paid education classes.
 
 
 
