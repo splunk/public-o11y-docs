@@ -29,7 +29,7 @@ Edit this page link
 
 On every page of the Observability Cloud documentation you can find an :guilabel:`Edit this page` link. Select the link to load the source of the document in a GitHub preview and start editing.
 
-.. image:: /_images/edit-the-docs.png
+.. image:: /_images/get-started/edit-the-docs.png
    :width: 100%
    :alt: Location of the Edit this page link
 
