@@ -60,6 +60,7 @@ This example shows how to tail a plaintext file:
 The receiver reads logs from the simple.log file, such as:
 
 ``2023-06-19 05:20:50 ERROR This is a test error message``
+
 ``2023-06-20 12:50:00 DEBUG This is a test debug message``
 
 Use operators to format logs
