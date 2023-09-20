@@ -112,10 +112,6 @@ Follow these steps to limit logging:
 #. Restart your docker service: ``sudo systemctl docker.service restart``.
 
 
-Deactivate network shaping for your private runner 
-------------------------------------------------------
-Launch your Docker container with the following environment variable: ``-e "DISABLE_NETWORK_SHAPING=true"``.
-
 
 Adding certificates in Synthetics
 ------------------------------------------------------
