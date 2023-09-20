@@ -55,16 +55,13 @@ Windows
    .. code-block:: powershell
 
       # Download and import the PowerShell module
-      # Replace <version> with the desired version
-      $module_url = "https://github.com/signalfx/splunk-otel-dotnet/releases/download/<version>/Splunk.OTel.DotNet.psm1"
+      $module_url = "https://github.com/signalfx/splunk-otel-dotnet/releases/latest/download/Splunk.OTel.DotNet.psm1"
       $download_path = Join-Path $env:temp "Splunk.OTel.DotNet.psm1"
       Invoke-WebRequest -Uri $module_url -OutFile $download_path
       Import-Module $download_path
 
       # Install the Splunk distribution using the PowerShell module
       Install-OpenTelemetryCore
-
-   .. note:: Replace ``<version>`` in the ``module_url`` with the desired version.
 
 #. Register the distribution:
 
@@ -110,12 +107,9 @@ Linux
 
    .. code-block:: shell
 
-      # Replace <version> with the desired version
-      curl -sSfL https://github.com/signalfx/splunk-otel-dotnet/releases/download/<version>/splunk-otel-dotnet-install.sh -O
+      curl -sSfL https://github.com/signalfx/splunk-otel-dotnet/releases/latest/download/splunk-otel-dotnet-install.sh -O
       # Install the distribution
       sh ./splunk-otel-dotnet-install.sh
-
-   .. note:: Replace ``<version>`` in the curl URL with the desired version.
 
 #. Activate the automatic instrumentation:
 
