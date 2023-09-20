@@ -17,6 +17,22 @@ Instrument mobile and web applications for Splunk RUM
 
 Instrument your mobile and web applications to send data to Splunk Real User Monitoring (RUM). Splunk RUM provides visibility into the user behaviors in mobile and web applications. To learn more about Splunk RUM, see :ref:`get-started-rum`.
 
+.. mermaid::
+   
+   flowchart LR
+      subgraph "Splunk RUM Instrumentation"
+      B["Browser-based web applications"]
+      M["Mobile applications (iOS, Android)"]
+      R["React Native applications"]
+      end
+
+      B -- "traces, metrics" --> S
+      M -- "traces, metrics" --> S
+      R -- "traces, metrics" --> S
+
+      S["Splunk RUM"]
+
+
 You can instrument the following types of application:
 
 - :ref:`Browser-based web applications <browser-rum-gdi>`
