@@ -245,7 +245,14 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Splunk Observability Cloud architecture <get-started/o11y-architecture>
+
+.. toctree::
+   :maxdepth:   3
+
    Contribute to our documentation <get-started/contribute>
+
+
 
 .. toctree::
    :maxdepth:   3
