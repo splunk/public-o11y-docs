@@ -35,6 +35,7 @@ service:
     metrics:
       receivers: [smartagent/win_services]
 ```
+
 To monitor a specific service, use the following configuration:
 
 ```yaml
@@ -43,7 +44,6 @@ receivers:
     type: telegraf/win_services 
     serviceNames:
          - exampleService1  # only monitor exampleService1
-    ...  # Additional config
 
 service:
   pipelines:
