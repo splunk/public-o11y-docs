@@ -77,7 +77,7 @@ Splunk Observability Cloud is built on top of OpenTelemetry and uses it as the d
 
         subgraph processingRetention[Processing and retention]
             direction LR 
-            indexStorage(Log indexing and storage)
+            indexStorage(Trace indexing and storage)
             traceMetricization(Trace metricization)
             metricsManagement(Metrics routing and storage)
         end
