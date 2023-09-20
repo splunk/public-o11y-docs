@@ -21,6 +21,7 @@ Components
     components/fluentd-receiver
     components/health-check-extension
     components/host-metrics-receiver
+    components/jaeger-receiver    
     components/kubelet-stats-receiver
     components/kubernetes-attributes-processor
     components/kubernetes-cluster-receiver
@@ -45,6 +46,7 @@ Components
     components/syslog-receiver      
     components/transform-processor
     components/windowsperfcounters-receiver
+    components/zipkin-receiver 
     components/zpages-extension    
 
 The OpenTelemetry Collector includes the following component types:
@@ -103,7 +105,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`host-metrics-receiver` (``hostmetrics``)
      - Generates system metrics from various sources. Use this receiver when deploying the Collector as an agent. 
      - Metrics
-   * - ``jaeger``
+   * - :ref:`jaeger-receiver` (``jaeger``)
      - Receives trace data in Jaeger format.
      - Traces
    * - ``journald``
@@ -181,7 +183,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`windowsperfcounters-receiver` (``windowsperfcounters``) (Windows only)
      - Collects the configured system, application, or custom performance counter data from the Windows Registry.
      - Metrics
-   * - ``zipkin``
+   * - :ref:`zipkin-receiver` (``zipkin``)
      - Receives spans from Zipkin versions 1 and 2.
      - Traces
 

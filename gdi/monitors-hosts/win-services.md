@@ -28,8 +28,22 @@ To activate this integration, add the following to your Collector configuration:
 ```yaml
 receivers:
   smartagent/win_services:
-    type: telegraf/win_services
-    ...  # Additional config
+    type: telegraf/win_services # monitor all services
+
+service:
+  pipelines:
+    metrics:
+      receivers: [smartagent/win_services]
+```
+
+To monitor a specific service, use the following configuration:
+
+```yaml
+receivers:
+  smartagent/win_services:
+    type: telegraf/win_services 
+    serviceNames:
+         - exampleService1  # only monitor exampleService1
 
 service:
   pipelines:
@@ -43,7 +57,7 @@ The following table shows the configuration options for this monitor:
 
 | Option| Required | Type | Description |
 | --- | --- | --- | --- |
-| `serviceNames` | No | List of strings | Names of services to monitor. All services will be monitored if none are specified.|
+| `serviceNames` | No | List of strings | Names of the services to monitor. If unspecified, all services will be monitored.|
 
 ## Metrics
 

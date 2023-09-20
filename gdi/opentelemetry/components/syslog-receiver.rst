@@ -20,7 +20,7 @@ Follow these steps to configure and activate the component:
   - :ref:`otel-install-windows`
   - :ref:`otel-install-k8s`
 
-2. Configure the Filelog receiver as described in the next section.
+2. Configure the Syslog receiver as described in the next section.
 3. Restart the Collector.
 
 Sample configurations
