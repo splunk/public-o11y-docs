@@ -24,8 +24,6 @@ Supported libraries
 
 The Splunk Distribution of OpenTelemetry .NET instruments the following libraries.
 
-.. caution:: This is a beta distribution. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on best-effort basis.
-
 Traces instrumentations
 ---------------------------------
 
