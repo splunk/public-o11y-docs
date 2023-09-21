@@ -76,7 +76,7 @@ ul.monitor-metrics, ul.monitor-attr {
   padding-left:1rem;
 }
 
-table.monitor-stats {
+table.monitor-stats, table.fix-width {
     width: 100%;
     table-layout:fixed;
     word-wrap: break-word;

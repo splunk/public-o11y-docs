@@ -85,6 +85,7 @@ If your recording contains unsupported steps, you need to edit the step to refor
 .. list-table::
    :header-rows: 1
    :widths: 50 50 
+   :class: fix-width
 
    * - :strong:`Google Chrome Recorder snippet`
      - :strong:`Synthetic snippet`
