@@ -11,11 +11,12 @@ You can use AWS PrivateLink to secure your traffic from your AWS environment to 
 
 AWS PrivateLink connects your Virtual Private Cloud (VPC) to your AWS services, treating them as if they were in your VPC. You can create and use VPC endpoints to securely access AWS services, and control the specific API endpoints and sites. To learn more, see AWS private link documentation at :new-page:`https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html <https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html>`.
 
+.. source in Lucidchart: https://lucid.app/lucidchart/21f1cd02-7b2c-4654-a1b8-18c80a903fee/edit?shared=true&page=0_0&invitationId=inv_2f660037-6a85-4b98-9025-212b16c6b5a2#
+
 .. image:: /_images/gdi/aws-privatelink-schema2.png
   :width: 80%
   :alt: AWS Private Link schema.
-  .. source in Lucidchart: https://lucid.app/lucidchart/21f1cd02-7b2c-4654-a1b8-18c80a903fee/edit?shared=true&page=0_0&invitationId=inv_2f660037-6a85-4b98-9025-212b16c6b5a2#
-
+  
 Prerequisites
 ==================================================
 
