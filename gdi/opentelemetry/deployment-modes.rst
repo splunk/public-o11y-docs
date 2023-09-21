@@ -88,7 +88,7 @@ Kubernetes
 
 The Collector for Kubernetes has different deployment options. You can configure them using the ``enabled`` field in their respective Helm value mappings. See :ref:`otel-kubernetes-config-advanced` for information on how to access your configuration yaml. 
 
-The available deployments are:
+The available options are:
 
 * Agent-only, with an agent deamonset 
 * All modes on, which includes a Gateway and ``clusterReceiver`` deployments 
