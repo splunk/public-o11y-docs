@@ -48,7 +48,7 @@ The following dimensions are automatically added to all metrics exported by the 
 Supported libraries
 -------------------------------------
 
-The agent collects the following metrics through the following supported libraries: 
+The Python agent collects metrics through the following supported libraries: 
 
 .. list-table::
   :header-rows: 1
@@ -69,10 +69,17 @@ The agent collects the following metrics through the following supported librari
 
 .. _python-otel-runtime-metrics:
 
+System metrics
+------------------------------------
+
+The Python agent automatically collects and exports system metrics.
+
+For a complete list of these metrics, see :new-page:`https://opentelemetry-python-contrib.readthedocs.io/en/latest/instrumentation/system_metrics/system_metrics.html`.
+
 Runtime metrics
 ------------------------------------
 
-The following runtime metrics are automatically collected and exported:
+The Python agent automatically collects and exports the following application runtime metrics:
 
 .. list-table::
    :header-rows: 1
