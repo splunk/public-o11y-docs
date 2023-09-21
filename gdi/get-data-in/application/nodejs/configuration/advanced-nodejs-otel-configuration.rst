@@ -105,7 +105,7 @@ For example, to turn off all default instrumentations and only turn on the ``bun
 
 .. code-block:: shell
 
-   export OTEL_INSTRUMENTATION_COMMON_DEFAULT_ENABLED=true
+   export OTEL_INSTRUMENTATION_COMMON_DEFAULT_ENABLED=false
    export OTEL_INSTRUMENTATION_BUNYAN_ENABLED=true
 
 The previous settings only apply to instrumentations loaded by the Splunk Distribution of OpenTelemetry JS by default. When using the programmatic API to supply a list of user-specified instrumentations, they have no effect.
