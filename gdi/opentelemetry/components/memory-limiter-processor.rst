@@ -114,7 +114,7 @@ The processor has the following configuration options:
 Settings
 ======================
 
-The following table shows the configuration options for the ``groupbyattrs`` processor:
+The following table shows the configuration options for the ``memory_limiter`` processor:
 
 .. raw:: html
 
