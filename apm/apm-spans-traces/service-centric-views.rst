@@ -12,51 +12,12 @@ Use service-centric views for a complete view of your service performance
 .. meta::
    :description: Learn how to use service-centric views in Splunk APM for a complete view of your service performance.
 
-
 Service owners can use the service-centric view in Splunk APM to get a complete view of their service performance. To access service-centric views, select a service from the APM landing page.
 
 Use the service metrics to monitor the performance of your service
 =====================================================================
 
 Use the following sections to monitor the performance of your service.
-
-.. tabs::
-
-   .. group-tab:: Overview
-
-      Use the following metrics in the :guilabel:`Overview` section to monitor the performance of your service.
-
-      :strong:`Availability service-level objective (SLO)`
-
-      The availablity service-level objective (SLO) shows the percentage of time your service was available in the last 30 days. The chart shows successful and unsuccessful requests.
-
-      :strong:`Dependency map`
-
-      The dependency map shows the immediate upstream and downstream dependencies for the service you are viewing.
-      :strong:`Request rate`
-
-      The request rate chart shows streaming request data for the service. The blue dot on the chart indicates the data is streaming, that is, no refresh is required.
-
-      :strong:`Requests latency distribution`
-
-      The request latency distribution chart shows p50, p90, and p99 latency data for the service. The blue dot on the chart indicates the data is streaming, that is, no refresh is required.
-
-      :strong:`Error rate`
-
-      The error rate chart shows streaming error data for the service. The blue dot on the chart indicates the data is streaming, that is, no refresh is required.
-
-      :strong:`Dependency time`
-
-      :strong:`Top endpoints`
-
-   .. group-tab:: Logs
-
-      By default, the :guilabel:`Logs` section shows unhandled, exception, traceback or stacktrace logs. 
-
-   .. group-tab:: Runtime
-
-   .. group-tab:: Infrastructure
-
 
 Overview
 ------------
@@ -85,18 +46,80 @@ The error rate chart shows streaming error data for the service. The blue dot on
 
 :strong:`Dependency time`
 
+
 :strong:`Top endpoints`
+
 
 Logs
 ------------
 
-By default, the :guilabel:`Logs` section shows unhandled, exception, traceback or stacktrace logs. 
+The :guilabel:`Logs` section shows unhandled, exception, traceback, and stacktrace logs. 
 
 Runtime
 -------------
 
+:strong:`Memory usage`
+
+The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+
+:strong:`Allocation rate`
+
+The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+
+:strong:`# Class loading`
+
+The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+
+:strong:`GC activity`
+
+The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+
+:strong:`GC overhead (%)`
+
+The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+
+:strong:`# Thread count`
+
+The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+
+:strong:`GC overhead (%)`
+
+The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+
+:strong:`# Thread count`
+
+The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+
+:strong:`# Thread pools`
+
+The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+
 Infrastructure
 ----------------
+
+:strong:`Host CPU usage`
+
+The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+
+:strong:`Host memory usage`
+
+The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+
+:strong:`Host disk usage`
+
+The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+
+:strong:`Host network usage`
+
+The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+
+:strong:`Pod CPU usage`
+
+The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+
+:strong:`Pod network utilization (bytes/sec)`
+
+The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
 
 Navigate to the Tag Spotlight view for your service
 =====================================================
