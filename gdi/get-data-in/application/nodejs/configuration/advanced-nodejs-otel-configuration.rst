@@ -279,6 +279,7 @@ The following settings activate runtime metrics collection:
 
 .. list-table::
    :header-rows: 1
+   :class: fix-width
 
    * - Environment variable
      - Argument to ``start()``

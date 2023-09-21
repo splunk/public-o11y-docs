@@ -19,6 +19,7 @@ Components
     components/filelog-receiver   
     components/filter-processor
     components/fluentd-receiver
+    components/groupbyattrs-processor    
     components/health-check-extension
     components/host-metrics-receiver
     components/jaeger-receiver    
@@ -26,7 +27,8 @@ Components
     components/kubernetes-attributes-processor
     components/kubernetes-cluster-receiver
     components/logging-exporter
-    components/memory-ballast-extension   
+    components/memory-ballast-extension
+    components/memory-limiter-processor          
     components/mongodb-atlas-receiver
     components/oracledb-receiver
     components/otlp-exporter
@@ -213,13 +215,13 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`filter-processor` (``filter``)
      - Can be configured to include or exclude metrics based on metric name in the case of the ``strict`` or ``regexp`` match types, or based on other metric attributes in the case of the ``expr`` match type.
      - Metrics
-   * - ``groupbyattrs``
+   * - :ref:`groupbyattrs-processor` (``groupbyattrs``)
      - Reassociates spans, log records, and metric data points to a resource that matches with the specified attributes. As a result, all spans, log records, or metric data points with the same values for the specified attributes are grouped under the same resource.
      - Metrics, logs, traces
    * - :ref:`kubernetes-attributes-processor` (``k8sattributes``)
      - Allows automatic tagging of spans, metrics, and logs with Kubernetes metadata. Formerly known as ``k8s_tagger``.
      - Metrics, logs, traces
-   * - ``memory_limiter``
+   * - :ref:`memory-limiter-processor` (``memory_limiter``) 
      - Prevents out of memory situations on the Splunk Distribution of OpenTelemetry Collector.
      - Metrics, logs, traces
    * - ``metricstransform``
