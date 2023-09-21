@@ -132,8 +132,8 @@ Follow these steps to create, use, and manage your AWS Private Link VPC endpoint
 
 .. _aws-privatelink-step1:
 
-Step 1: Request to add your AWS Account ID to allow list
------------------------------------------------------------
+Step 1: Request to add your AWS Account ID to the allow list
+--------------------------------------------------------------------
 
 Reach out to :ref:`Splunk Customer Support <support>` with the following information to include your AWS Account ID to the allow list:
 
