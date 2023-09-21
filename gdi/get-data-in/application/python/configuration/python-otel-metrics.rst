@@ -67,7 +67,7 @@ The Python agent collects metrics through the following supported libraries:
 
 
 
-.. _python-otel-runtime-metrics:
+.. _python-otel-system-metrics:
 
 System metrics
 ------------------------------------
@@ -75,6 +75,8 @@ System metrics
 The Python agent automatically collects and exports system metrics.
 
 For a complete list of these metrics, see :new-page:`https://opentelemetry-python-contrib.readthedocs.io/en/latest/instrumentation/system_metrics/system_metrics.html`.
+
+.. _python-otel-runtime-metrics:
 
 Runtime metrics
 ------------------------------------
