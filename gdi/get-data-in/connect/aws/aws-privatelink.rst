@@ -251,4 +251,4 @@ After you connect Splunk Observability Cloud with AWS, you can use Observability
 
 .. _aws-privatelink-support:
 
-.. include:: /_includes/troubleshooting-steps.rst
+.. include:: /_includes/report-issue.rst
