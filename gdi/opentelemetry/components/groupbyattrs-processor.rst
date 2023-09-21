@@ -28,9 +28,7 @@ Follow these steps to configure and activate the component:
 Sample configurations
 ----------------------
 
-To activate the resource processor, add ``groupbyattrs`` to the ``processors`` section of your configuration file, as shown in the following example:
-
-The configuration is very simple, as you only need to specify an array of attribute keys that will be used to "group" spans, log records or metric data points together, as in the below example:
+To activate the resource processor, add ``groupbyattrs`` to the ``processors`` section of your configuration file. Specify an array of attribute keys to use to "group" spans, log records or metric data points together, as in the following example:
 
 .. code-block:: yaml
 
@@ -45,7 +43,7 @@ The keys property describes which attribute keys will be considered for grouping
 * If the processed span, log record and metric data point has at least one of the specified attributes key, it will be moved to a resource with the same value for these attributes. The resource will be created if none exists with the same attributes.
 * If none of the specified attributes key is present in the processed span, log record or metric data point, it remains associated to the same resource, without any change.
 
-To complete the configuration, include the receiver in any pipeline of the ``service`` section of your configuration file. For example:
+To complete the configuration, include the processor in any pipeline of the ``service`` section of your configuration file. For example:
 
 .. code-block:: yaml
 
