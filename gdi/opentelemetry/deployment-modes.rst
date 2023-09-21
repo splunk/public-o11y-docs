@@ -86,7 +86,22 @@ To change the deployment mode, modify ``SPLUNK_CONFIG`` for the path to the gate
 Kubernetes
 ----------------------------------
 
-For Kubernetes, check the config mappings in your Helm chart. See :ref:`otel-kubernetes-config-advanced` for information on how to access your configuration yaml, and how to override it.
+For Kubernetes, to see which mode the Collector is deployed on, check the config mappings in your Helm chart. See :ref:`otel-kubernetes-config-advanced` for information on how to access your configuration yaml. 
+
+If you want to change the Collector mode, you need to deploy a new Helm chart with the desired configuration to override the existing config. See :new-page:`Rolling update deployment <https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#rolling-update-deployment>` in the official Kubernetes documentation.
+
+You can find the different Helm charts in Github:
+
+* :new-page:`Default config <https://github.com/signalfx/splunk-otel-collector-chart/tree/main/examples/default>`
+
+  * :new-page:`Agent configMap <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/default/rendered_manifests/configmap-agent.yaml>`
+  * :new-page:`Cluster receiver configMap <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/default/rendered_manifests/configmap-cluster-receiver.yaml>`
+
+* :new-page:`All modes enabled config <https://github.com/signalfx/splunk-otel-collector-chart/tree/main/examples/collector-all-modes>`
+
+  * :new-page:`Agent configMap <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/collector-all-modes/rendered_manifests/configmap-agent.yaml>`
+  * :new-page:`Cluster receiver configMap <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/collector-all-modes/rendered_manifests/configmap-cluster-receiver.yaml>`
+  * :new-page:`Gateway configMap <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/collector-all-modes/rendered_manifests/configmap-gateway.yaml>`
 
 .. _collector-agent-to-gateway:
 
