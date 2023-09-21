@@ -220,7 +220,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`kubernetes-attributes-processor` (``k8sattributes``)
      - Allows automatic tagging of spans, metrics, and logs with Kubernetes metadata. Formerly known as ``k8s_tagger``.
      - Metrics, logs, traces
-   * - ``memory_limiter``
+   * - :ref:`memory-limiter-processor` (``memory_limiter``) 
      - Prevents out of memory situations on the Splunk Distribution of OpenTelemetry Collector.
      - Metrics, logs, traces
    * - ``metricstransform``
