@@ -46,6 +46,7 @@ To send invitations to users, follow these steps:
 #. Select :guilabel:`Users`.
 #. Select :guilabel:`Invite User`.
 #. Enter the email addresses of your desired members in the dialog box. Separate each email address with a comma or single blank space.
+#. 
 #. Select :guilabel:`Send Invitation`.
 
 Users receive an email from Splunk Observability Cloud containing instructions for signing into
@@ -80,14 +81,15 @@ To grant administrator privileges to a user, follow these steps:
 #. From the left navigation menu, select :menuselection:`Settings > Users`.
    A table of current users appears in the main panel.
 #. Find the name of the user.
-#. Select the :guilabel:`Actions` (|more|) menu icon next the username, then select :menuselection:`Grant Admin`.
+#. Select the :guilabel:`Actions` (|more|) menu icon next the username, then select :menuselection:`Manage Roles`.
 
 To revoke administrator privileges from a user, follow these steps:
 
 #. From the left navigation menu, select :menuselection:`Settings > Users`.
    A table of current members appears in the main panel.
 #. Find the name of the user.
-#. Select the :guilabel:`Actions` (|more|) menu icon next the user's name, then select :menuselection:`Revoke Admin`.
+#. Select the :guilabel:`Actions` (|more|) menu icon next the user's name, then select :menuselection:`Manage Roles`.
+#. Select a non-admin role for the user.
 
 .. _request-admin:
 
@@ -102,7 +104,7 @@ Follow these steps to view a list of current admins:
 #. Select :guilabel:`Invite Users`.
 #. Filter for Admins.
 
-From the list, you can email or Slack message any administrators to request admin status. 
+From the list, you can email or message any administrators to request admin status. 
 
 .. _look-up-user-login:
 
