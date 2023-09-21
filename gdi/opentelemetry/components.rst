@@ -27,7 +27,8 @@ Components
     components/kubernetes-attributes-processor
     components/kubernetes-cluster-receiver
     components/logging-exporter
-    components/memory-ballast-extension   
+    components/memory-ballast-extension
+    components/memory-limiter-processor          
     components/mongodb-atlas-receiver
     components/oracledb-receiver
     components/otlp-exporter
