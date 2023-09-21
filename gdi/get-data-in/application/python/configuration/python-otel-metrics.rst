@@ -11,12 +11,14 @@ The Splunk Distribution of OpenTelemetry Python collects runtime and custom metr
 
 For examples of custom metrics instrumentation and instrument types, see :ref:`custom-metrics-python`.
 
+.. _python-system-metrics:
+
 System metrics
 ================================
 
 The Python agent automatically collects and exports system metrics.
 
-For a complete list of these metrics, see :new-page:`https://opentelemetry-python-contrib.readthedocs.io/en/latest/instrumentation/system_metrics/system_metrics.html`.
+For a complete list of these metrics, see the :new-page:`list of configured system metrics for OpenTelemetry Python <https://opentelemetry-python-contrib.readthedocs.io/en/latest/instrumentation/system_metrics/system_metrics.html>`.
 
 .. _python-app-metrics:
 
