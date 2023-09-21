@@ -11,6 +11,13 @@ The Splunk Distribution of OpenTelemetry Python collects runtime and custom metr
 
 For examples of custom metrics instrumentation and instrument types, see :ref:`custom-metrics-python`.
 
+System metrics
+================================
+
+The Python agent automatically collects and exports system metrics.
+
+For a complete list of these metrics, see :new-page:`https://opentelemetry-python-contrib.readthedocs.io/en/latest/instrumentation/system_metrics/system_metrics.html`.
+
 .. _python-app-metrics:
 
 Application metrics
@@ -64,17 +71,6 @@ The Python agent collects metrics through the following supported libraries:
   * - Pyramid
     - ``opentelemetry-instrumentation-pyramid``
     - Pyramid version 1.7 or higher
-
-
-
-.. _python-otel-system-metrics:
-
-System metrics
-------------------------------------
-
-The Python agent automatically collects and exports system metrics.
-
-For a complete list of these metrics, see :new-page:`https://opentelemetry-python-contrib.readthedocs.io/en/latest/instrumentation/system_metrics/system_metrics.html`.
 
 .. _python-otel-runtime-metrics:
 
