@@ -32,7 +32,7 @@ To activate the resource processor, add ``groupbyattrs`` to the ``processors`` s
 
 The configuration is very simple, as you only need to specify an array of attribute keys that will be used to "group" spans, log records or metric data points together, as in the below example:
 
-.. code:: yaml
+.. code-block:: yaml
 
   processors:
     groupbyattrs:
@@ -47,7 +47,7 @@ The keys property describes which attribute keys will be considered for grouping
 
 To complete the configuration, include the receiver in any pipeline of the ``service`` section of your configuration file. For example:
 
-.. code:: yaml
+.. code-block:: yaml
 
   service:
     pipelines:
@@ -85,7 +85,7 @@ Group metrics by host
 
 Consider the below metrics, all originally associated to the same resource:
 
-.. code:: yaml
+.. code-block:: yaml
 
   Resource {host.name="localhost",source="prom"}
     Metric "gauge-1" (GAUGE)
@@ -108,7 +108,7 @@ Consider the below metrics, all originally associated to the same resource:
 
 Use the following configuration to re-associate the metrics with either ``host-A`` or ``host-B``, based on the value of the ``host.name`` attribute.
 
-.. code:: yaml
+.. code-block:: yaml
 
   processors:
     groupbyattrs:
@@ -117,7 +117,7 @@ Use the following configuration to re-associate the metrics with either ``host-A
 
 The output of the processor is:
 
-.. code:: yaml
+.. code-block:: yaml
 
   Resource {host.name="localhost",source="prom"}
     Metric "dont-move" (Gauge)
@@ -163,7 +163,7 @@ To remedy this, use the ``groupbyattrs`` processor to compact the data by matchi
 
 For example, consider the following input:
 
-.. code:: yaml
+.. code-block:: yaml
 
   Resource {host.name="localhost"}
     InstumentationLibrary {name="MyLibrary"}
@@ -190,7 +190,7 @@ For example, consider the following input:
 
 Use the following configuration to re-associate the spans with matching ``Resource`` and ``InstrumentationLibrary``.
 
-.. code:: yaml
+.. code-block:: yaml
 
   processors:
     batch:
@@ -203,7 +203,7 @@ Use the following configuration to re-associate the spans with matching ``Resour
 
 The output of the processor is:
 
-.. code:: yaml
+.. code-block:: yaml
 
   Resource {host.name="localhost"}
     InstumentationLibrary {name="MyLibrary"}
