@@ -167,7 +167,7 @@ The following settings control trace exporters and their endpoints:
      - Comma-separated list of trace exporters to use. The default value is ``otlp``. To output to the console, set the variable to ``console``.
    * - ``OTEL_METRICS_EXPORTER``
      - ``metrics.metricReaderFactory``
-     - Comma-separated list of metrics exporter to use. The default value is ``otlp``. To output to the console, set the variable to ``console``.
+     - Comma-separated list of metrics exporter to use. The default value is ``otlp``. To output to the console, set the variable to ``console``. If set to ``none``, metric exports are turned off.
    * - ``OTEL_EXPORTER_OTLP_METRICS_PROTOCOL``
      - ``metrics.metricReaderFactory``
      - Procotol for exporting metrics. Accepted values are ``grpc`` and ``http/protobuf``. The default value is ``grpc``.
