@@ -26,7 +26,7 @@ The following diagram provides a high-level view of how each Observability Cloud
 .. source in figma: https://www.figma.com/file/BpVleOaAneD4KfivNDfTpn/Untitled?type=design&node-id=1-2&mode=design&t=S1ZYBRt7mgV4C7Nm-0
 
 .. image:: /_images/get-started/o11y-cloud-structure.png
-  :width: 100%
+  :width: 70%
   :alt: This screenshot shows how Observability Cloud products serve the different layers and processes in an organization's environment.
 
 For information about how these products can be used together to address real-life scenarios, see :ref:`get-started-scenario`.
