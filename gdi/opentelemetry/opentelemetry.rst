@@ -36,14 +36,14 @@ The OpenTelemetry Collector uses pipelines to receive, process, and export trace
     end
 
     Infrastructure -- "traces, metrics, logs" --> receivers
-    B["Back-end services"] -- "traces, metrics, logs" --> receivers
-    C["Front-end experiences"] -- "traces, metrics, logs" --> receivers
+    B[Back-end services] -- "traces, metrics, logs" --> receivers
+    C[Front-end experiences] -- "traces, metrics, logs" --> receivers
 
     receivers --> processors
     processors --> exporters
 
-    exporters --> S["Splunk Observability Cloud"]
-    exporters --> P["Splunk Cloud Platform"]
+    exporters --> S[Splunk Observability Cloud]
+    exporters --> P[Splunk Cloud Platform]
     
 The OpenTelemetry Collector has a core version and a contributions version. The core version provides receivers, processors, and exporters for general use. The contributions version provides receivers, processors, and exporters for specific vendors and use cases.
 

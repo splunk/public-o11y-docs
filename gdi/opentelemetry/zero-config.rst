@@ -24,14 +24,14 @@ The following diagram demonstrates the process of manually instrumenting your ap
 
    flowchart TB
       subgraph "Manual instrumentation"
-      A["Install the Splunk \n Distribution of
-      OpenTelemetry Collector \n agent for your integration"]
+      A[Install the Splunk \n Distribution of
+      OpenTelemetry Collector \n agent for your integration]
 
-      B["Set variables \n to export your data"]
+      B[Set variables \n to export your data]
 
-      C["Configure environment \n to run the agent"]
+      C[Configure environment \n to run the agent]
 
-      D["Run your application"]
+      D[Run your application]
 
       A --> B --> C --> D
       end
