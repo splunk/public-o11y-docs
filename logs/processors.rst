@@ -7,7 +7,9 @@ Transform your data with log processing rules
 .. meta::
   :description: Manage the logs pipeline with log processing rules, log metricization rules, and Infinite Logging rules. Customize your logs pipeline.
 
-.. note:: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can create or manage log processing rules. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration.
+.. include:: /_includes/log-observer-transition.rst
+
+Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can create or manage log processing rules using the Splunk Log Observer pipeline. 
 
 Add value to your raw logs by creating log processing rules, also known as processors, to transform your data or a subset of your data as it arrives.
 

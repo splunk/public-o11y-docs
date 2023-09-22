@@ -367,4 +367,4 @@ After uninstalling the Smart Agent, :ref:`deploy the Collector to a production h
 
 After verifying with one host, deploy the Collector with the same configuration to the rest of the hosts.
 
-.. include:: /_includes/troubleshooting-steps.rst
+.. include:: /_includes/troubleshooting-components.rst

@@ -16,13 +16,19 @@ Components
     components/basic-auth-extension
     components/batch-processor
     components/databricks-receiver
+    components/filelog-receiver   
     components/filter-processor
     components/fluentd-receiver
+    components/groupbyattrs-processor    
+    components/health-check-extension
     components/host-metrics-receiver
+    components/jaeger-receiver    
     components/kubelet-stats-receiver
     components/kubernetes-attributes-processor
     components/kubernetes-cluster-receiver
     components/logging-exporter
+    components/memory-ballast-extension
+    components/memory-limiter-processor          
     components/mongodb-atlas-receiver
     components/oracledb-receiver
     components/otlp-exporter
@@ -39,8 +45,11 @@ Components
     components/splunk-apm-exporter
     components/splunk-hec-exporter
     components/splunk-hec-receiver
+    components/syslog-receiver      
     components/transform-processor
     components/windowsperfcounters-receiver
+    components/zipkin-receiver 
+    components/zpages-extension    
 
 The OpenTelemetry Collector includes the following component types:
 
@@ -89,7 +98,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``discovery``
      - Wraps the receiver creator to facilitate the discovery of metric collection targets. See :ref:`discovery_mode`.
      - Logs
-   * - ``filelog``
+   * - :ref:`filelog-receiver` (``filelog``)
      - Tails and parses logs from files.
      - Logs
    * - :ref:`fluentd-receiver` (``fluentforward``)
@@ -98,7 +107,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`host-metrics-receiver` (``hostmetrics``)
      - Generates system metrics from various sources. Use this receiver when deploying the Collector as an agent. 
      - Metrics
-   * - ``jaeger``
+   * - :ref:`jaeger-receiver` (``jaeger``)
      - Receives trace data in Jaeger format.
      - Traces
    * - ``journald``
@@ -164,7 +173,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``statsd``
      - Collects StatsD messages to generate metrics.
      - Metrics
-   * - ``syslog``
+   * - :ref:`syslog-receiver` (``syslog``)
      - Parses syslog messages received over TCP or UDP.
      - Logs
    * - ``tcplog``
@@ -176,7 +185,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`windowsperfcounters-receiver` (``windowsperfcounters``) (Windows only)
      - Collects the configured system, application, or custom performance counter data from the Windows Registry.
      - Metrics
-   * - ``zipkin``
+   * - :ref:`zipkin-receiver` (``zipkin``)
      - Receives spans from Zipkin versions 1 and 2.
      - Traces
 
@@ -206,13 +215,13 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`filter-processor` (``filter``)
      - Can be configured to include or exclude metrics based on metric name in the case of the ``strict`` or ``regexp`` match types, or based on other metric attributes in the case of the ``expr`` match type.
      - Metrics
-   * - ``groupbyattrs``
+   * - :ref:`groupbyattrs-processor` (``groupbyattrs``)
      - Reassociates spans, log records, and metric data points to a resource that matches with the specified attributes. As a result, all spans, log records, or metric data points with the same values for the specified attributes are grouped under the same resource.
      - Metrics, logs, traces
    * - :ref:`kubernetes-attributes-processor` (``k8sattributes``)
      - Allows automatic tagging of spans, metrics, and logs with Kubernetes metadata. Formerly known as ``k8s_tagger``.
      - Metrics, logs, traces
-   * - ``memory_limiter``
+   * - :ref:`memory-limiter-processor` (``memory_limiter``) 
      - Prevents out of memory situations on the Splunk Distribution of OpenTelemetry Collector.
      - Metrics, logs, traces
    * - ``metricstransform``
@@ -309,7 +318,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
      - Uses the ECS and EC2 API to discover Prometheus scrape targets from all running tasks and filter them based on service names, task definitions, and container labels. Only compatible with the Prometheus receiver.
    * - ``file_storage``
      - Persists state to the local file system. Requires read and write access to a diectory.
-   * - ``health_check``
+   * - :ref:`health-check-extension` (``health_check``)
      - Activates an HTTP URL that can be probed to check the status of the OpenTelemetry Collector. You can also use this extension as a liveness or readiness probe on Kubernetes.
    * - ``http_forwarder``
      - Accepts HTTP requests and optionally adds headers and forwards them. The RequestURIs of the original requests are preserved by the extension. 
@@ -317,13 +326,13 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
      - Looks at the current host for listening network endpoints. Uses the /proc file system and requires the ``SYS_PTRACE`` and ``DAC_READ_SEARCH`` capabilities so that it can determine what processes own the listening sockets. See :ref:`receiver-creator-receiver` for more information.
    * - ``k8s_observer``
      - Uses the Kubernetes API to discover pods running on the local node. See :ref:`receiver-creator-receiver` for more information.
-   * - ``memory_ballast``
+   * - :ref:`memory-ballast-extension` (``memory_ballast``)
      - Configures the memory ballast for the Collector process, either as a size in megabytes or as a size expressed as a percentage of the total memory. Sufficient ballast enhances the stability of Collector deployments.
    * - ``pprof``
      - Activates the golang ``net/http/pprof`` endpoint, which is used to collect performance profiles and investigate issues with a service.
    * - ``smartagent``
      - Provides a mechanism to set configuration options that are applicable to all instances of the Smart Agent receiver. Allows to migrate your existing Smart Agent configuration to the Splunk Distribution of OpenTelemetry Collector. 
-   * - ``zpages``
+   * - :ref:`zpages-extension` (``zpages``) 
      - Activates an extension that serves zPages, an HTTP endpoint that provides live data for debugging different components.
 
 
