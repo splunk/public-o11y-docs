@@ -27,6 +27,7 @@ You can send metrics and traces from back-end applications to Splunk Observabili
 .. mermaid::
 
    flowchart LR
+
       subgraph "\nOpenTelemetry APM Instrumentation"
 
 
@@ -38,9 +39,9 @@ You can send metrics and traces from back-end applications to Splunk Observabili
 
       A -- "traces, metrics, logs" --> O
 
-      O[Splunk Distribution of 
-      OpenTelemetry Collector]
-      O --> M[Splunk APM]
+      O["Splunk Distribution of 
+      OpenTelemetry Collector"]
+      O --> M["Splunk APM"]
 
       A -- "traces, metrics, logs (API)" --> M
       B -- "traces, metrics, logs (API)" --> M
