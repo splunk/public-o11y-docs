@@ -10,7 +10,7 @@ Quick start tutorial for Splunk Infrastructure Monitoring
 This quick start tutorial walks you through the following steps to start monitoring your platform and cloud infrastructure using :new-page-ref:`Splunk Infrastructure Monitoring <get-started-infrastructure>` and related features.
 
 .. note::
-  This quick start tutorial covers a multiple types of platform and cloud infrastructure. For a quick start guide that focuses specifically on monitoring Kubernetes clusters in Splunk Observability Cloud, see :ref:`k8s-quickstart-guide`. 
+  This quick start tutorial covers a multiple types of platform and cloud infrastructure. For a quick start tutorial that focuses specifically on monitoring Kubernetes clusters in Splunk Observability Cloud, see :ref:`k8s-quickstart-guide`. 
 
 :strong:`Step 1`: :ref:`Start getting platform infrastructure data into Splunk Observability Cloud <gdi-infrastructure-imqs>` by installing the Splunk Distribution of OpenTelemetry Collector on a Windows Server or Linux host or in a Kubernetes cluster. 
 
