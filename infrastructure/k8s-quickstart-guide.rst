@@ -1,7 +1,7 @@
 .. _k8s-quickstart-guide:
 
 *********************************************************************************************
-Quick start guide: Monitor your Kubernetes environment with Splunk Observability Cloud
+Monitor your Kubernetes environment with Splunk Observability Cloud
 *********************************************************************************************
 
 .. meta::
