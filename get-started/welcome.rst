@@ -23,7 +23,7 @@ Splunk Observability Cloud's suite of products and features allow you to quickly
 
 The following diagram provides a high-level view of how each Observability Cloud product plays its part to provide you with full-stack observability:
 
-.. source in figma: https://www.figma.com/file/SspISKtNyGovP50c1FA35z/o11y-cloud-product-structure?node-id=146%3A47
+.. source in figma: https://www.figma.com/file/BpVleOaAneD4KfivNDfTpn/Untitled?type=design&node-id=1-2&mode=design&t=S1ZYBRt7mgV4C7Nm-0
 
 .. image:: /_images/get-started/o11y-cloud-structure.png
   :width: 100%
@@ -124,15 +124,6 @@ Splunk On-Call
 Splunk On-Call incident response software aligns log management, monitoring, chat tools, and more, for a single-pane of glass into system health. Splunk On-Call automates delivery of alerts to get the right alert, to the right person, at the right time.
 
 For more information, see the :new-page:`Splunk On-Call documentation <https://help.victorops.com/>`.
-
-.. _welcome-incident-intelligence:
-
-Splunk Incident Intelligence
-===============================
-
-Splunk Incident Intelligence incident response software lets site reliability engineers (SREs) in IT and DevOps resolve outages with alert correlation, incident response, and on-call routing. 
-
-For more information, see the :ref:`ii-get-started-incident-intelligence`.
 
 
 .. _welcome-mobile:
