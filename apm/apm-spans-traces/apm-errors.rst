@@ -16,11 +16,13 @@ How error spans are detected
 
 Each :term:`span` in Splunk APM captures a single operation. Splunk APM considers a span an error span if the operation that the span captures results in an error. A span is considered an error span when any of the following conditions are met: 
 
-* The ``otel.status_code`` field for the span is ``ERROR``. ``otel.status_code`` is set in Splunk Distribution of the OpenTelemetry Collector using the native OTel field ``span.status``. See the :new-page:`OpenTelemetry Transformation to non-OTLP Formats<https://opentelemetry.io/docs/specs/otel/common/mapping-to-non-otlp/#span-status>` to learn more about ``otel.status_code``. See the OpenTelemetry :new-page:`Tracing API specification <https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#set-status>` to learn more about ``span.status``. 
+* The ``otel.status_code`` field for the span is ``ERROR``. ``otel.status_code`` is set in Splunk Distribution of the OpenTelemetry Collector using the native OTel field ``span.status``. ``otel.status_code`` is set based on either the HTTP status code or the gRPC status code.
   
-   * See :ref:`apm-http-status` to learn which ``http.status_code`` tag values set ``span.status`` to ``error`` in the OpenTelemetry instrumentation.
-   * See :ref:`apm-grpc-status` to learn which ``rpc.grpc.status_code`` tag values set ``span.status`` to ``error`` in the OpenTelemetry instrumentation.
+   * See :ref:`apm-http-status` to learn which ``http.status_code`` tag values set ``span.status`` to ``ERROR`` in the OpenTelemetry instrumentation.
+   * See :ref:`apm-grpc-status` to learn which ``rpc.grpc.status_code`` tag values set ``span.status`` to ``ERROR`` in the OpenTelemetry instrumentation.
 * The ``error`` tag for the span is set to a truthy value, which is any value other than ``False`` or ``0``. 
+
+See the :new-page:`Span Status section of the OpenTelemetry Transformation to non-OTLP Formats<https://opentelemetry.io/docs/specs/otel/common/mapping-to-non-otlp/#span-status>` spec to learn more about ``otel.status_code``. See the :new-page:`Set Status section of the OpenTelemetry Tracing API specification <https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#set-status>` to learn more about ``span.status``. 
 
 .. _apm-http-status:
 
@@ -62,6 +64,23 @@ To determine if a gRPC span counts towards the error rate for a service, the Spl
    * ``INTERNAL``
    * ``UNAVAILABLE``
    * ``DATA_LOSS``
+
+.. list-table::
+   :header-rows: 1
+   :widths: 15 43 42
+
+   * - :strong:`Error type`
+     - :strong:`Server-side spans` ``span.kind = SERVER``
+     - :strong:`Client-side spans` ``span.kind = CLIENT``
+   * - 
+     - 
+     - 
+   * - 
+     - 
+     - 
+   * -  
+     - 
+     - 
 
 See the OpenTelemetry specification for information on the handling of gRPC status codes :new-page:`https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/semantic_conventions/rpc.md#grpc-status`. 
 
