@@ -7,7 +7,7 @@ Introduction to Splunk Log Observer
 .. meta::
    :description: Get started investigating issues with Splunk Log Observer. Resolve incidents faster through log filtering, aggregations, and analysis.
 
-
+.. include:: /_includes/log-observer-transition.rst
 
 If you do not have a Log Observer entitlement and instead use Log Observer Connect, see :ref:`logs-intro-logconnect`. 
 
