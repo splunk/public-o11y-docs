@@ -33,4 +33,5 @@ Using Splunk Observability Cloud for mobile, you can do the following:
 - Gain context on active alerts such as triggering conditions and detector details.
 - Conduct high-level investigation before switching to Splunk Observability Cloud or other relevant tools.
 - If you've configured your on-call notification preference to send push notifications, you will receive push notification on any device where you're logged in to Splunk Observability Cloud for Mobile.
+  
 .. - View your on-call schedule on the :guilabel:`Settings` tab. 
