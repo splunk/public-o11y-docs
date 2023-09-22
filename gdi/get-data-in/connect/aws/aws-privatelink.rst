@@ -192,7 +192,7 @@ To create a VPC endpoint, follow these steps:
 
 8. Specify the security group(s) controlling inbound and outbound traffic for the endpoint, and set the outbound rule for the selected security group(s) open for port ``443``.
 
-.. image:: /_images/gdi/aws-privatelink-secgroups.png
+.. image:: /_images/gdi/aws-privatelink-secgroups2.png
     :width: 80%
     :alt: Specify security groups that control traffic.
 
