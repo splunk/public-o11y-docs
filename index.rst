@@ -621,7 +621,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Quick start tutorial: Monitor your Kubernetes environment in Splunk Observability Cloud <infrastructure/k8s-quickstart-guide>
+   Monitor your Kubernetes environment in Splunk Observability Cloud <infrastructure/k8s-quickstart-guide>
 
 .. toctree::
    :maxdepth:   3
