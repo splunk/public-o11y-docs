@@ -62,8 +62,8 @@ A Splunk Cloud Platform admin must add Splunk Observability Cloud IP addresses t
    :header-rows: 1
    :widths: 20 80
 
-   * - :strong:`Type`
-     - :strong:`Description`
+   * - :strong:`Realm`
+     - :strong:`IP addresses`
   
    * - us0
      - | 34.199.200.84/32
