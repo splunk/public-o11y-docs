@@ -30,10 +30,10 @@ You can send metrics and traces from back-end applications to Splunk Observabili
       subgraph "\nOpenTelemetry APM Instrumentation"
 
 
-      A[Back-end applications
-      (Go, Python, Ruby, ...)]
-      B[Serverless functions 
-      (AWS Lambda, Azure, GCP)]
+      A["Back-end applications
+      (Go, Python, Ruby, ...)"]
+      B["Serverless functions 
+      (AWS Lambda, Azure, GCP)"]
       end
 
       A -- "traces, metrics, logs" --> O
