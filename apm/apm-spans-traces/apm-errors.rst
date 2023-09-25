@@ -16,10 +16,10 @@ How error spans are detected
 
 Each :term:`span` in Splunk APM captures a single operation. Splunk APM considers a span an error span if the operation that the span captures results in an error. A span is considered an error span when any of the following conditions are met: 
 
-* The ``otel.status_code`` field for the span is ``ERROR``. ``otel.status_code`` is set in Splunk Distribution of the OpenTelemetry Collector using the native OTel field ``span.status``. ``otel.status_code`` is set based on either the HTTP status code or the gRPC status code.
+* The ``otel.status_code`` field for the span is ``ERROR``. ``otel.status_code`` is set in Splunk Distribution of the OpenTelemetry Collector using the native OTel field ``span.status``. ``span.status`` and subsequently, ``otel.status_code``, are set based on either the HTTP status code or the gRPC status code.
   
-   * See :ref:`apm-http-status` to learn which ``http.status_code`` tag values set ``span.status`` to ``ERROR`` in the OpenTelemetry instrumentation.
-   * See :ref:`apm-grpc-status` to learn which ``rpc.grpc.status_code`` tag values set ``span.status`` to ``ERROR`` in the OpenTelemetry instrumentation.
+   * See :ref:`apm-http-status` to learn which ``http.status_code`` tag values set ``otel.status_code`` to ``ERROR`` in the OpenTelemetry instrumentation.
+   * See :ref:`apm-grpc-status` to learn which ``rpc.grpc.status_code`` tag values set ``otel.status_code`` to ``ERROR`` in the OpenTelemetry instrumentation.
 * The ``error`` tag for the span is set to a truthy value, which is any value other than ``False`` or ``0``. 
 
 See the :new-page:`Span Status section of the OpenTelemetry Transformation to non-OTLP Formats<https://opentelemetry.io/docs/specs/otel/common/mapping-to-non-otlp/#span-status>` spec to learn more about ``otel.status_code``. See the :new-page:`Set Status section of the OpenTelemetry Tracing API specification <https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#set-status>` to learn more about ``span.status``. 
@@ -29,7 +29,7 @@ See the :new-page:`Span Status section of the OpenTelemetry Transformation to no
 How OpenTelemetry handles HTTP status codes
 ----------------------------------------------
 
-The following table provides an overview of how HTTP status codes are used to set ``span.status`` in OpenTelemetry instrumentation in accordance with OpenTelemetry semantic conventions. To learn more, see the :new-page:`OpenTelemetry semantic conventions for HTTP spans <https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/semantic_conventions/http.md#status>` on GitHub.
+The following table provides an overview of how HTTP status codes are used to set ``span.status`` and subsequently, ``otel.status_code``, in OpenTelemetry instrumentation in accordance with OpenTelemetry semantic conventions. To learn more, see the :new-page:`OpenTelemetry semantic conventions for HTTP spans <https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/semantic_conventions/http.md#status>` on GitHub.
 
 .. list-table::
    :header-rows: 1
@@ -39,31 +39,21 @@ The following table provides an overview of how HTTP status codes are used to se
      - :strong:`Server-side spans` ``span.kind = SERVER``
      - :strong:`Client-side spans` ``span.kind = CLIENT``
    * - ``1xx``, ``2xx``, and ``3xx``
-     - ``span.status`` is unset, unless there's another error in the span. 
-     - ``span.status`` is unset, unless there's another error in the span. 
+     - ``otel.status_code`` is unset, unless there's another error in the span. 
+     - ``otel.status_code`` is unset, unless there's another error in the span. 
    * - ``4xx``
      - Not considered a server-side error; ``otel.status_code`` unset. See :ref:`4xx-error-logic` to learn more.
      - Counted as a client error; ``otel.status_code`` set to ``ERROR``.
    * - ``5xx`` 
-     - ``span.status`` set to ``ERROR``. See :ref:`5xx-error-logic` to learn more. 
-     - ``span.status`` set to ``ERROR``. See :ref:`5xx-error-logic` to learn more. 
+     - ``otel.status_code`` set to ``ERROR``. See :ref:`5xx-error-logic` to learn more. 
+     - ``otel.status_code`` set to ``ERROR``. See :ref:`5xx-error-logic` to learn more. 
 
 .. _apm-grpc-status:
 
 How OpenTelemetry handles gRPC status codes
 -----------------------------------------------
 
-To determine if a gRPC span counts towards the error rate for a service, the Splunk Distribution of the OpenTelemetry Collector looks at the ``span.status`` as set by OpenTelemetry instrumentation. The following logic is applied by the instrumentation in accordance with OpenTelemetry semantic conventions:
-
-* For client-side spans (``span.kind = CLIENT``), all non-OK, client-received status codes (``rpc.grpc.status_code``) set ``span.status`` to ``error``.
-* For server-side spans (``span.kind = SERVER``), the following gRPC status codes (``rpc.grpc.status_code``) set ``span.status`` to ``error``: 
-
-   * ``UNKNOWN``
-   * ``UNIMPLEMENTED``
-   * ``DEADLINE_EXCEEDED``
-   * ``INTERNAL``
-   * ``UNAVAILABLE``
-   * ``DATA_LOSS``
+To determine if a gRPC span counts towards the error rate for a service, the Splunk APM looks at the ``otel.status_code`` as set by OpenTelemetry instrumentation. The following logic is applied by the instrumentation in accordance with OpenTelemetry semantic conventions:
 
 .. list-table::
    :header-rows: 1
@@ -72,15 +62,57 @@ To determine if a gRPC span counts towards the error rate for a service, the Spl
    * - :strong:`Error type`
      - :strong:`Server-side spans` ``span.kind = SERVER``
      - :strong:`Client-side spans` ``span.kind = CLIENT``
-   * - 
-     - 
-     - 
-   * - 
-     - 
-     - 
-   * -  
-     - 
-     - 
+   * - OK
+     - unset
+     - unset
+   * - CANCELLED
+     - unset
+     - ERROR
+   * - UNKNOWN
+     - ERROR
+     - ERROR
+   * - INVALID_ARGUMENT
+     - unset
+     - ERROR
+   * - DEADLINE_EXCEEDED
+     - ERROR
+     - ERROR
+   * - NOT_FOUND
+     - unset
+     - ERROR
+   * - ALREADY_EXISTS
+     - unset
+     - ERROR
+   * - PERMISSION_DENIED
+     - unset
+     - ERROR
+   * - RESOURCE_EXHAUSTED
+     - unset
+     - ERROR
+   * - FAILED_PRECONDITION
+     - unset
+     - ERROR
+   * - ABORTED
+     - unset
+     - ERROR
+   * - OUT_OF_RANGE
+     - unset
+     - ERROR
+   * - UNIMPLEMENTED
+     - ERROR
+     - ERROR
+   * - INTERNAL
+     - ERROR
+     - ERROR
+   * - UNAVAILABLE
+     - ERROR
+     - ERROR
+   * - DATA_LOSS
+     - ERROR
+     - ERROR
+   * - UNAUTHENTICATED
+     - unset
+     - ERROR
 
 See the OpenTelemetry specification for information on the handling of gRPC status codes :new-page:`https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/semantic_conventions/rpc.md#grpc-status`. 
 
