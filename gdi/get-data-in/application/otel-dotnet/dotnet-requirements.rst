@@ -52,12 +52,12 @@ Traces instrumentations
    * - Azure SDK
      - ``Azure.`` prefixed packages, released after October 1, 2021
      - Experimental
-     - Vendor support
+     - Third-party support
      - ``AZURE``
    * - Elastic.Clients.Elasticsearch
      - 8.0.0 and higher
      - Experimental
-     - Vendor support
+     - Third-party support
      - ``ELASTICSEARCH``
    * - Microsoft.EntityFrameworkCore |br| (Not supported on .NET Framework)
      - 6.0.12 and higher
@@ -67,7 +67,7 @@ Traces instrumentations
    * - GraphQL |br| (Not supported on .NET Framework)
      - 7.5.0 and higher
      - Experimental
-     - Vendor support
+     - Third-party support
      - ``GRAPHQL``
    * - Grpc.Net.Client
      - 2.52.0 to 3.0.0
@@ -82,32 +82,32 @@ Traces instrumentations
    * - MassTransit |br| (Not supported on .NET Framework)
      - 8.0.0 and higher
      - Experimental
-     - Vendor support
+     - Third-party support
      - ``MASSTRANSIT``
    * - MongoDB.Driver.Core |br| (Not supported on .NET Framework)
      - 2.13.3 to 3.0.0
      - Experimental
-     - Vendor support
+     - Third-party support
      - ``MONGODB``
    * - MySqlConnector
      - 2.0.0 and higher
      - Experimental
-     - Vendor support
+     - Third-party support
      - ``MYSQLCONNECTOR``  
    * - MySql.Data |br| (Not supported on .NET Framework)
      - 8.1.0 and higher
      - Experimental
-     - Vendor support
+     - Third-party support
      - ``MYSQLDATA``
    * - Npgsql
      - 6.0.0 and higher
      - Experimental
-     - Vendor support
+     - Third-party support
      - ``NPGSQL``
    * - NServiceBus
      - 8.0.0 and higher
      - Experimental
-     - Vendor support
+     - Third-party support
      - ``NSERVICEBUS``
    * - Microsoft.Data.SqlClient and |br| System.Data.SqlClient
      - Version 3.* is not supported on .NET Framework
@@ -167,7 +167,7 @@ Metrics instrumentations
    * - NServiceBus
      - 8.0.0 and higher
      - Experimental
-     - Vendor support
+     - Third-party support
      - ``NSERVICEBUS``
    * - OpenTelemetry.Instrumentation.Process
      - See :ref:`dotnet-otel-versions`
