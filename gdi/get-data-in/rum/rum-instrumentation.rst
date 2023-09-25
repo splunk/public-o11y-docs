@@ -26,8 +26,8 @@ Instrument your mobile and web applications to send data to Splunk Real User Mon
       R["React Native applications"]
       end
 
-      APM 
-      APM -- "server trace data" --> S
+      A["Splunk APM"]
+      A -- "server trace data" --> S
 
       B -- traces --> S
       M -- traces --> S
