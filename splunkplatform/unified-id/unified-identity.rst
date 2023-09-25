@@ -35,7 +35,7 @@ Organizations that complete the integration of Splunk Cloud Platform and Splunk 
 * Users can navigate data and dashboards between Splunk Cloud Platform and Splunk Observability Cloud seamlessly after logging in with Splunk Cloud Platform SSO once.
 
 
-How to set up the Unified Identity
+How to set up Unified Identity
 ==========================================================================================
 You can pair only one Splunk Cloud Platform instance with one Splunk Observability Cloud instance at a time. The integration is a 1:1 mapping of one ad-hoc Splunk Cloud Search Head Unit with one Splunk Observability Cloud instance. Customers with multiple Splunk Observability Cloud organizations must choose one to pair with the chosen Splunk Cloud Platform instance.
 
@@ -45,7 +45,7 @@ Splunk Cloud Platform customers who want to purchase Splunk Observability Cloud 
 
 2. Turn on token authentication to allow Splunk Observability Cloud to view your Splunk Cloud Platform logs. See :new-page:`Enable or disable token authentication <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how.
 
-3. In the Splunk Cloud Platform instance you want to pair with Splunk Observability Cloud, create a custom role called ``observability_access`` and assign it to all Splunk Cloud Platform users who you want to give access to Splunk Observability Cloud. See :new-page:`Create and manage roles with Splunk Web <https://docs.splunk.com/Documentation/Splunk/9.1.1/Security/Addandeditroles#Add_or_edit_a_role>` for more information on Splunk Cloud Platform roles. Follow only the instructions in the :guilabel:`Add or edit a role` section. Note that you do not need to assign the role any capabilities or indexes. 
+3. In the Splunk Cloud Platform instance you want to pair with Splunk Observability Cloud, create a custom role called ``o11y_access`` and assign it to all Splunk Cloud Platform users who you want to give access to Splunk Observability Cloud. See :new-page:`Create and manage roles with Splunk Web <https://docs.splunk.com/Documentation/Splunk/9.1.1/Security/Addandeditroles#Add_or_edit_a_role>` for more information on Splunk Cloud Platform roles. Follow only the instructions in the :guilabel:`Add or edit a role` section. Note that you do not need to assign the role any capabilities or indexes. 
 
 
 .. _unified-id-user-provisioning:
