@@ -85,4 +85,4 @@ Splunk RUM uses gzip encoding to reduce network bandwidth consumption. The Netwo
 
 As a workaround, deactivate Splunk RUM while profiling your app, or deactivate gzip compression when profiling your app.
 
-.. include:: /_includes/troubleshooting-steps.rst
+.. include:: /_includes/troubleshooting-components.rst

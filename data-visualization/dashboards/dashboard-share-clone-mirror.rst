@@ -78,7 +78,7 @@ To clone a dashboard, follow these steps:
 #. Select the :guilabel:`Dashboard actions` (|more|) menu.
 
    .. image:: /_images/images-dashboard/dashboard-page-dashboard-actions-menu.png
-      :width: 99%
+      :width: 50%
       :alt: This image shows the Dashboard actions menu in dashboard view.
 
 #. Select :guilabel:`Save As...`.

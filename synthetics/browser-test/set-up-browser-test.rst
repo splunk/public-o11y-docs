@@ -85,6 +85,7 @@ If your recording contains unsupported steps, you need to edit the step to refor
 .. list-table::
    :header-rows: 1
    :widths: 50 50 
+   :class: fix-width
 
    * - :strong:`Google Chrome Recorder snippet`
      - :strong:`Synthetic snippet`
@@ -364,7 +365,7 @@ Authentication
 
 Add credentials to authenticate with sites that require additional security protocols, for example from within a corporate network. By using concealed global variables in the Authentication field, you create an additional layer of security for your credentials simplify the ability to share credentials across checks. For more, see :ref:`concealed-gv`
 
-The Authentication field is available for Browser tests in Chrome only. Firefox tests support Basic Authentication. Splunk Synthetic Monitoring supports a suite of authentication protocols. At this time, Splunk Synthetic Monitoring supports the following in Chrome:
+The Authentication field is available for Browser tests in Chrome only. Splunk Synthetic Monitoring supports a suite of authentication protocols. At this time, Splunk Synthetic Monitoring supports the following in Chrome:
 
 * Basic Authentication
 * NTLM
