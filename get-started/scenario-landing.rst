@@ -66,12 +66,6 @@ This is the collection of scenarios available for Splunk Observability Cloud.
     - :ref:`profiling-scenario`
   * - :ref:`APM Profiling <profiling-scenario-landingpage>` 
     - :ref:`memory-profiling-scenario`
-  * - :ref:`Incident Intelligence scheduling <ii-scenarios-schedules>`
-    - :ref:`ii-scenario-business-hours`
-  * - :ref:`Incident Intelligence scheduling <ii-scenarios-schedules>`
-    - :ref:`ii-scenario-week-by-week`
-  * - :ref:`Incident Intelligence scheduling <ii-scenarios-schedules>`
-    - :ref:`ii-scenario-day-by-day`
   * - :ref:`Infrastructure Monitoring <apm-scenarios-intro>`
     - :ref:`troubleshoot-k8s-nav-scenario`
   * - :ref:`Infrastructure Monitoring <apm-scenarios-intro>`
