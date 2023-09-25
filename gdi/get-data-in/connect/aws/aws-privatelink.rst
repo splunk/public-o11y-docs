@@ -17,6 +17,7 @@ AWS PrivateLink connects your Virtual Private Cloud (VPC) to your AWS services, 
   :width: 80%
   :alt: AWS Private Link schema.
   
+
 Prerequisites
 ==================================================
 
@@ -182,11 +183,11 @@ To create a VPC endpoint, follow these steps:
 
 3. Select :guilabel:`Create Endpoint`, and then :guilabel:`Other endpoint` services.
 
-4. Enter and verify the service name based on the AWS region where you're configuring the VPC endpoint. Identify the appropiate service name using the table :ref:`aws-privatelink-service-names`.
+4. Enter and verify the service name based on the AWS region where you're configuring the VPC endpoint. Identify the appropriate service name using the table :ref:`aws-privatelink-service-names`.
 
 5. Select the VPC in which you want to create the endpoint. 
 
-6. Choose the subnet(s) within the VPC where the endpoint will reside. Make sure to select the subnets from the appropiate availability zones.
+6. Choose the subnet(s) within the VPC where the endpoint will reside. Make sure to select the subnets from the appropriate availability zones.
 
 7. Set the IP address type to ``IPv4``.
 
@@ -241,13 +242,13 @@ This enhancement bolsters data integrity and security, aligning with the goal of
 
 Learn more at AWS official documentation :new-page:`Two VPCs peered together <https://docs.aws.amazon.com/vpc/latest/peering/peering-configurations-full-access.html#two-vpcs-full-access>`.
 
-Next steps
-================
+.. Next steps
+.. ================
 
-After you connect Splunk Observability Cloud with AWS, you can use Observability Cloud to track a series of metrics and analyze your AWS data in real time. 
+.. After you connect Splunk Observability Cloud with AWS, you can use Observability Cloud to track a series of metrics and analyze your AWS data in real time. 
 
-- See the AWS official documentation for a list of the available AWS resources.
-- See :ref:`how to leverage data from integration with AWS <aws-post-install>` for more information.
+.. - See the AWS official documentation for a list of the available AWS resources.
+..  - See :ref:`how to leverage data from integration with AWS <aws-post-install>` for more information.
 
 .. _aws-privatelink-support:
 
