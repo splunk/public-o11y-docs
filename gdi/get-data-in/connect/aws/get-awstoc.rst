@@ -14,6 +14,7 @@ Connect to AWS and send data to Splunk Observability Cloud
   Connect to AWS with the UI guided setup <aws-wizardconfig>
   Connect to AWS with the API <aws-apiconfig>
   Connect to AWS with Terraform <aws-terraformconfig>
+  Private Connectivity using PrivateLink <aws-privatelink>
   Collect logs from AWS <aws-logs>
   CloudFormation templates <aws-cloudformation>
   Next steps <aws-post-install>
@@ -115,6 +116,8 @@ Learn more at :ref:`Amazon CloudWatch usage costs <aws-costs>`.
 
 You can connect Splunk Observability Cloud to AWS in several ways. By default, Splunk Observability Cloud brings in data from all :ref:`supported AWS services <aws-integrations>` associated with your account. To limit the amount of data to import, see :ref:`specify-data-metadata`.
 
+.. caution:: Splunk is not responsible for data availability, and it can take up to several minutes (or longer, depending on your configuration) from the time you connect until you start seeing valid data from your account.
+
 Choose the connection method that best matches your needs:
 
 .. list-table::
@@ -134,11 +137,20 @@ Choose the connection method that best matches your needs:
   * - :ref:`Splunk Terraform <terraform-config>`
     - Use this connection method if you already manage your infrastructure as code by deploying through Terraform.
 
-See also the :new-page:`Splunk add-on for Amazon Kinesis Firehose <https://docs.splunk.com/Documentation/AddOns/latest/Firehose/ConfigureFirehose>`.
-
-.. caution:: Splunk is not responsible for data availability, and it can take up to several minutes (or longer, depending on your configuration) from the time you connect until you start seeing valid data from your account.
-
 If you can't connect AWS to Splunk Observability Cloud, see :ref:`Troubleshoot your AWS connection <aws-troubleshooting>`.
+
+.. _aws-connection-options-more:
+
+.. raw:: html
+
+  <embed>
+    <h3>More options to connect with AWS</h3>
+  </embed>  
+
+Observability Cloud also offers you the following options to connect to AWS:
+
+* :ref:`aws-privatelink`.
+* The :new-page:`Splunk add-on for Amazon Kinesis Firehose <https://docs.splunk.com/Documentation/AddOns/latest/Firehose/ConfigureFirehose>`.  
 
 .. _aws-collector:
 
