@@ -21,18 +21,19 @@ Instrument your mobile and web applications to send data to Splunk Real User Mon
    
    flowchart LR
       subgraph "Splunk RUM Instrumentation"
-      B[Browser-based web applications]
-      M[Mobile applications (iOS, Android)]
-      R[React Native applications]
+      B["Browser-based web applications"]
+      M["Mobile applications (iOS, Android)"]
+      R["React Native applications"]
       end
 
+      APM 
       APM -- "server trace data" --> S
 
       B -- traces --> S
       M -- traces --> S
       R -- traces --> S
 
-      S[Splunk RUM]
+      S["Splunk RUM"]
 
 
 You can instrument the following types of application:
