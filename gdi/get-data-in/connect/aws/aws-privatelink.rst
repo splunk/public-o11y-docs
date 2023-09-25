@@ -236,7 +236,7 @@ Advanced configuration: AWS PrivateLink with VPC peering
 
 Let's examine a scenario where your source region, or region generating your data, is ``ap-south-1`` and your destination region, or region where you have established your VPC connection and want to receive data, is ``us-east-1``. 
 
-In this context, you need to establish a VPC endpoint within your :strong:`destination region` ``us-east-1``. By activating PrivateLinkin in this region, you obtain a seamless, secure, and private channel to access AWS services available in the your source region, ``ap-south-1``. This arrangement ensures that communication between the two VPCs occurs through an internal network, removing the necessity of routing traffic over the public Internet.
+In this context, you need to establish a VPC endpoint within your :strong:`destination region` ``us-east-1``. By activating PrivateLink in this region, you obtain a seamless, secure, and private channel to access AWS services available in the your source region, ``ap-south-1``. This arrangement ensures that communication between the two VPCs occurs through an internal network, removing the necessity of routing traffic over the public Internet.
 
 This enhancement bolsters data integrity and security, aligning with the goal of optimizing inter-region communication while upholding stringent data protection standards.
 
