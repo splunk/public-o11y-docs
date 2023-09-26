@@ -77,7 +77,9 @@ Installation
 Configuration
 -------------
 
-.. include:: /_includes/configuration.rst ### Example
+.. include:: /_includes/configuration.rst
+
+### Example
 
 To activate this integration, add the following to your Collector
 configuration:
@@ -200,6 +202,8 @@ These metrics are available for this integration.
 Notes
 ~~~~~
 
-.. include:: /_includes/metric-defs.rst ## Troubleshooting
+.. include:: /_includes/metric-defs.rst
+
+## Troubleshooting
 
 .. include:: /_includes/troubleshooting.rst

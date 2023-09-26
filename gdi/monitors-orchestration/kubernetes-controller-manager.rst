@@ -6,7 +6,7 @@ Kubernetes Controller Manager (deprecated)
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the kube-controller-manager monitor. See benefits, install, configuration, and metrics
 
-:literal:`{note} This monitor is deprecated in favor of the \`prometheus-exporter\` monitor. See {ref}`Prometheus Exporter <prometheus-exporter>\` for more information.`
+.. note:: This monitor is deprecated in favor of the ``prometheus-exporter`` monitor. See :ref:`Prometheus Exporter <prometheus-exporter>` for more information.
 
 The monitor queries path ``/metrics`` by default when no path is
 configured. It converts the Prometheus metric types to Splunk

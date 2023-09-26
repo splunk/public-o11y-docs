@@ -19,7 +19,9 @@ The plugin supports Zookeeper 3.4.0 and higher.
 Benefits
 --------
 
-.. include:: /_includes/benefits.rst ## Installation
+.. include:: /_includes/benefits.rst
+
+## Installation
 
 .. include:: /_includes/collector-installation-linux.rst
 

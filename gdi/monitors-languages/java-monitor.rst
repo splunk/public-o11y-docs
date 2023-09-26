@@ -13,7 +13,7 @@ uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 
 This integration is available on Linux and Windows.
 
-:literal:`{note} To activate metrics collection in the OpenTelemetry Java agent, see {ref}`Activate metrics collection <enable_automatic_metric_collection>\`.`
+.. note:: To activate metrics collection in the OpenTelemetry Java agent, see :ref:`Activate metrics collection <enable_automatic_metric_collection>``
 
 Benefits
 --------

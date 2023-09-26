@@ -25,7 +25,9 @@ Installation
 Configuration
 -------------
 
-.. include:: /_includes/configuration.rst ### Example
+.. include:: /_includes/configuration.rst
+
+### Example
 
 To activate this integration, add the following to your Collector
 configuration:

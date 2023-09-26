@@ -13,7 +13,7 @@ uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 
 This integration is available for Kubernetes, Windows, and Linux.
 
-:literal:`{note} This monitor doesn't support MIB lookups\`.`
+.. note:: This monitor doesn't support MIB lookups``.
 
 Benefits
 --------

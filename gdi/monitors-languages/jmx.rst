@@ -74,9 +74,13 @@ Benefits
 Installation
 ------------
 
-.. include:: /_includes/collector-installation.rst ## Configuration
+.. include:: /_includes/collector-installation.rst
 
-.. include:: /_includes/configuration.rst ### Example
+## Configuration
+
+.. include:: /_includes/configuration.rst
+
+### Example
 
 To activate this integration, add the following to your Collector
 configuration:

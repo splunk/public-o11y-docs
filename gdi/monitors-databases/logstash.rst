@@ -95,7 +95,9 @@ Metrics
 
 The following metrics are available for this integration:
 
-.. container:: metrics-yaml
+.. raw:: html
+
+   <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/logstash/logstash/metadata.yaml"></div>
 
 Notes
 ~~~~~

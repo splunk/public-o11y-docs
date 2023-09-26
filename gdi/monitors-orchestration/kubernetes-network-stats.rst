@@ -6,7 +6,7 @@ Kubernetes network stats (deprecated)
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the kubelet-stats / kubernetes network stats monitor. See benefits, install, configuration, and metrics
 
-:literal:`{note} This monitor is deprecated in favor of the native OTel \`kubeletstats\` receiver. See {ref}`Kubelet Stats Receiver <kubelet-stats-receiver>\` for more information.`
+.. note:: This monitor is deprecated in favor of the native OTel ``kubeletstats`` receiver. See :ref:`Kubelet Stats Receiver <kubelet-stats-receiver>` for more information.
 
 Configuration settings
 ----------------------

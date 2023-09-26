@@ -37,7 +37,9 @@ leader agent election by setting the ``alwaysClusterReporter`` option to
 Benefits
 --------
 
-.. include:: /_includes/benefits.rst ## Installation
+.. include:: /_includes/benefits.rst
+
+## Installation
 
 Follow these steps to deploy this integration:
 
@@ -116,7 +118,7 @@ The following table shows the configuration options for this monitor:
          metrics are reported as data points of the form
          ``kubernetes.node_<type_snake_cased>`` with a value of ``0``
          corresponding to “False”, ``1`` to “True”, and ``-1`` to
-         “Unknown”. The default value is \`[Ready].)
+         “Unknown”. The default value is ``[Ready].)
 
 The **nested** ``kubernetesAPI`` configuration object has the following
 fields:

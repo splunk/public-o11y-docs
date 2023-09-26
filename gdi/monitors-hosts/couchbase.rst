@@ -26,7 +26,9 @@ Installation
 Configuration
 -------------
 
-.. include:: /_includes/configuration.rst ### Configuration options
+.. include:: /_includes/configuration.rst
+
+### Configuration options
 
 The following configuration options are available for this integration:
 

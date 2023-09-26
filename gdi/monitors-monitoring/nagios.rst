@@ -33,7 +33,7 @@ Linux or Windows machine in case of an abnormal state to understand what
 is happening. Using this integration also lets you create a dashboard
 that is familiar to Nagios users.
 
-:literal:`{note} The last sent event is cached into memory and compared to new events to avoid repeatedly sending the same event for each collection interval. Restarting the OTel Collector erases its cache, so the  most recently sent event is sent again upon restart. If your check always “normally” produces a different output for each run, for example, the uptime check, you can use the \`FilterStdOut: true\` parameter to ignore it in comparison.`
+.. note:: The last sent event is cached into memory and compared to new events to avoid repeatedly sending the same event for each collection interval. Restarting the OTel Collector erases its cache, so the  most recently sent event is sent again upon restart. If your check always “normally” produces a different output for each run, for example, the uptime check, you can use the ``FilterStdOut: true`` parameter to ignore it in comparison.
 
 This integration is available on Kubernetes, Linux, and Windows.
 

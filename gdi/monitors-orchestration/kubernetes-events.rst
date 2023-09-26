@@ -26,7 +26,9 @@ This monitor type is available on Kubernetes, Linux, and Windows.
 Benefits
 --------
 
-.. include:: /_includes/benefits-events.rst ## Installation
+.. include:: /_includes/benefits-events.rst
+
+## Installation
 
 .. include:: /_includes/collector-installation.rst
 

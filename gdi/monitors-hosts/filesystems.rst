@@ -6,7 +6,7 @@ Free disk space (filesystems)
 .. meta::
    :description: Use this Splunk Observability Cloud integrationfor the file systems / filesystems monitor. See benefits, install, configuration, and metrics
 
-:literal:`{note} If you are using the Splunk Distribution of OpenTelemetry Collector and want to collect file system utilization metrics, use the native OTel component {ref}`host-metrics-receiver\`.`
+.. note:: If you are using the Splunk Distribution of OpenTelemetry Collector and want to collect file system utilization metrics, use the native OTel component :ref:`host-metrics-receiver``
 
 Configuration settings
 ----------------------

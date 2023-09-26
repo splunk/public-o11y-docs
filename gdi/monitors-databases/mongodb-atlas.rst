@@ -6,7 +6,7 @@ MongoDB Atlas (deprecated)
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the MongoDB Atlas monitor. See benefits, install, configuration, and metrics
 
-:literal:`{note} This monitor is deprecated in favor of the Otel native component \`mongodbatlas\` receiver. See {ref}`MongoDB Atlas Receiver <mongodb-atlas-receiver>\` for more information.`
+.. note:: This monitor is deprecated in favor of the Otel native component ``mongodbatlas`` receiver. See :ref:`MongoDB Atlas Receiver <mongodb-atlas-receiver>` for more information.
 
 The
 :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`

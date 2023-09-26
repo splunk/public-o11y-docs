@@ -215,7 +215,7 @@ database driver to use. These names are the same as the name of the
 Golang SQL driver used in the agent. The monitor formats the
 ``connectionString`` according to the driver you specify.
 
-:literal:`{note} Please be sure to use the correct connection string syntax based on the driver you're using. For example, if you use the \`mysql\` driver, you must use the connection string syntax for the \`mysql\` driver.`
+.. note:: Please be sure to use the correct connection string syntax based on the driver you're using. For example, if you use the ``mysql`` driver, you must use the connection string syntax for the ``mysql`` driver.
 
 This is the list of the drivers currently supported:
 

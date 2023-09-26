@@ -49,7 +49,7 @@ with minimal read-only roles, as follows:
      roles: [ { role: "readAnyDatabase", db: "admin" }, { role: "clusterMonitor", db: "admin" } ]
    });
 
-``{note} Only SCRAM-SHA-1 authentication is supported.``
+.. note:: Only SCRAM-SHA-1 authentication is supported.
 
 Configuration
 -------------
@@ -186,7 +186,7 @@ monitor:
       - Whether to send collection level top timing metrics or not. The
          default value is ``false``.
 
-``{note} When using TLS authentication, SCRAM-SHA-256 is not supported. Use SCRAM-SHA-1 authentication.``
+.. note:: When using TLS authentication, SCRAM-SHA-256 is not supported. Use SCRAM-SHA-1 authentication.
 
 Metrics
 -------

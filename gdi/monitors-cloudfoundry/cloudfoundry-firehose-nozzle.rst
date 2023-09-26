@@ -174,6 +174,8 @@ The following metrics are available for this integration:
 Notes
 ~~~~~
 
-.. include:: /_includes/metric-defs.rst ## Troubleshooting
+.. include:: /_includes/metric-defs.rst
+
+## Troubleshooting
 
 .. include:: /_includes/troubleshooting.rst

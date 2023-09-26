@@ -15,7 +15,7 @@ the configured ingest host in the ``writer`` section of the agent
 config). By default, the server listens on localhost port ``14250``, but
 can be configured to anything.
 
-``{note} If you're using OpenTelemetry, consider using the native OpenTelemetry Jaeger receiver. To learn more, see <a class="external" href="https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver/jaegerreceiver" target="_blank">the Jaeger receiver documentation in GitHub</a>.``
+.. note:: If you're using OpenTelemetry, consider using the native OpenTelemetry Jaeger receiver. To learn more, see :new-page:`the Jaeger receiver documentation in GitHub <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver/jaegerreceiver>`.
 
 Benefits
 --------
@@ -30,7 +30,9 @@ Installation
 Configuration
 -------------
 
-.. include:: /_includes/configuration.rst ### Example
+.. include:: /_includes/configuration.rst
+
+### Example
 
 To activate this integration, add the following to your Collector
 configuration:

@@ -6,7 +6,7 @@ Interface traffic (deprecated)
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the interface monitor. See benefits, install, configuration, and metrics
 
-:literal:`{note} This integration is deprecated in favor of the \`net-io\` integration, which uses the \`interface\` dimension to identify the network card instead of the \`plugin_instance\` dimension and provides the same metrics. To learn more, see {ref}`net-io\`.`
+.. note:: This integration is deprecated in favor of the ``net-io`` integration, which uses the ``interface`` dimension to identify the network card instead of the ``plugin_instance`` dimension and provides the same metrics. To learn more, see :ref:`net-io``
 
 Configuration settings
 ----------------------

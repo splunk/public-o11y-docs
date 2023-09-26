@@ -193,7 +193,7 @@ monitor:
       - Whether the monitor verifies the RabbitMQ Management plugin SSL
          or TLS certificate. The default value is\ ``false``.
 
-:literal:`{note} You must activate each of the five \`collect*\` options to gather metrics pertaining to those facets of a RabbitMQ instance.`
+.. note:: You must activate each of the five ``collect*`` options to gather metrics pertaining to those facets of a RabbitMQ instance.
 
 Metrics
 -------

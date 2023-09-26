@@ -58,8 +58,7 @@ Velero
 
 Use the Velero Helm chart to automatically activate Prometheus metrics
 for Velero. See
-https://github.com/vmware-tanzu/helm-charts/blob/main/charts/velero/README.md
-on GitHub for more information.
+https://github.com/vmware-tanzu/helm-charts/blob/main/charts/velero/README.rston GitHub for more information.
 
 Configuration settings
 ~~~~~~~~~~~~~~~~~~~~~~
