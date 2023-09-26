@@ -77,23 +77,23 @@ The agent component consists of the following config files:
 
 * deployment-cluster-receiver.yaml
 
-  * Defines a Deployment to manage the replicated application for the Cluster Receiver.
+  * Defines a deployment to manage the replicated application for the cluster receiver.
   * Receives and processes data at the cluster level.
 
 * configmap-cluster-receiver.yaml
 
-  * Provides configuration data to the Cluster Receiver.
+  * Provides configuration data to the cluster receiver.
   * Contains details about how the receiver should process and forward the data it collects.
-
-* service-cluster-receiver-stateful-set.yaml (optional)
-
-  * Defines a Kubernetes Service for the Cluster Receiver.
-  * Associated with a StatefulSet and used for load balancing, internal communication, or exposing specific endpoints.
 
 * pdb-cluster-receiver.yaml
 
-  * Defines a Pod Disruption Budget (PDB) for the Cluster Receiver.
+  * Defines a Pod Disruption Budget (PDB) for the cluster receiver.
   * Ensures that a certain number or percentage of replicas remain available during operations like node maintenance.
+
+* service-cluster-receiver-stateful-set.yaml (optional)
+
+  * Defines a Kubernetes service for the cluster receiver.
+  * Associated with a StatefulSet and used for load balancing, internal communication, or exposing specific endpoints.
 
 Gateway component (optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
