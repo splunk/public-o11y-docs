@@ -57,9 +57,10 @@ To determine if a gRPC span counts towards the error rate for a service, the Spl
 
 .. list-table::
    :header-rows: 1
-   :widths: 15 43 42
+   :widths: 10 20 35 35
 
-   * - :strong:`Error type`
+   * - :strong:`Code`
+     - :strong:`Status`
      - :strong:`Server-side spans` ``span.kind = SERVER``
      - :strong:`Client-side spans` ``span.kind = CLIENT``
    * - 0 
