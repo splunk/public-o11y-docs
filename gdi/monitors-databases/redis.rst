@@ -97,7 +97,7 @@ integration:
       - ``pythonBinary``
       - No
       - ``string``
-      - Path to the Python binary. If you don’t provide a path, the
+      - Path to the Python binary. If you don't provide a path, the
          monitor uses its built-in runtime. The string can include
          arguments to the binary.
    - 
@@ -155,7 +155,7 @@ The following table shows you the configuration options for the
       - A string or pattern to use for selecting keys. A string selects
          a single key. A pattern that uses ``*`` as a ``glob`` style
          wildcard processes all keys that match the pattern. Surround a
-         pattern with single quotes (’), for example ``'mylist*'``
+         pattern with single quotes ('), for example ``'mylist*'``
 
 Monitor the length of Redis lists
 ---------------------------------
@@ -182,7 +182,7 @@ MTS for each Redis list.
 **Notes**:
 
 1. The Redis monitor uses the ``KEYS`` command to match patterns.
-   Because this command isn’t optimized, you need to keep your match
+   Because this command isn't optimized, you need to keep your match
    patterns small. Otherwise, the command can block other commands from
    executing.
 2. To avoid duplicate reporting, choose a single node in which to

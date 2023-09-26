@@ -361,7 +361,7 @@ integration:
       - ``index``
       - no
       - ``string``
-      - Index that’s being queried. If none is provided, given query
+      - Index that's being queried. If none is provided, given query
          will be applied across all indexes. To apply the search query
          to multiple indices, provide a comma separated list of indices
          (**default:** ``_all``)

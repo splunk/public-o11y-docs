@@ -1,4 +1,4 @@
-**You’re getting a “2021-10-19T20:18:40.556Z info
+**You're getting a “2021-10-19T20:18:40.556Z info
 builder/receivers_builder.go:112 Ignoring receiver as it is not used by
 any pipeline {”kind”: “receiver”, “name”: “” error message**
 

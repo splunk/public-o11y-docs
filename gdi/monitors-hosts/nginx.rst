@@ -123,7 +123,7 @@ You can configure NGINX to expose status information by editing the
 NGINX configuration. See ``ngx_http_stub_status_module`` on the NGINX
 documentation site.
 
-After you’ve set up the Collector, follow these steps to configure the
+After you've set up the Collector, follow these steps to configure the
 Nginx web server to expose status metrics:
 
 1. Add the following configuration to your Nginx server. The default

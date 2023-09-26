@@ -12,6 +12,6 @@ of these endpoints or ports:
 -  Extensions endpoint
 -  Metrics address (if port 8888)
 
-If you see this error message on Kubernetes and you’re using Helm
+If you see this error message on Kubernetes and you're using Helm
 charts, modify the configuration by updating the chart values for both
 configuration and exposed ports.

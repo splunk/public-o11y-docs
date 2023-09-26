@@ -136,7 +136,7 @@ monitor:
       - The name of a Windows service to report procstat information on.
 
 On Linux hosts, this monitor relies on the ``/proc`` file system. If the
-underlying host’s ``/proc`` file system is mounted somewhere other than
+underlying host's ``/proc`` file system is mounted somewhere other than
 ``/proc``, specify the path using the top-level configuration
 ``procPath``.
 

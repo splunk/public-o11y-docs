@@ -156,7 +156,7 @@ objects, consumer IDs or unique visitor metrics are not calculated.
 
 By default, the ``kong`` integration aggregates metrics by a context
 determined by the HTTP method of the request and by the status code of
-the response. If you’re monitoring a large infrastructure with hundreds
+the response. If you're monitoring a large infrastructure with hundreds
 of routes, grouping by HTTP method might be too granular. You can
 deactivate context grouping by setting ``aggregate_by_http_method`` to
 ``false``:

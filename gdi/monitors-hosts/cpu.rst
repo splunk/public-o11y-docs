@@ -12,7 +12,7 @@ CPU
 Configuration settings
 ----------------------
 
-If you’re still using this monitor with the Smart Agent (deprecated),
+If you're still using this monitor with the Smart Agent (deprecated),
 these are the configuration options:
 
 .. list-table::
@@ -33,7 +33,7 @@ these are the configuration options:
       - If ``true``, stats are generated for the system as a whole *as
          well as* for each individual CPU/core in the system, and are
          distinguished by the ``cpu`` dimension. If ``false``, stats are
-         only generated for the system as a whole, and don’t include a
+         only generated for the system as a whole, and don't include a
          ``cpu`` dimension. (**default:** ``false``)
 
 Metrics

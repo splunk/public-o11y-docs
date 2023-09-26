@@ -184,7 +184,7 @@ range.
 
 The following line is part of the global section of the file
 ``/etc/gitlab-runner/config.toml``. This file configures GitLab Runner.
-The following statement configures GitLab Runner’s Prometheus metrics
+The following statement configures GitLab Runner's Prometheus metrics
 HTTP server to allows network connection on port ``9252`` from any IP
 address:
 
@@ -293,7 +293,7 @@ The following table shows the configuration options for this monitor:
       - no
       - ``bool``
       - If ``useHTTPS`` is ``true`` and this option is also ``true``,
-         the exporter’s TLS cert will not be verified. The default value
+         the exporter's TLS cert will not be verified. The default value
          is ``false``.
    - 
 

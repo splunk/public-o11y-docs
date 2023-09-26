@@ -71,7 +71,7 @@ The following table shows the configuration options for this monitor:
       - no
       - ``bool``
       - If useHTTPS is ``true`` and this option is also ``true``, the
-         exporter’s TLS cert will not be verified. (**default:**
+         exporter's TLS cert will not be verified. (**default:**
          ``false``)
    - 
 

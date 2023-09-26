@@ -187,7 +187,7 @@ collectd/hadoopjmx receiver:
       - ``string``
       - The JMX connection string. Rendered as a Go template. Has access
          to the other values in this configuration. Under normal
-         circumstances, don’t set this string directly and use the host
+         circumstances, don't set this string directly and use the host
          and port settings instead. The default value is
          ``service:jmx:rmi:///jndi/rmi://{{.Host}}:{{.Port}}/jmxrmi``.
    - 

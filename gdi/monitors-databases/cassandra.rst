@@ -145,7 +145,7 @@ integration:
       - no
       - ``list of strings``
       - This array specifies a list of the MBeans defined in
-         ``mBeanDefinitions`` that you want to collect. If you don’t
+         ``mBeanDefinitions`` that you want to collect. If you don't
          provide the array, the monitor collects all defined MBeans.
    - 
 

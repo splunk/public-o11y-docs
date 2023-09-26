@@ -18,7 +18,7 @@ It supports gauge and counter metrics.
 This integration is available on Linux.
 
 This integration uses the new RLP Gateway model that was introduced in
-Pivotal Cloud Foundry (PCF) 2.4, so it doesn’t work with older releases.
+Pivotal Cloud Foundry (PCF) 2.4, so it doesn't work with older releases.
 
 Benefits
 --------
@@ -124,7 +124,7 @@ integration:
       - ``shardId``
       - no
       - ``string``
-      - The nozzle’s shard ID. All nozzle instances with the same ID
+      - The nozzle's shard ID. All nozzle instances with the same ID
          receive an exclusive subset of the data from the Firehose. The
          default should suffice in the vast majority of use cases.
          (**default:** ``signalfx_nozzle``)

@@ -11,7 +11,7 @@ The
 :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 ``docker-container-stats`` monitor type to read container stats from a
-Docker API server. Note it doesn’t currently support CPU share/quota
+Docker API server. Note it doesn't currently support CPU share/quota
 metrics.
 
 This integration is available for Kubernetes, Linux, and Windows.
@@ -31,7 +31,7 @@ Configuration
 
 ``{include} /_includes/configuration.md``
 
-If you’re using this integration with the default Docker daemon domain
+If you're using this integration with the default Docker daemon domain
 socket, you might need to add the ``splunk-otel-collector`` user to the
 ``docker`` group to have permission to access the Docker API.
 

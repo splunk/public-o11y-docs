@@ -39,7 +39,7 @@ Installation
 Authentication
 ~~~~~~~~~~~~~~
 
-If you’re monitoring a secured MongoDB deployment, create a MongoDB user
+If you're monitoring a secured MongoDB deployment, create a MongoDB user
 with minimal read-only roles, as follows:
 
 ::
@@ -121,7 +121,7 @@ monitor:
       - Yes
       - ``list of strings``
       - Name of the databases you want to monitor. The first database in
-         this list must be ``admin``, as it’s used to perform a
+         this list must be ``admin``, as it's used to perform a
          ``serverStatus()`` call.
    - 
 

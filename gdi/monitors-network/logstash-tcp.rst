@@ -194,7 +194,7 @@ type:
       - no
       - ``bool``
       - If ``true``, events received from Logstash will be dumped to the
-         agent’s stdout in deserialized form (**default:** ``false``)
+         agent's stdout in deserialized form (**default:** ``false``)
 
 Metrics
 -------

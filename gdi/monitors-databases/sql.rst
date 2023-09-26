@@ -362,13 +362,13 @@ Using metric expressions
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you need to do more complex logic than mapping columns to metric
-values and dimensions, use the ``datapointExpressions`` option that’s
+values and dimensions, use the ``datapointExpressions`` option that's
 available for individual metric configurations. Create more
 sophisticated logic to derive data points from individual rows by using
 the ``expr`` expression language. These expressions must evaluate to
 data points created by the ``GAUGE`` or ``CUMULATIVE`` helper functions
-available in the expression’s context. You can also have the expression
-evaluate to ``nil`` if you don’t need to generate a data point for a
+available in the expression's context. You can also have the expression
+evaluate to ``nil`` if you don't need to generate a data point for a
 particular row.
 
 Both the ``GAUGE`` and ``CUMULATIVE`` functions have the following
@@ -389,7 +389,7 @@ with single quotes (``''``).
 Metrics
 -------
 
-This integration doesn’t produce any metrics.
+This integration doesn't produce any metrics.
 
 Troubleshooting
 ---------------

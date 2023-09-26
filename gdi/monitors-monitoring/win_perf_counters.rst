@@ -192,7 +192,7 @@ The nested ``objects`` configuration object has the following fields:
 Metrics
 -------
 
-The Splunk Distribution of OpenTelemetry Collector doesn’t filter
+The Splunk Distribution of OpenTelemetry Collector doesn't filter
 metrics for this receiver.
 
 Troubleshooting

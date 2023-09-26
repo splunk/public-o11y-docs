@@ -225,7 +225,7 @@ The following table shows the configuration options for this monitor:
       - no
       - ``bool``
       - If ``useHTTPS`` is true and this option is also ``true``, the
-         exporter’s TLS cert is not verified. The default value is
+         exporter's TLS cert is not verified. The default value is
          ``false``.
    - 
 
@@ -234,7 +234,7 @@ The following table shows the configuration options for this monitor:
       - ``string``
       - If ``useHTTPS`` is ``true`` and ``skipVerify`` is ``true``, the
          sniServerName is used to verify the host name on the returned
-         certificates. It is also included in the client’s handshake to
+         certificates. It is also included in the client's handshake to
          support virtual hosting unless it is an IP address.
    - 
 

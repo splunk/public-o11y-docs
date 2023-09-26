@@ -11,13 +11,13 @@ The
 :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 Kubernetes API server monitor type to retrieve metrics from the API
-server’s Prometheus metric endpoint.
+server's Prometheus metric endpoint.
 
 This integration is available on Kubernetes, Linux, and Windows.
 
 This integration requires access to kube-apiserver pods to be able to
 access certain pods in the control plane. Since several
-Kubernetes-as-a-service distributions don’t expose the control plane
+Kubernetes-as-a-service distributions don't expose the control plane
 pods to the end user, metric collection might not be possible in these
 cases.
 

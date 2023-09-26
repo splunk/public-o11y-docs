@@ -12,7 +12,7 @@ Disk and partition
 Configuration settings
 ----------------------
 
-If you’re still using this monitor with the Smart Agent (deprecated),
+If you're still using this monitor with the Smart Agent (deprecated),
 these are the configuration options:
 
 The following table shows the configuration options for this monitor:

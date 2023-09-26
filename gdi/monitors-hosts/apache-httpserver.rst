@@ -169,7 +169,7 @@ The following configuration options are available for this integration:
 Apache configuration
 --------------------
 
-After you’ve set up the Collector, follow these steps to configure the
+After you've set up the Collector, follow these steps to configure the
 Apache web server to expose status metrics:
 
 1. Activate the ``mod_status`` module in your Apache server. Make sure

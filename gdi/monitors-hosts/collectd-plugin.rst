@@ -74,7 +74,7 @@ integration:
       - This option is filled in by the agent if using service
          discovery. It can be accessed in the provided configuration
          template with ``{{.Host}}``. This option is set to the hostname
-         or IP address of the discovered service. If you aren’t using
+         or IP address of the discovered service. If you aren't using
          service discovery, you can hard code the host/port in the
          configuration template and ignore these fields.
    - 

@@ -115,7 +115,7 @@ Notes
 Metrics about replication
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Replication metrics aren’t available on some PostgreSQL servers. For
+Replication metrics aren't available on some PostgreSQL servers. For
 now, this monitor automatically deactivates the ``replication`` metrics
 group if the monitor detects Aurora. This helps avoid following the
 error:

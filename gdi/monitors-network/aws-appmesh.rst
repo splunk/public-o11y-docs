@@ -81,7 +81,7 @@ Because you need to remove the prefix in metric names before metric name
 conversion, set value of the ``prefix`` field with the value of the
 ``metricPrefix`` configuration field described in the following table.
 This change causes the monitor to remove this specified prefix. If you
-don’t specify a value for the ``prefix`` field, it defaults to
+don't specify a value for the ``prefix`` field, it defaults to
 ``envoy``.
 
 To learn more, see the Envoy API reference.

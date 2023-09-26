@@ -104,7 +104,7 @@ The following table shows the configuration options for this monitor:
       - No
       - ``string``
       - URL on which to scrape Supervisor XML-RPC API. If this is not
-         provided, it’s derived from the ``host``, ``port``,
+         provided, it's derived from the ``host``, ``port``,
          ``useHTTPS``, and ``path`` options. For example,
          ``http://localhost:9001/RPC2``.
 

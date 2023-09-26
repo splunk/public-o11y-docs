@@ -26,7 +26,7 @@ Splunk APM is an Application Performance Monitoring solution that collects every
      - A special type of operation where the root span's ``span.kind = SERVER``. A given service typically has one or more endpoints associated with it.
 
    * - :ref:`environment<environment-concept>`
-     - A distinct deployment of your application that doesn’t interact directly with other deployments of the same application.  
+     - A distinct deployment of your application that doesn't interact directly with other deployments of the same application.  
 
    * - :ref:`identity<identity-concept>`
      - A unique set of indexed span tags that corresponds to a Splunk APM object. 
@@ -88,7 +88,7 @@ A special type of operation where the root span's ``span.kind = SERVER``. A give
 
 environment
 -------------
-The term “environment” refers to the deployment environment, which is a distinct deployment in Splunk APM that doesn’t interact directly with other deployments of the same application. Separate deployment environments are often used for different stages of the development process, such as development, staging, and production. For more information, see :ref:`apm-environments`. 
+The term “environment” refers to the deployment environment, which is a distinct deployment in Splunk APM that doesn't interact directly with other deployments of the same application. Separate deployment environments are often used for different stages of the development process, such as development, staging, and production. For more information, see :ref:`apm-environments`. 
 
 .. _identity-concept:
 
@@ -120,7 +120,7 @@ A specific action performed by a service. Each operation in an instrumented serv
 
 service
 --------
-A service is a small, flexible, and autonomous unit of software that connects to other services to make up a complete application. A service typically represents a collection of API endpoints and operations that work together with other services’ endpoints in a distributed and dynamic architecture to deliver the full functionality of an application. 
+A service is a small, flexible, and autonomous unit of software that connects to other services to make up a complete application. A service typically represents a collection of API endpoints and operations that work together with other services' endpoints in a distributed and dynamic architecture to deliver the full functionality of an application. 
 
 “Service” is an umbrella term that encompasses container services (e.g. Docker, Kubernetes), microservices, and even calls to serverless functions. By instrumenting each of the services that make up your application, you can collect spans that represent operations within services and traces that represent collections of operations across services, to analyze and monitor this activity in Splunk APM. 
 

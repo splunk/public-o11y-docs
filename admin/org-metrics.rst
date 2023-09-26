@@ -4,12 +4,12 @@ View organization metrics for Splunk Observability Cloud
 ========================================================
 
 Splunk Observability Cloud provides the specific metrics so you can
-measure your organization’s usage of the platform.
+measure your organization's usage of the platform.
 
 Org metrics include:
 
--  **Ingest metrics**: Measure the data you’re sending to Infrastructure
-   Monitoring, such as the number of data points you’ve sent.
+-  **Ingest metrics**: Measure the data you're sending to Infrastructure
+   Monitoring, such as the number of data points you've sent.
 
 -  **App usage metrics**: Measure your use of application features, such
    as the number of dashboards in your organization.
@@ -20,9 +20,9 @@ Org metrics include:
 
 -  **Resource metrics**: Measure your use of resources that you can
    specify limits for, such as the number of custom metric time series
-   (MTS) you’ve created.
+   (MTS) you've created.
 
-You’re not charged for these metrics, and they don’t count against any
+You're not charged for these metrics, and they don't count against any
 :ref:`system limits <per-product-limits>`
 
 .. _access-org-metrics:
@@ -30,7 +30,7 @@ You’re not charged for these metrics, and they don’t count against any
 Access organization metrics
 ---------------------------
 
-If you’re an admin, you can view some of these metrics in built-in
+If you're an admin, you can view some of these metrics in built-in
 charts on the Organization Overview page. Any user can view these
 metrics in custom charts.
 
@@ -44,7 +44,7 @@ To access the Organization Overview page, follow these steps:
 3. Select the tab for the metrics you want to view:
 
 -  Engagement: Metrics about your users and the charts, detectors,
-   dashboards, dashboard groups, and teams they’ve created.
+   dashboards, dashboard groups, and teams they've created.
 
 -  APM entitlements: For APM troubleshooting.
 
@@ -130,7 +130,7 @@ dropped:
    that can send data to your organization. **If you exceed this limit,
    Infrastructure Monitoring drops data points** for the custom MTS that
    exceeded the limit, but it continues to accept data points for custom
-   MTS that already existed. See the custom metrics you’ve defined with
+   MTS that already existed. See the custom metrics you've defined with
    ``sf.org.numCustomMetrics``.
 
    To learn more about custom MTS, see
@@ -141,7 +141,7 @@ dropped:
 
 -  ``sf.org.limit.detector`` (gauge): Maximum number of detectors that
    you can use for your organization. After you reach this limit, you
-   can’t create new detectors. To monitor the number of detectors you
+   can't create new detectors. To monitor the number of detectors you
    create, use the metric ``sf.org.num.detector``.
 
 -  ``sf.org.limit.eventsPerMinute`` (gauge): Maximum number of incoming
@@ -159,7 +159,7 @@ dropped:
    rate at which you can create new MTS in your organization, measured
    in MTS per minute. If you exceed this rate, Infrastructure Monitoring
    stops accepting data points for new MTS, but continues to accept data
-   points for existing MTS. To monitor the number of metrics you’ve
+   points for existing MTS. To monitor the number of metrics you've
    created overall, use the metric
    ``sf.org.numMetricTimeSeriesCreated``.
 
@@ -172,9 +172,9 @@ rate limits, Observability Cloud might throttle, or slow down, the data
 you send in.
 
 While org metrics whose name contains ``limit`` or ``limited`` indicate
-you’ve hit an amount limit, metrics with ``throttled`` (for example,
-``sf.org.numThrottledMetricTimeSeriesCreateCalls``) show that you’ve hit
-a rate/time limit, and therefore you won’t be able to send in more data
+you've hit an amount limit, metrics with ``throttled`` (for example,
+``sf.org.numThrottledMetricTimeSeriesCreateCalls``) show that you've hit
+a rate/time limit, and therefore you won't be able to send in more data
 points per minute.
 
 See more in :ref:`Per product system limits <per-product-limits>`
@@ -193,9 +193,9 @@ The sum of all the by token metric values for a measurement might be
 less than the total value metric value. For example, the sum, of all
 ``sf.org.numAddDatapointCallsByToken`` values might be less than the
 value of ``sf.org.numAddDatapointCalls``. The sums differ because
-Infrastructure Monitoring doesn’t use a token to retrieve data from
-cloud services you’ve integrated. Infrastructure Monitoring counts the
-data point calls for the integrated services, but it doesn’t have a way
+Infrastructure Monitoring doesn't use a token to retrieve data from
+cloud services you've integrated. Infrastructure Monitoring counts the
+data point calls for the integrated services, but it doesn't have a way
 to count the calls for any specific token.
 
 This difference in values applies to AWS CloudWatch, GCP StackDriver,
@@ -236,10 +236,10 @@ To learn more, see
 Cloud authentication error metrics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Editing a role and removing a user’s permissions to cloud services might
+Editing a role and removing a user's permissions to cloud services might
 generate authentication errors from your cloud service provider. When
-this happens, Observability Cloud integrations won’t work properly, and
-won’t be able to collect data and metadata from your services.
+this happens, Observability Cloud integrations won't work properly, and
+won't be able to collect data and metadata from your services.
 
 Observability Cloud has the following metrics to track auth errors:
 
@@ -249,11 +249,11 @@ Observability Cloud has the following metrics to track auth errors:
 
 -  ``sf.org.num.azureServiceAuthErrorCount``
 
-If you’re getting any of these errors, you need to fix your roles or
+If you're getting any of these errors, you need to fix your roles or
 tokens so Observability Cloud can retrieve your data.
 
 You can use these errors in :ref:`dashboards <dashboards>` to detect
-whether you’re experiencing this issues.
+whether you're experiencing this issues.
 
 Child org metrics
 ~~~~~~~~~~~~~~~~~

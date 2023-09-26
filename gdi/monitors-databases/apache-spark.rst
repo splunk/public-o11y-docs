@@ -80,7 +80,7 @@ section of your configuration file:
          receivers: [smartagent/collectd_spark_worker]
 
 **Note:** The names ``collectd_spark_master`` and
-``collectd_spark_worker`` are for identification purposes only and don’t
+``collectd_spark_worker`` are for identification purposes only and don't
 affect functionality. You can use either name in your configuration, but
 you need to select distinct monitor configurations and discovery rules
 for master and worker processes. For the master configuration, see the
@@ -108,7 +108,7 @@ integration:
       - no
       - ``string``
       - This option specifies the path to a Python binary that executes
-         the Python code. If you don’t set this option, the system uses
+         the Python code. If you don't set this option, the system uses
          a built-in runtime. You can also include arguments to the
          binary.
    - 
@@ -135,10 +135,10 @@ integration:
       - ``clusterType``
       - **yes**
       - ``string``
-      - Set this option to the type of cluster you’re monitoring. The
+      - Set this option to the type of cluster you're monitoring. The
          allowed values are ``Standalone``, ``Mesos`` or ``Yarn``. The
-         system doesn’t collect cluster metrics for Yarn. Use the
-         collectd/hadoop monitor to gain insights to your cluster’s
+         system doesn't collect cluster metrics for Yarn. Use the
+         collectd/hadoop monitor to gain insights to your cluster's
          health.
    - 
 

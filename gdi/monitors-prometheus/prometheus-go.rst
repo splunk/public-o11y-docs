@@ -187,9 +187,9 @@ Non-default metrics (version 4.7.0+)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To emit metrics that are not default, you can add those metrics in the
-generic receiver-level ``extraMetrics`` config option. You don’t need to
+generic receiver-level ``extraMetrics`` config option. You don't need to
 add to ``extraMetrics`` any metric derived from configuration options
-that don’t appear in the list of metrics.
+that don't appear in the list of metrics.
 
 To see a list of metrics that will be emitted you can run
 ``agent-status monitors`` after configuring the receiver in a running

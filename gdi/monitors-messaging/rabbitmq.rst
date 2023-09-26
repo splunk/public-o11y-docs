@@ -173,19 +173,19 @@ monitor:
       - ``sslCertFile``
       - No
       - ``string``
-      - Path to this monitor’s own SSL or TLS certificate.
+      - Path to this monitor's own SSL or TLS certificate.
    - 
 
       - ``sslKeyFile``
       - No
       - ``string``
-      - Path to this monitor’s private SSL or TLS key file.
+      - Path to this monitor's private SSL or TLS key file.
    - 
 
       - ``sslKeyPassphrase``
       - No
       - ``string``
-      - This monitor’s private SSL or TLS key file password, if any.
+      - This monitor's private SSL or TLS key file password, if any.
    - 
 
       - ``sslVerify``

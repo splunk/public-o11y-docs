@@ -125,7 +125,7 @@ Checker monitor:
       - ``skipSecurity``
       - no
       - ``bool``
-      - If ``true``, and ``useHTTPS`` is ``true``, the server’s SSL/TLS
+      - If ``true``, and ``useHTTPS`` is ``true``, the server's SSL/TLS
          cert will not be verified. (**default:** ``false``)
    - 
 

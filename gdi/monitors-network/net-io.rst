@@ -77,7 +77,7 @@ integration:
          ``[* !/^lo\d*$/ !/^docker.*/ !/^t(un|ap)\d*$/ !/^veth.*$/ !/^Loopback*/]``)
 
 On Linux hosts, this monitor relies on the ``/proc`` filesystem. If the
-underlying host’s ``/proc`` file system is mounted somewhere other than
+underlying host's ``/proc`` file system is mounted somewhere other than
 ``/proc``, specify the path using the top-level configuration
 ``procPath``.
 

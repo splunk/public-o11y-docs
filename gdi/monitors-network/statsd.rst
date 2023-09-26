@@ -144,7 +144,7 @@ The nested ``converters`` configuration object has the following fields:
       - A format to compose a metric name to report to Splunk
          Observability Cloud.
 
-The Smart Agent and Collector don’t do any built-in filtering of metrics
+The Smart Agent and Collector don't do any built-in filtering of metrics
 that come out of this monitor.
 
 Metrics
@@ -200,7 +200,7 @@ deactivated if ``metricName`` is not provided.
 
 Data points get a ``host`` dimension of the current host that the agent
 is running on, not the host from which the statsd metric was sent. For
-this reason, send statsd metrics to a local agent instance. If you don’t
+this reason, send statsd metrics to a local agent instance. If you don't
 want the ``host`` dimension, you can set ``disableHostDimensions: true``
 on the monitor configuration.
 

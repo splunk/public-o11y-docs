@@ -14,7 +14,7 @@ uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 vSphere API.
 
 This integration is available on Kubernetes, Linux, and Windows. You can
-install it on the same server used by vSphere if it’s running on Linux
+install it on the same server used by vSphere if it's running on Linux
 or Windows.
 
 This integration uses VMware ``govmomi`` SDK, which officially supports
@@ -130,7 +130,7 @@ monitor:
       - ``insecureSkipVerify``
       - No
       - ``bool``
-      - Controls whether a client verifies the server’s certificate
+      - Controls whether a client verifies the server's certificate
          chain and host name. The default value is ``false``.
    - 
 

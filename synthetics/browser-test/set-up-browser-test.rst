@@ -309,10 +309,10 @@ If your recording contains unsupported steps, you need to edit the step to refor
 View your Browser test
 ====================================
 
-Now that you created and saved a test, check whether it’s collecting data as expected: 
+Now that you created and saved a test, check whether it's collecting data as expected: 
 
 #. From the :guilabel:`Tests` list, select the three-dot :guilabel:`Actions` menu and select :guilabel:`Play` arrow icon to manually trigger a live run of the test, or wait for at least one duration of the test frequency you set so that the test has time to run and collect data. 
-#. Select the test you’re interested in to open the :guilabel:`Test history` view, where you can view visualizations of recent test results and metrics.
+#. Select the test you're interested in to open the :guilabel:`Test history` view, where you can view visualizations of recent test results and metrics.
 
 #. See :ref:`browser-test-results` to learn more about Browser test results. 
 

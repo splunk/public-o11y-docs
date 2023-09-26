@@ -12,7 +12,7 @@ The
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 ``collectd/kafka_consumer`` monitor type to monitor a Java-based Kafka
 consumer. It has a set of built-in MBeans to pull metrics from the Kafka
-consumer’s JMX endpoint.
+consumer's JMX endpoint.
 
 This integration is only available on Kubernetes and Linux. It requires
 Kafka version 0.9.0.0 or higher and collects metrics from the new
@@ -111,7 +111,7 @@ The following table shows the configuration options for
       - ``string``
       - The JMX connection string. Rendered as a Go template. Has access
          to the other values in this configuration. Under normal
-         circumstances, don’t set this string directly and use the host
+         circumstances, don't set this string directly and use the host
          and port settings instead. The default value is
          ``service:jmx:rmi:///jndi/rmi://{{.Host}}:{{.Port}}/jmxrmi``.
    - 

@@ -57,7 +57,7 @@ fields:
       - no
       - ``string``
       - Can be ``none`` for no auth, ``tls`` for TLS client cert auth,
-         or ``serviceAccount`` to use the pod’s default service account
+         or ``serviceAccount`` to use the pod's default service account
          token to authenticate. The default value is ``none``.
    - 
 

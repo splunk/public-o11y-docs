@@ -15,7 +15,7 @@ uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 Memory monitor type to send memory usage stats for the underlying host.
 
 On Linux hosts, this monitor type relies on the ``/proc`` file system.
-If the underlying host’s ``/proc`` file system is mounted somewhere
+If the underlying host's ``/proc`` file system is mounted somewhere
 other than ``/proc``, set the path using the top-level configuration
 ``procPath``, as shown in the following example:
 

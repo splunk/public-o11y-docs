@@ -30,7 +30,7 @@ A span is considered an error span when any of the following conditions are met:
 
 * The span's ``span.status``, set via OpenTelemetry instrumentation, is ``Error``. See the OpenTelemetry :new-page:`Tracing API specification <https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#set-status>` to learn more about the ``span.status``. 
 * The span's ``error`` tag is set to a truthy value, which is any value other than ``False`` or ``0``. 
-* The value of the span’s ``http.status_code`` tag is set to a ``5xx`` error code. See :ref:`apm-http-status` to learn more.
+* The value of the span's ``http.status_code`` tag is set to a ``5xx`` error code. See :ref:`apm-http-status` to learn more.
  
 Error counting in Splunk APM is based on the OpenTelemetry specification. See :new-page:`OpenTelemetry's Tracing API specification <https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#set-status>` on GitHub to learn more about the OpenTelemetry standard.
 
@@ -65,7 +65,7 @@ How are error spans counted in MetricSets?
 
 To generate endpoint-level Monitoring MetricSets, Splunk APM turns endpoint spans, which are spans with ``span.kind = SERVER`` or ``span.kind = CONSUMER``, into error metric data. If a span is considered an error per the Error rules in Splunk APM, that span counts towards errors in the Monitoring MetricSet for the endpoint associated with that span.
 
-Service-level Monitoring MetricSets are based on the number of error spans in each of the service’s endpoints.
+Service-level Monitoring MetricSets are based on the number of error spans in each of the service's endpoints.
 
 Server-side and client-side error counting
 --------------------------------------------
@@ -120,9 +120,9 @@ Count ``4xx`` status codes as errors
 
 By default, Splunk APM does not count server-side spans with ``4xx`` status codes as errors, because a ``4xx`` status code is often associated with a problem with the request itself, rather than a problem with the service handling a request.
 
-For example, if a user makes a request to ``endpoint/that/does/not/exist``, the ``404`` status code the service returns does not mean there's a problem with the service. Instead, it means there was a problem with the request, which is trying to call an endpoint that does not actually exist. Similarly, if a user tries to access a resource they don’t have access to, the service might return a ``401`` status code, which is typically not the result of an error on the server side.
+For example, if a user makes a request to ``endpoint/that/does/not/exist``, the ``404`` status code the service returns does not mean there's a problem with the service. Instead, it means there was a problem with the request, which is trying to call an endpoint that does not actually exist. Similarly, if a user tries to access a resource they don't have access to, the service might return a ``401`` status code, which is typically not the result of an error on the server side.
 
-However, depending on your application’s logic, a ``4xx`` status code might actually represent a meaningful error, particularly for client-side requests. To monitor for ``4xx`` errors, try doing the following: 
+However, depending on your application's logic, a ``4xx`` status code might actually represent a meaningful error, particularly for client-side requests. To monitor for ``4xx`` errors, try doing the following: 
 
 * Break down performance by HTTP status code span tags, if available. See :ref:`alert-401s` to learn more. 
 * Customize your instrumentation to set the ``span.status`` of spans with meaningful ``4xx`` status codes to ``Error``.
@@ -135,7 +135,7 @@ Example scenario: Alert on the rate of ``401`` errors for a service
 For example, if Kai wanted to alert on the rate of ``401`` errors returned by a given service, they would do the following:
 
 1. Index ``http.status_code``. See :ref:`apm-index-span-tags`.
-2. Create a custom Monitoring MetricSet on ``http.status_code`` for the service’s endpoints to get a time series for each status code. See :ref:`cmms`.
+2. Create a custom Monitoring MetricSet on ``http.status_code`` for the service's endpoints to get a time series for each status code. See :ref:`cmms`.
 3. Set up an alert on the rate of ``401`` errors as compared to all requests. See :ref:`apm-alerts`.
 
 .. _5xx-error-logic:

@@ -38,12 +38,12 @@ joined by an OR clause.
 Navigate your data
 ~~~~~~~~~~~~~~~~~~
 
-Whether you’re using the Smart Agent or the Collector, your original
+Whether you're using the Smart Agent or the Collector, your original
 dashboards and detectors function the same way.
 
 -  Infrastructure Navigator views use the mapping service to show both
    old collection data and new collection data.
--  After you’ve migrated to the Collector, see
+-  After you've migrated to the Collector, see
    :ref:`metrics-finder-and-metadata-catalog` to learn how to use
    the Metric Finder and Metadata Catalog to find, view, and edit
    information about the metadata in your system.
@@ -127,7 +127,7 @@ happen, for example, when an MTS attempts to correlate with a
 time-shifted or transformed version of itself.
 
 If you have charts and detectors built from formulas whose terms use
-different agents, you won’t get the alerts you expect.
+different agents, you won't get the alerts you expect.
 
 To resolve this issue, explicitly filter or group by dimensions so that
 Mapping Service renames the fields in all the MTS in the job to match
@@ -153,7 +153,7 @@ Team information
 
 The migration impact report extracts information from your dataset about
 stakeholders, meaning the people who created object types or are
-affected by changes to them because they’re on email lists of employees
+affected by changes to them because they're on email lists of employees
 to be notified in the event of, for example, a detector being triggered
 by a critical alert condition.
 
@@ -185,7 +185,7 @@ Conflicting semantics
 ^^^^^^^^^^^^^^^^^^^^^
 
 If you emit 2 or more metrics which could be mapped to one another, the
-system won’t be able to distinguish them and it might cause various
+system won't be able to distinguish them and it might cause various
 side-effects such as duplicated alerts or inconsistent dimensions in
 results.
 
@@ -207,7 +207,7 @@ MTSs.
 The same rule applies to querying in charts and detectors, where you are
 expected to only query by the OpenTelemetry semantics or by legacy
 semantics within the same ``data()`` invocation, regardless of the
-metrics you’re querying are aligned with legacy or OpenTelemetry
+metrics you're querying are aligned with legacy or OpenTelemetry
 semantics. In this situation Observability Cloud might produce
 duplicated MTSs from non-duplicated ingested data. For example, this
 might happen if you write a query such as

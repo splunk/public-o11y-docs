@@ -20,7 +20,7 @@ expose cAdvisor on a network port, even though they are running it
 within Kubelet.
 
 If you are running containers with Docker, retrieved metrics might
-overlap with ``docker-container-stats``\ ’. Consider not enabling the
+overlap with ``docker-container-stats``\ '. Consider not enabling the
 Docker monitor in a Kubernetes environment, or else use filtering to
 allow only certain metrics. This will cause the built-in Docker
 dashboards to be blank, but container metrics will be available on the

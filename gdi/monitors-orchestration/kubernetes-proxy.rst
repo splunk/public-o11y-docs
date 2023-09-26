@@ -215,7 +215,7 @@ Configuration settings
       - ``string``
       - If useHTTPS is true and skipVerify is true, the sniServerName is
          used to verify the hostname on the returned certificates. It is
-         also included in the client’s handshake to support virtual
+         also included in the client's handshake to support virtual
          hosting unless it is an IP address.
    - 
 

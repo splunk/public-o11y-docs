@@ -29,7 +29,7 @@ This is a more flexible alternative to the
          more, see :ref:`enable_automatic_metric_collection`
 
 You can use the following utility helpers in the Groovy script within
-the ``util`` variable, which is set in the script’s context:
+the ``util`` variable, which is set in the script's context:
 
 -  ``util.queryJMX(String objectName)``: This helper queries the
    configured JMX application for the given ``objectName``, which can
@@ -63,8 +63,8 @@ data to Splunk Observability Cloud. It contains the following methods:
 -  ``output.sendDatapoints(List<DataPoint> dp)``: Emit the given data
    points to SignalFx. We recommend using the
    ``util.make[Gauge|Cumulative]`` helpers to create the ``DataPoint``
-   instance. It’s slightly more efficient to send multiple data points
-   at once, but this doesn’t matter that much unless you’re sending very
+   instance. It's slightly more efficient to send multiple data points
+   at once, but this doesn't matter that much unless you're sending very
    high volumes of data.
 
 Benefits

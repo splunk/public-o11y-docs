@@ -37,7 +37,7 @@ Refine a search by entering more search terms or by adding filters. You can add 
      - :strong:`Notes`
 
    * - :strong:`.`
-     - Enter in a dot (.) in the search bar to see a list of possible completions for the prefix you’ve already searched.
+     - Enter in a dot (.) in the search bar to see a list of possible completions for the prefix you've already searched.
    * - :strong:`:`
      - Enter in the name of a dimension or property followed by (:), to see a list of possible values for that key in your data.
    * - :strong:`*` 
@@ -114,9 +114,9 @@ Custom categories help you quickly find metrics related to commonly used dimensi
 
 When you select a custom category value or integration, a key-value pair is added as a search filter, and a metric search is run.
 
-If there are more than a few values for a custom category, you can select :guilabel:`Show more` to see the first 100 results. If you don’t see the value that you’re looking for in the longer list, you can enter it in the search field to return more relevant search results.
+If there are more than a few values for a custom category, you can select :guilabel:`Show more` to see the first 100 results. If you don't see the value that you're looking for in the longer list, you can enter it in the search field to return more relevant search results.
 
-Use custom categories to browse for metrics using features that are unique to your organization’s data, like custom tags or properties. If you use custom metrics, you can set up custom categories to surface key dimensions from your data to help your user get started. Administrators can add custom categories.
+Use custom categories to browse for metrics using features that are unique to your organization's data, like custom tags or properties. If you use custom metrics, you can set up custom categories to surface key dimensions from your data to help your user get started. Administrators can add custom categories.
 
 To display dimensions and properties as custom categories on the Metrics page, select :guilabel:`Add custom categories`. Select :guilabel:`Save and close` when you finish adding categories. The custom categories you added are available for use on the Metrics page. Selecting :guilabel:`Edit` lets you add, delete, or update existing custom categories.
 

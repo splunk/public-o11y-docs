@@ -45,7 +45,7 @@ Follow these steps to deploy this integration:
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your
    host or container platform.
 
-   By default the Collector is installed in the namespace you’re logged
+   By default the Collector is installed in the namespace you're logged
    into. To deploy the Collector into a different namespace, use the
    ``--namespace`` flag to indicate where to place the Collector in.
 
@@ -155,21 +155,21 @@ fields:
       - ``clientCertPath``
       - no
       - ``string``
-      - The path to the TLS client cert on the pod’s filesystem, if
+      - The path to the TLS client cert on the pod's filesystem, if
          using ``tls`` auth.
    - 
 
       - ``clientKeyPath``
       - no
       - ``string``
-      - The path to the TLS client key on the pod’s filesystem, if using
+      - The path to the TLS client key on the pod's filesystem, if using
          ``tls`` auth.
    - 
 
       - ``caCertPath``
       - no
       - ``string``
-      - Path to a CA certificate to use when verifying the API server’s
+      - Path to a CA certificate to use when verifying the API server's
          TLS cert. Generally, this is provided by Kubernetes alongside
          the service account token, which is picked up automatically, so
          this should rarely be necessary to specify.

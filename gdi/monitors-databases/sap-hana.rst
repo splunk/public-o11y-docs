@@ -92,7 +92,7 @@ integration:
       - ``insecureSkipVerify``
       - no
       - ``bool``
-      - Controls whether a client verifies the server’s certificate
+      - Controls whether a client verifies the server's certificate
          chain and host name. The default value is ``false``.
    - 
 

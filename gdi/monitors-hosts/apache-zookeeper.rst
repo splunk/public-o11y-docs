@@ -74,7 +74,7 @@ Zookeeper monitor:
       - no
       - ``string``
       - This string contains a path to a python binary that you want to
-         use to execute the Python code. If you don’t set it, the system
+         use to execute the Python code. If you don't set it, the system
          uses a built-in runtime will be used. The string can include
          arguments to the binary.
    - 

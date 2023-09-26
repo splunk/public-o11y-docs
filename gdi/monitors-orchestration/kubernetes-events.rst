@@ -188,14 +188,14 @@ The **nested** ``kubernetesAPI`` config object has the following fields:
       - ``clientCertPath``
       - no
       - ``string``
-      - The path to the TLS client certificate on the pod’s filesystem,
+      - The path to the TLS client certificate on the pod's filesystem,
          if using ``tls`` authentication.
    - 
 
       - ``clientKeyPath``
       - no
       - ``string``
-      - The path to the TLS client key on the pod’s filesystem, if using
+      - The path to the TLS client key on the pod's filesystem, if using
          ``tls`` authentication.
    - 
 
