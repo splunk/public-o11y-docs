@@ -62,55 +62,72 @@ To determine if a gRPC span counts towards the error rate for a service, the Spl
    * - :strong:`Error type`
      - :strong:`Server-side spans` ``span.kind = SERVER``
      - :strong:`Client-side spans` ``span.kind = CLIENT``
-   * - OK
+   * - 0 
+     - OK
      - unset
      - unset
-   * - CANCELLED
+   * - 1
+     - CANCELLED
      - unset
      - ERROR
-   * - UNKNOWN
+   * - 2
+     - UNKNOWN
      - ERROR
      - ERROR
-   * - INVALID_ARGUMENT
+   * - 3
+     - INVALID_ARGUMENT
      - unset
      - ERROR
-   * - DEADLINE_EXCEEDED
+   * - 4
+     - DEADLINE_EXCEEDED
      - ERROR
      - ERROR
-   * - NOT_FOUND
+   * - 5
+     -  NOT_FOUND
      - unset
      - ERROR
-   * - ALREADY_EXISTS
+   * - 6
+     - ALREADY_EXISTS
      - unset
      - ERROR
-   * - PERMISSION_DENIED
+   * - 7
+     - PERMISSION_DENIED
      - unset
      - ERROR
-   * - RESOURCE_EXHAUSTED
+   * - 8 
+     -  RESOURCE_EXHAUSTED
      - unset
      - ERROR
-   * - FAILED_PRECONDITION
+   * - 9
+     - FAILED_PRECONDITION
      - unset
      - ERROR
-   * - ABORTED
+   * - 10
+     - ABORTED
      - unset
      - ERROR
-   * - OUT_OF_RANGE
+   * - 11 
+     - OUT_OF_RANGE
      - unset
      - ERROR
-   * - UNIMPLEMENTED
+   * - 12
+     - UNIMPLEMENTED
      - ERROR
      - ERROR
-   * - INTERNAL
+   * - 13
+     - INTERNAL
      - ERROR
      - ERROR
-   * - UNAVAILABLE
+   * - 14
+     - UNAVAILABLE
      - ERROR
      - ERROR
-   * - DATA_LOSS
+   * - 15
+     - DATA_LOSS
      - ERROR
      - ERROR
-   * - UNAUTHENTICATED
+   * - 16
+     - UNAUTHENTICATED
      - unset
      - ERROR
 
