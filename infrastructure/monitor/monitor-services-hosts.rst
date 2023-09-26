@@ -51,7 +51,7 @@ Displayed data: Traffic considerations
 
 * Information is displayed only if data is streamed in. If there's no data coming in from a stream for more than 3 hours, that stream stops being counted in Observability Cloud. 
     
-    - Kubernetes monitoring holds tiles in a disabled state until it goes inactive, which happens 25 hours after the last data point is received.
+    - Kubernetes monitoring holds tiles in a deactivated state until it goes inactive, which happens 25 hours after the last data point is received.
 * Some metrics, like those related to CPU utilization, are always reported. Observability Cloud uses these metrics on the Navigator summary page.
 * A few metrics are not sent continuously. For example, metrics related to the number of errors are only sent when errors happen.  
     

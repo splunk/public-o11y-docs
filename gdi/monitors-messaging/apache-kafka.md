@@ -68,7 +68,7 @@ The following table shows the configuration options for this monitor:
 | `customDimensions` | no | `map of strings` | Takes in key-value pairs of custom dimensions at the connection level. |
 | `mBeansToCollect` | no | `list of strings` | A list of the MBeans defined in `mBeanDefinitions` to actually collect. If not provided, then all defined MBeans will be collected. |
 | `mBeansToOmit` | no | `list of strings` | A list of the MBeans to omit. This will come in handy in cases where only a few MBeans need to be omitted from the default list.|
-| `mBeanDefinitions` | no | `map of objects (see below)` | Specifies how to map JMX MBean values to metrics.  If using a specific service monitor such as Cassandra, Kafka, or ActiveMQ, they come pre-loaded with a set of mappings, and any that you add in this option will be merged with those.  See [GenericJMX](https://collectd.org/documentation/manpages/collectd-java.5.shtml#genericjmx_plugin) for more details. |
+| `mBeanDefinitions` | no | `map of objects (see below)` | Specifies how to map JMX MBean values to metrics.  If using a specific service monitor such as Cassandra, Kafka, or ActiveMQ, they come pre-loaded with a set of mappings, and any that you add in this option will be merged with those.  See <a class="external" href="https://collectd.org/documentation/manpages/collectd-java.5.shtml#genericjmx_plugin" target="_blank">GenericJMX</a> for more details. |
 | `clusterName` | **yes** | `string` | Cluster name to which the broker belongs |. 
 
 
@@ -98,7 +98,7 @@ The **nested** `values` configuration object has the following fields:
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/kafka/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/collectd/kafka/metadata.yaml"></div>  
 
 ### Notes
 

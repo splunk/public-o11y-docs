@@ -3,7 +3,7 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Marathon monitor. See benefits, install, configuration, and metrics">
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Mesos Marathon monitor type to monitor a Mesos Marathon instance using the [Marathon Python plugin](https://github.com/signalfx/signalfx-agent/blob/main/docs/monitors/collectd-marathon.md).
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Mesos Marathon monitor type to monitor a Mesos Marathon instance using the <a class="external" href="https://github.com/signalfx/signalfx-agent/blob/main/docs/monitors/collectd-marathon.md" target="_blank">Marathon Python plugin</a>.
 
 This integration is only available on Kubernetes and Linux.
 
@@ -61,7 +61,7 @@ The following table shows the configuration options for the Mesos Marathon monit
 The following metrics are available for this integration:
 
 <!--- using type="marathon" adds a duplicate, non-table-formatted list of metrics at the bottom -->
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/marathon/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/collectd/marathon/metadata.yaml"></div>
 
 ### Notes
 

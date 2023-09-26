@@ -13,73 +13,6 @@ Metrics are data points identified by a name, and metadata is information that h
 
 To learn more about logs and AWS, see :ref:`get-started-logs`.
 
-.. _aws-data:
-
-About AWS data 
-=============================================================================
-
-See the AWS official documentation for a list of the available AWS metrics and other data, or see :ref:`the metadatada Observability Cloud provides <aws-infra-metadata>` for AWS.
-
-By default, Observability Cloud brings in data from all :ref:`supported AWS services <aws-integrations>` associated with your account, with :ref:`certain limitations <aws-data-limits>`. To manage the amount of data to import, see :ref:`specify-data-metadata`.
-
-.. _aws-namespaces:
-
-AWS namespaces
--------------------------------------------------------------------
-
-Infrastructure Monitoring imports AWS namespace metadata using the dimension ``namespace``. For most AWS services, the namespace name has the form ``"AWS/<NAME_OF_SERVICE>"``, such as "AWS/EC2" or "AWS/ELB". To select a metric time series (MTS) for an AWS metric when the metric has the same name for more than one service, such as ``CPUUtilization``, use the ``namespace`` dimension as a filter.
-
-To control the amount of data you import, specify the namespaces you want to import as well as the data you want to import or exclude from each namespace. For more information, see :ref:`specify-data-metadata`.
-
-.. _aws-unique-id:
-
-Uniquely identifying AWS instances
--------------------------------------------------------------------
-
-The AWS instance ID is not a unique identifier. To uniquely identify an AWS instance, you need to concatenate the ``instanceId``, ``region``, and ``accountID`` dimension values, separated by underscores "\_", as shown in the following example:
-
-``instanceId_region_accountID``
-
-To construct the identifier manually, first get the specified values for each of your instances. For example, you can
-use the following ``cURL`` command:
-
-.. code-block:: none
-
-   curl http://<INSTANCE_URL>/latest/dynamic/instance-identity/document
-
-Here's an example JSON response from the ``cURL`` command:
-
-.. code-block:: json
-
-   {
-      "devpayProductCodes" : null,
-      "privateIp" : "10.1.15.204",
-      "availabilityZone" : "us-east-1a",
-      "version" : "2010-08-31",
-      "accountId" : "134183635603",
-      "instanceId" : "i-a99f9802",
-      "billingProducts" : null,
-      "instanceType" : "c3.2xlarge",
-      "pendingTime" : "2015-09-02T16:45:40Z",
-      "imageId" : "ami-2ef44746",
-      "kernelId" : null,
-      "ramdiskId" : null,
-      "architecture" : "x86_64",
-      "region" : "us-east-1"
-   }
-
-From the response, copy the values for ``instanceId``, ``region``, and ``accountId``, then concatenate them with
-underscores as separators.
-
-Use the resulting string identifier as the value for the ``sfxdim\_AWSUniqueId`` dimension.
-
-.. _sfx-aws-metrics:
-
-Organization metrics related to AWS
--------------------------------------------------------------------
-
-Infrastructure Monitoring also sends a set of metrics for AWS related to errors and service calls for your organization. These metrics all start with ``sf.org.num.aws``. For more information, see :new-page:`Usage metrics for Splunk Observability Cloud <https://quickdraw.splunk.com/redirect/?product=Observability&location=userdocs.infrastructure.aws.organization.metrics&version=current>`.
-
 .. _aws-import-cloudwatch:
 .. _cloudwatch-metric-sync:
 .. _cloudwatch-agent:
@@ -185,7 +118,7 @@ Infrastructure Monitoring also imports metrics, metadata, and logs for some of y
 Specify and limit the data and metadata to import
 =============================================================================
 
-By default, Observability Cloud imports metrics from all built-in AWS namespaces (corresponding to these :ref:`AWS services <aws-integrations>`), and optionally from custom namespaces. 
+By default, Observability Cloud imports metrics from all built-in AWS namespaces, corresponding to these :ref:`AWS services <aws-integrations>`. Optionally, you can add custom namespaces. 
 
 To limit the amount of AWS data to import, reduce the number of namespaces to pull data from. 
 
@@ -258,7 +191,7 @@ When you remove a namespace, Infrastructure Monitoring no longer includes metric
 Example: Filter AWS data using tags
 --------------------------------------------------------------------------------
 
-You can filter AWS data using AWS tags, but only with namespaces for which Infrastructure Monitoring syncs tags. For more information, see :ref:`aws-namespaces`. For example, if you use Detailed Monitoring for EC2 instances in AWS, Infrastructure Monitoring imports the following dimensions:
+You can filter AWS data using AWS tags, only if Observability Cloud syncs tags for those AWS namespaces. For example, if you use Detailed Monitoring for EC2 instances in AWS, Infrastructure Monitoring imports the following dimensions:
 
 * ``AutoScalingGroupName``
 * ``ImageId``

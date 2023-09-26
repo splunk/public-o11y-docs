@@ -7,9 +7,9 @@ Private locations
 .. meta::
     :description: Learn about private locations in Splunk Synthetic Monitoring.
 
-A private location is a software package that offers a quick and easy deployment of Splunk Synthetic Monitoring solutions beyond the public network so that you can find, fix, and prevent web performance defects on any internal web application, in any environment - whether inside or outside of your firewalls. private locations allow Splunk Synthetics Monitoring users to test sooner in the development cycle and against internal sites or applications that aren't available to the public.
+A private location is a software package that offers a quick and easy deployment of Splunk Synthetic Monitoring solutions beyond the public network so that you can find, fix, and prevent web performance defects on any internal web application, in any environment - whether inside or outside of your firewalls. Private locations allow Splunk Synthetics Monitoring users to test sooner in the development cycle and against internal sites or applications that aren't available to the public.
 
-Customers can, through the Splunk Synthetics Monitoring web interface, create new private locations and open a runner to perform any checks assigned to them.
+Customers can, through the Splunk Synthetics Monitoring web interface, create new private locations and open a runner to run any checks assigned to them.
 
 What is a runner?
 ===================
@@ -68,7 +68,7 @@ Follow these steps to set up a new private location:
 
 1. In Splunk Synthetic Monitoring, select the settings gear icon, then :guilabel:`Private locations`.  
 2. Select :guilabel:`+ Add` and add a name. 
-3. Follow the steps in the wizard to set up your runner. 
+3. Follow the steps in the guided setup to set up your runner. 
 4. Save your private location. 
 
 
@@ -112,10 +112,6 @@ Follow these steps to limit logging:
 #. Restart your docker service: ``sudo systemctl docker.service restart``.
 
 
-Deactivate network shaping for your private runner 
-------------------------------------------------------
-Launch your Docker container with the following environment variable: ``-e "DISABLE_NETWORK_SHAPING=true"``.
-
 
 Adding certificates in Synthetics
 ------------------------------------------------------
@@ -132,7 +128,7 @@ For example, here is what a command might look like after you modify it to fit y
 
 .. code:: yaml
 
-  docker run -e "DISABLE_NETWORK_SHAPING=true" -e "RUNNER_TOKEN=<insert-token>" --volume=`pwd`/certs:/usr/local/share/ca-certificates/my_certs/ quay.io/signalfx/splunk-synthetics-runner:latest bash -c "sudo update-ca-certificates && bundle exec bin/start_runner"
+    docker run -e "RUNNER_TOKEN=<insert-token>" --volume=`pwd`/certs:/usr/local/share/ca-certificates/my_certs/ quay.io/signalfx/splunk-synthetics-runner:latest bash -c "sudo update-ca-certificates && bundle exec bin/start_runner"
 
 
 
@@ -158,7 +154,7 @@ A private location's health depends on three factors:
     - If you need to delete a private location, you need to first delete it from all tests.
   * - Clear queue
     - The queue for a given location is being cleared periodically and is not backed up.
-    - If the queue is backed up, add new runner(s) to the private location.
+    - If the queue is backed up, add new runners to the private location.
 
 Troubleshoot queue length and latency
 ---------------------------------------------------
@@ -170,7 +166,7 @@ If your queue latency increases but your queue length doesn’t, then try these 
 * Check to see if a step is delaying the rest of the test
 * Investigate whether you have the sufficient resources to run private location runners on your machines.
 
-The maximum number of runners in a queue is 100,000. 
+The maximum number of runs in a queue is 100,000. 
 
 Any runners older than one hour are removed from the queue. 
 

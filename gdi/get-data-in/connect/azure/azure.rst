@@ -89,6 +89,7 @@ Set your subscription permissions:
   #. On the :guilabel:`Add role assignment page`, perform the following steps:
       * From the :guilabel:`Role` drop-down list, select :menuselection:`Monitoring Reader`.
       * Leave the :guilabel:`Assign access to` drop-down list unchanged.
+      * Go to :guilabel:`Select member`.
       * In the :guilabel:`Select` text box, start entering the name of the Azure application you just created. The Azure portal automatically suggests names as you type. Enter the application name, and :guilabel:`Save`.
 
 Repeat these steps for each subscription you want to monitor.

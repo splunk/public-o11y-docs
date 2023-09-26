@@ -214,11 +214,11 @@ service:
 
 ### Condiguration options
 
-See the [configuration example](https://github.com/signalfx/splunk-otel-collector/tree/main/examples) in GitHub for specific use cases that show how the Splunk Distribution of OpenTelemetry Collector can integrate and complement existing environments.
+See the <a class="external" href="https://github.com/signalfx/splunk-otel-collector/tree/main/examples" target="_blank">configuration example</a> in GitHub for specific use cases that show how the Splunk Distribution of OpenTelemetry Collector can integrate and complement existing environments.
 
-For Kubernetes, see the [kubernetes.yaml](https://github.com/signalfx/splunk-otel-collector/tree/main/examples/kubernetes-yaml) in GitHub for the Agent and Gateway YAML files.
+For Kubernetes, see the <a class="external" href="https://github.com/signalfx/splunk-otel-collector/tree/main/examples/kubernetes-yaml" target="_blank">kubernetes.yaml</a> in GitHub for the Agent and Gateway YAML files.
 
-For Prometheus, see [Prometheus Federation Endpoint Example](https://github.com/signalfx/splunk-otel-collector/tree/main/examples/prometheus-federation) in GitHub for an example of how the OTel Collector works with Splunk Enterprise and an existing Prometheus deployment.
+For Prometheus, see <a class="external" href="https://github.com/signalfx/splunk-otel-collector/tree/main/examples/prometheus-federation" target="_blank">Prometheus Federation Endpoint Example</a> in GitHub for an example of how the OTel Collector works with Splunk Enterprise and an existing Prometheus deployment.
 
 ### Configuration settings
 

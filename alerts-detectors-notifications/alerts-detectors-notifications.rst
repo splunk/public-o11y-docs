@@ -79,6 +79,26 @@ The interaction between detectors, events, alerts, and notifications is as follo
 
 -  When the condition clears, the detector generates a second event and sends a second set of notifications.
 
+The following diagram illustrates the relationship between detectors and alerts. 
+The boxes represent objects relating to the detector, and the diamonds represent processes relating to the detector.
+
+.. mermaid:: 
+  
+  flowchart LR
+      subgraph Detector
+      Signal --> A{Alert condition met?}
+      B[Alert rule] --> A
+      end
+      A -- yes --> D{Detector triggered}
+      A -- no --> E{Detector not triggered}
+      D --> Alert
+      D --> Event
+      D -.-> F["Notifications (optional)"]
+    
+
+What you can do with alerts and detectors
+==================================================
+
 The following table shows you what you can do with detectors, events, alerts, and notifications:
 
 
@@ -120,4 +140,3 @@ The following table shows you what you can do with detectors, events, alerts, an
      - :ref:`linking-detectors`
 
 
-|br|

@@ -11,7 +11,7 @@ Use the Splunk Universal Forwarder with the Collector
 Splunk Enterprise Cloud and Splunk Observability Cloud currently use different data collection agents:
 
 - Enterprise Cloud uses the :new-page:`Splunk Universal Forwarder (UF) <https://docs.splunk.com/Documentation/Forwarder>` to capture logs and some metrics, which are also stored as logs.
-- Splunk Observability Cloud uses OpenTelemetry to capture traces, metrics, and logs. Logs are currently captured through bundled Fluentd.
+- Splunk Observability Cloud uses OpenTelemetry to capture traces, metrics, and logs. Logs are captured using Fluentd, which is deactivated by default.
 
 You can manage your data ingestion manually by deploying the Splunk Distribution of OpenTelemetry Collector alongside the UF on each virtual machine (VM).This solution is applicable for VM environments for operating systems that are currently supported by both Splunk Observability Cloud and Enterprise and Cloud, running in common environments such as AWS EC2, GCE, Azure VMs, and VMWare.
 
@@ -38,16 +38,16 @@ To collect data with the Collector and the UF:
 
 #. Configure each agent using the default configuration files:
 
-    * Configure the Collector in :new-page:`Agent <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml>` or :new-page:`Gateway <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/gateway_config.yaml>` mode.
+    * Configure the Collector in :new-page:`host monitoring (agent) <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml>` or :new-page:`data forwarding (gateway) <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/gateway_config.yaml>` mode.
 
     * Configure the :new-page:`UF <https://docs.splunk.com/Documentation/Forwarder/latest/Forwarder/Configuretheuniversalforwarder>`.
 
-#. Run the following command to skip installation of Fluentd and the plugins and dependencies for the Collector:
+#. Run the following command to install the Collector:
 
    .. code-block:: bash
 
       curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
-      sudo sh /tmp/splunk-otel-collector.sh --realm SPLUNK_REALM -- SPLUNK_ACCESS_TOKEN --without-fluentd
+      sudo sh /tmp/splunk-otel-collector.sh --realm SPLUNK_REALM -- SPLUNK_ACCESS_TOKEN 
 
 #. Ensure that the UF captures the fully qualified domain name (FQDN) of the host, which is used to identify hosts in Splunk Observability Cloud. The UF can already capture this, and its behavior is consistent with the Collector. To capture the FQDN:
 

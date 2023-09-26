@@ -65,7 +65,7 @@ You can configure NGINX to expose status information by editing the NGINX config
 
 After you've set up the Collector, follow these steps to configure the Nginx web server to expose status metrics:
 
-1. Add the following configuration to your Nginx server:
+1. Add the following configuration to your Nginx server. The default nginx server configuration is at /etc/nginx/sites-enabled/default.
 
    ```
    server {
