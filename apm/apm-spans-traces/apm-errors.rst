@@ -16,7 +16,7 @@ How error spans are detected
 
 Each :term:`span` in Splunk APM captures a single operation. Splunk APM considers a span an error span if the operation that the span captures results in an error. A span is considered an error span when any of the following conditions are met: 
 
-* The ``otel.status_code`` field for the span is ``ERROR``. ``otel.status_code`` is set in Splunk Distribution of the OpenTelemetry Collector using the native OTel field ``span.status``. ``span.status`` and subsequently, ``otel.status_code``, are set based on either the HTTP status code or the gRPC status code.
+* The ``otel.status_code`` field for the span is ``ERROR``. ``otel.status_code`` is set in Splunk Distribution of the OpenTelemetry instrumentation using the native OTel field ``span.status``. ``span.status`` and subsequently, ``otel.status_code``, are set based on either the HTTP status code or the gRPC status code.
   
    * See :ref:`apm-http-status` to learn which ``http.status_code`` tag values set ``otel.status_code`` to ``ERROR`` in the OpenTelemetry instrumentation.
    * See :ref:`apm-grpc-status` to learn which ``rpc.grpc.status_code`` tag values set ``otel.status_code`` to ``ERROR`` in the OpenTelemetry instrumentation.
