@@ -88,12 +88,16 @@ Kubernetes
 
 The Collector for Kubernetes has different deployment options. You can configure them using the ``enabled`` field in their respective Helm value mappings. See :ref:`otel-kubernetes-config-advanced` for information on how to access your configuration yaml. 
 
-The available options are:
+The main deployment modes are:
 
-* Agent-only, with an agent deamonset 
-* All modes on, which includes a Gateway and ``clusterReceiver`` deployments 
+* Default, which includes the agent deamonset and the ``clusterReceiver`` deployment.
+* All collector modes, which includes agent deamonset, and ``clusterReceiver`` deployment, and the gateway deployment.
+* Network explorer deployment mode, which uses the ``networkExplorer.kernelCollector`` daemonset and ``networkExplorer.k8sCollector`` config. See more in :ref:`network-explorer-setup`.
 
-There's also the ``networkExplorer.kernelCollector`` daemonset and ``networkExplorer.k8sCollector`` deployment. See more in :ref:`network-explorer-setup`.
+For more information on the components on each mode, see :ref:`helm-chart-components`.
+
+Change the deployment mode in a Kubernetes environment
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you want to change the Collector mode, deploy a new Helm chart with the desired configuration to override the existing config. See :new-page:`Rolling update deployment <https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#rolling-update-deployment>` in the official Kubernetes documentation.
 
