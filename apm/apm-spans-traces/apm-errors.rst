@@ -136,7 +136,7 @@ See the OpenTelemetry specification for information on the handling of gRPC stat
 
 .. _metricset-errors:
 
-How error spans counted in MetricSets
+How error spans are counted in MetricSets
 ============================================
 
 To generate endpoint-level Monitoring MetricSets, Splunk APM turns endpoint spans, which are spans with ``span.kind = SERVER`` or ``span.kind = CONSUMER``, into error metric data. If a span is considered an error per the Error rules in Splunk APM, that span counts towards errors in the Monitoring MetricSet for the endpoint associated with that span.
