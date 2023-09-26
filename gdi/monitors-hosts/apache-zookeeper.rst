@@ -1,4 +1,4 @@
-(zookeeper)=
+.. _zookeeper:
 
 Apache Zookeeper
 ================

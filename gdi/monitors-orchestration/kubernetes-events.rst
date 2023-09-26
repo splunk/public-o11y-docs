@@ -1,4 +1,4 @@
-(kubernetes-events)=
+.. _kubernetes-events:
 
 Kubernetes events
 =================

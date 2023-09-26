@@ -1,4 +1,4 @@
-(filesystems)=
+.. _filesystems:
 
 Free disk space (filesystems)
 =============================

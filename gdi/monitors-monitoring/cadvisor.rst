@@ -1,4 +1,4 @@
-(cadvisor)=
+.. _cadvisor:
 
 cAdvisor
 ========

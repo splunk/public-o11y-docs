@@ -1,4 +1,4 @@
-(kafka-consumer)=
+.. _kafka-consumer:
 
 Kafka consumer
 ==============

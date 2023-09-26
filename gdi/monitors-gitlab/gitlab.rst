@@ -1,4 +1,4 @@
-(gitlab)=
+.. _gitlab:
 
 GitLab
 ======

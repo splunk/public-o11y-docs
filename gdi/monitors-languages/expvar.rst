@@ -1,4 +1,4 @@
-(expvar)=
+.. _expvar:
 
 Expvar (Go)
 ===========

@@ -1,4 +1,4 @@
-(hadoopjmx)=
+.. _hadoopjmx:
 
 Hadoop JMX
 ==========

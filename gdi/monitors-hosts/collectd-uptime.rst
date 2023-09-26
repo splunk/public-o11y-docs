@@ -1,4 +1,4 @@
-(collectd-uptime)=
+.. _collectd-uptime:
 
 Collectd uptime
 ===============

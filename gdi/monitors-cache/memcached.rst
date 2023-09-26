@@ -1,4 +1,4 @@
-(memcached)= # Memcached
+.. _memcached: # Memcached
 
 .. raw:: html
 

@@ -1,4 +1,4 @@
-(prometheus-nginx-ingress)=
+.. _prometheus-nginx-ingress:
 
 Prometheus NGINX Ingress
 ========================

@@ -1,4 +1,4 @@
-(mysql)= # MySQL
+.. _mysql: # MySQL
 
 .. raw:: html
 

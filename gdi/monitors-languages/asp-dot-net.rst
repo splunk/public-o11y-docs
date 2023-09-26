@@ -1,4 +1,4 @@
-(asp-dot-net)=
+.. _asp-dot-net:
 
 ASP.NET
 =======

@@ -1,4 +1,4 @@
-(telegraf-ntpq)=
+.. _telegraf-ntpq:
 
 NTPQ
 ====

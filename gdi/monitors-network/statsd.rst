@@ -1,4 +1,4 @@
-(statsd)=
+.. _statsd:
 
 Statsd
 ======

@@ -1,4 +1,4 @@
-(collectd-df)=
+.. _collectd-df:
 
 Collectd df
 ===========

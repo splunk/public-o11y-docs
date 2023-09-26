@@ -1,4 +1,4 @@
-(amazon-ecs-metadata)=
+.. _amazon-ecs-metadata:
 
 Amazon ECS Task Metadata endpoint
 =================================

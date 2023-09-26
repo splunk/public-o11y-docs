@@ -1,4 +1,4 @@
-(ntp)=
+.. _ntp:
 
 NTP server
 ==========

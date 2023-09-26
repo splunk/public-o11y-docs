@@ -1,4 +1,4 @@
-(java-monitor)=
+.. _java-monitor:
 
 Java metrics
 ============

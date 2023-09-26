@@ -1,4 +1,4 @@
-(opcache)=
+.. _opcache:
 
 OPcache
 =======

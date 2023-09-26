@@ -1,4 +1,4 @@
-(vsphere)=
+.. _vsphere:
 
 VMware vSphere
 ==============

@@ -1,4 +1,4 @@
-(hana)=
+.. _hana:
 
 SAP HANA
 ========

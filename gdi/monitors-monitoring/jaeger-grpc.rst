@@ -1,4 +1,4 @@
-(jaeger-grpc)=
+.. _jaeger-grpc:
 
 Jaeger gRPC
 ===========

@@ -1,4 +1,4 @@
-(disk)=
+.. _disk:
 
 Disk and partition
 ==================

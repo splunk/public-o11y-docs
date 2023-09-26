@@ -1,4 +1,4 @@
-(postgresql)=
+.. _postgresql:
 
 PostgreSQL
 ==========

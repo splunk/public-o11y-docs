@@ -1,4 +1,4 @@
-(cloudfoundry-firehose-nozzle)=
+.. _cloudfoundry-firehose-nozzle:
 
 Cloud Foundry Loggregator Firehose
 ==================================

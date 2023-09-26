@@ -1,4 +1,4 @@
-(appmesh)=
+.. _appmesh:
 
 AWS AppMesh Envoy Proxy
 =======================

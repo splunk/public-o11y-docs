@@ -1,4 +1,4 @@
-(activemq)=
+.. _activemq:
 
 Apache ActiveMQ
 ===============

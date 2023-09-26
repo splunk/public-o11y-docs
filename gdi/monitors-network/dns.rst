@@ -1,4 +1,4 @@
-(dns)=
+.. _dns:
 
 DNS Query Input
 ===============

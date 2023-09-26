@@ -1,4 +1,4 @@
-(hadoop)= # Hadoop
+.. _hadoop: # Hadoop
 
 .. raw:: html
 

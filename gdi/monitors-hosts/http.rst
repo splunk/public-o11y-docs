@@ -1,4 +1,4 @@
-(http)=
+.. _http:
 
 HTTP
 ====

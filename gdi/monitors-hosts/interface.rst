@@ -1,4 +1,4 @@
-(interface)=
+.. _interface:
 
 Interface traffic (deprecated)
 ==============================

@@ -1,4 +1,4 @@
-(apache-tomcat)=
+.. _apache-tomcat:
 
 Apache Tomcat
 =============

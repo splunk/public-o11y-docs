@@ -1,4 +1,4 @@
-(genericjmx)=
+.. _genericjmx:
 
 GenericJMX
 ==========

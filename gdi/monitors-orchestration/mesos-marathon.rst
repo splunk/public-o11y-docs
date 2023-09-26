@@ -1,4 +1,4 @@
-(marathon)= # Mesos Marathon
+.. _marathon: # Mesos Marathon
 
 .. raw:: html
 

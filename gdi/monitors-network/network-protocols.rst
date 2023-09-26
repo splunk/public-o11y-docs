@@ -1,4 +1,4 @@
-(protocols)=
+.. _protocols:
 
 Network protocols
 =================

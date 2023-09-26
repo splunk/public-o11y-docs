@@ -1,4 +1,4 @@
-(snmp)=
+.. _snmp:
 
 SNMP agent
 ==========

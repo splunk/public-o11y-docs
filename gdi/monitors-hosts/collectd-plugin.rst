@@ -1,4 +1,4 @@
-(collectd-plugin)=
+.. _collectd-plugin:
 
 Collectd custom plugin
 ======================

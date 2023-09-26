@@ -1,4 +1,4 @@
-(kubernetes-scheduler)=
+.. _kubernetes-scheduler:
 
 Kubernetes scheduler
 ====================

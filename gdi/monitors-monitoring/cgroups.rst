@@ -1,4 +1,4 @@
-(cgroups)=
+.. _cgroups:
 
 cgroups
 =======

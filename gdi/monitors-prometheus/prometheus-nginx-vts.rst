@@ -1,4 +1,4 @@
-(prometheus-nginx-vts)=
+.. _prometheus-nginx-vts:
 
 Prometheus NGINX VTS
 ====================

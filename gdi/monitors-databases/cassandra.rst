@@ -1,4 +1,4 @@
-(cassandra)=
+.. _cassandra:
 
 Cassandra
 =========

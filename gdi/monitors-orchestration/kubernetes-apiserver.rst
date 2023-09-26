@@ -1,4 +1,4 @@
-(kubernetes-apiserver)=
+.. _kubernetes-apiserver:
 
 Kubernetes API server
 =====================

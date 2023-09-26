@@ -1,4 +1,4 @@
-(processlist)=
+.. _processlist:
 
 Host process list
 =================

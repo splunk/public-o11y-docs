@@ -1,4 +1,4 @@
-(legacy-otel-mappings)=
+.. _legacy-otel-mappings:
 
 Mapping service and migration impact report
 ===========================================

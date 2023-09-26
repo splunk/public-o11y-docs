@@ -1,4 +1,4 @@
-(openstack)=
+.. _openstack:
 
 OpenStack
 =========

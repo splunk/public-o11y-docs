@@ -1,4 +1,4 @@
-(kafka-producer)=
+.. _kafka-producer:
 
 Kafka producer
 ==============

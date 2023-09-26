@@ -1,4 +1,4 @@
-(chrony)=
+.. _chrony:
 
 Chrony NTP
 ==========

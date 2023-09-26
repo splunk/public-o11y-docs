@@ -1,4 +1,4 @@
-(rabbitmq)=
+.. _rabbitmq:
 
 RabbitMQ
 ========

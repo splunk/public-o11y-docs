@@ -1,4 +1,4 @@
-(processes)=
+.. _processes:
 
 Host processes
 ==============

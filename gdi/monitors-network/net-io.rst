@@ -1,4 +1,4 @@
-(net-io)=
+.. _net-io:
 
 Network interface I/O
 =====================

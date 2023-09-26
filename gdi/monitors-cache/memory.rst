@@ -1,4 +1,4 @@
-(memory)=
+.. _memory:
 
 Memory usage
 ============

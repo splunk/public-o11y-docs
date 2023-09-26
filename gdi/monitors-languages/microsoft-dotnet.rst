@@ -1,4 +1,4 @@
-(microsoft-dotnet)=
+.. _microsoft-dotnet:
 
 Microsoft .NET
 ==============

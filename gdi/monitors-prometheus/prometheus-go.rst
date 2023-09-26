@@ -1,4 +1,4 @@
-(prometheus-go)=
+.. _prometheus-go:
 
 Prometheus Go
 =============

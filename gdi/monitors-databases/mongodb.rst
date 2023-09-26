@@ -1,4 +1,4 @@
-(mongodb)= # MongoDB
+.. _mongodb: # MongoDB
 
 .. raw:: html
 

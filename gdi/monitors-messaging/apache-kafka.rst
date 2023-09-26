@@ -1,4 +1,4 @@
-(kafka)=
+.. _kafka:
 
 Apache Kafka
 ============

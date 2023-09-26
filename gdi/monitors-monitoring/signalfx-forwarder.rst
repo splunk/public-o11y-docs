@@ -1,4 +1,4 @@
-(signalfx-forwarder)=
+.. _signalfx-forwarder:
 
 SignalFx Forwarder
 ==================

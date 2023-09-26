@@ -1,4 +1,4 @@
-(kubernetes-proxy)=
+.. _kubernetes-proxy:
 
 Kubernetes proxy
 ================

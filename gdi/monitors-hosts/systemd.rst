@@ -1,4 +1,4 @@
-(collectd-systemd)=
+.. _collectd-systemd:
 
 systemd
 =======

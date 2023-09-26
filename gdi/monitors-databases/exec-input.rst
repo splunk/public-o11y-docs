@@ -1,4 +1,4 @@
-(exec-input)=
+.. _exec-input:
 
 Exec Input
 ==========

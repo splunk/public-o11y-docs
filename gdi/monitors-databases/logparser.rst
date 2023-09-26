@@ -1,4 +1,4 @@
-(telegraf-logparser)=
+.. _telegraf-logparser:
 
 Logparser
 =========

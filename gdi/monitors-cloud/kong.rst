@@ -1,4 +1,4 @@
-(kong)=
+.. _kong:
 
 Kong Gateway
 ============

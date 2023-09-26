@@ -1,4 +1,4 @@
-(openshift-cluster)=
+.. _openshift-cluster:
 
 OpenShift cluster
 =================

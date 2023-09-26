@@ -1,4 +1,4 @@
-(elasticsearch)=
+.. _elasticsearch:
 
 Elasticsearch stats
 ===================

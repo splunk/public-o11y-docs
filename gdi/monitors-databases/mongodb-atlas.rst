@@ -1,4 +1,4 @@
-(mongodb-atlas)=
+.. _mongodb-atlas:
 
 MongoDB Atlas (deprecated)
 ==========================

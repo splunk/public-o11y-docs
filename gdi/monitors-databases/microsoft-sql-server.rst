@@ -1,4 +1,4 @@
-(microsoft-sql-server)=
+.. _microsoft-sql-server:
 
 Microsoft SQL Server
 ====================

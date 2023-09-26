@@ -13,7 +13,7 @@ these tips:
 
    -  Available to Splunk Observability Cloud customers
 
--  Ask a question and get answers through community support at Splunk
+-  Send a question and get answers through community support at Splunk
    Answers.
 
    -  Available to Splunk Observability Cloud customers and free trial

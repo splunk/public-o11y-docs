@@ -1,4 +1,4 @@
-(procstat)=
+.. _procstat:
 
 procstat
 ========

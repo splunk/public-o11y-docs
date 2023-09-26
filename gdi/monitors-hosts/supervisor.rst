@@ -1,4 +1,4 @@
-(supervisor)=
+.. _supervisor:
 
 Supervisor
 ==========

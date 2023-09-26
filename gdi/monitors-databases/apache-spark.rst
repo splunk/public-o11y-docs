@@ -1,4 +1,4 @@
-(spark)=
+.. _spark:
 
 Apache Spark
 ============

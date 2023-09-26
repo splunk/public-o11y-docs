@@ -1,4 +1,4 @@
-(consul)=
+.. _consul:
 
 Consul datastore
 ================

@@ -1,4 +1,4 @@
-(jenkins)=
+.. _jenkins:
 
 Jenkins
 =======

@@ -1,4 +1,4 @@
-(prometheus-exporter)=
+.. _prometheus-exporter:
 
 Prometheus Exporter
 ===================

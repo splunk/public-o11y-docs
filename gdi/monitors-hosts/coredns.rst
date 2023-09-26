@@ -1,4 +1,4 @@
-(coredns)=
+.. _coredns:
 
 CoreDNS
 =======

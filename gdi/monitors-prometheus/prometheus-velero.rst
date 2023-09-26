@@ -1,4 +1,4 @@
-(prometheus-velero)=
+.. _prometheus-velero:
 
 Prometheus Velero
 =================

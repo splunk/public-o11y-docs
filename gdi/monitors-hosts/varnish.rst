@@ -1,4 +1,4 @@
-(telegraf-varnish)=
+.. _telegraf-varnish:
 
 Varnish
 =======

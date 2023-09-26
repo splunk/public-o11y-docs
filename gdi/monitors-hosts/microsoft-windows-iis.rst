@@ -1,4 +1,4 @@
-(windows-iis)=
+.. _windows-iis:
 
 Microsoft Windows IIS
 =====================

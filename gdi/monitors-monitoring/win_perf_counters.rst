@@ -1,4 +1,4 @@
-(telegraf-win-perf-counters)=
+.. _telegraf-win-perf-counters:
 
 Windows Performance Counters
 ============================

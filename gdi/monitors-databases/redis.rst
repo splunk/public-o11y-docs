@@ -1,4 +1,4 @@
-(redis)=
+.. _redis:
 
 Redis
 =====

@@ -1,4 +1,4 @@
-(prometheus-node)=
+.. _prometheus-node:
 
 Prometheus Node
 ===============

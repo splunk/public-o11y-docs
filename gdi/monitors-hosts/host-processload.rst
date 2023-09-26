@@ -1,4 +1,4 @@
-(load)=
+.. _load:
 
 Host process load
 =================

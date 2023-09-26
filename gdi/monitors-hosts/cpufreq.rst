@@ -1,4 +1,4 @@
-(cpufreq)=
+.. _cpufreq:
 
 CPUFreq
 =======

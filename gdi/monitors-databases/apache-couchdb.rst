@@ -1,4 +1,4 @@
-(apache-couchdb)=
+.. _apache-couchdb:
 
 Apache CouchDB
 ==============

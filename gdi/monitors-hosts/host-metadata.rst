@@ -1,4 +1,4 @@
-(host-metadata)=
+.. _host-metadata:
 
 Host metadata properties
 ========================

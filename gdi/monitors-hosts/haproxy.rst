@@ -1,4 +1,4 @@
-(haproxy)=
+.. _haproxy:
 
 HAProxy
 =======

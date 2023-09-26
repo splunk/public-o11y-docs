@@ -1,4 +1,4 @@
-(logstash-tcp)=
+.. _logstash-tcp:
 
 Logstash TCP
 ============

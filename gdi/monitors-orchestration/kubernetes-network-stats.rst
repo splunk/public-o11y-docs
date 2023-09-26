@@ -1,4 +1,4 @@
-(kubelet-stats)=
+.. _kubelet-stats:
 
 Kubernetes network stats (deprecated)
 =====================================

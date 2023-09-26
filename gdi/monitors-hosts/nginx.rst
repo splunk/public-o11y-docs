@@ -1,4 +1,4 @@
-(nginx)=
+.. _nginx:
 
 NGINX
 =====

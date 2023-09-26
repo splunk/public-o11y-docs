@@ -1,4 +1,4 @@
-(apache-httpserver)=
+.. _apache-httpserver:
 
 Apache HTTP Server
 ==================

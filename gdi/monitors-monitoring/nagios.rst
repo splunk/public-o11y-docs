@@ -1,4 +1,4 @@
-(nagios)=
+.. _nagios:
 
 Nagios
 ======

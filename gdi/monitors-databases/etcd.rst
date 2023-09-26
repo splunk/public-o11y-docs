@@ -1,4 +1,4 @@
-(etcd)=
+.. _etcd:
 
 etcd server
 ===========

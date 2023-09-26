@@ -12,14 +12,14 @@ dimensions.
 
 For example:
 
-::
+.. code-block:: yaml
 
    service:
      pipelines:
        logs:
          receivers:
            - smartagent/<receiver>
-   # Adds the Resource Detection processor to the logs pipeline.        
+   # Adds the Resource Detection processor to the logs pipeline.
          processors:
            - resourcedetection
          exporters:

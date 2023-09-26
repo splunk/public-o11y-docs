@@ -1,4 +1,4 @@
-(telegraf-win-services)=
+.. _telegraf-win-services:
 
 Windows Services
 ================

@@ -1,4 +1,4 @@
-(elasticsearch-query)=
+.. _elasticsearch-query:
 
 Elasticsearch query
 ===================

@@ -1,4 +1,4 @@
-(conviva)=
+.. _conviva:
 
 Conviva Real-Time/Live video play
 =================================

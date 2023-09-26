@@ -1,4 +1,4 @@
-(health-checker)=
+.. _health-checker:
 
 Health Checker
 ==============

@@ -1,4 +1,4 @@
-(heroku)=
+.. _heroku:
 
 Heroku
 ======

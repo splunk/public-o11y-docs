@@ -1,4 +1,4 @@
-(collectd-php-fpm)=
+.. _collectd-php-fpm:
 
 PHP FPM
 =======

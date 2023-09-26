@@ -1,4 +1,4 @@
-(solr)=
+.. _solr:
 
 SolrCloud
 =========

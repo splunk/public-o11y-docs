@@ -1,4 +1,4 @@
-(couchbase)=
+.. _couchbase:
 
 Couchbase server
 ================

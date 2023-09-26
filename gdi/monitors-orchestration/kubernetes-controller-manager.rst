@@ -1,4 +1,4 @@
-(kube-controller-manager)=
+.. _kube-controller-manager:
 
 Kubernetes Controller Manager (deprecated)
 ==========================================
