@@ -25,6 +25,7 @@ To activate additional Prometheus receivers, add a new ``prometheus`` entry in t
 
 .. code-block:: yaml
 
+
    receivers:
      prometheus:
        config:
@@ -58,6 +59,7 @@ The following is an example of a basic scrape configuration:
 
 .. code-block:: yaml
 
+
    receivers:
      prometheus:
        config:
@@ -88,6 +90,7 @@ The following is an example of a basic scrape configuration:
 To use environment variables in the Prometheus receiver configuration, use the ``${<var>}`` syntax. For example:
 
 .. code-block:: yaml
+
 
    prometheus:
      config:

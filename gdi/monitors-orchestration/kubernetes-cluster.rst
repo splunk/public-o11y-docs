@@ -13,7 +13,7 @@ Cluster Receiver \` for more information.
 If you are using OpenShift, use the ``openshift-cluster`` monitor type
 instead.
 
-::
+.. code-block:: yaml
 
 
    ## Configuration settings

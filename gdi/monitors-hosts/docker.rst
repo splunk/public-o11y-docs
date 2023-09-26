@@ -45,7 +45,7 @@ Example
 To activate this integration, add the following to your Collector
 configuration:
 
-::
+.. code-block:: yaml
 
    receivers:
      smartagent/docker-container-stats:
@@ -55,7 +55,7 @@ configuration:
 Next, add the monitor to the ``service.pipelines.metrics.receivers``
 section of your configuration file:
 
-::
+.. code-block:: yaml
 
    service:
     pipelines:
@@ -179,7 +179,7 @@ Protocol not available error
 If you get the following error message when configuring the monitor on a
 Windows host:
 
-::
+.. code-block:: yaml
 
    Error: Error initializing Docker client: protocol not available
 

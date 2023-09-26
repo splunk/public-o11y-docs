@@ -35,6 +35,7 @@ The following example shows how to give a ServiceAccount the necessary permissio
 
 .. code-block:: yaml
 
+
    apiVersion: v1
    kind: ServiceAccount
    metadata:
@@ -135,6 +136,7 @@ To automatically filter pods by the node the processors is running on, configure
 
 .. code-block:: yaml
 
+
    spec:
      containers:
      - env:
@@ -148,6 +150,7 @@ Then, set the ``filter.node_from_env_var`` field to the name of the environment 
 
 .. code-block:: yaml
 
+
    k8sattributes:
      filter:
        node_from_env_var: KUBE_NODE_NAME
@@ -160,6 +163,7 @@ The processor can't resolve the IP address of the pods that emit telemetry data 
 To forward IP addresses to gateways, configure the Collectors in host monitoring (agent) mode to run in passthrough mode. This ensures that agents detect IP addresses and pass them as an attribute attached to all telemetry resources.
 
 .. code-block:: yaml
+
 
    k8sattributes:
      passthrough: true
@@ -185,6 +189,7 @@ The following attributes are added by default:
 You can change this list by adding a ``metadata`` section. For example:
 
 .. code-block:: yaml
+
 
    k8sattributes:
      auth_type: "serviceAccount"
@@ -226,6 +231,7 @@ Each association is a list of sources. Sources contain rules. The processor exec
 
 .. code-block:: yaml
 
+
    pod_association:
     # List of associations
      - sources:
@@ -245,6 +251,7 @@ Each source rule consists of a pair of ``from`` and ``name`` statements, represe
 The following example shows the two type of ``from`` source statements in pod association rules:
 
 .. code-block:: yaml
+
 
    pod_association:
      - sources:
@@ -276,6 +283,7 @@ The processor extracts annotations and labels from pods and namespaces and adds 
 For example:
 
 .. code-block:: yaml
+
 
    annotations:
    # Extracts value of annotation from pods with key `annotation-one`

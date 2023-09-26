@@ -32,6 +32,7 @@ See :ref:`zipkin-receiver-settings` for more details.
 
 .. code-block:: yaml
 
+
   receivers:
     zipkin:
       endpoint: 0.0.0.0:9412

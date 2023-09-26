@@ -163,7 +163,7 @@ Monitor the length of Redis lists
 To monitor the length of list keys, you must specify the key and
 database index in the configuration using the following syntax:
 
-::
+.. code-block:: yaml
 
    sendListLengths: [{databaseIndex: $db_index, keyPattern: "$key_name"}]
 

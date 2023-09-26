@@ -37,7 +37,7 @@ Deploy with Helm
 To activate this monitor with the Helm chart, include this argument with
 the helm install command:
 
-::
+.. code-block:: yaml
 
    -set splunkObservability.infrastructureMonitoringEventsEnabled='true'
 
@@ -46,7 +46,7 @@ Deploy without Helm
 
 To deploy without Helm, include the following in the OTel configuration:
 
-::
+.. code-block:: yaml
 
    processors:
      resource/add_event_k8s:
@@ -84,7 +84,7 @@ Example
 To activate this integration, add the following to your Collector
 configuration:
 
-::
+.. code-block:: yaml
 
    receivers:
       smartagent/kubernetes-events:
@@ -94,7 +94,7 @@ configuration:
 Next, add the monitor to the ``service.pipelines.metrics.receivers``
 section of your configuration file:
 
-::
+.. code-block:: yaml
 
    services:
      logs/events:
@@ -104,7 +104,7 @@ section of your configuration file:
 Lastly, configure which events to send. You can see the types of events
 happening in your cluster with the following command:
 
-::
+.. code-block:: yaml
 
    kubectl get events -o yaml --all-namespaces
 
@@ -231,7 +231,7 @@ following fields:
 
 Example YAML configuration:
 
-::
+.. code-block:: yaml
 
    receivers:
       smartagent/kubernetes-events:

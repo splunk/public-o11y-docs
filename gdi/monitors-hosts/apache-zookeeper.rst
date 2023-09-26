@@ -35,7 +35,7 @@ Example
 To activate this integration, add the following to your Collector
 configuration:
 
-::
+.. code-block:: yaml
 
    receivers:
    smartagent/zookeeper:
@@ -45,7 +45,7 @@ configuration:
 Next, add the monitor to the ``service.pipelines.metrics.receivers``
 section of your configuration file:
 
-::
+.. code-block:: yaml
 
    service:
      pipelines:

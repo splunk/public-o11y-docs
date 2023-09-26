@@ -39,6 +39,7 @@ To activate the receiver creator receiver, add the desired extensions to the ``e
 
 .. code-block:: yaml
 
+
    extensions:
       # Configures the Kubernetes observer to watch for pod start and stop events.
       k8s_observer:
@@ -82,6 +83,7 @@ The following example shows how to configure the receiver creator using the Dock
 
 .. code-block:: yaml
 
+
    extensions:
      docker_observer:
        # Default is unix:///var/run/docker.sock
@@ -111,6 +113,7 @@ Kubernetes observer example
 The following example shows how to configure the receiver creator using the Kubernetes observer:
 
 .. code-block:: yaml
+
 
    extensions:
      k8s_observer:

@@ -29,7 +29,7 @@ Example
 To activate this monitor in the Splunk Distribution of OpenTelemetry
 Collector, add the following to your agent configuration:
 
-::
+.. code-block:: yaml
 
     receivers:
       smartagent/logstash:
@@ -39,7 +39,7 @@ Collector, add the following to your agent configuration:
 Next, add the monitor to the ``service.pipelines.metrics.receivers``
 section of your configuration file:
 
-::
+.. code-block:: yaml
 
    service:
      pipelines:

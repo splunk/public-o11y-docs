@@ -41,7 +41,7 @@ Example
 To activate this integration, add the following to your Collector
 configuration:
 
-::
+.. code-block:: yaml
 
    receivers:
      smartagent/cloudfoundry-firehose-nozzle
@@ -51,7 +51,7 @@ configuration:
 Next, add the monitor to the ``service.pipelines.metrics.receivers``
 section of your configuration file:
 
-::
+.. code-block:: yaml
 
    service:
      pipelines:
@@ -140,7 +140,7 @@ To create Cloud Foundry User Account and Authentication (UAA) user with
 the proper permissions to access the RLP Gateway, run the following
 command:
 
-::
+.. code-block:: yaml
 
    $ uaac client add my-v2-nozzle \
        --name signalfx-nozzle \

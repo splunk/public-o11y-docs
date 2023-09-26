@@ -33,7 +33,7 @@ Microsoft SQL Server host. To create this login, follow these steps:
 2. Start an SQL client.
 3. Enter the following commands:
 
-::
+.. code-block:: yaml
 
    USE master;
    GO
@@ -55,7 +55,7 @@ Example
 To activate this integration, add the following to your Collector
 configuration:
 
-::
+.. code-block:: yaml
 
    receivers:
      smartagent/sqlserver:
@@ -65,7 +65,7 @@ configuration:
 Next, add the monitor to the ``service.pipelines.metrics.receivers``
 section of your configuration file:
 
-::
+.. code-block:: yaml
 
    service:
      pipelines:

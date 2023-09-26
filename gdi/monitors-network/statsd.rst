@@ -37,7 +37,7 @@ To verify the installation, send statsd metrics locally with ``netcat``
 as follows, then verify in Splunk Observability Cloud that the metric
 arrived:
 
-::
+.. code-block:: yaml
 
    $ echo "statsd.test:1|g" | nc -w 1 -u 127.0.0.1 8125
 

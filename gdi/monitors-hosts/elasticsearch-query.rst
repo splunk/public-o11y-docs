@@ -59,7 +59,7 @@ Example: avg metric aggregation
 ``avg`` metric aggregation as a sub-aggregation of ``terms`` bucket
 aggregation:
 
-::
+.. code-block:: yaml
 
    ```json
    {
@@ -87,7 +87,7 @@ data oint as the ``metric_aggregation_type`` dimension.
 For instance, the ``json`` below provides 4 data points, each with a
 different value for ``host``:
 
-::
+.. code-block:: yaml
 
    ```json
    "aggregations" : {
@@ -134,7 +134,7 @@ Example: extended_stats metric aggregation
 ``extended_stats`` metric aggregation as a sub-aggregation of ``terms``
 bucket aggregation
 
-::
+.. code-block:: yaml
 
    ```json
    {
@@ -210,7 +210,7 @@ bucket aggregation
 
 In this case, each bucket outputs 5 metrics:
 
-::
+.. code-block:: yaml
 
    1. `cpu_usage_stats.count`
    2. `cpu_usage_stats.min`
@@ -236,7 +236,7 @@ Example
 To activate this integration, add the following to your Collector
 configuration:
 
-::
+.. code-block:: yaml
 
    receivers:
      smartagent/elasticsearch-query: 
@@ -246,7 +246,7 @@ configuration:
 Next, add the monitor to the ``service.pipelines.metrics.receivers``
 section of your configuration file:
 
-::
+.. code-block:: yaml
 
    service:
      pipelines:

@@ -85,11 +85,13 @@ Run the following command to deploy the Collector using the deployment.yaml file
 
 .. code-block:: yaml
 
+
    bosh -d splunk-otel-collector deploy deployment.yaml
 
 The following is an example deployment.yaml file:
 
 .. code-block:: yaml
+
 
    name: splunk-otel-collector
 
@@ -139,6 +141,7 @@ The following is an example deployment.yaml file:
 To include a custom Collector configuration for the deployment, use a custom configuration file, as shown in the following example:
 
 .. code-block:: yaml
+
 
    name: splunk-otel-collector
 

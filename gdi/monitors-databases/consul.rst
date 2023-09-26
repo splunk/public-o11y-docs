@@ -48,7 +48,7 @@ Example
 To activate this integration, add the following to your Collector
 configuration:
 
-::
+.. code-block:: yaml
 
    receivers:
      smartagent/consul:
@@ -58,7 +58,7 @@ configuration:
 Next, add the monitor to the ``service.pipelines.metrics.receivers``
 section of your configuration file:
 
-::
+.. code-block:: yaml
 
    service:
      pipelines:
@@ -73,7 +73,7 @@ each Consul agent you want to monitor to send metrics to the
 OpenTelemetry Collector. To do so, add the following configuration to
 each Consul agent configuration file:
 
-::
+.. code-block:: yaml
 
    {"telemetry":
       {"statsd_address": "<agent host>:<agent port, default 8125>"}

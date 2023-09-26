@@ -276,7 +276,9 @@ to find your org metrics.
 
 Observability Cloud provides the following organization metrics:
 
-.. container:: metrics-yaml
+.. raw:: html
+
+   <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/signalfx-org-metrics/metrics.yaml"></div>
 
 Troubleshooting
 ---------------

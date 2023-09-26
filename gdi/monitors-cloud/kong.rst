@@ -98,7 +98,7 @@ configuration:
 Next, add the monitor to the ``service.pipelines.metrics.receivers``
 section of your configuration file:
 
-::
+.. code-block:: yaml
 
    service:
      pipelines:
@@ -111,7 +111,7 @@ Filter example
 The following is a sample configuration with custom ``/signalfx`` route
 and filter lists:
 
-::
+.. code-block:: yaml
 
    receivers:
      smartagent/kong:

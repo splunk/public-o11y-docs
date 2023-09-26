@@ -83,7 +83,7 @@ Configuration
 To activate this integration, add the following to your Collector
 configuration:
 
-::
+.. code-block:: yaml
 
    receivers:
      smartagent/apache:
@@ -94,7 +94,7 @@ Additional configuration options include host or port, as shown below.
 If ``mod_status`` is exposed on an endpoint other than ``/mod_status``,
 you can use the url config option to specify the path:
 
-::
+.. code-block:: yaml
 
        type: collectd/apache
        host: localhost
@@ -104,7 +104,7 @@ you can use the url config option to specify the path:
 Next, add the monitor to the ``service.pipelines.metrics.receivers``
 section of your configuration file:
 
-::
+.. code-block:: yaml
 
    service:
      pipelines:

@@ -40,7 +40,7 @@ Install the following PHP script on your PHP web server:
 
 The following is an example using NGINX:
 
-::
+.. code-block:: yaml
 
    location ~ /monitoring/.*\.php$ {
        #access_log off;

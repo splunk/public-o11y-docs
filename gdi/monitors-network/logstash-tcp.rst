@@ -39,7 +39,7 @@ Configuration
 To activate this integration, add the following to your Collector
 configuration:
 
-::
+.. code-block:: yaml
 
    receivers:
      smartagent/logstash-tcp:
@@ -49,7 +49,7 @@ configuration:
 Next, add the monitor to the ``service.pipelines.metrics.receivers``
 section of your configuration file:
 
-::
+.. code-block:: yaml
 
    service:
      pipelines:
@@ -62,7 +62,7 @@ Example: Logstash Metrics plugin configuration
 The following example shows how to use both ``timer`` and ``meter``
 metrics from the Logstash Metrics filter plugin:
 
-::
+.. code-block:: yaml
 
    input {
      file {

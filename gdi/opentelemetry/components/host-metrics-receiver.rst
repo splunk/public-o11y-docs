@@ -51,6 +51,7 @@ The host metrics receiver collects metrics from the Linux system directories. To
 
    .. code-block:: yaml
 
+
       receivers:
       hostmetrics:
          root_path: /hostfs

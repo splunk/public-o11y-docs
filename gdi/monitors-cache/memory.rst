@@ -19,7 +19,7 @@ If the underlying host's ``/proc`` file system is mounted somewhere
 other than ``/proc``, set the path using the top-level configuration
 ``procPath``, as shown in the following example:
 
-::
+.. code-block:: yaml
 
    procPath: /proc
 
@@ -46,7 +46,7 @@ Example
 To activate this integration, add the following to your Collector
 configuration:
 
-::
+.. code-block:: yaml
 
    monitors:
      smartagent/collectd/memory: 
@@ -56,7 +56,7 @@ configuration:
 Next, add the monitor to the ``service.pipelines.metrics.receivers``
 section of your configuration file:
 
-::
+.. code-block:: yaml
 
    service:
      pipelines:

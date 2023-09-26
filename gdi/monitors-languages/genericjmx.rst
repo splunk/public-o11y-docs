@@ -322,7 +322,7 @@ The following Java properties show how to expose JMX ports to inbound
 connections. For more information, see Monitoring and Management Using
 JMX Technology in the Java documentation.
 
-::
+.. code-block:: yaml
 
    java \
      -Dcom.sun.management.jmxremote.port=5000 \
@@ -343,7 +343,7 @@ their meanings:
 Connection Refused
 ~~~~~~~~~~~~~~~~~~
 
-::
+.. code-block:: yaml
 
    java \
      -Dcom.sun.management.jmxremote.port=5000 \
@@ -361,7 +361,7 @@ might not be listening on localhost only.
 RMI Connection Issues
 ~~~~~~~~~~~~~~~~~~~~~
 
-::
+.. code-block:: yaml
 
    Creating MBean server connection failed: java.rmi.ConnectException: Connection refused to host: 172.17.0.3; nested exception is:
         java.net.ConnectException: Connection timed out (Connection timed out)

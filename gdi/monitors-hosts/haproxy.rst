@@ -27,7 +27,7 @@ Socket configuration
 The location of the HAProxy socket file is defined in the HAProxy
 configuration file, as shown in the following example:
 
-::
+.. code-block:: yaml
 
    global
        daemon
@@ -41,7 +41,7 @@ socket. For example, you can use
 the stats socket to use the same TCP address and port, as shown in the
 following example:
 
-::
+.. code-block:: yaml
 
    global
        daemon
@@ -61,7 +61,7 @@ To use a more restricted TCP socket, follow these steps:
 The following configuration file shows how to define a back-end server
 and a frontend proxy:
 
-::
+.. code-block:: yaml
 
    global
        daemon
@@ -87,7 +87,7 @@ file <https://github.com/signalfx/collectd-haproxy/blob/master/selinux/collectd-
 to some place on your server. Run the following commands to create and
 install the policy package:
 
-::
+.. code-block:: yaml
 
        $ checkmodule -M -m -o haproxy.mod haproxy.te
        checkmodule:  loading policy configuration from haproxy.te
@@ -117,7 +117,7 @@ Example
 To activate this integration, add the following to your Collector
 configuration:
 
-::
+.. code-block:: yaml
 
    receivers:
        smartagent/haproxy:
@@ -127,7 +127,7 @@ configuration:
 Next, add the monitor to the ``service.pipelines.metrics.receivers``
 section of your configuration file:
 
-::
+.. code-block:: yaml
 
    service:
      pipelines:

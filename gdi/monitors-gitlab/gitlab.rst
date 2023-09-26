@@ -153,13 +153,13 @@ OpenTelemetry Collector. For example, the following configuration in
 exporter to allow network connections on port ``9187`` from any IP
 address:
 
-::
+.. code-block:: yaml
 
    postgres_exporter['listen_address'] = '0.0.0.0:9187'
 
 Or
 
-::
+.. code-block:: yaml
 
    postgres_exporter['listen_address'] = ':9187'
 
@@ -171,7 +171,7 @@ connection in the ``172.17.0.0/16`` IP range. The assumption is that the
 IP address associated with the OpenTelemetry Collector is in that IP
 range.
 
-::
+.. code-block:: yaml
 
    server {
        ...
@@ -188,7 +188,7 @@ The following statement configures GitLab Runner's Prometheus metrics
 HTTP server to allows network connection on port ``9252`` from any IP
 address:
 
-::
+.. code-block:: yaml
 
    listen_address = "0.0.0.0:9252"
    ...
@@ -204,7 +204,7 @@ Example
 To activate this integration, add the following to your Collector
 configuration:
 
-::
+.. code-block:: yaml
 
    receivers:
      smartagent/gitlab:
@@ -215,7 +215,7 @@ Next, add the services you want to monitor to the
 ``service.pipelines.metrics.receivers`` section of your configuration
 file:
 
-::
+.. code-block:: yaml
 
    receivers:
      smartagent/gitlab-sidekiq:

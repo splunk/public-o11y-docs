@@ -136,6 +136,7 @@ You can override or add properties by creating the ``etc/otel/collector/config.d
 
    .. code-block:: yaml
 
+
       splunk.discovery:
         receivers:
            smartagent/postgresql:
@@ -159,6 +160,7 @@ To create custom discovery configurations, follow these steps:
 Custom configurations consist of the fields you want to override in the default configuration. For example:
 
 .. code-block:: yaml
+
 
     # <some-receiver-type-with-optional-name.discovery.yaml>
       <receiver_type>(/<receiver_name>):
