@@ -28,7 +28,7 @@ You can send metrics and traces from back-end applications to Splunk Observabili
 
    flowchart LR
 
-      subgraph "\nOpenTelemetry APM Instrumentation"
+      subgraph "\nOpenTelemetry instrumentation"
 
 
       A["Back-end applications
