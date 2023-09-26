@@ -29,17 +29,17 @@ MetricLens dimension entities.
 Benefits
 --------
 
-``{include} /_includes/benefits.md``
+.. include:: /_includes/benefits.rst
 
 Installation
 ------------
 
-``{include} /_includes/collector-installation.md``
+.. include:: /_includes/collector-installation.rst
 
 Configuration
 -------------
 
-``{include} /_includes/configuration.md``
+.. include:: /_includes/configuration.rst
 
 Example
 ~~~~~~~
@@ -171,9 +171,9 @@ The following metrics are available for this integration:
 Notes
 ~~~~~
 
-``{include} /_includes/metric-defs.md``
+.. include:: /_includes/metric-defs.rst
 
 Troubleshooting
 ---------------
 
-``{include} /_includes/troubleshooting.md``
+.. include:: /_includes/troubleshooting.rst

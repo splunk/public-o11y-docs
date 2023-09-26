@@ -18,17 +18,17 @@ This integration is only available on Kubernetes and Linux.
 Benefits
 --------
 
-``{include} /_includes/benefits.md``
+.. include:: /_includes/benefits.rst
 
 Installation
 ------------
 
-``{include} /_includes/collector-installation-linux.md``
+.. include:: /_includes/collector-installation-linux.rst
 
 Configuration
 -------------
 
-``{include} /_includes/configuration.md`` ### Example
+.. include:: /_includes/configuration.rst ### Example
 
 To activate this integration, add the following to your Collector
 configuration:
@@ -134,4 +134,4 @@ built-in filtering of metrics coming out of this integration.
 Troubleshooting
 ---------------
 
-``{include} /_includes/troubleshooting.md``
+.. include:: /_includes/troubleshooting.rst

@@ -24,17 +24,17 @@ This receiver is available on Linux and Windows.
 Benefits
 --------
 
-``{include} /_includes/benefits.md``
+.. include:: /_includes/benefits.rst
 
 Installation
 ------------
 
-``{include} /_includes/collector-installation-linux.md``
+.. include:: /_includes/collector-installation-linux.rst
 
 Configuration
 -------------
 
-``{include} /_includes/configuration.md`` ### Example
+.. include:: /_includes/configuration.rst ### Example
 
 To activate this integration, add the following to your Collector
 configuration:
@@ -204,4 +204,4 @@ There are no metrics available for this integration.
 Troubleshooting
 ---------------
 
-``{include} /_includes/troubleshooting.md``
+.. include:: /_includes/troubleshooting.rst

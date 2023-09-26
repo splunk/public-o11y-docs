@@ -17,7 +17,7 @@ The following metrics are available for this integration:
 Notes
 ~~~~~
 
-``{include} /_includes/metric-defs.md``
+.. include:: /_includes/metric-defs.rst
 
 Non-default metrics (version 4.7.0+)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -34,4 +34,4 @@ agent instance.
 Troubleshooting
 ---------------
 
-``{include} /_includes/troubleshooting.md``
+.. include:: /_includes/troubleshooting.rst

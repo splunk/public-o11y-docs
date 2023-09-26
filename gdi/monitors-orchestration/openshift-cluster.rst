@@ -38,7 +38,7 @@ leader agent election by setting the ``alwaysClusterReporter`` option to
 Benefits
 --------
 
-``{include} /_includes/benefits.md`` ## Installation
+.. include:: /_includes/benefits.rst ## Installation
 
 Follow these steps to deploy this integration:
 
@@ -70,7 +70,7 @@ Follow these steps to deploy this integration:
 Configuration
 -------------
 
-``{include} /_includes/configuration.md``
+.. include:: /_includes/configuration.rst
 
 Configuration options
 ~~~~~~~~~~~~~~~~~~~~~
@@ -184,9 +184,9 @@ The following metrics are available for this integration:
 Notes
 ~~~~~
 
-``{include} /_includes/metric-defs.md``
+.. include:: /_includes/metric-defs.rst
 
 Troubleshooting
 ---------------
 
-``{include} /_includes/troubleshooting.md``
+.. include:: /_includes/troubleshooting.rst

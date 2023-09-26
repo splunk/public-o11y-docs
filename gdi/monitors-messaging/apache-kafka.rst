@@ -29,17 +29,17 @@ following:
 Benefits
 --------
 
-``{include} /_includes/benefits.md``
+.. include:: /_includes/benefits.rst
 
 Installation
 ------------
 
-``{include} /_includes/collector-installation-linux.md``
+.. include:: /_includes/collector-installation-linux.rst
 
 Configuration
 -------------
 
-``{include} /_includes/configuration.md`` ### Example
+.. include:: /_includes/configuration.rst ### Example
 
 To activate this integration, add the following to your Collector
 configuration:
@@ -309,9 +309,9 @@ The following metrics are available for this integration:
 Notes
 ~~~~~
 
-``{include} /_includes/metric-defs.md``
+.. include:: /_includes/metric-defs.rst
 
 Troubleshooting
 ---------------
 
-``{include} /_includes/troubleshooting.md``
+.. include:: /_includes/troubleshooting.rst

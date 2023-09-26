@@ -21,17 +21,17 @@ can be configured to anything.
 Benefits
 --------
 
-``{include} /_includes/benefits.md``
+.. include:: /_includes/benefits.rst
 
 Installation
 ------------
 
-``{include} /_includes/collector-installation.md``
+.. include:: /_includes/collector-installation.rst
 
 Configuration
 -------------
 
-``{include} /_includes/configuration.md`` ### Example
+.. include:: /_includes/configuration.rst ### Example
 
 To activate this integration, add the following to your Collector
 configuration:
@@ -116,4 +116,4 @@ built-in filtering of metrics for this monitor.
 Troubleshooting
 ---------------
 
-``{include} /_includes/troubleshooting.md``
+.. include:: /_includes/troubleshooting.rst

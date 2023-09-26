@@ -19,17 +19,17 @@ This integration is available for Kubernetes, Linux, and Windows.
 Benefits
 --------
 
-``{include} /_includes/benefits.md``
+.. include:: /_includes/benefits.rst
 
 Installation
 ------------
 
-``{include} /_includes/collector-installation.md``
+.. include:: /_includes/collector-installation.rst
 
 Configuration
 -------------
 
-``{include} /_includes/configuration.md``
+.. include:: /_includes/configuration.rst
 
 If you're using this integration with the default Docker daemon domain
 socket, you might need to add the ``splunk-otel-collector`` user to the
@@ -166,12 +166,12 @@ The following metrics are available for this integration:
 Notes
 ~~~~~
 
-``{include} /_includes/metric-defs.md``
+.. include:: /_includes/metric-defs.rst
 
 Troubleshooting
 ---------------
 
-``{include} /_includes/troubleshooting.md``
+.. include:: /_includes/troubleshooting.rst
 
 Protocol not available error
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

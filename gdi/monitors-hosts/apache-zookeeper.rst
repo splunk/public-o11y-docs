@@ -20,14 +20,14 @@ The plugin supports Zookeeper 3.4.0 and higher.
 Benefits
 --------
 
-``{include} /_includes/benefits.md`` ## Installation
+.. include:: /_includes/benefits.rst ## Installation
 
-``{include} /_includes/collector-installation-linux.md``
+.. include:: /_includes/collector-installation-linux.rst
 
 Configuration
 -------------
 
-``{include} /_includes/configuration.md``
+.. include:: /_includes/configuration.rst
 
 Example
 ~~~~~~~
@@ -108,7 +108,7 @@ The following metrics are available for this integration:
 Notes
 ~~~~~
 
-``{include} /_includes/metric-defs.md``
+.. include:: /_includes/metric-defs.rst
 
 Group leader metrics
 ~~~~~~~~~~~~~~~~~~~~
@@ -123,4 +123,4 @@ activate them, add ``leader`` to the ``extraGroups`` setting:
 Troubleshooting
 ---------------
 
-``{include} /_includes/troubleshooting.md``
+.. include:: /_includes/troubleshooting.rst

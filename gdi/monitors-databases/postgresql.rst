@@ -110,7 +110,7 @@ The following metrics are available for this integration:
 Notes
 ~~~~~
 
-``{include} /_includes/metric-defs.md``
+.. include:: /_includes/metric-defs.rst
 
 Metrics about replication
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -128,4 +128,4 @@ The metric ``postgres_replication_state`` will be reported only for
 Troubleshooting
 ---------------
 
-``{include} /_includes/troubleshooting.md``
+.. include:: /_includes/troubleshooting.rst

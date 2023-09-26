@@ -27,9 +27,9 @@ This monitor type is available on Kubernetes, Linux, and Windows.
 Benefits
 --------
 
-``{include} /_includes/benefits-events.md`` ## Installation
+.. include:: /_includes/benefits-events.rst ## Installation
 
-``{include} /_includes/collector-installation.md``
+.. include:: /_includes/collector-installation.rst
 
 Deploy with Helm
 ~~~~~~~~~~~~~~~~
@@ -76,7 +76,7 @@ To deploy without Helm, include the following in the OTel configuration:
 Configuration
 -------------
 
-``{include} /_includes/configuration.md``
+.. include:: /_includes/configuration.rst
 
 Example
 ~~~~~~~
@@ -245,4 +245,4 @@ Example YAML configuration:
 Troubleshooting
 ---------------
 
-``{include} /_includes/troubleshooting.md``
+.. include:: /_includes/troubleshooting.rst

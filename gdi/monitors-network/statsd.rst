@@ -23,12 +23,12 @@ This integration is available for Kubernetes and Linux.
 Benefits
 --------
 
-``{include} /_includes/benefits.md``
+.. include:: /_includes/benefits.rst
 
 Installation
 ------------
 
-``{include} /_includes/collector-installation-linux.md``
+.. include:: /_includes/collector-installation-linux.rst
 
 Verify the installation
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -48,7 +48,7 @@ address of the node where the pod is running.
 Configuration
 -------------
 
-``{include} /_includes/configuration.md``
+.. include:: /_includes/configuration.rst
 
 Example
 ~~~~~~~
@@ -207,4 +207,4 @@ on the monitor configuration.
 Troubleshooting
 ---------------
 
-``{include} /_includes/troubleshooting.md``
+.. include:: /_includes/troubleshooting.rst

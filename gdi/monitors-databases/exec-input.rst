@@ -16,17 +16,17 @@ to receive metrics or logs from exec files.
 Benefits
 --------
 
-``{include} /_includes/benefits.md``
+.. include:: /_includes/benefits.rst
 
 Installation
 ------------
 
-``{include} /_includes/collector-installation.md``
+.. include:: /_includes/collector-installation.rst
 
 Configuration
 -------------
 
-``{include} /_includes/configuration.md``
+.. include:: /_includes/configuration.rst
 
 Example
 ~~~~~~~
@@ -407,4 +407,4 @@ Cloud, use one of the following options:
 Troubleshooting
 ---------------
 
-``{include} /_includes/troubleshooting.md``
+.. include:: /_includes/troubleshooting.rst

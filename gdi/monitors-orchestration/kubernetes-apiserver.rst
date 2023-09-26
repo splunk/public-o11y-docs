@@ -24,17 +24,17 @@ cases.
 Benefits
 --------
 
-``{include} /_includes/benefits.md``
+.. include:: /_includes/benefits.rst
 
 Installation
 ------------
 
-``{include} /_includes/collector-installation.md``
+.. include:: /_includes/collector-installation.rst
 
 Configuration
 -------------
 
-``{include} /_includes/configuration.md``
+.. include:: /_includes/configuration.rst
 
 Example
 ~~~~~~~
@@ -245,15 +245,15 @@ The following metrics are available for this integration:
 Notes
 ~~~~~
 
-``{include} /_includes/metric-defs.md``
+.. include:: /_includes/metric-defs.rst
 
 Troubleshooting
 ---------------
 
-``{include} /_includes/bind_address_error_msg.md``
+.. include:: /_includes/bind_address_error_msg.rst
 
-``{include} /_includes/missing_pipeline_configuration.md``
+.. include:: /_includes/missing_pipeline_configuration.rst
 
-``{include} /_includes/out_of_memory_error.md``
+.. include:: /_includes/out_of_memory_error.rst
 
-``{include} /_includes/troubleshooting.md``
+.. include:: /_includes/troubleshooting.rst

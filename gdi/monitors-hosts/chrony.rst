@@ -19,17 +19,17 @@ This integration is only available on Kubernetes and Linux.
 Benefits
 --------
 
-``{include} /_includes/benefits.md``
+.. include:: /_includes/benefits.rst
 
 Installation
 ------------
 
-``{include} /_includes/collector-installation-linux.md``
+.. include:: /_includes/collector-installation-linux.rst
 
 Configuration
 -------------
 
-``{include} /_includes/configuration.md``
+.. include:: /_includes/configuration.rst
 
 Example
 ~~~~~~~
@@ -99,4 +99,4 @@ The Splunk Distribution of OpenTelemetry Collector does not do any
 built-in filtering of metrics coming out of this integration. ##
 Troubleshooting
 
-``{include} /_includes/troubleshooting.md``
+.. include:: /_includes/troubleshooting.rst
