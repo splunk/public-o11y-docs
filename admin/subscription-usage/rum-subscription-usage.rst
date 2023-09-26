@@ -12,7 +12,7 @@ Each metric has two dimensions:
 *  ``sf_product``: The type of product, either web or mobile device that the data came from.
 
 .. list-table:: 
-   :widths: 25 25 50
+   :widths: 25 25 
    :header-rows: 1
 
    * - :strong:`Metric`
