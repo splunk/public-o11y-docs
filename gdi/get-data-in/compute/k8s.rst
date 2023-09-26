@@ -57,4 +57,5 @@ Next steps
 - Learn about the Collector commands. See :ref:`otel-commands`.
 - Troubleshoot Collector issues. See :ref:`otel-troubleshooting`.
 - Troubleshoot Kubernetes and container issues. See :ref:`tshoot-k8s-container-runtimes`.
+- For a list of host and application monitors that you can deploy in your Kubernetes environment, see :ref:`monitor-data-sources`.
 

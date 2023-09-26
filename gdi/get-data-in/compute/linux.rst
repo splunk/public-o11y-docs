@@ -41,3 +41,4 @@ Next steps
 - Configure the Collector on Linux. See :ref:`otel-linux-config`.
 - Learn about the Collector commands. See :ref:`otel-commands`.
 - Troubleshoot Collector issues. See :ref:`otel-troubleshooting`.
+- For a list of host and application receivers that you can deploy in your Linux environment, see :ref:`monitor-data-sources`.

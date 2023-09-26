@@ -42,3 +42,4 @@ Next steps
 - Configure the Collector. See :ref:`otel-configuration`.
 - Learn about the Collector commands. See :ref:`otel-commands`.
 - Troubleshoot Collector issues. See :ref:`otel-troubleshooting`.
+- For a list of host and application monitors that you can deploy in your Windows environment, see :ref:`monitor-data-sources`.

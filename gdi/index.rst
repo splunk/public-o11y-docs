@@ -1,7 +1,7 @@
 .. _monitor-data-sources:
 
 ********************************************************************************
-Available host and application monitors in Splunk Observability Cloud
+Available host and application metrics receivers in Splunk Observability Cloud
 ********************************************************************************
 
 .. meta::
