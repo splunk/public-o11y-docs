@@ -6,6 +6,14 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `jmx` monitor type to run an arbitrary Groovy script to convert JMX MBeans fetched from a remote Java application to SignalFx data points. This is a more flexible alternative to the {ref}`GenericJMX <genericjmx>` monitor.
 
+--- 
+<h2>Note</h2>
+
+If you are instrumenting an application with the Splunk Distribution of OpenTelemetry Java, you can capture
+metrics with the Java agent instead of using a JMX monitor. To learn more, see {ref}`enable_automatic_metric_collection`.
+
+---
+
 You can use the following utility helpers in the Groovy script within the `util` variable, which is set in the script's context:
 
 - `util.queryJMX(String objectName)`: This helper queries the configured JMX application for the given `objectName`, which can include wildcards. In any case, the return value will be a `List` of zero or more `GroovyMBean` objects, which are a convenience wrapper that Groovy provides to make accessing attributes on the MBean simple. See http://groovy-lang.org/jmx.html for more information about the `GroovyMBean` object. You can use the Groovy `.first()` method on the returned list to access the first MBean is you are only expecting one.
