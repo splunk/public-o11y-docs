@@ -44,7 +44,7 @@ Authentication
 If you're monitoring a secured MongoDB deployment, create a MongoDB user
 with minimal read-only roles, as follows:
 
-.. code-block:: yaml
+.. code-block::
 
    db.createUser( {
      user: "<username>",

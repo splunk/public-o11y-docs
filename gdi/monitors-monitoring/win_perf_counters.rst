@@ -14,7 +14,7 @@ Windows performance counters.
 
 This monitor is available on Windows.
 
-.. note:: For information on the OpenTelemetry receiver based on the Windows Performance Counters input plugin, see :ref:`Windows Performance Counters receiver <windowsperfcounters-receiver>``
+.. note:: For information on the OpenTelemetry receiver based on the Windows Performance Counters input plugin, see :ref:`Windows Performance Counters receiver <windowsperfcounters-receiver>`.
 
 Benefits
 --------

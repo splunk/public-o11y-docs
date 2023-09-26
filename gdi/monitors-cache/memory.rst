@@ -6,7 +6,7 @@ Memory usage
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Memory monitor. See benefits, install, configuration, and metrics
 
-.. note:: To collect memory utilization metrics only, use the native OTel component :ref:`host-metrics-receiver``
+.. note:: To collect memory utilization metrics only, use the native OTel component :ref:`host-metrics-receiver`.
 
 The
 :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`

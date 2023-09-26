@@ -6,7 +6,7 @@ Elasticsearch query
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the ElasticSearch Query monitor. See benefits, install, configuration, and metrics
 
-**This integration is in beta.**
+:strong:`This integration is in beta.`
 
 The
 :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
@@ -58,7 +58,7 @@ Example: avg metric aggregation
 ``avg`` metric aggregation as a sub-aggregation of ``terms`` bucket
 aggregation:
 
-.. code-block:: yaml
+.. code-block::
 
    ```json
    {
@@ -86,7 +86,7 @@ data oint as the ``metric_aggregation_type`` dimension.
 For instance, the ``json`` below provides 4 data points, each with a
 different value for ``host``:
 
-.. code-block:: yaml
+.. code-block::
 
    ```json
    "aggregations" : {
@@ -133,7 +133,7 @@ Example: extended_stats metric aggregation
 ``extended_stats`` metric aggregation as a sub-aggregation of ``terms``
 bucket aggregation
 
-.. code-block:: yaml
+.. code-block::
 
    ```json
    {
@@ -238,7 +238,7 @@ configuration:
 .. code-block:: yaml
 
    receivers:
-     smartagent/elasticsearch-query: 
+     smartagent/elasticsearch-query:
        type: elasticsearch-query
        ... # Additional config
 

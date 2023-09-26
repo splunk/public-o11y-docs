@@ -80,7 +80,7 @@ where it is running on each individual node or host instance.
 To use the observer, you must create a receiver creator instance with an
 associated rule. For example:
 
-.. code-block:: yaml
+.. code-block::
 
    extensions:
      # Configures the Kubernetes observer to watch for pod start and stop events.

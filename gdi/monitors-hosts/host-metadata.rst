@@ -6,7 +6,7 @@ Host metadata properties
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the host-metadata monitor. See benefits, install, configuration, and metrics
 
-.. note:: If you're using the Splunk Distribution of OpenTelemetry Collector and want to collect metadata properties about a host, use the native OTel component :ref:`host-metrics-receiver``
+.. note:: If you're using the Splunk Distribution of OpenTelemetry Collector and want to collect metadata properties about a host, use the native OTel component :ref:`host-metrics-receiver`.
 
 Metrics
 ----------------------

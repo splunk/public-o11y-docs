@@ -6,7 +6,7 @@ Host processes
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the processes monitor. See benefits, install, configuration, and metrics
 
-.. note:: If you're using the Splunk Distribution of OpenTelemetry Collector and want to collect metrics about processes running on a host, use the native OTel component :ref:`host-metrics-receiver``
+.. note:: If you're using the Splunk Distribution of OpenTelemetry Collector and want to collect metrics about processes running on a host, use the native OTel component :ref:`host-metrics-receiver`.
 
 Configuration settings
 ----------------------
