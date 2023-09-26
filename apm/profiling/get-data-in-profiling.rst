@@ -108,12 +108,12 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
       :strong:`Configure profiling`
 
-      - Check that the profiling data exporting OpenTelemetry Protocol (OTLP) endpoint is set correctly:
+      - Check that the OTLP endpoint that exports profiling data is set correctly:
          - The profiling-specific endpoint is configured through the ``splunk.profiler.logs-endpoint`` system property or the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable.
          - If that endpoint is not set, then the generic OTLP endpoint is used, configured through the ``otel.exporter.otlp.endpoint`` system property or the ``OTEL_EXPORTER_OTLP_ENDPOINT`` environment variable.
          - If that endpoint is not set either, it defaults to \http://localhost:4317.
          -  For non-Kubernetes deployments, the OTLP endpoint has to point to \http://${COLLECTOR_IP}:4317. If the collector and the profiled application run on the same host, then use \http://localhost:4317. Otherwise, make sure there are no firewall rules blocking access to port 4317 from the profiled host to the collector host.
-         -  For Kubernetes deployments, the OTLP endpoint has to point to \http://$(K8S_NODE_IP):4317 where the ``K8S_NODE_IP`` is fetched from the Kubernetes downstream API by setting the ``fieldPath`` on the application pod:
+         -  For Kubernetes deployments, the OTLP endpoint has to point to \http://$(K8S_NODE_IP):4317 where the ``K8S_NODE_IP`` is fetched from the Kubernetes downstream API by setting the environment configuration on the Kubernetes pod running the application. For example:
         
             .. code-block:: yaml
 
@@ -151,7 +151,7 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
       - Activate memory profiling by setting the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.
       - Check the OTLP the endpoint in the ``splunk.profiler.logs-endpoint`` system property or the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable:
          -  For non-Kubernetes deployments, the OTLP endpoint has to point to \http://${COLLECTOR_IP}:4317. If the collector and the profiled application run on the same host, then use \http://localhost:4317. Otherwise, make sure there are no firewall rules blocking access to port 4317 from the profiled host to the collector host.
-         -  For Kubernetes deployments, the OTLP endpoint has to point to \http://$(K8S_NODE_IP):4317 where the ``K8S_NODE_IP`` is fetched from the Kubernetes downstream API by setting the ``fieldPath`` on the application pod:
+         -  For Kubernetes deployments, the OTLP endpoint has to point to \http://$(K8S_NODE_IP):4317 where the ``K8S_NODE_IP`` is fetched from the Kubernetes downstream API by setting the environment configuration on the Kubernetes pod running the application. For example:
         
             .. code-block:: yaml
 
