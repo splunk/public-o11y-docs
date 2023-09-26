@@ -83,7 +83,7 @@ If you determine that you need to migrate, follow these steps:
 Time your update
 -----------------------
 
-As of August 7, 2023, Splunk APM began populating the new attributes with data. Depending on your historical reporting needs, choose a date to update that is right for your organization. You can follow the migration steps before or after updating, but the old tags will no longer receive new data after you update.
+As of August 7, 2023, Splunk APM began populating the new attributes with data. To prepare for the update you need to index the new attributes as tag so that you have the historical data you need. For TMS, which are used in Tag Spotlight, plan to index the new data at least 8 days in advance of the update. For MMS, which are used in dashboard charts and detectors, you'll need to update the SignalFlow for charts and dashboards to filter for both the old and new tags to prevent gaps in data. 
 
 .. _index-new-attributes: 
 
@@ -108,7 +108,13 @@ Update your charts and dashboards to use the new indexed tags
 To update charts or dashboards that reference the deprecated attributes as tags, follow these steps.
 
 #.  For each affected chart, select :guilabel:`Chart actions`, then :guilabel:`Open`.
-#. Go to the plot builder and edit the filter to change the reference to the new tag. Or, select :guilabel:`View SignalFlow` to edit the ``filter()`` function to reference the new tag.
+#. Go to the plot builder and edit the filter to change the reference to both the old and the new tag names. Or, select :guilabel:`View SignalFlow` to edit the ``filter()`` function to reference the new tag.
+
+Example SignalFlow that uses both old and new tags:
+
+.. code:: 
+
+   A = data('service.request.count', filter=filter('sf_dimensionalized', 'true') and filter('sf_service', 'adservice') and (filter('http_response_status_code', '200') or filter('http_status_code', '200')) and filter('sf_error', 'false')).publish(label='A')
 
 .. _update-detectors: 
 
@@ -119,7 +125,13 @@ To update your detectors, follow these steps.
 
 #. Go to :guilabel:`Alerts & Detectors`, then :guilabel:`Detectors`.
 #. For each affected detector, select the detector, then select :guilabel:`Signals`.
-#. Change the filter to reference the new tag name.
+#. Change the filter to reference both the old and the new tag names.
+
+Example SignalFlow that uses both old and new tags:
+
+.. code:: 
+
+   A = data('service.request.count', filter=filter('sf_dimensionalized', 'true') and filter('sf_service', 'adservice') and (filter('http_response_status_code', '200') or filter('http_status_code', '200')) and filter('sf_error', 'false')).publish(label='A')
 
 .. _delete-old-tags: 
 
