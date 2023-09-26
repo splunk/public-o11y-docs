@@ -303,7 +303,10 @@ The **nested** ``values`` configuration object has the following fields:
 Metrics
 -------
 
-.. container:: metrics-yaml
+.. raw:: html
+ 
+      <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/collectd/genericjmx/metadata.yaml"></div>
+
 
 Notes
 ~~~~~

@@ -106,7 +106,9 @@ Metrics
 
 These are the metrics and dimensions available for this integration:
 
-.. container:: metrics-yaml
+.. raw:: html
+ 
+      <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/hana/metadata.yaml"></div>
 
 Notes
 ~~~~~
