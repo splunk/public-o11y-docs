@@ -1,4 +1,7 @@
-.. _mysql: # MySQL
+.. _mysql:
+
+MySQL
+=======
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the MySQL monitor. See benefits, install, configuration, and metrics

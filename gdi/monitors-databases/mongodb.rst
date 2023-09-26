@@ -1,4 +1,7 @@
-.. _mongodb: # MongoDB
+.. _mongodb:
+
+MongoDB
+==========
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the MongoDB monitor. See benefits, install, configuration, and metrics

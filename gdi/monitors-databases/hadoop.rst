@@ -1,4 +1,7 @@
-.. _hadoop: # Hadoop
+.. _hadoop:
+
+Hadoop
+===============
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the hadoop monitor. See benefits, install, configuration, and metrics

@@ -88,7 +88,10 @@ Data is also filtered out of the platform, and can be tracked with
    example, data points without a metric name or value are invalid and
    will be dropped. Same with spans without a trace or span id.
 
-.. _org-metrics-gross-num: ### Compare ``gross`` and ``num`` metric values
+.. _org-metrics-gross-num:
+
+Compare ``gross`` and ``num`` metric values
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Some metrics report a ``gross`` value and a ``num`` value. Compare the
 ``gross`` and ``num`` values of a metric to verify if the system has
@@ -100,7 +103,10 @@ limited or filtered out data.
 -  A ``num`` metric reports the total number of data points the system
    receives after it completes any throttling or filtering.
 
-.. _org-metrics-track-limits: ### Metrics that track system limits
+.. _org-metrics-track-limits:
+
+Metrics that track system limits
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 These metrics track limits that Infrastructure Monitoring enforces for
 your organization. If you exceed these limits, your data might be
@@ -163,7 +169,10 @@ dropped:
    created overall, use the metric
    ``sf.org.numMetricTimeSeriesCreated``.
 
-.. _org-metrics-throttling: ### Metrics that track data throttling
+.. _org-metrics-throttling:
+
+Metrics that track data throttling
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 As explained in the previous section, certain system limits act as a
 “ceiling”, or a maximum number of elements allowed in Observability
@@ -179,7 +188,10 @@ points per minute.
 
 See more in :ref:`Per product system limits <per-product-limits>`
 
-.. _metrics-by-token: ### Metrics for values by token
+.. _metrics-by-token:
+
+Metrics for values by token
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In some cases, Infrastructure Monitoring has two similar metrics:
 

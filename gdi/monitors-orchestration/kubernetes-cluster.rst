@@ -1,4 +1,4 @@
-(kubernetes-cluster)=
+.. _kubernetes-cluster:
 
 Kubernetes cluster (deprecated)
 ===============================

@@ -18,16 +18,18 @@ emitted metrics have the plugin dimension set to ``telegraf-logparser``.
 Benefits
 --------
 
-.. include:: /_includes/benefits.rst
+.. include:: /_includes/benefits.md
 
 Installation
 ------------
 
-.. include:: /_includes/collector-installation.rst
+.. include:: /_includes/collector-installation.md
+
 Configuration
 -------------
 
-.. include:: /_includes/configuration.rst
+.. include:: /_includes/configuration.md
+
 Example
 ~~~~~~~
 
@@ -163,4 +165,4 @@ built-in filtering of metrics coming out of this monitor type.
 Troubleshooting
 ---------------
 
-.. include:: /_includes/troubleshooting.rst
+.. include:: /_includes/troubleshooting.md

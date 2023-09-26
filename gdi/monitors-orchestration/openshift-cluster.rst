@@ -114,11 +114,7 @@ The following table shows the configuration options for this monitor:
       - ``nodeConditionTypesToReport``
       - no
       - ``list of strings``
-      - A list of node status condition types to report as metrics. The
-         metrics are reported as data points of the form
-         ``kubernetes.node_<type_snake_cased>`` with a value of ``0``
-         corresponding to “False”, ``1`` to “True”, and ``-1`` to
-         “Unknown”. The default value is ``[Ready].)
+      - A list of node status condition types to report as metrics. The metrics are reported as data points of the form ``kubernetes.node_<type_snake_cased>`` with a value of ``0`` corresponding to “False”, ``1`` to “True”, and ``-1`` to “Unknown”. The default value is ``[Ready]``.
 
 The **nested** ``kubernetesAPI`` configuration object has the following
 fields:

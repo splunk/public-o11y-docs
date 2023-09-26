@@ -1,4 +1,7 @@
-.. _memcached: # Memcached
+.. _memcached:
+
+Memcached
+==================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Memcached monitor. See benefits, install, configuration, and metrics

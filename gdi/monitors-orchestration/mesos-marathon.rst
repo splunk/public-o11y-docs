@@ -1,4 +1,7 @@
-.. _marathon: # Mesos Marathon
+.. _marathon:
+
+Mesos Marathon
+=================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Marathon monitor. See benefits, install, configuration, and metrics
