@@ -27,7 +27,7 @@ Instrument your mobile and web applications to send data to Splunk Real User Mon
       end
 
       A["Splunk APM"]
-      A -- "server trace data" --> S
+      A <-. "Server-Timing data" .-> S
 
       B -- traces --> S
       M -- traces --> S
