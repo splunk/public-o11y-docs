@@ -10,7 +10,7 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the 
 <h2>Note</h2>
 
 If you are instrumenting an application with the Splunk Distribution of OpenTelemetry Java, you can capture
-metrics with the Java agent instead of using a JMX monitor. To learn more, see [Instrument your Java application for Splunk Observability Cloud](https://docs.splunk.com/Observability/en/gdi/get-data-in/application/java/instrumentation/instrument-java-application.html#activate-metrics-collection).
+metrics with the Java agent instead of using a JMX monitor. To learn more, see {ref}`enable_automatic_metric_collection`.
 
 ---
 
