@@ -3,9 +3,8 @@
 Kubernetes Controller Manager (deprecated)
 ==========================================
 
-.. raw:: html
-
-   <meta name="Description" content="Use this Splunk Observability Cloud integration for the kube-controller-manager monitor. See benefits, install, configuration, and metrics">
+.. meta::
+   :description: Use this Splunk Observability Cloud integration for the kube-controller-manager monitor. See benefits, install, configuration, and metrics
 
 :literal:`{note} This monitor is deprecated in favor of the \`prometheus-exporter\` monitor. See {ref}`Prometheus Exporter <prometheus-exporter>\` for more information.`
 

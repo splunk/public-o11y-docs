@@ -3,9 +3,8 @@
 SAP HANA
 ========
 
-.. raw:: html
-
-   <meta name="Description" content="Use this Splunk Observability Cloud integration for the SAP HANA monitor. See benefits, install, configuration, and metrics">
+.. meta::
+   :description: Use this Splunk Observability Cloud integration for the SAP HANA monitor. See benefits, install, configuration, and metrics
 
 The
 :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`

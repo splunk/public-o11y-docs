@@ -3,9 +3,8 @@
 PostgreSQL
 ==========
 
-.. raw:: html
-
-   <meta name="description" content="Use this Splunk Observability Cloud integration for the PostgreSQL monitor. See benefits, install, configuration, and metrics">
+.. meta::
+   :description: Use this Splunk Observability Cloud integration for the PostgreSQL monitor. See benefits, install, configuration, and metrics
 
 :literal:`{note} You can replace this monitor with the OTel native component \`postgresql\` receiver. See {ref}`postgresql-receiver\` for more information.`
 

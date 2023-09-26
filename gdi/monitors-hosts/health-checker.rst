@@ -3,9 +3,8 @@
 Health Checker
 ==============
 
-.. raw:: html
-
-   <meta name="description" content="Use this Splunk Observability Cloud integration for the Health Checker monitor. See benefits, install, configuration, and metrics">
+.. meta::
+   :description: Use this Splunk Observability Cloud integration for the Health Checker monitor. See benefits, install, configuration, and metrics
 
 The
 :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`

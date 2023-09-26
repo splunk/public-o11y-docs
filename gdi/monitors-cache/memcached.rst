@@ -1,8 +1,7 @@
 .. _memcached: # Memcached
 
-.. raw:: html
-
-   <meta name="description" content="Use this Splunk Observability Cloud integration for the Memcached monitor. See benefits, install, configuration, and metrics">
+.. meta::
+   :description: Use this Splunk Observability Cloud integration for the Memcached monitor. See benefits, install, configuration, and metrics
 
 The
 :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`

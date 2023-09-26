@@ -3,9 +3,8 @@
 Kubernetes cluster (deprecated)
 ===============================
 
-.. raw:: html
-
-   <meta name="description" content="Use this Splunk Observability Cloud integration for the Kubernetes cluster monitor. See benefits, install, configuration, and metrics">
+.. meta::
+   :description: Use this Splunk Observability Cloud integration for the Kubernetes cluster monitor. See benefits, install, configuration, and metrics
 
 This monitor is deprecated in favor of the native OpenTelemetry
 component ``k8s_cluster`` receiver. See

@@ -3,9 +3,8 @@
 CPU
 ===
 
-.. raw:: html
-
-   <meta name="description" content="Use this Splunk Observability Cloud integration for the CPU monitor. See benefits, install, configuration, and metrics">
+.. meta::
+   :description: Use this Splunk Observability Cloud integration for the CPU monitor. See benefits, install, configuration, and metrics
 
 :literal:`{note} If you're using the Splunk Distribution of OpenTelemetry Collector and want to collect CPU utilization metrics, use the native OTel component {ref}`host-metrics-receiver\`.`
 

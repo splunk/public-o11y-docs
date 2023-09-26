@@ -3,9 +3,8 @@
 MongoDB Atlas (deprecated)
 ==========================
 
-.. raw:: html
-
-   <meta name="description" content="Use this Splunk Observability Cloud integration for the MongoDB Atlas monitor. See benefits, install, configuration, and metrics">
+.. meta::
+   :description: Use this Splunk Observability Cloud integration for the MongoDB Atlas monitor. See benefits, install, configuration, and metrics
 
 :literal:`{note} This monitor is deprecated in favor of the Otel native component \`mongodbatlas\` receiver. See {ref}`MongoDB Atlas Receiver <mongodb-atlas-receiver>\` for more information.`
 

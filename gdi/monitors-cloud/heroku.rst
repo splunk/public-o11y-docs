@@ -3,9 +3,8 @@
 Heroku
 ======
 
-.. raw:: html
-
-   <meta name="description" content="Use this Splunk Observability Cloud integration for the Heroku monitor. See benefits, install, configuration, and metrics">
+.. meta::
+   :description: Use this Splunk Observability Cloud integration for the Heroku monitor. See benefits, install, configuration, and metrics
 
 The Splunk OpenTelemetry Connector for Heroku is a buildpack for the
 Splunk Distribution of OpenTelemetry Collector. The buildpack installs

@@ -3,9 +3,8 @@
 Mapping service and migration impact report
 ===========================================
 
-.. raw:: html
-
-   <meta name="Description" content="Documentation on the legacy SignalFX Smart Agent and OpenTelemetry Collector mappings in Splunk Observability Cloud">
+.. meta::
+   :description: Documentation on the legacy SignalFX Smart Agent and OpenTelemetry Collector mappings in Splunk Observability Cloud
 
 The mapping service lets you migrate from Smart Agent to OpenTelemetry
 deployments without significantly disrupting the form or content of your

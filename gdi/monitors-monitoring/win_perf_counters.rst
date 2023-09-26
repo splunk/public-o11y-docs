@@ -3,9 +3,8 @@
 Windows Performance Counters
 ============================
 
-.. raw:: html
-
-   <meta name="description" content="Use this Splunk Observability Cloud integration for the Telegraf win_perf_counters monitor for Windows. See benefits, install, configuration, and metrics">
+.. meta::
+   :description: Use this Splunk Observability Cloud integration for the Telegraf win_perf_counters monitor for Windows. See benefits, install, configuration, and metrics
 
 The
 :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`

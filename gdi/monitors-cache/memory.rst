@@ -3,9 +3,8 @@
 Memory usage
 ============
 
-.. raw:: html
-
-   <meta name="description" content="Use this Splunk Observability Cloud integration for the Memory monitor. See benefits, install, configuration, and metrics">
+.. meta::
+   :description: Use this Splunk Observability Cloud integration for the Memory monitor. See benefits, install, configuration, and metrics
 
 :literal:`{note} To collect memory utilization metrics only, use the native OTel component {ref}`host-metrics-receiver\`.`
 

@@ -3,9 +3,8 @@
 Elasticsearch query
 ===================
 
-.. raw:: html
-
-   <meta name="Description" content="Use this Splunk Observability Cloud integration for the ElasticSearch Query monitor. See benefits, install, configuration, and metrics">
+.. meta::
+   :description: Use this Splunk Observability Cloud integration for the ElasticSearch Query monitor. See benefits, install, configuration, and metrics
 
 **This integration is in beta.**
 

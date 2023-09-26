@@ -3,9 +3,8 @@
 Host process load
 =================
 
-.. raw:: html
-
-   <meta name="description" content="Use this Splunk Observability Cloud integration for the load monitor. See benefits, install, configuration, and metrics">
+.. meta::
+   :description: Use this Splunk Observability Cloud integration for the load monitor. See benefits, install, configuration, and metrics
 
 :literal:`{note} If you're using the Splunk Distribution of OpenTelemetry Collector and want to collect CPU load metrics, use the native OTel component {ref}`host-metrics-receiver\`.`
 

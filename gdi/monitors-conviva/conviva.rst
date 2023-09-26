@@ -3,9 +3,8 @@
 Conviva Real-Time/Live video play
 =================================
 
-.. raw:: html
-
-   <meta name="Description" content="Use this Splunk Observability Cloud integration for the Conviva monitor. See benefits, install, configuration, and metrics, including MetricLens">
+.. meta::
+   :description: Use this Splunk Observability Cloud integration for the Conviva monitor. See benefits, install, configuration, and metrics, including MetricLens
 
 The
 :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
