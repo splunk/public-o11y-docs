@@ -14,7 +14,7 @@ Connect to AWS and send data to Splunk Observability Cloud
   Connect to AWS with the UI guided setup <aws-wizardconfig>
   Connect to AWS with the API <aws-apiconfig>
   Connect to AWS with Terraform <aws-terraformconfig>
-  Connect from the AWS console <aws-console-ms>  
+  Connect Metric Streams from the AWS console <aws-console-ms>  
   Private Connectivity using PrivateLink <aws-privatelink>
   Collect logs from AWS <aws-logs>
   CloudFormation templates <aws-cloudformation>
