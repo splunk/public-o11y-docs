@@ -373,7 +373,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Available host and application receivers TOGGLE <gdi/index>
+   Available host and application monitors TOGGLE <gdi/index>
 
 .. toctree::
    :maxdepth: 4
