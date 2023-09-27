@@ -111,4 +111,4 @@ There are no metrics available for this integration.
 Troubleshooting
 ---------------
 
-.. include:: /_includes/troubleshooting.rst
+.. include:: /_includes/troubleshooting-components.rst

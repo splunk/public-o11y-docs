@@ -143,4 +143,4 @@ Notes
 Troubleshooting
 ---------------
 
-.. include:: /_includes/troubleshooting.rst
+.. include:: /_includes/troubleshooting-components.rst

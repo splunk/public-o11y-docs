@@ -136,4 +136,4 @@ built-in filtering of metrics coming out of this integration.
 Troubleshooting
 ---------------
 
-.. include:: /_includes/troubleshooting.rst
+.. include:: /_includes/troubleshooting-components.rst

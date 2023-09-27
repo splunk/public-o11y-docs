@@ -257,4 +257,4 @@ Troubleshooting
 
 .. include:: /_includes/out_of_memory_error.rst
 
-.. include:: /_includes/troubleshooting.rst
+.. include:: /_includes/troubleshooting-components.rst

@@ -68,4 +68,4 @@ built-in filtering of metrics for this monitor.
 Troubleshooting
 ---------------
 
-.. include:: /_includes/troubleshooting.rst
+.. include:: /_includes/troubleshooting-components.rst

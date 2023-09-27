@@ -383,4 +383,4 @@ built-in filtering of metrics for this receiver.
 Troubleshooting
 ---------------
 
-.. include:: /_includes/troubleshooting.rst
+.. include:: /_includes/troubleshooting-components.rst

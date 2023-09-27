@@ -127,4 +127,4 @@ activate them, add ``leader`` to the ``extraGroups`` setting:
 Troubleshooting
 ---------------
 
-.. include:: /_includes/troubleshooting.rst
+.. include:: /_includes/troubleshooting-components.rst

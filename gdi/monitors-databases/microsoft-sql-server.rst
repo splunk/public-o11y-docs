@@ -185,7 +185,7 @@ Notes
 Troubleshooting
 ---------------
 
-.. include:: /_includes/troubleshooting.rst
+.. include:: /_includes/troubleshooting-components.rst
 
 TCP/IP is deactivated
 ~~~~~~~~~~~~~~~~~~~~~

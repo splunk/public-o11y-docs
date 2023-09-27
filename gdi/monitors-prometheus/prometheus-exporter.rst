@@ -265,4 +265,4 @@ running with has the necessary permissions.
 Get help
 ~~~~~~~~
 
-.. include:: /_includes/troubleshooting.rst
+.. include:: /_includes/troubleshooting-components.rst

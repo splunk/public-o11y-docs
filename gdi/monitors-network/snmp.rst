@@ -389,4 +389,4 @@ This integration doesn't produce any metrics.
 Troubleshooting
 ---------------
 
-.. include:: /_includes/troubleshooting.rst
+.. include:: /_includes/troubleshooting-components.rst

@@ -130,4 +130,4 @@ The metric ``postgres_replication_state`` will be reported only for
 Troubleshooting
 ---------------
 
-.. include:: /_includes/troubleshooting.rst
+.. include:: /_includes/troubleshooting-components.rst

@@ -406,4 +406,4 @@ Cloud, use one of the following options:
 Troubleshooting
 ---------------
 
-.. include:: /_includes/troubleshooting.rst
+.. include:: /_includes/troubleshooting-components.rst
