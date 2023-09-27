@@ -301,12 +301,13 @@ To instrument a .NET function in AWS Lambda for Splunk APM, follow these steps:
    - ``SPLUNK_ACCESS_TOKEN``: Your Splunk ingest access token
    - ``SPLUNK_REALM``: Your Splunk ingest realm, for example ``us0``
 
-4. The template also contains 3 customisation points in ConfigureSplunkTelemetry()
-“Use Add[instrumentation-name]Instrumentation to instrument missing services. Use Nuget to find different instrumentation libraries.” - Add a custom instrumentation library to support other 3rd party libraries. This libraries can be searched in Nuget, usually they follow convention “OpenTelemetry.Instrumentation.TheLibraryName”.
-“Use AddSource to add your custom DiagnosticSource source names” - Some libraries already have System.Diagnostics.DiagnosticSource built in. Use .AddSource() to include a custom DiagnosticSource name.
-“Different resource detectors can be found at                https://github.com/open-telemetry/opentelemetry-dotnet-contrib/tree/main/src/OpenTelemetry.ResourceDetectors.AWS#usage” - the AWS package contains multiple ResourceDetectors that help to describe your environment. Select a detector that is the most usable for you.
+4. The template also contains the following customization points in ``ConfigureSplunkTelemetry()``:
 
+   - Add a custom instrumentation library to support other third-party libraries. You can search for libraries using NuGet and strings starting with ``OpenTelemetry.Instrumentation.``.
+   - Some libraries already have ``System.Diagnostics.DiagnosticSource`` built in. Use the ``.AddSource()`` method to include a custom ``DiagnosticSource`` name.
+   - The AWS package contains multiple ``ResourceDetectors`` that help describe your environment. Select a detector for your use case.
 
+5. Add your code to the ``FunctionHandler`` function as the default AWS template expects.
 
 
 .. _serverless-framework-support-aws:
@@ -317,21 +318,14 @@ Serverless Framework support
 Some features of the Serverless Framework might impact OpenTelemetry tracing of Python Lambda functions.
 
 Python libraries compression
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------
 
 The ``zip`` feature of ``pythonRequirements`` allows packing and deploying Lambda dependencies as compressed files. To instrument packages compressed using the Serverless Framework, set the ``SPLUNK_LAMBDA_SLS_ZIP`` environment variable to ``true``. For more information, see https://github.com/serverless/serverless-python-requirements#dealing-with-lambdas-size-limitations on GitHub.
 
 Slim feature
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------
 
 The Slim feature reduces the size of Lambda packages by removing some files, including ``dist-info`` folders. Some of the files removed by the Slim feature are required by the OpenTelemetry Python autoinstrumentation. Deactivate the ``slim`` option in your serverless.yml file or define custom ``slimPatterns``. For more information, see https://github.com/serverless/serverless-python-requirements#slim-package on GitHub.
-
-.. _check-otel-lambda-data:
-
-Check that data appears in Splunk Observability Cloud
-----------------------------------------------------------
-
-Each time the AWS Lambda function runs, trace and metric data appears in Splunk Observability Cloud. If no data appears, see :ref:`troubleshooting-lambda-layer`.
 
 .. _ec2-otel-collector-serverless:
 
@@ -344,3 +338,10 @@ To send spans directly to Splunk Observability Cloud from an AWS Lambda function
 
 - ``OTEL_EXPORTER_OTLP_TRACES_PROTOCOL`` with the value ``http/protobuf``
 - ``OTEL_EXPORTER_OTLP_TRACES_ENDPOINT`` with the value ``https://ingest.<realm>.signalfx.com/v2/trace/otlp``, substituting ``<realm>`` with the name of your organization's realm.
+
+.. _check-otel-lambda-data:
+
+Check that data appears in Splunk Observability Cloud
+=====================================================================
+
+Each time the AWS Lambda function runs, trace and metric data appears in Splunk Observability Cloud. If no data appears, see :ref:`troubleshooting-lambda-layer`.
