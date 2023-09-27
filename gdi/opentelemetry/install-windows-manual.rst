@@ -105,7 +105,7 @@ Perform the following steps to install Fluentd and forward ``collected`` log eve
   
     - Option 2: The installed Collector package provides a custom Fluentd config file ``\Program Files\Splunk\OpenTelemetry Collector\fluentd\td-agent.conf`` to collect log events from the Windows Event Log ``\Program Files\Splunk\OpenTelemetry Collector\fluentd\conf.d\eventlog.conf`` and forwards them to ``127.0.0.1:8006``. 
   
-    To use these files, backup the ``\opt\td-agent\etc\td-agent\`` directory, and copy the contents from ``\Program Files\Splunk\OpenTelemetry Collector\fluentd\`` to ``\opt\td-agent\etc\td-agent\``.
+    To use these files, backup the ``\opt\td-agent\etc\td-agent``` directory, and copy the contents from ``\Program Files\Splunk\OpenTelemetry Collector\fluentd``` to ``\opt\td-agent\etc\td-agent```.
 
 3. To apply any changes made to the Fluentd config files, restart the system, or restart ``fluentdwinsvc`` .
 

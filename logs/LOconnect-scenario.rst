@@ -40,7 +40,7 @@ Aisha opens the service map in Splunk Application Performance Monitoring (APM). 
         :alt: This screenshot shows a service map in Splunk APM displaying the paymentservice as the source of root errors.
 
 
-Aisha sees that :strong:`paymentservice` has the highest number of downstream errors that are contributing to a degraded experience for the workflow. Splunk APM identifies the issues as root cause errors. Aisha selects :strong:`paymentservice`. Splunk Observability Cloud displays details about the service’s errors and latency. 
+Aisha sees that :strong:`paymentservice` has the highest number of downstream errors that are contributing to a degraded experience for the workflow. Splunk APM identifies the issues as root cause errors. Aisha selects :strong:`paymentservice`. Splunk Observability Cloud displays details about the service's errors and latency. 
 
 Splunk Observability Cloud also surfaces Related Content tiles that provide access to relevant data in other areas of the application. For example, Aisha can look at the health of the Kubernetes cluster where :strong:`paymentservice` is running or they can examine logs being issued by the :strong:`paymentservice`. 
 
@@ -48,7 +48,7 @@ Splunk Observability Cloud also surfaces Related Content tiles that provide acce
         :width: 100%
         :alt: This screenshot shows a service map in Splunk APM providing access to two Related Content tiles: K8s clusters for paymentservice and Logs for paymentservice.
 
-Aisha decides to look at the log details. They select the Related Content tile, :strong:`Logs for paymentservice`. Log Observer opens, and Aisha’s view is automatically narrowed to display only logs from :strong:`paymentservice`. Log Observer displays :strong:`paymentservice` logs that were sent in to Splunk Cloud Platform. Log Observer does not ingest the logs, but displays the logs from their storage in Splunk Cloud Platform. 
+Aisha decides to look at the log details. They select the Related Content tile, :strong:`Logs for paymentservice`. Log Observer opens, and Aisha's view is automatically narrowed to display only logs from :strong:`paymentservice`. Log Observer displays :strong:`paymentservice` logs that were sent in to Splunk Cloud Platform. Log Observer does not ingest the logs, but displays the logs from their storage in Splunk Cloud Platform. 
 
 Because Aisha first tracked the workflow problems in Splunk APM, they were able to narrow their search down to only logs coming from :strong:`paymentservice`. Now Aisha can use Log Observer to analyze the logs. 
 
@@ -74,7 +74,7 @@ Find log patterns
 ========================================================================================================================
 Aisha opens a few other logs to see if others have the same error message. Several of the logs Aisha opens have the same error message: ``Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)``. 
 
-Aisha notes that all of the invalid API tokens start with “test”. Aisha hypothesizes that a team pushed the current version, v350.10, live with a test token that doesn’t work in production.
+Aisha notes that all of the invalid API tokens start with “test”. Aisha hypothesizes that a team pushed the current version, v350.10, live with a test token that doesn't work in production.
 
 To double-check their hypothesis, Aisha selects the error message and selects :strong:`Add to filter` to show only the logs that contain the same error message.
 
@@ -98,7 +98,7 @@ Aisha is pretty confident that they have isolated the problem to logs containing
 
 Test the hypothesis
 ========================================================================================================================
-To be sure, Aisha selects the eye icon for the message filter value to temporarily exclude the filter. Now there are logs that show up for version v350.9 too, but they don’t include the error message. Aisha can now correlate all of the logs containing the test token error message, and no logs that don't contain the error message, to version v350.10.
+To be sure, Aisha selects the eye icon for the message filter value to temporarily exclude the filter. Now there are logs that show up for version v350.9 too, but they don't include the error message. Aisha can now correlate all of the logs containing the test token error message, and no logs that don't contain the error message, to version v350.10.
 
     
 .. _identify-and-remediate:

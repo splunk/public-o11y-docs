@@ -36,6 +36,7 @@ To activate the Windows Performance Counters receiver add a ``windowsperfcounter
 
 .. code-block:: yaml
 
+
    receivers:
      windowsperfcounters:
        metrics:
@@ -54,6 +55,7 @@ To complete the configuration, include the receiver in the ``metrics`` pipeline 
 configuration file. For example:
 
 .. code-block:: yaml
+
 
    service:
      pipelines:
@@ -197,6 +199,7 @@ Scrape at different collection intervals
 The following example shows how to scrape performance counters using different collection intervals depending on the target:
 
 .. code-block:: yaml
+
 
    receivers:
      windowsperfcounters/memory:

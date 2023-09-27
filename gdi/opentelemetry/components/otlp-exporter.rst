@@ -38,6 +38,7 @@ This is a sample configuration for the exporter:
 
 .. code-block:: yaml
 
+
   exporters:
     otlp:
       endpoint: otelcol2:4317
@@ -55,6 +56,7 @@ Configure gzip compression
 By default, gzip compression is enabled. To turn it off, use the following configuration:
 
 .. code-block:: yaml
+
 
   exporters:
     otlp:
