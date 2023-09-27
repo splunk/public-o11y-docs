@@ -141,6 +141,7 @@ The following example shows how to configure the Collector in host monitoring (a
 
 .. code-block:: yaml
 
+
    receivers:
       hostmetrics:
          collection_interval: 10s
@@ -208,6 +209,7 @@ To set the Collector in data forwarding (gateway) mode to receiving data from an
 
 .. code-block:: yaml
 
+
    extensions:
       http_forwarder:
          egress:
@@ -265,6 +267,7 @@ If you want to use the :ref:`signalfx-exporter` for metrics on both agent and ga
 .. note:: If you want to collect host metrics from the Gateway, use a different ``signalfx exporter`` with translation rules intact. For example, add the ``hostmetrics`` to the metrics/internal pipeline.
 
 .. code-block:: yaml
+
    :emphasize-lines: 10,11
 
    exporters:

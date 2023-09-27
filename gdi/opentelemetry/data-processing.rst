@@ -27,6 +27,7 @@ A pipeline configuration typically looks like this:
 
 .. code-block:: yaml
 
+
   service:
     pipelines:
     # Pipelines can contain multiple subsections, one per pipeline.

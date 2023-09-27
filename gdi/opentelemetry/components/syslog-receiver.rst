@@ -30,12 +30,14 @@ To activate the Syslog receiver, add ``syslog`` to the ``receivers`` section of 
 
 .. code-block:: yaml
 
+
   receivers:
     syslog:
 
 This example shows how to configure logs received using TCP:
 
 .. code-block:: yaml
+
 
   receivers:
     syslog:
@@ -46,6 +48,7 @@ This example shows how to configure logs received using TCP:
 This example shows how to configure logs received using UDP:
 
 .. code-block:: yaml
+
 
   receivers:
     syslog:

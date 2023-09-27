@@ -352,7 +352,7 @@ For more details about working with charts, see :new-page-ref:`data-visualizatio
 Monitor Windows Server and Linux hosts using the Hosts navigator
 ------------------------------------------------------------------------------
 
-If you completed :ref:`gdi-infrastructure-imqs`, you can explore the host’s data using the Hosts navigator.
+If you completed :ref:`gdi-infrastructure-imqs`, you can explore the host's data using the Hosts navigator.
 
 #. Log in to Splunk Observability Cloud.
 
@@ -393,7 +393,7 @@ Tips for viewing host data
 Monitor Kubernetes clusters using the Kubernetes navigator
 ------------------------------------------------------------------------------
 
-If you completed :ref:`gdi-infrastructure-imqs`, you can explore the cluster’s data using the Kubernetes navigator.
+If you completed :ref:`gdi-infrastructure-imqs`, you can explore the cluster's data using the Kubernetes navigator.
 
 #. Log in to Splunk Observability Cloud.
 

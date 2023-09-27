@@ -43,6 +43,7 @@ The following example shows the main configuration settings of the resource attr
 
 .. code-block:: yaml
 
+
    resourcedetection:
      # List of detectors
      detectors: [system, ec2]
@@ -76,6 +77,7 @@ The following example shows how detect resources, environment variables, and sel
 
 .. code-block:: yaml
 
+
    processors:
      resourcedetection/ec2:
        detectors: [env, ec2]
@@ -101,6 +103,7 @@ The following example shows how to collect resource attributes from OpenShift an
 
 .. code-block:: yaml
 
+
    processors:
      resourcedetection/openshift:
        detectors: [openshift]
@@ -119,6 +122,7 @@ Collect system metadata using all available sources
 The following example shows how to use all sources available to the ``system`` detector to determine the host name. The ``resource_attributes`` field tells the processor to only include the selected attributes.
 
 .. code-block:: yaml
+
 
    processors:
      resourcedetection/system:
@@ -144,6 +148,7 @@ To migrate, move the attributes inside of ``attributes`` to the relevant ``resou
 
 .. code-block:: yaml
 
+
    resourcedetection:
      detectors: [system]
      # Deprecated in version 0.81
@@ -152,6 +157,7 @@ To migrate, move the attributes inside of ``attributes`` to the relevant ``resou
 You can replace the previous configuration with the following:
 
 .. code-block:: yaml
+
 
    resourcedetection:
      detectors: [system]
