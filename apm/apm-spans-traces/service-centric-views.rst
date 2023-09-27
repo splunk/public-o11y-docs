@@ -24,6 +24,10 @@ Overview
 
 Use the following metrics in the :guilabel:`Overview` section to monitor the performance of your service.
 
+..  image:: /_images/apm/spans-traces/service-centric-view-overview.png
+    :width: 95%
+    :alt: This screenshot shows the overview metrics for a service in the service-centric view. 
+
 * :strong:`Availability service-level objective (SLO)` - The availablity service-level objective (SLO) shows the percentage of time your service was available in the last 30 days. The chart shows successful and unsuccessful requests.
 * :strong:`Dependency map` - The dependency map shows the immediate upstream and downstream dependencies for the service you are viewing. 
 * :strong:`Request rate` - The request rate chart shows streaming request data for the service. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
