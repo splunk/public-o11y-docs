@@ -18,20 +18,20 @@ Splunk OpenTelemetry Zero Configuration Auto Instrumentation
 
 Splunk OpenTelemetry Zero Configuration Auto Instrumentation provides several packages that automatically instrument your back-end applications and services to capture and report distributed traces and metrics to the Splunk Distribution of OpenTelemetry Collector, and then on to Splunk APM.
 
-The following diagram demonstrates the process of manually instrumenting your applications compared to the process of using zero-config to instrument your applications:
+The following diagram demonstrates the process of manually instrumenting your applications compared to the process of using zero configuration auto instrumentation to instrument your applications:
 
 .. mermaid::
 
    flowchart TB
       subgraph "Manual instrumentation"
-      A[Install the Splunk \n Distribution of
-      OpenTelemetry Collector \n agent for your integration]
+      A["Install the Splunk \n Distribution of
+      OpenTelemetry Collector \n agent for your integration"]
 
-      B[Set variables \n to export your data]
+      B["Follow guided setup instructions \n to configure your environment"]
 
-      C[Configure environment \n to run the agent]
+      C["Deploy the Splunk Distribution of \n OpenTelemetry Collector"]
 
-      D[Run your application]
+      D["Run your application"]
 
       A --> B --> C --> D
       end
@@ -39,7 +39,7 @@ The following diagram demonstrates the process of manually instrumenting your ap
 .. mermaid::
 
    flowchart TB
-      subgraph "Zero-config auto-instrumentation"
+      subgraph "Zero configuration auto instrumentation"
       X["Install the zero-config package \n for your application"]
       Y["Ensure the Splunk Distribution of \nOpenTelemetry Collector
       is running"]
