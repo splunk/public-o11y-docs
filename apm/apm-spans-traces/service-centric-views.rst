@@ -32,10 +32,18 @@ Use the following metrics in the :guilabel:`Overview` section to monitor the per
 * :strong:`Dependency time`
 * :strong:`Top endpoints`- Top endpoints shows up to 5 endpoints for the service. Use the search field to search for specific endpoints. Use the sort drop-down list to change how endpoints are sorted. Select :guilabel:`Explore in APM` to navigate to Endpoint Performance.
 
+..  image:: /_images/apm/spans-traces/service-centric-view-endpoints.png
+    :width: 95%
+    :alt: This screenshot shows the top endpoints for a service in the service-centric view. 
+
 Logs
 ------------
 
 The :guilabel:`Logs` section shows unhandled, exception, traceback, and stacktrace logs. See :ref:`configure-service-view` for steps to modify the logs that are displayed. 
+
+..  image:: /_images/apm/spans-traces/service-centric-view-logs.png
+    :width: 95%
+    :alt: This screenshot shows the logs for a service in the service-centric view. 
 
 Runtime
 -------------
@@ -59,6 +67,10 @@ Infrastructure
 * :strong:`Host network usage` - The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
 * :strong:`Pod CPU usage` - The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
 * :strong:`Pod network utilization (bytes/sec)` - The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+
+..  image:: /_images/apm/spans-traces/service-centric-view-infra-metrics.png
+    :width: 95%
+    :alt: This screenshot shows the infrastructure metrics for a service in the service-centric view. 
 
 Navigate to the Tag Spotlight view for your service
 =====================================================
