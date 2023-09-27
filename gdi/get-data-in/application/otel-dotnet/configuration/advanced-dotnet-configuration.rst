@@ -158,7 +158,6 @@ The following resource detectors are available:
 
 .. list-table:: 
    :header-rows: 1
-   :widths: 30 30 40
    :width: 100%
 
    * - Detector ID
