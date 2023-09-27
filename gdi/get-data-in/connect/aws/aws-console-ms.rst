@@ -21,11 +21,11 @@ To connect Splunk Observability Cloud from the AWS console, follow these steps:
 .. image:: /_images/gdi/aws-console-splunk.png
   :width: 55%
 
-4. In the :guilabel:`Configure the AWS Partner destination` menu, select the Splunk Observability Cloud Ingest endpoints from the dropdown list based on what you can find in Profile -> Organizations -> Real-time Data Ingest Endpoint in Splunk Observability console. 
+3. In the :guilabel:`Configure the AWS Partner destination` menu, select the Splunk Observability Cloud Ingest endpoints from the dropdown list based on what you can find in :guilabel:`Profile > Organizations > Real-time Data Ingest Endpoint` in the Splunk Observability console. 
 
-5. Fill in the access token by copying one of the access tokens with INGEST authorization scope from :guilabel:`Settings > Access Tokens`.
+4. Fill in the access token by copying one of the access tokens with INGEST authorization scope from :guilabel:`Settings > Access Tokens`.
 
-6. You can leave the rest of the form as default, or customize the config according to your needs, such as filtering based on namespaces.
+5. You can leave the rest of the form as default, or customize the config according to your needs, such as filtering based on namespaces.
 
 Prerequisites
 ======================================================
