@@ -14,6 +14,7 @@ Connect to AWS and send data to Splunk Observability Cloud
   Connect to AWS with the UI guided setup <aws-wizardconfig>
   Connect to AWS with the API <aws-apiconfig>
   Connect to AWS with Terraform <aws-terraformconfig>
+  Connect from the AWS console <aws-console-ms>  
   Private Connectivity using PrivateLink <aws-privatelink>
   Collect logs from AWS <aws-logs>
   CloudFormation templates <aws-cloudformation>
@@ -149,6 +150,7 @@ If you can't connect AWS to Splunk Observability Cloud, see :ref:`Troubleshoot y
 
 Observability Cloud also offers you the following options to connect to AWS:
 
+* :ref:`aws-console-ms`.
 * :ref:`aws-privatelink`.
 * The :new-page:`Splunk add-on for Amazon Kinesis Firehose <https://docs.splunk.com/Documentation/AddOns/latest/Firehose/ConfigureFirehose>`.  
 
