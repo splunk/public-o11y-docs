@@ -141,7 +141,7 @@ How error spans are counted in MetricSets
 
 To generate endpoint-level Monitoring MetricSets, Splunk APM turns endpoint spans, which are spans with ``span.kind = SERVER`` or ``span.kind = CONSUMER``, into error metric data. If a span is considered an error per the Error rules in Splunk APM, that span counts towards errors in the Monitoring MetricSet for the endpoint associated with that span.
 
-Service-level Monitoring MetricSets are based on the number of error spans in each of the service’s endpoints.
+Service-level Monitoring MetricSets are based on the number of error spans in each of the service's endpoints.
 
 Server-side and client-side error counting
 --------------------------------------------
@@ -205,7 +205,7 @@ However, depending on your application’s logic, a ``4xx`` status code might re
 For example, if Kai wants to alert on the rate of ``401`` errors returned by a given service, they do the following:
 
 1. Index ``http.status_code``. See :ref:`apm-index-span-tags`.
-2. Create a custom Monitoring MetricSet on ``http.status_code`` for the service’s endpoints to get a time series for each status code. See :ref:`cmms`.
+2. Create a custom Monitoring MetricSet on ``http.status_code`` for the service's endpoints to get a time series for each status code. See :ref:`cmms`.
 3. Set up an alert on the rate of ``401`` errors as compared to all requests. See :ref:`apm-alerts`.
 
 .. _5xx-error-logic:

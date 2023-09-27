@@ -31,6 +31,7 @@ By default, the Splunk Distribution of OpenTelemetry Collector includes the logg
 To activate the logging exporter, add it to any pipeline you want to diagnose. For example:
 
 .. code-block:: yaml
+
    :emphasize-lines: 9, 13, 20
 
    service:

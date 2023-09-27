@@ -34,6 +34,7 @@ To send traces directly to the gRPC ingest endpoint, add the following lines to 
 
 .. code-block:: yaml
 
+
    exporters:
      otlp:
         endpoint: ingest.${SPLUNK_REALM}.signalfx.com:443
@@ -43,6 +44,7 @@ To send traces directly to the gRPC ingest endpoint, add the following lines to 
 Make sure that the traces pipeline contains the ``otlp`` exporter:
 
 .. code-block:: yaml
+
 
    service:
      pipelines:

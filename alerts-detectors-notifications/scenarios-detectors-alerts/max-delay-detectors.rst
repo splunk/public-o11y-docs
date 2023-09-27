@@ -9,7 +9,7 @@ Scenario: Kai sets a Max Delay for detectors to account for sudden changes in de
 .. meta::
     :description: This Splunk alerts and detectors scenario describes how to set max delay for detectors.
 
-In Splunk Observability Cloud, the site reliability engineering (SRE) team at Buttercup Game has set up a detector called :strong:`Store sales` that monitors Buttercup Games stores and alerts when any store’s hourly sales decrease by more than 10% compared to the previous week.
+In Splunk Observability Cloud, the site reliability engineering (SRE) team at Buttercup Game has set up a detector called :strong:`Store sales` that monitors Buttercup Games stores and alerts when any store's hourly sales decrease by more than 10% compared to the previous week.
 
 Kai, an SRE on the team, notices that sometimes the :strong:`Store sales` detector fires, but when they look at the chart 30 minutes later, everything seems normal.
 

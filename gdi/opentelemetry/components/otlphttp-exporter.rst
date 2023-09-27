@@ -54,6 +54,7 @@ This is a sample configuration for the exporter:
 
 .. code-block:: yaml
 
+
   exporters:
     otlphttp:
       endpoint: https://example.com:4318
@@ -64,6 +65,7 @@ Detailed sample configuration
 This is a detailed configuration example:
 
 .. code-block:: yaml
+
 
   endpoint: "https://1.2.3.4:1234"
   tls:
@@ -97,6 +99,7 @@ Configure gzip compression
 By default, gzip compression is enabled. To turn it off, use the following configuration:
 
 .. code-block:: yaml
+
 
   exporters:
     otlphttp:

@@ -22,6 +22,7 @@ To prevent both dimensions from being ingested, first Moira adds the attributes 
 
 .. code-block:: yaml
 
+
     extensions: 
         ...  
     processors:
@@ -38,6 +39,7 @@ To prevent both dimensions from being ingested, first Moira adds the attributes 
 Next, Moira adds the ``attributes/delete`` processor to the ``processors`` pipeline under ``pipelines`` in the Collector's configuration: 
 
 .. code-block:: yaml
+
 
     ... 
     service:

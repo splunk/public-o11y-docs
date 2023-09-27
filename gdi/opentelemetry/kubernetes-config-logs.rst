@@ -16,6 +16,7 @@ Add the following line to your configuration to use OpenTelemetry logs collectio
 
 .. code-block:: yaml
 
+
   logsEngine: otel
 
 The following are known limitations of native OpenTelemetry logs collection:
@@ -33,6 +34,7 @@ Add additional log files to be ingested from Kubernetes host machines and Kubern
 The following example shows how to add logs from Kubernetes host machines:
 
 .. code-block:: yaml
+
 
   logsCollection:
     extraFileLogs:
@@ -61,6 +63,7 @@ The Splunk Distribution of OpenTelemetry Collector for Kubernetes supports parsi
 
 .. code-block:: yaml
 
+
   logsCollection:
     containers:
       multilineConfigs:
@@ -81,6 +84,7 @@ Collect journald events
 The Splunk Distribution of OpenTelemetry Collector for Kubernetes can collect journald events from Kubernetes environment. Process journald events by adding the following section to your values.yaml configuration:
 
 .. code-block:: yaml
+
 
   logsCollection:
     journald:
@@ -109,6 +113,7 @@ The following annotations for log ingestion management are supported:
   * For example, to send logs from the ``kube-system`` namespace to the ``k8s_events`` index, use the command: 
   
   .. code-block:: yaml
+
 
     kubectl annotate namespace kube-system splunk.com/index=k8s_events
 

@@ -416,7 +416,7 @@ Maximum number of active alerts per detector
  
   If your detector has a large number of recipients or a large number of alerts, do the following:
 
-  * To update the detector, first mute its alerts. You can unmute them when you’re finished editing. To learn more about muting alerts, see :ref:`rule-from-alerts-page`.
+  * To update the detector, first mute its alerts. You can unmute them when you're finished editing. To learn more about muting alerts, see :ref:`rule-from-alerts-page`.
   * To delete the detector, first delete all its recipients. To learn more about deleting recipients, see :ref:`remove-recipients`.
 
 .. _maximum-alerts-rate:

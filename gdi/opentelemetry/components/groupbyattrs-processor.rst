@@ -32,6 +32,7 @@ To activate the resource processor, add ``groupbyattrs`` to the ``processors`` s
 
 .. code-block:: yaml
 
+
   processors:
     groupbyattrs:
       keys:
@@ -46,6 +47,7 @@ The keys property describes which attribute keys will be considered for grouping
 To complete the configuration, include the processor in any pipeline of the ``service`` section of your configuration file. For example:
 
 .. code-block:: yaml
+
 
   service:
     pipelines:
@@ -85,6 +87,7 @@ Consider the below metrics, all originally associated to the same resource:
 
 .. code-block:: yaml
 
+
   Resource {host.name="localhost",source="prom"}
     Metric "gauge-1" (GAUGE)
       DataPoint {host.name="host-A",id="eth0"}
@@ -108,6 +111,7 @@ Use the following configuration to re-associate the metrics with either ``host-A
 
 .. code-block:: yaml
 
+
   processors:
     groupbyattrs:
       keys:
@@ -116,6 +120,7 @@ Use the following configuration to re-associate the metrics with either ``host-A
 The output of the processor is:
 
 .. code-block:: yaml
+
 
   Resource {host.name="localhost",source="prom"}
     Metric "dont-move" (Gauge)
@@ -163,6 +168,7 @@ For example, consider the following input:
 
 .. code-block:: yaml
 
+
   Resource {host.name="localhost"}
     InstumentationLibrary {name="MyLibrary"}
     Spans
@@ -190,6 +196,7 @@ Use the following configuration to re-associate the spans with matching ``Resour
 
 .. code-block:: yaml
 
+
   processors:
     batch:
     groupbyattrs:
@@ -202,6 +209,7 @@ Use the following configuration to re-associate the spans with matching ``Resour
 The output of the processor is:
 
 .. code-block:: yaml
+
 
   Resource {host.name="localhost"}
     InstumentationLibrary {name="MyLibrary"}

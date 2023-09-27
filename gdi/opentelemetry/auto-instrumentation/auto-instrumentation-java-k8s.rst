@@ -44,6 +44,7 @@ For example, given the following deployment YAML:
 
 .. code-block:: yaml
 
+
     apiVersion: apps/v1
     kind: Deployment
     metadata:
@@ -58,6 +59,7 @@ For example, given the following deployment YAML:
 Activate auto instrumentation by adding ``otel.splunk.com/inject-java: "true"`` to the ``spec``:
 
 .. code-block:: yaml
+
 
     apiVersion: apps/v1
     kind: Deployment

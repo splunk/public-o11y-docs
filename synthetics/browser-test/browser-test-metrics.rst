@@ -182,7 +182,7 @@ To learn more about web vitals, see :new-page:`https://web.dev/vitals/` in the G
 
 Connection timings
 ^^^^^^^^^^^^^^^^^^^^
-Connection timings metrics capture information about the latency of your site’s connection to its server. 
+Connection timings metrics capture information about the latency of your site's connection to its server. 
 
 .. list-table::
    :header-rows: 1

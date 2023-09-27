@@ -91,7 +91,7 @@ Customizing mirrored dashboard filters
   mirror with the filters applied. After you save the mirror, the new filters appear in the customization section in the dashboard info tab.
 
 - On the Dashboard Info tab, anyone with :guilabel:`dashboard write permissions` can apply filters to the dashboard
-  (in the top portion of the tab). These filters affect all mirrors that don’t have filter customizations
+  (in the top portion of the tab). These filters affect all mirrors that don't have filter customizations
   applied.
 
 - If you want to apply a filter override, you can either add a filter to use in place of the
@@ -104,7 +104,7 @@ Customize dashboard variables
 =========================================
 
 You can define various dashboard variable settings that take effect for any dashboard in this dashboard group.
-Select :guilabel:`Dashboard Variables` from the dashboard’s Actions menu.
+Select :guilabel:`Dashboard Variables` from the dashboard's Actions menu.
 
 When you save these settings, the dashboard variable and the suggested values now reflect the customizations you
 specified.
@@ -119,7 +119,7 @@ Customizing mirrored dashboard variables
   automatically saved as default settings for this mirror.
 
 - On the :guilabel:`Dashboard Variables` tab, anyone with dashboard write permissions can add, delete, and edit
-  dashboard variables and their settings. These variables affect all mirrors that don’t have variable
+  dashboard variables and their settings. These variables affect all mirrors that don't have variable
   customizations applied.
 
 - If you want to override the dashboards default variables with no variables, you can leave the value blank. Doing so means you are overriding the dashboard variable default value with a setting of "no default value".

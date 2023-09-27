@@ -19,7 +19,6 @@ extensions = [
     'newpage',
     'github',
     'optimizer',
-    'myst_parser',
     'sphinx_tabs.tabs',
     'olly_on_git_hub',
     'sphinxcontrib.images',
@@ -55,7 +54,7 @@ exclude_patterns = ['_build', 'venv/lib/*/site-packages', '**/site-packages', 'T
 pygments_style = 'sphinx'
 todo_include_todos = False
 html_theme = 'alabaster'
-html_baseurl = "https://docs.splunk.com/Observability/"
+html_baseurl = "https://docs.splunk.com/observability/"
 html_title = 'Splunk Observability Cloud documentation'
 html_favicon = 'favicon.ico'
 html_static_path = ['_static']
