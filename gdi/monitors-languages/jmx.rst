@@ -65,7 +65,7 @@ Installation
 .. include:: /_includes/collector-installation.rst
 
 Configuration
-------------
+----------------
 
 .. include:: /_includes/configuration.rst
 

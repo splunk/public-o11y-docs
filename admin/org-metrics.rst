@@ -295,4 +295,4 @@ Observability Cloud provides the following organization metrics:
 Troubleshooting
 ---------------
 
-.. include:: /_includes/troubleshooting.rst
+.. include:: /_includes/troubleshooting-components.rst
