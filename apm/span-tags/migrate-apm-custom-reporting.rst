@@ -49,7 +49,7 @@ The following table covers the HTTP OpenTelemetry (OTel) attributes that changed
      - ``url.scheme``
      - Updated to avoid separate fields for various URL types and simplify telemetry correlation across different URL types like \ftp://, \ssh://, \file://, \data://, and so on.
    * - ``http.client_ip``
-     - ``http.forwarded.for``
+     - ``client.address``
      - Updated to reflect the latest attribute definition.
 
 Assess if you're affected by updating
