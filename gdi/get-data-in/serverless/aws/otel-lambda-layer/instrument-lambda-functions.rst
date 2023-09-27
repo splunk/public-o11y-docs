@@ -35,7 +35,9 @@ Follow these instructions to install the Splunk OpenTelemetry Lambda Layer:
 - :ref:`install-otel-lambda-layer`
 - :ref:`set-env-vars-otel-lambda`
 
-To instrument Go functions, also follow the steps in :ref:`go-serverless-instrumentation`.
+To instrument Go functions, skip to :ref:`go-serverless-instrumentation`.
+
+To instrument .NET functions, skip to :ref:`dotnet-serverless-instrumentation`.
 
 For Python functions using the Serverless Framework, see :ref:`serverless-framework-support-aws`.
 
@@ -144,9 +146,17 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
 
                   .. note:: The Graviton2 ARM64 architecture is not supported for Ruby Lambda functions.
 
+               .. tab:: .NET
+
+                  Don't set the ``AWS_LAMBDA_EXEC_WRAPPER`` environment variable.
+
+                  See :ref:`dotnet-serverless-instrumentation`.
+
                .. tab:: Go
 
-                  Don't set the ``AWS_LAMBDA_EXEC_WRAPPER`` environment variable. See :ref:`go-serverless-instrumentation`.
+                  Don't set the ``AWS_LAMBDA_EXEC_WRAPPER`` environment variable.
+
+                  See :ref:`go-serverless-instrumentation`.
 
       * - ``OTEL_SERVICE_NAME``
         - The name of your service.
@@ -154,7 +164,7 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
       * - (Optional) ``OTEL_RESOURCE_ATTRIBUTES``
         - Define the name of the deployment environment of your function by setting this environment variable to ``deployment.environment=<name-of-your-environment>``.
 
-5. Click :guilabel:`Save` and check that the environment variables appear in the table.
+5. Select :guilabel:`Save` and check that the environment variables appear in the table.
 
 To configure the mode of metric ingest, see :ref:`metrics-configuration-lambda`.
 
@@ -207,6 +217,15 @@ To instrument a Go function in AWS Lambda for Splunk APM, follow these additiona
       }
 
 .. note:: For a full example, see :new-page:`https://github.com/signalfx/tracing-examples/blob/main/opentelemetry-tracing/opentelemetry-lambda/go/example.go <https://github.com/signalfx/tracing-examples/blob/main/opentelemetry-tracing/opentelemetry-lambda/go/example.go>` on GitHub.
+
+.. _dotnet-serverless-instrumentation:
+
+Instrument .NET functions in AWS Lambda
+-------------------------------------------
+
+To instrument a .NET function in AWS Lambda for Splunk APM, follow these additional steps:
+
+
 
 .. _serverless-framework-support-aws:
 
