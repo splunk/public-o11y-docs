@@ -146,32 +146,32 @@ Metrics instrumentations
      - Instrumentation ID
    * - ASP.NET Framework
      - See :ref:`dotnet-otel-versions`
-     - Experimental
+     - Experimental Beta
      - Community support
      - ``ASPNET`` |br| (Requires the trace instrumentation)
    * - ASP.NET Core
      - See :ref:`dotnet-otel-versions`
-     - Experimental
+     - Experimental Beta
      - Community support
      - ``ASPNETCORE`` |br| (Automatically activates ``Microsoft.AspNetCore.Hosting.HttpRequestIn`` spans.)
    * - System.Net.Http.HttpClient and |br| System.Net.HttpWebRequest
      - See :ref:`dotnet-otel-versions`
-     - Experimental
+     - Experimental Beta
      - Community support
      - ``HTTPCLIENT``
    * - OpenTelemetry.Instrumentation.Runtime
      - See :ref:`dotnet-otel-versions`
-     - Experimental
+     - Experimental Beta
      - Community support
      - ``NETRUNTIME``
    * - NServiceBus
      - 8.0.0 and higher
-     - Experimental
+     - Experimental Beta
      - Third-party support
      - ``NSERVICEBUS``
    * - OpenTelemetry.Instrumentation.Process
      - See :ref:`dotnet-otel-versions`
-     - Experimental
+     - Experimental Beta
      - Community support
      - ``PROCESS``
 
@@ -190,7 +190,7 @@ Logs instrumentations
      - Instrumentation ID
    * - Microsoft.Extensions.Logging 6.0.0 and higher |br| (Not supported on .NET Framework)
      - 6.0.0 and higher
-     - Experimental
+     - Experimental Beta
      - Community support
      - ``ILOGGER`` |br| (Requires the trace instrumentation)
 
