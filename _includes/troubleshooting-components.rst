@@ -1,14 +1,12 @@
 If you are a Splunk Observability Cloud customer and are not able to see your data in Splunk Observability Cloud, you can get help in the following ways.
 
-Available to Splunk Observability Cloud customers
-----------------------------------------------------------------
+:strong:`Available to Splunk Observability Cloud customers`
 
 - Submit a case in the :new-page:`Splunk Support Portal <https://splunkcommunities.force.com/customers/home/home.jsp>`.
 
 - Call :new-page:`Splunk Customer Support <https://www.splunk.com/en_us/about-splunk/contact-us.html>`.
 
-Available to prospective customers and free trial users
---------------------------------------------------------------------------------
+:strong:`Available to prospective customers and free trial users`
 
 - Ask a question and get answers through community support at :new-page:`Splunk Answers <https://community.splunk.com/t5/Splunk-Observability-Cloud/bd-p/it-signalfx>`.
 
