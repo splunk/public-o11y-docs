@@ -12,12 +12,14 @@ The following sections list the collected metrics when you use the default confi
 
 .. caution:: In the Collector, data is processed as configured in your pipelines. Therefore, metrics first imported by receivers might be dropped further into the pipeline by other components, such as the SignalFx exporter. Check the details in the tables below. 
 
-See more at:
+Learn more about the Collector's configuration and data processing at:
 
 * :ref:`otel-configuration-ootb`
 * :ref:`otel-deployment-mode`
 * :ref:`otel-data-processing`
 * :ref:`signalfx-exporter`
+
+.. note:: To see the Collector's internal metrics, refer to :ref:`metrics-internal-collector`.
 
 Container level metrics and attributes
 ============================================================================
@@ -354,11 +356,6 @@ Volume level metrics and attributes
     - The number of capacity bytes in the volume
     - :ref:`ootb-metrics-k8s-attributes`
     - **Yes**
-
-Internal metrics
-============================================================================
-
-To see the Collector's internal metrics, refer to :ref:`metrics-internal-collector`.
 
 .. _ootb-metrics-k8s-attributes:
 
