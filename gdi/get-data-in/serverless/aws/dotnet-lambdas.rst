@@ -77,7 +77,7 @@ To instrument a .NET function in AWS Lambda for Splunk APM, follow these steps:
       }
    }
 
-2. Make sure that the new function handler ``TracingFunctionHandler`` is configured as the main entry point by editing the aws-lambda-tools-defaults.json file and changing the function handler entry. You can also do this using the AWS web console, changing the handler in :guilabel:`Runtime settings`.
+2. Make sure that the new function handler ``TracingFunctionHandler`` is configured as the main entry point by editing the aws-lambda-tools-defaults.json file and changing the ``function-handler`` entry. You can also do this using the AWS web console, changing the handler in :guilabel:`Runtime settings`.
 
 3. The template expects the following environment variables:
 
