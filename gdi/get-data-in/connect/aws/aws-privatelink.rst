@@ -163,7 +163,7 @@ To verify your AWS Account ID has been allowed, follow these steps:
 
 3. Select :guilabel:`Endpoint`, and then :guilabel:`Other endpoint services`.
 
-4. Enter and verify the service name based on the AWS region where you're configuring the VPC endpoint. Identify the appropriate service name using the table :guilabel:`PrivateLink Service Names`. 
+4. Enter and verify the service name based on the AWS region where you're configuring the VPC endpoint. Identify the appropriate service name using the table :ref:`aws-privatelink-service-names`.
 
   * If you see the :strong:`Service name verified` message, proceed with :ref:`aws-privatelink-step3`. 
   * If you see the :strong:`Service name could not be verified` error message, your account ID is not yet allowed for the given service name. Reach out to Splunk Customer Support to check the status of your request from :ref:`aws-privatelink-step1`. 
