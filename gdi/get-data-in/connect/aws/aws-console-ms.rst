@@ -37,7 +37,7 @@ Ensure you comply with the following requirements before you proceed to create y
 * Make sure the AWS account you used to create the integration contains the required policies for metric streams, as described in :ref:`metricstreams_iampolicy`. 
 
 Note
-* Only one integration is allowed to be created to receive Externally Managed (created through AWS CloudWatch Console) metric streams for each AWS account.
+* Only one integration is allowed to be created to receive Externally Managed, created through the AWS CloudWatch Console, metric streams for each AWS account.
 * If you want to add metric streams from more regions or include more namespaces, you shall edit the existing one instead of creating a new integration, as it will not be allowed.
 * By default, you might not want to edit the filter for syncing up metadata from all regions. If you deselect a region that has a metric stream sending in metrics, you may not be able to find it later in dashboards because of the lack of corresponding metadata.
 
