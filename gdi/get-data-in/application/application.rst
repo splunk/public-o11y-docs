@@ -22,6 +22,29 @@ Instrument back-end applications to send spans to Splunk APM
    Send spans from the Istio service mesh <istio/istio>
 
 Instrument your back-end services and applications to send metrics and traces to Splunk Observability Cloud.
+You can send metrics and traces from back-end applications to Splunk Observability Cloud through the Splunk Distribution of OpenTelemetry Collector, or you can send metrics and traces directly to Splunk Observability Cloud using the API.
+
+.. mermaid::
+
+   flowchart LR
+
+      subgraph "\nOpenTelemetry instrumentation"
+
+
+      A["Back-end applications
+      (Go, Python, Ruby, ...)"]
+      B["Serverless functions 
+      (AWS Lambda, Azure, GCP)"]
+      end
+
+      A -- "traces, metrics, logs" --> O
+
+      O["Splunk Distribution of 
+      OpenTelemetry Collector"]
+      O --> M["Splunk APM"]
+
+      A -- "traces, metrics, logs (API)" --> M
+      B -- "traces, metrics, logs (API)" --> M
 
 You can instrument applications in each of these languages using official Splunk instrumentation:
 
