@@ -18,19 +18,19 @@ This monitor is available on Linux.
 For general information on cgroups, see the Linux control groups and
 Linux Kernel documentation:
 
--  http://man7.org/linux/man-pages/man7/cgroups.7.html.
+-  :new-page:`http://man7.org/linux/man-pages/man7/cgroups.7.html`
 
--  https://www.kernel.org/doc/Documentation/cgroup-v1/memory.txt.
+-  :new-page:`https://www.kernel.org/doc/Documentation/cgroup-v1/memory.txt`
 
 For detailed information on ``cpu`` and ``memory`` cgroup metrics, see
 the Red Hat guides:
 
--  https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/resource_management_guide/sec-cpu
+-  :new-page:`https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/resource_management_guide/sec-cpu`
    Note that the ``cpuacct`` cgroup is primarily an informational cgroup
    that gives detailed information on how long processes in a cgroup
    used the CPU.
 
--  https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/resource_management_guide/sec-memory.
+-  :new-page:`https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/resource_management_guide/sec-memory`
 
 Benefits
 --------

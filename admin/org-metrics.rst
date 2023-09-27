@@ -23,7 +23,7 @@ Org metrics include:
    (MTS) you've created.
 
 You're not charged for these metrics, and they don't count against any
-:ref:`system limits <per-product-limits>`
+:ref:`system limits <per-product-limits>`.
 
 .. _access-org-metrics:
 

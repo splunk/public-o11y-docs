@@ -28,7 +28,8 @@ Configuration
 
 .. include:: /_includes/configuration.rst
 
-### Configuration options
+Configuration options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following configuration options are available for this integration:
 

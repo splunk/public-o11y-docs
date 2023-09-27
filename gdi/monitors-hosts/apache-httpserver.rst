@@ -204,6 +204,7 @@ Notes
 
 .. include:: /_includes/metric-defs.rst
 
-## Troubleshooting
+Troubleshooting
+--------------------
 
 .. include:: /_includes/troubleshooting.rst

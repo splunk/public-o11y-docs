@@ -39,7 +39,8 @@ Benefits
 
 .. include:: /_includes/benefits.rst
 
-## Installation
+Installation
+----------------
 
 Follow these steps to deploy this integration:
 
@@ -56,7 +57,9 @@ Follow these steps to deploy this integration:
       OpenShift metrics, in addition to the standard Kubernetes metrics.
 
       For example:
-      ``helm install --set cloudProvider=' ' --set distribution='openshift' --set splunkObservability.accessToken='******' --set            clusterName='cluster1' --namespace='namespace1' --set splunkObservability.realm='us0' --set gateway.enabled='false' --generate-name splunk-otel-collector-chart/splunk-otel-collector``
+      .. code-block:: shell
+
+         helm install --set cloudProvider=' ' --set distribution='openshift' --set splunkObservability.accessToken='******' --set clusterName='cluster1' --namespace='namespace1' --set splunkObservability.realm='us0' --set gateway.enabled='false' --generate-name splunk-otel-collector-chart/splunk-otel-collector``
 
       Find more information in our GitHub repos.
 

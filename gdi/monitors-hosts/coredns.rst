@@ -88,7 +88,7 @@ The following table shows the configuration options for this monitor:
       - ``int64``
       - HTTP timeout duration for both read and writes. Use a duration
          string that is accepted by
-         https://golang.org/pkg/time/#ParseDuration (**default:**
+         :new-page:`https://golang.org/pkg/time/#ParseDuration` (**default:**
          ``10s``)
    - 
 

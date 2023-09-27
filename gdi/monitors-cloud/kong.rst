@@ -57,14 +57,35 @@ Follow these steps to deploy the integration:
 
 1. Run the following commands on each Kong server with a configured
    ``LUA_PATH``:
-   ``sh     luarocks install kong-plugin-signalfx     # Or directly from the source repo     git clone git@github.com:signalfx/kong-plugin-signalfx.git     cd kong-plugin-signalfx     luarocks make     # Then notify Kong of the plugin or add to your existing configuration file     echo 'custom_plugins = signalfx' > /etc/kong/signalfx.conf``
+
+   ..code-block:: bash
+
+      luarocks install kong-plugin-signalfx
+      # Or directly from the source repo
+      git clone git@github.com:signalfx/kong-plugin-signalfx.git
+      cd kong-plugin-signalfx
+      luarocks make
+      # Then notify Kong of the plugin or add to your existing configuration file
+      echo 'custom_plugins = signalfx' > /etc/kong/signalfx.conf
+
 2. Add the following ``lua_shared_dict`` memory declarations to the
    NGINX configuration file of Kong, or add them directly to
    ``/usr/local/share/lua/5.1/kong/templates/nginx_kong.lua`` if you are
    using Kong default setup:
-   ``lua_shared_dict kong_signalfx_aggregation 10m;     lua_shared_dict kong_signalfx_locks 100k;``
+   
+   .. code-block:: bash
+
+      lua_shared_dict kong_signalfx_aggregation 10m;
+      lua_shared_dict kong_signalfx_locks 100k;
+
 3. Reload Kong to make the plugin available and install it globally:
-   ``sh     kong reload -c /etc/kong/signalfx.conf  # Or specify your modified configuration file     curl -X POST -d "name=signalfx" http://localhost:8001/plugins``
+
+   .. code-block:: shell 
+      
+      kong reload -c /etc/kong/signalfx.conf 
+      # Or specify your modified configuration file
+      curl -X POST -d "name=signalfx" http://localhost:8001/plugins``
+
 4. Deploy the Splunk Distribution of OpenTelemetry Collector to your
    host or container platform.
 5. Configure the monitor, as described in the next section.
