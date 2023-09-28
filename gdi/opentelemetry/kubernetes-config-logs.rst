@@ -16,11 +16,12 @@ Add the following line to your configuration to use OpenTelemetry logs collectio
 
 .. code-block:: yaml
 
+
   logsEngine: otel
 
 The following are known limitations of native OpenTelemetry logs collection:
 
-* The ``service.name`` attribute is not automatically constructed in an Istio environment, which means that correlation between logs and traces does not work in Splunk Observability Cloud. Use Fluentd for logs collection if you deploy the Helm chart with ``autodetect.istio=true``.
+* You must use version 0.80.0 (or higher) of the Splunk OpenTelemetry collector to correlate logs and traces in Istio environments. If you are unable to upgrade the collector to version 0.80.0 or higher, use Fluentd for logs collection and deploy the Helm chart with ``autodetect.istio=true``. See :new-page:`Splunk OpenTelemetry collector version 0.80.0 <https://github.com/signalfx/splunk-otel-collector-chart/releases/tag/splunk-otel-collector-0.80.0>` for more information.
 * Journald logs cannot be natively collected by the Collector at this time.
 * Logs collection is not supported in GKE Autopilot at this time.
 * See also :ref:`other rules and limitations for metrics and dimensions <metric-dimension-names>`. For instance, you can have up to 36 dimensions per MTS, otherwise the data point is dropped.
@@ -33,6 +34,7 @@ Add additional log files to be ingested from Kubernetes host machines and Kubern
 The following example shows how to add logs from Kubernetes host machines:
 
 .. code-block:: yaml
+
 
   logsCollection:
     extraFileLogs:
@@ -61,6 +63,7 @@ The Splunk Distribution of OpenTelemetry Collector for Kubernetes supports parsi
 
 .. code-block:: yaml
 
+
   logsCollection:
     containers:
       multilineConfigs:
@@ -81,6 +84,7 @@ Collect journald events
 The Splunk Distribution of OpenTelemetry Collector for Kubernetes can collect journald events from Kubernetes environment. Process journald events by adding the following section to your values.yaml configuration:
 
 .. code-block:: yaml
+
 
   logsCollection:
     journald:
@@ -109,6 +113,7 @@ The following annotations for log ingestion management are supported:
   * For example, to send logs from the ``kube-system`` namespace to the ``k8s_events`` index, use the command: 
   
   .. code-block:: yaml
+
 
     kubectl annotate namespace kube-system splunk.com/index=k8s_events
 

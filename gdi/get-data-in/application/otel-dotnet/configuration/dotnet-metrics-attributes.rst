@@ -9,8 +9,6 @@ Metrics collected by the Splunk Distribution of OpenTelemetry .NET
 
 The Splunk Distribution of OpenTelemetry .NET can collect runtime and trace metrics. To learn about the different metric types, see :ref:`metric-types`.
 
-.. caution:: This is a beta distribution. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on best-effort basis.
-
 .. _enable-dotnet-otel-metrics:
 
 Configure metrics collection
@@ -25,7 +23,7 @@ Metric collection is activated by default. To configure metric settings, see :re
 
 The Splunk Distribution of OpenTelemetry .NET can collect the following runtime metrics:
 
-.. list-table::  
+.. list-table::
    :header-rows: 1
    :widths: 40 10 50
    :width: 100%
@@ -51,6 +49,9 @@ The Splunk Distribution of OpenTelemetry .NET can collect the following runtime 
    * - ``process.runtime.dotnet.gc.committed_memory.size``
      - Gauge
      - Amount of committed virtual memory for the managed GC heap, as observed during the last garbage collection. Only available for .NET 6 and higher.
+   * - ``process.runtime.dotnet.gc.duration``
+     - Cumulative counter
+     - The total amount of time paused in GC since the process start. Only available for .NET 7 and higher.
    * - ``process.runtime.dotnet.monitor.lock_contention.count``
      - Cumulative counter
      - Contentions count when trying to acquire a monitor lock since the process started.

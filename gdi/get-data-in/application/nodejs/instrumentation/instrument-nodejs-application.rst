@@ -1,7 +1,7 @@
 .. _instrument-nodejs-applications:
 
 ***************************************************************
-Instrument a Node application for Splunk Observability Cloud
+Instrument your Node application for Splunk Observability Cloud
 ***************************************************************
 
 .. meta::
@@ -192,7 +192,7 @@ After you add the ``start()`` function to your entry point script, run your appl
 Add custom instrumentation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To add custom or third-party instrumentations that implement the OpenTelemetry JS Instrumentation interface, pass them to ``startTracing()`` using the following code:
+To add custom or third-party instrumentations that implement the OpenTelemetry JS Instrumentation interface, pass them to ``start()`` using the following code:
 
 .. code-block:: javascript
 

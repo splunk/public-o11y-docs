@@ -4,7 +4,7 @@
 API test metrics
 ******************************************
 
-API Tests capture a set of key metrics that offer insight into your API’s performance at a glance.
+API Tests capture a set of key metrics that offer insight into your API's performance at a glance.
 
 * :ref:`request-level-metrics-api`
 * :ref:`run-level-metrics-api`

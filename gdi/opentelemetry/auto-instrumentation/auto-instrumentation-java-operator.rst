@@ -28,6 +28,7 @@ To do so, Arnau, their DevOps manager, proceeds to:
 Arnau creates the ``spring-petclinic`` namespace and deploys the related Java applications to it. 
 
 .. code-block:: yaml
+
    
    kubectl apply -f examples/enable-operator-and-auto-instrumentation/spring-petclinic -R
 

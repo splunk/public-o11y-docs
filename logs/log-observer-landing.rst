@@ -7,11 +7,17 @@ Splunk Log Observer
 .. meta::
    :description: The Log Observer landing page lists and describes all capabilities. Investigate logs in context with metrics and traces in Splunk Log Observer.
 
+
+.. include:: /_includes/log-observer-transition.rst
+
+
 .. toctree::
     :maxdepth: 3
     :hidden:
 
 
+    lo-transition
+    forward-logs
     get-started-logs
     logs
     timeline
@@ -34,6 +40,12 @@ Splunk Log Observer
     limits
 
 
+
+
+
+- :ref:`lo-transition`
+
+- :ref:`forward-logs`
 
 - :ref:`get-started-logs`
 

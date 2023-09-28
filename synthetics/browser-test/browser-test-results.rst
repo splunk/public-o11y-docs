@@ -154,9 +154,9 @@ Using the waterfall chart, you can do the following:
 
 Filmstrip
 -----------
-:strong:`Available in the Enterprise Edition.`
+:strong:`Available in Enterprise Edition.`
 
-The filmstrip offers a screenshot of site performance at specific intervals on a timeline, so that you can see how the page responds in real time. By default, the filmstrip provides a screenshot and the time in milliseconds for every visual change as the page loads. You can also use the interval selector to view screenshots for every 100 milliseconds, 500 milliseconds, and 1 second. 
+The filmstrip offers a screenshot of site performance at specific intervals on a timeline, so that you can see how the page responds in real time. By default, the filmstrip provides a screenshot and the time in milliseconds for every visual change as the page loads. You can also use the interval selector to view screenshots for every 100 milliseconds, 500 milliseconds, and one second. 
 
 Within the filmstrip, you can use the :guilabel:`Download Screen Captures` button to download a zip file of .jpg images of all of the screenshots the test captured. 
 
@@ -164,7 +164,7 @@ Within the filmstrip, you can use the :guilabel:`Download Screen Captures` butto
 
 Video
 -------
-:strong:`Available in the Enterprise Edition.`
+:strong:`Available in Enterprise Edition.`
 
 In the filmstrip view, you can also view a video of the site loading in real time. This lets you see exactly what a user trying to load your site from the location and device of a particular test run would experience. You can use the :guilabel:`Download Video` button to download this video as an .mp4 file for later reference.  
 
@@ -179,7 +179,7 @@ In addition to these diagnostics, every run of a Browser Test produces a set of 
 
 Detect and report on your synthetic metrics
 ------------------------------------------------------------------
-To get even more value out of your synthetic metrics, use the Splunk Observability Cloud metrics engine to create custom metrics, charts, and detectors. See the following links for more information:
+To get even more value out of your synthetic metrics, use the metrics engine to create custom metrics, charts, and detectors. See the following links for more information:
 
 * To build charts and dashboards using your metrics, see :ref:`dashboards`.
 * To create static threshold detectors natively in Splunk Synthetic Monitoring, see :ref:`synth-alerts`.
@@ -190,4 +190,4 @@ To get even more value out of your synthetic metrics, use the Splunk Observabili
 
 (Optional) Splunk RUM integration 
 ------------------------------------
-Integrate with Splunk RUM so that you can automatically measure Web Vital metrics against your run results. Web vitals capture key metrics that affect user experience and assess the overall performance of your site. For more, see :ref:`rum-synth`.
+Splunk Synthetic Monitoring automatically collects web vitals for Browser tests. If you also want to measure web vital metrics against your run results, then integrate with Splunk RUM. Web vitals capture key metrics that affect user experience and assess the overall performance of your site. For more, see :ref:`rum-synth`.

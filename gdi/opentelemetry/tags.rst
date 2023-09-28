@@ -19,6 +19,7 @@ The settings look like this in the configuration YAML file:
 
 .. code-block:: yaml
 
+
    processors:
      # Overrides an existing tag for a span.
      attributes/copyfromexistingkey:
@@ -36,6 +37,7 @@ The settings look like this in the configuration YAML file:
 If you include ``attributes`` processor(s), you have to add them to your pipelines, as shown in the following example:
 
 .. code-block:: yaml
+
 
    service:
      pipelines:

@@ -136,11 +136,10 @@ Performance timing metrics capture information about how long it takes resources
 
    * - First CPU idle
      - ``synthetics.first_cpu_idle.time.ms``
-     - Time until the page is minimally interactive and will respond to user input in a reasonable amount of time. See "What Interactivity Metrics Does Rigor Offer?" in the Rigor knowledge base to learn more about how this metric is calculated. 
-
+     - Time until the page is minimally interactive and will respond to user input in a reasonable amount of time. 
    * - Time to interactive
      - ``synthetics.tti.time.ms``
-     - Time until the page is first expected to be usable and will respond to user input quickly. See "What Interactivity Metrics Does Rigor Offer?" in the Rigor knowledge base to learn more about how this metric is calculated. 
+     - Time until the page is first expected to be usable and will respond to user input quickly. 
      
    * - Onload time
      - ``synthetics.onload.time.ms``
@@ -148,11 +147,10 @@ Performance timing metrics capture information about how long it takes resources
 
    * - Visually complete time
      - ``synthetics.visually_complete.time.ms``
-     - Time until all above-the-fold content has finished rendering. See :new-page:`Monitoring the UX with Start Render, Visually Complete, and Speed Index <https://rigor.com/blog/monitoring-the-ux/>` on the Rigor blog to learn more about how this metric works. 
-
+     - Time until all above-the-fold content has finished rendering.
    * - Speed index
      - ``synthetics.speed_index.time.ms``
-     - A calculated metric that represents how quickly the page renders above-the-fold content. See :new-page:`Monitoring the UX with Start Render, Visually Complete, and Speed Index <https://rigor.com/blog/monitoring-the-ux/>` on the Rigor blog to learn more about how this metric works. 
+     - A calculated metric that represents how quickly the page renders above-the-fold content. 
 
 
 Web vitals
@@ -184,7 +182,7 @@ To learn more about web vitals, see :new-page:`https://web.dev/vitals/` in the G
 
 Connection timings
 ^^^^^^^^^^^^^^^^^^^^
-Connection timings metrics capture information about the latency of your site’s connection to its server. 
+Connection timings metrics capture information about the latency of your site's connection to its server. 
 
 .. list-table::
    :header-rows: 1

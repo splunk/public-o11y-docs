@@ -8,7 +8,7 @@ Migration process from the Smart Agent to the Splunk Distribution of the OpenTel
    :description: Describes the process of migrating from the SignalFX Smart Agent to the Splunk Distribution of OpenTelemetry Collector.
 
 .. note::
-   Using this content assumes that you're running the SignalFx SmartAgent in the Kubernetes, Linux, or Windows environments and want to migrate to the Splunk Distribution of OpenTelemetry Collector to collect telemetry data. Note that you cannot use both agents simultaneously on the same host.
+   Using this content assumes that you're running the SignalFx SmartAgent in the Kubernetes, Linux, or Windows environments and want to migrate to the Splunk Distribution of OpenTelemetry Collector to collect telemetry data. Note that you cannot use both agents simultaneously on the same host. See more details about this in the section :strong:`Conflicting semantics` in :ref:`Mapping service and migration impact report <legacy-otel-mappings>`.
 
 Do the following steps to migrate from the Smart Agent to the Collector:
 
@@ -91,6 +91,7 @@ For containerized environments, you can expose this port on a public interface i
 
 .. code-block:: yaml
 
+
    extensions:
       zpages:
          endpoint: 0.0.0.0:55679
@@ -138,17 +139,20 @@ For Docker:
 
 .. code-block:: yaml
 
+
    docker logs my-container >my-container.log
 
 For Journald: 
 
 .. code-block:: yaml
 
+
    journalctl -u my-service >my-service.log
 
 For Kubernetes: 
 
 .. code-block:: yaml
+
 
    kubectl describe pod my-pod kubectl logs my-pod otel-collector >my-pod-otel.log kubectl logs my-pod fluentd >my-pod-fluentd.log
 
@@ -172,6 +176,7 @@ Set the logging level to ``debug``:
 
 .. code-block:: yaml
 
+
    service:
       telemetry:
          logs:
@@ -180,6 +185,7 @@ Set the logging level to ``debug``:
 Set ``log_data_points`` to ``true`` using the SignalFx exporter:
 
 .. code-block:: yaml
+
 
    exporters:
       signalfx:
@@ -201,6 +207,7 @@ The Smart Agent can be configured by editing the agent.yaml file. By default, th
 The following is an example YAML configuration file with default values where applicable:
 
 .. code-block:: yaml
+
 
    signalFxAccessToken: {"#from": "env:SIGNALFX_ACCESS_TOKEN"}
    ingestUrl: https://ingest.us1.signalfx.com
@@ -261,6 +268,7 @@ The Smart Agent has an internal metrics monitor that emits metrics about the int
 
 .. code-block:: yaml
 
+
    monitors:
       - type: internal-metrics
 
@@ -271,7 +279,7 @@ After the configuration file is updated, restart the Smart Agent.
 You can then use the ``sfxagent.datapoints_sent`` and ``sfxagent.trace_spans_sent`` metrics to estimate the number of data points and spans being sent to Splunk Observability Cloud respectively. You can plot them on a dashboard and filter based on dimensions to ascertain the total per cluster or host.
 
 .. note::
-   The sizing recommendation for logs also accounts for td-agent (Fluentd) that is bundled with the Collector.
+   The sizing recommendation for logs also accounts for td-agent (Fluentd) that can be activated with the Collector.
 
 If a Collector handles both trace and metric data, then both must be accounted for when sizing. For example, 7.5K spans per second plus 10K data points per second would require 1 CPU core.
 
@@ -281,11 +289,13 @@ Configure ``ballastextension`` and the ``memory_limiter`` processor on every Col
 
 .. code-block:: yaml
 
+
    extensions:
       memory_ballast:
          size_mib:
 
 .. code-block:: yaml
+
 
    processors:
       memory_limiter:
@@ -298,7 +308,7 @@ Configure ``ballastextension`` and the ``memory_limiter`` processor on every Col
 
 .. _deploy-non-prod-updated-config:
 
-6. Deploy the Collector to the non-production environment using the updated configuration file
+1. Deploy the Collector to the non-production environment using the updated configuration file
 ===================================================================================================
 
 Complete the necessary updates and translation of the configuration file, and restart the Collector on the non-production environment using the updated file.
@@ -323,7 +333,8 @@ On Windows:
 
 On Kubernetes:
 
-.. code-block:: YAML
+.. code-block:: yaml
+
 
    helm upgrade my-splunk-otel-collector --values my_values.yaml splunk-otel-collector-chart/splunk-otel-collector
 
@@ -367,4 +378,4 @@ After uninstalling the Smart Agent, :ref:`deploy the Collector to a production h
 
 After verifying with one host, deploy the Collector with the same configuration to the rest of the hosts.
 
-.. include:: /_includes/troubleshooting-steps.rst
+.. include:: /_includes/troubleshooting-components.rst
