@@ -17,6 +17,7 @@ span.not-ok {
 
 span.std-term {
   font-weight: bold;
+  font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif;
 }
 
 .st-default-autocomplete {
