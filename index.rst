@@ -352,7 +352,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Private connectivity TOGGLE <gdi/get-data-in/private-connectivity/private-connectivity-landing>
+   Private connectivity TOGGLE <gdi/private-connectivity/private-connectivity-landing>
 
 .. toctree::
    :maxdepth:   3
