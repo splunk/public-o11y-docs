@@ -37,6 +37,11 @@ Using Splunk RUM instrumentation, you can send traces from web and mobile applic
 
       S["Splunk RUM"]
 
+.. raw:: html
+
+  <embed>
+    <h2>Available front-end instrumentations<a name="otel-frontend-instrumentations" class="headerlink" href="#otel-frontend-instrumentations" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
 You can instrument the following types of application:
 
