@@ -69,7 +69,9 @@ The following image shows the architecture for the data forwarding (gateway) mod
 Consolidate tokens with a Collector in data forwarding (gateway) mode
 -------------------------------------------------------------------------------
 
-When you use a Collector in data forwarding (gateway) mode, Collectors in agent mode are not sending the data directly to Splunk Observability Cloud back-end. Therefore, you only need one valid token for the gateway Collector to see data in Observability Cloud, and agent Collectors could have invalid or expired tokens.  
+Collectors in host monitoring or agent mode that send data to another Collector in data forwarding or gateway mode, are not sending the data directly to Splunk Observability Cloud back-end. In this case, only the ingest token in the gateway Collector is used, and tokens in the Collectors that are sending data to a gateway are ignored.
+
+Therefore, you only need one valid token for the gateway Collector to see data in Observability Cloud, and the rest of Collectors could have invalid or expired tokens.  
 
 .. _collector-current-mode:
 
