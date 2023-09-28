@@ -11,7 +11,7 @@ Private connectivity
 .. toctree::
    :hidden:
 
-   Private Connectivity using PrivateLink <connect/aws/aws-privatelink>
+   Private Connectivity using PrivateLink <gdi/get-data-in/connect/aws/aws-privatelink.rst>
 
 See the following topics to create private connections to send data to Splunk Observability Cloud:
 
