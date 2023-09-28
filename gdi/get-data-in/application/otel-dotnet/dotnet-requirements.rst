@@ -24,8 +24,6 @@ Supported libraries
 
 The Splunk Distribution of OpenTelemetry .NET instruments the following libraries.
 
-.. caution:: This is a beta distribution. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on best-effort basis.
-
 Traces instrumentations
 ---------------------------------
 
@@ -40,92 +38,92 @@ Traces instrumentations
      - Instrumentation ID
    * - ASP.NET Framework (.NET Framework) |br| MVC / WebApi (Only integrated pipeline mode supported)
      - See :ref:`dotnet-otel-versions`
-     - Experimental
+     - Experimental Beta
      - Community support
      - ``ASPNET``
    * - ASP.NET Core
      - See :ref:`dotnet-otel-versions`
-     - Experimental
+     - Experimental Beta
      - Community support
      - ``ASPNETCORE``
    * - Azure SDK
      - ``Azure.`` prefixed packages, released after October 1, 2021
-     - Experimental
+     - Experimental Beta
      - Third-party support
      - ``AZURE``
    * - Elastic.Clients.Elasticsearch
      - 8.0.0 and higher
-     - Experimental
+     - Experimental Beta
      - Third-party support
      - ``ELASTICSEARCH``
    * - Microsoft.EntityFrameworkCore |br| (Not supported on .NET Framework)
      - 6.0.12 and higher
-     - Experimental
+     - Experimental Beta
      - Community support
      - ``ENTITYFRAMEWORKCORE``
    * - GraphQL |br| (Not supported on .NET Framework)
      - 7.5.0 and higher
-     - Experimental
+     - Experimental Beta
      - Third-party support
      - ``GRAPHQL``
    * - Grpc.Net.Client
      - 2.52.0 to 3.0.0
-     - Experimental
+     - Experimental Beta
      - Community support
      - ``GRPCNETCLIENT``
    * - System.Net.Http.HttpClient and |br| System.Net.HttpWebRequest
      - See :ref:`dotnet-otel-versions`
-     - Experimental
+     - Experimental Beta
      - Community support
      - ``HTTPCLIENT``
    * - MassTransit |br| (Not supported on .NET Framework)
      - 8.0.0 and higher
-     - Experimental
+     - Experimental Beta
      - Third-party support
      - ``MASSTRANSIT``
    * - MongoDB.Driver.Core |br| (Not supported on .NET Framework)
      - 2.13.3 to 3.0.0
-     - Experimental
+     - Experimental Beta
      - Third-party support
      - ``MONGODB``
    * - MySqlConnector
      - 2.0.0 and higher
-     - Experimental
+     - Experimental Beta
      - Third-party support
      - ``MYSQLCONNECTOR``  
    * - MySql.Data |br| (Not supported on .NET Framework)
      - 8.1.0 and higher
-     - Experimental
+     - Experimental Beta
      - Third-party support
      - ``MYSQLDATA``
    * - Npgsql
      - 6.0.0 and higher
-     - Experimental
+     - Experimental Beta
      - Third-party support
      - ``NPGSQL``
    * - NServiceBus
      - 8.0.0 and higher
-     - Experimental
+     - Experimental Beta
      - Third-party support
      - ``NSERVICEBUS``
    * - Microsoft.Data.SqlClient and |br| System.Data.SqlClient
      - Version 3.* is not supported on .NET Framework
-     - Experimental
+     - Experimental Beta
      - Community support
      - ``SQLCLIENT``
    * - Quartz |br| (Not supported on .NET Framework 4.7.1 and lower)
      - 3.4.0 and higher
-     - Experimental
+     - Experimental Beta
      - Community support
      - ``QUARTZ``
    * - StackExchange.Redis |br| (Not supported on .NET Framework)
      - 2.0.405 to 3.0.0
-     - Experimental
+     - Experimental Beta
      - Community support
      - ``STACKEXCHANGEREDIS``
    * - System.ServiceModel |br| (Service side not supported on .NET)
      - 4.7.0 and higher |br| of ``System.ServiceModel.Primitives``
-     - Experimental
+     - Experimental Beta
      - Community support
      - ``WCFCLIENT`` for client side instrumentation and |br| ``WCFSERVICE`` for service side instrumentation
 
