@@ -6,7 +6,7 @@ Migrate APM custom reporting to OpenTelemetry Java and .NET Agent 2.0
 .. meta:: 
    :description: Steps to migrate your APM custom reporting to support update to version 2.0 of Splunk OpenTelemetry Java and .NET agents.
 
-Version 2.0 the Splunk Distribution of OpenTelemetry Java and .NET agents includes breaking changes to HTTP semantic conventions. While the release of version 2.0 is to be determined, you can migrate to affected attributes in advance of updating so you can ensure your Splunk APM experience is unaffected.
+Version 2.0 of the Splunk Distribution of OpenTelemetry Java and .NET agents includes breaking changes to HTTP semantic conventions. While the release of version 2.0 is to be determined, you can migrate to affected attributes in advance of updating so you can ensure your Splunk APM experience is minimally affected.
 
 If you continue to use deprecated OTel attributes, the following aspects of custom reporting in APM are affected by updating to version 2.0 of the Splunk Distribution of OpenTelemetry Java and .NET agents:
 
@@ -83,7 +83,7 @@ If you determine that you need to migrate, follow these steps:
 Time your update
 -----------------------
 
-As of August 7, 2023, Splunk APM began populating the new attributes with data. To prepare for the update you need to index the new attributes as tag so that you have the historical data you need. For TMS, which are used in Tag Spotlight, plan to index the new data at least 8 days in advance of the update. For MMS, which are used in dashboard charts and detectors, you'll need to update the SignalFlow for charts and dashboards to filter for both the old and new tags to prevent gaps in data. 
+As of August 7, 2023, Splunk APM began populating the new attributes of raw trace data. However, TMS and MMS for these new attributes have not been created. you need to create TMS and MMS in order to receive any data. To prepare for the update you need to index the new attributes as tags so custom TMS and MMS begin receiving data for reporting. For TMS, which are used in Tag Spotlight, plan to index the new data at least 8 days in advance of the update. For MMS, which are used in dashboard charts and detectors, you'll need to update the SignalFlow for charts and dashboards to filter for both the old and new tags to prevent gaps in data. 
 
 .. _index-new-attributes: 
 
@@ -107,8 +107,8 @@ Update your charts and dashboards to use the new indexed tags
 
 To update charts or dashboards that reference the deprecated attributes as tags, follow these steps.
 
-#.  For each affected chart, select :guilabel:`Chart actions`, then :guilabel:`Open`.
-#. Go to the plot builder and edit the filter to change the reference to both the old and the new tag names. Or, select :guilabel:`View SignalFlow` to edit the ``filter()`` function to reference the new tag.
+#. For each affected chart, select :guilabel:`Chart actions`, then :guilabel:`Open`.
+#. Go to the plot builder and edit the filter to change the reference to both the new tag names. Or, if you need to see data from the old tags, select :guilabel:`View SignalFlow` to edit the ``filter()`` function to reference both the old and the new tags.
 
 Example SignalFlow that uses both old and new tags:
 
@@ -125,7 +125,7 @@ To update your detectors, follow these steps.
 
 #. Go to :guilabel:`Alerts & Detectors`, then :guilabel:`Detectors`.
 #. For each affected detector, select the detector, then select :guilabel:`Signals`.
-#. Change the filter to reference both the old and the new tag names.
+#. Change the filter to reference the new tag names. Or, if you need to use data from the old tags in your detectors, change the reference in the SignalFlow to both the old and the new tags. 
 
 Example SignalFlow that uses both old and new tags:
 
@@ -138,7 +138,9 @@ Example SignalFlow that uses both old and new tags:
 (Optional) Delete MetricSets that use the deprecated attributes as tags
 ----------------------------------------------------------------------------
 
-After you have updated your charts, dashboards, and detectors to use the new attributes and have confirmed that all are working as expected, delete the tags that use the deprecated attributes. Deleting the tags that use the deprecated attributes reduces your organization's cardinality and also reduces potential user confusion.
+After you have updated your charts, dashboards, and detectors to use the new attributes and have confirmed that all are working as expected and have determined that you no longer need to reference or use any data from the deprecated tags, you can delete the tags that use the deprecated attributes. Deleting the tags that use the deprecated attributes reduces your organization's cardinality and also reduces potential user confusion.
+
+If, however, you need historical data, you can choose to maintain MetricSets that reference the deprecated attributes until your new tags populate with the data your organization needs.
 
 #. Go to :guilabel:`Settings`, then :guilabel:`APM MetricSets`. You must have the admin role to access APM MetricSets. 
 #. Select :guilabel:`Delete the MetricSet configuration` (trash can icon) to delete the tag and the corresponding MetricSets.
