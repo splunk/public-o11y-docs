@@ -18,12 +18,7 @@ Ensure you comply with the following requirements before you proceed to create y
 * Make sure Metric Streams is activated in the integration.
 * Make sure the AWS account you used to create the integration contains the required policies for Metric Streams, as described in :ref:`metricstreams_iampolicy`. 
 
-Notes
---------------------------------------------------
-
-* You can only have one integration externally managed from AWS at a time for each AWS account.
-* If you want to add Metric Streams from more regions, or include more namespaces, edit the existing integration. Creating a new integration is not allowed.
-* By default, keep the filter that syncs metadata from all regions. If you deselect a region that has a Metric Stream sending in metrics, you might not be able to find it later in dashboards.
+.. note:: You can only have one integration using Metric Streams externally managed from AWS at a time for each AWS account. All Metric Streams you created in different AWS regions will be sent to this integration. The editing of included regions will affect metadata only but could also affect how you may find corresponding metric streams in products.
 
 Integrate from the AWS console using the API 
 ======================================================
