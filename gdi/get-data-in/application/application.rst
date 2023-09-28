@@ -46,6 +46,13 @@ You can send metrics and traces from back-end applications to Splunk Observabili
       A -- "traces, metrics, logs (API)" --> M
       B -- "traces, metrics, logs (API)" --> M
 
+
+.. raw:: html
+
+  <embed>
+    <h2>Available language instrumentations<a name="otel-instrumentations" class="headerlink" href="#otel-instrumentations" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
 You can instrument applications in each of these languages using official Splunk instrumentation:
 
 - :ref:`Java <get-started-java>`
