@@ -16,9 +16,60 @@ For examples of custom metrics instrumentation and instrument types, see :ref:`c
 System metrics
 ================================
 
-The Python agent automatically collects and exports system metrics.
+The Python agent automatically collects and exports the following system metrics:
 
-For a complete list of these metrics, see the :new-page:`list of configured system metrics for OpenTelemetry Python <https://opentelemetry-python-contrib.readthedocs.io/en/latest/instrumentation/system_metrics/system_metrics.html>`.
+.. list-table::
+  :header-rows: 1
+  :widths: 45 20 35
+
+  * - Metric 
+    - Type
+    - Description
+  * - ``system.cpu.time``
+    - Counter
+    - Total seconds each logical CPU spent on each mode.
+  * - ``system.cpu.utilization``
+    - Gauge
+    - Difference in ``system.cpu.time`` since the last measurement per logical CPU, divided by the elapsed time (value in interval [0,1])
+  * - ``system.memory.usage``
+    - Counter
+    - Bytes of memory in use.
+  * - ``system.memory.utilization``
+    - Gauge
+    - Percentage of memory bytes in use.
+  * - ``system.swap.usage``
+    - Counter 
+    - Bytes of swap space in use.
+  * - ``system.swap.utilization``
+    - Gauge
+    - Percentage of swap space bytes in use.
+  * - ``system.disk.io``
+    - Counter
+    - Disk bytes transferred.
+  * - ``system.disk.operations``
+    - Counter
+    - Disk operations count.
+  * - ``system.disk.time``
+    - Counter
+    - Time disk spent activated
+  * - ``system.network.dropped.packets``
+    - Counter
+    - The number of packets dropped.
+  * - ``system.network.packets``
+    - Counter
+    - The number of packets transferred.
+  * - ``system.network.errors``
+    - Counter
+    - The number of errors encountered.
+  * - ``system.network.io``
+    - Counter
+    - The number of bytes transmitted and received.
+  * - ``system.network.connections``
+    - Counter
+    - The number of connections.
+  * - ``system.thread_count``
+    - Counter
+    - The number of threads.
 
 .. _python-app-metrics:
 
@@ -61,7 +112,7 @@ The Python agent collects metrics through the following supported libraries:
 
 .. list-table::
   :header-rows: 1
-  :widths: 45 20 50
+  :widths: 45 20 35
   :width: 100%
 
   * - Library/Framework
