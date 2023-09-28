@@ -27,7 +27,6 @@ A pipeline configuration typically looks like this:
 
 .. code-block:: yaml
 
-
   service:
     pipelines:
     # Pipelines can contain multiple subsections, one per pipeline.
@@ -35,9 +34,9 @@ A pipeline configuration typically looks like this:
       # Traces is the pipeline type.
         receivers: [otlp, jaeger, zipkin]
         processors: [memory_limiter, batch]
-        exporters: [otlp, jaeger, zipkin]
+        exporters: [otlp, splunk_hec, jaeger, zipkin]
 
-This example defines a pipeline for ``traces``, with three receivers, two processors, and three exporters. The following table describes the receivers, processors, and exporters used in this example.
+This example defines a pipeline for ``traces``, with three receivers, two processors, and four exporters. The following table describes the receivers, processors, and exporters used in this example. For more details, see :ref:`Collector components <otel-components>`.
 
 .. list-table::
    :widths: 25 50 25
