@@ -44,9 +44,9 @@ The Splunk Distribution of OpenTelemetry Collector is a distribution of the Open
     extensions
     end
 
-    Infrastructure -- "traces, metrics, logs" --> receivers
+    Infrastructure -- "metrics, logs" --> receivers
     B[Back-end services] -- "traces, metrics, logs" --> receivers
-    C[Front-end experiences] -- "traces, metrics, logs" --> receivers
+    C[Front-end experiences] -- "traces" --> S[Splunk Observability Cloud]
 
     receivers --> processors
     processors --> exporters
