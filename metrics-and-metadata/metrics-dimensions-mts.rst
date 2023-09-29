@@ -19,7 +19,7 @@ Splunk Observability Cloud data comes enriched with additional metadata:
     - :strong:`Data type`
     - :strong:`Format`
   * - Dimensions
-    - Sent in with metric time series (MTS) at the time of ingest to add context to metrics. Along with the metric name, they uniquely identify the MTS.
+    - Sent in with metric time series (MTS) at the time of ingest to add context to metrics. Along with the metric name, they uniquely identify the MTS. Dimensions do not change over time.
     - Infrastructure metric
     - Key-value pair
   * - Custom properties 
@@ -49,7 +49,7 @@ For more tools to leverage your data, see:
 Dimensions
 ================================================================================
 
-Dimensions are metadata in the form of key-value pairs that monitoring software sends in along with the metrics. The set of MTS dimensions sent during ingest is used, along with the metric name, to uniquely identify an MTS. 
+Dimensions are immutable metadata in the form of key-value pairs that monitoring software sends in along with the metrics. The set of MTS dimensions sent during ingest is used, along with the metric name, to uniquely identify an MTS. 
 
 Dimensions provide additional information about the metric, such as the name of the host that sent the metric. For example, ``"hostname": "host1"``. 
 
@@ -79,7 +79,7 @@ Dimension name criteria:
 Custom properties
 ===================
 
-Custom properties are key-value pairs you can assign to dimensions of existing MTSes. Custom properties are single-valued and don't support multiple values.
+Custom properties are key-value pairs you can assign to dimensions of existing MTSes after ingest. Custom properties are single-valued and don't support multiple values.
 
 For example, you can add the custom property ``use: QA`` to the host dimension of your metrics to indicate that the host that is sending the data is used for QA. The custom property ``use: QA`` then propagates to all MTS with that dimension. To learn more about adding custom properties to existing metric dimensions, see :ref:`search-edit-metadata`.
 
@@ -123,6 +123,11 @@ Tags are UTF-8 strings with a maximum length of 256 UTF-8 characters/1024 bytes.
 
 Span attributes or tags 
 ==========================================
+
+Tags are used when there is a need for a many-to-one relationship of tags to an object or a one-to-many relationship between the tag and the objects you are applying them to. They are useful for grouping together metrics that may not be intrinsically associated.
+
+Attributes in OpenTelemetry
+--------------------------------
 
 In the OpenTelemetry data model, metadata is provided as span attributes or tags. You can add and modify them using an attributes processor in your Collector's traces pipelines. 
 
