@@ -53,7 +53,7 @@ Use data forwarding (gateway) mode when you want to do one of the following:
 * Configure a larger buffer.
 * Configure an increased wait interval for retry attempts.
 * Limit the number of egress points required to send data.
-* Consolidate API token management.
+* Consolidate API token management. See more in :ref:`collector-gateway-mode-tokens`.
 
 See :new-page:`data forwarding (gateway) mode configuration <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/gateway_config.yaml>` for the default configuration file.
 
@@ -63,6 +63,15 @@ The following image shows the architecture for the data forwarding (gateway) mod
 
 .. image:: /_images/gdi/splunk-otel-collector-recommended-gateway-arch.png
    :alt: This image shows the architecture for the advanced mode.    
+
+.. _collector-gateway-mode-tokens:
+
+Consolidate tokens with a Collector in data forwarding (gateway) mode
+-------------------------------------------------------------------------------
+
+When Collectors in host monitoring or agent mode send data to another Collector in data forwarding or gateway mode, they are not sending the data directly to Splunk Observability Cloud back-end. In this case, only the ingest token in the gateway Collector is used, and tokens in the Collectors that are sending data to a gateway are ignored.
+
+Therefore, you only need one valid token for the gateway Collector to see data in Observability Cloud, and the rest of Collectors could have invalid or expired tokens.  
 
 .. _collector-current-mode:
 
