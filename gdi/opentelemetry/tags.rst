@@ -127,7 +127,7 @@ Kubernetes
 
 There are a number of standardized attributes for applications running in Kubernetes. The Splunk Distribution of the OpenTelemetry Collector adds many of these automatically, such as ``k8s.cluster.name``, ``k8s.node.name``, ``k8s.pod.name``, ``k8s.namespace.name``, and ``kubernetes.workload.name``.
 
-See more at :ref:`enablerelatedcontent-imm`.
+See more at :ref:`Related content in Infrastructure monitoring <enablerelatedcontent-imm>`.
 
 Best practices for creating custom attributes
 ------------------------------------------------------------
