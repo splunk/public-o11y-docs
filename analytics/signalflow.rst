@@ -49,7 +49,7 @@ Most built-in :ref:`analytical functions <analytics-ref>` can perform computatio
 
 -  Transformations operate in parallel on each MTS over a window of time and yield one output time series for each input time series. For example, the average CPU utilization for five servers over a rolling window of one day will display five MTS; each output value will be the moving average for that MTS over the previous 24 hours. For more information, see :new-page:`Transformations <https://dev.splunk.com/observability/docs/signalflow/#Transformations>`.
 
-   See the following sections to learn more about the three types of transformations available, moving window, calendar window, and dashboard window. For examples of how to use transformation analytics in charts, see :ref:`gain-insights-through-chart-analytics`.
+   See the following sections to learn more about the 3 types of transformations available, moving window, calendar window, and dashboard window. For examples of how to use transformation analytics in charts, see :ref:`gain-insights-through-chart-analytics`.
 
 Moving window transformations
 --------------------------------------------
