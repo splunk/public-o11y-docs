@@ -5,13 +5,12 @@ Private connectivity
 **************************************
 
 .. meta::
-   :description: Options for private connectivity
-
+   :description: Options for private connectivity to send data to Splunk Observability Cloud.
 
 .. toctree::
    :hidden:
 
-   Private Connectivity using PrivateLink <aws-privatelink.rst>
+   aws-privatelink
 
 See the following to create private connections to send data to Splunk Observability Cloud:
 
