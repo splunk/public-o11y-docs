@@ -19,7 +19,7 @@ Splunk Observability Cloud data comes enriched with additional metadata:
     - :strong:`Data type`
     - :strong:`Format`
   * - Dimensions
-    - Sent in with metric time series (MTS) at the time of ingest to add context to metrics. Along with the metric name, they uniquely identify the MTS. Dimensions do not change over time.
+    - Sent in with metric time series (MTS) at the time of ingest to add context to metrics. Along with the metric name, they uniquely identify the MTS. Dimension names do not change over time.
     - Infrastructure metric
     - Key-value pair
   * - Custom properties 
