@@ -3,10 +3,10 @@
 *****************************************************************
 Enable Related Content in Splunk Observability Cloud
 *****************************************************************
+
 Observability Cloud uses OpenTelemetry to correlate telemetry types. To enable this ability, your telemetry field names or metadata key names must exactly match the metadata key names used by OpenTelemetry and Splunk Observability Cloud.
 
 When you deploy Splunk Distribution of Open Telemetry Collector to send your telemetry data to Observability Cloud, your metadata key names are automatically mapped correctly. When you do not use the Splunk Distribution of OpenTelemetry Collector, your telemetry data might have metadata key names that are not consistent with those used by Observability Cloud and OpenTelemetry. In that case, you must change your metadata key names.
-
 
 For example, say Observability Cloud receives the following telemetry data:
 
@@ -59,6 +59,8 @@ For example, consider a scenario in which Related Content needs to return data f
   :width: 80%
   :alt: This diagram shows two uniquely named Kubernetes clusters, each containing pods that share names across clusters.
 
+
+.. _enablerelatedcontent-imm:
 
 Splunk Infrastructure Monitoring
 =================================================================
