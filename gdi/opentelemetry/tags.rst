@@ -24,6 +24,10 @@ With the processors you can do the following:
 - ``insert``: Create the key-value pair if it doesn't already exist.
 - ``update``: Update an attribute, when the key exists.
 - ``upsert``: Insert or update an attribute, regardless of its previous existence.
+- ``delete``: Delete an attribute from the data.
+- ``hash``: Hash the value of an existing attribute using the SHA1 algorithm.
+- ``extract``: Extract values using regular expression rules. 
+- ``convert``: Convert an attribute to another type.
 
 Sample configuration with the attributes processor
 --------------------------------------------------------
@@ -120,7 +124,7 @@ There are attributes that capture information for services running in public clo
 
 Learn more in the OpenTelemetry GitHub repo at :new-page:`Cloud semantic conventions <https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/resource/semantic_conventions/cloud.md>`.
 
-.. caution:: Some cloud providers, such as GCP, define semantic conventions specific to their offering.
+.. caution:: Some cloud providers, such as GCP, define semantic conventions specific to their offering. Check Google official documentation for more information.
 
 Kubernetes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
