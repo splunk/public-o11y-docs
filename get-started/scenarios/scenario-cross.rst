@@ -19,5 +19,6 @@ Learn more about the Splunk Observability Cloud platform with the following cros
 
 - :ref:`get-started-scenario`
 - :ref:`otel-collector-scenario`
+- :ref:`splunk-integration-scenario1`
 
 Ç
