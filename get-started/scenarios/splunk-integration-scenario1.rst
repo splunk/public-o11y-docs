@@ -13,7 +13,7 @@ To troubleshoot the problem, Kai takes the following actions:
 
 1. :ref:`glass-table`
 
-2. :ref:`synthetic-check` 
+2. :ref:`synthetics-check` 
 
 
 
@@ -28,16 +28,16 @@ Kai checks service health in Splunk IT Service Intelligence
 2. Kai sees red dots under :guilabel:`Synthetics Checks` and :guilabel:`Real User Monitoring` under the :guilabel:`Checkout`` service, indicating poor health. Kai also sees a poor health indicator under :guilabel:`Real User Monitoring` and :guilabel:`Application Performance Monitoring` for the :guilabel:`Payment` service. Kai begins his investigation by clicking the red dot under :guilabel:`Synthetics Checks` for the :guilabel:`Checkout` service. 
 
 .. image:: /_images/splunkplatform/glass_table.png
-  :width: 50%
+  :width: 100%
   :alt: This screenshot shows a glass table in Splunk IT Service Intelligence that tracks service health.
 
 
 .. image:: /_images/splunkplatform/glass_table2.png
-  :width: 50%
+  :width: 90%
   :alt: This screenshot shows a glass table in Splunk IT Service Intelligence that tracks service health.
 
 
-.. _synthetic-check:
+.. _synthetics-check:
 
 
 1. The :guilabel:`Synthetics` view opens when Kai clicks the red dot. In the :guilabel:`Synthetics` view, Kai clicks one of the failed tests that contains a slow checkout service call. Kai notices that Splunk tracks the front-end service of each element of the Buttercup Games website. Splunk also tracks the visual experience of the end-to-end customer journey so that Kai can replay it and see what customers are seeing.
