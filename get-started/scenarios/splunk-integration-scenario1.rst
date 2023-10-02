@@ -19,30 +19,55 @@ To troubleshoot the problem, Kai takes the following actions:
 
 .. _glass-table:
 
-
 Kai checks service health in Splunk IT Service Intelligence
 ===================================================================================================================
 
 1. Kai opens Splunk IT Service Intelligence (ITSI) and navigates to a glass table that monitors service health. The glass table shows service health scores that update in real time.
 
-2. Kai sees red dots under :guilabel:`Synthetics Checks` and :guilabel:`Real User Monitoring` under the :guilabel:`Checkout`` service, indicating poor health. Kai also sees a poor health indicator under :guilabel:`Real User Monitoring` and :guilabel:`Application Performance Monitoring` for the :guilabel:`Payment` service. Kai begins his investigation by clicking the red dot under :guilabel:`Synthetics Checks` for the :guilabel:`Checkout` service. 
-
 .. image:: /_images/splunkplatform/glass_table.png
   :width: 100%
   :alt: This screenshot shows a glass table in Splunk IT Service Intelligence that tracks service health.
 
+2. In the :guilabel:`Services Health Scores` section of a glass table, Kai sees red dots under :guilabel:`Synthetics Checks` and :guilabel:`Real User Monitoring` under the :guilabel:`Checkout`` service, indicating poor health. Kai also sees poor health indicators under :guilabel:`Real User Monitoring` and :guilabel:`Application Performance Monitoring` for the :guilabel:`Payment` service. Kai begins the investigation by selecting the red dot under :guilabel:`Synthetics Checks` for the :guilabel:`Checkout` service, which prompts Synthetics to open in Splunk Observability Cloud.
 
-.. image:: /_images/splunkplatform/glass_table2.png
-  :width: 90%
-  :alt: This screenshot shows a glass table in Splunk IT Service Intelligence that tracks service health.
+.. image:: /_images/splunkplatform/glass_table-close-up.png
+  :width: 100%
+  :alt: This screenshot shows a close up of the services health scores section of a glass table in Splunk IT Service Intelligence.
 
 
 .. _synthetics-check:
 
+Kai troubleshoots with Synthetics and APM in Splunk Observability Cloud
+===================================================================================================================
 
-1. The :guilabel:`Synthetics` view opens when Kai clicks the red dot. In the :guilabel:`Synthetics` view, Kai clicks one of the failed tests that contains a slow checkout service call. Kai notices that Splunk tracks the front-end service of each element of the Buttercup Games website. Splunk also tracks the visual experience of the end-to-end customer journey so that Kai can replay it and see what customers are seeing.
+1. In the :guilabel:`Synthetics` view, Kai opens one of the failed tests then scrolls down to the :guilabel:`Recent run results` section and opens one of the results. Kai notices that Splunk tracks the front-end service of each element of the Buttercup Games website. Splunk also tracks the visual experience of the end-to-end customer journey so that Kai can replay it in a video capture to see what customers are seeing.
 
-2. Kai clicks :guilabel:`Play` on the video replay in the upper right corner. The video capture shows that users are attempting to make purchases, but checkout fails. The application delivers no error or feedback to the user, making it an unacceptable customer experience. Kai closes the video replay.
+.. image:: /_images/splunkplatform/synthetics_test.png
+  :width: 90%
+  :alt: This screenshot shows the Synthetics view in Splunk Observability Cloud with a list of tests along with their statuses and a video replay capturing the user experience.
 
-3. Kai clicks the :guilabel:`APM` link next to the checkout element.
-***insert screenshot of ITSI glass table***
+2. Kai selects :guilabel:`Play` on the video capture in the upper right corner. The video capture shows that users are attempting to make purchases, but checkout fails. The application delivers no error or feedback to the user, making it an unacceptable customer experience. Kai closes the video replay.
+
+3. Kai selects the :guilabel:`APM` link next to the checkout element to open Splunk APM where they can see which procedures calls are slow, which are stalled, and which failed. Kai can use Splunk's full fidelity tracing to pivot to a reconstructed application map from the exact time of this issue.
+
+4. In Splunk APM, Kai chooses to go to a live service map and explore services visually on a dependency map in real time. 
+
+.. image:: /_images/splunkplatform/APM_service_map.png
+  :width: 100%
+  :alt: This screenshot shows a service dependency map with red indicators showing which services have errors.
+
+5. Kai sees red lines indicating slowness between the external clients and the payment service. Kai selects :guilabel:`Show Legend` and notes that the red lines indicate an error rate of greater than 20%.
+
+.. image:: /_images/splunkplatform/service_map_legend.png
+  :width: 100%
+  :alt: This screenshot shows a close up of the frontend, checkout service, and payment service and a legend showing error rates.
+
+6. Kai selects :guilabel:`paymentservice` on the map to to split the payment service out by application version, revealing whether a recent code push might have negative impact on customers. On the right panel, Kai selects :guilabel:`Breakdown` then selects :guilabel:`Version`, then :guilabel:`Errors`. Sure enough, the new version of the code is causing all of the slowness and root cause errors. Kai lets the development team know that they should roll back the new version, v350.10. 
+
+.. image:: /_images/splunkplatform/code_version.png
+  :width: 60%
+  :alt: This screenshot shows the service map filtered on the payment service by code version. All errors are associated with the recent code push. 
+
+7. Kai returns to the Splunk IT Service Intelligence glass table and is able to correlate the same application and business service with security notable events around the same time. Kai sees threat activity and some access and network activity right before that happened, which they immediately report to the Security team.
+
+  
