@@ -24,7 +24,7 @@ Sending a Stakeholder Message
 
 In Splunk On-Call, you may send messages to Stakeholders and Users from the incident UI and the API. Messages may be sent to individual users or teams via SMS or Email notification.
 
-.. image:: /_images/spoc/stakeholders-message.png
+.. image:: /_images/spoc/stakeholder-message.png
       :width: 99%
       :alt: Within an incident you can send a message to stakeholders.
 
@@ -44,7 +44,7 @@ Stakeholders may follow a notification link to see incident-specific updates. Th
       :width: 99%
       :alt: Stakeholders can view incident updates.
 
-.. image:: /_images/spoc/stakeholders-experience2.png
+.. image:: /_images/spoc/stakeholder-experience2.png
       :width: 99%
       :alt: Stakeholders can choose their preferred notification methods in their profile.
 

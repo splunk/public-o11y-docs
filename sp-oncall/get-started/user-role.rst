@@ -14,7 +14,7 @@ All users have the ability to reach out to Splunk On-Call support at any time wi
 
 Live Chat: If you are logged into your Splunk On-Call instance, you will have the ability to Live Chat with the Splunk On-Call Support team.
 
-Splunk Support Portal: You can open a Splunk On-Call support case in the Splunk Support Portal :new-page:`Splunk Support Portal <https://login.splunk.com/>.
+Splunk Support Portal: You can open a Splunk On-Call support case in the Splunk Support Portal :new-page:`Splunk Support Portal <https://login.splunk.com/>`.
 
 If you are facing any issues when trying to contact us, see XXXXXX Contacting Splunk On-Call Support XXXXXX
 
@@ -45,24 +45,28 @@ To set up your user account:
 
 #. Use the Manual Take On-Call feature for last-minute coverage: For unplanned absences such as a doctor appointment, the take on-call button can be used to cover another user's shift until they take it back or the shift ends.  
    - On mobile: 
+  
       #. Navigate to the home screen
       #. Click “View All” below teammates currently On-Call
       #. Click the “Take shift” button
       You are now on call until the end of the user's shift unless they take it back.
+   
    - In the web interface: 
+  
       #. Navigate to the People pane.
       #. Locate the user who needs last-minute coverage.
       #. Select the user.
       #. Click the “Take Shift” button
          You are now on call until the end of the user's shift unless they take it back. 
 
-#. Take action on an incident you are paged for: There are several different actions you can take on an incident you are paged for. The various actions are described below: Quick video on incident actions on the Web UI & Mobile UI! 
-Acknowledge: This will stop the incident from actively paging and continuing through the escalation policy. An acknowledgment signifies that you are aware of an incident and are taking action on it.
-Resolve: Once the incident is resolved within the monitoring tool it can be resolved within Splunk On-Call. Once resolved any new alert of the same type will create a new incident.
-Reroute: If the incident needs to be addressed by another user or directed to a different escalation policy the reroute option allows you to do this. 
-Snooze: If the incident is not urgent and can wait before being address you can snooze it for a specified amount of time using the snooze option. The incident will page users again after the amount of time selected is up.
-Add Responders/Conference Bridge: If more eyes are needed on an incident and/or a Conference Bridge is needed to troubleshoot the incident, you can click the Add Responders icon and send out a page to desired users or particular escalation policies.
-Chat: Chat in the incident timeline to collaborate with teammates
-use @ to notify specific users
-use @@ to notify a specific team
-User Onboarding Checklist
+#. Take action on an incident you are paged for: There are several different actions you can take on an incident you are paged for. The various actions are as follows: 
+    - Acknowledge: This will stop the incident from actively paging and continuing through the escalation policy. An acknowledgment signifies that you are aware of an incident and are taking action on it.
+    - Resolve: Once the incident is resolved within the monitoring tool it can be resolved within Splunk On-Call. Once resolved any new alert of the same type will create a new incident.
+    - Reroute: If the incident needs to be addressed by another user or directed to a different escalation policy the reroute option allows you to do this. 
+    - Snooze: If the incident is not urgent and can wait before being address you can snooze it for a specified amount of time using the snooze option. The incident will page users again after the amount of time selected is up.
+    - Add Responders/Conference Bridge: If more eyes are needed on an incident and/or a Conference Bridge is needed to troubleshoot the incident, you can click the Add Responders icon and send out a page to desired users or particular escalation policies.
+    - Chat: Chat in the incident timeline to collaborate with teammates
+       - use @ to notify specific users
+       - use @@ to notify a specific team
+
+

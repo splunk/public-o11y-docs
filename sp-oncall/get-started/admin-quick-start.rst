@@ -12,7 +12,7 @@ Admin quick-start guide
    :hidden:
 
    stakeholders
-   system-requirements
+   _system-reqts
    user-roles-permissions
    user-role
 
