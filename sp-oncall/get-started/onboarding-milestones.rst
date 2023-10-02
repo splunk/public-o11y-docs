@@ -16,8 +16,8 @@ Planning milestones
 
 #. Create a rough draft of your desired Splunk On-Call workflow in a spreadsheet. For example, who are the administrators, what tools are most important, who are action takers, what will your on-call schedules look like, and so on.
 #. Set an Onboarding Timeline. For example:
-#. 
-.. image:: /_images/spoc/_onboarding-milestones.png
+ 
+.. image:: /_images/spoc/onboarding-milestones.png
       :width: 99%
       :alt: Create a week-by-week implementation timeline.
 
@@ -31,9 +31,9 @@ The user milestones include the following:
 #. Determine user roles and permissions:
     - Determine your Global, Alert, and Team admins.
     - Share the admin training guides:
-       - :ref:`_global-admin`
-       - :ref:`_team-admin`
-       - :ref:`_alert-admin`
+       - :ref:`global-admin`
+       - :ref:`team-admin`
+       - :ref:`alert-admin`
 #. Set Primary Paging policies:
     - XXXXXX Paging Policies Best Practices
 #. Implement user training with the :ref:`user-role`.
