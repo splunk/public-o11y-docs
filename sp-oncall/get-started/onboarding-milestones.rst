@@ -1,39 +1,64 @@
 .. _onboarding-milestones:
 
 ************************************************************************
-Splunk On-Call system requirements
+Onboarding milestones
 ************************************************************************
 
 .. meta::
-   :description: Splunk On-Call system requirements, including browsers, mobile support, and incident requirements.
+   :description: Planning your Splunk On-Call implementation.
 
 
 
-Web Application
+Splunk On-Call is a powerful tool that allows teams to maintain a culture of high availability without slowing down the innovation process. Implementation of a new tool can be difficult; here are some key milestones to hit before going live with Splunk On-Call that will ensure your company is set up for success.
+
+Planning milestones
 =========================
 
-The Splunk On-Call web application supports the following browsers:
+#. Create a rough draft of your desired Splunk On-Call workflow in a spreadsheet. For example, who are the administrators, what tools are most important, who are action takers, what will your on-call schedules look like, and so on.
+#. Set an Onboarding Timeline. For example:
+#. 
+.. image:: /_images/spoc/_onboarding-milestones.png
+      :width: 99%
+      :alt: Create a week-by-week implementation timeline.
 
-Google Chrome (latest version)
-Mozilla Firefox (latest version)
-Microsoft Internet Explorer 11
-Microsoft Edge (latest version)
-Safari (latest version)
-Please note: Custom browser extensions may interfere with web-client performance.
 
-.. In the future, Splunk On-Call will support the Chromium version of Microsoft Edge, and eventually, discontinue support for IE11.
+User milestones
+============================
 
-For IP and Egress filtering, see XXXXXXXegress-filtering-cloudfareXXXXXXX.
+The user milestones include the following:
 
-Mobile Application
-========================
+#. Invite users.
+#. Determine user roles and permissions:
+    - Determine your Global, Alert, and Team admins.
+    - Share the admin training guides:
+       - :ref:`_global-admin`
+       - :ref:`_team-admin`
+       - :ref:`_alert-admin`
+#. Set Primary Paging policies:
+    - XXXXXX Paging Policies Best Practices
+#. Implement user training with the :ref:`user-role`.
 
-For full mobile functionality, Splunk On-Call recommends keeping up to date with the latest versions of the mobile app for iOS (Apple App Store) and Android (Google Play Store).
+Team milestones
+====================
 
-Splunk On-Call supports Android devices running Android 6 or newer. Splunk On-Call no longer supports the mobile app for Android versions 5 and below.
+Team milestones include the following:
 
-Incident Requirements
-=============================
+#. Create Teams and assign Team Admins.
+#. Create On-Call schedules, including:
+   - XXXXXX Rotation options
+   - XXXXXX Schedule examples
+#. Implementation of Team Workflows, including:
+   - XXXXXX Create escalation policies.
+   - XXXXXX Tips and tricks for multiple escalation policies.
 
-A JSON POST request is required to send an alert payload to the Splunk On-Call timeline. For required field variables, see XXXXXXincident-fields-glossaryXXXXXX.
 
+Integration milestones
+===============================
+
+Integration milestones include the following:
+
+#. Ensure all Splunk On-Call users have completed their User Trainings.
+#. Internal & External Resources made available, including:
+   - Create internal documentation for Splunk On-Call 
+   - XXXXXX Familiarize all Splunk On-Call users with the Splunk On-Call resources
+#. Go Live!

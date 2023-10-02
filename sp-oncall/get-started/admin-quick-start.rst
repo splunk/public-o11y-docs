@@ -18,6 +18,8 @@ Admin quick-start guide
    global-admin
    team-admin
    stakeholders
+   onboarding-milestones
+   team-dashboard
 
 
 
