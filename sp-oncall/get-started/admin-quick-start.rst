@@ -8,6 +8,17 @@ Admin quick-start guide
    :description: About Splunk On-Call, the incident management application.
 
 
+.. toctree::
+   :hidden:
+
+   stakeholders
+   system-requirements
+   user-roles-permissions
+
+
+
+   
+
 Set up
 ===============
 
