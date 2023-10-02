@@ -25,16 +25,29 @@ Get Kubernetes data into Splunk Observability Cloud
 
 1. Log in to Splunk Observability Cloud.
 2. Select the :guilabel:`Add Integration` button or in the left navigation menu, select :guilabel:`Data Management` to open the Integrate Your Data page.
-3. In the :guilabel:`Splunk OpenTelemetry Collector` menu, select the :guilabel:`Kubernetes` button to launch the quick install setup.
+3. Select :guilabel:`Deploy the Splunk OpenTelemetry Collector`, and select :guilabel:`Next`. The Install Configuration screen displays.
+4. In the :guilabel:`Platform` menu, select :guilabel:`Kubernetes`. The setup guide opens.
 
-4. Select :guilabel:`Kubernetes` from the platform menu and enter the values applicable to your environment to configure the Collector instance.
+5. Enter the values applicable to your environment to configure the Collector instance.
 
-.. image:: /_images/gdi/k8s-setup-wizard.png
+.. image:: /_images/infrastructure/images-k8s-infrastructure-tutorial/k8s-setup-wizard.png
   :width: 80%
-  :alt: Installation setup wizard for the OpenTelemetry Collector for Kubernetes.
+  :alt: Installation setup guide for the OpenTelemetry Collector for Kubernetes.
 
-5. Select :guilabel:`Next`. The Install Integration screen displays. Based on your entries on the Configure Integration screen, the guided setup provides commands that you can copy and paste to 
+6. Select :guilabel:`Next`. The Install Integration screen displays. Based on your entries on the Configure Integration screen, the guided setup provides commands that you can copy and paste to 
 install the Splunk Distribution of OpenTelemetry Collector on your selected platform.
+
+.. image:: /_images/infrastructure/images-k8s-infrastructure-tutorial/k8s-integration-commands.png
+  :width: 100%
+  :alt: Command lines for installing the Splunk Distribution of OpenTelemetry Collector for Kubernetes.
+
+.. image:: /_images/infrastructure/images-k8s-infrastructure-tutorial/k8s-install-collector.png
+  :width: 80%
+  :alt: Collector installation in the CLI.
+
+.. image:: /_images/infrastructure/images-k8s-infrastructure-tutorial/k8s-data-ingestion.png
+  :width: 100%
+  :alt: Successful Kubernetes data ingestion.
 
 Next step
 -------------------------------------------
