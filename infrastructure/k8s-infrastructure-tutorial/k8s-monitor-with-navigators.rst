@@ -28,7 +28,7 @@ Using charts, you can view details about your metrics and visualize metric time 
 
 * Every chart has a :guilabel:`Chart Actions` menu. Select the more (|more|) icon in the upper right of a chart to open the menu and view available actions. For example, you can share the chart, download it as an image, or export it as a comma-separated values (CSV) file.
 
-.. image:: /_images/gdi/k8s-chart-actions.png
+.. image:: /_images/infrastructure/images-k8s-infrastructure-tutorial/k8s-chart-actions.png
   :width: 80%
   :alt: The chart actions menu.
 
@@ -45,7 +45,7 @@ After installing the Splunk Distribution of OpenTelemetry Collector, explore you
 2. In the left navigation menu, select :guilabel:`Infrastructure`.
 3. In the :guilabel:`Containers` section, select :guilabel:`Kubernetes`. The Kubernetes navigator displays.
 
-.. image:: /_images/gdi/k8s-containers.gif
+.. image:: /_images/infrastructure/images-k8s-infrastructure-tutorial/k8s-containers.gif
   :width: 80%
   :alt: A user selects the Kubernetes navigator, allowing them to view the status of each Kubernetes container.
 
