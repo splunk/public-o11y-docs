@@ -26,7 +26,7 @@ Kai checks service health in Splunk IT Service Intelligence
 
    .. image:: /_images/splunkplatform/glass_table.png
      :width: 100%
-  :alt: This screenshot shows a glass table in Splunk IT Service Intelligence that tracks service health.
+     :alt: This screenshot shows a glass table in Splunk IT Service Intelligence that tracks service health.
 
 2. In the :guilabel:`Services Health Scores` section of a glass table, Kai sees red dots under :guilabel:`Synthetics Checks` and :guilabel:`Real User Monitoring` under the :guilabel:`Checkout` service, indicating poor health. Kai also sees poor health indicators under :guilabel:`Real User Monitoring` and :guilabel:`Application Performance Monitoring` for the :guilabel:`Payment` service. Kai begins the investigation by selecting the red dot under :guilabel:`Synthetics Checks` for the :guilabel:`Checkout` service, which prompts Synthetics to open in Splunk Observability Cloud.
 
