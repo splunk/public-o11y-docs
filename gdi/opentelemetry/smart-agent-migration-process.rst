@@ -91,6 +91,7 @@ For containerized environments, you can expose this port on a public interface i
 
 .. code-block:: yaml
 
+
    extensions:
       zpages:
          endpoint: 0.0.0.0:55679
@@ -138,17 +139,20 @@ For Docker:
 
 .. code-block:: yaml
 
+
    docker logs my-container >my-container.log
 
 For Journald: 
 
 .. code-block:: yaml
 
+
    journalctl -u my-service >my-service.log
 
 For Kubernetes: 
 
 .. code-block:: yaml
+
 
    kubectl describe pod my-pod kubectl logs my-pod otel-collector >my-pod-otel.log kubectl logs my-pod fluentd >my-pod-fluentd.log
 
@@ -172,6 +176,7 @@ Set the logging level to ``debug``:
 
 .. code-block:: yaml
 
+
    service:
       telemetry:
          logs:
@@ -180,6 +185,7 @@ Set the logging level to ``debug``:
 Set ``log_data_points`` to ``true`` using the SignalFx exporter:
 
 .. code-block:: yaml
+
 
    exporters:
       signalfx:
@@ -201,6 +207,7 @@ The Smart Agent can be configured by editing the agent.yaml file. By default, th
 The following is an example YAML configuration file with default values where applicable:
 
 .. code-block:: yaml
+
 
    signalFxAccessToken: {"#from": "env:SIGNALFX_ACCESS_TOKEN"}
    ingestUrl: https://ingest.us1.signalfx.com
@@ -261,6 +268,7 @@ The Smart Agent has an internal metrics monitor that emits metrics about the int
 
 .. code-block:: yaml
 
+
    monitors:
       - type: internal-metrics
 
@@ -281,11 +289,13 @@ Configure ``ballastextension`` and the ``memory_limiter`` processor on every Col
 
 .. code-block:: yaml
 
+
    extensions:
       memory_ballast:
          size_mib:
 
 .. code-block:: yaml
+
 
    processors:
       memory_limiter:
@@ -323,7 +333,8 @@ On Windows:
 
 On Kubernetes:
 
-.. code-block:: YAML
+.. code-block:: yaml
+
 
    helm upgrade my-splunk-otel-collector --values my_values.yaml splunk-otel-collector-chart/splunk-otel-collector
 

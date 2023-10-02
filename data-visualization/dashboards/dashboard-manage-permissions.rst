@@ -169,7 +169,7 @@ The following table describes dashboard and mirror actions that require write pe
      -
 
    * - Remove a mirror
-     - You don’t need write permission for the dashboard itself, but you do need write
+     - You don't need write permission for the dashboard itself, but you do need write
        permission for the dashboard group that contains the dashboard.
 
    * - Save changes to the filter and dashboard variable options in the

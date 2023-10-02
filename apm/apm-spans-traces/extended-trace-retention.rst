@@ -22,7 +22,7 @@ To configure extended trace retention, you must have an admin role.
 
 Customize your extended retention period
 ===============================================
-Before you select your extended retention period, consider any compliance requirements in your industry, such as the European General Data Protection Regulation (GDPR), that dictate how long to retain customer information. 
+Before you select your extended retention period, consider any compliance requirements in your industry, such as the European General Data Protection Regulation (GDPR), that dictate how long you should retain customer information. 
 
 Follow these steps to change your extended retention period: 
 
@@ -30,11 +30,11 @@ Follow these steps to change your extended retention period:
 #. Under :guilabel:`Trace Retention`, ensure the radio button for :guilabel:`Retain traces for a selected period of time beyond the default period` is selected.
 #. Under :guilabel:`Retention Period`, select the radio button for your desired retention period. Options include 30 days, 60 days, 90 days, and 13 months. 
 
-With extended trace retention turned on, any trace viewed in the Splunk APM UI is automatically stored for the selected retention period. 
+With extended trace retention enabled, any trace viewed in the Splunk APM UI is automatically stored for the selected retention period. 
 
-Turn off extended retention
+Disable extended retention
 ==================================
-If you don't want your traces to be retained beyond the default retention period, follow these steps to turn off extended trace retention for traces viewed in the UI.
+If you don't want your traces to be retained beyond the default retention period, follow these steps to disable extended trace retention for traces viewed in the UI.
 
-#. On the Splunk APM landing page, select :guilabel:`APM Configuration` and select :guilabel:`APM Services & Traces`. The :guilabel:`APM Services & Traces` page opens. 
+#. On the Splunk APM landing page, select :guilabel:`APM Configuration` and choose :guilabel:`APM Services & Traces`. The :guilabel:`APM Services & Traces` page opens. 
 #. Under :guilabel:`Trace Retention`, select the radio button for :guilabel:`Retain traces for the default period.`

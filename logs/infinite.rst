@@ -34,7 +34,7 @@ If you want to keep a sample of your archived logs to analyze in Log Observer, y
 
 Retain logs longer than 30 days
 -----------------------------------------------------------------------------
-Storing logs in S3 buckets gives you full control over retention time, which can, for example, help you meet compliance and audit requirements. To retain logs longer than Log Observer’s 30-day retention period, you can archive and index 100% of your logs. Logs that are archived and indexed will be available for analysis in Log Observer for 30 days and will also be stored in S3 buckets for as long as you want them.
+Storing logs in S3 buckets gives you full control over retention time, which can, for example, help you meet compliance and audit requirements. To retain logs longer than Log Observer's 30-day retention period, you can archive and index 100% of your logs. Logs that are archived and indexed will be available for analysis in Log Observer for 30 days and will also be stored in S3 buckets for as long as you want them.
 
 .. _order-of-execution:
 

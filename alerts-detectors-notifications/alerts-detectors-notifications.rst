@@ -40,7 +40,7 @@ For example, if you have a group of 30 virtual machines that are used to provide
 
 If you want to track whether the CPU utilization remains below 80 for each of those virtual machines, you can create a single detector that queries for the CPU utilization metrics that include the :code:`service:kafka` dimension and evaluates those metrics against the threshold of 80. This single detector triggers individual alerts for each virtual machine whose CPU utilization exceeds the threshold, as if you had 30 separate detectors. You do not need to create 30 individual detectors to monitor each of your 30 virtual machines.
 
-If the population changes because the cluster has grown to 40 virtual machines, you can make a cluster- or service-level detector. If you include the :code:`service:kafka` dimension for the newly-added virtual machines, the existing detector’s query includes all new virtual machines in the cluster in the threshold evaluation.
+If the population changes because the cluster has grown to 40 virtual machines, you can make a cluster- or service-level detector. If you include the :code:`service:kafka` dimension for the newly-added virtual machines, the existing detector's query includes all new virtual machines in the cluster in the threshold evaluation.
 
 Dynamic threshold conditions
 -----------------------------------

@@ -110,6 +110,7 @@ Here's an example configuration:
 
 .. code-block:: yaml
 
+
   receivers:
     otlp:
       protocols:

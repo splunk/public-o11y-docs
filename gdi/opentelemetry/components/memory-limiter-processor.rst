@@ -36,6 +36,7 @@ See the following example:
 
 .. code-block:: yaml
 
+
   processors:
     memory_limiter:
       check_interval: 1s
@@ -45,6 +46,7 @@ See the following example:
 To complete the configuration, include the processor in any pipeline of the ``service`` section of your configuration file. For example:
 
 .. code-block:: yaml
+
 
   service:
     pipelines:

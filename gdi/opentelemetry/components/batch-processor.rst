@@ -23,12 +23,14 @@ The Splunk Distribution of OpenTelemetry Collector adds the batch processor with
 
 .. code-block:: yaml
 
+
    processors:
      batch:
 
 The following example shows how to configure the batch processor to send batches after 5,000 spans, data points, or logs have been collected. The timeout setting works as a fallback condition in case the size condition isn't met.
 
 .. code-block:: yaml
+
 
    processors:
      batch/custom:
@@ -41,6 +43,7 @@ Batching by metadata
 Starting from version 0.78 of the OpenTelemetry Collector, you can batch telemetry based on metadata. For example:
 
 .. code-block:: yaml
+
 
    processors:
      batch:

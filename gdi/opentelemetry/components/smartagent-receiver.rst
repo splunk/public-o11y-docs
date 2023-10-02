@@ -34,6 +34,7 @@ The following example adds the Postgresql monitor to the Collector using the Sma
 
 .. code-block:: yaml
 
+
    receivers:
      smartagent/postgresql:
        type: postgresql
@@ -45,6 +46,7 @@ The following example adds the Postgresql monitor to the Collector using the Sma
 You can then add the receiver to any compatible pipeline. For example:
 
 .. code-block:: yaml
+
 
    service:
      pipelines:
@@ -66,6 +68,7 @@ Add additional metrics
 To ingest additional metrics using Smart Agent monitors, add the ``extraMetrics`` field to the monitor configuration. For example:
 
 .. code-block:: yaml
+
 
    receivers:
      smartagent/postgresql:
