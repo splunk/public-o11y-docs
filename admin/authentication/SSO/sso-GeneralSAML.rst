@@ -11,9 +11,11 @@ Configure SSO using a generic SAML SSO integration
 
 If you use an SSO login service other than the ones listed in :ref:`sso-label`, you can create a generic SAML SSO integration for your organization. 
 
-Before you begin configuring the generic SAML SSO integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
+Before you begin configuring the generic SAML SSO integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration <naming-note-sso>` to learn about naming your integrations.
 
 If you already have a SAML SSO integration for your organization, follow the steps in :ref:`saml-install` to install it in Observability Cloud.
+
+.. note:: To allow the generic SAML SSO integration, contact :ref:`support`.
 
 .. _saml-creators:
 
@@ -23,12 +25,11 @@ Generic SAML SSO integrations
 Observability Cloud provides integrations for specific SAML SSO providers. If your provider isn't in the list of supported integrations, your organization administrator can request a generic integration from Observability Cloud. You can use this integration to test and develop a SAML SSO provider. Using this integration, administrators can direct Observability Cloud
 to use any publicly-available SSO endpoint to authenticate users.
 
-To permit the generic SAML SSO integration, contact :ref:`support`.
-
 Be prepared to provide the domain for the ID/email address that your users provide when they log in. The domain is the part of the user ID/email address string that follows the ``@`` sign.
 
-.. note::  You can only use one type of ``PersonImmutableID`` for each generic SAML integration you create. If you create a second generic SAML integration using the same ``PersonImmutableID``, you must deactivate the first one and delete its users. Until you do so, users will not be able to use the same type of ID to log in to the organization. For example, if the first integration uses the  ``emailId`` as the PersonImmutableID, you can't use ``emailId`` in a second integration. 
-   For details on how to use the API to delete users, see :new-page:`Delete/organization/member <https://dev.splunk.com/observability/reference/api/organizations/latest#endpoint-delete-member-using-id>`.
+You can only use one type of ``PersonImmutableID`` for each generic SAML integration you create. If you create a second generic SAML integration using the same ``PersonImmutableID``, you must deactivate the first one and delete its users. Until you do so, users will not be able to use the same type of ID to log in to the organization. For example, if the first integration uses the  ``emailId`` as the PersonImmutableID, you can't use ``emailId`` in a second integration. 
+   
+For details on how to use the API to delete users, see :new-page:`Delete/organization/member <https://dev.splunk.com/observability/reference/api/organizations/latest#endpoint-delete-member-using-id>`.
 
 .. _saml-user-information:
 
@@ -121,5 +122,10 @@ If you want to turn off email authentication, contact :ref:`support`.
 Once you have a custom URL configured, your users can continue to log in using their existing username/password pair, or they can use their generic SAML SSO credentials instead. Generic SAML SSO authentication and Observability Cloud username/password authentication are independent.
 
 Observability Cloud generates a password for users you create in generic SAML SSO. If the generic SAML login portal is unavailable, Observability Cloud users can use the reset password link on the Observability Cloud login page to get native Observability Cloud credentials.
+
+.. _saml-support:
+
+Support
+-------------------------------------------------
 
 .. include:: /_includes/troubleshooting-components.rst
