@@ -755,7 +755,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: Splunk On-Call
    :maxdepth:   3
 
-   Introduction to Splunk On-Call <spoc/admin-quick-start>
+   Introduction to Splunk On-Call <spoc/get-started/admin-quick-start>
 
 
 
