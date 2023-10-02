@@ -47,9 +47,9 @@ To set up your user account:
    - On mobile: 
   
       #. Navigate to the home screen
-      #. Click “View All” below teammates currently On-Call
-      #. Click the “Take shift” button
-      You are now on call until the end of the user's shift unless they take it back.
+      #. Select :guilabel:`View All` below teammates currently On-Call
+      #. Select the :guilabel:`Take shift` button.
+          You are now on call until the end of the user's shift unless they take it back.
    
    - In the web interface: 
   
