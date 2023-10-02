@@ -7,7 +7,7 @@ Metrics and attributes collected by the Splunk Distribution of OpenTelemetry Pyt
 .. meta::
    :description: The Splunk Distribution of OpenTelemetry Python collects the following runtime and custom metrics.
 
-The Splunk Distribution of OpenTelemetry Python collects runtime and custom metrics. To automatically collect metrics from your Python applications, you must have `splunk-otel-python` version 1.14.0 or higher. For more information, see :ref:`splunk-python-otel-dist`.
+The Splunk Distribution of OpenTelemetry Python collects runtime and custom metrics. To automatically collect metrics from your Python applications, you must have ``splunk-otel-python`` version 1.14.0 or higher. For more information, see :ref:`splunk-python-otel-dist`.
 
 To learn about the different metric types, see :ref:`metric-types`.
 
