@@ -144,7 +144,7 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
 
                   .. note:: The Graviton2 ARM64 architecture is not supported for Ruby Lambda functions.
 
-               .. tab:: Go
+               .. tab:: Golang
 
                   Don't set the ``AWS_LAMBDA_EXEC_WRAPPER`` environment variable.
 
