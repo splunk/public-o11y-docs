@@ -15,13 +15,7 @@ Istio 1.8 and higher has native support for observability. You can configure you
 Requirements
 ==============================
 
-To send telemetry from Istio to Splunk Observability Cloud you need the following:
-
-- Istio 1.8 and higher
-- Splunk OpenTelemetry Collector for Kubernetes in host monitoring (agent) mode. See :ref:`otel-install-k8s`.
-- Splunk APM instrumentation with B3 context propagation. To set B3 as the context propagator, set the ``OTEL_PROPAGATORS`` environment variable to ``b3``.
-
-OpenCensus and W3C trace context are not supported because Istio does not support them.
+.. include:: /_includes/requirements/istio.rst
 
 Install and configure the Splunk OpenTelemetry Collector
 =============================================================
@@ -75,6 +69,8 @@ For example:
 
    apiVersion: install.istio.io/v1alpha1
    kind: IstioOperator
+   metadata:
+   name: istio-operator
    spec:
       meshConfig:
          # Requires Splunk Log Observer
@@ -125,6 +121,8 @@ For example:
 
    apiVersion: install.istio.io/v1alpha1
    kind: IstioOperator
+   metadata:
+   name: istio-operator
    spec:
       meshConfig:
          # Requires Splunk Log Observer
@@ -144,4 +142,4 @@ For example:
 
 For more information on how to configure Istio see the Istio distributed tracing installation documentation.
 
-.. include:: /_includes/troubleshooting-steps.rst
+.. include:: /_includes/troubleshooting-components.rst

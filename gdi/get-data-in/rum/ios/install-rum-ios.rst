@@ -23,12 +23,8 @@ Latest updates automatically whenever Splunk RUM releases a new version. In pre-
 Check compatibility and requirements
 ===============================================
 
-Splunk RUM for Mobile supports the following versions:
+.. include:: /_includes/requirements/ios.rst
 
-* iOS 11 and higher
-* iPadOS 13 and higher
-
-Splunk RUM supports Apple Silicon.
 
 .. _rum-ios-install:
 
@@ -266,7 +262,7 @@ Run the following command to create the XCFramework:
 
 4. Import the XCFramework into your project
 
-Open your project in Xcode and drag the SplunkOtel.xcframework file into the project navigator. This automatically imports the framework.
+Open your project in Xcode and drag the SplunkOtel.xcframework file into the project navigator. This automatically imports the framework. Go into the General tab in any targets using the framework and set their Embed property to Embed & Sign.
 
 .. _integrate-ios-apm-traces:
 

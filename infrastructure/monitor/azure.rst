@@ -11,6 +11,7 @@ Splunk Observability Cloud can automatically import metrics and metadata from yo
 
 * For a list of supported Azure services in Observability Cloud, refer to :ref:`supported-azure-services`. 
 * Before you can start monitoring any Microsoft Azure resources, :ref:`get-started-azure`.
+* To create filters using the API, see :new-page:`Create filters using the API <https://dev.splunk.com/observability/docs/integrations/msazure_integration_overview/#Create-filters-using-the-API>` in the developer portal documentation. 
 * See :new-page:`https://docs.microsoft.com/en-us/azure/azure-monitor/overview <https://docs.microsoft.com/en-us/azure/azure-monitor/overview>` on the Microsoft site for more information.
 
 You can also export and monitor data from sources running in your Azure environment, as described in the following table.

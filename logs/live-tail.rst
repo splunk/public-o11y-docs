@@ -7,7 +7,7 @@ Verify changes to monitored systems with Live Tail
 .. meta::
   :description: Live Tail shows a near real-time feed of log messages as they come into Log Observer. See the impact of updates live. Verify that an integration is sending data.
 
-.. note:: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can monitor systems with Live Tail. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration.
+.. include:: /_includes/log-observer-transition.rst
 
 Live Tail displays a streaming view of log messages. Use Live Tail to do the following:
 
@@ -15,7 +15,8 @@ Live Tail displays a streaming view of log messages. Use Live Tail to do the fol
 - View spans and traces that your APM services are sending to Observability Cloud.
 - See the impact of configuration changes on your incoming data streams.
 
-
+.. note:: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can monitor systems with Live Tail. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration.
+   
 View the Live Tail time range
 ================================================================================
 

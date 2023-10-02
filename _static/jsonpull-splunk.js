@@ -42,9 +42,9 @@ $(document).ready(function () {
 
          $(this).find('.monitor-stats').append("<thead>\n" +
             "<tr>\n" +
-            "<th>Metric Name</th>\n" +
-            "<th>Description</th>\n" +
-            "<th>Type</th>\n" +
+            "<th class='metric-name'>Metric Name</th>\n" +
+            "<th class='metric-desc'>Description</th>\n" +
+            "<th class='metric-type'>Type</th>\n" +
             "</tr>\n" +
             "</thead>");
 
@@ -186,10 +186,10 @@ $(document).ready(function () {
                                     <table style='width: 100%' class='monitor-stats docutils monitor-stats-standard' id='${id}-${idSuffix}'>
                                       <thead>
                                         <th class='head name-head'>Name</th>
-                                        <th class='head type-head'>Type</th>
+                                        <th class='head type-head' width='10%'>Type</th>
                                         ${idSuffix === 'metrics' ? '<th class="head unit-head">Unit</th>' : ''}
-                                        ${idSuffix === 'metrics' ? '<th class="head status-head">Active</th>' : ''}
-                                        <th class='head description-head' width="40%">Description</th>
+                                        ${idSuffix === 'metrics' ? '<th class="head status-head" width="10%">Active</th>' : ''}
+                                        <th class='head description-head' width="30%">Description</th>
                                         ${idSuffix === 'metrics' ? '<th class="head attributes-head">Attributes</th>' : ''}
                                         ${idSuffix === 'attributes' ? '<th class="head enum-head">Values</th>' : ''}
                                       </thead>
@@ -219,7 +219,7 @@ $(document).ready(function () {
                      const idAttr = id + '-metric-' + name;
                      const attributes = metric['attributes']?.join('</li><li>') ?? '';
                      const attributesLink = attributes ? attributes.split('</li><li>').map(a => `<a href='#${id}-attribute-${a}'>${a}</a>`).join('</li><li>') : '';
-                     const row = `<td id='${idAttr}'><code>${name}</code></td><td>${type}</td><td>${metric['unit'] != "1" ? metric['unit'] : ''}</td><td>${(metric['enabled'] == true ? 'Yes' : 'No')}</td><td>${converter.makeHtml(metric['description']) ?? ''}</td><td>${attributesLink ? "<ul><li>" : ''}${attributesLink}${attributesLink ? "</li></ul>" : ''}</td>`;
+                     const row = `<td id='${idAttr}'><code>${name}</code></td><td>${type}</td><td>${metric['unit'] != "1" ? metric['unit'] : ''}</td><td>${(metric['enabled'] == true ? 'Yes' : 'No')}</td><td>${converter.makeHtml(metric['description']) ?? ''}</td><td>${attributesLink ? "<ul class='monitor-metrics'><li>" : ''}${attributesLink}${attributesLink ? "</li></ul>" : ''}</td>`;
                      metricTable.find('tbody').append(`<tr>${row}</tr>`);
                   }
                }
@@ -246,7 +246,7 @@ $(document).ready(function () {
                for (let [name, attr] of Object.entries(data['attributes'])) {
                   const idAttr = id + '-attribute-' + name;
                   const enums = attr['enum']?.join('</code></li><li><code>') ?? '';
-                  const row = `<td id='${idAttr}'><code>${name}</code></td><td>${attr['type'] ?? ''}</td><td>${converter.makeHtml(attr['description']) ?? ''}</td><td>${enums ? "<ul><li>" : ''}<code>${enums}</code>${enums ? "</li></ul>" : ''}</td>`;
+                  const row = `<td id='${idAttr}'><code>${name}</code></td><td>${attr['type'] ?? ''}</td><td>${converter.makeHtml(attr['description']) ?? ''}</td><td>${enums ? "<ul class='monitor-attr'><li>" : ''}<code>${enums}</code>${enums ? "</li></ul>" : ''}</td>`;
                   attributesTable.find('tbody').append(`<tr>${row}</tr>`);
                }
             }

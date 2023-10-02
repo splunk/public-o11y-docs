@@ -33,8 +33,8 @@ Using the service map, you can do the following:
 
 * Hover over a node or edge to view a pop-up chart of the request, error, and latency (RED) metrics for that node or edge.
 * Select any node in the service map to see charts for that node in the service panel. 
-* Double-select on a node in the service map to isolate to that node and its immediate dependencies in the service map.
-* Use the :guilabel:`Breakdown` option to break the service activity down by any indexed span tag. See :ref:`service-map-breakdowns` to learn more.
+* Select on a node in the service map to isolate that node and its immediate dependencies in the service map.
+* Use the :guilabel:`Breakdown` selector to break the service's activity down by any indexed span tag. See :ref:`service-map-breakdowns` to learn more.
 * Select any chart in this view to show example traces that match the parameters of the chart.  
 
 You can also use the service map as a starting point for monitoring or troubleshooting scenarios:

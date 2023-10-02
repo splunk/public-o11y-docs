@@ -26,7 +26,7 @@ Latest updates automatically whenever Splunk RUM releases a new version. In pre-
 Check compatibility and requirements
 ===============================================
 
-Splunk RUM for Mobile supports Java and Kotlin applications for Android API Level 21 and higher. API levels 21 to 25 require core library desugaring activated. See :ref:`enable-desugaring`.
+.. include:: /_includes/requirements/android.rst
 
 .. _enable-desugaring:
 

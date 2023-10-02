@@ -22,6 +22,7 @@ The default configuration of the ``fluentforward`` receiver in the Splunk Distri
 
 .. code-block:: yaml
 
+
    receivers:
      fluentforward:
        endpoint: 127.0.0.1:8006

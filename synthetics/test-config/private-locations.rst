@@ -112,10 +112,6 @@ Follow these steps to limit logging:
 #. Restart your docker service: ``sudo systemctl docker.service restart``.
 
 
-Deactivate network shaping for your private runner 
-------------------------------------------------------
-Launch your Docker container with the following environment variable: ``-e "DISABLE_NETWORK_SHAPING=true"``.
-
 
 Adding certificates in Synthetics
 ------------------------------------------------------
@@ -132,7 +128,7 @@ For example, here is what a command might look like after you modify it to fit y
 
 .. code:: yaml
 
-  docker run -e "DISABLE_NETWORK_SHAPING=true" -e "RUNNER_TOKEN=<insert-token>" --volume=`pwd`/certs:/usr/local/share/ca-certificates/my_certs/ quay.io/signalfx/splunk-synthetics-runner:latest bash -c "sudo update-ca-certificates && bundle exec bin/start_runner"
+    docker run -e "RUNNER_TOKEN=<insert-token>" --volume=`pwd`/certs:/usr/local/share/ca-certificates/my_certs/ quay.io/signalfx/splunk-synthetics-runner:latest bash -c "sudo update-ca-certificates && bundle exec bin/start_runner"
 
 
 
@@ -165,7 +161,7 @@ Troubleshoot queue length and latency
 
 If both the queue latency and length increase over time, then add more runners to improve performance. 
 
-If your queue latency increases but your queue length doesn’t, then try these troubleshooting methods:
+If your queue latency increases but your queue length doesn't, then try these troubleshooting methods:
 
 * Check to see if a step is delaying the rest of the test
 * Investigate whether you have the sufficient resources to run private location runners on your machines.
