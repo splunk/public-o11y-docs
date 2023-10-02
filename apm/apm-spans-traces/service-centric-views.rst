@@ -33,7 +33,7 @@ Use the following metrics in the :guilabel:`Overview` section to monitor the per
 * :strong:`Request rate` - The request rate chart shows streaming request data for the service. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
 * :strong:`Requests latency distribution` - The request latency distribution chart shows p50, p90, and p99 latency data for the service. The blue dot on the chart indicates the data is streaming, that is, you don't need to refresh to see new data.
 * :strong:`Error rate` - The error rate chart shows streaming error data for the service. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`Dependency time`
+* :strong:`Dependency time` - [Needs description of data in chart]. 
 * :strong:`Top endpoints`- Top endpoints shows up to 5 endpoints for the service. Use the search field to search for specific endpoints. Use the sort drop-down list to change how endpoints are sorted. Select :guilabel:`Explore in APM` to navigate to Endpoint Performance.
 
 ..  image:: /_images/apm/spans-traces/service-centric-view-endpoints.png
@@ -52,25 +52,25 @@ The :guilabel:`Logs` section shows unhandled, exception, traceback, and stacktra
 Runtime
 -------------
 
-* :strong:`Memory usage` - The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`Allocation rate` - The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`# Class loading` - The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`GC activity` - The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`GC overhead (%)` - The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`# Thread count` - The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`GC overhead (%)` - The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`# Thread count` - The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`# Thread pools` - The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+* :strong:`Memory usage` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+* :strong:`Allocation rate` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+* :strong:`# Class loading` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+* :strong:`GC activity` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+* :strong:`GC overhead (%)` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+* :strong:`# Thread count` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+* :strong:`GC overhead (%)` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+* :strong:`# Thread count` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+* :strong:`# Thread pools` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
 
 Infrastructure
 ----------------
 
-* :strong:`Host CPU usage` - The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`Host memory usage` - The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`Host disk usage` - The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`Host network usage` - The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`Pod CPU usage` - The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`Pod network utilization (bytes/sec)` - The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+* :strong:`Host CPU usage` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+* :strong:`Host memory usage` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+* :strong:`Host disk usage` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+* :strong:`Host network usage` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+* :strong:`Pod CPU usage` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+* :strong:`Pod network utilization (bytes/sec)` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
 
 ..  image:: /_images/apm/spans-traces/service-centric-view-infra-metrics.png
     :width: 95%
