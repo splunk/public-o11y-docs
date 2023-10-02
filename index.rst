@@ -777,9 +777,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: Splunk On-Call
    :maxdepth:   3
 
+   Introduction to Splunk On-Call TOGGLE <sp-oncall/spoc-main>
+
+.. toctree::
+   :maxdepth:   3
+
    Introduction to Splunk On-Call TOGGLE <sp-oncall/get-started/admin-quick-start>
-
-
 
 .. toctree::
    :caption: Reference and Legal
