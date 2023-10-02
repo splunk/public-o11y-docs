@@ -50,7 +50,7 @@ Discovery mode supports the following host services and applications:
      - Smart Agent with postgresql monitor type. See :ref:`postgresql`.
 
    * - OracleDB
-     - Oracle Database native receiver. See :ref:`oracledb`.
+     - Oracle DB receiver. See :ref:`oracledb`.
 
    * - NGINX
      - Smart Agent with collectd/nginx monitor type. See :ref:`nginx`.
