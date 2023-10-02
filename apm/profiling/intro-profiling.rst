@@ -61,6 +61,7 @@ After you get profiling data into Observability Cloud, you can visualize the mem
 Memory profiling also exposes memory metrics for your application, which you can use to build charts and dashboards. See :ref:`profiling-memory-metrics`.
 
 .. raw:: html
+
   <embed>
     <h2>Supported languages</h2>
   </embed>
@@ -73,6 +74,7 @@ The following programming languages have instrumentation available:
 
    * - :strong:`Language`
      - :strong:`Available instrumentation`
+     - :strong:`Documentation`
    * - Java
      - Splunk Distribution of OpenTelemetry Java version 1.14.2 or higher
      - :ref:`instrument-java-applications`, :ref:`profiling-configuration-java`
