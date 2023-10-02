@@ -1,39 +1,48 @@
-.. _team-admin:
+.. _global-admin:
 
 ************************************************************************
-Get started as a Team admin
+Get started as a Global admin
 ************************************************************************
 
 .. meta::
-   :description: About the team admin  roll in Splunk On-Call.
+   :description: About the global admin  roll in Splunk On-Call.
 
 
 
-If you are new to Splunk On-Call a great place to start is with the topic :ref:`user-role`. Once you a familiar with your user permissions, learn about the Alert admin role.
+As a Global Admin, you have the highest level of permissions in the Splunk On-Call platform. You’re responsible for the overall workflow and management of integrations and users.
 
-A user can be elevated to a Team Admin for one or more teams. Likewise, there may be multiple Team Admins within a single team. As a Team Admin, you're responsible for a team.s on-call schedules, escalation policies, and the overall management of the users who are apart of your team. Team admins have permission to take the following actions: 
+As a Global Admin, you have access to all functionality across the platform including scheduling, integrations, teams, and users. While many of these responsibilities will fall on your Alert and Team Admins, there are three that are unique to the Global Admin role. Global admins have permission to take the following actions: 
 
 Permissions specific to a Team Admin:
 
-* Invite users to your team
-* Edit the paging policies of team members
-* Create, edit, or delete schedulesCread or assign schedued overrides for team members
+* Billing information
+* API access
+* Granting user permission
 
 
 
 Recommendations to be a Successful Alert Admin
 ======================================================
 
-* Create Routing Keys: Routing Keys are responsible for directing the alerts to the correct escalation policy in order to page the correct on-call user. Think of these as the “postage” of each alert. Reach out to Team Admins to assist with naming conventions for Routing Keys in order to ensure that escalation policies and routing key names are in sync and simple to identify.
+* Setup profile and familiarize yourself with Splunk On-Call: Setup your personal profile and create a personal paging policy. Explore the mobile and web platforms to get comfortable before beginning your configurations.
 
-* Enable and configure integrations: Search for the integrations you need on the XXXXXXX integrations page XXXXXX. If you do not see an integration listed, you can always use the Generic Rest Endpoint or Email integration based on the capabilities of your tools. Use the Integration Guides to configure your integrations.  Make sure you are only sending critical, actionable alerts to Splunk On-Call to avoid alert fatigue and confusion. 
+* Invite Users: This can be done via the user page by selecting the “invite user” button or via the API. 
+    - Configuring SSO prior to adding users helps ensure all users link their SSO account. Reach out to the Splunk On-Call Support team for assistance with SSO configuration.
+    - Keep a company-wide user naming convention. This is best achieved by using the name of your email, first.last. If needed, append the username with your Splunk On-Call instance “-orgname” to ensure uniqueness (example: jsmith-acme). Use the API to enforce the desired usernames when inviting users. Note: Email invitations let users create their own usernames, so internal communication will be important to ensure naming conventions are followed. 
 
-* Confirm alerts are directed to the corresponding teams: After configuring your integrations, make sure that incidents are routing and behaving properly by sending test alerts.
+* Assign Roles: Splunk On-Call has four roles you can assign to users. For details on user roles, see :ref:`user-roles-permissions`. Restrict user permissions as much as possible in order to limit the number of users making changes. Recommendation: 1-2 Global Admins per org, 1-2 Alert Admins per org, and 1-2 Team Admins per team.
 
-* Create Rules Engine Rules: You can modify fields, add annotations, and redirect alerts based on certain matching conditions. The Rules Engine even has regex capabilities to parse out portions of fields or create time-based rules. 
+* Create your teams: Determine the role of each team in Splunk On-Call and create each team within the teams' page. Assign 1-2 team admins per team to manage on-call schedules and users. Keep a team naming convention that is intuitive to each team role or the alerts they work. (For example. Support, Backend, Security, Data.)
 
-*  Configure custom outgoing webhooks: Webhooks allow you to pass information outside of Splunk On-Call based on actions taken within Splunk On-Call such as a triggered incident or a chat. When combined with the Rules Engine, they can be configured to conditionally fire. 
+*  Optimize Splunk On-Call configuration to achieve the desired workflow: Determine which alerts from your monitoring tools need to be sent into Splunk On-Call. Ensure admins for your monitoring tools are assigned alert admin permissions in Splunk On-Call in order to configure the integrations. Only send critical, actionable alerts into Splunk On-Call. Avoid unnecessary or noisy alerts – This will help reduce alert fatigue and make it easier to manage your incidents. 
 
-* Maintenance mode: If you need to perform maintenance for one of your integrations, you can turn on maintenance mode for a specific routing key or all routing keys. Maintenance mode will mute paging for the given period of time, and resume paging once ended. 
+* Familiarize yourself with Splunk On-Call Reports: Splunk On-Call has four reports that can be utilized to evaluate your incident response, identify and correct weaknesses, and track on-call user metrics. For details on the available reports, see XXXXXXX reports XXXXXXX.
+  
+* Global Alert Configuration & Settings:  Configuring your global alert settings will improve your workflow and ensure no alert goes unresolved. 
+    - Auto-Resolve & Pop-Out-Of-Ack
+    - Incident Creation based on Entity State
+    - Incident Resolve Notifications
+  
+* Understand Maintenance Mode and when to use it: Maintenance Mode allows you to temporarily mute alerts in order to complete server maintenance, or other work, without unnecessarily disrupting your teammates with incident paging. It does not prevent alerts from entering Splunk On-Call; it only stops specific alerts from paging on-call users. Note: Global and Alert Admins can begin Maintenance Mode.
 
-.. note:: Maintenance Mode does not stop the alerts from coming into Splunk On-Call, just from paging the on-call users when they do come in.
+* Get to know the Splunk On-Call API: Only Global Admins have the ability to enable the Splunk On-Call API and create API keys. The API can be used to pull Splunk On-Call data, make scripts, etc. You can access the public API XXXXXX HERE XXXXXX as well as from the API tab under Integrations. Use your API ID and up to five keys to perform calls.  

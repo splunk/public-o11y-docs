@@ -11,10 +11,15 @@ Admin quick-start guide
 .. toctree::
    :hidden:
 
-   stakeholders
-   _system-reqts
+   system-reqts
    user-roles-permissions
    user-role
+   alert-admin
+   global-admin
+   team-admin
+   stakeholders
+
+
 
 
 
