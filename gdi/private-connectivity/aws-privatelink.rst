@@ -1,7 +1,7 @@
 .. _aws-privatelink:
 
 *********************************************************************
-Private Connectivity with PrivateLink 
+Private Connectivity using AWS PrivateLink
 *********************************************************************
 
 .. meta::
