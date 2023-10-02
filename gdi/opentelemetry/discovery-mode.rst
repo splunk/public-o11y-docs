@@ -27,7 +27,7 @@ When you run the Collector in discovery mode, it tests built-in configurations f
 
 For any dynamically instantiated receiver that retrieves metrics matching the success criteria, the Collector translates the discovery configuration to a receiver creator instance with the known working rules, as well as the required observer extension. See :ref:`receiver-creator-receiver` for more information. At the same time, the Collector adds the configuration to the ``metrics`` pipeline at runtime.
 
-For any receiver that can establish a connection with a service, but not receive the expected metrics, discovery mode suggests which properties to set, or what extensions or settings to configure on the service to successfully retrieve telemetry. You can define any target-specific configuration values that are required, for example authentication information, using discovery properties to tune the discovery process. 
+For any receiver that can establish a connection with a service, but not receive the expected metrics, discovery mode suggests which properties to set, or what extensions or settings to configure on the service to successfully retrieve telemetry. You can define any target-specific configuration values that are required, for example authentication information, using discovery properties to tune the discovery process.
 
 
 Supported host services and applications
@@ -48,6 +48,9 @@ Discovery mode supports the following host services and applications:
 
    * - PostgreSQL
      - Smart Agent with postgresql monitor type. See :ref:`postgresql`.
+
+   * - OracleDB
+     - Oracle Database native receiver. See :ref:`oracledb`.
 
    * - NGINX
      - Smart Agent with collectd/nginx monitor type. See :ref:`nginx`.
@@ -70,7 +73,7 @@ The ``--dry-run`` option ensures that the resulting configuration isn't applied 
    $ Discovering for next 10s...
    Partially discovered "smartagent/postgresql" using "docker_observer"
    endpoint "5c9c80ba4319395c26255b6374f048ca973d3618fdd4b92a9ed601c7dddbff6a:5432":
-   Please ensure your user credentials are correctly specified with 
+   Please ensure your user credentials are correctly specified with
    `--set splunk.discovery.receivers.smartagent/postgresql.config.params::username="<username>"`
    and `--set splunk.discovery.receivers.smartagent/postgresql.config.params::password="<password>"`
    or `SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_postgresql_CONFIG_params_x3a__x3a_username="<username>"`
