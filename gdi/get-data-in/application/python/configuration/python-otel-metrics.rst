@@ -11,6 +11,8 @@ The Splunk Distribution of OpenTelemetry Python collects runtime and custom metr
 
 For examples of custom metrics instrumentation and instrument types, see :ref:`custom-metrics-python`.
 
+.. caution:: This feature is experimental, and exported metric data and configuration properties might change. See more in :new-page:`GitHub <https://github.com/signalfx/splunk-otel-python/blob/main/docs/advanced-config.md>`.
+
 .. _python-app-metrics:
 
 Application metrics
