@@ -70,7 +70,7 @@ The following programming languages have instrumentation available:
 
 .. list-table::
    :header-rows: 1
-   :widths: 50, 40, 40
+   :widths: 20, 40, 40
 
    * - :strong:`Language`
      - :strong:`Available instrumentation`
