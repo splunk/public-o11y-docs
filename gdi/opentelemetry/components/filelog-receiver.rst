@@ -32,6 +32,7 @@ This example shows how to tail a simple JSON file:
 
 .. code-block:: yaml
 
+
   receivers:
     filelog:
       include: [ /var/log/myservice/*.json ]
@@ -44,6 +45,7 @@ This example shows how to tail a simple JSON file:
 This example shows how to tail a plaintext file:
 
 .. code-block:: yaml
+
 
   receivers:
     filelog:
@@ -172,6 +174,7 @@ Send logs to Splunk Cloud
 Use the following configuration to send logs to Splunk Cloud:
 
 .. code-block:: yaml
+
 
   receivers:
     filelog:

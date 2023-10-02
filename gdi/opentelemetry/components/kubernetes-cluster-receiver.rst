@@ -47,6 +47,7 @@ Use ``metadata_exporters`` as a list of metadata exporters to sync with metadata
 
 .. code-block:: yaml
 
+
    receivers:
      k8s_cluster:
        auth_type: serviceAccount

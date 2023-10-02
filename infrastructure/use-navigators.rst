@@ -51,7 +51,7 @@ The following table shows how instances are sorted in each view:
 
        * The colors range from low values (lighter colors) to high values (darker colors).
 
-       * You can’t change the default colors for each Color |hyph| by option.
+       * You can't change the default colors for each Color |hyph| by option.
 
        * The navigator automatically sets the value range for each color.
 

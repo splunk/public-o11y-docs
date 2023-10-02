@@ -30,7 +30,7 @@ Organizations that complete the integration of Splunk Cloud Platform and Splunk 
 
 * Splunk Cloud Platform administrators can extend SAML settings for SSO configured in Splunk Cloud Platform to Splunk Observability Cloud applications.
 
-* When using any Splunk Observability Cloud application, a user can access all data in Splunk Cloud Platform indexes that the user’s role in Splunk Cloud Platform has permissions to access.
+* When using any Splunk Observability Cloud application, a user can access all data in Splunk Cloud Platform indexes that the user's role in Splunk Cloud Platform has permissions to access.
 
 * Users can navigate data and dashboards between Splunk Cloud Platform and Splunk Observability Cloud seamlessly after logging in with Splunk Cloud Platform SSO once.
 
@@ -77,7 +77,7 @@ To add a new user to Splunk Observability Cloud after the integration is complet
 
 .. note:: You can use a third party identity provider other than Splunk Cloud Platform, but you will lose the benefits of the integrated experience. See :ref:`unified-identity-benefits`.
 
-Once users are set up, Splunk Cloud Platform admins and Splunk Observability Cloud admins must manage roles independently. After initial setup, role updates in either product platform do not impact a user’s role in the other platform. However, a user’s permissions to specific indexes in Splunk Cloud Platform are always controlled by a user’s role and permissions in Splunk Cloud Platform.
+Once users are set up, Splunk Cloud Platform admins and Splunk Observability Cloud admins must manage roles independently. After initial setup, role updates in either product platform do not impact a user's role in the other platform. However, a user's permissions to specific indexes in Splunk Cloud Platform are always controlled by a user's role and permissions in Splunk Cloud Platform.
 
 
 What to expect at first login
@@ -110,7 +110,7 @@ In addition to logging in with SSO, users and admins experience other difference
 
 Point-and-click log analysis
 ------------------------------------------------------------------------------------------
-One important advantage of the integration is that users can now query their Splunk Cloud Platform logs in Log Observer’s no-code UI. Users can create advanced queries without knowing SPL with Log Observer’s filters and aggregations. See :ref:`logs-queries` for more information.
+One important advantage of the integration is that users can now query their Splunk Cloud Platform logs in Log Observer's no-code UI. Users can create advanced queries without knowing SPL with Log Observer's filters and aggregations. See :ref:`logs-queries` for more information.
 
 Related Content
 ------------------------------------------------------------------------------------------
@@ -118,7 +118,7 @@ Another significant benefit of the integration is that you can access any data r
 
 Unified user session
 ------------------------------------------------------------------------------------------
-You can navigate seamlessly back and forth between Splunk Cloud Platform and any Splunk Observability Cloud application (Infrastructure Monitoring, APM, Log Observer, RUM, and Synthetics) to see all data that your Splunk Cloud Platform role has permissions to see. Users need to log in only once to gain access to Splunk Cloud Platform and Splunk Observability Cloud. You don’t need additional login to move from one platform to the other when exploring data.
+You can navigate seamlessly back and forth between Splunk Cloud Platform and any Splunk Observability Cloud application (Infrastructure Monitoring, APM, Log Observer, RUM, and Synthetics) to see all data that your Splunk Cloud Platform role has permissions to see. Users need to log in only once to gain access to Splunk Cloud Platform and Splunk Observability Cloud. You don't need additional login to move from one platform to the other when exploring data.
 
 Splunk Cloud Platform maintenance windows
 ------------------------------------------------------------------------------------------
@@ -126,7 +126,7 @@ During a Splunk Cloud Platform maintenance window, users cannot log in to Splunk
 
 During a maintenance window, Splunk Cloud Platform displays a banner indicating the start and end time of the window. If a user is already logged in to Splunk Observability Cloud at the start of a maintenance window, the user is not impacted directly. However, access to Splunk Cloud Platform logs in Log Observer are unavailable during the maintenance window. You can continue working in Splunk Observability Cloud. 
 
-Typically, there are two planned maintenance windows per month for a Splunk Cloud Platform instance. Customers can determine the scheduling of maintenance windows and usually set them up to occur during the customer’s downtime. Talk to your Splunk Cloud Platform administrator about the planned maintenance windows.
+Typically, there are two planned maintenance windows per month for a Splunk Cloud Platform instance. Customers can determine the scheduling of maintenance windows and usually set them up to occur during the customer's downtime. Talk to your Splunk Cloud Platform administrator about the planned maintenance windows.
 
 Changing identity providers
 ------------------------------------------------------------------------------------------

@@ -55,6 +55,7 @@ For example:
 
 .. code-block:: yaml
 
+
   splunkObservability:
     accessToken: xxxxxx
     realm: us0
@@ -69,6 +70,7 @@ Configure the deployment environment
 If applicable, use the ``environment`` parameter to specify an additional ``deployment.environment`` attribute to be added to all telemetry data. This attribute helps Splunk Observability Cloud users investigate data coming from different sources separately. Example values include ``development``, ``staging``, and ``production``.
 
 .. code-block:: yaml
+
 
   splunkObservability:
     accessToken: xxxxxx
@@ -96,6 +98,7 @@ For example:
 
 .. code-block:: yaml
 
+
   splunkObservability:
     accessToken: xxxxxx
     realm: us0
@@ -110,6 +113,7 @@ Provide tokens as a secret
 Instead of having the tokens as clear text in the config file, you can provide them as a secret created before deploying the chart. See :new-page:`secret-splunk.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/templates/secret-splunk.yaml>` for the required fields.
 
 .. code-block:: yaml
+
 
   secret:
     create: false
@@ -135,6 +139,7 @@ For example, use the following configuration to activate automatic detection of 
 
 .. code-block:: yaml
 
+
   splunkObservability:
     accessToken: xxxxxx
     realm: us0
@@ -151,6 +156,7 @@ Deactivate particular types of telemetry
 By default, OpenTelemetry sends only metrics and traces to Splunk Observability Cloud and sends only logs to Splunk Platform. You can activate or deactivate any kind of telemetry data collection for a specific destination. For example, with the following configuration, the Collector sends all collected telemetry data to Splunk Observability Cloud and Splunk Platform, assuming you've properly configured them.
 
 .. code-block:: yaml
+
 
    splunkObservability:
      metricsEnabled: true
@@ -169,6 +175,7 @@ Use the following configuration to install the Helm chart on Windows worker node
 
 .. code-block:: yaml
 
+
    isWindows: true
    image:
      otelcol:
@@ -185,6 +192,7 @@ Deactivate the ``clusterReceiver`` on one of the installations to avoid cluster-
 
 .. code-block:: yaml
 
+
    clusterReceiver:
      enabled: false
 
@@ -198,6 +206,7 @@ To run the Collector in GKE Autopilot mode, set the ``distribution`` option to `
 
 .. code-block:: yaml
 
+
   distribution: gke/autopilot
 
 Search for "Autopilot overview" on the :new-page:`Google Cloud documentation site <https://cloud.google.com/docs>` for more information.
@@ -209,6 +218,7 @@ The Collector agent daemonset can have problems scheduling in Autopilot mode. If
 1. Create a new priority class for the Collector agent:
 
   .. code-block:: yaml
+
 
     cat <<EOF | kubectl apply -f -
     apiVersion: scheduling.k8s.io/v1
@@ -224,6 +234,7 @@ The Collector agent daemonset can have problems scheduling in Autopilot mode. If
 
   .. code-block:: yaml
 
+
     priorityClassName: splunk-otel-agent-priority
 
 GKE ARM support
@@ -232,6 +243,7 @@ GKE ARM support
 The default configuration of the Helm chart supports ARM workloads on GKE. Make sure to set the distribution value to ``gke``:
 
 .. code-block:: yaml
+
 
   distribution: gke
 
@@ -243,6 +255,7 @@ Configure Amazon Elastic Kubernetes Service Fargate
 To run the Collector in the Amazon EKS with Fargate profiles, set the required ``distribution`` value to ``eks/fargate``, as shown in the following example:
 
 .. code-block:: yaml
+
 
    distribution: eks/fargate
 
