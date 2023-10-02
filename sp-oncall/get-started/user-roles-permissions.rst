@@ -1,4 +1,4 @@
-.. _system-reqts:
+.. _user-roles-permissions:
 
 ************************************************************************
 Splunk On-Call user roles and permissions
