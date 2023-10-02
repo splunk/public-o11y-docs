@@ -13,7 +13,8 @@ As a user, you are responsible for taking action on incidents that page you whil
 All users have the ability to reach out to Splunk On-Call support at any time with questions.
 
 Live Chat: If you are logged into your Splunk On-Call instance, you will have the ability to Live Chat with the Splunk On-Call Support team.
-Splunk Support Portal: You can open a Splunk On-Call support case in the Splunk Support Portal :new-page:`Splunk Support Portal1 <https://login.splunk.com/>.
+
+Splunk Support Portal: You can open a Splunk On-Call support case in the Splunk Support Portal :new-page:`Splunk Support Portal <https://login.splunk.com/>.
 
 If you are facing any issues when trying to contact us, see XXXXXX Contacting Splunk On-Call Support XXXXXX
 
@@ -44,17 +45,18 @@ To set up your user account:
 
 #. Use the Manual Take On-Call feature for last-minute coverage: For unplanned absences such as a doctor appointment, the take on-call button can be used to cover another user's shift until they take it back or the shift ends.  
    - On mobile: 
-     #. Navigate to the home screen
-     #. Click “View All” below teammates currently On-Call
-     #. Click the “Take shift” button
-     You are now on call until the end of the user's shift unless they take it back.
+      #. Navigate to the home screen
+      #. Click “View All” below teammates currently On-Call
+      #. Click the “Take shift” button
+      You are now on call until the end of the user's shift unless they take it back.
    - In the web interface: 
-Navigate to the people pane
-Locate the user that needs last-minute coverage
-Select the user
-Click the “Take Shift” button
-You are now on call until the end of the user’s shift unless they take it back. 
-Take action on an incident you are paged for: There are several different actions you can take on an incident you are paged for. The various actions are described below: Quick video on incident actions on the Web UI & Mobile UI! 
+      #. Navigate to the People pane.
+      #. Locate the user who needs last-minute coverage.
+      #. Select the user.
+      #. Click the “Take Shift” button
+         You are now on call until the end of the user's shift unless they take it back. 
+
+#. Take action on an incident you are paged for: There are several different actions you can take on an incident you are paged for. The various actions are described below: Quick video on incident actions on the Web UI & Mobile UI! 
 Acknowledge: This will stop the incident from actively paging and continuing through the escalation policy. An acknowledgment signifies that you are aware of an incident and are taking action on it.
 Resolve: Once the incident is resolved within the monitoring tool it can be resolved within Splunk On-Call. Once resolved any new alert of the same type will create a new incident.
 Reroute: If the incident needs to be addressed by another user or directed to a different escalation policy the reroute option allows you to do this. 
