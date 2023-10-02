@@ -34,20 +34,26 @@ Get Kubernetes data into Splunk Observability Cloud
   :width: 80%
   :alt: Installation setup guide for the OpenTelemetry Collector for Kubernetes.
 
-6. Select :guilabel:`Next`. The Install Integration screen displays. Based on your entries on the Configure Integration screen, the guided setup provides commands that you can copy and paste to 
+6. Select :guilabel:`Next`. The Installation Instructions screen displays. Based on your entries in the Configure Integration screen, the guided setup provides commands that you can copy and paste to 
 install the Splunk Distribution of OpenTelemetry Collector on your selected platform.
 
 .. image:: /_images/infrastructure/images-k8s-infrastructure-tutorial/k8s-integration-commands.png
   :width: 100%
   :alt: Command lines for installing the Splunk Distribution of OpenTelemetry Collector for Kubernetes.
 
+7. Start your Kubernetes cluster, and use the commands from the Configure Integration to deploy the Splunk Distribution of OpenTelemetry Collector. The following image shows a successful installation of the Collector:
+
 .. image:: /_images/infrastructure/images-k8s-infrastructure-tutorial/k8s-install-collector.png
-  :width: 80%
+  :width: 100%
   :alt: Collector installation in the CLI.
+
+8. Once you have deployed the Collector, return to the Configure Integration screen and select :guilabel:`Next`. The Review Inventory screen shows a summary of your Kubernetes data.
 
 .. image:: /_images/infrastructure/images-k8s-infrastructure-tutorial/k8s-data-ingestion.png
   :width: 100%
   :alt: Successful Kubernetes data ingestion.
+
+9. (Optional) Select :guilabel:`Explore Metric Data` to further interact with your data.
 
 Next step
 -------------------------------------------
