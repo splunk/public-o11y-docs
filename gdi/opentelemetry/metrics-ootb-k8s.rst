@@ -109,6 +109,26 @@ Container level metrics and attributes
     - :ref:`ootb-metrics-k8s-attributes`
     - No
 
+Container level metrics and attributes after translation
+============================================================================
+
+.. note:: These metrics are compatible with the :ref:`signalfx-exporter`.
+
+.. list-table::
+  :widths: 30 30 30 10
+  :width: 100%
+  :header-rows: 1
+
+  * - Metric name
+    - Metric description
+    - Attributes
+    - Kept?
+
+  * - ``container.cpu.utilization``
+    - Pod CPU utilization in centicores
+    - :ref:`ootb-metrics-k8s-attributes`
+    - **Yes**
+
 Pod level metrics and attributes 
 ============================================================================
 
@@ -332,6 +352,109 @@ Node level metrics and attributes
   * - ``system.paging.utilization``
     - Swap (Unix) or pagefile (Windows) utilization
     - 
+    - **Yes**
+
+Node level metrics and attributes after translation
+============================================================================
+
+.. note:: These metrics are compatible with the :ref:`signalfx-exporter`.
+
+.. list-table::
+  :widths: 30 30 30 10
+  :width: 100%
+  :header-rows: 1
+
+  * - Metric name
+    - Metric description
+    - Attributes
+    - Kept?
+
+  * - ``cpu.idle``
+    - CPU time in centicores spent in any state other than those in the table
+    - :ref:`ootb-metrics-k8s-attributes`
+    - **Yes**
+
+  * - ``cpu.interrupt``
+    - CPU time in centicores spent while servicing hardware interrupts
+    - :ref:`ootb-metrics-k8s-attributes`
+    - **Yes**
+
+  * - ``cpu.nice``
+    - CPU time in centicores spent in userspace running ``'nice'-ed processes``
+    - :ref:`ootb-metrics-k8s-attributes`
+    - **Yes**
+
+  * - ``cpu.softirq``
+    - CPU time in centicores spent while servicing software interrupts
+    - :ref:`ootb-metrics-k8s-attributes`
+    - **Yes**
+
+  * - ``cpu.steal``
+    - CPU time in centicores spent waiting for a hypervisor to service requests from other virtual machines
+    - :ref:`ootb-metrics-k8s-attributes`
+    - **Yes**
+
+  * - ``cpu.system``
+    - CPU time in centicores spent running in the kernel
+    - :ref:`ootb-metrics-k8s-attributes`
+    - **Yes**
+
+  * - ``cpu.user``
+    - CPU time in centicores spent running in userspace
+    - :ref:`ootb-metrics-k8s-attributes`
+    - **Yes**
+
+  * - ``cpu.wait``
+    - CPU time in centicores spent idle while waiting for an I/O operation to complete
+    - :ref:`ootb-metrics-k8s-attributes`
+    - **Yes**
+
+  * - ``cpu.num_processors``
+    - The number of logical processors on the host
+    - :ref:`ootb-metrics-k8s-attributes`
+    - **Yes**
+
+  * - ``cpu.utilization``
+    - Percent of CPU used on this host
+    - :ref:`ootb-metrics-k8s-attributes`
+    - **Yes**
+
+  * - ``disk.summary_utilization``
+    - Percent of disk space utilized on all volumes on this host
+    - :ref:`ootb-metrics-k8s-attributes`
+    - **Yes**
+
+  * - ``disk.utilization``
+    - Percent of disk used on this volume
+    - * ``device``
+      * :ref:`ootb-metrics-k8s-attributes`
+    - **Yes**
+
+  * - ``memory.total``
+    - Total bytes of system memory on the system
+    - :ref:`ootb-metrics-k8s-attributes`
+    - **Yes**
+
+  * - ``memory.utilization``
+    - Percent of memory in use on this host
+    - :ref:`ootb-metrics-k8s-attributes`
+    - **Yes**
+
+  * - ``network.total``
+    - Total amount of inbound and outbound network traffic on this host, in bytes
+    - :ref:`ootb-metrics-k8s-attributes`
+    - **Yes**
+
+  * - ``process.cpu_time_seconds``
+    - Total CPU usage of the process in seconds
+    - * ``process.pid``
+      * ``process.parent_pid``
+      * ``process.executable.name``
+      * ``process.executable.path``
+      * ``process.command``
+      * ``process.command_line``
+      * ``process.owner``
+      * :ref:`ootb-metrics-k8s-attributes`
     - **Yes**
 
 Volume level metrics and attributes 
