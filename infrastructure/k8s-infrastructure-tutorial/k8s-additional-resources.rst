@@ -7,6 +7,8 @@ Additional resources
 .. meta::
     :description: Additional resources for concepts and features covered in this tutorial.
 
+See the following resources to learn more about concepts and features covered in this tutorial or to learn about other Splunk Observability Cloud features.
+
 Create and customize dashboards
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 To create your own dashboards and share them with your team, see :ref:`Create and customize dashboards <dashboard-create-customize>` and :ref:`Best practices for creating dashboards <dashboards-best-practices>` in Splunk Observability Cloud.

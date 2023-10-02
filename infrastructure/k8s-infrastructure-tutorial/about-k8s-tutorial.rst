@@ -31,4 +31,4 @@ After ensuring you have met the prerequisites, follow these steps of the tutoria
 * :ref:`monitor-k8s-cluster`.
 * :ref:`activate-builtin-detector`.
 
-To learn more about concepts and features in this tutorial, see :ref:`k8s-learn-more`.
+To learn more about concepts and features shown in this tutorial, see :ref:`k8s-learn-more`.
