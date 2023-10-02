@@ -43,12 +43,12 @@ To set up your user account:
    - Web: Navigate to your team and select :guilabel:`Secduled Overrides`, then :guilabel:`Create an Override`  and select the timezone, dates and time you need to be covered. Note: Another user will need to “take” the shift(s) from you before the shift is considered covered.
 
 #. Use the Manual Take On-Call feature for last-minute coverage: For unplanned absences such as a doctor appointment, the take on-call button can be used to cover another user's shift until they take it back or the shift ends.  
-Mobile: 
-Navigate to the home screen
-Click “View All” below teammates currently On-Call
-Click the “Take shift” button
-You are now on call until the end of the user’s shift unless they take it back.
-Web: 
+   - On mobile: 
+     #. Navigate to the home screen
+     #. Click “View All” below teammates currently On-Call
+     #. Click the “Take shift” button
+     You are now on call until the end of the user's shift unless they take it back.
+   - In the web interface: 
 Navigate to the people pane
 Locate the user that needs last-minute coverage
 Select the user
