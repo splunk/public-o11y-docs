@@ -12,7 +12,7 @@ Welcome to Splunk On-Call
 .. toctree::
    :hidden:
 
-   <get-started/admin-quick-start>
+   Get Started <get-started/admin-quick-start>
    
    
 
