@@ -13,7 +13,7 @@ To learn about the different metric types, see :ref:`metric-types`.
 
 For examples of custom metrics instrumentation and instrument types, see :ref:`custom-metrics-python`.
 
-.. caution:: This feature is experimental, and exported metric data and configuration properties might change. See more in :new-page:`GitHub <https://github.com/signalfx/splunk-otel-python/blob/main/docs/advanced-config.md>`.
+.. caution:: This feature is experimental, and exported metric data and configuration properties might change. To learn more, see :new-page:`https://github.com/signalfx/splunk-otel-python/blob/main/docs/advanced-config.md`.
 
 .. _python-app-metrics:
 
@@ -113,7 +113,7 @@ The Python agent automatically collects and exports the following system metrics
     - Total seconds each logical CPU spent on each mode.
   * - ``system.cpu.utilization``
     - Gauge
-    - Difference in ``system.cpu.time`` since the last measurement per logical CPU, divided by the elapsed time (value in interval [0,1])
+    - Difference in ``system.cpu.time`` since the last measurement per logical CPU, divided by the elapsed time (value in interval [0,1]).
   * - ``system.memory.usage``
     - Counter
     - Bytes of memory in use.
@@ -134,7 +134,7 @@ The Python agent automatically collects and exports the following system metrics
     - Disk operations count.
   * - ``system.disk.time``
     - Counter
-    - Time disk spent activated
+    - Time disk spent activated.
   * - ``system.network.dropped.packets``
     - Counter
     - The number of packets dropped.
