@@ -9,7 +9,7 @@ Getting started
 
 .. _k8s-tutorial-prereqs:
 
-Ensure that you meet prerequisites for getting Kubernetes data into Splunk Observability Cloud.
+Get started with monitoring your Kubernetes cluster data in Splunk Observability Cloud.
 
 Prerequisites
 ---------------------------------------

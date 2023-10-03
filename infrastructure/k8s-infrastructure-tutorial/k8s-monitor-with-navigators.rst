@@ -1,7 +1,8 @@
 .. _monitor-k8s-cluster:
 
-Step 2: Monitor your Kubernetes cluster
-========================================================================
+*******************************************
+Monitor your Kubernetes cluster
+*******************************************
 
 Now that you have data about your Kubernetes cluster flowing into Splunk Observability Cloud, 
 you can use built-in navigators to explore your data.

@@ -1,7 +1,7 @@
 .. _install-otel-k8s:
 
 ********************************************************************************************
-Step 1: Install the Collector and get Kubernetes data into Splunk Observability Cloud
+Install the Collector and get Kubernetes data into Splunk Observability Cloud
 ********************************************************************************************
 
 .. meta::
