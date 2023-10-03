@@ -11,7 +11,7 @@ Splunk Observability Cloud natively supports histograms. All histogram metric da
 
 Currently, only explicit bucket histograms are supported.
 
-
+ 
 Explicit bucket histograms
 ===========================================================
 
@@ -22,7 +22,9 @@ Advantages over other metric types
 Get histogram data into Splunk Observability Cloud
 ===========================================================
 
-Link to instructions (GDI)
+The Splunk Distribution of OpenTelemetry Collector fully supports explicit bucket histogram metrics starting from version 0.86.
+
+To get histogram data into Splunk Observability Cloud, see :ref:`enable-histograms-export`.
 
 Migrate your dashboards, functions, charts, and detectors
 ===========================================================

@@ -11,7 +11,7 @@ In Splunk Observability Cloud, there are three types of metrics. For example, ``
 
 .. image:: /_images/images-metrics/metrics-diagram.png
   :width: 60%
-  :alt: This diagram shows examples of metrics.
+  :alt: This diagram shows examples of metrics. 
 
 The type of the metric determines which default :strong:`rollup` function Observability Cloud applies to summarize individual incoming data points to match a specified data resolution. A rollup is a statistical function that takes all the data points in a metric time series (MTS) over a time period and outputs a single data point. Observability Cloud applies rollups after it retrieves the data points from storage but before it applies analytics functions. To learn more about rollups and data resolution, see :ref:`Rollups <rollups>` in Data resolution and rollups in charts.
 

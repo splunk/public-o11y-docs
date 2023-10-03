@@ -25,7 +25,6 @@ The following example shows the default configuration of SignalFx exporter for m
 
 .. code-block:: yaml
 
-
    # Metrics + Events
    signalfx:
      access_token: "${SPLUNK_ACCESS_TOKEN}"
@@ -40,7 +39,6 @@ When adding the SignalFx exporter, configure both the metrics and logs pipelines
 
 .. code-block:: yaml
 
-
    service:
      pipelines:
        metrics:
@@ -51,6 +49,25 @@ When adding the SignalFx exporter, configure both the metrics and logs pipelines
          receivers: [signalfx]
          processors: [memory_limiter, batch, resourcedetection]
          exporters: [signalfx]
+
+.. _enable-histograms-export:
+
+Send histogram metrics in OTLP format
+-------------------------------------------
+
+The Splunk Distribution of OpenTelemetry Collector supports OTLP histogram metrics starting from version 0.86 and higher. See :ref:`explicit-bucket-histograms` for more information.
+
+To send histogram data to Splunk Observability Cloud, set the ``send_otlp_histogram`` option to ``true``. For example:
+
+.. code-block:: yaml
+   :emphasize-lines: 5
+
+   signalfx:
+     access_token: "${SPLUNK_ACCESS_TOKEN}"
+     api_url: "${SPLUNK_API_URL}"
+     ingest_url: "${SPLUNK_INGEST_URL}"
+     send_otlp_histogram: true
+
 
 .. _sfx-exporter-default-metric-filter:
 
@@ -63,7 +80,6 @@ To override default exclusions and include metrics manually, use the ``include_m
 
 .. code-block:: yaml
 
-
    exporters:
      signalfx:
        include_metrics:
@@ -75,7 +91,6 @@ To override default exclusions and include metrics manually, use the ``include_m
 The following example instructs the exporter to send only the ``cpu.interrupt`` metric with a ``cpu`` dimension value and both per core and aggregate ``cpu.idle`` metrics:
 
 .. code-block:: yaml
-
 
    exporters:
      signalfx:
@@ -132,7 +147,7 @@ Metrics excluded by default by the SignalFx exporter are listed in the default_m
    - metric_name: cpu.idle
      dimensions:
        cpu: ["*"]
-   
+
    # Memory metrics
    - metric_name: system.memory.usage
      dimensions:
@@ -236,7 +251,7 @@ Metrics excluded by default by the SignalFx exporter are listed in the default_m
 Filter metrics using service or environment
 --------------------------------------------------------------
 
-The SignalFx exporter correlates the traces it receives to metrics. When the exporter detects a new service or environment, it associates the source (for example, a host or a pod) to that service or environment in Splunk Observability Cloud, and identifies them using ``sf_service`` and ``sf_environment``. You can then filter those metrics based on the trace service and environment. 
+The SignalFx exporter correlates the traces it receives to metrics. When the exporter detects a new service or environment, it associates the source (for example, a host or a pod) to that service or environment in Splunk Observability Cloud, and identifies them using ``sf_service`` and ``sf_environment``. You can then filter those metrics based on the trace service and environment.
 
 .. note:: You need to send traces using :ref:`splunk-apm-exporter` to see them in Splunk Observability Cloud.
 
@@ -260,7 +275,7 @@ See more options in the Settings section.
 Translation rules and metric transformations
 ========================================================
 
-Use the ``translation_rules`` field to transform metrics or produce custom metrics by copying, calculating, or aggregating other metric values without requiring an additional processor. 
+Use the ``translation_rules`` field to transform metrics or produce custom metrics by copying, calculating, or aggregating other metric values without requiring an additional processor.
 
 Translation rules currently allow the following actions:
 
