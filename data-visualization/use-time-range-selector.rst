@@ -7,28 +7,45 @@ Override default time range with the Time Range Selector
 .. meta::
    :description: The Time Range selector is located at the top right of dashboards and charts, and in the Chart Options tab. By default, Splunk Infrastructure Monitoring chooses the best time range based on the characteristics of the chart's data. However, you can use the Time Range selector to override the default for all charts in a dashboard. 
 
-The Time Range selector is located at the top right of dashboards and charts. It is also available to specify a chart's :ref:`default time range<default-time>` in the Chart Options tab. By default, Splunk Infrastructure Monitoring chooses the best time range for a chart based on the characteristics of the data that it shows. However, you can use the Time Range selector to :ref:`override the default<dashboard-time-range>` for all charts in a dashboard. The Time Range selector supports both relative and absolute time ranges.
+The Time Range selector is located at the top right of dashboards and charts. It is also available to specify a chart's :ref:`default time range<default-time>` in the Chart Options tab. By default, Splunk Infrastructure Monitoring chooses the best time range for a chart based on the characteristics of the data that it shows. However, you can use the Time Range selector to :ref:`override the default<dashboard-time-range>` for all charts in a dashboard. The Time Range selector supports both relative and absolute time ranges. The 24 hour clock is the default, unless a user has selected a 12 hour clock in their user preferences. 
 
 
 Specify a relative time range
 =============================================================================
 
-You can specify a relative time range by selecting a provided time range from the menu, or by typing your preferred relative time range. To learn more, see the following sections.
-
+You can specify a relative time range by selecting a provided time range from the menu, or by typing your preferred relative time range. 
 
 Select a time range from the menu
 -------------------------------------------------------------------
 
 To change the relative time range of a dashboard or chart, click the Time Range selector and choose your desired time range from the menu that appears.
 
-Type in a relative time range
+
+
+Select a relative time range
 -------------------------------------------------------------------
 
 If you don't see your desired relative time range on the menu, you can type it into the Time Range selector field. Valid time units in SignalFx for time ranges are m (minute), h (hour), d (day), and w (week). For example, -4h (past 4 hours), or -2d13h30m (past 2 days, 13 hours and 30 mins).
 
-To view data from a relative time window up to now, type the time unit preceded by a :strong:`-` (minus sign) into the Time Range selector. For example, if you want to see a metric from the last five minutes, click the Time Range selector and type :strong:`-5m`.
+To view data from a relative time window up to now, type the time unit preceded by a :strong:`-` (minus sign) into the Time Range selector. For example, if you want to see a metric from the last five minutes, select the Time Range selector and enter :strong:`-5m`.
 
 You can also view data from a relative time window up to some time before now using "start time to end time." For example, if you want to see a metric from between 1 and 3 minutes ago, click the Time Range selector and type :strong:`-3m to -1m`. The earlier time point must come first. In this example, typing :strong:`-1m to -3m` doesn't work.
+
+The recommended formats for relative time inputs include:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 80
+
+   * - :strong:`Format`
+     - :strong:`Description`
+  
+   * - -XXm, -XXs
+     - For example, -15m which represents the previous 15 minutes. You can also use seconds (s), hours (h), and days (d).
+   
+   * - -XXm-XXm
+     - For example, -15m-8m. This allows you to specify that you want to see the data for the time range of 15 minutes ago to 8 minutes ago. Note: You can also select this time range as an absolute time.
+   
 
 The Time Range selector shows your most recently used custom time range under the heading "Recent".
 
@@ -39,6 +56,20 @@ Specify an absolute time range
 
 You can also view data from an absolute time window with a defined start and end time. Click on the Time Range selector and choose :guilabel:`Custom` from the menu. A custom Time Range selector appears. Choose the starting and ending date and time of your desired time range, then click :guilabel:`Apply` to show data for that time range only.
 
+.. list-table::
+   :header-rows: 1
+   :widths: 20 80
+
+   * - :strong:`Format`
+     - :strong:`Description`
+  
+   * - 18 Sep 10:18 to 19 Sep 10:18
+     - Day, month, time. The times do not need to match. For example, 18 Sep 10:18 to 19 Sep 9:58.
+   
+   * - 2018-10-15T04:19:00.000-07:00 to 2019-10-16T16:19:00.000-07:00
+     - You can copy an ISO time range into the Time range selector.
+
+.. note:: 
 
 .. _panning:
 
