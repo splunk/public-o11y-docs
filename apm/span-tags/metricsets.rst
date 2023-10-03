@@ -38,7 +38,7 @@ The measurement precision of Troubleshooting MetricSets is 10 seconds. Splunk AP
 Where can I use TMS within Splunk APM?
 ----------------------------------------
 
-TMS appear on the service map <service-map> and in Tag Spotlight. You can use TMS to filter the service map and create breakdowns across the values of a given indexed span tag or process. You can also use TMS to monitor and alert on the performance of your services.
+TMS appear on the :ref:`service map <apm-service-map>` and in Tag Spotlight. You can use TMS to filter the service map and create breakdowns across the values of a given indexed span tag or process. You can also use TMS to monitor and alert on the performance of your services.
 
 What is the TMS retention period?
 -----------------------------------
