@@ -9,7 +9,8 @@ Set up a Browser test
     :description: Learn how to set up a Browser test in Splunk Synthetic Monitoring.
 
 
-A Browser test lets you monitor the user experience for a single page or a multi-step user flow by running a synthetic test of the URLs you provide. Use this type of test to monitor conversion paths or any path that requires multiple steps or runs JavaScript. 
+Use a Browser test to monitor the user experience for a single page or a multi-step user flow by running a synthetic test of the URLs you provide. Use this type of test to monitor conversion paths or any path that requires multiple steps or runs JavaScript. For an example, see :ref:`browser-test-scenario`.
+
 
 For each page checked in a Browser test, Splunk Synthetic Monitoring captures an HTTP Archive (HAR) file, represented in a waterfall chart, which illustrates the performance of specific resources within the page. Browser tests also capture a set of 40+ metrics. See :ref:`waterfall-chart` and :ref:`browser-metrics` to learn more.
 
@@ -43,18 +44,277 @@ Follow these steps to set up a Browser test:
 
 .. include:: /_includes/synthetics/configure-test.rst
 
+Import a JSON file generated from Google Chrome Recorder
+============================================================
+
+To simplify the test creation process, make a recording using Google Chrome Recorder. Then, import the JSON file to Splunk Synthetic Monitoring to automatically import the steps in the workflow instead of adding each individual interaction you want to track. Recordings are especially helpful for complex user flows, or tests that have a large number of steps. 
+
+
+Create a Google Chrome Recorder JSON file
+--------------------------------------------------------
+
+For steps on how to make a Google Chrome recording, see :new-page:`Record, replay, and measure user flows <https://developer.chrome.com/docs/devtools/recorder/>` in the Chrome Developer user guide in Google documentation. 
+
+:strong:`Requirements`
+
+* In Google Chrome Recorder, select either CSS or XPATH for Selector type to record.
+
+* Browser tests run in one Browser tab only. Your recording can't span multiple tabs. 
+
+Import a Google Chrome Recorder JSON file 
+--------------------------------------------------------
+
+.. Note:: Included within recordings from Google Chrome Recorder is the specific viewport size of the browser window used in the recording. When imported, this recorded viewport is not imported into the Synthetics Browser test. Check that the Synthetics Browser test device selection accurately represents the viewport size used by the recorded browser window.
+
+
+Follow these steps to import a JSON file from Google Chrome Recorder to a new or existing Browser test.
+
+
+#. In Splunk Synthetic Monitoring, select :guilabel:`Edit` on an existing Browser test to open the test configuration page, or create a new test. 
+#. Select Import.
+#. Upload the Google Chrome Recorder JSON file.
+#. If a step is not supported, you need to edit or delete the step in the test configuration page. 
+#. (Optional) Add a name to each step. 
+#. Save your changes.  
+
+
+Troubleshoot unsupported steps
+------------------------------------------
+If your recording contains unsupported steps, you need to edit the step to reformat it into one of the supported Synthetic Browser step types. The following table shows how Google Chrome Recorder step names and code snippets map to their counterparts in Splunk Synthetic Browser tests. These examples use Buttercup Games, a fictitious game company.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 50 50 
+   :class: fix-width
+
+   * - :strong:`Google Chrome Recorder snippet`
+     - :strong:`Synthetic snippet`
+
+   * - ``navigate``:
+
+         .. code-block:: javascript
+
+               {
+               "type": "navigate",
+               "url": "www.buttercupgames.com",
+               "assertedEvents": [
+                  {
+                     "type": "navigation",
+                     "url": "www.buttercupgames.com",
+                     "title": "Buttercup Games"
+                  }
+               ]
+               }
+
+     - ``go_to_url`` :
+     
+         .. code-block:: javascript
+
+               {
+               "name": "Go to URL",
+               "type": "go_to_url",
+               "url": "www.buttercupgames.com",
+               "wait_for_nav": true
+               }
+
+   * - ``click`` with resulting navigation:
+
+         .. code-block:: javascript
+
+               {
+               "type": "click",
+               "target": "main",
+               "selectors": [
+                  [
+                     "div:nth-of-type(2) > div:nth-of-type(2) a > div"
+                  ],
+                  [
+                     "xpath//html/body/main/div/div/div[2]/div[2]/div/a/div"
+                  ]
+               ],
+               "offsetY": 211,
+               "offsetX": 164,
+               "assertedEvents": [
+                  {
+                     "type": "navigation",
+                     "url": "www.buttercupgames.com/product/example",
+                     "title": "Buttercup Games"
+                  }
+               ]
+
+     - ``click_element`` with resulting navigation:
+
+         .. code-block:: javascript
+
+               {
+                  "name": "",
+                  "type": "click_element",
+                  "selector_type": "css",
+                  "selector": "div:nth-of-type(2) > div:nth-of-type(2) a > div",
+                  "wait_for_nav": true
+               }
+
+   * - ``click`` without resulting navigation:
+
+         .. code-block:: javascript
+
+               {
+               "type": "click",
+               "target": "main",
+               "selectors": [
+                  [
+                     "div:nth-of-type(2) > div:nth-of-type(2) a > div"
+                  ],
+                  [
+                     "xpath//html/body/main/div/div/div[2]/div[2]/div/a/div"
+                  ]
+               ],
+               "offsetY": 211,
+               "offsetX": 164,
+               "assertedEvents": []
+               }
+
+
+
+     - ``click_element`` without resulting navigation:
+
+         .. code-block:: javascript
+
+               {
+                  "name": "",
+                  "type": "click_element",
+                  "selector_type": "css",
+                  "selector": "div:nth-of-type(2) > div:nth-of-type(2) a > div",
+                  "wait_for_nav": false
+               }
+
+   * - ``change``:
+
+         .. code-block:: javascript
+
+               {
+                  "type": "change",
+                  "value": "5",
+                  "selectors": [
+                     [
+                        "#quantity"
+                     ],
+                     [
+                        "xpath///*[@id=\"quantity\"]"
+                     ]
+                  ],
+                  "target": "main"
+                  }
+
+
+     - ``enter_value``:
+
+         .. code-block:: javascript
+
+              {
+                  "name": "",
+                  "type": "enter_value",
+                  "selector_type": "id",
+                  "selector": "quantity",
+                  "option_selector_type": "index",
+                  "option_selector": "5",
+                  "wait_for_nav": false
+                  }
+
+   * - ``waitForElement``:
+
+         .. code-block:: javascript
+
+              {
+                  "type": "waitForElement",
+                  "selectors": [
+                     [
+                        "body",
+                        "#homepage_example",
+                        ".css-4t2fjl",
+                        ".eanm77i0"
+                     ]
+                  ]
+                  }
+
+
+
+     - ``assert_element_present``:
+
+         .. code-block:: javascript
+
+              {
+                  "name": "",
+                  "type": "assert_element_present",
+                  "wait_for_nav": false,
+                  "selector_type": "css",
+                  "selector": "body,#homepage_example, .css-4t2fjl, .eanm77i0"
+               }
+
+   * - ``waitForElement`` visible false:
+
+         .. code-block:: javascript
+
+            {
+               "type": "waitForElement",
+               "selectors": [
+                  [
+                     "body",
+                     "#homepage_product_brand-example",
+                     ".css-4t2fjl",
+                     ".eanm77i0"
+                  ]
+               ],
+               "visible": false
+            }
+
+
+     - ``assert_element_not_present``:
+
+         .. code-block:: javascript
+
+              {
+                  "name": "",
+                  "type": "assert_element_not_present",
+                  "wait_for_nav": false,
+                  "selector_type": "css",
+                  "selector": "body,#homepage_product_brand-example"
+                  }
+   * - ``customStep``:
+
+         .. code-block:: javascript
+
+            {
+               "type": "customStep",
+               "timeout": 5000,
+               "target": "main",
+               "name": "customParam",
+               "parameters": {}
+            }
+
+
+     - ``run_javascript``:
+
+         .. code-block:: javascript
+
+            {
+               "name": "Unsupported step customStep",
+               "type": "run_javascript",
+               "value": "",
+               "wait_for_nav": false
+            }
+
+   
 
 View your Browser test
 ====================================
 
-Now that you created and saved a test, check whether it’s collecting data as expected: 
+Now that you created and saved a test, check whether it's collecting data as expected: 
 
 #. From the :guilabel:`Tests` list, select the three-dot :guilabel:`Actions` menu and select :guilabel:`Play` arrow icon to manually trigger a live run of the test, or wait for at least one duration of the test frequency you set so that the test has time to run and collect data. 
-#. Select the test you’re interested in to open the :guilabel:`Test history` view, where you can view visualizations of recent test results and metrics.
+#. Select the test you're interested in to open the :guilabel:`Test history` view, where you can view visualizations of recent test results and metrics.
 
-Interpret your Browser test results
-======================================
-See :ref:`browser-test-results` to learn more about Browser test results. 
+#. See :ref:`browser-test-results` to learn more about Browser test results. 
 
 
 Edit your Browser test
@@ -66,8 +326,6 @@ To edit your Browser test, do the following:
 #. Select :guilabel:`Edit test` to edit your test configuration.
 
 If you change the name of your test or the name of a synthetic transaction, it may take up to 20 minutes for the updated name to appear in your charts and detectors.
-
-
 
 .. _browser-adv-setting:
 
@@ -82,7 +340,6 @@ There are many reasons why you might want to configure advanced settings for you
 * Testing out a CDN. For example, you might want to load the HTML page in the browser, but rewrite the hosts for some or all requests to a new host.
 * Filtering out requests from analytics on the back end by sending a specific header in the requests.
 * Running a test on a pre-production site that has a self-signed certificate.
-
 
 
 .. _browser-cookies:
@@ -108,7 +365,7 @@ Authentication
 
 Add credentials to authenticate with sites that require additional security protocols, for example from within a corporate network. By using concealed global variables in the Authentication field, you create an additional layer of security for your credentials simplify the ability to share credentials across checks. For more, see :ref:`concealed-gv`
 
-The Authentication field is available for Browser tests in Chrome only. Firefox tests support Basic Authentication. Splunk Synthetic Monitoring supports a suite of authentication protocols. At this time, Splunk Synthetic Monitoring supports the following in Chrome:
+The Authentication field is available for Browser tests in Chrome only. Splunk Synthetic Monitoring supports a suite of authentication protocols. At this time, Splunk Synthetic Monitoring supports the following in Chrome:
 
 * Basic Authentication
 * NTLM

@@ -98,7 +98,7 @@ Leverage metrics usage report to optimize your metrics volume
 Using the statistics in the metrics usage report, you can gain more visibility into and control over your metrics in the following ways:
 
 * Understand the cardinality of your metrics and determine the top cardinality metrics.
-* Find high cardinality metrics that aren’t frequently used in charts and dashboards. You can optimize your metrics volume by aggregating or dropping these metrics with metrics pipeline management.
+* Find high cardinality metrics that aren't frequently used in charts and dashboards. You can optimize your metrics volume by aggregating or dropping these metrics with metrics pipeline management.
 * Identify dimensions that are the main drivers of high cardinality. You can drop these dimensions and ingest only the aggregated metrics with metrics pipeline management.
 * Determine which teams are ingesting high cardinality metrics. You can work with those teams to optimize your metrics.
 

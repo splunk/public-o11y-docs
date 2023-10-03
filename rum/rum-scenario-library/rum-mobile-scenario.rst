@@ -5,6 +5,8 @@
 Scenario: Kai finds the root cause of a user reported error in Splunk RUM for Mobile  
 *************************************************************************************
 
+.. meta::
+  :description: An example scenario of how to use Splunk RUM for Mobile to find the root cause of issues reported by app users using filters, Tag Spotlight, and User sessions.
 
 The following scenario features Buttercup Industries, a fictitious e-commerce company.
 
@@ -17,7 +19,7 @@ Buttercup Industries recently launched a mobile application. Kai, a site reliabi
 Find the root cause of a user reported error 
 ================================================================
 
-Sometimes, users report an issue in the app that requires a lot of digging to find the root cause. For example, if a user says the app isn’t working, it can be tricky to find where to start troubleshooting. With Splunk RUM for Mobile, Kai can search for a the specific user session.
+Sometimes, users report an issue in the app that requires a lot of digging to find the root cause. For example, if a user says the app isn't working, it can be tricky to find where to start troubleshooting. With Splunk RUM for Mobile, Kai can search for a the specific user session.
 
 Splunk RUM Mobile captures:
 

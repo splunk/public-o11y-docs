@@ -15,9 +15,15 @@ There are three deployment options:
 
 * :ref:`otel-pcf-buildpack`: This integration installs and runs the Collector as a sidecar to your app. In this configuration, the Collector runs in the same container as the app.
 
-* :ref:`otel-pcf-tile`: The Tanzu Tile is a packaged release of the Collector that can be integrated into Pivotal Ops Manager. The Tanzu Tile allows you to download, install, run, configure, and update the Collector from the Ops Manager.
+* :ref:`otel-pcf-tile`: The Tanzu Tile is a packaged release of the Collector that can be integrated into Pivotal Ops Manager. The Tanzu Tile allows you to download, install, run, configure, and update the Collector from the Ops Manager. 
+  
+  Note that the Tanzu tile version 0.81 or higher supports the following services:
 
-.. caution:: Only Tanzu Application Service (TAS) version 2 is supported. TAS version 3 is not supported.
+    * Tanzu Application Service (TAS) versions 3 and 4
+    * VMware Tanzu Operations Manager version 3
+    * Stemcells (Ubuntu Jammy) version 1.148
+
+  Tile version 0.78.1 only supports TAS version 2.
 
 .. _otel-pcf-bosch:
 .. _pivotal-cloud-foundry:
@@ -79,11 +85,13 @@ Run the following command to deploy the Collector using the deployment.yaml file
 
 .. code-block:: yaml
 
+
    bosh -d splunk-otel-collector deploy deployment.yaml
 
 The following is an example deployment.yaml file:
 
 .. code-block:: yaml
+
 
    name: splunk-otel-collector
 
@@ -133,6 +141,7 @@ The following is an example deployment.yaml file:
 To include a custom Collector configuration for the deployment, use a custom configuration file, as shown in the following example:
 
 .. code-block:: yaml
+
 
    name: splunk-otel-collector
 
@@ -239,6 +248,14 @@ Tanzu Tile
 =========================
 
 The Tanzu tile uses the :ref:`otel-pcf-bosch` to deploy the Collector as a nozzle to :new-page:`Loggregator Firehose <https://docs.pivotal.io/tiledev/2-2/nozzle.html>`.
+
+Note that the Tanzu tile version 0.81 or higher supports the following services:
+
+  * Tanzu Application Service (TAS) versions 3 and 4
+  * VMware Tanzu Operations Manager version 3
+  * Stemcells (Ubuntu Jammy) version 1.148
+
+Tile version 0.78.1 only supports TAS version 2.
 
 Dependencies
 ----------------------------------

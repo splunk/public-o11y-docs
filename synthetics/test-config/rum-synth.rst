@@ -7,9 +7,8 @@ Splunk RUM metrics integration
 .. meta::
     :description: Learn how to integrate Splunk RUM with Splunk Synthetic Monitoring.
 
-Integrate with Splunk RUM so that you can automatically measure Web Vital metrics against your run results. Web vitals capture key metrics that affect user experience and assess the overall performance of your site.  Many businesses rely on search engines for users to discover their sites. Google uses web vitals to determine page ranking. 
 
-Web vitals are made up of these metrics that measure user experience.
+Splunk Synthetic Monitoring automatically collects Web Vitals for Browser tests. If you also want to measure Web Vital metrics against your run results, then integrate with Splunk RUM. Web vitals capture key metrics that affect user experience and assess the overall performance of your site. Many businesses rely on search engines for users to discover their sites. Google uses Web Vitals to determine page ranking. 
 
 .. list-table::
    :header-rows: 1
@@ -23,18 +22,18 @@ Web vitals are made up of these metrics that measure user experience.
    * - Cumulative layout shift (CLS)
      -  Measures visual stability by capturing the sum of all individual layout shift scores for every unexpected layout shift that occurs during the entire lifespan of the page. A layout shift occurs any time a visible element changes its position from one rendered frame to the next. Fewer shifts are better for page stability.
    * - First input delay (FID)
-     - Measures the time from when a user first interacts with a web page to the time when the browser is able to respond to that interaction
+     - Measures the time from when a user first interacts with a web page to the time when the browser responds to that interaction.
    * - Total blocking time (TBT)
-     - TBT is collected from a synthetic test, while FID is collected from real user data and they both may be considered equivalent to each other since they measure the same metric: time taken by the page to become interactive and responsiveness to the user.
+     - TBT is collected from a synthetic test, while FID is collected from real user data. They measure the same metric: time taken by the page to become interactive and responsiveness to the user.
 
 
 Prerequisites 
 =================
 You need to instrument your browser application with Splunk RUM. See, :ref:`browser-rum-gdi`.
 
-View web vitals for your run results 
+View Web Vitals for your run results 
 ==========================================
-Navigate to the run results page for the test you're interested in monitoring. The metrics panel for each run result lists web vitals, performance timing, and other metrics. Each web vital shows how your metrics compare to the acceptable range. 
+Navigate to the run results page for the test you're interested in monitoring. The metrics panel for each run result lists Web Vitals, performance timing, and other metrics. Each Web Vital shows how your metrics compare to the acceptable range. 
  
 For example, this image shows the acceptable ranges for TBT. Select the flash light icon to open the sessions in Tag Spotlight in Splunk RUM. The visit count represents the number of users and synthetic tests that have interacted with the normalized URL specified in the test.  
 
@@ -44,7 +43,7 @@ For example, this image shows the acceptable ranges for TBT. Select the flash li
 
 Compare latency of a test by run location 
 ====================================================================================
-Web vitals are a great way of measuring if your tests are actually capturing the performance you expect. Suppose you want to compare the latency of your tests by run location. Open the run results of your test. In the metrics panel, select the filter icon to open the run location options dialog box. 
+Web Vitals are a great way of measuring if your tests are actually capturing the performance you expect. Suppose you want to compare the latency of your tests by run location. Open the run results of your test. In the metrics panel, select the filter icon to open the run location options dialog box. 
 
 .. image:: /_images/rum/rum-synth-filter.png
       :width: 30%
@@ -74,4 +73,4 @@ To learn more about:
 
 * Web Vitals, see :new-page:`https://web.dev/vitals/` in the Google developer documentation
 * What kind of use cases you can solve with Splunk RUM, see :ref:`scenario-landingpage`
-* Tag spotlight, see :ref:`error-aggregates`
+* Tag Spotlight, see :ref:`error-aggregates`

@@ -15,6 +15,7 @@ If you use an OpenTelemetry Helm chart, add the following configuration to your 
 
 .. code-block:: yaml
 
+
    agentCollector:
      configOverride:
        processors:

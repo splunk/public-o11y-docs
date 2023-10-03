@@ -37,8 +37,10 @@ The following table lists all the instrumentations supported by Splunk. Check th
      - :new-page:`splunkredigo <https://pkg.go.dev/github.com/signalfx/splunk-otel-go/instrumentation/github.com/gomodule/redigo/splunkredigo>`
    * - github.com/graph-gophers/graphql-go
      - :new-page:`splunkgraphql <https://pkg.go.dev/github.com/signalfx/splunk-otel-go/instrumentation/github.com/graph-gophers/graphql-go/splunkgraphql>`
-   * - github.com/jackc/pgx
+   * - github.com/jackc/pgx/v4
      - :new-page:`splunkpgx <https://pkg.go.dev/github.com/signalfx/splunk-otel-go/instrumentation/github.com/jackc/pgx/splunkpgx>`
+   * - github.com/jackc/pgx/v5
+     - :new-page:`splunkpgx <https://pkg.go.dev/github.com/signalfx/splunk-otel-go/instrumentation/github.com/jackc/pgx/v5/splunkpgx>`
    * - github.com/jinzhu/gorm
      - :new-page:`splunkgorm <https://pkg.go.dev/github.com/signalfx/splunk-otel-go/instrumentation/github.com/jinzhu/gorm/splunkgorm>`
    * - github.com/jmoiron/sqlx
@@ -63,7 +65,8 @@ The following table lists all the instrumentations supported by Splunk. Check th
 Ensure you are using supported Go versions
 ==============================================================
 
-The Splunk Distribution of OpenTelemetry Go is compatible with Go 1.19 and higher.
+.. include:: /_includes/requirements/go.rst
+
 
 .. _go-otel-connector-requirement:
 

@@ -7,7 +7,9 @@ Splunk Log Observer
 .. meta::
    :description: The Log Observer landing page lists and describes all capabilities. Investigate logs in context with metrics and traces in Splunk Log Observer.
 
-.. note:: Customers with a Splunk Log Observer entitlement in Splunk Observability Cloud must transition from Log Observer to Log Observer Connect by January 2024. With Log Observer Connect, you can ingest more logs from a wider variety of data sources, enjoy a more advanced logs pipeline, and expand into security logging. See :ref:`lo-transition` to learn how.
+
+.. include:: /_includes/log-observer-transition.rst
+
 
 .. toctree::
     :maxdepth: 3
@@ -15,6 +17,7 @@ Splunk Log Observer
 
 
     lo-transition
+    forward-logs
     get-started-logs
     logs
     timeline
@@ -41,6 +44,8 @@ Splunk Log Observer
 
 
 - :ref:`lo-transition`
+
+- :ref:`forward-logs`
 
 - :ref:`get-started-logs`
 

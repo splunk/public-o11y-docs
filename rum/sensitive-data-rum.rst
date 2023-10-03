@@ -4,6 +4,9 @@
 Use controls for sensitive data in Splunk RUM
 ************************************************************
 
+.. meta::
+   :description: How to add additional controls in instrumentation libraries to protect sensitive data such as personally identifiable information, customer-identifiable information, or cardholder data in Splunk Real User Monitoring (RUM). 
+
 By default, Splunk RUM doesn't capture any sensitive information such as data filled in a text box, the string or label of a button, or the POST request or response body. However, you might have the possibility of a sensitive data leak in the following situations: 
 
 * Names of page or screen elements

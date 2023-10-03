@@ -38,6 +38,7 @@ By default, the Splunk Distribution of OpenTelemetry Collector includes the tran
 
 .. code-block:: yaml
 
+
    transform:
      error_mode: ignore
      # Statements can be trace, metric, or log
@@ -56,6 +57,7 @@ By default, the Splunk Distribution of OpenTelemetry Collector includes the tran
 You can then add the transform processor to any compatible pipeline. For example:
 
 .. code-block:: yaml
+
    :emphasize-lines: 6, 14, 22
 
    service:
@@ -108,6 +110,7 @@ The following example shows how to edit logs received using the ``k8sobjects`` r
 
 .. code-block:: yaml
 
+
    transform:
      error_mode: ignore
      log_statements:
@@ -121,6 +124,7 @@ Edit resources and spans for size
 The following example shows how to edit resources and spans by limiting the number of attributes and truncating them to 4,096 characters. The ``resource`` statement drops all keys except the ones indicated in ``keep_keys``.
 
 .. code-block:: yaml
+
 
    transform:
      error_mode: ignore
@@ -142,6 +146,7 @@ Convert datapoints to different types
 The following example shows how to convert datapoints to different types depending on their metric names using the functions included in the transform processor.
 
 .. code-block:: yaml
+
 
    transform:
      metric_statements:

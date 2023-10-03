@@ -9,7 +9,7 @@ Kubernetes attributes processor
 
 The Kubernetes attributes processor is an OpenTelemetry Collector component that manages resource attributes using Kubernetes metadata. The processor automatically discovers resources, extracts metadata from them, and adds the metadata to relevant spans, metrics and logs as resource attributes. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
-.. caution:: Don't remove the Kubernetes attributes processor from your configuration. Default attributes extracted by the processor, such as ``k8s.pod.name``, are required for Splunk Observability Cloud capabilities, such as Kuberbetes navigator, Related Content, and accurate subscription usage.
+.. caution:: Don't remove the Kubernetes attributes processor from your configuration. Default attributes extracted by the processor, such as ``k8s.pod.name``, are required for Splunk Observability Cloud capabilities, such as Kubernetes navigator, Related Content, and accurate subscription usage.
 
 Get started
 ======================
@@ -34,6 +34,7 @@ The Kubernetes attributes processor requires ``get``, ``watch`` and ``list`` per
 The following example shows how to give a ServiceAccount the necessary permissions for all pods and namespaces in a cluster. Replace ``<col_namespace>`` with the namespace where you've deployed the Collector:
 
 .. code-block:: yaml
+
 
    apiVersion: v1
    kind: ServiceAccount
@@ -135,6 +136,7 @@ To automatically filter pods by the node the processors is running on, configure
 
 .. code-block:: yaml
 
+
    spec:
      containers:
      - env:
@@ -148,6 +150,7 @@ Then, set the ``filter.node_from_env_var`` field to the name of the environment 
 
 .. code-block:: yaml
 
+
    k8sattributes:
      filter:
        node_from_env_var: KUBE_NODE_NAME
@@ -160,6 +163,7 @@ The processor can't resolve the IP address of the pods that emit telemetry data 
 To forward IP addresses to gateways, configure the Collectors in host monitoring (agent) mode to run in passthrough mode. This ensures that agents detect IP addresses and pass them as an attribute attached to all telemetry resources.
 
 .. code-block:: yaml
+
 
    k8sattributes:
      passthrough: true
@@ -186,6 +190,7 @@ You can change this list by adding a ``metadata`` section. For example:
 
 .. code-block:: yaml
 
+
    k8sattributes:
      auth_type: "serviceAccount"
      passthrough: false
@@ -200,7 +205,7 @@ You can change this list by adding a ``metadata`` section. For example:
          - k8s.node.name
          - k8s.pod.start_time
 
-.. caution:: Make sure that default attributes, such as ``k8s.pod.name``, are always extracted, as they're required for Splunk Observability Cloud capabilities, such as Kuberbetes navigator, Related Content, and accurate subscription usage.
+.. caution:: Make sure that default attributes, such as ``k8s.pod.name``, are always extracted, as they're required for Splunk Observability Cloud capabilities, such as Kubernetes navigator, Related Content, and accurate subscription usage.
 
 The following container level attributes require additional attributes to identify a container in a pod:
 
@@ -226,6 +231,7 @@ Each association is a list of sources. Sources contain rules. The processor exec
 
 .. code-block:: yaml
 
+
    pod_association:
     # List of associations
      - sources:
@@ -245,6 +251,7 @@ Each source rule consists of a pair of ``from`` and ``name`` statements, represe
 The following example shows the two type of ``from`` source statements in pod association rules:
 
 .. code-block:: yaml
+
 
    pod_association:
      - sources:
@@ -276,6 +283,7 @@ The processor extracts annotations and labels from pods and namespaces and adds 
 For example:
 
 .. code-block:: yaml
+
 
    annotations:
    # Extracts value of annotation from pods with key `annotation-one`

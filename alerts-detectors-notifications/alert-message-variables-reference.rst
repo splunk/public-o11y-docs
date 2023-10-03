@@ -8,6 +8,7 @@ The following tables describe the variables and helper functions you can use whe
 .. Note:: :ref:`Different additional variables may be available<condition-variables>` depending on the alert condition you specify. If you change the alert condition after customizing the message, an icon on the Message preview tab appears.
 
    .. image:: /_images/images-detectors-alerts/message-tab-icon.png
+      :width: 20%
       :alt: This image shows the message tab icon.
 
    This is to remind you to review the message, since some variables you used might no longer apply to the new condition you selected. The icon is removed when you navigate away from the Message preview tab.

@@ -35,7 +35,7 @@ Follow these steps to configure and activate the component:
 Sample configurations
 ----------------------
 
-To activate the PostgreSQL receiver, add ``mongodbatlas`` to the ``receivers`` section of your
+To activate the PostgreSQL receiver, add ``postgresql`` to the ``receivers`` section of your
 configuration file, as shown in the following example:
 
 .. code:: yaml
@@ -47,7 +47,7 @@ configuration file, as shown in the following example:
        username: otel
        password: ${POSTGRESQL_PASSWORD}
        databases:
-         - otel
+         - <database_name>
        collection_interval: 10s
        tls:
          insecure: false

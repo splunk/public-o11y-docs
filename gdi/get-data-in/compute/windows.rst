@@ -12,16 +12,8 @@ The Splunk Distribution of OpenTelemetry Collector is a package that provides in
 Supported versions
 =====================
 
-The Collector supports the following Windows versions:
+.. include:: /_includes/requirements/collector-windows.rst
 
-* Windows Server 2012 64-bit
-* Windows Server 2016 64-bit
-* Windows Server 2019 64-bit
-* Windows Server 2022 64-bit
-* Windows 10 Home
-* Windows 10 Pro
-
-.. note:: PowerShell 3.0 or higher is required.
 
 Getting started
 ===================
@@ -44,9 +36,10 @@ Splunk Observability Cloud offers a guided setup to install the Collector:
 
 For advanced installation instructions, see :ref:`otel-install-windows`.
 
-Next steps
+Learn more
 =================
 
 - Configure the Collector. See :ref:`otel-configuration`.
 - Learn about the Collector commands. See :ref:`otel-commands`.
 - Troubleshoot Collector issues. See :ref:`otel-troubleshooting`.
+- For a list of host and application monitors, see :ref:`monitor-data-sources`.

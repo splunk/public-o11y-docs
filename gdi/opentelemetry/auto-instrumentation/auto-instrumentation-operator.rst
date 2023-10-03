@@ -54,6 +54,7 @@ The Operator requires certain TLS cerificates to work. If a certification manage
 
 .. code-block:: yaml
 
+
    # Check if cert-manager is already installed, don't deploy a second cert-manager.
    kubectl get pods -l app=cert-manager --all-namespaces
 
@@ -71,6 +72,7 @@ Resources include the Collector, the Operator, webhook, an instrumentation.
 Run the following to verify the resources are deployed correctly:
 
 .. code-block:: yaml
+
    
    kubectl  get pods -n monitoring
    # NAME                                                          READY

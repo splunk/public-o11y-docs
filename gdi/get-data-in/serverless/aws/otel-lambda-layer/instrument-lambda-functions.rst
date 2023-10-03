@@ -35,7 +35,7 @@ Follow these instructions to install the Splunk OpenTelemetry Lambda Layer:
 - :ref:`install-otel-lambda-layer`
 - :ref:`set-env-vars-otel-lambda`
 
-To instrument Go functions, also follow the steps in :ref:`go-serverless-instrumentation`.
+To instrument .NET functions, see :ref:`dotnet-serverless-instrumentation`.
 
 For Python functions using the Serverless Framework, see :ref:`serverless-framework-support-aws`.
 
@@ -44,17 +44,8 @@ For Python functions using the Serverless Framework, see :ref:`serverless-framew
 Check compatibility and requirements
 ----------------------------------------------
 
-The Splunk OpenTelemetry Lambda Layer supports the following runtimes in AWS Lambda:
+.. include:: /_includes/requirements/lambda.rst
 
-- Java 8 and 11
-- Python 3.8 and 3.9
-- Node.js 14 and higher
-- Ruby 2.7
-- Go 1.18
-
-The Lambda Layer requires 49 MB on-disk in standard x86_64 systems.
-
-For more information, search for Lambda runtimes and other system requirements on the AWS documentation website.
 
 .. _install-otel-lambda-layer:
 
@@ -153,9 +144,11 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
 
                   .. note:: The Graviton2 ARM64 architecture is not supported for Ruby Lambda functions.
 
-               .. tab:: Go
+               .. tab:: Golang
 
-                  Don't set the ``AWS_LAMBDA_EXEC_WRAPPER`` environment variable. See :ref:`go-serverless-instrumentation`.
+                  Don't set the ``AWS_LAMBDA_EXEC_WRAPPER`` environment variable.
+
+                  See :ref:`go-serverless-instrumentation`.
 
       * - ``OTEL_SERVICE_NAME``
         - The name of your service.
@@ -163,7 +156,7 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
       * - (Optional) ``OTEL_RESOURCE_ATTRIBUTES``
         - Define the name of the deployment environment of your function by setting this environment variable to ``deployment.environment=<name-of-your-environment>``.
 
-5. Click :guilabel:`Save` and check that the environment variables appear in the table.
+5. Select :guilabel:`Save` and check that the environment variables appear in the table.
 
 To configure the mode of metric ingest, see :ref:`metrics-configuration-lambda`.
 
@@ -172,9 +165,9 @@ To configure the mode of metric ingest, see :ref:`metrics-configuration-lambda`.
 .. _go-serverless-instrumentation:
 
 Instrument Go functions in AWS Lambda
--------------------------------------------
+---------------------------------------------------
 
-To instrument a Go function in AWS Lambda for Splunk APM, follow these additional steps:
+To instrument a Go function in AWS Lambda for Splunk APM, follow these steps:
 
 #. Run the following commands to install the ``otellambda`` and the Splunk OTel Go distribution:
 
@@ -182,8 +175,6 @@ To instrument a Go function in AWS Lambda for Splunk APM, follow these additiona
 
       go get -u go.opentelemetry.io/contrib/instrumentation/github.com/aws/aws-lambda-go/otellambda
       go get -u github.com/signalfx/splunk-otel-go/distro
-
-#. Set environment variable ``OTEL_EXPORTER_OTLP_ENDPOINT`` with the value ``http://localhost:4318`` and ``OTEL_EXPORTER_OTLP_TRACES_PROTOCOL`` with the value ``http/protobuf``.
 
 #. Create a wrapper for the OpenTelemetry instrumentation in your function's code. For example:
 
@@ -220,26 +211,19 @@ To instrument a Go function in AWS Lambda for Splunk APM, follow these additiona
 .. _serverless-framework-support-aws:
 
 Serverless Framework support
----------------------------------
+---------------------------------------------------
 
 Some features of the Serverless Framework might impact OpenTelemetry tracing of Python Lambda functions.
 
 Python libraries compression
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The ``zip`` feature of ``pythonRequirements`` allows packing and deploying Lambda dependencies as compressed files. To instrument packages compressed using the Serverless Framework, set the ``SPLUNK_LAMBDA_SLS_ZIP`` environment variable to ``true``. For more information, see https://github.com/serverless/serverless-python-requirements#dealing-with-lambdas-size-limitations on GitHub.
 
 Slim feature
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The Slim feature reduces the size of Lambda packages by removing some files, including ``dist-info`` folders. Some of the files removed by the Slim feature are required by the OpenTelemetry Python autoinstrumentation. Deactivate the ``slim`` option in your serverless.yml file or define custom ``slimPatterns``. For more information, see https://github.com/serverless/serverless-python-requirements#slim-package on GitHub.
-
-.. _check-otel-lambda-data:
-
-Check that data appears in Splunk Observability Cloud
-----------------------------------------------------------
-
-Each time the AWS Lambda function runs, trace and metric data appears in Splunk Observability Cloud. If no data appears, see :ref:`troubleshooting-lambda-layer`.
 
 .. _ec2-otel-collector-serverless:
 
@@ -252,3 +236,10 @@ To send spans directly to Splunk Observability Cloud from an AWS Lambda function
 
 - ``OTEL_EXPORTER_OTLP_TRACES_PROTOCOL`` with the value ``http/protobuf``
 - ``OTEL_EXPORTER_OTLP_TRACES_ENDPOINT`` with the value ``https://ingest.<realm>.signalfx.com/v2/trace/otlp``, substituting ``<realm>`` with the name of your organization's realm.
+
+.. _check-otel-lambda-data:
+
+Check that data appears in Splunk Observability Cloud
+=====================================================================
+
+Each time the AWS Lambda function runs, trace and metric data appears in Splunk Observability Cloud. If no data appears, see :ref:`troubleshooting-lambda-layer`.

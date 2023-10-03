@@ -4,13 +4,15 @@
 Scenario: Kai identifies performance bottlenecks with Splunk RUM for Browser
 ******************************************************************************
 
-The following scenario features Buttercup Industries, a fictitious e-commerce company.
+.. meta::
+  :description: An example scenario of how to use Splunk RUM for Browser to monitor and identify the metrics that contribute to website performance, and troubleshoot slow website load times. 
 
+The following scenario features Buttercup Industries, a fictitious e-commerce company.
 
 About this scenario
 ================================
 
-Kai is a site reliability engineer at Buttercup Industries e-commerce company. One of Kai’s main concerns is monitoring the performance of the Buttercup Industries website. When sites are sluggish, users get frustrated and are more likely to abandon a slow site in favor of a faster competitor. In this example, Kai uses Splunk RUM for Browser and Splunk Observability Cloud to identify performance bottlenecks and monitor Web Vitals so that they can troubleshoot customer facing issues on the Buttercup Industries website. 
+Kai is a site reliability engineer at Buttercup Industries e-commerce company. One of Kai's main concerns is monitoring the performance of the Buttercup Industries website. When sites are sluggish, users get frustrated and are more likely to abandon a slow site in favor of a faster competitor. In this example, Kai uses Splunk RUM for Browser and Splunk Observability Cloud to identify performance bottlenecks and monitor Web Vitals so that they can troubleshoot customer facing issues on the Buttercup Industries website. 
 
 Web vitals 
 ------------------------
@@ -47,11 +49,11 @@ To monitor the Web Vitals, Kai follows these steps:
         :width: 100%
         :alt: This image shows the application summary dashboard in Splunk RUM for Browser. 
 
-3. Kai clicks on the LCP metric to see more in Tag Spotlight.
+2. Kai clicks on the LCP metric to see more in Tag Spotlight.
 
     * Kai can also get to Tag Spotlight by clicking into any metric in the Overview page. In Tag Spotlight Kai can filter session aggregates by endpoint, pages, environments, operation, and more.
 
-4. In Tag Spotlight, Kai sees that the P99 loading time for the site is abnormally slow, 53.86s for Chrome users! 
+3. In Tag Spotlight, Kai sees that the P99 loading time for the site is abnormally slow, 53.86s for Chrome users! 
    
     * This image shows the Browser metric in Tag Spotlight. As the width of the bars in the chart indicate, Chrome has the most users.
 
