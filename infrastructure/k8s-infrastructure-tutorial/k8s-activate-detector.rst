@@ -1,7 +1,8 @@
 .. _activate-builtin-detector:
 
-Step 3: Activate a built-in detector to issue alerts
-==================================================================================
+*************************************************************
+Activate a built-in detector to issue alerts
+*************************************************************
 
 Now that you have data flowing into Splunk Observability Cloud and you can explore that data using navigators and dashboards, you can set up an alert that can help keep you informed about certain conditions in your data.
 
