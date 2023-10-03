@@ -1,11 +1,11 @@
 .. _collector-how-to:
 
 ****************************************************************
-Use the Collector
+Use the Collector: How to perform common tasks
 ****************************************************************
 
 .. meta::
-      :description: Learn how to perform common actions with the Collector-
+      :description: Learn how to perform common actions with the Collector.
 
 .. toctree::
     :maxdepth: 4
@@ -26,9 +26,11 @@ Learn how to carry out common tasks with the Splunk Distribution of OpenTelemetr
   * - Control data pre-ingest
     - :ref:`configure-remove`
   * - Collect logs	
-    - :ref:`fluentd-receiver`
+    - :ref:`filelog-receiver`
   * - Uniquely identify an instance	
     - :ref:`attributes-processor` 
+  * - Use tags or attributes
+    - :ref:`otel-tags`   
   * - Remove attributes
     - :ref:`attributes-processor` 
   * - Filter Kubernetes elements 
