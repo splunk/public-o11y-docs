@@ -40,11 +40,11 @@ The recommended formats for relative time inputs include:
    * - :strong:`Format`
      - :strong:`Description`
   
-   * - -XXm, -XXs
+   * - -XXm 
      - For example, -15m which represents the previous 15 minutes. You can also use seconds (s), hours (h), and days (d).
    
-   * - -XXm-XXm
-     - For example, -15m-8m. This allows you to specify that you want to see the data for the time range of 15 minutes ago to 8 minutes ago. Note: You can also select this time range as an absolute time.
+   * - -XXm to -XXm
+     - For example, -15m to -8m. This allows you to specify that you want to see the data for the time range of 15 minutes ago to 8 minutes ago. Note: You can also select this time range as an absolute time.
    
 
 The Time Range selector shows your most recently used custom time range under the heading "Recent".
