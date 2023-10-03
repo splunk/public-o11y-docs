@@ -114,7 +114,7 @@ Splunk Observability Cloud overages are based on usage measured over a month. Ov
 Suite offerings
 -----------------------------------------------
 
-Splunk Observability Cloud is also available in different suits, including Splunk Observability Cloud Enterprise Edition and Splunk Observability Cloud Commercial Edition. See :new-page:`Suites <https://www.splunk.com/en_us/legal/suitification-licensing.html>` on Splunk.com for more information.
+Splunk Observability Cloud is also available in different suites, including Splunk Observability Cloud Enterprise Edition and Splunk Observability Cloud Commercial Edition. See :new-page:`Suites <https://www.splunk.com/en_us/legal/suitification-licensing.html>` on Splunk.com for more information.
 
 .. _sd-subscription:
 
@@ -146,7 +146,7 @@ For additional information, see:
 Available regions or realms
 ===========================================================
 
-Splunk Observability Cloud is available in the following global regions. Each Cloud provider region is mapped to an Observability Cloud realm, which determines access URLs and endpoints.
+Splunk Observability Cloud is available in the following global regions. Each Cloud provider region is mapped to a Splunk Observability Cloud realm, which determines access URLs and endpoints.
 
 .. list-table::
    :header-rows: 1
@@ -171,7 +171,7 @@ Splunk Observability Cloud is available in the following global regions. Each Cl
 Available components per region or realm
 ----------------------------------------------------------
 
-The following components are available for each global region. Each Cloud provider region is mapped to an Observability Cloud realm, which determines access URLs and endpoints.
+The following components are available for each global region. Each Cloud provider region is mapped to a Splunk Observability Cloud realm, which determines access URLs and endpoints.
 
 .. list-table::
    :header-rows: 1
@@ -183,6 +183,14 @@ The following components are available for each global region. Each Cloud provid
      - :strong:`Google Cloud regions`
      - :strong:`Splunk Observability Cloud realm`
    * - Application Performance Monitoring (APM)
+     - US: Oregon (us-west-2), Virginia (us-east-1)
+       Europe: Dublin (eu-west-1)
+       Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
+     - US: Oregon (us-west-1)
+     - us0, us1, us2
+       eu0
+       au0, jp0
+   * - Infrastructure Monitoring (IM)
      - US: Oregon (us-west-2), Virginia (us-east-1)
        Europe: Dublin (eu-west-1)
        Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
@@ -206,7 +214,7 @@ The following components are available for each global region. Each Cloud provid
      - us0, us1, us2
        eu0
        au0
-   * - Synthetic Monitoring (Synthetics)
+   * - Synthetic Monitoring
      - US: Oregon (us-west-2),
        Europe: Dublin (eu-west-1)
      - 
@@ -259,7 +267,7 @@ Splunk has attained a number of compliance attestations and certifications from 
 
 - :strong:`SOC 2 Type II`: Splunk Observability Cloud has an annual SOC 2 Type 2 audit report issued. The SOC 2 audit assesses an organization's security, availability, process integrity, and confidentiality processes to provide assurance about the systems that a company uses to protect customers' data. If you require the SOC 2 Type 2 attestation to review, contact your Splunk sales representative to request it.
 
-- :strong:`Health Insurance Portability and Accountability Act (HIPAA)`: Splunk Observability Cloud enables covered entities and their business associates to comply with U.S. Health Insurance Portability and Accountability Act of (1996) and the HIPAA Security Rule and HITECH Breach Notification Requirements. These regulations establish a standard for the security of any entity that accesses, processes, transmits, or stores electronic protected health information (ePHI).
+- :strong:`Health Insurance Portability and Accountability Act (HIPAA)`: Splunk Observability Cloud enables covered entities and their business associates to comply with U.S. Health Insurance Portability and Accountability Act of 1996. This regulation establishes a standard for the security of any entity that accesses, processes, transmits, or stores protected health information (PHI).
 
 - :strong:`Cloud Security Alliance (CSA) Security, Trust, & Assurance Registry (STAR)`: Splunk Observability Cloud participates in the voluntary CSA STAR Level 1 Self Assessment to document compliance with CSA- published best practices. We submit our security and privacy self-assessments using the :new-page:`Cloud Controls Matrix <https://cloudsecurityalliance.org/research/cloud-controls-matrix/>` and :new-page:`GDPR Code of Conduct <https://cloudsecurityalliance.org/privacy/gdpr/code-of-conduct/>` based on the CSA Consensus Assessment Initiative Questionnaire (CAIQ).
 
@@ -308,6 +316,7 @@ You can configure authentication using Single-sign on (SSO) integrations impleme
 
 For additional information, see:
 
+- :ref:`authentication-intro`
 - :new-page:`Splunk Data Privacy & Security <https://www.splunk.com/en_us/about-splunk/splunk-data-security-and-privacy.html>`
 - :new-page:`Splunk Observability Cloud Security Addendum <https://www.splunk.com/en_us/legal/splunk-observability-security-addendum.html>`
 
@@ -316,7 +325,7 @@ For additional information, see:
 Service level agreements
 ===========================================================
 
-The :new-page:`Splunk Observability Cloud Service Level Schedule <https://www.splunk.com/en_us/legal/observability-service-level-schedule.html>` document describes the uptime SLA and exclusions. You may claim service credits in the event of SLA failures, as set forth in the current Splunk SLA schedule.
+The :new-page:`Splunk Observability Cloud Service Level Schedule <https://www.splunk.com/en_us/legal/observability-service-level-schedule.html>` document describes the uptime SLA and exclusions. You may claim service credits in the event of SLA failures, as set forth in the Splunk SLA schedule.
 
 
 Status page
@@ -343,7 +352,7 @@ See :ref:`supported-browsers` for more information.
 System limits per product
 ===========================================================
 
-Splunk Observability Cloud service limits are described in :ref:`per-product-limits`. Service limits may vary based on your Observability Cloud subscription. Some limits depend on a combination of configuration, system load, performance, and available resources. Unless noted, the service limit is identical for all regions.
+Splunk Observability Cloud service limits are described in :ref:`per-product-limits`. Service limits may vary based on your Splunk Observability Cloud subscription. Some limits depend on a combination of configuration, system load, performance, and available resources. Unless noted, the service limit is identical for all regions.
 
 Contact Splunk if your requirements are different or exceed what is recommended in :ref:`per-product-limits`.
 
@@ -371,4 +380,4 @@ You are responsible for creating and administering your users' accounts, the aut
 Unified identity
 ----------------------------------------------------
 
-When Splunk Cloud Platform customers purchase or start a trial for Splunk Observability Cloud, users can access both platforms using a single identity. Users can log into Splunk Observability Cloud with SSO using their Splunk Cloud Platform credentials. When you integrate your Splunk Cloud Platform and Splunk Observability Cloud instances and activate Unified Identity, administrators can set up all users in a central location, Splunk Cloud Platform, ensuring that the role-based access control (RBAC) is the same across products. See :ref:`unified-id-unified-identity` for more information.
+When Splunk Cloud Platform customers purchase or start a trial of Splunk Observability Cloud, users can access both platforms using a single identity. A user's role-based access to Splunk Cloud Platform indexes carries over to Splunk Observability Cloud. Administrators can set up all users in a central location, Splunk Cloud Platform. Users can log into Splunk Observability Cloud with SSO using their Splunk Cloud Platform credentials. See :ref:`unified-id-unified-identity` for more information.
