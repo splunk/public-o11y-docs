@@ -23,6 +23,8 @@ Splunk Observability Cloud helps you respond to outages and identify root causes
 
 The following sections describe the features, capabilities, limitations, and constraints of the Splunk Observability Cloud service and the responsibilities of Splunk to you as a SaaS provider. This document also notes your responsibilities as a subscriber to the service. Be sure to read the complete service description and the service terms and policies documents listed in the following sections. If you have questions after reading any of this material, contact your Splunk sales representative.
 
+.. note:: For the service description of Splunk Cloud Platform see :new-page:`Splunk Cloud Platform Service Details <https://docs.splunk.com/Documentation/SplunkCloud/latest/Service/SplunkCloudservice>`.
+
 
 .. _sd-terms-policies:
 

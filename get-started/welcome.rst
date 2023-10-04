@@ -27,9 +27,7 @@ The following diagram provides a high-level view of how each Observability Cloud
   :width: 70%
   :alt: This screenshot shows how Observability Cloud products serve the different layers and processes in an organization's environment.
 
-For information about how these products can be used together to address real-life scenarios, see :ref:`get-started-scenario`.
-
-To get started with Observability Cloud, see :ref:`get-started-o11y`.
+For information about how these products can be used together to address real-life scenarios, see :ref:`get-started-scenario`. To get started with Observability Cloud, see :ref:`get-started-o11y`.
 
 For information about Observability Cloud packaging and pricing, see :new-page:`Pricing - Observability <https://www.splunk.com/en_us/products/pricing/observability.html>`.
 
@@ -49,6 +47,7 @@ Start learning about how the following Observability Cloud products work to prov
 
 - :ref:`welcome-mobile`
 
+.. note:: For a list of benefits and service terms of Splunk Observability Cloud, see :ref:`o11y-service-description`.
 
 .. _welcome-gdi:
 
