@@ -51,12 +51,12 @@ To access the Organization Overview page, follow these steps:
 -  APM throttling: These charts highlight metrics that track throttling
    and limiting in your organization.
 
--  IMM entitlements: For IMM troubleshooting.
+-  IM entitlements: For IM troubleshooting.
 
--  IMM system limits: These charts identify metrics that track usage of
+-  IM system limits: These charts identify metrics that track usage of
    system limits in your organization.
 
--  IMM throttling: These charts highlight metrics that track throttling
+-  IM throttling: These charts highlight metrics that track throttling
    and limiting in your organization.
 
 -  Cloud integrations: These charts highlight metrics that track errors
