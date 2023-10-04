@@ -88,7 +88,7 @@ Be careful when choosing tag names: Splunk Observability Cloud only allows alpha
     <h3>Use Metric Streams to forward data to Splunk Observability Cloud<a name="aws-metricstreams" class="headerlink" href="#aws-metricstreams" title="Permalink to this headline">¶</a></h3>
   </embed>
 
-Rather than polling for data, Metric Streams continually stream Amazon CloudWatch metrics to Splunk Observability Cloud. You can activate this option in the UI wizard, or through the API.
+Rather than polling for data, Metric Streams continually stream Amazon CloudWatch metrics to Splunk Observability Cloud. You can activate this option through the API.
 
 Although they're more efficient than API polling, consider the constraints below.
 
