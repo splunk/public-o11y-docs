@@ -5,8 +5,7 @@ Scenarios for monitoring applications and services using Splunk Synthetics
 *********************************************************************************************************
 
 .. meta::
-    
-    :description: Learn about scenarios for Splunk Synthetic Monitoring.
+    :description: Fictional use case demonstrating examples of how to use Splunk Synthetic Monitoring for various use cases, such as monitoring performance of a user-facing application. 
 
 .. toctree::
 

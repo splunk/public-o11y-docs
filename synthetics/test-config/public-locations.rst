@@ -5,7 +5,7 @@ Public locations
 *****************
 
 .. meta::
-    :description: Learn about public locations in Splunk Synthetic Monitoring.
+    :description: Run synthetic tests from locations set by infrastructure and connectivity providers to simulate performance for users in that location.
 
 Public locations are global checkpoints from which you can run synthetic tests to simulate performance for users in that location. 
 

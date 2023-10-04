@@ -5,7 +5,7 @@ Browser test metrics
 **********************
 
 .. meta::
-    :description: Learn about metrics for Browser tests in Splunk Synthetic Monitoring.
+    :description: Reference and definitions of available metrics captured by browser tests in Splunk Synthetic Monitoring.
 
 Metrics in Splunk Synthetic Monitoring are numeric indicators of site performance that synthetic tests capture in each run of a test. 
 
