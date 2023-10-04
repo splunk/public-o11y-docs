@@ -22,7 +22,7 @@ Use the following sections to monitor the performance of your service.
 Overview
 ------------
 
-Use the following metrics in the :guilabel:`Overview` section to monitor the performance of your service.
+Use the following metrics in the :guilabel:`Overview` section to monitor the performance of your service. 
 
 ..  image:: /_images/apm/spans-traces/service-centric-view-overview.png
     :width: 95%
@@ -30,9 +30,9 @@ Use the following metrics in the :guilabel:`Overview` section to monitor the per
 
 * :strong:`Availability service-level objective (SLO)` - The availablity service-level objective (SLO) shows the percentage of time your service was available in the last 30 days. The chart shows successful and unsuccessful requests.
 * :strong:`Dependency map` - The dependency map shows the immediate upstream and downstream dependencies for the service you are viewing. 
-* :strong:`Request rate` - The request rate chart shows streaming request data for the service. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`Requests latency distribution` - The request latency distribution chart shows p50, p90, and p99 latency data for the service. The blue dot on the chart indicates the data is streaming, that is, you don't need to refresh to see new data.
-* :strong:`Error rate` - The error rate chart shows streaming error data for the service. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+* :strong:`Request rate` - The request rate chart shows streaming request data for the service. If you have detectors for the request rate configured for the service triggered alerts will display below the chart. Select the chart to view example traces. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+* :strong:`Requests latency distribution` - The request latency distribution chart shows p50, p90, and p99 latency data for the service. If you have detectors for the latency configured for the service triggered alerts will display below the chart. Select the chart to view example traces. The blue dot on the chart indicates the data is streaming, that is, you don't need to refresh to see new data.
+* :strong:`Error rate` - The error rate chart shows streaming error data for the service. If you have detectors for the error rate configured for the service triggered alerts will display below the chart. Select the chart to view example traces. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
 * :strong:`Dependency time` - [Needs description of data in chart]. 
 * :strong:`Top endpoints`- Top endpoints shows up to 5 endpoints for the service. Use the search field to search for specific endpoints. Use the sort drop-down list to change how endpoints are sorted. Select :guilabel:`Explore in APM` to navigate to Endpoint Performance.
 
@@ -43,7 +43,7 @@ Use the following metrics in the :guilabel:`Overview` section to monitor the per
 Logs
 ------------
 
-The :guilabel:`Logs` section shows unhandled, exception, traceback, and stacktrace logs. See :ref:`configure-service-view` for steps to modify the logs that are displayed. 
+Select :guilabel:`Configure Service View` to add a query for the logs you want to display for your service. See :ref:`configure-service-view` for steps.
 
 ..  image:: /_images/apm/spans-traces/service-centric-view-logs.png
     :width: 95%
