@@ -179,11 +179,11 @@ Logs instrumentations
    :header-rows: 1
 
    * - Library
+     - Supported versions
      - Status
      - Support level
-     - Supported versions
      - Instrumentation ID
-   * - Microsoft.Extensions.Logging 6.0.0 and higher |br| (Not supported on .NET Framework)
+   * - Microsoft.Extensions.Logging |br| (Not supported on .NET Framework)
      - 6.0.0 and higher
      - Experimental Beta
      - Community support

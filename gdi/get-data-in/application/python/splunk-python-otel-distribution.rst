@@ -16,7 +16,7 @@ Features of the Splunk Distribution of OpenTelemetry Python
 
 In addition to the features of the OpenTelemetry Instrumentation for Python, like bundled exporters and propagators, the agent provides additional custom features:
 
-- Sends trace and span data to Splunk Observability Cloud using the OTel Collector..
+- Sends traces and metrics to Splunk Observability Cloud using the OTel Collector.
 - Instrumentation for HTTP server frameworks that returns server trace information in HTTP responses. See :ref:`server-trace-information-python`.
 - Automatic injection of trace metadata into application logs. See :ref:`correlate-traces-with-logs-python`.
 
@@ -30,7 +30,7 @@ Defaults of the Splunk Distribution of OpenTelemetry Python
 The Splunk Distribution of OpenTelemetry Python has the following default settings for context propagation, exporters, and trace settings:
 
 - W3C tracecontext and W3C baggage context propagation is activated by default. You can also configure B3 propagation. See :ref:`trace-propagation-configuration-python`.
-- The OTLP gRPC exporter is configured by default to send spans to the local :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+- The OTLP gRPC exporter is configured by default to send spans and metrics to the local :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 - Unlimited defaults for trace configuration to support full-fidelity tracing. See :ref:`trace-configuration-python`.
 
 Support for previous versions
