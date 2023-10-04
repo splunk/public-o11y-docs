@@ -87,10 +87,6 @@ When you send data to Splunk Observability Cloud, it is ingested and stored for 
 
 You can monitor subscription usage for each product depending on the type of subscription. See :ref:`subscription-overview` for more information.
 
-.. _sd-suites:
-
-
-
 .. _sd-subscriptions:
 
 Subscription types, expansions, renewals, and terminations
@@ -112,6 +108,8 @@ Overages
 ----------------------------------------------
 
 Splunk Observability Cloud overages are based on usage measured over a month. Overages are incurred if the monthly usage is higher than your paid subscription. Splunk Observability Cloud provides transparent usage data with granular daily detailed reports on all monitored hosts, containers, and metrics. You can also turn on alerts or setup tokens to manage your usage. See :ref:`subscription-overview` for more information.
+
+.. _sd-suites:
 
 Suite offerings
 -----------------------------------------------
