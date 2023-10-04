@@ -6,23 +6,23 @@
 
     Preview features described in this document are provided by Splunk to you "as is" without any warranties, maintenance and support, or service-level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it at any time. These documents are not yet publicly available and we ask that you keep such information confidential. Use of preview features is subject to the :new-page:`Splunk Pre-Release Agreement for Hosted Services <https://www.splunk.com/en_us/legal/pre-release-agreement-for-hosted-services.html>`.
     
-Use service-centric views for a complete view of your service performance 
+Use service-centric views for a complete view of your service health 
 *****************************************************************************
 
 .. meta::
-   :description: Learn how to use service-centric views in Splunk APM for a complete view of your service performance.
+   :description: Learn how to use service-centric views in Splunk APM for a complete view of your service health.
 
 Service owners can use the service-centric view in Splunk APM to get a complete view of their service health in a single pane of glass. The service-centric view includes availability, dependencies, request, error, and duration (RED) metrics, top endpoints, logs, runtime metrics, and infrastructure metrics for a selected service. To access service-centric views, select a service from the APM landing page.
 
-Use the service metrics to monitor the performance of your service
+Use the service metrics to monitor the health of your service
 =====================================================================
 
-Use the following sections to monitor the performance of your service.
+Use the following sections to monitor the health of your service.
 
 Overview
 ------------
 
-Use the following metrics in the :guilabel:`Overview` section to monitor the performance of your service. 
+Use the following metrics in the :guilabel:`Overview` section to monitor the health of your service. 
 
 ..  image:: /_images/apm/spans-traces/service-centric-view-overview.png
     :width: 95%
@@ -30,10 +30,10 @@ Use the following metrics in the :guilabel:`Overview` section to monitor the per
 
 * :strong:`Availability service-level objective (SLO)` - The availablity service-level objective (SLO) shows the percentage of time your service was available in the last 30 days. The chart shows successful and unsuccessful requests.
 * :strong:`Dependency map` - The dependency map shows the immediate upstream and downstream dependencies for the service you are viewing. 
-* :strong:`Request rate` - The request rate chart shows streaming request data for the service. If you have detectors for the request rate configured for the service triggered alerts will display below the chart. Select the chart to view example traces. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`Requests latency distribution` - The request latency distribution chart shows p50, p90, and p99 latency data for the service. If you have detectors for the latency configured for the service triggered alerts will display below the chart. Select the chart to view example traces. The blue dot on the chart indicates the data is streaming, that is, you don't need to refresh to see new data.
-* :strong:`Error rate` - The error rate chart shows streaming error data for the service. If you have detectors for the error rate configured for the service triggered alerts will display below the chart. Select the chart to view example traces. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`Dependency time` - The dependency time chart shows the latency for each of the downstream systems categorized as follows:
+* :strong:`Request rate` - The request rate chart shows streaming request data for the service. If you have detectors for the service request rate configured, triggered alerts display below the chart. Select the chart to view example traces. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+* :strong:`Requests latency distribution` - The request latency distribution chart shows p50, p90, and p99 latency data for the service. If you have detectors for the service latency configured, triggered alerts display below the chart. Select the chart to view example traces. The blue dot on the chart indicates the data is streaming, that is, you don't need to refresh to see new data.
+* :strong:`Error rate` - The error rate chart shows streaming error data for the service. If you have detectors for the service error rate configured, triggered alerts display below the chart. Select the chart to view example traces. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+* :strong:`Dependency time` - The dependency time chart shows the latency for each of the downstream systems. Select the chart to see details about each system category. Systems are categorized as follows:
    *  Internal - instrumented services
    *  External - uninstrumented, inferrred services
    *  Databases
@@ -106,7 +106,7 @@ Configure the service view
 
 Select :guilabel:`Configure Service View` to modify the query for the logs you want to display for your service. 
 
-1. In the :guilabel:`Lob Observer Connection` drop-down list, select the integration ID for the Log Observer Connect connection. To find your Lob Observer integration ID go to :guilabel:`Settings` then :guilabel:`Log Observer Connect`. Find the connection you want to pull logs from and :guilabel:`Update Connection` from the more menu (|more|). The integrationID displays in the URL. 
+1. In the :guilabel:`Lob Observer Connection` drop-down list, select the integration ID for the Log Observer Connect connection. To find your Lob Observer integration ID go to :guilabel:`Settings` then :guilabel:`Log Observer Connect`. Find the connection you want to pull logs from and select :guilabel:`Update Connection` from the more menu (|more|). The integrationID displays in the URL. 
 2. Enter the SPL for the logs you want to display in the :guilabel:`SPL Query` field. For example, the following SPL queries for unhandled, exception, stacktrace or error logs:
 
 .. code-block:: 
