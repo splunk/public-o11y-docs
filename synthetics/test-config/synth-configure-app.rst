@@ -5,7 +5,7 @@ Configure your site to accommodate synthetic tests
 *******************************************************************************
 
 .. meta::
-    :description: Learn how to adjust your application settings to accommodate traffic from Splunk Synthetic Monitoring.
+    :description: Information about the settings you need to configure for your application or site in order to receive traffic from Splunk Synthetic Monitoring.
 
 There are a couple of configurations you might need to set up for your application or webpage to receive traffic from Splunk Synthetic Monitoring.
 

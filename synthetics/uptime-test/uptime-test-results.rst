@@ -5,7 +5,7 @@ Interpret Uptime test results
 ******************************************
 
 .. meta::
-    :description: Learn about Uptime test results in Splunk Synthetic Monitoring.
+    :description: Understand the metrics captured by uptime tests in Splunk Synthetic Monitoring and learn how to understand results of an uptime test.
 
 Every run of an Uptime test in Splunk Synthetic Monitoring produces a set of results that help you understand the performance of your application in real time. 
 

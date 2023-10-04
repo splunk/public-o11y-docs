@@ -5,7 +5,7 @@ Built-in variables to use in tests
 ***********************************
 
 .. meta::
-    :description: Learn about preset variables in Splunk Synthetic Monitoring.
+    :description: Reference of variables you can use in Splunk Synthetic Monitoring, with examples of how to use each variable. 
 
 Splunk Synthetic Monitoring provides built-in variables for use in your synthetic tests. Use the variable name to reference a variable in a test during setup. 
 
