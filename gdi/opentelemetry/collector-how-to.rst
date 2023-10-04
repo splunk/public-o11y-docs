@@ -25,6 +25,8 @@ Learn how to carry out common tasks with the Splunk Distribution of OpenTelemetr
     - See...
   * - Control data pre-ingest
     - :ref:`configure-remove`
+  * - Obfuscate sensitive data
+    - :ref:`sensitive-data-controls`  
   * - Collect logs	
     - :ref:`filelog-receiver`
   * - Uniquely identify an instance	
@@ -41,6 +43,8 @@ Learn how to carry out common tasks with the Splunk Distribution of OpenTelemetr
     - :ref:`receiver-creator-receiver`
   * - Look for support for an environment	
     - :ref:`requirements`
+  * - Collector deployment options, such as Amazon Fargate, Ansible, Chef, PCF, or Puppet
+    - :ref:`otel_deployments`   
   * - Look for changes between versions	
     - * :new-page:`Main changelog for the Splunk distribution of the Collector <https://github.com/signalfx/splunk-otel-collector/blob/main/CHANGELOG.md>` 
       * :new-page:`Changelog for the Helm chart <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/CHANGELOG.md>` 
