@@ -14,7 +14,7 @@ Use the Collector: How to perform common tasks
 
     Remove data pre-ingest <configure-remove.rst>
 
-Learn how to carry out common tasks with the Splunk Distribution of OpenTelemetry Collector.
+Browse the table below to learn how to carry out common tasks with the Splunk Distribution of OpenTelemetry Collector.
 
 .. list-table::
   :width: 100%
@@ -27,14 +27,16 @@ Learn how to carry out common tasks with the Splunk Distribution of OpenTelemetr
     - :ref:`configure-remove`
   * - Obfuscate sensitive data
     - :ref:`sensitive-data-controls`  
-  * - Collect logs	
-    - :ref:`filelog-receiver`
   * - Uniquely identify an instance	
     - :ref:`attributes-processor` 
   * - Use tags or attributes
     - :ref:`otel-tags`   
   * - Remove attributes
     - :ref:`attributes-processor` 
+  * - Collect Prometheus metrics	
+    - :ref:`prometheus-receiver`     
+  * - Collect logs	
+    - :ref:`filelog-receiver`
   * - Filter Kubernetes elements 
     - :ref:`filter-processor-kubernetes` 
   * - Deactivate Kubernetes metrics
