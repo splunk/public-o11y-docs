@@ -60,9 +60,10 @@ Your system response looks something like this:
   "type" : "AWSCloudWatch"
   }
 
-In the system response, note the following:
+In the system response, note the following fields:
 
-- ``id`` field is the id of the integration you just created. ``externalId`` and ``accountId`` will be used when you create IAM role later in AWS console.
+- The ``id`` field is the id of the integration you just created. 
+- ``externalId`` and ``accountId`` will be used when you create an IAM (Identity and Access Management) role in the AWS console later on.
 - The ``importCloudWatch`` value is set to ``false`` because CloudWatch Metrics collection has not been configured.
 
 .. _aws-api-create-policy-role:
@@ -70,7 +71,7 @@ In the system response, note the following:
 Create an AWS policy and IAM role
 ---------------------------------------------------------------------
 
-To create an AWS policy and an AWS IAM (Identity and Access Management) role with a unique Amazon Resource Name (ARN), go to the AWS console and follow the instructions in :ref:`aws-authentication`. Use the ``externalId`` and ``accountId`` values generated in the previous step.
+To create an AWS policy and an AWS IAM role with a unique Amazon Resource Name (ARN), go to the AWS console and follow the instructions in :ref:`aws-authentication`. Use the ``externalId`` and ``accountId`` values generated in the previous step.
 
 .. _review-aws-iam-policy:
 
