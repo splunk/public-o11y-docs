@@ -12,7 +12,7 @@ Use service-centric views for a complete view of your service performance
 .. meta::
    :description: Learn how to use service-centric views in Splunk APM for a complete view of your service performance.
 
-Service owners can use the service-centric view in Splunk APM to get a complete view of their service performance in one view. The service-centric view includes availability, dependencies, request, error, and duration (RED) metrics, top endpoints, logs, runtime metrics, and infrastructure metrics for a selected service. To access service-centric views, select a service from the APM landing page.
+Service owners can use the service-centric view in Splunk APM to get a complete view of their service health in a single pane of glass. The service-centric view includes availability, dependencies, request, error, and duration (RED) metrics, top endpoints, logs, runtime metrics, and infrastructure metrics for a selected service. To access service-centric views, select a service from the APM landing page.
 
 Use the service metrics to monitor the performance of your service
 =====================================================================
@@ -33,7 +33,11 @@ Use the following metrics in the :guilabel:`Overview` section to monitor the per
 * :strong:`Request rate` - The request rate chart shows streaming request data for the service. If you have detectors for the request rate configured for the service triggered alerts will display below the chart. Select the chart to view example traces. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
 * :strong:`Requests latency distribution` - The request latency distribution chart shows p50, p90, and p99 latency data for the service. If you have detectors for the latency configured for the service triggered alerts will display below the chart. Select the chart to view example traces. The blue dot on the chart indicates the data is streaming, that is, you don't need to refresh to see new data.
 * :strong:`Error rate` - The error rate chart shows streaming error data for the service. If you have detectors for the error rate configured for the service triggered alerts will display below the chart. Select the chart to view example traces. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`Dependency time` - [Needs description of data in chart]. 
+* :strong:`Dependency time` - The dependency time chart shows the latency for each of the downstream systems categorized as follows:
+   *  Internal - instrumented services
+   *  External - uninstrumented, inferrred services
+   *  Databases
+   *  Queues
 * :strong:`Top endpoints`- Top endpoints shows up to 5 endpoints for the service. Use the search field to search for specific endpoints. Use the sort drop-down list to change how endpoints are sorted. Select :guilabel:`Explore in APM` to navigate to Endpoint Performance.
 
 ..  image:: /_images/apm/spans-traces/service-centric-view-endpoints.png
@@ -52,25 +56,29 @@ Select :guilabel:`Configure Service View` to add a query for the logs you want t
 Runtime
 -------------
 
-* :strong:`Memory usage` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`Allocation rate` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`# Class loading` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`GC activity` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`GC overhead (%)` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`# Thread count` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`GC overhead (%)` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`# Thread count` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`# Thread pools` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+The following runtime metrics are available:
+
+* :strong:`Memory usage`
+* :strong:`Allocation rate`
+* :strong:`# Class loading`
+* :strong:`GC activity`
+* :strong:`GC overhead (%)`
+* :strong:`# Thread count`
+* :strong:`GC overhead (%)`
+* :strong:`# Thread count`
+* :strong:`# Thread pools`
 
 Infrastructure
 ----------------
 
-* :strong:`Host CPU usage` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`Host memory usage` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`Host disk usage` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`Host network usage` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`Pod CPU usage` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`Pod network utilization (bytes/sec)` - [Needs description of data in chart]. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+The following infrastructure metrics are available:
+
+* :strong:`Host CPU usage`
+* :strong:`Host memory usage`
+* :strong:`Host disk usage`
+* :strong:`Host network usage`
+* :strong:`Pod CPU usage`
+* :strong:`Pod network utilization (bytes/sec)`
 
 ..  image:: /_images/apm/spans-traces/service-centric-view-infra-metrics.png
     :width: 95%
@@ -99,10 +107,18 @@ Configure the service view
 Select :guilabel:`Configure Service View` to modify the query for the logs you want to display for your service. 
 
 1. In the :guilabel:`Lob Observer Connection` drop-down list, select the integration ID for the Log Observer Connect connection. To find your Lob Observer integration ID go to :guilabel:`Settings` then :guilabel:`Log Observer Connect`. Find the connection you want to pull logs from and :guilabel:`Update Connection` from the more menu (|more|). The integrationID displays in the URL. 
-2. Enter the SPL for the logs you want to display in the :guilabel:`SPL Query` field.  
+2. Enter the SPL for the logs you want to display in the :guilabel:`SPL Query` field. For example, the following SPL queries for unhandled, exception, stacktrace or error logs:
+
+.. code-block:: 
+
+    linecount>3 (unhandled OR exception OR traceback OR stacktrace OR error)
+   | rex field=_raw "^[\d-]+\s[\d:]+\s(?<method>\w+)\s(?<severity>\w+)\s(?<error_message>[^\n]+)"
+   | timechart span=5m limit=5 count by error_message
+
 3. Select :guilabel:`Save Changes`.
 
 You can configure a logs query for each unique service and environment combination. 
+
 
 
 
