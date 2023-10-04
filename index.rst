@@ -27,7 +27,7 @@ Collection of scenarios for Splunk Observability Cloud :ref:`scenario-landing`
 
 .. rst-class:: newcard
 
-:strong:`Get started`
+:strong:`Architecture`
 Architecture of Splunk Observability Cloud :ref:`architecture`
 
 
