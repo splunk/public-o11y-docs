@@ -61,6 +61,7 @@ Tokens and APIs
 - RUM or INGEST tokens can't be assigned a role.
 
 APIs honor capabilities based on the role defined to their token. This is important to have strict role-based security control both from the front end and the backend.
+
 * APIs using Session Token - Session Tokens inherit individual user's role capabilities.
 * APIs using Org Tokens - Similar to users and teams, even org tokens can be assigned a predefined role and inherit those capabilities. For example, if you are taking system backups on a regular basis, you can use read-only org token APIs to take those backups without worrying about accidental changes with APIs that have full capabilities. 
 
