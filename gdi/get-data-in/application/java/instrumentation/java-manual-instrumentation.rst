@@ -5,7 +5,7 @@ Manually instrument Java applications for Splunk Observability Cloud
 ********************************************************************
 
 .. meta:: 
-   :description: Manually instrument your Java application when you need to add custom attributes to spans or want to manually generate spans and metrics. Keep reading to learn how to manually instrument your Java application for Splunk Observability Cloud. 
+   :description: Manually instrument your Java application when you need to add custom attributes to spans or want to manually generate spans and metrics. Keep reading to learn how to manually instrument your Java application for Splunk Observability Cloud.
 
 Instrumenting applications automatically using the agent of the Splunk Distribution of OpenTelemetry Java covers most needs. Manually instrumenting your application is only necessary when, for example, you need to add custom attributes to spans or need to manually generate spans and metrics.
 
