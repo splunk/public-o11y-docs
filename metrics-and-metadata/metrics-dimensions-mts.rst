@@ -157,7 +157,7 @@ To set global attributes in RUM, see:
 When to use each metadata type in Infrastructure
 ================================================================================
 
-The following table shows the main differences between the types of IMM metadata:
+The following table shows the main differences between the types of IM metadata:
 
 .. list-table::
   :header-rows: 1
@@ -214,7 +214,7 @@ Use custom properties in the following situations:
 
       **Example:** You collect a metric called ``service.errors`` to know when your customers are running into issues with your services. The MTS for this metric are already uniquely identifiable by the customer and service dimensions. You want to attach the escalation contacts for each service for every customer to your metrics. In this case, you assign the escalation contacts as custom properties to the specific service dimension or customer dimensions. As your team grows and goes through reorganization, you want to be able to change this metadata. You also don't need the escalation contacts as dimensions as the customer and service dimensions already yield separate MTS.
 
-Use IMM tags
+Use IM tags
 ----------------------------------------
 
 Use tags when there is a one-to-many relationship between the tag and the objects you are assigning it to. 
