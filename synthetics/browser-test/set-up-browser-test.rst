@@ -6,7 +6,7 @@ Set up a Browser test
 **************************************
 
 .. meta::
-    :description: Learn how to set up a Browser test in Splunk Synthetic Monitoring.
+    :description: Steps to set up a browser test to track the performance of specific site resources, or a multi-step user flow, in Splunk Synthetic Monitoring.
 
 
 Use a Browser test to monitor the user experience for a single page or a multi-step user flow by running a synthetic test of the URLs you provide. Use this type of test to monitor conversion paths or any path that requires multiple steps or runs JavaScript. For an example, see :ref:`browser-test-scenario`.

@@ -5,7 +5,7 @@ Splunk RUM metrics integration
 ********************************************************************************
 
 .. meta::
-    :description: Learn how to integrate Splunk RUM with Splunk Synthetic Monitoring.
+    :description: Measure Web Vital metrics against your browser test results and compare test latency in Splunk Synthetic Monitoring by integrating with Splunk RUM. 
 
 
 Splunk Synthetic Monitoring automatically collects Web Vitals for Browser tests. If you also want to measure Web Vital metrics against your run results, then integrate with Splunk RUM. Web vitals capture key metrics that affect user experience and assess the overall performance of your site. Many businesses rely on search engines for users to discover their sites. Google uses Web Vitals to determine page ranking. 
