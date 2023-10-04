@@ -13,20 +13,37 @@ Splunk Synthetic Monitoring partners with infrastructure and connectivity provid
 
 The following table provides a full list of locations, available in Splunk Synthetic Monitoring, along with their DNS, region code, and IP address. You can use this information to exclude locations from your site analytics or add them to your browser's allow list.
 
-US1
+AU0
 ============
 .. csv-table::
-   :file: us1-public-locations.csv
+   :file: au0-public-locations.csv
    :widths: 10, 10, 10, 10, 20
    :header-rows: 1
 
 EU0
 ============
 .. csv-table::
-   :file: eu-public-locations.csv
+   :file: eu0-public-locations.csv
    :widths: 10, 10, 10, 10, 20
    :header-rows: 1
 
+JP0
+============
+.. csv-table::
+   :file: jp0-public-locations.csv
+   :widths: 10, 10, 10, 10, 20
+   :header-rows: 1
 
+US0
+============
+.. csv-table::
+   :file: us0-public-locations.csv
+   :widths: 10, 10, 10, 10, 20
+   :header-rows: 1
 
-
+US1
+============
+.. csv-table::
+   :file: us1-public-locations.csv
+   :widths: 10, 10, 10, 10, 20
+   :header-rows: 1
