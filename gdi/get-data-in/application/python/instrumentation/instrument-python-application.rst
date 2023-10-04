@@ -19,7 +19,7 @@ To generate all the basic installation commands for your environment and applica
 #. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`Python guided setup <https://login.signalfx.com/#/gdi/scripted/python-tracing/step-1?category=product-apm&gdiState=%7B"integrationId":"python-tracing"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the navigation menu, select :menuselection:`Data Management`. 
+   #. In the navigation menu, select :menuselection:`Data Management`.
 
    #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 
@@ -28,6 +28,7 @@ To generate all the basic installation commands for your environment and applica
    #. Select the :guilabel:`APM` product.
 
    #. Select the :guilabel:`Python` tile to open the Python guided setup.
+
 
 Install the Splunk Distribution of OpenTelemetry Python manually
 ==================================================================
@@ -117,6 +118,8 @@ Follow these steps to automatically instrument your application using the Python
 #. (Optional) Perform these additional steps if you're using the Django framework:
 
    - :ref:`django-instrumentation`
+
+Application metrics are collected by default. See :ref:`python-otel-metrics` for more information.
 
 If no data appears in APM, see :ref:`common-python-troubleshooting`.
 
