@@ -47,7 +47,7 @@ Follow the steps below to create an HEC ingest token in the Splunk platform:
 
 11. Copy the token value that Splunk Web displays and paste it in the :guilabel:`HEC Ingest Token` field. You must use it in the next section.
 
-12. (Optional) If you want to see the progress of the new token’s deployment to your Splunk platform instance, select :guilabel:`Track deployment progress` on the Splunk platform token settings page. When you see a status of "Done", you can then use the token to send your Log Observer data.
+12. (Optional) If you want to see the progress of the new token's deployment to your Splunk platform instance, select :guilabel:`Track deployment progress` on the Splunk platform token settings page. When you see a status of "Done", you can then use the token to send your Log Observer data.
 
 To learn more about HEC Ingest tokens for Splunk Cloud or Splunk Enterprise, see :new-page:`Set up and use HTTP Event Collector in Splunk Web <https://docs.splunk.com/Documentation/Splunk/9.1.0/Data/UsetheHTTPEventCollector>`.
 

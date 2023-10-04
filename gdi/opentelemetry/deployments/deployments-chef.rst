@@ -48,6 +48,7 @@ To install the Collector, include the ``splunk_otel_collector::default`` recipe 
 
 .. code-block:: yaml
 
+
     {
         "splunk-otel-collector": {
             "splunk_access_token": "<SPLUNK_ACCESS_TOKEN>",

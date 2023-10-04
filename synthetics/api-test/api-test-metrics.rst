@@ -7,7 +7,7 @@ API test metrics
 .. meta::
     :description: Reference and definitions of available metrics captured by API tests in Splunk Synthetic Monitoring. 
 
-API Tests capture a set of key metrics that offer insight into your API’s performance at a glance.
+API Tests capture a set of key metrics that offer insight into your API's performance at a glance.
 
 * :ref:`request-level-metrics-api`
 * :ref:`run-level-metrics-api`

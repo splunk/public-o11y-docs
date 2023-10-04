@@ -97,6 +97,7 @@ Use extension Amazon Elastic Container Service Observer (``ecs_observer``) in yo
 
 .. code-block:: yaml
 
+
    ecs:List*
    ecs:Describe*
 
@@ -105,6 +106,7 @@ The following custom configuration examples show the ``ecs_observer`` configured
 The results are written to ``/etc/ecs_sd_targets.yaml``. The ``prometheus`` receiver is configured to read targets from the results file. The values for ``access_token`` and ``realm`` are read from the ``SPLUNK_ACCESS_TOKEN`` and ``SPLUNK_REALM`` environment variables , which must be specified in your container definition.
 
 .. code-block:: yaml
+
 
    extensions:
      ecs_observer:

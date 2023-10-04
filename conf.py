@@ -19,7 +19,6 @@ extensions = [
     'newpage',
     'github',
     'optimizer',
-    'myst_parser',
     'sphinx_tabs.tabs',
     'olly_on_git_hub',
     'sphinxcontrib.images',
@@ -86,7 +85,7 @@ sphinx_tabs_disable_tab_closing = True
 
 # Not found extension settings
 notfound_template = '404.html'
-notfound_urls_prefix = '/Observability/en/'
+notfound_urls_prefix = '/observability/en/'
 
 # Set myst_parser to automatically generate labels for h1, h2, and h3 headings
 myst_heading_anchors = 3

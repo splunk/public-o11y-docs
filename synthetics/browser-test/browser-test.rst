@@ -16,7 +16,7 @@ Use a Browser test to test a webpage
 
 A Browser test is a simulated run of a workflow or set of requests that make up the user experience on a single page or transactional user flow. You can run a Browser test from any device and from a number of locations around the world. 
 
-You can configure tests on a schedule so you're continually monitoring your site’s performance in the background. You can also set up detectors to alert your teams of test failures and errors. 
+You can configure tests on a schedule so you're continually monitoring your site's performance in the background. You can also set up detectors to alert your teams of test failures and errors. 
 
 .. raw:: html
 

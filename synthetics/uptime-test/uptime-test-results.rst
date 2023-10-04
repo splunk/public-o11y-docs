@@ -131,7 +131,7 @@ Integrate with Splunk RUM so that you can automatically measure Web Vital metric
 
 Uptime test metrics
 =================================
-Uptime tests capture a set of key metrics that offer insight into your webpage’s performance at a glance. The following table provides a list of these metrics: 
+Uptime tests capture a set of key metrics that offer insight into your webpage's performance at a glance. The following table provides a list of these metrics: 
 
 .. list-table::
    :header-rows: 1
