@@ -49,7 +49,7 @@ Check access tokens
 
 Access tokens are organization-level tokens that, by default, are valid for one year. For access tokens created prior to February 28, 2022, the expiration date remains 5 years from the creation date. You must use an org token to authenticate emitters that send data points to Splunk Observability Cloud. You can use an org token in long-running scripts that call the API. For more information, see :ref:`admin-org-tokens`.
 
-Next steps
+Learn more
 =================
 
 - Configure the Collector. See :ref:`otel-kubernetes-config`.
@@ -57,4 +57,5 @@ Next steps
 - Learn about the Collector commands. See :ref:`otel-commands`.
 - Troubleshoot Collector issues. See :ref:`otel-troubleshooting`.
 - Troubleshoot Kubernetes and container issues. See :ref:`tshoot-k8s-container-runtimes`.
+- For a list of host and application monitors, see :ref:`monitor-data-sources`.
 
