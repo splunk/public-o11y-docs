@@ -14,6 +14,7 @@ Welcome
 
 :icon-info:`.` :strong:`Welcome to Splunk Observability Cloud`
 Learn the basic elements of Splunk Observability Cloud and all it can do for you.
+
 .. rst-class:: newcard
 
 :strong:`Service description`
