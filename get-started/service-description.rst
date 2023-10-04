@@ -265,7 +265,7 @@ Compliance and certifications
 
 Splunk has attained a number of compliance attestations and certifications from industry-leading auditors as part of our commitment to adhere to industry standards worldwide and part of our efforts to safeguard customer data. The following compliance attestations/certifications are available:
 
-- :strong:`SOC 2 Type II`: Splunk Observability Cloud has an annual SOC 2 Type 2 audit report issued. The SOC 2 audit assesses an organization's security, availability, process integrity, and confidentiality processes to provide assurance about the systems that a company uses to protect customers' data. If you require the SOC 2 Type 2 attestation to review, contact your Splunk sales representative to request it.
+- :strong:`SOC 2 Type II`: Splunk Observability Cloud has an annual SOC 2 Type II audit report issued. The SOC 2 audit assesses an organization's security, availability, process integrity, and confidentiality processes to provide assurance about the systems that a company uses to protect customers' data. If you require the SOC 2 Type II attestation to review, contact your Splunk sales representative to request it.
 
 - :strong:`Health Insurance Portability and Accountability Act (HIPAA)`: Splunk Observability Cloud enables covered entities and their business associates to comply with U.S. Health Insurance Portability and Accountability Act of 1996. This regulation establishes a standard for the security of any entity that accesses, processes, transmits, or stores protected health information (PHI).
 
@@ -342,7 +342,9 @@ Supported browsers
 Splunk Observability Cloud works as expected when using the latest and next-to-latest official releases of the following browsers:
 
 - Chrome
+- Firefox
 - Safari
+- Edge
 
 See :ref:`supported-browsers` for more information.
 
@@ -380,4 +382,4 @@ You are responsible for creating and administering your users' accounts, the aut
 Unified identity
 ----------------------------------------------------
 
-When Splunk Cloud Platform customers purchase or start a trial of Splunk Observability Cloud, users can access both platforms using a single identity. A user's role-based access to Splunk Cloud Platform indexes carries over to Splunk Observability Cloud. Administrators can set up all users in a central location, Splunk Cloud Platform. Users can log into Splunk Observability Cloud with SSO using their Splunk Cloud Platform credentials. See :ref:`unified-id-unified-identity` for more information.
+When Splunk Cloud Platform customers purchase or start a trial of Splunk Observability Cloud, users can access both platforms using a single identity. A user's role-based access to Splunk Cloud Platform indexes carries over to Splunk Observability Cloud. Administrators can set up all users in a central location, Splunk Cloud Platform. Users can log into Splunk Observability Cloud with SSO using their Splunk Cloud Platform credentials. Users can examine logs from the Splunk Cloud Platform instance in Log Observer Connect upon provisioning with no additional setup. See :ref:`unified-id-unified-identity` for more information.
