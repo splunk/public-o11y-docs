@@ -11,6 +11,8 @@ A pipeline defines the path the ingested data follows in the Collector, starting
 
 Pipelines operate on three data types: logs, traces, and metrics. To learn more about data in Splunk Observability Cloud, see :ref:`data-model`.
 
+.. note:: See how to perform common actions and tasks with the Collector at :ref:`collector-how-to`.
+
 Define the pipeline
 =========================================
 
