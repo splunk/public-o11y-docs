@@ -158,13 +158,16 @@ Splunk Observability Cloud is available in the following global regions. Each Cl
      - :strong:`Google Cloud regions`
      - :strong:`Splunk Observability Cloud realm`
    * - Observability Cloud
-     - US: Oregon (us-west-2), Virginia (us-east-1)
-       Europe: Dublin (eu-west-1)
-       Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
-     - US: Oregon (us-west-1)
-     - us0, us1, us2
-       eu0
-       au0, jp0
+     - 
+        * US: Oregon (us-west-2), Virginia (us-east-1)
+        * Europe: Dublin (eu-west-1)
+        * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
+     - 
+       * US: Oregon (us-west-1)
+     - 
+        * us0, us1, us2
+        * eu0
+        * au0, jp0
 
 
 
@@ -183,43 +186,56 @@ The following components are available for each global region. Each Cloud provid
      - :strong:`Google Cloud regions`
      - :strong:`Splunk Observability Cloud realm`
    * - Application Performance Monitoring (APM)
-     - US: Oregon (us-west-2), Virginia (us-east-1)
-       Europe: Dublin (eu-west-1)
-       Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
-     - US: Oregon (us-west-1)
-     - us0, us1, us2
-       eu0
-       au0, jp0
+     - 
+        * US: Oregon (us-west-2), Virginia (us-east-1)
+        * Europe: Dublin (eu-west-1)
+        * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
+     - 
+       * US: Oregon (us-west-1)
+     - 
+       * us0, us1, us2
+       * eu0
+       * au0, jp0
    * - Infrastructure Monitoring (IM)
-     - US: Oregon (us-west-2), Virginia (us-east-1)
-       Europe: Dublin (eu-west-1)
-       Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
-     - US: Oregon (us-west-1)
-     - us0, us1, us2
-       eu0
-       au0, jp0
+     - 
+       * US: Oregon (us-west-2), Virginia (us-east-1)
+       * Europe: Dublin (eu-west-1)
+       * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
+     - 
+       * US: Oregon (us-west-1)
+     - 
+       * us0, us1, us2
+       * eu0
+       * au0, jp0
    * - Log Observer Connect
-     - US: Oregon (us-west-2), Virginia (us-east-1)
-       Europe: Dublin (eu-west-1)
-       Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
      - 
-     - us0, us1
-       eu0
-       au0, jp0
+       * US: Oregon (us-west-2), Virginia (us-east-1)
+       * Europe: Dublin (eu-west-1)
+       * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
+     - 
+     - 
+       * us0, us1
+       * eu0
+       * au0, jp0
    * - Real User Monitoring (RUM)
-     - US: Oregon (us-west-2), Virginia (us-east-1)
-       Europe: Dublin (eu-west-1)
-       Asia Pacific: Sydney (ap-southeast-2)
-     - US: Oregon (us-west-1)
-     - us0, us1, us2
-       eu0
-       au0
-   * - Synthetic Monitoring
-     - US: Oregon (us-west-2),
-       Europe: Dublin (eu-west-1)
      - 
-     - us0
-       eu0
+       * US: Oregon (us-west-2), Virginia (us-east-1)
+       * Europe: Dublin (eu-west-1)
+       * Asia Pacific: Sydney (ap-southeast-2)
+     - 
+       * US: Oregon (us-west-1)
+     -
+       * us0, us1, us2
+       * eu0
+       * au0
+   * - Synthetic Monitoring
+     - 
+       * US: Oregon (us-west-2),
+       * Europe: Dublin (eu-west-1)
+     - 
+     -
+       * us0
+       * eu0
 
 
 Realm to region equivalence

@@ -22,13 +22,13 @@ Benefits and service terms of Splunk Observability Cloud :ref:`o11y-service-desc
 
 .. rst-class:: newcard
 
-:strong:`Get started`
-Learn how to get started in five steps :ref:`get-started-o11y`
+:strong:`Scenarios`
+Collection of scenarios for Splunk Observability Cloud :ref:`scenario-landing`
 
 .. rst-class:: newcard
 
-:strong:`Scenarios`
-Collection of scenarios for Splunk Observability Cloud :ref:`scenario-landing`
+:strong:`Get started`
+Architecture of Splunk Observability Cloud :ref:`architecture`
 
 
 .. role:: icon-cloud-upload
