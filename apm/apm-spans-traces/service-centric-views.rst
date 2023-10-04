@@ -12,7 +12,7 @@ Use service-centric views for a complete view of your service performance
 .. meta::
    :description: Learn how to use service-centric views in Splunk APM for a complete view of your service performance.
 
-Service owners can use the service-centric view in Splunk APM to get a complete view of their service performance. To access service-centric views, select a service from the APM landing page.
+Service owners can use the service-centric view in Splunk APM to get a complete view of their service performance in one view. The service-centric view includes availability, dependencies, request, error, and duration (RED) metrics, top endpoints, logs, runtime metrics, and infrastructure metrics for a selected service. To access service-centric views, select a service from the APM landing page.
 
 Use the service metrics to monitor the performance of your service
 =====================================================================
