@@ -7,7 +7,7 @@ Zero Configuration Auto Instrumentation for Linux Node.js applications
 .. meta::
     :description: How to activate zero configuration automatic instrumentation for Linux Node.js applications, allowing you to collect and send traces to Splunk Application Performance Monitoring (APM) without altering your code.
 
-Zero Configuration Auto Instrumentation for Linux activates automatic instrumentation for Kubernetes Java applications. When you activate automatic instrumentation, you only have to restart any applications that are already running. 
+Zero Configuration Auto Instrumentation for Linux activates automatic instrumentation for Linux Node.js applications. When you activate automatic instrumentation, you only have to restart any applications that are already running. 
 
 .. _zero-config-js-linux-prereqs:
 
