@@ -9,6 +9,27 @@ Welcome
    :width: 97.3%
    :target: https://docs.splunk.com/Observability/get-started/o11y.html#nav-Get-started
 
+.. role:: icon-info
+.. rst-class:: newparawithicon
+
+:icon-info:`.` :strong:`Welcome to Splunk Observability Cloud`
+Learn the basic elements of Splunk Observability Cloud and all it can do for you.
+.. rst-class:: newcard
+
+:strong:`Service description`
+Benefits and service terms of Splunk Observability Cloud :ref:`o11y-service-description`
+
+.. rst-class:: newcard
+
+:strong:`Get started`
+Learn how to get started in five steps :ref:`get-started-o11y`
+
+.. rst-class:: newcard
+
+:strong:`Scenarios`
+Collection of scenarios for Splunk Observability Cloud :ref:`scenario-landing`
+
+
 .. role:: icon-cloud-upload
 .. rst-class:: newparawithicon
 
