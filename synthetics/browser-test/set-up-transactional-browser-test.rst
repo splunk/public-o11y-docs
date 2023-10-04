@@ -5,7 +5,7 @@ Add synthetic transactions to your Browser Test
 *********************************************************
 
 .. meta::
-    :description: Learn how to add steps or synthetic transactions to your Browser Test in Splunk Synthetic Monitoring.
+    :description: Customize your browser tests by adding a synthetic transaction that monitors a multi-step user flow in Splunk Synthetic Monitoring. For example, a checkout flow that requires various interactions on a webpage. 
 
 Use synthetic transactions in your Browser Tests to test multi-step user flows and transactions. 
 

@@ -5,8 +5,7 @@ Key concepts in Splunk Synthetic Monitoring
 ********************************************************
 
 .. meta::
-  :description: Learn key concepts in Splunk Synthetic Monitoring.
-  
+  :description: Definitions for key concepts in Splunk Synthetic Monitoring, such as synthetics, tests, metrics, and other terms.
   
 These key concepts help you get the most out of your experience with Splunk Synthetic Monitoring.
 
