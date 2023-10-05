@@ -28,8 +28,11 @@ The new roles provide more restricted access. This supports scenarios where addi
 Additionally, Splunk Observability Cloud role-based access control aligns with roles available in Splunk Cloud Platform, providing a consistent user and capability-based experience across Splunk Cloud Platform and Splunk Observability CLoud.
 
 
-Pre-defined roles
-======================
+.. raw:: html
+
+  <embed>
+    <h2>Pre-defined roles</h2>
+  </embed>
 
 Splunk Observability Cloud comes with the following roles predefined:
 
@@ -53,8 +56,11 @@ Splunk Observability Cloud comes with the following roles predefined:
 Splunk Observability Cloud tokens also honor the role-based access control framework. Since tokens can now be assigned to roles, APIs inherit capabilities from their token. For example, an API using a token which is created with read-only role will inherent read-only permissions. This can be used take system backups with a reduced risk of introducing changes.
 
 
-Tokens and APIs
-===================================
+.. raw:: html
+
+  <embed>
+    <h2>Tokens and API</h2>
+  </embed>
 
 - Session token APIs inherit the user's role capabilities.
 - Org tokens with API authorization scope can be assigned to predefined roles from the user interface.
@@ -67,8 +73,12 @@ APIs honor capabilities based on the role defined to their token. This is import
 
 .. _effect-multiple-roles:
 
-Multiple roles for a user or team
-===========================================
+
+.. raw:: html
+
+  <embed>
+    <h2>Multiple roles for a user or team</h2>
+  </embed>
 
 You can assign multiple roles to individual users. The user receives a combination of capabilities inherited from all of their roles. Additionally, if you revoke a role from a user the change takes effect immediately. The cache is invalidated and the user no longer has access to the capabilities associated with the role that was revoked.
 
