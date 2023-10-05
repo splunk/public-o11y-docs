@@ -113,9 +113,9 @@ Select :guilabel:`Configure Service View` to modify the query for the logs you w
 
 .. code-block:: 
 
-    linecount>3 (unhandled OR exception OR traceback OR stacktrace OR error)
-   | rex field=_raw "^[\d-]+\s[\d:]+\s(?<method>\w+)\s(?<severity>\w+)\s(?<error_message>[^\n]+)"
-   | timechart span=5m limit=5 count by error_message
+    linecount>3 (unhandled OR exception OR traceback OR stacktrace OR error) 
+    | rex field=_raw "^[\\d-]+\\s[\\d:]+\\s(?<method>\\w+)\\s(?<severity>\\w+)\\s(?<error_message>[^\\n]+)" 
+    | timechart span=1m limit=5 count() by error_message
 
 3. Select :guilabel:`Save Changes`.
 
