@@ -28,17 +28,17 @@ Use the following metrics in the :guilabel:`Overview` section to monitor the hea
     :width: 95%
     :alt: This screenshot shows the overview metrics for a service in the service-centric view. 
 
-* :strong:`Availability service-level objective (SLO)` - The availablity service-level objective (SLO) shows the percentage of time your service was available in the last 30 days. The chart shows successful and unsuccessful requests.
-* :strong:`Dependency map` - The dependency map shows the immediate upstream and downstream dependencies for the service you are viewing. 
-* :strong:`Request rate` - The request rate chart shows streaming request data for the service. If you have detectors for the service request rate configured, triggered alerts display below the chart. Select the chart to view example traces. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`Requests latency distribution` - The request latency distribution chart shows p50, p90, and p99 latency data for the service. If you have detectors for the service latency configured, triggered alerts display below the chart. Select the chart to view example traces. The blue dot on the chart indicates the data is streaming, that is, you don't need to refresh to see new data.
-* :strong:`Error rate` - The error rate chart shows streaming error data for the service. If you have detectors for the service error rate configured, triggered alerts display below the chart. Select the chart to view example traces. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* :strong:`Dependency time` - The dependency time chart shows the latency for each of the downstream systems. Select the chart to see details about each system category. Systems are categorized as follows:
+* Availability service-level objective (SLO) - The availablity service-level objective (SLO) shows the percentage of time your service was available in the last 30 days. The chart shows successful and unsuccessful requests.
+* Dependency map - The dependency map shows the immediate upstream and downstream dependencies for the service you are viewing. 
+* Request rate - The request rate chart shows streaming request data for the service. If you have detectors for the service request rate configured, triggered alerts display below the chart. Select the chart to view example traces. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+* Requests latency distribution - The request latency distribution chart shows p50, p90, and p99 latency data for the service. If you have detectors for the service latency configured, triggered alerts display below the chart. Select the chart to view example traces. The blue dot on the chart indicates the data is streaming, that is, you don't need to refresh to see new data.
+* Error rate - The error rate chart shows streaming error data for the service. If you have detectors for the service error rate configured, triggered alerts display below the chart. Select the chart to view example traces. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
+* Dependency time - The dependency time chart shows the latency for each of the downstream systems. Select the chart to see details about each system category. Systems are categorized as follows:
    *  Internal - instrumented services
    *  External - uninstrumented, inferrred services
    *  Databases
    *  Queues
-* :strong:`Top endpoints`- Top endpoints shows up to 5 endpoints for the service. Use the search field to search for specific endpoints. Use the sort drop-down list to change how endpoints are sorted. Select :guilabel:`Explore in APM` to navigate to Endpoint Performance.
+* Top endpoints- Top endpoints shows up to 5 endpoints for the service. Use the search field to search for specific endpoints. Use the sort drop-down list to change how endpoints are sorted. Select :guilabel:`Explore in APM` to navigate to Endpoint Performance.
 
 ..  image:: /_images/apm/spans-traces/service-centric-view-endpoints.png
     :width: 95%
@@ -58,27 +58,29 @@ Runtime
 
 The following runtime metrics are available:
 
-* :strong:`Memory usage`
-* :strong:`Allocation rate`
-* :strong:`# Class loading`
-* :strong:`GC activity`
-* :strong:`GC overhead (%)`
-* :strong:`# Thread count`
-* :strong:`GC overhead (%)`
-* :strong:`# Thread count`
-* :strong:`# Thread pools`
+* Memory usage
+* Allocation rate
+* # Class loading
+* GC activity
+* GC overhead (%)
+* # Thread count
+* GC overhead (%)
+* # Thread count
+* # Thread pools
 
 Infrastructure
 ----------------
 
 The following infrastructure metrics are available:
 
-* :strong:`Host CPU usage`
-* :strong:`Host memory usage`
-* :strong:`Host disk usage`
-* :strong:`Host network usage`
-* :strong:`Pod CPU usage`
-* :strong:`Pod network utilization (bytes/sec)`
+* Host CPU usage
+* Host memory usage
+* Host disk usage
+* Host network usage
+* Pod CPU usage
+* Pod network utilization (bytes/sec)
+* Pod disk usage
+* Pod network utilization (bytes/sec)
 
 ..  image:: /_images/apm/spans-traces/service-centric-view-infra-metrics.png
     :width: 95%
