@@ -12,8 +12,6 @@ Use the Collector: How to perform common tasks
     :titlesonly:
     :hidden:
 
-    Remove data pre-ingest <configure-remove.rst>
-
 Browse the table below to learn how to carry out common tasks with the Splunk Distribution of OpenTelemetry Collector.
 
 .. list-table::
