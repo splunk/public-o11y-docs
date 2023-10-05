@@ -71,7 +71,10 @@ APIs honor capabilities based on the role defined to their token. This is import
 * APIs using Session Token - Session Tokens inherit individual user's role capabilities.
 * APIs using Org Tokens - Similar to users and teams, even org tokens can be assigned a predefined role and inherit those capabilities. For example, if you are taking system backups on a regular basis, you can use read-only org token APIs to take those backups without worrying about accidental changes with APIs that have full capabilities. 
 
-.. _effect-multiple-roles:
+
+
+.. Multiple roles for a user or team
+.. =========================================
 
 
 .. raw:: html
