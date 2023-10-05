@@ -42,10 +42,6 @@ Kai troubleshoots with Synthetics and APM in Splunk Observability Cloud
 
 1. In the :guilabel:`Synthetics` view, Kai opens one of the failed tests then scrolls down to the :guilabel:`Recent run results` section and opens one of the results. Kai notices that Splunk tracks the front-end service of each element of the Buttercup Games website. Splunk also tracks the visual experience of the end-to-end customer journey so that Kai can replay it in a video capture to see what customers are seeing.
 
-   .. image:: /_images/splunkplatform/synthetics_test.png
-     :width: 100%
-     :alt: This screenshot shows the Synthetics view in Splunk Observability Cloud with a list of tests along with their statuses and a video replay capturing the user experience.
-
 2. Kai selects :guilabel:`Play` on the video capture in the upper right corner. The video capture shows that users are attempting to make purchases, but checkout fails. The application delivers no error or feedback to the user, making it an unacceptable customer experience. Kai closes the video replay.
 
 3. Kai selects the :guilabel:`APM` link next to the checkout element to open Splunk APM where they can see which procedure calls are slow, which are stalled, and which failed. Kai can use Splunk's full fidelity tracing to pivot to a reconstructed application map from the exact time of this issue or view a live service dependency map.
