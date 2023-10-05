@@ -106,7 +106,7 @@ Configure the service view
 
 Select :guilabel:`Configure Service View` to modify the query for the logs you want to display for your service. 
 
-1. In the :guilabel:`Lob Observer Connection` drop-down list, select the integration ID for the Log Observer Connect connection. To find your Lob Observer integration ID go to :guilabel:`Settings` then :guilabel:`Log Observer Connect`. Find the connection you want to pull logs from and select :guilabel:`Update Connection` from the more menu (|more|). The integrationID displays in the URL. 
+1. In the :guilabel:`Log Observer Connection` drop-down list, select the integration ID for the Log Observer Connect connection. To find your Log Observer integration ID go to :guilabel:`Settings` then :guilabel:`Log Observer Connect`. Find the connection you want to pull logs from and select :guilabel:`Update Connection` from the more menu (|more|). The integrationID displays in the URL. 
 2. Enter the SPL for the logs you want to display in the :guilabel:`SPL Query` field. For example, the following SPL queries for unhandled, exception, stacktrace or error logs:
 
 .. code-block:: 
