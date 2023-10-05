@@ -60,13 +60,13 @@ These are the Collector's internal metrics:
     - Total physical memory (resident set size)
 
   * - ``otelcol_process_runtime_total_alloc_bytes``
-    - Bytes of allocated heap objects (see 'go doc runtime.MemStats.HeapAlloc')
+    - Bytes of allocated heap objects 
 
   * - ``otelcol_process_runtime_total_sys_memory_bytes``
-    - Cumulative bytes allocated for heap objects (see 'go doc runtime.MemStats.TotalAlloc')
+    - Cumulative bytes allocated for heap objects 
 
   * - ``otelcol_process_runtime_total_sys_memory_bytes``
-    - Cumulative bytes allocated for heap objects (see 'go doc runtime.MemStats.TotalAlloc')
+    - Cumulative bytes allocated for heap objects 
 
   * - ``otelcol_process_uptime``
     - Uptime of the process
