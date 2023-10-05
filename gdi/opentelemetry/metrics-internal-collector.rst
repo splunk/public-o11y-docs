@@ -22,7 +22,6 @@ These are the Collector's internal metrics:
 
   * - ``otelcol_exporter_enqueue_failed_metric_points``
     - Number of metric points failed to be added to the sending queue
-    - 
 
   * - ``otelcol_exporter_enqueue_failed_spans``
     - Number of spans failed to be added to the sending queue
