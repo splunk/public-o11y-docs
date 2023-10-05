@@ -132,10 +132,10 @@ Configure your AWS PrivateLink VPC endpoints
 
 Follow these steps to create, use, and manage your AWS PrivateLink VPC endpoint:
 
-#. :ref:`aws-privatelink-step1`
-#. :ref:`aws-privatelink-step2`
-#. :ref:`aws-privatelink-step3`
-#. :ref:`aws-privatelink-step4`
+* :ref:`aws-privatelink-step1`
+* :ref:`aws-privatelink-step2`
+* :ref:`aws-privatelink-step3`
+* :ref:`aws-privatelink-step4`
 
 .. _aws-privatelink-step1:
 
@@ -182,9 +182,7 @@ Step 3: Create a VPC endpoint
 
 To create a VPC endpoint, follow these steps:
 
-1. Log in to the AWS Management Console, and open :guilabel:`Amazon VPC service` within the specific region where you intend to set up AWS PrivateLink.
-
-  If you have a VPC peering configuration, keep in mind the destination region of VPC peering.
+1. Log in to the AWS Management Console, and open :guilabel:`Amazon VPC service` within the specific region where you intend to set up AWS PrivateLink. If you have a VPC peering configuration, keep in mind the destination region of VPC peering.
 
 2. On the left navigation pane, select :guilabel:`Endpoints`.
 
@@ -202,13 +200,13 @@ To create a VPC endpoint, follow these steps:
 
   The following image shows the security options for AWS PrivateLink: 
 
-.. image:: /_images/gdi/aws-privatelink-secgroups2.png
-    :width: 80%
-    :alt: Specify security groups that control traffic.
+  .. image:: /_images/gdi/aws-privatelink-secgroups2.png
+      :width: 80%
+      :alt: Specify security groups that control traffic.
 
 9. Review the configuration details and select :guilabel:`Create Endpoint`.
 
-10.  Wait for Splunk Customer Support's confirmation before proceeding to :ref:`aws-privatelink-step4`. 
+10. Wait for Splunk Customer Support's confirmation before proceeding to :ref:`aws-privatelink-step4`. 
 
 .. _aws-privatelink-step4:
 
@@ -237,7 +235,6 @@ To delete an endpoint, follow these steps:
 #. Log in to the AWS Management Console and open the :guilabel:`Amazon VPC service`.
 #. On the left navigation pane, select :guilabel:`Endpoints`.
 #. Select the VPC endpoint you want to delete.
-
 #. Confirm the deletion when prompted.
 
 Advanced configuration: AWS PrivateLink with VPC peering 
