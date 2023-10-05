@@ -28,7 +28,7 @@ The following table lists the types of supported metrics and their default rollu
   * - :ref:`Cumulative counter metrics <cumulative-counters>`
     - Represent a running count of occurrences, and measure the change in the value of the metric from the previous data point.
     - Delta
-  * - :ref:`Explicit bucket histograms <histograms>`
+  * - :ref:`Histograms <histograms>`
     - Represent a distribution of measurements or metrics, with complete percentile data available. Data is distributed into equally sized intervals or "buckets".
     - Histogram
 
@@ -68,13 +68,11 @@ Number of successful jobs, number of logged-in users, and number of warnings are
 Splunk Observability Cloud applies the SignalFlow ``delta()`` function to data points for cumulative counter metrics. When you specify a ten second resolution for a line graph plot, and Splunk Observability Cloud is receiving data for the metric every second, each point on the line represents the change between the first data point received and
 the 10th data point received. As a result, you don't have to create custom SignalFlow to apply the ``delta()`` function, and the plot line represents variations.
 
-.. _histograms:
-
-Explicit bucket histograms
+Histograms
 =============================================================================
 
-Explicit bucket histograms record the distribution of metrics across time. For example, you can use histograms to track the number of milliseconds it took to respond to a request and see the percentage of requests that had a latency lower than a particular bucket boundary.
+Histograms can summarize data in ways that are difficult to reproduce with other metrics. Thanks to the buckets, the distribution of your continuous data over time is easier to explore, as you don't have to analyze the entire dataset to see where all the data points are. At the same time, histogram helps reduce usage of your subscription.
 
 Splunk Observability Cloud applies the SignalFlow ``histogram()`` function to data points for histogram metrics, with a default percentile value of 90. You can apply several other functions to histograms, like ``min``, ``max``, ``count``, ``sum``, ``percentile``, and ``cumulative_distribution_function``.
 
-For more information, see :ref:`explicit-bucket-histograms`.
+For more information, see :ref:`histograms`.
