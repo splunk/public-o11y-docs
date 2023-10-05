@@ -10,7 +10,7 @@ Collected metrics and dimensions for Kubernetes
 
 The following sections list the collected metrics when you use the default configuration for the Collector for Kubernetes in host monitoring (agent) mode.
 
-.. caution:: In the Collector, data is processed as configured in your pipelines. Therefore, metrics first imported by receivers might be dropped further into the pipeline by other components, such as the SignalFx exporter. Check the details in the tables below. 
+.. caution:: In the Collector, data is processed as configured in your pipelines. Therefore, metrics first imported by receivers might be dropped further into the pipeline by other components, such as the SignalFx exporter. Check the :strong:`Kept?` column in the tables below to see if the metric is kept (not excluded) after going through the pipelines. 
 
 Learn more about the Collector's configuration and data processing at:
 
@@ -125,7 +125,7 @@ Container level metrics and attributes after translation
     - Kept?
 
   * - ``container.cpu.utilization``
-    - Pod CPU utilization in centicores
+    - Container CPU utilization in centicores
     - :ref:`ootb-metrics-k8s-attributes`
     - **Yes**
 
