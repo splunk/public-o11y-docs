@@ -47,6 +47,9 @@
 .icon-wrench:before {
     content: "\e991";
   }
+  .icon-info:before {
+   content: "\e903";
+  }
   .icon-cog:before {
     content: "\e994";
   }
