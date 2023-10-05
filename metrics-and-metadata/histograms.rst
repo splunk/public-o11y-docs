@@ -56,7 +56,7 @@ For more information, see :new-page:`Why Histograms <https://opentelemetry.io/bl
 Explicit bucket histograms
 -------------------------------------------------
 
-Explicit bucket histograms are histograms with predefined bucket boundaries. The advantage of defining bucket boundaries yourself is that you can use limits that make sense in your situation. 
+Explicit bucket histograms are histograms with predefined bucket boundaries. The advantage of defining bucket boundaries yourself is that you can use limits that make sense in your situation.
 
 For example, the following Java code creates an OpenTelemetry histogram with explicit bucket boundaries:
 
@@ -76,9 +76,7 @@ For example, the following Java code creates an OpenTelemetry histogram with exp
       addDataToHistogram(histogram);
    }
 
-
-
-.. note:: Currently, exponential histograms aren't supported.
+Currently, Splunk Observability Cloud only supports explicit bucket histograms.
 
 .. _histograms-gdi:
 
