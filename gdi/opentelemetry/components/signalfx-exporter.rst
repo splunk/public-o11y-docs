@@ -68,6 +68,7 @@ To send histogram data to Splunk Observability Cloud, set the ``send_otlp_histog
      ingest_url: "${SPLUNK_INGEST_URL}"
      send_otlp_histogram: true
 
+You can collect histogram data using a variety of receivers, including the :ref:`Prometheus receiver <prometheus-receiver>`.
 
 .. _sfx-exporter-default-metric-filter:
 
