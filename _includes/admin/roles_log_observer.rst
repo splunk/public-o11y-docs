@@ -6,34 +6,34 @@
   * - :strong:`Permission`
     - :strong:`Admin`
     - :strong:`Power user`
+    - :strong:`Usage`
     - :strong:`Read-only`
-    - :strong:`Subscription usage`
 
 
   * - :strong:`View Timeline`
     - Yes
     - Yes
     - Yes
-    - No
+    - Yes
 
 
   * - :strong:`Live Tail`
     - Yes
     - Yes
     - Yes
-    - No
+    - Yes
 
   * - :strong:`Search and filter logs`
     - Yes
     - Yes
     - Yes
-    - No
+    - Yes
 
   * - :strong:`Aggregate logs`
     - Yes
     - Yes
     - Yes
-    - No
+    - Yes
 
   * - :strong:`Create and manage field aliases`
     - Yes
