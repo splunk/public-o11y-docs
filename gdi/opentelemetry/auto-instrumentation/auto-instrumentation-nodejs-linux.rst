@@ -98,3 +98,4 @@ Next steps
 ====================================================
 
 After activating automatic instrumentation for JS, ensure your data is flowing into Splunk Observability Cloud. See :ref:`verify-apm-data`. 
+
