@@ -1,3 +1,5 @@
+:orphan:
+
 .. _roles-and-capabilities-table:
 
 
@@ -12,7 +14,7 @@ Splunk Observability Cloud roles and capabilities
 
 .. include:: /_includes/private-preview.rst
 
-:orphan:
+
 
 |hr|
 
