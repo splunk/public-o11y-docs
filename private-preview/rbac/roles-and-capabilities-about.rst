@@ -53,7 +53,7 @@ Splunk Observability Cloud comes with the following roles predefined:
 
 
 
-Splunk Observability Cloud tokens also honor the role-based access control framework. Since tokens can now be assigned to roles, APIs inherit capabilities from their token. For example, an API using a token which is created with read-only role will inherent read-only permissions. This can be used take system backups with a reduced risk of introducing changes.
+Splunk Observability Cloud tokens also honor the role-based access control framework. Since tokens can now be assigned to roles, APIs inherit capabilities from their token. For example, an API using a token which is created with read-only role will inherit read-only permissions. This can be used take system backups with a reduced risk of introducing changes.
 
 
 .. raw:: html
@@ -101,7 +101,7 @@ You can assign multiple roles to individual users. The user receives a combinati
   * - admin
     - An admin user has full privileges across Splunk Observability Cloud.
   * - subscription usage and power user
-    - All the capabilities of a power user, plus the ability to view the Subscription useage pages for the org.
+    - All the capabilities of a power user, plus the ability to view the Subscription usage pages for the org.
   * - read_only and subscription usage
-    - All the capabilities of a read-only user, plus the ability to view the Subscription useage pages for the org.
+    - All the capabilities of a read-only user, plus the ability to view the Subscription usage pages for the org.
 
