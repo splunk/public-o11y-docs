@@ -87,3 +87,10 @@ Edit user roles using the API
 ===============================
 
 To view, add, or remove roles using the Observability Cloud REST API, see :new-page:`Organizations <https://dev.splunk.com/observability/reference/api/organizations/latest>` in the developer documentation.
+
+
+See also
+===============
+
+- :ref:`roles-and-capabilities-about`
+- :ref:`roles-and-capabilities-table`

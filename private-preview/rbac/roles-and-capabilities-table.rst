@@ -77,3 +77,9 @@ Help and support
 ----------------------------
 
 .. include:: /_includes/admin/roles_help_support.rst
+
+See also
+===============
+
+- :ref:`roles-and-capabilities-about`
+- :ref:`users-assign-roles`
