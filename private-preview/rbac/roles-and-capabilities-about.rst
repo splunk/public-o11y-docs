@@ -1,5 +1,5 @@
 .. _roles-and-capabilities:
-:orphan:
+
 
 ***************************************************
 About roles-based access control and capabilities
@@ -10,7 +10,7 @@ About roles-based access control and capabilities
 
 
 .. include:: /_includes/private-preview.rst
-
+:orphan:
 
 |hr|
 

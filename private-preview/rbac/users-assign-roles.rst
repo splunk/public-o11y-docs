@@ -1,6 +1,6 @@
 .. _users-assign-roles:
 
-:orphan:
+
 
 ********************************************************
 Assign roles to users in Splunk Observability Cloud
@@ -11,7 +11,7 @@ Assign roles to users in Splunk Observability Cloud
 
 
 .. include:: /_includes/private-preview.rst
-
+:orphan:
    
 You can assign roles to existing and new users to determine what they can do and which features they can access in Splunk Observability Cloud. For example, certain roles allow users to create detectors or dashboards.
 
