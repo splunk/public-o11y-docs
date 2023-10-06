@@ -60,7 +60,7 @@ The Operator requires certain TLS cerificates to work. If a certification manage
    # If cert-manager is not deployed, make sure to add certmanager.enabled=true to the list of values to set
    helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=dev splunk-otel-collector-chart/splunk-otel-collector
 
-1. Verify all the OpenTelemetry resources are deployed successfully
+2. Verify all the OpenTelemetry resources are deployed successfully
 ---------------------------------------------------------------------------
 
 Resources include the Collector, the Operator, webhook, an instrumentation.
