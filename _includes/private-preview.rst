@@ -7,7 +7,7 @@
     we ask that you keep such information confidential. Use of preview features is 
     subject to the :new-page:`Splunk Pre-Release Agreement for Hosted Services <https://www.splunk.com/en_us/legal/pre-release-agreement-for-hosted-services.html>`.
     
-    Use these links to navigate to the topics for Role-based access (RBAC)
+    Use these links to navigate to the topics for role-based access control (RBAC):
 
       * :ref:`roles-and-capabilities`
       * :ref:`roles-and-capabilities-table`
