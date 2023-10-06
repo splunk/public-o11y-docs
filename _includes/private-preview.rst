@@ -1,6 +1,6 @@
 .. admonition:: Preview: Role-based access
 
-   Preview features described in this document are provided by Splunk to you "as is" 
+    Preview features described in this document are provided by Splunk to you "as is" 
     without any warranties, maintenance and support, or service-level commitments. 
     Splunk makes this preview feature available in its sole discretion and may 
     discontinue it at any time. These documents are not yet publicly available and 
@@ -10,6 +10,6 @@
     
     Use these links to navigate to the topics for Role-based access (RBAC)
 
-      * :ref:`roles-and-capabilities-about`
+      * :ref:`roles-and-capabilities`
       * :ref:`roles-and-capabilities-table`
       * :ref:`users-assign-roles`
