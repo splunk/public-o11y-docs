@@ -25,10 +25,7 @@ The new roles provide more restricted access. This supports scenarios where addi
 
 Additionally, Splunk Observability Cloud role-based access control aligns with roles available in Splunk Cloud Platform, providing a consistent user and capability-based experience across Splunk Cloud Platform and Splunk Observability CLoud.
 
-Additional content:
 
-- :ref:`roles-and-capabilities-table`
-- :ref: `users-assign-roles`
 
 .. raw:: html
 
@@ -107,12 +104,3 @@ You can assign multiple roles to individual users. The user receives a combinati
   * - read_only and subscription usage
     - All the capabilities of a read-only user, plus the ability to view the Subscription useage pages for the org.
 
-
-.. raw:: html
-
-  <embed>
-    <h2>See also</h2>
-  </embed>
-
-- :ref:`roles-and-capabilities-table`
-- :ref:`users-assign-roles`

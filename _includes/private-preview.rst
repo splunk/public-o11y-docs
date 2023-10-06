@@ -8,3 +8,8 @@
     subject to the :new-page:`Splunk Pre-Release Agreement for Hosted Services 
     <https://www.splunk.com/en_us/legal/pre-release-agreement-for-hosted-services.html>`.
     
+    Use these links to navigate to the topics for Role-based access (RBAC)
+
+      * :ref:`roles-and-capabilities-about`
+      * :ref:`roles-and-capabilities-table`
+      * :ref:`users-assign-roles`
