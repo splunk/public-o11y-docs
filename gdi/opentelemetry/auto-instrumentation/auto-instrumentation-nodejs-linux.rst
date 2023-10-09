@@ -27,34 +27,17 @@ Run the installer script with the ``--with-instrumentation`` option, as shown in
 
     .. code-block:: bash
 
-        npm install @splunk/otel --with-instrumentation \ 
-        --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
+        curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+        sh /tmp/splunk-otel-collector.sh --with-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
 
-    .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance. 
-
-To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <env>`` option. Replace ``<env>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
-
-    .. code-block:: bash
-        :emphasize-lines: 2
-
-        npm install @splunk/otel --with-instrumentation \ 
-        --deployment-environment prod --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN> 
-
-You can activate AlwaysOn Profiling for CPU and memory, as well as metrics, using additional options, as in the following example:
-
-    .. code-block:: bash
-        :emphasize-lines: 3
-
-        npm install @splunk/otel --with-instrumentation --deployment-environment prod \ 
-        --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN> \
-        --enable-profiler --enable-profiler-memory --enable-metrics
+    .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option. 
       
-Next, ensure the service is running and restart your application. See :ref:`verify-js-agent-install` and :ref:`start-restart-js-apps`. 
+Next, ensure the collector service is running and restart your Node.js application(s). See :ref:`verify-js-agent-install` and :ref:`start-restart-js-apps`. 
 
 .. _verify-js-agent-install:
 
-Ensure the service is running
----------------------------------------
+Ensure the collector service is running
+--------------------------------------------
 
 After a successful installation, run the following command to ensure the ``splunk-otel-collector`` service is running:
 
@@ -79,7 +62,7 @@ If the service fails to start, check that the ``SPLUNK_REALM`` and ``SPLUNK_ACCE
 Start your applications
 ------------------------------------------------
 
-For auto instrumentation to take effect, you must manually start or restart any Node.js applications on the host where you installed the package. You must do restart applications after installing the auto instrumentation package for the first time and whenever you make any changes to the configuration file. 
+For auto instrumentation to take effect, you must either reboot the host or manually start or restart any Node.js applications on the host where you installed the package. You must restart the host or applications after installing the auto instrumentation package for the first time and whenever you make any changes to the configuration file. 
 
 After your applications are running, you can verify your data. See :ref:`verify-apm-data`. You can also configure instrumentation settings. See :ref:`configure-js-zeroconfig-linux`. 
 
