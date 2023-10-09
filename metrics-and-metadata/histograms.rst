@@ -1,21 +1,21 @@
 .. _histograms:
 
 ***********************************************************
-Histogram support in Splunk Observability Cloud
+Histogram metric support in Splunk Observability Cloud
 ***********************************************************
 
 .. meta::
    :description: Splunk Observability Cloud natively supports histograms. All histogram metric data you send to Splunk Observability Cloud through OpenTelemetry feeds charts, alerts, and other features.
 
-Splunk Observability Cloud natively supports histograms. You can use the histogram metric data you send from Prometheus and other applications to Splunk Observability Cloud to create charts, detectors, and more.
+Splunk Observability Cloud natively supports histograms. You can use the histogram metric data you send from instrumented applications and services to Splunk Observability Cloud to create charts, detectors, and more.
 
 Understanding histograms
 =======================================================
 
-A histogram represents the distribution of observations. Unlike bar charts, histograms require numerical, continuous values. Examples of continuous values include time, size, or temperature. The following chart is an example of a histogram for response times, in milliseconds:
+A histogram represents the distribution of observations. Histograms require numerical, continuous values. Examples of continuous values include time, size, or temperature. The following chart is an example of a histogram for response times, in milliseconds:
 
 .. image:: /_images/understand/histogram.png
-      :width: 100%
+      :width: 60%
       :alt: A sample histogram for response times with five intervals.
 
 Histograms store data in buckets, which are adjacent intervals with numeric boundaries. The buckets or bars in the previous histogram span 100 milliseconds. The size of each bar is determined by the number of observations inside of interval: the higher the bar, the more data points fall within the interval.
