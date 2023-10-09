@@ -44,7 +44,7 @@ The Collector supports the following processor architectures and operating syste
 
 .. _x86_64-AMD64-ARM64-yes:
 
-Compatible receivers
+Compatible monitors
 ======================================================================
 
 All native Smart Agent receivers are supported in the Collector for the x86_64, AMD64, ARM64, and ppc64le architectures.
@@ -52,7 +52,7 @@ All native Smart Agent receivers are supported in the Collector for the x86_64, 
 Standalone
 ----------------------------------
 
-The following receivers are supported:
+The following monitors are supported:
 
 * cAdvisor (with the kubelet stats receiver)
 * cgroups
@@ -93,7 +93,7 @@ The following receivers are supported:
 Prometheus
 ----------------------------------
 
-The following receivers are supported:
+The following monitors are supported:
 
 * CoreDNS
 * etcd
@@ -112,14 +112,14 @@ The following receivers are supported:
 Statsd
 ----------------------------------
 
-The following receivers are supported:
+The following monitors are supported:
 
 * AWS App Mesh 
 
 Telegraf
 ----------------------------------
 
-The following receivers are supported:
+The following monitors are supported:
 
 * ASP.NET (Windows)
 * DNS
@@ -154,7 +154,7 @@ These types derive from integrations that produce metrics in the Smart Agent and
 collectd
 ----------------------------------
 
-The following receivers are not supported:
+The following monitors are not supported:
 
 * Apache
 * Chrony
@@ -170,7 +170,7 @@ The following receivers are not supported:
 collectd or GenericJMX
 ----------------------------------
 
-The following receivers are not supported:
+The following monitors are not supported:
 
 * ActiveMQ
 * Cassandra
@@ -182,7 +182,7 @@ The following receivers are not supported:
 sfxcollectd 
 ----------------------------------
 
-The following receivers are not supported:
+The following monitors are not supported:
 
 * Consul
 * Couchbase
@@ -204,6 +204,6 @@ The following receivers are not supported:
 JMX
 ----------------------------------
 
-The following receivers are not supported:
+The following monitors are not supported:
 
 * JMX
