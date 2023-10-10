@@ -44,10 +44,10 @@ The Collector supports the following processor architectures and operating syste
 
 .. _x86_64-AMD64-ARM64-yes:
 
-Compatible monitors
+Compatible monitors and components
 ======================================================================
 
-All native Smart Agent receivers are supported in the Collector for the x86_64, AMD64, ARM64, and ppc64le architectures.
+All native OpenTelemetry receivers are supported in the Collector for the x86_64, AMD64, ARM64, and ppc64le architectures.
 
 Standalone
 ----------------------------------
