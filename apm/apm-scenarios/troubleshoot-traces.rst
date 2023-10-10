@@ -58,11 +58,12 @@ Now, Alex can review and compare successful traces for the ``/checkout/{cardId}`
 Summary
 ====================================================================================
 
-Using the high-resolution data provided by full-fidelity tracing, Alex managed to quickly determine the prevalence of an unknown issue. Using the grouping and filtering functionality of Trace Analyzer, Alex quickly isolated successful and problematic traces to provide to the developers to isolate the issue. 
+Using the high-resolution data provided by full-fidelity tracing, Alex managed to quickly determine the prevalence of an unknown issue. Using the grouping and filtering functionality of Trace Analyzer, Alex quickly isolated successful and problematic traces to provide to the engineers to isolate the issue. 
 
 Learn more
 ===============
 
 - For more information on Trace Analyzer, see :ref:`trace-analyzer`.
+- For another Trace Analyzer scenario, see :ref:`apm-scenario-trace-analyzer-trace-duration`.
 - For a list of APM key concepts, see :ref:`apm-key-concepts`.
 - For more Splunk APM scenarios, see :ref:`apm-scenarios-intro`.

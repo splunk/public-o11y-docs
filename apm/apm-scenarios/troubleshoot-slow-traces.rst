@@ -18,8 +18,8 @@ These are the steps Alex takes to determine how pervasive the checkout errors ar
 
 .. _trace-duration-view:
 
-Alex uses    trace duration view in Trace Analyzer and filters the time range
-============================================================================
+Alex uses the trace duration view in Trace Analyzer and filters the time range
+================================================================================
 
 Customer support shared that the customer reported slowness when going through the checkout flow at about 11:30am. So, Alex selects the trace duration view in Trace Analyzer and filters to the time range that matches the customer's report.
 
@@ -32,7 +32,7 @@ Customer support shared that the customer reported slowness when going through t
 Alex adds a filter for the checkout service and turns off sampling
 ============================================================================
 
-Alex further refines the traces he is viewing by adding a filter for the checkout service. He also selects :guilabel:`1:1`` for the :guilabel:`Sample Ratio` so that he can view all traces that match his criteria. 
+Alex further refines the traces they are viewing by adding a filter for the checkout service. Alxe also selects :guilabel:`1:1` for the :guilabel:`Sample Ratio` so that they can view all traces that match his criteria. 
 
 ..  image:: /_images/apm/apm-use-cases/trace-duration-filter-sample.gif
     :width: 95%
@@ -54,8 +54,21 @@ Alex uses the heatmap to better understand trace durations for the time period t
 Alex sorts to table of traces to reviews high-duration traces
 ============================================================================
 
-Alex further refines the traces he is viewing by adding a filter for the checkout service. He also selects :guilabel:`1:1`` for the :guilabel:`Sample Ratio` so that he can view all traces that match his criteria. 
+Alex sorts the table of traces by duration so that they can review the high-duration traces.
 
 ..  image:: /_images/apm/apm-use-cases/trace-duration-review-traces.gif
     :width: 95%
     :alt: This gif shows sorting the trace table by duration
+
+Summary
+====================================================================================
+
+Using the high-resolution data provided by full-fidelity tracing, Alex managed to quickly determine the prevalence of slowness in the checkout flow. Using filtering and the trace duration heatmap, Alex quickly isolated high-duration traces to provide to the engineers to isolate the issue. 
+
+Learn more
+===============
+
+- For more information on Trace Analyzer, see :ref:`trace-analyzer`.
+- For another Trace Analyzer scenario, see :ref:`apm-scenario-trace-analyzer`.
+- For a list of APM key concepts, see :ref:`apm-key-concepts`.
+- For more Splunk APM scenarios, see :ref:`apm-scenarios-intro`.
