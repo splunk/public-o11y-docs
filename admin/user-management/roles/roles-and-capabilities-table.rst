@@ -1,7 +1,7 @@
 .. _roles-table-phase1:
 
 ***************************************************
-Splunk Observability Cloud roles and capabilities
+Splunk Observability Cloud roles
 ***************************************************
 
 .. meta::
