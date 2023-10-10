@@ -55,6 +55,10 @@ Explore trace duration
 
 When you select to view :guilabel:`Trace Duration` the real time chart shows a heatmap of traces by duration. Select and drag over the bars in the chart to select a specific period within the available time frame. Select :guilabel:`Filter to selection` to update the time range filter.
 
+..  image:: /_images/apm/trace-analyzer/TraceDurationDragDropChart.gif
+    :width: 95%
+    :alt: Selection of a specific time frame
+
 View group metrics by tag
 -------------------------------
 
