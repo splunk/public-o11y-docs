@@ -131,3 +131,4 @@ Learn more
 See the following links for more information on Trace Analyzer: 
 
 * :ref:`apm-scenario-trace-analyzer`
+* :ref:`apm-scenario-trace-analyzer-trace-duration`
