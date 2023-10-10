@@ -46,7 +46,6 @@ To send invitations to users, follow these steps:
 #. Select :guilabel:`Users`.
 #. Select :guilabel:`Invite User`.
 #. Enter the email addresses of your desired members in the dialog box. Separate each email address with a comma or single blank space.
-#. 
 #. Select :guilabel:`Send Invitation`.
 
 Users receive an email from Splunk Observability Cloud containing instructions for signing into
