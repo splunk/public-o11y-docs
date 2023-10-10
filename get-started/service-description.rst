@@ -230,12 +230,14 @@ The following components are available for each global region. Each Cloud provid
        * au0
    * - Synthetic Monitoring
      - 
-       * US: Oregon (us-west-2),
+       * US: Oregon (us-west-2), Virginia (us-east-1)
        * Europe: Dublin (eu-west-1)
+       * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
      - 
      -
-       * us0
+       * us0, us1
        * eu0
+       * au0, jp0
 
 
 Realm to region equivalence
