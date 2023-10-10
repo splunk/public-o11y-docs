@@ -40,7 +40,7 @@ Alex further refines the traces they are viewing by adding a filter for the chec
 
 .. _review-heatmap:
 
-Alex reviews the heatmap for a high-percentage of high-duration traces
+Alex reviews the heatmap for a high percentage of high-duration traces
 ============================================================================
 
 Alex uses the heatmap to better understand trace durations for the time period that was reported by the customer. Alex notes the green area of the heatmap  at 11:31 which tells them that about 0.1 or 10 percent of traces per second had durations of 10+ seconds. 
