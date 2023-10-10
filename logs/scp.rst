@@ -83,7 +83,7 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
       
 9. Access your Splunk Cloud Platform management port (e.g. abc.splunk.com:8089) and use your browser's secure connection to download the certificate. 
 
-   a. For example, in the Chrome browser, select the lock icon in the address bar, then select :guilabel :`Connection is secure`.
+   a. For example, in the Chrome browser, select the lock icon in the address bar, then select :guilabel:`Connection is secure`.
 
       .. image:: /_images/logs/chrome-secure1.png
          :width: 50%
