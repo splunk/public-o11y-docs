@@ -101,7 +101,7 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
          :width: 60%
          :alt: This screenshot shows how to finish downloading a certificate in Google Chrome.
 
-10. Go back to the Log Observer Connect guided setup and open the third section called :guilabel:`Secure connection to the Splunk platform`. Upload the certificate you downloaded in the previous step to complete the guided setup.
+10. Go back to the Log Observer Connect guided setup and select :guilabel:`Next`. Enter your service account username, password, and Splunk platform URL, then upload the certificate you downloaded in the previous step to complete the guided setup.
 
 11. Remove your IPv4 address from the IP allowlist that you added in step 8.
 
