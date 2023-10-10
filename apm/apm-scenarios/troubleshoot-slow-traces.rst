@@ -6,7 +6,7 @@ Scenario: Alex troubleshoots slow traces using Trace Analyzer
 .. meta::
     :description: Alex uses Trace Analyzer to explore APM data from wide trends down to single traces to identify the cause and prevalence of slow traces.
 
-Alex, the site reliability engineer for Buttercup Games, receives a report of a customer who experience slowness during checkout. To proactively improve customer experience, Alex uses Trace Analyzer to determine how pervasive the checkout slowness is. 
+Alex, the site reliability engineer for Buttercup Games, receives a report of a customer who experienced slowness during checkout. To proactively improve customer experience, Alex uses Trace Analyzer to determine how pervasive the checkout slowness is. 
 
 These are the steps Alex takes to determine how pervasive the checkout errors are:
 
@@ -21,7 +21,7 @@ These are the steps Alex takes to determine how pervasive the checkout errors ar
 Alex uses the trace duration view in Trace Analyzer and filters the time range
 ================================================================================
 
-Customer support shared that the customer reported slowness when going through the checkout flow at about 11:30am. So, Alex selects the trace duration view in Trace Analyzer and filters to the time range that matches the customer's report.
+Customer support shared that the customer reported slowness when going through the checkout flow at about 11:30 am. So, Alex selects the trace duration view in Trace Analyzer and filters to the time range that matches the customer's report.
 
 ..  image:: /_images/apm/apm-use-cases/trace-duration-time-select.gif
     :width: 95%
@@ -51,7 +51,7 @@ Alex uses the heatmap to better understand trace durations for the time period t
 
 .. _review-traces:
 
-Alex sorts to table of traces to reviews high-duration traces
+Alex sorts to table of traces to review high-duration traces
 ============================================================================
 
 Alex sorts the table of traces by duration so that they can review the high-duration traces.
