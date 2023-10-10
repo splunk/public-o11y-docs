@@ -1,6 +1,6 @@
 .. list-table::
   :header-rows: 1
-  :width: 100
+  :width: 100%
   :widths: 50, 25, 25
   
   * - :strong:`Capability`
