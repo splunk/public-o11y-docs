@@ -23,6 +23,6 @@ Alex use trace duration view in Trace Analyzer and filters the time range
 
 Customer support shares that the customer reported slowness when going through the checkout flow at about 11:30am. Alex selects the trace duration view in Trace Analyzer and filters to the time range that matches the customer's report.
 
-..  image:: /_images/apm/apm-use-cases/trace-duration-time-select.png
+..  image:: /_images/apm/apm-use-cases/trace-duration-time-select.gif
     :width: 95%
     :alt: This gif shows the trace duration selection and the time selection in the Trace Analyzer chart

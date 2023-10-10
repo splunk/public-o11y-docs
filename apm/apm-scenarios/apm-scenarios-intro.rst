@@ -17,6 +17,7 @@ Scenarios for troubleshooting errors and monitoring application performance usin
     troubleshoot-business-workflows
     specific-trace
     troubleshoot-traces
+    troubleshoot-slow-traces
     monitor-services
     monitor-business-workflows
     configure-business-workflows
