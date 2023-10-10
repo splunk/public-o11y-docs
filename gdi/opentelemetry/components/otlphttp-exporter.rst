@@ -93,10 +93,10 @@ This is a detailed configuration example:
     another: "somevalue"
   compression: gzip
 
-Send traces and metrics directly
+Send traces and metrics
 --------------------------------
 
-If you need to bypass the Collector and send traces and metrics directly to Splunk Observability Cloud, configure the ``metrics_endpoint`` and ``traces_endpoint`` settings to the REST API ingest endpoints. For example:
+To send traces and metrics to Splunk Observability Cloud using OTLP over HTTP, configure the ``metrics_endpoint`` and ``traces_endpoint`` settings to the REST API ingest endpoints. For example:
 
 .. code-block:: yaml
 
