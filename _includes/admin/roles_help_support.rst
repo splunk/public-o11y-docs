@@ -2,7 +2,7 @@
   :widths: 50, 25, 25
   :width: 100%
 
-  * - :strong:`Capability`
+  * - :strong:`Permission`
     - :strong:`Admin`
     - :strong:`Power user`
 

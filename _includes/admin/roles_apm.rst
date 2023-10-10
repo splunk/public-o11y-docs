@@ -1,7 +1,7 @@
 .. list-table::
   :widths: 50, 25, 25
 
-  * - :strong:`Capability`
+  * - :strong:`Permission`
     - :strong:`Admin`
     - :strong:`Power user`
 
