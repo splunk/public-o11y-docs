@@ -1,4 +1,4 @@
-.. roles_mpm
+.. roles-mpm
 
 .. list-table::
   :widths: 50, 25, 25
