@@ -26,7 +26,7 @@ View roles assigned to users
 
 To see the roles assigned to users in your organization, follow these steps:
 
-#. From the left navigation menu, select :menuselection:`Settings > Users`.
+#. From the left navigation menu, select :menuselection:`Settings` then :menuselection:`Users`.
 #. The roles for all users are in the :guilabel:`Roles` column of the table.
 
 
@@ -36,7 +36,7 @@ Assign roles when inviting new users
 
 To assign roles when inviting new users, follow these steps:
 
-#. From the left navigation menu, select :menuselection:`Settings > Users`.
+#. From the left navigation menu, select :menuselection:`Settings` then :menuselection:`Users`.
 #. Select :guilabel:`Invite Users`.
 #. Enter the email addresses to invite.
 #. Click the :guilabel:`Roles` field to select any of the available roles.
@@ -48,7 +48,7 @@ Assign roles to an existing user
 
 To assign roles to a user that's already a member of your organization, follow these steps:
 
-#. From the left navigation menu, select :menuselection:`Settings > Users`.
+#. From the left navigation menu, select :menuselection:`Settings` then :menuselection:`Users`.
 #. Find the name of the user.
 #. Select the :guilabel:`Actions` (|verticaldots|) menu icon next the username, then select :menuselection:`Manage Roles`.
 #. In the :guilabel:`Manage Roles` dialog box, select one or more of the available roles, then select the right-pointing arrow to move the roles to the :guilabel:`Selected Roles` panel.
@@ -62,7 +62,7 @@ Remove roles from an existing user
 
 To remove roles from a user that's already a member of your organization, follow these steps:
 
-#. From the left navigation menu, select :menuselection:`Settings > Users`.
+#. From the left navigation menu, select :menuselection:`Settings` then :menuselection:`Users`.
 #. Find the name of the user.
 #. Select the :guilabel:`Actions` (|verticaldots|) menu icon next the username, then select :menuselection:`Manage Roles`.
 #. In the :guilabel:`Manage Roles` dialog box, select one or more of the selected roles, then select the left-pointing arrow to move the roles back to the :guilabel:`Available Roles` panel.
@@ -76,7 +76,7 @@ Edit roles for multiple users
 
 To edit roles for multiple users at the same time, follow these steps:
 
-#. From the left navigation menu, select :menuselection:`Settings > Users`.
+#. From the left navigation menu, select :menuselection:`Settings` then :menuselection:`Users`.
 #. Find users using the search bar.
 #. Select the users you want to edit.
 #. Select ``-`` or ``+`` in the :guilabel:`Roles` bar at the bottom of the table to remove or add roles.
