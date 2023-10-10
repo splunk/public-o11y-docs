@@ -1,4 +1,4 @@
-.. _roles-and-capabilities:
+.. _roles-phase1:
 
 ***************************************************
 About user roles in Splunk Observability Cloud
@@ -17,7 +17,7 @@ About user roles in Splunk Observability Cloud
    Assign roles to users <users-assign-roles>
 
 
-Splunk Observability Clouds lets you restrict access to certain features to specific groups of users. You assign roles to users. For details about each role and the associated capabilities, see :ref:`roles-and-capabilities-table`. 
+Splunk Observability Clouds lets you restrict access to certain features to specific groups of users. You assign roles to users. For details about each role and the associated capabilities, see :ref:`roles-table-phase1`. 
 
 
 .. raw:: html
