@@ -7,13 +7,9 @@
     - :strong:`Admin`
     - :strong:`Power user`
 
-
-
   * - :strong:`View metrics pipeline management metric summary (no ruleset)`
     - Yes
     - Yes
-
-
 
   * - :strong:`View metrics pipeline management metric summary with rulesets`
     - Yes
@@ -36,6 +32,7 @@
 
 
   * - :strong:`Activate, deactivate, or delete data routing exception rule`
+    - Yes
     - Yes
 
 
