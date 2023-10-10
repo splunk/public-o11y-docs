@@ -7,7 +7,7 @@ OTLP/HTTP exporter
 .. meta::
       :description: The OTLP/HTTP exporter allows the OpenTelemetry Collector to send metrics, traces, and logs via HTTP using the OTLP format. Read on to learn how to configure the component.
 
-The OTLP/HTTP exporter sends metrics, traces, and logs via HTTP using the OTLP format (``application/x-protobuf`` content-type). See :ref:`otel-data-processing` for more information.
+The OTLP/HTTP exporter sends metrics, traces, and logs through HTTP using the OTLP format (``application/x-protobuf`` content-type). See :ref:`otel-data-processing` for more information.
 
 For information on the OTLP exporter, see :ref:`otlp-exporter`.
 
@@ -18,7 +18,7 @@ The OTLP/HTTP exporter is not included in the default configuration of the Splun
 
 If you want to add it, the following settings are required:
 
-* ``endpoint``. The target base URL to send data to, for example ``https://example.com:4318``. No default value. 
+* ``endpoint``. The target base URL to send data to, for example ``https://example.com:4318``. No default value.
 
   * Each type of signal is added to this base URL. For example, for traces, ``https://example.com:4318/v1/traces``.
 
@@ -29,17 +29,17 @@ The following settings are optional:
   * For example, ``https://example.com:4318/v1/logs``.
   * If this setting is present, the endpoint setting is ignored for logs.
 
-* ``metrics_endpoint``. The target URL to send metric data to. 
+* ``metrics_endpoint``. The target URL to send metric data to.
   
   * For example, ``https://example.com:4318/v1/metrics``.
   * If this setting is present, the endpoint setting is ignored for metrics.
 
-* ``traces_endpoint``. The target URL to send trace data to. 
+* ``traces_endpoint``. The target URL to send trace data to.
   
   * For example, ``https://example.com:4318/v1/traces``.
   * If this setting is present, the endpoint setting is ignored for traces.
 
-* ``tls``. See :ref:`TLS Configuration Settings <otlphttp-exporter-settings>` in this document for the full set of available options. 
+* ``tls``. See :ref:`TLS Configuration Settings <otlphttp-exporter-settings>` in this document for the full set of available options.
 
 * ``timeout``. ``30s`` by default. HTTP request time limit. For details see :new-page:`https://golang.org/pkg/net/http/#Client`.
 
@@ -93,10 +93,25 @@ This is a detailed configuration example:
     another: "somevalue"
   compression: gzip
 
+Send traces and metrics directly
+--------------------------------
+
+If you need to bypass the Collector and send traces and metrics directly to Splunk Observability Cloud, configure the ``metrics_endpoint`` and ``traces_endpoint`` settings to the REST API ingest endpoints. For example:
+
+.. code-block:: yaml
+
+   exporters:
+     otlphttp:
+        metrics_endpoint: "https://ingest.${SPLUNK_REALM}.signalfx.com/v2/datapoint/otlp"
+        traces_endpoint: "https://ingest.${SPLUNK_REALM}.signalfx.com/v2/trace/otlp"
+        compression: gzip
+        headers:
+          "X-SF-Token": "${SPLUNK_ACCESS_TOKEN}"
+
 Configure gzip compression
 --------------------------------
 
-By default, gzip compression is enabled. To turn it off, use the following configuration:
+By default, gzip compression is turned on. To turn it off, use the following configuration:
 
 .. code-block:: yaml
 
