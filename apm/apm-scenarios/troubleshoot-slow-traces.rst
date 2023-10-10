@@ -12,8 +12,8 @@ These are the steps Alex takes to determine how pervasive the checkout errors ar
 
 #. :ref:`trace-duration-view`
 #. :ref:`service-filter`
-#. :ref:`trace-analyzer-filter`
-#. :ref:`trace-analyzer-compare`
+#. :ref:`review-heatmap`
+#. :ref:`review-traces`
 
 
 .. _trace-duration-view:
