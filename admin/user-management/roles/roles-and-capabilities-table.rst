@@ -16,38 +16,38 @@ Splunk Observability Clouds lets you restrict access to certain features to spec
 Metrics pipeline management
 ===============================================================================
 
-.. include:: /_includes/admin/roles-mpm.rst
+.. include:: /_includes/admin/roles-mpm1.rst
 
 
 Log Observer and Log Observer Connect
 ===============================================================================
 
-.. include:: /_includes/admin/roles_log_observer.rst
+.. include:: /_includes/admin/roles_log_observer1.rst
 
 
 Alerts and detectors
 ===============================================================================
 
-.. include:: /_includes/admin/roles_alerts_detectors.rst
+.. include:: /_includes/admin/roles_alerts_detectors1.rst
 
 
 Splunk Synthetic Monitoring 
 ==================================================
 
-.. include:: /_includes/admin/synth-roles-caps.rst
+.. include:: /_includes/admin/synth-roles-caps1.rst
 
 
 .. _rum-rbac:
 
 Splunk Real User Monitoring 
 ==================================================
-.. include:: /_includes/admin/rum-roles-caps.rst
+.. include:: /_includes/admin/rum-roles-caps1.rst
 
 .. apm-rbac:
 
 Splunk Application Performance Monitoring 
 ==================================================================
-.. include:: /_includes/admin/roles_apm.rst
+.. include:: /_includes/admin/roles_apm1.rst
 
 Settings
 ===========================
@@ -55,16 +55,16 @@ Settings
 General settings
 ----------------------------
 
-.. include:: /_includes/admin/roles_navigation.rst
+.. include:: /_includes/admin/roles_navigation1.rst
 
 
 Data configuration
 ----------------------------
 
-.. include:: /_includes/admin/roles_data_configuration.rst
+.. include:: /_includes/admin/roles_data_configuration1.rst
 
 
 Help and support
 ----------------------------
 
-.. include:: /_includes/admin/roles_help_support.rst
+.. include:: /_includes/admin/roles_help_support1.rst
