@@ -11,7 +11,7 @@ Splunk Observability Cloud roles
 
 Splunk Observability Clouds lets you restrict access to certain features to specific groups of users using role-based access control. You assign roles to users. The following tables identify the permissions for the admin and user roles.  
 
-.. _metrics-pipeline-rbac:
+.. .. _metrics-pipeline-rbac:
 
 Metrics pipeline management
 ===============================================================================
@@ -37,7 +37,7 @@ Splunk Synthetic Monitoring
 .. include:: /_includes/admin/synth-roles-caps1.rst
 
 
-.. _rum-rbac:
+.. .. _rum-rbac:
 
 Splunk Real User Monitoring 
 ==================================================
