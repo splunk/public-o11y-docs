@@ -26,7 +26,7 @@ Explore your trace data
 
 To explore your trace data, use the following controls:
 
-..  image:: /_images/apm/trace-analyzer/TraceAnalyzerControls.png
+..  image:: /_images/apm/trace-analyzer/TraceAnalyzerControls+duration.png
     :width: 95%
     :alt: Elements of the Trace Analyzer user interface
 
