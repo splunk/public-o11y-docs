@@ -3,7 +3,7 @@
 
   * - :strong:`Permission`
     - :strong:`Admin`
-    - :strong:`Power user`
+    - :strong:`User`
 
 
   * - :strong:`Create, delete, or update test`

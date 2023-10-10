@@ -5,7 +5,7 @@
 
   * - :strong:`Permission`
     - :strong:`Admin`
-    - :strong:`Power user`
+    - :strong:`User`
 
   * - :strong:`View metrics pipeline management metric summary (no ruleset)`
     - Yes

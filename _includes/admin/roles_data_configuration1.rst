@@ -3,7 +3,7 @@
   
   * - :strong:`Capability`
     - :strong:`Admin`
-    - :strong:`Power user`
+    - :strong:`User`
 
 
   * - :strong:`View Global Data Links`
