@@ -7,9 +7,9 @@ OTLP/HTTP exporter
 .. meta::
       :description: The OTLP/HTTP exporter allows the OpenTelemetry Collector to send metrics, traces, and logs via HTTP using the OTLP format. Read on to learn how to configure the component.
 
-The OTLP/HTTP exporter sends metrics, traces, and logs through HTTP using the OTLP format (``application/x-protobuf`` content-type). See :ref:`otel-data-processing` for more information.
+The OTLP/HTTP exporter sends metrics, traces, and logs through HTTP using the OTLP format (``application/x-protobuf`` content-type). The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
-For information on the OTLP exporter, see :ref:`otlp-exporter`.
+.. note:: For information on the OTLP exporter, see :ref:`otlp-exporter`.
 
 Get started
 ======================
@@ -61,6 +61,19 @@ To send traces and metrics to Splunk Observability Cloud using OTLP over HTTP, c
         compression: gzip
         headers:
           "X-SF-Token": "${SPLUNK_ACCESS_TOKEN}"
+
+To complete the configuration, include the receiver in the required pipeline of the ``service`` section of your
+configuration file. For example:
+
+.. code:: yaml
+
+   service:
+     pipelines:
+       metrics:
+         exporters: [otlphttp]
+       traces:
+         exporters: [otlphttp]
+
 
 Detailed sample configuration
 --------------------------------
