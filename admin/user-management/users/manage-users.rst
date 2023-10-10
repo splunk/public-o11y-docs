@@ -77,14 +77,14 @@ other users.
 
 To grant administrator privileges to a user, follow these steps:
 
-#. From the left navigation menu, select :menuselection:`Settings > Users`.
+#. From the left navigation menu, select :menuselection:`Settings` then :menuselection:`Users`.
    A table of current users appears in the main panel.
 #. Find the name of the user.
 #. Select the :guilabel:`Actions` (|more|) menu icon next the username, then select :menuselection:`Manage Roles`.
 
 To revoke administrator privileges from a user, follow these steps:
 
-#. From the left navigation menu, select :menuselection:`Settings > Users`.
+#. From the left navigation menu, select :menuselection:`Settings` then :menuselection:`Users`.
    A table of current members appears in the main panel.
 #. Find the name of the user.
 #. Select the :guilabel:`Actions` (|more|) menu icon next the user's name, then select :menuselection:`Manage Roles`.
