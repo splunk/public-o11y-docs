@@ -24,7 +24,7 @@ If you want to add it, the following settings are required:
 
 The following settings are optional:
 
-* ``logs_endpoint``. The target URL to send log data to. 
+* ``logs_endpoint``. The target URL to send log data to.
   
   * For example, ``https://example.com:4318/v1/logs``.
   * If this setting is present, the endpoint setting is ignored for logs.
@@ -50,14 +50,17 @@ The following settings are optional:
 Sample configurations
 --------------------------------
 
-This is a sample configuration for the exporter:
+To send traces and metrics to Splunk Observability Cloud using OTLP over HTTP, configure the ``metrics_endpoint`` and ``traces_endpoint`` settings to the REST API ingest endpoints. For example:
 
 .. code-block:: yaml
 
-
-  exporters:
-    otlphttp:
-      endpoint: https://example.com:4318
+   exporters:
+     otlphttp:
+        metrics_endpoint: "https://ingest.${SPLUNK_REALM}.signalfx.com/v2/datapoint/otlp"
+        traces_endpoint: "https://ingest.${SPLUNK_REALM}.signalfx.com/v2/trace/otlp"
+        compression: gzip
+        headers:
+          "X-SF-Token": "${SPLUNK_ACCESS_TOKEN}"
 
 Detailed sample configuration
 --------------------------------
@@ -93,20 +96,6 @@ This is a detailed configuration example:
     another: "somevalue"
   compression: gzip
 
-Send traces and metrics
---------------------------------
-
-To send traces and metrics to Splunk Observability Cloud using OTLP over HTTP, configure the ``metrics_endpoint`` and ``traces_endpoint`` settings to the REST API ingest endpoints. For example:
-
-.. code-block:: yaml
-
-   exporters:
-     otlphttp:
-        metrics_endpoint: "https://ingest.${SPLUNK_REALM}.signalfx.com/v2/datapoint/otlp"
-        traces_endpoint: "https://ingest.${SPLUNK_REALM}.signalfx.com/v2/trace/otlp"
-        compression: gzip
-        headers:
-          "X-SF-Token": "${SPLUNK_ACCESS_TOKEN}"
 
 Configure gzip compression
 --------------------------------
