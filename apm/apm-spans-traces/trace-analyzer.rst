@@ -31,12 +31,12 @@ To explore your trace data, use the following controls:
     :alt: Elements of the Trace Analyzer user interface
 
 #. Use the filter bar to filter by time range, environment, workflow, services, and tags.
-#. Use the trace view selection to choose whether to view trace and error count or duration in the chart.
+#. Use the trace view selection to choose whether to view trace and error counts or duration in the chart.
 #. Use the minimum and maximum trace duration to refine the traces that are included by their duration.
 #. Use the sample ratio to select to include all traces or 10 percent of traces. 
 #. Use the :guilabel:`Errors Only` switch to show only traces with errors.
 #. Use the search to search for a trace by its ID.
-#. Use the real time chart to view the count of total traces traces with error or a trace duration heatmap depending on your selection.
+#. Use the real-time chart to view the count of total traces with error or a trace duration heatmap depending on your selection.
 #. Use the table of traces to view trace details or group metrics based on a tag. 
 
 Trace Analyzer searches all currently retained traces; see :ref:`apm-data-retention` to learn more about the default trace retention period.
@@ -44,7 +44,7 @@ Trace Analyzer searches all currently retained traces; see :ref:`apm-data-retent
 Explore trace and error counts
 -------------------------------
 
-When you select to view :guilabel:`Trace & Error Count` the real time chart shows total traces and traces with errors in a stacked bars chart. Select and drag over the bars in the chart to select a specific period within the available time frame. Select :guilabel:`Filter to selection` to update the time range filter.
+When you select to view :guilabel:`Trace & Error Count` the real-time chart shows total traces and traces with errors in a stacked bars chart. Select and drag over the bars in the chart to select a specific period within the available time frame. Select :guilabel:`Filter to selection` to update the time range filter.
 
 ..  image:: /_images/apm/trace-analyzer/TraceDragDropChart.gif
     :width: 95%
@@ -53,7 +53,7 @@ When you select to view :guilabel:`Trace & Error Count` the real time chart show
 Explore trace duration
 --------------------------
 
-When you select to view :guilabel:`Trace Duration` the real time chart shows a heatmap of traces by duration. Select and drag over the bars in the chart to select a specific period within the available time frame. Select :guilabel:`Filter to selection` to update the time range filter.
+When you select to view :guilabel:`Trace Duration` the real-time chart shows a heatmap of traces by duration. Select and drag over the bars in the chart to select a specific period within the available time frame. Select :guilabel:`Filter to selection` to update the time range filter.
 
 ..  image:: /_images/apm/trace-analyzer/TraceDurationDragDropChart.gif
     :width: 95%
@@ -62,7 +62,7 @@ When you select to view :guilabel:`Trace Duration` the real time chart shows a h
 View group metrics by tag
 -------------------------------
 
-You can group all available traces by a single tag or attribute. For example, you can group all traces from your service by database table, host name, or HTTP status code.
+You can group all available traces by a single tag or attribute. For example, you can group all traces from your service by database table, hostname, or HTTP status code.
 
 ..  image:: /_images/apm/trace-analyzer/TraceSelectTag.png
     :width: 85%
@@ -80,7 +80,7 @@ You can order both tables by the number of matching traces.
 When to use Trace Analyzer
 =============================================
 
-Splunk Observability Cloud provides several tools for exploring application monitoring data. Trace Analyzer is suited to scenarios where high cardinality, high granularity searches and explorations are required for researching unknown or new issues. See :ref:`guideline-cardinality`.
+Splunk Observability Cloud provides several tools for exploring application monitoring data. Trace Analyzer is suited to scenarios where high-cardinality, high-granularity searches and explorations are required for researching unknown or new issues. See :ref:`guideline-cardinality`.
 
 The following table presents what each APM tool is best suited for:
 
@@ -118,7 +118,7 @@ Trace Analyzer trace limits
 
 Trace Analyzer can search a maximum of 6 hours of data. 
 
-Within the Trace Analyzer interface, there are three different display limits. The Trace Analyzer chart (1) and the Group Metrics (2) tab display up to 6 hours of traces. The list of traces displayed on the Traces tab (3) has a limit of 1,000 traces. For the Traces tab, Trace Analyzer searches for traces at the end of the time window you select. When 1,000 traces are matched or the six-hour search window is reached, the list stops populating.
+Within the Trace Analyzer interface, there are three different display limits. The Trace Analyzer chart (1) and the Group Metrics (2) tab displays up to 6 hours of traces. The list of traces displayed on the Traces tab (3) has a limit of 1,000 traces. For the Traces tab, Trace Analyzer searches for traces at the end of the time window you select. When 1,000 traces are matched or the six-hour search window is reached, the list stops populating.
 
 ..  image:: /_images/apm/trace-analyzer/TraceAnalyzerLimit.png
     :width: 95%
