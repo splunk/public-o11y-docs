@@ -86,19 +86,19 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
    a. For example, in the Chrome browser, select the lock icon in the address bar, then select :guilabel :`Connection is secure`.
 
       .. image:: /_images/logs/chrome-secure1.png
-         :width: 100%
+         :width: 50%
          :alt: This screenshot shows how to find the lock icon for secure download in Google Chrome.
    
    b. Next, select :guilabel:`Certificate is valid`.
 
       .. image:: /_images/logs/chrome-secure2.png
-         :width: 100%
+         :width: 50%
          :alt: This screenshot shows how to download a certificate in Google Chrome.
 
    c. On the :guilabel:`Details` tab, select :guilabel:`Export`.
 
       .. image:: /_images/logs/chrome-secure3.png
-         :width: 100%
+         :width: 60%
          :alt: This screenshot shows how to finish downloading a certificate in Google Chrome.
 
 10. Go back to the Log Observer Connect guided setup and open the third section called :guilabel:`Secure connection to the Splunk platform`. Upload the certificate you downloaded in the previous step to complete the guided setup.
