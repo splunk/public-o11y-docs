@@ -18,7 +18,7 @@ These are the steps Alex takes to determine how pervasive the checkout errors ar
 
 .. _trace-duration-view:
 
-Alex use trace duration view in Trace Analyzer and filters the time range
+Alex uses    trace duration view in Trace Analyzer and filters the time range
 ============================================================================
 
 Customer support shared that the customer reported slowness when going through the checkout flow at about 11:30am. So, Alex selects the trace duration view in Trace Analyzer and filters to the time range that matches the customer's report.
