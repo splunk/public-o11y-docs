@@ -5,7 +5,7 @@ Configure your tests
 ***************************************************
 
 .. meta::
-    :description: Learn about preset variables in Splunk Synthetic Monitoring.
+    :description: Customize tests run in Splunk Synthetic Monitoring by setting up different devices, variables, locations, test status, and other configurations to best simulate diverse types of traffic to your site or application. 
 
 .. toctree::
 

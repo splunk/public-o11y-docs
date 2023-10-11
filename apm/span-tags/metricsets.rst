@@ -4,8 +4,6 @@
 Learn about MetricSets in APM
 ******************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn about MetricSets in Splunk Observability Cloud. MetricSets are categories of metrics about traces and spans in Splunk APM.
 
@@ -38,7 +36,7 @@ The measurement precision of Troubleshooting MetricSets is 10 seconds. Splunk AP
 Where can I use TMS within Splunk APM?
 ----------------------------------------
 
-TMS appear on the service map <service-map> and in Tag Spotlight. You can use TMS to filter the service map and create breakdowns across the values of a given indexed span tag or process. You can also use TMS to monitor and alert on the performance of your services.
+TMS appear on the :ref:`service map <apm-service-map>` and in Tag Spotlight. You can use TMS to filter the service map and create breakdowns across the values of a given indexed span tag or process. You can also use TMS to monitor and alert on the performance of your services.
 
 What is the TMS retention period?
 -----------------------------------
@@ -59,14 +57,14 @@ Available MMS metrics
 
 Each MMS includes six metrics. For each metric, there is one MTS with responses ``sf_error: true`` or ``sf_error: false``.
 
-* ``count``
-* ``duration.min``
-* ``duration.median``
-* ``duration.p90``
-* ``duration.p99``
-* ``duration.max``
+* ``count`` - request count
+* ``duration.min`` - minimum request duration
+* ``duration.median`` - median request duration
+* ``duration.p90`` - 90th percentile request duration
+* ``duration.p99`` - 99th percentile request duration
+* ``duration.max`` - maximum request duration
 
-MMS are available for a specific endpoint, for the aggregate of all endpoints in a service, or for a specific Business Workflow.
+MMS are available for a specific endpoint or for the aggregate of all endpoints in a service.
 
 Endpoint-level MMS reflect the activity of a single endpoint in a service, while service-level MMS aggregate the activity of all of the endpoints in the service. Endpoint-level and service-level MMS are therefore limited to spans where the ``span.kind = SERVER`` or ``span.kind = CONSUMER``.
 
@@ -74,8 +72,6 @@ Spans might lack a ``kind`` value, or have a different ``kind`` value, in the fo
 
 * The span originates in self-initiating operations or inferred services
 * An error in instrumentation occurs.
-
-Workflow-level MMS aggregate data from all traces identified as part of a given Business Workflow. 
 
 What is the MMS retention period?
 -----------------------------------

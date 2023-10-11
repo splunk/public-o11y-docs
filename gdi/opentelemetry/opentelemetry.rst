@@ -17,6 +17,7 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     Requirements <otel-requirements.rst>
     install-the-collector.rst
     configure-the-collector.rst
+    collector-how-to.rst
     Zero config auto instrumentation <zero-config.rst>
     Discover metric sources automatically <discovery-mode.rst>
     Use the Universal Forwarder <collector-with-the-uf.rst>
@@ -70,6 +71,7 @@ To get started with the Collector, see :ref:`opentelemetry-resources`:
 
 #. Check the :ref:`requirements <otel-requirements>`.
 #. :ref:`otel-install-platform`. Get instructions for installing the Collector on a variety of platforms. Or use :ref:`our guided install <collector-guided-install>`.
+#. See how to perform common actions and tasks with the Collector at :ref:`collector-how-to`.
 #. Learn about the discovery mode. See :ref:`discovery_mode`.
 #. Learn about the available :ref:`configuration options <otel-configuration>`. 
 #. :ref:`otel-troubleshooting`. Try these troubleshooting techniques and learn how to open a support request.
