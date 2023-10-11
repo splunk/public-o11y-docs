@@ -52,7 +52,7 @@ You can generate a Monitoring MetricSet in three ways:
 * endpoint-level MMS for specific endpoints within a given service
 * orient both service-level MMS and endpoint-level MMS for all endpoints within a service
 
-Choose the best option for your needs to allocate your organization's cardinality entitlement efficiently. See :ref:`reduce-cardinality` to learn more. 
+Select the best option for your needs to allocate your organization's cardinality entitlement efficiently. See :ref:`reduce-cardinality` to learn more. 
 
 You can also filter by specific tag values to further reduce the cardinality of your MMS. All custom MMS include service-level metrics. In addition, you can generate endpoint-level metrics.
 
