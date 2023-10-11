@@ -42,7 +42,7 @@ Kai troubleshoots with Synthetics and APM in Splunk Observability Cloud
 
 1. In the :guilabel:`Synthetics` view, Kai opens one of the failed tests then scrolls down to the :guilabel:`Recent run results` section and opens one of the results. Kai notices that Splunk tracks the front-end service of each element of the Buttercup Games website. Splunk also tracks the visual experience of the end-to-end customer journey so that Kai can replay it in a video capture to see what customers are seeing.
 
-   .. image:: /_images/splunkplatform/synth-recentrun.png
+   .. image:: /_images/splunkplatform/synthetics_recentrun.png
      :width: 100%
      :alt: This screenshot shows a Synthetics recently run tests.
 
