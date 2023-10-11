@@ -1,13 +1,13 @@
 .. _splunk-integration-scenario1:
 
 *******************************************************************************************************************
-Scenario: Kai troubleshoots a problem faster with Splunk IT Service Intelligence and Splunk Observability Cloud
+Scenario: Kai troubleshoots faster with Splunk IT Service Intelligence and Splunk Observability Cloud
 *******************************************************************************************************************
 
 .. meta::
    :description: This scenario describers how users can use Splunk ITSI and Splunk Observability Cloud together to drill down faster on problems and reduce mean time to resolution.
 
-Buttercup Games, a fictitious company that runs an e-commerce site to sell its games online, is suddenly experiencing degraded revenue in online sales. Kai, a site reliability engineer at Buttercup Games, uses Splunk IT Service Intelligence and Splunk Observability Cloud together to accelerate troubleshooting.
+Buttercup Games, a fictitious company that runs an e-commerce site, Online Boutique, to sell its wares, is suddenly experiencing degraded revenue in online sales. Kai, a site reliability engineer at Buttercup Games, uses Splunk IT Service Intelligence and Splunk Observability Cloud together to accelerate troubleshooting.
 
 To troubleshoot the problem, Kai takes the following actions: 
 
