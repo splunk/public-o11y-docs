@@ -47,7 +47,7 @@ Troubleshoot with Synthetics and APM in Splunk Observability Cloud
      :alt: This screenshot shows a Synthetics recently run tests.
 
 
-2. Kai plays the video capture in the upper right corner. The video capture shows that users are attempting to make purchases, but checkout is failing. The application delivers no error or feedback to the user, making it an unacceptable customer experience. Kai closes the video capture.
+2. Kai plays the video capture in the upper right corner. The video capture shows that users attempt to make purchases, but checkout fails. The application delivers no error or feedback to the user, making it an unacceptable customer experience. Kai closes the video capture.
 
    .. image:: /_images/splunkplatform/synthetics_video.png
      :width: 100%
