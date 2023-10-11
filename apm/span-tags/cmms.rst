@@ -185,6 +185,8 @@ Service metrics and dimensions
 Workflow metrics and dimensions
 ---------------------------------
 
+These workflow metrics are created by default when you create a Business Workflow. Custom MMS are not available for Business Workflows.
+
 .. list-table::
    :header-rows: 1
 
