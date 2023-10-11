@@ -4,8 +4,6 @@
 Learn about MetricSets in APM
 ******************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn about MetricSets in Splunk Observability Cloud. MetricSets are categories of metrics about traces and spans in Splunk APM.
 
