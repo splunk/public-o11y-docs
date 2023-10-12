@@ -295,7 +295,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: Splunk platform users
    :maxdepth:   3
 
-   Splunk Observability Cloud and the Splunk platform <splunkplatform/splunkplatform-landing>
+   Splunk Observability Cloud and the Splunk platform <splunkplatform/practice-reliability/splunkplatform-landing>
 
 .. toctree::
    :maxdepth:   3

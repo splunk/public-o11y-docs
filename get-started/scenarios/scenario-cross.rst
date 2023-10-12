@@ -23,6 +23,6 @@ Learn more about the Splunk Observability Cloud platform with the following cros
 
 See how you can use Splunk Observability Cloud with the Splunk platform:
 
-- :ref:`scenarios-splunk-integration-scenario1`
+- :ref:`splunkplatform-scenarios-splunk-integration-scenario1`
 
 Ç
