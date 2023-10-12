@@ -1,4 +1,5 @@
-.. _scenarios-splunk-integration-scenario1:
+.. _splunk-platform-integration-scenario1:
+
 
 *******************************************************************************************************************
 Scenario: Kai troubleshoots faster with Splunk IT Service Intelligence and Splunk Observability Cloud
