@@ -12,7 +12,7 @@ Splunk Observability Cloud and the Splunk platform scenarios
     :maxdepth: 3
     :hidden:
 
-    Splunk ITSI and Splunk Observability Cloud scenario <splunkplatform/scenarios/integration-scenario1>
+    Splunk ITSI and Splunk Observability Cloud scenario <integration-scenario1>
 
 
 The following use case scenario demonstrates how you can use Splunk Observability Cloud with the Splunk platform:
