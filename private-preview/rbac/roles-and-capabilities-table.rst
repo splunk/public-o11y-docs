@@ -36,13 +36,13 @@ Alerts and detectors roles and capabilities
 
 .. include:: /_includes/admin/roles_alerts_detectors.rst
 
-Infrastructure Monitoring navigators roles and capabilities
+Infrastructure Monitoring navigators
 ===============================================================================
 
 .. include:: /_includes/admin/roles_navs_dashbds.rst   
 
 
-Splunk Synthetic Monitoring roles and capabilities
+Splunk Synthetic Monitoring 
 ==================================================
 
 .. include:: /_includes/admin/synth-roles-caps.rst
@@ -50,13 +50,13 @@ Splunk Synthetic Monitoring roles and capabilities
 
 .. _rum-rbac:
 
-Splunk Real User Monitoring roles and capabilities
+Splunk Real User Monitoring
 ==================================================
 .. include:: /_includes/admin/rum-roles-caps.rst
 
 .. apm-rbac:
 
-Splunk Application Performance Monitoring roles and capabilities
+Splunk Application Performance Monitoring
 ==================================================================
 .. include:: /_includes/admin/roles_apm.rst
 
