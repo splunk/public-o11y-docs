@@ -1,4 +1,4 @@
-.. _integration-scenario-landing:
+.. _scenarios-integration-scenario-landing:
 
 ******************************************************************************************************
 Splunk Observability Cloud and the Splunk platform scenarios
