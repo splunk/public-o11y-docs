@@ -1,4 +1,6 @@
 .. list-table::
+    :header-rows: 1
+  :width: 100%
   :widths: 20,20,20,20,20
 
   * - :strong:`Permission`
