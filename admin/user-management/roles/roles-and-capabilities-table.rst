@@ -31,6 +31,12 @@ Alerts and detectors
 .. include:: /_includes/admin/roles_alerts_detectors1.rst
 
 
+Infrastructure Monitoring navigators
+===============================================================================
+
+.. include:: /_includes/admin/roles_navs_dashbds1.rst   
+
+
 Splunk Synthetic Monitoring 
 ==================================================
 
