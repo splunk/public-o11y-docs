@@ -17,4 +17,4 @@ Splunk Observability Cloud and the Splunk platform scenarios
 
 The following use case scenario demonstrates how you can use Splunk Observability Cloud with the Splunk platform:
 
-- :ref:`splunk-integration-scenario1`
+- :ref:`scenarios-splunk-integration-scenario1`
