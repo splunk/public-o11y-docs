@@ -5,7 +5,7 @@ Scenario: Kai troubleshoots faster with Splunk IT Service Intelligence and Splun
 *******************************************************************************************************************
 
 .. meta::
-   :description: This scenario describers how users can use Splunk ITSI and Splunk Observability Cloud together to drill down faster on problems and reduce mean time to resolution.
+   :description: This scenario describes how users can use Splunk ITSI and Splunk Observability Cloud together to drill down faster on problems and reduce mean time to resolution.
 
 Online Boutique, a fictitious company that runs an e-commerce site to sell its products, suddenly experiences degraded revenue in online sales. Kai, a site reliability engineer at Online Boutique, uses Splunk IT Service Intelligence and Splunk Observability Cloud together to accelerate troubleshooting.
 

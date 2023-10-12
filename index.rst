@@ -305,17 +305,10 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Measure and alert on your SLIs <splunkplatform/practice-reliability/slis>
+   Use case scenarios <splunkplatform/integration-scenario-landing>
 
 .. toctree::
    :maxdepth:   3
-
-   Respond to incidents <splunkplatform/practice-reliability/incident-response>
-
-.. toctree::
-   :maxdepth:   3
-
-   Collaborate on observability <splunkplatform/practice-reliability/collaboration>
 
 .. toctree::
    :caption: Administer Splunk Observability Cloud
