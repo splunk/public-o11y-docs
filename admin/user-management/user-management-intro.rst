@@ -13,7 +13,7 @@ Manage users and teams
    Manage teams TOGGLE <teams/manage-teams>
    Manage users TOGGLE <users/manage-users>
    Manage roles TOGGLE <roles/roles-and-capabilities-about>
-
+  
 
 
 Admininstrators can manage user access for their organization and create teams to coordinate teamwork. Perform the following tasks to set up your teams and provide team members with resources that can help streamline their teamwork.

@@ -1,18 +1,14 @@
-.. _roles-and-capabilities:
+.. _roles-phase1:
 
 ***************************************************
-About roles-based access control and capabilities
+About user roles in Splunk Observability Cloud
 ***************************************************
 
 .. meta::
    :description: Learn how to how to manage user roles and capabilities (also called permissions).
 
 
-|hr|
 
-:strong:`Available in Enterprise Edition or with Service Bureau.`
-
-|hr|
 
 .. toctree::
    :hidden:
@@ -21,11 +17,7 @@ About roles-based access control and capabilities
    Assign roles to users <users-assign-roles>
 
 
-Splunk Observability Clouds lets you restrict access to certain features to specific groups of users using role-based access control (RBAC). You assign roles to users. A role contains a set of capabilities. These capabilities define what actions are available to roles. For example, capabilities determine whether someone with a particular role has capabilities to create detectors or dashboards. For details about each role and the associated capabilities, see :ref:`roles-and-capabilities-table`. 
-
-The new roles provide more restricted access. This supports scenarios where additional teams such as external vendors or teams that might belong to other business units, only need read-only access. Role-based access control lets you restrict users to the least-required capabilities, helping you meet compliance, business, or architectural requirements. By assigning the least required capabilties, you can help prevent users from making unwanted changes. 
-
-Additionally, Splunk Observability Cloud role-based access control aligns with roles available in Splunk Cloud Platform, providing a consistent user and capability-based experience across Splunk Cloud Platform and Splunk Observability CLoud.
+Splunk Observability Clouds lets you restrict access to certain features to specific groups of users. You assign roles to users. For details about each role and the associated capabilities, see :ref:`roles-table-phase1`. 
 
 
 .. raw:: html
@@ -44,16 +36,12 @@ Splunk Observability Cloud comes with the following roles predefined:
     - :strong:`Description`
   * - admin
     - This role has the most capabilities assigned to it. An admin user has full privileges across Splunk Observability Cloud.
-  * - power 
+  * - user 
     - This role can access all components in Splunk Observability Cloud, access a subset of settings, and create, delete, and update charts, dashboards and detectors. This is the default role assigned to users.
-  * - usage
-    - This role allows a user to view the subscription usage page without being an admin. This role also has read_only privileges.
-  * - read_only
-    - This role can access all pages and objects that a power user can, but cannot create, edit, or delete objects. They have limited access to the Settings pages.
 
 
 
-Splunk Observability Cloud tokens also honor the role-based access control framework. Since tokens can now be assigned to roles, APIs inherit capabilities from their token. For example, an API using a token which is created with read-only role will inherent read-only permissions. This can be used take system backups with a reduced risk of introducing changes.
+Splunk Observability Cloud tokens also honor the role-based access control framework. Since tokens can now be assigned to roles, APIs inherit capabilities from their token. For example, an API using a token which is created with an admin role will inherent admin permissions. 
 
 
 .. raw:: html
@@ -73,34 +61,3 @@ APIs honor capabilities based on the role defined to their token. This is import
 
 
 
-.. Multiple roles for a user or team
-.. =========================================
-
-
-.. raw:: html
-
-  <embed>
-    <h2>Multiple roles for a user or team</h2>
-  </embed>
-
-You can assign multiple roles to individual users. The user receives a combination of capabilities inherited from all of their roles. Additionally, if you revoke a role from a user the change takes effect immediately. The cache is invalidated and the user no longer has access to the capabilities associated with the role that was revoked.
-
-
-.. list-table::
-  :header-rows: 1
-  :widths: 30, 70
-
-  * - :strong:`Role`
-    - :strong:`Capabilities`
-  * - read-only
-    - Read-only access to most actions and pages including settings for most products except: the Subscription usage pages, and some admin pages.
-  * - subscription usage 
-    - Access to Subscription usage page only, plus the read-only capabilities.
-  * - power
-    - Includes capabilities to access all components in Splunk Observability Cloud. Can access a subset of settings, and create, delete, and update charts, dashboards and detectors.
-  * - admin
-    - An admin user has full privileges across Splunk Observability Cloud.
-  * - subscription usage and power user
-    - All the capabilities of a power user, plus the ability to view the Subscription useage pages for the org.
-  * - read_only and subscription usage
-    - All the capabilities of a read-only user, plus the ability to view the Subscription useage pages for the org.

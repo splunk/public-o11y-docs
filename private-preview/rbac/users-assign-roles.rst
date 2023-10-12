@@ -1,4 +1,8 @@
-.. _users-assign-roles:
+:orphan:
+
+.. _users-assign-roles-ph3:
+
+
 
 ********************************************************
 Assign roles to users in Splunk Observability Cloud
@@ -7,9 +11,13 @@ Assign roles to users in Splunk Observability Cloud
 .. meta::
    :description:  Manage users: Add one or more roles to a user in Observability Cloud.
 
-You can assign roles to existing and new users to determine what they can do and which features they can access in Splunk Observability Cloud. 
 
+.. include:: /_includes/private-preview.rst
 
+   
+You can assign roles to existing and new users to determine what they can do and which features they can access in Splunk Observability Cloud. For example, certain roles allow users to create detectors or dashboards.
+
+Users can have multiple roles at the same time. See :ref:`roles-and-capabilities` for more information. For details about each role and the associated capabilities, see :ref:`roles-and-capabilities-table`.
 
 .. note:: To create or manage users, you must have administrator access. To get this access, an existing administrative adds it to your user profile. See :ref:`request-admin` for more information.
 
@@ -81,3 +89,5 @@ Edit user roles using the API
 ===============================
 
 To view, add, or remove roles using the Observability Cloud REST API, see :new-page:`Organizations <https://dev.splunk.com/observability/reference/api/organizations/latest>` in the developer documentation.
+
+
