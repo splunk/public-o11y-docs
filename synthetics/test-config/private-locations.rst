@@ -168,6 +168,6 @@ If your queue latency increases but your queue length doesn't, then try these tr
 
 The maximum number of runs in a queue is 100,000. 
 
-Any runners older than one hour are removed from the queue. 
+Any runs older than one hour are removed from the queue. 
 
 

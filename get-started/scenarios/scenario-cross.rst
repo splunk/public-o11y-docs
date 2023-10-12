@@ -20,4 +20,6 @@ Learn more about the Splunk Observability Cloud platform with the following cros
 - :ref:`get-started-scenario`
 - :ref:`otel-collector-scenario`
 
-Ç
+See how you can use Splunk Observability Cloud with the Splunk platform to resolve problems more efficiently in the following scenario:
+
+- :ref:`integration-scenario1`
