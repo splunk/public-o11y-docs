@@ -295,7 +295,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: Splunk platform users
    :maxdepth:   3
 
-   Splunk Observability Cloud and the Splunk platform <splunkplatform/splunkplatform-landing>
+   Splunk Observability Cloud and the Splunk platform <splunkplatform/practice-reliability/splunkplatform-landing>
 
 .. toctree::
    :maxdepth:   3
@@ -305,17 +305,10 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Measure and alert on your SLIs <splunkplatform/practice-reliability/slis>
+   Use case scenarios <splunkplatform/scenarios/integration-scenario-landing>
 
 .. toctree::
    :maxdepth:   3
-
-   Respond to incidents <splunkplatform/practice-reliability/incident-response>
-
-.. toctree::
-   :maxdepth:   3
-
-   Collaborate on observability <splunkplatform/practice-reliability/collaboration>
 
 .. toctree::
    :caption: Administer Splunk Observability Cloud
