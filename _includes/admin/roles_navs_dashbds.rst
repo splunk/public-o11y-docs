@@ -7,19 +7,19 @@
     - :strong:`Usage`
     - :strong:`Read_only`
 
-  * - :strong:`View navigator`
+  * - :strong:`View navigators`
     - Yes
     - Yes
     - Yes
     - Yes
 
-  * - :strong:`Edit navigator`
+  * - :strong:`Edit navigators`
     - Yes
     - Yes
     - No
     - No
 
-  * - :strong:`Delete navigator`
+  * - :strong:`Delete navigators`
     - Yes
     - No
     - No

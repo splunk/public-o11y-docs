@@ -36,7 +36,7 @@ Alerts and detectors roles and capabilities
 
 .. include:: /_includes/admin/roles_alerts_detectors.rst
 
-Infrastructure Monitoring navigators roles and capabilities
+Infrastructure Monitoring navigators
 ===============================================================================
 
 .. include:: /_includes/admin/roles_navs_dashbds.rst   
