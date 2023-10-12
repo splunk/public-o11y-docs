@@ -38,8 +38,14 @@ Check service health in Splunk IT Service Intelligence
 
 .. _synthetics-check:
 
-Troubleshoot with Synthetics and APM in Splunk Observability Cloud
+Troubleshoot using Splunk Observability Cloud
 ===================================================================================================================
+
+In Splunk Observability Cloud, Kai troubleshoots the problem they first identified in ITSI by using the Synthetic Monitoring and Application Performance Monitoring (APM) views.
+
+
+Examine synthetics tests in Splunk Synthetic Monitoring
+-------------------------------------------------------------------------------------------------------------------
 
 1. In the Synthetics view, Kai opens one of the failed tests then scrolls down to the recent run results section and opens one of the results. Kai notices that Splunk tracks the front-end service of each element of the Online Boutique website. Splunk also tracks the visual experience of the end-to-end customer journey so that Kai can replay it in a video capture to see what customers are seeing.
 
@@ -60,15 +66,18 @@ Troubleshoot with Synthetics and APM in Splunk Observability Cloud
    .. image:: /_images/splunkplatform/synthetics2apm.png
      :width: 100%
      :alt: This screenshot shows how to link from Synthetics to APM.
-     
 
-4. In Splunk APM, Kai chooses to go to a live service map. Kai sees red lines indicating slowness between the external clients and the payment service. Kai hovers over :guilabel:`paymentservice` and sees that it is responsible for many root cause errors.
+
+Investigate service dependencies in Splunk APM
+-------------------------------------------------------------------------------------------------------------------     
+
+1. In Splunk APM, Kai chooses to go to a live service map. Kai sees red lines indicating slowness between the external clients and the payment service. Kai hovers over :guilabel:`paymentservice` and sees that it is responsible for many root cause errors.
 
    .. image:: /_images/splunkplatform/service_map.png
      :width: 100%
      :alt: This screenshot shows a close up of the frontend, checkout service, and payment service.
 
-5. Kai selects :guilabel:`paymentservice` on the map to to split the payment service out by application version, revealing whether a recent code push might have negative impact on customers. On the right panel, Kai selects :guilabel:`Breakdown` then selects :guilabel:`Version`, then :guilabel:`Errors`. Sure enough, the new version of the code is causing all of the slowness and root cause errors. Kai lets the development team know that they should roll back the new version, v350.10. 
+2. Kai selects :guilabel:`paymentservice` on the map to to split the payment service out by application version, revealing whether a recent code push might have negative impact on customers. On the right panel, Kai selects :guilabel:`Breakdown` then selects :guilabel:`Version`, then :guilabel:`Errors`. Sure enough, the new version of the code is causing all of the slowness and root cause errors. Kai lets the development team know that they should roll back the new version, v350.10. 
 
    .. image:: /_images/splunkplatform/code_version.png
      :width: 100%
