@@ -14,7 +14,7 @@ Splunk Observability Cloud global scenarios
 
     End-to-end scenario <scenario>
     Collector scenario <scenario-collector>
-    Splunk ITSI and Splunk Observability Cloud scenario <splunk-platform-integration-scenario1>
+    Splunk ITSI and Splunk Observability Cloud scenario <splunkplatform/scenarios/integration-scenario1>
 
 Learn more about the Splunk Observability Cloud platform with the following cross-product scenarios:
 
@@ -23,6 +23,6 @@ Learn more about the Splunk Observability Cloud platform with the following cros
 
 See how you can use Splunk Observability Cloud with the Splunk platform:
 
-- :ref:`splunk-platform-integration-scenario1`
+- :ref:`integration-scenario1`
 
 Ç
