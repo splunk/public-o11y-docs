@@ -3,27 +3,23 @@
 
   * - :strong:`Permission`
     - :strong:`Admin`
-    - :strong:`Power user`
-    - :strong:`Usage`
-    - :strong:`Read_only`
+    - :strong:`User`
+
 
   * - :strong:`View navigator`
     - Yes
     - Yes
-    - Yes
-    - Yes
+
 
   * - :strong:`Edit navigator`
     - Yes
     - Yes
-    - No
-    - No
+
 
   * - :strong:`Delete navigator`
     - Yes
     - No
-    - No
-    - No
+
 
 
 

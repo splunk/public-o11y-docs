@@ -43,7 +43,7 @@ Alerts and detectors roles and capabilities
 Infrastructure Monitoring navigators
 ===============================================================================
 
-.. include:: /_includes/admin/roles_navs_dashbds1.rst   
+.. include:: /_includes/admin/roles_navs_dashbds.rst   
 
 
 Splunk Synthetic Monitoring 
