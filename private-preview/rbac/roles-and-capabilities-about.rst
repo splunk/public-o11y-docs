@@ -9,6 +9,7 @@ About roles in Splunk Observability Cloud
 .. meta::
    :description: Learn how to how to manage user roles and capabilities (also called permissions).
 
+.. include:: /_includes/private-preview.rst
 
 |hr|
 

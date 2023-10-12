@@ -11,6 +11,8 @@ Splunk Observability Cloud roles and capabilities
 
 
 
+.. include:: /_includes/private-preview.rst
+   
 |hr|
 
 :strong:`Available in Enterprise Edition`
@@ -41,7 +43,7 @@ Alerts and detectors roles and capabilities
 Infrastructure Monitoring navigators
 ===============================================================================
 
-.. include:: /_includes/admin/roles_navs_dashbds.rst   
+.. include:: /_includes/admin/roles_navs_dashbds1.rst   
 
 
 Splunk Synthetic Monitoring 
