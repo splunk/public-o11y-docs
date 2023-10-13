@@ -8,7 +8,7 @@ Free disk space (filesystems)
 
 .. note:: If you are using the Splunk Distribution of OpenTelemetry Collector and want to collect file system utilization metrics, use the native OTel component :ref:`host-metrics-receiver`.
 
-The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the ``filesystems`` monitor type to to retrieve file system metrics.
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the ``filesystems`` monitor type to retrieve free disk space metrics.
 
 This integration is available on Linux and Windows. On Linux, this monitor relies on the ``/proc`` filesystem. If the underlying host's ``/proc`` file system is mounted somewhere other than ``/proc``, specify the path using the top level setting ``procPath``.
 
