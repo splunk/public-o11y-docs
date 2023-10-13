@@ -137,17 +137,7 @@ To configure your GCP service, follow these steps:
 
 .. _gcp-projects:
 
-.. raw:: html
-
-   <embed>
-      <h4>Configure multiple GCP projects<a name="gcp-projects" class="headerlink" href="#gcp-projects" title="Permalink to this headline">¶</a></h4>
-   </embed>
-
-To monitor multiple GCP projects with the integration you have two options: 
-
-* Repeat the steps described in this section for each one of the projects. 
-
-* Follow the instructions in GCP :new-page:`Overview of viewing metrics for multiple projects <https://cloud.google.com/monitoring/settings>` to attach monitored projects to the one you've already configured.
+.. note:: To monitor multiple GCP projects, repeat the steps described in this section for each one of the projects.
 
 .. _gcp-three:
 
