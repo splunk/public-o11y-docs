@@ -6,7 +6,7 @@ Scenario: Alex troubleshoots slow traces using Trace Analyzer
 .. meta::
     :description: Alex uses Trace Analyzer to explore APM data from wide trends down to single traces to identify the cause and prevalence of slow traces.
 
-Alex, the site reliability engineer for Buttercup Games, receives a report of a customer who experienced slowness during checkout. To proactively improve customer experience, Alex uses Trace Analyzer to determine how pervasive the checkout slowness is. 
+Alex, the site reliability engineer for Buttercup Games, receives a report of a customer who experienced slowness during checkout. To proactively improve the customer experience, Alex uses Trace Analyzer to determine how pervasive the checkout slowness is. 
 
 These are the steps Alex takes to determine how pervasive the checkout errors are:
 
@@ -32,7 +32,7 @@ Customer support shared that the customer reported slowness when going through t
 Alex adds a filter for the checkout service and turns off sampling
 ============================================================================
 
-Alex further refines the traces they are viewing by adding a filter for the checkout service. Alxe also selects :guilabel:`1:1` for the :guilabel:`Sample Ratio` so that they can view all traces that match their criteria. 
+Alex further refines the traces they are viewing by adding a filter for the checkout service. Alex also selects :guilabel:`1:1` for the :guilabel:`Sample Ratio` so that they can view all traces that match their criteria. 
 
 ..  image:: /_images/apm/apm-use-cases/trace-duration-filter-sample.gif
     :width: 95%
@@ -43,15 +43,15 @@ Alex further refines the traces they are viewing by adding a filter for the chec
 Alex reviews the heatmap for a high percentage of high-duration traces
 ============================================================================
 
-Alex uses the heatmap to better understand trace durations for the time period reported by the customer. Alex notes the green area of the heatmap at 11:31 AM which tells them that about 0.1 or 10% of traces per second had durations of 10+ seconds. 
+Alex uses the heatmap to better understand trace durations for the time period reported by the customer. Alex notes the green area of the heatmap at 11:31 AM which tells them that about 0.1 or 10% of traces per second had durations of 10 or more seconds. 
 
 ..  image:: /_images/apm/apm-use-cases/trace-duration-interpret-heatmap.png
     :width: 95%
-    :alt: This screenshot shows the heatmap for 11:31 which shows 10% of traces had durations of 10+ seconds
+    :alt: This screenshot shows the heatmap for 11:31 which shows 10% of traces had durations of 10 or more seconds
 
 .. _review-traces:
 
-Alex sorts to table of traces to review high-duration traces
+Alex sorts the table of traces to review high-duration traces
 ============================================================================
 
 Alex sorts the table of traces by duration so that they can review the high-duration traces.
