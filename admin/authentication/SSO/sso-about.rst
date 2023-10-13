@@ -59,16 +59,16 @@ Additionally, the IdP needs to know what parameters to send to Splunk Observabil
       :width: 90%
       :alt: The attributes that the IdP sends to Splunk Observability Cloud.
 
-The product-specific integrations provide default values for most of these fields and you don't have to configure them manually.  When setting up generic SAML or Active Directory Federation Searches (FS), you need to provide all the values yourself. 
+The product-specific integrations provide default values for most of these fields and you don't have to configure them manually.  When setting up generic SAML or Microsoft Entra Federation Searches (FS), you need to provide all the values yourself. 
 
-The following table uses Azure Active Directory as an example and shows the corresponding field names in Splunk Observability Cloud. Different IdPs may have slightly different field names. Example values are indicated in brackets.
+The following table uses Microsoft Entra as an example and shows the corresponding field names in Splunk Observability Cloud. Different IdPs may have slightly different field names. Example values are indicated in brackets.
 
 .. list-table::
    :header-rows: 1
    :widths: 50, 50
 
    * - :strong:`Splunk Observability Cloud field name`
-     - :strong:`Azure Active Directory field name`
+     - :strong:`Microsoft Entra field name`
 
    * - :guilabel:`Integration ID` (EPAMIDfalsg)
      - :guilabel:`Reply URL` (Assertion Consumer Service URL) (https://your_realm/v1/saml/acsEPAMIDfalsg)
