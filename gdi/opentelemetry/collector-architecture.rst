@@ -44,17 +44,10 @@ The Collector supports the following processor architectures and operating syste
 
 .. _native-monitor-support-matrices:
 
-<<<<<<< HEAD
-Compatible monitors and components
-======================================================================
-
-All native OpenTelemetry receivers are supported in the Collector for the x86_64, AMD64, ARM64, and ppc64le architectures.
-=======
 Native Smart Agent monitors
 ==========================================================
 
 Native Smart Agent monitors are grouped into four bundles:
->>>>>>> 108888c3 (architecture support matrices)
 
 * Standalone
 * Prometheus
