@@ -135,20 +135,6 @@ To configure your GCP service, follow these steps:
 #. Activate Key type :guilabel:`JSON`, and select :guilabel:`CREATE`. A new service account key JSON file is then downloaded to your computer.
 #. In a new window or tab, go to :new-page:`Cloud Resource Manager API <https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com?pli=1>`, and activate the Cloud Resource Manager API. You need to activate this API so Splunk Infrastructure Monitoring can use it to validate permissions on the service account keys.
 
-.. _gcp-projects:
-
-.. raw:: html
-
-   <embed>
-      <h4>Configure multiple GCP projects<a name="gcp-projects" class="headerlink" href="#gcp-projects" title="Permalink to this headline">¶</a></h4>
-   </embed>
-
-To monitor multiple GCP projects with the integration you have two options: 
-
-* Repeat the steps described in this section for each one of the projects. 
-
-* Follow the instructions in GCP :new-page:`Overview of viewing metrics for multiple projects <https://cloud.google.com/monitoring/settings>` to attach monitored projects to the one you've already configured.
-
 .. _gcp-three:
 
 .. raw:: html
