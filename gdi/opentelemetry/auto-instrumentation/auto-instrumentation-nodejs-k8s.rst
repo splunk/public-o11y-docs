@@ -1,8 +1,8 @@
 .. _auto-instrumentation-nodejs-k8s:
 
-*****************************************************************************
-Zero Configuration Auto Instrumentation for Kubernetes Node.js applications
-*****************************************************************************
+************************************************************************************
+Zero Configuration Automatic Instrumentation for Kubernetes Node.js applications
+************************************************************************************
 
 .. meta::
    :description: Use the Collector with the upstream Kubernetes Operator for automatic instrumentation to easily add observability code to your application, enabling it to produce telemetry data.
