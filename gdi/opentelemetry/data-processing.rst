@@ -11,6 +11,8 @@ A pipeline defines the path the ingested data follows in the Collector, starting
 
 Pipelines operate on three data types: logs, traces, and metrics. To learn more about data in Splunk Observability Cloud, see :ref:`data-model`.
 
+.. note:: See how to perform common actions and tasks with the Collector at :ref:`collector-how-to`.
+
 Define the pipeline
 =========================================
 
@@ -34,9 +36,9 @@ A pipeline configuration typically looks like this:
       # Traces is the pipeline type.
         receivers: [otlp, jaeger, zipkin]
         processors: [memory_limiter, batch]
-        exporters: [otlp, jaeger, zipkin]
+        exporters: [otlp, splunk_hec, jaeger, zipkin]
 
-This example defines a pipeline for ``traces``, with three receivers, two processors, and three exporters. The following table describes the receivers, processors, and exporters used in this example.
+This example defines a pipeline for ``traces``, with three receivers, two processors, and four exporters. The following table describes the receivers, processors, and exporters used in this example. For more details, see :ref:`Collector components <otel-components>`.
 
 .. list-table::
    :widths: 25 50 25

@@ -5,7 +5,7 @@ Set up an Uptime test
 **************************************
 
 .. meta::
-    :description: Learn how to set up an Uptime test in Splunk Synthetic Monitoring.
+    :description: Steps to set up a HTTP or port uptime test in Splunk Synthetic Monitoring, and add advanced settings. 
   
 An Uptime test lets you make a request to a specified URL or port address and monitor its response time and response code. Uptime tests record three metrics from each run: response time, DNS time, and time to first byte. 
 
@@ -47,10 +47,10 @@ Follow these steps to set up a Port Uptime test:
 View your Uptime test
 ======================
 
-Now that you created and saved a test, check whether it’s collecting data as expected: 
+Now that you created and saved a test, check whether it's collecting data as expected: 
 
 #. From the :guilabel:`Tests` list, select the three-dot :guilabel:`Actions` menu and select :guilabel:`Play` arrow icon to manually trigger a live run of the test, or wait for at least one duration of the test frequency you set so that the test has time to run and collect data. 
-#. Select the test you’re interested in to open the :guilabel:`Test History` view, where you can view visualizations of recent test results and metrics.
+#. Select the test you're interested in to open the :guilabel:`Test History` view, where you can view visualizations of recent test results and metrics.
 
 Interpret your Uptime test results
 ====================================

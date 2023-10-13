@@ -62,6 +62,7 @@ Example
 
 .. code-block:: yaml
 
+
    receivers:
       smartagent/signalfx-forwarder:
          type: signalfx-forwarder

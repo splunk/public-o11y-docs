@@ -104,6 +104,7 @@ If you don't see metrics and metadata after manually deploying the Collector in 
 #. Make sure that the agent configuration has a ``signalfx`` exporter in a pipeline. The following example shows a ``signalfx`` exporter and a pipeline that uses it for sending metrics:
 
   .. code-block:: yaml
+
       :emphasize-lines: 2,3,4,5,14
 
       exporters:
@@ -134,6 +135,7 @@ This processor inserts a ``deployment.environment`` span tag to all spans. The A
 For example:
 
 .. code-block:: yaml
+
 
     processors:
       resourcedetection:
@@ -184,6 +186,7 @@ If you encounter a conflict with port 8888, you will need to change to port 8889
 
 .. code-block:: yaml
 
+
       service:
         telemetry:
           metrics:
@@ -193,6 +196,7 @@ If you encounter a conflict with port 8888, you will need to change to port 8889
 2. Update the port for ``receivers.prometheus/internal`` from 8888 to 8889:
 
 .. code-block:: yaml
+
 
       receivers:
         prometheus/internal:

@@ -18,14 +18,8 @@ To instrument your React Native or Expo application and get data into Splunk RUM
 Check compatibility and requirements 
 ===============================================
 
-Splunk RUM for Mobile supports React Native 0.68 and higher. 
+.. include:: /_includes/requirements/react.rst
 
-The library is also compatible with the following frameworks and libraries:
-
-- Expo framework
-- React Navigation 5 and 6
-
-.. note::  To instrument applications using React Native 0.67 and lower, see :ref:`rn-lower-versions`.
 
 .. _rum-react-install:
 

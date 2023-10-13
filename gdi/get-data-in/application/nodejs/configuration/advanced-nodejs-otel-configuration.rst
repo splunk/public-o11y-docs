@@ -74,9 +74,6 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
    * - ``SPLUNK_ACCESS_TOKEN``
      - ``accessToken``
      - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Required if you need to send data to the Splunk Observability Cloud ingest endpoint. See :ref:`admin-tokens`.
-   * - ``OTEL_INSTRUMENTATION_COMMON_DEFAULT_ENABLED``
-     - ``d``
-     - Whether to load all the embedded instrumentations. The default value is ``true``. You can use  
    * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
      - ``tracing.serverTimingEnabled``
      - Activates the addition of server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-nodejs`. The default value is ``true``.
@@ -108,7 +105,7 @@ For example, to turn off all default instrumentations and only turn on the ``bun
 
 .. code-block:: shell
 
-   export OTEL_INSTRUMENTATION_COMMON_DEFAULT_ENABLED=true
+   export OTEL_INSTRUMENTATION_COMMON_DEFAULT_ENABLED=false
    export OTEL_INSTRUMENTATION_BUNYAN_ENABLED=true
 
 The previous settings only apply to instrumentations loaded by the Splunk Distribution of OpenTelemetry JS by default. When using the programmatic API to supply a list of user-specified instrumentations, they have no effect.
@@ -170,7 +167,7 @@ The following settings control trace exporters and their endpoints:
      - Comma-separated list of trace exporters to use. The default value is ``otlp``. To output to the console, set the variable to ``console``.
    * - ``OTEL_METRICS_EXPORTER``
      - ``metrics.metricReaderFactory``
-     - Comma-separated list of metrics exporter to use. The default value is ``otlp``. To output to the console, set the variable to ``console``.
+     - Comma-separated list of metrics exporter to use. The default value is ``otlp``. To output to the console, set the variable to ``console``. If set to ``none``, metric exports are turned off.
    * - ``OTEL_EXPORTER_OTLP_METRICS_PROTOCOL``
      - ``metrics.metricReaderFactory``
      - Procotol for exporting metrics. Accepted values are ``grpc`` and ``http/protobuf``. The default value is ``grpc``.
@@ -282,6 +279,7 @@ The following settings activate runtime metrics collection:
 
 .. list-table::
    :header-rows: 1
+   :class: fix-width
 
    * - Environment variable
      - Argument to ``start()``

@@ -63,6 +63,33 @@ Memory profiling also exposes memory metrics for your application, which you can
 .. raw:: html
 
   <embed>
+    <h2>Supported languages</h2>
+  </embed>
+
+The following programming languages have instrumentation available: 
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20, 40, 40
+
+   * - :strong:`Language`
+     - :strong:`Available instrumentation`
+     - :strong:`Documentation`
+   * - Java
+     - Splunk Distribution of OpenTelemetry Java version 1.14.2 or higher
+     - * :ref:`instrument-java-applications`
+       * :ref:`profiling-configuration-java`
+   * - Node.js
+     - Splunk Distribution of OpenTelemetry JS version 2.0 or higher
+     - :ref:`instrument-nodejs-applications`
+   * - .NET
+     - SignalFx Instrumentation for .NET version 1.0.0 or higher
+     - :ref:`instrument-dotnet-applications`
+
+
+.. raw:: html
+
+  <embed>
     <h2>Get AlwaysOn Profiling data into Splunk APM</h2>
   </embed>
 

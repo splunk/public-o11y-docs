@@ -92,7 +92,7 @@ In a rule, you define how you want to group together URLs based on common charac
 
 What is a pattern?
 ------------------------------------
-The pattern is the most important component of a rule. The pattern defines the common portion in the path or domain that is shared by all URLs that match the rule. Patterns also consist of tokens, like the domain and path in the URL. A wildcard in the pattern matches actual tokens in the URL’s path or domain. You can apply a wildcard to a pattern to match one or more tokens.  
+The pattern is the most important component of a rule. The pattern defines the common portion in the path or domain that is shared by all URLs that match the rule. Patterns also consist of tokens, like the domain and path in the URL. A wildcard in the pattern matches actual tokens in the URL's path or domain. You can apply a wildcard to a pattern to match one or more tokens.  
 
 
 <?> Wildcard for single token 

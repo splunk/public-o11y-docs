@@ -6,7 +6,7 @@ Set up a Browser test
 **************************************
 
 .. meta::
-    :description: Learn how to set up a Browser test in Splunk Synthetic Monitoring.
+    :description: Steps to set up a browser test to track the performance of specific site resources, or a multi-step user flow, in Splunk Synthetic Monitoring.
 
 
 Use a Browser test to monitor the user experience for a single page or a multi-step user flow by running a synthetic test of the URLs you provide. Use this type of test to monitor conversion paths or any path that requires multiple steps or runs JavaScript. For an example, see :ref:`browser-test-scenario`.
@@ -85,6 +85,7 @@ If your recording contains unsupported steps, you need to edit the step to refor
 .. list-table::
    :header-rows: 1
    :widths: 50 50 
+   :class: fix-width
 
    * - :strong:`Google Chrome Recorder snippet`
      - :strong:`Synthetic snippet`
@@ -308,10 +309,10 @@ If your recording contains unsupported steps, you need to edit the step to refor
 View your Browser test
 ====================================
 
-Now that you created and saved a test, check whether it’s collecting data as expected: 
+Now that you created and saved a test, check whether it's collecting data as expected: 
 
 #. From the :guilabel:`Tests` list, select the three-dot :guilabel:`Actions` menu and select :guilabel:`Play` arrow icon to manually trigger a live run of the test, or wait for at least one duration of the test frequency you set so that the test has time to run and collect data. 
-#. Select the test you’re interested in to open the :guilabel:`Test history` view, where you can view visualizations of recent test results and metrics.
+#. Select the test you're interested in to open the :guilabel:`Test history` view, where you can view visualizations of recent test results and metrics.
 
 #. See :ref:`browser-test-results` to learn more about Browser test results. 
 
@@ -364,7 +365,7 @@ Authentication
 
 Add credentials to authenticate with sites that require additional security protocols, for example from within a corporate network. By using concealed global variables in the Authentication field, you create an additional layer of security for your credentials simplify the ability to share credentials across checks. For more, see :ref:`concealed-gv`
 
-The Authentication field is available for Browser tests in Chrome only. Firefox tests support Basic Authentication. Splunk Synthetic Monitoring supports a suite of authentication protocols. At this time, Splunk Synthetic Monitoring supports the following in Chrome:
+The Authentication field is available for Browser tests in Chrome only. Splunk Synthetic Monitoring supports a suite of authentication protocols. At this time, Splunk Synthetic Monitoring supports the following in Chrome:
 
 * Basic Authentication
 * NTLM

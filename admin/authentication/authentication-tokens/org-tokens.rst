@@ -11,9 +11,9 @@ Access tokens, also known as org tokens, are long-lived organization-level token
 
 Use access tokens to:
 
-- Send data points to Infrastructure Monitoring with API calls.
+- Send data points to Splunk Observability Cloud with API calls.
 - Run scripts that call the API.
-- Manage your resource by tracking usage for different groups of users, services, teams, and so on. For example, you have users in the U.S. and Canada sending data to Infrastructure Monitoring. You can give each group its specific access token to compare the amount of data coming from each country.
+- Manage your resource by tracking usage for different groups of users, services, teams, and so on. For example, you have users in the U.S. and Canada sending data to Splunk Observability Cloud. You can give each group its specific access token to compare the amount of data coming from each country.
 
 .. note:: By default, only users who are administrators can search for and view all access tokens. You can change this default when you create or update an access token.
 
@@ -29,7 +29,7 @@ You can't rotate tokens after they expire. If you don't rotate a token before it
 The default access token
 ===========================
 
-By default, every organization has one organization-level access token. If you don't create any additional tokens, every API request that sends data to Infrastructure Monitoring must use this access token.
+By default, every organization has one organization-level access token. If you don't create any additional tokens, every API request that sends data to Splunk Observability Cloud must use this access token.
 
 .. _manage-access-token:
 
@@ -40,7 +40,7 @@ To manage your access (org) tokens:
 
 #. Open the :guilabel:`Settings` menu.
 #. Select :menuselection:`Access Tokens`.
-#. To find the access token in a large list, start entering its name in the search box. Infrastructure Monitoring returns matching results.
+#. To find the access token in a large list, start entering its name in the search box. Splunk Observability Cloud returns matching results.
 #. To look at the details for an access token, select the expand icon to the left of the token name.
 
    For information about the access token permissions allowed by the :guilabel:`Authorization Scopes` field value, see the permissions step in :ref:`create-access-token`.
@@ -58,7 +58,7 @@ To manage your access (org) tokens:
    #. If you selected :guilabel:`Admins and Select Users or Teams can Read`, select the users or teams to whom you want to give access:
 
       #. Select :guilabel:`Add Team or User`. Observability Cloud displays a list of teams and users in your organization.
-      #. To find the team or username in a large list, start entering the name in the search box. Infrastructure Monitoring returns matching results.
+      #. To find the team or username in a large list, start entering the name in the search box. Splunk Observability Cloud returns matching results.
          Select the user or team.
       #. If you need to add more teams or users, select :guilabel:`Add Team or User` again.
 
@@ -96,7 +96,7 @@ To create an access token:
 #. Open the Observability Cloud main menu.
 #. Select :menuselection:`Settings` and select :menuselection:`Access Tokens`.
 #. Select :guilabel:`New Token`. If your organization has a long list of access tokens, you might need to scroll down to the bottom of the list to access this button.
-#. Enter a unique token name. If you enter a token name that is already in use, even if the token is inactive, Infrastructure Monitoring doesn't accept the name.
+#. Enter a unique token name. If you enter a token name that is already in use, even if the token is inactive, Splunk Observability Cloud doesn't accept the name.
 #. Select an authorization scope for the token from one of the following values:    
    
    .. note:: Assign only one authorization scope to each token. Applying both the :strong:`API` and :strong:`Ingest` authorization scopes to the same token might raise a security concern.
@@ -113,13 +113,13 @@ To create an access token:
         - POST :code:`https://ingest.<REALM>.signalfx.com/v2/event`
         - POST :code:`https://ingest.<REALM>.signalfx.com/v1/trace`
 
-      For information about these endpoints, see :new-page:`Send Monitoring Metrics and Custom Events <https://dev.splunk.com/observability/docs/datamodel/ingest/>`.
-   - :strong:`API Token`: Select this authorization scope to use the token to authenticate with Infrastructure Monitoring endpoints. Example use cases are Terraform, programmatic usage of the API for business objects, and so on. These endpoints use the following base URLs: 
+      For information about these endpoints, see :new-page:`Sending data points <https://dev.splunk.com/observability/docs/datamodel/ingest/>`.
+   - :strong:`API Token`: Select this authorization scope to use the token to authenticate with Splunk Observability Cloud endpoints. Example use cases are Terraform, programmatic usage of the API for business objects, and so on. These endpoints use the following base URLs: 
         
         - :code:`https://api.<REALM>.signalfx.com`
         - :code:`wss://stream.<REALM>.signalfx.com`
 
-      For information about these endpoints, see :new-page:`Summary of Splunk Infrastructure Monitoring API Endpoints <https://dev.splunk.com/observability/docs/apibasics/api_list/>`.
+      For information about these endpoints, see :new-page:`Summary of Splunk Observability Cloud API Endpoints <https://dev.splunk.com/observability/docs/apibasics/api_list/>`.
 
 #. Edit the visibility permissions:
 
@@ -133,7 +133,7 @@ To create an access token:
 #. If you selected :guilabel:`Admins and Select Users or Teams can Read`, select the users or teams to whom you want to give access:
 
    #. Select :guilabel:`Add Team or User`. Observability Cloud displays a list of teams and users in your organization.
-   #. To find the team or username in a large list, start entering the name in the search box. Infrastructure Monitoring returns matching results.
+   #. To find the team or username in a large list, start entering the name in the search box. Splunk Observability Cloud returns matching results.
       Select the user or team.
    #. To add more teams or users, select :guilabel:`Add Team or User` again.
 

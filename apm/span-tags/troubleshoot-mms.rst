@@ -12,7 +12,7 @@ Troubleshoot cardinality in Monitoring MetricSets
 Follow these steps to troubleshoot high cardinality issues and Monitoring MetricSet configurations. 
 
 
-You’ve reached your subscription limit or you’re unable to create new Monitoring MetricSets
+You've reached your subscription limit or you're unable to create new Monitoring MetricSets
 =========================================================================================================
 
 Cause: Your cardinality is too high
@@ -64,13 +64,13 @@ The following table outlines the difference between endpoint and service level M
           * To choose a subset of endpoints, you can add a list or write a regular expression pattern to match the endpoints you want to track 
         - * If you are interested in metrics about the overall health of you service, start with a a service level MetricSet 
           * The Monitoring MetricSets at the service level are an aggregation of the metric sets at the endpoint-level
-          * If you don’t specify any filters, then the tag is added to all of the endpoints for the Monitoring MetricSet for the service
+          * If you don't specify any filters, then the tag is added to all of the endpoints for the Monitoring MetricSet for the service
 
 
 
 The MMS at the service level are an aggregation of the metric sets at the endpoint-level. If you specify the endpoints that are of interest to you in your Monitoring MetricSet, then you can reduce the amount of data.
 
-However, limiting the number of endpoints in your Monitoring MetricSet isn’t always a guaranteed way to reduce your cardinality. 
+However, limiting the number of endpoints in your Monitoring MetricSet isn't always a guaranteed way to reduce your cardinality. 
 
 Solution: Apply tag filters  
 ------------------------------------------------------------------------------------------------------------------

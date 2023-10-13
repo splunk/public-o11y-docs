@@ -4,7 +4,14 @@
 Scenario: Monitor a multi-step workflow using a Browser test 
 ******************************************************************************************
 
+<<<<<<< HEAD
 Kai, a site reliability engineer at Buttercup Industries, a fictitious e-commerce company, uses Splunk Synthetic Monitoring to monitor the performance of the Buttercup Industries site. Kai keeps ahead of potential issues with their organization's site or application using Browser tests.
+=======
+.. meta::
+    :description: Fictional use case describing how to monitor the performance of a company website using browser test monitoring from Splunk Synthetic Monitoring. 
+
+Kai, a site reliability engineer at Buttercup Industries, a fictitious e-commerce company, uses Splunk Synthetic Monitoring to monitor the performance of the Buttercup Industries site. Kai's scenario demonstrates how Browser test monitoring can help keep you ahead of potential issues with your organization's site or application.
+>>>>>>> main
 
 Set up a Browser test to monitor a critical workflow 
 ======================================================

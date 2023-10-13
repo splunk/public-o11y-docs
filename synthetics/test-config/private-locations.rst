@@ -5,7 +5,7 @@ Private locations
 *****************
 
 .. meta::
-    :description: Learn about private locations in Splunk Synthetic Monitoring.
+    :description: Run synthetic tests from an internal site or private web application to quickly find defects using Splunk Synthetic Monitoring. 
 
 A private location is a software package that offers a quick and easy deployment of Splunk Synthetic Monitoring solutions beyond the public network so that you can find, fix, and prevent web performance defects on any internal web application, in any environment - whether inside or outside of your firewalls. Private locations allow Splunk Synthetics Monitoring users to test sooner in the development cycle and against internal sites or applications that aren't available to the public.
 
@@ -112,10 +112,6 @@ Follow these steps to limit logging:
 #. Restart your docker service: ``sudo systemctl docker.service restart``.
 
 
-Deactivate network shaping for your private runner 
-------------------------------------------------------
-Launch your Docker container with the following environment variable: ``-e "DISABLE_NETWORK_SHAPING=true"``.
-
 
 Adding certificates in Synthetics
 ------------------------------------------------------
@@ -132,7 +128,7 @@ For example, here is what a command might look like after you modify it to fit y
 
 .. code:: yaml
 
-  docker run -e "DISABLE_NETWORK_SHAPING=true" -e "RUNNER_TOKEN=<insert-token>" --volume=`pwd`/certs:/usr/local/share/ca-certificates/my_certs/ quay.io/signalfx/splunk-synthetics-runner:latest bash -c "sudo update-ca-certificates && bundle exec bin/start_runner"
+    docker run -e "RUNNER_TOKEN=<insert-token>" --volume=`pwd`/certs:/usr/local/share/ca-certificates/my_certs/ quay.io/signalfx/splunk-synthetics-runner:latest bash -c "sudo update-ca-certificates && bundle exec bin/start_runner"
 
 
 
@@ -165,13 +161,13 @@ Troubleshoot queue length and latency
 
 If both the queue latency and length increase over time, then add more runners to improve performance. 
 
-If your queue latency increases but your queue length doesn’t, then try these troubleshooting methods:
+If your queue latency increases but your queue length doesn't, then try these troubleshooting methods:
 
 * Check to see if a step is delaying the rest of the test
 * Investigate whether you have the sufficient resources to run private location runners on your machines.
 
 The maximum number of runs in a queue is 100,000. 
 
-Any runners older than one hour are removed from the queue. 
+Any runs older than one hour are removed from the queue. 
 
 
