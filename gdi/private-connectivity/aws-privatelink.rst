@@ -206,7 +206,7 @@ To create a VPC endpoint, follow these steps:
 
 9. Review the configuration details and select :guilabel:`Create Endpoint`.
 
-10. Wait for Splunk Customer Support's confirmation before proceeding to :ref:`aws-privatelink-step4`. 
+10. Before proceeding to :ref:`aws-privatelink-step4`, confirm with Splunk Customer Support that you created the endpoint, that the service name has been verified, and that Support has enabled the endpoint urls.
 
 .. _aws-privatelink-step4:
 
