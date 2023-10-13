@@ -64,7 +64,7 @@ You also have the option of connecting to Azure through the Splunk Observability
 
 Follow these steps to create a new Microsoft Entra application:
 
-  #. In your Azure portal, navigate to :menuselection:`Microsoft Entra`, and register your new app. Splunk Observability Cloud does not use this information, but you need to provide it in order to create an app on Azure.
+  #. In your Azure portal, navigate to :menuselection:`Microsoft Entra ID`, and register your new app. Splunk Observability Cloud does not use this information, but you need to provide it in order to create an app on Azure.
   #. The Azure portal displays a summary about the application. Save the following information to use when you create your Azure integration in Splunk Observability Cloud:
       * :guilabel:`Display name`
       * :guilabel:`Application (client) ID`
