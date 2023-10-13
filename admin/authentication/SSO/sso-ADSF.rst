@@ -7,13 +7,13 @@ Configure an ADFS SSO integration
 *********************************************************************
 
 .. meta::
-   :description: Configure the Microsoft Active Directory Federation Services (ADFS) SSO integration to let your users log in to Observability Cloud using your Microsoft ADFS portal.
+   :description: Configure the Microsoft Entra Federation Services (ADFS) SSO integration to let your users log in to Observability Cloud using your Microsoft ADFS portal.
 
-The Microsoft Active Directory Federation Services (ADFS) SSO integration lets your users log in to Observability Cloud using your Microsoft ADFS portal.
+The Microsoft Entra Federation Services (ADFS) SSO integration lets your users log in to Observability Cloud using your Microsoft ADFS portal.
 
-Before you begin configuring the Microsoft Active Directory Federation Services (ADFS) integration, ensure you have completed the steps in :ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
+Before you begin configuring the Microsoft Entra Federation Services (ADFS) integration, ensure you have completed the steps in :ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
 
-This integration is only available for Microsoft Active Directory with ADFS. In addition, you need to have the following fields in your ADFS configuration:
+This integration is only available for Microsoft Entra with ADFS. In addition, you need to have the following fields in your ADFS configuration:
 
 - First Name
 - Last Name
@@ -48,7 +48,7 @@ Create a new ADFS SSO integration in Observability Cloud
 To create a new ADFS integration in Observability Cloud:
 
 #. Log in to Splunk Observability Cloud.
-#. Open the :new-page:`Active Directory FS guided setup <https://login.signalfx.com/#/integrations/adfs/description>`. Optionally, you can navigate to the guided setup on your own:
+#. Open the :new-page:`Microsoft Entra FS guided setup <https://login.signalfx.com/#/integrations/adfs/description>`. Optionally, you can navigate to the guided setup on your own:
 
    #. In the left navigation menu, select :menuselection:`Data Management`.
 
@@ -56,7 +56,7 @@ To create a new ADFS integration in Observability Cloud:
 
    #. In the integration filter menu, select :guilabel:`All`.
 
-   #. In the :guilabel:`Search` field, search for :guilabel:`Active Directory FS`, and select it.
+   #. In the :guilabel:`Search` field, search for :guilabel:`Microsoft Entra FS`, and select it.
 
    
 #. In the :guilabel:`Name` field, enter a name for your ADFS SSO integration.
@@ -139,7 +139,7 @@ Add Observability Cloud as a relying party in ADFS:
 #. Select :guilabel:`Add Rule...`.
 #. Select :menuselection:`Send LDAP Attributes as Claims`, and then select :guilabel:`Next`.
 #. Enter a name for the claim rule, such as "LDAP", then from the :guilabel:`Attribute store` list,
-   select :guilabel:`Active Directory`.
+   select :guilabel:`Microsoft Entra`.
 #. In the :guilabel:`Mapping of LDAP attributes to outgoing claim types` pane,
    use the drop-down lists to set the mappings between the
    :guilabel:`LDAP Attribute` and :guilabel:`Outgoing Claim Type` columns:
@@ -201,7 +201,7 @@ Upload the ADFS certificate and federation metadata to Observability Cloud
 
 In Observability Cloud, do the following:
 
-#. Find the Active Directory FS page you opened in a previous step.
+#. Find the Microsoft Entra FS page you opened in a previous step.
 #. Select the :strong:`Upload File` link in the :guilabel:`Certificate` field and upload the ``certificate.pem`` file.
 #. Select the :strong:`Upload File` link in the :guilabel:`Metadata` field and upload the ``FederationMetadata.xml`` file.
 #. Select :guilabel:`Save`.
