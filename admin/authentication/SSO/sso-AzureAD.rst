@@ -1,14 +1,14 @@
 .. _sso-azure:
 
 *********************************************************************
-Configure an Azure Active Directory (Azure AD) SSO integration
+Configure an Microsoft Entra (Azure AD) SSO integration
 *********************************************************************
 
 .. meta::
-   :description: Configure the Microsoft Azure Active Directory (Azure AD) integration to let users log in to Observability Cloud using their Azure AD account.
+   :description: Configure the Microsoft Microsoft Entra (Azure AD) integration to let users log in to Observability Cloud using their Azure AD account.
 
 
-The Microsoft Azure Active Directory (Azure AD) integration lets users log in to Observability Cloud using their Azure AD account.
+The Microsoft Microsoft Entra (Azure AD) integration lets users log in to Observability Cloud using their Azure AD account.
 
 Before you begin configuring the Azure AD integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
 
@@ -21,12 +21,12 @@ To learn more, see :new-page-ref:`manage_admin-access`.
 Configure Azure AD for a single organization
 --------------------------------------------------------------
 
-For instructions, see :new-page:`Tutorial: Azure Active Directory single sign-on (SSO) integration with SignalFx <https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/signalfx-tutorial>` on the Microsoft documentation website.
+For instructions, see :new-page:`Tutorial: Microsoft Entra single sign-on (SSO) integration with SignalFx <https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/signalfx-tutorial>` on the Microsoft documentation website.
 
 Configure Azure AD for multiple organizations
 ------------------------------------------------------------------------------------------
 
-#. In a new browser tab or window, access :new-page:`Tutorial: Azure Active Directory single sign-on (SSO) integration with SignalFx <https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/signalfx-tutorial>` on the Microsoft documentation website.
+#. In a new browser tab or window, access :new-page:`Tutorial: Microsoft Entra single sign-on (SSO) integration with SignalFx <https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/signalfx-tutorial>` on the Microsoft documentation website.
 #. After you complete step 7, do the following:
 
    #. In the Azure AD integration tile, select :guilabel:`Integration-specific Entity ID`.
