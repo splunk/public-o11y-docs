@@ -20,9 +20,9 @@ A histogram represents the distribution of observations. Histograms require nume
 
 Histograms store data in buckets, which are adjacent intervals with numeric boundaries. The buckets or bars in the previous histogram span 100 milliseconds. The size of each bar is determined by the number of observations inside of interval: the higher the bar, the more data points fall within the interval.
 
-For each bucket in a histogram you can calculate the total number of observations, the minimum and maximum value, the sum of all values, the average value, and discrete percentile values. Splunk Observability Cloud provides a SignalFuse function for histograms which you can use to customize histograms or perform calculations on the data.
+For each histogram you can calculate the total number of observations, the minimum and maximum value, the sum of all values, the average value, and discrete percentile values. Splunk Observability Cloud provides a SignalFuse function for histograms which you can use to customize histograms or perform calculations on the data.
 
-Histograms are useful to compare different datasets at a glance, and to identify trends in your data that might be otherwise hard to detect. For example, thanks to histograms you can answer questions like "What was the percentile 90 response time for the database yesterday?"
+Histograms are useful to compare different datasets at a glance, and to identify trends in your data that might be otherwise hard to detect. For example, thanks to histograms you can answer questions like "What was the 90th percentile of response time for the database yesterday?"
 
 
 .. _when-use-histograms:
@@ -30,7 +30,7 @@ Histograms are useful to compare different datasets at a glance, and to identify
 When to use histogram metrics
 ===========================================================
 
-Histograms can summarize data in ways that would be difficult to reproduce with other metrics. Thanks to the buckets, the distribution of your continuous data over time is easier to explore, as you don't have to analyze the entire dataset to see where all the data points are. At the same time, histogram helps reduce usage of your subscription.
+Histograms can summarize data in ways that would be difficult to reproduce with other metrics. Thanks to the buckets, the distribution of your continuous data over time is easier to explore, as you don't have to analyze the entire dataset to see where all the data points are. At the same time, histogram helps reduce usage of your subscription through multi-rollup, which allows to aggregate multiple metrics time series (MTS) into a single MTS.
 
 
 Service level objectives (SLO)
@@ -54,7 +54,7 @@ For more information, see :new-page:`Why Histograms <https://opentelemetry.io/bl
 .. _explicit-bucket-histograms:
 
 Explicit bucket histograms
--------------------------------------------------
+===========================================================
 
 Explicit bucket histograms are histograms with predefined bucket boundaries. The advantage of defining bucket boundaries yourself is that you can use limits that make sense in your situation.
 
