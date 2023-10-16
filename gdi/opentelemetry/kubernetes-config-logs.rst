@@ -165,6 +165,8 @@ The following are known limitations of native OpenTelemetry logs collection:
 
 * See also :ref:`other rules and limitations for metrics and dimensions <metric-dimension-names>`. For instance, you can have up to 36 dimensions per MTS, otherwise the data point is dropped.
 
+.. _otel-k8s-events:
+
 Collect events
 ===========================================================================
 
