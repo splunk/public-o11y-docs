@@ -177,7 +177,20 @@ For example:
 Activate profiling
 =================================
 
-TBC
+You can activate profiling while installing the Collector for Kubernetes using the UI wizard, or by configuring the :ref:`splunk-hec-exporter` with ``profiling_data_enabled`` set to ``true``, as in the example below:
+
+.. code-block:: yaml
+
+  splunk_hec:
+    profiling_data_enabled: true
+
+When profiling is activated: 
+
+* The operator is deployed and configured to auto-instrument applications. 
+* Auto-instrumented applications generate profiling data.
+* The Collector ingests profiling data using the ``logs`` pipeline.
+
+Learn more at :ref:`zero-config` and :ref:`profiling-intro`.
 
 Provide tokens as a secret
 =================================
