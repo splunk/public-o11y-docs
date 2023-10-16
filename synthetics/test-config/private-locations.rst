@@ -130,7 +130,11 @@ For example, here is what a command might look like after you modify it to fit y
 
     docker run -e "RUNNER_TOKEN=<insert-token>" --volume=`pwd`/certs:/usr/local/share/ca-certificates/my_certs/ quay.io/signalfx/splunk-synthetics-runner:latest bash -c "sudo update-ca-certificates && bundle exec bin/start_runner"
 
-**Note for Browser tests:** When using custom root CA certificates, please be aware that they are not compatible with Browser tests. Browser tests require SSL/TLS validation for accurate testing. You do have the option to disable SSL/TLS validation for browser tests when necessary, but custom root CA certificates are not supported for this test type.
+
+.. Note:: Custom root CA certificates aren't supported for Browser tests. Browser tests require SSL/TLS validation for accurate testing. Optionally, you can deactivate SSL/TLS validation for Browser tests when necessary.
+
+
+
 
 
 
