@@ -10,7 +10,7 @@ Configure logs and events for Kubernetes
 
 .. note:: See how to configure the Collector for Kubernetes at :ref:`otel-kubernetes-config` and :ref:`otel-kubernetes-config-advanced`.
 
-The Helm chart currently uses Fluentd to collect Kubernetes logs and sends them through the Collector, which does all of the necessary metadata enrichment. 
+The Helm chart uses Fluentd to collect Kubernetes logs and send them through the Collector, which does all of the necessary metadata enrichment. 
 
 For native OTel collection, see :ref:`otel-k8s-logs-native`.
 
