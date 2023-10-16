@@ -173,11 +173,13 @@ Collect events
 Collect events
 ----------------------------------
 
-To collect events using the Collector, set ``k8sEventsEnabled`` to ``true`` in your configuration file:
+To collect events using the Collector, set ``k8sObjects`` to ``true`` in your configuration file:
 
 .. code:: yaml
 
-  k8sEventsEnabled: true
+  k8sObjects: true
+
+.. note:: ``k8sEventsEnabled`` and ``eventsEnabled``are deprecated. 
 
 Collect journald events
 ----------------------------------
