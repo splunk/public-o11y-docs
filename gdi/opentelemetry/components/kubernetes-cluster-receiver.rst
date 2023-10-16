@@ -7,7 +7,7 @@ Kubernetes cluster receiver
 .. meta::
       :description: The Kubernetes cluster receiver allows the Splunk Distribution of OpenTelemetry Collector to collect cluster metrics from Kubernetes through its monitoring API.
 
-The Kubernetes cluster receiver collects cluster metrics using the Kubernetes API server. You can use a single instance of this receiver to monitor an entire Kubernetes cluster. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
+The Kubernetes cluster receiver collects cluster metrics using the Kubernetes API server. You can use a single instance of this receiver to monitor an entire Kubernetes cluster. The supported pipeline type is ``metrics``. To filter in or out other Kubernetes elements, such as containers, pods, nodes, namespaces, or clusters, use the Filter processor instead. Learn more at :ref:`filter-processor`. See :ref:`otel-data-processing` for more information on the different types of pipelines.
 
 Kubernetes version 1.21 and higher is compatible with the Kubernetes navigator. Using lower versions of Kubernetes is not supported for this receiver and might result in the navigator not displaying all clusters.
 
@@ -46,6 +46,7 @@ Sync metadata_exporters
 Use ``metadata_exporters`` as a list of metadata exporters to sync with metadata collected by the Kubernetes cluster receiver. For example:
 
 .. code-block:: yaml
+
 
    receivers:
      k8s_cluster:
@@ -102,6 +103,8 @@ Metrics
 =====================
 
 The following metrics, resource attributes, and attributes are available.
+
+.. note:: The SignalFx exporter excludes some available metrics by default. Learn more about default metric filters in :ref:`list-excluded-metrics`.
 
 .. raw:: html
 

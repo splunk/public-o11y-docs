@@ -13,6 +13,7 @@ Configure the Collector
     :hidden:
 
     configure-the-collector-ootb.rst
+    environment-variables.rst
     linux-config.rst
     kubernetes-config.rst
     kubernetes-config-advanced.rst
@@ -20,18 +21,14 @@ Configure the Collector
     windows-config.rst
     other-configuration-sources.rst
     data-processing.rst
+    Internal metrics <metrics-internal-collector.rst>
+    Default Kubernetes metrics <metrics-ootb-k8s.rst>
     tags.rst
     Remove data pre-ingest <configure-remove.rst>
 
 You can use a variety of default configuration files to set up the Splunk Distribution of OpenTelemetry Collector, as well :ref:`additional components <otel-components>` that you can configure separately. 
 
-See also other configuration options: 
-
-* :ref:`otel-data-processing`
-* :ref:`otel-tags`
-* :ref:`configure-remove`
-
-.. note:: Splunk Observability Cloud also offers several options for no-hassle, zero-config Auto Instrumentation. Learn more at :ref:`Splunk OpenTelemetry Zero Configuration Auto Instrumentation <zero-config>`.
+.. note:: See how to perform common actions and tasks with the Collector at :ref:`collector-how-to`. To understand how data is processed, see :ref:`otel-data-processing`.
 
 .. _otel-config-options:
 
@@ -48,6 +45,8 @@ You can also use these configurations to change the default settings in each Col
 * Kubernetes: :ref:`Helm configuration <otel-kubernetes-config>`, :ref:`advanced config <otel-kubernetes-config-advanced>`, and :ref:`log config <otel-kubernetes-config-logs>`
 * :ref:`otel-linux-config`
 * :ref:`otel-windows-config`
+
+.. note:: Splunk Observability Cloud offers several options for no-hassle, zero-config Auto Instrumentation. Learn more at :ref:`Splunk OpenTelemetry Zero Configuration Auto Instrumentation <zero-config>`.
 
 .. _otel-config-multiple-files:
 

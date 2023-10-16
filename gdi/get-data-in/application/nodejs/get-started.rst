@@ -5,13 +5,13 @@ Instrument Node.js applications for Splunk Observability Cloud
 ***************************************************************
 
 .. meta::
-   :description: Instrument a Node.js application to export metrics and spans to Splunk Observability Cloud.
+   :description: Instrument your Node.js application to export metrics and spans to Splunk Observability Cloud.
 
 .. toctree::
    :hidden:
 
    Requirements <nodejs-otel-requirements>
-   Instrument a Node.js application <instrumentation/instrument-nodejs-application>
+   Instrument your Node.js application <instrumentation/instrument-nodejs-application>
    Connect trace data with logs <instrumentation/connect-traces-logs>
    Runtime and custom metrics <configuration/nodejs-otel-metrics>
    Manual instrumentation <instrumentation/manual-instrumentation>

@@ -22,7 +22,8 @@ Override the default configuration
 
 You can override the :ref:`default OpenTelemetry agent configuration <otel-configuration-ootb>` to use your own configuration. To do this, include a custom configuration using the ``agent.config`` parameter in the values.yaml file. For example: 
 
-.. code-block:: yaml 
+.. code-block:: yaml
+ 
 
   agent:
     enabled: true
@@ -97,6 +98,7 @@ You can override the default configuration values used to connect to the control
 
 .. code-block:: yaml
 
+
   agent:
     config:
       receivers:
@@ -120,11 +122,18 @@ You can override the default configuration values used to connect to the control
 Run the container in non-root user mode
 ==================================================
 
-Collecting logs often requires reading log files owned by the root user. By default, the container runs with ``securityContext.runAsUser = 0``, which gives the root user permission to read those files. 
+Collecting logs often requires reading log files that are owned by the root user. By default, the container runs with `securityContext.runAsUser = 0` which gives the `root` user permission to read those files.
+To run the container in `non-root` user mode, set `.agent.securityContext`. The log data permissions will be adjusted to match the securityContext configurations. For instance:
 
-To run the container in non-root user mode, set ``.agent.securityContext`` to ``20000``, which makes the container to run the required file system operations as UID and GID ``20000``. You can use any other UID and GUI.
+.. code-block:: yaml
 
-.. note:: Setting the ``containerRuntime:`` parameter to ``cri-o`` did not work during internal testing for logs collection.
+
+agent:
+  securityContext:
+     runAsUser: 20000
+     runAsGroup: 20000
+
+.. note:: Running the collector agent for log collection in non-root mode is not currently supported in CRI-O and OpenShift environments at this time, for more details see the :new-page:`related GitHub feature request issue <https://github.com/signalfx/splunk-otel-collector-chart/issues/891>`.
 
 Use the Network Explorer to collect telemetry
 ==================================================
@@ -134,6 +143,7 @@ Use the Network Explorer to collect telemetry
 To enable the Network Explorer, set the ``enabled`` flag to ``true``:
 
 .. code-block:: yaml
+
 
   networkExplorer:
     enabled: true
@@ -162,6 +172,7 @@ The following example sets the reducer to use 4 shards per stage.
 
 .. code-block:: yaml
 
+
   networkExplorer:
     reducer:
       ingestShards: 4
@@ -177,6 +188,7 @@ To disable an entire category, give the category name, followed by ``.all``:
 
 .. code-block:: yaml
 
+
   networkExplorer:
     reducer:
       disableMetrics:
@@ -186,6 +198,7 @@ Disable individual metrics by their names:
 
 .. code-block:: yaml
 
+
   networkExplorer:
     reducer:
       disableMetrics:
@@ -194,6 +207,7 @@ Disable individual metrics by their names:
 You can mix categories and names. For example, yo disable all http metrics and the ``udp.bytes`` metric use:
 
 .. code-block:: yaml
+
 
   networkExplorer:
     reducer:
@@ -211,6 +225,7 @@ The ``disableMetrics`` flag is evaluated before ``enableMetrics``, so you can de
 For example, to deactivate all internal and http metrics but keep ``ebpf_net.collector_health``, use:
 
 .. code-block:: yaml
+
 
   networkExplorer:
     reducer:
@@ -230,6 +245,7 @@ For example, to activate ``feature1`` in the agent, activate ``feature2`` in the
 
 .. code-block:: yaml
 
+
   helm install {name} --set agent.featureGates=+feature1 --set clusterReceiver.featureGates=feature2 --set gateway.featureGates=-feature2 {other_flags}
 
 Set the pod security policy manually 
@@ -240,6 +256,7 @@ Support of Pod Security Policies (PSP) was removed in Kubernetes 1.25. If you st
 1. Run the following command to install the PSP. Don't forget to add the ``--namespace`` kubectl argument if needed:
 
   .. code-block:: yaml
+
 
     cat <<EOF | kubectl apply -f -
     apiVersion: policy/v1beta1
@@ -278,6 +295,7 @@ Support of Pod Security Policies (PSP) was removed in Kubernetes 1.25. If you st
 
   .. code-block:: yaml
 
+
     rbac:
       customRules:
         - apiGroups:     [extensions]
@@ -288,5 +306,6 @@ Support of Pod Security Policies (PSP) was removed in Kubernetes 1.25. If you st
 3. Install the Helm chart:
 
   .. code-block:: yaml
+
 
     helm install my-splunk-otel-collector -f my_values.yaml splunk-otel-collector-chart/splunk-otel-collector

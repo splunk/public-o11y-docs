@@ -17,6 +17,7 @@ Create custom traces
 To create custom spans and traces, follow these steps:
 
 1. If you can't use the ``splunk-py-trace`` command, import and configure ``start_tracing``:
+   
    .. code:: python
 
       from splunk_otel.tracing import start_tracing

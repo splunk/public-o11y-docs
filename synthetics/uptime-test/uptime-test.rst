@@ -6,7 +6,7 @@ Use an Uptime Test to test port or HTTP uptime
 **************************************************
 
 .. meta::
-    :description: Learn about Uptime tests in Splunk Synthetic Monitoring.
+    :description: Use API tests in Splunk Synthetic Monitoring to monitor the API requests that provide core functionality for your applications, and track performance of your endpoints.
 
 .. toctree::
 
@@ -18,7 +18,7 @@ An Uptime test uses the curl library to make a request to a specified URL and mo
 Uptime tests record the following metrics:
 
   * Response time
-  * DNS time
+  * DNS time (HTTP test only)
   * Time to first byte
 
 There are two types of Uptime tests. See :ref:`HTTP Test<http-test>` and :ref:`Port Test<port-test>` below for more information about each of these test types. 

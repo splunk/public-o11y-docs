@@ -22,7 +22,7 @@ By default, the host metrics receiver is activated in the Splunk Distribution of
 
 Host receiver metrics appear in Infrastructure Monitoring. You can use them to create dashboards and alerts. See :ref:`create-detectors` for more information.
 
-.. note:: The SignalFx exporter excludes some available metrics by default. Learn more about default metric filters in :ref:`list-excluded-metrics`. The most up-to-date list of excluded metrics is in GitHub. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/exporter/signalfxexporter/internal/translation/default_metrics.go#L49`. 
+.. caution:: The SignalFx exporter excludes some available metrics by default. Learn more about default metric filters in :ref:`list-excluded-metrics`. The most up-to-date list of excluded metrics is in GitHub. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/exporter/signalfxexporter/internal/translation/default_metrics.go#L49`.
 
 Get started
 ======================
@@ -38,7 +38,7 @@ Follow these steps to configure and activate the component:
 2. Configure the receiver as described in the next section.
 3. Restart the Collector.
 
-.. note:: Metrics produced by this receiver count towards the custom metric ingestion limit. See :ref:`sys-limits`.
+.. note:: Metrics produced by this receiver count towards metric ingestion limit. See :ref:`sys-limits`.
 
 Collect container host metrics (Linux)
 ---------------------------------------
@@ -50,6 +50,7 @@ The host metrics receiver collects metrics from the Linux system directories. To
 #. Configure ``root_path`` so that the host metrics receiver knows where the root file system is located. For example:
 
    .. code-block:: yaml
+
 
       receivers:
       hostmetrics:
@@ -248,12 +249,18 @@ cpu scraper
 
    <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/cpuscraper.yaml"></div>
 
+For more information, see the :new-page:`cpu scraper documentation <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/cpuscraper/documentation.md>` in GitHub.
+
+
 disk scraper
 --------------------------
 
 .. raw:: html
 
    <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/diskscraper.yaml"></div>
+
+For more information, see the :new-page:`disk scraper documentation <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/diskscraper/documentation.md>` in GitHub.
+
 
 filesystem scraper
 --------------------------
@@ -262,12 +269,18 @@ filesystem scraper
 
    <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/filesystemscraper.yaml"></div>
 
+For more information, see the :new-page:`filesystem scraper documentation <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/filesystemscraper/documentation.md>` in GitHub.
+
+
 load scraper
 --------------------------
 
 .. raw:: html
 
    <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/loadscraper.yaml"></div>
+
+For more information, see the :new-page:`load scraper documentation <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/loadscraper/documentation.md>` in GitHub.
+
 
 memory scraper
 --------------------------
@@ -276,12 +289,18 @@ memory scraper
 
    <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/memoryscraper.yaml"></div>
 
+For more information, see the :new-page:`memory scraper documentation <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/memoryscraper/documentation.md>` in GitHub.
+
+
 network scraper
 --------------------------
 
 .. raw:: html
 
    <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/networkscraper.yaml"></div>
+
+For more information, see the :new-page:`network scraper documentation <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/networkscraper/documentation.md>` in GitHub.
+
 
 paging scraper
 --------------------------
@@ -290,12 +309,8 @@ paging scraper
 
    <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/pagingscraper.yaml"></div>
 
-processes scraper
---------------------------
+For more information, see the :new-page:`paging scraper documentation <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/pagingscraper/documentation.md>` in GitHub.
 
-.. raw:: html
-
-   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/processesscraper.yaml"></div>
 
 process scraper
 --------------------------
@@ -303,6 +318,18 @@ process scraper
 .. raw:: html
 
    <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/processscraper.yaml"></div>
+
+For more information, see the :new-page:`process scraper documentation <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/processscraper/documentation.md>` in GitHub.
+
+
+processes scraper
+--------------------------
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/processesscraper.yaml"></div>
+
+For more information, see the :new-page:`processes scraper documentation <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/processesscraper/documentation.md>` in GitHub.
 
 
 .. include:: /_includes/gdi/default-translation-metrics.rst

@@ -4,8 +4,10 @@
 Experiment with the demo applications for Splunk RUM for Mobile 
 *******************************************************************************
 
-There are two demo applications for you to explore for RUM for Mobile.  
+.. meta::
+   :description: Use the Android or iOS demo application to explore Splunk RUM for Mobile. Learn how to access the Splunk RUM for Mobile applications on Github. 
 
+There are two demo applications for you to explore for RUM for Mobile.  
 
 Android demo app 
 ===================
@@ -26,7 +28,7 @@ iOS demo app
 
 The splunk-otel-ios library includes a demo application called Demo Boutique. 
 
-To access the sample app,  see :new-page:`Demo Boutique <https://github.com/signalfx/tracing-examples/tree/main/ios/Demo%20Boutique>` in tracing-examples/iOS on GitHub. 
+To access the sample app, see :new-page:`Demo Boutique <https://github.com/signalfx/tracing-examples/tree/main/ios/Demo%20Boutique>` in tracing-examples/iOS on GitHub. 
 
 To use the demo app, open :code:`Demo Boutique.xcodeproj` in Xcode and run the Demo Boutique application.
 

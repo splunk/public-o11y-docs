@@ -27,7 +27,7 @@ When you run the Collector in discovery mode, it tests built-in configurations f
 
 For any dynamically instantiated receiver that retrieves metrics matching the success criteria, the Collector translates the discovery configuration to a receiver creator instance with the known working rules, as well as the required observer extension. See :ref:`receiver-creator-receiver` for more information. At the same time, the Collector adds the configuration to the ``metrics`` pipeline at runtime.
 
-For any receiver that can establish a connection with a service, but not receive the expected metrics, discovery mode suggests which properties to set, or what extensions or settings to configure on the service to successfully retrieve telemetry. You can define any target-specific configuration values that are required, for example authentication information, using discovery properties to tune the discovery process. 
+For any receiver that can establish a connection with a service, but not receive the expected metrics, discovery mode suggests which properties to set, or what extensions or settings to configure on the service to successfully retrieve telemetry. You can define any target-specific configuration values that are required, for example authentication information, using discovery properties to tune the discovery process.
 
 
 Supported host services and applications
@@ -48,6 +48,9 @@ Discovery mode supports the following host services and applications:
 
    * - PostgreSQL
      - Smart Agent with postgresql monitor type. See :ref:`postgresql`.
+
+   * - OracleDB
+     - Oracle DB receiver. See :ref:`oracledb`.
 
    * - NGINX
      - Smart Agent with collectd/nginx monitor type. See :ref:`nginx`.
@@ -70,7 +73,7 @@ The ``--dry-run`` option ensures that the resulting configuration isn't applied 
    $ Discovering for next 10s...
    Partially discovered "smartagent/postgresql" using "docker_observer"
    endpoint "5c9c80ba4319395c26255b6374f048ca973d3618fdd4b92a9ed601c7dddbff6a:5432":
-   Please ensure your user credentials are correctly specified with 
+   Please ensure your user credentials are correctly specified with
    `--set splunk.discovery.receivers.smartagent/postgresql.config.params::username="<username>"`
    and `--set splunk.discovery.receivers.smartagent/postgresql.config.params::password="<password>"`
    or `SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_postgresql_CONFIG_params_x3a__x3a_username="<username>"`
@@ -79,7 +82,12 @@ The ``--dry-run`` option ensures that the resulting configuration isn't applied 
 
 When discovery mode can't access a discovered service to extract metric data, it provides instructions and the original log error message. In the example, discovery mode can't authenticate to the discovered PostgreSQL server due to missing or incorrect credentials, which you can provide through custom discovery properties. See :ref:`custom-discovery-props`.
 
-.. note:: The Linux installation script of the Collector supports the ``--discovery`` option. When turning on discovery mode through the installation script, the resulting configuration is applied directly to the ``metrics`` pipeline.
+.. note:: The Linux installation script of the Collector supports the ``--discovery`` option. When turning on discovery mode through the installation script, the resulting configuration is applied directly to the ``metrics`` pipeline. For example:
+
+   .. code-block:: bash
+
+      curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+      sudo sh /tmp/splunk-otel-collector.sh --realm <realm> – <token> --mode agent --discovery
 
 .. _custom-discovery-props:
 
@@ -131,6 +139,7 @@ You can override or add properties by creating the ``etc/otel/collector/config.d
 
    .. code-block:: yaml
 
+
       splunk.discovery:
         receivers:
            smartagent/postgresql:
@@ -154,6 +163,7 @@ To create custom discovery configurations, follow these steps:
 Custom configurations consist of the fields you want to override in the default configuration. For example:
 
 .. code-block:: yaml
+
 
     # <some-receiver-type-with-optional-name.discovery.yaml>
       <receiver_type>(/<receiver_name>):

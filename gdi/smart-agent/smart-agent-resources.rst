@@ -131,6 +131,8 @@ Service discovery using the Smart Agent
 
 The Smart Agent includes a comprehensive service discovery feature. This feature allows the Smart Agent to identify each of the services within your environment and automatically configure the appropriate integration plugins from within its bundle. This is particularly valuable in large ephemeral container environments that experience high-churn and dynamic service creation, as new services are automatically discovered, installed, and configured within minutes. However, this capability is extended to non-containerized environments as well. See :new-page:`Service Discovery <https://github.com/signalfx/signalfx-agent/blob/main/docs/auto-discovery.md>` for more information and configuration options.
 
+.. _filtering-smart-agent:
+
 Filtering data using the Smart Agent
 ====================================
 

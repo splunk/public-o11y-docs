@@ -47,6 +47,9 @@
 .icon-wrench:before {
     content: "\e991";
   }
+  .icon-info:before {
+   content: "\e903";
+  }
   .icon-cog:before {
     content: "\e994";
   }
@@ -247,7 +250,7 @@ div.sphinxsidebar hr {
 
 a {
     color: #004B6B;
-    text-decoration: underline;
+    text-decoration: none !important;
 }
 
 a:hover {

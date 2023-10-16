@@ -15,6 +15,11 @@ span.not-ok {
    color: red;
 }
 
+span.std-term {
+  font-weight: bold;
+  font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+
 .st-default-autocomplete {
   width:40% !important;
 }
@@ -70,6 +75,20 @@ a.image-reference {
 
 .monitor-table tr td:nth-child(4) {
     text-align:center;
+}
+
+ul.monitor-metrics, ul.monitor-attr {
+  padding-left:1rem;
+}
+
+table.monitor-stats, table.fix-width {
+    width: 100%;
+    table-layout:fixed;
+    word-wrap: break-word;
+    }
+
+span.pre {
+  white-space:normal;
 }
 
 /* Making heading levels more different
@@ -212,9 +231,9 @@ color:#0B599D !important;
 text-decoration:none;
 }
 
-a:hover {
-opacity:0.5;
-text-decoration:none;
+a.reference:hover {
+opacity: .5;
+text-decoration: none;
 }
 
 a:active {

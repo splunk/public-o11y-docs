@@ -1,15 +1,13 @@
 .. _instrument-otel-dotnet-applications:
 
-****************************************************************************
-Instrument a .NET application for Splunk Observability Cloud (OpenTelemetry)
-****************************************************************************
+*******************************************************************************
+Instrument your .NET application for Splunk Observability Cloud (OpenTelemetry)
+*******************************************************************************
 
 .. meta::
    :description: The Splunk Distribution of OpenTelemetry .NET automatically instruments .NET applications, Windows services running .NET applications, and ASP.NET applications deployed on IIS. Follow these steps to get started.
 
 The Splunk Distribution of OpenTelemetry .NET automatically instruments .NET applications, Windows services running .NET applications, and ASP.NET applications deployed on IIS.
-
-.. caution:: This distribution is currently in beta. Don't use it in production environments. Some features might have constrained capabilities. Support is provided on a best-effort basis.
 
 To get started, use the guided setup or follow the instructions manually.
 
@@ -39,7 +37,7 @@ To install the distribution using the official NuGet packages, see :ref:`otel-do
 
 .. _install-dotnet-otel-instrumentation:
 
-Instrument a .NET application
+Instrument your .NET application
 ---------------------------------------------
 
 Follow these steps to automatically instrument your application:
@@ -57,16 +55,13 @@ Windows
    .. code-block:: powershell
 
       # Download and import the PowerShell module
-      # Replace <version> with the desired version
-      $module_url = "https://github.com/signalfx/splunk-otel-dotnet/releases/download/<version>/Splunk.OTel.DotNet.psm1"
+      $module_url = "https://github.com/signalfx/splunk-otel-dotnet/releases/latest/download/Splunk.OTel.DotNet.psm1"
       $download_path = Join-Path $env:temp "Splunk.OTel.DotNet.psm1"
       Invoke-WebRequest -Uri $module_url -OutFile $download_path
       Import-Module $download_path
 
       # Install the Splunk distribution using the PowerShell module
       Install-OpenTelemetryCore
-
-   .. note:: Replace ``<version>`` in the ``module_url`` with the desired version.
 
 #. Register the distribution:
 
@@ -112,12 +107,9 @@ Linux
 
    .. code-block:: shell
 
-      # Replace <version> with the desired version
-      curl -sSfL https://github.com/signalfx/splunk-otel-dotnet/releases/download/<version>/splunk-otel-dotnet-install.sh -O
+      curl -sSfL https://github.com/signalfx/splunk-otel-dotnet/releases/latest/download/splunk-otel-dotnet-install.sh -O
       # Install the distribution
       sh ./splunk-otel-dotnet-install.sh
-
-   .. note:: Replace ``<version>`` in the curl URL with the desired version.
 
 #. Activate the automatic instrumentation:
 
@@ -159,7 +151,7 @@ Use the NuGet package in the following scenarios:
 3. You want to facilitate developer experimentation with automatic instrumentation through NuGet packages.
 4. You need to solve version conflicts between the dependencies used by the application and the automatic instrumentation.
 
-Instrument an application using the NuGet packages
+Instrument your application using the NuGet packages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To automatically instrument your application using the NuGet packages, add the ``Splunk.OpenTelemetry.AutoInstrumentation`` package to your project. For example:

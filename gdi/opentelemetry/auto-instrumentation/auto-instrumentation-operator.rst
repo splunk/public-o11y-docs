@@ -42,26 +42,23 @@ Deploy the :ref:`Collector for Kubernetes with the Helm chart <helm-chart>` with
 Ingest traces
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In order to be properly ingest trace telemetry data, the attribute ``environment`` must be on board the exported traces. There are two ways to set this attribute:
+To ingest trace telemetry data, the attribute ``environment`` must be on board the exported traces. There are two ways to set this attribute:
 
 * Use the `values.yaml` optional environment configuration.
 * Use the Instrumentation spec with the environment variable ``OTEL_RESOURCE_ATTRIBUTES``.
 
-Add certifications
+Add certificates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The Operator requires certain TLS cerificates to work. If a certification manager (or any other TLS certificate source) is not available in the cluster, then you'll need to deploy it using ``certmanager.enabled=true``. You can use the following commands to run these steps.
+The Operator requires certain TLS cerificates to work. If a certification manager (or any other TLS certificate source) is not available in the cluster, then you need to deploy it using ``certmanager.enabled=true``. You can use the following commands to run these steps.
 
 .. code-block:: yaml
 
    # Check if cert-manager is already installed, don't deploy a second cert-manager.
    kubectl get pods -l app=cert-manager --all-namespaces
 
-   # If cert-manager is not deployed.
-   helm install splunk-otel-collector -f ./my_values.yaml --set certmanager.enabled=true,operator.enabled=true,environment=dev -n monitoring helm-charts/splunk-otel-collector
-
-   # If cert-manager is already deployed.
-   helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=dev -n monitoring helm-charts/splunk-otel-collector
+   # If cert-manager is not deployed, make sure to add certmanager.enabled=true to the list of values to set
+   helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=dev splunk-otel-collector-chart/splunk-otel-collector
 
 2. Verify all the OpenTelemetry resources are deployed successfully
 ---------------------------------------------------------------------------
@@ -71,32 +68,31 @@ Resources include the Collector, the Operator, webhook, an instrumentation.
 Run the following to verify the resources are deployed correctly:
 
 .. code-block:: yaml
-   
-   kubectl  get pods -n monitoring
-   # NAME                                                          READY
-   # NAMESPACE     NAME                                                            READY   STATUS
-   # monitoring    splunk-otel-collector-agent-lfthw                               2/2     Running
-   # monitoring    splunk-otel-collector-cert-manager-6b9fb8b95f-2lmv4             1/1     Running
-   # monitoring    splunk-otel-collector-cert-manager-cainjector-6d65b6d4c-khcrc   1/1     Running
-   # monitoring    splunk-otel-collector-cert-manager-webhook-87b7ffffc-xp4sr      1/1     Running
-   # monitoring    splunk-otel-collector-k8s-cluster-receiver-856f5fbcf9-pqkwg     1/1     Running
-   # monitoring    splunk-otel-collector-opentelemetry-operator-56c4ddb4db-zcjgh   2/2     Running
 
-   kubectl get mutatingwebhookconfiguration.admissionregistration.k8s.io -n monitoring
+   kubectl get pods
+   # NAME                                                            READY   STATUS
+   # splunk-otel-collector-agent-lfthw                               2/2     Running
+   # splunk-otel-collector-cert-manager-6b9fb8b95f-2lmv4             1/1     Running
+   # splunk-otel-collector-cert-manager-cainjector-6d65b6d4c-khcrc   1/1     Running
+   # splunk-otel-collector-cert-manager-webhook-87b7ffffc-xp4sr      1/1     Running
+   # splunk-otel-collector-k8s-cluster-receiver-856f5fbcf9-pqkwg     1/1     Running
+   # splunk-otel-collector-opentelemetry-operator-56c4ddb4db-zcjgh   2/2     Running
+
+   kubectl get mutatingwebhookconfiguration.admissionregistration.k8s.io
    # NAME                                      WEBHOOKS   AGE
    # splunk-otel-collector-cert-manager-webhook              1          14m
    # splunk-otel-collector-opentelemetry-operator-mutation   3          14m
 
-   kubectl get otelinst -n {target_application_namespace}
-   # NAME                          AGE   ENDPOINT
-   # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
+   kubectl get otelinst
+   # NAME                    AGE   ENDPOINT
+   # splunk-otel-collector   3s    http://$(SPLUNK_OTEL_AGENT):4317
 
 3. Set annotations to instrument applications
 ------------------------------------------------------------
 
 You can add an ``instrumentation.opentelemetry.io/inject-{instrumentation_library}`` annotation to the following:
 
-* Namespace: All pods within that namespace will be instrumented.
+* Namespace: All pods within that namespace _alert-signal instrumented.
 * Pod Spec Objects: PodSpec objects that are available as part of Deployment, Statefulset, or other resources can be annotated.
 
 Instrumentation annotations can have the following values:
@@ -125,4 +121,4 @@ Learn more
 
 * See :ref:`auto-instrumentation-java-operator`.
 * To learn more about how Auto Instrumentation works in Splunk Observability Cloud, see :new-page:`more detailed documentation in GH <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/auto-instrumentation-install.md#how-does-auto-instrumentation-work>`.
-* Refer to :new-page:`the operator pattern in the Kubernetes documentation <https://kubernetes.io/docs/concepts/extend-kubernetes/operator/>` for more information.
+* See :new-page:`the operator pattern in the Kubernetes documentation <https://kubernetes.io/docs/concepts/extend-kubernetes/operator/>` for more information.

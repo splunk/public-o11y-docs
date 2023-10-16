@@ -17,14 +17,15 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     Requirements <otel-requirements.rst>
     install-the-collector.rst
     configure-the-collector.rst
+    collector-how-to.rst
     Zero config auto instrumentation <zero-config.rst>
     Discover metric sources automatically <discovery-mode.rst>
     Use the Universal Forwarder <collector-with-the-uf.rst>
     Troubleshooting <troubleshooting.rst>
     Commands reference <otel-commands.rst>
     
-The OpenTelemetry Collector uses pipelines to receive, process, and export trace data with components known as receivers, processors, and exporters. You can also add extensions that provide OpenTelemetry Collector with additional functionality, such as diagnostics and health checks.
-
+The OpenTelemetry Collector uses pipelines to receive, process, and export trace data with components known as receivers, processors, and exporters. You can also add extensions that provide the OpenTelemetry Collector with additional functionality, such as diagnostics and health checks.
+    
 The OpenTelemetry Collector has a core version and a contributions version. The core version provides receivers, processors, and exporters for general use. The contributions version provides receivers, processors, and exporters for specific vendors and use cases.
 
 .. caution::
@@ -32,7 +33,29 @@ The OpenTelemetry Collector has a core version and a contributions version. The 
   Splunk officially supports the Splunk Distribution of OpenTelemetry Collector. 
   Splunk only provides best-effort support for the upstream OpenTelemetry Collector. See :ref:`using-upstream-otel` for more information.
 
-The Splunk Distribution of OpenTelemetry Collector is a distribution of the OpenTelemetry Collector. The distribution is a project that bundles components from OpenTelemetry Core, OpenTelemetry Contrib, and other sources to provide data collection for multiple source platforms. The customizations in the Splunk distribution include these features:
+The Splunk Distribution of OpenTelemetry Collector is a distribution of the OpenTelemetry Collector. The distribution is a project that bundles components from OpenTelemetry Core, OpenTelemetry Contrib, and other sources to provide data collection for multiple source platforms. 
+
+.. mermaid::
+
+  flowchart LR
+    subgraph "\nSplunk Distribution of OpenTelemetry Collector"
+    receivers
+    processors
+    exporters
+    extensions
+    end
+
+    Infrastructure -- "metrics, logs" --> receivers
+    B[Back-end services] -- "traces, metrics, logs" --> receivers
+    C[Front-end experiences] -- "traces" --> S[Splunk Observability Cloud]
+
+    receivers --> processors
+    processors --> exporters
+
+    exporters --> S[Splunk Observability Cloud]
+    exporters --> P[Splunk Cloud Platform]
+
+The customizations in the Splunk distribution include these features:
 
 * Better defaults for Splunk products
 * Discovery mode for metric sources
@@ -48,6 +71,7 @@ To get started with the Collector, see :ref:`opentelemetry-resources`:
 
 #. Check the :ref:`requirements <otel-requirements>`.
 #. :ref:`otel-install-platform`. Get instructions for installing the Collector on a variety of platforms. Or use :ref:`our guided install <collector-guided-install>`.
+#. See how to perform common actions and tasks with the Collector at :ref:`collector-how-to`.
 #. Learn about the discovery mode. See :ref:`discovery_mode`.
 #. Learn about the available :ref:`configuration options <otel-configuration>`. 
 #. :ref:`otel-troubleshooting`. Try these troubleshooting techniques and learn how to open a support request.

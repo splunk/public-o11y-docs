@@ -129,4 +129,4 @@ To solve this issue, make sure the following conditions are true:
 
 #. The target endpoint is correct when providing an alternative value.
 
-.. include:: /_includes/troubleshooting-steps.rst
+.. include:: /_includes/troubleshooting-components.rst

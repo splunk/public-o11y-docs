@@ -4,10 +4,32 @@
 Welcome
 **********
 
-.. image:: _images/get-started/o11y-user-doc-hero-banner-v2.svg
+.. imagetarget:: _images/get-started/o11y-user-doc-hero-banner-v2.svg
    :alt: Welcome
    :width: 97.3%
    :target: https://docs.splunk.com/Observability/get-started/o11y.html#nav-Get-started
+
+.. role:: icon-info
+.. rst-class:: newparawithicon
+
+:icon-info:`.` :strong:`Welcome to Splunk Observability Cloud`
+Learn the basic elements of Splunk Observability Cloud and all it can do for you.
+
+.. rst-class:: newcard
+
+:strong:`Service description`
+Benefits and service terms of Splunk Observability Cloud :ref:`o11y-service-description`
+
+.. rst-class:: newcard
+
+:strong:`Scenarios`
+Collection of scenarios for Splunk Observability Cloud :ref:`scenario-landing`
+
+.. rst-class:: newcard
+
+:strong:`Architecture`
+Architecture of Splunk Observability Cloud :ref:`architecture`
+
 
 .. role:: icon-cloud-upload
 .. rst-class:: newparawithicon
@@ -17,8 +39,8 @@ The first step toward observability is getting relevant data into Splunk Observa
 
 .. rst-class:: newcard
 
-:strong:`Get data in`
-Learn how to get data in from each layer in your stack :ref:`get-started-get-data-in`
+:strong:`Compatibility and requirements`
+Systems and languages you can use with Splunk Observability Cloud :ref:`requirements`
 
 .. rst-class:: newcard
 
@@ -228,6 +250,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    get-started/welcome
 
 .. toctree::
+   :maxdepth: 3
+
+   Service description <get-started/service-description>
+
+.. toctree::
    :maxdepth:   3
 
    Get started <get-started/o11y>
@@ -245,7 +272,19 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Splunk Observability Cloud architecture <get-started/o11y-architecture>
+
+.. toctree::
+   :maxdepth:   3
+
    Contribute to our documentation <get-started/contribute>
+
+
+
+.. toctree::
+   :maxdepth:   3
+
+   Free and paid courses <get-started/education-resources>
 
 .. toctree::
    :maxdepth:   3
@@ -256,7 +295,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: Splunk platform users
    :maxdepth:   3
 
-   Splunk Observability Cloud and the Splunk platform <splunkplatform/splunkplatform-landing>
+   Splunk Observability Cloud and the Splunk platform <splunkplatform/practice-reliability/splunkplatform-landing>
 
 .. toctree::
    :maxdepth:   3
@@ -266,17 +305,10 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Measure and alert on your SLIs <splunkplatform/practice-reliability/slis>
+   Use case scenarios <splunkplatform/scenarios/integration-scenario-landing>
 
 .. toctree::
    :maxdepth:   3
-
-   Respond to incidents <splunkplatform/practice-reliability/incident-response>
-
-.. toctree::
-   :maxdepth:   3
-
-   Collaborate on observability <splunkplatform/practice-reliability/collaboration>
 
 .. toctree::
    :caption: Administer Splunk Observability Cloud
@@ -325,12 +357,22 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Compatibility and requirements <gdi/requirements>
+
+.. toctree::
+   :maxdepth:   3
+
    gdi/get-data-in/integrations
 
 .. toctree::
    :maxdepth:   3
 
    Connect to your cloud service provider TOGGLE <gdi/get-data-in/connect/connect>
+
+.. toctree::
+   :maxdepth:   3
+
+   Private connectivity TOGGLE <gdi/private-connectivity/private-connectivity-landing>
 
 .. toctree::
    :maxdepth:   3
@@ -495,6 +537,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Built-in alert conditions TOGGLE <alerts-detectors-notifications/alert-condition-reference/index>
+
+.. toctree::
+   :maxdepth:   3
+
+   alerts-detectors-notifications/alert-message-variables-reference
 
 .. toctree::
    :maxdepth:   3
@@ -692,6 +739,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
 .. toctree::
    :maxdepth:   3
+   
+   rum/rum-session-replay
+
+.. toctree::
+   :maxdepth:   3
 
    rum/sample-app
 
@@ -724,17 +776,17 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Use a browser test to test a webpage TOGGLE <synthetics/browser-test/browser-test>
+   Use a Browser test to test a webpage TOGGLE <synthetics/browser-test/browser-test>
 
 .. toctree::
    :maxdepth:   3
 
-   Use an Uptime Test to test port or HTTP uptime TOGGLE <synthetics/uptime-test/uptime-test>
+   Use an Uptime test to test port or HTTP uptime TOGGLE <synthetics/uptime-test/uptime-test>
 
 .. toctree::
    :maxdepth:   3
 
-   Use an API Test to test an endpoint TOGGLE <synthetics/api-test/api-test>
+   Use an API test to test an endpoint TOGGLE <synthetics/api-test/api-test>
 
 .. toctree::
    :maxdepth:   3
