@@ -12,7 +12,7 @@ Splunk Observability Cloud natively supports histograms. You can use the histogr
 Understanding histograms
 =======================================================
 
-A histogram represents the distribution of observations. Histograms require numerical, continuous values. Examples of continuous values include time, size, or temperature. The following chart is an example of a histogram for response times, in milliseconds:
+A histogram represents the distribution of observations. Histograms require numerical, continuous values. Examples of continuous values include time, size, or temperature. The following chart is a visual representation of a histogram for response times, in milliseconds:
 
 .. image:: /_images/understand/histogram.png
       :width: 60%
