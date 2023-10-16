@@ -5,14 +5,14 @@ Instrument your AWS Lambda function for Splunk Observability Cloud
 ******************************************************************
 
 .. meta::
-   :description: The Splunk OpenTelemetry Lambda Layer automatically instruments your AWS Lambda functions for many programming languages. Follow these steps to get started.
+   :description: The Splunk OpenTelemetry Lambda layer automatically instruments your AWS Lambda functions for many programming languages. Follow these steps to get started.
 
-Use the Splunk OpenTelemetry Lambda Layer to automatically instrument your AWS Lambda functions for many programming languages. To get started, use the guided setup or follow the instructions manually.
+Use the Splunk OpenTelemetry Lambda layer to automatically instrument your AWS Lambda functions for many programming languages. To get started, use the guided setup or follow the instructions manually.
 
 Generate customized instructions using the guided setup
 ====================================================================
 
-To generate a template that instruments your Lambda function using the Splunk OpenTelemetry Lambda Layer, use the AWS Lambda guided setup. To access the AWS Lambda guided setup, follow these steps:
+To generate a template that instruments your Lambda function using the Splunk OpenTelemetry Lambda layer, use the AWS Lambda guided setup. To access the AWS Lambda guided setup, follow these steps:
 
 #. Log in to Splunk Observability Cloud.
 
@@ -26,10 +26,10 @@ To generate a template that instruments your Lambda function using the Splunk Op
 
    #. Select the :guilabel:`AWS Lambda` tile to open the AWS Lambda guided setup.
 
-Install the Splunk OpenTelemetry Lambda Layer manually
+Install the Splunk OpenTelemetry Lambda layer manually
 ==================================================================
 
-Follow these instructions to install the Splunk OpenTelemetry Lambda Layer:
+Follow these instructions to install the Splunk OpenTelemetry Lambda layer:
 
 - :ref:`otel-lambda-layer-requirements`
 - :ref:`install-otel-lambda-layer`
@@ -52,11 +52,11 @@ Check compatibility and requirements
 Install the AWS Lambda layer
 ----------------------------------------------
 
-Follow these steps to instrument your function using the Splunk OpenTelemetry Lambda Layer:
+Follow these steps to instrument your function using the Splunk OpenTelemetry Lambda layer:
 
 #. In the AWS Lambda console, select the function that you want to instrument.
 
-#. In the :guilabel:`Layers` section, select :guilabel:`Add a layer`, then select :guilabel:`Specify an ARN`.
+#. In the :guilabel:`layers` section, select :guilabel:`Add a layer`, then select :guilabel:`Specify an ARN`.
 
 #. Copy the Amazon Resource Name (ARN) for the region of your Lambda function from the list matching your architecture:
 
@@ -74,16 +74,16 @@ Follow these steps to instrument your function using the Splunk OpenTelemetry La
 
 #. Paste the selected ARN in the :guilabel:`Specify an ARN` field and select :guilabel:`Add`.
 
-#. Check that the Splunk layer appears in the :guilabel:`Layers` table.
+#. Check that the Splunk layer appears in the :guilabel:`layers` table.
 
 .. note:: You can automate the update of the Lambda layer using the AWS CLI or other automation tools.
 
 .. _set-env-vars-otel-lambda:
 
-Configure the Splunk OpenTelemetry Lambda Layer
+Configure the Splunk OpenTelemetry Lambda layer
 ----------------------------------------------------
 
-Follow these steps to add the required configuration for the Splunk OpenTelemetry Lambda Layer:
+Follow these steps to add the required configuration for the Splunk OpenTelemetry Lambda layer:
 
 1. In the AWS Lambda console, open the function that you are instrumenting.
 
@@ -230,7 +230,7 @@ The Slim feature reduces the size of Lambda packages by removing some files, inc
 Send serverless spans directly to Splunk Observability Cloud
 =====================================================================
 
-By default, the Splunk OpenTelemetry Lambda Layer sends telemetry to a Collector running alongside the Lambda.
+By default, the Splunk OpenTelemetry Lambda layer sends telemetry to a Collector running alongside the Lambda.
 
 To send spans directly to Splunk Observability Cloud from an AWS Lambda function instrumented using the Splunk Lambda layer add the following environment variables:
 
