@@ -118,22 +118,22 @@ The following table provides a summary of performance benchmarks run internally:
     - 1.8
     - 28,000
 
-   * - 1
+  * - 1
     - 1024
     - 1.8
     - 24,000
 
-   * - 5
+  * - 5
     - 256
     - 3.2
     - 54,000
 
-   * - 7
+  * - 7
     - 256
     - 3
     - 52,000
 
-   * - 10
+  * - 10
     - 256
     - 3.2
     - 53,000
