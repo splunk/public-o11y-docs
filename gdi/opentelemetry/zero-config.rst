@@ -15,7 +15,7 @@ Splunk OpenTelemetry Zero Configuration Auto Instrumentation
    Kubernetes Operator <auto-instrumentation/auto-instrumentation-operator>
    Java <auto-instrumentation/auto-instrumentation-java>
    .NET <auto-instrumentation/auto-instrumentation-dotnet>
-   Node.js <auto-instrumentation/auto-instrumentation-nodejs>
+   NodeJS <auto-instrumentation/auto-instrumentation-nodejs>
 
 Splunk OpenTelemetry Zero Configuration Auto Instrumentation automatically instruments your back-end applications and services to capture and report distributed traces and metrics to the Splunk Distribution of OpenTelemetry Collector, and then on to Splunk APM.
 
@@ -55,7 +55,7 @@ The Zero Configuration packages provide the following benefits:
 - You can start streaming traces and monitor distributed applications with Splunk APM in minutes.
 - You don't need to configure or instrument your back-end services or applications before deployment.
 
-Zero Configuration Auto Instrumentation is available for Java, .NET, and Node.js applications.
+Zero Configuration Auto Instrumentation is available for Java, .NET, and NodeJS applications.
 
 .. list-table::
    :header-rows: 1
@@ -74,7 +74,7 @@ Zero Configuration Auto Instrumentation is available for Java, .NET, and Node.js
      - :strong:`X`
      - :strong:`X`
      - 
-   * - Node.js
+   * - NodeJS
      - :strong:`X`
      - 
      - :strong:`X`
