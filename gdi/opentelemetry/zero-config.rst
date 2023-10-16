@@ -73,7 +73,7 @@ Zero Configuration Auto Instrumentation is available for Java, .NET, and Node.js
    * - .NET
      - :strong:`X`
      - :strong:`X`
-     - :strong:`X`
+     - 
    * - Node.js
      - :strong:`X`
      - 

@@ -1,40 +1,35 @@
 .. _auto-instrumentation-nodejs-k8s:
 
 ************************************************************************************
-Zero Configuration Automatic Instrumentation for Kubernetes Node.js applications
+Zero Configuration Automatic Instrumentation for Kubernetes NodeJS applications
 ************************************************************************************
 
 .. meta::
    :description: Use the Collector with the upstream Kubernetes Operator for automatic instrumentation to easily add observability code to your application, enabling it to produce telemetry data.
 
-You can use the OTel Collector with an upstream Operator in a Kubernetes environment to implement and simplify the management of OpenTelemetry Auto Instrumentation of your applications. 
+You can use the OTel Collector with an upstream Operator in a Kubernetes environment to automatically instrument your NodeJS applications. 
 
-.. caution:: This instance of the Kubernetes Operator is part of the upstream OpenTelemetry Collector Contrib project. It's not related to the Splunk Operator for Kubernetes, which is used to deploy and operate Splunk Enterprise deployments in a Kubernetes infrastructure. 
+For more information about the Kubernetes operator, see :ref:`auto-instrumentation-operator`.
 
 Requirements
 ================================================================
 
-Operator Auto Instrumentation requires the following components: 
+Zero Config Auto Instrumentation for NodeJS requires the following components: 
 
 * The :ref:`Splunk OTel Collector chart <helm-chart>`: It deploys the Collector and related resources, including the OpenTelemetry Operator.
 * The OpenTelemetry Operator, which manages auto-instrumentation of Kubernetes applications. See more in the :new-page:`OpenTelemetry GitHub repo <https://github.com/open-telemetry/opentelemetry-operator>`.
-* Instrumentation libraries generate telemetry data when your application uses instrumented components.
 * A Kubernetes instrumentation object ``opentelemetry.io/v1alpha1``, which configures auto-instrumentation settings for applications.
 
-Install the Collector using the Kubernetes Operator  
-===========================================================================
+1. Set up the environment for instrumentation
+------------------------------------------------------------
 
-To use the Operator for Auto Instrumentation, follow these steps:
+Create a namespace for your NodeJS applications and deploy your NodeJS applications to that namespace. 
 
-#. Deploy the Helm chart with the required components, including the Operator, to your Kubernetes cluster. 
+.. code-block:: bash
 
-#. Verify the deployed resources are working correctly. 
+   kubectl create namespace <namespace>
 
-#. Apply annotations at the pod or namespace level for the Operator to know which pods to apply auto-instrumentation to.   
-
-#. Check out the results at Splunk Observability APM.
-
-1. Deploy the Helm Chart with the Operator enabled
+2. Deploy the Helm Chart with the Operator enabled
 ------------------------------------------------------------
 
 Deploy the :ref:`Collector for Kubernetes with the Helm chart <helm-chart>` with ``operator.enabled=true`` to include the Operator in the deployment.
@@ -63,7 +58,7 @@ The Operator requires certain TLS cerificates to work. If a certification manage
    # If cert-manager is already deployed.
    helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=dev -n monitoring helm-charts/splunk-otel-collector
 
-2. Verify all the OpenTelemetry resources are deployed successfully
+3. Verify all the OpenTelemetry resources are deployed successfully
 ---------------------------------------------------------------------------
 
 Resources include the Collector, the Operator, webhook, an instrumentation.
@@ -91,17 +86,81 @@ Run the following to verify the resources are deployed correctly:
    # NAME                          AGE   ENDPOINT
    # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
 
-3. Set annotations to instrument Node.js applications
+4. Set annotations to instrument NodeJS applications
 ------------------------------------------------------------
 
-You can add an ``instrumentation.opentelemetry.io/inject-{instrumentation_library}`` annotation to the following:
+Activate and deactivate auto instrumentation for NodeJS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Namespace: All pods within that namespace will be instrumented.
-* Pod Spec Objects: PodSpec objects that are available as part of Deployment, Statefulset, or other resources can be annotated.
+To activate auto instrumentation for your NodeJS deployment, run the following command:
 
-Use the Node.js annotation to instrument Node.js applications: ``instrumentation.opentelemetry.io/inject-nodejs: "true"``.
+.. code-block:: bash
 
-4. Check out the results at Splunk Observability APM
+   kubectl patch deployment <deployment_name> -n <namespace> -p '{"spec": {"template":{"metadata":{"annotations":{"instrumentation.opentelemetry.io/inject-nodejs":"default/splunk-otel-collector"}}}} }'
+
+.. note::
+   * The deployment pod will restart after running this command.
+   * If the chart is not installed in the "default" namespace, modify the annotation value to be "{chart_namespace}/splunk-otel-collector".
+
+To deactivate auto instrumentation for your NodeJS deployment, run the following command:
+
+.. code-block:: bash
+
+   kubectl patch deployment <deployment_name> -n <namespace> --type=json -p='[{"op": "remove", "path": "/spec/template/metadata/annotations/instrumentation.opentelemetry.io~1inject-nodejs"}]'
+
+Verify instrumentation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To verify that the instrumentation was successful, run the following command on an individual pod. Your instrumented pod should contain an initContainer named ``opentelemetry-auto-instrumentation`` and the target application container should have several ``OTEL_*`` environment variables similar to those in the output below.
+
+.. code-block:: bash
+
+   kubectl describe pod -n otel-demo -l app.kubernetes.io/name=opentelemetry-demo-frontend
+   # Name:             opentelemetry-demo-frontend-57488c7b9c-4qbfb
+   # Namespace:        otel-demo
+   # Annotations:      instrumentation.opentelemetry.io/inject-nodejs: default/splunk-otel-collector
+   # Status:           Running
+   # Init Containers:
+   #   opentelemetry-auto-instrumentation:
+   #     Command:
+   #       cp
+   #       -a
+   #       /autoinstrumentation/.
+   #       /otel-auto-instrumentation/
+   #     State:          Terminated
+   #       Reason:       Completed
+   #       Exit Code:    0
+   # Containers:
+   #   frontend:
+   #     State:          Running
+   #     Ready:          True
+   #     Environment:
+   #       FRONTEND_PORT:                              8080
+   #       FRONTEND_ADDR:                              :8080
+   #       AD_SERVICE_ADDR:                            opentelemetry-demo-adservice:8080
+   #       CART_SERVICE_ADDR:                          opentelemetry-demo-cartservice:8080
+   #       CHECKOUT_SERVICE_ADDR:                      opentelemetry-demo-checkoutservice:8080
+   #       CURRENCY_SERVICE_ADDR:                      opentelemetry-demo-currencyservice:8080
+   #       PRODUCT_CATALOG_SERVICE_ADDR:               opentelemetry-demo-productcatalogservice:8080
+   #       RECOMMENDATION_SERVICE_ADDR:                opentelemetry-demo-recommendationservice:8080
+   #       SHIPPING_SERVICE_ADDR:                      opentelemetry-demo-shippingservice:8080
+   #       WEB_OTEL_SERVICE_NAME:                      frontend-web
+   #       PUBLIC_OTEL_EXPORTER_OTLP_TRACES_ENDPOINT:  http://localhost:8080/otlp-http/v1/traces
+   #       NODE_OPTIONS:                                --require /otel-auto-instrumentation/autoinstrumentation.js
+   #       SPLUNK_OTEL_AGENT:                           (v1:status.hostIP)
+   #       OTEL_SERVICE_NAME:                          opentelemetry-demo-frontend
+   #       OTEL_EXPORTER_OTLP_ENDPOINT:                http://$(SPLUNK_OTEL_AGENT):4317
+   #       OTEL_RESOURCE_ATTRIBUTES_POD_NAME:          opentelemetry-demo-frontend-57488c7b9c-4qbfb (v1:metadata.name)
+   #       OTEL_RESOURCE_ATTRIBUTES_NODE_NAME:          (v1:spec.nodeName)
+   #       OTEL_PROPAGATORS:                           tracecontext,baggage,b3
+   #       OTEL_RESOURCE_ATTRIBUTES:                   splunk.zc.method=autoinstrumentation-nodejs:0.41.1,k8s.container.name=frontend,k8s.deployment.name=opentelemetry-demo-frontend,k8s.namespace.name=otel-demo,k8s.node.name=$(OTEL_RESOURCE_ATTRIBUTES_NODE_NAME),k8s.pod.name=$(OTEL_RESOURCE_ATTRIBUTES_POD_NAME),k8s.replicaset.name=opentelemetry-demo-frontend-57488c7b9c,service.version=1.5.0-frontend
+   #     Mounts:
+   #       /otel-auto-instrumentation from opentelemetry-auto-instrumentation (rw)
+   # Volumes:
+   #   opentelemetry-auto-instrumentation:
+   #     Type:        EmptyDir (a temporary directory that shares a pod's lifetime)
+
+5. View results at Splunk Observability APM
 ------------------------------------------------------------
 
 Allow the Operator to do the work. The Operator intercepts and alters the Kubernetes API requests to create and update annotated pods, the internal pod application containers are instrumented, and trace and metrics data populates the :ref:`APM dashboard <apm-dashboards>`. 
