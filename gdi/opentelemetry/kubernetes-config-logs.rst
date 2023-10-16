@@ -100,7 +100,7 @@ The following table provides a summary of performance benchmarks run internally:
 
 .. list-table:: Performance benchmarks
   :header-rows: 1
-  :width¡: 100%
+  :width: 100%
   :widths: 25 25 25 25
 
   * - Log generator count
