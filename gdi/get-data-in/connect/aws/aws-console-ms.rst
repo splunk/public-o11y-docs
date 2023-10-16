@@ -7,7 +7,7 @@ Connect Splunk Observability Cloud with Metric Streams from the AWS console
 .. meta::
   :description: Connect to AWS from the AWS console using Metric Streams
 
-Amazon CloudWatch supports a quick setup experience for AWS Partner destinations in the CloudWatch Metric Streams console. With this simplified getting-started experience you can create a Metric Stream to Splunk Observability in a single step.
+Amazon CloudWatch supports a quick setup experience for AWS Partner destinations in the CloudWatch Metric Streams console. With this simplified getting-started experience you can create a Metric Stream to Splunk Observability Cloud in a single step.
 
 Prerequisites
 ======================================================
@@ -47,8 +47,8 @@ To connect Splunk Observability Cloud from the AWS console, follow these steps:
 .. image:: /_images/gdi/aws-console-splunk.png
   :width: 55%
 
-3. In the :guilabel:`Configure the AWS Partner destination` menu, select the Splunk Observability Cloud Ingest endpoints from the dropdown list. See :guilabel:`Profile > Organizations > Real-time Data Ingest Endpoint` in the Splunk Observability Cloud console for more information. 
+4. In the :guilabel:`Configure the AWS Partner destination` menu, select the Splunk Observability Cloud Ingest endpoints from the dropdown list. See :guilabel:`Profile > Organizations > Real-time Data Ingest Endpoint` in the Splunk Observability Cloud console for more information. 
 
-4. Fill in the access token by copying one of the access tokens with ``INGEST`` authorization scope from :guilabel:`Settings > Access Tokens`.
+5. Fill in the access token by copying one of the access tokens with ``INGEST`` authorization scope from :guilabel:`Settings > Access Tokens`.
 
-5. You can leave the rest of the form as default, or customize the config according to your needs, such as filtering based on namespaces.
+6. You can leave the rest of the form as default, or customize the config according to your needs, such as filtering based on namespaces.

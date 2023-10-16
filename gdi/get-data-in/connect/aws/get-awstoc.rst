@@ -11,7 +11,7 @@ Connect to AWS and send data to Splunk Observability Cloud
   :hidden:
 
   AWS authentication and supported regions <aws-prereqs>
-  Connection options comparison <aws-compare-connect>
+  Compare connection options <aws-compare-connect>
   Connect to AWS with the UI guided setup <aws-wizardconfig>
   Connect to AWS with the API <aws-apiconfig>
   Connect to AWS with Terraform <aws-terraformconfig>
