@@ -180,7 +180,7 @@ To collect events using the Collector, set ``k8sObjects`` to ``true`` in your co
 
   k8sObjects: true
 
-.. note:: ``k8sEventsEnabled`` and ``eventsEnabled``are deprecated. 
+.. note:: ``k8sEventsEnabled`` and ``eventsEnabled`` are deprecated. 
 
 Collect journald events
 ----------------------------------
