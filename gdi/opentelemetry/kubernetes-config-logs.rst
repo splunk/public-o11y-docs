@@ -91,7 +91,7 @@ The following annotations for log ingestion management are supported:
 Review performance benchmarks
 ===========================================================================
 
-Some configurations set using the Collector for Kubernetes Helm chart can have an impact on overall performance of log ingestion. The more receivers, processors, exporters, and extensions that are added to any of the pipelines, the greater the performance impact.
+Configurations set using the Collector for Kubernetes Helm chart might have an impact on overall performance of log ingestion. The more receivers, processors, exporters, and extensions you add to any of the pipelines, the greater the performance impact.
 
 The Splunk Distribution of OpenTelemetry Collector for Kubernetes can exceed the default throughput of the HTTP Event Collector (HEC). To address capacity needs, monitor the HEC throughput and back pressure on the Collector for Kubernetes deployments and be prepared to add additional nodes as needed.
 
