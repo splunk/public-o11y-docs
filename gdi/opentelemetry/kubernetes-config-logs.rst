@@ -177,19 +177,7 @@ To collect events using the Collector, set ``k8sEventsEnabled`` to ``true`` in y
 
 .. code:: yaml
 
-  receivers:
-    k8s_cluster:
-      k8sEventsEnabled: true
-
-To complete the configuration, include the receiver in the ``logs`` pipeline of the ``service`` section of your
-configuration file. For example:
-
-.. code:: yaml
-
-  service:
-    pipelines:
-      logs:
-        receivers: [k8s_cluster]
+  k8sEventsEnabled: true
 
 Collect journald events
 ----------------------------------
