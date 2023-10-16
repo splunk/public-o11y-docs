@@ -56,7 +56,7 @@ Follow these steps to instrument your function using the Splunk OpenTelemetry La
 
 #. In the AWS Lambda console, select the function that you want to instrument.
 
-#. In the :guilabel:`layers` section, select :guilabel:`Add a layer`, then select :guilabel:`Specify an ARN`.
+#. In the :guilabel:`Layers` section, select :guilabel:`Add a layer`, then select :guilabel:`Specify an ARN`.
 
 #. Copy the Amazon Resource Name (ARN) for the region of your Lambda function from the list matching your architecture:
 
@@ -74,7 +74,7 @@ Follow these steps to instrument your function using the Splunk OpenTelemetry La
 
 #. Paste the selected ARN in the :guilabel:`Specify an ARN` field and select :guilabel:`Add`.
 
-#. Check that the Splunk layer appears in the :guilabel:`layers` table.
+#. Check that the Splunk layer appears in the :guilabel:`Layers` table.
 
 .. note:: You can automate the update of the Lambda layer using the AWS CLI or other automation tools.
 
