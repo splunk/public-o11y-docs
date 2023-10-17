@@ -1,7 +1,7 @@
 .. _otel-components:
 
 ******************************************
-Components
+Collector Components
 ******************************************
 
 .. meta::

@@ -7,17 +7,9 @@ Collector default configuration
 .. meta::
       :description: Configure the Splunk Distribution of OpenTelemetry Collector. There are a variety of default configuration files available, as well additional components that can be configured.
 
-The Collector configuration is stored in a :new-page:`YAML file <https://yaml.org/>` that specifies the characteristics and behavior of the following elements:
+The Collector configuration is stored in a :new-page:`YAML file <https://yaml.org/>` and specifies the behaviour of the different components and services.
 
-* :ref:`Extensions <collector-components-extensions>`: Extend the capabilities of the Collector.
-* :ref:`Receivers <collector-components-receivers>`: Determine how you'll get data into the Collector.
-* :ref:`Processors <collector-components-processors>`: Configure which operations you'll perform on data before it's exported. For example, filtering.
-* :ref:`Exporters <collector-components-exporters>`: Set up where to send data to. It can be one or more backends or destinations. 
-* Services. It consists of two elements:
-
-  * List of the :ref:`extensions <collector-components-extensions>` you've configured.
-
-  * :ref:`Pipelines <otel-data-processing>`: Path data will follow from reception, then through processing or modification, and finally exiting through exporters. 
+.. include:: /_includes/collector-components.rst
 
 See an overview of the elements and pipelines in the default configuration in the following sections.
 
@@ -147,6 +139,7 @@ Learn more
 
 See also the following documents:
 
+* :ref:`ootb-metrics-k8s`
 * :ref:`otel-collector-scenario`
 * :ref:`otel-install-platform` 
 * :ref:`Troubleshooting <otel-troubleshooting>`
