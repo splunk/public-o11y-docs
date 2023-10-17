@@ -1,109 +1,107 @@
-AlertSite by SMARTBEAR provides advanced synthetic monitoring platform
-for APIs, mobile and web applications. The VictorOps integration with
-AlertSite allows you to send alerts into the VictorOps timeline by using
-the generic email endpoint. The following guide will walk you through
-this integration.
+.. _alertsite-integration:
 
-In VictorOps
-------------
+AlertSite by SMARTBEAR integration
+******************************************
 
-First of all, you need to enable the AlertSite integration in VictorOps
-to be able to trigger and resolve incidents via email. To do that:
+.. meta::
+    :description: Configure the AlertSite integration for Splunk OnCall.
 
--  In VictorOps, go to **Settings > Alert Behavior > Integrations**, and
-   select AlertSite.\ |image1|
 
--  If it is not already enabled, click **Enable Integration**.
 
--  This will generate an email address to which you can send email
-   alerts. Note down this address – you will need to specify it in
-   AlertSite.\ |image2|
+AlertSite by SMARTBEAR provides advanced synthetic monitoring platform for APIs, mobile and web applications. The Splunk OnCall integration with AlertSite allows you to send alerts into the Splunk OnCall timeline by using
+the generic email endpoint. The following guide will walk you through this integration.
 
-The *$routing_key* should be replaced with the key of a team to which
-you want to route the alerts. For example:
 
-db212e48-……8669\ **+databaseteam**\ @alert.victorops.com
 
-Team routing keys are configured at the bottom of the **Settings
-> Integrations** page. For details, see `Routing
-Keys <http://help.victorops.com/knowledge-base/routing-keys/>`__ in the
-VictorOps knowledge base.
+In Splunk OnCall
+=============================
 
-If you do not use routing, remove the *+$routing_key* part (including
-the plus sign) so that the email looks like this:
+To enable the AlertSite integration in Splunk OnCall to be able to trigger and resolve incidents via email:
 
-db212e48-……8669@alert.victorops.com
+#. In Splunk OnCall, navigate to :guilabel:`Settings`, then :guilabel:`Alert Behavior`. Select :guilabel:`Integrations` and select AlertSite.
+
+    .. image:: /_images/spoc/Integration-alertsite.png
+      :width: 90%
+      :alt: Under All integrations, select the AlertSite logo.
+
+#. If it is not already enabled, select :guilabel:`Enable Integration`. This will generate an email address to which you can send email alerts. Note down this address. You will need to specify it in the AlertSite application.
+
+    .. image:: /_images/spoc/alertsite-integrationEmail.png
+      :width: 90%
+      :alt: Record the Service Email address for use in following steps.
+         
+#. The *$routing_key* should be replaced with the key of a team to which you want to route the alerts. For example:
+
+    db212e48-……8669\:strong:`+databaseteam`\ @alert.victorops.com
+
+   Team routing keys are configured at the bottom of the Settings > Integrations** page. For details, see `Routing
+Keys <http://help.victorops.com/knowledge-base/routing-keys/>`.
+#. If you do not use routing, remove the *+$routing_key* part, including the plus sign, so that the email looks like this:
+
+    db212e48-……8669@alert.victorops.com
+
+
 
 Configuring AlertSite
----------------------
+==============================
+
 
 Customizing Email Templates
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------
 
-When using the VictorOps email endpoint, the email subject must include
-specific keywords - CRITICAL or PROBLEM to open a new incident, and
-RESOLVED or OK to resolve an incident. You can customize AlertSite email
-alerts to include these keywords.
+When using the Splunk OnCall email endpoint, the email subject must include specific keywords - CRITICAL or PROBLEM to open a new incident, and RESOLVED or OK to resolve an incident. You can customize AlertSite email alerts to include these keywords.
 
-**Note:** The email subject line must be the same in both the “error”
-and “clear” templates (apart from the *CRITICAL*/*PROBLEM* and
-*RESOLVED*/*OK* words). This is needed for VictorOps to recognize that
-the “clear” email is related to the incident opened by the “error”
-email. For example, do not use the $STATUS variable in the subject line,
-because the status code will be different in the “error” and “clear”
-alerts, and, in this case, VictorOps will not be able to match these
-alerts.
+.. note:: The email subject line must be the same in both the error and clear templates (apart from the CRITICAL/PROBLEM and RESOLVED/OK words). This is needed for Splunk OnCall to recognize that the “clear” email is related to the incident opened by the “error” email. For example, do not use the $STATUS variable in the subject line, because the status code will be different in the “error” and “clear” alerts, and, in this case, Splunk OnCall will not be able to match these alerts.
 
-To create custom alert templates for VictorOps:
+To create custom alert templates for Splunk OnCall in AlertSite:
 
--  In AlertSite UXM, go to **Alerts > Template Editor**.
+#. In the AlertSite user interface, navigate to :guilabel:`Alerts` then :guilabel:`Template Editor`.
+#. To configure the error template:
+    #. Filter the template list to show only Alert Type: Site Error.
+    #. On the list, select the AlertSite Template for :strong:`Site Error`` with the delivery method :strong:`Text`. 
+    #. Select the template text in the editor to activate the edit mode.
+    #. Enter the following:
+       -  Template name: VictorOps - Monitor Error (or similar)
+       -  Subject: [AlertSite] Monitor Alert - $DESCRIP CRITICAL
 
--  To configure the error template:
+       .. note:: You can use another subject, but make sure it includes the word :strong:`CRITICAL` and does not include the *$STATUS* variable.
 
-   -  Filter the template list to show only *Alert Type: Site Error*.
+      .. image:: images/spoc/error-template.png
+         :width: 90%
+         :alt: Ensure the subject field includes the word Critical rather than variables.
 
-   -  On the list, select the **AlertSite Template** for **Site Error**
-      with the delivery method |image3| **Text**.\ |Base error template|
+    #. Select :guilabel:`Save As` to save the changes as a new template.
+#. To configure the ”all clear“ template:
+    #. Filter the template list to show only *Alert Type: Site Clear*.
+    #. Select the **AlertSite Template** for **Site Clear** with the delivery method of Text.
+    
+      .. image:: images/spoc/base-clear-template.png
+         :width: 90%
+         :alt: Select the delivery method of Text.
 
-   -  Click the template text in the editor to activate the edit mode.
+    #. Select the template text in the editor to activate the edit mode.
+    #. Enter the following:
 
-   -  Enter the following:
+       -  Template name: *VictorOps - Monitor Clear* (or similar).
+       -  Subject: *[AlertSite] Monitor Alert - $DESCRIP OK*
 
-      -  Template name: *VictorOps - Monitor Error* (or similar)
-      -  Subject: *[AlertSite] Monitor Alert - $DESCRIP CRITICAL*
+      .. note:: The subject must be exactly the same as in the error template, but with the *OK* word instead of *CRITICAL*.
 
-      **Note:** You can use another subject, but make sure it includes
-      the word *CRITICAL* and does not include the *$STATUS* variable.
+      .. image:: images/spoc/clear-template.png
+         :width: 90%
+         :alt: The subject must be exactly the same as in the error template, but with the OK word instead of CRITICAL.
 
-      .. image:: images/error-template.png
+     #. Select :guilabel:`Save As` to save the changes as a new template.
 
-   -  Click **Save As** to save the changes as a new template.
+You can see the created templates on the template list:
 
--  To configure the ”all clear“ template:
+   .. image:: images/spoc/victorops-templates.png
+      :width: 90%
+      :alt: The templates you created appear on the template list.
 
-   -  Filter the template list to show only *Alert Type: Site Clear*.
 
-   -  Select the **AlertSite Template** for **Site Clear** with the
-      delivery method |image4| **Text**.\ |image5|
-
-   -  Click the template text in the editor to activate the edit mode.
-
-   -  Enter the following:
-
-      -  Template name: *VictorOps - Monitor Clear* (or similar).
-      -  Subject: *[AlertSite] Monitor Alert - $DESCRIP OK*
-
-      **Important:** The subject must be exactly the same as in the
-      error template, but with the *OK* word instead of *CRITICAL*.
-
-      .. image:: images/clear-template.png
-
-   -  Click **Save As** to save the changes as a new template.
-
--  You can see the created templates on the template list:|image6|
-
-Adding VictorOps to Alert Recipients
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Adding Splunk OnCall to Alert Recipients
+--------------------------------------------
 
 Next, you need to add the VictorOps email endpoint that you `generated
 earlier <https://help.victorops.com/knowledge-base/alertsite-integration-guide-victorops/#victorops-email>`__
