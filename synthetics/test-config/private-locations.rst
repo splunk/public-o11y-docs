@@ -113,9 +113,9 @@ Follow these steps to limit logging:
 
 
 
-Adding certificates in Synthetics
+Add certificates in Synthetics
 ------------------------------------------------------
-Splunk Synthetic Monitoring supports injecting custom root CA certificates for any tests running from your private locations. Client keys and certificates aren't supported at this time. 
+Splunk Synthetic Monitoring supports injecting custom root CA certificates for API and Uptime tests running from your private locations. Client keys and certificates aren't supported at this time. 
 
 #. Create a folder called ``certs`` on your host machine and place the CA Certificate (in CRT format) in the folder.
 
@@ -129,6 +129,11 @@ For example, here is what a command might look like after you modify it to fit y
 .. code:: yaml
 
     docker run -e "RUNNER_TOKEN=<insert-token>" --volume=`pwd`/certs:/usr/local/share/ca-certificates/my_certs/ quay.io/signalfx/splunk-synthetics-runner:latest bash -c "sudo update-ca-certificates && bundle exec bin/start_runner"
+
+
+.. Note:: Custom root CA certificates aren't supported for Browser tests. Browser tests require SSL/TLS validation for accurate testing. Optionally, you can deactivate SSL/TLS validation for Browser tests when necessary.
+
+
 
 
 
@@ -168,6 +173,6 @@ If your queue latency increases but your queue length doesn't, then try these tr
 
 The maximum number of runs in a queue is 100,000. 
 
-Any runners older than one hour are removed from the queue. 
+Any runs older than one hour are removed from the queue. 
 
 

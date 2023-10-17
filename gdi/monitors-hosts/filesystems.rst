@@ -4,9 +4,77 @@ Free disk space (filesystems)
 =============================
 
 .. meta::
-   :description: Use this Splunk Observability Cloud integrationfor the file systems / filesystems monitor. See benefits, install, configuration, and metrics
+   :description: Use this Splunk Observability Cloud integration for the file systems / filesystems monitor. See benefits, install, configuration, and metrics
 
 .. note:: If you are using the Splunk Distribution of OpenTelemetry Collector and want to collect file system utilization metrics, use the native OTel component :ref:`host-metrics-receiver`.
+
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the ``filesystems`` monitor type to retrieve free disk space metrics.
+
+This integration is available on Linux and Windows. On Linux, this monitor relies on the ``/proc`` filesystem. If the underlying host's ``/proc`` file system is mounted somewhere other than ``/proc``, specify the path using the top level setting ``procPath``.
+
+
+Benefits
+--------
+
+.. include:: /_includes/benefits.rst
+
+Installation
+------------
+
+.. include:: /_includes/collector-installation.rst
+
+Configuration
+-------------
+
+.. include:: /_includes/configuration.rst
+
+Example
+~~~~~~~
+
+To activate this integration, add the following to your Collector
+configuration:
+
+.. code:: yaml
+
+   receivers:
+     smartagent/filesystems:
+       type: filesystems
+       ...  # Additional config
+
+Next, add the monitor to the ``service.pipelines.metrics.receivers``
+section of your configuration file:
+
+.. code:: yaml
+
+   service:
+     pipelines:
+       metrics:
+         receivers: [smartagent/filesystems]
+       logs:
+         receivers: [smartagent/filesystems]
+
+The following example shows how to collect additional metrics from a variefy of file system types:
+
+.. code:: yaml
+
+    smartagent/filesystems:
+       type: filesystems
+       extraMetrics:
+       - df_complex.reserved
+       - df_inodes.free
+       - df_inodes.used
+       - percent_inodes.free
+       - percent_inodes.used
+       - percent_bytes.free
+       - percent_bytes.reserved
+       - percent_bytes.used
+       fsTypes:
+       - ext3
+       - ext4
+       - nfs
+       - xfs
+       - btrfs
+       sendModeDimension: true
 
 Configuration settings
 ----------------------

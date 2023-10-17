@@ -132,7 +132,7 @@ Use the following configuration to collect and log CPU metrics. The ``cat`` comm
          scrapers:
             cpu:
    exporters:
-      logging:
+      debug:
          # Can be changed to info
          verbosity: detailed
    service:
