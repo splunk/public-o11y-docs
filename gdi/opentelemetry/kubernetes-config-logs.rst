@@ -11,9 +11,30 @@ Configure logs and events for Kubernetes
 
 .. note:: See how to configure the Collector for Kubernetes at :ref:`otel-kubernetes-config` and :ref:`otel-kubernetes-config-advanced`.
 
-The Helm chart uses Fluentd to collect Kubernetes logs and send them through the Collector, which does all of the necessary metadata enrichment. 
+Starting on version 0.86.0, the Splunk Distribution of Collector for Kubernetes collects native OpenTelemetry logs by default.
 
-For native OTel collection, see :ref:`otel-k8s-logs-native`.
+The following applies:
+
+* Use version 0.80.0 (or higher) of the Splunk OpenTelemetry Collector to correlate logs and traces in Istio environments. 
+
+  * If you're unable to upgrade the Collector to the required version, use Fluentd for log collection and deploy the Helm chart with ``autodetect.istio=true``. See :new-page:`Splunk OpenTelemetry collector version 0.80.0 <https://github.com/signalfx/splunk-otel-collector-chart/releases/tag/splunk-otel-collector-0.80.0>` for more information.
+
+* The Collector cannot collect Journald logs natively.
+
+* Log collection is not supported in GKE Autopilot.
+
+* See also :ref:`other rules and limitations for metrics and dimensions <metric-dimension-names>`. For instance, you can have up to 36 dimensions per MTS, otherwise the data point is dropped.
+
+Use Fluentd to collect logs
+===========================================================================
+
+You can also use Fluentd to collect Kubernetes logs and send them through the Collector, which does all of the necessary metadata enrichment. 
+
+Add the following line to your configuration to use Fluentd to collect logs.
+
+.. code-block:: yaml
+
+  logsEngine: fluentd
 
 Add log files from Kubernetes host machines or volumes
 ===========================================================================
@@ -94,7 +115,7 @@ Review performance benchmarks
 
 Configurations set using the Collector for Kubernetes Helm chart might have an impact on overall performance of log ingestion. The more receivers, processors, exporters, and extensions you add to any of the pipelines, the greater the performance impact.
 
-The Splunk Distribution of OpenTelemetry Collector for Kubernetes can exceed the default throughput of the HTTP Event Collector (HEC). To address capacity needs, monitor the HEC throughput and back pressure on the Collector for Kubernetes deployments and be prepared to add additional nodes as needed.
+The Collector for Kubernetes can exceed the default throughput of the :ref:`HTTP Event Collector (HEC) <splunk-hec-receiver>`. To address capacity needs, monitor the HEC throughput and back pressure on the Collector for Kubernetes deployments and, if necessary, add additional nodes.
 
 The following table provides a summary of performance benchmarks run internally:
 
@@ -140,32 +161,6 @@ The following table provides a summary of performance benchmarks run internally:
 
 The data pipelines for these test runs involved reading container logs as they are being written, then parsing filename for metadata, enriching it with Kubernetes metadata, reformatting the data structure, and sending logs (without compression) to the Splunk HEC endpoint.
 
-.. _otel-k8s-logs-native:
-
-Use native OpenTelemetry log collection
-===========================================================================
-
-Add the following line to your configuration to use OpenTelemetry logs collection instead of Fluentd:
-
-.. code-block:: yaml
-
-  logsEngine: otel
-
-Known limitations
-----------------------------------
-
-The following are known limitations of native OpenTelemetry logs collection:
-
-* Use version 0.80.0 (or higher) of the Splunk OpenTelemetry Collector to correlate logs and traces in Istio environments. 
-
-  * If you're unable to upgrade the Collector to the required version, use Fluentd for log collection and deploy the Helm chart with ``autodetect.istio=true``. See :new-page:`Splunk OpenTelemetry collector version 0.80.0 <https://github.com/signalfx/splunk-otel-collector-chart/releases/tag/splunk-otel-collector-0.80.0>` for more information.
-
-* The Collector cannot collect Journald logs natively.
-
-* Log collection is not supported in GKE Autopilot.
-
-* See also :ref:`other rules and limitations for metrics and dimensions <metric-dimension-names>`. For instance, you can have up to 36 dimensions per MTS, otherwise the data point is dropped.
-
 .. _otel-k8s-events:
 
 Collect events
@@ -174,13 +169,42 @@ Collect events
 Collect events
 ----------------------------------
 
-To collect events using the Collector, set ``k8sObjects`` to ``true`` in your configuration file:
+To collect events using the Collector, you need to add ``k8sObjects`` in your configuration file.
+
+This object has the following fields:
+
+* ``name``. :strong:`Required`. Name of the object, for example ``pods`` or ``namespaces``.
+
+* ``mode``. Defines in which way this type of object is collected: either ``pull`` or ``watch``. ``pull`` by default.
+
+  * ``pull`` mode reads all objects of this type using the list API at an interval. 
+  
+  * ``watch`` mode sets up a long connection using the watch API to get updates only.
+
+* ``namespace``. By default, it includes all namespaces. If specified, the Collector only collects objects from the specified namespace.
+
+* ``labelSelector``. Selects objects by label(s).
+
+* ``fieldSelector``. Select objects by field(s).
+
+* ``interval``. Only applies to ``pull`` mode. The interval at which object is pulled. ``60`` seconds by default. 
+
+For example:
 
 .. code:: yaml
 
-  k8sObjects: true
-
-.. note:: ``k8sEventsEnabled`` and ``eventsEnabled`` are deprecated. 
+  k8sObjects:
+    - name: pods
+      mode: pull
+      label_selector: environment in (production),tier in (frontend)
+      field_selector: status.phase=Running
+      interval: 15m
+    - name: events
+      mode: watch
+      group: events.k8s.io
+      namespaces: [default]
+  
+.. note:: The fields ``k8sEventsEnabled`` and ``eventsEnabled`` are deprecated. 
 
 Collect journald events
 ----------------------------------
