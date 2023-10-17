@@ -11,7 +11,7 @@ AlertSite by SMARTBEAR integration
 AlertSite by SMARTBEAR provides advanced synthetic monitoring platform for APIs, mobile and web applications. The Splunk OnCall integration with AlertSite allows you to send alerts into the Splunk OnCall timeline by using
 the generic email endpoint. The following guide will walk you through this integration.
 
-
+.. alertsite-spoc:
 
 In Splunk OnCall
 =============================
@@ -61,7 +61,7 @@ To create custom alert templates for Splunk OnCall in AlertSite:
     #. On the list, select the AlertSite Template for :strong:`Site Error`` with the delivery method :strong:`Text`. 
     #. Select the template text in the editor to activate the edit mode.
     #. Enter the following:
-       -  Template name: VictorOps - Monitor Error (or similar)
+       -  Template name: Splunk OnCall - Monitor Error (or similar)
        -  Subject: [AlertSite] Monitor Alert - $DESCRIP CRITICAL
 
        .. note:: You can use another subject, but make sure it includes the word :strong:`CRITICAL` and does not include the *$STATUS* variable.
@@ -82,7 +82,7 @@ To create custom alert templates for Splunk OnCall in AlertSite:
     #. Select the template text in the editor to activate the edit mode.
     #. Enter the following:
 
-       -  Template name: *VictorOps - Monitor Clear* (or similar).
+       -  Template name: *Splunk OnCall - Monitor Clear* (or similar).
        -  Subject: *[AlertSite] Monitor Alert - $DESCRIP OK*
 
       .. note:: The subject must be exactly the same as in the error template, but with the *OK* word instead of *CRITICAL*.
@@ -103,82 +103,58 @@ You can see the created templates on the template list:
 Adding Splunk OnCall to Alert Recipients
 --------------------------------------------
 
-Next, you need to add the VictorOps email endpoint that you `generated
-earlier <https://help.victorops.com/knowledge-base/alertsite-integration-guide-victorops/#victorops-email>`__
-as an alert recipient in AlertSite:
+Next, you need to add the Splunk OnCall email endpoint that you generated in :ref:`alertsite-spoc:` as an alert recipient in AlertSite:
 
--  In AlertSite UXM, go to **Alerts > Alert Recipients**.
--  Click **+ New Recipient**.
--  In the dialog that appears, enter the following:
+#. In the AlertSite, navigate to :guilabel:`Alerts` then :guilabel:`Alert Recipient`.
+#. Select :guilabel:`+ New Recipient`.
+#. In the dialog that appears, enter the following:
+    -  Name - any name, for example, *Splunk OnCall*
+    -  Recipient - the email address you generated in Splunk OnCall
+    -  Mode - *E-mail (text format)\ *
 
-   -  Name – any name, for example, *VictorOps*
-   -  Recipient – the email address you generated in VictorOps
-   -  Mode – *E-mail (text format)\ *
 
--  Click **Submit**.
--  Select the created recipient and click **Edit Recipient**.
--  On the **Availability Alerts** tab, set the option to **Alert
-   whenever an error clears**. This is needed to automatically resolve
-   incidents in VictorOps when an error clears in AlertSite.\ |image7|
--  Configure other options as needed. For a description of available
-   options, see `Recipient Properties - Availability
+      .. image:: images/spoc/add-victorops-recipient.png
+         :width: 90%
+         :alt: Add the email address generated in an earlier step 
+
+   - Click :guilabel:`Submit`.
+#. Select the created recipient and click :guilabel:`Edit Recipient`.
+#. On the :guilabel:`Availability Alerts` tab, set the option to Alert whenever an error clears. This is needed to automatically resolve incidents in Splunk OnCall when an error clears in AlertSite.
+
+      .. image:: images/spoc/availability-alerts-settings.png
+         :width: 90%
+         :alt: Set the option to Alert whenever an error clears.
+
+#. Configure other options as needed. For a description of available options, see `Recipient Properties - Availability
    Alerts <http://doc.alertsite.com/synthetic/alerts/editing-recipients.htm#availabillity>`__.
--  Click **Submit**.
+#. Click :guilabel:`Submit`.
 
-Assigning Custom Templates to VictorOps Email Alerts
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Now, you need to assign your custom alert templates to the VictorOps
-alert recipient. To do this, you need to create a `recipient
-group <http://doc.alertsite.com/synthetic/alerts/recipient-groups.htm>`__
-that contains the VictorOps recipient, the custom templates, and the
-monitor whose alerts you want to send to VictorOps:
+Assigning Custom Templates to Splunk OnCall Email Alerts
+-----------------------------------------------------------
 
--  In AlertSite UXM, go to **Alerts > Recipient Groups**.
--  Click **+ New Recipient Group**.\ |image8|
--  Enter a name for the group.
--  Under **Monitors**, add the monitors that should send alerts to
-   VictorOps.
--  Under **Recipients**, add the VictorOps recipient.
--  Under **Custom Templates**, add the VictorOps “error” and “clear”
-   templates that you created earlier.\ |image9|
--  (Optional) Under **Error Types**, select specific error codes that
-   should be reported to VictorOps. The default value is all errors.
--  Click **Save as new**.
+Now, you need to assign your custom alert templates to the Splunk OnCall alert recipient. To do this, you need to create a `recipient group <http://doc.alertsite.com/synthetic/alerts/recipient-groups.htm>` that contains the Splunk OnCall recipient, the custom templates, and the monitor whose alerts you want to send to Splunk OnCall:
 
-Now, the specified monitors will send alerts to VictorOps.
+#. In AlertSite, navigate to :guilabel:`Alerts`, then :guilabel:`Recipient Groups`. 
+#. Select :guilabel:`New Recipient Group`.
+  
+  |image8|
 
-Viewing Alerts in VictorOps
----------------------------
+#. Enter a name for the group.
+#. Under :guilabel:`Monitors`, add the monitors that should send alerts to Splunk OnCall.
+#. Under :guilabel:`Recipients`, add the Splunk OnCall recipient.
+#. Under :guilabel:`Custom Templates`, add the Splunk OnCall “error” and “clear” templates that you created earlier.
+#. Optionally: Under :guilabel:`Error Types`, select specific error codes that should be reported to Splunk OnCall The default value is all errors.
+#. Select :guilabel:`Save as new`.
 
-You can view AlertSite alerts in the VictorOps **Timeline** and
-**Incidents** tabs:
+Now, the specified monitors will send alerts to Splunk OnCall.
 
-|AlertSite alert in VictorOps|
+Viewing Alerts in Splunk OnCall
+-------------------------------------------
 
-Click **More info** to view the alert contents, including the
-description of the error occurred:
+You can view AlertSite alerts in the Splunk OnCall :guilabel:`Timeline` and :guilabel:`Incidents` tabs.
 
-|Alert details|
+Select :guilabel:`More info` to view the alert contents, including the description of the error occurred:
 
-The team members can then acknowledge the incidents and take action to
-resolve them. The incidents will also be resolved automatically when a
-“clear” notification arrives from AlertSite.
+The team members can then acknowledge the incidents and take action to resolve them. The incidents will also be resolved automatically when a “clear” notification arrives from AlertSite.
 
-If you have any questions please contact `VictorOps
-support <mailto:Support@victorops.com?Subject=Alert%Site%20VictorOps%20Integration>`__.
-
-.. |image1| image:: images/Integration-AlertSite-Final.png
-.. |image2| image:: images/AlertSiteIntegrationEmail@2x-2.png
-.. |image3| image:: images/envelope.png
-.. |Base error template| image:: images/base-error-template.png
-.. |image4| image:: images/envelope.png
-.. |image5| image:: images/base-clear-template.png
-.. |image6| image:: images/victorops-templates.png
-.. |image7| image:: images/availability-alerts-settings_thumb_0_300.png
-.. |image8| image:: images/new-recipient-group.png
-.. |image9| image:: images/recipient-group_thumb_600_0.png
-.. |AlertSite alert in VictorOps| image:: images/victorops-incident_thumb_700_0.png
-   :target: http://doc.alertsite.com/Resources/Images/synthetic/integrations/victorops/victorops-incident.png
-.. |Alert details| image:: images/victorops-alert-details_thumb_550_0.png
-   :target: http://doc.alertsite.com/Resources/Images/synthetic/integrations/victorops/victorops-alert-details.png
