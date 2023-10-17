@@ -60,6 +60,7 @@ Follow these steps to automatically instrument your application using the Ruby a
       .. code-block:: ruby
 
          require "splunk/otel"
+         require "opentelemetry/instrumentation/all"
          Splunk::Otel.configure(auto_instrument: true)
 
 #. Set the ``OTEL_SERVICE_NAME`` environment variable:
