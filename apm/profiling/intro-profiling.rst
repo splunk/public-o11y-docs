@@ -63,7 +63,7 @@ Memory profiling also exposes memory metrics for your application, which you can
 .. raw:: html
 
   <embed>
-    <h2><a name="supported-languages" class="headerlink" href="#supported-languages" title="Supported languages">Supported languages</h2>
+    <h2><a name="supported-languages" class="headerlink" href="#supported-languages" title="Supported languages">Supported languages</a></h2>
   </embed>
 
 The following programming languages have instrumentation available: 
