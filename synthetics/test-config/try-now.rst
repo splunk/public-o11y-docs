@@ -27,6 +27,9 @@ There are two types of runs in Splunk Synthetic Monitoring try now runs, and per
   * - Persisted run
     - 
         * Review run results. 
-        * Execute a test on a schedule. 
+        * Run a test on a schedule. 
 
+Limits
+========================================================================
+You can run a maximum of 1,000 try now runs per hour for each org. 
 
