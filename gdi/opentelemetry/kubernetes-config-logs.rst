@@ -169,9 +169,7 @@ Collect events
 Collect events
 ----------------------------------
 
-To collect events using the Collector, you need to add ``k8sObjects`` in your configuration file.
-
-This object has the following fields:
+To collect events using the Collector, you need to add ``k8sObjects`` to your configuration file. It has the following fields:
 
 * ``name``. :strong:`Required`. Name of the object, for example ``pods`` or ``namespaces``.
 
