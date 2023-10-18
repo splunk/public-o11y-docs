@@ -1,4 +1,4 @@
-.. _aws-wizardconfig:
+.. _aws-connect-ms:
 
 *********************************************************************
 Connect to AWS using the guided setup in Splunk Observability Cloud

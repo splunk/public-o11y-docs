@@ -19,7 +19,7 @@ Compare the different available options to connect Splunk Observability Cloud wi
     - :strong:`Advantages`
     - :strong:`Disadvantages`
 
-  * - Polling (default)
+  * - :ref:`Polling (default) <aws-connect-polling>` 
     - #. Your metrics are not time-sensitive, and delays are acceptable
       #. You need to use tag filtering and/or poll rate to manage cost
     - * Easiest method to set up
@@ -28,7 +28,7 @@ Compare the different available options to connect Splunk Observability Cloud wi
     - * Metrics might be delayed since they're are polled at intervals
       * If polling intervals are short, this method might be more expensive
 
-  * - Streaming (Splunk-managed)
+  * - :ref:`Streaming (Splunk-managed) <aws-connect-ms>` 
     - #. You're looking for real-time metrics 
       #. You need to sync metrics from multiple AWS regions
     - * Access metrics faster and at scale through Kinese Data Firehose streams
