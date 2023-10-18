@@ -169,7 +169,9 @@ Collect events
 Collect events
 ----------------------------------
 
-To collect events using the Collector, you need to add ``k8sObjects`` to your configuration file. It has the following fields:
+To collect Kubernetes events using the Collector, you need to add ``k8sObjects`` to your configuration file, and set ``logsEnabled`` to ``true``. 
+
+``k8sObjects`` has the following fields:
 
 * ``name``. :strong:`Required`. Name of the object, for example ``pods`` or ``namespaces``.
 
@@ -203,6 +205,8 @@ For example:
       namespaces: [default]
   
 .. note:: The fields ``k8sEventsEnabled`` and ``eventsEnabled`` are deprecated. 
+
+For more information, refer to the Github documentation for the cluster receiver Helm chart deployment at :new-page:`Kubernetes objects collection using OpenTelemetry Kubernetes Object Receiver <https://github.com/signalfx/splunk-otel-collector-chart/blob/da261f5c75444e50cc68e93164587bfec43b7270/helm-charts/splunk-otel-collector/values.yaml#L466C5>`.
 
 Collect journald events
 ----------------------------------
