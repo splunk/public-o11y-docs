@@ -27,8 +27,11 @@ Use the OpenTelemetry Collector to receive, process, and export metric, trace, a
 
 The Collector uses pipelines to receive, process, and export trace data with components known as receivers, processors, and exporters. You can also add extensions that provide the OpenTelemetry Collector with additional functionality, such as diagnostics and health checks.
 
-Understand the Collector distributions
-========================================
+.. raw:: html
+
+  <embed>
+    <h2>Understand the Collector distributions<a name="collector-distros" class="headerlink" href="#collector-distros" title="Permalink to this headline">¶</a></h2>
+  </embed>
     
 The OpenTelemetry Collector has a core version and a contributions version. The core version provides receivers, processors, and exporters for general use. The contributions version provides receivers, processors, and exporters for specific vendors and use cases.
 
@@ -67,10 +70,13 @@ The customizations in the Splunk distribution include these features:
 * Fluentd for log capture, deactivated by default
 * Tools to support migration from SignalFx products
 
-.. _opentelemetry-resources:
+.. _otel-intro-resources:
 
-Resources and other requirements
-======================================
+.. raw:: html
+
+  <embed>
+    <h2>Resources and other requirements<a name="otel-intro-resources" class="headerlink" href="#otel-intro-resources" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
 The following table describes everything you need to start using the Collector:
 
@@ -91,8 +97,11 @@ The following table describes everything you need to start using the Collector:
 
 See also :ref:`otel-requirements`.
 
-Install and configure the Collector
-==========================================
+.. raw:: html
+
+  <embed>
+    <h2>Install and configure the Collector<a name="otel-intro-install" class="headerlink" href="#otel-intro-install" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
 .. note::
 
@@ -114,8 +123,11 @@ After you've installed the Collector, see:
 
 .. _otel-monitoring:
 
-Monitor the Collector
-=============================================
+.. raw:: html
+
+  <embed>
+    <h2>Monitor the Collector<a name="otel-monitoring" class="headerlink" href="#otel-monitoring" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
 The default configuration automatically scrapes the Collector's own metrics and sends the data using the ``signalfx`` exporter. A built-in dashboard provides information about the health and status of Collector instances. In addition, logs are automatically collected for the Collector and Journald processes.
 
@@ -123,8 +135,11 @@ The Collector also offers a :new-page:`zPages extension <https://github.com/open
 
 .. _otel-using:
 
-Available features for the Collector
-================================================
+.. raw:: html
+
+  <embed>
+    <h2>Available features for the Collector<a name="otel-using" class="headerlink" href="#otel-using" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
 See the features available for the Collector:
 
