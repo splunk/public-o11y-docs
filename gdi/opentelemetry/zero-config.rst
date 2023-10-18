@@ -25,7 +25,7 @@ The following diagram demonstrates the process of manually instrumenting your ap
 
    flowchart TB
       subgraph "Manual instrumentation"
-      A["Install the Splunk \n Distribution of
+      A["Install the Splunk <br> Distribution of
       OpenTelemetry Collector \n agent for your integration"]
 
       B["Follow guided setup instructions \n to configure your environment"]
