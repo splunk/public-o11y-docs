@@ -25,7 +25,7 @@ After you get profiling data into Observability Cloud, you can explore stack tra
 .. raw:: html
 
   <embed>
-    <h2>What you can do with AlwaysOn Profiling</h2>
+    <h2>What you can do with AlwaysOn Profiling<a name="what-can-you-do" class="headerlink" href="#what-can-you-do" title="What can you do with AlwaysOn Profiling">¶</a></h2>
   </embed>
 
 Here are some of the things you can do with AlwaysOn Profiling for Splunk APM:
@@ -51,7 +51,7 @@ For sample scenarios, see :ref:`profiling-scenario-landingpage`.
 .. raw:: html
 
   <embed>
-    <h2>Memory profiling</h2>
+    <h2>Memory profiling<a name="memory-profiling" class="headerlink" href="#memory-profiling" title="Memory profiling">¶</a></h2>
   </embed>
 
 Memory profiling adds memory allocation data to stack traces and exposes memory metrics, so that you can discover leaks and unusual consumption patterns in your instrumented services and applications. See :ref:`memory-profiling-scenario`.
@@ -63,7 +63,7 @@ Memory profiling also exposes memory metrics for your application, which you can
 .. raw:: html
 
   <embed>
-    <h2>Supported languages</h2>
+    <h2>Supported languages<a name="supported-languages" class="headerlink" href="#supported-languages" title="Supported languages">¶</a></h2>
   </embed>
 
 The following programming languages have instrumentation available: 
@@ -90,7 +90,7 @@ The following programming languages have instrumentation available:
 .. raw:: html
 
   <embed>
-    <h2>Get AlwaysOn Profiling data into Splunk APM</h2>
+    <h2>Get AlwaysOn Profiling data into Splunk APM<a name="get-data-in" class="headerlink" href="#get-data-in" title="Get AlwaysOn Profiling data into Splunk APM">¶</a></h2>
   </embed>
 
 To get started, instrument your application or service for Splunk APM and activate AlwaysOn Profiling.
