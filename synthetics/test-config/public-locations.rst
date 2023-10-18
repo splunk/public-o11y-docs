@@ -13,6 +13,8 @@ Splunk Synthetic Monitoring partners with infrastructure and connectivity provid
 
 The following table provides a full list of locations, available in Splunk Synthetic Monitoring, along with their DNS, region code, and IP address. You can use this information to exclude locations from your site analytics or add them to your browser's allow list.
 
+Locations denoted with `Amazon (Local Zone)` as the Provider are located in AWS Local Zones and the display names are prefixed with `AWS LZ`. These locations have less redundancy than other Amazon locations and are primarily intended to be used for performance testing. If uptime testing is required, run the tests concurrently with multiple locations.
+
 AU0
 ============
 .. csv-table::
