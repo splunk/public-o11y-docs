@@ -7,7 +7,7 @@ Collector default configuration
 .. meta::
       :description: Configure the Splunk Distribution of OpenTelemetry Collector. There are a variety of default configuration files available, as well additional components that can be configured.
 
-The Collector configuration is stored in a :new-page:`YAML file <https://yaml.org/>` and specifies the behaviour of the different components and services.
+The Collector configuration is stored in a :new-page:`YAML file <https://yaml.org/>` and specifies the behavior of the different components and services.
 
 .. include:: /_includes/collector-components.rst
 
