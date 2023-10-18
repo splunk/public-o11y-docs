@@ -2,15 +2,20 @@
 .. _aws-connect-polling:
 
 *********************************************************************
-Connect to AWS using the guided setup in Splunk Observability Cloud
+Connect to AWS via polling from the Splunk console
 *********************************************************************
 
 .. meta::
-  :description: Use guided setup to connect Splunk Observability Cloud to AWS through CloudWatch.
+  :description: Send AWS data to Splunk Observability Cloud via polling.
 
 If you have Administrator privileges for Splunk Observability Cloud and your Amazon Web Services (AWS) account, you can use the UI guided setup to create an integration to connect to AWS, and configure metrics and logs collection.
 
 Check :ref:`get-started-aws` for prerequisites, information on ingest methods, and other ways to connect Splunk Observability Cloud to AWS.
+
+.. note:: 
+  
+    To connect using Metric Streams, see :ref:`aws-connect-ms`.
+    To connect using the Splunk Observability Cloud API, refer to :ref:`get-configapi`.
 
 .. _aws-wizard:
 
@@ -54,17 +59,6 @@ Polling rate
 If you poll yourdata from AWS, select the rate at which you want Splunk Observability Cloud to poll CloudWatch for metric data, with 1 minute as the minimum value, and 10 minutes as the maximum value. For example, a value of 300 polls metrics once every 5 minutes. 
 
 Poll rate is expressed in seconds.  
-
-.. _aws-wizard-metricstreams:
-
-Activating Metric Streams
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If you activate Metric Streams, take the following considerations into account:
-
-* When creating the new AWS IAM policy, :ref:`add these additional permissions <metricstreams_iampolicy>` to the ones already suggested in the guided setup.
-* Follow the instructions to :ref:`activate Metric Streams <activate-cw-metricstreams>`.
-* Update your settings and deploy the CloudFormation template following :ref:`these steps <activate-cw-metricstreams>`.
 
 .. _aws-wizard-prepare:
 

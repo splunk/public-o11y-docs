@@ -1,20 +1,26 @@
 .. _aws-connect-ms:
+.. _aws-wizard-metricstreams:
 
 *********************************************************************
-Connect to AWS using the guided setup in Splunk Observability Cloud
+Connect to AWS with Metrics Streams from the Splunk console
 *********************************************************************
 
 .. meta::
-  :description: Use guided setup to connect Splunk Observability Cloud to AWS through CloudWatch.
+  :description: Use guided setup to connect Splunk Observability Cloud to AWS through CloudWatch using Metric Streams.
 
-If you have Administrator privileges for Splunk Observability Cloud and your Amazon Web Services (AWS) account, you can use the UI guided setup to create an integration to connect to AWS, and configure metrics and logs collection.
+If you have Administrator privileges for Splunk Observability Cloud and your Amazon Web Services (AWS) account, you can use the UI guided setup to create an integration to connect to AWS with Metric Streams, and configure metrics and logs collection.
 
 Check :ref:`get-started-aws` for prerequisites, information on ingest methods, and other ways to connect Splunk Observability Cloud to AWS.
 
-.. _aws-wizard:
+.. note:: To connect using the Splunk Observability Cloud API, refer to :ref:`get-configapi`.
 
 Use the guided setup to connect to AWS 
 ============================================
+
+If you activate Metric Streams, take the following considerations into account:
+
+* When creating the new AWS IAM policy, :ref:`add these additional permissions <metricstreams_iampolicy>` to the ones already suggested in the guided setup.
+* Update your settings and deploy the CloudFormation template following :ref:`these steps <activate-cw-metricstreams>`.
 
 To access the guided setup for AWS integration, perform the following steps:
 
@@ -31,7 +37,7 @@ Next, follow the steps provided in the guided setup:
   - :ref:`aws-wizard-prepare`.
   - :ref:`aws-wizard-establish`.
 
-.. _aws-wizard-define:
+.. _aws-wizard-define-ms:
 
 Define your connection
 -------------------------------------------
@@ -45,19 +51,7 @@ Choose the following connection options:
   * Metadata.
   * Cost and usage metrics.
   * Logs.
-  * Ingestion method: Polling or streaming. Learn more at :ref:`get-started-aws`.
-
-Polling rate
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If you poll yourdata from AWS, select the rate at which you want Splunk Observability Cloud to poll CloudWatch for metric data, with 1 minute as the minimum value, and 10 minutes as the maximum value. For example, a value of 300 polls metrics once every 5 minutes. 
-
-Poll rate is expressed in seconds.  
-
-.. _aws-wizard-metricstreams:
-
-Activating Metric Streams
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  * Ingestion method: Polling or streaming. 
 
 If you activate Metric Streams, take the following considerations into account:
 
@@ -65,7 +59,7 @@ If you activate Metric Streams, take the following considerations into account:
 * Follow the instructions to :ref:`activate Metric Streams <activate-cw-metricstreams>`.
 * Update your settings and deploy the CloudFormation template following :ref:`these steps <activate-cw-metricstreams>`.
 
-.. _aws-wizard-prepare:
+.. _aws-wizard-prepare-ms:
 
 Prepare your AWS account
 -------------------------------------------
@@ -76,7 +70,7 @@ On this screen, Splunk Observability Cloud gives you the AWS IAM policy JSON sni
 
 See more details in :ref:`aws-authentication`.
 
-.. _aws-wizard-establish:
+.. _aws-wizard-establish-ms:
 
 Establish the connection
 -------------------------------------------
@@ -96,6 +90,7 @@ Review the default AWS integration settings
 
 After creating an AWS IAM policy and assigning it to a particular role through the guided setup, you can modify your configuration.
 
+
 Limit the scope of data collection
 --------------------------------------------------
 
@@ -106,7 +101,7 @@ By default, Splunk Observability Cloud will bring in data from all supported AWS
 - Use the check box options in the guided setup to limit the scope of your data collection. These are the available options:
   
   - Amazon Cost and Usage Metrics
-  - CloudWatch Metrics polling (you can deactivate it altogether, or deactivate the polling but activate AWS Metric Streams instead)
+  - Connection method ????
   - CloudWatch Logs
   - :ref:`AWS regions <aws-regions>` to fetch data from
   - AWS services to fetch data from
@@ -121,7 +116,7 @@ By default, Splunk Observability Cloud will bring in data from all supported AWS
 Select a CloudFormation template
 --------------------------------------------------
 
-Select a :ref:`CloudFormation template <aws-cloudformation>` to collect logs or Metric Streams for each AWS region that you want to operate in.
+Select a :ref:`CloudFormation template <aws-cloudformation>` to collect logs for each AWS region that you want to operate in.
 
 Next steps
 ================
