@@ -47,6 +47,8 @@ Select each of the following categories to learn how you can maintain reliabilit
 
 Then see :ref:`get-started-get-data-in` to set up each component of Splunk Observability Cloud.
 
+For a better understanding of how you can use Splunk Observability Cloud with other Splunk platform products, see :ref:`scenarios-integration-scenario-landing` for sample use cases. 
+
 
 
 
