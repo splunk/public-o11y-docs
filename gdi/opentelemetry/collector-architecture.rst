@@ -69,180 +69,180 @@ Support for native standalone monitors
      - Support for ARM64 Linux
      - Support for ppc64le Linux
    * - ``cadvisor``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``cgroups``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``cloudfoundry-firehose-nozzle``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``conviva``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``cpu``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``disk-io``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``docker-container-stats``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``ecs-metadata``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``elasticsearch``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``expvar``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``filesystems``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``trace-forwarder``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``haproxy``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``heroku-metadata``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``host-metadata``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``http``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``internal-metrics``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``jaeger-grpc``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``kubernetes-cluster``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``kubernetes-events``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``kubelet-metrics``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``kubernetes-volumes``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``load``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``logstash``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``logstash-tcp``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``memory``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``mongodb-atlas``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``net-io``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``ntp``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``postgresql``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``processlist``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``sql``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``supervisor``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``vmem``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``vsphere``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
 
 Support for native Prometheus monitors
 -------------------------------------------
@@ -257,70 +257,70 @@ Support for native Prometheus monitors
      - Support for ARM64 Linux
      - Support for ppc64le Linux
    * - ``coredns``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``etcd``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``gitlab``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``prometheus/go``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``kubernetes-apiserver``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``kube-controller-manager``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``kubernetes-proxy``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``kubernetes-scheduler``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``prometheus/nginx-vts``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``prometheus/node``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``prometheus/postgres``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``prometheus/redis``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``traefik``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
 
 Support for native Statsd monitors
 ---------------------------------------
@@ -335,10 +335,10 @@ Support for native Statsd monitors
      - Support for ARM64 Linux
      - Support for ppc64le Linux
    * - ``appmesh``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    
 Support for native Telegraf monitors
 ---------------------------------------
@@ -353,75 +353,75 @@ Support for native Telegraf monitors
      - Support for ARM64 Linux
      - Support for ppc64le Linux
    * - ``aspdotnet``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``telegraf/dns``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``telegraf/exec``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``windows-iis``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``telegraf/logparser``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``telegraf/sqlserver``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``dotnet``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``telegraf/procstat``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``telegraf/snmp``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``statsd``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``telegraf/tail``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``telegraf/win_perf_counters``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``windows-legacy``
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``telegraf/win_services`` 
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
+     - Yes
+     - Yes
 
 .. _subprocess-monitors-support-matrices:
 
@@ -451,55 +451,55 @@ Support for collectd subprocess monitors
      - Support for ARM64 Linux
      - Support for ppc64le Linux
    * - ``collectd/apache``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/chrony``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/cpufreq``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/memcached``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/mysql``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/nginx``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/php-fpm``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/postgresql``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/processes``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/uptime``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
 
 Support for collectd or GenericJMX subprocess monitors
 ------------------------------------------------------------
@@ -514,35 +514,35 @@ Support for collectd or GenericJMX subprocess monitors
      - Support for ARM64 Linux
      - Support for ppc64le Linux
    * - ``collectd/activemq``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/cassandra``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/hadoopjmx``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/kafka``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collect/kafka_consumer``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/kafka_producer``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    
 Support for sfxcollectd subprocess monitors
 ------------------------------------------------------------
@@ -557,85 +557,85 @@ Support for sfxcollectd subprocess monitors
      - Support for ARM64 Linux
      - Support for ppc64le Linux
    * - ``collectd/consul``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collect/couchbase``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/elasticsearch``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/etcd``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/hadoop``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/health-checker``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/jenkins``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     -  
+     - No
    * - ``collectd/kong``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/marathon``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/mongodb``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/openstack``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/rabbitmq``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/solr``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/spark``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/systemd``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
    * - ``collectd/zookeeper``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
 
 Support for subprocess JMX monitors
 ----------------------------------------
@@ -650,7 +650,7 @@ Support for subprocess JMX monitors
      - Support for ARM64 Linux
      - Support for ppc64le Linux
    * - ``jmx``
-     - :strong:`X`
-     - :strong:`X`
+     - Yes
+     - Yes
      - Experimental
-     - 
+     - No
