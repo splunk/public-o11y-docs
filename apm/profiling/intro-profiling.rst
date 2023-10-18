@@ -90,7 +90,7 @@ The following programming languages have instrumentation available:
 .. raw:: html
 
   <embed>
-    <h2>Get AlwaysOn Profiling data into Splunk APM</h2>
+    <h2><a name="get-data-in" class="headerlink" href="#get-data-in" title="Get AlwaysOn Profiling data into Splunk APM">Get AlwaysOn Profiling data into Splunk APM</a></h2>
   </embed>
 
 To get started, instrument your application or service for Splunk APM and activate AlwaysOn Profiling.
