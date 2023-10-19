@@ -217,7 +217,7 @@ For the Operator:
   operator:
     enabled: true
 
-Also, if ``cert-manager`` is already deployed, remove this section:
+Additionally, deploy the cert-manager for the operator if it hasn't been already.
 
 .. code-block:: yaml
   
