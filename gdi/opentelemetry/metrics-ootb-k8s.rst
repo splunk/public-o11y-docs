@@ -21,7 +21,7 @@ Learn more about the Collector's configuration and data processing at:
 
 .. note:: To see the Collector's internal metrics, refer to :ref:`metrics-internal-collector`.
 
-Container level metrics and attributes
+Container level metrics and dimensions
 ============================================================================
 
 .. list-table::
@@ -109,7 +109,7 @@ Container level metrics and attributes
     - :ref:`ootb-metrics-k8s-attributes`
     - No
 
-Container level metrics and attributes after translation
+Container level metrics and dimensions after translation
 ============================================================================
 
 .. note:: These metrics are compatible with the :ref:`signalfx-exporter`.
@@ -129,7 +129,7 @@ Container level metrics and attributes after translation
     - :ref:`ootb-metrics-k8s-attributes`
     - **Yes**
 
-Pod level metrics and attributes 
+Pod level metrics and dimensions
 ============================================================================
 
 .. list-table::
@@ -211,7 +211,7 @@ Pod level metrics and attributes
       * :ref:`ootb-metrics-k8s-attributes`
     - **Yes**
 
-Node level metrics and attributes 
+Node level metrics and dimensions
 ============================================================================
 
 .. list-table::
@@ -354,7 +354,7 @@ Node level metrics and attributes
     - 
     - **Yes**
 
-Node level metrics and attributes after translation
+Node level metrics and dimensions after translation
 ============================================================================
 
 .. note:: These metrics are compatible with the :ref:`signalfx-exporter`.
@@ -457,7 +457,7 @@ Node level metrics and attributes after translation
       * :ref:`ootb-metrics-k8s-attributes`
     - **Yes**
 
-Volume level metrics and attributes 
+Volume level metrics and dimensions 
 ============================================================================
 
 .. list-table::
@@ -482,7 +482,7 @@ Volume level metrics and attributes
 
 .. _ootb-metrics-k8s-attributes:
 
-Standard resource attributes
+Standard resource dimensions
 ============================================================================
 
 .. list-table::
