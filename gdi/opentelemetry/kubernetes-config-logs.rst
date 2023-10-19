@@ -1,4 +1,5 @@
 .. _otel-kubernetes-config-logs:
+.. _kubernetes-config-logs:
 
 *********************************************************************************
 Configure logs for Kubernetes
