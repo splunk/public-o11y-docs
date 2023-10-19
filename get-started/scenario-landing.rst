@@ -97,6 +97,6 @@ This is the collection of scenarios available for Splunk Observability Cloud.
   * - :ref:`Log Observer <logs-intro-logconnect>`
     - :ref:`logs-LOconnect-scenario`
   * - :ref:`Splunk platform integration <scenarios-integration-scenario-landing>`
-    - :ref:`Kai troubleshoots with Splunk ITSI and Splunk Observability Cloud <integration-scenario1>`
+    - :ref:`Kai troubleshoots faster with Splunk ITSI and Splunk Observability Cloud <integration-scenario1>`
 
 
