@@ -36,3 +36,9 @@ Delete an SLO
 #. Select :guilabel:`Delete` on the dialog box to confirm.
 
 .. note:: You can't recover a deleted SLO.
+
+Add an SLO to a dashboard
+================================
+
+#. On the :strong:`Service Level Objectives (SLOs)` page, select the more icon (|more|) next to the SLO you want to edit.
+#. In the actions menu, select :menuselection:`Add to dashboard`.
