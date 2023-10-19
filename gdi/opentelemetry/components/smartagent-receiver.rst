@@ -56,7 +56,7 @@ The Collector supports the following processor architectures and operating syste
 Native Smart Agent monitors
 --------------------------------------------------------------
 
-Native Smart Agent monitors are grouped into four bundles:
+Native Smart Agent monitors are grouped into three bundles:
 
 * Standalone
 * Prometheus
