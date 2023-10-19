@@ -166,10 +166,10 @@ The data pipelines for these test runs involved reading container logs as they a
 Collect events
 ===========================================================================
 
-Collect events
+Collect Kubernetes events
 ----------------------------------
 
-To collect Kubernetes events using the Collector, you need to add ``k8sObjects`` to your configuration file, and set ``logsEnabled`` to ``true``. 
+To collect Kubernetes events using the Collector, you need to add ``k8sObjects`` to your configuration file, and set ``logsEnabled`` to ``true`` in either ``splunkObservability`` or ``splunkPlatform``. Events are processed in the ``logs`` pipeline.
 
 ``k8sObjects`` has the following fields:
 
