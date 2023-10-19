@@ -174,7 +174,7 @@ For example:
 
 .. _otel-kubernetes-config-profiling:
 
-Activate AlwaysOn profiling
+Activate AlwaysOn Profiling
 =================================
 
 AlwaysOn Profiling in Splunk APM continuously captures stack traces, helping you identify performance bottlenecks or issues in your code. Activating profiling lets your Kubernetes applications produce and forward this data to Splunk Observability Cloud for visualization.
