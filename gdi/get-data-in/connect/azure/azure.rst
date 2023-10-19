@@ -35,7 +35,7 @@ After you connect your Azure account to Splunk Observability Cloud, you can do t
 Successful integration requires administrator privileges for the following:
 
 - Your organization in Splunk Observability Cloud.
-- Creating a new Microsoft Entra ID application.
+- Creating a new Microsoft Entra ID (formerly Azure Active Directory) application.
 
 To learn more about these privileges, see the Azure documentation for registering a new app.
 
@@ -51,7 +51,7 @@ To learn more about these privileges, see the Azure documentation for registerin
 
 To prepare Microsoft Azure to connect with Splunk Observability Cloud: 
 
-#. Create a Microsoft Entra ID application.
+#. Create a Microsoft Entra ID (formerly Azure Active Directory) application.
 #. Specify subscriptions and set subscription permissions.
 
 You also have the option of connecting to Azure through the Splunk Observability Cloud API. For details, see :new-page:`Integrate Microsoft Azure Monitoring with Splunk Observability Cloud <https://dev.splunk.com/observability/docs/integrations/msazure_integration_overview/>` in the Splunk developer documentation.
@@ -59,7 +59,7 @@ You also have the option of connecting to Azure through the Splunk Observability
 .. raw:: html
 
   <embed>
-    <h3>Create a Microsoft Entra ID application<a name="prep-ms-app" class="headerlink" href="#prep-ms-app" title="Permalink to this headline">¶</a></h3>
+    <h3>Create a Microsoft Entra ID (formerly Azure Active Directory) application<a name="prep-ms-app" class="headerlink" href="#prep-ms-app" title="Permalink to this headline">¶</a></h3>
   </embed>
 
 Follow these steps to create a new Microsoft Entra ID application:

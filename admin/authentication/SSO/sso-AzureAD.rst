@@ -1,15 +1,15 @@
 .. _sso-azure:
 
-*********************************************************************
-Configure a Microsoft Entra ID SSO integration
-*********************************************************************
+**************************************************************************************
+Configure a Microsoft Entra ID (formerly Azure Active Directory) SSO integration
+**************************************************************************************
 
 .. meta::
-   :description: Configure the Microsoft Entra ID integration to let users log in to Observability Cloud using their Entra ID account.
+   :description: Configure the Microsoft Entra ID (formerly Azure Active Directory) integration to let users log in to Observability Cloud using their Entra ID account.
 
-The Microsoft Entra ID integration lets users log in to Observability Cloud using their Microsoft Entra ID account.
+The Microsoft Entra ID (formerly Azure Active Directory) integration lets users log in to Observability Cloud using their Microsoft Entra ID account.
 
-Before you begin configuring the Azure AD integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
+Before you begin configuring this integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
 
 To configure an Azure AD SSO integration, you must be an administrator for your organization.
 To learn more, see :new-page-ref:`manage_admin-access`.

@@ -40,7 +40,7 @@ Azure uses diagnostic settings to send data to Event Hubs. Each resource you wan
 
          .. note:: If you set a different hub name, update the function application settings to use the right name.
 
-      .. tab:: Microsoft Entra ID logs
+      .. tab:: Microsoft Entra ID logs (formerly Azure Active Directory)
 
          Event Hub name: ``insights-logs-aad``
 

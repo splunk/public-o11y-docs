@@ -25,6 +25,8 @@ Observability Cloud supports the following SSO integrations:
 -  :ref:`PingOne<sso-ping-one>`
 -  :ref:`Generic SAML SSO<sso-generic>`
 
+.. note:: Microsoft Entra ID was formerly known as Azure Active Directory.
+
 .. _about-realms:
 
 .. include:: /_includes/realm-note.rst
