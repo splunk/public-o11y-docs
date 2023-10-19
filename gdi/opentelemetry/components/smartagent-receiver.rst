@@ -13,6 +13,77 @@ The Smart Agent receiver is fully supported only on amd64 linux platforms. Suppo
 
 .. note:: For instructions on how to migrate from the Smart Agent to the Splunk Distribution of OpenTelemetry Collector, see :ref:`migrate-from-sa-to-otel`.
 
+.. _architecture-requirements:
+
+Requirements
+=================================
+
+The Collector supports the following processor architectures and operating systems:
+
+.. list-table::
+   :width: 100%
+   :widths: 20 40 40
+   :header-rows: 1
+
+   * - Architecture
+     - Install methods
+     - Supported components
+   * - x86_64 and AMD64
+     - 
+        * Linux packages (deb, rpm, and tar.gz)
+        * Linux binary file (otelcol_linux_amd64)
+        * Windows installer and NuGet package (msi and nupkg)
+        * macOS binary file (otelcol_darwin_amd64)
+        * Docker image. See :ref:`Docker image for Linux <linux-docker>` and :ref:`Docker image for Windows <windows-docker>`
+     - See :ref:`native-monitor-support-matrices`.
+   * - ARM64
+     - 
+        * Linux packages (deb, rpm, and tar.gz)
+        * Linux binary file (otelcol_linux_arm64)
+        * macOS binary file (otelcol_darwin_arm64)
+        * Docker image. See :ref:`Docker image for Linux <linux-docker>`
+     - Some monitors within the Smart Agent receivers are considered experimental for ARM64. See :ref:`subprocess-monitors-support-matrices`.
+   * - ppc64le, including IBM Private Cloud
+     - 
+        * Linux binary file (otelcol_linux_ppc64le)
+        * Docker image. :ref:`Docker image for Linux <linux-docker>`
+     - Some Smart Agent monitors are not supported on ppc64le. See :ref:`subprocess-monitors-support-matrices`.
+
+.. caution:: Smart Agent support on ARM64 is experimental.
+
+.. _native-monitor-support-matrices:
+
+Native Smart Agent monitors
+--------------------------------------------------------------
+
+Native Smart Agent monitors are grouped into four bundles:
+
+* Standalone
+* Prometheus
+* Statsd
+* Telegraf
+
+The following matrices list support capabilities for each monitor in each architecture.
+
+.. include:: /_includes/gdi/processor-architecture-native.rst
+
+.. _subprocess-monitors-support-matrices:
+
+Subprocess Smart Agent monitors 
+--------------------------------------------------------------
+
+Support for Smart Agent receiver monitor types is experimental for ARM64 starting from the Splunk Distribution of OpenTelemetry Collector version 0.73 and higher. Using the Smart Agent receiver with monitor types is not supported for ppc64le architectures.
+
+Subprocess monitor types are those that initiate the creation and management of a child process where metric gathering occurs. There are three major subprocess monitor types: 
+
+* ``collectd`` and its associated ``collectd/GenericJMX`` plugin-based integrations
+* ``sfxcollectd``
+* ``JMX``
+
+These types derive from integrations that produce metrics in the Smart Agent and are not reflective of the current ability to run arbitrary Python or Java applications.
+
+.. include:: /_includes/gdi/processor-architecture-subprocess.rst
+
 Benefits
 =================================
 
