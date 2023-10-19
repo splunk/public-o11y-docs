@@ -10,16 +10,20 @@ Connect to AWS via polling from the Splunk console
 
 If you have Administrator privileges for Splunk Observability Cloud and your Amazon Web Services (AWS) account, you can use the UI guided setup to create an integration to connect to AWS, and configure metrics and logs collection.
 
-Check :ref:`get-started-aws` for prerequisites, information on ingest methods, and other ways to connect Splunk Observability Cloud to AWS.
+Before you start
+============================================
 
-.. note:: 
-  
-    To connect using Metric Streams, see :ref:`aws-connect-ms`.
-    To connect using the Splunk Observability Cloud API, refer to :ref:`get-configapi`.
+Before you proceed, check :ref:`aws-prereqs` and :ref:`collection-interval-aws`.
+
+For alternative connection methods, see:
+
+* :ref:`aws-connect-ms`
+* :ref:`aws-console-ms`
+* :ref:`get-configapi`
 
 .. _aws-wizard:
 
-Use the guided setup to connect to AWS 
+Use the UI guided setup to connect to AWS 
 ============================================
 
 To access the guided setup for AWS integration, perform the following steps:
@@ -33,32 +37,34 @@ To access the guided setup for AWS integration, perform the following steps:
 
 Next, follow the steps provided in the guided setup:
 
-  - :ref:`aws-wizard-define`.
-  - :ref:`aws-wizard-prepare`.
-  - :ref:`aws-wizard-establish`.
+* :ref:`aws-wizard-define`.
+* :ref:`aws-wizard-prepare`.
+* :ref:`aws-wizard-establish`.
 
 .. _aws-wizard-define:
 
-Define your connection
+Define your AWS connection
 -------------------------------------------
 
-Choose the following connection options:
+In this step you need to choose the following connection options:
 
-* The region AWS from which AWS manages your resources. See :ref:`aws-regions` for more informaion.
-* Authentication method. Learn more at :ref:`aws-authentication`.
-* Data ingest options such as:
+* :guilabel:`Overall region`: The region AWS from which AWS manages your resources. See :ref:`aws-regions` for more information.
+* :guilabel:`Authentication type`: How you will authenticate to connect with AWS. Learn more at :ref:`aws-authentication`.
+* :guilabel:`Data types`: Select which types of data to ingest.
 
   * Metadata.
   * Cost and usage metrics.
+  * CloudWatch metrics. 
   * Logs.
-  * Ingestion method: Polling or streaming. Learn more at :ref:`get-started-aws`.
 
-Polling rate
+In the CloudWatch Metrics option, select :guilabel:`Polling` as the ingestion method, and set up the polling rate at which you want Splunk Observability Cloud to poll CloudWatch for metric data.
+
+Set up the polling rate 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you poll yourdata from AWS, select the rate at which you want Splunk Observability Cloud to poll CloudWatch for metric data, with 1 minute as the minimum value, and 10 minutes as the maximum value. For example, a value of 300 polls metrics once every 5 minutes. 
+The polling rate is expressed in seconds, with ``60`` (1 minute) as the minimum value, and ``600`` (10 minutes) as the maximum value. 
 
-Poll rate is expressed in seconds.  
+For example, a value of 300 polls metrics once every 5 minutes. 
 
 .. _aws-wizard-prepare:
 

@@ -8,9 +8,9 @@ AWS authentication and supported regions
 .. meta::
   :description: Connection planning information and links to the different ways to connect AWS to Splunk Observability Cloud.
 
-To connect your AWS services to Spulnk Observability Cloud you need: 
+To connect your AWS services to Splunk Observability Cloud you need: 
 
-- Administrator privileges in Splunk Observability Cloud and your AWS accounts. 
+- Administrator privileges in your Splunk Observability Cloud and your AWS accounts. 
 - :ref:`AWS authentication rights <aws-authentication>`. You can authenticate either with an :ref:`External ID (recommended) <aws-authentication>` or using a :ref:`security token <aws-authentication-token>`.
 
 .. _aws-authentication:
