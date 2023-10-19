@@ -47,11 +47,10 @@ The Collector supports the following processor architectures and operating syste
 Native Smart Agent monitors
 ==========================================================
 
-Native Smart Agent monitors are grouped into four bundles:
+Native Smart Agent monitors are grouped into three bundles:
 
 * Standalone
 * Prometheus
-* Statsd
 * Telegraf
 
 The following matrices list support capabilities for each monitor in each architecture.
@@ -68,6 +67,11 @@ Support for native standalone monitors
      - Support for AMD64 Windows
      - Support for ARM64 Linux
      - Support for ppc64le Linux
+   * - ``appmesh``
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``cadvisor``
      - Yes
      - Yes
@@ -321,25 +325,7 @@ Support for native Prometheus monitors
      - Yes
      - Yes
      - Yes
-
-Support for native Statsd monitors
----------------------------------------
-   
-.. list-table::
-   :header-rows: 1
-   :width: 100%
-
-   * - Monitor
-     - Support for AMD64 Linux
-     - Support for AMD64 Windows
-     - Support for ARM64 Linux
-     - Support for ppc64le Linux
-   * - ``appmesh``
-     - Yes
-     - Yes
-     - Yes
-     - Yes
-   
+    
 Support for native Telegraf monitors
 ---------------------------------------
 
@@ -368,10 +354,10 @@ Support for native Telegraf monitors
      - Yes
      - Yes
    * - ``windows-iis``
+     - No
      - Yes
-     - Yes
-     - Yes
-     - Yes
+     - No
+     - No
    * - ``telegraf/logparser``
      - Yes
      - Yes
