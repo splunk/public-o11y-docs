@@ -60,7 +60,6 @@ Native Smart Agent monitors are grouped into four bundles:
 
 * Standalone
 * Prometheus
-* Statsd
 * Telegraf
 
 The following matrices list support capabilities for each monitor in each architecture.
