@@ -8,7 +8,7 @@ Collected metrics and dimensions for Kubernetes
       :description: Out-of-the-box metrics obtained with the Collector for Kubernetes.
 
 
-The following sections list the collected metrics when you use the default configuration for the Collector for Kubernetes in host monitoring (agent) mode.
+The following sections list the collected metrics when you use the default configuration for the Collector for Kubernetes in host monitoring (agent) mode for certain distributions.
 
 In the Collector, data is processed as configured in your pipelines. Therefore, metrics that are imported by receivers might be excluded further into the pipeline by other components. For instance, the :ref:`signalfx-exporter`, included in the default Collector configuration, drops certain metrics and applies :ref:`translation rules <exclusion-rules>` that impact the metrics sent to Splunk.    
 

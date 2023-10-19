@@ -42,19 +42,6 @@ Find the available components at :ref:`otel-components`.
 .. raw:: html
 
   <embed>
-    <h3>Deployment modes<a name="collector-intro-deploy" class="headerlink" href="#collector-intro-deploy" title="Permalink to this headline">¶</a></h3>
-  </embed>
-
-You can deploy the Collector in two modes: Host monitoring (agent) or data forwarding (gateway) mode:
-
-* In host monitoring (agent) mode, the Collector runs with the application or on the same host as the application. 
-* In data forwarding (gateway) mode, one or more Collectors run a standalone service, for example, a container or deployment. 
-
-Learn more at :ref:`otel-deployment-mode`.
-
-.. raw:: html
-
-  <embed>
     <h2>Understand the Collector distributions<a name="collector-distros" class="headerlink" href="#collector-distros" title="Permalink to this headline">¶</a></h2>
   </embed>
     
@@ -134,6 +121,25 @@ See also :ref:`otel-requirements` for information on:
 .. note::
 
   Check :ref:`migrate-from-sa-to-otel` to learn how to migrate your data from the SignalFx Smart Agent (deprecated) to the Collector.
+
+.. raw:: html
+
+  <embed>
+    <h3>Deployment modes<a name="collector-intro-deploy" class="headerlink" href="#collector-intro-deploy" title="Permalink to this headline">¶</a></h3>
+  </embed>
+
+You can deploy the Collector in two modes: Host monitoring (agent) or data forwarding (gateway) mode:
+
+* In host monitoring (agent) mode, the Collector runs with the application or on the same host as the application. 
+* In data forwarding (gateway) mode, one or more Collectors run a standalone service, for example, a container or deployment. 
+
+Learn more at :ref:`otel-deployment-mode`.
+
+.. raw:: html
+
+  <embed>
+    <h3>Install the Collector<a name="collector-intro-install" class="headerlink" href="#collector-intro-install" title="Permalink to this headline">¶</a></h3>
+  </embed>
 
 Learn how to install, deploy, upgrade or uninstall the Collector in :ref:`otel-install-platform`. Or use :ref:`our guided install <collector-guided-install>`.
 
