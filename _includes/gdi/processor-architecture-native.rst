@@ -11,6 +11,11 @@
      - Support for AMD64 Windows
      - Support for ARM64 Linux
      - Support for ppc64le Linux
+   * - ``appmesh``
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``cadvisor``
      - Yes
      - Yes
@@ -266,25 +271,6 @@
      - Yes
      - Yes
 
-.. raw:: html 
-    
-    <h4>Support for native Statsd monitors</h4>
-   
-.. list-table::
-   :header-rows: 1
-   :width: 100%
-
-   * - Monitor
-     - Support for AMD64 Linux
-     - Support for AMD64 Windows
-     - Support for ARM64 Linux
-     - Support for ppc64le Linux
-   * - ``appmesh``
-     - Yes
-     - Yes
-     - Yes
-     - Yes
-   
 .. raw:: html
 
     <h4>Support for native Telegraf monitors</h4>
