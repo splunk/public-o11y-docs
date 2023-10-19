@@ -174,23 +174,67 @@ For example:
 
 .. _otel-kubernetes-config-profiling:
 
-Activate profiling
+Activate AlwaysOn profiling
 =================================
 
-You can activate profiling while installing the Collector for Kubernetes using the UI wizard, or by configuring the :ref:`splunk-hec-exporter` with ``profiling_data_enabled`` set to ``true``, as in the example below:
+AlwaysOn Profiling in Splunk APM continuously captures stack traces, helping you identify performance bottlenecks or issues in your code. Activating profiling lets your Kubernetes applications produce and forward this data to Splunk Observability Cloud for visualization.
+
+You can activate profiling while installing the Collector for Kubernetes using the UI wizard, or by modifying your configuration files.
+
+The Collector ingests profiling data using the ``logs`` pipeline.
+
+Learn more at :ref:`zero-config` and :ref:`profiling-intro`.
+
+Set up profiling 
+-------------------------------------------
+
+To set up profiling in your environment, you have two main components: the Collector, responsible for receiving and exporting the profiling data to Splunk Observability Cloud, and the Operator, which auto-instruments applications so they can generate and emit traces along with profiling data. 
+
+You can activate profiling in two main scenarios:
+
+* Using both Collector and Operator: The Operator auto-instruments your applications, which then send the profiling data to the Collector.
+* Using only the Collector: You manually instrument your applications to generate profiling data, which is then sent directly to the Collector.
+
+Activate profiling with the Collector and the Operator
+------------------------------------------------------------
+
+To activate profiling with the Collector and the Operator, deploy the Helm chart with the following configuration:
+
+For the Collector:
 
 .. code-block:: yaml
 
-  splunk_hec:
-    profiling_data_enabled: true
+  splunkObservability:
+    accessToken: CHANGEME
+    realm: us0
+    logsEnabled: true
+    profilingEnabled: true
 
-When profiling is activated: 
+For the Operator:
 
-* The operator is deployed and configured to auto-instrument applications. 
-* Auto-instrumented applications generate profiling data.
-* The Collector ingests profiling data using the ``logs`` pipeline.
+.. code-block:: yaml
 
-Learn more at :ref:`zero-config` and :ref:`profiling-intro`.
+  operator:
+    enabled: true
+
+Also, if ``cert-manager`` is already deployed, remove this section:
+
+.. code-block:: yaml
+  
+  certmanager:
+    enabled: true
+
+With the above configuration:
+
+* The Collector is set up to receive profiling data.
+* The Operator is deployed and auto-instruments applications based on target pod annotations, allowing these applications to generate profiling data.
+
+Activate profiling only with the Collector
+------------------------------------------------------------
+
+If you want to only use the Collector and have manually instrumented applications, ensure that ``splunkObservability.logsEnabled=true`` and ``splunkObservability.profilingEnabled=true`` is set in your configuration.
+
+.. caution:: With this option, you need to manually set up instrumented applications to send profiling data directly to the Collector.
 
 Provide tokens as a secret
 =================================
