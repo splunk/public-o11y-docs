@@ -32,6 +32,8 @@ When to use histogram metrics
 
 Histograms can summarize data in ways that would be difficult to reproduce with other metrics. Thanks to the buckets, the distribution of your continuous data over time is easier to explore, as you don't have to analyze the entire dataset to see where all the data points are. At the same time, histogram helps reduce usage of your subscription through multi-rollup, which allows to aggregate multiple metrics time series (MTS) into a single MTS.
 
+.. Rewrite before publication, see thread in tmp channel on no-bucket histograms
+
 
 Service level objectives (SLO)
 -----------------------------------------------------------
@@ -103,7 +105,7 @@ To migrate your existing dashboards, functions, charts, and detectors to histogr
 
 1. Make sure that you're sending histogram data using the Splunk Distribution of OpenTelemetry Collector version 0.86 or higher. Lower versions can't send histogram data in OTLP format.
 
-2. Start sending histogram metrics instead of split data points. See :ref:`explicit-bucket-histograms` for more information and examples.
+2. Start sending histogram metrics. See :ref:`explicit-bucket-histograms` for more information on how to activate this feature in the Collector.
 
 3. Edit your charts to use the new ``histogram()`` function. See :new-page:`histogram() <https://dev.splunk.com/observability/docs/signalflow/functions/histogram>` in the SignalFlow reference documentation.
 
