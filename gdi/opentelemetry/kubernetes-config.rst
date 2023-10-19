@@ -177,9 +177,7 @@ For example:
 Activate AlwaysOn Profiling
 =================================
 
-AlwaysOn Profiling in Splunk APM continuously captures stack traces, helping you identify performance bottlenecks or issues in your code. Activating profiling lets your Kubernetes applications produce and forward this data to Splunk Observability Cloud for visualization.
-
-You can activate profiling while installing the Collector for Kubernetes using the UI wizard, or by modifying your configuration files.
+AlwaysOn Profiling in Splunk APM continuously captures stack traces, helping you identify performance bottlenecks or issues in your code. Activating profiling lets your Kubernetes applications produce and forward this data to Splunk Observability Cloud for visualization. 
 
 The Collector ingests profiling data using the ``logs`` pipeline.
 
@@ -188,17 +186,19 @@ Learn more at :ref:`zero-config` and :ref:`profiling-intro`.
 Set up profiling 
 -------------------------------------------
 
-To set up profiling in your environment, you have two main components: the Collector, responsible for receiving and exporting the profiling data to Splunk Observability Cloud, and the Operator, which auto-instruments applications so they can generate and emit traces along with profiling data. 
+You can activate profiling while installing the Collector for Kubernetes using the UI wizard, or by modifying your configuration files.
 
-You can activate profiling in two main scenarios:
+Profiling uses two main components: the Collector, responsible for receiving and exporting the profiling data to Splunk Observability Cloud, and the Operator, which auto-instruments applications so they can generate and emit traces along with profiling data. 
 
-* Using both Collector and Operator: The Operator auto-instruments your applications, which then send the profiling data to the Collector.
-* Using only the Collector: You manually instrument your applications to generate profiling data, which is then sent directly to the Collector.
+There are two main scenarios:
+
+* Profiling using both Collector and Operator: The Operator auto-instruments your applications, which then send the profiling data to the Collector.
+* Profiling using only the Collector: You manually instrument your applications to generate profiling data, which is then sent directly to the Collector.
 
 Activate profiling with the Collector and the Operator
-------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To activate profiling with the Collector and the Operator, deploy the Helm chart with the following configuration:
+To activate profiling with the Collector and the Operator, activate the :guilabel:`Profiling` option in the UI, or deploy the Helm chart with the following configuration:
 
 For the Collector:
 
@@ -217,7 +217,7 @@ For the Operator:
   operator:
     enabled: true
 
-Additionally, deploy the cert-manager for the operator if it hasn't been already.
+Additionally, deploy the cert-manager for the Operator if it hasn't been already.
 
 .. code-block:: yaml
   
@@ -230,7 +230,7 @@ With the above configuration:
 * The Operator is deployed and auto-instruments applications based on target pod annotations, allowing these applications to generate profiling data.
 
 Activate profiling only with the Collector
-------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you want to only use the Collector and have manually instrumented applications, ensure that ``splunkObservability.logsEnabled=true`` and ``splunkObservability.profilingEnabled=true`` is set in your configuration.
 
