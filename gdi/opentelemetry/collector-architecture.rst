@@ -23,7 +23,7 @@ The Collector supports the following processor architectures and operating syste
      - 
         * Linux packages (deb, rpm, and tar.gz)
         * Linux binary file (otelcol_linux_amd64)
-        * Windows installer and binary file (otelcol_windows_amd64.exe)
+        * Windows installer and NuGet package (msi and nupkg)
         * macOS binary file (otelcol_darwin_amd64)
         * Docker image. See :ref:`Docker image for Linux <linux-docker>` and :ref:`Docker image for Windows <windows-docker>`
      - See :ref:`native-monitor-support-matrices`.
@@ -33,7 +33,7 @@ The Collector supports the following processor architectures and operating syste
         * Linux binary file (otelcol_linux_arm64)
         * macOS binary file (otelcol_darwin_arm64)
         * Docker image. See :ref:`Docker image for Linux <linux-docker>`
-     - Some monitors within the Smart Agent receivers are not supported with ARM64. See :ref:`subprocess-monitors-support-matrices`.
+     - Some monitors within the Smart Agent receivers are considered experimental for ARM64. See :ref:`subprocess-monitors-support-matrices`.
    * - ppc64le, including IBM Private Cloud
      - 
         * Linux binary file (otelcol_linux_ppc64le)
@@ -107,7 +107,7 @@ Support for native standalone monitors
      - Yes
      - Yes
      - Yes
-     - Yes
+     - No
    * - ``elasticsearch``
      - Yes
      - Yes
@@ -148,11 +148,6 @@ Support for native standalone monitors
      - Yes
      - Yes
      - Yes
-   * - ``internal-metrics``
-     - Yes
-     - Yes
-     - Yes
-     - Yes
    * - ``jaeger-grpc``
      - Yes
      - Yes
@@ -169,6 +164,11 @@ Support for native standalone monitors
      - Yes
      - Yes
    * - ``kubelet-metrics``
+     - Yes
+     - Yes
+     - Yes
+     - Yes
+   * - ``kubelet-stats``
      - Yes
      - Yes
      - Yes
@@ -383,10 +383,10 @@ Support for native Telegraf monitors
      - Yes
      - Yes
    * - ``dotnet``
+     - No
      - Yes
-     - Yes
-     - Yes
-     - Yes
+     - No
+     - No
    * - ``telegraf/procstat``
      - Yes
      - Yes
@@ -397,7 +397,7 @@ Support for native Telegraf monitors
      - Yes
      - Yes
      - Yes
-   * - ``statsd``
+   * - ``telegraf/statsd``
      - Yes
      - Yes
      - Yes
@@ -408,20 +408,20 @@ Support for native Telegraf monitors
      - Yes
      - Yes
    * - ``telegraf/win_perf_counters``
+     - No
      - Yes
-     - Yes
-     - Yes
-     - Yes
+     - No
+     - No
    * - ``windows-legacy``
+     - No
      - Yes
-     - Yes
-     - Yes
-     - Yes
+     - No
+     - No
    * - ``telegraf/win_services`` 
+     - No
      - Yes
-     - Yes
-     - Yes
-     - Yes
+     - No
+     - No
 
 .. _subprocess-monitors-support-matrices:
 
@@ -452,52 +452,52 @@ Support for collectd subprocess monitors
      - Support for ppc64le Linux
    * - ``collectd/apache``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/chrony``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/cpufreq``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/memcached``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/mysql``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/nginx``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/php-fpm``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/postgresql``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/processes``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/uptime``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
 
@@ -515,32 +515,32 @@ Support for collectd or GenericJMX subprocess monitors
      - Support for ppc64le Linux
    * - ``collectd/activemq``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/cassandra``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/hadoopjmx``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/kafka``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collect/kafka_consumer``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/kafka_producer``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    
@@ -558,82 +558,82 @@ Support for sfxcollectd subprocess monitors
      - Support for ppc64le Linux
    * - ``collectd/consul``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collect/couchbase``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/elasticsearch``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/etcd``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/hadoop``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/health-checker``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/jenkins``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/kong``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/marathon``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/mongodb``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/openstack``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/rabbitmq``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/solr``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/spark``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/systemd``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
    * - ``collectd/zookeeper``
      - Yes
-     - Yes
+     - No
      - Experimental
      - No
 
