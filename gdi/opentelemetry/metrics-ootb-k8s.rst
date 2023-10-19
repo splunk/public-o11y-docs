@@ -10,7 +10,9 @@ Collected metrics and dimensions for Kubernetes
 
 The following sections list the collected metrics when you use the default configuration for the Collector for Kubernetes in host monitoring (agent) mode.
 
-.. caution:: In the Collector, data is processed as configured in your pipelines. Therefore, metrics first imported by receivers might be dropped further into the pipeline by other components, such as the SignalFx exporter. Check the :strong:`Kept?` column in the tables below to see if the metric is kept (not excluded) after going through the pipelines. 
+In the Collector, data is processed as configured in your pipelines. Therefore, metrics that are imported by receivers might be excluded further into the pipeline by other components. For instance, the :ref:`signalfx-exporter`, included in the default Collector configuration, drops certain metrics and applies :ref:`translation rules <exclusion-rules>` that impact the metrics sent to Splunk.    
+
+.. caution:: Check the :strong:`Sent` column in the tables below to see if the metric is finally sent to Splunk Observability Cloud after going through the pipelines. 
 
 Learn more about the Collector's configuration and data processing at:
 
