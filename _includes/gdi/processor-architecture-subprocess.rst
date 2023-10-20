@@ -95,7 +95,7 @@
      - No
      - Experimental
      - No
-   * - ``collect/kafka_consumer``
+   * - ``collectd/kafka_consumer``
      - Yes
      - No
      - Experimental
@@ -108,7 +108,7 @@
    
 .. raw:: html 
   
-  <h4>Support for sfxcollectd subprocess monitors</h4>
+  <h4>Support for sfxcollectd Python subprocess monitors</h4>
 
 .. list-table::
    :header-rows: 1
@@ -121,82 +121,82 @@
      - Support for ppc64le Linux
    * - ``collectd/consul``
      - Yes
-     - No
+     - Yes
      - Experimental
      - No
-   * - ``collect/couchbase``
+   * - ``collectd/couchbase``
      - Yes
-     - No
+     - Yes
      - Experimental
      - No
    * - ``collectd/elasticsearch``
      - Yes
-     - No
+     - Yes
      - Experimental
      - No
    * - ``collectd/etcd``
      - Yes
-     - No
+     - Yes
      - Experimental
      - No
    * - ``collectd/hadoop``
      - Yes
-     - No
+     - Yes
      - Experimental
      - No
    * - ``collectd/health-checker``
      - Yes
-     - No
+     - Yes
      - Experimental
      - No
    * - ``collectd/jenkins``
      - Yes
-     - No
+     - Yes
      - Experimental
      - No
    * - ``collectd/kong``
      - Yes
-     - No
+     - Yes
      - Experimental
      - No
    * - ``collectd/marathon``
      - Yes
-     - No
+     - Yes
      - Experimental
      - No
    * - ``collectd/mongodb``
      - Yes
-     - No
+     - Yes
      - Experimental
      - No
    * - ``collectd/openstack``
      - Yes
-     - No
+     - Yes
      - Experimental
      - No
    * - ``collectd/rabbitmq``
      - Yes
-     - No
+     - Yes
      - Experimental
      - No
    * - ``collectd/solr``
      - Yes
-     - No
+     - Yes
      - Experimental
      - No
    * - ``collectd/spark``
      - Yes
-     - No
+     - Yes
      - Experimental
      - No
    * - ``collectd/systemd``
      - Yes
-     - No
+     - Yes
      - Experimental
      - No
    * - ``collectd/zookeeper``
      - Yes
-     - No
+     - Yes
      - Experimental
      - No
 
@@ -215,6 +215,6 @@
      - Support for ppc64le Linux
    * - ``jmx``
      - Yes
-     - Yes
+     - Yes (requires JRE)
      - Experimental
      - No

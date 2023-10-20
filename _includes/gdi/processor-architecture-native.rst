@@ -61,6 +61,11 @@
      - Yes
      - Yes
      - Yes
+   * - ``elasticsearch-query``
+     - Yes
+     - Yes
+     - Yes
+     - Yes
    * - ``expvar``
      - Yes
      - Yes
@@ -172,6 +177,11 @@
      - Yes
      - Yes
    * - ``sql``
+     - Yes
+     - Yes
+     - Yes
+     - Yes
+   * - ``statsd``
      - Yes
      - Yes
      - Yes
