@@ -1,4 +1,5 @@
 .. _get-configapi:
+.. _aws-api-connect:
 
 ********************************************************
 Connect to AWS using the Splunk Observability Cloud API
@@ -10,21 +11,22 @@ Connect to AWS using the Splunk Observability Cloud API
 To connect Splunk Observability Cloud to your AWS account, complete the following steps:
 
 #. :ref:`Create an AWS connection <aws-api-create-connection>`. See the available :ref:`AWS regions <aws-regions>`.
-#. :ref:`Review your IAM policy <review-aws-iam-policy>`. Specify whether to collect both metrics and logs, and whether to gather metrics by API polling (which is the default) or through CloudWatch Metric Streams.
+#. :ref:`Review your IAM policy <review-aws-iam-policy>`. Specify the permissions you'll require to connect to AWS.
 #. :ref:`Configure your setup <aws-api-setup>`. 
-#. Optionally, :ref:`activate Metric Streams <activate-cw-metricstreams>`.
+#. :ref:`Configure how to connect to AWS <aws-api-connect>`: Select :ref:`polling <aws-api-connect-polling>` or :ref:`Metric Streams <aws-api-connect-ms>`. 
+#. :ref:`Deploy CloudFormation <aws-api-cloudformation>`.  
 #. :ref:`Collect logs <aws-api-logs>`.  
 #. See :ref:`next steps <aws-api-next-steps>`. 
 
 .. _aws-api-create-connection:
 
-Create an AWS connection 
+1. Create an AWS connection 
 =====================================================
 
 To connect Splunk Observability Cloud to AWS through the Splunk Observability Cloud API, perform the following steps:
 
-#. :ref:`Create an external AWS ID <aws-api-create-id>`
-#. :ref:`Create an AWS policy and IAM role <aws-api-create-policy-role>`
+* :ref:`Create an external AWS ID <aws-api-create-id>`
+* :ref:`Create an AWS policy and IAM role <aws-api-create-policy-role>`
 
 .. _aws-api-create-id:
 
@@ -75,7 +77,7 @@ To create an AWS policy and an AWS IAM role with a unique Amazon Resource Name (
 
 .. _review-aws-iam-policy:
 
-Review your IAM policy
+2. Review your IAM policy
 =====================================================
 
 To collect AWS data, review the permissions in this document:
@@ -180,7 +182,6 @@ For example:
     }
   ]
   }
-
 
 .. _aws-iam-policy-services:
 
@@ -398,10 +399,12 @@ Include these permissions to allow Splunk Observability Cloud to collect AWS usa
 
 .. _aws-api-setup:
 
-Configure your setup
+3. Configure your setup
 =============================
 
-Provide the ARN role to the Infrastructure Monitoring component of Splunk Observability Cloud. You can also configure your connection to support any of the following use cases:
+Provide the ARN role to Splunk Observability Cloud. 
+
+You can also configure your connection to support any of the following use cases:
 
 - Collect metrics for selected regions and services using the CloudWatch API.
 - Collect metrics for all regions and all services using the CloudWatch API.
@@ -441,10 +444,18 @@ The following example shows how to collect metrics from all regions and services
       "syncLoadBalancerTargetGroupTags" : false,
       "type" : "AWSCloudWatch"}'
 
-.. _aws-configure-api-polling:
+.. _aws-api-connect:
 
-Configure API polling (optional)
-========================================================
+4. Configure how to connect to AWS 
+======================================
+
+Configure how to connect to AWS: via API polling, or using Metric Streams.
+
+.. _aws-configure-api-polling:
+.. _aws-api-connect-polling:
+
+Configure API polling (default)
+------------------------------------------------------
 
 If you're retrieving AWS metrics polling CloudWatch APIs, keep in mind the following intervals: 
 
@@ -457,11 +468,12 @@ If you're retrieving AWS metrics polling CloudWatch APIs, keep in mind the follo
     - See :new-page:`how to configure the APIs in the developer portal <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-retrieve-integrations-query>` for more information.
 
 .. _activate-cw-metricstreams:
+.. _aws-api-connect-ms:
 
-Activate CloudWatch Metric Streams (optional)
-========================================================
+Configure Metric Streams 
+------------------------------------------------------
 
-To activate CloudWatch Metric Streams as an alternative to traditional API polling, follow these steps:
+To activate CloudWatch Metric Streams, follow these steps:
 
 #. Submit a GET request to ``https://api.<realm>.signalfx.com/v2/integration/<integrationId>`` to retrieve your current settings. Make sure to substitute your own realm and integration ID in the URL.
 #. Set the ``metricStreamsSyncState`` field to ``ENABLED``.
@@ -486,7 +498,7 @@ This creates:
 See :new-page:`Create an AWS integration using an external ID and ARN <https://dev.splunk.com/observability/docs/integrations/aws_integration_overview/#Create-an-AWS-integration-using-an-external-ID-and-ARN>` in the Splunk developer documentation for syntax examples.
 
 Deactivate Metric Streams
-------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To deactivate Metric Streams, follow these steps:
 
@@ -498,8 +510,9 @@ To deactivate Metric Streams, follow these steps:
   * If Splunk Observability Cloud sets ``metricStreamsSyncState`` to ``CANCELLATION_FAILED``, try again, or refer to :ref:`aws-ts-metric-streams`.
 
 .. _metricstreams_cloudformation:
+.. _aws-api-cloudformation:
 
-Deploy CloudFormation
+5. (Optional) Deploy CloudFormation
 ===================================================
 
 To collect CloudWatch Metric Streams or logs from all supported AWS services across all regions, select and deploy a CloudFormation template that supports metric streams or logs. Deploying the template creates the additional resources on your AWS account required both by Metric Streams (Kinesis Firehose, S3 bucket, IAM roles) and logs (Splunk AWS log collector lambda function, IAM role).
@@ -509,7 +522,7 @@ To collect CloudWatch Metric Streams or logs from all supported AWS services acr
 
 .. _aws-api-logs:
 
-Collect logs
+6. Collect logs
 ===================================================
 
 To collect log data from any CloudWatch log group, perform the following steps:

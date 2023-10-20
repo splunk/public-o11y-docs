@@ -17,11 +17,6 @@ Check :ref:`get-started-aws` for prerequisites, information on ingest methods, a
 Use the guided setup to connect to AWS 
 ============================================
 
-If you activate Metric Streams, take the following considerations into account:
-
-* When creating the new AWS IAM policy, :ref:`add these additional permissions <metricstreams_iampolicy>` to the ones already suggested in the guided setup.
-* Update your settings and deploy the CloudFormation template following :ref:`these steps <activate-cw-metricstreams>`.
-
 To access the guided setup for AWS integration, perform the following steps:
 
 #. Log in to Splunk Observability Cloud.
@@ -33,9 +28,9 @@ To access the guided setup for AWS integration, perform the following steps:
 
 Next, follow the steps provided in the guided setup:
 
-  - :ref:`aws-wizard-define`.
-  - :ref:`aws-wizard-prepare`.
-  - :ref:`aws-wizard-establish`.
+  - :ref:`aws-wizard-define-ms`.
+  - :ref:`aws-wizard-prepare-ms`.
+  - :ref:`aws-wizard-establish-ms`.
 
 .. _aws-wizard-define-ms:
 
