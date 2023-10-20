@@ -33,9 +33,9 @@ The Collector supports the following processor architectures and operating syste
         * Linux binary file (otelcol_linux_arm64)
         * macOS binary file (otelcol_darwin_arm64)
         * Docker image. See :ref:`Docker image for Linux <linux-docker>`
-     - Some monitors within the Smart Agent receivers are considered experimental for ARM64. See :ref:`subprocess-monitors-support-matrices`.
+     - Some monitors within the Smart Agent receivers are considered experimental for ARM64. For more information about the Smart Agent receiver, see :ref:`smartagent-receiver`.
    * - ppc64le, including IBM Private Cloud
      - 
         * Linux binary file (otelcol_linux_ppc64le)
         * Docker image. :ref:`Docker image for Linux <linux-docker>`
-     - Some Smart Agent monitors are not supported on ppc64le. See :ref:`subprocess-monitors-support-matrices`.
+     - Some Smart Agent monitors are not supported on ppc64le. For more information about the Smart Agent receiver, see :ref:`smartagent-receiver`.
