@@ -9,29 +9,44 @@ Smart Agent receiver
 
 The Smart Agent receiver is a native OTel component that lets you use Smart Agent monitors through the Splunk Distribution of OpenTelemetry Collector. Supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
-The Smart Agent receiver is fully supported only on amd64 linux platforms. Support for ARM64 is experimental starting from the Splunk Distribution of OpenTelemetry Collector version 0.73 and higher. For a list of supported monitors, see :ref:`collector-architecture`.
+The Smart Agent receiver is fully supported only on amd64 linux platforms. Support for ARM64 is experimental starting from the Splunk Distribution of OpenTelemetry Collector version 0.73 and higher.
 
 .. note:: For instructions on how to migrate from the Smart Agent to the Splunk Distribution of OpenTelemetry Collector, see :ref:`migrate-from-sa-to-otel`.
 
 .. _architecture-support:
 
-Requirements
+Supported monitors
 =================================
 
+The Smart Agent bundle provides the following monitor types for each platform:
 
+.. list-table::
+  :header-rows: 1
+  :width: 100%
+
+  * - Platform
+    - Monitor types
+  * - Linux (AMD64 and ARM64)
+    - * collectd subprocess
+      * sfxcollectd Python
+      * Java/JMX with OpenJDK runtime
+  * - Windows (AMD64)
+    - * sfxcollectd Python
+
+For more information about monitors included in the agent bundle, see :ref:`subprocess-monitors-support-matrices`.
 
 .. _native-monitor-support-matrices:
 
 Native Smart Agent monitors
 --------------------------------------------------------------
 
-Native Smart Agent monitors are grouped into three bundles:
+Native Smart Agent monitors are grouped into three types:
 
 * Standalone
 * Prometheus
 * Telegraf
 
-The following matrices list support capabilities for each monitor in each architecture.
+The following matrices list support for each monitor in each architecture.
 
 .. include:: /_includes/gdi/processor-architecture-native.rst
 
