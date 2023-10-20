@@ -118,12 +118,10 @@ CloudWatch Metric Streams supports filtering by namespace and metric name but do
 
 By default, Splunk Observability Cloud brings in data from all :ref:`supported AWS services <aws-integrations>` associated with your account. To limit the amount of data to import, see :ref:`specify-data-metadata`.  
 
-.. _aws-collection-interval:
-
 .. raw:: html
 
   <embed>
-    <h2>Data collection interval and costs<a name="collection-interval-aws" class="headerlink" href="#collection-interval-aws" title="Permalink to this headline">¶</a></h2>
+    <h2>Data collection interval and costs<a name="aws-collection-interval" class="headerlink" href="#aws-collection-interval" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 In most cases, metrics are reported every minute. However, some services use a different cadence: For example, selected S3 metrics are reported on a daily basis. Check AWS documentation to verify how often your services' metrics are reported.

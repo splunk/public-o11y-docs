@@ -13,7 +13,7 @@ If you have Administrator privileges for Splunk Observability Cloud and your Ama
 Before you start
 ============================================
 
-Before you proceed, check :ref:`aws-prereqs` and :ref:`aws-collection-interval`.
+Before you proceed, check :ref:`aws-prereqs` and :ref:`get-started-aws` for information on data collection intervals and costs.
 
 For alternative connection methods, see:
 

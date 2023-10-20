@@ -1,5 +1,4 @@
 .. _get-configapi:
-.. _aws-api-connect:
 
 ********************************************************
 Connect to AWS using the Splunk Observability Cloud API
