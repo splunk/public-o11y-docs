@@ -26,7 +26,7 @@ The Collector supports the following processor architectures and operating syste
         * Windows installer and NuGet package (msi and nupkg)
         * macOS binary file (otelcol_darwin_amd64)
         * Docker image. See :ref:`Docker image for Linux <linux-docker>` and :ref:`Docker image for Windows <windows-docker>`
-     - See :ref:`native-monitor-support-matrices`.
+     - For information about the Smart Agent receiver, see :ref:`smartagent-receiver`.
    * - ARM64
      - 
         * Linux packages (deb, rpm, and tar.gz)
