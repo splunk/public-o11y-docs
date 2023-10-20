@@ -35,6 +35,8 @@ Browse the table below to learn how to carry out common tasks with the Splunk Di
     - :ref:`prometheus-receiver`     
   * - Collect logs	
     - :ref:`filelog-receiver`
+  * - Collect Kubernetes events 
+    - :ref:`otel-k8s-events` 
   * - Filter Kubernetes elements 
     - :ref:`filter-processor-kubernetes` 
   * - Deactivate Kubernetes metrics
