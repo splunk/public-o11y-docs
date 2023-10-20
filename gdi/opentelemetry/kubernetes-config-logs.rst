@@ -180,7 +180,7 @@ To collect Kubernetes events using the Collector, you need to add ``k8sObjects``
   
   * ``watch`` mode sets up a long connection using the watch API to get updates only.
 
-* ``namespace``. By default, it includes all namespaces. If specified, the Collector only collects objects from the specified namespace.
+* ``namespaces``. If specified, the Collector only collects objects from the specified namespaces. By default, the matching objects from all namespaces are included. 
 
 * ``labelSelector``. Selects objects by label(s).
 
