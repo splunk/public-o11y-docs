@@ -44,7 +44,11 @@ After installing the Splunk Distribution of OpenTelemetry Collector, explore you
 
 1. Log in to Splunk Observability Cloud.
 2. In the left navigation menu, select :guilabel:`Infrastructure`.
-3. In the :guilabel:`Containers` section, select :guilabel:`Kubernetes`. The Kubernetes navigator displays.
+3. In the :guilabel:`Containers` section, select :guilabel:`Kubernetes`. 
+4. Select a Kubernetes service, such as :guilabel:`Kubernetes nodes`. The Kubernetes navigator displays.
+
+.. note::
+  By default, Kubernetes clusters are separated by service. To see a map of all Kubernetes clusters, select :guilabel:`Switch to classic navigator`.
 
 .. image:: /_images/infrastructure/images-k8s-infrastructure-tutorial/k8s-containers.gif
   :width: 80%
