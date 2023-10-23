@@ -8,11 +8,18 @@ Connect to AWS with Metrics Streams from the Splunk console
 .. meta::
   :description: Use guided setup to connect Splunk Observability Cloud to AWS through CloudWatch using Metric Streams.
 
-If you have Administrator privileges for Splunk Observability Cloud and your Amazon Web Services (AWS) account, you can use the UI guided setup to create an integration to connect to AWS with Metric Streams, and configure metrics and logs collection.
+If you have Administrator privileges for Splunk Observability Cloud and your Amazon Web Services (AWS) account, you can use the UI guided setup to create an integration to connect to AWS, and configure metrics and logs collection.
 
-Check :ref:`get-started-aws` for prerequisites, information on ingest methods, and other ways to connect Splunk Observability Cloud to AWS.
+Before you start
+============================================
 
-.. note:: To connect using the Splunk Observability Cloud API, refer to :ref:`get-configapi`.
+Before you proceed, check :ref:`aws-prereqs` and :ref:`get-started-aws` for information on data collection intervals and costs.
+
+For alternative connection methods, see:
+
+* :ref:`aws-connect-polling`
+* :ref:`aws-console-ms`
+* :ref:`get-configapi`
 
 Use the guided setup to connect to AWS 
 ============================================

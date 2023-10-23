@@ -92,27 +92,28 @@ Finally, proceed with the last steps:
 
 .. note:: Select :guilabel:`All built-in services` to import all data from built-in CloudWatch namespaces and ensure that built-in dashboards display automatically.
 
-Review the default AWS integration settings
+Review the default settings
 ==================================================
 
 After creating an AWS IAM policy and assigning it to a particular role through the guided setup, you can modify your configuration.
 
-Limit the scope of data collection
+Modify the scope of data collection
 --------------------------------------------------
 
-By default, Splunk Observability Cloud will bring in data from all supported AWS services associated with your account, with :ref:`certain limitations <aws-data-limits>`. 
+By default, Splunk Observability Cloud brings in data from all supported AWS services associated with your account, with :ref:`certain limitations <aws-data-limits>`. 
 
-- To manage the amount of data to import, see :ref:`specify-data-metadata`. 
-
-- Use the check box options in the guided setup to limit the scope of your data collection. These are the available options:
+Use the check box options in the guided setup to limit the scope of your data collection. These are the available options:
   
-  - Amazon Cost and Usage Metrics
-  - CloudWatch Metrics polling (you can deactivate it altogether, or deactivate the polling but activate AWS Metric Streams instead)
-  - CloudWatch Logs
-  - :ref:`AWS regions <aws-regions>` to fetch data from
-  - AWS services to fetch data from
+* Collect Amazon Cost and Usage Metrics.
+* Ingest CloudWatch Metrics. You can deactivate it altogether, or deactivate the polling but activate AWS Metric Streams instead.
+* Collect CloudWatch Logs.
+* Select which :ref:`AWS regions <aws-regions>` to fetch data from.
+* Select which AWS services to fetch data from.
 
-- In the :strong:`Data Management` menu in Splunk Observability Cloud, edit any integration to limit data import.
+To limit data collection, you can also:
+
+- Manage the amount of data to import. See :ref:`specify-data-metadata`. 
+- In the :guilabel:`Data Management` menu in Splunk Observability Cloud, edit any integration to limit data import.
 
   .. image:: /_images/gdi/aws-edit-data-limit.png
     :width: 55%
