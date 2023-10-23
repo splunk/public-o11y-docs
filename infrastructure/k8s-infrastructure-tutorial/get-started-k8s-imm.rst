@@ -18,6 +18,7 @@ Prerequisites
 * You must have an access token for the Splunk Observability Cloud organization you want to get data into. If you are using a free trial account, you can use the :guilabel:`Default` access token to complete this task. 
   For more details about creating organization access tokens, see :ref:`admin-org-tokens`.
 * You must have systemd and cURL installed.
+* You must have a running Kubernetes cluster.
 
 Next step
 ---------------------------------------
