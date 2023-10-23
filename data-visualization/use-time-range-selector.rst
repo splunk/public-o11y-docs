@@ -69,7 +69,7 @@ You can also view data from an absolute time window with a defined start and end
    * - 2018-10-15T04:19:00.000-07:00 to 2019-10-16T16:19:00.000-07:00
      - You can copy an ISO time range into the Time range selector.
 
-.. note:: 
+
 
 .. _panning:
 
