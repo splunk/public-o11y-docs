@@ -138,7 +138,7 @@ Learn more at :ref:`Amazon CloudWatch usage costs <aws-costs>`.
     <h2>Install the Splunk Distribution of OpenTelemetry Collector<a name="install-splunk-otel-collector" class="headerlink" href="#install-splunk-otel-collector" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-To take advantage of the full benefits of the Splunk Observability Cloud platform, install the :ref:`OpenTelemetry Collector <otel-intro>`, since it offers a higher degree of customization than the AWS integration.
+To take advantage of the full benefits of the Splunk Observability Cloud platform, install the :ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>` as well.
 
 You can track the degree of OpenTelemetry enablement in your AWS integrations by going to :guilabel:`Data Management > AWS`.
 
