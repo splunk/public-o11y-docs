@@ -30,7 +30,7 @@ Get Kubernetes data into Splunk Observability Cloud
 
 5. Enter the values applicable to your environment to configure the Collector instance.
 
-.. image:: /_images/infrastructure/images-k8s-infrastructure-tutorial/k8s-setup-wizard.png
+.. image:: /_images/infrastructure/images-k8s-infrastructure-tutorial/k8s-setup-wizard-new.png
   :width: 80%
   :alt: Installation setup guide for the OpenTelemetry Collector for Kubernetes.
 
