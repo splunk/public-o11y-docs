@@ -1,14 +1,14 @@
 .. _migrate-apm-custom-reporting: 
 
-Migrate APM custom reporting to OpenTelemetry Java and .NET Agent 2.0
+Migrate APM custom reporting to OpenTelemetry Java Agent 2.0
 *************************************************************************
 
 .. meta:: 
-   :description: Steps to migrate your APM custom reporting to support update to version 2.0 of Splunk OpenTelemetry Java and .NET agents.
+   :description: Steps to migrate your APM custom reporting to support update to version 2.0 of Splunk OpenTelemetry Java agent.
 
-Version 2.0 of the Splunk Distribution of OpenTelemetry Java and .NET agents includes breaking changes to HTTP semantic conventions. While the release of version 2.0 is to be determined, you can migrate to affected attributes in advance of updating so you can ensure your Splunk APM experience is minimally affected.
+Version 2.0 of the Splunk Distribution of OpenTelemetry Java agent includes breaking changes to HTTP semantic conventions. While the release of version 2.0 is to be determined, you can migrate to affected attributes in advance of updating so you can ensure your Splunk APM experience is minimally affected.
 
-If you continue to use deprecated OTel attributes, the following aspects of custom reporting in APM are affected by updating to version 2.0 of the Splunk Distribution of OpenTelemetry Java and .NET agents:
+If you continue to use deprecated OTel attributes, the following aspects of custom reporting in APM are affected by updating to version 2.0 of the Splunk Distribution of OpenTelemetry Java agent:
 
 * Tag Spotlight
 * Custom charts and dashboards that you created
@@ -19,7 +19,10 @@ If you continue to use deprecated OTel attributes, the following aspects of cust
 HTTP semantic convention changes
 ===================================
 
-The following table covers the HTTP OpenTelemetry (OTel) attributes that changed from version 1.0 to version 2.0 in the Splunk Distribution of OpenTelemetry Java and .NET agents.
+The following table covers the current HTTP OpenTelemetry (OTel) attributes that changed from version 1.0 to version 2.0 in the Splunk Distribution of OpenTelemetry Java agent.
+
+.. _note:
+    Until the release of version 2.0 of the OpenTelemetry Java agent, this list is subject to change.
 
 .. list-table:: 
    :header-rows: 1
