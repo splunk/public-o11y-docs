@@ -102,6 +102,7 @@ To install a generic SAML SSO integration, follow these steps:
 
    #. Log in to Splunk Observability Cloud.
    #. Open the :new-page:`SAML guided setup <https://login.signalfx.com/#/integrations/saml/description>`. Optionally, you can navigate to the guided setup on your own:
+   
       #. In the left navigation menu, select :menuselection:`Data Management`.
    
       #. Select :guilabel:`Add Integration`.
@@ -123,9 +124,4 @@ Once you have a custom URL configured, your users can continue to log in using t
 
 Observability Cloud generates a password for users you create in generic SAML SSO. If the generic SAML login portal is unavailable, Observability Cloud users can use the reset password link on the Observability Cloud login page to get native Observability Cloud credentials.
 
-.. _saml-support:
 
-Support
--------------------------------------------------
-
-.. include:: /_includes/troubleshooting-components.rst

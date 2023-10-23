@@ -73,7 +73,7 @@ The agent component consists of the following config files:
 Cluster receiver component
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The agent component consists of the following config files:
+The cluster receiver component consists of the following config files:
 
 * deployment-cluster-receiver.yaml
 

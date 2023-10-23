@@ -18,7 +18,7 @@ monitor automatically.
 
 This monitor is available on Kubernetes, Linux, and Windows.
 
-Behaviour
+Behavior
 ---------
 
 Since the agent is generally running in multiple places in a Kubernetes

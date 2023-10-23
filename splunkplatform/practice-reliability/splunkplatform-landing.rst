@@ -1,14 +1,23 @@
 .. _splunkplatform-landing:
 
 ***********************************************************************************
-Splunk Observability Cloud and the Splunk platform
+Practice reliability with Splunk Observability Cloud and the Splunk platform
 ***********************************************************************************
 
 .. meta::
    :description: This page provides an overview of how reliability engineers can maintain reliability with Observability Cloud components.
+
+
+.. toctree::
+    :maxdepth: 3
+    :hidden:
+
+    Measure and alert on SLIs <slis>
+    Respond to incidents <incident-response>
+    Collaborate on observability <collaboration>
    
 
-With the Splunk platform (Splunk Cloud Platform or Splunk Enterprise), you can manually perform tasks to maintain or increase the reliability of your systems through Splunk searches and log analysis. With Splunk Observability Cloud, on the other hand, you can monitor your system and measure its current state based on the data it generates in the form of logs, metrics, traces, and user sessions. In other words, you can perform observability to ensure reliability.
+With the Splunk platform (Splunk Cloud Platform or Splunk Enterprise), you can manually perform tasks to maintain or increase the reliability of your systems through Splunk searches and log analysis. With Splunk Observability Cloud, on the other hand, you can monitor your system and measure its current state based on the data it generates in the form of logs, metrics, traces, and user sessions. In other words, you can perform observability to ensure reliability. 
 
 Splunk Observability Cloud lets you to do the following:
 
@@ -29,7 +38,7 @@ Five core principles underpin system reliability: availability, performance, mon
 
 Select each of the following categories to learn how you can maintain reliability with Observability Cloud:
 
-* :ref:`Measure and alert on your SLIs <practice-reliability-slis>`
+* :ref:`Measure and alert on SLIs <practice-reliability-slis>`
 
 * :ref:`Respond to incidents <practice-reliability-incident-response>`
 
@@ -37,6 +46,8 @@ Select each of the following categories to learn how you can maintain reliabilit
 
 
 Then see :ref:`get-started-get-data-in` to set up each component of Splunk Observability Cloud.
+
+For a better understanding of how you can use Splunk Observability Cloud with other Splunk platform products, see :ref:`scenarios-integration-scenario-landing` for sample use cases. 
 
 
 
