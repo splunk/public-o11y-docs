@@ -2,7 +2,7 @@
 .. _aws-wizard-metricstreams:
 
 *********************************************************************
-Connect to AWS with Metrics Streams from the Splunk console
+Connect to AWS with Metric Streams from the Splunk console
 *********************************************************************
 
 .. meta::
