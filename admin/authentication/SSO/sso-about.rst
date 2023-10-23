@@ -22,7 +22,7 @@ About SSO integrations for Splunk Observability Cloud
    sso-troubleshoot
 
 
-Single-sign on (SSO) integrations implement SAML 2.0, which is a standard for exchanging authentication and authorization information between an identity provider (IdP) such as Ping, Okta, AzureAD, or OneLogin and a service provider (SP) such as Splunk Observability Cloud.  
+Single-sign on (SSO) integrations implement SAML 2.0, which is a standard for exchanging authentication and authorization information between an identity provider (IdP) such as Ping, Okta, Microsoft Entra ID (formerly Azure Active Directory), or OneLogin and a service provider (SP) such as Splunk Observability Cloud.  
 When you set up a new SSO integration in Splunk Observability Cloud, you authorize Splunk Observability Cloud to trust information from a particular IdP and use it for logging in users in an organization. After that trust is set up, users can log in from the IdP in an IdP-initiated flow, which starts with a portal or an app page within the IdP, or using an SP-initiated flow from a Splunk Observability Cloud login page (only available if your org has a custom domain configured).
 
 You can see the general SSO SAML flow in the following image:
