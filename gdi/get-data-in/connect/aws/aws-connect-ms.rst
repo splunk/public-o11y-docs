@@ -41,24 +41,23 @@ Next, follow the steps provided in the guided setup:
 
 .. _aws-wizard-define-ms:
 
-Define your connection
+Define your AWS connection
 -------------------------------------------
 
-Choose the following connection options:
+In this step you need to choose the following connection options:
 
-* The region AWS from which AWS manages your resources. See :ref:`aws-regions` for more informaion.
-* Authentication method. Learn more at :ref:`aws-authentication`.
-* Data ingest options such as:
+* :guilabel:`Overall region`: The region AWS from which AWS manages your resources. See :ref:`aws-regions` for more information.
+* :guilabel:`Authentication type`: How you will authenticate to connect with AWS. Learn more at :ref:`aws-authentication`.
+* :guilabel:`Data types`: Select which types of data to ingest.
 
   * Metadata.
   * Cost and usage metrics.
+  * CloudWatch metrics. 
   * Logs.
-  * Ingestion method: Polling or streaming. 
 
-If you activate Metric Streams, take the following considerations into account:
+In the CloudWatch Metrics option, select :guilabel:`Metric Streams (Splunk-managed)` as the ingestion method. When you activate Metric Streams:
 
-* When creating the new AWS IAM policy, :ref:`add these additional permissions <metricstreams_iampolicy>` to the ones already suggested in the guided setup.
-* Follow the instructions to :ref:`activate Metric Streams <activate-cw-metricstreams>`.
+* Make sure you :ref:`add these additional permissions <metricstreams_iampolicy>` to your IAM policy. 
 * Update your settings and deploy the CloudFormation template following :ref:`these steps <activate-cw-metricstreams>`.
 
 .. _aws-wizard-prepare-ms:
@@ -87,28 +86,28 @@ Finally, proceed with the last steps:
 
 .. note:: Select :guilabel:`All built-in services` to import all data from built-in CloudWatch namespaces and ensure that built-in dashboards display automatically.
 
-Review the default AWS integration settings
+Review the default settings
 ==================================================
 
 After creating an AWS IAM policy and assigning it to a particular role through the guided setup, you can modify your configuration.
 
-
-Limit the scope of data collection
+Modify the scope of data collection
 --------------------------------------------------
 
-By default, Splunk Observability Cloud will bring in data from all supported AWS services associated with your account, with :ref:`certain limitations <aws-data-limits>`. 
+By default, Splunk Observability Cloud brings in data from all supported AWS services associated with your account, with :ref:`certain limitations <aws-data-limits>`. 
 
-- To manage the amount of data to import, see :ref:`specify-data-metadata`. 
-
-- Use the check box options in the guided setup to limit the scope of your data collection. These are the available options:
+Use the check box options in the guided setup to limit the scope of your data collection. These are the available options:
   
-  - Amazon Cost and Usage Metrics
-  - Connection method ????
-  - CloudWatch Logs
-  - :ref:`AWS regions <aws-regions>` to fetch data from
-  - AWS services to fetch data from
+* Collect Amazon Cost and Usage Metrics.
+* Ingest CloudWatch Metrics. You can deactivate it altogether, or deactivate the polling but activate AWS Metric Streams instead.
+* Collect CloudWatch Logs.
+* Select which :ref:`AWS regions <aws-regions>` to fetch data from.
+* Select which AWS services to fetch data from.
 
-- In the :strong:`Data Management` menu in Splunk Observability Cloud, edit any integration to limit data import.
+To limit data collection, you can also:
+
+- Manage the amount of data to import. See :ref:`specify-data-metadata`. 
+- In the :guilabel:`Data Management` menu in Splunk Observability Cloud, edit any integration to limit data import.
 
   .. image:: /_images/gdi/aws-edit-data-limit.png
     :width: 55%
@@ -118,7 +117,7 @@ By default, Splunk Observability Cloud will bring in data from all supported AWS
 Select a CloudFormation template
 --------------------------------------------------
 
-Select a :ref:`CloudFormation template <aws-cloudformation>` to collect logs for each AWS region that you want to operate in.
+Select a :ref:`CloudFormation template <aws-cloudformation>` to collect logs or Metric Streams for each AWS region that you want to operate in.
 
 Next steps
 ================
