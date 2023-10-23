@@ -21,8 +21,8 @@ HTTP semantic convention changes
 
 The following table covers the current HTTP OpenTelemetry (OTel) attributes that changed from version 1.0 to version 2.0 in the Splunk Distribution of OpenTelemetry Java agent.
 
-.. _note:
-    Until the release of version 2.0 of the OpenTelemetry Java agent, this list is subject to change.
+.. note::
+   Until the release of version 2.0 of the OpenTelemetry Java agent, this list is subject to change.
 
 .. list-table:: 
    :header-rows: 1
