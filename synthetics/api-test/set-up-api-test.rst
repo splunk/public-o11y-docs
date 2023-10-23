@@ -5,7 +5,7 @@ Set up an API test
 **************************************
 
 .. meta::
-    :description: Learn how to set up an API test in Splunk Synthetic Monitoring.
+    :description: Steps to set up an API test in Splunk Synthetic Monitoring to check the functionality and performance of API endpoints.
 
 An API test provides a flexible way to check the functionality and performance of API endpoints. See :ref:`api-test` for an overview of API tests in Splunk Synthetic Monitoring.
 

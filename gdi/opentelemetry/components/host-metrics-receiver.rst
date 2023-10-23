@@ -38,7 +38,7 @@ Follow these steps to configure and activate the component:
 2. Configure the receiver as described in the next section.
 3. Restart the Collector.
 
-.. note:: Metrics produced by this receiver count towards the custom metric ingestion limit. See :ref:`sys-limits`.
+.. note:: Metrics produced by this receiver count towards metric ingestion limit. See :ref:`sys-limits`.
 
 Collect container host metrics (Linux)
 ---------------------------------------

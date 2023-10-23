@@ -201,7 +201,6 @@ Turn off logs or profiling data
 If you don't need AlwaysOn Profiling data for a specific host or container. set the ``profiling_data_enabled`` option to ``false`` in the ``splunk_hec`` exporter settings of the Collector configuration file. For example:
 
 .. code-block:: yaml
-
    :emphasize-lines: 6
 
    splunk_hec:
@@ -214,7 +213,6 @@ If you don't need AlwaysOn Profiling data for a specific host or container. set 
 To turn off log collection for Splunk Observability Cloud while preserving AlwaysOn Profiling data for APM, set the ``log_data_enabled`` option to ``false``. See :ref:`disable_log_collection` for more information.
 
 .. code-block:: yaml
-
    :emphasize-lines: 6
 
    splunk_hec/profiling:
@@ -227,7 +225,6 @@ To turn off log collection for Splunk Observability Cloud while preserving Alway
 If you need to turn off log data export to Splunk Observability Cloud, for example because you're using Log Observer Connect or because you don't have Log Observer in your organization, set ``log_data_enabled`` to ``false`` in the ``splunk_hec`` exporter of your Collector configuration file:
 
 .. code-block:: yaml
-
    :emphasize-lines: 6
 
    splunk_hec:

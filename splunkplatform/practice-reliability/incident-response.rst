@@ -9,6 +9,8 @@ Respond to incidents
 
 You can drill down to find the root cause of incidents using several tools available in Splunk Observability Cloud. In the following sections, see how each component of Observability Cloud is an effective incident response tool.
 
+For a better understanding of how you can use Splunk Observability Cloud with other Splunk platform products, see :ref:`scenarios-integration-scenario-landing` for sample use cases.
+
 Alerts and detectors
 ===================================================================================
 Use Observability Cloud alerts, detectors, events, and notifications to inform you when certain criteria are met. Alerts and detectors are often your first awareness that an incident has occurred. Observability Cloud has AutoDetect, or built-in alerts and detectors for supported integrations. See :ref:`AutoDetect <autodetect>` for more information. 

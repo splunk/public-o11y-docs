@@ -5,7 +5,7 @@ Introduction to Splunk Synthetic Monitoring
 ********************************************
 
 .. meta::
-    :description: Get started synthetically monitoring web application performance with Splunk Observability Cloud.
+    :description: Monitor the performance of your web pages and applications by running synthetic Browser, Uptime, and API tests with Splunk Synthetic Monitoring.
 
 Create detailed tests to proactively monitor the speed and reliability of websites, web apps, and resources over time, at any stage in the development cycle.
 

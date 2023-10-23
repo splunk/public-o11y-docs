@@ -5,7 +5,7 @@ Interpret Browser Test results
 ***********************************************
 
 .. meta::
-    :description: Learn about Browser Test run results in Splunk Synthetic Monitoring.
+    :description: Understand the results of browser tests run in Splunk Synthetic Monitoring and learn how to interpret the data in visualizations, such as the waterfall chart. 
 
 Every run of a Browser Test in Splunk Synthetic Monitoring produces a set of diagnostics that help you understand the performance of your application in real time. 
 

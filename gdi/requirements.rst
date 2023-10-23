@@ -9,7 +9,7 @@ Compatibility and requirements for Splunk Observability Cloud
 
 You can get infrastructure, application, and user experience data into Splunk Observability Cloud from a variety of monitored and instrumented sources. Check the following requirements to learn which operating systems, languages, and frameworks are compatible with Splunk Observability Cloud.
 
-Infrastructure monitoring (IMM)
+Infrastructure monitoring (IM)
 ==================================================
 
 The Splunk Distribution of OpenTelemetry Collector supports the following operating systems and services.

@@ -13,7 +13,7 @@ With a single CPU core, the Collector can receive, process, or export the follow
 
 * If handling traces, 15,000 spans per second.
 * If handling metrics, 20,000 data points per second.
-* If handling logs, 10,000 log records per second, including Fluentd ``td-agent``, which forwards logs to the ``fluentforward`` receiver in the Collector.
+* If handling logs, 10,000 log records per second, including Fluentd ``td-agent``, which forwards logs to the ``fluentforward`` receiver in the Collector. See more at :ref:`fluentd-receiver`.
 
 Sizing recommendations 
 ==========================================
@@ -69,10 +69,12 @@ In this scenario:
 When to scale
 ------------------------------------------------------------
 
+.. note:: Find the list of the Collector's internal metrics at :ref:`metrics-internal-collector`.
+
 Here's a few tips: 
 
-* If using the ``memory_limiter`` processor, check the ``otelcol_processor_refused_spans`` metric. If data is being refused from entering the pipeline too often, scale up your Collector cluster. You can scale down after memory consumption across the nodes is significantly lower than the limit set through the processor.
-* Check metrics related to the queue sizes for exporters, such as ``otelcol_exporter_queue_capacity`` and ``otelcol_exporter_queue_size``. If there aren't enough workers or the back end is too slow, data might accumulate in the queue until there's no more space and it's rejected.
+* If using the ``memory_limiter`` processor, check the Collectot's ``otelcol_processor_refused_spans`` metric. If data is being refused from entering the pipeline too often, scale up your Collector cluster. You can scale down after memory consumption across the nodes is significantly lower than the limit set through the processor. Learn about the processor at :ref:`memory-limiter-processor`.
+* Check other internal metrics related to the queue sizes for exporters, such as ``otelcol_exporter_queue_capacity`` and ``otelcol_exporter_queue_size``. If there aren't enough workers or the back end is too slow, data might accumulate in the queue until there's no more space and it's rejected.
 
 Sometimes scaling won't bring any benefits: 
 

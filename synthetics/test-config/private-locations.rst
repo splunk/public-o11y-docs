@@ -5,7 +5,7 @@ Private locations
 *****************
 
 .. meta::
-    :description: Learn about private locations in Splunk Synthetic Monitoring.
+    :description: Run synthetic tests from an internal site or private web application to quickly find defects using Splunk Synthetic Monitoring. 
 
 A private location is a software package that offers a quick and easy deployment of Splunk Synthetic Monitoring solutions beyond the public network so that you can find, fix, and prevent web performance defects on any internal web application, in any environment - whether inside or outside of your firewalls. Private locations allow Splunk Synthetics Monitoring users to test sooner in the development cycle and against internal sites or applications that aren't available to the public.
 
@@ -113,9 +113,9 @@ Follow these steps to limit logging:
 
 
 
-Adding certificates in Synthetics
+Add certificates in Synthetics
 ------------------------------------------------------
-Splunk Synthetic Monitoring supports injecting custom root CA certificates for any tests running from your private locations. Client keys and certificates aren't supported at this time. 
+Splunk Synthetic Monitoring supports injecting custom root CA certificates for API and Uptime tests running from your private locations. Client keys and certificates aren't supported at this time. 
 
 #. Create a folder called ``certs`` on your host machine and place the CA Certificate (in CRT format) in the folder.
 
@@ -129,6 +129,11 @@ For example, here is what a command might look like after you modify it to fit y
 .. code:: yaml
 
     docker run -e "RUNNER_TOKEN=<insert-token>" --volume=`pwd`/certs:/usr/local/share/ca-certificates/my_certs/ quay.io/signalfx/splunk-synthetics-runner:latest bash -c "sudo update-ca-certificates && bundle exec bin/start_runner"
+
+
+.. Note:: Custom root CA certificates aren't supported for Browser tests. Browser tests require SSL/TLS validation for accurate testing. Optionally, you can deactivate SSL/TLS validation for Browser tests when necessary.
+
+
 
 
 
@@ -168,6 +173,6 @@ If your queue latency increases but your queue length doesn't, then try these tr
 
 The maximum number of runs in a queue is 100,000. 
 
-Any runners older than one hour are removed from the queue. 
+Any runs older than one hour are removed from the queue. 
 
 

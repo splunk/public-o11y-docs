@@ -9,6 +9,28 @@ Welcome
    :width: 97.3%
    :target: https://docs.splunk.com/Observability/get-started/o11y.html#nav-Get-started
 
+.. role:: icon-info
+.. rst-class:: newparawithicon
+
+:icon-info:`.` :strong:`Welcome to Splunk Observability Cloud`
+Learn the basic elements of Splunk Observability Cloud and all it can do for you.
+
+.. rst-class:: newcard
+
+:strong:`Service description`
+Benefits and service terms of Splunk Observability Cloud :ref:`o11y-service-description`
+
+.. rst-class:: newcard
+
+:strong:`Scenarios`
+Collection of scenarios for Splunk Observability Cloud :ref:`scenario-landing`
+
+.. rst-class:: newcard
+
+:strong:`Architecture`
+Architecture of Splunk Observability Cloud :ref:`architecture`
+
+
 .. role:: icon-cloud-upload
 .. rst-class:: newparawithicon
 
@@ -228,6 +250,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    get-started/welcome
 
 .. toctree::
+   :maxdepth: 3
+
+   Service description <get-started/service-description>
+
+.. toctree::
    :maxdepth:   3
 
    Get started <get-started/o11y>
@@ -268,7 +295,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: Splunk platform users
    :maxdepth:   3
 
-   Splunk Observability Cloud and the Splunk platform <splunkplatform/splunkplatform-landing>
+   Splunk Observability Cloud and the Splunk platform <splunkplatform/practice-reliability/splunkplatform-landing>
 
 .. toctree::
    :maxdepth:   3
@@ -278,17 +305,10 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Measure and alert on your SLIs <splunkplatform/practice-reliability/slis>
+   Use case scenarios <splunkplatform/scenarios/integration-scenario-landing>
 
 .. toctree::
    :maxdepth:   3
-
-   Respond to incidents <splunkplatform/practice-reliability/incident-response>
-
-.. toctree::
-   :maxdepth:   3
-
-   Collaborate on observability <splunkplatform/practice-reliability/collaboration>
 
 .. toctree::
    :caption: Administer Splunk Observability Cloud
