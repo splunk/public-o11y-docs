@@ -58,7 +58,7 @@ The following table covers the current HTTP OpenTelemetry (OTel) attributes that
 Assess if you're affected by updating
 =========================================
 
-To determine if your APM experience is affected by the update check whether you are indexing the affected OTel attributes as custom tags in Splunk APM:
+To determine if your APM experience is affected by the update, check whether you are indexing the affected OTel attributes as custom tags in Splunk APM:
 
 .. note:: 
    The HTTP method attribute is stored as a system tag by default in Splunk Observability Cloud. You don't need to index the HTTP method attribute to use it as a Troubleshooting MetricSet (TMS) or Monitoring MetricSet (MMS).
