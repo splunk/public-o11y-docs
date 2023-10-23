@@ -37,8 +37,11 @@ Delete an SLO
 
 .. note:: You can't recover a deleted SLO.
 
-Add an SLO to a dashboard
+Add an SLO chart to a dashboard
 ================================
 
-#. On the :strong:`Service Level Objectives (SLOs)` page, select the more icon (|more|) next to the SLO you want to edit.
-#. In the actions menu, select :menuselection:`Add to dashboard`.
+#. On the :strong:`Service Level Objectives (SLOs)` page, select the more icon (|more|) next to the SLO you want to add to a dashboard.
+#. In the actions menu, select :menuselection:`Add to dashboard..`.
+#. Select an existing dashboard or create a new dashboard for your SLO chart.
+
+.. note:: You must have write permission for a dashboard to add an SLO chart to it.
