@@ -1,7 +1,7 @@
 .. _about-k8s-imm:
 
 *****************************************************************************************
-About the monitor your Kubernetes environment in Splunk Observability Cloud tutorial
+Tutorial: monitor your Kubernetes environment in Splunk Observability Cloud
 *****************************************************************************************
 
 .. meta::
