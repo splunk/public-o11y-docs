@@ -9,7 +9,7 @@ Amazon Fargate
 
 Knowledge of AWS Fargate (Fargate) is assumed. See the :new-page:`user guide <https://docs.aws.amazon.com/AmazonECS/latest/userguide/what-is-fargate.html>` for more information. 
 
-Unless stated otherwise, the Collector is deployed as a sidecar (additional container) to ECS tasks. AWS Fargate is classified as a container, and Fargate metrics count are classified as container metrics.
+Unless stated otherwise, the Collector is deployed as a sidecar (additional container) to ECS tasks. AWS Fargate is classified as a container, and Fargate metrics are classified as container metrics.
 
 This deployment requires Collector release v0.33.0 or newer, which corresponds to image tag ``0.33.0`` and newer. See the :new-page:`image repository <https://quay.io/repository/signalfx/splunk-otel-collector?tab=tags>` to download the latest image.
 
