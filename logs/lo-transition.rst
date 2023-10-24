@@ -29,10 +29,13 @@ Changes in logging after the transition
 ==============================================================================================================
 After your transition to Log Observer Connect, you experience changes in the following logging functionality:
 
-- Log processing rules
-- Infinite loggging rules
-- Search-time processing rules
-- Live Tail
+* :ref:`Log processing rules <transition-processing-rules>`
+* :ref:`Infinite logging rules <transition-infinite-logging>`
+* :ref:`Search-time processing rules <transition-search-time-rules>`
+* :ref:`Live Tail <transition-live-tail>`
+
+
+.. _transition-processing-rules:
 
 Log processing rules
 --------------------------------------------------------------------------------------------------------------
@@ -41,7 +44,12 @@ You can continue using existing log processing rules. See :ref`logs-processors` 
 Going forward, you can process data at ingest time with Splunk Cloud Platform functionality, including the following:
 
 - Ingest actions
-- 
+- .conf configuration
+- Edge Processor
+- Data Stream Processor
+- Filter Processor (Splunk Distribution of OpenTelemetry Collector only)
+
+.. _transition-infinite-logging:
 
 Infinite logging rules
 --------------------------------------------------------------------------------------------------------------
@@ -49,10 +57,14 @@ You can continue using existing infinite logging rules. See :ref`logs-infinite` 
 
 Going forward, you can archive data in Splunk Cloud Platform using Dynamic Data Active Archive. See :new-page:`Store expired Splunk Cloud Platform data in a Splunk-managed archive <https://docs.splunk.com/Documentation/SplunkCloud/9.0.2305/Admin/DataArchiver>` for more information.
 
+.. _transition-search-time-rules:
+
 Search-time processing rules
 --------------------------------------------------------------------------------------------------------------
 You cannot use search-time processing rules. Search-time rules are the application of log processing rules across historical data. See :ref:`logs-search-time-rules` for more information. Going forward, you can utilize the global time range picker in Splunk Cloud Platform dashboards to do search-time processing.
 
+.. _transition-live-tail:
+
 Live Tail
 --------------------------------------------------------------------------------------------------------------
-
+The Live Tail feature of Log Observer ends in January 2024. There is no equivalent in Splunk Cloud Platform.
