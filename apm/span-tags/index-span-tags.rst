@@ -4,8 +4,6 @@
 Index span tags to generate Troubleshooting MetricSets
 ************************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn how to use index tags to create Troubleshooting MetricSets that help you troubleshoot services with Splunk Observability Cloud.
 
