@@ -10,7 +10,7 @@ Override default time range with the Time Range Selector
 The Time Range selector is located at the top right of dashboards and charts. It is also available to specify a chart's :ref:`default time range<default-time>` in the Chart Options tab. By default, Splunk Infrastructure Monitoring chooses the best time range for a chart based on the characteristics of the data that it shows. However, you can use the Time Range selector to :ref:`override the default<dashboard-time-range>` for all charts in a dashboard. The Time Range selector supports both relative and absolute time ranges.
 
 
-.. include:: /includes/data-viz/timepicker
+.. include:: /_includes/data-viz/timepicker
 
 .. _panning:
 
