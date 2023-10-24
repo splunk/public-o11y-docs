@@ -22,7 +22,7 @@ About SSO integrations for Splunk Observability Cloud
    sso-troubleshoot
 
 
-Single-sign on (SSO) integrations implement SAML 2.0, which is a standard for exchanging authentication and authorization information between an identity provider (IdP) such as Ping, Okta, AzureAD, or OneLogin and a service provider (SP) such as Splunk Observability Cloud.  
+Single-sign on (SSO) integrations implement SAML 2.0, which is a standard for exchanging authentication and authorization information between an identity provider (IdP) such as Ping, Okta, Microsoft Entra ID (formerly Azure Active Directory), or OneLogin and a service provider (SP) such as Splunk Observability Cloud.  
 When you set up a new SSO integration in Splunk Observability Cloud, you authorize Splunk Observability Cloud to trust information from a particular IdP and use it for logging in users in an organization. After that trust is set up, users can log in from the IdP in an IdP-initiated flow, which starts with a portal or an app page within the IdP, or using an SP-initiated flow from a Splunk Observability Cloud login page (only available if your org has a custom domain configured).
 
 You can see the general SSO SAML flow in the following image:
@@ -59,16 +59,16 @@ Additionally, the IdP needs to know what parameters to send to Splunk Observabil
       :width: 90%
       :alt: The attributes that the IdP sends to Splunk Observability Cloud.
 
-The product-specific integrations provide default values for most of these fields and you don't have to configure them manually.  When setting up generic SAML or Active Directory Federation Searches (FS), you need to provide all the values yourself. 
+The product-specific integrations provide default values for most of these fields and you don't have to configure them manually. When setting up generic SAML or Microsoft Entra ID (formerly Azure Active Directory) Federation Searches (FS), you need to provide all the values yourself. 
 
-The following table uses Azure Active Directory as an example and shows the corresponding field names in Splunk Observability Cloud. Different IdPs may have slightly different field names. Example values are indicated in brackets.
+The following table uses Microsoft Entra ID (formerly Azure Active Directory) as an example and shows the corresponding field names in Splunk Observability Cloud. Different IdPs may have slightly different field names. Example values are indicated in brackets.
 
 .. list-table::
    :header-rows: 1
    :widths: 50, 50
 
    * - :strong:`Splunk Observability Cloud field name`
-     - :strong:`Azure Active Directory field name`
+     - :strong:`Microsoft Entra ID (formerly Azure Active Directory) field name`
 
    * - :guilabel:`Integration ID` (EPAMIDfalsg)
      - :guilabel:`Reply URL` (Assertion Consumer Service URL) (https://your_realm/v1/saml/acsEPAMIDfalsg)
@@ -82,8 +82,8 @@ The following table uses Azure Active Directory as an example and shows the corr
    * - :guilabel:`Integration ID` (EPAMIDfalsg)
      - :guilabel:`Reply URL (Assertion Consumer Service URL)` (https://your_realm/v1/saml/acsEPAMIDfalsg)
    
-   * - :guilabel:`Azure AD Identifier` (https://your_domain/081aaa5f-fsec-m01c-03dfalke45n)
-     - :guilabel:`Azure AD Identifier`  (https://your_domain/081aaa5f-fsec-m01c-03dfalke45n)
+   * - :guilabel:`Microsoft Entra ID Identifier` (https://your_domain/081aaa5f-fsec-m01c-03dfalke45n)
+     - :guilabel:`Microsoft Entra ID Identifier`  (https://your_domain/081aaa5f-fsec-m01c-03dfalke45n)
      
    * - For user attributes and claims, :code:`FullName` or :code:`User.FirstName` and :code:`User.LastName` are required, in addition to :code:`PersonImmutableID` and :code:`User.email`
      - :guilabel:`User.FirstName`  (user.givenname), :guilabel:`LastName` (user.surname), PersonImmutableID (user.userprincipal name), :guilabel:`FullName` (user.displayname), :guilabel:`email` (user.othermail)

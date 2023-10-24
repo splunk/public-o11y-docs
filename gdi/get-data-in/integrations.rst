@@ -1202,8 +1202,8 @@ Login services
 
 These login service integrations allow your users to single sign-on (SSO) to Splunk Observability Cloud using a third-party identity provider (IdP) that uses SAML SSO or a custom URL that you specify.
 
-- Active Directory FS
-- Azure Active Directory
+- Microsoft ADFS
+- Microsoft Entra ID (formerly Azure Directory)
 - Google Cloud Identity
 - Google Sign-In
 - Okta
