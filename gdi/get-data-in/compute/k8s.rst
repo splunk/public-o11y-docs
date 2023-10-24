@@ -18,7 +18,7 @@ The Collector is deployed using a Helm chart for the Splunk Distribution of Open
 Supported versions
 =====================
 
-This Kubernetes solution has been validated in Kubernetes environments that use Minikube, Amazon Elastic Kubernetes Service (Amazon EKS), and Google Kubernetes Engine.
+This Kubernetes solution has been validated in Kubernetes environments that use Minikube, Amazon Elastic Kubernetes Service (Amazon EKS), and Google Kubernetes Engine. See more details at :ref:`helm-chart-supported-distros`.
 
 Start the integration
 =========================
@@ -42,7 +42,13 @@ Advanced install
 
 For advanced installation instructions, see :ref:`otel-install-k8s`. 
 
-This includes :ref:`how to configure the destination for the Collector <collector-k8s-destination>`: Splunk Enterprise or Splunk Cloud (``splunkPlatform``) or Splunk Observability Cloud (``splunkObservability``). 
+This includes information about:
+
+* :ref:`helm-chart-components`
+* :ref:`Setting the destination for the Collector <collector-k8s-destination>` to Splunk Enterprise or Splunk Cloud (``splunkPlatform``) or Splunk Observability Cloud (``splunkObservability``)
+* :ref:`resource-yaml-manifests`
+* :ref:`otel-kubernetes-config-distro`
+* :ref:`otel-kubernetes-config-environment`
 
 Check access tokens
 ----------------------------------
