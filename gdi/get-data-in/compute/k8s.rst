@@ -7,13 +7,9 @@ Collect Kubernetes data
 .. meta::
    :description: Integrate Kubernetes metrics and logs with Splunk Observability Cloud.
 
-The Splunk Distribution of OpenTelemetry Collector provides integrated collection and forwarding for all Kubernetes telemetry. Deploy the Collector to gather telemetry for Splunk Infrastructure Monitoring, Splunk APM, or Splunk Log Observer.
+The Splunk Distribution of OpenTelemetry Collector provides integrated collection and forwarding for all Kubernetes telemetry, such as metrics, APM traces, and logs, to Splunk Observability Cloud.
 
-The Collector is deployed using a Helm chart for the Splunk Distribution of OpenTelemetry Collector for Kubernetes. In a Kubernetes cluster, the chart creates a Kubernetes DaemonSet as well as other Kubernetes objects. These objects collect the following for the cluster:
-
-- Metrics for Infrastructure Monitoring
-- Traces for APM
-- Logs for Log Observer
+The Collector is deployed using a Helm chart. In a Kubernetes cluster, the chart creates a Kubernetes DaemonSet as well as other Kubernetes objects. 
 
 Supported versions
 =====================
@@ -53,7 +49,11 @@ This includes information about:
 Check access tokens
 ----------------------------------
 
-Access tokens are organization-level tokens that, by default, are valid for one year. For access tokens created prior to February 28, 2022, the expiration date remains 5 years from the creation date. You must use an org token to authenticate emitters that send data points to Splunk Observability Cloud. You can use an org token in long-running scripts that call the API. For more information, see :ref:`admin-org-tokens`.
+Access tokens are organization-level tokens that, by default, are valid for one year. For access tokens created prior to February 28, 2022, the expiration date remains 5 years from the creation date. 
+
+You must use an org token to authenticate emitters that send data points to Splunk Observability Cloud. You can use an org token in long-running scripts that call the API. 
+
+For more information, see :ref:`admin-org-tokens`.
 
 Learn more
 =================
