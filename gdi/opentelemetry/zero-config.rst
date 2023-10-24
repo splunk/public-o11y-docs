@@ -67,17 +67,17 @@ Zero Configuration Auto Instrumentation is available for Java, .NET, and NodeJS 
      - Supported for Windows
      - Supported for Kubernetes
    * - Java
-     - :strong:`X`
-     - 
-     - :strong:`X`
+     - Yes
+     - No
+     - Yes
    * - .NET
-     - :strong:`X`
-     - :strong:`X`
-     - 
+     - Yes
+     - Yes
+     - No
    * - NodeJS
-     - :strong:`X`
-     - 
-     - :strong:`X`
+     - Yes
+     - No
+     - Yes
 
 To get started with automatic instrumentation for your applications, see the following pages:
 
