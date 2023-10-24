@@ -3,7 +3,7 @@
 .. _sso-adfs:
 
 *********************************************************************
-Configure a ADFS SSO integration
+Configure an ADFS SSO integration
 *********************************************************************
 
 .. meta::
@@ -13,13 +13,13 @@ The Microsoft Active Directory Federation Services (ADFS) SSO integration lets y
 
 Before you begin configuring the ADFS integration, ensure you have completed the steps in :ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
 
-This integration is only available for Microsoft Entra ID with ADFS. In addition, you need to have the following fields in your ADFS configuration:
+This integration is only available for Microsoft Entra ID (formerly Azure Active Directory) with ADFS. In addition, you need to have the following fields in your ADFS configuration:
 
 - First Name
 - Last Name
 - Email
 
-The procedure for configuring ADFS with Observability Cloud has these sections:
+The procedure for configuring ADFS with Splunk Observability Cloud has these sections:
 
 * :ref:`notify-splunk-support`
 * :ref:`create-adfs-imm-integration`

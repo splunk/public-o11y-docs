@@ -11,7 +11,7 @@ The Microsoft Entra ID (formerly Azure Active Directory) integration lets users 
 
 Before you begin configuring this integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
 
-To configure an Microsoft Entra ID SSO integration, you must be an administrator for your organization.
+To configure a Microsoft Entra ID SSO integration, you must be an administrator for your organization.
 To learn more, see :new-page-ref:`manage_admin-access`.
 
 .. note:: The procedure for creating multiple integrations for Microsoft Entra ID is
@@ -32,12 +32,12 @@ Configure Microsoft Entra ID for multiple organizations
    #. Copy the URI that appears next to check box, so you can use it in steps 4a and 4b of
       the section :strong:`Step 3: Configure Microsoft Entra ID SSO`.
 #. When you reach step 4a and 4b of :strong:`Step 3: Configure Microsoft Entra ID SSO`, use the
-   integration-specific entity ID you copied from Observability Cloud instead of the
+   integration-specific entity ID you copied from Splunk Observability Cloud instead of the
    URLs listed in the instructions.
 #. Proceed with the rest of the instructions.
 
 After you complete these steps, the Microsoft Entra ID SSO integration is available to users
-in your Microsoft Entra ID organization. When users sign in to Observability Cloud
+in your Microsoft Entra ID organization. When users sign in to Splunk Observability Cloud
 from Microsoft Entra ID for the first time, they receive an email containing a link that
 they must open in order to authenticate. This only occurs the first time the user
 signs in. Subsequent login attempts don't require validation.
