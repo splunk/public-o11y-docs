@@ -52,10 +52,15 @@ Traces instrumentations
      - Third-party support
      - ``AZURE``
    * - Elastic.Clients.Elasticsearch
-     - 8.0.0 and higher
+     - 8.0.0 to 8.9.3. |br| (Higher versions are supported by Elastic.Transport)
      - Experimental Beta
      - Third-party support
      - ``ELASTICSEARCH``
+   * - Elastic.Transport
+     - 0.4.16 and higher
+     - Experimental Beta
+     - Third-party support
+     - ``ELASTICTRANSPORT``
    * - Microsoft.EntityFrameworkCore |br| (Not supported on .NET Framework)
      - 6.0.12 and higher
      - Experimental Beta
