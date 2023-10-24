@@ -159,6 +159,7 @@ For example:
     {
       "Effect": "Allow",
       "Action": [
+        "cloudwatch:GetMetricStream"
         "cloudwatch:ListMetricStreams",
         "cloudwatch:PutMetricStream",
         "cloudwatch:DeleteMetricStream",
