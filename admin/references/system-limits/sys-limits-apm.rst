@@ -48,7 +48,7 @@ Span and trace limits
      - Spans are dropped from traces that exceed the 16 MB limit and are not analyzed by Splunk APM.  
    * - Span accumulation duration
      - 10 minutes
-     - When a specific trace ID reaches this limit, subsequent spans are grouped into another trace segment. Exceeding the limit leads to suboptimal trace-based analysis for inferred services, failure root cause metrics and workflow metrics, but no spans or traces exceeding this limit are dropped. 
+     - When a specific trace ID reaches this limit, subsequent spans are grouped into another trace segment. 
    * - Trace assembly delay
      - 60s 
      - Time from last span arrival for a traceId to trace assembly completed.
