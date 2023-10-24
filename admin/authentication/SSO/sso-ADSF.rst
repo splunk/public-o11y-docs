@@ -3,15 +3,15 @@
 .. _sso-adfs:
 
 *********************************************************************
-Configure a Microsoft Entra ID (formerly ADFS)  SSO integration
+Configure a ADFS SSO integration
 *********************************************************************
 
 .. meta::
-   :description: Configure the Microsoft Entra ID (formerly Azure Active Directory) Federation Services (ADFS) SSO integration to let your users log in to Observability Cloud using your Microsoft ADFS portal.
+   :description: Configure the Active Directory Federation Services (ADFS) SSO integration to let your users log in to Observability Cloud using your Microsoft ADFS portal.
 
-The Microsoft Entra ID (formerly Azure Active Directory) Federation Services (ADFS) SSO integration lets your users log in to Observability Cloud using your Microsoft ADFS portal.
+The Azure Active Directory Federation Services (ADFS) SSO integration lets your users log in to Observability Cloud using your Microsoft ADFS portal.
 
-Before you begin configuring the Microsoft Entra ID Federation Services (ADFS) integration, ensure you have completed the steps in :ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
+Before you begin configuring the ADFS integration, ensure you have completed the steps in :ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
 
 This integration is only available for Microsoft Entra ID with ADFS. In addition, you need to have the following fields in your ADFS configuration:
 
@@ -56,7 +56,7 @@ To create a new ADFS integration in Observability Cloud:
 
    #. In the integration filter menu, select :guilabel:`All`.
 
-   #. In the :guilabel:`Search` field, search for :guilabel:`Microsoft Entra ID FS`, and select it.
+   #. In the :guilabel:`Search` field, search for :guilabel:`Azure Directory FS`, and select it.
 
    
 #. In the :guilabel:`Name` field, enter a name for your ADFS SSO integration.
@@ -201,7 +201,7 @@ Upload the ADFS certificate and federation metadata to Observability Cloud
 
 In Observability Cloud, do the following:
 
-#. Find the Microsoft Entra ID FS page you opened in a previous step.
+#. Find the ADFS page you opened in a previous step.
 #. Select the :strong:`Upload File` link in the :guilabel:`Certificate` field and upload the ``certificate.pem`` file.
 #. Select the :strong:`Upload File` link in the :guilabel:`Metadata` field and upload the ``FederationMetadata.xml`` file.
 #. Select :guilabel:`Save`.
