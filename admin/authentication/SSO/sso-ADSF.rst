@@ -9,7 +9,7 @@ Configure a ADFS SSO integration
 .. meta::
    :description: Configure the Active Directory Federation Services (ADFS) SSO integration to let your users log in to Observability Cloud using your Microsoft ADFS portal.
 
-The Azure Active Directory Federation Services (ADFS) SSO integration lets your users log in to Observability Cloud using your Microsoft ADFS portal.
+The Microsoft Active Directory Federation Services (ADFS) SSO integration lets your users log in to Observability Cloud using your Microsoft ADFS portal.
 
 Before you begin configuring the ADFS integration, ensure you have completed the steps in :ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
 
@@ -48,7 +48,7 @@ Create a new ADFS SSO integration in Observability Cloud
 To create a new ADFS integration in Observability Cloud:
 
 #. Log in to Splunk Observability Cloud.
-#. Open the :new-page:`Microsoft Entra ID FS guided setup <https://login.signalfx.com/#/integrations/adfs/description>`. Optionally, you can navigate to the guided setup on your own:
+#. Open the :new-page:`ADFS guided setup <https://login.signalfx.com/#/integrations/adfs/description>`. Optionally, you can navigate to the guided setup on your own:
 
    #. In the left navigation menu, select :menuselection:`Data Management`.
 
@@ -192,7 +192,7 @@ Obtain a federation metadata file to install to Observability Cloud:
 #. Open a new browser window or tab, then navigate to the URL you copied. This opens a file download dialog box.
 #. Save the file FederationMetadata.xml. In a following step, you upload this file to Observability Cloud.
 
- .. note:: URLs must belong to ADFS in order to validate. Accepted domains include ``windows.net`` and ``windows-ppe.net``.
+.. note:: URLs must belong to ADFS in order to validate. Accepted domains include ``windows.net`` and ``windows-ppe.net``.
 
 .. _upload-adfs-cert-metadata-im:
 
@@ -206,7 +206,7 @@ In Observability Cloud, do the following:
 #. Select the :strong:`Upload File` link in the :guilabel:`Metadata` field and upload the ``FederationMetadata.xml`` file.
 #. Select :guilabel:`Save`.
 
-The Microsoft ADFS SSO integration is now available to users in your ADFS organization.
+The ADFS SSO integration is now available to users in your ADFS organization.
 When users log in to Observability Cloud from ADFS for the first time,
 they receive an email containing a link that they must open in order to authenticate.
 This only occurs the first time the user signs in. Subsequent login attempts don't
