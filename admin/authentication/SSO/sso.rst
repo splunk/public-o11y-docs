@@ -16,16 +16,14 @@ Observability Cloud also supports SSO initiated by Observability Cloud, and this
 
 Observability Cloud supports the following SSO integrations:
 
--  :ref:`Microsoft Active Directory Federation Services(ADFS)<sso-adfs>`
--  :ref:`Microsoft Entra ID<sso-azure>`
+-  :ref:`Microsoft Active Directory Federation Services (ADFS)<sso-adfs>`
+-  :ref:`Microsoft Entra ID (formerly Azure Active Directory) <sso-azure>`
 -  :ref:`Google<sso-google>`
 -  :ref:`Google Cloud Identity (IDP)<sso-google-cloud-identity>`
 -  :ref:`Okta<sso-okta>`
 -  :ref:`OneLogin<sso-one-login>`
 -  :ref:`PingOne<sso-ping-one>`
 -  :ref:`Generic SAML SSO<sso-generic>`
-
-.. note:: Microsoft Entra ID was formerly known as Azure Active Directory.
 
 .. _about-realms:
 
