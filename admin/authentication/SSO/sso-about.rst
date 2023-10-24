@@ -82,8 +82,8 @@ The following table uses Microsoft Entra ID (formerly Azure Active Directory) as
    * - :guilabel:`Integration ID` (EPAMIDfalsg)
      - :guilabel:`Reply URL (Assertion Consumer Service URL)` (https://your_realm/v1/saml/acsEPAMIDfalsg)
    
-   * - :guilabel:`Microsoft Entra Identifier` (https://your_domain/081aaa5f-fsec-m01c-03dfalke45n)
-     - :guilabel:`Microsoft Entra Identifier`  (https://your_domain/081aaa5f-fsec-m01c-03dfalke45n)
+   * - :guilabel:`Microsoft Entra ID Identifier` (https://your_domain/081aaa5f-fsec-m01c-03dfalke45n)
+     - :guilabel:`Microsoft Entra ID Identifier`  (https://your_domain/081aaa5f-fsec-m01c-03dfalke45n)
      
    * - For user attributes and claims, :code:`FullName` or :code:`User.FirstName` and :code:`User.LastName` are required, in addition to :code:`PersonImmutableID` and :code:`User.email`
      - :guilabel:`User.FirstName`  (user.givenname), :guilabel:`LastName` (user.surname), PersonImmutableID (user.userprincipal name), :guilabel:`FullName` (user.displayname), :guilabel:`email` (user.othermail)
