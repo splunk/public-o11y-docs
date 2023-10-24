@@ -11,6 +11,9 @@ You can use the OTel Collector with an upstream Operator in a Kubernetes environ
 
 For more information about the Kubernetes operator, see :ref:`auto-instrumentation-operator`.
 
+.. note::
+   For a specific example of how a customer automatically instruments a NodeJS application, see :new-page:`https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/enable-operator-and-auto-instrumentation/otel-demo-nodejs.md`.
+
 Requirements
 ================================================================
 
