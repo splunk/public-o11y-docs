@@ -38,10 +38,10 @@ Advanced install
 
 For advanced installation instructions, see :ref:`otel-install-k8s`. 
 
-This includes information about:
+This includes details about:
 
 * :ref:`helm-chart-components`
-* :ref:`Setting the destination for the Collector <collector-k8s-destination>` to Splunk Enterprise or Splunk Cloud (``splunkPlatform``) or Splunk Observability Cloud (``splunkObservability``)
+* :ref:`Setting the destination for the Collector <collector-k8s-destination>` to Splunk Enterprise or Splunk Cloud (``splunkPlatform``) or Splunk Observability Cloud (``splunkObservability``), including information about HEC endpoints
 * :ref:`resource-yaml-manifests`
 * :ref:`otel-kubernetes-config-distro`
 * :ref:`otel-kubernetes-config-environment`
