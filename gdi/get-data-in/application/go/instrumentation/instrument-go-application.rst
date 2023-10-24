@@ -183,6 +183,6 @@ In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, f
 
 The realm name appears in the :guilabel:`Organizations` section. 
 
-.. note:: For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
+For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
 
-.. note:: Currently, there is no support for sending metrics directly to Splunk Observability Cloud.
+.. note:: Currently, you can't bypass the Collector to send metrics directly to Splunk Observability Cloud.
