@@ -49,9 +49,6 @@ $(document).ready(function () {
                         tableGenerated = true;
                      }
                   }
-               } else {
-                  $(document).find('.metrics-config').append('<div class="admonition caution"> ... </div>');
-                  client.abort();
                }
             };
             client.send();
