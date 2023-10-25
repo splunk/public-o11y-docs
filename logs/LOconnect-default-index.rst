@@ -4,7 +4,7 @@
 Reset the default Log Observer Connect indexes
 *****************************************************************************
 
-When a Splunk Observability Cloud administrator sets up Log Observer Connect, they select one or more Splunk platform indexes as the default indexes that users can search in the Log Observer Connect UI. An administrator can reset the default index by following the steps on this page.
+When a Splunk Observability Cloud administrator sets up Log Observer Connect, they select one or more Splunk platform indexes as the default indexes that users can search in the Log Observer Connect UI. For more information, see :ref:`logs-scp` or :ref:`logs-set-up-logconnect`. An administrator can reset the default index or indexes by following the steps on this page.
 
 Prerequisites
 =============================================================================
@@ -21,6 +21,6 @@ To reset the default index or indexes that Log Observer Connect users can search
    
    A list of your Log Observer Connect connections appears. Each connection is associated with a Splunk platform index or set of indexes. These indexes are searchable in the Log Observer Connect UI.
 
-3. Select the three-dot menu next to the connection associated with the default Splunk platform indexes your Log Observer Connect users should be able to search, then select :guilabel:`Make default` from the drop-down list.
+3. Select the three-dot menu next to the connection associated with the default Splunk platform indexes you want as the default searchable indexes in the Log Observer Connect UI, then select :guilabel:`Make default` from the drop-down list.
    
    The indexes associated with the connection you select is the new default Splunk platform index or indexes that users can search in the Log Observer Connect UI.
