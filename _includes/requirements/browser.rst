@@ -1,10 +1,12 @@
-The Browser RUM agent supports the following browser versions:
+The Browser RUM agent instruments all front-end experiences written in JavaScript that run in modern browsers, regardless of the library or framework you use.
 
-- Chrome and Chrome Android 51 and higher
-- Edge 12 and higher
-- Firefox 36 and higher
-- Safari and Safari iOS 10.1 and higher
-- Internet Explorer 11, which requires the ``splunk-otel-web-legacy.js`` version of the Browser RUM agent
+The Browser RUM agent supports the following browsers:
+
+- Google Chrome
+- Microsoft Edge
+- Mozilla Firefox
+- Apple Safari
+- Microsoft Internet Explorer 11, which requires the ``splunk-otel-web-legacy.js`` version of the Browser RUM agent
 
 All your pages, assets, and requests must be securely loaded over the HTTPS protocol.
 
