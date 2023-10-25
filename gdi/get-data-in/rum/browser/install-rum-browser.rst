@@ -20,7 +20,7 @@ Check compatibility and requirements
 
 
 Decide which version to run in your environment
-=======================================================
+===============================================
 
 The versioning of the Browser RUM agent follows semantic versioning rules. To have more control over the version you load, see the following versioning policy:
 
@@ -49,7 +49,7 @@ Select one of the following methods to instrument your web application:
 * :ref:`rum-browser-install-npm`
 
 
- Use the guided setup
+Use the guided setup
 -----------------------------------------------------------
 
 To generate all the installation commands for your environment and application, use the Browser Instrumentation guided setup.

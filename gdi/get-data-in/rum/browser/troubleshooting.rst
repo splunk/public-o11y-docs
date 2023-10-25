@@ -109,7 +109,7 @@ Check how you're initializing RUM
 Make sure you're initializing Browser RUM correctly:
 
 * Make sure you're initializing the agent synchronously and as early as possible. See :ref:`loading-initializing_browser-rum`.
-* If your app is a single-page application (SPA), see :ref:`browser-rum-spas`.
+* If your app is a single-page application (SPA), see :ref:`browser-rum-install`.
 
 
 .. _browser-rum-break-site:
