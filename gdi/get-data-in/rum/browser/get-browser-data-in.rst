@@ -10,14 +10,14 @@ Instrument browser-based web applications for Splunk RUM
 .. toctree::
    :hidden:
 
-   Install the Browser RUM agent <install-rum-browser>
-   Configure the instrumentation <configure-rum-browser-instrumentation>
-   Manually instrument applications <manual-rum-browser-instrumentation>
+   Installation <install-rum-browser>
+   Configuration <configure-rum-browser-instrumentation>
+   Manual instrumentation <manual-rum-browser-instrumentation>
    Migrate manual instrumentation <migrate-manual-instrumentation>
-   Data collected by Browser RUM <rum-browser-data-model>
+   Data collected <rum-browser-data-model>
    Instrumentation-specific data <browser-rum-instrumentations>
-   Errors collected by Browser RUM <browser-rum-errors>
-   Browser RUM API reference <browser-rum-api-reference>
+   Errors collected <browser-rum-errors>
+   API reference <browser-rum-api-reference>
    Troubleshooting <troubleshooting>
 
 Instrument your browser-based web applications to get Real User Monitoring (RUM) data into Splunk Observability Cloud. With Splunk RUM, you can gain insight about the performance and health of your front-end apps, including single-page applications and mobile WebViews.
