@@ -1,4 +1,4 @@
-The Browser RUM agent instruments all front-end experiences written in JavaScript that run in modern browsers, regardless of the library or framework you use.
+The Browser RUM agent instruments all front-end experiences that run in modern browsers, regardless of the JavaScript library or framework you use.
 
 The Browser RUM agent supports the following browsers:
 
