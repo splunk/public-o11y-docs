@@ -54,15 +54,15 @@ Select one of the following methods to instrument your web application.
      - Considerations
 
    * - :ref:`rum-browser-install-cdn`
-     - :ref:`rum-browser-install-self-hosted`
-     - :ref:`rum-browser-install-npm`
-
-   * - Multi-page websites
      - Multi-page websites
-     - Single-page applications
+     - Easier integration. Ad-blockers might interfere with loading.
 
-   * - Easier integration. Ad-blockers might interfere with loading.
+   * - :ref:`rum-browser-install-self-hosted`
+     - Multi-page websites
      - Provides more control. Updates are entirely manual.
+
+   * - :ref:`rum-browser-install-npm`
+     - Single-page applications
      - Bundles into your app. Must be loaded in the right place.
 
 
