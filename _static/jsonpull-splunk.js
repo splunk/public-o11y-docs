@@ -2,11 +2,15 @@ $(document).ready(function () {
 
 
    $('.metrics-config').each(function () {
+      if ($(this).data('processed')) {
+         return;
+      }
+
       let url = $(this).attr('url');
+
 
       const mainColumn = $(this).data('main-column');
       const secondaryColumn = $(this).data('secondary-column');
-
       const otherColumns = [];
       let columnIndex = 3;
       while ($(this).data(`column-${columnIndex}`)) {
@@ -24,28 +28,39 @@ $(document).ready(function () {
          columnIndex++;
       }
 
-      try {
-         let client = new XMLHttpRequest();
-         client.open('GET', url);
+      const uniqueId = generateUniqueId(url, mainColumn, secondaryColumn, otherColumns, headers);
 
-         client.onreadystatechange = function () {
-            const status = client.status;
-            if (status >= 200 && status < 400) {
-               const yamlData = jsyaml.load(client.responseText, 'utf8');
-               for (const key in yamlData) {
-                  if (yamlData.hasOwnProperty(key)) {
-                     $(document).find('.metrics-config').append(generateTableFromData(yamlData[key], mainColumn, secondaryColumn, otherColumns, headers));
+      if ($("#" + uniqueId).length === 0) {
+
+         try {
+            let client = new XMLHttpRequest();
+            client.open('GET', url);
+
+            let tableGenerated = false;
+
+            client.onreadystatechange = function () {
+               const status = client.status;
+               if (status >= 200 && status < 400 && !tableGenerated) {
+                  const yamlData = jsyaml.load(client.responseText, 'utf8');
+                  for (const key in yamlData) {
+                     if (yamlData.hasOwnProperty(key)) {
+                        const table = generateTableFromData(yamlData[key], mainColumn, secondaryColumn, otherColumns, headers);
+                        $(document).find('.metrics-config').append(`<div id="${uniqueId}">${table}</div>`);
+                        tableGenerated = true;
+                     }
                   }
+               } else {
+                  $(document).find('.metrics-config').append('<div class="admonition caution"> ... </div>');
+                  client.abort();
                }
-            } else {
-               $(document).find('.metrics-config').append('<div class="admonition caution"> ... </div>');
-               client.abort();
-            }
-         };
-         client.send();
-      } catch (e) {
-         console.log(e);
+            };
+            client.send();
+         } catch (e) {
+            console.log(e);
+         }
       }
+
+      $(this).data('processed', true);
    });
 
    $('.metrics-table').each(function () {
@@ -124,6 +139,18 @@ $(document).ready(function () {
 
 
    monitorsFromRaw();
+
+   function generateUniqueId(url, mainColumn, secondaryColumn, otherColumns, headers) {
+      const stringToHash = `${url}-${mainColumn}-${secondaryColumn}-${otherColumns.join('-')}-${headers.join('-')}`;
+      let hash = 0;
+      for (let i = 0; i < stringToHash.length; i++) {
+         const character = stringToHash.charCodeAt(i);
+         hash = (hash << 5) - hash + character;
+         hash = hash & hash; // Convert to 32bit integer
+      }
+      return `table-${hash}`;
+   }
+
 
    function coalesce() {
       return [].find.call(arguments, x => x !== null && x !== undefined);
