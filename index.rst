@@ -11,7 +11,7 @@ Welcome
 
 .. raw:: html
 
-<div class="metrics-config" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/ootb/navigators_builtin_content.yaml" data-main-column="category_display_name" data-secondary-column="key" data-column-3="importQualifiers" data-header-1="Category" data-header-2="Navigator" data-header-3="ImportQualifiers (Required data onboarding conditions)"></div>
+    <div class="metrics-config" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/ootb/navigators_builtin_content.yaml" data-main-column="category_display_name" data-secondary-column="key" data-column-3="importQualifiers" data-header-1="Category" data-header-2="Navigator" data-header-3="ImportQualifiers (Required data onboarding conditions)"></div>
 
 
 .. role:: icon-info
