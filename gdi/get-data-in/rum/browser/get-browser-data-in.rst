@@ -11,7 +11,6 @@ Instrument browser-based web applications for Splunk RUM
    :hidden:
 
    Install the Browser RUM agent <install-rum-browser>
-   Instrument single-page apps <instrument-single-page-applications>
    Configure the instrumentation <configure-rum-browser-instrumentation>
    Manually instrument applications <manual-rum-browser-instrumentation>
    Migrate manual instrumentation <migrate-manual-instrumentation>

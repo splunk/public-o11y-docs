@@ -48,7 +48,11 @@ Select one of the following methods to instrument your web application:
 * :ref:`rum-browser-install-self-hosted`
 * :ref:`rum-browser-install-npm`
 
-.. Note:: To generate all the installation commands for your environment and application, use the Browser Instrumentation guided setup.
+
+ Use the guided setup
+-----------------------------------------------------------
+
+To generate all the installation commands for your environment and application, use the Browser Instrumentation guided setup.
 
 To access the Browser Instrumentation guided setup, follow these steps:
 
