@@ -614,15 +614,19 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Key concepts <infrastructure/terms-concepts>
 
 .. toctree::
-   :maxdepth:   2
+   :maxdepth:   3
 
    Quick start tutorial <infrastructure/quickstart-imm>
 
 .. toctree::
    :maxdepth:   3
 
-   infrastructure/infrastructure
+   Tutorial: monitor your Kubernetes environment in Splunk Observability Cloud <infrastructure/k8s-infrastructure-tutorial/about-k8s-tutorial>
 
+.. toctree::
+   :maxdepth:   3
+
+   infrastructure/infrastructure
 
 .. toctree::
    :maxdepth:   3
