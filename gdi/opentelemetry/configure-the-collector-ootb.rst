@@ -90,6 +90,8 @@ Learn more about these exporters:
 Default pipelines for metrics 
 ----------------------------------------------------------------------------
 
+The following diagram shows the default metrics pipeline:
+
 .. mermaid:: 
 
    flowchart LR
@@ -131,10 +133,7 @@ Default pipelines for metrics
       metrics/internal/prometheus/internal --> metrics/internal/memory_limiter
       metrics/internal/resourcedetection --> metrics/internal/signalfx/out
 
-The following diagram shows the default metrics pipeline:
 
-.. image:: /_images/collector/pipeline-metrics.png
-  :alt: Default metrics pipeline.  
 
 Learn more about these receivers:
 
@@ -157,8 +156,44 @@ Default pipelines for traces
 
 The following diagram shows the default traces pipeline:
 
-.. image:: /_images/collector/pipeline-traces.png
-  :alt: Default traces pipeline.  
+.. mermaid:: 
+
+   flowchart LR
+      %% LR indicates the direction (left-to-right)
+
+      %% You can define classes to style nodes and other elements
+      classDef receiver fill:#00FF00
+      classDef processor fill:#FF9900
+      classDef exporter fill:#FF33FF
+
+      %% Each subgraph determines what's in each category
+      subgraph Receivers
+         direction LR
+         traces/jaeger:::receiver
+         traces/otlp:::receiver
+         traces/smartagent/signalfx-forwarder:::receiver
+         traces/zipkin:::receiver
+      end
+
+      subgraph Processor
+         direction LR
+         traces/memory_limiter:::processor --> traces/batch:::processor --> traces/resourcedetection:::processor
+      end
+
+      subgraph Exporters
+         direction LR
+         traces/sapm:::exporter
+         traces/signalfx/out:::exporter
+      end
+
+      %% Connections beyond categories are added later
+      traces/jaeger --> traces/memory_limiter
+      traces/otlp --> traces/memory_limiter
+      traces/smartagent/signalfx-forwarder --> traces/memory_limiter
+      traces/zipkin --> traces/memory_limiter
+      traces/resourcedetection --> traces/sapm
+      traces/resourcedetection --> traces/signalfx/out
+
 
 Learn more about these receivers:
 
