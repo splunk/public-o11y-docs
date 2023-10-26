@@ -38,7 +38,7 @@ Follow these steps to configure and activate the component:
 2. Configure the receiver as described in the next section.
 3. Restart the Collector.
 
-.. note:: Metrics produced by this receiver count towards metric ingestion limit. See :ref:`sys-limits`.
+.. note:: Data ingested into Splunk Observability Cloud is subject to system limits. See :ref:`per-product-limits` for more information. 
 
 Collect container host metrics (Linux)
 ---------------------------------------
