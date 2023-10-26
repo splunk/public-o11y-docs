@@ -1,7 +1,7 @@
 .. _otel-components:
 
 ******************************************
-Components
+Collector components
 ******************************************
 
 .. meta::
@@ -16,15 +16,19 @@ Components
     components/basic-auth-extension
     components/batch-processor
     components/databricks-receiver
+    components/filelog-receiver   
     components/filter-processor
     components/fluentd-receiver
+    components/groupbyattrs-processor    
     components/health-check-extension
     components/host-metrics-receiver
+    components/jaeger-receiver    
     components/kubelet-stats-receiver
     components/kubernetes-attributes-processor
     components/kubernetes-cluster-receiver
     components/logging-exporter
-    components/memory-ballast-extension   
+    components/memory-ballast-extension
+    components/memory-limiter-processor          
     components/mongodb-atlas-receiver
     components/oracledb-receiver
     components/otlp-exporter
@@ -41,8 +45,10 @@ Components
     components/splunk-apm-exporter
     components/splunk-hec-exporter
     components/splunk-hec-receiver
+    components/syslog-receiver      
     components/transform-processor
     components/windowsperfcounters-receiver
+    components/zipkin-receiver 
     components/zpages-extension    
 
 The OpenTelemetry Collector includes the following component types:
@@ -54,7 +60,7 @@ The OpenTelemetry Collector includes the following component types:
 
 You can activate components by configuring :ref:`pipelines <otel-data-processing>` in the Collector configuration. See :ref:`otel-configuration` to learn how to define multiple instances of components as well as their pipelines.
 
-The Splunk Distribution of OpenTelemetry Collector includes and supports the following components.
+The Splunk Distribution of OpenTelemetry Collector includes and supports the components listed on this doc.
 
 .. note:: The following lists might not contain all the latest additions. For a complete list of Collector components, including components that aren't included in the Splunk Distribution of OpenTelemetry Collector, see the ``opentelemetry-contrib`` repository in GitHub.
 
@@ -92,7 +98,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``discovery``
      - Wraps the receiver creator to facilitate the discovery of metric collection targets. See :ref:`discovery_mode`.
      - Logs
-   * - ``filelog``
+   * - :ref:`filelog-receiver` (``filelog``)
      - Tails and parses logs from files.
      - Logs
    * - :ref:`fluentd-receiver` (``fluentforward``)
@@ -101,7 +107,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`host-metrics-receiver` (``hostmetrics``)
      - Generates system metrics from various sources. Use this receiver when deploying the Collector as an agent. 
      - Metrics
-   * - ``jaeger``
+   * - :ref:`jaeger-receiver` (``jaeger``)
      - Receives trace data in Jaeger format.
      - Traces
    * - ``journald``
@@ -167,7 +173,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``statsd``
      - Collects StatsD messages to generate metrics.
      - Metrics
-   * - ``syslog``
+   * - :ref:`syslog-receiver` (``syslog``)
      - Parses syslog messages received over TCP or UDP.
      - Logs
    * - ``tcplog``
@@ -179,7 +185,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`windowsperfcounters-receiver` (``windowsperfcounters``) (Windows only)
      - Collects the configured system, application, or custom performance counter data from the Windows Registry.
      - Metrics
-   * - ``zipkin``
+   * - :ref:`zipkin-receiver` (``zipkin``)
      - Receives spans from Zipkin versions 1 and 2.
      - Traces
 
@@ -209,13 +215,13 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`filter-processor` (``filter``)
      - Can be configured to include or exclude metrics based on metric name in the case of the ``strict`` or ``regexp`` match types, or based on other metric attributes in the case of the ``expr`` match type.
      - Metrics
-   * - ``groupbyattrs``
+   * - :ref:`groupbyattrs-processor` (``groupbyattrs``)
      - Reassociates spans, log records, and metric data points to a resource that matches with the specified attributes. As a result, all spans, log records, or metric data points with the same values for the specified attributes are grouped under the same resource.
      - Metrics, logs, traces
    * - :ref:`kubernetes-attributes-processor` (``k8sattributes``)
      - Allows automatic tagging of spans, metrics, and logs with Kubernetes metadata. Formerly known as ``k8s_tagger``.
      - Metrics, logs, traces
-   * - ``memory_limiter``
+   * - :ref:`memory-limiter-processor` (``memory_limiter``) 
      - Prevents out of memory situations on the Splunk Distribution of OpenTelemetry Collector.
      - Metrics, logs, traces
    * - ``metricstransform``

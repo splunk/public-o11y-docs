@@ -5,7 +5,7 @@ Use an API Test to test an endpoint
 ************************************
 
 .. meta::
-    :description: Learn about API Tests in Splunk Synthetic Monitoring.
+    :description:  Use API tests in Splunk Synthetic Monitoring to monitor the API requests that provide core functionality for your applications, and track performance of your endpoints.
 
 .. toctree::
 

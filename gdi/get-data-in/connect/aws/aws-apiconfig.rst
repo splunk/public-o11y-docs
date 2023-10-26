@@ -49,19 +49,21 @@ Your system response looks something like this:
   "authMethod" : "ExternalId",
   "enabled" : false,
   "externalId" : "<externalId>",
-  "id" : "<id>",
+  "id" : "<integrationId>",
   "importCloudWatch" : false,
   "name" : "AWS",
   "pollRate" : 300000,
   "regions" : [ "us-east-1", "us-east-2", "us-west-1", "us-west-2" ],
   "roleArn" : null,
   "services" : [ ],
+  "sfxAwsAccountArn" : "arn:aws:iam::<accountId>:root"
   "type" : "AWSCloudWatch"
   }
 
-In the system response, note the following:
+In the system response, note the following fields:
 
-- Values are displayed for the ``externalId`` and ``id`` fields.
+- The ``id`` field is the id of the integration you just created. 
+- ``externalId`` and ``accountId`` will be used when you create an IAM (Identity and Access Management) role in the AWS console later on.
 - The ``importCloudWatch`` value is set to ``false`` because CloudWatch Metrics collection has not been configured.
 
 .. _aws-api-create-policy-role:
@@ -69,7 +71,7 @@ In the system response, note the following:
 Create an AWS policy and IAM role
 ---------------------------------------------------------------------
 
-To create an AWS policy and an AWS IAM (Identity and Access Management) role with a unique Amazon Resource Name (ARN), go to the AWS console and follow the instructions in :ref:`aws-authentication`. Use the ``externalId`` value generated in the previous step.
+To create an AWS policy and an AWS IAM role with a unique Amazon Resource Name (ARN), go to the AWS console and follow the instructions in :ref:`aws-authentication`. Use the ``externalId`` and ``accountId`` values generated in the previous step.
 
 .. _review-aws-iam-policy:
 
@@ -409,7 +411,7 @@ The following example shows how to collect metrics from selected regions and all
 
 .. code-block:: none
 
-  curl -X PUT 'https://app.<realm>.signalfx.com/v2/integration/<IntegrationID>' \
+  curl -X PUT 'https://app.<realm>.signalfx.com/v2/integration/<integrationId>' \
     -H 'accept: application/json, text/plain, */*' \
     -H 'x-sf-token: <USER_API_ACCESS_TOKEN>' \
     -H 'content-type: application/json' \
@@ -422,8 +424,8 @@ The following example shows how to collect metrics from selected regions and all
       "enableAwsUsage" : false,
       "enableCheckLargeVolume" : false,
       "enabled" : true,
-      "externalId" : "bqvguakfajpzxgqobzvd",
-      "id" : "F2aURjcAAAI",
+      "externalId" : "<externalId>",
+      "id" : "<integrationId>",
       "importCloudWatch" : true,
       "largeVolume" : false,
       "lastUpdated" : 1690856052734,
@@ -434,7 +436,7 @@ The following example shows how to collect metrics from selected regions and all
       "regions" : [ "us-east-1", "us-east-2", "us-west-1", "us-west-2" ],
       "roleArn" : "<your-aws-iam-role-arn>",
       "services" : [ ],
-      "sfxAwsAccountArn" : "arn:aws:iam::134183635603:root",
+      "sfxAwsAccountArn" : "arn:aws:iam::<accountId>:root",
       "syncCustomNamespacesOnly" : false,
       "syncLoadBalancerTargetGroupTags" : false,
       "type" : "AWSCloudWatch"}'
@@ -461,11 +463,11 @@ Activate CloudWatch Metric Streams (optional)
 
 To activate CloudWatch Metric Streams as an alternative to traditional API polling, follow these steps:
 
-#. Submit a GET request to ``https://api.<realm>.signalfx.com/v2/integration/<integration-id>`` to retrieve your current settings. Make sure to substitute your own realm and integration ID in the URL.
+#. Submit a GET request to ``https://api.<realm>.signalfx.com/v2/integration/<integrationId>`` to retrieve your current settings. Make sure to substitute your own realm and integration ID in the URL.
 #. Set the ``metricStreamsSyncState`` field to ``ENABLED``.
 #. Set the ``importCloudWatch`` field to ``true``.
 #. Set the ``enabled`` field to ``true``.
-#. Submit a PUT request to the ``https://api.<realm>.signalfx.com/v2/integration/<integration-id>`` endpoint to save your updated settings.
+#. Submit a PUT request to the ``https://api.<realm>.signalfx.com/v2/integration/<integrationId>`` endpoint to save your updated settings.
 
 .. caution:: CloudWatch Metric Streams supports filtering by namespace and metric name but doesn't support filtering based on resource tags.   
 
@@ -488,7 +490,7 @@ Deactivate Metric Streams
 
 To deactivate Metric Streams, follow these steps:
 
-#. Submit a GET request to ``https://api.<realm>.signalfx.com/v2/integration/<integration-id>`` to retrieve your current settings. Make sure to substitute your own realm and integration ID in the URL.
+#. Submit a GET request to ``https://api.<realm>.signalfx.com/v2/integration/<integrationId>`` to retrieve your current settings. Make sure to substitute your own realm and integration ID in the URL.
 #. Set the ``metricStreamsSyncState`` field to ``CANCELLING``.
 #. Wait for Splunk Observability Cloud to clean up. This can take up to 15 minutes. 
 

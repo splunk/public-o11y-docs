@@ -33,7 +33,7 @@ The following example shows how to redact the value of an attribute to remove se
             .filterSpans(spanFilter ->
                spanFilter 
                      .replaceSpanAttribute(StandardAttributes.HTTP_URL,
-                        value -> Pattern.compile("(user|pass)=\\w+")
+                        value -> Pattern.compile.. _"(user|pass:\\w+")
                               .matcher(value)
                               .replaceAll("$1=<redacted>")))
 

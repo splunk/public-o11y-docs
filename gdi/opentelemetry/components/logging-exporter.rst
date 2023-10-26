@@ -6,14 +6,17 @@ Logging exporter
 .. meta::
       :description: Use the logging exporter to write traces, metrics, and logs to the console. Read on to learn how to configure the component.
 
+
+.. note:: The Logging exporter will be deprecated in September 2024 in favor of the Debug exporter. For more information, see the GitHub repo and docs at :new-page:`Debug exporter <https://github.com/open-telemetry/opentelemetry-collector/blob/main/exporter/debugexporter/README.md>`.
+
 The logging exporter allows the OpenTelemetry Collector to send traces, metrics, and logs directly to the console. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
 Use the logging exporter to diagnose and troubleshoot issues with telemetry received and processed by the OpenTelemetry Collector, or to obtain samples for other purposes.
 
-.. note:: The logging exporter sends pipeline activity to the console as logs. To control the verbosity of the OpenTelemetry Collector itself, use the ``service.logger`` setting.
-
 Get started
 ======================
+
+.. note:: The Logging exporter sends pipeline activity to the console as logs. To control the verbosity of the OpenTelemetry Collector itself, use the ``service.logger`` setting.
 
 By default, the Splunk Distribution of OpenTelemetry Collector includes the logging exporter with verbosity set to ``detailed`` when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information.
 
@@ -31,6 +34,7 @@ By default, the Splunk Distribution of OpenTelemetry Collector includes the logg
 To activate the logging exporter, add it to any pipeline you want to diagnose. For example:
 
 .. code-block:: yaml
+
    :emphasize-lines: 9, 13, 20
 
    service:

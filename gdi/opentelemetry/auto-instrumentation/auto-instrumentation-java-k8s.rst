@@ -44,6 +44,7 @@ For example, given the following deployment YAML:
 
 .. code-block:: yaml
 
+
     apiVersion: apps/v1
     kind: Deployment
     metadata:
@@ -58,6 +59,7 @@ For example, given the following deployment YAML:
 Activate auto instrumentation by adding ``otel.splunk.com/inject-java: "true"`` to the ``spec``:
 
 .. code-block:: yaml
+
 
     apiVersion: apps/v1
     kind: Deployment
@@ -174,4 +176,4 @@ Run this command to see the logs for one of the pods:
 
 - You can also follow the :ref:`steps to troubleshoot the Java agent<basic-java-troubleshooting>`.
 
-.. include:: /_includes/troubleshooting-steps.rst
+.. include:: /_includes/troubleshooting-components.rst

@@ -5,7 +5,7 @@ Configure your tests
 ***************************************************
 
 .. meta::
-    :description: Learn about preset variables in Splunk Synthetic Monitoring.
+    :description: Customize tests run in Splunk Synthetic Monitoring by setting up different devices, variables, locations, test status, and other configurations to best simulate diverse types of traffic to your site or application. 
 
 .. toctree::
 
@@ -38,7 +38,7 @@ Because Browser tests capture the visual experience of a page, while Uptime and 
   </embed>
 
 
-Browser tests in Splunk Synthetic Monitoring capture the visual experience of a user interacting with your application. The viewport is the framed area on a device’s screen for viewing information, such as the browser window on a desktop. By default, Browser tests run from a desktop-sized viewport. You can configure tests to run from other viewport sizes to test the user experience from a variety of window sizes and device types. 
+Browser tests in Splunk Synthetic Monitoring capture the visual experience of a user interacting with your application. The viewport is the framed area on a device's screen for viewing information, such as the browser window on a desktop. By default, Browser tests run from a desktop-sized viewport. You can configure tests to run from other viewport sizes to test the user experience from a variety of window sizes and device types. 
 
 When you set up a test, you can choose the viewport size from a list of common devices, or set a custom viewport by height and width. 
 

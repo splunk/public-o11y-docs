@@ -57,11 +57,8 @@ The Operator requires certain TLS cerificates to work. If a certification manage
    # Check if cert-manager is already installed, don't deploy a second cert-manager.
    kubectl get pods -l app=cert-manager --all-namespaces
 
-   # If cert-manager is not deployed.
-   helm install splunk-otel-collector -f ./my_values.yaml --set certmanager.enabled=true,operator.enabled=true,environment=dev -n monitoring helm-charts/splunk-otel-collector
-
-   # If cert-manager is already deployed.
-   helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=dev -n monitoring helm-charts/splunk-otel-collector
+   # If cert-manager is not deployed, make sure to add certmanager.enabled=true to the list of values to set
+   helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=dev splunk-otel-collector-chart/splunk-otel-collector
 
 2. Verify all the OpenTelemetry resources are deployed successfully
 ---------------------------------------------------------------------------
@@ -71,25 +68,24 @@ Resources include the Collector, the Operator, webhook, an instrumentation.
 Run the following to verify the resources are deployed correctly:
 
 .. code-block:: yaml
-   
-   kubectl  get pods -n monitoring
-   # NAME                                                          READY
-   # NAMESPACE     NAME                                                            READY   STATUS
-   # monitoring    splunk-otel-collector-agent-lfthw                               2/2     Running
-   # monitoring    splunk-otel-collector-cert-manager-6b9fb8b95f-2lmv4             1/1     Running
-   # monitoring    splunk-otel-collector-cert-manager-cainjector-6d65b6d4c-khcrc   1/1     Running
-   # monitoring    splunk-otel-collector-cert-manager-webhook-87b7ffffc-xp4sr      1/1     Running
-   # monitoring    splunk-otel-collector-k8s-cluster-receiver-856f5fbcf9-pqkwg     1/1     Running
-   # monitoring    splunk-otel-collector-opentelemetry-operator-56c4ddb4db-zcjgh   2/2     Running
 
-   kubectl get mutatingwebhookconfiguration.admissionregistration.k8s.io -n monitoring
+   kubectl get pods
+   # NAME                                                            READY   STATUS
+   # splunk-otel-collector-agent-lfthw                               2/2     Running
+   # splunk-otel-collector-cert-manager-6b9fb8b95f-2lmv4             1/1     Running
+   # splunk-otel-collector-cert-manager-cainjector-6d65b6d4c-khcrc   1/1     Running
+   # splunk-otel-collector-cert-manager-webhook-87b7ffffc-xp4sr      1/1     Running
+   # splunk-otel-collector-k8s-cluster-receiver-856f5fbcf9-pqkwg     1/1     Running
+   # splunk-otel-collector-opentelemetry-operator-56c4ddb4db-zcjgh   2/2     Running
+
+   kubectl get mutatingwebhookconfiguration.admissionregistration.k8s.io
    # NAME                                      WEBHOOKS   AGE
    # splunk-otel-collector-cert-manager-webhook              1          14m
    # splunk-otel-collector-opentelemetry-operator-mutation   3          14m
 
-   kubectl get otelinst -n {target_application_namespace}
-   # NAME                          AGE   ENDPOINT
-   # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
+   kubectl get otelinst
+   # NAME                    AGE   ENDPOINT
+   # splunk-otel-collector   3s    http://$(SPLUNK_OTEL_AGENT):4317
 
 3. Set annotations to instrument applications
 ------------------------------------------------------------

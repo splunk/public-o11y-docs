@@ -123,4 +123,4 @@ If you send traces directly to Splunk Observability Cloud and receive a 401 erro
 
 Make sure that you're using a valid Splunk access token when sending data directly to your Splunk platform instance. See :ref:`admin-api-access-tokens`.
 
-.. include:: /_includes/troubleshooting-steps.rst
+.. include:: /_includes/troubleshooting-components.rst

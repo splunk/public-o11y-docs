@@ -5,7 +5,7 @@ Instrument your Java application for Splunk Observability Cloud
 ***************************************************************************
 
 .. meta::
-   :description: Start sending metrics and log telemetry to Splunk Observability Cloud using the Splunk OpenTelemetry Java agent to automatically instrument your Java application or service. Follow these steps to get started. 
+   :description: Start sending metrics and log telemetry to Splunk Observability Cloud using the Splunk OpenTelemetry Java agent to automatically instrument your Java application or service. Follow these steps to get started.
 
 The Java agent from the Splunk Distribution of OpenTelemetry Java can automatically instrument your Java application by injecting instrumentation to Java classes. To get started, use the guided setup or follow the instructions manually.
 
@@ -17,7 +17,7 @@ To generate all the basic installation commands for your environment and applica
 #. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`Java guided setup <https://login.signalfx.com/#/gdi/scripted/java-tracing/step-1?gdiState=%7B"integrationId":"java-tracing"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the navigation menu, select :menuselection:`Data Management`. 
+   #. In the navigation menu, select :menuselection:`Data Management`.
 
    #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 
@@ -33,7 +33,7 @@ Install the Splunk Distribution of OpenTelemetry Java manually
 Follow these instructions to install the Splunk Distribution of OpenTelemetry Java:
 
 - :ref:`install-enable-jvm-agent`
-   - :ref:`enable_profiling_java` 
+   - :ref:`enable_profiling_java`
    - :ref:`enable_automatic_metric_collection`
    - :ref:`ignore_endpoints_java`
 - :ref:`configure-java-instrumentation`
@@ -169,7 +169,7 @@ In the following example, the sampler drops all ``SERVER`` spans whose endpoints
    .. code-tab:: shell Windows PowerShell
 
       $env:OTEL_TRACES_SAMPLER=rules
-      $env:OTEL_TRACES_SAMPLER_ARG=drop=/healthcheck;fallback=parentbased_always_on  
+      $env:OTEL_TRACES_SAMPLER_ARG=drop=/healthcheck;fallback=parentbased_always_on
 
 See :ref:`trace-sampling-settings-java` for more information.
 
@@ -185,9 +185,39 @@ For advanced configuration of the JVM agent, like changing trace propagation for
 .. _kubernetes_java_agent:
 
 Deploy the Java agent in Kubernetes
+==================================================================
+
+To deploy the Java agent in Kubernetes, follow these steps:
+
+1. :ref:`docker_java_agent`
+2. :ref:`configure_kubernetes_java`
+
+.. _docker_java_agent:
+
+Deploy the Java agent in Docker
 -----------------------------------------------------------
 
-To deploy the Java agent in Kubernetes, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
+To deploy the Java agent in Docker, do the following:
+
+1. Edit the Dockerfile for your application image to add the following commands:
+
+.. code-block:: docker
+
+   # Adds the latest version of the Splunk Java agent
+   ADD https://github.com/signalfx/splunk-otel-java/releases/latest/download/splunk-otel-javaagent.jar .
+   # Modifies the entry point
+   ENTRYPOINT ["java","-javaagent:splunk-otel-javaagent.jar","-jar","./<myapp>.jar"]
+
+2. Use ``ENV`` commands to set environment variables for the Java agent. To activate metrics or profiling, add the required ``-Dotel`` argument to the ``ENTRYPOINT`` list.
+
+When you deploy the Java agent with your application build, you ensure that the Java agent is launched with tracing.
+
+.. _configure_kubernetes_java:
+
+Configure Kubernetes to run the agent
+-----------------------------------------------------------
+
+To configure your application in Kubernetes to use the Java agent, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
 
 The following example shows how to update a deployment to expose environment variables by adding the agent configuration under the ``.spec.template.spec.containers.env`` section:
 
@@ -215,28 +245,23 @@ The following example shows how to update a deployment to expose environment var
                - name: OTEL_RESOURCE_ATTRIBUTES
                  value: "deployment.environment=<environmentName>"
 
-.. _docker_java_agent:
+.. note:: You can also deploy instrumentation using the Kubernetes Operator. See :ref:`auto-instrumentation-operator`.
 
-Deploy the Java agent in Docker
------------------------------------------------------------
+.. _java-agent-cloudfoundry:
 
-To deploy the Java agent in Docker, edit the Dockerfile for your application image to add the following commands:
+Deploy the Java agent in Cloudfoundry
+=======================================================
 
-.. code-block:: docker
+To instrument a Java application in Cloudfoundry, use the Splunk OpenTelemetry Java Agent buildpack framework. The framework automatically instruments your application to send traces to Splunk Observability Cloud.
 
-   # Adds the latest version of the Splunk Java agent
-   ADD https://github.com/signalfx/splunk-otel-java/releases/latest/download/splunk-otel-javaagent.jar .
-   # Modifies the entry point
-   ENTRYPOINT ["java","-javaagent:splunk-otel-javaagent.jar","-jar","./<myapp>.jar"]
-
-Use ``ENV`` commands to set environment variables for the Java agent. To activate metrics or profiling, add the required ``-Dotel`` argument to the ``ENTRYPOINT`` list.
+See :new-page:`https://github.com/cloudfoundry/java-buildpack/blob/main/docs/framework-splunk_otel_java_agent.md <https://github.com/cloudfoundry/java-buildpack/blob/main/docs/framework-splunk_otel_java_agent.md>` for instructions.
 
 .. _export-directly-to-olly-cloud-java:
 
 Send data directly to Splunk Observability Cloud
------------------------------------------------------------
+=======================================================
 
-By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
+By default, the agent sends all telemetry to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
 If you need to send data directly to Splunk Observability Cloud, set the following environment variables:
 
@@ -254,11 +279,11 @@ If you need to send data directly to Splunk Observability Cloud, set the followi
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
 
 #. Open the navigation menu in Splunk Observability Cloud.
 #. Select :menuselection:`Settings`.
-#. Select your username. 
+#. Select your username.
 
 The realm name appears in the :guilabel:`Organizations` section.
 
@@ -269,9 +294,9 @@ For more information on the ingest API endpoints, see :new-page:`Send APM traces
 .. _instrument_aws_lambda_functions:
 
 Instrument Lambda functions
------------------------------------------------------------
+==========================================================
 
-You can instrument AWS Lambda functions using the Splunk OpenTelemetry Lambda Layer. See :ref:`instrument-aws-lambda-functions` for more information. 
+You can instrument AWS Lambda functions using the Splunk OpenTelemetry Lambda Layer. See :ref:`instrument-aws-lambda-functions` for more information.
 
 .. _upgrade-java-instrumentation:
 
@@ -289,7 +314,7 @@ Best practices for upgrades
 
 To reduce the risk of issues with an upgrade, do the following:
 
-- Read the release notes and changelog for each release to determine if the release has changes that might affect your environment. Pay attention to mentions of libraries, frameworks, and tools that your software uses.
+- See the release notes and changelog for each release to determine if the release has changes that might affect your environment. Pay attention to mentions of libraries, frameworks, and tools that your software uses.
 - Never put untested code into production. Verify that the new build works in a staging or pre-production environment before promoting it to production. Don't use snapshot builds in production.
 - Use canary instances. Let the canaries operate with the code before releasing the code to production. Run the canaries for at least a few hours, and preferably for a few days.
 - Minimize the number of dependencies, including instrumentation, that change in a given release. Determining the root cause of a problem after upgrading multiple dependencies at the same time can be difficult.

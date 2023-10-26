@@ -41,9 +41,9 @@ Switch back to Okta:
    #. Assign the :guilabel:`SignalFx` application to users in your Okta organization, then select :guilabel:`Next`.
    #. Select :guilabel:`Sign on`, then select :guilabel:`View Setup instructions`.
    #. Copy the following strings from the instructions, and paste them into a text editor:
-      * :guilabel:`Public Key`
-      * :guilabel:`Issuer URL`
-      * :guilabel:`Metadata URL`
+       - :guilabel:`Public Key`
+       - :guilabel:`Issuer URL`
+       - :guilabel:`Metadata URL`
    
 .. note:: URLs must belong to Okta in order to validate. Accepted domains are ``okta.com``, ``oktapreview.com``, and ``okta-emea.com``.
 
@@ -63,4 +63,4 @@ Once you have a custom URL configured, your users can continue to log in using t
 
 Observability Cloud generates a password for users you create in Okta SSO. If the Okta login portal is unavailable, Observability Cloud users can use the reset password link on the Observability Cloud login page to get native Observability Cloud credentials.
 
-.. include:: /_includes/troubleshooting-steps.rst
+.. include:: /_includes/troubleshooting-components.rst
