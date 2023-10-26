@@ -72,8 +72,8 @@ To define multiple config files simultaneously use:
 
 The Collector can capture logs using Fluentd, but this option is deactivated by default.
 
-* In Kubernetes, native OTel log collection is supported by default. See more at :ref:`kubernetes-config-logs`.
-* In Linux and Windows environments, use the Universal Forwarder to send logs to the Splunk platform. See more at :ref:`collector-with-the-uf`.
+* For Kubernetes, native OpenTelemetry log collection is supported by default. See more at :ref:`kubernetes-config-logs`.
+* For Linux and Windows environments (physical hosts and virtual machines), use the Universal Forwarder to send logs to the Splunk platform. See more at :ref:`collector-with-the-uf`.
 
 .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance. 
 

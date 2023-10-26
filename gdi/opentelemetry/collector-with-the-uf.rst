@@ -79,3 +79,4 @@ To collect data with the Collector and the UF:
    #. To capture the name of the service, set the ``OTEL_SERVICE_NAME`` environment variable in the configuration file. On Linux, run ``export OTEL_SERVICE_NAME=<yourServiceName>``. On Windows Powershell, run ``$env:OTEL_SERVICE_NAME=<yourServiceName>``. See :new-page:`https://github.com/open-telemetry/opentelemetry-specification/blob/main/spec-compliance-matrix.md#environment-variables  <https://github.com/open-telemetry/opentelemetry-specification/blob/main/spec-compliance-matrix.md#environment-variables>` on GitHub to view additional OpenTelemetry specification environment variables.
 
 #. Restart both agents.
+
