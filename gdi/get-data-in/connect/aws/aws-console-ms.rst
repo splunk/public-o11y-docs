@@ -46,7 +46,7 @@ Next, follow the steps provided in the guided setup:
   - :ref:`aws-wizard-prepare-ms`.
   - :ref:`aws-wizard-establish-ms`.
 
-.. _aws-wizard-define-ms:
+.. _aws-console-ms-define:
 
 Define your AWS connection
 -------------------------------------------
@@ -74,7 +74,7 @@ On this screen, Splunk Observability Cloud gives you:
 * The AWS IAM policy JSON snippet, your Splunk Observability Cloud account ID and your External ID, which you'll need to define your authenticaton policies in the console. See more details in :ref:`aws-authentication`.
 * The steps to create Metric Streams in the AWS console. See more at :ref:`aws-console-ms-console`.
 
-.. _aws-wizard-establish-ms:
+.. _aws-console-ms-establish:
 
 Establish the connection
 -------------------------------------------
@@ -89,7 +89,7 @@ Finally, proceed with the last steps:
 
 .. note:: Select :guilabel:`All built-in services` to import all data from built-in CloudWatch namespaces and ensure that built-in dashboards display automatically.
 
-.. _aws-console-ms-console:
+.. _aws-console-ms-connect-aws:
 
 Connect Splunk Observability Cloud in AWS
 ======================================================
