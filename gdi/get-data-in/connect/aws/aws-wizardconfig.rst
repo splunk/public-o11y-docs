@@ -38,7 +38,7 @@ Define your connection
 
 Choose the following connection options:
 
-* The region AWS from which AWS manages your resources. See :ref:`aws-regions` for more informaion.
+* The region AWS from which AWS manages your resources. See :ref:`aws-regions` for more information.
 * Authentication method. Learn more at :ref:`aws-authentication`.
 * Data ingest options such as:
 

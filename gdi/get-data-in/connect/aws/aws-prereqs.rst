@@ -82,7 +82,9 @@ Supported AWS regions
 If you want to activate a specific optional region, you need to do it before adding it to the integration. Make sure you've activated the optional regions you'll need in your AWS console first. Regular regions are activated in AWS by default.
 
   * If you're using the :ref:`UI guided setup <aws-wizardconfig>` to create the integration, you'll be prompted to select which AWS regions you work with. 
-  * If you're :ref:`using the API <get-configapi>` and supply an empty list in an API call, Splunk Observability Cloud activates all regular regions. If you add the ``ec2:DescribeRegions`` permission to your AWS policy, optional regions you've activated on your AWS account are activated in Splunk Observability Cloud as well. 
+  * If you're :ref:`using the API <get-configapi>` and supply an empty list in an API call, Splunk Observability Cloud activates all regular regions. If you add the ``ec2:DescribeRegions`` permission to your AWS policy, optional regions you've activated on your AWS account are activated in Splunk Observability Cloud as well. Although empty regions list configuration is possible via the API, it is highly discouraged since it can lead to an unexpected cost increase whenever a new region is enabled on the AWS account.
+
+.. note:: When you edit an existing integration that was configured with an empty list of regions, the UI guided setup will automatically populate the regions list to include regions enabled on your AWS account if your policy contains ``ec2:DescribeRegions`` permission. Otherwise, it will populate the list with all regular AWS regions. If you previously created an integration using the UI guided setup and used the default all regions configuration, it also will get migrated accordingly. This migration will not impact what data we currently collect for any edited integrations.
 
 Splunk Observability Cloud supports the following AWS regions:
 
