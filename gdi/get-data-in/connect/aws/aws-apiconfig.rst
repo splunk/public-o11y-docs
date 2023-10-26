@@ -197,7 +197,7 @@ If you want to integrate from the AWS console, make sure the following fields ar
 
 .. code-block:: yaml
 
-  "importCloudWatch": true // fetch metrics
+  "importCloudWatch": true // import metrics
   "metricStreamsSyncState": "ENABLED" // Metric Streams is activated
   "metricStreamsManagedExternally": true // Metric Streams managed by AWS
 
