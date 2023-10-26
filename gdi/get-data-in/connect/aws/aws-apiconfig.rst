@@ -188,6 +188,19 @@ This creates:
 
 See :new-page:`Create an AWS integration using an external ID and ARN <https://dev.splunk.com/observability/docs/integrations/aws_integration_overview/#Create-an-AWS-integration-using-an-external-ID-and-ARN>` in the Splunk developer documentation for syntax examples.
 
+.. _aws-api-connect-aws:
+
+Configure Metric Streams from the AWS console
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you want to integrate from the AWS console, make sure the following fields are configured:
+
+.. code-block:: yaml
+
+  "importCloudWatch": true // fetch metrics
+  "metricStreamsSyncState": "ENABLED" // Metric Streams is activated
+  "metricStreamsManagedExternally": true // Metric Streams managed by AWS
+
 Deactivate Metric Streams
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

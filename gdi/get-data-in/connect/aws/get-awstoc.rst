@@ -53,10 +53,10 @@ See a comparison of the connection options at :ref:`aws-compare-connect`, and ch
     - :strong: `Available at`
 
   * - :ref:`Polling (default) <aws-connect-polling>` 
-    - Use either Splunk's UI wizard or the Splunk API.
+    - Use either Splunk's UI wizard or the Splunk Observability Cloud API.
 
   * - :ref:`Streaming (Splunk-managed) <aws-connect-ms>` 
-    - Use either the UI wizard or the API.
+    - Use either the UI wizard or the Splunk Observability Cloud API.
 
   * - :ref:`Streaming (AWS-managed) <aws-console-ms>`
     - Connect and manage Metric Streams from the AWS console.
