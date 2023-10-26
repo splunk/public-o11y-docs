@@ -72,7 +72,7 @@ In this step, switch to your AWS Console to prepare for authentication and creat
 On this screen, Splunk Observability Cloud gives you:
 
 * The AWS IAM policy JSON snippet, your Splunk Observability Cloud account ID and your External ID, which you'll need to define your authenticaton policies in the console. See more details in :ref:`aws-authentication`.
-* The steps to create Metric Streams in the AWS console. See more at :ref:`aws-console-ms-console`.
+* The steps to create Metric Streams in the AWS console. See more at :ref:`aws-console-ms-connect-aws`.
 
 .. _aws-console-ms-establish:
 
