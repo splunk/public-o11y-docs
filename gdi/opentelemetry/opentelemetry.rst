@@ -23,9 +23,21 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     Troubleshooting <troubleshooting.rst>
     Commands reference <otel-commands.rst>
     
-Use the OpenTelemetry Collector to receive, process, and export metric, trace, and log data for Splunk Observability Cloud.
+Use the Splunk Distribution of the OpenTelemetry Collector to receive, process, and export metric, trace, and log data for Splunk Observability Cloud.
 
-The Collector uses pipelines to receive, process, and export trace data with components known as receivers, processors, and exporters. You can also add extensions that provide the OpenTelemetry Collector with additional functionality, such as diagnostics and health checks.
+.. raw:: html
+
+  <embed>
+    <h2>How does the Collector work?<a name="collector-intro-how" class="headerlink" href="#collector-intro-how" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
+The OpenTelemetry Collector is a tech-agnostic way to receive, process and export telemetry data.
+
+After you have installed the Collector in your platform, you can configure the different Collector components (receivers, processors, and exporters) and define your service pipelines to determine the path to process your data. Read more at :ref:`otel-data-processing`. 
+
+You can also add extensions that provide the OpenTelemetry Collector with additional functionality, such as diagnostics and health checks.
+
+Find the available components at :ref:`otel-components`.
 
 .. raw:: html
 
@@ -90,12 +102,15 @@ The following table describes everything you need to start using the Collector:
       - Use an access token to track and manage your resource usage. Where you see ``<access_token>``, replace it with the name of your access token. See :ref:`admin-org-tokens`.
   *   - Realm
       - A realm is a self-contained deployment that hosts organizations. You can find your realm name on your profile page in the user interface. Where you see ``<REALM>``, replace it with the name of your organization's realm. See :new-page:`realms <https://dev.splunk.com/observability/docs/realms_in_endpoints/>`.   
-  *   - Host monitoring (agent) or data forwarding (gateway) mode
-      - In host monitoring (agent) mode, the Collector runs with the application or on the same host as the application. In data forwarding (gateway) mode, one or more Collectors run a standalone service, for example, a container or deployment. See :ref:`otel-deployment-mode`.
   *   - Ports and endpoints
       - Check exposed ports to make sure your environment doesn't have conflicts and that firewalls are configured. You can change the ports in the Collector configuration. See :ref:`otel-exposed-endpoints`.
 
-See also :ref:`otel-requirements`.
+See also :ref:`otel-requirements` for information on:
+
+* :ref:`otel-security`
+* :ref:`otel-exposed-endpoints`
+* :ref:`otel-sizing`
+* :ref:`collector-architecture`
 
 .. raw:: html
 
@@ -106,6 +121,25 @@ See also :ref:`otel-requirements`.
 .. note::
 
   Check :ref:`migrate-from-sa-to-otel` to learn how to migrate your data from the SignalFx Smart Agent (deprecated) to the Collector.
+
+.. raw:: html
+
+  <embed>
+    <h3>Deployment modes<a name="collector-intro-deploy" class="headerlink" href="#collector-intro-deploy" title="Permalink to this headline">¶</a></h3>
+  </embed>
+
+You can deploy the Collector in two modes: Host monitoring (agent) or data forwarding (gateway) mode:
+
+* In host monitoring (agent) mode, the Collector runs with the application or on the same host as the application. 
+* In data forwarding (gateway) mode, one or more Collectors run a standalone service, for example, a container or deployment. 
+
+Learn more at :ref:`otel-deployment-mode`.
+
+.. raw:: html
+
+  <embed>
+    <h3>Install the Collector<a name="collector-intro-install" class="headerlink" href="#collector-intro-install" title="Permalink to this headline">¶</a></h3>
+  </embed>
 
 Learn how to install, deploy, upgrade or uninstall the Collector in :ref:`otel-install-platform`. Or use :ref:`our guided install <collector-guided-install>`.
 
@@ -119,7 +153,6 @@ After you've installed the Collector, see:
 
 * :ref:`otel-configuration`  
 * :ref:`otel-other-configuration-sources`
-* :ref:`otel-components` 
 
 .. _otel-monitoring:
 
