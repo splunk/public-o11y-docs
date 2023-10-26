@@ -152,5 +152,17 @@ For more information:
 - :ref:`otel-troubleshooting`. Try these troubleshooting techniques and learn how to open a support request.
 - Read :ref:`otel-collector-scenario`.
 
+.. _otel-intro-enterprise:
+
+.. raw:: html
+
+  <embed>
+    <h2>Use the Collector to send data to Splunk Enterprise<a name="otel-intro-enterprise" class="headerlink" href="#otel-intro-enterprise" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
+If you want to send data to Splunk Enterprise using the Collector, the following applies:
+
+* For Kubernetes, Splunk Entreprise supports receiving metrics and logs from the Collector. Trace collection is not supported.
+* For Linux and Windows environments (physical hosts and virtual machines), Splunk Enterprise is not compatible with the Collector. Instead, use the Universal Forwarder to send metrics, traces, and logs to the Splunk platform. See more at :ref:`collector-with-the-uf`.
 
 
