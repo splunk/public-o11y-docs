@@ -18,7 +18,7 @@ The SignalFx Instrumentation for .NET supports the following .NET versions:
 
 - Instrumentation for traces and metrics:
    
-   -  .NET 6.0 and higher
+   -  .NET 6.0 and .NET 7.0
    -  .NET Framework 4.6.2 and higher
 
 - AlwaysOn Profiling:
