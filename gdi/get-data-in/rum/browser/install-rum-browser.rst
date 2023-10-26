@@ -19,23 +19,6 @@ Check compatibility and requirements
 .. include:: /_includes/requirements/browser.rst
 
 
-Decide which version to run in your environment
-===============================================
-
-The versioning of the Browser RUM agent follows semantic versioning rules. To have more control over the version you load, see the following versioning policy:
-
-* Use the latest version to use the latest version of the Browser RUM agent. In preproduction, use ``latest`` to try out the most recent version of Splunk RUM. Don't use in production environments without prior testing. This version might not be suitable for manual instrumentation, as breaking API changes might occur between major version changes.
-* Use major versions, for example ``v1``, if you want to receive new features automatically while keeping backward compatibility with the API. This is the default for all production deployments, as well as for npm installations.
-* Use minor versions, for example ``v1.1``, to receive bug fixes while not receiving new features automatically.
-* Use patch versions, for example, ``v1.2.1``, to pin a specific version of the agent for your application.
-
-The versions of the agent are included in URLs as a designated token. For example:
-
-``https://cdn.signalfx.com/o11y-gdi-rum/v<MAJOR.MINOR.PATCH>/splunk-otel-web.js``
-
-In production environments, use the pinned version which was previously tested in preproduction and update the production version on a monthly cycle.
-
-
 .. _rum-browser-install:
 
 Instrument your web application for Splunk RUM
@@ -72,6 +55,25 @@ Splunk CDN
 ----------------------------------------------------------------------
 
 You can use the Splunk Content Delivery Network (CDN) to load the Browser RUM agent synchronously. The CDN link ensures that your application always uses the latest version.
+
+Decide which version to run in your environment
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The versioning of the Browser RUM agent follows semantic versioning rules. To have more control over the version you load, see the following versioning policy:
+
+* Use the latest version to use the latest version of the Browser RUM agent. In preproduction, use ``latest`` to try out the most recent version of Splunk RUM. Don't use in production environments without prior testing. This version might not be suitable for manual instrumentation, as breaking API changes might occur between major version changes.
+* Use major versions, for example ``v1``, if you want to receive new features automatically while keeping backward compatibility with the API. This is the default for all production deployments, as well as for npm installations.
+* Use minor versions, for example ``v1.1``, to receive bug fixes while not receiving new features automatically.
+* Use patch versions, for example, ``v1.2.1``, to pin a specific version of the agent for your application.
+
+The versions of the agent are included in URLs as a designated token. For example:
+
+``https://cdn.signalfx.com/o11y-gdi-rum/v<MAJOR.MINOR.PATCH>/splunk-otel-web.js``
+
+In production environments, use the pinned version which was previously tested in preproduction and update the production version on a monthly cycle.
+
+Add the CDN script to your application
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Follow these steps to instrument your application with the CDN:
 

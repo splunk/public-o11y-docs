@@ -1,13 +1,15 @@
-The Browser RUM agent instruments all front-end experiences that run in modern browsers, regardless of the JavaScript library or framework you use.
+The Browser RUM agent instruments all front-end experiences that run in modern browsers, regardless of the JavaScript library or framework you use. All your pages, assets, and requests must be securely loaded over the HTTPS protocol.
 
-The Browser RUM agent supports the following browsers:
+The Browser RUM agent is compatible with the all the supported versions of the following browsers:
 
 - Google Chrome
+- Google Chrome for Android
 - Microsoft Edge
 - Mozilla Firefox
 - Apple Safari
-- Microsoft Internet Explorer 11, which requires the ``splunk-otel-web-legacy.js`` version of the Browser RUM agent
+- Apple Safari for iOS
+- Chromium-based browsers
 
-All your pages, assets, and requests must be securely loaded over the HTTPS protocol.
+Microsoft Internet Explorer 11 is supported by a separate legacy build, available as ``splunk-otel-web-legacy.js`` in the :new-page:`release assets on GitHub <https://github.com/signalfx/splunk-otel-js-web/releases>`.
 
 .. note:: Splunk APM is not required to instrument Splunk RUM for Browser.
