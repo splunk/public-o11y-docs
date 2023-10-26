@@ -64,7 +64,7 @@ Features or tools within Splunk Observability Cloud do not work as expected.
 Cause
 ^^^^^^
 
-When a feature in Splunk Observability Cloud does not work as expected after connection to AWS, then permissions for that feature in the AWS IAM policy are absent or blocking implementation. For example, ``ec2:DescribeRegions`` is used to detect which AWS regions are active in your account. Without that permission, or if no region is specified, then system settings default to AWS standard regions. It is not recommended to leave the regions field empty, see more: :ref:`AWS authentication and supported regions <aws-regions>`.
+When a feature in Splunk Observability Cloud does not work as expected after connecting to AWS, it's likely that permissions for that feature in the AWS IAM policy are absent or blocking implementation. For example, ``ec2:DescribeRegions`` is used to detect which AWS regions are active in your account. Without that permission, or if no region is specified, then system settings default to AWS standard regions. To avoid unexpected issues, it's better to populate the regions field. See more at :ref:`AWS authentication and supported regions <aws-regions>`.
 
 Metrics collection also depends on the the permissions you set. 
 
