@@ -62,7 +62,7 @@ In this step you need to choose the following connection options:
   * CloudWatch metrics. 
   * Logs.
 
-In the CloudWatch Metrics option, select :guilabel:`Streaming (AWS-managed)` as the ingestion method, and proceed to the AWS console to complete the connection. 
+In the CloudWatch Metrics option, select :guilabel:`Metric Streams (AWS-managed)` as the ingestion method, and proceed to the AWS console to complete the connection. 
 
 Connect Splunk Observability Cloud in AWS
 ======================================================
