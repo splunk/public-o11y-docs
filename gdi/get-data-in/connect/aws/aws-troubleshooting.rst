@@ -64,7 +64,7 @@ Features or tools within Splunk Observability Cloud do not work as expected.
 Cause
 ^^^^^^
 
-When a feature in Splunk Observability Cloud does not work as expected after connection to AWS, then permissions for that feature in the AWS IAM policy are absent or blocking implementation. For example, ``ec2:DescribeRegions`` is used to detect which AWS regions are active in your account. Without that permission, or if no region is specified, then system settings default to AWS standard regions.
+When a feature in Splunk Observability Cloud does not work as expected after connecting to AWS, it's likely that permissions for that feature in the AWS IAM policy are absent or blocking implementation. For example, ``ec2:DescribeRegions`` is used to detect which AWS regions are active in your account. Without that permission, or if no region is specified, then system settings default to AWS standard regions. To avoid unexpected issues, it's better to populate the regions field. See more at :ref:`AWS authentication and supported regions <aws-regions>`.
 
 Metrics collection also depends on the the permissions you set. 
 
@@ -152,7 +152,7 @@ You'll get something similar to:
             "lastUpdatedByName": "John Smith",
             "name": "AWS Dev",
             "pollRate": 300000,
-            "regions": [],
+            "regions": [ "us-east-1", "us-east-2", "us-west-1", "us-west-2" ],
             "roleArn": null,
             "services": [],
             "sfxAwsAccountArn": "arn:aws:iam::134183635603:root",
@@ -178,7 +178,7 @@ You'll get something similar to:
             "lastUpdatedByName": "John Doe",
             "name": "AWS Prod",
             "pollRate": 300000,
-            "regions": [],
+            "regions": [ "us-east-1", "us-east-2", "us-west-1", "us-west-2" ],
             "roleArn": "arn:aws:iam::123456789012:role/splunk-o11y-role",
             "services": [],
             "sfxAwsAccountArn": "arn:aws:iam::134183635603:root",
@@ -218,7 +218,7 @@ You'll get something similar to:
       "largeVolume": false,
       "name": "AWS Dev",
       "pollRate": 300000,
-      "regions": [],
+      "regions": [ "us-east-1", "us-east-2", "us-west-1", "us-west-2" ],
       "roleArn": null,
       "services": [],
       "sfxAwsAccountArn": "arn:aws:iam::134183635603:root",
