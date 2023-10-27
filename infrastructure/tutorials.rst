@@ -7,6 +7,13 @@ Splunk Infrastructure Monitoring tutorials
 .. meta::
   :description: Tutorials and quickstart guides to get started monitoring your infrastructure with Splunk Observability Cloud.
 
+.. toctree::
+    :hidden:
+    :maxdepth: 3
+
+  quickstart-imm
+  about-k8s-imm
+  about-aws-imm`    
 
 Read the following tutorials to learn how to use Splunk Infrastructure Monitoring.
 
