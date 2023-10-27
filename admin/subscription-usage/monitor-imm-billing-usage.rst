@@ -104,10 +104,10 @@ The report has six columns:
      - The number of containers that Infrastructure Monitoring monitored during the specified hour.
 
    * - # Custom Metrics
-     - The number of non-high-resolution custom metrics (MTS) that are sent to Infrastructure Monitoring during the specified hour.
+     - The number of non-high-resolution Metric Time Series (MTS) that are sent to Infrastructure Monitoring during the specified hour.
 
    * - # High Res Metrics
-     - The number of high-resolution metrics (MTS) that are sent to Infrastructure Monitoring during the specified hour.
+     - The number of high-resolution Metric Time Series (MTS) that are sent to Infrastructure Monitoring during the specified hour.
 
 .. _summary-including-children:
 
