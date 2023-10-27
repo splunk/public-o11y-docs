@@ -47,7 +47,30 @@ Going forward, you can process data at ingest time with Splunk Cloud Platform fu
 - .conf configuration
 - Edge Processor
 - Data Stream Processor
-- Filter Processor (Splunk Distribution of OpenTelemetry Collector only)
+
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 40
+
+   * - :strong:`Processing method`
+     - :strong:`Documentation`
+
+   * - Field extractions
+     - See :new-page:`Build field extractions with the field extractor <https://docs.splunk.com/Documentation/SplunkCloud/latest/Knowledge/ExtractfieldsinteractivelywithIFX>` 
+   
+   * - Ingest actions
+     - See :new-page:`Use ingest actions to improve the data input process <https://docs.splunk.com/Documentation/SplunkCloud/latest/Data/DataIngest>`
+
+   * - .conf configuration
+     - See :ref:`bigpanda`.
+
+   * - Edge Processor
+     - See :new-page:`About the Edge Processor solution <https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/EdgeProcessor/AboutEdgeProcessorSolution>`
+
+   * - Data Stream Processor
+     - See :new-page:`Processing data in motion using the Splunk Data Stream Processor <https://docs.splunk.com/Documentation/DSP/1.4.2/User/About>`.
+
 
 .. _transition-infinite-logging:
 
