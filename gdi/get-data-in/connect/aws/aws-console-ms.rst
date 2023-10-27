@@ -67,12 +67,12 @@ In the CloudWatch Metrics option, select :guilabel:`Metric Streams (AWS-managed)
 Prepare your AWS account
 -------------------------------------------
 
-In this step, switch to your AWS Console to prepare for authentication and create the Metric Stream.
-
 On this screen, Splunk Observability Cloud gives you:
 
 * The AWS IAM policy JSON snippet, your Splunk Observability Cloud account ID and your External ID, which you'll need to define your authenticaton policies in the console. See more details in :ref:`aws-authentication`.
 * The steps to create Metric Streams in the AWS console. See more at :ref:`aws-console-ms-connect-aws`.
+
+To complete this step, switch to your AWS Console to prepare for authentication and create the Metric Stream to send your data to Splunk Observability Cloud.
 
 .. _aws-console-ms-establish:
 
