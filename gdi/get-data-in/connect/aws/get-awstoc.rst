@@ -50,7 +50,7 @@ See a comparison of the connection options at :ref:`aws-compare-connect`, and ch
   :widths: 50, 50
 
   * - :strong:`Connection option`
-    - :strong: `Available at`
+    - :strong:`Available at`
 
   * - :ref:`Polling (default) <aws-connect-polling>` 
     - Use either Splunk's UI wizard or the Splunk Observability Cloud API.
