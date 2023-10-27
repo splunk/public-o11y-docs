@@ -137,9 +137,6 @@ Now, you need to assign your custom alert templates to the Splunk OnCall alert r
 
 #. In AlertSite, navigate to :guilabel:`Alerts`, then :guilabel:`Recipient Groups`. 
 #. Select :guilabel:`New Recipient Group`.
-  
-  |image8|
-
 #. Enter a name for the group.
 #. Under :guilabel:`Monitors`, add the monitors that should send alerts to Splunk OnCall.
 #. Under :guilabel:`Recipients`, add the Splunk OnCall recipient.

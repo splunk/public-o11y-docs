@@ -99,7 +99,7 @@ This can take up to 10 minutes for the caching to “clear”).
 Request Types
 -------------
 
-Next, select the appropriate method for your webhook. The available
+Next, select the appropriate method for your webhook. The available
 options are:
 
 -  GET
@@ -135,7 +135,7 @@ Finally, hit *Save* and you are done.
 Conditionally Fire Webhooks
 ---------------------------
 
-By combining outgoing webhooks with the power of the Alert Rules Engine,
+By combining outgoing webhooks with the power of the Alert Rules Engine,
 you can set up rules to have them only fire when a desired condition is
 met.
 
