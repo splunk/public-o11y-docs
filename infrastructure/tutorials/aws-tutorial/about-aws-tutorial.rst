@@ -1,4 +1,4 @@
-.. _about-aws-imm:
+.. _about-aws-tutorial:
 
 *****************************************************************************************
 Tutorial: monitor your AWS environment in Splunk Observability Cloud
