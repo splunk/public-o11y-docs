@@ -2,11 +2,11 @@
 .. _metrics-pipeline-intro:
 
 ******************************************************
-Introduction to metrics pipeline management
+Optimizing metrics data
 ******************************************************
 
 .. meta::
-    :description: Introduction to metrics pipeline management in Splunk Infrastructure Monitoring
+    :description: Optimizing metrics data using metrics pipeline management in Splunk Infrastructure Monitoring
 
 |hr|
 
@@ -15,7 +15,58 @@ Introduction to metrics pipeline management
 |hr|
 
 .. meta::
-    :description: Introduction to metrics pipeline management in Splunk Observability Cloud.
+    :description: Optimizing metrics data using metrics pipeline management in Splunk Infrastructure Monitoring
+
+Outline for section one
+===============================================================================
+
+#. The problem: too much metrics data
+
+   * Customers see exponential data growth as they expand observability over all their systems.
+   * High cardinality data also leads to data growth
+   * Problems:
+
+    * Increased data cost
+    * Decrease in performance due to processing overhead
+    * Operational challenges: How do I make sense of my data?
+
+    * **More data doesn't yield better outcomes**
+
+#. The solution: Optimize data
+
+   * Analyze data: Identify unused data and high cardinality data
+   * Refine data usage using metrics pipeline management:
+
+     * Aggregate MTS/Drop unwanted or high cardinality dimensions → summarized, rolled up data
+     * Route MTS to lower-cost data tier
+     * Re-analyze data and make more adjustments
+     * In summary:
+
+.. mermaid::
+
+   flowchart LR
+       A(Find unwanted and high cardinality data) -- MPM -->B{Aggregate and route data} -- View MPM --> C(Analyze results) -->A
+
+#. Use rules to optimize data usage
+
+   * Data optimization is rules-based
+   * Create and change rules to adjust the following:
+
+     * Aggregation - Choose MTS to aggregate, choose dimensions to aggregate or drop
+     * Data routing
+
+       * Choose MTS to move to a lower-cost tier
+       * Choose historical MTS to restore to higher-cost tier
+
+   * Dashboards show rules in effect and their impact on data storage
+
+     * Summary
+
+.. mermaid::
+
+   flowchart LR
+   Raw[(Incoming raw MTS)] ---|MPM|ChooseDimensions{"`Choose MTS to aggregate`"} ---|Perform aggregation|CreateNew("`New aggregated MTS with rolled-up
+   metrics`") ---|Keep or drop raw MTS|OriginalMTS[(Kept MTS and new MTS)]
 
 Metrics pipeline management is an evolution of Splunk Observability Cloud metrics platform that offers you solutions to
 centrally manage metric cardinality.
