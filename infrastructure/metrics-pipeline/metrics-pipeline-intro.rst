@@ -45,7 +45,7 @@ Outline for section one
 .. mermaid::
 
    flowchart LR
-       A(Find unwanted and high cardinality data) -- MPM -->B{Aggregate and route data} -- View MPM --> C(Analyze results) -->A
+       A(Find unwanted and high cardinality data) -->B(Aggregate and route data using MPM rules) -- View MPM dashboard --> C(Analyze MPM results) -->A
 
 #. Use rules to optimize data usage
 
@@ -65,8 +65,8 @@ Outline for section one
 .. mermaid::
 
    flowchart LR
-   Raw[(Incoming raw MTS)] ---|MPM|ChooseDimensions{"`Choose MTS to aggregate`"} ---|Perform aggregation|CreateNew("`New aggregated MTS with rolled-up
-   metrics`") ---|Keep or drop raw MTS|OriginalMTS[(Kept MTS and new MTS)]
+   Raw[(Incoming raw MTS)] --->|MPM|Analyze{"`Identify MTS with issues`"} --->|Aggregate|CreateNew("`New aggregated MTS with rolled-up
+   metrics`") ---|Route|RouteRules("`Route or drop MTS`") -->|MPMResults|NewRouted[(New MTS, kept MTS)]
 
 Metrics pipeline management is an evolution of Splunk Observability Cloud metrics platform that offers you solutions to
 centrally manage metric cardinality.
