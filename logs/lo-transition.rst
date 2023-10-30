@@ -41,13 +41,7 @@ Log processing rules
 --------------------------------------------------------------------------------------------------------------
 You can continue using existing log processing rules. See :ref`logs-processors` for more information. You can turn your existing log processing rules off and on. However, you cannot create new log processing rules or edit existing rules.
 
-Going forward, you can process data at ingest time with Splunk Cloud Platform functionality, including the following:
-
-- Ingest actions
-- .conf configuration
-- Edge Processor
-- Data Stream Processor
-
+Going forward, you can process data in the Splunk platform using the following methods:
 
 .. list-table::
    :header-rows: 1
@@ -76,9 +70,11 @@ Going forward, you can process data at ingest time with Splunk Cloud Platform fu
 
 Infinite logging rules
 --------------------------------------------------------------------------------------------------------------
-You can continue using existing infinite logging rules. See :ref`logs-infinite` for more information. You can turn your existing infinite logging rules off and on. However, you cannot create new infinite logging rules or edit existing rules.
+You can continue using existing infinite logging rules. See :ref:`logs-infinite` for more information. You can turn your existing infinite logging rules off and on. However, you cannot create new infinite logging rules or edit existing rules.
 
-Going forward, you can archive data in Splunk Cloud Platform using Dynamic Data Active Archive. See :new-page:`Store expired Splunk Cloud Platform data in a Splunk-managed archive <https://docs.splunk.com/Documentation/SplunkCloud/9.0.2305/Admin/DataArchiver>` for more information.
+Going forward, you can use the 
+
+You can also archive data in Splunk Cloud Platform using Dynamic Data Active Archive. See :new-page:`Store expired Splunk Cloud Platform data in a Splunk-managed archive <https://docs.splunk.com/Documentation/SplunkCloud/9.0.2305/Admin/DataArchiver>` for more information.
 
 .. _transition-search-time-rules:
 
