@@ -27,109 +27,105 @@ Container level metrics and dimensions
 ============================================================================
 
 .. list-table::
-  :widths: 30 30 30 10
+  :widths: 25 25 30 10 10
   :width: 100%
   :header-rows: 1
 
   * - Metric name
     - Metric description
     - Attributes
-    - Kept?
+    - Before translation?
+    - Sent to O11y?
 
   * - ``container.cpu.utilization``
     - Container CPU utilization
-    - 
+    - :ref:`ootb-metrics-k8s-attributes`
     - No
+    - Yes
 
   * - ``container.cpu.time``
     - Container CPU time
     - 
     - No
-
+    - No
+  
   * - ``container.memory.available``
     - Container memory available
     - 
+    - No
     - No
 
   * - ``container.memory.usage``
     - Container memory usage
     - 
     - No
+    - No
 
   * - ``container.memory.rss``
     - Container memory rss
     - 
+    - No
     - No
 
   * - ``container.memory.working_set``
     - Container memory ``working_set``
     - 
     - No
+    - No
 
   * - ``container.memory.page_faults``
     - Container memory ``page_faults``
     - 
+    - No
     - No
 
   * - ``container.memory.major_page_faults``
     - Container memory ``major_page_faults``
     - 
     - No
+    - No
 
   * - ``container.filesystem.available``
     - Container filesystem available
     - :ref:`ootb-metrics-k8s-attributes`
+    - No
     - No
 
   * - ``container.filesystem.capacity``
     - Container filesystem capacity
     - :ref:`ootb-metrics-k8s-attributes`
     - No
+    - No
 
   * - ``container.filesystem.usage``
     - Container filesystem usage
     - :ref:`ootb-metrics-k8s-attributes`
+    - No
     - No
 
   * - ``k8s.container.cpu_limit``
     - Container ``cpu_limit``
     - :ref:`ootb-metrics-k8s-attributes`
     - No
+    - No
 
   * - ``k8s.container.cpu_request``
     - Container ``cpu_request``
     - :ref:`ootb-metrics-k8s-attributes`
+    - No
     - No
 
   * - ``k8s.container.memory_limit``
     - Container ``memory_limit``
     - :ref:`ootb-metrics-k8s-attributes`
     - No
+    - No
 
   * - ``k8s.container.memory_request``
     - Container ``memory_request``
     - :ref:`ootb-metrics-k8s-attributes`
     - No
-
-Container level metrics and dimensions after translation
-============================================================================
-
-.. note:: These metrics are compatible with the :ref:`signalfx-exporter`.
-
-.. list-table::
-  :widths: 30 30 30 10
-  :width: 100%
-  :header-rows: 1
-
-  * - Metric name
-    - Metric description
-    - Attributes
-    - Kept?
-
-  * - ``container.cpu.utilization``
-    - Container CPU utilization in centicores
-    - :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - No
 
 Pod level metrics and dimensions
 ============================================================================
