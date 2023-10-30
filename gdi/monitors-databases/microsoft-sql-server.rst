@@ -20,7 +20,7 @@ Benefits
 Installation
 ------------
 
-.. include:: /_includes/collector-installation-linux.rst
+.. include:: /_includes/collector-installation.rst
 
 Microsoft SQL installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
