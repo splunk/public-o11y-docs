@@ -52,7 +52,7 @@ Requirements
         * ``quay.io/signalfx``
         * ``quay.io/v2``
   * - Operating system   
-    -  Linux, Windows, or OSX
+    -  Linux, Windows, or macOS
 
 
 For optimal performance when running Browser tests:
