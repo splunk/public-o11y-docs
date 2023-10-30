@@ -29,7 +29,7 @@ See the Span Status section of the OpenTelemetry Transformation to non-OTLP Form
 How OpenTelemetry handles HTTP status codes
 ----------------------------------------------
 
-The following table provides an overview of how HTTP status codes are used to set the ``span.status`` field, and subsequently ``otel.status_code``, in OpenTelemetry instrumentation in accordance with OpenTelemetry semantic conventions. To learn more, see the OpenTelemetry semantic conventions for HTTP spans on GitHub :new-page:`https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/semantic_conventions/http.md#status`.
+The following table provides an overview of how HTTP status codes are used to set the ``span.status`` field, and subsequently ``otel.status_code``, in OpenTelemetry instrumentation in accordance with OpenTelemetry semantic conventions. To learn more, see the OpenTelemetry semantic conventions for HTTP spans on GitHub :new-page:`https://github.com/open-telemetry/semantic-conventions/blob/main/model/trace/http.yaml`.
 
 .. list-table::
    :header-rows: 1
@@ -132,7 +132,7 @@ To determine if a gRPC span counts towards the error rate for a service, Splunk 
      - unset
      - ERROR
 
-See the OpenTelemetry specification for information on the handling of gRPC status codes on GitHub :new-page:`https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/semantic_conventions/rpc.md#grpc-status`.
+See the OpenTelemetry specification for information on the handling of gRPC status codes on GitHub :new-page:`https://github.com/open-telemetry/semantic-conventions/blob/main/model/trace/rpc.yaml`.
 
 .. _metricset-errors:
 
