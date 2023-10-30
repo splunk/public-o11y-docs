@@ -29,6 +29,10 @@ A :ref:`metric time series (MTS) <metric-time-series>` contains all the data poi
 
 
   flowchart LR
+
+      accTitle: Metric time series diagram
+      accDescr: This example metric time series consists of 3 data points. They all share the same metric name, cpu.utilization, the same metric type, gauge, and the same set of dimension key-value pairs, which are hostname:server1 and location:Tokyo. The first data point has a value of .85 and a timestamp of 1557225030000 in UNIX time. The second data point has a value of .9 and a timestamp of 1557225030100 in UNIX time. The third data point has a value of .7 and a timestamp of 1557225030200 in UNIX time.
+      
       %% LR indicates the direction (left-to-right)
 
       %% You can define classes to style nodes and other elements
