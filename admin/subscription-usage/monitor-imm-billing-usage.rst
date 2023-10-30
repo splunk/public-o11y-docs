@@ -19,9 +19,9 @@ Observability Cloud provides a summary and detailed subscription usage reports t
 Metrics in Infrastructure
 ==================================================
 
-Infrastructure Monitoring collects metric time series (MTS) with different categories of metrics.
+Infrastructure Monitoring collects metric time series (MTS) which are classified into different categories depending on the type of subscription you have.
 
-* In MTS-based plans, all metrics are custom.
+* In MTS-based subscriptions, all MTS are counted towards custom metrics usage.
 * In host-based plans, the following categories apply:
 
 .. list-table::
@@ -44,6 +44,8 @@ Infrastructure Monitoring collects metric time series (MTS) with different categ
       * Custom metrics are often used for application monitoring, such as counting the number of Splunk Infrastructure Monitoring API calls or measuring the duration of the API requests. 
       * You can also configure the Splunk Distribution of OpenTelemetry Collector to send custom metrics (such as system or service metrics) outside of its default set of metrics.
       * Your Infrastructure Monitoring subscription lets you send a certain number of custom metrics. If you exceed this number your organization might be overcharged.
+
+In host-based subscriptions, MTS from host and container metrics and bundled metrics are covered as part of the subscription and not charged separately. MTS from custom metrics are subject to the entitlements (200 MTS per host for Enterprise plan and 100 MTS per host for Standard plan). Additional MTS from custom metrics will be charged separately per MTS. 
 
 Learn more about metric categories in :ref:`metrics-category`.
 
