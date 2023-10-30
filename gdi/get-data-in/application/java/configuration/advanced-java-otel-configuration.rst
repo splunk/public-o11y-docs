@@ -252,7 +252,7 @@ The following settings control metrics collection for the Java agent:
    * - ``SPLUNK_METRICS_ENDPOINT``
      - The OTel collector metrics endpoint. Default is ``http://localhost:9943``. |br| |br| System property: ``splunk.metrics.endpoint``
    * - ``SPLUNK_METRICS_EXPORT_INTERVAL``
-     - Interval between pushing metrics. You can define duration in the form ``<number><unit>``, where the unit can be ``ms``, ``s``, ``m``, ``h``, or ``d``. The default interval is ``30s``. If you enter a number but not a unit, the default unit is assumed to be ``ms``. |br| |br| System property: ``splunk.metrics.export.interval``
+     - Deprecated. Use ``OTEL_METRIC_EXPORT_INTERVAL`` instead. See :new-page:`Periodic exporting MetricReader <https://opentelemetry.io/docs/specs/otel/configuration/sdk-environment-variables/#periodic-exporting-metricreader>` in the official OpenTelemetry documentation.
 
 .. note:: Metric support is experimental.
 
