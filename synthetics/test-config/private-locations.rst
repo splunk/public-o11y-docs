@@ -84,7 +84,7 @@ Each private location has a corresponding private location ID. With this ID, you
 
 Manage your tokens
 --------------------
-It is your responsibility to update and manage your tokens. For added security, create a secret environment variable for your token in Docker. Consider creating a second token to provide coverage before your first token expires.
+It is your responsibility to update and manage your tokens. Tokens are valid for one year. For added security, create a secret environment variable for your token in Docker. Consider creating a second token to provide coverage before your first token expires. You are not notified of expiring tokens.
 
 
 Working with Docker 

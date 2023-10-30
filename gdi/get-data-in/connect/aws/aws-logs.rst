@@ -120,7 +120,7 @@ Instead of sending all logs to Splunk Observability Cloud, you can forward logs 
 
 .. caution:: Do not name your filters ``Splunk Log Collector``. It's a reserved name for Splunk-managed subscriptions and they'll be removed automatically. 
 
-Metadata
+Log metadata
 ============================
 
 Log events from AWS services are enriched with relevant metadata. Some of the metadata is common :ref:`to all services <aws-logs-meta-common>`, while some other is :ref:`service-specific <aws-logs-meta-service>`.

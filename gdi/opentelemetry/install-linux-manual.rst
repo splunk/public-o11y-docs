@@ -228,7 +228,7 @@ To install the Collector using the binary file, follow these steps:
 
 #. Download the binary for your architecture from :new-page:`GitHub releases <https://github.com/signalfx/splunk-otel-collector/releases>`.
 
-#. If you're not using an existing or custom config file, download the :new-page:`default config file <https://github.com/signalfx/splunk-otel-collector/tree/main/cmd/otelcol/config/collector>`` for the Collector. See more at :ref:`otel-configuration-ootb`.
+#. If you're not using an existing or custom config file, download the :new-page:`default config file <https://github.com/signalfx/splunk-otel-collector/tree/main/cmd/otelcol/config/collector>` for the Collector. See more at :ref:`otel-configuration-ootb`.
 
 #. Run the binary from the command line:
 
