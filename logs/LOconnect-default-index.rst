@@ -1,7 +1,7 @@
 .. _LOconnect-default-index:
 
 *****************************************************************************
-Reset the default Log Observer Connect indexes
+Reset the default Log Observer Connect index
 *****************************************************************************
 A Splunk Observability Cloud administrator sets your organization's default Log Observer Connect index for the Log Observer Connect service account at two times:
 
