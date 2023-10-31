@@ -85,7 +85,7 @@ Going forward, determine the best option for your organization by discussing wit
      - See :new-page:`Store expired Splunk Cloud Platform data in a Splunk-managed archive <https://docs.splunk.com/Documentation/SplunkCloud/9.0.2305/Admin/DataArchiver>`
 
    * - Dynamic Data Self Storage
-     - See :new-page:`Store expired Splunk Cloud Platform data in a Splunk-managed archive <https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/Admin/DataSelfStorage>`
+     - See :new-page:`Store expired Splunk Cloud Platform data in your private archive <https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/Admin/DataSelfStorage>`
    
    * - Ingest actions
      - See :new-page:`Use ingest actions to improve the data input process <https://docs.splunk.com/Documentation/SplunkCloud/latest/Data/DataIngest>`
