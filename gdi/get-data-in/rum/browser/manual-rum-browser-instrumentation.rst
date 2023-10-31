@@ -14,7 +14,7 @@ To migrate manual instrumentation created for another vendor, see :ref:`browser-
 Instrument your application using the OpenTelemetry API
 =============================================================
 
-To instrument your front-end application manually, use the OpenTelemetry API. The Browser RUM agent automatically registers its TraceProvider using ``@opentelemetry/api``, so that your own instrumentations can access it. 
+To instrument your front-end application manually, use the OpenTelemetry API. The Browser RUM agent automatically registers its TraceProvider using ``@opentelemetry/api``, so that your own instrumentations can access it.
 
 Check the version of the OpenTelemetry API
 ----------------------------------------------
@@ -69,7 +69,7 @@ The following example shows how to create a custom event:
    // time passes
    span.end();
 
-.. note:: To avoid load problems due to content blockers when using the CDN version of the Browser RUM agent, add ``if (window.SplunkRum)`` checks around ``SplunkRum`` API calls. 
+.. note:: To avoid load problems due to content blockers when using the CDN version of the Browser RUM agent, add ``if (window.SplunkRum)`` checks around ``SplunkRum`` API calls.
 
 .. _rum-browser-redact-pii:
 
@@ -232,3 +232,226 @@ To activate error collection for workflow spans, add the ``error`` and ``error.m
    });
 
    span.end();
+
+.. _rum-browser-spa-custom:
+
+Create custom spans for single-page applications
+========================================================
+
+You can use the OpenTelemetry API to create custom spans that are specific to the structure of your application. For example, you can generate spans when a user clicks a specific button, or to instrument a custom communication protocol.
+
+Set up the OpenTelemetry API
+---------------------------------------------------------
+
+Add the current version of the OpenTelemetry API package using npm:
+
+.. code-block:: shell
+
+   npm install @opentelemetry/api
+
+.. note:: Make sure that the version of the OpenTelemetry API matches the major version of the API used by the ``@splunk/otel-web`` package. Version information is available in the :new-page:`release notes <https://github.com/signalfx/splunk-otel-js-web/releases>`.
+
+Create custom spans
+---------------------------------------------------------
+
+You can create custom spans by including a tracer. For example: 
+
+.. code-block:: javascript
+
+   import {trace} from '@opentelemetry/api';
+
+   // Create a tracer
+   const tracer = trace.getTracer('my-application', '1.0.0');
+   
+   // Example of an async/await function
+   async function processForm(form) {
+      const span = tracer.startSpan('process form');
+      
+      // Wait for processing to be done
+      span.end();
+   }
+
+   // Example of a callback function
+   function markCompleted(item) {
+      const span = tracer.startSpan('item complete');
+   
+      processCompletion(item, function() {
+         // ... Update item display
+         span.end();
+      });
+   }
+   
+   // Example of hook system provided by another library
+   router.beforeEach((transition) => {
+      transition.span = tracer.startSpan('navigate', {
+         attributes: {
+            'router.path': transition.path
+         }
+      });
+   });
+
+   router.afterEach((transition) => {
+      if (transition.span) {
+         transition.span.end();
+      }
+   });
+
+   // For a list of available methods, see the OpenTelemetry API documentation.
+
+To add child spans to the generated spans, use the Context API. For example:
+
+.. code-block:: javascript
+
+   import {trace, context} from '@opentelemetry/api';
+
+   // Create a tracer
+   const tracer = trace.getTracer('my-application', '1.0.0');
+   
+   async function processForm(form) {
+      const span = tracer.startSpan('process form');
+      await context.with(trace.setSpan(context.active(), span), async () => {
+         
+         await client.send(form); // client.send would create a XHR span using instrumentation
+
+      });
+      span.end();
+   }
+
+.. note:: Context might not propagate to child spans that aren't called directly, for example inside a ``Promise.then, setTimeout, ...`` block. To mitigate this issue, activate asynchronous tracing. See :ref:`browser-rum-async-traces`.
+
+.. _rum-browser-spa-errors:
+
+Collect errors with single-page application frameworks
+========================================================
+
+To activate the collection of JavaScript errors from single-page application (SPA) frameworks using their own error interceptors or handlers, you need to integrate the Browser RUM agent with the framework.
+
+The following framework-specific examples show how to integrate the Browser RUM agent with the supported frameworks. All the examples assume that you installed the Browser RUM agent using npm. See :ref:`rum-browser-install-npm`.
+
+React
+-----------------------------------------
+
+Use the Splunk RUM agent API in your error boundary component:
+
+.. code-block:: javascript
+
+   import React from 'react';
+   import SplunkRum from '@splunk/otel-web';
+   
+   class ErrorBoundary extends React.Component {
+      componentDidCatch(error, errorInfo) {
+   // To avoid loading issues due to content blockers
+   // when using the CDN version of the Browser RUM
+   // agent, add if (window.SplunkRum) checks around
+   // SplunkRum API calls
+         SplunkRum.error(error, errorInfo)
+      }
+   
+      // Rest of your error boundary component
+      render() {
+         return this.props.children
+      }
+   }
+
+Vue.js
+-----------------------------------------
+
+Add the collect function to your Vue ``errorHandler``. 
+
+For Vue.js version 3.x, use the following code:
+
+.. code-block:: javascript
+
+   import Vue from 'vue';
+   import SplunkRum from '@splunk/otel-web';
+   
+   const app = createApp(App);
+   
+   app.config.errorHandler = function (error, vm, info) {
+   // To avoid loading issues due to content blockers
+   // when using the CDN version of the Browser RUM
+   // agent, add if (window.SplunkRum) checks around
+   // SplunkRum API calls
+      SplunkRum.error(error, info)
+   }
+   app.mount('#app')
+
+For Vue.js version 2.x, use the following code:
+
+.. code-block:: javascript
+
+   import Vue from 'vue';
+   import SplunkRum from '@splunk/otel-web';
+   
+   Vue.config.errorHandler = function (error, vm, info) {
+   // To avoid loading issues due to content blockers
+   // when using the CDN version of the Browser RUM
+   // agent, add if (window.SplunkRum) checks around
+   // SplunkRum API calls
+      SplunkRum.error(error, info)
+   }
+
+Angular
+-----------------------------------------
+
+For Angular version 2.x, create an error handler module:
+
+.. code-block:: ts
+
+   import {NgModule, ErrorHandler} from '@angular/core';
+   import SplunkRum from '@splunk/otel-web';
+   
+   class SplunkErrorHandler implements ErrorHandler {
+      handleError(error) {
+   // To avoid loading issues due to content blockers
+   // when using the CDN version of the Browser RUM
+   // agent, add if (window.SplunkRum) checks around
+   // SplunkRum API calls
+         SplunkRum.error(error, info)
+      }
+   }
+   
+   @NgModule({
+      providers: [
+         {
+            provide: ErrorHandler,
+            useClass: SplunkErrorHandler
+         }
+      ]
+   })
+   class AppModule {}
+
+For Angular version 1.x, create an ``exceptionHandler``:
+
+.. code-block:: javascript
+
+   import SplunkRum from '@splunk/otel-web';
+
+   angular.module('...')
+      .factory('$exceptionHandler', function () {
+         return function (exception, cause) {
+   // To avoid loading issues due to content blockers
+   // when using the CDN version of the Browser RUM
+   // agent, add if (window.SplunkRum) checks around
+   // SplunkRum API calls
+            SplunkRum.error(exception, cause)
+         }
+   })
+
+Ember.js
+-----------------------------------------
+
+Configure an ``Ember.onerror`` hook as in the following example:
+
+.. code-block:: javascript
+
+   import Ember from 'ember';
+   import SplunkRum from '@splunk/otel-web';
+
+   Ember.onerror = function(error) {
+   // To avoid loading issues due to content blockers
+   // when using the CDN version of the Browser RUM
+   // agent, add if (window.SplunkRum) checks around
+   // SplunkRum API calls
+      SplunkRum.error(error)
+   }

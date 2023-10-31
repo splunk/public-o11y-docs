@@ -50,6 +50,6 @@ Browse the table below to learn how to carry out common tasks with the Splunk Di
   * - Look for changes between versions	
     - * :new-page:`Main changelog for the Splunk distribution of the Collector <https://github.com/signalfx/splunk-otel-collector/blob/main/CHANGELOG.md>` 
       * :new-page:`Changelog for the Helm chart <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/CHANGELOG.md>` 
-      * :new-page:`Collector Contrib repository <https://github.com/open-telemetry/opentelemetry-collector-contrib.md>` 
+      * :new-page:`Collector Contrib repository <https://github.com/open-telemetry/opentelemetry-collector-contrib>` 
       * :new-page:`Upstream changelog (Contrib) <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/CHANGELOG.md>`
       * :new-page:`Upstream changelog (Core) <https://github.com/open-telemetry/opentelemetry-collector/blob/main/CHANGELOG.md>`
