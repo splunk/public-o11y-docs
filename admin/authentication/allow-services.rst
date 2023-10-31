@@ -173,6 +173,7 @@ If you're unable to allow all URLs as described in :ref:`allow-urls`, ensure tha
    customer-api.<YOUR_REALM>.signalfx.com
 
    # CDN for Splunk Observability Cloud files and installers
+   # Note that files might be hosted on Github.com
    dl.signalfx.com
 
    # Backfill API base URL (https://dev.splunk.com/observability/reference/api/backfill/latest)
