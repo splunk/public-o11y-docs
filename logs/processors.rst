@@ -9,24 +9,42 @@ Transform your data with log processing rules
 
 .. include:: /_includes/log-observer-transition.rst
 
-Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can create or manage log processing rules using the Splunk Log Observer pipeline. 
+Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can create or manage log processing rules using the Splunk Log Observer pipeline. Those customers must transition to Log Observer Connect. At the time of transition, log processing rule functionality changes. At transition, you can continue using existing log processing rules. You can turn your existing log processing rules off and on. However, you cannot create new log processing rules or edit existing rules.
+
+Going forward after the transition to Log Observer Connect, you can process data in the Splunk platform using the following methods:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 40
+
+   * - :strong:`Processing method`
+     - :strong:`Documentation`
+
+   * - Field extractions
+     - See :new-page:`Build field extractions with the field extractor <https://docs.splunk.com/Documentation/SplunkCloud/latest/Knowledge/ExtractfieldsinteractivelywithIFX>` 
+   
+   * - Ingest actions
+     - See :new-page:`Use ingest actions to improve the data input process <https://docs.splunk.com/Documentation/SplunkCloud/latest/Data/DataIngest>`
+
+   * - .conf configuration
+     - See :new-page:`Overview of event processing <https://docs.splunk.com/Documentation/SplunkCloud/9.0.2305/Data/Overviewofeventprocessing>`.
+
+   * - Edge Processor
+     - See :new-page:`About the Edge Processor solution <https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/EdgeProcessor/AboutEdgeProcessorSolution>`
+
+   * - Data Stream Processor
+     - See :new-page:`Use the Data Stream Processor <https://docs.splunk.com/Documentation/DSP/1.4.2/User/About>`.
+
 
 Add value to your raw logs by creating log processing rules, also known as processors, to transform your data or a subset of your data as it arrives.
 
 To add more control to processors, you can add filters that determine which logs a processor will be applied to.
 
-On the Logs Pipeline Management page, you can adjust the order in which your processing rules run, edit processors, or delete processors.
-
-.. note:: You can't edit or delete prepackaged processors.
-
-Prepackaged processors appear at the beginning of the list of processors, and
-they're identified by a lock icon. These prepackaged processors always execute
-before any processors you define. You can't modify or reorder prepackaged processors.
+Prepackaged processors appear at the beginning of the list of processors, and have a lock icon. These prepackaged processors always execute before any processors you define. You can't modify or reorder prepackaged processors.
 
 One example of a prepackaged processor is the ``Level`` to ``severity`` attributed remapper.
 
-Splunk Observability Cloud includes prepackaged processors for Kubernetes and
-Cassandra.
+Splunk Observability Cloud includes prepackaged processors for Kubernetes and Cassandra.
 
 Observability Cloud provides three types of log processors:
 
