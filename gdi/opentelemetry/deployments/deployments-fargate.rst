@@ -5,11 +5,11 @@ Amazon Fargate
 ****************************
 
 .. meta::
-      :description: Deploy the Splunk Observability Cloud OpenTelemetry Collector as a Daemon service in an Amazon ECS EC2 cluster.
+      :description: Deploy the Splunk Observability Cloud OpenTelemetry Collector as a Daemon service in an Amazon ECS with AWS Fargate.
 
 Knowledge of AWS Fargate (Fargate) is assumed. See the :new-page:`user guide <https://docs.aws.amazon.com/AmazonECS/latest/userguide/what-is-fargate.html>` for more information. 
 
-Unless stated otherwise, the Collector is deployed as a sidecar (additional container) to ECS tasks.
+Unless stated otherwise, the Collector is deployed as a sidecar (additional container) to ECS tasks. AWS Fargate is classified as a container, and Fargate metrics are classified as container metrics.
 
 This deployment requires Collector release v0.33.0 or newer, which corresponds to image tag ``0.33.0`` and newer. See the :new-page:`image repository <https://quay.io/repository/signalfx/splunk-otel-collector?tab=tags>` to download the latest image.
 
@@ -19,7 +19,7 @@ Use the guided setup
 
 Use the guided setup to deploy the Collector as a sidecar to ECS tasks.  Choose one of the following Collector configuration options:
 
-- **Default:** The ``/etc/otel/collector/ecs_ec2_config.yaml`` file in the Collector image is used for the Collector configuration.
+- **Default:** The ``/etc/otel/collector/fargate_config.yaml`` file in the Collector image is used for the Collector configuration.
 - **File:** Specify the file to use for the Collector configuration. See :ref:`ecs-observer-config-fargate`.
 - **AWS Parameter Store:** Specify the AWS Parameter Store key or ARN to use for the Collector configuration. See :ref:`ecs-observer-config-fargate`.
 

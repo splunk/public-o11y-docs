@@ -2,7 +2,7 @@
 
 
 *******************************************************************************************************************
-Scenario: Kai troubleshoots faster with Splunk IT Service Intelligence and Splunk Observability Cloud
+Scenario: Kai troubleshoots faster with IT Service Intelligence and Splunk Observability Cloud
 *******************************************************************************************************************
 
 .. meta::
@@ -61,7 +61,7 @@ Examine synthetics tests in Splunk Synthetic Monitoring
      :alt: This screenshot shows a Synthetics view with video capture of user experience in upper right corner.
 
 
-3. Kai selects the APM link next to the checkout element to open Splunk APM where they can see which procedure calls are slow, which are stalled, and which failed. Kai can use Splunk APM full fidelity tracing to pivot to a reconstructed application map from the exact time of this issue or view a live service dependency map.
+3. Kai selects the APM link next to the long checkout request to open Splunk APM where they can see which procedure calls are slow, which are stalled, and which failed. Kai can use Splunk APM full fidelity tracing to pivot to a reconstructed application map from the exact time of this issue or view a live service dependency map.
 
    .. image:: /_images/splunkplatform/synthetics2apm.png
      :width: 100%

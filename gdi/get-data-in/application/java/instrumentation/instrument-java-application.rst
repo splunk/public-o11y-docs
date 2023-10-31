@@ -247,6 +247,15 @@ The following example shows how to update a deployment to expose environment var
 
 .. note:: You can also deploy instrumentation using the Kubernetes Operator. See :ref:`auto-instrumentation-operator`.
 
+.. _java-agent-cloudfoundry:
+
+Deploy the Java agent in Cloudfoundry
+=======================================================
+
+To instrument a Java application in Cloudfoundry, use the Splunk OpenTelemetry Java Agent buildpack framework. The framework automatically instruments your application to send traces to Splunk Observability Cloud.
+
+See :new-page:`https://github.com/cloudfoundry/java-buildpack/blob/main/docs/framework-splunk_otel_java_agent.md <https://github.com/cloudfoundry/java-buildpack/blob/main/docs/framework-splunk_otel_java_agent.md>` for instructions.
+
 .. _export-directly-to-olly-cloud-java:
 
 Send data directly to Splunk Observability Cloud

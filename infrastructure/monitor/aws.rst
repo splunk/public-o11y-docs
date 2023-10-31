@@ -109,7 +109,7 @@ You can also use the Splunk Distribution of OpenTelemetry Collector to import AW
 
 You can only use the Collector when you have direct control over the applications installed on an AWS instance, such as AWS Elastic Compute Cloud (EC2). Some other AWS services require you to use Infrastructure Monitoring AWS integration and AWS CloudWatch. As a result, you might need to use both the AWS integration and OTel.
 
-To learn how to install the Collector, see :ref:`opentelemetry-resources`.
+To learn more, see :ref:`otel-intro`.
 
 .. raw:: html
 

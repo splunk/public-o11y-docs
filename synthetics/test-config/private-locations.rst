@@ -50,8 +50,9 @@ Requirements
         * ``*.signalfx.com`` 
         * ``*.amazonaws.com``
         * ``quay.io/signalfx``
+        * ``quay.io/v2``
   * - Operating system   
-    -  Linux, Windows1, or OSX1
+    -  Linux, Windows, or macOS
 
 
 For optimal performance when running Browser tests:
@@ -83,7 +84,7 @@ Each private location has a corresponding private location ID. With this ID, you
 
 Manage your tokens
 --------------------
-It is your responsibility to update and manage your tokens. For added security, create a secret environment variable for your token in Docker. Consider creating a second token to provide coverage before your first token expires.
+It is your responsibility to update and manage your tokens. Tokens are valid for one year. For added security, create a secret environment variable for your token in Docker. Consider creating a second token to provide coverage before your first token expires. You are not notified of expiring tokens.
 
 
 Working with Docker 
@@ -113,9 +114,9 @@ Follow these steps to limit logging:
 
 
 
-Adding certificates in Synthetics
+Add certificates in Synthetics
 ------------------------------------------------------
-Splunk Synthetic Monitoring supports injecting custom root CA certificates for any tests running from your private locations. Client keys and certificates aren't supported at this time. 
+Splunk Synthetic Monitoring supports injecting custom root CA certificates for API and Uptime tests running from your private locations. Client keys and certificates aren't supported at this time. 
 
 #. Create a folder called ``certs`` on your host machine and place the CA Certificate (in CRT format) in the folder.
 
@@ -129,6 +130,11 @@ For example, here is what a command might look like after you modify it to fit y
 .. code:: yaml
 
     docker run -e "RUNNER_TOKEN=<insert-token>" --volume=`pwd`/certs:/usr/local/share/ca-certificates/my_certs/ quay.io/signalfx/splunk-synthetics-runner:latest bash -c "sudo update-ca-certificates && bundle exec bin/start_runner"
+
+
+.. Note:: Custom root CA certificates aren't supported for Browser tests. Browser tests require SSL/TLS validation for accurate testing. Optionally, you can deactivate SSL/TLS validation for Browser tests when necessary.
+
+
 
 
 
