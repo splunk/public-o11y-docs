@@ -1,4 +1,7 @@
-The Browser RUM agent instruments all front-end experiences that run in modern browsers, regardless of the JavaScript library or framework you use. All your pages, assets, and requests must be securely loaded over the HTTPS protocol.
+The Browser RUM agent instruments all front-end experiences that run in modern browsers, regardless of the JavaScript library or framework you use, with the following requirements:
+
+- All your pages, assets, and requests must be securely loaded over the HTTPS protocol.
+- Your application must not override standard methods.
 
 The Browser RUM agent is compatible with the all the supported versions of the following browsers:
 

@@ -32,21 +32,21 @@ Select one of the following methods to instrument your web application.
    :header-rows: 1
    :width: 100%
 
-   * - Method
+   * - Installation method
      - Use cases
      - Considerations
 
    * - :ref:`rum-browser-install-cdn`
      - Multi-page websites
-     - Easier integration. Ad-blockers might interfere with loading.
+     - Quick integration with your site or applciation. Ad-blockers might interfere with loading.
 
    * - :ref:`rum-browser-install-self-hosted`
      - Multi-page websites
-     - Provides more control. Updates are entirely manual.
+     - Provides greater control over the installation. Updates are entirely manual.
 
    * - :ref:`rum-browser-install-npm`
      - Single-page applications
-     - Bundles into your app. Must be loaded in the right place.
+     - Bundles into your web application. Must be loaded as soon as possible. See :ref:`loading-initializing_browser-rum` for more information.
 
 
 .. _rum-browser-install-cdn:
