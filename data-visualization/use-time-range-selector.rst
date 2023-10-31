@@ -54,6 +54,11 @@ Time zone abbreviations are based on the user's browser locale for both the time
 - If the same date: 10:18 to 10:20
 - If you copied an ISO range, 2023-10-15T04:19:00.000-07:00 to 2023-10-16T16:19:00.000-07:00
 
+Select a custom time range
+================================
+
+You can also view data from a relative or absolute time window with a defined start and end time. Select the Time Range selector and choose :guilabel:`Custom` from the menu. A custom Time Range selector appears. Choose the starting and ending date and time of your desired time range, then click :guilabel:`Apply` to show data for that time range only.
+
 .. _panning:
 
 Pan through time ranges
