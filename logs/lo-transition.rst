@@ -23,7 +23,7 @@ To transition to Splunk Log Observer Connect, you must take the following action
 
 Verify log data transfer
 ==============================================================================================================
-After completing the preceding steps, you will be able to store data in both Log Observer and your Splunk platform instance for 30 days. During the 30-day window you can verify that the data in your Splunk platform instance from Log Observer Connect matches the Log Observer data. There is no disruption to your functionality during this time. 
+After completing the preceding steps, you can store data in both Log Observer and your Splunk platform instance for 30 days. During the 30-day window you can verify that the data in your Splunk platform instance from Log Observer Connect matches the Log Observer data. There is no disruption to your functionality during this time. 
 
 Changes in logging after the transition
 ==============================================================================================================
@@ -39,7 +39,7 @@ After your transition to Log Observer Connect, you experience changes in the fol
 
 Log processing rules
 --------------------------------------------------------------------------------------------------------------
-You can continue using existing log processing rules. See :ref`logs-processors` for more information. You can turn your existing log processing rules off and on. However, you cannot create new log processing rules or edit existing rules.
+You can continue using existing log processing rules. See :ref:`logs-processors` for more information. You can turn your existing log processing rules off and on. However, you cannot create new log processing rules or edit existing rules.
 
 Going forward, you can process data in the Splunk platform using the following methods:
 
@@ -57,13 +57,13 @@ Going forward, you can process data in the Splunk platform using the following m
      - See :new-page:`Use ingest actions to improve the data input process <https://docs.splunk.com/Documentation/SplunkCloud/latest/Data/DataIngest>`
 
    * - .conf configuration
-     - See :ref:`bigpanda`.
+     - See :new-page:`Overview of event processing <https://docs.splunk.com/Documentation/SplunkCloud/9.0.2305/Data/Overviewofeventprocessing>`.
 
    * - Edge Processor
      - See :new-page:`About the Edge Processor solution <https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/EdgeProcessor/AboutEdgeProcessorSolution>`
 
    * - Data Stream Processor
-     - See :new-page:`Processing data in motion using the Splunk Data Stream Processor <https://docs.splunk.com/Documentation/DSP/1.4.2/User/About>`.
+     - See :new-page:`Use the Data Stream Processor <https://docs.splunk.com/Documentation/DSP/1.4.2/User/About>`.
 
 
 .. _transition-infinite-logging:
@@ -72,18 +72,49 @@ Infinite logging rules
 --------------------------------------------------------------------------------------------------------------
 You can continue using existing infinite logging rules. See :ref:`logs-infinite` for more information. You can turn your existing infinite logging rules off and on. However, you cannot create new infinite logging rules or edit existing rules.
 
-Going forward, you can use the 
+Going forward, determine the best option for your organization by discussing with your Splunk representative the following types of data storage:
 
-You can also archive data in Splunk Cloud Platform using Dynamic Data Active Archive. See :new-page:`Store expired Splunk Cloud Platform data in a Splunk-managed archive <https://docs.splunk.com/Documentation/SplunkCloud/9.0.2305/Admin/DataArchiver>` for more information.
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 40
+
+   * - :strong:`Storage type`
+     - :strong:`Documentation`
+
+   * - Dynamic Data Active Archive
+     - See :new-page:`Store expired Splunk Cloud Platform data in a Splunk-managed archive <https://docs.splunk.com/Documentation/SplunkCloud/9.0.2305/Admin/DataArchiver>`
+
+   * - Dynamic Data Self Storage
+     - See :new-page:`Store expired Splunk Cloud Platform data in a Splunk-managed archive <https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/Admin/DataSelfStorage>`
+   
+   * - Ingest actions
+     - See :new-page:`Use ingest actions to improve the data input process <https://docs.splunk.com/Documentation/SplunkCloud/latest/Data/DataIngest>`
+
 
 .. _transition-search-time-rules:
 
 Search-time processing rules
 --------------------------------------------------------------------------------------------------------------
-You cannot use search-time processing rules. Search-time rules are the application of log processing rules across historical data. See :ref:`logs-search-time-rules` for more information. Going forward, you can utilize the global time range picker in Splunk Cloud Platform dashboards to do search-time processing.
+You cannot use search-time processing rules in the Log Observer Connect UI. Search-time rules are the application of log processing rules across historical data. See :ref:`logs-search-time-rules` for more information. Going forward, you can utilize the global time range picker in Splunk Cloud Platform dashboards to do search-time processing.
+
+Going forward, you can utilize the following methods for processing data at search time:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 40
+
+   * - :strong:`Search-time processing method`
+     - :strong:`Documentation`
+
+   * - Field extractor
+     - See :new-page:`Build field extractions with the field extractor <https://docs.splunk.com/Documentation/SplunkCloud/latest/Knowledge/ExtractfieldsinteractivelywithIFX>`
+
+   * - Field aliases
+     - See :new-page:`Create field aliases in Splunk Web <https://docs.splunk.com/Documentation/SplunkCloud/9.0.2305/Knowledge/Addaliasestofields>`
+
 
 .. _transition-live-tail:
 
 Live Tail
 --------------------------------------------------------------------------------------------------------------
-The Live Tail feature of Log Observer ends in January 2024. There is no equivalent in Splunk Cloud Platform.
+The Live Tail feature of Log Observer ends in January 2024. In Splunk Cloud Platform, you can adjust the time range picker to :guilabel:`All time (real-time)` or :guilabel:`30 second window`. You must select :guilabel:`Search` again and rerun your search to see the most recent log events. For more information, see :new-page:`Select time ranges to apply to your search <https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/Search/Selecttimerangestoapply>`
