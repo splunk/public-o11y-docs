@@ -50,8 +50,9 @@ Requirements
         * ``*.signalfx.com`` 
         * ``*.amazonaws.com``
         * ``quay.io/signalfx``
+        * ``quay.io/v2``
   * - Operating system   
-    -  Linux, Windows1, or OSX1
+    -  Linux, Windows, or macOS
 
 
 For optimal performance when running Browser tests:
