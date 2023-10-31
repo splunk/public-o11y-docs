@@ -21,7 +21,7 @@ Metrics in Infrastructure
 
 Infrastructure Monitoring collects metric time series (MTS) which are classified into different categories depending on the type of subscription you have.
 
-* In MTS-based subscriptions, all MTS are counted towards custom metrics usage.
+* In MTS-based subscriptions, all MTS count towards custom metrics usage.
 * In host-based plans, the following categories apply:
 
 .. list-table::

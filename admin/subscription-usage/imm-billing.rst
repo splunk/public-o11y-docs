@@ -25,7 +25,7 @@ The number of hosts, containers, and other resources that Infrastructure Monitor
 
 - To calculate monthly usage for hosts and containers, Observability Cloud counts the number of unique hosts and containers sending metrics during each hour in the month. It then calculates the average of these counts to determine monthly usage.
 
-- To calculate monthly usage for custom and high-resolution metrics, Observability Cloud counts the number of Metric Time Series (MTS) sent during each hour in the month. It then calculates the average of these counts to determine monthly usage. For details on the difference between metrics and Metric Time Series, see :ref:`get-started-metrics`.
+- To calculate monthly usage for custom and high-resolution metrics, Observability Cloud counts the number of metric time series (MTS) sent during each hour in the month. It then calculates the average of these counts to determine monthly usage. For details on the difference between metrics and Metric Time Series, see :ref:`get-started-metrics`.
 
 Overage fees apply to each type of object individually. 
 
