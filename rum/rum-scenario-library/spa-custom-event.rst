@@ -59,8 +59,6 @@ To create a custom event in Splunk RUM that measures likes on a blog post, Kai d
 
 Here is an example of how Kai initializes the tracer and creates a custom event using the NPM package for Splunk RUM for Browser:
 
-
-
       .. code-block:: javascript
 
          import {trace} from '@opentelemetry/api'
