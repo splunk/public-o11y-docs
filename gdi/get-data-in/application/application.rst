@@ -29,7 +29,12 @@ You can send metrics and traces from back-end applications to Splunk Observabili
    flowchart LR
 
       accTitle: Back-end instrumentation diagram
-      accDescr: OpenTelemetry instrumentation encompasses back-end applications and serverless functions. Instrumentation sends back-end application metrics, traces, and logs to the Splunk Distribution of OpenTelemetry Collector, which sends them to Splunk APM. Instrumentation also sends back-end application metrics, traces, and logs to Splunk APM through the API. Instrumentation sends serverless function metrics, traces, and logs to Splunk APM using the API. 
+      
+      accDescr: OpenTelemetry instrumentation encompasses back-end applications and serverless functions. 
+      Instrumentation sends back-end application metrics, traces, and logs to the Splunk Distribution of 
+      OpenTelemetry Collector, which sends them to Splunk APM. Instrumentation also sends back-end application 
+      metrics, traces, and logs to Splunk APM through the API. Instrumentation sends serverless function metrics, 
+      traces, and logs to Splunk APM using the API. 
                
 
       subgraph "\nOpenTelemetry instrumentation"
