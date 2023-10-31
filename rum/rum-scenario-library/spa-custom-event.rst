@@ -55,7 +55,26 @@ Kai wants to capture metrics for like and share actions on blog posts to help Bu
 
 To create a custom event in Splunk RUM that measures likes on a blog post, Kai does the following:
 
-1. Kai creates a custom event called ``blog.likes`` to track how users are engaging with content on the Buttercup Blog. See, :ref:`rum-custom-event` for the steps they take.
+1. Kai creates a custom event called ``blog.likes`` to track how users are engaging with content on the Buttercup Blog.
+
+Here is an example of how Kai initializes the tracer and creates a custom event using the NPM package for Splunk RUM for Browser:
+
+
+
+      .. code-block:: javascript
+
+         import {trace} from '@opentelemetry/api'
+
+         const tracer = trace.getTracer('appModuleLoader');
+         const span = tracer.startSpan('test.module.load', {
+         attributes: {
+               'blog.likes': 'test.module.load'
+         }
+         });
+         // time passes
+         span.end();
+
+
 
 2. To see the metrics on the custom event they created, navigate to Tag Spotlight. Select the custom event metric they're interested in from the top filter bar.
 
