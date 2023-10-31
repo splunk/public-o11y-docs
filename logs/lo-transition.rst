@@ -95,9 +95,9 @@ Going forward, determine the best option for your organization by discussing wit
 
 Search-time processing rules
 --------------------------------------------------------------------------------------------------------------
-You cannot use search-time processing rules in the Log Observer Connect UI. Search-time rules are the application of log processing rules across historical data. See :ref:`logs-search-time-rules` for more information. Going forward, you can utilize the global time range picker in Splunk Cloud Platform dashboards to do search-time processing.
+You cannot use search-time processing rules in the Log Observer Connect UI. Search-time rules are the application of log processing rules across historical data. See :ref:`logs-search-time-rules` for more information. 
 
-Going forward, you can utilize the following methods for processing data at search time:
+Going forward, you can utilize the following methods for processing data at search time in Splunk Cloud Platform:
 
 .. list-table::
    :header-rows: 1
@@ -117,4 +117,4 @@ Going forward, you can utilize the following methods for processing data at sear
 
 Live Tail
 --------------------------------------------------------------------------------------------------------------
-The Live Tail feature of Log Observer ends in January 2024. In Splunk Cloud Platform, you can adjust the time range picker to :guilabel:`All time (real-time)` or :guilabel:`30 second window`. You must select :guilabel:`Search` again and rerun your search to see the most recent log events. For more information, see :new-page:`Select time ranges to apply to your search <https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/Search/Selecttimerangestoapply>`
+The Live Tail feature of Log Observer ends in January 2024. In Splunk Cloud Platform, you can achieve similar functionality by adjusting the time range picker to :guilabel:`All time (real-time)` or :guilabel:`30 second window`. You must select :guilabel:`Search` again and rerun your search to see the most recent log events because live events do not stream in unprompted. For more information, see :new-page:`Select time ranges to apply to your search <https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/Search/Selecttimerangestoapply>`
