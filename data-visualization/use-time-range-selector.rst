@@ -7,7 +7,7 @@ Override default time range with the Time Range Selector
 .. meta::
    :description: The Time Range selector is located at the top right of dashboards and charts, and in the Chart Options tab. By default, Splunk Infrastructure Monitoring chooses the best time range based on the characteristics of the chart's data. However, you can use the Time Range selector to override the default for all charts in a dashboard. 
 
-The Time Range selector is used through Splunk Observability Cloud. It can specify a chart's :ref:`default time range<default-time>` in the Chart Options tab. By default, Splunk Observability Cloud chooses the best time range for a chart based on the characteristics of the data that it shows. However, you can use the Time Range selector to :ref:`override the default<dashboard-time-range>` for all charts in a dashboard. The Time Range selector supports both relative and absolute time ranges.
+The time range selector is used through Splunk Observability Cloud. It can specify a chart's :ref:`default time range<default-time>` in the Chart Options tab. By default, Splunk Observability Cloud chooses the best time range for a chart or data view based on the characteristics of the data that it shows. However, you can use the time range selector to :ref:`override the default<dashboard-time-range>` for all charts in a dashboard. The time range selector supports both relative and absolute time ranges.
 
 
 Specify a relative time range
@@ -48,11 +48,11 @@ Specify an absolute time range
 
 You can also view data from an absolute time window with a defined start and end time. Select the Time Range selector and choose :guilabel:`Custom` from the menu. A custom Time Range selector appears. Choose the starting and ending date and time of your desired time range, then click :guilabel:`Apply` to show data for that time range only.
 
-Time zone abbreviations are based on the user's browser locale for both the time stamp and time range selections. If you are sharing time stamps with team members across locales, take care to avoid confusion over time zone abbreviations. Using ISO with UTC offsets is the preferred method. Preferred absolute time formats include:
+Time zone abbreviations are based on the user's browser locale for both the time stamp and time range selections. If you are sharing time stamps with team members across locales, take care to avoid confusion over time zone abbreviations, which may have ambiguous meanings depending on the language. For example, CST is UTC -6:00 in US English, while it is UTC +9:30 in Australian English. Using ISO with UTC offsets is the preferred method. Preferred absolute time formats include:
 
 - 18 Sep 10:18 to 19 Sep 10:18
 - If the same date: 10:18 to 10:20
-- If you copied an ISO range: 2023-10-15T04:19:00.000-07:00 to 2023-10-16T16:19:00.000-07:00
+- If you copied an ISO range, 2023-10-15T04:19:00.000-07:00 to 2023-10-16T16:19:00.000-07:00
 
 .. _panning:
 
