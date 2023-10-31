@@ -124,7 +124,7 @@ Splunk Cloud Platform maintenance windows
 ------------------------------------------------------------------------------------------
 During a Splunk Cloud Platform maintenance window, users cannot log in to Splunk Observability Cloud with Splunk Cloud Platform for SSO. Login can be impacted from 2 to 5 minutes during Splunk Cloud Platform maintenance windows. Users can log into Splunk Observability Cloud again as soon as the maintenance window is completed. 
 
-During a maintenance window, Splunk Cloud Platform displays a banner indicating the start and end time of the window. If a user is already logged in to Splunk Observability Cloud at the start of a maintenance window, the user is not impacted directly. However, access to Splunk Cloud Platform logs in Log Observer are unavailable during the maintenance window. You can continue working in Splunk Observability Cloud. 
+During a maintenance window, Splunk Cloud Platform displays a banner indicating the start and end time of the window. If a user is already logged in to Splunk Observability Cloud at the start of a maintenance window, the user is not impacted directly. However, access to Splunk Cloud Platform logs in Log Observer Connect are unavailable during the maintenance window. You can continue working in Splunk Observability Cloud. 
 
 Typically, there are two planned maintenance windows per month for a Splunk Cloud Platform instance. Customers can determine the scheduling of maintenance windows and usually set them up to occur during the customer's downtime. Talk to your Splunk Cloud Platform administrator about the planned maintenance windows.
 
