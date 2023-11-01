@@ -183,7 +183,7 @@ Define a startup function and decorate the assembly with it. The startup functio
             var tp = Sdk.CreateTracerProviderBuilder()
                 // Use Add[instrumentation-name]Instrumentation to instrument missing services.
                 // Use Nuget to find different instrumentation libraries
-               .AddHttpClientInstrumentation()
+               .AddHttpClientInstrumentation(opts => opts.Filter = req => Activity.Current?.Parent != null)
                .AddAspNetCoreInstrumentation()
                // Use AddSource to add your custom DiagnosticSource source names
                //.AddSource("My.Source.Name")
