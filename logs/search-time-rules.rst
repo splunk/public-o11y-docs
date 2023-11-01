@@ -15,7 +15,7 @@ After the transition to Log Observer Connect
 =============================================================================
 You cannot use search-time processing rules in the Log Observer Connect UI. 
 
-Going forward, you can utilize the following methods for processing data at search time in Splunk Cloud Platform:
+Going forward, you can utilize the following methods for processing data at search time in the Splunk platform:
 
 .. list-table::
    :header-rows: 1

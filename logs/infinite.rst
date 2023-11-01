@@ -17,7 +17,7 @@ After the transition to Log Observer Connect
 =============================================================================
 You can continue using existing infinite logging rules. You can turn your existing infinite logging rules off and on. However, you cannot create new infinite logging rules or edit existing rules.
 
-Going forward, determine the best option for your organization by discussing with your Splunk representative the following types of data storage you can use in Splunk Cloud Platform instead of infinite logging rules:
+Going forward, determine the best option for your organization by discussing with your Splunk representative the following types of data storage you can use in the Splunk platform instead of infinite logging rules:
 
 .. list-table::
    :header-rows: 1
