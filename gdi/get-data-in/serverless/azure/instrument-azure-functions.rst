@@ -181,9 +181,11 @@ Define a startup function and decorate the assembly with it. The startup functio
             ArgumentNullException.ThrowIfNull(realm, "SPLUNK_REALM");
 
             var tp = Sdk.CreateTracerProviderBuilder()
-                // Use Add[instrumentation-name]Instrumentation to instrument missing services.
+                // Use Add[instrumentation-name]Instrumentation to instrument missing services
                 // Use Nuget to find different instrumentation libraries
-               .AddHttpClientInstrumentation(opts => opts.Filter = req => Activity.Current?.Parent != null)
+               .AddHttpClientInstrumentation(opts => 
+                  // This filter prevents background (parent-less) http client activity
+                  opts.Filter = req => Activity.Current?.Parent != null)
                .AddAspNetCoreInstrumentation()
                // Use AddSource to add your custom DiagnosticSource source names
                //.AddSource("My.Source.Name")
