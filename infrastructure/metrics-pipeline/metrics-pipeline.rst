@@ -1,9 +1,9 @@
 
 .. _metrics-pipeline:
 
-**************************************************************************
-Metrics pipeline management in Splunk Infrastructure Monitoring 
-**************************************************************************
+*******************************************************************************
+Metrics pipeline management in Splunk Infrastructure Monitoring
+*******************************************************************************
 
 .. meta::
     :description: Metrics pipeline management documentation.
@@ -18,19 +18,24 @@ Metrics pipeline management in Splunk Infrastructure Monitoring
     :hidden:
 
     metrics-pipeline-intro
-    use-metrics-pipeline
+    use-MTS-data-routing-pipeline
+    use-MTS-aggregation-pipeline
+    delete-metric-ruleset
+    view-metrics-usage-list
     data-dropping-impact
     metrics-usage-report
-    aggregate-drop-use-case
+    pipeline-management-use-cases
     related-metrics
-
 
 Use the following links to navigate the documentation set for metrics pipeline management:
 
     * :ref:`metrics-pipeline-intro`
-    * :ref:`use-metrics-pipeline`
+    * :ref:`use-MTS-data-routing-pipeline`
+    * :ref:`use-MTS-aggregation-pipeline`
+    * :ref:`delete-metric-ruleset`
+    * :ref:`view-metrics-usage-list`
     * :ref:`data-dropping-impact`
     * :ref:`metrics-usage-report`
-    * :ref:`aggregate-drop-use-case`
+    * :ref:`pipeline-management-use-cases`
     * :ref:`org-metrics-metrics-pipeline`
 

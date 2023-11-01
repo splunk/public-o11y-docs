@@ -5,9 +5,7 @@
 Related org metrics for metrics pipeline management
 ************************************************************************
 
-
 Splunk Infrastructure Monitoring provides some metrics to help you measure your usage of metrics pipeline management and how it affects your subscription. For more information on how to view these metrics, see :new-page-ref:`access-org-metrics`.
-
 
 Data point ingestion metrics
 ----------------------------------------
