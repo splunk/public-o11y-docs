@@ -8,14 +8,18 @@ Splunk Log Observer transition
 .. meta::
   :description: Discover how you can transition from Splunk Log Observer to Splunk Log Observer Connect where you can ingest more logs from a wider variety of data sources, use a more advanced logs pipeline, and expand into security logging by the January 2024 deadline.
 
-All Splunk Log Observer customers must transition to Splunk Log Observer Connect by January 2024. Log Observer customers can now use Splunk Cloud Platform and Splunk Enterprise for logging and data analytics. Using the Splunk platform allows you to ingest more logs from a wider variety of data sources, use a more advanced logs pipeline, and use logging for security use cases. You can still use Splunk Observability Cloud for observability. Migrating from Log Observer to the Splunk platform for logging does not have any impact on your ability to use Splunk Observability Cloud to correlate logs, metrics, and traces.
+
+All Splunk Log Observer customers, who are sending log data to Splunk Observability cloud today,  must transition to using Splunk Cloud Platform or Splunk Enterprise as the central platform for logs by the end of December 2023. Splunk Observability Cloud will continue to support Log Observer functionality and user experience with Splunk Log Observer Connect as a bridge between Splunk Observability Cloud and Splunk Cloud Platform. Transitioning to the Splunk platform, whether it is Splunk Cloud Platform or Splunk Enterprise, as the back-end for log storage does not impact your ability to use Splunk Observability Cloud to correlate logs, metrics, and traces.
+
+Using the Splunk platform allows you to ingest more logs from a wider variety of data sources, use a more advanced logs pipeline, and use logging for security use cases. 
+
 
 How to transition to Log Observer Connect
 ==============================================================================================================
 
 To transition to Splunk Log Observer Connect, you must take the following actions:
 
-1. Reach out to your Splunk regional sales manager to request assistance with the transition. The deadline is October 31, 2023.
+1. Reach out to your Splunk regional sales manager to request assistance with the transition. The deadline is November 15, 2023.
 
 2. Connect your Splunk platform instance to your Log Observer Connect instance. See :ref:`logs-scp` or :ref:`logs-set-up-logconnect`, depending on the type of Splunk platform deployment you have.
 
