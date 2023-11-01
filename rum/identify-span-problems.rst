@@ -1,7 +1,7 @@
 .. _rum-identify-span-problems:
 
 *****************************************************************
-Scenario: Kai identifies errors in browser spans 
+Identify errors in browser spans 
 *****************************************************************
 
 .. meta::
@@ -9,36 +9,30 @@ Scenario: Kai identifies errors in browser spans
 
 The following scenario features Buttercup Industries, a fictitious e-commerce company.
 
-About this scenario
-================================
-
-Kai, a site reliability engineer at Buttercup Industries, uses Splunk RUM for Browser to monitor errors. In this scenario, you can learn about the types of errors Kai looks for in their data at Buttercup Industries. 
 
 Errors in Splunk RUM  
 ========================================
 
-On the session details page, Kai reviews their span data to identify errors and other problems like long resource response times.
-
-Splunk RUM for Browser captures all HTTP status codes and Kai can see all XHR and Fetch requests in Tag Spotlight. The Endpoints Errors metric counts 5xx errors and 4xx errors. Each span in Splunk RUM contains tags and errors are defined as a span with an attribute of:
+Splunk RUM for Browser captures all HTTP status codes and you can see all XMLHttpRequest (XHR) objects and fetch requests in Tag Spotlight. The endpoints errors metric counts 5xx errors and 4xx errors. Each span in Splunk RUM contains tags and errors are defined as a span with these attributes:
 
 * ``status_code:5xx`` 
 * ``error:true`` 
 * ``status_code:4xx``
 
-The following definitions and examples walk through different types of errors Kai can look for in their data with Splunk RUM for Browser. 
+The following definitions and examples show different types of errors you can look for in their data with Splunk RUM for Browser. 
 
 JavaScript errors
 =================
 
-In Splunk RUM for Browser, there are two types of JavaScript errors, explicit JavaScript console errors and uncaught JavaScript errors like onerror events. Front-end errors are shown by page and described in terms of errors per min or errors per page load or route change.
+In Splunk RUM for Browser, there are two types of JavaScript errors, explicit JavaScript console errors and uncaught JavaScript errors, like onerror events. Front-end errors are shown by page and described in terms of errors per minute or errors per page load or route change.
 
 JavaScript console errors
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-A JavaScript console error is an explicit error. When Kai calls a ``console.error(...)`` the error surfaces and  contains a custom error message they wrote that describes the context or cause of the error. 
+A JavaScript console error is an explicit error. If the error ``console.error(...)`` surfaces and  contains a custom error message they wrote that describes the context or cause of the error. 
 
 Uncaught JavaScript errors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-An uncaught JavaScript error is an implicit error. Uncaught JavaScript errors typically don't have custom error messages. Uncaught JavaScript errors can contain important information in an unedited format like a stack trace. Both caught and uncaught JavaScript errors can contain stack traces. This example span of an uncaught error from the fictitious "my-app" walks through what fields you might see in Splunk RUM in the details view.
+An uncaught JavaScript error is an implicit error. Uncaught JavaScript errors typically don't have custom error messages. Uncaught JavaScript errors can contain important information in an unedited format like a stack trace. Both caught and uncaught JavaScript errors can contain stack traces. This example span of an uncaught error from the fictitious application shows what fields you might see in Splunk RUM in the sesion details view.
 
 ::
 
@@ -50,7 +44,7 @@ An uncaught JavaScript error is an implicit error. Uncaught JavaScript errors ty
   _sf_ua_browserVersion        87.0.4280.88
   _sf_ua_clientIP              exampleIP
   _sf_ua_osName                Linux
-  app                          my-app
+  app                          ExampleName
   component                    error
   error                        true
   error.message                Uncaught TypeError: Cannot read property 'Price' of undefined
@@ -66,17 +60,16 @@ An uncaught JavaScript error is an implicit error. Uncaught JavaScript errors ty
 Back-end errors and long resource response times
 ================================================
 
-Back-end errors can be captured for both first-party and third-party endpoints.
+Back-end errors are captured for both first-party and third-party endpoints.
 
 Resource errors
 ^^^^^^^^^^^^^^^
 
-In Splunk RUM for Browser, resource errors are explicit HTTP <method> event errors like fetch errors, AJAX errors and XHR requests. An XHR/fetch error happens when the server encounters an error. For example, if a user requested to access data on Kai's application and the data was deleted from the server. A third party resource error is when a user tries to access resource over a network and the resource is unavailable. For example, if a user on your application tries to load a JavaScript, CSS, or image resource, but it didn't load.
+In Splunk RUM for Browser, resource errors are explicit HTTP event errors like fetch errors, AJAX errors and XHR requests. An XHR/fetch error happens when the server encounters an error. For example, if a user requested to access data on an application and the data was deleted from the server. A third-party resource error is when a user tries to access resource over a network and the resource is unavailable. For example, if a user on your application tries to load a JavaScript, CSS, or image resource, but it didn't load.
 
 Resource response time
 ^^^^^^^^^^^^^^^^^^^^^^
-
-Monitor the performance of endpoints with RUM to identify spikes in behavior like slow resource response.
+Splunk RUM for Browser monitors the performance of endpoints to identify spikes in behavior like slow resource response.
 
 Example span
 ^^^^^^^^^^^^^
@@ -117,7 +110,7 @@ This shows an example span for the fictitious "my-app" with a 404 error.
 Summary
 =================================
 
-This scenario walked through the definitions of error types in Splunk RUM for Browser. To learn more about how you can optimize your experience with Splunk Observability Cloud, see:  
+To learn more about how you can optimize your experience with Splunk Observability Cloud, see:  
 
 .. list-table::
    :header-rows: 1
@@ -137,4 +130,4 @@ This scenario walked through the definitions of error types in Splunk RUM for Br
        * :ref:`rum-custom-event`
        * :ref:`rum-alerts`
        * :ref:`Track service performance using dashboards in Splunk APM<apm-dashboards>`
-       * 
+
