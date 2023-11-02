@@ -52,6 +52,7 @@ To prevent custom properties from being deleted, you can follow these steps when
 
     * To find a custom property using the Metadata Catalog, see :ref:`search-edit-metadata`.
         .. _note:: The Metadata Catalog doesn't distinguish between dimensions and properties when returning search results.
+            
     * To retrieve a list of custom properties using the API, see the :new-page:`GET endpoint for the Metrics Metadata API <https://dev.splunk.com/observability/reference/api/metrics_metadata/latest#endpoint-retrieve-dimensions-query>`.
 
 #. Assign any custom property you want to keep to the new aggregated metrics.
