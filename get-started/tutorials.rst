@@ -1,7 +1,7 @@
 .. _im-tutorials:
 
 ************************************************************
-Splunk Infrastructure Monitoring tutorials
+Splunk Observability Cloud tutorials
 ************************************************************
 
 .. meta::
@@ -14,9 +14,9 @@ Splunk Infrastructure Monitoring tutorials
     tutorials/k8s-infrastructure-tutorial/about-k8s-tutorial
     tutorials/aws-tutorial/about-aws-tutorial    
 
-Read the following tutorials to learn how to use Splunk Infrastructure Monitoring.
+Read the following tutorials to learn how to understand and use Splunk Observability Cloud.
 
 * :ref:`about-k8s-tutorial`
 * :ref:`about-aws-tutorial`
 
-For an overview of an end-to-end experience, see :ref:`get-started-scenario`.
+For specific scenarios and use cases, see :ref:`scenario-landing`.
