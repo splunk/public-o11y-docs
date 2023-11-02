@@ -13,6 +13,7 @@ Splunk OpenTelemetry Zero Config Auto Instrumentation for Node.js
     :hidden:
 
     Kubernetes <auto-instrumentation-nodejs-k8s>
+    Linux <auto-instrumentation-nodejs-linux>
 
 Splunk OpenTelemetry (OTel) Zero Configuration Auto Instrumentation for Node.js automatically instruments supported Node.js libraries in running applications to capture distributed traces. 
 The Splunk OpenTelemetry Collector receives the distributed traces and forwards them to Splunk Application Performance Monitoring (APM) in Splunk Observability Cloud. 
@@ -55,3 +56,4 @@ In both cases you must restart the applications to start instrumentation.
 Follow instructions from the following list:
 
 - :ref:`Install Zero Configuration Auto Instrumentation on Kubernetes <auto-instrumentation-nodejs-k8s>`
+- :ref:`Install Zero Configuration Auto Instrumentation on Linux <auto-instrumentation-nodejs-linux>`

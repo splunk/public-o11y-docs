@@ -1,4 +1,4 @@
-.. include:: /_includes/gdi/zero-config-preview-header.rst
+
 
 .. _zero-config:
 
@@ -62,7 +62,7 @@ Zero Configuration Auto Instrumentation is available for Java, .NET, and NodeJS 
    :width: 60%
    :widths: 15 15 15 15
 
-   * - Application
+   * - Application/language
      - Supported for Linux
      - Supported for Windows
      - Supported for Kubernetes
@@ -71,13 +71,13 @@ Zero Configuration Auto Instrumentation is available for Java, .NET, and NodeJS 
      - No
      - Yes
    * - .NET
-     - Yes
+     - No
      - Yes
      - No
    * - NodeJS
+     - Preview
      - No
-     - No
-     - Yes
+     - Preview
 
 To get started with automatic instrumentation for your applications, see the following pages:
 
