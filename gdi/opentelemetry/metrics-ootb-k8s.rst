@@ -12,8 +12,6 @@ The following sections list the collected metrics when you use the default confi
 
 The Collector processes collected data as configured in your pipelines. Therefore, metrics that are imported by receivers might be excluded further into the pipeline by other components. For instance, the :ref:`signalfx-exporter`, included in the default Collector configuration, drops certain metrics and applies :ref:`translation rules <exclusion-rules>` that impact the metrics the Collector sends to Splunk Observability Cloud.    
 
-.. caution:: Check the :strong:`Kept?` column in the tables below to see if the metric is finally sent to Splunk Observability Cloud after going through the Collector pipelines. 
-
 Learn more about the Collector's configuration and data processing at:
 
 * :ref:`otel-configuration-ootb`
@@ -26,6 +24,12 @@ Learn more about the Collector's configuration and data processing at:
 Container level metrics and dimensions
 ============================================================================
 
+.. caution:: 
+  
+  The :strong:`Translated?` column indicates whether the metric is translated by the SignalFx exporter.
+  
+  The :strong:`Exported to Observability?` column indicates if the metric is finally sent to Splunk Observability Cloud after going through the Collector pipelines. 
+
 .. list-table::
   :widths: 25 25 30 10 10
   :width: 100%
@@ -34,14 +38,14 @@ Container level metrics and dimensions
   * - Metric name
     - Metric description
     - Attributes
-    - Before translation?
-    - Sent to O11y?
+    - Translated?
+    - Exported to Observability?
 
   * - ``container.cpu.utilization``
     - Container CPU utilization
     - :ref:`ootb-metrics-k8s-attributes`
-    - No
     - Yes
+    - No
 
   * - ``container.cpu.time``
     - Container CPU time
@@ -477,6 +481,27 @@ Volume level metrics and dimensions
     - The number of capacity bytes in the volume
     - :ref:`ootb-metrics-k8s-attributes`
     - **Yes**
+
+.. _ootb-metrics-k8s-control-plane:
+
+Control plane metrics
+============================================================================
+
+To see the control plane metrics the Collector provides, see:
+
+* :ref:`CoreDNS <coredns>`
+* :ref:`etcd`
+* :ref:`Kubernetes controller manager <kube-controller-manager>`
+* :ref:`Kubernetes API server <kubernetes-apiserver>`
+* :ref:`Kubernetes proxy <kubernetes-proxy>`
+* :ref:`Kubernetes scheduler <kubernetes-scheduler>`
+
+The following distributions support control plane metrics configuration:
+
+* Kubernetes 1.22 (kops created)
+* OpenShift version 4.9
+
+For information about control plane metrics, see :ref:`otel-kubernetes-config-advanced-control-plane`.
 
 .. _ootb-metrics-k8s-attributes:
 
