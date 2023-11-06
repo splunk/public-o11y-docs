@@ -9,8 +9,6 @@ Zero Configuration Automatic Instrumentation for Kubernetes Java applications
 
 You can use the OTel Collector with an upstream Operator in a Kubernetes environment to automatically instrument your Java applications. 
 
-For more information about the Kubernetes operator, see :ref:`auto-instrumentation-operator`.
-
 Requirements
 ================================================================
 
