@@ -60,7 +60,7 @@ To open Trace Analyzer, select :guilabel:`Traces` in Splunk APM and select :guil
 
 To explore your trace data, use the following controls, which are numbered as callouts in the image. Additional details for each callout follow the image:
 
-..  image:: /_images/apm/trace-analyzer/TraceAnalyzerControls.png
+..  image:: /_images/apm/trace-analyzer/TraceAnalyzerControls_sampling.png
     :width: 95%
     :alt: Elements of the Trace Analyzer user interface
 
@@ -101,34 +101,6 @@ The resulting :guilabel:`Group Metrics` tab shows a breakdown of the top 100 val
 
 You can order both tables by the number of matching traces.
 
-When to use Trace Analyzer
-=============================================
-
-Splunk Observability Cloud provides several tools for exploring application monitoring data. Trace Analyzer is suited to scenarios where high cardinality, high granularity searches and explorations are required for researching unknown or new issues. See :ref:`guideline-cardinality`.
-
-The following table presents what each APM tool is best suited for:
-
-.. list-table::
-   :header-rows: 1
-   :widths: 33 33 33
-   :width: 100
-
-   * - Trace Analyzer
-     - Tag Spotlight / Service map
-     - Monitoring MetricSets
-   
-   * - Identify patterns for unindexed tags
-     - Surface trends for indexed tags
-     - Get alerts on service degradation
-
-   * - Trace-level analysis
-     - Service-level analysis
-     - Workflow and service level analysis
-
-   * - High cardinality
-     - Medium cardinality
-     - Low cardinality
-
 Trace Analyzer trace limits
 ==================================
 
@@ -139,7 +111,6 @@ Within the Trace Analyzer interface, there are three different display limits. T
 ..  image:: /_images/apm/trace-analyzer/TraceAnalyzerLimit.png
     :width: 95%
     :alt: Trace limit in trace list
-
 
 Learn more
 =====================
