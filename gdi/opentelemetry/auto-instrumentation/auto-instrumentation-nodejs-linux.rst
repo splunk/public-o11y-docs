@@ -16,30 +16,59 @@ Zero Configuration Auto Instrumentation for Linux activates automatic instrument
 Prerequisites
 =======================================
 
-.. include:: /_includes/gdi/zero-conf-reqs.rst
+- Automatic instrumentation is only available for applications using supported Node.js libraries. See :ref:`nodes-requirements`. If your application isn't supported, manually instrument your service to generate trace data. See :ref:`nodejs-manual-instrumentation` .
 
-- You must have ``npm`` installed.
+- :ref:`nodejs-otel-requirements`.
+
+- Your Splunk Observability Cloud realm and access token.
+
+   - To get an access token, see :ref:`admin-api-access-tokens`.
+
+   - To find the realm name of your account, open the navigation menu in Splunk Observability Cloud. Select :menuselection:`Settings`, and then select your username. The realm name appears in the :guilabel:`Organizations` section.
 
 .. _install-js-package:
 
 Install the package
 =======================================
 
-To install the package, run the Collector installer script with the ``--with-instrumentation`` option. The installer script will install the Collector and the JS agent from the Splunk Distribution of OpenTelemetry JS. The JS agent automatically loads when a JS application starts on the local machine.
+You can install the ``splunk-otel-auto-instrumentation`` package in the following ways:
 
-.. note:: 
-    By default, auto instrumentation is activated for both Java and NodeJS when using the installer script. To deactivate auto instrumentation for Java, add the ``--without-instrumentation-sdk java`` option in the installer script.
 
-Run the installer script with the ``--with-instrumentation`` option, as shown in the following example. Replace  ``<SPLUNK_REALM>`` and ``<SPLUNK_ACCESS_TOKEN>`` with your Splunk Observability Cloud realm and token, respectively.
+Using the installer script, you can install the auto instrumentation package for Node.js and activate auto instrumentation for Node.js for either all supported Node.js applications on the host or for only Node.js applications running as ``systemd`` services.
 
-    .. code-block:: bash
+.. tabs:: 
 
-        curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
-        sh /tmp/splunk-otel-collector.sh --with-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
+    .. tab:: Preload
 
-    .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option. 
+        To install the package, run the Collector installer script with the ``--with-instrumentation`` option. The installer script will install the Collector and the JS agent from the Splunk Distribution of OpenTelemetry JS. The JS agent automatically loads when a JS application starts on the local machine.
 
-Next, ensure the collector service is running and restart your Node.js application(s). See :ref:`verify-js-agent-install` and :ref:`start-restart-js-apps`. 
+        .. note:: By default, auto instrumentation is activated for both Java and Node.js when using the installer script. To deactivate auto instrumentation for Java, add the ``--without-instrumentation-sdk java`` option or ``--with-instrumentation-sdk node`` in the installer script.
+
+        Run the installer script with the ``--with-instrumentation`` option, as shown in the following example. Replace  ``<SPLUNK_REALM>`` and ``<SPLUNK_ACCESS_TOKEN>`` with your Splunk Observability Cloud realm and token, respectively.
+
+            .. code-block:: bash
+
+                curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+                sh /tmp/splunk-otel-collector.sh --with-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
+
+            .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option. 
+
+        Next, ensure the collector service is running and restart your Node.js application(s). See :ref:`verify-js-agent-install` and :ref:`start-restart-js-apps`. 
+
+    .. tab:: ``systemd``
+
+        Run the installer script with the ``--with-systemd-instrumentation`` option, as shown in the following example. Replace  ``<SPLUNK_REALM>`` and ``<SPLUNK_ACCESS_TOKEN>`` with your Splunk Observability Cloud realm and token, respectively.
+            
+            .. code-block:: bash
+
+                curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+                sudo sh /tmp/splunk-otel-collector.sh --with-systemd-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
+            
+            The ``systemd`` instrumentation automatically adds environment variables to ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
+
+            .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option. 
+
+        Next, ensure the collector service is running and restart your Node.js application(s). See :ref:`verify-js-agent-install` and :ref:`start-restart-js-apps`. 
 
 .. _verify-js-agent-install:
 

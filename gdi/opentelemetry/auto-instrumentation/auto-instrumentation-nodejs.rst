@@ -29,7 +29,15 @@ This feature provides the following benefits:
         <h2>Prerequisites</h2>
     </embed>
 
-.. include:: /_includes/gdi/zero-conf-reqs.rst
+- Automatic instrumentation is only available for applications using supported Node.js libraries. See :ref:`nodes-requirements`. If your application isn't supported, manually instrument your service to generate trace data. See :ref:`nodejs-manual-instrumentation` .
+
+- :ref:`nodejs-otel-requirements`.
+
+- Your Splunk Observability Cloud realm and access token.
+
+   - To get an access token, see :ref:`admin-api-access-tokens`.
+
+   - To find the realm name of your account, open the navigation menu in Splunk Observability Cloud. Select :menuselection:`Settings`, and then select your username. The realm name appears in the :guilabel:`Organizations` section.
 
 .. raw:: html
 
@@ -41,9 +49,9 @@ Zero Config Auto Instrumentation is available on Kubernetes and Linux using Splu
 When you activate Zero Config, Splunk OpenTelemetry JS automatically instruments all Node.js applications 
 running in the target environment. 
 
-On Linux, the target environment is the entire Linux host, so the JS agent instruments every Node.js application on the host.
+On Linux, the target environment is the entire Linux host, so the Node.js agent instruments every Node.js application on the host.
 
-On Kubernetes, the target environment is the deployment or pod where you activated instrumentation. The JS agent instruments every Node.js application within the pod or deployment.
+On Kubernetes, the target environment is the deployment or pod where you activated instrumentation. The Node.js agent instruments every Node.js application within the pod or deployment.
 
 In both cases you must restart the applications to start instrumentation.
 

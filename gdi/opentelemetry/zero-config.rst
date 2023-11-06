@@ -12,10 +12,9 @@ Splunk OpenTelemetry Zero Configuration Auto Instrumentation
 .. toctree::
    :hidden:
 
-   Kubernetes Operator <auto-instrumentation/auto-instrumentation-operator>
    Java <auto-instrumentation/auto-instrumentation-java>
    .NET <auto-instrumentation/auto-instrumentation-dotnet>
-   NodeJS <auto-instrumentation/auto-instrumentation-nodejs>
+   Node.js <auto-instrumentation/auto-instrumentation-nodejs>
 
 Splunk OpenTelemetry Zero Configuration Auto Instrumentation automatically instruments your back-end applications and services to capture and report distributed traces and metrics to the Splunk Distribution of OpenTelemetry Collector, and then on to Splunk APM.
 
@@ -25,12 +24,11 @@ The following diagram demonstrates the process of manually instrumenting your ap
 
    flowchart TB
       subgraph "Manual instrumentation"
-      A["Install the Splunk <br> Distribution of
-      OpenTelemetry Collector \n agent for your integration"]
+      A["Connect to your cloud environment"]
 
-      B["Follow guided setup instructions \n to configure your environment"]
+      C["Deploy the Splunk Distribution of \n OpenTelemetry Collector in your environment"]
 
-      C["Deploy the Splunk Distribution of \n OpenTelemetry Collector"]
+      B["Deploy language-specific components \n to each service"]
 
       D["Run your application"]
 
@@ -41,9 +39,10 @@ The following diagram demonstrates the process of manually instrumenting your ap
 
    flowchart TB
       subgraph "Zero configuration auto instrumentation"
-      X["Install the zero-config package \n for your application"]
-      Y["Ensure the Splunk Distribution of \nOpenTelemetry Collector
-      is running"]
+      X["Connect to your cloud environment"]
+
+      Y["Deploy the Splunk Distribution \n of OpenTelemetry Collector in your environment]
+
       Z["Run your application"]
       
       X --> Y --> Z
@@ -55,7 +54,7 @@ The Zero Configuration packages provide the following benefits:
 - You can start streaming traces and monitor distributed applications with Splunk APM in minutes.
 - You don't need to configure or instrument your back-end services or applications before deployment.
 
-Zero Configuration Auto Instrumentation is available for Java, .NET, and NodeJS applications.
+Zero Configuration Auto Instrumentation is available for Java, .NET, and Node.js applications.
 
 .. list-table::
    :header-rows: 1
@@ -74,7 +73,7 @@ Zero Configuration Auto Instrumentation is available for Java, .NET, and NodeJS 
      - No
      - Yes
      - No
-   * - NodeJS
+   * - Node.js
      - Preview
      - No
      - Preview
@@ -84,7 +83,4 @@ To get started with automatic instrumentation for your applications, see the fol
 - :ref:`auto-instrumentation-java`
 - :ref:`auto-instrumentation-dotnet`
 - :ref:`auto-instrumentation-nodejs`
-
-.. note:: You can also install the Collector with the Kubernetes Operator for Auto Instrumentation. See :ref:`Install the Collector with the Kubernetes Operator <auto-instrumentation-operator>` for more information.
-
 
