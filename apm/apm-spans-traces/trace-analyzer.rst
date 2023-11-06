@@ -17,10 +17,46 @@ Examples of questions that Trace Analyzer helps you answer include:
 -  For a given issue, which customers experience the highest error rate?
 -  How to locate error spikes in my trace data?
 
-To open Trace Analyzer, select :guilabel:`Traces` in Splunk APM and select :guilabel:`Switch to Trace Analyzer`. To switch back to the classic Traces view, select :guilabel:`Switch to Classic View`. See :ref:`trace-search` for more info about the classic Traces view.
+When to use Trace Analyzer
+=============================================
+
+Splunk Observability Cloud provides several tools for exploring application monitoring data. Trace Analyzer is suited to scenarios where you have high-cardinality, high-granularity searches and explorations to research unknown or new issues. See :ref:`guideline-cardinality`.
+
+The following table presents what each APM tool is best suited for:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 20 20
+   :width: 100
+
+   * - APM tool
+     - Scenario
+     - Analysis level
+     - Cardinality 
+     - Documentation
+
+   * - Trace Analyzer
+     - Identify patterns for unindexed tags
+     - Trace-level analysis
+     - High cardinality
+     - 
+
+   * - Tag Spotlight and service map
+     - Surface trends for indexed tags
+     - Service-level analysis
+     - Medium cardinality
+     - :ref:`apm-tag-spotlight`
+
+   * - Monitoring MetricSets
+     - Get alerts on service degradation
+     - Workflow and service-level analysis
+     - Low cardinality
+     - :ref:`cmms`
 
 Explore your trace data
 =========================
+
+To open Trace Analyzer, select :guilabel:`Traces` in Splunk APM and select :guilabel:`Switch to Trace Analyzer`. To switch back to the classic traces view, select :guilabel:`Switch to Classic View`. See :ref:`trace-search` for more info about the classic traces view.
 
 To explore your trace data, use the following controls, which are numbered as callouts in the image. Additional details for each callout follow the image:
 
@@ -37,6 +73,9 @@ To explore your trace data, use the following controls, which are numbered as ca
 #. Use the table of traces to view trace details or group metrics based on a tag. 
 
 Trace Analyzer searches all currently retained traces; see :ref:`apm-data-retention` to learn more about the default trace retention period.
+
+Explore trace and error counts
+-------------------------------
 
 Trace Analyzer shows total traces and traces with errors in a stacked bars chart. Select and drag over the bars in the chart to select a specific period within the available time frame. Select :guilabel:`Filter to selection` to update the time range filter.
 
