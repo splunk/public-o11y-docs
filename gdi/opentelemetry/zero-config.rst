@@ -39,9 +39,10 @@ The following diagram demonstrates the process of manually instrumenting your ap
 
    flowchart TB
       subgraph "Zero configuration auto instrumentation"
+
       X["Connect to your cloud environment"]
 
-      Y["Deploy the Splunk Distribution \n of OpenTelemetry Collector in your environment]
+      Y["Deploy the Splunk Distribution \n of OpenTelemetry Collector in your environment"]
 
       Z["Run your application"]
       
