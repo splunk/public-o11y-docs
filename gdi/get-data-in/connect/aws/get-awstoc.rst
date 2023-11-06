@@ -127,7 +127,7 @@ CloudWatch Metric Streams supports filtering by namespace and metric name but do
 
 .. caution:: Splunk is not responsible for data availability, and it can take up to several minutes or longer, depending on your configuration, from the time you connect until you start seeing valid data from your account.
 
-By default, Splunk Observability Cloud brings in data from all supported AWS services associated with your account. See :ref:` Supported integrations in Splunk Observability Cloud <aws-integrations>`.
+By default, Splunk Observability Cloud brings in data from all supported AWS services associated with your account. See :ref:`Supported integrations in Splunk Observability Cloud <aws-integrations>`.
 
 To limit the amount of data to import, see :ref:`specify-data-metadata`.  
 
@@ -178,7 +178,7 @@ Splunk Observability Cloud also offers secured connectivity with AWS. For more i
 .. raw:: html
 
   <embed>
-    <h2>Next steps<a name="after-aws-integration" class="headerlink" href="#after-aws-integration" title="Permalink to this headline">¶</a></h2>
+    <h2>See also<a name="after-aws-integration" class="headerlink" href="#after-aws-integration" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 * See :ref:`Leverage data from integration with AWS <aws-post-install>` ffor an overview of what you can do after you connect Splunk Observability Cloud to AWS.
