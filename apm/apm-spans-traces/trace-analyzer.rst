@@ -18,28 +18,6 @@ The following examples are questions that Trace Analyzer can help you answer:
 -  When and where are customers experiencing slowness? 
 -  How many customers are experiencing slowness?
 
-To open Trace Analyzer, select :guilabel:`Traces` in Splunk APM and select :guilabel:`Switch to Trace Analyzer`. To switch back to the classic traces view, select :guilabel:`Switch to Classic View`. See :ref:`trace-search` for more info about the classic traces view.
-
-Explore your trace data
-=========================
-
-To explore your trace data, use the following controls, which are numbered as callouts in the image. Additional details for each callout follow the image:
-
-..  image:: /_images/apm/trace-analyzer/TraceAnalyzerControls+duration.png
-    :width: 95%
-    :alt: Elements of the Trace Analyzer user interface, described in the list after this image.
-
-#. Use the filter bar to filter by time range, environment, workflow, services, and tags.
-#. Use the trace view selection to select trace and error counts or duration in the chart.
-#. Use the minimum and maximum trace duration to refine the traces that are included by their duration.
-#. Use the sample ratio to select all traces or 10% of traces. 
-#. Use the :guilabel:`Errors Only` switch to show only traces with errors.
-#. Use the search to search for a trace by its ID.
-#. Use the real-time chart to view the count of total traces with error or a trace duration heatmap depending on your selections.
-#. Use the table of traces to view trace details or group metrics based on a tag. 
-
-Trace Analyzer searches all currently retained traces. See :ref:`apm-data-retention` to learn more about the default trace retention period.
-
 When to use Trace Analyzer
 =============================================
 
@@ -76,6 +54,27 @@ The following table presents what each APM tool is best suited for:
      - Low cardinality
      - :ref:`cmms`
 
+Explore your trace data
+=========================
+
+To open Trace Analyzer, select :guilabel:`Traces` in Splunk APM and select :guilabel:`Switch to Trace Analyzer`. To switch back to the classic traces view, select :guilabel:`Switch to Classic View`. See :ref:`trace-search` for more info about the classic traces view.
+
+To explore your trace data, use the following controls, which are numbered as callouts in the image. Additional details for each callout follow the image:
+
+..  image:: /_images/apm/trace-analyzer/TraceAnalyzerControls+duration.png
+    :width: 95%
+    :alt: Elements of the Trace Analyzer user interface, described in the list after this image.
+
+#. Use the filter bar to filter by time range, environment, workflow, services, and tags.
+#. Use the trace view selection to select trace and error counts or duration in the chart.
+#. Use the minimum and maximum trace duration to refine the traces that are included by their duration.
+#. Use the sample ratio to select all traces or 10% of traces. 
+#. Use the :guilabel:`Errors Only` switch to show only traces with errors.
+#. Use the search to search for a trace by its ID.
+#. Use the real-time chart to view the count of total traces with error or a trace duration heatmap depending on your selections.
+#. Use the table of traces to view trace details or group metrics based on a tag. 
+
+Trace Analyzer searches all currently retained traces. See :ref:`apm-data-retention` to learn more about the default trace retention period.
 
 Explore trace and error counts
 -------------------------------
