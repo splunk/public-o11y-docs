@@ -20,11 +20,13 @@ Metrics pipeline management in Splunk Infrastructure Monitoring
     metrics-pipeline-intro
     use-MTS-data-routing-pipeline
     use-MTS-aggregation-pipeline
+    use-metrics-pipeline
     delete-metric-ruleset
     view-metrics-usage-list
     data-dropping-impact
     metrics-usage-report
     pipeline-management-use-cases
+    aggregate-drop-use-case
     related-metrics
 
 Use the following links to navigate the documentation set for metrics pipeline management:

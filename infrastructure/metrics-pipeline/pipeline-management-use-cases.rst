@@ -72,10 +72,8 @@ creating a more focused monitoring experience for their team while minimizing st
 Learn more
 ===============================================================================
 
-To learn more about MTS aggregation, see :ref:`selecting-MTS-aggregation`.
+To learn more about MTS aggregation, including how to create aggregation rules, see :ref:`use-MTS-aggregation-pipeline`.
 
 To learn more about considerations for routing data to :guilabel:`Dropped`, see :ref:`data-dropping-impact`.
 
 To learn more about the metrics usage report, see :ref:`metrics-usage-report`.
-
-For more information on how to create aggregation rules, see :ref:`use-MTS-aggregation-pipeline`.

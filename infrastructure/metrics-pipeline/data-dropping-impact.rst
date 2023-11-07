@@ -15,14 +15,17 @@ Impact and benefits of dropping data
 
 |hr|
 
-When you create or update rules for your metric ingest, you can drop unaggregated raw data to discard metric time series (MTS) you don't want to ingest or monitor in Splunk Observability Cloud. You can also drop a metric without adding an aggregation rule. To learn more, see :ref:`data-dropping`.
+When you update data routing for metric time series (MTS) associated with a metric, you can discard MTS
+you don't want to ingest or monitor in Splunk Observability Cloud. To learn more, see :ref:`use-MTS-data-routing-pipeline`.
 
-.. note:: You must be an Admin to drop data.
+.. note:: You must have the Admin or Power role to drop MTS data.
 
-Considerations when dropping data
-======================================
+.. _considerations-drop-MTS:
 
-Before you decide to drop unaggregated raw data for your metric, consider the following impacts:
+Considerations for dropping MTS
+===============================================================================
+
+Before you decide to drop raw incoming MTS for a metric, consider the following impacts:
 
 - You can only drop new incoming data. Data dropping has no effect on existing MTS.
 - You can't recover dropped data.
@@ -38,7 +41,7 @@ Before you decide to drop unaggregated raw data for your metric, consider the fo
 .. _avoid-empty-charts-detectors:
 
 Avoid empty charts and detectors when dropping data
-------------------------------------------------------------
+===============================================================================
 
 To prevent charts and detectors from showing no data, you can follow these steps when updating data routing:
 

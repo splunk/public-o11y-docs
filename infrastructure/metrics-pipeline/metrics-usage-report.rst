@@ -5,7 +5,6 @@
 Understand your metrics usage with metrics usage report
 ************************************************************************
 
-
 .. meta::
     :description: Learn about the metrics usage report and how to leverage it for metrics volume optimization.
 
@@ -31,10 +30,7 @@ Report columns
 
 For each metric in the report, you see the following columns:
 
-Metric identifiers
---------------------------------
-
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 20 80
 

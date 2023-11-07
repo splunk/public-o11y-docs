@@ -17,7 +17,7 @@ Optimizing metrics data
 .. meta::
     :description: Optimizing metrics data using metrics pipeline management in Splunk Infrastructure Monitoring
 
-The problem: too much data
+The problem: Too much data
 ===============================================================================
 
 As you expand observability to cover all you systems, you often see exponential data growth. High cardinality data

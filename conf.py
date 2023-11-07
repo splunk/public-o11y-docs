@@ -131,6 +131,14 @@ rst_prolog = """
 
    ⋮
 
+.. |add| raw:: html
+
+   +
+
+.. |delete| raw:: html
+
+   ⅹ
+   
 .. |takeshift| imagetarget:: /_images/incident-intelligence/Incident-intelligence-take-shift-icon.png
    :alt: Take shift
    :class: inline-image
