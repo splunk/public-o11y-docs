@@ -12,6 +12,6 @@ The following Java Virtual Machines (JVMs) are compatible:
 - Eclipse Adoptium/Temurin
 - IBM J9 (AlwaysOn Profiling is not supported)
 - Microsoft OpenJDK
-- Oracle OpenJDK
+- Oracle OpenJDK (AlwaysOn Profiling is not supported on Oracle JDK 8)
 - Red Hat OpenJDK
 - SAP SapMachine

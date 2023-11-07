@@ -22,7 +22,7 @@ For custom metrics support, you must use MicroMeter 1.5 and higher. See :ref:`ja
 
 .. _java-requirements:
 
-Ensure you are using compatible Java and JVM versions
+Make sure you are using compatible Java and JVM versions
 ==============================================================
 
 .. include:: /_includes/requirements/java.rst
