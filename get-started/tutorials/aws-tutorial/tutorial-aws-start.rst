@@ -1,7 +1,7 @@
-.. _get-started-aws-imm:
+.. _tutorial-aws-start:
 
 **************************************************
-Getting started
+Start here: Install the AWS integration
 **************************************************
 
 .. meta::

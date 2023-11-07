@@ -11,7 +11,8 @@ Tutorial: monitor your AWS environment in Splunk Observability Cloud
     :hidden:
     :maxdepth: 3
 
-    get-started-aws-imm
+    tutorial-aws-start
+    tutorial-aws-use
 
 Deploy the Splunk Distribution of OpenTelemetry Collector with AWS integrations and start monitoring your AWS platform using Splunk Observability Cloud.
 
@@ -42,4 +43,4 @@ Each part in this tutorial builds on the previous part. Follow the tutorial part
 
     <h3> Next step </h3>
 
-To get started with the tutorial, see :ref:`get-started-aws-imm`.
+To get started with the tutorial, see :ref:`tutorial-aws-start`.
