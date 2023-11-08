@@ -37,8 +37,10 @@ default, so the dashboard list can be extensive.
 in different groups have the same name, as they might in the case of a common function like "Service endpoint," then search displays the relevant 
 part of the dashboard list where the dashboards appear in alphabetical order.
 #. (Optional) Use the buttons next to the search field to apply either of the following search filters:
+
    * Created by me
    * Favorites
+
 #. Click on the name of the dashboard you want to link to the navigator.
 #. Click :guilabel:`Select` at the bottom right of the dashboard listing. 
 #. (Optional) Repeat steps 2 through 5 to link additional dashboards to the navigator.
