@@ -3,7 +3,7 @@
 .. _auto-instrumentation-nodejs-k8s:
 
 ************************************************************************************
-Zero Configuration Automatic Instrumentation for Kubernetes NodeJS applications
+Zero Configuration Automatic Instrumentation for Kubernetes Node.js applications
 ************************************************************************************
 
 .. meta::
