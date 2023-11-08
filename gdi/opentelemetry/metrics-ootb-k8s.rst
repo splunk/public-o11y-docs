@@ -45,7 +45,7 @@ Container level metrics and dimensions
     - Container CPU utilization
     - :ref:`ootb-metrics-k8s-attributes`
     - Yes
-    - No
+    - Yes
 
   * - ``container.cpu.time``
     - Container CPU time
