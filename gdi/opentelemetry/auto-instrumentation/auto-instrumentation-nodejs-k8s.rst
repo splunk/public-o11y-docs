@@ -26,7 +26,7 @@ Zero Config Auto Instrumentation for NodeJS requires the following components:
 1. Set up the environment for instrumentation
 ------------------------------------------------------------
 
-Create a namespace for your NodeJS applications and deploy your NodeJS applications to that namespace. 
+Create a namespace for your Node.js applications and deploy your Node.js applications to that namespace. 
 
 .. code-block:: bash
 
