@@ -9,7 +9,7 @@ Zero Configuration Automatic Instrumentation for Kubernetes Node.js applications
 .. meta::
    :description: Use the Collector with the upstream Kubernetes Operator for automatic instrumentation to easily add observability code to your application, enabling it to produce telemetry data.
 
-You can use the OTel Collector with an upstream Operator in a Kubernetes environment to automatically instrument your NodeJS applications. 
+You can use the OTel Collector with an upstream Operator in a Kubernetes environment to automatically instrument your Node.js applications. 
 
 .. note::
    For a specific example of how a customer automatically instruments a Node.js application, see :new-page:`https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/enable-operator-and-auto-instrumentation/otel-demo-nodejs.md`.
