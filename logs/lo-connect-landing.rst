@@ -15,6 +15,7 @@ Splunk Log Observer Connect
     scp
     set-up-logconnect
     LOconnect-troubleshoot
+    LOconnect-default-index
     LOconnect-scenario
     timeline
     queries
@@ -38,6 +39,8 @@ Splunk Log Observer Connect
 - :ref:`logs-set-up-logconnect`
 
 - :ref:`logs-LOconnect-troubleshoot`
+
+- :ref:`LOconnect-default-index`
 
 - :ref:`logs-LOconnect-scenario`
 
