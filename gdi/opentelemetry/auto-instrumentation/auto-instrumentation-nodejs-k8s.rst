@@ -89,7 +89,7 @@ Run the following to verify the resources are deployed correctly:
    # NAME                          AGE   ENDPOINT
    # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
 
-4. Set annotations to instrument NodeJS applications
+4. Set annotations to instrument Node.js applications
 ------------------------------------------------------------
 
 Activate and deactivate auto instrumentation for NodeJS
