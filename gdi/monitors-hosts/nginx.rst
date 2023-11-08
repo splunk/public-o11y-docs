@@ -40,6 +40,8 @@ configuration:
    receivers:
      smartagent/nginx:
        type: collectd/nginx
+       host: <host>
+       port: <port>
        ...  # Additional config
 
 Next, add the monitor to the ``service.pipelines.metrics.receivers``
