@@ -34,7 +34,7 @@ Install the package
 You can install the ``splunk-otel-auto-instrumentation`` package in the following ways:
 
 
-Using the installer script, you can install the auto instrumentation package for Node.js and activate auto instrumentation for Node.js for either all supported Node.js applications on the host or for only Node.js applications running as ``systemd`` services.
+Using the installer script, you can install the auto instrumentation package for Node.js and activate auto instrumentation for Node.js for either all supported Node.js applications on the host via the "preload" method or for only Node.js applications running as ``systemd`` services.
 
 .. tabs:: 
 
