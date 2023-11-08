@@ -8,8 +8,6 @@ Connect to AWS with Metric Streams from the Splunk console
 .. meta::
   :description: Use guided setup to connect Splunk Observability Cloud to AWS through CloudWatch using Metric Streams.
 
-.. note:: The guided setup to connect AWS with Metric Streams from the Splunk Console is being rolled out starting October 26 and will be completed by November 6. 
-
 If you have Administrator privileges for Splunk Observability Cloud and your Amazon Web Services (AWS) account, you can use the UI guided setup to create an integration to connect to AWS, and configure metrics and logs collection.
 
 Before you start

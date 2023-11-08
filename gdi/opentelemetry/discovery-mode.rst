@@ -55,6 +55,8 @@ Discovery mode supports the following host services and applications:
    * - NGINX
      - Smart Agent with collectd/nginx monitor type. See :ref:`nginx`.
 
+   * - Redis
+     - Redis receiver.
 
 
 Discover active metric sources
