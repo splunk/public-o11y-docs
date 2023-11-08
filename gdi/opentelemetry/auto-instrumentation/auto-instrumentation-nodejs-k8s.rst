@@ -105,7 +105,7 @@ To activate auto instrumentation for your NodeJS deployment, run the following c
    * The deployment pod will restart after running this command.
    * If the chart is not installed in the "default" namespace, modify the annotation value to be "{chart_namespace}/splunk-otel-collector".
 
-To deactivate auto instrumentation for your NodeJS deployment, run the following command:
+To deactivate auto instrumentation for your Node.js deployment, run the following command:
 
 .. code-block:: bash
 
