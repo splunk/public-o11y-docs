@@ -31,14 +31,11 @@ dashboards are listed in a table that displays them by name.
 
 To add one or more dashboards to the default dashboard set for a navigator, do the following from the Navigator settings page:
 
-#. Click on **+Add dashboard** 
+#. Click on **+Add dashboard**.
 
-#. Scroll through the list of dashboards, using the Prev and Next buttons to navigate through multiple pages as desired. All available dashboards are displayed by
-default, so the dashboard list can be extensive.
+#. Scroll through the list of dashboards, using the Prev and Next buttons to navigate through multiple pages as desired. All available dashboards are displayed bydefault, so the dashboard list can be extensive.
 
-#. (Optional) In the search field of the :guilabel:`Select a dashboard`` window, enter the name of the dashboard you want to find. If dashboards
-in different groups have the same name, as they might in the case of a common function like "Service endpoint," then search displays the relevant 
-part of the dashboard list where the dashboards appear in alphabetical order.
+#. (Optional) In the search field of the :guilabel:`Select a dashboard`` window, enter the name of the dashboard you want to find. If dashboards in different groups have the same name, as they might in the case of a common function like "Service endpoint," then search displays the relevant part of the dashboard list where the dashboards appear in alphabetical order.
 
 #. (Optional) Use the buttons next to the search field to apply either of the following search filters:
 
@@ -51,17 +48,14 @@ part of the dashboard list where the dashboards appear in alphabetical order.
 
 #. (Optional) Repeat steps 2 through 5 to link additional dashboards to the navigator.
 
-#. (Optional) To change the dashboard display order on the home page for the navigator, click on a dashboard name and drag it up or down in the
-dashboard list.
+#. (Optional) To change the dashboard display order on the home page for the navigator, click on a dashboard name and drag it up or down in the dashboard list.
 
 #. Click :guilabel:`Save changes` to confirm and apply your choices. 
 
 If you select :guilabel:`Reset to built-in dashboards` rather than :guilabel:`Save changes`, then your system resets to the original state 
 of the navigator without any customization.
 
-To hide a dashboard from view temporarily without actually disassociating it from a navigator, open the Dashboards list and click on the eye symbol 
-shown to the right of the dashboard namew. When a dashboard is hidden, the eye symbol has a slash through it and the dashboard name displays
-in gray text. 
+To hide a dashboard from view temporarily without actually disassociating it from a navigator, open the Dashboards list and click on the eye symbol shown to the right of the dashboard namew. When a dashboard is hidden, the eye symbol has a slash through it and the dashboard name displays with its name grayed out. 
 
 
 Built-in dashboards
