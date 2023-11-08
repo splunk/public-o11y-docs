@@ -92,7 +92,7 @@ Run the following to verify the resources are deployed correctly:
 4. Set annotations to instrument Node.js applications
 ------------------------------------------------------------
 
-Activate and deactivate auto instrumentation for NodeJS
+Activate and deactivate auto instrumentation for Node.js
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To activate auto instrumentation for your NodeJS deployment, run the following command:
