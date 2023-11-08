@@ -28,7 +28,7 @@ Container level metrics and dimensions
   
   The :strong:`Translated?` column indicates whether the metric is translated by the SignalFx exporter.
   
-  The :strong:`Exported to Observability?` column indicates if the metric is finally sent to Splunk Observability Cloud after going through the Collector pipelines. 
+  The :strong:`Exported?` column indicates if the metric is finally sent to Splunk Observability Cloud after going through the Collector pipelines. 
 
 .. list-table::
   :widths: 25 25 30 10 10
@@ -39,7 +39,7 @@ Container level metrics and dimensions
     - Metric description
     - Attributes
     - Translated?
-    - Exported to Observability?
+    - Exported?
 
   * - ``container.cpu.utilization``
     - Container CPU utilization
