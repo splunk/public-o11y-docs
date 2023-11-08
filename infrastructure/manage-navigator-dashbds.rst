@@ -30,6 +30,7 @@ Either access method opens the Navigator settings page, from which you can selec
 dashboards are listed in a table that displays them by name.
 
 To add one or more dashboards to the default dashboard set for a navigator, do the following from the Navigator settings page:
+
 #. Click on **+Add dashboard** 
 #. Scroll through the list of dashboards, using the Prev and Next buttons to navigate through multiple pages as desired. All available dashboards are displayed by
 default, so the dashboard list can be extensive.
