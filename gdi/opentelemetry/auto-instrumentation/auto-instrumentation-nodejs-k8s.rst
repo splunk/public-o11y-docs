@@ -95,7 +95,7 @@ Run the following to verify the resources are deployed correctly:
 Activate and deactivate auto instrumentation for Node.js
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To activate auto instrumentation for your NodeJS deployment, run the following command:
+To activate auto instrumentation for your Node.js deployment, run the following command:
 
 .. code-block:: bash
 
