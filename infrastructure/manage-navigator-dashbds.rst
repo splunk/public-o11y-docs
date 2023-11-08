@@ -9,11 +9,11 @@ Customize dashboards in Splunk Infrastructure Monitoring navigators
 
 .. note:: You must be an admin user to perform the tasks described in this topic.
 
-Apart from modifying what content you view in a navigator as explained in :ref:`customize-navigator`, you can also   
-use navigator customization to modify the number and scope of the dashboards associated with a navigator. Navigator display customization persists
-across sessions and applies to all users.
+Apart from modifying parameters for the data that you view and monitor in a navigator as explained in :ref:`customize-navigator`, you can also   
+use navigator customization to modify the number and scope of the dashboards associated with a navigator. Dashboard customization persists
+across sessions and applies to all users viewing the involved navigator.
 
-You can apply custom dashboard settings to both the aggregate view of all navigators in a group for a specific techhology, or the more focused instance view of 
+You can apply custom dashboard settings to both the aggregate view of all navigators for a specific techhology, or the more focused instance view of 
 navigators for a representative example, as for example, monitoring all active EC2 hosts in an aggregate view vs. monitoring one active EC2 host in an instance view. 
 A label next to the title of the Navigator settings page identifies whether you're working with an aggregate
 view or an instance view. Fewer dashboards display for instance views than for aggregate views, but you can customize either view.
