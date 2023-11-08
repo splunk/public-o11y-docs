@@ -1,9 +1,10 @@
 
 .. _metrics-pipeline-intro:
 
-******************************************************
+*******************************************************************************
 Optimizing metrics data
-******************************************************
+*******************************************************************************
+
 
 .. meta::
     :description: Optimizing metrics data using metrics pipeline management in Splunk Infrastructure Monitoring
@@ -17,6 +18,8 @@ Optimizing metrics data
 .. meta::
     :description: Optimizing metrics data using metrics pipeline management in Splunk Infrastructure Monitoring
 
+.. _problem-too-much-data:
+
 The problem: Too much data
 ===============================================================================
 
@@ -28,6 +31,8 @@ also leads to data growth. These challenges lead to the following problems:
 * Operational challenges: How do I make sense of my data?
 
 You discover that more data doesn't yield better observability outcomes.
+
+.. _solution-optimize-data:
 
 The solution: Optimize data
 ===============================================================================
@@ -45,6 +50,8 @@ MPM is a set of tools and a process that helps you optimize your data by followi
 #. Review your new MTS usage.
 #. Refine your aggregation and routing rules.
 
+.. _flowchart-mpm-process:
+
 The following flowchart summarizes the MPM process:
 
 .. mermaid::
@@ -60,6 +67,7 @@ The following flowchart summarizes the MPM process:
    B -- Route -->D("`Define rules that route or drop MTS`") -->E
    E(Optimized data with aggregated MTS and routed MTS) -- Analyze results -->A
 
+.. _use-MPM-versus-SignalFlow:
 
 Using MPM instead of SignalFlow aggregation
 --------------------------------------------------------------------------------
@@ -70,9 +78,10 @@ raw MTS ingestion is complete, so you can eliminate high-cardinality dimensions 
 
 MPM can also route data to a low-cost data tier, which SignalFlow can't do.
 
+.. _use-MPM-versus-OTel:
+
 Using MPM instead of Splunk Distribution of OpenTelemetry Collector changes
 --------------------------------------------------------------------------------
-
 
 When you use MPM,  you don't have to modify the configuration of your
 :ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>`. You can still use the configuration to ingest
@@ -80,45 +89,39 @@ data, remove high-cardinality dimensions, drop MTS you don't need, and route MTS
 ingest OpenTelemetry data. To learn how to remove data before using the Collector by modifying the configuration,
 see :ref:`configure-remove`.
 
-What are high-cardinality MTS dimensions?
+.. _what-is-metric-cardinality:
+
+What is metric cardinality?
 ===============================================================================
 
-The cardinality of a single metric time series (MTS) is cardinality of its dimensions.
+Metric cardinality is the number of unique metric time series (MTS) produced by a combination of metric name and its
+associated dimensions. Therefore, a metric has high cardinality when it has a high number of dimension keys, and a high
+number of possible unique values for those dimension keys.
 
-An MTS is the combination of a metric type, a metric name, the value of the metric, and the dimension names (keys) and values
-for the metric. Each unique combination of dimension key and value is a separate dimension.
+For example, you send in data for a metric ``http.server.duration``.
 
-A metric has high cardinality when it has a high number of dimension keys, or a high number of possible unique values for its dimension keys,
-or both.
+* If ``http.server.duration`` has only 1 dimension ``endpoint`` with 3 unique values: ``A``, ``B``, and ``C``, then
+  ``http.server.duration`` generates 3 metric time series (MTS).
+* If you add another dimension ``region`` with 3 unique values: ``us-east``, ``us-west``, and ``eu``, then
+  ``http.server.duration`` generates 3 (endpoints) * 3 (regions) = 9 MTS.
 
-For example, suppose you ingest data for the metric ``http.server.duration``.
-
-* If ``http.server.duration`` has only 1 dimension key ``endpoint`` with 3 unique values: ``A``, ``B``, and ``C``, then
-  ``http.server.duration`` has 3 possible dimensions. ``http.server.duration`` could have three MTS, each representing the data from
-  3 different endopints
-* When you add another dimension ``region`` with 3 unique values: ``us-east``, ``us-west``, and ``eu``, then
-  ``http.server.duration`` could have 9 MTS, one for each possible endpoint and region combination (3 endpoints * 3 regions = 9 dimensions).
-  Even though ``http.server.duration`` only has 2 dimensions, its metric cardinality is already 9 since each dimension has
-  multiple possible values.
-
-Your data might also contain 9 dimension keys, each with its own unique value. For example, the ``country`` dimension key
-might have the values ``Canada``, ``Brazil``, ``France``, ``Germany``, ``Spain``, ``Portugal``, ``Mexico``, ``United Kingdom``, and
-``Ireland``. This single dimension key has a metric cardinality of 9. If you use this dimension key with the ones previously
-mentioned, you get a cardinality of 81. For a metric that has a large number of values, the number of MTS generated can be
-large.
+Even though ``http.server.duration`` only has 2 dimensions, metric cardinality is already 9 since each dimension has
+multiple possible values.
 
 To learn more about MTS, see :ref:`metric-time-series`. To learn more about the Observability Cloud data model, see
 :ref:`data-model`.
 
+.. _how-does-mpm-work:
+
 How does metrics pipeline management work?
-========================================================
+===============================================================================
 
 Metrics pipeline management has the following features that optimize metrics data:
 
 MTS aggregation
    MPM creates new MTS by aggregating metrics and dimensions data from incoming raw MTS and dropping unwanted dimensions.
-   You create aggregation rules that roll up your selected metric data into new metrics that take up less storage and increase
-   computational performance. To learn how to create aggregation rules, see :ref:`aggregation`.
+   You create aggregation rules that roll up your selected metric data into new metrics that take up less storage and lead to
+   an increased query performance. To learn how to create aggregation rules, see :ref:`aggregation`.
 MTS Data dropping
    After MPM aggregates new MTS, it can drop the original raw MTS. You create data dropping rules that discard any metrics
    you don't want to retain for monitoring. To learn how to create data dropping rules, see
@@ -132,20 +135,25 @@ MTS routing
    points over a period that's much longer than 10 seconds, you might have difficulty reconciling your raw data with
    the aggregated data. To learn more, see the section :ref:`mts-aggregation-rollup-period`.
 
-Controlling metrics pipeline management using rules
+.. _rules-based-metrics-management:
+
+Rules-based metrics management
 ===============================================================================
 
-Metrics pipeline management is rules-based. Use rules to do the following:
+Control metrics pipeline management with rules that define the following:
 
 * Aggregation - Choose MTS to aggregate, choose dimensions to aggregate or drop
-* Data routing
+* Data routing -
 
        * Choose MTS to move to a lower-cost tier
        * Choose historical MTS to restore to higher-cost tier
 
-* Dashboards show rules in effect and their impact on data storage
+Metrics pipeline management dashboards display the current rules their effect on data storage
 
-To learn how to manage rules, see :ref:`use-metrics-pipeline`.
+To learn how to manage rules, see one of the following topics:
+
+* To learn how to set up data ingestion rules, see :ref:`use-MTS-aggregation-pipeline`.
+* To learn how to set up MTS storage overhead rules, see :ref:`use-MTS-data-routing-pipeline`.
 
 .. _aggregation:
 
@@ -165,6 +173,8 @@ based on the dimensions you select and rolls up data points for each MTS. By def
 data points into the new MTS using ``sum``, ``min``, ``max``, ``count``, ``delta``, ``avg``, and ``latest`` functions.
 You can use the new aggregated MTS in the same way as any other MTS in Observability Cloud.
 
+.. _scenario-reduce-cardinality:
+
 Scenario: Reducing dimension cardinality
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -177,6 +187,8 @@ Your data is coming in at the container ID level, generating 10 (endpoints) * 5 
 
 You can reduce your metric cardinality by aggregating one or multiple dimensions.
 
+.. _scenario-aggregate-one-dimension:
+
 Scenario: Aggregate using one dimension
 --------------------------------------------------------------------------------
 
@@ -185,6 +197,8 @@ the ``region`` dimension.
 
 The aggregated metric removes all other dimensions and retains only the ``region`` dimension based on your rule. There
 are only 20 different values for ``region``, so only Observability Cloud only ingests 20 MTS.
+
+.. _scenario-aggregate-multiple-dimensions:
 
 Scenario: Aggregate using multiple dimensions
 --------------------------------------------------------------------------------
@@ -215,6 +229,8 @@ seconds. In both cases, metrics pipeline management rolls up the raw points into
 Also, if you want to send data points every second and you want to keep the resolution of the incoming data points, don't
 use MTS aggregation.
 
+.. _timestamp-considerations:
+
 Timestamp considerations
 ===============================================================================
 
@@ -244,12 +260,14 @@ Data dropping rules
 
 When you have a new aggregated metric, you might no longer need the original unaggregated data. You
 can also drop a metric without adding an aggregation rule. Data dropping rules let you discard any data you don't want
-to monitor, so you can save storage space and reduce cardinality.
+to monitor, so you can control costs and reduce cardinality.
 
 .. note::
     - You must be an admin to drop data.
     - You can drop new incoming data, but you can't drop data that Observability Cloud has already ingested.
     - You can't recover dropped data. Before you drop data, see :ref:`data-dropping-impact`.
+
+.. _scenario-dropping-raw-data:
 
 Scenario: Dropping raw data
 --------------------------------------------------------------------------------
@@ -257,10 +275,14 @@ Scenario: Dropping raw data
 Once you have new aggregated metrics created by aggregation rules, you can drop the raw unaggregated data for
 ``http.server.duration``.
 
+.. _scenario-metrics-pipeline-management:
+
 Scenario: Metrics pipeline management
 ===============================================================================
 
 See :ref:`aggregate-drop-use-case`.
+
+.. _create-first-metric-rules:
 
 Create your first metric rules
 ===============================================================================
