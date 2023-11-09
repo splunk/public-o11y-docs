@@ -198,16 +198,34 @@ To define a custom directory for discovery settings, use the ``--config-dir`` op
 Usage example
 ======================
 
-The following example show how to install the Collector with discovery mode to find a MySQL database and retrieve metrics.
+The following example shows how to install the Collector on Linux using discovery mode to find a MySQL database and retrieve metrics.
 
-#. Install the collector on the host using the ``--discovery`` flag:
+#. Install the collector on the host where MySQL is running.  Include the ``--discovery`` flag:
 
    .. code-block:: shell
     
       curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
       sudo sh /tmp/splunk-otel-collector.sh --realm <realm> – <token> --mode agent --discovery
 
-#. Create the properties.discovery.yaml file in the `/etc/otel/collector/config.d` directory with the following content: 
+#. Review the Collector logs with the following command and review the output of the discovery process: 
+
+   .. code-block:: shell
+
+      journalctl -u splunk-otel-collector -f
+
+#. In the logs, we can see that the MySQL database has been partially discovered, and we need to provide credentials to complete the discovery process:   
+
+   .. code-block:: text
+
+        Partially discovered "smartagent/collectd/mysql" using "host_observer" endpoint "(host_observer)[::]-3306-TCP-1757": Make sure y
+        our user credentials are correctly specified using the `--set splunk.discovery.receivers.smartagent/collectd/mysql.config.username="<username>"` and `--set splunk.discovery.receivers.smartagent/collect
+        d/mysql.config.password="<password>"` command or the `SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_collectd_x2f_mysql_CONFIG_username="<username>"` and `SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_collectd_
+        x2f_mysql_CONFIG_password="<password>"` environment variables. (evaluated "{\"collectdInstance\":\"monitor-smartagentcollectdmysqlreceiver_creatorhost_observerendpoint3306host_observer3306TCP1757\",\"k
+        ind\":\"receiver\",\"message\":\"mysql plugin: Failed to connect to database splunk.discovery.default at server ::: Access denied for user 'splunk.discovery.default'@'localhost' (using password: YES)\"
+        ,\"monitorType\":\"collectd/mysql\"}")
+
+
+#. Provide the necessary credentials by creating the properties.discovery.yaml file in the `/etc/otel/collector/config.d` directory with the following content: 
 
    .. code-block:: yaml
 
@@ -216,24 +234,27 @@ The following example show how to install the Collector with discovery mode to f
           smartagent/collectd/mysql:
             enabled: true
             config:
-              username: "root"
+              username: "<username>"
               password: "<password>"
-              databases: "[{name: 'information_schema'}]"
+              databases: "[{name: '<database name>'}]"
 
-#. Tail the Collector logs with the following command to confirm that it has discovered the MySQL database successfully: 
+#. Restart the collector with the following command: 
 
    .. code-block:: shell
 
-      journalctl -u splunk-otel-collector
+      sudo systemctl restart splunk-otel-collector
 
-#. When successful, the logs include lines similar to the following: 
+#. Tail the Collector logs again to confirm that it has discovered the MySQL database successfully: 
+
+   .. code-block:: shell
+
+      journalctl -u splunk-otel-collector -f
+
+#. When successful, the logs include a line similar to the following: 
 
    .. code-block:: text
 
-      info        collectd/logging.go:49        plugin "logfile" successfully loaded.        {"kind": "receiver", "name": "receiver_creator/discovery", "data_type": "metrics", "name": 
-      "smartagent/collectd/mysql/receiver_creator/discovery{endpoint=\"[::]:3306\"}/(host_observer)[::]-3306-TCP-2005", "collectdInstance": "monitor- 
-      smartagentcollectdmysqlreceiver_creatordiscoveryendpoint3306host_observer3306TCP2005", "monitorID": "smartagentcollectdmysqlreceiver_creatordiscoveryendpoint3306host_observer3306TCP2005", "monitorType": 
-      "collectd/mysql", "plugin": "plugin_load"}
+      Successfully discovered "smartagent/collectd/mysql" using "host_observer" endpoint "(host_observer)[::]-3306-TCP-1757".
 
 Troubleshooting
 ======================
