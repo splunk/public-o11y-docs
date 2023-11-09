@@ -99,7 +99,7 @@ To activate auto instrumentation for your Node.js deployment, run the following 
 
 .. code-block:: bash
 
-   kubectl patch deployment <deployment_name> -n <namespace> -p '{"spec": {"template":{"metadata":{"annotations":{"instrumentation.opentelemetry.io/inject-nodejs":"default/splunk-otel-collector"}}}} }'
+   kubectl patch deployment <deployment_name> -n <namespace> -p '{"spec": {"template":{"metadata":{"annotations":{"instrumentation.opentelemetry.io/inject-nodejs":"<splunk_otel_collector_namespace>/splunk-otel-collector"}}}} }'
 
 .. note::
    * The deployment pod will restart after running this command.
