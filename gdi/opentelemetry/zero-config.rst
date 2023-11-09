@@ -26,9 +26,9 @@ The following diagram demonstrates the process of manually instrumenting your ap
       subgraph "Manual instrumentation"
       A["Connect to your cloud environment"]
 
-      C["Deploy the Splunk Distribution of \n OpenTelemetry Collector in your environment"]
+      B["Deploy the Splunk Distribution of \n OpenTelemetry Collector in your environment"]
 
-      B["Deploy language-specific components \n to each service"]
+      C["Deploy language-specific components \n to each service"]
 
       D["Run your application"]
 
