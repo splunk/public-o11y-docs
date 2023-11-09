@@ -23,12 +23,12 @@ Optimizing metrics data
 The problem: Too much data
 ===============================================================================
 
-As you expand observability to cover all you systems, you often see exponential data growth. High cardinality data
+As you expand observability to cover all you systems, you often see exponential growth in data. High cardinality data
 also leads to data growth. These challenges lead to the following problems:
 
 * Increased cost for ingesting and storing data
-* Decreased performance due to processing overhead
-* Operational challenges: How do I make sense of my data?
+* Decreased performance due to the amount of data collected
+* Operational challenges: How do I derive value from my data?
 
 You discover that more data doesn't yield better observability outcomes.
 
@@ -37,16 +37,16 @@ You discover that more data doesn't yield better observability outcomes.
 The solution: Optimize data
 ===============================================================================
 
-Splunk Observability Cloud helps you identify and address the problem of too much data with metrics pipeline management (MPM).
+Splunk Observability Cloud helps you identify and address the problem of growing data with metrics pipeline management (MPM).
 
-MPM is a set of tools and a process that helps you optimize your data by following these steps:
+MPM is a solution that helps you optimize your data. To use MPM, follow these steps:
 
-#. Start by reviewing raw, unchanged MTS from the systems you want to monitor.
-#. Use charts and data tables to look for MTS that have unused or high-cardinality dimensions. You can also review
-   organization metrics that measure your use of Splunk Observability Cloud resources. To learn more, see :ref:`org-metrics-metrics-pipeline`.
-#. Use aggregation rules to create new aggregated MTS. Drop unneeded dimensions from the MTS; aggregation automatically rolls up the metrics.
-#. Drop the original MTS.
-#. Use routing rules to move existing MTS into the low-cost tier. Drop MTS you don't want to keep.
+#. Review your raw, unchanged MTS from the systems you want to monitor.
+#. Use charts and data tables to look for MTS that have unused or high-cardinality dimensions. To learn more, see :ref:`org-metrics-metrics-pipeline`.
+#. Review organization metrics that help you measure your use of Splunk Observability Cloud resources.
+#. Use aggregation rules to create new aggregated MTS. Drop unneeded dimensions from these new MTS. Aggregation automatically rolls up the metrics.
+#. Drop the incoming raw MTS.
+#. Use routing rules to move existing MTS into the low-cost archival tier. Drop MTS you don't want to keep.
 #. Review your new MTS usage.
 #. Refine your aggregation and routing rules.
 
@@ -76,7 +76,7 @@ Although you can use SignalFlow to aggregate MTS, the aggregation occurs after y
 can't help you remove high-cardinality dimensions, and it can't drop MTS you don't need. MPM aggregation occurs before
 raw MTS ingestion is complete, so you can eliminate high-cardinality dimensions and drop data you don't want.
 
-MPM can also route data to a low-cost data tier, which SignalFlow can't do.
+MPM can also route data to a low-cost archival data tier, which SignalFlow can't do.
 
 .. _use-MPM-versus-OTel:
 
@@ -84,10 +84,9 @@ Using MPM instead of Splunk Distribution of OpenTelemetry Collector changes
 --------------------------------------------------------------------------------
 
 When you use MPM,  you don't have to modify the configuration of your
-:ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>`. You can still use the configuration to ingest
-data, remove high-cardinality dimensions, drop MTS you don't need, and route MTS to the low-cost data tier after you
-ingest OpenTelemetry data. To learn how to remove data before using the Collector by modifying the configuration,
-see :ref:`configure-remove`.
+:ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>`. You can still use this configuration to ingest
+raw OpenTelemetry MTS, then use MPM to remove high-cardinality dimensions, drop MTS you don't need, and route MTS to the low-cost archival data tier.
+To learn how to remove raw incoming MTS by modifying the Collector configuration, see :ref:`configure-remove`.
 
 .. _what-is-metric-cardinality:
 
@@ -140,15 +139,17 @@ MTS routing
 Rules-based metrics management
 ===============================================================================
 
-Control metrics pipeline management with rules that define the following:
+Metrics pipeline management operation is based on rules that define the following processes:
 
-* Aggregation - Choose MTS to aggregate, choose dimensions to aggregate or drop
+* Aggregation - Rules specify incoming raw MTS to aggregate and the incoming MTS dimensions to drop,
+  resulting in new aggregated MTS.
 * Data routing -
 
-       * Choose MTS to move to a lower-cost tier
-       * Choose historical MTS to restore to higher-cost tier
+       * Rules specify incoming raw MTS to move to a low-cost archival data tier.
+       * Rules specify incoming raw MTS to drop entirely.
+       * Rules specify historical MTS to move from the low-cost archival data tier to the real-time tier.
 
-Metrics pipeline management dashboards display the current rules their effect on data storage
+Metrics pipeline management dashboards display the current rules and their effect on data storage
 
 To learn how to manage rules, see one of the following topics:
 
