@@ -200,20 +200,20 @@ Usage example
 
 The following example shows how to install the Collector on Linux using discovery mode to find a MySQL database and retrieve metrics.
 
-#. Install the collector on the host where MySQL is running.  Include the ``--discovery`` flag:
+#. Install the Collector on the host where MySQL is running.  Include the ``--discovery`` flag:
 
    .. code-block:: shell
     
       curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
       sudo sh /tmp/splunk-otel-collector.sh --realm <realm> – <token> --mode agent --discovery
 
-#. Review the Collector logs with the following command and review the output of the discovery process: 
+#. Retrieve the Collector logs with the following command and review the output of the discovery process: 
 
    .. code-block:: shell
 
       journalctl -u splunk-otel-collector -f
 
-#. In the logs, we can see that the MySQL database has been partially discovered, and we need to provide credentials to complete the discovery process:   
+#. In the following sample logs, the MySQL database has been partially discovered:
 
    .. code-block:: text
 
@@ -223,7 +223,6 @@ The following example shows how to install the Collector on Linux using discover
         x2f_mysql_CONFIG_password="<password>"` environment variables. (evaluated "{\"collectdInstance\":\"monitor-smartagentcollectdmysqlreceiver_creatorhost_observerendpoint3306host_observer3306TCP1757\",\"k
         ind\":\"receiver\",\"message\":\"mysql plugin: Failed to connect to database splunk.discovery.default at server ::: Access denied for user 'splunk.discovery.default'@'localhost' (using password: YES)\"
         ,\"monitorType\":\"collectd/mysql\"}")
-
 
 #. Provide the necessary credentials by creating the properties.discovery.yaml file in the `/etc/otel/collector/config.d` directory with the following content: 
 
