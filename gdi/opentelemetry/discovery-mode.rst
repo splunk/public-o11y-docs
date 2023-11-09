@@ -213,16 +213,16 @@ The following example shows how to install the Collector on Linux using discover
 
       journalctl -u splunk-otel-collector -f
 
-#. In the following sample logs, the MySQL database has been partially discovered:
+   In the following sample logs, the MySQL database has been partially discovered. The error message indicates the problem, which in this case is bad credentials:
 
    .. code-block:: text
 
-        Partially discovered "smartagent/collectd/mysql" using "host_observer" endpoint "(host_observer)[::]-3306-TCP-1757": Make sure y
-        our user credentials are correctly specified using the `--set splunk.discovery.receivers.smartagent/collectd/mysql.config.username="<username>"` and `--set splunk.discovery.receivers.smartagent/collect
-        d/mysql.config.password="<password>"` command or the `SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_collectd_x2f_mysql_CONFIG_username="<username>"` and `SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_collectd_
-        x2f_mysql_CONFIG_password="<password>"` environment variables. (evaluated "{\"collectdInstance\":\"monitor-smartagentcollectdmysqlreceiver_creatorhost_observerendpoint3306host_observer3306TCP1757\",\"k
-        ind\":\"receiver\",\"message\":\"mysql plugin: Failed to connect to database splunk.discovery.default at server ::: Access denied for user 'splunk.discovery.default'@'localhost' (using password: YES)\"
-        ,\"monitorType\":\"collectd/mysql\"}")
+      Partially discovered "smartagent/collectd/mysql" using "host_observer" endpoint "(host_observer)[::]-3306-TCP-1757": Make sure y
+      our user credentials are correctly specified using the `--set splunk.discovery.receivers.smartagent/collectd/mysql.config.username="<username>"` and `--set splunk.discovery.receivers.smartagent/collect
+      d/mysql.config.password="<password>"` command or the `SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_collectd_x2f_mysql_CONFIG_username="<username>"` and `SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_collectd_
+      x2f_mysql_CONFIG_password="<password>"` environment variables. (evaluated "{\"collectdInstance\":\"monitor-smartagentcollectdmysqlreceiver_creatorhost_observerendpoint3306host_observer3306TCP1757\",\"k
+      ind\":\"receiver\",\"message\":\"mysql plugin: Failed to connect to database splunk.discovery.default at server ::: Access denied for user 'splunk.discovery.default'@'localhost' (using password: YES)\"
+      ,\"monitorType\":\"collectd/mysql\"}")
 
 #. Provide the necessary credentials by creating the properties.discovery.yaml file in the `/etc/otel/collector/config.d` directory with the following content: 
 
@@ -237,7 +237,7 @@ The following example shows how to install the Collector on Linux using discover
               password: "<password>"
               databases: "[{name: '<database name>'}]"
 
-#. Restart the collector with the following command: 
+#. Restart the Collector with the following command: 
 
    .. code-block:: shell
 
