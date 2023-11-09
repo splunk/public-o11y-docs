@@ -375,6 +375,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Private connectivity TOGGLE <gdi/private-connectivity/private-connectivity-landing>
 
 .. toctree::
+   :maxdepth: 4
+
+   Splunk Distribution of the OpenTelemetry Collector TOGGLE <gdi/opentelemetry/opentelemetry>
+
+.. toctree::
    :maxdepth:   3
 
    Collect infrastructure metrics and logs TOGGLE <gdi/get-data-in/compute/compute>
@@ -383,7 +388,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   4
 
    Instrument back-end services TOGGLE <gdi/get-data-in/application/application>
-
 
 .. toctree::
    :maxdepth:   3
@@ -399,11 +403,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Available host and application monitors TOGGLE <gdi/index>
-
-.. toctree::
-   :maxdepth: 4
-
-   Splunk Distribution of OpenTelemetry Collector TOGGLE <gdi/opentelemetry/opentelemetry>
 
 .. toctree::
    :maxdepth: 3
