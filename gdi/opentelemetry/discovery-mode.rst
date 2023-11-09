@@ -200,7 +200,7 @@ Usage example
 
 The following example show how to install the Collector with discovery mode to find a MySQL database and retrieve metrics.
 
-#. Install the collector on the host using the `--discovery` flag:
+#. Install the collector on the host using the ``--discovery`` flag:
 
    .. code-block:: shell
     
