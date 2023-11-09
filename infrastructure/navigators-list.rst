@@ -28,4 +28,13 @@ List of navigators
     <div class="metrics-config" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/ootb/navigators_builtin_content.yaml" data-main-column="category_display_name" data-secondary-column="key" data-column-3="importQualifiers" data-header-1="Category" data-header-2="Navigator" data-header-3="ImportQualifiers (Required data onboarding conditions)"></div>
 
 
+.. list-table::
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * - Category
+      - Navigator
+      - ImportQualifiers (Required data onboarding conditions)
+
+
 For a comprehensive list of dashboards, see the Dashboads available topic.
