@@ -701,7 +701,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    rum/sensitive-data-rum
 
 
-
 .. toctree::
    :maxdepth:   3
 

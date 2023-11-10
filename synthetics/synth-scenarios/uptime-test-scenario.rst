@@ -1,7 +1,7 @@
 .. _uptime-test-scenario:
 
 ************************************************************************************
-Scenario: Mnitor the performance of a user-facing application 
+Scenario: Monitor the performance of a user-facing application 
 ************************************************************************************
 
 .. meta::
