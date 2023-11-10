@@ -161,7 +161,7 @@ Run the following commands to deploy the Helm chart:
 
    .. code-block:: bash
 
-      helm repo add splunk-otel-collector-chart https://signalfx.github.io/splunk-otel-collector-chart
+      helm repo add splunk-otel-collector-chart https://github.com/signalfx/splunk-otel-collector-chart
 
 #. Determine your destination. 
 
