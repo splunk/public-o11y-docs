@@ -35,7 +35,7 @@ Trace configuration
 
 The following settings control tracing limits and attributes:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
 
    * - Environment variable
@@ -125,7 +125,7 @@ To connect Real User Monitoring (RUM) requests from mobile and web applications 
 
 .. code-block::
 
-   Access-Control-Expose-Headers: Server-Timing 
+   Access-Control-Expose-Headers: Server-Timing
    Server-Timing: traceparent;desc="00-<serverTraceId>-<serverSpanId>-01"
 
 The ``Server-Timing`` header contains the ``traceId`` and ``spanId`` parameters in ``traceparent`` format. For more information, see the Server-Timing and traceparent documentation on the W3C website.
@@ -146,6 +146,10 @@ Other settings
      - Level for debug logging. Default is ``WARN``. When set to ``DEBUG``, the layer sends additional logs to AWS CloudWatch.
    * - ``SPLUNK_LAMBDA_SLS_ZIP``
      - Set to ``true`` to instrument Python libraries compressed using the Serverless Framework. The default value is ``false``.
+   * - ``SPLUNK_EXTENSION_WRAPPER_ENABLED``
+     - Set to ``false`` to deactivate the legacy SignalFx metric instrumentation. This is useful if you don't use Infrastructure Monitoring and want to reduce warmup time. The default value is ``true``.
+   * - ``SPLUNK_LAMBDA_LOCAL_COLLECTOR_ENABLED``
+     - Set to ``false`` to deactivate the OpenTelemetry Collector instance running inside each Lambda runtime. If you deactivate the bundled Collector, configure the instrumentation to either communicate directly to the REST API ingest endpoints, or configure up a forwarding instance of the Collector and configure the instrumentation to send data to it. The default value is ``true``. See :ref:`ec2-otel-collector-serverless` for more information.
    * - ``OTEL_PYTHON_DISABLED_INSTRUMENTATIONS``
      - Comma-separated list of Python instrumentations you want to deactivate. For a list of automatically loaded instrumentations, see the requirements list in the OpenTelemetry repository on GitHub: https://github.com/open-telemetry/opentelemetry-lambda/blob/main/python/src/otel/otel_sdk/requirements-nodeps.txt
 

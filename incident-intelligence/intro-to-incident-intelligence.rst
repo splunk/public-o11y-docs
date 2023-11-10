@@ -75,5 +75,5 @@ How to provide feedback or get help
 ======================================
 Use the following forms to share feedback or ask questions about Incident Intelligence:
 
-- To share feedback about Incident Intelligence, see :new-page:`Incident Intelligence Ideas <https://quickdraw.splunk.com/redirect/?product=Observability&location=beta.ideas&version=beta>` in Splunk Ideas.
-- Ask questions about Incident Intelligence, see :new-page:`Ask Questions, Get Help with Splunk Incident Intelligence <https://quickdraw.splunk.com/redirect/?product=Observability&location=beta.questions&version=beta>` in Splunk Community.
+- To share feedback about Incident Intelligence, see :new-page:`Incident Intelligence Ideas <https://ideas.splunk.com/?project=INCID>` in Splunk Ideas.
+- Ask questions about Incident Intelligence, see :new-page:`Ask Questions, Get Help with Splunk Incident Intelligence <https://community.splunk.com/t5/Splunk-Observability-Cloud/Ask-Questions-Get-Help-about-Splunk-Incident-Intelligence/m-p/583294>` in Splunk Community.

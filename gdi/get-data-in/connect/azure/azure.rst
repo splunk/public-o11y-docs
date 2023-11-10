@@ -35,7 +35,7 @@ After you connect your Azure account to Splunk Observability Cloud, you can do t
 Successful integration requires administrator privileges for the following:
 
 - Your organization in Splunk Observability Cloud.
-- Creating a new Azure Active Directory application.
+- Creating a new Microsoft Entra ID (formerly Azure Active Directory) application.
 
 To learn more about these privileges, see the Azure documentation for registering a new app.
 
@@ -51,7 +51,7 @@ To learn more about these privileges, see the Azure documentation for registerin
 
 To prepare Microsoft Azure to connect with Splunk Observability Cloud: 
 
-#. Create an Azure Active Directory application.
+#. Create a Microsoft Entra ID (formerly Azure Active Directory) application.
 #. Specify subscriptions and set subscription permissions.
 
 You also have the option of connecting to Azure through the Splunk Observability Cloud API. For details, see :new-page:`Integrate Microsoft Azure Monitoring with Splunk Observability Cloud <https://dev.splunk.com/observability/docs/integrations/msazure_integration_overview/>` in the Splunk developer documentation.
@@ -59,12 +59,12 @@ You also have the option of connecting to Azure through the Splunk Observability
 .. raw:: html
 
   <embed>
-    <h3>Create an Azure Active Directory application<a name="prep-ms-app" class="headerlink" href="#prep-ms-app" title="Permalink to this headline">¶</a></h3>
+    <h3>Create a Microsoft Entra ID (formerly Azure Active Directory) application<a name="prep-ms-app" class="headerlink" href="#prep-ms-app" title="Permalink to this headline">¶</a></h3>
   </embed>
 
-Follow these steps to create a new Azure Active Directory application:
+Follow these steps to create a new Microsoft Entra ID application:
 
-  #. In your Azure portal, navigate to :menuselection:`Azure Active Directory`, and register your new app. Splunk Observability Cloud does not use this information, but you need to provide it in order to create an app on Azure.
+  #. In your Azure portal, navigate to :menuselection:`Microsoft Entra ID`, and register your new app. Splunk Observability Cloud does not use this information, but you need to provide it in order to create an app on Azure.
   #. The Azure portal displays a summary about the application. Save the following information to use when you create your Azure integration in Splunk Observability Cloud:
       * :guilabel:`Display name`
       * :guilabel:`Application (client) ID`

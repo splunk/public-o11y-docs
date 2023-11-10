@@ -286,7 +286,7 @@ The following settings activate runtime metrics collection:
      - Description
    * - ``SPLUNK_METRICS_ENABLED``
      - Activated by calling ``start``.
-     - Activates metrics collection. The default value is ``false``. For more information on Node metrics, see :ref:`nodejs-otel-metrics`.
+     - Activates metrics collection. The default value is ``false``. For more information on Node.js metrics, see :ref:`nodejs-otel-metrics`.
    * - ``SPLUNK_METRICS_ENDPOINT``
      - ``metrics.endpoint``
      - The metrics endpoint. Takes precedence over ``OTEL_EXPORTER_OTLP_METRICS_ENDPOINT``. When ``SPLUNK_REALM`` is used, the default value is ``https://ingest.<realm>.signalfx.com/v2/datapoint/otlp``.
