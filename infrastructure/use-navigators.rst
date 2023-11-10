@@ -112,7 +112,7 @@ Use the Dashboard section
 
 The :strong:`Dashboard` section contains built-in dashboards that provide access to detailed information about the instances displayed.
 
-Dashboards in navigators are read |hyph| only, so you can't directly make any changes to them. However, you can clone a built-in dashboard to make changes to the clone, or download a built-in dashboard. As an admin, you can also add or remove custom dashboards, and hide but not remove any built-in dashboards that you don't use.
+Dashboards in navigators are read |hyph| only, so you can't directly make any changes to them. However, you can clone a built-in dashboard to make changes to the clone, or download a built-in dashboard. As an admin, you can also add or remove custom dashboards, and hide any built-in dashboards that you don't use.
 
 To learn more, see :ref:`Clone a built-in dashboard in a navigator<clone-dashboard-navigator>` and :ref:`Export a built-in dashboard in a navigator<export-dashboard-navigator>` in the :ref:`built-in-dashboards` documentation.
 
