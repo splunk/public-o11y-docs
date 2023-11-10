@@ -10,13 +10,12 @@ Customize dashboards in Splunk Infrastructure Monitoring navigators
 .. note:: You must be an admin user to perform the tasks described in this topic.
 
 Apart from modifying parameters for the data that you view and monitor in a navigator as explained in :ref:`customize-navigator`, you can also   
-use navigator customization to modify the number and scope of the dashboards associated with a navigator. Dashboard customization persists
+use navigator customization to modify the set of dashboards associated with a navigator. Dashboard customization persists
 across sessions and applies to all users viewing the involved navigator.
 
-You can apply custom dashboard settings to both the aggregate view of all navigators for a specific techhology, or the more focused instance view of 
-navigators for a representative example, as for example, monitoring all active EC2 hosts in an aggregate view vs. monitoring one active EC2 host in an instance view. 
-A label next to the title of the Navigator settings page identifies whether you're working with an aggregate
-view or an instance view. Fewer dashboards display for instance views than for aggregate views, but you can customize either view.
+You can apply custom dashboard settings to both the aggregate view of all navigators for a specific techhology, and the more focused instance view of 
+navigators that focuses on one navigator at a time. A label next to the title of the Navigator settings page identifies whether you're working with an aggregate
+view or an instance view. For example, if you have an EC2 environment, you'd monitor all active EC2 hosts using aggregate view, and a particular host using instance view. 
 
 Use :guilabel:`Manage navigator dashboards` to find dashboards that you can add to the set associated with a navigator.
 
@@ -42,11 +41,11 @@ To add one or more dashboards to the default dashboard set for a navigator, do t
    * Created by me
    * Favorites
 
-#. Click on the name of the dashboard you want to link to the navigator.
+#. Click on the name of the dashboard you want to add to the navigator.
 
 #. Click :guilabel:`Select` at the bottom right of the dashboard listing.
 
-#. (Optional) Repeat steps 2 through 5 to link additional dashboards to the navigator.
+#. (Optional) Repeat steps 2 through 5 to add additional dashboards to the navigator.
 
 #. (Optional) To change the dashboard display order on the home page for the navigator, click on a dashboard name and drag it up or down in the dashboard list.
 
@@ -55,7 +54,7 @@ To add one or more dashboards to the default dashboard set for a navigator, do t
 If you select :guilabel:`Reset to built-in dashboards` rather than :guilabel:`Save changes`, then your system resets to the original state 
 of the navigator without any customization.
 
-To hide a dashboard from view temporarily without actually disassociating it from a navigator, open the Dashboards list and click on the eye symbol shown to the right of the dashboard namew. When a dashboard is hidden, the eye symbol has a slash through it and the dashboard name displays with its name grayed out. 
+To hide a dashboard from view without disassociating it from a navigator, open the Dashboards list and click on the eye symbol shown to the right of the dashboard namew. When a dashboard is hidden, the eye symbol has a slash through it and the dashboard name displays with its name grayed out. 
 
 
 Built-in dashboards
