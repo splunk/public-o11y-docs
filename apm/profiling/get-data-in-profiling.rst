@@ -96,7 +96,7 @@ Activate AlwaysOn Profiling
 
 After you've instrumented your service for Splunk Observability Cloud and checked that APM data is getting into Splunk APM, activate AlwaysOn Profiling.
 
-To activate AlwaysOn Profiling, follow the steps for the appropriate programming language: 
+To activate AlwaysOn Profiling, follow the steps for the appropriate programming language:
 
 .. tabs::
 
@@ -139,6 +139,8 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
          -jar <your_application>.jar
 
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-java`.
+
+      .. note:: AlwaysOn Profiling is not compatible with Oracle JDK 8.
 
    .. group-tab:: Node.js
 
