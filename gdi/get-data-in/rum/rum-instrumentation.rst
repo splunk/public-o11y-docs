@@ -20,10 +20,12 @@ Instrument your mobile and web applications to send data to Splunk Real User Mon
 Splunk RUM instrumentation sends traces from web and mobile applications to Splunk Observability Cloud. 
 
 .. mermaid::
-   accTitle: Splunk RUM instrumentation diagram
-   accDescr: Splunk RUM instrumentation encompasses web applications, mobile applications, and React Native applications. RUM instrumentation sends traces from these applications to Splunk RUM. Splunk APM and Splunk RUM send server-timing data between each other.
    
    flowchart LR
+
+      accTitle: Splunk RUM instrumentation diagram
+      accDescr: Splunk RUM instrumentation encompasses web applications, mobile applications, and React Native applications. RUM instrumentation sends traces from these applications to Splunk RUM. Splunk APM and Splunk RUM send server-timing data between each other.
+
       subgraph "Splunk RUM Instrumentation"
       B["Browser-based web applications"]
       M["Mobile applications (iOS, Android)"]

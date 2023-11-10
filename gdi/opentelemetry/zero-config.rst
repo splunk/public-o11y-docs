@@ -21,10 +21,12 @@ Splunk OpenTelemetry Zero Configuration Auto Instrumentation provides several pa
 The following diagram demonstrates the process of manually instrumenting your applications compared to the process of using zero configuration auto instrumentation to instrument your applications:
 
 .. mermaid::
-   accTitle: Manual instrumentation process diagram
-   accDescr: Step one. Install the Splunk Distribution of OpenTelemetry Collector for your integration. Step two. Follow guided setup instructions to configure your environment. Step three. Deploy the Collector. Step four. Run your application.
-
+   
    flowchart TB
+
+      accTitle: Manual instrumentation process diagram
+      accDescr: Step one. Install the Splunk Distribution of OpenTelemetry Collector for your integration. Step two. Follow guided setup instructions to configure your environment. Step three. Deploy the Collector. Step four. Run your application.
+
       subgraph "Manual instrumentation"
       A["Install the Splunk \n Distribution of
       OpenTelemetry Collector \n agent for your integration"]
@@ -39,10 +41,12 @@ The following diagram demonstrates the process of manually instrumenting your ap
       end
    
 .. mermaid::
-   accTitle: Zero configuration auto instrumentation process diagram
-   accDescr: Step one. Install the zero config package for your application. Step two. Ensure the OpenTelemetry Collector is running. Step three. Run your application.
-
+   
    flowchart TB
+
+      accTitle: Zero configuration auto instrumentation process diagram
+      accDescr: Step one. Install the zero config package for your application. Step two. Ensure the OpenTelemetry Collector is running. Step three. Run your application.
+
       subgraph "Zero configuration auto instrumentation"
       X["Install the zero-config package \n for your application"]
       Y["Ensure the Splunk Distribution of \nOpenTelemetry Collector
