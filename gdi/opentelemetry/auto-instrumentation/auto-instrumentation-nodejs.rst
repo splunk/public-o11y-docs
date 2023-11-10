@@ -45,8 +45,8 @@ This feature provides the following benefits:
         <h2>Key Concepts</h2>
     </embed>
 
-Zero Config Auto Instrumentation is available on Kubernetes and Linux using Splunk OpenTelemetry JS.
-When you activate Zero Config, Splunk OpenTelemetry JS automatically instruments all Node.js applications 
+Zero Config Auto Instrumentation is available on Kubernetes and Linux using Splunk OpenTelemetry Node.js.
+When you activate Zero Config, Splunk OpenTelemetry Node.js automatically instruments all Node.js applications 
 running in the target environment. 
 
 On Linux, the target environment is the entire Linux host, so the Node.js agent instruments every Node.js application on the host.

@@ -17,7 +17,7 @@ You can use the OTel Collector with an upstream Operator in a Kubernetes environ
 Requirements
 ================================================================
 
-Zero Config Auto Instrumentation for NodeJS requires the following components: 
+Zero Config Auto Instrumentation for Node.js requires the following components: 
 
 * The :ref:`Splunk OTel Collector chart <helm-chart>`: It deploys the Collector and related resources, including the OpenTelemetry Operator.
 * The OpenTelemetry Operator, which manages auto-instrumentation of Kubernetes applications. See more in the :new-page:`OpenTelemetry GitHub repo <https://github.com/open-telemetry/opentelemetry-operator>`.
