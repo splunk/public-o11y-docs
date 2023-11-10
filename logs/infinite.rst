@@ -11,7 +11,29 @@ Archive your logs with infinite logging rules
 
 Create infinite logging rules to archive all or any subset of logs in Amazon S3 buckets for compliance or possible future use while not paying to index them unless and until you want to analyze them in Splunk Log Observer. 
 
-.. note:: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can create infinite logging rules. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration.
+Only customers with a Splunk Log Observer entitlement can use infinite logging rules. Those customers must transition to Log Observer Connect.
+
+After the transition to Log Observer Connect
+=============================================================================
+You can continue using existing infinite logging rules. You can turn your existing infinite logging rules off and on. However, you cannot create new infinite logging rules or edit existing rules.
+
+Going forward, determine the best option for your organization by discussing with your Splunk representative the following types of data storage you can use in the Splunk platform instead of infinite logging rules:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 40
+
+   * - :strong:`Storage type`
+     - :strong:`Documentation`
+
+   * - Dynamic Data Active Archive
+     - See :new-page:`Store expired Splunk Cloud Platform data in a Splunk-managed archive <https://docs.splunk.com/Documentation/SplunkCloud/9.0.2305/Admin/DataArchiver>`
+
+   * - Dynamic Data Self Storage
+     - See :new-page:`Store expired Splunk Cloud Platform data in your private archive <https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/Admin/DataSelfStorage>`
+   
+   * - Ingest actions
+     - See :new-page:`Use ingest actions to improve the data input process <https://docs.splunk.com/Documentation/SplunkCloud/latest/Data/DataIngest>`
 
 
 Use cases for archiving your logs
