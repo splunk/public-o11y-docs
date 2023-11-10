@@ -258,7 +258,7 @@ The Linux installer script supports the following options:
      - Specify ``--no-generate-service-name`` to prevent the preloader from setting the ``OTEL_SERVICE_NAME`` environment variable. Only applicable if the ``--with-instrumentation`` option is also specified. This option has been deprecated for Splunk OpenTelemetry Auto Instrumentation versions ``0.87`` or higher, and the bundled Auto Instrumentation agents automatically generate a service name by default.
      - ``--generate-service-name``
    * - ``--[enable|disable]-telemetry``
-     - Activate or deactivate the instrumentation preloader from sending the ``splunk.linux-autoinstr.executions``  metric to the Collector. Only applicable if the ``--with-instrumentation``  option is also specified. This option has been deprecated for OpenTelemetry Collector versions ``0.87`` or higher, and the Collector no longer generates the ``splunk.linux-autoinstr.executions`` telemetry metric.
+     - Activate or deactivate the instrumentation preloader from sending the ``splunk.linux-autoinstr.executions``  metric to the Collector. Only applicable if the ``--with-instrumentation``  option is also specified. This option has been deprecated for Splunk OpenTelemetry Auto Instrumentation versions ``0.87`` or higher, and the `libsplunk.so` library no longer generates the ``splunk.linux-autoinstr.executions`` telemetry metric.
      - ``--enable-telemetry``
    * - ``--[enable|disable]-profiler``
      - Activate or deactivate AlwaysOn CPU Profiling. Only applicable if the ``--with-instrumentation``  option is also specified.
