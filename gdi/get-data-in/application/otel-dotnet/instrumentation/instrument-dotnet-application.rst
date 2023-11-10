@@ -174,7 +174,7 @@ You can also set the ``SkippedInstrumentation`` property from the terminal. Rewr
 
    dotnet build -p:SkippedInstrumentations=StackExchange.Redis%3BMongoDB.Driver.Core
 
-To distribute the appropriate native runtime components with your .NET application, specify a Runtime Identifier (RID) to build the application using ``dotnet build`` or ``dotnet publish``. 
+To distribute the appropriate native runtime components with your .NET application, specify a Runtime Identifier (RID) to build the application using ``dotnet build`` or ``dotnet publish``.
 
 Both self-contained and framework-dependent applications are compatible with automatic instrumentation. See :new-page:`.NET application publishing overview <https://learn.microsoft.com/en-us/dotnet/core/deploying/>` in the .NET documentation for more information.
 
@@ -254,3 +254,26 @@ In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, f
 #. Select your username.
 
 The realm name appears in the :guilabel:`Organizations` section.
+
+.. _uninstall-otel-dotnet:
+
+Uninstall the .NET instrumentation
+========================================
+
+To deactivate and uninstall the .NET instrumentation, run the following commands:
+
+.. tabs::
+
+   .. code-tab:: powershell Windows (PowerShell)
+
+      # Run the unregister command for your situation
+      Unregister-OpenTelemetryForIIS
+      Unregister-OpenTelemetryForWindowsService
+      Unregister-OpenTelemetryForCurrentSession
+
+      # Uninstall OpenTelemetry for .NET
+      Uninstall-OpenTelemetryCore
+
+   .. code-tab:: shell Linux
+
+      rm -rf <path_of_otel_dotnet_install>
