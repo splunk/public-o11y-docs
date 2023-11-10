@@ -32,7 +32,7 @@ You can install the ``splunk-otel-auto-instrumentation`` package in the followin
 
       Using the installer script, you can install the auto instrumentation package for Java and activate auto instrumentation for Java for either all supported Java applications on the host via the "preload" method or for only Java applications running as ``systemd`` services.
 
-      .. note:: By default, auto instrumentation is activated for both Java and Node.js when using the installer script. To deactivate auto instrumentation for Node.js, add the ``--without-instrumentation-sdk node`` or ``--with-instrumentation-sdk java`` option in the installer script.
+      .. note:: By default, auto instrumentation is activated for both Java and Node.js when using the installer script. To deactivate auto instrumentation for Node.js, add the ``--without-instrumentation-sdk node`` or ``--with-instrumentation-sdk java`` option in the installer script command.
       
       .. tabs:: 
 
