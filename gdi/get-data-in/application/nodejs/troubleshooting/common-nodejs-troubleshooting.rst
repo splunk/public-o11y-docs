@@ -104,7 +104,7 @@ Webpack compatibility issues
 
 The Splunk Distribution of OpenTelemetry JS can't instrument modules bundled using Webpack, as OpenTelemetry can instrument libraries only by intercepting its ``require`` calls.
 
-To instrument Node applications that use bundled modules, use the Webpack ``externals`` configuration option so that the ``require`` calls are visible to OpenTelemetry.
+To instrument Node.js applications that use bundled modules, use the Webpack ``externals`` configuration option so that the ``require`` calls are visible to OpenTelemetry.
 
 The following example shows how to edit the ``webpack.config.js`` file to instrument the ``express`` framework:
 
@@ -142,10 +142,10 @@ Check that AlwaysOn Profiling is activated
 
 Make sure that you've activated the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``. See :ref:`profiling-configuration-nodejs`.
 
-Unsupported Node version
+Unsupported Node.js version
 -----------------------------------------------
 
-To use AlwaysOn Profiling, upgrade to Node version 16 or higher.
+To use AlwaysOn Profiling, upgrade to Node.js version 16 or higher.
 
 AlwaysOn Profiling data and logs don't appear in Splunk Observability Cloud
 ----------------------------------------------------------------------------
@@ -154,7 +154,7 @@ Collector configuration issues might prevent AlwaysOn Profiling data and logs fr
 
 To solve this issue, do the following:
 
-#. Check the configuration of the Node agent, especially ``SPLUNK_PROFILER_LOGS_ENDPOINT``.
+#. Check the configuration of the Node.js agent, especially ``SPLUNK_PROFILER_LOGS_ENDPOINT``.
 #. Verify that the Splunk Distribution of OpenTelemetry Collector is running at the expected endpoint and that the application host or container can resolve the host name and connect to the OTLP port.
 #. Make sure that you're running the Splunk Distribution of OpenTelemetry Collector and that the version is 0.34 or higher. Other collector distributions might not be able to route the log data that contains profiling data.
 #. A custom configuration might override settings that let the collector handle profiling data. Make sure to configure an ``otlp`` receiver and a ``splunk_hec`` exporter with correct token and endpoint fields. The ``profiling`` pipeline must use the OTLP receiver and Splunk HEC exporter you've configured.

@@ -15,6 +15,6 @@ The SignalFx Lambda wrappers instrument your AWS Lambda functions to send metric
 
 - Java. See :new-page:`SignalFx Java Wrapper <https://github.com/signalfx/lambda-java>` on GitHub.
 - Python. See :new-page:`SignalFx Python Wrapper <https://github.com/signalfx/lambda-python>` on GitHub.
-- Node.js. See :new-page:`SignalFx Node Wrapper <https://github.com/signalfx/lambda-nodejs>` on GitHub.
+- Node.js. See :new-page:`SignalFx Node.js Wrapper <https://github.com/signalfx/lambda-nodejs>` on GitHub.
 - Ruby. See :new-page:`SignalFx Ruby Wrapper <https://github.com/signalfx/lambda-ruby>` on GitHub.
 - C#. See :new-page:`SignalFx C# Wrapper <https://github.com/signalfx/lambda-csharp>` on GitHub.
