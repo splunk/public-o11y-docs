@@ -51,6 +51,8 @@ Using the installer script, you can install the auto instrumentation package for
                 curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
                 sh /tmp/splunk-otel-collector.sh --with-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
 
+        Auto instrumentation method automatically adds environment variables to ``/etc/splunk/zeroconfig/node.conf``.
+
             .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option. 
 
         You can activate AlwaysOn Profiling for CPU and memory, as well as metrics, using additional options, as in the following example:
