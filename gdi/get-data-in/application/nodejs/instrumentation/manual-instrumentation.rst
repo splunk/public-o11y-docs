@@ -1,8 +1,8 @@
 .. _nodejs-manual-instrumentation:
 
-********************************************************************
+************************************************************************
 Manually instrument Node.js applications for Splunk Observability Cloud
-********************************************************************
+************************************************************************
 
 .. meta::
    :description: Manually instrument your Node.js application when you need to add custom attributes to spans or want to manually generate spans and metrics. Keep reading to learn how to manually instrument your Node.js application for Splunk Observability Cloud.

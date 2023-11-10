@@ -1,8 +1,8 @@
 .. _instrument-nodejs-applications:
 
-***************************************************************
+********************************************************************
 Instrument your Node.js application for Splunk Observability Cloud
-***************************************************************
+********************************************************************
 
 .. meta::
    :description: The Splunk Distribution of OpenTelemetry Node.js can automatically instrument your Node.js application or service. Follow these steps to get started.
@@ -19,7 +19,7 @@ To generate all the basic installation commands for your environment and applica
 #. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`Node.js guided setup <https://login.signalfx.com/#/gdi/scripted/nodejs-tracing/step-1?category=product-apm&gdiState=%7B"integrationId":"nodejs-tracing"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the navigation menu, select :menuselection:`Data Management`. 
+   #. In the navigation menu, select :menuselection:`Data Management`.
 
    #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 
@@ -36,7 +36,7 @@ Install the Splunk Distribution of OpenTelemetry JS manually
 Follow these instructions to install the Splunk Distribution of OpenTelemetry JS:
 
 - :ref:`install-enable-nodejs-agent`
-   - :ref:`enable_profiling_nodejs` 
+   - :ref:`enable_profiling_nodejs`
    - :ref:`enable_automatic_metric_collection_nodejs`
 - :ref:`configure-nodejs-instrumentation`
 - :ref:`nodejs-programmatically-instrument`
@@ -53,7 +53,7 @@ To instrument your Node.js application with the Splunk Distribution of OpenTelem
    .. code-block:: bash
 
       npm install @splunk/otel
-   
+
    To add custom instrumentations, see :ref:`add-custom-instrumentation`.
 
 #. Set the ``OTEL_SERVICE_NAME`` environment variable:
@@ -270,11 +270,11 @@ If you need to send data directly to Splunk Observability Cloud, set the followi
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
 
 #. Open the navigation menu in Splunk Observability Cloud.
 #. Select :menuselection:`Settings`.
-#. Select your username. 
+#. Select your username.
 
 The realm name appears in the :guilabel:`Organizations` section.
 
