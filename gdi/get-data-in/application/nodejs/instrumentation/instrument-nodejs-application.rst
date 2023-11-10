@@ -1,13 +1,13 @@
 .. _instrument-nodejs-applications:
 
 ***************************************************************
-Instrument your Node application for Splunk Observability Cloud
+Instrument your Node.js application for Splunk Observability Cloud
 ***************************************************************
 
 .. meta::
-   :description: The Splunk Distribution of OpenTelemetry Node.js can automatically instrument your Node application or service. Follow these steps to get started.
+   :description: The Splunk Distribution of OpenTelemetry Node.js can automatically instrument your Node.js application or service. Follow these steps to get started.
 
-The Splunk Distribution of OpenTelemetry JS can automatically instrument your Node application and many of the popular node.js libraries your application uses.
+The Splunk Distribution of OpenTelemetry JS can automatically instrument your Node.js application and many of the popular node.js libraries your application uses.
 
 To get started, use the guided setup or follow the instructions manually.
 
@@ -94,7 +94,7 @@ To instrument your Node.js application with the Splunk Distribution of OpenTelem
 
 #. (Optional) Activate metric collection. See :ref:`enable_automatic_metric_collection_nodejs`.
 
-#. To run your Node application, enter the following command:
+#. To run your Node.js application, enter the following command:
 
    .. code-block:: bash
 
@@ -156,7 +156,7 @@ In most cases, the only configuration setting you need to enter is the service n
 Instrument your application programmatically
 -----------------------------------------------------
 
-To have even finer control over the tracing pipeline, instrument your Node application programmatically.
+To have even finer control over the tracing pipeline, instrument your Node.js application programmatically.
 
 To instrument your application programmatically, add the following lines at the beginning of your entry point script, before any instrumentation function is called:
 
