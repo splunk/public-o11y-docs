@@ -140,8 +140,8 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-java`.
 
-      .. note:: AlwaysOn Profiling is not compatible with Oracle JDK 8.
-
+      .. note:: AlwaysOn Profiling is not supported on Oracle JDK 8 and IBM J9.
+   
    .. group-tab:: Node.js
 
       :strong:`Requirements`

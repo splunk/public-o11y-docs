@@ -10,10 +10,9 @@ The following Java Virtual Machines (JVMs) are compatible:
 - Azul Zulu
 - BellSoft Liberica JDK
 - Eclipse Adoptium/Temurin
-- IBM J9 (AlwaysOn Profiling is not supported)
+- IBM J9
 - Microsoft OpenJDK
-- Oracle OpenJDK
-- Red Hat OpenJDK
+- OpenJDK
 - SAP SapMachine
 
-.. note:: AlwaysOn Profiling is not supported on Oracle JDK 8.
+.. note:: AlwaysOn Profiling is not supported on Oracle JDK 8 and IBM J9.
