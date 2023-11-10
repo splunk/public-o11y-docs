@@ -61,16 +61,17 @@ Here is an example of how Kai initializes the tracer and creates a custom event 
 
       .. code-block:: javascript
 
-         import {trace} from '@opentelemetry/api'
+          import {trace} from '@opentelemetry/api'
 
-         const tracer = trace.getTracer('appModuleLoader');
-         const span = tracer.startSpan('test.module.load', {
-         attributes: {
-               'blog.likes': 'test.module.load'
-         }
-         });
-         // time passes
-         span.end();
+          const tracer = trace.getTracer('blogLoader');
+          const span = tracer.startSpan('blog.likes', {
+            attributes: {
+                'workflow.name': 'blog.likes'
+            }
+          });
+
+          // time passes
+          span.end();
 
 
 
