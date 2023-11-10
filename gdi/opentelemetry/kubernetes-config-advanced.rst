@@ -308,9 +308,7 @@ Support of Pod Security Policies (PSP) was removed in Kubernetes 1.25. If you st
 
   .. code-block:: yaml
 
-
     helm install my-splunk-otel-collector -f my_values.yaml splunk-otel-collector-chart/splunk-otel-collector
-
 
 Configure data persistence queues
 ==================================================
@@ -330,6 +328,9 @@ Config examples
 
 Use following in values.yaml to disable data persistense for logs, metrics, or traces:
 
+Logs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 .. code-block:: yaml
 
   agent:
@@ -339,7 +340,9 @@ Use following in values.yaml to disable data persistense for logs, metrics, or t
             sending_queue:
               storage: null
 
-or
+
+Metrics
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: yaml
 
@@ -350,7 +353,8 @@ or
           sending_queue:
             storage: null
 
-or
+Traces
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: yaml
 
@@ -380,13 +384,11 @@ Gateway support
 
 The filestorage extention acquires an exclusive lock for the queue directory.
 
-It's not possible to run persistent buffering if there are multiple replicas of a pod and ``gateway`` runs 3 replicas by default.
-
-Even if support is somehow provided, only one of the pods will be able to acquire the lock and run, while the others will be blocked and unable to operate.
+It's not possible to run persistent buffering if there are multiple replicas of a pod. Even if support could be provided, only one of the pods will be able to acquire the lock and run, while the others will be blocked and unable to operate.
 
 Cluster Receiver support
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The Cluster receiver is a 1-replica deployment of the OpenTelemetry Collector. Because any available node can be selected by the Kubernetes control plane to run the cluster receiver pod (unless ``clusterReceiver.nodeSelector`` is explicitly set to pin the pod to a specific node), ``hostPath`` or ``local`` volume mounts wouldn't work for such environments.
+The Cluster receiver is a 1-replica deployment of the OpenTelemetry Collector. Because the Kubernetes control plane can select any available node to run the cluster receiver pod (unless ``clusterReceiver.nodeSelector`` is explicitly set to pin the pod to a specific node), ``hostPath`` or ``local`` volume mounts wouldn't work for such environments.
 
 Data persistence is currently not applicable to the Kubernetes cluster metrics and Kubernetes events.
