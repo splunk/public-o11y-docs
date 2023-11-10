@@ -1,8 +1,8 @@
 .. _browser-test-scenario:
 
-*********************************************
-Scenario: Kai monitors a multi-step workflow 
-*********************************************
+******************************************************************************************
+Scenario: Monitor a multi-step workflow using a Browser test 
+******************************************************************************************
 
 .. meta::
     :description: Fictional use case describing how to monitor the performance of a company website using browser test monitoring from Splunk Synthetic Monitoring. 
@@ -12,7 +12,7 @@ Kai, a site reliability engineer at Buttercup Industries, a fictitious e-commerc
 Set up a Browser test to monitor a critical workflow 
 ======================================================
 
-Buttercup Industries has a large conference coming up. Kai sets up an Browser test to monitor the performance of the website hosting to make sure that all attendees can access the website and see the agenda for the conference. Kai uses a global variable to retrieve the user credentials during the login workflow. For more, see :ref:`global-variables`. 
+Buttercup Industries has a large conference coming up. Kai sets up a Browser test to monitor the performance of the website hosting to make sure that all attendees can access the website and see the agenda for the conference. Kai uses a global variable to retrieve the user credentials during the login workflow. 
 
 Kai's Browser test captures this user workflow: 
 
@@ -20,9 +20,9 @@ Kai's Browser test captures this user workflow:
 2. Navigate to the education portal.
 3. Open a virtual session page.
 
-Here is how Kai set up the browser test for the login workflow. 
+Here is how Kai set up the Browser test for the login workflow. 
 
-1. Kai creates a step to go the Buttercup Games homepage and adds a few second delay between steps by selecting :guilabel:`Wait for navigation`. 
+1. Kai creates a step to go the Buttercup Games home page and adds a few second delay between steps by selecting :guilabel:`Wait for navigation`. 
 
 ..  image:: /_images/synthetics/browser-test-one.png
     :width: 100% 
@@ -58,11 +58,18 @@ All together, the test looks like this:
     :width: 100% 
     :alt: This image shows a completed browser test. 
 
+Summary
+===========
+
+With this Browser test, Kai can monitor the login workflow of Buttercup Games to guarantee that conference attendees can access all of the information needed to attend and participate in the sessions.  
+
 
 Learn more 
 =======================
-See the following topics to learn how to set up a a Browser test, and to learn more about the results, diagnostics, and metrics that Browser tests capture:
 
+See the following topics to learn how to set up a Browser test, and to learn more about the results, diagnostics, and metrics that Browser tests capture:
+
+* :ref:`global-variables`
 * :ref:`set-up-browser-test`
 * :ref:`browser-metrics`
 * :ref:`browser-test-results`
