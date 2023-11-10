@@ -30,24 +30,24 @@ dashboards are listed in a table that displays them by name.
 
 To add one or more dashboards to the default dashboard set for a navigator, do the following from the Navigator settings page:
 
-#. Click on **+Add dashboard**.
+#. Click on :guilabel:`+Add dashboard`.
 
-#. Scroll through the list of dashboards, using the Prev and Next buttons to navigate through multiple pages as desired. All available dashboards are displayed bydefault, so the dashboard list can be extensive.
+#. Scroll through the list of dashboards, using the Prev and Next buttons to navigate through multiple pages as desired. All available dashboards are displayed in alphabetical order, so the dashboard list may be extensive.
 
-#. (Optional) In the search field of the :guilabel:`Select a dashboard` window, enter the name of the dashboard you want to find. If dashboards in different groups have the same name, as they might in the case of a common function like "Service endpoint," then search displays the relevant part of the dashboard list where the dashboards appear in alphabetical order.
+#. (Optional) In the search field of the :guilabel:`Select a dashboard` window, enter the name of the dashboard you want to find. If dashboards in different groups have the same name, as they might for a common function like "Service endpoint," then search displays the part of the dashboard list where similar names are grouped.
 
-#. (Optional) Use the buttons next to the search field to apply either of the following search filters:
+#. (Optional) Use the buttons next to the search field to apply either of the following filters:
 
    * Created by me
    * Favorites
 
 #. Click on the name of the dashboard you want to add to the navigator.
 
-#. Click :guilabel:`Select` at the bottom right of the dashboard listing.
+#. Click :guilabel:`Select` at the bottom right of the listing window.
 
 #. (Optional) Repeat steps 2 through 5 to add additional dashboards to the navigator.
 
-#. (Optional) To change the dashboard display order on the home page for the navigator, click on a dashboard name and drag it up or down in the dashboard list.
+#. (Optional) To change the dashboard display order on the navigator's home page, drag a dashboard name up or down in the dashboard list.
 
 #. Click :guilabel:`Save changes` to confirm and apply your choices. 
 
