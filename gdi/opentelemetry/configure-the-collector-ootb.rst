@@ -34,6 +34,7 @@ The following diagram shows the default logs pipeline:
 .. mermaid:: 
 
    flowchart LR
+
       %% LR indicates the direction (left-to-right)
 
       %% You can define classes to style nodes and other elements

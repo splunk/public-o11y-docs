@@ -223,9 +223,8 @@ Follow these steps to set up AlwaysOn Profiling with a collector in data forward
    flowchart LR
 
       accTitle: Example gateway deployment diagram
-
       accDescr: Step one. Point the instrumentation agent to the collector in host (agent) monitoring mode. Step two. Configure the collector in host (agent) monitoring mode. Step three. Configure the collector in data forwarding (gateway) mode. Step four. Send data to Splunk Observability Cloud.
-      
+
    instrumentation["`**(1)** Instrumentation agent`"] --> collector["`**(2)** Collector in host (agent) monitoring mode`"] --> datacollector["`**(3)** Collector in data forwarding (gateway) mode`"] --> SOC["`**(4)** Splunk Observability Cloud`"]
 
 #. Point the instrumentation agent to the OTLP gRPC receiver for the collector in host monitoring (agent) mode. The OTLP gRPC receiver must be running on the same host and port as the collector in host monitoring (agent) mode.
