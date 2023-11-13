@@ -47,7 +47,7 @@ You can install the ``splunk-otel-auto-instrumentation`` package in the followin
 
             .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option.
 
-            The auto instrumentation method automatically adds environment variables to ``/etc/splunk/zeroconfig/java.conf``.
+            The system-wide auto instrumentation method automatically adds environment variables to ``/etc/splunk/zeroconfig/java.conf``.
 
             To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <env>`` option. Replace ``<env>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
 
