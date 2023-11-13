@@ -216,7 +216,7 @@ To connect using Terraform, see :ref:`terraform-config`.
 
 To take advantage of the full benefits of the Splunk Observability Cloud platform, install the :ref:`OpenTelemetry Collector <otel-intro>`. 
 
-To track the degree of OpenTelemetry enablement in your AWS integrations: 
+To track the degree of OpenTelemetry enablement in your GCP integrations: 
 
 1. From Splunk Observability Cloud, go to :guilabel:`Data Management > Google Cloud Platform`.
 
