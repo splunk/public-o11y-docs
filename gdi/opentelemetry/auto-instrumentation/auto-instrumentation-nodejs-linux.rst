@@ -28,12 +28,6 @@ Prerequisites
 
 - You must have ``npm`` to install the Node.js auto instrumentation package. 
 
-- You must install the provided Node.js package with ``npm``. To install globally, use the following command:
-
-    .. code-block:: bash
-
-        sudo npm install --global /usr/lib/splunk-instrumentation/splunk-otel-js.tgz
-
 .. _install-js-package:
 
 Install the package
@@ -41,7 +35,13 @@ Install the package
 
 You can install the ``splunk-otel-auto-instrumentation`` package in the following ways:
 
-Using the installer script, you can install the auto instrumentation package for Node.js and activate auto instrumentation for Node.js for either all supported Node.js applications on the host via the system-wide method or for only Node.js applications running as ``systemd`` services.
+Using the installer script, you can install the auto instrumentation package for Node.js and activate auto instrumentation for Node.js for either all supported Node.js applications on the host via the system-wide method or for only Node.js applications running as ``systemd`` services. 
+
+By default, the installer script installs the Node.js package globally using the ``npm install --global`` command. To specify a custom command for installation, use ``npm-command <command>`` as in the following example:
+
+.. code-block:: bash
+
+    --npm-command "/custom/path/to/npm install --prefix /custom/nodejs/install/path"
 
 .. note:: By default, auto instrumentation is activated for both Java and Node.js when using the installer script. To deactivate auto instrumentation for Java, add the ``--without-instrumentation-sdk java`` or ``--with-instrumentation-sdk node`` option in the installer script command.
 
