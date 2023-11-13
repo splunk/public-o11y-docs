@@ -14,7 +14,7 @@ Tutorial: monitor your AWS environment in Splunk Observability Cloud
     tutorial-aws-start
     tutorial-aws-use
 
-Deploy the Splunk Distribution of OpenTelemetry Collector with AWS integrations and start monitoring your AWS platform using Splunk Observability Cloud.
+Install the AWS integration and connect your AWS services with Splunk Observability Cloud.
 
 .. raw:: html
 
@@ -22,22 +22,9 @@ Deploy the Splunk Distribution of OpenTelemetry Collector with AWS integrations 
 
 This tutorial covers the following concepts:
 
-* Installing and deploying the Splunk Distribution of OpenTelemetry Collector for Kubernetes.
-* Using the Splunk Distribution of OpenTelemetry Collector to send Kubernetes data to Splunk Observability Cloud.
-* Viewing your Kubernetes cluster data in navigators and dashboards.
-* Creating a detector to issue alerts about your Kubernetes cluster data.
-
-.. raw:: html
-
-    <h3> How to use this tutorial </h3>
-
-Each part in this tutorial builds on the previous part. Follow the tutorial parts in order. 
-
-1. Ensure you meet the prerequisites for using this tutorial. See :ref:`get-started-k8s-imm`.
-2. Deploy the Splunk Distribution of OpenTelemetry Collector for Kubernetes. See :ref:`install-otel-k8s`.
-3. Use navigators and dashboards to monitor your Kubernetes cluster. See :ref:`monitor-k8s-cluster`.
-4. Create a detector to alert you about Kubernetes cluster data. See :ref:`activate-builtin-detector`.
-5. (Optional) Learn more about concepts from this tutorial. See :ref:`k8s-learn-more`.
+1. Install the Splunk Observability Cloud AWS integration. See :ref:`tutorial-aws-start`.
+2. Use Splunk Observability Cloud to monitor your AWS services. See :ref:`tutorial-aws-use`.
+3. (Optional) Learn more about concepts from this tutorial. See :ref:`tutorials-additional-resources`.
 
 .. raw:: html
 

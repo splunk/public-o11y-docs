@@ -1,4 +1,5 @@
 .. _k8s-learn-more:
+.. _tutorials-additional-resources:
 
 **********************************
 Additional resources

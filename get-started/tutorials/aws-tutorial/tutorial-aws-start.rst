@@ -5,7 +5,7 @@ Start here: Connect with your AWS services
 **************************************************
 
 .. meta::
-    :description: Prerequisites for getting Kubernetes data into Splunk Observability Cloud.
+   :description: Prerequisites for getting Kubernetes data into Splunk Observability Cloud.
 
 Get started with monitoring your AWS data in Splunk Observability Cloud.
 
@@ -57,7 +57,6 @@ Steps
 
 For example, you might want to use the guided setup if you are setting up just a few integrations. However, if you are setting up many integrations, such as for different accounts and regions, use the API or Terraform. Note that if you need all of the latest integration features, you might want to use the API because support might not yet be available using Terraform.
 
-.. _gdi-2:
 
 Install the OpenTelemetry Collector to send server and cluster data
 =============================================================================================================
