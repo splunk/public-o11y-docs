@@ -1,3 +1,6 @@
+:orphan:
+
+.. include:: /_includes/mpm-arm/mpm-arm-preview-header.rst
 
 .. _delete-metric-ruleset-arm:
 
