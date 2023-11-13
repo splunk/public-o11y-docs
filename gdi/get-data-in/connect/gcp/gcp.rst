@@ -216,7 +216,15 @@ To connect using Terraform, see :ref:`terraform-config`.
 
 To take advantage of the full benefits of the Splunk Observability Cloud platform, install the :ref:`OpenTelemetry Collector <otel-intro>`. 
 
-The Collector offers a higher degree of customization than the GCP integration, and you might prefer it if you want to see metrics at a resolution lower than one minute, or when you need fine-grained control over the filtering of what metrics are sent.     
+To track the degree of OpenTelemetry enablement in your AWS integrations: 
+
+1. From Splunk Observability Cloud, go to :guilabel:`Data Management > Google Cloud Platform`.
+
+2. Select :guilabel:`OpenTelemetry Enabled` to see whether the OTel Collector is installed on each GCP instance. This helps you identify the instances that still need to be instrumented. For instances that are successfully instrumented, you can see which version of the OTel Collector is deployed.
+
+..  image:: /_images/gdi/gcp-collector-insights.png
+  :width: 80%
+  :alt: Amount of GCP entities with the Collector installed.  
 
 .. _next-gcp-steps:
 
