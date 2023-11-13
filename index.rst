@@ -700,6 +700,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    rum/sensitive-data-rum
 
+
 .. toctree::
    :maxdepth:   3
 
@@ -714,6 +715,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    rum/error-aggregates
+
+.. toctree::
+   :maxdepth:   3
+
+   rum/rum-identify-span-problems
 
 .. toctree::
    :maxdepth:   3
