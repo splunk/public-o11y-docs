@@ -30,13 +30,13 @@ You can install the ``splunk-otel-auto-instrumentation`` package in the followin
 
    .. tab:: Installer script
 
-      Using the installer script, you can install the auto instrumentation package for Java and activate auto instrumentation for Java for either all supported Java applications on the host via the "preload" method or for only Java applications running as ``systemd`` services.
+      Using the installer script, you can install the auto instrumentation package for Java and activate auto instrumentation for Java for either all supported Java applications on the host via the system-wide method or for only Java applications running as ``systemd`` services.
 
       .. note:: By default, auto instrumentation is activated for both Java and Node.js when using the installer script. To deactivate auto instrumentation for Node.js, add the ``--without-instrumentation-sdk node`` or ``--with-instrumentation-sdk java`` option in the installer script command.
       
       .. tabs:: 
 
-         .. tab:: Preload
+         .. tab:: System-wide
             
             Run the installer script with the ``--with-instrumentation`` option, as shown in the following example. Replace  ``<SPLUNK_REALM>`` and ``<SPLUNK_ACCESS_TOKEN>`` with your Splunk Observability Cloud realm and token, respectively.
 
@@ -44,8 +44,6 @@ You can install the ``splunk-otel-auto-instrumentation`` package in the followin
 
                curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
                sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
-
-            Auto instrumentation method automatically adds environment variables to ``/etc/splunk/zeroconfig/java.conf``.
 
             .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance. 
 
@@ -197,7 +195,7 @@ The default settings for zero config autoinstrumentation are sufficient for most
 
 The installation package contains the following artifacts:
 
-- The configuration file at ``/etc/splunk/zeroconfig/java.conf``. This is only applicable for the Preload method, and this file is automatically added to ``/etc/ld.so.preload``.
+- The configuration file at ``/etc/splunk/zeroconfig/java.conf``. This is only applicable for the system-wide method, and this file is automatically added to ``/etc/ld.so.preload``.
 - The :new-page:`Java Instrumentation Agent <https://github.com/signalfx/splunk-otel-java>` at ``/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar``
 - The shared instrumentation library at ``/usr/lib/splunk-instrumentation/libsplunk.so```
 
