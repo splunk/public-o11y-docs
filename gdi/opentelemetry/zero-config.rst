@@ -18,7 +18,7 @@ Splunk OpenTelemetry Zero Configuration Auto Instrumentation
 
 Splunk OpenTelemetry Zero Configuration Auto Instrumentation automatically instruments your back-end applications and services to capture and report distributed traces and metrics to the Splunk Distribution of OpenTelemetry Collector, and then on to Splunk APM.
 
-The following diagram demonstrates the process of manually instrumenting your applications compared to the process of using zero configuration auto instrumentation to instrument your applications:
+The following diagram demonstrates the process of manually instrumenting your applications:
 
 .. mermaid::
 
@@ -35,6 +35,8 @@ The following diagram demonstrates the process of manually instrumenting your ap
       A --> B --> C --> D
       end
    
+The following diagram demonstrates the process of using zero config auto instrumentation to instrument your applications: 
+
 .. mermaid::
 
    flowchart TB
