@@ -304,3 +304,10 @@ Follow these steps to remove an inactive navigator.
         :alt: This image shows a navigator with a Remove Navigator option.
         
 #. Confirm your selection.
+
+.. _list-available-navigators:
+
+List available navigators
+-------------------------------
+
+For a list of all the navigators available, see :ref:`navigators-list-imm`.
