@@ -26,8 +26,9 @@ Before you decide to drop unaggregated raw data for your metric, consider the fo
 
 - You can only drop new incoming data. Existing data can't be dropped.
 - You can't recover dropped data.
-- Detectors using the metric you drop will misfire alerts or stop alerting.
-- Charts using the metric you drop will stop reporting new data.
+- Detectors using the metric or custom properties you drop will misfire alerts or stop alerting.
+- Charts using the metric or custom properties you drop will stop reporting new data.
+- Custom properties assigned to dropped dimensions or metrics will be deleted. To learn more, see :ref:`custom-properties`.
 - If you drop data for metrics associated with built-in charts and AutoDetect detectors, these charts and detectors will be empty and not function correctly. Avoid dropping data for metrics used in built-in charts and AutoDetect detectors. For a list of AutoDetect detectors, see :ref:`autodetect-list`.
 
 Avoid empty charts and detectors when dropping data
@@ -40,6 +41,23 @@ To prevent charts and detectors from showing no data, you can follow these steps
 #. Save your new rules.
 #. Replace the metric in all associated charts and detectors with the new aggregated metrics.
 #. Drop unaggregated raw data for your metric once you have updated associated charts and detectors.
+
+Avoid deleting custom properties when dropping data
+------------------------------------------------------------
+
+To prevent custom properties from being deleted, you can follow these steps when creating new rules:
+
+#. Keep all data when you first create new rules.
+#. Find custom properties assigned to the dimensions or metrics you want to drop using the Metadata Catalog or the Metrics Metadata API.
+
+    * To find a custom property using the Metadata Catalog, see :ref:`search-edit-metadata`.
+
+        .. note:: The Metadata Catalog doesn't distinguish between dimensions and properties when returning search results.
+
+    * To retrieve a list of custom properties using the API, see the :new-page:`GET endpoint for the Metrics Metadata API <https://dev.splunk.com/observability/reference/api/metrics_metadata/latest#endpoint-retrieve-dimensions-query>`.
+
+#. Assign any custom property you want to keep to the new aggregated metrics.
+#. Drop unaggregated raw data for your metric once you have assigned custom properties to the new metrics.
 
 .. _data-dropping-billing:
 

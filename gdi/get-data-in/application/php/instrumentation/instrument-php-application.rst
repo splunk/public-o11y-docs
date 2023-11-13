@@ -161,25 +161,31 @@ The following example shows how to update a deployment to expose environment var
 
    apiVersion: apps/v1
    kind: Deployment
+   metadata:
+     name: my-deployment
    spec:
-      selector:
-         matchLabels:
-            app: your-application
-      template:
-         spec:
-            containers:
-            - name: myapp
-               env:
-                  - name: SIGNALFX_PHP_LIBRARY
-                  valueFrom:
-                     fieldRef:
-                        fieldPath: status.hostIP
-                  - name: SIGNALFX_SERVICE_NAME
-                    value: "<service-name>"
-                  - name: SIGNALFX_ENDPOINT_URL
-                    value: "http://<endpoint>:9080/v1/trace"
-                  - name: SIGNALFX_TRACE_GLOBAL_TAGS
-                    value: "deployment.environment:<my_environment>"
+     selector:
+       matchLabels:
+         app: your-application
+     template:
+       metadata:
+         labels:
+           app: your-application
+       spec:
+         containers:
+         - name: myapp
+           image: <image-name>
+           env:
+             - name: SIGNALFX_PHP_LIBRARY
+               valueFrom:
+                 fieldRef:
+                   fieldPath: status.hostIP
+             - name: SIGNALFX_SERVICE_NAME
+               value: "<service-name>"
+             - name: SIGNALFX_ENDPOINT_URL
+               value: "http://<endpoint>:9080/v1/trace"
+             - name: SIGNALFX_TRACE_GLOBAL_TAGS
+               value: "deployment.environment:<my_environment>"
 
 Next, configure the PHP instrumentation for Splunk Observability Cloud. See :ref:`advanced-php-configuration` for more information.
 

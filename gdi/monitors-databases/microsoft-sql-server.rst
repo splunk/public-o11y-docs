@@ -36,11 +36,11 @@ Microsoft SQL Server host. To create this login, follow these steps:
 
    USE master;
    GO
-   CREATE LOGIN [signalfxagent] WITH PASSWORD = '<YOUR PASSWORD HERE>';
+   CREATE LOGIN [<user_id>] WITH PASSWORD = '<YOUR PASSWORD HERE>';
    GO
-   GRANT VIEW SERVER STATE TO [signalfxagent];
+   GRANT VIEW SERVER STATE TO [<user_id>];
    GO
-   GRANT VIEW ANY DEFINITION TO [signalfxagent];
+   GRANT VIEW ANY DEFINITION TO [<user_id>];
    GO
 
 Configuration

@@ -192,7 +192,7 @@ $(document).ready(function () {
       const tableHeaders = headers.map(header => `<th>${header}</th>`).join('');
 
       const table = `
-    <table style='width: 100%' class='generated-table'>
+    <table style='width: 100%' class='generated-table docutils align-default'>
         <thead>
             ${tableHeaders}
         </thead>
