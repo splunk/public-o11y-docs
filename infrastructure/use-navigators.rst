@@ -63,7 +63,7 @@ For information on customizing the content and format of the navigator, includin
 
 For interactive walkthroughs of how to use navigators in Infrastructure Monitoring to troubleshoot your web server or observe your application and the underlying infrastructure, see :new-page:`Splunk Infrastructure Monitoring web server troubleshooting scenario <https://bossofopsando11y.com/imt/webserver-troubleshooting.html>` and :new-page:`Splunk Infrastructure Monitoring application monitoring scenario <https://bossofopsando11y.com/imt/application-monitoring.html>`.
 
-For a list of all the navigators available, see :ref:`_navigators-list-imm`.
+For a list of all the navigators available, see :ref:`navigators-list-imm`.
 
 .. note::
 
