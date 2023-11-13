@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-scenario-business-hours:
 
 Scenario: Skyler creates business-hours and nights-and-weekend rotations for the web application service

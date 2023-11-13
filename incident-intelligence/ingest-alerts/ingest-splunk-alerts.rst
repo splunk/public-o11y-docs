@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-ingest-splunk-itsi-alerts:
 
 Ingest alerts from Splunk Enterprise and Splunk Cloud Platform
