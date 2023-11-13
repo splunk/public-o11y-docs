@@ -35,6 +35,9 @@ The following diagram shows the default logs pipeline:
 
    flowchart LR
 
+      accTitle: Default logs pipeline diagram
+      accDescr: Receivers send logs to the logs/memory_limiter processor. The logs/memory_limiter processor sends logs to the batch processor, and the batch processor sends logs to the resource detection processor. The resource detection processor sends logs to the exporter. The Signalfx logs pipeline follows the same steps, but uses internal receivers, processors, and exporters to send logs. 
+
       %% LR indicates the direction (left-to-right)
 
       %% You can define classes to style nodes and other elements
@@ -96,6 +99,10 @@ The following diagram shows the default metrics pipeline:
 .. mermaid:: 
 
    flowchart LR
+
+      accTitle: Default metric pipeline diagram
+      accDescr: Receivers send logs to the metrics/memory_limiter processor. The metrics/memory_limiter processor sends metrics to the batch processor, and the batch processor sends metrics to the resource detection processor. The resource detection processor sends metrics to the exporter. The internal metrics pipeline follows the same steps, but uses internal receivers, processors, and exporters to send metrics. 
+
       %% LR indicates the direction (left-to-right)
 
       %% You can define classes to style nodes and other elements
@@ -160,6 +167,10 @@ The following diagram shows the default traces pipeline:
 .. mermaid:: 
 
    flowchart LR
+
+      accTitle: Default traces pipeline diagram
+      accDescr: Receivers send traces to the traces/memory_limiter processor. The traces/memory_limiter processor sends traces to the batch processor, and the batch processor sends traces to the resource detection processor. The resource detection processor sends traces to the Splunk APM exporter and the Signalfx exporter.
+
       %% LR indicates the direction (left-to-right)
 
       %% You can define classes to style nodes and other elements
