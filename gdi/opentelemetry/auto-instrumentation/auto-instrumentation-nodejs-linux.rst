@@ -37,7 +37,7 @@ You can install the ``splunk-otel-auto-instrumentation`` package in the followin
 
 Using the installer script, you can install the auto instrumentation package for Node.js and activate auto instrumentation for Node.js for either all supported Node.js applications on the host via the system-wide method or for only Node.js applications running as ``systemd`` services. 
 
-By default, the installer script installs the Node.js package globally using the ``npm install --global`` command. To specify a custom command for installation, use ``npm-command <command>`` as in the following example:
+By default, the installer script installs the Node.js package globally using the ``npm install --global`` command. To specify a custom command for installation, use the ``--npm-command <command>`` option as in the following example:
 
 .. code-block:: bash
 
