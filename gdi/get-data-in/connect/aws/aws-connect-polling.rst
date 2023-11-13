@@ -26,7 +26,7 @@ For alternative connection methods, see:
 Use the UI guided setup to connect to AWS 
 ============================================
 
-To access the guided setup for AWS integration, perform the following steps:
+To access the guided setup for the AWS integration, perform the following steps:
 
 #. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`Amazon Web Services guided setup <https://login.signalfx.com/#/gdi/aws?category=all&gdiState=%7B%22integrationId%22:%22FfhrrZoAYAA%22%7D>`. Optionally, you can navigate to the guided setup on your own:

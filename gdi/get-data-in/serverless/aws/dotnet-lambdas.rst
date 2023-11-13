@@ -9,7 +9,7 @@ Instrument your .NET AWS Lambda function for Splunk Observability Cloud
 
 You can instrument a .NET lambda function to send traces to Splunk Observability Cloud using the following OpenTelemetry template. The template uses these packages:
 
-* :new-page:`OpenTelemetry <https://www.nuget.org/packages/OpenTelemetry0>`
+* :new-page:`OpenTelemetry <https://www.nuget.org/packages/OpenTelemetry>`
 * :new-page:`OpenTelemetry.Exporter.OpenTelemetryProtocol <https://www.nuget.org/packages/OpenTelemetry.Exporter.OpenTelemetryProtocol>` 
 * :new-page:`OpenTelemetry.Instrumentation.AWS <https://www.nuget.org/packages/OpenTelemetry.Instrumentation.AWS>`
 * :new-page:`OpenTelemetry.Instrumentation.AWSLambda <https://www.nuget.org/packages/OpenTelemetry.Instrumentation.AWSLambda>`

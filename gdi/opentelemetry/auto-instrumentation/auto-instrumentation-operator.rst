@@ -92,7 +92,7 @@ Run the following to verify the resources are deployed correctly:
 
 You can add an ``instrumentation.opentelemetry.io/inject-{instrumentation_library}`` annotation to the following:
 
-* Namespace: All pods within that namespace _alert-signal instrumented.
+* Namespace: All pods within that namespace are instrumented.
 * Pod Spec Objects: PodSpec objects that are available as part of Deployment, Statefulset, or other resources can be annotated.
 
 Instrumentation annotations can have the following values:

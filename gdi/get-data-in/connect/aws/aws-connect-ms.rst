@@ -8,8 +8,6 @@ Connect to AWS with Metric Streams from the Splunk console
 .. meta::
   :description: Use guided setup to connect Splunk Observability Cloud to AWS through CloudWatch using Metric Streams.
 
-.. note:: The guided setup to connect AWS with Metric Streams from the Splunk Console is being rolled out starting October 26 and will be completed by November 6. 
-
 If you have Administrator privileges for Splunk Observability Cloud and your Amazon Web Services (AWS) account, you can use the UI guided setup to create an integration to connect to AWS, and configure metrics and logs collection.
 
 Before you start
@@ -26,7 +24,7 @@ For alternative connection methods, see:
 Use the guided setup to connect to AWS 
 ============================================
 
-To access the guided setup for AWS integration, perform the following steps:
+To access the guided setup for the AWS integration, perform the following steps:
 
 #. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`Amazon Web Services guided setup <https://login.signalfx.com/#/gdi/aws?category=all&gdiState=%7B%22integrationId%22:%22FfhrrZoAYAA%22%7D>`. Optionally, you can navigate to the guided setup on your own:
@@ -57,7 +55,7 @@ In this step you need to choose the following connection options:
   * CloudWatch metrics. 
   * Logs.
 
-In the CloudWatch Metrics option, select :guilabel:`Metric Streams (Splunk-managed)` as the ingestion method. When you activate Metric Streams:
+In the CloudWatch Metrics option, select :guilabel:`Streaming (Splunk-managed)` as the ingestion method. When you activate Metric Streams:
 
 * Make sure you :ref:`add these additional permissions <metricstreams_iampolicy>` to your IAM policy. 
 * Update your settings and deploy the CloudFormation template following :ref:`these steps <activate-cw-metricstreams>`.

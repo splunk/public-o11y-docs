@@ -25,14 +25,14 @@ The number of hosts, containers, and other resources that Infrastructure Monitor
 
 - To calculate monthly usage for hosts and containers, Observability Cloud counts the number of unique hosts and containers sending metrics during each hour in the month. It then calculates the average of these counts to determine monthly usage.
 
-- To calculate monthly usage for custom and high-resolution metrics, Observability Cloud counts the number of custom and high-resolution metrics sent during each hour in the month. It then calculates the average of these counts to determine monthly usage.
+- To calculate monthly usage for custom and high-resolution metrics, Observability Cloud counts the number of metric time series (MTS) sent during each hour in the month. It then calculates the average of these counts to determine monthly usage. For details on the difference between metrics and Metric Time Series, see :ref:`get-started-metrics`.
 
 Overage fees apply to each type of object individually. 
 
 Example
 ------------------------------
 
-Let's suppose the your subscription plan covers 25 hosts and 10 containers per host, or 250 containers. 
+Let's suppose that your subscription plan covers 25 hosts and 10 containers per host, or 250 containers. 
 
 Let's also suppose that you are over your limits as follows:
 
@@ -71,8 +71,7 @@ When creating the detector, you can use these metrics as signals on the :guilabe
    *  -  Custom metrics
       -  ``sf.org.numCustomMetrics``
 
-   *  -  High-resolution metrics
-      -  ``sf.org.numHighResolutionMetrics``
+
 
 Also, consider using one of the following conditions on the :guilabel:`Alert condition` tab:
 
@@ -88,9 +87,9 @@ How to avoid overage fees
 If you are approaching or over your limit in any area, you have a few options available to avoid overage fees:
 
 * Monitor fewer hosts, send in fewer custom metrics, and so forth. 
-* Reevaluate the size your subscription, increasing your limits to match your need for hosts, containers, custom metrics, or high-resolution metrics.
+* Reevaluate the size of your subscription, increasing your limits to match your need for hosts, containers, or custom metrics.
 * If you have Enterprise Edition, you can manage costs associated with sending in data by setting limits on access tokens. See :ref:`admin-manage-usage` for more information.
-* If you have a Standard Edition pricing plan, you can upgrade your subscription to Enterprise Edition, which includes support for monitoring more containers, custom metrics, and high-resolution metrics per host. 
+* If you have a Standard Edition pricing plan, you can upgrade your subscription to Enterprise Edition, which includes support for monitoring more containers and custom metrics per host. 
 * Purchase support for increasing your limits on any of these items. 
   
 To get help with understanding which option is best for your organization, contact :ref:`support`.

@@ -2164,7 +2164,7 @@ msgid ""
 "The following table provides an overview of how HTTP status codes are used to set the ``span.status`` field, and subsequently ``otel.status_code``, in OpenTelemetry instrumentation in accordance with OpenTelemetry "
 "semantic conventions. To learn more, see the OpenTelemetry semantic conventions for HTTP spans on GitHub :new-page:`https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/"
 "semantic_conventions/http.md#status`."
-msgstr "以下の表は、OpenTelemetry セマンティック規約に従って、OpenTelemetry インストルメンテーションにおいて、HTTP ステータスコードがどのように ``span.status`` フィールドの設定に使われ、その後 ``otel.status_code`` の設定に使われるかの概要を示しています。詳しくは、GitHub の OpenTelemetry semantic conventions for HTTP spans :new-page:`https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/semantic_conventions/http.md#status` を参照してください。"
+msgstr "以下の表は、OpenTelemetry セマンティック規約に従って、OpenTelemetry インストルメンテーションにおいて、HTTP ステータスコードがどのように ``span.status`` フィールドの設定に使われ、その後 ``otel.status_code`` の設定に使われるかの概要を示しています。詳しくは、GitHub の OpenTelemetry semantic conventions for HTTP spans :new-page:`https://github.com/open-telemetry/semantic-conventions/blob/main/model/trace/http.yaml` を参照してください。"
 
 #: ../../apm/apm-spans-traces/apm-errors.rst:38
 msgid ":strong:`Error type`"
@@ -2392,7 +2392,7 @@ msgstr "非認証"
 msgid ""
 "See the OpenTelemetry specification for information on the handling of gRPC status codes on GitHub :new-page:`https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/"
 "semantic_conventions/rpc.md#grpc-status`."
-msgstr "gRPCのステータスコードの取り扱いについては、OpenTelemetry仕様をGitHub :new-page:`https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/semantic_conventions/rpc.md#grpc-status` で参照してください。"
+msgstr "gRPCのステータスコードの取り扱いについては、OpenTelemetry仕様をGitHub :new-page:`https://github.com/open-telemetry/semantic-conventions/blob/main/model/trace/rpc.yaml` で参照してください。"
 
 #: ../../apm/apm-spans-traces/apm-errors.rst:140
 #, fuzzy
