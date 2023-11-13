@@ -315,7 +315,7 @@ For a list of all the navigators available, see :ref:`navigators-list-imm`.
 .. toctree::
    :hidden:
 
-   navigators-list-imm
+   navigators-list
    manage-navigator-dashbds
    
 
