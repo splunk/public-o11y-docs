@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-ingest-alerts:
 
 Ingest alerts in Splunk Incident Intelligence
