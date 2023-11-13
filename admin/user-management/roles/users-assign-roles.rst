@@ -60,7 +60,7 @@ To remove roles from a user that's already a member of your organization, follow
 #. In the :guilabel:`Manage Roles` dialog box, select one or more of the selected roles, then select the left-pointing arrow to move the roles back to the :guilabel:`Available Roles` panel.
 #. Select :guilabel:`Assign Roles` to confirm.
 
-.. note:: You can use the :guilabel:`Remove All` link to add all available roles to a user.
+.. note:: You can use the :guilabel:`Remove All` link to remove all available roles to a user.
 
 
 Edit roles for multiple users
