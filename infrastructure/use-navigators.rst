@@ -311,3 +311,11 @@ List available navigators
 -------------------------------
 
 For a list of all the navigators available, see :ref:`navigators-list-imm`.
+
+.. toctree::
+   :hidden:
+
+   navigators-list-imm
+   manage-navigator-dashbds
+   
+
