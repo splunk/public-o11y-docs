@@ -1,18 +1,23 @@
-.. _auto-instrumentation-java-k8s:
+.. include:: /_includes/gdi/zero-config-preview-header.rst
+
+.. _auto-instrumentation-nodejs-k8s:
 
 ************************************************************************************
-Zero Configuration Automatic Instrumentation for Kubernetes Java applications
+Zero Configuration Automatic Instrumentation for Kubernetes Node.js applications
 ************************************************************************************
 
 .. meta::
    :description: Use the Collector with the upstream Kubernetes Operator for automatic instrumentation to easily add observability code to your application, enabling it to produce telemetry data.
 
-You can use the OTel Collector with an upstream Operator in a Kubernetes environment to automatically instrument your Java applications. 
+You can use the OTel Collector with an upstream Operator in a Kubernetes environment to automatically instrument your Node.js applications. 
+
+.. note::
+   For a specific example of how a customer automatically instruments a Node.js application, see :new-page:`https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/enable-operator-and-auto-instrumentation/otel-demo-nodejs.md`.
 
 Requirements
 ================================================================
 
-Zero Config Auto Instrumentation for Java requires the following components: 
+Zero Config Auto Instrumentation for Node.js requires the following components: 
 
 * The :ref:`Splunk OTel Collector chart <helm-chart>`: It deploys the Collector and related resources, including the OpenTelemetry Operator.
 * The OpenTelemetry Operator, which manages auto-instrumentation of Kubernetes applications. See more in the :new-page:`OpenTelemetry GitHub repo <https://github.com/open-telemetry/opentelemetry-operator>`.
@@ -21,7 +26,7 @@ Zero Config Auto Instrumentation for Java requires the following components:
 1. Set up the environment for instrumentation
 ------------------------------------------------------------
 
-Create a namespace for your Java applications and deploy your Java applications to that namespace. 
+Create a namespace for your Node.js applications and deploy your Node.js applications to that namespace. 
 
 .. code-block:: bash
 
@@ -84,27 +89,27 @@ Run the following to verify the resources are deployed correctly:
    # NAME                          AGE   ENDPOINT
    # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
 
-4. Set annotations to instrument Java applications
+4. Set annotations to instrument Node.js applications
 ------------------------------------------------------------
 
-Activate and deactivate auto instrumentation for Java
+Activate and deactivate auto instrumentation for Node.js
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To activate auto instrumentation for your Node.js deployment, run the following command:
 
 .. code-block:: bash
 
-   kubectl patch deployment <deployment_name> -n <namespace> -p '{"spec": {"template":{"metadata":{"annotations":{"instrumentation.opentelemetry.io/inject-java":"<splunk_otel_collector_namespace>/splunk-otel-collector"}}}} }'
+   kubectl patch deployment <deployment_name> -n <namespace> -p '{"spec": {"template":{"metadata":{"annotations":{"instrumentation.opentelemetry.io/inject-nodejs":"<splunk_otel_collector_namespace>/splunk-otel-collector"}}}} }'
 
 .. note::
    * The deployment pod will restart after running this command.
    * If the chart is not installed in the "default" namespace, modify the annotation value to be "{chart_namespace}/splunk-otel-collector".
 
-To deactivate auto instrumentation for your Java deployment, run the following command:
+To deactivate auto instrumentation for your Node.js deployment, run the following command:
 
 .. code-block:: bash
 
-   kubectl patch deployment <deployment_name> -n <namespace> --type=json -p='[{"op": "remove", "path": "/spec/template/metadata/annotations/instrumentation.opentelemetry.io~1inject-java"}]'
+   kubectl patch deployment <deployment_name> -n <namespace> --type=json -p='[{"op": "remove", "path": "/spec/template/metadata/annotations/instrumentation.opentelemetry.io~1inject-nodejs"}]'
 
 Verify instrumentation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -168,3 +173,4 @@ Learn more
 
 * To learn more about how Zero Config Auto Instrumentation works in Splunk Observability Cloud, see :new-page:`more detailed documentation in GitHub <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/auto-instrumentation-install.md#how-does-auto-instrumentation-work>`.
 * Refer to :new-page:`the operator pattern in the Kubernetes documentation <https://kubernetes.io/docs/concepts/extend-kubernetes/operator/>` for more information.
+
