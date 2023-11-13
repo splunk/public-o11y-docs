@@ -53,6 +53,8 @@ Using the installer script, you can install the auto instrumentation package for
 
             .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option. 
 
+        The auto instrumentation method automatically adds environment variables to ``/etc/splunk/zeroconfig/node.conf``.
+
         You can activate AlwaysOn Profiling for CPU and memory, as well as metrics, using additional options, as in the following example:
 
         .. code-block:: bash
