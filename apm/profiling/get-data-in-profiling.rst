@@ -146,7 +146,7 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
       :strong:`Requirements`
 
-      AlwaysOn Profiling requires Node 16 and higher.
+      AlwaysOn Profiling requires Node.js 16 and higher.
 
       :strong:`Instrumentation`
 
