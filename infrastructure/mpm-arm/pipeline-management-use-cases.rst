@@ -1,5 +1,5 @@
 
-.. _pipeline-management-use-cases:
+.. _pipeline-management-use-cases-arm:
 
 ****************************************************************************************************
 Use case: Improve storage use and monitoring performance using data routing and aggregation
@@ -54,7 +54,7 @@ Kai decides to use metrics pipeline management to control how Observability Clou
    ``region`` dimension and discarding ``instance_id`` and ``host_name``.
 #. Kai has a new aggregated ``service.latency_by_region`` metric that only has 1,623 associated MTS.
 #. Kai views or downloads the list of charts and detectors that use the ``service.latency`` metric. To learn more about
-   viewing or downloading the list, see :ref:`view-metrics-usage-list`.
+   viewing or downloading the list, see :ref:`view-metrics-usage-list-arm`.
 #. For each associated chart and detector, Kai replaces ``service.latency`` with ``service.latency_by_region``.
 #. Kai lets Skyler know that they have created an aggregated MTS and updated all the associated charts and detectors,
    so Skyler can drop the unaggregated raw MTS that the team no longer needs to monitor.
@@ -72,8 +72,8 @@ creating a more focused monitoring experience for their team while minimizing st
 Learn more
 ===============================================================================
 
-To learn more about MTS aggregation, including how to create aggregation rules, see :ref:`use-MTS-aggregation-pipeline`.
+To learn more about MTS aggregation, including how to create aggregation rules, see :ref:`use-MTS-aggregation-pipeline-arm`.
 
-To learn more about considerations for routing data to :guilabel:`Dropped`, see :ref:`data-dropping-impact`.
+To learn more about considerations for routing data to :guilabel:`Dropped`, see :ref:`data-dropping-impact-arm`.
 
-To learn more about the metrics usage report, see :ref:`metrics-usage-report`.
+To learn more about the metrics usage report, see :ref:`metrics-usage-report-arm`.

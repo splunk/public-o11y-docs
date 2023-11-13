@@ -1,5 +1,5 @@
 
-.. _view-metrics-usage-list:
+.. _view-metrics-usage-list-arm:
 
 *******************************************************************************
 View and download the usage list for a metric

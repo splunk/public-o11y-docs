@@ -1,5 +1,5 @@
 
-.. _use-MTS-data-routing-pipeline:
+.. _use-MTS-data-routing-pipeline-arm:
 
 *******************************************************************************
 Control metric time series (MTS) storage overhead with data routing
@@ -19,7 +19,7 @@ Data routing also lets you discard the MTS.
 
 Routing exception rules let you modify the behavior of data routing.
 
-.. _display-pipeline-information:
+.. _display-pipeline-information-arm:
 
 View existing data routing for a metric
 ===============================================================================
@@ -40,12 +40,12 @@ To display the data routing ruleset for a metric, perform the following steps:
    If you have the admin role, you also see the Action menu (|verticaldots|) icon.
 
    If you don't see a list, and you want to configure data routing for a metric, follow the steps in the
-   :ref:`define-data-routing` section.
+   :ref:`define-data-routing-arm` section.
 #. To find a metric in the list, go to the search box and start entering the name of the metric. The system starts
    displaying matching metric names, using autocomplete.
 #. When you see the metric you want, select it from the list of metric names. The summary page for the metric appears.
 
-.. _define-data-routing:
+.. _define-data-routing-arm:
 
 Define data routing for a metric
 ===============================================================================
@@ -78,7 +78,7 @@ To update the data routing for MTS associated with a metric, follow these steps:
    - If the update is successful, the notification is highlighted in green. The text confirms that the routing for the metric is updated.
    - If the update isn't applied, the notification is highlighted in red. The text displays the reason that the update wasn't applied.
 
-.. _manage-routing-exception-rules:
+.. _manage-routing-exception-rules-arm:
 
 Manage routing exception rules
 ===============================================================================
@@ -91,9 +91,9 @@ Rules also let you drop the incoming raw MTS from which you are creating aggrega
 
 As with aggregation rules, you can deactivate, activate, and delete routing exception rules.
 
-To learn more about dropping raw incoming MTS after creating an aggregation rule, see :ref:`drop-raw-MTS`.
+To learn more about dropping raw incoming MTS after creating an aggregation rule, see :ref:`drop-raw-MTS-arm`.
 
-.. _add-routing-exception-rules:
+.. _add-routing-exception-rules-arm:
 
 Add a routing exception rule
 --------------------------------------------------------------------------------
@@ -132,7 +132,7 @@ To add a routing exception rule for a metric and its associated MTS, follow thes
    - If adding the rule wasn't successful, the notification is highlighted in red. The text displays the reason that the rule wasn't created.
 
 
-.. _drop-raw-MTS:
+.. _drop-raw-MTS-arm:
 
 Drop raw incoming MTS using aggregation rules
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -150,10 +150,10 @@ MTS for the aggregation rule, update metrics pipeline management to drop MTS for
 
 To drop raw incoming MTS, perform the following steps:
 
-#. Create the aggregation rule for the aggregated MTS. To learn how, see :ref:`create-aggregation-rule`. When you
+#. Create the aggregation rule for the aggregated MTS. To learn how, see :ref:`create-aggregation-rule-arm`. When you
    create the aggregation rule, you create a new metric name for the aggregated MTS.
 #. View or download the list of charts and detectors that use the raw MTS associated with the original metric name.
-   To learn how, see :ref:`view-metrics-usage-list`.
+   To learn how, see :ref:`view-metrics-usage-list-arm`.
 #. Update the charts and detectors that were using the raw incoming MTS to use the aggregated MTS:
 
    * Charts:
@@ -168,11 +168,11 @@ To drop raw incoming MTS, perform the following steps:
      - Add, edit, or delete the dimensions for the MTS you want the detector to monitor.
      - Save the detector.
 #. Change the data routing for the original metric name so that metrics pipeline management drops the MTS associated
-   with the metric. To learn how, see :ref:`define-data-routing`.
+   with the metric. To learn how, see :ref:`define-data-routing-arm`.
 
-Follow the instructions in the :ref:`define-data-routing` section to send the aggregated MTS to archived storage.
+Follow the instructions in the :ref:`define-data-routing-arm` section to send the aggregated MTS to archived storage.
 
-.. _edit-routing-exception-rule:
+.. _edit-routing-exception-rule-arm:
 
 Edit a routing exception rule
 --------------------------------------------------------------------------------
@@ -222,7 +222,7 @@ To edit an existing routing exception rule, perform the following steps:
    - If the update is successful, the notification is highlighted in green. The text confirms that the routing for the metric has been updated.
    - If the update isn't applied, the notification is highlighted in red. The text displays the reason that the update wasn't created.
 
-.. _activate-routing-exception-rule:
+.. _activate-routing-exception-rule-arm:
 
 Activate a routing exception rule
 --------------------------------------------------------------------------------
@@ -248,7 +248,7 @@ To activate a routing exception rule, follow these steps:
    - If the activation is successful, the notification is highlighted in green. The text confirms the activation.
    - If the activation is unsuccessful, the notification is highlighted in red. The text displays the reason that the activation was unsuccessful.
 
-.. _deactivate-routing-exception-rule:
+.. _deactivate-routing-exception-rule-arm:
 
 Deactivate a routing exception rule
 --------------------------------------------------------------------------------
@@ -273,7 +273,7 @@ To deactivate a routing exception rule, follow these steps:
    - If the deactivation is successful, the notification is highlighted in green. The text confirms the deactivation.
    - If the deactivation is unsuccessful, the notification is highlighted in red. The text displays the reason that the deactivation was unsuccessful.
 
-.. _delete-routing-exception-rule:
+.. _delete-routing-exception-rule-arm:
 
 Delete a routing exception rule
 --------------------------------------------------------------------------------

@@ -6,7 +6,7 @@ Impact and benefits of dropping data
 *********************************************************************
 
 .. meta::
-    :description: Learn about the impact of dropping incoming raw MTS in metrics pipeline management.
+    :description: Learn about the impact of data dropping in metrics pipeline management.
 
 
 |hr|
@@ -15,41 +15,49 @@ Impact and benefits of dropping data
 
 |hr|
 
-When you update data routing for metric time series (MTS) associated with a metric, you can discard MTS
-you don't want to ingest or monitor in Splunk Observability Cloud. To learn more, see :ref:`use-MTS-data-routing-pipeline`.
+When you create or update rules for your metric ingest, you can drop unaggregated raw data to discard metric time series (MTS) you don't want to ingest or monitor in Splunk Observability Cloud. You can also drop a metric without adding an aggregation rule. To learn more, see :ref:`data-dropping`.
 
-.. note:: You must have the Admin or Power role to drop MTS data.
+.. note:: You must be an Admin to drop data.
 
-.. _considerations-drop-MTS:
+Considerations when dropping data
+======================================
 
-Considerations for dropping MTS
-===============================================================================
+Before you decide to drop unaggregated raw data for your metric, consider the following impacts:
 
-Before you decide to drop raw incoming MTS for a metric, consider the following impacts:
-
-- You can only drop new incoming data. Data dropping has no effect on existing MTS.
+- You can only drop new incoming data. Existing data can't be dropped.
 - You can't recover dropped data.
-- Detectors using the MTS you drop stop working. Alerts fire incorrectly, or the detector no longer issues any alerts.
-- Charts using the MTS you drop stop reporting new data.
-- If you drop data for MTS associated with built-in charts and AutoDetect detectors, these charts and detectors don't function correctly:
-
-  - The charts no longer report data.
-  - The detectors issue incorrect alerts or no longer issue alerts.
-- Because of these problems, you need to avoid dropping data for metrics used in built-in charts and AutoDetect detectors.
-  For a list of AutoDetect detectors, see :ref:`autodetect-list`.
-
-.. _avoid-empty-charts-detectors:
+- Detectors using the metric or custom properties you drop will misfire alerts or stop alerting.
+- Charts using the metric or custom properties you drop will stop reporting new data.
+- Custom properties assigned to dropped dimensions or metrics will be deleted. To learn more, see :ref:`custom-properties`.
+- If you drop data for metrics associated with built-in charts and AutoDetect detectors, these charts and detectors will be empty and not function correctly. Avoid dropping data for metrics used in built-in charts and AutoDetect detectors. For a list of AutoDetect detectors, see :ref:`autodetect-list`.
 
 Avoid empty charts and detectors when dropping data
-===============================================================================
+------------------------------------------------------------
 
-To prevent charts and detectors from showing no data, you can follow these steps when updating data routing:
+To prevent charts and detectors from showing no data, you can follow these steps when creating new rules:
 
-#. Start by keeping all data in real-time storage.
-#. Download the list of charts and detectors that use MTS for your metric.
-#. If you want to use aggregated MTS instead of raw MTS, create your aggregation rules.
-#. Replace the MTS in all associated charts and detectors with the new aggregated MTS.
-#. Change data routing to drop unaggregated raw data for your MTS after you have updated associated charts and detectors.
+#. Keep all data when you first create new rules.
+#. Download the list of charts and detectors associated with your metric.
+#. Save your new rules.
+#. Replace the metric in all associated charts and detectors with the new aggregated metrics.
+#. Drop unaggregated raw data for your metric once you have updated associated charts and detectors.
+
+Avoid deleting custom properties when dropping data
+------------------------------------------------------------
+
+To prevent custom properties from being deleted, you can follow these steps when creating new rules:
+
+#. Keep all data when you first create new rules.
+#. Find custom properties assigned to the dimensions or metrics you want to drop using the Metadata Catalog or the Metrics Metadata API.
+
+    * To find a custom property using the Metadata Catalog, see :ref:`search-edit-metadata`.
+
+        .. note:: The Metadata Catalog doesn't distinguish between dimensions and properties when returning search results.
+
+    * To retrieve a list of custom properties using the API, see the :new-page:`GET endpoint for the Metrics Metadata API <https://dev.splunk.com/observability/reference/api/metrics_metadata/latest#endpoint-retrieve-dimensions-query>`.
+
+#. Assign any custom property you want to keep to the new aggregated metrics.
+#. Drop unaggregated raw data for your metric once you have assigned custom properties to the new metrics.
 
 .. _data-dropping-billing:
 
@@ -67,36 +75,36 @@ However, for host-based subscriptions, dropping these dimensions might affect ho
     *   - Source
         - Dimensions to drop
 
-    *   - Any agent
+    *   - Any agent  
         - ``host``, ``host.name``, ``container.id``, ``container_id``, ``metric_source``, ``plugin``, ``redis.version`` , ``state`` , ``url``
 
     *   - AWS 
         - ``AWSUniqueId``, ``InstanceId``, ``namespace``
 
-    *   - Azure
+    *   - Azure 
         - ``azure_resource_id``, ``resource_type``, ``monitored_resource``
 
-    *   - GCP
+    *   - GCP 
         - ``gcp_id``, ``service``
 
-    *   - VMware
+    *   - VMware 
         - ``vcenter``
 
-    *   - Heroku
+    *   - Heroku 
         - ``dyno_id``
 
-    *   - NPM
+    *   - NPM 
         - ``sf_product``
 
 
 Further impacts: Product experience and property sync
 ------------------------------------------------------------
 
-Keep in mind that dropping any of those billing-related dimensions can also affect product experience, since these dimensions are commonly used for dashboards:
+Keep in mind that dropping any of those billing-related dimensions can also affect product experience, since these dimensions are commonly used for dashboards: 
 
-* If dashboard import qualifiers are modified, then dashboards may not be imported at all.
+* If dashboard import qualifiers are modified, then dashboards may not be imported at all. 
 * If dashboard analytics are impacted, charts may not report correctly or at all.
 
-Dropping dimensions specific to a resource type and used in dashboard and detector analytics will likely only impact that resource's charts and dashboards.
+Dropping dimensions specific to a resource type and used in dashboard and detector analytics will likely only impact that resource's charts and dashboards. 
 
 Removing any of the base dimensions (generally a subset of those explicitly listed above as related to billing) might affect property synchonization. For instance, if you drop ``AWSUniqueId``, metrics will no longer be associated to the cloud resource properties identified with ``aws_*``, including service-specific attributes and resource group tags.

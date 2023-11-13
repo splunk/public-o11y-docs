@@ -1,5 +1,5 @@
 
-.. _use-MTS-aggregation-pipeline:
+.. _use-MTS-aggregation-pipeline-arm:
 
 *******************************************************************************
 Control your data ingestion volume with aggregation rules
@@ -18,7 +18,7 @@ Control your data ingestion volume with aggregation rules
 For each metric time series (MTS) that Splunk Observability Cloud creates from ingested data, you can create
 aggregation to control ingestion and storage volume.
 
-.. _view-existing-aggregation-rule:
+.. _view-existing-aggregation-rule-arm:
 
 View existing aggregation rules
 ===============================================================================
@@ -38,12 +38,12 @@ To view existing aggregation rules for a metric, follow these steps:
 
    If you have the Admin or Power user role, you also see the Action menu (|verticaldots|) icon.
 
-   If you don't see a list, and you want to add an aggregation rule, follow the steps in the :ref:`create-aggregation-rule` section.
+   If you don't see a list, and you want to add an aggregation rule, follow the steps in the :ref:`create-aggregation-rule-arm` section.
 #. To find a metric in the list, go to the search box and start entering the name of the metric. The system starts
    displaying matching metric names, using autocomplete.
 #. When you see the metric you want, select it from the list of metric names. The summary page for the metric appears.
 
-.. _create-aggregation-rule:
+.. _create-aggregation-rule-arm:
 
 Create aggregation rules for MTS
 ===============================================================================
@@ -51,7 +51,7 @@ Create aggregation rules for MTS
 .. note:: To create an aggregation rule, you must have the Admin or Power user role.
 
 The option to discard raw MTS after creating an aggregation rule is now a data routing option.
-To learn more, see the :ref:`drop-raw-MTS` section in the
+To learn more, see the :ref:`drop-raw-MTS-arm` section in the
 :strong:`Control metric time series (MTS) storage overhead with data routing` topic.
 
 To create aggregation rules for MTS associated with a metric, follow these steps:
@@ -99,7 +99,7 @@ To create aggregation rules for MTS associated with a metric, follow these steps
 
 To add another aggregation rule, in the :guilabel:`Added by rule` box select :guilabel:`Add`, then following the previous directions.
 
-.. _manage-aggregation-rules:
+.. _manage-aggregation-rules-arm:
 
 Edit, activate, deactivate, and delete aggregation rules
 ===============================================================================
@@ -120,12 +120,12 @@ To edit, deactivate, activate, or delete an aggregation rule, follow these steps
 #. From the list of aggregation rules for the metric in the center of the page, find the rule you want to modify.
 #. From the :guilabel:`More actions` (|verticaldots| icon) menu for the rule, select the option you want:
 
-   - To edit an existing rule, select :guilabel:`Edit`. The :guilabel:`Edit aggregation rule` dialog appears. To continue, follow the steps shown in the :ref:`edit-aggregation-rule` section.
-   - If the rule is deactivated, select :guilabel:`Activate` to activate the rule. The :guilabel:`Activate aggregation rule` dialog appears. To continue, follow the steps shown in the :ref:`activate-aggregation-rule` section.
-   - If the rule is activated, select :guilabel:`Deactivate` to deactivate the rule. The :guilabel:`Deactivate aggregation rule` dialog appears. To continue, follow the steps shown in the :ref:`deactivate-aggregation-rule` section.
-   - To delete the rule, select :guilabel:`Delete`. The :guilabel:`Delete activation rule` dialog appears. To continue, follow the steps shown in the :ref:`delete-aggregation-rule` section.
+   - To edit an existing rule, select :guilabel:`Edit`. The :guilabel:`Edit aggregation rule` dialog appears. To continue, follow the steps shown in the :ref:`edit-aggregation-rule-arm` section.
+   - If the rule is deactivated, select :guilabel:`Activate` to activate the rule. The :guilabel:`Activate aggregation rule` dialog appears. To continue, follow the steps shown in the :ref:`activate-aggregation-rule-arm` section.
+   - If the rule is activated, select :guilabel:`Deactivate` to deactivate the rule. The :guilabel:`Deactivate aggregation rule` dialog appears. To continue, follow the steps shown in the :ref:`deactivate-aggregation-rule-arm` section.
+   - To delete the rule, select :guilabel:`Delete`. The :guilabel:`Delete activation rule` dialog appears. To continue, follow the steps shown in the :ref:`delete-aggregation-rule-arm` section.
 
-.. _edit-aggregation-rule:
+.. _edit-aggregation-rule-arm:
 
 Edit an aggregation rule
 --------------------------------------------------------------------------------
@@ -170,7 +170,7 @@ To edit an aggregation rule, perform the following steps:
    - If your change is successful, the notification is highlighted in green. The text confirms your update.
    - If your change is unsuccessful, the notification is highlighted in red. The text displays the reason that the update was unsuccessful.
 
-.. _activate-aggregation-rule:
+.. _activate-aggregation-rule-arm:
 
 Activate an aggregation rule
 --------------------------------------------------------------------------------
@@ -195,7 +195,7 @@ To activate a deactivated aggregation rule, follow these steps:
    - If the activation is successful, the notification is highlighted in green. The text confirms the activation.
    - If the activation is unsuccessful, the notification is highlighted in red. The text displays the reason that the activation was unsuccessful.
 
-.. _deactivate-aggregation-rule:
+.. _deactivate-aggregation-rule-arm:
 
 Deactivate an aggregation rule
 --------------------------------------------------------------------------------
@@ -222,7 +222,7 @@ To deactivate an active aggregation rule, follow these steps:
    - If the deactivation is successful, the notification is highlighted in green. The text confirms the deactivation.
    - If the deactivation is unsuccessful, the notification is highlighted in red. The text displays the reason that the deactivation was unsuccessful.
 
-.. _delete-aggregation-rule:
+.. _delete-aggregation-rule-arm:
 
 Delete an aggregation rule
 --------------------------------------------------------------------------------

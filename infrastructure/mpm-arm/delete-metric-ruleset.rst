@@ -1,5 +1,5 @@
 
-.. _delete-metric-ruleset:
+.. _delete-metric-ruleset-arm:
 
 *******************************************************************************
 Delete a metrics ruleset
@@ -18,7 +18,7 @@ When you want to clear all your routing exception and MTS aggregation rules for 
 delete the metric ruleset for the metric. Deleting the ruleset resets the storage of the metric to its
 default routing.
 
-.. _delete-ruleset:
+.. _delete-ruleset-arm:
 
 Delete the ruleset
 ===============================================================================
