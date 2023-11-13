@@ -26,13 +26,20 @@ Prerequisites
 
    - To find the realm name of your account, open the navigation menu in Splunk Observability Cloud. Select :menuselection:`Settings`, and then select your username. The realm name appears in the :guilabel:`Organizations` section.
 
+- You must have ``npm`` to install the Node.js auto instrumentation package. 
+
+- You must install the provided Node.js package with ``npm``. To install globally, use the following command:
+
+    .. code-block:: bash
+
+        sudo npm install --global /usr/lib/splunk-instrumentation/splunk-otel-js.tgz
+
 .. _install-js-package:
 
 Install the package
 =======================================
 
 You can install the ``splunk-otel-auto-instrumentation`` package in the following ways:
-
 
 Using the installer script, you can install the auto instrumentation package for Node.js and activate auto instrumentation for Node.js for either all supported Node.js applications on the host via the system-wide method or for only Node.js applications running as ``systemd`` services.
 
