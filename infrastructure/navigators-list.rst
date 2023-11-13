@@ -7,7 +7,7 @@ Navigators available
 .. meta::
     :description: Automated list of the navigators available to you
 
-In Splunk Infrastructure Monitoring, a navigator is a collection of resources that lets you monitor metrics and logs across various instances of your services and detect outliers in the instance population based on key performance indicators. Resources in a navigator include, but are not limited to, a full list of entities, dashboards, related alerts and detectors, and service dependencies.
+In Splunk Infrastructure Monitoring, a navigator is a collection of resources that enables you to monitor metrics and logs across various instances of your services so you can detect outliers in the instance population based on key performance indicators. Resources in a navigator include, but are not limited to, a full list of entities, dashboards, related alerts and detectors, and service dependencies.
 
 View navigators
 ----------------------
@@ -27,4 +27,4 @@ List of navigators
 
 
 
-For a comprehensive list of dashboards, see the Dashboads available topic.
+
