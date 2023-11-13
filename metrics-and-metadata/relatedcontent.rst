@@ -18,7 +18,7 @@ In the preceding example, the user navigates through the following sequence:
 
 1. The user starts in APM by exploring the service dependency map. They select the :strong:`Frontend` service because it shows a high error rate.
 
-   In the Related Content bar at the bottom of the screen, the user sees a tile showing related EC2 instances and selects it.
+   In the Related Content bar at the bottom of the screen, the user sees an Infrastructure tile showing related EC2 instances and selects it. Results are grouped by component. For example, Infrastructure, Logs, APM. Hovering over the tile indicates whether there are any Related Content results to view.
 
 2. Observability Cloud takes the user to Infrastructure where they click the first EC2 instance because it shows the highest CPU utilization. 
 
