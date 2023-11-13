@@ -42,7 +42,7 @@ Using the installer script, you can install the auto instrumentation package for
 
     .. tab:: System-wide
 
-        To install the package, run the Collector installer script with the ``--with-instrumentation`` option. The installer script will install the Collector and the Node.js agent from the Splunk Distribution of OpenTelemetry Node.js. The Node.js agent automatically loads when a Node.js application starts on the local machine.
+        To install the package, run the Collector installer script with the ``--with-instrumentation`` option. The installer script will install the Collector and the Node.js agent from the Splunk Distribution of OpenTelemetry JS. The Node.js agent automatically loads when a Node.js application starts on the local machine.
 
         Run the installer script with the ``--with-instrumentation`` option, as shown in the following example. Replace  ``<SPLUNK_REALM>`` and ``<SPLUNK_ACCESS_TOKEN>`` with your Splunk Observability Cloud realm and token, respectively.
 
