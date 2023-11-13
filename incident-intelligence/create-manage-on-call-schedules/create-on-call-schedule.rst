@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-create-on-call-schedule:
 
 Create an on-call schedule

@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-prevent-spam:
 
 Prevent SMS and voice notifications from going to spam

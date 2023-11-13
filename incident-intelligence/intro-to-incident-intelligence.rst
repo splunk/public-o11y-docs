@@ -1,4 +1,5 @@
- 
+:orphan:
+
 .. _ii-get-started-incident-intelligence:
 
 Introduction to Splunk Incident Intelligence

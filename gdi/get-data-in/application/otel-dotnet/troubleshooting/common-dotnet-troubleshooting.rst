@@ -101,3 +101,8 @@ You can deactivate all instrumentations for a specific signal type by setting th
 For a more granular approach, you can deactivate specific instrumentations for a given signal type by setting the ``OTEL_DOTNET_AUTO_{SIGNAL}_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED`` environment variable to ``false``, where ``{SIGNAL}`` is the type of signal, for example traces, and ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation.
 
 .. note:: You can't set environment variables for deactivating instrumentations using the web.config or app.config files.
+
+Uninstall the instrumentation
+======================================
+
+To uninstall the .NET instrumentation, see :ref:`uninstall-otel-dotnet`.

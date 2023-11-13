@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-add-incident-tools-resources:
 
 Add collaboration tools and resources to an incident
