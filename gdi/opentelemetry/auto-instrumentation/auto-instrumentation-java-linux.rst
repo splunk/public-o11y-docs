@@ -197,7 +197,7 @@ The default settings for zero config autoinstrumentation are sufficient for most
 
 The installation package contains the following artifacts:
 
-- The configuration file at ``/etc/splunk/zeroconfig/java.conf``. This is only applicable for the system-wide method, and this file is automatically added to ``/etc/ld.so.preload``.
+- The configuration file at ``/etc/splunk/zeroconfig/java.conf``. This is only applicable for the system-wide method,.
 - The :new-page:`Java Instrumentation Agent <https://github.com/signalfx/splunk-otel-java>` at ``/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar``
 - The shared instrumentation library at ``/usr/lib/splunk-instrumentation/libsplunk.so```
 
