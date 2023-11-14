@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-respond-manage-incidents:
 
 Respond to and manage incidents

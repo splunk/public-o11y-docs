@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-example-notifications:
 
 Example notifications: Email, mobile push, SMS, and voice

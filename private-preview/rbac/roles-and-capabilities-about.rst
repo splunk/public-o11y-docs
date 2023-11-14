@@ -81,7 +81,7 @@ APIs honor capabilities based on the role defined to their token. This is import
     <h2>Multiple roles for a user or team</h2>
   </embed>
 
-You can assign multiple roles to individual users. The user receives a combination of capabilities inherited from all of their roles. Additionally, if you revoke a role from a user the change takes effect immediately. The cache is invalidated and the user no longer has access to the capabilities associated with the role that was revoked.
+You can assign multiple roles to individual users. The user receives a combination of capabilities inherited from all of their roles. Additionally, if you revoke a role from a user the change takes effect immediately. 
 
 
 .. list-table::

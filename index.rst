@@ -700,6 +700,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    rum/sensitive-data-rum
 
+
 .. toctree::
    :maxdepth:   3
 
@@ -714,6 +715,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    rum/error-aggregates
+
+.. toctree::
+   :maxdepth:   3
+
+   rum/rum-identify-span-problems
 
 .. toctree::
    :maxdepth:   3
@@ -795,52 +801,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Configure your tests TOGGLE <synthetics/test-config/test-config>
-
-.. toctree::
-   :caption: Incident Intelligence
-   :maxdepth:   3
-
-   Introduction to Splunk Incident Intelligence <incident-intelligence/intro-to-incident-intelligence>
-
-.. toctree::
-   :maxdepth:   3
-
-   incident-intelligence/incident-intelligence-overview
-
-.. toctree::
-   :maxdepth:   3
-
-   incident-intelligence/key-concepts
-
-.. toctree::
-   :maxdepth:   3
-
-   Set up Incident Intelligence <incident-intelligence/set-up-incident-intelligence>
-
-.. toctree::
-   :maxdepth:   3
-
-   Ingest alerts in Incident Intelligence TOGGLE <incident-intelligence/ingest-alerts/ingest-alerts>
-
-.. toctree::
-   :maxdepth:   3
-
-   incident-intelligence/create-configure-incident-policies
-
-.. toctree::
-   :maxdepth:   4
-
-   Create and manage on-call schedules TOGGLE <incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules>
-
-.. toctree::
-   :maxdepth:   3
-
-   Respond to and manage incidents TOGGLE <incident-intelligence/respond-manage-incidents/respond-manage-incidents>
-
-.. toctree::
-   :maxdepth:   3
-
-   Manage notifications from Incident Intelligence TOGGLE <incident-intelligence/manage-notifications/manage-notifications.rst>
 
 
 .. toctree::

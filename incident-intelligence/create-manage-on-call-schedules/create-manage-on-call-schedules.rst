@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-create-manage-on-call-schedules:
 
 Create and manage on-call schedules

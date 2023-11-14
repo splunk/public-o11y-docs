@@ -5,9 +5,9 @@ Connect Node.js trace data with logs for Splunk Observability Cloud
 *******************************************************************
 
 .. meta:: 
-   :description: You can configure Node logging libraries to include tracing attributes provided automatically by the Splunk Distribution of OpenTelemetry JS. Use the trace metadata to correlate traces with log events and explore Node application logs in Splunk Observability Cloud.
+   :description: You can configure Node.js logging libraries to include tracing attributes provided automatically by the Splunk Distribution of OpenTelemetry JS. Use the trace metadata to correlate traces with log events and explore Node.js application logs in Splunk Observability Cloud.
 
-You can configure Node logging libraries to include tracing attributes provided automatically by the Splunk Distribution of OpenTelemetry JS. Use the trace metadata to correlate traces with log events and explore Node application logs in Splunk Observability Cloud.
+You can configure Node.js logging libraries to include tracing attributes provided automatically by the Splunk Distribution of OpenTelemetry JS. Use the trace metadata to correlate traces with log events and explore Node.js application logs in Splunk Observability Cloud.
 
 .. _nodejs-traces-logs-requirements:
 
