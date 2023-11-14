@@ -61,8 +61,8 @@ Availability and configuration instructions
 
 The following distributions are supported:
 
-* Kubernetes 1.22 (kops created)
-* OpenShift version 4.9
+* Kubernetes 
+* OpenShift 
 
 The following distributions are not supported:
 
@@ -91,13 +91,14 @@ There is a known limitation for the Kubernetes proxy control plane receiver. Whe
 #. Set ``kubeProxy.metricsBindAddress: 0.0.0.0`` in the kops cluster specification.
 #. Run ``kops update cluster {cluster_name}`` and ``kops rolling-update cluster {cluster_name}`` to deploy the change.
 
-Using custom configurations for non-standard control plane components
+Use custom configurations for non-standard control plane components
 -----------------------------------------------------------------------------
 
-You can override the default configuration values used to connect to the control plane. If your control plane uses nonstandard ports or custom TLS settings, you need to override the default configurations. The following example shows how to connect to a nonstandard API server that uses port 3443 for metrics and custom TLS certs stored in the /etc/myapiserver/ directory.
+You can override the default configuration values used to connect to the control plane. If your control plane uses nonstandard ports or custom TLS settings, you need to override the default configurations. 
+
+The following example shows how to connect to a nonstandard API server that uses port ``3443`` for metrics and custom TLS certs stored in the /etc/myapiserver/ directory.
 
 .. code-block:: yaml
-
 
   agent:
     config:
@@ -122,18 +123,18 @@ You can override the default configuration values used to connect to the control
 Run the container in non-root user mode
 ==================================================
 
-Collecting logs often requires reading log files that are owned by the root user. By default, the container runs with `securityContext.runAsUser = 0` which gives the `root` user permission to read those files.
-To run the container in `non-root` user mode, set `.agent.securityContext`. The log data permissions will be adjusted to match the securityContext configurations. For instance:
+Collecting logs often requires reading log files that are owned by the root user. By default, the container runs with ``securityContext.runAsUser = 0``, which gives the ``root`` user permission to read those files.
+
+To run the container in ``non-root`` user mode, use ``agent.securityContext`` to adjust log data permissions to match the ``securityContext`` configurations. For instance:
 
 .. code-block:: yaml
 
+  agent:
+    securityContext:
+      runAsUser: 20000
+      runAsGroup: 20000
 
-agent:
-  securityContext:
-     runAsUser: 20000
-     runAsGroup: 20000
-
-.. note:: Running the collector agent for log collection in non-root mode is not currently supported in CRI-O and OpenShift environments at this time, for more details see the :new-page:`related GitHub feature request issue <https://github.com/signalfx/splunk-otel-collector-chart/issues/891>`.
+.. note:: Running the collector agent for log collection in non-root mode is not currently supported in CRI-O and OpenShift environments at this time. For more details, see the :new-page:`related GitHub feature request issue <https://github.com/signalfx/splunk-otel-collector-chart/issues/891>`.
 
 Use the Network Explorer to collect telemetry
 ==================================================

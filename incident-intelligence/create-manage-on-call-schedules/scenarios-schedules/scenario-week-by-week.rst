@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-scenario-week-by-week:
 
 Scenario: Skyler creates weekly coverage using the Week-by-week shift type

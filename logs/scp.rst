@@ -21,7 +21,7 @@ Splunk Log Observer Connect is available in the following Splunk Observability r
 Prerequisites
 ==============================================================
 Ensure that token authentication is enabled for your Log Observer Connect service account in your Splunk Cloud Platform instance. See :new-page:`Securing Splunk Cloud Platform: Enable or disable token authentication token <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how. 
-The Splunk Cloud users you configure in the following section must have the sc_admin role.
+To configure the Splunk Cloud service account user in the following section you must have the sc_admin role.
 
 Set up Log Observer Connect
 ==============================================================
@@ -37,6 +37,8 @@ In Splunk Observability Cloud, do the following:
 
 Splunk Cloud Platform
 ----------------------------------------------------------------
+To configure the Splunk Cloud service account user in the following section you must have the sc_admin role.
+
 In Splunk Cloud Platform, follow the instructions in the guided setup for the integration to do the following:
 
 1. To configure a role in Splunk Cloud Platform for the Log Observer Connect service account, go to :guilabel:`Settings > Roles`.

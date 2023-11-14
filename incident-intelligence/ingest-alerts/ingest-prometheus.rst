@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-ingest-prometheus-alerts:
 
 Ingest Prometheus alerts

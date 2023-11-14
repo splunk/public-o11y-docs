@@ -34,38 +34,38 @@ From Splunk APM
 #. Select a service.
 #. Select :guilabel:`Java Runtime Metrics` to navigate to the runtime metrics dashboard.
 
-NodeJS Runtime Metrics dashboard
-================================
+Node.js Runtime Metrics dashboard
+===================================
 
-You can access a configured dashboard for :ref:`NodeJS runtime metrics <nodejs-otel-runtime-metrics>` to check memory usage. There are two ways to access the NodeJS Runtime Metrics dashboard.
+You can access a configured dashboard for :ref:`Node.js runtime metrics <nodejs-otel-runtime-metrics>` to check memory usage. There are two ways to access the Node.js Runtime Metrics dashboard.
 
 From the dashboards
 ---------------------
 
 #. Go to Dashboards from the navigation menu in Splunk Observability Cloud.
-#. On the dashboard landing page and select the :guilabel:`APM NodeJS services` built-in dashboard group. Anyone can access this group by default. 
-#. Select the :guilabel:`NodeJS runtime metrics` dashboard. 
+#. On the dashboard landing page and select the :guilabel:`APM NodeJS services` built-in dashboard group. Anyone can access this group by default.
+#. Select the :guilabel:`NodeJS runtime metrics` dashboard.
 
 From Splunk APM
 -----------------
-#. Go to :guilabel:`AlwaysOn Profiling` from within APM. 
+#. Go to :guilabel:`AlwaysOn Profiling` from within APM.
 #. Select a service.
-#. Select :guilabel:`NodeJS Runtime Metrics` to navigate to the runtime metrics dashboard.
+#. Select :guilabel:`Node.js Runtime Metrics` to navigate to the runtime metrics dashboard.
 
 .NET Runtime Metrics dashboard
 ================================
 
-You can access a configured dashboard for :ref:`.NET runtime metrics <dotnet-runtime-metrics>` to check memory usage. There are two ways to access the NodeJS Runtime Metrics dashboard.
+You can access a configured dashboard for :ref:`.NET runtime metrics <dotnet-runtime-metrics>` to check memory usage. There are two ways to access the Node.js Runtime Metrics dashboard.
 
 From the dashboards
 ---------------------
 
 #. Go to Dashboards from the navigation menu in Splunk Observability Cloud.
-#. On the dashboard landing page and select the :guilabel:`APM .NET services` built-in dashboard group. Anyone can access this group by default. 
-#. Select the :guilabel:`.NET runtime metrics` dashboard. 
+#. On the dashboard landing page and select the :guilabel:`APM .NET services` built-in dashboard group. Anyone can access this group by default.
+#. Select the :guilabel:`.NET runtime metrics` dashboard.
 
 From Splunk APM
 -----------------
-#. Go to :guilabel:`AlwaysOn Profiling` from within APM. 
+#. Go to :guilabel:`AlwaysOn Profiling` from within APM.
 #. Select a service.
 #. Select :guilabel:`.NET Runtime Metrics` to navigate to the runtime metrics dashboard.

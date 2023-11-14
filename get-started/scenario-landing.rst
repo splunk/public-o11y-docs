@@ -96,4 +96,7 @@ This is the collection of scenarios available for Splunk Observability Cloud.
     - :ref:`uptime-test-scenario`
   * - :ref:`Log Observer <logs-intro-logconnect>`
     - :ref:`logs-LOconnect-scenario`
+  * - :ref:`Splunk platform integration <scenarios-integration-scenario-landing>`
+    - :ref:`integration-scenario1`
+
 

@@ -15,24 +15,25 @@ Live Tail displays a streaming view of log messages. Use Live Tail to do the fol
 - View spans and traces that your APM services are sending to Observability Cloud.
 - See the impact of configuration changes on your incoming data streams.
 
-.. note:: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can monitor systems with Live Tail. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration.
+Only customers will a Splunk Log Observer Connect entitlement can monitor systems with Live Tail. Those customers must transition to Log Observer Connect.
+
+After the transition to Log Observer Connect
+=============================================================================
+The Log Observer Live Tail feature ends in January 2024. In Splunk Cloud Platform, you can achieve similar functionality by adjusting the time range picker to :guilabel:`All time (real-time)` or :guilabel:`30 second window`. You must select :guilabel:`Search` again and rerun your search to see the most recent log events because live events do not stream in unprompted. For more information, see :new-page:`Select time ranges to apply to your search <https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/Search/Selecttimerangestoapply>`
    
 View the Live Tail time range
 ================================================================================
-
 The Log Observer TimeLine time picker offers Live Tail as one of the time ranges.
 In all other time ranges, the logs are already indexed by Splunk Cloud Platform services.
 The logs displayed by Live Tail aren't indexed.
 
 Exit Live Tail
 ================================================================================
-
 To exit Live Tail and return to the Log Observer main page, use the time picker in the
 navigation bar to select a different time range.
 
 The Live Tail display
 ================================================================================
-
 The Live Tail displays a sample of incoming logs because the amount of log data
 is too large to display completely. Below the time picker menu in the navigation bar,
 you can see the time when Live Tail started displaying logs and the percentage of logs displayed.
@@ -41,7 +42,6 @@ receiving.
 
 Adjust incoming log speed in Live Tail
 ================================================================================
-
 Because incoming data comes in quickly, you might have problems reading the incoming logs.
 You can adjust the incoming log speed in the following ways:
 
@@ -58,7 +58,6 @@ Observability Suite after an integration with Kubernetes.
 
 Verify an integration using Live Tail
 ================================================================================
-
 To verify, for example, your integration of Kubernetes with Splunk Observability Cloud, use
 one of of the techniques demonstrated in the following examples:
 

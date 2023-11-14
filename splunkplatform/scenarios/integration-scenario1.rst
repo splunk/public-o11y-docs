@@ -2,7 +2,7 @@
 
 
 *******************************************************************************************************************
-Scenario: Kai troubleshoots faster with Splunk IT Service Intelligence and Splunk Observability Cloud
+Scenario: Kai troubleshoots faster with IT Service Intelligence and Splunk Observability Cloud
 *******************************************************************************************************************
 
 .. meta::
