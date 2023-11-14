@@ -2,7 +2,7 @@
 
 
 ******************************************************************************
-Scenario: Kai creates custom events and monitor a single page application
+Scenario: Create custom events and monitor a single page application
 ******************************************************************************
 
 .. meta::
@@ -18,15 +18,15 @@ Buttercup Industries recently started a blog to share customer success stories a
 Instrument an SPA with Splunk RUM 
 ===================================
 
-Splunk RUM for Browser automatically collects metrics on route changes for an SPA. Route changes are events with zero second durations.
+Splunk RUM for Browser automatically collects metrics on route changes for an SPA. Route changes are events with zero-second durations.
 
-To monitor an SPA in Splunk RUM:
+To monitor an SPA in Splunk RUM, Kai follows these steps:
 
 1. Kai instruments the blog and names the application ``ButtercupBlog``. See, :ref:`browser-rum-install` for the steps they take to instrument an SPA with Splunk RUM.
 
 2. Kai opens RUM. From the navigation panel, they select :strong:`RUM` and :strong:`Browser` as the source and :strong:`ButtercupBlog` as the Application.
 
-    In the Application Summary Dashboard Kai sees key metrics about the health of their application, like:
+    In the application summary dashboard Kai sees key metrics about the health of their application:
 
     * Web vitals
 
@@ -40,28 +40,43 @@ To monitor an SPA in Splunk RUM:
 
     * Detectors
 
-3. Kai opens Tag Spotlight to take a look at route changes by clicking :strong:`see all` in the :strong:`Page views/Route changes` metric. The following image shows an example set of urls for the Page views/Route changes metric in RUM.
+3. Kai opens Tag Spotlight to look at route changes by selecting :strong:`see all` in the :strong:`Page views/Route changes` metric. The following image shows an example set of URLs for the page view and route change metric in RUM.
 
     ..  image:: /_images/rum/pageview-routechange.png
         :width: 80%
         :alt: This image shows the Page Views/Route Changes metric in RUM.
 
-4. To explore a specific session, Kai can open :strong:`User sessions`. To learn more, see :ref:`User sessions<example-session>`.
+4. To explore individual sessions, Kai opens :strong:`User sessions`.
 
 Create a custom event to measure user engagement on blog posts
 =================================================================
 
-Kai wants to capture metrics for like and share actions on blog posts to help Buttercup Industries gauge how users are interacting with the content. Since there is no route change, and no URL change when someone likes a blog post, Kai creates a custom event to capture this workflow. Custom events are a great tool for Kai to leverage with MPA (multiple page apps) and SPA when they want to monitor a workflow with custom JavaScript logic.
+Kai wants to capture metrics for like and share actions on blog posts to help Buttercup Industries gauge how users are interacting with the content. Since there is no route change, and no URL change when someone likes a blog post, Kai creates a custom event to capture this workflow. Custom events are a great tool for Kai to leverage with multiple-page apps single-page apps when they want to monitor a workflow with custom JavaScript logic.
 
-To create a custom event in Splunk RUM:
+To create a custom event in Splunk RUM that measures likes on a blog post, Kai does the following:
 
-1. Kai creates a custom event called ``blog.likes`` to track how users are engaging with content on the Buttercup Blog. See, :ref:`rum-custom-event` for the steps they take.
+1. Kai creates a custom event called ``blog.likes`` to track how users engage with content on the Buttercup Blog.
 
-2. To see the metrics on the custom event they created, navigate to Tag Spotlight. Select the custom event metric they're interested in from the top filter bar.
+Here is an example of how Kai initializes the tracer and creates a custom event using the NPM package for Splunk RUM for Browser:
 
-    ..  image:: /_images/rum/FilterbarSPAusecase.png
-        :width: 80%
-        :alt: This image shows the Page Views/Route Changes metric in RUM.
+      .. code-block:: javascript
+
+          import {trace} from '@opentelemetry/api'
+
+          const tracer = trace.getTracer('blogLoader');
+          const span = tracer.startSpan('blog.likes', {
+            attributes: {
+                'workflow.name': 'blog.likes'
+            }
+          });
+
+          // time passes
+          span.end();
+
+
+
+2. To see the metrics on the custom event they created, Kai navigates to Tag Spotlight where Kai can filter by custom events to see metrics specific to ``blog.likes``. 
+
 
 Summary
 =========
@@ -72,7 +87,7 @@ In this scenario, Kai:
 
 * Created a custom event to monitor blog posts likes and shares to better understand user engagement by following these steps: :ref:`rum-custom-event`.
 
-To learn more about how you can optimize your experience with Splunk Observability Cloud, see:
+To learn more about how you can optimize your experience with Splunk Observability Cloud, see the following resources:
 
 .. list-table::
    :header-rows: 1

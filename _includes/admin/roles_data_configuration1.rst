@@ -18,11 +18,6 @@
     - Yes
 
 
-  * - :strong:`View Incident Managent`
-    - Yes
-    - No
-
-
   * - :strong:`View APM MetricSets`
     - Yes
     - Yes

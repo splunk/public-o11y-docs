@@ -1,3 +1,7 @@
+:orphan:
+
+:orphan:
+
 .. _ii-incident-intelligence-overview:
 
 Splunk Incident Intelligence overview

@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-scenarios-schedules:
 
 Scenarios for notifying the correct responder using schedules in Incident Intelligence
