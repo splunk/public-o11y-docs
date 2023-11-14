@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-whos-on-call:
 
 Check who's currently on call
