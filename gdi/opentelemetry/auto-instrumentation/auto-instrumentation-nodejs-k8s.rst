@@ -23,7 +23,7 @@ Zero Config Auto Instrumentation for Node.js requires the following components:
 * The OpenTelemetry Operator, which manages auto-instrumentation of Kubernetes applications. See more in the :new-page:`OpenTelemetry GitHub repo <https://github.com/open-telemetry/opentelemetry-operator>`.
 * A Kubernetes instrumentation object ``opentelemetry.io/v1alpha1``, which configures auto-instrumentation settings for applications.
 
-1. Deploy the Helm Chart with the Operator enabled
+Deploy the Helm Chart with the Operator enabled
 ------------------------------------------------------------
 
 Add certifications and deploy the Helm Chart
@@ -54,7 +54,7 @@ In order to be properly ingest trace telemetry data, the attribute ``environment
 * Use the ``values.yaml`` optional environment configuration.
 * Use the Instrumentation spec with the environment variable ``OTEL_RESOURCE_ATTRIBUTES``.
 
-2. Verify all the OpenTelemetry resources are deployed successfully
+Verify all the OpenTelemetry resources are deployed successfully
 ---------------------------------------------------------------------------
 
 Resources include the Collector, the Operator, webhook, and instrumentation.
@@ -82,7 +82,7 @@ Run the following to verify the resources are deployed correctly:
    # NAME                          AGE   ENDPOINT
    # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
 
-3. Set annotations to instrument Node.js applications
+Set annotations to instrument Node.js applications
 ------------------------------------------------------------
 
 You can activate auto instrumentation for Node.js applications before or during runtime.
@@ -200,15 +200,15 @@ To verify that the instrumentation was successful, run the following command on 
    #   opentelemetry-auto-instrumentation:
    #     Type:        EmptyDir (a temporary directory that shares a pod's lifetime)
 
-4. View results at Splunk Observability APM
+View results at Splunk Observability APM
 ------------------------------------------------------------
 
 Allow the Operator to do the work. The Operator intercepts and alters the Kubernetes API requests to create and update annotated pods, the internal pod application containers are instrumented, and trace and metrics data populates the :ref:`APM dashboard <apm-dashboards>`.
 
 .. _configure-js-zeroconfig-k8s:
 
-5. (Optional) Configure the instrumentation
-====================================================
+(Optional) Configure the instrumentation
+-------------------------------------------------------
 
 You can configure the Splunk Distribution of OpenTelemetry JS to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started.
 

@@ -76,6 +76,10 @@ dimensions you consider important.
 .. mermaid::
 
    flowchart LR
+
+   accTitle: Data aggregation diagram
+   accDescr: Metrics pipeline management (MPM) receives raw incoming metric time series (MTS). You choose an MTS to aggregate, and perform the aggregation, then you choose whether to keep or drop the raw MTS. MPM keeps the aggregated MTS and any raw MTS that you chose to keep.
+   
    Raw[(Incoming raw MTS)] ---|MPM|ChooseDimensions{"`Choose MTS to aggregate`"} ---|Perform aggregation|CreateNew("`New aggregated MTS with rolled-up
    metrics`") ---|Keep or drop raw MTS|OriginalMTS[(Kept MTS and new MTS)]
 
