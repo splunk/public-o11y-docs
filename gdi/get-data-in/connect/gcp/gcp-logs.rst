@@ -28,7 +28,7 @@ To send GCP logs to Splunk Observability Cloud:
 
    - Change the token in the sample syntax (``token=your-splunk-hec-token``) to a Splunk Observability Cloud organization access token with ingest permission. For more information about organization access tokens, see :ref:`admin-org-tokens`.
 
-   - Change the URL in the sample syntax (``url=your-splunk-hec-url``) to point to the real-time log data ingest endpoint for Splunk Observability Cloud: ``https://ingest.{REALM}.signalfx.com``. For example, ``https://ingest.{REALM}.signalfx.com:443``.
+   - Change the URL in the sample syntax (``url=your-splunk-hec-url``) to point to the real-time log data ingest endpoint for Splunk Observability Cloud: ``https://ingest.{REALM}.signalfx.com/v1/log``.
 
 Manage delivery failures
 ------------------------------------------------
