@@ -13,16 +13,13 @@ Prerequisites
 ===================================================================================
 
 * You must be an administrator in Splunk Observability Cloud.
-* You must have an access token for the Splunk Observability Cloud organization you want to get data into. If you are using a free trial account, you can use the :guilabel:`Default` access token to complete this task. 
-  For more details about creating organization access tokens, see :ref:`admin-org-tokens`.
+* You must have an access token for the Splunk Observability Cloud organization you want to get data into. 
 
-Connect
+  * For more details about creating organization access tokens, see :ref:`admin-org-tokens`.
+  * If you are using a free trial account, you can use the :guilabel:`Default` access token to complete this task. 
 
 Prerequisites
 ===================================================================================
-
-
----------------------------------------
 
 If you're using cloud services for your infrastructure, the first step is to integrate these services with Splunk Observability Cloud. Cloud integrations can send metrics and metadata (such as tags, labels and other properties) to Infrastructure Monitoring.
 
