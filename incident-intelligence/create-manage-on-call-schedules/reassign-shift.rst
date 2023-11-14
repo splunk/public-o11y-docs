@@ -1,3 +1,5 @@
+:orphan:
+
 .. _reassign-shift:
 
 Reassign a full or partial shift in Incident Intelligence

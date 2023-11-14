@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-sync-on-call-schedule:
 
 Check your on-call schedule and sync it to your personal calendar

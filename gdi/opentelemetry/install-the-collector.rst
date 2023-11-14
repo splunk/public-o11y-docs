@@ -54,7 +54,7 @@ The Splunk Distribution of OpenTelemetry Collector is supported on Kubernetes, L
 
 Deploy one of the following packages to gather data for Splunk Observability Cloud.
 
-* Splunk Distribution of OpenTelemetry Collector for Kubernetes or ``splunk-otel-collector-chart``. See :ref:`Install on Kubernetes <otel-install-k8s>`. You can also install the Kubernetes Operator for Auto Instrumentation, as explained in :ref:`Install the Collector with the Kubernetes Operator for Auto Instrumentation <auto-instrumentation-operator>`.
+* Splunk Distribution of OpenTelemetry Collector for Kubernetes or ``splunk-otel-collector-chart``. See :ref:`Install on Kubernetes <otel-install-k8s>`. You can also install the Kubernetes Operator for Auto Instrumentation. See :ref:`zero-config` for more information.
 * Splunk Distribution of OpenTelemetry Collector for Linux or ``splunk-otel-collector``. See :ref:`Install on Linux (script) <otel-install-linux>` or :ref:`Install on Linux (manual) <otel-install-linux-manual>`, including instructions to install using the :ref:`binary file <linux-binary-file>`.
 * Splunk Distribution of OpenTelemetry Collector for Windows or ``splunk-otel-collector``. See :ref:`Install on Windows (script) <otel-install-windows>` or :ref:`Install on Windows (manual) <otel-install-windows-manual>`, including instructions for the :ref:`binary file <windows-binary>`.
 

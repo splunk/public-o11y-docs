@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-ingest-rest:
 
 Ingest generic REST alerts
