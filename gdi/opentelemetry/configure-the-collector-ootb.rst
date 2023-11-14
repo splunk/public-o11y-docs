@@ -36,7 +36,7 @@ The following diagram shows the default logs pipeline:
    flowchart LR
 
       accTitle: Default logs pipeline diagram
-      accDescr: Receivers send logs to the logs/memory_limiter processor. The logs/memory_limiter processor sends logs to the batch processor, and the batch processor sends logs to the resource detection processor. The resource detection processor sends logs to the exporter. The Signalfx logs pipeline follows the same steps, but uses internal receivers, processors, and exporters to send logs. 
+      accDescr: Receivers send logs to the logs/memory_limiter processor. The logs/memory_limiter processor sends logs to the batch processor, and the batch processor sends logs to the resource detection processor. The resource detection processor sends logs to the exporter. The SignalFx logs pipeline follows the same steps, but uses internal receivers, processors, and exporters to send logs. 
 
       %% LR indicates the direction (left-to-right)
 
@@ -169,7 +169,7 @@ The following diagram shows the default traces pipeline:
    flowchart LR
 
       accTitle: Default traces pipeline diagram
-      accDescr: Receivers send traces to the traces/memory_limiter processor. The traces/memory_limiter processor sends traces to the batch processor, and the batch processor sends traces to the resource detection processor. The resource detection processor sends traces to the Splunk APM exporter and the Signalfx exporter.
+      accDescr: Receivers send traces to the traces/memory_limiter processor. The traces/memory_limiter processor sends traces to the batch processor, and the batch processor sends traces to the resource detection processor. The resource detection processor sends traces to the Splunk APM exporter and the SignalFx exporter.
 
       %% LR indicates the direction (left-to-right)
 
