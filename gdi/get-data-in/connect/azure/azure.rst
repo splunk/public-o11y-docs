@@ -162,7 +162,15 @@ To connect using Terraform, see :ref:`terraform-config`.
 
 To take advantage of the full benefits of the Splunk Observability Cloud platform, install the :ref:`OpenTelemetry Collector <otel-intro>`. 
 
-The Collector offers a higher degree of customization than the Azure integration, and you might prefer it if you want to see metrics at a resolution lower than one minute, or when you need fine-grained control over the filtering of what metrics are sent.  
+To track the degree of OpenTelemetry enablement in your Azure integrations: 
+
+1. From Splunk Observability Cloud, go to :guilabel:`Data Management > Azure`.
+
+2. Select :guilabel:`OpenTelemetry Enabled` to see whether the OTel Collector is installed on each Azure instance. This helps you identify the instances that still need to be instrumented. For instances that are successfully instrumented, you can see which version of the OTel Collector is deployed.
+
+..  image:: /_images/gdi/azure-collector-insights.png
+  :width: 80%
+  :alt: Amount of Azure entities with the Collector installed. 
 
 .. _next-azure-steps:
 

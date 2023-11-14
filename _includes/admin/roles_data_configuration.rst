@@ -19,11 +19,6 @@
     - No
     - No
 
-  * - :strong:`View Incident Managent`
-    - Yes
-    - No
-    - No
-    - No
 
   * - :strong:`View APM MetricSets`
     - Yes

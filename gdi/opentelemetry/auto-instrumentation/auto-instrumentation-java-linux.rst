@@ -1,4 +1,4 @@
-.. include:: /_includes/gdi/zero-config-preview-header.rst
+
 
 
 .. _auto-instrumentation-java-linux:
@@ -30,37 +30,79 @@ You can install the ``splunk-otel-auto-instrumentation`` package in the followin
 
    .. tab:: Installer script
 
-      To install the package, run the Collector installer script with the ``--with-instrumentation`` option. The installer script will install the Collector and the Java agent from the Splunk Distribution of OpenTelemetry Java. The Java agent is then loaded automatically when a Java application starts on the local machine.
+      Using the installer script, you can install the auto instrumentation package for Java and activate auto instrumentation for Java for either all supported Java applications on the host via the system-wide method or for only Java applications running as ``systemd`` services.
 
-      Run the installer script with the ``--with-instrumentation`` option, as shown in the following example. Replace  ``<SPLUNK_REALM>`` and ``<SPLUNK_ACCESS_TOKEN>`` with your Splunk Observability Cloud realm and token, respectively.
-
-      .. code-block:: bash
-
-         curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
-         sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
-
-      .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance. 
-
-      To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <env>`` option. Replace ``<env>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
-
-      .. code-block:: bash
-         :emphasize-lines: 2
-
-         curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
-         sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --deployment-environment prod \
-         --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
-
-      You can activate AlwaysOn Profiling for CPU and memory, as well as metrics, using additional options, as in the following example:
-
-      .. code-block:: bash
-         :emphasize-lines: 4
-
-         curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
-         sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --deployment-environment prod \
-         --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN> \
-         --enable-profiler --enable-profiler-memory --enable-metrics
+      .. note:: By default, auto instrumentation is activated for both Java and Node.js when using the installer script. To deactivate auto instrumentation for Node.js, add the ``--without-instrumentation-sdk node`` or ``--with-instrumentation-sdk java`` option in the installer script command.
       
-      Next, ensure the service is running and restart your application. See :ref:`verify-install` and :ref:`start-restart-java-apps`. 
+      .. tabs:: 
+
+         .. tab:: System-wide
+            
+            Run the installer script with the ``--with-instrumentation`` option, as shown in the following example. Replace  ``<SPLUNK_REALM>`` and ``<SPLUNK_ACCESS_TOKEN>`` with your Splunk Observability Cloud realm and token, respectively.
+
+            .. code-block:: bash
+
+               curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+               sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
+
+            .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option.
+
+            The system-wide auto instrumentation method automatically adds environment variables to ``/etc/splunk/zeroconfig/java.conf``.
+
+            To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <env>`` option. Replace ``<env>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
+
+            .. code-block:: bash
+               :emphasize-lines: 2
+
+               curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+               sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --deployment-environment prod \
+               --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
+
+            You can activate AlwaysOn Profiling for CPU and memory, as well as metrics, using additional options, as in the following example:
+
+            .. code-block:: bash
+               :emphasize-lines: 4
+
+               curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+               sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --deployment-environment prod \
+               --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN> \
+               --enable-profiler --enable-profiler-memory --enable-metrics
+            
+            Next, ensure the service is running and restart your application. See :ref:`verify-install` and :ref:`start-restart-java-apps`. 
+      
+         .. tab:: ``systemd``
+
+            Run the installer script with the ``--with-systemd-instrumentation`` option, as shown in the following example. Replace  ``<SPLUNK_REALM>`` and ``<SPLUNK_ACCESS_TOKEN>`` with your Splunk Observability Cloud realm and token, respectively.
+            
+            .. code-block:: bash
+
+               curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+               sudo sh /tmp/splunk-otel-collector.sh --with-systemd-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
+            
+            The ``systemd`` instrumentation automatically adds environment variables to ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
+
+            .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option. 
+
+            To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <env>`` option. Replace ``<env>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
+
+            .. code-block:: bash
+               :emphasize-lines: 2
+
+               curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+               sudo sh /tmp/splunk-otel-collector.sh --with-systemd-instrumentation --deployment-environment prod \
+               --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
+
+            You can activate AlwaysOn Profiling for CPU and memory, as well as metrics, using additional options, as in the following example:
+
+            .. code-block:: bash
+               :emphasize-lines: 4
+
+               curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+               sudo sh /tmp/splunk-otel-collector.sh --with-systemd-instrumentation --deployment-environment prod \
+               --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN> \
+               --enable-profiler --enable-profiler-memory --enable-metrics
+            
+            Next, ensure the service is running and restart your application. See :ref:`verify-install` and :ref:`start-restart-java-apps`. 
 
    .. tab::  Linux packages (deb, rpm)
 
@@ -75,11 +117,11 @@ You can install the ``splunk-otel-auto-instrumentation`` package in the followin
          .. tabs::
 
             .. code-tab:: bash Debian
-               
+                     
                sudo dpkg -i <path to splunk-otel-auto-instrumentation deb>
-               
+                     
             .. code-tab:: bash RPM
-               
+                     
                sudo rpm -ivh <path to splunk-otel-auto-instrumentation rpm>
 
       3. Edit the ``/etc/otel/collector/splunk-otel-collector.conf`` file to set the ``SPLUNK_ACCESS_TOKEN`` and ``SPLUNK_REALM`` variables to the values you got earlier. If the file does not exist, use the provided sample at ``/etc/otel/collector/splunk-otel-collector.conf.example`` as a starting point.
@@ -93,7 +135,7 @@ You can install the ``splunk-otel-auto-instrumentation`` package in the followin
 
          .. code-block:: bash
 
-            sudo systemctl start splunk-otel-collector
+                  sudo systemctl start splunk-otel-collector
 
       5. :ref:`verify-install`.
       6. :ref:`start-restart-java-apps`.
@@ -155,7 +197,7 @@ The default settings for zero config autoinstrumentation are sufficient for most
 
 The installation package contains the following artifacts:
 
-- The configuration file at ``/usr/lib/splunk-instrumentation/instrumentation.conf`` 
+- The configuration file at ``/etc/splunk/zeroconfig/java.conf``. This is only applicable for the system-wide method.
 - The :new-page:`Java Instrumentation Agent <https://github.com/signalfx/splunk-otel-java>` at ``/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar``
 - The shared instrumentation library at ``/usr/lib/splunk-instrumentation/libsplunk.so```
 
