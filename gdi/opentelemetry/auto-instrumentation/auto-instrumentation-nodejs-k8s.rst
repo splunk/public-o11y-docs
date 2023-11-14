@@ -23,37 +23,22 @@ Zero Config Auto Instrumentation for Node.js requires the following components:
 * The OpenTelemetry Operator, which manages auto-instrumentation of Kubernetes applications. See more in the :new-page:`OpenTelemetry GitHub repo <https://github.com/open-telemetry/opentelemetry-operator>`.
 * A Kubernetes instrumentation object ``opentelemetry.io/v1alpha1``, which configures auto-instrumentation settings for applications.
 
-1. Set up the environment for instrumentation
+1. Deploy the Helm Chart with the Operator enabled
 ------------------------------------------------------------
 
-Create a namespace for your Node.js applications and deploy your Node.js applications to that namespace. 
-
-.. code-block:: bash
-
-   kubectl create namespace <namespace>
-
-2. Deploy the Helm Chart with the Operator enabled
-------------------------------------------------------------
-
-Deploy the :ref:`Collector for Kubernetes with the Helm chart <helm-chart>` with ``operator.enabled=true`` to include the Operator in the deployment.
-
-Ingest traces
+Add certifications and deploy the Helm Chart
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In order to be properly ingest trace telemetry data, the attribute ``environment`` must be on board the exported traces. There are two ways to set this attribute:
-
-* Use the `values.yaml` optional environment configuration.
-* Use the Instrumentation spec with the environment variable ``OTEL_RESOURCE_ATTRIBUTES``.
-
-Add certifications
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The Operator requires certain TLS cerificates to work. If a certification manager (or any other TLS certificate source) is not available in the cluster, then you'll need to deploy it using ``certmanager.enabled=true``. You can use the following commands to run these steps.
+The Operator requires certain TLS certificates to work. Use the following command to check whether a certification manager is available:
 
 .. code-block:: yaml
 
    # Check if cert-manager is already installed, don't deploy a second cert-manager.
    kubectl get pods -l app=cert-manager --all-namespaces
+
+If a certification manager (or any other TLS certificate source) is not available in the cluster, then you'll need to deploy it using ``certmanager.enabled=true``. Use the following commands to deploy the Helm Chart.
+
+.. code-block:: yaml 
 
    # If cert-manager is not deployed.
    helm install splunk-otel-collector -f ./my_values.yaml --set certmanager.enabled=true,operator.enabled=true,environment=dev -n monitoring helm-charts/splunk-otel-collector
@@ -61,10 +46,18 @@ The Operator requires certain TLS cerificates to work. If a certification manage
    # If cert-manager is already deployed.
    helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=dev -n monitoring helm-charts/splunk-otel-collector
 
-3. Verify all the OpenTelemetry resources are deployed successfully
+Ingest traces
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In order to be properly ingest trace telemetry data, the attribute ``environment`` must be on board the exported traces. There are two ways to set this attribute:
+
+* Use the ``values.yaml`` optional environment configuration.
+* Use the Instrumentation spec with the environment variable ``OTEL_RESOURCE_ATTRIBUTES``.
+
+2. Verify all the OpenTelemetry resources are deployed successfully
 ---------------------------------------------------------------------------
 
-Resources include the Collector, the Operator, webhook, an instrumentation.
+Resources include the Collector, the Operator, webhook, and instrumentation.
 
 Run the following to verify the resources are deployed correctly:
 
@@ -85,21 +78,63 @@ Run the following to verify the resources are deployed correctly:
    # splunk-otel-collector-cert-manager-webhook              1          14m
    # splunk-otel-collector-opentelemetry-operator-mutation   3          14m
 
-   kubectl get otelinst -n {target_application_namespace}
+   kubectl get otelinst -n <target_application_namespace>
    # NAME                          AGE   ENDPOINT
    # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
 
-4. Set annotations to instrument Node.js applications
+3. Set annotations to instrument Node.js applications
 ------------------------------------------------------------
 
-Activate and deactivate auto instrumentation for Node.js
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Activate and deactivate auto instrumentation before runtime
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To activate auto instrumentation for your Node.js deployment, run the following command:
+If the deployment is not running, add the ``otel.splunk.com/inject-node`` annotation to the application deployment YAML file.
+
+For example, given the following deployment YAML:
+
+.. code-block:: yaml
+
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: my-nodejs-app
+    spec:
+      template:
+        spec:
+          containers:
+          - name: my-nodejs-app
+            image: my-nodejs-app:latest
+
+Activate auto instrumentation by adding ``otel.splunk.com/inject-nodejs: "true"`` to the ``spec``:
+
+.. code-block:: yaml
+
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: my-nodejs-app
+    spec:
+      template:
+        metadata:
+          annotations:
+            otel.splunk.com/inject-nodejs: "true"
+        spec:
+          containers:
+          - name: my-nodejs-app
+            image: my-nodejs-app:latest
+
+The Collector operator activates automatic instrumentation for any Node.js applications in the deployment.
+
+To deactivate automatic instrumentation, remove the annotation or set its value to ``false``.
+
+Activate and deactivate auto instrumentation for Node.js on a running workload
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To activate auto instrumentation for your Node.js deployment, run the following command. Replace ``<my-deployment>`` with the deployment name and ``<my-namespace>`` with the name of the target application namespace.
 
 .. code-block:: bash
 
-   kubectl patch deployment <deployment_name> -n <namespace> -p '{"spec": {"template":{"metadata":{"annotations":{"instrumentation.opentelemetry.io/inject-nodejs":"<splunk_otel_collector_namespace>/splunk-otel-collector"}}}} }'
+   kubectl patch deployment <my-deployment> -n <my-namespace> -p '{"spec": {"template":{"metadata":{"annotations":{"instrumentation.opentelemetry.io/inject-nodejs":"<splunk_otel_collector_namespace>/splunk-otel-collector"}}}} }'
 
 .. note::
    * The deployment pod will restart after running this command.
@@ -109,12 +144,12 @@ To deactivate auto instrumentation for your Node.js deployment, run the followin
 
 .. code-block:: bash
 
-   kubectl patch deployment <deployment_name> -n <namespace> --type=json -p='[{"op": "remove", "path": "/spec/template/metadata/annotations/instrumentation.opentelemetry.io~1inject-nodejs"}]'
+   kubectl patch deployment <my-deployment> -n <my-namespace> --type=json -p='[{"op": "remove", "path": "/spec/template/metadata/annotations/instrumentation.opentelemetry.io~1inject-nodejs"}]'
 
 Verify instrumentation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To verify that the instrumentation was successful, run the following command on an individual pod. Your instrumented pod should contain an initContainer named ``opentelemetry-auto-instrumentation`` and the target application container should have several ``OTEL_*`` environment variables similar to those in the output below.
+To verify that the instrumentation was successful, run the following command on an individual pod. Your instrumented pod should contain an initContainer named ``opentelemetry-auto-instrumentation`` and the target application container should have several ``OTEL_*`` environment variables similar to those in the demo output below.
 
 .. code-block:: bash
 
@@ -163,10 +198,19 @@ To verify that the instrumentation was successful, run the following command on 
    #   opentelemetry-auto-instrumentation:
    #     Type:        EmptyDir (a temporary directory that shares a pod's lifetime)
 
-5. View results at Splunk Observability APM
+4. View results at Splunk Observability APM
 ------------------------------------------------------------
 
-Allow the Operator to do the work. The Operator intercepts and alters the Kubernetes API requests to create and update annotated pods, the internal pod application containers are instrumented, and trace and metrics data populates the :ref:`APM dashboard <apm-dashboards>`. 
+Allow the Operator to do the work. The Operator intercepts and alters the Kubernetes API requests to create and update annotated pods, the internal pod application containers are instrumented, and trace and metrics data populates the :ref:`APM dashboard <apm-dashboards>`.
+
+.. _configure-js-zeroconfig-k8s:
+
+5. (Optional) Configure the instrumentation
+====================================================
+
+You can configure the Splunk Distribution of OpenTelemetry JS to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started.
+
+To learn more, see :ref:`advanced-nodejs-otel-configuration`.
 
 Learn more
 ===========================================================================

@@ -18,37 +18,22 @@ Zero Config Auto Instrumentation for Java requires the following components:
 * The OpenTelemetry Operator, which manages auto-instrumentation of Kubernetes applications. See more in the :new-page:`OpenTelemetry GitHub repo <https://github.com/open-telemetry/opentelemetry-operator>`.
 * A Kubernetes instrumentation object ``opentelemetry.io/v1alpha1``, which configures auto-instrumentation settings for applications.
 
-1. Set up the environment for instrumentation
+1. Deploy the Helm Chart with the Operator enabled
 ------------------------------------------------------------
 
-Create a namespace for your Java applications and deploy your Java applications to that namespace. 
-
-.. code-block:: bash
-
-   kubectl create namespace <namespace>
-
-2. Deploy the Helm Chart with the Operator enabled
-------------------------------------------------------------
-
-Deploy the :ref:`Collector for Kubernetes with the Helm chart <helm-chart>` with ``operator.enabled=true`` to include the Operator in the deployment.
-
-Ingest traces
+Add certifications and deploy the Helm Chart
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In order to be properly ingest trace telemetry data, the attribute ``environment`` must be on board the exported traces. There are two ways to set this attribute:
-
-* Use the `values.yaml` optional environment configuration.
-* Use the Instrumentation spec with the environment variable ``OTEL_RESOURCE_ATTRIBUTES``.
-
-Add certifications
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The Operator requires certain TLS cerificates to work. If a certification manager (or any other TLS certificate source) is not available in the cluster, then you'll need to deploy it using ``certmanager.enabled=true``. You can use the following commands to run these steps.
+The Operator requires certain TLS certificates to work. Use the following command to check whether a certification manager is available:
 
 .. code-block:: yaml
 
    # Check if cert-manager is already installed, don't deploy a second cert-manager.
    kubectl get pods -l app=cert-manager --all-namespaces
+
+If a certification manager (or any other TLS certificate source) is not available in the cluster, then you'll need to deploy it using ``certmanager.enabled=true``. Use the following commands to deploy the Helm Chart.
+
+.. code-block:: yaml 
 
    # If cert-manager is not deployed.
    helm install splunk-otel-collector -f ./my_values.yaml --set certmanager.enabled=true,operator.enabled=true,environment=dev -n monitoring helm-charts/splunk-otel-collector
@@ -56,7 +41,15 @@ The Operator requires certain TLS cerificates to work. If a certification manage
    # If cert-manager is already deployed.
    helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=dev -n monitoring helm-charts/splunk-otel-collector
 
-3. Verify all the OpenTelemetry resources are deployed successfully
+Ingest traces
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In order to be properly ingest trace telemetry data, the attribute ``environment`` must be on board the exported traces. There are two ways to set this attribute:
+
+* Use the ``values.yaml`` optional environment configuration.
+* Use the Instrumentation spec with the environment variable ``OTEL_RESOURCE_ATTRIBUTES``.
+
+2. Verify all the OpenTelemetry resources are deployed successfully
 ---------------------------------------------------------------------------
 
 Resources include the Collector, the Operator, webhook, an instrumentation.
@@ -84,39 +77,81 @@ Run the following to verify the resources are deployed correctly:
    # NAME                          AGE   ENDPOINT
    # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
 
-4. Set annotations to instrument Java applications
-------------------------------------------------------------
+3. Set annotations to instrument Java applications
+-------------------------------------------------------------------
 
-Activate and deactivate auto instrumentation for Java
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Activate and deactivate auto instrumentation before runtime
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To activate auto instrumentation for your Node.js deployment, run the following command:
+If the deployment is not deployed, add the ``otel.splunk.com/inject-java`` annotation to the application deployment YAML file.
+
+For example, given the following deployment YAML:
+
+.. code-block:: yaml
+
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: my-java-app
+    spec:
+      template:
+        spec:
+          containers:
+          - name: my-java-app
+            image: my-java-app:latest
+
+Activate auto instrumentation by adding ``otel.splunk.com/inject-java: "true"`` to the ``spec``:
+
+.. code-block:: yaml
+
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: my-java-app
+    spec:
+      template:
+        metadata:
+          annotations:
+            otel.splunk.com/inject-java: "true"
+        spec:
+          containers:
+          - name: my-java-app
+            image: my-java-app:latest
+
+The Collector operator activates automatic instrumentation for any Java applications in the deployment.
+
+To deactivate automatic instrumentation, remove the annotation or set its value to ``false``.
+
+Activate and deactivate auto instrumentation for Java on a running workload
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To activate auto instrumentation for your Java deployment, run the following command:
 
 .. code-block:: bash
 
-   kubectl patch deployment <deployment_name> -n <namespace> -p '{"spec": {"template":{"metadata":{"annotations":{"instrumentation.opentelemetry.io/inject-java":"<splunk_otel_collector_namespace>/splunk-otel-collector"}}}} }'
+   kubectl patch deployment <my-deployment> -n <my-namespace> -p '{"spec": {"template":{"metadata":{"annotations":{"instrumentation.opentelemetry.io/inject-java":"<splunk_otel_collector_namespace>/splunk-otel-collector"}}}} }'
 
 .. note::
    * The deployment pod will restart after running this command.
    * If the chart is not installed in the "default" namespace, modify the annotation value to be "{chart_namespace}/splunk-otel-collector".
 
-To deactivate auto instrumentation for your Java deployment, run the following command:
+To deactivate auto instrumentation for your Java deployment, run the same command but change the annotation value to ``false``:
 
 .. code-block:: bash
 
-   kubectl patch deployment <deployment_name> -n <namespace> --type=json -p='[{"op": "remove", "path": "/spec/template/metadata/annotations/instrumentation.opentelemetry.io~1inject-java"}]'
+   kubectl patch deployment <my-deployment> -n <my-namespace> --type=json -p='[{"op": "remove", "path": "/spec/template/metadata/annotations/instrumentation.opentelemetry.io~1inject-java"}]'
 
 Verify instrumentation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To verify that the instrumentation was successful, run the following command on an individual pod. Your instrumented pod should contain an initContainer named ``opentelemetry-auto-instrumentation`` and the target application container should have several ``OTEL_*`` environment variables similar to those in the output below.
+To verify that the instrumentation was successful, run the following command on an individual pod. Your instrumented pod should contain an initContainer named ``opentelemetry-auto-instrumentation`` and the target application container should have several ``OTEL_*`` environment variables similar to those in the demo output below.
 
 .. code-block:: bash
 
    kubectl describe pod -n otel-demo -l app.kubernetes.io/name=opentelemetry-demo-frontend
    # Name:             opentelemetry-demo-frontend-57488c7b9c-4qbfb
    # Namespace:        otel-demo
-   # Annotations:      instrumentation.opentelemetry.io/inject-nodejs: default/splunk-otel-collector
+   # Annotations:      instrumentation.opentelemetry.io/inject-java: default/splunk-otel-collector
    # Status:           Running
    # Init Containers:
    #   opentelemetry-auto-instrumentation:
@@ -144,24 +179,31 @@ To verify that the instrumentation was successful, run the following command on 
    #       SHIPPING_SERVICE_ADDR:                      opentelemetry-demo-shippingservice:8080
    #       WEB_OTEL_SERVICE_NAME:                      frontend-web
    #       PUBLIC_OTEL_EXPORTER_OTLP_TRACES_ENDPOINT:  http://localhost:8080/otlp-http/v1/traces
-   #       NODE_OPTIONS:                                --require /otel-auto-instrumentation/autoinstrumentation.js
+   #       NODE_OPTIONS:                                --require /otel-auto-instrumentation/autoinstrumentation.java
    #       SPLUNK_OTEL_AGENT:                           (v1:status.hostIP)
    #       OTEL_SERVICE_NAME:                          opentelemetry-demo-frontend
    #       OTEL_EXPORTER_OTLP_ENDPOINT:                http://$(SPLUNK_OTEL_AGENT):4317
    #       OTEL_RESOURCE_ATTRIBUTES_POD_NAME:          opentelemetry-demo-frontend-57488c7b9c-4qbfb (v1:metadata.name)
    #       OTEL_RESOURCE_ATTRIBUTES_NODE_NAME:          (v1:spec.nodeName)
    #       OTEL_PROPAGATORS:                           tracecontext,baggage,b3
-   #       OTEL_RESOURCE_ATTRIBUTES:                   splunk.zc.method=autoinstrumentation-nodejs:0.41.1,k8s.container.name=frontend,k8s.deployment.name=opentelemetry-demo-frontend,k8s.namespace.name=otel-demo,k8s.node.name=$(OTEL_RESOURCE_ATTRIBUTES_NODE_NAME),k8s.pod.name=$(OTEL_RESOURCE_ATTRIBUTES_POD_NAME),k8s.replicaset.name=opentelemetry-demo-frontend-57488c7b9c,service.version=1.5.0-frontend
+   #       OTEL_RESOURCE_ATTRIBUTES:                   splunk.zc.method=autoinstrumentation-java:0.41.1,k8s.container.name=frontend,k8s.deployment.name=opentelemetry-demo-frontend,k8s.namespace.name=otel-demo,k8s.node.name=$(OTEL_RESOURCE_ATTRIBUTES_NODE_NAME),k8s.pod.name=$(OTEL_RESOURCE_ATTRIBUTES_POD_NAME),k8s.replicaset.name=opentelemetry-demo-frontend-57488c7b9c,service.version=1.5.0-frontend
    #     Mounts:
    #       /otel-auto-instrumentation from opentelemetry-auto-instrumentation (rw)
    # Volumes:
    #   opentelemetry-auto-instrumentation:
    #     Type:        EmptyDir (a temporary directory that shares a pod's lifetime)
 
-5. View results at Splunk Observability APM
+4. View results at Splunk Observability APM
 ------------------------------------------------------------
 
 Allow the Operator to do the work. The Operator intercepts and alters the Kubernetes API requests to create and update annotated pods, the internal pod application containers are instrumented, and trace and metrics data populates the :ref:`APM dashboard <apm-dashboards>`. 
+
+5. (Optional) Configure the instrumentation
+------------------------------------------------------------
+
+You can configure the Splunk Distribution of OpenTelemetry Java to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started.
+
+To learn more, see :ref:`java-manual-instrumentation`.
 
 Learn more
 ===========================================================================
