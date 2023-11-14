@@ -50,8 +50,12 @@ The OpenTelemetry Collector is an open-source project that has a core version an
 The Splunk Distribution of OpenTelemetry Collector is a distribution of the OpenTelemetry Collector. It sits on top of the Contrib version, and it bundles components from OpenTelemetry Core, OpenTelemetry Contrib, and other sources to provide data collection for multiple source platforms.  
 
 .. mermaid::
-
+  
   flowchart LR
+
+    accTitle: Splunk Distribution of OpenTelemetry Collector diagram.
+    accDescr: The Splunk Distribution of OpenTelemetry Collector contains receivers, processors, exporters, and extensions. Receivers gather metrics and logs from infrastructure, and metrics, traces, and logs from back-end applications. Receivers send data to processors, and processors send data to exporters. Exporters send data to Splunk Observability Cloud and Splunk Cloud Platform. Front-end experiences send data directly to Splunk Observability Cloud through RUM instrumentation.
+
     subgraph "\nSplunk Distribution of OpenTelemetry Collector"
     receivers
     processors
