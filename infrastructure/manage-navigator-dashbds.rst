@@ -66,5 +66,5 @@ A dashboard with a :guilabel:`Limited access` label is associated with an access
 Custom dashboards
 -----------------------------
 
-Custom dashboards are monitoring tools that you add to the built-in dashboard set when you modify navigators to more closely match the needs
+Custom dashboards are monitoring tools that you add to the built-in dashboard set when you modify (customize) navigators to more closely match the needs
 of your end-to-end computing environment.
