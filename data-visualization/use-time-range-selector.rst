@@ -1,7 +1,7 @@
 .. _time-range-selector:
 
 *****************************************************************
-Override default time range with the Time Range Selector
+Selecting the time range with the Time Range Selector
 *****************************************************************
 
 .. meta::
