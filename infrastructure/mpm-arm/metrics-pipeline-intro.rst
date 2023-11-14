@@ -124,7 +124,7 @@ MTS aggregation
    MPM creates new MTS by aggregating metrics and dimensions data from incoming raw MTS and dropping unwanted dimensions.
    You create aggregation rules that roll up your selected metric data into new metrics that take up less storage and lead to
    an increased query performance. To learn how to create aggregation rules, see :ref:`aggregation-arm`.
-MTS Data dropping
+MTS data dropping
    After MPM aggregates new MTS, it can drop the original raw MTS. You create data dropping rules that discard any metrics
    you don't want to retain for monitoring. To learn how to create data dropping rules, see
    :ref:`data-dropping-arm`.
@@ -144,9 +144,9 @@ Rules-based metrics management
 
 Metrics pipeline management operation is based on rules that define the following processes:
 
-* Aggregation - Rules specify incoming raw MTS to aggregate and the incoming MTS dimensions to drop,
+* Aggregation: Rules specify incoming raw MTS to aggregate and the incoming MTS dimensions to drop,
   resulting in new aggregated MTS.
-* Data routing -
+* Data routing:
 
        * Rules specify incoming raw MTS to move to a low-cost archival data tier.
        * Rules specify incoming raw MTS to drop entirely.
@@ -222,7 +222,7 @@ If your systems send periodic data points, but the period is longer than 10 seco
 might not be what you expect.
 
 For example, suppose your systems generate data points every 5 seconds. Two successive data points have timestamps
-that differ by 5 seconds. If your systems immediately transmit the points to Observability Cloud, the system ingests
+that differ by 5 seconds. If your systems immediately transmit the data points to Observability Cloud, the system ingests
 two data points every 10 seconds. Metrics pipeline management can roll up the two data points into one aggregated
 data point with a resolution of 10 seconds, which is the result you expect.
 
@@ -253,7 +253,7 @@ the system uses when it aggregates data points can cause one of the following is
 
 You can avoid these aggregation issues by using the following options:
 
-* Do your own MTS aggregation before sending data to the system, by reconfiguring the OTel collector to drop unwanted dimensions.
+* Do your own MTS aggregation before sending data to the system, by reconfiguring the Splunk Distribution of OpenTelemetry Collector to drop unwanted dimensions.
 * Aggregate data using SignalFlow when you generate charts or create detectors.
 
 
