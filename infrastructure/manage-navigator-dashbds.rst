@@ -32,7 +32,7 @@ To add one or more dashboards to the default dashboard set for a navigator, do t
 
 #. Click on :guilabel:`+Add dashboard`.
 
-#. Scroll through the list of dashboards, using the Prev and Next buttons to navigate through multiple pages as desired. All available dashboards are displayed in alphabetical order, so the dashboard list may be extensive.
+#. Scroll through the list of dashboards, using the Prev and Next buttons to navigate through multiple pages as desired. All available dashboards are displayed in alphabetical order, so the dashboard list might be extensive.
 
 #. (Optional) In the search field of the :guilabel:`Select a dashboard` window, enter the name of the dashboard you want to find. If dashboards in different groups have the same name, as they might for a common function like "Service endpoint," then search displays the part of the dashboard list where similar names are grouped.
 
