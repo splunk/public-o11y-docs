@@ -37,7 +37,7 @@ If a certification manager (or any other TLS certificate source) is not availabl
 
    # If cert-manager is not deployed.
    helm install splunk-otel-collector -f ./my_values.yaml --set certmanager.enabled=true,operator.enabled=true,environment=dev -n monitoring helm-charts/splunk-otel-collector
-
+   
    # If cert-manager is already deployed.
    helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=dev -n monitoring helm-charts/splunk-otel-collector
 
@@ -79,6 +79,8 @@ Run the following to verify the resources are deployed correctly:
 
 3. Set annotations to instrument Java applications
 -------------------------------------------------------------------
+
+You can activate auto instrumentation for Java applications before or during runtime.
 
 Activate and deactivate auto instrumentation before runtime
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -125,7 +127,7 @@ To deactivate automatic instrumentation, remove the annotation or set its value 
 Activate and deactivate auto instrumentation for Java on a running workload
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To activate auto instrumentation for your Java deployment, run the following command:
+To activate auto instrumentation for your Java deployment, run the following command. Replace ``<my-deployment>`` with the deployment name and ``<my-namespace>`` with the name of the target application namespace.
 
 .. code-block:: bash
 

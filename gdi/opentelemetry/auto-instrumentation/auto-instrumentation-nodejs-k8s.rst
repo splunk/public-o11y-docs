@@ -85,6 +85,8 @@ Run the following to verify the resources are deployed correctly:
 3. Set annotations to instrument Node.js applications
 ------------------------------------------------------------
 
+You can activate auto instrumentation for Java applications before or during runtime.
+
 Activate and deactivate auto instrumentation before runtime
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
