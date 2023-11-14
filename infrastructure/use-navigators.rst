@@ -312,6 +312,12 @@ List available navigators
 
 For a list of all the navigators available, see :ref:`navigators-list-imm`.
 
+Customize navigators
+-------------------------------
+
+For instructions on how to customize navigators by adding to or removing from the group of built-in dashboards associated with them, see :ref:`manage-dashboards-imm`.
+
+
 .. toctree::
    :hidden:
 
