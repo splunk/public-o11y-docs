@@ -122,63 +122,48 @@ incident.
 
 -  Acknowledgment -  can be executed via Push, SMS, or Phone notification & within the web/mobile clients. Will cease paging and  assign you to the incident.
 -  `S_nooze\_ <https://help.victorops.com/knowledge-base/snooze/>`__ - can be executed within the web/mobile clients. Will cease paging of an incident for a defined time period. When the time period is reached, the incident will then be retriggered and begin paging out again.
--  `Reroute <https://help.victorops.com/knowledge-base/reroute-an-incident/>`__
-   *-* can be executed within the web/mobile clients. Redirects an
-   incident to a user(s) or escalation policy(s).
--  *Resolve -*  can be executed via Push, SMS, or Phone notification &
-   within the web/mobile clients. Will end the incident as being
-   complete - no further action needed.
+-  `Reroute <https://help.victorops.com/knowledge-base/reroute-an-incident/>`- can be executed within the web/mobile clients. Redirects an incident to a user(s) or escalation policy(s).
+-  Resolve -can be executed via Push, SMS, or Phone notification and within the web or mobile clients. Will end the incident as being complete - no further action needed.
 
 Processing Incidents in Splunk On-Call
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------------------
 
 How to find the right incident information:
 
--  *Details/Payload* - contains preconfigured alert data from your
-   monitoring tools related to the incident.
--  *Incident Specific Timeline* - captures all Splunk On-Call events
-   related to the incident.
--  `Annotations <https://help.victorops.com/knowledge-base/transmogrifier-annotations/>`__
-   - additional context added by the `Rules
-   Engine <https://help.victorops.com/knowledge-base/transmogrifier/>`__
-   rules you’ve setup. Can annotate links, notes, and images to be
+- Details/Payload - contains preconfigured alert data from your monitoring tools related to the incident.
+- Incident Specific Timeline* - captures all Splunk On-Call events related to the incident.
+- `Annotations <https://help.victorops.com/knowledge-base/transmogrifier-annotations/>`- additional context added by the `Rules
+   Engine <https://help.victorops.com/knowledge-base/transmogrifier/>` rules you've setup. Can annotate links, notes, and images to be
    delivered in hand with the alert payload.
 
-**On-call Awareness**
-~~~~~~~~~~~~~~~~~~~~~
+On-call Awareness
+-------------------------
 
--  *When am I on-call?* - your user card within the People Pane will
-   display your current and upcoming on-call shift information. Your
-   profile also contains an `on-call calendar
-   export <https://help.victorops.com/knowledge-base/calendar-export/>`__
-   link for 3rd party calendars.
+- When am I on-call? - your user card within the People Pane will display your current and upcoming on-call shift information. Your
+   profile also contains an `on-call calendar export <https://help.victorops.com/knowledge-base/calendar-export/>` link for 3rd party calendars.
 
--  *Who else is on-call with me?* - the Splunk On-Call oak leaf icon on
-   a user card in the People Pane denotes a person as being on-call
+- Who else is on-call with me? - the Splunk On-Call oak leaf icon on a user card in the People Pane denotes a person as being on-call
    currently.
 
--  *Team’s Schedule* - your team’s schedule can be found in the Settings
+-  Team's Schedule - your team's schedule can be found in the Settings
    page and by selecting the dropdown icon in line with your team.
 
--  *Escalation Policy Awareness* - when on-call, it is important to know
-   how your team’s escalation policies are structured and who exactly an
-   incident may escalate to and when if you do not respond. You can find
-   these within each team.
+-  Escalation Policy Awareness - when on-call, it is important to know how your team's escalation policies are structured and who exactly an incident may escalate to and when if you do not respond. You can find these within each team.
 
-**Coverage Activities**
-~~~~~~~~~~~~~~~~~~~~~~~
+Coverage Activities
+--------------------------
 
--  `Scheduled
-   Overrides <https://help.victorops.com/knowledge-base/scheduled-overrides/>`__
-   *- allow users to request on-call coverage for any planned absence.*
+- `Scheduled Overrides <https://help.victorops.com/knowledge-base/scheduled-overrides/>` - allow users to request on-call coverage for any planned absence.
 
--  `Manual Take
-   On-Call <https://help.victorops.com/knowledge-base/manual-take-call/>`__
-   - take someone’s on-call shift one-off – on-call personnel change in
-   real time.
+- `Manual Take On-Call <https://help.victorops.com/knowledge-base/manual-take-call/>` - take someone's on-call shift one-off. On-call personnel change in real time.
 
- 
 
-**How does an incident get to me?**
+How does an incident get to me?
+----------------------------------
 
-.. image:: images/vo-incident-flow.png
+
+.. image:: /_images/spoc/vo-incident-flow.png
+    :width: 100%
+    :alt: Splunk On-Call takes alerts from detectors and used the policies you've configured to page users.
+
+    

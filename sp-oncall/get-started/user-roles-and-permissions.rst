@@ -1,44 +1,79 @@
-This article discusses roles in Splunk On-Call and provides a detailed
-breakdown of the specific permissions allocated to each role. It will
+.. _spoc-system-requirements:
+
+*********************************
+User roles and permissions
+*********************************
+
+This article discusses roles in Splunk On-Call and provides a detailed breakdown of the specific permissions allocated to each role. It will
 also review how to change the roles for users.
 
 There are five roles in Splunk On-Call:
 
 -  Global Admin: Global access, no restrictions
 -  Team Admin: Manages people and scheduling on a team basis
--  Alert Admin: Manages the technical aspects of creating and optimizing
-   alerts
+-  Alert Admin: Manages the technical aspects of creating and optimizing alerts
 -  User: Alert response
 -  Stakeholder: Read-only awareness
 
-Global Admin, Alert Admin, User, and Stakeholder are **global** roles.
-The Team Admin role is assigned on a team basis. This means that a user
-that is a Team Admin for one team has permissions to manage people and
-schedules for only that team.
+Global Admin, Alert Admin, User, and Stakeholder are :strong:`roles`. The Team Admin role is assigned on a team basis. This means that a user
+that is a Team Admin for one team has permissions to manage people and schedules for only that team.
 
-This means that a user can hold **two** roles. Here are the possible
-combinations:
+This means that a user can hold twp roles. Here are the possible combinations:
 
 -  User & Team Admin
 -  Alert Admin & Team Admin
 
-Stakeholders can be considered separate from all other roles as these
-users cannot be placed in any on-call schedules nor take action on
-incidents.  They can simply be added to existing incidents and notified
-through their defined contact methods for awareness.  For comprehensive
-information on stakeholders, please see `this
-article <https://help.victorops.com/knowledge-base/stakeholders/>`__.
+Stakeholders can be considered separate from all other roles as these users cannot be placed in any on-call schedules nor take action on
+incidents. They can simply be added to existing incidents and notified through their defined contact methods for awareness. For comprehensive
+information on stakeholders, please see `this article <https://help.victorops.com/knowledge-base/stakeholders/>`__.
 
 The next sections provides a detailed breakdown of the specific
 permissions for each role.
 
-User Permissions
-----------------
+User Permissions
+=========================
 
 User Management
-~~~~~~~~~~~~~~~
+---------------------
 
-[table id=10 /]
+.. list-table::
+   : width: 100%
+   :widths: 25,15,15,15,15,15
+
+  * - :strong:`Capability`
+    - :strong:`Global Admin`
+    - :strong:`Alert Admin`
+    - :strong:`Team Admin`
+    - :strong:`User`
+    - :strong:`Stakeholder`
+
+  * - :strong:`Invite user`
+    - Yes
+    - 
+    - Yes
+    - 
+    - 
+  
+  * - :strong:`Invite user`
+    - Yes
+    - 
+    - Yes
+    - 
+    - 
+
+  * - :strong:`Invite user`
+    - Yes
+    - 
+    - Yes
+    - 
+    - 
+    
+-   * - :strong:`Invite user`
+    - Yes
+    - 
+    - Yes
+    - 
+    - 
 
 Team Management
 ~~~~~~~~~~~~~~~
