@@ -211,8 +211,10 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
       :strong:`Instrumentation`
 
-      - Activate the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
-      - Check the OTLP the endpoint in the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable:
+      Activate the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
+
+      Check the OTLP endpoint in the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable:
+
          - For non-Kubernetes environments, make sure that the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to \http://localhost:4317.
          - For Kubernetes deployments, the OTLP endpoint has to point to \http://$(K8S_NODE_IP):4317 where the ``K8S_NODE_IP`` is fetched from the Kubernetes downstream API by setting the environment configuration on the Kubernetes pod running the application. For example:
 
