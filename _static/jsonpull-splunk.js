@@ -153,12 +153,13 @@ $(document).ready(function () {
       return [].find.call(arguments, x => x !== null && x !== undefined);
    }
 
+
    function generateTableFromData(data, mainColumn, secondaryColumn, otherColumns, headers) {
       const groupedData = {};
       for (const key in data) {
          const item = data[key];
-         item[secondaryColumn] = key;  // Store the key as the secondary column value
-         const mainValue = item[mainColumn];
+         item[secondaryColumn] = key;
+         const mainValue = item[mainColumn].toString();
          if (!groupedData[mainValue]) {
             groupedData[mainValue] = [];
          }
@@ -167,18 +168,24 @@ $(document).ready(function () {
 
       let tableContent = '';
 
-      const sortedMainValues = Object.keys(groupedData).sort();
+      function compareValues(a, b) {
+         a = a.toString().toLowerCase();
+         b = b.toString().toLowerCase();
+         return a < b ? -1 : (a > b ? 1 : 0);
+      }
+
+      const sortedMainValues = Object.keys(groupedData).sort(compareValues);
 
       for (const mainValue of sortedMainValues) {
          const sortedGroupItems = groupedData[mainValue].sort((a, b) => {
-            return a[secondaryColumn].localeCompare(b[secondaryColumn]);
+            return compareValues(a[secondaryColumn], b[secondaryColumn]);
          });
 
          let rowspan = sortedGroupItems.length;
          let isFirst = true;
          for (const item of sortedGroupItems) {
-            const secondaryValue = item[secondaryColumn];
-            const otherValues = otherColumns.map(column => item[column] || '');
+            const secondaryValue = item[secondaryColumn].toString();
+            const otherValues = otherColumns.map(column => item[column].toString() || '');
             let rowData = isFirst ? `<td rowspan="${rowspan}">${mainValue}</td>` : '';
             rowData += `<td>${secondaryValue}</td>`;
             otherValues.forEach(val => {
@@ -192,15 +199,15 @@ $(document).ready(function () {
       const tableHeaders = headers.map(header => `<th>${header}</th>`).join('');
 
       const table = `
-    <table style='width: 100%' class='generated-table docutils align-default'>
-        <thead>
-            ${tableHeaders}
-        </thead>
-        <tbody>
-            ${tableContent}
-        </tbody>
-    </table>
-    `;
+<table style='width: 100%' class='generated-table docutils align-default'>
+    <thead>
+        ${tableHeaders}
+    </thead>
+    <tbody>
+        ${tableContent}
+    </tbody>
+</table>
+`;
 
       return table;
    }
