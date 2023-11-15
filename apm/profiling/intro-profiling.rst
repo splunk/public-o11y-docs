@@ -85,6 +85,10 @@ The following programming languages have instrumentation available:
    * - .NET
      - SignalFx Instrumentation for .NET version 1.0.0 or higher
      - :ref:`instrument-dotnet-applications`
+   * - Python
+     - Splunk Distribution of OpenTelemetry Python version 1.15 or higher
+     - * :ref:`instrument-python-applications`
+       * :ref:`profiling-configuration-python` 
 
 
 .. raw:: html
