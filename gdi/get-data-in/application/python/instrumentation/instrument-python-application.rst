@@ -132,8 +132,7 @@ To activate AlwaysOn Profiling, set the ``splunk.profiler.enabled`` system prope
 
 The following example shows how to activate the profiler using the system property:
 
-<example code>
-
+.. If users can use the system property, than an example would go here. Otherwise it could also help to have an example of how the user sets the env var to true.
 
 See :ref:`get-data-in-profiling` for more information. For additional settings, see :ref:`profiling-configuration-python`.
 

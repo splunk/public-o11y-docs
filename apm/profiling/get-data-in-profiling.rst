@@ -224,6 +224,8 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
                      fieldRef:
                         apiVersion: v1
                         fieldPath: status.hostIP
+      
+      .. If applicable I would also like to add an example for how to use system properties or application code to activate profiling here.
 
 .. _profiling-check-data-coming-in:
 
