@@ -123,6 +123,20 @@ Application metrics are collected by default. See :ref:`python-otel-metrics` for
 
 If no data appears in APM, see :ref:`common-python-troubleshooting`.
 
+.. _enable-profiling-python:
+
+Activate AlwaysOn Profiling
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To activate AlwaysOn Profiling, set the ``splunk.profiler.enabled`` system property or the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to true.
+
+The following example shows how to activate the profiler using the system property:
+
+<example code>
+
+
+See :ref:`get-data-in-profiling` for more information. For additional settings, see :ref:`profiling-configuration-python`.
+
 .. _configure-python-instrumentation:
 
 Configure the Python agent

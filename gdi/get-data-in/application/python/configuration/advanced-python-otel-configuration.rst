@@ -115,6 +115,29 @@ For backward compatibility with the SignalFx Python Tracing Library, use the b3m
 
       $env:OTEL_PROPAGATORS=b3multi
 
+.. _profiling-configuration-python:
+
+Python settings for AlwaysOn Profiling
+====================================================
+
+The following settings control the AlwaysOn Profiling feature for the Python agent:
+
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 40 60
+
+  * - Environment variable
+    - Description
+  * - ``SPLUNK_PROFILER_ENABLED``
+    - Activates AlwaysOn Profiling. The default value is ``false``. |br| |br| System property: ``splunk.profiler.enabled``
+  * - ``SPLUNK_PROFILER_LOGS_ENDPOINT``
+    - The collector endpoint for profiler logs. By default, it takes the value of ``http://localhost:4317``. |br| |br| System property: ``splunk.profiler.logs-endpoint``
+  * - ``SPLUNK_PROFILER_CALL_STACK_INTERVAL``
+    - The frequency of call stack sampling, in milliseconds. The default value is ``1000``. |br| |br| System property: ``splunk.profiler.call.stack.interval``
+  * - ``SPLUNK_PROFILER_INCLUDE_INTERNAL_STACKS``
+    - Determines whether to include stack traces from internal profiler threads. The default value is ``false``. |br| |br| ``splunk.profiler.include.internal.stacks``
+
 .. _server-trace-information-python:
 
 Server trace information
