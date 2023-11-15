@@ -221,11 +221,11 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
             .. code-block:: yaml
 
                env:  
-                  - name: K8S_NODE_IP
-                  valueFrom:
-                     fieldRef:
-                        apiVersion: v1
-                        fieldPath: status.hostIP
+               - name: K8S_NODE_IP
+                 valueFrom:
+                   fieldRef:
+                     apiVersion: v1
+                     fieldPath: status.hostIP
       
       The following example shows how to activate the profiler from your application's code:
 
