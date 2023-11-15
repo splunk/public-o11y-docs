@@ -21,8 +21,12 @@ Splunk OpenTelemetry Zero Configuration Auto Instrumentation automatically instr
 The following diagram demonstrates the process of manually instrumenting your applications:
 
 .. mermaid::
-
+   
    flowchart TB
+
+      accTitle: Manual instrumentation process diagram
+      accDescr: Step one. Install the Splunk Distribution of OpenTelemetry Collector for your integration. Step two. Follow guided setup instructions to configure your environment. Step three. Deploy the Collector. Step four. Run your application.
+
       subgraph "Manual instrumentation"
       A["Connect to your cloud environment"]
 
@@ -38,8 +42,12 @@ The following diagram demonstrates the process of manually instrumenting your ap
 The following diagram demonstrates the process of using zero config auto instrumentation to instrument your applications: 
 
 .. mermaid::
-
+   
    flowchart TB
+
+      accTitle: Zero configuration auto instrumentation process diagram
+      accDescr: Step one. Install the zero config package for your application. Step two. Ensure the OpenTelemetry Collector is running. Step three. Run your application.
+
       subgraph "Zero configuration auto instrumentation"
 
       X["Connect to your cloud environment"]

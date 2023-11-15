@@ -111,6 +111,7 @@ To send custom application metrics to Splunk Observability Cloud, follow these s
    - :ref:`Node.js <metrics-configuration-nodejs>`
    - .NET metric collection is on by default. 
    - Go metric collection is on by default. 
+   - Python metric collection is on by default.
    
    If you've activated AlwaysOn Profiling, metric collection is turned on by default for all languages that support profiling.
 
@@ -120,6 +121,7 @@ To send custom application metrics to Splunk Observability Cloud, follow these s
    - :ref:`nodejs-otel-metrics`
    - :ref:`dotnet-otel-metrics-attributes`
    - :ref:`go-otel-metrics`
+   - :ref:`python-otel-metrics`
 
 4. Create custom metrics following the instructions for each language:
 
@@ -127,3 +129,4 @@ To send custom application metrics to Splunk Observability Cloud, follow these s
    - :ref:`Node.js <nodejs-otel-custom-metrics>`
    - :ref:`.NET (OpenTelemetry) <custom-metrics-otel-dotnet>`
    - :ref:`Go <custom-metrics-go>`
+   - :ref:`Python <custom-metrics-python>`
