@@ -5,7 +5,7 @@ Get started as a Team admin
 ************************************************************************
 
 .. meta::
-   :description: About the team admin  roll in Splunk On-Call.
+   :description: About the team admin roll in Splunk On-Call.
 
 
 

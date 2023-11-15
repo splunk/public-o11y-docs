@@ -1,206 +1,127 @@
+.. _about-spoc
+
+************************************************************************
 What is Splunk On-Call?
------------------------
+************************************************************************
 
-Splunk On-Call is incident management software that allows teams to
-maintain a culture of high availability without slowing down the
-innovation process. The moment something goes wrong, Splunk On-Call will
-spring people to action, automatically.
+.. meta::
+   :description: About the team admin roll in Splunk On-Call.
 
-**Where can I get help?** *-* If at any point you find yourself needing
-additional help, please contact support (victorops-support@splunk.com).
-Our 24/7 support team is on-call when you are. You can even initiate a
-Live Chat (within business hours,8:00 A.M.-5:00 P.M. Mountain Time) or
-submit a ticket via our `Contact
-Support <https://victorops.com/contact-support/>`__ page.
 
-**Mobile App Download** *-*
-`iOS <https://itunes.apple.com/us/app/victorops/id696974262?mt=8>`__ &
-`Android <https://play.google.com/store/apps/details?id=com.victorops.androidclient&hl=en>`__
+Splunk On-Call is incident management software that allows teams to maintain a culture of high availability without slowing down the
+innovation process. The moment something goes wrong, Splunk On-Call will spring people to action, automatically.
+
 
 We offer two getting started guides: one for admins and one for users.
 
-Getting Started Guide - Admins
-------------------------------
+Getting Started Guide for Admins
+=====================================
 
-**Team Page Layout**
+The Team page is your central location for configuring teams, schedules, rotations, and escalation policies.
 
-.. image:: images/Team-Page.jpg
+.. image:: /_images/spoc/team-page.png
+    :width: 100%
+    :alt: The Team page has several tabs to allow you to access schedules, rotations, and escalation policies.
 
-**Set-up**
-~~~~~~~~~~
 
-`Add
-Users <https://help.victorops.com/knowledge-base/removing-a-user/>`__ -
-The most important first step of setting up Splunk On-Call is adding
-users. To add new users:
+Set up
+----------
 
--  Leverage their email address in the portal (Users -> Invite User)
--  Utilize our API (ID & Key required, can be found in Integrations ->
-   API) \*Uploading a lot of users? Reach out to us, and we’ll help you
-   out!
+XXXXXX`Add Users <https://help.victorops.com/knowledge-base/removing-a-user/>`XXXXXX - The most important first step of setting up Splunk On-Call is adding users. To add new users:
 
-`Create Teams <https://help.victorops.com/knowledge-base/teams/>`__ *-*
-Teams hold user lists, on-call shifts, and escalation policies. To
-create a team, head to the “Teams” section from the top nav bar. From
-the ‘Teams’ page click the “Add Team” button. Then choose a name.
+-  Leverage their email address in the portal (:guilabel:`Users`, then :guilabel:`Invite User`)
+-  Utilize our API (ID & Key required, can be found in :guilabel:`Integrations` then :guilabel:`API`) 
+   Uploading a lot of users? Reach out to us, and we'll help you out.
 
--  We recommend standardizing your team names to clearly delineate
-   across teams. You can choose team names based on service, internal
-   team name, etc.—whatever makes sense to your organization, just aim
-   for consistency.
+XXXXXX`Create Teams <https://help.victorops.com/knowledge-base/teams/>`XXXXXX - Teams hold user lists, on-call shifts, and escalation policies. To
+create a team, navigate to the :menuselection:`Teams` section from the top nav bar. From the :menuselection:`Teams` page select  :guilabel:`Add Team`. Then choose a name.
 
-`Invite
-Users <https://help.victorops.com/knowledge-base/removing-a-user/>`__
-*and Declare Admins* - Once you’ve built a few teams, the next step is
-to add people. You can add invited users. Then, establish a hierarchy of
-users based on user roles, e.g, Admins, Users, and `Team
-Admins <https://help.victorops.com/knowledge-base/how-to-set-up-team-admins/>`__.
+   -  We recommend standardizing your team names to clearly delineate across teams. You can choose team names based on service, internal team name, and so on. Use whatever makes sense to your organization, but aim for consistency.
 
-`Build
-Rotations <https://help.victorops.com/knowledge-base/rotations/>`__ -
-Rotations are your recurring on-call schedules—basically groups of
-on-call shifts. A shift is shared across a number of people.
 
--  You can also reach out to us for help setting up your custom
-   rotation. \*Note: A scheduled rotation doesn’t automatically mean
-   you’re on-call; rotations need to be tied to an escalation policy.
+XXXXXX`Invite Users <https://help.victorops.com/knowledge-base/removing-a-user/>`XXXXXX *and Declare Admins* - Once you've built a few teams, the next step is to add people. You can add invited users. Then, establish a hierarchy of users based on user roles. For example, admins, users, and XXXXXX`Team Admins <https://help.victorops.com/knowledge-base/how-to-set-up-team-admins/>`XXXXXX.
 
-`Create Escalation
-Policies <https://help.victorops.com/knowledge-base/team-escalation-policy/>`__
-- Escalation policies determine which incidents are routed, to whom they
-are routed, and how they are escalated. Essentially, an escalation
-policy is how Splunk On-Call escalates a triggered event.
+XXXXXX`Build Rotations <https://help.victorops.com/knowledge-base/rotations/>`-  Rotations are your recurring on-call schedules—basically groups of on-call shifts. A shift is shared across a number of people.
 
--  Best practice for setting up your escalation policy is to establish a
-   minimum of three escalation paths: on-duty user, previous/next user
-   in a rotation, and manager/team lead.
--  `Read this
-   post <https://help.victorops.com/knowledge-base/tips-tricks-multiple-escalation-policies/>`__
-   for more tips and tricks on how to manage multiple alert behaviors
-   within a single team.
+-  You can also reach out to us for help setting up your custom rotation. 
+   .. note:: A scheduled rotation doesn't automatically mean you're on-call; rotations need to be tied to an escalation policy.
 
-`Configure Routing
-Keys <https://help.victorops.com/knowledge-base/routing-keys/>`__ *-*
-Routing keys tie the alerts from your monitoring tools to the specific
-team (or escalation policy) in Splunk On-Call—this helps get the right
-person on the problem and reduce alert noise for those unrelated to a
-specific incident. These can be found by navigating to Settings ->
-Routing Keys.
+XXXXXX`Create Escalation
+Policies <https://help.victorops.com/knowledge-base/team-escalation-policy/>`XXXXXX - Escalation policies determine which incidents are routed, to whom they are routed, and how they are escalated. Essentially, an escalation policy is how Splunk On-Call escalates a triggered event.
 
--  Keep them simple! Use the name of the team/policy that is handling
-   the alerts, the service/host for the alert, monitoring tool the alert
-   is coming from. Although routing keys are case insensitive, we
-   recommend using all lowercase letters to prevent alerts from going to
-   the default routing team.
+-  Best practice for setting up your escalation policy is to establish a minimum of three escalation paths: on-duty user, previous or next user in a rotation, and manager or team lead.
+-  XXXXXX`Read this post <https://help.victorops.com/knowledge-base/tips-tricks-multiple-escalation-policies/>`XXXXXX for more tips and tricks on how to manage multiple alert behaviors within a single team.
+
+XXXXXX`Configure Routing Keys <https://help.victorops.com/knowledge-base/routing-keys/>`XXXXXX - Routing keys tie the alerts from your monitoring tools to the specific team (or escalation policy) in Splunk On-Call. This helps get the right person on the problem and reduce alert noise for those unrelated to a specific incident. These can be found by navigating to :menuselection:`Settings` then :menuselection:`Routing Keys`.
+
+-  Keep them simple! Use the name of the team/policy that is handling the alerts, the service/host for the alert, monitoring tool the alert is coming from. Although routing keys are case insensitive, we recommend using all lowercase letters to prevent alerts from going to the default routing team.
 
    -  Matching team name: CloudOps (team) = cloudops (routing key)
    -  Matching monitoring tool: Splunk (tool) = splunk (routing key)
 
-`Integrations <https://victorops.com/integrations/>`__ - The final piece
-is to set up your custom integrations. Integrations will feed alerts
-into Splunk On-Call in order to create incidents which will then page
-out.
+XXXXXX `Integrations <https://victorops.com/integrations/>`XXXXXX - The final piece is to set up your custom integrations. Integrations will feed alerts into Splunk On-Call in order to create incidents which will then page out.
 
--  For a `full list of integrations—plus more information on how to set
-   them up—check
-   here. <https://help.victorops.com/article-categories/integrations/>`__
-   Can’t find what you’re looking for? Check out our `generic
-   email <https://help.victorops.com/knowledge-base/victorops-generic-email-endpoint/>`__
-   or `REST
-   endpoints <https://help.victorops.com/knowledge-base/victorops-restendpoint-integration/>`__!
--  We recommend setting up any chat integrations or non-alerting
-   integrations before setting up your alerting integrations.
+- For a full list of integrations, see XXXXXX` <https://help.victorops.com/article-categories/integrations/>`XXXXXX
+- Can't find what you're looking for? Check out our XXXXXX`generic email <https://help.victorops.com/knowledge-base/victorops-generic-email-endpoint/>`XXXXXX or XXXXXX`REST endpoints <https://help.victorops.com/knowledge-base/victorops-restendpoint-integration/>`XXXXXX
+- We recommend setting up any chat integrations or non-alerting integrations before setting up your alerting integrations.
 
-`Rules
-Engine <https://help.victorops.com/knowledge-base/transmogrifier/>`__ -
-The Rules Engine is a `Full-Stack <https://victorops.com/pricing>`__
-service level feature. It is, essentially, a rules engine that allows
-you to set set certain conditions, and trigger custom actions - such as
-annotating alerts with images/links/notes, overwrite alert fields or add
-new fields - when those conditions are met.
+XXXXXX`Rules
+Engine <https://help.victorops.com/knowledge-base/transmogrifier/>`XXXXXX - The Rules Engine is a `Full-Stack <https://victorops.com/pricing>` service level feature. It is a rules engine that allows you to set set certain conditions, and trigger custom actions - such as
+annotating alerts with images, links, notes, overwrite alert fields, or add new fields - when those conditions are met.
 
-**Reporting on Team Activity and Performance**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Reporting on Team activity and performance
+--------------------------------------------------
 
-As an admin, it is important that you are able to track and report out
-on team activity and performance in order to continuously improve.
-Navigate to the ‘Reports’ page in the top nav-bar.
+As an admin, it is important that you are able to track and report out on team activity and performance in order to continuously improve.
+Navigate to the :menuselection:`Reports` page in the top navigation menu.
 
--  `Post Incident
-   Review <https://help.victorops.com/knowledge-base/post-incident-review/>`__
-   *-* gain historical insight on incidents and a documented account of
-   how you solved the problem.
--  `Performance (MTTA/MTTR)
-   Report <https://help.victorops.com/knowledge-base/mttamttr-report/>`__
-   - tells the story of your investment in Splunk On-Call and the
-   practice of DevOps.
--  `On-Call
-   Report <https://help.victorops.com/knowledge-base/on-call-report/>`__
-   - take a look into time spent on-call and number of incidents worked
-   by team/user.
--  `Incident Frequency
-   Report <https://help.victorops.com/knowledge-base/incident-frequency-report/>`__
-   - analyze the flow of incidents after the fact so you can go upstream
-   to solve the incident causing the problem in your system.
+-  XXXXXX`Post Incident
+   Review <https://help.victorops.com/knowledge-base/post-incident-review/>`XXXXXX -  gain historical insight on incidents and a documented account of how you solved the problem.
+-  XXXXXX`Performance (MTTA/MTTR) Report <https://help.victorops.com/knowledge-base/mttamttr-report/>`XXXXXX - tells the story of your investment in Splunk On-Call and the practice of DevOps.
+-  XXXXXX`On-Call Report <https://help.victorops.com/knowledge-base/on-call-report/>`XXXXXX - take a look into time spent on-call and number of incidents worked by team or user.
+-  XXXXXX`Incident Frequency Report <https://help.victorops.com/knowledge-base/incident-frequency-report/>`XXXXXX - analyze the flow of incidents after the fact so you can go upstream to solve the incident causing the problem in your system.
 
-**Adjusting License Numbers**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Adjusting License Numbers
+------------------------------
 
-If you ever need to significantly increase or decrease your Splunk
-On-Call license numbers, please reach out to your Regional Sales Manager
-or Customer Success Manager. If you are unsure of who to engage, please
-send your inquiry to victorops-sales@splunk.com.
+If you ever need to significantly increase or decrease your Splunk On-Call license numbers, please reach out to your Regional Sales Manager
+or Customer Success Manager. If you are unsure of who to engage, please send your inquiry to victorops-sales@splunk.com.
 
 Getting Started Guide - Users
------------------------------
+=====================================
 
-**Mobile Activation Process**
+Mobile downloads are available at:
+`iOS <https://itunes.apple.com/us/app/victorops/id696974262?mt=8>`__ &
+`Android <https://play.google.com/store/apps/details?id=com.victorops.androidclient&hl=en>`__
 
-[video width=“1920” height=“1080”
-mp4=“https://help.victorops.com/wp-content/uploads/Mobile-Activation-Process-2.mp4”][/video]
 
- 
 
-**Main Dashboard View Layout**
+Main Dashboard layout
+---------------------------
 
-.. image:: images/Timeline-Nav-1.jpg
+Familiarize yourself with the layout of the main dashboard.
 
-`Single Sign On
-(SSO) <https://help.victorops.com/knowledge-base/single-sign-sso/>`__
-**-** if your org is using SSO, please check `this
-article <https://help.victorops.com/knowledge-base/single-sign-sso/>`__
-for setup instructions and the step-by-step process in order to link
-your Splunk On-Call user to your org’s IDP.
+.. image:: /_images/spoc/timeline-nav-1.png
+    :width: 100%
+    :alt: An image showing the main parts of the Splunk On-Call dashboard.
 
-`Personal Paging
-Policies <https://help.victorops.com/knowledge-base/paging-policy/>`__
-**-** Your Personal Paging Policy is your definition of how you’d like
-to be notified by Splunk On-Call when an incident is routed to you. Your
-options for notifications are push, email, SMS, and phone call.
+XXXXXX`Single Sign On
+(SSO) <https://help.victorops.com/knowledge-base/single-sign-sso/>`XXXXXX -  if your org is using SSO, please check XXXXXX`this article <https://help.victorops.com/knowledge-base/single-sign-sso/>`XXXXXX for setup instructions and the step-by-step process in order to link
+your Splunk On-Call user to your orgss IDP.
 
--  `Custom (Time
-   Based) <https://help.victorops.com/knowledge-base/custom-paging-policies-time-based/>`__
-   - Custom policies are restricted to certain times of the day/week.
-   When you are being paged for an incident, we will execute the first
-   matching policy in the list top to bottom. Your Primary policy will
-   be used if none of your custom policies match the current time.
--  *Best Practice*: The more diverse your paging policies, in terms of
-   steps and methods of contact, the better.
+`Personal Paging Policies <https://help.victorops.com/knowledge-base/paging-policy/>`- Your Personal Paging Policy is your definition of how you'd like to be notified by Splunk On-Call when an incident is routed to you. Your options for notifications are push, email, SMS, and phone call.
+
+`Custom (Time Based) <https://help.victorops.com/knowledge-base/custom-paging-policies-time-based/>`- Custom policies are restricted to certain times of the day/week. When you are being paged for an incident, we will execute the first matching policy in the list top to bottom. Your primary policy will be used if none of your custom policies match the current time.
+    -  Best Practice: The more diverse your paging policies, in terms of steps and methods of contact, the better.
 
 Incident Actions
-~~~~~~~~~~~~~~~~
+-------------------------
 
 Different scenarios require different actions when dealing with an
 incident.
 
--  *Acknowledgment -* can be executed via Push, SMS, or Phone
-   notification & within the web/mobile clients. Will cease paging and
-   assign you to the incident.
--  `S_nooze\_ <https://help.victorops.com/knowledge-base/snooze/>`__ *-*
-   can be executed within the web/mobile clients. Will cease paging of
-   an incident for a defined time period. When the time period is
-   reached, the incident will then be retriggered and begin paging out
-   again.
+-  Acknowledgment -  can be executed via Push, SMS, or Phone notification & within the web/mobile clients. Will cease paging and  assign you to the incident.
+-  `S_nooze\_ <https://help.victorops.com/knowledge-base/snooze/>`__ - can be executed within the web/mobile clients. Will cease paging of an incident for a defined time period. When the time period is reached, the incident will then be retriggered and begin paging out again.
 -  `Reroute <https://help.victorops.com/knowledge-base/reroute-an-incident/>`__
    *-* can be executed within the web/mobile clients. Redirects an
    incident to a user(s) or escalation policy(s).
