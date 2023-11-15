@@ -17,7 +17,7 @@ BLA BLA
 
 .. note::
 
-   To see the technical add-ons available for Slunk 
+   To see the technical Add-ons available for Splunk Platform, refer to :new-page:`Splunk Supported Add-ons <https://docs.splunk.com/Documentation/AddOns>`. 
 
 
 .. raw:: html
