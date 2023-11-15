@@ -207,12 +207,12 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
       :strong:`Requirements`
 
-      AlwaysOn Profiling requires Python 3.7 or higher.
+      AlwaysOn Profiling requires Python 3.7.2 or higher.
 
       :strong:`Instrumentation`
 
       - Activate the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
-      - Check the OTLP the endpoint in the ``splunk.profiler.logs-endpoint`` system property or the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable:
+      - Check the OTLP the endpoint in the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable:
          - For non-Kubernetes environments, make sure that the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to \http://localhost:4317.
          - For Kubernetes deployments, the OTLP endpoint has to point to \http://$(K8S_NODE_IP):4317 where the ``K8S_NODE_IP`` is fetched from the Kubernetes downstream API by setting the environment configuration on the Kubernetes pod running the application. For example:
 
@@ -225,7 +225,24 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
                         apiVersion: v1
                         fieldPath: status.hostIP
       
-      .. If applicable I would also like to add an example for how to use system properties or application code to activate profiling here.
+      The following example shows how to activate the profiler from your application's code:
+
+      .. code-block:: python
+
+         from splunk_otel.profiling import start_profiling
+
+         # Activates CPU profiling
+         # All arguments are optional
+         start_profiling(
+            service_name='my-python-service', 
+            resource_attributes={
+               'service.version': '3.1'
+               'deployment.environment': 'production', 
+            }
+            endpoint='http://localhost:4317', 
+            call_stack_interval_millis='1000'
+         ) 
+      
 
 .. _profiling-check-data-coming-in:
 
