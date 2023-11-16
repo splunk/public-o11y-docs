@@ -126,7 +126,7 @@ If no data appears in APM, see :ref:`common-python-troubleshooting`.
 .. _enable-profiling-python:
 
 Activate AlwaysOn Profiling
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------------------
 
 .. note::
    AlwaysOn Profiling for Python is in beta development. This feature is provided by Splunk to you "as is" without any warranties, maintenance and support, or service-level commitments. Use of this feature is subject to the :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`.
@@ -164,7 +164,7 @@ For advanced configuration of the Python agent, like changing trace propagation 
 .. _kubernetes_python_agent:
 
 Deploy the Python agent in Kubernetes
-----------------------------------------------------
+===================================================
 
 To deploy the Python agent in Kubernetes, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
 
@@ -197,7 +197,7 @@ The following example shows how to update a deployment to expose environment var
 .. _export-directly-to-olly-cloud-python:
 
 Send data directly to Splunk Observability Cloud
-----------------------------------------------------
+==========================================================
 
 By default, the agent sends all telemetry to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
@@ -232,6 +232,6 @@ The realm name appears in the :guilabel:`Organizations` section.
 .. _instrument_aws_python_functions:
 
 Instrument Lambda functions
-----------------------------------------------------
+=============================================
 
 You can instrument AWS Lambda functions using the Splunk OpenTelemetry Lambda Layer. See :ref:`instrument-aws-lambda-functions` for more information.
