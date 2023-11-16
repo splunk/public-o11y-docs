@@ -13,7 +13,7 @@ Create and manage users in Splunk Observability Cloud
    app-preferences
    personal-info
 
-To create or manage users and teams, you must have administrator access. To get this access, an existing administrator adds it to your user profile. See :ref:`request-admin` for more information.
+To create or manage users and teams, you must have administrator access. To get this access, an existing administrator adds it to your user profile. 
 
 
 
@@ -31,11 +31,10 @@ To send invitations to users, follow these steps:
 #. Select :guilabel:`Users`.
 #. Select :guilabel:`Invite User`.
 #. Enter the email addresses of your desired members in the dialog box. Separate each email address with a comma or single blank space.
+#. In the :guilabel:`Roles` field to select any of the available roles.
 #. Select :guilabel:`Send Invitation`.
 
-Users receive an email from Splunk Observability Cloud containing instructions for signing into
-the organization. After they sign up, their names appear in the menu in the
-:menuselection:`Settings` then :menuselection:`Users` list.
+Users receive an email from Splunk Observability Cloud containing instructions for signing intothe organization. After they sign up, their  names appear in the menu in the :menuselection:`Settings` then :menuselection:`Users` list.
 
 
 .. raw:: html
@@ -71,6 +70,8 @@ To grant administrator privileges to a user, follow these steps:
    A table of current users appears in the main panel.
 #. Find the name of the user.
 #. Select the :guilabel:`Actions` (|more|) menu icon next the username, then select :menuselection:`Manage Roles`.
+#. In the :guilabel:`Manage Roles` dialog box, select one or more of the available roles, then select the right-pointing arrow to move the roles to the :guilabel:`Selected Roles` panel.
+#. Select :guilabel:`Assign Roles` to confirm.
 
 To revoke administrator privileges from a user, follow these steps:
 

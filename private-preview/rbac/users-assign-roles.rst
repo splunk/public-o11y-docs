@@ -19,7 +19,7 @@ You can assign roles to existing and new users to determine what they can do and
 
 Users can have multiple roles at the same time. See :ref:`roles-and-capabilities` for more information. For details about each role and the associated capabilities, see :ref:`roles-and-capabilities-table`.
 
-.. note:: To create or manage users, you must have administrator access. To get this access, an existing administrative adds it to your user profile. See :ref:`request-admin` for more information.
+.. note:: To create or manage users, you must have administrator access. To get this access, an existing administrator adds it to your user profile. See :ref:`admin-manage-users` for more information.
 
 View roles assigned to users
 =====================================

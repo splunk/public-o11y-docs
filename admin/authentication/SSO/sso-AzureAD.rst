@@ -12,7 +12,7 @@ The Microsoft Entra ID (formerly Azure Active Directory) integration lets users 
 Before you begin configuring this integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
 
 To configure a Microsoft Entra ID SSO integration, you must be an administrator for your organization.
-To learn more, see :new-page-ref:`manage_admin-access`.
+To learn more, see :new-page-ref:`admin-manage-users`.
 
 .. note:: The procedure for creating multiple integrations for Microsoft Entra ID is
    different from the procedure for creating a single integration.
