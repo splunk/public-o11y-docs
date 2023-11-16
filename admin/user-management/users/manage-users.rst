@@ -7,11 +7,6 @@ Create and manage users in Splunk Observability Cloud
 .. meta::
    :description:  Manage users: add, remove, grant admin access, view login details, and unlock an account.
 
-.. toctree::
-   :hidden:
-
-   app-preferences
-   personal-info
 
 .. note:: To create or manage users and teams, you must have administrator access.
    To get this access, an existing administrator adds it to your user profile. See :ref:`request-admin` for more information.

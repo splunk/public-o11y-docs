@@ -16,7 +16,7 @@ Manage users and teams
   
 
 
-Among the foundational tasks of configuring your org is adding users, assigning them to teams, and managing roles and access permissions for users. Most organizations plan to roll Splunk Observability Cloud  out across their enterprise footprint and will have multiple internal customers. Often it involves different requirements when using the various features of the product.
+The foundational tasks of configuring your org include adding users, assigning them to teams, and managing roles and access permissions for users. Most organizations plan to roll Splunk Observability Cloud  out across their enterprise footprint and will have multiple internal customers. Often it involves different requirements when using the various features of the product.
 
 To manage these internal customers you can use the :ref:`Teams <admin-manage-teams>` feature, this allows you to organize users together in a team and manage them as a functional unit.
 
