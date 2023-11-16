@@ -4,6 +4,19 @@
 Monitor and use AWS data in Splunk Observability Cloud
 *****************************************************************
 
+
+After you've integrated with your cloud services, you can access your data in the following locations:
+
+- View metrics in Infrastructure Monitoring navigators
+
+   .. image:: /_images/infrastructure/ebs-navigator.png
+      :width: 100%
+      :alt: This screenshot shows the EBS navigator in Splunk Infrastructure Monitoring displaying charts and visualizations of data collected from EBS.
+
+
+- View metrics in :ref:`built-in dashboards <built-in-dashboards>` for AWS, GCP, and Azure services
+
+
 Tips for working with navigators
 ------------------------------------------------------------------------------
 

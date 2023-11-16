@@ -1,84 +1,71 @@
 .. _tutorial-aws-start:
 
 **************************************************
-Start here: Connect with your AWS services
+Connect with your AWS services
 **************************************************
 
 .. meta::
    :description: Prerequisites for getting Kubernetes data into Splunk Observability Cloud.
 
-Get started with monitoring your AWS data in Splunk Observability Cloud.
+If you're using AWS cloud services for your infrastructure, you can integrate these services with Splunk Observability Cloud to monitor metrics and metadata such as tags, labels and other properties. 
 
 Prerequisites
 ===================================================================================
 
-* You must be an administrator in Splunk Observability Cloud.
-* You must have an access token for the Splunk Observability Cloud organization you want to get data into. 
+To integrate your AWS services with Splunk Observability Cloud, you need:
 
+* Administrator privileges in your Splunk Observability Cloud and your AWS accounts. 
+* :ref:`AWS authentication rights <aws-authentication>`. 
+
+  * You can authenticate either with an :ref:`External ID (recommended) <aws-authentication>` or using a :ref:`security token <aws-authentication-token>`. 
   * For more details about creating organization access tokens, see :ref:`admin-org-tokens`.
-  * If you are using a free trial account, you can use the :guilabel:`Default` access token to complete this task. 
 
-Prerequisites
+Connect with AWS
 ===================================================================================
 
-If you're using cloud services for your infrastructure, the first step is to integrate these services with Splunk Observability Cloud. Cloud integrations can send metrics and metadata (such as tags, labels and other properties) to Infrastructure Monitoring.
+By default, the preferred method to send Amazon Web Services data is via :ref:`polling (default) <aws-connect-polling>`, which you can set up using Splunk's UI wizard. Optionally, you can also use the Splunk Observability Cloud API.
 
-After you've integrated with your cloud services, you can access your data in the following locations:
+Alternatively , you can opt for :ref:`data streaming (Splunk-managed) <aws-connect-ms>`, :ref:`data streaming (AWS-managed) <aws-console-ms>`, or to configure the connection using :ref:`Splunk Terraform <terraform-config>`. Learn more at :ref:`aws-compare-connect`.
 
-- View metrics in Infrastructure Monitoring navigators
-
-   .. image:: /_images/infrastructure/ebs-navigator.png
-      :width: 100%
-      :alt: This screenshot shows the EBS navigator in Splunk Infrastructure Monitoring displaying charts and visualizations of data collected from EBS.
-
-   For more information, see:
-
-      - :ref:`monitor-aws-services`
-      - :ref:`monitor-gcp-services`
-      - :ref:`monitor-azure-services`
-
-- View metrics in :ref:`built-in dashboards <built-in-dashboards>` for AWS, GCP, and Azure services
-
-- Search for metrics :ref:`using the Metric Finder <metric-finder>`. For the list of metrics provided by a cloud service, see:
-
-   - :new-page:`AWS official documentation <https://docs.aws.amazon.com/index.html#general_resourcess>`
-
-
-Steps
+Poll AWS data using the UI
 --------------------------------------------------------------
 
-- To integrate with Amazon Web Services, use the method that better suits your environment:
+To access the guided setup for the AWS integration: 
 
+#. Log in to Splunk Observability Cloud.
+#. On the navigation menu, select :menuselection:`Data Management > Add Integration > Amazon Web Services`. 
 
+.. image:: /_images/get-started/tutorial-aws-wizard.png
+   :width: 80%
+   :alt: UI wizard to connect to AWS
 
+Follow the steps to configure the different connection options such as:
 
-For example, you might want to use the guided setup if you are setting up just a few integrations. However, if you are setting up many integrations, such as for different accounts and regions, use the API or Terraform. Note that if you need all of the latest integration features, you might want to use the API because support might not yet be available using Terraform.
+* :guilabel:`Overall region`: The region AWS from which AWS manages your resources. See :ref:`aws-regions` for more information.
+* :guilabel:`Authentication type`: How you will authenticate to connect with AWS. Learn more at :ref:`aws-authentication`.
+* :guilabel:`Data types`: The types of data and metadata to ingest.   
+* In the CloudWatch Metrics option, select :guilabel:`Polling` as the ingestion method, and set up the polling rate at which you want Splunk Observability Cloud to poll CloudWatch for metric data.
+* Your data sources: AWS Regions and services. 
 
+For details on each step, read :ref:`aws-connect-polling`.
 
-Install the OpenTelemetry Collector to send server and cluster data
-=============================================================================================================
+Available AWS services
+--------------------------------------------------------------
 
-Install the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` on any hosts or clusters you're using as a part of your infrastructure, such as servers running in your data center or on a virtual machine running in the cloud to: 
+Check the :ref:`list of AWS integrations available in Splunk Observability Cloud <aws-integrations>` to monitor the specific services you're using. 
 
-- Send metrics to Infrastructure Monitoring
-- Send logs to Log Observer
-- Set up your environment to receive logs and traces from applications instrumented in step :ref:`gdi-4`
+For the list of metrics provided by each service, see the :new-page:`AWS official documentation <https://docs.aws.amazon.com/index.html#general_resourcess>`.
 
-After you've installed the Collector and configured your servers and clusters, you can access your data in the following locations:
+Install the OpenTelemetry Collector to send server and cluster data (Optional)
+--------------------------------------------------------------------------------
 
-- View metrics in Infrastructure Monitoring navigators
-
-   .. image:: /_images/infrastructure/hosts-navigator.png
-      :width: 100%
-      :alt: This screenshot shows the Hosts navigator in Splunk Infrastructure Monitoring displaying charts and visualizations of data collected from hosts.
-
-   For more information, see:
-
-      - :ref:`monitor-hosts`
-      - :Ref:`use-the-k8s-navigator`
-
-
-
-
+Optionally, you can install the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` on any hosts or clusters you're using as a part of your infrastructure to send metrics to Infrastructure Monitoring, traces to APM, or logs to the Splunk Platform. 
 
 One of the benefits of using the Splunk Distribution of OpenTelemetry Collector to send your data to Splunk Observability Cloud is that Related Content, a feature that activates users to seamlessly move between key views in Splunk Observability Cloud, is easier to implement. For more information, see :ref:`get-started-relatedcontent`.
+
+Next 
+===================================================================================
+
+This completes the first step of the tutorial.
+
+To learn how to monitor your Kubernetes data using built-in dashboards and navigators, continue to :ref:`tutorial-aws-use`.

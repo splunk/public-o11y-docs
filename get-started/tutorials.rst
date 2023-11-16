@@ -13,7 +13,6 @@ Splunk Observability Cloud tutorials
 
     tutorials/k8s-infrastructure-tutorial/about-k8s-tutorial
     tutorials/aws-tutorial/about-aws-tutorial
-    tutorials/k8s-infrastructure-tutorial/k8s-additional-resources
 
 Read the following tutorials to learn how to understand and use Splunk Observability Cloud. 
 
@@ -22,4 +21,4 @@ Read the following tutorials to learn how to understand and use Splunk Observabi
 
 For specific scenarios and use cases, see :ref:`scenario-landing`.
 
-For an overview of Splunk Observability Cloud, go to :ref:`welcome`.
+For an overview of Splunk Observability Cloud and how to send your data in, go to :ref:`welcome` and :ref:`get-started-get-data-in`.

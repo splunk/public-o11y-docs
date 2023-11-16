@@ -24,7 +24,6 @@ This tutorial covers the following concepts:
 
 1. Install the Splunk Observability Cloud AWS integration. See :ref:`tutorial-aws-start`.
 2. Use Splunk Observability Cloud to monitor your AWS services. See :ref:`tutorial-aws-use`.
-3. (Optional) Learn more about concepts from this tutorial. See :ref:`tutorials-additional-resources`.
 
 .. raw:: html
 
