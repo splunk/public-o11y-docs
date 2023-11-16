@@ -19,9 +19,9 @@ To create or manage users and teams, you must have administrator access. To get 
 
 .. raw:: html
 
-   <embed>
-      <h2 id="add-users-organization">Add users to the organization</h2>
-   </embed>
+  <embed>
+    <h2>Add users to the organization<a name="add-users-organization" class="headerlink" href="#add-users-organization" title="Permalink to this headline"></a></h2>
+  </embed>
 
 You must be an administrator to add users to the org. Add users to your organization by sending them an email invitation.
 
@@ -37,11 +37,13 @@ Users receive an email from Splunk Observability Cloud containing instructions f
 the organization. After they sign up, their names appear in the menu in the
 :menuselection:`Settings` then :menuselection:`Users` list.
 
+
 .. raw:: html
 
-   <embed>
-      <h2 id="remove-users-organization">Remove users from the organization</h2>
-   </embed>
+  <embed>
+    <h2>Remove users from the organization<a name="remove-users-organization" class="headerlink" href="#remove-users-organization" title="Permalink to this headline"></a></h2>
+  </embed>
+
 
 You must be an administrator to remove users from the org.  To remove users from the organization, follow these steps:
 
