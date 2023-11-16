@@ -4,7 +4,7 @@
 Monitor and use AWS data in Splunk Observability Cloud
 *****************************************************************
 
-After you've integrated with your AWS services, you can access your data, set up alerts, and enjor other features of Splunk Observability Cloud.
+After you've integrated with your AWS services, you can access your data, set up alerts, and enjoy other features of Splunk Observability Cloud.
   
 View and manage AWS data
 ========================================================================
@@ -57,7 +57,7 @@ Learn more at :ref:`data-tools-landing`.
 Manage your metrics with metrics pipeline management 
 --------------------------------------------------------------------------------------------
 
-Metrics pipeline management allows you to centrally manage metric cardinality, and control ohow you ingest and store your metrics, so you can lower costs and improve monitoring performance.
+Metrics pipeline management allows you to centrally manage metric cardinality, and control how you ingest and store your metrics, so you can lower costs and improve monitoring performance.
 
 See more at :ref:`metrics-pipeline-intro`.
 

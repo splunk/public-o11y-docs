@@ -68,4 +68,4 @@ Next
 
 This completes the first step of the tutorial.
 
-To learn how to monitor your Kubernetes data using built-in dashboards and navigators, continue to :ref:`tutorial-aws-use`.
+To learn how to monitor your AWS data and services, continue to :ref:`tutorial-aws-use`.
