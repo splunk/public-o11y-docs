@@ -315,7 +315,7 @@ Configure data persistence queues
 
 Without any configuration, data is queued in memory only. When data cannot be sent, it's retried a few times for up to 5 minutes by default, and then dropped. If, for any reason, the Collector is restarted in this period, the queued data will be gone.
 
-If you want the queue to be persisted on disk if the Collector restarts, set ``splunkPlatform.sendingQueue.persistentQueue.enabled`` to enable support for logs, metrics and traces.
+If you want the queue to be persisted on disk if the Collector restarts, set ``splunkPlatform.sendingQueue.persistentQueue.enabled=true`` to enable support for logs, metrics and traces.
 
 By default, data is persisted in the ``/var/addon/splunk/exporter_queue`` directory. To override this path, use the ``splunkPlatform.sendingQueue.persistentQueue.storagePath`` option.
 
