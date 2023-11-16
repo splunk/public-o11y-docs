@@ -45,8 +45,10 @@ Collector components
     components/splunk-apm-exporter
     components/splunk-hec-exporter
     components/splunk-hec-receiver
-    components/syslog-receiver      
+    components/syslog-receiver 
+    components/tcp-receiver     
     components/transform-processor
+    components/udp-receiver
     components/windowsperfcounters-receiver
     components/zipkin-receiver 
     components/zpages-extension    
