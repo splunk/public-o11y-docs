@@ -12,8 +12,6 @@ The following sections list the collected metrics when you use the default confi
 
 The Collector processes collected data as configured in your pipelines. Therefore, metrics that are imported by receivers might be excluded further into the pipeline by other components. For instance, the :ref:`signalfx-exporter`, included in the default Collector configuration, drops certain metrics and applies :ref:`translation rules <exclusion-rules>` that impact the metrics the Collector sends to Splunk Observability Cloud.    
 
-.. caution:: Check the :strong:`Kept?` column in the tables below to see if the metric is finally sent to Splunk Observability Cloud after going through the Collector pipelines. 
-
 Learn more about the Collector's configuration and data processing at:
 
 * :ref:`otel-configuration-ootb`
@@ -26,114 +24,120 @@ Learn more about the Collector's configuration and data processing at:
 Container level metrics and dimensions
 ============================================================================
 
+.. caution:: 
+  
+  The :strong:`Translated?` column indicates whether the metric is translated by the SignalFx exporter.
+  
+  The :strong:`Exported?` column indicates if the metric is finally sent to Splunk Observability Cloud after going through the Collector pipelines. 
+
 .. list-table::
-  :widths: 30 30 30 10
+  :widths: 25 25 30 10 10
   :width: 100%
   :header-rows: 1
 
   * - Metric name
     - Metric description
     - Attributes
-    - Kept?
+    - Translated?
+    - Exported?
 
   * - ``container.cpu.utilization``
     - Container CPU utilization
-    - 
-    - No
+    - :ref:`ootb-metrics-k8s-attributes`
+    - Yes
+    - Yes
 
   * - ``container.cpu.time``
     - Container CPU time
     - 
     - No
-
+    - No
+  
   * - ``container.memory.available``
     - Container memory available
     - 
+    - No
     - No
 
   * - ``container.memory.usage``
     - Container memory usage
     - 
     - No
+    - No
 
   * - ``container.memory.rss``
     - Container memory rss
     - 
+    - No
     - No
 
   * - ``container.memory.working_set``
     - Container memory ``working_set``
     - 
     - No
+    - No
 
   * - ``container.memory.page_faults``
     - Container memory ``page_faults``
     - 
+    - No
     - No
 
   * - ``container.memory.major_page_faults``
     - Container memory ``major_page_faults``
     - 
     - No
+    - No
 
   * - ``container.filesystem.available``
     - Container filesystem available
     - :ref:`ootb-metrics-k8s-attributes`
     - No
+    - Yes
 
   * - ``container.filesystem.capacity``
     - Container filesystem capacity
     - :ref:`ootb-metrics-k8s-attributes`
     - No
+    - Yes
 
   * - ``container.filesystem.usage``
     - Container filesystem usage
     - :ref:`ootb-metrics-k8s-attributes`
     - No
+    - Yes
 
   * - ``k8s.container.cpu_limit``
     - Container ``cpu_limit``
     - :ref:`ootb-metrics-k8s-attributes`
     - No
+    - Yes
 
   * - ``k8s.container.cpu_request``
     - Container ``cpu_request``
     - :ref:`ootb-metrics-k8s-attributes`
     - No
+    - Yes
 
   * - ``k8s.container.memory_limit``
     - Container ``memory_limit``
     - :ref:`ootb-metrics-k8s-attributes`
     - No
+    - Yes
 
   * - ``k8s.container.memory_request``
     - Container ``memory_request``
     - :ref:`ootb-metrics-k8s-attributes`
     - No
-
-Container level metrics and dimensions after translation
-============================================================================
-
-.. note:: These metrics are compatible with the :ref:`signalfx-exporter`.
-
-.. list-table::
-  :widths: 30 30 30 10
-  :width: 100%
-  :header-rows: 1
-
-  * - Metric name
-    - Metric description
-    - Attributes
-    - Kept?
-
-  * - ``container.cpu.utilization``
-    - Container CPU utilization in centicores
-    - :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
 
 Pod level metrics and dimensions
 ============================================================================
 
+.. caution:: 
+  
+  The :strong:`Exported?` column indicates if the metric is finally sent to Splunk Observability Cloud after going through the Collector pipelines. 
+
 .. list-table::
   :widths: 30 30 30 10
   :width: 100%
@@ -142,7 +146,7 @@ Pod level metrics and dimensions
   * - Metric name
     - Metric description
     - Attributes
-    - Kept?
+    - Exported?
 
   * - ``k8s.pod.cpu.time``
     - Pod CPU time
@@ -204,17 +208,23 @@ Pod level metrics and dimensions
     - * ``interface``. See :ref:`kubelet-stats-receiver`
       * ``direction``. See :ref:`kubelet-stats-receiver`
       * :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
 
   * - ``k8s.pod.network.io``
     - Pod network IO
     - * ``interface``. See :ref:`kubelet-stats-receiver`
       * ``direction``. See :ref:`kubelet-stats-receiver`
       * :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
 
 Node level metrics and dimensions
 ============================================================================
+
+.. caution:: 
+  
+  The :strong:`Translated?` column indicates whether the metric is translated by the SignalFx exporter.
+  
+  The :strong:`Exported?` column indicates if the metric is finally sent to Splunk Observability Cloud after going through the Collector pipelines. 
 
 .. list-table::
   :widths: 30 30 30 10
@@ -224,7 +234,7 @@ Node level metrics and dimensions
   * - Metric name
     - Metric description
     - Attributes
-    - Kept?
+    - Exported?
 
   * - ``k8s.node.cpu.time``
     - Node CPU time
@@ -250,7 +260,7 @@ Node level metrics and dimensions
     - Node filesystem usage
     - 
     - No
-
+  
   * - ``k8s.node.memory.available``
     - Node memory available
     - 
@@ -305,7 +315,7 @@ Node level metrics and dimensions
     - * ``cpu``. See :ref:`host-metrics-receiver`
       * ``state``. See :ref:`host-metrics-receiver`
       * :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
 
   * - ``system.filesystem.usage``
     - Filesystem bytes used
@@ -315,7 +325,7 @@ Node level metrics and dimensions
       * ``type``. See :ref:`host-metrics-receiver`
       * ``state``. See :ref:`host-metrics-receiver`      
       * :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
 
   * - ``system.filesystem.utilization``
     - Fraction of filesystem bytes used
@@ -324,40 +334,44 @@ Node level metrics and dimensions
       * ``mountpoint``. See :ref:`host-metrics-receiver`
       * ``type``. See :ref:`host-metrics-receiver`
       * :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
 
   * - ``system.cpu.load_average.1m``
     - Average CPU Load over 1 minute
     - 
-    - **Yes**
+    - Yes
 
   * - ``system.cpu.load_average.5m``
     - Average CPU Load over 5 minutes
     - 
-    - **Yes**
+    - Yes
 
   * - ``system.cpu.load_average.15m``
     - Average CPU Load over 15 minutes
     - 
-    - **Yes**
+    - Yes
 
   * - ``system.memory.usage``
     - Bytes of memory in use
     - ``state``. See :ref:`host-metrics-receiver`     
-    - **Yes**
+    - Yes
 
   * - ``system.memory.utilization``
     - Percentage of memory bytes in use
     - ``state``. See :ref:`host-metrics-receiver`   
-    - **Yes**
+    - Yes
 
   * - ``system.paging.utilization``
     - Swap (Unix) or pagefile (Windows) utilization
     - 
-    - **Yes**
+    - Yes
 
 Node level metrics and dimensions after translation
 ============================================================================
+
+.. caution:: 
+  
+  The :strong:`Exported?` column indicates if the metric is finally sent to Splunk Observability Cloud after going through the Collector pipelines. 
 
 .. note:: These metrics are compatible with the :ref:`signalfx-exporter`.
 
@@ -369,83 +383,83 @@ Node level metrics and dimensions after translation
   * - Metric name
     - Metric description
     - Attributes
-    - Kept?
+    - Exported?
 
   * - ``cpu.idle``
     - CPU time in centicores spent in any state other than those in the table
     - :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
 
   * - ``cpu.interrupt``
     - CPU time in centicores spent while servicing hardware interrupts
     - :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
 
   * - ``cpu.nice``
     - CPU time in centicores spent in userspace running ``'nice'-ed processes``
     - :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
 
   * - ``cpu.softirq``
     - CPU time in centicores spent while servicing software interrupts
     - :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
 
   * - ``cpu.steal``
     - CPU time in centicores spent waiting for a hypervisor to service requests from other virtual machines
     - :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
 
   * - ``cpu.system``
     - CPU time in centicores spent running in the kernel
     - :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
 
   * - ``cpu.user``
     - CPU time in centicores spent running in userspace
     - :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
 
   * - ``cpu.wait``
     - CPU time in centicores spent idle while waiting for an I/O operation to complete
     - :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
 
   * - ``cpu.num_processors``
     - The number of logical processors on the host
     - :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
 
   * - ``cpu.utilization``
     - Percent of CPU used on this host
     - :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
 
   * - ``disk.summary_utilization``
     - Percent of disk space utilized on all volumes on this host
     - :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
 
   * - ``disk.utilization``
     - Percent of disk used on this volume
     - * ``device``
       * :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
 
   * - ``memory.total``
     - Total bytes of system memory on the system
     - :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
 
   * - ``memory.utilization``
     - Percent of memory in use on this host
     - :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
 
   * - ``network.total``
     - Total amount of inbound and outbound network traffic on this host, in bytes
     - :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
 
   * - ``process.cpu_time_seconds``
     - Total CPU usage of the process in seconds
@@ -457,10 +471,15 @@ Node level metrics and dimensions after translation
       * ``process.command_line``
       * ``process.owner``
       * :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
 
 Volume level metrics and dimensions 
 ============================================================================
+
+.. caution:: 
+  
+  The :strong:`Exported?` column indicates if the metric is finally sent to Splunk Observability Cloud after going through the Collector pipelines. 
+
 
 .. list-table::
   :widths: 30 30 30 10
@@ -470,17 +489,38 @@ Volume level metrics and dimensions
   * - Metric name
     - Metric description
     - Attributes
-    - Kept?
+    - Exported?
 
   * - ``k8s.volume.available``
     - The number of available bytes in the volume
     - :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
 
   * - ``k8s.volume.capacity``
     - The number of capacity bytes in the volume
     - :ref:`ootb-metrics-k8s-attributes`
-    - **Yes**
+    - Yes
+
+.. _ootb-metrics-k8s-control-plane:
+
+Control plane metrics
+============================================================================
+
+To see the control plane metrics the Collector provides, see:
+
+* :ref:`CoreDNS <coredns>`
+* :ref:`etcd`
+* :ref:`Kubernetes controller manager <kube-controller-manager>`
+* :ref:`Kubernetes API server <kubernetes-apiserver>`
+* :ref:`Kubernetes proxy <kubernetes-proxy>`
+* :ref:`Kubernetes scheduler <kubernetes-scheduler>`
+
+The following distributions support control plane metrics configuration:
+
+* Kubernetes 1.22 (kops created)
+* OpenShift version 4.9
+
+For information about control plane metrics, see :ref:`otel-kubernetes-config-advanced-control-plane`.
 
 .. _ootb-metrics-k8s-attributes:
 
