@@ -45,6 +45,8 @@ This custom configuration is merged into the default agent configuration.
 
 .. caution:: After merging the files you need to fully redefine parts of the configuration, for example ``service``, ``pipelines``, ``logs``, and ``processors``.
 
+.. _otel-kubernetes-config-advanced-control-plane:
+
 Override a control plane configuration
 ==============================================================
 
