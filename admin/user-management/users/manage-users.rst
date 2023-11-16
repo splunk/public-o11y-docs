@@ -7,33 +7,23 @@ Create and manage users in Splunk Observability Cloud
 .. meta::
    :description:  Manage users: add, remove, grant admin access, view login details, and unlock an account.
 
+.. toctree::
+   :hidden:
 
-.. note:: To create or manage users and teams, you must have administrator access.
-   To get this access, an existing administrator adds it to your user profile. See :ref:`request-admin` for more information.
+   app-preferences
+   personal-info
 
-Users with administrative access for an organization can run the following actions:
+To create or manage users and teams, you must have administrator access. To get this access, an existing administrator adds it to your user profile. See :ref:`request-admin` for more information.
 
-* :ref:`Add users to the organization <add-users-organization>`
-* :ref:`Remove users from the organization <remove-users-organization>`
-* :ref:`Grant and revoke administrative access <manage_admin-access>`
 
-Any user can run the following actions:
 
-* :ref:`request-admin`
-* :ref:`look-up-user-login`
-* :ref:`user-account-locked`
+.. raw:: html
 
-Only the current user can run the following actions:
+   <embed>
+      <h2 id="add-users-organization">Add users to the organization</h2>
+   </embed>
 
-* :ref:`change_time_zone_color_accessibility`
-* :ref:`api-access-token`
-
-.. _add-users-organization:
-
-Add users to the organization
-============================================================================
-
-Add users to your organization by sending them an email invitation.
+You must be an administrator to add users to the org. Add users to your organization by sending them an email invitation.
 
 To send invitations to users, follow these steps:
 
@@ -45,14 +35,15 @@ To send invitations to users, follow these steps:
 
 Users receive an email from Splunk Observability Cloud containing instructions for signing into
 the organization. After they sign up, their names appear in the menu in the
-:menuselection:`Settings > Users` list.
+:menuselection:`Settings` then :menuselection:`Users` list.
 
-.. _remove-users-organization:
+.. raw:: html
 
-Remove users from the organization
-============================================================================
+   <embed>
+      <h2 id="remove-users-organization">Remove users from the organization</h2>
+   </embed>
 
-To remove users from the organization, follow these steps:
+You must be an administrator to remove users from the org.  To remove users from the organization, follow these steps:
 
 #. From the Splunk Observability menu, select :menuselection:`Settings` then :menuselection:`Users`.
    A table of current members appears in the main panel.
@@ -62,13 +53,15 @@ To remove users from the organization, follow these steps:
 
 The user no longer appears in the list of members.
 
-.. _manage_admin-access:
 
-Grant and revoke administrative access
-============================================================================
+.. raw:: html
 
-As a user with administrative access, you can grant or revoke administrative access for
-other users.
+  <embed>
+    <h2>Grant and revoke administrative access<a name="manage-admin-access" class="headerlink" href="#manage-admin-access" title="Permalink to this headline"></a></h2>
+  </embed>
+
+
+You must be an administrator to grant the admin role to other users. 
 
 To grant administrator privileges to a user, follow these steps:
 
@@ -85,10 +78,12 @@ To revoke administrator privileges from a user, follow these steps:
 #. Select the :guilabel:`Actions` (|more|) menu icon next the user's name, then select :menuselection:`Manage Roles`.
 #. Select a non-admin role for the user.
 
-.. _request-admin:
 
-Request administrative access
-==================================================
+.. raw:: html
+
+  <embed>
+    <h2>Request administrative access<a name="request-admin" class="headerlink" href="#request-admin" title="Permalink to this headline"></a></h2>
+  </embed>
 
 To receive administrator access, request the admin role from an existing administrator. 
 
@@ -100,10 +95,13 @@ Follow these steps to view a list of current admins:
 
 From the list, you can email or message any administrators to request admin status. 
 
-.. _look-up-user-login:
 
-Look up when a user logged in
-====================================================================
+.. raw:: html
+
+  <embed>
+    <h2>Look up when a user logged in<a name="look-up-user-login" class="headerlink" href="#look-up-user-login" title="Permalink to this headline"></a></h2>
+  </embed>
+
 
 You can look up when a user logged in to Observability Cloud by looking at user session creation events. To do this:
 
@@ -124,13 +122,13 @@ You can look up when a user logged in to Observability Cloud by looking at user 
 #. The :guilabel:`Event Feed` menu displays user and token session events. A :guilabel:`User Session Created` event indicates when a user logged in to Observability Cloud.
 
 
-.. _user-account-locked:
 
-Address a locked user account
-======================================
+.. raw:: html
 
-After a user makes too many unsuccessful login attempts, Observability Cloud locks that user's account.
+  <embed>
+    <h2>Address a locked user account<a name="user-account-locked" class="headerlink" href="#user-account-locked" title="Permalink to this headline"></a></h2>
+  </embed>
 
-The user's account is locked for several minutes before the user can try to log in again.
+After a user makes too many unsuccessful login attempts, Splunk Observability Cloud locks that user's account. The user's account is locked for several minutes before the user can try to log in again.
 
 If you need to unlock an account before the lock period ends, contact :ref:`support`.
