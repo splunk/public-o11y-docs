@@ -107,7 +107,7 @@ If no data appears in APM, see :ref:`common-nodejs-troubleshooting`.
 .. _enable_profiling_nodejs:
 
 Activate AlwaysOn Profiling
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------
 
 To activate AlwaysOn Profiling, set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
 
@@ -130,7 +130,7 @@ See :ref:`get-data-in-profiling` for more information. For more settings, see :r
 .. _enable_automatic_metric_collection_nodejs:
 
 Activate metrics collection
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------------------
 
 To activate automatic runtime metric collection, activate the metrics feature using the ``SPLUNK_METRICS_ENABLED`` environment variable. See :ref:`metrics-configuration-nodejs` for more information.
 
@@ -216,7 +216,7 @@ For a list of supported instrumentations, see :new-page:`https://github.com/open
 .. _kubernetes_nodejs_agent:
 
 Deploy the Node.js distribution in Kubernetes
------------------------------------------------------
+=======================================================
 
 To deploy the Splunk Distribution of OpenTelemetry JS in Kubernetes, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
 
@@ -250,7 +250,7 @@ The following example shows how to update a deployment to expose environment var
 .. _export-directly-to-olly-cloud-nodejs:
 
 Send data directly to Splunk Observability Cloud
------------------------------------------------------
+=============================================================
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
