@@ -308,5 +308,87 @@ Support of Pod Security Policies (PSP) was removed in Kubernetes 1.25. If you st
 
   .. code-block:: yaml
 
-
     helm install my-splunk-otel-collector -f my_values.yaml splunk-otel-collector-chart/splunk-otel-collector
+
+Configure data persistence queues
+==================================================
+
+Without any configuration, data is queued in memory only. When data cannot be sent, it's retried a few times for up to 5 minutes by default, and then dropped. If, for any reason, the Collector is restarted in this period, the queued data will be gone.
+
+If you want the queue to be persisted on disk if the Collector restarts, set ``splunkPlatform.sendingQueue.persistentQueue.enabled=true`` to enable support for logs, metrics and traces.
+
+By default, data is persisted in the ``/var/addon/splunk/exporter_queue`` directory. To override this path, use the ``splunkPlatform.sendingQueue.persistentQueue.storagePath`` option.
+
+Check the :new-page:`Data Persistence in the OpenTelemetry Collector <https://community.splunk.com/t5/Community-Blog/Data-Persistence-in-the-OpenTelemetry-Collector/ba-p/624583>` for a detailed explantion.
+
+.. note:: Data can only be persisted for agent daemonsets.
+
+Config examples
+-----------------------------------------------------------------------------
+
+Use following in values.yaml to disable data persistense for logs, metrics, or traces:
+
+Logs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: yaml
+
+  agent:
+    config:
+      exporters:
+          splunk_hec/platform_logs:
+            sending_queue:
+              storage: null
+
+
+Metrics
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: yaml
+
+  agent:
+    config:
+      exporters:
+        splunk_hec/platform_metrics:
+          sending_queue:
+            storage: null
+
+Traces
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: yaml
+
+  agent:
+    config:
+      exporters:
+        splunk_hec/platform_traces:
+          sending_queue:
+            storage: null
+
+Support for persistent queue
+-----------------------------------------------------------------------------
+
+The following support is offered:
+
+Support for ``GKE/Autopilot`` and ``EKS/Fargate`` 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Persistent buffering is not supported for ``GKE/Autopilot`` and ``EKS/Fargate``, since the directory needs to be mounted via ``hostPath``.
+
+Also, ``GKE/Autopilot`` and ``EKS/Fargate`` don't allow volume mounts, as Splunk Observability Cloud doesn't manage the underlying infrastructure.
+
+Refer to :new-page:`aws/fargate <https://docs.aws.amazon.com/eks/latest/userguide/fargate.html>` and :new-page:`gke/autopilot <https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-security#built-in-security>` for more information.
+
+Gateway support
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The filestorage extention acquires an exclusive lock for the queue directory.
+
+It's not possible to run persistent buffering if there are multiple replicas of a pod. Even if support could be provided, only one of the pods will be able to acquire the lock and run, while the others will be blocked and unable to operate.
+
+Cluster Receiver support
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The Cluster receiver is a 1-replica deployment of the OpenTelemetry Collector. Because the Kubernetes control plane can select any available node to run the cluster receiver pod (unless ``clusterReceiver.nodeSelector`` is explicitly set to pin the pod to a specific node), ``hostPath`` or ``local`` volume mounts wouldn't work for such environments.
+
+Data persistence is currently not applicable to the Kubernetes cluster metrics and Kubernetes events.
