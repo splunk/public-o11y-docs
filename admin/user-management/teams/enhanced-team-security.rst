@@ -25,6 +25,8 @@ Turn on enhanced team security
 
 By default, every user can join any team in your organization. If you want to restrict users from being able to join any team, you can turn on the enhanced team security setting. Turning on the enhanced team security setting also makes the Team Manager role available to teams.
 
+It is important to note that the Team Manager role is not part of role-based access control (RBAC). The Team Manager role, when enhanced security is enabled, allows an individual to perform administrative tasks for the team. For example, editing the team description, adding or removing team members, and modifying the team notification policies. These permissions apply only to the team they are a member of and do not apply across the entire organization.
+
 To learn more about team roles and permissions, see :ref:`about-team-roles`.
 
 You must be a Splunk Observability Cloud administrator to apply this setting. This setting applies to every team in your organization.
