@@ -50,7 +50,7 @@ You must be an administrator to remove users from the org.  To remove users from
    A table of current members appears in the main panel.
 #. Use the Search field to find the name of the user you want to remove, either by name or email address.
 #. Select the :guilabel:`Actions` (|more|) menu icon next the username, then select :menuselection:`Remove User`.
-#. Observability Cloud displays a dialog box that asks you to confirm the deletion. Select:abbr:`Delete`.
+#. Observability Cloud displays a dialog box that asks you to confirm the deletion. Select :menuselection:`Delete`.
 
 The user no longer appears in the list of members.
 
