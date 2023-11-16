@@ -128,7 +128,10 @@ If no data appears in APM, see :ref:`common-python-troubleshooting`.
 Activate AlwaysOn Profiling
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To activate AlwaysOn Profiling, set the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` or call the ``start_profiling`` function in your application code.
+.. note::
+   AlwaysOn Profiling for Python is in beta development. This feature is provided by Splunk to you "as is" without any warranties, maintenance and support, or service-level commitments. Use of this feature is subject to the :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`.
+
+To activate AlwaysOn Profiling, set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true`` or call the ``start_profiling`` function in your application code.
 
 The following example shows how to activate the profiler from your application code:
 
@@ -144,8 +147,7 @@ The following example shows how to activate the profiler from your application c
                'service.version': '3.1'
                'deployment.environment': 'production', 
             }
-            endpoint='http://localhost:4317', 
-            call_stack_interval_millis='1000'
+            endpoint='http://localhost:4317'
          ) 
 
 See :ref:`get-data-in-profiling` for more information. For additional settings, see :ref:`profiling-configuration-python`.

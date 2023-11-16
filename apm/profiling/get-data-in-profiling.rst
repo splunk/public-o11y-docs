@@ -86,7 +86,7 @@ AlwaysOn Profiling requires APM tracing data to correlate stack traces to your a
    * - .NET
      - SignalFx Instrumentation for .NET version 1.0.0 or higher
      - :ref:`instrument-dotnet-applications`
-   * - Python
+   * - Python (in beta)
      - Splunk Distribution of OpenTelemetry Python version 1.15 or higher
      - * :ref:`instrument-python-applications`
        * :ref:`profiling-configuration-python`
@@ -205,13 +205,16 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
    .. group-tab:: Python
 
+      .. note::
+         AlwaysOn Profiling for Python is in beta development. This feature is provided by Splunk to you "as is" without any warranties, maintenance and support, or service-level commitments. Use of this feature is subject to the :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`.
+
       :strong:`Requirements`
 
       AlwaysOn Profiling requires Python 3.7.2 or higher.
 
       :strong:`Instrumentation`
 
-      Activate the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
+      Activate the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true`` or call the ``start_profiling`` function in your application code. 
 
       Check the OTLP endpoint in the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable:
 
@@ -241,10 +244,10 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
                'service.version': '3.1'
                'deployment.environment': 'production', 
             }
-            endpoint='http://localhost:4317', 
-            call_stack_interval_millis='1000'
+            endpoint='http://localhost:4317'
          ) 
       
+      For more configuration options, see :ref:`profiling-configuration-python`.
 
 .. _profiling-check-data-coming-in:
 
