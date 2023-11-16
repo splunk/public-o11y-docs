@@ -50,7 +50,7 @@ To access these dashboards:
 Search for AWS data
 --------------------------------------------------------------------------------------------
 
-You can search for specific metrics :ref:`using Metric Finder <metric-finder>`, and for metadata using the metadata catalog :ref:`<search-edit-metadata>`.
+You can search for specific metrics :ref:`using Metric Finder <metric-finder>`, and for metadata using the :ref:`metadata catalog <search-edit-metadata>`.
 
 Learn more at :ref:`data-tools-landing`.
 
