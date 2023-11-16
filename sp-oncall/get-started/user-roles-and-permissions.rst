@@ -54,29 +54,100 @@ User Management
     - 
     - 
   
-  * - :strong:`Invite user`
+  * - :strong:`Delete user`
     - Yes
     - 
-    - Yes
+    - 
     - 
     - 
 
-  * - :strong:`Invite user`
+  * - :strong:`Increase seats`
     - Yes
     - 
     - Yes
     - 
     - 
     
--   * - :strong:`Invite user`
+-   * - :strong:`User Profile - View, Manage contact methods, Manage paging poicies`
+    - Yes
+    - Their own
+    - For users on teams where they are a Team Admin
+    - Their own
+    - Their own
+
+-   * - :strong:`User Profile - Manage Global roles`
     - Yes
     - 
-    - Yes
+    - 
     - 
     - 
 
+-   * - :strong:`Promote user to Team Admin`
+    - Yes
+    - 
+    - For users on teams where they are a Team Admin
+    - 
+    - 
+
+
+
+
 Team Management
-~~~~~~~~~~~~~~~
+--------------------
+
+.. list-table::
+   : width: 100%
+   :widths: 25,15,15,15,15,15
+
+  * - :strong:`Capability`
+    - :strong:`Global Admin`
+    - :strong:`Alert Admin`
+    - :strong:`Team Admin`
+    - :strong:`User`
+    - :strong:`Stakeholder`
+
+  * - :strong:`Create team`
+    - Yes
+    - 
+    - Yes
+    - 
+    - 
+  
+  * - :strong:`Rename or delete team`
+    - Yes
+    - 
+    - For teams where they are a Team Admin
+    - 
+    - 
+
+  * - :strong:`Add, remove users`
+    - Yes
+    - 
+    - Yes
+    - 
+    - 
+    
+-   * - :strong:`User Profile - View, Manage contact methods, Manage paging poicies`
+    - Yes
+    - Their own
+    - For users on teams where they are a Team Admin
+    - Their own
+    - Their own
+
+-   * - :strong:`User Profile - Manage Global roles`
+    - Yes
+    - 
+    - 
+    - 
+    - 
+
+-   * - :strong:`Promote user to Team Admin`
+    - Yes
+    - 
+    - For users on teams where they are a Team Admin
+    - 
+    - 
+
 
 [table id=11 /]
 
