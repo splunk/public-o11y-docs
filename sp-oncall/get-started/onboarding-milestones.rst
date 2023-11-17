@@ -57,6 +57,17 @@ Integration milestones
 
 Integration milestones include the following:
 
+#. Determine necessary integrations.
+#. Create Splunk On-Call routing keys. `Routing Key Best Practice <https://help.victorops.com/knowledge-base/routing-keys/>`__
+#. Configure integrations.  `Splunk On-Call Integration Guides <https://help.victorops.com/article-categories/integrations/>`__
+#. Test integrations and trigger test incidents. `Maintenance Mode <https://help.victorops.com/knowledge-base/maintenance-mode/>`
+
+
+Go Live milestones
+===============================
+
+Go Live milestones include the following:
+
 #. Ensure all Splunk On-Call users have completed their User Trainings.
 #. Internal & External Resources made available, including:
    - Create internal documentation for Splunk On-Call 

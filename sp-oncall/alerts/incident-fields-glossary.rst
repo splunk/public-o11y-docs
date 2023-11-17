@@ -1,3 +1,12 @@
+
+.. _incident-fields-glossary:
+
+
+*******************************************
+Incident fields Glossary
+********************************************
+
+
 `Click here to skip to the Glossary of Fields <#glossary-of-fields>`__
 
 Incidents in your Splunk On-Call timeline function like a simple table

@@ -9,7 +9,7 @@ Get started as a Global admin
 
 
 
-As a Global Admin, you have the highest level of permissions in the Splunk On-Call platform. You’re responsible for the overall workflow and management of integrations and users.
+As a Global Admin, you have the highest level of permissions in the Splunk On-Call platform. You're responsible for the overall workflow and management of integrations and users.
 
 As a Global Admin, you have access to all functionality across the platform including scheduling, integrations, teams, and users. While many of these responsibilities will fall on your Alert and Team Admins, there are three that are unique to the Global Admin role. Global admins have permission to take the following actions: 
 
