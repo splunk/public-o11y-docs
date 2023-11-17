@@ -1,3 +1,5 @@
+.. _team-escalation-policy:
+
 Escalation policies determine set who is actually on-call for a given
 team and are the link to utilize any rotations that have been created
 
