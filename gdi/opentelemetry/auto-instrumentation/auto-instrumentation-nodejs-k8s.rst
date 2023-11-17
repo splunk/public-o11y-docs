@@ -41,18 +41,39 @@ If a certification manager (or any other TLS certificate source) is not availabl
 .. code-block:: yaml 
 
    # If cert-manager is not deployed.
-   helm install splunk-otel-collector -f ./my_values.yaml --set certmanager.enabled=true,operator.enabled=true,environment=dev -n monitoring helm-charts/splunk-otel-collector
+   helm install splunk-otel-collector -f ./my_values.yaml --set certmanager.enabled=true,operator.enabled=true,environment=dev -n monitoring splunk-otel-collector-chart/splunk-otel-collector
 
    # If cert-manager is already deployed.
-   helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=dev -n monitoring helm-charts/splunk-otel-collector
+   helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=dev -n monitoring splunk-otel-collector-chart/splunk-otel-collector
 
 Ingest traces
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In order to be properly ingest trace telemetry data, the attribute ``environment`` must be on board the exported traces. There are two ways to set this attribute:
 
-* Use the ``values.yaml`` optional environment configuration.
-* Use the Instrumentation spec with the environment variable ``OTEL_RESOURCE_ATTRIBUTES``.
+* Use the ``values.yaml`` optional environment configuration. For example:
+
+   .. code-block:: yaml
+
+      apiVerstion: apps/v1
+      kind: Deployment
+      metadata:
+        name: my-nodejs-app
+      spec:
+        template:
+          spec:
+            containers:
+            - name: my-nodejs-app
+              image: my-nodejs-app:latest 
+              env:
+              - name: OTEL_RESOURCE_ATTRIBUTES
+                value: environment=prod
+
+* Use the Instrumentation spec with the environment variable ``OTEL_RESOURCE_ATTRIBUTES``. For example:
+
+   .. code-block:: bash
+
+      kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=environment=prod
 
 Verify all the OpenTelemetry resources are deployed successfully
 ---------------------------------------------------------------------------
@@ -211,6 +232,16 @@ Allow the Operator to do the work. The Operator intercepts and alters the Kubern
 -------------------------------------------------------
 
 You can configure the Splunk Distribution of OpenTelemetry JS to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started.
+
+You can add advanced configuration like activating custom sampling and including custom data in the reported spans with environment variables.
+
+For example, if you want every span to include the key-value pair ``build.id=feb2023_v2``, set the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable.
+
+  .. code-block:: bash
+    
+     kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=build.id=feb2023_v2
+
+See :ref:`advanced-nodejs-otel-configuration` for the full list of supported environment variables.
 
 To learn more, see :ref:`advanced-nodejs-otel-configuration`.
 
