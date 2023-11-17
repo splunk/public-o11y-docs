@@ -23,10 +23,10 @@ Zero Config Auto Instrumentation for Java requires the following components:
 * Kubernetes version ``1.28`` or higher.
 
 Deploy the Helm Chart with the Operator enabled
-------------------------------------------------------------
+=========================================================
 
 Add certifications and deploy the Helm Chart
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------------
 
 The Operator requires certain TLS certificates to work. Use the following command to check whether a certification manager is available:
 
@@ -46,7 +46,7 @@ If a certification manager (or any other TLS certificate source) is not availabl
    helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=dev -n monitoring splunk-otel-collector-chart/splunk-otel-collector
 
 Ingest traces
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------------------
 
 In order to be properly ingest trace telemetry data, the attribute ``environment`` must be on board the exported traces. There are two ways to set this attribute:
 
@@ -76,7 +76,7 @@ In order to be properly ingest trace telemetry data, the attribute ``environment
       kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=environment=prod
 
 Verify all the OpenTelemetry resources are deployed successfully
----------------------------------------------------------------------------
+==========================================================================
 
 Resources include the Collector, the Operator, webhook, an instrumentation.
 
@@ -104,12 +104,12 @@ Run the following to verify the resources are deployed correctly:
    # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
 
 Set annotations to instrument Java applications
--------------------------------------------------------------------
+===================================================================
 
 You can activate auto instrumentation for Java applications before or during runtime.
 
 Activate and deactivate auto instrumentation before runtime
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------------------------
 
 If the deployment is not deployed, add the ``otel.splunk.com/inject-java`` annotation to the application deployment YAML file.
 
@@ -151,7 +151,7 @@ The Collector operator activates automatic instrumentation for any Java applicat
 To deactivate automatic instrumentation, remove the annotation or set its value to ``false``.
 
 Activate and deactivate auto instrumentation for Java on a running workload
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------------------------------------
 
 To activate auto instrumentation for your Java deployment, run the following command. Replace ``<my-deployment>`` with the deployment name and ``<my-namespace>`` with the name of the target application namespace.
 
@@ -170,7 +170,7 @@ To deactivate auto instrumentation for your Java deployment, run the same comman
    kubectl patch deployment <my-deployment> -n <my-namespace> --type=json -p='[{"op": "remove", "path": "/spec/template/metadata/annotations/instrumentation.opentelemetry.io~1inject-java"}]'
 
 Verify instrumentation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------------------
 
 To verify that the instrumentation was successful, run the following command on an individual pod. Your instrumented pod should contain an initContainer named ``opentelemetry-auto-instrumentation`` and the target application container should have several ``OTEL_*`` environment variables similar to those in the demo output below.
 
@@ -222,12 +222,12 @@ To verify that the instrumentation was successful, run the following command on 
    #     Type:        EmptyDir (a temporary directory that shares a pod's lifetime)
 
 View results at Splunk Observability APM
-------------------------------------------------------------
+===========================================================
 
 Allow the Operator to do the work. The Operator intercepts and alters the Kubernetes API requests to create and update annotated pods, the internal pod application containers are instrumented, and trace and metrics data populates the :ref:`APM dashboard <apm-dashboards>`. 
 
 (Optional) Configure the instrumentation
-------------------------------------------------------------
+===========================================================
 
 You can configure the Splunk Distribution of OpenTelemetry Java to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started.
 
