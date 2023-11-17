@@ -11,7 +11,7 @@ You can assign roles to existing and new users to determine what they can do and
 
 
 
-.. note:: To create or manage users, you must have administrator access. To get this access, an existing administrative adds it to your user profile. See :ref:`request-admin` for more information.
+.. note:: To create or manage users, you must have administrator access. To get this access, an existing administrator adds it to your user profile. See :ref:`admin-manage-users` for more information.
 
 View roles assigned to users
 =====================================
@@ -31,7 +31,7 @@ To assign roles when inviting new users, follow these steps:
 #. From the left navigation menu, select :menuselection:`Settings` then :menuselection:`Users`.
 #. Select :guilabel:`Invite Users`.
 #. Enter the email addresses to invite.
-#. Click the :guilabel:`Roles` field to select any of the available roles.
+#. In the :guilabel:`Roles` field to select any of the available roles.
 #. Select :guilabel:`Send Invitation` to confirm.
 
 
@@ -60,7 +60,7 @@ To remove roles from a user that's already a member of your organization, follow
 #. In the :guilabel:`Manage Roles` dialog box, select one or more of the selected roles, then select the left-pointing arrow to move the roles back to the :guilabel:`Available Roles` panel.
 #. Select :guilabel:`Assign Roles` to confirm.
 
-.. note:: You can use the :guilabel:`Remove All` link to add all available roles to a user.
+.. note:: You can use the :guilabel:`Remove All` link to remove all available roles to a user.
 
 
 Edit roles for multiple users

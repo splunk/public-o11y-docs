@@ -16,7 +16,7 @@ using their Google credentials.
 Before you begin configuring the Google SSO integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
 
 To configure a Google SSO integration, you must be an administrator for your organization.
-To learn more, see :new-page-ref:`manage_admin-access`.
+To learn more, see :new-page-ref:`admin-manage-users`.
 
 .. note:: When you configure the Google SSO integration for a domain,
    everyone in the domain has access to the organization, even if they have not
@@ -62,7 +62,7 @@ Before you proceed, review the section :ref:`Name an SSO integration<naming-note
 
 To configure GCI as an IdP using an Observability Cloud SSO integration,
 you must be an administrator for your organization and a super-administrator of your Google domain.
-To learn more, see :new-page-ref:`manage_admin-access`.
+To learn more, see :new-page-ref:`admin-manage-users`.
 
 The :new-page:`G Suite Administrator Help document <https://support.google.com/a/answer/7623225?hl=en>`
 topic, developed by Google, describes how to configure the integration.
