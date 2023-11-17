@@ -18,7 +18,8 @@ Zero Config Auto Instrumentation for Java requires the following components:
 * The OpenTelemetry Operator, which manages auto-instrumentation of Kubernetes applications. See more in the :new-page:`OpenTelemetry GitHub repo <https://github.com/open-telemetry/opentelemetry-operator>`.
 * A Kubernetes instrumentation object ``opentelemetry.io/v1alpha1``, which configures auto-instrumentation settings for applications.
 
-.. just a guess...
+.. just a guess
+
 * Kubernetes version ``1.28`` or higher.
 
 Deploy the Helm Chart with the Operator enabled
