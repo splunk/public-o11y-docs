@@ -26,7 +26,7 @@ By default, users can choose to join or leave teams at will. For larger organiza
 
 For an overview of the various team roles and permissions, see :ref:`about-team-roles`.
 
-Teams can also assign :ref:`team specific notification <admin-team-notifications>` methods for alerts raised by detectors that are set up in Splunk Observability Cloud as different teams may have different escalation methods for their alerts.
+Teams can also assign :ref:`team specific notification <admin-team-notifications>` methods for alerts raised by detectors that are set up in Splunk Observability Cloud as different teams might have different escalation methods for their alerts.
 
 Determining naming convention for teams is essential to ensure uniformity and easily identified when assigning access tokens to be able to control data ingest limits. One of the more common best practices is to synch Team and Token names such as:
 

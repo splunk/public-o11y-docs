@@ -34,7 +34,7 @@ To send invitations to users, follow these steps:
 #. In the :guilabel:`Roles` field to select any of the available roles.
 #. Select :guilabel:`Send Invitation`.
 
-Users receive an email from Splunk Observability Cloud containing instructions for signing intothe organization. After they sign up, their  names appear in the menu in the :menuselection:`Settings` then :menuselection:`Users` list.
+Users receive an email from Splunk Observability Cloud containing instructions for signing intothe organization. After they sign up, their names appear in the menu in the :menuselection:`Settings` then :menuselection:`Users` list.
 
 
 .. raw:: html
@@ -112,7 +112,7 @@ You can look up when a user logged in to Observability Cloud by looking at user 
 
 #. Open any dashboard.
 
-#. Select `Event Overlay`.
+#. Select :guilabel:`Event Overlay`.
 
 #. In the :guilabel:`Event Overlay` field, enter :guilabel:`SessionLog`.
 
