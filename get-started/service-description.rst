@@ -80,6 +80,12 @@ Ingest API endpoints
 You can use the REST API to send telemetry directly to Splunk Observability Cloud. This might be useful when you can't use the Splunk Distribution of OpenTelemetry Collector or when you have specific networking or security requirements. See :ref:`rest-api-ingest` for more information. If your organization has stringent networking security policies that apply to sending data to third parties, see :ref:`allow-services`.
 
 
+Private connectivity
+-------------------------------------------------------------
+
+If you prefer not to send data to Splunk public endpoints using HTTPS, you can use AWS Private Link to ingest data from sources deployed on AWS. See :ref:`aws-privatelink` for more information.
+
+
 Data retention
 -------------------------------------------------------------
 
