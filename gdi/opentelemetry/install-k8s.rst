@@ -141,9 +141,9 @@ Depending on your destination, you need:
 
 * To send data to ``splunkPlatform``:
 
-   * Splunk Enterprise 8.0 or later.
+   * Splunk Enterprise 8.0 or higher.
    * A minimum of one Splunk platform index ready to collect the log data. This index is used for ingesting logs.
-   * An HTTP Event Collector (HEC) token and endpoint. See :new-page:`https://docs.splunk.com/Documentation/Splunk/8.2.0/Data/UsetheHTTPEventCollector <https://docs.splunk.com/Documentation/Splunk/8.2.0/Data/UsetheHTTPEventCollector>` and :new-page:`https://docs.splunk.com/Documentation/Splunk/8.2.0/Data/ScaleHTTPEventCollector <https://docs.splunk.com/Documentation/Splunk/8.2.0/Data/ScaleHTTPEventCollector>`.
+   * An HTTP Event Collector (HEC) token and endpoint. See :new-page:`Set up and use HTTP Event Collector in Splunk Web <https://docs.splunk.com/Documentation/Splunk/8.2.0/Data/UsetheHTTPEventCollector>` and :new-page:`Scale HTTP Event Collector <https://docs.splunk.com/Documentation/Splunk/8.2.0/Data/ScaleHTTPEventCollector>`.
    * ``splunkPlatform.endpoint``. URL to a Splunk instance, for example: ``"http://localhost:8088/services/collector"``.
    * ``splunkPlatform.token``. Splunk HTTP Event Collector token.
 

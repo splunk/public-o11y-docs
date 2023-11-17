@@ -1,7 +1,7 @@
-.. _technical-addons:
+.. _collector-addons:
 
 *********************************************************************
-Collector technical Add-ons
+Collector Add-ons
 *********************************************************************
 
 .. meta::
@@ -11,13 +11,13 @@ Collector technical Add-ons
    :maxdepth: 5
    :hidden:
 
-   add-ons/ta-aws-eks
+   add-ons/addon-aws-eks
 
 An Add-on is a type of app that runs on Splunk Observability Cloud and provides specific capabilities to other apps, such as getting data in, mapping data, or providing saved searches and macros. An add-on is a reusable component that supports other apps across a number of different use cases, and is not typically run as a standalone app. 
 
 .. note::
 
-   To see the technical Add-ons available for the Splunk Platform, refer to :new-page:`Splunk Supported Add-ons <https://docs.splunk.com/Documentation/AddOns>`. 
+   To see the Add-ons available for the Splunk Platform, refer to :new-page:`Splunk Supported Add-ons <https://docs.splunk.com/Documentation/AddOns>`. 
 
 .. raw:: html
 
@@ -35,5 +35,5 @@ The main benefit of using Add-ons is the ease of deployment compared to standard
 
 The following Add-ons are available for the Splunk Distribution of the OpenTelemetry Collector:
 
-* :ref:`ta-aws-eks`
+* :ref:`addon-aws-eks`
 
