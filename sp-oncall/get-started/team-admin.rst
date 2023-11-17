@@ -47,3 +47,14 @@ Recommendations to be a Successful Team Admin
 
 * Connect with a Global or Alert Admin to create your team's routing key: Once you are ready for alerts to be routed to your team, you will need a Global or Alert Admin to create routing key for your team's Escalation Policies. You can find user roles under the Users tab. Request that your routing key names follow your Escalation Policy naming convention. 
 * Understand Scheduled Overrides & Manual Takes: As a Team Admin, you have permissions to manage scheduled overrides for users on your team. Scheduled overrides should be used for planned absences, whereas Manual takes should only be used for last-minute coverage needs.
+
+
+Team Admin Checklist
+=========================
+
+- i have configured my own user account's paging policy and have familiarized myself with the web and mobile applications.
+- I understand my permissions and responsibilitiesas a team admi. 
+- I know who my internal and external resources are.
+- I understand the relationshis between shifts, rotations, and escalation policies.
+- I have built my teams on-call schedulein Splunk On-Call to optimize on-call and reduce on-call fatigue.
+- I understand scheduled override and manual takes, and when to use one over the other.
