@@ -1,4 +1,4 @@
-.. _spoc-system-requirements:
+.. _user-roles-and-permissions:
 
 *********************************
 User roles and permissions
@@ -25,10 +25,9 @@ This means that a user can hold twp roles. Here are the possible combinations:
 
 Stakeholders can be considered separate from all other roles as these users cannot be placed in any on-call schedules nor take action on
 incidents. They can simply be added to existing incidents and notified through their defined contact methods for awareness. For comprehensive
-information on stakeholders, please see `this article <https://help.victorops.com/knowledge-base/stakeholders/>`__.
+information on stakeholders, please see XXXXXX `this article <https://help.victorops.com/knowledge-base/stakeholders/>.
 
-The next sections provides a detailed breakdown of the specific
-permissions for each role.
+The next sections provides a detailed breakdown of the specific permissions for each role.
 
 User Permissions
 =========================

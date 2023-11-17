@@ -1,80 +1,55 @@
-**Your Role as a User**
-~~~~~~~~~~~~~~~~~~~~~~~
+.. _user-training:
 
-As a User, you are responsible for taking action on incidents that page
-you while you are on call.
 
-**Your Permissions as a User** 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+****************************************
+User training 
+****************************************
 
-As a User, you have access to view and edit your own user information,
-view your on-call schedule, and the ability to take action on alerts. 
+.. meta::
+   :description: About the user roll in Splunk On-Call.
 
-**View all** `User Roles and
-Permissions! <https://help.victorops.com/knowledge-base/user-roles-and-permissions/>`__
 
-**Your Resources as a User**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+As a user, you are responsible for taking action on incidents that page you while you are on call. You have access to view and edit your own user information, view your on-call schedule, and the ability to take action on alerts.
 
-**Knowledge Base:** Splunk On-Call has an extensive `knowledge
-base <https://help.victorops.com/>`__ that is always a good place to
-start if you are unsure how something works or are in need of some
-tips! 
+To learn more about all roles and permissions, see :ref:`user-roles-and-permissions`.
 
-**Contact Us:** All users have the ability to reach out to Splunk
-On-Call support at any time with any questions!
+Your Resources as a User
+=============================
 
-**1.**  **Live Chat:** If you are logged into your Splunk On-Call
-instance, you will have the ability to Live Chat with the Splunk On-Call
-Support team.
+- Documentation: Splunk On-Call has an extensive documentation which is always a good place to start if you are unsure how something works.
+- Contact us: All users have the ability to reach out to Splunk On-Call support at any time with any questions.
+    - Live chat: If you are logged into your Splunk On-Call instance, you will have the ability to Live Chat with the Splunk On-Call Support team.
+    - You can open a Splunk On-Call support case in the Splunk Support Portal:https://login.splunk.com/
 
-**2.**  **Splunk Support Portal:** You can open a Splunk On-Call support
-case in the Splunk Support Portal:https://login.splunk.com/
+If you are facing any issues when trying to contact us please have a look XXXXXX `HERE <https://help.victorops.com/knowledge-base/important-splunk-on-call-support-changes-coming-nov-11th/>`
 
-**If you are facing any issues when trying to contact us please have a
-look **\ `HERE <https://help.victorops.com/knowledge-base/important-splunk-on-call-support-changes-coming-nov-11th/>`__\ **!**
+Setting up your account
+==========================
 
-**Setting up your account**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#. Accept your email invitation.
+#. Create a username if one has not been created for you: Keep in mind that usernames cannot be changed. Please be sure to follow any naming conventions outlined by your account admins.
+#. Add contact methods to your profile: Add the contact methods you would like us to use. For example, phone numbers, emails. For push
+   notifications, first download the mobile app and log in. Your device will then appear in your profile and you will be able to use push notifications.
+#. Set up your Personal Paging Policies: Your paging policy determines how Splunk On-Call notifies you of an incident.
+   Include multiple steps and multiple notification types** in your policy that increase in noise such as push to SMS to a phone call.
+   
+    ..note:: the last step of your paging policy will repeat until the incident is acknowledged. Quick video on** `Personal Paging
+   Policies <https://share.vidyard.com/watch/gpRuaMFxCK8wZyB9oFRXBA?>`
 
-1. **Accept your email invitation** 
-
-2. **Create a username if one has not been created for you:** Keep in
-   mind that *usernames* **cannot** *be changed.* Please be sure to
-   follow any naming conventions outlined by your account admins. 
-
-3. **Add contact methods to your profile:** Add the contact methods that
-   you would like to be reached on (phone numbers, emails). **For push
-   notifications:** First, download the mobile app and log in. Your
-   device will then appear in your profile and you will be able to use
-   push notifications.
-
-4. **Set up your Personal Paging Policies: Your paging policy
-   determines** \_how\_*\* Splunk On-Call notifies you of an incident.
-   Include*\* **multiple steps and multiple notification types** in your
-   policy that increase in noise such as push to SMS to a phone call.
-   *NOTE: the last step of your paging policy will repeat until the
-   incident is acknowledged.* **Quick video on** `Personal Paging
-   Policies <https://share.vidyard.com/watch/gpRuaMFxCK8wZyB9oFRXBA?>`__\ **!** 
-
-   **♦** **Best Practice Tip** **♦ Your Primary Paging Policy should be
-   the loudest and most attention-grabbing notification method. While
-   your custom paging policy can be less aggressive for a configured
-   period time that may not require such aggressive paging (i.e. during
-   business hours).**
+       - Best Practice tip: Your Primary Paging Policy should be the loudest and most attention-grabbing notification method. While your custom paging policy can be less aggressive for a configured period time that may not require such aggressive paging, for example, during business hours.
 
    **♦** **Best Practice Tip** **♦ Include a phone call in the last step
    of your paging policy so that you are alerted in the noisiest way
    until you acknowledge the incident.**
 
-5. **Download Mobile App & Add Splunk On-Call to your contacts:** Splunk
+1. **Download Mobile App & Add Splunk On-Call to your contacts:** Splunk
    On-Call can be easily added to your phone contacts from the mobile
    app. Just navigate to the Menu, Notifications, and select “Add Splunk
    On-Call to Contacts”. *NOTE: if you need Splunk On-Call notifications
    to override “Do Not Disturb” please visit our mobile application
    articles for directions.*
 
-6. **View Your Schedule:** **Login to the mobile app and select the
+2. **View Your Schedule:** **Login to the mobile app and select the
    calendar icon at the bottom of the screen to see when you are
    on-call. From the Web UI,  Navigate to Teams >> “Your Team” >>
    On-Call Schedule.** Quick video on `viewing an On-call
@@ -84,7 +59,7 @@ look **\ `HERE <https://help.victorops.com/knowledge-base/important-splunk-on-c
    personal calendar .ics file to your favorite calendar tools such as
    Google or Outlook.
 
-7. **Create a Scheduled Override:** Heading out of town or have a
+3. **Create a Scheduled Override:** Heading out of town or have a
    scheduled absence where you will need on-call coverage? Create an
    override so someone can cover your shift for you. \****Quick video on
    `Scheduled
@@ -99,7 +74,7 @@ look **\ `HERE <https://help.victorops.com/knowledge-base/important-splunk-on-c
       covered. *NOTE:* **Another user will need to “take” the shift(s)
       from you before the shift is considered covered**
 
-8. **Use the Manual Take On-Call feature for last-minute coverage:** For
+4. **Use the Manual Take On-Call feature for last-minute coverage:** For
    unplanned absences (i.e. a doctor’s appointment), the take on-call
    button can be used to cover another user’s shift until they take it
    back or the shift ends. **Quick video on** `Manual
@@ -122,7 +97,7 @@ look **\ `HERE <https://help.victorops.com/knowledge-base/important-splunk-on-c
       5. You are now on call until the end of the user’s shift unless
          they take it back. 
 
-9. **Take action on an incident you are paged for:** There are several
+5. **Take action on an incident you are paged for:** There are several
    different actions you can take on an incident you are paged for. The
    various actions are described below: \****Quick video on incident
    actions on the `Web
