@@ -93,7 +93,7 @@ For more details about using alerts and detectors, see :new-page-ref:`get-starte
 Next steps
 ==================
 
-This completes the tutorial. 
+You've completed this tutorial!
 
 You can now...
 

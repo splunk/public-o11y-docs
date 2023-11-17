@@ -47,6 +47,10 @@ Follow the steps to configure the different connection options such as:
 * In the CloudWatch Metrics option, select :guilabel:`Polling` as the ingestion method, and set up the polling rate at which you want Splunk Observability Cloud to poll CloudWatch for metric data.
 * Your data sources: AWS Regions and services. 
 
+.. image:: /_images/get-started/tutorial-aws-sources.png
+   :width: 90%
+   :alt: Data sources for your AWS connection
+
 For details on each step, read :ref:`aws-connect-polling`.
 
 Available AWS services
@@ -66,6 +70,6 @@ One of the benefits of using the Splunk Distribution of OpenTelemetry Collector 
 Next 
 ===================================================================================
 
-This completes the first step of the tutorial.
+You've completed the first step of the tutorial!
 
 To learn how to monitor your AWS data and services, continue to :ref:`tutorial-aws-use`.
