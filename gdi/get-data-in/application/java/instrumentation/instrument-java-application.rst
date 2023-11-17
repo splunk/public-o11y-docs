@@ -112,7 +112,7 @@ If you need to add custom attributes to spans or want to manually generate spans
 .. _enable_profiling_java:
 
 Activate AlwaysOn Profiling
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------
 
 To activate AlwaysOn Profiling, use the following system property argument. You can also use the ``SPLUNK_PROFILER_ENABLED`` environment variable. For more information, see :ref:`profiling-intro`.
 
@@ -135,7 +135,7 @@ See :ref:`get-data-in-profiling` for more information. For more settings, see :r
 .. _enable_automatic_metric_collection:
 
 Activate metrics collection
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------
 
 To activate automatic metric collection, activate the metrics feature using a system property argument. You can also use the ``SPLUNK_METRICS_ENABLED`` environment variable.
 
@@ -153,7 +153,7 @@ If your metrics endpoint is different than the default value, set the ``SPLUNK_M
 .. _ignore_endpoints_java:
 
 Ignore specific endpoints
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------------
 
 By default, the Java agent collects traces from all the endpoints of your application. To ignore specific endpoints, use the ``rules`` sampler and define ``drop`` rules.
 
@@ -245,7 +245,7 @@ The following example shows how to update a deployment to expose environment var
                - name: OTEL_RESOURCE_ATTRIBUTES
                  value: "deployment.environment=<environmentName>"
 
-.. note:: You can also deploy instrumentation using the Kubernetes Operator. See :ref:`auto-instrumentation-operator`.
+.. note:: You can also deploy instrumentation using the Kubernetes Operator. See :ref:`auto-instrumentation-java-k8s`.
 
 .. _java-agent-cloudfoundry:
 

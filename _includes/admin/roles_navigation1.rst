@@ -62,16 +62,16 @@
 
   * - :strong:`Join team`
     - Yes
-    - Not applicable: A Team Manager doesn't join a team. Only an existing Team Member can be assigned this role.
+    - Yes. Unless enhanced team security is enabled.
 
 
   * - :strong:`Add or remove team member`
     - Yes
-    - Yes
+    - No
 
 
   * - :strong:`Edit notification policy`
     - Yes
-    - Yes
+    - No
 
 

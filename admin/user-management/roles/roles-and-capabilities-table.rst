@@ -61,6 +61,8 @@ Settings
 General settings
 ----------------------------
 
+.. note:: If :ref:`enhanced team security <enhanced-team-security>` is enabled, some of these permissions may change if a user is also designated as a Team Manager. Team Manager is not part of RBAC; it provides a user with additional permissions for managing a specific team. For details, see :ref:`about-team-roles`. 
+
 .. include:: /_includes/admin/roles_navigation1.rst
 
 

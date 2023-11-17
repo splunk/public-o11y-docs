@@ -63,6 +63,8 @@ For information on customizing the content and format of the navigator, includin
 
 For interactive walkthroughs of how to use navigators in Infrastructure Monitoring to troubleshoot your web server or observe your application and the underlying infrastructure, see :new-page:`Splunk Infrastructure Monitoring web server troubleshooting scenario <https://bossofopsando11y.com/imt/webserver-troubleshooting.html>` and :new-page:`Splunk Infrastructure Monitoring application monitoring scenario <https://bossofopsando11y.com/imt/application-monitoring.html>`.
 
+For a list of all the navigators available, see :ref:`navigators-list-imm`.
+
 .. note::
 
    The format and content displayed in the navigator for AWS Lambda is different from what is discussed below.
@@ -112,7 +114,7 @@ Use the Dashboard section
 
 The :strong:`Dashboard` section contains built-in dashboards that provide access to detailed information about the instances displayed.
 
-Dashboards in navigators are read |hyph| only, so you can't directly make any changes to them. However, you can clone a built-in dashboard to make changes to the clone, or download a built-in dashboard.
+Dashboards in navigators are read |hyph| only, so you can't directly make any changes to them. However, you can clone a built-in dashboard to make changes to the clone, or download a built-in dashboard. As an admin, you can also add or remove custom dashboards, and hide any built-in dashboards that you don't use.
 
 To learn more, see :ref:`Clone a built-in dashboard in a navigator<clone-dashboard-navigator>` and :ref:`Export a built-in dashboard in a navigator<export-dashboard-navigator>` in the :ref:`built-in-dashboards` documentation.
 
@@ -302,3 +304,24 @@ Follow these steps to remove an inactive navigator.
         :alt: This image shows a navigator with a Remove Navigator option.
         
 #. Confirm your selection.
+
+.. _list-available-navigators:
+
+List available navigators
+-------------------------------
+
+For a list of all the navigators available, see :ref:`navigators-list-imm`.
+
+Customize navigators
+-------------------------------
+
+For instructions on how to customize navigators by adding to or removing from the group of built-in dashboards associated with them, see :ref:`manage-dashboards-imm`.
+
+
+.. toctree::
+   :hidden:
+
+   navigators-list
+   manage-navigator-dashbds
+   
+

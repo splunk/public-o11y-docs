@@ -2164,7 +2164,7 @@ msgid ""
 "The following table provides an overview of how HTTP status codes are used to set the ``span.status`` field, and subsequently ``otel.status_code``, in OpenTelemetry instrumentation in accordance with OpenTelemetry "
 "semantic conventions. To learn more, see the OpenTelemetry semantic conventions for HTTP spans on GitHub :new-page:`https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/"
 "semantic_conventions/http.md#status`."
-msgstr "以下の表は、OpenTelemetry セマンティック規約に従って、OpenTelemetry インストルメンテーションにおいて、HTTP ステータスコードがどのように ``span.status`` フィールドの設定に使われ、その後 ``otel.status_code`` の設定に使われるかの概要を示しています。詳しくは、GitHub の OpenTelemetry semantic conventions for HTTP spans :new-page:`https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/semantic_conventions/http.md#status` を参照してください。"
+msgstr "以下の表は、OpenTelemetry セマンティック規約に従って、OpenTelemetry インストルメンテーションにおいて、HTTP ステータスコードがどのように ``span.status`` フィールドの設定に使われ、その後 ``otel.status_code`` の設定に使われるかの概要を示しています。詳しくは、GitHub の OpenTelemetry semantic conventions for HTTP spans :new-page:`https://github.com/open-telemetry/semantic-conventions/blob/main/model/trace/http.yaml` を参照してください。"
 
 #: ../../apm/apm-spans-traces/apm-errors.rst:38
 msgid ":strong:`Error type`"
@@ -2392,7 +2392,7 @@ msgstr "非認証"
 msgid ""
 "See the OpenTelemetry specification for information on the handling of gRPC status codes on GitHub :new-page:`https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/"
 "semantic_conventions/rpc.md#grpc-status`."
-msgstr "gRPCのステータスコードの取り扱いについては、OpenTelemetry仕様をGitHub :new-page:`https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/semantic_conventions/rpc.md#grpc-status` で参照してください。"
+msgstr "gRPCのステータスコードの取り扱いについては、OpenTelemetry仕様をGitHub :new-page:`https://github.com/open-telemetry/semantic-conventions/blob/main/model/trace/rpc.yaml` で参照してください。"
 
 #: ../../apm/apm-spans-traces/apm-errors.rst:140
 #, fuzzy
@@ -6337,8 +6337,8 @@ msgid ":strong:`Requirements`"
 msgstr ":strong:`必要条件`"
 
 #: ../../apm/profiling/get-data-in-profiling.rst:147
-msgid "AlwaysOn Profiling requires Node 16 and higher."
-msgstr "AlwaysOn プロファイリングには、Node 16 以上が必要です。"
+msgid "AlwaysOn Profiling requires Node.js 16 and higher."
+msgstr "AlwaysOn プロファイリングには、Node.js 16 以上が必要です。"
 
 #: ../../apm/profiling/get-data-in-profiling.rst:149 ../../apm/profiling/get-data-in-profiling.rst:191
 msgid ":strong:`Instrumentation`"
@@ -6748,32 +6748,32 @@ msgid "Select :guilabel:`Java Runtime Metrics` to navigate to the runtime metric
 msgstr ":guilabel:`Java Runtime Metrics` を選択して、ランタイム・メトリクス・ダッシュボードに移動します。"
 
 #: ../../apm/profiling/profiling-memory-metrics.rst:38
-msgid "NodeJS Runtime Metrics dashboard"
-msgstr "NodeJSランタイム・メトリクス・ダッシュボード"
+msgid "Node.js Runtime Metrics dashboard"
+msgstr "Node.jsランタイム・メトリクス・ダッシュボード"
 
 #: ../../apm/profiling/profiling-memory-metrics.rst:40
-msgid "You can access a configured dashboard for :ref:`NodeJS runtime metrics <nodejs-otel-runtime-metrics>` to check memory usage. There are two ways to access the NodeJS Runtime Metrics dashboard."
-msgstr ":ref:`NodeJS ランタイム・メトリクス<nodejs-otel-runtime-metrics>` 用に設定されたダッシュボードにアクセスして、メモリ使用量を確認することができます。NodeJS ランタイム・メトリクス・ダッシュボードにアクセスするには、2 つの方法があります。"
+msgid "You can access a configured dashboard for :ref:`Node.js runtime metrics <nodejs-otel-runtime-metrics>` to check memory usage. There are two ways to access the Node.js Runtime Metrics dashboard."
+msgstr ":ref:`Node.js ランタイム・メトリクス<nodejs-otel-runtime-metrics>` 用に設定されたダッシュボードにアクセスして、メモリ使用量を確認することができます。Node.js ランタイム・メトリクス・ダッシュボードにアクセスするには、2 つの方法があります。"
 
 #: ../../apm/profiling/profiling-memory-metrics.rst:46
-msgid "On the dashboard landing page and select the :guilabel:`APM NodeJS services` built-in dashboard group. Anyone can access this group by default."
-msgstr "ダッシュボードのランディングページで、:guilabel:`APM NodeJS services` 組み込みダッシュボードグループを選択します。このグループにはデフォルトで誰でもアクセスできます。"
+msgid "On the dashboard landing page and select the :guilabel:`APM Node.js services` built-in dashboard group. Anyone can access this group by default."
+msgstr "ダッシュボードのランディングページで、:guilabel:`APM Node.js services` 組み込みダッシュボードグループを選択します。このグループにはデフォルトで誰でもアクセスできます。"
 
 #: ../../apm/profiling/profiling-memory-metrics.rst:47
-msgid "Select the :guilabel:`NodeJS runtime metrics` dashboard."
-msgstr ":guilabel:`NodeJS runtime metrics` ダッシュボードを選択する。"
+msgid "Select the :guilabel:`Node.js runtime metrics` dashboard."
+msgstr ":guilabel:`Node.js runtime metrics` ダッシュボードを選択する。"
 
 #: ../../apm/profiling/profiling-memory-metrics.rst:53
-msgid "Select :guilabel:`NodeJS Runtime Metrics` to navigate to the runtime metrics dashboard."
-msgstr ":guilabel:`NodeJS Runtime Metrics` を選択して、ランタイム・メトリクス・ダッシュボードに移動します。"
+msgid "Select :guilabel:`Node.js Runtime Metrics` to navigate to the runtime metrics dashboard."
+msgstr ":guilabel:`Node.js Runtime Metrics` を選択して、ランタイム・メトリクス・ダッシュボードに移動します。"
 
 #: ../../apm/profiling/profiling-memory-metrics.rst:56
 msgid ".NET Runtime Metrics dashboard"
 msgstr ".NET Runtime Metricsダッシュボード"
 
 #: ../../apm/profiling/profiling-memory-metrics.rst:58
-msgid "You can access a configured dashboard for :ref:`.NET runtime metrics <dotnet-runtime-metrics>` to check memory usage. There are two ways to access the NodeJS Runtime Metrics dashboard."
-msgstr ":ref:`.NET ランタイム・メトリクス<dotnet-runtime-metrics>` 用に設定されたダッシュボードにアクセスして、メモリ使用量を確認できます。NodeJS ランタイム・メトリクス・ダッシュボードにアクセスするには、2 つの方法があります。"
+msgid "You can access a configured dashboard for :ref:`.NET runtime metrics <dotnet-runtime-metrics>` to check memory usage. There are two ways to access the Node.js Runtime Metrics dashboard."
+msgstr ":ref:`.NET ランタイム・メトリクス<dotnet-runtime-metrics>` 用に設定されたダッシュボードにアクセスして、メモリ使用量を確認できます。Node.js ランタイム・メトリクス・ダッシュボードにアクセスするには、2 つの方法があります。"
 
 #: ../../apm/profiling/profiling-memory-metrics.rst:64
 msgid "On the dashboard landing page and select the :guilabel:`APM .NET services` built-in dashboard group. Anyone can access this group by default."

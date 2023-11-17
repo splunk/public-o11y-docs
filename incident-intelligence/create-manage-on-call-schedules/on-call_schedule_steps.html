@@ -1,0 +1,87 @@
+:orphan:
+
+
+<!--This can probably be pulled out of the HTML file at some point. This list was originally 3 levels deep and the numbering within the table was incorrect but it could probably be moved back to rst.-->
+
+<ol style="list-style-type: decimal !important;">
+    <li>In Incident Intelligence, select <span class="guilabel">Incident Management.</span></li>
+    <li>Select the <span class="guilabel">On-call schedules</span> tab.</li>
+    <li>Select <span class="guilabel">Create new schedule</span>.</li>
+    <li>Select the pencil icon to edit the schedule name. Name your schedules so that they are easy to find when adding them to an incident workflow. For example, include a team name, a priority (for example, primary, secondary, and so on), and what is being covered (for example, database, web, and so on). Select the checkmark icon to save your schedule name.</li>
+    <li>(Optional) Add a teams tag if you want to associate your schedule with a team. The teams tag makes finding a schedule in an incident workflow easier. It also sorts the team members at the top of the responder list when adding responders to your schedule shifts. To add a teams tag, enter the team name in the <span class="guilabel">Teams tag</span> field and select the team when it appears.</li>
+    <li>
+        Enter a shift name. Shift names often refer to time (for example, business hours, weekends, and so on).
+    </li>
+    <li>
+        Select a shift start date. The shift begins on the day you select in <span class="guilabel">Shift starts on</span>. Shifts within the same can have independent start dates.
+    </li>
+    <li>
+        Use the timezone picker to select the timezone for the coverage. The times in the schedule preview reflect this selection, not your local timezone.
+    </li>
+    <li>
+        <p>Define your shift coverage. As you configure a new shift, refer to the <span class="guilabel">Schedule Preview</span> to confirm that you configured your schedule as intended. The schedule preview includes schedule info for up to one year. Select <span class="guilabel">Next Month</span> and <span class="guilabel"></span>Previous Month</span> to navigate the schedule preview.</p>
+        <table style="width: 100% !important; border: 1px solid !important;">
+            <thead>
+            <tr>
+                <th class="head" style="width: 33% !important; border: 1px solid !important; padding: 0.25em 0.7em; !important; text-align:center;"><p><span class="strong">Shift coverage type</span></p></th>
+                <th class="head" style="width: 33% !important; border: 1px solid !important; padding: 0.25em 0.7em; !important; text-align:center;"><p><span class="strong">Shift coverage description</span></p></th>
+                <th class="head" style="width: 33% !important; border: 1px solid !important; padding: 0.25em 0.7em; !important; text-align:center;"><p><span class="strong">Steps</span></p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="width: 33% !important; border: 1px solid !important; padding: 0.25em 0.7em;">
+                    <p>Day-by-day shift coverage</p>
+                </td>
+                <td style="width: 33% !important; border: 1px solid !important; padding: 0.25em 0.7em;">
+                    <p>Day-by-day shifts are designed to span 24 hours or fewer on select days of the week. This option is best if you want to create short-term shifts that are staggered on specific days of the week, with responders rotating on a more frequent basis. <br/><br/>For a scenario for the day-by-day shift type, see <a href="https://docs.splunk.com/observability/incident-intelligence/create-manage-on-call-schedules/use-cases-schedules/use-case-day-by-day.html">Scenario: Create every-other-day coverage using the day-by-day shift type</a>.</p>
+                </td>
+                <td style="width: 33% !important; border: 1px solid !important; padding: 0.25em 0.7em;">
+                    <ol style="list-style-type: decimal !important; list-style-position: inside !important;">
+                        <li>Select the days of the week you want to set up coverage for.</li>
+                        <li>
+                            Select the <span class="guilabel">Daily start time</span> and <span class="guilabel">Daily end time</span>. If you want to set up 24-hour coverage, select <span class="guilabel">Create 24 hr shifts</span>.
+                        </li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 33% !important; border: 1px solid !important; padding: 0.25em 0.7em;">
+                    <p>Week-by-week shift coverage</p>
+                </td>
+                <td style="width: 33% !important; border: 1px solid !important; padding: 0.25em 0.7em;">
+                    <p>Week-by-week shifts are designed to span over one week and repeat every week. This option is best if you want to create a long-term shift that spans the course of two to seven days, with responders rotating on a less frequent basis. <br/><br/>For a scenario for the week-by-week shift type, see <a href="https://docs.splunk.com/observability/incident-intelligence/create-manage-on-call-schedules/use-cases-schedules/use-case-week-by-week.html">Scenario: Create weekly coverage using the week-by-week shift type</a>.</p>
+                </td>
+                <td style="width: 33% !important; border: 1px solid !important; padding: 0.25em 0.7em;">
+                    <ol style="list-style-type: decimal !important; list-style-position: inside !important;">
+                        <li>
+                            Select the day and time you want the shift to start in the <span class="guilabel">Starts on</span> menus.
+                        </li>
+                        <li>Select the day and time you want the shift to end in the <span class="guilabel">Ends on</span> menus.</li>
+                    </ol>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </li>
+    <li>
+        Under <span class="guilabel">Customize shift handoff</span>, select the number of shifts that you want to elapse before a handoff to the next team member in the schedule list. Increasing this number increases the number of times a responder is repeated in the schedule until the next responder is on call. For example, week-by-week coverage with a shift handoff of 2 creates a biweekly shift. Day-by-day coverage with a shift handoff of 2 keeps a responder on-call for 2 shift days until the next responder is on call.
+    </li>
+    <li>
+        Under <span class="guilabel">Add responders</span>, add one or more team members to the shift. You can add responders to a shift more than once.
+
+
+        <ol style="list-style-type: lower-alpha !important;">
+            <li>
+                Enter team member names and select them when they appear. If you added a teams tag, the team members from this team are listed at the top of this menu. Select <span class="guilabel">Add all members from [TEAM]</span> to quickly add all the team members from that team. The <span class="guilabel">ALL</span> section of the team member list comes from the Observability Cloud user list. See <a href="https://docs.splunk.com/Observability/admin/users/manage-users.html">Create and manage users in Splunk Observability Cloud</a> for more info.
+            </li>
+            <li>Drag responders in the list to reorder.</li>
+        </ol>
+    </li>
+    <li>
+        Select <span class="guilabel">Save shift</span>. Shifts are added to the <span class="guilabel">SAVED SHIFTS</span> list under the schedule name. You must have at least one shift saved per schedule. To edit a previously-saved shift, select the pencil icon next to the shift. To delete a shift select the trash icon next to the shift.
+    </li>
+    <li>
+        Repeat these steps to add shifts to the schedule as needed. Select <span class="guilabel">Back to all schedules</span> when you are finished adding shifts to your on-call schedule.
+    </li>
+</ol>

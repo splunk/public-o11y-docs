@@ -45,6 +45,8 @@ This custom configuration is merged into the default agent configuration.
 
 .. caution:: After merging the files you need to fully redefine parts of the configuration, for example ``service``, ``pipelines``, ``logs``, and ``processors``.
 
+.. _otel-kubernetes-config-advanced-control-plane:
+
 Override a control plane configuration
 ==============================================================
 
@@ -61,8 +63,8 @@ Availability and configuration instructions
 
 The following distributions are supported:
 
-* Kubernetes 1.22 (kops created)
-* OpenShift version 4.9
+* Kubernetes 
+* OpenShift 
 
 The following distributions are not supported:
 
@@ -91,13 +93,14 @@ There is a known limitation for the Kubernetes proxy control plane receiver. Whe
 #. Set ``kubeProxy.metricsBindAddress: 0.0.0.0`` in the kops cluster specification.
 #. Run ``kops update cluster {cluster_name}`` and ``kops rolling-update cluster {cluster_name}`` to deploy the change.
 
-Using custom configurations for non-standard control plane components
+Use custom configurations for non-standard control plane components
 -----------------------------------------------------------------------------
 
-You can override the default configuration values used to connect to the control plane. If your control plane uses nonstandard ports or custom TLS settings, you need to override the default configurations. The following example shows how to connect to a nonstandard API server that uses port 3443 for metrics and custom TLS certs stored in the /etc/myapiserver/ directory.
+You can override the default configuration values used to connect to the control plane. If your control plane uses nonstandard ports or custom TLS settings, you need to override the default configurations. 
+
+The following example shows how to connect to a nonstandard API server that uses port ``3443`` for metrics and custom TLS certs stored in the /etc/myapiserver/ directory.
 
 .. code-block:: yaml
-
 
   agent:
     config:
@@ -122,18 +125,18 @@ You can override the default configuration values used to connect to the control
 Run the container in non-root user mode
 ==================================================
 
-Collecting logs often requires reading log files that are owned by the root user. By default, the container runs with `securityContext.runAsUser = 0` which gives the `root` user permission to read those files.
-To run the container in `non-root` user mode, set `.agent.securityContext`. The log data permissions will be adjusted to match the securityContext configurations. For instance:
+Collecting logs often requires reading log files that are owned by the root user. By default, the container runs with ``securityContext.runAsUser = 0``, which gives the ``root`` user permission to read those files.
+
+To run the container in ``non-root`` user mode, use ``agent.securityContext`` to adjust log data permissions to match the ``securityContext`` configurations. For instance:
 
 .. code-block:: yaml
 
+  agent:
+    securityContext:
+      runAsUser: 20000
+      runAsGroup: 20000
 
-agent:
-  securityContext:
-     runAsUser: 20000
-     runAsGroup: 20000
-
-.. note:: Running the collector agent for log collection in non-root mode is not currently supported in CRI-O and OpenShift environments at this time, for more details see the :new-page:`related GitHub feature request issue <https://github.com/signalfx/splunk-otel-collector-chart/issues/891>`.
+.. note:: Running the collector agent for log collection in non-root mode is not currently supported in CRI-O and OpenShift environments at this time. For more details, see the :new-page:`related GitHub feature request issue <https://github.com/signalfx/splunk-otel-collector-chart/issues/891>`.
 
 Use the Network Explorer to collect telemetry
 ==================================================
@@ -307,5 +310,87 @@ Support of Pod Security Policies (PSP) was removed in Kubernetes 1.25. If you st
 
   .. code-block:: yaml
 
-
     helm install my-splunk-otel-collector -f my_values.yaml splunk-otel-collector-chart/splunk-otel-collector
+
+Configure data persistence queues
+==================================================
+
+Without any configuration, data is queued in memory only. When data cannot be sent, it's retried a few times for up to 5 minutes by default, and then dropped. If, for any reason, the Collector is restarted in this period, the queued data will be gone.
+
+If you want the queue to be persisted on disk if the Collector restarts, set ``splunkPlatform.sendingQueue.persistentQueue.enabled=true`` to enable support for logs, metrics and traces.
+
+By default, data is persisted in the ``/var/addon/splunk/exporter_queue`` directory. To override this path, use the ``splunkPlatform.sendingQueue.persistentQueue.storagePath`` option.
+
+Check the :new-page:`Data Persistence in the OpenTelemetry Collector <https://community.splunk.com/t5/Community-Blog/Data-Persistence-in-the-OpenTelemetry-Collector/ba-p/624583>` for a detailed explantion.
+
+.. note:: Data can only be persisted for agent daemonsets.
+
+Config examples
+-----------------------------------------------------------------------------
+
+Use following in values.yaml to disable data persistense for logs, metrics, or traces:
+
+Logs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: yaml
+
+  agent:
+    config:
+      exporters:
+          splunk_hec/platform_logs:
+            sending_queue:
+              storage: null
+
+
+Metrics
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: yaml
+
+  agent:
+    config:
+      exporters:
+        splunk_hec/platform_metrics:
+          sending_queue:
+            storage: null
+
+Traces
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: yaml
+
+  agent:
+    config:
+      exporters:
+        splunk_hec/platform_traces:
+          sending_queue:
+            storage: null
+
+Support for persistent queue
+-----------------------------------------------------------------------------
+
+The following support is offered:
+
+Support for ``GKE/Autopilot`` and ``EKS/Fargate`` 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Persistent buffering is not supported for ``GKE/Autopilot`` and ``EKS/Fargate``, since the directory needs to be mounted via ``hostPath``.
+
+Also, ``GKE/Autopilot`` and ``EKS/Fargate`` don't allow volume mounts, as Splunk Observability Cloud doesn't manage the underlying infrastructure.
+
+Refer to :new-page:`aws/fargate <https://docs.aws.amazon.com/eks/latest/userguide/fargate.html>` and :new-page:`gke/autopilot <https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-security#built-in-security>` for more information.
+
+Gateway support
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The filestorage extention acquires an exclusive lock for the queue directory.
+
+It's not possible to run persistent buffering if there are multiple replicas of a pod. Even if support could be provided, only one of the pods will be able to acquire the lock and run, while the others will be blocked and unable to operate.
+
+Cluster Receiver support
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The Cluster receiver is a 1-replica deployment of the OpenTelemetry Collector. Because the Kubernetes control plane can select any available node to run the cluster receiver pod (unless ``clusterReceiver.nodeSelector`` is explicitly set to pin the pod to a specific node), ``hostPath`` or ``local`` volume mounts wouldn't work for such environments.
+
+Data persistence is currently not applicable to the Kubernetes cluster metrics and Kubernetes events.

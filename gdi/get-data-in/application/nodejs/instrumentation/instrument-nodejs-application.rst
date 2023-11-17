@@ -1,13 +1,13 @@
 .. _instrument-nodejs-applications:
 
-***************************************************************
-Instrument your Node application for Splunk Observability Cloud
-***************************************************************
+********************************************************************
+Instrument your Node.js application for Splunk Observability Cloud
+********************************************************************
 
 .. meta::
-   :description: The Splunk Distribution of OpenTelemetry Node.js can automatically instrument your Node application or service. Follow these steps to get started.
+   :description: The Splunk Distribution of OpenTelemetry Node.js can automatically instrument your Node.js application or service. Follow these steps to get started.
 
-The Splunk Distribution of OpenTelemetry JS can automatically instrument your Node application and many of the popular node.js libraries your application uses.
+The Splunk Distribution of OpenTelemetry JS can automatically instrument your Node.js application and many of the popular node.js libraries your application uses.
 
 To get started, use the guided setup or follow the instructions manually.
 
@@ -19,7 +19,7 @@ To generate all the basic installation commands for your environment and applica
 #. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`Node.js guided setup <https://login.signalfx.com/#/gdi/scripted/nodejs-tracing/step-1?category=product-apm&gdiState=%7B"integrationId":"nodejs-tracing"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the navigation menu, select :menuselection:`Data Management`. 
+   #. In the navigation menu, select :menuselection:`Data Management`.
 
    #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 
@@ -36,7 +36,7 @@ Install the Splunk Distribution of OpenTelemetry JS manually
 Follow these instructions to install the Splunk Distribution of OpenTelemetry JS:
 
 - :ref:`install-enable-nodejs-agent`
-   - :ref:`enable_profiling_nodejs` 
+   - :ref:`enable_profiling_nodejs`
    - :ref:`enable_automatic_metric_collection_nodejs`
 - :ref:`configure-nodejs-instrumentation`
 - :ref:`nodejs-programmatically-instrument`
@@ -53,7 +53,7 @@ To instrument your Node.js application with the Splunk Distribution of OpenTelem
    .. code-block:: bash
 
       npm install @splunk/otel
-   
+
    To add custom instrumentations, see :ref:`add-custom-instrumentation`.
 
 #. Set the ``OTEL_SERVICE_NAME`` environment variable:
@@ -94,7 +94,7 @@ To instrument your Node.js application with the Splunk Distribution of OpenTelem
 
 #. (Optional) Activate metric collection. See :ref:`enable_automatic_metric_collection_nodejs`.
 
-#. To run your Node application, enter the following command:
+#. To run your Node.js application, enter the following command:
 
    .. code-block:: bash
 
@@ -107,7 +107,7 @@ If no data appears in APM, see :ref:`common-nodejs-troubleshooting`.
 .. _enable_profiling_nodejs:
 
 Activate AlwaysOn Profiling
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------
 
 To activate AlwaysOn Profiling, set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
 
@@ -130,7 +130,7 @@ See :ref:`get-data-in-profiling` for more information. For more settings, see :r
 .. _enable_automatic_metric_collection_nodejs:
 
 Activate metrics collection
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------------------
 
 To activate automatic runtime metric collection, activate the metrics feature using the ``SPLUNK_METRICS_ENABLED`` environment variable. See :ref:`metrics-configuration-nodejs` for more information.
 
@@ -156,7 +156,7 @@ In most cases, the only configuration setting you need to enter is the service n
 Instrument your application programmatically
 -----------------------------------------------------
 
-To have even finer control over the tracing pipeline, instrument your Node application programmatically.
+To have even finer control over the tracing pipeline, instrument your Node.js application programmatically.
 
 To instrument your application programmatically, add the following lines at the beginning of your entry point script, before any instrumentation function is called:
 
@@ -216,7 +216,7 @@ For a list of supported instrumentations, see :new-page:`https://github.com/open
 .. _kubernetes_nodejs_agent:
 
 Deploy the Node.js distribution in Kubernetes
------------------------------------------------------
+=======================================================
 
 To deploy the Splunk Distribution of OpenTelemetry JS in Kubernetes, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
 
@@ -250,7 +250,7 @@ The following example shows how to update a deployment to expose environment var
 .. _export-directly-to-olly-cloud-nodejs:
 
 Send data directly to Splunk Observability Cloud
------------------------------------------------------
+=============================================================
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
@@ -270,11 +270,11 @@ If you need to send data directly to Splunk Observability Cloud, set the followi
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
 
 #. Open the navigation menu in Splunk Observability Cloud.
 #. Select :menuselection:`Settings`.
-#. Select your username. 
+#. Select your username.
 
 The realm name appears in the :guilabel:`Organizations` section.
 

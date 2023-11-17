@@ -12,7 +12,7 @@ The SignalFx Instrumentation for .NET automatically instruments .NET application
 To get started, use the guided setup or follow the instructions manually.
 
 Generate customized instructions using the guided setup
-====================================================================
+===================================================================
 
 To generate all the basic installation commands for your environment and application, use the .NET guided setup. To access the .NET guided setup, follow these steps:
 

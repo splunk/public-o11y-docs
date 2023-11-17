@@ -37,7 +37,7 @@ Arnau creates the ``spring-petclinic`` namespace and deploys the related Java ap
 2. Deploy and configure the Collector
 ======================================================================
 
-Arnau follows the steps described in :ref:`auto-instrumentation-operator` to set up Auto Intrumentation for their clinic apps.
+Arnau follows the steps described in :ref:`auto-instrumentation-java-k8s` to set up Auto Intrumentation for their clinic apps.
 
 After completing the deployment, Arnau is able to see the results using :ref:`APM <get-started-apm>`.
 
@@ -49,8 +49,3 @@ Summary
 ======================================================================
 
 Arnau uses the Collector and the upstream Kubernetes Operator to auto-instrument their Java applications and see the results in APM dashboards. 
-
-Learn more
-======================================================================
-
-To install the Operator for Auto Instrumentation, see :ref:`Install the Collector with the Kubernetes Operator <auto-instrumentation-operator>`.
