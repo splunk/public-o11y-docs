@@ -20,7 +20,7 @@ In the preceding example, the user navigates through the following sequence:
 
    In the Related Content bar at the bottom of the screen, the user sees an Infrastructure tile showing related EC2 instances and selects it. Results are grouped by component. For example, Infrastructure, Logs, APM. Hovering over the tile indicates whether there are any Related Content results to view.
 
-2. Observability Cloud takes the user to Infrastructure where they click the first EC2 instance because it shows the highest CPU utilization. 
+2. Observability Cloud takes the user to Infrastructure where they select the first EC2 instance because it shows the highest CPU utilization. 
 
    In the Related Content bar, the user sees a tile showing logs related to the EC2 instance, so they click it.
 
@@ -60,7 +60,9 @@ The following Infrastructure Monitoring metadata keys are required to enable Rel
 - ``k8s.namespace.name``
 - ``kubernetes.workload.name``
 
-The Splunk Distribution of OpenTelemetry Collector already provides the Infrastructure Monitoring metadata.
+If you're using the Splunk Distribution of the OpenTelemetry Collector for Kubernetes, the required Infrastructure Monitoring metadata is provided. See more at :ref:`otel-install-k8s`.
+
+If you're using other configurations to collect infrastructure data, Related Content won't work out of the box.
 
 Log Observer
 -----------------------------------------------------------------
