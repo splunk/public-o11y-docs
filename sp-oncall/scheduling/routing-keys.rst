@@ -1,3 +1,5 @@
+.. _routing-keys:
+
 Routing Keys in Splunk On-Call
 ------------------------------
 

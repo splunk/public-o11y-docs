@@ -24,6 +24,22 @@ If you are facing any issues when trying to contact us, see XXXXXX Contacting Sp
     :width: 50%
     :alt: A 404 error message stating "Could not find credentials".
 
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 15, 15, 15, 15, 10
+
+   * - :strong:`Capability`
+     - :strong:`Global admin`
+     - :strong:`Alert admin`
+     - :strong:`Team admin`
+     - :strong:`User`
+     - :strong:`Stakeholder`
+
+   * - Change billing contact info
+     - Yes
+     - 
+     - 
 Set up your account
 ================================
 

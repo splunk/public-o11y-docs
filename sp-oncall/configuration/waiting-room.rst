@@ -1,6 +1,8 @@
+.. _waiting-room:
+
 Many resilient monitoring systems will automatically resolve a problem
 without any human interaction required. Paging users for incidents that
-could auto-resolve creates unnecessary noise for your on-call users. To
+could auto-resolve creates unnecessary noise for your on-call users. To
 avoid this issue, you may want to set up a waiting room. This article
 describes the process of setting up a waiting room escalation policy
 that will temporarily hold an incident for a configurable time period to
