@@ -292,7 +292,7 @@ For example, if you want every span to include the key-value pair ``build.id=feb
     
      kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=build.id=feb2023_v2
 
-You can also use the methods shown in :ref:`zeroconfig-java-traces` to configure your instrumentation with the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable.
+You can also use the methods shown in :ref:`zeroconfig-java-traces` to configure your instrumentation with the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable and other environment variables.
 
 See :ref:`advanced-java-otel-configuration` for the full list of supported environment variables.
 
