@@ -1,23 +1,29 @@
-.. _addon-aws-eks:
+.. _install-k8s-addon-eks:
 
-*********************************************************************
-Collector Add-on for AWS EKS
-*********************************************************************
+*******************************************************************************
+Splunk Distribution of the OTel Collector Add-on for AWS EKS
+*******************************************************************************
 
 .. meta::
     :description: AWS Add-on for EKS
+
+An Add-on is a type of app that runs on Splunk Observability Cloud and provides specific capabilities to other apps, such as getting data in, mapping data, or providing saved searches and macros. An add-on is a reusable component that supports other apps across a number of different use cases, and is not typically run as a standalone app. The main benefit of using Add-ons is the ease of deployment compared to standard process to install the OpenTelemetry Collector. 
 
 Amazon Elastic Kubernetes Service (EKS) is a managed container service to run and scale Kubernetes applications in the AWS cloud. Splunk Observability Cloud provides an Add-on available in the AWS marketplace that allows you to seamlessly connect to Amazon EKS to track EKS performance by namespace, cluster, pod or organizational concepts such as team or application. 
 
 For more information, read the official AWS documentation at :new-page:`Amazon EKS add-ons <https://docs.aws.amazon.com/eks/latest/userguide/eks-add-ons.html>`
 
+.. note::
+
+    To see the Add-ons available for the Splunk Platform, refer to :new-page:`Splunk Supported Add-ons <https://docs.splunk.com/Documentation/AddOns>`. 
+
 Benefits
 =============================================================================================
 
-Amazon EKS Add-ons: 
+The Splunk Distribution of the OTel Collector Add-on for AWS EKS: 
 
-* Provide simplified installation, configuration and management of Amazon EKS clusters. 
-* Include the latest security patches, bug fixes, and are validated by AWS to work with Amazon EKS. 
+* Provides simplified installation, configuration and management of Amazon EKS clusters. 
+* Includes the latest security patches, bug fixes, and are validated by AWS to work with Amazon EKS. 
 
 Install the AWS EKS Add-on
 =============================================================================================
@@ -112,4 +118,6 @@ Step 5: Apply the Configuration
 ------------------------------------------------------------
 
 Use the YAML file you've prepared to configure the Add-on with your chosen method: ``eksctl``, the AWS Management Console, or the AWS CLI.
+
+
 

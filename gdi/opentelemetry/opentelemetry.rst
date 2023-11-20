@@ -20,7 +20,6 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     Zero config auto instrumentation <zero-config.rst>
     Discover metric sources automatically <discovery-mode.rst>
     Use the Universal Forwarder <collector-with-the-uf.rst>
-    Collector add-ons <collector-addons.rst>
     Troubleshooting <troubleshooting.rst>
     Commands reference <otel-commands.rst>
     
