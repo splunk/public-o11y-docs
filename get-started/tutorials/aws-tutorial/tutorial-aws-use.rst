@@ -9,9 +9,14 @@ After you've integrated with your AWS services, you can access your data, set up
 View and manage AWS data
 ========================================================================
 
-You can access and view your AWS data with a variety of tools. See the following list:
-* :ref:`<navigators>`
-* :ref:`<dashboards>`
+You can access and view your AWS data with a variety of tools:
+
+* :ref:`tutorial-aws-use-navigators`
+* :ref:`tutorial-aws-use-dashboards`
+* :ref:`tutorial-aws-use-search`
+* :ref:`tutorial-aws-use-manage`
+
+.. _tutorial-aws-use-navigators:
 
 View metrics in Infrastructure Monitoring navigators
 ------------------------------------------------------------------------------
@@ -38,6 +43,8 @@ For more details about using navigators, see :new-page-ref:`use-navigators-imm`.
 
 For more details about working with charts, see :new-page-ref:`data-visualization-charts`.
 
+.. _tutorial-aws-use-dashboards:
+
 View AWS metrics in built-in dashboards
 --------------------------------------------------------------------------------------------
 
@@ -49,12 +56,16 @@ To access these dashboards:
 #. Search for :strong:`AWS`, and the available Amazon Web Services dashboard groups will be displayed. 
 #. Select a link to access a relevant dashboard.
 
+.. _tutorial-aws-use-search:
+
 Search for AWS data
 --------------------------------------------------------------------------------------------
 
 You can search for specific metrics :ref:`using Metric Finder <metric-finder>`, and for metadata using the :ref:`metadata catalog <search-edit-metadata>`.
 
 Learn more at :ref:`data-tools-landing`.
+
+.. _tutorial-aws-use-manage:
 
 Manage your metrics with metrics pipeline management 
 --------------------------------------------------------------------------------------------
