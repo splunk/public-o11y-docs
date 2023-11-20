@@ -9,7 +9,9 @@ After you've integrated with your AWS services, you can access your data, set up
 View and manage AWS data
 ========================================================================
 
-You can access and view your AWS data with a variety of tools. 
+You can access and view your AWS data with a variety of tools. See the following list:
+* :ref:`<navigators>`
+* :ref:`<dashboards>`
 
 View metrics in Infrastructure Monitoring navigators
 ------------------------------------------------------------------------------
