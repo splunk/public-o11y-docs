@@ -23,7 +23,7 @@ To integrate your AWS services with Splunk Observability Cloud, you need:
 Connect with AWS
 ===================================================================================
 
-By default, the preferred method to send Amazon Web Services data is via :ref:`polling (default) <aws-connect-polling>`, which you can set up using Splunk's UI wizard. Optionally, you can also use the Splunk Observability Cloud API.
+By default, the recommended method to send Amazon Web Services data is via :ref:`polling (default) <aws-connect-polling>`, which you can set up using Splunk's UI wizard. Optionally, you can also use the Splunk Observability Cloud API.
 
 Alternatively , you can opt for :ref:`data streaming (Splunk-managed) <aws-connect-ms>`, :ref:`data streaming (AWS-managed) <aws-console-ms>`, or to configure the connection using :ref:`Splunk Terraform <terraform-config>`. Learn more at :ref:`aws-compare-connect`.
 
