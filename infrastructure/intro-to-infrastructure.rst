@@ -54,11 +54,6 @@ The following diagram gives you an overview of the different components and thei
       alert--send-->notification[Notifications]
       end
 
-
-..  image:: /_images/infrastructure/imm-hierarchy.png
-    :width: 80%
-    :alt: This image describes the hierarchy in Splunk Infrastructure Monitoring.
-
 Metrics are the driving components for Splunk Infrastructure Monitoring. To learn more about metrics, see :ref:`get-started-metrics`.
 
 
