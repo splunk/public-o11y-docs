@@ -4,17 +4,17 @@
 Enable Related Content in Splunk Observability Cloud
 *****************************************************************
 
-Observability Cloud uses OpenTelemetry to correlate telemetry types. To enable this ability, your telemetry field names or metadata key names must exactly match the metadata key names used by OpenTelemetry and Splunk Observability Cloud.
+Splunk Observability Cloud uses OpenTelemetry to correlate telemetry types. To enable this ability, your telemetry field names or metadata key names must exactly match the metadata key names used by OpenTelemetry and Splunk Observability Cloud.
 
-When you deploy Splunk Distribution of OpenTelemetry Collector to send your telemetry data to Observability Cloud, your metadata key names are automatically mapped correctly. If you do not use the Splunk Distribution of OpenTelemetry Collector, your telemetry data might have metadata key names that are not consistent with those used by Observability Cloud and OpenTelemetry, and Related Content might not work. In that case, you must change your metadata key names.
+When you deploy the Splunk Distribution of OpenTelemetry Collector to send your telemetry data to Observability Cloud, your metadata key names are automatically mapped correctly. If you do not use the Splunk Distribution of OpenTelemetry Collector, your telemetry data might have metadata key names that are not consistent with those used by Observability Cloud and OpenTelemetry, and Related Content might not work. In that case, you must change your metadata key names.
 
-For example, say Observability Cloud receives the following telemetry data:
+For example, say Splunk Observability Cloud receives the following telemetry data:
 
 - Splunk APM receives a trace with the metadata key ``trace_id: 2b78e7c951497655``
 
 - Splunk Log Observer receives a log with the metadata key ``trace.id:2b78e7c951497655``
 
-Although these refer to the same trace ID value, the log and the trace cannot be correlated in Observability Cloud because the field names, ``trace_id`` and ``trace.id`` do not match. In this case, rename your log metadata key ``trace.id`` to ``trace_id`` using the field copy processor in Logs Pipeline Management. Alternatively, you can re-instrument your log collection to make metadata key names align. When the field names in APM and Log Observer match, the trace and the log with the same trace ID value can be correlated in Observability Cloud. Then, when you are viewing the trace in APM, you can select directly into the log with the same trace ID value and view the correlated log in Log Observer.
+Although these refer to the same trace ID value, the log and the trace cannot be correlated in Splunk Observability Cloud because the field names, ``trace_id`` and ``trace.id`` do not match. In this case, rename your log metadata key ``trace.id`` to ``trace_id`` using the field copy processor in Logs Pipeline Management. Alternatively, you can re-instrument your log collection to make metadata key names align. When the field names in APM and Log Observer match, the trace and the log with the same trace ID value can be correlated in Observability Cloud. Then, when you are viewing the trace in APM, you can select directly into the log with the same trace ID value and view the correlated log in Log Observer.
 
 How to change your metadata key names
 =================================================================
@@ -113,7 +113,7 @@ The following table describes the four methods for remapping log fields:
    * - :strong:`Remapping Method`
      - :strong:`Instructions`
 
-   * - Observability Cloud Logs Pipeline Management
+   * - Splunk Observability Cloud Logs Pipeline Management
      - Create and apply a field copy processor. See the
        :strong:`Field copy processors` section in 
        :ref:`logs-processors` to learn how. 
