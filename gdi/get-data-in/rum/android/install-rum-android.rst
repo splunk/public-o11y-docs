@@ -111,7 +111,7 @@ Follow these steps to install the Android RUM agent using Maven Central:
             // Set the desired version of the RUM agent.
             // See available releases: https://github.com/signalfx/splunk-otel-android/releases
             implementation("com.splunk:splunk-otel-android:+")
-            implementation("com.splunk:opentelemetry-android-instrumentation:+")
+            implementation("io.opentelemetry.android:instrumentation:+")
          //...
          }
 
@@ -122,7 +122,7 @@ Follow these steps to install the Android RUM agent using Maven Central:
             // Set the desired version of the RUM agent.
             // See available releases: https://github.com/signalfx/splunk-otel-android/releases
             implementation 'com.splunk:splunk-otel-android:+'
-            implementation 'com.splunk:opentelemetry-android-instrumentation:+'
+            implementation 'io.opentelemetry.android:instrumentation:+'
          //...
          }
 
