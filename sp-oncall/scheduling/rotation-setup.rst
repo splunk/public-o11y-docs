@@ -55,7 +55,7 @@ On the Rotations tab, Global Admins and Teams Admins have the ability to edit cu
 View or edit rotations
 --------------------------
 
-To rename or delete a rotation select the more menu to the right of the rotation name. To expand the different rotations, select the carrot icon. From there admins have the option to add, remove or reorder users in a shift, edit the shift, or delete the shift.
+To rename or delete a rotation select the more menu to the right of the rotation name. To expand the different rotations, select the caret icon. From there admins have the option to add, remove or reorder users in a shift, edit the shift, or delete the shift.
 
 Add, remove or reorder users in a shift
 ------------------------------------------------

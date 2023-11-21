@@ -34,56 +34,47 @@ In order to view all overrides, only your team's overrides, or only your persona
 
 .. image:: /_images/spoc/override2.png
     :width: 100%
-    :alt: The Creat
+    :alt: Use the drop-down to select which overrides you want to view.
 
-Click the carrot icon to the right of the override to view the
-escalation policies which need to be assigned.
+Select the caret icon to the right of the override to view the escalation policies which need to be assigned.
 
-.. image:: images/override3.png
+.. image:: /_images/spoc/override3.png
+    :width: 100%
+    :alt: Use the drop-down to select which overrides you want to view.
 
-For each escalation policy, pick the user from the dropdown who will be
-assigned to the override.
+For each escalation policy, select the user from the dropdown who will be assigned to the override.
 
-If only a particular escalation policy needs to be assigned and the
-original user is still to be on-call for their other escalation
-policies, be sure to select the original user as the “override user” to
-keep them on-call.
+If only a particular escalation policy needs to be assigned and the original user is still to be on-call for their other escalation policies, be sure to select the original user as the override user to keep them on-call.
 
 Taking an Override
-~~~~~~~~~~~~~~~~~~
+==========================
 
-If you are the user who will be covering someone’s override, simply
-select “Take” next to the escalation policy which you are to cover.
+If you are the user who will be covering someone's override, simply select :guilabel:`Take` next to the escalation policy which you are to cover.
 
-.. image:: images/override4.png
+.. image:: /_images/spoc/override4.png
+    :width: 100%
+    :alt: Select the Take button to cover another team member's override.
 
 View the Override on the On-Call Schedule
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+====================================================
 
-To see the override on the On-Call Schedule, navigate to the On-Call
-Schedule tab within the team for which the user is to be covered.
+To see the override on the On-Call Schedule, navigate to the On-Call Schedule tab within the team for which the user is to be covered.
 
-.. image:: images/oncall1.png
+.. image:: /_images/spoc/oncall1.png
+    :width: 100%
+    :alt: Select the Take button to cover another team member's override.
 
-Expand the on-call schedule by clicking on the carrot icon to right. The
-override will show as an orange block and the user’s username who is now
-on-call for the given time will be present as well.
+Expand the on-call schedule by clicking on the caret icon to right. The override will show as an orange block and the user's username who is now on-call for the given time will be present as well.
 
 Scheduled Overrides via Mobile
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------
 
-To see how to create, assign, and view Scheduled Overrides via mobile
-visit our mobile overrides page
-`HERE <https://help.victorops.com/knowledge-base/mobile-app-schedule-scheduled-overrides/>`__.
+To see how to create, assign, and view Scheduled Overrides using the mobile app, see :ref:`mobile-schedule-overrides`.
 
 Email sent out if Scheduled Overrides remain unassigned
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+============================================================
 
-If there is a scheduled override that remains unassigned and begins
-within the next 7 days, an email will be sent out to Admins (Global
-and/or Team). This email will be sent out at roughly 2 AM UTC with
-reminders to provide coverage on these overrides.  Global Admins will
-see all the account’s overrides in the email within this threshold,
+If there is a scheduled override that remains unassigned and begins within the next 7 days, an email will be sent out to Admins (Global and/or Team). This email will be sent out at roughly 2 AM UTC with reminders to provide coverage on these overrides. Global Admins will see all the account's overrides in the email within this threshold,
 while Team Admins will only receive an email for their Team’s scheduled
 overrides within that upcoming week.
 

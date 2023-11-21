@@ -1,3 +1,5 @@
+.. _mobile-schedule-overrides:
+
 Schedule and Scheduled Overrides from the Mobile App
 ----------------------------------------------------
 
