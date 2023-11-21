@@ -38,6 +38,7 @@ Configuration files
 
 * Kubernetes: Run ``kubectl get configmap my-configmap -o yaml >my-configmap.yaml`` to retrieve the logs.
 * Linux: View the file at ``/etc/otel/collector``.
+* Windows: Configuration files are located inside the ``C:\ProgramData\Splunk\OpenTelemetry Collector`` directory.
 
 Logs and debug logs
 ============================
