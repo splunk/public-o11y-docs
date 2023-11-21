@@ -75,6 +75,8 @@ The following metadata keys are required to enable Related Content for Log Obser
 - ``trace_id``
 - ``span_id``
 
+.. include:: /_includes/log-observer-transition.rst
+
 Enable Related Content
 =================================================================
 
