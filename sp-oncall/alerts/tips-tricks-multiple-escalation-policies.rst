@@ -1,3 +1,6 @@
+.. _mult-escalation-policies:
+
+
 Having multiple escalation policies can be very useful as it allows for
 unique escalation paths for different types and severities of alerts
 within a single team.

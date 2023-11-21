@@ -85,34 +85,21 @@ escalation policy is connected to the correct routing key.
 
 
 
-**Features and Benefits of using Multiple Escalation Policies**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Features and Benefits of using Multiple Escalation Policies
+===================================================================
 
--  **Flexible SLA Configurability**: Create urgent escalation policies
-   that notify many people quickly for high-priority issues and relaxed
-   escalation policies that merely send emails to distribution groups
+- Flexible SLA Configurability: Create urgent escalation policies that notify many people quickly for high-priority issues and relaxed escalation policies that merely send emails to distribution groups.
 
--  **Waiting Rooms**: Send incidents that often auto-resolve to `Waiting
-   Rooms <https://help.victorops.com/knowledge-base/waiting-room/>`__ to
-   give them a chance to do so before alerting anyone
+- Waiting Rooms: Send incidents that often auto-resolve to :ref:`Waiting rooms <waiting-room>` to give them a chance to do so before alerting anyone.
 
--  **Schedule Views**:  Surface the on-call schedules for each
-   escalation policy via separate calendar links
+- Schedule Views: Surface the on-call schedules for each escalation policy via separate calendar links.
 
--  **Internal Team Rerouting**:  Reroute easily within your team by
-   setting up primary and secondary escalation policies
+- Internal Team Rerouting:Reroute easily within your team by setting up primary and secondary escalation policies.
 
--  **Flexible Take On-Call**:  Take on-call for the primary or the
-   secondary escalation policy
+- Flexible Take On-Call: Take on-call for the primary or the secondary escalation policy.
 
--  **Flexible Manual Incident Creation**:  Send a manual incident to
-   separate escalation policies
+- Flexible Manual Incident Creation: Send a manual incident to separate escalation policies.
 
--  **Reuse Policies Across Teams**:  Reuse globally available escalation
-   policies across multiple teams
+- Reuse Policies Across Teams: Reuse globally available escalation policies across multiple teams.
 
-For more detailed examples on how to benefit from the use of multiple
-escalation policies, please see our `Tips and Tricks for Multiple
-Escalation
-Policies <https://help.victorops.com/knowledge-base/tips-tricks-multiple-escalation-policies/>`__
-article.
+For more detailed examples on how to benefit from the use of multiple escalation policies, see :ref:`mult-escalation-policies`.

@@ -1,3 +1,6 @@
+
+.. _manual-take-call:
+
 Manual Take On-Call
 ===================
 

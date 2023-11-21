@@ -1,43 +1,40 @@
-Scheduled Overrides allow users to request on-call coverage for planned
-absences. If a current shift needs to be covered on short notice, visit
-the `Manual
-Take <https://help.victorops.com/knowledge-base/manual-take-call/>`__
-article to learn how to perform a manual take.
+.. _scheduled-overrides:
 
---------------
+========================================
+Scheduled Overrides
+=========================================
+
+.. meta::
+   :description: Scheduled Overrides allow users to request on-call coverage for planned absences.
+
+
+Scheduled Overrides allow users to request on-call coverage for planned absences. If a current shift needs to be covered on short notice, see :ref:`manual-take-call`.
+
 
 Scheduling an Override
-~~~~~~~~~~~~~~~~~~~~~~
+=============================
 
-From within any team’s page select, *Scheduled Overrides,* and then,
-*Schedule an Override.*
+From within any team's page select, :guilabel:`Scheduled Overrides` and then :guilabel:`Schedule an Override`. You can then choose who the override will be for as well as the start and end dates and times.
 
-A pop-out window will appear to choose who the override will be for as
-well as the start and end dates and times.
+.. image:: /_images/spoc/override1-1.png
+    :width: 100%
+    :alt: The Create Scheduled Override allows you to choose who the override is for and when.
 
-.. image:: images/override1-1.png
+.. note:: Overrides can not be scheduled within 30 minutes of the current time.
 
- 
-
-**NOTE:** Overrides can not be scheduled within 30 minutes of the
-current time.
-
-**Once the override has been created, a user (or users) still need to be
-assigned to the override!  If the override remains unassigned, the
-original user will remain on-duty.**
+Once the override has been created, a user still need to be assigned to the override. If the override remains unassigned, the original user will remain on-duty.
 
 Assigning an Override
-~~~~~~~~~~~~~~~~~~~~~
+=========================
 
-**NOTE:** Global Admins can assign anyone to scheduled overrides, while
-Team Admins are able to create and assign overrides for anyone on their
-team.
+Global Admins can assign anyone to scheduled overrides, while Team Admins are able to create and assign overrides for anyone on their team.
 
-In order to view all overrides, only your team’s overrides, or only your
-personal overrides, make sure to select the desired view on the
-drop-down under the scheduled override description.
+In order to view all overrides, only your team's overrides, or only your personal overrides, make sure to select the desired view on the drop-down under the scheduled override description.
 
-.. image:: images/override2.png
+
+.. image:: /_images/spoc/override2.png
+    :width: 100%
+    :alt: The Creat
 
 Click the carrot icon to the right of the override to view the
 escalation policies which need to be assigned.
