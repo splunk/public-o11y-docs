@@ -1,77 +1,61 @@
-A virtually limitless number of scheduling options can be configured in
-VictorOps.  This article will walk through how to configure some of the
-most popular ones.
 
-Note: Only Global and `Team
-Admins <https://help.victorops.com/knowledge-base/how-to-set-up-team-admins/>`__
-in VictorOps have the ability to create and edit schedules.
+.. _schedule-examples:
+
+************************************************************************
+Schedule examples
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
+
+
+A virtually limitless number of scheduling options can be configured in Splunk On-Call. Two of the most common scenarios are described in the following sections.
+
+.. note:: Only Global and Team Admins have the ability to create and edit schedules.
 
 Scenario #1
------------
+========================
 
-**Multiple people On-Call during Business Hours, One person takes turns
-doing Nights/Weekends, One person takes turns doing 24x7 Secondary
-coverage**
+Multiple people on-call during business hours. One person takes turns doing nights and weekends, One person takes turns doing 24x7 secondary coverage
 
-Large Points:
+Main points:
 
--  Create a Rotation called “Business Hours” with one Partial Day type
-   shift for each user you would like on-call during Business Hours
--  Create a Rotation called “Nights and Weekends” with one Partial Day
-   type shift for the weeknights portion, and one Multi-day type shift
-   for the Weekend
--  Create a Rotation called “Secondary” with a 24/7 type shift
--  Make 3 Escalation Policies that use these rotations with “Notify the
-   on duty users in rotation” actions in Step 1.  Set Step 2 of the
-   Nights and Weekends and Business Hours escalation policies to execute
-   the Secondary escalation policy
+- Create a rotation called "Business Hours" with one Partial Day type shift for each user you would like on-call during Business Hours.
+- Create a rotation called "Nights and Weekends" with one Partial Day type shift for the weeknights portion, and one Multi-day type shift for the weekend.
+- Create a rotation called "Secondary" with a 24/7 type shift
+- Make three escalation policies that use these rotations with "Notify the on duty users in rotation" actions in Step 1. Set Step 2 of the Nights and Weekends and Business Hours escalation policies to execute the Secondary escalation policy
 
-**Process:**
 
-**Business Hours rotation**
+Configure the Business Hours rotation
+----------------------------------------------
 
-1. To start, navigate to the team you’d like to implement this schedule
-   on and add all of the appropriate users using the ‘Invite User’
-   button
-2. Next, go to the Rotations tab and click “Add Rotation”
-3. Name the Rotation “Business Hours” and select “Partial Day” for the
-   shift type
-4. Name the first shift either after the user who will be occupying it
-   (i.e. Mike’s Shift) or just call it “Shift 1” and set hours
-5. Click “Save Shift”
+#. To start, navigate to the team you'd like to implement this schedule for and add all of the appropriate users using the :guilabel:`Invite User` button.
+#. Navigate to the :menuselection:`Rotations` tab and select :guilabel:`Add Rotation`.
+#. Name the rotation "Business Hours" and select "Partial Day" for the shift type
+    #. Name the first shift either after the user who will be occupying it or just call it "Shift 1" and set the hours.
+    #. Select :guilabel:`Save Shift`.
+    
+    .. note::  Ignore the "Handoff happens every X week" and "The next handoff happens X" fields because this shift is being created with the intent to not handoff.
 
-   -  **Note:** We’re able to ignore the “Handoff happens every X week”
-      and “The next handoff happens X” fields because this shift is
-      being created with the intent to not handoff
+    #. Next, add the appropriate user to this shift by selecting :guilabel:`Manage Members` and then :guilabel:`Select a User to add`.
+    #. After adding the appropriate user, select :guilabel:`Add Another Shift`.
+#. Select :guilabel:`Partial Day` and repeat the process from the previous steps. You will end up creating one shift for each user you would like on-call simultaneously during the business day.
+#. When finished, select :guilabel:`I'm Done, Save this Rotation`.
 
-6. Next, add the appropriate user to this shift by clicking the Manage
-   Members button and then “Select a User to add…”
-7. After adding the appropriate user, click “Add Another Shift”
-8. Again, select “Partial Day” and repeat the process from the previous
-   steps.  You will end up creating one shift for each user you would
-   like on-call simultaneously during the business day (in my example 4
-   users will be on-call simultaneously)
-9. When finished, click “I’m Done, Save this Rotation”
+Configure the Nights and Weekends rotation
+----------------------------------------------
 
-**Nights and Weekends Rotation**
-
-1.  We’ll now create the “Nights and Weekends” rotation by clicking “Add
-    a Rotation”
-2.  Call it “Nights and Weekends” and select “Partial Day” for the first
-    shift type
-3.  Call the first shift “Weeknights”
-4.  Click on where it says Monday through Friday in blue lettering and
-    un-check Friday.  Also, change the hours to cover all week-hours
-    that are not covered by the Business Hours rotation (i.e. if your
-    business hours are 8 am - 5 pm, your Weeknights shift should be 5 pm
-    - 8 am.  If your Business Hours are 9 am - 4 pm, your Weeknights
-    shift should be 4 pm - 9 am)
-5.  Change the “The next handoff happens” date to the next upcoming
-    Monday
-6.  Finally, click “Save Shift”
-7.  Next, add the appropriate users to this shift by clicking the Manage
+#.  Create the "Nights and Weekends' rotation by selecting :guilabel:`Add a Rotation`.
+#.  Name the rotation "Nights and Weekends" and select "Partial Day" for the first shift type.
+#.  Name the first shift "Weeknights".
+#.  In the section with Monday through Friday in blue lettering, deselect Friday. Also, change the hours to cover all week-hours that are not covered by the Business Hours rotation. For example, if your  business hours are 8 AM to 5 PM, your Weeknights shift should be 5 PM to 8 AM. If your Business Hours are 9 AM to 4 PM, your Weeknights
+    shift should be 4 PM to 9 AM.
+#.  Change the :guilabel:`The next handoff happens` date to the next upcoming Monday.
+#.  Finally, click “Save Shift”
+#.  Next, add the appropriate users to this shift by clicking the Manage
     Members button and then “Select a User to add…”
-8.  The order that you add the users in will dictate the week they end
+#.  The order that you add the users in will dictate the week they end
     up on-duty (the first user you add will do the current week, the
     next user the week after, the third user the third week…).  You can
     re-order them after adding by dragging them around on the “Members”
