@@ -143,6 +143,10 @@ rst_prolog = """
    :alt: Take shift
    :class: inline-image
 
+   |App Launcher| imagetarget:: /_images/spoc/outlook-launcher.png
+   :alt: App Launcher
+   :class: inline-image
+   
 .. |br| raw:: html
 
    <br />

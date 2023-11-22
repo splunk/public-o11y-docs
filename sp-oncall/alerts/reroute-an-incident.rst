@@ -1,3 +1,5 @@
+.. _reroute-an-incident:
+
 Sometimes, users who are paged for an issue may need to reroute the
 incident, either to another team, or to a specific individual.
  VictorOps offers the ability to route an existing incident to

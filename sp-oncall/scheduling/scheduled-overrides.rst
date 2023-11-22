@@ -69,15 +69,12 @@ Expand the on-call schedule by clicking on the caret icon to right. The override
 Scheduled Overrides via Mobile
 ------------------------------------
 
-To see how to create, assign, and view Scheduled Overrides using the mobile app, see :ref:`mobile-schedule-overrides`.
+For information on how to create, assign, and view Scheduled Overrides using the mobile app, see :ref:`mobile-schedule-overrides`.
 
 Email sent out if Scheduled Overrides remain unassigned
 ============================================================
 
-If there is a scheduled override that remains unassigned and begins within the next 7 days, an email will be sent out to Admins (Global and/or Team). This email will be sent out at roughly 2 AM UTC with reminders to provide coverage on these overrides. Global Admins will see all the account's overrides in the email within this threshold,
-while Team Admins will only receive an email for their Team’s scheduled
-overrides within that upcoming week.
+If there is a scheduled override that remains unassigned and begins within the next 7 days, an email will be sent out to Global and Team Admins. This email will be sent out at roughly 2 AM UTC with reminders to provide coverage on these overrides. Global Admins will see all the account's overrides in the email within this threshold, while Team Admins will only receive an email for their Team's scheduled overrides within that upcoming week.
 
-In order to not receive these emails, all scheduled overrides need to be
-assigned to either another user or the original user as the “override
-user” to keep them on-call.
+In order to not receive these emails, all scheduled overrides need to be assigned to either another user or the original user as the override
+user to keep them on-call.
