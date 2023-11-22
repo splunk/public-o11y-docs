@@ -73,7 +73,7 @@ Follow these steps to automatically instrument your application:
 
             SetEnv SIGNALFX_SERVICE_NAME="<my-service-name>"
             SetEnv SIGNALFX_ENDPOINT_URL='http://localhost:9080/v1/trace'
-            SetEnv SIGNALFX_TRACE_GLOBAL_TAGS="deployment.environment<my_environment>"
+            SetEnv SIGNALFX_TRACE_GLOBAL_TAGS="deployment.environment:<my_environment>"
 
       .. tab:: Terminal
 
