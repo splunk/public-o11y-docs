@@ -1,3 +1,13 @@
+.. _user-role:
+
+************************************************************************
+Log in with GitHub authentication
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
+
 Log in with GitHub
 ------------------
 
