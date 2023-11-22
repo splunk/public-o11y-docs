@@ -290,6 +290,8 @@ For example, if you want every span to include the key-value pair ``build.id=feb
 
 You can also use the methods shown in :ref:`zeroconfig-dotnet-traces` to configure your instrumentation with the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable and other environment variables.
 
+See :ref:`advanced-dotnet-otel-configuration` for the full list of supported environment variables.
+
 Learn more
 ===========================================================================
 
