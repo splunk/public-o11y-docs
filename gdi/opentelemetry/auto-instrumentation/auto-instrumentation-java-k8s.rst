@@ -46,7 +46,7 @@ If a certification manager (or any other TLS certificate source) is not availabl
 Ingest traces
 ------------------------------------------------
 
-In order to be properly ingest trace telemetry data, the attribute ``environment`` must be on board the exported traces. There are four ways to do this:
+In order to be properly ingest trace telemetry data, the attribute ``environment`` must be onboard the exported traces. There are four ways to do this:
 
 * Set the attribute using ``kubectl``.
 * Add the attribute to ``values.yaml``.
