@@ -237,12 +237,6 @@ NServiceBus
    * - Metric
      - Type
      - Description
-   * - ``http.client.duration_{bucket|count|sum}``
-     - Cumulative counters (histogram)
-     - Duration of outbound HTTP requests, in the form of count, sum, and histogram buckets. This metric originates multiple metric time series, which might result in increased data ingestion costs.
-   * - ``http.server.duration_{bucket|count|sum}``
-     - Cumulative counters (histogram)
-     - Duration of the inbound HTTP request, in the form of count, sum, and histogram buckets. This metric originates multiple metric time series, which might result in increased data ingestion costs.
    * - ``nservicebus.messaging.successes``
      - Cumulative counter
      - Number of messages successfully processed by the endpoint.
