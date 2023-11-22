@@ -16,6 +16,13 @@ The Zero Configuration package provides the following benefits:
 - You can start streaming traces and monitor distributed applications with Splunk APM in minutes.
 - You don't need to configure or instrument your .NET back-end services or applications before deployment.
 
+.. toctree::
+   :hidden:
+   :maxdepth: 3
+
+   auto-instrumentation-dotnet-linux.rst
+   auto-instrumentation-dotnet-k8s.rst
+
 .. _install-the-package-dotnet:
 
 Install the package
