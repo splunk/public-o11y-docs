@@ -10,11 +10,11 @@
 
   * - :strong:`Show Chat`
     - Yes
-    - No
+    - Yes
 
 
   * - :strong:`Training`
     - Yes
-    - No
+    - Yes
 
 

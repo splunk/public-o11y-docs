@@ -97,7 +97,7 @@
 
   * - :strong:`View org subscription usage`
     - Yes
-    - Yes
+    - No
     - No
     - Yes
 

@@ -9,13 +9,13 @@
 
   * - :strong:`View Global Data Links`
     - Yes
-    - No
+    - Yes
     - No
     - No
 
   * - :strong:`Create, delete, or clone Global Data Links`
     - Yes
-    - Yes
+    - No
     - No
     - No
 
