@@ -18,10 +18,6 @@ Zero Config Auto Instrumentation for Java requires the following components:
 * The OpenTelemetry Operator, which manages auto-instrumentation of Kubernetes applications. See more in the :new-page:`OpenTelemetry GitHub repo <https://github.com/open-telemetry/opentelemetry-operator>`.
 * A Kubernetes instrumentation object ``opentelemetry.io/v1alpha1``, which configures auto-instrumentation settings for applications.
 
-.. just a guess
-
-* Kubernetes version ``1.28`` or higher.
-
 Deploy the Helm Chart with the Operator enabled
 =========================================================
 
@@ -50,17 +46,22 @@ If a certification manager (or any other TLS certificate source) is not availabl
 Ingest traces
 ------------------------------------------------
 
-In order to be properly ingest trace telemetry data, the attribute ``environment`` must be on board the exported traces. There are three ways to set this attribute:
+In order to be properly ingest trace telemetry data, the attribute ``environment`` must be on board the exported traces. There are four ways to do this:
 
-* Update the environment variable ``OTEL_RESOURCE_ATTRIBUTES``. For example:
-
-   .. code-block:: bash
-
-      kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=environment=prod
-
-* Use the ``values.yaml`` optional environment configuration. You can set the variable globally or set the environment variable by using the instrumentation spec.
+* Set the attribute using ``kubectl``.
+* Add the attribute to ``values.yaml``.
+* Add the attribute to the ``instrumentation`` spec in ``values.yaml``.
+* Add the attribute to your Kubernetes application deployment spec.
 
 .. tabs::
+
+    .. tab:: ``kubectl``
+
+      Update the environment variable ``OTEL_RESOURCE_ATTRIBUTES`` using ``kubectl``. For example:
+
+      .. code-block:: bash
+
+         kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=environment=prod
 
     .. tab:: ``values.yaml``
 
@@ -88,23 +89,25 @@ In order to be properly ingest trace telemetry data, the attribute ``environment
                     - name: OTEL_RESOURCE_ATTRIBUTES
                       value: "deployment.environment=prd-canary-java"
 
-* Update the application deployment YAML file. This method adds the ``deployment.environment`` attribute to all telemetry data from pods that contain the specified environment variable.
+    .. tab:: Deployment ``.yaml`` file
 
-    .. code-block:: yaml
+      Update the application deployment YAML file. This method adds the ``deployment.environment`` attribute to all telemetry data from pods that contain the specified environment variable.
 
-      apiVersion: apps/v1
-      kind: Deployment
-      metadata:
-        name: my-java-app
-      spec:
-        template:
-          spec:
-            containers:
-            - name: my-java-app
-              image: my-java-app:latest
-              env:
-              - name: OTEL_RESOURCE_ATTRIBUTES
-                value: "deployment.environment=prod"
+         .. code-block:: yaml
+
+            apiVersion: apps/v1
+            kind: Deployment
+            metadata:
+            name: my-java-app
+            spec:
+            template:
+               spec:
+                  containers:
+                  - name: my-java-app
+                  image: my-java-app:latest
+                  env:
+                  - name: OTEL_RESOURCE_ATTRIBUTES
+                    value: "deployment.environment=prod"
 
 Verify all the OpenTelemetry resources are deployed successfully
 ==========================================================================

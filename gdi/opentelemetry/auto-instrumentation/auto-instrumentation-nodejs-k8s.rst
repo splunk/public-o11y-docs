@@ -46,34 +46,73 @@ If a certification manager (or any other TLS certificate source) is not availabl
    # If cert-manager is already deployed.
    helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=dev -n monitoring splunk-otel-collector-chart/splunk-otel-collector
 
+.. _zeroconfig-nodejs-traces:
+
 Ingest traces
 ------------------------------------------------
 
-In order to be properly ingest trace telemetry data, the attribute ``environment`` must be on board the exported traces. There are two ways to set this attribute:
+In order to be properly ingest trace telemetry data, the attribute ``environment`` must be on board the exported traces. There are four ways to do this:
 
-* Use the ``values.yaml`` optional environment configuration. For example:
+* Set the attribute using ``kubectl``.
+* Add the attribute to ``values.yaml``.
+* Add the attribute to the ``instrumentation`` spec in ``values.yaml``.
+* Add the attribute to your Kubernetes application deployment spec.
 
-   .. code-block:: yaml
+.. tabs::
 
-      apiVerstion: apps/v1
-      kind: Deployment
-      metadata:
-        name: my-nodejs-app
-      spec:
-        template:
-          spec:
-            containers:
-            - name: my-nodejs-app
-              image: my-nodejs-app:latest 
-              env:
-              - name: OTEL_RESOURCE_ATTRIBUTES
-                value: environment=prod
+    .. tab:: ``kubectl``
 
-* Use the Instrumentation spec with the environment variable ``OTEL_RESOURCE_ATTRIBUTES``. For example:
+      Update the environment variable ``OTEL_RESOURCE_ATTRIBUTES`` using ``kubectl``. For example:
 
-   .. code-block:: bash
+      .. code-block:: bash
 
-      kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=environment=prod
+         kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=environment=prod
+
+    .. tab:: ``values.yaml``
+
+      Add the environment variable using the ``extraEnvs`` option in the ``values.yaml`` file. This adds the ``deployment.environment`` attribute to all telemetry data the Collector receives, including data from automatically-instrumented pods.
+
+      .. code-block:: yaml
+
+          extraEnvs: [OTEL_RESOURCE_ATTRIBUTES=deployment.environment=prod]
+
+    .. tab:: ``values.yaml`` (Instrumentation spec)
+
+      Add the environment variable to the ``instrumentation`` spec as shown in the following example code. This method adds the ``deployment.environment`` attribute to all telemetry data from automatically-instrumented pods.
+
+      .. code-block:: yaml
+
+          operator:
+            enabled: true
+            instrumentation:
+              spec:
+                env: 
+                  - name: OTEL_RESOURCE_ATTRIBUTES
+                    value: "deployment.environment=prod"
+                nodejs:
+                  env: 
+                    - name: OTEL_RESOURCE_ATTRIBUTES
+                      value: "deployment.environment=prd-canary-nodejs"
+
+    .. tab:: Deployment ``.yaml`` file
+
+      Update the application deployment YAML file. This method adds the ``deployment.environment`` attribute to all telemetry data from pods that contain the specified environment variable.
+
+         .. code-block:: yaml
+
+            apiVersion: apps/v1
+            kind: Deployment
+            metadata:
+            name: my-nodejs-app
+            spec:
+            template:
+               spec:
+                  containers:
+                  - name: my-nodejs-app
+                  image: my-nodejs-app:latest
+                  env:
+                  - name: OTEL_RESOURCE_ATTRIBUTES
+                    value: "deployment.environment=prod"
 
 Verify all the OpenTelemetry resources are deployed successfully
 ==========================================================================
@@ -240,6 +279,8 @@ For example, if you want every span to include the key-value pair ``build.id=feb
   .. code-block:: bash
     
      kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=build.id=feb2023_v2
+
+You can also use the methods shown in :ref:`zeroconfig-nodejs-traces` to configure your instrumentation with the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable and other environment variables.
 
 See :ref:`advanced-nodejs-otel-configuration` for the full list of supported environment variables.
 
