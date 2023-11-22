@@ -11,9 +11,9 @@
 
   * - :strong:`View General Settings`
     - Yes
-    - Yes
-    - Yes
-    - Yes
+    - No
+    - No
+    - No
 
   * - :strong:`View Organization Overview`
     - Yes
@@ -23,9 +23,9 @@
 
   * - :strong:`View org access tokens`
     - Yes
-    - No
-    - No
-    - No
+    - Yes
+    - Yes
+    - Yes
 
   * - :strong:`Create, activate, edit, or deactivate an org access token`
     - Yes
