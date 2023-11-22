@@ -111,8 +111,8 @@ Traces instrumentations
      - Experimental Beta
      - Third-party support
      - ``NSERVICEBUS``
-   * - Microsoft.Data.SqlClient and |br| System.Data.SqlClient
-     - Version 3.* is not supported on .NET Framework
+   * - Microsoft.Data.SqlClient, |br| System.Data.SqlClient, |br| System.Data 
+     - Version 3.* is not supported on .NET Framework |br| 4.8.5 and higher |br| versions shipped with .NET Framework
      - Experimental Beta
      - Community support
      - ``SQLCLIENT``
