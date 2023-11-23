@@ -644,14 +644,14 @@ To migrate to the OpenTelemetry Collector eBPF Helm chart, follow these steps:
    .. code-block:: yaml
 
       gateway:
-      enabled: true
+        enabled: true
 
 2. Disable the ``networkExplorer`` setting in the Splunk OpenTelemetry Collector Helm chart:
 
    .. code-block:: yaml
 
       networkExplorer:
-      enabled: false
+        enabled: false
 
 3. Retrieve the name of the Splunk OpenTelemetry Collector gateway service:
 
