@@ -1,32 +1,35 @@
-The Splunk On-Call and `Big Panda <https://www.bigpanda.io/>`__
-integration allows you to surface incidents from your Big Panda account
+.. _bigpanda-spoc:
+
+Big Panda for Splunk On-Call
+******************************************
+
+.. meta::
+    :description: Configure the Big Panda integration for Splunk On-Call.
+
+The Splunk On-Call and Big Panda integration allows you to surface incidents from your Big Panda account
 in Splunk On-Call.
 
-[ht_toggle title=“Requirements” id=“” class=“” style=“” ]
+Requirements
+==================
 
--  Any level Splunk On-Call Account and Global or Alert Admin
-   permissions
--  Ability to create Big Panda Notification Webhooks
+This integration is compatible with the following versions of Splunk On-Call:
 
-[/ht_toggle]
+- Starter
+- Growth
+- Enterprise
 
-In Splunk On-Call
------------------
+Ability to create Big Panda Notification Webhooks is required.
 
-To start, navigate to the integrations tab in On-Call and select the Big
-Panda Integration. Next click “Enable Integration” and a new REST
-endpoint will be generated for your org.
+Splunk On-Call configuration
+====================================
 
-In Big Panda
-------------
+Navigate to the integrations tab in On-Call and select the Big Panda Integration. Select :guilabel:`Enable Integration` to generate a new REST endpoint for your org.
 
-Follow this guide to create a notification webhook for the alert you’d
-like to send to On-Call in Big Panda:
-https://docs.bigpanda.io/reference/webhook
+Big Panda configuration
+====================================
 
-When you get to the point where you need to put in an endpoint that Big
-Panda will send the payload to, put in the endpoint from the On-Call Big
-Panda integration page with your desired routing_key filled in.
+Follow this guide to create a notification webhook for the alert you want to send to On-Call: :new-page:`https://docs.bigpanda.io/reference/webhook <https://docs.bigpanda.io/reference/webhook>`.
 
-Once this is saved you should now receive incidents in On-Call from the
-webhook notification that was just configured in Big Panda!
+When you get to the point where you need to put in an endpoint that Big Panda will use to send the payload to, enter the endpoint from the On-Call Big Panda integration page with your desired ``routing_key`` filled in.
+
+After you saved, On-Call starts receiving incidents from the webhook notification that configured in Big Panda.
