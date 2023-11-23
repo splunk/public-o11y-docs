@@ -630,10 +630,56 @@ In the following example, all HTTP metrics along with certain individual interna
        - ebpf_net.codetiming_min_ns
        - ebpf_net.entrypoint_info
 
+.. _ebpf-chart-migrate:
+
+Migrate from networkExplorer to eBPF Helm chart
+=========================================================
+
+Starting from version 0.88 of the Helm chart, the ``networkExplorer`` setting of the Splunk OpenTelemetry Collector Helm chart is deprecated. ``networkExplorer`` settings are fully compatible with the OpenTelemetry Collector eBPF Helm chart, which is supported by Network Explorer.
+
+To migrate to the OpenTelemetry Collector eBPF Helm chart, follow these steps:
+
+1. Make sure that the Splunk OpenTelemetry Collector Helm chart is installed in data forwarding (Gateway) mode:
+
+   .. code-block:: yaml
+
+      gateway:
+      enabled: true
+
+2. Disable the ``networkExplorer`` setting in the Splunk OpenTelemetry Collector Helm chart:
+
+   .. code-block:: yaml
+
+      networkExplorer:
+      enabled: false
+
+3. Retrieve the name of the Splunk OpenTelemetry Collector gateway service:
+
+   .. code-block:: shell
+
+      kubectl get svc | grep splunk-otel-collector-gateway
+
+4. Install the upstream OpenTelemetry Collector eBPF Helm chart pointing to the Splunk OpenTelemetry Collector gateway service:
+
+   .. code-block:: shell
+
+      helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm-charts
+      helm repo update open-telemetry
+      helm install my-opentelemetry-ebpf -f ./otel-ebpf-values.yaml open-telemetry/opentelemetry-ebpf
+
+The otel-ebpf-values.yaml file must have the ``endpoint.address`` option set to the Splunk OpenTelemetry Collector gateway service name captured in the third step.
+
+.. code-block:: yaml
+
+   endpoint:
+     address: <my-splunk-otel-collector-gateway>
+
+Additionally, if you had any custom settings in the ``networkExplorer`` section, you need to move them to the otel-ebpf-values.yaml file. See the :new-page:`OpenTelemetry Collector eBPF values file <https://github.com/open-telemetry/opentelemetry-helm-charts/blob/main/charts/opentelemetry-ebpf/values.yaml>` for more information.
+
 Next steps
 ====================================
 
-Once you set up Network Explorer, you can start monitoring network telemetry metrics coming into your Splunk Infrastructure Monitoring platform using one or more of the following options:
+Once you set up Network Explorer, you can start monitoring network telemetry metrics coming into your Splunk Infrastructure Monitoring platform using 1 or more of the following options:
 
 - Built-in Network Explorer navigators. To see the Network Explorer navigators, follow these steps:
 
