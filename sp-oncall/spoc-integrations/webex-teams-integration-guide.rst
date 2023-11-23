@@ -1,132 +1,103 @@
-"Webex Teams Integration Guide"
+.. _webex-spoc:
 
-The Splunk On-Call and Webex Teams integration allows you to surface
-incidents from your Splunk On-Call account in Webex Teams, notifying you
-where you’re already working and reducing tool switching during
-firefights.
+Webex Teams for Splunk On-Call
+******************************************
 
-[ht_toggle title=“Requirements” id=“” class=“” style=“” ]
+.. meta::
+    :description: Configure the Webex Teams integration for Splunk On-Call.
 
--  Enterprise level Splunk On-Call Account and Global or Alert Admin
-   permissions
--  Webex Teams Account and Moderator permissions
+The Splunk On-Call and Webex Teams integration allows you to surface incidents from your Splunk On-Call account in Webex Teams, notifying you where you're already working and reducing tool switching during emergencies.
 
-[/ht_toggle]
+Requirements
+==================
 
-In Webex Teams
---------------
+This integration is compatible with the following versions of Splunk On-Call:
 
-To start, navigate to the `Incoming Webhooks
-app <https://apphub.webex.com/applications/incoming-webhooks-cisco-systems-38054-23307>`__
-on the Webex App Hub and click the green *Connect* button.  Authenticate
-as required, then click *Accept*.
+- Enterprise
 
-Occasionally, this opens a new Webex tab that spins incessantly. 
-Disregard this, navigate back to the Incoming Webhooks app tab, and
-refresh.  The green *Connect* button should be replaced with
-a *Disconnect* button and towards the bottom of the screen, you’ll be
-prompted to provide a Webhook name and to select a Space for the
-webhook.
+Webex Teams Account and Moderator permissions are required.
 
-.. image:: images/Incoming_Webhooks___Webex_App_Hub.jpg
+Webex Teams configuration
+============================
 
-After providing these, click the *Add* button and copy the Webhook URL
-to your clipboard.
+Follow these steps to set up the Webex Teams integration:
 
-In Splunk On-Call
------------------
+#. Navigate to the :strong:`Incoming Webhooks` app on the Webex App Hub and select :guilabel:`Connect`.
 
-Navigate to *Integrations >> Outgoing Webhooks* and click the blue *Add
-Webhook* button to create a new one.
+#. Authenticate as required, then select :guilabel:`Accept`.
 
-Below are our suggested values for the webhook:
+#. Navigate back to the Incoming Webhooks app tab and refresh.
 
-**Event**: Incident-Triggered
+#. When prompted, provide a webhook name and select a space for the webhook.
 
-**Method:** POST
+   .. image:: images/spoc/webex-webhooks.jpg
+      :alt: Incoming webhooks app
 
-**Content Type:** application/json
+#. Select :guilabel:`Add` and copy the Webhook URL to your clipboard.
 
-**Custom Headers**: none
+Splunk On-Call configuration
+=================================
 
-**To:** 
+Follow these steps to set up the Webex Teams integration:
 
-**Payload:**
+#. Navigate to :guilabel:`Integrations`, guilabel:`Outgoing Webhooks` and select :guilabel:`Add Webhook`.
 
-{ “markdown”:
-“:math:`{{ALERT.entity\_display\_name}}<br>`\ {{ALERT.state_message}}” }
+#. Enter the following values for the new webhook:
 
-Lastly, click *Save*.  An Outgoing Webhook will now be sent to your
-Webex Teams space when an incident is triggered in Splunk On-Call.
+   - :guilabel:`Event`: Incident-Triggered
+   - :guilabel:`Method`: POST
+   - :guilabel:`Content Type`: application/json
+   - :guilabel:`Custom Headers`: none
+   - :guilabel:`To`: Your webhook URL copied from Webex
+   - :guilabel:`Payload`:
 
-[Optional] Only send a notification to Webex for alerts directed to a specific routing key
+      .. code-block:: json
+
+         { “markdown”:
+         “:math:`{{ALERT.entity\_display\_name}}<br>`\ {{ALERT.state_message}}” }
+
+#. Select :guilabel:`Save`.
+
+(Optional) Only send a notification for alerts directed to a specific routing key
 ------------------------------------------------------------------------------------------
 
-With some configuration adjustments, it’s possible to reduce the scope
-of the Outgoing Webhook so that it only successfully posts a message in
-Webex Teams when your specified routing key is present in the Splunk
-On-Call incident.
+You can reduce the scope of the outgoing webhook so that it only posts a message in Webex Teams when your specified routing key is present in the Splunk On-Call incident.
 
-To start, navigate back to the Outgoing Webhook you created
-under *Integrations >> Outgoing Webhooks* and edit the webhook. 
-Navigate to the *To* field and highlight the portion following
+To do so, navigate back to the outgoing webhook you created under :guilabel:`Integrations`, :guilabel:`Outgoing Webhooks` and edit the webhook:
 
-https://webexapis.com/v1/webhooks/incoming/
+#. Navigate to the :guilabel:`To` field and highlight the random string following ``https://webexapis.com/v1/webhooks/incoming/``.
 
-It should be a random string looking something like
-**Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1dFQkhPT0svNTZhZDEzZmMtNWQyNi00YTA3LWI5OTgtNjJiNmQwZTc2NWNm**.
+#. Copy the random string to your clipboard and replace it with ``${{ALERT.webexteams-field}}``. For example, ``https://webexapis.com/v1/webhooks/incoming/${{ALERT.webexteams-field}}``.
 
-Copy this random string to your clipboard and replace it with
-${{ALERT.webexteams-field}}.  The full URL should now look like
+#. Save your changes.
 
-https://webexapis.com/v1/webhooks/incoming/${{ALERT.webexteams-field}}
+#. Navigate to the alert rules engine under :guilabel:`Settings`, :guilabel:`Alert Rules Engine` and select :guilabel:`Add Rule`.
 
-Save your changes.
+#. Specify the routing_key you want to have trigger the message in Webex Teams.
 
-Next, navigate to the Alert Rules Engine under *Settings >> Alert Rules
-Engine* and click the blue *Add Rule* button.
+#. Skip down to the :guilabel:`Transform these alert fields` section and set ``webexteams-field`` to the portion of the
+URL you copied earlier. The following image shows a sample resulting URL:
 
-In the top line, specify the routing_key you’d like to have trigger the
-message in Webex Teams.  Next, skip down to the *Transform these alert
-fields* section and set the **webexteams-field** to the portion of the
-URL you copied earlier.  The resulting rule should look similar to the
-below screenshot.
+.. image:: images/spoc/webex-rules.jpg
+   :alt: Fields for configuring Webex notifications
 
-.. image:: images/Alert_Rules_Engine_-_cmillane-testing-518.jpg
+#. Save the rule.
 
-Click the blue *Save* button to save the rule.  This optional
-configuration is now complete.
+When the routing key you've specified is present on an alert, the rule applies and creates a field called ``webexteams-field`` with the URL portion you pasted in as the value.
 
-When the routing key you’ve specified is present on an alert, this alert
-rule will apply and create a field called *webexteams-field* with a
-value of the URL portion you pasted in.  This *webexteams-field* value
-is then dynamically pulled in on the Outgoing Webhook, completing the
-URL and giving it a valid destination to send to.  For all alerts that
-don’t contain this routing key, the webhook will be attempted and will
-fail as it will be directed to a URL of literally
-https://webexapis.com/v1/webhooks/incoming/${{ALERT.webexteams-field}}.
-
-[Optional] Segment notifications to different Webex Teams spaces based on the routing key of the alert
+(Optional) Segment notifications to different Webex Teams
 ------------------------------------------------------------------------------------------------------
 
-This largely builds off of the previous “[Optional] Only send a
-notification to Webex for alerts directed to a specific routing key”
-section.  This takes it a step further and walks through the creation of
-multiple *Incoming Webhooks* in Webex Teams that direct to different
-spaces.
+To segment notifications to different Webex Teams spaces based on the routing key of the alert, follow these steps:
 
-To start, navigate back to the `Incoming
-Webhooks <https://apphub.webex.com/applications/incoming-webhooks-cisco-systems-38054-23307>`__
-page on the Webex App Hub.  Provide a new webhook name, specify the
-space you want this to sent to, and click *Add*.  Copy the resulting
-Webhook URL to your clipboard.
+#. Navigate to the Incoming Webhooks page on the Webex App Hub.
 
-You can now scroll back up to the `In Splunk
-On-Call <https://help.victorops.com/knowledge-base/webex-teams-integration-guide/#in-splunk-on-call-teams>`__
-section and resume following the instructions from there.  You will
-complete both that and the `[Optional] Only send a notification to Webex
-for alerts directed to a specific routing
-key <https://help.victorops.com/knowledge-base/webex-teams-integration-guide/#optional-only-send-a-notification-to-webex-for-alerts-directed-to-a-specific-routing-key>`__
-section again, specifying the different routing key you’d like to send
-your Webex Space.  Repeat these steps as necessary for all of the
-routing keys and spaces you’d like to integrate with.
+#. Provide a new webhook name.
+
+#. Specify the space you want the notification to be sent to.
+
+#. Select :guilabel:`Add`.
+
+#. Copy the resulting webhook URL to the clipboard.
+
+#. Continue the previous instruction sections specifying the different routing keys you want to send to your Webex Space. Repeat these steps as necessary for all the routing keys and spaces you want to integrate with.
