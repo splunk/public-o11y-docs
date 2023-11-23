@@ -2,7 +2,6 @@
 
 .. _network-explorer-setup:
 
-
 *******************************************************
 Set up Network Explorer
 *******************************************************
@@ -28,17 +27,17 @@ To use Network Explorer with Kubernetes, you must meet the following requirement
         
     * - Environment
       - Network Explorer is supported in Kubernetes-based environments on Linux hosts. Use Helm-based management.
-      
+
     * - Operating system
       - * Linux kernel versions 3.10 to 3.19, 4.0 to 4.20, and 5.0 to 5.19, unless explicitly not allowed. Versions 4.15.0, 4.19.57, and 5.1.16 are not supported
-        * RedHat Linux versions 7.6 or higher 
-        * Ubuntu versions 16.04 or higher 
-        * Debian Stretch+ 
-        * Amazon Linux 2 
-        * Google COS 
+        * RedHat Linux versions 7.6 or higher
+        * Ubuntu versions 16.04 or higher
+        * Debian Stretch+
+        * Amazon Linux 2
+        * Google COS
 
     * - Kubernetes version
-      - Network Explorer is supported on all active releases of Kubernetes. For more information, see :new-page:`Releases <https://kubernetes.io/releases/>` in the Kubernetes documentation. 
+      - Network Explorer is supported on all active releases of Kubernetes. For more information, see :new-page:`Releases <https://kubernetes.io/releases/>` in the Kubernetes documentation.
 
 .. note:: Network Explorer is not compatible with GKE Autopilot clusters.
 
@@ -53,7 +52,7 @@ To use Network Explorer with OpenShift, you must meet the following requirements
         
     * - OpenShift version
       - An on-premises OpenShift cluster or an OpenShift Rosa cluster version 4.12.18 or 4.12.13
-      
+
     * - Admin role
       - You must be an admin in Splunk Observability Cloud to install Network Explorer on OpenShift
 
@@ -70,38 +69,38 @@ Network Explorer consists of the following components:
    * - :strong:`Component`
      - :strong:`Description`
      - :strong:`Required?`
-     - :strong:`Enabled by default?`
+     - :strong:`On by default?`
 
    * - The reducer
      - The reducer takes the data points collected by the collectors and reduces them to actual metric time series (MTS). The reducer also connects to the Splunk Distribution of OpenTelemetry Collector on the OTLP gRPC port.
-     - Yes. Install and configure at least one instance of the reducer.     
+     - Yes. Install and configure at least one instance of the reducer.
      - Yes
 
    * - The kernel collector
      - The Extended Berkeley Packet Filter (eBPF) agent responsible for gathering data points from the kernel. 
-     - Yes. Install and configure the kernel collector on each of your hosts. 
+     - Yes. Install and configure the kernel collector on each of your hosts.
      - Yes
         
-   * - The Kubernetes collector 
-     - The Kubernetes collector further enriches collected data points with additional metadata. 
-     - No. If you want to get additional metadata, install and configure at least one instance of the Kubernetes collector on each Kubernetes cluster. 
+   * - The Kubernetes collector
+     - The Kubernetes collector further enriches collected data points with additional metadata.
+     - No. If you want to get additional metadata, install and configure at least one instance of the Kubernetes collector on each Kubernetes cluster.
      - Yes. If you want to disable the Kubernetes collector, set ``k8sCollector.enabled`` to ``false``.
 
    * - The cloud collector
      - The cloud collector further enriches collected data points with additional metadata.
      - No. If your Kubernetes is hosted by, or installed within, AWS, and you want to get additional metadata, install and configure at least one instance of the cloud collector.
      - No. If you want to enable the cloud collector, set ``cloudCollector.enabled`` to ``true``.
-         
+
 
 .. _install-network-explorer:
 
 Install Network Explorer
 =======================================================================================
 
-For the Splunk Distribution of OpenTelemetry Collector to work with Network Explorer, you must install it in data forwarding (gateway) mode, and perform the following steps:
+For the Splunk Distribution of OpenTelemetry Collector to work with Network Explorer, you must install it in data forwarding (gateway) mode, and follow these steps:
 
-- Enable OTLP gRPC reception by configuring an OTLP gRPC metric receiver on the Gateway.
-- Enable SignalFx export by configuring a SignalFx exporter on the Gateway with the valid realm and access token.
+- Turn on OTLP gRPC reception by configuring an OTLP gRPC metric receiver on the Gateway.
+- Turn on SignalFx export by configuring a SignalFx exporter on the Gateway with the valid realm and access token.
 
 The OTLP gRPC metric receiver and SignalFx exporter are already configured in the Helm chart for the Splunk Distribution of OpenTelemetry Collector, so if you use the Helm chart method to install the Splunk Distribution of OpenTelemetry Collector, you don't need to configure these requirements separately.
 
@@ -117,16 +116,16 @@ The following table shows required parameters for this installation:
        * - ``namespace``
          - The Kubernetes namespace to install into. This value must match the value for the namespace of the Network Explorer.
        * - ``splunkObservability.realm``
-         - Splunk realm to send telemetry data to. For example, ``us0``.   
+         - Splunk realm to send telemetry data to. For example, ``us0``.
        * - ``splunkObservability.accessToken``
-         - The access token for your organization. An access token with ingest scope is sufficient. For more information, see :ref:`admin-org-tokens`.        
+         - The access token for your organization. An access token with ingest scope is sufficient. For more information, see :ref:`admin-org-tokens`.
        * - ``clusterName``
          - An arbitrary value that identifies your Kubernetes cluster.
        * - ``networkExplorer.enabled``
-         - Set this to ``true`` to enable Network Explorer.
+         - Set this to ``true`` to activate Network Explorer.
        * - ``agent.enabled``
          - * If you are adding Network Explorer to an existing Splunk Distribution of OpenTelemetry Collector configuration, leave ``agent.enabled`` as is.
-           * If you are installing a new instance of the Splunk Distribution of OpenTelemetry Collector and only want to collect telemetry from Network Explorer, set this to ``false`` to disable installing the Splunk Distribution of OpenTelemetry Collector in host monitoring (agent) mode on each Kubernetes node.
+           * If you are installing a new instance of the Splunk Distribution of OpenTelemetry Collector and only want to collect telemetry from Network Explorer, set this to ``false`` to turn off installing the Splunk Distribution of OpenTelemetry Collector in host monitoring (agent) mode on each Kubernetes node.
            * If you are installing a new instance of the Splunk Distribution of OpenTelemetry Collector and want to collect telemetry from both Network Explorer and the individual OpenTelemetry Collector agents, set this to ``true``.
        * - ``clusterReceiver.enabled``
          - * If you are adding Network Explorer to an existing Splunk Distribution of OpenTelemetry Collector configuration, leave ``clusterReceiver.enabled`` as is.
@@ -139,7 +138,7 @@ The following table shows required parameters for this installation:
 Example: Install Network Explorer for Kubernetes
 ----------------------------------------------------------
 
-In this example, the reducer, the kernel collector, and the Kubernetes collector are configured. The cloud collector isn't enabled.
+In this example, the reducer, the kernel collector, and the Kubernetes collector are configured. The cloud collector isn't turned on.
 
 Follow these steps to install Network Explorer using the Helm chart method:
 
@@ -204,7 +203,7 @@ Follow these steps to install Network Explorer using the Helm chart method:
 
         sudo yum install -y kernel-devel-$(uname -r)
 
-For additional Splunk Distribution of OpenTelemetry Collector configuration, see :ref:`otel-install-k8s`.     
+For additional Splunk Distribution of OpenTelemetry Collector configuration, see :ref:`otel-install-k8s`.
 
 
 Example: Install Network Explorer for OpenShift
@@ -212,7 +211,7 @@ Example: Install Network Explorer for OpenShift
 
 Follow these steps to install Network Explorer for OpenShift:
 
-#. Each node of an OpenShift cluster runs on Red Hat Enterprise Linux CoreOS, which has SELinux enabled by default. To install the Network Explorer kernel collector, you have to configure Super-Privileged Container (SPC) for SELinux. Run the following script to modify the SELinux SPC policy to allow additional access to ``spc_t`` domain processes. 
+#. Each node of an OpenShift cluster runs on Red Hat Enterprise Linux CoreOS, which has SELinux enabled by default. To install the Network Explorer kernel collector, you have to configure Super-Privileged Container (SPC) for SELinux. Run the following script to modify the SELinux SPC policy to allow additional access to ``spc_t`` domain processes.
 
     .. code-block:: bash
 
@@ -235,7 +234,7 @@ Follow these steps to install Network Explorer for OpenShift:
 #. Run the following commands to deploy the Helm chart.
     
     .. code-block:: bash
-      
+
       helm repo add splunk-otel-collector-chart https://signalfx.github.io/splunk-otel-collector-chart
 
 #. Run the following command to update the Helm chart.
@@ -272,7 +271,7 @@ Follow these steps to install Network Explorer for OpenShift:
 
         oc adm policy add-scc-to-user privileged -z my-splunk-otel-collector-kernel-collector -n <NAMESPACE>
 
-#. Run the following command to update the default security context constraints (SCC) for your OpenShift cluster, so that images are not forced to run as a pre-allocated User Identifier, without granting everyone access to the privileged SCC. 
+#. Run the following command to update the default security context constraints (SCC) for your OpenShift cluster, so that images are not forced to run as a pre-allocated User Identifier, without granting everyone access to the privileged SCC.
 
     .. code-block:: bash
 
@@ -344,7 +343,7 @@ Change the resource footprint of the reducer
 The reducer is a single pod per Kubernetes cluster. If your cluster contains a large number of pods, nodes, and services, you can increase the resources allocated to it.
 
 The reducer processes telemetry in multiple stages, with each stage partitioned into one or more shards, where each shard is a separate thread. Increasing the number of shards in each stage expands the capacity of the reducer.
- 
+
 Change the following parameters in the :new-page:`Splunk Distribution of OpenTelemetry Collector values file <https://github.com/signalfx/splunk-otel-collector-chart/blob/954a4d66c647b0ce2cd47113a247d26c48164b9d/helm-charts/splunk-otel-collector/values.yaml#L1105>` to increase or decrease the number of shards per reducer stage. You can set between 1-32 shards.
 
 The default configuration is 1 shard per reducer stage.
@@ -389,19 +388,19 @@ Customize network telemetry generated by Network Explorer
 
 If you want to collect fewer or more network telemetry metrics, you can update the :new-page:`Splunk Distribution of OpenTelemetry Collector values file <https://github.com/signalfx/splunk-otel-collector-chart/blob/954a4d66c647b0ce2cd47113a247d26c48164b9d/helm-charts/splunk-otel-collector/values.yaml#L1109>`.
 
-The following sections show you how to disable or enable different metrics.
+The following sections show you how to turn off or turn on different metrics.
 
-Enable all metrics, including metrics turned off by default
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Turn on all metrics, including metrics turned off by default
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-    .. code-block:: yaml 
+    .. code-block:: yaml
 
       networkExplorer:
         reducer:
           disableMetrics:
             - none
               
-Disable entire metric categories
+Turn off entire metric categories
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     .. code-block:: yaml 
@@ -414,11 +413,10 @@ Disable entire metric categories
             - dns.all
             - http.all
 
-
-Disable an individual TCP metric
+Turn off an individual TCP metric
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
-    .. code-block:: yaml 
+    .. code-block:: yaml
 
       networkExplorer:
         reducer:
@@ -434,10 +432,10 @@ Disable an individual TCP metric
             - tcp.resets
 
 
-Disable an individual UDP metric
+Turn off an individual UDP metric
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
-    .. code-block:: yaml 
+    .. code-block:: yaml
 
       networkExplorer:
         reducer:
@@ -447,10 +445,10 @@ Disable an individual UDP metric
             - udp.active
             - udp.drops
 
-Disable an individual DNS metric
+Turn off an individual DNS metric
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
-    .. code-block:: yaml 
+    .. code-block:: yaml
 
       networkExplorer:
         reducer:
@@ -461,7 +459,7 @@ Disable an individual DNS metric
             - dns.responses
             - dns.timeouts
 
-Disable an individual HTTP metric
+Turn off an individual HTTP metric
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
     .. code-block:: yaml
@@ -474,7 +472,7 @@ Disable an individual HTTP metric
             - http.active_sockets
             - http.status_code
 
-Disable an internal metric
+Turn off an internal metric
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     .. code-block:: yaml
@@ -492,7 +490,7 @@ Disable an internal metric
 
 .. note:: This list represents the set of internal metrics which are enabled by default.
 
-Enable entire metric categories
+Turn on entire metric categories
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     .. code-block:: yaml 
@@ -506,7 +504,7 @@ Enable entire metric categories
             - http.all
             - ebpf_net.all
 
-Enable an individual TCP metric
+Turn on an individual TCP metric
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     .. code-block:: yaml 
@@ -524,10 +522,10 @@ Enable an individual TCP metric
             - tcp.new_sockets
             - tcp.resets
 
-Enable an individual UDP metric
+Turn on an individual UDP metric
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
-    .. code-block:: yaml 
+    .. code-block:: yaml
 
       networkExplorer:
         reducer:
@@ -537,10 +535,10 @@ Enable an individual UDP metric
             - udp.active
             - udp.drops
 
-Enable an individual DNS metric
+Turn on an individual DNS metric
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
-    .. code-block:: yaml 
+    .. code-block:: yaml
 
       networkExplorer:
         reducer:
@@ -551,7 +549,7 @@ Enable an individual DNS metric
             - dns.responses
             - dns.timeouts
 
-Enable an individual HTTP metric
+Turn on an individual HTTP metric
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
     .. code-block:: yaml
@@ -564,7 +562,7 @@ Enable an individual HTTP metric
             - http.active_sockets
             - http.status_code
 
-Enable an internal metric
+Turn on an internal metric
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
     .. code-block:: yaml
@@ -572,7 +570,7 @@ Enable an internal metric
       networkExplorer:
         reducer:
           enableMetrics:
-            - ebpf_net.span_utilization_fraction 
+            - ebpf_net.span_utilization_fraction
             - ebpf_net.pipeline_metric_bytes_discarded
             - ebpf_net.codetiming_min_ns
             - ebpf_net.entrypoint_info
@@ -595,9 +593,9 @@ In the following example, all HTTP metrics along with certain individual TCP and
             - tcp.new_sockets
             - tcp.resets
             - udp.bytes
-            - udp.packets        
+            - udp.packets
 
-In the following example, all HTTP metrics along with certain individual internal metrics are enabled.
+In the following example, all HTTP metrics along with certain individual internal metrics are turned on.
 
   .. note:: The ``disableMetrics`` flag is evaluated before the ``enableMetrics`` flag.
 
