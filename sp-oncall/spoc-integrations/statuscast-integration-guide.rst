@@ -1,12 +1,19 @@
 .. _statuscast-spoc:
 
-StatusCast
+StatusCast for Splunk On-Call
 ******************************************
 
 .. meta::
     :description: Configure the StatusCast integration for Splunk OnCall.
 
 The StatusCast integration allows you to automatically create and update StatusCast incidents based on Splunk On-Call incidents. The following guide walks you through the setup process.
+
+Requirements
+==================
+
+This integration is compatible with the following versions of Splunk On-Call:
+
+- Enterprise
 
 Set up outgoing webhooks in Splunk On-Call
 ================================================

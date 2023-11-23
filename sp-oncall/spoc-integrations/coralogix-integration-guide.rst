@@ -1,120 +1,97 @@
-[ht_toggle title=“Requirements” id=“” class=“” style=“” ]
+.. _coralogix-spoc:
 
-VictorOps Version Required: Starter, Growth, or Enterprise
+Coralogix for Splunk On-Call
+******************************************
 
-[/ht_toggle]
+.. meta::
+    :description: Configure the Coralogix integration for Splunk On-Call.
 
-Coralogix is a SaaS based log management solution. Combining the
-standard ELK stack with Machine Learning, an enhanced UI and out of the
-box integrations creates a powerful solution that can help make sense of
-the abundance of data produced by your applications and infrastructure.
-Coralogix simplifies and shortens root-cause and impact analysis and
-using its powerful algorithms can identify issues before you or
-customers are aware of them.
+You can integrate Coralogix with Splunk On-Call following these steps.
 
---------------
+Requirements
+==================
 
-In VictorOps
-------------
+This integration is compatible with the following versions of Splunk On-Call:
 
-From the main timeline select **Integrations >> 3rd Party Integrations
->> Coralogix**
+- Starter
+- Growth
+- Enterprise
 
-If the integration has not yet been enabled, click the “Enable
-Integration” button.  Copy the “URL to notify” to your clipboard.
 
-Once you have copied the URL to notify to your clipboard, click on
-**Settings**\ * >> *\ **Routing Keys** page to find your routing key
-configuration.  Decide which routing_key will be used with this
-integration and make sure it is associated to the correct escalation
-policy/policies. For more information on routing keys or instructions on
-creating a new one, please see `this
-article <https://help.victorops.com/knowledge-base/routing-keys/>`__.
+Splunk On-Call configuration
+===================================
 
---------------
+Follow these steps in Splunk On-Call to set up the integration:
 
-In Coralogix
-------------
+#. From the main timeline, select :guilabel:`Integrations`, :guilabel:`3rd Party Integrations`, :menuselection:`Coralogix`. If the integration hasn't been enabled, select :guilabel:`Enable Integration`.
 
-Creating your webhook(s)
-~~~~~~~~~~~~~~~~~~~~~~~~
+#. Copy the value of the :guilabel:`URL to notify` field to your clipboard.
 
-From the main dashboard, click on your username symbol in the upper
-righthand corner and click \_\ **Settings**\ \_\_.\_  Towards the top of
-the screen, navigate to **Webhooks** and then click the blue “+” button
-on the righthand side of the screen.  Provide an Alias for the webhook
-and change the type from the default ‘Slack’ setting to ‘WebHook’. 
-Next, paste in the ‘URL to notify’ that you’d previously copied from
-VictorOps.
+#. After you've copied the URL, select :guilabel:`Settings`, :guilabel:`Routing Keys` to find your routing key
+configuration.
 
-.. image:: images/Coralogix.png
+#. Decide which routing key you want to use with the integration and make sure it's associated to the correct escalation policies. For more information on routing keys or instructions on creating a new one, see :ref:`routing-keys`.
 
-Leave the Method on the default ‘Post’ setting and expand the ‘Edit
-body’ box.  Below is the default payload we recommend sending to
-VictorOps, though you’re welcome to include additional fields if
-applicable.
+Coralogix configuration
+===================================
 
-``{`` ``"message_type": "CRITICAL",`` ``"entity_id": "$ALERT_ID",``
-``"entity_display_name": "$ALERT_NAME",``
-``"alert_severity": "$EVENT_SEVERITY",``
-``"state_message": "$LOG_TEXT",``
-``"description": "$ALERT_DESCRIPTION",``
-``"alert_action": "$ALERT_ACTION",`` ``"alert_url": "$ALERT_URL",``
-``"log_url": "$LOG_URL",`` ``"monitoring_tool": "Coralogix",``
-``"team": "$TEAM_NAME",`` ``"application": "$APPLICATION_NAME",``
-``"subsystem": "$SUBSYSTEM_NAME",`` ``"ipAddress": "$IP_ADDRESS",``
-``"timestamp": "$EVENT_TIMESTAMP",`` ``"hitCount": "$HIT_COUNT"`` ``}``
+Follow these steps in Coralogix to set up the integration.
 
-There are two specific fields of particular note - the **message_type**
-field, which declares the criticality of the alert in VictorOps, and the
-**entity_id** field, which serves as the central identifier of the
-alert.  Below are the accepted values for the **message_type** field
-(more info in `this
-article <https://help.victorops.com/knowledge-base/incident-fields-glossary/>`__):
+Create a webhook
+----------------------------
 
--  CRITICAL
--  WARNING
--  ACKNOWLEDGEMENT
--  INFO
--  RECOVERY
+#. From the main dashboard, select the username symbol in the upper right corner and select :guilabel:`Settings`.
 
-It may be necessary to create multiple webhooks, tied with different
-Alerts in Coralogix (explained below), in order to properly send your
-desired info with desired criticality to VictorOps.  It may also be
-useful to ensure that the entity_id, drawn from the ALERT_ID field in
-Coralogix when following the default payload, remains consistent across
-these alerts with varying criticality.  This will potentially allow
-incidents to auto-acknowledge or auto-resolve in VictorOps when the
-right events trigger these webhooks in Coralogix.
+#. Navigate to :guilabel:`Webhooks` and select the blue :guilabel:`+` button on the righthand side of the screen.
 
-For more information on Custom Alert Webhooks, please refer to
-Coralogix’ documentation at
-https://coralogix.com/tutorials/alert-webhooks/
+#. Provide an alias for the webhook and change the type from `Slack` to `WebHook`.
 
-Testing the webhook
-~~~~~~~~~~~~~~~~~~~
+#. Paste the URL that you previously copied from Splunk On-Call.
 
-After filling out the payload of this webhook, Coralogix offers a
-convenient “Test Configuration” button.  If you’d like to verify that
-your webhook is properly configured to send alerts to VictorOps, click
-this button and check your VictorOps timeline to ensure that the alert
-arrived.
+.. image:: images/spoc/coralogix-webhook.png
+   :alt: Coralogix webhook dialog
 
-Assigning your Webhook to an Alert
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#. Paste the following payload inside :guilabel:`Edit body`:
 
-Once you’ve created the webhook that points towards VictorOps, you’ll
-want to assign it to a Coralogix Alert in order to have the webhook fire
-on the proper events.  In Coralogix’ top nav bar, navigate
-to **Alerts**\ \_.\_  Either select an existing alert or click the ‘New
-Alert’ button.  Apply your intended Alert settings and scroll down to
-the ‘Recipients’ section.  Select the VictorOps webhook that you’d
-previously created and save the Alert.
+   .. code-block:: json
 
-.. image:: images/Slice-1-3.png
+      { "message_type": "CRITICAL", "entity_id": "$ALERT_ID",
+      "entity_display_name": "$ALERT_NAME",
+      "alert_severity": "$EVENT_SEVERITY",
+      "state_message": "$LOG_TEXT",
+      "description": "$ALERT_DESCRIPTION",
+      "alert_action": "$ALERT_ACTION", "alert_url": "$ALERT_URL",
+      "log_url": "$LOG_URL", "monitoring_tool": "Coralogix",
+      "team": "$TEAM_NAME", "application": "$APPLICATION_NAME",
+      "subsystem": "$SUBSYSTEM_NAME", "ipAddress": "$IP_ADDRESS",
+      "timestamp": "$EVENT_TIMESTAMP", "hitCount": "$HIT_COUNT" }
 
-You should now be configured to send Coralogix alerts into VictorOps.
+   The value of ``message_type`` helps identify the type of alert. Valid values are:
 
-Note: It may be necessary to create multiple webhooks and alerts in
-Coralogix to cover all events you’d like surfaced in VictorOps.  For
-detailed assistance, please email victorops-support@splunk.com.
+   -  ``CRITICAL``
+   -  ``WARNING``
+   -  ``ACKNOWLEDGEMENT``
+   -  ``INFO``
+   -  ``RECOVERY``
+
+You might have to create multiple webhooks, tied to different alerts in Coralogix, to properly send alerts with the desired criticality to Splunk On-Call. Make sure that ``entity_id`` value, drawn from the ALERT_ID field in Coralogix when following the default payload, remains consistent across alerts with varying criticality.
+
+For more information on custom alert webhooks, see the official Coralogix documentation.
+
+Test the webhook
+----------------------------
+
+After filling out the payload for a webhook, test the configuration in Coralogix.
+
+Assign an alert to a webhook
+------------------------------
+
+After you've created a webhook that points to Splunk On-Call, assign it to a Coralogix Alert so that the webhook triggers on the proper events:
+
+#. In Coralogix, navigate to :guilabel:`Alerts` and select an existing alert, or select :guilabel:`New Alert`.
+#. Apply your intended alert settings and scroll down to the :guilabel:`recipients` section.
+#. Select the Splunk On-Call webhook that you previously created.
+#. Save the alert.
+
+.. image:: images/spoc/coralogix-recipient.png
+   :alt: Recipients dialog
