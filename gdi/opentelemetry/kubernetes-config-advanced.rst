@@ -146,7 +146,7 @@ You can collect network metrics and analyze them in Network Explorer using the O
 
 To install and configure the eBPF Helm chart, see :ref:`ebpf-chart-setup`.
 
-.. note:: The ``networkExplorer`` setting of the Splunk OpenTelemetry Collector Helm chart is deprecated. For instructions on how to migrate from the ``networkExplorer`` setting to the eBPF Helm chart, see :ref:`ebpf-chart-migrate`.
+.. note:: Starting from version 0.88 of the Helm chart, the ``networkExplorer`` setting of the Splunk OpenTelemetry Collector Helm chart is deprecated. For instructions on how to migrate from the ``networkExplorer`` setting to the eBPF Helm chart, see :ref:`ebpf-chart-migrate`.
 
 Prerequisites
 -----------------------------------------------------------------------------
