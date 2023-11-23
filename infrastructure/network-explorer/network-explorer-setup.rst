@@ -7,7 +7,7 @@ Set up Network Explorer
 *******************************************************
 
 .. meta::
-    :description: Install and configure Network Explorer on Kubernetes systems
+    :description: Install and configure Network Explorer on Kubernetes systems using the OpenTelemetry eBPF Helm chart.
 
 .. note:: The following topic only applies to Kubernetes systems. If you want to set up Network Explorer on other systems, see :ref:`network-explorer-setup-non-k8s`.
 
@@ -18,26 +18,29 @@ Prerequisites
 
 To use Network Explorer with Kubernetes, you must meet the following requirements.
 
- .. list-table::
-    :header-rows: 1
-    :widths: 30 70
+.. list-table::
+   :header-rows: 1
+   :widths: 30 70
 
-    * - :strong:`Prerequisite`
-      - :strong:`Description`
-        
-    * - Environment
-      - Network Explorer is supported in Kubernetes-based environments on Linux hosts. Use Helm-based management.
+   * - :strong:`Prerequisite`
+     - :strong:`Description`
 
-    * - Operating system
-      - * Linux kernel versions 3.10 to 3.19, 4.0 to 4.20, and 5.0 to 5.19, unless explicitly not allowed. Versions 4.15.0, 4.19.57, and 5.1.16 are not supported
-        * RedHat Linux versions 7.6 or higher
-        * Ubuntu versions 16.04 or higher
-        * Debian Stretch+
-        * Amazon Linux 2
-        * Google COS
+   * - Environment
+     - Network Explorer is supported in Kubernetes-based environments on Linux hosts. Use Helm-based management.
 
-    * - Kubernetes version
-      - Network Explorer is supported on all active releases of Kubernetes. For more information, see :new-page:`Releases <https://kubernetes.io/releases/>` in the Kubernetes documentation.
+   * - Operating system
+     - * Linux kernel versions 3.10 to 3.19, 4.0 to 4.20, and 5.0 to 5.19, unless explicitly not allowed. Versions 4.15.0, 4.19.57, and 5.1.16 are not supported
+       * Red Hat Linux versions 7.6 or higher
+       * Ubuntu versions 16.04 or higher
+       * Debian Stretch+
+       * Amazon Linux 2
+       * Google COS
+
+   * - Kubernetes version
+     - Network Explorer requires Kubernetes 1.24 or higher. For more information, see :new-page:`Releases <https://kubernetes.io/releases/>` in the Kubernetes documentation.
+   
+   * - Helm version
+     - Network Explorer requires Helm version 3.9 or higher.
 
 .. note:: Network Explorer is not compatible with GKE Autopilot clusters.
 
