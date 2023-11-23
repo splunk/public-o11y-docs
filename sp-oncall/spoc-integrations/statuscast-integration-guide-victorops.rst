@@ -1,115 +1,76 @@
-About StatusCast and VictorOps
-------------------------------
+.. _statuscast-spoc:
 
-The VictorOps and StatusCast integration allows you to automatically
-create and update StatusCast incidents based on VictorOps incidents. 
-The below guide will walk through the setup process.
+StatusCast
+******************************************
 
-[ht_toggle title=“Requirements” id=“” class=“” style=“” ]
+.. meta::
+    :description: Configure the StatusCast integration for Splunk OnCall.
 
-**Versions Supported:** N/A (SaaS)
+The StatusCast integration allows you to automatically create and update StatusCast incidents based on Splunk On-Call incidents. The following guide walks you through the setup process.
 
-**VictorOps Version Required: Enterprise**
+Set up outgoing webhooks in Splunk On-Call
+================================================
 
-[/ht_toggle]
+In Splunk On-Call, navigate to :guilabel:`Integrations`, :guilabel:`Outgoing Webhooks` and select :guilabel:`Add Webhook`. This creates 2 separate outgoing webhooks as part of the setup.
 
-**Set up Outgoing Webhooks in VictorOps**
------------------------------------------
+.. image:: images/spoc/statuscast-webhooks.png
+   :alt: Outgoing webhook creation dialog
 
-In VictorOps, navigate to *Integrations >> Outgoing Webhooks* and click
-the blue “+ Add Webhook” button.  You’ll end up creating two separate
-Outgoing Webhooks as part of the setup.
+Fill out the following fields:
 
-.. image:: images/image-10.png
+* :guilabel:`Event`: During the setup of the first outgoing webhook, set the field to :menuselection:`Incident-Triggered`. For the second outgoing webhook, set the field to :menuselection:`Incident-Resolved`.
+* :guilabel:`Method`: Set to :menuselection:`POST`.
+* :guilabel:`Content Type`: Set to :menuselection:`application/json`.
+* :guilabel:`To`: Set to ``https://<yourapp>.statuscast.com/webhook/victorops``. Replace ``<yourapp>`` in the URL with your status page name.
+* :guilabel:`Payload`: Your payload tells StatusCast what resource is affected and what the current status is. For example:
 
-**Event** - During the setup of the first Outgoing Webhook, set it
-to *Incident-Triggered*.  For the second, set it to *Incident-Resolved*
-**Method** - set this to *POST* **Content Type** - set this
-*application/json* **Custom Headers** - you do not need to add any
-values to this **To**: - set this to
-https://[yourapp].statuscast.com/webhook/victorops , just replace
-[yourapp] with your status page name. **Payload** - Your payload will
-tell StatusCast what resource is affected and what the current status
-is. While you can customize these values we recommend starting out with:
-
-::
+.. code-block:: text
 
    {
 
-   monitorName: "${{ALERT.monitor_name}}",
-   state: "${{ALERT.entity_state}}"
+      monitorName: "${{ALERT.monitor_name}}",
+      state: "${{ALERT.entity_state}}"
 
    }
 
-The monitor name will correspond to a template in StatusCast. Feel free
-to customize the payload values, however the property names listed above
-are required. The **monitorName** property will map to a corresponding
-template in StatusCast.
+The monitor name corresponds to a template in StatusCast. Customize the payload values while preserving the property names listed as required. The ``monitorName`` property maps to a corresponding template in StatusCast.
 
-**Description** - Not required but we recommend leaving a description in
-case any other VictorOps users may access your webhooks.
+Repeat the previous steps to create another outgoing webhook, this time with an :guilabel:`Event` value of :menuselection:`Incident-Resolved`.
 
-Repeat the above steps to create another Outgoing Webhook, this time
-with an **Event** value of *Incident-Resolved*.
+StatusCast configuration
+==================================
 
-**StatusCast Setup**
---------------------
+To complete the setup, configure your StatusCast account by following these steps:
 
-With that saved you can complete the setup in your StatusCast account,
-log into the administrative portal in a new tab and navigate to the
-**Monitors** section. Here you can create an entry for each monitor in
-your VictorOps account that you want StatusCast to automatically create
-incidents for.
+#. Log into the administrative portal and navigate to the :guilabel:`Monitors` section. Here you can create an entry for each monitor in your Splunk On-Call account that you want StatusCast to automatically create incidents for.
 
-Select *New Monitor* and in the **Choose Provider** drop down select
-VictorOps:
+#. Select :menuselection:`New Monitor` and in the :guilabel:`Choose Provider` menu select :menuselection:`Splunk On-Call`:
 
-.. image:: images/image.png
+.. image:: images/spoc/statuscast-provider.png
+   :alt: Provider menu
 
-Next enter the **Alert Name** for the monitor. This corresponds to the
-monitor name that set off an alert.
+#. Enter the :guilabel:`Alert Name` for the monitor. This corresponds to the monitor name that set off an alert.
 
-.. image:: images/image.png
+.. image:: images/spoc/statuscast-alertname.png
+   :alt: Alert name field
 
-Then enter the **Authored by** which defines who is the author of the
-incident. Don’t worry though, if you page is set to hide authors they
-will still remain hidden.
+#. Enter the :guilabel:`Authored by` value,  which defines who is the author of the incident. If you page is set to hide authors, they remain hidden.
 
-.. image:: images/image.png
+.. image:: images/spoc/statuscast-authoredby.png
+   :alt: Authored by field
 
-The other Incident settings including **Type, Affected components,
-Subject,** and **Message** reflect the same general options you have
-when creating an incident. For more information on this process please
-refer to StatusCast’s `How do I post a new incident or
-status <https://statuscast.com/support/post-new-incident-status/>`__
-article.
+Other incident settings include :guilabel:`Type`, :guilabel:`Affected components`, :guilabel:`Subject`, and :guilabel:`Message`. They reflect the same general options you get when creating an incident. For more information on this process, see :new-page:`How do I post a new incident or status <https://statuscast.com/support/post-new-incident-status/>` in the StatusCast official documentation.
 
-With the incident settings finished, define the actual workflow of the
-incident being posted:
+With the incident settings filled out, define the workflow of the incident you are posting:
 
-**Notify theses employees** – select which employees StatusCast will
-notify when this type of incident gets created. Please note that you can
-select multiple employees.
+:guilabel:`Notify theses employees`: Select which employees StatusCast notifies when this type of incident gets created. You can select multiple employees.
 
-**Wait time** – is the amount of time StatusCast waits before actually
-creating your incident. This is typically used to buffer out incidents
-that are quickly resolved, usually in a matter of a few minutes. If your
-monitoring service already has this built in, then you can set this
-value to 0 and StatusCast will post the incident when it’s received.
+:guilabel:`Wait time`: Amount of time StatusCast waits before creating your incident. This is used to buffer out incidents that are resolved in a matter of minutes. If your monitoring service already has this built in, you can set the value to `0`, which causes StatusCast to post the incident when it's received.
 
-**Combine alerts** – in case your monitoring services sends out multiple
-requests you can choose to combine them to prevent redundant incidents
-from being reported.
+:guilabel:`Combine alerts`: When your monitoring services send out multiple requests, you can choose to combine them to prevent redundant incidents from being reported.
 
-**Auto-publish** – if selected your incident will be automatically
-published, which notifies all subscribers. If this option is turned off
-then your employees will need to activate the post manually, either by
-logging into StatusCast and activating it within the **Dashboard** or by
-simply replying to the notification email.
+:guilabel:`Auto-publish`: If selected, your incident is automatically published, which notifies all subscribers. If this option is turned off, your employees need to activate the post manually, either by logging into StatusCast and activating it within the :guilabel:`Dashboard` or by replying to the notification email.
 
-**Auto-close** – if selected your incident will be closed when your
-monitoring service sends an update. By selecting this you can also enter
-a **Closing Comment** that will be posted.
+:guilabel:`Auto-close`: If selected, your incident is closed when your monitoring service sends an update. By selecting this you can also enter a :guilabel:`Closing Comment` to be posted.
 
-Once you have all the configurations set please *Submit* to save the
-configuration.
+After you have all the configurations set, select :guilabel:`Submit`` to save the configuration.
