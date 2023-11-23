@@ -141,7 +141,7 @@ ASP.NET Core
    * - ``http.server.request.duration_{bucket|count|sum}``
      - Cumulative counters (histogram)
      - Duration of HTTP server requests. Supported only on .NET8+.
-   * - kestrel.active_connections
+   * - ``kestrel.active_connections``
      - Gauge
      - Number of connections that are currently active on the server. Supported only on .NET8+.
    * - ``kestrel.connection.duration_{bucket|count|sum}``
