@@ -1,3 +1,8 @@
+.. _spoc-api:
+
+Splunk On-Call API
+***************************
+
 Follow these steps to configure API calls within your Splunk On-Call
 account. To see all available API calls and configuration steps please
 visit the `API
