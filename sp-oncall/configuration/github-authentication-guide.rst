@@ -5,80 +5,54 @@ Log in with GitHub authentication
 ************************************************************************
 
 .. meta::
-   :description: About the user roll in Splunk On-Call.
+   :description: Use GitHub authentication to log in to Splunk On-Call.
 
 
-Log in with GitHub
-------------------
 
-When logging into VictorOps, you may decide to do so via GitHub
-authentication. If you have a GitHub account, whether you’re a new
-VictorOps user or an existing one, you can log in via GitHub.
+When logging into Splunk On-Call, you may decide to do so via GitHub authentication. If you have a GitHub account, whether you're a new Splunk On-Calls user or an existing one, you can log in using GitHub authentication.
 
-To get started, head to the VictorOps `login
-page <https://portal.victorops.com/membership/>`__:
+The Splunk On-Call Sign in page is available at: :ref:`Splunk On-Call <https://portal.victorops.com/membership/>`.
 
+
+Existing Splunk On-Call Users
+=====================================
+
+If you already have a Splunk On-Call user name:
+
+#. From the :guilabel:`Sign in` page, select :guilabel:`Sign in with GitHub`. You'll  be redirected to GitHub and prompted for your login credentials. If you're currently logged in to GitHub in your browser, skip to step 3.
+#. Enter your GitHub login credentials and select :ref:`Sign in`. If you have two-factor authentication enabled through GitHub, verify your account by entering the verification code.
+#. Select :guilabel:`Authorize VictorOps`to sign in using GitHub authentication.
+
+    .. image:: /_images/spoc/github-auth.png
+       :width: 100%
+       :alt: Authorize Splunk On-Call to use your GitHub authentication.
  
+   After selecting :guilabel:`Authorize VictorOps`, you'll be redirected back to Splunk On-Call to link your GitHub account. 
+#. Enter your Splunk On-Call log in credentials to link your account with your GitHub account.
 
-.. image:: images/Screen-Shot-2018-06-07-at-2.19.30-PM.png
+   .. image:: /_images/spoc/github-auth2.png
+          :width: 100%
+          :alt: Link your GitHub account to your Splunk On-Call credentials.
 
- **Existing VictorOps User**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-From the sign-in screen, select **Sign in with GitHub**. You’ll then be
-taken to GitHub where they’ll ask for your login credentials.
+New Splunk On-Call Users
+=============================
 
-If you aren’t currently logged into GitHub in your browser, you’ll see
-the following page:
+If you don't already have a Splunk On-Call account:
 
- 
-
-.. image:: images/Github-Sign-on-Not-already-signed-in.jpg
-
- 
-
-(Note: If you’re currently logged into GitHub in your browser, you’ll
-skip the page above and see the page below.)
-
-Enter your GitHub login credentials and click **Sign in**. If you have
-two-factor authentication enabled through GitHub, you’ll need to verify
-your account by entering a verification code.
-
-Once you’ve been verified by GitHub, you’ll be brought to the next page
-where you’ll select **Authorize VictorOps** to sign in via GitHub.
-
- 
-
-.. image:: images/Github-Sign-on-authorization.jpg
-
- 
-
-After selecting **Authorize VictorOps**, you’ll be redirected back to
-VictorOps to link your GitHub account. Here, you’ll enter your VictorOps
-login credentials to link your account with your GitHub account:
-
-.. image:: images/Screen-Shot-2018-06-07-at-4.40.39-PM.png
-
-And there you go. You’re now logged into your team’s VictorOps portal!
-
- 
-
-New VictorOps User
-~~~~~~~~~~~~~~~~~~
-
-From the sign-in page, select **Need a VictorOps Account?**. Then, the
-following page will give you an option to register with your GitHub
-account.
-
- 
+#. Navigate to :ref:`Splunk On-Call <https://portal.victorops.com/membership/>`.
+#. Select :guilabel:`Need a Splunk On-Call Account?`.
+#. Select :guilabel:`Register with Github`.
 
 .. image:: images/GitHubAuthNeedVOAcct.png
-
+   .. image:: /_images/spoc/github-auth2.png
+          :width: 100%
+          :alt: Link
 .. image:: images/Screen-Shot-2018-06-08-at-9.40.18-AM.png
 
  
 
-After selecting **Register with GitHub**, you’ll be brought to a page
+After selecting :guilabel:`Register with GitHub`, you’ll be brought to a page
 where you’ll need to enter your GitHub credentials.
 
 (Note: If you’re already logged into GitHub in your browser, you’ll skip
@@ -93,11 +67,11 @@ with GitHub.)
 
  
 
-After selecting to **Authorize VictorOps** in GitHub, you’ll be brought
+After selecting to :guilabel:`Authorize VictorOps` in GitHub, you’ll be brought
 to the VictorOps sign-up form. The Email and Username fields will
 auto-fill with your GitHub information.
 
-Enter the rest of your information and select **Get Started**.
+Enter the rest of your information and select :guilabel:`Get Started`.
 
  
 
