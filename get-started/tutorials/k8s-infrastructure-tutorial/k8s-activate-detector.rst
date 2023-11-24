@@ -36,4 +36,4 @@ Additional resources
 
 This completes the tutorial.
 
-To learn more about concepts in this tutorial, such as managing dashboards and teams, see :ref:`k8s-learn-more`.
+To learn more about concepts in this tutorial, such as managing dashboards and teams, see :ref:`welcome`.

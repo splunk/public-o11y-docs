@@ -267,6 +267,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Tutorials <get-started/tutorials>
+
+.. toctree::
+   :maxdepth:   3
+
    About Mobile TOGGLE <get-started/intro-to-mobile>
 
 .. toctree::
@@ -616,11 +621,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Quick start tutorial <infrastructure/quickstart-imm>
-
-.. toctree::
-   :maxdepth:   3
-
-   Tutorial: monitor your Kubernetes environment in Splunk Observability Cloud <infrastructure/k8s-infrastructure-tutorial/about-k8s-tutorial>
 
 .. toctree::
    :maxdepth:   3
