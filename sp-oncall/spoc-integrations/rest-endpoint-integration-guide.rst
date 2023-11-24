@@ -1,7 +1,7 @@
 .. _spoc-rest-endpoint:
 
-REST Endpoint for Splunk On-Call
-******************************************
+REST Endpoint integration for Splunk On-Call
+**********************************************
 
 .. meta::
     :description: Configure the REST Endpoint integration for Splunk On-Call.

@@ -1,6 +1,6 @@
 .. _bigpanda-spoc:
 
-Big Panda for Splunk On-Call
+Big Panda integration for Splunk On-Call
 ******************************************
 
 .. meta::
