@@ -1,187 +1,130 @@
-About AWS Cloudwatch and Splunk On-Call
----------------------------------------
+.. _aws-cloudwatch-spoc:
 
-The Splunk On-Call (formerly VictorOps) and AWS Cloudwatch integration
-allows you to forward AWS Cloudwatch alerts into Splunk On-Call to
-notify the correct on-call users. Create on-call schedules, rotations,
-and escalation policies in Splunk On-Call, then route AWS alerts based
-on those parameters.
+AWS CloudWatch integration for Splunk On-Call
+**************************************************
 
-When events meet predetermined monitoring criteria, AWS sends an alert
-notification. Then, in the Splunk On-Call timeline, users can route and
-escalate critical alert data to the correct people. With the Splunk
-On-Call and AWS integration, on-call responders can collaborate in
-real-time around system data to reduce MTTA/MTTR and resolve incidents
-faster.
+.. meta::
+    :description: Configure the AWS CloudWatch integration for Splunk On-Call.
 
-[ht_toggle title=“Requirements” id=“” class=“” style=“” ]
 
-**Versions Supported:** N/A (SaaS)
+The Splunk On-Call (formerly VictorOps) and AWS Cloudwatch integration allows you to forward AWS Cloudwatch alerts into Splunk On-Call to notify the correct on-call users. Create on-call schedules, rotations, and escalation policies in Splunk On-Call, then route AWS alerts based on those parameters.
 
-**VictorOps Version Required: **\ Starter, Growth,***\* or
-\****Enterprise***\*
+When events meet predetermined monitoring criteria, AWS sends an alert notification. Then, in the Splunk On-Call timeline, users can route and escalate critical alert data to the correct people. With the Splunk On-Call and AWS integration, on-call responders can collaborate in real-time around system data to reduce MTTA/MTTR and resolve incidents faster.
 
-**What you need to know:**  This integration works with
-**Amazon CloudWatch** only.  **SNS messages sent from other Amazon
-services will fail if sent directly to your CloudWatch endpoint in
-VictorOps**.
+Requirements
+==================
 
-[/ht_toggle]
+This integration is compatible with the following versions of Splunk On-Call:
 
-Our `CloudWatch <http://aws.amazon.com/cloudwatch/>`__ integration
-allows you to send alerts from Amazon’s CloudWatch into your Splunk
-On-Call timeline. This guide assumes that you’ve already set up
-CloudWatch to send alarms to a queue in SNS and that you’re receiving
-them through some other means, such as email. If you need more
-information on how to create a new alarm please consult `Amazon’s
-documentation <http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html>`__.
+- Starter
+- Growth
+- Enterprise
 
-**NOTE: SNS Messages sent from other Amazon services will fail if sent
-directly to the Cloudwatch endpoint in Splunk On-Call.**
+This guide assumes that you've already set up CloudWatch to send alarms to a queue in SNS and that you're receiving
+them through some other means, such as email. If you need more information on how to create a new alarm see Amazon's official documentation.
 
-**Enable AWS Cloudwatch in Splunk On-Call**
--------------------------------------------
+.. note:: This integration works with Amazon CloudWatch only. SNS messages sent from other Amazon services fail if sent directly to your CloudWatch endpoint in Splunk On-Call.
 
-In Splunk On-Call, select *Integrations >> AWS CloudWatch.*
+Turn on AWS Cloudwatch in Splunk On-Call
+=============================================
 
-If the integration has not yet been enabled, click the *Enable
-Integration* button to generate your endpoint URL. Be sure to replace
-the “**$routing_key**” section of your new endpoint with the actual
-routing key you intend to use. If no routing key is included as part of
-the endpoint URL, the subscription will not be confirmed. (To view or
-configure `routing keys in
-VictorOps <https://help.victorops.com/knowledge-base/routing-keys/>`__,
-click *Settings* *>> Routing Keys*)
+In Splunk On-Call, select :guilabel:`Integrations`, :guilabel:`AWS CloudWatch`.
 
-Multiple SNS subscriptions should be pointed towards the same AWS
-CloudWatch endpoint in VictorOps. The subscription will not be confirmed
-if it hits a different endpoint.
+If the integration has not yet been activated, select :guilabel:`Enable Integration` to generate your endpoint URL. Be sure to replace the ``$routing_key`` section of your new endpoint with the routing key you want to use. If no routing key is included as part of the endpoint URL, the subscription isn't confirmed. See :ref:`routing-keys` for more information.
 
---------------
+You can point multiple SNS subscriptions to the same AWS CloudWatch endpoint in Splunk On-Call. The subscription isn't confirmed if it hits a different endpoint.
 
 Linking Splunk On-Call in AWS Simple Notification Service (SNS)
----------------------------------------------------------------
+=======================================================================
 
-From the main AWS Management Console, navigate to your SNS control panel
-by searching for “**SNS**”, in the main search bar.
+From the main AWS Management Console, navigate to your SNS control panel.
 
-.. image:: images/CW4-SNS@2x.png
+.. image:: images/spoc/CW4-SNS@2x.png
+   :alt: AWS console
 
-From the SNS dashboard, choose **Topics** and then select **Create
-topic**.
+From the SNS dashboard, select :guilabel:`Topics` and then select :guilabel:`Create topic`.
 
-.. image:: images/CW5-Topics@2x.png
+.. image:: images/spoc/CW5-Topics@2x.png
+   :alt: Create a topic
 
-Select **Standard** for Type. **Name** your Topic. Then, hit **Create
-Topic** at the bottom.
+Select :guilabel:`Standard` for Type. :guilabel:`Name` your Topic. Then, select :guilabel:`Create Topic`.
 
-.. image:: images/Screen-Shot-2021-11-09-at-8.41.25-PM.png
+.. image:: images/spoc/Screen-Shot-2021-11-09-at-8.41.25-PM.png
+   :alt: Create a topic
 
-Once you’ve created your Splunk On-Call related Topic, you’ll be
-required to create a **Subscription** to the new Topic you created.
+After you've created your Splunk On-Call related Topic, create a :guilabel:`Subscription` to the new Topic you created.
 
-.. image:: images/CW-7@2x.png
+.. image:: images/spoc/CW-7@2x.png
+   :alt: Create subscription
 
-Here you’ll define the protocol type as **HTTPS**, paste in the custom
-endpoint with the desired routing key.
+Define the protocol type as :guilabel:`HTTPS`, paste in the custom endpoint with the desired routing key.
 
-.. image:: images/CW-9@2x.png
+.. image:: images/spoc/CW-9@2x.png
+   :alt: Define the protocol type
 
- 
+When your subscription is confirmed, select :guilabel:`Publish Message`.
 
-Once your subscription is confirmed, select **Publish Message**. In the
-following steps, you’ll be able to send a test incident to Splunk
-On-Call.
+.. image:: images/spoc/CW-10@2x-1.png
+   :alt: Publish message
 
-.. image:: images/CW-10@2x-1.png
+Test the integration
+=================================
 
-Testing the Integration
------------------------
+In the :guilabel:`Publish message` page, add the following payload to the :guilabel:`Message` box. Do not change the formatting. Changes to the payload, including changes to the granularity of ``StateChangeTime`` to microseconds or nanoseconds, result in the failure of Cloudwatch incident delivery to Splunk On-Call.
 
-In the *Publish message* page, add the following payload to
-the *Message* box. **Do not change the formatting.** Changes here,
-including changes to the granularity of StateChangeTime to
-microseconds/nanoseconds, will result in **failure of Cloudwatch
-incident delivery to Splunk On-Call.** 
+.. code-block:: json
 
-Custom Payload
-''''''''''''''
+   {“AlarmName”:“VictorOps - CloudWatch Integration TEST”,“NewStateValue”:“ALARM”,“NewStateReason”:“failure”,“StateChangeTime”:“2017-12-14T01:00:00.000Z”,“AlarmDescription”:“VictorOps
+   - CloudWatch Integration TEST”}
 
-{“AlarmName”:“VictorOps - CloudWatch Integration
-TEST”,“NewStateValue”:“ALARM”,“NewStateReason”:“failure”,“StateChangeTime”:“2017-12-14T01:00:00.000Z”,“AlarmDescription”:“VictorOps
-- CloudWatch Integration TEST”}
+.. image:: images/spoc/CW-13-Publish-Message-body@2x-1.png
+   :alt: Publish message to topic
 
-.. image:: images/CW-13-Publish-Message-body@2x-1.png
+After you've published a message to a topic with the required Splunk On-Call payload, a green bar shows a success message in CloudWatch.
 
-Once you’ve published a message to a topic with the required Splunk
-On-Call payload, you should see a green bar display a success message in
-CloudWatch.
+.. image:: images/spoc/CW-11-green-success-bar@2x.png
+   :alt: Success message in CloudWatch
 
-.. image:: images/CW-11-green-success-bar@2x.png
+Navigate back to Splunk On-Call to see the new incident created.
 
-Navigate back to Splunk On-Call and you should see a new incident
-created.
+.. image:: images/spoc/Screen-Shot-2019-09-03-at-9.59.45-AM.png
+   :alt: New incident created
 
-.. image:: images/Screen-Shot-2019-09-03-at-9.59.45-AM.png
+To send in a ``RECOVERY`` to Splunk On-Call, replace the ``Alarm`` variable in the field ``NewStateValue`` to ``OK`` in the provided payload and publish the message again:
 
-To send in a RECOVERY to Splunk On-Call simply replace the “**Alarm**”
-variable in the field “**NewStateValue**” to “**OK**” in the provided
-payload and publish the message again:
+.. code-block:: text
 
-“NewStateValue”:“OK”
+   “NewStateValue”:“OK”
 
-Auto-Recovery Alarms from CloudWatch
-------------------------------------
+Auto-recovery alarms from CloudWatch
+===========================================
 
-Cloudwatch is where you set the **alerts** that triggers the event that
-sends Splunk On-Call an incident.
+Cloudwatch is where you set the alerts that triggers the event that sends Splunk On-Call an incident.
 
-.. image:: images/Screen-Shot-2021-11-10-at-5.09.41-PM.png
+.. image:: images/spoc/Screen-Shot-2021-11-10-at-5.09.41-PM.png
+   :alt: Alarms section
 
-When setting up the Alarm (or if you are editing one that you have
-already), the second step is to configure the actions for the
-notifications. In here, you want to make sure you set **two**
-different **trigger** **notifications**, one for ‘In Alarm’ and another
-for ‘OK’.
+When setting up the alarm, or if you are editing one that you have already, the second step is to configure the actions for the notifications. Make sure you set two different trigger notifications, one for ``In Alarm`` and another for ``OK``.
 
-Set the first notification as **In Alarm**. Then make sure you tie this
-notification to the **Topic** you just created in SNS. Click **Add
-Notification** after that.
+Set the first notification as ``In Alarm``. Then make sure you tie this notification to the topic you just created in SNS. Select :guilabel:`Add Notification` after that.
 
-.. image:: images/Screen-Shot-2021-11-10-at-5.19.09-PM.png
+.. image:: images/spoc/Screen-Shot-2021-11-10-at-5.19.09-PM.png
+   :alt: Add notificaiton
 
-Set the second notification as **OK**. Make sure again you set the
-right **Topic.** Click **Next** or **Update Alarm** at the end of the
-page.
+Set the second notification as ``OK``. Make sure again you set the right topic. Select :guilabel:`Next` or :guilabel:`Update Alarm` at the end of the page.
 
-|image1|
---------
+.. image:: images/spoc/Screen-Shot-2021-11-10-at-5.22.01-PM.png
+   :alt: Set second notification
 
-When you make sure you add that second notification, if the event
-‘In-Alert’ event that triggered in AWS resolves itself, it will send an
-OK (or Recovery) alert to Splunk On-Call, resolving the incident on
-SpOC’s end.
+If the ``In-Alert`` event that triggered in AWS resolves itself, it sends an ``OK`` or Recovery alert to Splunk On-Call, resolving the incident in Splunk On-Callº.
 
-Required and Custom Fields
---------------------------
+Required and custom fields
+=====================================
 
-For advanced users looking to tailor their Cloudwatch integration, there
-are a few mandates which must be considered. Alerts reaching the
-Cloudwatch alerting endpoint do need to have a basic form. There are
-three fields which must be present within the message sent from
-CloudWatch:
+For advanced users looking to tailor their Cloudwatch integration, there are a few mandates which must be considered. Alerts reaching the Cloudwatch alerting endpoint need to have a basic form. There are 3 fields which must be present within the message sent from CloudWatch:
 
-1. **AlarmName** – This field can be any string and will map to the
-   entity_id. Since the entity_id is the field used to link different
-   alerts together, it is important to maintain a consistent naming
-   convention for each incident.
-2. **NewStateValue** – This field, populated by Cloudwatch, should be
-   either “ALARM”, triggering a critical incident; or “OK” resolving an
-   incident.
-3. **StateChangeTime** – This field, also populated by Cloudwatch, will
-   map to the timestamp used in Splunk On-Call.
+1. :guilabel:`AlarmName`: This field can be any string and maps to the ``entity_id``. Since the ``entity_id`` is the field used to link different alerts together, maintain a consistent naming convention for each incident.
+2. :guilabel:`NewStateValue`: This field, populated by Cloudwatch, can be either ``ALARM``, triggering a critical incident, or ``OK``, resolving an incident.
+3. :guilabel:`StateChangeTime`: This field, also populated by Cloudwatch, maps to the timestamp used in Splunk On-Call.
 
-Additionally, custom fields *can* be added to any message payload so
-long as the required three fields are present and valid.
-
-.. |image1| image:: images/Screen-Shot-2021-11-10-at-5.22.01-PM.png
+Additionally, you can add custom fields to any message payload so long as the required 3 fields are present and valid.
