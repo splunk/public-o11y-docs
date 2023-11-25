@@ -1,3 +1,5 @@
+.. _spoc-alert-aggregation:
+
 **Notification Aggregation**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

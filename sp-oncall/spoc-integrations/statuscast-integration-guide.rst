@@ -1,6 +1,6 @@
 .. _statuscast-spoc:
 
-StatusCast for Splunk On-Call
+StatusCast integration for Splunk On-Call
 ******************************************
 
 .. meta::

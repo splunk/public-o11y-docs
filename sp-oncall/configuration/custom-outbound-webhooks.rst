@@ -1,3 +1,8 @@
+.. _custom-outbound-webhooks:
+
+Custom outbound webhooks in Splunk On-Call
+**********************************************
+
 Connect Splunk On-Call to the tool of your choice using our custom
 outgoing webhooks. Splunk On-Calls outbound webhooks can ‘subscribe’ to
 a number of different Splunk On-Call actions such as incidents or chats.

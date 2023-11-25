@@ -1,6 +1,6 @@
 .. _coralogix-spoc:
 
-Coralogix for Splunk On-Call
+Coralogix integration for Splunk On-Call
 ******************************************
 
 .. meta::

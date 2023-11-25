@@ -1,7 +1,7 @@
 .. _webex-spoc:
 
-Webex Teams for Splunk On-Call
-******************************************
+Webex Teams integration for Splunk On-Call
+********************************************
 
 .. meta::
     :description: Configure the Webex Teams integration for Splunk On-Call.
