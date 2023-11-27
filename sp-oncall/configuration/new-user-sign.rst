@@ -55,97 +55,72 @@ You want to make a username that is recognizable to everyone in your organizatio
 Complete your Profile
 ============================
 
-Once you have successfully created a username and password, VictorOps
-will take you to the `main
-timeline <https://help.victorops.com/knowledge-base/timeline/>`__ of the
-platform. As with any web page in the portal, direct your attention to
-the top right-hand corner of the screen where you can click your
-username then *Your Profile* to complete your set up.
+Once you have successfully created a username and password, Splunk On-Call will take you to the main timeline of the
+org. Select your username in the top right-hand corner of the screen, then :guilabel:`Your Profile` to complete your set up.
 
-.. image:: images/Edit-your-profile.png
 
-From here, you can add additional email addresses as well as up to
-4 phone numbers:
+.. image:: /_images/spoc/user-profile.png
+    :width: 100%
+    :alt: Complete your profile.
 
-.. image:: images/Add-contact-methods-in-your-profile.png
+From here, you can add additional email addresses as well as up to fourphone numbers.
 
-If you add a cell phone number, you will need to verify the number.
-Click *Verify*, to the right-hand side of the phone number you added,
-and we will send a 4 digit SMS short code that will be entered into your
-profile, please see below.
 
-.. image:: images/Verify-your-phone-number.png
+.. image:: /_images/spoc/user-profile2.png
+    :width: 100%
+    :alt: Add additional contact methods.
 
-If you’re adding a landline or a desk phone, enter the desired phone
-number and email support@victorops.com; we will manually verify your
-phone number.
 
---------------
+If you add a cell phone number, you will need to verify the number. Select :guilabel:`Verify`, to the right of the phone number you added, and we will send a four digit SMS short code that you must enter into your
+profile.
+
+.. image:: /_images/spoc/user-profile3.png
+    :width: 100%
+    :alt: Add additional contact methods.
+
+If you're adding a landline or a desk phone, enter the desired phone number and email support@victorops.com. Splunk On-Call Support will manually verify your phone number.
+
 
 Set up your Paging Policy
--------------------------
+==================================
 
-Located shortly below your contact methods, you will see your “Paging
-Policy”. This is how VictorOps will notify you if an incident comes in
-when you are on-call. Build out your Paging Policy to ensure that you
-are properly notified when an incident comes in. You have the option to
-add additional steps within steps, by using the *plus sign* button, or
-you can add additional steps by using the *Add a Step* button.
+Located shortly below your contact methods is the :guilabel:`Paging Policy` section. This is how Splunk On-Call  notifies you if an incident comes in when you are on-call. Build out your Paging Policy to ensure that you are properly notified when an incident comes in. You have the option to add additional steps within steps, by using the plus (+) button, or you can add additional steps by selecting :guilabel:`Add a Step`.
 
-.. image:: images/Set-up-your-paging-policy-in-your-profile-1.png
 
- 
+.. image:: /_images/spoc/user-profile4.png
+    :width: 100%
+    :alt: Build your paging policy.
 
---------------
+
 
 Download the Mobile App
------------------------
+=============================
 
-Please note: in order to receive push notifications, you will need to
-download the mobile app and sign in. Once you have done this, your
-device will appear under your contact methods.
+In order to receive push notifications, you need to download the mobile app and sign in. Once you have done this, your device will appear under your contact methods. For details, see:
 
-`iOS
-App <https://itunes.apple.com/us/app/victorops/id696974262?ls=1&mt=8>`__
+- For iOS, see the :new-page:`Apple store <https://apps.apple.com/us/app/splunk-on-call/id696974262?ls=1>`.
+- For Android, see the :new-page:`Google Play store <https://play.google.com/store/apps/details?id=com.victorops.androidclient&hl=en&pli=1>`
 
-`Android
-App <https://play.google.com/store/apps/details?id=com.victorops.androidclient&hl=en>`__
 
-Download the VictorOps Contact
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Download the Splunk On-Call contact information
+-----------------------------------------------------------
 
-VictorOps uses numerous `phone
-numbers <https://help.victorops.com/knowledge-base/victorops-phone-numbers/>`__,
-to contact you via SMS or Phone call, for an incident. By downloading
-the contact directly from the mobile app, all numbers will be
-automatically added to the contact. Then you can add the contacts to
-your favorites, if desired.
+Splunk On-Call uses several phone numbers to contact you via SMS or phone call for an incident. By downloading
+the contact directly from the mobile app, all numbers will be automatically added to the contact. Then you can add the contacts to your favorites. For details, see: :ref:`mobile-get-started`.
 
-Recover Username
-----------------
+Recover username
+----------------------
 
-Forget your username? Simply select **Forgot username?** to start the
-username recovery process:
+To recover your username:
 
-.. image:: images/Forgot-Username.jpg
+#.  Select :guilabel:`Forgot username?` when signing in to start the username recovery process.
 
-In the subsequent screen, you’ll enter the email address associated with
-your VictorOps account.
 
-Then, in your email client, you’ll receive a message showing your
-VictorOps username. Directly from the email, you’ll select the **Log
-in** button to return to the sign-on page where you can now enter your
-credentials.
+    .. image:: /_images/spoc/user-profile5.png
+       :width: 100%
+       :alt: Select Forgot username? to recover your username
 
-Additional Resources
---------------------
 
-If you have any questions after completing the steps above, or while
-using VictorOps at any point in time, please feel free to utilize one of
-the resources below:
+#. In the subsequent screen, you'll enter the email address associated with your Splunk On-Call account.
+#. In your email client, you'll receive a message showing your Splunk On-Call username. Directly from the email, select the :guilabel:`Log in` to return to the sign-on page where you can now enter your credentials.
 
--  `User Training
-   Videos <https://help.victorops.com/knowledge-base/user-training-videos/>`__
--  support@victorops.com
--  `VictorOps Support Page <https://victorops.com/contact-support/>`__
--  Call Support at: 1-877-318-0960 (Domestic: 720-207-6506)
