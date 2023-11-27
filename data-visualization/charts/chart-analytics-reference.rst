@@ -272,6 +272,8 @@ Calculates the specified percentile of values in data points collected either fr
 
   Outputs one time series for each group of input time series expressing, for each time period, the configured percentile (between 1 and 100, inclusive) of the values present in the input in the time period. The default percentile value is 95.
 
+  For example, when you apply a percentile value of 95 to a data stream with 1,000 metric time series (MTS), you get the value of the 50th biggest MTS for each time period. 
+
 - :strong:`Percentile:Transformation`
 
   For each input time series, outputs a corresponding time series expressing, for each time period, the configured percentile (between 1 and 100, inclusive) of the input time series over a configurable time window leading up to that period. The default percentile value is 95, and the default time window is one hour.
