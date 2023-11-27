@@ -1,15 +1,26 @@
-[ht_toggle title=“Requirements” id=“” class=“” style=“” ]
+.. _single-sign-sso:
 
-**Splunk On-Call Version Required: Full-Stack**
+************************************************************************
+Configure Single Sign-On for Splunk On-Call
+************************************************************************
 
-**What you need to know: To enable SSO for your organization, you will
-need to provide an updated metadata file and your IDP. If you are
-interested in setting up SSO, please contact** `Splunk On-Call
-Support <https://help.victorops.com/knowledge-base/important-splunk-on-call-support-changes-coming-nov-11th/>`__\ **.** 
+.. meta::
+   :description: Enable Splunk On-Call SSO for your organization. 
 
-[/ht_toggle]
 
- 
+
+
+Requirements
+==================
+
+This integration is compatible with the following versions of Splunk On-Call:
+
+- Full-Stack
+
+To enable SSO for your organization, you will need to provide an updated metadata file and your IDP. If you are
+interested in setting up SSO, please contact :ref:`Splunk On-Call Support <spoc-support>`.
+
+\
 
 **This article provides instructions for configuring Single Sign On
 between your Identity Provider (IDP) and** Splunk On-Call\ **.  It also

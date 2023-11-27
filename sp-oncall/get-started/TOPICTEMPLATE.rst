@@ -10,9 +10,19 @@ Get started as user
 
 As a user, you are responsible for taking action on incidents that page you while you are on call. You have access to view and edit your own user information, view your on-call schedule, and the ability to take action on alerts. For permissions and capabilities for all roles, see :ref:`user-roles-permissions`.
 
+
+Requirements
+==================
+
+This integration is compatible with the following versions of Splunk On-Call:
+
+- Enterprise
+
 All users have the ability to reach out to Splunk On-Call support at any time with questions.
 
 Live Chat: If you are logged into your Splunk On-Call instance, you will have the ability to Live Chat with the Splunk On-Call Support team.
+
+
 
 Splunk Support Portal: You can open a Splunk On-Call support case in the Splunk Support Portal :new-page:`Splunk Support Portal <https://login.splunk.com/>`.
 

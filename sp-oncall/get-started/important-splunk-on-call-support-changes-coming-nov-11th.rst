@@ -1,3 +1,7 @@
+
+.. _spoc-support:
+
+
 IMPORTANT Splunk On-Call Support Changes
 ----------------------------------------
 
