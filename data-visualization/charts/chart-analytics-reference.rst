@@ -286,7 +286,7 @@ Identifies the desired percentile value from a set of data points.
 
   The percentile transformation function outputs a data stream for all data points in a specified time period of the input MTS, identifying for each time period, the configured percentile (between 1 and 100, inclusive) of the input MTS over a configurable time window leading up to that period. The default percentile value is 95, and the default time window is 1 hour.
   
-  For example, by applying a percentile value of 95 to the past hour of an MTS with a 10s resolution, you will get the 18th largest value from the past hour. In this example, out of the 360 data points that were received in the hour, approximately 95% of the values are lower than the identified percentile and approximately 5% are higher.
+  For example, by applying a percentile value of 95 to the past hour of an MTS with a 10s resolution, you get the 18th largest value from the past hour. In this example, out of the 360 data points that were received in the hour, approximately 95% of the values are lower than the identified percentile and approximately 5% are higher.
 
   .. note:: The percentile transformation function runs no calculation. The value that represents the 95th percentile is selected from the input.
 
