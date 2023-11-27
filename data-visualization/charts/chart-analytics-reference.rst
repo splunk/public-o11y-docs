@@ -266,17 +266,29 @@ Percentile
 
 SignalFlow function: :new-page:`percentile() <https://dev.splunk.com/observability/docs/signalflow/methods/percentile_stream_method>`
 
-Calculates the specified percentile of values in data points collected either from multiple time series at a point in time (aggregation), or from individual time series over a moving time window (transformation).
+Identifies the desired percentile value from a set of data points.
 
 - :strong:`Percentile:Aggregation`
+  
+  For aggregation, the percentile function is applied to multiple input metric time series (MTS) at each time period.
+  
+  The percentile aggregation function outputs a data stream for each group of input MTS, identifying for each time period the desired percentile (between 1 and 100, inclusive) out of the values from the input MTS. The default percentile value is 95.
 
-  Outputs one time series for each group of input time series expressing, for each time period, the configured percentile (between 1 and 100, inclusive) of the values present in the input in the time period. The default percentile value is 95.
+  For example, by applying a percentile value of 95 to a data stream with 1,000 MTS, you get the value of the 50th biggest MTS for each time period. In this example, approximately 95% of the values are lower than the identified percentile and approximately 5% are higher.
 
-  For example, when you apply a percentile value of 95 to a data stream with 1,000 metric time series (MTS), you get the value of the 50th biggest MTS for each time period. 
+  .. note:: The percentile aggregation function runs no calculation. The value that represents the 95th percentile is selected from the input.
 
 - :strong:`Percentile:Transformation`
 
-  For each input time series, outputs a corresponding time series expressing, for each time period, the configured percentile (between 1 and 100, inclusive) of the input time series over a configurable time window leading up to that period. The default percentile value is 95, and the default time window is one hour.
+  For transformation, the percentile function is applied to all data points of an individual MTS over a time window.
+  
+  The percentile transformation function outputs a data stream for a single MTS, identifying the desired percentile out of all values that occurred over the time period.
+
+  The percentile transformation function outputs a data stream for all data points in a specified time period of the input MTS, identifying for each time period, the configured percentile (between 1 and 100, inclusive) of the input MTS over a configurable time window leading up to that period. The default percentile value is 95, and the default time window is 1 hour.
+  
+  For example, by applying a percentile value of 95 to the past hour of an MTS with a 10s resolution, you will get the 18th largest value from the past hour. In this example, out of the 360 data points that were received in the hour, approximately 95% of the values are lower than the identified percentile and approximately 5% are higher.
+
+  .. note:: The percentile transformation function runs no calculation. The value that represents the 95th percentile is selected from the input.
 
 The :strong:`Percentile` function also supports transformation over a dashboard window instead of a moving window. For more information, see :ref:`dashboard-window`.
 
