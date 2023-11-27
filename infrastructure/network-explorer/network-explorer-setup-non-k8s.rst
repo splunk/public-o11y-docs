@@ -12,7 +12,7 @@ To use Network Explorer on non-Kubernetes systems, you must install the Extended
 Install the eBPF collector
 ==============================
 
-Follow these steps to install and configure the eBPF collector on non-Kubernetes systems: 
+Follow these steps to install and configure the eBPF collector on non-Kubernetes systems:
 
 #. Download the eBPF packages from the :new-page:`GitHub releases page <https://github.com/open-telemetry/opentelemetry-ebpf/releases>`.
 #. Run the following commands to install the reducer, the kernel collector, and the cloud collector components.
@@ -63,9 +63,9 @@ Follow these steps to install and configure the eBPF collector on non-Kubernetes
           * - :strong:`Parameter`
             - :strong:`Value`
           * - ``prom_bind``
-            - IP address and port number on which Prometheus will scrape
+            - IP address and port number on which Prometheus scrapes metrics
           * - ``disable_prometheus_metrics``
-            - ``false``    
+            - ``false``
 
     * If you use the cloud collector, set ``enable_aws_enrichment`` to ``true``.
 
@@ -73,7 +73,7 @@ Follow these steps to install and configure the eBPF collector on non-Kubernetes
 
     .. tabs::
 
-      .. code-tab:: bash Start command 
+      .. code-tab:: bash Start command
   
         systemctl start reducer
 
@@ -90,15 +90,15 @@ Follow these steps to install and configure the eBPF collector on non-Kubernetes
       * - :strong:`Parameter`
         - :strong:`Value`
       * - Intake host
-        - IP address or hostname where the reducer is running
-      * - Intake port 
+        - IP address or host name where the reducer is running
+      * - Intake port
         - Same value as ``telemetry_port`` in the reducer.yaml file
 
 #. Run the following command to start or restart the kernel collector to apply the changes.
 
     .. tabs::
 
-      .. code-tab:: bash Start command 
+      .. code-tab:: bash Start command
   
         systemctl start kernel-collector
 
@@ -115,15 +115,15 @@ Follow these steps to install and configure the eBPF collector on non-Kubernetes
       * - :strong:`Parameter`
         - :strong:`Value`
       * - Intake host
-        - IP address or hostname where the reducer is running
-      * - Intake port 
+        - IP address or host name where the reducer is running
+      * - Intake port
         - Same value as ``telemetry_port`` in the reducer.yaml file
 
 #. Run the following command to start or restart the cloud collector to apply the changes.
 
     .. tabs::
 
-      .. code-tab:: bash Start command 
+      .. code-tab:: bash Start command
   
         systemctl start cloud-collector
 
@@ -134,11 +134,11 @@ Follow these steps to install and configure the eBPF collector on non-Kubernetes
 Next steps
 ====================================
 
-Once you set up Network Explorer, you can start monitoring network telemetry metrics coming into your Splunk Infrastructure Monitoring platform using one or more of the following options:
+Once you set up Network Explorer, you can start monitoring network telemetry metrics coming into your Splunk Infrastructure Monitoring platform using 1 or more of the following options:
 
 - Built-in Network Explorer navigators. To see the Network Explorer navigators, follow these steps:
 
-  #. From the Splunk Observability Cloud home page, select :strong:`Infrastructure` on the left navigator.
+  #. From the Splunk Observability Cloud home page, select :strong:`Infrastructure` on the navigator.
   #. Select :strong:`Network Explorer`.
 
       .. image:: /_images/images-network-explorer/network-explorer-navigators.png
