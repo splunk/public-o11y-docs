@@ -266,7 +266,7 @@ Percentile
 
 SignalFlow function: :new-page:`percentile() <https://dev.splunk.com/observability/docs/signalflow/methods/percentile_stream_method>`
 
-Returns the specified percentile of values in data points collected either from multiple time series at a point in time (aggregation), or from individual time series over a moving time window (transformation).
+Finds the specified percentile of values in data points collected either from multiple time series at a point in time (aggregation), or from individual time series over a moving time window (transformation).
 
 - :strong:`Percentile:Aggregation`
 
