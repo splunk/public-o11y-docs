@@ -46,22 +46,29 @@ If a certification manager (or any other TLS certificate source) is not availabl
 Ingest traces
 ------------------------------------------------
 
-In order to be properly ingest trace telemetry data, the attribute ``environment`` must be onboard the exported traces. There are four ways to do this:
+To properly ingest trace telemetry data, the attribute ``deployment.environment`` must be onboard the exported traces. The following table demonstrates the different methods for setting this attribute.
 
-* Set the attribute using ``kubectl``.
-* Add the attribute to ``values.yaml``.
-* Add the attribute to the ``instrumentation`` spec in ``values.yaml``.
-* Add the attribute to your Kubernetes application deployment spec.
+.. list-table::
+  :header-rows: 1
+  :width: 100%
+  :widths: 33 33 33
+
+  * - Method
+    - Scope
+    - Implementation
+  * - Through the ``values.yaml`` file ``environment`` configuration
+    - Applies the attribute to all telemetry data (metrics, logs, traces) exported through the collector.
+    - The chart will set an attribute processor to add ``deployment.environment=dev`` to all telemetry data processed by the collector.
+  * - Through the ``values.yaml`` file and ``operator.instrumentation.spec.env`` or ``operator.instrumentation.spec.{instrumentation_library}.env`` configuration
+    - Allows you to set ``deployment.environment`` either for all auto-instrumented applications collectively or per auto-instrumentation language.
+    - Add the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable, setting its value to ``deployment.environment=dev``.
+  * - Through your Kubernetes application deployment, daemonset, or pod specification
+    - Allows you to set ``deployment.environment`` at the level of individual deployments, daemonsets, or pods.
+    - Employ the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable, assigning the value ``deployment.environment=dev``.
+
+The following examples demonstrate how to set the attribute using each method.
 
 .. tabs::
-
-    .. tab:: ``kubectl``
-
-      Update the environment variable ``OTEL_RESOURCE_ATTRIBUTES`` using ``kubectl``. For example:
-
-      .. code-block:: bash
-
-         kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=environment=prod
 
     .. tab:: ``values.yaml``
 
@@ -109,6 +116,14 @@ In order to be properly ingest trace telemetry data, the attribute ``environment
                   - name: OTEL_RESOURCE_ATTRIBUTES
                     value: "deployment.environment=prod"
 
+    .. tab:: ``kubectl``
+
+      Update the environment variable ``OTEL_RESOURCE_ATTRIBUTES`` using ``kubectl set env``. For example:
+
+      .. code-block:: bash
+        
+          kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=environment=prod
+      
 Verify all the OpenTelemetry resources are deployed successfully
 ==========================================================================
 
@@ -140,18 +155,11 @@ Run the following to verify the resources are deployed correctly:
 Set annotations to instrument Java applications
 ===================================================================
 
-You can activate auto instrumentation for Java applications before or during runtime.
+You can activate auto instrumentation for Java applications before runtime.
 
-Activate and deactivate auto instrumentation before runtime
--------------------------------------------------------------------
+If the related Kubernetes object (deployment, daemonset, or pod) is not deployed, add the ``otel.splunk.com/inject-java`` annotation to the application object YAML.
 
-If the deployment is not deployed, add the ``otel.splunk.com/inject-java`` annotation to the application deployment YAML file or add the Java auto instrumentation repository to your ``values.yaml`` instrumentation spec.
-
-.. tabs:: 
-
-  .. tab:: Deployment YAML
-
-    Add the ``otel.splunk.com/inject-java`` annotation to the application deployment YAML file. For example, given the following deployment YAML:
+For example, given the following deployment YAML:
 
     .. code-block:: yaml
 
@@ -166,7 +174,7 @@ If the deployment is not deployed, add the ``otel.splunk.com/inject-java`` annot
             - name: my-java-app
               image: my-java-app:latest
 
-    Activate auto instrumentation by adding ``otel.splunk.com/inject-java: "true"`` to the ``spec``:
+Activate auto instrumentation by adding ``otel.splunk.com/inject-java: "true"`` to the ``spec``:
 
     .. code-block:: yaml
       :emphasize-lines: 9
@@ -185,45 +193,11 @@ If the deployment is not deployed, add the ``otel.splunk.com/inject-java`` annot
             - name: my-java-app
               image: my-java-app:latest
     
-    To deactivate automatic instrumentation, remove the annotation or set its value to ``false``.
+To deactivate automatic instrumentation, remove the annotation. The following command removes the annotation for automatic instrumentation, deactivating it:
 
-  .. tab:: Instrumentation spec
+    .. code-block:: bash
 
-    Add the Java auto instrumentation repository to the ``operator`` spec in your ``values.yaml`` file. For example:
-
-    .. code-block:: yaml
-      :emphasize-lines: 5,6,7
-
-      operator:
-        enabled: true
-        instrumentation:
-          spec:
-            java:
-              repository: ghcr.io/signalfx/splunk-otel-java/splunk-otel-java
-              tag: v1.28.0
-
-    To deactivate automatic instrumentation, remove ``java`` and its fields from the instrumentation spec.
-
-The Collector operator activates automatic instrumentation for any Java applications in the deployment.
-
-Activate and deactivate auto instrumentation for Java on a running workload
---------------------------------------------------------------------------------
-
-To activate auto instrumentation for your Java deployment, run the following command. Replace ``<my-deployment>`` with the deployment name and ``<my-namespace>`` with the name of the target application namespace.
-
-.. code-block:: bash
-
-   kubectl patch deployment <my-deployment> -n <my-namespace> -p '{"spec": {"template":{"metadata":{"annotations":{"instrumentation.opentelemetry.io/inject-java":"<splunk_otel_collector_namespace>/splunk-otel-collector"}}}} }'
-
-.. note::
-   * The deployment pod will restart after running this command.
-   * If the chart is not installed in the "default" namespace, modify the annotation value to be "{chart_namespace}/splunk-otel-collector".
-
-To deactivate auto instrumentation for your Java deployment, run the same command but change the annotation value to ``false``:
-
-.. code-block:: bash
-
-   kubectl patch deployment <my-deployment> -n <my-namespace> --type=json -p='[{"op": "remove", "path": "/spec/template/metadata/annotations/instrumentation.opentelemetry.io~1inject-java"}]'
+        kubectl patch deployment <my-deployment> -n <my-namespace> --type=json -p='[{"op": "remove", "path": "/spec/template/metadata/annotations/instrumentation.opentelemetry.io~1inject-java"}]'
 
 Verify instrumentation
 -----------------------------------------------
