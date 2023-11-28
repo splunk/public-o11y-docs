@@ -41,32 +41,39 @@ If a certification manager (or any other TLS certificate source) is not availabl
 .. code-block:: yaml 
 
    # If cert-manager is not deployed.
-   helm install splunk-otel-collector -f ./my_values.yaml --set certmanager.enabled=true,operator.enabled=true,environment=dev -n monitoring splunk-otel-collector-chart/splunk-otel-collector
+   helm install splunk-otel-collector -f ./my_values.yaml --set certmanager.enabled=true,operator.enabled=true,environment=prd -n monitoring splunk-otel-collector-chart/splunk-otel-collector
 
    # If cert-manager is already deployed.
-   helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=dev -n monitoring splunk-otel-collector-chart/splunk-otel-collector
+   helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=prd -n monitoring splunk-otel-collector-chart/splunk-otel-collector
 
 .. _zeroconfig-nodejs-traces:
 
 Ingest traces
 ------------------------------------------------
 
-In order to be properly ingest trace telemetry data, the attribute ``environment`` must be onboard the exported traces. There are four ways to do this:
+To properly ingest trace telemetry data, the attribute ``deployment.environment`` must be onboard the exported traces. The following table demonstrates the different methods for setting this attribute:
 
-* Set the attribute using ``kubectl``.
-* Add the attribute to ``values.yaml``.
-* Add the attribute to the ``instrumentation`` spec in ``values.yaml``.
-* Add the attribute to your Kubernetes application deployment spec.
+.. list-table::
+  :header-rows: 1
+  :width: 100%
+  :widths: 33 33 33
+
+  * - Method
+    - Scope
+    - Implementation
+  * - Through the ``values.yaml`` file ``environment`` configuration
+    - Applies the attribute to all telemetry data (metrics, logs, traces) exported through the collector.
+    - The chart will set an attribute processor to add ``deployment.environment=prd`` to all telemetry data processed by the collector.
+  * - Through the ``values.yaml`` file and ``operator.instrumentation.spec.env`` or ``operator.instrumentation.spec.{instrumentation_library}.env`` configuration
+    - Allows you to set ``deployment.environment`` either for all auto-instrumented applications collectively or per auto-instrumentation language.
+    - Add the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable, setting its value to ``deployment.environment=prd``.
+  * - Through your Kubernetes application deployment, daemonset, or pod specification
+    - Allows you to set ``deployment.environment`` at the level of individual deployments, daemonsets, or pods.
+    - Employ the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable, assigning the value ``deployment.environment=prd``.
+
+The following examples demonstrate how to set the attribute using each method:
 
 .. tabs::
-
-    .. tab:: ``kubectl``
-
-      Update the environment variable ``OTEL_RESOURCE_ATTRIBUTES`` using ``kubectl``. For example:
-
-      .. code-block:: bash
-
-         kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=environment=prod
 
     .. tab:: ``values.yaml``
 
@@ -74,7 +81,7 @@ In order to be properly ingest trace telemetry data, the attribute ``environment
 
       .. code-block:: yaml
 
-          extraEnvs: [OTEL_RESOURCE_ATTRIBUTES=deployment.environment=prod]
+          extraEnvs: [OTEL_RESOURCE_ATTRIBUTES=deployment.environment=prd]
 
     .. tab:: ``values.yaml`` (Instrumentation spec)
 
@@ -88,7 +95,7 @@ In order to be properly ingest trace telemetry data, the attribute ``environment
               spec:
                 env: 
                   - name: OTEL_RESOURCE_ATTRIBUTES
-                    value: "deployment.environment=prod"
+                    value: "deployment.environment=prd"
                 nodejs:
                   env: 
                     - name: OTEL_RESOURCE_ATTRIBUTES
@@ -112,7 +119,15 @@ In order to be properly ingest trace telemetry data, the attribute ``environment
                   image: my-nodejs-app:latest
                   env:
                   - name: OTEL_RESOURCE_ATTRIBUTES
-                    value: "deployment.environment=prod"
+                    value: "deployment.environment=prd"
+
+    .. tab:: ``kubectl``
+
+      Update the environment variable ``OTEL_RESOURCE_ATTRIBUTES`` using ``kubectl set env``. For example:
+
+      .. code-block:: bash
+        
+          kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=environment=prd
 
 Verify all the OpenTelemetry resources are deployed successfully
 ==========================================================================
@@ -145,12 +160,9 @@ Run the following to verify the resources are deployed correctly:
 Set annotations to instrument Node.js applications
 ==============================================================
 
-You can activate auto instrumentation for Node.js applications before or during runtime.
+You can activate auto instrumentation for Node.js applications before runtime.
 
-Activate and deactivate auto instrumentation before runtime
---------------------------------------------------------------------
-
-If the deployment is not running, add the ``otel.splunk.com/inject-node`` annotation to the application deployment YAML file.
+If the related Kubernetes object (deployment, daemonset, or pod) is not deployed, add the ``otel.splunk.com/inject-nodejs`` annotation to the application object YAML.
 
 For example, given the following deployment YAML:
 
@@ -160,6 +172,7 @@ For example, given the following deployment YAML:
     kind: Deployment
     metadata:
       name: my-nodejs-app
+      namespace: monitoring
     spec:
       template:
         spec:
@@ -170,11 +183,13 @@ For example, given the following deployment YAML:
 Activate auto instrumentation by adding ``otel.splunk.com/inject-nodejs: "true"`` to the ``spec``:
 
 .. code-block:: yaml
+    :emphasize-lines: 10
 
     apiVersion: apps/v1
     kind: Deployment
     metadata:
       name: my-nodejs-app
+      namespace: monitoring
     spec:
       template:
         metadata:
@@ -185,24 +200,7 @@ Activate auto instrumentation by adding ``otel.splunk.com/inject-nodejs: "true"`
           - name: my-nodejs-app
             image: my-nodejs-app:latest
 
-The Collector operator activates automatic instrumentation for any Node.js applications in the deployment.
-
-To deactivate automatic instrumentation, remove the annotation or set its value to ``false``.
-
-Activate and deactivate auto instrumentation for Node.js on a running workload
------------------------------------------------------------------------------------------
-
-To activate auto instrumentation for your Node.js deployment, run the following command. Replace ``<my-deployment>`` with the deployment name and ``<my-namespace>`` with the name of the target application namespace.
-
-.. code-block:: bash
-
-   kubectl patch deployment <my-deployment> -n <my-namespace> -p '{"spec": {"template":{"metadata":{"annotations":{"instrumentation.opentelemetry.io/inject-nodejs":"<splunk_otel_collector_namespace>/splunk-otel-collector"}}}} }'
-
-.. note::
-   * The deployment pod will restart after running this command.
-   * If the chart is not installed in the "default" namespace, modify the annotation value to be "{chart_namespace}/splunk-otel-collector".
-
-To deactivate auto instrumentation for your Node.js deployment, run the following command:
+To deactivate automatic instrumentation, remove the annotation. The following command removes the annotation for automatic instrumentation, deactivating it:
 
 .. code-block:: bash
 
@@ -218,7 +216,7 @@ To verify that the instrumentation was successful, run the following command on 
    kubectl describe pod -n otel-demo -l app.kubernetes.io/name=opentelemetry-demo-frontend
    # Name:             opentelemetry-demo-frontend-57488c7b9c-4qbfb
    # Namespace:        otel-demo
-   # Annotations:      instrumentation.opentelemetry.io/inject-nodejs: default/splunk-otel-collector
+   # Annotations:      instrumentation.opentelemetry.io/inject-nodejs: true
    # Status:           Running
    # Init Containers:
    #   opentelemetry-auto-instrumentation:
@@ -272,7 +270,7 @@ Allow the Operator to do the work. The Operator intercepts and alters the Kubern
 
 You can configure the Splunk Distribution of OpenTelemetry JS to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started.
 
-You can add advanced configuration like activating custom sampling and including custom data in the reported spans with environment variables.
+You can add advanced configuration like activating custom sampling and including custom data in the reported spans with environment variables and Node.js system properties. To do so, use the ``values.yaml`` file and  ``operator.instrumentation.sampler`` configuration. For more information, see the :new-page:`documentation in GitHub <https://github.com/open-telemetry/opentelemetry-operator/blob/main/docs/api.md#instrumentationspecsampler>` and :new-page:`example in GitHub <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/enable-operator-and-auto-instrumentation/instrumentation/instrumentation-add-trace-sampler.yaml>`.
 
 For example, if you want every span to include the key-value pair ``build.id=feb2023_v2``, set the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable.
 

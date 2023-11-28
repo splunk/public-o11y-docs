@@ -36,17 +36,17 @@ If a certification manager (or any other TLS certificate source) is not availabl
 .. code-block:: yaml 
 
    # If cert-manager is not deployed.
-   helm install splunk-otel-collector -f ./my_values.yaml --set certmanager.enabled=true,operator.enabled=true,environment=dev -n monitoring splunk-otel-collector-chart/splunk-otel-collector
+   helm install splunk-otel-collector -f ./my_values.yaml --set certmanager.enabled=true,operator.enabled=true,environment=prd -n monitoring splunk-otel-collector-chart/splunk-otel-collector
    
    # If cert-manager is already deployed.
-   helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=dev -n monitoring splunk-otel-collector-chart/splunk-otel-collector
+   helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=prd -n monitoring splunk-otel-collector-chart/splunk-otel-collector
 
 .. _zeroconfig-java-traces:
 
 Ingest traces
 ------------------------------------------------
 
-To properly ingest trace telemetry data, the attribute ``deployment.environment`` must be onboard the exported traces. The following table demonstrates the different methods for setting this attribute.
+To properly ingest trace telemetry data, the attribute ``deployment.environment`` must be onboard the exported traces. The following table demonstrates the different methods for setting this attribute:
 
 .. list-table::
   :header-rows: 1
@@ -58,15 +58,15 @@ To properly ingest trace telemetry data, the attribute ``deployment.environment`
     - Implementation
   * - Through the ``values.yaml`` file ``environment`` configuration
     - Applies the attribute to all telemetry data (metrics, logs, traces) exported through the collector.
-    - The chart will set an attribute processor to add ``deployment.environment=dev`` to all telemetry data processed by the collector.
+    - The chart will set an attribute processor to add ``deployment.environment=prd`` to all telemetry data processed by the collector.
   * - Through the ``values.yaml`` file and ``operator.instrumentation.spec.env`` or ``operator.instrumentation.spec.{instrumentation_library}.env`` configuration
     - Allows you to set ``deployment.environment`` either for all auto-instrumented applications collectively or per auto-instrumentation language.
-    - Add the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable, setting its value to ``deployment.environment=dev``.
+    - Add the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable, setting its value to ``deployment.environment=prd``.
   * - Through your Kubernetes application deployment, daemonset, or pod specification
     - Allows you to set ``deployment.environment`` at the level of individual deployments, daemonsets, or pods.
-    - Employ the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable, assigning the value ``deployment.environment=dev``.
+    - Employ the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable, assigning the value ``deployment.environment=prd``.
 
-The following examples demonstrate how to set the attribute using each method.
+The following examples demonstrate how to set the attribute using each method:
 
 .. tabs::
 
@@ -76,7 +76,7 @@ The following examples demonstrate how to set the attribute using each method.
 
       .. code-block:: yaml
 
-          extraEnvs: [OTEL_RESOURCE_ATTRIBUTES=deployment.environment=prod]
+          extraEnvs: [OTEL_RESOURCE_ATTRIBUTES=deployment.environment=prd]
 
     .. tab:: ``values.yaml`` (Instrumentation spec)
 
@@ -90,7 +90,7 @@ The following examples demonstrate how to set the attribute using each method.
               spec:
                 env: 
                   - name: OTEL_RESOURCE_ATTRIBUTES
-                    value: "deployment.environment=prod"
+                    value: "deployment.environment=prd"
                 java:
                   env: 
                     - name: OTEL_RESOURCE_ATTRIBUTES
@@ -114,7 +114,7 @@ The following examples demonstrate how to set the attribute using each method.
                   image: my-java-app:latest
                   env:
                   - name: OTEL_RESOURCE_ATTRIBUTES
-                    value: "deployment.environment=prod"
+                    value: "deployment.environment=prd"
 
     .. tab:: ``kubectl``
 
@@ -122,7 +122,7 @@ The following examples demonstrate how to set the attribute using each method.
 
       .. code-block:: bash
         
-          kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=environment=prod
+          kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=environment=prd
       
 Verify all the OpenTelemetry resources are deployed successfully
 ==========================================================================
@@ -167,6 +167,7 @@ For example, given the following deployment YAML:
       kind: Deployment
       metadata:
         name: my-java-app
+        namespace: monitoring
       spec:
         template:
           spec:
@@ -177,12 +178,13 @@ For example, given the following deployment YAML:
 Activate auto instrumentation by adding ``otel.splunk.com/inject-java: "true"`` to the ``spec``:
 
     .. code-block:: yaml
-      :emphasize-lines: 9
+      :emphasize-lines: 10
 
       apiVersion: apps/v1
       kind: Deployment
       metadata:
         name: my-java-app
+        namespace: monitoring
       spec:
         template:
           metadata:
@@ -197,7 +199,7 @@ To deactivate automatic instrumentation, remove the annotation. The following co
 
     .. code-block:: bash
 
-        kubectl patch deployment <my-deployment> -n <my-namespace> --type=json -p='[{"op": "remove", "path": "/spec/template/metadata/annotations/instrumentation.opentelemetry.io~1inject-java"}]'
+      kubectl patch deployment <my-deployment> -n <my-namespace> --type=json -p='[{"op": "remove", "path": "/spec/template/metadata/annotations/instrumentation.opentelemetry.io~1inject-java"}]'
 
 Verify instrumentation
 -----------------------------------------------
@@ -209,7 +211,7 @@ To verify that the instrumentation was successful, run the following command on 
    kubectl describe pod -n otel-demo -l app.kubernetes.io/name=opentelemetry-demo-frontend
    # Name:             opentelemetry-demo-frontend-57488c7b9c-4qbfb
    # Namespace:        otel-demo
-   # Annotations:      instrumentation.opentelemetry.io/inject-java: default/splunk-otel-collector
+   # Annotations:      instrumentation.opentelemetry.io/inject-java: true
    # Status:           Running
    # Init Containers:
    #   opentelemetry-auto-instrumentation:
@@ -261,15 +263,13 @@ Allow the Operator to do the work. The Operator intercepts and alters the Kubern
 
 You can configure the Splunk Distribution of OpenTelemetry Java to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started.
 
-You can add advanced configuration like activating custom sampling and including custom data in the reported spans with environment variables and Java system properties.
+You can add advanced configuration like activating custom sampling and including custom data in the reported spans with environment variables and Java system properties. To do so, use the ``values.yaml`` file and  ``operator.instrumentation.sampler`` configuration. For more information, see the :new-page:`documentation in GitHub <https://github.com/open-telemetry/opentelemetry-operator/blob/main/docs/api.md#instrumentationspecsampler>` and :new-page:`example in GitHub <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/enable-operator-and-auto-instrumentation/instrumentation/instrumentation-add-trace-sampler.yaml>`.
 
-For example, if you want every span to include the key-value pair ``build.id=feb2023_v2``, set the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable.
+You can also the methods shown in :ref:`zeroconfig-java-traces` to configure your instrumentation with the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable and other environment variables. For example, if you want every span to include the key-value pair ``build.id=feb2023_v2``, set the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable:
 
   .. code-block:: bash
     
      kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=build.id=feb2023_v2
-
-You can also use the methods shown in :ref:`zeroconfig-java-traces` to configure your instrumentation with the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable and other environment variables.
 
 See :ref:`advanced-java-otel-configuration` for the full list of supported environment variables.
 
