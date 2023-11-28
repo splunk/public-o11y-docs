@@ -164,7 +164,7 @@ The following settings control trace sampling:
    * - Environment variable
      - Description
    * - ``OTEL_TRACES_SAMPLER``
-     - Sampler to use. The default value is ``parentbased_always_on``.
+     - Sampler to use. The default value is ``parentbased_always_on``. Possible values are: ``always_on``, ``always_off``, ``parentbased_always_on``, ``parentbased_always_off``, ``traceidratio``, ``parentbased_traceidratio``. See :new-page:`Built-in samplers <https://github.com/open-telemetry/opentelemetry-js/blob/main/packages/opentelemetry-sdk-trace-base/README.md#built-in-samplers>` in the official OpenTelemetry documentation for more information.
 
    * - ``OTEL_TRACES_SAMPLER_ARG``
      - Semicolon-separated list of rules for the ``rules`` sampler. For example, when setting the sampler to ``parentbased_traceidratio`` you can set the ratio using a number in the 0 to 1 range: |br| |br| ``OTEL_TRACES_SAMPLER_ARG=0.25``.

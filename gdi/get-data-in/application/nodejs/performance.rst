@@ -62,7 +62,7 @@ Increasing the maximum memory size of the Node.js V8 process using the ``--max-o
 Reduce manual instrumentation to a minimum
 ----------------------------------------------------------------
 
-Manual instrumentation might introduce inefficiencies that increase agent overhead. For example, <...>
+Manual instrumentation might introduce inefficiencies that increase agent overhead. For example, creating spans in a tight loop might end up producing millions of spans, severely taxing the host.
 
 Provision adequate resources
 ----------------------------------------------------------------
@@ -77,9 +77,7 @@ Constraints impacting the performance of the Node.js agent
 
 In general, the more telemetry you collect from your application, the bigger is the impact on agent overhead. For example, tracing methods that aren't relevant to your application can still produce considerable agent overhead because tracing such methods is computationally more expensive than running the method itself. Similarly, high cardinality tags in metrics might increase memory usage. Debug logging also increases write operations to disk and memory usage.
 
-.. rewrite!
-
-Some features of the Node.js agent, like AlwaysOn Profiling, increase resource consumption because profiling paylods require heap space and memory profiling relies on TLAB events that might increase agent overhead significantly when produced in high numbers. Some instrumentations, for example JDBC or Redis, produce high span volumes that increase agent overhead. For more information on how to turn off unnecessary instrumentations, see :ref:`turn-on-nodejs-instrumentations`.
+Some instrumentations, for example JDBC or Redis, produce high span volumes that increase agent overhead. For more information on how to turn off unnecessary instrumentations, see :ref:`turn-on-nodejs-instrumentations`.
 
 .. note:: Experimental features of the Node.js agent might increase agent overhead due to the experimental focus on functionality over performance. Stable features are safer in terms of agent overhead.
 
