@@ -121,6 +121,81 @@ Instrumentation metrics
 
 The Splunk Distribution of OpenTelemetry .NET can collect the following instrumentation metrics:
 
+ASP.NET Core
+-------------------------
+
+.. list-table:: 
+   :header-rows: 1
+   :widths: 40 10 50
+   :width: 100%
+
+   * - Metric
+     - Type
+     - Description
+   * - ``http.server.duration_{bucket|count|sum}``
+     - Cumulative counters (histogram)
+     - Duration of the inbound HTTP request, in the form of count, sum, and histogram buckets. This metric originates multiple metric time series, which might result in increased data ingestion costs. Supported only on .NET prior to 8.
+   * - ``http.server.active_requests``
+     - Gauge
+     - Number of active HTTP server requests. Supported only on .NET8+.
+   * - ``http.server.request.duration_{bucket|count|sum}``
+     - Cumulative counters (histogram)
+     - Duration of HTTP server requests. Supported only on .NET8+.
+   * - ``kestrel.active_connections``
+     - Gauge
+     - Number of connections that are currently active on the server. Supported only on .NET8+.
+   * - ``kestrel.connection.duration_{bucket|count|sum}``
+     - Cumulative counters (histogram)
+     - The duration of connections on the server. Supported only on .NET8+.
+   * - ``kestrel.rejected_connections``
+     - Cumulative counters
+     - Number of connections rejected by the server. Connections are rejected when the currently active count exceeds the value configured with MaxConcurrentConnections. Supported only on .NET8+.
+   * - ``kestrel.queued_connections``
+     - Gauge
+     - Number of connections that are currently queued and are waiting to start. Supported only on .NET8+.
+   * - ``kestrel.queued_requests``
+     - Gauge
+     - Number of HTTP requests on multiplexed connections (HTTP/2 and HTTP/3) that are currently queued and are waiting to start. Supported only on .NET8+.
+   * - ``kestrel.upgraded_connections``
+     - Gauge
+     - Number of HTTP connections that are currently upgraded (WebSockets). The number only tracks HTTP/1.1 connections. Supported only on .NET8+.
+   * - ``kestrel.tls_handshake.duration_{bucket|count|sum}``
+     - Cumulative counters (histogram)
+     - The duration of TLS handshakes on the server. Supported only on .NET8+.
+   * - ``kestrel.active_tls_handshakes``
+     - Gauge
+     - Number of TLS handshakes that are currently in progress on the server. Supported only on .NET8+.
+   * - ``signalr.server.connection.duration_{bucket|count|sum}``
+     - Cumulative counters (histogram)
+     - The duration of connections on the server. Supported only on .NET8+.
+   * - ``signalr.server.active_connections``
+     - Gauge
+     - Number of connections that are currently active on the server. Supported only on .NET8+.
+   * - ``aspnetcore.routing.match_attempts``
+     - Cumulative counters
+     - Number of requests that were attempted to be matched to an endpoint. Supported only on .NET8+.
+   * - ``aspnetcore.diagnostics.exceptions``
+     - Cumulative counters
+     - Number of exceptions caught by exception handling middleware. Supported only on .NET8+.
+   * - ``aspnetcore.rate_limiting.active_request_leases``
+     - Gauge
+     - Number of HTTP requests that are currently active on the server that hold a rate limiting lease. Supported only on .NET8+.
+   * - ``aspnetcore.rate_limiting.request_lease.duration_{bucket|count|sum}``
+     - Cumulative counters (histogram)
+     - The duration of rate limiting leases held by HTTP requests on the server. Supported only on .NET8+.
+   * - ``aspnetcore.rate_limiting.queued_requests``
+     - Gauge
+     - Number of HTTP requests that are currently queued, waiting to acquire a rate limiting lease. Supported only on .NET8+.
+   * - ``aspnetcore.rate_limiting.request.time_in_queue_{bucket|count|sum}``
+     - Cumulative counters (histogram)
+     - The duration of HTTP requests in a queue, waiting to acquire a rate limiting lease. Supported only on .NET8+.
+   * - ``aspnetcore.rate_limiting.requests``
+     - Cumulative counters
+     - Number of requests that tried to acquire a rate limiting lease. Requests could be rejected by global or endpoint rate limiting policies. Or the request could be canceled while waiting for the lease. Supported only on .NET8+.
+
+HTTP Client
+-------------------------
+
 .. list-table:: 
    :header-rows: 1
    :widths: 40 10 50
@@ -131,10 +206,37 @@ The Splunk Distribution of OpenTelemetry .NET can collect the following instrume
      - Description
    * - ``http.client.duration_{bucket|count|sum}``
      - Cumulative counters (histogram)
-     - Duration of outbound HTTP requests, in the form of count, sum, and histogram buckets. This metric originates multiple metric time series, which might result in increased data ingestion costs.
-   * - ``http.server.duration_{bucket|count|sum}``
+     - Duration of outbound HTTP requests, in the form of count, sum, and histogram buckets. This metric originates multiple metric time series, which might result in increased data ingestion costs. Supported only on .NET prior to 8.
+   * - ``http.client.active_requests``
+     - Gauge
+     - Number of outbound HTTP requests that are currently active on the client. Supported only on .NET8+.
+   * - ``http.client.request.duration_{bucket|count|sum}``
      - Cumulative counters (histogram)
-     - Duration of the inbound HTTP request, in the form of count, sum, and histogram buckets. This metric originates multiple metric time series, which might result in increased data ingestion costs.
+     - Duration of HTTP client requests. Supported only on .NET8+.
+   * - ``http.client.open_connections``
+     - Gauge
+     - Number of outbound HTTP connections that are currently active or idle on the client. Supported only on .NET8+.
+   * - ``http.client.connection.duration_{bucket|count|sum}``
+     - Cumulative counters (histogram)
+     - The duration of successfully established outbound HTTP connections. Supported only on .NET8+.
+   * - ``http.client.request.time_in_queue_{bucket|count|sum}``
+     - Cumulative counters (histogram)
+     - The amount of time requests spent on a queue waiting for an available connection. Supported only on .NET8+.
+   * - ``dns.lookup.duration_{bucket|count|sum}``
+     - Cumulative counters (histogram)
+     - Measures the time taken to perform a DNS lookup. Supported only on .NET8+.
+
+NServiceBus
+-------------------------
+
+.. list-table:: 
+   :header-rows: 1
+   :widths: 40 10 50
+   :width: 100%
+
+   * - Metric
+     - Type
+     - Description
    * - ``nservicebus.messaging.successes``
      - Cumulative counter
      - Number of messages successfully processed by the endpoint.
