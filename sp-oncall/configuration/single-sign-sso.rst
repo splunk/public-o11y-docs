@@ -20,270 +20,180 @@ This integration is compatible with the following versions of Splunk On-Call:
 To enable SSO for your organization, you will need to provide an updated metadata file and your IDP. If you are
 interested in setting up SSO, please contact :ref:`Splunk On-Call Support <spoc-support>`.
 
-\
 
-**This article provides instructions for configuring Single Sign On
-between your Identity Provider (IDP) and** Splunk On-Call\ **.  It also
-provides information for your end users when logging into Splunk On-Call
-for the first time using SSO.**
 
-Our standard SSO setup uses SAML 2.0 protocol.  **As long as your IDP
-can use SAML 2.0 protocol, it can be integrated with** Splunk
-On-Call***\* with fairly minimal effort.  The exact steps differ
-depending on which IDP you use, but the process typically involves
-exporting a .XML metadata file and sending it to our support team.  Once
-you have sent the .xml file, a Splunk On-Call support specialist will
-complete the setup on the back-end respond with confirmation.
+Configure Single Sign On between your Identity Provider (IDP) and  Splunk On-Call. Our standard SSO setup uses SAML 2.0 protocol. As long as your IDP can use SAML 2.0 protocol, it can integrate with Splunk On-Call. The exact steps differ depending on which IDP you use, but the process typically involves exporting a .XML metadata file and sending it to our Support team. Once you have sent the .xml file, a Splunk On-Call support specialist will
+complete the setup on the back-end and respond with confirmation.
 
-*If your IDP does not have SAML capability, please contact* `Splunk
-On-Call
-Support <https://help.victorops.com/knowledge-base/important-splunk-on-call-support-changes-coming-nov-11th/>`__
-*to explore what alternative options may be available*.
+If your IDP does not have SAML capability, please contact Splunk On-Call Support to explore what alternative options may be available. For details on how to contact Splunk On-Call Support, see :ref:`spoc-support`.
 
---------------
 
-**Instructions for Users**
---------------------------
+Instructions for Users
+===============================
 
-**Organization Slug**
-~~~~~~~~~~~~~~~~~~~~~
-
-Throughout this article, the phrase *Organization Slug* refers to
-the *slugified* version of your organization’s name in Splunk On-Call
-(This process changes your organization name to a lowercase URL friendly
-version with no spaces or punctuation, though it may contain dashes).
-Your Organization Slug can be found at the end of the URL when you are
+Organization Slug: The phrase "Organization Slug" refers to the slugified version of your organization's name in Splunk On-Call. This process changes your organization name to a lowercase URL-friendly version with no spaces or punctuation, though it may contain dashes. Your Organization Slug can be found at the end of the URL when you are
 logged into the Splunk On-Call portal via a web browser.
 
-**Contact your Splunk On-Call administrator or reach out to** `Splunk
-On-Call
-Support <https://help.victorops.com/knowledge-base/important-splunk-on-call-support-changes-coming-nov-11th/>`__
-**if you are having trouble finding your Organization Slug.**
+Contact your Splunk On-Call administrator or reach out to Splunk On-Call Support if you are having trouble finding your Organization Slug.
 
-A user’s login experience on the Splunk On-Call platform will be
-slightly different after enabling Single Sign-On for your organization. 
-If your organization has not explicitly disabled traditional
-authentication, users will be able to login as normal with their Splunk
-On-Call credentials or login via SSO.  If traditional authentication has
-been disabled, users will encounter an error message directing them to
-login via SSO if they attempt to login with their Splunk On-Call
-credentials.
+A user's login experience on the Splunk On-Call platform will be slightly different after enabling Single Sign-On for your organization. If your organization has not explicitly disabled traditional authentication, users will be able to login as normal with their Splunk On-Call credentials or login via SSO. If traditional authentication has
+been disabled, users will encounter an error message directing them to login via SSO if they attempt to login with their Splunk On-Call credentials.
 
-\****Web Client UI***\*
-~~~~~~~~~~~~~~~~~~~~~~~
+Web Client UI
+=================
 
-The SSO login form can be found
-here: https://portal.victorops.com/auth/sso
+The SSO login form can be found at this URL: https://portal.victorops.com/auth/sso
 
-Alternatively, you can create a link or bookmark to skip the typing and
-bypass the form by appending your company ID to the SSO URL, like
-this: https://portal.victorops.com/auth/sso/**org-slug-here**
+Alternatively, you can create a link or bookmark to skip the typing and bypass the form by appending your company ID to the SSO URL, like this: https://portal.victorops.com/auth/sso/<org-slug-here>
 
-Either of these routes will direct the user’s browser to your identity
-provider, where they will be required to authenticate and sent back to
-the Splunk On-Call timeline.
+Either of these routes will direct the user's browser to your identity provider, where they will be required to authenticate and are then sent back to the Splunk On-Call timeline.
 
-\****Mobile Applications***\*
------------------------------
+Mobile Applications
+=========================
 
-The Splunk On-Call client for your mobile device will also present a
-link on the login screen, offering the option to use your SSO
-credentials.
+The Splunk On-Call client for your mobile device will also present a link on the login screen, offering the option to use your SSO credentials.
 
-iOS/Android SSO Login
-~~~~~~~~~~~~~~~~~~~~~
+iOS or Android SSO Login
+-----------------------
 
-On the login screen, select “Sign in with Enterprise SSO”.  This link
-will take you to a form prompting for your Organization Slug. After you
-enter your Company’s Organization Slug, you will be redirected to your
-IDP login page in a mobile browser. Once you sign in through the IDP you
-will be automatically logged into Splunk On-Call.
+On the login screen, select :guilabel:`Sign in with Enterprise SSO`. This link will take you to a form prompting for your Organization Slug. After you enter your company's Organization Slug, you are redirected to your
+IDP login page in a mobile browser. Once you log in through the IDP you are automatically logged into Splunk On-Call.
 
---------------
+.. _sso-linking::
 
-**First-Time SSO Login**
-------------------------
+First-Time SSO Login
+========================
 
-If your organization is using SSO you will need to do a **one-time
-linking process** between your SSO provider and your Splunk On-Call
-account. This will create a link between your external user ID and your
-Splunk On-Call user ID. If you have not received a “Your invitation to
-Splunk On-Call” email, please contact your Splunk On-Call administrator
-and ask them to send you an invitation.
+If your organization is using SSO you will need to do a one-time linking process between your SSO provider and your Splunk On-Call account. This will create a link between your external user ID and your Splunk On-Call user ID. If you have not received an email invitation with the subject “Your invitation to Splunk On-Call”, contact your Splunk On-Call administrator and ask them to send you an invitation.
 
--  Receive an email to **activate your Splunk On-Call account**, create
-   your username and password and complete the account set up process.
--  You will be directed into the Splunk On-Call platform. From here, you
-   need to **sign out** and select “\ **sign in via SSO”** on the login
-   page to perform the one-time link. Please verify that you have logged
-   out of Splunk On-Call in every browser you are using, and your IDP.
--  Next, you will be prompted to **enter your Org Slug**
+#.  When you receive an email to activate your Splunk On-Call account, create your username and password and complete the account set up process. You will be directed into the Splunk On-Call platform. 
+#. You need to log out and select :guilabel:`Sign in via SSO”` on the login page to perform the one-time link. Verify that you have logged out of Splunk On-Call in every browser you are using and your IDP.
+#. You are prompted to :guilabel:`Enter your Org Slug`.
 
-.. image:: images/Org-Slug.jpg
 
--  From this page you will be redirected to your IDP page, where you
-   will **sign in using your SSO credentials.** 
+.. image:: /_images/spoc/sso.png
+    :width: 100%
+    :alt: Enter your org slug to connect your user ID.
 
-.. image:: images/Screen-Shot-2019-12-16-at-2.52.11-PM.png
+#. You are redirected to your IDP page where you log in using your SSO credentials.
 
--  After entering IDP credentials, you will be asked to **enter the
-   Splunk On-Call username/password**. You will only need to enter your
-   Splunk On-Call username and password once, and then we will not ask
-   for it again.
--  From here the user will be taken into the Splunk On-Call platform and
-   they have finished the one-time SSO linking process!
 
---------------
+.. image:: /_images/spoc/sso-org2.png
+    :width: 100%
+    :alt: Log in with your SSO credentials.
 
-**How to break your SSO Linkage**
----------------------------------
+#. Enter your Splunk On-Call username and password. You will only need to enter your Splunk On-Call username and password once, and then we will not ask for it again.
 
-If you are receiving an error when trying to sign into Splunk On-Call
-through SSO (such as “Uh oh - The Splunk On-Call user you have linked to
-your external SSO ID is not part of . Please contact your
-administrator”), you may need to break the linkage between your Splunk
-On-Call username/password and your SSO provider.
+You are redirected to the Splunk On-Call platform and have finished the one-time SSO linking process.
 
-To break the linkage, ensure you are signed in to your IDP and then
-paste the following link into the address bar of your
-browser: **https://portal.victorops.com/do-defederation** . If the link
-between your Splunk On-Call credentials and your SSO provider is
-successfully broken, you will see the error, shown below.
 
-Note: You may have to paste the defederation link into your browser
-multiple times before the below error message will appear.
+How to break your SSO linkage
+==========================================
 
-.. figure:: images/Screenshot-2017-05-24-15.08.47.png
-   :alt: VictorOps broken SSO linkage screen
+If you are receiving an error when trying to log into Splunk On-Call through SSO you may need to break the linkage between your Splunk On-Call username and password and your SSO provider.
 
-   VictorOps broken SSO linkage screen
+To break the linkage, ensure you are signed in to your IDP and then paste the following link into the address bar of your browser: https://portal.victorops.com/do-defederation . If the link between your Splunk On-Call credentials and your SSO provider is successfully broken, you will see the error, shown below.
 
-To re-associate your Splunk On-Call username/password with your SSO
-provider, you will need to walk through the “one-time” linking process
-again (please see steps in the “First-Time SSO Login” section).
+.. note:: You may have to paste the defederation link into your browser multiple times before the below error message will appear.
 
-If you have any questions or experience any issues, please contact
-`Splunk On-Call
-Support <https://help.victorops.com/knowledge-base/important-splunk-on-call-support-changes-coming-nov-11th/>`__.
 
---------------
+.. image:: /_images/spoc/sso-org3.png
+    :width: 100%
+    :alt: VictorOps broken SSO linkage screen
+
+To re-associate your Splunk On-Call username and password with your SSO provider, repeat the linking steps in :ref:`sso-linking`.
+
+If you have any questions or experience any issues, contact Splunk On-Call Support.
+
 
 Administrator Setup
--------------------
+==========================
 
-Please see below for corresponding steps needed to complete, or begin,
-the SSO configuration with Splunk On-Call, and your IDP (Identity
-Provider).
+Instructions to complete the SSO configuration with Splunk On-Call and your IDP are provided for:
 
---------------
+- :ref:`sso-okta-spoc`
+- :ref:`sso-google-spoc`
+- 
 
-**Okta**
-~~~~~~~~
+.. _sso-okta-spoc::
 
-From the Okta User Homepage, select *Admin*.
+Okta
+==========
 
-.. figure:: images/Okta-1.png
-   :alt: VictorOps Okta SSO setup step 1
+#. From the Okta user homepage, select :guilabel:`Admin` to access the Okta Admin dashboard.
 
-   VictorOps Okta SSO setup step 1
 
-Selecting Admin will bring you to the Okta Dashboard. From the Okta
-Admin Dashboard, click *Applications*, and select *Applications* from
-the drop down.
+.. image:: /_images/spoc/sso-okta1.png
+    :width: 100%
+    :alt: Splunk On-Call Okta SSO setup step 1
 
-.. figure:: images/Okta-2.png
-   :alt: VictorOps Okta SSO setup step 2
 
-   VictorOps Okta SSO setup step 2
+#. From the Okta Admin Dashboard, Select :guilabel:`Applications`, then select :guilabel:`Applications` from
+the drop-down.
 
-Within Applications, select *Add Application*.
+.. image:: /_images/spoc/sso-okta2.png
+    :width: 100%
+    :alt: Splunk On-Call Okta SSO setup step 2
 
-.. figure:: images/Okta-3.png
-   :alt: VictorOps Okta SSO setup step 3
 
-   VictorOps Okta SSO setup step 3
 
-After clicking Add Application, begin typing *Splunk On-Call* in the
-search bar. When Splunk On-Call appears, select *Add*.
+#. Within Applications, select :guilabel:`Add Application`.
 
-.. figure:: images/Okta-4.png
-   :alt: VictorOps Okta SSO setup step 4
+.. image:: /_images/spoc/sso-okta3.png
+    :width: 100%
+    :alt: Splunk On-Call Okta SSO setup step 3
 
-   VictorOps Okta SSO setup step 4
+#. Begin entering Splunk On-Call in the search bar. When Splunk On-Call appears, select :guilabel:`Add`.
 
-The Application label, or name, should auto-populate with the name
-Splunk On-Call, but please feel free to re-name this label, if desired.
-The Browser plugin auto-submit should be auto-populated as well. Verify
-that this setting is checked, and click *Next*.
+.. image:: /_images/spoc/sso-okta4.png
+    :width: 100%
+    :alt: Splunk On-Call Okta SSO setup step 4
 
-.. figure:: images/Okta-5.png
-   :alt: VictorOps Okta SSO setup step 5
+#. The Application label, or name, should auto-populate with the name Splunk On-Call, but you can re-name this label. The Browser plugin auto-submit should be auto-populated as well. Verify that this setting is selected and select :guilabel:`Next`.
 
-   VictorOps Okta SSO setup step 5
+.. image:: /_images/spoc/sso-okta5.png
+    :width: 100%
+    :alt: Splunk On-Call Okta SSO setup step 5
 
-In the Default Relay State box drop in the following URL:
+#. On the :guilabel:`Sign-On Options` tab, in the :guilabel:`Default Relay State` field enter the following URL:
 
--  **Default Relay State**:
-   https://portal.victorops.com/auth/sso/**org-slug-here**
+   -  Default Relay State: https://portal.victorops.com/auth/sso/<your-org-slug>
 
-.. figure:: images/Org-Slug.png
-   :alt: orgslug example
+.. image:: /_images/spoc/sso-okta6.png
+    :width: 100%
+    :alt: Splunk On-Call Okta SSO setup step 6. Org slug example.
 
-   orgslug example
+#. Once the URL has been added, select :guilabel:`Identity Provider metadata` to download the metadata file. Splunk On-Call requires this file to complete the SSO configuration. Email this file to Splunk On-Call Support.
+#. After downloading the file, select :guilabel:`Next`.
 
-Once the URL has been added, click on the *Identity Provider
-metadata* to download the metadata file, needed by Splunk On-Call, to
-conduct the SSO configuration. Once you have downloaded the file click
-*Next*. (Don’t forget to email this file to `Splunk On-Call
-Support <https://help.victorops.com/knowledge-base/important-splunk-on-call-support-changes-coming-nov-11th/>`__.)
+#. Select the users that should have access to add the Splunk On-Call app to their Okta homepage and log in to Splunk On-Call through SSO. Once all of the users have been listed, select :guilabel:`Next`.
 
-.. figure:: images/Okta-6.png
-   :alt: VictorOps Okta SSO setup step 6
+.. image:: /_images/spoc/sso-okta7.png
+    :width: 100%
+    :alt: Add users who should have access to the Splunk On-Call app.
 
-   VictorOps Okta SSO setup step 6
+#. Select :guilabel:`Done`.
 
-Once you have clicked Next, select the users that should have access to
-add the Splunk On-Call app to their Okta homepage and sign in to Splunk
-On-Call through SSO. Once all of the users have been selected, click
-*Next*.
 
-.. figure:: images/Okta-7.png
-   :alt: VictorOps Okta SSO setup step 7
+Once the users have added the app they will be directed to a one-time linking process to connect their Splunk On-Call credentials to Okta. To conduct the one-time linking process outside of the Okta Homepage, see :ref:`sso-linking`.
 
-   VictorOps Okta SSO setup step 7
 
-Then click *Done*, on the next page.
+.. _sso-google-spoc::
 
-.. figure:: images/Okta-8.png
-   :alt: VictorOps Okta SSO setup step 8
+Google Apps
+================
 
-   VictorOps Okta SSO setup step 8
+To configure SSO for Splunk On-Call using Google Apps:
 
-Once the users have added the App they will be directed to a one time
-linking process to connect their Splunk On-Call credentials to Okta, see
-below.
-
-.. figure:: images/Okta-9.png
-   :alt: VictorOps Okta SSO Login screen
-
-   VictorOps Okta SSO Login screen
-
-To conduct the one-time linking process outside of the Okta Homepage,
-please see the steps located in the “First-Time SSO Login” section
-above.
-
---------------
-
-**Google Apps**
-~~~~~~~~~~~~~~~
-
--  Access the Admin portal for Google Apps and navigate to Apps >> SAML
-   Apps:
+#. Access the Admin portal for Google Apps and navigate to :guilabel:`Apps` then :guilabel:`SAML Apps`.
 
 .. figure:: images/SSO2.png
    :alt: VictorOps SSO Google Apps Setup 1
 
    VictorOps SSO Google Apps Setup 1
+   .. image:: /_images/spoc/sso-okta7.png
+       :width: 100%
+       :alt: Add users 
 
 -  Select “Set up my own custom app”:
 
@@ -313,7 +223,7 @@ above.
    VictorOps SSO Google Apps Setup 5
 
 -  On the “Service Provider Details” step place the following in the
-   **ACS URL** line:
+   :guilabel:`ACS URL` line:
 
    -  https://sso.victorops.com:443/sp/ACS.saml2
 
@@ -469,8 +379,8 @@ Azure Active Directory (SAML-based Sign-on)
 AWS IAM Identity Center - SAML
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  In the IAM Identity Center console find the **Applications** tab.
--  Hit **Add Application** and look for **VictorOps.** 
+-  In the IAM Identity Center console find the :guilabel:`Applications` tab.
+-  Hit :guilabel:`Add Application` and look for **VictorOps.** 
 -  In the configuration settings make sure you set the fields as
    followed:
 
