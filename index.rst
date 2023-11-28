@@ -252,6 +252,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth: 3
 
+   Admin journey <get-started/admin-journey-landing>
+
+.. toctree::
+   :maxdepth: 3
+
    Service description <get-started/service-description>
 
 .. toctree::

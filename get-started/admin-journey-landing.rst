@@ -1,4 +1,4 @@
-.. _scenario-landing:
+.. admin-landing:
 
 ******************************************************************************************************
 Splunk Observability Cloud Admin journeys

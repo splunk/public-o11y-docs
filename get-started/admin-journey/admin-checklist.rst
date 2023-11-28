@@ -7,6 +7,14 @@ Admin onboarding checklist for Splunk Observability Cloud
 .. meta::
    :description: Overview of the Observability Cloud admin tasks and links to the documentation.
 
+
+.. toctree::
+    :maxdepth: 3
+    :hidden:
+
+    Admin Journey <admin-journey/org-setup-checklist>
+
+
 Many of companies go through a similar journey when they first start to use the Splunk Observability Cloud. This document is meant to be a guide to capture the common journey and points to consider as you set up your org and onboard uers. 
 
 To set up your organization, you should create and carry out a plan for addressing the tasks described in this topic. Many of these tasks require administrator access, and you might need to perform some administrative tasks on a regular basis after your initial setup.
@@ -25,7 +33,7 @@ The first onboarding phase generally consists of a number of activities aimed at
 This document details the adoption journey to help Developers and SREs get the most value out of the Splunk Infrastructure Monitoring and Splunk Application Performance Monitoring products.
 
 
-. image:: /_images/get-started/admin-journey.png
+.. image:: /_images/get-started/admin-journey.png
       :width: 80%
       :alt: The Observability adoption journey
 
@@ -33,4 +41,4 @@ This document details the adoption journey to help Developers and SREs get the m
 Stages
 ------------
 
-- :ref:`_org-setup-checklist`
+- :ref:`org-setup-checklist`
