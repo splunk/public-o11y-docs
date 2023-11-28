@@ -9,8 +9,6 @@ Set up Network Explorer in Kubernetes
 
 You can install and configure Network Explorer as part of the Splunk Distribution of OpenTelemetry Collector Helm chart. You also need the OpenTelemetry Collector eBPF Helm chart.
 
-To install Network Explorer in systems not using Kubernetes, see :ref:`network-explorer-setup-non-k8s`.
-
 
 Prerequisites
 ==============================
