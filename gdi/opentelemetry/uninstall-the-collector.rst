@@ -258,6 +258,6 @@ Alternatively, try the following commands:
 
 .. code-block:: PowerShell
 
-   return (Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\uninstall\* | Where { $_.DisplayName -eq "Splunk OpenTelemetry Collector" })
+   $MyProgram = Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\uninstall\* | Where { $_.DisplayName -eq "Splunk OpenTelemetry Collector" }
    
-   $MyProgram.uninstall()
+   cmd /c $MyProgram.UninstallString
