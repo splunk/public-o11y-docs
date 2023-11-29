@@ -46,14 +46,14 @@ The following example shows how to configure trace sampling in the code to drop 
    tracing: {
       tracerConfig: {
          sampler: {
-         shouldSample: (context, traceId, spanName, spanKind, attributes, links) => {
-            if (spanName ===  "unwanted") {
-               return { decision: SamplingDecision.NOT_RECORD };
-            }
+           shouldSample: (context, traceId, spanName, spanKind, attributes, links) => {
+              if (spanName ===  "unwanted") {
+                 return { decision: SamplingDecision.NOT_RECORD };
+              }
 
-            return { decision: SamplingDecision.RECORD };
-         },
-         toString: () => return "CustomSampler",
+              return { decision: SamplingDecision.RECORD };
+           },
+           toString: () => return "CustomSampler",
          }
       },
    },
