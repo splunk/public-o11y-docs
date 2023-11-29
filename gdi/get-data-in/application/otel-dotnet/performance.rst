@@ -43,11 +43,11 @@ Turn off specific instrumentations
 
 Consider turning off instrumentations that you don't need or are producing too many spans to further reduce agent overhead and span volume. To turn off an instrumentation, use ``OTEL_DOTNET_AUTO_TRACES_{name}_INSTRUMENTATION_ENABLED`` environment variable, where ``{name}`` is the name of the instrumentation.
 
-For example, the following option turns off the ``HttpClient`` instrumentation:
+For example, the following option turns off the ``SqlClient`` instrumentation:
 
 .. code-block:: shell
 
-   OTEL_DOTNET_AUTO_TRACES_HTTPCLIENT_INSTRUMENTATION_ENABLED=false
+   OTEL_DOTNET_AUTO_TRACES_SQLCLIENT_INSTRUMENTATION_ENABLED=false
 
 .. note:: Use Trace Analyzer in Splunk APM to explore the spans from your application and identify instrumentations you don't need. See :ref:`trace-search-concept` for more information.
 
