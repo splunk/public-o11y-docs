@@ -78,11 +78,6 @@ The previous settings only apply to instrumentations loaded by the Splunk Distri
 
 .. note:: Use Trace Analyzer in Splunk APM to explore the spans from your application and identify instrumentations you don't need. See :ref:`trace-search-concept` for more information.
 
-Allocate more memory for the application
-----------------------------------------------------------------
-
-Increasing the maximum memory size of the Node.js V8 process using the ``--max-old-space-size=<size_in_megabytes>`` and the ``--max-semi-space-size=<size_in_megabytes>`` options might help in alleviating agent overhead issues, as instrumentations can generate a large number of short-lived objects in memory. See :new-page:`Useful V8 options <https://nodejs.org/api/cli.html#useful-v8-options>` in the official Node.js documentation for more information.
-
 Reduce manual instrumentation to a minimum
 ----------------------------------------------------------------
 
