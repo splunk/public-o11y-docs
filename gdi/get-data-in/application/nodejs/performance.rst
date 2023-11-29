@@ -35,6 +35,30 @@ Configure trace sampling
 
 The volume of spans processed by the instrumentation might impact agent overhead. You can configure trace sampling to adjust the span volume and reduce resource usage. See :ref:`trace-sampling-settings-nodejs` for more information on sampling settings.
 
+The following example shows how to configure trace sampling in the code to drop spans named ``unwanted``:
+
+.. code-block:: javascript
+
+   const { start } = require("@splunk/otel");
+   const { SamplingDecision } = require("@opentelemetry/sdk-trace-base");
+
+   start({
+   tracing: {
+      tracerConfig: {
+         sampler: {
+         shouldSample: (context, traceId, spanName, spanKind, attributes, links) => {
+            if (spanName ===  "unwanted") {
+               return { decision: SamplingDecision.NOT_RECORD };
+            }
+
+            return { decision: SamplingDecision.RECORD };
+         },
+         toString: () => return "CustomSampler",
+         }
+      },
+   },
+   });
+
 
 .. _turn-on-nodejs-instrumentations:
 
@@ -102,6 +126,7 @@ Consider taking the following actions to decrease agent overhead:
 - Tune trace sampling settings to reduce span volume. See :ref:`trace-sampling-settings-nodejs`.
 - Turn off specific instrumentations. See :ref:`turn-on-nodejs-instrumentations`.
 - Review manual instrumentation for unnecessary span generation.
+- Turn on runtime metrics to check event loop lag. See :ref:`enable_automatic_metric_collection_nodejs`.
 
 
 .. _nodejs-overhead-measure-diy:
