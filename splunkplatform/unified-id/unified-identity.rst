@@ -61,7 +61,7 @@ The integration automatically maps Splunk Cloud Platform roles to the following 
    * - :strong:`Role in Splunk Cloud Platform`
      - :strong:`Role in Splunk Observability Cloud`
 
-   * - admin
+   * - sc_admin
      - admin
 
    * - power, can_delete
