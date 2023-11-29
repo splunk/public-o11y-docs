@@ -16,6 +16,7 @@ Instrument Node.js applications for Splunk Observability Cloud
    Runtime and custom metrics <configuration/nodejs-otel-metrics>
    Manual instrumentation <instrumentation/manual-instrumentation>
    Configure the Node.js agent <configuration/advanced-nodejs-otel-configuration>
+   Performance overhead <performance>
    Troubleshoot the Node.js agent <troubleshooting/common-nodejs-troubleshooting>
    About Splunk OTel JS <splunk-nodejs-otel-distribution>
    Migrate from the SFx Tracing Library <troubleshooting/migrate-signalfx-nodejs-agent-to-otel>
