@@ -65,14 +65,14 @@ The following applies to operators:
   * Optionally, you can use the output parameter to specify the Id of another operator to pass logs there directly.
 
 Parser operators
---------------------------------------------------
+---------------------------------------
 
 Use parser operators to isolate values from a string. There are two classes of parsers, simple and complex.
 
 Parsers with embedded operations
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can configure many parsing operators to embed certain follow-up operations such as timestamp and severity parsing. 
+You can configure parsing operators to embed certain follow-up operations such as timestamp and severity parsing. 
 
 For more information, see the the GitHub entry on complex parsers at :new-page:`Parsers <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/pkg/stanza/docs/types/parsers.md#complex-parsers>`.
 
