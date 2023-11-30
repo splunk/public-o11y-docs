@@ -146,7 +146,7 @@ Learn all metric categories and how to identify them in :ref:`metric-categories`
 Metric resolution
 ----------------------------
 
-By default, metrics are processed by Observability Cloud at the coarser of their native resolution, or at 10-second resolution. In other words, they are never displayed at a resolution finer than 10 |nbsp| seconds.
+By default, Splunk Observability Cloud processes metrics at a 10-second resolution. If metrics have a native resolution courser than 10 seconds, then Splunk Observability Cloud processes the metrics at their native resolution.
 
 Optionally, metrics can be ingested at a :strong:`higher resolution of 1 second`. High-resolution metrics enable exceptionally fine-grained and low-latency visibility and alerting for your infrastructure, applications, and business performance. 
 
