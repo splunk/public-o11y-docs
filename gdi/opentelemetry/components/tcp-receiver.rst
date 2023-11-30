@@ -4,6 +4,9 @@
 TCP log receiver
 *******************************************
 
+.. meta::
+      :description: The TCP log receiver collects logs over TCP connections.
+
 The TCP log receiver allows the Splunk Distribution of OpenTelemetry Collector to collect logs over TCP connections. The supported pipeline is ``logs``. See :ref:`otel-data-processing` for more information.
 
 .. _get-started-tcp-receiver:
