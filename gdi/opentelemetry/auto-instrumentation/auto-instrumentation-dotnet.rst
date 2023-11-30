@@ -22,42 +22,22 @@ The Zero Configuration package provides the following benefits:
 
    auto-instrumentation-dotnet-linux.rst
    auto-instrumentation-dotnet-k8s.rst
+   auto-instrumentation-dotnet-windows.rst
 
-.. _install-the-package-dotnet:
+.. raw:: html
 
-Install the package
-=========================================================
+   <h2>Install Zero Configuration Auto Instrumentation</h2>
 
-By default, the installer script only installs the Collector. If you add the ``with_dotnet_instrumentation`` parameter, the script also downloads and installs the SignalFx Instrumentation for .NET. 
+To install zero config for OpenTelemetry .NET, follow the instructions relevant to your platform:
 
-Run the PowerShell script with the ``with_dotnet_instrumentation`` parameter, as shown in the following example:
+* :ref:`auto-instrumentation-dotnet-linux`
+* :ref:`auto-instrumentation-dotnet-k8s`
+* :ref:`auto-instrumentation-dotnet-windows`
 
-.. code-block:: powershell
-   :emphasize-lines: 3
+.. raw:: html
 
-   & {Set-ExecutionPolicy Bypass -Scope Process -Force; `
-   $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); `
-   $params = @{access_token = "<access_token>"; realm = "<realm>"; mode = "agent"; with_dotnet_instrumentation = "`$true"; deployment_env = "<environment_name>"}; `
-   Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
+   <h2>Learn more</h2>
 
-Do the following to customize the command:
-
-- Replace ``<environment_name>`` with the label for the target environment.
-- Replace ``<access_token>`` with a valid Splunk Observability Cloud access token. To obtain an access token, see :ref:`admin-api-access-tokens`.
-- Replace ``<realm>`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, open the navigation menu in Splunk Observability Cloud, select :menuselection:`Settings`, and then select your username. The realm name appears in the :guilabel:`Organizations` section.
-
-.. _configure-the-package-dotnet:
-
-Configure the .NET instrumentation
-==========================================================
-
-To configure the instrumentation, see :ref:`advanced-dotnet-configuration`.
-
-.. _upgrade-the-package-dotnet:
-
-Upgrade the package
-==========================
-
-You can upgrade the package by installing a new version of the SignalFx Instrumentation for .NET. See :ref:`instrument-dotnet-applications`.
-
-.. include:: /_includes/troubleshooting-components.rst
+* Auto instrumentation sends trace data to Splunk APM. To learn more, see :ref:`wcidw-apm`
+* For more information about the Splunk Distribution of OpenTelemetry .NET, see :ref:`get-started-dotnet-otel`.
+* For information about performance, see :ref:`dotnet-otel-performance`.

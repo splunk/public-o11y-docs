@@ -81,9 +81,9 @@ Zero Configuration Auto Instrumentation is available for Java, .NET, and Node.js
      - No
      - Yes
    * - .NET
-     - No
      - Yes
-     - No
+     - Yes
+     - Yes
    * - Node.js
      - In preview
      - No
