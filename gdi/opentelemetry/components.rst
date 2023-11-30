@@ -181,6 +181,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - ``tcplog``
      - Receives logs over TCP.
      - Logs
+   * - ``udplog``
+     - Receives logs over UDP.
+     - Logs
    * - ``windowseventlog``
      - Tails and parses logs from the Windows Event log API.
      - Logs
