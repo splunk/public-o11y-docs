@@ -1,6 +1,8 @@
 .. _otel-translation-tool:
 .. _translatefx:
 
+.. note:: As part of the SignalFx Smart Agent, the translatesfx tool reached end of support and is deprecated. Smart Agent monitors are available and supported through the :ref:`smartagent-receiver` in the Splunk Distribution of OpenTelemetry Collector.
+
 *************************************************************************
 Configuration translation rules and tool
 *************************************************************************
@@ -8,7 +10,7 @@ Configuration translation rules and tool
 .. meta::
       :description: Use this tool to convert a SignalFX Smart Agent YAML configuration file into the Splunk Distribution of OpenTelemetry Collector YAML configuration file.
 
-``translatesfx`` is a command-line tool provided by Splunk Observability Cloud that helps you translate your existing Smart Agent YAML configuration file into a configuration that can be used by the Collector.  
+``translatesfx`` is a command-line tool provided by Splunk Observability Cloud that helps you translate your existing Smart Agent YAML configuration file into a configuration that can be used by the Collector. 
 
 .. caution::
 
