@@ -220,7 +220,9 @@ For example, the following sets of data points are in three separate MTS:
 #. MTS2: Gauge metric ``cpu.utilization``, dimension ``"source_host": "host1"``
 #. MTS3: Gauge metric ``cpu.utilization``, dimension ``"hostname": "host2"``
 
-MTS 2 has the same host value as MTS 1, but not the same dimension key. MTS 3 has the same host name as MTS 1, but not the same host name value.
+MTS 2 has the same host value as MTS 1, but not the same dimension key. MTS 3 has the same host name as MTS 1, but not the same host name value. 
+
+Splunk Observability Cloud retains inactive MTS for 13 months. 
 
 Use unique dimensions to create independent MTS
 ----------------------------------------------------
