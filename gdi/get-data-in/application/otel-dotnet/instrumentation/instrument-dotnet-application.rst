@@ -199,7 +199,7 @@ The script passes all the command-line parameters you provide to the application
 Instrument an application running within a Docker container
 --------------------------------------------------------------
 
-An example of a Dockerfile that instruments a .NET application running inside a Docker container is available in the :new-page:`splunk/observability-content-contrib < https://github.com/splunk/observability-content-contrib/tree/main/integration-examples/splunk-otel-dotnet-docker>` repository on GitHub.
+An example of a Dockerfile that instruments a .NET application running inside a Docker container is available in the :new-page:`splunk/observability-content-contrib <https://github.com/splunk/observability-content-contrib/tree/main/integration-examples/splunk-otel-dotnet-docker>` repository on GitHub.
 
 .. _windows-offline-install-otel-dotnet:
 
