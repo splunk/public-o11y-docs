@@ -1,11 +1,11 @@
-.. _single-sign-sso:
+.. _sp-sso-users:
 
 ************************************************************************
-Configure Single Sign-On for Splunk On-Call
+Sign in to Splunk On-Call with SSO
 ************************************************************************
 
 .. meta::
-   :description: Enable Splunk On-Call SSO for your organization. 
+   :description: Signing into Splunk On-Call with SSO, in the Web UI or on mobile. 
 
 
 
@@ -22,12 +22,6 @@ interested in setting up SSO, please contact :ref:`Splunk On-Call Support <spoc-
 
 
 
-Configure SSO between your Identity Provider (IDP) and  Splunk On-Call. Our standard SSO setup uses SAML 2.0 protocol. As long as your IDP can use SAML 2.0 protocol, it can integrate with Splunk On-Call. The exact steps differ depending on which IDP you use, but the process typically involves exporting a .XML metadata file and sending it to our Support team. Once you have sent the .xml file, a Splunk On-Call support specialist will
-complete the setup on the back-end and respond with confirmation.
-
-If your IDP does not have SAML capability, please contact Splunk On-Call Support to explore what alternative options may be available. For details on how to contact Splunk On-Call Support, see :ref:`spoc-support`.
-
-
 Instructions for Users
 ===============================
 
@@ -36,8 +30,7 @@ logged into the Splunk On-Call portal via a web browser.
 
 Contact your Splunk On-Call administrator or reach out to Splunk On-Call Support if you are having trouble finding your Organization Slug.
 
-A user's login experience on the Splunk On-Call platform will be slightly different after enabling Single Sign-On for your organization. If your organization has not explicitly disabled traditional authentication, users will be able to login as normal with their Splunk On-Call credentials or login via SSO. If traditional authentication has
-been disabled, users will encounter an error message directing them to login via SSO if they attempt to login with their Splunk On-Call credentials.
+A user's login experience on the Splunk On-Call platform will be slightly different after enabling Single Sign-On for your organization. If your organization has not explicitly disabled traditional authentication, users will be able to login as normal with their Splunk On-Call credentials or login via SSO. If traditional authentication has been disabled, users will encounter an error message directing them to login via SSO if they attempt to login with their Splunk On-Call credentials.
 
 Web Client UI
 =================
