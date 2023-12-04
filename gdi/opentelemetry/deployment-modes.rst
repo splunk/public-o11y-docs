@@ -95,13 +95,12 @@ To change the deployment mode, modify ``SPLUNK_CONFIG`` for the path to the gate
 Kubernetes
 ----------------------------------
 
-The Collector for Kubernetes has different deployment options. You can configure them using the ``enabled`` field in their respective Helm value mappings. See :ref:`otel-kubernetes-config-advanced` for information on how to access your configuration yaml. 
+The Collector for Kubernetes has different deployment options. You can configure them using the ``enabled`` field in their respective Helm value mappings. See :ref:`otel-kubernetes-config-advanced` for information on how to access your configuration yaml.
 
 The main deployment modes are:
 
 * Default, which includes the ``agent`` deamonset and the ``clusterReceiver`` deployment component.
 * All collector modes, which includes ``agent`` deamonset, and the ``clusterReceiver`` and the ``gateway`` components.
-* Network explorer deployment mode, which uses the ``networkExplorer.kernelCollector`` daemonset and ``networkExplorer.k8sCollector`` config. See more in :ref:`network-explorer-setup`.
 
 For more information on the components on each mode, see :ref:`helm-chart-components`.
 

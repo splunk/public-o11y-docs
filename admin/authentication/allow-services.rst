@@ -52,6 +52,15 @@ The following examples show how to set the ``HTTP_PROXY`` and ``HTTPS_PROXY`` en
 
 .. tabs::
 
+   .. code-tab:: shell splunk-otel-collector.conf file (Systemd)
+
+      # Edit the example systemd environment file in
+      # /etc/otel/collector/splunk-otel-collector.conf.example
+
+      NO_PROXY=<address,anotheraddress>
+      HTTP_PROXY=http://<proxy.address:port>
+      HTTPS_PROXY=http://<proxy.address:port>
+
    .. code-tab:: bash Linux (Systemd)
 
       # Add proxy settings to the environment for the installer script
@@ -136,7 +145,7 @@ The following examples show how to set the ``HTTP_PROXY`` and ``HTTPS_PROXY`` en
               # or splunk_otel_collector_proxy_https is defined. Default is localhost,127.0.0.1,::1)
               splunk_otel_collector_no_proxy): 127.0.0.1
 
-Restart the Collector after adding these environment variables to your configuration. 
+Restart the Collector after adding these environment variables to your configuration.
 
 
 .. _allow-urls:
