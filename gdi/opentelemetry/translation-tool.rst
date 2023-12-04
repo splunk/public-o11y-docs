@@ -1,7 +1,7 @@
 .. _otel-translation-tool:
 .. _translatefx:
 
-.. note:: As part of the SignalFx Smart Agent, the translatesfx tool reached end of support and is deprecated. Smart Agent monitors are available and supported through the :ref:`smartagent-receiver` in the Splunk Distribution of OpenTelemetry Collector.
+.. note:: As part of the SignalFx Smart Agent, the translatesfx tool is deprecated. Smart Agent monitors are available and supported through the :ref:`smartagent-receiver` in the Splunk Distribution of OpenTelemetry Collector.
 
 *************************************************************************
 Configuration translation rules and tool
