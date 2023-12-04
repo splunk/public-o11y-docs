@@ -56,23 +56,26 @@ To collect control plane metrics, the Helm chart uses the Collector on each node
 
 If your control plane is using non-standard specifications, then you can provide a custom configuration to allow the Collector to successfully connect to it.
 
-The Collector relies on pod-level network access to collect metrics from the control plane pods. Since most cloud Kubernetes as a service distributions don't expose the control plane pods to the end user, collecting metrics from these distributions is not supported.
-
 Availability and configuration instructions
 -----------------------------------------------------------------------------
 
-The following distributions are supported:
+The Collector relies on pod-level network access to collect metrics from the control plane pods. Since most cloud Kubernetes as a service distributions don't expose the control plane pods to the end user, collecting metrics from these distributions is not supported.
 
-* Kubernetes
-* OpenShift
+The following table shows which Kubernetes distributions support control plane metrics collection:
 
-The following distributions are not supported:
+.. list-table::
+  :header-rows: 1
+  :width: 60%
 
-* AKS
-* EKS
-* EKS/Fargate
-* GKE
-* GKE/Autopilot
+  * - Supported
+    - Unsupported
+  * - * Kubernetes
+      * OpenShift
+    - * AKS
+      * EKS
+      * EKS/Fargate
+      * GKE
+      * GKE/Autopilot
 
 See the :new-page:`agent template <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/templates/config/_otel-agent.tpl>` for the default configurations for the control plane receivers.
 

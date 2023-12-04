@@ -17,7 +17,7 @@ Keep in mind you might also need the following access tokens:
 
 .. _api-access-token:
 
-Retrieve you user API access token (session token)
+Retrieve your user API access token (session token)
 =========================================================
 
 Observability Cloud automatically generates a user API access token every time you log in.
