@@ -194,6 +194,13 @@ If you run the application using the ``dotnet`` CLI, add ``dotnet`` after the sc
 The script passes all the command-line parameters you provide to the application.
 
 
+.. _docker-install-otel-dotnet:
+
+Instrument an application running within a Docker container
+--------------------------------------------------------------
+
+An example of a Dockerfile that instruments a .NET application running inside a Docker container is available in the :new-page:`splunk/observability-content-contrib < https://github.com/splunk/observability-content-contrib/tree/main/integration-examples/splunk-otel-dotnet-docker>` repository on GitHub.
+
 .. _windows-offline-install-otel-dotnet:
 
 Offline installation for Windows
