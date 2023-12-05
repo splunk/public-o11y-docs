@@ -270,6 +270,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Get started <get-started/get-started-306090>
+
+.. toctree::
+   :maxdepth:   3
+
    Get started <get-started/o11y>
 
 .. toctree::
