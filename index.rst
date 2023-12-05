@@ -22,8 +22,15 @@ Splunk Observability Cloud overview :ref:`welcome`
 
 .. rst-class:: newcard
 
+:strong:`Get started`
+Get started with Splunk Observability Cloud :ref:`get-started-306090`
+
+.. rst-class:: newcard
+
 :strong:`Scenarios`
 Collection of scenarios for Splunk Observability Cloud :ref:`scenario-landing`
+
+.. rst-class:: newcard
 
 :strong:`Tutorials`
 Collection of tutorials for Splunk Observability Cloud :ref:`im-tutorials`
