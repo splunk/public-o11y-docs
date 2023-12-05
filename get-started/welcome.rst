@@ -1,7 +1,7 @@
 .. _welcome:
 
 *************************************
-Welcome to Splunk Observability Cloud
+Splunk Observability Cloud Overview
 *************************************
 
 .. meta::
@@ -46,6 +46,10 @@ Start learning about how the following Observability Cloud products work to prov
 - :ref:`welcome-oncall`
 
 - :ref:`welcome-mobile`
+
+- :ref:`welcome-it`
+
+- :ref:`welcome-content-packs`
 
 .. note:: For a list of benefits and service terms of Splunk Observability Cloud, see :ref:`o11y-service-description`.
 
@@ -130,6 +134,8 @@ Splunk Observability Cloud for Mobile is an iOS and Android companion mobile app
 
 For more information, see :ref:`intro-to-mobile`.
 
+.. _welcome-it:
+
 Splunk IT Essentials Work and Splunk IT Service Intelligence 
 ===================================================================
 
@@ -138,6 +144,8 @@ Splunk IT Essentials Work (ITE Work) is a free application that helps you get st
 Splunk IT Service Intelligence (ITSI) is a premium IT operations solution that provides actionable insight into the performance and behavior of your IT services. You can also ingest events from across your IT landscape and from other monitoring silos to provide a unified operational console of all your events and service-impacting issues. 
 
 For more information about these applications, see the :new-page:`IT operations product overview <https://docs.splunk.com/Documentation/ITOps/current/Overview/Overview>`. 
+
+.. _welcome-content-packs:
 
 Splunk App for Content Packs
 ======================================
