@@ -12,6 +12,6 @@ There are 3 distinct phases to onboarding journey for Splunk Observability Cloud
 
 #. The onboarding phase - activities that connect Splunk Observability Cloud to your existing software framework that already exists in your environment.
 #. The initial pilot rollout phase - set up standards and procedures for end users, like development teams and site reliability engineers.
-#. The expansion and optimization phase
+#. The expansion and optimization phase - carry forward best practices and frameworks established during the pilot rollout to your infrastructure, applications, and teams.
 
 
