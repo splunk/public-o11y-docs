@@ -13,17 +13,25 @@ Welcome
 .. rst-class:: newparawithicon
 
 :icon-info:`.` :strong:`Welcome to Splunk Observability Cloud`
-Learn the basic elements of Splunk Observability Cloud and all it can do for you.
+Learn the basic elements of Splunk Observability Cloud and you can use it for.
 
 .. rst-class:: newcard
 
-:strong:`Service description`
-Benefits and service terms of Splunk Observability Cloud :ref:`o11y-service-description`
+:strong:`Overview`
+Splunk Observability Cloud overview :ref:`welcome`
 
 .. rst-class:: newcard
 
 :strong:`Scenarios`
 Collection of scenarios for Splunk Observability Cloud :ref:`scenario-landing`
+
+:strong:`Tutorials`
+Collection of tutorials for Splunk Observability Cloud :ref:`im-tutorials`
+
+.. rst-class:: newcard
+
+:strong:`Service description`
+Benefits and service terms of Splunk Observability Cloud :ref:`o11y-service-description`
 
 .. rst-class:: newcard
 

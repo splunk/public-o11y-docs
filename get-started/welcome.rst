@@ -1,7 +1,7 @@
 .. _welcome:
 
 *************************************
-Splunk Observability Cloud Overview
+Splunk Observability Cloud overview
 *************************************
 
 .. meta::
