@@ -1,4 +1,5 @@
 .. _phase3:
 
-Phase 3
-******************************************************
+
+Get started with Splunk Observability Cloud: Expansion and optimization phase
+*******************************************************************************
