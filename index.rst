@@ -4,6 +4,9 @@
 Welcome
 **********
 
+.. meta::
+    :description: Welcome to Splunk Observability Cloud documentation. Learn about the basic elements of Splunk Observability Cloud and all it can do for you.
+
 .. imagetarget:: _images/get-started/o11y-user-doc-hero-banner-v2.svg
    :alt: Welcome
    :width: 97.3%
@@ -13,7 +16,7 @@ Welcome
 .. rst-class:: newparawithicon
 
 :icon-info:`.` :strong:`Welcome to Splunk Observability Cloud`
-Learn the basic elements of Splunk Observability Cloud and all it can do for you.
+Learn about the basic elements of Splunk Observability Cloud and all it can do for you.
 
 .. rst-class:: newcard
 
