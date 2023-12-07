@@ -12,20 +12,7 @@ Onboarding phase: Configure your user and team administration
 Create a trial for your organization 
 ========================================
 
-To request a Splunk Observability Cloud Free Trial, follow these steps:
-
-#. Go to https://www.splunk.com/en_us/download/o11y-cloud-free-trial.html.
-#. Select your preferred region and then select :guilabel:`Next`. Select the location closest to you, or the region that has been recommended by your Splunk technical contact, if you have one.
-#. Enter your contact information and select the term agreement.
-    #. The name and emails address you enter are used to create the first user which is granted admin capabilities automatically.
-    #. The company name you enter is used to name the organization, so enter a name describes your account, as well as, its function. For example “ACME Dev Platform” 
-#. Select :guilabel:`Start Free Trial`.
-#. After you submit the form an trial confirmation email is sent. Check your spam folder if it takes longer than 10 minutes.
-#. In the confirmation email, select the :guilabel:`Verify` or paste the link provided in your browser. 
-#. Enter your password in the popup.
-#. Select on :guilabel:`Sign In Now` to access your new Splunk Observability Cloud trial.
-
-Alternatively, if you have a Splunk technical contact they can create a Splunk Observability Cloud trial for your organization. 
+If you have a Splunk technical contact, they can create a Splunk Observability Cloud trial for your organization and provide you with the link to log in to your trial organization. Alternatively, you can sign up for a trial. See :ref:`o11y-trial`.
 
 Decide how to manage user access
 -------------------------------------

@@ -23,7 +23,7 @@ Configure your user and team administration
 Create a trial for your organization 
 -----------------------------------------------------------------------
 
-If you have a Splunk technical contact they can create a Splunk Observability Cloud trial for your organization. Alternatively, you can creat
+If you have a Splunk technical contact, they can create a Splunk Observability Cloud trial for your organization and provide you with the link to log in to your trial organization. Alternatively, you can sign up for a trial. See :ref:`o11y-trial`.
 
 Decide how to manage user access
 -------------------------------------
