@@ -86,7 +86,7 @@ The Kubernetes navigator automatically discovers the full hierarchy of elements-
 
 To explore the main area, you can take the following actions:
 
-- Hover: Hover over an element to display a border and to open a tooltip that displays information about the element, including the element’s condition or phase, if applicable.
+- Hover: Hover over an element to display a border and to open a tooltip that displays information about the element, including the element's condition or phase, if applicable.
 - Zoom: Hover a cluster or node to display a magnifying glass icon in the upper left corner of the element. Click the magnifying glass icon to apply the filter and change the zoom level of the map.
 - Select: Click an element on the map to drill down for more detail. Details about the element display in the Info panel of the sidebar on the right. Selecting an element on the map does not change the zoom level or filters on the map, but does add a border around the selected element.
 - Filter: Filter the map by any available metadata in your Kubernetes data, such as a namespace, a workload, or any other key-value pair. When you filter the map, you see nodes that match the filter. Nodes that do not match the filter are hidden. Pods and containers that match the filter are highlighted, and non-matching pods and containers are dimmed. You can still select the dimmed pods and containers to view details about them in the Info panel.

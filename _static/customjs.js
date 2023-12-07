@@ -19,7 +19,7 @@ $(document).ready(function () {
     });
 
 
-    $("ul.current > li.toctree-l2").each(function () {
+    $("ul.current > li.toctree-l2, ul.current").each(function () {
         $("li.toctree-l2").show();
     });
 

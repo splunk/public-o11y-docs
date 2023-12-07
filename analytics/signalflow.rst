@@ -49,7 +49,7 @@ Most built-in :ref:`analytical functions <analytics-ref>` can perform computatio
 
 -  Transformations operate in parallel on each MTS over a window of time and yield one output time series for each input time series. For example, the average CPU utilization for five servers over a rolling window of one day will display five MTS; each output value will be the moving average for that MTS over the previous 24 hours. For more information, see :new-page:`Transformations <https://dev.splunk.com/observability/docs/signalflow/#Transformations>`.
 
-   To learn more about th two types of transformations available, moving window and calendar window, are discussed in the following section. For examples of how to use transformation analytics in charts, see :ref:`gain-insights-through-chart-analytics`.
+   See the following sections to learn more about the 3 types of transformations available, moving window, calendar window, and dashboard window. For examples of how to use transformation analytics in charts, see :ref:`gain-insights-through-chart-analytics`.
 
 Moving window transformations
 --------------------------------------------
@@ -152,7 +152,14 @@ The difference between the two charts is that the :strong:`listChartDemo` chart 
 
 When you adjust the :guilabel:`Time` picker for the dashboard, only the chart on the :strong:`listChartDashboardWindow` chart will update its values according to the selected time range. For example, if you select a time range of ``-12h``, the chart will display data from the past 12 hours.
 
-.. For more information about dashboard window transformations, see :new-page:`Dashboard window transformations <https://dev.splunk.com/observability/docs/signalflow/#Calendar-window-transformations>`.
+For more information about dashboard window transformations, see :new-page:`Dashboard window transformations <https://dev.splunk.com/observability/docs/signalflow/#Dashboard-window-transformations>`.
+
+.. note::
+    
+    You can't apply dashboard window transformations to detectors. When you create a new detector from a chart that uses dashboard window transformation, the transformation window is updated to the closest match to the current time window of the dashboard. 
+     
+    For example, the current time window of a dashboard is ``09/01/2023 09:25:00 am to 09/02/2023 07:30:00 am``. When you create a new detector from a chart in this dashboard, the transformation window becomes ``Past day (-1d)``.
+
 
 .. _other-functions:
 

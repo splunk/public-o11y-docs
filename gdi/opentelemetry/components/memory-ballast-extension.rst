@@ -49,6 +49,7 @@ This configuration uses 64 Mib of memory for the ballast:
 
 .. code-block:: yaml
 
+
   extensions:
     memory_ballast:
       size_mib: 64
@@ -57,6 +58,7 @@ This configuration uses 64 Mib of memory for the ballast:
 This configuration uses 20% of the total memory for the ballast:
 
 .. code-block:: yaml
+
 
   extensions:
     memory_ballast:

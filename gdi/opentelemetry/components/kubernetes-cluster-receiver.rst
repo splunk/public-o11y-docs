@@ -47,6 +47,7 @@ Use ``metadata_exporters`` as a list of metadata exporters to sync with metadata
 
 .. code-block:: yaml
 
+
    receivers:
      k8s_cluster:
        auth_type: serviceAccount
@@ -102,6 +103,8 @@ Metrics
 =====================
 
 The following metrics, resource attributes, and attributes are available.
+
+.. note:: The SignalFx exporter excludes some available metrics by default. Learn more about default metric filters in :ref:list-excluded-metrics. See :ref:ootb-metrics-k8s to see how the Collector processes Kubernetes metrics.
 
 .. raw:: html
 

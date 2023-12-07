@@ -10,7 +10,7 @@ Docs contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for the c
 
 ## Requirements
 
-The documentation is built from [reStructuredText](https://docutils.sourceforge.io/rst.html) and Markdown files using [Sphinx](https://www.sphinx-doc.org/en/master/).
+The documentation is built from [reStructuredText](https://docutils.sourceforge.io/rst.html) files using [Sphinx](https://www.sphinx-doc.org/en/master/).
 
 To contribute to the documentation you need a GitHub account. See [CONTRIBUTING.md](CONTRIBUTING.md) for our contribution guidelines.
 
@@ -31,5 +31,3 @@ This Splunk repository is subject to the Splunk Websites Terms and Conditions of
 and the [LICENSE](LICENSE) specific to this repository.
 
 You can contribute new documentation and edits to the existing documentation.
-
-####

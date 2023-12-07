@@ -40,7 +40,7 @@ The following table provides an overview of what you can do with Splunk APM:
     - Service map
     - :ref:`Explore the service map <apm-service-map>`
 
-  * - Monitor endpoints in your services using Endpoint Performance. Using the filter, sort, and compare functionality within Endpoint Performance, you can quickly isolate endpoints with increased requests, errors, or duration that impact your services’ performance.
+  * - Monitor endpoints in your services using Endpoint Performance. Using the filter, sort, and compare functionality within Endpoint Performance, you can quickly isolate endpoints with increased requests, errors, or duration that impact your services' performance.
     - Endpoint performance
     - :ref:`apm-scenario-endpoint-performance`
 

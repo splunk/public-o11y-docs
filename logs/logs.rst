@@ -152,7 +152,7 @@ in addition to your current system, follow these steps:
 
 2. Add HEC output.
    Change your Fluentd configuration by adding another output section. The new HEC
-   output section points to Splunk’s SignalFx Observability ingest endpoint.
+   output section points to Splunk's SignalFx Observability ingest endpoint.
 
    For example, if you have one output to elasticsearch, follow these steps:
 

@@ -14,13 +14,13 @@ To get a detailed breakdown of your metric time series (MTS) creation and usage,
 
 You can use the detailed metrics usage report to optimize your usage of custom metrics. 
 
-    * If you are on a usage-based pricing plan, all your metrics are considered custom metrics. By using the report to find and clean high cardinality metrics, you can better control your costs and query performance. 
+    * If you are on a usage-based pricing plan, the system counts your metrics as custom metrics. By using the report to find and clean high cardinality metrics, you can better control your costs and query performance.
     * If you are on a host-based pricing plan with high utilization of custom metrics, you can use the report to lower your custom metrics usage. Learn more about this subscription plan in :ref:`monitor-imm-billing-usage`.
 
 Format of the report
 ==============================
 
-For each metric in the report, you can see the following columns.
+For each metric in the report, you can see the columns shown in the following table.
 
 Metric identifiers
 --------------------------------
@@ -37,9 +37,10 @@ Metric identifiers
      - The name of the metric
    
    * - Category type 
-     - The category of the metric, in the format of a number. It only applies to host-based subscription plans. In DPM subscription plans, all metrics are considered custom.
+     - The category of the metric, in the format of a number. It only applies to host-based subscription plans. In data points per
+       minute (DPM) subscription plans, the system counts all metrics ase considered custom metrics.
 
-See the following table for more information on metric category types. For more information, see :ref:`metrics-category`.
+The following table has an overview of metric category types. To learn more about metric categories, see :ref:`metrics-category`.
 
 .. include:: /_includes/metric-categories.rst
 
@@ -58,7 +59,7 @@ Usage statistics
      - Number of unique detectors running during the interval for the metric. Detectors created before the interval are also counted.
 
    * - Charts
-     - Number of unique charts containing the metric that are viewed in dashboards during the interval. If the same chart is viewed multiple times, it is counted only once towards the total charts count.
+     - Number of unique charts containing the metric that users viewed in dashboards during the interval. If users viewed the same chart multiple times, all the views count only once towards the total charts count.
 
 
 MTS creation statistics
@@ -84,8 +85,8 @@ MTS creation statistics
    * - MTS per token
      - | The token used to create the MTS and the number of MTS created for the metric using that token.
 
-       * If you see a number, such as ``1336332416901451776``, instead of a token ID, the token was deleted before the report was generated.
-       * If you see ``0`` instead of a token ID, the MTS were not created using a token.
+       * If you see a number, such as ``1336332416901451776``, instead of a token ID, a user deleted the token before you generated the report.
+       * If you see ``0`` instead of a token ID, the system didn't use a token to generate the MTS.
        * If you see ``{}`` instead of a token ID and the MTS count, the metric is an internal metric. 
 
    * - Example MTS
@@ -98,7 +99,7 @@ Leverage metrics usage report to optimize your metrics volume
 Using the statistics in the metrics usage report, you can gain more visibility into and control over your metrics in the following ways:
 
 * Understand the cardinality of your metrics and determine the top cardinality metrics.
-* Find high cardinality metrics that aren’t frequently used in charts and dashboards. You can optimize your metrics volume by aggregating or dropping these metrics with metrics pipeline management.
+* Find high cardinality metrics that aren't frequently used in charts and dashboards. You can optimize your metrics volume by aggregating or dropping these metrics with metrics pipeline management.
 * Identify dimensions that are the main drivers of high cardinality. You can drop these dimensions and ingest only the aggregated metrics with metrics pipeline management.
 * Determine which teams are ingesting high cardinality metrics. You can work with those teams to optimize your metrics.
 

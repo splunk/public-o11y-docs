@@ -12,9 +12,9 @@ To learn more about how to work with each chart type, see :ref:`choose-chart-typ
   
 - :ref:`line-charts`: Display data in a plot with data points connected by a series of straight lines.
 - :ref:`area-charts`: Display in a plot similar to a line chart, except that the area below the line is filled.
-- :ref:`column-charts`: Also known as bar charts. Each data point is displayed as a vertical bar going from the x-axis origin to the measured value of the data point. The bars aren’t connected.
+- :ref:`column-charts`: Also known as bar charts. Each data point is displayed as a vertical bar going from the x-axis origin to the measured value of the data point. The bars aren't connected.
 - :ref:`histogram-charts`: Display as horizontal rectangles on a two-dimensional plot. The starting and ending x-position of a rectangle represents the time duration over which data points for that rectangle were collected. The y-position of a rectangle represents the number of data points collected in that time duration.
-- :ref:`list-charts`: Display multiple data points at each point in time. They show recent trends in the data, but they don’t let you see large amounts of history.
+- :ref:`list-charts`: Display multiple data points at each point in time. They show recent trends in the data, including up to 100 data points.
 - :ref:`single-value-charts`: Show a single value for a data point as it changes over time. In most cases, you use this type of chart to display important metrics as a single number.
 - :ref:`heatmap-charts`: Present a series of squares each representing a single data point of the selected metric. The color of each square represents the value range of the metric allowing quick identification of values that are higher or lower than desired.
 - :ref:`event-feed-charts`: This chart type doesn't display metric data. Instead, it displays a list of events that meet the criteria you specify.
@@ -126,7 +126,7 @@ Secondary visualizations help you see trends in a single value chart:
   the expected range of values
 - :strong:`Linear`: Shows a bar that marks where the current value is among the expected range of values
 
-By default, a single value chart doesn’t show any additional visualizations.
+By default, a single value chart doesn't show any additional visualizations.
 
 .. _list-charts:
 

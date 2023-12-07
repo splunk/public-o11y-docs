@@ -6,7 +6,7 @@ Troubleshoot Log Observer Connect setup
 
 
 .. meta::
-  :description: See Log Observer Connect’s limits on MB of data ingested or indexed per month, limits on the number and type of processing rules, and search query limits.
+  :description: See Log Observer Connect's limits on MB of data ingested or indexed per month, limits on the number and type of processing rules, and search query limits.
 
 This topic helps Log Observer Connect administrators and users resolve issues that might arise when searching Splunk platform indexes in Log Observer Connect.
 

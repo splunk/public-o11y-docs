@@ -149,6 +149,27 @@ The following settings control tracing limits and attributes:
      - Not applicable
      - Whether to include the full Redis query in ``db.statement`` span attributes when using the Redis instrumentation. Default value is ``false``.
 
+.. _trace-sampling-settings-nodejs:
+
+Samplers configuration
+===============================================================
+
+The following settings control trace sampling:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 70
+   :width: 100%
+
+   * - Environment variable
+     - Description
+   * - ``OTEL_TRACES_SAMPLER``
+     - Sampler to use. The default value is ``parentbased_always_on``. Possible values are: ``always_on``, ``always_off``, ``parentbased_always_on``, ``parentbased_always_off``, ``traceidratio``, ``parentbased_traceidratio``. See :new-page:`Built-in samplers <https://github.com/open-telemetry/opentelemetry-js/blob/main/packages/opentelemetry-sdk-trace-base/README.md#built-in-samplers>` in the official OpenTelemetry documentation for more information.
+
+   * - ``OTEL_TRACES_SAMPLER_ARG``
+     - Semicolon-separated list of rules for the ``rules`` sampler. For example, when setting the sampler to ``parentbased_traceidratio`` you can set the ratio using a number in the 0 to 1 range: |br| |br| ``OTEL_TRACES_SAMPLER_ARG=0.25``.
+
+
 .. _trace-exporters-settings-nodejs:
 
 Exporters configuration
@@ -167,7 +188,7 @@ The following settings control trace exporters and their endpoints:
      - Comma-separated list of trace exporters to use. The default value is ``otlp``. To output to the console, set the variable to ``console``.
    * - ``OTEL_METRICS_EXPORTER``
      - ``metrics.metricReaderFactory``
-     - Comma-separated list of metrics exporter to use. The default value is ``otlp``. To output to the console, set the variable to ``console``.
+     - Comma-separated list of metrics exporter to use. The default value is ``otlp``. To output to the console, set the variable to ``console``. If set to ``none``, metric exports are turned off.
    * - ``OTEL_EXPORTER_OTLP_METRICS_PROTOCOL``
      - ``metrics.metricReaderFactory``
      - Procotol for exporting metrics. Accepted values are ``grpc`` and ``http/protobuf``. The default value is ``grpc``.
@@ -286,7 +307,7 @@ The following settings activate runtime metrics collection:
      - Description
    * - ``SPLUNK_METRICS_ENABLED``
      - Activated by calling ``start``.
-     - Activates metrics collection. The default value is ``false``. For more information on Node metrics, see :ref:`nodejs-otel-metrics`.
+     - Activates metrics collection. The default value is ``false``. For more information on Node.js metrics, see :ref:`nodejs-otel-metrics`.
    * - ``SPLUNK_METRICS_ENDPOINT``
      - ``metrics.endpoint``
      - The metrics endpoint. Takes precedence over ``OTEL_EXPORTER_OTLP_METRICS_ENDPOINT``. When ``SPLUNK_REALM`` is used, the default value is ``https://ingest.<realm>.signalfx.com/v2/datapoint/otlp``.

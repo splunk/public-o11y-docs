@@ -27,6 +27,7 @@ The default configuration of the ``signalfx`` receiver in the Splunk Distributio
 
 .. code-block:: yaml
 
+
    receivers:
      signalfx:
        endpoint: 0.0.0.0:9943
@@ -37,6 +38,7 @@ The default configuration of the ``signalfx`` receiver in the Splunk Distributio
 When adding the SignalFx receiver, configure both the metrics and logs pipelines. Make sure to also add the SignalFx exporter as in the following example:
 
 .. code-block:: yaml
+
 
    service:
      pipelines:

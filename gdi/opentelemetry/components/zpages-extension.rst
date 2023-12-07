@@ -31,6 +31,7 @@ This is a configuration example for the extension:
 
 .. code-block:: yaml
 
+
   extensions:
     zpages:
       endpoint: "localhost:56888"

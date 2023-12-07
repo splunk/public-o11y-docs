@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-whos-on-call:
 
 Check who's currently on call
@@ -15,7 +17,7 @@ You can also view who's on call in :guilabel:`Incident Management`. To do so, fo
 
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
 #. Select :guilabel:`On-call schedules`. 
-#. Select the schedule for which you want to view who’s on call.
+#. Select the schedule for which you want to view who's on call.
 
 See also
 ============

@@ -36,9 +36,10 @@ Splunk Observability Cloud offers a guided setup to install the Collector:
 
 For advanced installation instructions, see :ref:`otel-install-windows`.
 
-Next steps
+Learn more
 =================
 
 - Configure the Collector. See :ref:`otel-configuration`.
 - Learn about the Collector commands. See :ref:`otel-commands`.
 - Troubleshoot Collector issues. See :ref:`otel-troubleshooting`.
+- For a list of host and application monitors, see :ref:`monitor-data-sources`.

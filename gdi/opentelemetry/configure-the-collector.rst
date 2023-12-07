@@ -21,18 +21,14 @@ Configure the Collector
     windows-config.rst
     other-configuration-sources.rst
     data-processing.rst
+    Internal metrics <metrics-internal-collector.rst>
+    Default Kubernetes metrics <metrics-ootb-k8s.rst>
     tags.rst
     Remove data pre-ingest <configure-remove.rst>
 
 You can use a variety of default configuration files to set up the Splunk Distribution of OpenTelemetry Collector, as well :ref:`additional components <otel-components>` that you can configure separately. 
 
-See also other configuration options: 
-
-* :ref:`otel-data-processing`
-* :ref:`otel-tags`
-* :ref:`configure-remove`
-
-.. note:: Splunk Observability Cloud also offers several options for no-hassle, zero-config Auto Instrumentation. Learn more at :ref:`Splunk OpenTelemetry Zero Configuration Auto Instrumentation <zero-config>`.
+.. note:: See how to perform common actions and tasks with the Collector at :ref:`collector-how-to`. To understand how data is processed, see :ref:`otel-data-processing`.
 
 .. _otel-config-options:
 
@@ -50,6 +46,8 @@ You can also use these configurations to change the default settings in each Col
 * :ref:`otel-linux-config`
 * :ref:`otel-windows-config`
 
+.. note:: Splunk Observability Cloud offers several options for no-hassle, zero-config Auto Instrumentation. Learn more at :ref:`Splunk OpenTelemetry Zero Configuration Auto Instrumentation <zero-config>`.
+
 .. _otel-config-multiple-files:
 
 .. raw:: html
@@ -64,21 +62,28 @@ To define multiple config files simultaneously use:
 
   ./otelcol --config=file:/path/to/first/file --config=file:/path/to/second/file
 
+.. _otel-config-logs:
+
 .. raw:: html
 
   <embed>
-    <h2>Configure log collection<a name="otel-config-options" class="headerlink" href="#otel-config-options" title="Permalink to this headline">¶</a></h2>
+    <h2>Configure log collection<a name="otel-config-logs" class="headerlink" href="#otel-config-logs" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-Use the Fluentd receiver to collect logs. Common sources such as filelog, journald, and Windows Event Viewer are included in the installation. See :ref:`fluentd-receiver` for more information.
+The Collector can capture logs using Fluentd, but this option is deactivated by default.
+
+* For Kubernetes, native OpenTelemetry log collection is supported by default. See more at :ref:`kubernetes-config-logs`.
+* For Linux and Windows environments (physical hosts and virtual machines), use the Universal Forwarder to send logs to the Splunk platform. See more at :ref:`collector-with-the-uf`.
 
 .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance. 
 
 .. raw:: html
 
   <embed>
-    <h3>Fluentd artifacts<a name="otel-fluentd-artifacts" class="headerlink" href="#otel-fluentd-artifacts" title="Permalink to this headline">¶</a></h2>
+    <h3>Configure Fluentd<a name="otel-fluentd-artifacts" class="headerlink" href="#otel-fluentd-artifacts" title="Permalink to this headline">¶</a></h2>
   </embed>
+
+You can use the Fluentd receiver to collect logs. Common sources such as filelog, journald, and Windows Event Viewer are included in the installation. See :ref:`fluentd-receiver` for more information.
 
 The following table describes the artifacts in the Fluentd directory:
 
@@ -89,7 +94,7 @@ The following table describes the artifacts in the Fluentd directory:
   * - Configuration
     - Description
   * - fluent.conf or td-agent.conf
-    - These are the main Fluentd configuration files used to forward events to the Collector. The file locations are ``/etc/otel/collector/fluentd/fluent.conf`` on Linux and ``C:\opt\td-agent\etc\td-agent\td-agent.conf`` on Windows. By default, these files configure Fluentd to include custom Fluentd sources and forward all log events with the ``@SPLUNK`` label to the Collector. 
+    - These are the main Fluentd configuration files used to forward events to the Collector. The file locations are ``/etc/otel/collector/fluentd/fluent.conf`` on Linux and ``C:\opt\td-agent\etc\td-agent\td-agent.conf`` on Windows. By default, these files configure Fluentd to include custom Fluentd sources and forward all log events with the ``@SPLUNK`` label to the Collector.
   * - conf.d
     - This directory contains the custom Fluentd configuration files. The location is ``/etc/otel/collector/fluentd/conf.d`` on Linux and ``\opt\td-agent\etc\td-agent\conf.d`` on Windows. All files in this directory ending with the .conf extension are automatically included by Fluentd, including ``\opt\td-agent\etc\td-agent\conf.d\eventlog.conf`` on Windows.
   * - splunk-otel-collector.conf

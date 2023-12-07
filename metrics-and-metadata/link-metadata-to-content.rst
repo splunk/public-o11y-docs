@@ -49,7 +49,7 @@ For example, here is a global data link displaying for a host property on a dash
 
 For more examples of global data links displayed in context, see :ref:`access-global-data-link`.
 
-Global data links dynamically transfer contextual information about the metadata you’re viewing to the linked resource, helping you get to relevant information faster.
+Global data links dynamically transfer contextual information about the metadata you're viewing to the linked resource, helping you get to relevant information faster.
 
 When you create a global data link, it appears wherever the designated metadata is visible in dashboards, Splunk Infrastructure Monitoring navigators, Splunk APM, and alert messages. All users who can see the metadata can see the global data link.
 
@@ -61,7 +61,7 @@ Prerequisite
 
 You must be an administrator to create global data links.
 
-For information about granting administrative access, see :ref:`manage_admin-access`.
+For information about granting administrative access, see :ref:`admin-manage-users`.
 
 
 .. _create-global-data-link:

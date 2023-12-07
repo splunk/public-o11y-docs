@@ -6,7 +6,7 @@ Set up Splunk Synthetic Monitoring
 ********************************************************************
 
 .. meta::
-    :description: Get started with Splunk Synthetic Monitoring.
+    :description: Create detailed tests to monitor the performance of websites, web apps, and resources over time, and proactively alert relevant teams when applications are unresponsive.
 
 
 Monitor the performance of your web pages and applications by running synthetic Browser, Uptime, and API tests. These tests let you proactively alert the relevant teams when a site or user flow they manage becomes unavailable, as well as report on the performance of a site or user flow over time. Splunk Synthetic Monitoring does not require extensive installation and setup: you can get started by creating your first test directly in the Splunk Synthetic Monitoring user interface. 

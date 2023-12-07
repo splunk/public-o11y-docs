@@ -1,8 +1,12 @@
 .. _uptime-test-scenario:
 
 ************************************************************************************
-Scenario: Kai monitors the performance of a user-facing application 
+Scenario: Monitor the performance of a user-facing application 
 ************************************************************************************
+
+.. meta::
+    :description: Fictional use case describing how to proactively prevent issues with a user-facing application or site using an uptime test from Splunk Synthetic Monitoring.
+
 Kai, a site reliability engineer at Buttercup Industries, a fictitious e-commerce company, uses Splunk Synthetic Monitoring to monitor the performance of the Buttercup Industries site. Kai's scenario demonstrates how uptime test monitoring can help keep you ahead of potential issues with your organization's site or application.
 
 Set an Uptime test to monitor a mobile app endpoint

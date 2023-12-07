@@ -9,7 +9,7 @@ Customize your Splunk APM experience
 .. meta::
    :description: Learn about advanced configurations to help you get the most out of Splunk APM. 
 
-Now that you’ve explored what you can do with Splunk APM, you can consider more advanced configurations to tailor Splunk APM to your business needs.
+Now that you've explored what you can do with Splunk APM, you can consider more advanced configurations to tailor Splunk APM to your business needs.
 
 Prerequisites
 ==============

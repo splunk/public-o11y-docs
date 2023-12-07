@@ -20,7 +20,7 @@ In Splunk Observability Cloud, you can create events in several ways.
 
 -  Events are created whenever a :ref:`detector <create-detectors>` triggers an alert. A second event is created when the alert clears, is manually resolved, or is stopped due to the detector being edited or deleted.
 
--  A SessionLog event is created when a user explicitly logs into or explicitly logs out of your organization. The SessionLog events capture 2 actions: "session created" or "session deleted". SessionLog events include the userId, email, and a timestamp.
+-  The SessionLog events capture 2 actions: "session created" or "session deleted". A SessionLog event is created when a user explicitly logs into or out of your organization. Users who navigate to Splunk Observability Cloud who already have an active session aren't prompted to log in and, therefore, don't create a SessionLog event. SessionLog events include the userId, email, and a timestamp. 
 
 -  A custom event is created when you capture and send an event to Splunk Observability Cloud. For example, you might send a custom "code push" event each time your development team deploys new code, so that you can correlate it with the resource consumption profiles of your infrastructure before and after the event.
 

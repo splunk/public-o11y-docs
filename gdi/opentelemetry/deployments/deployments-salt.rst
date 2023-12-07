@@ -39,6 +39,7 @@ You can configure all attributes in the ``splunk-otel-collector`` pillar. For ex
 
 .. code-block:: yaml
 
+
    splunk-otel-collector:
    splunk_access_token: "MY_ACCESS_TOKEN"
    splunk_realm: "SPLUNK_REALM"

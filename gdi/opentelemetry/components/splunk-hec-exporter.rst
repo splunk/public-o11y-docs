@@ -33,6 +33,7 @@ The following example shows a Splunk HEC exporter instance configured for a logs
 
 .. code-block:: yaml
 
+
    exporters:
      # ...
      splunk_hec:
@@ -93,6 +94,7 @@ If you're using the Collector for log collection and need to send data to Splunk
 
 .. code-block:: yaml
 
+
    exporters:
       splunk_hec:
          # Splunk HTTP Event Collector token.
@@ -120,6 +122,7 @@ You can split log data between Splunk Cloud Platform or Enterprise and Splunk Ob
 To split the log pipelines, configure two separate ``splunk_hec`` entries in the ``receiver`` and ``exporters`` sections of the Collector configuration file. Then, add both to the ``logs`` pipeline. For example:
 
 .. code-block:: yaml
+
 
    receivers:
      # Default OTLP receiver--used by Splunk platform logs
@@ -239,6 +242,7 @@ If you've deployed the Collector in Kubernetes using the Helm chart, change the 
 
 .. code-block:: yaml
 
+
    splunkObservability:
      # Other settings
      logsEnabled: false
@@ -253,6 +257,7 @@ You can use the Collector to send metrics to Splunk Cloud Platform or Splunk Ent
 For example, if you're scraping Prometheus metrics with a configuration such as: 
 
 .. code-block:: yaml
+
 
   pipelines:
     metrics:
@@ -272,6 +277,7 @@ For example, if you're scraping Prometheus metrics with a configuration such as:
 You need to configure the ``splunk_hec`` exporter as shown in the following example:
 
 .. code-block:: yaml
+
 
   exporters:
       splunk_hec/metrics:

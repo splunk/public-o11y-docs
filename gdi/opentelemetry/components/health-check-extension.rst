@@ -35,6 +35,7 @@ This is a sample configuration for the extension:
 
 .. code-block:: yaml
 
+
   extensions:
     health_check:
     health_check/1:
@@ -55,6 +56,7 @@ Detailed sample configuration
 This is a detailed configuration example:
 
 .. code-block:: yaml
+
 
   health_check:
   health_check/1:

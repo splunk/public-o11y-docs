@@ -30,12 +30,14 @@ To activate the Syslog receiver, add ``syslog`` to the ``receivers`` section of 
 
 .. code-block:: yaml
 
+
   receivers:
     syslog:
 
 This example shows how to configure logs received using TCP:
 
 .. code-block:: yaml
+
 
   receivers:
     syslog:
@@ -46,6 +48,7 @@ This example shows how to configure logs received using TCP:
 This example shows how to configure logs received using UDP:
 
 .. code-block:: yaml
+
 
   receivers:
     syslog:
@@ -75,7 +78,7 @@ You can use the following fields to configure the Syslog receiver with a TCP con
   
   * ``ca_file``.	Path to the CA certificate. For a client this verifies the server certificate. For a server this verifies client certificates. If empty, it uses the system's root CA.
   
-  * ``client_ca_file``. Optional. Path to the TLS certificate the server uses to verify a client certificate. This sets the ClientCAs and ClientAuth to RequireAndVerifyClientCert in the TLSConfig. See :new-page:`godoc.org/crypto/tls#Config` for more information.
+  * ``client_ca_file``. Optional. Path to the TLS certificate the server uses to verify a client certificate. This sets the ClientCAs and ClientAuth to RequireAndVerifyClientCert in the TLSConfig. See :new-page:`https://godoc.org/crypto/tls#Config` for more information.
 
 Configure UDP
 ^^^^^^^^^^^^^^^^^^^^^^^^^^

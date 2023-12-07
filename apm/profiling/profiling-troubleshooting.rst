@@ -81,6 +81,22 @@ Check the Helm chart configuration
 
 If you've deployed the Collector in a Kubernetes environment, make sure that the ``splunkObservability.profilingEnabled=true`` is present. See :ref:`profiling-setup-helm` for more information.
 
+.. _export-error:
+
+Error exporting profiling data Error: 14 UNAVAILABLE: No connection established
+==================================================================================
+
+Check the following configurations:
+
+#. The profiling exporting endpoint is correctly set to the host and port where the OTEL collector is running.
+
+   * If the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable or ``splunk.profiler.logs-endpoint`` system property is set, this value is used.
+   * Otherwise, if the ``OTEL_EXPORTER_OTLP_ENDPOINT`` environment variable or ``otel.exporter.otlp.endpoint`` system property is set, this value is used.
+   * Finally, if neither is set, the default value of ``http://localhost:4317``
+#. The OTel collector is running, the port is open and accessible from the host where the profiled application is running.
+#. The receiver for OTLP/gRPC is turned on in the OTel collector configuration.
+#. The profiling pipeline is turned on in OTel collector configuration. 
+
 .. _no-call-stacks:
 
 No call stacks available for a span

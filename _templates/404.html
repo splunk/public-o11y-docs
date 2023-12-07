@@ -50,6 +50,75 @@ function OptanonWrapper() { }
     window.location.href = "https://docs.splunk.com/Observability/";
   }
 </script>
+<script defer onload="renderSplunkSearchBarComponent()"
+        src="https://d221cp5lqk6y64.cloudfront.net/1.1.30/searchBar.js"
+        type="text/javascript">
+</script>
+<script>
+    const getBarConfig = () => {
+        const customTheme = ``;
+
+        return {
+            customTheme,
+            env: window.location.hostname.includes('splunk') ? 'prod' : 'dev',
+            language: 'en',
+            layoutTemplate: "docsResultLayout",
+            showSearchButton: false,
+            searchBarRedirectUrl: 'https://docs.splunk.com/observability/en/search.html',
+            analyticsConfig: {
+                applicationName: 'docs-o11y'
+            },
+            initialFilters: [
+                {
+                    "name": "source_name_s",
+                    "value": [
+                        "Docs_Observability"
+                    ],
+                    "type": "any"
+                }
+            ]
+        };
+    };
+
+    function renderSplunkSearchBarComponent(product=null, version=null) {
+        let counter = 1;
+        const cfg = getBarConfig();
+        if (product) {
+            let url = cfg.searchBarRedirectUrl;
+            cfg.searchBarRedirectUrl = url +`?filters[${counter}][field]=docProduct_s&filters[${counter}][values][0]=${product}`;
+            cfg.searchBarRedirectUrl = cfg.searchBarRedirectUrl + `&filters[${counter}][type]=any`;
+            counter++;
+        }
+        if (version) {
+            let url = cfg.searchBarRedirectUrl;
+            cfg.searchBarRedirectUrl = url +`${counter > 0 ? '&' : '?' }filters[${counter}][field]=docVersion_s&filters[${counter}][values][0]=${version}`;
+            cfg.searchBarRedirectUrl = cfg.searchBarRedirectUrl + `&filters[${counter}][type]=any`;
+        }
+        const container = document.getElementById('searchbox');
+        if (container) {
+            const cc = document.createElement('wplt-search-bar-web-component');
+            cc.config = Object.assign({}, cfg, {
+                showSearchButton: true,
+                translationOverride: {
+                    views: {
+                        searchInput: {
+                            suggestion: 'Suggestions',
+                            button: 'Search',
+                            placeholder: '',
+                        },
+                    },
+                }
+            });
+            container.replaceChildren(cc);
+        }
+        const headerContainer = document.getElementById('search-header-container');
+        if (headerContainer) {
+            const headerCC = document.createElement('wplt-search-bar-web-component');
+            headerCC.config = cfg;
+            headerContainer.replaceChildren(headerCC);
+        }
+    }
+</script>
 {% endblock %}
 
 {%- block content %}

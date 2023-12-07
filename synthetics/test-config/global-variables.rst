@@ -5,7 +5,7 @@ Create and use Global Variables
 *****************************************
 
 .. meta::
-    :description: Learn about global variables in Splunk Synthetic Monitoring.
+    :description: Define a variable that you can use in multiple browser and API tests in Splunk Synthetic Monitoring.
 
 Define a global variables once, then you can use the variable across all of your Browser and API tests.
 

@@ -5,7 +5,7 @@ Use a Browser test to test a webpage
 ****************************************
 
 .. meta::
-    :description: Learn about Browser Tests in Splunk Synthetic Monitoring.
+    :description: Test webpage performance and latency of page resources using browser tests in Splunk Synthetic Monitoring, and set up a browser test schedule to continually monitor and collect site performance data.  
 
 .. toctree::
 
@@ -16,7 +16,7 @@ Use a Browser test to test a webpage
 
 A Browser test is a simulated run of a workflow or set of requests that make up the user experience on a single page or transactional user flow. You can run a Browser test from any device and from a number of locations around the world. 
 
-You can configure tests on a schedule so you're continually monitoring your site’s performance in the background. You can also set up detectors to alert your teams of test failures and errors. 
+You can configure tests on a schedule so you're continually monitoring your site's performance in the background. You can also set up detectors to alert your teams of test failures and errors. 
 
 .. raw:: html
 

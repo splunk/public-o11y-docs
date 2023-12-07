@@ -14,7 +14,7 @@ Before you begin to configure the Google Cloud Identity integration, ensure you 
 
 To configure GCI as an IdP using an Observability Cloud SSO integration,
 you must be an administrator for your organization and a super-administrator of your Google domain.
-To learn more, see :new-page-ref:`manage_admin-access`.
+To learn more, see :new-page-ref:`admin-manage-users`.
 
 The :new-page:`G Suite Administrator Help document <https://support.google.com/a/answer/7623225?hl=en>`
 topic, developed by Google, describes how to configure the integration.

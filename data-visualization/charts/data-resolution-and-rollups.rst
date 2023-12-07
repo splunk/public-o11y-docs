@@ -120,7 +120,7 @@ Observability Cloud has different rollup types:
        chart has a one day resolution, Observability Cloud rolls up the data to a one day resolution.
 
        If the chart resolution is the same as the native resolution of the incoming data,
-       these rollups don’t have any effect.
+       these rollups don't have any effect.
 
    * - Count per second (rate)
      - Converts data points that represent a count of events or occurrences in

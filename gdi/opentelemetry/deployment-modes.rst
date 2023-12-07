@@ -53,7 +53,7 @@ Use data forwarding (gateway) mode when you want to do one of the following:
 * Configure a larger buffer.
 * Configure an increased wait interval for retry attempts.
 * Limit the number of egress points required to send data.
-* Consolidate API token management.
+* Consolidate API token management. See more in :ref:`collector-gateway-mode-tokens`.
 
 See :new-page:`data forwarding (gateway) mode configuration <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/gateway_config.yaml>` for the default configuration file.
 
@@ -63,6 +63,15 @@ The following image shows the architecture for the data forwarding (gateway) mod
 
 .. image:: /_images/gdi/splunk-otel-collector-recommended-gateway-arch.png
    :alt: This image shows the architecture for the advanced mode.    
+
+.. _collector-gateway-mode-tokens:
+
+Consolidate tokens with a Collector in data forwarding (gateway) mode
+-------------------------------------------------------------------------------
+
+When Collectors in host monitoring or agent mode send data to another Collector in data forwarding or gateway mode, they are not sending the data directly to Splunk Observability Cloud back-end. In this case, only the ingest token in the gateway Collector is used, and tokens in the Collectors that are sending data to a gateway are ignored.
+
+Therefore, you only need one valid token for the gateway Collector to see data in Observability Cloud, and the rest of Collectors could have invalid or expired tokens.  
 
 .. _collector-current-mode:
 
@@ -86,7 +95,32 @@ To change the deployment mode, modify ``SPLUNK_CONFIG`` for the path to the gate
 Kubernetes
 ----------------------------------
 
-For Kubernetes, check the config mappings in your Helm chart. See :ref:`otel-kubernetes-config-advanced` for information on how to access your configuration yaml, and how to override it.
+The Collector for Kubernetes has different deployment options. You can configure them using the ``enabled`` field in their respective Helm value mappings. See :ref:`otel-kubernetes-config-advanced` for information on how to access your configuration yaml.
+
+The main deployment modes are:
+
+* Default, which includes the ``agent`` deamonset and the ``clusterReceiver`` deployment component.
+* All collector modes, which includes ``agent`` deamonset, and the ``clusterReceiver`` and the ``gateway`` components.
+
+For more information on the components on each mode, see :ref:`helm-chart-components`.
+
+Change the deployment mode in a Kubernetes environment
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you want to change the Collector mode, deploy a new Helm chart with the desired configuration to override the existing config. See :new-page:`Rolling update deployment <https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#rolling-update-deployment>` in the official Kubernetes documentation.
+
+You can find the different Helm charts in Github:
+
+* :new-page:`Default config <https://github.com/signalfx/splunk-otel-collector-chart/tree/main/examples/default>`
+
+  * :new-page:`Agent configMap <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/default/rendered_manifests/configmap-agent.yaml>`
+  * :new-page:`Cluster receiver configMap <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/default/rendered_manifests/configmap-cluster-receiver.yaml>`
+
+* :new-page:`All modes enabled config <https://github.com/signalfx/splunk-otel-collector-chart/tree/main/examples/collector-all-modes>`
+
+  * :new-page:`Agent configMap <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/collector-all-modes/rendered_manifests/configmap-agent.yaml>`
+  * :new-page:`Cluster receiver configMap <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/collector-all-modes/rendered_manifests/configmap-cluster-receiver.yaml>`
+  * :new-page:`Gateway configMap <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/collector-all-modes/rendered_manifests/configmap-gateway.yaml>`
 
 .. _collector-agent-to-gateway:
 
@@ -114,6 +148,7 @@ To activate trace correlation, use the ``signalfx`` exporter in the traces pipel
 The following example shows how to configure the Collector in host monitoring (agent) mode when sending data to a gateway:
 
 .. code-block:: yaml
+
 
    receivers:
       hostmetrics:
@@ -182,6 +217,7 @@ To set the Collector in data forwarding (gateway) mode to receiving data from an
 
 .. code-block:: yaml
 
+
    extensions:
       http_forwarder:
          egress:
@@ -239,6 +275,7 @@ If you want to use the :ref:`signalfx-exporter` for metrics on both agent and ga
 .. note:: If you want to collect host metrics from the Gateway, use a different ``signalfx exporter`` with translation rules intact. For example, add the ``hostmetrics`` to the metrics/internal pipeline.
 
 .. code-block:: yaml
+
    :emphasize-lines: 10,11
 
    exporters:

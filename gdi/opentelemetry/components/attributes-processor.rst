@@ -42,6 +42,7 @@ By default, the Splunk Distribution of OpenTelemetry Collector includes the attr
 
 .. code-block:: yaml
 
+
    processors:
      attributes/example:
        actions:
@@ -67,6 +68,7 @@ By default, the Splunk Distribution of OpenTelemetry Collector includes the attr
 You can then add the attributes processors to any compatible pipeline. For example:
 
 .. code-block:: yaml
+
    :emphasize-lines: 6, 14, 22
 
    service:
@@ -111,6 +113,7 @@ The following example shows how to apply a ``delete`` action to specific service
 
 .. code-block:: yaml
 
+
    attributes/selectiveprocessing:
      include:
        match_type: strict
@@ -135,6 +138,7 @@ The following example shows how to remove a token attribute, hash an email, and 
 
 .. code-block:: yaml
 
+
    attributes/log_body_regexp:
      include:    
        match_type: regexp
@@ -155,6 +159,7 @@ The following example shows how to create a new attribute based on the value of 
 
 .. code-block:: yaml
 
+
    attributes/createattributes:
      actions:
          # Creates four new attributes (defined in pattern) from the
@@ -169,6 +174,7 @@ Backfill spans that are missing an attribute
 The following example shows how to backfill spans that are missing an attribute:
 
 .. code-block:: yaml
+
 
    attributes/complex:
      actions:

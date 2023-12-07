@@ -17,6 +17,9 @@ Splunk Observability Cloud global scenarios
 
 Learn more about the Splunk Observability Cloud platform with the following cross-product scenarios:
 
-- :ref:`Troubleshoot an issue from the browser to the back end using Splunk Observability Cloud <get-started-scenario>`
-- :ref:`Monitor infrastructure and apps in a cloud environment using the Splunk OTel Collector <otel-collector-scenario>`
+- :ref:`get-started-scenario`
+- :ref:`otel-collector-scenario`
 
+See how you can use Splunk Observability Cloud with the Splunk platform to resolve problems more efficiently in the following scenario:
+
+- :ref:`integration-scenario1`

@@ -4,6 +4,9 @@
 Interpret API test results 
 ******************************************
 
+.. meta::
+    :description: How to understand and visualize results from API tests run in Splunk Synthetic Monitoring through the request result timeline or performance KPIs chart. 
+
 Every run of an API test in Splunk Synthetic Monitoring produces a set of diagnostics that help you understand the performance of your application in real time. 
 
 .. _api-detector:

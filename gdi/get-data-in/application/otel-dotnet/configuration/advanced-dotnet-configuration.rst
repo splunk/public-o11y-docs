@@ -4,12 +4,10 @@
 Configure the Splunk Distribution of OpenTelemetry .NET
 ********************************************************************
 
-.. meta:: 
+.. meta::
    :description: Configure the Splunk Distribution of OpenTelemetry .NET to suit your instrumentation needs, such as correlating traces with logs and activating custom sampling.
 
-You can configure the Splunk Distribution of OpenTelemetry .NET to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started. More advanced settings are also available. 
-
-.. caution:: This is a beta distribution. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on best-effort basis.
+You can configure the Splunk Distribution of OpenTelemetry .NET to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started. More advanced settings are also available.
 
 .. _configuration-methods-dotnet-otel:
 
@@ -46,7 +44,7 @@ General settings
 
 The following settings are common to most instrumentation scenarios:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :width: 100%
    :widths: 40 60
@@ -68,7 +66,7 @@ The following settings are common to most instrumentation scenarios:
    * - ``OTEL_DOTNET_AUTO_NETFX_REDIRECT_ENABLED``
      - Activates immediate redirection of the assemblies used by the automatic instrumentation on the .NET Framework. The default values is ``true``. Can't be set using the web.config or app.config files.
    * - ``OTEL_DOTNET_AUTO_FLUSH_ON_UNHANDLEDEXCEPTION``
-     - Controls whether the telemetry data is flushed when an ``AppDomain.UnhandledException`` event is raised. Set to ``true`` when experiencing missing telemetry at the same time of unhandled exceptions.	
+     - Controls whether the telemetry data is flushed when an ``AppDomain.UnhandledException`` event is raised. Set to ``true`` when experiencing missing telemetry at the same time of unhandled exceptions.
    * - ``OTEL_DOTNET_AUTO_RULE_ENGINE_ENABLED``
      - Activates RuleEngine. The default values is ``true``. RuleEngine increases the stability of the instrumentation by validating assemblies for unsupported scenarios.
    * - ``OTEL_DOTNET_AUTO_FAIL_FAST_ENABLED``
@@ -81,7 +79,7 @@ Exporter settings
 
 The following settings control trace exporters and their endpoints:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :width: 100%
    :widths: 40 60
@@ -102,7 +100,7 @@ Trace propagation settings
 
 The following settings control trace propagation:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :width: 100%
    :widths: 40 60
@@ -119,7 +117,7 @@ Samplers configuration
 
 The following settings control trace sampling:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 30 70
    :width: 100%
@@ -140,7 +138,7 @@ You can use resource detectors to retrieve additional attributes for your applic
 
 The following settings control resource detectors:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 30 70
    :width: 100%
@@ -156,20 +154,25 @@ The following settings control resource detectors:
 
 The following resource detectors are available:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
-   :widths: 30 30 40
    :width: 100%
 
    * - Detector ID
      - Description
      - Attributes
+     - Maturity level
+     - Support level
    * - ``AZUREAPPSERVICE``
      - Azure App Service detector.
      - ``azure.app.service.stamp``, ``cloud.platform``, ``cloud.provider``, ``cloud.resource_id``, ``cloud.region``, ``deployment.environment``, ``host.id``, ``service.instance.id``, ``service.name``
+     - Experimental Beta
+     - Community support
    * - ``CONTAINER``
      - Container detector. For example, Docker or Podman containers.
      - ``container.id``
+     - Experimental Beta
+     - Community support
 
 .. _dotnet-otel-instrumentation-settings:
 
@@ -178,7 +181,7 @@ Instrumentation settings
 
 The following settings control instrumentations and tracing behavior:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :width: 100%
    :widths: 40 60
@@ -188,7 +191,7 @@ The following settings control instrumentations and tracing behavior:
    * - ``OTEL_SERVICE_NAME``
      - Name of the service or application you're instrumenting. Takes precedence over the service name defined in the ``OTEL_RESOURCE_ATTRIBUTES`` variable.
    * - ``OTEL_RESOURCE_ATTRIBUTES``
-     - Comma-separated list of resource attributes added to every reported span. For example, ``key1=val1,key2=val2``. 
+     - Comma-separated list of resource attributes added to every reported span. For example, ``key1=val1,key2=val2``.
    * - ``OTEL_DOTNET_AUTO_TRACES_ADDITIONAL_SOURCES``
      - Comma-separated list of additional ``System.Diagnostics.ActivitySource`` names to be added to the tracer at startup. Use it to capture spans from manual instrumentation.
    * - ``OTEL_DOTNET_AUTO_METRICS_ADDITIONAL_SOURCES``
@@ -204,7 +207,7 @@ The following settings control instrumentations and tracing behavior:
    * - ``OTEL_DOTNET_AUTO_GRAPHQL_SET_DOCUMENT``
      - Whether the GraphQL instrumentation can pass raw queries as a ``graphql.document`` attribute. As queries might contain sensitive information, the default value is ``false``.
    * - ``OTEL_DOTNET_AUTO_TRACES_ADDITIONAL_LEGACY_SOURCES``
-     - Comma-separated list of additional legacy source names to be added to the tracer at the startup. Use it to capture ``System.Diagnostics.Activity`` objects created without using the ``System.Diagnostics.ActivitySource`` API.	
+     - Comma-separated list of additional legacy source names to be added to the tracer at the startup. Use it to capture ``System.Diagnostics.Activity`` objects created without using the ``System.Diagnostics.ActivitySource`` API.
 
 The following settings control which instrumentations are activated. See :ref:`disable-instrumentations-otel-dotnet` for more information.
 
@@ -239,7 +242,7 @@ To connect Real User Monitoring (RUM) requests from mobile and web applications 
 
 .. code-block::
 
-   Access-Control-Expose-Headers: Server-Timing 
+   Access-Control-Expose-Headers: Server-Timing
    Server-Timing: traceparent;desc="00-<serverTraceId>-<serverSpanId>-01"
 
 The ``Server-Timing`` header contains the ``traceId`` and ``spanId`` parameters in ``traceparent`` format. For more information, see the Server-Timing and traceparent documentation on the W3C website.
@@ -253,7 +256,7 @@ Diagnostic logging settings
 
 The following settings control the internal logging of the Splunk Distribution of OpenTelemetry .NET:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :width: 100%
    :widths: 40 60

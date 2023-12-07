@@ -24,7 +24,7 @@ To view host and Kubernetes metrics in your dashboards, you need to have a Splun
 .. note::
   See :ref:`monitor-services` for a scenario involving built-in dashboards in Splunk APM. 
 
-You can customize built-in dashboards to present the information you’re most interested in, or build your own from scratch. To learn more, see :ref:`apm-custom-dashboards`.
+You can customize built-in dashboards to present the information you're most interested in, or build your own from scratch. To learn more, see :ref:`apm-custom-dashboards`.
 
 You can also create detectors directly from dashboards to receive alerts on the problems that matter most to you. See :ref:`apm-detector-from-dashboard` to learn how. 
 
@@ -53,7 +53,7 @@ You can access dashboards in APM in several places, described in the following t
 
 Use dashboards to troubleshoot issues in APM
 =============================================
-You can navigate from within a dashboard directly to the relevant troubleshooting view with all the relevant data populated. In a dashboard, select the more menu (|more|) within a chart and select :guilabel:`Troubleshoot from the Time Window` to open the troubleshooting view (which includes the service map). The dashboard’s filters are preserved so that you can continue troubleshooting issues in context. 
+You can navigate from within a dashboard directly to the relevant troubleshooting view with all the relevant data populated. In a dashboard, select the more menu (|more|) within a chart and select :guilabel:`Troubleshoot from the Time Window` to open the troubleshooting view (which includes the service map). The dashboard's filters are preserved so that you can continue troubleshooting issues in context. 
 
 See :ref:`service-map` for a sample scenario of the troubleshooting view in Splunk APM. 
 

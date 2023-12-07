@@ -38,6 +38,7 @@ By default, the Splunk Distribution of OpenTelemetry Collector includes the filt
 
 .. code-block:: yaml
 
+
    processors:
      filter/includemetrics:
        metrics:
@@ -73,6 +74,7 @@ By default, the Splunk Distribution of OpenTelemetry Collector includes the filt
 You can then add the filter processors to any compatible pipeline. For example:
 
 .. code-block:: yaml
+
    :emphasize-lines: 6, 14, 15, 23
 
    service:
@@ -119,6 +121,7 @@ You can exclude or include spans from traces using resource attributes or OTTL c
 
 .. code-block:: yaml
 
+
    filter/spans:
      spans:
        include:
@@ -149,6 +152,7 @@ Filter metrics
 You can exclude or include metrics using metric names, expressions, or OTTL conditions. For example:
 
 .. code-block:: yaml
+
 
    filter/mixed:
      metrics:
@@ -192,6 +196,7 @@ Filter logs
 You can exclude or include logs using resource attributes or OTTL conditions. For example:
 
 .. code-block:: yaml
+
 
    filter/mixed:
      logs:
@@ -250,7 +255,8 @@ Filter Kubernetes elements
 
 You can exclude or include Kubernetes elements, such as containers, pods, nodes, namespaces, or clusters, with the following configuration:
 
-.. code-block:: yaml 
+.. code-block:: yaml
+ 
 
   agent:
     config:
@@ -320,7 +326,8 @@ You can exclude or include Kubernetes elements, such as containers, pods, nodes,
 
 After setting up the processors, configure the pipelines:
 
-.. code-block:: yaml 
+.. code-block:: yaml
+ 
   
       # Define the data processing pipelines for logs, metrics, and traces
       service:
@@ -347,6 +354,7 @@ You can use the OpenTelemetry Transformation Language (OTTL) to define filtering
 In OTTL, each telemetry type or context has its own fields. The following example shows all available OTTL contexts:
 
 .. code-block:: yaml
+
 
    processors:
      filter:

@@ -270,7 +270,7 @@ A table chart displays metrics and dimensions in table format. Each metric name 
 .. image:: /_images/data-visualization/charts/table-chart.png
    :alt: This screenshot shows a table chart grouped by the demo_host dimension, sorted by the demo_customer dimension, and linked to a detector with no alerts as illustrated by a green border around the table chart.
 
-You can group metric time series rows by a dimension. To do this, select the :strong:`Group by` menu and select the dimension you want to group the rows by. The selected dimension’s column becomes the first column and each row of the table displays to represent one value of the dimension.
+You can group metric time series rows by a dimension. To do this, select the :strong:`Group by` menu and select the dimension you want to group the rows by. The selected dimension's column becomes the first column and each row of the table displays to represent one value of the dimension.
 
 For example, group the table by the :code:`host` dimension to display the health and status of each host in your environment.
 

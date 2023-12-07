@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-key-concepts:
 
 Key concepts in Splunk Incident Intelligence 
@@ -76,7 +78,7 @@ Here are some important concepts you need to know to successfully use Splunk Inc
      - An incident status that incident responders set to indicate that the incident is resolved. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Resolving an incident status prevents the escalation to the next step in an incident workflow.
 
    * - Incident policy-based routing
-     - Incident Intelligence relies on an incident policy-based routing scheme. Incident policy-based routing automatically organizes and routes incidents depending on the service that it’s impacting. Rather than routing to a combination of teams and policies, the incident policy an incident is associated with determines who is notified of the incident. 
+     - Incident Intelligence relies on an incident policy-based routing scheme. Incident policy-based routing automatically organizes and routes incidents depending on the service that it's impacting. Rather than routing to a combination of teams and policies, the incident policy an incident is associated with determines who is notified of the incident. 
 
    * - Snoozed
      - An incident status that is set when responders snooze the incident.

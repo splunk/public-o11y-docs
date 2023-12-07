@@ -23,15 +23,11 @@ Splunk Observability Cloud's suite of products and features allow you to quickly
 
 The following diagram provides a high-level view of how each Observability Cloud product plays its part to provide you with full-stack observability:
 
-.. source in figma: https://www.figma.com/file/SspISKtNyGovP50c1FA35z/o11y-cloud-product-structure?node-id=146%3A47
-
 .. image:: /_images/get-started/o11y-cloud-structure.png
-  :width: 100%
+  :width: 70%
   :alt: This screenshot shows how Observability Cloud products serve the different layers and processes in an organization's environment.
 
-For information about how these products can be used together to address real-life scenarios, see :ref:`get-started-scenario`.
-
-To get started with Observability Cloud, see :ref:`get-started-o11y`.
+For information about how these products can be used together to address real-life scenarios, see :ref:`get-started-scenario`. To get started with Observability Cloud, see :ref:`get-started-o11y`.
 
 For information about Observability Cloud packaging and pricing, see :new-page:`Pricing - Observability <https://www.splunk.com/en_us/products/pricing/observability.html>`.
 
@@ -49,10 +45,9 @@ Start learning about how the following Observability Cloud products work to prov
 
 - :ref:`welcome-oncall`
 
-- :ref:`welcome-incident-intelligence`
-
 - :ref:`welcome-mobile`
 
+.. note:: For a list of benefits and service terms of Splunk Observability Cloud, see :ref:`o11y-service-description`.
 
 .. _welcome-gdi:
 
@@ -124,15 +119,6 @@ Splunk On-Call
 Splunk On-Call incident response software aligns log management, monitoring, chat tools, and more, for a single-pane of glass into system health. Splunk On-Call automates delivery of alerts to get the right alert, to the right person, at the right time.
 
 For more information, see the :new-page:`Splunk On-Call documentation <https://help.victorops.com/>`.
-
-.. _welcome-incident-intelligence:
-
-Splunk Incident Intelligence
-===============================
-
-Splunk Incident Intelligence incident response software lets site reliability engineers (SREs) in IT and DevOps resolve outages with alert correlation, incident response, and on-call routing. 
-
-For more information, see the :ref:`ii-get-started-incident-intelligence`.
 
 
 .. _welcome-mobile:

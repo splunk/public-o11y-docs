@@ -36,7 +36,7 @@ Splunk Observability Cloud offers a guided setup to install the Collector:
 
 #. Log in to Splunk Observability Cloud.
 
-#. In the navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+#. In the navigation menu, select :menuselection:`Data Management`.
   
 #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 
@@ -52,9 +52,9 @@ Splunk Observability Cloud offers a guided setup to install the Collector:
 
 The Splunk Distribution of OpenTelemetry Collector is supported on Kubernetes, Linux, Windows, and Mac. See :ref:`collector-architecture` for compatible CPU architectures and operating systems.
 
-Deploy one of the following packages to gather data for Infrastructure Monitoring, APM, and Log Observer:
+Deploy one of the following packages to gather data for Splunk Observability Cloud.
 
-* Splunk Distribution of OpenTelemetry Collector for Kubernetes or ``splunk-otel-collector-chart``. See :ref:`Install on Kubernetes <otel-install-k8s>`. You can also install the Kubernetes Operator for Auto Instrumentation, as explained in :ref:`Install the Collector with the Kubernetes Operator for Auto Instrumentation <auto-instrumentation-operator>`.
+* Splunk Distribution of OpenTelemetry Collector for Kubernetes or ``splunk-otel-collector-chart``. See :ref:`Install on Kubernetes <otel-install-k8s>`. You can also install the Kubernetes Operator for Auto Instrumentation. See :ref:`zero-config` for more information.
 * Splunk Distribution of OpenTelemetry Collector for Linux or ``splunk-otel-collector``. See :ref:`Install on Linux (script) <otel-install-linux>` or :ref:`Install on Linux (manual) <otel-install-linux-manual>`, including instructions to install using the :ref:`binary file <linux-binary-file>`.
 * Splunk Distribution of OpenTelemetry Collector for Windows or ``splunk-otel-collector``. See :ref:`Install on Windows (script) <otel-install-windows>` or :ref:`Install on Windows (manual) <otel-install-windows-manual>`, including instructions for the :ref:`binary file <windows-binary>`.
 
@@ -66,82 +66,10 @@ See also :ref:`other deployment tools and options <otel_deployments>`.
     <h2>Components of the Collector<a name="collector-components-index" class="headerlink" href="#collector-components-index" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-The Collector uses the components listed in the following table:
+.. include:: /_includes/collector-components.rst
 
-.. list-table::
-  :width: 100%
-  :widths: 20 80
-  :header-rows: 1
+To learn how to configure them, see: 
 
-  * - Component
-    - Description
-  * - :ref:`Receivers <monitor-data-sources>`
-    - Get data into the Collector using receivers. Receivers, which can be push or pull based, support one or more data sources. You must configure one or more receivers. By default, no receivers are configured.
-  * - Processors
-    - Control the data you send using processors. Processors sit between receivers and exporters, reading and sometimes operating on data as it flows through the pipeline. Processors are optional, but you should include processors in your configuration. The order in which processors are listed in the ``processors`` section of the configuration is relevant.
-  * - Exporters
-    - Send data to one or more destinations using exporters. Exporters, which can be push or pull based, support one or more data sources.
-
-To learn more about Collector components, see :ref:`otel-components`.
-
-When configured, activate these components using pipelines within the service section of the configuration. 
-
-.. raw:: html
-
-  <embed>
-    <h2>Collector services<a name="collector-service" class="headerlink" href="#collector-service" title="Permalink to this headline">¶</a></h2>
-  </embed>
-
-The service section of the Collector contains two subsections: extensions and pipelines. The extensions section is where you optionally activate any extensions you have configured, and the pipelines section is where you define one or more pipelines, each of which consists of receivers, processors (optional), and exporters. The service section's two subsections are described in the following table.
-
-.. list-table::
-  :width: 100%
-  :widths: 20 80
-  :header-rows: 1
-
-  * - Component
-    - Description
-  * - Extension
-    - Provide capabilities that can be added to the Collector, but which do not require direct access to telemetry data and are not part of pipelines.
-  * - Pipeline
-    - :ref:`Pipelines <otel-data-processing>` can be traces, metrics, or logs. They consist of a set of receivers, processors, and exporters, and define the path of the ingested data element. Each receiver, processor, and exporter must be defined in the configuration outside of the service section to be included in a pipeline.
-
-Here's an example configuration:
-
-.. code-block:: yaml
-
-  receivers:
-    otlp:
-      protocols:
-        grpc:
-        http:
-
-  processors:
-    batch:
-
-  exporters:
-    otlp:
-      endpoint: otelcol:4317
-
-  extensions:
-    health_check:
-    pprof:
-    zpages:
-
-  service:
-    extensions: [health_check,pprof,zpages]
-    pipelines:
-      traces:
-        receivers: [otlp]
-        processors: [batch]
-        exporters: [otlp]
-      metrics:
-        receivers: [otlp]
-        processors: [batch]
-        exporters: [otlp]
-      logs:
-        receivers: [otlp]
-        processors: [batch]
-        exporters: [otlp]
-
+* :ref:`otel-configuration`
+* :ref:`otel-configuration-ootb`
 

@@ -62,7 +62,7 @@ Observability Cloud, you can control the metric volume with a set of aggregation
   :ref:`data-dropping`.
 
 By aggregating combinations of dimensions that provide useful insights while dropping a large amount of the unaggregated
-raw data, you can significantly reduce your organization’s data footprint.
+raw data, you can significantly reduce your organization's data footprint.
 
 .. _aggregation:
 
@@ -76,12 +76,16 @@ dimensions you consider important.
 .. mermaid::
 
    flowchart LR
+
+   accTitle: Data aggregation diagram
+   accDescr: Metrics pipeline management (MPM) receives raw incoming metric time series (MTS). You choose an MTS to aggregate, and perform the aggregation, then you choose whether to keep or drop the raw MTS. MPM keeps the aggregated MTS and any raw MTS that you chose to keep.
+   
    Raw[(Incoming raw MTS)] ---|MPM|ChooseDimensions{"`Choose MTS to aggregate`"} ---|Perform aggregation|CreateNew("`New aggregated MTS with rolled-up
    metrics`") ---|Keep or drop raw MTS|OriginalMTS[(Kept MTS and new MTS)]
 
 By selecting specific dimensions to keep, you can aggregate your data points into a new metric with fewer dimensions,
 creating a specific view of dimensions that are important. You can then obtain a more simplified and concentrated view
-of your data when you don’t need to view metrics across all dimensions.
+of your data when you don't need to view metrics across all dimensions.
 
 When you select specific dimensions, metrics pipeline management generates a new metric. The system creates new MTS
 based on the dimensions you select and rolls up data points for each MTS. By default, aggregation rules roll up the

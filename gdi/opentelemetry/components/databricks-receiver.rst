@@ -40,6 +40,7 @@ configuration file with all the mandatory fields, as shown in the following exam
 
 .. code-block:: yaml
 
+
    databricks:
      instance_name: my-instance
      endpoint: https://dbr.example.net

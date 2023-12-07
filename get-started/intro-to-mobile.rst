@@ -32,6 +32,6 @@ Using Splunk Observability Cloud for mobile, you can do the following:
 - View, filter, and search for dashboards and alerts from your Splunk Observability Cloud instance.
 - Gain context on active alerts such as triggering conditions and detector details.
 - Conduct high-level investigation before switching to Splunk Observability Cloud or other relevant tools.
-- View, acknowledge, dismiss, resolve, and snooze incidents from Incident Intelligence on the :guilabel:`Incidents` tab. You can also add responders to an incident. 
-- View your on-call schedule on the :guilabel:`Settings` tab. 
 - If you've configured your on-call notification preference to send push notifications, you will receive push notification on any device where you're logged in to Splunk Observability Cloud for Mobile.
+  
+.. - View your on-call schedule on the :guilabel:`Settings` tab. 

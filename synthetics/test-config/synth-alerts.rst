@@ -5,7 +5,7 @@ Set up detectors and alerts in Splunk Synthetic Monitoring
 ************************************************************
 
 .. meta::
-    :description: Learn about detectors alerting in Splunk Synthetic Monitoring.
+    :description: How to use Splunk Observability Cloud detectors to monitor your tests for anomalies and generate alerts in Splunk Synthetic Monitoring.
 
 In Splunk Observability Cloud, detectors monitor your tests and metrics for anomalies and generate alerts when problems arise. You can customize the alerting threshold, severity, notification method, recipients, and more. 
 

@@ -69,6 +69,8 @@ For example:
 
    apiVersion: install.istio.io/v1alpha1
    kind: IstioOperator
+   metadata:
+   name: istio-operator
    spec:
       meshConfig:
          # Requires Splunk Log Observer
@@ -119,6 +121,8 @@ For example:
 
    apiVersion: install.istio.io/v1alpha1
    kind: IstioOperator
+   metadata:
+   name: istio-operator
    spec:
       meshConfig:
          # Requires Splunk Log Observer

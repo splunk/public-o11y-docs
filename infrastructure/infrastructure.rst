@@ -24,7 +24,7 @@ Step 1. Connect cloud services
 
 **Note:** You must be an administrator to set up integrations that collect data on your behalf in Observability Cloud.
 
-Connect Observability Cloud to your cloud service provider to collect data from supported cloud services in AWS, GCP, or Azure. If you don’t use cloud services or don’t want Observability Cloud to collect data from them, skip to the next step. You do not have to connect to cloud services to monitor hosts or Kubernetes clusters that run in cloud services, but connecting your cloud account is the only way to collect cloud metadata.
+Connect Observability Cloud to your cloud service provider to collect data from supported cloud services in AWS, GCP, or Azure. If you don't use cloud services or don't want Observability Cloud to collect data from them, skip to the next step. You do not have to connect to cloud services to monitor hosts or Kubernetes clusters that run in cloud services, but connecting your cloud account is the only way to collect cloud metadata.
 
 Observability Cloud collects both logs and metrics data from AWS accounts. If you plan to collect only metrics from an AWS account, select to only collect data from CloudWatch Metrics.
 

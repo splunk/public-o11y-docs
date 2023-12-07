@@ -32,6 +32,7 @@ See :ref:`jaeger-receiver-settings` for more details.
 
 .. code-block:: yaml
 
+
   receivers:
     jaeger:
       protocols:
@@ -66,6 +67,7 @@ Use the UDP protocols, currently ``thrift_binary`` and ``thrift_compact``, to se
 For example:
 
 .. code-block:: yaml
+
 
   protocols:
     thrift_binary:

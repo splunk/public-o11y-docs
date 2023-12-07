@@ -5,7 +5,7 @@ Configure your site to accommodate synthetic tests
 *******************************************************************************
 
 .. meta::
-    :description: Learn how to adjust your application settings to accommodate traffic from Splunk Synthetic Monitoring.
+    :description: Information about the settings you need to configure for your application or site in order to receive traffic from Splunk Synthetic Monitoring.
 
 There are a couple of configurations you might need to set up for your application or webpage to receive traffic from Splunk Synthetic Monitoring.
 
@@ -22,5 +22,3 @@ If you use a web analytics tool to monitor traffic on your website or applicatio
 
 To do so, filter Splunk Synthetic Monitoring IP addresses in the settings of your web analytics tool. See :ref:`public-locations` for the list of IP addresses, and then refer to your analytics tool's documentation for instructions on how to filter them. 
 
-.. GA: 
-    * Exclude analytics files from loading during browser checks -- GA feature, to be documented

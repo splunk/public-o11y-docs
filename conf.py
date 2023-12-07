@@ -19,7 +19,6 @@ extensions = [
     'newpage',
     'github',
     'optimizer',
-    'myst_parser',
     'sphinx_tabs.tabs',
     'olly_on_git_hub',
     'sphinxcontrib.images',
@@ -55,7 +54,7 @@ exclude_patterns = ['_build', 'venv/lib/*/site-packages', '**/site-packages', 'T
 pygments_style = 'sphinx'
 todo_include_todos = False
 html_theme = 'alabaster'
-html_baseurl = "https://docs.splunk.com/Observability/"
+html_baseurl = "https://docs.splunk.com/observability/"
 html_title = 'Splunk Observability Cloud documentation'
 html_favicon = 'favicon.ico'
 html_static_path = ['_static']
@@ -86,7 +85,7 @@ sphinx_tabs_disable_tab_closing = True
 
 # Not found extension settings
 notfound_template = '404.html'
-notfound_urls_prefix = '/Observability/en/'
+notfound_urls_prefix = '/observability/en/'
 
 # Set myst_parser to automatically generate labels for h1, h2, and h3 headings
 myst_heading_anchors = 3
@@ -104,7 +103,7 @@ mermaid_version=""
 linkcheck_anchors = False
 linkcheck_workers = 3
 linkcheck_exclude_documents = [r'_.*', r'\.github', r'myst_parser', r'tests']
-linkcheck_ignore = [r'https://ingest.*',r'https://app.*',r'https://login.*',r'.*\<.*',r'https://api.*',r'https://rum-ingest.*',r'https://proxy.*',r'https://example.*', r'https://domain.com.*', r'.*domain/path.*', r'.*signalfx.com.*', r'.*your_realm.*', r'.*your_domain.*']
+linkcheck_ignore = [r'https://ingest.*',r'https://app.*',r'https://login.*',r'.*\<.*',r'https://api.*',r'https://rum-ingest.*',r'https://proxy.*',r'https://example.*', r'https://domain.com.*', r'.*domain/path.*', r'.*signalfx.com.*', r'.*your_realm.*', r'.*your_domain.*', r'http://localhost*', r'https://localhost*', r'https://leader.mesos*', r'https://login.splunk.com*', r'https://ideas.splunk.com*']
 
 # Image settings
 
@@ -132,6 +131,14 @@ rst_prolog = """
 
    ⋮
 
+.. |add| raw:: html
+
+   +
+
+.. |delete| raw:: html
+
+   ⅹ
+   
 .. |takeshift| imagetarget:: /_images/incident-intelligence/Incident-intelligence-take-shift-icon.png
    :alt: Take shift
    :class: inline-image

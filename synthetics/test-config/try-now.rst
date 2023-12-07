@@ -4,6 +4,9 @@
 Validate your test configuration with try now 
 ******************************************************************************************
 
+.. meta::
+    :description: Use a try now run in Splunk Synthetic Monitoring to validate tests and check that your test configurations are correct and accurate. 
+
 When you create a test, you have the option to validate the configuration of your test with a try now run. 
 
 When to run a test or use try now to validate your test configuration 
@@ -24,6 +27,9 @@ There are two types of runs in Splunk Synthetic Monitoring try now runs, and per
   * - Persisted run
     - 
         * Review run results. 
-        * Execute a test on a schedule. 
+        * Run a test on a schedule. 
 
+Limits
+========================================================================
+You can run a maximum of 1,000 try now runs per hour for each org. 
 

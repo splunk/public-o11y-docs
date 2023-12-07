@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-scenario-business-hours:
 
 Scenario: Skyler creates business-hours and nights-and-weekend rotations for the web application service
@@ -106,7 +108,7 @@ Skyler wants the responder for the weeknights shift to be the same as the respon
       <h2 id="ii-create-secondary-schedule">Skyler creates a schedule for secondary coverage with a 24x7 shift</h2>
    </embed>
 
-Skyler creates a new schedule for secondary coverage for the web application service and names it accordingly: **Web application service - secondary**. Skyler adds the **WebApp** teams tag again to make the schedule easier to find. The teams tag also sorts the list of responders so they’re easier to find and select when Skyler adds them to a shift later. The following image shows the new schedule Skyler creates with the teams tag. 
+Skyler creates a new schedule for secondary coverage for the web application service and names it accordingly: **Web application service - secondary**. Skyler adds the **WebApp** teams tag again to make the schedule easier to find. The teams tag also sorts the list of responders so they're easier to find and select when Skyler adds them to a shift later. The following image shows the new schedule Skyler creates with the teams tag. 
 
 .. image:: /_images/incident-intelligence/use-cases/Create_secondary_schedule.png
       :width: 50%

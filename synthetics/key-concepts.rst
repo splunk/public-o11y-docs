@@ -5,8 +5,7 @@ Key concepts in Splunk Synthetic Monitoring
 ********************************************************
 
 .. meta::
-  :description: Learn key concepts in Splunk Synthetic Monitoring.
-  
+  :description: Definitions for key concepts in Splunk Synthetic Monitoring, such as synthetics, tests, metrics, and other terms.
   
 These key concepts help you get the most out of your experience with Splunk Synthetic Monitoring.
 
@@ -27,7 +26,7 @@ These key concepts help you get the most out of your experience with Splunk Synt
      - Tests are the primary mechanism of application monitoring in Splunk Synthetic Monitoring. You can set up Browser, Uptime, and API tests to run at your preferred frequency from the devices and public locations of your choosing. 
 
    * - Runs
-     - Each occurrence of a test from a particular device and location at a specific time is called a run. Each run of a test captures a set of metrics and diagnostics that provide insight into your application’s performance. 
+     - Each occurrence of a test from a particular device and location at a specific time is called a run. Each run of a test captures a set of metrics and diagnostics that provide insight into your application's performance. 
 
    * - Metrics
      - | Numeric indicators of site performance that synthetic tests capture in each run of a test. See the following links for the lists of metrics available for each test type:
@@ -53,7 +52,7 @@ These key concepts help you get the most out of your experience with Splunk Synt
      - Options to configure the viewport and network connection type of your tests. For example, you can test a webpage from a laptop screen or a smartphone. 
 
    * - Viewport
-     -  Browser tests in Splunk Synthetic Monitoring capture the visual experience of a user interacting with your application. The viewport is the framed area on a device’s screen for viewing information, such as the browser window on a desktop. When you set up a test, you can choose the viewport size from a list of common devices, or set a custom viewport by height and width. 
+     -  Browser tests in Splunk Synthetic Monitoring capture the visual experience of a user interacting with your application. The viewport is the framed area on a device's screen for viewing information, such as the browser window on a desktop. When you set up a test, you can choose the viewport size from a list of common devices, or set a custom viewport by height and width. 
 
    * - Network connection
      - You can run Browser, Uptime or API tests to simulate network connections of various latencies, including Mobile LTE, Mobile 3G, DSL, and cable internet. Testing your site from a variety of connection types lets you monitor the experience of users in a variety of settings. 

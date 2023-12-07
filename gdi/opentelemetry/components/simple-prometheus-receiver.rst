@@ -37,6 +37,7 @@ To activate additional Prometheus receivers, add a new ``prometheus_simple`` ent
 
 .. code-block:: yaml
 
+
    receivers:
      prometheus:
       receivers:

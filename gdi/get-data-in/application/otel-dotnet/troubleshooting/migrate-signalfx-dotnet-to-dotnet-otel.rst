@@ -9,8 +9,6 @@ Migrate from the SignalFx .NET Instrumentation
 
 The agent of the Splunk Distribution of OpenTelemetry .NET is an alternative to the SignalFx Instrumentation for .NET. To migrate from the SignalFx instrumentation, follow these instructions.
 
-.. caution:: This is a beta distribution. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on best-effort basis.
-
 .. _requirements-splunk-dotnet-otel-migration:
 
 Compatibility and requirements
@@ -44,7 +42,7 @@ Configuration setting changes
 
 The following table shows SignalFx Instrumentation for .NET environment variables and their OpenTelemetry equivalents:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :width: 100%
 
@@ -95,14 +93,14 @@ The following table shows SignalFx Instrumentation for .NET environment variable
    * - ``SIGNALFX_PROPAGATORS``
      - ``OTEL_PROPAGATORS``. The default values are ``tracecontext, baggage``. Also available: ``b3multi, b3``.
 
-For more information about Splunk Java OTel settings, see :ref:`advanced-dotnet-otel-configuration`. 
+For more information about Splunk Java OTel settings, see :ref:`advanced-dotnet-otel-configuration`.
 
 Library-specific instrumentation settings
 --------------------------------------------------------
 
 The following table shows library-specific environment variables for the SignalFx Instrumentation for .NET and their OpenTelemetry equivalents:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :width: 100
 

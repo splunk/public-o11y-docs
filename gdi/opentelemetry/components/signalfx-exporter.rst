@@ -25,6 +25,7 @@ The following example shows the default configuration of SignalFx exporter for m
 
 .. code-block:: yaml
 
+
    # Metrics + Events
    signalfx:
      access_token: "${SPLUNK_ACCESS_TOKEN}"
@@ -38,6 +39,7 @@ The following example shows the default configuration of SignalFx exporter for m
 When adding the SignalFx exporter, configure both the metrics and logs pipelines. Make sure to also add the SignalFx receiver as in the following example:
 
 .. code-block:: yaml
+
 
    service:
      pipelines:
@@ -61,6 +63,7 @@ To override default exclusions and include metrics manually, use the ``include_m
 
 .. code-block:: yaml
 
+
    exporters:
      signalfx:
        include_metrics:
@@ -72,6 +75,7 @@ To override default exclusions and include metrics manually, use the ``include_m
 The following example instructs the exporter to send only the ``cpu.interrupt`` metric with a ``cpu`` dimension value and both per core and aggregate ``cpu.idle`` metrics:
 
 .. code-block:: yaml
+
 
    exporters:
      signalfx:
@@ -89,6 +93,7 @@ List of metrics excluded by default
 Metrics excluded by default by the SignalFx exporter are listed in the default_metrics.go file. The following snippet shows the latest version of the list:
 
 .. code-block:: yaml
+
 
    # DefaultExcludeMetricsYaml holds a list of hard coded metrics that's added to the
    # exclude list from the config. It includes non-default metrics collected by

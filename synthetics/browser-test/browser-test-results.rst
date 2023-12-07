@@ -5,7 +5,7 @@ Interpret Browser Test results
 ***********************************************
 
 .. meta::
-    :description: Learn about Browser Test run results in Splunk Synthetic Monitoring.
+    :description: Understand the results of browser tests run in Splunk Synthetic Monitoring and learn how to interpret the data in visualizations, such as the waterfall chart. 
 
 Every run of a Browser Test in Splunk Synthetic Monitoring produces a set of diagnostics that help you understand the performance of your application in real time. 
 
@@ -157,8 +157,6 @@ Filmstrip
 :strong:`Available in Enterprise Edition.`
 
 The filmstrip offers a screenshot of site performance at specific intervals on a timeline, so that you can see how the page responds in real time. By default, the filmstrip provides a screenshot and the time in milliseconds for every visual change as the page loads. You can also use the interval selector to view screenshots for every 100 milliseconds, 500 milliseconds, and one second. 
-
-Within the filmstrip, you can use the :guilabel:`Download Screen Captures` button to download a zip file of .jpg images of all of the screenshots the test captured. 
 
 .. _video:
 

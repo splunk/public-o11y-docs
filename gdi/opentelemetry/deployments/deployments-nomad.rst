@@ -27,6 +27,7 @@ To start a local dev agent for Nomad and Consul:
    
    .. code-block:: yaml
 
+
       $ nomad agent -dev -network-interface='{{ GetPrivateInterfaces | attr "name" }}'
 
       $ consul agent -dev
@@ -77,7 +78,7 @@ You can specify content in the :new-page:`template stanza <https://www.nomadproj
        correlation: null
        ingest_url: https://ingest.${SPLUNK_REALM}.signalfx.com
        sync_host_metadata: true
-     logging:
+     debug:
        verbosity: detailed
    service:
      extensions:
@@ -108,6 +109,7 @@ Run the Collector as a gateway by registering a service job, as shown in the fol
 
 .. code-block:: yaml
 
+
    $ git clone https://github.com/signalfx/splunk-otel-collector.git
    $ cd splunk-otel-collector/deployments/nomad
    $ nomad run otel-gateway.nomad
@@ -121,6 +123,7 @@ Run the Collector as an agent
 Run the Collector as an agent by registering a system job, as shown in the following example:
 
 .. code-block:: yaml
+
 
    $ git clone https://github.com/signalfx/splunk-otel-collector.git
    $ cd splunk-otel-collector/deployments/nomad

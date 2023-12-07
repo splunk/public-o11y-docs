@@ -15,6 +15,11 @@ span.not-ok {
    color: red;
 }
 
+span.std-term {
+  font-weight: bold;
+  font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+
 .st-default-autocomplete {
   width:40% !important;
 }

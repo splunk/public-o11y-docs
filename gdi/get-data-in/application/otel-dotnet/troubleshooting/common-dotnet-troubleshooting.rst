@@ -9,8 +9,6 @@ Troubleshoot .NET instrumentation for Splunk Observability Cloud
 
 When you instrument a .NET application using the Splunk Distribution of OpenTelemetry .NET and you don't see your data in Splunk Observability Cloud, follow these troubleshooting steps.
 
-.. caution:: This is a beta distribution. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on best-effort basis.
-
 .. _enable-dotnet-otel-debug-logging:
 
 General troubleshooting
@@ -39,7 +37,7 @@ Activate debug logging
 
 You can activate debug logging to obtain more information about the issue:
 
-#. Set the ``OTEL_LOG_LEVEL`` environment variable to ``debug`` before starting your instrumented application. 
+#. Set the ``OTEL_LOG_LEVEL`` environment variable to ``debug`` before starting your instrumented application.
 
 #. Run your application or service and generate some activity.
 
@@ -103,3 +101,8 @@ You can deactivate all instrumentations for a specific signal type by setting th
 For a more granular approach, you can deactivate specific instrumentations for a given signal type by setting the ``OTEL_DOTNET_AUTO_{SIGNAL}_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED`` environment variable to ``false``, where ``{SIGNAL}`` is the type of signal, for example traces, and ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation.
 
 .. note:: You can't set environment variables for deactivating instrumentations using the web.config or app.config files.
+
+Uninstall the instrumentation
+======================================
+
+To uninstall the .NET instrumentation, see :ref:`uninstall-otel-dotnet`.

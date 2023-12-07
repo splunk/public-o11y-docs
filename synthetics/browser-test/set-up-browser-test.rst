@@ -6,7 +6,7 @@ Set up a Browser test
 **************************************
 
 .. meta::
-    :description: Learn how to set up a Browser test in Splunk Synthetic Monitoring.
+    :description: Steps to set up a browser test to track the performance of specific site resources, or a multi-step user flow, in Splunk Synthetic Monitoring.
 
 
 Use a Browser test to monitor the user experience for a single page or a multi-step user flow by running a synthetic test of the URLs you provide. Use this type of test to monitor conversion paths or any path that requires multiple steps or runs JavaScript. For an example, see :ref:`browser-test-scenario`.
@@ -30,8 +30,6 @@ Follow these steps to set up a Browser test:
 #. Under Tests, select :guilabel:`Add New Test` and select :guilabel:`Browser Test` from the drop-down list. The test creation view opens. 
 
 #. In the :guilabel:`Name` field, enter a name for your test. 
-
-#. In the :guilabel:`Go to URL` field, enter the URL for the page you want to test, including ``http`` or ``https``.
 
 #. To add steps and synthetic transactions to your Browser test, select :guilabel:`Edit steps or synthetic transactions`. See :ref:`add-transactions` to learn more. 
 
@@ -309,10 +307,10 @@ If your recording contains unsupported steps, you need to edit the step to refor
 View your Browser test
 ====================================
 
-Now that you created and saved a test, check whether it’s collecting data as expected: 
+Now that you created and saved a test, check whether it's collecting data as expected: 
 
 #. From the :guilabel:`Tests` list, select the three-dot :guilabel:`Actions` menu and select :guilabel:`Play` arrow icon to manually trigger a live run of the test, or wait for at least one duration of the test frequency you set so that the test has time to run and collect data. 
-#. Select the test you’re interested in to open the :guilabel:`Test history` view, where you can view visualizations of recent test results and metrics.
+#. Select the test you're interested in to open the :guilabel:`Test history` view, where you can view visualizations of recent test results and metrics.
 
 #. See :ref:`browser-test-results` to learn more about Browser test results. 
 
@@ -340,6 +338,21 @@ There are many reasons why you might want to configure advanced settings for you
 * Testing out a CDN. For example, you might want to load the HTML page in the browser, but rewrite the hosts for some or all requests to a new host.
 * Filtering out requests from analytics on the back end by sending a specific header in the requests.
 * Running a test on a pre-production site that has a self-signed certificate.
+
+
+
+Custom properties 
+--------------------
+Custom properties are key-value pairs you can assign to dimensions of existing MTSes after ingest. Custom properties are single-valued and don’t support multiple values, like ``region:northamerica`` or ``environment:prod``.
+
+Key requirements:
+
+* Keys must start with an uppercase or lowercase letter. Keys can't start with special characters or numbers. 
+* The remainder of the key can contain letters, numbers, underscores and hyphens.
+* Keys can’t be named test_id or test.
+* Key size can't exceed 128 characters. 
+
+See, :ref:`custom-properties`. 
 
 
 .. _browser-cookies:

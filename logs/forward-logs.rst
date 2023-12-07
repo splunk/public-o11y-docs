@@ -47,9 +47,42 @@ Follow the steps below to create an HEC ingest token in the Splunk platform:
 
 11. Copy the token value that Splunk Web displays and paste it in the :guilabel:`HEC Ingest Token` field. You must use it in the next section.
 
-12. (Optional) If you want to see the progress of the new token’s deployment to your Splunk platform instance, select :guilabel:`Track deployment progress` on the Splunk platform token settings page. When you see a status of "Done", you can then use the token to send your Log Observer data.
+12. (Optional) If you want to see the progress of the new token's deployment to your Splunk platform instance, select :guilabel:`Track deployment progress` on the Splunk platform token settings page. When you see a status of "Done", you can then use the token to send your Log Observer data.
 
 To learn more about HEC Ingest tokens for Splunk Cloud or Splunk Enterprise, see :new-page:`Set up and use HTTP Event Collector in Splunk Web <https://docs.splunk.com/Documentation/Splunk/9.1.0/Data/UsetheHTTPEventCollector>`.
+
+
+.. _ip-allow-list:
+
+Add Splunk Observability Cloud IP addresses to your allow list
+================================================================================
+A Splunk Cloud Platform admin must add Splunk Observability Cloud IP addresses to your Splunk Cloud Platform allow list. See :new-page:`Configure IP allow lists using Splunk Web <https://docs.splunk.com/Documentation/SplunkCloud/latest/Admin/ConfigureIPAllowList#Add_subnets_to_IP_allow_lists>` to learn how. 
+
+If you already set up Log Observer Connect, you do not need to add the necessary IP addresses because you already added them. If you have not set up Log Observer Connect, add the following IP addresses to your Splunk Cloud Platform allow list:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 80
+
+   * - :strong:`Realm`
+     - :strong:`IP addresses`
+  
+   * - us0
+     - | 34.199.200.84/32
+       | 52.20.177.252/32
+       | 52.201.67.203/32
+       | 54.89.1.85/32
+   
+   * - us1
+     - | 44.230.152.35/32
+       | 44.231.27.66/32
+       | 44.225.234.52/32
+       | 44.230.82.104/32
+
+   * - eu0
+     - | 108.128.26.145/32
+       | 34.250.243.212/32
+       | 54.171.237.247/32
 
 
 .. _authenticate-hec:

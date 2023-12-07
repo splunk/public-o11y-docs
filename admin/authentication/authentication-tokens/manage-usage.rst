@@ -36,7 +36,7 @@ Cost-related token limits example
 -------------------------------------
 
 For example, suppose your pricing plan lets you send up to 5,000 custom metrics
-in a time period. If you have hosts that you use for testing, you don’t want data
+in a time period. If you have hosts that you use for testing, you don't want data
 sent from them to count towards your limit. In this case, you can create a testing
 token with a limit of 100 custom metrics and use it to send data from your test hosts.
 When you use a separate token for production, your production hosts always have at

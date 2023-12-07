@@ -33,7 +33,7 @@ You can share a dashboard from Splunk Observability Cloud in the following ways.
 Use the share menu option
 ------------------------------------------------------------
 
-This method lets you share a copy of the current state of a dashboard. Copies include unsaved changes at the time you share, and auto-expire unless the recipient saves them. Sharing a copy is useful for when you make a change that you want to show to team members, but don’t want to modify the original dashboard. In the share menu there are two ways to share the dashboard:
+This method lets you share a copy of the current state of a dashboard. Copies include unsaved changes at the time you share, and auto-expire unless the recipient saves them. Sharing a copy is useful for when you make a change that you want to show to team members, but don't want to modify the original dashboard. In the share menu there are two ways to share the dashboard:
 
 Share directly
 -------------------------------------------------------------
@@ -45,7 +45,7 @@ Share directly
 - After adding recipients, select :guilabel:`Share`. Recipients will receive a link to the dashboard copy. When they open it, they can edit and save their copy without affecting the original.
 
 .. caution::
-    Administrators can add email addresses of people who aren’t members of your organization. Recipients who aren't members will be asked to create a user account before they can view the shared content. Be sure the email addresses you enter for non-members are correct, especially if the item you are sharing contains any sensitive or proprietary information.
+    Administrators can add email addresses of people who aren't members of your organization. Recipients who aren't members will be asked to create a user account before they can view the shared content. Be sure the email addresses you enter for non-members are correct, especially if the item you are sharing contains any sensitive or proprietary information.
 
 
 Copy link
@@ -147,14 +147,14 @@ When you create a mirror, you have a number of ways to customize how the mirror 
 Select a dashboard group
 ------------------------------------------------
 
-Select or search for a group where you want the mirror to be placed. Dashboard groups for which you don’t have write permissions will not be available as targets for the mirror.
+Select or search for a group where you want the mirror to be placed. Dashboard groups for which you don't have write permissions will not be available as targets for the mirror.
 
 Change the dashboard name and description
 ------------------------------------------------
 
 Specify a name for the mirror in the target group. The default name suggested when creating a new dashboard mirror is the name of the original dashboard, which might be different from the displayed name of the dashboard you are currently mirroring if that dashboard itself is a mirror.
 
-Specify a new description for the mirror in the target group. As with the name, the default will come from the dashboard. A dashboard or mirror’s description is visible when you select :guilabel:`Dashboard Info` from the Actions menu (|more|).
+Specify a new description for the mirror in the target group. As with the name, the default will come from the dashboard. A dashboard or mirror's description is visible when you select :guilabel:`Dashboard Info` from the Actions menu (|more|).
 
 Customize dashboard filters and variables
 -------------------------------------------------

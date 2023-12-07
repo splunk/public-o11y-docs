@@ -266,15 +266,19 @@ Percentile
 
 SignalFlow function: :new-page:`percentile() <https://dev.splunk.com/observability/docs/signalflow/methods/percentile_stream_method>`
 
-Calculates the specified percentile of values in data points collected either from multiple time series at a point in time (aggregation), or from individual time series over a moving time window (transformation).
+Finds the specified percentile of values in data points collected either from multiple time series at a point in time (aggregation), or from individual time series over a moving time window (transformation).
 
 - :strong:`Percentile:Aggregation`
 
-  Outputs one time series for each group of input time series expressing, for each time period, the configured percentile (between 1 and 100, inclusive) of the values present in the input in the time period. The default percentile value is 95.
+  Outputs a data stream for each group of input time series expressing, for each time period, the configured percentile (between 1 and 100, inclusive) of the values present in the input in the time period. The default percentile value is 95.
+
+  For example, by applying a percentile value of 95 to a data stream with 1,000 MTS, you get the value of the 50th biggest MTS for each time period. In this example, approximately 95% of the values are lower than the returned percentile and approximately 5% are higher.
 
 - :strong:`Percentile:Transformation`
 
-  For each input time series, outputs a corresponding time series expressing, for each time period, the configured percentile (between 1 and 100, inclusive) of the input time series over a configurable time window leading up to that period. The default percentile value is 95, and the default time window is one hour.
+  For each input time series, outputs a corresponding data stream expressing, for each time period, the configured percentile (between 1 and 100, inclusive) of the input time series over a configurable time window leading up to that period. The default percentile value is 95, and the default time window is 1 hour.
+
+  For example, by requesting the 95th percentile of the past hour of an MTS with a 10s resolution (assuming no rollup), you get the 18th largest value from the past hour. In this example, out of the 360 data points from the past hour, approximately 95% of the values are lower than the returned percentile and approximately 5% are higher.
 
 The :strong:`Percentile` function also supports transformation over a dashboard window instead of a moving window. For more information, see :ref:`dashboard-window`.
 
