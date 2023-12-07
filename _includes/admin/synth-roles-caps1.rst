@@ -33,7 +33,7 @@
     - Yes
     - No
 
-    * - :strong:`Create, read, or delete runners`
+  * - :strong:`Create, read, or delete runners`
     - Yes
     - No
 
