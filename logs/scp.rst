@@ -85,7 +85,7 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
 
 8. Secure a connection to your Splunk Cloud Platform instance in Splunk Observability Cloud. To get help from Splunk Support, :ref:`Submit a support ticket <support-ticket>`. To do it yourself, add your public IPv4 address to the allow list by following instructions in :new-page:`Add subnets to IP allow lists <https://docs.splunk.com/Documentation/SplunkCloud/latest/Admin/ConfigureIPAllowList#Add_subnets_to_IP_allow_lists>`. 
       
-9. Access your Splunk Cloud Platform management port (e.g. abc.splunkcloud.com:8089) and use your browser's secure connection to download the certificate. 
+9. Access your Splunk Cloud Platform management port (e.g. abc.splunkcloud.com:8089) and use your browser's secure connection to download the certificate.
 
    a. For example, in the Chrome browser, select the lock icon in the address bar, then select :guilabel:`Connection is secure`.
 
