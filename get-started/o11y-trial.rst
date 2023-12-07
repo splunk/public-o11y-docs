@@ -17,7 +17,7 @@ You can try out Splunk Observability Cloud for 14 days, absolutely free. You can
 
 For an introduction to Splunk Observability Cloud products, see :ref:`welcome`.
 
-For information about how these products can be used together to address real-life scenarios, see :ref:`get-started-scenario`.
+For information about how to use these products together to address real-life scenarios, see :ref:`get-started-scenario`.
 
 Sign up for the trial
 ============================
@@ -55,7 +55,7 @@ You can also expand the left-hand navigation menu to show the full names of the 
 Guided onboarding
 =========================
 
-There are 5 steps to the guided onboarding:
+There are five steps to the guided onboarding:
 
 #. Preparing the prerequisites.
 #. Install OpenTelemetry.
@@ -72,13 +72,13 @@ To run the demo environment, install and have functioning versions of:
 - Docker: Install Docker if needed. See :new-page:`https://docs.docker.com/engine/install`
 - minikube: Install and configure minikube. See :new-page:`https://minikube.sigs.k8s.io/docs/start`
 - Helm: Install Helm version 3.0 or higher. See :new-page:`https://helm.sh/docs/intro/install/`
-- GSED: GNU implementations of the stream editor. gnu-sed is used in the configuration script for the kubernetes manifests. - See :new-page:`https://formulae.brew.sh/formula/gnu-sed`
+- GSED: GNU implementations of the stream editor. gnu-sed is used in the configuration script for the kubernetes manifests. - See :new-page:`https://formulae.brew.sh/formula/gnu-sed`.
 - The Hipster Shop cluster requires a minimum 4 GB of memory. 
 
 
 To install the OpenTelemetry collector, you'll need to know:
 
-- Your Splunk Observability Cloud realm. To locate your realm, see :new-page:`View your realm and org info <https://docs.splunk.com/Observability/admin/references/organizations.html>`
+- Your Splunk Observability Cloud realm. To locate your realm, see :new-page:`View your realm and org info <https://docs.splunk.com/Observability/admin/references/organizations.html>`.
 - Your Splunk Observability Cloud access token. For details, see :ref:`admin-org-tokens`.
 
 
