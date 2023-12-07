@@ -66,33 +66,18 @@ To configure SSO for Splunk On-Call using Google Apps:
 #. Save the Splunk On-Call logo file found `HERE <https://help.victorops.com/wp-content/uploads/2016/11/256x256-VictorOps-Oakleaf.png>`__.
 #. Enter a name for the application (Splunk On-Call) and upload the logo file.
 
-.. figure:: images/SSO5.png
-   :alt: VictorOps SSO Google Apps Setup 5
+   .. image:: /_images/spoc/sso-google4.png
+       :width: 100%
+       :alt: Splunk On-Call SSO Google Apps Setup 5
 
-   VictorOps SSO Google Apps Setup 5
-
--  On the “Service Provider Details” step place the following in the
-   :guilabel:`ACS URL` line:
-
-   -  https://sso.victorops.com:443/sp/ACS.saml2
-
--  For the Entity ID place the following:
-
-   -  victorops.com
-
--  For the Start URL place the following with the correct Organization
-   Slug at the end:
-
-   -  https://portal.victorops.com/auth/sso/**org-slug-here**
+#. In the :guilabel:`Service Provider Details` step, enter the following values:
+   - in the :guilabel:`ACS URL` field: https://sso.victorops.com:443/sp/ACS.saml2
+   - in the :guilabel:`Entity ID` field: victorops.com
+   - in the :guilabel:`Start URL` field, enter the following with the correct Organization Slug at the end: https://portal.victorops.com/auth/sso/**org-slug-here**
 
 **VictorOps SSO Google Apps Setup 6**
 
--  Finally, skip the attribute mapping step and click FINISH
-
-.. figure:: images/SSO7.png
-   :alt: VictorOps SSO Google Apps Setup 7
-
-   VictorOps SSO Google Apps Setup 7
+#. Skip the attribute mapping step and select :guilabel:`Finish`.
 
 
 
