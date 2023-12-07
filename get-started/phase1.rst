@@ -20,12 +20,6 @@ Your goal in the onboarding phase is to understand the platform and make sure yo
 Configure your user and team administration
 ===============================================
 
-#. Create a trial for your organization.
-#. Decide how to manage user access.
-#. (Optional) Request a custom URL for your organization.
-#. (Optional) Further separate teams and functionality using the parent-child setup.
-#. Plan your teams structure and token management to control access.
-
 Create a trial for your organization 
 -----------------------------------------------------------------------
 
@@ -91,6 +85,48 @@ You want to determine a naming convention for teams to ensure uniformity and eas
 * Token name: FRONTEND_DEV_TEAM_INGEST, FRONTEND_DEV_TEAM_API, FRONTEND_DEV_TEAM_RUM
 
 Aligning team and token names makes it easier to identify the owners of tokens when viewing the usage reports.
+
+Design your architecture and get data in
+==========================================
+
+Get familiar with the OpenTelemetry Collector concepts
+------------------------------------------------------------------------------------------------------------
+
+Gather requirements to create an architecture prototype
+------------------------------------------------------------------------------------------------------------
+
+Analyze your required network communication
+------------------------------------------------------------------------------------------------------------
+
+Analyze how to collect metrics from hosts, containers, cloud providers
+------------------------------------------------------------------------------------------------------------
+
+Configure and implement host and Kubernetes metrics
+------------------------------------------------------------------------------------------------------------
+
+Collect data from 3rd-party metrics providers
+------------------------------------------------------------------------------------------------------------
+
+Get familiar familiar with the Splunk Observability APM concepts
+------------------------------------------------------------------------------------------------------------
+
+Add an auto-instrumentation library to a service to send traces to Splunk APM
+------------------------------------------------------------------------------------------------------------
+
+(Optional) Consider the zero-config implementation for .Net & Java
+------------------------------------------------------------------------------------------------------------
+
+(Optional) Enable AlwaysOn Profiling to continuously collect stack traces
+------------------------------------------------------------------------------------------------------------
+
+(Optional) Enable Log Observer Connect for Splunk Cloud and Splunk Enterprise
+------------------------------------------------------------------------------------------------------------
+
+Review the default dashboards 
+------------------------------------------------------------------------------------------------------------
+
+Review the default detectors (auto-detect)
+------------------------------------------------------------------------------------------------------------ 
 
 
 
