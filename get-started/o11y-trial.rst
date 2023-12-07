@@ -20,7 +20,7 @@ For an introduction to Splunk Observability Cloud products, see :ref:`welcome`.
 For information about how these products can be used together to address real-life scenarios, see :ref:`get-started-scenario`.
 
 Sign up for the trial
-===========================
+============================
 
 If this is your first experience with Splunk Observability Cloud, here's how you can sign up for your free trial.
 
