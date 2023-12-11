@@ -216,6 +216,7 @@ The following settings control the AlwaysOn Profiling feature for the Java agent
         * The default value is ``false``. 
         * Requires ``splunk.profiler.enabled`` to be set to ``true``.  
         * Activating memory profiling sets the value of ``splunk.metrics.enabled`` to ``true``.
+       .. note:: Due to a Java bug, OpenJDK versions 15.0-17.0.8, are not supported for memory profiling. See :new-page:`https://bugs.openjdk.org/browse/JDK-8309862` in the JDK bug system for more information.  
 
        System property: ``splunk.profiler.memory.enabled``
    * - ``SPLUNK_PROFILER_MEMORY_EVENT_RATE``

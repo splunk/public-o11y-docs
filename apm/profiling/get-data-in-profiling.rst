@@ -78,6 +78,8 @@ AlwaysOn Profiling requires APM tracing data to correlate stack traces to your a
      - :strong:`Documentation`
    * - Java
      - Splunk Distribution of OpenTelemetry Java version 1.14.2 or higher
+
+       Due to a Java bug, OpenJDK versions 15.0-17.0.8, are not supported for memory profiling. See :new-page:`https://bugs.openjdk.org/browse/JDK-8309862` in the JDK bug system for more information. 
      - * :ref:`instrument-java-applications`
        * :ref:`profiling-configuration-java`
    * - Node.js
