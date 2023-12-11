@@ -246,7 +246,7 @@ To send spans from the instrumented Lambda function to the Collector gateway run
    - ``OTLP_EXPORTER_OTLP_TRACES_PROTOCOL`` with the value ``http/protobuf``
    - ``SPLUNK_LAMBDA_LOCAL_COLLECTOR_ENABLED`` with the value ``false``
 
-.. note:: If you've already set the access token in the Collector configuration, delete the ``SPLUNK_ACCESS_TOKEN`` environment variable.
+#. If you've already set the access token and realm in the Collector configuration, delete the ``SPLUNK_ACCESS_TOKEN`` and ``SPLUNK_REALM`` environment variables.
 
 
 .. _send_directly_olly_cloud:
