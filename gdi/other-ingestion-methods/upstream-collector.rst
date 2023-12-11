@@ -8,7 +8,7 @@
 Send telemetry using the OpenTelemetry Collector Contrib project
 ****************************************************************
 
-.. meta:: 
+.. meta::
       :description: If you need to use the upstream Collector due to technical or practical reasons, you can still send traces and metrics to Splunk Observability Cloud. On the other hand, the Splunk Distribution of OpenTelemetry Collector enhances the upstream OpenTelemetry Collector and is fully compatible with Splunk instrumentation.
 
 The OpenTelemetry Collector Contrib project, referred to officially as the upstream Collector, is the upstream source of all OpenTelemetry Collector distributions, including the Splunk Distribution of OpenTelemetry Collector. The upstream Collector contains vendor-specific components, such as receivers and exporters for several observability back ends, including Splunk Observability Cloud.
@@ -47,7 +47,7 @@ The following table compares the Splunk Distribution of OpenTelemetry Collector 
 
   * - Zero config automatic instrumentation
     - Yes
-    - No 
+    - No
 
   * - Discovery mode
     - Yes
@@ -57,11 +57,7 @@ The following table compares the Splunk Distribution of OpenTelemetry Collector 
     - Yes, for Ansible, Chef, Puppet, and Salt
     - No
 
-  * - Helm chart and Kubernetes operator
-    - Yes
-    - No
-
-  * - Built-in dashboards
+  * - Receivers for IMM already included
     - Yes
     - No
 
@@ -69,17 +65,9 @@ The following table compares the Splunk Distribution of OpenTelemetry Collector 
     - Yes, CPU and memory
     - No
 
-  * - Network Explorer
-    - Yes
-    - No
-
-  * - Log collection and export
-    - Yes, using Splunk HEC and Fluentd
-    - No, it requires configuration
-
   * - Related content
     - Yes
-    - No
+    - Yes, when using Splunk exporters
 
   * - RUM correlation
     - Yes
