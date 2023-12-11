@@ -37,11 +37,11 @@ You can install the ``splunk-otel-auto-instrumentation`` package in the followin
 
 Using the installer script, you can install the auto instrumentation package for Node.js and activate auto instrumentation for Node.js for either all supported Node.js applications on the host via the system-wide method or for only Node.js applications running as ``systemd`` services. 
 
-By default, the installer script installs the Node.js package globally using the ``npm install --global`` command. To specify a custom command for installation, use the ``--npm-command <command>`` option as in the following example:
+By default, the installer script installs the Node.js package globally using the ``npm install --global`` command. To specify a custom command for installation, use the ``--npm-path <command>`` option as in the following example:
 
 .. code-block:: bash
 
-    --npm-command "/custom/path/to/npm install --prefix /custom/nodejs/install/path"
+    --npm-path /custom/path/to/npm
 
 .. note:: By default, auto instrumentation is activated for both Java and Node.js when using the installer script. To deactivate auto instrumentation for Java, add the ``--without-instrumentation-sdk java`` or ``--with-instrumentation-sdk node`` option in the installer script command.
 
@@ -139,6 +139,27 @@ After your applications are running, you can verify your data. See :ref:`verify-
 You can configure the Splunk Distribution of OpenTelemetry JS to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started.
 
 To learn more, see :ref:`advanced-nodejs-otel-configuration`.
+
+.. _update-js-zeroconfig-linux:
+
+Update zero config auto instrumentation
+============================================
+
+To update the Node.js agent to the latest provided version, run the following command:
+
+.. code-block:: bash
+
+    cd /usr/lib/splunk-instrumentation/splunk-otel-js && \
+    sudo npm install /usr/lib/splunk-instrumentation/splunk-otel-js.tgz
+
+
+The default auto instrumentation configuration expects the Node.js agent to be installed under the ``/usr/lib/splunk-instrumentation/splunk-otel-js`` path. 
+
+If auto instrumentation is installed under a different path, manually update the path for the ``NODE_OPTIONS`` environment variable in either ``/etc/splunk/zeroconfig/node.conf`` for system-wide services or ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf`` for ``systemd`` services. For example:
+
+.. code-block:: yaml
+
+    NODE_OPTIONS=-r /custom/nodejs/install/path/@splunk-otel-instrument
 
 .. _js-zeroconfig-linux-nextsteps:
 
