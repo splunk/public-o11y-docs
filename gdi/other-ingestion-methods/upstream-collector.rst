@@ -76,7 +76,7 @@ The following table compares the Splunk Distribution of OpenTelemetry Collector 
 Prerequisites
 ===================================================
 
-To send data to Splunk Observability Cloud you can use the Collector from the OpenTelemetry Collector Contrib project. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib <https://github.com/open-telemetry/opentelemetry-collector-contrib>` on GitHub for more information. 
+To send data to Splunk Observability Cloud you can use the Collector from the OpenTelemetry Collector Contrib project. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib <https://github.com/open-telemetry/opentelemetry-collector-contrib>` on GitHub for more information.
 
 .. note:: Make sure that the version number of OpenTelemetry Collector Contrib is the same as the latest Splunk distribution before configuring the Collector. To check the version of the Splunk Distribution of OpenTelemetry Collector, see the :new-page:`Releases <https://github.com/signalfx/splunk-otel-collector/releases>` page on GitHub.
 
@@ -88,14 +88,14 @@ Sample configuration for Splunk Observability Cloud
 The following example shows how to configure the upstream Collector to send metrics and traces to Splunk Observability Cloud:
 
 .. github:: yaml
-  :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/cmd/otelcol/config/collector/upstream_agent_config.yaml
+   :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/cmd/otelcol/config/collector/upstream_agent_config.yaml
 
 .. _migrate-otel-upstream:
 
 Migrate to the Splunk Distribution of OpenTelemetry Collector
 ================================================================
 
-Migrating from existing upstream Collectors to the Splunk Distribution of OpenTelemetry Collector requires fewer steps than migrating from other proprietary agents, because the Splunk distribution is based on the OpenTelemetry Collector. 
+Migrating from existing upstream Collectors to the Splunk Distribution of OpenTelemetry Collector requires fewer steps than migrating from other proprietary agents, because the Splunk distribution is based on the OpenTelemetry Collector.
 
 To migrate from the Collector Contrib to the Splunk OTel Collector, follow these steps:
 
@@ -105,7 +105,7 @@ To migrate from the Collector Contrib to the Splunk OTel Collector, follow these
 
 #. Remove the OpenTelemetry Collector Contrib binary and configuration files, including system service configuration files, or use the package manager in your system to remove the upstream Collector.
 
-#. Install the Splunk OTel Collector. See :ref:`otel-install-platform`. If you've deployed the Collector in Kubernetes use the Helm chart. See :ref:`helm-chart` for more information. 
+#. Install the Splunk OTel Collector. See :ref:`otel-install-platform`. If you've deployed the Collector in Kubernetes use the Helm chart. See :ref:`helm-chart` for more information.
 
 #. Configure the Splunk OTel Collector taking into account the settings you saved before removing the Collector Contrib project, as well as the components available in the Splunk Distribution of OpenTelemetry Collector. See :ref:`gdi-upstream-collector` and :ref:`otel-components`.
 
