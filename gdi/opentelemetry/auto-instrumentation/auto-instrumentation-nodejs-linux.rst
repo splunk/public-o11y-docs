@@ -159,7 +159,7 @@ If the Node.js agent is installed under a different path, manually update the pa
 
 .. code-block:: yaml
 
-    NODE_OPTIONS=-r /custom/nodejs/install/path/@splunk-otel-instrument
+    NODE_OPTIONS=-r /custom/nodejs/install/path/@splunk/otel/instrument
 
 .. _js-zeroconfig-linux-nextsteps:
 
