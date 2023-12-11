@@ -145,7 +145,9 @@ To learn more, see :ref:`advanced-nodejs-otel-configuration`.
 Update zero config auto instrumentation
 ============================================
 
-To update the Node.js agent to the latest provided version, run the following command:
+To update the Node.js agent to the latest provided version, you must first update the ``splunk-otel-auto-instrumentation`` package by following the steps in :new-page:`GitHub <https://github.com/splunk/private-o11y-docs/blob/main/gdi/opentelemetry/auto-instrumentation/auto-instrumentation-java-linux.rst#upgrade-the-package>`.
+
+After updating the ``splunk-otel-auto-instrumentation`` package, run the following command:
 
 .. code-block:: bash
 
