@@ -155,7 +155,7 @@ To update the Node.js agent to the latest provided version, run the following co
 
 The default auto instrumentation configuration expects the Node.js agent to be installed under the ``/usr/lib/splunk-instrumentation/splunk-otel-js`` path. 
 
-If auto instrumentation is installed under a different path, manually update the path for the ``NODE_OPTIONS`` environment variable in either ``/etc/splunk/zeroconfig/node.conf`` for system-wide services or ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf`` for ``systemd`` services. For example:
+If the Node.js agent is installed under a different path, manually update the path for the ``NODE_OPTIONS`` environment variable in either ``/etc/splunk/zeroconfig/node.conf`` for system-wide services or ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf`` for ``systemd`` services. For example:
 
 .. code-block:: yaml
 
