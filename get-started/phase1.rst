@@ -35,12 +35,12 @@ There are 3 options for managing user access:
 #. Use Splunk Cloud as the unified identity provider. See :ref:`unified-id-unified-identity` for more information.
 
 (Optional) Request a custom URL for your organization
------------------------------------------------
+-------------------------------------------------------
 
 Create a Splunk support request to request a custom URL for your organization, for example, acme.signalfx.com. See :ref:`support` for support contact options.
 
 (Optional) Further separate teams and functionality using the parent-child setup
-------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
 
 If you want to create separate environments you can use parent-child organizations. Perhaps you want a development environment and a production environment or you want to make sure Team A is fully separated from Team B. Parent-child orgs are 2 or more separate organizations, where your original organization is the parent organization which include your original usage entitlement. You can then have 1 or more orgs as child organizations within the parent organiation. The organiations are fully separated, including users and data. You can request a parent-child organization setup by creating support case. See :ref:`support` for support contact options.
 
