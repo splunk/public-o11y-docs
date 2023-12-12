@@ -28,14 +28,15 @@ The Splunk Distribution of the OTel Collector Add-on for AWS EKS:
 Limitations
 =============================================================================================
 
-While the Splunk Distribution of the OTel Collector Add-on for AWS EKS offers numerous advantages, it is important to be aware of certain limitations:
+While the Splunk Distribution of the OpenTelemetry Collector Add-on for AWS EKS offers numerous advantages, be aware of these limitations:
 
-* Lack of Support for Helm Hooks and Helm Subcharts:
-  * The EKS add-on integration does not support Helm Hooks and Helm subcharts. Consequently, certain features that rely on these capabilities are unavailable:
-    * Collector Secret Validation: This feature is not available as it utilizes a Helm hook.
-    * Operator-based Auto-Instrumentation: This is not supported due to its dependency on subcharts for deploying necessary components.
-* Single Instance Deployment:
-  * Currently, only one instance of the Splunk Distribution of the OTel Collector can be deployed per EKS cluster. The EKS add-ons do not yet support deploying multiple instances of add-ons. This limitation should be considered when planning for scale and redundancy.
+* The EKS Add-on integration doesn't support Helm hooks and Helm subcharts. Consequently, certain features that rely on these capabilities are unavailable, such as:
+
+    * The Collector Secret Validation feature is unavailable as it uses a Helm hook.
+    * Operator-based Auto-Instrumentation is unsupported since it relies on subcharts for deploying necessary components.
+
+* With the EKS Add-on, you can only deploy one instance of the Splunk Distribution of the OTel Collector per EKS cluster. Take into account this limitation when planning for scale and redundancy.
+
 Install the AWS EKS Add-on
 =============================================================================================
 
@@ -55,8 +56,7 @@ Step 1: Subscribe to the AWS Marketplace Splunk Add-on
 In your AWS Marketplace, ensure that:
 
 * You have sufficient permissions in your AWS account to enable the Splunk Add-on.
-* Complete the subscription process on this [AWS Marketplace
- Page](https://aws.amazon.com/marketplace/pp/prodview-sjdb4tw5uy47k) to add the Splunk Distribution of the OpenTelemetry Collector Add-on to your AWS account.
+* Complete the subscription process in the AWS console. Go to the [AWS Marketplace Page](https://aws.amazon.com/marketplace/pp/prodview-sjdb4tw5uy47k) to add the Splunk Distribution of the OpenTelemetry Collector Add-on to your AWS account.
 
 .. _addon-aws-eks-two:
 
@@ -98,7 +98,9 @@ Find the AWS EKS User guide at :new-page:`Managing Amazon EKS add-ons <https://d
 Step 4: Configure the Splunk Observability Cloud Add-on
 ------------------------------------------------------------
 
-Prepare a configuration YAML file based on your destination, replacing configuration values appropriately based on your Splunk setup. 
+To configure the Splunk Observability Cloud Add-on, prepare a YAML file tailored to your Splunk set-up, replacing placeholder values with your specific configuration details. 
+
+.. caution:: For security reasons, avoid including tokens or any sensitive data in the configuration file, as EKS Add-on configurations are exposed within the EKS web console.
 
 For ``splunkPlatform``:
 
@@ -106,7 +108,7 @@ For ``splunkPlatform``:
 
     splunkPlatform:
         endpoint: http://localhost:8088/services/collector
-        token: CHANGEME
+        token: <YOUR_HEC_TOKEN>
     clusterName: my-aws-eks-cluster
     cloudProvider: aws
     distribution: eks
@@ -116,7 +118,7 @@ For ``splunkObservability``:
 .. code-block:: yaml
 
     splunkObservability:
-        accessToken: CHANGEME
+        accessToken: <YOUR_HEC_TOKEN>
         realm: us0
     clusterName: my-aws-eks-cluster
     cloudProvider: aws
@@ -129,7 +131,89 @@ For more specific configuration information, see :ref:`otel-install-k8s`.
 Step 5: Apply the Configuration
 ------------------------------------------------------------
 
-Use the YAML file you've prepared to configure the Add-on with your chosen method: ``eksctl``, the AWS Management Console, or the AWS CLI.
+Use the YAML config file you've prepared to configure the Add-on with your chosen method: ``eksctl``, the AWS Management Console, or the AWS CLI.
+
+Improve your security with secure token handling
+================================================================
+
+For enhanced security, create a Kubernetes secret after deploying the Add-on. This method ensures sensitive data such as access tokens are securely managed and not visible within the EKS console.
+
+Follow these steps to secure token handling:
+
+* :ref:`addon-aws-eks-secure-token-one`
+* :ref:`addon-aws-eks-secure-token-two`
+* :ref:`addon-aws-eks-secure-token-three`
+
+.. _addon-aws-eks-secure-token-one:
+
+Step 1: Deploy the Add-on 
+------------------------------------------------------------
+
+Add the following configuration to your Add-on, removing any access tokens from it.
+
+For ``splunkPlatform``:
+
+.. code-block:: yaml
+
+    splunkPlatform:
+        endpoint: http://localhost:8088/services/collector
+    clusterName: my-aws-eks-cluster
+    cloudProvider: aws
+    distribution: eks
+
+    secret:
+        create: false
+        name: splunk-otel-collector
+        validateSecret: false
 
 
+For ``splunkObservability``:
+
+.. code-block:: yaml
+
+    splunkObservability:
+        realm: us0
+    clusterName: my-aws-eks-cluster
+    cloudProvider: aws
+    distribution: eks
+
+    secret:
+        create: false
+        name: splunk-otel-collector
+        validateSecret: false
+
+.. _addon-aws-eks-secure-token-two:
+
+Step 2: Add your secret
+------------------------------------------------------------
+
+Deploy the secret into the splunk-monitoring namespace using the kubectl command or by applying a YAML file.
+Creating Secrets Using kubectl Command:
+
+For ``splunkPlatform``:
+
+.. code-block:: yaml
+
+    kubectl create secret generic splunk-otel-collector \
+        --from-literal=splunk_platform_hec_token=<YOUR_HEC_TOKEN> \
+        -n splunk-monitoring
+
+Replace ``<YOUR_ACCESS_TOKEN>`` with your actual Splunk Platform HEC token.
+
+For ``splunkObservability``:
+
+.. code-block:: yaml
+
+    kubectl create secret generic splunk-otel-collector \
+        --from-literal=splunk_observability_access_token=<YOUR_ACCESS_TOKEN> \
+        -n splunk-monitoring
+
+Replace ``<YOUR_ACCESS_TOKEN>`` with your actual Splunk Observability Cloud access token.
+
+.. _addon-aws-eks-secure-token-three:
+
+Step 3: Wait for the Collector
+------------------------------------------------------------
+
+After adding the secret, allow some time for the Collector to detect your secret and start running successfully.
 
