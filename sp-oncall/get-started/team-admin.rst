@@ -1,30 +1,29 @@
-.. _alert-admin:
+.. _team-admin:
 
 ************************************************************************
-Get started as an Alert admin
+Get started as a Team admin
 ************************************************************************
 
 .. meta::
-   :description: About the alert admin  roll in Splunk On-Call.
+   :description: About the team admin roll in Splunk On-Call.
 
 
 
 If you are new to Splunk On-Call a great place to start is with the topic :ref:`user-role`. Once you a familiar with your user permissions, learn about the Alert admin role.
 
-As an alert admin, you are responsible for managing alert configuration, integrations, and their workflow. Your permissions are organization-wide. The proper management and upkeep of integrations are essential to your alert workflow. Alert Admins have permission to take the following actions: 
+A user can be elevated to a Team Admin for one or more teams. Likewise, there may be multiple Team Admins within a single team. As a Team Admin, you're responsible for a team.s on-call schedules, escalation policies, and the overall management of the users who are apart of your team. Team admins have permission to take the following actions: 
 
-Permissions specific to an Alert Admin:
+Permissions specific to a Team Admin:
 
-* Integration Configuration
-* Management of Routing Keys & Rules
-* Creation & Upkeep of Webhooks
-* Maintenance Mode
+* Invite users to your team
+* Edit the paging policies of team members
+* Create, edit, or delete schedulesCread or assign schedued overrides for team members
 
 
 Recommendations to be a Successful Team Admin
 ======================================================
 
-* Setup your profile and familiarize yourself with the Splunk On-Call web and mobile platforms: As a Team Admin, it’s your responsibility to ensure that you and the members of your team are familiar with the Splunk On-Call platform.
+* Setup your profile and familiarize yourself with the Splunk On-Call web and mobile platforms: As a Team Admin, it's your responsibility to ensure that you and the members of your team are familiar with the Splunk On-Call platform.
 
 * Learn your Internal Resources in Splunk On-Call: On the Users tab, you can see specific user roles and find out who your Global Admins or Alert Admins are within your organization. Note: You will need to know who your admins are to request configuration assistance outside of your permissions.
 
