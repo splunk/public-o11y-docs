@@ -191,7 +191,7 @@
      - Yes
      - Yes
      - Yes
-   * - ``vmem``
+   * - ``vmem (deprecated)``
      - Yes
      - Yes
      - Yes
