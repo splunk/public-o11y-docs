@@ -55,7 +55,8 @@ Step 1: Subscribe to the AWS Marketplace Splunk Add-on
 In your AWS Marketplace, ensure that:
 
 * You have sufficient permissions in your AWS account to enable the Splunk Add-on.
-* Follow the subscription process to add the Splunk Add-on to your AWS account.
+* Complete the subscription process on this [AWS Marketplace
+ Page](https://aws.amazon.com/marketplace/pp/prodview-sjdb4tw5uy47k) to add the Splunk Distribution of the OpenTelemetry Collector Add-on to your AWS account.
 
 .. _addon-aws-eks-two:
 
