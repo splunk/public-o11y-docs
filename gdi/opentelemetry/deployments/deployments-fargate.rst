@@ -9,7 +9,7 @@ Amazon ECS Fargate
 
 Deploy the Splunk Distribution of the OpenTelemetry Collector as a Daemon service in an Amazon ECS with AWS Fargate. Unless stated otherwise, the Collector is deployed as a sidecar (additional container) to ECS tasks. AWS Fargate is classified as a container, and Fargate metrics are classified as container metrics.
 
-For an example on how to use the Collector in an ECS Fargate environment to monitor a Java application, see :ref:`deployments-fargate-java.`
+For an example on how to use the Collector in an ECS Fargate environment to monitor a Java application, see :ref:`deployments-fargate-java`.
 
 Requirements
 ==========================
@@ -113,7 +113,7 @@ Alternatively, you can specify the custom configuration YAML directly using the 
 ``ecs_observer`` configuration
 --------------------------------
 
-Use extension Amazon Elastic Container Service Observer (ecs_observer) in your custom configuration to discover metrics targets in running tasks, filtered by service names, task definitions and container labels. ecs_observer is currently limited to Prometheus targets and requires the read-only permissions below. You can add the permissions to the task role by adding them to a customer-managed policy that is attached to the task role.
+Use the extension Amazon Elastic Container Service Observer (``ecs_observer``) in your custom configuration to discover metrics targets in running tasks, filtered by service names, task definitions and container labels. ``ecs_observer`` is currently limited to Prometheus targets and requires the read-only permissions below. You can add the permissions to the task role by adding them to a customer-managed policy that is attached to the task role.
 
 .. code-block:: yaml
 
@@ -162,22 +162,23 @@ The results are written to /etc/ecs_sd_targets.yaml. The ``prometheus`` receiver
          processors: [batch, resourcedetection]
          exporters: [signalfx]
 
-.. note:: 
+Effects of the ARN pattern 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     
-    Using this task ARN pattern causes the ``ecs_observer`` to discover targets in running revisions of task ``lorem-ipsum-task``. This means that when multiple revisions of task ``lorem-ipsum-task`` are running, the ``ecs_observer`` discovers targets outside the task in which the Collector sidecar container is running. In a sidecar deployment, the Collector and the monitored containers are in the same task, so metric targets must be within the task. This problem can be solved by using the complete task ARN as shown below. But, now the task ARN pattern must be updated to keep pace with task revisions.
+Using this task ARN pattern causes the ``ecs_observer`` to discover targets in running revisions of task ``lorem-ipsum-task``. This means that when multiple revisions of task ``lorem-ipsum-task`` are running, the ``ecs_observer`` discovers targets outside the task in which the Collector sidecar container is running. In a sidecar deployment, the Collector and the monitored containers are in the same task, so metric targets must be within the task. This problem can be solved by using the complete task ARN as shown below. But, now the task ARN pattern must be updated to keep pace with task revisions.
 
-   .. code-block:: none
+  .. code-block:: none
 
-    ...
-     - arn_pattern: "^arn:aws:ecs:us-west-2:906383545488:task-definition/lorem-ipsum-task:3$"
-    ... 
+  ...
+  - arn_pattern: "^arn:aws:ecs:us-west-2:906383545488:task-definition/lorem-ipsum-task:3$"
+  ... 
 
 .. _fargate-direct-config:
 
 Use a direct configuration
 ===================================
 
-The file system is not readily available in Fargate, which means that you should specify the configuration YAML directly using the ``SPLUNK_CONFIG_YAML`` environment variable.
+Since the file system is not readily available in Fargate, you need to specify the configuration YAML directly using the ``SPLUNK_CONFIG_YAML`` environment variable.
 
 For example, you can store the custom configuration YAML in a parameter called ``splunk-otel-collector-config`` in AWS Systems Manager Parameter Store. In your Collector container definition, assign the parameter to the ``SPLUNK_CONFIG_YAML`` environment variable  using ``valueFrom``. In the following example, ``MY_SPLUNK_ACCESS_TOKEN`` and ``MY_SPLUNK_REALM`` are placeholder values and ``0.33.0`` is the image tag.
 
@@ -205,9 +206,7 @@ For example, you can store the custom configuration YAML in a parameter called `
   "name": "splunk_otel_collector"
    }
 
-.. note:: 
-  
-  You should add ``AmazonSSMReadOnlyAccess`` policy to the task role for the task to have read access to the Parameter Store.
+.. note:: If you want a task to have read access to the Parameter Store, add the ``AmazonSSMReadOnlyAccess`` policy to the task role.
 
 Standalone task
 --------------------------
