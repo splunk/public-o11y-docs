@@ -116,7 +116,6 @@ The following diagram shows the default metrics pipeline:
          metrics/hostmetrics:::receiver
          metrics/otlp:::receiver
          metrics/signalfx/in:::receiver
-         metrics/smartagent/signalfx-forwarder:::receiver
          metrics/internal/prometheus/internal:::receiver
       end
 
@@ -137,17 +136,13 @@ The following diagram shows the default metrics pipeline:
       metrics/resourcedetection --> metrics/signalfx/out
       metrics/otlp --> metrics/memory_limiter
       metrics/signalfx/in --> metrics/memory_limiter
-      metrics/smartagent/signalfx-forwarder --> metrics/memory_limiter
       metrics/internal/prometheus/internal --> metrics/internal/memory_limiter
       metrics/internal/resourcedetection --> metrics/internal/signalfx/out
-
-
 
 Learn more about these receivers:
 
 * :ref:`host-metrics-receiver`
 * :ref:`signalfx-receiver`
-* :ref:`signalfx-forwarder`
 * :ref:`prometheus-receiver`
 
 Learn more about these processors:
@@ -183,7 +178,6 @@ The following diagram shows the default traces pipeline:
          direction LR
          traces/jaeger:::receiver
          traces/otlp:::receiver
-         traces/smartagent/signalfx-forwarder:::receiver
          traces/zipkin:::receiver
       end
 
@@ -201,7 +195,6 @@ The following diagram shows the default traces pipeline:
       %% Connections beyond categories are added later
       traces/jaeger --> traces/memory_limiter
       traces/otlp --> traces/memory_limiter
-      traces/smartagent/signalfx-forwarder --> traces/memory_limiter
       traces/zipkin --> traces/memory_limiter
       traces/resourcedetection --> traces/sapm
       traces/resourcedetection --> traces/signalfx/out
@@ -210,7 +203,6 @@ The following diagram shows the default traces pipeline:
 Learn more about these receivers:
 
 * :ref:`jaeger-grpc`
-* :ref:`signalfx-forwarder`
 
 Learn more about these processors:
 
