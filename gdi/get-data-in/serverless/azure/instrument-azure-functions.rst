@@ -124,13 +124,11 @@ Add startup initialization in the Program.cs file:
       // Creates root spans for function executions
       .AddSource("Microsoft.Azure.Functions.Worker")
       .SetSampler(new AlwaysOnSampler())
-      // Add resource attributes to all spans
-      .SetResourceBuilder(
-         ResourceBuilder.CreateDefault()
-               .AddService(serviceName: serviceName, serviceVersion: "1.0.0")
-               // See https://github.com/open-telemetry/opentelemetry-dotnet-contrib/tree/main/src/OpenTelemetry.ResourceDetectors.Azure
-               // for other types of Azure detectors
-               .AddDetector(new AppServiceResourceDetector()))
+      .ConfigureResource(configure => configure
+         .AddService(serviceName: serviceName, serviceVersion: "1.0.0")
+         // See https://github.com/open-telemetry/opentelemetry-dotnet-contrib/tree/main/src/OpenTelemetry.ResourceDetectors.Azure
+         // for other types of Azure detectors
+         .AddDetector(new AppServiceResourceDetector()))
       .AddOtlpExporter(opts =>
       {
          opts.Endpoint = new Uri($"https://ingest.{realm}.signalfx.com/v2/trace/otlp");
