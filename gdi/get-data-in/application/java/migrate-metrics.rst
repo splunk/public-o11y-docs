@@ -7,9 +7,9 @@ Migration guide for OpenTelemetry Java 2.0 metrics
 .. meta::
   :description: OpenTelemetry Java Instrumentation 2.x contains a set of breaking changes, introduced as part of recent OpenTelemetry HTTP semantic convention updates.
 
-penTelemetry Java Instrumentation 2.x contains a set of breaking changes, introduced as part of recent OpenTelemetry HTTP semantic convention updates. Changes to upstream OpenTelemetry Java instrumentation will impact Splunk OpenTelemetry Java distribution.
+OpenTelemetry Java Instrumentation 2.x contains a set of breaking changes, introduced as part of recent OpenTelemetry HTTP semantic convention updates. Versions 2.0 and higher of the Splunk Distribution of OpenTelemetry Java are fully compatible with these changes.
 
-If you're using the upstream OpenTelemetry 1.x instrumentation, wait before upgrading to version 2.x, as it might cause built-in Java metric dashboards and features that rely on metricized attributes, such MTS and TMS, to not work as expected.
+Follow the steps in this guide to migrate to 2.0 metrics and convert your IMM, APM, and RUM custom reporting to the new metrics format.
 
 .. note:: AlwaysOn Profiling metrics are not impacted by this change.
 
