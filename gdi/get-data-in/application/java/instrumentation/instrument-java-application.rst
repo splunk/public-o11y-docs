@@ -137,7 +137,9 @@ See :ref:`get-data-in-profiling` for more information. For more settings, see :r
 Activate metrics collection
 ---------------------------------------
 
-To activate automatic metric collection, activate the metrics feature using a system property argument. You can also use the ``SPLUNK_METRICS_ENABLED`` environment variable.
+Starting from version 2.0, the Java agent collects metrics by default when instrumenting an application or service automatically. To migrate metric collection from version 1.x to 2.x, see :ref:`java-metrics-migration-guide`.
+
+To make sure metric collection is turned on, activate the metrics feature using a system property argument. You can also use the ``SPLUNK_METRICS_ENABLED`` environment variable.
 
 .. code-block:: bash
    :emphasize-lines: 2
