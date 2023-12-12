@@ -22,7 +22,7 @@ interested in setting up SSO, please contact :ref:`Splunk On-Call Support <spoc-
 
 
 
-Configure Single Sign On between your Identity Provider (IDP) and  Splunk On-Call. Our standard SSO setup uses SAML 2.0 protocol. As long as your IDP can use SAML 2.0 protocol, it can integrate with Splunk On-Call. The exact steps differ depending on which IDP you use, but the process typically involves exporting a .XML metadata file and sending it to our Support team. Once you have sent the .xml file, a Splunk On-Call support specialist will
+Configure Single Sign On (SSO) between your Identity Provider (IDP) and  Splunk On-Call. Our standard SSO setup uses SAML 2.0 protocol. As long as your IDP can use SAML 2.0 protocol, it can integrate with Splunk On-Call. The exact steps differ depending on which IDP you use, but the process typically involves exporting a .XML metadata file and sending it to our Support team. Once you have sent the .xml file, a Splunk On-Call support specialist will
 complete the setup on the back-end and respond with confirmation.
 
 If your IDP does not have SAML capability, please contact Splunk On-Call Support to explore what alternative options may be available. For details on how to contact Splunk On-Call Support, see :ref:`spoc-support`.
@@ -37,145 +37,21 @@ Instructions to complete the SSO configuration with Splunk On-Call and your IDP 
 
 - :ref:`sso-okta-spoc`
 - :ref:`sso-google-spoc`
-- 
-
-.. _sso-okta-spoc::
-
-Okta
-==========
-
-#. From the Okta user homepage, select :guilabel:`Admin` to access the Okta Admin dashboard.
-
-
-.. image:: /_images/spoc/sso-okta1.png
-    :width: 100%
-    :alt: Splunk On-Call Okta SSO setup step 1
-
-
-#. From the Okta Admin Dashboard, Select :guilabel:`Applications`, then select :guilabel:`Applications` from
-the drop-down.
-
-.. image:: /_images/spoc/sso-okta2.png
-    :width: 100%
-    :alt: Splunk On-Call Okta SSO setup step 2
+- :ref:`sso-onelogin-spoc`
 
 
 
-#. Within Applications, select :guilabel:`Add Application`.
-
-.. image:: /_images/spoc/sso-okta3.png
-    :width: 100%
-    :alt: Splunk On-Call Okta SSO setup step 3
-
-#. Begin entering Splunk On-Call in the search bar. When Splunk On-Call appears, select :guilabel:`Add`.
-
-.. image:: /_images/spoc/sso-okta4.png
-    :width: 100%
-    :alt: Splunk On-Call Okta SSO setup step 4
-
-#. The Application label, or name, should auto-populate with the name Splunk On-Call, but you can re-name this label. The Browser plugin auto-submit should be auto-populated as well. Verify that this setting is selected and select :guilabel:`Next`.
-
-.. image:: /_images/spoc/sso-okta5.png
-    :width: 100%
-    :alt: Splunk On-Call Okta SSO setup step 5
-
-#. On the :guilabel:`Sign-On Options` tab, in the :guilabel:`Default Relay State` field enter the following URL:
-
-   -  Default Relay State: https://portal.victorops.com/auth/sso/<your-org-slug>
-
-.. image:: /_images/spoc/sso-okta6.png
-    :width: 100%
-    :alt: Splunk On-Call Okta SSO setup step 6. Org slug example.
-
-#. Once the URL has been added, select :guilabel:`Identity Provider metadata` to download the metadata file. Splunk On-Call requires this file to complete the SSO configuration. Email this file to Splunk On-Call Support.
-#. After downloading the file, select :guilabel:`Next`.
-
-#. Select the users that should have access to add the Splunk On-Call app to their Okta homepage and log in to Splunk On-Call through SSO. Once all of the users have been listed, select :guilabel:`Next`.
-
-.. image:: /_images/spoc/sso-okta7.png
-    :width: 100%
-    :alt: Add users who should have access to the Splunk On-Call app.
-
-#. Select :guilabel:`Done`.
 
 
-Once the users have added the app they will be directed to a one-time linking process to connect their Splunk On-Call credentials to Okta. To conduct the one-time linking process outside of the Okta Homepage, see :ref:`sso-linking`.
 
+.. _sso-onelogin-spoc::
 
-.. _sso-google-spoc::
+OneLogin
+-------------
 
-Google Apps
-================
+If you are configuring SSO for OneLogin, the Default relay state is:
 
-To configure SSO for Splunk On-Call using Google Apps:
-
-#. Access the Admin portal for Google Apps and navigate to :guilabel:`Apps` then :guilabel:`SAML Apps`.
-
-.. figure:: images/SSO2.png
-   :alt: VictorOps SSO Google Apps Setup 1
-
-   VictorOps SSO Google Apps Setup 1
-   .. image:: /_images/spoc/sso-okta7.png
-       :width: 100%
-       :alt: Add users 
-
--  Select “Set up my own custom app”:
-
-.. figure:: images/SSO3.png
-   :alt: VictorOps SSO Google Apps Setup 2
-
-   VictorOps SSO Google Apps Setup 2
-
--  From the following screen, select *Option 2* to download IDP metadata
-   in XML format.  Attach and send the downloaded .xml file to `Splunk
-   On-Call
-   Support <https://help.victorops.com/knowledge-base/important-splunk-on-call-support-changes-coming-nov-11th/>`__.
-
-.. figure:: images/SSO4.png
-   :alt: VictorOps SSO Google Apps Setup 4
-
-   VictorOps SSO Google Apps Setup 4
-
--  Save the logo image file found
-   `HERE <https://help.victorops.com/wp-content/uploads/2016/11/256x256-VictorOps-Oakleaf.png>`__.
--  Next, give the application a name (Splunk On-Call) and upload the
-   logo file.
-
-.. figure:: images/SSO5.png
-   :alt: VictorOps SSO Google Apps Setup 5
-
-   VictorOps SSO Google Apps Setup 5
-
--  On the “Service Provider Details” step place the following in the
-   :guilabel:`ACS URL` line:
-
-   -  https://sso.victorops.com:443/sp/ACS.saml2
-
--  For the Entity ID place the following:
-
-   -  victorops.com
-
--  For the Start URL place the following with the correct Organization
-   Slug at the end:
-
-   -  https://portal.victorops.com/auth/sso/**org-slug-here**
-
-**VictorOps SSO Google Apps Setup 6**
-
--  Finally, skip the attribute mapping step and click FINISH
-
-.. figure:: images/SSO7.png
-   :alt: VictorOps SSO Google Apps Setup 7
-
-   VictorOps SSO Google Apps Setup 7
-
---------------
-
-**OneLogin**
-~~~~~~~~~~~~
-
--  Default relay state:
-   https://portal.victorops.com/auth/sso/**org-slug-here**
+   https://portal.victorops.com/auth/sso/<<org-slug-here>>
 
 --------------
 
