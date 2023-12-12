@@ -420,3 +420,12 @@ The Splunk Distribution of OpenTelemetry Java captures data about the applicatio
     - Version of the application server.
 
 For a list of supported application servers, see the OpenTelemetry documentation at https://github.com/open-telemetry/opentelemetry-java-instrumentation/blob/main/docs/supported-libraries.md#application-servers.
+
+New metric names
+======================================
+
+.. include:: /_includes/gdi/java-20-metrics-equivalences.rst
+
+For more information, see:
+
+* :new-page:`OpenTelemetry semantic convention <https://opentelemetry.io/docs/specs/semconv/>`
