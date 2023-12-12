@@ -25,6 +25,17 @@ The Splunk Distribution of the OTel Collector Add-on for AWS EKS:
 * Provides simplified installation, configuration and management of Amazon EKS clusters. 
 * Includes the latest security patches, bug fixes, and are validated by AWS to work with Amazon EKS. 
 
+Limitations
+=============================================================================================
+
+While the Splunk Distribution of the OTel Collector Add-on for AWS EKS offers numerous advantages, it is important to be aware of certain limitations:
+
+* Lack of Support for Helm Hooks and Helm Subcharts:
+  * The EKS add-on integration does not support Helm Hooks and Helm subcharts. Consequently, certain features that rely on these capabilities are unavailable:
+    * Collector Secret Validation: This feature is not available as it utilizes a Helm hook.
+    * Operator-based Auto-Instrumentation: This is not supported due to its dependency on subcharts for deploying necessary components.
+* Single Instance Deployment:
+  * Currently, only one instance of the Splunk Distribution of the OTel Collector can be deployed per EKS cluster. The EKS add-ons do not yet support deploying multiple instances of add-ons. This limitation should be considered when planning for scale and redundancy.
 Install the AWS EKS Add-on
 =============================================================================================
 
