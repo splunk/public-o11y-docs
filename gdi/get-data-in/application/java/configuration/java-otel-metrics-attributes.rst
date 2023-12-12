@@ -4,12 +4,12 @@
 Metrics and attributes collected by the Splunk OTel Java agent
 ***************************************************************
 
-.. meta:: 
+.. meta::
   :description: The Splunk Distribution of OpenTelemetry Java collects the following application metrics data and WebEngine attributes. You can also collect custom metrics through Micrometer.
 
 The agent of the Splunk Distribution of OpenTelemetry Java collects the following application metrics data and attributes in addition to all that the upstream OpenTelemetry agent collects. To learn about the different metric types, see :ref:`metric-types`.
 
-.. caution:: This feature is experimental, and exported metric data and configuration properties might change. See more in :new-page:`GitHub <https://github.com/signalfx/splunk-otel-java/blob/main/docs/metrics.md#metrics-and-attributes/>`.
+.. caution:: OpenTelemetry Java Instrumentation 2.x contains a set of breaking changes, introduced as part of recent OpenTelemetry HTTP semantic convention updates. To migrate, see :ref:`java-metrics-migration-guide`.
 
 .. _enable-otel-metrics:
 
@@ -32,7 +32,7 @@ Default metric dimensions
 
 The following dimensions are automatically added to all metrics exported by the agent:
 
-.. list-table:: 
+.. list-table::
   :header-rows: 1
   :widths: 40 60
   :width: 100%
@@ -59,7 +59,7 @@ Supported libraries
 
 The agent collects the following metrics through the following libraries:
 
-.. list-table:: 
+.. list-table::
   :header-rows: 1
   :widths: 45 20 50
   :width: 100%
@@ -112,7 +112,7 @@ ClassLoader metrics
 
 The agent collects the following ClassLoader metrics:
 
-.. list-table:: 
+.. list-table::
   :header-rows: 1
   :width: 100%
   :widths: 40 10 50
@@ -134,7 +134,7 @@ Garbage collection metrics
 
 The agent collects the following garbage collection (GC) metrics:
 
-.. list-table:: 
+.. list-table::
   :header-rows: 1
   :width: 100%
   :widths: 40 10 50
@@ -168,7 +168,7 @@ Heap pressure metrics
 
 The agent collects the following heap pressure metrics:
 
-.. list-table:: 
+.. list-table::
   :header-rows: 1
   :widths: 40 10 50
   :width: 100%
@@ -190,7 +190,7 @@ Memory metrics
 
 The agent collects the following memory metrics:
 
-.. list-table:: 
+.. list-table::
   :header-rows: 1
   :widths: 40 10 50
   :width: 100%
@@ -201,14 +201,14 @@ The agent collects the following memory metrics:
   * - ``process.runtime.jvm.memory.allocated``
     - Counter
     - Total number of bytes allocated by JVM threads since the previous data point was emitted. 
-        - Use the rate per second rollup. 
+        - Use the rate per second rollup.
         - Requires to activate memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag.
   * - ``process.runtime.jvm.memory.reclaimed``
     - Counter
-    - Total number of bytes reclaimed by the GCP since the previous data point was emitted. Notes: 
-        - This metric might be inaccurate for concurrent garbage collectors such as Shenandoah or ZGC. 
+    - Total number of bytes reclaimed by the GCP since the previous data point was emitted. Notes:
+        - This metric might be inaccurate for concurrent garbage collectors such as Shenandoah or ZGC.
         - Use the rate per second rollup.
-        - Requires to activate memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag. 
+        - Requires to activate memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag.
   * - ``runtime.jvm.buffer.count``
     - Gauge
     - An estimate of the number of buffers in the pool.
@@ -230,7 +230,7 @@ The agent collects the following memory metrics:
 
 All memory pool metrics share the following tags:
 
-.. list-table:: 
+.. list-table::
   :header-rows: 1
   :width: 100%
   :widths: 30 70
@@ -249,7 +249,7 @@ Thread metrics
 
 The agent collects the following thread metrics:
 
-.. list-table:: 
+.. list-table::
   :header-rows: 1
   :widths: 40 10 50
   :width: 100%
@@ -288,7 +288,7 @@ The Splunk Distribution of OpenTelemetry Java instruments several Java Database 
 
 Each of the connection pools reports a subset of the following metrics:
 
-.. list-table:: 
+.. list-table::
   :header-rows: 1
   :widths: 40 10 50
   :width: 100%
@@ -332,7 +332,7 @@ Each of the connection pools reports a subset of the following metrics:
 
 All connection pool metrics share the following tags:
 
-.. list-table:: 
+.. list-table::
   :header-rows: 1
   :widths: 40 60
   :width: 100%
@@ -357,7 +357,7 @@ The Splunk Distribution of OpenTelemetry Java instruments the following thread p
 
 Each of the supported connection pools reports a subset of the following metrics:
 
-.. list-table:: 
+.. list-table::
   :header-rows: 1
   :widths: 40 10 50
   :width: 100%
@@ -389,7 +389,7 @@ Each of the supported connection pools reports a subset of the following metrics
 
 All thread pool metrics have the following tags:
 
-.. list-table:: 
+.. list-table::
   :header-rows: 1
   :widths: 40 60
   :width: 100%
@@ -408,7 +408,7 @@ WebEngine attributes
 
 The Splunk Distribution of OpenTelemetry Java captures data about the application server and adds the following attributes to `SERVER` spans:
 
-.. list-table:: 
+.. list-table::
   :header-rows: 1
   :width: 100%
 

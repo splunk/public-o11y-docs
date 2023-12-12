@@ -14,6 +14,7 @@ Instrument Java applications for Splunk Observability Cloud
    Instrument your Java application <instrumentation/instrument-java-application>
    Instructions for app servers <instrumentation/java-servers-instructions>
    Metrics and attributes <configuration/java-otel-metrics-attributes>
+   Migrate to metrics 2.0 <migrate-metrics>
    Connect trace data with logs <instrumentation/connect-traces-logs>
    Configure the Java agent <configuration/advanced-java-otel-configuration>
    Manual instrumentation <instrumentation/java-manual-instrumentation>
