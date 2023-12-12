@@ -9,11 +9,17 @@ Get started as an Alert admin
 
 
 
-If you are new to Splunk On-Call a great place to start is with the topic :ref:`user-role`. Once you a familiar with your user permissions, learn about the Alert admin role.
+If you are new to Splunk On-Call a great place to start is with the topic :ref:`user-role`. Once you a familiar with your user permissions, learn about the Alert admin role. The role of Alert Admin provides separate permissions required to manage people and schedules from those necessary to manage technical and high-risk behavior into two roles. The full list of Splunk On-Call user permissions includes:
 
-As an alert admin, you are responsible for managing alert configuration, integrations, and their workflow. Your permissions are organization-wide. The proper management and upkeep of integrations are essential to your alert workflow. Alert Admins have permission to take the following actions: 
+-  Global Admin: Retains all permissions
+-  Team Admin: Manages people and scheduling
+-  Alert Admin: Manages the technical aspects of creating and optimizing alerts
+-  User: Alert response
 
-Permissions specific to an Alert Admin:
+
+As an alert admin, you are responsible for managing alert configuration, integrations, and their workflow. Your permissions are organization-wide. The proper management and upkeep of integrations are essential to your alert workflow.
+
+Alert Admins have permission to take the following actions: 
 
 * Integration Configuration
 * Management of Routing Keys & Rules
