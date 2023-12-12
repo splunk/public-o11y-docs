@@ -14,6 +14,7 @@ Collector deployment tools and options
 
     deployments-ecs-ec2.rst
     deployments-fargate.rst
+    deployments-fargate-java.rst
     deployments-linux-ansible.rst
     deployments-windows-ansible.rst
     deployments-chef.rst
@@ -26,7 +27,7 @@ Collector deployment tools and options
 Use the following deployment and configuration management tools to automate the installation of Collector:
 
 * :ref:`deployments-ecs-ec2`
-* :ref:`deployments-fargate`
+* :ref:`deployments-fargate` and :ref:`deployments-fargate-java`
 * :ref:`deployment-linux-ansible`
 * :ref:`deployment-windows-ansible`
 * :ref:`deployments-chef`

@@ -1,23 +1,27 @@
 .. _deployments-fargate:
 
 ****************************
-Amazon Fargate 
+Amazon ECS Fargate 
 ****************************
 
 .. meta::
       :description: Deploy the Splunk Observability Cloud OpenTelemetry Collector as a Daemon service in an Amazon ECS with AWS Fargate.
 
-Knowledge of AWS Fargate (Fargate) is assumed. See the :new-page:`user guide <https://docs.aws.amazon.com/AmazonECS/latest/userguide/what-is-fargate.html>` for more information. 
+Deploy the Splunk Distribution of the OpenTelemetry Collector as a Daemon service in an Amazon ECS with AWS Fargate. Unless stated otherwise, the Collector is deployed as a sidecar (additional container) to ECS tasks. AWS Fargate is classified as a container, and Fargate metrics are classified as container metrics.
 
-Unless stated otherwise, the Collector is deployed as a sidecar (additional container) to ECS tasks. AWS Fargate is classified as a container, and Fargate metrics are classified as container metrics.
+For an example on how to use the Collector in an ECS Fargate environment to monitor a Java application, see :ref:`deployments-fargate-java.`
 
-This deployment requires Collector release v0.33.0 or newer, which corresponds to image tag ``0.33.0`` and newer. See the :new-page:`image repository <https://quay.io/repository/signalfx/splunk-otel-collector?tab=tags>` to download the latest image.
-
-
-Use the guided setup
+Requirements
 ==========================
 
-Use the guided setup to deploy the Collector as a sidecar to ECS tasks.  Choose one of the following Collector configuration options:
+Before you proceed, you require previous knowledge of AWS Fargate (Fargate). See the official :new-page:`AWS Fargate user guide <https://docs.aws.amazon.com/AmazonECS/latest/userguide/what-is-fargate.html>` for more information. 
+
+This deployment requires Collector release v0.33.0 or higher, which corresponds to image tag ``0.33.0`` or above. See the :new-page:`image repository <https://quay.io/repository/signalfx/splunk-otel-collector?tab=tags>` to download the latest image.
+
+Use the guided set-up
+==========================
+
+Use the guided setup to deploy the Collector as a sidecar to ECS tasks. Choose one of the following Collector configuration options:
 
 - **Default:** The ``/etc/otel/collector/fargate_config.yaml`` file in the Collector image is used for the Collector configuration.
 - **File:** Specify the file to use for the Collector configuration. See :ref:`ecs-observer-config-fargate`.
@@ -31,13 +35,14 @@ Open the :new-page:`Amazon Fargate guided setup <https://login.signalfx.com/#/gd
 #. On the Integrate Your Data page, select the tile for :guilabel:`Amazon Fargate`.
 #. Follow the steps provided in the guided setup.
 
-Getting started
-=================================
-Copy the default Collector container definition shown in the example.Replace ``MY_SPLUNK_ACCESS_TOKEN`` and ``MY_SPLUNK_REALM`` with valid values. Update the image tag to the newest version, and then add the configuration to the ``containerDefinitions`` section of your task definition.
+Get started
+--------------------------------
+
+Copy the default Collector container definition shown in the example. Replace ``MY_SPLUNK_ACCESS_TOKEN`` and ``MY_SPLUNK_REALM`` with valid values. Update the image tag to the newest version, and then add the configuration to the ``containerDefinitions`` section of your task definition.
 
 .. code-block:: none
 
-    {
+  {
   "environment": [
     {
       "name": "SPLUNK_ACCESS_TOKEN",
@@ -59,7 +64,7 @@ Copy the default Collector container definition shown in the example.Replace ``M
   "image": "quay.io/signalfx/splunk-otel-collector:0.33.0",
   "essential": true,
   "name": "splunk_otel_collector"
-   }
+  }
 
 In this example container definition, the Collector is configured to use the default configuration file ``/etc/otel/collector/fargate_config.yaml``. The Collector image Dockerfile is available at :new-page:`Dockerfile <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/Dockerfile>` and the contents of the default configuration file can be seen at :new-page:`Fargate configuration <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/fargate_config.yaml>`. Note that the ``smartagent/ecs-metadata`` receiver is activated by default.
 
@@ -77,13 +82,14 @@ Assign a stringified array of metrics you want excluded to environment variable 
 
 Use a custom configuration
 ==============================
+
 The following example shows an excerpt of the container definition for the Collector configured to use custom configuration file ``/path/to/custom/config/file``. 
 
 ``/path/to/custom/config/file`` is a placeholder value for the actual custom configuration file path and ``0.33.0`` is the latest image tag at present. The custom configuration file should be present in a volume attached to the task.
 
 .. code-block:: none
 
-   {
+  {
   "environment": [
     {
       "name": "SPLUNK_CONFIG",
@@ -93,9 +99,9 @@ The following example shows an excerpt of the container definition for the Colle
   "image": "quay.io/signalfx/splunk-otel-collector:0.33.0",
   "essential": true,
   "name": "splunk_otel_collector"
-   }
+  }
 
-The custom Collector container definition essentially:
+The custom Collector container definition:
 
 * Specifies the Collector image.
 * Sets environment variable ``SPLUNK_CONFIG`` with the custom configuration file path.
@@ -106,20 +112,19 @@ Alternatively, you can specify the custom configuration YAML directly using the 
 
 ``ecs_observer`` configuration
 --------------------------------
+
 Use extension Amazon Elastic Container Service Observer (ecs_observer) in your custom configuration to discover metrics targets in running tasks, filtered by service names, task definitions and container labels. ecs_observer is currently limited to Prometheus targets and requires the read-only permissions below. You can add the permissions to the task role by adding them to a customer-managed policy that is attached to the task role.
 
 .. code-block:: yaml
 
-
-   ecs:List*
-   ecs:Describe*
+  ecs:List*
+  ecs:Describe*
 
 The following custom configuration examples shows the ``ecs_observer`` configured to find Prometheus targets in the ``lorem-ipsum-cluster`` cluster and ``us-west-2`` region, where the task ARN pattern is ``^arn:aws:ecs:us-west-2:906383545488:task-definition/lorem-ipsum-task:[0-9]+$``. 
 
 The results are written to /etc/ecs_sd_targets.yaml. The ``prometheus`` receiver is configured to read targets from the results file. The values for ``access_token`` and ``realm`` are read from the ``SPLUNK_ACCESS_TOKEN`` and ``SPLUNK_REALM`` environment variables , which must be specified in your container definition.
 
 .. code-block:: yaml
-
 
    extensions:
      ecs_observer:
@@ -206,12 +211,14 @@ For example, you can store the custom configuration YAML in a parameter called `
 
 Standalone task
 --------------------------
+
 The ``ecs_observer`` extension is capable of scanning for targets in the entire cluster. Scanning lets you collect telemetry data by deploying the Collector in a task that is separate from tasks containing monitored applications. This is in contrast to the sidecar deployment where the Collector container, and the monitored application containers are in the same task. 
 
 Do not configure the ECS ``resourcedetection`` processor for the standalone task, as it would detect resources in the standalone Collector task itself as opposed to resources in the tasks containing the monitored applications.
 
 AWS Graviton2
 -------------------------
+
 AWS Graviton2 is supported with the default Fargate configuration. The Collector Docker image can run on both AMD64 and ARM64 architectures.
 
 
