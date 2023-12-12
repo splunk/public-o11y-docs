@@ -181,8 +181,8 @@ Define a startup function and decorate the assembly with it. The startup functio
             ArgumentNullException.ThrowIfNull(realm, "SPLUNK_REALM");
 
             var tp = Sdk.CreateTracerProviderBuilder()
-                // Use Add[instrumentation-name]Instrumentation to instrument missing services
-                // Use Nuget to find different instrumentation libraries
+               // Use Add[instrumentation-name]Instrumentation to instrument missing services
+               // Use Nuget to find different instrumentation libraries
                .AddHttpClientInstrumentation(opts => 
                   // This filter prevents background (parent-less) http client activity
                   opts.Filter = req => Activity.Current?.Parent != null)
@@ -195,13 +195,13 @@ Define a startup function and decorate the assembly with it. The startup functio
                   ResourceBuilder.CreateDefault()
                   .AddService(serviceName: serviceName, serviceVersion: "1.0.0")
                   .AddAttributes(new Dictionary<string, object>() {
-                        { "faas.instance", Environment.GetEnvironmentVariable("WEBSITE_INSTANCE_ID") }
+                     { "faas.instance", Environment.GetEnvironmentVariable("WEBSITE_INSTANCE_ID") }
                   }))
                .AddOtlpExporter(opts =>
                {
-                   opts.Endpoint = new Uri($"https://ingest.{realm}.signalfx.com/v2/trace/otlp");
-                   opts.Protocol = OtlpExportProtocol.HttpProtobuf;
-                   opts.Headers = $"X-SF-TOKEN={accessToken}";
+                  opts.Endpoint = new Uri($"https://ingest.{realm}.signalfx.com/v2/trace/otlp");
+                  opts.Protocol = OtlpExportProtocol.HttpProtobuf;
+                  opts.Headers = $"X-SF-TOKEN={accessToken}";
                })
                .Build();
 
