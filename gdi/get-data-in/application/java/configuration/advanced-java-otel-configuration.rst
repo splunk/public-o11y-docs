@@ -216,7 +216,9 @@ The following settings control the AlwaysOn Profiling feature for the Java agent
         * The default value is ``false``. 
         * Requires ``splunk.profiler.enabled`` to be set to ``true``.  
         * Activating memory profiling sets the value of ``splunk.metrics.enabled`` to ``true``.
-       .. note:: OpenJDK versions 15.0 to 17.0.8, are not supported for memory profiling. See :new-page:`https://bugs.openjdk.org/browse/JDK-8309862` in the JDK bug system for more information.  
+       
+       .. note:: OpenJDK versions 15.0 to 17.0.8, are not supported for memory profiling. See :new-page:`https://bugs.openjdk.org/browse/JDK-8309862` in the JDK bug system for more information.
+          
        System property: ``splunk.profiler.memory.enabled``
    * - ``SPLUNK_PROFILER_MEMORY_EVENT_RATE``
      - Rate limit for memory profiling data, expressed as stack traces per unit of time. You can define duration in the form ``<number>/<unit>``, where the unit can be ``s`` or ``m``. The default value is ``150/s``, or 150 stack traces per second. Consider increasing this value when collecting memory profiling data from complex, multithreaded workloads, like application servers. |br| |br| System property: ``splunk.profiler.memory.event.rate``
