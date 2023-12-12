@@ -112,11 +112,13 @@ If you need to add custom attributes to spans or want to manually generate spans
 .. _enable_profiling_java:
 
 Activate AlwaysOn Profiling
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------
 
 To activate AlwaysOn Profiling, use the following system property argument. You can also use the ``SPLUNK_PROFILER_ENABLED`` environment variable. For more information, see :ref:`profiling-intro`.
 
 To activate memory profiling, set the ``splunk.profiler.memory.enabled`` system property or the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after activating AlwaysOn Profiling.
+
+.. note:: OpenJDK versions 15.0 to 17.0.8 are not supported for memory profiling. See :new-page:`https://bugs.openjdk.org/browse/JDK-8309862` in the JDK bug system for more information. 
 
 The following example shows how to activate the profiler using the system property:
 
@@ -135,7 +137,7 @@ See :ref:`get-data-in-profiling` for more information. For more settings, see :r
 .. _enable_automatic_metric_collection:
 
 Activate metrics collection
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------
 
 To activate automatic metric collection, activate the metrics feature using a system property argument. You can also use the ``SPLUNK_METRICS_ENABLED`` environment variable.
 
@@ -153,7 +155,7 @@ If your metrics endpoint is different than the default value, set the ``SPLUNK_M
 .. _ignore_endpoints_java:
 
 Ignore specific endpoints
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------------
 
 By default, the Java agent collects traces from all the endpoints of your application. To ignore specific endpoints, use the ``rules`` sampler and define ``drop`` rules.
 

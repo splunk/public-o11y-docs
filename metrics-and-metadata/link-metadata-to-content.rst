@@ -61,7 +61,7 @@ Prerequisite
 
 You must be an administrator to create global data links.
 
-For information about granting administrative access, see :ref:`manage_admin-access`.
+For information about granting administrative access, see :ref:`admin-manage-users`.
 
 
 .. _create-global-data-link:

@@ -83,7 +83,7 @@
 
   * - :strong:`View org subscription usage`
     - Yes
-    - Yes
+    - No
 
 
   * - :strong:`Set up Log Observer Connect connection to Splunk platform`

@@ -78,6 +78,8 @@ AlwaysOn Profiling requires APM tracing data to correlate stack traces to your a
      - :strong:`Documentation`
    * - Java
      - Splunk Distribution of OpenTelemetry Java version 1.14.2 or higher
+
+       OpenJDK versions 15.0 to 17.0.8 are not supported for memory profiling. See :new-page:`https://bugs.openjdk.org/browse/JDK-8309862` in the JDK bug tracker for more information. 
      - * :ref:`instrument-java-applications`
        * :ref:`profiling-configuration-java`
    * - Node.js
@@ -86,6 +88,10 @@ AlwaysOn Profiling requires APM tracing data to correlate stack traces to your a
    * - .NET
      - SignalFx Instrumentation for .NET version 1.0.0 or higher
      - :ref:`instrument-dotnet-applications`
+   * - Python (in beta)
+     - Splunk Distribution of OpenTelemetry Python version 1.15 or higher
+     - * :ref:`instrument-python-applications`
+       * :ref:`profiling-configuration-python`
 
 .. note:: See :ref:`apm-data-retention` for information on profiling data retention.
 
@@ -198,6 +204,52 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
       - Check that the ``SIGNALFX_PROFILER_LOGS_ENDPOINT`` environment variable points to \http://localhost:4318/v1/logs or to the Splunk Distribution of OpenTelemetry Collector.
 
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-dotnet`.
+
+   .. group-tab:: Python
+
+      .. note::
+         AlwaysOn Profiling for Python is in beta development. This feature is provided by Splunk to you "as is" without any warranties, maintenance and support, or service-level commitments. Use of this feature is subject to the :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`.
+
+      :strong:`Requirements`
+
+      AlwaysOn Profiling requires Python 3.7.2 or higher.
+
+      :strong:`Instrumentation`
+
+      Activate the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true`` or call the ``start_profiling`` function in your application code. 
+
+      Check the OTLP endpoint in the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable:
+
+         - For non-Kubernetes environments, make sure that the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to \http://localhost:4317.
+         - For Kubernetes deployments, the OTLP endpoint has to point to \http://$(K8S_NODE_IP):4317 where the ``K8S_NODE_IP`` is fetched from the Kubernetes downstream API by setting the environment configuration on the Kubernetes pod running the application. For example:
+
+            .. code-block:: yaml
+
+               env:  
+               - name: K8S_NODE_IP
+                 valueFrom:
+                   fieldRef:
+                     apiVersion: v1
+                     fieldPath: status.hostIP
+      
+      The following example shows how to activate the profiler from your application's code:
+
+      .. code-block:: python
+
+         from splunk_otel.profiling import start_profiling
+
+         # Activates CPU profiling
+         # All arguments are optional
+         start_profiling(
+            service_name='my-python-service', 
+            resource_attributes={
+               'service.version': '3.1'
+               'deployment.environment': 'production', 
+            }
+            endpoint='http://localhost:4317'
+         ) 
+      
+      For more configuration options, see :ref:`profiling-configuration-python`.
 
 .. _profiling-check-data-coming-in:
 

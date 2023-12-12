@@ -10,12 +10,12 @@
 
   * - :strong:`View Global Data Links`
     - Yes
-    - No
+    - Yes
 
 
   * - :strong:`Create, delete, or clone Global Data Links`
     - Yes
-    - Yes
+    - No
 
 
   * - :strong:`View APM MetricSets`

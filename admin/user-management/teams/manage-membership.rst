@@ -21,7 +21,7 @@ To create a team, follow these steps:
 
 #. Log in to Splunk Observability Cloud.
 
-#. In the left navigation menu, select :menuselection:`Settings > Teams`.
+#. In the left navigation menu, select :menuselection:`Settings` then :menuselection:`Teams`.
 
 #. Select :guilabel:`Create New Team`.
 
@@ -142,31 +142,5 @@ To view which teams a user belongs to, follow these steps:
 
 #. In the search bar, enter the name of the user and ensure that :guilabel:`Users` is selected. You can search by the user's name or email address.
 
-
-
-.. _admin-team-controls:
-
-Turn on enhanced team security
-============================================================================
-
-|hr|
-
-:strong:`Available in Enterprise Edition`
-
-|hr|
-
-By default, every user can join any team in your organization. If you want to restrict users from being able to join any team, you can turn on the enhanced team security setting. Turning on the enhanced team security setting also makes the Team Manager role available to teams.
-
-To learn more about team roles and permissions, see :ref:`about-team-roles`.
-
-You must be a Splunk Observability Cloud administrator to apply this setting. This setting applies to every team in your organization.
-
-To turn on the enhanced team security setting, follow these steps:
-
-#. Log in to Splunk Observability Cloud.
-
-#. In the left navigation menu, select :menuselection:`Settings > General Settings`.
-
-#. Select the :guilabel:`Restrict Access` check box.
 
 

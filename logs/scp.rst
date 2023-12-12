@@ -85,7 +85,7 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
 
 8. Secure a connection to your Splunk Cloud Platform instance in Splunk Observability Cloud. To get help from Splunk Support, :ref:`Submit a support ticket <support-ticket>`. To do it yourself, add your public IPv4 address to the allow list by following instructions in :new-page:`Add subnets to IP allow lists <https://docs.splunk.com/Documentation/SplunkCloud/latest/Admin/ConfigureIPAllowList#Add_subnets_to_IP_allow_lists>`. 
       
-9. Access your Splunk Cloud Platform management port (e.g. abc.splunk.com:8089) and use your browser's secure connection to download the certificate. 
+9. Access your Splunk Cloud Platform management port (e.g. abc.splunkcloud.com:8089) and use your browser's secure connection to download the certificate.
 
    a. For example, in the Chrome browser, select the lock icon in the address bar, then select :guilabel:`Connection is secure`.
 
@@ -117,7 +117,7 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
 
 Submit a support ticket
 ===================================================================
-If you were not able to run the script in step 3d in the preceeding section, you may submit a support ticket from your Splunk Cloud Platform instance to do this on your behalf. Submit a ticket to Splunk Support to configure your Splunk Cloud Platform instance's IP allow list. Configuring your allow list properly opens your Splunk Cloud Platform instance management port to Log Observer Connect, which can then search your Splunk Cloud Platform instance log data. After Splunk Support prepares your Splunk Cloud Platform instance, you can securely create a connection to Log Observer Connect.
+If you were not able to independently secure a connection to your Splunk Cloud Platform instance in step 8 in the previous section, you may submit a support ticket from your Splunk Cloud Platform instance to do this on your behalf. Submit a ticket to Splunk Support to configure your Splunk Cloud Platform instance's IP allow list. Configuring your allow list properly opens your Splunk Cloud Platform instance management port to Log Observer Connect, which can then search your Splunk Cloud Platform instance log data. After Splunk Support prepares your Splunk Cloud Platform instance, you can securely create a connection to Log Observer Connect.
 
 To submit a support ticket, follow these steps:
 

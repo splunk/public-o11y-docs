@@ -11,9 +11,9 @@
 
   * - :strong:`View General Settings`
     - Yes
-    - Yes
-    - Yes
-    - Yes
+    - No
+    - No
+    - No
 
   * - :strong:`View Organization Overview`
     - Yes
@@ -23,9 +23,9 @@
 
   * - :strong:`View org access tokens`
     - Yes
-    - No
-    - No
-    - No
+    - Yes
+    - Yes
+    - Yes
 
   * - :strong:`Create, activate, edit, or deactivate an org access token`
     - Yes
@@ -67,25 +67,24 @@
     - Yes
     - Yes
     - No
-    - * Yes, when enhanced team security is disabled
-      * No, when enhanced team security is enabled
+    - No
 
   * - :strong:`Join team`
     - Yes
-    - Not applicable: A Team Manager doesn't join a team. Only an existing Team Member can be assigned this role.
     - * Yes, when enhanced team security is disabled
       * No, when enhanced team security is enabled. A user must be added by an Admin or Team Manager
+    - No
     - Not applicable: A Team Member is already on a team and doesn't need to join.
 
   * - :strong:`Add or remove team member`
     - Yes
-    - Yes
+    - No. Unless enhanced team security is enabled and the user is designated as a Team Manager.
     - No
     - No
 
   * - :strong:`Edit notification policy`
     - Yes
-    - Yes
     - No
-    - Yes
+    - No
+    - No
 

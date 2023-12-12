@@ -10,13 +10,13 @@
 
   * - :strong:`Show Chat`
     - Yes
-    - No
-    - No
-    - No
+    - Yes
+    - Yes
+    - Yes
 
   * - :strong:`Training`
     - Yes
-    - No
-    - No
-    - No
+    - Yeso
+    - Yes
+    - Yes
 
