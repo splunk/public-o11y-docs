@@ -7,10 +7,7 @@ Manage team landing pages in Splunk Observability Cloud
 .. meta::
    :description: Learn how to view and configure an associated landing page that contains information relevant to team members.
 
-Every team has an associated landing page that contains information relevant
-to team members. A landing page brings together dashboard groups and alerts
-triggered by detectors that are linked to the team. The landing page has the
-following sections:
+Every team has an associated landing page that contains information relevant to team members. A landing page brings together dashboard groups and alerts triggered by detectors that are linked to the team. The landing page has the following sections:
 
 * A customizable text section to provide helpful information to team members. In this section, you can use Markdown-formatted text.
 
@@ -32,7 +29,7 @@ To see the landing page for any team, follow these steps:
 
 #. Log in to Splunk Observability Cloud.
 
-#. In the left navigation menu, select :menuselection:`Settings > Teams`.
+#. In the left navigation menu, select :menuselection:`Settings` then :menuselection:`Teams`.
 
 #. A table of current teams appears in the main panel.
 

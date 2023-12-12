@@ -12,6 +12,7 @@ Scenarios for monitoring applications and services using Splunk Synthetics
     browser-test-scenario
     api-test-scenario
     uptime-test-scenario
+    rum-synth-scenario
 
 
 The following scenarios feature examples from Buttercup Industries, a fictitious e-commerce company. Kai, a site reliability engineer at the Buttercup e-commerce company, shares the stories of how they use Splunk Synthetics and Splunk Observability Cloud to monitor and take action on their applications and services. 

@@ -46,10 +46,12 @@
      - APM bundled metrics  
 
    * - 12
-     - APM Troubleshooting MetricSets
+     - | APM Troubleshooting MetricSets
+       | This category is not part of the report.
 
    * - 13
-     - APM Monitoring MetricSets
+     - | APM Monitoring MetricSets
+       | This category is not part of the report.
 
    * - 14
      - Infrastructure Monitoring function
@@ -58,7 +60,8 @@
      - APM function
 
    * - 16
-     - RUM Troubleshooting MetricSets
+     - | RUM Troubleshooting MetricSets
+       | This category is not part of the report.
 
    * - 17
      - RUM Monitoring MetricSets
@@ -72,4 +75,4 @@
    * - 20
      - Synthetics metrics
 
-.. note:: In MTS-based subscription plans, all metrics are categorized as custom metrics and billed accordingly.
+.. note:: In subscription plans based on metric time series (MTS), all metrics are categorized as custom metrics and billed accordingly.

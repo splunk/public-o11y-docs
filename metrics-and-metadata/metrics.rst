@@ -29,6 +29,10 @@ A :ref:`metric time series (MTS) <metric-time-series>` contains all the data poi
 
 
   flowchart LR
+
+      accTitle: Metric time series diagram
+      accDescr: This example metric time series consists of 3 data points. They all share the same metric name, cpu.utilization, the same metric type, gauge, and the same set of dimension key-value pairs, which are hostname:server1 and location:Tokyo. The first data point has a value of .85 and a timestamp of 1557225030000 in UNIX time. The second data point has a value of .9 and a timestamp of 1557225030100 in UNIX time. The third data point has a value of .7 and a timestamp of 1557225030200 in UNIX time.
+      
       %% LR indicates the direction (left-to-right)
 
       %% You can define classes to style nodes and other elements
@@ -145,7 +149,7 @@ Learn all metric categories and how to identify them in :ref:`metric-categories`
 Metric resolution
 ----------------------------
 
-By default, metrics are processed by Observability Cloud at the coarser of their native resolution, or at 10-second resolution. In other words, they are never displayed at a resolution finer than 10 |nbsp| seconds.
+By default, Splunk Observability Cloud processes metrics at a 10-second resolution. If metrics have a native resolution courser than 10 seconds, then Splunk Observability Cloud processes the metrics at their native resolution.
 
 Optionally, metrics can be ingested at a :strong:`higher resolution of 1 second`. High-resolution metrics enable exceptionally fine-grained and low-latency visibility and alerting for your infrastructure, applications, and business performance. 
 
@@ -219,7 +223,9 @@ For example, the following sets of data points are in three separate MTS:
 #. MTS2: Gauge metric ``cpu.utilization``, dimension ``"source_host": "host1"``
 #. MTS3: Gauge metric ``cpu.utilization``, dimension ``"hostname": "host2"``
 
-MTS 2 has the same host value as MTS 1, but not the same dimension key. MTS 3 has the same host name as MTS 1, but not the same host name value.
+MTS 2 has the same host value as MTS 1, but not the same dimension key. MTS 3 has the same host name as MTS 1, but not the same host name value. 
+
+Splunk Observability Cloud retains inactive MTS for 13 months. 
 
 Use unique dimensions to create independent MTS
 ----------------------------------------------------

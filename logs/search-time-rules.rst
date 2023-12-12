@@ -9,10 +9,30 @@ Apply processing rules across historical data
 
 .. include:: /_includes/log-observer-transition.rst
 
-Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can apply processing rules across historical data. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk platform integration.
+Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can apply processing rules across historical data using search-time rules. Those customers must transition to Log observer Connect.
+
+After the transition to Log Observer Connect
+=============================================================================
+You cannot use search-time processing rules in the Log Observer Connect UI. 
+
+Going forward, you can utilize the following methods for processing data at search time in the Splunk platform:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 40
+
+   * - :strong:`Search-time processing method`
+     - :strong:`Documentation`
+
+   * - Field extractor
+     - See :new-page:`Build field extractions with the field extractor <https://docs.splunk.com/Documentation/SplunkCloud/latest/Knowledge/ExtractfieldsinteractivelywithIFX>`
+
+   * - Field aliases
+     - See :new-page:`Create field aliases in Splunk Web <https://docs.splunk.com/Documentation/SplunkCloud/9.0.2305/Knowledge/Addaliasestofields>`
+
 
 What are search-time rules?
---------------------------------------------------------------------------------
+=============================================================================
 
 Search-time rules are the application of log processing rules across historical data. Log processing rules can occur at index time or at search time. Index-time rules can only be applied to data that streams in after the index-time rule was created. To learn more about index-time rules, see :ref:`logs-processors`. It can be helpful to apply an index-time rule to data that streamed in before the index-time rule existed. To do so, create a search-time rule.
 
@@ -42,13 +62,13 @@ Do not activate search-time rules except when you are intentionally applying ind
 
 
 Use case for applying search-time rules
---------------------------------------------------------------------------------
+=============================================================================
 
 You can apply search-time rules when you discover a problem after the fact. For example, suppose an error occurred between 2 am and 5 am last night and no one was on duty to track down the cause. This morning at 9 am, you discover the error occurred and try to figure out what went wrong. You create field extractions to define a few fields to make filtering easier. The new fields, which were created with index-time rules, can only be applied to logs that stream in after you created the fields at 9 am. To apply your newly created fields to logs that streamed in between 2 am and 5 am, create a search-time rule based on the index-time rule you created at 9 am, then activate it as a search-time rule and apply it to logs that came in between 2 am and 5 am.
 
 
 Create and activate a search-time rule
---------------------------------------------------------------------------------
+=============================================================================
 
 To create a search-time rule, follow these steps:
 
@@ -62,7 +82,7 @@ To create a search-time rule, follow these steps:
 
 
 Deactivate a search-time rule
---------------------------------------------------------------------------------
+=============================================================================
 
 To deactivate a search-time rule, follow these steps:
 

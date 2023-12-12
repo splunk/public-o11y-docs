@@ -21,12 +21,12 @@ Dashboards in Splunk Observability Cloud
    Best practices for creating dashboards<dashboards-best-practices>
    dashboards-import-export
    Share, clone, and mirror dashboards<dashboard-share-clone-mirror>
-
+   Dashboards available<dashboards-list>
    
 
-Dashboards are groupings of charts and visualizations of metrics. Well-designed dashboards can provide useful and actionable insight into your system at a glance. Dashboards can be complex or contain just a few charts that drill down only into the data you want to see.
+Dashboards are groupings of charts and visualizations of metrics. Well-designed dashboards provide useful and actionable insight into your system at a glance. Dashboards can be complex or contain just a few charts that drill down only into the data you want to see.
 
-Continue with the following sections to learn how to use, create, and modify dashboards to suit your requirements.
+Continue with the following topics to learn how to use, create, and modify dashboards to suit your requirements.
 
 - :ref:`dashboard-basics`
 - :ref:`built-in-dashboards`
@@ -39,5 +39,6 @@ Continue with the following sections to learn how to use, create, and modify das
 - :ref:`dashboards-best-practices`
 - :ref:`dashboards-import-export`
 - :ref:`dashboard-share-clone-mirror`
+- :ref:`dashboards-list-imm`
 
 

@@ -73,7 +73,7 @@ The following runtime metrics are automatically collected and exported:
 
 .. _nodejs-otel-metrics-migration:
 
-Migrate from SignalFx metrics for NodeJS
+Migrate from SignalFx metrics for Node.js
 ===========================================
 
 To migrate your custom metric instrumentation from the SignalFx client library, follow these steps:

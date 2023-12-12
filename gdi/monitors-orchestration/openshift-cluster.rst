@@ -18,7 +18,7 @@ monitor automatically.
 
 This monitor is available on Kubernetes, Linux, and Windows.
 
-Behaviour
+Behavior
 ---------
 
 Since the agent is generally running in multiple places in a Kubernetes
@@ -57,6 +57,7 @@ Follow these steps to deploy this integration:
       OpenShift metrics, in addition to the standard Kubernetes metrics.
 
       For example:
+
       .. code-block:: shell
 
          helm install --set cloudProvider=' ' --set distribution='openshift' --set splunkObservability.accessToken='******' --set clusterName='cluster1' --namespace='namespace1' --set splunkObservability.realm='us0' --set gateway.enabled='false' --generate-name splunk-otel-collector-chart/splunk-otel-collector``

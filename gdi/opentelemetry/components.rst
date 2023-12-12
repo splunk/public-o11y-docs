@@ -1,7 +1,7 @@
 .. _otel-components:
 
 ******************************************
-Components
+Collector components
 ******************************************
 
 .. meta::
@@ -45,8 +45,10 @@ Components
     components/splunk-apm-exporter
     components/splunk-hec-exporter
     components/splunk-hec-receiver
-    components/syslog-receiver      
+    components/syslog-receiver 
+    components/tcp-receiver     
     components/transform-processor
+    components/udp-receiver
     components/windowsperfcounters-receiver
     components/zipkin-receiver 
     components/zpages-extension    
@@ -58,9 +60,9 @@ The OpenTelemetry Collector includes the following component types:
 * :ref:`Exporters <collector-components-exporters>`: Send data to one or more backends or destinations. 
 * :ref:`Extensions <collector-components-extensions>`: Extend the capabilities of the Collector.
 
-You can activate components by configuring :ref:`pipelines <otel-data-processing>` in the Collector configuration. See :ref:`otel-configuration` to learn how to define multiple instances of components as well as their pipelines.
+You can activate components by configuring :ref:`service pipelines <otel-data-processing>` in the Collector configuration. See :ref:`otel-configuration` to learn how to define multiple instances of components as well as their pipelines.
 
-The Splunk Distribution of OpenTelemetry Collector includes and supports the following components.
+The Splunk Distribution of OpenTelemetry Collector includes and supports the components listed on this doc.
 
 .. note:: The following lists might not contain all the latest additions. For a complete list of Collector components, including components that aren't included in the Splunk Distribution of OpenTelemetry Collector, see the ``opentelemetry-contrib`` repository in GitHub.
 
@@ -178,6 +180,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
      - Logs
    * - ``tcplog``
      - Receives logs over TCP.
+     - Logs
+   * - ``udplog``
+     - Receives logs over UDP.
      - Logs
    * - ``windowseventlog``
      - Tails and parses logs from the Windows Event log API.

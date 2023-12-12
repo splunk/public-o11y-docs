@@ -32,7 +32,7 @@ Splunk Observability Cloud data comes enriched with additional metadata:
     - String
   * - Attributes or span tags
     - Annotation to carry information about the operation being tracked.
-    - APM metric, span
+    - APM metric, Collector metric, span
     - Key-value pair
 
 * To find and edit your metadata, use the Metadata Catalogue. Learn more at :ref:`metrics-finder-and-metadata-catalog`. 
@@ -49,16 +49,19 @@ For more tools to leverage your data, see:
 Dimensions
 ================================================================================
 
+.. caution:: The OpenTelemetry data model uses ``attributes`` instead of dimensions. See more at :ref:`Tags in OpenTelemetry <otel-tags>`. 
+
 Dimensions are immutable metadata in the form of key-value pairs that monitoring software sends in along with the metrics. The set of MTS dimensions sent during ingest is used, along with the metric name, to uniquely identify an MTS. 
 
 Dimensions provide additional information about the metric, such as the name of the host that sent the metric. For example, ``"hostname": "host1"``. 
 
-.. note:: 
-    * Two key-value pairs with different keys are different dimensions, regardless of value. For example, ``"hostname": "bcn"`` and ``"clustername": "bcn"``.  
-    * Two key-value pairs that have the same key but different values are different dimensions. For example, ``"hostname": "bcn"`` and ``"hostname": "gir"``.   
-    * Two key-value pairs with the same key and value are the same dimension. For example, ``"hostname": "host"`` and ``"hostname": "host"``.   
+The following applies:
 
-See how to use them in :ref:`metadata-best-practices`.
+* Two key-value pairs with different keys are different dimensions, regardless of value. For example, ``"hostname": "bcn"`` and ``"clustername": "bcn"``.  
+* Two key-value pairs that have the same key but different values are different dimensions. For example, ``"hostname": "bcn"`` and ``"hostname": "gir"``.   
+* Two key-value pairs with the same key and value are the same dimension. For example, ``"hostname": "host"`` and ``"hostname": "host"``.   
+
+See how to use dimensions in :ref:`metadata-best-practices`.
 
 Dimensions criteria
 ----------------------
@@ -214,10 +217,10 @@ Use custom properties in the following situations:
 
       **Example:** You collect a metric called ``service.errors`` to know when your customers are running into issues with your services. The MTS for this metric are already uniquely identifiable by the customer and service dimensions. You want to attach the escalation contacts for each service for every customer to your metrics. In this case, you assign the escalation contacts as custom properties to the specific service dimension or customer dimensions. As your team grows and goes through reorganization, you want to be able to change this metadata. You also don't need the escalation contacts as dimensions as the customer and service dimensions already yield separate MTS.
 
-Use IM tags
+Use Infrastructure Monitoring tags
 ----------------------------------------
 
-Use tags when there is a one-to-many relationship between the tag and the objects you are assigning it to. 
+In Infrastructure Monitoring, use tags when there is a one-to-many relationship between the tag and the objects you are assigning it to. 
 
 For example:
 

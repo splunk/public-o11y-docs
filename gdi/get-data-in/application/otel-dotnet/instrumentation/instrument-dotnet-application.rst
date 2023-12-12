@@ -9,7 +9,7 @@ Instrument your .NET application for Splunk Observability Cloud (OpenTelemetry)
 
 The Splunk Distribution of OpenTelemetry .NET automatically instruments .NET applications, Windows services running .NET applications, and ASP.NET applications deployed on IIS.
 
-To get started, use the guided setup or follow the instructions manually.
+To get started, use the guided setup, follow the instructions manually, or auto-instrument your application. See :ref:`auto-instrumentation-dotnet` for more information.
 
 Generate customized instructions using the guided setup
 ====================================================================
@@ -174,7 +174,7 @@ You can also set the ``SkippedInstrumentation`` property from the terminal. Rewr
 
    dotnet build -p:SkippedInstrumentations=StackExchange.Redis%3BMongoDB.Driver.Core
 
-To distribute the appropriate native runtime components with your .NET application, specify a Runtime Identifier (RID) to build the application using ``dotnet build`` or ``dotnet publish``. 
+To distribute the appropriate native runtime components with your .NET application, specify a Runtime Identifier (RID) to build the application using ``dotnet build`` or ``dotnet publish``.
 
 Both self-contained and framework-dependent applications are compatible with automatic instrumentation. See :new-page:`.NET application publishing overview <https://learn.microsoft.com/en-us/dotnet/core/deploying/>` in the .NET documentation for more information.
 
@@ -193,6 +193,13 @@ If you run the application using the ``dotnet`` CLI, add ``dotnet`` after the sc
 
 The script passes all the command-line parameters you provide to the application.
 
+
+.. _docker-install-otel-dotnet:
+
+Instrument an application running within a Docker container
+--------------------------------------------------------------
+
+An example of a Dockerfile that instruments a .NET application running inside a Docker container is available in the :new-page:`splunk/observability-content-contrib <https://github.com/splunk/observability-content-contrib/tree/main/integration-examples/splunk-otel-dotnet-docker>` repository on GitHub.
 
 .. _windows-offline-install-otel-dotnet:
 
@@ -254,3 +261,26 @@ In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, f
 #. Select your username.
 
 The realm name appears in the :guilabel:`Organizations` section.
+
+.. _uninstall-otel-dotnet:
+
+Uninstall the .NET instrumentation
+========================================
+
+To deactivate and uninstall the .NET instrumentation, run the following commands:
+
+.. tabs::
+
+   .. code-tab:: powershell Windows (PowerShell)
+
+      # Run the unregister command for your situation
+      Unregister-OpenTelemetryForIIS
+      Unregister-OpenTelemetryForWindowsService
+      Unregister-OpenTelemetryForCurrentSession
+
+      # Uninstall OpenTelemetry for .NET
+      Uninstall-OpenTelemetryCore
+
+   .. code-tab:: shell Linux
+
+      rm -rf <path_of_otel_dotnet_install>

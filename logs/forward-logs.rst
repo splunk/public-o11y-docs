@@ -56,7 +56,9 @@ To learn more about HEC Ingest tokens for Splunk Cloud or Splunk Enterprise, see
 
 Add Splunk Observability Cloud IP addresses to your allow list
 ================================================================================
-A Splunk Cloud Platform admin must add Splunk Observability Cloud IP addresses to your Splunk Cloud Platform allow list. If you already set up Log Observer Connect, you do not need to add the necessary IP addresses because you already added them. If you have not set up Log Observer Connect, add the following IP addresses to your Splunk Cloud Platform allow list:
+A Splunk Cloud Platform admin must add Splunk Observability Cloud IP addresses to your Splunk Cloud Platform allow list. See :new-page:`Configure IP allow lists using Splunk Web <https://docs.splunk.com/Documentation/SplunkCloud/latest/Admin/ConfigureIPAllowList#Add_subnets_to_IP_allow_lists>` to learn how. 
+
+If you already set up Log Observer Connect, you do not need to add the necessary IP addresses because you already added them. If you have not set up Log Observer Connect, add the following IP addresses to your Splunk Cloud Platform allow list:
 
 .. list-table::
    :header-rows: 1

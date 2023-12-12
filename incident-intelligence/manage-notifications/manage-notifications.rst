@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-manage-notifications:
 
 Manage notifications from Incident Intelligence

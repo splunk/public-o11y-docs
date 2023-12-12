@@ -17,9 +17,42 @@ Splunk Infrastructure Monitoring hierarchy
 
 The following diagram gives you an overview of the different components and their hierarchical relationship in Splunk Infrastructure Monitoring.
 
-..  image:: /_images/infrastructure/imm-hierarchy.png
-    :width: 80%
-    :alt: This image describes the hierarchy in Splunk Infrastructure Monitoring.
+.. mermaid::
+
+  %%{
+    init: {
+      'theme': 'base',
+      'themeVariables': {
+        'primaryColor': '#FFFFFF',
+        'primaryTextColor': '#000000',
+        'primaryBorderColor': '#000000',
+        'nodeBorder':'#000000',
+        'lineColor': '#000000',
+      }
+    }
+  }%%
+
+
+  flowchart TB
+    accTitle: Splunk Infrastructure Monitoring hierarchy
+    accDescr: In Splunk Infrastructure Monitoring, realm is the all-encompassing top level. A realm contains multiple organizations. Each organization contains dashboard groups, navigators, detectors, and teams. Teams contain users. Both dashboard groups and navigators contain dashboards. Dashboards contain charts. Charts and detectors use metrics to operate. Detectors can generate alerts and send notifications.
+
+      %% LR indicates the direction (left-to-right)
+
+      %% You can define classes to style nodes and other elements
+      classDef default fill:#FFFFFF, stroke:#000
+
+      subgraph Splunk Infrastructure Monitoring hierarchy
+      direction TB
+      realm[Realm]--contains-->org[Organizations]--contain-->dashboardGroup[Dashboard groups] & navigator[Navigators] & detector[Detectors] & teams[Teams]
+      dashboardGroup --contain-->dashboard[Dashboards]
+      navigator--contain-->dashboard--contain-->chart[Charts]
+      chart--use-->metric[Metrics]
+      detector--use-->metric
+      detector--generate-->alert[Alerts]
+      teams--contain-->users[Users]
+      alert--send-->notification[Notifications]
+      end
 
 Metrics are the driving components for Splunk Infrastructure Monitoring. To learn more about metrics, see :ref:`get-started-metrics`.
 

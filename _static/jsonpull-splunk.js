@@ -1,6 +1,65 @@
 $(document).ready(function () {
 
 
+   $('.metrics-config').each(function () {
+      if ($(this).data('processed')) {
+         return;
+      }
+
+      let url = $(this).attr('url');
+
+
+      const mainColumn = $(this).data('main-column');
+      const secondaryColumn = $(this).data('secondary-column');
+      const otherColumns = [];
+      let columnIndex = 3;
+      while ($(this).data(`column-${columnIndex}`)) {
+         otherColumns.push($(this).data(`column-${columnIndex}`));
+         columnIndex++;
+      }
+
+      const headers = [
+         $(this).data('header-1') || 'Main',
+         $(this).data('header-2') || 'Secondary'
+      ];
+      columnIndex = 3;
+      while ($(this).data(`header-${columnIndex}`)) {
+         headers.push($(this).data(`header-${columnIndex}`));
+         columnIndex++;
+      }
+
+      const uniqueId = generateUniqueId(url, mainColumn, secondaryColumn, otherColumns, headers);
+
+      if ($("#" + uniqueId).length === 0) {
+
+         try {
+            let client = new XMLHttpRequest();
+            client.open('GET', url);
+
+            let tableGenerated = false;
+
+            client.onreadystatechange = function () {
+               const status = client.status;
+               if (status >= 200 && status < 400 && !tableGenerated) {
+                  const yamlData = jsyaml.load(client.responseText, 'utf8');
+                  for (const key in yamlData) {
+                     if (yamlData.hasOwnProperty(key)) {
+                        const table = generateTableFromData(yamlData[key], mainColumn, secondaryColumn, otherColumns, headers);
+                        $(document).find('.metrics-config').append(`<div id="${uniqueId}">${table}</div>`);
+                        tableGenerated = true;
+                     }
+                  }
+               }
+            };
+            client.send();
+         } catch (e) {
+            console.log(e);
+         }
+      }
+
+      $(this).data('processed', true);
+   });
+
    $('.metrics-table').each(function () {
 
       $(this).append('<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>');
@@ -78,9 +137,81 @@ $(document).ready(function () {
 
    monitorsFromRaw();
 
+   function generateUniqueId(url, mainColumn, secondaryColumn, otherColumns, headers) {
+      const stringToHash = `${url}-${mainColumn}-${secondaryColumn}-${otherColumns.join('-')}-${headers.join('-')}`;
+      let hash = 0;
+      for (let i = 0; i < stringToHash.length; i++) {
+         const character = stringToHash.charCodeAt(i);
+         hash = (hash << 5) - hash + character;
+         hash = hash & hash; // Convert to 32bit integer
+      }
+      return `table-${hash}`;
+   }
+
+
    function coalesce() {
       return [].find.call(arguments, x => x !== null && x !== undefined);
    }
+
+
+   function generateTableFromData(data, mainColumn, secondaryColumn, otherColumns, headers) {
+      const groupedData = {};
+      for (const key in data) {
+         const item = data[key];
+         item[secondaryColumn] = key;
+         const mainValue = item[mainColumn].toString();
+         if (!groupedData[mainValue]) {
+            groupedData[mainValue] = [];
+         }
+         groupedData[mainValue].push(item);
+      }
+
+      let tableContent = '';
+
+      function compareValues(a, b) {
+         a = a.toString().toLowerCase();
+         b = b.toString().toLowerCase();
+         return a < b ? -1 : (a > b ? 1 : 0);
+      }
+
+      const sortedMainValues = Object.keys(groupedData).sort(compareValues);
+
+      for (const mainValue of sortedMainValues) {
+         const sortedGroupItems = groupedData[mainValue].sort((a, b) => {
+            return compareValues(a[secondaryColumn], b[secondaryColumn]);
+         });
+
+         let rowspan = sortedGroupItems.length;
+         let isFirst = true;
+         for (const item of sortedGroupItems) {
+            const secondaryValue = item[secondaryColumn].toString();
+            const otherValues = otherColumns.map(column => item[column].toString() || '');
+            let rowData = isFirst ? `<td rowspan="${rowspan}">${mainValue}</td>` : '';
+            rowData += `<td>${secondaryValue}</td>`;
+            otherValues.forEach(val => {
+               rowData += `<td>${val}</td>`;
+            });
+            tableContent += `<tr>${rowData}</tr>`;
+            isFirst = false;
+         }
+      }
+
+      const tableHeaders = headers.map(header => `<th>${header}</th>`).join('');
+
+      const table = `
+<table style='width: 100%' class='generated-table docutils align-default'>
+    <thead>
+        ${tableHeaders}
+    </thead>
+    <tbody>
+        ${tableContent}
+    </tbody>
+</table>
+`;
+
+      return table;
+   }
+
 
    function monitorsFromRaw() {
       try {

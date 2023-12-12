@@ -27,7 +27,7 @@ When you run the Collector in discovery mode, it tests built-in configurations f
 
 For any dynamically instantiated receiver that retrieves metrics matching the success criteria, the Collector translates the discovery configuration to a receiver creator instance with the known working rules, as well as the required observer extension. See :ref:`receiver-creator-receiver` for more information. At the same time, the Collector adds the configuration to the ``metrics`` pipeline at runtime.
 
-For any receiver that can establish a connection with a service, but not receive the expected metrics, discovery mode suggests which properties to set, or what extensions or settings to configure on the service to successfully retrieve telemetry. You can define any target-specific configuration values that are required, for example authentication information, using discovery properties to tune the discovery process. 
+For any receiver that can establish a connection with a service, but not receive the expected metrics, discovery mode suggests which properties to set, or what extensions or settings to configure on the service to successfully retrieve telemetry. You can define any target-specific configuration values that are required, for example authentication information, using discovery properties to tune the discovery process.
 
 
 Supported host services and applications
@@ -49,9 +49,14 @@ Discovery mode supports the following host services and applications:
    * - PostgreSQL
      - Smart Agent with postgresql monitor type. See :ref:`postgresql`.
 
+   * - OracleDB
+     - Oracle DB receiver. See :ref:`oracledb`.
+
    * - NGINX
      - Smart Agent with collectd/nginx monitor type. See :ref:`nginx`.
 
+   * - Redis
+     - Redis receiver.
 
 
 Discover active metric sources
@@ -70,7 +75,7 @@ The ``--dry-run`` option ensures that the resulting configuration isn't applied 
    $ Discovering for next 10s...
    Partially discovered "smartagent/postgresql" using "docker_observer"
    endpoint "5c9c80ba4319395c26255b6374f048ca973d3618fdd4b92a9ed601c7dddbff6a:5432":
-   Please ensure your user credentials are correctly specified with 
+   Please ensure your user credentials are correctly specified with
    `--set splunk.discovery.receivers.smartagent/postgresql.config.params::username="<username>"`
    and `--set splunk.discovery.receivers.smartagent/postgresql.config.params::password="<password>"`
    or `SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_postgresql_CONFIG_params_x3a__x3a_username="<username>"`
@@ -161,7 +166,6 @@ Custom configurations consist of the fields you want to override in the default 
 
 .. code-block:: yaml
 
-
     # <some-receiver-type-with-optional-name.discovery.yaml>
       <receiver_type>(/<receiver_name>):
          enabled: <true | false> # true by default
@@ -191,6 +195,65 @@ To define a custom directory for discovery settings, use the ``--config-dir`` op
 
     otelcol --discovery --config-dir <custom_path>
 
+Usage example
+======================
+
+The following example shows how to install the Collector on Linux using discovery mode to find a MySQL database and retrieve metrics.
+
+#. Install the Collector on the host where MySQL is running.  Include the ``--discovery`` flag:
+
+   .. code-block:: shell
+    
+      curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+      sudo sh /tmp/splunk-otel-collector.sh --realm <realm> – <token> --mode agent --discovery
+
+#. Retrieve the Collector logs with the following command and review the output of the discovery process: 
+
+   .. code-block:: shell
+
+      journalctl -u splunk-otel-collector -f
+
+   In the following sample logs, the MySQL database has been partially discovered. The error message indicates the problem, which in this case is bad credentials:
+
+   .. code-block:: text
+
+      Partially discovered "smartagent/collectd/mysql" using "host_observer" endpoint "(host_observer)[::]-3306-TCP-1757": Make sure y
+      our user credentials are correctly specified using the `--set splunk.discovery.receivers.smartagent/collectd/mysql.config.username="<username>"` and `--set splunk.discovery.receivers.smartagent/collect
+      d/mysql.config.password="<password>"` command or the `SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_collectd_x2f_mysql_CONFIG_username="<username>"` and `SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_collectd_
+      x2f_mysql_CONFIG_password="<password>"` environment variables. (evaluated "{\"collectdInstance\":\"monitor-smartagentcollectdmysqlreceiver_creatorhost_observerendpoint3306host_observer3306TCP1757\",\"k
+      ind\":\"receiver\",\"message\":\"mysql plugin: Failed to connect to database splunk.discovery.default at server ::: Access denied for user 'splunk.discovery.default'@'localhost' (using password: YES)\"
+      ,\"monitorType\":\"collectd/mysql\"}")
+
+#. Provide the necessary credentials by creating the properties.discovery.yaml file in the `/etc/otel/collector/config.d` directory with the following content: 
+
+   .. code-block:: yaml
+
+      splunk.discovery:
+        receivers:
+          smartagent/collectd/mysql:
+            enabled: true
+            config:
+              username: "<username>"
+              password: "<password>"
+              databases: "[{name: '<database name>'}]"
+
+#. Restart the Collector with the following command: 
+
+   .. code-block:: shell
+
+      sudo systemctl restart splunk-otel-collector
+
+#. Tail the Collector logs again to confirm that it has discovered the MySQL database successfully: 
+
+   .. code-block:: shell
+
+      journalctl -u splunk-otel-collector -f
+
+#. When successful, the logs include a line similar to the following: 
+
+   .. code-block:: text
+
+      Successfully discovered "smartagent/collectd/mysql" using "host_observer" endpoint "(host_observer)[::]-3306-TCP-1757".
 
 Troubleshooting
 ======================

@@ -31,8 +31,6 @@ Follow these steps to set up a Browser test:
 
 #. In the :guilabel:`Name` field, enter a name for your test. 
 
-#. In the :guilabel:`Go to URL` field, enter the URL for the page you want to test, including ``http`` or ``https``.
-
 #. To add steps and synthetic transactions to your Browser test, select :guilabel:`Edit steps or synthetic transactions`. See :ref:`add-transactions` to learn more. 
 
 #. As you build your test, you can use :guilabel:`Try now` to check that the configuration of your test is valid. Run results aren't stored. For more, see :ref:`try-now`. 
@@ -340,6 +338,21 @@ There are many reasons why you might want to configure advanced settings for you
 * Testing out a CDN. For example, you might want to load the HTML page in the browser, but rewrite the hosts for some or all requests to a new host.
 * Filtering out requests from analytics on the back end by sending a specific header in the requests.
 * Running a test on a pre-production site that has a self-signed certificate.
+
+
+
+Custom properties 
+--------------------
+Custom properties are key-value pairs you can assign to dimensions of existing MTSes after ingest. Custom properties are single-valued and don’t support multiple values, like ``region:northamerica`` or ``environment:prod``.
+
+Key requirements:
+
+* Keys must start with an uppercase or lowercase letter. Keys can't start with special characters or numbers. 
+* The remainder of the key can contain letters, numbers, underscores and hyphens.
+* Keys can’t be named test_id or test.
+* Key size can't exceed 128 characters. 
+
+See, :ref:`custom-properties`. 
 
 
 .. _browser-cookies:

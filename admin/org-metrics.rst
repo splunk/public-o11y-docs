@@ -267,6 +267,8 @@ tokens so Observability Cloud can retrieve your data.
 You can use these errors in :ref:`dashboards <dashboards>` to detect
 whether you're experiencing this issues.
 
+.. _org-metrics-child:
+
 Child org metrics
 ~~~~~~~~~~~~~~~~~
 

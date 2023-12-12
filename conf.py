@@ -103,7 +103,7 @@ mermaid_version=""
 linkcheck_anchors = False
 linkcheck_workers = 3
 linkcheck_exclude_documents = [r'_.*', r'\.github', r'myst_parser', r'tests']
-linkcheck_ignore = [r'https://ingest.*',r'https://app.*',r'https://login.*',r'.*\<.*',r'https://api.*',r'https://rum-ingest.*',r'https://proxy.*',r'https://example.*', r'https://domain.com.*', r'.*domain/path.*', r'.*signalfx.com.*', r'.*your_realm.*', r'.*your_domain.*']
+linkcheck_ignore = [r'https://ingest.*',r'https://app.*',r'https://login.*',r'.*\<.*',r'https://api.*',r'https://rum-ingest.*',r'https://proxy.*',r'https://example.*', r'https://domain.com.*', r'.*domain/path.*', r'.*signalfx.com.*', r'.*your_realm.*', r'.*your_domain.*', r'http://localhost*', r'https://localhost*', r'https://leader.mesos*', r'https://login.splunk.com*', r'https://ideas.splunk.com*']
 
 # Image settings
 
@@ -131,6 +131,14 @@ rst_prolog = """
 
    ⋮
 
+.. |add| raw:: html
+
+   +
+
+.. |delete| raw:: html
+
+   ⅹ
+   
 .. |takeshift| imagetarget:: /_images/incident-intelligence/Incident-intelligence-take-shift-icon.png
    :alt: Take shift
    :class: inline-image

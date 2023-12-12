@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-notification-preferences:
 
 Set your on-call notification preferences

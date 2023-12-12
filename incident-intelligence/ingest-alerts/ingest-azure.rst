@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-ingest-azure-alerts:
 
 Ingest Azure Monitor alerts

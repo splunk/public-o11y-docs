@@ -70,7 +70,7 @@ The following examples show how to create a custom tag for an existing span:
 
       customizedSpan = trace.get_current_span()
 
-      customizedSpan.set_attribute("my.attribute", "value");
+      customizedSpan.set_attribute("my.attribute", "value")
 
       # You can also set global tags using the OTEL_RESOURCE_ATTRIBUTES	
       # environment variable, which accepts a list of comma-separated key-value
