@@ -9,56 +9,57 @@ Migration guide for OpenTelemetry Java 2.0 metrics
 
 penTelemetry Java Instrumentation 2.x contains a set of breaking changes, introduced as part of recent OpenTelemetry HTTP semantic convention updates. Changes to upstream OpenTelemetry Java instrumentation will impact Splunk OpenTelemetry Java distribution.
 
-To solve this, the 2.0 GA release of the Splunk Distribution of OpenTelemetry Java, expected to happen in early 2024, will be fully compatible with the enhancements introduced by OpenTelemetry native version. A migration guide will be made available to all users.
-
-Until the stable release of the Splunk Distribution of OpenTelemetry Java 2.0, existing and new customers must continue using version 1.x of the Splu
-
 If you're using the upstream OpenTelemetry 1.x instrumentation, wait before upgrading to version 2.x, as it might cause built-in Java metric dashboards and features that rely on metricized attributes, such MTS and TMS, to not work as expected.
 
-ENABLE 
+.. note:: AlwaysOn Profiling metrics are not impacted by this change.
 
-DATA MIGRATION PAGE
+When to start the migration to 2.0 metrics
+==============================================
 
-Assuming that: All prerequisite available (implemented or releases)
-Decision by customer to start the migration 
-Prepare for migration 
-Regenerate custom metricssets of HTTP sem convention impacted indexes under new naming conventions
-Enable migration functionality for Java 2.x migration
-Deploy instrumentation 
-Splunk OTel Collector in version including necessary metric exporter changes  
-Splunk Java instrumentation 2.x agent 
-Perform migration steps on IM 
-Re-create dashboards for impacted metrics 
-Re-create detectors and alerts for impacted metrics
-Perform migration steps on APM
-Customers need to manually change MMS references in their custom reporting (dashboards, charts, and detectors). 
-Switch to Java service runtime metrics 2.0 dashboard
-Migration steps on RUM 
-TBD
-Disable metric processor transformations and double-publishing 
-General assumptions 
-Manual migration - Customers will have to migrate their custom dashboards containing metrics for impacted charts and detectors with associated  alerts (i.e. custom elements) to be based on new metrics and semantic conventions. The migration will be documented in the form of a migration guide describing how to identify and change the content. The guide will be published in official documentation and if applicable referenced from data migration functionality in the observability cloud settings.
-Best effort migration - no parity of data or data formats - The migration is caused by a series of breaking changes in semantic conventions and metrics. Therefore the data presented after the migration will not be the same as before migration and will have different structure and in some cases meaning. It is critical to convey that message to any team (internal or external) impacted by this change.  
-Migration start - Migration will start based on customer decision to start using Java OpenTelemetry instrumentation 2.x and will require as one of the first steps update of the instrumentation components (java agent, collector).
-Preventing access to data  - To prevent sudden loss of access to custom elements new data will be duplicated and double-published for a limited period of time without charge i.e. grace period.
-Grace period length is 6 months - during which a customer will not be charged for duplicated data.  
-Cost after the grace period - After grace duplicated data will be treated as custom metrics and a customer will be charged for it according to general billing rules.
-Grace period is fixed. - Grace period starts when Splunk Otel Java 2.x instrumentation is released  and lasts for a predetermined period of time which is minimum 6  months and should not exceed EoS for Splunk Otel Java 1.x instrumentation so ~12 months from 2.x release.  . 
-Metric transformations in metric processor. - transformations, duplication and double-publishing of selected metrics will happen in the metric processor based on a set of predefined rules which will be active when the user will decide to enable migration functionality.. 
-Metric Pipeline Management UX changes to show migration rules - The MPM will display all the defined rules similarly to any other rule. The migration rules will be treated as system rules which can not be edited or modified by the user/admin.The metric processor UI user experience - Metric Pipline Mnagment 
-Migration management UX - A new settings page (available on settings navigation and/or icon on data management bar) will be created to manage current and future migrations. The page will allow a set of migration procedures that can be enabled or disabled by the user and will automatically generate necessary actions in the system. That UI will also contain all additional information related to migrations.
-Built-in (i.e. Out of the Box or OoTB) Java service metrics dashboards in two versions. - Two dashboard versions will be available for Java service metrics representing metrics from 1.x and 2.x and will be displayed to the customer simultaneously. The customer should have the ability to select which dashboard to use. 
-Java profiling metrics will not be impacted. - Metrics used as part of Java profiling feature for CPU and memory will not be impacted.Required profiling metrics will be transformed from new metrics to old or Java 2.x will continue to publish metrics that can not be transformed.
-HTTP Semantic convention changes for APM - The semantic convention change should not impact the main UI and its general functions and built-in features; however any customer defined indexes will have to be manually updated.
-HTTP Semantic convention changes for RUM - The semantic convention change should not impact the main UI and its general functions however any customer defined indexes will have to be manually updated.
-Migration documentation - The migration process will be described in the form of a high level migration guide and several area specific migration guide documents. High level migration guides will describe overall process and reference area specific migration guides as needed.
-Data migration page - describes new settings page and its operations.
-Instrumentation guide - describes the steps necessary to migrate to new Java 2.x instrumentation covering java agent and collector.
-APM guide - describes the changes related to built-in and custom TMS, MMS, associated custom reporting, built-in dashboard as well as any other steps related to semantic conventions updates 
-IM guide - describes manual steps necessary to recreate dashboards/charts and detectors/alerts.management and metric processor to control the process of transformation. 
-RUM guide - describes the changes related to functionality as well as any other steps related to semantic conventions updates 
+If you're already instrumenting your Java services using the Splunk Distribution of OpenTelemetry Java 1.x or the equivalent upstream instrumentation, you can already migrate to the version 2.0 and higher of the Java agent.
 
-Metric names
+.. include:: /_includes/requirements/java.rst
+
+
+Migration manager
+----------------------------------------------
+
+Use the Migration manager under ::guilabel:`Settings` > ::guilabel:`Data Management` to turn on migration procedures that help you migrate Java metrics to version 2.0.
+
+
+Metric data redundancy grace period
+-----------------------------------------------
+
+To prevent sudden loss of access to custom reporting elements, the Metrics Pipeline Manager transforms and duplicates metric data in both 1.x and the 2.x formats for a limited period of time with no additional cost. 
+
+The duplication and double-publishing of metrics follows a set of predefined rules that are activated when you decide to migrate. MPM shows the rules as system rules that can't be edited. See :ref:`metrics-pipeline-arm`.
+
+The grace period for receiving and processing duplicated metric started with the release of the Java agent version 2.0 on <DATE> and ends on <DATE>.
+
+.. note:: After the grace period, duplicated metric data is treated as custom metrics and charged accordingly.
+
+
+.. _migrate-java-steps:
+
+Migrate to OTel Java 2.0
+========================================
+
+To migrate your instrumentation to the version 2.0 or higher of the Java agent, follow these steps:
+
+1. Install version 2.0 or higher of the Splunk Distribution of the Java agent. For upgrade best practices, see :ref:`upgrade-java-instrumentation`.
+
+2. Migrate custom reporting elements:
+
+      - For Splunk APM, see :ref:`migrate-apm-custom-reporting`.
+      - For Splunk IMM, see ---
+      - For Splunk RUM, see ---
+
+3. (Optional) Switch to the new Java metrics 2.0 built-in dashboards. Built-in dashboard versions are available for Java service metrics representing metrics from versions 1.x and 2.x.
+
+
+.. _java-20-metric-names:
+
+New metric names
 ======================================
 
 The following table shows the previous metric names and the current names used by OpenTelemetry Java 2.0 and higher. When a metric isn't available, the table suggests a similar metric or calculation where possible. For a full list of OpenTelemetry Java 2.0 metrics, see :ref:`java-otel-metrics-attributes`.

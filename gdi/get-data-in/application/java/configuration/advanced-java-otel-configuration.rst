@@ -236,7 +236,7 @@ Metrics collection settings
 
 The following settings control metrics collection for the Java agent:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :width: 100%
    :widths: 40 60
@@ -245,7 +245,7 @@ The following settings control metrics collection for the Java agent:
      - Description
    * - ``SPLUNK_METRICS_ENABLED``
      - Activates exporting metrics. See :ref:`java-otel-metrics-attributes` for more information.
-        - Default is ``false``.
+        - Default is ``true``.
         - If you activate memory profiling using the ``splunk.profiler.memory.enabled`` property, the value of ``splunk.metrics.enabled`` is set to ``true``. 
 
        System property: ``splunk.metrics.enabled``
@@ -254,7 +254,6 @@ The following settings control metrics collection for the Java agent:
    * - ``SPLUNK_METRICS_EXPORT_INTERVAL``
      - Deprecated. Use ``OTEL_METRIC_EXPORT_INTERVAL`` instead. See :new-page:`Periodic exporting MetricReader <https://opentelemetry.io/docs/specs/otel/configuration/sdk-environment-variables/#periodic-exporting-metricreader>` in the official OpenTelemetry documentation.
 
-.. note:: Metric support is experimental.
 
 .. _server-trace-information-java:
 
@@ -265,7 +264,7 @@ To connect Real User Monitoring (RUM) requests from mobile and web applications 
 
 .. code-block::
 
-   Access-Control-Expose-Headers: Server-Timing 
+   Access-Control-Expose-Headers: Server-Timing
    Server-Timing: traceparent;desc="00-<serverTraceId>-<serverSpanId>-01"
 
 The ``Server-Timing`` header contains the ``traceId`` and ``spanId`` parameters in ``traceparent`` format. For more information, see the Server-Timing and traceparent documentation on the W3C website.
@@ -282,12 +281,12 @@ The following server frameworks and libraries add ``Server-Timing`` information:
 Other settings
 ================================================
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :width: 100%
    :widths: 40 60
-   
+
    * - Environment variable
      - Description
    * - ``OTEL_JAVAAGENT_ENABLED``
-     - Globally activates the Java agent automatic instrumentation. The default value is ``true``. Useful for deactivating auto instrumentation in testing scenarios or pipelines. |br| |br| System property: ``otel.javaagent.enabled`` 
+     - Globally activates the Java agent automatic instrumentation. The default value is ``true``. Useful for deactivating auto instrumentation in testing scenarios or pipelines. |br| |br| System property: ``otel.javaagent.enabled``
