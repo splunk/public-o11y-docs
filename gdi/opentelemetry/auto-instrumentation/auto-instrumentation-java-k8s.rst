@@ -72,7 +72,7 @@ The following examples demonstrate how to set the attribute using each method:
 
     .. tab:: ``values.yaml`` (environment option)
 
-      Set the `environment`` option in the ``values.yaml`` file. This adds the ``deployment.environment`` attribute to all telemetry data the Collector receives, including data from automatically-instrumented pods.
+      Set the ``environment`` option in the ``values.yaml`` file. This adds the ``deployment.environment`` attribute to all telemetry data the Collector receives, including data from automatically-instrumented pods.
 
       .. code-block:: yaml
 
