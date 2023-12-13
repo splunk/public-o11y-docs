@@ -21,24 +21,33 @@ This deployment requires Collector release v0.33.0 or higher, which corresponds 
 Use the guided set-up
 ==========================
 
-Use the guided setup to deploy the Collector as a sidecar to ECS tasks. Choose one of the following Collector configuration options:
+Use the guided set-up to deploy the Collector as a sidecar to ECS tasks. Choose one of the following Collector configuration options:
 
 - **Default:** The ``/etc/otel/collector/fargate_config.yaml`` file in the Collector image is used for the Collector configuration.
 - **File:** Specify the file to use for the Collector configuration. See :ref:`ecs-observer-config-fargate`.
 - **AWS Parameter Store:** Specify the AWS Parameter Store key or ARN to use for the Collector configuration. See :ref:`ecs-observer-config-fargate`.
 
-Open the :new-page:`Amazon Fargate guided setup <https://login.signalfx.com/#/gdi/scripted/fargate/step-1?category=all&gdiState=%7B%22integrationId%22:%22fargate%22%7D>`. Optionally, you can navigate to the guided setup on your own:
+Access the guided set-up
+--------------------------------
+
+Open the :new-page:`Amazon Fargate guided setup <https://login.signalfx.com/#/gdi/scripted/fargate/step-1?category=all&gdiState=%7B%22integrationId%22:%22fargate%22%7D>`. 
+
+Optionally, you can navigate to the guided setup on your own:
 
 #. Log in to Splunk Observability Cloud.
 #. On the navigation menu, select :guilabel:`Data Management`.
 #. Select :guilabel:`Add Integration`.
 #. On the Integrate Your Data page, select the tile for :guilabel:`Amazon Fargate`.
-#. Follow the steps provided in the guided setup.
+#. Follow the steps provided in the guided set-up.
 
 Get started
 --------------------------------
 
-Copy the default Collector container definition shown in the example. Replace ``MY_SPLUNK_ACCESS_TOKEN`` and ``MY_SPLUNK_REALM`` with valid values. Update the image tag to the newest version, and then add the configuration to the ``containerDefinitions`` section of your task definition.
+Copy the default Collector container definition shown in the example and make the following changes: 
+
+* Replace ``MY_SPLUNK_ACCESS_TOKEN`` and ``MY_SPLUNK_REALM`` with valid values. 
+* Update the image tag to the newest version. 
+* Add the configuration to the ``containerDefinitions`` section of your task definition.
 
 .. code-block:: none
 
@@ -83,9 +92,7 @@ Assign a stringified array of metrics you want excluded to environment variable 
 Use a custom configuration
 ==============================
 
-The following example shows an excerpt of the container definition for the Collector configured to use custom configuration file ``/path/to/custom/config/file``. 
-
-``/path/to/custom/config/file`` is a placeholder value for the actual custom configuration file path and ``0.33.0`` is the latest image tag at present. The custom configuration file should be present in a volume attached to the task.
+The following example shows an excerpt of the container definition for the Collector configured to use custom configuration, where ``/path/to/custom/config/file`` is a placeholder value for the actual custom configuration file path and ``0.33.0`` is the latest image tag at present. The custom configuration file should be present in a volume attached to the task.
 
 .. code-block:: none
 
@@ -162,12 +169,14 @@ The results are written to /etc/ecs_sd_targets.yaml. The ``prometheus`` receiver
          processors: [batch, resourcedetection]
          exporters: [signalfx]
 
-Effects of the ARN pattern 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Set the ARN pattern in the ``ecs_observer`` configuration
+------------------------------------------------------------------
     
-Using this task ARN pattern causes the ``ecs_observer`` to discover targets in running revisions of task ``lorem-ipsum-task``. This means that when multiple revisions of task ``lorem-ipsum-task`` are running, the ``ecs_observer`` discovers targets outside the task in which the Collector sidecar container is running. In a sidecar deployment, the Collector and the monitored containers are in the same task, so metric targets must be within the task. This problem can be solved by using the complete task ARN as shown below. But, now the task ARN pattern must be updated to keep pace with task revisions.
+Using this task ARN pattern causes the ``ecs_observer`` to discover targets in running revisions of task ``lorem-ipsum-task``. This means that when multiple revisions of task ``lorem-ipsum-task`` are running, the ``ecs_observer`` discovers targets outside the task in which the Collector sidecar container is running. In a sidecar deployment, the Collector and the monitored containers are in the same task, so metric targets must be within the task. 
 
-  .. code-block:: none
+To solve this problem, use the complete task ARN as shown below. Note that you'll need to update the task ARN pattern to keep pace with task revisions.
+
+.. code-block:: none
 
   ...
   - arn_pattern: "^arn:aws:ecs:us-west-2:906383545488:task-definition/lorem-ipsum-task:3$"
@@ -184,7 +193,7 @@ For example, you can store the custom configuration YAML in a parameter called `
 
 .. code-block:: none
 
-   {
+  {
   "environment": [
     {
       "name": "SPLUNK_ACCESS_TOKEN",
@@ -204,7 +213,7 @@ For example, you can store the custom configuration YAML in a parameter called `
   "image": "quay.io/signalfx/splunk-otel-collector:0.33.0",
   "essential": true,
   "name": "splunk_otel_collector"
-   }
+  }
 
 .. note:: If you want a task to have read access to the Parameter Store, add the ``AmazonSSMReadOnlyAccess`` policy to the task role.
 

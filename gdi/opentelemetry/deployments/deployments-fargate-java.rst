@@ -194,7 +194,7 @@ Next, build and push the created image to your repo:
 3. Update the ECS task definition 
 ----------------------------------------------------------------
 
-Use this container image in your ECS task definition to make the splunk-otel-javaagent.jar file available to your application container. For example, Tomcat:
+Use this container image in your ECS task definition to make the splunk-otel-javaagent.jar file available to your application container, such as Tomcat:
 
 .. code-block:: 
 
