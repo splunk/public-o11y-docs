@@ -1,8 +1,8 @@
 .. _deployments-fargate:
 
-****************************
-Amazon ECS Fargate 
-****************************
+********************************************************
+Deploy the Collector with Amazon ECS Fargate 
+********************************************************
 
 .. meta::
       :description: Deploy the Splunk Observability Cloud OpenTelemetry Collector as a Daemon service in an Amazon ECS with AWS Fargate.

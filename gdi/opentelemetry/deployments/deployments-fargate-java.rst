@@ -336,7 +336,7 @@ Ensure the application container has the required environment variables for Java
                }
            ],
 
-Next, tell the application container to get a volume from the splunk-java-agent container. Also, specify that the application container depends on the ``splunk-java-agent`` container to ensure the jar file is available to the application container when it starts: 
+Next, tell the application container to get a volume from the ``splunk-java-agent`` container. Also, specify that the application container depends on the ``splunk-java-agent`` container to ensure the app can access the jar file when it starts: 
 
 .. code-block:: 
 
