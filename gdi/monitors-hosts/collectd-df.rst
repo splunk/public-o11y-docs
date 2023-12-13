@@ -6,7 +6,7 @@ Collectd df (deprecated)
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Collectd df plugin monitor. See benefits, install, configuration, and metrics
 
-.. note::  This integration is deprecated. 
+.. note::  This integration is deprecated in favor of :ref:`filesystems`. 
 
 The
 :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
