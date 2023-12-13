@@ -75,13 +75,13 @@ The following examples demonstrate how to set the attribute using each method:
 
 .. tabs::
 
-    .. tab:: ``values.yaml``
+    .. tab:: ``values.yaml`` (Environment option)
 
-      Add the environment variable using the ``extraEnvs`` option in the ``values.yaml`` file. This adds the ``deployment.environment`` attribute to all telemetry data the Collector receives, including data from automatically-instrumented pods.
+      Set the ``environment`` option in the ``values.yaml`` file. This adds the ``deployment.environment`` attribute to all telemetry data the Collector receives, including data from automatically-instrumented pods.
 
       .. code-block:: yaml
 
-          extraEnvs: [OTEL_RESOURCE_ATTRIBUTES=deployment.environment=prd]
+          environment: prd
 
     .. tab:: ``values.yaml`` (Instrumentation spec)
 
