@@ -15,6 +15,7 @@ Splunk Observability Cloud and the Splunk platform scenarios
     Splunk ITSI and Splunk Observability Cloud scenario <integration-scenario1>
 
 
-The following use case scenario demonstrates how you can use Splunk Observability Cloud with the Splunk platform:
+The following use case scenarios demonstrate how you can use Splunk Observability Cloud with the Splunk platform:
 
 - :ref:`integration-scenario1`
+- :ref:`logs-LOconnect-scenario`

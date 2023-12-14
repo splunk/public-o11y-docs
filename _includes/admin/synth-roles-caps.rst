@@ -37,3 +37,9 @@
     - No
     - No
     - No
+
+  * - :strong:`Create, read, or delete runners`
+    - Yes
+    - No
+    - No
+    - No

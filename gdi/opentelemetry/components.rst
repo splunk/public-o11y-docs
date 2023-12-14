@@ -45,8 +45,10 @@ Collector components
     components/splunk-apm-exporter
     components/splunk-hec-exporter
     components/splunk-hec-receiver
-    components/syslog-receiver      
+    components/syslog-receiver 
+    components/tcp-receiver     
     components/transform-processor
+    components/udp-receiver
     components/windowsperfcounters-receiver
     components/zipkin-receiver 
     components/zpages-extension    
@@ -178,6 +180,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
      - Logs
    * - ``tcplog``
      - Receives logs over TCP.
+     - Logs
+   * - ``udplog``
+     - Receives logs over UDP.
      - Logs
    * - ``windowseventlog``
      - Tails and parses logs from the Windows Event log API.
