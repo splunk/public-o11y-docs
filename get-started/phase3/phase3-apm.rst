@@ -7,13 +7,13 @@ Expansion and optimization: Application Performance Monitoring
 
 To expand and optimize Splunk Infrastructure Monitoring, you must do the following:
 
-1. :ref:`optimize-data <Optimize data usage. Analyze cardinality contribution of indexed span tags and processes.>
+1. :ref:`optimize-data <Optimize data usage. Analyze cardinality contribution of indexed span tags and processes.>'
 
-2. :ref:`bottlenecks <Identify and address bottlenecks in code and architecture using AlwaysOn Profiling.>
+2. :ref:`bottlenecks <Identify and address bottlenecks in code and architecture using AlwaysOn Profiling.>'
 
-3. :ref:`data-links-apm <Utilize Data Links to connect APM properties to relevant resources.>
+3. :ref:`data-links-apm <Utilize Data Links to connect APM properties to relevant resources.>'
 
-4. :ref:`onboard-apps <Onboard all production applications.>
+4. :ref:`onboard-apps <Onboard all production applications.>'
 
 
 .. _optimize-data:

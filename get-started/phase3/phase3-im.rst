@@ -6,29 +6,29 @@ Expansion and optimization: Splunk Infrastructure Monitoring
 
 To expand and optimize Splunk Infrastructure Monitoring, you must do the following:
    
-1. :ref:`expand-im1 <Build advanced dashboards and charts.>
+1. :ref:`expand-im1 <Build advanced dashboards and charts.>'
 
-2. :ref:`expand-im2 <Build advanced detectors.>
+2. :ref:`expand-im2 <Build advanced detectors.>'
 
-3. :ref:`expand-im3 <Automate token rotation process.>
+3. :ref:`expand-im3 <Automate token rotation process.>'
 
-4. :ref:`expand-im4 <Identify and review MTTR reduction.>
+4. :ref:`expand-im4 <Identify and review MTTR reduction.>'
 
-5. :ref:`expand-im5 <Utilize Metrics Pipeline Management tools to reduce cardinality of MTS.>
+5. :ref:`expand-im5 <Utilize Metrics Pipeline Management tools to reduce cardinality of MTS.>'
 
-6. :ref:`expand-im6 <Set up Network Explorer to monitor network environment.>
+6. :ref:`expand-im6 <Set up Network Explorer to monitor network environment.>'
 
-7. :ref:`expand-im7 <Analyze and troubleshoot usage, limits and throttles.>
+7. :ref:`expand-im7 <Analyze and troubleshoot usage, limits and throttles.>'
 
-8. :ref:`expand-im8 <Automate key workflows to further accelerate onboarding and standardize consistent practices.>
+8. :ref:`expand-im8 <Automate key workflows to further accelerate onboarding and standardize consistent practices.>'
 
-9. :ref:`expand-im9 <Identify more complex/customized use cases to further enhance value and ROI.>
+9. :ref:`expand-im9 <Identify more complex/customized use cases to further enhance value and ROI.>'
 
-10. :ref:`expand-im10 <Get internal feedback from O11y product with key user teams/admins and submit Splunk Ideas for Feature Requests.>
+10. :ref:`expand-im10 <Get internal feedback from O11y product with key user teams/admins and submit Splunk Ideas for Feature Requests.>'
 
-11. :ref:`expand-im11 <Onboard all production applications.>
+11. :ref:`expand-im11 <Onboard all production applications.>'
 
-12. :ref:`expand-im12 <Onboard all teams/users.>
+12. :ref:`expand-im12 <Onboard all teams/users.>'
 
 
 .. _expand-im1:
@@ -78,6 +78,7 @@ Splunk Distribution of OpenTelemetry Collector Helm chart allows you to configur
 - Run eBPF when TCP handshake is complete
 
 - Run eBPF when TCP receives an acknowledgement for a packet
+
 Network Explorer captures network data that is passed onto the reducer and then to the Splunk OTel Collector. Note that in order for Splunk OTel Collector to work with Network Explorer, it needs to be installed in gateway mode.
 Upon successful installation, the Network Explorer navigator will be present in the “Infrastructure” tab in the Splunk IM User Interface, you can also check the metrics sf.org.numNPMMetrics will be non zero.
 
