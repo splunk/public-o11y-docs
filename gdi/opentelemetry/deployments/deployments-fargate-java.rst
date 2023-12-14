@@ -23,38 +23,58 @@ Option 1: Bake splunk-otel-javaagent.jar into the application image
 
 Follow these steps to bake splunk-otel-javaagent.jar into the application image:
 
-1. Update the application's Docker file
+1. Update the application's Dockerfile
 ----------------------------------------------------------------
 
-With this option, the first step is to update the Dockerfile used to build the application container and download the splunk-otel-javaagent.jar file so it's available on the host.  
+With this option, the first step is to update the Dockerfile used to build the application container and download the splunk-otel-javaagent.jar file so it's available on the host. This example assumes the application container is based on Tomcat 9 running on Alpine Linux.
 
-This example assumes the application container is based on Tomcat 9 running on Alpine Linux: 
+To update the Dockerfile, run:
 
 .. code-block:: 
 
-  FROM tomcat:9.0-jre8-alpine
-  RUN apk add curl
-  
-  # Create a work directory to copy the agent artifacts
-  RUN mkdir -p /opt/splunk
+    FROM tomcat:9.0-jre8-alpine
 
-  # Download and extract agent artifacts to the work directory
-  RUN curl -L0 https://github.com/signalfx/splunk-otel-java/releases/latest/download/splunk-otel-javaagent.jar \
-  -o /opt/splunk/splunk-otel-javaagent.jar
+    RUN apk add curl
 
-2. Update the ECS task definition 
+    # Create a work directory to copy the agent artifacts
+    RUN mkdir -p /opt/splunk
+
+    # Download and extract agent artifacts to the work directory
+    RUN curl -L0 https://github.com/signalfx/splunk-otel-java/releases/latest/download/splunk-otel-javaagent.jar \
+    -o /opt/splunk/splunk-otel-javaagent.jar
+
+    WORKDIR /usr/local/tomcat/webapps
+
+    EXPOSE 8080
+
+    CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
+
+2. Push the image to your repo
 ----------------------------------------------------------------
 
-Next, update the ECS task definition to use the splunk-otel-javaagent.jar file, now part of our application container in the /opt/splunk directory: 
+Next, build and push the image to your repo. Replace ``username`` with your Docker Hub username: 
+
+.. code-block:: 
+
+    docker build --platform="linux/amd64" -t tomcat-with-splunk-java-agent:latest --no-cache .
+
+    docker tag tomcat-with-splunk-java-agent:latest username/tomcat-with-splunk-java-agent:latest 
+
+    docker push username/tomcat-with-splunk-java-agent:latest
+
+3. Update the ECS task definition 
+----------------------------------------------------------------
+
+After updating and pushing your Dockerfile, update the ECS task definition to use the splunk-otel-javaagent.jar file, now part of your application container in the /opt/splunk directory: 
 
 .. code-block:: 
 
   {
-    "family": "derek-java-example",
+    "family": "agent-baked-in-example",
     "containerDefinitions": [
         {
             "name": "tomcat",
-            "image": "tomcat:9.0",
+            "image": "username/tomcat-with-splunk-java-agent:latest",
             "cpu": 0,
             "portMappings": [
                 {
@@ -88,7 +108,7 @@ Next, update the ECS task definition to use the splunk-otel-javaagent.jar file, 
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/derek-java-example",
+                    "awslogs-group": "/ecs/agent-baked-in-example",
                     "awslogs-region": "eu-west-1",
                     "awslogs-stream-prefix": "ecs"
                 },
@@ -126,7 +146,7 @@ Next, update the ECS task definition to use the splunk-otel-javaagent.jar file, 
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/derek-java-example",
+                    "awslogs-group": "/ecs/agent-baked-in-example",
                     "awslogs-region": "eu-west-1",
                     "awslogs-stream-prefix": "ecs"
                 },
@@ -157,39 +177,39 @@ Follow these steps to use a separate container image:
 1. Create a Dockerfile for the Splunk Java agent
 ----------------------------------------------------------------
 
-First, create a Dockerfile which simply downloads the splunk-otel-javaagent.jar file and makes it available as a volume: 
+First, create a Dockerfile to download the splunk-otel-javaagent.jar file and make it available as a volume: 
 
 .. code-block:: 
 
-  FROM debian
+    FROM alpine:latest
 
-  # Install Required Packages
-  RUN apt-get update && apt-get -y install curl && apt-get -y install openssl && apt-get -y install bash && apt-get clean
+    RUN apk add --no-cache curl
 
-  # Create a work directory to copy the agent artifacts
-  ENV APP_HOME /opt/splunk
-  RUN mkdir -p ${APP_HOME}
-  WORKDIR ${APP_HOME}
+    # Create a directory for the agent artifacts
+    RUN mkdir -p /opt/splunk
+    WORKDIR /opt/splunk
 
-  # Download and extract agent artifacts to the work directory
-  RUN curl -L0 https://github.com/signalfx/splunk-otel-java/releases/latest/download/splunk-otel-javaagent.jar \
-  -o splunk-otel-javaagent.jar
+    # Download the Splunk Java agent
+    RUN curl -L0 https://github.com/signalfx/splunk-otel-java/releases/latest/download/splunk-otel-javaagent.jar \
+    -o splunk-otel-javaagent.jar
 
-  Expose the /opt/splunk directory as a shared volume
-  VOLUME ["/opt/splunk"]
+    # Expose the /opt/splunk directory as a shared volume
+    VOLUME ["/opt/splunk"]
 
-  CMD tail -f /dev/null
+    CMD tail -f /dev/null
 
-2. Push the image
+2. Push the image to your repo
 ----------------------------------------------------------------
 
-Next, build and push the created image to your repo: 
+Next, build and push the image to your repo. Replace ``username`` with your Docker Hub username: 
 
-.. code-block::
+.. code-block:: 
 
-  docker build -t splunk-java-agent:latest --no-cache .
-  docker tag splunk-java-agent:latest derekmitchell399/splunk-java-agent:latest 
-  docker push derekmitchell399/splunk-java-agent:latest
+    docker build --platform="linux/amd64" -t tomcat-with-splunk-java-agent:latest --no-cache .
+
+    docker tag tomcat-with-splunk-java-agent:latest username/tomcat-with-splunk-java-agent:latest 
+
+    docker push username/tomcat-with-splunk-java-agent:latest    
 
 3. Update the ECS task definition 
 ----------------------------------------------------------------
@@ -199,7 +219,7 @@ Use this container image in your ECS task definition to make the splunk-otel-jav
 .. code-block:: 
 
   {
-   "family": "derek-java-example",
+   "family": "agent-init-container-example",
    "containerDefinitions": [
        {
            "name": "tomcat",
@@ -247,7 +267,7 @@ Use this container image in your ECS task definition to make the splunk-otel-jav
                "logDriver": "awslogs",
                "options": {
                    "awslogs-create-group": "true",
-                   "awslogs-group": "/ecs/derek-java-example",
+                   "awslogs-group": "/ecs/agent-init-container-example",
                    "awslogs-region": "eu-west-1",
                    "awslogs-stream-prefix": "ecs"
                },
@@ -285,7 +305,7 @@ Use this container image in your ECS task definition to make the splunk-otel-jav
                "logDriver": "awslogs",
                "options": {
                    "awslogs-create-group": "true",
-                   "awslogs-group": "/ecs/derek-java-example",
+                   "awslogs-group": "/ecs/agent-init-container-example",
                    "awslogs-region": "eu-west-1",
                    "awslogs-stream-prefix": "ecs"
                },
@@ -294,7 +314,7 @@ Use this container image in your ECS task definition to make the splunk-otel-jav
        },
        {
            "name": "splunk-java-agent",
-           "image": "derekmitchell399/splunk-java-agent:latest",
+           "image": "username/splunk-java-agent:latest",
            "cpu": 0,
            "portMappings": [],
            "essential": false,
