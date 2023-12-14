@@ -1,4 +1,6 @@
-The following table shows the previous metric names and the current names used by OpenTelemetry Java 2.0 and higher. When a metric isn't available, the table suggests a similar metric or calculation where possible. For a full list of OpenTelemetry Java 2.0 metrics, see :ref:`java-otel-metrics-attributes`.
+The following table shows the previous metric names and the current names used by OpenTelemetry Java 2.0 and higher. When a metric isn't available, the table suggests a similar metric or calculation where possible. 
+
+OpenTelemetry Java 2.0 also brings new metrics. For a full list of OpenTelemetry Java 2.0 metrics, see :ref:`java-otel-metrics-attributes`.
 
 .. list-table::
   :header-rows: 1
