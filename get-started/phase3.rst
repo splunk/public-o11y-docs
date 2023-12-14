@@ -1,7 +1,7 @@
 .. _phase3:
 
-.. meta::
-    :description: Learn how to get started with Splunk Observability Cloud in 3 phases.
+Get started with Splunk Observability Cloud: Expansion and optimization phase
+*******************************************************************************
 
 .. toctree::
    :hidden:
@@ -11,15 +11,11 @@
    phase3/phase3-im
    phase3/phase3-excellence
 
-
-Get started with Splunk Observability Cloud: Expansion and optimization phase
-*******************************************************************************
-
 In the expansion and optimization phase, you solidify the best practices and frameworks that you've established in the pilot phase and apply them to a wider pool of infrastructure, applications, and teams. You begin by expanding and optimizing Splunk Application Performance Monitoring and Splunk Infrastructure Monitoring. Then you develop a Center of Excellence that helps to maintain best practices. See the following to learn how:
 
 - :ref:`phase3-im`
 
 - :ref:`phase3-apm`
 
-- :ref:`phase3excellence`
+- :ref:`phase3-excellence`
 
