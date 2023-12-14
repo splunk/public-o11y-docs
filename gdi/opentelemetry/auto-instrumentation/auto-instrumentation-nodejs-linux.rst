@@ -47,7 +47,7 @@ The installer script installs the Node.js package using the ``npm install`` comm
 
 .. tabs::
 
-    .. tab:: Installation script
+    .. tab:: Installer script
 
         Using the installer script, you can install the auto instrumentation package for Node.js and activate auto instrumentation for Node.js for either all supported Node.js applications on the host via the system-wide method or for only Node.js applications running as ``systemd`` services.
 
