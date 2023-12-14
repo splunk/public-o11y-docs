@@ -7,9 +7,9 @@
    :hidden:
    :maxdepth: 3
 
-   phase3-apm
-   phase3-im
-   phase3excellence
+   phase3/phase3-apm
+   phase3/phase3-im
+   phase3/phase3-excellence
 
 
 Get started with Splunk Observability Cloud: Expansion and optimization phase

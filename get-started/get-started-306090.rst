@@ -12,7 +12,7 @@ Get started with Splunk Observability Cloud
 
    phase1
    phase2/phase2
-   phase3/phase3
+   phase3
 
 Use this get-started guide to follow the most common journey for onboarding Splunk Observability Cloud in your organization. This document details the 30-60-90 days journey to help Developers and SREs get the most value out of the Splunk Infrastructure Monitoring and Splunk Application Performance Monitoring products.
 
