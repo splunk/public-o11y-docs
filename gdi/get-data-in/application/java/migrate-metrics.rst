@@ -24,7 +24,7 @@ If you're already instrumenting your Java services using the Splunk Distribution
 Migration manager
 ----------------------------------------------
 
-Use the Migration manager under ::guilabel:`Settings` > ::guilabel:`Data Management` to turn on migration procedures that help you migrate Java metrics to version 2.0.
+Use the Migration manager under ::guilabel:`Settings`, ::guilabel:`Data Management` to turn on migration procedures that help you migrate Java metrics to version 2.0.
 
 
 Metric data redundancy grace period

@@ -8,7 +8,7 @@ The following table shows the previous metric names and the current names used b
   * - Old name (Micrometer)
     - New name or OTel Java 2.0 equivalent
   * - ``runtime.jvm.classes.loaded``
-    - ``jvm.class.count`` |br| ``jvm.class.loaded``
+    - ``jvm.class.count``
   * - ``runtime.jvm.classes.unloaded``
     - ``jvm.class.unloaded``
   * - ``runtime.jvm.gc.concurrent.phase.time``
@@ -26,7 +26,7 @@ The following table shows the previous metric names and the current names used b
   * - ``runtime.jvm.gc.overhead``
     - No equivalent
   * - ``runtime.jvm.memory.usage.after.gc``
-    - ``jvm.memory.usage_after_last_gc{jvm.memory.pool.name=<long lived pools>,`` |br| ``jvm.memory.type=heap} / jvm.memory.limit{jvm.memory.pool.name=<long lived pools>,jvm.memory.type=heap}``
+    - No equivalent
   * - ``process.runtime.jvm.memory.allocated``
     - ``process.runtime.jvm.memory.allocated``
   * - ``process.runtime.jvm.memory.reclaimed``
@@ -50,9 +50,9 @@ The following table shows the previous metric names and the current names used b
   * - ``runtime.jvm.threads.peak``
     - No equivalent
   * - ``runtime.jvm.threads.states``
-    - ``jvm.thread.count``
+    - No equivalent
   * - ``db.pool.connections``
-    - ``db.client.connections.usage``
+    - No equivalent
   * - ``db.pool.connections.active``
     - ``db.client.connections.usage[state=used]``
   * - ``db.pool.connections.idle``
