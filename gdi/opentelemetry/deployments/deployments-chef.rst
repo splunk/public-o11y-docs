@@ -155,7 +155,7 @@ The following table shows the variables that can be configured for this Chef coo
      - Path to the Splunk OpenTelemetry Java agent. The default path is provided by the ``splunk-otel-auto-instrumentation`` package. If the path is changed from the default value, the path should be an existing file on the node. The specified path is added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect. 
      - ``/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar``
    * - ``auto_instrumentation_resource_attributes``
-     - Configure the OpenTelemetry instrumentation resource attributes, for example, ``deployment.environment=prod``. The specified resource attributes are added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
+     - Configure the OpenTelemetry instrumentation resource attributes, for example, ``deployment.environment=prd``. The specified resource attributes are added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
      - ``''``
    * - ``auto_instrumentation_service_name``
      - Explicitly sets the service name for the instrumented Java application, for example, ``my.service``. By default, the service name is automatically derived from the arguments of the Java executable on the node. However, if this variable is set to a non-empty value, the value overrides the derived service name and is added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
@@ -167,7 +167,7 @@ The following table shows the variables that can be configured for this Chef coo
      - Prevents the preloader from sending the ``splunk.linux-autoinstr.executions`` metric to the Collector.
      - ``false``
    * - ``auto_instrumentation_enable_profiler``
-     - Activates or deactibvates AlwaysOn CPU Profiling.
+     - Activates or deactivates AlwaysOn CPU Profiling.
      - ``false``
    * - ``auto_instrumentation_enable_profiler_memory``
      - Activates or deactivates AlwaysOn Memory Profiling.
@@ -175,6 +175,65 @@ The following table shows the variables that can be configured for this Chef coo
    * - ``auto_instrumentation_enable_metrics``
      - Activates or deactivates JVM metrics. 
      - ``false``
+
+.. _chef-zero-config-nodejs:
+
+Configure auto instrumentation for Node.js (Linux only)
+-------------------------------------------------------------
+
+You can automatically instrument your Node.js applications along with the Collector installation. Auto instrumentation removes the need to install and configure the Node.js agent separately. See :ref:`auto-instrumentation-nodejs` for more information. 
+
+The following table shows the variables that can be configured with this Chef cookbook:
+
+.. list-table::
+  :widths: 20 30 50
+  :header-rows: 1
+
+  * - Name
+    - Description
+    - Default value
+  * - ``with_auto_instrumentation``
+    - Whether to install or manage :ref:`auto-instrumentation-nodejs`. When set to ``true``, the ``splunk-otel-auto-instrumentation`` deb/rpm package is downloaded and installed from the Collector repository. The Node.js application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
+    - ``false``
+  * - ``auto_instrumentation_version``
+    - Version of the ``splunk-otel-auto-instrumentation`` package to install, for example, ``0.50.0``. The minimum supported version is ``0.87.0``. The Node.js application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
+    - ``latest``
+  * - ``auto_instrumentation_systemd``
+    - Whether to install the package using the ``--with-systemd-instrumentation`` instrumentation option. If set to ``true``, the auto instrumentation automatically adds environment variables to ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
+    - ``false``
+  * - ``auto_instrumentation_ld_so_preload``
+    - By default, the ``/etc/ld.so.preload`` file on the node is configured for the ``/usr/lib/splunk-instrumentation/libsplunk.so`` shared object library provided by the ``splunk-otel-auto-instrumentation`` package and is required for auto instrumentation. Configure this variable to include additional library paths, for example, ``/path/to/my.library.so``. The Node.js application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
+    - ``''``
+  * - ``auto_instrumentation_resource_attributes``
+    - Configure the OpenTelemetry instrumentation resource attributes, for example, ``deployment.environment=prd``. The specified resource attributes are added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The Node.js application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
+    - ``''``
+  * - ``auto_instrumentation_service_name``
+    - Explicitly sets the service name for the instrumented Node.js application, for example, ``my.service``. By default, the service name is automatically derived from the arguments of the Node.js executable on the node. However, if this variable is set to a non-empty value, the value overrides the derived service name and is added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The Node.js application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
+    - ``''``
+  * - ``auto_instrumentation_generate_service_name``
+    - Set to ``false`` to prevent the preloader from setting the ``OTEL_SERVICE_NAME`` environment variable.
+    - ``true``
+  * - ``auto_instrumentation_disable_telemetry``
+    - Prevents the preloader from sending the ``splunk.linux-autoinstr.executions`` metric to the Collector.
+    - ``false``
+  * - ``auto_instrumentation_enable_profiler``
+    - Activates or deactivates AlwaysOn CPU Profiling. To learn more, see :ref:`profiling-configuration-nodejs`.
+    - ``false``
+  * - ``auto_instrumentation_enable_profiler_memory``
+    - Activates or deactivates AlwaysOn Memory Profiling. To learn more, see :ref:`profiling-configuration-nodejs`.
+    - ``false``
+  * - ``auto_instrumentation_enable_metrics``
+    - Activates or deactivates runtime and custom metrics collection. To learn more, see :ref:`nodejs-otel-metrics`.
+    - ``false``
+  * - ``auto_instrumentation_otlp_endpoint``
+    - The Collector endpoint that receives metrics and traces from auto instrumentation.
+    - ``http://127.0.0.1:4317``
+  * - ``with_auto_instrumentation_sdks``
+    - The auto instrumentation language SDKs to include.
+    - ``%w(java nodejs)``
+  * - ``auto_instrumentation_npm_path``
+    - The installation path for the auto instrumentation Node.js package.
+    - ``npm``
 
 Attributes for Windows
 ===========================
