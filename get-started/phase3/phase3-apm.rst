@@ -6,7 +6,7 @@ Expansion and optimization: Application Performance Monitoring
 *******************************************************************************
 
 To expand and optimize Splunk Infrastructure Monitoring, you must do the following:
-   :ref:`Field extraction processors <field-extraction-processors>`
+
 1. :ref:`Optimize data usage. Analyze cardinality contribution of indexed span tags and processes. <optimize-data>'
 
 2. :ref:`Identify and address bottlenecks in code and architecture using AlwaysOn Profiling. <bottlenecks>'
