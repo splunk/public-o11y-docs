@@ -102,13 +102,15 @@ The installer script installs the Node.js package using the ``npm install`` comm
                     sudo sh /tmp/splunk-otel-collector.sh --with-systemd-instrumentation --deployment-environment prod \
                     --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN> \
                     --enable-profiler --enable-profiler-memory --enable-metrics
+
+                Next, ensure the collector service is running and restart your Node.js application(s). See :ref:`verify-js-agent-install` and :ref:`start-restart-js-apps`.  
+
     
     .. tab:: Chef
 
         See :ref:`chef-zero-config-nodejs`.
 
 
-    Next, ensure the collector service is running and restart your Node.js application(s). See :ref:`verify-js-agent-install` and :ref:`start-restart-js-apps`.  
 
 .. _verify-js-agent-install:
 
