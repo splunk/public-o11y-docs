@@ -108,7 +108,7 @@ The installer script installs the Node.js package using the ``npm install`` comm
     
     .. tab:: Chef
 
-        See :ref:`chef-zero-config-nodejs`.
+        See :ref:`chef-zero-config`.
 
 
 

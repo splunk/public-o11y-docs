@@ -146,7 +146,7 @@ You can install the ``splunk-otel-auto-instrumentation`` package in the followin
 
    .. tab:: Chef
 
-      See :ref:`chef-zero-config-java`.
+      See :ref:`chef-zero-config`.
 
    .. tab:: Puppet
 
