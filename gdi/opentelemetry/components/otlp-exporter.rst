@@ -9,7 +9,9 @@ OTLP exporter
 
 The OTLP exporter sends metrics, traces, and logs through gRPC using the OTLP format. See :ref:`otel-data-processing` for more information. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. By default, this exporter requires TLS and provides queued retry capabilities.
 
-.. note:: For information on the OTLP/HTTP exporter, see :ref:`otlphttp-exporter`.
+Read more about the OTLP format at the OTel repo :new-page:`OpenTelemetry Protocol Specification <https://github.com/open-telemetry/opentelemetry-proto/blob/main/docs/specification.md>`.
+
+.. note:: For information on the OTLP/HTTP exporter, see :ref:`otlphttp-exporter`. For information on the OTLP receiver, see :ref:`otlp-receiver`.
 
 Get started
 ======================

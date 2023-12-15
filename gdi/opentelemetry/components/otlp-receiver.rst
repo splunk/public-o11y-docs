@@ -7,9 +7,11 @@ OTLP receiver
 .. meta::
       :description: The OTLP receiver retrieves data through gRPC or HTTP using OTLP format.
 
-The OTLP receiver obtains data via gRPC or HTTP using the OTLP format. The supported pipeline is ``logs``. See :ref:`otel-data-processing` for more information.
+The OTLP receiver obtains data via gRPC or HTTP using the OTLP format. The supported pipelines are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
 Read more about the OTLP format at the OTel repo :new-page:`OpenTelemetry Protocol Specification <https://github.com/open-telemetry/opentelemetry-proto/blob/main/docs/specification.md>`.
+
+.. note:: For information on the OTLP exporter, see :ref:`otlp-exporter`.
 
 .. _get-started-otlp-receiver:
 
