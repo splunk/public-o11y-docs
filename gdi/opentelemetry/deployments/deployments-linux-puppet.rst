@@ -1,8 +1,8 @@
 .. _deployment-linux-puppet:
 
-**********************
-Puppet for Linux
-**********************
+********************************************************
+Deploy the Collector with Puppet for Linux 
+********************************************************
 
 .. meta::
       :description: Describes how to install the Splunk Observability Cloud OpenTelemetry Collector Puppet module on Linux. 
@@ -23,7 +23,7 @@ On Linux systems, the :new-page:`puppetlabs/stdlib module <https://forge.puppet.
     
     systemd is required to be installed on the host for service management.
 
-Using the module
+Use the Puppet module
 ============================
 
 To use this module, include the ``splunk_otel_collector`` class in your manifests with the supported parameters (see :ref:`modify-class-parameters-linux` for descriptions of the available parameters). For example, the following deployment definition is the simplest deployment definition with the default parameters (replace ``VERSION`` with the desired Collector version, ``SPLUNK_ACCESS_TOKEN`` with your Splunk access token to authenticate requests, and ``SPLUNK_REALM`` for the realm to send the data to):
