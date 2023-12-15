@@ -63,7 +63,7 @@ You can then add the transform processor to any compatible pipeline. For example
    service:
      pipelines:
        traces:
-         receivers: [jaeger, otlp, smartagent/signalfx-forwarder, zipkin]
+         receivers: [jaeger, otlp, zipkin]
          processors:
          - transform
          - memory_limiter
@@ -71,7 +71,7 @@ You can then add the transform processor to any compatible pipeline. For example
          - resourcedetection
          exporters: [sapm, signalfx]
        metrics:
-         receivers: [hostmetrics, otlp, signalfx, smartagent/signalfx-forwarder]
+         receivers: [hostmetrics, otlp, signalfx]
          processors:
          - transform
          - memory_limiter
