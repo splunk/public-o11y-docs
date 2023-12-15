@@ -205,11 +205,11 @@ Next, build and push the image to your repo. Replace ``username`` with your Dock
 
 .. code-block:: 
 
-    docker build --platform="linux/amd64" -t tomcat-with-splunk-java-agent:latest --no-cache .
+    docker build --platform="linux/amd64" -t splunk-java-agent:latest --no-cache .
 
-    docker tag tomcat-with-splunk-java-agent:latest username/tomcat-with-splunk-java-agent:latest 
+    docker tag splunk-java-agent:latest username/splunk-java-agent:latest 
 
-    docker push username/tomcat-with-splunk-java-agent:latest    
+    docker push username/splunk-java-agent:latest
 
 3. Update the ECS task definition 
 ----------------------------------------------------------------
