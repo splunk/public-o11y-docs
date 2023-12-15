@@ -143,7 +143,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`oracledb` (``oracledb``) |br|
      - Connects to an Oracle Database instance and obtains metrics such as physical reads, CPU, time, and others.
      - Metrics
-   * - ``otlp``
+   * - :ref:`otlp-receiver` (``otlp``)
      - Receives data through gRPC or HTTP using OTLP format.
      - Metrics, logs, traces
    * - :ref:`postgresql-receiver` (``postgresql``)
@@ -182,10 +182,10 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`syslog-receiver` (``syslog``)
      - Parses syslog messages received over TCP or UDP.
      - Logs
-   * - ``tcplog``
+   * - :ref:`tcp-logs-receiver` (``tcplog``)
      - Receives logs over TCP.
      - Logs
-   * - ``udplog``
+   * - :ref:`udp-logs-receiver` (``udplog``) 
      - Receives logs over UDP.
      - Logs
    * - ``windowseventlog``
