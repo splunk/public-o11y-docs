@@ -33,6 +33,7 @@ Collector components
     components/mongodb-atlas-receiver
     components/oracledb-receiver
     components/otlp-exporter
+    components/otlp-receiver         
     components/otlphttp-exporter            
     components/postgresql-receiver
     components/prometheus-receiver

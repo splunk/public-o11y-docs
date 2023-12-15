@@ -47,48 +47,64 @@ Read about valid syntax at :new-page:`gRPC Name Resolution <https://github.com/g
 Advanced configuration
 -------------------------------------------------
 
-Several helper files are leveraged to provide additional capabilities automatically:
+Use the following helper files to provide additional capabilities automatically:
 
-gRPC settings including CORS
-HTTP settings
-TLS and mTLS settings
-Auth settings
+* :new-page:`gRPC settings <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/configgrpc/README.md>` including CORS
+* :new-page:`HTTP settings <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/confighttp/README.md>`
+* :new-page:`TLS and mTLS settings <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/configtls/README.md>`
+* :new-page:`Auth settings <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/configauth/README.md>`
 
-Writing with HTTP/JSON
+Write with HTTP/JSON
 =================================================
 
-The OTLP receiver can receive trace export calls via HTTP/JSON in addition to gRPC. The HTTP/JSON address is the same as gRPC as the protocol is recognized and processed accordingly. Note the serialization format needs to be protobuf JSON.
+The OTLP receiver can receive trace export calls via HTTP/JSON in addition to gRPC. The HTTP/JSON address is the same as gRPC as the protocol is recognized and processed accordingly. Note the serialization format needs to be protobuf JSON. The default port is ``4318``. 
 
-The HTTP/JSON configuration also provides traces_url_path, metrics_url_path, and logs_url_path configuration to allow the URL paths that signal data needs to be sent to be modified per signal type. These default to /v1/traces, /v1/metrics, and /v1/logs respectively.
+The HTTP/JSON configuration also provides ``traces_url_path``, ``metrics_url_path``, and ``logs_url_path`` configuration to allow the URL paths that signal data needs to be sent to be modified per signal type. These default to ``/v1/traces``, ``/v1/metrics``, and ``/v1/logs`` respectively.
 
-To write traces with HTTP/JSON, POST to [address]/[traces_url_path] for traces, to [address]/[metrics_url_path] for metrics, to [address]/[logs_url_path] for logs. The default port is 4318. When using the otlphttpexporter peer to communicate with this component, use the traces_endpoint, metrics_endpoint, and logs_endpoint settings in the otlphttpexporter to set the proper URL to match the address and URL signal path on the otlpreceiver.
+To write traces with HTTP/JSON, POST to ``[address]/[traces_url_path]`` for traces, to ``[address]/[metrics_url_path]`` for metrics, or to ``[address]/[logs_url_path]`` for logs. 
 
-CORS (Cross-origin resource sharing)
+Work with the OTLP HTTP exporter
 -------------------------------------------------
 
-The HTTP/JSON endpoint can also optionally configure CORS under cors:. Specify what origins (or wildcard patterns) to allow requests from as allowed_origins. To allow additional request headers outside of the default safelist, set allowed_headers. Browsers can be instructed to cache responses to preflight requests by setting max_age.
+When using the ``otlphttpexporter`` peer to communicate with this component, use the ``traces_endpoint``, ``metrics_endpoint``, and ``logs_endpoint`` settings in the ``otlphttpexporter`` to set the proper URL to match the address and URL signal path on the ``otlpreceiver``. 
 
-receivers:
-  otlp:
-    protocols:
-      http:
-        endpoint: "localhost:4318"
-        cors:
-          allowed_origins:
-            - http://test.com
-            # Origins can have wildcards with *, use * by itself to match any origin.
-            - https://*.example.com
-          allowed_headers:
-            - Example-Header
-          max_age: 7200
-opentelemetry-collector/receiver/otlpreceiver/README.md at main · open-telemetry/opentelemetry-collector
+See more at :ref:`otlphttp-exporter`.
+
+Cross-origin resource sharing (CORS)
+-------------------------------------------------
+
+The HTTP/JSON endpoint can also optionally configure CORS under ``cors:``:
+
+* Use ``allowed_origins`` to specify what origins (or wildcard patterns) to allow requests from. 
+* Set ``allowed_headers`` to allow additional request headers outside of the default safelist. 
+* Set ``max_age`` to instruct browsers to cache responses to preflight requests.
+
+Learn more at :new-page:`https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS`.
+
+See the following sample config:
+
+.. code-block:: yaml
+
+  receivers:
+    otlp:
+      protocols:
+        http:
+          endpoint: "localhost:4318"
+          cors:
+            allowed_origins:
+              - http://test.com
+              # Origins can have wildcards with *, use * by itself to match any origin.
+              - https://*.example.com
+            allowed_headers:
+              - Example-Header
+            max_age: 7200
 
 .. _otlp-receiver-settings:
 
 Settings
 =================================================
 
-The following table shows the configuration options for the TCP receiver:
+The following table shows the configuration options for the OTLP receiver:
 
 .. raw:: html
 
