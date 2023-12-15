@@ -23,6 +23,7 @@ Collector components
     components/health-check-extension
     components/host-metrics-receiver
     components/jaeger-receiver    
+    components/jmx-receiver    
     components/kubelet-stats-receiver
     components/kubernetes-attributes-processor
     components/kubernetes-cluster-receiver
@@ -112,6 +113,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`jaeger-receiver` (``jaeger``)
      - Receives trace data in Jaeger format.
      - Traces
+   * - :ref:`jmx-receiver` (``jmx``)
+     - Works in conjunction with the :new-page:`OpenTelemetry JMX Metric Gatherer <https://github.com/open-telemetry/opentelemetry-java-contrib/blob/main/jmx-metrics/README.md>` to report metrics from an MBean server.
+     - Metrics
    * - ``journald``
      - Parses Journald events from the systemd journal. The ``journalctl`` binary must be in the same ``$PATH`` of the agent.
      - Logs
