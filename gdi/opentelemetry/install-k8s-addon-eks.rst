@@ -5,7 +5,7 @@ Splunk Distribution of the OpenTelemetry Collector as EKS Add-on
 *******************************************************************************
 
 .. meta::
-    :description: Kubernetes (EKS Add-on)
+    :description: Kubernetes via the EKS Add-on installation
 
 Amazon Elastic Kubernetes Service (EKS) is a managed container service to run and scale Kubernetes applications in the AWS cloud. Splunk Observability Cloud provides an EKS Add-on available in the AWS marketplace that allows you to seamlessly deploy Splunk Distribution of the OpenTelemetry Collector to Amazon EKS clusters to track EKS performance by namespace, cluster, pod or organizational concepts such as team or application. 
 
