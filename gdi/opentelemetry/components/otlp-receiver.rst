@@ -18,7 +18,7 @@ Read more about the OTLP format at the OTel repo :new-page:`OpenTelemetry Protoc
 Get started
 =================================================
 
-.. note:: The OTLP receiver is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector. See more at :ref:`otel-configuration-ootb`.
+.. note:: The OTLP receiver is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector. See :ref:`otel-configuration-ootb`.
 
 Follow these steps to configure and activate the component:
 
