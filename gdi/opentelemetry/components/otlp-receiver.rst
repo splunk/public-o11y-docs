@@ -5,9 +5,9 @@ OTLP receiver
 *******************************************
 
 .. meta::
-      :description: The OTLP receiver retrieves data through gRPC or HTTP using OTLP format.
+      :description: The OTLP receiver obtains data through gRPC or HTTP using OTLP format.
 
-The OTLP receiver obtains data via gRPC or HTTP using the OTLP format. The supported pipelines are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
+The OTLP receiver allows the Collector to receive data via gRPC or HTTP using the OTLP format. The supported pipelines are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
 Read more about the OTLP format at the OTel repo :new-page:`OpenTelemetry Protocol Specification <https://github.com/open-telemetry/opentelemetry-proto/blob/main/docs/specification.md>`.
 
@@ -17,6 +17,8 @@ Read more about the OTLP format at the OTel repo :new-page:`OpenTelemetry Protoc
 
 Get started
 =================================================
+
+.. note:: The OTLP receiver is included ib the default configuration of the Splunk Distribution of the OpenTelemetry Collector. See more at :ref:`otel-configuration-ootb`.
 
 Follow these steps to configure and activate the component:
 
