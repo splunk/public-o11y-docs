@@ -7,7 +7,7 @@ Splunk Distribution of the OpenTelemetry Collector as an AWS EKS Add-on
 .. meta::
     :description: Kubernetes via the EKS Add-on installation
 
-Amazon Elastic Kubernetes Service (EKS) is a managed container service to run and scale Kubernetes applications in the AWS cloud. Splunk Observability Cloud provides an EKS Add-on available in the AWS marketplace that allows you to seamlessly deploy Splunk Distribution of the OpenTelemetry Collector to Amazon EKS clusters to track EKS performance by namespace, cluster, pod or organizational concepts such as team or application. 
+Amazon Elastic Kubernetes Service (EKS) is a managed container service to run and scale Kubernetes applications in the Amazon Web services (AWS) cloud. Splunk Observability Cloud provides an EKS Add-on available in the AWS marketplace that allows you to seamlessly deploy the Splunk Distribution of the OpenTelemetry Collector to Amazon EKS clusters to track EKS performance by namespace, cluster, pod or organizational concepts such as team or application. 
 
 For more information, read the official AWS documentation at :new-page:`Amazon EKS add-ons <https://docs.aws.amazon.com/eks/latest/userguide/eks-add-ons.html>`.
 
@@ -18,7 +18,7 @@ For more information, read the official AWS documentation at :new-page:`Amazon E
 Benefits
 =============================================================================================
 
-The Amazon EKS Add-on "Splunk Distribution of the OpenTelemetry Collector":
+The "Splunk Distribution of the OpenTelemetry Collector" Amazon EKS Add-on:
 
 * Provides simplified installation, configuration and management of Amazon EKS clusters. 
 * Includes the latest security patches, bug fixes, and are validated by AWS to work with Amazon EKS. 
@@ -26,7 +26,7 @@ The Amazon EKS Add-on "Splunk Distribution of the OpenTelemetry Collector":
 Limitations
 =============================================================================================
 
-While this deployment approach offers numerous advantages, be aware of these limitations:
+While the Add-on deployment approach offers numerous advantages, be aware of these limitations:
 
 * The EKS Add-on integration doesn't support Helm hooks and Helm subcharts. Consequently, certain features that rely on these capabilities are unavailable, such as:
 
@@ -48,7 +48,7 @@ To install the EKS Add-on "Splunk Distribution of the OpenTelemetry Collector" f
 
 .. _addon-aws-eks-one:
 
-Step 1: Subscribe to the EKS Add-on in AWS Marketplace
+Step 1: Subscribe to the EKS Add-on in the AWS Marketplace
 ------------------------------------------------------------
 
 In your AWS Marketplace, ensure that:
@@ -84,19 +84,19 @@ For ``splunkObservability``:
 
 .. _addon-aws-eks-three:
 
-Step 3: Add the Add-on to EKS clusters
+Step 3: Add the Add-on to your EKS clusters
 ------------------------------------------------------------
 
 Follow the steps outlined in the Amazon EKS User Guide to add an Add-on using ``eksctl``, the AWS Management Console, or the AWS CLI.
 
-Find the Amazon EKS User guide at :new-page:`Managing Amazon EKS add-ons <https://docs.aws.amazon.com/eks/latest/userguide/managing-add-ons.html#creating-an-add-on>`.
+Find the Amazon EKS User Guide at :new-page:`Managing Amazon EKS add-ons <https://docs.aws.amazon.com/eks/latest/userguide/managing-add-ons.html#creating-an-add-on>`.
 
 .. _addon-aws-eks-four:
 
 Step 4: Configure the Add-on
 ------------------------------------------------------------
 
-To configure the EKS Add-on "Splunk Distribution of the OTel Collector", prepare a YAML file tailored to your Splunk set-up, replacing placeholder values with your specific configuration details. 
+To configure the "Splunk Distribution of the OTel Collector" EKS Add-on, prepare a YAML file tailored to your Splunk set-up, replacing placeholder values with your specific configuration details. 
 
 .. caution:: For security reasons, avoid including tokens or any sensitive data in the configuration file, as EKS Add-on configurations are exposed within the EKS web console.
 
