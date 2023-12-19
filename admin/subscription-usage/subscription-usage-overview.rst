@@ -19,6 +19,7 @@ Monitor and manage subscription usage and billing
    Logs subscription usage <lo-billing-usage>
    RUM subscription usage <rum-subscription-usage>
    View parent-child subscription usage <parent-child-orgs>
+   Synthetic Monitoring subscription usage <synthetics-usage>
 
 View Splunk Observability Cloud subscription usage data to monitor your organization's usage against its subscription plan and entitlements. 
 
