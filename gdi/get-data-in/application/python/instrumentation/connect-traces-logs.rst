@@ -28,7 +28,7 @@ The integration uses the following logging format by default:
 
 .. code-block::
 
-   %(asctime)s %(levelname)s [%(name)s] [%(filename)s:%(lineno)d] [trace_id=%(otelTraceID)s span_id=%(otelSpanID)s resource.service.name=%(otelServiceName)s] - %(message)s
+   %(asctime)s %(levelname)s [%(name)s] [%(filename)s:%(lineno)d] [trace_id=%(otelTraceID)s span_id=%(otelSpanID)s service.name=%(otelServiceName)s] - %(message)s
 
 Customize format and level of log statements
 ---------------------------------------------------
