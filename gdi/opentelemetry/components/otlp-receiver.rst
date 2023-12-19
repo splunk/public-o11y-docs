@@ -7,7 +7,7 @@ OTLP receiver
 .. meta::
       :description: The OTLP receiver accepts OTLP formatted data over gRPC or HTTP.
 
-The OTLP receiver allows the Collector to receive data via gRPC or HTTP using the OTLP format. The supported pipelines are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
+The OTLP receiver allows the Collector to receive data over gRPC or HTTP using the OTLP format. The supported pipelines are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
 Read more about the OTLP format at the OTel repo :new-page:`OpenTelemetry Protocol Specification <https://github.com/open-telemetry/opentelemetry-proto/blob/main/docs/specification.md>`.
 
@@ -18,7 +18,7 @@ Read more about the OTLP format at the OTel repo :new-page:`OpenTelemetry Protoc
 Get started
 =================================================
 
-.. note:: The OTLP receiver is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector. See :ref:`otel-configuration-ootb`.
+.. note:: The OTLP receiver is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector. See :ref:`otel-configuration-ootb` for details, such as the default ports for HTTP and gRCP requests. You can customize your configuration any time as explained in this document.
 
 Follow these steps to configure and activate the component:
 
@@ -31,7 +31,7 @@ Follow these steps to configure and activate the component:
 Sample configurations
 -------------------------------------------------
 
-To activate the OTLP receiver add ``otlp`` to the ``receivers`` section of your collector configuration file and include it in your desired pipelines, as in the following example configuration:
+To activate the OTLP receiver add ``otlp`` to the ``receivers`` section of your collector configuration file, as in the following example configuration:
 
 .. code-block:: yaml
 
@@ -39,7 +39,9 @@ To activate the OTLP receiver add ``otlp`` to the ``receivers`` section of your 
     otlp:
       protocols:
         grpc:
+          endpoint: "${HOST_LISTEN_INTERFACE}:1234"
         http:
+          endpoint: "${HOST_LISTEN_INTERFACE}:5678"        
 
 You can specify the ``endpoint``, the ``host:port`` to which the receiver is going to receive data. 
 
@@ -47,6 +49,17 @@ You can specify the ``endpoint``, the ``host:port`` to which the receiver is goi
 * ``endpoint`` defaults to ``0.0.0.0:4318`` for HTTP 
 
 Read about valid syntax at :new-page:`gRPC Name Resolution <https://github.com/grpc/grpc/blob/master/doc/naming.md>`.
+
+Next, add the receiver to the service pipelines section of your configuration file for the data types you want to receive, for example: 
+
+.. code-block:: yaml
+
+  service:
+    pipelines:
+      traces:
+        receivers: [otlp]
+      metrics:
+        receivers: [otlp]
 
 Advanced configuration
 -------------------------------------------------
