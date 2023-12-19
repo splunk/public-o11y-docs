@@ -107,20 +107,24 @@ For ``splunkPlatform``:
     splunkPlatform:
         endpoint: http://localhost:8088/services/collector
         token: <YOUR_HEC_TOKEN>
-    clusterName: my-aws-eks-cluster
+    clusterName: <EKS_CLUSTER_NAME>
     cloudProvider: aws
     distribution: eks
+
+Replace ``<YOUR_HEC_TOKEN>`` with your actual Splunk Platform HEC token, and replace ``<EKS_CLUSTER_NAME>`` with your actual EKS cluster's name.
 
 For ``splunkObservability``:
 
 .. code-block:: yaml
 
     splunkObservability:
-        accessToken: <YOUR_HEC_TOKEN>
-        realm: us0
-    clusterName: my-aws-eks-cluster
+        accessToken: <YOUR_ACCESS_TOKEN>
+        realm: <REALM>
+    clusterName: <EKS_CLUSTER_NAME>
     cloudProvider: aws
     distribution: eks
+
+Replace ``<YOUR_ACCESS_TOKEN>`` and ``<REALM>`` with your actual Splunk Observability Cloud access token within the corresponding realm, and replace ``<EKS_CLUSTER_NAME>`` with your actual EKS cluster's name.
 
 For more specific configuration information, see :ref:`otel-install-k8s`.
 
@@ -155,7 +159,7 @@ For ``splunkPlatform``:
 
     splunkPlatform:
         endpoint: http://localhost:8088/services/collector
-    clusterName: my-aws-eks-cluster
+    clusterName: <EKS_CLUSTER_NAME>
     cloudProvider: aws
     distribution: eks
 
@@ -170,8 +174,8 @@ For ``splunkObservability``:
 .. code-block:: yaml
 
     splunkObservability:
-        realm: us0
-    clusterName: my-aws-eks-cluster
+        realm: <REALM>
+    clusterName: <EKS_CLUSTER_NAME>
     cloudProvider: aws
     distribution: eks
 
@@ -196,7 +200,7 @@ For ``splunkPlatform``:
         --from-literal=splunk_platform_hec_token=<YOUR_HEC_TOKEN> \
         -n splunk-monitoring
 
-Replace ``<YOUR_ACCESS_TOKEN>`` with your actual Splunk Platform HEC token.
+Replace ``<YOUR_HEC_TOKEN>`` with your actual Splunk Platform HEC token.
 
 For ``splunkObservability``:
 
