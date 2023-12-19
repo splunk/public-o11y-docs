@@ -43,7 +43,7 @@ To activate the OTLP receiver add ``otlp`` to the ``receivers`` section of your 
         http:
           endpoint: "${HOST_LISTEN_INTERFACE}:5678"        
 
-You can specify the ``endpoint``, the ``host:port`` to which the receiver is going to receive data. 
+You can specify the ``endpoint``, or the ``host:port`` to which the receiver is going to receive data. 
 
 * ``endpoint`` defaults to ``0.0.0.0:4317`` for gRCP 
 * ``endpoint`` defaults to ``0.0.0.0:4318`` for HTTP 
@@ -71,26 +71,40 @@ Use the following helper files to provide additional capabilities automatically:
 * :new-page:`TLS and mTLS settings <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/configtls/README.md>`
 * :new-page:`Auth settings <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/configauth/README.md>`
 
-Write with HTTP/JSON
+Protobuf payloads
 =================================================
 
-The OTLP receiver can receive trace export calls via HTTP/JSON in addition to gRPC. The HTTP/JSON address is the same as gRPC as the protocol is recognized and processed accordingly. Note the serialization format needs to be protobuf JSON. The default port is ``4318``. 
+OTLP is implemented over gRPC and HTTP using a Protocol Buffers schema for the payloads. 
 
-The HTTP/JSON configuration also provides ``traces_url_path``, ``metrics_url_path``, and ``logs_url_path`` configuration to allow the URL paths that signal data needs to be sent to be modified per signal type. These default to ``/v1/traces``, ``/v1/metrics``, and ``/v1/logs`` respectively.
+Protocol Buffers is an agnostic mechanism that serializes structured data. You can define how you want your data to be structured once, then you can use special generated source code to write and read your structured data using a variety of languages.
 
-To write traces with HTTP/JSON, POST to ``[address]/[traces_url_path]`` for traces, to ``[address]/[metrics_url_path]`` for metrics, or to ``[address]/[logs_url_path]`` for logs. 
+Learn more at :new-page:`Protocol Buffers documentation <https://protobuf.dev/overview/>`.
 
-Work with the OTLP HTTP exporter
+Work with OTLP/gRPC 
+-------------------------------------------------
+
+If you use gRPC, after establishing the underlying gRPC transport, the OTLP receiver will start to continoulsy receive requests with telemetry data, and needs to respond to each request. For more information, refer to the official OpenTelemetry documentation at :new-page:`OTLP/gRCP Specification <https://opentelemetry.io/docs/specs/otlp/#otlpgrcp>`. This includes details on requests, responses, and OTLP/gRPC throttling.
+
+Work with OTLP/HTTP 
+-------------------------------------------------
+
+If you use HTTP, the Protobuf payloads can be encoded either in binary or JSON format. OTLP/HTTP uses HTTP ``POST`` requests to send telemetry data to the receiver. For more information, refer to the official OpenTelemetry documentation at :new-page:`OTLP/HTTP Specification <https://opentelemetry.io/docs/specs/otlp/#otlphttp>`. This includes details on encoding, requests, responses, and throttling.
+
+The OTLP/HTTP configuration also provides ``traces_url_path``, ``metrics_url_path``, and ``logs_url_path`` configuration to allow the URL paths that signal data needs to be sent to be modified per signal type. These default to ``/v1/traces``, ``/v1/metrics``, and ``/v1/logs`` respectively.
+
+To write traces with HTTP, POST to ``[address]/[traces_url_path]`` for traces, to ``[address]/[metrics_url_path]`` for metrics, or to ``[address]/[logs_url_path]`` for logs. 
+
+Work with the OTLP/HTTP exporter
 -------------------------------------------------
 
 When using the ``otlphttpexporter`` peer to communicate with this component, use the ``traces_endpoint``, ``metrics_endpoint``, and ``logs_endpoint`` settings in the ``otlphttpexporter`` to set the proper URL to match the address and URL signal path on the ``otlpreceiver``. 
 
 See more at :ref:`otlphttp-exporter`.
 
-Cross-origin resource sharing (CORS)
+Use Cross-origin resource sharing (CORS)
 -------------------------------------------------
 
-The HTTP/JSON endpoint can also optionally configure CORS under ``cors:``:
+The HTTP endpoint can also optionally configure CORS under ``cors:``:
 
 * Use ``allowed_origins`` to specify what origins (or wildcard patterns) to allow requests from. 
 * Set ``allowed_headers`` to allow additional request headers outside of the default safelist. 
