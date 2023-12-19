@@ -7,7 +7,7 @@ Collect logs from your AWS services
 .. meta::
   :description: Collect logs from your AWS services in Splunk Observability Cloud.
 
-.. caution:: Splunk Log Observer is no longer available for new users. You can continue to use Log Observer if you already have an entitlement.
+.. caution:: Splunk Log Observer is no longer available for new users. If you have a Log Observer entitlement, you must transition to Splunk Cloud Platform or Splunk Enterprise. Read more at :ref:`lo-transition`.
 
 When setting up an AWS connection, you can choose to import logs from a Cloudwatch log group or an S3 bucket. 
 
