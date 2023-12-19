@@ -5,7 +5,7 @@ OTLP receiver
 *******************************************
 
 .. meta::
-      :description: The OTLP receiver obtains data through gRPC or HTTP using OTLP format.
+      :description: The OTLP receiver accepts OTLP formatted data over gRPC or HTTP.
 
 The OTLP receiver allows the Collector to receive data via gRPC or HTTP using the OTLP format. The supported pipelines are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
