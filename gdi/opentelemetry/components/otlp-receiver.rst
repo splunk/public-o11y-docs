@@ -31,7 +31,7 @@ Follow these steps to configure and activate the component:
 Sample configurations
 -------------------------------------------------
 
-To activate the TCP receiver add ``otlp`` to the ``receivers`` section of your ``agent_config.yaml`` file, as in the following example configuration:
+To activate the OTLP receiver add ``otlp`` to the ``receivers`` section of your collector configuration file and include it in your desired pipelines, as in the following example configuration:
 
 .. code-block:: yaml
 
