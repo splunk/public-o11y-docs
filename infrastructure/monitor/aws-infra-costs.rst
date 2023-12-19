@@ -10,7 +10,7 @@ Costs for AWS monitoring
 To understand the costs derived from monitoring AWS with Splunk Observability Cloud, see:
 
 * :ref:`aws-costs-splunk`
-* :red:`aws-costs-amazon`
+* :ref:`aws-costs-amazon`
 
 .. _aws-costs-splunk:
 
