@@ -96,7 +96,7 @@ See the following example:
 
 .. _span-processor-extract:
 
-Extract attributes from span name
+Extract attributes from a span name
 --------------------------------------------
 
 The ``span``processor takes a list of regular expressions to match the span name against, and extracts attributes from it based on subexpressions. It must be specified under the ``to_attributes`` section.
@@ -142,7 +142,7 @@ See the following example:
 
 .. _span-processor-set-status:
 
-Set the status for span
+Set the status for a span
 --------------------------------------------
 
 To set the status for a span, see the following settings:
