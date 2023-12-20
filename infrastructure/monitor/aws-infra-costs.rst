@@ -15,10 +15,10 @@ To understand the costs derived from monitoring AWS with Splunk Observability Cl
 
 .. _aws-costs-splunk:
 
-Splunk Observability Cloud costs 
+Costs derived from Splunk Observability Cloud 
 ===========================================================
 
-Your subscription plan determines how you'll be charged for sending AWS metrics to Observability Cloud. See more in :ref:`monitor-imm-billing-usage`.
+Your subscription plan determines how you'll be charged for sending AWS metrics to Splunk Observability Cloud. See more in :ref:`monitor-imm-billing-usage`.
 
 * In MTS-based subscription plans, all metrics are custom, and you're therefore charged for them.
 * In host-based subscription plans, most AWS metrics are categorized as bundled, and are part of your plan. 
@@ -34,10 +34,10 @@ For a complete list of Observability Cloud metrics, see :ref:`metric-categories`
 
 .. _aws-costs-amazon:
 
-AWS costs 
+Costs derived from AWS 
 ===========================================================
 
-Observability Cloud retrieves AWS metrics with two methods:
+You can send AWS data to Splunk Observability Cloud with one of two methods, which have different associated costs:
 
 #. Streaming data with Metric Streams. 
 #. Polling CloudWatch APIs:

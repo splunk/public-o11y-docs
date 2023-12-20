@@ -10,13 +10,13 @@ Monitor Amazon Web Services
 .. toctree::
    :hidden:
 
-   aws-infra-import.rst
+   Manage AWS data <aws-infra-import.rst>
    Monitor AWS <aws-infra-monitor>
    aws-infra-costs.rst
    Supported Amazon services <https://docs.splunk.com/Observability/gdi/get-data-in/integrations.html#amazon-web-services>
    Available AWS metadata <aws-infra-metadata>
    
-Infrastructure Monitoring imports data, logs, and metadata, including tags and other properties, for the following :ref:`AWS services <aws-integrations>`.
+Splunk Observability Cloud's Infrastructure Monitoring imports data, logs, and metadata, including tags and other properties, for the following :ref:`AWS services <aws-integrations>`.
 
 To monitor AWS resources:
 

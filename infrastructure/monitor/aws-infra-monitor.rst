@@ -5,13 +5,15 @@ Monitor Amazon Web Services
 **********************************
 
 .. meta::
-   :description: The Splunk Infrastructure Monitoring AWS integration imports AWS metrics, metadata, and logs from AWS CloudWatch. This information helps you monitor your AWS resources and the applications that are using those resources.
+   :description: The Splunk Infrastructure Monitoring AWS integration helps you monitor your AWS resources and the applications that are using those resources.
 
-The Infrastructure Monitoring Amazon Web Services (AWS) integration imports metrics and metadata from AWS CloudWatch and the following :ref:`AWS services <aws-integrations>`, as well as other applications.
+.. note:: 
+   
+   To set up your AWS integration and start sending AWS data to Splunk Observability Cloud, see :ref:`get-started-aws` and :ref:`aws-infra-import`.
 
-Metrics are data points identified by a name, and metadata is information that helps you identify aspects of the metrics such as its source. AWS metrics and metadata help you monitor and troubleshoot the AWS services you're using. They also help you monitor applications, such as Kubernetes clusters, that use the AWS services. 
+   To understand the costs associated to working with AWS data in Splunk Observability Cloud see :ref:`aws-infra-costs`.
 
-To learn more importing AWS data, see :ref:`aws-infra-import`.
+Now that your AWS data is in Splunk Observability Cloud, use the available features to monitor your AWS services.
 
 .. _monitor-aws-services:
 
@@ -64,7 +66,7 @@ The default dashboard helps you analyze all the available metadata about the clo
 Use default dashboards to monitor AWS services
 ===========================================================
 
-Observability Cloud provides default dashboards for supported AWS services. Default dashboards are available in dashboard groups based on the AWS service a dashboard represents data for.
+Splunk Observability Cloud provides default dashboards for supported AWS services. Default dashboards are available in dashboard groups based on the AWS service a dashboard represents data for.
 
 To find default dashboards for AWS services, select :strong:`Navigation menu > Dashboards` and search for the AWS service you want to view dashboards for.
 
@@ -73,9 +75,10 @@ Explore built-in content
 
 To see all of the navigators provided for data collected in your organization, go to the :strong:`Infrastructure` page. To see all the pre-built dashboards for data collected in your organization, select :strong:`Dashboards > Built-in`.
 
-Amazon EC2 instances are powered by their respective public cloud service as well as the Splunk Distribution of OpenTelemetry Collector. You need both for all the charts to display data in the built-in dashboards.
+The Amazon EC2 instances dashboard is powered by the CloudWatch metrics as well as the Splunk Distribution of the OpenTelemetry Collector. You need both for all the charts to display data in the built-in dashboards. To install the Collector, see :ref:`otel-install-platform`.
 
-- If you have only the public cloud service and the Smart Agent configured, some charts in the built-in dashboards for Amazon EC2 instances display no data.
-- If you have only the public cloud service configured, you can see all the cards representing the services where data come from, but some charts in the built-in dashboards for Amazon EC2 instances display no data.
-- If you have only Smart Agent configured, Amazon EC2 instance navigator isn't available.
+- If you're only using the AWS integration to fetch CloudWatch metrics, you can see all the cards representing the services where data come from, but some charts in the built-in dashboards for Amazon EC2 instances display no data.
+- If you're using the AWS integration and the Smart Agent (deprecated) to fetch CloudWatch metrics, some charts in the built-in dashboards for Amazon EC2 instances display no data.
+- If you have only Smart Agent (deprecated) configured, the Amazon EC2 instance navigator isn't available.
+- To start using the Collector, see :ref:`migration-process`.
 
