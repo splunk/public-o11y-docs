@@ -14,7 +14,7 @@ Install and deploy the Collector
 
     Deployment modes <deployment-modes.rst>
     Kubernetes <install-k8s.rst>
-    Add-on for AWS EKS <install-k8s-addon-eks.rst>
+    Kubernetes (EKS Add-on) <install-k8s-addon-eks.rst>
     Linux (script) <install-linux.rst>
     Linux (manual) <install-linux-manual.rst>    
     Windows (script) <install-windows.rst>
