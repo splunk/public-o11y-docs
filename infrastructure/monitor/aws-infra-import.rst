@@ -9,15 +9,13 @@ Manage Amazon Web Services data import
 
 .. note:: 
    
-   To set up your AWS integration see :ref:`get-started-aws`.
-
+   To set up your AWS integration see :ref:`get-started-aws`. 
+   
    To understand the costs associated to working with AWS data in Splunk Observability Cloud see :ref:`aws-infra-costs`.
 
 The Infrastructure Monitoring Amazon Web Services (AWS) integration imports metrics and metadata from AWS CloudWatch and the following :ref:`AWS services <aws-integrations>`, as well as other applications. 
 
 After you've sent your AWS data, Splunk Observability Cloud helps you monitor your AWS resources and the applications that are using those resources. See how at :ref:`aws-infra-monitor`.
-
-.. note:: 
 
 .. _aws-import-cloudwatch:
 .. _cloudwatch-metric-sync:
