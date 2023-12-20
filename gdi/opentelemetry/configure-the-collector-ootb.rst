@@ -76,9 +76,10 @@ The following diagram shows the default logs pipeline:
 
 Learn more about these receivers:
 
-* :ref:`signalfx-receiver`
-* :ref:`processlist`
 * :ref:`fluentd-receiver`
+* :ref:`signalfx-receiver`
+* :ref:`otlp-receiver` 
+* :ref:`processlist`
 
 Learn more about these processors:
 
@@ -143,6 +144,7 @@ Learn more about these receivers:
 
 * :ref:`host-metrics-receiver`
 * :ref:`signalfx-receiver`
+* :ref:`otlp-receiver`
 * :ref:`prometheus-receiver`
 
 Learn more about these processors:
@@ -203,6 +205,7 @@ The following diagram shows the default traces pipeline:
 Learn more about these receivers:
 
 * :ref:`jaeger-grpc`
+* :ref:`otlp-receiver` 
 
 Learn more about these processors:
 
