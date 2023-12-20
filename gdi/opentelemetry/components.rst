@@ -44,6 +44,7 @@ Collector components
     components/signalfx-exporter
     components/signalfx-receiver
     components/smartagent-receiver
+    components/span-processor
     components/splunk-apm-exporter
     components/splunk-hec-exporter
     components/splunk-hec-receiver
@@ -249,7 +250,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - ``routing``
      - Reads a header from the incoming HTTP request or reads a resource attribute, and then directs the trace information to specific exporters based on the value.
      - Metrics, logs, traces
-   * - ``span``
+   * - :ref:`span-processor` (``span``)
      - Modifies either the span name or attributes of a span based on the span name.
      - Traces
    * - ``tail_sampling``
@@ -344,7 +345,6 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
      - Provides a mechanism to set configuration options that are applicable to all instances of the Smart Agent receiver. Allows to migrate your existing Smart Agent configuration to the Splunk Distribution of OpenTelemetry Collector. 
    * - :ref:`zpages-extension` (``zpages``) 
      - Activates an extension that serves zPages, an HTTP endpoint that provides live data for debugging different components.
-
 
 .. raw:: html
 

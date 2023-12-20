@@ -162,7 +162,7 @@ Set annotations to instrument Node.js applications
 
 You can activate auto instrumentation for Node.js applications before runtime.
 
-If the related Kubernetes object (deployment, daemonset, or pod) is not deployed, add the ``otel.splunk.com/inject-nodejs`` annotation to the application object YAML.
+If the related Kubernetes object (deployment, daemonset, or pod) is not deployed, add the ``instrumentation.opentelemetry.io/inject-nodejs`` annotation to the application object YAML.
 
 For example, given the following deployment YAML:
 
@@ -180,7 +180,7 @@ For example, given the following deployment YAML:
           - name: my-nodejs-app
             image: my-nodejs-app:latest
 
-Activate auto instrumentation by adding ``otel.splunk.com/inject-nodejs: "true"`` to the ``spec``:
+Activate auto instrumentation by adding ``instrumentation.opentelemetry.io/inject-nodejs: "true"`` to the ``spec``:
 
 .. code-block:: yaml
     :emphasize-lines: 10
@@ -194,7 +194,7 @@ Activate auto instrumentation by adding ``otel.splunk.com/inject-nodejs: "true"`
       template:
         metadata:
           annotations:
-            otel.splunk.com/inject-nodejs: "true"
+            instrumentation.opentelemetry.io/inject-nodejs: "true"
         spec:
           containers:
           - name: my-nodejs-app
