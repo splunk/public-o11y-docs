@@ -117,6 +117,25 @@ The following settings control trace exporters and their endpoints:
 
 To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-go`.
 
+.. _trace-sampling-settings-go-otel:
+
+Samplers configuration
+===============================================================
+
+The following settings control trace sampling:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 70
+   :width: 100%
+
+   * - Environment variable
+     - Description
+   * - ``OTEL_TRACES_SAMPLER``
+     - Sampler to use. The default value is ``always_on``. Supported values are ``parentbased_always_on``, ``always_off``, ``traceidratio``, ``parentbased_always_on``, ``parentbased_always_off``, and ``parentbased_traceidratio``.
+   * - ``OTEL_TRACES_SAMPLER_ARG``
+     - List of rules for the ``rules`` sampler. Values are separated using semicolons (``;``). The default value is ``1.0``.
+
 Configure a TLS connection
 ------------------------------------------------------
 
