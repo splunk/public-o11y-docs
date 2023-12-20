@@ -5,37 +5,16 @@ Span processor
 ****************************
 
 .. meta::
-      :description: Use the resource processor to update, add, or delete resource attributes. Read on to learn how to configure the component.
+      :description: Use the span processor to modify the span name based on its attributes or extract span attributes from the span name.
 
-The resource processor is an OpenTelemetry Collector component that can add, update, or delete resource attributes. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
+The span processor allows you to:
 
-The resource processor is useful when you want to add attributes that your instrumentation doesn't provide, or when you need to override the value of attributes collected by receivers using other attributes. To edit existing attributes, for example to obfuscate sensitive information, use the attributes processor. See :ref:`attributes-processor`.
-
-Target attributes are defined through the ``key`` field. The ``value`` field contains the desired value for the attribute. Each attribute in the list requires an action. The available actions are the following:
-
-.. list-table::
-   :header-rows: 1
-   :widths: 30, 70
-   :width: 100%
-
-   * - Action
-     - Description
-   * - ``insert``
-     -  Adds the key-value combination to attributes when the key doesn't exist. Requires one of the following fields: ``value``, ``from_attribute``, or ``from_context``.
-   * - ``update``
-     -  Updates an existing key with a value. Requires one of the following fields: ``value``, ``from_attribute``, or ``from_context``.
-   * - ``upsert``
-     -  Adds or updates a key-value combination depending on the attributes containing the key. Requires one of the following fields: ``value``, ``from_attribute``, or ``from_context``.
-   * - ``delete``
-     - Deletes the attribute.
-   * - ``hash`` 
-     - Hashes an existing value using the SHA-1 algorithm.
-   * - ``extract``
-     - Extracts values from an attribute using a regular expression to add or update the value of keys specified in the rule. Requires the ``pattern`` field.
-   * -  ``convert``
-     - Converts the type of an existing attribute if the attribute can be converted. Requires the ``converted_type`` field.
-
-.. note:: For information about the Resource Detection processor, see :ref:`resourcedetection-processor`.
+* Modify the span name based on its attributes. 
+* Extract span attributes from the span name.
+* Change span status. 
+* Optionally, you can include or exclude spans. Read more in the GitHub Filtering repo at :new-page:`Include/Exclude Filtering <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/processor/attributesprocessor/README.md#includeexclude-filtering>`.
+  
+The supported pipeline types are ``traces``. See :ref:`otel-data-processing` for more information.
 
 Get started
 ======================
@@ -54,38 +33,138 @@ Follow these steps to configure and activate the component:
 Sample configurations
 ----------------------
 
-To activate the resource processor, add ``resource`` to the ``processors`` section of your
-configuration file, as shown in the following example:
+To activate the resource processor, add ``span`` to the ``processors`` section of your configuration file, as shown in the following example:
 
 .. code:: yaml
 
-   resource:
-     attributes:
-     # Adds the attribute overriding existing values
-     - key: cloud.availability_zone
-       value: zone-1
-       action: upsert
-     # Copies the value of an attribute into another  
-     - key: k8s.cluster.name
-       from_attribute: k8s-cluster
-       action: insert
-      # Removes an attribute 
-     - key: redundant-attribute
-       action: delete
+  resource:
+    span:
+      name:
+      status:
 
-To complete the configuration, include the receiver in any pipeline of the ``service`` section of your
-configuration file. For example:
+The processor supports the following actions:
+
+* ``name``: Modify the name of attributes within a span.
+* ``status``: Modify the status of the span.
+
+Next, add the processor to the service pipelines section of your configuration file, for example: 
+
+.. code-block:: yaml
+
+  service:
+    pipelines:
+      traces:
+        processors: [span]
+
+.. _span-processor-use:
+
+Use the ``span`` processor
+===============================
+
+.. _span-processor-name:
+
+Name a span
+--------------------------------------------
+
+To name a span, use the following settings:
+
+* ``from_attributes``. **Required**. The attribute value for the keys used to create a new name in the order specified in the configuration.
+* ``separator``: A string used to split values.
+
+.. note:: If renaming is dependent on attributes being modified by the :ref:`attributes-processor`, ensure the span processor is specified after the attributes processor in the pipelines.
 
 .. code:: yaml
 
-   service:
-     pipelines:
-       metrics:
-         processors: [resource]
-       logs:
-         processors: [resource]
-       traces:
-         processors: [resource]
+    span:
+      name:
+        # from_attributes represents the attribute keys to pull the values from to generate the new span name.
+        from_attributes: [<key1>, <key2>, ...]
+        # Separator is the string used to concatenate various parts of the span name.
+        separator: <value>
+
+Example
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+See the following example:
+
+.. code:: yaml
+
+  span:
+    name:
+      from_attributes: ["db.svc", "operation"]
+      separator: "::"
+
+.. _span-processor-extract:
+
+Extract attributes from span name
+--------------------------------------------
+
+The ``span``processor takes a list of regular expressions to match the span name against, and extracts attributes from it based on subexpressions. It must be specified under the ``to_attributes`` section.
+
+To extract attributes from a span name, use the following settings:
+
+* ``rules``. **Required**. A list of rules to extract attribute values from span name. The values in the span name are replaced by extracted attribute names. Each rule in the list is a regex pattern string. 
+  
+  * The span name is checked against the regex and, if the regex matches, all named subexpressions of the regex are extracted as attributes and are added to the span. 
+  * Each subexpression name becomes an attribute name and subexpression matched portion becomes the attribute value. The matched portion in the span name is replaced by the extracted attribute name. 
+  * If the attributes already exist in the span they are overwritten. 
+  * The process is repeated for all rules in the order they are specified. Each subsequent rule works on the span name that is the output after processing the previous rule.
+
+* ``break_after_match``. **Required**. ``false`` by default. Specifies if processing of rules should stop after the first match. If ``false``, rule processing will continue to be performed over the modified span name.
+
+.. code:: yaml
+
+  span/to_attributes:
+    name:
+      to_attributes:
+        rules:
+          - regexp-rule1
+          - regexp-rule2
+          - regexp-rule3
+          ...
+        break_after_match: <true|false>
+
+Example
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+See the following example:
+
+.. code:: yaml
+
+  # Let's assume input span name is /api/v1/document/12345678/update
+  # Applying the following results in output span name /api/v1/document/{documentId}/update
+  # and will add a new attribute "documentId"="12345678" to the span.
+  span/to_attributes:
+    name:
+      to_attributes:
+        rules:
+          - ^\/api\/v1\/document\/(?P<documentId>.*)\/update$
+
+.. _span-processor-set-status:
+
+Set the status for span
+--------------------------------------------
+
+To set the status for a span, see the following settings:
+
+* ``code``. **Required**. Represents the span status. Accepted values: ``Unset``, ``Error``, ``Ok``.
+* ``description``. Only used for code ``Error``.
+
+Example
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+See the following example:
+
+.. code:: yaml
+
+  # Set status allows to set specific status for a given span. Possible values are
+  # Ok, Error and Unset as per
+  # https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#set-status
+  # The description field allows to set a human-readable message for errors.
+  span/set_status:
+    status:
+      code: Error
+      description: "some error description"
 
 .. _span-processor-settings:
 
