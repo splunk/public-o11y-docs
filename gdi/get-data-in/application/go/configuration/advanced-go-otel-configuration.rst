@@ -134,7 +134,7 @@ The following settings control trace sampling:
    * - ``OTEL_TRACES_SAMPLER``
      - Sampler to use. The default value is ``always_on``. Supported values are ``parentbased_always_on``, ``always_off``, ``traceidratio``, ``parentbased_always_on``, ``parentbased_always_off``, and ``parentbased_traceidratio``.
    * - ``OTEL_TRACES_SAMPLER_ARG``
-     - Semicolon-separated list of rules for the ``rules`` sampler. The default value is ``1.0``.
+     - List of rules for the ``rules`` sampler. Values are separated using semicolons (``;``). The default value is ``1.0``.
 
 Configure a TLS connection
 ------------------------------------------------------
