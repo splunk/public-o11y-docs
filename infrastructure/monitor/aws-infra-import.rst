@@ -34,13 +34,13 @@ AWS data in Splunk Observability Cloud
 During import, Infrastructure Monitoring gives the metrics special names so you can identify them as coming from AWS: 
 
 - AWS metadata becomes dimensions and custom properties. 
-- AWS tags are key-value pairs, so Infrastructure Monitoring converts them to custom properties.
+- AWS tags are key-value pairs, so Infrastructure Monitoring converts them into custom properties.
 
 To learn more, see :ref:`aws-oc-metrics`, or refer to the AWS documentation site.
 
 .. _aws-namespaces:
 
-AWS namespaces
+Namespaces in Splunk Observability Cloud
 --------------------------------------------------------------------------------
 
 Splunk Observability Cloud imports metadata using the dimension ``namespace``. For most AWS services, the namespace name has the form ``"AWS/<NAME_OF_SERVICE>"``, such as "AWS/EC2" or "AWS/ELB". To select a metric time series (MTS) for an AWS metric when the metric has the same name for more than one service, such as ``CPUUtilization``, use the ``namespace`` dimension as a filter. 
@@ -133,28 +133,85 @@ Splunk Observability Cloud also imports metrics, metadata, and logs for some of 
 
 .. _specify-data-metadata:
 
-Limit the data and metadata to import
+Control the data and metadata to import
 =============================================================================
 
 By default, Splunk Observability Cloud imports metrics from all built-in AWS namespaces, corresponding to these :ref:`AWS services <aws-integrations>`. Optionally, you can add custom namespaces. 
 
-To limit the amount of AWS data to import, reduce the number of namespaces to pull data from. 
+You can control data import with the following options:
 
-   * Specify a subset of :strong:`built-in namespaces` to import data from. On the UI, go to :guilabel:`Select built-in services to collect data from`, then choose the specific namespaces you want to work with. You can specify multiple built-in services.
+* Region
+* Namespaces
+* Polling rate (not available for data streaming)
+* Filtering 
+
+.. _aws-control-namespaces:
+
+Control data import using namespaces
+--------------------------------------------------------------------------------
+
+To limit the amount of AWS data to import, reduce the number of namespaces to pull data from:
+
+* Specify a subset of :strong:`built-in namespaces` to import data from. On the UI, go to :guilabel:`Select built-in services to collect data from`, then choose the specific namespaces you want to work with. You can specify multiple built-in services.
    
-   * Specify the :strong:`custom namespaces` to import data from. On the UI, go to :guilabel:`Select custom services to collect data from`, type the name of the custom namespace, then press :guilabel:`Enter`. Using this procedure, you can specify multiple custom namespaces. Note that data from built-in services is imported as well.
+* Specify the :strong:`custom namespaces` to import data from. On the UI, go to :guilabel:`Select custom services to collect data from`, type the name of the custom namespace, then press :guilabel:`Enter`. Using this procedure, you can specify multiple custom namespaces. Note that data from built-in services is imported as well.
 
-  * To discard data from built-in namespaces and :strong:`only import metrics from custom namespaces`, use the field ``syncCustomNamespacesOnly`` via the API. See how to do this in :new-page:`our developer portal <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-create-integration/>`.  
+* To discard data from built-in namespaces and :strong:`only import metrics from custom namespaces`, use the field ``syncCustomNamespacesOnly`` via the API. See how to do this in :new-page:`our developer portal <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-create-integration/>`.  
+
+.. _aws-control-poll:
+
+Control data import using the poll rate 
+--------------------------------------------------------------------------------
 
 You can also limit the amount of AWS data that the integration imports by changing the rate at which Infrastructure Monitoring polls AWS CloudWatch.
 
-Next, you can specify filters to limit the data you want to import:
+.. _aws-control-filter:
+.. _aws-filter:
 
-   * For :ref:`built-in services <aws-integrations>` for which we sync metadata, you can filter the data based on AWS tags, metric names, or both. Filters don't affect tag syncing.  
+Control data import using filters
+--------------------------------------------------------------------------------
 
-   * For services without metadata (including custom namespaces), you can only filter by metric names.
+You can specify filters to limit the data you want to import for a specific namespace. Filters don't affect tag syncing.  
+
+  * If you're polling AWS data, you can filter built-in services with synced metadata based on AWS tags, metric names, or dimensions. Filters can either be inclusive or exclusive. 
+
+  * If you're streaming AWS data, you can filter built-in services with synced metadata by metric name and dimensions. You can only use inclusive filters.
+
+  * For services without metadata (including custom namespaces), you can only filter by metric names.
+
+See how to filter data at :ref:`aws-control-example`.
 
 .. note:: You must be an administrator of your AWS account to specify namespaces and set filters.
+
+.. _aws-filter-char: 
+
+Unsupported characters for tags 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Be careful when choosing tag names. Splunk Observability Cloud allows only alphanumeric characters, and the underscore ( ``_`` ) and minus ( ``-`` ) symbols. Spaces are replaced by the underscore character. 
+
+These characters are unsupported:
+
+* periods ( ``.`` )
+* colons ( ``:`` )
+* forward slashes ( ``/`` )
+* equal signs ( ``=`` )
+* plus signs ( ``+`` )
+* at symbols ( ``@`` ) 
+
+.. _api-filters:
+
+Advanced filtering using the API
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+You can specify more complex filtering options for a namespace by using the Infrastructure Monitoring API. In this case, the UI displays a message indicating that the filter is defined programmatically.
+   
+To see which metrics and tags are included or excluded for that namespace, click :guilabel:`View filter code`.
+
+.. _aws-control-example:
+
+Data import management examples
+=========================================
 
 Example: Specify namespaces and filters
 --------------------------------------------------------------------------------
@@ -198,16 +255,8 @@ In this example, metricA and metricB are included for resources that have the ``
 
 When you remove a namespace, Infrastructure Monitoring no longer includes metrics from that namespace.
 
-.. _api-filters:
-
-.. note:: You can specify more complex filtering options for a namespace by using the Infrastructure Monitoring API.
-   In this case, the UI displays a message indicating that the filter is defined programmatically.
-   To see which metrics and tags are included or excluded for that namespace, click :guilabel:`View filter code`.
-
-.. _aws-filter:
-
-Filter AWS data
-=============================================================================
+Example: Filter AWS data using tags
+--------------------------------------------------------------------------------
 
 You can filter AWS data using AWS tags, only if Observability Cloud syncs tags for those AWS namespaces. For example, if you use Detailed Monitoring for EC2 instances in AWS, Infrastructure Monitoring imports the following dimensions:
 
@@ -238,11 +287,3 @@ You can use the following AWS metadata to filter metrics:
 Use ``aws_account_id`` to differentiate between metrics you import from multiple AWS accounts. Infrastructure Monitoring adds ``aws_account_id`` as a dimension of the MTS for the metric.
 
 For supported AWS services, Infrastructure Monitoring imports AWS tags and adds them as custom properties to the MTS for the metric. For example, if AWS tag has the value named Production, it will be shown in Infrastructure Monitoring as ``aws_tag_Production``.
-
-.. _aws-filter-char: 
-
-Unsupported characters for tags 
---------------------------------------------------------------------------------
-
-Be careful when choosing tag names: Splunk Observability Cloud only allows alphanumeric characters, and the underscore and minus symbols. Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character.    
-
