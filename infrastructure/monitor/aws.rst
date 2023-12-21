@@ -34,21 +34,9 @@ To monitor AWS resources:
       <h2>About AWS data<a name="aws-data" class="headerlink" href="#aws-data" title="Permalink to this headline">¶</a></h2>
    </embed>
 
-See the AWS official documentation for a list of the available AWS metrics and other data, or see :ref:`the metadatada Observability Cloud provides <aws-infra-metadata>` for AWS.
+See the AWS official documentation for a list of the available AWS metrics and other data, or see :ref:`the metadatada Splunk Observability Cloud provides <aws-infra-metadata>` for AWS.
 
-By default, Observability Cloud brings in data from all :ref:`supported AWS services <aws-integrations>` associated with your account, with :ref:`certain limitations <aws-data-limits>`. To manage the amount of data to import, see :ref:`specify-data-metadata`.
-
-.. _aws-namespaces:
-
-.. raw:: html
-
-   <embed>
-      <h3>AWS namespaces</h3>
-   </embed>
-
-Observability Cloud imports AWS namespace metadata using the dimension ``namespace``. For most AWS services, the namespace name has the form ``"AWS/<NAME_OF_SERVICE>"``, such as "AWS/EC2" or "AWS/ELB". To select a metric time series (MTS) for an AWS metric when the metric has the same name for more than one service, such as ``CPUUtilization``, use the ``namespace`` dimension as a filter.
-
-To control the amount of data you import, specify the namespaces you want to import as well as the data you want to import or exclude from each namespace. For more information, see :ref:`specify-data-metadata`.
+By default, Splunk Observability Cloud brings in data from all :ref:`supported AWS services <aws-integrations>` associated with your account, with :ref:`certain limitations <aws-data-limits>`. To manage the amount of data to import, see :ref:`specify-data-metadata`.
 
 .. _aws-unique-id:
 

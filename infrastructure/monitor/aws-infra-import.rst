@@ -13,7 +13,7 @@ Manage Amazon Web Services data import
    
    To understand the costs associated to working with AWS data in Splunk Observability Cloud see :ref:`aws-infra-costs`.
 
-The Infrastructure Monitoring Amazon Web Services (AWS) integration imports metrics and metadata from AWS CloudWatch and the following :ref:`AWS services <aws-integrations>`, as well as other applications. 
+Splunk Observability Cloud's Amazon Web Services (AWS) integration imports metrics and metadata from AWS CloudWatch and the following :ref:`AWS services <aws-integrations>`, as well as other applications. 
 
 After you've sent your AWS data, Splunk Observability Cloud helps you monitor your AWS resources and the applications that are using those resources. See how at :ref:`aws-infra-monitor`.
 
@@ -24,14 +24,28 @@ After you've sent your AWS data, Splunk Observability Cloud helps you monitor yo
 Import AWS CloudWatch data and metadata
 =============================================================================
 
-AWS provides a CloudWatch agent that lets you import (or download) metrics, logs, and metadata. Metrics are data points identified by a name, and metadata is information that helps you identify aspects of the metrics such as its source. AWS metrics and metadata help you monitor and troubleshoot the AWS services you're using. They also help you monitor applications, such as Kubernetes clusters, that use the AWS services. 
+AWS provides a CloudWatch agent that lets you import metrics, logs, and metadata. Metrics are data points identified by a name, and metadata is information that helps you identify aspects of the metrics such as its source. AWS metrics and metadata help you monitor and troubleshoot the AWS services you're using. They also help you monitor applications, such as Kubernetes clusters, that use the AWS services. See more at :ref:`aws-infra-monitor`.
 
-To import these metrics in Infrastructure Monitoring, add the namespace you use for the AWS CloudWatch agent as a custom namespace in your AWS integration, as described in the section :ref:`specify-data-metadata`. During import, Infrastructure Monitoring gives the metrics special names so you can identify them as coming from AWS: 
+By default, Splunk Observability Cloud brings in data from all :ref:`supported AWS services <aws-integrations>` associated with your account, with :ref:`certain limitations <aws-data-limits>`. 
+
+AWS data in Splunk Observability Cloud
+--------------------------------------------------------------------------------
+
+During import, Infrastructure Monitoring gives the metrics special names so you can identify them as coming from AWS: 
 
 - AWS metadata becomes dimensions and custom properties. 
 - AWS tags are key-value pairs, so Infrastructure Monitoring converts them to custom properties.
 
 To learn more, see :ref:`aws-oc-metrics`, or refer to the AWS documentation site.
+
+.. _aws-namespaces:
+
+AWS namespaces
+--------------------------------------------------------------------------------
+
+Splunk Observability Cloud imports metadata using the dimension ``namespace``. For most AWS services, the namespace name has the form ``"AWS/<NAME_OF_SERVICE>"``, such as "AWS/EC2" or "AWS/ELB". To select a metric time series (MTS) for an AWS metric when the metric has the same name for more than one service, such as ``CPUUtilization``, use the ``namespace`` dimension as a filter. 
+
+To control the amount of data you import, you can specify the namespaces you want to import data from, add any AWS CloudWatch agent namespace as a custom namespace, or select the data you want to import or exclude from each namespace. For more information, see :ref:`specify-data-metadata`.
 
 .. _using-cloudwatch-metrics:
 
@@ -93,7 +107,7 @@ To learn more, see the AWS developer documentation for AWS CloudWatch.
 Import data and metadata from other applications
 =============================================================================
 
-Splunk Observability Cloud also imports metrics, metadata, and logs for some of your applications that use AWS services. The following table lists these applications.
+Splunk Observability Cloud also imports metrics, metadata, and logs for some of your applications that use AWS services, such as:
 
 .. list-table::
    :header-rows: 1
@@ -119,7 +133,7 @@ Splunk Observability Cloud also imports metrics, metadata, and logs for some of 
 
 .. _specify-data-metadata:
 
-Specify and limit the data and metadata to import
+Limit the data and metadata to import
 =============================================================================
 
 By default, Splunk Observability Cloud imports metrics from all built-in AWS namespaces, corresponding to these :ref:`AWS services <aws-integrations>`. Optionally, you can add custom namespaces. 
@@ -192,8 +206,8 @@ When you remove a namespace, Infrastructure Monitoring no longer includes metric
 
 .. _aws-filter:
 
-Example: Filter AWS data using tags
---------------------------------------------------------------------------------
+Filter AWS data
+=============================================================================
 
 You can filter AWS data using AWS tags, only if Observability Cloud syncs tags for those AWS namespaces. For example, if you use Detailed Monitoring for EC2 instances in AWS, Infrastructure Monitoring imports the following dimensions:
 
@@ -227,8 +241,8 @@ For supported AWS services, Infrastructure Monitoring imports AWS tags and adds 
 
 .. _aws-filter-char: 
 
-Unsupported characters 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Unsupported characters for tags 
+--------------------------------------------------------------------------------
 
 Be careful when choosing tag names: Splunk Observability Cloud only allows alphanumeric characters, and the underscore and minus symbols. Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character.    
 
