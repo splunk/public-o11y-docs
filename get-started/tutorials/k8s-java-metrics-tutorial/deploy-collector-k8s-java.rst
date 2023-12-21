@@ -4,7 +4,7 @@
 Part 2: Deploy the Collector and Java application
 *********************************************************************
 
-Now that we've configured your Kubernetes environment, we can deploy the Splunk Distribution of OpenTelemetry Collector.
+Now that we've configured a Kubernetes environment, we can deploy the Splunk Distribution of OpenTelemetry Collector.
 
 In a command line interface, run the following command:
 
@@ -30,16 +30,16 @@ There are now several new pods running in the ``petclinic`` namespace:
     splunk-otel-collector-k8s-cluster-receiver-594fd9c8c7-6n545     1/1     Running   0          94s
     splunk-otel-collector-operator-69d476cb7-s8hcl                  2/2     Running   0          94s
 
-You've now deployed the Splunk Distribution of OpenTelemetry Collector, and you're now ready to deploy the Spring Petclinic application.
+We've now deployed the Splunk Distribution of OpenTelemetry Collector, and we're ready to deploy the Spring Petclinic application.
 
 .. _k8s-java-deploy-app:
 
 Deploy the Spring Petclinic application
 ================================================
 
-You can now deploy the Spring Petclinic Java application. To get started, create a new file in your ``spring-petclinic-app`` directory called ``petclinic-spec.yaml``. This file stores the keys and values used to configure your application deployment in Kubernetes.
+Let's deploy the Spring Petclinic Java application in our Kubernetes cluster. To get started, create a new file in your ``spring-petclinic-app`` directory called ``petclinic-spec.yaml``. This file stores the keys and values used to configure your application deployment in Kubernetes.
 
-See the following table for keys and values to include:
+The following table describes some important keys and values to include:
 
 .. list-table::
     :header-rows: 1
@@ -92,7 +92,7 @@ After adding these keys and values, your ``petclinic-spec.yaml`` file should loo
           image: ghcr.io/pavolloffay/spring-petclinic:latest
           imagePullPolicy: Always
 
-Next, run the following command to start the application deployment:
+Run the following command to start the application deployment:
 
 .. code-block:: bash
 
@@ -153,5 +153,5 @@ The output also shows several ``OTEL`` environment variables:
 
     If you can't see the ``initContainer`` or ``OTEL`` environment, restart your application pod. The OpenTelemetry Collector pods must be active and running before you deploy your Java application.
 
-Now that your application is running, you're ready to start viewing data in Splunk APM. See :ref:`k8s-java-view-apm`.
+Now that the application is running, we're ready to start viewing data in Splunk APM. See :ref:`k8s-java-view-apm`.
 

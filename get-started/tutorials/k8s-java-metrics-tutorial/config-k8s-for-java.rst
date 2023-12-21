@@ -19,11 +19,11 @@ This namespace helps us differentiate between the many different pods running in
 Configure ``values.yaml`` for the Helm Chart
 ====================================================================
 
-Next, create a new directory called ``spring-petclinic-app`` to store the files used for this deployment. 
+We need to install Splunk Distribution of OpenTelemetry Collector using Helm. Create a new directory called ``spring-petclinic-app`` to store the files we'll use for Helm. 
 
-In the new directory, create a file called ``values.yaml``. This file stores keys and values that configure the Splunk Distribution of OpenTelemetry Collector through the Helm Chart.
+In the ``spring-petlcinic-app`` directory, create a file called ``values.yaml``. This file stores keys and values that configure the Splunk Distribution of OpenTelemetry Collector through the Helm Chart. 
 
-The following table demonstrates the keys and values to add to ``values.yaml``:
+Using the following table, add keys and values to ``values.yaml``:
 
 .. list-table::
     :header-rows: 1
@@ -46,7 +46,7 @@ The following table demonstrates the keys and values to add to ``values.yaml``:
       - ``prd``
       - Tags data that the application sends to Splunk Observability Cloud, allowing you to see the data in Splunk APM.
 
-After adding these values, your ``values.yaml`` file should look like the following example:
+After adding these keys and values, your ``values.yaml`` file should look like the following example:
 
 .. code-block:: yaml
 
