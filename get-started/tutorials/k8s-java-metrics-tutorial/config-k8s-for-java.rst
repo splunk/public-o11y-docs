@@ -12,16 +12,16 @@ Next, create a namespace for the sample application:
     
     kubectl create namespace petclinic
 
-This namespace will help us differentiate between the many different pods running in the cluster, and we will use it as our context for the OpenTelemetry pods and our application pods.
+This namespace helps us differentiate between the many different pods running in the cluster.
 
 .. _config-values-yaml:
 
 Configure ``values.yaml`` for the Helm Chart
 ====================================================================
 
-Next, we'll create a new directory called ``spring-petclinic-app`` to store the files used for this deployment. 
+Next, create a new directory called ``spring-petclinic-app`` to store the files used for this deployment. 
 
-In the new directory, create a ``values.yaml`` file. This file stores keys and values that configure the Splunk Distribution of OpenTelemetry Collector.
+In the new directory, create a file called ``values.yaml``. This file stores keys and values that configure the Splunk Distribution of OpenTelemetry Collector through the Helm Chart.
 
 The following table demonstrates the keys and values to add to ``values.yaml``:
 
@@ -44,9 +44,9 @@ The following table demonstrates the keys and values to add to ``values.yaml``:
       - Allows you to access the Splunk Distribution of OpenTelemetry Collector Helm Chart
     * - ``environment``
       - ``prd``
-      - Tags data that is sent to Splunk Observability Cloud, allowing you to see the data in Splunk APM.
+      - Tags data that the application sends to Splunk Observability Cloud, allowing you to see the data in Splunk APM.
 
-When you are finished adding these values, your ``values.yaml`` file should look like this:
+After adding these values, your ``values.yaml`` file should look like the following example:
 
 .. code-block:: yaml
 
@@ -60,4 +60,4 @@ When you are finished adding these values, your ``values.yaml`` file should look
     # deployment environment value, which tags the data sent by your application
     environment: prd
 
-You've now configured your Kubernetes environment! Next, we'll install the Splunk Distribution of OpenTelemetry Collector using Helm. See :ref:`deploy-collector-k8s-java` to continue.
+You've now configured your Kubernetes environment. Next, we'll install the Splunk Distribution of OpenTelemetry Collector using Helm. See :ref:`deploy-collector-k8s-java` to continue.

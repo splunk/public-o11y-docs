@@ -4,9 +4,9 @@
 Part 2: Deploy the Collector and Java application
 *********************************************************************
 
-Now that you've configured your Kubernetes environment, you can deploy the Splunk Distribution of OpenTelemetry Collector.
+Now that we've configured your Kubernetes environment, we can deploy the Splunk Distribution of OpenTelemetry Collector.
 
-In your command line interface, run the following command:
+In a command line interface, run the following command:
 
 .. code-block:: bash
 
@@ -30,7 +30,7 @@ There are now several new pods running in the ``petclinic`` namespace:
     splunk-otel-collector-k8s-cluster-receiver-594fd9c8c7-6n545     1/1     Running   0          94s
     splunk-otel-collector-operator-69d476cb7-s8hcl                  2/2     Running   0          94s
 
-Great! You've now deployed the Splunk Distribution of OpenTelemetry Collector. You're now ready to deploy the Spring Petclinic application.
+You've now deployed the Splunk Distribution of OpenTelemetry Collector, and you're now ready to deploy the Spring Petclinic application.
 
 .. _k8s-java-deploy-app:
 
@@ -65,7 +65,7 @@ See the following table for keys and values to include:
       - ``instrumentation.opentelemetry.io/inject-java: "true"``
       - Activates Splunk OpenTelemetry automatic instrumentation for the Java application.
    
-After adding these keys and values, your ``petclinic-spec.yaml`` file should look like this:
+After adding these keys and values, your ``petclinic-spec.yaml`` file should look like the following example:
 
 .. code-block:: yaml
 
@@ -98,7 +98,7 @@ Next, run the following command to start the application deployment:
 
     kubectl apply -n petclinic -f spring-petclinic-app/petclinic-spec.yaml
 
-You should now see a deployment called ``spring-petclinic`` and a pod with a similar name running in your cluster.
+This command starts running a new deployment called ``spring-petclinic`` as well as a pod with a similar name.
 
 .. _k8s-java-verify:
 
@@ -111,7 +111,7 @@ Let's make sure that everything is running correctly. Run the following command 
 
     kubectl describe pod -n petclinic <pod-name>
 
-The output should show an ``initContainer`` called ``opentelemetry-auto-instrumentation-java``:
+The output shows an ``initContainer`` called ``opentelemetry-auto-instrumentation-java``:
 
 .. code-block:: bash
 
@@ -135,7 +135,7 @@ The output should show an ``initContainer`` called ``opentelemetry-auto-instrume
         Image:         ghcr.io/signalfx/splunk-otel-java/splunk-otel-java:v1.30.0
         Image ID:      docker-pullable://ghcr.io/signalfx/splunk-otel-java/splunk-otel-java@sha256:bb3de9e5d7f3577888f547903b62e281885961e3a49baebfb83b6239824ab5a7
 
-The output should also show several ``OTEL`` environment variables:
+The output also shows several ``OTEL`` environment variables:
 
 .. code-block:: bash
 
@@ -153,5 +153,5 @@ The output should also show several ``OTEL`` environment variables:
 
     If you can't see the ``initContainer`` or ``OTEL`` environment, restart your application pod. The OpenTelemetry Collector pods must be active and running before you deploy your Java application.
 
-Now that your application is running, you're ready to start viewing data in Splunk APM! See :ref:`k8s-java-view-apm`.
+Now that your application is running, you're ready to start viewing data in Splunk APM. See :ref:`k8s-java-view-apm`.
 

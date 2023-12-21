@@ -15,13 +15,13 @@ Tutorial: capture metrics from a Java application in Kubernetes
     deploy-collector-k8s-java.rst
     k8s-java-view-apm.rst
 
-This tutorial provides a walkthrough of instrumenting a sample Java application in a Kubernetes environment. After this tutorial, you will be able to:
+This tutorial provides a walkthrough of instrumenting a sample Java application in a Kubernetes environment. After this tutorial, you can:
 
 * Configure a Kubernetes environment for application monitoring
 * Deploy the Kubernetes Operator to automatically instrument a Java application.
 * View your application data in Splunk APM.
 
-We will use the Spring Petclinic Java application as our example in the tutorial. To learn more about this application and to see a demo, visit the :new-page:`Spring Petclinic website <https://spring-petclinic.github.io/>`. 
+We'll use the Spring Petclinic Java application as our example in the tutorial. To learn more about this application and to see a demo, go to the :new-page:`Spring Petclinic website <https://spring-petclinic.github.io/>`. 
 
 .. _k8s-java-prereqs:
 
@@ -29,7 +29,7 @@ We will use the Spring Petclinic Java application as our example in the tutorial
 
     <h2> Prerequisites </h2>
 
-To get the most out of this tutorial, you should have a basic understanding of Kubernetes. You should know how to create and manage Kubernetes components such as deployments, pods, and services.
+To get the most out of this tutorial, you need a basic understanding of Kubernetes. You must know how to create and manage Kubernetes components such as deployments, pods, and services.
 
 You must have the following installed:
 
