@@ -22,8 +22,8 @@ This integration is compatible with the following versions of Splunk On-Call:
 - Growth
 - Enterprise
 
-In Splunk On-Call
-===================
+Splunk On-Call configuration
+==============================
 
 From the main timeline, select :guilabel:`Settings`, :guilabel:`Alert Behavior`, :guilabel:`Integrations`, :guilabel:`AppOptics`.
 
@@ -37,8 +37,8 @@ If the integration has not yet been activated, select :guilabel:`Enable Integrat
 
 Copy the Service API Key to your clipboard and determine which Splunk On-Call routing-key value you use for this integration. For more information on routing keys and best practices, see :ref:`routing-keys`.
 
-In AppOptics
-==================
+AppOptics configuration
+========================
 
 From the :guilabel:`Organization Details` section, select :guilabel:`Notification Services`, :guilabel:`Splunk On-Call`, and then select :guilabel:`Add Configuration`.
 
