@@ -82,7 +82,7 @@ Learn more about these receivers:
 Learn more about these processors:
 
 * :ref:`batch-processor`
-* :ref:`memory_limiter`
+* :ref:`memory-limiter-processor`
 * :ref:`resourcedetection-processor`
 
 Learn more about these exporters:
@@ -149,7 +149,7 @@ Learn more about these receivers:
 Learn more about these processors:
 
 * :ref:`batch-processor`
-* :ref:`memory_limiter`
+* :ref:`memory-limiter-processor`
 * :ref:`resourcedetection-processor`
 
 Learn more about these exporters:
@@ -211,7 +211,7 @@ Learn more about these receivers:
 Learn more about these processors:
 
 * :ref:`batch-processor`
-* :ref:`memory_limiter`
+* :ref:`memory-limiter-processor`
 * :ref:`resourcedetection-processor`
 
 Learn more about these exporters:
