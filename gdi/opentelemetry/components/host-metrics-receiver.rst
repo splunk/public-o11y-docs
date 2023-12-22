@@ -27,6 +27,8 @@ Host receiver metrics appear in Infrastructure Monitoring. You can use them to c
 Get started
 ======================
 
+.. note:: This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector. See :ref:`otel-configuration-ootb` for details. You can customize your configuration any time as explained in this document.
+
 Follow these steps to configure and activate the component:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:

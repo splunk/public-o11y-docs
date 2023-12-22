@@ -12,6 +12,8 @@ The batch processor is an OpenTelemetry Collector component that batches and com
 Get started
 ======================
 
+.. note:: This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector. See :ref:`otel-configuration-ootb` for details. You can customize your configuration any time as explained in this document.
+
 By default, the Splunk Distribution of OpenTelemetry Collector includes the batch processor in all the predefined pipelines when deployed in host monitoring (agent) or data forwarding (gateway) modes. See :ref:`otel-deployment-mode` for more information.
 
 To ensure that batching happens after data sampling and filtering, add the batch processor after the ``memory_limiter`` processor and other sampling processors.

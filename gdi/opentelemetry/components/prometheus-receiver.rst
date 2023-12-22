@@ -19,6 +19,8 @@ The Prometheus receiver can scrape metrics data from any application that expose
 Get started
 ========================
 
+.. note:: This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector. See :ref:`otel-configuration-ootb` for details. You can customize your configuration any time as explained in this document.
+
 By default, the Splunk Distribution of OpenTelemetry Collector includes the Prometheus receiver in the ``metrics/internal`` pipeline when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information.
 
 To activate additional Prometheus receivers, add a new ``prometheus`` entry in the ``receivers`` section of the Collector configuration file, as in the following example:

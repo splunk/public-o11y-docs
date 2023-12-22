@@ -14,6 +14,8 @@ All core exporters and receivers provide some zPage instrumentation.
 Get started
 ======================
 
+.. note:: This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector. See :ref:`otel-configuration-ootb` for details. You can customize your configuration any time as explained in this document.
+
 The following settings are required to configure the extension:
 
 * ``endpoint``. Specifies the HTTP endpoint that serves zPages. 

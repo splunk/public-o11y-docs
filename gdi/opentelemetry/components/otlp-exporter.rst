@@ -16,6 +16,8 @@ Read more about the OTLP format at the OTel repo :new-page:`OpenTelemetry Protoc
 Get started
 ======================
 
+.. note:: This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector. See :ref:`otel-configuration-ootb` for details. You can customize your configuration any time as explained in this document.
+
 The OTLP exporter is included in the Splunk Distribution of OpenTelemetry Collector default configuration in host monitoring (agent) mode for all data pipelines: ``metrics``, ``traces``, and ``logs``. Learn more in :ref:`otel-configuration-ootb` and :ref:`otel-deployment-mode`.
 
 The following settings are required:
