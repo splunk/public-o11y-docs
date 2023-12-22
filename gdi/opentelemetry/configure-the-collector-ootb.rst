@@ -77,8 +77,8 @@ Learn more about these receivers:
 * :ref:`fluentd-receiver`
 * :ref:`processlist`
 * :ref:`otlp-receiver` 
-* :ref:`signalfx-receiver`
-* 
+* :ref:`signalfx-receiver` 
+
 Learn more about these processors:
 
 * :ref:`batch-processor`
