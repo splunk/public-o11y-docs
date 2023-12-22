@@ -39,7 +39,9 @@ Follow the steps below to create an HEC ingest token in the Splunk platform:
 
 7. Ensure that the source type is correct. 
   
-  * Install the ``olly_logs`` app on your Splunk Cloud Platform instance. To learn how, see :new-page:`Install apps on your Splunk Cloud Platform deployment <https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/Admin/SelfServiceAppInstall>`. 
+  * Install the ``olly_logs`` app on your Splunk Cloud Platform instance. 
+  
+  * To learn how, follow :new-page:`Install apps on your Splunk Cloud Platform deployment <https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/Admin/SelfServiceAppInstall>`, and look for the app "Observability Logs - prepackaged transformations". 
 
   * Select the :guilabel:`Structured > olly_logs` source type from the list. 
   
