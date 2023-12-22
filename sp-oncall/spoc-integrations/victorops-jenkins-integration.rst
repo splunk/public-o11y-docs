@@ -1,3 +1,5 @@
+.. _jenkins-spoc:
+
 With hundreds of plugins in the Update Center, Jenkins integrates with
 practically every tool in the continuous integration and continuous
 delivery toolchain. The VictorOps integration with Jenkins provides
