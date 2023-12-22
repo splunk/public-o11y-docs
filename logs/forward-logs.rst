@@ -39,9 +39,9 @@ Follow the steps below to create an HEC ingest token in the Splunk platform:
 
 7. Ensure that the source type is correct. 
   
-  * Install the ``olly_logs`` app on your Splunk Cloud Platform instance.  
+  * Install the ``olly_logs`` app on your Splunk Cloud Platform instance. To learn how, see :new-page:`Install apps on your Splunk Cloud Platform deployment <https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/Admin/SelfServiceAppInstall>`. 
 
-  * Select a source type from the list and choose :guilabel:`Structured > olly_logs`. 
+  * Select the :guilabel:`Structured > olly_logs` source type from the list. 
   
 8. Ensure that the index for Log Observer logs data is in the :guilabel:`Allowed indexes` list and select it as the default index. It's best practice to create a new index for Log Observer logs data.  
 
