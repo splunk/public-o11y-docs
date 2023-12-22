@@ -11,7 +11,13 @@ The Splunk APM (SAPM) exporter allows the OpenTelemetry Collector to send traces
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the SAPM exporter in the ``traces`` pipeline when deploying in host monitoring (agent) or data forwarding (gateway) modes. See :ref:`otel-deployment-mode` for more information.
+.. note:: 
+  
+  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information. 
+  
+  For details about the default configuration, see :ref:`otel-configuration-ootb`. You can customize your configuration any time as explained in this document.
+
+By default, the Splunk Distribution of OpenTelemetry Collector includes the SAPM exporter in the ``traces`` pipeline.
 
 Sample configurations
 ----------------------

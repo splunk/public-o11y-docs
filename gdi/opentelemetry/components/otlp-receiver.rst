@@ -18,7 +18,7 @@ Read more about the OTLP format at the OTel repo :new-page:`OpenTelemetry Protoc
 Get started
 =================================================
 
-.. note:: The OTLP receiver is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector. See :ref:`otel-configuration-ootb` for details, such as the default ports for HTTP and gRCP requests. You can customize your configuration any time as explained in this document.
+.. note:: This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector. See :ref:`otel-configuration-ootb` for details, such as the default ports for HTTP and gRCP requests. You can customize your configuration any time as explained in this document.
 
 Follow these steps to configure and activate the component:
 

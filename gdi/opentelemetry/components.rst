@@ -121,6 +121,12 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - ``journald``
      - Parses Journald events from the systemd journal. The ``journalctl`` binary must be in the same ``$PATH`` of the agent.
      - Logs
+   * - ``kafkametrics``
+     - Collects Kafka metrics such as brokers, topics, partitions, and consumer groups from Kafka server, and converts them to OTLP format.
+     - Metrics
+   * - ``kafka``
+     - Receives metrics, logs, and traces from Kafka. Metrics and logs only support the OTLP format.
+     - Metrics, logs, traces
    * - :ref:`kubernetes-cluster-receiver` (``k8s_cluster``)
      - Collects cluster-level metrics from the Kubernetes API server. It uses the Kubernetes API to listen for updates. You can use a single instance of this receiver to monitor a cluster.
      - Metrics
@@ -130,12 +136,6 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - ``k8sobjects``
      - Collects objects from the Kubernetes API server. Supports authentication through service accounts only.
      - Logs
-   * - ``kafkametrics``
-     - Collects Kafka metrics such as brokers, topics, partitions, and consumer groups from Kafka server, and converts them to OTLP format.
-     - Metrics
-   * - ``kafka``
-     - Receives metrics, logs, and traces from Kafka. Metrics and logs only support the OTLP format.
-     - Metrics, logs, traces
    * - :ref:`kubelet-stats-receiver` (``kubeletstats``)
      - Pulls pod metrics from the API server on a kubelet.
      - Metrics

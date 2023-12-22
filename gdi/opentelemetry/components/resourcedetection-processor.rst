@@ -28,7 +28,13 @@ You can use metadata collected by the resource detection processor to expand or 
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the resource detection processor in all the predefined pipelines when deploying in host monitoring (agent) mode. When deploying the Collector in data forwarding (gateway) mode, the resource detection processor collects internal metrics. See :ref:`otel-deployment-mode` for more information.
+.. note:: 
+  
+  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector. 
+  
+  For details about the default configuration, see :ref:`otel-configuration-ootb`. You can customize your configuration any time as explained in this document.
+
+By default, the Splunk Distribution of OpenTelemetry Collector includes the resource detection processor in all the predefined pipelines when deploying in host monitoring (agent) mode. When deploying the Collector in data forwarding (gateway) mode, the resource detection processor collects internal metrics. See :ref:`otel-deployment-mode` for more information. 
 
 To detect more types of resources, you can configure additional processors and add them to existing or new pipelines, as shown in the following sample configurations.
 

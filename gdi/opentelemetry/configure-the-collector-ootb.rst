@@ -7,11 +7,9 @@ Collector default configuration
 .. meta::
       :description: Configure the Splunk Distribution of OpenTelemetry Collector. There are a variety of default configuration files available, as well additional components that can be configured.
 
-The Collector configuration is stored in a :new-page:`YAML file <https://yaml.org/>` and specifies the behavior of the different components and services.
-
 .. include:: /_includes/collector-components.rst
 
-See an overview of the elements and pipelines in the default configuration in the following sections.
+The Collector configuration is stored in a :new-page:`YAML file <https://yaml.org/>` and specifies the behavior of the different components and services. See an overview of the elements and pipelines in the default configuration in the following sections.
 
 Default configuration 
 ========================================================
@@ -77,13 +75,14 @@ The following diagram shows the default logs pipeline:
 Learn more about these receivers:
 
 * :ref:`fluentd-receiver`
-* :ref:`signalfx-receiver`
-* :ref:`otlp-receiver` 
 * :ref:`processlist`
+* :ref:`otlp-receiver` 
+* :ref:`signalfx-receiver` 
 
 Learn more about these processors:
 
 * :ref:`batch-processor`
+* :ref:`memory-limiter-processor`
 * :ref:`resourcedetection-processor`
 
 Learn more about these exporters:
@@ -143,13 +142,14 @@ The following diagram shows the default metrics pipeline:
 Learn more about these receivers:
 
 * :ref:`host-metrics-receiver`
-* :ref:`signalfx-receiver`
 * :ref:`otlp-receiver`
 * :ref:`prometheus-receiver`
+* :ref:`signalfx-receiver`
 
 Learn more about these processors:
 
 * :ref:`batch-processor`
+* :ref:`memory-limiter-processor`
 * :ref:`resourcedetection-processor`
 
 Learn more about these exporters:
@@ -206,10 +206,12 @@ Learn more about these receivers:
 
 * :ref:`jaeger-grpc`
 * :ref:`otlp-receiver` 
+* :ref:`zipkin-receiver`
 
 Learn more about these processors:
 
 * :ref:`batch-processor`
+* :ref:`memory-limiter-processor`
 * :ref:`resourcedetection-processor`
 
 Learn more about these exporters:
