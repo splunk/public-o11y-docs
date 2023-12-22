@@ -12,6 +12,12 @@ The Memory Ballast extension enables applications to configure memory ballast fo
 Get started
 ======================
 
+.. note:: 
+  
+  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information. 
+  
+  For details about the default configuration, see :ref:`otel-configuration-ootb`. You can customize your configuration any time as explained in this document.
+
 You can configure the following settings for the extension:
 
 * ``size_mib``. The memory ballast size, in MiB. 
