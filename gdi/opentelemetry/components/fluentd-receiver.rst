@@ -16,14 +16,15 @@ The receiver accepts data formatted as Fluent Forward events through a TCP conne
 Get started
 ======================
 
-.. note:: This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector. See :ref:`otel-configuration-ootb` for details. You can customize your configuration any time as explained in this document.
+.. note:: 
+  
+  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information. 
+  
+  For details about the default configuration, see :ref:`otel-configuration-ootb`. You can customize your configuration any time as explained in this document.
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the Fluent Forward receiver in the ``logs`` pipeline when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information.
-
-The default configuration of the ``fluentforward`` receiver in the Splunk Distribution of OpenTelemetry Collector is the following:
+By default, the Splunk Distribution of OpenTelemetry Collector includes the Fluent Forward receiver in the ``logs`` pipeline:
 
 .. code-block:: yaml
-
 
    receivers:
      fluentforward:
