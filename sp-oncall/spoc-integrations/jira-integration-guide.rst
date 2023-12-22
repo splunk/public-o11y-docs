@@ -1,312 +1,184 @@
-**About Jira and Splunk On-Call**
----------------------------------
+.. _Jira-spoc:
 
-The Splunk On-Call and Jira integration helps with project and ticket
-tracking while centralizing incident information in Splunk On-Call.
-Depending on how your organization is using
-`Jira <https://www.atlassian.com/software/jira>`__, an issue could
-represent a software bug, a project task, a helpdesk ticket, a leave
-request form, etc. The Splunk On-Call and Jira integration works in two
-ways: 1) The Jira integration allows you to create a new Jira ticket for
-any incident that comes into Splunk On-Call. 2) You can create Splunk
-On-Call incidents whenever a new issue is added to a Jira ticket.
+Jira integration for Splunk On-Call
+***************************************************
 
-Splunk On-Call and Jira: Flexible Project and Ticket Tracking for
-Software Teams
+.. meta::
+    :description: Configure the Jira integration for Splunk On-Call.
 
--  Create new Jira tickets for incidents that comes into Splunk On-Call
+The Splunk On-Call and Jira integration helps with project and ticket tracking while centralizing incident information in Splunk On-Call. Depending on how your organization is using Jira, an issue can represent a software bug, a project task, a helpdesk ticket, a leave request form, and so on.
 
-   -  Integrate Jira issues with every Splunk On-Call incident by adding
-      the Jira email address to the first step of that team’s escalation
-      policy
+The Splunk On-Call and Jira integration works in two ways
 
--  Create Splunk On-Call incidents whenever a new issue is added to your
-   Jira project.
--  The Splunk On-Call and Jira integration empowers continuous delivery
-   *and* site reliability through detailed project tracking in both Jira
-   and Splunk On-Call
+1. The Jira integration allows you to create a new Jira ticket for any incident that comes into Splunk On-Call.
+2. You can create Splunk On-Call incidents whenever a new issue is added to a Jira ticket.
 
-This integration provides a wide range of customizable configuration
-options, so there is not just one way to set this up. This guide aims to
-provide you with all the tools you will need to setup this integration
-to fit your workflows.
+This integration provides a wide range of customizable configuration options, so there is not just one way to set this up. This guide aims to provide you with all the tools you will need to setup this integration to fit your workflows.
+
+Requirements
+==================
+
+This integration is compatible with the following versions of Splunk On-Call:
+
+- Starter
+- Growth
+- Enterprise
 
 Jira Webhook Integration Guide
-------------------------------
+====================================
 
-Getting Started
-~~~~~~~~~~~~~~~
+From the Splunk On-Call web portal navigate to :guilabel:`Integrations`, :guilabel:`3rd Party Integrations`, :guilabel:`Jira (webhook)` and select :guilabel:`Enable Integration`. Copy your :guilabel:`Service API Endpoint` to the clipboard to be used later in future steps. Replace the ``$routing_key`` with the routing key you want to use.
 
-From the Splunk On-Call web portal navigate to *Integrations >> 3rd
-Party Integrations >> Jira (webhook)* and click *Enable
-Integration.* Copy your **Service API Endpoint** to the clipboard to be
-used later in future steps. Replace the *$routing_key* with whichever
-routing key is desired (leaving it blank will route to the default
-routing key in Splunk On-Call).
+Jira configuration
+---------------------------------
 
-**In Jira (Webhook Integration)**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+From the main web interface, select the cog in the upper right hand corner and then :guilabel:`System.`
 
-From the main web interface, select the cog in the upper right hand
-corner and then **System.** 
+.. image:: images/spoc/Jnew1.png
+   :alt: Select webhooks in Jira
 
-.. figure:: images/Jnew1.png
-   :alt: select webhooks in Jira
+In the left side bar under “Advanced” select :guilabel:`WebHooks`.
 
-   select webhooks in Jira
+.. image:: images/spoc/jnew2.png
+   :alt: Select webhooks in Jira
 
-In the left side bar under “Advanced” select **WebHooks**.
+Select :guilabel:`+ Create a Webhook`. Give the WebHook a name, set the status to :guilabel:`Enabled`, and paste in the Splunk On-Call Jira URL.
 
-.. figure:: images/jnew2.png
-   :alt: select webhooks in Jira - 2
+.. image:: images/spoc/jnew3.png
+   :alt: Select + Create a Webhook
 
-   select webhooks in Jira - 2
+You have the options to use specific JQL queries to send only certain issues.
 
-Select **+ Create a Webhook**. Give the WebHook a name, set the status
-to **Enabled**, and paste in the VictorOps JIRA URL.
+Next select the events you want to send to Splunk On-Call for. The example sends a webhook whenever an issue is created, updated or deleted.
 
-.. figure:: images/jnew3.png
-   :alt: Select + Create a Webhook - Jira VictorOps
+.. image:: images/spoc/jnew4.png
+   :alt: Select the events you would like to have a webhook sent to SPoC
 
-   Select + Create a Webhook - Jira VictorOps
+Deselect :guilabel:`Exclude body` so that Jira sends JSON, then select :guilabel:`Create`.
 
-You will then have the options to use specific JQL queries to send only
-certain issues.
+When an issue is created in Jira, a ``CRITICAL`` incident is created in Splunk On-Call and any updates are sent to the timeline as an alert associated to that incident, including info messages when a comment is added. When the issue is resolved or deleted in Jira, the incident is resolved in Splunk On-Call.
 
-Next select the events you would like to send to Splunk On-Call for. In
-our example we have chosen to send a webhook whenever an “Issue” is
-created, updated or deleted.
+Splunk On-Call configuration
+-------------------------------------------
 
-.. figure:: images/jnew4.png
-   :alt: select the events you would like to have a webhook sent to
-   VictorOps for
+Now that webhooks are sent from Jira, you can manipulate those into different types of alerts and update
+Jira issues based on actions in Splunk On-Call. Start with using the Rules Engine to create a simple rule.
 
-   select the events you would like to have a webhook sent to VictorOps
-   for
+For example you might want to adjust the severity level of an alert based on the priority that was set in Jira or the ``Jira.issue.fields.priority.name``. For all Jira issues with a priority of Sev 4 to create ``WARNING`` alerts in Splunk On-Call, the rule looks as follows:
 
-Finally un-check the “Exclude body” check box so that JIRA sends JSON,
-and click **Create**.
+.. image:: images/spoc/Screen-Shot-2019-08-14-at-11.00.20-AM.png
+   :alt: Sample rule
 
-Now when an issue is created in JIRA, a CRITICAL incident will be
-created in Splunk On-Call and any updates will be sent to the timeline
-as an alert associated to that incident (including info messages when a
-comment is added). When the issue is resolved or deleted in JIRA, the
-incident will be resolved in Splunk On-Call. That is the out of the box
-functionality. Any additional functionality you desire can be
-accomplished through the use of custom fields and the `Rules
-Engine <https://help.victorops.com/knowledge-base/transmogrifier/>`__.
+To send information based on actions in Splunk On-Call back into Jira you need to configure outbound webhooks. You can do things such as update the status of a ticket when the incident is acknowledged in Splunk On-Call, or add a
+comment or assignee to the Jira ticket. The following example walks you through how to add a comment to a Jira ticket when someone writes in the associated incident timeline in Splunk On-Call.
 
-**In Splunk On-Call (Webhook Integration)**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+From the Splunk On-Call web portal, navigate to :guilabel:`Integrations`, :guilabel:`Outgoing Webhooks` and select :guilabel:`Add Webhook`.
 
-Now that webhooks are being sent from JIRA, we have a number of options
-on how we can manipulate those into different types of alerts and update
-JIRA issues based on actions in Splunk On-Call. We will start with using
-the Rules Engine to create a simple rule. For example you may want to
-adjust the severity level of an alert based on the priority that was set
-in JIRA or the jira.issue.fields.priority.name. Let’s say for all JIRA
-issues with a priority of Sev 4 you want to make those WARNING alerts in
-Splunk On-Call. The rule would look like:
+Set the :guilabel:`Event` to :guilabel:`Incident-Chats`, the :guilabel:`Method` to ``POST`` and the :guilabel:`Content Type` to ``application/json``. Next, select :guilabel:`Add a Customer Header` to set an authentication header. You need to Base64 encode your username and API token key all together, like this: ``Jira_USERNAME:Jira_API_TOKEN``. 
 
-.. image:: images/Screen-Shot-2019-08-14-at-11.00.20-AM.png
+After you have encoded that value, add :guilabel:`Authorization` in the first box and the encoded key on the second with the word ``Basic`` in front of it. For example:
 
-Next, to send information based on actions in Splunk On-Call back into
-JIRA you will need to setup `Outbound
-Webhooks <https://help.victorops.com/knowledge-base/custom-outbound-webhooks/>`__
-to accomplish this. You can do things such as update the status of a
-ticket when the incident is acknowledged in Splunk On-Call, or add a
-comment or assignee to the JIRA ticket. The following example will walk
-you through how to add a comment to a JIRA ticket when someone writes in
-the associated incident timeline in Splunk On-Call.
+.. code-block:: text
 
-From the Splunk On-Call web portal, navigate to *Integrations >>
-Outgoing Webhooks* and click *Add Webhook*.
+   Authorization: Basic
+   <Encoded_String>
 
-Set the “Event” to “Incident-Chats” Set the “Method” to POST Set the
-“Content Type” to application/json Next, click on the ‘Add a Customer
-Header’ to set an authentication header. You will first need to Base64
-encode your username and API token key all together, like this :
-JIRA_USERNAME:JIRA_API_TOKEN. You can use this `site to do
-so. <https://www.base64encode.org/>`__ Once you have encoded that value,
-you will add ‘Authorization’ in the first box, and the encoded key on
-the second with the word ‘Basic’ in front of it. Like this:
-
-Authorization: Basic
-<`BASE_64_ENCODE <https://www.base64decode.org/>`__\ \_OF_JIRA_USERNAME:API_TOKEN>
-
-Set the “To” to the JIRA rest endpoint for issue comments.
-
-Set the “Payload” to include the chat text from the incident timeline.
-The payload should look like so:
+Set the ``To`` field to the Jira REST endpoint for issue comments. Set the payload to include the chat text from the incident timeline. The payload looks similar to the following:
 
 ``{"body": "Via Splunk On-Call Timeline: ${{CHAT.TEXT}}"}``
 
-The final result should like like so:
+The final result looks like so:
 
-.. image:: images/Jira-Webhook-Example2.png
+.. image:: images/spoc/Jira-Webhook-Example2.png
+   :alt: Jira webhook example
 
- 
+Now every time a chat is entered into the timeline a comment is added to the issue in Jira.
 
-Now every time a chat is entered into the timeline a comment will be
-added to the issue in JIRA.
+Some important Jira fields for both the Rules Engine and the Outbound Webhooks are:
 
-Some important JIRA fields for both the Rules Engine and the Outbound
-Webhooks are:
+- ``Jira.issue.fields.status.id Jira.issue.fields.status.name``
+- ``Jira.issue.fields.priority.id Jira.issue.fields.priority.name``
+- ``Jira.issue.id Jira.issue.key``
 
-jira.issue.fields.status.id jira.issue.fields.status.name
-jira.issue.fields.priority.id jira.issue.fields.priority.name
-jira.issue.id jira.issue.key
+Jira Service Desk integration
+====================================
 
-For Additional information on JIRA’s API see the documentation
-`here <https://docs.atlassian.com/jira/REST/cloud/#api/2/issue>`__.
+Jira Software offers flexible issue and project tracking for software teams. Splunk On-Call has two integrations with Jira Service Desk, one for each direction. With the first you can create a new Jira ticket for any incident that comes into Splunk On-Call. The second one helps you create Splunk On-Call incidents whenever a new issue is added to project.
 
-This is just one of many ways to set up this integration, if you are
-trying to setup a custom workflow and have any questions please contact
-support.
+Splunk On-Call to Jira (Email Endpoint)
+------------------------------------------
 
- 
+This integration requires that you setup a Jira email that creates and updates Issues. This is only available with Jira Service Desk.
 
-Jira Service Desk Integration
------------------------------
+Jira configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-JIRA Software offers flexible issue and project tracking for software
-teams. Splunk On-Call has two integrations with JIRA, one for each
-direction. The first will allow you to create a new JIRA ticket for any
-incident that comes into Splunk On-Call. The second one below allows you
-to create Splunk On-Call incidents whenever a new issue is added to your
-JIRA project.
+Set up an incoming mail handler for the project you want to receive issues from Splunk On-Call. To do so, select
+:guilabel:`Settings` (gear icon) and then :guilabel:`System`.
 
--  `Splunk On-Call =>JIRA <#v2j>`__ (Email Endpoint)
--  `Splunk On-Call =>JIRA <#v2j2>`__ (Custom URL)
+.. image:: images/spoc/Jira1.png
+   :alt: Set up an Incoming mail handler
 
-Splunk On-Call =>JIRA (Email Endpoint)
+In the sidebar select :guilabel:`Incoming Mail`.
 
-This integration requires that you setup a JIRA email that creates and
-updates Issues. This is only available with `JIRA Service
-Desk. <https://www.atlassian.com/software/jira/service-desk>`__ For more
-information see the documentation
-`HERE <https://confluence.atlassian.com/jira/creating-issues-and-comments-from-email-185729464.html>`__.
+.. image:: images/spoc/Jira2.png
+   :alt: Select Incoming Mail
 
-**In Jira (Service Desk Integration)**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Select :guilabel:`Add Incoming mail handler`.
 
-The first step is to set up an “Incoming mail handler” for the project
-you want to receive issues from Splunk On-Call. To do so, select
-**Settings** (gear icon) and then **System**.
+.. image:: images/spoc/Jira3.png
+   :alt: Add incoming mail handler
 
-.. figure:: images/Jira1.png
-   :alt: setup an Incoming mail handler - Jira VictorOps
+Give it a name and select the appropriate handler you want to use for this integration, like :guilabel:`Create a new issue or add a comment to an existing issue`. Then select :guilabel:`Next`.
 
-   setup an Incoming mail handler - Jira VictorOps
+.. image:: images/spoc/Jira4.png
+   :alt: Create a new issue or add a comment to an existing issue
 
-In the left sidebar under “Mail” select **Incoming Mail.**
+Select the project you want to associate this integration with, then select :guilabel:`Add`. In this example you select the :guilabel:`Splunk On-Call Critical Incidents`.
 
-.. figure:: images/Jira2.png
-   :alt: select Incoming Mail
+.. image:: images/spoc/Jira5.png
+   :alt: Adding VictorOps Critical Incidents project
 
-   select Incoming Mail
+Retrieve the email address associated to the project. To do this go into your projects administration page and select :guilabel:`Email requests`. Copy the email you want to use to your clipboard.
 
-Under “Mail Handlers” select **Add Incoming mail handler**.
+.. image:: images/spoc/Jira6.png
+   :alt: Projects administration page and select Email requests
 
-.. figure:: images/Jira3.png
-   :alt: add incoming mail handler - Jira VictorOps
+Splunk On-Call configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   add incoming mail handler - Jira VictorOps
+Use the Jira email address as part of a team's escalation policy so that when an alert is routed to that team, a ticket is created. This gives you two options:
 
-Give it a name and select the appropriate handler you want to use for
-this integration (We suggest the “Create a new issue or add a comment to
-an existing issue” option), then hit Next.
+1. Create Jira issues from specific Splunk On-Call incidents by rerouting incidents to a "New Jira Ticket” team that has a single escalation step to send an email to the Jira email address.
 
-.. figure:: images/Jira4.png
-   :alt: Create a new issue or add a comment to an existing issue - Jira
-   VictorOps
+2. Create Jira issues from every Splunk On-Call incident that goes to a team by adding the Jira email address to the first step of that teams escalation policy.
 
-   Create a new issue or add a comment to an existing issue - Jira
-   VictorOps
+For the first option, follow these steps:
 
-Select the Project you want to associate this integration with, then
-select **Add**. In this example we selected the “Splunk On-Call Critical
-Incidents”.
+1. In the Splunk On-Call web portal navigate to :guilabel:`Teams`, then select :guilabel:`Add Team`. Add your Jira Email address to the first step of this team's Escalation Policy.
 
-.. figure:: images/Jira5.png
-   :alt: adding VictorOps Critical Incidents project - Jira
+2. When you want to create a Jira issue from any Splunk On-Call incident, reroute that incident to the “New Jira Ticket” team.
 
-   adding VictorOps Critical Incidents project - Jira
-
-Next, retrieve the email address associated to the project. To do this
-go into your projects administration page and select **Email
-requests.** Copy the email you want to use to your clipboard.
-
-.. figure:: images/Jira6.png
-   :alt: projects administration page and select Email requests
-
-   projects administration page and select Email requests
-
-**In Splunk On-Call (Service Desk Integration)**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-We will use the JIRA email address as part of a team’s escalation policy
-so that when an alert is routed to that team, a ticket is created. This
-gives you two options:
-
-1) Create JIRA issues from specific Splunk On-Call incidents by
-   re-routing incidents to a “New JIRA Ticket” team that has a single
-   escalation step to send an email to the JIRA email address. 2) Create
-   JIRA issues from every Splunk On-Call incident that goes to a team by
-   adding the JIRA email address to the first step of that teams
-   escalation policy.
-
-The following will walk you through the first option.
-
-In the Splunk On-Call web portal navigate to *Teams* then click *Add
-Team*. Add your JIRA Email address to the first step of this team’s
-Escalation Policy.
-
-When you want to create a JIRA issue from any Splunk On-Call incident,
-re-route that incident to the “New JIRA Ticket” team.
-
-For any questions or feedback, please `contact Splunk On-Call
-Support <https://help.victorops.com/knowledge-base/how-to-contact-splunk-on-call-support/>`__.
 
 Splunk On-Call to Jira (Custom URL)
------------------------------------
+-----------------------------------------
 
-This integration method utilizes a custom URL and the Splunk On-Call
-`Rules
-Engine <https://help.victorops.com/knowledge-base/transmogrifier/>`__ to
-generate a JIRA ticket with information from the alert automatically
-added.
+This integration method uses a custom URL and the Splunk On-Call Rules Engine to generate a Jira ticket with information from the alert automatically added.
 
-**In Splunk On-Call (Custom URL)**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Splunk On-Call configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-From the web portal select *Settings* >> *Alert Rules* *Engine* and
-click *Add a Rule*.
+From the web portal select :guilabel:`Settings`, :guilabel:`Alert Rules`, :guilabel:`Engine` and select :guilabel:`Add a Rule`.
 
-Set the rule to match on the alerts you would want to create JIRA
-tickets from.  Next, add an Annotation and select the URL type. Give it
-a name and then build a custom create JIRA ticket using documentation
-from Atlassian here:
+Set the rule to match on the alerts you want to create Jira tickets from. Next, add an Annotation and select the URL type. Give it a name and then build a custom create Jira ticket using documentation from Atlassian here:
 
 `Altassian
-Documentation <https://confluence.atlassian.com/display/JIRAKB/Creating+Issues+via+direct+HTML+links>`__
+Documentation <https://confluence.atlassian.com/display/JiraKB/Creating+Issues+via+direct+HTML+links>`__
 
-You can use `Variable
-Expansion <https://help.victorops.com/knowledge-base/transmogrifier/#variable-expansion>`__
-within the Rules Engine to build the URL in a way that pulls in
-information for the ticket dynamically. The exact format of the
-necessary URL is highly variable based on your specific Jira
-environment.  Below are some examples where we set the Description,
-Summary and Label fields.
+You can use variable expansion within the Rules Engine to build the URL in a way that pulls in information for the ticket dynamically. The exact format of the necessary URL is highly variable based on your specific Jira environment. The following are some examples where we set the Description, Summary and Label fields.
 
 ``https://YOUR_DOMAIN_HERE.atlassian.net/secure/CreateIssueDetails!init.jspa?pid=10506&issuetype=1&description=${{state_message}}&summary=${{entity_id}}&labels=${{labels}}``
 
 ``https://YOUR_DOMAIN_HERE.atlassian.net/secure/CreateIssueDetails!init.jspa?pid=10000&issuetype=10000&description=${{state_message}}&summary=${{entity_id}}&labels=${{labels}}``
 
-Within the Splunk On-Call incident, this rule will create a clickable
-annotation. Now whenever the rule matches on an alert, you will have a
-one-touch option to create a JIRA ticket that already has information
-pulled directly from the Splunk On-Call alert.
-
-For any questions or feedback, please `contact Splunk On-Call
-Support <https://help.victorops.com/knowledge-base/how-to-contact-splunk-on-call-support/>`__.
+Within the Splunk On-Call incident, this rule creates a clickable annotation. Whenever the rule matches on an alert, you have a one-touch option to create a Jira ticket that already has information pulled directly from the Splunk On-Call alert.
