@@ -12,6 +12,8 @@ The ``health_check`` extension allows you to enable an HTTP URL that can be prob
 Get started
 ======================
 
+.. note:: This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector. See :ref:`otel-configuration-ootb` for details. You can customize your configuration any time as explained in this document.
+
 The following settings are required to configure the extension:
 
 * ``endpoint``. Address to publish the health check status. ``0.0.0.0:13133`` by default. 
