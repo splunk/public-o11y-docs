@@ -26,18 +26,14 @@ By default, the Splunk Distribution of OpenTelemetry Collector includes the Flue
 
 .. code-block:: yaml
 
-   receivers:
-     fluentforward:
-       endpoint: 127.0.0.1:8006
+  receivers:
+    fluentforward:
+      endpoint: 127.0.0.1:8006
 
-   service:
-     pipelines:
-       logs:
-         receivers: [fluentforward, otlp]
-         processors:
-         - memory_limiter
-         - batch
-         - resourcedetection
+  service:
+    pipelines:
+      logs:
+        receivers: [fluentforward]
 
 For more information on how to install Fluentd when manually installing the Collector, see:
 

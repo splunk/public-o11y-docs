@@ -14,9 +14,18 @@ The OTLP/HTTP exporter sends metrics, traces, and logs through HTTP using the OT
 Get started
 ======================
 
-The OTLP/HTTP exporter is not included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector.
+Follow these steps to configure and activate the component:
 
-If you want to add it, the following settings are required:
+1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+  
+  - :ref:`otel-install-linux`
+  - :ref:`otel-install-windows`
+  - :ref:`otel-install-k8s`
+
+2. Configure the exporter as described in the next section.
+3. Restart the Collector.
+
+The OTLP/HTTP exporter is not included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector. If you want to add it, the following settings are required:
 
 * ``endpoint``. The target base URL to send data to, for example ``https://example.com:4318``. No default value.
 
@@ -74,8 +83,7 @@ configuration file. For example:
        traces:
          exporters: [otlphttp]
 
-
-Detailed sample configuration
+Configuration examples
 --------------------------------
 
 This is a detailed configuration example:

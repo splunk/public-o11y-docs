@@ -30,12 +30,31 @@ Follow these steps to configure and activate the component:
 2. Configure the JMX receiver as described in the next section.
 3. Restart the Collector.
 
-Sample configurations
+Sample configuration
 --------------------------------
 
-To activate the JMX receiver, add ``jmx`` to the ``receivers`` section of your configuration file, as in the following sample configurations. 
+To activate the JMX receiver, add ``jmx`` to the ``receivers`` section of your configuration file:
+
+.. code-block:: yaml
+
+  receivers:
+    jmx:
+
+To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your configuration file:
+
+.. code:: yaml
+
+  service:
+    pipelines:
+      metrics:
+        receivers: [jmx]
 
 See :ref:`jmx-receiver-settings` for more details.
+
+Configuration example
+--------------------------------
+
+This examples provides configuration details for the receiver:
 
 .. code-block:: yaml
 
@@ -59,6 +78,8 @@ See :ref:`jmx-receiver-settings` for more details.
   
 Advanced settings
 -----------------------------------------------
+
+You can use the following advanced settings with the receiver:
 
 * ``jar_path``. The path for the JMX Metric Gatherer uber JAR to run. Use a jar version 1.9 or higher, which can be downloaded from GitHub. ``/opt/opentelemetry-java-contrib-jmx-metrics.jar`` by default.
 

@@ -34,10 +34,15 @@ Statements can transform telemetry of a higher context. For example, statements 
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the transform processor. To activate the transform processor for a pipeline, add ``transform`` to the ``processors`` section of the configuration. For example:
+Follow these steps to configure and activate the component:
+
+1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform. See :ref:`otel-install-platform`. 
+2. Configure the TCP log receiver as described in the next section. 
+3. Restart the Collector.
+
+To activate the transform processor for a pipeline, add ``transform`` to the ``processors`` section of the configuration. For example:
 
 .. code-block:: yaml
-
 
    transform:
      error_mode: ignore

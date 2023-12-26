@@ -13,13 +13,22 @@ Get started
 
 .. note:: 
   
-  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information. 
+  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector when deploying in host monitoring (agent) mode in the ``traces`` pipeline. See :ref:`otel-deployment-mode` for more information. 
   
   For details about the default configuration, see :ref:`otel-configuration-ootb`. You can customize your configuration any time as explained in this document.
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the SAPM exporter in the ``traces`` pipeline.
+Follow these steps to configure and activate the component:
 
-Sample configurations
+1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+  
+  - :ref:`otel-install-linux`
+  - :ref:`otel-install-windows`
+  - :ref:`otel-install-k8s`
+
+2. Configure the exporter as described in this doc.
+3. Restart the Collector.  
+
+Sample configuration
 ----------------------
 
 The following example shows a SAPM exporter instance configure for a maximum of 100 connections and 8 workers:
@@ -41,6 +50,9 @@ The following example shows a SAPM exporter instance configure for a maximum of 
            receivers: [nop]
            processors: [nop]
            exporters: [sapm]
+
+Configuration example with all settings
+----------------------------------------------
 
 The following example shows all available settings:
 

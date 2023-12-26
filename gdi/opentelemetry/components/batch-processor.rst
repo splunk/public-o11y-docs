@@ -9,6 +9,8 @@ Batch processor
 
 The batch processor is an OpenTelemetry Collector component that batches and compresses spans, metrics, or logs based on size or time. Batching can help reduce the number of submission requests made by exporters, and help regulate the flow of telemetry from multiple or single receivers in a pipeline.
 
+To ensure that batching happens after data sampling and filtering, add the batch processor after the ``memory_limiter`` processor and other sampling processors.
+
 Get started
 ======================
 
@@ -18,28 +20,40 @@ Get started
   
   For details about the default configuration, see :ref:`otel-configuration-ootb`. You can customize your configuration any time as explained in this document.
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the batch processor in all the predefined pipelines. To ensure that batching happens after data sampling and filtering, add the batch processor after the ``memory_limiter`` processor and other sampling processors.
-
-Sample configurations
+Sample configuration
 ----------------------
 
 The Splunk Distribution of OpenTelemetry Collector adds the batch processor with the default configuration:
 
 .. code-block:: yaml
 
+  processors:
+    batch:
 
-   processors:
-     batch:
+The processor is included in all pipelines of the ``service`` section of your configuration file:
+
+.. code-block:: yaml
+
+  service:
+    pipelines:
+      metrics:
+        processors: [batch]
+      logs:
+        processors: [batch]
+      traces:
+        processors: [batch]
+
+Basic batching example
+--------------------------------
 
 The following example shows how to configure the batch processor to send batches after 5,000 spans, data points, or logs have been collected. The timeout setting works as a fallback condition in case the size condition isn't met.
 
 .. code-block:: yaml
 
-
-   processors:
-     batch/custom:
-       send_batch_size: 5000
-       timeout: 15s
+  processors:
+    batch/custom:
+      send_batch_size: 5000
+      timeout: 15s
 
 Batching by metadata
 --------------------------------

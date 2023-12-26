@@ -22,17 +22,24 @@ Get started
 
 .. note:: 
   
-  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information. 
+  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector when deploying in host monitoring (agent) mode in the ``logs`` pipeline. See :ref:`otel-deployment-mode` for more information. 
   
   For details about the default configuration, see :ref:`otel-configuration-ootb`. You can customize your configuration any time as explained in this document.
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the Splunk HEC exporter in the ``logs`` pipeline.
-
 Starting from version 0.81 of the Splunk Distribution of OpenTelemetry Collector, the default configuration includes an exporter for AlwaysOn Profiling data that is separate from the standard logs exporter. See :ref:`exclude-log-data`.
 
-.. note:: To send Splunk HEC data through a proxy, configure proxy settings as environment variables. See :ref:`configure-proxy-collector` for more information.
+Follow these steps to configure and activate the component:
 
-Sample configurations
+1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+  
+  - :ref:`otel-install-linux`
+  - :ref:`otel-install-windows`
+  - :ref:`otel-install-k8s`
+
+2. Configure the exporter as described in this doc.
+3. Restart the Collector.  
+
+Sample configuration
 ----------------------
 
 The following example shows a Splunk HEC exporter instance configured for a logs pipeline in the Collector configuration file:
@@ -91,10 +98,15 @@ In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, f
 
 The realm name appears in the :guilabel:`Organizations` section.
 
+.. note:: To send Splunk HEC data through a proxy, configure proxy settings as environment variables. See :ref:`configure-proxy-collector` for more information.
+
+Use cases
+======================
+
 .. _send_logs_to_splunk:
 
 Send logs to Splunk Cloud Platform or Splunk Enterprise
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------------------------------------------------------------
 
 If you're using the Collector for log collection and need to send data to Splunk Cloud Platform or Splunk Enterprise, configure the ``splunk_hec`` exporter to use your Splunk ``endpoint`` and ``token``. For example:
 
@@ -199,7 +211,7 @@ To split the log pipelines, configure two separate ``splunk_hec`` entries in the
 .. _exclude-log-data:
 
 Turn off logs or profiling data
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------------------------------------------------------------
 
 .. note:: Starting from version 0.81 of the Splunk Distribution of OpenTelemetry Collector, logs and profiling pipelines are split. In that case, you can remove or comment them out according to your needs.
 
@@ -256,7 +268,7 @@ If you've deployed the Collector in Kubernetes using the Helm chart, change the 
 .. _send_metrics_to_splunk:
 
 Send metrics to Splunk Cloud Platform or Splunk Enterprise
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------------------------------------------------------------
 
 You can use the Collector to send metrics to Splunk Cloud Platform or Splunk Enterprise.  
 
