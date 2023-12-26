@@ -31,7 +31,7 @@ Follow these steps to configure and activate the component:
 Sample configuration
 ----------------------
 
-The following example shows a SAPM exporter instance configure for a maximum of 100 connections and 8 workers:
+The following example shows a SAPM exporter instance configuration for a maximum of 100 connections and 8 workers:
 
 .. code:: yaml
 
@@ -42,6 +42,10 @@ The following example shows a SAPM exporter instance configure for a maximum of 
        endpoint: https://ingest.<realm>.signalfx.com/v2/trace
        max_connections: 100
        num_workers: 8
+
+Next, add the exporter to the ``services`` section of your configuration file:
+
+.. code:: yaml
 
    service:
      pipelines:

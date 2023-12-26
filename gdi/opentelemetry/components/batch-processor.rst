@@ -20,10 +20,21 @@ Get started
   
   For details about the default configuration, see :ref:`otel-configuration-ootb`. You can customize your configuration any time as explained in this document.
 
+Follow these steps to configure and activate the component:
+
+1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+
+  - :ref:`otel-install-linux`
+  - :ref:`otel-install-windows`
+  - :ref:`otel-install-k8s`
+
+2. Configure the processor as described in this document.
+3. Restart the Collector.  
+
 Sample configuration
 ----------------------
 
-The Splunk Distribution of OpenTelemetry Collector adds the batch processor with the default configuration:
+The Splunk Distribution of the OpenTelemetry Collector adds the batch processor with the default configuration:
 
 .. code-block:: yaml
 
@@ -74,7 +85,7 @@ Starting from version 0.78 of the OpenTelemetry Collector, you can batch telemet
 
 To use metadata as batching criteria, add the ``include_metadata: true`` setting to your receivers's configuration, so that the batch processor can use the available metadata keys.
 
-.. caution:: Batching by metadata can increase memory consumption, as each metadata combination triggers the allocation of a new background task in the Collector. The maximum number of distinct combinations is defined using the ``metadata_cardinality_limit`` setting, which defaults to ``1000``.
+.. caution:: Batching by metadata might increase memory consumption, as each metadata combination triggers the allocation of a new background task in the Collector. The maximum number of distinct combinations is defined using the ``metadata_cardinality_limit`` setting, which defaults to ``1000``.
 
 Settings
 ======================

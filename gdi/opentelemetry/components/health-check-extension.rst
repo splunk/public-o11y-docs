@@ -76,9 +76,6 @@ This is a basic configuration example for the extension:
         interval: "5m"
         exporter_failure_threshold: 5
 
-Detailed sample configuration
---------------------------------
-
 This is a detailed configuration example:
 
 .. code-block:: yaml

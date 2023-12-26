@@ -40,7 +40,7 @@ Follow these steps to configure and activate the component:
 Sample configurations
 ----------------------
 
-The default configuration of the ``signalfx`` receiver in the Splunk Distribution of OpenTelemetry Collector is the following:
+The default configuration of the ``signalfx`` receiver in the Splunk Distribution of the OpenTelemetry Collector is the following:
 
 .. code-block:: yaml
 

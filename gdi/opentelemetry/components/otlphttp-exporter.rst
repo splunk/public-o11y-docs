@@ -117,7 +117,6 @@ This is a detailed configuration example:
     another: "somevalue"
   compression: gzip
 
-
 Configure gzip compression
 --------------------------------
 

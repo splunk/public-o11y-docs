@@ -46,7 +46,6 @@ The following example shows a Splunk HEC exporter instance configured for a logs
 
 .. code-block:: yaml
 
-
    exporters:
      # ...
      splunk_hec:
@@ -58,7 +57,11 @@ The following example shows a Splunk HEC exporter instance configured for a logs
        sourcetype: "otel"
 
    # ...
-   
+
+Next, add the exporter to the ``services`` section of your configuration file:
+
+.. code:: yaml
+
    service:
      # ...
      pipelines:

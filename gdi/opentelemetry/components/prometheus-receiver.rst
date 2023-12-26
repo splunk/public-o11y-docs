@@ -54,8 +54,7 @@ To activate additional Prometheus receivers, add a new ``prometheus`` entry in t
              static_configs:
                - targets: ['0.0.0.0:8888']
 
-To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your
-configuration file. For example:
+To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your configuration file. For example:
 
 .. code:: yaml
 
@@ -125,7 +124,7 @@ Scaling considerations
 When running multiple replicas of the Collector with the same configuration, the Prometheus receiver scrapes targets multiple times. If you need to configure each replica with different scraping configurations, shard the scraping. The Prometheus receiver is stateful. For considerations on scaling, see :ref:`otel-sizing`.
 
 Known limitations
----------------------------------
+======================
 
 The following Prometheus features are not supported and return an error if used in the receiver configuration:
 

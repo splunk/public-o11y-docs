@@ -22,7 +22,7 @@ Follow these steps to configure and activate the component:
 
 .. _tcp-receiver-sample-configs:
 
-Sample configurations
+Sample configuration
 -------------------------------------------------
 
 To activate the TCP receiver add ``tcplog`` to the ``receivers`` section of your ``agent_config.yaml`` file, as in the following example configuration:

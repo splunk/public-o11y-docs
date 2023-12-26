@@ -87,11 +87,11 @@ Next, include the processor in the required pipelines of the ``service`` section
   service:
     pipelines:
       metrics:
-        processors: [resource_attributes]
+        processors: [resourcedetection]
       logs:
-        processors: [resource_attributes]
+        processors: [resourcedetection]
       traces:
-        processors: [resource_attributes]
+        processors: [resourcedetection]
 
 .. _resourceattributes-ordering-considerations:
 
