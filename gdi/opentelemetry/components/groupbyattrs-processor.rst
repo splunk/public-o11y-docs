@@ -48,7 +48,6 @@ To complete the configuration, include the processor in any pipeline of the ``se
 
 .. code-block:: yaml
 
-
   service:
     pipelines:
       metrics:

@@ -27,21 +27,32 @@ Follow these steps to configure and activate the component:
 2. Configure the Splunk HEC receiver as described in the next section.
 3. Restart the Collector.
 
-Sample configurations
+Sample configuration
 ----------------------
 
-To activate the Splunk HEC receiver add a ``splunk_hec`` entry inside the ``receivers`` section of the Collector configuration file. For example:
+To activate the Splunk HEC receiver add a ``splunk_hec`` entry inside the ``receivers`` section of the Collector configuration file:
 
 .. code-block:: yaml
-
 
    receivers:
       splunk_hec:
 
+To complete the configuration, include the receiver in the required pipeline of the ``service`` section of your
+configuration file. For example:
+
+.. code:: yaml
+
+   service:
+      pipelines:
+         metrics:
+            receivers: [splunk_hec]
+
+Configuration example
+--------------------------------------------
+
 The following example shows a Splunk HEC receiver configured with all available settings:
 
 .. code-block:: yaml
-
 
    receivers:
      # ...

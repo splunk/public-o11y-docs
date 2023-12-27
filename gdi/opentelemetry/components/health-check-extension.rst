@@ -18,6 +18,34 @@ Get started
   
   For details about the default configuration, see :ref:`otel-configuration-ootb`. You can customize your configuration any time as explained in this document.
 
+Follow these steps to configure and activate the component:
+
+1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+
+  - :ref:`otel-install-linux`
+  - :ref:`otel-install-windows`
+  - :ref:`otel-install-k8s`
+
+2. Configure the ``basicauth`` extension as described in the next section.
+3. Restart the Collector.
+
+Sample configuration
+--------------------------------
+
+To activate the component, add ``health_check`` to the ``extensions`` section of your configuration file:
+
+.. code-block:: yaml
+
+  extensions:
+    health_check:
+
+To complete the configuration, include the extension in the ``service`` section of your configuration file:
+
+.. code:: yaml
+
+  service:
+    extensions: [health_check]
+
 The following settings are required to configure the extension:
 
 * ``endpoint``. Address to publish the health check status. ``0.0.0.0:13133`` by default. 
@@ -27,20 +55,12 @@ The following settings are required to configure the extension:
 * ``interval``. Time interval to check the number of failures. ``5m`` by default. 
 * ``exporter_failure_threshold``. The failure number threshold to mark containers as healthy. ``5`` by default. 
 
-Check the Collector's pipeline
------------------------------------------
-
-Optionally, you can use the configuration parameter ``check_collector_pipeline`` to enable Health Check for the Collector pipelines. If activated, you can monitor the number of times that components failed to send data to their destination. 
-
-Note that it only supports exporter failures, but not receivers or processors.
-
-Sample configuration
+Configuration examples
 --------------------------------
 
-This is a sample configuration for the extension:
+This is a basic configuration example for the extension:
 
 .. code-block:: yaml
-
 
   extensions:
     health_check:
@@ -56,13 +76,9 @@ This is a sample configuration for the extension:
         interval: "5m"
         exporter_failure_threshold: 5
 
-Detailed sample configuration
---------------------------------
-
 This is a detailed configuration example:
 
 .. code-block:: yaml
-
 
   health_check:
   health_check/1:
@@ -94,6 +110,13 @@ This is a detailed configuration example:
       enabled: false
       interval: "5m"
       exporter_failure_threshold: 5        
+
+Check the Collector's pipelines
+-----------------------------------------
+
+Optionally, you can use the configuration parameter ``check_collector_pipeline`` to enable Health Check for the Collector pipelines. If activated, you can monitor the number of times that components failed to send data to their destination. 
+
+Note that it only supports exporter failures, but not receivers or processors.
 
 Settings
 ======================
