@@ -22,22 +22,29 @@ Get started
   
   For details about the default configuration, see :ref:`otel-configuration-ootb`. You can customize your configuration any time as explained in this document.
 
+Follow these steps to configure and activate the component:
+
+1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+
+  - :ref:`otel-install-linux`
+  - :ref:`otel-install-windows`
+  - :ref:`otel-install-k8s`
+
+2. Configure the receiver as described in the next document.
+3. Restart the Collector.
+
 By default, the Splunk Distribution of OpenTelemetry Collector includes the Fluent Forward receiver in the ``logs`` pipeline:
 
 .. code-block:: yaml
 
-   receivers:
-     fluentforward:
-       endpoint: 127.0.0.1:8006
+  receivers:
+    fluentforward:
+      endpoint: 127.0.0.1:8006
 
-   service:
-     pipelines:
-       logs:
-         receivers: [fluentforward, otlp]
-         processors:
-         - memory_limiter
-         - batch
-         - resourcedetection
+  service:
+    pipelines:
+      logs:
+        receivers: [fluentforward]
 
 For more information on how to install Fluentd when manually installing the Collector, see:
 

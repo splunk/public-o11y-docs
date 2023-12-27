@@ -26,13 +26,23 @@ Get started
 
 By default, the Splunk Distribution of OpenTelemetry Collector includes the SignalFx receiver in the ``metrics`` and ``logs/signalfx`` pipelines. 
 
+Follow these steps to configure and activate the component:
+
+1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+  
+  - :ref:`otel-install-linux`
+  - :ref:`otel-install-windows`
+  - :ref:`otel-install-k8s`
+
+2. Configure the receiver as described in this doc.
+3. Restart the Collector.  
+
 Sample configurations
 ----------------------
 
-The default configuration of the ``signalfx`` receiver in the Splunk Distribution of OpenTelemetry Collector is the following:
+The default configuration of the ``signalfx`` receiver in the Splunk Distribution of the OpenTelemetry Collector is the following:
 
 .. code-block:: yaml
-
 
    receivers:
      signalfx:
@@ -44,7 +54,6 @@ The default configuration of the ``signalfx`` receiver in the Splunk Distributio
 When adding the SignalFx receiver, configure both the metrics and logs pipelines. Make sure to also add the SignalFx exporter as in the following example:
 
 .. code-block:: yaml
-
 
    service:
      pipelines:
