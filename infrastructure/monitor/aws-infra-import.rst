@@ -181,16 +181,16 @@ You can specify filters to limit the data you want to import for a specific name
 
 See how to filter data at :ref:`aws-control-example`.
 
-.. note:: You must be an administrator of your AWS account to specify namespaces and set filters.
+.. note:: You must be an Administrator of your AWS account to specify namespaces and set filters.
 
 .. _aws-filter-char: 
 
 Unsupported characters for tags 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Be careful when choosing tag names. Splunk Observability Cloud allows only alphanumeric characters, and the underscore ( ``_`` ) and minus ( ``-`` ) symbols. Spaces are replaced by the underscore character. 
+Be careful when choosing tag names. Splunk Observability Cloud only allows alphanumeric characters (lower and upper case latin letters), digits, the underscore ( ``_`` ) and the minus/hyphen ( ``-`` ) symbols. Spaces and unsupported characters are replaced by the underscore character. 
 
-These characters are unsupported:
+Note that these characters are unsupported:
 
 * periods ( ``.`` )
 * colons ( ``:`` )
