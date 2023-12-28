@@ -14,6 +14,9 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     Migrate from the Smart Agent to the Collector <smart-agent-migration-to-otel-collector.rst>
     otel-requirements.rst
     components.rst
+    Collector for Kubernetes <collector-kubernetes/collector-kubernetes-intro.rst>
+    Collector for Linux <collector-linux/collector-linux-intro.rst>
+    Collector for Windows <collector-windows/collector-windows-intro.rst>        
     install-the-collector.rst
     configure-the-collector.rst
     collector-how-to.rst
@@ -150,7 +153,7 @@ Learn more at :ref:`otel-deployment-mode`.
 .. raw:: html
 
   <embed>
-    <h3>Install the Collector<a name="collector-intro-install" class="headerlink" href="#collector-intro-install" title="Permalink to this headline">¶</a></h3>
+    <h3>Install and configure the Collector<a name="collector-intro-install" class="headerlink" href="#collector-intro-install" title="Permalink to this headline">¶</a></h3>
   </embed>
 
 Learn how to install, deploy, upgrade or uninstall the Collector in :ref:`otel-install-platform`. Or use :ref:`our guided install <collector-guided-install>`.

@@ -14,15 +14,9 @@ Configure the Collector
 
     configure-the-collector-ootb.rst
     environment-variables.rst
-    linux-config.rst
-    kubernetes-config.rst
-    kubernetes-config-advanced.rst
-    kubernetes-config-logs.rst
-    windows-config.rst
     other-configuration-sources.rst
     data-processing.rst
     Internal metrics <metrics-internal-collector.rst>
-    Default Kubernetes metrics <metrics-ootb-k8s.rst>
     tags.rst
     Remove data pre-ingest <configure-remove.rst>
 
