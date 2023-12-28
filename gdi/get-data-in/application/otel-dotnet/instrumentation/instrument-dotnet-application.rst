@@ -72,7 +72,7 @@ Windows
          # Set up environment to start instrumentation from the current PowerShell session
          Register-OpenTelemetryForCurrentSession -OTelServiceName "<your-service-name>"
 
-      .. code-tab:: shell IIS application (.NET)
+      .. code-tab:: shell IIS application
 
          # Set up IIS instrumentation
          # IIS is restarted as a result
@@ -81,16 +81,84 @@ Windows
       .. code-tab:: shell Windows service
 
          # Set up your Windows Service instrumentation
-         Register-OpenTelemetryForWindowsService -WindowsServiceName "<your-windows-service-name>"
+         Register-OpenTelemetryForWindowsService -WindowsServiceName "<your-windows-service-name>" -OTelServiceName "<your-OTel-service-name>"
 
 #. Set the environment and service version resource attributes:
 
-   .. code-block:: powershell
+   .. tabs::
 
-      # You can also set this in web.config or app.config
-      $env:OTEL_RESOURCE_ATTRIBUTES='deployment.environment=<envtype>,service.version=<version>'
+      .. tab:: .NET application
 
-#. Run your application.
+         .. code-block:: powershell
+
+            # Configure environment and service version for current PowerShell session
+            $env:OTEL_RESOURCE_ATTRIBUTES='deployment.environment=<envtype>,service.version=<version>'
+
+         Run your application.
+
+      .. tab:: IIS application (ASP.NET)
+
+         For ASP.NET application, service name and resource attributes can be configured in ``appSettings`` block of web.config file.
+
+         .. code-block:: xml
+
+            <appSettings>
+               <add key="OTEL_SERVICE_NAME" value="my-service-name" />
+               <add key="OTEL_RESOURCE_ATTRIBUTES" value="deployment.environment=test,service.version=1.0.0" />
+            </appSettings>
+
+         .. note:: If ``OTEL_SERVICE_NAME`` is not set for web application hosted in IIS, inferred name based on site name and virtual directory path will be used.
+
+         After modifying the web.config file, restart IIS e.g by running the following command:
+
+         .. code-block:: powershell
+
+            Start-Process "iisreset.exe" -NoNewWindow -Wait
+
+         Alternatively, resource attributes can be set for specific application pools in ``environmentVariables`` block of :new-page:`applicationHost.config file <https://learn.microsoft.com/en-us/iis/configuration/system.applicationhost/applicationpools/add/environmentvariables/#configuration-sample>`.
+
+         .. code-block:: xml
+
+            <environmentVariables>
+               <add name="OTEL_RESOURCE_ATTRIBUTES" value="deployment.environment=test,service.version=1.0.0" />
+            </environmentVariables>
+
+         .. note:: If ``OTEL_SERVICE_NAME`` or ``OTEL_RESOURCE_ATTRIBUTES`` environment variables are set for a process, settings with the same names from ``appSettings`` block of web.config are ignored.
+
+      .. tab:: IIS application (ASP.NET Core)
+
+         For ASP.NET Core application hosted in IIS, service name and resource attributes can be configured using ``environmentVariables`` block of :new-page:`web.config file <https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/web-config?view=aspnetcore-8.0#set-environment-variables>`.
+
+         .. code-block:: xml
+
+            <environmentVariables>
+               <environmentVariable name="OTEL_SERVICE_NAME" value="my-service-name" />
+               <environmentVariable name="OTEL_RESOURCE_ATTRIBUTES" value="deployment.environment=test,service.version=1.0.0" />
+            </environmentVariables>
+
+         After modifying the web.config file, restart IIS e.g by running the following command:
+
+         .. code-block:: powershell
+
+            Start-Process "iisreset.exe" -NoNewWindow -Wait
+
+      .. tab:: Windows service
+
+         For .NET Framework applications, resource attributes can be configured in ``appSettings`` block of app.config file.
+
+         .. code-block:: xml
+
+            <appSettings>
+               <add key="OTEL_RESOURCE_ATTRIBUTES" value="deployment.environment=test,service.version=1.0.0" />
+            </appSettings>
+
+         Alternatively, modify the Environment key in Windows Registry for the Windows Service.
+
+         After modifying the app.config file or Windows Registry, restart the service e.g by running the following command:
+
+         .. code-block:: powershell
+
+            Restart-Service -Name "<your-windows-service-name>" -Force
 
 If no data appears in APM, see :ref:`common-dotnet-otel-troubleshooting`.
 
