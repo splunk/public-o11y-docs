@@ -13,12 +13,6 @@ Install and deploy the Collector
     :hidden:
 
     Deployment modes <deployment-modes.rst>
-    Kubernetes <install-k8s.rst>
-    Kubernetes (EKS Add-on) <install-k8s-addon-eks.rst>
-    Linux (script) <install-linux.rst>
-    Linux (manual) <install-linux-manual.rst>    
-    Windows (script) <install-windows.rst>
-    Windows (manual) <install-windows-manual.rst>
     deployments/otel-deployments.rst
     otel-upgrade.rst
     uninstall-the-collector.rst
