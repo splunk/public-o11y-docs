@@ -18,6 +18,22 @@ Get started with the Collector for Kubernetes
    kubernetes-config-logs.rst
    Default Kubernetes metrics <metrics-ootb-k8s.rst>
 
-Install the Splunk Distribution of OpenTelemetry Collector for Kubernetes
+To install and configure the Splunk Distribution of OpenTelemetry Collector for Kubernetes, follow these docs:
 
-[INTRO HERE]
+* :ref:`otel-install-k8s`
+* :ref:`install-k8s-addon-eks`
+* :ref:`otel-kubernetes-config`
+* :ref:`otel-kubernetes-config-advanced`
+* :ref:`kubernetes-config-logs`
+* :ref:`Default Kubernetes metrics <ootb-metrics-k8s>` 
+
+Next, learn more about the Collector at :ref:`otel-configuration`.
+
+.. note::
+
+   If you have any installation or configuration issues, refer to :ref:`otel-troubleshooting`.
+
+   To update or uninstall the Collector, see :ref:`otel-upgrade` and :ref:`otel-uninstall-integration`.
+
+
+
