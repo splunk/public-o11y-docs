@@ -14,12 +14,11 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     Migrate from the Smart Agent to the Collector <smart-agent-migration-to-otel-collector.rst>
     otel-requirements.rst
     components.rst
+    install-the-collector.rst
     Collector for Kubernetes <collector-kubernetes/collector-kubernetes-intro.rst>
     Collector for Linux <collector-linux/collector-linux-intro.rst>
-    Collector for Windows <collector-windows/collector-windows-intro.rst>        
-    install-the-collector.rst
-    configure-the-collector.rst
-    collector-how-to.rst
+    Collector for Windows <collector-windows/collector-windows-intro.rst>     
+    configure-the-collector.rst    
     Zero config auto instrumentation <zero-config.rst>
     Discover metric sources automatically <discovery-mode.rst>
     Use the Universal Forwarder <collector-with-the-uf.rst>
@@ -158,11 +157,13 @@ Learn more at :ref:`otel-deployment-mode`.
 
 Learn how to install, deploy, upgrade or uninstall the Collector in :ref:`otel-install-platform`. Or use :ref:`our guided install <collector-guided-install>`.
 
-This distribution is supported on and packaged for a variety of platforms, including:
+The Splunk distribution of the OpenTelemetry Collector is supported on and packaged for a variety of platforms, including:
 
-- Kubernetes: :ref:`Helm <helm-chart>` (recommended) and :ref:`YAML <resource-yaml-manifests>`.
-- Linux: :ref:`installer script <linux-scripts>` (recommended), :ref:`Ansible <deployment-linux-ansible>`, :ref:`Puppet <deployment-linux-puppet>`, :ref:`Heroku <linux-heroku>`, and :ref:`manual <linux-manual>` (including DEB/RPM packages, Docker, and binary).
-- Windows: :ref:`installer script <windows-script>` (recommended), :ref:`Ansible <deployment-windows-ansible>`, :ref:`Puppet <deployment-windows-puppet>`, and :ref:`manual <otel-install-windows-manual>` (including MSI with GUI and PowerShell).
+* :ref:`Collector for Kubernetes <collector-kubernetes-intro>`
+* :ref:`Collector for Linux <collector-linux-intro>`
+* :ref:`Collector for Windows <collector-windows-intro>`   
+
+You can also deploy the Collector with tools such as Amazon ECS EC2, Amazon Fargate, Ansible, Nomad, PCF, or Puppet. Learn more at :ref:`otel_deployments`.
 
 After you've installed the Collector, see: 
 
