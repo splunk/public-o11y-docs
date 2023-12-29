@@ -136,7 +136,7 @@ Windows
                <environmentVariable name="OTEL_RESOURCE_ATTRIBUTES" value="deployment.environment=test,service.version=1.0.0" />
             </environmentVariables>
 
-         After modifying the web.config file, restart IIS e.g by running the following command:
+         After modifying the ``web.config`` file, restart IIS e.g by running the following command:
 
          .. code-block:: powershell
 
@@ -154,7 +154,7 @@ Windows
 
          Alternatively, modify the Environment key in Windows Registry for the Windows Service.
 
-         After modifying the app.config file or Windows Registry, restart the service e.g by running the following command:
+         After modifying the ``app.config`` file or Windows Registry, restart the service e.g by running the following command:
 
          .. code-block:: powershell
 
