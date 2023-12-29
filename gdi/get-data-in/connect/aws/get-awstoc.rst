@@ -96,18 +96,9 @@ You can deactivate this check by setting the ``enableCheckLargeVolume`` field in
     <h4>Tag filtering<a name="tag-filtering-aws" class="headerlink" href="#tag-filtering-aws" title="Permalink to this headline">¶</a></h4>
   </embed>
 
-If you filter data based on tags, your costs for Amazon CloudWatch and Splunk Infrastructure Monitoring might decrease.
+If you filter data based on tags, your costs for Amazon CloudWatch and Splunk Infrastructure Monitoring might decrease. Read more at :ref:`specify-data-metadata`.
 
-Be careful when choosing tag names. Splunk Observability Cloud allows only alphanumeric characters, and the underscore ( ``_`` ) and minus ( ``-`` ) symbols. Spaces are replaced by the underscore character. 
-
-These characters are unsupported:
-
-* periods ( ``.`` )
-* colons ( ``:`` )
-* forward slashes ( ``/`` )
-* equal signs ( ``=`` )
-* plus signs ( ``+`` )
-* at symbols ( ``@`` ) 
+.. include:: /_includes/gdi/aws-unsupported-chars.rst
 
 .. raw:: html
 
@@ -129,7 +120,7 @@ CloudWatch Metric Streams supports filtering by namespace and metric name but do
 
 By default, Splunk Observability Cloud brings in data from all supported AWS services associated with your account. See :ref:`Supported integrations in Splunk Observability Cloud <aws-integrations>`.
 
-To limit the amount of data to import, see :ref:`specify-data-metadata`.  
+To manage the amount of data to import, see :ref:`aws-infra-import`.  
 
 .. raw:: html
 
