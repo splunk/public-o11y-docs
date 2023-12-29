@@ -19,34 +19,27 @@ Understand and use the Collector
     collector-how-to.rst
     Remove data pre-ingest <configure-remove.rst>    
 
-Read the following to better understand how the Collector works:
+.. raw:: html
+
+  <embed>
+    <h2>Use the Collector<a name="collector-use-index" class="headerlink" href="#collector-use-index" title="Permalink to this headline">¶</a></h2>
+  </embed>  
+
+See the following to understand how the Collector works, and how to use it:
 
 * :ref:`collector-env-var`
 * :ref:`metrics-internal-collector`
 * :ref:`otel-data-processing`
 * :ref:`otel-tags`
-
-.. raw:: html
-
-  <embed>
-    <h2>Components of the Collector<a name="collector-components-index" class="headerlink" href="#collector-components-index" title="Permalink to this headline">¶</a></h2>
-  </embed>
-
-.. include:: /_includes/collector-components.rst
-
-By default, the Splunk Distribution is configured as explained in :ref:`configure-the-collector-ootb`. You can also use a set of :ref:`additional Collector components <otel-components>` that you can configure separately. 
-
-.. note:: See how to perform common actions and tasks with the Collector at :ref:`collector-how-to`. To understand how data is processed, see :ref:`otel-data-processing`.
-
-.. raw:: html
-
-  <embed>
-    <h2>Use the Collector<a name="collector-components-index" class="headerlink" href="#collector-components-index" title="Permalink to this headline">¶</a></h2>
-  </embed>  
-
-See the following:
-
-* :ref:`otel-data-processing`
-* :ref:`otel-tags`
 * :ref:`collector-how-to`
 * :ref:`configure-remove`
+
+.. raw:: html
+
+  <embed>
+    <h2>Components and services of the Collector<a name="collector-components-index" class="headerlink" href="#collector-components-index" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
+By default, the Collector is configured as explained in :ref:`configure-the-collector-ootb`.
+
+.. include:: /_includes/collector-components.rst
