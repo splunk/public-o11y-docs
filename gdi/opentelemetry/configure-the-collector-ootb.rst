@@ -1,4 +1,5 @@
 .. _otel-configuration-ootb:
+.. _configure-the-collector-ootb:
 
 ****************************************************************
 Collector default configuration
