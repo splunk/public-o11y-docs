@@ -89,7 +89,7 @@ You can also use these configurations to change the default settings in each Col
 .. raw:: html
 
   <embed>
-    <h3>Multiple configuration files<a name="otel-config-multiple-files" class="headerlink" href="#otel-config-multiple-files" title="Permalink to this headline">¶</a></h2>
+    <h3>Use multiple configuration files<a name="otel-config-multiple-files" class="headerlink" href="#otel-config-multiple-files" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 To define multiple config files simultaneously use:
@@ -151,8 +151,6 @@ The following is a sample configuration to collect custom logs:
     tag my-custom-logs
   </source>
 
-See :ref:`fluentd-receiver` for more information.
-
 .. _otel-config-additional-components:
 
 .. raw:: html
@@ -163,8 +161,8 @@ See :ref:`fluentd-receiver` for more information.
 
 You can also use these additional :ref:`configuration sources <otel-other-configuration-sources>`:
 
-  * Environment variable (Alpha)
-  * etcd (Alpha)
-  * Include config source (Beta)
-  * Vault (Alpha)
-  * Zookeeper (Alpha)
+* :ref:`Environment variable (Alpha) <env-variable-config-source>`
+* :ref:`etcd2 (Alpha) <etcd2-config-source>`
+* :ref:`Include config source (Beta) <include-config-source>`
+* :ref:`Vault (Alpha) <vault-config-source>`
+* :ref:`Zookeeper (Alpha) <zookeeper-config-source>`

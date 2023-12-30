@@ -12,12 +12,16 @@ Understand and use the Collector
     :titlesonly:
     :hidden:
 
-    environment-variables.rst
-    Internal metrics <metrics-internal-collector.rst>
     data-processing.rst
     tags.rst
     collector-how-to.rst
     Remove data pre-ingest <configure-remove.rst>    
+    environment-variables.rst
+    Internal metrics <metrics-internal-collector.rst>
+
+For a quick overview of the Collector, see :ref:`otel-intro`.  
+
+To learn how to install and configure the Collector, see :ref:`otel-install-platform`.
 
 .. raw:: html
 
@@ -25,11 +29,10 @@ Understand and use the Collector
     <h2>Use the Collector<a name="collector-use-index" class="headerlink" href="#collector-use-index" title="Permalink to this headline">¶</a></h2>
   </embed>  
 
-See the following to understand how the Collector works, and how to use it:
+.. include:: /_includes/collector-works.rst
 
-* :ref:`collector-env-var`
-* :ref:`metrics-internal-collector`
-* :ref:`otel-data-processing`
+See also the following documents to understand how the Collector works, and how to use it:
+
 * :ref:`otel-tags`
 * :ref:`collector-how-to`
 * :ref:`configure-remove`
@@ -43,3 +46,14 @@ See the following to understand how the Collector works, and how to use it:
 By default, the Collector is configured as explained in :ref:`configure-the-collector-ootb`.
 
 .. include:: /_includes/collector-components.rst
+
+.. raw:: html
+
+  <embed>
+    <h2>Collector variables and internal metrics<a name="collector-internal-index" class="headerlink" href="#collector-internal-index" title="Permalink to this headline">¶</a></h2>
+  </embed>  
+
+The Collector operates using these environmental variables and internal metrics:
+
+* :ref:`collector-env-var`
+* :ref:`metrics-internal-collector`
