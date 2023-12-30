@@ -35,11 +35,7 @@ Learn more about the Splunk Observability Cloud data model at :ref:`data-model`.
     <h2>How does the Collector work?<a name="collector-intro-how" class="headerlink" href="#collector-intro-how" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-The OpenTelemetry Collector is a tech-agnostic way to receive, process and export telemetry data.
-
-After you've installed the Collector in your platform, update your config file to define the different Collector components (receivers, processors, and exporters) you want to use. However, receivers and exporters are not enabled until they are in a pipeline, as explained in the next paragraph. You can also add extensions that provide the OpenTelemetry Collector with additional functionality, such as diagnostics and health checks. Find the available components at :ref:`otel-components`.  
-
-Next, you need to configure your service pipelines to determine how to process your data. In the pipelines section you tie together the receivers, processors and exporters, designing the path your data takes. Multiple pipelines can be defined, and a single receiver or exporter definition can be used in multiple pipelines. A single pipeline can also have multiple receivers or exporters within it. Learn more at :ref:`otel-data-processing`. 
+.. include:: /_includes/collector-works.rst
 
 .. raw:: html
 
