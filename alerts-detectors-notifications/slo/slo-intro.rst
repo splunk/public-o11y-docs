@@ -12,8 +12,8 @@ Introduction to service level objective (SLO) management in Splunk Observability
     :maxdepth: 3
     :hidden:
 
-    create-slo
-    view-slo
+    Measure and track your service health metrics with SLOs <create-slo>
+    View and manage SLOs <view-slo>
     burn-rate-alerts
 
 Service level objective (SLO) management is a service level monitoring experience that helps you align your business needs with your engineering reliability goals.
