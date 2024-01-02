@@ -475,7 +475,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Read and write permissions <data-visualization/permissions>
 
 .. toctree::
-   :caption: Alerts and detectors
+   :caption: Alerts, detectors, and SLOs
    :maxdepth:   3
 
    Introduction to alerts and detectors <alerts-detectors-notifications/alerts-detectors-notifications>
@@ -554,6 +554,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    alerts-detectors-notifications/alert-message-variables-reference
+
+.. toctree::
+   :maxdepth:   3
+
+   Service level objective TOGGLE <slo/slo-intro>
 
 .. toctree::
    :maxdepth:   3
