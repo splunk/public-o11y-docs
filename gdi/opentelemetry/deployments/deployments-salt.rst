@@ -1,8 +1,8 @@
 .. _deployments-salt:
 
-****************************
-Salt
-****************************
+********************************************************
+Deploy the Collector with Salt 
+********************************************************
 
 .. meta::
       :description: Deploy the Splunk Observability Cloud OpenTelemetry Collector using a Salt formula.

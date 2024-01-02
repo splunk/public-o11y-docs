@@ -12,7 +12,7 @@ Amazon CloudWatch supports a quick setup experience for AWS Partner destinations
 Before you start
 ======================================================
 
-Before you proceed, check :ref:`aws-prereqs` and :ref:`get-started-aws` for information on data collection intervals and costs.
+Before you proceed, check :ref:`aws-prereqs` and :ref:`get-started-aws` for information on data collection intervals and costs. When setting up your configuration in the AWS console, keep in mind that Splunk Observability Cloud only supports OpenTelemetry 0.7.0. 
 
 For alternative connection methods, see:
 
@@ -80,7 +80,7 @@ Finally, proceed with the last steps:
 * Complete your authentication configuration as prompted.
 * Select your data sources: 
   
-  * AWS Regions 
+  * AWS Regions. 
   * Built-in and custom services. 
 
 .. note:: Select :guilabel:`All built-in services` to import all data from built-in CloudWatch namespaces and ensure that built-in dashboards display automatically.

@@ -118,6 +118,8 @@ To activate AlwaysOn Profiling, use the following system property argument. You 
 
 To activate memory profiling, set the ``splunk.profiler.memory.enabled`` system property or the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after activating AlwaysOn Profiling.
 
+.. note:: OpenJDK versions 15.0 to 17.0.8 are not supported for memory profiling. See :new-page:`https://bugs.openjdk.org/browse/JDK-8309862` in the JDK bug system for more information. 
+
 The following example shows how to activate the profiler using the system property:
 
 .. code-block:: bash

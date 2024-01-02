@@ -28,21 +28,39 @@ You can use metadata collected by the resource detection processor to expand or 
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the resource detection processor in all the predefined pipelines when deploying in host monitoring (agent) mode. When deploying the Collector in data forwarding (gateway) mode, the resource detection processor collects internal metrics. See :ref:`otel-deployment-mode` for more information.
+.. note:: 
+  
+  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector. 
+  
+  For details about the default configuration, see :ref:`otel-configuration-ootb`. You can customize your configuration any time as explained in this document.
+
+By default, the Splunk Distribution of OpenTelemetry Collector includes the resource detection processor in all the predefined pipelines when deploying in host monitoring (agent) mode. When deploying the Collector in data forwarding (gateway) mode, the resource detection processor collects internal metrics. See :ref:`otel-deployment-mode` for more information. 
 
 To detect more types of resources, you can configure additional processors and add them to existing or new pipelines, as shown in the following sample configurations.
 
 .. caution:: Don't remove the ``resourcedetection`` or the ``resourcedetection/internal`` processors from the configuration. Removing the processor might prevent Splunk Observability Cloud from collecting infrastructure metadata.
+
+Follow these steps to configure and activate the component:
+
+1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+  
+  - :ref:`otel-install-linux`
+  - :ref:`otel-install-windows`
+  - :ref:`otel-install-k8s`
+
+2. Configure the processor as described in this doc.
+3. Restart the Collector.    
 
 Main configuration
 ---------------------------------------------------
 
 The resource attributes processor accepts a list of detectors in ``detectors``. You can specify which resource attributes are collected or ignored for each detector, as well as whether existing attributes must be overridden. See :ref:`resourcedetection-processor-metadata` for a list of detectors.
 
+.. note:: Starting from version 0.81 of the Collector, the ``attributes`` setting is deprecated. To migrate from ``attributes`` to ``resource_attributes``, see :ref:`migration-from-attributes-to-resource-attributes`.
+
 The following example shows the main configuration settings of the resource attributes processor:
 
 .. code-block:: yaml
-
 
    resourcedetection:
      # List of detectors
@@ -62,16 +80,38 @@ The following example shows the main configuration settings of the resource attr
          host.id:
            enabled: true
 
-.. note:: Starting from version 0.81 of the Collector, the ``attributes`` setting is deprecated. To migrate from ``attributes`` to ``resource_attributes``, see :ref:`migration-from-attributes-to-resource-attributes`.
+Next, include the processor in the required pipelines of the ``service`` section of your configuration file:
 
+.. code-block:: yaml
 
-Sample configurations
----------------------------------------------------
+  service:
+    pipelines:
+      metrics:
+        processors: [resourcedetection]
+      logs:
+        processors: [resourcedetection]
+      traces:
+        processors: [resourcedetection]
+
+.. _resourceattributes-ordering-considerations:
+
+Ordering considerations
+------------------------------------
+
+If multiple detectors insert the same attribute name, only the first detector is considered. For example, if you use the ``eks`` and ``ec2`` detectors, the value of the ``cloud.platform`` attribute is ``aws_eks`` instead of ``ec2``.
+
+When using multiple detectors, follow this order:
+
+* AWS: ``lambda``, ``elastic_beanstalk``, ``eks``, ``ecs``, ``ec2``
+* GCP: ``gke``, ``gce``
+
+Detect resources and collect data 
+==============================================
 
 The following sample configurations show how to detect resources from different targets.
 
 Collect EC2 resources and tags
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------------------
 
 The following example shows how detect resources, environment variables, and selected tags from EC2 instances without overwriting existing metadata:
 
@@ -97,12 +137,11 @@ The following example shows how detect resources, environment variables, and sel
            - ^label.*$
 
 Collect OpenShift resources over a TLS connection
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------------------
 
 The following example shows how to collect resource attributes from OpenShift and the Kubernetes API by specifying an IP address and port, as well as a TLS certificate and service token:
 
 .. code-block:: yaml
-
 
    processors:
      resourcedetection/openshift:
@@ -117,7 +156,7 @@ The following example shows how to collect resource attributes from OpenShift an
            ca_file: "/var/run/secrets/kubernetes.io/serviceaccount/ca.crt"
 
 Collect system metadata using all available sources
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------------------
 
 The following example shows how to use all sources available to the ``system`` detector to determine the host name. The ``resource_attributes`` field tells the processor to only include the selected attributes.
 
@@ -136,51 +175,6 @@ The following example shows how to use all sources available to the ``system`` d
              enabled: true
            host.id:
              enabled: true
-
-.. _migration-from-attributes-to-resource-attributes:
-
-Migration from attributes to resource_attributes
----------------------------------------------------
-
-Starting from version 0.81 of the Collector, the resource detection processor deprecates the ``attributes`` option and replaces it with ``resource_attributes``, which is specific to each detector.
-
-To migrate, move the attributes inside of ``attributes`` to the relevant ``resource_attributes`` lists of each detector. For example, consider the following configuration:
-
-.. code-block:: yaml
-
-
-   resourcedetection:
-     detectors: [system]
-     # Deprecated in version 0.81
-     attributes: ['host.name', 'host.id']
-
-You can replace the previous configuration with the following:
-
-.. code-block:: yaml
-
-
-   resourcedetection:
-     detectors: [system]
-     system:
-       resource_attributes:
-         host.name:
-           enabled: true
-         host.id:
-           enabled: true
-         os.type:
-           enabled: false
-
-.. _resourceattributes-ordering-considerations:
-
-Ordering considerations
-------------------------------------
-
-If multiple detectors insert the same attribute name, only the first detector is considered. For example, if you use the ``eks`` and ``ec2`` detectors, the value of the ``cloud.platform`` attribute is ``aws_eks`` instead of ``ec2``.
-
-When using multiple detectors, follow this order:
-
-* AWS: ``lambda``, ``elastic_beanstalk``, ``eks``, ``ecs``, ``ec2``
-* GCP: ``gke``, ``gce``
 
 .. _resourcedetection-processor-metadata:
 
@@ -432,6 +426,37 @@ The default configuration of the detector is ``hostname_sources: ["dns", "os"]``
 To avoid using the FQDN, set the value of the ``hostname_sources`` field to ``os``.
 
 .. note:: Use the ``docker`` detector if you're running the Collector as a Docker container.
+
+.. _migration-from-attributes-to-resource-attributes:
+
+Migrate from ``attributes`` to ``resource_attributes``
+============================================================================================
+
+Starting from version 0.81 of the Collector, the resource detection processor deprecates the ``attributes`` option and replaces it with ``resource_attributes``, which is specific to each detector.
+
+To migrate, move the attributes inside of ``attributes`` to the relevant ``resource_attributes`` lists of each detector. For example, consider the following configuration:
+
+.. code-block:: yaml
+
+  resourcedetection:
+    detectors: [system]
+    # Deprecated in version 0.81
+    attributes: ['host.name', 'host.id']
+
+You can replace the previous configuration with the following:
+
+.. code-block:: yaml
+
+  resourcedetection:
+    detectors: [system]
+    system:
+      resource_attributes:
+        host.name:
+          enabled: true
+        host.id:
+          enabled: true
+        os.type:
+          enabled: false
 
 .. _resourcedetection-processor-settings:
 

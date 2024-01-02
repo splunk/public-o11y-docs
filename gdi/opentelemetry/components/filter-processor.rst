@@ -80,7 +80,7 @@ You can then add the filter processors to any compatible pipeline. For example:
    service:
      pipelines:
        traces:
-         receivers: [jaeger, otlp, smartagent/signalfx-forwarder, zipkin]
+         receivers: [jaeger, otlp, zipkin]
          processors:
          - filter/traces
          - memory_limiter
@@ -88,7 +88,7 @@ You can then add the filter processors to any compatible pipeline. For example:
          - resourcedetection
          exporters: [sapm, signalfx]
        metrics:
-         receivers: [hostmetrics, otlp, signalfx, smartagent/signalfx-forwarder]
+         receivers: [hostmetrics, otlp, signalfx]
          processors:
          - filter/includemetrics
          - filter/excludemetrics

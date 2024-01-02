@@ -14,6 +14,7 @@ Install and deploy the Collector
 
     Deployment modes <deployment-modes.rst>
     Kubernetes <install-k8s.rst>
+    Kubernetes (EKS Add-on) <install-k8s-addon-eks.rst>
     Linux (script) <install-linux.rst>
     Linux (manual) <install-linux-manual.rst>    
     Windows (script) <install-windows.rst>
@@ -54,9 +55,18 @@ The Splunk Distribution of OpenTelemetry Collector is supported on Kubernetes, L
 
 Deploy one of the following packages to gather data for Splunk Observability Cloud.
 
-* Splunk Distribution of OpenTelemetry Collector for Kubernetes or ``splunk-otel-collector-chart``. See :ref:`Install on Kubernetes <otel-install-k8s>`. You can also install the Kubernetes Operator for Auto Instrumentation. See :ref:`zero-config` for more information.
-* Splunk Distribution of OpenTelemetry Collector for Linux or ``splunk-otel-collector``. See :ref:`Install on Linux (script) <otel-install-linux>` or :ref:`Install on Linux (manual) <otel-install-linux-manual>`, including instructions to install using the :ref:`binary file <linux-binary-file>`.
-* Splunk Distribution of OpenTelemetry Collector for Windows or ``splunk-otel-collector``. See :ref:`Install on Windows (script) <otel-install-windows>` or :ref:`Install on Windows (manual) <otel-install-windows-manual>`, including instructions for the :ref:`binary file <windows-binary>`.
+* Splunk Distribution of OpenTelemetry Collector for Kubernetes or ``splunk-otel-collector-chart``. See :ref:`Install on Kubernetes <otel-install-k8s>`. 
+
+  * You can also install the Kubernetes Operator for Auto Instrumentation. See :ref:`zero-config` for more information. 
+  * If you're using AWS EKS, you can also install the Collector with the Add-On. Learn how at :ref:`install-k8s-addon-eks`. 
+
+* Splunk Distribution of OpenTelemetry Collector for Linux or ``splunk-otel-collector``. See :ref:`Install on Linux (script) <otel-install-linux>`. 
+  
+  * For customized installation, see :ref:`Install on Linux (manual) <otel-install-linux-manual>`, including instructions to install using the :ref:`binary file <linux-binary-file>`.
+
+* Splunk Distribution of OpenTelemetry Collector for Windows or ``splunk-otel-collector``. See :ref:`Install on Windows (script) <otel-install-windows>`. 
+  
+  *   * For customized installation, see :ref:`Install on Windows (manual) <otel-install-windows-manual>`, including instructions for the :ref:`binary file <windows-binary>`.
 
 See also :ref:`other deployment tools and options <otel_deployments>`.
 
