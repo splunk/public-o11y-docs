@@ -13,7 +13,7 @@ Introduction to service level objective (SLO) management in Splunk Observability
 
     create-slo
     view-slo
-    burn-rate-alert
+    burn-rate-alerts
 
 Service level objective (SLO) management is a service level monitoring experience that helps you align your business needs with your engineering reliability goals.
 
