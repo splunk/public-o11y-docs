@@ -11,7 +11,7 @@ Ingest Google Cloud Platform log data
 .. toctree::
    :hidden:
 
-.. caution:: Splunk Log Observer is no longer available for new users. You can continue to use Log Observer if you already have an entitlement.
+.. caution:: Splunk Log Observer is no longer available for new users. If you have a Log Observer entitlement, you must transition to Splunk Cloud Platform or Splunk Enterprise. Read more at :ref:`lo-transition`.
 
 To send GCP logging data to Splunk Observability Cloud's Log Observer, create a Pub/Sub subscription and use the :new-page:`Pub/Sub to Splunk Dataflow template <https://cloud.google.com/dataflow/docs/guides/templates/provided-streaming#cloudpubsubtosplunk>` to create a Dataflow job. The Dataflow job takes messages from the Pub/Sub subscription, converts payloads into Splunk HTTP Event Collector (HEC) event format, and forwards them to Splunk Observability Cloud, where the whole event (JSON payload and its information) is ingested.    
 

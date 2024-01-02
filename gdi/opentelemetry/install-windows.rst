@@ -225,6 +225,9 @@ The Windows installer script supports the following options:
    * - ``msi_path``
      - Specify a local path to a Splunk OpenTelemetry Collector MSI package to install instead of downloading the package. If specified, the ``-collector_version`` and ``-stage`` parameters will be ignored.
      -
+   * - ``msi_public_properties``
+     - Specify public MSI properties to be used when installing the Splunk OpenTelemetry Collector MSI package.
+     -
 
 
 

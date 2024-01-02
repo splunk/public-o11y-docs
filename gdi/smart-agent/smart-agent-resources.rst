@@ -41,7 +41,7 @@ Check exposed ports
 Before installing the Smart Agent, check exposed ports to make sure your environment doesn't have conflicts. You can change the ports in the Smart Agent configuration.
 
 * Port 8095 is the default port that the internal status server listens on. Configure port 8095 using the ``internalStatusPort`` option.
-* Port 9080 is the default port that the server listens on. Configure port 9080 using the ``listenAddress`` option. The ``listenAddress`` option is a configurable option for the ``trace-forwarder`` and ``signalfx-forwarder`` monitors.
+* Port 9080 is the default port that the server listens on. Configure port 9080 using the ``listenAddress`` option. The ``listenAddress`` option is a configurable option for the ``trace-forwarder`` monitor.
 
 Install the Smart Agent
 ============================================

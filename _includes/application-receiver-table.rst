@@ -523,7 +523,7 @@
      -
      -
 
-   * - :ref:`SignalFx Forwarder <signalfx-forwarder>`
+   * - :ref:`signalfx-forwarder`
      - :strong:`X`
      - :strong:`X`
      -
