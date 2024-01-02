@@ -55,13 +55,13 @@ AWS PrivateLink endpoint URLs
     - :new-page:`private-ingest.jp0.signalfx.com <http://private-ingest.jp0.signalfx.com/>`
     - :new-page:`private-api.jp0.signalfx.com <http://private-api.jp0.signalfx.com/>`
     - Coming soon
-    - Coming soon
+    - :new-page:
 
   * - ap-southeast-2
     - :new-page:`private-ingest.au0.signalfx.com <http://private-ingest.au0.signalfx.com/>`
     - :new-page:`private-api.au0.signalfx.com <http://private-api.au0.signalfx.com/>`
     - Coming soon
-    - Coming soon
+    - :new-page:`private-backfill.au0.signalfx.com <http://private-backfill.au0.signalfx.com/>`
 
   * - eu-west-1
     - :new-page:`private-ingest.eu0.signalfx.com <http://private-ingest.eu0.signalfx.com/>`
@@ -152,6 +152,7 @@ Reach out to Splunk Customer Support with the following information to include y
   
   * Ingest
   * API
+  * Stream
 
 Review the ways you can contact Splunk Customer Support at :ref:`Splunk Observability Cloud support <support>`.
 
