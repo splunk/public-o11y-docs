@@ -21,38 +21,38 @@ Follow these steps to create an SLO.
 #. Select :guilabel:`Create SLO`.
 #. Select the service or metric you want to use as the system health indicator for your SLO.
 
-Follow these steps to use a service as health indicator for your SLO
+    Follow these steps to use a service as health indicator for your SLO
 
-    .. list-table::
-      :header-rows: 1
-      :widths: 40 60
+        .. list-table::
+          :header-rows: 1
+          :widths: 40 60
 
-      * - :strong:`Field name`
-        - :strong:`Description`
-      * - Metric type
-        - Select :guilabel:`Service & endpoint` from the dropdown menu
-      * - Environment
-        - Open the dropdown menu and check the boxes for the environments where you want to apply this SLO
-      * - Service\:\endpoint
-        - * Search for the service you want to create an SLO for
-          * (Optional) Add an endpoint for the selected service
-      * - Filters
-        - Additional dimension names and values you want to apply this SLO to
+          * - :strong:`Field name`
+            - :strong:`Description`
+          * - Metric type
+            - Select :guilabel:`Service & endpoint` from the dropdown menu
+          * - Environment
+            - Open the dropdown menu and check the boxes for the environments where you want to apply this SLO
+          * - Service\:\endpoint
+            - * Search for the service you want to create an SLO for
+              * (Optional) Add an endpoint for the selected service
+          * - Filters
+            - Additional dimension names and values you want to apply this SLO to
 
-Follow these steps to use a custom metric as health indicator for your SLO
+    Follow these steps to use a custom metric as health indicator for your SLO
 
-    .. list-table::
-      :header-rows: 1
-      :widths: 40 60
+        .. list-table::
+          :header-rows: 1
+          :widths: 40 60
 
-      * - :strong:`Field name`
-        - :strong:`Description`
-      * - Metric type
-        - Select :guilabel:`Custom metric` from the dropdown menu
-      * - Numerator metric
-        - Search for the metric you want to use as the measurement for success rate
-      * - Denominator metric
-        - Search for the service you want to use as the total count
+          * - :strong:`Field name`
+            - :strong:`Description`
+          * - Metric type
+            - Select :guilabel:`Custom metric` from the dropdown menu
+          * - Numerator metric
+            - Search for the metric you want to use as the measurement for success rate
+          * - Denominator metric
+            - Search for the service you want to use as the total count
 
 #. Define your SLO and how to measure it.
 
