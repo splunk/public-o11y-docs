@@ -55,31 +55,31 @@ AWS PrivateLink endpoint URLs
     - :new-page:`private-ingest.jp0.signalfx.com <http://private-ingest.jp0.signalfx.com/>`
     - :new-page:`private-api.jp0.signalfx.com <http://private-api.jp0.signalfx.com/>`
     - Coming soon
-    - :new-page:
+    - :new-page:`private-stream.jp0.signalfx.com <http://private-stream.jp0.signalfx.com/>`
 
   * - ap-southeast-2
     - :new-page:`private-ingest.au0.signalfx.com <http://private-ingest.au0.signalfx.com/>`
     - :new-page:`private-api.au0.signalfx.com <http://private-api.au0.signalfx.com/>`
     - Coming soon
-    - :new-page:`private-backfill.au0.signalfx.com <http://private-backfill.au0.signalfx.com/>`
+    - :new-page:`private-stream.au0.signalfx.com <http://private-stream.au0.signalfx.com/>`
 
   * - eu-west-1
     - :new-page:`private-ingest.eu0.signalfx.com <http://private-ingest.eu0.signalfx.com/>`
     - :new-page:`private-api.eu0.signalfx.com <http://private-api.eu0.signalfx.com/>`
     - Coming soon
-    - Coming soon
+    - :new-page:`private-stream.eu0.signalfx.com <http://private-stream.eu0.signalfx.com/>`
 
   * - us-east-1
     - :new-page:`private-ingest.us0.signalfx.com <http://private-ingest.us0.signalfx.com/>`
     - :new-page:`private-api.us0.signalfx.com <http://private-api.us0.signalfx.com/>`
     - Coming soon
-    - Coming soon
+    - :new-page:`private-stream.us0.signalfx.com <http://private-stream.us0.signalfx.com/>`
 
   * - us-west-2
     - :new-page:`private-ingest.us1.signalfx.com <http://private-ingest.us1.signalfx.com/>`
     - :new-page:`private-api.us1.signalfx.com <http://private-api.us1.signalfx.com/>`
     - Coming soon
-    - Coming soon
+    - :new-page:`private-stream.us1.signalfx.com <http://private-stream.us1.signalfx.com/>`
 
 .. _aws-privatelink-service-names:
 
@@ -101,31 +101,31 @@ AWS PrivateLink service names
     - com.amazonaws.vpce.ap-northeast-1.vpce-svc-086c8167a74323e5a
     - com.amazonaws.vpce.ap-northeast-1.vpce-svc-06e1951072fcabaaa
     - Coming soon
-    - Coming soon
+    - com.amazonaws.vpce.ap-northeast-1.vpce-svc-0aebd0dfe769cc20b
 
   * - ap-southeast-2
     - com.amazonaws.vpce.ap-southeast-2.vpce-svc-01e4e31c294754b6e
     - com.amazonaws.vpce.ap-southeast-2.vpce-svc-0d1d69a0b1bf003cd
     - Coming soon
-    - Coming soon
+    - com.amazonaws.vpce.ap-southeast-2.vpce-svc-006a9808c3bf97fc1
 
   * - eu-west-1
     - com.amazonaws.vpce.eu-west-1.vpce-svc-01c194b2265ecb86e
     - com.amazonaws.vpce.eu-west-1.vpce-svc-07b08296ff84e17a0
     - Coming soon
-    - Coming soon
+    - com.amazonaws.vpce.eu-west-1.vpce-svc-0d036df6dbc6ddadb
 
   * - us-east-1
     - com.amazonaws.vpce.us-east-1.vpce-svc-0336437d577075951
     - com.amazonaws.vpce.us-east-1.vpce-svc-089b68950f5be1c22
     - Coming soon
-    - Coming soon
+    - com.amazonaws.vpce.us-east-1.vpce-svc-0c7d803ea7ebe3157
 
   * - us-west-2
     - com.amazonaws.vpce.us-west-2.vpce-svc-06376c4a9be288ee9
     - com.amazonaws.vpce.us-west-2.vpce-svc-0da2bbb45fa4c3a6b
     - Coming soon
-    - Coming soon
+    - com.amazonaws.vpce.us-west-2.vpce-svc-0d78b8dec1a837389
 
 Configure your AWS PrivateLink VPC endpoints
 =================================================================
