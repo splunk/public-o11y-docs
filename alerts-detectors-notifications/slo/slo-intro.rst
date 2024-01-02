@@ -9,6 +9,7 @@ Introduction to service level objective (SLO) management in Splunk Observability
 
 
 .. toctree::
+    :maxdepth: 3
     :hidden:
 
     create-slo
