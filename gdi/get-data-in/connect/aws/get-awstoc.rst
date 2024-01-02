@@ -108,6 +108,16 @@ If you filter data based on tags, your costs for Amazon CloudWatch and Splunk In
 
 CloudWatch Metric Streams supports filtering by namespace and metric name but doesn't support filtering based on resource tags.
 
+.. raw:: html
+
+  <embed>
+    <h2>Imported data<a name="aws-imported-data" class="headerlink" href="#aws-imported-data" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
+By default, Splunk Observability Cloud brings in data from all supported AWS services associated with your account. See :ref:`Supported integrations in Splunk Observability Cloud <aws-integrations>`.
+
+To manage the amount of data to import, see :ref:`aws-infra-import`.  
+
 .. _aws-data-availability:
 
 .. raw:: html
@@ -116,11 +126,14 @@ CloudWatch Metric Streams supports filtering by namespace and metric name but do
     <h2>Data availability<a name="aws-data-availability" class="headerlink" href="#aws-data-availability" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-.. caution:: Splunk is not responsible for data availability, and it can take up to several minutes or longer, depending on your configuration, from the time you connect until you start seeing valid data from your account.
+.. caution:: Splunk Observability Cloud is not responsible for data availability. 
+  
+Depending on your configuration, it might take up to several minutes from the time you connect until you start seeing valid data from your account.
 
-By default, Splunk Observability Cloud brings in data from all supported AWS services associated with your account. See :ref:`Supported integrations in Splunk Observability Cloud <aws-integrations>`.
+If you're streaming data with Metric Streams, the configured buffering settings on the Kinesis Data Firehose delivery stream determine how long it takes for data to appear.
 
-To manage the amount of data to import, see :ref:`aws-infra-import`.  
+* Buffering is expressed in maximum payload size or maximum wait time, whichever is reached first. 
+* If set to the minimum values (60 seconds or 1MB) the expected latency is within 3 minutes if the selected CloudWatch namespaces have active streams.
 
 .. raw:: html
 
