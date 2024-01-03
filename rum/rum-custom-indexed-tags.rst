@@ -4,13 +4,11 @@
 Custom indexed tags in Splunk RUM 
 ***********************************
 
-description 
-
 .. meta::
    :description: words
 
 
-This table shows the differences among the types of span tags in Splunk RUM. 
+Custom tags provide the flexibility of adding whatever metadata you're interested in to spans that you send to Splunk RUM. For example, if you want to send metadata by department, or customer tier, you can create custom span tags for each. This table shows the differences among the types of span tags in Splunk RUM. 
 
 .. list-table::
    :widths: 20 20 20
@@ -20,11 +18,20 @@ This table shows the differences among the types of span tags in Splunk RUM.
      - :strong:`Indexed span tags`
      - :strong:`Custom indexed span tags`
    * - Created using global attributes in Splunk RUM instrumentation. 
-     - RUM Troubleshooting MetricSets are generated for indexed tags, so that you can filter and aggregate Troubleshooting MetricSets by indexed tags on Tag Spotlight. There are a number of tags that are indexed by default, such as the ``sf_ua_browserversion`` tag. Indexing a span tag generates Troubleshooting MetricSets for that tag.
-     - A custom span tag that you indicate is a tag for which you would like to generate Troubleshooting MetricSets. This provides the added functionality of aggregating and filtering Troubleshooting MetricSets on this tag in Tag Spotlight view.
-   * - words 
-     - words
-     - words 
+     - RUM Troubleshooting MetricSets are generated for indexed tags, so that you can filter and aggregate Troubleshooting MetricSets by indexed tags on Tag Spotlight. Indexing a span tag generates Troubleshooting MetricSets for that tag. These tags are automatically indexed:
+
+       * url name
+       * operation
+       * HTTP Method and status code
+       * custom event name
+       * browser and version
+       * OS name and version
+       * city, region, country
+        
+     - A custom span tag that you indicate is a tag for which you want to generate Troubleshooting MetricSets. This provides the added functionality of aggregating and filtering Troubleshooting MetricSets on this tag in Tag Spotlight view.
+   * - :ref:`browser-rum-identify-users` 
+     - :ref:`search-indexed-tags`
+     - link
 
 
 
