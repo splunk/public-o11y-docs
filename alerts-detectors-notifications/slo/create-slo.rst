@@ -50,9 +50,9 @@ Follow these steps to create an SLO.
           * - Metric type
             - Select :guilabel:`Custom metric` from the dropdown menu
           * - Numerator metric
-            - Search for the metric you want to use as the measurement for success rate
+            - Search for the metric you want to use for the success request count
           * - Denominator metric
-            - Search for the service you want to use as the total count
+            - Search for the service you want to use for the total request count
 
 #. Define your SLO and how to measure it.
 

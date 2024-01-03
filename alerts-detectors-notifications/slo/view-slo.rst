@@ -10,10 +10,14 @@ View and manage service level objectives (SLOs)
 
 You can view a list of existing SLOs and manage your SLOs after creating them.
 
-View a list of all SLOs
+View a list of SLOs
 ================================
 
-To view all existing SLOs, from the landing page of Splunk Observability Cloud, go to :strong:`Service Level Objectives (SLOs)`. The table view gives you a summary of SLO status, budget remaining, and burn rate alerting.
+To view existing SLOs, from the landing page of Splunk Observability Cloud, go to :strong:`Service Level Objectives (SLOs)`. The table view gives you a summary of SLO status, budget remaining, and burn rate alerting.
+
+To sort SLOs by name, select the :strong:`Name` column header.
+
+By default, the table shows all existing SLOs. To filter SLOs by status, select the :guilabel:`Status: All` dropdown menu and select the status you want to see: :guilabel:`Breached` or :guilabel:`Normal`.
 
 Edit an SLO
 ================================
