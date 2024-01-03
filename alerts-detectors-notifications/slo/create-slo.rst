@@ -52,7 +52,7 @@ Follow these steps to create an SLO.
           * - Numerator metric
             - Search for the metric you want to use for the success request count
           * - Denominator metric
-            - Search for the service you want to use for the total request count
+            - Search for the metric you want to use for the total request count
 
 #. Define your SLO and how to measure it.
 
