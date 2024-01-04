@@ -13,8 +13,6 @@ Install, deploy and configure the Collector
     :hidden:
 
     Deployment modes <deployment-modes.rst>
-    deployments/otel-deployments.rst
-    configure-the-collector-ootb.rst
     other-configuration-sources.rst
     otel-upgrade.rst
     uninstall-the-collector.rst

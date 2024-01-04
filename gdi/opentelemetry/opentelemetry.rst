@@ -18,6 +18,7 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     Collector for Kubernetes <collector-kubernetes/collector-kubernetes-intro.rst>
     Collector for Linux <collector-linux/collector-linux-intro.rst>
     Collector for Windows <collector-windows/collector-windows-intro.rst>     
+    deployments/otel-deployments.rst
     configure-the-collector.rst    
     Zero config auto instrumentation <zero-config.rst>
     Discover metric sources automatically <discovery-mode.rst>
