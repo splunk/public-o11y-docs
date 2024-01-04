@@ -27,12 +27,10 @@ Get started: Understand and use the Collector
 
 For a quick overview of the Collector, see :ref:`otel-intro`.  
 
-Get started with the available options to install, deploy, and configure the Splunk Distribution of the OpenTelemetry Collector. 
+Get started with the available options to install, deploy, and configure the Splunk Distribution of the OpenTelemetry Collector. Next, learn how to use the Collector.
 
 * See :ref:`collector-architecture` for compatible CPU architectures and operating systems. 
 * See :ref:`otel-deployment-mode` for information on the two deployment modes for the Collector: :ref:`host monitoring (agent) mode <collector-agent-mode>`, and :ref:`data forwarding (gateway) mode <collector-gateway-mode>`.
-
-Next, learn how to :ref:`collector-use-index`. 
 
 .. raw:: html
 
