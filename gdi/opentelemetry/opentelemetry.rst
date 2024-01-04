@@ -37,6 +37,8 @@ Learn more about the Splunk Observability Cloud data model at :ref:`data-model`.
 
 .. include:: /_includes/collector-works.rst
 
+Learn more at :ref:`otel-understand-use`.  
+
 .. raw:: html
 
   <embed>
@@ -145,13 +147,27 @@ You can deploy the Collector in two modes: Host monitoring (agent) or data forwa
 
 Learn more at :ref:`otel-deployment-mode`.
 
+.. _collector-guided-install:
+
 .. raw:: html
 
   <embed>
-    <h3>Install and configure the Collector<a name="collector-intro-install" class="headerlink" href="#collector-intro-install" title="Permalink to this headline">¶</a></h3>
+    <h3>Guided install for the Collector<a name="collector-guided-install" class="headerlink" href="#collector-guided-install" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-Learn how to install, deploy, upgrade or uninstall the Collector in :ref:`otel-install-platform`. Or use :ref:`our guided install <collector-guided-install>`.
+Splunk Observability Cloud offers a guided setup to install the Collector:
+
+#. Log in to Splunk Observability Cloud.
+#. In the navigation menu, select :menuselection:`Data Management`.
+#. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+#. Select one of the platforms in the :guilabel:`Splunk OpenTelemetry Collector` section.
+#. Follow the step-by-step process provided in the platform's guided setup.
+
+.. raw:: html
+
+  <embed>
+    <h3>Advanced install<a name="collector-intro-install" class="headerlink" href="#collector-intro-install" title="Permalink to this headline">¶</a></h3>
+  </embed>
 
 The Splunk distribution of the OpenTelemetry Collector is supported on and packaged for a variety of platforms, including:
 

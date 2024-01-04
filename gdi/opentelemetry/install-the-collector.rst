@@ -1,5 +1,6 @@
 .. _otel-install-platform:
 .. _otel-configuration:
+.. _otel-understand-use:
 
 ***********************************************************************************
 Understand and use the Collector 
@@ -27,24 +28,6 @@ Understand and use the Collector
 For a quick overview of the Collector, see :ref:`otel-intro`.  
 
 See the available options to install, deploy, and configure the Splunk Distribution of the OpenTelemetry Collector. Next, learn how to use the Collector.
-
-Next, learn :ref:`collector-use-index`, and :ref:`collector-internal`.
-
-.. _collector-guided-install:
-
-.. raw:: html
-
-  <embed>
-    <h2>Guided install for the Collector<a name="collector-guided-install" class="headerlink" href="#collector-guided-install" title="Permalink to this headline">¶</a></h2>
-  </embed>
-
-Splunk Observability Cloud offers a guided setup to install the Collector:
-
-#. Log in to Splunk Observability Cloud.
-#. In the navigation menu, select :menuselection:`Data Management`.
-#. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
-#. Select one of the platforms in the :guilabel:`Splunk OpenTelemetry Collector` section.
-#. Follow the step-by-step process provided in the platform's guided setup.
 
 .. raw:: html
 
