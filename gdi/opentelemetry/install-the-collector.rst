@@ -3,7 +3,7 @@
 .. _otel-understand-use:
 
 ***********************************************************************************
-Understand and use the Collector 
+Install and use the Collector 
 ***********************************************************************************
 
 .. meta::
@@ -16,18 +16,21 @@ Understand and use the Collector
 
     Deployment modes <deployment-modes.rst>
     other-configuration-sources.rst
-    otel-upgrade.rst
-    uninstall-the-collector.rst
     data-processing.rst
     tags.rst
     collector-how-to.rst
     Remove data pre-ingest <configure-remove.rst>    
     environment-variables.rst
     Internal metrics <metrics-internal-collector.rst>    
+    otel-upgrade.rst
+    uninstall-the-collector.rst
 
 For a quick overview of the Collector, see :ref:`otel-intro`.  
 
-See the available options to install, deploy, and configure the Splunk Distribution of the OpenTelemetry Collector. Next, learn how to use the Collector.
+* See :ref:`collector-architecture` for compatible CPU architectures and operating systems. 
+* See :ref:`deployment-modes` for information on the two deployment modes fro the Collector: :ref:`host monitoring (agent) mode <collector-agent-mode>`, and :ref:`data forwarding (gateway) mode <collector-gateway-mode>`.
+
+Read on to see the available options to install, deploy, and configure the Splunk Distribution of the OpenTelemetry Collector. Next, learn how to use the Collector.
 
 .. raw:: html
 
@@ -35,9 +38,7 @@ See the available options to install, deploy, and configure the Splunk Distribut
     <h2>Install the Collector using packages and deployment tools<a name="collector-package-install" class="headerlink" href="#collector-package-install" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-The Splunk Distribution of OpenTelemetry Collector is supported on Kubernetes, Linux, Windows, and Mac. See :ref:`collector-architecture` for compatible CPU architectures and operating systems.
-
-Deploy one of the following packages to gather data for Splunk Observability Cloud.
+The Splunk Distribution of OpenTelemetry Collector is supported on Kubernetes, Linux, Windows, and Mac. Use one of the following packages to gather data for Splunk Observability Cloud:
 
 * :ref:`collector-kubernetes-intro`
 * :ref:`collector-linux-intro`
@@ -50,7 +51,7 @@ See also :ref:`other deployment tools and options <otel_deployments>`.
 .. raw:: html
 
   <embed>
-    <h2>Configuration files<a name="otel-config-options" class="headerlink" href="#otel-config-options" title="Permalink to this headline">¶</a></h2>
+    <h2>Configure the Collector: Config files, auto-config, and other configuration sources<a name="otel-config-options" class="headerlink" href="#otel-config-options" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 Use these configurations to change the default settings in each Collector package:
@@ -76,6 +77,22 @@ To define multiple config files simultaneously use:
   ./otelcol --config=file:/path/to/first/file --config=file:/path/to/second/file
 
 .. _otel-config-logs:
+
+.. _otel-config-additional-components:
+
+.. raw:: html
+
+  <embed>
+    <h3>Additional configuration sources<a name="otel-config-additional-components" class="headerlink" href="#otel-config-additional-components" title="Permalink to this headline">¶</a></h3>
+  </embed>
+
+You can also use these additional :ref:`configuration sources <otel-other-configuration-sources>`:
+
+* :ref:`Environment variable (Alpha) <env-variable-config-source>`
+* :ref:`etcd2 (Alpha) <etcd2-config-source>`
+* :ref:`Include config source (Beta) <include-config-source>`
+* :ref:`Vault (Alpha) <vault-config-source>`
+* :ref:`Zookeeper (Alpha) <zookeeper-config-source>`
 
 .. raw:: html
 
@@ -128,27 +145,11 @@ The following is a sample configuration to collect custom logs:
     tag my-custom-logs
   </source>
 
-.. _otel-config-additional-components:
-
 .. raw:: html
 
   <embed>
-    <h2>Additional configuration sources<a name="otel-config-additional-components" class="headerlink" href="#otel-config-additional-components" title="Permalink to this headline">¶</a></h2>
+    <h2>Use the Collector<a name="collector-use-index" class="headerlink" href="#collector-use-index" title="Permalink to this headline">¶</a></h2>
   </embed>
-
-You can also use these additional :ref:`configuration sources <otel-other-configuration-sources>`:
-
-* :ref:`Environment variable (Alpha) <env-variable-config-source>`
-* :ref:`etcd2 (Alpha) <etcd2-config-source>`
-* :ref:`Include config source (Beta) <include-config-source>`
-* :ref:`Vault (Alpha) <vault-config-source>`
-* :ref:`Zookeeper (Alpha) <zookeeper-config-source>`
-
-.. raw:: html
-
-  <embed>
-    <h2>Use the Collector</h2>
-  </embed>  
 
 .. include:: /_includes/collector-works.rst
 
@@ -161,7 +162,7 @@ See also the following documents to understand how the Collector works, and how 
 .. raw:: html
 
   <embed>
-    <h2>Components and services of the Collector</h2>
+    <h3>Components and services of the Collector<a name="collector-components-index" class="headerlink" href="#collector-components-index" title="Permalink to this headline">¶</a></h3>
   </embed>
 
 .. include:: /_includes/collector-components.rst
@@ -169,8 +170,8 @@ See also the following documents to understand how the Collector works, and how 
 .. raw:: html
 
   <embed>
-    <h2>Collector variables and internal metrics</h2>
-  </embed>  
+    <h2>Collector variables and internal metrics<a name="collector-internal" class="headerlink" href="#collector-internal" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
 The Collector operates using these environmental variables and internal metrics:
 
