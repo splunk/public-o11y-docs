@@ -3,7 +3,7 @@
 .. _otel-understand-use:
 
 ***********************************************************************************
-Install and use the Collector 
+Get started: Understand and use the Collector  
 ***********************************************************************************
 
 .. meta::
@@ -27,10 +27,12 @@ Install and use the Collector
 
 For a quick overview of the Collector, see :ref:`otel-intro`.  
 
-* See :ref:`collector-architecture` for compatible CPU architectures and operating systems. 
-* See :ref:`deployment-modes` for information on the two deployment modes fro the Collector: :ref:`host monitoring (agent) mode <collector-agent-mode>`, and :ref:`data forwarding (gateway) mode <collector-gateway-mode>`.
+Get started with the available options to install, deploy, and configure the Splunk Distribution of the OpenTelemetry Collector. 
 
-Read on to see the available options to install, deploy, and configure the Splunk Distribution of the OpenTelemetry Collector. Next, learn how to use the Collector.
+* See :ref:`collector-architecture` for compatible CPU architectures and operating systems. 
+* See :ref:`otel-deployment-mode` for information on the two deployment modes for the Collector: :ref:`host monitoring (agent) mode <collector-agent-mode>`, and :ref:`data forwarding (gateway) mode <collector-gateway-mode>`.
+
+Next, learn how to :ref:`collector-use-index`. 
 
 .. raw:: html
 
@@ -76,8 +78,6 @@ To define multiple config files simultaneously use:
 
   ./otelcol --config=file:/path/to/first/file --config=file:/path/to/second/file
 
-.. _otel-config-logs:
-
 .. _otel-config-additional-components:
 
 .. raw:: html
@@ -93,6 +93,8 @@ You can also use these additional :ref:`configuration sources <otel-other-config
 * :ref:`Include config source (Beta) <include-config-source>`
 * :ref:`Vault (Alpha) <vault-config-source>`
 * :ref:`Zookeeper (Alpha) <zookeeper-config-source>`
+
+.. _otel-config-logs:
 
 .. raw:: html
 
@@ -113,9 +115,9 @@ The Collector can capture logs using Fluentd, but this option is deactivated by 
     <h3>Configure Fluentd<a name="otel-fluentd-artifacts" class="headerlink" href="#otel-fluentd-artifacts" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-You can use the Fluentd receiver to collect logs. Common sources such as filelog, journald, and Windows Event Viewer are included in the installation. See :ref:`fluentd-receiver` for more information.
+You can use the Fluentd receiver to collect logs. 
 
-The following table describes the artifacts in the Fluentd directory:
+Common sources such as filelog, journald, and Windows Event Viewer are included in the installation. The following table describes the artifacts in the Fluentd directory:
 
 .. list-table::
   :widths: 25 75
@@ -144,6 +146,8 @@ The following is a sample configuration to collect custom logs:
     pos_file /var/log/td-agent/my-custom-logs.pos
     tag my-custom-logs
   </source>
+
+To learn more about the Fluentd receiver, see :ref:`fluentd-receiver`.
 
 .. raw:: html
 
