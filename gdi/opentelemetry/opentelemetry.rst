@@ -11,20 +11,19 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     :maxdepth: 5
     :hidden:
 
-    Migrate from the Smart Agent to the Collector <smart-agent-migration-to-otel-collector.rst>
     otel-requirements.rst
     components.rst
     install-the-collector.rst
     Collector for Kubernetes <collector-kubernetes/collector-kubernetes-intro.rst>
     Collector for Linux <collector-linux/collector-linux-intro.rst>
     Collector for Windows <collector-windows/collector-windows-intro.rst>     
-    deployments/otel-deployments.rst
-    configure-the-collector.rst    
+    deployments/otel-deployments.rst  
     Zero config auto instrumentation <zero-config.rst>
     Discover metric sources automatically <discovery-mode.rst>
     Use the Universal Forwarder <collector-with-the-uf.rst>
     Troubleshooting <troubleshooting.rst>
     Commands reference <otel-commands.rst>
+    Migrate from the Smart Agent to the Collector <smart-agent-migration-to-otel-collector.rst>
     
 Use the Splunk Distribution of the OpenTelemetry Collector to receive, process, and export metric, trace, and log data and metadata for Splunk Observability Cloud.
 
@@ -162,11 +161,7 @@ The Splunk distribution of the OpenTelemetry Collector is supported on and packa
 
 You can also deploy the Collector with tools such as Amazon ECS EC2, Amazon Fargate, Ansible, Nomad, PCF, or Puppet. Learn more at :ref:`otel_deployments`.
 
-After you've installed the Collector, see: 
-
-* :ref:`otel-configuration`  
-* :ref:`otel-configuration-ootb`
-* :ref:`otel-other-configuration-sources`
+See also :ref:`otel-other-configuration-sources`.
 
 .. _otel-monitoring:
 
