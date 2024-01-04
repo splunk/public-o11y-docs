@@ -1,7 +1,8 @@
 .. _otel-install-platform:
+.. _otel-configuration:
 
 ***********************************************************************************
-Install, deploy and configure the Collector 
+Understand and use the Collector 
 ***********************************************************************************
 
 .. meta::
@@ -16,8 +17,18 @@ Install, deploy and configure the Collector
     other-configuration-sources.rst
     otel-upgrade.rst
     uninstall-the-collector.rst
+    data-processing.rst
+    tags.rst
+    collector-how-to.rst
+    Remove data pre-ingest <configure-remove.rst>    
+    environment-variables.rst
+    Internal metrics <metrics-internal-collector.rst>    
 
-See the available options to install, deploy, and configure the Splunk Distribution of the OpenTelemetry Collector.
+For a quick overview of the Collector, see :ref:`otel-intro`.  
+
+See the available options to install, deploy, and configure the Splunk Distribution of the OpenTelemetry Collector. Next, learn how to use the Collector.
+
+Next, learn :ref:`collector-use-index`, and :ref:`collector-internal`.
 
 .. _collector-guided-install:
 
@@ -30,13 +41,9 @@ See the available options to install, deploy, and configure the Splunk Distribut
 Splunk Observability Cloud offers a guided setup to install the Collector:
 
 #. Log in to Splunk Observability Cloud.
-
 #. In the navigation menu, select :menuselection:`Data Management`.
-  
 #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
-
 #. Select one of the platforms in the :guilabel:`Splunk OpenTelemetry Collector` section.
-
 #. Follow the step-by-step process provided in the platform's guided setup.
 
 .. raw:: html
@@ -49,19 +56,10 @@ The Splunk Distribution of OpenTelemetry Collector is supported on Kubernetes, L
 
 Deploy one of the following packages to gather data for Splunk Observability Cloud.
 
-* Splunk Distribution of OpenTelemetry Collector for Kubernetes or ``splunk-otel-collector-chart``. See :ref:`Install on Kubernetes <otel-install-k8s>`. 
-
-  * You can also install the Kubernetes Operator for Auto Instrumentation. See :ref:`zero-config` for more information. 
-  * If you're using AWS EKS, you can also install the Collector with the Add-On. Learn how at :ref:`install-k8s-addon-eks`. 
-
-* Splunk Distribution of OpenTelemetry Collector for Linux or ``splunk-otel-collector``. See :ref:`Install on Linux (script) <otel-install-linux>`. 
+* :ref:`collector-kubernetes-intro`
+* :ref:`collector-linux-intro`
+* :ref:`collector-windows-intro`
   
-  * For customized installation, see :ref:`Install on Linux (manual) <otel-install-linux-manual>`, including instructions to install using the :ref:`binary file <linux-binary-file>`.
-
-* Splunk Distribution of OpenTelemetry Collector for Windows or ``splunk-otel-collector``. See :ref:`Install on Windows (script) <otel-install-windows>`. 
-  
-  *   * For customized installation, see :ref:`Install on Windows (manual) <otel-install-windows-manual>`, including instructions for the :ref:`binary file <windows-binary>`.
-
 See also :ref:`other deployment tools and options <otel_deployments>`.
 
 .. _otel-config-options:
@@ -72,9 +70,7 @@ See also :ref:`other deployment tools and options <otel_deployments>`.
     <h2>Configuration files<a name="otel-config-options" class="headerlink" href="#otel-config-options" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-See :ref:`the default configuration <otel-configuration-ootb>` to learn about the basic structure of the Collector's configuration file. It also contains an example valid for most environments. 
-
-You can also use these configurations to change the default settings in each Collector package:
+Use these configurations to change the default settings in each Collector package:
 
 * Kubernetes: :ref:`Helm configuration <otel-kubernetes-config>`, :ref:`advanced config <otel-kubernetes-config-advanced>`, and :ref:`log config <otel-kubernetes-config-logs>`
 * :ref:`otel-linux-config`
@@ -164,3 +160,36 @@ You can also use these additional :ref:`configuration sources <otel-other-config
 * :ref:`Include config source (Beta) <include-config-source>`
 * :ref:`Vault (Alpha) <vault-config-source>`
 * :ref:`Zookeeper (Alpha) <zookeeper-config-source>`
+
+.. raw:: html
+
+  <embed>
+    <h2>Use the Collector</h2>
+  </embed>  
+
+.. include:: /_includes/collector-works.rst
+
+See also the following documents to understand how the Collector works, and how to use it:
+
+* :ref:`otel-tags`
+* :ref:`collector-how-to`
+* :ref:`configure-remove`
+
+.. raw:: html
+
+  <embed>
+    <h2>Components and services of the Collector</h2>
+  </embed>
+
+.. include:: /_includes/collector-components.rst
+
+.. raw:: html
+
+  <embed>
+    <h2>Collector variables and internal metrics</h2>
+  </embed>  
+
+The Collector operates using these environmental variables and internal metrics:
+
+* :ref:`collector-env-var`
+* :ref:`metrics-internal-collector`
