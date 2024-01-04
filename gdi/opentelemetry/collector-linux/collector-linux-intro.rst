@@ -14,15 +14,14 @@ Get started with the Collector for Linux
    Install the Collector for Linux (script) <install-linux.rst>
    Install the Collector for Linux (manual) <install-linux-manual.rst>    
    linux-config.rst
+   linux-config-ootb.rst
 
 To install and configure the Splunk Distribution of OpenTelemetry Collector for Linux, follow these docs:
 
 * :ref:`otel-install-linux`
 * :ref:`otel-install-linux-manual`
-* See the default configuration at :ref:`otel-configuration-ootb`
+* :ref:`linux-config-ootb`
 * :ref:`otel-linux-config`
-
-Next, learn more about the Collector at :ref:`otel-configuration`.
 
 .. note::
 

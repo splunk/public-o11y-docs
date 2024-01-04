@@ -22,16 +22,13 @@ To install and configure the Splunk Distribution of OpenTelemetry Collector for 
 
 * :ref:`otel-install-k8s`
 * :ref:`install-k8s-addon-eks`
-* See the default configuration at :ref:`otel-configuration-ootb`
-* :ref:`Default Kubernetes metrics <ootb-metrics-k8s>` 
+* :ref:`otel-kubernetes-config`
+* By default, you'll obtain these :ref:`Kubernetes metrics <ootb-metrics-k8s>` 
 
 For advanced configuration options, see:
 
-* :ref:`otel-kubernetes-config`
 * :ref:`otel-kubernetes-config-advanced`
 * :ref:`kubernetes-config-logs`
-
-Next, learn more about the Collector at :ref:`otel-configuration`.
 
 .. note::
 
