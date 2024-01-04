@@ -558,7 +558,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Service level objective TOGGLE <alerts-detectors-notifications/slo/slo-intro>
+   Service level objectives TOGGLE <alerts-detectors-notifications/slo/slo-intro>
 
 .. toctree::
    :maxdepth:   3
