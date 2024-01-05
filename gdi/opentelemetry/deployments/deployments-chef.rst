@@ -158,7 +158,7 @@ The following table shows the variables that can be configured with this Chef co
      - Configure the OpenTelemetry instrumentation resource attributes, for example, ``deployment.environment=prd``. The specified resource attributes are added to the ``/etc/splunk/zeroconfig/node.conf`` configuration file on the node, or ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf`` if using the ``systemd`` installation method. The application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
      - ``''``
    * - ``auto_instrumentation_service_name``
-     - Explicitly sets the service name for all instrumented applications on the node, for example, ``my.service``. By default, the service name is automatically derived from the arguments of the application executable on the node. However, if this variable is set to a non-empty value, the value overrides the derived service name and is added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
+     - Explicitly sets the service name for all instrumented applications on the node, for example, ``my.service``. By default, the service name is automatically derived for each instrumented application. However, if this variable is set to a non-empty value, the value overrides the derived service names.
      - ``''``
    * - ``auto_instrumentation_enable_profiler``
      - Activates or deactivates AlwaysOn CPU Profiling. To learn more, see :ref:`profiling-configuration-nodejs`.
