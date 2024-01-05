@@ -1,4 +1,3 @@
-.. _otel-uninstall-integration:
 .. _otel-kubernetes-uninstall:
 
 ********************************************

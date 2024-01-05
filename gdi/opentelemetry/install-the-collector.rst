@@ -22,7 +22,6 @@ Get started: Understand and use the Collector
     Remove data pre-ingest <configure-remove.rst>    
     environment-variables.rst
     Internal metrics <metrics-internal-collector.rst>    
-    otel-upgrade.rst
 
 For a quick overview of the Collector, see :ref:`otel-intro`.  
 
