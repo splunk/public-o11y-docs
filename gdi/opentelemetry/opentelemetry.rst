@@ -23,7 +23,7 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     Use the Universal Forwarder <collector-with-the-uf.rst>
     Troubleshooting <troubleshooting.rst>
     Commands reference <otel-commands.rst>
-    Migrate from the Smart Agent to the Collector <smart-agent-migration-to-otel-collector.rst>
+    Migrate from the Smart Agent to the Collector <smart-agent/smart-agent-migration-to-otel-collector.rst>
     
 Use the Splunk Distribution of the OpenTelemetry Collector to receive, process, and export metric, trace, and log data and metadata for Splunk Observability Cloud.
 
