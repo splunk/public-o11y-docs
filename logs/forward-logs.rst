@@ -38,12 +38,12 @@ Follow the steps below to create an HEC ingest token in the Splunk platform:
 6. (Optional) If you want to activate indexer acknowledgment for this token, select :guilabel:`Enable indexer acknowledgment`, then select :guilabel:`Next`. Indexer acknowledgement can impact the timeliness of data forwarding and Splunk does not recommend it for the Log Observer forwarding use case. 
 
 7. Ensure that the source type is correct. 
-  
+
   * Install the ``olly_logs`` app on your Splunk Cloud Platform instance. 
   
-  * To learn how, follow :new-page:`Install apps on your Splunk Cloud Platform deployment <https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/Admin/SelfServiceAppInstall>`, and look for the app "Observability Logs - prepackaged transformations". 
+  * To learn how, follow :new-page:`Manage private apps on your Splunk Cloud Platform deployment <https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/Admin/PrivateApps>`. 
 
-  * Select the :guilabel:`Structured > olly_logs` source type from the list. 
+  * Contact support to obtain the private app package for :guilabel:`Observability Logs - prepackaged transformations`.
   
 8. Ensure that the index for Log Observer logs data is in the :guilabel:`Allowed indexes` list and select it as the default index. It's best practice to create a new index for Log Observer logs data.  
 
