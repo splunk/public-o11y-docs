@@ -1,7 +1,7 @@
-.. _otel-configuration-ootb:
+.. _windows-config-ootb:
 
 ****************************************************************
-Collector default configuration
+Collector for Windows default configuration
 ****************************************************************
 
 .. meta::
@@ -14,7 +14,7 @@ The Collector configuration is stored in a :new-page:`YAML file <https://yaml.or
 Default configuration 
 ========================================================
 
-This is the default configuration file for the Linux (Debian/RPM) and Windows Installer collector packages:
+This is the default configuration file for the Windows Installer collector package:
 
 .. github:: yaml
   :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/cmd/otelcol/config/collector/agent_config.yaml
@@ -224,7 +224,6 @@ Learn more
 
 See also the following documents:
 
-* :ref:`ootb-metrics-k8s`
 * :ref:`otel-collector-scenario`
 * :ref:`otel-install-platform` 
 * :ref:`Troubleshooting <otel-troubleshooting>`
