@@ -176,7 +176,7 @@ The following table shows the variables that can be configured with this Chef co
      - The auto instrumentation language SDKs to include.
      - ``%w(java nodejs)``
    * - ``auto_instrumentation_java_agent_path``
-     - Path to the Splunk OpenTelemetry Java agent. The default path is provided by the ``splunk-otel-auto-instrumentation`` package. If the path is changed from the default value, the path should be an existing file on the node. The specified path is added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect. 
+     - Path to the Splunk OpenTelemetry Java agent. The default path is provided by the ``splunk-otel-auto-instrumentation`` package. If the path is changed from the default value, the path should be an existing file on the node.
      - ``/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar``
    * - ``auto_instrumentation_npm_path``
      - The path to the pre-installed ``npm`` command, e.g. ``/my/custom/path/to/npm``.
