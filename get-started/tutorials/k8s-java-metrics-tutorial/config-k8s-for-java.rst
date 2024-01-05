@@ -4,60 +4,73 @@
 Part 1: Configure your Kubernetes environment
 ******************************************************************
 
-Before deploying the OpenTelemetry Collector, you must have a running Kubernetes cluster. In this tutorial, we'll use ``minikube`` as the cluster. Start running the cluster with ``minikube start``.
+Before deploying the OpenTelemetry Collector, you must have a running Kubernetes cluster. In this tutorial, we'll use minikube as the cluster.
 
-Next, create a namespace for the sample application:
+.. _run-the-cluster:
 
-.. code-block:: bash
-    
-    kubectl create namespace petclinic
+Run the Kubernetes cluster
+=========================================
+
+We'll start by running the cluster and creating a new namespace for the application.
+
+#. Start running the cluster with ``minikube start``.
+#. Create a namespace for the sample application. For this example, name the namespace :guilabel:`petclinic`: 
+
+    .. code-block:: bash
+        
+        kubectl create namespace petclinic
 
 This namespace helps us differentiate between the many different pods running in the cluster.
 
 .. _config-values-yaml:
 
-Configure ``values.yaml`` for the Helm Chart
+Configure the values.yaml file for the Helm Chart
 ====================================================================
 
-We need to install Splunk Distribution of OpenTelemetry Collector using Helm. Create a new directory called ``spring-petclinic-app`` to store the files we'll use for Helm. 
+Now, we need to configure Helm to correctly install the Splunk Distribution of OpenTelemetry Collector: 
 
-In the ``spring-petlcinic-app`` directory, create a file called ``values.yaml``. This file stores keys and values that configure the Splunk Distribution of OpenTelemetry Collector through the Helm Chart. 
+#. Create a new directory called :guilabel:`spring-petclinic-app` to store the files we'll use for Helm. 
+#. In the spring-petlcinic-app directory, create a file called :guilabel:`values.yaml`. This file stores keys and values that configure the Splunk Distribution of OpenTelemetry Collector through the Helm Chart. 
+#. Using the following table, add keys and values to values.yaml:
 
-Using the following table, add keys and values to ``values.yaml``:
+    .. list-table::
+        :header-rows: 1
+        :width: 100%
+        :widths: 33 33 33
 
-.. list-table::
-    :header-rows: 1
-    :width: 100%
-    :widths: 33 33 33
+        * - Key
+          - Value
+          - Notes
+        * - ``clusterName``
+          - ``my-cluster`` or your desired cluster name
+          - Name of the Kubernetes cluster
+        * - ``splunkObservability.realm``
+          - Your Splunk Observability Cloud realm
+          - Allows you to access the Splunk Distribution of OpenTelemetry Collector Helm Chart
+        * - ``splunkObservability.accessToken``
+          - Your Splunk Observability Cloud access token
+          - Allows you to access the Splunk Distribution of OpenTelemetry Collector Helm Chart
+        * - ``environment``
+          - ``prd``
+          - Tags data that the application sends to Splunk Observability Cloud, allowing you to see the data in Splunk APM
 
-    * - Key
-      - Value
-      - Notes
-    * - ``clusterName``
-      - ``my-cluster`` or your desired cluster name
-      - Name of the Kubernetes cluster
-    * - ``splunkObservability.realm``
-      - Your Splunk Observability Cloud realm
-      - Allows you to access the Splunk Distribution of OpenTelemetry Collector Helm Chart
-    * - ``splunkObservability.accessToken``
-      - Your Splunk Observability Cloud access token
-      - Allows you to access the Splunk Distribution of OpenTelemetry Collector Helm Chart
-    * - ``environment``
-      - ``prd``
-      - Tags data that the application sends to Splunk Observability Cloud, allowing you to see the data in Splunk APM.
+    After adding these keys and values, your values.yaml file looks like the following example:
 
-After adding these keys and values, your ``values.yaml`` file should look like the following example:
+    .. code-block:: yaml
 
-.. code-block:: yaml
+        clusterName: my-cluster
 
-    clusterName: my-cluster
+        # your credentials for Splunk Observability Cloud
+        splunkObservability:
+          realm: <splunk-realm>
+          accessToken: <splunk-access-token>
 
-    # your credentials for Splunk Observability Cloud
-    splunkObservability:
-      realm: <splunk-realm>
-      accessToken: <splunk-access-token>
+        # deployment environment value, which tags the data sent by your application
+        environment: prd
 
-    # deployment environment value, which tags the data sent by your application
-    environment: prd
+Next step
+==============================
 
-You've now configured your Kubernetes environment. Next, we'll install the Splunk Distribution of OpenTelemetry Collector using Helm. See :ref:`deploy-collector-k8s-java` to continue.
+You've now configured your Kubernetes environment by starting your Kubernetes cluster, creating a namespace for your application, and configuring the values.yaml file. 
+
+Next, we'll install the Splunk Distribution of OpenTelemetry Collector using Helm. See :ref:`deploy-collector-k8s-java` to continue.

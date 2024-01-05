@@ -19,6 +19,7 @@ Read the following tutorials to learn how to understand and use Splunk Observabi
 
 * :ref:`about-k8s-tutorial`
 * :ref:`about-aws-tutorial`
+* :ref:`about-k8s-java-metrics-tutorial`
 
 For specific scenarios and use cases, see :ref:`scenario-landing`.
 

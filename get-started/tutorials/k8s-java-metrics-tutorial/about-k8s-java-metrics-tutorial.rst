@@ -1,7 +1,7 @@
 .. _about-k8s-java-metrics-tutorial:
 
 *******************************************************************************
-Tutorial: capture metrics from a Java application in Kubernetes
+Tutorial: Capture metrics from a Java application in Kubernetes
 *******************************************************************************
 
 .. meta::
@@ -15,13 +15,29 @@ Tutorial: capture metrics from a Java application in Kubernetes
     deploy-collector-k8s-java.rst
     k8s-java-view-apm.rst
 
-This tutorial provides a walkthrough of instrumenting a sample Java application in a Kubernetes environment. After this tutorial, you can:
+Follow this tutorial for a walkthrough of instrumenting a sample Java application in a Kubernetes environment. After this tutorial, you can:
+
+.. raw:: html
+
+    <h2>What's in this tutorial</h2>
+
+After completing this tutorial, you can achieve the following tasks:
 
 * Configure a Kubernetes environment for application monitoring
 * Deploy the Kubernetes Operator to automatically instrument a Java application.
 * View your application data in Splunk APM.
 
-We'll use the Spring Petclinic Java application as our example in the tutorial. To learn more about this application and to see a demo, go to the :new-page:`Spring Petclinic website <https://spring-petclinic.github.io/>`. 
+.. raw:: html
+
+    <h2> How to use this tutorial</h2>
+
+Each part in this tutorial builds on the previous parts. Follow the tutorial parts in order.
+
+#. Configure your Kubernetes environment to install the OpenTelemetry Collector. See :ref:`config-k8s-for-java`
+#. Deploy the OpenTelemetry Collector and Spring PetClinic Java application. See :ref:`deploy-collector-k8s-java`
+#. View your application data in Splunk APM. See :ref:`k8s-java-view-apm`
+
+We'll use the Spring Petclinic Java application as our example in the tutorial. To learn more about this application and to see a demo, see the Spring Petclinic website: :new-page:`https://spring-petclinic.github.io/`. 
 
 .. _k8s-java-prereqs:
 
@@ -31,12 +47,13 @@ We'll use the Spring Petclinic Java application as our example in the tutorial. 
 
 To get the most out of this tutorial, you need a basic understanding of Kubernetes. You must know how to create and manage Kubernetes components such as deployments, pods, and services.
 
-You must have the following installed:
+You must install the following components:
 
-* ``minikube`` and ``kubectl``
-* Helm version ``3.0.0`` or higher.
+* minikube
+* kubectl
+* Helm version 3.0.0 or higher.
 
-Additionally, you must have your Splunk realm and Splunk Observability Cloud access token to deploy the Splunk Distribution of OpenTelemetry Collector. For more information, see :ref:`admin-org-tokens`.
+Additionally, you must have your Splunk Observability Cloud realm and access token to deploy the Splunk Distribution of OpenTelemetry Collector. For more information, see :ref:`admin-org-tokens`.
 
 .. raw:: html
 

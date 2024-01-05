@@ -4,13 +4,13 @@
 Part 3: View your data in Splunk APM
 ********************************************
 
-Before you can view data in Splunk APM, ensure that the application is active and generating data. Send requests to the application through ``cURL`` or interact with the application's UI to generate activity.
+Before you can view data in Splunk Application Performance Monitoring (APM), ensure that the application is active and generating data. Send requests to the application through ``cURL`` or interact with the application's UI to generate activity.
 
 Follow these steps to start viewing your data:
 
 #. Navigate to the Splunk Observability Cloud home page.
 #. Select :guilabel:`APM`.
-#. Search for the name of your service, ``spring-petclinic``, in the APM search bar. Note that it may take a few minutes for your service to appear in APM.
+#. Search for the name of your service, :guilabel:`spring-petclinic`, in the APM search bar. It might take a few minutes for your service to appear in APM.
 
 The ``spring-petclinic`` service appears in the search results:
 

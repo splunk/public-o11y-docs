@@ -6,29 +6,38 @@ Part 2: Deploy the Collector and Java application
 
 Now that we've configured a Kubernetes environment, we can deploy the Splunk Distribution of OpenTelemetry Collector.
 
-In a command line interface, run the following command:
+Deploy the Splunk Distribution of OpenTelemetry Collector
+============================================================
 
-.. code-block:: bash
+Using Helm, we'll deploy the Splunk Distribution of OpenTelemetry Collector in our Kubernetes namespace:
 
-    helm install splunk-otel-collector -f ./spring-petclinic-app/values.yaml --set certmanager.enabled=true,operator.enabled=true,environment=prd -n petclinic splunk-otel-collector-chart/splunk-otel-collector
+#. In a command line interface, run the following command:
 
-This command uses the ``values.yaml`` file from the previous step to configure and deploy the Splunk Distribution of OpenTelemetry Collector through Helm. Next, run the following command:
+    .. code-block:: bash
 
-.. code-block:: bash
+        helm install splunk-otel-collector -f ./spring-petclinic-app/values.yaml --set certmanager.enabled=true,operator.enabled=true,environment=prd -n petclinic splunk-otel-collector-chart/splunk-otel-collector
 
-    kubectl get pod -n petclinic
+    This command uses the values.yaml file from the previous step to configure and deploy the Splunk Distribution of OpenTelemetry Collector through Helm. 
+  
+#. Run the following command to view all pods in the petclinic namespace:
 
-There are now several new pods running in the ``petclinic`` namespace:
+    .. code-block:: bash
 
-.. code-block:: bash
+        kubectl get pod -n petclinic
 
-    NAME                                                            READY   STATUS    RESTARTS   AGE
-    splunk-otel-collector-agent-nkwwf                               1/1     Running   0          94s
-    splunk-otel-collector-certmanager-6d95596898-z7qfz              1/1     Running   0          94s
-    splunk-otel-collector-certmanager-cainjector-5c5dc4ff8f-7rlwx   1/1     Running   0          94s
-    splunk-otel-collector-certmanager-webhook-69f4ff754c-hm9m2      1/1     Running   0          94s
-    splunk-otel-collector-k8s-cluster-receiver-594fd9c8c7-6n545     1/1     Running   0          94s
-    splunk-otel-collector-operator-69d476cb7-s8hcl                  2/2     Running   0          94s
+    There are now several new pods running:
+
+    .. code-block:: bash
+
+        NAME                                                            READY   STATUS    RESTARTS   AGE
+        splunk-otel-collector-agent-nkwwf                               1/1     Running   0          94s
+        splunk-otel-collector-certmanager-6d95596898-z7qfz              1/1     Running   0          94s
+        splunk-otel-collector-certmanager-cainjector-5c5dc4ff8f-7rlwx   1/1     Running   0          94s
+        splunk-otel-collector-certmanager-webhook-69f4ff754c-hm9m2      1/1     Running   0          94s
+        splunk-otel-collector-k8s-cluster-receiver-594fd9c8c7-6n545     1/1     Running   0          94s
+        splunk-otel-collector-operator-69d476cb7-s8hcl                  2/2     Running   0          94s
+
+    This output indicates that you've successfully deployed the Splunk Distribution of OpenTelemetry Collector, and that the Collector is ready to start receiving data and sending it to Splunk Observability Cloud. 
 
 We've now deployed the Splunk Distribution of OpenTelemetry Collector, and we're ready to deploy the Spring Petclinic application.
 
@@ -37,68 +46,72 @@ We've now deployed the Splunk Distribution of OpenTelemetry Collector, and we're
 Deploy the Spring Petclinic application
 ================================================
 
-Let's deploy the Spring Petclinic Java application in our Kubernetes cluster. To get started, create a new file in your ``spring-petclinic-app`` directory called ``petclinic-spec.yaml``. This file stores the keys and values used to configure your application deployment in Kubernetes.
+Let's deploy the Spring Petclinic Java application in our Kubernetes cluster. 
 
-The following table describes some important keys and values to include:
+#. Create a new YAML file in your spring-petclinic-app directory called :guilabel:`petclinic-spec.yaml`. This file stores the keys and values used to configure your application deployment in Kubernetes.
 
-.. list-table::
-    :header-rows: 1
-    :width: 100%
-    :widths: 33 33 33
+#. Include the following important keys and values in the file:
 
-    * - Key
-      - Value
-      - Notes
-    * - ``metadata.name``
-      - ``spring-petclinic``
-      - Name of the deployment
-    * - ``metadata.namespace``
-      - ``petclinic``
-      - Namespace to deploy the application in
-    * - ``spec.template.spec.containers``
-      - ``- name: petclinic-app``
-      - Name of the container for the application
-    * - ``spec.template.spec.containers``
-      - ``image: ghcr.io/pavolloffay/spring-petclinic:latest``
-      - Image for the Spring Petclinic application
-    * - ``spec.template.metadata.annotations``
-      - ``instrumentation.opentelemetry.io/inject-java: "true"``
-      - Activates Splunk OpenTelemetry automatic instrumentation for the Java application.
-   
-After adding these keys and values, your ``petclinic-spec.yaml`` file should look like the following example:
+      .. list-table::
+          :header-rows: 1
+          :width: 100%
+          :widths: 33 33 33
 
-.. code-block:: yaml
+          * - Key
+            - Value
+            - Notes
+          * - ``metadata.name``
+            - ``spring-petclinic``
+            - Name of the deployment
+          * - ``metadata.namespace``
+            - ``petclinic``
+            - Namespace to deploy the application in
+          * - ``spec.template.spec.containers``
+            - ``- name: petclinic-app``
+            - Name of the container for the application
+          * - ``spec.template.spec.containers``
+            - ``image: ghcr.io/pavolloffay/spring-petclinic:latest``
+            - Image for the Spring Petclinic application
+          * - ``spec.template.metadata.annotations``
+            - ``instrumentation.opentelemetry.io/inject-java: "true"``
+            - Activates Splunk OpenTelemetry automatic instrumentation for the Java application
 
-    apiVersion: v1
-    kind: Deployment
-    metadata:
-    name: spring-petclinic
-    namespace: petclinic
-    spec:
-    selector:
-      matchLabels:
-      app: spring-petclinic
-    template:
-      metadata:
-        labels:
-          app: spring-petclinic
-        annotations:
-          # Activates automatic instrumentation for the Java application
-          instrumentation.opentelemetry.io/inject-java: "true"
-      spec:
-        containers:
-        - name: petclinic-app
-          # Java application to instrument
-          image: ghcr.io/pavolloffay/spring-petclinic:latest
-          imagePullPolicy: Always
+      After adding these keys and values, your petclinic-spec.yaml file looks like the following example:
 
-Run the following command to start the application deployment:
+      .. code-block:: yaml
 
-.. code-block:: bash
+          apiVersion: v1
+          kind: Deployment
+          metadata:
+          name: spring-petclinic
+          namespace: petclinic
+          spec:
+          selector:
+            matchLabels:
+            app: spring-petclinic
+          template:
+            metadata:
+              labels:
+                app: spring-petclinic
+              annotations:
+                # Activates automatic instrumentation for the Java application
+                instrumentation.opentelemetry.io/inject-java: "true"
+            spec:
+              containers:
+              - name: petclinic-app
+                # Java application to instrument
+                image: ghcr.io/pavolloffay/spring-petclinic:latest
+                imagePullPolicy: Always
 
-    kubectl apply -n petclinic -f spring-petclinic-app/petclinic-spec.yaml
+#. Run the following command to start the application deployment:
 
-This command starts running a new deployment called ``spring-petclinic`` as well as a pod with a similar name.
+    .. code-block:: bash
+
+        kubectl apply -n petclinic -f spring-petclinic-app/petclinic-spec.yaml
+
+    This command starts running a new deployment called ``spring-petclinic`` as well as a pod with a similar name.
+
+We've now successfully deployed the Spring PetClinic Java application in a Kubernetes pod.
 
 .. _k8s-java-verify:
 
@@ -151,7 +164,10 @@ The output also shows several ``OTEL`` environment variables:
 
 .. note::
 
-    If you can't see the ``initContainer`` or ``OTEL`` environment, restart your application pod. The OpenTelemetry Collector pods must be active and running before you deploy your Java application.
+    If you can't see the ``initContainer`` or ``OTEL`` environment, restart your application pod using ``kubectl rollout restart -n petclinic <pod-name>``. The OpenTelemetry Collector pods must be active and running before you deploy your Java application.
 
-Now that the application is running, we're ready to start viewing data in Splunk APM. See :ref:`k8s-java-view-apm`.
+Next step
+==========================
+
+Now that the application is running, we're ready to start viewing data in Splunk Application Performance Monitoring (APM). See :ref:`k8s-java-view-apm`.
 
