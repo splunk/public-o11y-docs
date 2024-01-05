@@ -173,7 +173,7 @@ The following table shows the variables that can be configured with this Chef co
      - Sets the OTLP gRPC endpoint that receives traces. Only applicable for OpenTelemetry Collector versions ``0.87.0`` and higher.
      - ``http://127.0.0.1:4317``
    * - ``with_auto_instrumentation_sdks``
-     - The auto instrumentation language SDKs to include.
+     - The auto instrumentation language SDKs to install and activate.
      - ``%w(java nodejs)``
    * - ``auto_instrumentation_java_agent_path``
      - Path to the Splunk OpenTelemetry Java agent. The default path is provided by the ``splunk-otel-auto-instrumentation`` package. If the path is changed from the default value, the path should be an existing file on the node.
