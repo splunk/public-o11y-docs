@@ -131,7 +131,7 @@ For Linux, the cookbook accepts the attributes described in the following table:
 Configure auto instrumentation for Java and Node.js (Linux only)
 ------------------------------------------------------------------
 
-You can automatically instrument your Java and Node.js applications along with the Collector installation. Auto instrumentation removes the need to install and configure OpenTelemetry agents separately. See :ref:`zero-config` for more information. 
+You can automatically instrument your Java and Node.js applications along with the Collector installation. Auto instrumentation removes the need to install and configure OpenTelemetry agents separately. See :ref:`zero-config` for more information.  The applications to be instrumented on the node need to be started or restarted separately after installation or any configuration changes for auto instrumentation to take effect.
 
 The following table shows the variables that can be configured with this Chef cookbook:
 
