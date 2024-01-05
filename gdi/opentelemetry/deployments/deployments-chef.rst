@@ -170,7 +170,7 @@ The following table shows the variables that can be configured with this Chef co
      - Activates or deactivates exporting instrumentation metrics.
      - ``false``
    * - ``auto_instrumentation_otlp_endpoint``
-     - Sets the OTLP gRPC endpoint that receives traces. Only applicable for OpenTelemetry Collector versions ``0.87`` and higher.
+     - Sets the OTLP gRPC endpoint that receives traces. Only applicable for OpenTelemetry Collector versions ``0.87.0`` and higher.
      - ``http://127.0.0.1:4317``
    * - ``with_auto_instrumentation_sdks``
      - The auto instrumentation language SDKs to include.
