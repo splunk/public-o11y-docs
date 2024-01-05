@@ -23,7 +23,6 @@ Get started: Understand and use the Collector
     environment-variables.rst
     Internal metrics <metrics-internal-collector.rst>    
     otel-upgrade.rst
-    uninstall-the-collector.rst
 
 For a quick overview of the Collector, see :ref:`otel-intro`.  
 
