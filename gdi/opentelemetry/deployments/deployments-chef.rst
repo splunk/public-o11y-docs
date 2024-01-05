@@ -146,7 +146,7 @@ The following table shows the variables that can be configured with this Chef co
      - Whether to install or manage :ref:`auto-instrumentation-nodejs` and/or :ref:`auto-instrumentation-java`. When set to ``true``, the ``splunk-otel-auto-instrumentation`` deb/rpm package is downloaded and installed from the Collector repository.
      - ``false``
    * - ``auto_instrumentation_version``
-     - Version of the ``splunk-otel-auto-instrumentation`` package to install, for example, ``0.50.0``. The minimum supported version is ``0.48`` for Java and ``0.87.0`` for Node.js. The application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
+     - Version of the ``splunk-otel-auto-instrumentation`` package to install, for example, ``0.50.0``. The minimum supported version is ``0.48`` for Java and ``0.87.0`` for Node.js.
      - ``latest``
    * - ``auto_instrumentation_systemd``
      - Whether to activate and configure the auto instrumentation for ``systemd`` services only. If set to ``true``, the auto instrumentation automatically environment variables are added to ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
