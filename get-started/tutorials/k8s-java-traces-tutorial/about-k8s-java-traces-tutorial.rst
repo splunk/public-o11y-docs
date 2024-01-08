@@ -15,7 +15,7 @@ Tutorial: Capture traces from a Java application in Kubernetes
     deploy-collector-k8s-java.rst
     k8s-java-view-apm.rst
 
-Follow this tutorial for a walkthrough of instrumenting a sample Java application in a Kubernetes environment.
+Follow this tutorial for a walkthrough of instrumenting a sample Java application in a Kubernetes environment by using Splunk Zero Configuration Auto Instrumentation.
 
 .. raw:: html
 

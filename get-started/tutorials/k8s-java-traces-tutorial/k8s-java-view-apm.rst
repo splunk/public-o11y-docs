@@ -24,4 +24,15 @@ Next, select the service. A page with detailed APM data opens:
     :width: 100%
     :alt: A view of the Splunk APM data for the Spring Petclinic service.
 
-Congratulations! You've now successfully deployed and instrumented a Java application in Kubernetes, and you can now see your data in Splunk APM.
+Congratulations! You've now successfully deployed and instrumented a Java application in Kubernetes, and you can now see your data in Splunk APM. 
+
+See the :ref:`learn-more-k8s-java-traces` section for additional resources about Splunk APM and Splunk Zero Configuration Auto Instrumentation.
+
+.. _learn-more-k8s-java-traces:
+
+Learn more
+=========================
+
+See :ref:`get-started-apm` to learn how to use Splunk APM to gather insights about your data.
+
+See :ref:`zero-config` for more information about Splunk Zero Configuration Auto Instrumentation.
