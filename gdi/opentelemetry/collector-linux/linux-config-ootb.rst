@@ -2,8 +2,6 @@
 .. _configure-the-collector-ootb:
 .. _linux-config-ootb:
 
-.. REMEMBER TO SYNC OOTB Windows doc!
-
 ****************************************************************
 Collector for Linux default configuration
 ****************************************************************
