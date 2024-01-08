@@ -27,6 +27,7 @@ Collector components
     components/kubelet-stats-receiver
     components/kubernetes-attributes-processor
     components/kubernetes-cluster-receiver
+    components/loadbalancingexporter
     components/logging-exporter
     components/memory-ballast-extension
     components/memory-limiter-processor          
