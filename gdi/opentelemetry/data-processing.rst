@@ -16,7 +16,7 @@ Pipelines operate on three data types: logs, traces, and metrics. To learn more 
 Define the pipeline
 =========================================
 
-The pipeline is constructed during Collector startup based on the pipeline definition. See :ref:`otel-components` to understand the behavior of each component, and check :ref:`otel-configuration-ootb`.
+The pipeline is constructed during Collector startup based on the pipeline definition. See :ref:`otel-components` to understand the behavior of each component. 
 
 To define the pipeline, first you need to specify a data type in your pipeline configuration. All the receivers, exporters, and processors you use in a pipeline must support the particular data type, otherwise you'll get the ``ErrDataTypeIsNotSupported`` error message when the configuration is loaded. 
 
