@@ -7,8 +7,7 @@ Kong Gateway
    :description: Use this Splunk Observability Cloud integration for Kong analytics. See benefits, install, configuration, and metrics
 
 The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the :ref:`Prometheus receiver <prometheus-receiver>`
-to provide service traffic metrics using the `Kong metrics Prometheus endpoint <https://docs.konghq.com/hub/kong-inc/prometheus>`,
-which emits metrics for configurable request and response lifecycle groups, including:
+to provide service traffic metrics using the Kong metrics Prometheus endpoint, which emits metrics for configurable request and response lifecycle groups, including:
 
 -  Counters for response counts
 -  Counters for cumulative response and request sizes
@@ -27,6 +26,8 @@ including:
 -  A counter for total fielded requests
 -  Gauges for active connections and their various states
 -  A gauge for database connectivity
+
+To learn more about the Kong metrics Prometheus endpoint, see :new-page:`Kong Docs on Prometheus <https://docs.konghq.com/hub/kong-inc/prometheus>`. 
 
 Benefits
 --------
