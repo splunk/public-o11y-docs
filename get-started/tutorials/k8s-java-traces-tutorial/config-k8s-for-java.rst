@@ -4,7 +4,7 @@
 Part 1: Configure your Kubernetes environment
 ******************************************************************
 
-Before deploying the OpenTelemetry Collector, you must have a running Kubernetes cluster. In this tutorial, we'll use minikube as the cluster.
+Before deploying the OpenTelemetry Collector, you must have a running Kubernetes cluster. In this tutorial, we'll use minikube to create the Kubernetes cluster.
 
 .. _run-the-cluster:
 
@@ -46,13 +46,19 @@ Now, we need to configure Helm to correctly install the Splunk Distribution of O
           - Name of the Kubernetes cluster
         * - ``splunkObservability.realm``
           - Your Splunk Observability Cloud realm
-          - Allows you to access the Splunk Distribution of OpenTelemetry Collector Helm Chart
+          - Deployment of the Splunk Observability Cloud instance
         * - ``splunkObservability.accessToken``
           - Your Splunk Observability Cloud access token
-          - Allows you to access the Splunk Distribution of OpenTelemetry Collector Helm Chart
+          - Allows you to send telemetry data to Splunk Observability Cloud
         * - ``environment``
-          - ``prd``
+          - ``prd`` or your desired environment name
           - Tags data that the application sends to Splunk Observability Cloud, allowing you to see the data in Splunk APM
+        * - ``certmanager.enabled``
+          - ``true``
+          - Activates the certification manager for Helm
+        * - ``operator.enabled``
+          - ``true``
+          - Activates the OpenTelemetry Kubernetes Operator
 
     After adding these keys and values, your values.yaml file looks like the following example:
 
@@ -67,6 +73,10 @@ Now, we need to configure Helm to correctly install the Splunk Distribution of O
 
         # deployment environment value, which tags the data sent by your application
         environment: prd
+        certmanager:
+          enabled: true
+        operator:
+          enabled: true
 
 Next step
 ==============================

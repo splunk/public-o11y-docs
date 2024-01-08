@@ -15,7 +15,7 @@ Using Helm, we'll deploy the Splunk Distribution of OpenTelemetry Collector in o
 
     .. code-block:: bash
 
-        helm install splunk-otel-collector -f ./spring-petclinic-app/values.yaml --set certmanager.enabled=true,operator.enabled=true,environment=prd -n petclinic splunk-otel-collector-chart/splunk-otel-collector
+        helm install splunk-otel-collector -f ./spring-petclinic-app/values.yaml --set certmanager.enabled=true,operator.enabled=true -n petclinic splunk-otel-collector-chart/splunk-otel-collector
 
     This command uses the values.yaml file from the previous step to configure and deploy the Splunk Distribution of OpenTelemetry Collector through Helm. 
   

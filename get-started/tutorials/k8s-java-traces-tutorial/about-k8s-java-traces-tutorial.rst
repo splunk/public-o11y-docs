@@ -1,11 +1,11 @@
-.. _about-k8s-java-metrics-tutorial:
+.. _about-k8s-java-traces-tutorial:
 
 *******************************************************************************
-Tutorial: Capture metrics from a Java application in Kubernetes
+Tutorial: Capture traces from a Java application in Kubernetes
 *******************************************************************************
 
 .. meta::
-    :description: Learn how to capture metrics from a Java application in Kubernetes by following a guided walkthrough with an example application.
+    :description: Learn how to capture traces from a Java application in Kubernetes by following a guided walkthrough with an example application.
 
 .. toctree::
     :hidden:
@@ -15,7 +15,7 @@ Tutorial: Capture metrics from a Java application in Kubernetes
     deploy-collector-k8s-java.rst
     k8s-java-view-apm.rst
 
-Follow this tutorial for a walkthrough of instrumenting a sample Java application in a Kubernetes environment. After this tutorial, you can:
+Follow this tutorial for a walkthrough of instrumenting a sample Java application in a Kubernetes environment.
 
 .. raw:: html
 

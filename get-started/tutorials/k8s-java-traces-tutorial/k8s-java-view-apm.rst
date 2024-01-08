@@ -10,17 +10,17 @@ Follow these steps to start viewing your data:
 
 #. Navigate to the Splunk Observability Cloud home page.
 #. Select :guilabel:`APM`.
-#. Search for the name of your service, :guilabel:`spring-petclinic`, in the APM search bar. It might take a few minutes for your service to appear in APM.
+#. Search for your service by using the :guilabel:`Environment` filter or by entering your service name in the search bar. It might take a few minutes for your service to appear in APM.
 
-The ``spring-petclinic`` service appears in the search results:
+The :guilabel:`spring-petclinic` service appears in the results:
 
-.. image:: /_images/get-started/k8s-java-metrics-tutorial/spring-petclinic-search.png
+.. image:: /_images/get-started/k8s-java-traces-tutorial/spring-petclinic-search.png
     :width: 100%
     :alt: The Spring Petclinic service appears as a search result in the APM page.
 
 Next, select the service. A page with detailed APM data opens:
 
-.. image:: /_images/get-started/k8s-java-metrics-tutorial/spring-petclinic-apm.png
+.. image:: /_images/get-started/k8s-java-traces-tutorial/spring-petclinic-apm.png
     :width: 100%
     :alt: A view of the Splunk APM data for the Spring Petclinic service.
 
