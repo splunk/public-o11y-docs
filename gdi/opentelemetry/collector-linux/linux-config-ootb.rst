@@ -2,6 +2,8 @@
 .. _configure-the-collector-ootb:
 .. _linux-config-ootb:
 
+.. REMEMBER TO SYNC OOTB Windows doc!
+
 ****************************************************************
 Collector for Linux default configuration
 ****************************************************************
@@ -12,6 +14,7 @@ Collector for Linux default configuration
 .. include:: /_includes/collector-components.rst
 
 The Collector configuration is stored in a :new-page:`YAML file <https://yaml.org/>` and specifies the behavior of the different components and services. See an overview of the elements and pipelines in the default configuration in the following sections.
+
 
 Default configuration 
 ========================================================
@@ -76,22 +79,21 @@ The following diagram shows the default logs pipeline:
 
 Learn more about these receivers:
 
-* :ref:`fluentd-receiver`
-* :ref:`processlist`
-* :ref:`otlp-receiver` 
 * :ref:`signalfx-receiver` 
+* :ref:`processlist`
+* :ref:`fluentd-receiver`
+* :ref:`otlp-receiver` 
 
 Learn more about these processors:
 
-* :ref:`batch-processor`
 * :ref:`memory-limiter-processor`
+* :ref:`batch-processor`
 * :ref:`resourcedetection-processor`
 
 Learn more about these exporters:
 
 * :ref:`signalfx-exporter`
 * :ref:`splunk-hec-exporter`
-
 
 Default pipelines for metrics 
 ----------------------------------------------------------------------------
@@ -145,13 +147,13 @@ Learn more about these receivers:
 
 * :ref:`host-metrics-receiver`
 * :ref:`otlp-receiver`
-* :ref:`prometheus-receiver`
 * :ref:`signalfx-receiver`
+* :ref:`prometheus-receiver`
 
 Learn more about these processors:
 
-* :ref:`batch-processor`
 * :ref:`memory-limiter-processor`
+* :ref:`batch-processor`
 * :ref:`resourcedetection-processor`
 
 Learn more about these exporters:
@@ -203,7 +205,6 @@ The following diagram shows the default traces pipeline:
       traces/resourcedetection --> traces/sapm
       traces/resourcedetection --> traces/signalfx/out
 
-
 Learn more about these receivers:
 
 * :ref:`jaeger-grpc`
@@ -212,8 +213,8 @@ Learn more about these receivers:
 
 Learn more about these processors:
 
-* :ref:`batch-processor`
 * :ref:`memory-limiter-processor`
+* :ref:`batch-processor`
 * :ref:`resourcedetection-processor`
 
 Learn more about these exporters:
@@ -226,6 +227,6 @@ Learn more
 
 See also the following documents:
 
-* :ref:`otel-collector-scenario`
-* :ref:`otel-install-platform` 
+* :ref:`collector-linux-intro` 
 * :ref:`Troubleshooting <otel-troubleshooting>`
+* :ref:`otel-collector-scenario`

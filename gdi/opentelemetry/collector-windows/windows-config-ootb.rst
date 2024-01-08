@@ -1,5 +1,7 @@
 .. _windows-config-ootb:
 
+.. REMEMBER TO SYNC OOTB Linux doc!
+
 ****************************************************************
 Collector for Windows default configuration
 ****************************************************************
