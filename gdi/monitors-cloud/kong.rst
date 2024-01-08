@@ -6,12 +6,9 @@ Kong Gateway
 .. meta::
    :description: Use this Splunk Observability Cloud integration for Kong analytics. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Prometheus receiver <prometheus-receiver>`
-to provide service traffic metrics using the `Kong metrics Prometheus endpoint <https://docs.konghq.com/hub/kong-inc/prometheus>`_,
-which emits metrics for configurable request
-and response lifecycle groups, including:
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the :ref:`Prometheus receiver <prometheus-receiver>`
+to provide service traffic metrics using the `Kong metrics Prometheus endpoint <https://docs.konghq.com/hub/kong-inc/prometheus>`,
+which emits metrics for configurable request and response lifecycle groups, including:
 
 -  Counters for response counts
 -  Counters for cumulative response and request sizes
@@ -44,7 +41,7 @@ Installation
 Kong installation
 ~~~~~~~~~~~~~~~~~
 
-Follow the `official Kong instructions <https://docs.konghq.com/hub/kong-inc/prometheus>`_ to expose the Prometheus metrics endpoint.
+Follow the official Kong instructions to expose the Prometheus metrics endpoint. To learn how, see :new-page:`Kong Docs on Prometheus <https://docs.konghq.com/hub/kong-inc/prometheus>`.
 
 Configuration
 -------------
@@ -71,7 +68,7 @@ Next, activate the ``metrics`` pipeline:
 Metrics
 -------
 
-Please consult `the official Kong documentation <https://docs.konghq.com/hub/kong-inc/prometheus/>`_ for the list of available metrics.monitors/collectd/kong/metadata.yaml"></div>
+For the complete list of metrics provided by the integration, refer to :new-page:`Kong Docs on Prometheus <https://docs.konghq.com/hub/kong-inc/prometheus>`.
 
 Notes
 ~~~~~
