@@ -197,18 +197,23 @@ Activate auto instrumentation by adding ``otel.splunk.com/inject-java: "true"`` 
     
 To deactivate automatic instrumentation, remove the annotation. The following command removes the annotation for automatic instrumentation, deactivating it:
 
-    .. code-block:: bash
+.. code-block:: bash
 
-      kubectl patch deployment <my-deployment> -n <my-namespace> --type=json -p='[{"op": "remove", "path": "/spec/template/metadata/annotations/instrumentation.opentelemetry.io~1inject-java"}]'
+  kubectl patch deployment <my-deployment> -n <my-namespace> --type=json -p='[{"op": "remove", "path": "/spec/template/metadata/annotations/instrumentation.opentelemetry.io~1inject-java"}]'
 
 Verify instrumentation
 -----------------------------------------------
 
-To verify that the instrumentation was successful, run the following command on an individual pod. Your instrumented pod should contain an initContainer named ``opentelemetry-auto-instrumentation`` and the target application container should have several ``OTEL_*`` environment variables similar to those in the demo output below.
+To verify that the instrumentation was successful, run the following command on an individual pod:
 
 .. code-block:: bash
 
-   kubectl describe pod -n otel-demo -l app.kubernetes.io/name=opentelemetry-demo-frontend
+   kubectl describe pod <application_pod_name> -n <namespace>
+
+The instrumented pod contains an initContainer named ``opentelemetry-auto-instrumentation`` and the target application container should have several ``OTEL_*`` environment variables similar to those in the following demo output:
+
+.. code-block:: bash
+
    # Name:             opentelemetry-demo-frontend-57488c7b9c-4qbfb
    # Namespace:        otel-demo
    # Annotations:      instrumentation.opentelemetry.io/inject-java: true
@@ -277,4 +282,4 @@ Learn more
 ===========================================================================
 
 * To learn more about how Zero Config Auto Instrumentation works in Splunk Observability Cloud, see :new-page:`more detailed documentation in GitHub <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/auto-instrumentation-install.md#how-does-auto-instrumentation-work>`.
-* Refer to :new-page:`the operator pattern in the Kubernetes documentation <https://kubernetes.io/docs/concepts/extend-kubernetes/operator/>` for more information.
+* See :new-page:`the operator pattern in the Kubernetes documentation <https://kubernetes.io/docs/concepts/extend-kubernetes/operator/>` for more information.

@@ -209,11 +209,16 @@ To deactivate automatic instrumentation, remove the annotation. The following co
 Verify instrumentation
 --------------------------------------------------------------
 
-To verify that the instrumentation was successful, run the following command on an individual pod. Your instrumented pod should contain an initContainer named ``opentelemetry-auto-instrumentation`` and the target application container should have several ``OTEL_*`` environment variables similar to those in the demo output below.
+To verify that the instrumentation was successful, run the following command on an individual pod:
 
 .. code-block:: bash
 
-   kubectl describe pod -n otel-demo -l app.kubernetes.io/name=opentelemetry-demo-frontend
+   kubectl describe pod <application_pod_name> -n <namespace>
+
+Instrumented pods contain an initContainer named ``opentelemetry-auto-instrumentation`` and the target application container should have several ``OTEL_*`` environment variables similar to those in the following demo output:
+
+.. code-block:: bash
+
    # Name:             opentelemetry-demo-frontend-57488c7b9c-4qbfb
    # Namespace:        otel-demo
    # Annotations:      instrumentation.opentelemetry.io/inject-nodejs: true
