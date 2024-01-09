@@ -75,7 +75,7 @@ The following examples demonstrate how to set the attribute using each method:
 
 .. tabs::
 
-    .. tab:: ``values.yaml`` (Environment option)
+    .. tab:: Environment option
 
       Set the ``environment`` option in the ``values.yaml`` file. This adds the ``deployment.environment`` attribute to all telemetry data the Collector receives, including data from automatically-instrumented pods.
 
@@ -83,9 +83,9 @@ The following examples demonstrate how to set the attribute using each method:
 
           environment: prd
 
-    .. tab:: ``values.yaml`` (Instrumentation spec)
+    .. tab:: Instrumentation spec
 
-      Add the environment variable to the ``instrumentation`` spec as shown in the following example code. This method adds the ``deployment.environment`` attribute to all telemetry data from automatically-instrumented pods.
+      Add the environment variable to the ``values.yaml`` instrumentation spec as shown in the following example code. This method adds the ``deployment.environment`` attribute to all telemetry data from automatically-instrumented pods.
 
       .. code-block:: yaml
 
@@ -101,7 +101,7 @@ The following examples demonstrate how to set the attribute using each method:
                     - name: OTEL_RESOURCE_ATTRIBUTES
                       value: "deployment.environment=prd-canary-nodejs"
 
-    .. tab:: Deployment ``.yaml`` file
+    .. tab:: Deployment YAML
 
       Update the application deployment YAML file. This method adds the ``deployment.environment`` attribute to all telemetry data from pods that contain the specified environment variable.
 
@@ -121,7 +121,7 @@ The following examples demonstrate how to set the attribute using each method:
                   - name: OTEL_RESOURCE_ATTRIBUTES
                     value: "deployment.environment=prd"
 
-    .. tab:: ``kubectl``
+    .. tab:: kubectl
 
       Update the environment variable ``OTEL_RESOURCE_ATTRIBUTES`` using ``kubectl set env``. For example:
 
@@ -134,7 +134,7 @@ Verify all the OpenTelemetry resources are deployed successfully
 
 Resources include the Collector, the Operator, webhook, and instrumentation.
 
-Run the following to verify the resources are deployed correctly:
+Run the following commands to verify the resources are deployed correctly:
 
 .. code-block:: yaml
    
