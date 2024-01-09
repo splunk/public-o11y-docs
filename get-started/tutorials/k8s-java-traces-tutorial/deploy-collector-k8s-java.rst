@@ -4,12 +4,12 @@
 Part 2: Deploy the Collector and Java application
 *********************************************************************
 
-Now that we've configured a Kubernetes environment, we can deploy the Splunk Distribution of OpenTelemetry Collector.
+Now that you've configured a Kubernetes environment, you can deploy the Splunk Distribution of OpenTelemetry Collector.
 
 Deploy the Splunk Distribution of OpenTelemetry Collector
 ============================================================
 
-Using Helm, we'll deploy the Splunk Distribution of OpenTelemetry Collector in our Kubernetes namespace:
+Using Helm, deploy the Splunk Distribution of OpenTelemetry Collector in your Kubernetes namespace:
 
 #. In a command line interface, run the following command:
 
@@ -39,14 +39,14 @@ Using Helm, we'll deploy the Splunk Distribution of OpenTelemetry Collector in o
 
     This output indicates that you've successfully deployed the Splunk Distribution of OpenTelemetry Collector, and that the Collector is ready to start receiving data and sending it to Splunk Observability Cloud. 
 
-We've now deployed the Splunk Distribution of OpenTelemetry Collector, and we're ready to deploy the Spring Petclinic application.
+You've now deployed the Splunk Distribution of OpenTelemetry Collector, and we're ready to deploy the Spring Petclinic application.
 
 .. _k8s-java-deploy-app:
 
 Deploy the Spring Petclinic application
 ================================================
 
-Let's deploy the Spring Petclinic Java application in our Kubernetes cluster. 
+Deploy the Spring Petclinic Java application in your Kubernetes cluster:
 
 #. Create a new YAML file in your spring-petclinic-app directory called :guilabel:`petclinic-spec.yaml`. This file stores the keys and values used to configure your application deployment in Kubernetes.
 
@@ -111,14 +111,14 @@ Let's deploy the Spring Petclinic Java application in our Kubernetes cluster.
 
     This command starts running a new deployment called ``spring-petclinic`` as well as a pod with a similar name.
 
-We've now successfully deployed the Spring PetClinic Java application in a Kubernetes pod.
+You've now successfully deployed the Spring PetClinic Java application in a Kubernetes pod.
 
 .. _k8s-java-verify:
 
 Verify your deployment
 ==================================
 
-Let's make sure that everything is running correctly. Run the following command on your application pod, and replace ``<pod-name>`` with the name of your Spring Petclinic application pod:
+Make sure that everything is running correctly. Run the following command on your application pod, and replace ``<pod-name>`` with the name of your Spring Petclinic application pod:
 
 .. code-block:: bash
 
@@ -169,5 +169,5 @@ The output also shows several ``OTEL`` environment variables:
 Next step
 ==========================
 
-Now that the application is running, we're ready to start viewing data in Splunk Application Performance Monitoring (APM). See :ref:`k8s-java-view-apm`.
+Now that the application is running, you're ready to start viewing data in Splunk Application Performance Monitoring (APM). See :ref:`k8s-java-view-apm`.
 

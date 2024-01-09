@@ -4,7 +4,7 @@
 Part 3: View your data in Splunk APM
 ********************************************
 
-Before you can view data in Splunk Application Performance Monitoring (APM), ensure that the application is active and generating data. Send requests to the application through ``cURL`` or interact with the application's UI to generate activity.
+Before you can view data in Splunk Application Performance Monitoring (APM), make sure that the application is active and generating data. Send requests to the application through ``cURL`` or interact with the application's UI to generate activity.
 
 Follow these steps to start viewing your data:
 
@@ -24,7 +24,7 @@ Next, select the service. A page with detailed APM data opens:
     :width: 100%
     :alt: A view of the Splunk APM data for the Spring Petclinic service.
 
-Congratulations! You've now successfully deployed and instrumented a Java application in Kubernetes, and you can now see your data in Splunk APM. 
+You've now successfully deployed and instrumented a Java application in Kubernetes, and you can now see your data in Splunk APM. 
 
 See the :ref:`learn-more-k8s-java-traces` section for additional resources about Splunk APM and Splunk Zero Configuration Auto Instrumentation.
 

@@ -4,14 +4,14 @@
 Part 1: Configure your Kubernetes environment
 ******************************************************************
 
-Before deploying the OpenTelemetry Collector, you must have a running Kubernetes cluster. In this tutorial, we'll use minikube to create the Kubernetes cluster.
+Before deploying the OpenTelemetry Collector, you must have a running Kubernetes cluster. Use minikube to create the Kubernetes cluster.
 
 .. _run-the-cluster:
 
 Run the Kubernetes cluster
 =========================================
 
-We'll start by running the cluster and creating a new namespace for the application.
+Start by running the cluster and creating a new namespace for the application.
 
 #. Start running the cluster with ``minikube start``.
 #. Create a namespace for the sample application. For this example, name the namespace :guilabel:`petclinic`: 
@@ -20,16 +20,16 @@ We'll start by running the cluster and creating a new namespace for the applicat
         
         kubectl create namespace petclinic
 
-This namespace helps us differentiate between the many different pods running in the cluster.
+This namespace helps you differentiate between the many different pods running in the cluster.
 
 .. _config-values-yaml:
 
 Configure the values.yaml file for the Helm Chart
 ====================================================================
 
-Now, we need to configure Helm to correctly install the Splunk Distribution of OpenTelemetry Collector: 
+Now, you need to configure Helm to correctly install the Splunk Distribution of OpenTelemetry Collector: 
 
-#. Create a new directory called :guilabel:`spring-petclinic-app` to store the files we'll use for Helm. 
+#. Create a new directory called :guilabel:`spring-petclinic-app` to store the files for Helm. 
 #. In the spring-petlcinic-app directory, create a file called :guilabel:`values.yaml`. This file stores keys and values that configure the Splunk Distribution of OpenTelemetry Collector through the Helm Chart. 
 #. Using the following table, add keys and values to values.yaml:
 
@@ -83,4 +83,4 @@ Next step
 
 You've now configured your Kubernetes environment by starting your Kubernetes cluster, creating a namespace for your application, and configuring the values.yaml file. 
 
-Next, we'll install the Splunk Distribution of OpenTelemetry Collector using Helm. See :ref:`deploy-collector-k8s-java` to continue.
+Next, install the Splunk Distribution of OpenTelemetry Collector using Helm. See :ref:`deploy-collector-k8s-java` to continue.
