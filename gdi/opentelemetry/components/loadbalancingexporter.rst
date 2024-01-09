@@ -1,18 +1,18 @@
 .. _loadbalancingexporter:
 
 ***************************************************
-Loadbalancing exporter
+Load balancing exporter
 ***************************************************
 
 .. meta::
-    :description: Loadbalancing exporter
+    :description: The load balancing exporter exports spans, metrics, and logs.
 
-The loadbalancing exporter exports spans, metrics, and logs. The supported pipeline types are ``metrics``, ``traces``, and ``logs``. You can filter the type of data that the loadbalancing exporter exports by using a ``routing-key``.
+The load balancing exporter exports spans, metrics, and logs. The supported pipeline types are ``metrics``, ``traces``, and ``logs``. You can filter the type of data that the loadbalancing exporter exports by using a ``routing-key``.
 
 Get started
 ============================
 
-This is an exporter that exports spans, metrics and logs depending on the ``routing_key`` configured.
+The load balancing exporter can export spans, metrics, and logs depending on the ``routing_key`` configured.
 
 The following table shows options for the ``routing_key``:
 
@@ -20,16 +20,16 @@ The following table shows options for the ``routing_key``:
     :header-rows: 1
     :widths: 50 50
 
-    * - routing_key
-      - used for
+    * - Routing key
+      - Used for
     * - ``service``
-      - logs, spans, metrics
+      - Logs, spans, metrics
     * - ``traceID``
-      - logs, spans
+      - Logs, spans
     * - ``resource``
-      - metrics
+      - Metrics
     * - ``metric``
-      - metrics
+      - Metrics
 
 By default, the routing mechanism is ``traceID`` for traces and ``service`` for metrics.
 
@@ -41,7 +41,7 @@ This section details some example configurations for the loadbalancing exporter.
 Simple example configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The following example is a simple configuration of the ``loadbalancing`` exporter:
+The following example configures the load balancing exporter for:
 
 .. code-block:: yaml
 

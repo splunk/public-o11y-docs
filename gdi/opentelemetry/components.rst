@@ -22,7 +22,8 @@ Collector components
     components/groupbyattrs-processor    
     components/health-check-extension
     components/host-metrics-receiver
-    components/jaeger-receiver    
+    components/jaeger-receiver
+    components/jmx-receiver-2    
     components/jmx-receiver    
     components/kubelet-stats-receiver
     components/kubernetes-attributes-processor
@@ -285,7 +286,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - ``kafka``
      - Exports metrics, logs, and traces to Kafka using a synchronous producer. 
      - Metrics, logs, traces
-   * - :ref:`loadbalancingexporter`
+   * - :ref:`loadbalancingexporter` (``loadbalancing``)
      - Exports metrics, logs, and traces using a routing key.
      - Metrics, logs, traces
    * - :ref:`logging-exporter` (``logging``)
