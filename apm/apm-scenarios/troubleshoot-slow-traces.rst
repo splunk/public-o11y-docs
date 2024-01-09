@@ -21,7 +21,7 @@ These are the steps Alex takes to determine how pervasive the checkout errors ar
 Alex uses the trace duration view in Trace Analyzer and filters the time range
 ================================================================================
 
-Customer support shared that the customer reported slowness when going through the checkout flow at about 11:30 AM. So, Alex selects the trace duration view in Trace Analyzer and filters to the time range that matches the customer's report.
+Customer support shared that the customer reported slowness when going through the checkout flow at about 12:20 PM. So, Alex selects the trace duration view in Trace Analyzer and filters to the time range that matches the customer's report.
 
 ..  image:: /_images/apm/apm-use-cases/trace-duration-time-select.gif
     :width: 95%
@@ -43,7 +43,7 @@ Alex further refines the traces they are viewing by adding a filter for the chec
 Alex reviews the heatmap for a high percentage of high-duration traces
 ============================================================================
 
-Alex uses the heatmap to better understand trace durations for the time period reported by the customer. Alex notes the green area of the heatmap at 11:31 AM which tells them that about 0.1 or 10% of traces per second had durations of 10 or more seconds. 
+Alex uses the heatmap to better understand trace durations for the time period reported by the customer. Alex notes the darker area of the heatmap at 12:19 PM which tells them that there was a high trace per second rate (1.308 traces per second) with durations of 20 or more seconds.
 
 ..  image:: /_images/apm/apm-use-cases/trace-duration-interpret-heatmap.png
     :width: 95%

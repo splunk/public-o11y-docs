@@ -88,7 +88,12 @@ When you view :guilabel:`Trace & error count`, the real-time chart shows total t
 Explore trace duration
 --------------------------
 
-When you view :guilabel:`Trace Duration`, the real-time chart shows a heatmap of traces by duration. Select and drag over the bars in the chart to select a specific time period and trace duration range. Select :guilabel:`Filter to selection` to add a time range filter and a min and max duration filter.
+When you view :guilabel:`Trace Duration`, the real-time chart shows a heatmap of traces by duration.
+
+Select and drag over the bars in the chart to select a specific time period and trace duration range. Select :guilabel:`Filter to selection` to add a time range filter and a min and max duration filter.
+
+
+The Traces per second that represent the heatmap shades are scaled for the data in range based on your filters. 
 
 ..  image:: /_images/apm/trace-analyzer/TraceDurationDragDropChart.gif
     :width: 95%
