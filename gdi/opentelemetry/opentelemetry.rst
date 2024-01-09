@@ -1,11 +1,50 @@
 .. _otel-intro:
 
+*************************
+OTLP/HTTP exporter
+*************************
+
+.. meta::
+      :description: The OTLP/HTTP exporter allows the OpenTelemetry Collector to send metrics, traces, and logs via HTTP using the OTLP format. Read on to learn how to configure the component.
+
+The OTLP/HTTP exporter sends metrics, traces, and logs through HTTP using the OTLP format (``application/x-protobuf`` content-type). The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
+
+.. note:: For information on the OTLP exporter, see :ref:`otlp-exporter`.
+
+Sample configurations
+--------------------------------
+
+To send traces and metrics to Splunk Observability Cloud using OTLP over HTTP, configure the ``metrics_endpoint`` and ``traces_endpoint`` settings to the REST API ingest endpoints. For example:
+
+.. code-block:: yaml
+
+   exporters:
+     otlphttp:
+        metrics_endpoint: "https://ingest.${SPLUNK_REALM}.signalfx.com/v2/datapoint/otlp"
+        traces_endpoint: "https://ingest.${SPLUNK_REALM}.signalfx.com/v2/trace/otlp"
+        compression: gzip
+        headers:
+          "X-SF-Token": "${SPLUNK_ACCESS_TOKEN}"
+
+To complete the configuration, include the receiver in the required pipeline of the ``service`` section of your
+configuration file. For example:
+
+.. code:: yaml
+
+   service:
+     pipelines:
+       metrics:
+         exporters: [otlphttp]
+       traces:
+         exporters: [otlphttp]
+
+
 *******************************************************************************************
 Get started with the Splunk Distribution of the OpenTelemetry Collector
 *******************************************************************************************
 
 .. meta::
-    :description: Install and configure the Splunk Distribution of OpenTelemetry Collector to receive, process, and export metric, trace, and log data for Splunk Observability Cloud. Splunk Observability Cloud offers a guided setup to install the Splunk Distribution of OpenTelemetry Collector. 
+    :description: If you want service profiling install and configure the Splunk Distribution of OpenTelemetry Collector to receive, process, and export metric, trace, and log data for Splunk Observability Cloud. Splunk Observability Cloud offers a guided setup to install the Splunk Distribution of OpenTelemetry Collector. 
 
 .. toctree::
     :maxdepth: 5
