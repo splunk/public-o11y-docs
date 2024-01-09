@@ -8,7 +8,7 @@ Free trial of Splunk Observability Cloud
     :description: About the free trial available for Splunk Observability Cloud.
 
 
-Hipster shop, the Splunk Observability Cloud trial shop, will be deployed to a local minikube cluster as a set of Docker containers that will provide metrics and traces. To set up your minikube cluster and OpenTelemetry collector you'll also need Helm and gsed installed for the automation to configure the cluster.
+The trial install will guide you through the steps to create your Splunk Observability Cloud trial environment. As part of the trial, Hipster shop - the Splunk Observability Cloud trial shop - will be deployed to a local minikube cluster as a set of Docker containers that will provide metrics and traces. To set up your minikube cluster and OpenTelemetry collector you'll also need Helm and gsed installed for the automation to configure the cluster.
 
 You can try out Splunk Observability Cloud for 14 days, absolutely free. You can explore the trial in two ways:
 
@@ -55,7 +55,7 @@ You can also expand the left-hand navigation menu to show the full names of the 
 Guided onboarding
 =========================
 
-There are five steps to the guided onboarding:
+There are five steps to the guided onboarding. The UI guides you through each of the steps, providing the commands and links you require.
 
 #. Preparing the prerequisites.
 #. Install OpenTelemetry.
@@ -67,6 +67,8 @@ There are five steps to the guided onboarding:
 Pre-Requisites
 ---------------------
 
+The first step is to set up some pre-requistes for the demo enviornmnet. The trial UI will guide you through this and link to the resources you need. 
+
 To run the demo environment, install and have functioning versions of:
 
 - Docker: Install Docker if needed. See :new-page:`https://docs.docker.com/engine/install`
@@ -75,14 +77,17 @@ To run the demo environment, install and have functioning versions of:
 - GSED: GNU implementations of the stream editor. gnu-sed is used in the configuration script for the kubernetes manifests. - See :new-page:`https://formulae.brew.sh/formula/gnu-sed`.
 - The Hipster Shop cluster requires a minimum 4 GB of memory. 
 
-
+Install the OpenTelemetry collector
+------------------------------------------------
 To install the OpenTelemetry collector, you'll need to know:
 
 - Your Splunk Observability Cloud realm. To locate your realm, see :new-page:`View your realm and org info <https://docs.splunk.com/Observability/admin/references/organizations.html>`.
 - Your Splunk Observability Cloud access token. For details, see :ref:`admin-org-tokens`.
 
+Install the Hipster Shop
+-------------------------------------
 
-To install the Hipster shop demo locally, you'll need your Real User Management (RUM) token. For instructions, see :ref:`rum-access-token`.
+The Hipster Shop allows you to generate sample data. To install the Hipster shop demo locally, you'll need your Real User Management (RUM) token. For instructions, see :ref:`rum-access-token`.
 
 Once you have installed and configured the Hipster Shop environment, you can generate traffic and explore the results in your Splunk Observability Cloud trial organization.
 
