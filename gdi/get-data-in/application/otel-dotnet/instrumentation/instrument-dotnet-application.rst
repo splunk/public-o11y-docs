@@ -94,11 +94,11 @@ Windows
             # Configure environment and service version for current PowerShell session
             $env:OTEL_RESOURCE_ATTRIBUTES='deployment.environment=<envtype>,service.version=<version>'
 
-         Run your application.
+         Run your application after setting the attribute.
 
       .. tab:: IIS application (ASP.NET)
 
-         For ASP.NET application, service name and resource attributes can be configured in ``appSettings`` block of web.config file.
+         For ASP.NET applications, configure the service name and resource attributes in the ``appSettings`` block of the web.config file:
 
          .. code-block:: xml
 
@@ -107,15 +107,16 @@ Windows
                <add key="OTEL_RESOURCE_ATTRIBUTES" value="deployment.environment=test,service.version=1.0.0" />
             </appSettings>
 
-         .. note:: If ``OTEL_SERVICE_NAME`` is not set for web application hosted in IIS, inferred name based on site name and virtual directory path will be used.
+         .. note:: 
+            If ``OTEL_SERVICE_NAME`` is not set for a web application hosted in IIS, the inferred name based on the site name and virtual directory path is used.
 
-         After modifying the web.config file, restart IIS e.g by running the following command:
+         After modifying the web.config file, restart IIS:
 
          .. code-block:: powershell
 
             Start-Process "iisreset.exe" -NoNewWindow -Wait
 
-         Alternatively, resource attributes can be set for specific application pools in ``environmentVariables`` block of :new-page:`applicationHost.config file <https://learn.microsoft.com/en-us/iis/configuration/system.applicationhost/applicationpools/add/environmentvariables/#configuration-sample>`.
+         You can also set the resource attributes for specific application pools in the ``environmentVariables`` block of the :new-page:`applicationHost.config file <https://learn.microsoft.com/en-us/iis/configuration/system.applicationhost/applicationpools/add/environmentvariables/#configuration-sample>`. For example:
 
          .. code-block:: xml
 
@@ -123,11 +124,12 @@ Windows
                <add name="OTEL_RESOURCE_ATTRIBUTES" value="deployment.environment=test,service.version=1.0.0" />
             </environmentVariables>
 
-         .. note:: If ``OTEL_SERVICE_NAME`` or ``OTEL_RESOURCE_ATTRIBUTES`` environment variables are set for a process, settings with the same names from ``appSettings`` block of web.config are ignored.
+         .. note::
+            If the ``OTEL_SERVICE_NAME`` or ``OTEL_RESOURCE_ATTRIBUTES`` environment variables are set for a process, settings with the same names from ``appSettings`` block of web.config are ignored.
 
       .. tab:: IIS application (ASP.NET Core)
 
-         For ASP.NET Core application hosted in IIS, service name and resource attributes can be configured using ``environmentVariables`` block of :new-page:`web.config file <https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/web-config?view=aspnetcore-8.0#set-environment-variables>`.
+         For ASP.NET Core applications hosted in IIS, the service name and resource attributes can be configured using the ``environmentVariables`` block of the :new-page:`web.config file <https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/web-config?view=aspnetcore-8.0#set-environment-variables>`. For example:
 
          .. code-block:: xml
 
@@ -136,7 +138,7 @@ Windows
                <environmentVariable name="OTEL_RESOURCE_ATTRIBUTES" value="deployment.environment=test,service.version=1.0.0" />
             </environmentVariables>
 
-         After modifying the ``web.config`` file, restart IIS e.g by running the following command:
+         After modifying the ``web.config`` file, restart IIS:
 
          .. code-block:: powershell
 
@@ -144,7 +146,7 @@ Windows
 
       .. tab:: Windows service
 
-         For .NET Framework applications, resource attributes can be configured in ``appSettings`` block of app.config file.
+         For .NET Framework applications, you can configure resource attributes in the ``appSettings`` block of the app.config file.
 
          .. code-block:: xml
 
@@ -152,9 +154,9 @@ Windows
                <add key="OTEL_RESOURCE_ATTRIBUTES" value="deployment.environment=test,service.version=1.0.0" />
             </appSettings>
 
-         Alternatively, modify the Environment key in Windows Registry for the Windows Service.
+         You can also modify the ``Environment`` key in the Windows Registry for each Windows service.
 
-         After modifying the ``app.config`` file or Windows Registry, restart the service e.g by running the following command:
+         After modifying the app.config file or the Windows Registry, restart the service:
 
          .. code-block:: powershell
 
