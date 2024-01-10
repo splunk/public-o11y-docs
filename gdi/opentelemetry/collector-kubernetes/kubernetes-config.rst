@@ -149,7 +149,6 @@ For example:
 
   clusterName: my-k8s-cluster
 
-
 .. _otel-kubernetes-config-environment:
 
 Configure the deployment environment
