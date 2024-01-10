@@ -7,14 +7,14 @@ Set up and administer Splunk Observability Cloud
 .. meta::
    :description: Overview of the Observability Cloud admin tasks and links to the documentation.
 
-One of the first steps in getting started with Observability Cloud is setting up your organization. In Observability Cloud, an organization, or account, is the highest-level security grouping. For example, data within an organization cannot be accessed by other organizations and their users.
+One of the first steps in getting started with Observability Cloud is setting up your organization. In Observability Cloud, an organization, or account, is the highest-level security grouping. For example, other organizations and their users can't access the data in your organization.
 
-To set up your organization, create and carry out a plan that addresses key aspects of your organization as covered below. Many of these tasks require administrator permissions and some tasks might need to be performed on an ongoing administrative basis beyond the initial setup.
+To set up your organization, create and carry out a plan for addressing the tasks described in this topic. Many of these tasks require administrator access, and you might need to perform some administrative tasks on a regular basis after your initial setup.
 
 
-What can I do to set up and administer my organization?
+Set up and administer your organization
 ==============================================================
-Here are key aspects of your Observability Cloud organization to plan for and set up:
+The following table shows you aspects of your Observability Cloud organization that you can plan for and set up:
 
 .. list-table::
    :header-rows: 1
@@ -44,7 +44,7 @@ Here are key aspects of your Observability Cloud organization to plan for and se
      - :guilabel:`Settings > Users`
      - For information, see :ref:`admin-manage-users`.
 
-   * - Integrate with notification services to enable team workflows and communication channels
+   * - Integrate with notification services to facilitate team workflows and communication channels
      - :guilabel:`Data Management`
      - For information, see :ref:`admin-notifs-index`.
 
@@ -52,7 +52,7 @@ Here are key aspects of your Observability Cloud organization to plan for and se
      - :guilabel:`Settings > Global Data links`
      - For information, see :ref:`link-metadata-to-content`.
 
-   * - Understand your subscription usage
+   * - Understand your subscription usage and billing
      - :guilabel:`Settings` 
      -  For information about APM subscription usage, see :ref:`apm-billing-usage-index`.
 

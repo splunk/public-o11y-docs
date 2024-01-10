@@ -7,7 +7,7 @@ Troubleshoot Go instrumentation for Splunk Observability Cloud
 .. meta::
    :description: If your instrumented Go application is not sending data to Splunk Observability Cloud, or data is missing, follow these steps to identify and resolve the issue.
 
-When you instrument a Go application using the Splunk Distribution of OpenTelemetry Go and you don't see your data in Observability Cloud, follow these troubleshooting steps.
+When you instrument a Go application using the Splunk Distribution of OpenTelemetry Go and you don't see your data in Splunk Observability Cloud, follow these troubleshooting steps.
 
 .. _basic-go-troubleshooting:
 
@@ -22,10 +22,10 @@ The following steps can help you troubleshoot Go instrumentation issues:
 
 .. _enable-go-debug-logging:
 
-Enable debug logging
+Activate debug logging
 ==========================================================
 
-Debug logging increases the verbosity of the Go instrumentation. This can help you troubleshoot issues. To enable debug logging, set the ``OTEL_LOG_LEVEL`` environment variable to ``debug``.
+Debug logging increases the verbosity of the Go instrumentation. This can help you troubleshoot issues. To activate debug logging, set the ``OTEL_LOG_LEVEL`` environment variable to ``debug``.
 
 .. code-block:: shell
 
@@ -69,7 +69,7 @@ If you don't see spans in Splunk Observability Cloud for your service, do the fo
 Missing some spans from a service
 -----------------------------------------
 
-After enabling debug logging, check the logs for messages like the following:
+After activating debug logging, check the logs for messages like the following:
 
 .. code-block:: text
 
@@ -129,4 +129,4 @@ To solve this issue, make sure the following conditions are true:
 
 #. The target endpoint is correct when providing an alternative value.
 
-.. include:: /_includes/troubleshooting-steps.rst
+.. include:: /_includes/troubleshooting-components.rst

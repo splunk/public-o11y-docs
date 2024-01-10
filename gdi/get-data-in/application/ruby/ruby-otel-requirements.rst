@@ -21,7 +21,8 @@ The Splunk Distribution of OpenTelemetry Ruby instruments numerous libraries and
 Ensure you have supported Ruby and library versions
 ==============================================================
 
-The agent of the Splunk Distribution of OpenTelemetry Ruby is compatible with Ruby 2.6 and higher.
+.. include:: /_includes/requirements/ruby.rst
+
 
 .. _ruby-otel-connector-requirement:
 
@@ -30,7 +31,7 @@ Install and configure the Splunk OpenTelemetry Collector
 
 The Splunk Distribution of OpenTelemetry Ruby exports application traces and spans to the Splunk OpenTelemetry Collector, which also collects system metric data and logs.
 
-To send application traces and spans to Observability Cloud, install the Splunk OpenTelemetry Collector for your platform. The following distributions are available:
+To send application traces and spans to Splunk Observability Cloud, install the Splunk OpenTelemetry Collector for your platform. The following distributions are available:
 
 - Splunk OTel Collector for Linux. See :ref:`otel-install-linux`.
 - Splunk OTel Collector for Windows. See :ref:`otel-install-windows`.

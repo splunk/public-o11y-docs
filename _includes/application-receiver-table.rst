@@ -1,7 +1,7 @@
 .. list-table::
    :header-rows: 1
    :widths: 50 16 16 16
-   :width: 100
+   :width: 100%
    :class: monitor-table
 
    * - :strong:`Data source`
@@ -9,7 +9,7 @@
      - :strong:`Provides traces`
      - :strong:`Provides logs`
 
-   * - :ref:`AWS AppMesh Envoy Proxy <appmesh>`
+   * - :ref:`Amazon ECS Task Metadata <amazon-ecs-metadata>`
      - :strong:`X`
      -
      -
@@ -19,7 +19,12 @@
      -
      -
 
-   * - :ref:`Apache HTTP Server <apache>`
+   * - :ref:`Apache CouchDB <apache-couchdb>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Apache HTTP Server <apache-httpserver>`
      - :strong:`X`
      -
      - :strong:`X`
@@ -34,7 +39,7 @@
      -
      -
 
-   * - :ref:`Apache Tomcat <collectd-tomcat>`
+   * - :ref:`Apache Tomcat <apache-tomcat>`
      - :strong:`X`
      -
      -
@@ -45,6 +50,11 @@
      -
 
    * - :ref:`ASP.NET <asp-dot-net>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`AWS AppMesh Envoy Proxy <appmesh>`
      - :strong:`X`
      -
      -
@@ -74,37 +84,12 @@
      -
      -
 
-   * - :ref:`Collectd plugin <collectd>`
+   * - :ref:`Collectd plugin <collectd-plugin>`
      - :strong:`X`
      -
      -
 
-   * - :ref:`Collectd CPUFreq <collectd-cpufreq>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`Collectd df <collectd-df>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`Collectd Hadoop JMX <collectd-hadoopjmx>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`Collectd Kafka consumer <collectd-kafka-consumer>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`Collectd Kafka producer <collectd-kafka-producer>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`Collectd PHP FPM <collectd-php-fpm>`
+   * - :ref:`Collectd df plugin <collectd-df>`
      - :strong:`X`
      -
      -
@@ -139,6 +124,11 @@
      -
      -
 
+   * - :ref:`CPUFreq <cpufreq>`
+     - :strong:`X`
+     -
+     -
+
    * - :ref:`Databricks Receiver <databricks_receiver>`  
      - :strong:`X`
      -
@@ -149,7 +139,7 @@
      -
      -
 
-   * - :ref:`DNS Query Input <telegraf-dns>`
+   * - :ref:`DNS Query Input <dns>`
      - :strong:`X`
      -
      -
@@ -158,11 +148,6 @@
      - :strong:`X`
      -
      - :strong:`X`
-
-   * - :ref:`Amazon ECS Task Metadata <ecs-metadata>`
-     - :strong:`X`
-     -
-     -
 
    * - :ref:`Elasticsearch <elasticsearch>`
      - :strong:`X`
@@ -179,7 +164,7 @@
      -
      - :strong:`X`
 
-   * - :ref:`Exec Input <telegraf-exec>`
+   * - :ref:`Exec Input <exec-input>`
      - :strong:`X`
      -
      - :strong:`X`
@@ -189,7 +174,7 @@
      -
      -
 
-   * - :ref:`Free disk space <filesystems>`
+   * - :ref:`Free disk space (filesystems) <filesystems>`
      - :strong:`X`
      -
      -
@@ -204,32 +189,12 @@
      -
      -
 
-   * - :ref:`Gitaly and Gitaly Cluster <gitlab-gitaly>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`GitLab Runner <gitlab-runner>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`GitLab Sidekiq <gitlab-sidekiq>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`GitLab Unicorn <gitlab-unicorn>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`GitLab Workhorse <gitlab-workhorse>`
-     - :strong:`X`
-     -
-     -
-
    * - :ref:`Hadoop <hadoop>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Hadoop JMX <hadoopjmx>`
      - :strong:`X`
      -
      -
@@ -286,8 +251,8 @@
 
    * - :ref:`Istio <get-started-istio>`
      - :strong:`X`
-     -
-     -
+     - :strong:`X`
+     - :strong:`X`
 
    * - :ref:`Jaeger gRPC <jaeger-grpc>`
      - :strong:`X`
@@ -305,6 +270,16 @@
      -
 
    * - :ref:`JMX <jmx>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Kafka consumer <kafka-consumer>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Kafka producer <kafka-producer>`
      - :strong:`X`
      -
      -
@@ -388,6 +363,11 @@
      -
      -
 
+   * - :ref:`Microsoft .NET <microsoft-dotnet>`
+     - :strong:`X`
+     -
+     -
+
    * - :ref:`Microsoft .NET runtime <get-started-dotnet>`
      - :strong:`X`
      -
@@ -413,7 +393,7 @@
      -
      - 
 
-   * - :ref:`MongoDB Atlas  <mongodb-atlas-receiver>`
+   * - :ref:`MongoDB Atlas receiver <mongodb-atlas-receiver>`
      - :strong:`X`
      -
      - 
@@ -443,7 +423,12 @@
      -
      - :strong:`X`
 
-   * - :ref:`NTP Receiver <ntp>`
+   * - :ref:`NTPQ <telegraf-ntpq>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`NTP server <ntp>`
      - :strong:`X`
      -
      -
@@ -463,10 +448,15 @@
      -
      -
 
-   * - :ref:`Oracle Database <oracledb>`
+   * - :ref:`Oracle Database receiver <oracledb>`
      - :strong:`X`
      -
      -  
+
+   * - :ref:`PHP FPM <collectd-php-fpm>`
+     - :strong:`X`
+     -
+     -
 
    * - :ref:`PostgreSQL <postgresql>`
      - :strong:`X`
@@ -478,7 +468,12 @@
      -
      -
 
-   * - :ref:`Prometheus Exporter <prometheus-exporter>`
+   * - :ref:`Prometheus - any app exposing Prometheus metrics <prometheus-generic>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Prometheus exporter <prometheus-exporter>`
      - :strong:`X`
      -
      -
@@ -498,12 +493,12 @@
      -
      -
 
-   * - :ref:`Prometheus Node Exporter <prometheus-node>`
+   * - :ref:`Prometheus Node exporter <prometheus-node>`
      - :strong:`X`
      -
      -
 
-   * - :ref:`Prometheus Receiver <prometheus-receiver>`
+   * - :ref:`Prometheus receiver <prometheus-receiver>`
      - :strong:`X`
      -
      -
@@ -528,7 +523,7 @@
      -
      -
 
-   * - :ref:`SignalFx Forwarder <signalfx-forwarder>`
+   * - :ref:`signalfx-forwarder`
      - :strong:`X`
      - :strong:`X`
      -
@@ -563,17 +558,12 @@
      -
      -
 
-   * - :ref:`Telegraf NTPQ <telegraf-ntpq>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`Telegraf Varnish <telegraf-varnish>`
-     - :strong:`X`
-     -
-     -
-
    * - :ref:`Traefik <traefik>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Varnish <telegraf-varnish>`
      - :strong:`X`
      -
      -
@@ -584,6 +574,11 @@
      -
 
    * - :ref:`Windows Performance Counters <telegraf-win-perf-counters>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Windows services <telegraf-win-services>`
      - :strong:`X`
      -
      -

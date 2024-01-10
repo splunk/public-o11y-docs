@@ -1,4 +1,4 @@
-import cssmin, glob,re
+import cssmin, re
 from jsmin import jsmin 
 
 def setup(app):
@@ -24,11 +24,10 @@ def pushassets():
    asset_includes('signalfx-includes.css',"yes")
    asset_includes('signalfx-includes.js',"yes")
    asset_includes('jsonpull-splunk.js',"yes")
-   asset_includes('toggle-sections.js',"yes")
-   asset_includes('toggle-sections.css',"yes")
    asset_includes('customjs.js',"yes")
    asset_includes('yaml-splunk.js',"no")
    asset_includes('showdown.min.js',"no")
+   asset_includes('mermaid.min.js', "no")
    return final_conf_includes
 
 #calling static push assets and same method will be called in conf.py for non minify css & js files.

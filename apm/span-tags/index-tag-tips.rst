@@ -9,7 +9,7 @@ Reference and best practices for span tags and Troubleshooting MetricSets
 .. meta::
   :description: Learn how to drill down to gain insights about the performance of your infrastructure or to address a specific incident using Troubleshooting MetricSets (TMS).
 
-With Troubleshooting MetricSets (TMS), you can drill down into to gain insights about the performance of your infrastructure, or to address a specific incident.
+With Troubleshooting MetricSets (TMS), you can drill down to gain insights about the performance of your infrastructure, or to address a specific incident.
 
 .. note::
   Troubleshooting MetricSets are distinct from Monitoring MetricSets in Splunk APM. For an overview of the types of MetricSets in APM, see :ref:`apm-metricsets`. 
@@ -25,10 +25,10 @@ With Troubleshooting MetricSets (TMS), you can drill down into to gain insights 
 
 .. _apm-default-span-tags:
 
-Span tags APM automatically indexes
+Default indexed span tags in APM
 ====================================
 
-APM automatically indexes and creates Troubleshooting MetricSets for the span tags in the following table:
+APM indexes and creates Troubleshooting MetricSets by default for the span tags in the following table:
 
 .. list-table::
    :header-rows: 1
@@ -105,9 +105,9 @@ If you choose not to index any additional span tags, you can still view tags in 
 Limits on indexing span tags
 ============================
 
- APM generates a Troubleshooting MetricSet for every unique set of indexed span tag values, so the number of the span tags you can index depends on the number of Troubleshooting MetricSets that the span tags generate. This is also known as the cardinality contribution of indexed tags. The number of Troubleshooting MetricSets you can generate might be limited in your Splunk APM contract, so keep this limit in mind when you're indexing span tags. For more information, see :new-page:`Splunk APM Pricing <https://www.splunk.com/en_us/products/pricing/faqs/observability.html#splunk-apm>`.
+ APM generates a Troubleshooting MetricSet for every unique set of indexed span tag values, so the number of span tags you can index depends on the number of Troubleshooting MetricSets that the span tags generate. This is also known as the cardinality contribution of indexed tags. The number of Troubleshooting MetricSets you can generate might be limited in your Splunk APM contract, so keep this limit in mind when you're indexing span tags. For more information, see :new-page:`Splunk APM Pricing <https://www.splunk.com/en_us/products/pricing/faqs/observability.html#splunk-apm>`.
 
-Determining the number of possible Troubleshooting metricsets
+Determining the number of possible Troubleshooting MetricSets
 -----------------------------------------------------------------
 To determine the total number of possible Troubleshooting MetricSets that indexing a tag will generate, multiply the number of indexed tag values for each indexed tag associated with each unique set of service, endpoint, operation, and environment values.
 
@@ -220,7 +220,7 @@ To avoid running out of Troubleshooting MetricSets, consider which span tags are
 
 - How much cardinality do I need?
 
-  Some span tags provide a level of cardinality that might not be useful. For example, indexing ``query_id`` can generate Troubleshooting MetricSets for every unique query, and in most cases there's no reason for this level of cardinality. 
+  Some span tags provide a level of cardinality that might not be useful. For example, indexing ``query_id`` can generate Troubleshooting MetricSets for every unique query, and in most cases, there's no reason for this level of cardinality. 
 
 - Do any of my tags represent ephemeral resources?
 

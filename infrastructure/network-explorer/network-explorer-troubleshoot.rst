@@ -37,16 +37,16 @@ Your Network Explorer metrics are not generated with Kubernetes metadata.
 Causes
 ----------------
 
-* Your Kubernetes collector is disabled. You can check this in the :new-page:`Network Explorer values file <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/values.yaml#L71>`.
+* Your Kubernetes collector is turned off.
     
-    The Kubernetes collector is disabled if you see the following.
+    The Kubernetes collector is turned off if you see the following:
 
         .. code-block:: yaml            
             
             k8sCollector:
               enabled: false
 
-* If your Kubernetes collector is enabled, you can determine the root cause based on the logs for the ``k8s-watcher`` and ``k8s-relay`` containers in the ``k8s-collector`` pod.
+* If your Kubernetes collector is turned on, you can determine the root cause based on the logs for the ``k8s-watcher`` and ``k8s-relay`` containers in the ``k8s-collector`` pod.
 
     #. Run the following command to find your ``k8s-collector`` pod name.
         
@@ -79,14 +79,14 @@ Causes
 Solution
 ----------------
 
-* If your Kubernetes collector is disabled, you need to enable it by setting ``k8sCollector.enabled`` to ``true`` in the :new-page:`Network Explorer values file <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/values.yaml#L71>`.
+* If your Kubernetes collector is turned off, you need to turn it on by setting ``k8sCollector.enabled`` to ``true`` in the Network Explorer values file.
 
     .. code-block:: yaml            
     
         k8sCollector:
             enabled: true
 
-* For other errors, see the :new-page:`Kubernetes documentation <https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#use-the-default-service-account-to-access-the-api-server>` for more information on configuring the service account for the pod to enable communication with the API server.
+* For other errors, see the :new-page:`Kubernetes documentation <https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#use-the-default-service-account-to-access-the-api-server>` for more information on configuring the service account for the pod to turn on communication with the API server.
 
 
 

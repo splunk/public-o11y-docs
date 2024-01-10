@@ -12,16 +12,17 @@ Instrument Python applications for Splunk Observability Cloud
    :hidden:
 
    Requirements <python-otel-requirements>
-   Instrument a Python application <instrumentation/instrument-python-application>
+   Instrument your Python application <instrumentation/instrument-python-application>
    Connect trace data with logs <instrumentation/connect-traces-logs>
    Configure the Python agent <configuration/advanced-python-otel-configuration>
+   Metrics and attributes <configuration/python-otel-metrics>
    Manual instrumentation <instrumentation/python-manual-instrumentation>
    Additional steps for frameworks <instrumentation/instrument-python-frameworks>
    Troubleshoot the Python instrumentation <troubleshooting/common-python-troubleshooting>
    About Splunk OTel Python <splunk-python-otel-distribution>
    Migrate from SignalFx Python agent <troubleshooting/migrate-signalfx-python-agent-to-otel>
 
-The Splunk Distribution of OpenTelemetry Python provides a Python agent that automatically adds APM instrumentation to your Python application. The instrumentation captures distributed traces and sends them to Splunk Observability Cloud.
+The Splunk Distribution of OpenTelemetry Python provides a Python agent that automatically adds APM instrumentation to your Python application. The instrumentation captures distributed traces and metrics and sends them to Splunk Observability Cloud.
 
 To instrument your Python application, follow these steps:
 

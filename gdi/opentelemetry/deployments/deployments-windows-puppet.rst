@@ -1,8 +1,8 @@
 .. _deployment-windows-puppet:
 
-**********************
-Puppet for Windows
-**********************
+********************************************************
+Deploy the Collector with Puppet for Windows
+********************************************************
 
 .. meta::
       :description: Describes how to install the Splunk Observability Cloud OpenTelemetry Collector Puppet module on Windows.
@@ -11,7 +11,7 @@ Use this module to install and configure the Collector on Windows. Download and 
 
 On Windows systems, the :new-page:`puppetlabs/registry module <https://forge.puppet.com/modules/puppetlabs/registry>` is required to set the registry key/values, and the :new-page:`puppetlabs/powershell module <https://forge.puppet.com/modules/puppetlabs/powershell>` is required to run Powershell commands.
 
-Using the module
+Use the Puppet module
 ============================
 
 To use this module, include the ``splunk_otel_collector`` class in your manifests with the supported parameters (see :ref:`modify-class-parameters-windows` for descriptions of the available parameters). For example, the following deployment definition is the simplest deployment definition with the default parameters (replace ``VERSION`` with the desired Collector version, ``SPLUNK_ACCESS_TOKEN`` with your Splunk access token to authenticate requests, and ``SPLUNK_REALM`` for the realm to send the data to):
@@ -82,7 +82,7 @@ The class accepts the parameters described in the following table:
      - ``%PROGRAMDATA%\Splunk\OpenTelemetry Collector\agent_config.yaml``
    * - ``with_fluentd``
      - Whether to install or manage Fluentd and dependencies for log collection.
-     - ``true``
+     - ``false``
    * - ``fluentd_config_source``
      - Source path to the Fluentd configuration file. This file is copied to the ``$fluentd_config_dest`` path on the node. See the :new-page:`source attribute <https://puppet.com/docs/puppet/latest/types/file.html#file-attribute-source>` of the file resource for the supported value types. The default source file is provided by the Collector package. Only applicable if ``$with_fluentd`` is set to ``true``.
      - ``%PROGRAMFILES\Splunk\OpenTelemetry Collector\fluentd\td-agent.conf``

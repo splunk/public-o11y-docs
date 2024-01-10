@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-notification-preferences:
 
 Set your on-call notification preferences
@@ -39,7 +41,7 @@ To ensure you receive notifications from Incident Intelligence, follow these ste
 #. Select :guilabel:`Settings`
 #. Enable :guilabel:`Incident Notifications are Critical Alerts` to ensure incident notifications are not muted by the system.
 #. When prompted, confirm that the Splunk Observability Cloud for Mobile app can send push notifications.
-#. Review the options for notifications, sounds, badges, and banners are enabled to ensure you do not miss incident notifications if your phone is locked or set to Do Not Disturb.
+#. Review the options for notifications, sounds, badges, and banners are turned on to ensure you do not miss incident notifications if your phone is locked or set to Do Not Disturb.
     .. image:: /_images/incident-intelligence/incident-intelligence-iOS-notif-override.png
         :width: 40%
         :alt: In the Triggered Incidents section, manage your notification settings to ensure you receive incident notifications while not receiving dual notifications from the app and your mobile device settings.
@@ -70,9 +72,9 @@ To set the volume override follow these steps:
 #. Select :guilabel:`Incident Notifications`.
 #. In the :guilabel:`Triggered Incidents` section:
     #. Change the Notification Sound to your preference.
-    #. Ensure you enable the option to Override System Notification Volume. This ensures that the notification sound plays at maximum volume.
+    #. Ensure you turn on the option to Override System Notification Volume. This ensures that the notification sound plays at maximum volume.
         #. Select :guilabel:`Manage Channel Settings` and do the following:
-        #. Ensure :guilabel:`Show notifications` is enabled.
+        #. Ensure :guilabel:`Show notifications` is turned on.
         #. (Optional) To avoid double sounds or ringtones being issued by the Splunk Observability Cloud for Mobile app and your Android system settings, expand the :guilabel:`Advanced settings` and change the Sound setting to None. 
         
 

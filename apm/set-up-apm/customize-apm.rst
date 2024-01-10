@@ -9,7 +9,7 @@ Customize your Splunk APM experience
 .. meta::
    :description: Learn about advanced configurations to help you get the most out of Splunk APM. 
 
-Now that you’ve explored what you can do with Splunk APM, you can consider more advanced configurations to tailor Splunk APM to your business needs.
+Now that you've explored what you can do with Splunk APM, you can consider more advanced configurations to tailor Splunk APM to your business needs.
 
 Prerequisites
 ==============
@@ -51,7 +51,7 @@ Continue learning about Splunk APM
 The following resources provide additional information about Splunk APM:
 
 * For an overview of important terms and concepts in Splunk APM, see :ref:`APM terms and concepts <apm-key-concepts>`.
-* For a series of Splunk APM use cases, see :ref:`apm-use-cases-intro`.
+* For a series of Splunk APM scenarios, see :ref:`apm-scenarios-intro`.
 * For a set of interactive walkthroughs of Splunk APM, see :new-page:`APM Scenarios <https://quickdraw.splunk.com/redirect/?product=Observability&location=apm-walkthrough&version=current>`. 
 
 .. For an example that shows you how to identify the root cause of issues with APM, see :ref:`Example APM root cause investigation <apm-find-root-cause>`.

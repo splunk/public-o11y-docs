@@ -15,13 +15,13 @@ You can send traces to Splunk Observability Cloud in OTLP format using the gRPC 
 Send traces using the gRPC endpoint
 ==============================================
 
-The gRPC ingest endpoint for traces is ``ingest.<realm>.signalfx.com:443``, where ``<realm>`` is your Observability Cloud realm. Requests must contain an access token in the ``X-SF-Token`` header.
+The gRPC ingest endpoint for traces is ``ingest.<realm>.signalfx.com:443``, where ``<realm>`` is your Splunk Observability Cloud realm. Requests must contain an access token in the ``X-SF-Token`` header.
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
 To find the realm name of your account, follow these steps: 
 
-#. Open the navigation menu in Observability Cloud.
+#. Open the navigation menu in Splunk Observability Cloud.
 #. Select :menuselection:`Settings`.
 #. Select your username. 
 
@@ -34,6 +34,7 @@ To send traces directly to the gRPC ingest endpoint, add the following lines to 
 
 .. code-block:: yaml
 
+
    exporters:
      otlp:
         endpoint: ingest.${SPLUNK_REALM}.signalfx.com:443
@@ -43,6 +44,7 @@ To send traces directly to the gRPC ingest endpoint, add the following lines to 
 Make sure that the traces pipeline contains the ``otlp`` exporter:
 
 .. code-block:: yaml
+
 
    service:
      pipelines:

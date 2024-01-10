@@ -1,8 +1,8 @@
 .. _deployment-windows-ansible:
 
-**********************
-Ansible for Windows
-**********************
+********************************************************
+Deploy the Collector with Ansible for Windows
+********************************************************
 
 .. meta::
       :description: Describes how to install the Splunk Observability Cloud OpenTelemetry Collector Ansible role on Windows.
@@ -63,7 +63,7 @@ The following table describes the variables that can be configured for this role
    * - ``splunk_otel_collector_version``
      - The version of the package to install, for example, ``0.25.0``. The default value is ``latest``.
    * - ``splunk_otel_collector_config``
-     - The configuration file, created in YAML. This variable can be set to ``%ProgramData%\Splunk\OpenTelemetry Collector\gateway_config.yaml`` to install the package in Gateway mode. The default location is ``%ProgramData%\Splunk\OpenTelemetry Collector\agent_config.yaml``.
+     - The configuration file, created in YAML. This variable can be set to ``%ProgramData%\Splunk\OpenTelemetry Collector\gateway_config.yaml`` to install the package in data forwarding (gateway) mode. The default location is ``%ProgramData%\Splunk\OpenTelemetry Collector\agent_config.yaml``.
    * - ``splunk_config_override``
      - The custom configuration that is merged into the default configuration.
    * - ``splunk_config_override_list_merge``
@@ -79,7 +79,7 @@ The following table describes the variables that can be configured for this role
    * - ``splunk_ballast_size_mib``
      - The set memory ballast size in MiB. The default value is 1/3 of the value set in ``splunk_memory_total_mib``.
    * - ``install_fluentd``
-     - The option to install or manage Fluentd and dependencies for log collection. The default value is ``true``.  
+     - The option to install or manage Fluentd and dependencies for log collection. The default value is ``false``.
    * - ``td_agent_version``
      - The version of td-agent (Fluentd package) that is installed.
    * - ``splunk_fluentd_config``

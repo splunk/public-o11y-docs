@@ -1,44 +1,24 @@
 .. _kubernetes-cluster-receiver:
 
-Kubernetes Cluster receiver
+****************************************
+Kubernetes cluster receiver
 ****************************************
 
 .. meta::
-      :description: Use this Splunk Observability Cloud integration for the Kubernetes Cluster / k8s-cluster receiver. See benefits, install, configuration, and metrics.
+      :description: The Kubernetes cluster receiver allows the Splunk Distribution of OpenTelemetry Collector to collect cluster metrics from Kubernetes through its monitoring API.
 
-The Kubernetes Cluster Receiver, ``k8s_cluster``, collects cluster-level
-metrics from the Kubernetes API server. The receiver uses the Kubernetes
-API to listen for updates. A single instance of this receiver can be
-used to monitor a cluster.
+The Kubernetes cluster receiver collects cluster metrics using the Kubernetes API server. You can use a single instance of this receiver to monitor an entire Kubernetes cluster. The supported pipeline type is ``metrics``. To filter in or out other Kubernetes elements, such as containers, pods, nodes, namespaces, or clusters, use the Filter processor instead. Learn more at :ref:`filter-processor`. See :ref:`otel-data-processing` for more information on the different types of pipelines.
 
-This receiver is a native OpenTelemetry receiver and replaces the
-``kubernetes-cluster`` SignalFx Smart Agent monitor.
+Kubernetes version 1.21 and higher is compatible with the Kubernetes navigator. Using lower versions of Kubernetes is not supported for this receiver and might result in the navigator not displaying all clusters.
 
-.. note:: This receiver is in beta and configuration fields are subject to change.
+.. note:: This receiver replaces the ``kubernetes-cluster`` Smart Agent monitor type.
 
-Installation
-==========================
+Get started
+======================
 
-Follow these steps to deploy the integration:
+By default, the Kubernetes cluster receiver is already activated in the Helm chart of the Splunk OpenTelemetry Collectors. See :ref:`otel-kubernetes-config` for more information.
 
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
-   
-   - :ref:`otel-install-linux`
-   
-   - :ref:`otel-install-windows`
-   
-   - :ref:`otel-install-k8s`
-
-2. Configure the receiver as described in the next section.
-3. Restart the Collector.
-
-.. note:: Kubernetes version 1.21 and higher are compatible with the Kubernetes navigator. Using lower versions of Kubernetes is not fully supported for this receiver and may result in the navigator not displaying all clusters.
-
-Configuration
-==========================
-
-Use the following example configuration to activate this receiver in the
-Collector:
+To activate the Kubernetes cluster receiver manually in the Collector configuration, add ``k8s_cluster`` to the ``receivers`` section of your configuration file, as shown in the following example:
 
 .. code:: yaml
 
@@ -50,19 +30,31 @@ Collector:
        allocatable_types_to_report: ["cpu","memory"]
        metadata_exporters: [signalfx]
 
-The following table shows the required and optional settings:
+To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your
+configuration file. For example:
 
-.. raw:: html
+.. code:: yaml
 
-   <div class="metrics-standard" category="included" url="https://github.com/splunk/collector-config-tools/raw/main/cfg-metadata/receiver/k8s_cluster.yaml"></div>
+   service:
+     pipelines:
+       metrics:
+         receivers: [k8s_cluster]
 
-metadata_exporters
----------------------------------------
+Sync metadata_exporters
+-----------------------------
 
-Sync the receiver with the metadata exporters you want to use to collect
-metadata. Exporters specified in this list need to implement the
-following interface. If an exporter doesn't implement the interface,
-startup fails.
+Use ``metadata_exporters`` as a list of metadata exporters to sync with metadata collected by the Kubernetes cluster receiver. For example:
+
+.. code-block:: yaml
+
+
+   receivers:
+     k8s_cluster:
+       auth_type: serviceAccount
+       metadata_exporters:
+       - signalfx
+
+Exporters specified in this list need to implement the following interface. If an exporter doesn't implement the interface, startup fails.
 
 .. code:: yaml
 
@@ -82,15 +74,10 @@ startup fails.
      MetadataToUpdate map[string]string
    }
 
-node_conditions_to_report
-----------------------------------------
+Set node_conditions_to_report
+-----------------------------------
 
-Use the following configuration to have the ``k8s_cluster`` receiver
-emit two metrics, ``k8s.node.condition_ready`` and
-``k8s.node.condition_memory_pressure``, one for each condition in the
-configuration. The value is ``1`` if the ``ConditionStatus`` for the
-corresponding ``Condition`` is ``True``, ``0`` if it is ``False``, and
-``-1`` if it is ``Unknown``.
+Use the following configuration to have the ``k8s_cluster`` receiver emit two metrics, ``k8s.node.condition_ready`` and ``k8s.node.condition_memory_pressure``, one for each condition in the configuration:
 
 .. code:: yaml
 
@@ -101,219 +88,31 @@ corresponding ``Condition`` is ``True``, ``0`` if it is ``False``, and
        - MemoryPressure
    # ...
 
-To learn more, search for “Conditions” on the Kubernetes documentation
-site.
+The value is ``1`` if the ``ConditionStatus`` for the corresponding ``Condition`` is ``True``, ``0`` if it's ``False``, and ``-1`` if it's ``Unknown``. To learn more, search for “Conditions” in the Kubernetes documentation.
 
-Configure with the SignalFx Exporter
-====================================================
+Settings
+======================
 
-The following example shows a deployment of the Collector that sets up
-the ``k8s_cluster`` receiver along with the SignalFx Metrics Exporter.
-
-This example shows how to set up the following Kubernetes resources that
-are required for the deployment:
-
--  ConfigMap
--  Service account
--  RBAC
--  Deployment
-
-ConfigMap
------------------
-
-Create a ConfigMap with the configuration for ``otelcontribcol``.
-Replace ``SIGNALFX_TOKEN`` and ``SIGNALFX_REALM`` with valid values.
-
-.. code:: bash
-
-   cat <<EOF | kubectl apply -f -
-   apiVersion: v1
-   kind: ConfigMap
-   metadata:
-     name: otelcontribcol
-     labels:
-       app: otelcontribcol
-   data:
-     config.yaml: |
-       receivers:
-         k8s_cluster:
-           collection_interval: 10s
-           metadata_exporters: [signalfx]
-       exporters:
-         signalfx:
-           access_token: <SIGNALFX_TOKEN>
-           realm: <SIGNALFX_REALM>
-
-       service:
-         pipelines:
-           metrics:
-             receivers: [k8s_cluster]
-             exporters: [signalfx]
-   EOF
-
-Service account
------------------------
-
-Create a service account for the Collector:
-
-.. code:: bash
-
-   <<EOF | kubectl apply -f -
-   apiVersion: v1
-   kind: ServiceAccount
-   metadata:
-     labels:
-       app: otelcontribcol
-     name: otelcontribcol
-   EOF
-
-Role-based access control (RBAC)
-----------------------------------------------
-
-Create a ``ClusterRole`` with required permissions:
-
-.. code:: bash
-
-   <<EOF | kubectl apply -f -
-   apiVersion: rbac.authorization.k8s.io/v1beta1
-   kind: ClusterRole
-   metadata:
-     name: otelcontribcol
-     labels:
-       app: otelcontribcol
-   rules:
-   - apiGroups:
-     - ""
-     resources:
-     - events
-     - namespaces
-     - namespaces/status
-     - nodes
-     - nodes/spec
-     - pods
-     - pods/status
-     - replicationcontrollers
-     - replicationcontrollers/status
-     - resourcequotas
-     - services
-     verbs:
-     - get
-     - list
-     - watch
-   - apiGroups:
-     - apps
-     resources:
-     - daemonsets
-     - deployments
-     - replicasets
-     - statefulsets
-     verbs:
-     - get
-     - list
-     - watch
-   - apiGroups:
-     - extensions
-     resources:
-     - daemonsets
-     - deployments
-     - replicasets
-     verbs:
-     - get
-     - list
-     - watch
-   - apiGroups:
-     - batch
-     resources:
-     - jobs
-     - cronjobs
-     verbs:
-     - get
-     - list
-     - watch
-   - apiGroups:
-       - autoscaling
-     resources:
-       - horizontalpodautoscalers
-     verbs:
-       - get
-       - list
-       - watch
-   EOF
-
-Create a ``ClusterRoleBinding`` to grant the role to the service account
-created in the service account example:
-
-.. code:: bash
-
-   <<EOF | kubectl apply -f -
-   apiVersion: rbac.authorization.k8s.io/v1beta1
-   kind: ClusterRoleBinding
-   metadata:
-     name: otelcontribcol
-     labels:
-       app: otelcontribcol
-   roleRef:
-     apiGroup: rbac.authorization.k8s.io
-     kind: ClusterRole
-     name: otelcontribcol
-   subjects:
-   - kind: ServiceAccount
-     name: otelcontribcol
-     namespace: default
-   EOF
-
-Deployment
-----------------------------------------------
-
-Create a deployment to the Collector:
-
-.. code:: bash
-
-   <<EOF | kubectl apply -f -
-   apiVersion: apps/v1
-   kind: Deployment
-   metadata:
-     name: otelcontribcol
-     labels:
-       app: otelcontribcol
-   spec:
-     replicas: 1
-     selector:
-       matchLabels:
-         app: otelcontribcol
-     template:
-       metadata:
-         labels:
-           app: otelcontribcol
-       spec:
-         serviceAccountName: otelcontribcol
-         containers:
-         - name: otelcontribcol
-           image: otelcontribcol:latest # specify image
-           args: ["--config", "/etc/config/config.yaml"]
-           volumeMounts:
-           - name: config
-             mountPath: /etc/config
-           imagePullPolicy: IfNotPresent
-         volumes:
-           - name: config
-             configMap:
-               name: otelcontribcol
-   EOF
-
-Metrics
-=================
-
-The following table shows the legacy metrics that are available for this
-integration. See `OpenTelemetry values and their legacy
-equivalents <https://docs.splunk.com/Observability/gdi/opentelemetry/legacy-otel-mappings.html#opentelemetry-values-and-their-legacy-equivalents>`__
-for the Splunk Distribution of OpenTelemetry Collector equivalents.
+The following table shows the configuration options for the MongoDB Atlas:
 
 .. raw:: html
 
-   <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/kubernetes/cluster/metadata.yaml"></div>
+   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/k8s_cluster.yaml"></div>
 
-Get help
+Metrics
+=====================
+
+The following metrics, resource attributes, and attributes are available.
+
+.. note:: The SignalFx exporter excludes some available metrics by default. Learn more about default metric filters in :ref:list-excluded-metrics. See :ref:ootb-metrics-k8s to see how the Collector processes Kubernetes metrics.
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/k8sclusterreceiver.yaml"></div>
+
+.. include:: /_includes/activate-deactivate-native-metrics.rst
+
+Troubleshooting
 ======================
 
 .. include:: /_includes/troubleshooting-components.rst

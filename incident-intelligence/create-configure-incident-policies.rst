@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-create-configure-incident-policies:
 
 ************************************************************************
@@ -7,7 +9,7 @@ Create and configure incident policies
 .. meta::
    :description: Steps to create and configure incident policies to organize incidents for Incident Intelligence in Splunk Observability Cloud.
 
-Use incident policies to organize incidents depending on the impacted environmental component, for example, your web application service or checkout service. Begin by creating an incident policy. Then, route alerts to the incident policy. Next, specify which alerts create an incident and how alerts are grouped into incidents. Finally, create incident workflows with escalating steps to determine who is notified to respond when a new incident is triggered.
+Use incident policies to organize incidents depending on the impacted environmental component, for example, your web application service or checkout service. Begin by creating an incident policy. Then, route alerts to the incident policy. Next, identify which alerts create an incident and how alerts are grouped into incidents. Finally, create incident workflows with escalating steps to determine who is notified to respond when a new incident triggers.
 
 .. _ii-create-incident-policy:
 
@@ -19,11 +21,23 @@ Create an incident policy
 #. Give your incident policy a unique name and a description. 
 #. Select :guilabel:`Create incident policy`.
 
-After you create your incident policy, you are directed to configure which alerts are routed to your incident policy. 
+After you create your incident policy, you can configure which alerts are routed to your incident policy. 
+
+
+Delete an incident policy
+===========================
+
+If you want to stop using an existing incident policy, you can either modify or delete the policy and create a new one. When you delete an incident policy, new alerts that were previously routed to the incident policy are no longer grouped to new or existing incidents. The deleted incident policy is no longer listed when creating manual incidents.
+
+#. In Incident Intelligence, select :guilabel:`Incident Management`.
+#. In the Incident Policies list, locate the policy you want to delete. 
+#. Select the :guilabel:`Action` menu (|more|).
+#. Select :guilabel:`Delete`.
+
 
 .. _ii-configure-alert-routing:
 
-Configure the alerts that are routed to your incident policy
+Configure the alerts routed to your incident policy
 ============================================================
 
 Use alert routing to associate alerts with an incident policy. If an alert matches your alert filter conditions, it is routed to the incident policy. To set up your alert routing for the incident policy, follow these steps:
@@ -40,7 +54,7 @@ Use alert routing to associate alerts with an incident policy. If an alert match
     #. Select :guilabel:`Enter` to save your condition. 
 #. Repeat these steps for any additional alert routing conditions that you want to set up. By default, multiple conditions are joined by an ``OR`` operator. To switch an ``OR`` operator to ``AND``, select the ``OR`` operator and select ``AND``.
 #. Review the list of alerts that are currently routed to the incident policy to confirm your filter conditions are correct. 
-#. Select :guilabel:`Save alert routing` when you are finished setting up your alert routing conditions.
+#. Select :guilabel:`Save alert routing` when you finish setting up your alert routing conditions.
 
 After you configure which alerts are routed to your incident policy, configure how alerts are grouped into incidents.
 
@@ -49,14 +63,25 @@ After you configure which alerts are routed to your incident policy, configure h
 Configure how alerts are grouped
 ====================================
 
-Use alert grouping to manage which alerts create an incident and how alerts are grouped into incidents. Alert grouping is specific to each incident policy and you can customize it to create the workflow that works for you. You can use alert severity to determine if an incident is created and also group alerts by time period. To configure alert grouping, follow these steps:
+Use alert grouping to manage how alerts are grouped into incidents and which alerts trigger a new incident. Alert grouping is specific to each incident policy and you can customize it to create the workflow that works for you. 
+
+ To configure alert grouping, follow these steps:
 
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
-#. Select :guilabel:`Incident policies` and then the incident policy you want to add alert grouping conditions to. Each incident policy can have one alert grouping rule.
-#. On the :guilabel:`Alert grouping` tab, select the minimum severity level you want to require for an incident to be triggered in the drop-down list next to :guilabel:`Trigger an incident when alerts reach severity level`.
-#. If you want to group alerts into incidents, select :guilabel:`Group alerts from the same time period into incidents`, and then select a time period between 10 minutes and 24 hours from the drop-down list next to :guilabel:`Create a new incident if there is a pause in alerts for`.
-#. Under :guilabel:`Alert metadata grouping (optional)`, select metadata fields you want to group by. The fields you are using in your alert routing conditions are available to select. If you want to filter on another field enter that field name. 
-#. Select :guilabel:`Save alert grouping`.
+#. Select :guilabel:`Incident policies` and then the incident policy you want to add alert grouping conditions to. Each incident policy can have one alert grouping configuration.
+#. Select the :guilabel:`Alert grouping` tab.
+#. Under :guilabel:`Alert metadata grouping (optional)`, select metadata fields you want to group by. The fields you are using in your alert routing conditions are available to select. However any custom field that is common in the alert routing metadata can be entered as a custom value. If you want add a field that is not displayed, enter the field name and select it from the dropdown to add it as a selected metadata field. Any custom field that is common in the alert routing metadata can be entered as a ``group by`` field.
+#. In the :guilabel:`Incident breaking conditions` section, define the conditions that cause an incident to stop accumulating new alerts. When any one of the conditions you set in this section are met any subsequent alerts will trigger a new incident instead of being added to the existing incident.
+
+   #. To break the existing incident if there has been a pause in alerts that lasts for the time duration you specify, select the pause duration from the :guilabel:`Select time value` drop down. Note: If you choose a time duration that is too short, you might encounter the situation where every alert triggers a new incident.  This is not generally desirable if the alerts are coming in within a short time span.
+   
+   #. To break the existing incident when an alert with specific values are included, select :guilabel:`Add Filters` and choose the key-value pair which will prevent new alerts coming to the existing incident.
+   
+   #. To break the existing incident after a specific amount of time has passed for the current alert, select that time duration in the :guilabel:`Select time value` dropdown.
+   
+   #. To break the existing incident after a specific number of alerts has been received in an incident, enter that value in the :guilabel:`The number of alerts in an incident reaches` field.
+
+#. Select :guilabel:`Save`.
 
 After you manage which alerts create an incident and how alerts are grouped into incidents, configure incident workflows for your incident policy.  
 
@@ -70,7 +95,7 @@ Use incident workflows to determine who is notified when a new incident is trigg
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
 #. Select :guilabel:`Incident policies` and then the incident policy where you want to create an incident workflow.
 #. Select the :guilabel:`Incident workflows` tab. 
-#. To add responders, select :guilabel:`Configure invite` under :guilabel:`Immediately`. 
+#. To add responders, select :guilabel:`+ Add responders` under :guilabel:`Immediately`. 
 #. In the :guilabel:`Configure invite` window, add responders by name or by schedule. If you don't have an on-call schedule, see :ref:`ii-create-manage-on-call-schedules`.
    
     .. list-table::
@@ -89,8 +114,8 @@ Use incident workflows to determine who is notified when a new incident is trigg
 #. Repeat these steps until you have all the responders you want to invite to incidents for this step in the workflow. 
 #. Select :guilabel:`Add responders`.
 #. Select :guilabel:`Add New Step` to add additional escalating steps with additional responders to your incident workflow.
-#. Select an elapsed time period in the drop-down list next to :guilabel:`If unacknowledged after`.
-#. Select :guilabel:`Configure invite` to add responders.
+#. Select an elapsed time period in the list next to :guilabel:`If unacknowledged after`.
+#. Select :guilabel:`+ Add responders` to add responders.
 #. Repeat these steps until you have a complete incident workflow for the incident policy. 
 
 .. _ii-rank-incident-policies:
@@ -107,9 +132,9 @@ Mute notifications using incident policy maintenance
 
 Use incident policy maintenance to mute notifications while you are making changes to the incident policy. 
 
-To put your incident policy in maintenance, select the :guilabel:`Actions` menu on the incident policy you want to put in maintenance and select :guilabel:`Maintenance`. The incident policy status will show as :guilabel:`Maintenance`. 
+To put your incident policy in maintenance, select the :guilabel:`Actions` menu on the incident policy you want to put in maintenance and select :guilabel:`Maintenance`. The incident policy status shows as :guilabel:`Maintenance`. 
 
-All incidents that are associated with the incident policy that are triggered while the incident policy is in maintenance are created in a muted state. No responders are notified when a muted incident is triggered. Muted incidents don't show in your incident list by default. To see your muted incidents, select the :guilabel:`Incidents` tab in Incident Intelligence and add a ``Status = Muted`` filter.  Muted incidents are read-only and can't be acknowledged, resolved, or dismissed.  
+All incidents associated with the incident policy that are triggered while the incident policy is in maintenance are created in a muted state. A muted incident does not notify responders. Muted incidents don't show in your incident list by default. To see your muted incidents, select the :guilabel:`Incidents` tab in Incident Intelligence and add a ``Status = Muted`` filter. Muted incidents are read-only and you can't acknowledge, resolve, or dismiss them.  
 
 Take an incident policy out of maintenance
 ---------------------------------------------

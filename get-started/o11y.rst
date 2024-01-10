@@ -7,45 +7,65 @@ Get started with Splunk Observability Cloud
 .. meta::
     :description: Learn how to get started with Splunk Observability Cloud in five steps.
 
-This topic covers five high-level steps you can follow to get started with Splunk Observability Cloud and its products, which include Splunk Infrastructure Monitoring, Splunk Application Performance Monitoring (APM), Splunk Real User Monitoring (RUM), or Splunk Log Observer.
+This topic covers five high-level steps you can follow to get started with Splunk Observability Cloud and its products, which include Splunk Infrastructure Monitoring, Splunk Application Performance Monitoring (APM), Splunk Real User Monitoring (RUM), and Splunk Log Observer.
 
-For an introduction to Observability Cloud products, see :ref:`welcome`.
+For an introduction to Splunk Observability Cloud products, see :ref:`welcome`.
 
-For information about how these products can be used together to address real-life use cases, see :ref:`get-started-use-case`.
+For information about how these products can be used together to address real-life scenarios, see :ref:`get-started-scenario`.
 
-Follow these steps to set up and make the most of Observability Cloud:
+Follow these steps to set up and make the most of Splunk Observability Cloud:
 
-.. source in figma: https://www.figma.com/file/ngM8GWA5GqzW0hAhToM58v/get-started-5-steps?node-id=5%3A5
+.. list-table::
+   :header-rows: 1
+   :widths: 60, 40
 
-.. image:: /_images/get-started/get-started-5-steps.png
-    :width: 80%
-    :alt: This diagrams provides a high-level view of the 5 steps to getting started with Observability Cloud.
+   * - :strong:`Configuration stages`
+     - :strong:`Task overview`
+
+   * - :ref:`get-started-plan` with:
+     - Single sign-on, Access tokens, Admins and users, Teams, Notification service integrations (Jira, PagerDuty, and more)
+
+   * - :ref:`get-started-gdi` from your: 
+     - Cloud services, Servers, Server applications, Clusters, Applications, Serverless functions, User interfaces
+
+   * - :ref:`get-started-explore` using: 
+     - Infrastructure Monitoring, Real User Monitoring, Log Observer, Application Performance Monitoring, Related Content
+
+   * - :ref:`get-started-customize`:
+     - Detectors and alerts, Custom dashboards, Span tags, Business workflows, Logs pipeline, Custom data
+
+   * - :ref:`get-started-datalinks` from dashboards and alerts to:
+     - Splunk Observability Cloud dashboards, Splunk Cloud Platform, Splunk Enterprise, Custom URLs, Kibana logs
+
+
 
 
 .. _get-started-plan:
 
+
 1. Create a plan and set up your organization
 =================================================
 
-Before you start, create a plan for how you want to set up your Observability Cloud organization. For information about how to plan for and set up your Observability Cloud organization, see :ref:`admin-admin`.
+Before you start, create a plan for how you want to set up your Splunk Observability Cloud organization. For information about how to plan for and set up your Observability Cloud organization, see :ref:`admin-admin`.
 
 
 .. _get-started-gdi:
 
-2. Get data into Observability Cloud
-=========================================
+2. Get data into Splunk Observability Cloud
+==============================================
 
-Gather all the data from your environment in Observability Cloud to achieve full-stack observability. For information about how to get data in, see :ref:`get-started-get-data-in`.
+Gather all the data from your environment in Splunk Observability Cloud to achieve full-stack observability. For information about how to get data in, see :ref:`get-started-get-data-in`.
 
-As a part of getting data in, make sure to consider bringing in data in a way that enables :ref:`get-started-relatedcontent`, a feature that automatically correlates data between different views within Observability Cloud. When enabled, the Related Content bar displays automatically when a you select a relevant element and lets you take a data-driven investigative approach.
+As a part of getting data in, make sure to consider bringing in data in a way that allows :ref:`get-started-relatedcontent`, a feature that automatically correlates data between different views within Splunk Observability Cloud. When turned on, the Related Content bar displays automatically when a you select a relevant element and lets you take a data-driven investigative approach.
 
+To learn more about Splunk Observability Cloud's data model, refer to :ref:`data-model`.
 
 .. _get-started-explore:
 
 3. Explore and analyze your data
 ========================================================
 
-Once you have data coming into Observability Cloud, it's time to do some exploring. For example, you can:
+Once you have data coming into Splunk Observability Cloud, it's time to do some exploring. For example, you can:
 
 - Use :ref:`Infrastructure Monitoring <get-started-infrastructure>` to analyze the performance of cloud services, hosts, and containers, or view the health of your infrastructure at a glance, and view outlier conditions in your hybrid infrastructure.
 
@@ -53,11 +73,11 @@ Once you have data coming into Observability Cloud, it's time to do some explori
 
 - Use :ref:`RUM <get-started-rum>` to analyze the performance of web and mobile applications and keep track of how users are interacting with your front-end services, including page load times and responsiveness.
 
-- Use :ref:`Log Observer <get-started-logs>` to pinpoint interesting log events and troubleshoot issues with your infrastructure and cloud services.
+- Use :ref:`Log Observer <get-started-logs>` or :ref:`Log Observer Connect <logs-intro-logconnect>` to pinpoint interesting log events and troubleshoot issues with your infrastructure and cloud services.
 
-- As described in step :ref:`get-started-gdi`, if you enabled :ref:`get-started-relatedcontent` when setting up your data integrations, you can click options in the Related Content bar to seamlessly navigate between APM, Log Observer, and Infrastructure Monitoring with your selected filters and context automatically applied to each view.
+- As described in step :ref:`get-started-gdi`, if you turned on :ref:`get-started-relatedcontent` when setting up your data integrations, you can select options in the Related Content bar to seamlessly navigate between APM, Log Observer, and Infrastructure Monitoring with your selected filters and context automatically applied to each view.
 
-- Use the :ref:`mobile app <intro-to-mobile>` to check system critical metrics in Observability Cloud on the go, access real-time alerts with visualizations, and view mobile-friendly dashboards.
+- Use the :ref:`mobile app <intro-to-mobile>` to check system critical metrics in Splunk Observability Cloud on the go, access real-time alerts with visualizations, and view mobile-friendly dashboards.
 
 
 .. _get-started-customize:
@@ -65,13 +85,13 @@ Once you have data coming into Observability Cloud, it's time to do some explori
 4. Set up alerts and customize your experience
 ========================================================
 
-Now that you've explored and familiarized yourself with the data you have coming into Observability Cloud, set up detectors to issue alerts about your data and customize your Observability Cloud experience.
+Now that you've explored and familiarized yourself with the data you have coming into Splunk Observability Cloud, set up detectors to issue alerts about your data and customize your Splunk Observability Cloud experience.
 
 - Set up :ref:`detectors <create-detectors>` to send alerts when your incoming data contains conditions you want to know about.
 
 - In addition to exploring your data using Infrastructure Monitoring navigators and built-in :ref:`dashboards <dashboard-create-customize>`, you can also create new dashboards and customize existing ones.
 
-- In addition to the built-in data you already have coming into Observability Cloud, you can also bring in custom data. For more information, see :ref:`Configure and instrument applications to send custom data <gdi-7>` and :ref:`Use the Observability Cloud API to send custom data <gdi-8>`.
+- In addition to the built-in data you already have coming into Splunk Observability Cloud, you can also bring in custom data. For more information, see :ref:`Configure and instrument applications to send custom data <gdi-7>` and :ref:`Use the Observability Cloud API to send custom data <gdi-8>`.
 
 - Customize your APM experience by setting up business workflows and creating span tags that add metadata to traces sent to APM. For more information, see :ref:`apm-workflows` and :ref:`apm-add-context-trace-span`.
 
@@ -83,9 +103,9 @@ Now that you've explored and familiarized yourself with the data you have coming
 5. Create global data links
 ========================================================
 
-Now that you've customized your Observability Cloud experience, create global data links to further enrich the user experience.
+Now that you've customized your Splunk Observability Cloud experience, create global data links to further enrich the user experience.
 
-Global data links provide convenient access to related resources, such as Observability Cloud dashboards, Splunk Cloud Platform and Splunk Enterprise, custom URLs, and Kibana logs in the context of the following locations in Observability Cloud:
+Global data links provide convenient access to related resources, such as Splunk Observability Cloud dashboards, Splunk Cloud Platform and Splunk Enterprise, custom URLs, and Kibana logs in the context of the following locations in Splunk Observability Cloud:
 
 - Dashboards
 - Alerts

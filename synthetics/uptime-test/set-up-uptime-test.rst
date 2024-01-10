@@ -5,7 +5,7 @@ Set up an Uptime test
 **************************************
 
 .. meta::
-    :description: Learn how to set up an Uptime test in Splunk Synthetic Monitoring.
+    :description: Steps to set up a HTTP or port uptime test in Splunk Synthetic Monitoring, and add advanced settings. 
   
 An Uptime test lets you make a request to a specified URL or port address and monitor its response time and response code. Uptime tests record three metrics from each run: response time, DNS time, and time to first byte. 
 
@@ -19,6 +19,7 @@ Decide whether you want to set up an HTTP Uptime test or Port Uptime test, and t
 Configure an HTTP Uptime test
 ==============================
 
+
 Follow these steps to set up a HTTP Uptime test: 
 
 #. From the landing page of Splunk Observability Cloud, navigate to Splunk Synthetic Monitoring. 
@@ -26,6 +27,7 @@ Follow these steps to set up a HTTP Uptime test:
 #. Make sure the :guilabel:`HTTP` tab is selected.
 #. In the :guilabel:`Name` field, enter a name for your test. You will use this name to identify data from the test in your alerts and reports. 
 #. In the :guilabel:`URL` field, paste the URL for the page you want to test, including ``http`` or ``https``.
+#. As you build your test, you can use :guilabel:`Try now` to check that the configuration of your test is valid. Run results aren't stored. For more, see :ref:`try-now`.  
 
 .. _configure-port-test:
 
@@ -45,10 +47,10 @@ Follow these steps to set up a Port Uptime test:
 View your Uptime test
 ======================
 
-Now that you created and saved a test, check whether it’s collecting data as expected: 
+Now that you created and saved a test, check whether it's collecting data as expected: 
 
 #. From the :guilabel:`Tests` list, select the three-dot :guilabel:`Actions` menu and select :guilabel:`Play` arrow icon to manually trigger a live run of the test, or wait for at least one duration of the test frequency you set so that the test has time to run and collect data. 
-#. Select the test you’re interested in to open the :guilabel:`Test History` view, where you can view visualizations of recent test results and metrics.
+#. Select the test you're interested in to open the :guilabel:`Test History` view, where you can view visualizations of recent test results and metrics.
 
 Interpret your Uptime test results
 ====================================
@@ -69,6 +71,20 @@ There are many reasons why you might want to configure advanced settings for you
 * Testing out a CDN. For example, you might want to load the HTML page in the browser, but rewrite the hosts for some or all requests to a new host.
 * Filtering out requests from analytics on the back end by sending a specific header in the requests.
 * Running a test on a pre-production site that has a self-signed certificate.
+
+Custom properties 
+--------------------
+Custom properties are key-value pairs you can assign to dimensions of existing MTSes after ingest. Custom properties are single-valued and don’t support multiple values, like ``region:northamerica`` or ``environment:prod``.
+
+Key requirements:
+
+* Keys must start with an uppercase or lowercase letter. Keys can't start with special characters or numbers. 
+* The remainder of the key can contain letters, numbers, underscores and hyphens.
+* Keys can’t be named test_id or test.
+* Key size can't exceed 128 characters. 
+
+
+See, :ref:`custom-properties`. 
 
 
 .. _uptime-request-time:
@@ -103,4 +119,4 @@ You can make an assertion on two values. Add two parameters along with the compa
 
 Example
 ==================
-For an example, see :ref:`uptime-test-use-case`.
+For an example, see :ref:`uptime-test-scenario`.

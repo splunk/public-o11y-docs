@@ -11,7 +11,7 @@ Instrument AWS Lambda functions for Splunk Observability Cloud
    :hidden:
 
    Instrument your Lambda function <otel-lambda-layer/instrument-lambda-functions>
-   otel-lambda-layer/collector-ec2-setup
+   .NET lambda functions <dotnet-lambdas>
    Advanced configuration <otel-lambda-layer/advanced-configuration>
    Metrics and dimensions <otel-lambda-layer/lambda-metrics>
    Troubleshooting <otel-lambda-layer/troubleshooting-lambda-layer>
@@ -26,6 +26,6 @@ To instrument your AWS Lambda function using the Splunk OpenTelemetry Lambda Lay
 #. :ref:`install-otel-lambda-layer`.
 #. :ref:`set-env-vars-otel-lambda`.
 
-Splunk Observability Cloud can also collect AWS Lambda metrics and logs from AWS CloudWatch. See :ref:`get-started-aws` for more information on how to connect Observability Cloud to your AWS services.
+Splunk Observability Cloud can also collect AWS Lambda metrics and logs from AWS CloudWatch. See :ref:`get-started-aws` for more information on how to connect Splunk Observability Cloud to your AWS services.
 
 .. note:: The :ref:`SignalFx Lambda wrappers <signalfx-lambda-wrappers>` are deprecated. To migrate to the Splunk OpenTelemetry Lambda Layer, see :ref:`migrate-signalfx-lambda-wrappers`.

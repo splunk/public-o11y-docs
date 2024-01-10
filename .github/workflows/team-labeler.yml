@@ -1,0 +1,56 @@
+name: "Label issues"
+on: 
+  pull_request_target:
+    types:
+      - opened
+  
+jobs:
+  label-pr:
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    if: github.repository == 'splunk/public-o11y-docs' && github.actor != 'srv-rpa-o11y-docs-splunk'
+    steps:
+      - id: membership_check
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.TEAM_MEMBERSHIP_CHECK }}
+          script: |
+            try {
+              await github.rest.teams.getMembershipForUserInOrg({
+                org: 'splunk',
+                team_slug: 'o11y-docs',
+                username: context.payload.sender.login
+              });
+              console.log("Author of the PR is a maintainer")
+              return true
+            } catch (err) {
+              console.log("Author of the PR is not a maintainer")
+              return false
+            }
+      - id: labelTeam
+        if: steps.membership_check.outputs.result == 'true'
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.MY_TOKEN }}
+          script: |
+                github.rest.issues.addLabels({
+                  issue_number: context.issue.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  labels: ['internal']
+                })
+      - id: labelContributor
+        if: steps.membership_check.outputs.result == 'false'
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.MY_TOKEN }}
+          script: |
+                github.rest.issues.addLabels({
+                  issue_number: context.issue.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  labels: ['external']
+                })
+

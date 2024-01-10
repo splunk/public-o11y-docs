@@ -16,19 +16,8 @@ To instrument your browser application and get data into Splunk RUM, follow the 
 Check compatibility and requirements
 ==============================================
 
-The Browser RUM agent supports the following browser versions:
+.. include:: /_includes/requirements/browser.rst
 
-- Chrome and Chrome Android 51 and higher
-- Edge 12 and higher
-- Firefox 36 and higher
-- Safari and Safari iOS 10.1 and higher
-- Internet Explorer 11
-
-Internet Explorer 11 requires the ``splunk-otel-web-legacy.js`` version of the Browser RUM agent.
-
-All your pages, assets, and requests must be securely loaded over the HTTPS protocol.
-
-.. note:: Splunk APM is not required to instrument Splunk RUM for Browser. 
 
 .. _rum-browser-install:
 
@@ -37,20 +26,27 @@ Instrument your web application for Splunk RUM
 
 Before you instrument and configure Splunk RUM for your web application, understand which data RUM collects about your application and determine the scope of what you want to monitor. See :ref:`rum-data-collected`.
 
-Select one of the following methods to instrument your web application:
+Select one of the following methods to instrument your web application.
 
-* :ref:`rum-browser-install-cdn`
-* :ref:`rum-browser-install-self-hosted`
-* :ref:`rum-browser-install-npm`
+.. list-table::
+   :header-rows: 1
+   :width: 100%
 
-:strong:`Tip:` To generate all the installation commands for your environment and application, use the Browser Instrumentation guided setup. To access the Browser Instrumentation guided setup, follow these steps:
+   * - Installation method
+     - Use cases
+     - Considerations
 
-#. Log in to Observability Cloud.
-#. In the left navigation menu, select :menuselection:`Data Management`. 
-#. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
-#. In the integration filter menu, select :guilabel:`By Use Case`.
-#. Select the :guilabel:`Monitor user experience` use case.
-#. Select the :guilabel:`Browser Instrumentation` tile to open the Browser Instrumentation guided setup.
+   * - :ref:`rum-browser-install-cdn`
+     - Multi-page websites
+     - Quick integration with your site or applciation. Ad-blockers might interfere with loading.
+
+   * - :ref:`rum-browser-install-self-hosted`
+     - Multi-page websites
+     - Provides greater control over the installation. Updates are entirely manual.
+
+   * - :ref:`rum-browser-install-npm`
+     - Single-page applications
+     - Bundles into your web application. Must be loaded as soon as possible. See :ref:`loading-initializing_browser-rum` for more information.
 
 
 .. _rum-browser-install-cdn:
@@ -60,28 +56,55 @@ Splunk CDN
 
 You can use the Splunk Content Delivery Network (CDN) to load the Browser RUM agent synchronously. The CDN link ensures that your application always uses the latest version.
 
+Decide which version to run in your environment
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The versioning of the Browser RUM agent follows semantic versioning rules. To have more control over the version you load, see the following versioning policy:
+
+* Use the latest version to use the latest version of the Browser RUM agent. In preproduction, use ``latest`` to try out the most recent version of Splunk RUM. Don't use in production environments without prior testing. This version might not be suitable for manual instrumentation, as breaking API changes might occur between major version changes.
+* Use major versions, for example ``v1``, if you want to receive new features automatically while keeping backward compatibility with the API. This is the default for all production deployments, as well as for npm installations.
+* Use minor versions, for example ``v1.1``, to receive bug fixes while not receiving new features automatically.
+* Use patch versions, for example, ``v1.2.1``, to pin a specific version of the agent for your application.
+
+The versions of the agent are included in URLs as a designated token. For example:
+
+``https://cdn.signalfx.com/o11y-gdi-rum/v<MAJOR.MINOR.PATCH>/splunk-otel-web.js``
+
+In production environments, use the pinned version which was previously tested in preproduction and update the production version on a monthly cycle.
+
+Add the CDN script to your application
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Follow these steps to instrument your application with the CDN:
 
 #. Customize the following snippet:
 
    .. code-block:: html
 
-      <script src="https://cdn.signalfx.com/o11y-gdi-rum/latest/splunk-otel-web.js" crossorigin="anonymous"></script>
+      <!--//
+
+      IMPORTANT: Replace the <version> placeholder in the src URL with a
+      version from https://github.com/signalfx/splunk-otel-js-web/releases
+
+      //-->
+      <script src="https://cdn.signalfx.com/o11y-gdi-rum/<version>/splunk-otel-web.js" crossorigin="anonymous"></script>
       <script>
          SplunkRum.init({
-            beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
-            rumAuth: '<your_rum_token>',
-            app: '<your_app_name>',
+            realm: '<realm>',
+            rumAccessToken: '<your_rum_token>',
+            applicationName: '<your_app_name>',
             version: '<your_app_version>',
-            environment: '<your_environment_name>'
+            deploymentEnvironment: '<your_environment_name>'
          });
       </script>
 
-   * In the beacon URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+   * In the URL of the script, replace ``<version>`` with a version from the :new-page:`Releases page in GitHub <https://github.com/signalfx/splunk-otel-js-web/releases>`.
 
-         1. Open the left navigation menu in Observability Cloud.
+   * ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
+
+         1. Open the navigation menu in Splunk Observability Cloud.
          2. Select :menuselection:`Settings`.
-         3. Select your username. 
+         3. Select your username.
 
       The realm name appears in the :guilabel:`Organizations` section.
 
@@ -89,7 +112,10 @@ Follow these steps to instrument your application with the CDN:
 
 #. Add the snippet to the head section of every page you want to monitor in your application.
 
-#. Deploy the changes to your application.
+#. Deploy the changes to your application. Make sure to test the instrumentation in a pre-production environment before deploying to production.
+
+.. caution:: Don't use the ``latest`` version in production without prior testing.
+
 
 .. _rum-browser-install-self-hosted:
 
@@ -111,20 +137,21 @@ Follow these steps to instrument your application using a self-hosted script:
       <script src="http://example.domain/path/splunk-otel-web.js"></script>
       <script>
          SplunkRum.init({
-            beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
-            rumAuth: '<your_rum_token>',
-            app: '<your_app_name>',
+            realm: '<realm>',
+            rumAccessToken: '<your_rum_token>',
+            applicationName: '<your_app_name>',
             version: '<your_app_version>',
-            environment: '<your_environment_name>'
+            deploymentEnvironment: '<your_environment_name>'
          });
       </script>
 
-   * In the beacon URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. See :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
+   * ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. See :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
    * To generate a RUM access token, see :ref:`rum-access-token`.
 
 #. Add the snippet to the head section of every page you want to monitor in your application.
 
-#. Deploy the changes to your application.
+#. Deploy the changes to your application. Make sure to test the instrumentation in a pre-production environment before deploying to production.
+
 
 .. _rum-browser-install-npm:
 
@@ -135,7 +162,7 @@ To bundle the Browser RUM agent directly with your application, use the ``@splun
 
 Follow these steps to instrument and configure Splunk RUM using npm:
 
-#. Enter the following command to install the Browser RUM agent and add it to your ``package.json`` file:
+#. Enter the following command to install the Browser RUM agent and add it to your package.json file:
 
    .. code-block:: shell
 
@@ -147,28 +174,29 @@ Follow these steps to instrument and configure Splunk RUM using npm:
 
       import SplunkOtelWeb from '@splunk/otel-web';
       SplunkOtelWeb.init({
-         beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
-         rumAuth: '<your_rum_token>',
-         app: '<your_application_name>',
+         realm: '<realm>',
+         rumAccessToken: '<your_rum_token>',
+         applicationName: '<your_application_name>',
          version: '<your_app_version>',
-         environment: '<your_environment_name>'
+         deploymentEnvironment: '<your_environment_name>'
       });
 
-   * In the beacon URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+   * ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
 
-         1. Open the left navigation menu in Observability Cloud.
+         1. Open the navigation menu in Splunk Observability Cloud.
          2. Select :menuselection:`Settings`.
-         3. Select your username. 
+         3. Select your username.
 
       The realm name appears in the :guilabel:`Organizations` section.
-      
+
    * To generate a RUM access token, see :ref:`rum-access-token`.
 
 #. Import or require the ``splunk-instrumentation.js`` file before other files to ensure that the instrumentation runs before the application code.
 
-#. Deploy the changes to your application.
+#. Deploy the changes to your application. Make sure to test the instrumentation in a pre-production environment before deploying to production.
 
 .. note:: Make sure the Splunk RUM agent doesn't run in Node.js. To instrument Node.js services for Splunk APM, see :ref:`get-started-nodejs`.
+
 
 .. _loading-initializing_browser-rum:
 
@@ -184,6 +212,7 @@ Use one the following methods to load and initialize the Browser RUM agent, in o
 
 If you defer the loading of the Browser RUM agent, make sure other scripts are also deferred to preserve the initialization order. Note that asynchronously loaded scripts are not supported.
 
+
 .. _modify-spans:
 
 Customize your RUM data intake
@@ -194,7 +223,7 @@ You can customize the data intake for the Browser RUM agent to reduce noise and 
 Opt out of error.message collection
 ------------------------------------------------
 
-To avoid collecting ``error.message`` responses, disable the errors instrumentation as in the following example:
+To avoid collecting ``error.message`` responses, deactivate the errors instrumentation as in the following example:
 
 .. code-block:: html
    :emphasize-lines: 7
@@ -202,18 +231,26 @@ To avoid collecting ``error.message`` responses, disable the errors instrumentat
    <script src="https://cdn.signalfx.com/o11y-gdi-rum/latest/splunk-otel-web.js" crossorigin="anonymous"></script>
    <script>
       SplunkRum.init({
-         beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
-         rumAuth: '<your_rum_token>',
-         app: '<your_app_name>',
+         realm: '<realm>',
+         rumAccessToken: '<your_rum_token>',
+         applicationName: '<your_app_name>',
          version: '<your_app_version>',
          instrumentations: { errors: false }
       });
    </script>
 
+
 Change attributes before they're collected
 ----------------------------------------------------------------
 
 To remove or change attributes in your spans, see :ref:`rum-browser-redact-pii`.
+
+
+Collect errors with single-page application frameworks
+------------------------------------------------------------------
+
+To collect errors when using single-page application frameworks, see :ref:`rum-browser-spa-errors`.
+
 
 .. _rum-apm-connection:
 
@@ -223,10 +260,6 @@ Link RUM with Splunk APM
 Splunk RUM uses server timing to calculate the response time between the front end and back end of your application, and to join the front-end and back-end traces for end-to-end visibility.
 
 By default, the Splunk Distributions of OpenTelemetry already send the ``Server-Timing`` header. The header links spans from the browser with back-end spans and traces.
-
-The APM environment variable for controlling the ``Server-Timing`` header  is ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED=true``. Set ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED=true`` to link to Splunk APM. 
-
- To create a header manually, see :ref:`browser-server-trace-context`.
 
 .. note::  When linking sessions from Splunk RUM to Splunk APM while using the Safari browser, note that Safari supports linking XHR and fetch requests to Splunk APM, but doesn't support linking page loads or resource loads to Splunk APM.
 
@@ -241,30 +274,18 @@ To instrument WebViews, follow the instructions for the app's operating system:
 * :ref:`Android WebViews <android-webview-instrumentation>`
 * :ref:`iOS WebViews <ios-webview-instrumentation>`
 
+
 Considerations for content security policy
 =================================================
 
-If your application uses Content Security Policy (CSP) to mitigate potential impact from cross-site scripting (XSS) and other attacks, make sure the policy allows Splunk RUM to run
+If your application uses Content Security Policy (CSP) to mitigate potential impact from cross-site scripting (XSS) and other attacks, make sure the policy allows Splunk RUM to run:
 
 - When using the CDN version of the agent, allow the ``script-src cdn.signalfx.com`` URL.
 - When self-hosting or using the npm package, configure your site accordingly.
-- Add the host from the ``beaconUrl`` property to the ``connect-src`` property. For example: ``connect-src app.us1.signalfx.com``.
+- Add the host from the ``beaconEndpoint`` property to the ``connect-src`` property. For example: ``connect-src app.us1.signalfx.com``.
+
 
 How to contribute
 =========================================================
 
 The Splunk Distribution of OpenTelemetry JavaScript for Web is open-source software. You can contribute to its improvement by creating pull requests in GitHub. To learn more, see the :new-page:`contributing guidelines <https://github.com/signalfx/splunk-otel-js-web/blob/main/CONTRIBUTING.md>` in GitHub.
-
-Versioning policy
----------------------------------------------------------
-
-The versioning of the Browser RUM agent follows semantic versioning rules. To have more control over the version you load, see the following versioning policy:
-
-* Use the ``LATEST`` version to use the latest version of the Browser RUM agent. This might not be suitable for manual instrumentation, as breaking API changes might occur between major version changes.
-* Use ``MAJOR`` versions, for example ``v1``, if you want to receive new features automatically while keeping backward compatibility with the API. This is the default for all production deployments, as well as for npm installations.
-* Use ``MINOR`` versions, for example ``v1.1``, to receive bug fixes while not receiving new features automatically.
-* Use ``PATCH`` versions, for example, ``v1.2.1``, to pin a specific version of the agent for your application.
-
-The versions of the agent are included in URLs as a designated token:
-
-``https://cdn.signalfx.com/o11y-gdi-rum/v<MAJOR.MINOR.PATCH>/splunk-otel-web.js``

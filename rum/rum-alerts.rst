@@ -5,6 +5,9 @@
 Alert on Splunk RUM data 
 ************************************************
 
+.. meta::
+   :description: Configure alerts for your Splunk RUM metrics to monitor and and take timely actions in response to metric data. You can alert on data such as RUM browser data, iOS RUM data, and Android data.
+
 Splunk RUM leverages the Infrastructure Monitoring platform to create detectors and alerts. Configure detectors to alert on your Splunk RUM metrics so that you can monitor and take timely action on alerts associated with your application. 
 
 How alerts work in Splunk RUM
@@ -97,7 +100,7 @@ To create a page level metric, first create a custom rule to map to the page you
 App level metrics 
 -----------------
 
-Web vitals have a standard range that denotes good performance. For example, a Largest Contentful Paint (LCP) metric of more than 2.5 seconds might lead to bad user experience on your application. With Splunk RUM, you can create an alert to notify you when your aggregated LCP is more than 2.5 seconds, send a Slack notification to your team, and link to the runbook with the steps on how to remedy the slow LCP.
+Web vitals have a standard range that denotes good performance. For example, a largest contentful paint (LCP) metric of more than 2.5 seconds might lead to bad user experience on your application. With Splunk RUM, you can create an alert to notify you when your aggregated LCP is more than 2.5 seconds, send a Slack notification to your team, and link to the runbook with the steps on how to remedy the slow LCP.
 
 .. image:: /_images/rum/alert-modal-lcp.png
    :alt: This screenshot shows a detector modal where you can select the scope, type, and frequency of your alert. 
@@ -126,7 +129,7 @@ Follow these steps to create a detector in RUM:
 
 1. In Splunk RUM, select a metric that is of interest to you to open Tag Spotlight.  
 
-2. Select :strong:`Create New Detector`.
+2. Select :strong:`Create new detector`.
 
 3. Configure your detector:
 

@@ -5,7 +5,7 @@ Dashboard types in Splunk Observability Cloud
 ************************************************
 
 .. meta::
-      :description: Dashboards are groupings of charts and visualizations of metrics. Splunk Observability Cloud has three types of dashboards and dashboard groups: built-in, custom, and user. Built-in dashboard groups are provided by Observability Cloud to give you immediate visibility into the technologies and services being used in your environment. You can also build custom and user dashboard groups to create content specific to your organization's requirements.
+      :description: Use built-in, custom, or user dashboard types to understand your data in Splunk Observability Cloud. Custom and user dashboards and dashboard groups are accessible by all users. 
 
 Dashboards are groupings of charts and visualizations of metrics. All dashboards, irrespective of type, belong to a dashboard group. Dashboard groups are displayed on the Dashboards page.
 

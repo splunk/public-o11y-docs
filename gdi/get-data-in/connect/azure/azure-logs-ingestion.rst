@@ -8,6 +8,12 @@ Send Azure logs to Splunk Log Observer
 .. meta::
    :description: Learn how to send logs from your Azure services to Splunk Observability Cloud and Splunk Log Observer using Azure Event Hub.
 
+.. caution:: 
+
+   Splunk Log Observer is no longer available for new users. If you have a Log Observer entitlement, you must transition to Splunk Cloud Platform or Splunk Enterprise. Read more at :ref:`lo-transition`.
+
+   You can also use the Data Manager to send Azure logs to Splunk Platform. Learn how at :new-page:`Onboarding for Azure data in Data Manager <https://docs.splunk.com/Documentation/DM/1.8.2/User/StartConfigurationAzureAD>`.
+
 You can send logs from Azure to Splunk Log Observer by deploying a function that prepares and sends log data to the Splunk HTTP Event Collector (HEC) endpoint. To get started, follow these instructions.
 
 Prerequisites
@@ -15,7 +21,7 @@ Prerequisites
 
 To send logs from Azure to Splunk Observability Cloud, you need the following:
 
-- Access to Log Observer in Observability Cloud. See :ref:`logs-logs`.
+- Access to Log Observer in Splunk Observability Cloud. See :ref:`logs-logs`.
 - An ingest token in your organization. See :ref:`admin-org-tokens`.
 - An Event Hub namespace in Azure to use for logs forwarding. See Event Hub in the Azure documentation.
 
@@ -38,7 +44,7 @@ Azure uses diagnostic settings to send data to Event Hubs. Each resource you wan
 
          .. note:: If you set a different hub name, update the function application settings to use the right name.
 
-      .. tab:: Active Directory logs
+      .. tab:: Microsoft Entra ID logs (formerly Azure Active Directory)
 
          Event Hub name: ``insights-logs-aad``
 
@@ -63,9 +69,11 @@ Azure uses diagnostic settings to send data to Event Hubs. Each resource you wan
 Configure diagnostic settings to send logs
 ===================================================
 
-After you've created the event hub, follow these steps to enable diagnostic settings:
+After you've created the event hub, follow these steps to activate diagnostic settings:
 
-#. In Azure, select the resource and go to :guilabel:`Monitoring > Diagnostic settings`.
+#. In Azure, select the resource.
+
+#. Select :guilabel:`Monitoring`, then :guilabel:` Diagnostic settings`.
 
 #. Create a new setting or edit an existing setting.
 
@@ -96,9 +104,9 @@ In the :guilabel:`Function App Settings` section, enter the following details:
    * - Event Hub Namespace
      - The namespace that contains the event hub you've created.
    * - Splunk HEC Endpoint
-     - ``https://ingest.<realm>.signalfx.com/v1/log`` where ``<realm>`` is your Observability Cloud realm.
+     - ``https://ingest.<realm>.signalfx.com/v1/log`` where ``<realm>`` is your Splunk Observability Cloud realm. See :ref:`splunk-hec-exporter` for more information.
    * - Splunk HEC Token
-     - Your Observabily Cloud ingest token. See :ref:`admin-org-tokens`.
+     - Your Splunk Observability Cloud ingest token. See :ref:`admin-org-tokens`.
 
 .. include:: /_includes/realm-note.rst
 

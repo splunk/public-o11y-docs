@@ -4,6 +4,7 @@
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 BUILDDIR      = _build
+export FORCE_COLOR   = 1
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
@@ -11,6 +12,7 @@ ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
 endif
 
 ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(SPHINXOPTS) .
+TESTOPTS = -W --keep-going -n -E -q -d $(BUILDDIR)/doctrees $(SPHINXOPTS) .
 
 .PHONY: help
 help:
@@ -46,6 +48,23 @@ html:
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
+.PHONY: html-ja
+html-ja:
+	@echo "Building the MINIFY Files for Japanese documentation..."
+	@echo
+	pip3 install cssmin
+	pip3 install jsmin
+	python3 _ext/assetminify.py
+	@echo
+	@echo "*****************************************************"
+	@echo "        Building Japanese Splunk Observability Docs"
+	@echo "*****************************************************"
+	@echo
+	@echo "Building the Japanese HTML files from source..."
+	$(SPHINXBUILD) -b html -D language=ja_JA . $(BUILDDIR)/html/ja_JA
+	@echo
+	@echo "Build finished. The Japanese HTML pages are in $(BUILDDIR)/html/ja_JA."
+
 .PHONY: livehtml
 livehtml:
 	@echo
@@ -55,4 +74,29 @@ livehtml:
 	@echo
 	@echo "Starting the live server..."
 	@echo
-	@sphinx-autobuild "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O) --host 0.0.0.0 --port 8888
+	@sphinx-autobuild "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O) --host 0.0.0.0 --port 8888 --ignore /docs/_static/main.min.css  --ignore /docs/_static/main.min.js
+
+.PHONY: test
+test: 
+	@echo
+	@echo "*****************************************************"
+	@echo "       Testing Splunk Observability Docs build       "
+	@echo "*****************************************************"
+	@echo
+	@echo "Testing the docs..."
+	@echo
+	@sphinx-build -b dummy $(TESTOPTS) $(BUILDDIR)/html
+
+.PHONY: linkcheck
+linkcheck:
+	@echo
+	@echo "*****************************************************"
+	@echo "       Checking Splunk Observability Docs links      "
+	@echo "*****************************************************"
+	@echo
+	@echo "Checking links..."
+	@echo
+	@sphinx-build -b linkcheck $(TESTOPTS) $(BUILDDIR)/linkcheck
+	@echo
+	@echo "Link check complete; look for any errors in the above output " \
+	      "or in $(BUILDDIR)/linkcheck/output.txt."

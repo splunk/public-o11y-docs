@@ -1,200 +1,163 @@
 .. _java-otel-performance:
 
 ***************************************************
-Performance overhead of the Splunk OTel Java agent
+Performance reference for Splunk OTel Java agent
 ***************************************************
 
 .. meta::
-   :description: The Splunk OpenTelemetry Java agent has minimal impact on system performance. This page contains the latest performance overhead measurements, as well as a description of the testing conditions, and instructions for repeating the tests in your own environment.
+   :description: Minimum requirements of the Splunk OTel Java agent, as well as potential constraints impacting performance, and guidelines to optimize and troubleshoot the performance of the agent.
 
-The Splunk OpenTelemetry Java agent has minimal impact on system performance when instrumenting Java Virtual Machine (JVM) applications. This page contains the latest performance overhead measurements, a description of the testing conditions, and instructions for repeating the tests in your own environment.
+The Splunk OTel Java agent instruments your application by running inside the same Java Virtual Machine (JVM). Like any other software agent, the Java agent requires system resources like CPU, memory, and network bandwidth. The use of resources by the agent is called agent overhead or performance overhead. The Splunk OTel Java agent has minimal impact on system performance when instrumenting JVM applications, although the final agent overhead depends on multiple factors.
 
-Many factors affect performance results, including JVM configuration, transaction volume, deployment architecture, and hardware. These results represent reference information and do not represent performance in all environments.
+Some factors that might increase agent overhead are environmental, such as the physical machine architecture, CPU frequency, amount and speed of memory, system temperature, and resource contention. Other factors include virtualization and containerization, the operating system and its libraries, the JVM version and vendor, JVM settings, the algorithmic design of the software being monitored, and software dependencies.
 
-.. caution:: The methodology used for performance testing is under active review. Depending on the outcome, these results might become unavailable or be replaced.
+Due to the complexity of modern software and the broad diversity in deployment scenarios, it is impossible to come up with a single agent overhead estimate. To find the overhead of any instrumentation agent in a given deployment, you have to conduct experiments and collect measurements directly. Therefore, all statements about performance must be treated as general information and guidelines that are subject to evaluation in a specific system.
 
-.. _java-perf-overhead-data:
+The following sections describe the minimum requirements of the Splunk OTel Java agent, as well as potential constraints impacting performance, and guidelines to optimize and troubleshoot the performance of the agent.
 
-Overhead of the Java agent
-===================================================
 
-The following tables compare the overhead for several system metrics across different usage scenarios.
+.. _java-overhead-requirements:
 
-.. tabs::
+Minimum requirements for production deployments
+=================================================================
 
-   .. tab:: CPU
+.. include:: /_includes/requirements/java.rst
 
-      The following table shows the average CPU load for the user running the test application: 
 
-      .. list-table:: 
-         :header-rows: 1
-         :widths: 60 40
-         :width: 100%
+.. _java-overhead-guidelines:
 
-         * - Condition
-           - Value
-         * - No instrumentation
-           - 25%
-         * - Splunk OpenTelemetry Java agent 1.18.0
-           - 25%
-         * - Splunk OpenTelemetry Java agent 1.18.0 with AlwaysOn Profiling
-           - 29%
+Guidelines to reduce agent overhead
+=================================================================
 
-      * Tested on December 9, 2022 using Splunk Java OTel agent version 1.18.0. For a description of the test environment, see :ref:`perf-overhead-java-setup`.
+The following best practices and techniques might help in reducing overhead caused by the Java agent.
 
-   .. tab:: Network
+Configure trace sampling
+-----------------------------------------------------------------
 
-      The following table shows the network write average: 
+The volume of spans processed by the instrumentation might impact agent overhead. You can configure trace sampling to adjust the span volume and reduce resource usage. See :ref:`trace-sampling-settings-java` for more information on sampling settings.
 
-      .. list-table:: 
-         :header-rows: 1
-         :widths: 60 40
-         :width: 100%
+.. _turn-off-java-instrumentations:
 
-         * - Condition
-           - Value
-         * - No instrumentation
-           - 10.78 Mbps
-         * - Splunk OpenTelemetry Java agent 1.18.0
-           - 29.12 Mbps
-         * - Splunk OpenTelemetry Java agent 1.18.0 with AlwaysOn Profiling
-           - 28.80 Mbps
+Turn off specific instrumentations
+-----------------------------------------------------------------
 
-      * Tested on December 9, 2022 using Splunk Java OTel agent version 1.18.0. For a description of the test environment, see :ref:`perf-overhead-java-setup`.
+Consider turning off instrumentations that you don't need or are producing too many spans to further reduce agent overhead and span volume. To turn off an instrumentation, use ``-Dotel.instrumentation.<name>.enabled=false`` or the ``OTEL_INSTRUMENTATION_<NAME>_ENABLED`` environment variable, where ``<name>`` is the name of the instrumentation.
 
-   .. tab:: Request latency
+For example, the following option turns off the JDBC instrumentation: ``-Dotel.instrumentation.jdbc.enabled=false``
 
-      The following table shows the average latency for single requests:
+.. note:: Use Trace Analyzer in Splunk APM to explore the spans from your application and identify instrumentations you don't need. See :ref:`trace-search-concept` for more information.
 
-      .. list-table:: 
-         :header-rows: 1
-         :widths: 60 40
-         :width: 100%
-         
-         * - Condition
-           - Value
-         * - No instrumentation
-           - 5.46 milliseconds
-         * - Splunk OpenTelemetry Java agent 1.18.0
-           - 16.85 milliseconds
-         * - Splunk OpenTelemetry Java agent 1.18.0 with AlwaysOn Profiling
-           - 18.70 milliseconds
+Allocate more memory for the application
+----------------------------------------------------------------
 
-      * Tested on December 9, 2022 using Splunk Java OTel agent version 1.18.0. For a description of the test environment, see :ref:`perf-overhead-java-setup`.
+Increasing the maximum heap size of the JVM using the ``--Xmx<size>`` option might help in alleviating agent overhead issues, as instrumentations can generate a large number of short-lived objects in memory.
 
-   .. tab:: Throughput
+Reduce manual instrumentation to a minimum
+----------------------------------------------------------------
 
-      The following table shows application throughput, expressed as requests per second: 
+Manual instrumentation might introduce inefficiencies that increase agent overhead. For example, using ``@WithSpan`` on every method results in a high span volume, which in turn increases noise in the data and consumes more system resources.
 
-      .. list-table:: 
-         :header-rows: 1
-         :widths: 60 40
-         :width: 100%
+Provision adequate resources
+----------------------------------------------------------------
 
-         * - Condition
-           - Value
-         * - No instrumentation
-           - 882.31 requests per second
-         * - Splunk OpenTelemetry Java agent
-           - 631.74 requests per second
-         * - Splunk OpenTelemetry Java agent with AlwaysOn Profiling
-           - 588.97 requests per second
+Make sure to provision enough resources for your instrumentation and for the Collector. The amount of resources such as memory or disk depend on your application architecture and needs. For example, a common setup is to run the instrumented application on the same host as the Splunk Distribution of OpenTelemetry Collector. In that case, consider rightsizing the resources for the Collector and optimize its settings. See :ref:`otel-sizing`.
 
-      * Tested on December 9, 2022 using Splunk Java OTel agent version 1.18.0. For a description of the test environment, see :ref:`perf-overhead-java-setup`.
 
-   .. tab:: Startup time
+.. _java-overhead-constraints:
 
-      The following table shows application startup time: 
+Constraints impacting the performance of the Java agent
+=================================================================
 
-      .. list-table:: 
-         :header-rows: 1
-         :widths: 60 40
-         :width: 100%
-         
-         * - Condition
-           - Value
-         * - No instrumentation
-           - 11.64 seconds
-         * - Splunk OpenTelemetry Java agent 1.18.0
-           - 19.65 seconds
-         * - Splunk OpenTelemetry Java agent 1.18.0 with AlwaysOn Profiling
-           - 20.86 seconds
+In general, the more telemetry you collect from your application, the bigger is the impact on agent overhead. For example, tracing methods that aren't relevant to your application can still produce considerable agent overhead because tracing such methods is computationally more expensive than running the method itself. Similarly, high cardinality tags in metrics might increase memory usage. Debug logging, if turned on, also increases write operations to disk and memory usage.
 
-      * Tested on December 9, 2022 using Splunk Java OTel agent version 1.18.0. For a description of the test environment, see :ref:`perf-overhead-java-setup`.
+Some features of the Java agent, like AlwaysOn Profiling, increase resource consumption because Java Flight Recorder (JFR) recordings require heap space and memory profiling relies on TLAB events that might increase agent overhead significantly when produced in high numbers. Some instrumentations, for example JDBC or Redis, produce high span volumes that increase agent overhead. For more information on how to turn off unnecessary instrumentations, see :ref:`turn-off-java-instrumentations`.
 
-.. _perf-overhead-java-setup:
+.. note:: Experimental features of the Java agent might increase agent overhead due to the experimental focus on functionality over performance. Stable features are safer in terms of agent overhead.
 
-Configuration of the test environment
-================================================
 
-The environment for measuring the performance overhead of the Java agent has the following features:
+.. _java-overhead-troubleshooting:
 
-Software configuration
------------------------------------------------
+Troubleshooting agent overhead issues
+====================================================================
 
-The instrumented service is ``petclinic-rest`` from the Spring PetClinic sample application. The microservice is deployed together with the k6 test runner in the same Amazon EC2 instance, named ``testbox``. To minimize the impact of external components, the Splunk Distribution of OpenTelemetry Collector and the database run in a separate instance, named ``externals``. The following image shows the architecture of the test environment:
+When troubleshooting agent overhead issues, do the following:
 
-..  image:: /_images/performance/java/test-env.png
-   :alt: Diagram of the test environment
+- Check minimum requirements. See :ref:`java-overhead-requirements`.
+- Use the latest compatible version of the Java agent.
+- Use the latest compatible version of your JVM.
 
-The ``petclinic-rest`` microservice runs on OpenJDK version 11.0.11, with no additional arguments except ``-javaagent``, with no heap limits specified. AlwaysOn Profiling uses the JDK Flight Recorder subsystem. System updates, AWS daemons, and unnecessary system processes are disabled or removed to reduce errors. The G1 Garbage Collector is the default for java 11 and is used across all tests.
+Consider taking the following actions to decrease agent overhead:
 
-Hardware configuration
------------------------------------------------
+- If your application is approaching memory limits, consider giving it more memory.
+- If your application is using all the CPU, you might want to scale it horizontally.
+- Try turning off or tuning CPU or memory profiling. See :ref:`profiling-configuration-java`.
+- Try turning off or tuning metrics. See :ref:`metrics-configuration-java`.
+- Tune trace sampling settings to reduce span volume. See :ref:`trace-sampling-settings-java`.
+- Turn off specific instrumentations. See :ref:`turn-off-java-instrumentations`.
+- Review manual instrumentation for unnecessary span generation.
 
-All tests run on Amazon EC2 instances with the following specifications:
 
-- ``testbox``: m4.xlarge instance
-   - 4 vCPU
-   - 16 GiB of memory
-   - Debian 9 x64 with kernel version 4.9
-   - Latest version of ``docker-ce``
-- ``externals``: m4.large instance
-   - 2 vCPU
-   - 8 GiB of memory
-   - Debian 9 x64 with kernel version 4.9
-   - Latest version of ``docker-ce``
+.. _java-overhead-measure-diy:
 
-Test scenarios
------------------------------------------------
+Guidelines for measuring agent overhead
+=================================================================
 
-The following configurations are tested for each metric:
+Measuring agent overhead in your own environment and deployments provides accurate data about the impact of instrumentation on the performance of your application or service. The following guidelines describe the general steps for collecting and comparing reliable agent overhead measurements.
 
-- No instrumentation agent
-- Splunk OpenTelemetry Java agent
-- Splunk OpenTelemetry Java agent with AlwaysOn Profiling enabled
+Decide what you want to measure
+-----------------------------------------------------------------
 
-Each agent configuration runs 10 times using a fresh JVM. After each test run, the PostgreSQL database of the sample application restarts to eliminate interferences between test runs. The same OTel Collector instance is used across all test runs and configured only for logging export.
+Different users of your application or service might notice different aspects of agent overhead. For example, while end users might notice degradation in service latency, power users with heavy workloads pay more attention to CPU overhead. On the other hand, users who deploy frequently, for example due to elastic workloads, care more about startup time.
 
-The instrumented application warms up for 60 seconds, with some light test traffic prior to beginning measurements. The warm-up phase allows the JVM to cache class instances, perform just-in-time compilation (JIT), and prepare caches, buffers, database connections, and so on. The JDK Flight Recorder (JFR) subsystem collects telemetry during the test run. The JFR contributes less than 2% of the total overhead.
+Reduce your measurements to factors that are sure to impact the user experience of your application, so as not to produce datasets that contain irrelevant information. Some examples of measurements include the following:
 
-The following sequence runs 10 times for each configuration:
+- User average, user peak, and machine average CPU usage
+- Total memory allocated and maximum heap used
+- Garbage collection pause time
+- Startup time in milliseconds
+- Average and percentile 95 (p95) service latency
+- Network read and write average throughput
 
-#. Start PostgreSQL.
-#. Start Spring PetClinic.
-#. Record application start time.
-#. Conduct warm-up phase:
-   
-   #. Start warm-up JFR recording.
-   #. Run k6 with 5 users for 60 seconds to generate traffic.
-   #. Stop JFR.
+Prepare a suitable test environment
+-----------------------------------------------------------------
 
-#. Record test start time.
-#. Start JFR recording.
-#. Run k6 script with the following features: 8,500 passes, 30 concurrent users, 900 requests per second.
+By measuring agent overhead in a controlled test environment you can better control and identify the factors affecting performance. When preparing a test environment, complete the following:
 
-Measurements come from k6 and from JFR data, and are aggregated across all 10 runs. The test script writes the results to a CSV file and the summary of the final run in a text file.
+1. Make sure that the configuration of the test environment resembles production.
+2. Isolate the application under test from other services that might interfere.
+3. Turn off or remove all unnecessary system services on the application host.
+4. Ensure that the application has enough system resources to handle the test workload.
 
-Troubleshooting performance issues
-===========================================================
+Create a battery of realistic tests
+-----------------------------------------------------------------
 
-If you run into unusual performance overhead issues when instrumenting services using the Splunk OpenTelemetry Java agent, collect the following information:
+Design the tests that you run against the test environment to resemble typical workloads as much as possible. For example, if some REST API endpoints of your service are susceptible to high request volumes, create a test that simulates heavy network traffic.
 
-- Description of the performance impact or degradation (for example, increase in network latency), and which load your environment is experiencing.
-- Description of your environment, including hardware specifications, version of the agent, runtime environment, and so on.
+For Java applications, use a warm-up phase prior to starting measurements. The JVM is a highly dynamic machine that performs a large number of optimizations through just-in-time compilation (JIT). The warm-up phase helps the application to finish most of its class loading and gives the JIT compiler time to run the majority of optimizations.
 
-After you've collected the information, you can do the following:
+Make sure to run a large number of requests and to repeat the test pass many times. This repetition helps to ensure a representative data sample. Include error scenarios in your test data. Simulate an error rate similar to that of a normal workload, typically between 2% to 10%.
 
-- Ask questions and get answers through community support at Splunk Answers.
-- If you have a support contract, file a case using the Splunk Support Portal. See Support and Services.
-- To get professional help with optimizing your Splunk software investment, see Splunk Services.
+Collect comparable measurements
+-----------------------------------------------------------------
+
+To identify which factors might be affecting performance and causing agent overhead, collect measurements in the same environment after modifying a single factor or condition.
+
+For example, you can take three different sets of measurements where the only difference is the presence and settings of the instrumentation:
+
+- Condition A: No instrumentation or baseline
+- Condition B: Instrumentation without AlwaysOn Profiling
+- Condition C: Instrumentation with AlwaysOn Profiling
+
+Analyze the agent overhead data
+------------------------------------------------------------------
+
+After collecting data from multiple passes, you can compare averages using simple statistical tests to check for significant differences, or plot results in a chart.
+
+Consider that different stacks, applications, and environments might result in different operational characteristics and different agent overhead measurement results.
+
+
+
+How to get support
+=================================================================
+
+.. include:: /_includes/troubleshooting-components.rst

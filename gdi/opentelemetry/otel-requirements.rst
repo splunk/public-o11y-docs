@@ -12,10 +12,20 @@ Collector requirements
     :titlesonly:
     :hidden:
 
-    security.rst
+    Security guidelines <security>
     exposed-endpoints.rst
     sizing.rst
     collector-architecture.rst
+
+The Splunk Distribution of OpenTelemetry Collector supports the following operating systems.
+
+:strong:`Linux`
+
+.. include:: /_includes/requirements/collector-linux.rst
+
+:strong:`Windows`
+
+.. include:: /_includes/requirements/collector-windows.rst
 
 Keep in mind the following pre-requisites, requirements, and general considerations when using the Collector:
 

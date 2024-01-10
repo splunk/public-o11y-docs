@@ -1,0 +1,533 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023 Splunk, Inc
+# This file is distributed under the same license as the Splunk package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Splunk\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-18 11:06+0000\n"
+"PO-Revision-Date: 2023-12-21 17:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: ja_JA <LL@li.org>\n"
+"Language: ja_JA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"X-Generator: Poedit 3.3.2\n"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:-1
+msgid "Splunk infrastructure monitoring analytics overview, rollup policies, signalflow instructions, and analytics aggregations and transformations"
+msgstr "Splunk Infrastructure Monitoring分析の概要、ロールアップ・ポリシー、SignalFlow命令、分析の集約と変換"
+
+#: ../../<rst_prolog>:18
+msgid "Take shift"
+msgstr "シフトの引き受け"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:5
+msgid "Splunk Infrastructure Monitoring analytics"
+msgstr "Splunk Infrastructure Monitoring分析"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:10
+msgid ""
+"Conceptually, a SignalFlow program consists of a several computational blocks, each of which accepts some input, performs some computation (for example, sum, mean, max, and so on) and generates some output. The blocks are connected in a directed graph so that the output of one unit flows as "
+"input to other units, resulting in a cascading series of computations that calculates the desired results."
+msgstr ""
+"概念的には、SignalFlowプログラムはいくつかの計算ブロックで構成され、各計算ブロックは入力を受け取り、何らかの計算（例えば、合計、平均、最大値など）を実行し、何らかの出力を生成します。ブロックは有向グラフで接続され、あるユニットの出力が他のユニットへの入力として流れ、その結果、一連の計算がカス"
+"ケード接続され、目的の結果が計算されます。"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:12
+msgid "In practice, individual SignalFlow programs are the computational backbone for charts in Infrastructure Monitoring, and are visualized in the Infrastructure Monitoring application as an interlinked set of analytics pipelines."
+msgstr "実際には、個々のSignalFlowプログラムは、インフラストラクチャ・モニタリングのチャートの計算バックボーンであり、インフラストラクチャ・モニタリング・アプリケーションでは、相互にリンクされた分析パイプラインのセットとして視覚化されます。"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:14
+msgid "The initial input into a SignalFlow program is typically a set of one or more time series."
+msgstr "SignalFlowプログラムへの初期入力は、通常、1つまたは複数の時系列のセットです。"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:19
+msgid "Rollup policies"
+msgstr "ロールアップ・ポリシー"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:21
+msgid ""
+"Each set of time series in a plot line has a common metric type, whether a gauge, counter or cumulative counter. The metric type determines the default visualization :new-page-ref:`rollups <rollups>` that is applied to the time series data. The defaults in each case are chosen to ensure "
+"that values displayed are accurate and stable across different chart resolutions."
+msgstr ""
+"プロット・ライン内の時系列の各セットは、ゲージ、カウンタ、累積カウンタなどの共通のメトリクス・タイプを持っています。メトリクス・タイプによって、時系列データに適用されるデフォルトの可視化 :new-page-ref:`rollups <rollups>` を決定します。それぞれの場合のデフォルトは、表示される値が正確で、さま"
+"ざまなチャート解像度で安定するように選択されます。"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:23
+msgid ""
+"Take as an example a gauge that is reporting every 30 seconds. In a chart with a time range of 5 minutes, each reported value can be shown on the chart, as there is typically enough screen real estate to show the data at its native resolution, i.e. 10 data points sent in during a 5‑minute "
+"period. If the time range is changed to 1 week, however, Infrastructure Monitoring automatically switches to a coarser chart resolution to match."
+msgstr ""
+"30秒ごとに報告されるゲージを例にとってみましょう。時間範囲が5分のチャートでは、報告された各値をチャートに表示できます。通常、データを本来の解像度（5分間に送信された10データポイント）で表示するのに十分な画面領域があるからです。しかし、時間範囲を1週間に変更した場合、インフラモニタリングは自動"
+"的にそれに合わせてより粗いチャート解像度に切り替わります。"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:25
+msgid ""
+"In this case, Infrastructure Monitoring uses the :strong:`Average` rollup to calculate the average value of the gauge, over each time interval at the coarser chart resolution. With one week's worth of data, each visible data point is the average of the values sent during the chosen "
+"interval. Infrastructure Monitoring then plots those average values, instead of, say, a sampled value. In general, this provides a more accurate representation of the data, but it also has the side effect of averaging out peaks and valleys, which may not be desirable, depending on the "
+"actual metric."
+msgstr ""
+"この場合、インフラモニタリングは、:strong:`平均` ロールアップを使用して、より粗いチャート解像度で各時間間隔にわたるゲージの平均値を計算します。1週間分のデータで、各可視データポイントは、選択されたインターバル中に送信された値の平均です。インフラモニタリングは、サンプリングされた値の代わりに、"
+"これらの平均値をプロットします。一般的に、これはデータをより正確に表現しますが、実際のメトリクスによっては望ましくないかもしれませんが、山と谷を平均化するという副作用もあります。"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:29
+msgid "If you prefer to see sampled values, you can select the :strong:`Latest` rollup, or if you prefer to see the peaks and valleys, you can select the :strong:`Max` or :strong:`Min` rollups, respectively."
+msgstr "サンプリングされた値を見たい場合は、:strong:`Latest` のロールアップを選択し、ピークと谷を見たい場合は、それぞれ :strong:`Max` または :strong:`Min` のロールアップを選択することができます。"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:31
+msgid ""
+"For a counter or cumulative counter, the chosen rollup affects not only the accuracy, but more generally how the chart behaves as you change the time range. For example, you have a counter, sent as a high-resolution metric, that tells you how many responses a server handled per 1‑second "
+"interval. If you use a rollup of :strong:`Rate/sec` rather than the default :strong:`Sum` rollup, then in a chart with a time range small enough to show the time series at its native resolution, values are reported as follows:"
+msgstr ""
+"カウンタや累積カウンタの場合、選択したロールアップは精度だけでなく、時間範囲を変更したときのチャートの動作にも影響します。たとえば、高解像度のメトリクスとして送信されるカウンタがあり、サーバが 1 秒間隔で処理したレスポンスの数がわかるとします。デフォルトの :strong:`Sum` のロールアップではな"
+"く、:strong:`Rate/sec` のロールアップを使用した場合、時系列を本来の解像度で表示するのに十分な小さい時間範囲のチャートでは、値は以下のように報告されます："
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:33
+msgid ""
+"For a counter, each reported :strong:`Rate/sec` value is shown normalized by the interval, for example, number of responses during each 1‑second interval, divided by 1 (for data coming in every second), number of responses during each 5‑second interval, divided by 5 (for data coming in "
+"every 5 seconds) etc."
+msgstr "カウンタの場合、:strong:`Rate/sec` の各報告値は、インターバルで正規化されて表示されます。例えば、各1秒インターバル中のレスポンス数を1で割った値（1秒ごとにデータが来る場合）、各5秒インターバル中のレスポンス数を5で割った値（5秒ごとにデータが来る場合）などです。"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:35
+msgid "For a cumulative counter, the default rollup is :strong:`Delta`, so each reported :strong:`Rate/sec` value is the delta from the last data point normalized by the interval, divided by 1 (for data coming in every second), divided by 5 (for data coming in every 5 seconds), etc."
+msgstr ""
+"累積カウンタの場合、デフォルトのロールアップは :strong:`デルタ` です。したがって、報告される各 :strong:`Rate/sec` 値は、インターバルで正規化された最後のデータポイントからのデルタであり、1で割った値（1秒ごとに入ってくるデータの場合）、5で割った値（5秒ごとに入ってくるデータの場合）などです。"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:37
+msgid "If you then change the time range, such that each data point to plot represents, say, a 4‑minute interval, then values are reported as follows:"
+msgstr "次に、プロットする各データポイントが例えば4分間隔を表すように時間範囲を変更すると、値は以下のように報告されます："
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:39
+msgid "For a counter, each data point is the sum of all the responses during that 4‑minute interval, divided by 240 (the number of seconds in that interval)."
+msgstr "カウンタの場合、各データポイントは、その4分間のインターバル中のすべての回答の合計を240（そのインターバルの秒数）で割ったものです。"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:41
+msgid "For a cumulative counter, each data point is the sum of delta rollups over the interval (delta rollups are the differences between successive data points), divided by 240 (the number of seconds in the interval)."
+msgstr "累積カウンタの場合、各データポイントは、インターバル中のデルタ・ロールアップ（デルタ・ロールアップは連続するデータポイント間の差）の合計を240（インターバルの秒数）で割ったものです。"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:43
+msgid "In all likelihood, this has an impact similar to the :strong:`Average` rollup for a gauge: it provides an accurate representation of the data, and one whose visualization is aligned with how you typically use line or area charts."
+msgstr "おそらくこれは、:strong:`平均` ゲージのロールアップと同じような影響を与えます。データの正確な表現を提供し、折れ線グラフやエリア・チャートを通常使用する方法と同じように視覚化されます。"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:45
+msgid ""
+"In contrast, if you choose a different rollup, such as :strong:`Sum`, then the behavior of the chart changes with different chart resolutions. In a chart with a time range small enough to show the time series at its native resolution, each reported value is same as in the rate per second "
+"case, as the sum rollup occurs over a 1‑second interval. In a chart with a four-minute interval, however, the values shown are the sum of all values during the 240 seconds. This is likely to generate a value that is significantly higher than the normalized rate per second rollup, and "
+"depending on the nature of your metric, it may be what you are looking for."
+msgstr ""
+"対照的に、:strong:`Sum` のような異なるロールアップを選択した場合、チャートの解像度が異なると、チャートの動作が変わります。時系列を本来の解像度で表示するのに十分な小さな時間範囲のチャートでは、合計のロールアップが1秒間隔で発生するため、報告される各値は秒あたりのレートの場合と同じです。しか"
+"し、4分間隔のチャートでは、表示される値は240秒間のすべての値の合計となります。これは、正規化された1秒あたりのレートのロールアップよりもかなり高い値を生成する可能性が高く、メトリクスの性質によっては、あなたが求めているものかもしれません。"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:47
+msgid "To learn more about the interaction of rollups, resolutions, and analytics, see :new-page-ref:`data-resolution-rollups-charts`."
+msgstr "ロールアップ、リゾリューション、分析のインタラクションの詳細については、:new-page-ref:`data-resolution-rollups-charts` を参照してください。"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:52
+msgid "How SignalFlow handles metadata"
+msgstr "SignalFlowのメタデータの扱い方"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:54
+msgid ""
+"SignalFlow computations often involve both data and corresponding metadata - dimensions, properties, or tags. For example, when a mean is computed across CPU utilization metrics received from server instances spread out across multiple regions or availability zones, you can group them by "
+"the regions or availability zones, so that you can discern whether one is running hotter than the next at the aggregate level."
+msgstr ""
+"SignalFlowの計算には、多くの場合、データと対応するメタデータ（ディメンション、プロパティ、またはタグ）の両方が含まれます。たとえば、複数のリージョンまたはアベイラビリティ・ゾーンに分散するサーバ・インスタンスから受信したCPU使用率メトリクス全体で平均を計算する場合、リージョンまたはアベイラビ"
+"リティ・ゾーンごとにそれらをグループ化し、集約レベルで1つが次のものよりも高温で動作しているかどうかを識別できるようにすることができます。"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:56
+msgid ""
+"To ensure that calculations throughout a SignalFlow program are able to make use of this metadata, time series data is ingested into a SignalFlow computation with its corresponding metadata. Subsequent computations on data include corresponding computations on metadata so that the result "
+"includes both data and metadata components, enabling further downstream processing and re-aggregations, as necessary."
+msgstr ""
+"SignalFlowプログラム全体の計算がこのメタデータを利用できるように、時系列データは対応するメタデータと共にSignalFlow計算に取り込まれます。データに対する後続の計算にはメタデータに対する対応する計算が含まれるため、結果にはデータとメタデータの両方のコンポーネントが含まれ、必要に応じてさらなるダウ"
+"ンストリーム処理や再集計が可能になります。"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:58
+msgid ""
+"Computations that output a single summary result from a collection of time series, such as a sum or mean, use only the metadata that shares the same name and values across the collection. In contrast, computations that select values from a collection, such as maximum, minimum, etc. simply "
+"use the corresponding metadata of the selected values as is."
+msgstr "合計や平均など、時系列のコレクションから1つの要約結果を出力する計算では、コレクション全体で同じ名前と値を共有するメタデータのみを使用します。対照的に、最大値、最小値など、コレクションから値を選択する計算では、選択された値の対応するメタデータをそのまま使用します。"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:60
+msgid "To learn more about SignalFlow computations, see :new-page-ref:`get-started-signalflow`."
+msgstr "SignalFlow の計算の詳細については、:new-page-ref:`get-started-signalflow` を参照してください。"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:65
+msgid "Aggregations and transformations"
+msgstr "集約と変換"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:67
+msgid ""
+"An analytic computation is a mathematical function that is applied to a collection of data points. For example, a mean is computed over a collection of data points by dividing the sum of the collection by the number of data points in the collection. In the context of time series "
+"calculations, an analytic computation is applied either as an aggregation or a transformation. For more information, see :new-page-ref:`aggregations-transformations`."
+msgstr ""
+"分析計算とは、データ点の集まりに適用される数学関数です。例えば、平均はデータ点の集合に対して、集合の合計を集合内のデータ点の数で割ることによって計算されます。時系列計算では、分析計算は集約または変換として適用されます。詳細は :new-page-ref:`aggregations-transformations` を参照してください。"
+
+#: ../../analytics/signalflow.rst:5
+msgid "Analyze incoming data using SignalFlow"
+msgstr "SignalFlowを使用した受信データの分析"
+
+#: ../../analytics/signalflow.rst:7
+msgid "Using SignalFlow in the Splunk Observability Cloud UI, you can improve your charts and detectors analytics."
+msgstr "Splunk Observability Cloud UIでSignalFlowを使用すると、チャートとディテクターの分析を改善できます。"
+
+#: ../../analytics/signalflow.rst:12
+msgid "Run SignalFlow programs from the UI"
+msgstr "UIからのSignalFlowプログラムの実行"
+
+#: ../../analytics/signalflow.rst:14
+msgid "You can add SignalFlow programs from the Observability Cloud user interface to stream processed data to detectors and charts."
+msgstr "Observability CloudのユーザーインターフェースからSignalFlowプログラムを追加し、処理されたデータをディテクターやチャートにストリーミングすることができます。"
+
+#: ../../analytics/signalflow.rst:16
+msgid "To edit SignalFlow programs when editing detectors, see :ref:`create-detectors`."
+msgstr "ディテクターの編集時にSignalFlowプログラムを編集するには、:ref:`create-detectors` を参照してください。"
+
+#: ../../analytics/signalflow.rst:17
+msgid "To use SignalFlow functions when editing charts, see :ref:`analytics-ref`."
+msgstr "チャートの編集時に SignalFlow 関数を使用するには、:ref:`analytics-ref` を参照してください。"
+
+#: ../../analytics/signalflow.rst:19
+msgid "You can also add SignalFlow programs using the SignalFlow API. See :new-page:`Using the SignalFlow API <https://dev.splunk.com/observability/docs/signalflow/#Using-the-SignalFlow-API>`."
+msgstr "SignalFlow APIを使用して、SignalFlowプログラムを追加することもできます。:new-page:`SignalFlow APIを使用する<https://dev.splunk.com/observability/docs/signalflow/#Using-the-SignalFlow-API>` を参照してください。"
+
+#: ../../analytics/signalflow.rst:24
+msgid "Process stream objects"
+msgstr "ストリーム・オブジェクトを処理する"
+
+#: ../../analytics/signalflow.rst:26
+msgid ""
+"SignalFlow programs handle stream objects, which produce timestamped value organized along dimensions. Raw metric time series data is streamed to analytics jobs, and the queries and computations specified through SignalFlow produce new streams. For example, statistics computed across a "
+"population or over time."
+msgstr ""
+"SignalFlowプログラムはストリーム・オブジェクトを処理し、ディメンションに沿って整理されたタイムスタンプ値を生成します。生のメトリック時系列データは分析ジョブにストリーミングされ、SignalFlowを通じて指定されたクエリと計算が新しいストリームを生成します。たとえば、母集団全体または時間にわたって計"
+"算された統計です。"
+
+#: ../../analytics/signalflow.rst:28
+msgid ""
+"Streams are local to a particular analytics query or computation, and several distinct jobs may query for the same underlying metric time series data. Detectors evaluate conditions involving one or more streams, typically comparisons between streams over a period of time. For example, the "
+"condition for a detector could be \"disk utilization is greater than 80% for 90% of 10 minutes,\" or, \"average database latency is above 5 seconds and the number of database calls is at least 20% of the one day average.\""
+msgstr ""
+"ストリームは、特定の分析クエリまたは計算に対してローカルであり、複数の異なるジョブが、同じ基礎となるメトリック時系列データに対してクエリを実行する可能性があります。ディテクターは、1 つまたは複数のストリームに関係する条件（通常は一定期間にわたるストリーム間の比較）を評価します。たとえば、"
+"「ディスク使用率が 10 分間の 90%で 80%を超えている」、「データベースの平均待ち時間が 5 秒を超え、データベースの呼び出し回数が 1 日平均の少なくとも 20%である」などがディテクターの条件となります。"
+
+#: ../../analytics/signalflow.rst:30
+msgid "For more information about stream objects, see :new-page:`Streams as variables <https://dev.splunk.com/observability/docs/signalflow/#Streams-as-variables>`."
+msgstr "ストリーム・オブジェクトの詳細については、:new-page:`変数としてのストリーム<https://dev.splunk.com/observability/docs/signalflow/#Streams-as-variables>` を参照してください。"
+
+#: ../../analytics/signalflow.rst:33
+msgid "Create custom analytics"
+msgstr "カスタム分析の作成"
+
+#: ../../analytics/signalflow.rst:35
+msgid "If you want to create custom charts and detector analytics, see :new-page:`Analyze Data Using SignalFlow <https://dev.splunk.com/observability/docs/signalflow/>` in the Splunk Observability Cloud Developer Guide."
+msgstr "カスタムチャートやディテクター分析を作成したい場合は、『Splunk Observability Cloud 開発者ガイド』の :new-page:`SignalFlowを使用してデータを分析する<https://dev.splunk.com/observability/docs/signalflow/>` を参照してください。"
+
+#: ../../analytics/signalflow.rst:37
+msgid "You can also run SignalFlow programs directly. For more information, see the :new-page:`SignalFlow API <https://dev.splunk.com/observability/docs/signalflow#SignalFlow-API/>` topic in the Splunk Observability Cloud Developer Guide."
+msgstr "SignalFlow プログラムを直接実行することもできます。詳細については、Splunk Observability Cloud Developer Guide の :new-page:`SignalFlow API<https://dev.splunk.com/observability/docs/signalflow#SignalFlow-API/>` トピックを参照してください。"
+
+#: ../../analytics/signalflow.rst:42
+msgid "Aggregate and transform data"
+msgstr "データの集約と変換"
+
+#: ../../analytics/signalflow.rst:44
+msgid "Most built-in :ref:`analytical functions <analytics-ref>` can perform computations on time series in charts and detectors in two ways: aggregations and transformations."
+msgstr "ほとんどの組み込み :ref:`分析関数<analytics-ref>`、集計と変換の2つの方法で、チャートやディテクターの時系列に対して計算を実行できます。"
+
+#: ../../analytics/signalflow.rst:46
+msgid ""
+"Aggregations operate across all of the data points at a single instance in time, for example the mean CPU utilization across a group of five servers at time t, t+1, t+2, and so on. The output of an aggregation is a single :term:`metric time series <Metric time series>` (MTS), where each "
+"data point represents the aggregation of all the data points over a specific period of time. For more information, see :new-page:`Aggregations <https://dev.splunk.com/observability/docs/signalflow/#Aggregations>`."
+msgstr ""
+"例えば、時刻 t、t+1、t+2 における 5 台のサーバグループの平均 CPU 使用率などです。集約の出力は、単一の :term:`メトリック時系列<Metric time series>` (MTS)であり、各データポイントは、特定の期間におけるすべてのデータポイントの集約を表します。詳細については、:new-page:`集計<https://dev.splunk."
+"com/observability/docs/signalflow/#Aggregations>` を参照。"
+
+#: ../../analytics/signalflow.rst:48
+msgid ""
+"An additional option, Group By, is available for aggregations. If a group-by field is specified, MTS sharing values for properties named in the group-by criterion are aggregated together. For example, you can compute the average CPU load grouped by AWS instance type; add the Mean function "
+"as an aggregation, and set AWS instance type as the group-by criterion. The output will show one MTS per AWS instance type."
+msgstr ""
+"集計には、Group Byという追加オプションが利用できます。group-byフィールドが指定された場合、group-by基準で指定されたプロパティの MTS 共有値が一緒に集計されます。たとえば、平均 CPU負荷を AWSインスタンスタイプ別にグループ化して計算できます。Mean関数を集計として追加し、AWSインスタンスタイプを "
+"group-by基準として設定します。出力には、AWSインスタンスタイプごとに 1つのMTSが表示されます。"
+
+#: ../../analytics/signalflow.rst:50
+msgid ""
+"Transformations operate in parallel on each MTS over a window of time and yield one output time series for each input time series. For example, the average CPU utilization for five servers over a rolling window of one day will display five MTS; each output value will be the moving average "
+"for that MTS over the previous 24 hours. For more information, see :new-page:`Transformations <https://dev.splunk.com/observability/docs/signalflow/#Transformations>`."
+msgstr ""
+"変換は各 MTS に対し時間ウィンドウ上で並列に実行され、各入力時系列に対し 1 つの出力時系列が得られます。たとえば、5 台のサーバの 1 日の平均 CPU 使用率は、5 つの MTS を表示し、各出力値はその MTS の過去 24 時間の移動平均となります。詳細については、:new-page:`変換<https://dev.splunk.com/"
+"observability/docs/signalflow/#Transformations>` を参照してください。"
+
+#: ../../analytics/signalflow.rst:52
+#, fuzzy
+msgid "See the following sections to learn more about the 3 types of transformations available, moving window, calendar window, and dashboard window. For examples of how to use transformation analytics in charts, see :ref:`gain-insights-through-chart-analytics`."
+msgstr "利用可能な3種類の変換、移動ウィンドウ、カレンダー・ウィンドウ、ダッシュボード・ウィンドウについては、以下のセクションを参照のこと。チャートでの変換分析の使用例については、:ref:`gain-insights-through-chart-analytics` を参照してください。"
+
+#: ../../analytics/signalflow.rst:55
+msgid "Moving window transformations"
+msgstr "移動ウィンドウの変換"
+
+#: ../../analytics/signalflow.rst:57
+msgid ""
+"In the following example of a moving window transformation chart, each line represents the Mean CPU utilization across four servers. The grey line represents the mean value for each data point over the preceding minute. The magenta line represents the mean value for each data point over the "
+"preceding hour rolling window."
+msgstr "以下の移動窓変換チャートの例では、各線は 4 台のサーバの平均 CPU 使用率を表しています。灰色の線は、直前 1 分間の各データポイントの平均値を表します。マゼンタの線は、直前の 1 時間のローリング・ウィンドウにおける各データポイントの平均値を表します。"
+
+#: ../../analytics/signalflow.rst:55
+msgid "This image shows a rolling window transformation chart. Two CPU utilization functions appear in the chart."
+msgstr "この画像はローリング・ウィンドウの変換チャートです。チャートには2つのCPU使用率関数が表示されています。"
+
+#: ../../analytics/signalflow.rst:63
+msgid "For more information about rolling window transformations, see :new-page:`Rolling window transformations <https://dev.splunk.com/observability/docs/signalflow/#Rolling-window-transformations>`."
+msgstr "ローリング・ウィンドウ変換の詳細については、:new-page:`ローリング・ウィンドウ変換<https://dev.splunk.com/observability/docs/signalflow/#Rolling-window-transformations>` を参照のこと。"
+
+#: ../../analytics/signalflow.rst:68
+msgid "Calendar window transformations"
+msgstr "カレンダー・ウィンドウの変換"
+
+#: ../../analytics/signalflow.rst:70
+msgid ""
+"In the following example, the ``Sum``, ``Mean``, ``Maximum``, and ``Minimum`` functions let you set a calendar window for a transformation. In the chart, the magenta line shows the sum of all transactions over a moving window of one week. The green line shows the sum of the transactions "
+"over a calendar week, including partial values calculated throughout the week. Values increase over a week, then reset at the beginning of the following week."
+msgstr ""
+"次の例では、``Sum``、``Mean``、``Maximum``、``Minimum`` 関数で、変換のカレンダー・ウィンドウを設定できます。このチャートでは、マゼンタの線が1週間の移動ウィンドウにおける全取引の合計を示しています。緑色の線は、1週間を通して計算された部分的な値を含む、暦上の1週間の取引の合計を示します。値は1週"
+"間かけて増加し、翌週の初めにリセットされます。"
+
+#: ../../analytics/signalflow.rst:68
+msgid "This image shows a calendar window transformation chart."
+msgstr "この画像は、カレンダー・ウィンドウの変換チャートです。"
+
+#: ../../analytics/signalflow.rst:76
+msgid "For more information about calendar window transformations, see :new-page:`Calendar window transformations <https://dev.splunk.com/observability/docs/signalflow/#Calendar-window-transformations>`."
+msgstr "カレンダー・ウィンドウの変換の詳細については、:new-page:`カレンダー・ウィンドウの変換<https://dev.splunk.com/observability/docs/signalflow/#Calendar-window-transformations>` を参照してください。"
+
+#: ../../analytics/signalflow.rst:80
+msgid "Resolution considerations"
+msgstr "解像度に関する考察"
+
+#: ../../analytics/signalflow.rst:82
+msgid ""
+"When you add a function with a calendar window to a plot, and the current time window is narrower than the cycle length that you specified on the function, the chart resizes to a default time of at least one cycle. At the same time, any dashboard override for time range is removed. A "
+"message is shown to inform you of this optimization; if you don't accept the optimization, you may need to modify the time range manually to see the data you expect."
+msgstr ""
+"プロットにカレンダー・ウィンドウを持つ関数を追加し、現在の時間ウィンドウが関数で指定したサイクル長より狭い場合、チャートは少なくとも1サイクルのデフォルト時間にリサイズされます。同時に、時間範囲に関するダッシュボードのオーバーライドはすべて削除されます。この最適化を受け入れない場合は、期待す"
+"るデータを見るために時間範囲を手動で変更する必要があるかもしれません。"
+
+#: ../../analytics/signalflow.rst:84
+msgid "For a chart to show a value at the end of every calendar cycle, the cycle length must be a multiple of the resolution. For more information, see :ref:`resolution <get-started-retention>`."
+msgstr "チャートがカレンダー・サイクルの終わりに値を表示するには、サイクルの長さが解像度の倍数でなければなりません。詳しくは、:ref:`解像度<get-started-retention>` を参照してください。"
+
+#: ../../analytics/signalflow.rst:86
+msgid ""
+"For some combinations of time range and chart display resolution, it may not be possible to use a resolution that guarantees a chart shows values perfectly aligned with cycle boundaries. For example, if a resolution of one day results in more data points than can be shown on a chart, you "
+"may have to use a resolution of two days. This means that plotted values can't line up with the end of a month that has 29 or 31 days, because neither value is a multiple of the two-day resolution. Such a situation is indicated by the resolution pill on a chart turning orange and showing a "
+"message in a tooltip. You can solve this issue by changing the display resolution or viewing a narrower time range."
+msgstr ""
+"時間範囲とチャート表示の解像度の組み合わせによっては、チャートがサイクル境界に完全に一致した値を表示することを保証する解像度を使用できない場合があります。例えば、解像度を1日にすると、チャート上に表示できるデータポイント数を超えてしまう場合、解像度を2日にしなければならないことがあります。これ"
+"は、プロットされた値が29日または31日の月の終わりと一致しないことを意味します。このような状況は、チャートの解像度ピルがオレンジ色になり、ツールチップにメッセージが表示されることで示されます。この問題は、表示解像度を変更するか、より狭い時間範囲を表示することで解決できます。"
+
+#: ../../analytics/signalflow.rst:88
+msgid "When using calendar time windows with transformations, the chart cannot have a resolution finer than one hour."
+msgstr "カレンダーの時間ウィンドウを変換で使用する場合、チャートの解像度は1時間より細かくできません。"
+
+#: ../../analytics/signalflow.rst:91
+msgid "Cycle length and start"
+msgstr "サイクルの長さと開始"
+
+#: ../../analytics/signalflow.rst:93
+msgid "Cycle length options include hour, day, week, month, and quarter."
+msgstr "サイクルの長さには、時間、日、週、月、四半期のオプションがあります。"
+
+#: ../../analytics/signalflow.rst:95
+msgid ""
+"For most cycle length options, you can specify a starting point. For example, for a cycle length of a quarter, you can specify that the first quarter starts in February instead of the default of January. The one exception is an hourly cycle length. Hourly cycles always start at the top of "
+"the hour (minute zero)."
+msgstr "ほとんどのサイクル長オプションでは、開始点を指定できます。例えば、サイクルの長さを四半期にする場合、最初の四半期の開始をデフォルトの1月ではなく、2月に指定できます。例外は、1時間単位のサイクル長です。1時間単位のサイクルは、常に時の先頭（0分）から始まります。"
+
+#: ../../analytics/signalflow.rst:102
+msgid "Calendar time zone"
+msgstr "カレンダーのタイムゾーン"
+
+#: ../../analytics/signalflow.rst:104
+msgid ""
+"For calendar windows, you must specify a calendar time zone. The calendar time zone is a per-chart (or per-detector) setting that is independent of the visualization timezone that is set in your user profile. The time zone you set for a calendar window determines the exact beginning and end "
+"of your chosen calendar window cycles."
+msgstr ""
+"カレンダー・ウィンドウでは、カレンダー・タイムゾーンを指定する必要があります。カレンダー・タイムゾーンはチャートごと（またはディテクターごと）の設定で、ユーザープロファイルで設定されている表示タイムゾーンとは独立しています。カレンダー・ウィンドウに設定したタイムゾーンは、選択したカレンダー・"
+"ウィンドウ・サイクルの正確な開始と終了を決定します。"
+
+#: ../../analytics/signalflow.rst:106
+msgid ""
+"For example, January in America/Los Angeles starts at a different time relative to January in Asia/Tokyo. If Observability Cloud receives a data point with a timestamp near midnight UTC time on December 31, the calendar time zone determines whether that data point counts towards the "
+"calculation for December or the calculation for January."
+msgstr ""
+"例えば、アメリカ/ロサンゼルスの1月は、アジア/東京の1月とは異なる時間に始まります。もしObservability Cloudが12月31日のUTC時間午前0時付近のタイムスタンプを持つデータポイントを受信した場合、カレンダーのタイムゾーンによって、そのデータポイントが12月の計算にカウントされるか、1月の計算にカウントさ"
+"れるかが決まります。"
+
+#: ../../analytics/signalflow.rst:108
+msgid "All calendar window functions in a chart share the same calendar time zone. The first time you add a calendar window function on any plot in a chart, the visualization timezone from your profile is suggested as the value to use for the calendar timezone."
+msgstr "チャート内のすべてのカレンダー・ウィンドウ関数は、同じカレンダー・タイムゾーンを共有します。チャートのどのプロット上でも、カレンダー・ウィンドウ関数を初めて追加すると、プロファイルのビジュアライゼーション・タイムゾーンが、カレンダー・タイムゾーンに使用する値として提案されます。"
+
+#: ../../analytics/signalflow.rst:113
+msgid "Hide partial values"
+msgstr "部分的な値を隠す"
+
+#: ../../analytics/signalflow.rst:115
+msgid ""
+"The :guilabel:`Hide partial values` setting lets you optimize the output of a calendar window function, based on whether you are interested only in the final values calculated at the ends of cycles, as well as partial values calculated during a cycle. For example, if you have a cycle length "
+"of one day, hiding partial values means that you will only see one value for each day; you won't see how values change during the course of the day."
+msgstr ""
+" :guilabel:`Hide partial values` 設定により、カレンダー・ウィンドウ関数の出力を最適化することができます。これは、サイクルの終了時に計算された最終的な値と、サイクル中に計算された部分的な値のどちらに関心があるかに基づきます。たとえば、サイクルの長さが1日の場合、部分的な値を非表示にすると、各日"
+"の値が1つだけ表示されます。"
+
+#: ../../analytics/signalflow.rst:117
+msgid "Deselecting this option has no effect when the cycle length is one hour, because a chart using calendar windows cannot have a resolution finer than one hour."
+msgstr "カレンダー・ウィンドウを使用するチャートは1時間より細かい解像度を持つことができないため、サイクルの長さが1時間の場合、このオプションの選択を解除しても効果はありません。"
+
+#: ../../analytics/signalflow.rst:119
+msgid "In the following example, hiding partial values (magenta bars) provides a better overview of how values compare on a day-to-day basis. Not hiding partial values (green lines) shows how the mean changes over the course of each day."
+msgstr "以下の例では、部分的な値（マゼンタの棒グラフ）を非表示にすることで、1日単位での値の比較の概要がより明確になります。部分的な値（緑色の線）を非表示にすることで、各日の平均値がどのように変化するかを表示します。"
+
+#: ../../analytics/signalflow.rst:113
+msgid "This image shows a chart with hidden partial values."
+msgstr "この図は、部分的な値を隠したチャートを示しています。"
+
+#: ../../analytics/signalflow.rst:125
+msgid "The value at the start of each cycle represents the final value for the previous cycle. The magenta column at 12:00 AM February 15 represents the mean of the values seen over February 14. The column at 12:00 AM February 16 represents the mean of the values for February 15, and so on."
+msgstr "各サイクルの開始時の値は、前サイクルの最終値を表します。2月15日午前0時のマゼンタ色の列は、2月14日の平均値を表します。2月16日午前12時の列は、2月15日の値の平均を表し、以下同様です。"
+
+#: ../../analytics/signalflow.rst:127
+msgid "Single value charts can be useful for visualizing calculations such as the maximum latency reported in the current day so far. To properly display these numbers, deselect :guilabel:`Hide partial values`."
+msgstr "単一値チャートは、現在までに報告された最大待ち時間などの計算を視覚化するのに便利です。これらの数値を適切に表示するには、:guilabel:`Hide partial values` の選択を解除してください。"
+
+#: ../../analytics/signalflow.rst:132
+msgid "Timeshift for calendar windows"
+msgstr "カレンダーウィンドウのタイムシフト"
+
+#: ../../analytics/signalflow.rst:134
+msgid ""
+"The timeshift function shifts the data points for each MTS in the input stream, offsetting them by a specified time period. A typical use case for using timeshift is to compare the average value seen for a metric over a period of time with the average seen over the previous period. For more "
+"information on the SignalFlow function, see :new-page:`timeshift() <https://dev.splunk.com/observability/docs/signalflow/methods/timeshift_stream_method>`."
+msgstr ""
+"timeshift 関数は、入力ストリームの各 MTS のデータポイントをシフトし、指定した期間だけオフセットします。timeshiftを使用する典型的なユースケースは、ある期間のメトリクスの平均値と、その前の期間に測定された平均値とを比較することです。SignalFlow関数の詳細については、:new-page:"
+"`timeshift()<https://dev.splunk.com/observability/docs/signalflow/methods/timeshift_stream_method>` を参照してください。"
+
+#: ../../analytics/signalflow.rst:136
+msgid ""
+"Timeshift is available only when partial values are hidden. If you enable timeshift when using calendar windows, the value from the end of a previous cycle will be shown at the end of every calendar cycle. For example, if your cycle length is Month and you timeshift by one cycle, the data "
+"point at April 30 will represent the value from March 31, the data point at May 31 will represent the value from April 30, and so on."
+msgstr ""
+"タイムシフトは、部分的な値が非表示になっている場合にのみ有効です。カレンダー・ウィンドウを使用しているときにタイムシフトを有効にすると、各カレンダー・サイクルの終わりに、前のサイクルの終わりの値が表示されます。例えば、サイクルの長さが月で、1サイクルずつタイムシフトする場合、4月30日のデータポ"
+"イントは3月31日の値を表し、5月31日のデータポイントは4月30日の値を表します。"
+
+#: ../../analytics/signalflow.rst:138
+msgid ""
+"The timeshift feature in charts is aware of cycles having variable lengths, such as how March has more days than February, and shifts correctly to the end of a previous interval. By contrast, the standalone timeshift analytics function performs a fixed width shift, such as 30 days. For more "
+"information, see :ref:`use-timeshift-function-to-understand-trends`."
+msgstr ""
+"チャートのタイムシフト機能は、3月が2月より日数が多いというような、可変長のサイクルを認識し、前の間隔の終わりに正しくシフトします。対照的に、スタンドアローンのタイムシフト分析機能は、30日のような固定幅のシフトを行います。詳しくは :ref:`use-timeshift-function-to-understand-trends` を参照してく"
+"ださい。"
+
+#: ../../analytics/signalflow.rst:143
+#, fuzzy
+msgid "Dashboard window transformations"
+msgstr "ダッシュボード・ウィンドウの変換"
+
+#: ../../analytics/signalflow.rst:145
+msgid "In the following example, both charts in the same dashboard show the total number of hosts for load balancers in different regions. Based on data in the past hour, there are 2124 hosts in the Tokyo region and 1772 hosts in the Paris region."
+msgstr "次の例では、同じダッシュボードの両方のチャートが、異なるリージョンにあるロードバランサのホストの総数を示しています。過去1時間のデータに基づくと、東京リージョンには2124のホストがあり、パリリージョンには1772のホストがあります。"
+
+#: ../../analytics/signalflow.rst:143
+#, fuzzy
+msgid "This image shows a dashboard window transformation in chart."
+msgstr "この画像はダッシュボードのウィンドウをチャートで変換したものです。"
+
+#: ../../analytics/signalflow.rst:151
+msgid "The difference between the two charts is that the :strong:`listChartDemo` chart isn't configured with dashboard window transformation, while the :strong:`listChartDashboardWindow` chart is."
+msgstr "2つのチャートの違いは、:strong:`listChartDemo` のチャートにはダッシュボード・ウィンドウの変換が設定されていないのに対し、:strong:`listChartDashboardWindow` のチャートには設定されていることです。"
+
+#: ../../analytics/signalflow.rst:153
+msgid ""
+"When you adjust the :guilabel:`Time` picker for the dashboard, only the chart on the :strong:`listChartDashboardWindow` chart will update its values according to the selected time range. For example, if you select a time range of ``-12h``, the chart will display data from the past 12 hours."
+msgstr "ダッシュボードの :guilabel:`Time` ピッカーを調整すると、:strong:`listChartDashboardWindow` のチャートだけが、選択した時間範囲に従って値を更新します。例えば、``-12h`` の時間範囲を選択すると、チャートは過去12時間のデータを表示します。"
+
+#: ../../analytics/signalflow.rst:155
+#, fuzzy
+msgid "For more information about dashboard window transformations, see :new-page:`Dashboard window transformations <https://dev.splunk.com/observability/docs/signalflow/#Dashboard-window-transformations>`."
+msgstr "ダッシュボード・ウィンドウの変換の詳細については、:new-page:`ダッシュボード・ウィンドウの変換<https://dev.splunk.com/observability/docs/signalflow/#Dashboard-window-transformations>` を参照してください。"
+
+#: ../../analytics/signalflow.rst:159
+msgid "You can't apply dashboard window transformations to detectors. When you create a new detector from a chart that uses dashboard window transformation, the transformation window is updated to the closest match to the current time window of the dashboard."
+msgstr "ディテクターにダッシュボード・ウィンドウの変換を適用することはできません。ダッシュボードのウィンドウ変換を使用するチャートから新しいディテクターを作成すると、変換ウィンドウはダッシュボードの現在の時間ウィンドウに最も近いものに更新されます。"
+
+#: ../../analytics/signalflow.rst:161
+msgid "For example, the current time window of a dashboard is ``09/01/2023 09:25:00 am to 09/02/2023 07:30:00 am``. When you create a new detector from a chart in this dashboard, the transformation window becomes ``Past day (-1d)``."
+msgstr "例えば、ダッシュボードの現在の時間ウィンドウは ``09/01/2023 09:25:00 am to 09/02/2023 07:30:00 am`` です。このダッシュボードのチャートから新しいディテクターを作成すると、変換ウィンドウは ``Past day (-1d)`` になります。"
+
+#: ../../analytics/signalflow.rst:167
+msgid "Other functions"
+msgstr "その他の関数"
+
+#: ../../analytics/signalflow.rst:169
+msgid ""
+"In addition to functions that provide aggregations and transformations, SignalFlow provides functions such as ``Count``, which counts the number of MTS that have values; ``Top`` and ``Bottom``, which show the highest or lowest N number of values; and ``Exclude``, which provides the ability "
+"to filter time series by value, rather than by source."
+msgstr "集計と変換を提供する関数に加え、SignalFlowは、値を持つMTSの数をカウントする ``Count``、値の最高または最低N数を表示する ``Top``、``Bottom``、時系列をソース別ではなく値別にフィルタリングする機能を提供する ``Exclude``、などの関数を提供します。"
+
+#: ../../analytics/signalflow.rst:171
+msgid "As with other analytical functions, these functions can be used in concert with others to produce more sophisticated computations. For example, ``Exclude`` can be used with ``Sum`` to achieve a result akin to the ``sumif()`` function found in popular spreadsheet applications."
+msgstr "他の分析関数と同様に、これらの関数は他の関数と組み合わせて使用することで、より高度な計算を行うことができます。例えば、``Exclude`` は、``Sum`` と一緒に使うことで、一般的な表計算アプリケーションで見られる ``sumif()`` 関数のような結果を得ることができます。"
+
+#: ../../analytics/signalflow.rst:173
+msgid "For a detailed explanation of each function, see :ref:`analytics-ref`."
+msgstr "各機能の詳細については、:ref:`analytics-ref` を参照してください。"
+
+#: ../../analytics/signalflow.rst:178
+msgid "Expressions"
+msgstr "式"
+
+#: ../../analytics/signalflow.rst:180
+msgid "SignalFlow lets you create expressions that refer to preceding computations as variables. For example, you can calculate a ratio of HTTP response codes received that are 2xx to those that are 4xx or 5xx."
+msgstr "SignalFlowでは、先行する計算を変数として参照する式を作成できます。例えば、受信したHTTPレスポンスコードのうち、2xxと4xxまたは5xxの比率を計算することができます。"
+
+#: ../../analytics/signalflow-analytics-intro.rst:-1
+msgid "Intro page for SignalFlow and Splunk Infrastructure Monitoring analytics"
+msgstr "SignalFlow と Splunk Infrastructure Monitoring 分析の紹介ページ"
+
+#: ../../analytics/signalflow-analytics-intro.rst:5
+msgid "SignalFlow and analytics"
+msgstr "SignalFlowと分析"
+
+#: ../../analytics/signalflow-analytics-intro.rst:18
+msgid ":new-page:`SignalFlow <https://dev.splunk.com/observability/docs/signalflow/>` is the analytics engine at the heart of Splunk Observability Cloud. It runs computation that allow you to analyze incoming data and write custom chart and detector analytics."
+msgstr " :new-page:`SignalFlow<https://dev.splunk.com/observability/docs/signalflow/>` は Splunk Observability Cloud の中核をなす分析エンジンです。入力データを分析し、カスタムチャートとディテクター分析を書くことができる計算を実行します。"
+
+#: ../../analytics/signalflow-analytics-intro.rst:20
+msgid "You can use the following SignalFlow components to create custom analytics for your data:"
+msgstr "以下のSignalFlowコンポーネントを使用して、データのカスタム分析を作成できます："
+
+#: ../../analytics/signalflow-analytics-intro.rst:22
+msgid "SignalFlow programming language: A Python-like language that you use to write SignalFlow programs."
+msgstr "SignalFlowプログラミング言語：SignalFlowのプログラムを記述するために使用するPythonライクな言語。"
+
+#: ../../analytics/signalflow-analytics-intro.rst:23
+msgid "SignalFlow library: Functions and methods you can call from a SignalFlow program."
+msgstr "SignalFlowライブラリ：SignalFlowプログラムから呼び出せる関数とメソッド。"
+
+#: ../../analytics/signalflow-analytics-intro.rst:24
+msgid "SignalFlow computation engine: The engine that runs your SignalFlow programs in the background and streams results."
+msgstr "SignalFlow計算エンジン：SignalFlowプログラムをバックグラウンドで実行し、結果をストリームするエンジン。"
+
+#: ../../analytics/signalflow-analytics-intro.rst:26
+msgid "To learn how to use SignalFlow, see :ref:`get-started-signalflow`."
+msgstr "SignalFlow の使用方法については、:ref:`get-started-signalflow` を参照してください。"
+
+#: ../../analytics/signalflow-analytics-intro.rst:28
+msgid "For more information on Splunk Infrastructure Monitoring analytics, see :ref:`infrastructure-monitoring-analytics`."
+msgstr "Splunk Infrastructure Monitoring 分析の詳細については、:ref:`infrastructure-monitoring-analytics` を参照してください。"

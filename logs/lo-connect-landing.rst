@@ -15,16 +15,17 @@ Splunk Log Observer Connect
     scp
     set-up-logconnect
     LOconnect-troubleshoot
+    LOconnect-default-index
+    LOconnect-scenario
     timeline
     queries
     raw-logs-display
     keyword
-    filter-logs-by-field
+    open-logs-splunk
     alias
     logs-individual-log-connect
     message-field
     aggregations
-    save-share
     logviews
     timestamp
     lo-connect-limits
@@ -39,6 +40,10 @@ Splunk Log Observer Connect
 
 - :ref:`logs-LOconnect-troubleshoot`
 
+- :ref:`LOconnect-default-index`
+
+- :ref:`logs-LOconnect-scenario`
+
 - :ref:`logs-timeline`
 
 - :ref:`logs-queries`
@@ -47,7 +52,7 @@ Splunk Log Observer Connect
 
 - :ref:`logs-keyword`
 
-- :ref:`logs-filter-logs-by-field`
+- :ref:`open-logs-splunk`
 
 - :ref:`logs-alias`
 

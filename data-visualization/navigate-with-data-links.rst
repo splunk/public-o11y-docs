@@ -4,10 +4,10 @@
 Navigate to related resources with data links
 *****************************************************************
 
-.. meta updated 10/12/18
+
 
 .. meta::
-  	:description: Data links enable DevOps teams to get to better insights and resolve issues faster by tapping into the right data from the right system at the right time. They accomplish this by enabling seamless and context-aware transitions among Splunk Infrastructure Monitoring dashboards, and to third-party solutions in your toolchain, such as logging and APM.
+  	:description: Data links help you get additional insights and resolve issues faster by tapping into the right data in the right system at the right time. Data links accomplish this by giving you seamless and context-aware transitions between Splunk Infrastructure Monitoring dashboards and third party software you use.
 
 This topic shows you how to configure data links in charts and dashboards as well as how to use them to navigate to related resources. To learn more about data links, see :ref:`data-link-def`.
 
@@ -32,7 +32,7 @@ There are two types of data links for a property, local and global. See the foll
    * - Local
      - | - Available on only on dashboard.
        | - Anyone with write permission for a dashboard can add data links that appear on that dashboard.
-       | - Example: While viewing a dashboard, you can create a link from any value of ``InstanceId`` to the built-in dashboard "EC2 Instance". Following the link opens the EC2 Instance dashboard filtered to the value of ``InstanceId`` you click. This link is available for any appearance of ``InstanceId`` in that dashboard; it doesn't appear as a link on any other dashboard or in alert messages.
+       | - Example: While viewing a dashboard, you can create a link from any value of ``InstanceId`` to the built-in dashboard "EC2 Instance". Following the link opens the EC2 Instance dashboard filtered to the value of ``InstanceId`` you select. This link is available for any appearance of ``InstanceId`` in that dashboard; it doesn't appear as a link on any other dashboard or in alert messages.
    
    * - Global
      - | - Available on all dashboards and alert messages, as well as in the Infrastructure Monitoring navigators.
@@ -50,11 +50,11 @@ Configure local data links
 
 When you view properties in a chart on a dashboard, either in the data table or on a list chart, you can configure local data links by using the :strong:`Actions` menu. The following steps show you how to create a new local data link:
 
-#. Hover over the property and click the (|more|) icon.
+#. Hover over the property and select the (|more|) icon.
 
-#. Click :strong:`Configure data links` to display the :strong:`Data Links` tab.
+#. Select :strong:`Configure data links` to display the :strong:`Data Links` tab.
 
-#. Click :guilabel:`New Link` to display the link configuration options. If the :guilabel:`New Link` button is not available, you don't have write permission for the dashboard and can't create local data links.
+#. Select :guilabel:`New Link` to display the link configuration options. If the :guilabel:`New Link` button is not available, you don't have write permission for the dashboard and can't create local data links.
 
 #. Add a label for the link. This label is what the user sees in a property's :strong:`Actions` menu, so use a concise and clear label.
 
@@ -71,7 +71,7 @@ When you view properties in a chart on a dashboard, either in the data table or 
     - Any Value of: Link from any value of a property. The property you start from is pre-filled as the trigger, but you can delete it and select a different trigger.
     - Property:Value Pair: Link from a specific value of a property. The property:value you start from is pre-filled, but you can delete it and select a different trigger.
 
-#. If you want the data link to display based on the :strong:`Show On` value and one or more additional conditions, click :strong:`Add Conditions`. If you define multiple conditions, all conditions must be met for the link to display.
+#. If you want the data link to display based on the :strong:`Show On` value and one or more additional conditions, select :strong:`Add Conditions`. If you define multiple conditions, all conditions must be met for the link to display.
 
 #. Choose the scope of visibility of this link. You can choose:
 
@@ -83,17 +83,17 @@ When you view properties in a chart on a dashboard, either in the data table or 
 
 #. Configure the actual destination for your link, depending on the type of destination you chose.
 
-    - If your destination is a dashboard, click :guilabel:`Choose Dashboard`, search for the target dashboard, then click :guilabel:`OK`.
+    - If your destination is a dashboard, select :guilabel:`Choose Dashboard`, search for the target dashboard, then select :guilabel:`OK`.
 
         - If the target dashboard is in the same dashboard group as the source dashboard, any filters that you apply on the source dashboard are preserved on the destination dashboard.
 
-        - If the link uses the ``Any Metadata Value`` or ``Any Value of`` option, the property value that you click on is also applied as a filter on the destination dashboard.
+        - If the link uses the ``Any Metadata Value`` or ``Any Value of`` option, the property value that you select is also applied as a filter on the destination dashboard.
 
-        - If the link uses the ``Property:Value Pair`` option, the assumption is that the destination dashboard is already specific to that value, and the property value that you click on isn't applied as a filter on the destination dashboard. For example, if the trigger is ``service:analytics``, the target dashboard must be specific to the analytics service, with any appropriate filters already applied.
+        - If the link uses the ``Property:Value Pair`` option, the assumption is that the destination dashboard is already specific to that value, and the property value that you select isn't applied as a filter on the destination dashboard. For example, if the trigger is ``service:analytics``, the target dashboard must be specific to the analytics service, with any appropriate filters already applied.
 
-    - If your destination is a Splunk instance, type the instance URL in the URL field. The property:value information is passed to Splunk.
+    - If your destination is a Splunk instance, enter the instance URL in the URL field. The property:value information is passed to Splunk.
 
-    - If your destination is a custom URL or Kibana, type the full address of the URL in the URL field. You can insert variables to vary the resulting URL by property values. Available values are shown when you click the URL field. Common variables and associated syntax include:
+    - If your destination is a custom URL or Kibana, enter the full address of the URL in the URL field. You can insert variables to vary the resulting URL by property values. Available values are shown when you select the URL field. Common variables and associated syntax include:
 
         - start and end time: ``&st={{start_time}}&et={{end_time}}``
         - property name (key) and value for the trigger: ``&field={{key}}&value={{value}}``
@@ -103,7 +103,7 @@ When you view properties in a chart on a dashboard, either in the data table or 
 
 #. (optional) If your destination is a custom URL, Splunk instance, or Kibana, you can use Property Mapping to dynamically rename a key or key:value pair in the URL. Use this if you want to link to a destination that has similar data, but different names for the properties that appear in your dashboard.
 
-#. Click :guilabel:`Save` to create the new link.
+#. Select :guilabel:`Save` to create the new link.
 
 The link now appears on the :strong:`Actions` menu for the property.
 
@@ -112,12 +112,12 @@ The link now appears on the :strong:`Actions` menu for the property.
 
 .. _click-on-link:
 
-Click on a property value to follow a link
+Select a property value to follow a link
 =============================================================================
 
-If a link target is an Infrastructure Monitoring dashboard, you can follow a link by clicking on the property value. When multiple links to dashboards are available for a property, the application selects which link to follow based on the following order of operations.
+If a link target is an Infrastructure Monitoring dashboard, you can follow a link by selecting on the property value. When multiple links to dashboards are available for a property, the application selects which link to follow based on the following order of operations.
 
-.. note:: In any dashboard, all local and global data links are available via a property's :strong:`Actions` menu. You don't have to click on a property value to navigate to a link.
+.. note:: In any dashboard, all local and global data links are available by using a property's :guilabel:`Actions` (|more|) menu. You don't have to click on a property value to navigate to a link.
 
 More specific data links override less specific data links
 ----------------------------------------------------------------------------------
@@ -163,12 +163,12 @@ If data links are available in your organization, you have access to them from a
         :width: 40%
         :alt: This image shows the tooltip that appears when you hover over over a property that has a data link.
 
-- Alternately, you can view available data links in the :guilabel:`Actions` menu for any property. To access the :strong:`Actions` menu, hover over a property and click the (|more|) icon that appears. If there are data links defined for the property, the list of links is displayed when you click the (|more|) icon, and you can navigate to any of them from this menu.
+- Alternately, you can view available data links in the :guilabel:`Actions` menu for any property. To access the :strong:`Actions` menu, hover over a property and select the (|more|) icon that appears. If there are data links defined for the property, the list of links is displayed when you select the (|more|) icon, and you can navigate to any of them from this menu.
 
     .. note:: To navigate to targets other than dashboards, you must use the :strong:`Actions` menu.
 
 - To view all the local data links for a dashboard, select :guilabel:`Data Links` from the :strong:`Dashboard actions` menu.
-- To view all the global data links for an organization, go to :guilabel:`Navigation menu > Data Configuration`, then select :guilabel:`Global Data Links`. Alternately, you can click :guilabel:`Global Data links` when viewing the list of local data links.
+- To view all the global data links for an organization, go to :guilabel:`Navigation menu > Data Configuration`, then select :guilabel:`Global Data Links`. Alternately, you can select :guilabel:`Global Data links` when viewing the list of local data links.
 
 .. _about-links:
 

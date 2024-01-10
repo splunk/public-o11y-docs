@@ -4,7 +4,7 @@
 Link detectors to charts
 *****************************************************************
 
-.. meta updated 1/23/23
+
 
 .. meta::
   :description: Learn how to Link detectors to charts in Splunk Observability Cloud so that you can discover and diagnose issues more quickly.
@@ -34,7 +34,7 @@ To link one or more existing detectors to a chart:
 
 #. Open the Detector menu (bell icon) for a chart in a dashboard or from the Chart Builder, then select :menuselection:`Link detector`. 
 
-#. Depending on the plots in the chart, you may see one or more related detectors. 
+#. Depending on the plots in the chart, you might see one or more related detectors. 
 
 #. Select a detector from the list to link it to the chart. 
 
@@ -44,7 +44,7 @@ If you don't see a related detector that you want to link, select :menuselection
 
 .. _via-link-button:
 
-.. note:: Clicking the :menuselection:`Link detector` button in the Chart Builder has identical functionality to selecting :ref:`Choose detector to link <via-choose-detector-to-link>`.
+.. note:: Selecting the :guilabel:`Link detector` button in the Chart Builder has identical functionality to selecting :ref:`Choose detector to link <via-choose-detector-to-link>`.
 
 .. _unlink-linked-detector:
 
@@ -57,7 +57,7 @@ The black bell icon next to the linked detector name helps you differentiate lin
    :width: 50%
    :alt: Plot name with detector bell next to it.
 
-To unlink the detector from the chart, click the more icon (|more|) and select :menuselection:`Delete` from the menu.
+To unlink the detector from the chart, select the more icon (|more|) and select :menuselection:`Delete` from the menu.
 
 .. _list-alerts-detectors:
 
@@ -103,8 +103,8 @@ List charts linked to a detector
 
 To view the linked detector information:
 
-#. Click the :guilabel:`Plot Editor` tab of the Chart Builder.
-#. Click the more icon (|more|).
+#. Select the :guilabel:`Plot Editor` tab of the Chart Builder.
+#. Select the more icon (|more|).
 #. Select :menuselection:`Detector info`.
 
 The Detector Info dialog box lists all of the charts, with their dashboard name and group name for context, that are linked to the detector. 

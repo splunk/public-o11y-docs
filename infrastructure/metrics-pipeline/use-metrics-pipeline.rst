@@ -1,7 +1,3 @@
-:orphan:
-
-.. include:: /_includes/metrics-pipeline/metrics-pipeline-preview-header.rst
-
 
 .. _use-metrics-pipeline:
 
@@ -10,7 +6,14 @@ Control your metric ingestion volume with rules
 *********************************************************************
 
 .. meta::
-    :description: Learn how to create metric rules in metrics pipeline management.
+    :description: Learn how to create aggregation and dropping rules in metrics pipeline management.
+
+|hr|
+
+:strong:`Available in Enterprise Edition and Service Bureau`
+
+|hr|
+
 
 For each metric you send to Splunk Observability Cloud, you can create various aggregation and data dropping rules to control ingestion and storage volume.
 
@@ -22,6 +25,9 @@ Follow these steps to create rules for a metric.
 #. From the landing page of Splunk Observability Cloud, go to :strong:`Settings > Metrics pipeline management`.
 #. Select :guilabel:`Create new rules`.
 #. In the search bar, enter the name of the metric for which you want to create rules.
+
+    .. note:: Metrics ingested through the ``https://ingest.signalfx.com/v1/collectd`` endpoint might appear in your search, but metrics pipeline management is not available for those metrics.
+
 #. Select :guilabel:`OK`.
 #. Add aggregation rules:
 
@@ -38,8 +44,8 @@ Follow these steps to create rules for a metric.
         * - Filter population
           - Search for dimension keys or values to narrow down the associated MTS
           - No
-        * - Select dimensions to keep
-          - Search for dimensions you want to keep. The dimensions you keep are used in the new aggregated MTS. All other dimensions are removed.
+        * - Specify dimensions: Keep/Drop
+          - Search for dimensions and select either :strong:`Keep` or :strong:`Drop`. The dimensions you keep are used in the new aggregated MTS. All dropped dimensions are removed.
           - Yes
         * - New aggregated metric name
           - Select :guilabel:`Generate name` to use a metric name set by the system, or enter a custom name for your aggregated metric.

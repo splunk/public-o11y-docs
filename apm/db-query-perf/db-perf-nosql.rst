@@ -5,12 +5,10 @@
 Database Query Performance for NoSQL
 ************************************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn how to use Database Query Performance to troubleshoot performance issues in the following NoSQL databases.
 
-Database Query Performance can help you troubleshoot performance issues in the following NoSQL databases. For a sample use case, see :ref:`redis-use-case`.
+Database Query Performance can help you troubleshoot performance issues in the following NoSQL databases. For a sample scenario, see :ref:`redis-scenario`.
 
 .. _redis-db-query-performance:
 
@@ -25,7 +23,7 @@ To instrument Redis for infrastructure metrics and see related Infrastructure Mo
    :width: 95%
    :alt: Related content for an instrumented Redis service.
 
-For a use case focusing on Redis and NoSQL troubleshooting, see :ref:`redis-use-case`.
+For a scenario focusing on Redis and NoSQL troubleshooting, see :ref:`redis-scenario`.
 
 .. note:: Redis databases appear as "Redis" in the :guilabel:`Services` menu.
 

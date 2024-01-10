@@ -4,6 +4,9 @@
 Splunk RUM custom dashboards 
 ************************************************************
 
+.. meta::
+   :description: Create custom dashboards in Splunk RUM to track application metrics that are most relevant to your business. 
+
 Create a custom dashboard for any Splunk RUM metric. 
 
 
@@ -37,7 +40,7 @@ The following use case features an example from Kai, a site reliability engineer
 Monitor custom events and page level metrics
 ---------------------------------------------
 
-Kai uses custom dashboards to get a high level assessment of the health of the Buttercup Industries applications. They go to :menuselection:`Dashboards` to create a new dashboard. Kai wants to look at custom events and page level metrics for page views. The first chart utilizes the metric ``rum.node.workflow.count``. The second chart shows the metric ``rum.node.page_view.count`` uses to show the  Kai wants to look at custom events and page level metrics for page views. Kai set up their dashboard: 
+Kai uses custom dashboards to get a high level assessment of the health of the Buttercup Industries applications. They go to :menuselection:`Dashboards` to create a new dashboard. Kai wants to look at custom events and page level metrics for page views. The first chart utilizes the metric ``rum.node.workflow.count``. The second chart shows the metric ``rum.node.page_view.count`` which shows custom events and page level metrics for page views. Here is how Kai set up their dashboard: 
 
 
 ..  image:: /_images/rum/use-case-custom-dashboard.png

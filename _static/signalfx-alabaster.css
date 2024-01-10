@@ -47,6 +47,9 @@
 .icon-wrench:before {
     content: "\e991";
   }
+  .icon-info:before {
+   content: "\e903";
+  }
   .icon-cog:before {
     content: "\e994";
   }
@@ -219,11 +222,11 @@ div.sphinxsidebar ul {
 }
 
 div.sphinxsidebar ul li.toctree-l1 > a {
-    font-size: 120%;
+    font-size: 100%;
 }
 
 div.sphinxsidebar ul li.toctree-l2 > a {
-    font-size: 110%;
+    font-size: 100%;
 }
 
 div.sphinxsidebar input {
@@ -247,7 +250,7 @@ div.sphinxsidebar hr {
 
 a {
     color: #004B6B;
-    text-decoration: underline;
+    text-decoration: none !important;
 }
 
 a:hover {
@@ -456,8 +459,16 @@ pre, tt, code {
     display: block;
 }
 
+/* what is the difference between img and img.screenshot? */
+
 img {
     margin-bottom: 20px !important;
+}
+
+/* this is inline so we want to keep that as is with the margin directive there */ 
+
+.inline-image {
+    margin-bottom: 0px !important;
 }
 
 tt.descname, tt.descclassname, code.descname, code.descclassname {
@@ -468,14 +479,17 @@ tt.descname, code.descname {
     padding-right: 0.08em;
 }
 
+/* what is the difference between img. and img.screenshot? */
+
 img.screenshot {
     -moz-box-shadow: 2px 2px 4px #eee;
     -webkit-box-shadow: 2px 2px 4px #eee;
     box-shadow: 2px 2px 4px #eee;
+    margin-bottom: 15px !important;
 }
 
+
 table.docutils {
-    border: 1px solid #888;
     -moz-box-shadow: 2px 2px 4px #eee;
     -webkit-box-shadow: 2px 2px 4px #eee;
     box-shadow: 2px 2px 4px #eee;
@@ -483,27 +497,42 @@ table.docutils {
     /*margin-bottom: 20px;*/
 }
 
-/* Added line height for consistency --brs */
+
 
 table.docutils td, table.docutils th {
-    border: 1px solid #888;
+    border-style: 2px solid rgba(43, 43, 137, 0.546);
+    border-bottom-style: none; 
+    border-top-style: none;
     padding: 0.25em 0.7em;
-    line-height:1.7em ;
+    line-height: 1.7em ;
+    text-align: left; 
+    vertical-align: top;
+
+}
+    
+    thead {  
+        background-color: #999;
+        color: white;
+    }
+
+    tr:nth-child(even) {background-color: #f2f2f2;  
 }
 
+
 table.field-list, table.footnote {
-    border: none;
+    /*border: 1px solid #2a0e0e; */
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
 
 table.footnote {
-    margin: 15px 0;
+    margin: 1px 0;
     width: 100%;
     border: 1px solid #EEE;
     background: #FDFDFD;
     font-size: 0.9em;
+    
 }
 
 table.footnote + table.footnote {

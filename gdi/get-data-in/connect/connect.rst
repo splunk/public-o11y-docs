@@ -19,8 +19,10 @@ Connect to your cloud service provider to start sending data to Splunk Observabi
 
 See the following topics to learn how to connect each of these cloud service providers:
 
-- :ref:`AWS<get-started-aws>`
-- :ref:`Azure<get-started-azure>`
-- :ref:`GCP<get-started-gcp>`
+- :ref:`AWS <get-started-aws>`
+- :ref:`Azure <get-started-azure>`
+- :ref:`GCP <get-started-gcp>`
 
-.. note:: Splunk is not responsible for data availability, and it can take up to several minutes (or longer, depending on your configuration) from the time you connect until you start seeing valid data from your account. 
+To connect using Terraform, see :ref:`terraform-config`.
+
+.. caution:: Splunk is not responsible for data availability, and it can take up to several minutes (or longer, depending on your configuration) from the time you connect until you start seeing valid data from your account. 

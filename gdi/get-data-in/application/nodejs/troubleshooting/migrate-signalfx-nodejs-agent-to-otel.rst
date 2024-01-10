@@ -1,13 +1,13 @@
 .. _migrate-signalfx-nodejs-agent-to-otel: 
 
 **************************************************************
-Migrate from the SignalFx Tracing Library for NodeJS
+Migrate from the SignalFx Tracing Library for Node.js
 **************************************************************
 
 .. meta:: 
    :description: The Splunk Distribution of OpenTelemetry JS replaces the deprecated SignalFx Tracing Library for Node.js. To migrate to the Splunk Distribution of OTel JS, follow these instructions.
 
-The SignalFx Tracing Library for NodeJS is deprecated and will reach End of Support on June 8th, 2023. Replace it with the Splunk Distribution of OpenTelemetry JS. Read the following instructions to learn how to migrate.
+The SignalFx Tracing Library for Node.js is deprecated and will reach End of Support on June 8th, 2023. Replace it with the Splunk Distribution of OpenTelemetry JS. Read the following instructions to learn how to migrate.
 
 The Splunk Distribution of OpenTelemetry JS is based on the OpenTelemetry Instrumentation for Node.js, an open-source project that uses the OpenTelemetry API.
 
@@ -84,13 +84,13 @@ You have two options to update your instrumentation entry point:
    // your new options here
   });
 
-2. Automatically update your application to use Splunk Distribution of OpenTelemetry JS instead of SignalFx Tracing Library. To do so, run Node using the following command:
+2. Automatically update your application to use Splunk Distribution of OpenTelemetry JS instead of SignalFx Tracing Library. To do so, run Node.js using the following command:
 
 .. code-block:: bash
 
   node -r @splunk/otel/instrument <your-app.js>
 
-.. note:: To export traces directly to Observability Cloud, see :ref:`export-directly-to-olly-cloud-nodejs`.
+.. note:: To export traces directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-nodejs`.
 
 .. _migrate-settings-nodejs-agent:
 
@@ -117,7 +117,7 @@ To migrate settings from the SignalFx tracing library to the Splunk Distribution
    * - ``SIGNALFX_SPAN_TAGS``
      - ``OTEL_RESOURCE_ATTRIBUTES`` as comma-separated key-value pairs. See :ref:`advanced-nodejs-otel-configuration`.
    * - ``SIGNALFX_LOGS_INJECTION``
-     - Not applicable. Log injection is always enabled. See :ref:`correlate-traces-with-logs-nodejs`.
+     - Not applicable. Log injection is always activated. See :ref:`correlate-traces-with-logs-nodejs`.
    * - ``SIGNALFX_LOGS_INJECTION_TAGS``
      - Not applicable See :ref:`correlate-traces-with-logs-nodejs`.
    * - ``SIGNALFX_ENABLED_PLUGINS``
@@ -183,7 +183,7 @@ To migrate your custom metric instrumentation from the SignalFx client library, 
 Migrate instrumentations
 ----------------------------------------------------
 
-All libraries supported by the SignalFx Tracing Library for NodeJS are support by the Splunk Distribution of OpenTelemetry JS. The only exceptions are listed in :ref:`considerations-nodejs-migration`.
+All libraries supported by the SignalFx Tracing Library for Node.js are support by the Splunk Distribution of OpenTelemetry JS. The only exceptions are listed in :ref:`considerations-nodejs-migration`.
 
 To find equivalent instrumentation, search for each instrumentation in the OpenTelemetry registry. If an instrumentation is not bundled, you can use custom instrumentation packages. See :ref:`add-custom-instrumentation`.
 
@@ -195,7 +195,7 @@ Considerations for migrating to Splunk Distribution of OpenTelemetry JS
 The following limitations apply when migrating from the SignalFx Tracing Library for Node.js:
 
 - The set of Node.js versions that Splunk Distribution of OpenTelemetry JS supports is different from the set that SignalFx Tracing Library supports. See :ref:``nodejs-otel-requirements``.
-- The default flush interval, which defines how frequently captured telemetry data is sent to the backend, is now 500 milliseconds instead of 2 seconds, and can't be modified.
+- The default flush interval, which defines how frequently captured telemetry data is sent to the back end, is now 500 milliseconds instead of 2 seconds, and can't be modified.
 - Autoinstrumentation is not available for the following libraries:
    - ``AdonisJS``
    - ``amqp10``
@@ -203,6 +203,6 @@ The following limitations apply when migrating from the SignalFx Tracing Library
    - ``sails``
 - Some instrumentations have specific requirements:
    - ``express``, ``koa``, and ``hapi`` instrumentations require active ``http`` or ``https`` instrumentation to produce spans.
-   - ``bluebird``, ``q``, and ``when`` are supported through ``AsyncLocalStorageContextManager`` (or ``AsyncHooksContextManager`` when the Node version is lower than 14.8).
+   - ``bluebird``, ``q``, and ``when`` are supported through ``AsyncLocalStorageContextManager`` (or ``AsyncHooksContextManager`` when the Node.js version is lower than 14.8).
 
 Use the :new-page:`OpenTelemetry Registry <https://opentelemetry.io/registry>` to find autoinstrumentation packages for libraries supported by the Splunk Distribution of OpenTelemetry JS.

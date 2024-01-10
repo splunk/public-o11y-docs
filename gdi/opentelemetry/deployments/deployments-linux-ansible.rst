@@ -1,21 +1,30 @@
 .. _deployment-linux-ansible:
 
-**********************
-Ansible for Linux
-**********************
+********************************************************
+Deploy the Collector with Ansible for Linux
+********************************************************
 
 .. meta::
       :description: Describes how to install the Splunk Observability Cloud OpenTelemetry Collector Ansible role on Linux.
 
 Install the Ansible collection
 =========================================
+
+The following Linux distributions and versions are supported:
+
+* Amazon Linux: 2, 2023. Log collection with Fluentd isn't supported for Amazon Linux 2023.
+* CentOS, Red Hat, or Oracle: 7, 8, 9
+* Debian: 9, 10, 11
+* SUSE: 12, 15 for Collector version 0.34.0 or higher. Log collection with Fluentd isn't supported.
+* Ubuntu: 16.04, 18.04, 20.04, and 22.04
+
 Before installing the Ansible collection, do the following:
 
 * Find your :ref:`Splunk access token <otel-using>`
 * Find your :ref:`Splunk realm <otel-using>`
 * Check :ref:`exposed ports <otel-using>` to make sure your environment doesn't have conflicts. Ports can be changed in the package's configuration.
 
-Ansible Galaxy is Ansible's official hub for sharing Ansible content. See :new-page:`Ansible Collection for the Splunk Distribution of OpenTelemetry Collector <https://galaxy.ansible.com/signalfx/splunk_otel_collector>` for more information about the playbook. 
+Ansible Galaxy is the Ansible official hub for sharing Ansible content. See :new-page:`Ansible Collection for the Splunk Distribution of OpenTelemetry Collector <https://galaxy.ansible.com/signalfx/splunk_otel_collector>` for more information about the playbook. 
 
 Run the following command to install the Ansible collection from Ansible Galaxy:
 
@@ -62,7 +71,7 @@ The following table describes the variables that can be configured for this role
    * - ``splunk_otel_collector_version``
      - The version of the package to install, for example, ``0.25.0``. The default value is ``latest``.
    * - ``splunk_otel_collector_config``
-     - The configuration file, created in YAML. This variable can be set to ``/etc/otel/collector/gateway_config.yaml`` to install the package in Gateway mode. The default location is ``/etc/otel/collector/agent_config.yaml``.
+     - The configuration file, created in YAML. This variable can be set to ``/etc/otel/collector/gateway_config.yaml`` to install the package in data forwarding (gateway) mode. The default location is ``/etc/otel/collector/agent_config.yaml``.
    * - ``splunk_config_override``
      - The custom configuration that is merged into the default configuration.
    * - ``splunk_config_override_list_merge``
@@ -82,7 +91,7 @@ The following table describes the variables that can be configured for this role
    * - ``splunk_ballast_size_mib``
      - The set memory ballast size in MiB. The default value is 1/3 of the value set in ``splunk_memory_total_mib``.
    * - ``install_fluentd``
-     - The option to install or manage Fluentd and dependencies for log collection. The dependencies include ``capng_c`` for enabling Linux capabilities, ``fluent-plugin-systemd`` for systemd journal log collection, and the required libraries or development tools. The default value is ``true``.
+     - The option to install or manage Fluentd and dependencies for log collection. The dependencies include ``capng_c`` for activating Linux capabilities, ``fluent-plugin-systemd`` for systemd journal log collection, and the required libraries or development tools. The default value is ``false``.
    * - ``td_agent_version``
      - The version of td-agent (Fluentd package) that is installed. The default value is ``3.3.0`` for Debian jessie, ``3.7.1`` for Debian stretch, and ``4.3.0`` for other distros.
    * - ``splunk_fluentd_config``
@@ -90,13 +99,16 @@ The following table describes the variables that can be configured for this role
    * - ``splunk_fluentd_config_source``
      - The source path to a Fluentd configuration file on your control host that is uploaded and set in place of the value set in ``splunk_fluentd_config`` on remote hosts. Use this variable to submit a custom Fluentd configuration, for example, ``./custom_fluentd_config.conf``. The default value is ``""``, which means that nothing is copied and the configuration file set with ``splunk_otel_collector_config`` is used.
 
-Configure auto instrumentation for Java 
-=================================================
+.. _ansible-zero-config-java:
+
+Configure auto instrumentation for Java (Linux only)
+======================================================
+
 You can automatically instrument your Java applications along with the Collector installation. Auto instrumentation removes the need to install and configure the Java agent separately. See :ref:`configure-auto-instrumentation` for more information. 
 
 The following table shows the variables that can be configured for this Ansible role:
 
-.. list-table:: Variables for auto instrumentation
+.. list-table::
    :widths: 50 50
    :header-rows: 1
 
@@ -114,3 +126,14 @@ The following table shows the variables that can be configured for this Ansible 
      - Available on Linux only. Configures the OpenTelemetry instrumentation resource attributes, for example, ``deployment.environment=prod``. The resource attributes are user-defined key-value pairs. The specified resource attributes are added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The Java application on the node needs to be restarted separately for any change to take effect. See :ref:`trace-configuration-java` for more information.
    * -  ``splunk_otel_auto_instrumentation_service_name`` 
      - Available on Linux only. Explicitly sets the service name for the instrumented Java application, for example, ``my.service``. By default, the service name is automatically derived from the arguments of the Java executable on the node. The specified service name is added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node, overriding any generated service name. See :ref:`trace-configuration-java` for more information. The Java application on the node needs to be restarted separately for any change to take effect.
+   * - ``splunk_otel_auto_instrumentation_generate_service_name``
+     - Set to ``false`` to prevent the preloader from setting the ``OTEL_SERVICE_NAME`` environment variable.
+   * - ``splunk_otel_auto_instrumentation_disable_telemetry``
+     - Prevents the preloader from sending the ``splunk.linux-autoinstr.executions`` metric to the Collector.
+   * - ``splunk_otel_auto_instrumentation_enable_profiler``
+     - Activates or deactivates AlwaysOn CPU Profiling.
+   * - ``splunk_otel_auto_instrumentation_enable_profiler_memory``
+     - Activates or deactivates AlwaysOn Memory Profiling.
+   * - ``splunk_otel_auto_instrumentation_enable_metrics``
+     - Activates or deactivates JVM metrics. 
+

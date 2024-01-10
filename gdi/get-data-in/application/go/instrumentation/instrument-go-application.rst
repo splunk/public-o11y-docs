@@ -1,7 +1,7 @@
 .. _instrument-go-applications:
 
 ***************************************************************
-Instrument a Go application for Splunk Observability Cloud
+Instrument your Go application for Splunk Observability Cloud
 ***************************************************************
 
 .. meta::
@@ -14,10 +14,10 @@ Generate customized instructions using the guided setup
 
 To generate all the basic installation commands for your environment and application, use the Go guided setup. To access the Go guided setup, follow these steps:
 
-#. Log in to Observability Cloud.
+#. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`Go guided setup <https://login.signalfx.com/#/gdi/scripted/go-tracing/step-1?category=product-apm&gdiState=%7B"integrationId":"go-tracing"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the left navigation menu, select :menuselection:`Data Management`. 
+   #. In the navigation menu, select :menuselection:`Data Management`. 
 
    #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 
@@ -27,10 +27,15 @@ To generate all the basic installation commands for your environment and applica
 
    #. Select the :guilabel:`Go` tile to open the Go guided setup.
 
+Install the Splunk Distribution of OpenTelemetry Go manually
+==================================================================
+
+Follow these instructions to install the Splunk Distribution of OpenTelemetry Go.
+
 .. _install-enable-go-instrumentation:
 
-Install and enable the Go instrumentation
-===================================================================
+Install and activate the Go instrumentation
+--------------------------------------------------------------------
 
 Follow these steps to instrument your application using the Go instrumentation:
 
@@ -104,18 +109,18 @@ Follow these steps to instrument your application using the Go instrumentation:
 
          // ...
 
-#. Enable additional instrumentations. For more information, see :ref:`supported-go-libraries`.
+#. Activate additional instrumentations. For more information, see :ref:`supported-go-libraries`.
 
-#. (Optional) To link APM and RUM data, enable the HTTP instrumentation. See :ref:`server-trace-information-go`.
+#. (Optional) To link APM and RUM data, activate the HTTP instrumentation. See :ref:`server-trace-information-go`.
 
-If no data appears in :strong:`Observability > APM`, see :ref:`common-go-troubleshooting`.
+If no data appears in APM, see :ref:`common-go-troubleshooting`.
 
 .. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your Go application or service manually. See :ref:`go-manual-instrumentation`.
 
 .. _kubernetes_go:
 
 Deploy the Go instrumentation in Kubernetes
-==========================================================
+--------------------------------------------------------------------
 
 To deploy the Go instrumentation in Kubernetes, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
 
@@ -147,12 +152,12 @@ The following example shows how to update a deployment to expose environment var
 
 .. _export-directly-to-olly-cloud-go:
 
-Send data directly to Observability Cloud
-==============================================================
+Send data directly to Splunk Observability Cloud
+--------------------------------------------------------------------
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
-If you need to send data directly to Observability Cloud, set the following environment variables:
+If you need to send data directly to Splunk Observability Cloud, set the following environment variables:
 
 .. tabs::
 
@@ -160,6 +165,7 @@ If you need to send data directly to Observability Cloud, set the following envi
 
       export SPLUNK_ACCESS_TOKEN=<access_token>
       export SPLUNK_REALM=<realm>
+      export OTEL_METRICS_EXPORTER=none
 
    .. code-tab:: shell Windows PowerShell
 
@@ -168,12 +174,12 @@ If you need to send data directly to Observability Cloud, set the following envi
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-#. Open the left navigation menu in Observability Cloud.
+#. Open the navigation menu in Splunk Observability Cloud.
 #. Select :menuselection:`Settings`.
 #. Select your username. 
 
 The realm name appears in the :guilabel:`Organizations` section. 
 
-.. note:: For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
+For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>` and :new-page:`Send data points <https://dev.splunk.com/observability/docs/datamodel/ingest#Send-data-points>`.

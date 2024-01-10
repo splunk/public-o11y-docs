@@ -5,7 +5,7 @@ Third-party software
 ********************
 
 .. meta::
-   :description: Download credits to third-party software included in RUM.
+   :description: View the third-party software components included in Splunk RUM.
 
 Some of the components included in Splunk RUM are licensed under free or open source licenses. We wish to thank the contributors to those projects.
 

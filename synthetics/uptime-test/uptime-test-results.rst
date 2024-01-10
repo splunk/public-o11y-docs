@@ -5,7 +5,7 @@ Interpret Uptime test results
 ******************************************
 
 .. meta::
-    :description: Learn about Uptime test results in Splunk Synthetic Monitoring.
+    :description: Understand the metrics captured by uptime tests in Splunk Synthetic Monitoring and learn how to understand results of an uptime test.
 
 Every run of an Uptime test in Splunk Synthetic Monitoring produces a set of results that help you understand the performance of your application in real time. 
 
@@ -120,11 +120,18 @@ For failed Uptime tests, the Run Results page shows the following additional dia
 - Connection log
 
 
+
+Splunk RUM integration 
+------------------------------------
+Integrate with Splunk RUM so that you can automatically measure Web Vital metrics against your run results. Web vitals capture key metrics that affect user experience and assess the overall performance of your site. For more, see :ref:`rum-synth`.
+
+
+
 .. _uptime-metrics:
 
 Uptime test metrics
 =================================
-Uptime tests capture a set of key metrics that offer insight into your webpage’s performance at a glance. The following table provides a list of these metrics: 
+Uptime tests capture a set of key metrics that offer insight into your webpage's performance at a glance. The following table provides a list of these metrics: 
 
 .. list-table::
    :header-rows: 1

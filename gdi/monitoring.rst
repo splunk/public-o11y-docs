@@ -11,21 +11,14 @@ Configure application exporters and receivers for monitoring
    :maxdepth: 4
    :hidden:
 
-   cadvisor/cadvisor
-   cgroups/cgroups
+   monitors-monitoring/cadvisor
+   monitors-monitoring/cgroups
    Istio <get-data-in/application/istio/istio>
-   jaeger-grpc/jaeger-grpc
-   nagios/nagios
-   prometheus-exporter/prometheus-exporter
-   prometheus-go/prometheus-go
-   prometheus-nginx-ingress/prometheus-nginx-ingress
-   prometheus-nginx-vts/prometheus-nginx-vts
-   prometheus-node/prometheus-node
-   opentelemetry/components/prometheus-receiver
-   signalfx-forwarder/signalfx-forwarder
+   monitors-monitoring/jaeger-grpc
+   monitors-monitoring/nagios
+   monitors-monitoring/signalfx-forwarder
    opentelemetry/components/splunk-apm-exporter
-   velero/prometheus-velero
-   windows/telegraf-win_perf_counters
+   monitors-monitoring/win_perf_counters
 
 These application receivers gather metrics from their associated monitoring applications and the hosts the applications are running on.
 
@@ -34,13 +27,6 @@ These application receivers gather metrics from their associated monitoring appl
 * :ref:`Istio <get-started-istio>`
 * :ref:`jaeger-grpc`
 * :ref:`nagios`
-* :ref:`prometheus-exporter`
-* :ref:`prometheus-go`
-* :ref:`prometheus-nginx-ingress`
-* :ref:`prometheus-nginx-vts`
-* :ref:`prometheus-node`
-* :ref:`prometheus-receiver`
-* :ref:`prometheus-velero`
 * :ref:`signalfx-forwarder`
 * :ref:`telegraf-win-perf-counters`
 

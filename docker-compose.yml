@@ -1,18 +1,5 @@
 version: '3'
 services:
-  ollysite:
-    image: 'nginx:stable-alpine'
-    links:
-      - sphinx
-    depends_on:
-      - sphinx
-    ports:
-      - "9999:80"
-    volumes:
-      - ./_build/html:/usr/share/nginx/html
-    working_dir: /usr/share/nginx/html
-    networks:
-      - sphinx-docs
   sphinx:
     build:
       context: ./.

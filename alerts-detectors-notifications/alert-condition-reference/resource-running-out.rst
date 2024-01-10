@@ -4,8 +4,6 @@
 Resource Running Out
 =============================================================================
 
-.. meta updated 1/23/23
-
 .. meta::
   :description: The Resource Running Out condition alerts when a signal has a certain amount of time before it is exhausted or full.
 
@@ -46,10 +44,6 @@ Basic settings
 
 \* If you specify a metric unit in the plot configuration panel for the signal, the value you enter for Capacity must match the unit you specified. For example, if you specified bytes, you have to specify 100000000000 (a hundred billion) to specify 100 gigabytes. To learn more, see :ref:`specify-unit` and :ref:`plot-config-panel`.
    
-
-..  
-   tbd if this will be implemented. If so, add to the end of the previous para --brs
-   To help you enter the correct value, the equivalent value in a larger unit is displayed to the right as you type the number.
 
 Advanced settings
 =============================================================================
@@ -118,7 +112,7 @@ Further reading
    * - Signal
      - The alert condition applies a rate of change transformation, and this might not interact well with other analytics (especially rolling minimum, mean, maximum transformations).
 
-       .. Joe what does "interact poorly" mean? That they shouldn't be choosing signals that use those analytics functions you have listed? --brs
+       
 
    * - Signal
      - The transformed signal is "hours left." This quantity is negative if the signal goes below the specified minimum value (for Empty) or above the specified capacity (for Capacity). This means you might see negative values for "hours left" in the detector's chart.

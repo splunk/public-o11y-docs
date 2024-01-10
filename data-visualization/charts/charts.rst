@@ -20,9 +20,9 @@ Charts in Splunk Observability Cloud
    Export and share charts<export-and-share-charts>
    gain-insights-through-chart-analytics
 
-Charts enable you to visualize the metrics you are sending to Splunk Observability Cloud.
+Charts enable you to visualize the metrics or logs you can view in Splunk Observability Cloud.
 
-A metric is anything that is measurable (you can assign a numerical value to it) and variable (changes over time).
+A metric is anything that is measurable (you can assign a numerical value to it) and variable (changes over time). A log is an automatically generated, time-stamped record of each event relevant to a specific system. To learn more about Observability Cloud's data model, refer to :ref:`data-model`.
 
 Charts can range from extremely simple (monitor a single metric for a single host in real time) to very sophisticated (apply advanced analytic formulas across several dimensions, compare values for different time periods, configure advanced display settings, and more).
 

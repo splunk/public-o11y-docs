@@ -53,7 +53,7 @@ The width of each bar is an important clue to the performance of your code. The 
    * - Memory
      - How much memory is allocated by a function relative to other stack traces
 
-You can group stack frames and turn them into the root frame by clicking the tile button that appears after expanding a stack frame. Click the button again to restore the view. You can also click the :guilabel:`Total` frame at any time to go back. The following animation shows how to group and ungroup stack frames:
+You can group stack frames and turn them into the root frame by selecting the tile button that appears after expanding a stack frame. Select the button again to restore the view. You can also select the :guilabel:`Total` frame at any time to go back. The following animation shows how to group and ungroup stack frames:
 
 .. image:: /_images/apm/profiling/group-frames.gif
    :alt: Grouping and ungrouping stack frames.
@@ -61,7 +61,7 @@ You can group stack frames and turn them into the root frame by clicking the til
 CPU and memory
 -------------------------------------------------
 
-You can switch the view of the AlwaysOn Profiling flame graph between :guilabel:`CPU` and :guilabel:`Memory` at any time. Memory data only appears if you've enabled memory profiling. See :ref:`profiling-setup-enable-profiler`.
+You can switch the view of the AlwaysOn Profiling flame graph between :guilabel:`CPU` and :guilabel:`Memory` at any time. Memory data only appears if you've activated memory profiling. See :ref:`profiling-setup-enable-profiler`.
 
 The following image shows the memory profiling flame graph for a Java application:
 
@@ -73,7 +73,7 @@ Frame table
 
 In the AlwaysOn Profiling table, :guilabel:`Count` shows how many times a line appeared in stack traces, while :guilabel:`Self time` expresses the time spent executing the function, minus the time spent calling other functions. A high self time value can also indicate performance issues. In some cases it might mean the thread is idle and doesn't consume resources.
 
-When you click a frame, an information panel appears with the amount of call stacks where the code is present. Click :guilabel:`Show thread info` to see which threads contributed call stacks. The following image shows the frame information panel with a list of threads:
+When you select a frame, an information panel appears with the amount of call stacks where the code is present. Select :guilabel:`Show thread info` to see which threads contributed call stacks. The following image shows the frame information panel with a list of threads:
 
 .. image:: /_images/apm/profiling/profiling-thread-info.png
    :alt: Information panel on a highlighted thread.
@@ -95,8 +95,8 @@ In most cases, you open the flame graph following the lead of a problematic span
 
 The top bars of the flame graph, which are the widest, frequently represent framework code, and might be less relevant for troubleshooting. To highlight your application components, type function or class names in the filter and scroll to the highlighted bars. Select each bar to maximize their width and drill down into the methods called from that function.
 
-The structure of each flame graph depends on the amount of profiling data and on the behavior of the application. Forks in the flame graph indicate different code paths in the dataset. Whenever a function calls other functions, its bar has several bars underneath. The wider a bar, the more calls to the function AlwaysOn Profiling captured.
+The structure of each flame graph depends on the amount of profiling data and on the behavior of the application. Forks in the flame graph indicate different code paths in the data set. Whenever a function calls other functions, its bar has several bars underneath. The wider a bar, the more calls to the function AlwaysOn Profiling captured.
 
 When you're examining a frame, the flame graph shows the flow of the code from that point onwards by stacking other frames underneath. Any unusual pattern in the calls originated by the frame can imply issues in your application's code or opportunities for optimization.
 
-For sample use cases featuring the flame graph, see :ref:`profiling-use-case-landingpage`.
+For sample scenarios featuring the flame graph, see :ref:`profiling-scenario-landingpage`.

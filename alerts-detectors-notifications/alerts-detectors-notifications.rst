@@ -4,14 +4,14 @@
 Introduction to alerts and detectors in Splunk Observability Cloud
 **************************************************************************
 
-.. meta updated 1/23/23
+
 
 .. meta::
    :description: Splunk Observability Cloud uses detectors, events, alerts, and notifications to keep you informed when certain criteria are met. When a detector condition is met, the detector generates an event, triggers an alert, and can send one or more notifications.
 
 Splunk Observability Cloud uses :strong:`detectors`, :strong:`events`, :strong:`alerts`, and :strong:`notifications` to keep you informed when certain criteria are met.
 
-Sample use cases of alerts and detectors
+Sample scenarios of alerts and detectors
 ==========================================
 
 - You want a message sent to a Slack channel or to an email address for the Ops team when CPU Utilization has reached the 95th percentile.
@@ -40,7 +40,7 @@ For example, if you have a group of 30 virtual machines that are used to provide
 
 If you want to track whether the CPU utilization remains below 80 for each of those virtual machines, you can create a single detector that queries for the CPU utilization metrics that include the :code:`service:kafka` dimension and evaluates those metrics against the threshold of 80. This single detector triggers individual alerts for each virtual machine whose CPU utilization exceeds the threshold, as if you had 30 separate detectors. You do not need to create 30 individual detectors to monitor each of your 30 virtual machines.
 
-If the population changes because the cluster has grown to 40 virtual machines, you can make a cluster- or service-level detector. If you include the :code:`service:kafka` dimension for the newly-added virtual machines, the existing detector’s query includes all new virtual machines in the cluster in the threshold evaluation.
+If the population changes because the cluster has grown to 40 virtual machines, you can make a cluster- or service-level detector. If you include the :code:`service:kafka` dimension for the newly-added virtual machines, the existing detector's query includes all new virtual machines in the cluster in the threshold evaluation.
 
 Dynamic threshold conditions
 -----------------------------------
@@ -78,6 +78,30 @@ The interaction between detectors, events, alerts, and notifications is as follo
    -  Sends one or more notifications, so people are informed about the alert even if they are not currently monitoring dashboards.
 
 -  When the condition clears, the detector generates a second event and sends a second set of notifications.
+
+The following diagram illustrates the relationship between detectors and alerts. 
+The boxes represent objects relating to the detector, and the diamonds represent processes relating to the detector.
+
+.. mermaid:: 
+  
+  flowchart LR
+
+    accTitle: Alert and detector diagram
+    accDescr: The detector encompasses a signal, an alert rule, and an alert condition. Based on the signal and alert rule, the detector checks whether its alert condition is met. If the alert condition is met, the detector is triggered, and the detector sends an alert, an event, and (optionally) a notification. If the alert condition isn't met, then the detector isn't triggered.
+
+      subgraph Detector
+      Signal --> A{Alert condition met?}
+      B[Alert rule] --> A
+      end
+      A -- yes --> D{Detector triggered}
+      A -- no --> E{Detector not triggered}
+      D --> Alert
+      D --> Event
+      D -.-> F["Notifications (optional)"]
+    
+
+What you can do with alerts and detectors
+==================================================
 
 The following table shows you what you can do with detectors, events, alerts, and notifications:
 
@@ -120,4 +144,3 @@ The following table shows you what you can do with detectors, events, alerts, an
      - :ref:`linking-detectors`
 
 
-|br|

@@ -1,0 +1,42 @@
+name: "Check external links"
+
+on:
+#  push: 
+#    branches: [ main ]
+#  pull_request:
+#    types:
+#      - opened
+#      - synchronize
+#      - reopened
+  schedule: 
+    - cron: "5 8 * * Sun"
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
+
+jobs:
+  test:
+    if: ${{ github.repository == 'splunk/public-o11y-docs' || github.repository == 'splunk/private-o11y-docs' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.11
+      - name: Install pip
+        run: pip3 install --upgrade pip
+      - name: Install requirements
+        run: pip3 install -r requirements.txt --root-user-action=ignore
+      - name: Test the docs
+        run: make linkcheck
+

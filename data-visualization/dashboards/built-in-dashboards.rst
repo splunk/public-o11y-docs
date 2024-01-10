@@ -5,7 +5,7 @@ Built-in dashboards
 ********************
 
 .. meta::
-      :description: Built-in dashboards are automatically created in your organization if you deploy any of the integrations.
+      :description: Monitor services and identify patterns and outliers using built-in dashboards in Splunk Observability Cloud. Learn how to clone or export dashboards. 
 
 Splunk Observability Cloud provides built-in dashboards that give you immediate visibility into the technologies and services being used in your environment.
 
@@ -30,12 +30,12 @@ In a navigator
 To clone a built-in dashboard in a navigator, follow these steps:
 
 #. Select :guilabel:`Infrastructure` from the Splunk Observability Cloud home page.
-#. On the Infratruscture Monitoring landing page, select the navigator that contains the dashboard you want to clone.
+#. On the Infrastructure Monitoring landing page, select the navigator that contains the dashboard you want to clone.
 #. In the :strong:`Dashboard` section, click the :guilabel:`Dashboard actions` menu.
 
    .. image:: /_images/images-dashboard/navigator-dashboard-actions-menu.png
-      :width: 99%
-      :alt: This image shows the Dashboard actions menu in a navigator.
+      :width: 50%
+      :alt: This image shows the Dashboard actions menu (|more|) in a navigator.
 
 #. Select :guilabel:`Save As...`. 
 #. In the :guilabel:`Dashboard Name` field, specify a name for the cloned dashboard. Use a different name from the original dashboard to avoid multiple dashboards with the same name.
@@ -54,8 +54,8 @@ To clone a built-in dashboard from the :strong:`Dashboards` page, follow these s
 #. Click the :guilabel:`Dashboard actions` menu.
 
    .. image:: /_images/images-dashboard/dashboard-page-dashboard-actions-menu.png
-      :width: 99%
-      :alt: This image shows the Dashboard actions menu in a dashboard.
+      :width: 50%
+      :alt: This image shows the Dashboard actions menu (|more|) in a dashboard.
 
 #. Select :guilabel:`Save As...`. 
 #. In the :guilabel:`Dashboard Name` field, specify a name for the cloned dashboard. Use a different name from the original dashboard to avoid multiple dashboards with the same name.
@@ -80,12 +80,12 @@ In a navigator
 To export a dashboard in a navigator, follow these steps:
 
 #. Select :guilabel:`Infrastructure` from the Splunk Observability Cloud home page.
-#. On the Infratruscture Monitoring landing page, select the navigator that contains the dashboard you want to export.
+#. On the Infrastructure Monitoring landing page, select the navigator that contains the dashboard you want to export.
 #. In the :strong:`Dashboard` section, click the :guilabel:`Dashboard actions` menu.
 
    .. image:: /_images/images-dashboard/navigator-dashboard-actions-menu.png
-      :width: 99%
-      :alt: This image shows the Dashboard actions menu in a navigator.
+      :width: 50%
+      :alt: This image shows the Dashboard actions menu (|more|) in a navigator.
 
 #. Select :guilabel:`Export`.
 #. Click :guilabel:`Download`.
@@ -102,8 +102,8 @@ To clone a built-in dashboard from the :strong:`Dashboards` page, follow these s
 #. Click the :guilabel:`Dashboard actions` menu.
 
    .. image:: /_images/images-dashboard/dashboard-page-dashboard-actions-menu.png
-      :width: 99%
-      :alt: This image shows the Dashboard actions menu in a dashboard.
+      :width: 50%
+      :alt: This image shows the Dashboard actions menu (|more|) in a dashboard.
 
 #. Select :guilabel:`Export`.
 #. Click :guilabel:`Download`.

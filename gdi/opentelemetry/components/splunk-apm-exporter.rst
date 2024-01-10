@@ -4,104 +4,81 @@ Splunk APM exporter
 **************************
 
 .. meta::
-      :description: Use this Splunk Observability Cloud integration for the Splunk APM exporter. See benefits, install, configuration, and traces
+      :description: Use the Splunk APM (SAPM) exporter to send traces from multiple nodes or services in a single batch. Read on to learn how to configure the component.
 
-The Splunk Distribution of OpenTelemetry Collector offers support for
-the Splunk APM (SAPM) exporter. The SAPM exporter is in beta, but
-breaking changes will not be introduced in a new release.
+The Splunk APM (SAPM) exporter allows the OpenTelemetry Collector to send traces to Splunk Observability Cloud. The supported pipeline types are ``traces``. See :ref:`otel-data-processing` for more information.
 
-The SAPM exporter builds on the Jaeger protocol and adds additional
-batching on top, which allows the Collector to export traces from
-multiple nodes or services in a single batch. See `SAPM
-protocol <https://github.com/signalfx/sapm-proto/>`__ for complete
-details on the schema.
+Get started
+======================
 
-Review the Collector’s `security
-documentation <https://docs.splunk.com/Observability/gdi/opentelemetry/security.html>`__,
-which contains recommendations on securing sensitive information such as
-the API key required by this exporter.
+.. note:: 
+  
+  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector when deploying in host monitoring (agent) mode in the ``traces`` pipeline. See :ref:`otel-deployment-mode` for more information. 
+  
+  For details about the default configuration, see :ref:`otel-kubernetes-config`, :ref:`linux-config-ootb`, or :ref:`windows-config-ootb`. You can customize your configuration any time as explained in this document.
 
-.. note:: The SAPM exporter only collects trace data.
-
-Installation
-=====================
-
-Follow these steps to deploy the integration:
+Follow these steps to configure and activate the component:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
-   
-   - :ref:`otel-install-linux`
-   
-   - :ref:`otel-install-windows`
-   
-   - :ref:`otel-install-k8s`
+  
+  - :ref:`otel-install-linux`
+  - :ref:`otel-install-windows`
+  - :ref:`otel-install-k8s`
 
-2. Configure the receiver as described in the next section.
-3. Restart the Collector.
+2. Configure the exporter as described in this doc.
+3. Restart the Collector.  
 
-Configuration
-=====================
+Sample configuration
+----------------------
 
-Include the ``sapm`` exporter in the ``exporters`` section of your
-configuration file, as shown in the following example:
+The following example shows a SAPM exporter instance configuration for a maximum of 100 connections and 8 workers:
 
 .. code:: yaml
 
    exporters:
      sapm:
-       access_token: YOUR_ACCESS_TOKEN
+       access_token: <access_token>
        access_token_passthrough: true
-       endpoint: https://ingest.YOUR_SIGNALFX_REALM.signalfx.com/v2/trace
+       endpoint: https://ingest.<realm>.signalfx.com/v2/trace
        max_connections: 100
        num_workers: 8
 
+Next, add the exporter to the ``services`` section of your configuration file:
+
+.. code:: yaml
+
    service:
      pipelines:
-       # To complete the integration, include the exporter in a traces metrics pipeline. 
+       # To complete the configuration, include the exporter in a traces metrics pipeline. 
        traces:
            receivers: [nop]
            processors: [nop]
            exporters: [sapm]
 
-Use the following extended example configuration to activate this
-exporter in the Collector:
+Configuration example with all settings
+----------------------------------------------
+
+The following example shows all available settings:
 
 .. code:: yaml
 
-   receivers:
-     nop:
-
-   processors:
-     nop:
-
    exporters:
-     sapm:
      sapm/customname:
-
        # Endpoint is the destination to where traces are sent in SAPM format.
        # The endpoint must be a full URL and include the scheme, port, and path. 
-       # For example, ``https://ingest.us0.signalfx.com/v2/trace``
+       # For example, https://ingest.us0.signalfx.com/v2/trace
        endpoint: test-endpoint
-
-       # AccessToken is the authentication token provided by Splunk Infrastructure Monitoring.
+       # Authentication token provided by Splunk Observability Cloud.
        access_token: abcd1234
-
-       # NumWorkers is the number of workers that should be used to export traces.
+       # Number of workers that should be used to export traces.
        # The exporter can make as many requests in parallel as the number of workers.
        num_workers: 3
-
-       # MaxConnections is used to set a limit to the maximum idle HTTP connection the exporter can keep open.
+       # Used to set a limit to the maximum idle HTTP connections the exporter can keep open.
        max_connections: 45
-
        access_token_passthrough: false
-       # The option to use the ``com.splunk.signalfx.access_token`` trace resource attribute, if any, as the 
-       # access  token. In either case, this attribute is deleted during final translation. Use this option 
-       # with an identical configuration option for the SAPM receiver to preserve trace origin. The default 
-       # value is ``true``
-
+       # Timeout for every attempt to send data to the back end.
+       # The default value is 5s.
        timeout: 10s
-       # The timeout for every attempt to send data to the back end.
-       # The default value is ``5s``.
        sending_queue:
          enabled: true
          num_consumers: 2
@@ -114,36 +91,31 @@ exporter in the Collector:
 
    service:
      pipelines:
-       # To complete the integration, include the exporter in a traces metrics pipeline. 
        traces:
            receivers: [nop]
            processors: [nop]
            exporters: [sapm]
 
-Configuration options
---------------------------------
+In the endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-The following table shows the configuration options:
+#. Open the navigation menu in Splunk Observability Cloud.
+#. Select :menuselection:`Settings`.
+#. Select your username. 
+
+The realm name appears in the :guilabel:`Organizations` section.
+
+.. note:: To send SAPM data through a proxy, configure proxy settings as environment variables. See :ref:`configure-proxy-collector` for more information.
+
+Settings
+======================
+
+The following table shows the configuration options for the SAPM exporter:
 
 .. raw:: html
 
-   <div class="metrics-standard" category="included" url="hhttps://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/sapm.yaml"></div>
+   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/exporter/sapm.yaml"></div>
 
-Proxy support configuration
---------------------------------
-
-The Collector provides proxy support for the SAPM exporter. Beyond the
-standard YAML configuration, the SAPM exporter uses the net/http package
-and the following proxy environment variables:
-
--  HTTP_PROXY
--  HTTPS_PROXY
--  NO_PROXY
-
-Restart the Collector after adding these environment variables to your
-configuration.
-
-Get help
-================
+Troubleshooting
+======================
 
 .. include:: /_includes/troubleshooting-components.rst

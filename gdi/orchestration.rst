@@ -12,28 +12,29 @@ Configure application receivers for orchestration
    :hidden:
 
    Istio <get-data-in/application/istio/istio>
-   kubernetes-apiserver/kubernetes-apiserver
-   kubernetes-cluster/kubernetes-cluster
+   monitors-orchestration/kubernetes-apiserver
+   monitors-orchestration/kubernetes-cluster
    opentelemetry/components/kubernetes-cluster-receiver
-   kube-controller-manager/kube-controller-manager
-   kubernetes-events/kubernetes-events
-   kubernetes-proxy/kubernetes-proxy
-   kubernetes-scheduler/kubernetes-scheduler
-   kubelet-stats/kubelet-stats
+   monitors-orchestration/kubernetes-controller-manager
+   monitors-orchestration/kubernetes-events
+   monitors-orchestration/kubernetes-network-stats
+   monitors-orchestration/kubernetes-proxy
+   monitors-orchestration/kubernetes-scheduler
    opentelemetry/components/kubelet-stats-receiver
-   marathon/marathon
-   openshift-cluster/openshift-cluster
+   monitors-orchestration/mesos-marathon
+   monitors-orchestration/openshift-cluster
 
 These application receivers gather metrics from their associated orchestration-related applications and the hosts the applications are running on.
 
 * :ref:`get-started-istio`
+* :ref:`kubernetes-apiserver`
 * :ref:`kubernetes-cluster`
 * :ref:`kubernetes-cluster-receiver`
 * :ref:`kube-controller-manager`
 * :ref:`kubernetes-events`
+* :ref:`kubelet-stats`
 * :ref:`kubernetes-proxy`
 * :ref:`kubernetes-scheduler`
-* :ref:`kubelet-stats`
 * :ref:`kubelet-stats-receiver`
 * :ref:`marathon`
 * :ref:`openshift-cluster`

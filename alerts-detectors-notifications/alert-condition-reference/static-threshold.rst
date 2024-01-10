@@ -4,7 +4,7 @@
 Static Threshold
 =============================================================================
 
-.. meta updated 1/23/23
+
 
 .. meta::
   :description: The Static Threshold condition alerts when a signal goes above or below a static threshold, or is within or outside of a range.

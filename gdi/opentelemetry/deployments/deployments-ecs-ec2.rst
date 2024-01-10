@@ -1,8 +1,8 @@
 .. _deployments-ecs-ec2:
 
-*******************************
-Amazon ECS EC2 
-*******************************
+********************************************************
+Deploy the Collector with Amazon ECS EC2
+********************************************************
 
 .. meta::
       :description: Deploy the Splunk Observability Cloud OpenTelemetry Collector as a Daemon service in an Amazon ECS EC2 cluster.
@@ -18,7 +18,7 @@ Choose one of the following Collector configuration options:
 To access the guided setup for AWS integration, perform the following steps:
 
 #. Log in to Splunk Observability Cloud.
-#. On the left navigation menu, select :guilabel:`Data Management`.
+#. On the navigation menu, select :guilabel:`Data Management`.
 #. On the Integrate Your Data page, select the tile for :guilabel:`Amazon ECS EC2`.
 #. Follow the steps provided in the guided setup.
 
@@ -47,7 +47,7 @@ The Collector is configured to use the default configuration file ``/etc/otel/co
    
    You do not need the ``smartagent/ecs-metadata`` metrics receiver in the default configuration file if all you want is tracing. You can take the default configuration, remove the receiver, then use the configuration in a custom configuration following the directions in :ref:`ecs-ec2-custom-config`.
 
-The configured network mode for the task is ``host``. This means that task metadata endpoint version 2 used by the ``smartagent/ecs-metadata`` receiver is not enabled by default. See :new-page:`task metadata endpoint <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-metadata-endpoint.html>` to determine if task metadata endpoint version 3 is enabled by default for your task. If this version is enabled, then add the following to the environment list in the task definition:
+The configured network mode for the task is ``host``. This means that task metadata endpoint version 2 used by the ``smartagent/ecs-metadata`` receiver is not activated by default. See :new-page:`task metadata endpoint <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-metadata-endpoint.html>` to determine if task metadata endpoint version 3 is activated by default for your task. If this version is activated, then add the following to the environment list in the task definition:
 
 .. code-block:: none
 
@@ -97,6 +97,7 @@ Use extension Amazon Elastic Container Service Observer (``ecs_observer``) in yo
 
 .. code-block:: yaml
 
+
    ecs:List*
    ecs:Describe*
 
@@ -105,6 +106,7 @@ The following custom configuration examples show the ``ecs_observer`` configured
 The results are written to ``/etc/ecs_sd_targets.yaml``. The ``prometheus`` receiver is configured to read targets from the results file. The values for ``access_token`` and ``realm`` are read from the ``SPLUNK_ACCESS_TOKEN`` and ``SPLUNK_REALM`` environment variables , which must be specified in your container definition.
 
 .. code-block:: yaml
+
 
    extensions:
      ecs_observer:

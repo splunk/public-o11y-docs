@@ -4,7 +4,7 @@
 Manage notification subscribers 
 *****************************************************************
 
-.. meta updated 1/23/23
+
 
 .. meta::
   :description: Learn how to set recipients for your Observability Cloud notifications, so that new alerts and their resolution get to the right people in your organization.
@@ -21,7 +21,7 @@ To manage the notification recipients of existing detectors:
 - :ref:`Subscribe to a detector using the bell icon <subscribe>`.
 - :ref:`Edit the detector and change its rules <build-rules>`.
 
-.. note:: If you're not receiving notifications as expected, see if any detector rules have been disabled (see :ref:`manage-rules`). Also check the |mtab| to make sure notifications haven't been :ref:`temporarily suspended <mute-notifications>`.
+.. note:: If you're not receiving notifications as expected, see if any detector rules have been deactivated (see :ref:`manage-rules`). Also check the |mtab| to make sure notifications haven't been :ref:`temporarily suspended <mute-notifications>`.
 
 .. _manage-subs:
 
@@ -31,7 +31,7 @@ Manage subscribers from the Detectors tab
 To manage the subscribers to a specific detector:
 
 #. Go to :guilabel:`Alerts` and select the :guilabel:`Detectors` tab.
-#. Click the more icon (|more|) of the detector you want to edit.
+#. Select the more icon (|more|) of the detector you want to edit.
 #. In the actions menu, select :menuselection:`Manage Subscriptions`.
 #. In the dialog box, select :guilabel:`Add Recipient`.
 
@@ -46,7 +46,7 @@ You can manage subscriptions to any detector linked to a chart by using the dete
 
 To subscribe to a linked detector from a chart:
 
-#. Click the :guilabel:`Detector` menu (bell icon).
+#. Select the :guilabel:`Detector` menu (bell icon).
 #. Select the detector, then select :guilabel:`Subscribe`.
 
    .. image:: /_images/alerts-detectors-notifications/manage-notifications/detector-subscribe.png
@@ -60,7 +60,7 @@ Remove notification recipients from a detector
 
 To stop sending notifications to a recipient, open the detector from the :guilabel:`Detectors` tab and edit each rule. 
 
-You can also :ref:`manage-subs` to see a list of current recipients and click the :guilabel:`X` next to any recipient to unsubscribe them.
+You can also :ref:`manage-subs` to see a list of current recipients and select the :guilabel:`X` next to any recipient to unsubscribe them.
 
 Do more with your notifications
 =============================================================

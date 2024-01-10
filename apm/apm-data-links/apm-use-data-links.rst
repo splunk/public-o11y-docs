@@ -4,10 +4,8 @@
 Access relevant resources linked to APM services, traces, and spans
 **********************************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
-   :description: Get stated with global data links using this use case. 
+   :description: Get stated with global data links using this scenario. 
 
 Use global data links to access relevant resources directly from Splunk APM properties, including services, traces, spans, and span tags.
 
@@ -25,7 +23,7 @@ Access global data links for a service
 
 #. Select :guilabel:`APM`. The Overview page displays.
 
-#. On the :guilabel:`Services` tab, click the :guilabel:`More` icon for the service you're investigating. The menu displays global data links for the service.
+#. On the :guilabel:`Services` tab, select the :guilabel:`More` icon for the service you're investigating. The menu displays global data links for the service.
 
 **To view global data links for a service on the Explore page:**
 
@@ -33,11 +31,11 @@ Access global data links for a service
 
 #. Select :guilabel:`APM`. The Overview page displays.
 
-#. In the sidebar, click the :guilabel:`Explore` card. The Explore page displays.
+#. In the sidebar, select the :guilabel:`Explore` card. The Explore page displays.
 
-#. In the service map, click the service you're investigating. The service detail drawer displays.
+#. In the service map, select the service you're investigating. The service detail drawer displays.
 
-#. In the service detail drawer, click the :guilabel:`More` icon next to the service name. The menu displays global data links for the service.
+#. In the service detail drawer, select the :guilabel:`More` icon next to the service name. The menu displays global data links for the service.
 
 
 Access global data links for a trace
@@ -49,11 +47,11 @@ Access global data links for a trace
 
 #. Select :guilabel:`APM`. The Overview page displays.
 
-#. In the sidebar, click the :guilabel:`Traces` card. The Traces page displays.
+#. In the sidebar, select the :guilabel:`Traces` card. The Traces page displays.
 
-#. Click the trace ID you're investigating. The trace ID detail sidebar displays.
+#. Select the trace ID you're investigating. The trace ID detail sidebar displays.
 
-#. In the trace detail sidebar, click the :guilabel:`More` icon next to the :guilabel:`Trace ID` value. The menu displays global data links for the trace. The :guilabel:`More` icon displays only if global data links have been created for the trace.
+#. In the trace detail sidebar, select the :guilabel:`More` icon next to the :guilabel:`Trace ID` value. The menu displays global data links for the trace. The :guilabel:`More` icon displays only if global data links were created for the trace.
 
 
 Access global data links for a span
@@ -65,15 +63,15 @@ Access global data links for a span
 
 #. Select :guilabel:`APM`. The Overview page displays.
 
-#. In the sidebar, click the :guilabel:`Traces` card. The Traces page displays.
+#. In the sidebar, select the :guilabel:`Traces` card. The Traces page displays.
 
-#. Click the :guilabel:`Trace ID` value you're investigating.
+#. Select the :guilabel:`Trace ID` value you're investigating.
 
-#. On the :guilabel:`Waterfall` tab, click a :guilabel:`Service: Operation` value you're interested in.
+#. On the :guilabel:`Waterfall` tab, select a :guilabel:`Service: Operation` value you're interested in.
 
-#. Click the :guilabel:`More` icon next to the :guilabel:`Span ID` value. The menu displays global data links for the span. The :guilabel:`More` icon displays only if global data links have been created for the span.
+#. Select the :guilabel:`More` icon next to the :guilabel:`Span ID` value. The menu displays global data links for the span. The :guilabel:`More` icon displays only if global data links have been created for the span.
 
-#. If the span has a parent, you can click the :guilabel:`More` icon next to the :guilabel:`Parent ID` value. The menu displays global data links for the span. The :guilabel:`More` icon displays only if global data links have been created for the span.
+#. If the span has a parent, you can select the :guilabel:`More` icon next to the :guilabel:`Parent ID` value. The menu displays global data links for the span. The :guilabel:`More` icon displays only if global data links have been created for the span.
 
 
 Access global data links for a span tag
@@ -85,10 +83,10 @@ Access global data links for a span tag
 
 #. Select :guilabel:`APM`. The Overview page displays.
 
-#. In the sidebar, click the :guilabel:`Traces` card. The Traces page displays.
+#. In the sidebar, select the :guilabel:`Traces` card. The Traces page displays.
 
-#. Click the :guilabel:`Trace ID` value you're investigating.
+#. Select the :guilabel:`Trace ID` value you're investigating.
 
-#. On the ::guilabel:`Waterfall` tab, click a :guilabel:`Service: Operation` value you're interested in.
+#. On the ::guilabel:`Waterfall` tab, select a :guilabel:`Service: Operation` value you're interested in.
 
-#. In the :guilabel:`Tags` section, click the :guilabel:`More` icon next to a span tag field-value pair you're interested in. The menu displays global data links for the span tag. The :guilabel:`More` icon displays only if global data links have been created for the span tag.
+#. In the :guilabel:`Tags` section, select the :guilabel:`More` icon next to a span tag field-value pair you're interested in. The menu displays global data links for the span tag. The :guilabel:`More` icon displays only if global data links have been created for the span tag.

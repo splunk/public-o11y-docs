@@ -24,7 +24,7 @@ As a result, the metrics for calculating usage depend on the subscription plan t
 
 To see all of the organization metrics for APM, see :ref:`Usage metrics for Splunk Observability Cloud <org-metrics>`.
 
-To see the usage charts and metrics for your subscription plan, go to :guilabel:`Settings > Subscription Usage` and select the :strong:`APM` tab. Depending on your org subscription model, this might be :guilabel:`Settings > Billing and Usage`.  The following sections detail the metrics for TAPM and host subscription plans respectively.
+To see the usage charts and metrics for your subscription plan, go to :guilabel:`Settings > Subscription Usage` and select the :strong:`APM` tab. Depending on your org subscription model, this might be :guilabel:`Settings > Billing and Usage`. The following sections detail the metrics for TAPM and host subscription plans respectively.
 
 .. _tapm_subscription_plans:
 
@@ -114,16 +114,16 @@ For more information about APM usage reports, see :ref:`view-apm-billing-reports
 Subscription usage report for hosts and containers
 =========================================================
 
-For host subscription plans, you can request and download reports that show which hosts and containers are sending APM data over a specific minute. This can help you identify which hosts and containers are contributing to your subscription usage.
+For host subscription plans, you can request and download reports that show which hosts and containers are sending APM data over a specific minute. This can help you identify which hosts and containers are contributing to your subscription usage. You can generate and download reports within the retention period for traces. See :ref:`apm-data-retention` for more information.
 
 To download a subscription usage report, do the following:
 
-- Go to :menuselection:`Settings > Subscription Usage` and select the :strong:`APM` tab.
+- Go to :menuselection:`Settings` then :menuselection:`Subscription Usage` and select the :guilabel:`APM` tab.
 - Expand the :guilabel:`Hosts` chart or the :guilabel:`Containers` chart.
 - Select an hour of time in the chart.
 - Select a specific minute within the hour.
-- Click :guilabel:`Download Data` to download the CSV file.
+- Select :guilabel:`Download Data` to download the CSV file.
 
 For each selected minute, the report shows the attributes or tags associated with the hosts and containers that sent data to Splunk APM. You might see different tags, like ``AWSUniqueId``, ``container_id``,  ``gcp_id``, and so on depending on the source of the host or container observed and the version of your instrumentation agent.
 
-.. note:: You can generate and download reports within the retention period for traces. See :ref:`apm-data-retention` for more information.
+.. caution:: For Kubernetes deployments, the Kubernetes attributes processor extracts default attributes extracted by the processor, such as ``k8s.pod.name``, are required for accurate subscription usage. Don’t remove the Kubernetes attributes processor from your configuration. See :ref:`kubernetes-attributes-processor` for more information.

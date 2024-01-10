@@ -1,38 +1,44 @@
 .. _otel-data-processing:
 
 *********************************************************************
-Configure pipelines
+Process your data with pipelines 
 *********************************************************************
 
 .. meta::
       :description: Learn how to process data collected with the Splunk Distribution of OpenTelemetry Collector.
 
-A pipeline defines a path the data follows in the Collector starting from reception, then further processing or modification, and finally exiting the Collector through exporters.
+A pipeline defines the path the ingested data follows in the Collector, starting from reception, then further processing or modification, and finally when data exits the Collector through exporters. 
 
-Pipelines operate on three data types: logs, traces, and metrics. The data type is a property of the pipeline defined by its configuration. Receivers, exporters, and processors used in a pipeline must support the particular data type, otherwise the "ErrDataTypeIsNotSupported" error message is reported when the configuration is loaded.
+Pipelines operate on three data types: logs, traces, and metrics. To learn more about data in Splunk Observability Cloud, see :ref:`data-model`.
 
-There can be one or more receivers in a pipeline. Data from all receivers is pushed to the first processor, which performs processing on it and then pushes it to the next processor and so on until the last processor in the pipeline pushes the data to the exporters. Each exporter gets a copy of each data element. The last processor uses a data fan-out connector to fan out (distribute) the data to multiple exporters.
+.. note:: See how to perform common actions and tasks with the Collector at :ref:`collector-how-to`.
 
-The pipeline is constructed during Collector startup based on the pipeline definition. See :ref:`otel-components`.
-
-Common processing scenarios
+Define the pipeline
 =========================================
+
+The pipeline is constructed during Collector startup based on the pipeline definition. See :ref:`otel-components` to understand the behavior of each component. 
+
+To define the pipeline, first you need to specify a data type in your pipeline configuration. All the receivers, exporters, and processors you use in a pipeline must support the particular data type, otherwise you'll get the ``ErrDataTypeIsNotSupported`` error message when the configuration is loaded. 
+
+A pipeline can contain one or more receivers. Data from all receivers is pushed to the first processor, which performs processing on it and then pushes it to the next processor and so on until the last processor in the pipeline pushes the data to the exporters. Each exporter gets a copy of each data element. The last processor uses a data fan-out connector to fan out (distribute) the data to multiple exporters.
+
+Example of a pipeline configuration
+--------------------------------------------------------------------
+
 A pipeline configuration typically looks like this:
 
 .. code-block:: yaml
 
-   service:
-     pipelines:
-     # Pipelines can contain multiple subsections, one per pipeline.
-       traces:
-       # Traces is the pipeline type.
-         receivers: [otlp, jaeger, zipkin]
-         processors: [memory_limiter, batch]
-         exporters: [otlp, jaeger, zipkin]
+  service:
+    pipelines:
+    # Pipelines can contain multiple subsections, one per pipeline.
+      traces:
+      # Traces is the pipeline type.
+        receivers: [otlp, jaeger, zipkin]
+        processors: [memory_limiter, batch]
+        exporters: [otlp, splunk_hec, jaeger, zipkin]
 
-|br|
-
-This example defines a pipeline for ``traces``, with three receivers, two processors, and three exporters. The following table describes the receivers, processors, and exporters used in this example.
+This example defines a pipeline for ``traces``, with three receivers, two processors, and four exporters. The following table describes the receivers, processors, and exporters used in this example. For more details, see :ref:`Collector components <otel-components>`.
 
 .. list-table::
    :widths: 25 50 25
@@ -60,25 +66,14 @@ This example defines a pipeline for ``traces``, with three receivers, two proces
      - ``otlp``: Exports data through gRPC using OTLP format. By default, this exporter requires TLS and offers queued retry capabilities.
      - Traces, metrics
    * - Exporter
+     - ``HEC``: Sends data to Splunk HTTP Event Collector (HEC) endpoints.
+     - Metrics, logs     
+   * - Exporter
      - ``jaeger``: Exports data through gRPC to Jaeger destinations. By default, this exporter requires TLS and offers queued retry capabilities.
      - Traces
    * - Exporter
      - ``zipkin``: Exports data to a Zipkin server. By default, this exporter requires TLS and offers queued retry capabilities.
      - Traces
-
-Processing logs
-=========================================
-
-See :ref:`logs-pipeline`.
-
-Processing metrics
-=========================================
-
-See :ref:`org-metrics` and :ref:`otel-tags`.
-
-Processing traces
-==========================================
-See :ref:`apm-traces-spans`.
 
 Metadata transformations
 ============================================
@@ -87,6 +82,7 @@ Metadata refers to the name/value pair added to telemetry data. OpenTelemetry ca
 
 Attributes
 --------------------------
+
 Attributes are a list of zero or more key-value pairs. An attribute must have the following properties:
 
 * The attribute key, which must be a non-null and non-empty string.
@@ -103,11 +99,41 @@ Attribute values of ``null`` are not valid and attempting to set a ``null`` valu
 
 Labels
 -----------------------------------------
+
 Labels are name/value pairs added to metric data points. Labels are deprecated from the OpenTelemetry specification. Use attributes instead of labels.
 
 Fields
 ---------------------------------------
+
 Fields are name/value pairs added to log records. Each record contains two kinds of fields:
 
 * Named top-level fields of specific type and meaning.
 * Fields stored as ``map<string, any>``, which can contain arbitrary values of different types. The keys and values for well-known fields follow semantic conventions for key names and possible values that allow all parties that work with the field to have the same interpretation of the data.
+
+.. _pipelines-next:
+
+Next steps: See and manage the data you ingested
+==================================================================================
+
+After you've ingested and processed your data using the Collector, you can see the final, exported version in Splunk Observability Cloud. 
+
+See and manage logs
+---------------------------------------
+
+To see and manage your logs, use :ref:`lo-connect-landing`.
+
+.. caution:: Splunk Log Observer is no longer available for new users. You can continue to use Log Observer if you already have an entitlement. Learn more in :ref:`logs-logs`.
+
+See and manage metrics
+---------------------------------------
+
+Splunk Observability Cloud offers several tools to track and manage your metrics:
+
+* :ref:`metrics-finder-and-metadata-catalog`.
+* See :ref:`metrics-pipeline` to manage metrics. 
+* See also :ref:`org-metrics` for metrics generated by Splunk Observability Cloud. 
+
+See and manage spans, traces, and tags
+---------------------------------------
+
+See :ref:`apm-traces-spans` and :ref:`otel-tags`.

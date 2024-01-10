@@ -7,7 +7,7 @@ Connect .NET trace data with logs for Splunk Observability Cloud
 .. meta::
    :description: Configure .NET logging libraries to include tracing attributes provided automatically by the SignalFx Instrumentation for .NET.
 
-You can configure logging libraries to include tracing attributes provided automatically by the SignalFx Instrumentation for .NET. Use the metadata to correlate traces with log events and explore logs in Splunk Observability Cloud.
+You can configure logging libraries to include tracing attributes provided automatically by the SignalFx Instrumentation for .NET. Use the metadata to correlate traces with log events and explore logs in Splunk.
 
 .. _dotnet-traces-logs-requirements:
 
@@ -24,7 +24,7 @@ The SignalFx Instrumentation supports the following logging libraries:
      - Versions
      - Layouts
    * - ILogger
-     - 2.0.0 to 6.x.x
+     - 2.5.0 to 6.x.x
      - * JSON format: ``json`` from the ``NetEscapades.Extensions.Logging`` package
    * - Log4Net
      - 1.0.0 to 2.x.x
@@ -41,10 +41,10 @@ The SignalFx Instrumentation supports the following logging libraries:
 
 .. _dotnet-enable-log-correlation:
 
-Enable log correlation
+Activate log correlation
 ============================
 
-To enable log correlation, set the ``SIGNALFX_LOGS_INJECTION`` environment variable to ``true`` before running your instrumented application. 
+To activate log correlation, set the ``SIGNALFX_LOGS_INJECTION`` environment variable to ``true`` before running your instrumented application. 
 
 .. _dotnet-include-trace-data:
 
@@ -158,7 +158,7 @@ See :ref:`logs-processors` for more information on how to define log transformat
 ILogger
 -------------------------
 
-When using the ``NetEscapades.Extensions.Logging.RollingFile`` package, enable the ``IncludeScopes`` option and use the ``json`` formatter. For example:
+When using the ``NetEscapades.Extensions.Logging.RollingFile`` package, activate the ``IncludeScopes`` option and use the ``json`` formatter. For example:
 
 .. code-block:: csharp
 
@@ -171,6 +171,8 @@ When using the ``NetEscapades.Extensions.Logging.RollingFile`` package, enable t
          opts.IncludeScopes = true; // addition
       })
    );
+
+.. note:: SignalFx Instrumentation for .NET only supports ILogger 2.5.0 or higher.
 
 Log correlation also works when ILogger is wrapping other supported loggers.
 

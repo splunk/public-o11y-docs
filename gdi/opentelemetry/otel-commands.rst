@@ -90,7 +90,7 @@ Syntax
    splunk-otel-collector-chart/splunk-otel-collector \
    -f ~/workshop/k3s/otel-collector.yaml
 
-You can also set Helm values as arguments using a YAML file. For example, after creating a YAML file named ``my_values.yaml``, run the following command to deploy the Helm chart:
+You can also set Helm values as arguments using a YAML file. For example, after creating a YAML file named my_values.yaml, run the following command to deploy the Helm chart:
 
 .. code-block:: bash
   
@@ -544,7 +544,7 @@ Description
 
 Check the status of the collector on the host. Only available for :new-page:`Linux <https://github.com/signalfx/splunk-otel-collector/blob/main/docs/getting-started/linux-installer.md>`.
 
-Additionaly, you might use the :new-page:`Health Check extension <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/extension/healthcheckextension/README.md>`, which enables to probe an HTTP url to check the status of the OpenTelemetry Collector.
+Additionally, you can use the :new-page:`Health Check extension <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/extension/healthcheckextension/README.md>`, which activates to probe an HTTP url to check the status of the OpenTelemetry Collector.
 
 Syntax
 ---------------

@@ -1,7 +1,7 @@
 .. _supported-data-sources:
 
 ********************************************************************************
-Supported integrations
+Supported integrations in Splunk Observability Cloud
 ********************************************************************************
 
 .. meta::
@@ -18,7 +18,7 @@ Amazon Web Services
 To learn about AWS and Splunk Observability Cloud, read the following: 
 
 * :ref:`get-started-aws`
-* Refer to the AWS official documentation for a list of the available AWS metrics and other data, or read about :ref:`the metadata Observability Cloud provides <aws-infra-metadata>`
+* Refer to the AWS official documentation for a list of the available AWS metrics and other data, or read about :ref:`the metadata Splunk Observability Cloud provides <aws-infra-metadata>`
 * :ref:`aws-logs`
 * :ref:`infrastructure-aws`
 
@@ -679,7 +679,9 @@ To learn about GCP and Splunk Observability Cloud, read the following:
 * :ref:`gcp-logs`
 * :ref:`infrastructure-gcp`
 
-The following GCP services send metrics to Infrastructure Monitoring:
+Observability Cloud supports certain services by default, but you can add any other GCP service you need to monitor, as explained in :ref:`step 8 of Start the integration <gcp-three>`. 
+
+The following GCP services send metrics to Infrastructure Monitoring out-of-the-box:
 
 .. list-table::
   :header-rows: 1
@@ -796,7 +798,7 @@ To learn about Azure and Splunk Observability Cloud, read the following:
 * :ref:`ingest-azure-log-data`
 * :ref:`infrastructure-azure`
 
-The following Azure services send metrics to Infrastructure Monitoring:
+The following Azure services send metrics to Infrastructure Monitoring out-of-the-box:
 
 .. list-table::
   :header-rows: 1
@@ -1061,7 +1063,7 @@ Install the Splunk Distribution of OpenTelemetry Collector on your infrastructur
 APM instrumentation
 --------------------------------------------
 
-Instrument your applications to send metrics and traces to Observability Cloud.
+Instrument your applications to send metrics and traces to Splunk Observability Cloud.
 
 .. list-table::
    :header-rows: 1
@@ -1089,7 +1091,7 @@ Instrument your applications to send metrics and traces to Observability Cloud.
      - :strong:`X`
      -
 
-   * - :ref:`Microsoft .NET <dotnet>`
+   * - :ref:`Microsoft .NET <microsoft-dotnet>`
      -
      - :strong:`X`
      -
@@ -1148,7 +1150,7 @@ Application receivers
 
 An application receiver gathers metrics from its associated application and the host the application is running on and sends them to Infrastructure Monitoring.
 
-.. using an include for this table because it also appears on gdi/index.rst
+
 
 .. include:: /_includes/application-receiver-table.rst
 
@@ -1168,17 +1170,17 @@ Community integrations
 For information about these integrations:
 
 #. Log in to Splunk Observability Cloud
-#. In the left navigation menu, select :menuselection:`Data Management`. 
+#. In the navigation menu, select :menuselection:`Data Management`. 
 #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 #. In the integration filter menu, select :guilabel:`All`.
 #. In the :guilabel:`Search` field, search for the name of the community integration.
-#. Select the community integration's tile to display its details.
+#. Select the community integration tile to display its details.
 
 
 Notification services
 --------------------------------------------
 
-These integrations enable you to send Observability Cloud alert notifications to the following third-party notification services:
+These integrations let you send Splunk Observability Cloud alert notifications to the following third-party notification services:
 
 - Amazon EventBridge
 - BigPanda
@@ -1198,10 +1200,10 @@ For more information about integrating with notification services, see :ref:`adm
 Login services
 --------------------------------------------
 
-These login service integrations enable your users to single sign-on (SSO) to Observability Cloud using a third-party identity provider (IdP) that uses SAML SSO or a custom URL that you specify.
+These login service integrations allow your users to single sign-on (SSO) to Splunk Observability Cloud using a third-party identity provider (IdP) that uses SAML SSO or a custom URL that you specify.
 
-- Active Directory FS
-- Azure Active Directory
+- Microsoft ADFS
+- Microsoft Entra ID (formerly Azure Directory)
 - Google Cloud Identity
 - Google Sign-In
 - Okta
@@ -1215,7 +1217,7 @@ For more information about configuring an SSO integration, see :ref:`sso-label`.
 Data link destinations
 --------------------------------------------
 
-Data links enable you to link metadata to the following destinations outside of Observability Cloud:
+Data links let you link metadata to the following destinations outside of Splunk Observability Cloud:
 
 - Splunk Cloud Platform
 - Splunk Enterprise

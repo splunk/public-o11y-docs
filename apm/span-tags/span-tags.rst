@@ -4,8 +4,6 @@
 Analyze services with span tags and MetricSets in Splunk APM
 *************************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn how to use span tags to add additional context about the operations that spans represent, so that you can drill deeply into service performance. 
 
@@ -19,6 +17,7 @@ Analyze services with span tags and MetricSets in Splunk APM
    index-tag-tips
    cmms
    troubleshoot-mms
+   migrate-apm-custom-reporting
 
 
 Use span tags to add additional context about the operations that spans represent, so that you can drill deeply into service performance.
@@ -44,7 +43,7 @@ Indexing a span tag means APM automatically generates :new-page-ref:`troubleshoo
 .. raw:: html
 
   <embed>
-    <h2>Use cases for indexed span tags and Troubleshooting MetricSets</h2>
+    <h2>Scenarios for indexed span tags and Troubleshooting MetricSets</h2>
   </embed>
 
 

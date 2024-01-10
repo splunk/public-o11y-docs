@@ -4,7 +4,7 @@
 View and manage permissions for detectors
 ********************************************************************************
 
-.. meta updated 1/23/23
+
 
 .. meta::
    :description: Learn how to manage access permissions for detectors.
@@ -54,9 +54,9 @@ To grant write permissions for a detector, follow these steps:
 #. To start using specific write permissions for a detector,
    uncheck :guilabel:`Anyone in this organization can edit`. You are now the
    only user who can edit the item.
-#. Click :guilabel:`Add user or team`, then select the users or teams to whom
+#. Select :guilabel:`Add user or team`, then select the users or teams to whom
    you want to grant write permissions for the item.
-#. Click :guilabel:`Save`
+#. Select :guilabel:`Save`
 
 .. _procedure-revoke-write-permissions:
 
@@ -66,8 +66,8 @@ Revoke write permissions for detectors
 To revoke write permissions for a detector, follow these steps:
 
 #. Display the permissions for the item by selecting the detector's actions menu (|more|) and selecting :guilabel:`Permissions`.
-#. To remove a user or team, click the :guilabel:`x` next to the user or team name.
-#. Click :guilabel:`Save`
+#. To remove a user or team, select the :guilabel:`x` next to the user or team name.
+#. Select :guilabel:`Save`
 
 .. note:: Important
 

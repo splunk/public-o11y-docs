@@ -4,6 +4,10 @@
 Create custom events
 ********************************
 
+.. meta::
+   :description: Use custom events to capture metrics (errors, page loads, and core web vitals) specific to your organization's use cases, such as understanding drop off rates during a checkout workflow. 
+
+   
 Create custom events to capture meaningful metrics about customer journeys and user behavior on your site. Custom events support filtering by tags and the ability to add custom attributes.  
 
 How custom events can add value to your organization  
@@ -99,6 +103,17 @@ The following examples show how to create a custom event for browser, Android, a
             //...
                span.end() // You can also use defer for this
          }
+
+      This example shows how to record an event with no duration:
+
+      .. code-block:: swift
+
+         let dictionary: NSDictionary = [
+                           "attribute1": "hello",
+                           "attribute2": "world!",
+                           "attribute3": 3
+         ]
+         SplunkRum.reportEvent(name: "testEvent", attributes: dictionary)
 
 Advanced configurations
 ========================

@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-sending-phone-numbers:
 
 Sending phone numbers for voice and SMS

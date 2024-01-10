@@ -22,7 +22,7 @@ To configure a new rule from Splunk APM, follow these steps. There is a differen
 
 1. Go to :strong:`Data Configuration > Business Workflow`.
 
-2. Click :strong:`New Rule`.
+2. Select :strong:`New Rule`.
 
 3. Select one of the following options from the :strong:`Rule Type` drop-down:
 
@@ -45,13 +45,13 @@ To configure a new rule from Splunk APM, follow these steps. There is a differen
 
    :strong:`Target Service` prompts you to select a service and specify the :strong:`Source of Workflow Name`, which is extra metadata to view about the workflow. You can select to correlate traces for a service by an endpoint for the initiating span or a span tag value.
 
-4. Click :strong:`Create` to save your changes and create the rule.
+4. Select :strong:`Create` to save your changes and create the rule.
 
 5. View the list of rules to confirm the rule you just created is enabled. 
 
 6. By default, the newest rule has the highest priority. This means Splunk APM applies the new rule before applying any other rules. If there are other rules you want to apply first, adjust the priority of the new rule.
 
-7. Click :strong:`Save Changes` to apply the new rule and priority list.
+7. Select :strong:`Save Changes` to apply the new rule and priority list.
 
 When to keep or disable the default rule
 ========================================
@@ -63,7 +63,7 @@ In systems where many traces have the same initiating operations, for example be
 Rule behavior and limits
 ========================
 
-To reduce the likelihood of partial rule changes generating unexpected results, changes to rules are accumulated throughout a single computing session and applied all together when you click :strong:`Apply Changes`. Change encompasses all of the following:
+To reduce the likelihood of partial rule changes generating unexpected results, changes to rules accumulate throughout a single computing session and applied all together when you select :strong:`Apply Changes`. Change encompasses all of the following:
 
 - Creating rules
 
@@ -71,11 +71,11 @@ To reduce the likelihood of partial rule changes generating unexpected results, 
 
 - Deleting or disabling rules
 
-The Business Workflow configuration UI displays rules numbered in continuous sequence 1 to ``n``, regardless of whether those rules are enabled or disabled. Because each trace belongs to only one workflow rule, priority matters. When multiple rules could apply to the same trace, that trace is matched to the highest priority rule. Rule creation and configuration is governed by the following properties:
+The Business Workflow configuration UI displays rules numbered in continuous sequence 1 to ``n``, regardless of whether those rules are active or not. Because each trace belongs to only one workflow rule, priority matters. When multiple rules can apply to the same trace, that trace is matched to the highest priority rule. Rule creation and configuration is governed by the following properties:
 
 - The limit on the number of rules you can have is 99.
 
-- You can enable or disable a rule using its toggle switch without affecting the content of the rule.
+- You can turn a rule on or off using its toggle switch without affecting the content of the rule.
 
 - Using the directional arrows in the UI to move a rule up or down in the list changes the rule priority relative to other rules. Rules at the beginning of the list have higher priority than rules at the end of the list.
 

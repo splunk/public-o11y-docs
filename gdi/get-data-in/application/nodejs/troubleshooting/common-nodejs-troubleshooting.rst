@@ -7,7 +7,7 @@ Troubleshoot Node.js instrumentation for Splunk Observability Cloud
 .. meta::
    :description: If your instrumented Node.js application is not sending data to Splunk Observability Cloud, or data is missing, follow these steps to identify and resolve the issue.
 
-When you instrument a Node.js application using the Splunk Distribution of OpenTelemetry JS and you don't see your data in Observability Cloud, follow these troubleshooting steps.
+When you instrument a Node.js application using the Splunk Distribution of OpenTelemetry JS and you don't see your data in Splunk Observability Cloud, follow these troubleshooting steps.
 
 .. _basic-nodejs-troubleshooting:
 
@@ -17,17 +17,18 @@ Steps for troubleshooting Node.js OpenTelemetry issues
 The following steps can help you troubleshoot Node.js instrumentation issues:
 
 #. :ref:`enable-nodejs-debug-logging`
+#. :ref:`enable-debug-metrics`
 
 .. _enable-nodejs-debug-logging:
 
-Enable diagnostic logging
+Activate diagnostic logging
 -------------------------------------------------------
 
 Diagnostic logs can help you troubleshoot instrumentation issues.
 
 To output instrumentation logs to the console, set the ``OTEL_LOG_LEVEL`` environment variable to ``debug``. 
 
-You can also enable debug logging programmatically by setting the ``logLevel`` argument. For example:
+You can also activate debug logging programmatically by setting the ``logLevel`` argument. For example:
 
 .. code-block:: js
    :emphasize-lines: 2
@@ -45,14 +46,21 @@ You can also enable debug logging programmatically by setting the ``logLevel`` a
       },
    });
 
-To disable debug logging in your code, call ``setLogger()`` as in the following example:
+To deactivate debug logging in your code, call ``setLogger()`` as in the following example:
 
 .. code-block:: js
 
    const { diag } = require('@opentelemetry/api');
    diag.setLogger();
 
-.. note:: Enable debug logging only when needed. Debug mode requires more resources.
+.. note:: Activate debug logging only when needed. Debug mode requires more resources.
+
+.. _enable-debug-metrics:
+
+Activate debug metrics
+---------------------------------
+
+You can activate internal debug metrics by setting the ``SPLUNK_DEBUG_METRICS_ENABLED`` environment variable to true. For more information, see :ref:`nodejs-otel-debug-metrics`.
 
 .. _nodejs-trace-exporter-issues:
 
@@ -75,13 +83,13 @@ To troubleshoot the lack of connectivity between the OTLP exporter and the OTel 
 
 #. Make sure that ``OTEL_EXPORTER_OTLP_ENDPOINT`` points to the correct OpenTelemetry Collector instance host.
 #. Check that your collector instance is configured and running. See :ref:`otel-splunk-collector-tshoot`.
-#. Check that the OTLP receiver is enabled in the OTel Collector and plugged into the traces pipeline.
+#. Check that the OTLP receiver is activated in the OTel Collector and plugged into the traces pipeline.
 #. Check that the OTel Collector points to the following address: ``http://<host>:4317``. Verify that your URL is correct.
 
 401 error when sending spans
 --------------------------------------------------------
 
-If you send traces directly to Observability Cloud and receive a 401 error code, the authentication token specified in ``SPLUNK_ACCESS_TOKEN`` is invalid. The following are possible reasons:
+If you send traces directly to Splunk Observability Cloud and receive a 401 error code, the authentication token specified in ``SPLUNK_ACCESS_TOKEN`` is invalid. The following are possible reasons:
 
 - The value is null.
 - The value is not a well-formed token.
@@ -96,7 +104,7 @@ Webpack compatibility issues
 
 The Splunk Distribution of OpenTelemetry JS can't instrument modules bundled using Webpack, as OpenTelemetry can instrument libraries only by intercepting its ``require`` calls.
 
-To instrument Node applications that use bundled modules, use the Webpack ``externals`` configuration option so that the ``require`` calls are visible to OpenTelemetry.
+To instrument Node.js applications that use bundled modules, use the Webpack ``externals`` configuration option so that the ``require`` calls are visible to OpenTelemetry.
 
 The following example shows how to edit the ``webpack.config.js`` file to instrument the ``express`` framework:
 
@@ -129,24 +137,24 @@ Troubleshoot AlwaysOn Profiling for Node.js
 
 See the following common issues and fixes for AlwaysOn Profiling:
 
-Check that AlwaysOn Profiling is enabled
+Check that AlwaysOn Profiling is activated
 ----------------------------------------------------------------
 
-Make sure that you've enabled the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``. See :ref:`profiling-configuration-nodejs`.
+Make sure that you've activated the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``. See :ref:`profiling-configuration-nodejs`.
 
-Unsupported Node version
+Unsupported Node.js version
 -----------------------------------------------
 
-To use AlwaysOn Profiling, upgrade to Node version 16 or higher.
+To use AlwaysOn Profiling, upgrade to Node.js version 16 or higher.
 
-AlwaysOn Profiling data and logs don't appear in Observability Cloud
---------------------------------------------------------------------
+AlwaysOn Profiling data and logs don't appear in Splunk Observability Cloud
+----------------------------------------------------------------------------
 
 Collector configuration issues might prevent AlwaysOn Profiling data and logs from appearing in Splunk Observability Cloud.
 
 To solve this issue, do the following:
 
-#. Check the configuration of the Node agent, especially ``SPLUNK_PROFILER_LOGS_ENDPOINT``.
+#. Check the configuration of the Node.js agent, especially ``SPLUNK_PROFILER_LOGS_ENDPOINT``.
 #. Verify that the Splunk Distribution of OpenTelemetry Collector is running at the expected endpoint and that the application host or container can resolve the host name and connect to the OTLP port.
 #. Make sure that you're running the Splunk Distribution of OpenTelemetry Collector and that the version is 0.34 or higher. Other collector distributions might not be able to route the log data that contains profiling data.
 #. A custom configuration might override settings that let the collector handle profiling data. Make sure to configure an ``otlp`` receiver and a ``splunk_hec`` exporter with correct token and endpoint fields. The ``profiling`` pipeline must use the OTLP receiver and Splunk HEC exporter you've configured.
@@ -157,24 +165,27 @@ The following snippet contains a sample ``profiling`` pipeline:
 
    receivers:
      otlp:
-        protocols:
-           grpc:
+       protocols:
+         grpc:
 
    exporters:
-     splunk_hec:
-        token: "${SFX_TOKEN}"
-        endpoint: "https://ingest.${SFX_REALM}.signalfx.com/v1/log"
-     logging/info:
-        loglevel: info
+     # Profiling
+     splunk_hec/profiling:
+       token: "${SPLUNK_ACCESS_TOKEN}"
+       endpoint: "${SPLUNK_INGEST_URL}/v1/log"
+       log_data_enabled: false
 
    processors:
      batch:
+     memory_limiter:
+       check_interval: 2s
+       limit_mib: ${SPLUNK_MEMORY_LIMIT_MIB}
 
    service:
      pipelines:
-        profiling:
-           receivers: [otlp]
-           processors: [batch]
-           exporters: [logging/info, splunk_hec]
+       logs/profiling:
+         receivers: [otlp]
+         processors: [memory_limiter, batch]
+         exporters: [splunk_hec, splunk_hec/profiling]
 
-.. include:: /_includes/troubleshooting-steps.rst
+.. include:: /_includes/troubleshooting-components.rst

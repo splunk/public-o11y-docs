@@ -4,7 +4,7 @@
 Custom threshold
 =============================================================================
 
-.. meta updated 1/23/23
+
 
 .. meta::
   :description: This alert condition lets you trigger an alert by comparing one signal to another or by evaluating multiple conditions
@@ -19,9 +19,9 @@ Custom Threshold lets you trigger an alert by comparing one signal to another or
 Compound conditions
 =============================================================================
 
-When you are on the Alert Settings tab, you can click :guilabel:`Add another condition` to create a compound condition using AND and OR operators. You can add a total of 10 |nbsp| conditions.
+When you are on the Alert Settings tab, you can select :guilabel:`Add another condition` to create a compound condition using AND and OR operators. You can add a total of 10 |nbsp| conditions.
 
-When specifying compound conditions, AND conditions are applied before OR conditions. To ensure that the conditions are evaluated as required, you can select options from a condition's Actions menu to arrange them into the appropriate order. You can also remove a condition from a condition's Actions menu.
+When specifying compound conditions, AND conditions are applied before OR conditions. To ensure that the conditions are evaluated as required, you can select options from a condition's Actions menu (|more|) to arrange them into the appropriate order. You can also remove a condition from a condition's Actions menu (|more|).
 
 .. note:: For a compound condition to trigger an alert, all the values involved in the condition must be non-null.
 

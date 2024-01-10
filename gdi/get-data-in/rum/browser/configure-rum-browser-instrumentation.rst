@@ -21,9 +21,9 @@ To configure the Browser RUM agent, edit the object passed to the ``SplunkRum.in
    <script>
          SplunkRum.init(
          {
-            beaconUrl: 'https://rum-ingest.us0.signalfx.com/v1/rum'
-            rumAuth: 'ABC123...789',
-            app: 'my-awesome-app',
+            beaconEndpoint: 'https://rum-ingest.us0.signalfx.com/v1/rum'
+            rumAccessToken: 'ABC123...789',
+            applicationName: 'my-awesome-app',
             version: '1.0.1'
             // Any additional settings
          });
@@ -43,19 +43,22 @@ Use the following settings to configure the Browser RUM agent:
    * - Property
      - Type
      - Description
-   * - ``beaconUrl``
-     - String (required)
-     - Ingest URL to which the agent sends collected telemetry. The URL must contain your realm in Splunk Observability Cloud. For example, ``https://rum-ingest.us0.signalfx.com/v1/rum`` is the ingest URL for the ``us0`` realm.
-   * - ``rumAuth``
+   * - ``realm``
+     - String
+     - The name of your organization's realm, for example, ``us0``. To find the realm name of your account, open the navigation menu in Splunk Observability Cloud, select :menuselection:`Settings`, and then select your username. The realm name appears in the :guilabel:`Organizations` section.
+   * - ``rumAccessToken``
      - String (required)
      - RUM token that authorizes the agent to send telemetry data to Splunk Observability Cloud. To generate a RUM access token, see :ref:`rum-access-token`.
-   * - ``app``
+   * - ``beaconEndpoint``
+     - String (required if ``realm`` isn't set)
+     - Ingest URL to which the agent sends collected telemetry. When ``realm`` is set, the URL is in the form ``https://rum-ingest.<realm>.signalfx.com/v1/rum``. When you set an endpoint manually, this overrides the value of ``realm``.
+   * - ``applicationName``
      - String
      - Name of the application. The default value is ``unknown-browser-app``.
    * - ``version``
      - String
      - Version of the application for all spans. For example, "1.0.1" or "20220820".
-   * - ``environment``
+   * - ``deploymentEnvironment``
      - String
      - Environment for all the spans produced by the application. For example, ``dev``, ``test``, or ``prod``.
    * - ``globalAttributes``
@@ -63,7 +66,7 @@ Use the following settings to configure the Browser RUM agent:
      - Sets additional attributes added to all spans. For example, ``version`` or ``user_id``.
    * - ``instrumentations``
      - Object
-     - Enables or disables specific Browser RUM instrumentations. See :ref:`browser-rum-instrumentation-settings`.
+     - Activates or deactivates specific Browser RUM instrumentations. See :ref:`browser-rum-instrumentation-settings`.
    * - ``ignoreUrls``
      - ``(string\|regex)[]``
      - List of URLs that the agent must ignore. Matching URLs don't produce spans. You can provide two different types of rules: strings or regular expressions.
@@ -72,31 +75,31 @@ Use the following settings to configure the Browser RUM agent:
      - Domain used for session tracking. For example, if you have sites on both ``foo.example.com`` and ``bar.example.com``, setting ``cookieDomain`` to ``example.com`` allows both sites to use the same session identifier. See :ref:`browser-rum-cookies` for more information.
    * - ``context.async``
      - Boolean
-     - Enables the asynchronous context manager. The default value is ``false``. See :ref:`browser-rum-async-traces`.
+     - Activates the asynchronous context manager. The default value is ``true``. See :ref:`browser-rum-async-traces`.
    * - ``exporter.onAttributesSerializing``
      - ``(a: SpanAttributes, s?: Span) => SpanAttributes``
-     - Provides a callback for modifying span attributes before they're exported. The default value is ``(attrs) => attrs``. A sample use case is :ref:`rum-browser-redact-pii`. 
+     - Provides a callback for modifying span attributes before they're exported. The default value is ``(attrs) => attrs``. A sample scenario is :ref:`rum-browser-redact-pii`. 
    * - ``tracer``
      - Object
      - Tracing configuration passed to ``WebTracerProvider``. You can use it to configure sampling. See :ref:`browser-rum-sampling-configuration`.
    * - ``debug``
      - Boolean
-     - Enables debug logging in the developer console. The default value is ``false``.
+     - Activates debug logging in the developer console. The default value is ``false``.
 
 .. _browser-rum-instrumentation-settings:
 
 Instrumentation settings
 ==============================================
 
-To enable or disable specific Browser RUM instrumentations, compose and pass an object to the ``instrumentations`` property. The following example of agent initialization changes the settings of several instrumentations:
+To activate or deactivate specific Browser RUM instrumentations, compose and pass an object to the ``instrumentations`` property. The following example of agent initialization changes the settings of several instrumentations:
 
 .. code-block:: javascript
 
    SplunkRum.init(
       {
-         beaconUrl: 'https://rum-ingest.us0.signalfx.com/v1/rum',
-         rumAuth: 'ABC123…789',
-         app: 'my-awesome-app',
+         beaconEndpoint: 'https://rum-ingest.us0.signalfx.com/v1/rum',
+         rumAccessToken: 'ABC123…789',
+         applicationName: 'my-awesome-app',
          instrumentations:
          {
             interactions:
@@ -108,14 +111,14 @@ To enable or disable specific Browser RUM instrumentations, compose and pass an 
                 'gamepadconnected'
               ],
             },
-            longtask: false, // Disables monitoring for longtasks
-            websockets: true, // Enables monitoring for websockets
+            longtask: false, // Deactivates monitoring for longtasks
+            websocket: true, // Activates monitoring for websockets
          },
       });
 
 The following table contains all the properties supported by the ``instrumentations`` option:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 20 10 70
 
@@ -124,46 +127,46 @@ The following table contains all the properties supported by the ``instrumentati
      - Description
    * - ``connectivity``
      - ``false``
-     - Enables the collection of connectivity events. See :ref:`browser-rum-data-connectivity-events`.
+     - Activates the collection of connectivity events. See :ref:`browser-rum-data-connectivity-events`.
    * - ``document``
      - ``true``
-     - Enables the collection of spans related to document load events. See :ref:`browser-rum-data-doc-load`.
+     - Activates the collection of spans related to document load events. See :ref:`browser-rum-data-doc-load`.
    * - ``errors``
      - ``true``
-     - Enables the collection of JavaScript errors. See :ref:`browser-rum-data-js-errors`.
+     - Activates the collection of JavaScript errors. See :ref:`browser-rum-data-js-errors`.
    * - ``fetch``
      - ``true``
-     - Enables the collection of Fetch API requests. See :ref:`browser-rum-data-fetch-requests`.
+     - Activates the collection of Fetch API requests. See :ref:`browser-rum-data-fetch-requests`.
    * - ``interactions``
      - ``true``
-     - Enables the collection of user interactions, such as clicks or key presses. See :ref:`browser-rum-data-user-interactions`.
+     - Activates the collection of user interactions, such as clicks or key presses. See :ref:`browser-rum-data-user-interactions`.
    * - ``interactions.eventNames``
      - 
-     - Array of DOM events that the instrumentation captures as user interactions. You can access the default values by accessing the ``SplunkRum.DEFAULT_AUTO_INSTRUMENTED_EVENT_NAMES`` property. 
+     - Array of DOM events that the instrumentation captures as user interactions. You can access the default values by accessing the ``SplunkRum.DEFAULT_AUTO_INSTRUMENTED_EVENT_NAMES`` property.
    * - ``longtask``
      - ``true``
-     - Enables the collection of long tasks. See :ref:`browser-rum-data-long-tasks`.
+     - Activates the collection of long tasks. See :ref:`browser-rum-data-long-tasks`.
    * - ``socketio``
      - ``false``
-     - Enables the collection of socket.io messages. See :ref:`browser-rum-data-socketio`.
+     - Activates the collection of socket.io messages. See :ref:`browser-rum-data-socketio`.
    * - ``postload``
      - ``true``
-     - Enables the collection of resources loaded after a load event. See :ref:`browser-rum-data-resources-after-load`.
+     - Activates the collection of resources loaded after a load event. See :ref:`browser-rum-data-resources-after-load`.
    * - ``socketio.target``
      - ``'io'``
      - The global variable name to which the socket.io client is loaded, or the ``io`` object. See :ref:`browser-rum-data-socketio`.
    * - ``visibility``
      - ``false``
-     - Enables the collection of visibility events. See :ref:`browser-rum-data-visibility-events`.
-   * - ``websockets``
+     - Activates the collection of visibility events. See :ref:`browser-rum-data-visibility-events`.
+   * - ``websocket``
      - ``false``
-     - Enables the collection of websocket lifecycle events. See :ref:`browser-rum-data-websockets`.
+     - Activates the collection of websocket lifecycle events. See :ref:`browser-rum-data-websockets`.
    * - ``webvitals``
      - ``true``
-     -  Enables the collection of Google Web Vitals metrics. See :ref:`browser-rum-data-webvitals`.
+     -  Activates the collection of Google Web Vitals metrics. See :ref:`browser-rum-data-webvitals`.
    * - ``xhr``
      - ``true``
-     - Enables the collection of XMLHttpRequest events. See :ref:`browser-rum-data-fetch-requests`.
+     - Activates the collection of XMLHttpRequest events. See :ref:`browser-rum-data-fetch-requests`.
 
 .. _browser-rum-sampling-configuration:
 
@@ -184,9 +187,9 @@ The following example shows how to restrict sampling to logged in users:
          var shouldTrace = isUserLoggedIn();
 
          SplunkRum.init({
-            beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
-            rumAuth: '<your_rum_token>',
-            app: '<application-name>',
+            realm: '<realm>',
+            rumAccessToken: '<your_rum_token>',
+            applicationName: '<application-name>',
             tracer: {
                sampler: shouldTrace ? new AlwaysOnSampler() : new SplunkRum.AlwaysOffSampler(),
             },
@@ -201,9 +204,9 @@ The following example shows how to restrict sampling to logged in users:
       import SplunkOtelWeb from '@splunk/otel-web';
 
       SplunkOtelWeb.init({
-         beaconUrl: 'https://rum-ingest..signalfx.com/v1/rum',
-         rumAuth: '<your_rum_token>', 
-         app: '<application-name>', 
+         beaconEndpoint: 'https://rum-ingest..signalfx.com/v1/rum',
+         rumAccessToken: '<your_rum_token>', 
+         applicationName: '<application-name>', 
          tracer: { 
             sampler: userShouldBeTraced() ? new SplunkRum.AlwaysOnSampler() : new SplunkRum.AlwaysOffSampler(),
          },
@@ -218,9 +221,9 @@ The Splunk Distribution of OpenTelemetry JS for Web includes the following sampl
    * - Sampler
      - Description
    * - ``AlwaysOnSampler``
-     - Sampling enabled for all requests. This is the default sampler.
+     - Sampling activated for all requests. This is the default sampler.
    * - ``AlwaysOffSampler``
-     - Sampling disabled for all requests.
+     - Sampling deactivated for all requests.
    * - ``ParentBasedSampler``
      - Inherits the sampler configuration of the parent trace.
    * - ``SessionBasedSampler``
@@ -271,9 +274,9 @@ The following example shows how to collect RUM data from half of the sessions:
       <script src="https://cdn.signalfx.com/o11y-gdi-rum/latest/splunk-otel-web.js" crossorigin="anonymous"></script>
       <script>
         SplunkRum.init({
-          beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
-          rumAuth: '<your_rum_token>',
-          app: '<application-name>',
+          realm: '<realm>',
+          rumAccessToken: '<your_rum_token>',
+          applicationName: '<application-name>',
           tracer: {
             sampler: new SplunkRum.SessionBasedSampler({
             ratio: 0.5
@@ -288,9 +291,9 @@ The following example shows how to collect RUM data from half of the sessions:
       import SplunkOtelWeb, {SessionBasedSampler} from '@splunk/otel-web';
 
       SplunkOtelWeb.init({ 
-        beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
-        rumAuth: '<your_rum_token>', 
-        app: '<application-name>',
+        realm: '<realm>',
+        rumAccessToken: '<your_rum_token>', 
+        applicationName: '<application-name>',
         tracer: {
             sampler: new SessionBasedSampler({
               ratio: 0.5 
@@ -314,7 +317,7 @@ Traces that happen asynchronously, such as user interactions that result in a pr
 -  ``MessagePort``
 -  Hash-based routers
 
-To enable asynchronous traces, set the ``context.async`` property to ``true``.
+Asynchronous trace linking is activated by default. In case of compatibility issues you can disable it by setting the ``context.async`` property to ``false``.
 
 The context manager allows Splunk RUM to link requests executed when a component is first rendered to the user interaction that caused the application to add the component to the page. ``XMLHttpRequest`` events and Fetch API events through promise methods are patched to preserve the parent context, so subsequent requests link to their parents.
 
@@ -323,7 +326,7 @@ Limitations
 
 The following limitations apply when using asynchronous tracing:
 
-- ``async/await`` functions aren't supported. You can connect them using Babel as in the following example:
+- ``async/await`` functions aren't supported. Down-compile the code using Babel and targeting older browsers.
 
    .. code-block:: javascript
 

@@ -4,7 +4,7 @@
 Chart Options in the Chart Builder
 *****************************************************************
 
-.. meta updated 8/7/18
+
 
 .. meta::
   :description: In addition to customizing individual plots on a chart, you can set a number of options on the Chart Options tab that apply to the entire chart
@@ -356,7 +356,7 @@ When your message doesn't appear
 
 The "no active metrics" message might not appear for charts with inactive metrics in the following cases:
 
--  When you use the ``newrelic()`` or ``graphite()`` functions in your chart. Splunk Observability Cloud uses the Metric Finder to determine which metrics are inactive, but the Metric Finder doesn't work on metrics used by these two functions. To learn more about these functions, see :new-page:`newrelic() <https://dev.splunk.com/observability/docs/signalflow/functions/newrelic_function/>` and :new-page:`graphite() <https://dev.splunk.com/observability/docs/signalflow/functions/graphite_function/>`.
+-  When you use the ``graphite()`` functions in your chart. Splunk Observability Cloud uses the Metric Finder to determine which metrics are inactive, but the Metric Finder doesn't work on metrics used by these two functions. To learn more about these functions, see :new-page:`graphite() <https://dev.splunk.com/observability/docs/signalflow/functions/graphite_function/>`.
 -  When you use custom SignalFlow that the SignalFlow API can't parse in your chart. This can happen even if the custom SignalFlow is valid. When the SignalFlow API can't parse your custom SignalFlow, you will get this error message when you click :guilabel:`View Builder` in the :strong:`Plot Editor` tab.
 
   ..  image:: /_images/images-charts/signalflow-parse-error.png

@@ -5,12 +5,15 @@
 Splunk RUM metrics reference
 **********************************
 
+.. meta::
+   :description: List of available metrics in Splunk RUM, and a definitions of aggregate metrics and page level metrics. 
 
 The following metrics are available in Splunk RUM. All errors in Splunk RUM have the dimension ``sf_error=true``.
 
 * :ref:`RUM Browser metrics <browser-rum-default-tags>`
 * :ref:`RUM iOS metrics <rum-ios-metrics>`
 * :ref:`RUM Android metrics <rum-android-metrics>`
+* :ref:`rum-subscription-usage`
 
 
 Aggregates versus page level metrics 

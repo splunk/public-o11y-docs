@@ -4,7 +4,7 @@
 View alerts in Splunk Observability Cloud
 *****************************************************************
 
-.. meta updated 1/23/23
+
 
 .. meta::
    :description: Learn how to view currently active alerts on the Alerts page or in the Infrastructure Navigator.
@@ -27,7 +27,7 @@ To review all the active alerts in your organization, go to :guilabel:`Alerts`. 
 
 The table lists all active alerts matching the conditions you've entered. If a notification for an alert is :ref:`muted <mute-notifications>`, a :guilabel:`notifications muted` label is shown next to the alert.
 
-To see more details about the alert, click its rule name and source in the table. In the details dialog box, you can click :guilabel:`Resolve` the alert, open the detector that triggered the alert, and explore related items.
+To see more details about the alert, select its rule name and source in the table. In the details dialog box, you can select :guilabel:`Resolve` the alert, open the detector that triggered the alert, and explore related items.
 
 .. image:: /_images/images-detectors-alerts/alerts/alert-details.png
    :width: 99%
@@ -40,7 +40,7 @@ To see more details about the alert, click its rule name and source in the table
 Filter alerts to reduce noise
 -------------------------------------------------------------------
 
-You can click on any of the alert counters to filter alerts by the corresponding severity level. You can also use :guilabel:`Filter` to show only alerts that are relevant to specific tags or dimensions.
+You can select any of the alert counters to filter alerts by the corresponding severity level. You can also use :guilabel:`Filter` to show only alerts that are relevant to specific tags or dimensions.
 
 .. image:: /_images/images-detectors-alerts/alerts/alerts-filter.png
    :width: 99%
@@ -70,13 +70,13 @@ To view active alerts for a detector, go to the :guilabel:`Detectors` tab in :gu
    :width: 99%
    :alt: Detectors tab in Alerts
 
-To open a detector, click on its name. When you open a detector, a counter for each alert rule shows the number of active alerts that apply to the detector.
+To open a detector, select its name. When you open a detector, a counter for each alert rule shows the number of active alerts that apply to the detector.
 
 .. image:: /_images/images-detectors-alerts/alerts/open-detector.png
    :width: 70%
    :alt: Alert counts in the detector details screen
 
-Click any of the counters to view a list of active alerts for that rule. If there are multiple filters in the view, you can remove any of them to see a wider range of alerts for that detector. 
+Select any of the counters to view a list of active alerts for that rule. If there are multiple filters in the view, you can remove any of them to see a wider range of alerts for that detector. 
 
 .. _view-alerts-for-related:
 

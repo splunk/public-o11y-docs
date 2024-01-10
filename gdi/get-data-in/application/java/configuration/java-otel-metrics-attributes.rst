@@ -7,18 +7,16 @@ Metrics and attributes collected by the Splunk OTel Java agent
 .. meta:: 
   :description: The Splunk Distribution of OpenTelemetry Java collects the following application metrics data and WebEngine attributes. You can also collect custom metrics through Micrometer.
 
-The agent of the Splunk Distribution of OpenTelemetry Java collects the following application metrics data and attributes in addition to all that the upstream OpenTelemetry agent collects.
+The agent of the Splunk Distribution of OpenTelemetry Java collects the following application metrics data and attributes in addition to all that the upstream OpenTelemetry agent collects. To learn about the different metric types, see :ref:`metric-types`.
 
-To learn about the different metric types, see :ref:`metric-types`.
+.. caution:: This feature is experimental, and exported metric data and configuration properties might change. See more in :new-page:`GitHub <https://github.com/signalfx/splunk-otel-java/blob/main/docs/metrics.md#metrics-and-attributes/>`.
 
 .. _enable-otel-metrics:
 
-Enable metrics collection
+Activate metrics collection
 ====================================================
 
 To collect Java application and Java Virtual Machine metrics, see :ref:`enable_automatic_metric_collection`.
-
-.. note:: Application metrics collection is an experimental feature subject to future changes.
 
 .. _java-otel-metrics:
 
@@ -105,7 +103,7 @@ The agent collects the following metrics through the following libraries:
 JVM metrics
 =============================================================
 
-The Splunk OTel Java agent collects the following Java Virtual Machine (JVM) metrics when metric collection is enabled:
+The Splunk OTel Java agent collects the following Java Virtual Machine (JVM) metrics when metric collection is activated:
 
 .. _classloader-metrics:
 
@@ -165,7 +163,7 @@ The agent collects the following garbage collection (GC) metrics:
 
 .. _jvm-heap-pressure-metrics:
 
-Heap preassure metrics
+Heap pressure metrics
 ----------------------------------------------------------------------
 
 The agent collects the following heap pressure metrics:
@@ -180,10 +178,10 @@ The agent collects the following heap pressure metrics:
     - Description
   * - ``runtime.jvm.gc.overhead``
     - Gauge
-    - An approximation of the percentage of CPU time used by GC activities over the last lookback period or since monitoring began, whichever is shorter, in the range [0..1].
+    - An approximation of the percentage of CPU time used by GCP activities over the last lookback period or since monitoring began, whichever is shorter, in the range [0..1].
   * - ``runtime.jvm.memory.usage.after.gc``
     - Gauge
-    - The percentage of long-lived heap pool used after the last GC event, in the range [0..1].
+    - The percentage of long-lived heap pool used after the last GCP event, in the range [0..1].
 
 .. _jvm-memory-metrics:
 
@@ -204,13 +202,13 @@ The agent collects the following memory metrics:
     - Counter
     - Total number of bytes allocated by JVM threads since the previous data point was emitted. 
         - Use the rate per second rollup. 
-        - Requires to enable memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag.
+        - Requires to activate memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag.
   * - ``process.runtime.jvm.memory.reclaimed``
     - Counter
-    - Total number of bytes reclaimed by the GC since the previous data point was emitted. Notes: 
+    - Total number of bytes reclaimed by the GCP since the previous data point was emitted. Notes: 
         - This metric might be inaccurate for concurrent garbage collectors such as Shenandoah or ZGC. 
         - Use the rate per second rollup.
-        - Requires to enable memory profiling,or to use the ``splunk.metrics.experimental.enabled`` flag. 
+        - Requires to activate memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag. 
   * - ``runtime.jvm.buffer.count``
     - Gauge
     - An estimate of the number of buffers in the pool.
@@ -422,61 +420,3 @@ The Splunk Distribution of OpenTelemetry Java captures data about the applicatio
     - Version of the application server.
 
 For a list of supported application servers, see the OpenTelemetry documentation at https://github.com/open-telemetry/opentelemetry-java-instrumentation/blob/main/docs/supported-libraries.md#application-servers.
-
-.. _java-otel-custom-metrics:
-
-Send custom Java application metrics
-========================================================
-
-The Splunk Distribution of OpenTelemetry Java agent detects if the instrumented application is using Micrometer and injects a special ``MeterRegistry`` implementation that lets the agent collect user-defined meters.
-
-Follow these steps to enable custom application metrics:
-
-- :ref:`add-micrometer-dep`
-- :ref:`add-meter-registry`
-
-.. _add-micrometer-dep:
-
-Add the micrometer-core dependency
-------------------------------------------------------
-
-To export custom metrics through the Java agent, add a dependency on the ``micrometer-core`` library with version 1.5 and higher:
-
-.. tabs::
-
-  .. code-tab:: xml Maven
-
-      <dependency>
-        <groupId>io.micrometer</groupId>
-        <artifactId>micrometer-core</artifactId>
-        <version>1.7.5</version>
-      </dependency>
-
-  .. code-tab:: java Gradle
-
-      implementation("io.micrometer:micrometer-core:1.7.5")
-
-.. _add-meter-registry:
-
-Register each custom meter
----------------------------------------------------
-
-You must register each custom meter in the global ``Metrics.globalRegistry`` instance provided by the Micrometer library. You can use one of meter factory methods provided by the ``Metrics`` class, or use meter builders and reference the ``Metrics.globalRegistry`` directly, as in the following example:
-
-.. code:: java
-
-  class MyClass {
-  Counter myCounter = Metrics.counter("my_custom_counter");
-    Timer myTimer = Timer.builder("my_custom_timer").register(Metrics.globalRegistry);
-
-    int foo() {
-      myCounter.increment();
-      return myTimer.record(this::fooImpl);
-    }
-
-    private int fooImpl() {
-       // ...
-    }
-  }
-
-For more information on the Micrometer API, see the Micrometer official documentation.

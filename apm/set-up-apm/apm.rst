@@ -45,5 +45,5 @@ See the following optional topics for additional guidance as you set up Splunk A
 The following resources provide additional information about Splunk APM:
 
 * For an overview of important terms and concepts in Splunk APM, see :ref:`apm-key-concepts`.
-* For a series of Splunk APM use cases, see :ref:`apm-use-cases-intro`.
+* For a series of Splunk APM scenarios, see :ref:`apm-scenarios-intro`.
 * For a set of interactive walkthroughs of Splunk APM, see :new-page:`APM Scenarios <https://quickdraw.splunk.com/redirect/?product=Observability&location=apm-walkthrough&version=current>`. 

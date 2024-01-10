@@ -5,7 +5,7 @@ Browser test metrics
 **********************
 
 .. meta::
-    :description: Learn about metrics for Browser tests in Splunk Synthetic Monitoring.
+    :description: Reference and definitions of available metrics captured by browser tests in Splunk Synthetic Monitoring.
 
 Metrics in Splunk Synthetic Monitoring are numeric indicators of site performance that synthetic tests capture in each run of a test. 
 
@@ -69,7 +69,7 @@ Test-level metrics in Browser tests
      - ``synthetics.run.count``
      - Total number of runs for the test. This metric contains dimensions such as ``success: true`` and ``failed: false`` to indicate whether the run succeeded or failed. 
 
-   * - Run-level Duration
+   * - Run-level duration
      - ``synthetics.run.duration.time.ms``
      - The total duration of the entire run, including all pages and synthetic transactions. 
 
@@ -110,7 +110,7 @@ Performance timing metrics capture information about how long it takes resources
      - ``synthetics.dom_load.time.ms``
      - Time until the Document Object Model (DOM) has loaded, and the initial markup has been parsed. This metric corresponds to the browser ``DOMContentLoaded`` event.
 
-   * - First byte time
+   * - Time to first byte (TTFB)
      - ``synthetics.ttfb.time.ms``
      - Time from the start of the first request until receiving the first byte of the first non-redirect request. ``3xx`` redirects increase the duration of this time.
 
@@ -136,11 +136,10 @@ Performance timing metrics capture information about how long it takes resources
 
    * - First CPU idle
      - ``synthetics.first_cpu_idle.time.ms``
-     - Time until the page is minimally interactive and will respond to user input in a reasonable amount of time. See :new-page:`What Interactivity Metrics Does Rigor Offer? <https://help.rigor.com/hc/en-us/articles/360011039573>` to learn more about how this metric is calculated. 
-
+     - Time until the page is minimally interactive and will respond to user input in a reasonable amount of time. 
    * - Time to interactive
      - ``synthetics.tti.time.ms``
-     - Time until the page is first expected to be usable and will respond to user input quickly. See :new-page:`What Interactivity Metrics Does Rigor Offer? <https://help.rigor.com/hc/en-us/articles/360011039573>` to learn more about how this metric is calculated. 
+     - Time until the page is first expected to be usable and will respond to user input quickly. 
      
    * - Onload time
      - ``synthetics.onload.time.ms``
@@ -148,11 +147,10 @@ Performance timing metrics capture information about how long it takes resources
 
    * - Visually complete time
      - ``synthetics.visually_complete.time.ms``
-     - Time until all above-the-fold content has finished rendering. See :new-page:`Monitoring the UX with Start Render, Visually Complete, and Speed Index <https://rigor.com/blog/monitoring-the-ux/>` on the Rigor blog to learn more about how this metric works. 
-
+     - Time until all above-the-fold content has finished rendering.
    * - Speed index
      - ``synthetics.speed_index.time.ms``
-     - A calculated metric that represents how quickly the page renders above-the-fold content. See :new-page:`Monitoring the UX with Start Render, Visually Complete, and Speed Index <https://rigor.com/blog/monitoring-the-ux/>` on the Rigor blog to learn more about how this metric works. 
+     - A calculated metric that represents how quickly the page renders above-the-fold content. 
 
 
 Web vitals
@@ -184,7 +182,7 @@ To learn more about web vitals, see :new-page:`https://web.dev/vitals/` in the G
 
 Connection timings
 ^^^^^^^^^^^^^^^^^^^^
-Connection timings metrics capture information about the latency of your site’s connection to its server. 
+Connection timings metrics capture information about the latency of your site's connection to its server. 
 
 .. list-table::
    :header-rows: 1
@@ -233,15 +231,15 @@ Resource and error count metrics capture information about the number and types 
    
    * - Client error count
      - ``synthetics.resource_request.error.count``
-     - Number of client responses with a status code between 400 and 499. The error type is indicated in the ``content_type`` dimension. 
+     - Number of client responses with a status code between 400 and 499. The error type is indicated in the ``http.status_code_type`` dimension. 
 
    * - Connection error count
      - ``synthetics.resource_request.error.count``
-     - Number of connection responses where the status code is 504 or 0 (a request aborted by the browser). The error type is indicated in the ``content_type`` dimension. 
+     - Number of connection responses where the status code is 504 or 0 (a request aborted by the browser). The error type is indicated in the ``http.status_code_type`` dimension. 
 
    * - Server error count 
      - ``synthetics.resource_request.error.count``
-     - Number of server responses where the status code is 500 or higher (excluding 504). The error type is indicated in the ``content_type`` dimension. 
+     - Number of server responses where the status code is 500 or higher (excluding 504). The error type is indicated in the ``http.status_code_type`` dimension. 
 
    * - Error count
      - ``synthetics.resource_request.error.count``

@@ -4,7 +4,7 @@
 Preview detector alerts
 **********************************
 
-.. meta updated 1/23/23
+
 
 .. meta::
   :description: How to preview alerts that your detectors are set up to generate.
@@ -23,7 +23,7 @@ When you go to the Alert Settings tab while creating or editing a detector rule,
 .. note:: If you are editing a detector created using the API, alert preview is available while you are managing rules using the Alert Rules tab. The preview is triggered when you are editing the SignalFlow text or when you change the time range of the detector.
 
 
-Data displayed in the chart may be rolled up based on the detector's time range. The detail view displays data at detector resolution for the selected time period on the chart; that is, data points are shown at the frequency with which the detector is monitoring the signal to determine whether an alert should be triggered or cleared. This view lets you see exactly what data the detector is viewing for the period selected in the chart. You can click and drag the left edge of the detail view to enlarge it and gain more visibility into the data.
+Data displayed in the chart may be rolled up based on the detector's time range. The detail view displays data at detector resolution for the selected time period on the chart; that is, data points are shown at the frequency with which the detector is monitoring the signal to determine whether an alert should be triggered or cleared. This view lets you see exactly what data the detector is viewing for the period selected in the chart. You can select and drag the left edge of the detail view to enlarge it and gain more visibility into the data.
 
 You can navigate between tabs while the preview is shown. For example, you might want to go to the Alert Signal tab and look at the Data Table to review the values of your signal before, during, and after the time an alert would be triggered.
 
@@ -50,7 +50,7 @@ To use the preview option for the detector, open the detector and set a time ran
 
 Depending on the type of alert condition, you have different options for making the detector more or less sensitive. For example, if you see more markers than you think you should (alert is too :term:`flappy`), you might be able to change Trigger Sensitivity from High to Medium or Low, or you might be able to change the sensitivity from triggering immediately to triggering after a period of time. For many alert conditions, you can choose Custom for Trigger Sensitivity, which gives you more control over when alerts will be triggered.
 
-As you make these changes, the preview is updated and the chart will display the number of alerts that would have triggered based on your new settings. When you have modified the detector to more accurately reflect the desired behavior, click Activate and then update the alert rule.
+As you make these changes, the preview is updated and the chart will display the number of alerts that would have triggered based on your new settings. When you have modified the detector to more accurately reflect the desired behavior, select :guilabel:`Activate`` and then update the alert rule.
 
 .. note:: When you save a detector with modified alert conditions, the status of any currently active alerts will be set to "Stopped".
 
@@ -63,7 +63,7 @@ Create a new detector based on a recent alert
 
 Suppose a signal spiked in the past couple of hours, and you are :ref:`creating a new detector<create-detector-from-scratch>` to monitor for that spike. You would add the signal that spiked on the Signals tab, then choose an appropriate condition on the Alert Conditions tab.
 
-.. note:: If you already have a chart that includes the signal as a plot line, you can :ref:`create a detector from the chart<create-detector-from-chart>` instead of creating a new detector from scratch. Simply choose that signal when you begin creating the rule in the Alert Conditions tab.
+.. note:: If you already have a chart that includes the signal as a plot line, you can :ref:`create a detector from the chart<create-detector-from-chart>` instead of creating a new detector from scratch. Choose that signal when you begin creating the rule in the Alert Conditions tab.
 
 In this example, we set the time range of the detector to -2h, named the detector and the new rule, and chose the :ref:`sudden-change` condition, which compares recent values with earlier values. Based on the trigger sensitivity (the default is Low), the preview chart shows event markers for times when the alert would have been triggered during the past week; you should see an event marker for the time the spike occurred. You might also see markers for other times the signal spiked in the past week, as well as markers indicating the alert condition cleared.
 

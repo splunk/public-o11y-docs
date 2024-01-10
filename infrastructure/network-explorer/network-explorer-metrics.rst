@@ -19,7 +19,7 @@ The following metrics are available to collect with Network Explorer.
 
 .. raw:: html
 
-    <div class="metrics-yaml" url="https://raw.githubusercontent.com/Flowmill/support/main/metrics.yaml"></div>
+    <div class="metrics-yaml" url="https://raw.githubusercontent.com/open-telemetry/opentelemetry-ebpf/main/docs/metrics/metrics.yaml"></div>
 
 Dimensions
 =============
@@ -28,7 +28,7 @@ The following dimensions are available for network telemetry metrics.
 
 .. raw:: html
 
-    <div class="metrics-yaml" url="https://raw.githubusercontent.com/Flowmill/support/main/dimensions.yaml"></div>
+    <div class="metrics-yaml" url="https://raw.githubusercontent.com/open-telemetry/opentelemetry-ebpf/main/docs/metrics/dimensions.yaml"></div>
 
 Customize metrics to collect
 ================================

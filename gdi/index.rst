@@ -1,11 +1,11 @@
 .. _monitor-data-sources:
 
 ********************************************************************************
-Available host and application monitors
+Available host and application monitors in Splunk Observability Cloud
 ********************************************************************************
 
 .. meta::
-  :description: This page provides a listing of all host and application receivers in Splunk Observability Cloud.
+  :description: A list of all host and application receivers in Splunk Observability Cloud.
 
 .. toctree::
   :maxdepth: 4
@@ -13,8 +13,8 @@ Available host and application monitors
 
   Caches and memory TOGGLE <caches-memory>
   Cloud platforms TOGGLE <cloud>
-  cloudfoundry-firehose-nozzle/cloudfoundry-firehose-nozzle
-  conviva/conviva
+  monitors-cloudfoundry/cloudfoundry-firehose-nozzle
+  monitors-conviva/conviva
   Databases TOGGLE <databases>
   GitLab TOGGLE <gitlab-monitors>
   Hosts and servers TOGGLE <hosts-servers>
@@ -23,15 +23,21 @@ Available host and application monitors
   Monitoring TOGGLE <monitoring>
   Networks TOGGLE <network>
   Orchestration TOGGLE <orchestration>
+  Prometheus TOGGLE <prometheus>
 
-You can configure an application receiver to gather metrics from its associated application and the host the application is running on.
+.. note:: The SignalFx Smart Agent has reached End of Support. While the agent can capture and export telemetry to Splunk Observability Cloud, Splunk no longer provides any support, feature updates, security, or bug fixes. Such requests are not bound by any SLAs.
 
-To find a receiver for your application, see the alphabetical listing of receivers on this page, or use the menu to browse for receivers by application category.
+  Note that this only affects the agent; Smart Agent integrations and application receivers are available and supported through the Splunk Distribution of OpenTelemetry Collector. Native OpenTelemetry receivers are supported as well.
 
-Receiver functionality is also provided in the form of SignalFx Smart Agent monitors. Configuration options for both the Splunk Distribution of OpenTelemetry Collector receivers and Smart Agent monitors is available.
+To find an integration for your application or service, see the alphabetical listing of receivers on this page, or use the navigation menu to browse for receivers by application category. 
 
-.. note:: The SignalFx Smart Agent is deprecated and will reach end of support on June 30th, 2023. Note that this only affects the agent; Smart Agent receivers bundled in the Splunk Open Telemetry Collector are not deprecated. For more details, see the :new-page:`Deprecation Notice <https://github.com/signalfx/signalfx-agent/blob/main/docs/smartagent-deprecation-notice.md>`.
+If available, you can use native OpenTelemetry components instead of Smart Agent application receivers to send data to Splunk Observability Cloud. For instance, you can use the OpenTelemetry native Prometheus receiver to gather metrics from any software, tool, or service that exposes metrics in the Prometheus format, such as Ansible Tower (AWX), CockroachDB, Docker Daemon, Doorman, Etcd, Flink, Grafana, PATROL, Traefik, or Zipkin. For more information, see :ref:`prometheus-receiver`.
 
-.. using an include for this table because it also appears on gdi/get-start-in/integrations.rst
+* To install the Splunk Distribution of OpenTelemetry Collector, see :ref:`otel-intro`.
+* To see native OpenTelemetry receivers, see :ref:`otel-components`. 
+* To learn about metrics, see :ref:`metrics-landing`.
+* To learn about monitoring infrastructure metrics, see :ref:`get-started-compute`.
+
+You can also use Smart Agent application receivers and monitors with the Collector and the Smart Agent receiver, a native OpenTelemetry component, to send data to Splunk Observability Cloud. For more information, see :ref:`Smart Agent receiver <smartagent-receiver>`.
 
 .. include:: /_includes/application-receiver-table.rst

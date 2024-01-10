@@ -5,49 +5,128 @@ Prometheus receiver
 *******************************************
 
 .. meta::
-      :description: Use the Prometheus Receiver to collect metric data in the Prometheus format in Splunk Cloud Observability.
+      :description: The Prometheus receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from any scraping source compatible with the Prometheus format.
 
-The Prometheus Receiver collects metric data in the Prometheus format. The supported pipeline type is metrics.
+The Prometheus receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from any source exposing telemetry in Prometheus format. The supported pipeline type is ``metrics``.
 
-The Prometheus Receiver is added to your configuration :new-page:`by default < https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml#L73>`. Do not remove this receiver from your configuration, as the internal metrics that are scraped power the Splunk Distribution of OpenTelemetry Collector default dashboard. See :ref:`dashboard-basics` for more information on the types of dashboards and dashboard groups available in Splunk Observability Cloud. 
+.. note:: To use a simplified version of the Prometheus receiver that supports single endpoints, see :ref:`simple-prometheus-receiver`.
 
-.. caution::
-   The Prometheus receiver is currently in :new-page:`beta <https://github.com/open-telemetry/opentelemetry-collector#beta>`. The following limitations should be considered before using this receiver:
+Benefits
+=================================
 
-   * The Splunk Distribution of OpenTelemetry Collector cannot autoscale scraping when multiple replicas of the Collector are run.
-   * When running multiple replicas of the Collector with the same configuration, this receiver scrapes the targets multiple times.
-   * If you need to configure each replica with different scraping configurations, then manually shard the scraping.
-   * The Prometheus Receiver is a stateful component, which means that it keeps track of changing data.
+The Prometheus receiver can scrape metrics data from any application that exposes a Prometheus endpoint. The receiver converts Prometheus metrics to OpenTelemetry metrics while preserving metric names, values, timestamps, and labels. You can also reuse your existing Prometheus configurations.
 
-Benefits 
-=====================================
+Get started
+========================
 
-The benefits of using the Prometheus Receiver are described in this section.
+.. note:: 
+  
+  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information. 
+  
+  For details about the default configuration, see :ref:`otel-kubernetes-config`, :ref:`linux-config-ootb`, or :ref:`windows-config-ootb`. You can customize your configuration any time as explained in this document.
 
-Familiarity with the Prometheus scrape configuration
----------------------------------------------------------
+Follow these steps to configure and activate the component:
 
-The Prometheus Receiver uses the Prometheus source code, which includes a configuration system for scraping metrics data from any application that exposes a Prometheus format metrics endpoint. See :ref:`scrape-configuration` for more information.
+1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+  
+  - :ref:`otel-install-linux`
+  - :ref:`otel-install-windows`
+  - :ref:`otel-install-k8s`
 
-Mapping Prometheus metrics to the corresponding OpenTelemetry metrics
-------------------------------------------------------------------------
+2. Configure the receiver as described in the next section.
+3. Restart the Collector.
 
-The Prometheus Receiver can map Prometheus metrics to OpenTelemetry's proto-based metrics. The Prometheus Receiver maintains the original metric name, value, timestamp, as well as tags. 
+Sample configuration
+--------------------------------
 
-The Prometheus Receiver does not need to provide a one-to-one mapping, since supported metric types are different from the two systems, but it does not drop data.
+By default, the Splunk Distribution of OpenTelemetry Collector includes the Prometheus receiver in the ``metrics/internal`` pipeline. 
 
-Parity between Prometheus and the OpenTelemetry Prometheus exporter
--------------------------------------------------------------------------
+To activate additional Prometheus receivers, add a new ``prometheus`` entry in the ``receivers`` section of the Collector configuration file, as in the following example:
 
-Prometheus can also be used as an exporter that it can expose the metrics it scrapes from other systems with its own metrics endpoint. The Prometheus Receiver retains parity from the following two setups:
+.. code-block:: yaml
 
-* Application > Prometheus > Metric endpoint
-* Application > Splunk Distribution of OpenTelemetry Collector (configured with the Prometheus Receiver and the Prometheus exporter) > metrics endpoint
+   receivers:
+     prometheus:
+       config:
+         scrape_configs:
+           - job_name: 'sample-name'
+             scrape_interval: 5s
+             static_configs:
+               - targets: ['0.0.0.0:8888']
 
-Unsupported features
-=====================================
+To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your configuration file. For example:
 
-The Prometheus Receiver is meant to be a drop-in replacement for Prometheus to scrape your services. However, there are advanced features of Prometheus that are not supported, and do return an error if the Receiver's configuration contains any of the following options:
+.. code:: yaml
+
+   service:
+     pipelines:
+       metrics:
+         receivers:
+           - prometheus
+
+.. caution:: Don't remove the ``prometheus/internal`` receiver from the configuration. Internal metrics feed the Splunk Distribution of OpenTelemetry Collector default dashboard.
+
+Scraper configuration
+----------------------------------
+
+The Prometheus Receiver supports the most of the scrape configuration of Prometheus, including service discovery, through the ``config.scrape_configs`` section. In the ``scrape_config`` section of your configuration file you can specify a set of targets and parameters that describe how to scrape them. 
+
+For basic configurations, a single scrape configuration specifies a single job. You can configure static targets using the ``static_configs`` parameter. Dynamically discovered targets use service discovery mechanisms of Prometheus. In addition, the ``relabel_configs`` parameter allows advanced modifications to any target and its labels before scraping.
+
+The following is an example of a basic scrape configuration:
+
+.. code-block:: yaml
+
+
+   receivers:
+     prometheus:
+       config:
+         scrape_configs:
+         # The job name assigned to scraped metrics by default.
+         # <job_name> must be unique across all scrape configurations.
+           - job_name: 'otel-collector'
+           # How frequently to scrape targets from this job. 
+           # The acceptable values are <duration> | default = <global_config.scrape_interval> ]
+             scrape_interval: 5s
+           # List of labeled statically configured targets for this job.
+             static_configs:
+               - targets: ['0.0.0.0:8888']
+           - job_name: k8s
+           # Scraping configuration for Kubernetes 
+             kubernetes_sd_configs:
+             - role: pod
+             relabel_configs:
+             - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_scrape]
+               regex: "true"
+               action: keep
+             # List of metric relabel configurations.
+             metric_relabel_configs:
+             - source_labels: [__name__]
+               regex: "(request_duration_seconds.*|response_duration_seconds.*)"
+               action: keep
+
+To use environment variables in the Prometheus receiver configuration, use the ``${<var>}`` syntax. For example:
+
+.. code-block:: yaml
+
+
+   prometheus:
+     config:
+       scrape_configs:
+         - job_name: ${JOBNAME}
+           scrape_interval: 5s
+
+If you're using existing Prometheus configurations, replace ``$`` with ``$$`` to prevent the Collector from reading them as environment variables.
+
+Scaling considerations
+-------------------------------
+
+When running multiple replicas of the Collector with the same configuration, the Prometheus receiver scrapes targets multiple times. If you need to configure each replica with different scraping configurations, shard the scraping. The Prometheus receiver is stateful. For considerations on scaling, see :ref:`otel-sizing`.
+
+Known limitations
+======================
+
+The following Prometheus features are not supported and return an error if used in the receiver configuration:
 
 * ``alert_config.alertmanagers``
 * ``alert_config.relabel_configs``
@@ -55,69 +134,37 @@ The Prometheus Receiver is meant to be a drop-in replacement for Prometheus to s
 * ``remote_write``
 * ``rule_files``
 
-Configuration
-========================
+Settings
+======================
 
-The Prometheus Receiver supports the full :ref:`scrape-configuration`, including service discovery.
-
-Do the following:
-
-1. Include the receiver in your configuration file. See :ref:`scrape-configuration` for an example.
-2. Run the following command to start Prometheus using your configuration file. In this example, the configuration file is named ``prom.yaml``.
-    
-    .. code-block:: yaml
-
-      prometheus --config.file=prom.yaml
-
-.. note::
-   Since the configuration supports environment variable substitution, the ``$`` characters in your Prometheus configuration are interpreted as environment variables. If you want to use ``$`` characters in your Prometheus configuration, you must escape them using ``$$``.
-
-Configuration options
---------------------------------
-
-The following table shows the configuration options:
+The following table shows the configuration options for the Prometheus receiver:
 
 .. raw:: html
 
-   <div class="metrics-standard" category="included" url="https://github.com/splunk/collector-config-tools/raw/main/cfg-metadata/receiver/prometheus.yaml"></div>
+   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/prometheus.yaml"></div>
 
-.. _scrape-configuration:
+Metrics
+=====================
 
-Scrape configuration
-------------------------------------
+The Prometheus receiver converts Prometheus metrics to OpenTelemetry metrics following these conversion rules:
 
-The ``scrape_config`` section of your configuration file can specify a set of targets and parameters describing how to scrape them. For basic configurations, one scrape configuration specifies a single job. 
+.. list-table::
+   :width: 100%
+   :widths: 50 50
+   :header-rows: 1
 
-Targets may be statically configured by using the ``static_configs`` parameter or dynamically discovered using one of the supported service-discovery mechanisms.
+   * - Prometheus metric type
+     - OpenTelemetry metric type
+   * - Counter (monotonic)
+     - Sum (data type ``double``)
+   * - Gauge |br| Unknown
+     - Gauge (data type ``double``)
+   * - Histogram
+     - Histogram (cumulative distribution)
+   * - Summary
+     - Summary (percentiles)
 
-Additionally, the ``relabel_configs`` parameter allows advanced modifications to any target and its labels before scraping.
-
-The following is an example of a basic scrape configuration:
-
-.. code-block:: yaml
-
-   receivers:
-    prometheus/internal:
-      config:
-        scrape_configs:
-        # The job name assigned to scraped metrics by default.
-        # <job_name> must be unique across all scrape configurations.
-        - job_name: 'otel-collector'
-          # How frequently to scrape targets from this job. 
-          # The acceptable values are <duration> | default = <global_config.scrape_interval> ]
-          scrape_interval: 10s
-          # List of labeled statically configured targets for this job.
-          static_configs:
-          - targets: ['0.0.0.0:8888']
-          # List of metric relabel configurations.
-          metric_relabel_configs:
-            - source_labels: [ __name__ ]
-              regex: '.*grpc_io.*'
-              action: drop
-
-See the :new-page:`scrape configuration in GitHub <https://github.com/prometheus/prometheus/blob/v2.28.1/docs/configuration/configuration.md#scrape_config>` for advanced configuration examples.
-
-Get help
-=======================
+Troubleshooting
+======================
 
 .. include:: /_includes/troubleshooting-components.rst

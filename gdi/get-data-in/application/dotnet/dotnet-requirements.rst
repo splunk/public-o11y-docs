@@ -16,10 +16,30 @@ Ensure you are using supported .NET versions
 
 The SignalFx Instrumentation for .NET supports the following .NET versions:
 
-- .NET Core 3.1, .NET 5.0 and higher on Windows and Linux
-- .NET Framework 4.6.1 and higher on Windows
+- Instrumentation for traces and metrics:
+   
+   -  .NET 6.0 and .NET 7.0
+   -  .NET Framework 4.6.2 and higher
 
-.. note:: AlwaysOn Profiling requires NET Core 3.1 or .NET 5.0 and higher. Memory profiling requires .NET 5.0 and higher.
+- AlwaysOn Profiling:
+
+   - .NET 6.0 and .NET 7.0.
+
+Support for legacy .NET versions
+---------------------------------------------------------------
+
+Limited support is available for the following legacy versions of .NET:
+
+- Instrumentation for traces and metrics:
+
+   - .NET Core 3.1
+   - .NET 5.x
+   - .NET Framework 4.6.1
+
+- AlwaysOn Profiling:
+
+   - CPU Profiling: .NET Core 3.1 and .NET 5.x
+   - Memory Profiling: .NET Core 5.x
 
 .. _supported-dotnet-libraries:
 
@@ -120,7 +140,7 @@ Install and configure the Splunk Distribution of OpenTelemetry Collector
 
 The SignalFx Instrumentation for .NET exports application traces and spans to the Splunk Distribution of OpenTelemetry Collector, which also collects system metric data and logs, including profiling data.
 
-To send application traces and spans to Observability Cloud, install the Splunk Distribution of OpenTelemetry Collector for your platform. The following distributions are available:
+To send application traces and spans to Splunk Observability Cloud, install the Splunk Distribution of OpenTelemetry Collector for your platform. The following distributions are available:
 
 - Splunk OTel Collector for Linux. See :ref:`otel-install-linux`.
 - Splunk OTel Collector for Windows. See :ref:`otel-install-windows`.

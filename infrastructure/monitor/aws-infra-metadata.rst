@@ -32,15 +32,11 @@ For all services, the system imports the following common properties:
 
    *  - AccountId
       - aws_account_id
-      - The id of your AWS account
-
-   *  - AccountAlias
-      - aws_account_alias
-      - The alias of your AWS account
+      - The id of your AWS account.
 
    *  - Region
       - aws_region
-      - The region you're importing metadata from
+      - The region you're importing metadata from. See available :ref:`AWS regions <aws-regions>`.
 
 
 .. _aws-oc-metrics:

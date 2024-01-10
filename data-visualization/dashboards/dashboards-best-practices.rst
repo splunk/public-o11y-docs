@@ -5,7 +5,7 @@ Best practices for creating dashboards in Splunk Observability Cloud
 ********************************************************************
 
 .. meta::
-      :description: Learn about best practices for creating useful dashboards in Splunk Observability Cloud.
+      :description: Share a dashboard with your organization, create a dashboard style guide, and other best practices for creating dashboards in Splunk Observability Cloud. 
 
 Splunk Observability Cloud provides a range of visualization and organizational options for dashboards. This section provides guidance for using these options.
 
@@ -34,11 +34,11 @@ Publish dashboards to share with your organization
 
 Sometimes, you might want to create a dashboard and share it outside of your team. Follow this workflow when publishing dashboards to share with your organization.
 
--	Users create charts and dashboards for their own use, including as drafts, in their own user dashboard group. Charts are usually created starting from the Metric Finder if they don’t know the name of the metrics they want to chart, or starting from the Chart Builder directly if they do. Alternatively, a team dashboard group can be created as a shared workspace, with creation and editing done in there.
+-	Users create charts and dashboards for their own use, including as drafts, in their own user dashboard group. Charts are usually created starting from the Metric Finder if they don't know the name of the metrics they want to chart, or starting from the Chart Builder directly if they do. Alternatively, a team dashboard group can be created as a shared workspace, with creation and editing done in there.
 
--	When users have a chart or dashboard that is ready to be shared, they create an appropriately named custom dashboard group (if it doesn’t already exist) for the team that is meant to use it, or for the service or environment that it represents, and then copy the chart or dashboard into that dashboard group.
+-	When users have a chart or dashboard that is ready to be shared, they create an appropriately named custom dashboard group (if it doesn't already exist) for the team that is meant to use it, or for the service or environment that it represents, and then copy the chart or dashboard into that dashboard group.
 
--	If there are built-in dashboards (or filtered versions thereof) that are logically part of a team’s responsibility, or supporting a component of a service, then they are often saved into the appropriate dashboard group as well. For example, you may have a custom dashboard group for your Kafka service, and in addition to the Kafka-specific metrics, you may want to see the EC2 infrastructure metrics for the cluster upon which Kafka depends. In that case, you would apply an appropriate filter to the EC2 built-in dashboard (using ``aws_tag_service:Kafka``, for example) and then use :menuselection:`Save as` add the dashboard to your Kafka dashboard group.
+-	If there are built-in dashboards (or filtered versions thereof) that are logically part of a team's responsibility, or supporting a component of a service, then they are often saved into the appropriate dashboard group as well. For example, you may have a custom dashboard group for your Kafka service, and in addition to the Kafka-specific metrics, you may want to see the EC2 infrastructure metrics for the cluster upon which Kafka depends. In that case, you would apply an appropriate filter to the EC2 built-in dashboard (using ``aws_tag_service:Kafka``, for example) and then use :menuselection:`Save as` add the dashboard to your Kafka dashboard group.
 
 Establish a style guide for your organization
 =============================================================================

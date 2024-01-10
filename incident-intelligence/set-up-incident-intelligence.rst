@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-set-up-incident-intelligence:
 
 Set up Splunk Incident Intelligence

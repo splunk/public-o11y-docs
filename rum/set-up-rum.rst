@@ -4,6 +4,9 @@
 Set up Splunk RUM for mobile and browser applications
 *******************************************************************************
 
+.. meta::
+   :description:  Directions about how to get data in to Splunk Real User Monitoring (RUM). Learn how to instrument your applications and check that data is coming in. 
+
 Follow these steps to instrument your mobile and browser applications and get data into Splunk Real User Monitoring (RUM).
 
 .. _rum-access-token:
@@ -17,7 +20,7 @@ Follow these steps to create a RUM access token for your organization.
 
 #. Log in to Splunk Observability Cloud.
 
-#. Open the settings and select :strong:`Access Tokens`.
+#. Select  :strong:`Settings > Access Tokens`.
 
 #. Select :strong:`New Token` and enter a name.
 
@@ -44,7 +47,7 @@ Check that your data is coming in
 
 Follow these steps to check that your data is in your Splunk RUM for Mobile instance:
 
-:strong:`Preparation`
+:strong:`Prerequisites`
 
 To start sending data to Splunk RUM, you need to first have user activity on your application.
 

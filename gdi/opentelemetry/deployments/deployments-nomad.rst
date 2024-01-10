@@ -1,19 +1,19 @@
 .. _deployments-nomad:
 
-****************************
-Nomad
-****************************
+********************************************************
+Deploy the Collector with Nomad
+********************************************************
 
 .. meta::
       :description: Deploy the Splunk Observability Cloud OpenTelemetry Collector using Nomad.
 
-Use Nomad to to deploy the Collector. Nomad is an orchestrator deployment which creates a job that provides a unified way to receive, process, and export metric and trace data for Splunk Observability Cloud.
+Use the Nomad deployment orchestrator to create a job that provides a unified way to receive, process, and export metric and trace data for Splunk Observability Cloud.
 
 .. note:: 
     
     Job files are provided as a reference only and are not intended for production use.
 
-Getting started
+Get started
 =======================
 To run the job files, you need:
 
@@ -26,6 +26,7 @@ To start a local dev agent for Nomad and Consul:
 2. Run the following commands in two different terminals:
    
    .. code-block:: yaml
+
 
       $ nomad agent -dev -network-interface='{{ GetPrivateInterfaces | attr "name" }}'
 
@@ -77,8 +78,8 @@ You can specify content in the :new-page:`template stanza <https://www.nomadproj
        correlation: null
        ingest_url: https://ingest.${SPLUNK_REALM}.signalfx.com
        sync_host_metadata: true
-     logging:
-       logLevel: debug
+     debug:
+       verbosity: detailed
    service:
      extensions:
      - health_check
@@ -108,6 +109,7 @@ Run the Collector as a gateway by registering a service job, as shown in the fol
 
 .. code-block:: yaml
 
+
    $ git clone https://github.com/signalfx/splunk-otel-collector.git
    $ cd splunk-otel-collector/deployments/nomad
    $ nomad run otel-gateway.nomad
@@ -121,6 +123,7 @@ Run the Collector as an agent
 Run the Collector as an agent by registering a system job, as shown in the following example:
 
 .. code-block:: yaml
+
 
    $ git clone https://github.com/signalfx/splunk-otel-collector.git
    $ cd splunk-otel-collector/deployments/nomad

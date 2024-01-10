@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-sync-on-call-schedule:
 
 Check your on-call schedule and sync it to your personal calendar
@@ -47,7 +49,7 @@ See also
 ============
 
 * :ref:`ii-create-manage-on-call-schedules`
-* :ref:`ii-schedule-scenarios`
+* :ref:`ii-scenarios-schedules`
 * :ref:`ii-whos-on-call`
 
 

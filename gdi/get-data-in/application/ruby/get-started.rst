@@ -12,7 +12,7 @@ Instrument Ruby applications for Splunk Observability Cloud
    :hidden:
 
    Requirements <ruby-otel-requirements>
-   Instrument a Ruby application <instrumentation/instrument-ruby-application>
+   Instrument your Ruby application <instrumentation/instrument-ruby-application>
    Connect trace data with logs <instrumentation/connect-traces-logs>
    Configure the Ruby instrumentation <configuration/advanced-ruby-otel-configuration>
    Manual instrumentation <instrumentation/ruby-manual-instrumentation>

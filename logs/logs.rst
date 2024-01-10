@@ -11,6 +11,8 @@ Set up Log Observer
 ..	toctree::
    :hidden:
 
+.. include:: /_includes/log-observer-transition.rst
+   
 Complete the instructions on this page if you have a Log Observer entitlement in Observability Cloud. If you don't have a Log Observer entitlement in Observability Cloud, see :ref:`logs-intro-logconnect` to set up the integration and begin using Log Observer to query your Splunk platform logs.
 
 By default, Log Observer indexes and stores all logs data that you send to Observability Cloud unless you choose to archive some of your logs data in Amazon S3 buckets. See :ref:`logs-infinite` to learn how to archive logs until you want to index and analyze them in Log Observer. If you use Log Observer Connect, your logs data remains in your Splunk platform instance and is never stored in Log Observer or Observability Cloud.
@@ -93,11 +95,11 @@ After you see data coming into Log Observer from your data source, you can send 
 
    If you already have existing Fluentd or Fluent Bit deployments, you can configure them to send logs to Log Observer. However, it is important to note that the following are true when using Fluentd or Fluent Bit:
 
-      - Logs captured by your own FluentD or Fluent Bit agents do not include the resource metadata that automatically links log data to other related sources available within APM and Infrastructure Monitoring.
+      - Logs captured by your own Fluentd or Fluent Bit agents do not include the resource metadata that automatically links log data to other related sources available within APM and Infrastructure Monitoring.
 
       - Although there are multiple ways to send log data to Log Observer, Splunk only provides direct support for the Splunk distribution of OpenTelemetry Collector.
 
-   If you still want to use FluentD to send logs to Log Observer, see :ref:`Configure Fluentd to send logs <fluentd>`.
+   If you still want to use Fluentd to send logs to Log Observer, see :ref:`Configure Fluentd to send logs <fluentd>`.
 
 .. _work-with-data:
 
@@ -150,7 +152,7 @@ in addition to your current system, follow these steps:
 
 2. Add HEC output.
    Change your Fluentd configuration by adding another output section. The new HEC
-   output section points to Splunk’s SignalFx Observability ingest endpoint.
+   output section points to Splunk's SignalFx Observability ingest endpoint.
 
    For example, if you have one output to elasticsearch, follow these steps:
 

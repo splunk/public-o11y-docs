@@ -9,14 +9,14 @@ About the Splunk Distribution of OpenTelemetry Go
 
 The Splunk Distribution of OpenTelemetry Go extends the OpenTelemetry Instrumentation for Go, a set of open source Go packages that provides APIs to directly measure the performance and behavior of your software.
 
-With the distribution you can instrument any application written in Go 1.18 and higher. See :ref:`go-otel-requirements`.
+With the distribution you can instrument any application written in Go 1.19 and higher. See :ref:`go-otel-requirements`.
 
 Features of the Splunk Distribution of OpenTelemetry Go
 ===========================================================
 
 In addition to the features of the OpenTelemetry Instrumentation for Go, like bundled exporters and propagators, the Splunk Distribution of OpenTelemetry Go provides additional custom features:
 
-- Sends trace and span data to Splunk Observability Cloud using the OTel Collector..
+- Sends trace and metrics telemetry to Splunk Observability Cloud using the OTel Collector.
 - Provides additional library instrumentations. See :ref:`supported-go-libraries`.
 - Provides trace metadata for application logs. See :ref:`correlate-traces-with-logs-go`.
 
@@ -29,8 +29,8 @@ Defaults of the Splunk Distribution of OpenTelemetry Go
 
 The Splunk Distribution of OpenTelemetry Go has the following default settings for context propagation, exporters, and trace settings:
 
-- W3C tracecontext and W3C baggage context propagation is enabled by default.
-- The OTLP over gRPC exporter is configured to send spans to a locally running the Splunk Distribution of OpenTelemetry Collector.
+- W3C tracecontext and W3C baggage context propagation is activated by default.
+- The OTLP over gRPC exporter is configured to send spans and metrics to a locally running the Splunk Distribution of OpenTelemetry Collector.
 - Unlimited defaults for trace configuration to support full-fidelity tracing.
 
 Support for previous versions

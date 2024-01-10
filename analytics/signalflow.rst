@@ -49,7 +49,7 @@ Most built-in :ref:`analytical functions <analytics-ref>` can perform computatio
 
 -  Transformations operate in parallel on each MTS over a window of time and yield one output time series for each input time series. For example, the average CPU utilization for five servers over a rolling window of one day will display five MTS; each output value will be the moving average for that MTS over the previous 24 hours. For more information, see :new-page:`Transformations <https://dev.splunk.com/observability/docs/signalflow/#Transformations>`.
 
-   To learn more about th two types of transformations available, moving window and calendar window, are discussed in the following section. For examples of how to use transformation analytics in charts, see :ref:`gain-insights-through-chart-analytics`.
+   See the following sections to learn more about the 3 types of transformations available, moving window, calendar window, and dashboard window. For examples of how to use transformation analytics in charts, see :ref:`gain-insights-through-chart-analytics`.
 
 Moving window transformations
 --------------------------------------------
@@ -74,6 +74,7 @@ In the following example, the ``Sum``, ``Mean``, ``Maximum``, and ``Minimum`` fu
     :alt: This image shows a calendar window transformation chart.
 
 For more information about calendar window transformations, see :new-page:`Calendar window transformations <https://dev.splunk.com/observability/docs/signalflow/#Calendar-window-transformations>`.
+
 
 Resolution considerations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -128,13 +129,37 @@ The value at the start of each cycle represents the final value for the previous
 .. _cal-window-timeshift:
 
 Timeshift for calendar windows
------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The timeshift function shifts the data points for each MTS in the input stream, offsetting them by a specified time period. A typical use case for using timeshift is to compare the average value seen for a metric over a period of time with the average seen over the previous period. For more information on the SignalFlow function, see :new-page:`timeshift() <https://dev.splunk.com/observability/docs/signalflow/methods/timeshift_stream_method>`.
 
 Timeshift is available only when partial values are hidden. If you enable timeshift when using calendar windows, the value from the end of a previous cycle will be shown at the end of every calendar cycle. For example, if your cycle length is Month and you timeshift by one cycle, the data point at April 30 will represent the value from March 31, the data point at May 31 will represent the value from April 30, and so on.
 
 .. note:: The timeshift feature in charts is aware of cycles having variable lengths, such as how March has more days than February, and shifts correctly to the end of a previous interval. By contrast, the standalone timeshift analytics function performs a fixed width shift, such as 30 days. For more information, see :ref:`use-timeshift-function-to-understand-trends`.
+
+.. _dashboard-window:
+
+Dashboard window transformations
+------------------------------------------
+
+In the following example, both charts in the same dashboard show the total number of hosts for load balancers in different regions. Based on data in the past hour, there are 2124 hosts in the Tokyo region and 1772 hosts in the Paris region.
+
+.. image:: /_images/get-started/dashboard-window-transformation.png
+    :width: 99%
+    :alt: This image shows a dashboard window transformation in chart.
+
+The difference between the two charts is that the :strong:`listChartDemo` chart isn't configured with dashboard window transformation, while the :strong:`listChartDashboardWindow` chart is.
+
+When you adjust the :guilabel:`Time` picker for the dashboard, only the chart on the :strong:`listChartDashboardWindow` chart will update its values according to the selected time range. For example, if you select a time range of ``-12h``, the chart will display data from the past 12 hours.
+
+For more information about dashboard window transformations, see :new-page:`Dashboard window transformations <https://dev.splunk.com/observability/docs/signalflow/#Dashboard-window-transformations>`.
+
+.. note::
+    
+    You can't apply dashboard window transformations to detectors. When you create a new detector from a chart that uses dashboard window transformation, the transformation window is updated to the closest match to the current time window of the dashboard. 
+     
+    For example, the current time window of a dashboard is ``09/01/2023 09:25:00 am to 09/02/2023 07:30:00 am``. When you create a new detector from a chart in this dashboard, the transformation window becomes ``Past day (-1d)``.
+
 
 .. _other-functions:
 

@@ -4,13 +4,18 @@ on:
   workflow_dispatch:
   schedule: 
     - cron: "*/5 * * * *"
+    
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
   repo-sync:
-    name: Repo Sync
+    name: Synchronize repositories
+    if: ${{ github.repository == 'splunk/public-o11y-docs' || github.repository == 'splunk/private-o11y-docs' }}
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - uses: repo-sync/github-sync@v2
       name: Sync repo to branch
       with:
@@ -24,7 +29,5 @@ jobs:
         source_branch: ${{ secrets.INTERMEDIATE_BRANCH }}
         destination_branch: main
         pr_title: "Pulling ${{ github.ref }} into main"
-        pr_reviewer: "puribe-splunk,jmalin-splunk"                         # Comma-separated list (no spaces)
-        pr_assignee: "puribe-splunk,jmalin-splunk"
         pr_label: "sync"
         github_token: ${{ secrets.MY_TOKEN }}

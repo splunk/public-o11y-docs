@@ -8,23 +8,25 @@ Monitor Kubernetes
 .. meta::
    :description: Learn how to monitor Kubernetes resources with Splunk Observability Cloud.
 
-.. caution:: The new Kubernetes navigator is an experimental feature subject to future changes.
 
 .. note:: The following topic describes the new Kubernetes navigator. See :ref:`infrastructure-k8s` for documentation on the classic Kubernetes navigator.
 
 
-You can monitor Kubernetes metrics with Splunk Observability Cloud. Observability Cloud uses the Splunk Distribution of OpenTelemetry Collector for Kubernetes to provide robust infrastructure monitoring capabilities. To learn more, see :ref:`otel-intro`.
+You can monitor Kubernetes metrics with Splunk Observability Cloud. Splunk Observability Cloud uses the Splunk Distribution of OpenTelemetry Collector for Kubernetes to provide robust infrastructure monitoring capabilities. To learn more, see :ref:`otel-intro`.
 
-Prerequisite
+Prerequisites
 ================
 
-Before you can start monitoring any Kubernetes resources, :ref:`get-started-k8s`, and log in with your administrator credentials.
+Before you start monitoring any Kubernetes resources, do the following:
+
+* :ref:`get-started-k8s`.
+* Log in with your administrator credentials.
 
 
 .. _use-k8s-nav:
 
-Use the Kubernetes navigators
-==============================
+Kubernetes navigators
+===============================
 
 .. note:: The following sections show you components specific to the Kubernetes navigators. For information on components shared by all navigators, see :ref:`use-navigators-imm`.
 
@@ -134,6 +136,25 @@ Apart from monitoring your Kubernetes infrastructure, you can also track service
     :width: 100%
     :alt: Navigating to the EC2 navigator from the Kubernetes nodes navigator, and then navigating back to the Kubernetes nodes navigator.
 
+Analyzer
++++++++++++++++++++++++++++
+
+The Analyzer accessed through the K8s analyzer tab helps you troubleshoot Kubernetes problems at scale by highlighting Kubernetes objects that are in a bad state, such as nodes that are not ready. Then, the Analyzer produces theories about what those objects might have in common, such as that all of the objects are running the same workload or all objects are located in the same AWS region. Click on a finding in the Analyzer panel to filter the map.
+
+The Analyzer panel displays suggested filters for the elements selected in the :ref:`cluster map <k8s-nav-map>`. Click links in the Analyzer panel to add filters to the cluster map and explore conditions across your entire Kubernetes environment.
+
+The Analyzer uses AI-driven insights to examine patterns that nodes, pods, or containers could have in common. Trouble indicators are:
+
+-  pods that are in pending status
+-  pods that are in failed status
+-  pods with unknown condition
+-  containers with high restart counts
+-  nodes not ready
+-  nodes with unknown condition
+-  nodes experiencing high CPU
+-  nodes experiencing high memory
+
+The Analyzer displays overrepresented metrics properties for known conditions, such as pods in pending status, pods in failed status, and so on. You can use properties that are highly correlated with these conditions to filter the cluster map. You can explore data about each of those elements in the navigator using context-sensitive dashboards. This enables you to identify the underlying patterns noticeable on the filtered map that might be correlated with Kubernetes issues. For example, if all failed pods are in certain types of clusters, Analyzer provides suggested paths to follow for troubleshooting such issues.
 
 Next steps
 =====================

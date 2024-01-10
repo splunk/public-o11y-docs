@@ -5,11 +5,11 @@ Configure the Ruby agent for Splunk Observability Cloud
 ********************************************************************
 
 .. meta:: 
-   :description: Configure the agent of the Splunk Distribution of OpenTelemetry Ruby to suit most of your instrumentation needs, like correlating traces with logs, enabling exporters, and more.
+   :description: Configure the agent of the Splunk Distribution of OpenTelemetry Ruby to suit most of your instrumentation needs, like correlating traces with logs, activating exporters, and more.
 
 You can configure the Ruby agent from the Splunk Distribution of OpenTelemetry Ruby to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started.
 
-The following sections describe all available settings for configuring the Ruby agent, including options for enabling new features that are unique to the Splunk Distribution of OpenTelemetry Ruby.
+The following sections describe all available settings for configuring the Ruby agent, including options for activating new features that are unique to the Splunk Distribution of OpenTelemetry Ruby.
 
 .. _main-ruby-agent-settings:
 
@@ -24,11 +24,11 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
    * - Environment variable
      - Description
    * - ``SPLUNK_ACCESS_TOKEN``
-     - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Not required unless you need to send data to the Observability Cloud ingest endpoint. See :ref:`admin-tokens`.
+     - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Not required unless you need to send data to the Splunk Observability Cloud ingest endpoint. See :ref:`admin-tokens`.
    * - ``SPLUNK_REALM``
      - The name of your organization's realm, for example, ``us0``. When you set the realm, telemetry is sent directly to the ingest endpoint of Splunk Observability Cloud, bypassing the Splunk OpenTelemetry Collector.
    * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
-     - Enables you to add server trace information to HTTP response headers using the ``net/http`` instrumentation package. For more information, see :ref:`server-trace-information-go`. The default value is ``true``.
+     - Lets you add server trace information to HTTP response headers using the ``net/http`` instrumentation package. For more information, see :ref:`server-trace-information-go`. The default value is ``true``.
 
 To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-ruby`.
 
@@ -112,7 +112,7 @@ For backward compatibility with the SignalFx Ruby Tracing Library, use the b3mul
 Server trace information
 ==============================================
 
-To connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data, enable the Rack instrumentation in the configuration:
+To connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data, activate the Rack instrumentation in the configuration:
 
 .. code-block:: ruby
 
@@ -127,7 +127,7 @@ To connect Real User Monitoring (RUM) requests from mobile and web applications 
       run ->(_env) { [200, { "content-type" => "text/plain" }, ["OK"]] }
    end
 
-When using ActionPack, the middleware is added automatically if the instrumentation ActionPack is enabled:
+When using ActionPack, the middleware is added automatically if the instrumentation ActionPack is activated:
 
 .. code-block:: ruby
 
@@ -137,7 +137,7 @@ When using ActionPack, the middleware is added automatically if the instrumentat
       c.use "Splunk::Otel::Instrumentation::ActionPack"
    end
 
-After you've enabled the Rack instrumentation, set the following environment variable: 
+After you've activated the Rack instrumentation, set the following environment variable: 
 
 .. tabs::
 

@@ -36,6 +36,8 @@ The following table contains all the metrics reported by the Splunk Lambda Exten
      - Gauge
      - Lifetime of the function, in milliseconds. The lifetime of the function might span multiple Lambda invocations.
 
+.. note:: To track the execution time of a function, consider using alternative indicators, such the ``lambda.function.lifetime`` metric for functions that are called rarely. Another indication of longer execution time might be an increased function concurrency.
+
 AWS Lambda dimensions
 ================================================
 
@@ -65,7 +67,36 @@ The following table contains all the dimensions reported by the Splunk Lambda Ex
    * - ``aws_function_shutdown_cause``
      - Reason for the shutdown. Available only for the ``lambda.function.shutdown`` metrics.
 
+.. _ingest-modes-aws-lambda:
+
+Ingest modes for metrics
+=================================================
+
+The Splunk Extension for AWS Lambda sends metrics in real time with minimal impact on monitored functions. The following ingest modes are available. Choose the ingest mode that best suits your case. For information on how to configure the ingest modes, see :ref:`metrics-configuration-lambda`.
+
+Fast ingest mode
+------------------
+
+The fast ingest mode is similar to real-time monitoring in that it sends a metric update every time a monitored function is invoked. Use this mode when your functions are rarely called, accept increased concurrency, or require real-time metrics.
+
+.. caution:: Fast ingest might have significant impact on the duration of a function. To mitigate the increased duration due to fast ingest, you can activate Fast Invoke Response in AWS Lambda, although this might increase concurrenty and costs in turn.
+
+Buffering mode
+------------------
+
+Buffering mode minimizes the impact on monitored functions by buffering data points internally and send them at an interval specified using the ``REPORTING_RATE`` and ``REPORTING_TIMEOUT`` settings.
+
+Use buffering mode when you don't need near real-time feedback and don't want to increase function latency. Don't use buffering mode with functions that are invoked less frequently than the reporting interval, as this might cause delays in data reporting.
+
+.. note:: Due to AWS Lambda limitations, instrumented functions that use buffering mode send the last batch of data points with significant delay. This happens when each process in the execution environment is complete and there are no pending events.
+
 Tags and properties
 =================================================
 
-By default, metrics reported by the Splunk Lambda Extension don't have tag or properties attached to them. To enable this feature, you must configure an AWS data source in Splunk Observability Cloud. See :ref:`specify-data-metadata`.
+By default, metrics reported by the Splunk Lambda Extension don't have tag or properties attached to them. To activate this feature, you must configure an AWS data source in Splunk Observability Cloud. See :ref:`specify-data-metadata`.
+
+
+Troubleshooting
+=================================================
+
+To troubleshoot AWS Lambda metrics, see :ref:`aws-lambda-troubleshooting`.

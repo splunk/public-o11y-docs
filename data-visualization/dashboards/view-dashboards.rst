@@ -5,10 +5,9 @@ View dashboards in Splunk Observability Cloud
 ************************************************
 
 .. meta::
-      :description: Dashboards are groupings of charts and visualizations of metrics. Observability Cloud has three types of dashboards and dashboard groups: built-in, custom, and user. Built-in dashboard groups are provided by Observability Cloud to give you immediate visibility into the technologies and services being used in your environment. You can also build custom and user dashboard groups to create content specific to your organization's requirements.
+      :description: View and rearrange dashboards and dashboard groups, understand data points on charts, and troubleshoot, download, or take actions on your charts in Splunk Observability Cloud. 
 
 This document describes how to view dashboards and dashboard groups, as well as how to adjust your view once you are in a dashboard group or dashboard. It also covers how to create a list of your favorite dashboards for easy access.
-
 
 .. _viewing-dashboards:
 
@@ -92,15 +91,25 @@ To create a detector based on the chart, click the :strong:`Get Alerts` icon. Fo
 
 From the :strong:`Chart actions` menu, you can perform the following tasks:
 
-* Make a copy of the chart. For more information, see :ref:`copy-charts`.
+* Select :strong:`Open` to open the individual chart.
 
-* Share the chart with others. For more information, see :ref:`sharing-a-chart`.
+* Select :strong:`Copy` if you want to paste your logs chart elsewhere for further examination. For more information, see :ref:`copy-charts`.
 
-* View information about the chart
+* Select :strong:`Share` to share a chart with team members or members of other teams who have permissions to view the chart. For more information, see :ref:`sharing-a-chart`.
 
-* Download an image (screenshot) of the chart
+* Select :strong:`Info` to see which user added and last updated the logs chart.
 
-* For event feed charts, you can export the contents to a JSON file. For more information, see :ref:`dashboard-event-feed`.
+* Select :strong:`Download chart as image` to download your logs chart as a PNG file.
+
+* Select :strong:`Export Chart as CSV` to export data from a chart to a CSV file.
+
+* Select :strong:`Export Events as JSON` to export the contents of an event feed chart to a JSON file. For more information, see :ref:`dashboard-event-feed`.
+
+* Select :strong:`Troubleshoot from this Time Window (APM)` to explore related data in Splunk APM. (This option only exists if APM contains data related to data in the logs chart.)
+
+* Select :strong:`Troubleshoot from this Time Window (RUM)` to explore related data in Splunk RUM. (This option only exists if RUM contains data related to data in the logs chart.)
+
+* Select :strong:`Delete` to remove your logs chart from the dashboard. Deleting it from the dashboard does not impact the query you used to create your logs chart in Log Observer.
 
 Not all actions are available for all chart types.
 
@@ -131,7 +140,7 @@ If you edited a :ref:`plot name <plot-name>` or specified :ref:`display units <p
 ..
   ref broken for now bc page that includes the label is also in the process of being migrated. resolve once both pages are merged to trangl-POR-7413-migrate-custom-content.
 
-As you hover over dimensions on the :strong:`Data Table` tab, an :strong:`Actions menu` icon displays. Menu options let you add a filter to the chart's :strong:`Overrides` bar based on the value of the dimension. For more information, see :ref:`filter-from-data-table` and :ref:`navigate-with-data-links`.
+As you hover over dimensions on the :strong:`Data Table` tab, an :strong:`Actions menu` (|more|) icon displays. Menu options let you add a filter to the chart's :strong:`Overrides` bar based on the value of the dimension. For more information, see :ref:`filter-from-data-table` and :ref:`navigate-with-data-links`.
 
 
 View the Events tab

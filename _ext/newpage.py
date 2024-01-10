@@ -32,18 +32,18 @@ from docutils.parsers.rst import roles
 
 from sphinx.roles import AnyXRefRole
 
-url_re = re.compile('(.+) <(.+)>')
+url_re = re.compile(r'^(.*)<(.*)>$')
 
 
 def new_page(name, rawtext, text, lineno, inliner, options={}, content=[]):
     """
     An rst role that creates links that open in a new page.
     """
-    if '<' in text:
-        match = url_re.search(text)
+    match = url_re.search(text)
+    if match:
         title, url = match.groups()
     else:
-        url = title = text
+        url = title = text.strip()
     options['classes'] = ['new-page']
     roles.set_classes(options)
     node = nodes.reference(rawtext, title, refuri=url, **options)

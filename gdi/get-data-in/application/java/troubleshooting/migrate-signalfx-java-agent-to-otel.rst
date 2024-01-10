@@ -7,7 +7,7 @@ Migrate from the SignalFx Java Agent
 .. meta:: 
    :description: The agent of the Splunk Distribution of OpenTelemetry Java replaces the deprecated SignalFx Java Agent. To migrate to the Splunk Java OTel agent, follow these instructions.
 
-The SignalFx Java Agent is deprecated and will reach End of Support on December 17th, 2022. Replace it with the agent from the Splunk Distribution of OpenTelemetry Java. For more information, see :ref:`smart-agent`.
+The SignalFx Java Agent is deprecated and has reached End of Support. Replace it with the agent from the Splunk Distribution of OpenTelemetry Java.
 
 The agent of the Splunk Distribution of OpenTelemetry Java is based on the OpenTelemetry Instrumentation for Java, an open-source project that uses the OpenTelemetry API and has a smaller memory footprint than the SignalFx Java Agent. 
 
@@ -25,7 +25,7 @@ Migrate to the Splunk Distribution of OpenTelemetry Java
 
 To migrate from the SignalFx Java Agent to the Splunk Distribution of OpenTelemetry Java, follow these steps:
 
-#. Install and enable the Java agent. See :ref:`install-enable-jvm-agent`.
+#. Install and activate the Java agent. See :ref:`install-enable-jvm-agent`.
 #. Specify the endpoint of the OpenTelemetry Collector you're exporting traces to. See :ref:`trace-exporters-settings-java`.
 #. In your application startup script, replace ``-javaagent:./signalfx-tracing.jar`` with ``-javaagent:/path/to/splunk-otel-javaagent.jar``.
 
@@ -55,7 +55,7 @@ The following table shows SignalFx Java Agent system properties and their OpenTe
    * - ``signalfx.env``
      - ``otel.resource.attributes=deployment.environment=<environment_name>``
    * - ``signalfx.endpoint.url``
-     - ``otel.exporter.otlp.endpoint`` or ``otel.exporter.jaeger.endpoint``, depending on which trace exporter you're using. OTLP is the default.
+     - ``otel.exporter.otlp.endpoint``
    * - ``signalfx.tracing.enabled``
      - ``otel.javaagent.enabled``
    * - ``signalfx.integration.<name>.enabled=false``
@@ -81,7 +81,7 @@ The following table shows SignalFx Java Agent environment variables and their Op
    * - ``SIGNALFX_ENV``
      - ``OTEL_RESOURCE_ATTRIBUTES=deployment.environment=<environment_name>``
    * - ``SIGNALFX_ENDPOINT_URL``
-     - ``OTEL_EXPORTER_OTLP_ENDPOINT`` or ``OTEL_EXPORTER_JAEGER_ENDPOINT``, depending on which trace exporter you're using. OTLP is the default one.
+     - ``OTEL_EXPORTER_OTLP_ENDPOINT``
    * - ``SIGNALFX_TRACING_ENABLED``
      - ``OTEL_JAVAAGENT_ENABLED``
    * - ``SIGNALFX_INTEGRATION_<name>_ENABLED=false``

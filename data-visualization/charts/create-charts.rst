@@ -181,6 +181,7 @@ Use single value charts
 Choose this chart type when you want to see a single number in a large font that represents the current value of a single data point on a plot line. If the time period is in the past, the number represents the value of the metric near the end of the time period.
 
   .. image:: /_images/data-visualization/charts/single-value-chart.png
+     :width: 50%
      :alt: This screenshot shows a single value chart illustrating the number of hosts with the Splunk Distribution of OpenTelemetry Collector installed.
 
 .. caution::
@@ -251,6 +252,7 @@ Use text charts
 Use text charts when you want to place a text note on the dashboard instead of displaying metrics.
 
   .. image:: /_images/data-visualization/charts/text-chart.png
+     :width: 50%
      :alt: This screenshot shows a text chart illustrating how you can this chart type to provide relevant instructional text on a dashboard.
 
 To learn more about text charts, see :ref:`text-charts`.
@@ -268,7 +270,7 @@ A table chart displays metrics and dimensions in table format. Each metric name 
 .. image:: /_images/data-visualization/charts/table-chart.png
    :alt: This screenshot shows a table chart grouped by the demo_host dimension, sorted by the demo_customer dimension, and linked to a detector with no alerts as illustrated by a green border around the table chart.
 
-You can group metric time series rows by a dimension. To do this, select the :strong:`Group by` menu and select the dimension you want to group the rows by. The selected dimension’s column becomes the first column and each row of the table displays to represent one value of the dimension.
+You can group metric time series rows by a dimension. To do this, select the :strong:`Group by` menu and select the dimension you want to group the rows by. The selected dimension's column becomes the first column and each row of the table displays to represent one value of the dimension.
 
 For example, group the table by the :code:`host` dimension to display the health and status of each host in your environment.
 
@@ -298,7 +300,7 @@ Here are some additional ways in which you can customize a table chart to best v
 
 - Sort table values
 
-  Select a column header to swtich between sorting by ascending and descending order. An arrow icon displays in the column header to indicate the sort order.
+  Select a column header to switch between sorting by ascending and descending order. An arrow icon displays in the column header to indicate the sort order.
 
 - Link a detector to the table chart
 

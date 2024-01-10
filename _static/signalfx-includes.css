@@ -15,6 +15,11 @@ span.not-ok {
    color: red;
 }
 
+span.std-term {
+  font-weight: bold;
+  font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+
 .st-default-autocomplete {
   width:40% !important;
 }
@@ -70,6 +75,20 @@ a.image-reference {
 
 .monitor-table tr td:nth-child(4) {
     text-align:center;
+}
+
+ul.monitor-metrics, ul.monitor-attr {
+  padding-left:1rem;
+}
+
+table.monitor-stats, table.fix-width {
+    width: 100%;
+    table-layout:fixed;
+    word-wrap: break-word;
+    }
+
+span.pre {
+  white-space:normal;
 }
 
 /* Making heading levels more different
@@ -152,7 +171,7 @@ html, body {
 /* For subsection headings */
 
 div.sphinxsidebar p.caption {
-    font-size: 140%;
+    font-size: 113%;
 }
 
 
@@ -212,9 +231,9 @@ color:#0B599D !important;
 text-decoration:none;
 }
 
-a:hover {
-opacity:0.5;
-text-decoration:none;
+a.reference:hover {
+opacity: .5;
+text-decoration: none;
 }
 
 a:active {
@@ -233,7 +252,7 @@ li.toctree-l1 {
 /* 
 border-bottom: 1px solid #eee;
  */
-padding-bottom: 1 px; /*changed from 10 brs */
+padding-bottom: 1px; /*changed from 10 brs */
 }
 
 div.sphinxsidebar h3 {
@@ -245,7 +264,7 @@ margin:30px 0 20px;
 /* For subsection headings */
 
 div.sphinxsidebar p.caption {
-    font-size: 140%;
+    font-size: 113%;
 }
 
 
@@ -501,7 +520,7 @@ margin-left: 20%;
 max-width: 56%;
 border-right: 1px solid #eee;
 padding: 10px;
-text-align: justify;
+text-align: left;
 margin-bottom: 200px !important;
 }
 
@@ -822,7 +841,7 @@ border:none;
 }
 
 div.sphinxsidebar p {
-  margin:24px 0 5px;
+  margin:17px 0 5px;
 }
 
 #welcome {

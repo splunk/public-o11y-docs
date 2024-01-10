@@ -1,8 +1,8 @@
 .. _instrument-python-applications:
 
-***************************************************************
-Instrument a Python application for Splunk Observability Cloud
-***************************************************************
+**********************************************************************
+Instrument your Python application for Splunk Observability Cloud
+**********************************************************************
 
 .. meta::
    :description: The Splunk OpenTelemetry Python agent can automatically instrument your Python application or service. Follow these steps to get started.
@@ -16,10 +16,10 @@ Generate customized instructions using the guided setup
 
 To generate all the basic installation commands for your environment and application, use the Python guided setup. To access the Python guided setup, follow these steps:
 
-#. Log in to Observability Cloud.
+#. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`Python guided setup <https://login.signalfx.com/#/gdi/scripted/python-tracing/step-1?category=product-apm&gdiState=%7B"integrationId":"python-tracing"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the left navigation menu, select :menuselection:`Data Management`. 
+   #. In the navigation menu, select :menuselection:`Data Management`.
 
    #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 
@@ -29,10 +29,19 @@ To generate all the basic installation commands for your environment and applica
 
    #. Select the :guilabel:`Python` tile to open the Python guided setup.
 
+
+Install the Splunk Distribution of OpenTelemetry Python manually
+==================================================================
+
+Follow these instructions to install the Splunk Distribution of OpenTelemetry Python:
+
+- :ref:`install-enable-python-agent`
+- :ref:`configure-python-instrumentation`
+
 .. _install-enable-python-agent:
 
-Install and enable the Python agent
-===================================================================
+Install and activate the Python agent
+----------------------------------------------------
 
 Follow these steps to automatically instrument your application using the Python agent:
 
@@ -42,9 +51,9 @@ Follow these steps to automatically instrument your application using the Python
 
    .. code-block:: bash
 
-      pip3 install splunk-opentelemetry[all]
+      pip install "splunk-opentelemetry[all]"
 
-   If you're using a ``requirements.txt`` or ``pyproject.toml`` file, add ``splunk-opentelemetry[all]`` to it.
+   If you're using a requirements.txt or pyproject.toml file, add ``splunk-opentelemetry[all]`` to it.
 
 #. Run the bootstrap script to install instrumentation for every supported package in your environment:
 
@@ -90,7 +99,7 @@ Follow these steps to automatically instrument your application using the Python
 
          $env:OTEL_RESOURCE_ATTRIBUTES='deployment.environment=<envtype>,service.version=<version>'
 
-#. Enable the Splunk OTel Python agent by editing your Python service command.
+#. Activate the Splunk OTel Python agent by editing your Python service command.
 
    For example, if you open your Python application as follows:
 
@@ -110,12 +119,52 @@ Follow these steps to automatically instrument your application using the Python
 
    - :ref:`django-instrumentation`
 
-If no data appears in :strong:`Observability > APM`, see :ref:`common-python-troubleshooting`.
+Application metrics are collected by default. See :ref:`python-otel-metrics` for more information.
+
+If no data appears in APM, see :ref:`common-python-troubleshooting`.
+
+.. _enable-profiling-python:
+
+Activate AlwaysOn Profiling
+------------------------------------------------
+
+.. note::
+   AlwaysOn Profiling for Python is in beta development. This feature is provided by Splunk to you "as is" without any warranties, maintenance and support, or service-level commitments. Use of this feature is subject to the :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`.
+
+To activate AlwaysOn Profiling, set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true`` or call the ``start_profiling`` function in your application code.
+
+The following example shows how to activate the profiler from your application code:
+
+.. code-block:: python
+
+         from splunk_otel.profiling import start_profiling
+
+         # Activates CPU profiling
+         # All arguments are optional
+         start_profiling(
+            service_name='my-python-service', 
+            resource_attributes={
+               'service.version': '3.1'
+               'deployment.environment': 'production', 
+            }
+            endpoint='http://localhost:4317'
+         ) 
+
+See :ref:`get-data-in-profiling` for more information. For additional settings, see :ref:`profiling-configuration-python`.
+
+.. _configure-python-instrumentation:
+
+Configure the Python agent
+----------------------------------------------------
+
+In most cases, the only configuration setting you need to enter is the service name. You can also define other basic settings, like the deployment environment, the service version, and the endpoint, among others.
+
+For advanced configuration of the Python agent, like changing trace propagation formats, correlating traces and logs, or configuring server trace data, see :ref:`advanced-python-otel-configuration`.
 
 .. _kubernetes_python_agent:
 
 Deploy the Python agent in Kubernetes
-==========================================================
+===================================================
 
 To deploy the Python agent in Kubernetes, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
 
@@ -145,23 +194,14 @@ The following example shows how to update a deployment to expose environment var
                - name: OTEL_RESOURCE_ATTRIBUTES
                  value: "deployment.environment=<environmentName>"
 
-.. _configure-python-instrumentation:
-
-Configure the Python agent
-===========================================================
-
-In most cases, the only configuration setting you need to enter is the service name. You can also define other basic settings, like the deployment environment, the service version, and the endpoint, among others.
-
-For advanced configuration of the Python agent, like changing trace propagation formats, correlating traces and logs, or configuring server trace data, see :ref:`advanced-python-otel-configuration`.
-
 .. _export-directly-to-olly-cloud-python:
 
-Send data directly to Observability Cloud
-==============================================================
+Send data directly to Splunk Observability Cloud
+==========================================================
 
 By default, the agent sends all telemetry to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
-To send data directly to Observability Cloud, set the following environment variables:
+To send data directly to Splunk Observability Cloud, set the following environment variables:
 
 .. tabs::
 
@@ -179,9 +219,9 @@ To send data directly to Observability Cloud, set the following environment vari
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-#. Open the left navigation menu in Observability Cloud.
+#. Open the navigation menu in Splunk Observability Cloud.
 #. Select :menuselection:`Settings`.
 #. Select your username. 
 
@@ -192,6 +232,6 @@ The realm name appears in the :guilabel:`Organizations` section.
 .. _instrument_aws_python_functions:
 
 Instrument Lambda functions
-=========================================================
+=============================================
 
 You can instrument AWS Lambda functions using the Splunk OpenTelemetry Lambda Layer. See :ref:`instrument-aws-lambda-functions` for more information.

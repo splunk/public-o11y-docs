@@ -7,12 +7,7 @@ Connect Ruby trace data with logs for Splunk Observability Cloud
 .. meta:: 
    :description: You can configure the Ruby standard logger to include tracing attributes provided automatically by Splunk OTel Ruby agent. Use the trace metadata to correlate traces with log events and explore logs in Splunk Observability Cloud.
 
-You can configure the Ruby standard logger to include tracing attributes provided automatically by the Splunk OTel Ruby agent. Use the trace metadata to correlate traces with log events and explore logs in Splunk Observability Cloud.
-
-To include trace metadata in application logs, follow these steps:
-
-- :ref:`ruby-include-trace-data`
-- :ref:`explore-log-observer-ruby`
+You can configure the Ruby standard logger to include tracing attributes provided automatically by the Splunk OTel Ruby agent. Use the trace metadata to correlate traces with log events and explore logs in Splunk.
 
 .. _ruby-include-trace-data:
 
@@ -37,10 +32,3 @@ This adds ``service.name=<ServiceName> trace_id=<TraceId> span_id=<SpanId>`` to 
 .. code-block:: text
 
    service.name=basic-service trace_id=789b159aaee2b389a8771b2588278bcf span_id=6d26eba14a81f3fa
-
-.. _explore-log-observer-ruby: 
-
-Explore application logs in Log Observer
-==================================================
-
-You can send Ruby application logs to Observability Cloud in the same way you send any other type of log data. To learn more about logs in Observability Cloud, see :ref:`logs-logs`.

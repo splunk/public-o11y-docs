@@ -4,8 +4,6 @@
 Reference for Database Query Performance
 ************************************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Reference material for using Database Query Performance in Splunk APM. 
 
@@ -98,7 +96,7 @@ Learn more
 See the following links for more information about Database Query Performance: 
 
 * For an overview of Database Query Performance, see :ref:`db-query-performance`.
-* To enable Database Query Performance, see :ref:`enable-db-perf`. 
-* For a use case focusing on MySQL and SQL troubleshooting, see :ref:`db-perf-use-case`. 
-* For a use case focusing on Redis and NoSQL troubleshooting, see :ref:`redis-use-case`.
+* To turn on Database Query Performance, see :ref:`turn-on-db-perf`. 
+* For a scenario focusing on MySQL and SQL troubleshooting, see :ref:`db-perf-scenario`. 
+* For a scenario focusing on Redis and NoSQL troubleshooting, see :ref:`redis-scenario`.
 * To troubleshoot issues with Database Query Performance, see :ref:`db-perf-troubleshooting`. 

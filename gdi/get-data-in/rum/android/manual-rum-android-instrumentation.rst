@@ -33,7 +33,7 @@ The following example shows how to redact the value of an attribute to remove se
             .filterSpans(spanFilter ->
                spanFilter 
                      .replaceSpanAttribute(StandardAttributes.HTTP_URL,
-                        value -> Pattern.compile("(user|pass)=\\w+")
+                        value -> Pattern.compile.. _"(user|pass:\\w+")
                               .matcher(value)
                               .replaceAll("$1=<redacted>")))
 
@@ -185,12 +185,12 @@ Add server trace context from Splunk APM
 
 The Android RUM agent collects server trace context using back-end data provided by APM instrumentation through the ``Server-Timing`` header. In some cases, you might want to generate the header manually.
 
-To create the ``Server-Timing`` header manually, provide a ``Server-Timing`` header with the name ``traceparent``, where the ``desc`` field holds the version, the trace ID, the parent ID, and the trace flag. 
+To create the ``Server-Timing`` header manually, provide a ``Server-Timing`` header with the name ``traceparent``, where the ``desc`` field holds the version, the trace ID, the parent ID, and the trace flag.
 
 Consider the following HTTP header:
 
 .. code-block:: shell
-   
+
    Server-Timing: traceparent;desc="00-4bf92f3577b34da6a3ce929d0e0e4736-00f067aa0ba902b7-01"
 
 The example resolves to a context containing the following data:
@@ -203,7 +203,7 @@ The example resolves to a context containing the following data:
 When generating a value for the ``traceparent`` header, make sure that it matches the following regular expression:
 
 .. code-block:: shell
-   
+
    00-([0-9a-f]{32})-([0-9a-f]{16})-01
 
 Server timing headers with values that don't match the pattern are automatically discarded. For more information, see the ``Server-Timing`` and ``traceparent`` documentation on the W3C website.

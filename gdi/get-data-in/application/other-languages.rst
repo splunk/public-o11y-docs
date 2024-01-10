@@ -9,20 +9,20 @@ Instrument applications written in other programming languages
 
 You can send traces to Splunk Observabilty Cloud from applications or services written in programming languages for which a Splunk distribution isn't available. See :ref:`get-started-application` for a list of supported languages.
 
-Follow these steps to manually instrument an application to send traces to Splunk Observability Cloud.
+Follow these steps to manually instrument an application to send traces to Splunk APM in Splunk Observability Cloud.
 
 .. _other-add-dependencies:
 
 1. Add the required dependencies or packages
 ==================================================
 
-To instrument your application for Observability Cloud, you need to generate traces and spans that follow the OpenTelemetry format and semantic conventions. Add the required OpenTelemetry dependencies to your project, including gRPC communication libraries for communicating with the Splunk OpenTelemetry Collector.
+To instrument your application for Splunk Observability Cloud, you need to generate traces and spans that follow the OpenTelemetry format and semantic conventions. Add the required OpenTelemetry dependencies to your project, including gRPC communication libraries for communicating with the Splunk OpenTelemetry Collector.
 
 .. tabs::
 
    .. tab:: Erlang
 
-      Add the OpenTelemetry packages to the list of dependencies in your ``rebar.config`` file:
+      Add the OpenTelemetry packages to the list of dependencies in your rebar.config file:
 
       .. code-block:: Erlang
 
@@ -48,7 +48,7 @@ To instrument your application for Observability Cloud, you need to generate tra
 
    .. tab:: Rust
 
-      Add the required dependencies to the ``cargo.toml`` file:
+      Add the required dependencies to the cargo.toml file:
 
       .. code-block:: toml
 
@@ -70,13 +70,13 @@ To instrument your application for Observability Cloud, you need to generate tra
 2. Initialize the OpenTelemetry tracer
 =================================================
 
-In your application's code, initialize the OpenTelemetry library and tracer like in the following examples:
+In your application code, initialize the OpenTelemetry library and tracer like in the following examples:
 
 .. tabs::
 
    .. tab:: Erlang
 
-      Include the OpenTelemetry tracer in your application's code.
+      Include the OpenTelemetry tracer in your application code.
 
       .. code-block:: erlang
 
@@ -129,7 +129,7 @@ In your application's code, initialize the OpenTelemetry library and tracer like
 3. Generate spans for your application
 ==================================================
 
-In your application's code, create spans for the operations you want to track. How you create spans differs depending on the target programming language. 
+In your application code, create spans for the operations you want to track. How you create spans differs depending on the target programming language. 
 
 The following examples show how to create spans that have attributes or tags:
 
@@ -191,12 +191,12 @@ The following examples show how to create spans that have attributes or tags:
 
 .. _export-directly-to-olly-cloud-others:
 
-Send data directly to Observability Cloud
+Send data directly to Splunk Observability Cloud
 ==================================================
 
 By default, all telemetry goes to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
-If you need to send data directly to Observability Cloud, set the following environment variables. When instrumenting Rust applications or services you might need to read the values of the environment variables first.
+If you need to send data directly to Splunk Observability Cloud, set the following environment variables. When instrumenting Rust applications or services you might need to read the values of the environment variables first.
 
 .. code-block:: shell
 
@@ -206,9 +206,9 @@ If you need to send data directly to Observability Cloud, set the following envi
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-#. Open the left navigation menu in Observability Cloud.
+#. Open the navigation menu in Splunk Observability Cloud.
 #. Select :menuselection:`Settings`.
 #. Select your username. 
 

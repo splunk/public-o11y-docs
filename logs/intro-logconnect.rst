@@ -4,7 +4,7 @@
 Introduction to Splunk Log Observer Connect
 *****************************************************************
 
-.. meta created 2021-12-03
+
 
 .. meta::
    :description: Log Observer integration with Splunk Cloud Platform or Splunk Enterprise. The introduction is an overview describing all Log Observer Connect functionality.
@@ -50,7 +50,7 @@ The following table lists features available to customers who have integrated Sp
 
    * - Filter your logs to see only logs that contain a field of your choice with the value :guilabel:`error`.
      - Logs table
-     - :ref:`logs-filter-logs-by-field`
+     - :ref:`logs-keyword`
 
    * - View the JSON schema of an individual log.
      - Log details
@@ -58,7 +58,7 @@ The following table lists features available to customers who have integrated Sp
 
    * - See the metrics, traces, and infrastructure related to a specific log.
      - Related Content
-     - :ref:`get-started-use-case`
+     - :ref:`get-started-scenario`
 
    * - Save and share Log Observer queries.
      - Saved Queries

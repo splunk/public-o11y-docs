@@ -57,7 +57,7 @@ Ceiling
 
 SignalFlow function: :new-page:`ceil() <https://dev.splunk.com/observability/docs/signalflow/methods/ceil_stream_method/>`
 
-Rounds data points up, away from zero, to the nearest integer.
+Rounds a data point up to the largest (closest to positive infinity) floating-point value that is less than or equal to the argument and is equal to a mathematical integer.
 
 .. _count:
 
@@ -115,7 +115,7 @@ Use the following parameters with :strong:`EWMA` and :strong:`Double EWMA`.
 
 - :strong:`Forecast` (duration, applies only to :strong:`Double EWMA`)
 
-  How far into the future to forecast (for example 1h, 4m, etc.). Calculated by adding an appropriate multiple of the trend term to the level term. The default value (0) smooths the series. 
+  How far into the future to forecast (for example 1h, 4m, and so on). Calculated by adding an appropriate multiple of the trend term to the level term. The default value (0) smooths the series. 
   
   For example, if the forecast parameter is set to 10m, the output time series estimates the value of the input time series 10 minutes from now. This can be used to predict when a resource is likely to be exhausted, or as a way of getting alerts earlier. Forecasting also eliminates some false alarms in the scenario where the values are problematic but the trend is benign (decreasing back to healthy).
 
@@ -141,7 +141,7 @@ Floor
 
 SignalFlow function: :new-page:`floor() <https://dev.splunk.com/observability/docs/signalflow/methods/floor_stream_method>`
 
-Rounds data points down, toward zero, to the nearest integer.
+Rounds a data point down to the smallest (closest to negative infinity) floating-point value that is greater than or equal to the argument and is equal to a mathematical integer.
 
 .. _integrate:
 
@@ -215,7 +215,7 @@ You can choose to either aggregate or transform the values of :strong:`Mean`.
 
   |br|
 
-  The :strong:`Mean` function also supports transformation over a calendar window (day, week, month, etc.) instead of a moving window. For more information, see :ref:`calendar-window`.
+  The :strong:`Mean` function also supports transformation over a calendar window (day, week, month, and so on) and a dashboard window instead of a moving window. For more information, see :ref:`calendar-window` and :ref:`dashboard-window`.
 
 .. _mean-plus-stddev:
 
@@ -257,7 +257,7 @@ Returns either the smallest (:strong:`Minimum`) or the largest (:strong:`Maximum
 
 |br|
 
-  The Minimum and Maximum functions also support transformation over a calendar window (day, week, month, etc.) instead of a moving window. For more information, see :ref:`calendar-window`.
+  The :strong:`Minimum` and :strong:`Maximum` functions also support transformation over a calendar window (day, week, month, and so on) and a dashboard window instead of a moving window. For more information, see :ref:`calendar-window` and :ref:`dashboard-window`.
 
 .. _percentile:
 
@@ -266,15 +266,21 @@ Percentile
 
 SignalFlow function: :new-page:`percentile() <https://dev.splunk.com/observability/docs/signalflow/methods/percentile_stream_method>`
 
-Calculates the specified percentile of values in data points collected either from multiple time series at a point in time (aggregation), or from individual time series over a moving time window (transformation).
+Finds the specified percentile of values in data points collected either from multiple time series at a point in time (aggregation), or from individual time series over a moving time window (transformation).
 
 - :strong:`Percentile:Aggregation`
 
-  Outputs one time series for each group of input time series expressing, for each time period, the configured percentile (between 1 and 100, inclusive) of the values present in the input in the time period. The default percentile value is 95.
+  Outputs a data stream for each group of input time series expressing, for each time period, the configured percentile (between 1 and 100, inclusive) of the values present in the input in the time period. The default percentile value is 95.
+
+  For example, by applying a percentile value of 95 to a data stream with 1,000 MTS, you get the value of the 50th biggest MTS for each time period. In this example, approximately 95% of the values are lower than the returned percentile and approximately 5% are higher.
 
 - :strong:`Percentile:Transformation`
 
-  For each input time series, outputs a corresponding time series expressing, for each time period, the configured percentile (between 1 and 100, inclusive) of the input time series over a configurable time window leading up to that period. The default percentile value is 95, and the default time window is one hour.
+  For each input time series, outputs a corresponding data stream expressing, for each time period, the configured percentile (between 1 and 100, inclusive) of the input time series over a configurable time window leading up to that period. The default percentile value is 95, and the default time window is 1 hour.
+
+  For example, by requesting the 95th percentile of the past hour of an MTS with a 10s resolution (assuming no rollup), you get the 18th largest value from the past hour. In this example, out of the 360 data points from the past hour, approximately 95% of the values are lower than the returned percentile and approximately 5% are higher.
+
+The :strong:`Percentile` function also supports transformation over a dashboard window instead of a moving window. For more information, see :ref:`dashboard-window`.
 
 .. _power:
 
@@ -356,7 +362,7 @@ Adds up all the values in data points collected either from multiple time series
 
 |br|
 
-The :strong:`Sum` function also supports transformation over a calendar window (day, week, month, etc.) instead of a moving window. For more information, see :ref:`calendar-window`.
+The :strong:`Sum` function also supports transformation over a calendar window (day, week, month, and so on) and a dashboard window instead of a moving window. For more information, see :ref:`calendar-window` and :ref:`dashboard-window`.
 
 .. _timeshift:
 

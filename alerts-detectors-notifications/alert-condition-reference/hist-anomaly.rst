@@ -4,7 +4,7 @@
 Historical Anomaly
 =============================================================================
 
-.. meta updated 1/23/23
+
 
 .. meta::
   :description: The Historical Anomaly condition alerts when a signal is different from the same periods in the past (for cyclical or seasonal data)
@@ -34,7 +34,7 @@ Basic settings
 
    * - :strong:`Cycle length`
      - Integer >= 1, followed by time indicator (s, m, h, d, w). For example, 30s, 10m, 2h, 5d, 1w. Set this value to be significantly larger than the native resolution.
-     - The time range that reflects the cyclicity of your signal. For example, a value of 1w indicates your signal follows a weekly cycle (you want to compare data for a Monday morning with previous Monday mornings). A value of 1d indicates your signal follows a daily cycle (you want to compare today’s data with data from the same time yesterday, the day before, and so on.)
+     - The time range that reflects the cyclicity of your signal. For example, a value of 1w indicates your signal follows a weekly cycle (you want to compare data for a Monday morning with previous Monday mornings). A value of 1d indicates your signal follows a daily cycle (you want to compare today's data with data from the same time yesterday, the day before, and so on.)
 
    * - :strong:`Alert when`
      - ``Too high``, ``Too low``, ``Too high or Too low``

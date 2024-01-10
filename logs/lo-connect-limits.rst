@@ -4,11 +4,8 @@
 Log Observer Connect limits
 *********************************************************************************************
 
-.. meta created 2021-12-12
-.. meta DOCS-4836
-
 .. meta::
-  :description: See Log Observer Connect’s limits on MB of data ingested or indexed per month, limits on the number and type of processing rules, and search query limits.
+  :description: See Log Observer Connect's limits on MB of data ingested or indexed per month, limits on the number and type of processing rules, and search query limits.
 
 This page documents Splunk Log Observer Connect service limits and behavior. System protection limits are meant to allow for stability and availability of multi-tenant systems and are subject to fine-tuning and change without notice.
 

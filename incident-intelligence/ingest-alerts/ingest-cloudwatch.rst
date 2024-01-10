@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-ingest-cloudwatch-alerts:
 
 Ingest Amazon CloudWatch alarms

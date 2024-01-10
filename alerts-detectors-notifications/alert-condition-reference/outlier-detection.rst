@@ -4,7 +4,7 @@
 Outlier Detection
 =============================================================================
 
-.. meta updated 1/23/23
+
 
 .. meta::
   :description: The Outlier Detection condition alerts when a signal is significantly different from its peers in the same time period.

@@ -5,7 +5,10 @@
 Write custom rules for URL grouping in Splunk RUM
 *********************************************************************
 
-Splunk RUM automatically groups URLs together based on default rules that capture errors and metrics, such as page load and route change duration, JavaScript errors, back-end errors, and Web vitals to name a few. 
+.. meta::
+   :description: Write custom rules to group URLs based on criteria that matches your business specifications, and organize data to match your business needs. Group URLs by both path and domain. 
+
+Splunk RUM automatically groups URLs together based on default rules that capture errors and metrics, such as page load and route change duration, JavaScript errors, back-end errors, and Web vitals. 
 
 What are custom rules in Splunk RUM?
 ================================================
@@ -89,7 +92,7 @@ In a rule, you define how you want to group together URLs based on common charac
 
 What is a pattern?
 ------------------------------------
-The pattern is the most important component of a rule. The pattern defines the common portion in the path or domain that is shared by all URLs that match the rule. Patterns also consist of tokens, like the domain and path in the URL. A wildcard in the pattern matches actual tokens in the URL’s path or domain. You can apply a wildcard to a pattern to match one or more tokens.  
+The pattern is the most important component of a rule. The pattern defines the common portion in the path or domain that is shared by all URLs that match the rule. Patterns also consist of tokens, like the domain and path in the URL. A wildcard in the pattern matches actual tokens in the URL's path or domain. You can apply a wildcard to a pattern to match one or more tokens.  
 
 
 <?> Wildcard for single token 

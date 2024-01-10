@@ -37,11 +37,13 @@ To replace the SignalFx handler with your function handler, follow these steps:
 
 #. In the AWS Lambda console, open the function that you are instrumenting.
 
-#. Navigate to :guilabel:`Code` > :guilabel:`Runtime settings`, then click :guilabel:`Edit`.
+#. Navigate to :guilabel:`Code`, then :guilabel:`Runtime settings`.
+
+#. Select :guilabel:`Edit`.
 
 #. Replace the SignalFx handler with the handler of your function.
 
-#. Click :guilabel:`Save`.
+#. Select :guilabel:`Save`.
 
 .. _install-new-layer:
 

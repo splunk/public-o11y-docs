@@ -7,7 +7,7 @@ Introduction to Splunk Log Observer
 .. meta::
    :description: Get started investigating issues with Splunk Log Observer. Resolve incidents faster through log filtering, aggregations, and analysis.
 
-
+.. include:: /_includes/log-observer-transition.rst
 
 If you do not have a Log Observer entitlement and instead use Log Observer Connect, see :ref:`logs-intro-logconnect`. 
 
@@ -54,7 +54,7 @@ The following table lists features available to customers with a Log Observer en
 
    * - Filter your logs to see only logs that contain the field :guilabel:`error`.
      - Logs table
-     - :ref:`logs-filter-logs-by-field`
+     - :ref:`logs-keyword`
 
    * - Redact data to mask personally identifiable information in your logs.
      - Field redaction processors
@@ -78,7 +78,7 @@ The following table lists features available to customers with a Log Observer en
 
    * - See the metrics, traces, and infrastructure related to a specific log.
      - Related Content
-     - :ref:`get-started-use-case`
+     - :ref:`get-started-scenario`
 
 
 =========================================

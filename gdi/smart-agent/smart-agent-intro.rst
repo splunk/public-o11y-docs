@@ -11,10 +11,11 @@ SignalFx Smart Agent
    :hidden:
 
    Install and configure <smart-agent-resources>
-   Common commands <../agent-commands/smart-agent-commands> 
+   Common commands <smart-agent-commands> 
 
-.. note::
-   The SignalFx Smart Agent is deprecated and will reach end of support on June 30th, 2023. Note that this only affects the agent; Smart Agent receivers bundled in the Splunk Open Telemetry Collector are not deprecated. For details, see the :new-page:`Deprecation Notice <https://github.com/signalfx/signalfx-agent/blob/main/docs/smartagent-deprecation-notice.md>`.
+.. note:: The SignalFx Smart Agent has reached End of Support. While the agent can capture and export telemetry to Splunk Observability Cloud, Splunk no longer provides any support, feature updates, security, or bug fixes. Such requests are not bound by any SLAs.
+
+  Note that this only affects the agent; Smart Agent receivers bundled in the Splunk Distribution of OpenTelemetry Collector are available and supported.
 
 See the following topics to learn about the Smart Agent and how to migrate to the Collector:
 

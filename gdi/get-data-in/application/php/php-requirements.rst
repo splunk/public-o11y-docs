@@ -7,15 +7,7 @@ PHP instrumentation compatibility and requirements
 .. meta::
     :description: This is what you need to instrument PHP applications for Splunk Observability Cloud.
 
-The SignalFx Tracing Library for PHP supports PHP version 7.0 or higher running on the Zend engine.
-
-Supported web servers are:
-
-- Apache
-- php-fpm
-- php-cli
-
-.. note:: The library is not compatible with Windows environments.
+.. include:: /_includes/requirements/php.rst
 
 .. _supported-php-libraries:
 

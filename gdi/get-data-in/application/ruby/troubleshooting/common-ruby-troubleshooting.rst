@@ -7,7 +7,7 @@ Troubleshoot Ruby instrumentation for Splunk Observability Cloud
 .. meta::
    :description: If your instrumented Ruby application is not sending data to Splunk Observability Cloud, or data is missing, follow these steps to identify the issue and solve it.
 
-When you instrument a Ruby application using the Splunk Distribution of OpenTelemetry Ruby and you don't see your data in Observability Cloud, follow these troubleshooting steps.
+When you instrument a Ruby application using the Splunk Distribution of OpenTelemetry Ruby and you don't see your data in Splunk Observability Cloud, follow these troubleshooting steps.
 
 .. _basic-ruby-troubleshooting:
 
@@ -20,10 +20,10 @@ The following steps can help you troubleshoot Ruby instrumentation issues:
 
 .. _enable-ruby-debug-logging:
 
-Enable debug logging
+Activate debug logging
 ==========================================================
 
-Debug logging increases the verbosity of the Ruby instrumentation. This can help you troubleshoot issues. To enable debug logging, set the ``OTEL_LOG_LEVEL`` environment variable to ``debug``.
+Debug logging increases the verbosity of the Ruby instrumentation. This can help you troubleshoot issues. To activate debug logging, set the ``OTEL_LOG_LEVEL`` environment variable to ``debug``.
 
 .. code-block:: shell
 
@@ -45,13 +45,13 @@ To troubleshoot the lack of connectivity between the OTLP exporter and the OTel 
 
 #. Make sure that ``OTEL_EXPORTER_OTLP_ENDPOINT`` points to the correct OpenTelemetry Collector instance host.
 #. Check that your collector instance is configured and running. See :ref:`otel-troubleshooting`.
-#. Check that the OTLP receiver is enabled in the OTel Collector and plugged into the traces pipeline.
+#. Check that the OTLP receiver is activated in the OTel Collector and plugged into the traces pipeline.
 #. Check that the OTel Collector points to the following address: ``http://<host>:4318``. Verify that your URL is correct.
 
 401 error when sending spans
 --------------------------------------------------------
 
-If you send traces directly to Observability Cloud and receive a 401 error code, the authentication token specified in ``SPLUNK_ACCESS_TOKEN`` is invalid. The following are possible reasons:
+If you send traces directly to Splunk Observability Cloud and receive a 401 error code, the authentication token specified in ``SPLUNK_ACCESS_TOKEN`` is invalid. The following are possible reasons:
 
 - The value is null.
 - The value is not a well-formed token.
@@ -59,4 +59,4 @@ If you send traces directly to Observability Cloud and receive a 401 error code,
 
 Make sure that you're using a valid Splunk access token when sending data directly to your Splunk platform instance. See :ref:`admin-api-access-tokens`.
 
-.. include:: /_includes/troubleshooting-steps.rst
+.. include:: /_includes/troubleshooting-components.rst

@@ -90,7 +90,7 @@ Follow these best practices to use names to indicate different :ref:`metric type
 
 * Give each metric its own name.
 * When you define your own metric, give each metric a name that includes a reference of the metric type.
-* Avoid assigning custom metric names that include dimensions. For example, if you have 100 server instances and you want to create a custom metric that tracks the number of disk writes for each one, differentiante between the instances with a dimension. 
+* Avoid assigning custom metric names that include dimensions. For example, if you have 100 server instances and you want to create a custom metric that tracks the number of disk writes for each one, differentiate between the instances with a dimension. 
 
 Create metric names using a hierarchical structure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -127,8 +127,8 @@ Dimension name requirements
 Dimension names have the following requirements:
 
 * UTF-8 string, maximum length of 128 characters (512 bytes).
-* Dimension values cab have a maximum length of 256 characters.
-* Must start with an uppercase or lowercase letter. The rest of the name can contain letters, numbers, underscores (_) and hyphens (-).
+* Dimension values can have a maximum length of 256 characters.
+* Must start with an uppercase or lowercase letter. The rest of the name can contain letters, numbers, underscores (_) and hyphens (-), and periods (.).
 * Must not start with the underscore character (_).
 * Must not start with the prefix :code:`sf_`, except for dimensions defined by Observability Cloud such as :code:`sf_hires`.
 * Must not start with the prefix :code:`aws_`, :code:`gcp_`, or :code:`azure_`.

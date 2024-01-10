@@ -4,8 +4,6 @@
 Compatible span formats for Splunk APM
 *****************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn about the variety of span formats in Splunk APM.
 
@@ -25,7 +23,7 @@ The Splunk Distribution of the OpenTelemetry Collector can collect spans in the 
 - Splunk APM Protocol (SAPM)
 - OpenTelemetry Protocol (OTLP)
 
-The following examples show how to configure receivers in the Collector's configuration file. You can use multiple receivers according to your needs.
+The following examples show how to configure receivers in the collector configuration file. You can use multiple receivers according to your needs.
 
 .. tabs::
 

@@ -1,30 +1,26 @@
 .. _rum-ios-data:
 
 ***********************************
-iOS RUM data model 
+iOS RUM data model
 ***********************************
 
 .. meta::
    :description: Understand which RUM data you collect from iOS applications when using Splunk Real User Monitoring (RUM).
 
-The iOS RUM agent includes a package that collects the following types of data about your iOS application.
+The iOS RUM library includes a package that collects the following types of data about your iOS application.
 
 Common data types
 ==============================================
 
 .. include:: /_includes/rum-data-model.rst
 
-
-
-
-
 .. _rum-ios-metrics:
 
-Metrics 
+Metrics
 =============================================
-The following tables list all of the metrics available in Splunk RUM for iOS. 
+The following tables list all of the metrics available in Splunk RUM for iOS.
 
-.. list-table:: 
+.. list-table::
    :widths: 20 15 65
    :header-rows: 1
 
@@ -33,7 +29,7 @@ The following tables list all of the metrics available in Splunk RUM for iOS.
      - :strong:`Description`
    * - ``rum.workflow.count``
      - Custom Event Count
-     - The total number of spans with the selected custom event in the given time range. 
+     - The total number of spans with the selected custom event in the given time range.
    * - ``rum.workflow.time.ns.p75``
      - Custom Event Duration
      - The p75 time in nanoseconds of spans with the selected custom event in the given time range.
@@ -42,28 +38,25 @@ The following tables list all of the metrics available in Splunk RUM for iOS.
      - A crash happens when a user encounters an error and has to exit the app.
    * - ``rum.app_error.count``
      - App error
-     - Total number of reported errors in the given time range. 
+     - Total number of reported errors in the given time range.
    * - ``rum.resource_request.count``
      - Network or back-end requests/errors
-     - The total number of network requests in a given time range. 
+     - The total number of network requests in a given time range.
    * - ``rum.resource_request.time.ns.p75``
      - Network back-end latency
-     - The p75 time in nanoseconds for the network request latency in the given time range. 
+     - The p75 time in nanoseconds for the network request latency in the given time range.
    * - ``rum.cold_start.time.ns.p75``
      -  Cold start time
-     -  The p75 time in nanoseconds of cold starts in the given time range.  
-   * - ``rum.cold_start.count`` 
+     -  The p75 time in nanoseconds of cold starts in the given time range.
+   * - ``rum.cold_start.count``
      - Cold start count
-     - Total number of cold starts in the given time range.   
+     - Total number of cold starts in the given time range.
    * - ``rum.hot_start.count``
-     - Hot start count 
-     - Total number of hot starts in the given time range. 
+     - Hot start count
+     - Total number of hot starts in the given time range.
    * - ``rum.hot_start.time.ns.p75``
      - Hot start time
-     - The p75 time in nanoseconds for a hot start. 
-
-
-
+     - The p75 time in nanoseconds for a hot start.
 
 .. _ios-rum-basic-properties:
 
@@ -72,7 +65,7 @@ Basic properties
 
 The following properties are common to all applications instrumented for Splunk RUM:
 
-.. list-table:: 
+.. list-table::
    :widths: 10 10 80
    :header-rows: 1
    :width: 100%
@@ -109,7 +102,7 @@ The following properties are common to all applications instrumented for Splunk 
      - Carries tracing-system specific context in a list of key-value pairs.
    * - ``SpanKind``
      - Enum
-     - Type of span. Use it to set additional relationships between spans. The default value is ``Internal``. 
+     - Type of span. Use it to set additional relationships between spans. The default value is ``Internal``.
 
        Supported values are:
 
@@ -121,7 +114,7 @@ The following properties are common to all applications instrumented for Splunk 
 
 The following table describes each value of ``SpanKind``:
 
-.. list-table:: 
+.. list-table::
    :widths: 30 70
    :header-rows: 1
    :width: 100%
@@ -142,9 +135,9 @@ The following table describes each value of ``SpanKind``:
 Default attributes
 ===================
 
-By default, the iOS RUM agent adds the following attributes to all spans:
+By default, the iOS RUM library adds the following attributes to all spans:
 
-.. list-table:: 
+.. list-table::
    :widths: 20 10 70
    :header-rows: 1
    :width: 100%
@@ -171,9 +164,9 @@ By default, the iOS RUM agent adds the following attributes to all spans:
 Resource attributes
 ==============================================
 
-By default, the iOS RUM agent adds the following resource attributes to all spans:
+By default, the iOS RUM library adds the following resource attributes to all spans:
 
-.. list-table:: 
+.. list-table::
    :widths: 20 10 70
    :header-rows: 1
    :width: 100%
@@ -183,7 +176,7 @@ By default, the iOS RUM agent adds the following resource attributes to all span
      - Description
    * - ``environment``
      - String
-     - Name of the deployment environment. For example, ``dev``. Defined using :code:`deploymentEnvironment(String)`.
+     - Name of the deployment environment. For example, ``dev``. Defined using :code:`deploymentEnvironment(environment: <string>)`.
    * - ``device.model.name``
      - String
      - The model name for the device.
@@ -203,14 +196,14 @@ By default, the iOS RUM agent adds the following resource attributes to all span
 Instrumentation attributes
 ==============================================
 
-The iOS RUM agent collects the following data using its instrumentations. To enable or disable specific instrumentations, see :ref:`ios-rum-instrumentation-settings`.
+The iOS RUM library collects the following data using its instrumentations. To activate or deactivate specific instrumentations, see :ref:`ios-rum-instrumentation-settings`.
 
 Crash reporting
 ----------------------------------------------------
 
-The iOS RUM agent adds the following crash reporting attributes to spans that represent uncaught exceptions:
+The iOS RUM library adds the following crash reporting attributes to spans that represent uncaught exceptions:
 
-.. list-table:: 
+.. list-table::
    :widths: 20 10 70
    :header-rows: 1
    :width: 100%
@@ -251,7 +244,7 @@ Network monitoring
 
 Network monitoring produces spans with the name ``network.change`` and the following attributes:
 
-.. list-table:: 
+.. list-table::
    :widths: 20 10 70
    :header-rows: 1
    :width: 100%
@@ -277,7 +270,7 @@ Slow rendering detection generates up to two spans on every interval: a span nam
 
 Slow rendering detection spans have the following attribute:
 
-.. list-table:: 
+.. list-table::
    :widths: 20 10 70
    :header-rows: 1
    :width: 100%
@@ -292,11 +285,11 @@ Slow rendering detection spans have the following attribute:
 HTTP clients
 ------------------------------------
 
-The iOS RUM agent includes instrumentation for the NSURLConnection clients. To enable the instrumentation, see :ref:`ios-rum-instrumentation-settings`.
+The iOS RUM library includes instrumentation for the NSURLConnection clients. To activate the instrumentation, see :ref:`ios-rum-instrumentation-settings`.
 
 The HTTP client instrumentation collects the following OpenTelemetry HTTP attributes:
 
-.. list-table:: 
+.. list-table::
    :widths: 20 10 70
    :header-rows: 1
    :width: 100%
@@ -319,7 +312,7 @@ The HTTP client instrumentation collects the following OpenTelemetry HTTP attrib
 
 The HTTP instrumentation also collects the following attributes:
 
-.. list-table:: 
+.. list-table::
    :widths: 20 10 70
    :header-rows: 1
    :width: 100%
@@ -342,11 +335,11 @@ UI actions monitoring
 
 UIAction monitoring collects the following attributes:
 
-.. list-table:: 
+.. list-table::
    :widths: 20 10 70
    :header-rows: 1
    :width: 100%
-   
+
    * - Name
      - Type
      - Description
@@ -375,7 +368,7 @@ Screen transitions monitoring generates spans whenever a screen changes its stat
 
 Screen transition spans contain the following attribute:
 
-.. list-table:: 
+.. list-table::
    :widths: 20 10 70
    :header-rows: 1
    :width: 100%
@@ -397,11 +390,11 @@ App start monitoring feature generates spans whenever the app performs a cold, w
 
 App start monitoring produces spans with the name ``AppStart`` and the following attributes:
 
-.. list-table:: 
+.. list-table::
    :widths: 20 10 70
    :header-rows: 1
    :width: 100%
-   
+
    * - Name
      - Type
      - Description
@@ -412,16 +405,16 @@ App start monitoring produces spans with the name ``AppStart`` and the following
      - String
      - The type of start. Can be ``cold``, or ``hot``.
 
-Location data  
+Location data
 =============
 
-If you choose to set the latitude and longitude for location data by using the Splunk RUM for iOS APIs, Observability Cloud uses the information to map the geographical location of the user, such as country, city, and so on.
+If you choose to set the latitude and longitude for location data by using the Splunk RUM for iOS APIs, Splunk Observability Cloud uses the information to map the geographical location of the user, such as country, city, and so on.
 
-.. list-table:: 
+.. list-table::
    :widths: 20 10 70
    :header-rows: 1
    :width: 100%
-   
+
    * - Optional method
      - Type
      - Description

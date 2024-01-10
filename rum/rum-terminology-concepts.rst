@@ -5,7 +5,7 @@ Key concepts in Splunk RUM
 ******************************************************
 
 .. meta::
-   :description: Learn about important terminology and concepts in Splunk RUM for Browser 
+   :description: Definitions, examples, and key concepts for terms in Splunk RUM for Browser and Splunk RUM for Mobile. 
 
 This topic introduces important terminology and concepts in Splunk RUM for Browser and Splunk RUM for Mobile. Each key concept is linked to an example. 
 
@@ -34,9 +34,9 @@ This topic introduces important terminology and concepts in Splunk RUM for Brows
       - A crash happens when a user encounters an error and has to exit the app.
     * - :ref:`rum-web-vitals`
       - Web Vitals are made up of three metrics that measure user experience:
-            * LCP (largest contentful paint)
-            * CLS (cumulative layout shift)
-            * FID (first input delay).
+            * Largest contentful paint (LCP)
+            * Cumulative layout shift (CLS)
+            * First input delay (FID)
     * - :ref:`rum-error-id`
       - In Splunk RUM, the error ID is created by hashing the associated stack trace, error message, and error type. 
     * - :ref:`rum-custom-event-term`
@@ -126,7 +126,7 @@ A browser trace is a collection of spans that specifically represents activity o
 Back-end trace
 -----------------
 
-Back-end traces are collections of back-end spans. Backend spans are calls that microservices make to each other, such as an account service making a request to a database.
+Back-end traces are collections of back-end spans. Backend-spans are calls that microservices make to each other, such as an account service making a request to a database.
 
 
 .. _example-session:
@@ -249,4 +249,4 @@ Built-in dashboards offer charts, metrics, and aggregations about your applicati
 
 Global attributes
 ===================
-Global attributes are useful for reporting app or user-specific values as tags. You can set global attributes either at the time of library initialization, or afterwards.For more, see :ref:`rum-global_attributes`. 
+Global attributes are useful for reporting app or user-specific values as tags. You can set global attributes either at the time of library initialization, or afterwards. For more, see :ref:`rum-global_attributes`. 

@@ -5,7 +5,7 @@ Specify settings for all charts in a dashboard
 ***********************************************
 
 .. meta::
-      :description: There are many situations where you will want to align all of the charts on a dashboard to the same filters, time range, max delay value, or chart display resolution. Some of these include troubleshooting, efficiently creating similar dashboards, or using the same dashboard to view metrics for an entire fleet as well as select subsets of it. You can use the Overrides bar to apply various settings to all the charts on the dashboard.
+      :description: Use the Overrides navigation bar to apply the same settings to multiple dashboards and charts, or override individual settings for dashboards and charts.
 
 There are many situations where you want to align all of the charts on a dashboard to the same filters, time range, or chart display resolution, such as:
 
@@ -110,7 +110,7 @@ Filter from the data table
 
 You can also add filters when you view the data table for a chart. To learn more about data table, see :ref:`show-data-table`.
 
-As you hover over dimensions in the data table, an Actions menu icon is displayed.
+As you hover over dimensions in the data table, an Actions menu (|more|) icon is displayed.
 
 -  To filter the view down so that only data with the specified value is shown, click the menu icon and select :guilabel:`Filter`. The corresponding filter is added in the Overrides bar.
 
@@ -161,7 +161,7 @@ To learn more, see :ref:`chart-resolution`.
 Data links
 =============================================================================
 
-Data links are dynamic links available for properties that appear in a chart's data table and in list charts. As you hover over a property, an Actions menu icon is displayed.
+Data links are dynamic links available for properties that appear in a chart's data table and in list charts. As you hover over a property, an Actions menu (|more|) icon is displayed.
 
 If there are data links configured for that property, they are listed when you open the menu.
 
@@ -175,7 +175,7 @@ Max delay value
 
 In addition to using the Chart Options tab to set a value for max delay for an individual chart, you can set a max delay value for a dashboard. As with all dashboard overrides, a dashboard max delay value applies to all the charts on the dashboard, overriding any individual chart's max delay settings. 
 
-#. From a dashboard's Actions menu, select :guilabel:`Dashboard Info`.
+#. From a dashboard's Actions menu (|more|), select :guilabel:`Dashboard Info`.
 #. Click in the :guilabel:`Max Delay` field, then select an option from the drop-down menu or enter a value in seconds or minutes. You can enter a value up to 15 |nbsp| minutes, although values higher than 5 |nbsp| minutes are not recommended. 
 #. Click :guilabel:`Save`.
 
@@ -201,7 +201,7 @@ Dashboard variables allow you to pin frequently used filters to the dashboard, r
 
 When you navigate among dashboards in a dashboard group, selections you make for dashboard variables in one dashboard are reflected in other dashboards that have the same dashboard variable. This feature helps you maintain context when moving from one dashboard to another in a dashboard group.
 
-To add a variable to a dashboard, select :guilabel:`Dashboard Variables` from the dashboard's Actions menu.
+To add a variable to a dashboard, select :guilabel:`Dashboard Variables` from the dashboard's Actions menu (|more|).
 
 .. note::
       If you don't see :guilabel:`Dashboard Variables`, either you don't have write permissions for the dashboard you are viewing, or you are in a built-in dashboard. To learn more about write permissions, see :ref:`about-permissions`. To learn more about built-in dashboards, see :ref:`built-in-dashboards`.
@@ -222,7 +222,7 @@ Provide a label for the variable. The text you enter here appears on the dashboa
 Description
 -------------------------------------------------------------------
 
-If you add a description for the dashboard variable, it appears in the mouseover text for the alias you specify.
+If you add a description for the dashboard variable, it appears in the mouse-over text for the alias you specify.
 
 Default value and value required
 -------------------------------------------------------------------
@@ -261,7 +261,7 @@ You can choose whether the variable condition is applied to all plots on all cha
    ..    - hide metrics that send the specified property but don't meet the variable setting.
    ..    - hide metrics that don't send the specified property at all.
 
-   A common use case for this setting is when you want to focus on only data that meets the variable condition, so you want to hide all other data.
+   A common scenario for this setting is when you want to focus on only data that meets the variable condition, so you want to hide all other data.
    
    .. note::
       Because you hide data, your dashboard might have a number of blank charts.
@@ -288,7 +288,7 @@ You can choose whether the variable condition is applied to all plots on all cha
    ..    - display all other metrics, including metrics that don't send the specified property at all.
 
 
-   A common use case this setting is when you have, for instance, two charts, each with a plot that shows the mean of a metric that has the ``aws_availability_zone`` property. You want one chart to always show the mean aggregated across all zones, while in the other chart, you want to be able to use a dashboard variable to drill down to a single zone. In the latter chart, you add a filter for ``aws_availability_zone:*`` (or an OR filter that contains multiple zone values). When the dashboard variable is applied, the filter in that plot is "replaced" by the specified availability zone, so the chart displays values only for that zone. However, because no filter is applied to the plot in the first chart, the mean across all zones is still displayed.
+   A common scenario this setting is when you have, for instance, two charts, each with a plot that shows the mean of a metric that has the ``aws_availability_zone`` property. You want one chart to always show the mean aggregated across all zones, while in the other chart, you want to be able to use a dashboard variable to drill down to a single zone. In the latter chart, you add a filter for ``aws_availability_zone:*`` (or an OR filter that contains multiple zone values). When the dashboard variable is applied, the filter in that plot is "replaced" by the specified availability zone, so the chart displays values only for that zone. However, because no filter is applied to the plot in the first chart, the mean across all zones is still displayed.
 
 When you return to the dashboard and hover over the dashboard variable field, you either see a tooltip telling you the variable applies to all charts, or you see a different message along with some charts being highlighted on the dashboard. In the latter case, the dashboard variable is being applied to those charts because at least one plot in the chart has a filter matching the dashboard variable property.
 

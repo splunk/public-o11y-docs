@@ -5,7 +5,7 @@
 Troubleshoot detectors in Splunk Observability Cloud
 ******************************************************************
 
-.. meta updated 1/23/23
+
 
 .. meta::
   :description: Learn how to troubleshoot detectors in Splunk Observability Cloud. 
@@ -39,7 +39,7 @@ If a detector does not trigger an alert under conditions when you expected one, 
 #. Compare the signal against the resolution reported in the :guilabel:`Detail View` of the detector. Mismatch between the signal and the resolution in the Detail View can show up in two ways:
 
 
-- If the resolution in the Detail View is coarser than the resolution in the signal, then it’s likely that your reporting interval has changed and the detector no longer fires because the data is too unreliable to trigger alert events.
+- If the resolution in the Detail View is coarser than the resolution in the signal, then it's likely that your reporting interval has changed and the detector no longer fires because the data is too unreliable to trigger alert events.
 
 - If the resolution in the Detail View is finer than the resolution of the signal, then rolled up data might be causing an inconsistency in the criteria being evaluated.
 
@@ -94,7 +94,7 @@ If your detector is set to trigger an alert when a metric is above 50 for 5 minu
 
 In this example, the detector does not trigger an alert if all data arrives on time. But the value of the metric being monitored was over 50 between 11:08 and 11:15, when the 11:09 data point with a value of 40 finally arrived. With the provided detector parameters, an alert is triggered 5 minutes after 11:08, at 11:13.
 
-When you look later at the detector, however, data points shown in the chart reflect the correct timestamps. That is, all the data points from 11:09 onwards show values under 50 with the correct timestamps (for when metrics were sent and expected to arrive), so it doesn’t look like the triggering threshold condition was met.
+When you look later at the detector, however, data points shown in the chart reflect the correct timestamps. That is, all the data points from 11:09 onwards show values under 50 with the correct timestamps (for when metrics were sent and expected to arrive), so it doesn't look like the triggering threshold condition was met.
 
 You can use several strategies to avoid this problem:
 

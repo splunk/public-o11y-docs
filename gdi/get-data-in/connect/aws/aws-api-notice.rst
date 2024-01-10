@@ -8,7 +8,7 @@ GetMetricStatistics API deprecation notice
   :description: Deprecation notice for the AWS integration GetMetricStatistics API.
 
 
-.. note:: Splunk will remove support for the ``GetMetricStatistics`` API on May 1, 2023. Follow the instructions in this document to migrate to the ``GetMetricData`` API.
+.. note:: Splunk will remove support for the ``GetMetricStatistics`` API on :strike:`May 1, 2023` :strike:`May 23, 2023` **May 31, 2023**. After this date **only** the ``GetMetricData`` API will be used. Follow the instructions on this document to migrate to the ``GetMetricData`` API. 
 
 Splunk Observability Cloud provides a unified view into metrics, traces, and logs coming from various sources through integrations with third party services, including AWS integrations.
 
@@ -28,7 +28,7 @@ To do so, add ``"cloudwatch:GetMetricData"`` in the :strong:`Action` section of 
 Configure the API using the AWS UI
 -----------------------------------------
 
-Alternatively, you can configure this via the AWS Management Console. 
+Alternatively, you can configure this using the AWS Management Console. 
 
 .. image:: /_images/gdi/GetMetricData_AWSUI.png
   :width: 90% 
@@ -52,4 +52,4 @@ If an AWS account produces many CloudWatch metrics, the improved performance mig
 
 For example, if the ``GetMetricStatistics`` API takes 5 minutes to retrieve all the data, the ``GetMetricData`` API might take only 1 minute. When an AWS integration's poll rate is set to 1 minute, the ``GetMetricData`` requests are sent up to 5 times more often, generating a larger AWS API bill, while improving data latency at the same time. Increase the poll rate to 5 minutes to keep the cost at the same level.
 
-You can keep track of the CloudWatch API cost incurred by Observability Cloud using the AWS CloudWatch integration pricing section in the :ref:`Organization Metrics / Cloud Integrations built-in dashboards <aws-dashboards>`.
+You can keep track of the CloudWatch API cost incurred by Splunk Observability Cloud using the AWS CloudWatch integration pricing section in the :ref:`Organization Metrics / Cloud Integrations built-in dashboards <aws-dashboards>`.

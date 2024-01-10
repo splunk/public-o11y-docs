@@ -5,9 +5,9 @@ Manually instrument iOS applications
 *******************************************************************************
 
 .. meta::
-   :description: Manually instrument iOS applications for Splunk Observability Cloud real user monitoring / RUM using the iOS RUM agent to collect additional telemetry, sanitize Personal Identifiable Information (PII), add global attributes, and more.
+   :description: Manually instrument iOS applications for Splunk Observability Cloud real user monitoring / RUM using the iOS RUM library to collect additional telemetry, sanitize Personal Identifiable Information (PII), add global attributes, and more.
 
-You can manually instrument iOS applications for Splunk RUM using the iOS RUM agent to collect additional telemetry, sanitize Personal Identifiable Information (PII), add global attributes, and more.
+You can manually instrument iOS applications for Splunk RUM using the iOS RUM library to collect additional telemetry, sanitize Personal Identifiable Information (PII), add global attributes, and more.
 
 .. _ios-rum-span-filtering:
 
@@ -23,14 +23,16 @@ The following example shows how to remove a span:
    options.spanFilter = { spanData in
       var spanData = spanData
       if spanData.name == "DropThis" {
-         return nil // Spans with the name "DropThis" are not be sent
+         // Spans with the name "DropThis" aren't sent
+         return nil
       }
       var atts = spanData.attributes
-      atts["http.url"] = .string("redacted") // Change values for all URLs
+      // Change values for all URLs
+      atts["http.url"] = .string("redacted")
       return spanData.settingAttributes(atts)
    }
 
-.. note:: Span filtering is supported only in Swift.
+.. note:: Span filtering doesn't work in Objective-C.
 
 .. _ios-rum-globalattributes:
 
@@ -43,18 +45,18 @@ The following example shows how to define global attributes in your code:
 
 .. code-block:: swift
 
-   // You can set the globalAttributes option to the map at initialization
    import SplunkOtel
    //..
-   SplunkRum.initialize(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum",
-         rumAuth: "<rum-token>",
-         options: SplunkRumOptions(environment:"<environment-name>"))
-         options.globalAttributes = ["key1": "value1", "key2": 7]
+   SplunkRumBuilder(realm: "<realm>", rumAuth: "<rum-token>")
+   // You can set the globalAttributes option to the map at initialization
+      .deploymentEnvironment(environment: "<environment>")
+      .setApplicationName("<your_app_name>")
+      .build()
 
-   // You can also call the ``setGlobalAttributes`` function 
+   // You can also call the ``setGlobalAttributes`` function
    // anywhere in your code using the same map
-   SplunkRum.setGlobalAttributes(["key1": "value1", "key2": 7])
-   
+   SplunkRum.setGlobalAttributes([])
+
    // To remove a global attribute, pass the key name to removeGlobalAttribute
    SplunkRum.removeGlobalAttribute("key2")
 
@@ -63,7 +65,7 @@ The following example shows how to define global attributes in your code:
 Manually change screen names
 ======================================
 
-By default, the iOS RUM agent collects the name set in the :code:`ViewController`. You can customize the screen names for your application by using the ``setScreenName`` function. The custom name persists until your next call to :code:`setScreenName`.
+By default, the iOS RUM library collects the name set in the :code:`ViewController`. You can customize the screen names for your application by using the ``setScreenName`` function. The custom name persists until your next call to :code:`setScreenName`.
 
 The following example shows how to customize the name of an account settings screen:
 
@@ -71,7 +73,7 @@ The following example shows how to customize the name of an account settings scr
 
    SplunkRum.setScreenName("AccountSettingsTab")
 
-When calling the :code:`setScreenName` function, automatic screen name instrumentation is disabled to avoid overwriting custom names.
+When calling the :code:`setScreenName` function, automatic screen name instrumentation is deactivated to avoid overwriting custom names.
 
 .. note:: Use ``setScreenName`` in all the views of your application to avoid inconsistent names in your data.
 
@@ -80,7 +82,7 @@ When calling the :code:`setScreenName` function, automatic screen name instrumen
 Add user metadata using global attributes
 =============================================
 
-By default, the iOS RUM agent doesn't automatically link traces to users of your site. However, you might need to collect user metadata to filter or debug traces.
+By default, the iOS RUM library doesn't automatically link traces to users of your site. However, you might need to collect user metadata to filter or debug traces.
 
 You can identify users by adding global attributes from the OpenTelemetry specification, such as ``enduser.id`` and ``enduser.role``, to your spans.
 
@@ -94,9 +96,9 @@ Add identification metadata during initialization
 
    import SplunkOtel
    //..
-   SplunkRum.initialize(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum",
-         rumAuth: "<rum-token>",
-         options.globalAttributes = ["enduser.id": "user-id-123456"]
+   SplunkRumBuilder(realm: "<realm>", rumAuth: "<rum-token>")
+      .globalAttributes(globalAttributes: ["enduser.id": "user-id-123456"])
+      .build()
 
 Add identification metadata after initialization
 --------------------------------------------------
@@ -128,6 +130,17 @@ The following example shows how to use the OTel Swift API to report on a functio
       span.end() // You can also use defer for this
    }
 
+This other example shows how to record an event with no duration, that is, which happens in an instant:
+
+.. code-block:: swift
+
+   let dictionary: NSDictionary = [
+                     "attribute1": "hello",
+                     "attribute2": "world!",
+                     "attribute3": 3
+   ]
+   SplunkRum.reportEvent(name: "testEvent", attributes: dictionary)
+
 .. _ios-rum-error-reporting:
 
 Configure error reporting
@@ -148,14 +161,14 @@ The following example shows how to report the :code:`example_error`:
 Add server trace context from Splunk APM
 ==========================================
 
-The iOS RUM agent collects server trace context using back-end data provided by APM instrumentation through the ``Server-Timing`` header. In some cases, you might want to generate the header manually.
+The iOS RUM library collects server trace context using back-end data provided by APM instrumentation through the ``Server-Timing`` header. In some cases, you might want to generate the header manually.
 
-To create the ``Server-Timing`` header manually, provide a ``Server-Timing`` header with the name ``traceparent``, where the ``desc`` field holds the version, the trace ID, the parent ID, and the trace flag. 
+To create the ``Server-Timing`` header manually, provide a ``Server-Timing`` header with the name ``traceparent``, where the ``desc`` field holds the version, the trace ID, the parent ID, and the trace flag.
 
 Consider the following HTTP header:
 
 .. code-block:: shell
-   
+
    Server-Timing: traceparent;desc="00-4bf92f3577b34da6a3ce929d0e0e4736-00f067aa0ba902b7-01"
 
 The example resolves to a context containing the following data:
@@ -168,7 +181,7 @@ The example resolves to a context containing the following data:
 When generating a value for the ``traceparent`` header, make sure that it matches the following regular expression:
 
 .. code-block:: shell
-   
+
    00-([0-9a-f]{32})-([0-9a-f]{16})-01
 
 Server timing headers with values that don't match the pattern are automatically discarded. For more information, see the ``Server-Timing`` and ``traceparent`` documentation on the W3C website.

@@ -1,3 +1,5 @@
+:orphan:
+
 .. _ii-example-notifications:
 
 Example notifications: Email, mobile push, SMS, and voice
@@ -36,7 +38,7 @@ When you select mobile push notification, you will receive an push notification 
 :strong:`INC-[NUMBER] Incident title`
 [SEVERITY] for policy [incident policy name]: Rule "[rule name]" in detector "[detector name]" triggered at [date-time triggered]
 
-You can select the notification to go to the incident details where you can review details and acknowledge, dismiss, or resolve the incident.
+You can select the notification to go to the incident details where you can review details and acknowledge, dismiss, or resolve the incident. The text in the notification is static and can't be modified.
 
 Voice notification
 ====================

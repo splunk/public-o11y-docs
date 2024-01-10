@@ -5,11 +5,11 @@ Configure the Java agent for Splunk Observability Cloud
 ********************************************************************
 
 .. meta:: 
-   :description: Configure the agent of the Splunk Distribution of OpenTelemetry Java to suit most of your instrumentation needs, like correlating traces with logs, enabling custom sampling, and more.
+   :description: Configure the agent of the Splunk Distribution of OpenTelemetry Java to suit most of your instrumentation needs, like correlating traces with logs, activating custom sampling, and more.
 
 You can configure the Java agent from the Splunk Distribution of OpenTelemetry Java to suit most of your instrumentation needs. In most cases, modifying the basic configuration is enough to get started. More advanced settings are also available.
 
-The following sections describe all available settings for configuring the Java Virtual Machine (JVM) agent, including options for enabling new features that are unique to the Splunk Distribution of OpenTelemetry Java.
+The following sections describe all available settings for configuring the Java Virtual Machine (JVM) agent, including options for activating new features that are unique to the Splunk Distribution of OpenTelemetry Java.
 
 .. _configuration-methods-java:
 
@@ -58,9 +58,9 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
    * - ``SPLUNK_REALM``
      - The name of your organization's realm, for example, ``us0``. When you set the realm, telemetry is sent directly to the ingest endpoint of Splunk Observability Cloud, bypassing the Splunk Distribution of OpenTelemetry Collector. |br| |br| System property: ``splunk.realm``
    * - ``SPLUNK_ACCESS_TOKEN``
-     - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Not required unless you need to send data to the Observability Cloud ingest endpoint. See :ref:`admin-tokens`. |br| |br| System property: ``splunk.access.token``
+     - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Not required unless you need to send data to the Splunk Observability Cloud ingest endpoint. See :ref:`admin-tokens`. |br| |br| System property: ``splunk.access.token``
    * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
-     - Enables the addition of server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-java`. The default value is ``true``. |br| |br| System property: ``splunk.trace-response-header.enabled``
+     - Activates the addition of server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-java`. The default value is ``true``. |br| |br| System property: ``splunk.trace-response-header.enabled``
    * - ``SPLUNK_METRICS_FORCE_FULL_COMMANDLINE``
      - Adds the full command line as a resource attribute for all metrics. If false, commands longer than 255 characters are truncated. |br| |br| System property: ``splunk.metrics.force_full_commandline``
 
@@ -110,15 +110,11 @@ The following settings control trace exporters and their endpoints:
    * - Environment variable
      - Description
    * - ``OTEL_TRACES_EXPORTER``
-     - Trace exporter to use. You can set multiple comma-separated values. For example, ``otlp,console_span``. The default value is ``otlp``. To select the Jaeger exporter, use ``jaeger-thrift-splunk``. |br| |br| System property: ``otel.traces.exporter``
+     - Trace exporter to use. You can set multiple comma-separated values. |br| |br| System property: ``otel.traces.exporter``
    * - ``OTEL_EXPORTER_OTLP_ENDPOINT``
      - OTLP gRPC endpoint. The default value is ``http://localhost:4317``. |br| |br| System property: ``otel.exporter.otlp.endpoint``
-   * - ``OTEL_EXPORTER_JAEGER_ENDPOINT``
-     - The Jaeger endpoint. The default value is ``http://localhost:9080/v1/trace``. |br| |br| System property: ``otel.exporter.jaeger.endpoint``
 
-The Splunk Distribution of OpenTelemetry Java uses the OTLP gRPC span exporter by default. If you're still using the Smart Agent (now deprecated), use the Jaeger exporter. To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-java`.
-
-.. caution:: Support for the `jaeger-thrift-splunk` exporter will be removed after December 17th, 2022.
+The Splunk Distribution of OpenTelemetry Java uses the OTLP gRPC span exporter by default. To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-java`.
 
 .. _trace-sampling-settings-java:
 
@@ -149,6 +145,18 @@ The following settings control trace sampling:
         - ``fallback=<sampler>``: Sampler to use if no ``drop`` rule matched a given span. Supported samplers are ``always_on`` and ``parentbased_always_on``. If you define multiple fallback samplers, the Java agent uses the last one.
 
        If you don't set arguments when using the ``rules`` sampler, the instrumentation defaults to the ``parentbased_always_on`` sampler. |br| |br| System property: ``otel.traces.sampler.arg``
+
+Example of trace sampling
+-------------------------------------------------------
+
+The following example shows how to use the ``rules`` traces sampler to exclude the ``/healthcheck`` endpoint from monitoring:
+
+.. code-block:: bash
+
+   export OTEL_TRACES_SAMPLER=rules
+   export OTEL_TRACES_SAMPLER_ARG=drop=/healthcheck;fallback=parentbased_always_on
+
+All requests to downstream services that happen as a consequence of calling an excluded endpoint are also excluded.
 
 .. _trace-propagation-configuration-java:
 
@@ -192,23 +200,30 @@ The following settings control the AlwaysOn Profiling feature for the Java agent
    * - Environment variable
      - Description
    * - ``SPLUNK_PROFILER_ENABLED``
-     - Enables AlwaysOn Profiling. The default value is ``false``. |br| |br| System property: ``splunk.profiler.enabled``
+     - Activates AlwaysOn Profiling. The default value is ``false``. |br| |br| System property: ``splunk.profiler.enabled``
    * - ``SPLUNK_PROFILER_LOGS_ENDPOINT``
      - The collector endpoint for profiler logs. By default, it takes the value of ``otel.exporter.otlp.endpoint``. |br| |br| System property: ``splunk.profiler.logs-endpoint``
    * - ``SPLUNK_PROFILER_DIRECTORY``
      -  The location of the JDK Flight Recorder files. The default value is the local directory (``.``). |br| |br| System property: ``splunk.profiler.directory``
    * - ``SPLUNK_PROFILER_RECORDING_DURATION``
-     - The duration of the recording unit, in seconds. You can define duration in the form ``<number><unit>``, where the unit can be ``ms``, ``s``, ``m``, ``h``, or ``d``. The default interval is ``20s``. If you enter a number but not a unit, the default unit is assumed to be ``ms``. |br| |br| System property: ``splunk.profiler.recording.duration``
+     - The duration of the recording unit. You can define duration in the form ``<number><unit>``, where the unit can be ``ms``, ``s``, ``m``, ``h``, or ``d``. The default interval is ``20s``. If you enter a number but not a unit, the default unit is assumed to be ``ms``. |br| |br| System property: ``splunk.profiler.recording.duration``
    * - ``SPLUNK_PROFILER_KEEP_FILES``
      -  Whether to preserve JDK Flight Recorder (JFR) files or not. The default value is ``false``, which means that JFR files are deleted after processing. |br| |br| System property: ``splunk.profiler.keep-files``
    * - ``SPLUNK_PROFILER_CALL_STACK_INTERVAL``
      - Frequency with which call stacks are sampled, in milliseconds. The default value is 10000 milliseconds. |br| |br| System property: ``splunk.profiler.call.stack.interval``
    * - ``SPLUNK_PROFILER_MEMORY_ENABLED``
-     - Enables memory profiling with all the options. Enabling memory profiling overrides the value of ``splunk.metrics.enabled``. The default value is ``false``. Requires ``splunk.profiler.enabled`` to be set to ``true``. To enable or disable specific memory profiling options, set their values explicitly. |br| |br| System property: ``splunk.profiler.memory.enabled``
-   * - ``SPLUNK_PROFILER_MEMORY_SAMPLER_INTERVAL``
-     - Defines the sampling interval. The default value is 1. Set the value to 2 and higher to sample data every nth allocation event. |br| |br| System property: ``splunk.profiler.memory.sampler.interval``
+     - Activates memory profiling with all the options. To activate or deactivate specific memory profiling options, set their values explicitly. 
+        * The default value is ``false``. 
+        * Requires ``splunk.profiler.enabled`` to be set to ``true``.  
+        * Activating memory profiling sets the value of ``splunk.metrics.enabled`` to ``true``.
+       
+       .. note:: OpenJDK versions 15.0 to 17.0.8, are not supported for memory profiling. See :new-page:`https://bugs.openjdk.org/browse/JDK-8309862` in the JDK bug system for more information.
+          
+       System property: ``splunk.profiler.memory.enabled``
+   * - ``SPLUNK_PROFILER_MEMORY_EVENT_RATE``
+     - Rate limit for memory profiling data, expressed as stack traces per unit of time. You can define duration in the form ``<number>/<unit>``, where the unit can be ``s`` or ``m``. The default value is ``150/s``, or 150 stack traces per second. Consider increasing this value when collecting memory profiling data from complex, multithreaded workloads, like application servers. |br| |br| System property: ``splunk.profiler.memory.event.rate``
    * - ``SPLUNK_PROFILER_TLAB_ENABLED``
-     - Whether to enable TLAB memory events. The default value is the value assigned to the ``splunk.profiler.memory.enabled`` property. |br| |br| System property: ``splunk.profiler.tlab.enabled``
+     - Whether to activate TLAB memory events. The default value is the value assigned to the ``splunk.profiler.memory.enabled`` property. |br| |br| System property: ``splunk.profiler.tlab.enabled``
    * - ``SPLUNK_PROFILER_INCLUDE_INTERNAL_STACKS``
      - Whether to include stack traces of the agent internal threads and stack traces with JDK internal frames. The default value is ``false``. |br| |br| System property: ``splunk.profiler.include.internal.stacks``
    * - ``SPLUNK_PROFILER_TRACING_STACKS_ONLY``
@@ -231,11 +246,15 @@ The following settings control metrics collection for the Java agent:
    * - Environment variable
      - Description
    * - ``SPLUNK_METRICS_ENABLED``
-     - Enables exporting metrics. If you enable memory profiling using the ``splunk.profiler.memory.enabled`` property, the value of ``splunk.metrics.enabled`` is ignored. See :ref:`java-otel-metrics-attributes` for more information. Default is ``false``. |br| |br| System property: ``splunk.metrics.enabled``
+     - Activates exporting metrics. See :ref:`java-otel-metrics-attributes` for more information.
+        - Default is ``false``.
+        - If you activate memory profiling using the ``splunk.profiler.memory.enabled`` property, the value of ``splunk.metrics.enabled`` is set to ``true``. 
+
+       System property: ``splunk.metrics.enabled``
    * - ``SPLUNK_METRICS_ENDPOINT``
      - The OTel collector metrics endpoint. Default is ``http://localhost:9943``. |br| |br| System property: ``splunk.metrics.endpoint``
    * - ``SPLUNK_METRICS_EXPORT_INTERVAL``
-     - Interval between pushing metrics. You can define duration in the form ``<number><unit>``, where the unit can be ``ms``, ``s``, ``m``, ``h``, or ``d``. The default interval is ``30s``. If you enter a number but not a unit, the default unit is assumed to be ``ms``. |br| |br| System property: ``splunk.metrics.export.interval``
+     - Deprecated. Use ``OTEL_METRIC_EXPORT_INTERVAL`` instead. See :new-page:`Periodic exporting MetricReader <https://opentelemetry.io/docs/specs/otel/configuration/sdk-environment-variables/#periodic-exporting-metricreader>` in the official OpenTelemetry documentation.
 
 .. note:: Metric support is experimental.
 
@@ -244,34 +263,21 @@ The following settings control metrics collection for the Java agent:
 Server trace information
 ==============================================
 
-To connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data, enable Splunk trace response headers by setting the following environment variable:
-
-.. tabs::
-
-   .. code-tab:: shell Linux
-   
-      export SPLUNK_TRACE_RESPONSE_HEADER_ENABLED=true
-   
-   .. code-tab:: shell Windows PowerShell
-
-      $env:SPLUNK_TRACE_RESPONSE_HEADER_ENABLED=true
-
-When you set this environment variable, your application instrumentation adds the following response headers to HTTP responses:
+To connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data, trace response headers are activated by default. The instrumentation adds the following response headers to HTTP responses:
 
 .. code-block::
 
    Access-Control-Expose-Headers: Server-Timing 
    Server-Timing: traceparent;desc="00-<serverTraceId>-<serverSpanId>-01"
 
-The ``Server-Timing`` header contains the ``traceId`` and ``spanId`` parameters in ``traceparent`` format. See the following W3C documents for more information about the ``Server-Timing`` header:
-
--  https://www.w3.org/TR/server-timing
--  https://www.w3.org/TR/trace-context/#traceparent-header
+The ``Server-Timing`` header contains the ``traceId`` and ``spanId`` parameters in ``traceparent`` format. For more information, see the Server-Timing and traceparent documentation on the W3C website.
 
 The following server frameworks and libraries add ``Server-Timing`` information:
 
 - Servlet API versions 2.2 to 4.X.
 - Netty versions 3.8 to 4.0.
+
+.. note:: If you need to deactivate trace response headers, set ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED`` to ``false``.
 
 .. _other-java-settings:
 
@@ -286,4 +292,4 @@ Other settings
    * - Environment variable
      - Description
    * - ``OTEL_JAVAAGENT_ENABLED``
-     - Globally enables the Java agent automatic instrumentation. The default value is ``true``. Useful for disabling auto instrumentation in testing scenarios or pipelines. |br| |br| System property: ``otel.javaagent.enabled`` 
+     - Globally activates the Java agent automatic instrumentation. The default value is ``true``. Useful for deactivating auto instrumentation in testing scenarios or pipelines. |br| |br| System property: ``otel.javaagent.enabled`` 

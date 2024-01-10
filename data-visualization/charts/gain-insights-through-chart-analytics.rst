@@ -77,7 +77,7 @@ When you are looking at infrastructure metrics for a good-sized fleet of hosts, 
 Retain peaks and valleys in longer time ranges
 =========================================================
 
-By default, Splunk Infrastructure Monitoring selects a :new-page-ref:`rollup <rollups>` that is appropriate for the time range and :new-page-ref:`chart resolution <chart-resolution>` you have selected. For example, let’s assume you are sending a metric every 10 seconds to Infrastructure Monitoring, and that its metric type is gauge. If you are looking at a month’s worth of that metric in a chart, there are too many data points to display (6 data points per minute x 60 minutes per hour x 24 hours per day x 30 days per month = 259,200 data points).
+By default, Splunk Infrastructure Monitoring selects a :new-page-ref:`rollup <rollups>` that is appropriate for the time range and :new-page-ref:`chart resolution <chart-resolution>` you have selected. For example, let's assume you are sending a metric every 10 seconds to Infrastructure Monitoring, and that its metric type is gauge. If you are looking at a month's worth of that metric in a chart, there are too many data points to display (6 data points per minute x 60 minutes per hour x 24 hours per day x 30 days per month = 259,200 data points).
 
 In this situation, Infrastructure Monitoring applies the default visualization rollup of Average for a gauge metric. This rollup has the effect of averaging out the data, and makes peaks or valleys that are visible at the higher resolution less apparent.
 
@@ -87,7 +87,7 @@ In this situation, Infrastructure Monitoring applies the default visualization r
 
 |br|
 
-To retain the peaks or valleys, you can change the rollup to :strong:`max` or :strong:`min`, whichever is more relevant to your metric. The Y-axis value range may change from what it was in the original visualization. In this illustration, we clone plot A and change the rollup to :strong:`max` in plot B (and change the color in plot B to make the differences easier to see). To clone a plot line, open the plot’s Actions menu at the far right of the plot line, then select :strong:`Clone`. For information on changing plot color, see :ref:`plot-config-panel`.
+To retain the peaks or valleys, you can change the rollup to :strong:`max` or :strong:`min`, whichever is more relevant to your metric. The Y-axis value range may change from what it was in the original visualization. In this illustration, we clone plot A and change the rollup to :strong:`max` in plot B (and change the color in plot B to make the differences easier to see). To clone a plot line, open the plot's Actions menu (|more|) at the far right of the plot line, then select :strong:`Clone`. For information on changing plot color, see :ref:`plot-config-panel`.
 
 ..  image:: /_images/data-visualization/charts/gain-insights-through-chart-analytics/retain-peaks-and-valleys-02.png
     :width: 99%
@@ -118,11 +118,11 @@ For more information about the interactions between rollups, chart resolution, a
 Correlate multiple metrics
 =========================================================
 
-It is often useful to visualize multiple metrics on the same chart so as to more easily correlate their behavior. For example, you may want to look at the number of transactions happening per second alongside the latency of the transactions. Splunk Infrastructure Monitoring lets you display as many metrics as you want on a single chart, and gives you two Y-axes in case the ranges of the metrics’ values are significantly different.
+It is often useful to visualize multiple metrics on the same chart so as to more easily correlate their behavior. For example, you may want to look at the number of transactions happening per second alongside the latency of the transactions. Splunk Infrastructure Monitoring lets you display as many metrics as you want on a single chart, and gives you two Y-axes in case the ranges of the metrics' values are significantly different.
 
 1. Select the metric you want to compare and enter its name in the Signal field for plot A. In this example, we are using ``demo.trans.latency``.
 
-2. Select the second metric and use it in plot B. We’ve selected ``demo.trans.count``.
+2. Select the second metric and use it in plot B. We've selected ``demo.trans.count``.
 
 ..  image:: /_images/data-visualization/charts/gain-insights-through-chart-analytics/correlate-metrics-01.png
     :width: 99%
@@ -151,7 +151,7 @@ View weekly, daily or hourly comparisons
 
 If time of day or week matters for understanding whether your apps or infrastructure are performing within normal bounds, or if your business sees cyclical or periodic demand, e.g. weekdays and weekends are very different, then you can create charts that highlight the change from one week, one day, one hour etc. to the next. (Note that Splunk Infrastructure Monitoring allows you to do comparisons using whatever timeframe you want, not just these intervals.)
 
-1. Use the first plot (plot A) to show the metric you care about, then clone A to create plot B. (To clone a plot line, open the plot’s Actions menu at the far right of the plot line, then select :strong:`Clone`.) In this example, we are using ``memory.usage.total`` as our signal.
+1. Use the first plot (plot A) to show the metric you care about, then clone A to create plot B. (To clone a plot line, open the plot's Actions menu (|more|) at the far right of the plot line, then select :strong:`Clone`.) In this example, we are using ``memory.usage.total`` as our signal.
 
 2. Add a :new-page-ref:`Timeshift <timeshift>` function to plot B, entering a time range over which the change matters, For example, use ``5m`` for 5 minutes, ``2d`` for 2 days, and ``1w`` for 1 week.
 
@@ -182,7 +182,7 @@ Use the Timeshift function to understand trends
 
 In infrastructure and application monitoring, the trend of a metric (the rate at which it is changing) is frequently of greater interest than the absolute value of the metric itself. For example, it might not be meaningful to know that your CPU is 70% utilized, but you might care to know that the utilization has doubled consistently for the past 10 minutes, as that might indicate that the system is trending towards failure.
 
-1. Use the first plot (plot A) to show the metric you care about (we used the mean for ``cpu.utilization``), then clone A to create plot B. (To clone a plot line, open the plot’s Actions menu at the far right of the plot line, then select :strong:`Clone`).
+1. Use the first plot (plot A) to show the metric you care about (we used the mean for ``cpu.utilization``), then clone A to create plot B. (To clone a plot line, open the plot's Actions menu (|more|) at the far right of the plot line, then select :strong:`Clone`).
 
 2. Add a :new-page-ref:`Timeshift <timeshift>` function to plot B, entering a time range over which the change matters, e.g. ``5m`` for 5 minutes.
 
@@ -336,7 +336,7 @@ A histogram is a good way to look at the distribution of a population at a singl
 Smooth out peaks and valleys
 =====================================
 
-Do you want to smooth out peaks and valleys in your data, to see general patterns from one period to the next? If you can’t tell at a glance if a value is generally steady, rising, or falling, you want to see data normalized in a moving average format, from one time period to the next. To do this, use the Transformation option instead of Aggregation. The Transformation option is available with the following analytics functions: :new-page-ref:`mean`, :new-page-ref:`min-max`, :new-page-ref:`percentile`, :new-page-ref:`sum`, and :new-page-ref:`variance`. For Mean, Minimum, Maximum, and Sum, you can specify either a moving window (the past number of minutes, hours, etc.) or a calendar time window (over the past day, week, month, etc.)
+Do you want to smooth out peaks and valleys in your data, to see general patterns from one period to the next? If you can't tell at a glance if a value is generally steady, rising, or falling, you want to see data normalized in a moving average format, from one time period to the next. To do this, use the Transformation option instead of Aggregation. The Transformation option is available with the following analytics functions: :new-page-ref:`mean`, :new-page-ref:`min-max`, :new-page-ref:`percentile`, :new-page-ref:`sum`, and :new-page-ref:`variance`. For Mean, Minimum, Maximum, and Sum, you can specify either a moving window (the past number of minutes, hours, etc.) or a calendar time window (over the past day, week, month, etc.)
 
 1. Determine an appropriate interval for applying a moving average.
 

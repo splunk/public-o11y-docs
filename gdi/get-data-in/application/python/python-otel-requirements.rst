@@ -21,8 +21,8 @@ The Splunk Distribution of OpenTelemetry Python instruments numerous libraries a
 Ensure you have supported Python and library versions
 ==============================================================
 
-The agent of the Splunk Distribution of OpenTelemetry Python is compatible with Python 3.7 and higher. To instrument Python 2 applications, use the :new-page:`SignalFx Tracing Library for Python <https://github.com/signalfx/signalfx-python-tracing>`.
-
+.. include:: /_includes/requirements/python.rst
+   
 .. _python-otel-connector-requirement:
 
 Install and configure the Splunk Distribution of OpenTelemetry Collector
@@ -30,7 +30,7 @@ Install and configure the Splunk Distribution of OpenTelemetry Collector
 
 The Splunk Distribution of OpenTelemetry Python exports application traces and spans to the Splunk Distribution of OpenTelemetry Collector, which also collects system metric data and logs.
 
-To send application traces and spans to Observability Cloud, install the Splunk Distribution of OpenTelemetry Collector for your platform. The following distributions are available:
+To send application traces and spans to Splunk Observability Cloud, install the Splunk Distribution of OpenTelemetry Collector for your platform. The following distributions are available:
 
 - Splunk OTel Collector for Linux. See :ref:`otel-install-linux`.
 - Splunk OTel Collector for Windows. See :ref:`otel-install-windows`.

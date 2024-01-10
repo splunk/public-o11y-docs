@@ -4,7 +4,7 @@
 Heartbeat Check
 =============================================================================
 
-.. meta updated 1/23/23
+
 
 .. meta::
   :description: The Heartbeat Check condition alerts when a signal has not reported for some time. This might happen because a host is down or stopped reporting a particular metric.

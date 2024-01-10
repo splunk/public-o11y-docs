@@ -4,8 +4,6 @@
 Manage services, spans, and traces in Splunk APM
 **************************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn about traces and spans in Splunk Observability Cloud. Spans are operations, and traces are collections of spans.
 
@@ -16,6 +14,7 @@ Manage services, spans, and traces in Splunk APM
    apm-errors
    service-map
    trace-search
+   trace-analyzer
    traces-special-cases
    span-search
    download-traces
@@ -23,7 +22,7 @@ Manage services, spans, and traces in Splunk APM
    span-formats
 
 
-Spans and traces form the backbone of application monitoring in Splunk APM. Use the following topics to learn about spans and traces and manage your spans and traces effectively, so that you can get the most out of APM's full-fidelity tracing: 
+Spans and traces form the backbone of application monitoring in Splunk APM. Use the following topics to learn about spans and traces and manage your spans and traces effectively, so that you can get the most out of APM full-fidelity tracing: 
 
 * :ref:`apm-inferred-services`
 * :ref:`apm-errors`
@@ -62,7 +61,7 @@ The following image illustrates the relationship between traces and spans:
    :width: 70%
    :alt: This image shows a trace represented by a series of multicolored bars labeled with the letters A, B, C, D, and E. Each lettered bar represents a single span. The spans are organized to visually represent a hierarchical relationship in which span A is the parent span and the subsequent spans are its children.
 
-A span might refer to another span as its parent, indicating a relationship between operations involved in the trace. In the image above, span A is a parent span, and span B is a child span. This relationship could indicate that, for example, span A makes a service call that triggers the operation captured by span B. In this image, span C is also a child of span B, and so on. 
+A span might refer to another span as its parent, indicating a relationship between operations involved in the trace. In the preceding image, span A is a parent span, and span B is a child span. This relationship might indicate that, for example, span A makes a service call that triggers the operation captured by span B. In this image, span C is also a child of span B, and so on. 
 
 
 .. raw:: html
@@ -125,11 +124,11 @@ Each span contains the following basic metadata:
 
 Span tags are key-value pairs that provide additional information and context about the operations a span represents. Both the keys and values are strings, and span tag keys for a single span must be unique. You can use span tags to query and filter traces, or to get information about the spans of a trace during troubleshooting.
 
-You can add custom span tags via the OpenTelemetry Collector, or when you instrument an application. For more information about using span tags to analyze service performance, see :ref:`apm-span-tags`. 
+You can add custom span tags through the OpenTelemetry Collector, or when you instrument an application. For more information about using span tags to analyze service performance, see :ref:`apm-span-tags`. 
 
 Span tags are most useful when they follow a simple, dependable system of naming conventions. See :ref:`span-tag-naming` to learn about OpenTelemetry naming conventions for span tags. 
 
-.. note:: Note that span tags in Splunk APM are distinct from metadata tags in Splunk Infrastructure Monitoring, which are searchable labels or keywords you can assign to metric dimensions in the form of strings rather than as key-value pairs. To learn more about metadata tags, see :ref:`metadata-tags`.
+.. note:: Note that span tags in Splunk APM are distinct from metadata tags in Splunk Infrastructure Monitoring, which are searchable labels or keywords you can assign to metric dimensions in the form of strings rather than as key-value pairs. To learn more about metadata tags, see :ref:`metadata-infra-tags`.
 
 .. raw:: html
 
