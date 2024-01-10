@@ -59,7 +59,7 @@ For example:
     accessToken: xxxxxx
     realm: us0
   clusterName: my-k8s-cluster
-  distribution: gke   
+  distribution: gke
 
 Configure Google Kubernetes Engine 
 -----------------------------------------------------------------------------
@@ -129,6 +129,26 @@ This distribution operates similarly to the ``eks`` distribution, but with the f
 * Since Fargate nodes use a VM boundary to prevent access to host-based resources used by other pods, pods are not able to reach their own kubelet. The cluster receiver for the Fargate distribution has two primary differences between regular ``eks`` to work around this limitation:
    * The configured cluster receiver is deployed as a two-replica StatefulSet instead of a Deployment, and uses a Kubernetes Observer extension that discovers the cluster's nodes and, on the second replica, its pods for user-configurable receiver creator additions.Using this observer dynamically creates the Kubelet Stats receiver instances that report kubelet metrics for all observed Fargate nodes. The first replica monitors the cluster with a ``k8s_cluster`` receiver, and the second cluster monitors all kubelets except its own (due to an EKS/Fargate networking restriction).
    * The first replica's Collector monitors the second's kubelet. This is made possible by a Fargate-specific ``splunk-otel-eks-fargate-kubeletstats-receiver-node`` node label. The Collector ClusterRole for ``eks/fargate`` allows the ``patch`` verb on ``nodes`` resources for the default API groups to allow the cluster receiver's init container to add this node label for designated self monitoring.
+
+.. _otel-kubernetes-config-clustername:
+
+Configure the cluster name
+============================================
+
+The ``clusterName`` parameter can be used to specify the name of the Kubernetes cluster. This parameter is optional for the ``eks``, ``eks/fargate``, ``gke``, and ``gke/autopilot`` distributions, but required for all of the others.
+
+Apply the following to configure your cluster name:
+
+.. code-block:: bash
+
+  --set clusterName=my-k8s-cluster
+
+For example:
+
+.. code-block:: yaml
+
+  clusterName: my-k8s-cluster
+
 
 .. _otel-kubernetes-config-environment:
 
