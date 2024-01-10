@@ -158,7 +158,7 @@ Instrument your application programmatically
 
 To have even finer control over the tracing pipeline, instrument your Node.js application programmatically.
 
-To instrument your application programmatically, add the following lines at the beginning of your entry point script, before any instrumentation function is called:
+To instrument your application programmatically, add the following lines at the beginning of your entry point script before calling any instrumentation function:
 
 .. code-block:: javascript
 
@@ -218,34 +218,44 @@ For a list of supported instrumentations, see :new-page:`https://github.com/open
 Deploy the Node.js distribution in Kubernetes
 =======================================================
 
-To deploy the Splunk Distribution of OpenTelemetry JS in Kubernetes, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
+To deploy the Collector for Node.js in a Kubernetes environment, follow these steps:
 
-The following example shows how to update a deployment to expose environment variables by adding the OpenTelemetry configuration under the ``.spec.template.spec.containers.env`` section:
+#. Edit the Dockerfile for your application image to add the following commands:
 
-.. code-block:: yaml
+   .. code-block:: docker
 
-   apiVersion: apps/v1
-   kind: Deployment
-   spec:
-     selector:
-       matchLabels:
-         app: your-application
-     template:
-       spec:
-         containers:
-           - name: myapp
-             env:
-               - name: SPLUNK_OTEL_AGENT
-                 valueFrom:
-                   fieldRef:
-                     fieldPath: status.hostIP
-               - name: OTEL_EXPORTER_OTLP_ENDPOINT
-                 value: "http://$(SPLUNK_OTEL_AGENT):4317"
-               - name: OTEL_SERVICE_NAME
-                 value: "<serviceName>"
-               - name: OTEL_RESOURCE_ATTRIBUTES
-                 value: "deployment.environment=<environmentName>"
+      # Install the @splunk/otel package
+      RUN npm install @splunk/otel
+      # Set appropriate permissions
+      RUN chmod -R go+r /node_modules/@splunk/otel
 
+#. Configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
+
+   The following example shows how to update a deployment to expose environment variables by adding the OpenTelemetry configuration under the ``.spec.template.spec.containers.env`` section:
+
+   .. code-block:: yaml
+
+      apiVersion: apps/v1
+      kind: Deployment
+      spec:
+      selector:
+         matchLabels:
+            app: your-application
+      template:
+         spec:
+            containers:
+            - name: myapp
+               env:
+                  - name: SPLUNK_OTEL_AGENT
+                  valueFrom:
+                     fieldRef:
+                        fieldPath: status.hostIP
+                  - name: OTEL_EXPORTER_OTLP_ENDPOINT
+                  value: "http://$(SPLUNK_OTEL_AGENT):4317"
+                  - name: OTEL_SERVICE_NAME
+                  value: "<serviceName>"
+                  - name: OTEL_RESOURCE_ATTRIBUTES
+                  value: "deployment.environment=<environmentName>"
 
 .. _export-directly-to-olly-cloud-nodejs:
 
