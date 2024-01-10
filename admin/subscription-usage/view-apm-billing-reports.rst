@@ -40,14 +40,6 @@ In addition to per-minute usage metrics, usage reports for host subscription pla
 
 - The billed trace volume
 
-- 50% of the peak number of hosts
-
-- 50% of the peak number of containers
-
-- 50% of the peak number of Troubleshooting MetricSets
-
-- 50% of the peak trace volume
-
 - The average number of hosts
 
 - The average number of containers
@@ -68,12 +60,6 @@ In addition to per-minute usage metrics, usage reports for TAPM subscription pla
 - The number of billed Troubleshooting MetricSets
 
 - The billed trace volume
-
-- 50% of the peak number of TAPM
-
-- 50% of the peak number of Troubleshooting MetricSets
-
-- 50% of the peak trace volume
 
 - The average number of TAPM
 
