@@ -23,7 +23,7 @@ For each Smart Agent monitor you want to add to the Collector, add a ``smartagen
 
 Instead of using ``discoveryRule``, use the Collector receiver creator and observer extensions. See :ref:`receiver-creator-receiver` for more information.
 
-If you're using a SignalFx Forwarder monitor, add it to both a ``traces`` and a ``metrics`` pipeline, and use a Sapm exporter and a SignalFx exporter, as each pipeline's exporter, respectively. See more on :ref:`exporters <collector-components-processors>`.
+If you're using a SignalFx Forwarder monitor (deprecated), add it to both a ``traces`` and a ``metrics`` pipeline, and use a Sapm exporter and a SignalFx exporter, as each pipeline's exporter, respectively. See more on :ref:`exporters <collector-components-processors>`.
 
 Configure metrics
 ------------------------------
@@ -64,8 +64,6 @@ Example
 
 
    receivers:
-      smartagent/signalfx-forwarder:
-         type: signalfx-forwarder
       smartagent/postgresql:
          type: postgresql
          host: mypostgresinstance
@@ -100,7 +98,7 @@ Example
             receivers:
                - smartagent/postgresql
                - smartagent/kafka
-               - smartagent/signalfx-forwarder
+               - otlp
             processors:
                - resourcedetection
             exporters:
@@ -114,7 +112,7 @@ Example
                - signalfx
          traces:
             receivers:
-               - smartagent/signalfx-forwarder
+               - otlp
             processors:
                - resourcedetection
             exporters:

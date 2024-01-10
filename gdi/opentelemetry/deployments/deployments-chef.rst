@@ -1,8 +1,8 @@
 .. _deployments-chef:
 
-****************************
-Chef 
-****************************
+********************************************************
+Deploy the Collector with Chef
+********************************************************
 
 .. meta::
       :description: Use Chef to install and configure the OpenTelemetry Collector to collect metrics, traces, and logs from Linux and Windows machines and send data to Splunk Observability Cloud.

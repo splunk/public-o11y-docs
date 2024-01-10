@@ -6,7 +6,7 @@ PostgreSQL
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the PostgreSQL monitor. See benefits, install, configuration, and metrics
 
-.. note:: You can replace this monitor with the OTel native component ``postgresql`` receiver. See :ref:`postgresql-receiver` for more information.
+.. note:: This integration is deprecated. If you're using the Splunk Distribution of the OpenTelemetry Collector and want to collect PostgreSQL metrics, use the native OTel component :ref:`postgresql-receiver`.
 
 The
 :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`

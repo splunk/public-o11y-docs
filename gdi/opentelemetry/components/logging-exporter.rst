@@ -40,14 +40,14 @@ To activate the logging exporter, add it to any pipeline you want to diagnose. F
    service:
      pipelines:
        traces:
-         receivers: [jaeger, otlp, smartagent/signalfx-forwarder, zipkin]
+         receivers: [jaeger, otlp, zipkin]
          processors:
          - memory_limiter
          - batch
          - resourcedetection
          exporters: [sapm, signalfx, logging]
        metrics:
-         receivers: [hostmetrics, otlp, signalfx, smartagent/signalfx-forwarder]
+         receivers: [hostmetrics, otlp, signalfx]
          processors: [memory_limiter, batch, resourcedetection]
          exporters: [signalfx, logging]
        logs:

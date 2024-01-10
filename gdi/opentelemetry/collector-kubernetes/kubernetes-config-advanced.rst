@@ -20,7 +20,7 @@ For basic Helm chart configuration, see :ref:`otel-kubernetes-config`. For log c
 Override the default configuration
 ==============================================================
 
-You can override the :ref:`default OpenTelemetry agent configuration <otel-configuration-ootb>` to use your own configuration. To do this, include a custom configuration using the ``agent.config`` parameter in the values.yaml file. For example:
+You can override the default configuration to use your own. To do this, include a custom configuration using the ``agent.config`` parameter in the values.yaml file. For example:
 
 .. code-block:: yaml
  

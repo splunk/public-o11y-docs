@@ -1,8 +1,8 @@
 .. _deployment-windows-ansible:
 
-**********************
-Ansible for Windows
-**********************
+********************************************************
+Deploy the Collector with Ansible for Windows
+********************************************************
 
 .. meta::
       :description: Describes how to install the Splunk Observability Cloud OpenTelemetry Collector Ansible role on Windows.
