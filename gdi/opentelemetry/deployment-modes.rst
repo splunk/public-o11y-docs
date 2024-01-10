@@ -213,7 +213,16 @@ If you want to use the ``signalfx`` exporter for metrics on both agent and gatew
 .. note:: If you want to collect host metrics from the Gateway, use a different ``signalfx exporter`` with translation rules intact. For example, add the ``hostmetrics`` to the metrics/internal pipeline.
 
 .. code-block:: yaml
-   :emphasize-lines: 10,11
+
+   receivers:
+      hostmetrics:
+         collection_interval: 10s
+         scrapers:
+            cpu:
+            disk:
+            filesystem:
+            memory:
+            network:
 
    exporters:
       # Traces
