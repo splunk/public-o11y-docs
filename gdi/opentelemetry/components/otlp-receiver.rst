@@ -18,8 +18,12 @@ Read more about the OTLP format at the OTel repo :new-page:`OpenTelemetry Protoc
 Get started
 =================================================
 
-.. note:: This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector. See :ref:`otel-configuration-ootb` for details, such as the default ports for HTTP and gRCP requests. You can customize your configuration any time as explained in this document.
+.. note:: 
+  
+  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector. 
 
+  For details about the default configuration, see :ref:`otel-kubernetes-config`, :ref:`linux-config-ootb`, or :ref:`windows-config-ootb`. You can customize your configuration any time as explained in this document.
+  
 Follow these steps to configure and activate the component:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform. See :ref:`otel-install-platform`. 

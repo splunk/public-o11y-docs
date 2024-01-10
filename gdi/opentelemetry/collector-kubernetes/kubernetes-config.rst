@@ -1,7 +1,7 @@
 .. _otel-kubernetes-config:
 
 *********************************************************************************
-Configure Helm for Kubernetes
+Configure the Collector for Kubernetes with Helm
 *********************************************************************************
 
 .. meta::

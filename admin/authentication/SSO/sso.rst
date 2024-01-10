@@ -16,6 +16,7 @@ Observability Cloud also supports SSO initiated by Observability Cloud, and this
 
 Observability Cloud supports the following SSO integrations:
 
+-  :ref:`Splunk Cloud Platform<unified-id-unified-identity>`
 -  :ref:`Microsoft Active Directory Federation Services (ADFS)<sso-adfs>`
 -  :ref:`Microsoft Entra ID (formerly Azure Active Directory) <sso-azure>`
 -  :ref:`Google<sso-google>`
