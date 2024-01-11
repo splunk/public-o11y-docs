@@ -35,7 +35,7 @@ While the Add-on deployment approach offers numerous advantages, be aware of the
 
 * With the EKS Add-on, you can only deploy one instance of the Splunk Distribution of the OTel Collector per EKS cluster. Take into account this limitation when planning for scale and redundancy.
 
-Install the EKS Add-on
+Install the EKS Add-on with secure token handling
 =============================================================================================
 
 To install the EKS Add-on "Splunk Distribution of the OpenTelemetry Collector" follow these steps:
@@ -45,6 +45,7 @@ To install the EKS Add-on "Splunk Distribution of the OpenTelemetry Collector" f
 * :ref:`addon-aws-eks-three`
 * :ref:`addon-aws-eks-four`
 * :ref:`addon-aws-eks-five`
+* :ref:`addon-aws-eks-six`
 
 .. _addon-aws-eks-one:
 
@@ -92,13 +93,100 @@ Follow the steps outlined in the Amazon EKS User Guide to add an Add-on using ``
 Find the Amazon EKS User Guide at :new-page:`Managing Amazon EKS add-ons <https://docs.aws.amazon.com/eks/latest/userguide/managing-add-ons.html#creating-an-add-on>`.
 
 .. _addon-aws-eks-four:
+.. _addon-aws-eks-secure-token-one:
 
-Step 4: Configure the Add-on
+Step 4: Deploy the Add-on with improved security
 ------------------------------------------------------------
 
 To configure the "Splunk Distribution of the OTel Collector" EKS Add-on, prepare a YAML file tailored to your Splunk set-up, replacing placeholder values with your specific configuration details. 
 
 .. caution:: For security reasons, avoid including tokens or any sensitive data in the configuration file, as EKS Add-on configurations are exposed within the EKS web console.
+
+For ``splunkPlatform``:
+
+.. code-block:: yaml
+
+    splunkPlatform:
+        endpoint: http://localhost:8088/services/collector
+    clusterName: <EKS_CLUSTER_NAME>
+    cloudProvider: aws
+    distribution: eks
+
+    secret:
+        create: false
+        name: splunk-otel-collector
+        validateSecret: false
+
+For ``splunkObservability``:
+
+.. code-block:: yaml
+
+    splunkObservability:
+        realm: <REALM>
+    clusterName: <EKS_CLUSTER_NAME>
+    cloudProvider: aws
+    distribution: eks
+
+    secret:
+        create: false
+        name: splunk-otel-collector
+        validateSecret: false
+
+.. _addon-aws-eks-secure-token-two:
+.. _addon-aws-eks-five:
+
+Step 5: Configure your secret and deploy
+------------------------------------------------------------
+
+Deploy the secret into the Splunk monitoring namespace by applying a YAML file, or by using the kubectl command.
+
+YAML file
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Use the YAML config file you've prepared to configure the Add-on with your chosen method: ``eksctl``, the AWS Management Console, or the AWS CLI.
+
+
+kubectl commands
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To create secrets, use kubectl command:
+
+For ``splunkPlatform``:
+
+.. code-block:: yaml
+
+    kubectl create secret generic splunk-otel-collector \
+        --from-literal=splunk_platform_hec_token=<YOUR_HEC_TOKEN> \
+        -n splunk-monitoring
+
+Replace ``<YOUR_HEC_TOKEN>`` with your actual Splunk Platform HEC token.
+
+For ``splunkObservability``:
+
+.. code-block:: yaml
+
+    kubectl create secret generic splunk-otel-collector \
+        --from-literal=splunk_observability_access_token=<YOUR_ACCESS_TOKEN> \
+        -n splunk-monitoring
+
+Replace ``<YOUR_ACCESS_TOKEN>`` with your actual Splunk Observability Cloud access token.
+
+.. _addon-aws-eks-six:
+.. _addon-aws-eks-secure-token-three:
+
+Step 6: Wait for the Collector
+------------------------------------------------------------
+
+After adding the secret, allow some time for the Collector to detect your secret and start running successfully.
+
+Install the EKS Add-on without secure token handling
+=============================================================================================
+
+Alternatively, you can install the EKS Add-on with lower levels of security, without deploying a secret.
+
+.. caution:: For security reasons, avoid including tokens or any sensitive data in the configuration file, as EKS Add-on configurations are exposed within the EKS web console.
+
+Prepare a YAML file tailored to your Splunk set-up as follows.    
 
 For ``splunkPlatform``:
 
@@ -127,95 +215,3 @@ For ``splunkObservability``:
 Replace ``<YOUR_ACCESS_TOKEN>`` and ``<REALM>`` with your actual Splunk Observability Cloud access token within the corresponding realm, and replace ``<EKS_CLUSTER_NAME>`` with your actual EKS cluster's name.
 
 For more specific configuration information, see :ref:`otel-install-k8s`.
-
-.. _addon-aws-eks-five:
-
-Step 5: Apply the Configuration
-------------------------------------------------------------
-
-Use the YAML config file you've prepared to configure the Add-on with your chosen method: ``eksctl``, the AWS Management Console, or the AWS CLI.
-
-Improve your security with secure token handling
-================================================================
-
-For enhanced security, create a Kubernetes secret after deploying the Add-on. This method ensures sensitive data such as access tokens are securely managed and not visible within the EKS console.
-
-Follow these steps to secure token handling:
-
-* :ref:`addon-aws-eks-secure-token-one`
-* :ref:`addon-aws-eks-secure-token-two`
-* :ref:`addon-aws-eks-secure-token-three`
-
-.. _addon-aws-eks-secure-token-one:
-
-Step 1: Deploy the Add-on 
-------------------------------------------------------------
-
-Add the following configuration to your Add-on, removing any access tokens from it.
-
-For ``splunkPlatform``:
-
-.. code-block:: yaml
-
-    splunkPlatform:
-        endpoint: http://localhost:8088/services/collector
-    clusterName: <EKS_CLUSTER_NAME>
-    cloudProvider: aws
-    distribution: eks
-
-    secret:
-        create: false
-        name: splunk-otel-collector
-        validateSecret: false
-
-
-For ``splunkObservability``:
-
-.. code-block:: yaml
-
-    splunkObservability:
-        realm: <REALM>
-    clusterName: <EKS_CLUSTER_NAME>
-    cloudProvider: aws
-    distribution: eks
-
-    secret:
-        create: false
-        name: splunk-otel-collector
-        validateSecret: false
-
-.. _addon-aws-eks-secure-token-two:
-
-Step 2: Add your secret
-------------------------------------------------------------
-
-Deploy the secret into the splunk-monitoring namespace using the kubectl command or by applying a YAML file.
-Creating Secrets Using kubectl Command:
-
-For ``splunkPlatform``:
-
-.. code-block:: yaml
-
-    kubectl create secret generic splunk-otel-collector \
-        --from-literal=splunk_platform_hec_token=<YOUR_HEC_TOKEN> \
-        -n splunk-monitoring
-
-Replace ``<YOUR_HEC_TOKEN>`` with your actual Splunk Platform HEC token.
-
-For ``splunkObservability``:
-
-.. code-block:: yaml
-
-    kubectl create secret generic splunk-otel-collector \
-        --from-literal=splunk_observability_access_token=<YOUR_ACCESS_TOKEN> \
-        -n splunk-monitoring
-
-Replace ``<YOUR_ACCESS_TOKEN>`` with your actual Splunk Observability Cloud access token.
-
-.. _addon-aws-eks-secure-token-three:
-
-Step 3: Wait for the Collector
-------------------------------------------------------------
-
-After adding the secret, allow some time for the Collector to detect your secret and start running successfully.
-
