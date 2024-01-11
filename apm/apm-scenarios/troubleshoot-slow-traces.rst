@@ -11,7 +11,8 @@ Alex, the site reliability engineer for Buttercup Games, receives a report of a 
 These are the steps Alex takes to determine how pervasive the checkout errors are:
 
 #. :ref:`trace-duration-view`
-#. :ref:`service-filter`
+#. :ref:`zoom-heatmap`
+#. :ref:`sampling`
 #. :ref:`review-heatmap`
 #. :ref:`review-traces`
 
@@ -27,7 +28,7 @@ Customer support shared that the customer reported slowness when going through t
     :width: 95%
     :alt: This gif shows the trace duration selection and the time selection in the Trace Analyzer chart
 
-.. _service-filter:
+.. _zoom-heatmap:
 
 Alex zooms in on the trace duration heatmap
 ============================================================================
@@ -39,7 +40,7 @@ Alex selects the time period in the trace duration heatmap that shows a higher r
     :width: 95%
     :alt: This gif shows the filtering to a selection in the Trace Analyzer heatmap
 
-.. _service-filter:
+.. _sampling:
 
 Alex turns off sampling
 ============================================================================
