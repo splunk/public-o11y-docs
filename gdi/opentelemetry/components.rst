@@ -286,7 +286,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
      - Exports metrics, logs, and traces to Kafka using a synchronous producer. 
      - Metrics, logs, traces
    * - :ref:`loadbalancingexporter` (``loadbalancing``)
-     - Exports metrics, logs, and traces using a routing key.
+     - Exports metrics, logs, and traces to different back-ends.
      - Metrics, logs, traces
    * - :ref:`logging-exporter` (``logging``)
      - Exports data to the console. By default, ``logging`` doesn't send its output to Windows Event Viewer. Run the Splunk Distribution of OpenTelemetry Collector directly from the PowerShell terminal to send output to the Windows Event Viewer.
