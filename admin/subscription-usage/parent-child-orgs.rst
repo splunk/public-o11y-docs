@@ -48,6 +48,6 @@ To view the available usage reports:
       :width: 70%
       :alt: The usage report shows the parent org data separate from the child org usage data.
 
-For more details about Service Bureau or parent-child orgs, contact your Account team or Splunk Support.
+For more details about parent-child orgs, contact your Account team or Splunk Support.
 
 .. note:: To see child org metrics, refer to :ref:`Organization metrics in child orgs <org-metrics-child>`.
