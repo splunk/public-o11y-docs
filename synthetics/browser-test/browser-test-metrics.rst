@@ -110,9 +110,9 @@ Performance timing metrics capture information about how long it takes resources
      - ``synthetics.ttfb.time.ms``
      - Time from the start of the first request until receiving the first byte of the first non-redirect request. ``3xx`` redirects increase the duration of this time.
 
-   * - Duration/Response time
+   * - Duration
      - ``synthetics.duration.time.ms``
-     - The response time for a single-page Browser test is the same as the load time.
+     - Total amount of time spent on this page. This is the time from the start of the first request until either the end of the last request, or the end of the last step executed on this page, whichever is later. Summing all page durations is equivalent to the run duration (``synthetics.run.duration.time.ms``).
 
    * - First paint time
      - ``synthetics.first_paint.time.ms``
