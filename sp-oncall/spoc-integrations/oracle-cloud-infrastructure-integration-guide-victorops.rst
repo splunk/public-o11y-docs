@@ -1,82 +1,62 @@
-This guide contains documentation to integrate your Oracle Cloud
-Infrastructure  with Splunk On-Call.
+.. _oci-integration-spoc:
 
-General Requirements
---------------------
+Oracle Cloud Infrastructure integration for Splunk On-Call
+************************************************************
 
--  
+.. meta::
+    :description: Configure the Oracle Cloud Infrastructure integration for Splunk On-Call.
 
-   -  
+This guide explains how to integrate your Oracle Cloud Infrastructure (OCI) with Splunk On-Call.
 
-      -  **OCI Account:** May Require Administrative Privileges to
-         Integrate
+Requirements
+==================
 
-         -  **Splunk On-Call Version Required:** Starter, Growth, or
-            Enterprise.
+This integration is compatible with the following versions of Splunk On-Call:
 
-Configuration In Splunk On-Call
--------------------------------
+- Starter
+- Growth
+- Enterprise
 
-Enable The Integration
-~~~~~~~~~~~~~~~~~~~~~~
+You might require administrative privileges in Oracle Cloud Infrastructure.
 
-From the Splunk On-Call web portal navigate to *Integrations >> 3rd
-Party Integrations >> Oracle Cloud Infrastructure* and click *Enable
-Integration.*
+Splunk On-Call configuration
+====================================
 
-Copy the resulting uniquely generated service API Endpoint to your
-clipboard for later use in OCI.
+From the Splunk On-Call web portal navigate to :guilabel:`Integrations`, :guilabel:`3rd Party Integrations`, :guilabel:`Oracle Cloud Infrastructure` and then select :guilabel:`Enable Integration`.
 
-Configuration in Oracle Cloud Infrastructure
---------------------------------------------
+Copy the resulting generated service API endpoint to your clipboard for later use in OCI.
 
-From the Oracle Cloud console navigate to Solutions and Platform >>
-Monitoring >> Alarm Definitions.
+Oracle Cloud Infrastructure configuration
+===================================================
 
- 
+From the Oracle Cloud console navigate to :guilabel:`Solutions and Platform Monitoring`, :guilabel:`Alarm Definitions`.
 
-.. image:: images/OCI-1.jpg
+.. image:: images/spoc/OCI-1.jpg
+   :alt: Location of Alarm Definitions in OCI
 
- 
+Select :guilabel:`Create Alarm`. On this screen define your alarm and configure the desired alarm metrics and trigger rules.
 
-Then select “Create Alarm” - On this screen define your alarm and
-configure the desired alarm metrics and trigger rules. 
+.. image:: images/spoc/Create-Alarm.jpg
+   :alt: Create alarm in OCI
 
-.. image:: images/Create-Alarm.jpg
+After the alarm configuration is complete, the :guilabel:`Notifications` section populates at the bottom of the :guilabel:`Create Alarm` page. Select :guilabel:`Create a topic`.
 
- 
+.. image:: images/spoc/Create-a-topic.jpg
+   :alt: Create a new topic in OCI
 
-After the alarm configuration is complete, the “Notifications” section
-will populate at the bottom of the “Create Alarm” page. Select “Create a
-topic”
+Provide a topic name. Under :guilabel:`Subscription Protocol`, select :guilabel:`HTTPS`. Paste the service endpoint URL copied in previous step. Replace ``$routing_key`` in the URL with the value of the routing key you have configured.
 
-.. image:: images/Create-a-topic.jpg
+.. image:: images/spoc/URL.jpg
+   :alt: Select protocol
 
- 
+.. image:: images/spoc/Configure-URL.jpg
+   :alt: Create topic and subscription
 
-Here, Provide a Topic Name and under Subscription Protocol, select
-HTTPS. Paste the Service Endpoint URL copied in previous steps from
-VictorOps. Make sure you replace “$routing_key” in the URL with value of
-the actual routing key you have configured. 
+After creating the topic, select :guilabel:`Save alarm`.
 
-.. image:: images/URL.jpg
+Now, navigate back to Splunk On-Call. An initial ``INFO`` alert from Oracle Cloud appears. Expand the Alert Payload and copy the confirmation url that is included in the alert data under ``raw.ConfirmationURL``.
 
-.. image:: images/Configure-URL.jpg
+As the last step, paste the URL into a browser to see a topic subscription confirmation message like the following:
 
- 
-
-After creating the topic - Click Save alarm.
-
-Now, navigate back to Splunk On-Call and you should see an initial INFO
-alert from Oracle Cloud.
-
-Expand the Alert Payload and copy the confirmation url that is included
-in the alert data under “raw.ConfirmationURL”
-
-Finally, Paste the URL into a browser and you should see the topic
-subscription confirmation message like the one below:
-
-.. image:: images/OCI-Confirmation.jpg
-
-Congratulations! You have successfully configured Oracle Cloud to send
-alerts to VictorOps.
+.. image:: images/spoc/OCI-Confirmation.jpg
+   :alt: Confirmation message for the subscription in OCI

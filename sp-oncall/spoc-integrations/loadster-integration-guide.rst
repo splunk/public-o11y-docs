@@ -1,49 +1,44 @@
-[ht_toggle title=“Requirements” id=“” class=“” style=“” ]
+.. _loadster-integration-spoc:
 
-**Versions Supported: N/A (SaaS)**
+Loadster integration for Splunk On-Call
+***************************************************
 
-**VictorOps Version Required:** Getting Started, Essentials, or
-Full-Stack
+.. meta::
+    :description: Configure the Loadster integration for Splunk On-Call.
 
-[/ht_toggle]
+Loadster is a cloud-hybrid load testing solution for high-performance websites and applications. Load test your sites to find bottlenecks, improve stability, and optimize user experience.
 
-Loadster is a cloud-hybrid load testing solution for high-performance
-websites and applications. Load test your sites to find bottlenecks,
-improve stability, and optimize user experience.
+Requirements
+==================
 
-**In VictorOps**
-----------------
+This integration is compatible with the following versions of Splunk On-Call:
 
-From the main timeline select **Integrations >> 3rd Party Integrations
->> Loadster.**
+- Starter
+- Growth
+- Enterprise
 
-If the integration has not yet been enabled, click the “Enable
-Integration” button.  Copy the “Service API Key” to your clipboard.
 
-Once you have copied the API key to your clipboard, click
-on **Settings** *>>* **Routing Keys** page to find your routing key
-configuration.  Decide which routing_key will be used with this
-integration and make sure it is associated to the correct escalation
-policy/policies.  (You may need to create a new key)
+Splunk On-Call configuration
+========================================
 
-**In Loadster**
----------------
+From the main timeline select :guilabel:`Integrations`, :guilabel:`3rd Party Integrations`, :guilabel:`Loadster`.
 
-From the main dashboard, click on the profile icon in the upper
-righthand corner and then click *Integrations.*
+If the integration isn't active, select :guilabel:`Enable Integration`. Copy the service API key to your clipboard.
 
-Scroll down to VictorOps and click *Enable VictorOps*.
+After you have copied the API key to your clipboard, select :guilabel:`Settings`, :guilabel:`Routing Keys` to find your routing key configuration. Decide which routing key you want to use with the integration and make sure it is associated to the correct escalation policies.
 
-Next, enter the Service API Key you’d copied and (optionally) the
-routing key you’d like to direct these Loadster alerts to.
+Loadster configuration
+========================================
 
-**Testing the Loadster integration**
-------------------------------------
+From the main dashboard, select the profile icon in the upper righthand corner and then select :guilabel:`Integrations`.
 
-Now that the integration is enabled, each time one of your Loadster
-monitors fails, an incident will be created in VictorOps. Incidents
-usually show up in VictorOps within a minute or two. When the same
-Loadster monitor recovers, the incident will be resolved in VictorOps.
+Scroll down to Splunk On-Call and then select :guilabel:`Enable Splunk On-Call`.
 
-You can test this by creating a Loadster monitor that points to an
-invalid location, submits invalid data, or is otherwise broken.
+Next, enter the Service API Key you copied and, optionally, the routing key you want to direct Loadster alerts to.
+
+Testing the Loadster integration
+========================================
+
+Now that the integration is active, each time one of your Loadster monitors fails, an incident is created in Splunk On-Call. Incidents usually show up in Splunk On-Call within a minute or two. When the same Loadster monitor recovers, the incident is resolved.
+
+You can test this by creating a Loadster monitor that points to an invalid location, submits invalid data, or is otherwise broken.

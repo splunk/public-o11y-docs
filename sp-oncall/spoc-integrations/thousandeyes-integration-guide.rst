@@ -1,58 +1,48 @@
-[ht_toggle title=“Requirements” id=“” class=“” style=“” ]
+.. _thousandeyes-spoc:
 
-Required: ThousandEyes Implemented Environment
+ThousandEyes integration for Splunk On-Call
+***************************************************
 
-VictorOps Version Required: Starter, Growth, or Enterprise
+.. meta::
+    :description: Configure the ThousandEyes integration for Splunk On-Call.
 
-[/ht_toggle]
+The Splunk On-Call integration with ThousandEyes requires that you've implemented ThousandEyes in your environment. The following is a walkthrough on how to activate and configure the integration.
 
-The VictorOps integration with ThousandEyes requires that you’ve
-implemented ThousandEyes in your environment. The following is a brief
-walkthrough on how to enable and configure the integration.
+Requirements
+==================
 
---------------
+This integration is compatible with the following versions of Splunk On-Call:
 
-In VictorOps
-------------
+- Starter
+- Growth
+- Enterprise
 
-From the main timeline select Integrations. From the resulting lists of
-integrations, select ThousandEyes.
 
-If the integration has not yet been enabled, click the “Enable
-Integration” button. Copy the resulting service URL to your clipboard.
+Splunk On-Call configuration
+========================================
 
-**NOTE:** The $routing_key at the end of the alert will need to be
-replaced with a valid routing key from your VictorOps instance. This can
-be completed after pasting the URL into ThousandEyes. A valid, complete
-service URL should appear as follows:
+From the main timeline select :guilabel:`Integrations`. From the resulting lists of integrations, select :guilabel:`ThousandEyes`.
 
-``https://alert-mapping.victorops.com/integrations/thousandeyes/v1/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/thisIsMyRoutingKey``
+If the integration isn't active, select :guilabel:`Enable Integration`. Copy the resulting service URL to your clipboard.
 
-Where thisIsMyRoutingKey is a valid routing key in your VictorOps
-instance.
+.. note::
+   
+   Replace the ``$routing_key`` string at the end of the alert with a valid routing key from your Splunk On-Call instance. You can do this after pasting the URL into ThousandEyes. A valid, complete service URL looks like the following:
 
---------------
+   ``https://alert-mapping.victorops.com/integrations/thousandeyes/v1/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/thisIsMyRoutingKey``
 
-In ThousandEyes
----------------
+   Where ``thisIsMyRoutingKey`` is a valid routing key in your Splunk On-Call instance.
 
-Navigate to the Alert Rules interface by selecting *Alerts >> Alert
-Rules.* 
+ThousandEyes configuration
+========================================
 
-Locate the alert rule that you wish to alert VictorOps on. Expand this
-rule and select the **Notifications** tab. Under the **Webhooks**
-section, click the **Configure Webhooks** link, or, if you have already
-configured webhooks for this alert, click **Edit Webhooks.** Click **Add
-a new webhook.**
+Navigate to the Alert Rules interface by selecting :guilabel:`Alerts`, :guilabel:`Alert Rules`. Locate the alert rule that you want to alert Splunk On-Call on. Expand this rule and select the :guilabel:`Notifications` tab.
 
-Give the webhook a meaningful name and paste the VictorOps service URL
-from the VictorOps step above, ensuring to replace **$routing_key** with
-a valid routing key from your VictorOps instance. Leave the **Auth
-Type** value set to **None**.
+Under the :guilabel:`Webhooks` section, select :guilabel:`Configure Webhooks`. If you have already configured webhooks for this alert, select :guilabel:`Edit Webhooks` and then select :guilabel:`Add a new webhook`.
 
-To test the webhook, click the **Test** button. You will see a message
-appear in the modal stating, “Webhook test completed successfully” after
-ThousandEyes has successfully sent a test webhook.
+Give the webhook a name and paste the Splunk On-Call service URL from the previous step, ensuring to replace ``$routing_key`` with a valid routing key from your Splunk On-Call instance. Leave the :guilabel:`Auth Type` value set to ``None``.
 
-Click **Add New Webhook** to save this configuration. Select this new
-webhook from the list of webhooks to activate the webhook.
+To test the webhook, select :guilabel:`Test`. A message appears in the dialog box stating :guilabel:`Webhook test completed successfully` after ThousandEyes has successfully sent a test webhook.
+
+Select :guilabel:`Add New Webhook` to save the configuration. Select this new webhook from the list of webhooks to activate the webhook.
+
