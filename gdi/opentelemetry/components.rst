@@ -22,8 +22,7 @@ Collector components
     components/groupbyattrs-processor    
     components/health-check-extension
     components/host-metrics-receiver
-    components/jaeger-receiver
-    components/jmx-receiver-2    
+    components/jaeger-receiver  
     components/jmx-receiver    
     components/kubelet-stats-receiver
     components/kubernetes-attributes-processor
