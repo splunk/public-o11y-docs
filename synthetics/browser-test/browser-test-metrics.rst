@@ -7,11 +7,11 @@ Browser test metrics
 .. meta::
     :description: Reference and definitions of available metrics captured by browser tests in Splunk Synthetic Monitoring.
 
-Metrics in Splunk Synthetic Monitoring are numeric indicators of site performance that synthetic tests capture in each run of a test. 
+Metrics in Splunk Synthetic Monitoring are numeric indicators of site performance that synthetic tests capture in each run of a test.
 
 Metrics for Browser tests
 =================================
-Browser tests capture 40+ metrics that offer a complete picture of your website performance. You can also configure custom metrics to gather the information you care about most. The following sections detail the three main types of metrics that Browser tests can capture.  
+Browser tests capture 40+ metrics that offer a complete picture of your website performance. You can also configure custom metrics to gather the information you care about most. The following sections detail the three main types of metrics that Browser tests can capture.
 
 * :ref:`test-level-metrics`
 * :ref:`page-level-metrics`
@@ -40,10 +40,10 @@ All Splunk Synthetic Monitoring metrics contain the following dimensions:
      - The ID of the location for this run.
 
    * - ``test_id``
-     - The ID of this test.    
+     - The ID of this test.
 
    * - ``test_type``
-     - The test type dimension for Browser tests is set to ``browser``. 
+     - The test type dimension for Browser tests is set to ``browser``.
 
 .. _test-level-metrics:
 
@@ -67,24 +67,24 @@ Test-level metrics in Browser tests
 
    * - Run count
      - ``synthetics.run.count``
-     - Total number of runs for the test. This metric contains dimensions such as ``success: true`` and ``failed: false`` to indicate whether the run succeeded or failed. 
+     - Total number of runs for the test. This metric contains dimensions such as ``success: true`` and ``failed: false`` to indicate whether the run succeeded or failed.
 
    * - Run-level duration
      - ``synthetics.run.duration.time.ms``
-     - The total duration of the entire run, including all pages and synthetic transactions. 
+     - The total duration of the entire run, including all pages and synthetic transactions.
 
-  
+
 .. _page-level-metrics:
 
 Page-level metrics in Browser tests
 --------------------------------------
-Browser tests in Splunk Synthetic Monitoring automatically capture a set of 46 default metrics for each page load. These metrics are grouped into several categories. See the tables below for details on all default page-level metrics. 
+Browser tests in Splunk Synthetic Monitoring automatically capture a set of 46 default metrics for each page load. These metrics are grouped into several categories. See the tables below for details on all default page-level metrics.
 
-Page-level metrics include an additional ``page_position`` dimension that refers to the position of the page within the test. The position of the first page in the test is 0, the second page has position 1, and so on. If you choose a page-level metric in the Performance KPIs chart or in a detector without specifying a page in the ``page_position`` dimension, the metric value is aggregated across all pages. 
+Page-level metrics include an additional ``page_position`` dimension that refers to the position of the page within the test. The position of the first page in the test is 0, the second page has position 1, and so on. If you choose a page-level metric in the Performance KPIs chart or in a detector without specifying a page in the ``page_position`` dimension, the metric value is aggregated across all pages.
 
 Performance timings
 ^^^^^^^^^^^^^^^^^^^^
-Performance timing metrics capture information about how long it takes resources on the page to render. 
+Performance timing metrics capture information about how long it takes resources on the page to render.
 
 .. list-table::
    :header-rows: 1
@@ -93,7 +93,7 @@ Performance timing metrics capture information about how long it takes resources
    * - :strong:`Metric label`
      - :strong:`Source metric name`
      - :strong:`Description`
-   
+
    * - DNS time
      - ``synthetics.dns.time.ms``
      - Time required to resolve a host name from the DNS server.
@@ -116,7 +116,7 @@ Performance timing metrics capture information about how long it takes resources
 
    * - Duration/Response time
      - ``synthetics.duration.time.ms``
-     - The response time for a single-page Browser test is the same as the load time. 
+     - The response time for a single-page Browser test is the same as the load time.
 
    * - First paint time
      - ``synthetics.first_paint.time.ms``
@@ -136,11 +136,11 @@ Performance timing metrics capture information about how long it takes resources
 
    * - First CPU idle
      - ``synthetics.first_cpu_idle.time.ms``
-     - Time until the page is minimally interactive and will respond to user input in a reasonable amount of time. 
+     - Time until the page is minimally interactive and will respond to user input in a reasonable amount of time.
    * - Time to interactive
      - ``synthetics.tti.time.ms``
-     - Time until the page is first expected to be usable and will respond to user input quickly. 
-     
+     - Time until the page is first expected to be usable and will respond to user input quickly.
+
    * - Onload time
      - ``synthetics.onload.time.ms``
      - Time until the page has loaded. This corresponds to the browser load event.
@@ -150,12 +150,12 @@ Performance timing metrics capture information about how long it takes resources
      - Time until all above-the-fold content has finished rendering.
    * - Speed index
      - ``synthetics.speed_index.time.ms``
-     - A calculated metric that represents how quickly the page renders above-the-fold content. 
+     - A calculated metric that represents how quickly the page renders above-the-fold content.
 
 
 Web vitals
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Web vitals capture key metrics that affect user experience. 
+Web vitals capture key metrics that affect user experience.
 
 .. list-table::
    :header-rows: 1
@@ -164,7 +164,7 @@ Web vitals capture key metrics that affect user experience.
    * - :strong:`Metric label`
      - :strong:`Source metric name`
      - :strong:`Description`
-   
+
    * - Cumulative layout shift (CLS)
      - ``synthetics.webvitals_cls.score``
      - Measures page stability. CLS is based on a formula that tallies up how many times the components on the page move or “shift” around while the page is loading. Fewer shifts are better.
@@ -182,7 +182,7 @@ To learn more about web vitals, see :new-page:`https://web.dev/vitals/` in the G
 
 Connection timings
 ^^^^^^^^^^^^^^^^^^^^
-Connection timings metrics capture information about the latency of your site's connection to its server. 
+Connection timings metrics capture information about the latency of your site's connection to its server.
 
 .. list-table::
    :header-rows: 1
@@ -191,7 +191,7 @@ Connection timings metrics capture information about the latency of your site's 
    * - :strong:`Metric label`
      - :strong:`Source metric name`
      - :strong:`Description`
-   
+
    * - DNS time
      - ``synthetics.first_request.dns.time.ms``
      - Time required to resolve a host name from the DNS server.
@@ -199,7 +199,7 @@ Connection timings metrics capture information about the latency of your site's 
    * - TCP connect time
      - ``synthetics.first_request.connect.time.ms``
      - Time it takes to create a TCP connection.
- 
+
    * - Receive time
      - ``synthetics.first_request.receive.time.ms``
      - Time required to read the entire response from the server.
@@ -209,7 +209,7 @@ Connection timings metrics capture information about the latency of your site's 
      - Time required to send HTTP data to the server.
 
    * - TLS time
-     - ``synthetics.first_request.tls.time.ms`` 
+     - ``synthetics.first_request.tls.time.ms``
      - Time required for TLS/SSL negotiation.
 
    * - Wait time
@@ -228,46 +228,46 @@ Resource and error count metrics capture information about the number and types 
    * - :strong:`Metric label`
      - :strong:`Source metric name`
      - :strong:`Description`
-   
+
    * - Client error count
      - ``synthetics.resource_request.error.count``
-     - Number of client responses with a status code between 400 and 499. The error type is indicated in the ``http.status_code_type`` dimension. 
+     - Number of client responses with a status code between 400 and 499. The error type is indicated in the ``http.status_code_type`` dimension.
 
    * - Connection error count
      - ``synthetics.resource_request.error.count``
-     - Number of connection responses where the status code is 504 or 0 (a request aborted by the browser). The error type is indicated in the ``http.status_code_type`` dimension. 
+     - Number of connection responses where the status code is 504 or 0 (a request aborted by the browser). The error type is indicated in the ``http.status_code_type`` dimension.
 
-   * - Server error count 
+   * - Server error count
      - ``synthetics.resource_request.error.count``
-     - Number of server responses where the status code is 500 or higher (excluding 504). The error type is indicated in the ``http.status_code_type`` dimension. 
+     - Number of server responses where the status code is 500 or higher (excluding 504). The error type is indicated in the ``http.status_code_type`` dimension.
 
    * - Error count
      - ``synthetics.resource_request.error.count``
-     - Total count of responses with status codes greater than or equal to 400. This is a calculated metric, equivalent to the total number of client, connection, and server errors. 
+     - Total count of responses with status codes greater than or equal to 400. This is a calculated metric, equivalent to the total number of client, connection, and server errors.
 
    * - HTML count
      - ``synthetics.resource_request.count``
-     - Number of requests for HTML documents. The content type is indicated in the ``content_type`` dimension. 
-     
+     - Number of requests for HTML documents. The content type is indicated in the ``content_type`` dimension.
+
    * - Image count
      - ``synthetics.resource_request.count``
-     - Number of requests for images. The content type is indicated in the ``content_type`` dimension. 
+     - Number of requests for images. The content type is indicated in the ``content_type`` dimension.
 
    * - JavaScript count
-     - ``synthetics.resource_request.count`` 
-     - Number of requests for JavaScript files. The content type is indicated in the ``content_type`` dimension.  
+     - ``synthetics.resource_request.count``
+     - Number of requests for JavaScript files. The content type is indicated in the ``content_type`` dimension.
 
    * - CSS count
      - ``synthetics.resource_request.count``
-     - Number of requests for CSS files. The content type is indicated in the ``content_type`` dimension. 
+     - Number of requests for CSS files. The content type is indicated in the ``content_type`` dimension.
 
    * - Video count
      - ``synthetics.resource_request.count``
-     - Number of requests for videos. The content type is indicated in the ``content_type`` dimension. 
+     - Number of requests for videos. The content type is indicated in the ``content_type`` dimension.
 
    * - Font count
      - ``synthetics.resource_request.count``
-     - Number of requests for fonts. The content type is indicated in the ``content_type`` dimension. 
+     - Number of requests for fonts. The content type is indicated in the ``content_type`` dimension.
 
    * - Other count
      - ``synthetics.resource_request.count``
@@ -290,43 +290,43 @@ Content size metrics capture information about the size of resources on a page. 
    * - :strong:`Metric label`
      - :strong:`Source metric name`
      - :strong:`Description`
-   
+
    * - Total content size
-     - ``synthetics.resource_request.size.bytes`` 
+     - ``synthetics.resource_request.size.bytes``
      - Total size (in bytes) of all content loaded. This is equivalent to the total sum of all resource type sizes (HTML, image, JavaScript, CSS, video, font and other sizes).
 
    * - Total HTML size
-     - ``synthetics.resource_request.size.bytes`` 
+     - ``synthetics.resource_request.size.bytes``
      - Total size (in bytes) of all HTML content loaded. The content type is indicated by the ``content_type`` dimension.
 
    * - Total image size
-     - ``synthetics.resource_request.size.bytes`` 
+     - ``synthetics.resource_request.size.bytes``
      - Total size (in bytes) of all image content loaded. The content type is indicated by the ``content_type`` dimension.
 
    * - Total JavaScript size
-     - ``synthetics.resource_request.size.bytes`` 
+     - ``synthetics.resource_request.size.bytes``
      - Total size (in bytes) of all JavaScript content loaded. The content type is indicated by the ``content_type`` dimension.
 
    * - Total CSS size
-     - ``synthetics.resource_request.size.bytes`` 
+     - ``synthetics.resource_request.size.bytes``
      - Total size (in bytes) of all CSS content loaded. The content type is indicated by the ``content_type`` dimension.
 
    * - Total video size
-     - ``synthetics.resource_request.size.bytes`` 
+     - ``synthetics.resource_request.size.bytes``
      - Total size (in bytes) of all video content loaded. The content type is indicated by the ``content_type`` dimension.
 
    * - Total font size
-     - ``synthetics.resource_request.size.bytes`` 
+     - ``synthetics.resource_request.size.bytes``
      - Total size (in bytes) of all font content loaded. The content type is indicated by the ``content_type`` dimension.
-     
+
    * - Total other size
-     - ``synthetics.resource_request.size.bytes`` 
+     - ``synthetics.resource_request.size.bytes``
      - Total size (in bytes) of all other resources that are not HTML, image, JavaScript, CSS, video, or font requests.
- 
+
 
 Score metrics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Splunk Synthetic Monitoring currently offers one calculated score metric to offer a gauge of how your page is performing against an established scale. 
+Splunk Synthetic Monitoring currently offers one calculated score metric to offer a gauge of how your page is performing against an established scale.
 
 .. list-table::
    :header-rows: 1
@@ -345,9 +345,9 @@ Splunk Synthetic Monitoring currently offers one calculated score metric to offe
 
 Transaction-level metrics
 -------------------------------------
-Splunk Synthetic Monitoring captures three metrics for each synthetic transaction. Using these metrics, synthetic transactions can act as custom timers on business-critical workflows in your application and receive metrics tailored to the workflows you care about. See :ref:`set-up-transactional-browser-test` to learn how to set up Business Transactions. 
+Splunk Synthetic Monitoring captures three metrics for each synthetic transaction. Using these metrics, synthetic transactions can act as custom timers on business-critical workflows in your application and receive metrics tailored to the workflows you care about. See :ref:`set-up-transactional-browser-test` to learn how to set up Business Transactions.
 
-Transaction-level metrics include two additional dimensions that correspond to each specific transaction within the test: ``transaction`` and ``transaction_position``. The ``transaction`` dimension contains the name of the corresponding transaction, and the that refers to the position of that transaction within the test. The position of the first transaction in the test is 0, the second transaction has position 1, and so on. If you choose a transaction-level metric in the Performance KPIs chart or in a detector without specifying a transaction in the ``transaction`` dimension, the metric value is an aggregate of the metric across all transactions. 
+Transaction-level metrics include two additional dimensions that correspond to each specific transaction within the test: ``transaction`` and ``transaction_position``. The ``transaction`` dimension contains the name of the corresponding transaction, and the that refers to the position of that transaction within the test. The position of the first transaction in the test is 0, the second transaction has position 1, and so on. If you choose a transaction-level metric in the Performance KPIs chart or in a detector without specifying a transaction in the ``transaction`` dimension, the metric value is an aggregate of the metric across all transactions.
 
 .. list-table::
    :header-rows: 1
@@ -356,14 +356,14 @@ Transaction-level metrics include two additional dimensions that correspond to e
    * - :strong:`Metric label`
      - :strong:`Source metric name`
      - :strong:`Description`
-   
+
    * - Duration
      - ``synthetics.duration.time.ms``
      - Total duration of the synthetic transaction.
 
    * - Requests
-     - ``synthetics.resource_request.count`` 
-     -  Total number of requests made during the synthetic transaction. 
+     - ``synthetics.resource_request.count``
+     -  Total number of requests made during the synthetic transaction.
 
    * - Total size
      - ``synthetics.resource_request.size.bytes``
