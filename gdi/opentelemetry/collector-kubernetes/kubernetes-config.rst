@@ -135,7 +135,7 @@ This distribution operates similarly to the ``eks`` distribution, but with the f
 Configure the cluster name
 ============================================
 
-The ``clusterName`` parameter can be used to specify the name of the Kubernetes cluster. This parameter is optional for the ``eks``, ``eks/fargate``, ``gke``, and ``gke/autopilot`` distributions, but required for all of the others.
+Use the ``clusterName`` parameter to specify the name of the Kubernetes cluster. This parameter is optional for the ``eks``, ``eks/fargate``, ``gke``, and ``gke/autopilot`` distributions, but required for all of others.
 
 Apply the following to configure your cluster name:
 
@@ -157,7 +157,6 @@ Configure the deployment environment
 If applicable, use the ``environment`` parameter to specify an additional ``deployment.environment`` attribute to be added to all telemetry data. This attribute helps Splunk Observability Cloud users investigate data coming from different sources separately. Example values include ``development``, ``staging``, and ``production``.
 
 .. code-block:: yaml
-
 
   splunkObservability:
     accessToken: xxxxxx
