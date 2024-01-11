@@ -35,7 +35,7 @@ Alex zooms in on the trace duration heatmap
 Alex selects the time period in the trace duration heatmap that shows a higher rate of traces with a longer trace duration to further refine the traces in the table.
 
 
-..  image:: /_images/apm/apm-use-cases/trace-duration-fiter-to-selection.gif
+..  image:: /_images/apm/apm-use-cases/trace-duration-filter-to-selection.gif
     :width: 95%
     :alt: This gif shows the filtering to a selection in the Trace Analyzer heatmap
 
