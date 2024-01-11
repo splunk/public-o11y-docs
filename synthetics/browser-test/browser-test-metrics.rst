@@ -336,7 +336,7 @@ Splunk Synthetic Monitoring currently offers one calculated score metric to offe
 
    * - Lighthouse Performance Score
      - ``synthetics.lighthouse.score``
-     - A weighted aggregation of several Browser test metric values calculated using v6 of the Lighthouse scoring algorithm. See https://web.dev/performance-scoring/ in the Google developer documentation to learn more about Lighthouse scoring.
+     - A weighted aggregation of several Browser test metric values calculated using v10 of the Lighthouse scoring algorithm. See https://web.dev/performance-scoring/ in the Google developer documentation to learn more about Lighthouse scoring.
 
 
 .. _transaction-level-metrics:
