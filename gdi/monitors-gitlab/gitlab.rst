@@ -48,11 +48,10 @@ Installation
 GitLab configuration
 --------------------
 
-Follow the instructions on Monitoring GitLab with
-Prometheus](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html)
+Follow the instructions on :new-page:`Monitoring GitLab with
+Prometheus <https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html>`
 to configure the GitLab Prometheus exporters to expose metric endpoint
-targets. For the GitLab Runner monitoring configuration, see [GitLab
-Runner monitoring.
+targets. 
 
 If you configue GitLab by editing ``/etc/gitlab/gitlab.rb``, you need to
 run the command ``gitlab-ctl reconfigure`` for the changes to take
