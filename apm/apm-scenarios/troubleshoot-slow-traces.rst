@@ -22,7 +22,7 @@ These are the steps Alex takes to determine how pervasive the slowness is:
 Alex uses the trace duration view in Trace Analyzer and filters the time range
 ================================================================================
 
-Customer support shared that the customer reports of slowness started around 11:00 APM. So, Alex selects the trace duration view in Trace Analyzer and filters to the time range that matches the customer's report.
+Customer support shared that the customer reports of slowness started around 11:00 AM. So, Alex selects the trace duration view in Trace Analyzer and filters to the time range that matches the customer's report.
 
 ..  image:: /_images/apm/apm-use-cases/trace-duration-time-select.gif
     :width: 95%
@@ -33,7 +33,7 @@ Customer support shared that the customer reports of slowness started around 11:
 Alex zooms in on the trace duration heatmap
 ============================================================================
 
-Alex selects the time period in the trace duration heatmap that shows a higher rate of traces with a longer trace durations to further refine the traces in the table.
+Alex selects the time period in the trace duration heatmap that shows a higher rate of traces with longer trace durations to further refine the traces in the table.
 
 
 ..  image:: /_images/apm/apm-use-cases/trace-duration-filter-to-selection.gif
@@ -76,7 +76,7 @@ Alex sorts the table of traces by duration so that they can review the high-dura
 Summary
 ====================================================================================
 
-Using the high-resolution data provided by full-fidelity tracing, Alex managed to quickly determine the prevalence of slowness in the checkout flow. Using filtering and the trace duration heatmap, Alex quickly isolated high-duration traces to provide to the engineers to isolate the issue. 
+Using the high-resolution data provided by full-fidelity tracing, Alex managed to quickly determine the prevalence of slowness. Using filtering and the trace duration heatmap, Alex quickly isolated high-duration traces to provide to the engineers to isolate the issue. 
 
 Learn more
 ===============
