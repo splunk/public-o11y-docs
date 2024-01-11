@@ -48,8 +48,8 @@ Installation
 GitLab configuration
 --------------------
 
-Follow the instructions on Monitoring GitLab with
-Prometheus](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html)
+Follow the instructions on `Monitoring GitLab with
+Prometheus <https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html>`_
 to configure the GitLab Prometheus exporters to expose metric endpoint
 targets. For the GitLab Runner monitoring configuration, see [GitLab
 Runner monitoring.
