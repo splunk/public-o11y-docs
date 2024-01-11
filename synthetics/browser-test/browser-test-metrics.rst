@@ -78,7 +78,7 @@ Test-level metrics in Browser tests
 
 Page-level metrics in Browser tests
 --------------------------------------
-Browser tests in Splunk Synthetic Monitoring automatically capture a set of 46 default metrics for each page load. These metrics are grouped into several categories. See the tables below for details on all default page-level metrics.
+Browser tests in Splunk Synthetic Monitoring automatically capture a set of 45 default metrics for each page load. These metrics are grouped into several categories. See the tables below for details on all default page-level metrics.
 
 Page-level metrics include an additional ``page_position`` dimension that refers to the position of the page within the test. The position of the first page in the test is 0, the second page has position 1, and so on. If you choose a page-level metric in the Performance KPIs chart or in a detector without specifying a page in the ``page_position`` dimension, the metric value is aggregated across all pages.
 
@@ -93,10 +93,6 @@ Performance timing metrics capture information about how long it takes resources
    * - :strong:`Metric label`
      - :strong:`Source metric name`
      - :strong:`Description`
-
-   * - DNS time
-     - ``synthetics.dns.time.ms``
-     - Time required to resolve a host name from the DNS server.
 
    * - DOM complete time
      - ``synthetics.dom_complete.time.ms``
@@ -137,6 +133,7 @@ Performance timing metrics capture information about how long it takes resources
    * - First CPU idle
      - ``synthetics.first_cpu_idle.time.ms``
      - Time until the page is minimally interactive and will respond to user input in a reasonable amount of time.
+
    * - Time to interactive
      - ``synthetics.tti.time.ms``
      - Time until the page is first expected to be usable and will respond to user input quickly.
@@ -148,6 +145,7 @@ Performance timing metrics capture information about how long it takes resources
    * - Visually complete time
      - ``synthetics.visually_complete.time.ms``
      - Time until all above-the-fold content has finished rendering.
+
    * - Speed index
      - ``synthetics.speed_index.time.ms``
      - A calculated metric that represents how quickly the page renders above-the-fold content.
