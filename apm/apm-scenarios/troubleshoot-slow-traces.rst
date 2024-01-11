@@ -29,14 +29,26 @@ Customer support shared that the customer reported slowness when going through t
 
 .. _service-filter:
 
-Alex adds a filter for the checkout service and turns off sampling
+Alex zooms in on the trace duration heatmap
 ============================================================================
 
-Alex further refines the traces they are viewing by adding a filter for the checkout service. Alex also selects :guilabel:`1:1` for the :guilabel:`Sample Ratio` so that they can view all traces that match their criteria. 
+Alex selects the time period in the trace duration heatmap that shows a higher rate of traces with a longer trace duration to further refine the traces in the table.
+
+
+..  image:: /_images/apm/apm-use-cases/trace-duration-fiter-to-selection.gif
+    :width: 95%
+    :alt: This gif shows the filtering to a selection in the Trace Analyzer heatmap
+
+.. _service-filter:
+
+Alex turns off sampling
+============================================================================
+
+Alex selects :guilabel:`1:1` for the :guilabel:`Sample Ratio` so that they can view all traces that match their criteria. 
 
 ..  image:: /_images/apm/apm-use-cases/trace-duration-filter-sample.gif
     :width: 95%
-    :alt: This gif shows the addition of a service filter and sampling ration selection in the Trace Analyzer chart
+    :alt: This gif shows the sampling ratio selection in the Trace Analyzer chart
 
 .. _review-heatmap:
 

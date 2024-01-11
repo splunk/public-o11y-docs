@@ -68,7 +68,7 @@ To explore your trace data, use the following controls, which are numbered as ca
 #. Use the filter bar to refine traces by time range, environment, workflow, services, and tags.
 #. Use the trace view selection to select trace and error counts or duration in the chart.
 #. Use the minimum and maximum trace duration to refine the traces that are included by their duration.
-#. Use the sample ratio to select all traces or 10% of traces. 
+#. Use the sample ratio to select all traces or 10% of traces. By default the sample ratio is set to 1:10. Once you make a selection, your selection is preserved.
 #. Use the :guilabel:`Errors Only` switch to show only traces with errors.
 #. Use the search to look up a trace by its ID.
 #. Use the real-time chart to view the count of total traces with error or a trace duration heatmap depending on your selections.
