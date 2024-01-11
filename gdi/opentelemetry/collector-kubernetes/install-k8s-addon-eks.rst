@@ -95,7 +95,7 @@ Find the Amazon EKS User Guide at :new-page:`Managing Amazon EKS add-ons <https:
 .. _addon-aws-eks-four:
 .. _addon-aws-eks-secure-token-one:
 
-Step 4: Deploy the Add-on with improved security
+Step 4: Configure the Add-on with improved security
 ------------------------------------------------------------
 
 To configure the "Splunk Distribution of the OTel Collector" EKS Add-on, prepare a YAML file tailored to your Splunk set-up, replacing placeholder values with your specific configuration details. 
@@ -132,10 +132,12 @@ For ``splunkObservability``:
         name: splunk-otel-collector
         validateSecret: false
 
+.. note:: For more specific configuration information, see :ref:`otel-install-k8s`.
+
 .. _addon-aws-eks-secure-token-two:
 .. _addon-aws-eks-five:
 
-Step 5: Configure your secret and deploy
+Step 5: Add your secret and deploy
 ------------------------------------------------------------
 
 Deploy the secret into the Splunk monitoring namespace by applying a YAML file, or by using the kubectl command.
@@ -145,8 +147,7 @@ YAML file
 
 Use the YAML config file you've prepared to configure the Add-on with your chosen method: ``eksctl``, the AWS Management Console, or the AWS CLI.
 
-
-kubectl commands
+kubectl command
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To create secrets, use kubectl command:
@@ -178,6 +179,8 @@ Step 6: Wait for the Collector
 ------------------------------------------------------------
 
 After adding the secret, allow some time for the Collector to detect your secret and start running successfully.
+
+.. _addon-aws-eks-non-secure:
 
 Install the EKS Add-on without secure token handling
 =============================================================================================
@@ -214,4 +217,4 @@ For ``splunkObservability``:
 
 Replace ``<YOUR_ACCESS_TOKEN>`` and ``<REALM>`` with your actual Splunk Observability Cloud access token within the corresponding realm, and replace ``<EKS_CLUSTER_NAME>`` with your actual EKS cluster's name.
 
-For more specific configuration information, see :ref:`otel-install-k8s`.
+.. note:: For more specific configuration information, see :ref:`otel-install-k8s`.
