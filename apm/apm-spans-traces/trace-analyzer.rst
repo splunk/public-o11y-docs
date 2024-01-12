@@ -64,7 +64,7 @@ To explore your trace data, use the following controls, which are numbered as ca
     :width: 95%
     :alt: Elements of the Trace Analyzer user interface
 
-#. Use the filter bar to refine the traces by time range, environment, workflow, services, and tags.
+#. Use the filter bar to refine the traces by time range, environment, workflow, services, and tags. For tag filters, both equal to (``=``) and not equal to (``!=``) operators are available. 
 #. Use the minimum and maximum trace duration to refine the traces that are included by their duration.
 #. Use the sample ratio to select all traces or 10% of traces. 
 #. Use the :guilabel:`Errors Only` switch to show only traces with errors.
