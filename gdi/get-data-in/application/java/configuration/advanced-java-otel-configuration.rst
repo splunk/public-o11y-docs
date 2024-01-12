@@ -208,7 +208,7 @@ The following settings control the AlwaysOn Profiling feature for the Java agent
    * - ``SPLUNK_PROFILER_LOGS_ENDPOINT``
      - The collector endpoint for profiler logs. By default, it takes the value of ``otel.exporter.otlp.endpoint``. |br| |br| System property: ``splunk.profiler.logs-endpoint``
    * - ``SPLUNK_PROFILER_OTLP_PROTOCOL``
-   * - The transport protocol to use or profiling OTLP log requests. Possible values are ``grpc`` and ``http/protobuf``. The default value is ``http/protobuf``. |br| |br| System property: ``splunk.profiler.otlp.protocol``
+     - The transport protocol to use or profiling OTLP log requests. Possible values are ``grpc`` and ``http/protobuf``. The default value is ``http/protobuf``. |br| |br| System property: ``splunk.profiler.otlp.protocol``
    * - ``SPLUNK_PROFILER_DIRECTORY``
      -  The location of the JDK Flight Recorder files. The default value is the local directory (``.``). |br| |br| System property: ``splunk.profiler.directory``
    * - ``SPLUNK_PROFILER_RECORDING_DURATION``
