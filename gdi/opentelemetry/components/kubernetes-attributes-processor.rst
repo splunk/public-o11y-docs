@@ -24,6 +24,68 @@ To manually configure the Kubernetes attributes processor, follow these steps:
 #. :ref:`configure-association-lists-k8sattributes`
 #. :ref:`configure-labels-k8sattributes`
 
+Sample configuration
+----------------------
+
+The Splunk Distribution of OpenTelemetry Collector for Kubernetes adds the ``k8sattributes`` processor with the default configuration:
+
+.. code-block:: yaml
+
+  processors:
+    k8sattributes:
+
+You can include the processor in all pipelines of the ``service`` section of your configuration file:
+
+.. code-block:: yaml
+
+  service:
+    pipelines:
+      metrics:
+        processors: [k8sattributes/demo]
+      logs:
+        processors: [k8sattributes/demo]
+      traces:
+        processors: [k8sattributes/demo]
+
+Configuration example
+---------------------------
+
+The following example contains a list of extracted metadata, Kubernetes annotations and labels, and an association list:
+
+.. code:: yaml
+
+   k8sattributes/demo:
+     auth_type: "serviceAccount"
+     passthrough: false
+     filter:
+       node_from_env_var: <KUBE_NODE_NAME>
+     extract:
+       metadata:
+         - k8s.pod.name
+         - k8s.pod.uid
+         - k8s.deployment.name
+         - k8s.namespace.name
+         - k8s.node.name
+         - k8s.pod.start_time
+     annotations:
+       - key_regex: opentel.* # extracts Keys & values of annotations matching regex `opentel.*`
+         from: pod
+     labels:
+       - key_regex: opentel.* # extracts Keys & values of labels matching regex `opentel.*`
+         from: pod
+     pod_association:
+       - sources:
+          - from: resource_attribute
+            name: k8s.pod.ip
+       - sources:
+          - from: resource_attribute
+            name: k8s.pod.uid
+       - sources:
+          - from: connection
+
+Advanced use cases
+==================================================================
+
 .. _configure-rbac-k8sattributes:
 
 Configure role-based access control
@@ -67,56 +129,6 @@ The following example shows how to give a ServiceAccount the necessary permissio
       kind: ClusterRole
       name: otel-collector
       apiGroup: rbac.authorization.k8s.io
-
-Sample configuration
----------------------------
-
-The following example contains a list of extracted metadata, Kubernetes annotations and labels, and an association list:
-
-.. code:: yaml
-
-   k8sattributes/demo:
-     auth_type: "serviceAccount"
-     passthrough: false
-     filter:
-       node_from_env_var: <KUBE_NODE_NAME>
-     extract:
-       metadata:
-         - k8s.pod.name
-         - k8s.pod.uid
-         - k8s.deployment.name
-         - k8s.namespace.name
-         - k8s.node.name
-         - k8s.pod.start_time
-     annotations:
-       - key_regex: opentel.* # extracts Keys & values of annotations matching regex `opentel.*`
-         from: pod
-     labels:
-       - key_regex: opentel.* # extracts Keys & values of labels matching regex `opentel.*`
-         from: pod
-     pod_association:
-       - sources:
-          - from: resource_attribute
-            name: k8s.pod.ip
-       - sources:
-          - from: resource_attribute
-            name: k8s.pod.uid
-       - sources:
-          - from: connection
-
-To complete the configuration, include the receiver in any pipeline of the ``service`` section of your
-configuration file. For example:
-
-.. code:: yaml
-
-   service:
-     pipelines:
-       metrics:
-         processors: [k8sattributes/demo]
-       logs:
-         processors: [k8sattributes/demo]
-       traces:
-         processors: [k8sattributes/demo]
 
 .. _configure-filter-k8sattributes:
 
@@ -172,7 +184,7 @@ Then, configure the Collector gateways as usual. The processor automatically det
 
 .. _configure-extracted-metadata-k8sattributes:
 
-Extracted metadata
+Extract metadata
 ----------------------------
 
 Use the ``metadata`` option to define what resource attributes you want to add. You can only use attribute names from existing metadata defined in ``pod_association.resource_attribute``. The processor ignores empty or nonexisting values.

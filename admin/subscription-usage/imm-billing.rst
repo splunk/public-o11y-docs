@@ -43,7 +43,7 @@ In this case, Observability Cloud charges overage fees for 10 hosts and for 50 c
 
 However, paying the overage fee for 10 hosts doesn't automatically add 100 containers to your subscription limit and accommodate for the 50 additional containers. You must add 10 hosts to your subscription plan, as discussed in :ref:`avoid-fees`, to add support for an additional 100 containers.
 
-Overage fees can be as high as 110% of the monthly list price for each element for which you are over your plan's limit. 
+Overage fees can be as high as 150% of the monthly list price for each element for which you are over your plan's limit. 
 
 .. _detect-subscription-limits:
 

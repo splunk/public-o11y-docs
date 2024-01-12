@@ -67,7 +67,7 @@ Next, activate the ``metrics`` pipeline:
 .. code:: yaml
 
    metrics:
-      receivers: [hostmetrics, otlp, signalfx, smartagent/signalfx-forwarder, prometheus/flink]
+      receivers: [hostmetrics, otlp, signalfx, prometheus/flink]
 
 Settings
 ======================

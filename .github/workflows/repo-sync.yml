@@ -15,7 +15,7 @@ jobs:
     if: ${{ github.repository == 'splunk/public-o11y-docs' || github.repository == 'splunk/private-o11y-docs' }}
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: repo-sync/github-sync@v2
       name: Sync repo to branch
       with:

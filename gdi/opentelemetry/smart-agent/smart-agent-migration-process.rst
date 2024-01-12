@@ -13,12 +13,12 @@ Migration process from the Smart Agent to the Splunk Distribution of the OpenTel
 Do the following steps to migrate from the Smart Agent to the Collector:
 
 #. :ref:`Deploy the Collector in a non-production environment <deploy-the-collector-non-prod-env>`
-#. :ref:`Validate the deployment of the Collector <validate-deployment-of-collector>` 
+#. :ref:`Validate the deployment of the Collector <validate-deployment-of-collector>`
 #. :ref:`Locate your existing Smart Agent configuration file <locate-sa-config-file>`
-#. :ref:`Translate the Smart Agent configuration file using translatesfx <use-translatefx>` 
-#. :ref:`Estimate resource utilization (sizing) for the production environment <estimate-sizing>` 
-#. :ref:`Deploy the Collector to the non-production environment using the updated configuration file <deploy-non-prod-updated-config>` 
-#. :ref:`Deploy the Collector to a production host using the updated configuration file <deploy-to-prod-updated-config>` 
+#. :ref:`Translate the Smart Agent configuration file using translatesfx <use-translatefx>`
+#. :ref:`Estimate resource utilization (sizing) for the production environment <estimate-sizing>`
+#. :ref:`Deploy the Collector to the non-production environment using the updated configuration file <deploy-non-prod-updated-config>`
+#. :ref:`Deploy the Collector to a production host using the updated configuration file <deploy-to-prod-updated-config>`
 
 .. _deploy-the-collector-non-prod-env:
 
@@ -27,7 +27,7 @@ Do the following steps to migrate from the Smart Agent to the Collector:
 
 Deploy the Collector in a non-production environment, for example, a development host or VM or a Kubernetes cluster in staging. The environment needs to be a copy or identical to your production environment.
 
-Navigate to your instance of Splunk Observability Cloud and select :menuselection:`Data Management` in the navigation bar. Choose the platform you would like to deploy the Collector to.
+Navigate to your instance of Splunk Observability Cloud and select :menuselection:`Data Management` in the navigation bar. Choose the platform you want to deploy the Collector to.
 
 .. image:: /_images/gdi/3886-choose-your-platform.png
    :width: 99%
@@ -231,8 +231,6 @@ The following is an example YAML configuration file with default values where ap
    configDir: "/tmp/signalfx-agent/collectd"
 
    monitors:
-      - type: signalfx-forwarder
-         listenAddress: 0.0.0.0:9080
       - type: collectd/activemq
          discoveryRule: container_image =~ "activemq" && private_port == 1099
          extraDimensions:
@@ -248,7 +246,7 @@ The following is an example YAML configuration file with default values where ap
 
 .. _use-translatefx:
 
-4. Translate the Smart Agent configuration file using translatesfx
+1. Translate the Smart Agent configuration file using translatesfx
 =====================================================================================
 
 ``translatesfx`` is a command-line tool provided by Splunk Observability Cloud that helps you translate your existing Smart Agent YAML configuration file into a configuration that can be used by the Collector. To learn how to use it, see :ref:`Configuration translation tool <otel-translation-tool>`.

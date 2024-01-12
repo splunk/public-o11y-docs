@@ -16,17 +16,33 @@ For more information on the SignalFx proto format, see :new-page:`Send Traces, M
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the SignalFx receiver in the ``metrics`` and ``logs/signalfx`` pipelines when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information.
+.. note:: 
+  
+  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information. 
+  
+  For details about the default configuration, see :ref:`otel-kubernetes-config`, :ref:`linux-config-ootb`, or :ref:`windows-config-ootb`. You can customize your configuration any time as explained in this document.
 
 .. caution:: Don't remove the ``signalfx`` receiver from the default configuration. If you need to change its settings, use the existing receiver or create a separate receiver configuration.
+
+By default, the Splunk Distribution of OpenTelemetry Collector includes the SignalFx receiver in the ``metrics`` and ``logs/signalfx`` pipelines. 
+
+Follow these steps to configure and activate the component:
+
+1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+  
+  - :ref:`otel-install-linux`
+  - :ref:`otel-install-windows`
+  - :ref:`otel-install-k8s`
+
+2. Configure the receiver as described in this doc.
+3. Restart the Collector.  
 
 Sample configurations
 ----------------------
 
-The default configuration of the ``signalfx`` receiver in the Splunk Distribution of OpenTelemetry Collector is the following:
+The default configuration of the ``signalfx`` receiver in the Splunk Distribution of the OpenTelemetry Collector is the following:
 
 .. code-block:: yaml
-
 
    receivers:
      signalfx:
@@ -38,7 +54,6 @@ The default configuration of the ``signalfx`` receiver in the Splunk Distributio
 When adding the SignalFx receiver, configure both the metrics and logs pipelines. Make sure to also add the SignalFx exporter as in the following example:
 
 .. code-block:: yaml
-
 
    service:
      pipelines:

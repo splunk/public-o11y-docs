@@ -395,6 +395,19 @@ Include these permissions to allow Splunk Observability Cloud to collect AWS usa
 - ``"ec2:DescribeRegions"``
 - ``"organizations:DescribeOrganization"``
 
+.. _aws-iam-policy-ts:
+
+Troubleshoot AWS permission issues
+-----------------------------------------------------------
+
+In case of any permission-related issue, review your AWS Organization Service Control Policy and the permission boundaries for your IAM entities. Both might impose some limits on the AWS policy Splunk Observability Cloud uses to connect to your AWS account. 
+
+Read more at the official AWS documentation:
+
+* :new-page:`AWS Organization Service Control Policies <https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html>`
+* :new-page:`Permissions boundaries for IAM entities <https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html>`
+* :new-page:`Troubleshooting IAM permission access denied or unauthorized errors <https://repost.aws/knowledge-center/troubleshoot-iam-permission-errors>`
+
 .. _aws-regions:
 
 Supported AWS regions

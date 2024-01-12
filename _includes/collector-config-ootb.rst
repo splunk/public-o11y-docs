@@ -1,29 +1,3 @@
-.. _otel-configuration-ootb:
-
-****************************************************************
-Collector default configuration
-****************************************************************
-
-.. meta::
-      :description: Configure the Splunk Distribution of OpenTelemetry Collector. There are a variety of default configuration files available, as well additional components that can be configured.
-
-The Collector configuration is stored in a :new-page:`YAML file <https://yaml.org/>` and specifies the behavior of the different components and services.
-
-.. include:: /_includes/collector-components.rst
-
-See an overview of the elements and pipelines in the default configuration in the following sections.
-
-Default configuration 
-========================================================
-
-This is the default configuration file for the Linux (Debian/RPM) and Windows Installer collector packages:
-
-.. github:: yaml
-  :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/cmd/otelcol/config/collector/agent_config.yaml
-
-Default pipelines
-========================================================
-
 By default, ingested data follows these pipelines.
 
 Default pipelines for logs 
@@ -76,12 +50,14 @@ The following diagram shows the default logs pipeline:
 
 Learn more about these receivers:
 
-* :ref:`signalfx-receiver`
+* :ref:`signalfx-receiver` 
 * :ref:`processlist`
 * :ref:`fluentd-receiver`
+* :ref:`otlp-receiver` 
 
 Learn more about these processors:
 
+* :ref:`memory-limiter-processor`
 * :ref:`batch-processor`
 * :ref:`resourcedetection-processor`
 
@@ -89,7 +65,6 @@ Learn more about these exporters:
 
 * :ref:`signalfx-exporter`
 * :ref:`splunk-hec-exporter`
-
 
 Default pipelines for metrics 
 ----------------------------------------------------------------------------
@@ -116,7 +91,6 @@ The following diagram shows the default metrics pipeline:
          metrics/hostmetrics:::receiver
          metrics/otlp:::receiver
          metrics/signalfx/in:::receiver
-         metrics/smartagent/signalfx-forwarder:::receiver
          metrics/internal/prometheus/internal:::receiver
       end
 
@@ -137,21 +111,19 @@ The following diagram shows the default metrics pipeline:
       metrics/resourcedetection --> metrics/signalfx/out
       metrics/otlp --> metrics/memory_limiter
       metrics/signalfx/in --> metrics/memory_limiter
-      metrics/smartagent/signalfx-forwarder --> metrics/memory_limiter
       metrics/internal/prometheus/internal --> metrics/internal/memory_limiter
       metrics/internal/resourcedetection --> metrics/internal/signalfx/out
-
-
 
 Learn more about these receivers:
 
 * :ref:`host-metrics-receiver`
+* :ref:`otlp-receiver`
 * :ref:`signalfx-receiver`
-* :ref:`signalfx-forwarder`
 * :ref:`prometheus-receiver`
 
 Learn more about these processors:
 
+* :ref:`memory-limiter-processor`
 * :ref:`batch-processor`
 * :ref:`resourcedetection-processor`
 
@@ -183,7 +155,6 @@ The following diagram shows the default traces pipeline:
          direction LR
          traces/jaeger:::receiver
          traces/otlp:::receiver
-         traces/smartagent/signalfx-forwarder:::receiver
          traces/zipkin:::receiver
       end
 
@@ -201,19 +172,19 @@ The following diagram shows the default traces pipeline:
       %% Connections beyond categories are added later
       traces/jaeger --> traces/memory_limiter
       traces/otlp --> traces/memory_limiter
-      traces/smartagent/signalfx-forwarder --> traces/memory_limiter
       traces/zipkin --> traces/memory_limiter
       traces/resourcedetection --> traces/sapm
       traces/resourcedetection --> traces/signalfx/out
 
-
 Learn more about these receivers:
 
 * :ref:`jaeger-grpc`
-* :ref:`signalfx-forwarder`
+* :ref:`otlp-receiver` 
+* :ref:`zipkin-receiver`
 
 Learn more about these processors:
 
+* :ref:`memory-limiter-processor`
 * :ref:`batch-processor`
 * :ref:`resourcedetection-processor`
 
@@ -221,13 +192,3 @@ Learn more about these exporters:
 
 * :ref:`splunk-apm-exporter`
 * :ref:`signalfx-exporter`
-
-Learn more
-========================================================
-
-See also the following documents:
-
-* :ref:`ootb-metrics-k8s`
-* :ref:`otel-collector-scenario`
-* :ref:`otel-install-platform` 
-* :ref:`Troubleshooting <otel-troubleshooting>`

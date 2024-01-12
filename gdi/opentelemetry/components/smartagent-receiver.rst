@@ -77,7 +77,7 @@ For a list of monitor data sources, see :ref:`monitor-data-sources`.
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the Smart Agent receiver with the ``signalfx-forwarder`` and ``processlist`` monitors when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information.
+By default, the Splunk Distribution of OpenTelemetry Collector includes the Smart Agent receiver with the ``processlist`` monitor when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information.
 
 For each Smart Agent monitor you want to add to the Collector, add a Smart Agent receiver. After you've configured a Smart Agent monitor in the Collector, each Smart Agent receiver behaves like the corresponding Smart Agent monitor. 
 
@@ -112,7 +112,7 @@ You can then add the receiver to any compatible pipeline. For example:
 
 If you use a monitor that updates dimension properties or tags, for example ``postgresql``, add the name of your SignalFx exporter in the ``dimensionClients`` field in Smart Agent receiver configuration block. If you don't set any exporter in the ``dimensionClients`` field, the receiver tries to use the pipeline to which it's connected. If you don't require dimension updates, you can use an empty array (``[]``) to deactivate it.
 
-.. caution:: Don't remove the ``smartagent/signalfx-forwarder`` and ``smartagent/processlist`` receivers from the configuration. System processes and Smart Agent telemetry depend on both receivers's configurations.
+.. caution:: Don't remove the ``smartagent/processlist`` receiver from the configuration. System processes and Smart Agent telemetry depend on the receiver's configuration.
 
 .. _otel-sareceiver-extrametrics:
 

@@ -16,6 +16,7 @@ Instrument .NET applications for Splunk Observability Cloud (OpenTelemetry)
    Connect trace data with logs <instrumentation/connect-traces-logs>
    Metrics and attributes <configuration/dotnet-metrics-attributes>
    Manual instrumentation <instrumentation/manual-dotnet-instrumentation>
+   Performance overhead <performance>
    Troubleshoot the .NET instrumentation <troubleshooting/common-dotnet-troubleshooting>
    Migrate from SignalFx Instrumentation for .NET <troubleshooting/migrate-signalfx-dotnet-to-dotnet-otel>
 

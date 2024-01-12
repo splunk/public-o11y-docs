@@ -25,8 +25,27 @@ Follow these steps to configure and activate the component:
 2. Configure the Kubelet stats receiver as described in the next section.
 3. Restart the Collector.
 
-Sample configurations
-----------------------
+Sample configuration
+--------------------------------
+
+To activate the Kubelet stats receiver, add ``kubeletstats`` to the ``receivers`` section of your configuration file: 
+
+.. code-block:: yaml
+
+  receivers:
+    kubeletstats:
+
+To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your configuration file:
+
+.. code:: yaml
+
+  service:
+    pipelines:
+      metrics:
+        receivers: [kubeletstats]
+
+Authenticate your Kubelet stats receiver connection
+==================================================================
 
 A kubelet runs on a Kubernetes node and has an API server to which the Kubelet stats receiver connects. To configure the receiver, set the connection and authentication details, and how often you want to collect data and send it.
 
@@ -36,7 +55,7 @@ There are two ways to authenticate, as indicated by the ``auth_type`` field:
 -  ``ServiceAccount`` tells this receiver to use the default service account token to authenticate to the kubelet API.
 
 Configure TLS authentication
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------------------
 
 The following example shows how to configure the kubelet stats receiver with TLS authentication:
 
@@ -63,7 +82,7 @@ The following example shows how to configure the kubelet stats receiver with TLS
          exporters: [file]
 
 Configure service account authentication
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------------------
 
 The following example shows how to configure the ``kubeletstats`` receiver with service account authentication.
 
@@ -98,8 +117,11 @@ The following example shows how to configure the ``kubeletstats`` receiver with 
 
 .. caution:: A missing or empty ``endpoint`` value causes the host name on which the Collector is running to be used as the endpoint. If the ``hostNetwork`` flag is set, and the Collector is running in a Pod, the host name resolves to the node's network namespace.
 
+Advanced use cases
+==================================================================
+
 Add metrics excluded by default
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------------------
 
 To import excluded metrics, use the ``include_metrics`` option as in the following example:
 
@@ -113,7 +135,7 @@ To import excluded metrics, use the ``include_metrics`` option as in the followi
              - container.memory.available.bytes  
 
 Add additional metadata attributes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------------------
 
 By default, all produced metrics get resource attributes based on what kubelet the ``/stats/summary`` endpoint provides. For some use cases, this might not be enough: use other endpoints to retrieve additional metadata entities and set them as extra attributes on the metric resource.
 
@@ -138,7 +160,7 @@ To add the ``container.id`` label to your metrics, set the ``extra_metadata_labe
 If ``extra_metadata_labels`` isn't set, no additional API calls are made to receive metadata.
 
 Collect additional volume metadata
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------------------
 
 When dealing with persistent volume claims, you can sync metadata from the underlying storage resource. For example:
 
@@ -158,7 +180,7 @@ When dealing with persistent volume claims, you can sync metadata from the under
 If ``k8s_api_config`` is set, the receiver attempts to collect metadata from underlying storage resources for persistent volume claims. For example, if a Pod is using a persistent volume claim backed by an Elastic Block Store (EBS) instance on AWS, the receiver sets the ``k8s.volume.type`` label to ``awsElasticBlockStore`` rather than ``persistentVolumeClaim``.
 
 Configure metric groups
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------------------
 
 A metric group is a collection of metrics by component type. By default, metrics from containers, pods, and nodes are collected. If ``metric_groups`` is set, then only metrics from the listed groups are collected. Valid groups are ``container``, ``pod``, ``node``, and ``volume``.
 
@@ -177,7 +199,7 @@ For example, to collect only node and pod metrics from the receiver:
          - pod
 
 Configure optional parameters
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------------------
 
 You can also set the following optional parameters:
 
