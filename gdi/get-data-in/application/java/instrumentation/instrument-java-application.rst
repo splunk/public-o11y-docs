@@ -154,6 +154,15 @@ If your metrics endpoint is different than the default value, set the ``SPLUNK_M
 
 .. note:: If you activate memory profiling, metrics collection is activated automatically and cannot be deactivated.
 
+.. _enable_automatic_logs_collection:
+
+Activate logs collection
+---------------------------------------
+
+By default, the Java agent injects trace and span metadata automatically into logs. The agent then sends the annotated logs to the OpenTelemetry Collector, which exports them to Splunk Observability Cloud.
+
+For more information on trace-log correlation, see :ref:`correlate-traces-with-logs-java`.
+
 .. _ignore_endpoints_java:
 
 Ignore specific endpoints

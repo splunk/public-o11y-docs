@@ -1,4 +1,4 @@
-The following table shows the previous metric names and the current names used by OpenTelemetry Java 2.0 and higher. When a metric isn't available, the table suggests a similar metric or calculation where possible. 
+The following table shows the previous metric names and the current names used by OpenTelemetry Java 2.0 and higher. When a metric isn't available, the table suggests a similar metric or calculation where possible.
 
 OpenTelemetry Java 2.0 also brings new metrics. For a full list of OpenTelemetry Java 2.0 metrics, see :ref:`java-otel-metrics-attributes`.
 
@@ -89,3 +89,5 @@ OpenTelemetry Java 2.0 also brings new metrics. For a full list of OpenTelemetry
     - No equivalent
   * - ``executor.tasks.completed``
     - No equivalent
+
+For more information on the HTTP semantic convention changes, see :new-page:`HTTP semantic convention migration guide <https://github.com/open-telemetry/semantic-conventions/blob/main/docs/http/migration-guide.md#summary-of-changes>`.

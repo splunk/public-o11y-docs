@@ -102,7 +102,7 @@ Exporters configuration
 
 The following settings control trace exporters and their endpoints:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :width: 100%
    :widths: 40 60
@@ -113,6 +113,10 @@ The following settings control trace exporters and their endpoints:
      - Trace exporter to use. You can set multiple comma-separated values. |br| |br| System property: ``otel.traces.exporter``
    * - ``OTEL_EXPORTER_OTLP_ENDPOINT``
      - OTLP gRPC endpoint. The default value is ``http://localhost:4317``. |br| |br| System property: ``otel.exporter.otlp.endpoint``
+   * - ``OTEL_EXPORTER_OTLP_PROTOCOL``
+     - OTLP export protocol. The default value is ``http/protobuf``.  |br| |br| System property: ``otel.exporter.otlp.protocol``
+   * - ``OTEL_LOGS_EXPORTER``
+     - Logs exporter to use. Supported values are ``otlp`` and ``none``. The default value is ``otlp``. To deactivate logs export, set the ``none``. |br| |br| System property: ``otel.logs.exporter``
 
 The Splunk Distribution of OpenTelemetry Java uses the OTLP gRPC span exporter by default. To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-java`.
 
@@ -123,7 +127,7 @@ Samplers configuration
 
 The following settings control trace sampling:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 30 70
    :width: 100%
@@ -203,6 +207,8 @@ The following settings control the AlwaysOn Profiling feature for the Java agent
      - Activates AlwaysOn Profiling. The default value is ``false``. |br| |br| System property: ``splunk.profiler.enabled``
    * - ``SPLUNK_PROFILER_LOGS_ENDPOINT``
      - The collector endpoint for profiler logs. By default, it takes the value of ``otel.exporter.otlp.endpoint``. |br| |br| System property: ``splunk.profiler.logs-endpoint``
+   * - ``SPLUNK_PROFILER_OTLP_PROTOCOL``
+   * - The transport protocol to use or profiling OTLP log requests. Possible values are ``grpc`` and ``http/protobuf``. The default value is ``http/protobuf``. |br| |br| System property: ``splunk.profiler.otlp.protocol``
    * - ``SPLUNK_PROFILER_DIRECTORY``
      -  The location of the JDK Flight Recorder files. The default value is the local directory (``.``). |br| |br| System property: ``splunk.profiler.directory``
    * - ``SPLUNK_PROFILER_RECORDING_DURATION``
@@ -212,9 +218,9 @@ The following settings control the AlwaysOn Profiling feature for the Java agent
    * - ``SPLUNK_PROFILER_CALL_STACK_INTERVAL``
      - Frequency with which call stacks are sampled, in milliseconds. The default value is 10000 milliseconds. |br| |br| System property: ``splunk.profiler.call.stack.interval``
    * - ``SPLUNK_PROFILER_MEMORY_ENABLED``
-     - Activates memory profiling with all the options. To activate or deactivate specific memory profiling options, set their values explicitly. 
+     - Activates memory profiling with all the options. To activate or deactivate specific memory profiling options, set their values explicitly.
         * The default value is ``false``. 
-        * Requires ``splunk.profiler.enabled`` to be set to ``true``.  
+        * Requires ``splunk.profiler.enabled`` to be set to ``true``.
         * Activating memory profiling sets the value of ``splunk.metrics.enabled`` to ``true``.
        
        .. note:: OpenJDK versions 15.0 to 17.0.8, are not supported for memory profiling. See :new-page:`https://bugs.openjdk.org/browse/JDK-8309862` in the JDK bug system for more information.
