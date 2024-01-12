@@ -112,13 +112,13 @@ Within the Trace Analyzer interface, there are three different display limits. T
     :width: 95%
     :alt: Trace limit in trace list
 
-What to expect in Trace Analyzer when using visibility filter APIs 
+What to expect in Trace Analyzer when using the visibility filter API
 ======================================================================
 
-If you are using the visibility filter API to block specific span tags in Splunk APM here is what you can expect to see in Trace Analyzer. 
+If you are using the visibility filter API to block specific span tags in Splunk APM here is what you can expect to see in Trace Analyzer: 
 
-* If you are hiding tags using the ``hiddenTags`` field, then you can't use these tags in the filter bar or to group traces. 
-* If you are specify the visibile tags using the ``visibleTags`` in the visibility filter API, then you can only filter by visible tags in the filter bar or to group traces. 
+* If you are hiding tags using the ``hiddenTags`` field, then you can't use these tags in the filter bar or trace grouping.  
+* If you are specify the visible tags using the ``visibleTags`` in the visibility filter API, then you can only use the visible tags in the filter bar or trace grouping.  
 
 See :ref:`apm-visibility-filters` and :new-page:`https://dev.splunk.com/observability/docs/apm/visibility-filter/` to learn more about visibility filters. 
 
