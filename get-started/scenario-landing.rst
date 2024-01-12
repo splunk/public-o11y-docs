@@ -55,7 +55,7 @@ This is the collection of scenarios available for Splunk Observability Cloud.
   * - :ref:`APM <apm-scenarios-intro>`
     - :ref:`monitor-business-workflows`
   * - :ref:`APM <apm-scenarios-intro>`
-    - :ref:`historical-data`
+    - :ref:`historical-data```
   * - :ref:`APM <apm-scenarios-intro>`
     - :ref:`custom-metricset`  
   * - :ref:`APM <apm-scenarios-intro>`
