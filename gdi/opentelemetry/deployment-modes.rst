@@ -276,7 +276,15 @@ If you want to use the :ref:`signalfx-exporter` for metrics on both agent and ga
 
 .. code-block:: yaml
 
-   :emphasize-lines: 10,11
+   receivers:
+      hostmetrics:
+         collection_interval: 10s
+         scrapers:
+            cpu:
+            disk:
+            filesystem:
+            memory:
+            network:
 
    exporters:
       # Traces
