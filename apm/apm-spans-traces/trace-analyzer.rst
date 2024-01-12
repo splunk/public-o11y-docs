@@ -92,8 +92,7 @@ When you view :guilabel:`Trace Duration`, the real-time chart shows a heatmap of
 
 Select and drag over the bars in the chart to select a specific time period and trace duration range. Select :guilabel:`Filter to selection` to add a time range filter and a min and max duration filter.
 
-
-The Traces per second that represent the heatmap shades are scaled for the data in range based on your filters. 
+The Traces per second that represent the heatmap shades are scaled for the data in range based on your filters so, the trace per second legend values change based o the data in frame. 
 
 ..  image:: /_images/apm/trace-analyzer/TraceDurationDragDropChart.gif
     :width: 95%
