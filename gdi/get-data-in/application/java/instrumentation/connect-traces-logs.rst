@@ -31,12 +31,13 @@ The Splunk OTel Java agent supports the following logging libraries:
 Include trace metadata in log statements
 ===================================================
 
-The Splunk OTel Java agent provides the following attributes for logging libraries:
+The Splunk OTel Java agent provides the following attributes for logging libraries by default:
 
 - Trace information: ``trace_id`` and ``span_id``
-- Resource attributes: ``service.name`` and ``deployment.environment``
 
-The following examples show how to include trace data in log statements produced by the logging library:
+In addition, you can inject resource attributes in your log statements, such as ``service.name`` and ``deployment.environment``. 
+
+The following examples show how to include additional metadata in log statements produced by the logging library:
 
 .. tabs::
 
