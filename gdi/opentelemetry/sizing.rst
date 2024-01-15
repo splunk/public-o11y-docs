@@ -9,7 +9,7 @@ Sizing and scaling
 
 By default, the Collector is configured to use 512 MB (500 x 2^20 bytes) of memory. 
 
-With a single CPU core, the Collector can receive, process, or export the following: 
+With a single CPU core, the Collector can ingest the following: 
 
 * If handling traces, 15,000 spans per second.
 * If handling metrics, 20,000 data points per second.
