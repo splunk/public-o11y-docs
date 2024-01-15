@@ -31,7 +31,11 @@ You can instrument your back-end services and applications to send metrics and t
 
 You have the following options to send app and service data to Splunk Observability Cloud:
 
-* Use the Splunk Distribution of OpenTelemetry Collector to send metrics and traces from back-end applications. Learn more at :ref:`otel-intro`, including the :ref:`zero-config`.
+* Use the Splunk Distribution of OpenTelemetry Collector to send metrics and traces from back-end applications. 
+   
+   * Available languages include Java, Node.js, .NET, Go, Python, Ruby, and PHP.
+
+   * Learn more about the Collector at :ref:`otel-intro`, including the :ref:`zero-config`.
 
 * Send metrics and traces directly to Splunk Observability Cloud using the API. See more in our :new-page:`dev portal documentation <https://dev.splunk.com/observability/docs/apm/send_traces>`. 
 
