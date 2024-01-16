@@ -11,7 +11,7 @@ OpenTelemetry Java Instrumentation 2.x contains a set of breaking changes, intro
 
 To solve this, the 2.0 GA release of the Splunk Distribution of OpenTelemetry Java, expected to happen in early 2024, will be fully compatible with the enhancements introduced by OpenTelemetry native version. A migration guide will be made available to all users.
 
-Until the stable release of the Splunk Distribution of OpenTelemetry Java 2.0, existing and new customers must continue using version 1.x of the Splu
+Until the stable release of the Splunk Distribution of OpenTelemetry Java 2.0, existing and new customers must continue using version 1.x of the Splunk distribution, which is fully supported and is compatible with existing features of Splunk Observability Cloud. 
 
 If you're using the upstream OpenTelemetry 1.x instrumentation, wait before upgrading to version 2.x, as it might cause built-in Java metric dashboards and features that rely on metricized attributes, such MTS and TMS, to not work as expected.
 
