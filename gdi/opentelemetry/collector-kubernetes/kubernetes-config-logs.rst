@@ -187,7 +187,7 @@ To collect Kubernetes events as logs for Log Observer or Log Observer Connect us
 
 * ``labelSelector``. Selects objects by labels.
 
-* ``fieldSelector``. Select objects by fields.
+* ``fieldSelector``. Selects objects by fields.
 
 * ``interval``. Only applies to ``pull`` mode. The interval at which object is pulled. ``60`` seconds by default. 
 
