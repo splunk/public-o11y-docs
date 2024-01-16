@@ -14,7 +14,7 @@ Collect infrastructure metrics and logs
    linux
    windows
 
-Deploy the Splunk Distribution of OpenTelemetry Collector on your infrastructure to start sending metrics and logs to Splunk Observability Cloud. To learn more about the data model of Splunk Observability Cloud, see :ref:`data-model`.
+Deploy the Splunk Distribution of the OpenTelemetry Collector on your infrastructure to start sending data to Splunk Observability Cloud. For an overview of the Collector, see :ref:`otel-intro`.
 
 See the following topics to set up the Collector on each of these hosts:
 
@@ -22,6 +22,22 @@ See the following topics to set up the Collector on each of these hosts:
 - :ref:`get-started-linux`
 - :ref:`get-started-windows`
 
-To send custom metrics to Splunk Observability Cloud, see :ref:`send-custom-metrics`. 
+.. raw:: html
+
+   <embed>
+      <h2>Send data to Splunk Observability Cloud<a name="compute-data" class="headerlink" href="#compute-data" title="Permalink to this headline">¶</a></h2>
+   </embed>
+
+Use the Collector to send metrics and logs to Splunk Observability Cloud: 
+
+* To send custom metrics, see :ref:`send-custom-metrics`. 
+
+* To send logs, see :ref:`otel-config-logs`.
+
+  * For Kubernetes, native OpenTelemetry log collection is supported by default. 
+
+  * For Linux and Windows environments, use the Universal Forwarder to send logs to the Splunk platform. 
+
+.. note:: To learn more about the data model of Splunk Observability Cloud, see :ref:`data-model`. 
 
 
