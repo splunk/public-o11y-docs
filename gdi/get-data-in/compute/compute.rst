@@ -25,10 +25,10 @@ See the following topics to set up the Collector on each of these hosts:
 .. raw:: html
 
    <embed>
-      <h2>Send data to Splunk Observability Cloud<a name="compute-data" class="headerlink" href="#compute-data" title="Permalink to this headline">¶</a></h2>
+      <h2>Send infrastructure data to Splunk Observability Cloud<a name="compute-data" class="headerlink" href="#compute-data" title="Permalink to this headline">¶</a></h2>
    </embed>
 
-Use the Collector to send metrics and logs to Splunk Observability Cloud: 
+Use the Collector to send your infrastructure metrics and logs to Splunk Observability Cloud: 
 
 * To send custom metrics, see :ref:`send-custom-metrics`. 
 
