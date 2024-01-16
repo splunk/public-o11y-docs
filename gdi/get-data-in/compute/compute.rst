@@ -32,7 +32,7 @@ Use the Collector to send metrics and logs to Splunk Observability Cloud:
 
 * To send custom metrics, see :ref:`send-custom-metrics`. 
 
-* To send logs, see :ref:`otel-config-logs`.
+* To send logs, see :ref:`otel-understand-use`.
 
   * For Kubernetes, native OpenTelemetry log collection is supported by default. 
 
