@@ -74,7 +74,7 @@ The following examples show how to include additional metadata in log statements
                      <KeyValuePair key="trace_id" value="${ctx:trace_id}"/>
                      <KeyValuePair key="span_id" value="${ctx:span_id}"/>
                      <KeyValuePair key="service.name" value="${ctx:service.name}"/>
-                     <KeyValuePair key="service.name" value="${ctx:environment}"/>
+                     <KeyValuePair key="environment" value="${ctx:environment}"/>
                      <KeyValuePair key="trace_sampled" value="${ctx:trace_flags}"/>
                   </JsonLayout>
                </Console>
