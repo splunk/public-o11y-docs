@@ -83,11 +83,9 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
 
 .. _download-certificate:
 
-8. Secure a connection to your Splunk Cloud Platform instance in Splunk Observability Cloud. To get help from Splunk Support, :ref:`Submit a support ticket <support-ticket>`. To do it yourself, do the following:
+8. Secure a connection to your Splunk Cloud Platform instance in Splunk Observability Cloud. To get help from Splunk Support, :ref:`Submit a support ticket <support-ticket>`. To do it yourself, add your public IPv4 address to your Splunk Cloud Platform allow list by following instructions in :new-page:`Add subnets to IP allow lists <https://docs.splunk.com/Documentation/SplunkCloud/latest/Admin/ConfigureIPAllowList#Add_subnets_to_IP_allow_lists>`. 
 
-   If you are in an AWS environment, add your public IPv4 address to your Splunk Cloud Platform allow list by following instructions in :new-page:`Add subnets to IP allow lists <https://docs.splunk.com/Documentation/SplunkCloud/latest/Admin/ConfigureIPAllowList#Add_subnets_to_IP_allow_lists>`. 
-
-   If you are in a GCP environment, add the following IP addresses to your Splunk Cloud Platform allow list:
+If you are in a GCP environment, add the following additional IP addresses to your Splunk Cloud Platform allow list:
 
       * 35.247.113.38/32
    
