@@ -25,6 +25,9 @@ The Splunk OTel Java agent supports the following logging libraries:
 - Log4j 2 2.7 and higher
 - Log4j 1 1.2 and higher
 - Logback 1.0 and higher
+- JBoss LogManager 1.1.0 and higher
+
+The ``java.util.logging`` library is fully supported in all JDK versions that are compatible with the Splunk Distribution of OpenTelemetry Java. See :ref:`java-otel-requirements`.
 
 .. _java-include-trace-data:
 
@@ -34,8 +37,23 @@ Include trace metadata in log statements
 The Splunk OTel Java agent provides the following attributes for logging libraries by default:
 
 - Trace information: ``trace_id`` and ``span_id``
+- Trace flags
 
-In addition, you can inject resource attributes in your log statements, such as ``service.name`` and ``deployment.environment``. 
+In addition, you can inject resource attributes in your log statements, such as ``service.name`` and ``deployment.environment``. This requires defining the attributes you want to inject and configuring your logger.
+
+Define the resource attributes
+---------------------------------------------------
+
+Before injecting attributes, you must make them available through the Mapped Diagnostic Context (MDC) by setting the ``mdc.resource-attributes`` property at runtime. For example:
+
+.. code-block:: shell
+
+   -Dotel.instrumentation.common.mdc.resource-attributes=service.name,environment
+
+Configure your logging library
+--------------------------------------------------
+
+The Splunk Distribution of OpenTelemetry Java exposes resource attributes as context properties, which you can use to configure logger libraries.
 
 The following examples show how to include additional metadata in log statements produced by the logging library:
 
@@ -46,6 +64,7 @@ The following examples show how to include additional metadata in log statements
       Edit your Log4j configuration, for example in the ``src/main/resources/log4j2.xml`` file. Depending on your environment, you might have to edit a different file or use a different configuration system.
 
       .. code-block:: xml
+         :emphasize-lines: 8,9
 
          <?xml version="1.0" encoding="UTF-8"?>
          <Configuration status="WARN">
@@ -54,7 +73,8 @@ The following examples show how to include additional metadata in log statements
                   <JsonLayout compact="true" eventEol="true">
                      <KeyValuePair key="trace_id" value="${ctx:trace_id}"/>
                      <KeyValuePair key="span_id" value="${ctx:span_id}"/>
-                     <KeyValuePair key="service.name" value="${sys:otel.resource.service.name}"/>
+                     <KeyValuePair key="service.name" value="${ctx:service.name}"/>
+                     <KeyValuePair key="service.name" value="${ctx:environment}"/>
                      <KeyValuePair key="trace_sampled" value="${ctx:trace_flags}"/>
                   </JsonLayout>
                </Console>
@@ -66,19 +86,20 @@ The following examples show how to include additional metadata in log statements
 
       .. code-block:: text
 
-         logging.pattern.console = %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} trace_flags=%X{trace_flags} %n
+         logging.pattern.console = %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{environment} trace_flags=%X{trace_flags} %n
 
    .. tab:: Logback
 
       Edit your Logback configuration, for example in the ``src/main/resources/logback.xml`` file. Depending on your environment, you might have to edit a different file or use a different configuration system.
 
       .. code-block:: xml
+         :emphasize-lines: 6
 
          <?xml version="1.0" encoding="UTF-8"?>
          <configuration>
             <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
                <encoder>
-                  <pattern>%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} trace_flags=%X{trace_flags} %n</pattern>
+                  <pattern>%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{environment} trace_flags=%X{trace_flags} %n</pattern>
                </encoder>
             </appender>
             <root level="info">
@@ -90,32 +111,20 @@ The following examples show how to include additional metadata in log statements
 
       .. code-block:: text
 
-         logging.pattern.console = %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} trace_flags=%X{trace_flags} %n
+         logging.pattern.console = %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{environment} trace_flags=%X{trace_flags} %n %n
 
-Add resource attributes to your application logs
----------------------------------------------------
+   .. tab:: JBoss LogManager
 
-The Splunk Distribution of OpenTelemetry Java exposes resource attributes as system properties prefixed with ``otel.resource.``, which you can use to configure logger libraries.
+      Edit your JBoss LogManager configuration, for example in the ``logging.properties`` file.
 
-The following examples show how to add Splunk OTel Java metadata to the logger configuration:
+      .. code-block:: text
 
-.. tabs::
+         formatter.PATTERN=org.jboss.logmanager.formatters.PatternFormatter
+         formatter.PATTERN.properties=pattern
+         formatter.PATTERN.constructorProperties=pattern
+         formatter.PATTERN.pattern=%logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{environment} trace_flags=%X{trace_flags}: %m%n
 
-   .. code-tab:: xml Log4j
-
-      <PatternLayout>
-         <pattern>
-            service.name=${sys:otel.resource.service.name}, deployment.environment=${sys:otel.resource.deployment.environment} %m%n
-         </pattern>
-      </PatternLayout>
-
-   .. code-tab:: xml Logback
-
-      <pattern>
-         service: %property{otel.resource.service.name}, env: %property{otel.resource.deployment.environment}: %m%n
-      </pattern>
-
-If you're instrumenting a serverless service or application, use environment variables instead:
+If you're instrumenting a serverless service or application, use environment variables instead. For example:
 
 .. tabs::
 
@@ -132,6 +141,10 @@ If you're instrumenting a serverless service or application, use environment var
       <pattern>
          service: ${OTEL_SERVICE_NAME}, env: ${OTEL_ENV_NAME}: %m%n
       </pattern>
+
+   .. code-tab:: text JBoss LogManager
+
+      formatter.PATTERN.pattern=service=${OTEL_SERVICE_NAME}, env=${OTEL_ENV_NAME}
 
 Deactivate logs export
 ==================================
