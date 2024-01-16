@@ -15,39 +15,20 @@ Splunk On-Call was designed to make communication between key personnel easy and
 
 .. note:: In order to receive the push notifications mentioned in this topic, users are required to have installed the Splunk On-Call mobile app on their Android or iOS mobile device .
 
-`@Mentions <#at>`__ and `@@Mentions <#atat>`__ can be used to contact
-other users directly via push notification to the user’s registered
-mobile device.  These communications are recorded in the main timeline
-and visible to all users, which means they can also be used for
-reporting and analysis.  This function exists both in the main timeline
-and the `Incident Timeline <#incident>`__, with slightly different
-behavior in either case.
+@Mentions and @@Mentions can be used to contact other users directly via push notification to the user's registered mobile device. These communications are recorded in the main timeline and visible to all users, which means they can also be used for reporting and analysis. This function exists both in the main timeline and the Incident Timeline, with slightly different behavior in either case.
 
-`Private chats <#private>`__ occur between two users and are not
-recorded in the timeline. They cannot be used for reporting and are not
-visible to any other users in the platform.
+Private chats occur between two users and are not recorded in the timeline. They cannot be used for reporting and are not visible to any other users in the platform.
 
-**@ Mentions**
-~~~~~~~~~~~~~~
+@ Mentions
+======================
 
-Within the main timeline, there is a text bar located at the top.
- Typing a single @ symbol into the text bar will bring up a list of
-users.  You can either click on a user to populate the name, or begin
-typing out the username to narrow the list down to the specific user you
-want to contact.  This can be done for a single user or multiple users
-(each requires a @ symbol in front of their username). Once
-the \_@username\_ has been entered, you simply type the message you want
-to convey and press ENTER. This will result in a single push
-notification to that user’s mobile device informing them that they have
+Within the main timeline, there is a text bar located at the top. Typing a single @ symbol into the text bar will bring up a list of users. You can either click on a user to populate the name, or begin
+typing out the username to narrow the list down to the specific user you want to contact. This can be done for a single user or multiple users. Each requires a @ symbol in front of their username. Once
+the @username has been entered, you simply type the message you want to convey and press ENTER. This will result in a single push notification to that user's mobile device informing them that they have
 been mentioned in the Splunk On-Call timeline.
 
-It is not required that you use the @ symbol before every chat.  Once a
-conversation has begun and the users are engaged, it may not be
-necessary for users to receive a push notification for each chat.  At
-that point, you can simply chat back and forth with the assumption that
-the other user is already engaged and paying attention.  If a long time
-passes, you may want to use another @mention to draw that user’s
-attention back to the timeline.
+It is not required that you use the @ symbol before every chat. Once a conversation has begun and the users are engaged, it may not be necessary for users to receive a push notification for each chat. At
+that point, you can simply chat back and forth with the assumption that the other user is already engaged and paying attention. If a long time passes, you may want to use another @mention to draw that user's attention back to the timeline.
 
 .. _mentions-1:
 
@@ -75,7 +56,7 @@ the other user is already engaged and paying attention. If a long time
 passes, you may want to use another @@mention to draw the team’s
 attention back to the timeline.
 
-**Chatting in the Main Timeline vs. the Incident Timeline**
+Chatting in the Main Timeline compared to the Incident Timeline
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In the Splunk On-Call timeline, you can use the @ or @@ mention function
