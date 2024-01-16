@@ -115,7 +115,7 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
 
 10. Go back to the Log Observer Connect guided setup and select :guilabel:`Next`. Enter your service account username, password, and Splunk platform URL, then upload the certificate you downloaded in the previous step to complete the guided setup.
 
-11. Remove your IPv4 address from the IP allowlist that you added in step 8.
+11. Remove your IPv4 address from the IP allowlist that you added in step 8. If you are in a GCP environment, do not remove the additional GCP IP addresses that you added in step 8.
 
 12. Make sure to give each connection a unique name on the final page of the Log Observer Connect guided setup.
 
