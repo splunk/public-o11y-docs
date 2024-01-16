@@ -1,15 +1,19 @@
-Splunk On-Call was designed to make communication between key personnel
-easy and efficient when dealing with a crisis.  This article describes
-the different methods Splunk On-Call users can employ to collaborate
-with colleagues to solve problems faster and more efficiently.
+.. _user-chat:
 
-.. raw:: html
+************************************************************************
+Chat with other Splunk On-Call users
+************************************************************************
 
-   <script type="text/javascript" id="vidyard_embed_code_dCp8p2E6SZqojehsiws2bz" src="//play.vidyard.com/dCp8p2E6SZqojehsiws2bz.js?v=3.1.1&amp;type=inline"></script>
+.. meta::
+   :description: About the chat communication tools in Splunk On-Call.
 
-*\* In order to receive the push notifications mentioned in this
-article, users are required to have installed the Splunk On-Call mobile
-app on their mobile device (Android or iOS).*
+
+
+Splunk On-Call was designed to make communication between key personnel easy and efficient when dealing with a crisis. Splunk On-Call users have options they can employ to collaborate with colleagues to solve problems faster and more efficiently.
+
+
+
+.. note:: In order to receive the push notifications mentioned in this topic, users are required to have installed the Splunk On-Call mobile app on their Android or iOS mobile device .
 
 `@Mentions <#at>`__ and `@@Mentions <#atat>`__ can be used to contact
 other users directly via push notification to the user’s registered
