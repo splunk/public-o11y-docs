@@ -18,6 +18,8 @@ The load balancing exporter can send telemetry data to multiple back-ends at onc
 
 In some cases, the Collector sends data faster than a back-end can ingest it. The load balancing exporter can help you avoid this kind of issue by splitting the data between multiple routes and back-ends.
 
+Using the load balancing exporter, you can also send data to other running instances of the OpenTelemetry Collector through a Collector endpoint. For example, you can send all traces to one running instance of the Collector and all logs to another running instance. Using this method, you can process or manipulate your data in separate Collector environments.
+
 .. _get-started-loadbalancing-exporter:
 
 Get started
