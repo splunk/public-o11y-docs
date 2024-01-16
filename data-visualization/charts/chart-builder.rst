@@ -70,7 +70,7 @@ For example, suppose you want to display the percentage of cache hits for a syst
 
 To see only the composite metric C on the chart, select the eye icon to the left of plots A and B to hide them from the display.
 
-.. note:: The formula field only accepts arithmetics symbols (``+``, ``/``, ``-``, ``*``), parenthesis, numbers, and letters representing the plot keys.
+.. note:: The formula field only accepts arithmetic symbols (``+``, ``/``, ``-``, ``*``), parenthesis, numbers, and letters representing the plot keys.
 
 
 Determine the kind of entry a plot is displaying
