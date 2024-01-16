@@ -14,7 +14,7 @@ When you set up Log Observer Connect, your logs data remains strictly in your Sp
 Region and version availability
 ==============================================================
 
-Splunk Log Observer Connect is available in the following Splunk Observability realms: us0, us1, eu0, jp0, and au0. Splunk Log Observer Connect is compatible with Splunk Cloud Platform versions 8.2 and higher. Splunk Log Observer Connect is not available for Splunk Cloud Platform trials and is not supported in GovCloud regions. 
+Splunk Log Observer Connect is available in the following Splunk Observability realms: us0, us1, us2, eu0, jp0, and au0. Splunk Log Observer Connect is compatible with Splunk Cloud Platform versions 8.2 and higher. Splunk Log Observer Connect is not available for Splunk Cloud Platform trials and is not supported in GovCloud regions. 
 
 .. note:: You can collect data using both the Splunk Distribution of OpenTelemetry Collector and the universal forwarder without submitting any duplicate telemetry data. See :ref:`collector-with-the-uf` to learn how.
 
