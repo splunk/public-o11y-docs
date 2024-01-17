@@ -73,7 +73,7 @@ You have the following options to send app and service data to Splunk Observabil
 If you send your APM data directly to Splunk Observability Cloud without using the Collector, keep in mind the following limitations:
 
 * APM billing data might be inaccurate. Learn more at :ref:`apm-billing-usage-index`.
-* APM monitoring correlation might not work as expected, impacting Related Content.
+* APM monitoring correlation might not work as expected, impacting Related Content. To use Related Content, refer to :ref:`get-started-relatedcontent`.
 
 .. raw:: html
 
