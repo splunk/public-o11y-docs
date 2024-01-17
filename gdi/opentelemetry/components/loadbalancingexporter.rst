@@ -98,20 +98,20 @@ The following example uses a static list of host names to configure the load bal
             # dns:
             #  hostname: otelcol-headless.observability.svc.cluster.local        
 
-        service:
-        pipelines:
-          traces:
-          receivers:
-            - otlp
-          processors: []
-          exporters:
-            - loadbalancing
-          logs:
-          receivers:
-            - otlp
-          processors: []
-          exporters:
-            - loadbalancing
+    service:
+      pipelines:
+        traces:
+        receivers:
+          - otlp
+        processors: []
+        exporters:
+          - loadbalancing
+        logs:
+        receivers:
+          - otlp
+        processors: []
+        exporters:
+          - loadbalancing
 
 Kubernetes resolver
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -129,7 +129,7 @@ The following example configures the load balancing exporter for a Kubernetes re
     processors:
 
     exporters:
-    loadbalancing:
+      loadbalancing:
         routing_key: "service"
         protocol:
         otlp:
@@ -145,7 +145,7 @@ The following example configures the load balancing exporter for a Kubernetes re
             - 16317
 
     service:
-    pipelines:
+      pipelines:
         traces:
         receivers:
             - otlp
