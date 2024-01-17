@@ -104,6 +104,45 @@ The main deployment modes are:
 
 For more information on the components on each mode, see :ref:`helm-chart-components`.
 
+.. mermaid:: 
+
+   flowchart LR
+
+      DaemonSet[Collector \n daemonset]
+
+      DaemonSet -.- Agent1
+      DaemonSet -.- Agent2
+      DaemonSet -.- Agent3
+
+      subgraph Kubernetes["Kubernetes cluster \n"]
+
+      subgraph Node1[Node]
+      Agent1[(Agent pod)]
+      Deployment1[Deployments, pods, \n services]
+
+      end
+
+      subgraph Node2[Node]
+      Agent2[(Agent pod)]
+      Deployment2[Deployments, pods, \n services]
+
+      end
+
+      subgraph Node3[Node]
+      Agent3[(Agent pod)]
+      Deployment3[Deployments, pods, \n services]
+
+      end
+
+
+      end
+
+      Splunk[Splunk Observability \n Cloud]
+
+      Agent1 -- "node telemetry data" --> Splunk
+      Agent2 -- "node telemetry data" --> Splunk
+      Agent3 -- "node telemetry data" --> Splunk
+
 Change the deployment mode in a Kubernetes environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
