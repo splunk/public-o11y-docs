@@ -54,7 +54,7 @@ After installing the Splunk Distribution of OpenTelemetry Collector, explore you
   :width: 80%
   :alt: A user selects the Kubernetes navigator, allowing them to view the status of each Kubernetes container.
 
-To filter the data shown in the navigator to a specific cluster, such as the one you installed the Splunk Distribution of OpenTelemetry Collector in, set the :guilabel:`Cluster` value to the cluster name you provided in :ref:`gdi-infrastructure-imqs`.
+To filter the data shown in the navigator to a specific cluster, such as the one you installed the Splunk Distribution of OpenTelemetry Collector in, set the :guilabel:`Cluster` value to the cluster name you provided.
 
 For more details about the data displayed in the Kubernetes navigator, see :ref:`Use the Kubernetes navigator <use-the-k8s-navigator>`.
 
@@ -74,7 +74,7 @@ Narrow the scope of data in the Kubernetes navigator
 
 To narrow the scope of the data shown in the navigator, such as to show only the data received from the connection you made, follow these steps: 
 
-1. Select :guilabel:`Add Filter` and select a key and value that uniquely identifies your connection. For example, you can select :guilabel:`subscription_id = <your subscription ID>`, where the subscription ID value is the one associated with a subscription you provided in :ref:`gdi-infrastructure-imqs`. Select :guilabel:`Apply Filter`.
+1. Select :guilabel:`Add Filter` and select a key and value that uniquely identifies your connection. For example, you can select :guilabel:`subscription_id = <your subscription ID>`, where the subscription ID value is the one associated with a subscription you provided. Select :guilabel:`Apply Filter`.
 2. Select :guilabel:`Apply Filter`.
 
 Next step
