@@ -124,7 +124,7 @@ The following examples show how to include additional metadata in log statements
          formatter.PATTERN.constructorProperties=pattern
          formatter.PATTERN.pattern=%logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{environment} trace_flags=%X{trace_flags}: %m%n
 
-If you're instrumenting a serverless service or application, use environment variables instead. For example:
+If you're instrumenting a serverless service or application, use environment variables instead. The deployment environment requires that you set an arbitrary environment variable, for example ``OTEL_ENV_NAME``.
 
 .. tabs::
 
