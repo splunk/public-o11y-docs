@@ -120,7 +120,7 @@ If you are using the visibility filter API to block specific span tags in Splunk
 * If you hide tags using the ``hiddenTags`` field in the visibility filter API, then you can't use these tags in the filter bar or trace grouping.  
 * If you specify the visible tags using the ``visibleTags`` field in the visibility filter API, then you can use only the visible tags in the filter bar or trace grouping.  
 
-See :ref:`apm-visibility-filters` and :new-page:`Visibility filters in APM <https://dev.splunk.com/observability/docs/apm/visibility-filter/>`in the Splunk Developer Guide to learn more about visibility filters. 
+See :ref:`apm-visibility-filters` and :new-page:`Visibility filters in APM <https://dev.splunk.com/observability/docs/apm/visibility-filter/>` in the Splunk Developer Guide to learn more about visibility filters. 
 
 Learn more
 =====================
