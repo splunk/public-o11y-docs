@@ -169,7 +169,9 @@ Collect events
 Collect Kubernetes events
 ----------------------------------
 
-To collect Kubernetes events using the Collector, you need to add ``k8sObjects`` to your configuration file, and set ``logsEnabled`` to ``true`` in either ``splunkObservability`` or ``splunkPlatform``. Events are processed in the ``logs`` pipeline.
+To see Kubernetes events as part of the :strong:`Events Feed` section in charts, set ``splunkObservability.infrastructureMonitoringEventsEnabled`` to ``true``. The cluster receiver will be configured with a Smart Agent receiver using the ``kubernetes-events`` monitor to send custom events.
+
+To collect Kubernetes events as logs for Log Observer or Log Observer Connect using the Collector, you need to add ``k8sObjects`` to your configuration file, and set ``logsEnabled`` to ``true`` in either ``splunkObservability`` or ``splunkPlatform``. Events are processed in the ``logs`` pipeline.
 
 ``k8sObjects`` has the following fields:
 
@@ -183,9 +185,9 @@ To collect Kubernetes events using the Collector, you need to add ``k8sObjects``
 
 * ``namespaces``. If specified, the Collector only collects objects from the specified namespaces. By default, the matching objects from all namespaces are included. 
 
-* ``labelSelector``. Selects objects by label(s).
+* ``labelSelector``. Selects objects by labels.
 
-* ``fieldSelector``. Select objects by field(s).
+* ``fieldSelector``. Selects objects by fields.
 
 * ``interval``. Only applies to ``pull`` mode. The interval at which object is pulled. ``60`` seconds by default. 
 
@@ -204,7 +206,7 @@ For example:
       group: events.k8s.io
       namespaces: [default]
   
-For more information, refer to the Github documentation for the cluster receiver Helm chart deployment at :new-page:`Kubernetes objects collection using OpenTelemetry Kubernetes Object Receiver <https://github.com/signalfx/splunk-otel-collector-chart/blob/da261f5c75444e50cc68e93164587bfec43b7270/helm-charts/splunk-otel-collector/values.yaml#L466C5>`.
+For more information, see the Github documentation for the cluster receiver Helm chart deployment at :new-page:`Kubernetes objects collection using OpenTelemetry Kubernetes Object Receiver <https://github.com/signalfx/splunk-otel-collector-chart/blob/da261f5c75444e50cc68e93164587bfec43b7270/helm-charts/splunk-otel-collector/values.yaml#L466C5>`.
 
 Collect journald events
 ----------------------------------
