@@ -87,16 +87,16 @@ The following programming languages have instrumentation available:
        * :ref:`profiling-configuration-nodejs`
    * - .NET (OpenTelemetry)
      - Splunk Distribution of OpenTelemetry .NET 1.3.0 or higher
-     - * :ref:`instrument-dotnet-otel-applications`
+     - * :ref:`instrument-otel-dotnet-applications`
        * :ref:`profiling-configuration-otel-dotnet`
    * - .NET (SignalFx)
      - SignalFx Instrumentation for .NET version 1.0.0 or higher
      - * :ref:`instrument-dotnet-applications`
-       * :ref:`profiling-configuration-dotnet` 
+       * :ref:`profiling-configuration-dotnet`
    * - Python (in beta)
      - Splunk Distribution of OpenTelemetry Python version 1.15 or higher
      - * :ref:`instrument-python-applications`
-       * :ref:`profiling-configuration-python` 
+       * :ref:`profiling-configuration-python`
 
 
 .. raw:: html

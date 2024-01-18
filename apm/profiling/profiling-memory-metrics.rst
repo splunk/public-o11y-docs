@@ -14,7 +14,7 @@ AlwaysOn Profiling provides memory metrics that you can use to build dashboards 
 
 For more information on dashboards, see :ref:`dashboard-create-customize`.
 
-The list of available memory metrics depends on the programming language. See :ref:`get-data-in-profiling` for supported languages. 
+The list of available memory metrics depends on the programming language. See :ref:`get-data-in-profiling` for supported languages.
 
 Java Runtime Metrics dashboard
 ================================
@@ -25,12 +25,12 @@ From the dashboards
 ---------------------
 
 #. Go to Dashboards from the navigation menu in Splunk Observability Cloud.
-#. On the dashboard landing page and select the :guilabel:`APM java services` built-in dashboard group. Anyone can access this group by default. 
-#. Select the :guilabel:`Java runtime metrics` dashboard. 
+#. On the dashboard landing page and select the :guilabel:`APM java services` built-in dashboard group. Anyone can access this group by default.
+#. Select the :guilabel:`Java runtime metrics` dashboard.
 
 From Splunk APM
 -----------------
-#. Go to :guilabel:`AlwaysOn Profiling` from within APM. 
+#. Go to :guilabel:`AlwaysOn Profiling` from within APM.
 #. Select a service.
 #. Select :guilabel:`Java Runtime Metrics` to navigate to the runtime metrics dashboard.
 
@@ -55,7 +55,7 @@ From Splunk APM
 .NET Runtime Metrics dashboard
 ================================
 
-You can access a configured dashboard for :ref:`.NET runtime metrics <dotnet-otel-runtime-metrics>` to check memory usage. There are two ways to access the .NET Runtime Metrics dashboard.
+You can access a configured dashboard for :ref:`.NET runtime metrics <dotnet-runtime-otel-metrics>` to check memory usage. There are two ways to access the .NET Runtime Metrics dashboard.
 
 From the dashboards
 ---------------------
