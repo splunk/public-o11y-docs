@@ -18,7 +18,7 @@ For more information, read the official AWS documentation at :new-page:`Amazon E
 Benefits
 =============================================================================================
 
-The "Splunk Distribution of the OpenTelemetry Collector" Amazon EKS Add-on:
+The :strong:`Splunk Distribution of the OpenTelemetry Collector` Amazon EKS Add-on:
 
 * Provides simplified installation, configuration and management of Amazon EKS clusters. 
 * Includes the latest security patches, bug fixes, and are validated by AWS to work with Amazon EKS. 
@@ -38,7 +38,7 @@ While the Add-on deployment approach offers numerous advantages, be aware of the
 Install the EKS Add-on with secure token handling
 =============================================================================================
 
-To install the EKS Add-on "Splunk Distribution of the OpenTelemetry Collector" follow these steps:
+To install the EKS Add-on :strong:`Splunk Distribution of the OpenTelemetry Collector` follow these steps:
 
 * :ref:`addon-aws-eks-one`
 * :ref:`addon-aws-eks-two`
@@ -55,7 +55,7 @@ Step 1: Subscribe to the EKS Add-on in the AWS Marketplace
 In your AWS Marketplace, ensure that:
 
 * You have sufficient permissions in your AWS account to enable this Add-on.
-* Complete the subscription process in the AWS console. Go to the :new-page:`AWS Marketplace Page <https://aws.amazon.com/marketplace/pp/prodview-sjdb4tw5uy47k>` to add the EKS add-on "Splunk Distribution of the OpenTelemetry Collector" to your AWS account.
+* Complete the subscription process in the AWS console. Go to the :new-page:`AWS Marketplace Page <https://aws.amazon.com/marketplace/pp/prodview-sjdb4tw5uy47k>` to add the EKS Add-on :strong:`Splunk Distribution of the OpenTelemetry Collector` to your AWS account.
 
 .. _addon-aws-eks-two:
 
@@ -98,7 +98,7 @@ Find the Amazon EKS User Guide at :new-page:`Managing Amazon EKS add-ons <https:
 Step 4: Configure the Add-on with improved security
 ------------------------------------------------------------
 
-To configure the :strong:`Splunk Distribution of the OTel Collector` EKS Add-on, prepare a YAML file tailored to your Splunk set-up, replacing placeholder values with your specific configuration details. 
+To configure the :strong:`Splunk Distribution of the OpenTelemetry Collector` EKS Add-on, prepare a YAML file tailored to your Splunk set-up, replacing placeholder values with your specific configuration details. 
 
 .. caution:: For security reasons, avoid including tokens or any sensitive data in the configuration file, as EKS Add-on configurations are exposed within the EKS web console.
 
