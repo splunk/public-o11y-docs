@@ -201,7 +201,7 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
       - Activate the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true`` for your .NET process.
       - Activate memory profiling by setting the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.
       - Make sure that the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to \http://localhost:4317.
-      - Check that the ``SIGNALFX_PROFILER_LOGS_ENDPOINT`` environment variable points to \http://localhost:4318/v1/logs or to the Splunk Distribution of OpenTelemetry Collector.
+      - Check that the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to \http://localhost:4318/v1/logs or to the Splunk Distribution of OpenTelemetry Collector.
 
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-otel-dotnet`.
 
