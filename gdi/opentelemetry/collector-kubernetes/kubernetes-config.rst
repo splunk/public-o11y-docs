@@ -195,7 +195,8 @@ For example:
 Use the networking stack of your host's machine
 ======================================================
 
-To schedule the pod with the host's network namespace, set ``hostNetwork`` to ``true``.
+To give the daemonset pods access to the node host network, set ``hostNetwork`` to ``true``.
+This value is set to `true` by default.
 
 If disabled, monitoring of some control plane components might be affected.
 
