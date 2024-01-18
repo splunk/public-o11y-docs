@@ -98,7 +98,7 @@ Find the Amazon EKS User Guide at :new-page:`Managing Amazon EKS add-ons <https:
 Step 4: Configure the Add-on with improved security
 ------------------------------------------------------------
 
-To configure the :gui-label:`Splunk Distribution of the OTel Collector` EKS Add-on, prepare a YAML file tailored to your Splunk set-up, replacing placeholder values with your specific configuration details. 
+To configure the :strong:`Splunk Distribution of the OTel Collector` EKS Add-on, prepare a YAML file tailored to your Splunk set-up, replacing placeholder values with your specific configuration details. 
 
 .. caution:: For security reasons, avoid including tokens or any sensitive data in the configuration file, as EKS Add-on configurations are exposed within the EKS web console.
 
