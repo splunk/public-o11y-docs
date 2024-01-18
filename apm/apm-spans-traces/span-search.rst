@@ -47,7 +47,9 @@ When viewing spans in the trace waterfall, note the following:
 View RUM session details
 ===========================
 
-For spans that also have RUM session details, RUM displays in the span, select the link to go to RUM. Select the span with RUM to view the RUM session details display in the Trace Properties
+For spans that also have RUM session details, RUM displays in the span, select the link to go to RUM. Select the span with RUM to view the RUM session details in the Trace Properties panel.
+
+
 
 Explore logs for each span
 ===========================
