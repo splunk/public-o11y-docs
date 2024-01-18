@@ -104,7 +104,7 @@ The main deployment modes are:
 
 For more information on the components on each mode, see :ref:`helm-chart-components`.
 
-By default, the ``agent`` daemonset deploys the OpenTelemetry Collector in ``agent`` mode to a pod in each node of your Kubernetes cluster. The agent pods send data from your applications, services, and other objects running in each node to Splunk Observability Cloud.
+By default, the ``agent`` daemonset deploys a pod running the OpenTelemetry Collector agent in each node of your Kubernetes cluster. The agent pods send data from your applications, services, and other objects running in each node to Splunk Observability Cloud.
 
 .. image:: /_images/gdi/k8s-daemonset.png
    :width: 60%
