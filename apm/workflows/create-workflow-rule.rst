@@ -11,12 +11,12 @@ Business Workflow rules use span tags to make trace behavior in transaction proc
 
 You can create rules that correlate traces from a specific service or from multiple services that include the same global span tag. You must be an administrator to configure Business Workflow rules.
 
-The Business Workflow page includes the following system-generated rule by default: “All traces will be associated with workflows that are identified by the initiating operations of those traces.” This is the only default rule. You cannot edit the default rule, but you can disable it.
+The Business Workflow page includes a system-generated rule by default: All traces will be associated with workflows that are identified by the initiating operations of those traces. This is the only default rule. You can't edit the default rule, but you can turn it off.
 
 Configure a rule
 ================
 
-To configure a new rule from Splunk APM, follow these steps. There is a difference between enabling a rule and applying it. The enable/disable switch affects an individual rule by turning it on or off. After you modify one or more rules, you then use buttons that act on the entire rule set to save or discard those changes. Changes are not applied unless you save them.
+To configure a new rule from Splunk APM, follow these steps. There is a difference between turning on a rule and applying it. The on/off switch affects an individual rule by turning it on or off. After you modify 1 or more rules, you then use buttons that act on the entire rule set to save or discard those changes. Changes are not applied unless you save them.
 
 1. Go to :guilabel:`Data Configuration` then :guilabel:`Business Workflow`.
 
@@ -45,13 +45,13 @@ To configure a new rule from Splunk APM, follow these steps. There is a differen
 
 5. Select :strong:`Create` to save your changes and create the rule.
 
-6. View the list of rules to confirm the rule you just created is enabled. 
+6. View the list of rules to confirm the rule you created is turned on. 
 
 7. By default, the newest rule has the highest priority. This means Splunk APM applies the new rule before applying any other rules. If there are other rules you want to apply first, adjust the priority of the new rule.
 
 8. Select :strong:`Save Changes` to apply the new rule and priority list.
 
-When to keep or disable the default rule
+When use the default rule
 ========================================
 
 If the initiating operation of a trace is granular enough to capture meaningful workflows, for example with API calls, then the default rule is useful because it groups related traces by their initiating operation, which is different from other initiating operations.
@@ -69,7 +69,7 @@ To reduce the likelihood of partial rule changes generating unexpected results, 
 
 - Deleting or disabling rules
 
-The Business Workflow configuration UI displays rules numbered in continuous sequence 1 to ``n``, regardless of whether those rules are active or not. Because each trace belongs to only one workflow rule, priority matters. When multiple rules can apply to the same trace, that trace is matched to the highest priority rule. Rule creation and configuration is governed by the following properties:
+The Business Workflow configuration UI displays rules numbered in continuous sequence 1 to ``n``, regardless of whether those rules are active or not. Because each trace belongs to only 1 workflow rule, priority matters. When multiple rules can apply to the same trace, that trace is matched to the highest priority rule. Rule creation and configuration is governed by the following properties:
 
 - The limit on the number of rules you can have is 99.
 
