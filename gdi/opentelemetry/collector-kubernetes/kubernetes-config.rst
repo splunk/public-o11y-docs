@@ -196,9 +196,8 @@ Use the networking stack of your host's machine
 ======================================================
 
 To give the daemonset pods access to the node host network, set ``hostNetwork`` to ``true``.
-This value is set to `true` by default.
 
-If disabled, monitoring of some control plane components might be affected.
+``hostNetwork`` is set to ``true`` by default. If disabled, monitoring of some control plane components might be affected.
 
 This value is disregarded for Windows.
 
