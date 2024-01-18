@@ -190,7 +190,16 @@ For example:
   clusterName: my-k8s-cluster
   cloudProvider: aws
 
-.. _otel-kubernetes-config-profiling:
+.. _otel-kubernetes-config-hostnetwork:
+
+Use the networking stack of your host's machine
+======================================================
+
+To schedule the pod with the host's network namespace, set ``hostNetwork`` to ``true``.
+
+If disabled, monitoring of some control plane components might be affected.
+
+This value is disregarded for Windows.
 
 Activate AlwaysOn Profiling
 =================================
