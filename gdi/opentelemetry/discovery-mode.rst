@@ -47,7 +47,7 @@ Discovery mode supports the following host services and applications:
      - Smart Agent with collectd/mysql monitor type. See :ref:`mysql`.
 
    * - PostgreSQL
-     - Smart Agent with postgresql monitor type. See :ref:`postgresql`.
+     - PostgreSQL receiver. See :ref:`postgresql-receiver`.
 
    * - OracleDB
      - Oracle DB receiver. See :ref:`oracledb`.
@@ -144,11 +144,9 @@ You can override or add properties by creating the ``etc/otel/collector/config.d
 
       splunk.discovery:
         receivers:
-           smartagent/postgresql:
-            config:
-              params:
-                username: "${PG_USERNAME_ENVVAR}"
-                password: "${PG_PASSWORD_ENVVAR}"
+          postgresql:
+            username: "${PG_USERNAME_ENVVAR}"
+            password: "${PG_PASSWORD_ENVVAR}"
 
 You can use the ``--discovery-properties=<filepath.yaml>`` argument to load discovery mode properties that you don't want to share with other Collectors. If you specify discovery properties using this argument, properties contained in ``config.d/properties.discovery.yaml`` are ignored.
 

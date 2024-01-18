@@ -61,10 +61,7 @@ Metrics are the driving components for Splunk Infrastructure Monitoring. To lear
 Get started with Splunk Infrastructure Monitoring
 ==========================================================
 
-For a step-by-step tutorial on how to set up Splunk Infrastructure Monitoring, see :ref:`Quick start tutorial <quickstart-imm>`.
-
 To learn how to get data in, monitor, and troubleshoot your infrastructure, see :ref:`infrastructure-infrastructure`.
-
 
 .. _wcidw-imm:
 

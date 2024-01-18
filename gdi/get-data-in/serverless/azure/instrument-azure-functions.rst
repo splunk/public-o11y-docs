@@ -28,7 +28,7 @@ Set the required environment variables in your function's settings:
 
 #. Select your function in Function App.
 
-#. Go to :guilabel:`Settings`, then :guilabel:` Configuration`.
+#. Go to :guilabel:`Settings`, then :guilabel:`Configuration`.
 
 #. Select :strong:`New application setting` to add the following settings:
 

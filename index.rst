@@ -628,11 +628,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Quick start tutorial <infrastructure/quickstart-imm>
-
-.. toctree::
-   :maxdepth:   3
-
    infrastructure/infrastructure
 
 .. toctree::

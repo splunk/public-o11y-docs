@@ -99,34 +99,6 @@ The following table shows the configuration options for the
       - The number of top queries to consider when publishing
          query-related metrics (**default:** ``10``)
 
-Metrics
--------
-
-The following metrics are available for this integration:
-
-.. raw:: html
- 
-      <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/postgresql/metadata.yaml"></div>
-
-
-Notes
-~~~~~
-
-.. include:: /_includes/metric-defs.rst
-
-Metrics about replication
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Replication metrics aren't available on some PostgreSQL servers. For
-now, this monitor automatically deactivates the ``replication`` metrics
-group if the monitor detects Aurora. This helps avoid following the
-error:
-``Function pg_last_xlog_receive_location() is currently not supported for Aurora``
-
-The metric ``postgres_replication_state`` will be reported only for
-``master`` and for ``postgres_replication_lag`` for the ``standby`` role
-(replica).
-
 Troubleshooting
 ---------------
 
