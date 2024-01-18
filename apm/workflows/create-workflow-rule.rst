@@ -4,8 +4,6 @@
 Configure Business Workflow rules
 *********************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn how Business Workflow rules make trace behavior in transaction processing explicit and transparent.
 
@@ -20,7 +18,7 @@ Configure a rule
 
 To configure a new rule from Splunk APM, follow these steps. There is a difference between enabling a rule and applying it. The enable/disable switch affects an individual rule by turning it on or off. After you modify one or more rules, you then use buttons that act on the entire rule set to save or discard those changes. Changes are not applied unless you save them.
 
-1. Go to :strong:`Data Configuration > Business Workflow`.
+1. Go to :guilabel:`Data Configuration` then :guilabel:`Business Workflow`.
 
 2. Select :strong:`New Rule`.
 
@@ -39,19 +37,19 @@ To configure a new rule from Splunk APM, follow these steps. There is a differen
       * - Service
         - Define workflows based on traces that include a service you specify. When a trace matches the rule, you also see a specified tag value or endpoint associated with the trace for the service.
 
-3. Select a :strong:`Target Global Tag` or :strong:`Target Service` according to the :strong:`Rule Type` you selected.
+4. Select a :strong:`Target Global Tag` or :strong:`Target Service` according to the :strong:`Rule Type` you selected.
 
    :strong:`Target Global Tag` prompts you to select an indexed global tag. When you select a tag, the rule correlates all traces with the global tag. The rule name is based on the global tag you select.
 
    :strong:`Target Service` prompts you to select a service and specify the :strong:`Source of Workflow Name`, which is extra metadata to view about the workflow. You can select to correlate traces for a service by an endpoint for the initiating span or a span tag value.
 
-4. Select :strong:`Create` to save your changes and create the rule.
+5. Select :strong:`Create` to save your changes and create the rule.
 
-5. View the list of rules to confirm the rule you just created is enabled. 
+6. View the list of rules to confirm the rule you just created is enabled. 
 
-6. By default, the newest rule has the highest priority. This means Splunk APM applies the new rule before applying any other rules. If there are other rules you want to apply first, adjust the priority of the new rule.
+7. By default, the newest rule has the highest priority. This means Splunk APM applies the new rule before applying any other rules. If there are other rules you want to apply first, adjust the priority of the new rule.
 
-7. Select :strong:`Save Changes` to apply the new rule and priority list.
+8. Select :strong:`Save Changes` to apply the new rule and priority list.
 
 When to keep or disable the default rule
 ========================================
