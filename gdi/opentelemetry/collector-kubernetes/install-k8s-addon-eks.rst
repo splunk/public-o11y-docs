@@ -145,7 +145,20 @@ Deploy the secret into the Splunk monitoring namespace by applying a YAML file, 
 YAML file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Use the YAML config file you've prepared to configure the Add-on with your chosen method: ``eksctl``, the AWS Management Console, or the AWS CLI.
+To deploy the secret, utilize a distinct Kubernetes secret YAML file, separate from the Add-on configuration YAML. The file can be named `splunk-otel-collector-secret.yaml`. This file contains sensitive tokens and can be deployed securely using the following command: `kubectl apply -f splunk-otel-collector-secret.yaml`.
+
+Here is a template for the `splunk-otel-collector-secret.yaml` file:
+
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: splunk-otel-collector
+  namespace: splunk-monitoring
+type: Opaque
+data:
+  splunk_observability_access_token: <YOUR_ACCESS_TOKEN> # Replace with your actual access token
+  splunk_platform_hec_token: <YOUR_HEC_TOKEN>  # Add this line only if using with splunkPlatform
 
 kubectl command
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
