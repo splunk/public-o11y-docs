@@ -1,3 +1,13 @@
+.. _auto-resolve:
+
+************************************************************************
+Auto-resolve
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
+
 Click on *Settings* >> Click on *Alert Configuration.* To **pop out of
 ack**, select “Acknowledged incidents will return to triggered after”
 and then a timeframe. To **auto-resolve**, click “Auto-resolve incidents

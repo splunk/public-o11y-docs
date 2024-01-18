@@ -1,4 +1,11 @@
-[ht_toggle title=“Requirements” id=“” class=“” style=“” ]
+.. _rules-engine-transf:
+
+************************************************************************
+Auto-Pause and High Alert lag settings
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
 
 **Versions Supported: Enterprise**
 
