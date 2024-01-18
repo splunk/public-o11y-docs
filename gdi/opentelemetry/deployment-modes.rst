@@ -102,11 +102,11 @@ The main deployment modes are:
 * Default, which includes the ``agent`` deamonset and the ``clusterReceiver`` deployment component.
 * All collector modes, which includes ``agent`` deamonset, and the ``clusterReceiver`` and the ``gateway`` components.
 
-By default, the ``agent`` daemonset deploys a pod running the OpenTelemetry Collector agent in each node of your Kubernetes cluster. The agent pods send data from your applications, services, and other objects running in each node to Splunk Observability Cloud.
+By default, the ``agent`` daemonset deploys a pod running the OpenTelemetry Collector agent in each node of your Kubernetes cluster. The agent pods gather data from your applications, services, and other objects running in their respective nodes, then send the data to Splunk Observability Cloud.
 
 .. image:: /_images/gdi/k8s-daemonset.png
    :width: 60%
-   :alt: The ``agent`` daemonset deploys the OpenTelemetry Collector in ``agent`` mode to a pod in each node of your Kubernetes cluster. The agent pods send data from your applications, services, and other objects running in each node to Splunk Observability Cloud.
+   :alt: This Kubernetes cluster contains three nodes. Each node contains an OpenTelemetry Collector agent pod that sends telemetry data to Splunk Observability Cloud.
 
 For more information on the components on each mode, see :ref:`helm-chart-components`.
 
