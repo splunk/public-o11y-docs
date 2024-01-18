@@ -93,6 +93,31 @@ The following settings control trace exporters and their endpoints:
    * - ``SPLUNK_ACCESS_TOKEN``
      - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Required if you need to send data to the Splunk Observability Cloud ingest endpoint. See :ref:`admin-tokens`.
 
+.. _profiling-configuration-otel-dotnet:
+
+.NET OTel settings for AlwaysOn Profiling
+===============================================
+
+The following settings control the AlwaysOn Profiling feature for the .NET instrumentation:
+
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 40 60
+
+   * - Environment variable
+     - Description
+   * - ``SPLUNK_PROFILER_ENABLED``
+     - Activates AlwaysOn Profiling. The default value is ``false``.
+   * - ``SPLUNK_PROFILER_MEMORY_ENABLED``
+     - Activates memory profiling. The default value is ``false``.
+   * - ``SPLUNK_PROFILER_LOGS_ENDPOINT``
+     - The collector endpoint for profiler logs. The default value is ``http://localhost:4318/v1/logs``.
+   * - ``SPLUNK_PROFILER_CALL_STACK_INTERVAL``
+     - Frequency with which call stacks are sampled, in milliseconds. The default value is ``10000`` milliseconds.
+
+.. note:: For more information on AlwaysOn Profiling, see :ref:`profiling-intro`.
+
 .. _dotnet-otel-trace-propagation-settings:
 
 Trace propagation settings

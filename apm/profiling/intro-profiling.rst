@@ -78,18 +78,21 @@ The following programming languages have instrumentation available:
    * - Java
      - Splunk Distribution of OpenTelemetry Java version 1.14.2 or higher
        
-       OpenJDK versions 15.0 to 17.0.8 are not supported for memory profiling. See :new-page:`https://bugs.openjdk.org/browse/JDK-8309862` in the JDK bug system for more information. 
+       OpenJDK versions 15.0 to 17.0.8 are not supported for memory profiling. See :new-page:`https://bugs.openjdk.org/browse/JDK-8309862` in the JDK bug system for more information.
      - * :ref:`instrument-java-applications`
        * :ref:`profiling-configuration-java`
    * - Node.js
      - Splunk Distribution of OpenTelemetry JS version 2.0 or higher
-     - :ref:`instrument-nodejs-applications`
+     - * :ref:`instrument-nodejs-applications`
+       * :ref:`profiling-configuration-nodejs`
    * - .NET (OpenTelemetry)
      - Splunk Distribution of OpenTelemetry .NET 1.3.0 or higher
-     - :ref:`instrument-dotnet-otel-applications`
+     - * :ref:`instrument-dotnet-otel-applications`
+       * :ref:`profiling-configuration-otel-dotnet`
    * - .NET (SignalFx)
      - SignalFx Instrumentation for .NET version 1.0.0 or higher
-     - :ref:`instrument-dotnet-applications`
+     - * :ref:`instrument-dotnet-applications`
+       * :ref:`profiling-configuration-dotnet` 
    * - Python (in beta)
      - Splunk Distribution of OpenTelemetry Python version 1.15 or higher
      - * :ref:`instrument-python-applications`
