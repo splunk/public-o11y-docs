@@ -5,7 +5,7 @@ Filtering options
 ************************************************************************
 
 .. meta::
-   :description: About the user roll in Splunk On-Call.
+   :description: Splunk On-Call offers several methods to customize the interface to view only what is relevant. Filtering is done on a 'by user' basis.
 
 
 Filtering is a useful tool to isolate only the messages, notifications and incidents which concern the user. Splunk On-Call offers several methods to customize the interface to view only what is relevant. Filtering is done on a 'by user' basis.
