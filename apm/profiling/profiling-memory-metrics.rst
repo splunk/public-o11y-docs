@@ -55,7 +55,7 @@ From Splunk APM
 .NET Runtime Metrics dashboard
 ================================
 
-You can access a configured dashboard for :ref:`.NET runtime metrics <dotnet-runtime-metrics>` to check memory usage. There are two ways to access the Node.js Runtime Metrics dashboard.
+You can access a configured dashboard for :ref:`.NET runtime metrics <dotnet-otel-runtime-metrics>` to check memory usage. There are two ways to access the .NET Runtime Metrics dashboard.
 
 From the dashboards
 ---------------------

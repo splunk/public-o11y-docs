@@ -3,7 +3,7 @@
 Get data into Splunk APM AlwaysOn Profiling
 ******************************************************
 
-.. meta:: 
+.. meta::
    :description: Follow these instructions to get data into Splunk APM AlwaysOn Profiling.
 
 Follow these instructions to get profiling into Splunk APM AlwaysOn Profiling.
@@ -31,7 +31,7 @@ If you're deploying the Splunk Distribution of OpenTelemetry Collector using Hel
 
 .. code-block:: bash
 
-   --set splunkObservability.profilingEnabled='true' 
+   --set splunkObservability.profilingEnabled='true'
 
 You can also edit the parameter in the values.yaml file itself. For example:
 
@@ -67,7 +67,7 @@ Follow these instructions to get profiling data into Splunk APM using AlwaysOn P
 Instrument your application or service
 ---------------------------------------------------------------
 
-AlwaysOn Profiling requires APM tracing data to correlate stack traces to your application requests. To instrument your application for Splunk APM, follow the steps for the appropriate programming language: 
+AlwaysOn Profiling requires APM tracing data to correlate stack traces to your application requests. To instrument your application for Splunk APM, follow the steps for the appropriate programming language:
 
 .. list-table::
    :header-rows: 1
@@ -79,16 +79,19 @@ AlwaysOn Profiling requires APM tracing data to correlate stack traces to your a
    * - Java
      - Splunk Distribution of OpenTelemetry Java version 1.14.2 or higher
 
-       OpenJDK versions 15.0 to 17.0.8 are not supported for memory profiling. See :new-page:`https://bugs.openjdk.org/browse/JDK-8309862` in the JDK bug tracker for more information. 
+       OpenJDK versions 15.0 to 17.0.8 are not supported for memory profiling. See :new-page:`https://bugs.openjdk.org/browse/JDK-8309862` in the JDK bug tracker for more information.
      - * :ref:`instrument-java-applications`
        * :ref:`profiling-configuration-java`
    * - Node.js
      - Splunk Distribution of OpenTelemetry JS version 2.0 or higher
      - :ref:`instrument-nodejs-applications`
-   * - .NET
+   * - .NET (OpenTelemetry)
+     - Splunk Distribution of OpenTelemetry .NET version 1.3.0 or higher
+     - :ref:`instrument-otel-dotnet-applications`
+   * - .NET (SignalFx)
      - SignalFx Instrumentation for .NET version 1.0.0 or higher
      - :ref:`instrument-dotnet-applications`
-   * - Python (in beta)
+   * - Python
      - Splunk Distribution of OpenTelemetry Python version 1.15 or higher
      - * :ref:`instrument-python-applications`
        * :ref:`profiling-configuration-python`
@@ -131,7 +134,7 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
                      apiVersion: v1
                      fieldPath: status.hostIP
       - Port 9943 is the default port for the SignalFx receiver in the collector distribution. If you change this port in your collector configuration, you need to pass the custom port to the JVM.
-      
+
       The following example shows how to activate the profiler using the system property:
 
       .. code-block:: bash
@@ -147,7 +150,7 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-java`.
 
       .. note:: AlwaysOn Profiling is not supported on Oracle JDK 8 and IBM J9.
-   
+
    .. group-tab:: Node.js
 
       :strong:`Requirements`
@@ -164,7 +167,7 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
         
             .. code-block:: yaml
 
-               env:  
+               env:
                - name: K8S_NODE_IP
                  valueFrom:
                    fieldRef:
@@ -185,7 +188,24 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-nodejs`.
 
-   .. group-tab:: .NET
+   .. group-tab:: .NET (OTel)
+
+      :strong:`Requirements`
+
+      AlwaysOn Profiling requires .NET 6.0 or higher.
+
+      .. note:: .NET Framework is not supported.
+
+      :strong:`Instrumentation`
+
+      - Activate the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true`` for your .NET process.
+      - Activate memory profiling by setting the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.
+      - Make sure that the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to \http://localhost:4317.
+      - Check that the ``SIGNALFX_PROFILER_LOGS_ENDPOINT`` environment variable points to \http://localhost:4318/v1/logs or to the Splunk Distribution of OpenTelemetry Collector.
+
+      For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-otel-dotnet`.
+
+   .. group-tab:: .NET (SFx)
 
       :strong:`Requirements`
 
@@ -216,7 +236,7 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
       :strong:`Instrumentation`
 
-      Activate the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true`` or call the ``start_profiling`` function in your application code. 
+      Activate the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true`` or call the ``start_profiling`` function in your application code.
 
       Check the OTLP endpoint in the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable:
 

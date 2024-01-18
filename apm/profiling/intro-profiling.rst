@@ -84,7 +84,10 @@ The following programming languages have instrumentation available:
    * - Node.js
      - Splunk Distribution of OpenTelemetry JS version 2.0 or higher
      - :ref:`instrument-nodejs-applications`
-   * - .NET
+   * - .NET (OpenTelemetry)
+     - Splunk Distribution of OpenTelemetry .NET 1.3.0 or higher
+     - :ref:`instrument-dotnet-otel-applications`
+   * - .NET (SignalFx)
      - SignalFx Instrumentation for .NET version 1.0.0 or higher
      - :ref:`instrument-dotnet-applications`
    * - Python (in beta)
