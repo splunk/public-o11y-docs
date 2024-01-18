@@ -116,7 +116,7 @@ The .NET instrumentation logs the string ``ContinuousProfiler::StartThreadSampli
 
 .. code-block:: bash 
 
-   10/12/22 12:10:31.962 PM [12096|22036] [info] ContinuousProfiler::StartThreadSampling
+   10/12/23 12:10:31.962 PM [12096|22036] [info] ContinuousProfiler::StartThreadSampling
 
 If no string appears, make sure that you've activated the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``. See :ref:`profiling-configuration-otel-dotnet`.
 
