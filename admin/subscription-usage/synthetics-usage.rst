@@ -22,6 +22,42 @@ Splunk Synthetic Monitoring offers metrics you can use to track your subscriptio
      - Description
    * - ``syn.customer_usage.runs_completed``
      - Description 
+   * - ``sf.org.synthetics.numDatapointsReceived``
+     -
+   * - ``sf.org.synthetics.limit.metricTimeSeriesCreatedPerMinute``
+     -
+   * - ``sf.org.numSyntheticsMetrics``
+     -
+   * - ``sf.org.synthetics.limit.synthetics``
+     -
+   * - ``sf.org.synthetics.numDatapointsReceivedByToken``
+     -
+   * - ``sf.org.numSyntheticsMetricsByToken``
+     -
+   * - ``sf.org.synthetics.numDatapointsDroppedInTimeout``
+     -
+   * - ``sf.org.subscription.syntheticsMetrics``
+     -
+   * - ``sf.org.numMetricTimeSeriesCreatedByCategoryType``
+     -
+   * - ``sf.org.numMetricTimeSeriesCreatedByDatapointTypeByToken``
+     -
+   * - ``sf.org.numThrottledMetricTimeSeriesCreateCallsByDatapointTypeByToken``
+     -
+   * - ``sf.org.numLimitedMetricTimeSeriesCreateCallsByCategoryTypeByToken``
+     - Number of MTS not sent per token; over maximum allowed.
+   * - ``sf.org.numThrottledMetricTimeSeriesCreateCallsByDatapointType``
+     -
+   * - ``sf.org.numMetricTimeSeriesCreatedByCategoryTypeByToken``
+     -
+   * - ``sf.org.numLimitedMetricTimeSeriesCreateCallsByCategoryType``
+     -
+   * - ``sf.org.numMetricTimeSeriesCreatedByDatapointType``
+     -
+
+
+
+
 
 
 See also
