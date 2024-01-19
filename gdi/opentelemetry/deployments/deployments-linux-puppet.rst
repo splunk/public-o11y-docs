@@ -158,7 +158,7 @@ The following table shows the variables that you can configure for this Puppet m
      - The auto instrumentation SDKs to install and activate.
      - ``%w(java nodejs)``
    * - ``auto_instrumentation_java_agent_jar``
-     - Path to the Splunk OpenTelemetry Java agent. The default path is provided by the ``splunk-otel-auto-instrumentation`` package. If the path is changed from the default value, the path should be an existing file on the node. The specified path is added to the /usr/lib/splunk-instrumentation/instrumentation.conf configuration file on the node. The applications on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
+     - Path to the Splunk OpenTelemetry Java agent. The default path is provided by the ``splunk-otel-auto-instrumentation`` package. If the path is changed from the default value, the path should be an existing file on the node. The specified path is added to the /usr/lib/splunk-instrumentation/instrumentation.conf configuration file on the node. The applications on the node needs to be restarted separately after installation for auto instrumentation to take effect.
      - ``/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar``
    * - ``auto_instrumentation_npm_path``
      - The path to the pre-installed ``npm`` command. For example, ``/my/custom/path/to/npm``.
