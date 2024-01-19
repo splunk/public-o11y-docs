@@ -37,7 +37,7 @@ When filtering for a span, select the :guilabel:`Matches Only` switch to show on
 Expand and collapse spans
 ===========================
 
-Use the 3-dot menu to expand and collapse spans as needed. You can expand or collapse at a specific depth or at the service and operation level.
+Use the 3-dot menu next to each span to expand and collapse spans as needed. You can expand or collapse at a specific depth or at the service and operation level.
 
 .. image:: /_images/apm/spans-traces/span-search-expand-collapse.png
   :width: 95%
@@ -54,7 +54,7 @@ When viewing spans in the trace waterfall, note the following:
 View RUM session details
 ===========================
 
-For spans that also have RUM session details, RUM displays in the span, select the link to go to RUM. Select the span with RUM to view the RUM session details in the Trace Properties panel.
+For spans that also have RUM session details, RUM displays in the span, select the link view the session in RUM. Select the span and then select the :guilabel:`RUM Session` tab to view the RUM session details in the Trace Properties panel. You can also select the session ID to go to RUM. 
 
 .. image:: /_images/apm/spans-traces/span-search-integrated-traces.png
   :width: 95%
