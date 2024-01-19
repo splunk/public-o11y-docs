@@ -18,12 +18,11 @@ Splunk Synthetic Monitoring offers metrics you can use to track your subscriptio
 
    * - :strong:`Metric`
      - :strong:`Description`
-   * - 
-     -
-   * -
-     - 
-   * - 
-     - 
+   * - ``sf.org.synthetics.limit.synthetics``
+     - Description
+   * - ``syn.customer_usage.runs_completed``
+     - Description 
+
 
 See also
 ==========
