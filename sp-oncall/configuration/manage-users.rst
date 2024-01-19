@@ -1,4 +1,4 @@
-.. _remove-user:
+.. _manage-users:
 
 ************************************************************************
 Managing Splunk On-Call users

@@ -33,7 +33,7 @@ Recommendations to be a successful Alert Admin
 
 * Create Routing Keys: Routing Keys are responsible for directing the alerts to the correct escalation policy in order to page the correct on-call user. Think of these as the “postage” of each alert. Reach out to Team Admins to assist with naming conventions for Routing Keys in order to ensure that escalation policies and routing key names are in sync and simple to identify.
 
-* Enable and configure integrations: Search for the integrations you need on the XXXXXXX integrations page XXXXXX. If you do not see an integration listed, you can always use the Generic Rest Endpoint or Email integration based on the capabilities of your tools. Use the Integration Guides to configure your integrations.  Make sure you are only sending critical, actionable alerts to Splunk On-Call to avoid alert fatigue and confusion. 
+* Enable and configure integrations: Search for the integrations you need on the :ref:`integrations-main` page. If you do not see an integration listed, you can always use the Generic Rest Endpoint or Email integration based on the capabilities of your tools. Use the Integration Guides to configure your integrations.  Make sure you are only sending critical, actionable alerts to Splunk On-Call to avoid alert fatigue and confusion. 
 
 * Confirm alerts are directed to the corresponding teams: After configuring your integrations, make sure that incidents are routing and behaving properly by sending test alerts.
 

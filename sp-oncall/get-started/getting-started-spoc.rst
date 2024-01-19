@@ -27,7 +27,7 @@ The Team page is your central location for configuring teams, schedules, rotatio
 Set up
 ----------
 
-XXXXXX`Add Users <https://help.victorops.com/knowledge-base/removing-a-user/>`XXXXXX - The most important first step of setting up Splunk On-Call is adding users. To add new users:
+:ref:`Add Users <manage-users>`- The most important first step of setting up Splunk On-Call is adding users. To add new users:
 
 -  Leverage their email address in the portal (:guilabel:`Users`, then :guilabel:`Invite User`)
 -  Utilize our API (ID & Key required, can be found in :guilabel:`Integrations` then :guilabel:`API`) 
