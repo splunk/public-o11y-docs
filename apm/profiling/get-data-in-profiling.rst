@@ -190,6 +190,9 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
    .. group-tab:: .NET (OTel)
 
+      .. note::
+         AlwaysOn Profiling for .NET (OTel) is in beta development. This feature is provided by Splunk to you "as is" without any warranties, maintenance and support, or service-level commitments. Use of this feature is subject to the :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`.
+
       :strong:`Requirements`
 
       AlwaysOn Profiling requires .NET 6.0 or higher.
@@ -200,7 +203,7 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
       - Activate the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true`` for your .NET process.
       - Activate memory profiling by setting the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.
-      - Make sure that the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://localhost:4317``.
+      - ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable by default points to http://localhost:4318/v1/logs. It can be reconfigured to the Splunk Distribution of OpenTelemetry Collector.
 
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-otel-dotnet`.
 
@@ -219,7 +222,6 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
       - Activate the profiler by setting the ``SIGNALFX_PROFILER_ENABLED`` environment variable to ``true`` for your .NET process.
       - Activate memory profiling by setting the ``SIGNALFX_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.
-      - Make sure that the ``SIGNALFX_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://localhost:4317``.
 
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-dotnet`.
 
