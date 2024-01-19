@@ -45,7 +45,7 @@ The Splunk Distribution of OpenTelemetry .NET can collect the following runtime 
      - Count of bytes currently in use by live objects in the GC heap.
    * - ``process.runtime.dotnet.gc.allocations.size``
      - Cumulative counter
-     - Count of bytes allocated on the managed GC heap since the process started. Only available for .NET 6 or higher.	
+     - Count of bytes allocated on the managed GC heap since the process started. Only available for .NET 6 or higher.
    * - ``process.runtime.dotnet.gc.committed_memory.size``
      - Gauge
      - Amount of committed virtual memory for the managed GC heap, as observed during the last garbage collection. Only available for .NET 6 and higher.
