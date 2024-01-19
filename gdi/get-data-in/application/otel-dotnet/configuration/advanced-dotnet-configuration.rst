@@ -172,6 +172,21 @@ The following resource detectors are available:
      - ``container.id``
      - Experimental Beta
      - Community support
+   * - ``HOST``
+     - Host detector.
+     - ``host.name``
+     - Experimental Beta
+     - Community support
+   * - ``PROCESS``
+     - Process detector.
+     - ``process.pid``
+     - Experimental Beta
+     - Community support
+   * - ``PROCESSRUNTIME``
+     - Process Runtime detector.
+     - ``process.runtime.description``, ``process.runtime.name``, ``process.runtime.version``
+     - Experimental Beta
+     - Community support
 
 .. _dotnet-otel-instrumentation-settings:
 
