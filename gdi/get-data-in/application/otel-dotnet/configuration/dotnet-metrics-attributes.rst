@@ -121,6 +121,21 @@ Instrumentation metrics
 
 The Splunk Distribution of OpenTelemetry .NET can collect the following instrumentation metrics:
 
+ASP.NET
+-------------------------
+
+.. list-table:: 
+   :header-rows: 1
+   :widths: 40 10 50
+   :width: 100%
+
+   * - Metric
+     - Type
+     - Description
+   * - ``http.server.request.duration_{bucket|count|sum}``
+     - Cumulative counters (histogram)
+     - Duration of HTTP server requests.
+
 ASP.NET Core
 -------------------------
 
@@ -132,15 +147,12 @@ ASP.NET Core
    * - Metric
      - Type
      - Description
-   * - ``http.server.duration_{bucket|count|sum}``
+   * - ``http.server.request.duration_{bucket|count|sum}``
      - Cumulative counters (histogram)
-     - Duration of the inbound HTTP request, in the form of count, sum, and histogram buckets. This metric originates multiple metric time series, which might result in increased data ingestion costs. Supported only on .NET prior to 8.
+     - Duration of HTTP server requests.
    * - ``http.server.active_requests``
      - Gauge
      - Number of active HTTP server requests. Supported only on .NET8+.
-   * - ``http.server.request.duration_{bucket|count|sum}``
-     - Cumulative counters (histogram)
-     - Duration of HTTP server requests. Supported only on .NET8+.
    * - ``kestrel.active_connections``
      - Gauge
      - Number of connections that are currently active on the server. Supported only on .NET8+.
@@ -204,15 +216,12 @@ HTTP Client
    * - Metric
      - Type
      - Description
-   * - ``http.client.duration_{bucket|count|sum}``
+   * - ``http.client.request.duration_{bucket|count|sum}``
      - Cumulative counters (histogram)
-     - Duration of outbound HTTP requests, in the form of count, sum, and histogram buckets. This metric originates multiple metric time series, which might result in increased data ingestion costs. Supported only on .NET prior to 8.
+     - Duration of HTTP client requests.
    * - ``http.client.active_requests``
      - Gauge
      - Number of outbound HTTP requests that are currently active on the client. Supported only on .NET8+.
-   * - ``http.client.request.duration_{bucket|count|sum}``
-     - Cumulative counters (histogram)
-     - Duration of HTTP client requests. Supported only on .NET8+.
    * - ``http.client.open_connections``
      - Gauge
      - Number of outbound HTTP connections that are currently active or idle on the client. Supported only on .NET8+.
