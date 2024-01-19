@@ -29,7 +29,7 @@ To access Chart Builder, open the navigation :strong:`Menu` and select :strong:`
 Enter a metric name or tag
 -------------------------------------------------------------------
 
-If you know the name of the metric you want to view, you can simply type its name directly into the :strong:`Signal` field on the :strong:`Plot Editor` tab. Splunk Observability Cloud uses type-ahead search to show you any metrics that match what you are typing.
+If you know the name of the metric you want to view, you can type its name directly into the :strong:`Signal` field on the :strong:`Plot Editor` tab. Splunk Observability Cloud uses type-ahead search to show you any metrics that match what you are typing.
 
 Splunk Observability Cloud lets you build a chart to plot a signal for which you have not yet started sending data. Type in the name of the metric you expect to plot and press Enter. When data starts arriving for that signal, it is displayed on the chart.
 
@@ -383,7 +383,7 @@ Size and time metrics; such as kb, Gb, ms, and w; are available from the :strong
 Add a prefix and/or suffix
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Unlike specifying the actual unit associated with the metric, the prefix and suffix are simply text fields that you add to clarify the chart display. They don't have any intrinsic relationship to the metric on the plot line and are not automatically scaled.
+Unlike specifying the actual unit associated with the metric, the prefix and suffix are text fields that you add to clarify the chart display. They don't have any intrinsic relationship to the metric on the plot line and are not automatically scaled.
 
 Using display units can also provide information that would not otherwise be apparent.
 

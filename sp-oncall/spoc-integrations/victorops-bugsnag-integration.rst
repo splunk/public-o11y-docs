@@ -6,7 +6,7 @@
 
 [/ht_toggle]
 
-Bugsnag’s cross platform error monitoring automatically detects crashes
+Bugsnag's cross platform error monitoring automatically detects crashes
 in your applications, letting you ship with confidence.
 
 The following will guide you through the steps needed to send you

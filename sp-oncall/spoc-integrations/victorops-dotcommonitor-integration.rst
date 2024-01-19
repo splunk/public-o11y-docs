@@ -270,7 +270,7 @@ integration.
 
 7.  Create or edit a Team and add the Users who should receive alerts.
     Add an escalation policy and please note that routing keys will
-    appear after you’ve completed the routing key
+    appear after you've completed the routing key
     configuration.\ |image5|
 
 8.  Add a routing key using the “Add Key”, named curl. Then add the
@@ -354,7 +354,7 @@ integration.
 
           <p class="p1">
 
-       Sample Custom Script file we’ve used in this showcase:
+       Sample Custom Script file we've used in this showcase:
 
        .. raw:: html
 
@@ -400,7 +400,7 @@ integration.
 12. Go back into your Splunk On-Call account and make sure that you are
     viewing the Timeline. Check if the alert has been received. Below is
     a screenshot showing that the alert has been received.
-    |image8|\ Congratulations! You’ve successfully sent your first alert
+    |image8|\ Congratulations! You've successfully sent your first alert
     from Dotcom monitor to Splunk On-Call!
 
 .. |image1| image:: images/DM-1-final-1.png

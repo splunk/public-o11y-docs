@@ -34,10 +34,10 @@ In SolarWinds
     Service API Endpoint*
 6.  In the **Body to POST**, copy/paste an applicable **Trigger Action**
     payload from below
-7.  For **Content Type** you’ll want to set it to \_“application/json\_”
+7.  For **Content Type** you'll want to set it to \_“application/json\_”
     and for **Authentication** you can leave it at “*None*”.
-8.  You can configure the rest of the settings however you’d like and
-    when you’re done be sure to save your changes.
+8.  You can configure the rest of the settings however you'd like and
+    when you're done be sure to save your changes.
 9.  Select **Next** to open the **Reset Action** tab, and again click
     to **Add Action**
 10. In the **Body to POST**, copy/paste the corresponding **Reset
@@ -136,11 +136,11 @@ Example Body Payloads
 ---------------------
 
 The below template payloads contain the required fields, though you may
-add additional fields as you wish. *Note that a ‘\\’ character cannot be
+add additional fields as you wish. *Note that a ‘\\' character cannot be
 user in the HTTP post. Instead use an SQL replace function in the
 SolarWinds Alert:*
 
-SQL: SELECT REPLACE (’’‘${Caption}’’‘,’\\‘,’ ’)}
+SQL: SELECT REPLACE (''‘${Caption}''‘,'\\‘,' ')}
 
 **Node is Down**
 
@@ -168,24 +168,24 @@ Trigger Action
 
 {
 “alert_rule”:“:math:`{N=Alerting;M=AlertName}",  "entity\_display\_name":"`\ {NodeName}
-:math:`{SQL: SELECT REPLACE ('''`\ {Caption}’’‘,’\\‘,’ ’)} has
+:math:`{SQL: SELECT REPLACE ('''`\ {Caption}''‘,'\\‘,' ')} has
 :math:`{VolumeSpaceAvailable} free",  "entity\_id":"`\ {N=Alerting;M=AlertObjectID}”,
 “host_name”:“:math:`{NodeName}",  "ip\_address":"`\ {Node.IP_Address}”,
 “message_type”:“CRITICAL”, “monitor_name”:“SolarWinds”,
 “monitoring_tool”:“SolarWinds”, “state_message”:“${NodeName}
-:math:`{SQL: SELECT REPLACE ('''`\ {Caption}’’‘,’\\‘,’ ’)} has
+:math:`{SQL: SELECT REPLACE ('''`\ {Caption}''‘,'\\‘,' ')} has
 ${VolumeSpaceAvailable} free” }
 
 Reset Action
 
 {
 “alert_rule”:“:math:`{N=Alerting;M=AlertName}",  "entity\_display\_name":"`\ {NodeName}
-:math:`{SQL: SELECT REPLACE ('''`\ {Caption}’’‘,’\\‘,’ ’)} has
+:math:`{SQL: SELECT REPLACE ('''`\ {Caption}''‘,'\\‘,' ')} has
 :math:`{VolumeSpaceAvailable} free",  "entity\_id":"`\ {N=Alerting;M=AlertObjectID}”,
 “host_name”:“:math:`{NodeName}",  "ip\_address":"`\ {Node.IP_Address}”,
 “message_type”:“RECOVERY”, “monitor_name”:“SolarWinds”,
 “monitoring_tool”:“SolarWinds”, “state_message”:“${NodeName}
-:math:`{SQL: SELECT REPLACE ('''`\ {Caption}’’‘,’\\‘,’ ’)} has
+:math:`{SQL: SELECT REPLACE ('''`\ {Caption}''‘,'\\‘,' ')} has
 ${VolumeSpaceAvailable} free” }
 
 **Component Based Alert**

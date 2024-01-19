@@ -1,6 +1,6 @@
 WhatsUp Gold is network monitoring reimagined with advanced
 visualization features for faster decisions, intuitive workflows for
-improved productivity and the industry’s most flexible licensing
+improved productivity and the industry's most flexible licensing
 approach for a superior return on your investment.  The following guide
 will walk you through this integration.
 

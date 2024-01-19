@@ -16,9 +16,9 @@ immediately send upon opening but rather on a one-minute interval. A
 single notification will then display the number of incidents the user
 is being paged for – rather than for each. The medium of the
 notification sent will align with whichever methods are specified within
-the user’s personal paging policy of which they are in. Furthermore, if
+the user's personal paging policy of which they are in. Furthermore, if
 no new incidents arrive and the triggered alerts remain unacknowledged
-the next page will follow the user’s paging policy.
+the next page will follow the user's paging policy.
 
 When notification aggregation is not triggered, multiple incidents will
 page traditionally exactly as outlined in the personal paging policy of
@@ -60,14 +60,14 @@ Below is an explanation of a few different scenarios.
 VictorOps aggregates alerts based on the **entity_id** field value
 within the incident payload. Below, in the Timeline, you will see
 incident #642 and four subsequent alerts tethered to it. If an Incident
-is in an *Ack’d* or *Critical* state while multiple alerts with the same
+is in an *Ack'd* or *Critical* state while multiple alerts with the same
 **entity_id** continue to arrive in the Timeline, then the alerts will
 roll up under the incident and only page out based on the original
 alert.
 
 .. image:: images/Timeline_-_EMStester.png
 
-This alert aggregation works with *Critical, Warning,* and *Ack’d*
+This alert aggregation works with *Critical, Warning,* and *Ack'd*
 message types as long the **entity_id** is shared between events. For
 more information regarding fields like **entity_id** and message_type
 please see our `Glossary of Fields documentation  found
@@ -76,6 +76,6 @@ here <https://help.victorops.com/knowledge-base/incident-fields-glossary/#glossa
 Please Note: Alerts aggregating under a *Warning* **message_type** will
 aggregate normally unless the **message_type** value of the alert
 changes status from *Warning* to *Critical*. If this value changes
-(escalates) in status from its source then any Ack’d incident will “Pop
+(escalates) in status from its source then any Ack'd incident will “Pop
 of of Ack” and return to a triggered state to start paging an on-call
 user.

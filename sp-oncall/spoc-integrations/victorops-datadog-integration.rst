@@ -48,11 +48,11 @@ desired routing key has been added make sure to save the configuration.
 
 Finally, add @victorops- to your Datadog metric monitors. To ensure a
 monitor will auto-resolve the corresponding VictorOps incident, make
-sure that @victorops is selected in the monitor’s notification step.
+sure that @victorops is selected in the monitor's notification step.
 
 .. image:: images/datadog-notify-@victorops.png
 
-Finally, check that VictorOps has installed properly and you’re done!
+Finally, check that VictorOps has installed properly and you're done!
 
 --------------
 

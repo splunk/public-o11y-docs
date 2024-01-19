@@ -61,7 +61,7 @@ secluded behind a firewall, see the *Nagios Alerts Via Email* section.
 ~~~~~~~~~~~~~~~~~
 
 Splunk On-Call alert processing is implemented as a Nagios contact that
-is added to a contact group (often ‘admins’, but that will depend on
+is added to a contact group (often ‘admins', but that will depend on
 your individual configuration).
 
 The contact mechanism for the Splunk On-Call contact is a simple shell
@@ -117,7 +117,7 @@ Depending on your system you may need to use sudo with these commands.
 
    dpkg -i <path_to_file>
 
-   If you don’t want to use dpkg you can also use
+   If you don't want to use dpkg you can also use
 
    sudo apt install <path_to_file>
 
@@ -141,7 +141,7 @@ If you install from the DEB or RPM packages, the installer will put the
 plugin files in the location /opt/victorops/nagios_plugin and create the
 logging and alert directories.
 
-After installation, you’ll need to move the victorops.cfg file to your
+After installation, you'll need to move the victorops.cfg file to your
 Nagios configuration directory, and modify both the nagios.cfg and
 victorops.cfg files.
 
@@ -181,12 +181,12 @@ VictorOps_Service_Settings (~line 40) service object definitions:
 
    -  This is your org slug. It can be found by accessing Splunk On-Call
       Timeline and then looking at the URL.  The \_VO_ORGANIZATION_ID
-      will be the string that appears after ‘/client/’.
+      will be the string that appears after ‘/client/'.
 
 -  \_VO_ORGANIZATION_KEY (~line 25 & 26)
 
    -  Can be found In Splunk On-Call by following **Integrations >>
-      Nagios**.  It will be listed as ‘Service API Key’
+      Nagios**.  It will be listed as ‘Service API Key'
 
 To generate a Service API Key, in Splunk On-Call select **Integrations
 >> Nagios.**
@@ -225,7 +225,7 @@ to this address. We recommend including an email-SMS gateway in this
 list. You may configure multiple addresses by separating them with
 spaces and enclosing the whole thing in single quotes:
 
-‘me@mydomain.com you@mydomain.com him@mydomain.com 3035551212@vtext.com’
+‘me@mydomain.com you@mydomain.com him@mydomain.com 3035551212@vtext.com'
 
 \_VO_MAX_SEND_DELAY (~line 36)
 
@@ -240,14 +240,14 @@ above.
 
 These four services will appear on the Nagios server in the Nagios
 dashboard. By default, notifications for these services are disabled. If
-you wish to enable alerts for them, simply edit their service
+you wish to enable alerts for them, edit their service
 definitions in victorops.cfg.
 
 **Splunk On-Call Alert Forwarder:**
 
 This is a process check for the long-running script described above. If
 this service goes critical, it will raise an alert via email (since
-normal alert forwarding can’t work when this service is down).
+normal alert forwarding can't work when this service is down).
 
 **Heartbeat:**
 
@@ -358,13 +358,12 @@ contact to specific services.*
 Nagios Alerts Via Email:
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-If your Nagios environment is restricted behind a firewall or if you
-simply would rather not install the plugin on your Nagios hosts, you can
+If your Nagios environment is restricted behind a firewall or if you  would rather not install the plugin on your Nagios hosts, you can
 still send Nagios alerts to Splunk On-Call via email. These alerts will
 show up in your timeline in a more limited format without the extended
 functionality provided by the plugin.
 
-To send Nagios alerts to Splunk On-Call, simply create a Nagios contact
+To send Nagios alerts to Splunk On-Call, create a Nagios contact
 using the sample configuration shown below, and add that contact to one
 of the Nagios contact groups that normally receives alerts from your
 system.
@@ -419,7 +418,7 @@ Centos 5 Timeouts:
 ~~~~~~~~~~~~~~~~~~
 
 To avoid timeouts when using Centos 5, you will need to link the timeout
-command to a directory that’s in the path. First, create the symlink:
+command to a directory that's in the path. First, create the symlink:
 
 ln -s /usr/share/doc/bash-3.2/scripts/timeout /usr/bin/timeout
 
@@ -520,10 +519,10 @@ Send Alerts to Splunk On-Call
 You should now be able to enable active checks on the “VictorOps Command
 Poll” service through the Nagios XI interface.
 
-If alerts still aren’t coming through, try copying this file
+If alerts still aren't coming through, try copying this file
 ``/opt/victorops/nagios_plugin/nagios_conf/victorops.cfg`` to:
 ``/usr/local/nagios/etc/cfgprep/victorops.cfg``
 
 If you are experiencing the error *Duplicate definition found for
-contact ‘VictorOps_Contact_Settings’* then remove the line
+contact ‘VictorOps_Contact_Settings'* then remove the line
 ``cfg_file=/usr/local/nagios/etc/victorops.cfg`` from nagios.cfg.

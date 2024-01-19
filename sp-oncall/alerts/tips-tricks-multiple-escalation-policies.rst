@@ -20,14 +20,14 @@ you find who is on-call faster and reduces scheduling headaches.
 
 --------------
 
-**Tip 2: Create ‘Waiting Rooms’ to Eliminate Middle-Of-The-Night Alerts from Incidents Known to Auto-Resolve**
+**Tip 2: Create ‘Waiting Rooms' to Eliminate Middle-Of-The-Night Alerts from Incidents Known to Auto-Resolve**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Many of our customers have alerts that auto-resolve within a few
 minutes, so why wake up at 2 a.m.? In this case, if an incident has not
 resolved after a period of time, only then should VictorOps page you.
 
-Here’s a trick to fix this:
+Here's a trick to fix this:
 
 1. Create a second escalation policy within your team called Waiting
    Room. Create a routing key (used to send alerts to the Waiting Room)
@@ -52,7 +52,7 @@ auto-resolve before waking you up.
 
 The second step of an escalation policy will not appear on your on-call
 calendar nor can overrides be scheduled for these shifts. If your
-company treats secondary on-call as ‘on-call,’ here’s a tip to get
+company treats secondary on-call as ‘on-call,' here's a tip to get
 VictorOps to surface secondary in the on-call calendar and enable
 scheduled overrides for these responsibilities.
 
@@ -71,7 +71,7 @@ scheduled overrides for these responsibilities.
 Scheduled Overrides are on an Escalation Policy basis, and you may
 request coverage for a single policy. When you schedule an override,
 Splunk On-Call will centralize and surface all the policies that would
-result in a page to you directly. If you don’t require coverage for a
-particular policy, simply don’t assign anyone to cover that specific
+result in a page to you directly. If you don't require coverage for a
+particular policy, don't assign anyone to cover that specific
 policy, or assign it to yourself (original user) and VictorOps will
 continue to alert you.

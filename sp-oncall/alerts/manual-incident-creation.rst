@@ -1,5 +1,15 @@
+.. _manual-incident:
+
+************************************************************************
+Using Webhooks with Splunk On-Call
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
+
 VictorOps offers the ability to manually trigger a new incident from
-within the application.  This option is available for both the web
+within the application. This option is available for both the web
 portal and mobile applications.
 
 **What you need to know about this feature:**
@@ -10,7 +20,7 @@ portal and mobile applications.
 -  A user must be a member of **at least one** **team** in order to
    directly page them via manual incident.
 -  Manual incidents trigger personal paging policies the same way that
-   any other incident does.  Unlike incidents created by monitoring
+   any other incident does. Unlike incidents created by monitoring
    tools, manual incidents can be routed to individuals, groups of
    individuals, or directly to an existing escalation policy.
 

@@ -14,7 +14,7 @@ deselected depending on the data desired.
 For each type of data, the script will check to see if the API response
 contains duplicate data, and if so, then the data is not indexed. For
 example, all users will be polled on the interval, however, if for some
-user A data looks the same, then it won’t be indexed; if the user
+user A data looks the same, then it won't be indexed; if the user
 updated their paging policy then the data will be indexed. This is
 important because it will ensure that the Splunk On-Call data is a
 *very* low amount.
@@ -179,11 +179,11 @@ sample JSON format.
 Things to verify, generally in order, if encountering problems
 
 1. Check that the API credentials are correct. Note, this is not the
-   ‘Splunk API key’ this is the public API key and id found under
+   ‘Splunk API key' this is the public API key and id found under
    Integrations >> API.
 2. Is the environment permitted to access the outside web? Ensure that
    from the host you can reach the Splunk On-Call API. Try running ‘ping
-   api.victorops.com’ to confirm the connection.
+   api.victorops.com' to confirm the connection.
 3. You can investigate further by inspecting the logs in
    $SPLUNK_HOME/var/log/splunk/ta_splunk_add_on_for_victorops_victorops\_<INSERT_INPUT_TYPE_HERE>.log.
 4. If polling incidents in an organization with more than 60 incidents
@@ -217,10 +217,10 @@ Splunk On-Call will send data to Splunk using an `HTTP Endpoint
 Collector <https://docs.splunk.com/Documentation/Splunk/9.0.5/Data/UsetheHTTPEventCollector>`__
 (HEC) depending upon your deployment a heavy forwarder may also be
 needed. To ensure communication from Splunk On-Call to Splunk, Splunk
-On-Call’s range of IP addresses should be whitelisted.
+On-Call's range of IP addresses should be whitelisted.
 
 *Tip: When setting up the HEC in Splunk, create a new Source Type for
-the type of data that you’re sending in. This allows for you to send in
+the type of data that you're sending in. This allows for you to send in
 and keep track of multiple different types of OnCall data like chats,
 incident action logs, different teams incidents, etc.*
 

@@ -4,7 +4,7 @@
 
 [/ht_toggle]
 
-Scout is Application Monitoring built for modern development teams. It’s
+Scout is Application Monitoring built for modern development teams. It's
 built to provide the fastest path to a slow line-of-code.
 
 **In On-Call**

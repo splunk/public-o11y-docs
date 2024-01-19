@@ -4,7 +4,7 @@
 
 **VictorOps Version Required:** **Starter, Growth,** or **Enterprise**
 
-**What you need to know:  Sentry’s real-time error tracking gives you
+**What you need to know:  Sentry's real-time error tracking gives you
 insight into production deployments and information to reproduce and fix
 crashes. This simple to set up integration sends all your Sentry alerts
 into the VictorOps timeline.**

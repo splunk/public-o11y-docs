@@ -39,7 +39,7 @@ Key** input.
 
 You are then able to test the integration.
 
-And you’re done!
+And you're done!
 
 **Note:**\ * VictorOps only works with Nagios notifications, BSM
 notifications are not currently supported.*

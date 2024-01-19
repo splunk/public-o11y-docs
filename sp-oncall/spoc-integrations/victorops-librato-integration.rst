@@ -37,7 +37,7 @@ Select “Services” in the left side bar, and then select
 **VictorOps**.\ |librato2|
 
 Configure the new VictorOps service by giving it a title, then enter
-your VictorOps Service API Key (that you’d copied earlier) and Routing
+your VictorOps Service API Key (that you'd copied earlier) and Routing
 key.\ |librato6|
 
 Hit “create service” and you are done!

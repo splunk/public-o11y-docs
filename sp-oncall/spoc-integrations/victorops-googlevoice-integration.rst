@@ -27,7 +27,7 @@ tab specifically for your Voice account.
 
    google3
 
-If you don’t have a number already, get one by selecting the *Get a
+If you don't have a number already, get one by selecting the *Get a
 Voice number* link.
 
 .. figure:: images/2-Google2.png
@@ -113,4 +113,4 @@ message. The transcription will appear in the **state_message** field.
 
    google11
 
-That’s it, you’re done!
+That's it, you're done!

@@ -40,8 +40,8 @@ Follow these steps:
    in the top left corner of the Azure Portal. You can equivalently
    follow the first couple steps
    in `this <https://docs.microsoft.com/en-us/azure/logic-apps/quickstart-create-first-logic-app-workflow>`__ documentation.
--  **Name the application** whatever you’d like, but preferably
-   ‘VictorOps’
+-  **Name the application** whatever you'd like, but preferably
+   ‘VictorOps'
 -  **Select** an existing **Resource Group** or create a new one
 -  For now, at least, check the box to pin the application to the
    dashboard
@@ -95,7 +95,7 @@ Select **HTTP - HTTP\ **
 **Alerts**
 
 In order to send requests to trigger the Logic App just made we can
-leverage the Alerting which is native to Azure’s Monitoring
+leverage the Alerting which is native to Azure's Monitoring
 functionality. Follow these steps:
 
 1. From the left menu pane, select **Monitoring**>> **Alerts** >> **New

@@ -20,7 +20,7 @@ to remediate site issues.
 -  Integrate monitoring and alerting tools in VictorOps to notify your
    team of incidents and communicate through Microsoft Teams and/or
    VictorOps to resolve issues
--  VictorOps’ incident timeline seamlessly integrates with Microsoft
+-  VictorOps' incident timeline seamlessly integrates with Microsoft
    Teams to provide an environment for system visibility and team
    collaboration
 

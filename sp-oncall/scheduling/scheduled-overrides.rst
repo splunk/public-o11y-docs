@@ -49,7 +49,7 @@ If only a particular escalation policy needs to be assigned and the original use
 Taking an Override
 ==========================
 
-If you are the user who will be covering someone's override, simply select :guilabel:`Take` next to the escalation policy which you are to cover.
+If you are the user who will be covering someone's override, select :guilabel:`Take` next to the escalation policy which you are to cover.
 
 .. image:: /_images/spoc/override4.png
     :width: 100%

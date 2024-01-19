@@ -33,14 +33,14 @@ On-Call** as the type.
 Give the webhook a name and specify your trigger or triggers.  In the
 “send request to” box for each trigger, replace the default
 *https://alert.victorops.com/integrations/<<YOUR_VICTOROPS_REST_ENDPOINT>>*
-with the URL you’d previously copied.
+with the URL you'd previously copied.
 
 On each trigger, also replace the trailing $routing_key value with the
-Splunk On-Call routing key you’d like this webhook to hit.  For more
+Splunk On-Call routing key you'd like this webhook to hit.  For more
 information on routing keys, see `this
 article. <https://help.victorops.com/knowledge-base/routing-keys/>`__
 
-You’re welcome to leave the payloads at their default values, or if you
+You're welcome to leave the payloads at their default values, or if you
 find it more appropriate, replace the default variables with ones more
 catered towards your use case.
 

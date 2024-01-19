@@ -3,7 +3,7 @@ numbers and short code. You may add these numbers to your contacts in
 the Mobile App for both
 `Android <https://help.victorops.com/knowledge-base/android-devices-victorops/>`__
 and `iOS <https://help.victorops.com/knowledge-base/ios-application/>`__
-devices by simply navigating to *Settings >> Help and Support >>* *Add
+devices by navigating to *Settings >> Help and Support >>* *Add
 VictorOps to Your Contacts:*
 
 .. image:: images/Add-Contacts-Android-1.png

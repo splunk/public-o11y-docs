@@ -14,7 +14,7 @@ address Lita with timeline chat messages in the usual way:
 You may install LitaBot according to these instructions:
 https://github.com/civichacker/lita-victorops
 
-Add lita-victorops to your Lita instance’s Gemfile:
+Add lita-victorops to your Lita instance's Gemfile:
 
 gem “lita-victorops”
 
@@ -31,6 +31,6 @@ gem “lita-victorops”
 ` <https://github.com/civichacker/lita-victorops#example>`__\ Example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Lita.configure do \|config\| config.robot.mention_name = ‘lita’
+Lita.configure do \|config\| config.robot.mention_name = ‘lita'
 config.robot.adapter = “victorops” config.adapters.victorops.token =
-ENV[‘VICTOROPS_TOKEN’] end
+ENV[‘VICTOROPS_TOKEN'] end

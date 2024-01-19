@@ -22,9 +22,9 @@ ignored.  This feature allows admins to configure the amount of time an
 incident can sit in an acknowledged state before it is automatically
 re-triggered.
 
-Simply check the box and select a time-frame and any incidents that have
+Check the box and select a time-frame and any incidents that have
 been acknowledged but unresolved for that time-frame will automatically
-be re-triggered.  The incident will return to a triggered (un’acked)
+be re-triggered.  The incident will return to a triggered (un'acked)
 state and start again at the beginning of the escalation policy for the
 team that received the incident initially.
 

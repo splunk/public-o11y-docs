@@ -72,7 +72,7 @@ Configure in Elasticsearch Watcher
 
 From the command line, verify that Watcher is running on your server:
 
-curl -XGET ‘http://localhost:9200/\_watcher/stats?pretty’
+curl -XGET ‘http://localhost:9200/\_watcher/stats?pretty'
 
 You should get a response showing ``"watcher_state": "started"``:
 
@@ -91,7 +91,7 @@ to replace ``$service_api_key`` with your **Service API Key** from the
 key <https://help.victorops.com/knowledge-base/routing-keys/>`__ you
 intend to use.
 
-curl -XPUT ‘http://localhost:9200/\_watcher/watch/cluster_health_watch’
+curl -XPUT ‘http://localhost:9200/\_watcher/watch/cluster_health_watch'
 -d ‘{ “trigger” : { “schedule” : { “interval” : “60s” } }, “input” : {
 “http” : { “request” : { “host” : “localhost”, “port” : 9200, “path” :
 “/\_cluster/health” } } }, “condition” : { “always” : {} }, “actions” :
@@ -104,7 +104,7 @@ curl -XPUT ‘http://localhost:9200/\_watcher/watch/cluster_health_watch’
 \\”{{ctx.watch_id}}\\“,\\”state_message\\“:
 \\”{{ctx.watch_id}}\\“,\\”elastic_watcher_payload\\“:
 {{#toJson}}ctx.payload{{/toJson}} }”, “headers” : {“Content-type”:
-“application/json”} } } } }’
+“application/json”} } } } }'
 
 The “actions” section of the JSON object configures Watcher to send
 alerts to Splunk On-Call, the rest of the object is where you configure

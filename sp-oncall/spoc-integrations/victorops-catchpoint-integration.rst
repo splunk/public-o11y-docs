@@ -53,20 +53,20 @@ click *Settings>> Routing Keys*)
 5) Paste the following code in the *Template* section:
 
 {
-“message_type”:“:math:`{switch('`\ {notificationLevelId}‘,’0’,‘warning’,‘1’,‘critical’,‘2’,‘recovery’,‘3’,‘recovery’)}”,
+“message_type”:“:math:`{switch('`\ {notificationLevelId}‘,'0',‘warning',‘1',‘critical',‘2',‘recovery',‘3',‘recovery')}”,
 “monitoring_tool”: “Catchpoint”, “entity_display_name”: “Catchpoint
 Alert for ${testName} on node :math:`{nodeDetails(`\ {nodeName})}”,
 “entity_id”: “:math:`{testId}\_`\ {AlertInitialTriggerDateUtcEpoch}”,
 “state_message”: “Alert Type
 ID-:math:`{alertTypeId}, Test Type ID-`\ {testTypeId},
-Node-:math:`{nodeDetails('`\ {nodeName}’)}, Product-
+Node-:math:`{nodeDetails('`\ {nodeName}')}, Product-
 :math:`{productId}, Test\_url-`\ {testUrl}” }
 
-6) Select your newly created template, hit *Save,* and you’re done!
+6) Select your newly created template, hit *Save,* and you're done!
 
 .. image:: images/Screenshot-2017-05-18-15.43.31.png
 
-Also, if you’re looking for additional variables to add to your payload,
+Also, if you're looking for additional variables to add to your payload,
 please seek out the Alert Webhook Macros in `the support section of the
 Catchpoint platform <https://support.catchpoint.com/>`__. Please note,
 you may add as many variables as you want, but customizing the

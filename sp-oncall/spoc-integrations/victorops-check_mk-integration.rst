@@ -35,7 +35,7 @@ Configuration in CheckMK
 
 .. image:: images/0checkmk.png
 
-Visit `CheckMK’s
+Visit `CheckMK's
 documentation <https://docs.checkmk.com/latest/en/notifications_victorops.html>`__
 for more information on integrating and testing.
 
@@ -58,7 +58,7 @@ Depending on your system you may need to use sudo with these commands.
 
    dpkg -i <path_to_file>
 
-   If you don’t want to use dpkg you can also use
+   If you don't want to use dpkg you can also use
 
    sudo apt install <path_to_file>
 

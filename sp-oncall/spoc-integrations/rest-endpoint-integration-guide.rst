@@ -140,7 +140,7 @@ You can also call the endpoint using cURL commands. For example:
 
    curl -X POST -d ‘{“entity_id”:“ID of the
    incident”,“message_type”:“critical”,“state_message”:“hi, this is some
-   state message.”}’
+   state message.”}'
    https://alert.Splunk On-Call.com/integrations/generic/20131114/alert/[YOUR_REST_ENDPOINT_KEY]/[ROUTING_KEY_HERE]
 
 Annotations

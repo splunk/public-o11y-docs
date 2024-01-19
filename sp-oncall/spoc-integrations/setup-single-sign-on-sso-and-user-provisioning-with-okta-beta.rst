@@ -1,11 +1,11 @@
 **Disclaimer**
 --------------
 
-This documentation is subject to Splunk’s `Websites Terms and Conditions
+This documentation is subject to Splunk's `Websites Terms and Conditions
 of Use <https://www.splunk.com/en_us/legal/terms/terms-of-use.html>`__.
 Please be advised that using this integration is permitted subject to
 your obligations, including data privacy obligations, under your
-agreement with Splunk and Splunk’s Privacy Policy.
+agreement with Splunk and Splunk's Privacy Policy.
 
 This is a beta release and may contain defects or deficiencies. Please
 use it at your own risk. Splunk disclaims any and all warranties for
@@ -64,7 +64,7 @@ The following provisioning features are supported:
 
 -  Push User Deactivation
 
-   -  Deactivating the user or disabling the user’s access to the
+   -  Deactivating the user or disabling the user's access to the
       VictorOps (Beta application through Okta will deactivate the user
       in Splunk On-Call.
    -  Note: For this scenario, deactivating a user means removing the
@@ -258,7 +258,7 @@ Okta requests to deactivate user from Splunk On-Call are handled as
 follows:
 
 **For Users to be removed who are part of On-call rotations, Escalation
-Policies or User is overriding another user’s on-call in Scheduled
+Policies or User is overriding another user's on-call in Scheduled
 Overrides**
 
 1. Find all the teams the user is part of or teams in which the user
@@ -310,7 +310,7 @@ Troubleshooting
 
    -  Updates to user profile attributes in Splunk On-Call, including
       username, are currently not supported. If updating a certain
-      user’s profile is really important, a workaround is to delete the
+      user's profile is really important, a workaround is to delete the
       user from Okta. And then create a new user in Okta and assign to
       the Splunk On-Call application. This will result in a new user
       being created in Splunk On-Call with the desired user profile

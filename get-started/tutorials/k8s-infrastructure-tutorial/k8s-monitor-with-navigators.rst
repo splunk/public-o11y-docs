@@ -12,9 +12,9 @@ Prerequisites
 
 Navigators appear only if Splunk Infrastructure Monitoring is receiving data from your source.
 
-For example, even if a guided setup you used in :ref:`install-otel-k8s` or in this task provided confirmation of a valid connection, the navigators don’t display unless your host, Kubernetes cluster, or cloud provider service is actively sending data to Splunk Infrastructure Monitoring.
+For example, even if a guided setup you used in :ref:`install-otel-k8s` or in this task provided confirmation of a valid connection, the navigators don't display unless your host, Kubernetes cluster, or cloud provider service is actively sending data to Splunk Infrastructure Monitoring.
 
-If you don’t see a navigator after 15 minutes of making a valid connection, check your source to ensure that it is generating data. For example, ensure that your host, cluster, or service is being used in a way that generates data that it can send to Splunk Infrastructure Monitoring.
+If you don't see a navigator after 15 minutes of making a valid connection, check your source to ensure that it is generating data. For example, ensure that your host, cluster, or service is being used in a way that generates data that it can send to Splunk Infrastructure Monitoring.
 
 Tips for working with navigators
 ----------------------------------------------------------------
@@ -25,7 +25,7 @@ Using charts, you can view details about your metrics and visualize metric time 
 
 * Hover over a chart to see details about specific metric time series.
 * Select within a chart to see the data table for a given time period.
-* Select a chart title in the top left of a chart to display the full chart along with more chart options, such as a plot editor and the ability to change the chart’s visualization type to area, column, or histogram.
+* Select a chart title in the top left of a chart to display the full chart along with more chart options, such as a plot editor and the ability to change the chart's visualization type to area, column, or histogram.
 
 * Every chart has a :guilabel:`Chart Actions` menu. Select the more (|more|) icon in the upper right of a chart to open the menu and view available actions. For example, you can share the chart, download it as an image, or export it as a comma-separated values (CSV) file.
 

@@ -35,7 +35,7 @@ stream \|alert() .victorOps()
 Alert will be sent to VictorOps with the routing_key set to
 “Another_route”:
 
-stream \|alert() .victorOps() .routingKey(‘Another_route’)
+stream \|alert() .victorOps() .routingKey(‘Another_route')
 
 If you want to send all alerts to VictorOps without explicitly stating
 it in the TICKscript, then set “global” to ``true`` in the “[victorops]”

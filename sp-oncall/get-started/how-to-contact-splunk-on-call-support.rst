@@ -14,9 +14,9 @@ VictorOps)** Support:
    Splunk Support Portal: https://login.splunk.com/ This path requires
    that you log into the Splunk Support Portal, which is a different
    login than the Splunk On-Call product login. If this is the first
-   time you’ve accessed the portal, please follow the directions
+   time you've accessed the portal, please follow the directions
    outlined below.
-3. **Call Center:** If you don’t have access to your On-Call instance or
+3. **Call Center:** If you don't have access to your On-Call instance or
    the Support Portal, please `call our hotline to be routed to On-Call
    Support <https://www.splunk.com/en_us/about-splunk/contact-us.html#customer-support>`__.
    This path will require you to specify that your question is for the
@@ -26,7 +26,7 @@ VictorOps)** Support:
 Splunk Support Portal for the first time, `you will need to create a new
 Splunk
 login <https://www.splunk.com/en_us/page/sign_up?redirecturl=https%3A%2F%2Fwww.splunk.com%2Fen_us>`__.
-It’s an easy process, and you can take that action now:
+It's an easy process, and you can take that action now:
 
 1. Visit the `Splunk Support Portal <https://login.splunk.com/>`__ 
 2. Select “sign up”
@@ -53,7 +53,7 @@ FAQ
    1. If you do not have an option to open a case in the support portal,
       please reach out via Live Chat in the `Splunk On-Call
       portal <https://portal.victorops.com/membership/?redirectTo=https%3A%2F%2Fportal.victorops.com%2Fclient%2Fvictorops#/>`__.
-      If you don’t have access to your On-Call instance, please `call
+      If you don't have access to your On-Call instance, please `call
       our hotline to be routed to On-Call
       Support <https://www.splunk.com/en_us/about-splunk/contact-us.html#customer-support>`__.
 

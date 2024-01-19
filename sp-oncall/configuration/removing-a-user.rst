@@ -23,13 +23,13 @@ API.
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Global Admins or Team Admins of the team are able to invite users to a
-team by selecting “Invite User” on the team’s page.
+team by selecting “Invite User” on the team's page.
 
 **Adding Users to a Shift**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once a rotation has been created with one or more shifts, users can be
-added to each shift by selecting the people icon next to the shift’s
+added to each shift by selecting the people icon next to the shift's
 name.
 
 **NOTE:** Users must be apart of the team before they are able to be
@@ -79,8 +79,8 @@ name and select to the “x”
 **Removing a User from a Team**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-On the team’s page under the *Users* tab, a trash icon next to the
-user’s name will delete them from the team.
+On the team's page under the *Users* tab, a trash icon next to the
+user's name will delete them from the team.
 
 As a fail-safe, when a user is being removed from a team, a replacement
 user is required to fill any holes the user being removed will open up.

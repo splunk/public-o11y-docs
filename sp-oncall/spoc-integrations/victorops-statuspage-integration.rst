@@ -48,7 +48,7 @@ After doing so, select your proper StatusPage.io ID from the dropdown:
 
 .. image:: images/2.-Select-page-ID.png
 
-And that’s it! Now when you go back into the timeline you will see the
+And that's it! Now when you go back into the timeline you will see the
 StatusPage.io symbol in the upper right-hand corner of the UI.
 
 .. image:: images/3.-SPIO-Icon-1.png

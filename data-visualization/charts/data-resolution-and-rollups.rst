@@ -225,7 +225,7 @@ When you apply analytics functions to a chart, you change the meaning of the dat
 Rollup functions are always applied to the data first and affect the data before
 Observability Cloud applies the analytics functions.
 
-.. note:: The "Average" rollup type and the "Mean" analytics function both calculate an average; they simply have different names.
+.. note:: The "Average" rollup type and the "Mean" analytics function both calculate an average; they have different names.
 
 When you interpret a chart that has both rollups and analytics functions:
 

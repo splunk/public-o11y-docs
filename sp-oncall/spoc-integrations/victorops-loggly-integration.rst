@@ -20,7 +20,7 @@ Configuration Steps
 
 -  Go to the **Users** tab and select **Add New**. |loggly3|
 -  Name the user whatever you want (VictorOps Alerts in example) and
-   paste the Email address you generated in as the user’s **Email
+   paste the Email address you generated in as the user's **Email
    Address** then presses submit\ |loggly4|
 -  Go to your **Alerts** and either edit an existing alert or create a
    new one. |loggly5|

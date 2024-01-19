@@ -29,9 +29,9 @@ the (+) icon in the upper right hand corner of the screen.
 
  
 
-Next, you’ll be prompted to choose the timezone for which the override
+Next, you'll be prompted to choose the timezone for which the override
 is to take place, the start time and the end time. Make sure to select
-“Create” when you’re ready to schedule your override.
+“Create” when you're ready to schedule your override.
 
 .. image:: images/iOS-Calendar-Override2@2x.png
 
@@ -47,7 +47,7 @@ well as details below indicating who picked up each shift.
 .. image:: images/iOS-Calendar-Overrides@2x.png
 
 A blue bar will NOT appear unless someone has been assigned to your
-scheduled override. Below the calendar, under ‘Schedule Overrides’, when
+scheduled override. Below the calendar, under ‘Schedule Overrides', when
 your override has yet to be re-assigned you will see an empty blue
 circle for the unassigned override.
 
@@ -118,7 +118,7 @@ well as details below indicating who picked up each shift.
 .. image:: images/Android-Calendar5@2x-1.png
 
 A blue bar will NOT appear unless someone has been assigned to your
-scheduled override. Below the calendar, under ‘Schedule Overrides’, when
+scheduled override. Below the calendar, under ‘Schedule Overrides', when
 your override has yet to be re-assigned you will see an empty blue
 circle for the unassigned override.
 

@@ -56,8 +56,8 @@ applied to alerts that you do not wish to alter.  This problem can be
 solved by using a sequence of sequential rules to limit the scope of the
 wildcard matching condition.
 
-For example, let’s say we want to catch the word “staging” in the
-entity_id field and convert those alerts to INFO alerts so we don’t
+For example, let's say we want to catch the word “staging” in the
+entity_id field and convert those alerts to INFO alerts so we don't
 create an incident and notify anyone at 3:00 AM for a problem in a
 staging environment.  However, there are some cases where you *do* want
 to create an incident for the staging environment, so creating a single

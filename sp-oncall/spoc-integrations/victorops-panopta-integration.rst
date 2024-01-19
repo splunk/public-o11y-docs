@@ -35,7 +35,7 @@ Integrations tab.
 
 .. image:: images/New_VictorOps_Integration_-_Google_Docs.png
 
-There is a Webhooks integration you’ll want to select to get started
+There is a Webhooks integration you'll want to select to get started
 with your VictorOps integration.
 
 .. image:: images/New_VictorOps_Integration_-_Google_Docs-1.png

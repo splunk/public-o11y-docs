@@ -91,7 +91,7 @@ Emergency Bypass
 
 You have the option to set Splunk On-Call as an Emergency Bypass
 contact. This will allow the Splunk On-Call contact to contact you when
-you’re in *Do Not Disturb*, without adding the contact as a favorite.
+you're in *Do Not Disturb*, without adding the contact as a favorite.
 
 To add Splunk On-Call as an Emergency Bypass contact, go to Contacts >>
 your Splunk On-Call contact >> Text Tone >> Toggle Emergency Bypass
@@ -140,7 +140,7 @@ and later. 
    select from
 -  For iPhone 6s and later, press hard to activate the 3D touch feature
    and reveal all of the actions and options you can take
--  After you have acknowledged an incident, you’ll receive a success
+-  After you have acknowledged an incident, you'll receive a success
    notification confirming that your acknowledgment was successful
 
  
@@ -167,7 +167,7 @@ iOS App Troubleshooting
 
 -  Swipe from **right to lef**\ t with **two fingers** and this window
    will appear
--  Select ‘**Report a Bug**’ or ‘**Suggest an Improvement**’
+-  Select ‘**Report a Bug**' or ‘**Suggest an Improvement**'
 -  From there you will be prompted in another screen where you can add
    more information to your report, take a screen recording, screenshot,
    or attach a screenshot from your Camera Roll

@@ -30,6 +30,6 @@ select *Notifications* >> *Integrations* >> *New Profile*
 After clicking on *New Profile*, a screen will appear. Select VictorOps
 as the provider type. Add the API Key from the VictorOps integration
 page, and add the desired routing key. |image1|\ Select **Save** and
-you’re done!
+you're done!
 
 .. |image1| image:: images/Uptime-slide-2.png

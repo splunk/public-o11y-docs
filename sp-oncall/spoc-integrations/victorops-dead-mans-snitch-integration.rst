@@ -1,20 +1,20 @@
-The Dead Man’s Snitch integration allows your snitches to automatically
+The Dead Man's Snitch integration allows your snitches to automatically
 trigger incidents within On-Call.
 
 Enable the Integration
 ======================
 
-In Splunk On-Call, click on *Integrations >>  Dead Man’s Snitch.*
+In Splunk On-Call, click on *Integrations >>  Dead Man's Snitch.*
 
 Click the blue *Enable* button to generate your endpoint destination
 URL. Copy the Service API endpoint to your clipboard.
 
 .. image:: images/kb-dms-copy-API-endpoint.png
 
-In Dead Man’s Snitch
+In Dead Man's Snitch
 ====================
 
-In Dead Man’s Snitch, navigate to the integrations page and click to add
+In Dead Man's Snitch, navigate to the integrations page and click to add
 VictorOps.
 
 .. image:: images/kb-dms-integrations-add-vo.png
@@ -27,7 +27,7 @@ example, assuming a ``$routing_key`` value of “database”:
 
 .. image:: images/kb-dms-integration-url.png
 
-You’ll be redirected back to the integrations page where your routing
+You'll be redirected back to the integrations page where your routing
 key appears as a Configured Integration. Snitches will now automatically
 trigger incidents within On-Call. Test the integration with fake
 incidents to make sure it works.

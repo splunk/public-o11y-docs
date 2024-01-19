@@ -61,7 +61,7 @@ Android
 
 These screenshots show the general steps for Android 9 devices (some
 device specific instructions are listed below if the battery settings
-appear slightly different on a particular user’s device/OS)
+appear slightly different on a particular user's device/OS)
 
 From your Android Settings, find the Splunk On-Call Mobile Application
 
@@ -71,12 +71,12 @@ From the Splunk On-Call App, please select *Advanced* >> *Battery*
 
 .. image:: images/Android-Battery-Saver-2@2x.png
 
-From *Battery usage* settings you’ll want *Battery optimization* >> *Not
+From *Battery usage* settings you'll want *Battery optimization* >> *Not
 optimized* >> *All apps*
 
 .. image:: images/Android-Battery-Saver-3@2x.png
 
-From here, you’ll **exempt** the VictorOps App from *Battery
+From here, you'll **exempt** the VictorOps App from *Battery
 optimization*. Select done.
 
 .. image:: images/Android-Battery-Saver-4@2x.png

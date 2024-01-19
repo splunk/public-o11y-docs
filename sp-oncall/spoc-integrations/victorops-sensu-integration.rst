@@ -14,13 +14,13 @@ relevant Sensu docs.
 **In VictorOps**
 ================
 
-Navigate to your VO instance’s Integrations page by
+Navigate to your VO instance's Integrations page by
 clicking *Integrations*. From the resulting list of integrations, select
 the Sensu integration.
 
-From here, click the ‘Enable Integration’ button to have a Sensu API
+From here, click the ‘Enable Integration' button to have a Sensu API
 Endpoint generated for you. Copy this Service API Endpoint to your
-clipboard, ensuring that your replace the ‘$routing_key’ piece at the
+clipboard, ensuring that your replace the ‘$routing_key' piece at the
 end of the API Endpoint to a valid routing_key. Alerts from this
 configuration will route through this key. For more information on
 routing_keys, please see `this Knowledge Base
@@ -55,16 +55,16 @@ resolves victorops incidents # # Released under the same terms as Sensu
 (the MIT license); see LICENSE # for details. # Downloaded from: #
 https://help.victorops.com/knowledge-base/victorops-sensu-integration/#
 
-require ‘rubygems’ if RUBY_VERSION < ‘1.9.0’ require ‘sensu-handler’
-require ‘uri’ require ‘net/http’ require ‘net/https’ require ‘json’
+require ‘rubygems' if RUBY_VERSION < ‘1.9.0' require ‘sensu-handler'
+require ‘uri' require ‘net/http' require ‘net/https' require ‘json'
 
 class VictorOps < Sensu::Handler def handle config =
-settings[‘victorops’] incident_key = @event[‘client’][‘name’] + ‘/’ +
-@event[‘check’][‘name’]
+settings[‘victorops'] incident_key = @event[‘client'][‘name'] + ‘/' +
+@event[‘check'][‘name']
 
-description = @event[‘check’][‘notification’] description \||=
-[@event[‘client’][‘name’], @event[‘check’][‘name’],
-@event[‘check’][‘output’]].join(’ : ‘) host = @event[’client’][‘name’]
+description = @event[‘check'][‘notification'] description \||=
+[@event[‘client'][‘name'], @event[‘check'][‘name'],
+@event[‘check'][‘output']].join(' : ‘) host = @event['client'][‘name']
 entity_id = incident_key state_message = description begin
 Timeout.timeout(10) do
 
@@ -110,8 +110,8 @@ Timeout.timeout(10) do
       end
     end
 
-rescue Timeout::Error puts ‘victorops – timed out while attempting to’ +
-@event[‘action’] + ’ a incident – ’ + incident_key end end end
+rescue Timeout::Error puts ‘victorops – timed out while attempting to' +
+@event[‘action'] + ' a incident – ' + incident_key end end end
 
 --------------
 

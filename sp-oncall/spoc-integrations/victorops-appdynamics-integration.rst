@@ -55,7 +55,7 @@ In AppDynamics
 
            victorops-alert.sh
 
-   If you don’t have custom.xml already, create one with the below xml
+   If you don't have custom.xml already, create one with the below xml
    content:``<custom-actions>``
 
    ::
@@ -95,7 +95,7 @@ In AppDynamics
    Now you are ready to use this extension as a custom action. In the
    AppDynamics UI, go to Alert & Respond ⇨ Actions. Click Create Action.
    Select *Custom Action* and click *OK*. In the drop-down menu, you can
-   find the action called ‘victorops-alert’.
+   find the action called ‘victorops-alert'.
 
 --------------
 
@@ -103,7 +103,7 @@ In AppDynamics
 ----------------
 
 AppDynamics gives you real-time insight from your apps using Application
-Performance Management–how they’re being used, how they’re performing,
+Performance Management–how they're being used, how they're performing,
 where they need help. The following guide will walk you through the
 Splunk On-Call integration with the AppDynamics SaaS-based model, if you
 are using the hosted solution please see the documentation here:

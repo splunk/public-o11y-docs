@@ -1,9 +1,9 @@
 About VictorOps and GitHub
 --------------------------
 
-VictorOps’s delivery insights endpoint integration
+VictorOps's delivery insights endpoint integration
 with `GitHub <https://github.com/>`__ ensures better visibility into
-development, delivery, and issues in production. You can simply send
+development, delivery, and issues in production. You can send
 pull request information from GitHub repositories directly into the
 VictorOps timeline where your team can collaborate further. Leverage the
 power of GitHub data with the actionable alerting and collaborative
@@ -37,7 +37,7 @@ In VictorOps, click on *Settings >> Alert Behavior >> Integrations* 
 
 .. image:: images/integrations.png
 
-Then you’ll want to find the Github Integration
+Then you'll want to find the Github Integration
 
  
 
@@ -53,7 +53,7 @@ application in GitHub.
 Connecting VictorOps in GitHub
 ------------------------------
 
-First you’ll want to sign-in.
+First you'll want to sign-in.
 
 .. figure:: images/Github-App-4@2x.png
    :alt: sign in to github to find victorops

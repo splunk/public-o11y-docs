@@ -50,7 +50,7 @@ locations in the app!
 
 -  
 
-   2) From the Calendar page click “\ **Add**\ ’
+   2) From the Calendar page click “\ **Add**\ '
 
 -  
 

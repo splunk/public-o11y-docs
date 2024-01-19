@@ -6,7 +6,7 @@ mp4=“https://help.victorops.com/wp-content/uploads/Mobile-Home-Screen.mp4”][
 
  
 
-Within the VictorOps Mobile App you’ll find on-call actions and
+Within the VictorOps Mobile App you'll find on-call actions and
 information at your fingertips. The Mobile App home page provides quick
 shortcuts to the information that is most relevant to you. Quickly
 access your incidents, your teams incidents, who is currently on-call,
@@ -21,8 +21,8 @@ Home Page
 your home page for fast access to your current on-call status.
 
 This status will also let you know when you are on-call till or when you
-are on-call next. “You’re On-Call” in blue when you are currently
-on-call and “You’re Not On-Call” in black when you are not currently
+are on-call next. “You're On-Call” in blue when you are currently
+on-call and “You're Not On-Call” in black when you are not currently
 on-call.
 
 **Incidents:** From the Mobile App Home Page you can quickly access your

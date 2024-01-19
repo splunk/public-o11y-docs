@@ -65,7 +65,7 @@ Formatting emails and handling incidents
 When using the email endpoint, the resulting behavior of the On-Call platform depends on the use of predefined keywords in the subject line of the email. You can use any of the following keywords:
 
 -  ``CRITICAL``: Opens a new incident, triggering whatever escalation policy you configured for the team receiving the incident. The patterns recognized are "critical" and "problem".
--  ``WARNING``: Adds an entry to the timeline, and can either create a new incident or simply show visually based on    your configuration at :guilabel:`Settings`, :guilabel:`Alert Configuration`. The patterns recognized are "warn" and "warning".
+-  ``WARNING``: Adds an entry to the timeline, and can either create a new incident or show visually based on    your configuration at :guilabel:`Settings`, :guilabel:`Alert Configuration`. The patterns recognized are "warn" and "warning".
 -  ``INFO``: Posts an informational event in the timeline, without creating an incident. Nobody gets paged. The patterns recognized are "info", "informational" and "information".
 -  ``ACKNOWLEDGEMENT``: Acknowledges an incident. The platform stops paging users. The patterns recognized are "acked", "acknowledge", "acknowledgement" and "acknowledged".
 -  ``RECOVERY``: Resolves an open incident. The platform will stop paging users. It is not necessary for an incident to be acknowledged before it can be resolved. The patterns recognized are "resolved", "recovered", "recovery", "ok", and "closed".

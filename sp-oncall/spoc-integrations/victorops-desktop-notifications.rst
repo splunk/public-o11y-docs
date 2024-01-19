@@ -100,7 +100,7 @@ block notifications from your VictorOps portal
 
 5. If you would like to enable, click *Allow Notifications*
 
-6. If you would like to disable, click *Don’t Allow*
+6. If you would like to disable, click *Don't Allow*
 
  
 

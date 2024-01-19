@@ -15,7 +15,7 @@ individual users, teams of users or escalation policies.
    will page and escalate in accordance with the steps indicated in the
    policy.
 -  You will want to ensure your team members have appropriately set up
-   their policies such that important incidents aren’t being routed to
+   their policies such that important incidents aren't being routed to
    email purgatory.
 
 **Web Portal**
@@ -32,13 +32,13 @@ Policies* and *Users* to reroute to.
 |image1| |image2|
 
 Selecting a User(s) to reroute to will invoke notifications according to
-that user’s Personal Paging Policy.
+that user's Personal Paging Policy.
 
 Selecting an *Escalation Policy* will cause the incident to be processed
 by that policy, which may or may not result an any users being notified
 immediately depending on the way the policy is configured.
 
-Once you have selected the appropriate users or policies, simply click
+Once you have selected the appropriate users or policies, click
 “Reroute”.
 
 **Mobile**

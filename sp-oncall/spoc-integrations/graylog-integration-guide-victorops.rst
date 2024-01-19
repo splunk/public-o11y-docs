@@ -29,14 +29,14 @@ Create VictorOps Notification
 Open the web UI for Graylog, by default this is set to
 http://127.0.0.1:9000. From there, login and go to **Alerts >>
 Notifications** and select **Create Notification**. Then, go ahead and
-give this notification a title and description that you’ll remember.
-You’ll then want to select **HTTP Notification** for notification type
+give this notification a title and description that you'll remember.
+You'll then want to select **HTTP Notification** for notification type
 and copy the **Service API Endpoint** from above into the **URL** field.
 
 .. image:: images/graylog1-2.png
 
 Put the appropriate routing key at the end of the url and be sure to add
-it to Graylog’s whitelisted URL’s if you have that enabled.
+it to Graylog's whitelisted URL's if you have that enabled.
 
 Next click **Execute Test Notification.** This should produce an info
 type alert on your timeline if everything is setup properly.
@@ -46,7 +46,7 @@ type alert on your timeline if everything is setup properly.
 Now your notification is all setup! Be sure to click **Create/Update**
 to save this notification.
 
-*Note: If you’d like Graylog to notify multiple routing keys, you will
+*Note: If you'd like Graylog to notify multiple routing keys, you will
 need to setup a new Notification for each routing key.*
 
  

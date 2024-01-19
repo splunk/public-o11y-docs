@@ -1,8 +1,8 @@
 Your Primary Paging Policy is executed when an incident is routed to you
-based on a team’s Escalation Policy. Learn more about `team escalation
+based on a team's Escalation Policy. Learn more about `team escalation
 policies <http://help.victorops.com/knowledge-base/team-escalation-policy/>`__ if
 you need help setting those up. Your Paging Policy is part of your
-personal profile and gives you control of how, and how often you’re
+personal profile and gives you control of how, and how often you're
 contacted when incidents are routed to you.
 
 Want to dive deeper into time-based paging policies? Learn more about
@@ -25,7 +25,7 @@ good paging policy is a diverse paging policy.
 Splunk On-Call offers **Push, Phone Call, SMS,** and **Email** contact
 methods.
 
-To utilize **Phone Call** or **SMS**, you’ll first need to verify your
+To utilize **Phone Call** or **SMS**, you'll first need to verify your
 phone number.  From your profile, click *Add Contact Method* and supply
 a label and number for your phone.  Next, click on the blue *Verify*
 button.  Enter the verification code you received on your phone, then
@@ -39,7 +39,7 @@ Configure Your Personal Paging Policy
 -------------------------------------
 
 When an incident is routed to you, either directly or via an escalation
-policy that you’re on-call for, you may determine how you’re contacted.
+policy that you're on-call for, you may determine how you're contacted.
 The steps in a personal paging policy will execute in order. The last
 step of the policy will repeat until the incident is acknowledged.
 
@@ -53,7 +53,7 @@ Primary Paging Policy
 ~~~~~~~~~~~~~~~~~~~~~
 
 Your primary paging policy is your default paging policy and it is not
-time-based. You can’t delete your primary paging policy. If an incident
+time-based. You can't delete your primary paging policy. If an incident
 is routed to you, Splunk On-Call will first check all of your custom
 paging policies to see if any of them match the current time. If none of
 the custom paging policies match the current time, then your primary
@@ -79,8 +79,8 @@ When the following box is checked under *Settings >> Alert
 Configuration*
 
 |The VictorOps Settings -> Alert Configuration page, with ‘Send a
-notification when incidents resolve’ setting checked off.| You will be
+notification when incidents resolve' setting checked off.| You will be
 notified of incidents you were paged for or took action on by what is
 configured in the Recovery Notification setting in your Profile.
 
-.. |The VictorOps Settings -> Alert Configuration page, with ‘Send a notification when incidents resolve’ setting checked off.| image:: images/Create-Custom-Paging-Policy_Notification-of-Resolves.png
+.. |The VictorOps Settings -> Alert Configuration page, with ‘Send a notification when incidents resolve' setting checked off.| image:: images/Create-Custom-Paging-Policy_Notification-of-Resolves.png

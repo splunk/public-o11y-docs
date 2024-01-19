@@ -34,7 +34,7 @@ this integration. Then select **Save**.
 
    drip5
 
-That’s it! You can now manage the integration from the previous
+That's it! You can now manage the integration from the previous
 integration tab.
 
 .. figure:: images/drip6.png

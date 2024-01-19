@@ -15,11 +15,11 @@ Auto-Pause and High Alert lag settings
 
 An alert rule transformation is a way to change alert data before it
 arrives at your VictorOps timeline. Typing the name of an existing field
-into the rules engine’s ‘alert field’ box, allows you to overwrite that
+into the rules engine's ‘alert field' box, allows you to overwrite that
 field with a new value of your choosing.
 
 Transformation actions can also add entirely new fields to an alert.
- This can be accomplished by simply typing the desired name of the field
+ This can be accomplished by typing the desired name of the field
 into the *alert field* section and assigning a value.
 
 --------------
@@ -49,7 +49,7 @@ Adding a new alert field
 
 In order to add a new field to an alert, you must first create a
 matching condition. For example, if every time a certain monitoring tool
-sends an alert you’d like to add a new field, you would would create a
+sends an alert you'd like to add a new field, you would would create a
 matching condition that states:
 
    **When** monitoring_tool **matches** your_tool **using** Wildcard
@@ -62,7 +62,7 @@ similar to:
 
    **Set** new_field_name **to** value of new field
 
-If you’d like the value of the new field to dynamically pull the
+If you'd like the value of the new field to dynamically pull the
 contents of an existing field, use this syntax
 **${{current_field_name}}**.
 
@@ -112,8 +112,8 @@ timezone differences from UTC.
 
 Below is an example of a rule that will only capture alerts that come in
 between 8 am and 12 pm UTC no matter the year, week, day of the week, or
-minutes of the hour. In the below case, we’re only wanting to capture
-alerts between 8 am and 12 pm UTC, for that reason, we’ve broken down
+minutes of the hour. In the below case, we're only wanting to capture
+alerts between 8 am and 12 pm UTC, for that reason, we've broken down
 the rule as follows:
 
    **When** Alert_received_time_utc **matches** .*T(0[8-9]|1[0-1]):.\*
@@ -129,7 +129,7 @@ By using `variable
 expansion <https://help.victorops.com/knowledge-base/transmogrifier-variable-expansion/>`__
 and transformations, you can alter alert fields. An example is changing
 the display name on an alert card. The display name field is called the
-**entity_display_name.** If you’d like to change this field to display
+**entity_display_name.** If you'd like to change this field to display
 another field, you would configure a rule like the following:
 
    **When** entity_display_name **matches** * **using** Wildcard

@@ -1,3 +1,13 @@
+.. _ack-back:
+
+************************************************************************
+Ack-Back for Nagios
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
+
 Enabling Ack-Back is an option for Nagios/Icinga (explained below) along
 with
 `Zabbix <https://help.victorops.com/knowledge-base/victorops-zabbix-integration/>`__. In
@@ -13,7 +23,7 @@ to enable this feature.
 
 Ack-Back is implemented as a Nagios service called “VictorOps Command
 Poll”. It retrieves acknowledgement commands from VictorOps for
-executing locally to Nagios. Enabling Ack-Back is simply a matter of
+executing locally to Nagios. Enabling Ack-Back is a matter of
 enabling active checks of the VictorOps Command Poll service.
 
 Find the service definition in the victorops.cfg file:

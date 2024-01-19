@@ -6,7 +6,7 @@
 
 [/ht_toggle]
 
-An **annotation** is simply a bit of information or link to a resource
+An **annotation** is a bit of information or link to a resource
 you can add to the payload of any incident that meets the matching
 condition for a rule. It can be a URL, an image URL, or a Note (just a
 blob of plain text). You can add multiple annotations to a single rule
@@ -78,7 +78,7 @@ Info*.
 Adding Annotations via Alert Fields
 -----------------------------------
 
-The Alert Rules Engine isn’t the only way annotations can be added to
+The Alert Rules Engine isn't the only way annotations can be added to
 alerts.  If alerts are being directed to a REST-style integration,
 annotations can be automatically created by including fields with the
 proper syntax in the alert payload.

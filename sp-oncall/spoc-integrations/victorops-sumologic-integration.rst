@@ -1,8 +1,8 @@
-**Sumo Logic** is the industry’s leading, secure and purpose-built
+**Sumo Logic** is the industry's leading, secure and purpose-built
 cloud-based machine data analytics service that leverages big data for
 real-time IT insights.
 
-This integration utilizes Sumo Logic’s “Connections” option to send
+This integration utilizes Sumo Logic's “Connections” option to send
 webhooks to the VictorOps REST endpoint, creating incidents in the
 timeline. The following guide will walk you through the steps needed to
 integrate the two platforms.
@@ -92,7 +92,7 @@ From the search screen select **Edit**.
 
    sumo8
 
-Select to **Edit this search’s schedule >**
+Select to **Edit this search's schedule >**
 
 .. figure:: images/Sumo9.png
    :alt: sumo9

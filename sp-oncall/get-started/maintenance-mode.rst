@@ -3,7 +3,7 @@ Maintenance Mode
 
 Maintenance Mode allows you to temporarily mute alerts in order to
 complete server maintenance, or other work, without disrupting members
-of your team with paging. We’ve also seen Maintenance Mode used to help
+of your team with paging. We've also seen Maintenance Mode used to help
 keep things quiet during alert storms.
 
 When you start a Maintenance Mode, you have the option to mute ALL
@@ -37,7 +37,7 @@ right corner within the incidents pane on the web UI.
    global Maintenance Mode or elect Mute select Routing Key(s) if you
    want to select one or more Routing Keys for which paging will be
    muted (without disrupting paging for other Routing Keys).
--  **Start Maintenance Mode:**  Once you’ve started Maintenance Mode,
+-  **Start Maintenance Mode:**  Once you've started Maintenance Mode,
    the modal will close and a banner will display across the top of your
    screen signaling to you that the feature is active. *NOTE: All
    members of your org who are on call will receive an email

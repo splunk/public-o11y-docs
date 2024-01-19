@@ -1,5 +1,5 @@
 Outlyer is a monitoring service for DevOps & Operations teams running
-Cloud, SaaS, Microservices and IoT deployments. Designed for today’s
+Cloud, SaaS, Microservices and IoT deployments. Designed for today's
 dynamic environments that need beyond cloud-scale monitoring, it makes
 monitoring effortless so you can concentrate on running a better service
 for your users.  The following guide will walk you through this

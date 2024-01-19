@@ -11,7 +11,7 @@ playbook automation, and case management capabilities to integrate your
 team, processes and tools together.
 
 The Splunk On-Call (formerly VictorOps) integration with Phantom makes
-use of our REST API and requires that you’ve implemented Phantom in your
+use of our REST API and requires that you've implemented Phantom in your
 environment. The following is a brief walkthrough on how to enable and
 configure the integration.
 

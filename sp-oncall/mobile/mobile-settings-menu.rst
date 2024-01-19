@@ -29,7 +29,7 @@ incident!
    selecting your name. From here you can view/edit your contact
    information and Paging Policy.
 -  **“Stop Notification on Logout”** - You will notice that this setting
-   is automatically toggled ON. This setting ensures that if you don’t
+   is automatically toggled ON. This setting ensures that if you don't
    miss a Splunk On-Call notification if you are unintentionally logged
    out.
 
@@ -47,7 +47,7 @@ phone numbers and shortcodes. You may add these numbers to your contacts
 in the Mobile App for both
 `Android <https://help.victorops.com/knowledge-base/android-devices-victorops/>`__
 and `iOS <https://help.victorops.com/knowledge-base/ios-application/>`__
-devices by simply navigating to *Menu >> Notifications >>* *Add Splunk
+devices by  navigating to *Menu >> Notifications >>* *Add Splunk
 On-Call to Contacts*
 
 .. image:: images/VO-Contact.png
@@ -76,11 +76,11 @@ iOS
 ~~~
 
 In the Splunk On-Call Mobile App, select the *Users* icon at the bottom
-of your iOS device’s screen. Then select the person icon from
+of your iOS device's screen. Then select the person icon from
 the *Users* page.
 
 From your User Profile page, you may select the *Paging Policies tab* to
-view your current configuration. If you’d like to change your paging
+view your current configuration. If you'd like to change your paging
 policy select *Edit*. Here you may delete, update, or add steps to
 your *Primary Paging Policy and Custom Paging Policies* from your iOS
 device. Once complete, be sure to save your changes!
@@ -94,7 +94,7 @@ is only a few clicks away. Select the *Users* icon at the bottom, then
 select the person from the resulting Users page. Finally, select
 the *Paging Policies* tab.
 
-Once you’ve accessed your *Paging Policies*, select *Edit.* Select the
-step you’d like to *Edit* or *Add Step*.
+Once you've accessed your *Paging Policies*, select *Edit.* Select the
+step you'd like to *Edit* or *Add Step*.
 
 .. |image1| image:: images/Settings.png

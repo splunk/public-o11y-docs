@@ -50,7 +50,7 @@ Date Range & Bucketing
 ----------------------
 
 See how incident trends impact your team on a daily, weekly, or monthly
-basis. It’s up to you how granular your scope can be.
+basis. It's up to you how granular your scope can be.
 
 .. image:: images/IFR-Display.jpg
 

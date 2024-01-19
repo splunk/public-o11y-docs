@@ -1,10 +1,19 @@
+.. _escalation-webhooks:
+
+************************************************************************
+Using Webhooks with Splunk On-Call
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
 Webhooks are a way to specify callbacks from Splunk On-Call to your own
-applications, and can be added to your teams’
+applications, and can be added to your teams'
 `escalation <https://help.victorops.com/knowledge-base/team-escalation-policy/>`__
 policies in order to receive incident details and process them however
 you wish. Some examples of how these could be used:
 
--  Automatically bounce a server process when there’s an incident
+-  Automatically bounce a server process when there's an incident
    related to it.
 -  Integrate VictorOps incidents into your own service dashboard.
 -  Keep a status page up-to-date with outages
@@ -37,11 +46,11 @@ application from Splunk On-Call complete these steps:
 
 1. Create a string with the URL of the webhook, exactly how it appears
    in Splunk On-Call; this includes trailing slashes etc…
-2. Sort the request’s **POST** variables alphabetically by key.
-3. Append each **POST** variable’s key and value to the URL string, with
+2. Sort the request's **POST** variables alphabetically by key.
+3. Append each **POST** variable's key and value to the URL string, with
    no delimiter.
 4. Create a binary hash of the resulting string with HMAC-SHA1, using
-   the webhook’s authentication key
+   the webhook's authentication key
 5. Base64 encode the binary signature
 6. Compare the output with the key X-VictorOps-Signature in the request
    - if it matches, the request originated from Splunk On-Call (formerly
@@ -62,7 +71,7 @@ Practices <https://www.ssllabs.com/projects/best-practices/index.html>`__.
 **Webhook Escalation Steps**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When a webhook is part of a team’s escalation policy, your service will
+When a webhook is part of a team's escalation policy, your service will
 receive an HTTP POST request when the incident is escalated. The request
 will contain the following information:
 

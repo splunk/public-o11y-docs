@@ -1,5 +1,12 @@
 .. _alert-rules-engine:
 
+************************************************************************
+The Splunk On-Call Alert Rules Engine
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
 
 What is the Splunk On-Call Alert Rules Engine?
 ==============================================

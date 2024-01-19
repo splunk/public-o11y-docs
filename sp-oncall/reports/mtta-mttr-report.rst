@@ -35,9 +35,9 @@ that are important to you.
 Track Response Metrics with Team Filtering
 ==========================================
 
-Track both your organization and team’s MTTA/MTTR and incident metrics
+Track both your organization and team's MTTA/MTTR and incident metrics
 by leveraging the team filter. These are directly related to the
-associated team’s escalation policies.
+associated team's escalation policies.
 
 .. image:: images/Team-Filter.jpg
 

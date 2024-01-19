@@ -1,6 +1,16 @@
-Sometimes alerts resolve themselves and you don’t need to be paged for
+.. _delayed-notifications:
+
+************************************************************************
+Configure delayed notifications
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
+
+Sometimes alerts resolve themselves and you don't need to be paged for
 them immediately. Other times, you get an alert that does not need
-immediate attention but you don’t want it to get lost.
+immediate attention but you don't want it to get lost.
 
 Using VictorOps escalation policies you can delay notifications from
 being sent, or use a re-route to postpone a notification to alert you

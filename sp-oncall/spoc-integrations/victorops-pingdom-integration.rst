@@ -99,7 +99,7 @@ In Pingdom (Email)
 Navigate to *Users and Teams* in the side-menu of Pingdom and select
 *Users*.
 
-In the upper right corner select ’\ *Add User’*. When creating the new
+In the upper right corner select '\ *Add User'*. When creating the new
 VictorOps user make sure to select, next to *Alert recipients*,
 *Contact; can only receive alerts*.
 
@@ -114,7 +114,7 @@ into the contact method. Save the user by clicking *Add User*.
 
 Now under Experience Monitoring, you can add your new contact to your
 desired checks. You can add the user to your desired checks by editing a
-check and selecting your user for ‘*Who to alert?*’. Once selected and
+check and selecting your user for ‘*Who to alert?*'. Once selected and
 saved, this check will alert your VictorOps email endpoint.
 
 .. image:: images/Screen-Shot-2019-10-09-at-12.38.25-PM.png

@@ -28,7 +28,7 @@ resulting **API key** and existing **API ID**.
    Marketplace header.
 3. If on Jira Server, search for the app \_Splunk On-Call for Jira
    Server\_\_.\_ If on Jira Cloud, search for the app *VictorOps for
-   Jira Cloud*.  Once you’ve located the right app, click *Install*.
+   Jira Cloud*.  Once you've located the right app, click *Install*.
 
 Once installation completes, click on **Configure**.
 
@@ -37,12 +37,12 @@ Configuring Application Settings
 
 1. Insert the API key you generated in VictorOps into the **API Key**
    field under the *Connect to your VictorOps Organization* section of
-   Jira’s *VictorOps for Jira Server Configuration* page.
+   Jira's *VictorOps for Jira Server Configuration* page.
 2. In the **API ID** field in the same section, insert the API ID you
    noted in the Splunk On-Call step above.
 3. Copy the Splunk On-Call Org ID displayed in your VictorOps URL
    (e.g. https://portal.victorops.com/client/%7BOrg_ID}) and paste it in
-   Jira’s **Organization ID** field. This is appended to the incident
+   Jira's **Organization ID** field. This is appended to the incident
    link within Jira tickets.
 4. Once all three fields have been populated, click **Connect**.  On
    success, a new entry will appear in the *Connected VictorOps
@@ -80,7 +80,7 @@ Default Incident Settings
 Incoming Issue Settings
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Splunk On-Call incidents created for a project’s *Default Team
+Splunk On-Call incidents created for a project's *Default Team
 Escalation Policy* will automatically generate Jira issues.  The default
 type for such issues (Bug, Epic, Story, or Task) is set by selecting the
 desired option from the **Issue type to use for incoming VictorOps
@@ -106,7 +106,7 @@ Currently, Splunk On-Call incidents can only be created from the Jira
 issue view.
 
 1. Click **More** > **Create VictorOps Incident**.  A preview of the
-   Splunk On-Call incident card will display, using the project’s
+   Splunk On-Call incident card will display, using the project's
    *Default Team Escalation Policy*. Note: For Jira Cloud, the More
    button is an ellipsis button.
 2. You may select a different escalation policy from the *VictorOps Team
@@ -118,7 +118,7 @@ issue view.
    This will then display a *Triggered* Splunk On-Call incident card
    under the *VictorOps* section in the lower right frame of the issue
    view.
-4. Click the incident card’s **Incident Details** link to display the
+4. Click the incident card's **Incident Details** link to display the
    incident in Splunk On-Call in a new browser tab.
 
 .. image:: images/4jira.png

@@ -6,7 +6,7 @@ SignalFx detectors into your Splunk On-Call timeline.
 
 You must be an administrator in both SignalFx and Splunk On-Call to
 establish this integration. Any SignalFx user can send alerts into
-Splunk On-Call once it’s been integrated.
+Splunk On-Call once it's been integrated.
 
 **In Splunk On-Call**
 ---------------------

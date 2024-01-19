@@ -15,7 +15,7 @@ incidents, and automatically update or look at related
 `Slack <https://help.victorops.com/knowledge-base/slack-integration-guide/>`__ channels
 or `ServiceNow <https://help.victorops.com/knowledge-base/servicenow-bi-directional-integration-guide/>`__ tickets
 – helping individual responders share applicable context with related
-stakeholders in the places they’re already working. In one single place,
+stakeholders in the places they're already working. In one single place,
 on-call responders can find instructions and tools such as runbooks,
 wikis, dashboards or post-incident review documentation to diagnose
 exactly how they can fix a problem. In that same place, you can reroute

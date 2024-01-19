@@ -25,7 +25,7 @@ Key <https://help.victorops.com/knowledge-base/routing-keys/>`__.
 **Alerts**
 
 In order to send requests to trigger an incident in VictorOps, we can
-leverage Alerting which is native to Azure’s Monitoring functionality.
+leverage Alerting which is native to Azure's Monitoring functionality.
 Follow these steps:
 
 1. Login to Azure portal. From the left menu pane,

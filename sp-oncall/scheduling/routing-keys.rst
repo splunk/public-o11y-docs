@@ -37,7 +37,7 @@ If the Multi-Responder box is checked for a routing key, an
 acknowledgement will be required from a member of each defined
 escalation policy before the incident becomes fully acknowledged.  To
 enable this on existing routing keys, hover your mouse over the routing
-key’s row and click on the pencil icon that appears.  You can now check
+key's row and click on the pencil icon that appears.  You can now check
 the multi-responder box and then the checkmark to save your changes.
 
 .. image:: images/Routing_Keys_-_cmillane-testing-scaled.jpg
@@ -77,7 +77,7 @@ Routing Key Tips & Tricks
    `filtering <https://help.victorops.com/knowledge-base/filtering-options/>`__
    the timeline a breeze. A filtered timeline is the easiest way to hone
    in on exclusively the events that are important to you.
-4. If it’s important that multiple groups acknowledge incidents for a
+4. If it's important that multiple groups acknowledge incidents for a
    certain routing key, make sure to check the *Multi-Responder* box on
-   the routing key’s row.  An acknowledgement will then be required from
+   the routing key's row.  An acknowledgement will then be required from
    each defined escalation policy.

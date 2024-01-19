@@ -1,5 +1,5 @@
 FusionReactor Cloud moves FusionReactor from being an on-premise monitor
-into a Hybrid monitoring solution - extending FR’s feature set to
+into a Hybrid monitoring solution - extending FR's feature set to
 enhance the monitoring, historic data analysis and alerting capability
 to new levels.  The following guide will walk you through this
 integration.

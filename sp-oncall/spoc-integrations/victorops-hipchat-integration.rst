@@ -79,7 +79,7 @@ Finally, click *Install*:
 
    hip9
 
-That’s it!
+That's it!
 
 The final step is to test the integration by posting an entry to the
 HipChat room you chose and make sure that it appears in your Splunk

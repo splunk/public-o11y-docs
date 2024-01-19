@@ -18,7 +18,7 @@ Full-Stack
 cloud users with access to the developer tools. The integration triggers
 an incident in VictorOps upon the creation of a case in Salesforce and
 then resolves it when the case is closed. This Splunk On-Call
-integration makes use of our REST API and requires that you’ve
+integration makes use of our REST API and requires that you've
 implemented Salesforce with your infrastructure.
 
 [/ht_toggle]
@@ -113,6 +113,6 @@ of VictorOpsTimeLine.caseToVictor which is in every class and trigger.
  
 
 Once you add all the Apex Classes and Triggers into your Salesforce
-Sandbox you can deploy it as a ‘change set’ or use the Force IDE. More
+Sandbox you can deploy it as a ‘change set' or use the Force IDE. More
 information regarding deploying Apex code to production can be found
 `here <https://www.salesforce.com/us/developer/docs/apexcode/Content/apex_deploying.htm>`__.

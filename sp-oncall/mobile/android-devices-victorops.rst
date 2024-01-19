@@ -7,7 +7,7 @@ supports the mobile app for Android versions 5 and below.
 **Note:** Using custom ROMs (or those provided by the device
 manufacturer) can alter the settings and functionality described herein.
 If your device utilizes a custom/manufacturer-furnished ROM, please
-refer to the owner’s manual (and/or other applicable literature)
+refer to the owner's manual (and/or other applicable literature)
 provided by the ROM developer.
 
 Best Practices
@@ -94,7 +94,7 @@ You can get there a couple of ways.
 1. You can try pulling down your System Tray, once you see the icons in
    the top, you should be able to see a DND icon. Press that icon for 2
    seconds, and it should redirect you to the settings.
-2. You can open your Android Settings and simply search for “Do Not
+2. You can open your Android Settings and search for “Do Not
    Disturb”.
 
 .. image:: images/Android-11-ss4.png
@@ -103,7 +103,7 @@ Once you open the DND Settings, you will want to check one thing:
 
 1. First, you will see the section “**What Can Interrupt DND**”. You can
    select **Apps** there. Then, make sure you see **Splunk On-Call**
-   there. If you don’t see it, simply press **Add Apps**, and find
+   there. If you don't see it, press **Add Apps**, and find
    Splunk On-Call there.
 
 .. image:: images/Android-11-ss5-1.png
@@ -143,10 +143,10 @@ highlighted below:
    seven events that generate notifications in VictorOps
 
 You may set unique notification settings for each event by clicking on
-that category. Let’s use **@Mentions** as the example. There are two
+that category. Let's use **@Mentions** as the example. There are two
 things to set:
 
-1. Change **Sound** to **None** (in the event you’re toggling the
+1. Change **Sound** to **None** (in the event you're toggling the
    Override system notification volume setting, as outlined below)
 2. Toggle on **Override Do Not Disturb**
 
@@ -247,7 +247,7 @@ VictorOps app to give it access.
    Toggle on do not disturb access
 
 **NOTE:** If Splunk On-Call does not appear in the list above, make sure
-that Splunk On-Call was installed **through phone’s main, top level
+that Splunk On-Call was installed **through phone's main, top level
 account** from Google Play (as opposed to a secondary or tertiary
 personal/work/enterprise account). If it the app has not been installed
 through the main account, VictorOps will not appear as an option.
@@ -292,7 +292,7 @@ highlighted below:
 .. image:: images/Android-Oreo-6.png
 
 You may set unique notification settings for each event by clicking on
-that category. Let’s use **@Mentions** as the example. There are four
+that category. Let's use **@Mentions** as the example. There are four
 things to set:
 
 1. Toggle **On** the main notification option
@@ -386,7 +386,7 @@ VictorOps app to give it access.
 
 **Push Notifications on Log Out**
 
-Splunk On-Call has a setting to make sure that you’ll receive
+Splunk On-Call has a setting to make sure that you'll receive
 notifications to your phone whether or not you are logged in. Within
 Splunk On-Call Settings, uncheck the box next to **Stop push
 notifications on logout**. This setting must be **disabled** to ensure
@@ -642,7 +642,7 @@ Other Features
 
 [ht_toggle title=“Ack from Locked Screen” id=“” class=“” style=“” ] One
 of the Splunk On-Call notification options is a push notification to the
-user’s Android device.  When a user is notified in this fashion, while
+user's Android device.  When a user is notified in this fashion, while
 their phone is idle (in lock-screen), they will have the option to
 acknowledge the alert directly from the lock-screen notification without
 requiring that they unlock the phone and access the application first.

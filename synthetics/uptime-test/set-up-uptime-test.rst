@@ -74,13 +74,13 @@ There are many reasons why you might want to configure advanced settings for you
 
 Custom properties 
 --------------------
-Custom properties are key-value pairs you can assign to dimensions of existing MTSes after ingest. Custom properties are single-valued and don’t support multiple values, like ``region:northamerica`` or ``environment:prod``.
+Custom properties are key-value pairs you can assign to dimensions of existing MTSes after ingest. Custom properties are single-valued and don't support multiple values, like ``region:northamerica`` or ``environment:prod``.
 
 Key requirements:
 
 * Keys must start with an uppercase or lowercase letter. Keys can't start with special characters or numbers. 
 * The remainder of the key can contain letters, numbers, underscores and hyphens.
-* Keys can’t be named test_id or test.
+* Keys can't be named test_id or test.
 * Key size can't exceed 128 characters. 
 
 

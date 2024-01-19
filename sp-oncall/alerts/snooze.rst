@@ -38,7 +38,7 @@ When Snooze Expires
 ===================
 
 When a snooze expires, the incident will begin paging the on-call user
-for the previously paged escalation policy. If the incident didn’t have
+for the previously paged escalation policy. If the incident didn't have
 a policy associated (example: the incident was created manually and sent
 to a single user), then that user will be paged.
 
@@ -47,8 +47,8 @@ to a single user), then that user will be paged.
 Changing Snooze Expiration Time
 ===============================
 
-If you need more time for a different task or have simply selected the
-wrong expiration time, it’s easy to modify the snooze. Click on the
+If you need more time for a different task or have selected the
+wrong expiration time, it's easy to modify the snooze. Click on the
 *Snoozed Until* link, as indicated in the image below.
 
 .. image:: images/Link-to-change-snooze.png
@@ -70,7 +70,7 @@ effectively end the snooze.
 Cancelling Snooze
 =================
 
-Didn’t mean to snooze? Simply `reroute the
+Didn't mean to snooze? `reroute the
 incident <https://help.victorops.com/knowledge-base/reroute-an-incident/>`__
 to **yourself** to cancel the snooze.
 
@@ -81,7 +81,7 @@ Who can Snooze?
 
 Anyone can snooze any triggered or acknowledged incident. If a user
 snoozes an incident that was previously acknowledged by someone else,
-that incident becomes snoozed/acknowledged in that user’s name.
+that incident becomes snoozed/acknowledged in that user's name.
 
 Only the user who snoozed an incident can modify the snooze time on the
 incident.

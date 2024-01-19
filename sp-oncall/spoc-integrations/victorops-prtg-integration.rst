@@ -33,14 +33,14 @@ Param( [string]\ :math:`API\_URL,  \[string\]`\ MessageType,
 Add-Type -AssemblyName System.Web.Extensions function ConvertTo-Json
 ([Object] $value) {
 [System.Web.Script.Serialization.JavaScriptSerializer] $jsSerializer =
-New-Object ‘System.Web.Script.Serialization.JavaScriptSerializer’
+New-Object ‘System.Web.Script.Serialization.JavaScriptSerializer'
 :math:`jsSerializer.Serialize(`\ value) }
 
 function setMessageType ([string]
 :math:`inputString) {  If (`\ inputString -like “Up\*”) { return
-‘recovery’ } elseif
+‘recovery' } elseif
 (:math:`inputString -like "Down\*")  {  return 'critical'  }  elseif (`\ inputString
--like “Warning\*”) { return ‘warning’ } else { return ‘info’ } }
+-like “Warning\*”) { return ‘warning' } else { return ‘info' } }
 
 :math:`postVOAlert = ConvertTo-Json(@{ message\_type = SetMessageType(`\ Status);
 entity_id = $DeviceId; entity_display_name = $Device; monitoring_tool =
@@ -53,13 +53,13 @@ entity_id = $DeviceId; entity_display_name = $Device; monitoring_tool =
 [Net.SecurityProtocolType]::Tls12 $postVOAlert \| Out-File -FilePath
 vo.log
 
-[System.Net.WebClient] $webclient = New-Object ‘System.Net.WebClient’
+[System.Net.WebClient] $webclient = New-Object ‘System.Net.WebClient'
 $webclient.Headers.Add(“Content-Type”,“application/json”)
 :math:`webclient.UploadData(`\ API_URL,
 [System.Text.Encoding]::UTF8.GetBytes($postVOAlert)) \| Out-File
 -FilePath vo.log -Append
 
-From your server’s desktop, open **PRTG Enterprise Console**.
+From your server's desktop, open **PRTG Enterprise Console**.
 
 .. image:: images/Screenshot__24__png__15_documents__15_total_pages_.png
 
@@ -90,9 +90,9 @@ then paste the following into the “Parameter” field replacing
 ``URL_to_notify`` with your “URL to notify” from the “In Splunk On-Call”
 section.
 
--API_URL ‘URL_to_notify’ -SiteName ‘%sitename’ -Device ‘%device’
--DeviceId ‘%deviceid’ -Name ‘%name’ -Status ‘%status’ -Down ‘%down’
--DateTime ‘%datetime’ -LinkDevice ‘%linkdevice’ -Message ‘%message’
+-API_URL ‘URL_to_notify' -SiteName ‘%sitename' -Device ‘%device'
+-DeviceId ‘%deviceid' -Name ‘%name' -Status ‘%status' -Down ‘%down'
+-DateTime ‘%datetime' -LinkDevice ‘%linkdevice' -Message ‘%message'
 
 .. image:: images/Screenshot__32__png__15_documents__15_total_pages_-2.png
 

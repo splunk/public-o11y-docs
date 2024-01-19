@@ -22,7 +22,7 @@ a ticket through the queue. This way, you can quickly respond to an
 incident, collaborate in real-time and find resolutions faster.
 
 The Splunk On-Call ServiceNow bidirectional integration maintains
-incident and ticket history but doesn’t distract you during a firefight.
+incident and ticket history but doesn't distract you during a firefight.
 Then, you can leverage this detailed incident history to conduct
 thorough post-incident reviews and ensure on-call incident management
 gets better over time. Eliminate context-switching by working in a
@@ -30,7 +30,7 @@ single application, focusing on the issue at hand and spending less time
 organizing tickets.
 
 Download the VictorOps application within the ServiceNow app store, and
-you’ll be up and running within minutes!
+you'll be up and running within minutes!
 
 **Automatically Update ServiceNow Tickets from Splunk On-Call**
 
@@ -130,7 +130,7 @@ paging behavior in Splunk On-Call.
 .. image:: images/Screen-Shot-2022-04-07-at-1.07.56-PM.png
 
 Select **Add Mapping** to see available choices. *For the ServiceNow
-Assignment Group, start typing in the ‘filter’ box to see the different
+Assignment Group, start typing in the ‘filter' box to see the different
 available options.*
 
 .. image:: images/Screen-Shot-2022-04-07-at-3.01.58-PM.png
@@ -197,7 +197,7 @@ resolved_by should automatically be handled by the integration mapping.
 **Mandatory / Custom Fields**
 
 To dynamically assign the value based on an alert field in Splunk
-On-Call, use the syntax ’\ **${{victorops_field_name}}**\ ‘. See `field
+On-Call, use the syntax '\ **${{victorops_field_name}}**\ ‘. See `field
 expansion <https://help.victorops.com/knowledge-base/transmogrifier-variable-expansion/>`__
 for more tips on dynamic assignment.
 
@@ -206,9 +206,9 @@ app, so mapping additional fields in ServiceNow requires additional
 configuration.
 
 1. In ServiceNow, use the filter navigator to search for
-   ‘**x_splu2_victorops_incident_import.list**’ and hit enter. It should
+   ‘**x_splu2_victorops_incident_import.list**' and hit enter. It should
    take you to a page where you will see a table with some empty fields.
-2. Hit **New** in the top, next to ‘Incident Reports’. This will show
+2. Hit **New** in the top, next to ‘Incident Reports'. This will show
    you all the current active fields.
 3. Click the **Menu** button at the top (three line icon), then look
    for **Configure** then **Form Layout**.
@@ -221,15 +221,15 @@ configuration.
       want to map. You will want to keep the same format that you see in
       the Selected list: VictorOps .
    2. Change the Field Length to **Medium**.
-   3. Click **Add.** You will see the field added to the ‘Selected’
+   3. Click **Add.** You will see the field added to the ‘Selected'
       column. Make sure you hit **Save** at the end.
 
 5. Now go back to the filter navigator to search for ‘**Transform
-   Maps**’, under System Import Sets. Then look for ‘**VictorOps
-   Incident**’, you can use the search box inside the Table Transform
+   Maps**', under System Import Sets. Then look for ‘**VictorOps
+   Incident**', you can use the search box inside the Table Transform
    Maps page.
 6. Open the **VictorOps Incident** table transform map, then scroll down
-   to ‘**Field Maps**’ and click the ‘**Mapping assist**’ link right on
+   to ‘**Field Maps**' and click the ‘**Mapping assist**' link right on
    top of the Field Maps tab. Note: if you get some error or pop up in
    the screen, you can hit cancel for now.
 7. In the Mapping Assist page, you will see three boxes. The left box
@@ -238,7 +238,7 @@ configuration.
    these fields, where you match the source with the Target.
 
    1. First thing you will want to do is search in the ‘**Source
-      Field**’ for the name of the field you created in step 4. Once you
+      Field**' for the name of the field you created in step 4. Once you
       find it, select it carefully and hit the Add arrow.
    2. Next, you will want to do the same thing for the **Target Field**
       box. Find and assign the Target Field you want to match with and
@@ -248,7 +248,7 @@ configuration.
 
 After the above steps are complete you can use the Splunk On-Call alert
 rules engine to supply the field values with the same syntax as before:
-‘set **ServiceNowField_u\_<field_name>** to new value ****’
+‘set **ServiceNowField_u\_<field_name>** to new value ****'
 
 In the example image below, the field value on the Splunk On-Call import
 table (in ServiceNow) is “victorops_custom_field”.
@@ -256,7 +256,7 @@ table (in ServiceNow) is “victorops_custom_field”.
 .. image:: images/snowRuleEx10-2.png
 
 **Note:** If the field name in ServiceNow has capital letters in it,
-you’ll want to replace them with lower case letters when creating the
+you'll want to replace them with lower case letters when creating the
 alert rule in On-Call. Ex: A custom ServiceNow Field “Test Field”
 becomes “ServiceNowField_u_test_field” in the Alert Rule.
 
@@ -309,7 +309,7 @@ additional roles to be required that are unique to your instance of
 ServiceNow. You will need to identify the subset of roles that are
 required by your instance and add them to the service user account. One
 easy way to identify if this is the case, is to temporarily add the
-‘admin’ role since it inherits all other roles. Then test the
+‘admin' role since it inherits all other roles. Then test the
 integration. If everything works as expected, there is some role or
 subset of roles that need to be identified and added.
 
@@ -321,4 +321,4 @@ drop the attempted request. Many times, ServiceNow will queue the api
 call, but the link between VictorOps Incident and ServiceNow incident is
 not established because our system did not receive the response in time.
 To speed up the requests, apply an index in ServiceNow on the field
-‘x_splu2_victorops_victorops_incident’ on the ‘Incidents’ table.
+‘x_splu2_victorops_victorops_incident' on the ‘Incidents' table.

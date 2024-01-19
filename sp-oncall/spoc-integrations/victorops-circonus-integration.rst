@@ -92,7 +92,7 @@ only creates incidents when needed.
 
  
 
-That’s it! You can send a test message, just to make sure everything is
+That's it! You can send a test message, just to make sure everything is
 configured appropriately, and an info message will be sent into the
 Splunk On-Call timeline.\ |circonus6|
 
@@ -103,7 +103,7 @@ Splunk On-Call timeline.\ |circonus6|
 
 --------------
 
-To send acknowledgements back to Circonus we will use Splunk On-Call’s
+To send acknowledgements back to Circonus we will use Splunk On-Call's
 `Custom Outbound
 Webhooks <https://help.victorops.com/knowledge-base/custom-outbound-webhooks/>`__.
 To begin we will create a new outbound webhook in Splunk On-Call.
@@ -128,7 +128,7 @@ Note: If you want alerts that are “Resolved” via Splunk On-Call to clear
 the acknowledgment at Circonus (allowing the alert to be triggered
 again) set the Event field to *Any-Incident*. Otherwise, set it to
 “Incident-Acknowledged” and the acknowledgement at Circonus will expire
-normally (if the alert condition doesn’t clear first).
+normally (if the alert condition doesn't clear first).
 
 When acknowledging alerts via Splunk On-Call, the alert at Circonus is
 acknowledged for 30 minutes by default. You can change this by adding

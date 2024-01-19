@@ -21,7 +21,7 @@ when using Centos 5.
 `(click here if you are using Icinga 2) <#Icinga2>`__
 
 VictorOps alert processing is implemented as an Icinga contact that is
-added to a contact group (often ‘admins’, but that will depend on your
+added to a contact group (often ‘admins', but that will depend on your
 individual configuration).
 
 The contact mechanism for the VictorOps contact is a simple shell script
@@ -51,7 +51,7 @@ email <https://help.victorops.com/knowledge-base/victorops-generic-email-endpoin
 The plugin files are installed to ``/opt/victorops/nagios_plugin``.
 There is a Icinga configuration file called **victorops.cfg** in
 ``/opt/victorops/nagios_plugin/nagios_conf``. This file contains all
-configuration for the plugin. After you’ve added your company ID, API
+configuration for the plugin. After you've added your company ID, API
 key and Icinga host name, copy it to your Icinga configuration
 directory.
 
@@ -73,7 +73,7 @@ Depending on your system you may need to use sudo with these commands.
 
    dpkg -i <path_to_file>
 
-   If you don’t want to use dpkg you can also use
+   If you don't want to use dpkg you can also use
 
    sudo apt install <path_to_file>
 
@@ -99,7 +99,7 @@ If you install from the DEB or RPM packages, the installer will put the
 plugin files in the location **/opt/victorops/nagios_plugin** and create
 the logging and alert directories.
 
-After installation, you’ll need to move the victorops.cfg file to your
+After installation, you'll need to move the victorops.cfg file to your
 Icinga configuration directory, and modify both the icinga.cfg and
 victorops.cfg files.
 
@@ -140,8 +140,8 @@ VictorOps_Service_Settings (~line 40) service object definitions:
 
    -  This is your org slug. It can be found by accessing VictorOps
       Timeline and then looking at the URL.  The \_VO_ORGANIZATION_ID
-      will be the string that appears after ‘/client/’.  An example can
-      be found below, where ‘my-company’ is the \_VO_ORGANIZATION_ID
+      will be the string that appears after ‘/client/'.  An example can
+      be found below, where ‘my-company' is the \_VO_ORGANIZATION_ID
 
 .. image:: images/Timeline_-_Ops_Learning-1.jpg
 
@@ -149,7 +149,7 @@ VictorOps_Service_Settings (~line 40) service object definitions:
 
    -  Can be found In VictorOps by following *Settings >> Alert Behavior
       >> Integrations >> Icinga*.  It will be listed as ‘Service API
-      Key’
+      Key'
 
 To generate a Service API Key, in VictorOps navigate to *Integrations >>
 Icinga*\ **.**
@@ -209,7 +209,7 @@ DEBUG_FILE=/dev/null
 
 These four services will appear on the Icinga server in the Icinga
 dashboard. By default, notifications for these services are disabled. If
-you wish to enable alerts for them, simply edit their service
+you wish to enable alerts for them,  edit their service
 definitions in victorops.cfg.
 
  
@@ -219,7 +219,7 @@ VictorOps Alert Forwarder
 
 This is a process check for the long-running script described above. If
 this service goes critical, it will raise an alert via email (since
-normal alert forwarding can’t work when this service is down).
+normal alert forwarding can't work when this service is down).
 
  
 
@@ -338,7 +338,7 @@ to specific services.*
 **Avoid Centos 5 Timeouts**
 ===========================
 
-You will need to link the timeout command to a directory that’s in the
+You will need to link the timeout command to a directory that's in the
 path. First, create the symlink:
 
 ln -s /usr/share/doc/bash-3.2/scripts/timeout /usr/bin/timeout
@@ -407,7 +407,7 @@ values:
 
    const VictorOps_enable_cmd_poll = true
 
-2. Give your Icinga 2 host a distinct name to VictorOps: **Note:** you’d
+2. Give your Icinga 2 host a distinct name to VictorOps: **Note:** you'd
    only really need this if you have multiple Icinga hosts.
 
  

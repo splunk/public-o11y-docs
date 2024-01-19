@@ -35,7 +35,7 @@ Installation
 ------------
 
 -  Download the Splunk>VictorOps app from the Microsoft Store, then
-   click the app’s icon to begin the installation process.
+   click the app's icon to begin the installation process.
 -  Click **Add to a team**, then select a channel for the
    Splunk>VictorOps bot and any incoming VictorOps incidents.  Note that
    installing into any channel in a team will make Splunk>VictorOps
@@ -56,11 +56,11 @@ Teams org administrator, and must also have a VictorOps account using
 the same email address. 
 
 -  Once Splunk>VictorOps has been added to a team, a **Welcome to
-   VictorOps** card is displayed in that team’s General channel.  You
+   VictorOps** card is displayed in that team's General channel.  You
    may also execute the bot command *@Splunk VictorOps configure* to
    generate a new card in your current channel.  Click the **Configure**
    button in this card to begin the process.
--  Click **Add Configuration**, then enter your On-Call org’s API ID and
+-  Click **Add Configuration**, then enter your On-Call org's API ID and
    API Key.  
 -  Once the API details are added, click on the *Allow application to
    access MS Teams account details* checkbox.
@@ -110,24 +110,24 @@ in the resulting card.
 -  Click on the Escalation Policy Mapping tab, then click Add Mapping to
    display the Add Escalation Policy to Channel Mapping modal.
 -  Select a configured connection from the VictorOps Organization
-   dropdown list, then select your desired VictorOps Escalation Policy. 
+   dropdown list, then select your desired VictorOps Escalation Policy.
    Note that these are listed alphabetically within their VictorOps
    teams.
 -  Select your desired Microsoft Teams Team, then choose your Channel
-   Settings.  You may map new incidents to an existing channel within
+   Settings. You may map new incidents to an existing channel within
    your selected Team, or you may choose to create a new channel within
    that Team for each new incident.
 -  If you choose to create new channels, you have the further option of
-   controlling which Teams users are added to that channel’s Microsoft
-   Teams Team.  Note that this functionality only works for Teams
+   controlling which Teams users are added to that channel's Microsoft
+   Teams Team. Note that this functionality only works for Teams
    members with corresponding accounts in the configured VictorOps
-   organization, matched on email address.  You may simply leave all
+   organization, matched on email address. You may leave all
    members as-is, you may add only members who are being paged for the
    incident, or you may add all members of the VictorOps team associated
-   with the incident’s Escalation Policy.
--  Click Save.  If the selected Team does not yet have the application
+   with the incident's Escalation Policy.
+-  Click Save. If the selected Team does not yet have the application
    installed, you will receive a warning, along with a single-click
-   option to install the app at that time.  Once this is complete, click
+   option to install the app at that time. Once this is complete, click
    Save once again.
 -  Your mapping will now display in the Escalation Policy Mapping table,
    where it can be edited or deleted.
@@ -160,7 +160,7 @@ Uninstallation
 The Splunk>VictorOps app can be uninstalled at the team or organization
 level.  While a Teams org administrator has adequate permission to
 perform both tasks, a Team owner will only be able to manage their own
-team’s settings, and team members’ permissions can vary and may be
+team's settings, and team members' permissions can vary and may be
 inadequate.
 
 Uninstalling at a team level automatically unsubscribes and removes the
@@ -171,7 +171,7 @@ team level:
 
    -  Click on the **Teams** entry in the sidebar.
 
-      -  Select the team’s **More options…** menu, then click **Manage
+      -  Select the team's **More options…** menu, then click **Manage
          team**.
       -  **On the Apps tab, click the Uninstall icon to the right of the
          Splunk>VictorOps entry.**
@@ -185,7 +185,7 @@ organization level:
 
    -  Click on the **Apps** entry in the sidebar.
 
-      -  Click on the **Splunk>VictorOps** icon’s ellipse menu, then
+      -  Click on the **Splunk>VictorOps** icon's ellipse menu, then
          click **Delete**.
       -  **Select the I understand the app will be deleted for all users
          checkbox.**

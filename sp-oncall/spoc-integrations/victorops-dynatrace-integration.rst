@@ -1,6 +1,6 @@
 **Note: this integration is for the tool formerly known as Ruxit.** 
 
-Dynatrace monitors your applications, so you don’t have to.
+Dynatrace monitors your applications, so you don't have to.
 Dynatrace automatically monitors your applications, analyzes problems,
 and notifies you when something goes wrong.
 

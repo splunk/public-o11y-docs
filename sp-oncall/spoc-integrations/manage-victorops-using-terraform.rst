@@ -1,9 +1,9 @@
 **HashiCorp Terraform**
 -----------------------
 
-`HashiCorp’s Terraform <https://terraform.io>`__ has emerged as a
+`HashiCorp's Terraform <https://terraform.io>`__ has emerged as a
 powerful tool for managing infrastructure as code. Teams can fully
-describe an application’s infrastructure needs such as physical
+describe an application's infrastructure needs such as physical
 machines, VMs, containers and more using configuration files. This
 allows the application infrastructure to be version controlled, reducing
 human errors during deployments.
@@ -40,7 +40,7 @@ in this post.
 Steps to get started
 --------------------
 
-If you don’t already have Terraform installed, go through the
+If you don't already have Terraform installed, go through the
 instructions here:
 https://learn.hashicorp.com/tutorials/terraform/install-cli
 
@@ -65,7 +65,7 @@ automatically, from the Terraform Registry.
 The provider communicates with Splunk On-Call using the `REST
 API <https://portal.victorops.com/public/api-docs.html>`__, so we need
 to provide it with an API key. Here are the instructions to find your
-organization’s API key: https://help.victorops.com/knowledge-base/api/
+organization's API key: https://help.victorops.com/knowledge-base/api/
 
 **Copy the API Id and API Key from Splunk On-Call and paste it in the
 following format.**
@@ -76,9 +76,9 @@ api key goes here” }
 **Next, we will start creating Splunk On-Call resources. Paste the
 following into the file.**
 
-**Note that the Terraform provider calls Splunk On-Call’s public API.
+**Note that the Terraform provider calls Splunk On-Call's public API.
 For that reason, only user-level users can be created through Terraform
-at this time. Edits to a user’s permissions levels will need to be done
+at this time. Edits to a user's permissions levels will need to be done
 through the UI once the user has been created.**
 
 # Create a team within victorops resource “victorops_team” “team” { name
@@ -125,7 +125,7 @@ You should see an output similar to terraform plan, this time with a
 prompt to confirm execution.
 
 Do you want to perform these actions?   Terraform will perform the
-actions described above.   Only ‘yes’ will be accepted to approve.
+actions described above.   Only ‘yes' will be accepted to approve.
   **Enter a value:** 
 
 **Type yes to approve and you should see output as follows:**

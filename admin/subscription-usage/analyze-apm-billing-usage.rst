@@ -126,4 +126,4 @@ To download a subscription usage report, do the following:
 
 For each selected minute, the report shows the attributes or tags associated with the hosts and containers that sent data to Splunk APM. You might see different tags, like ``AWSUniqueId``, ``container_id``,  ``gcp_id``, and so on depending on the source of the host or container observed and the version of your instrumentation agent.
 
-.. caution:: For Kubernetes deployments, the Kubernetes attributes processor extracts default attributes extracted by the processor, such as ``k8s.pod.name``, are required for accurate subscription usage. Don’t remove the Kubernetes attributes processor from your configuration. See :ref:`kubernetes-attributes-processor` for more information.
+.. caution:: For Kubernetes deployments, the Kubernetes attributes processor extracts default attributes extracted by the processor, such as ``k8s.pod.name``, are required for accurate subscription usage. Don't remove the Kubernetes attributes processor from your configuration. See :ref:`kubernetes-attributes-processor` for more information.

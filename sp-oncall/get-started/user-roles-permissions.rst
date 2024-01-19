@@ -26,7 +26,7 @@ This means that a user can hold two roles. Here are the possible combinations:
 
 * User & Team Admin
 * Alert Admin & Team Admin
-* Stakeholders can be considered separate from all other roles as these users cannot be placed in any on-call schedules nor take action on incidents.  They can simply be added to existing incidents and notified through their defined contact methods for awareness.  For comprehensive information on stakeholders, see this XXXXXX stakeholders XXXXXX.
+* Stakeholders can be considered separate from all other roles as these users cannot be placed in any on-call schedules nor take action on incidents.  They can be added to existing incidents and notified through their defined contact methods for awareness.  For comprehensive information on stakeholders, see this XXXXXX stakeholders XXXXXX.
 
 How to Change Global Roles
 ----------------------------------

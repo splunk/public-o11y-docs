@@ -14,7 +14,7 @@ feature)
 `Runscope <https://www.runscope.com/>`__ allows you to log, monitor and
 measure your API usage to solve API problems fast. The following steps
 will walk you through the integration process. You can also refer to
-Runscope’s documentation on this integration
+Runscope's documentation on this integration
 `here <https://www.runscope.com/docs/api-testing/victorops>`__.
 
 **In VictorOps**
@@ -51,7 +51,7 @@ Paste in your **API
 Key** and `Routing Key <https://help.victorops.com/knowledge-base/reroute-an-incident/>`__\ **.** Make
 sure to select “*Automatically resolve incidents when test passes*” and
 to set the **Notification Threshold** to 1. Finish by clicking “*Connect
-Account*” and you’re done!
+Account*” and you're done!
 
 .. image:: images/vo_rs_config@2x.png
 

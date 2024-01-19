@@ -1,3 +1,13 @@
+.. _alert-admin:
+
+************************************************************************
+Alert Admin user training
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
+
 **NOTE:** If you are new to Splunk On-Call a great place to start is
 with our User Training, found
 `here <https://help.victorops.com/knowledge-base/user-training/>`__.

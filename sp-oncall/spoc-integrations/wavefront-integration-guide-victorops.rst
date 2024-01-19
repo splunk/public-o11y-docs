@@ -1,5 +1,5 @@
 Wavefront is a cloud-hosted service where you send your time-series
-(metric) data – from CollectD, StatsD, JMX, Ruby’s logger, AWS,
+(metric) data – from CollectD, StatsD, JMX, Ruby's logger, AWS,
 anything. Then you can perform arbitrary mathematical operations on any
 number of those series, render charts to see anomalies or KPI
 dashboards, and ultimately create truly intelligent alerts to
@@ -61,7 +61,7 @@ Check for the notification in VictorOps.
 
 .. image:: images/VO_alert@2x.png
 
-Last, you’ll want to attach the Alert Target to an actual alert. Whether
+Last, you'll want to attach the Alert Target to an actual alert. Whether
 creating or editing an alert, use the below example as guide for
 connecting VictorOps to an alert. First, edit (or create) an alert.
 

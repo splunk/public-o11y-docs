@@ -24,15 +24,15 @@ integrate GCP Monitoring (formerly Stackdriver) with Splunk On-Call.
 -----------------------------
 
 1. Navigate to **Monitoring** >> **Alerting** then select the ‘**Edit
-   Notification Channels**’ option at the top of the page.
-2. From here scroll down to ‘**Webhooks**’ and click ‘**Add New**’.
+   Notification Channels**' option at the top of the page.
+2. From here scroll down to ‘**Webhooks**' and click ‘**Add New**'.
 3. Under the **Endpoint URL** enter the address you copied from your
    Splunk On-Call Stackdriver integration page. For **Display Name**
-   enter your desired display name such as ‘Splunk On-Call’.
-4. Leave ‘Use HTTP Basic Auth’ **unchecked**.
-5. Click ‘**Test Connection**’ and then ‘**Save**’.
+   enter your desired display name such as ‘Splunk On-Call'.
+4. Leave ‘Use HTTP Basic Auth' **unchecked**.
+5. Click ‘**Test Connection**' and then ‘**Save**'.
 
-   -  **NOTE**: The ‘Test Connection’ button will not work to trigger an
+   -  **NOTE**: The ‘Test Connection' button will not work to trigger an
       incident in Splunk On-Call but must be pressed in order to click
       Save. To test the integration you will need to manually trigger a
       real alert in GCP Monitoring.

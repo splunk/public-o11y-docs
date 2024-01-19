@@ -63,5 +63,5 @@ message will be sent whenever the webhook data exporter is started or if
 the configuration is changed. The second type is an ``idr_alert`` event.
 This type of message will be sent whenever an alert triggers in
 InsightIDR and contains information about the alert in the event. More
-details about each type of event can be found in Rapid7’s documentation
+details about each type of event can be found in Rapid7's documentation
 `here <https://docs.rapid7.com/insightidr/webhook>`__.

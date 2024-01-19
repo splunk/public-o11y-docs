@@ -54,7 +54,7 @@ settings page). For further reference regarding Routing Keys and their
 usage please follow the link to our Knowledge Base article on the
 subject `here <https://help.victorops.com/knowledge-base/routing-keys/>`__.
 
-Once you’ve enabled the Uptime Robot Specific Endpoint you’re ready to
+Once you've enabled the Uptime Robot Specific Endpoint you're ready to
 move on to The Uptime Robot UI.
 
 --------------
@@ -99,5 +99,5 @@ Select the VictorOps *Alert Contact* and then *Save Changes.*
 Now whenever an alert is triggered in Uptime Robot a message will be
 sent to the VictorOps timeline.
 
-That’s it! If you have any questions please reach out to `VictorOps
+That's it! If you have any questions please reach out to `VictorOps
 Support <mailto:Support@victorops.com?Subject=UptimeRobot%20VictorOps%20Integration>`__.

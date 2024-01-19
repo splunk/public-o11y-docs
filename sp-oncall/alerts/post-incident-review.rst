@@ -4,7 +4,7 @@ About the Splunk On-Call Post Incident Review
 The *Post-Incident Review Report* from Splunk On-Call allows you to gain
 historical insight on events surrounding a particular incident or range
 of time, so the next time a similar situation arises, you have a
-documented account of how you solved the problem. We believe it’s
+documented account of how you solved the problem. We believe it's
 important to not just catalog what happened in an incident, but to
 analyze the event in its entirety, and define actionable steps that help
 a team and/or organization dive deeper into the data.
@@ -21,9 +21,9 @@ a title and click *Create Report*.
 Configuring Post Incident Review Reports
 ----------------------------------------
 
-Once you’ve created a *New Report*, you’ll enter the main report
-configuration page where you’ll be able to provide and define context
-for your team about the effects of an incident. Here you’ll give the
+Once you've created a *New Report*, you'll enter the main report
+configuration page where you'll be able to provide and define context
+for your team about the effects of an incident. Here you'll give the
 report a title, set a date range, limit or share editing privileges, and
 select whether or not an incident impacted customers. You may even
 create detailed *Action Items* to serve as guidelines for future

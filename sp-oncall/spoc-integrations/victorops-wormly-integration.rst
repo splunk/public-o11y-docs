@@ -6,8 +6,8 @@ explaining how to set up this simple integration.
 
  
 
-1. From the Wormly UI select ‘Alerts’ and then ‘Contacts’ |image1|
-2. Next select ‘+ Create New Contact’ and click on the Email contact
+1. From the Wormly UI select ‘Alerts' and then ‘Contacts' |image1|
+2. Next select ‘+ Create New Contact' and click on the Email contact
    type. Then enter a name for the contact (VictorOps Timeline for
    example). |image2|
 3. In VictorOps, select *Settings >> Alert Behavior >> Integrations >>
@@ -17,11 +17,11 @@ explaining how to set up this simple integration.
    the actual routing key you intend to use. (To view or configure route
    keys in VictorOps, click *Alert Behavior >> Route Keys*)\ |image4|
 4. Copy the email string and make sure to put in the appropriate routing
-   key after the ‘+’ sign so that all Wormly alerts are sent to the
+   key after the ‘+' sign so that all Wormly alerts are sent to the
    right teams. |image5|
 5. Paste the email address into the Email field in Wormly and click Send
    Test. You should get a result like the one pictured here. |image6|
-6. Hit ‘Update’ and you are done.
+6. Hit ‘Update' and you are done.
 
 .. |image1| image:: images/wormly-integration@2x.png
 .. |image2| image:: images/wormly-2@2x.png

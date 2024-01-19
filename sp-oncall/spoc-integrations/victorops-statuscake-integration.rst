@@ -46,5 +46,5 @@ the VictorOps timeline.
 
    statuscake6
 
-You’re done. If you have any questions please contact `VictorOps
+You're done. If you have any questions please contact `VictorOps
 support <mailto:support@victorops.com?Subject=StatusCake%20VictorOps%20Integration>`__.

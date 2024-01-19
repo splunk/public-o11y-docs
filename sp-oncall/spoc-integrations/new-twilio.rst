@@ -28,7 +28,7 @@ incident resolution**
 
 -  Create a single phone number for live call routing in Splunk On-Call
    – connecting multiple teams and/or escalation policies to incidents
-   as they’re reported
+   as they're reported
 -  Integrate on-call schedules with alert routing, escalations and call
    routing in order to automate much of the incident response workflow
 -  Track historical incident details such as call information, alert
@@ -46,7 +46,7 @@ Enterprise
 
 **What you need to know:**  At this time, trial Twilio accounts require
 all phone numbers the integration may end up calling (i.e. VictorOps
-user’s phone numbers) to be verified by following `this
+user's phone numbers) to be verified by following `this
 process. <https://support.twilio.com/hc/en-us/articles/223180048-Adding-a-Verified-Phone-Number-or-Caller-ID-with-Twilio>`__ If
 you would like to see how this integration works successfully before
 verifying numbers or purchasing a Twilio phone number, please
@@ -136,9 +136,9 @@ the example below we use the DevOps team.
 
 .. image:: images/Team-Name.png
 
-To acquire the escalation policy name, we’ll go one step further.  Click
+To acquire the escalation policy name, we'll go one step further.  Click
 into your desired team, and go to the *Escalation Policies* tab, and
-copy the name of the escalation policy you’d like to use – in the
+copy the name of the escalation policy you'd like to use – in the
 example below we use the Standard escalation policy from within the
 DevOps team.
 
@@ -163,7 +163,7 @@ steps of the escalation policy specified will be utilized.
 The integration will ignore any time delay configured between each
 escalation policy step.  For example, if Step 1 was set to occur
 immediately, and then Step 2 after 15 minutes, the caller will not have
-to wait 15 minutes for the Step 2 user to be called - the system simply
+to wait 15 minutes for the Step 2 user to be called - the system
 look for the separation of steps and call users in that order.
 
 If one of the steps in your escalation policy is to “Execute Policy”,
@@ -188,8 +188,8 @@ team-35Rgt19gE35g3.*
  
 
 Next go to *Settings >>* *Routing Keys* and create a new routing key
-with the URL-friendly team slug associated to that team.  You’ll paste
-the slug you’d copied into the Routing Key field and choose the Team and
+with the URL-friendly team slug associated to that team.  You'll paste
+the slug you'd copied into the Routing Key field and choose the Team and
 Escalation Policy it associates with in the Escalation Policies field.
 
 .. image:: images/Routing-Key.png
@@ -198,7 +198,7 @@ This will assure that all incidents are sent to the correct escalation
 policy.
 
 Note: If you are utilizing either the Multi-Team Phone Tree or Multiple
-Phone Numbers to Route to Different Teams setup, you’ll need to repeat
+Phone Numbers to Route to Different Teams setup, you'll need to repeat
 this step for all teams specified through the integration, thus creating
 multiple routing keys.
 
@@ -211,7 +211,7 @@ The remaining configuration will take place in
 `Twilio <https://www.twilio.com/>`__. This Integration requires that you
 have a Twilio account and Twilio phone number. Please note, at this time
 trial Twilio accounts require all phone numbers the integration may end
-up calling (i.e. Splunk On-Call user’s phone numbers) to be verified by
+up calling (i.e. Splunk On-Call user's phone numbers) to be verified by
 following `this
 process <https://support.twilio.com/hc/en-us/articles/223180048-Adding-a-Verified-Phone-Number-or-Caller-ID-with-Twilio>`__.
 If you would like to see how this integration works successfully before
@@ -245,7 +245,7 @@ Tools*).
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 From the main console dashboard click on *Phone Numbers* and then
-*Manage*. Thenselect *Buy a Number,* if you haven’t done so already, set
+*Manage*. Thenselect *Buy a Number,* if you haven't done so already, set
 the *Capabilities* to *Voice*, and click *Search*.
 
 .. image:: images/twilio4.png
@@ -274,7 +274,7 @@ save.
 ~~~~~~~~~~~~~~~~~~~~
 
 This integration makes use of
-Twilio’s `Functions <https://www.twilio.com/docs/runtime/functions>`__
+Twilio's `Functions <https://www.twilio.com/docs/runtime/functions>`__
 feature.
 
 **Configuration**
@@ -293,7 +293,7 @@ Function.
 
 .. image:: images/Slice-2-1.png
 
-You’ll be directed to name the path for the function, which you should
+You'll be directed to name the path for the function, which you should
 set as “/victorops-live-call-routing”.  Click elsewhere in the screen
 and some default code for the function will show on the righthand side
 of your screen.
@@ -306,7 +306,7 @@ of your screen.
 ~~~~~~~~~~~~
 
 Highlight the default code that Twilio provides (often begins with “//
-This is your new function”) and delete it.  Next, locate the code you’ll
+This is your new function”) and delete it.  Next, locate the code you'll
 want to copy and paste in there at the following link:
 
 https://github.com/victorops/twilio-live-call-routing/blob/master/Splunk-On-Call-Twilio
@@ -326,8 +326,8 @@ First, make sure *Add my Twilio Credentials (ACCOUNT_SID) and
 (AUTH_TOKEN) to ENV* is checked.
 
 Next, add in all the environment variables shown in the screenshot
-below.  The order of them doesn’t matter but each one needs to be
-entered as specified below. You’ll enter in your API credentials and
+below.  The order of them doesn't matter but each one needs to be
+entered as specified below. You'll enter in your API credentials and
 Twilio service API key that we located (in Splunk On-Call) earlier.  For
 **TEAM_1**, use the **team name** copied from your VictorOps account. 
 For **ESC_POL_1**, use the name of the target escalation policy. For
@@ -339,7 +339,7 @@ and have to match the Splunk On-Call spelling/capitalization exactly.
 
 .. image:: images/carter-testing-1483_twil_io___Twilio_Functions.jpg
 
-The “Key” column’s inputs are listed below for convenient
+The “Key” column's inputs are listed below for convenient
 copying/pasting:
 
 [table id=17 /]
@@ -350,8 +350,8 @@ copying/pasting:
 Just below where you selected *Environment Variables* (under *Settings*
 towards the bottom of the screen), select *Dependencies*.
 
-Similar to the inputs for Environment Variables, you’ll enter Modules
-and Versions to match the below screenshot (again, order doesn’t
+Similar to the inputs for Environment Variables, you'll enter Modules
+and Versions to match the below screenshot (again, order doesn't
 matter).
 
 .. image:: images/victorops-live-call-routing-2060_twil_io___Twilio_Functions.png
@@ -363,7 +363,7 @@ Again, for copy/paste convenience:
 **IMPORTANT**: after completing these steps, click the blue *Deploy All*
 button near the bottom lefthand corner of the screen.  This publishes
 your Function, Environment Variables, and Dependencies and is necessary
-for the integration to operate.  You’ll see a green check mark next to
+for the integration to operate.  You'll see a green check mark next to
 the function and a “Deployed to environment:” message at the bottom of
 the logs when successfully deployed (generally takes 5-15 seconds).
 
@@ -396,7 +396,7 @@ additional environmental variables are required. For every additional
 team you want in the phone tree, enter “**TEAM_2**, **TEAM_3**, and so
 on…” into the Key box. Then, enter the corresponding Escalation Policy
 with a Key of **ESC_POL_2**\ \_,\_ **ESC_POL_3**, and so on, specifying
-the Escalation Policy’s name in the Value box. You will also need to set
+the Escalation Policy's name in the Value box. You will also need to set
 a variable called **NUMBER_OF_MENUS** and set it to *1* or *2*. Setting
 this to *1* will result in the operator reading “Press 1 for <Team 1>,
 Press 2 for <Team 2>.  Setting this to *2* will result in an initial
@@ -421,9 +421,9 @@ Key that was created during the “In VictorOps” step.
 **Multiple Phone Numbers to Route to Different Teams**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If instead of the phone tree, you’d like designated phone numbers to
+If instead of the phone tree, you'd like designated phone numbers to
 route to different Splunk On-Call teams, a few additional steps are
-necessary on top of the standard setup.  You’ll need to purchase
+necessary on top of the standard setup.  You'll need to purchase
 additional Twilio numbers, create new a new Service and Function (with
 matching Environmental Variables and Dependencies), and assign the
 Service and Function to your new phone number.
@@ -431,16 +431,16 @@ Service and Function to your new phone number.
 To purchase additional Twilio numbers, follow the process specified in
 the above **Acquiring a Twilio Phone Number** section.
 
-Next, you’ll need to create a new Service and Function.  Repeat the
+Next, you'll need to create a new Service and Function.  Repeat the
 steps specified above from `Twilio
 Functions <https://help.victorops.com/knowledge-base/twilio-live-call-routing-guide/#twilio-functions>`__
 through `Add Function to a Phone
 Number <https://help.victorops.com/knowledge-base/twilio-live-call-routing-guide/#add-function-to-a-phone-number>`__,
 this time specifying the Team and Escalation Policy you want this number
-to call.  Note: you’ll need to name your new service something slightly
+to call.  Note: you'll need to name your new service something slightly
 different than you named the first one.  This name is visual only and
-doesn’t affect functionality, so we recommend naming it after the team
-it’s designed to reach.
+doesn't affect functionality, so we recommend naming it after the team
+it's designed to reach.
 
 .. _routing-keys-1:
 
@@ -473,7 +473,7 @@ for a recording outside these duration limits, Twilio will write a
 warning to your debug log rather than transcribing the recording. In the
 case that the message cannot be transcribed, a critical incident will
 still be posted in Splunk On-Call, with a ‘*Twilio was unable to
-transcribe message*’ note within the alert payload.
+transcribe message*' note within the alert payload.
 
 **Listen to Voicemail**
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -484,7 +484,7 @@ can be done through the Twilio platform, which can be easily linked to
 from VictorOps using
 `annotations <https://help.victorops.com/knowledge-base/transmogrifier-annotations/>`__.
 Create the below Rules Engine rule to easily link back to a specific
-call’s history and to listen to or download the voicemail.
+call's history and to listen to or download the voicemail.
 
 When **monitoring_tool** matches **Twilio**
 
@@ -513,36 +513,36 @@ If you do not have the Polly.Salli voice and would like to enable it,
 follow the below walkthrough.
 
 First, navigate to your VictorOps Function.  Depending on whether you
-set this up in Twilio’s Functions Classic UI or their new Functions
+set this up in Twilio's Functions Classic UI or their new Functions
 Services UI, it will be in slightly different places.
 
-If you set up this integration in Twilio’s Functions Classic UI (likely
+If you set up this integration in Twilio's Functions Classic UI (likely
 if configured prior to August, 2020) go to *Functions >> Overview >>
 Manage Services >> VictorOps Live Call Routing >> Functions*.
 
-If you set this up in Twilio’s new Services UI, go to *Functions >>
+If you set this up in Twilio's new Services UI, go to *Functions >>
 Services >> Manage Services* >>
 *VictorOps-Live-Call-Routing* >> *Functions.*
 
 In roughly line 82 in the code for the function, you should be able to locate a line that says:
-   ‘woman’;
+   ‘woman';
 
-Change the text ‘woman’ to ‘Polly.Salli’ so that it shows like below:
-   ‘Polly.Salli’;
+Change the text ‘woman' to ‘Polly.Salli' so that it shows like below:
+   ‘Polly.Salli';
 
 There are additionally some pieces of text that will have to be changed
 to ensure proper voice readout.  Specifically, in roughly line 28, there
 should be a line that says:
 
-greeting: ‘Welcome to Victor Ops Live Call Routing.’,
+greeting: ‘Welcome to Victor Ops Live Call Routing.',
 
-Change the word ‘Live’ to ‘Lyve’ so that the end result looks like:
+Change the word ‘Live' to ‘Lyve' so that the end result looks like:
 
-greeting: ‘Welcome to Victor Ops Lyve Call Routing.’,
+greeting: ‘Welcome to Victor Ops Lyve Call Routing.',
 
 An equivalent edit will be made on roughly line 38 where you will change
-the word ‘Live’ to ‘Lyve’.  This forces the voice to pronounce the word
-as we’ve intended.
+the word ‘Live' to ‘Lyve'.  This forces the voice to pronounce the word
+as we've intended.
 
 After completing these edits, click the blue Save button and then the
 blue Deploy All button (if in the new Services UI) or the red Save
@@ -551,7 +551,7 @@ screen.  It may take 15 seconds or so but you should see a confirmation
 message letting you know the deploy has been successful.
 
 Note: Polly.Salli is one of the many Amazon Polly voices that can be
-leveraged for this integration.  If you’d like to see how others sound,
+leveraged for this integration.  If you'd like to see how others sound,
 in the Twilio Console UI, navigate to *Programmable Voice >> TwiML >>
 Text-to-Speech*.  A red plus button should appear under the Current
 Language Mapping heading.  Click on it, select the appropriate language,
@@ -560,7 +560,7 @@ voice.  You are able to enter sample text to have it reach in order to
 test.
 
 After settling on an Amazon Polly voice, follow the above instructions,
-simply replacing ‘Salli’ with the voice you’ve chosen.
+ replacing ‘Salli' with the voice you've chosen.
 
 --------------
 
@@ -600,12 +600,12 @@ reached.  Additionally, even with a paid Twilio account, phone numbers
 in certain countries (such as Slovakia) will still need to verify
 numbers before calling them.
 
-You are able to verify the numbers you’re calling to by following the
-steps under the ‘Add a Verified Caller ID via the Console Site’ section
+You are able to verify the numbers you're calling to by following the
+steps under the ‘Add a Verified Caller ID via the Console Site' section
 `HERE <https://support.twilio.com/hc/en-us/articles/223180048-Adding-a-verified-outbound-caller-ID-with-Twilio>`__.
 
 **Problem 2:**  **‘There is a missing configuration value.  Please
-contact your administrator to fix the problem.’**
+contact your administrator to fix the problem.'**
 
 This message represents that either one of the Twilio Dependencies or
 Environmental variables is incorrectly configured
@@ -618,11 +618,11 @@ recommended ones below:
 .. image:: images/Twilio_Cloud_Communications___Web_Service_API_for_building_Voice_and_SMS_Applications.jpg
 
 **Problem 3:**  **‘There was an error retrieving the list of teams for
-your organization.’**
+your organization.'**
 
-This message represents that the team attempting to be notified doesn’t
+This message represents that the team attempting to be notified doesn't
 exist, has not been specified properly, or that the VICTOROPS_API_KEY or
-VICTOROPS_TWILIO_SERVICE_API_KEY hasn’t been copied and pasted
+VICTOROPS_TWILIO_SERVICE_API_KEY hasn't been copied and pasted
 accurately.
 
 Double check that the spelling of the team in VictorOps (including
@@ -631,17 +631,17 @@ Variables and that the proper value is in place for
 the VICTOROPS_API_KEY and VICTOROPS_TWILIO_SERVICE_API_KEY.
 
 **Problem 4:**  **‘There was an error retrieving the on-call phone
-numbers.  Please try again.’**
+numbers.  Please try again.'**
 
 This signifies that the number attempting to be called has not yet been
 verified in VictorOps
 
-Verify the number by clicking the ‘Verify’ button next to it within the
-User’s VictorOps personal profile, and then enter in the verification
+Verify the number by clicking the ‘Verify' button next to it within the
+User's VictorOps personal profile, and then enter in the verification
 code sent to the device
 
 **Problem 5:**  **‘Team ${team-name} does not exist.  Please contact
-your administrator to fix the problem’**
+your administrator to fix the problem'**
 
 This indicates that the team spelling/capitalization in Twilio (under
 the Value column in Environmental Variables) may not perfectly mirror
@@ -675,15 +675,15 @@ to.
 **Problem 9: Nobody is called.  The caller is prompted to leave a
 message.**
 
-This may be caused by a mismatch between the values in Twilio’s
+This may be caused by a mismatch between the values in Twilio's
 Environmental Variables and the corresponding values in VictorOps. 
 Double check that the spelling of the Team and Escalation Policy in
 Twilio match exactly what is used in VictorOps.
 
-**Problem 10: ‘We were unable to reach an on-call representative’**
+**Problem 10: ‘We were unable to reach an on-call representative'**
 
 This message represents that the team attempting to be notified either
-doesn’t exist, or has not been specified properly
+doesn't exist, or has not been specified properly
 
 Double check that the spelling of the team in Splunk On-Call (including
 capitalization) is matched exactly within the Twilio Environmental
@@ -696,19 +696,19 @@ they can be reached.  Additionally, even with a paid Twilio account,
 phone numbers in certain countries (such as Slovakia) will still need to
 verify numbers before calling them.
 
-You are able to verify the numbers you’re calling to by following the
-steps under the ‘Add a Verified Caller ID via the Console Site’ section
+You are able to verify the numbers you're calling to by following the
+steps under the ‘Add a Verified Caller ID via the Console Site' section
 `HERE <https://support.twilio.com/hc/en-us/articles/223180048-Adding-a-verified-outbound-caller-ID-with-Twilio>`__.
 
-**Problem 11: ‘An application error has occurred.  Goodbye’ and/or you
+**Problem 11: ‘An application error has occurred.  Goodbye' and/or you
 see 82002 and 11200 errors in the Twilio logs**
 
 This indicates that the code used within the Splunk On-Call function is
 not properly copied and pasted, that the path is not specified properly
 *(i.e. the name for the path for the function needs to be:
-/victorops-live-call-routing)*, that the Dependencies haven’t all been
-copied over (oftentimes the ‘got’ module), or that the Splunk On-Call
-user attempting to be called doesn’t have a number in their user
+/victorops-live-call-routing)*, that the Dependencies haven't all been
+copied over (oftentimes the ‘got' module), or that the Splunk On-Call
+user attempting to be called doesn't have a number in their user
 profile.  Double check these areas.
 
 **Problem 12: A Splunk On-Call user has multiple phone numbers
@@ -721,31 +721,31 @@ remove numbers you do not want called and then re-add them in order to
 have the one you do want called be the “oldest”.
 
 **Problem 13: ‘The number you have dialed is not in service.  Please
-check the number and try again’**
+check the number and try again'**
 
 This message may mean that the function has not been properly assigned
 to your Twilio phone number.  Ensure that the number is configured to
 perform the Splunk On-Call function when a call comes in.
 
-**Problem 14: After clicking ‘Save’ on the Functions >> Configure page,
+**Problem 14: After clicking ‘Save' on the Functions >> Configure page,
 you see a “Failed to deploy your Function” message**
 
 If you encounter this error message when trying to save on the Configure
 page in Twilio (where Environmental Variables and Dependencies are
 listed), this may be due to a recent change of the accepted values for
-the ‘got’ dependency.  Previously, we recommended people leave the
-version for this ‘got’ dependency blank, though with a recent change to
-the v10 package of ‘got’, we now must specify this version as 9.6.0. 
+the ‘got' dependency.  Previously, we recommended people leave the
+version for this ‘got' dependency blank, though with a recent change to
+the v10 package of ‘got', we now must specify this version as 9.6.0. 
 Ensure all dependencies match the screenshot/table in the above
 “Configure Environmental Variables” section and re-try saving.
 
 .. image:: images/Voice-2.png
 
 **Problem 15:** **The integration calls a seemingly random team, not the
-one you’ve specified within the Functions >> Configure section in
+one you've specified within the Functions >> Configure section in
 Twilio**
 
-This may be because the code used in your Twilio function isn’t the one
+This may be because the code used in your Twilio function isn't the one
 intended for your use case.  If setting up the standard, single-phone
 number configuration, delete the existing code in place
 within *Functions >> Manage >> VictorOps* and replace it with the code

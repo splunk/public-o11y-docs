@@ -41,7 +41,7 @@ Enable the New Relic Integration in Splunk On-Call
 From the main timeline select *Integrations >> 3rd Party Integrations >>
 New Relic.*
 
-|image1|\ If the integration hasn’t yet been enabled, click on
+|image1|\ If the integration hasn't yet been enabled, click on
 the *Enable Integration* button to generate your API Keys.  Copy the top
 full URL to your clipboard for use later in New Relic.
 
@@ -75,7 +75,7 @@ article <https://help.victorops.com/knowledge-base/routing-keys/>`__.
 .. image:: images/New-Relic-3-1.jpg
 
 After saving the destination, update the payload provided for the
-webhook.  Below is our recommended payload, though you’re welcome to
+webhook.  Below is our recommended payload, though you're welcome to
 make any customizations so long as the JSON formatting is retained. 
 Click *Send test notification* when done with adjustments to ensure the
 notification can hit your Splunk On-Call account.
@@ -127,7 +127,7 @@ Legacy Version of New Relic
 2. Click *Channels and Groups*: |newrelic10|
 3. Select *Create Channel*, then *Webhook*: |newrelic11| |newrelic12|
 
-   -  Enter any name you’d like
+   -  Enter any name you'd like
    -  Enter the following for the WebHook URL, make sure to include the
       correct **Key** and **Route_Key**:
       ``https://alert.victorops.com/integrations/newrelic/20140115/alert/--key--/--routing--``

@@ -1,4 +1,4 @@
-Hubot is your company’s robot. Install it in your VictorOps timeline to
+Hubot is your company's robot. Install it in your VictorOps timeline to
 dramatically improve employee efficiency.
 
 The Hubot - VictorOps Adapter allows your Hubot to join your VictorOps
@@ -41,7 +41,7 @@ Configuration Steps
 
       export HUBOT_VICTOROPS_KEY=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
-6. Add the VictorOps adapter to your Hubot’s dependencies in
+6. Add the VictorOps adapter to your Hubot's dependencies in
    package.json:
 
    ::

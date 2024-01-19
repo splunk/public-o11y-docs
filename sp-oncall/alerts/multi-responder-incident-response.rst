@@ -60,7 +60,7 @@ Splunk On-Call can suggest responders who are likely able to help.
 Splunk On-Call leverages information about user involvement in past
 incidents to suggest responders that may be added to incident response.
 If a user is currently not on-call a red warning symbol will appear next
-to the user’s name.
+to the user's name.
 
 .. image:: images/Screen-Shot-2019-07-19-at-4.17.41-PM.png
 

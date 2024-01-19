@@ -30,7 +30,7 @@ Organization**
    quickly share critical infrastructure information and dashboards,
    reducing MTTA/MTTR
 
-Grafana is a general purpose dashboard and graph composer. It’s focused
+Grafana is a general purpose dashboard and graph composer. It's focused
 on providing rich ways to visualize time series metrics from Graphite,
 but also works with several other popular metric databases like
 InfluxDB, OpenTSDB, and Prometheus. The Grafana and Splunk On-Call
@@ -95,7 +95,7 @@ The resulting test alert in Splunk On-Call should look similar to this:
 
 Locate the Grafana Dashboard panel you want to send alerts to Splunk
 On-Call and click on the Edit button.  This should appear by clicking on
-the dropdown arrow next to the panel’s name.  Next, navigate to the
+the dropdown arrow next to the panel's name.  Next, navigate to the
 Alert section on the lefthand side.  Define your alert conditions and
 then under Notifications, click the plus button to select the
 notification channel you just configured.
@@ -106,8 +106,8 @@ Be sure to save your changes.  The standard configuration is now
 complete.
 
 Repeat these steps as necessary, creating separate Notification Channels
-for each Routing Key you’d like utilized and assigning the Notification
-Channel on each Dashboard Panel you’d like to alert you.
+for each Routing Key you'd like utilized and assigning the Notification
+Channel on each Dashboard Panel you'd like to alert you.
 
 **Include an Image on the Alert**
 ---------------------------------

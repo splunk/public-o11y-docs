@@ -39,7 +39,7 @@ team to populate the team name or begin typing out the team name to narrow the l
 member of that team (regardless of their current on-call status) informing them that they have been mentioned in the Splunk On-Call timeline.
 
 It is not required that you use the @@ symbol before every chat. Once a conversation has begun and the users are engaged, it may not be necessary for users to receive a push notification for each chat. At
-that point, you can simply chat back and forth with the assumption that the other user is already engaged and paying attention. If a long time passes, you may want to use another @@mention to draw the team's attention back to the timeline.
+that point, you can chat back and forth with the assumption that the other user is already engaged and paying attention. If a long time passes, you may want to use another @@mention to draw the team's attention back to the timeline.
 
 Chatting in the Main Timeline compared to the Incident Timeline
 ====================================================================

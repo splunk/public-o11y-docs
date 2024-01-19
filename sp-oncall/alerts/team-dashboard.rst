@@ -62,16 +62,16 @@ People Table
 
 See a list of users that are on-call for the teams that you have
 filtered for. You can see which teams that these users are on call for,
-as well as clicking the user’s name to take on-call or see these user’s
+as well as clicking the user's name to take on-call or see these user's
 upcoming shifts.
 
-You can navigate to the team’s view below to see other user’s associated
+You can navigate to the team's view below to see other user's associated
 with teams.
 
 Take On-Call from Another User
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Navigate to a user in the on-call list, and click the user’s name. From
+Navigate to a user in the on-call list, and click the user's name. From
 here, you can take the shift from a user from the pop over.
 
 To revert an on-call take, click the “clear take” button from the

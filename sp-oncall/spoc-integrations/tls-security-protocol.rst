@@ -2,7 +2,7 @@ Historically, Splunk On-Call has allowed customers to connect to our
 platform using older, less-secure encryption protocols (TLS versions
 prior to 1.2, SSLv3). This was to allow customers using older web client
 libraries to connect to our API endpoints. In the interest of providing
-the best possible protection for all of our customers’ data, we no
+the best possible protection for all of our customers' data, we no
 longer support these older protocols.
 
 **ACTION REQUIRED:** Please update connecting websocket libraries to

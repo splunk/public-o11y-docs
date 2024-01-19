@@ -3,7 +3,7 @@ Please note: This is not an officially supported integration. Thanks to
 together.
 
 VictorOps Alerting from Microsoft System Center Operations Manager
-(SCOM) through PowerShell. Call this script from SCOM’s command
+(SCOM) through PowerShell. Call this script from SCOM's command
 notification channel.
 
 Change $RoutingKey to the routing key you would like to pass in or
@@ -22,18 +22,18 @@ STARTUP FOLDER FOR THE COMMAND LINE:
 C:\\windows\\system32\\WindowsPowerShell\\v1.0\\
 
 <#.SYNOPSIS VictorOps Alerting from Microsoft System Center Operations
-Manager (SCOM) through PowerShell Call this script from SCOM’s command
+Manager (SCOM) through PowerShell Call this script from SCOM's command
 notification channel - be sure to update the API key (parameter #2). See
 Example for usage. .DESCRIPTION Post alerts to VictorOps from Microsoft
 System Center Operations Manager (SCOM) through PowerShell .EXAMPLE FULL
 PATH OF THE COMMAND FILE:
 C:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe COMMAND
 LINE PARAMETERS: “C:\\scripts\\VO_Send-Alert_Test.ps1”
-‘“:math:`Data\[Default='Not Present'\]/Context/DataItem/AlertId`”’
-‘“$RoutingKey”’ ‘“api-key”’ # !Change
+‘“:math:`Data\[Default='Not Present'\]/Context/DataItem/AlertId`”'
+‘“$RoutingKey”' ‘“api-key”' # !Change
 :math:`RoutingKey to the routing key you would like to pass in or remove it alltogether to default to 'everyone' # !Change api-key to the organization api key or default it in parameter #2 STARTUP FOLDER FOR THE COMMAND LINE: C:\\windows\\system32\\WindowsPowerShell\\v1.0\\ .EXAMPLE # Easier to look at: "C:\\scripts\\VO\_Send-Alerts.ps1" ^ '"`\ Data[Default=‘Not
-Present’]/Context/DataItem/AlertId\ :math:`"' ^ '"`\ RoutingKey”’’ ^
-‘“api-key”’ # Change
+Present']/Context/DataItem/AlertId\ :math:`"' ^ '"`\ RoutingKey”'' ^
+‘“api-key”' # Change
 :math:`RoutingKey to the routing key you would like to pass in, or remove it alltogether to default to 'everyone' #> Param (  \[Parameter(Mandatory=`\ true
 ,Position=0,HelpMessage=“Unique AlertID must be
 provided.”)][GUID]\ :math:`AlertID,  \[Parameter(Mandatory=`\ false,Position=1,HelpMessage=“Team
@@ -105,7 +105,7 @@ Event-log
 :math:`CheckEventLog = (Get-EventLog -List | ? Log -EQ "OM Alerts") if(`\ CheckEventLog
 -eq $null){ try{New-EventLog -LogName “OM Alerts” -Source “VictorOps
 Alerts”} catch{Write-Error “Please rerun the script from a Windows
-PowerShell console with admin rights (‘Run As Administrator’). Cannot
+PowerShell console with admin rights (‘Run As Administrator'). Cannot
 continue.”;Break} } $event_message =
 :math:`StateMessage + "\`n Command: " + "Invoke-RestMethod -Method Post -ContentType \`"application/json\`" -Body \`n`\ json`n
 -Uri
