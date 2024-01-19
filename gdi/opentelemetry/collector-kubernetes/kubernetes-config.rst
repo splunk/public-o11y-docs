@@ -192,12 +192,12 @@ For example:
 
 .. _otel-kubernetes-config-hostnetwork:
 
-Use the networking stack of your host's machine
+Configure the agent's use of the host network
 ======================================================
 
-To give the daemonset pods access to the node host network, set ``hostNetwork`` to ``true``.
+By default, ``agent.hostNetwork`` is set to ``true``. This grants DaemonSet pods of the agent access to the node's host network, allowing them to monitor specific elements. Enable this setting to monitor certain control plane components and integrations that require host network access.
 
-``hostNetwork`` is set to ``true`` by default. If disabled, monitoring of some control plane components might be affected.
+Set ``agent.hostNetwork`` to ``false`` to turn off host network access. This might be necessary to comply with certain organization security policies. If host network access is disabled, the agent's monitoring capabilities might be limited.
 
 This value is disregarded for Windows.
 
