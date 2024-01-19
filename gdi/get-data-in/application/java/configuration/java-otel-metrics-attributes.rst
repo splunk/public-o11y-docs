@@ -145,12 +145,6 @@ The agent collects the following garbage collection (GC) metrics:
   * - ``runtime.jvm.gc.concurrent.phase.time``
     - Timer
     - Time spent in concurrent phase, in milliseconds.
-  * - ``runtime.jvm.gc.live.data.size``
-    - Gauge
-    - Size of long-lived heap memory pool after reclamation, in bytes.
-  * - ``runtime.jvm.gc.max.data.size``
-    - Gauge
-    - Maximum size of long-lived heap memory pool, in bytes.
   * - ``runtime.jvm.gc.memory.allocated``
     - Counter
     - Increase in the size of the young heap memory pool after one garbage collection and before the next.
@@ -200,13 +194,7 @@ The agent collects the following memory metrics:
     - Description
   * - ``process.runtime.jvm.memory.allocated``
     - Counter
-    - Total number of bytes allocated by JVM threads since the previous data point was emitted. 
-        - Use the rate per second rollup.
-        - Requires to activate memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag.
-  * - ``process.runtime.jvm.memory.reclaimed``
-    - Counter
-    - Total number of bytes reclaimed by the GCP since the previous data point was emitted. Notes:
-        - This metric might be inaccurate for concurrent garbage collectors such as Shenandoah or ZGC.
+    - Total number of bytes allocated by JVM threads since the previous data point was emitted.
         - Use the rate per second rollup.
         - Requires to activate memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag.
   * - ``runtime.jvm.buffer.count``
