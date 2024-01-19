@@ -1,5 +1,13 @@
 .. _reroute-an-incident:
 
+************************************************************************
+Re-route incidents
+************************************************************************
+
+.. meta::
+   :description: Learn how to manually take an on-call shift from someone in real-time. Ideal for unexpected absences from work when you're on-call.
+
+
 Sometimes, users who are paged for an issue may need to reroute the
 incident, either to another team, or to a specific individual.
  VictorOps offers the ability to route an existing incident to

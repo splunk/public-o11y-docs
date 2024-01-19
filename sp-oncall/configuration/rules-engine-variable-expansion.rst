@@ -1,3 +1,14 @@
+.. _rules-engine-variable:
+
+************************************************************************
+Rules engine variable expansion
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
+
+
 The Rules Engine can pull the content of an alert field into the rule,
 thus allowing users to dynamically update any annotation or
 transformation with data from the alert. This can be done using the

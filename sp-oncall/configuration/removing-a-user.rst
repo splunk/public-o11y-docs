@@ -1,3 +1,13 @@
+.. _remove-user:
+
+************************************************************************
+Managing Splunk On-Call users
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
+
 In order to add or delete users in the VictorOps platform, you must
 either have the Global Admin role for global add/remove permissions or
 the Team Admin role for team-specific add/remove permissions.

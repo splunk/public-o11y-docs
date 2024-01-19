@@ -1,7 +1,13 @@
 .. _spoc-api:
 
+
+************************************************************************
 Splunk On-Call API
-***************************
+************************************************************************
+
+.. meta::
+   :description: Learn how to manually take an on-call shift from someone in real-time. Ideal for unexpected absences from work when you're on-call.
+
 
 Follow these steps to configure API calls within your Splunk On-Call
 account. To see all available API calls and configuration steps please

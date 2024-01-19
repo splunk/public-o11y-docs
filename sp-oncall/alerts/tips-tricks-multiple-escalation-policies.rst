@@ -1,5 +1,12 @@
 .. _mult-escalation-policies:
 
+************************************************************************
+Multiple escalation policies best practices
+************************************************************************
+
+.. meta::
+   :description: Learn how to manually take an on-call shift from someone in real-time. Ideal for unexpected absences from work when you're on-call.
+
 
 Having multiple escalation policies can be very useful as it allows for
 unique escalation paths for different types and severities of alerts

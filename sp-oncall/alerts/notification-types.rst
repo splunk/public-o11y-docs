@@ -1,3 +1,12 @@
+.. _notif-types:
+
+************************************************************************
+Notification Aggregation
+************************************************************************
+
+.. meta::
+   :description: Learn how to manually take an on-call shift from someone in real-time. Ideal for unexpected absences from work when you're on-call.
+
 Splunk On-Call offers many notification options including email, SMS,
 phone, and push notifications. This article highlights each of the
 different options.

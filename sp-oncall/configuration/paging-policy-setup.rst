@@ -1,3 +1,14 @@
+.. _primary-paging:
+
+************************************************************************
+Primary paging policy
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
+
+
 Your Primary Paging Policy is executed when an incident is routed to you
 based on a team's Escalation Policy. Learn more about `team escalation
 policies <http://help.victorops.com/knowledge-base/team-escalation-policy/>`__ if

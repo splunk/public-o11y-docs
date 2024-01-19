@@ -1,3 +1,15 @@
+.. _rules-engine-stop-flag:
+
+************************************************************************
+Rules engine stop flag
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
+
+
+
 At the bottom of any rule setup window, there is an option to stop
 processing after the rule has been applied.
 

@@ -1,4 +1,11 @@
-[ht_toggle title=“Requirements” id=“” class=“” style=“” ]
+.. _rules-engine-annot:
+
+************************************************************************
+Rules engine annotations
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
 
 **Versions Supported: Enterprise**
 

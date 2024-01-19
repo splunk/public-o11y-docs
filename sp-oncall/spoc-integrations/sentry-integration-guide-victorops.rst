@@ -1,4 +1,11 @@
-[ht_toggle title=“Requirements” id=“” class=“” style=“” ]
+.. _sentry-integration:
+
+************************************************************************
+Matching conditions for the Rule Engine
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
 
 **Versions Supported:** N/A (SaaS)
 

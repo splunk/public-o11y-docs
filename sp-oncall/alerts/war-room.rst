@@ -1,3 +1,13 @@
+.. _war-room:
+
+************************************************************************
+About the War room
+************************************************************************
+
+.. meta::
+   :description: Learn how to manually take an on-call shift from someone in real-time. Ideal for unexpected absences from work when you're on-call.
+
+
 The War Room interface pops out from the incident pane, allowing teams
 to better digest incident context and mobilize on-call teams. From this
 view, incident responders can track critical incident metrics such as
