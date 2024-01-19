@@ -1,3 +1,14 @@
+
+.. _mtta-mttr:
+
+
+************************************************************************
+MTTA and MTTR reports
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
 The Response Metrics MTTA (Mean Time to Acknowledge) and MTTR (Mean Time
 to Resolve) Report tells the story of your investment in Splunk On-Call
 and the practice of DevOps. Track evolution and goals over time, and

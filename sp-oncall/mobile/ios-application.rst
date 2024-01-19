@@ -1,3 +1,13 @@
+.. _spoc-ios:
+
+************************************************************************
+iOS for mobile Splunk On-Call
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
+
 This article will help iOS users understand the features and
 capabilities that are specific to the iOS version of the Splunk On-Call
 mobile application.

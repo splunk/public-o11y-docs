@@ -1,3 +1,13 @@
+.. _mobile-incidents:
+
+************************************************************************
+Incident management from the mobile app
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
+
 Incident Management from the Mobile App
 ---------------------------------------
 

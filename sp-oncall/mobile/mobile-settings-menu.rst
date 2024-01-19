@@ -1,5 +1,15 @@
+
+.. _mobile-settings:
+
+
+************************************************************************
 Splunk On-Call Mobile App Settings
-----------------------------------
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
+
 
 The Splunk On-Call mobile app has many helpful settings to be aware of.
 Understanding the features and capabilities of your Splunk On-Call

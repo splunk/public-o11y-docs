@@ -1,3 +1,13 @@
+.. _mobile-sched-overrides:
+
+************************************************************************
+Managing schedules on Splunk On-Call for mobile
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
+
 This article will help you navigate the My Schedule feature on both iOS
 and Android systems. With My Schedule, you are able to easily view your
 on-call schedule and upcoming on-call shifts as well as schedule

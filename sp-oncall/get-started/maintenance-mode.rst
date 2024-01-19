@@ -1,3 +1,13 @@
+.. _maintenance-mode:
+
+************************************************************************
+Maintenance mode
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
+
 Maintenance Mode
 ----------------
 

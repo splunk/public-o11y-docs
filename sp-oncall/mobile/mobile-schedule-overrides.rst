@@ -1,7 +1,15 @@
 .. _mobile-schedule-overrides:
 
+
+************************************************************************
 Schedule and Scheduled Overrides from the Mobile App
-----------------------------------------------------
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
+
+
 
 Within the Splunk On-Call Mobile App you can access your schedule and
 make schedule changes on the go and from anywhere. Capabilities include

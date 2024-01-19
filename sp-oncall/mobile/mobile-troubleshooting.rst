@@ -1,3 +1,15 @@
+
+.. _mobile-troubleshoot:
+
+
+************************************************************************
+Troubleshooting the Splunk On-Call Mobile App
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
+
 Android
 -------
 

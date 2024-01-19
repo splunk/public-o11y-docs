@@ -1,3 +1,15 @@
+
+.. _incident-frequency:
+
+
+************************************************************************
+Splunk On-Call Mobile App Settings
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
+
 Incident Frequency Report
 -------------------------
 

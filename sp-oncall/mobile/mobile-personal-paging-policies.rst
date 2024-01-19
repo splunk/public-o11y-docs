@@ -1,3 +1,13 @@
+.. _mobile-personal-paging:
+
+************************************************************************
+Personal paging policies on the Splunk On-Call mobile app
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
+
 This article will help you navigate to and edit the Personal Paging
 Policy feature on both iOS and Android systems. Within the VictorOps
 Mobile App, you are able to easily view and update your paging policies

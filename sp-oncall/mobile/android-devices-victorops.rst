@@ -1,3 +1,13 @@
+.. _spoc-android:
+
+************************************************************************
+Android mobile devices for Splunk On-Call
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
+
 Requirements
 ------------
 

@@ -1,3 +1,13 @@
+.. _spoc-mobile-main:
+
+************************************************************************
+Navigating the Splunk On-Call mobile app
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
+
 Navigating the VictorOps Mobile App
 -----------------------------------
 
