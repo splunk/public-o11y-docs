@@ -110,6 +110,10 @@ The installer script installs the Node.js package using the ``npm install`` comm
 
         See :ref:`chef-zero-config`.
 
+    .. tab:: Puppet
+
+        See :ref:`puppet-zero-config`.
+
 
 
 .. _verify-js-agent-install:
