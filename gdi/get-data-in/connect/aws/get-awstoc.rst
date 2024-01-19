@@ -160,7 +160,7 @@ To take advantage of the full benefits of the Splunk Observability Cloud platfor
 .. raw:: html
 
   <embed>
-    <h2>Manage your OpenTelemetry enablement<a name="install-splunk-otel-collector-enablement" class="headerlink" href="#install-splunk-otel-collector-enablement" title="Permalink to this headline">¶</a></h2>
+    <h3>Track your OpenTelemetry enablement<a name="install-splunk-otel-collector-enablement" class="headerlink" href="#install-splunk-otel-collector-enablement" title="Permalink to this headline">¶</a></h3>
   </embed>
 
 To track the degree of OpenTelemetry enablement in your AWS integrations: 
@@ -173,7 +173,7 @@ To track the degree of OpenTelemetry enablement in your AWS integrations:
   :width: 80%
   :alt: Amount of AWS entities with the Collector installed.
 
-3. For instances that are successfully instrumented, you can see which version of the OTel Collector is deployed.  
+3. For OTel Collector instances that are successfully instrumented, you can see which version of the OTel Collector is deployed.  
 
 ..  image:: /_images/gdi/aws-collector-insights-version.png
   :width: 80%
