@@ -43,6 +43,6 @@ See the table for a complete list of exposed ports and endpoints:
   * - ``http(s)://0.0.0.0:9411/api/[v1|v2]/spans``
     - Zipkin receiver supporting V1 and V2
   * - ``http(s)://0.0.0.0:9943``
-    - SignalFx receiver supporting metrics and events
+    - SignalFx receiver supporting metrics, traces, and events
 
 For more information, see the :new-page:`agent <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml>` and :new-page:`gateway <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/gateway_config.yaml>` configuration files.
