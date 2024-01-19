@@ -140,7 +140,7 @@ The following table shows the variables that you can configure for this Puppet m
      - Configure the OpenTelemetry instrumentation resource attributes, for example, ``deployment.environment=prod``. The specified resource attributes are added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node, or ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf`` if using the ``systemd`` installation method. 
      - None
    * - ``auto_instrumentation_service_name``
-     - Explicitly sets the service name for the instrumented Java and Node.js applications, for example, ``my.service``. If this variable is set to a non-empty value, the value overrides is added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The applications on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
+     - Explicitly sets the service name for the instrumented Java and Node.js applications, for example, ``my.service``. If this variable is set to a non-empty value, the value overrides is added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The applications on the node needs to be restarted separately after installation for auto instrumentation to take effect.
      - None 
    * - ``auto_instrumentation_enable_profiler``
      - Activates or deactivates AlwaysOn CPU Profiling.
