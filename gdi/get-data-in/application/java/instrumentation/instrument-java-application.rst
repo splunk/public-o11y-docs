@@ -283,7 +283,7 @@ To override the host used by the Java agent, use the environment variable ``OTEL
 
    .. code-tab:: bash Linux
 
-      export OTEL_RESOURCE_ATTRIBUTES=<host_name>
+      export OTEL_RESOURCE_ATTRIBUTES=host.name=<host_name>
 
    .. code-tab:: shell Windows PowerShell
 
