@@ -131,7 +131,7 @@ The following table shows the variables that you can configure for this Puppet m
      - Version of the ``splunk-otel-auto-instrumentation`` package to install, for example, ``0.50.0``. The minimum supported version is ``0.48.0`` for Java and ``0.87.0`` for Node.js. The Java and Node.js applications on the node need to be restarted after installation for auto instrumentation to take effect.
      - ``latest``
    * - ``auto-instrumentation-systemd``
-     - Whether to activate and configure the auto instrumentation for ``systemd`` services only. If set to ``true``, the auto instrumentation automatically environment variables are added to ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
+     - Whether to activate and configure the auto instrumentation for ``systemd`` services only. If set to ``true``, auto instrumentation environment variables are added to ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
      - ``false``
    * - ``auto_instrumentation_ld_so_preload``
      - By default, the ``/etc/ld.so.preload`` file on the node is configured for the ``/usr/lib/splunk-instrumentation/libsplunk.so`` shared object library provided by the ``splunk-otel-auto-instrumentation`` package and is required for auto instrumentation. Configure this variable to include additional library paths, for example, ``/path/to/my.library.so``. The applications on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
