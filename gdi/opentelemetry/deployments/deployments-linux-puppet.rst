@@ -128,7 +128,7 @@ The following table shows the variables that you can configure for this Puppet m
      - Whether to install or manage :ref:`auto-instrumentation-java` and :ref:`auto-instrumentation-nodejs`. When set to ``true``, the ``splunk-otel-auto-instrumentation`` deb/rpm package is downloaded and installed from the Collector repository. The applications on the node need to be started or restarted after installation for auto instrumentation to take effect.
      - ``false``
    * - ``auto_instrumentation_version``
-     - Version of the ``splunk-otel-auto-instrumentation`` package to install, for example, ``0.50.0``. The minimum supported version is ``0.48.0`` for Java and ``0.87.0`` for Node.js. The Java and Node.js applications on the node need to be started or restarted after installation for auto instrumentation to take effect.
+     - Version of the ``splunk-otel-auto-instrumentation`` package to install, for example, ``0.50.0``. The minimum supported version is ``0.48.0`` for Java and ``0.87.0`` for Node.js. The Java and Node.js applications on the node need to be restarted after installation for auto instrumentation to take effect.
      - ``latest``
    * - ``auto-instrumentation-systemd``
      - Whether to activate and configure the auto instrumentation for ``systemd`` services only. If set to ``true``, the auto instrumentation automatically environment variables are added to ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
