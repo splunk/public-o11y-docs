@@ -88,7 +88,7 @@ Follow these steps at first login to Splunk Observability Cloud:
 
 1. Select :strong:`Sign in with Splunk Cloud`.
 
-2. Provide your Splunk Cloud Platform credentials. If your Splunk Cloud Platform user has an associated email, the :strong:`Email` field autopopulates. If your Splunk Cloud Platform user does not have an associated email, you must enter your email address twice. Make sure to use the same email address that you use to sign in to Splunk Cloud Platform. If you get the :strong:`No access` error message, contact your administrator. See :ref:`Field redaction processors <no-access-error>` for more information.
+2. Provide your Splunk Cloud Platform credentials. If your Splunk Cloud Platform user has an associated email, the :strong:`Email` field autopopulates. If your Splunk Cloud Platform user does not have an associated email, you must enter your email address twice. Make sure to use the same email address that you use to sign in to Splunk Cloud Platform. If you get the :strong:`No access` error message, contact your administrator. See :ref:`no-access-error` for more information.
 
 3. You then receive an e-mail to verify your identity. Verify your identity in the e-mail to be authenticated in Splunk Observability Cloud. After authentication, you can access all Splunk Cloud Platform data that your Splunk Cloud Platform role has permissions to access in Splunk Observability Cloud applications. If you see an Internal Server Error, follow these steps.
 
