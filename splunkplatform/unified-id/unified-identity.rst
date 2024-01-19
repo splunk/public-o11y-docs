@@ -88,7 +88,7 @@ Follow these steps at first login to Splunk Observability Cloud:
 
 1. Select :strong:`Sign in with Splunk Cloud`.
 
-2. Provide your Splunk Cloud Platform credentials. If your Splunk Cloud Platform user has an associated email, the :strong:`Email` field autopopulates. If your Splunk Cloud Platform user does not have an associated email, you must enter your email address twice. Make sure to use the same email address that you use to sign in to Splunk Cloud Platform.
+2. Provide your Splunk Cloud Platform credentials. If your Splunk Cloud Platform user has an associated email, the :strong:`Email` field autopopulates. If your Splunk Cloud Platform user does not have an associated email, you must enter your email address twice. Make sure to use the same email address that you use to sign in to Splunk Cloud Platform. If you get the :strong:`No access` error message, contact your administrator. See :ref:`Field redaction processors <no-access-error>` for more information.
 
 3. You then receive an e-mail to verify your identity. Verify your identity in the e-mail to be authenticated in Splunk Observability Cloud. After authentication, you can access all Splunk Cloud Platform data that your Splunk Cloud Platform role has permissions to access in Splunk Observability Cloud applications. If you see an Internal Server Error, follow these steps.
 
@@ -103,6 +103,17 @@ Follow these steps at first login to Splunk Observability Cloud:
 
 After the first login, you do not need to provide your Splunk Cloud Platform credentials again. On subsequent logins, if you are already logged in to Splunk Cloud Platform, select :strong:`Sign in with Splunk Cloud` and you are automatically signed in to Splunk Observability Cloud.
 
+.. _no-access-error:
+
+No access error
+------------------------------------------------------------------------------------------
+Contact your Splunk Cloud Platform administrator if you receive the following :strong:`No access` error message:
+
+.. image:: /_images/splunkplatform/no-access-error.png
+     :width: 50%
+     :alt: This screenshot shows the no access error.
+
+Users receive this error message if their Splunk Cloud Platform administrator did not give them the custom role ``o11y_access``. The ``o11y_access`` role is required to access Splunk Observability Cloud.
 
 Working in Splunk Observability Cloud after the integration
 ==========================================================================================
