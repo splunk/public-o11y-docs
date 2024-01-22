@@ -19,10 +19,7 @@ Splunk Synthetic Monitoring offers metrics you can use to track your subscriptio
    * - :strong:`Metric`
      - :strong:`Description`
    * - ``sf.org.synthetics.limit.synthetics``
-     -Limit of number of MTS for that org.
-
-
-
+     - Limit of number of MTS for that org.
 
 
 
