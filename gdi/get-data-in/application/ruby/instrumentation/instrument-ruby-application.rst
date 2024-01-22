@@ -127,7 +127,7 @@ For advanced configuration of the Ruby agent, like changing trace propagation fo
 .. _kubernetes_ruby_agent:
 
 Deploy the Ruby agent in Kubernetes
----------------------------------------------
+==================================================================
 
 To deploy the Ruby agent in Kubernetes, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
 
@@ -160,7 +160,7 @@ The following example shows how to update a deployment to expose environment var
 .. _export-directly-to-olly-cloud-ruby:
 
 Send data directly to Splunk Observability Cloud
---------------------------------------------------
+==================================================================
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
@@ -191,13 +191,13 @@ The realm name appears in the :guilabel:`Organizations` section.
 .. note:: For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
 
 Specify the source host 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------------
 
 .. include:: /_includes/gdi/apm-api-define-host.rst
 
 .. _instrument_aws_ruby_functions:
 
 Instrument Lambda functions
-----------------------------------
+==================================================================
 
 You can instrument AWS Lambda functions using the Splunk OpenTelemetry Lambda Layer. See :ref:`instrument-aws-lambda-functions` for more information.

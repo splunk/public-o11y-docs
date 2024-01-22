@@ -153,7 +153,7 @@ The following example shows how to update a deployment to expose environment var
 .. _export-directly-to-olly-cloud-go:
 
 Send data directly to Splunk Observability Cloud
---------------------------------------------------------------------
+==================================================================
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
@@ -185,6 +185,6 @@ The realm name appears in the :guilabel:`Organizations` section.
 For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>` and :new-page:`Send data points <https://dev.splunk.com/observability/docs/datamodel/ingest#Send-data-points>`.
 
 Specify the source host 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------------------------
 
 .. include:: /_includes/gdi/apm-api-define-host.rst
