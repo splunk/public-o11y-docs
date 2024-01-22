@@ -104,14 +104,14 @@ If no data appears in APM, see :ref:`common-ruby-troubleshooting`.
 If you want to manually install and activate instrumentation libraries, see :ref:`ruby-manual-instrumentation`.
 
 Instrument Ruby on Rails applications
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------------
 
 To instrument a Ruby on Rails application, see :ref:`instrument-ruby-rails`.
 
 .. _ruby-enable-server-timing:
 
 Activate server timing for RUM
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------------
 
 You can connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data produced by your Ruby application or service. For more information, see :ref:`server-trace-information-ruby`.
 
