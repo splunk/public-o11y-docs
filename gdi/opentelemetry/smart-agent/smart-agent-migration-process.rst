@@ -231,8 +231,6 @@ The following is an example YAML configuration file with default values where ap
    configDir: "/tmp/signalfx-agent/collectd"
 
    monitors:
-      - type: signalfx-forwarder
-         listenAddress: 0.0.0.0:9080
       - type: collectd/activemq
          discoveryRule: container_image =~ "activemq" && private_port == 1099
          extraDimensions:
@@ -248,7 +246,7 @@ The following is an example YAML configuration file with default values where ap
 
 .. _use-translatefx:
 
-4. Translate the Smart Agent configuration file using translatesfx
+1. Translate the Smart Agent configuration file using translatesfx
 =====================================================================================
 
 ``translatesfx`` is a command-line tool provided by Splunk Observability Cloud that helps you translate your existing Smart Agent YAML configuration file into a configuration that can be used by the Collector. To learn how to use it, see :ref:`Configuration translation tool <otel-translation-tool>`.

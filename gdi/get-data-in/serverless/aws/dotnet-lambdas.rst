@@ -66,11 +66,10 @@ To instrument a .NET function in AWS Lambda for Splunk APM, follow these steps:
                .AddHttpClientInstrumentation()
                .AddAWSInstrumentation()
                // Use AddSource to add your custom DiagnosticSource source names
-               .AddSource(SourceName)
+               //.AddSource("My.Source.Name")
                .SetSampler(new AlwaysOnSampler())
                .AddAWSLambdaConfigurations(opts => opts.DisableAwsXRayContextExtraction = true)
-               .SetResourceBuilder(
-                  ResourceBuilder.CreateDefault()
+               .ConfigureResource(configure => configure
                      .AddService(serviceName, serviceVersion: "1.0.0")
                      // Different resource detectors can be found at
                      // https://github.com/open-telemetry/opentelemetry-dotnet-contrib/tree/main/src/OpenTelemetry.ResourceDetectors.AWS#usage

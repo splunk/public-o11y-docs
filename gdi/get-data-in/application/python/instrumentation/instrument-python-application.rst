@@ -229,6 +229,11 @@ The realm name appears in the :guilabel:`Organizations` section.
 
 .. note:: For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
 
+Specify the source host 
+----------------------------------------------------
+
+.. include:: /_includes/gdi/apm-api-define-host.rst
+
 .. _instrument_aws_python_functions:
 
 Instrument Lambda functions

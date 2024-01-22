@@ -21,6 +21,9 @@ If the page load request has a ``Server-Timing`` header, RUM uses the data to li
 
 .. _browser-rum-documentload:
 
+
+
+
 documentLoad
 ------------------------------
 
@@ -68,6 +71,14 @@ The following annotations are collected from the navigation timings, as specifie
      - When the load event of the current document is completed.
 
 .. _browser-rum-documentfetch:
+
+This diagram shows the sequence of events in documentLoad. 
+
+
+.. image:: /_images/gdi/documentLoad.png
+  :width: 50%
+  :alt: This image shows a diagram of the documentLoad proccess. 
+
 
 documentFetch
 --------------------------

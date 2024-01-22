@@ -93,6 +93,31 @@ The following settings control trace exporters and their endpoints:
    * - ``SPLUNK_ACCESS_TOKEN``
      - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Required if you need to send data to the Splunk Observability Cloud ingest endpoint. See :ref:`admin-tokens`.
 
+.. _profiling-configuration-otel-dotnet:
+
+.NET OTel settings for AlwaysOn Profiling
+===============================================
+
+The following settings control the AlwaysOn Profiling feature for the .NET instrumentation:
+
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 40 60
+
+   * - Environment variable
+     - Description
+   * - ``SPLUNK_PROFILER_ENABLED``
+     - Activates AlwaysOn Profiling. The default value is ``false``.
+   * - ``SPLUNK_PROFILER_MEMORY_ENABLED``
+     - Activates memory profiling. The default value is ``false``.
+   * - ``SPLUNK_PROFILER_LOGS_ENDPOINT``
+     - The collector endpoint for profiler logs. The default value is ``http://localhost:4318/v1/logs``.
+   * - ``SPLUNK_PROFILER_CALL_STACK_INTERVAL``
+     - Frequency with which call stacks are sampled, in milliseconds. The default value is ``10000`` milliseconds.
+
+.. note:: For more information on AlwaysOn Profiling, see :ref:`profiling-intro`.
+
 .. _dotnet-otel-trace-propagation-settings:
 
 Trace propagation settings
@@ -126,8 +151,7 @@ The following settings control trace sampling:
      - Description
    * - ``OTEL_TRACES_SAMPLER``
      - Sampler to use. The default value is ``parentbased_always_on``. Supported values are ``always_on``, ``always_off``, ``traceidratio``, ``parentbased_always_on``, ``parentbased_always_off``, and ``parentbased_traceidratio``.
-   * - ``OTEL_TRACES_SAMPLER_ARG``
-     - Semicolon-separated list of rules for the ``rules`` sampler. The default value is ``1.0``.
+
 
 .. _resource-detector-settings-dotnet-otel:
 
@@ -171,6 +195,21 @@ The following resource detectors are available:
    * - ``CONTAINER``
      - Container detector. For example, Docker or Podman containers.
      - ``container.id``
+     - Experimental Beta
+     - Community support
+   * - ``HOST``
+     - Host detector.
+     - ``host.name``
+     - Experimental Beta
+     - Community support
+   * - ``PROCESS``
+     - Process detector.
+     - ``process.pid``
+     - Experimental Beta
+     - Community support
+   * - ``PROCESSRUNTIME``
+     - Process Runtime detector.
+     - ``process.runtime.description``, ``process.runtime.name``, ``process.runtime.version``
      - Experimental Beta
      - Community support
 

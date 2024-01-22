@@ -22,7 +22,7 @@ Follow these steps to configure and activate the component:
 
 .. _tcp-receiver-sample-configs:
 
-Sample configurations
+Sample configuration
 -------------------------------------------------
 
 To activate the TCP receiver add ``tcplog`` to the ``receivers`` section of your ``agent_config.yaml`` file, as in the following example configuration:
@@ -33,10 +33,20 @@ To activate the TCP receiver add ``tcplog`` to the ``receivers`` section of your
       tcplog:
         listen_address: "0.0.0.0:54525"
 
+To complete the configuration, include the receiver in the ``logs`` pipeline of the ``service`` section of your
+configuration file. For example:
+
+.. code:: yaml
+
+  service:
+    pipelines:
+      logs:
+        receivers: [tcplog]
+
 See :ref:`tcp-receiver-settings` for additional settings.
 
 Use operators to format logs
--------------------------------------------------
+=================================================
 
 The TCP log receiver uses operators to process logs into a desired format. Each operator fulfills a single responsibility, such as reading lines from a file, or parsing JSON from a field. You need to chain operators together in a pipeline to achieve your desired result.
 
@@ -89,7 +99,9 @@ The ``multiline`` configuration block must contain exactly one of ``line_start_p
 The ``omit_pattern`` setting can be used to omit the start/end pattern from each entry.
 
 Supported encodings
---------------------------------------------------
+=================================================
+
+The following encodings are supported:
 
 .. list-table::
   :widths: 30 70

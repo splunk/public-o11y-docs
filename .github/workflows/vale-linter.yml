@@ -27,7 +27,7 @@ jobs:
           unzip latest.zip -d .
       - name: Get all changed docs
         id: changed-files
-        uses: tj-actions/changed-files@v35
+        uses: tj-actions/changed-files@v41
         with:
           files: |
             **/*.rst

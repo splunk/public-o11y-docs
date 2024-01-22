@@ -19,12 +19,13 @@ endpoints:
 -  Mesos
 -  Hadoop YARN
 
-You need to select distinct monitor configurations and discovery rules
+This collectd plugin is not compatible with Kubernetes cluster mode. You need
+to select distinct monitor configurations and discovery rules
 for master and worker processes. For the master configuration, set
 ``isMaster`` to ``true``. When you run Apache Spark on Hadoop YARN, this
 integration can only report application metrics from the master node.
 
-This integration is only available on Kubernetes and Linux.
+This integration is only available on Linux.
 
 Benefits
 --------

@@ -1,8 +1,8 @@
 .. _deployment-linux-ansible:
 
-**********************
-Ansible for Linux
-**********************
+********************************************************
+Deploy the Collector with Ansible for Linux
+********************************************************
 
 .. meta::
       :description: Describes how to install the Splunk Observability Cloud OpenTelemetry Collector Ansible role on Linux.

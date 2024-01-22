@@ -46,6 +46,17 @@ Configure the .NET instrumentation
 
 To configure the instrumentation, see :ref:`advanced-dotnet-configuration`.
 
+Uninstall auto instrumentation
+=====================================
+
+To uninstall zero config auto instrumentation for .NET, run the following command in PowerShell:
+
+.. code-block:: powershell
+
+   $MyProgram = Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\uninstall\* | Where { $_.DisplayName -eq "SignalFx .NET Tracing 64-bit" }
+
+   cmd /c $MyProgram.UninstallString
+
 .. _upgrade-the-package-dotnet:
 
 Upgrade the package

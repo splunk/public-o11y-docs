@@ -14,7 +14,7 @@ The Collector processes collected data as configured in your pipelines. Therefor
 
 Learn more about the Collector's configuration and data processing at:
 
-* :ref:`otel-configuration-ootb`
+* :ref:`collector-kubernetes-intro`
 * :ref:`otel-deployment-mode`
 * :ref:`otel-data-processing`
 * :ref:`signalfx-exporter`
