@@ -89,11 +89,7 @@ The following metrics power the charts in your APM Subscription Usage page with 
 How APM calculates usage 
 ==========================
 
-APM provides a value for each usage metric the system collects for each subscription usage period. The billed value is the higher of these metric values:
-
-- The average per-minute usage throughout the usage period.
-
-- 50% of the peak usage for the usage period.
+APM provides a value for each usage metric the system collects for each subscription usage period. The billed value is the average per-minute usage throughout the usage period.
 
 Every chart on the APM Billing and Usage page plots these metrics so you can monitor the billed value for each metric.
 
