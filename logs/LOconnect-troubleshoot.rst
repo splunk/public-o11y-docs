@@ -57,4 +57,10 @@ Solution
 ------------------------------------------------------------------------
 Do not try to target an internal index. Internal indexes start with “_” such as “_internal”. Internal indexes are not compatible with Log Observer Connect.
 
-Certain indexes, such as indexes defined in orphaned apps, do not appear for the REST endpoint /services/data/indexes. Move indexes defined in orphaned apps to a different indexes.conf. In Splunk Cloud Platform, this requires assistance from Splunk Support. In Splunk enterprise, it requires server command line access.
+Cause
+------------------------------------------------------------------------
+You are selecting an index in an orphaned app.
+
+Solution
+------------------------------------------------------------------------
+Indexes defined in orphaned apps do not appear for the REST endpoint /services/data/indexes. Move indexes defined in orphaned apps to a different indexes.conf. In Splunk Cloud Platform, this requires assistance from Splunk Support. In Splunk enterprise, it requires server command line access.
