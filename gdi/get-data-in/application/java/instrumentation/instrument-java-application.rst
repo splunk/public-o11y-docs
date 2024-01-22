@@ -287,7 +287,7 @@ To override the host used by the Java agent, use the environment variable ``OTEL
 
    .. code-tab:: shell Windows PowerShell
 
-      $env:OTEL_RESOURCE_ATTRIBUTES=<host_name>
+      $env:OTEL_RESOURCE_ATTRIBUTES=host.name=<host_name>
 
 .. _instrument_aws_lambda_functions:
 
