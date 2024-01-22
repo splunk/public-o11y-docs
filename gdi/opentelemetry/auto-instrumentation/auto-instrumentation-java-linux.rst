@@ -150,7 +150,7 @@ You can install the ``splunk-otel-auto-instrumentation`` package in the followin
 
    .. tab:: Puppet
 
-      See :ref:`puppet-zero-config-java`.
+      See :ref:`puppet-zero-config`.
       
    .. tab:: Salt
 
