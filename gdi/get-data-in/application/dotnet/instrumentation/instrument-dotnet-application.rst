@@ -304,7 +304,7 @@ When instrumenting an Azure WebJob in App Service, add the following settings. R
 .. _kubernetes_dotnet:
 
 Deploy the .NET instrumentation in Kubernetes
---------------------------------------------------------------------
+==================================================================
 
 To deploy the .NET instrumentation in Kubernetes, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
 
@@ -345,7 +345,7 @@ The following example shows how to update a deployment to expose environment var
 .. _export-directly-to-olly-cloud-dotnet:
 
 Send data directly to Splunk Observability Cloud
---------------------------------------------------------------------
+==================================================================
 
 By default, the instrumentation sends all telemetry to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
@@ -377,3 +377,7 @@ For more information on the ingest API endpoints, see :new-page:`Send APM traces
 
 .. caution:: This procedure applies to spans and traces. To send AlwaysOn Profiling data, you must use the OTel Collector.
 
+Specify the source host 
+--------------------------------------------------------------------
+
+.. include:: /_includes/gdi/apm-api-define-host.rst
