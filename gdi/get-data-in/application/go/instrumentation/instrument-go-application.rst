@@ -183,3 +183,18 @@ In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, f
 The realm name appears in the :guilabel:`Organizations` section. 
 
 For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>` and :new-page:`Send data points <https://dev.splunk.com/observability/docs/datamodel/ingest#Send-data-points>`.
+
+Specify the source host 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To override the host used by the agent, use the environment variable ``OTEL_RESOURCE_ATTRIBUTES`` to set your host's name to the desired source:
+
+.. tabs::
+
+   .. code-tab:: bash Linux
+
+      export OTEL_RESOURCE_ATTRIBUTES=host.name=<host_name>
+
+   .. code-tab:: shell Windows PowerShell
+
+      $env:OTEL_RESOURCE_ATTRIBUTES=host.name=<host_name>

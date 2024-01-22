@@ -380,7 +380,7 @@ For more information on the ingest API endpoints, see :new-page:`Send APM traces
 Specify the source host 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To override the host used by the Java agent, use the environment variable ``OTEL_RESOURCE_ATTRIBUTES`` to set your host's name to the desired source:
+To override the host used by the agent, use the environment variable ``OTEL_RESOURCE_ATTRIBUTES`` to set your host's name to the desired source:
 
 .. tabs::
 

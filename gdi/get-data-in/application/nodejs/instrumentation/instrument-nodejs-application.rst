@@ -292,7 +292,23 @@ For more information on the ingest API endpoints, see :new-page:`Send APM traces
 
 .. caution:: This procedure applies to spans and traces. To send AlwaysOn Profiling data, you must use the OTel Collector.
 
-Instrument Lambda functions
+Specify the source host 
 -----------------------------------------------------
+
+To override the host used by the agent, use the environment variable ``OTEL_RESOURCE_ATTRIBUTES`` to set your host's name to the desired source:
+
+.. tabs::
+
+   .. code-tab:: bash Linux
+
+      export OTEL_RESOURCE_ATTRIBUTES=host.name=<host_name>
+
+   .. code-tab:: shell Windows PowerShell
+
+      $env:OTEL_RESOURCE_ATTRIBUTES=host.name=<host_name>
+
+
+Instrument Lambda functions
+=============================================================
 
 You can instrument AWS Lambda functions using the Splunk OpenTelemetry Lambda Layer. See :ref:`instrument-aws-lambda-functions` for more information.
