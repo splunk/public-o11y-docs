@@ -292,7 +292,12 @@ For more information on the ingest API endpoints, see :new-page:`Send APM traces
 
 .. caution:: This procedure applies to spans and traces. To send AlwaysOn Profiling data, you must use the OTel Collector.
 
-Instrument Lambda functions
+Specify the source host 
 -----------------------------------------------------
+
+.. include:: /_includes/gdi/apm-api-define-host.rst
+
+Instrument Lambda functions
+=============================================================
 
 You can instrument AWS Lambda functions using the Splunk OpenTelemetry Lambda Layer. See :ref:`instrument-aws-lambda-functions` for more information.

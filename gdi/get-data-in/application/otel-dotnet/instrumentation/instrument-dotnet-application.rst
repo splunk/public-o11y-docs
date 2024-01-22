@@ -315,7 +315,7 @@ To install the .NET automatic instrumentation on Windows hosts that are offline,
 .. _export-directly-to-olly-cloud-dotnet-otel:
 
 Send data directly to Splunk Observability Cloud
----------------------------------------------------
+====================================================================
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
@@ -342,6 +342,11 @@ In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, f
 #. Select your username.
 
 The realm name appears in the :guilabel:`Organizations` section.
+
+Specify the source host 
+----------------------------------------------
+
+.. include:: /_includes/gdi/apm-api-define-host.rst
 
 .. _uninstall-otel-dotnet:
 
