@@ -93,13 +93,7 @@ APM provides a value for each usage metric the system collects for each subscrip
 
 Every chart on the APM Billing and Usage page plots these metrics so you can monitor the billed value for each metric.
 
-The detailed usage report for each usage period provides the billed value for each usage metric. The following example illustrates how the billed value is based on the higher value of the usage metrics for a usage period:
-
-.. code-block:: none
-
-   # The billed TAPM value for this month is: 47064
-
-   # The average TAPM value for this month is: 31516
+The detailed usage report for each usage period provides the billed value for each usage metric.
 
 For more information about APM usage reports, see :ref:`view-apm-billing-reports`.
 
