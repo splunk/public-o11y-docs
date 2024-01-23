@@ -25,7 +25,7 @@ APM usage reports are available as tab-delimited text files. They include metric
 
 3. Select the usage report for the usage period you want to analyze. The usage report opens in a new tab.
 
-4. To download the report, select the usage report and save it as a ``.txt`` file.
+4. To download the report, select the usage report and save it as a .txt file.
 
 Metrics for host subscription plans
 -----------------------------------
