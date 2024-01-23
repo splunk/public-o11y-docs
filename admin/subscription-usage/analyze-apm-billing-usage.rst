@@ -101,8 +101,6 @@ The detailed usage report for each usage period provides the billed value for ea
 
    # The average TAPM value for this month is: 31516
 
-   # The halfpeak TAPM value for this month is: 47064
-
 For more information about APM usage reports, see :ref:`view-apm-billing-reports`.
 
 .. _host-diagnostics-report-apm:
