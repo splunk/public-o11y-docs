@@ -18,14 +18,14 @@ Download an APM usage report
 
 APM usage reports are available as tab-delimited text files. They include metrics and subscription usage for the entire usage period and break down usage for each minute in the usage period. Follow these steps to view and download a usage report:
 
-1. Go to :guilabel:`Settings > Subscription Usage` and select the :strong:`APM` tab.
-   Depending on your org subscription model, this might be :guilabel:`Settings > Billing and Usage`.
+1. Go to :guilabel:`Settings` then :guilabel:`Subscription Usage` and select the :strong:`APM` tab.
+   Depending on your org subscription model, this might be :guilabel:`Settings` then :guilabel:`Billing and Usage`.
 
 2. Select :guilabel:`View Detailed Usage Reports`.
 
 3. Select the usage report for the usage period you want to analyze. The usage report opens in a new tab.
 
-4. To download the report, right-click the usage report and save it as a ``.txt`` file.
+4. To download the report, select the usage report and save it as a ``.txt`` file.
 
 Metrics for host subscription plans
 -----------------------------------
@@ -50,8 +50,8 @@ In addition to per-minute usage metrics, usage reports for host subscription pla
 
 .. note:: To generate and download per-minute subscription usage reports for your hosts and containers, see :ref:`host-diagnostics-report-apm`.
 
-Metrics for TAPM subscription plans
------------------------------------
+Metrics for trace-analyzed-per-second (TAPM) subscription plans
+----------------------------------------------------------------
 
 In addition to per-minute usage metrics, usage reports for TAPM subscription plans include the following information about your organization's usage:
 
