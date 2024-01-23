@@ -88,7 +88,11 @@ When you view :guilabel:`Trace & error count`, the real-time chart shows total t
 Explore trace duration
 --------------------------
 
-When you view :guilabel:`Trace Duration`, the real-time chart shows a heatmap of traces by duration.
+When you view :guilabel:`Trace Duration`, the real-time chart shows a heatmap of traces by duration. The heatmap represents 3 dimensions of data:
+
+#. Time on the x-axis
+#. Trace duration on the y-axis
+#. The traces (or requests) per second are represented by the heatmap shades
 
 Select and drag over the bars in the chart to select a specific time period and trace duration range. Select :guilabel:`Filter to selection` to add a time range filter and a min and max duration filter.
 
