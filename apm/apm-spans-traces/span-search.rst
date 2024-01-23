@@ -56,7 +56,7 @@ View RUM session details
 
 For spans that also have RUM session details, RUM displays in the span, select the link view the session in RUM. Select the span and then select the :guilabel:`RUM Session` tab to view the RUM session details in the Trace Properties panel. You can also select the session ID to go to RUM. 
 
-.. image:: /_images/apm/spans-traces/span-search-integrated-traces.png
+.. image:: /_images/apm/spans-traces/span-search-integrated-traces-splunk-show.png
   :width: 95%
   :alt: The integration of RUM within traces shows a link to RUM and the RUM session details in the Trace Properties panel
 
