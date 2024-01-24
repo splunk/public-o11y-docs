@@ -37,34 +37,52 @@ Follow these steps to configure and activate the component:
 2. Configure the receiver as described in this doc.
 3. Restart the Collector.  
 
-Sample configurations
+Default configuration
 ----------------------
 
-The default configuration of the ``signalfx`` receiver in the Splunk Distribution of the OpenTelemetry Collector is the following:
+To use the ``signalfx`` receiver in the Splunk Distribution of the OpenTelemetry Collector, add the following to your config file:
 
 .. code-block:: yaml
 
-   receivers:
-     signalfx:
-       endpoint: 0.0.0.0:9943
-       # Whether to preserve incoming access token and
-       #  use instead of exporter token. Default value is false.
-       #access_token_passthrough: true
+  receivers:
+    signalfx:
+      endpoint: 0.0.0.0:9943
+      # Whether to preserve incoming access token and
+      #  use instead of exporter token. Default value is false.
+      #access_token_passthrough: true
 
-When adding the SignalFx receiver, configure both the metrics and logs pipelines. Make sure to also add the SignalFx exporter as in the following example:
+Next, configure both the metrics and logs pipelines. Make sure to also add the SignalFx exporter as in the following example:
 
 .. code-block:: yaml
 
-   service:
-     pipelines:
-       metrics:
-         receivers: [signalfx]
-         processors: [memory_limiter, batch]
-         exporters: [signalfx]
-         logs:
-       receivers: [signalfx]
-         processors: [memory_limiter, batch]
-         exporters: [signalfx]
+  service:
+    pipelines:
+      metrics:
+        receivers: [signalfx]
+        processors: [memory_limiter, batch]
+        exporters: [signalfx]
+      logs:
+        receivers: [signalfx]
+        processors: [memory_limiter, batch]
+        exporters: [signalfx]
+
+Sample configuration
+--------------------------------------------
+
+This is a sample config for the receiver:
+
+.. code-block:: yaml
+
+  signalfx:
+  signalfx/allsettings:
+    # endpoint specifies the network interface and port which will receive
+    # SignalFx metrics.
+    endpoint: localhost:9943
+    access_token_passthrough: true
+  signalfx/tls:
+    tls:
+      cert_file: /test.crt
+      key_file: /test.key
 
 Settings
 ======================
@@ -73,9 +91,9 @@ The following table shows the configuration options for the SignalFx receiver:
 
 .. raw:: html
 
-   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/signalfx.yaml"></div>
+  <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/signalfx.yaml"></div>
 
-.. caution:: If you use the ``access_token_passthrough`` setting with any exporter other than the SignalFx exporter, the receiver might reveal all organization access tokens. Only use the SignalFx receiver with the SignalFx exporter when activating this setting.
+.. caution:: If you use the ``access_token_passthrough`` setting with any exporter other than the SignalFx exporter, the receiver might reveal all organization access tokens. If you activate this seeting, you must use the SignalFx receiver with the SignalFx exporter.
 
 Troubleshooting
 ======================
