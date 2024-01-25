@@ -105,7 +105,7 @@ The following table shows the configuration options for this monitor.
       - ``fsTypes``
       - no
       - ``list of strings``
-      - The filesystem types to include/exclude. This is an
+      - The filesystem types to include. This is an
          :ref:`overridable set <filtering-smart-agent>` If this is
          not set, the default value is the set of all
          **non-logical/virtual filesystems** on the system. On Linux
