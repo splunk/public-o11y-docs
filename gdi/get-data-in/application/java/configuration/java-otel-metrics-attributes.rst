@@ -153,7 +153,7 @@ The agent collects the following garbage collection (GC) metrics:
     - Count of positive increases in the size of the old generation memory pool from before to after garbage collection.
   * - ``runtime.jvm.gc.pause``
     - Timer
-    - Time spent in garbage collection pause, in seconds. It produces multiple aggregations, such as ``runtime.jvm.gc.pause.avg``, ``runtime.jvm.gc.pause.count``, ``runtime.jvm.gc.pause.max``, or ``runtime.jvm.gc.pause.totalTime``.
+    - Time spent in garbage collection pause, in seconds. It produces multiple aggregations, such as ``runtime.jvm.gc.pause.avg`` or ``runtime.jvm.gc.pause.max``.
 
 .. _jvm-heap-pressure-metrics:
 
@@ -192,7 +192,7 @@ The agent collects the following memory metrics:
   * - Metric
     - Type
     - Description
-  * - ``process.runtime.jvm.memory.allocated``
+  * - ``jvm.memory.allocated``
     - Counter
     - Total number of bytes allocated by JVM threads since the previous data point was emitted.
         - Use the rate per second rollup.

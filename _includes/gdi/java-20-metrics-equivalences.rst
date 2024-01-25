@@ -20,7 +20,7 @@ OpenTelemetry Java 2.0 also brings new metrics. For a full list of OpenTelemetry
   * - ``runtime.jvm.gc.max.data.size``
     - ``jvm.memory.limit{jvm.memory.pool.name=<long lived pools>}``
   * - ``runtime.jvm.gc.memory.allocated``
-    - ``process.runtime.jvm.memory.allocated``
+    - ``jvm.memory.allocated``
   * - ``runtime.jvm.gc.memory.promoted``
     - No equivalent
   * - ``runtime.jvm.gc.pause``
@@ -30,7 +30,7 @@ OpenTelemetry Java 2.0 also brings new metrics. For a full list of OpenTelemetry
   * - ``runtime.jvm.memory.usage.after.gc``
     - No equivalent
   * - ``process.runtime.jvm.memory.allocated``
-    - ``process.runtime.jvm.memory.allocated``
+    - ``jvm.memory.allocated``
   * - ``process.runtime.jvm.memory.reclaimed``
     - ``process.runtime.jvm.memory.reclaimed``
   * - ``runtime.jvm.buffer.count``
