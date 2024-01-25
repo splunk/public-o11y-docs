@@ -11,6 +11,18 @@ The Windows Performance Counters receiver allows the Splunk Distribution of Open
 
 Configured metrics consist of a metric description, including unit and type, used by one or more performance counters scraped by the receiver. If a specific performance counter can't be accessed at startup, the receiver emits a warning and continues execution.
 
+The receiver supports the following performance objects and counters:
+
+.. list-table:: 
+  :header-rows: 1
+
+  * - Performance object
+    - Corresponding counter
+  * - ``Memory``
+    - ``Committed Bytes``
+  * - ``Processor``
+    - ``% Processor Time``
+
 The Windows Performance Counters receiver replaces the SmartAgent monitor type of the same name. See :ref:`telegraf-win-perf-counters` for information on the monitor type.
 
 .. note:: The Windows Performance Counters receiver only works on Windows hosts.
@@ -68,8 +80,9 @@ To collect metrics from Windows performance counters, you need to define metrics
 Metric format
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+To report metrics in a specific format, define the metric and reference it in the corresponding counter, along with any applicable attributes. By default, the metric name corresponds to the name of the counter.
 
-To report metrics in a specific format, define the metric and reference it in the corresponding counter, along with any applicable attributes. Metrics can be of type ``sum`` or ``gauge``. Sum metrics support the ``aggregation`` and ``monotonic`` fields.
+Metrics can be of type ``sum`` or ``gauge``. Sum metrics support the ``aggregation`` and ``monotonic`` fields.
 
 
 .. list-table::
@@ -85,7 +98,7 @@ To report metrics in a specific format, define the metric and reference it in th
    - 
 
       - ``name``
-      - Metric key or name
+      - Metric key or name. Can be any non empty string.
       - String
       - Name of the counter
    - 
@@ -168,30 +181,30 @@ Configure collection interval and counters
 
 You can configure the collection interval and which performance counters you want to scrape. For example:
 
-.. code-block::
+.. code-block:: yaml
 
-   windowsperfcounters:
-   collection_interval: <duration> # default = "1m"
-   initial_delay: <duration> # default = "1s"
-   metrics:
-      <metric name>:
-         description: <description>
-         unit: <unit type>
-         gauge:
-      <metric name>:
-         description: <description>
-         unit: <unit type>
-         sum:
-         aggregation: <cumulative or delta>
-         monotonic: <true or false>
-   perfcounters:
-      - object: <object name>
-         instances: [<instance name>]*
-         counters:
-         - name: <counter name>
-            metric: <metric name>
-            attributes:
-               <key>: <value>
+    windowsperfcounters:
+    collection_interval: <duration> # default = "1m"
+    initial_delay: <duration> # default = "1s"
+    metrics:
+        <metric name>:
+          description: <description>
+          unit: <unit type>
+          gauge:
+        <metric name>:
+          description: <description>
+          unit: <unit type>
+          sum:
+          aggregation: <cumulative or delta>
+          monotonic: <true or false>
+    perfcounters:
+        - object: <object name>
+          instances: [<instance name>]*
+          counters:
+          - name: <counter name>
+              metric: <metric name>
+              attributes:
+                <key>: <value>
 
 Scrape at different collection intervals
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
