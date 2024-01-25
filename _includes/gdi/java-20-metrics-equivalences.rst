@@ -16,7 +16,7 @@ OpenTelemetry Java 2.0 also brings new metrics. For a full list of OpenTelemetry
   * - ``runtime.jvm.gc.concurrent.phase.time``
     - ``jvm.gc.duration{jvm.gc.name=<concurrent gcs>}`` (Histogram)
   * - ``runtime.jvm.gc.live.data.size``
-    - ``process.runtime.jvm.memory.usage_after_last_gc{pool=<long lived pools>}``
+    - ``jvm.memory.used_after_last_gc{pool=<long lived pools>}``
   * - ``runtime.jvm.gc.max.data.size``
     - ``jvm.memory.limit{jvm.memory.pool.name=<long lived pools>}``
   * - ``runtime.jvm.gc.memory.allocated``
