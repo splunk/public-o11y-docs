@@ -5,37 +5,31 @@ Re-route incidents
 ************************************************************************
 
 .. meta::
-   :description: Learn how to manually take an on-call shift from someone in real-time. Ideal for unexpected absences from work when you're on-call.
-
-
-Sometimes, users who are paged for an issue may need to reroute the
-incident, either to another team, or to a specific individual.
- VictorOps offers the ability to route an existing incident to
+   :description: Splunk On-Call offers the ability to route an existing incident to
 individual users, teams of users or escalation policies.
 
-**What you need to know:**
-~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  When an incident is routed directly to a user, the user will be paged
-   in accordance with their personal paging policy until it has been
-   acknowledged.
--  When an incident is routed to one or more escalation policies, it
-   will page and escalate in accordance with the steps indicated in the
-   policy.
--  You will want to ensure your team members have appropriately set up
-   their policies such that important incidents aren't being routed to
-   email purgatory.
+Sometimes, users who are paged for an issue may need to reroute the incident, either to another team, or to a specific individual. Splunk On-Call offers the ability to route an existing incident to
+individual users, teams of users or escalation policies.
 
-**Web Portal**
-~~~~~~~~~~~~~~
+What you need to know
+===============================
 
-From the *Incident Management Pane* (far right), click the reroute
-symbol:
+-  When an incident is routed directly to a user, the user will be paged in accordance with their personal paging policy until it has been acknowledged.
+-  When an incident is routed to one or more escalation policies, it will page and escalate in accordance with the steps indicated in the policy.
+-  You will want to ensure your team members have appropriately set up their policies such that important incidents aren't being routed to email purgatory.
 
-.. image:: images/Trigger-UI.png
+Web Portal
+=============
 
-This will produce a pop-up prompt where you can search for *Escalation
-Policies* and *Users* to reroute to.
+From the :guilabel:`Incident Management` pane, select the reroute symbol:
+
+.. image:: /_images/spoc/reroute1.png
+    :width: 100%
+    :alt: The reroute option is the middle icon.
+
+
+This will produce a prompt where you can search for Escalation Policies and *Users* to reroute to.
 
 |image1| |image2|
 
