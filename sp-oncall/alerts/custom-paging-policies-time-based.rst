@@ -1,7 +1,7 @@
 .. _custom-paging-policy:
 
 ************************************************************************
-Get started as user
+Configure custom time-based paging policy
 ************************************************************************
 
 .. meta::
@@ -28,7 +28,7 @@ Custom Paging Policies
 Custom paging policies are restricted to certain times of the day/week
 and you may create multiple. When an incident is routed to you, we'll
 execute the first matching policy in the list, top to bottom. If none of
-your custom personal paging policies match the current time, your
+your custom personal paging policies match the current time, your
 `primary paging
 policy <https://help.victorops.com/knowledge-base/paging-policy/>`__
 will be used.
