@@ -11,8 +11,6 @@ The Windows Performance Counters receiver allows the Splunk Distribution of Open
 
 Configured metrics consist of a metric description, including unit and type, used by one or more performance counters scraped by the receiver. If a specific performance counter can't be accessed at startup, the receiver emits a warning and continues execution.
 
-
-
 The Windows Performance Counters receiver replaces the SmartAgent monitor type of the same name. See :ref:`telegraf-win-perf-counters` for information on the monitor type.
 
 .. note:: The Windows Performance Counters receiver only works on Windows hosts.
