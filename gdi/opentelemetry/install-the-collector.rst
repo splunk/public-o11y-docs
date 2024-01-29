@@ -20,6 +20,7 @@ Get started: Understand and use the Collector
     tags.rst
     collector-how-to.rst
     Remove data pre-ingest <configure-remove.rst>    
+    collector-builtin-dashboard.rst
     environment-variables.rst
     Internal metrics <metrics-internal-collector.rst>    
 
