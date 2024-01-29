@@ -11,17 +11,7 @@ The Windows Performance Counters receiver allows the Splunk Distribution of Open
 
 Configured metrics consist of a metric description, including unit and type, used by one or more performance counters scraped by the receiver. If a specific performance counter can't be accessed at startup, the receiver emits a warning and continues execution.
 
-The receiver supports the following performance objects and counters:
 
-.. list-table:: 
-  :header-rows: 1
-
-  * - Performance object
-    - Corresponding counter
-  * - ``Memory``
-    - ``Committed Bytes``
-  * - ``Processor``
-    - ``% Processor Time``
 
 The Windows Performance Counters receiver replaces the SmartAgent monitor type of the same name. See :ref:`telegraf-win-perf-counters` for information on the monitor type.
 
@@ -40,6 +30,41 @@ Follow these steps to configure and activate the component:
 
 2. Configure the Windows Performance Counters receiver as described in the next section.
 3. Restart the Collector.
+
+View available performance counters
+---------------------------------------
+
+To see a list of available performance counters, use Windows PowerShell or the Windows Performance Monitor.
+
+.. tabs:: 
+  
+  .. tab:: PowerShell
+
+    In PowerShell, run the following command to list all performance counter sets:
+
+    .. code-block:: powershell
+
+      Get-Counter -ListSet *
+
+    To list the instances of each performance counter set, run the following command and replace ``<perf_object_name>`` with the name of the instances you want to find:
+
+    .. code-block:: powershell
+
+      Get-Counter -List "<perf_object_name>"
+    
+  .. tab:: Windows Performance Monitor
+    
+    Run the following command to open the Windows Performance Monitor:
+
+    .. code-block:: powershell
+
+      perfmon /sys
+
+    In the Windows Performance Monitor, select the green plus arrow to see a list of available performance counters. 
+
+    .. image:: /_images/gdi/windows-monitor.png
+      :width: 100%
+      :alt: The Add Counters screen of the Windows Performance Monitor displays a list of available Windows Performance Counters and a list of counters added to the performance monitor.
 
 Sample configurations
 ----------------------
