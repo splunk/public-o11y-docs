@@ -46,6 +46,8 @@ your *Paging Policy* before it will be used in notifications.
 
 .. image:: images/Xavi_Hernandez_-_cmillane-testing-2.jpg
 
+.. _personal-paging::
+
 Configure Your Personal Paging Policy
 -------------------------------------
 

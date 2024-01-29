@@ -5,20 +5,24 @@ The Splunk On-Call Alert Rules Engine
 ************************************************************************
 
 .. meta::
-   :description: About the user roll in Splunk On-Call.
+   :description: The Splunk On-Call Alert Rules Engine is a rules engine that allows you to set certain conditions, and trigger custom actions when those conditions are met.
+
+
+
+Requirements
+==================
+
+This integration is compatible with the following versions of Splunk On-Call:
+
+- Enterprise
+
 
 
 What is the Splunk On-Call Alert Rules Engine?
 ==============================================
 
-The Alert Rules Engine is
-an `Enterprise <https://victorops.com/pricing>`__ service level feature.
-
-The Alert Rules Engine is a powerful tool that allows you to deliver
-helpful information and useful resources to your users at the same
-moment they are notified of the problem, as well as customize the
-behavior of your incidents.  It is, essentially, a rules engine that
-allows you to set certain conditions, and trigger custom actions when
+The Alert Rules Engine is a powerful tool that allows you to deliver helpful information and useful resources to your users at the same moment they are notified of the problem, as well as customize the
+behavior of your incidents. It is, essentially, a rules engine that allows you to set certain conditions, and trigger custom actions when
 those conditions are met.
 
 Getting paged for a non-critical issue?  You can use the Alert Rules
