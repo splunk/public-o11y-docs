@@ -8,9 +8,7 @@ Using Webhooks with Splunk On-Call
    :description: About the user roll in Splunk On-Call.
 
 
-VictorOps offers the ability to manually trigger a new incident from
-within the application. This option is available for both the web
-portal and mobile applications.
+Splunk On-Call offers the ability to manually trigger a new incident from within the application. This option is available for both the web portal and mobile applications.
 
 **What you need to know about this feature:**
 
