@@ -162,8 +162,7 @@ integration:
       - This object specifies how to map JMX MBean values to metrics.
          Cassandra comes pre-loaded with a set of mappings. Any mappings
          that you add in this option are merged with the pre-loaded
-         ones. To learn more, see
-         https://collectd.org/documentation/manpages/collectd-java.5.shtml#genericjmx_plugin
+         ones. To learn more, see the :new-page:`Collectd documentation <https://www.collectd.org/documentation/manpages/collectd-java.html>`.
 
 The ``mBeanDefinitions`` configuration option has the following fields:
 
