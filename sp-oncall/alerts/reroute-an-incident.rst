@@ -29,43 +29,44 @@ From the :guilabel:`Incident Management` pane, select the reroute symbol:
     :alt: The reroute option is the middle icon.
 
 
-This will produce a prompt where you can search for Escalation Policies and *Users* to reroute to.
+This will produce a prompt where you can search for Escalation Policies and Users to reroute to.
 
-|image1| |image2|
+.. image:: /_images/spoc/reroute2.png
+    :width: 100%
+    :alt: The reroute options.
 
-Selecting a User(s) to reroute to will invoke notifications according to
-that user's Personal Paging Policy.
 
-Selecting an *Escalation Policy* will cause the incident to be processed
-by that policy, which may or may not result an any users being notified
-immediately depending on the way the policy is configured.
+.. image:: /_images/spoc/reroute3.png
+    :width: 100%
+    :alt: The reroute options.
 
-Once you have selected the appropriate users or policies, click
-“Reroute”.
 
-**Mobile**
-~~~~~~~~~~
+Selecting a user to reroute to will invoke notifications according to that user's Personal Paging Policy.
 
-An Incident can be rerouted directly from a push notification by holding
-down the notification, and then selecting “Reroute”.
+Selecting an Escalation Policy will cause the incident to be processed by that policy, which may or may not result an any users being notified immediately depending on the way the policy is configured.
 
-.. image:: images/Push-reroute.png
+Once you have selected the appropriate users or policies, select :guilabel:`Reroute`.
 
-There is also the ability to reroute an incident from within the mobile
-application. To do so tap into respective incident and in the bottom
-right corner there is the ACK or REROUTE buttons and on the left hand
-corner is SNOOZE:
+Mobile
+===============
 
-.. image:: images/App-Reroute.png
+An incident can be rerouted directly from a push notification by holding down the notification, and then selecting :guilabel:`Reroute`.
 
-Select **Reroute**
+.. image:: /_images/spoc/reroute4.png
+    :width: 100%
+    :alt: The mobile push notification has a Reroute option.
 
-From the Reroute page, select the **escalation policies** or
-direct **Users** to be notified in the reroute. Once you have finished
-marking your selection, tap the **Reroute** icon in the upper right
+There is also the ability to reroute an incident from within the mobile application. To do so, tap into respective incident and in the bottom right corner there is the ACK or REROUTE buttons and on the left hand corner is SNOOZE:
+
+.. image:: /_images/spoc/reroute5.png
+    :width: 100%
+    :alt: The mobile push notification has a Reroute option.
+
+Select :guilabel:`Reroute`.
+
+From the Reroute page, select the escalation policies or direct users to be notified in the reroute. Once you have finished marking your selection, tap the :guilabel:`Reroute` icon in the upper right
 corner to confirm your decision.
 
-.. image:: images/App-Reroute-escalation-policy.png
-
-.. |image1| image:: images/Reroute-Escalation-Policies.png
-.. |image2| image:: images/Reroute-Users.png
+.. image:: /_images/spoc/reroute6.png
+    :width: 100%
+    :alt: The mobile options to reroute an incident.
