@@ -20,28 +20,28 @@ The following table provides a description of each variable.
   :widths: 50 50
   :header-rows: 1
 
-   * - Variable
-     - Description
-   * - ``${SPLUNK_ACCESS_TOKEN}``
-     - The Splunk access token to authenticate requests
-   * - ``${SPLUNK_API_URL}``
-     - The Splunk API URL. For example, ``https://api.us0.signalfx.com``
-   * - ``${SPLUNK_BUNDLE_DIR}``
-     - The location of your Smart Agent bundle for monitor functionality. For example, ``C:\Program Files\Splunk\OpenTelemetry Collector\agent-bundle``
-   * - ``${SPLUNK_CONFIG}``
-     - The path to the Collector config file. For example, ``C:\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml``
-   * - ``${SPLUNK_HEC_TOKEN}``
-     - The Splunk HEC authentication token
-   * - ``${SPLUNK_HEC_URL}``
-     - The Splunk HEC endpoint URL. For example, ``https://ingest.us0.signalfx.com/v1/log``
-   * - ``${SPLUNK_INGEST_URL}``
-     - The Splunk ingest URL. For example, ``https://ingest.us0.signalfx.com``
-   * - ``${SPLUNK_MEMORY_TOTAL_MIB}``
-     - Total memory in MiB allocated to the Collector. For example, ``512``
-   * - ``${SPLUNK_REALM}``
-     - The Splunk realm to send the data to. For example, ``us0``
-   * - ``${SPLUNK_TRACE_URL}``
-     - The Splunk trace endpoint URL. For example, ``https://ingest.us0.signalfx.com/v2/trace``
+  * - Variable
+    - Description
+  * - ``${SPLUNK_ACCESS_TOKEN}``
+    - The Splunk access token to authenticate requests
+  * - ``${SPLUNK_API_URL}``
+    - The Splunk API URL. For example, ``https://api.us0.signalfx.com``
+  * - ``${SPLUNK_BUNDLE_DIR}``
+    - The location of your Smart Agent bundle for monitor functionality. For example, ``C:\Program Files\Splunk\OpenTelemetryCollector\agent-bundle``
+  * - ``${SPLUNK_CONFIG}``
+    - The path to the Collector config file. For example, ``C:\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml``
+  * - ``${SPLUNK_HEC_TOKEN}``
+    - The Splunk HEC authentication token
+  * - ``${SPLUNK_HEC_URL}``
+    - The Splunk HEC endpoint URL. For example, ``https://ingest.us0.signalfx.com/v1/log``
+  * - ``${SPLUNK_INGEST_URL}``
+    - The Splunk ingest URL. For example, ``https://ingest.us0.signalfx.com``
+  * - ``${SPLUNK_MEMORY_TOTAL_MIB}``
+    - Total memory in MiB allocated to the Collector. For example, ``512``
+  * - ``${SPLUNK_REALM}``
+    - The Splunk realm to send the data to. For example, ``us0``
+  * - ``${SPLUNK_TRACE_URL}``
+    - The Splunk trace endpoint URL. For example, ``https://ingest.us0.signalfx.com/v2/trace``
 
 Change the default configuration file
 ==========================================
