@@ -74,7 +74,7 @@ To explore your trace data, use the following controls, which are numbered as ca
 #. Use the real-time chart to view the count of total traces with error or a trace duration heatmap depending on your selections.
 #. Use the table of traces to view trace details or group metrics based on a tag. 
 
-Trace Analyzer searches all currently retained traces. See :ref:`apm-data-retention` to learn more about the default trace retention period.
+Trace Analyzer searches all traces within the default retention period of 8 days. See :ref:`apm-data-retention` to learn more about the default trace retention period.
 
 Explore trace and error counts
 -------------------------------
