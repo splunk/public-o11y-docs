@@ -71,10 +71,10 @@ See the following example:
          threading:
            objectName: java.lang:type=Threading
            values:
-             type: gauge
-             table: false
-             instancePrefix: jvm.threads.count
-             attribute: ThreadCount
+             - type: gauge
+               table: false
+               instancePrefix: jvm.threads.count
+               attribute: ThreadCount
 
 Configuration settings
 ~~~~~~~~~~~~~~~~~~~~~~
