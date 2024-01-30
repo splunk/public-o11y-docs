@@ -66,7 +66,7 @@ To install the package using the installer script, follow these steps:
 #. Run the following PowerShell command on your host, replacing the following variables for your environment:
 
    * ``SPLUNK_REALM``: This is the realm to send data to. The default is ``us0``. See :new-page:`realms <https://dev.splunk.com/observability/docs/realms_in_endpoints/>`.
-   * ``SPLUNK_ACCESS_TOKEN``: This is the base64-encoded access token for authenticating data ingest requests. See :ref:`admin-org-tokens`.
+   * ``SPLUNK_ACCESS_TOKEN``: This is the base64-encoded access token for authenticating data ingest requests. Your access token needs to have the ingest authorization scope. See :ref:`admin-org-tokens`.
 
 .. code-block:: PowerShell
 
