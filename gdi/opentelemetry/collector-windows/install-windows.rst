@@ -19,7 +19,7 @@ forwarding for all data types. Install the package using one of these methods:
 
 Alternatively, you can manually install the Collector. To learn how, see :ref:`otel-install-windows-manual`.
 
-.. note:: The Collector comes with a default configuration. To learn more, see :ref:`otel-windows-config`.
+.. note:: The Collector comes with a default configuration. To learn more, see :ref:`windows-config-ootb`.
 
 .. _windows-otel-requirements:
 

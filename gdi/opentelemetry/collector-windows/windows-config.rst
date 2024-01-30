@@ -7,7 +7,7 @@ Advanced configuration for Windows
 .. meta::
       :description: Optional configurations for the Splunk Distribution of OpenTelemetry Collector for Windows.
 
-The Collector comes with a default configuration. To learn more, see :ref:`otel-windows-config`.
+The Collector comes with a default configuration. To learn more, see :ref:`windows-config-ootb`.
 
 Configuration variables
 ==========================================
@@ -44,7 +44,7 @@ The following table provides a description of each variable:
 Change the default configuration file
 ==========================================
 
-Before starting the ``splunk-otel-collector`` service, change the variables in the default configuration file to the appropriate values for your environment. Based on the specified installation parameters, the following environment variables are saved to the HKLM:\SYSTEM\CurrentControlSet\Services\splunk-otel-collector registry key and set on the ``Environment`` entry.
+Before starting the ``splunk-otel-collector`` service, change the variables in the default configuration file to the appropriate values for your environment. Based on the specified installation parameters, the environment variables are saved to the HKLM:\SYSTEM\CurrentControlSet\Services\splunk-otel-collector registry key and set on the ``Environment`` entry.
 
 To modify any of the configuration values, run ``regedit`` and browse to the path.
 
