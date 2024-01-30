@@ -115,7 +115,7 @@ To create an access token:
 
       For information about these endpoints, see :new-page:`Sending data points <https://dev.splunk.com/observability/docs/datamodel/ingest/>`.
 
-      .. note:: Use the ingest autorization scope for the Splunk Distribution of the Open Telemetry Collector. See :ref:`otel-intro`.
+      .. note:: Use the ingest autorization scope for the Splunk Distribution of the OpenTelemetry Collector. See :ref:`otel-intro`.
    - :strong:`API Token`: Select this authorization scope to use the token to authenticate with Splunk Observability Cloud endpoints. Example use cases are Terraform, programmatic usage of the API for business objects, and so on. These endpoints use the following base URLs: 
         
         - :code:`https://api.<REALM>.signalfx.com`

@@ -149,7 +149,7 @@ Depending on your destination, you need:
 
 * To send data to ``splunkObservability``:
 
-   * ``splunkObservability.accessToken``. Your Splunk Observability org access token with ingest authorization scope. See :ref:`admin-org-tokens`.
+   * ``splunkObservability.accessToken``. Your Splunk Observability Cloud org access token with ingest authorization scope. See :ref:`admin-org-tokens`.
    * ``splunkObservability.realm``. Splunk realm to send telemetry data to. The default is ``us0``. See :new-page:`realms <https://dev.splunk.com/observability/docs/realms_in_endpoints/>`.
 
 .. note:: The default Splunk platform index used by the Collector for Kubernetes is ``main``.
