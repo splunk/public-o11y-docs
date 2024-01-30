@@ -11,24 +11,22 @@ Install the Collector for Windows with the installer script
   :maxdepth: 4
   :titlesonly:
 
-  /gdi/opentelemetry/deployments/deployments-windows-ansible.rst
-  /gdi/opentelemetry/deployments/deployments-windows-puppet.rst
-
-The Splunk Distribution of OpenTelemetry Collector for Windows is a package that provides integrated collection and
+The Splunk Distribution of the OpenTelemetry Collector for Windows is a package that provides integrated collection and
 forwarding for all data types. Install the package using one of these methods:
 
 * :ref:`Installer script <windows-script>`
-* :ref:`Deployments <windows-deployments>`
+* :ref:`Deployment tools <windows-deployments>`
 
 Alternatively, you can manually install the Collector. To learn how, see :ref:`otel-install-windows-manual`.
+
+.. note:: The Collector comes with a default configuration. To learn more, see :ref:`otel-windows-config`.
 
 .. _windows-otel-requirements:
 
 Prerequisites
 ==========================
 
-The Splunk Distribution of OpenTelemetry Collector for Windows has the following requirements
-depending on the installation method:
+These are the requirements for the Splunk Distribution of the OpenTelemetry Collector for Windows depending on the installation method:
 
 .. list-table::
   :header-rows: 1
@@ -54,10 +52,13 @@ depending on the installation method:
 
 .. _windows-script:
 
-Installer script
-==========================
+Install the Collector using the script
+============================================
 
-The installer script is available for Windows 64-bit environments, and deploys and configures the Splunk Distribution of OpenTelemetry Collector for Windows and Fluentd through the td-agent, which is deactivated by default.
+The installer script is available for Windows 64-bit environments, and deploys and configures: 
+
+* The Splunk Distribution of the OpenTelemetry Collector for Windows 
+* Fluentd through the ``td-agent``, which is deactivated by default
 
 To install the package using the installer script, follow these steps:
 
@@ -71,10 +72,16 @@ To install the package using the installer script, follow these steps:
 
   & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
 
-.. note:: If needed, activate TLS in PowerShell using the following command:
-  
-   ``[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12``
+If you need to activate TLS in PowerShell, use the command:
 
+.. code-block:: PowerShell
+
+  [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
+
+.. _windows-script-options:
+
+Additional script options
+============================================
 
 Configure memory allocation
 ----------------------------------
@@ -94,49 +101,17 @@ Configure proxy settings
 
 To configure proxy settings to install and run the OpenTelemetry Collector, see :ref:`configure-proxy-collector`.
 
+Custom MSI URLs
+----------------------------------
 
-.. _fluentd-manual-config-windows:
+By default, the Collector MSI is downloaded from :new-page:`https://dl.signalfx.com <https://dl.signalfx.com>` and
+the Fluentd MSI is downloaded from :new-page:`https://packages.treasuredata.com <https://packages.treasuredata.com>`.  
 
-Configure fluentd for log collection
--------------------------------------------
-
-If you have a Log Observer entitlement or wish to collect logs for the target host with Fluentd, use the ``with_fluentd = 1`` option to also install Fluentd when installing the Collector. For example:
-
-.. code-block:: PowerShell
-
-  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"; with_fluentd = 1}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
-
-When activated, the Fluentd service is configured by default to collect and forward log events with the ``@SPLUNK`` label to the Collector, which then
-send these events to the HEC ingest endpoint determined by the ``realm = "<SPLUNK_REALM>"`` option.
-For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
-
-To configure the package to send log events to a custom HTTP Event Collector (HEC) endpoint URL with a token different than ``<SPLUNK_ACCESS_TOKEN>``, you can specify the following parameters for the installer script:
-
-* ``hec_url = "<SPLUNK_HEC_URL>"``
-* ``hec_token = "<SPLUNK_HEC_TOKEN>"``
-
-For example (replace the ``<SPLUNK...>`` values in the command for your configuration):
+To specify custom URLs for these downloads, use the ``collector_msi_url`` and ``fluentd_msi_url`` options. Replace ``COLLECTOR_MSI_URL`` and ``FLUENTD_MSI_URL`` with the URLs to the desired MSI packages to install:
 
 .. code-block:: PowerShell
 
-  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "<SPLUNK_ACCESS_TOKEN>"; realm = "<SPLUNK_REALM>"; hec_url = "<SPLUNK_HEC_URL>"; hec_token = "<SPLUNK_HEC_TOKEN>"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
-
-The installation creates the main fluentd configuration file  ``<drive>\opt\td-agent\etc\td-agent\td-agent.conf``, where ``<drive>`` is the drive letter for the fluentd installation directory.
-
-You can add custom fluentd source configuration files to the ``<drive>\opt\td-agent\etc\td-agent\conf.d``
-directory after installation.
-
-Note the following:
-
-* In this directory, fluentd includes all files with the .conf extension.
-* By default, fluentd collects from the Windows Event Log. See ``<drive>\opt\td-agent\etc\td-agent\conf.d\eventlog.conf`` for the default configuration.
-
-After any configuration modification, apply the changes by restarting the system or running the following PowerShell commands:
-
-.. code-block:: PowerShell
-
-  Stop-Service fluentdwinsvc
-  Start-Service fluentdwinsvc
+  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"; collector_msi_url = "COLLECTOR_MSI_URL"; fluentd_msi_url = "FLUENTD_MSI_URL"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
 
 Start the Collector executable manually 
 -------------------------------------------
@@ -148,7 +123,6 @@ To do so, run the following PowerShell command as an Admin:
 .. code-block:: PowerShell
 
   & 'C:\Program Files\Splunk\OpenTelemetry Collector\otelcol.exe' --config 'C:\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml'
-
 
 .. _otel-installer-options-windows:
 
@@ -229,13 +203,11 @@ The Windows installer script supports the following options:
      - Specify public MSI properties to be used when installing the Splunk OpenTelemetry Collector MSI package.
      -
 
-
-
-
 .. _windows-deployments:
 
-Deployments
+Deployment tools
 ===============================
+
 Splunk offers the configuration management options described in this section.
 
 .. _windows-ansible:
@@ -254,20 +226,75 @@ Splunk provides a cookbook to install the Collector using Chef. See :ref:`deploy
 
 Nomad 
 -----------------
+
 Use Nomad to deploy the Collector. To learn how to install Nomad, see :ref:`deployments-nomad`.
 
 .. _windows-puppet:
 
 Puppet
 -------------------------------
+
 Splunk provides a Puppet module to install and configure the package. A module is a collection of resources, classes, files, definition, and templates. To learn how to download and customize the module, see :ref:`deployment-windows-puppet`.
 
+.. _fluentd-manual-config-windows:
+
+Configure fluentd for log collection
+====================================================================
+
+If you have a Log Observer entitlement or wish to collect logs for the target host with Fluentd, use the ``with_fluentd = 1`` option to also install Fluentd when installing the Collector. For example:
+
+.. code-block:: PowerShell
+
+  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"; with_fluentd = 1}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
+
+When activated, the Fluentd service is configured by default to collect and forward log events with the ``@SPLUNK`` label to the Collector, which then
+send these events to the HEC ingest endpoint determined by the ``realm = "<SPLUNK_REALM>"`` option.
+For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
+
+To configure the package to send log events to a custom HTTP Event Collector (HEC) endpoint URL with a token different than ``<SPLUNK_ACCESS_TOKEN>``, you can specify the following parameters for the installer script:
+
+* ``hec_url = "<SPLUNK_HEC_URL>"``
+* ``hec_token = "<SPLUNK_HEC_TOKEN>"``
+
+For example (replace the ``<SPLUNK...>`` values in the command for your configuration):
+
+.. code-block:: PowerShell
+
+  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "<SPLUNK_ACCESS_TOKEN>"; realm = "<SPLUNK_REALM>"; hec_url = "<SPLUNK_HEC_URL>"; hec_token = "<SPLUNK_HEC_TOKEN>"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
+
+The installation creates the main fluentd configuration file  ``<drive>\opt\td-agent\etc\td-agent\td-agent.conf``, where ``<drive>`` is the drive letter for the fluentd installation directory.
+
+You can add custom fluentd source configuration files to the ``<drive>\opt\td-agent\etc\td-agent\conf.d``
+directory after installation.
+
+Note the following:
+
+* In this directory, fluentd includes all files with the .conf extension.
+* By default, fluentd collects from the Windows Event Log. See ``<drive>\opt\td-agent\etc\td-agent\conf.d\eventlog.conf`` for the default configuration.
+
+After any configuration modification, apply the changes by restarting the system or running the following PowerShell commands:
+
+.. code-block:: PowerShell
+
+  Stop-Service fluentdwinsvc
+  Start-Service fluentdwinsvc
 
 Next steps
 ==================================
 
-After you have installed the package, you can do the following:
+After you have installed the package, see:
 
 * :ref:`use-navigators-imm`.
 * View logs and errors in the Windows Event Viewer. Search for "view logs and errors" on :new-page:`Microsoft documentation site <https://docs.microsoft.com/en-us/>` for more information.
 * :ref:`apm`.
+
+
+
+
+
+
+
+
+
+
+
