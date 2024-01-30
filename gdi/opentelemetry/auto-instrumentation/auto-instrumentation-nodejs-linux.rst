@@ -105,6 +105,9 @@ The installer script installs the Node.js package using the ``npm install`` comm
 
                 Next, ensure the collector service is running and restart your Node.js application(s). See :ref:`verify-js-agent-install` and :ref:`start-restart-js-apps`.  
 
+    .. tab:: Ansible
+
+        See :ref:`ansible-zero-config`.
     
     .. tab:: Chef
 
