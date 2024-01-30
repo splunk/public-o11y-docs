@@ -21,7 +21,7 @@ Configuration variables
 
 All installation methods offer default configurations using environment variables. Before starting the ``splunk-otel-collector`` service, replace the following variables in the default configuration file with the appropriate values for your environment:
 
-- ``${SPLUNK_ACCESS_TOKEN}``: The Splunk access token to authenticate requests.
+- ``${SPLUNK_ACCESS_TOKEN}``: The Splunk access token with ingest authorization scope to authenticate requests.
 - ``${SPLUNK_API_URL}``: The Splunk API URL. For example, ``https://api.us0.signalfx.com``.
 - ``${SPLUNK_HEC_TOKEN}``: The Splunk HTTP Event Collector (HEC) authentication token.
 - ``${SPLUNK_HEC_URL}``: The Splunk HEC endpoint URL. For example, ``https://ingest.us0.signalfx.com/v1/log``.
