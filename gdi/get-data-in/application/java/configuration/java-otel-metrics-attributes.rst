@@ -254,9 +254,7 @@ The agent collects the following thread metrics:
   * - ``runtime.jvm.threads.peak``
     - Gauge
     - Peak live thread count since the JVM started or peak was reset.
-  * - ``runtime.jvm.threads.states``
-    - Gauge
-    - Number of threads per ``state`` as a metric tag.
+
 
 .. _connection-pool-metrics:
 
