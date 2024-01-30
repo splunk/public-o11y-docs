@@ -1,44 +1,45 @@
 .. _escalation-webhooks:
 
 ************************************************************************
-Using Webhooks with Splunk On-Call
+Using webhooks in escalation policies
 ************************************************************************
 
 .. meta::
    :description: About the user roll in Splunk On-Call.
 
-Webhooks are a way to specify callbacks from Splunk On-Call to your own
-applications, and can be added to your teams'
-`escalation <https://help.victorops.com/knowledge-base/team-escalation-policy/>`__
-policies in order to receive incident details and process them however
-you wish. Some examples of how these could be used:
+Webhooks are a way to specify callbacks from Splunk On-Call to your own applications, and can be added to your teams' escalation policies in order to receive incident details and process them however
+you wish. For more detail about escalation policies, see :ref:`team-escalation-policy`.
 
--  Automatically bounce a server process when there's an incident
-   related to it.
--  Integrate VictorOps incidents into your own service dashboard.
+Some examples of how these could be used:
+
+-  Automatically bounce a server process when there's an incident related to it.
+-  Integrate Splunk On-Call incidents into your own service dashboard.
 -  Keep a status page up-to-date with outages
 
-Webhook content type: application/x-www-form-urlencoded
+Webhook content type: application/x-www-form-urlencoded
 
-Getting Started
-~~~~~~~~~~~~~~~
+Get started
+====================
 
-To get started, from the VictorOps timeline go to *Integrations* and
+To get started, from the Splunk On-Call timeline navigate to :guilabel:`Integrations` and
 select Webhooks.
 
-.. image:: images/Select-Webhooks.png
+.. image:: /_images/spoc/webhooks-2.png
+    :width: 100%
+    :alt: On the integrations page, select webhooks.
 
-.. image:: images/Create-a-webhook.png
 
-You then will be prompted for a Name and URL for the Webhook.  Once
-submitted, an Auth Code will be generated.
+.. image:: /_images/spoc/webhooks-3.png
+    :width: 100%
+    :alt: On the integrations page, select webhooks.
 
-**Authenticating Webhook Requests**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When you create a webhook, we generate a secure, random authentication
-token. POST requests are signed with this key, so you can verify the
-incoming request, to make sure that it actually came from Splunk
+You are prompted for a Name and URL for the webhook.  Once submitted, an Auth Code will be generated.
+
+Authenticating Webhook Requests
+----------------------------------------
+
+When you create a webhook, we generate a secure, random authentication token. POST requests are signed with this key, so you can verify the incoming request, to make sure that it actually came from Splunk
 On-Call.
 
 In order to authenticate that the POST requests are arriving to your
