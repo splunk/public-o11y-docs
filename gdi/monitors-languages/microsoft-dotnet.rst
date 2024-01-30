@@ -1,10 +1,12 @@
 .. _microsoft-dotnet:
 
-Microsoft .NET
-==============
+Microsoft .NET (deprecated)
+===========================
 
 .. meta::
-   :description: Use this Splunk Observability Cloud integration for the .Net (dotnet) apps monitor. See benefits, install, configuration, and metrics
+   :description: Use this Splunk Observability Cloud integration for the .NET (dotnet) apps monitor. See benefits, install, configuration, and metrics
+
+.. note:: This integration is deprecated. Use the metrics collected by the Splunk Distribution of OpenTelemetry .NET :ref:`_dotnet_metrics_attribute`.
 
 The
 :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
