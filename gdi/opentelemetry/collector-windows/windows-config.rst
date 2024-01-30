@@ -48,6 +48,9 @@ Before starting the ``splunk-otel-collector`` service, change the variables in t
 
 To modify any of the configuration values, run ``regedit`` and browse to the path.
 
+Command line options
+==========================================
+
 To add or remove command line options for the ``splunk-otel-collector`` service, run ``regedit`` and modify the ``ImagePath`` value in the HKLM:\SYSTEM\CurrentControlSet\Services\splunk-otel-collector registry key. 
 
 Alternatively, run the following PowerShell command, replacing ``OPTIONS`` with the desired command line options:
@@ -62,14 +65,8 @@ For example, to change the default exposed metrics address of the Collector to `
 
   Set-ItemProperty -path "HKLM:\SYSTEM\CurrentControlSet\Services\splunk-otel-collector" -name "ImagePath" -value "C:\Program Files\Splunk\OpenTelemetry Collector\otelcol.exe --metrics-addr 0.0.0.0:9090"
 
-Command line options
---------------------------
-
-To see all available command line options, run the following PowerShell command:
-
-.. code-block:: PowerShell
-
-  & 'C:\Program Files\Splunk\OpenTelemetry Collector\otelcol.exe' --help
+Apply the changes
+-------------------------------------------
 
 After modifying the configuration file or registry key, apply the changes by restarting the system or running the following PowerShell commands:
 
@@ -77,6 +74,16 @@ After modifying the configuration file or registry key, apply the changes by res
 
   Stop-Service splunk-otel-collector
   Start-Service splunk-otel-collector
+
+Available command line options
+-------------------------------------------
+
+To see all available command line options, run the following PowerShell command:
+
+.. code-block:: PowerShell
+
+  & 'C:\Program Files\Splunk\OpenTelemetry Collector\otelcol.exe' --help
+
 
 
 
