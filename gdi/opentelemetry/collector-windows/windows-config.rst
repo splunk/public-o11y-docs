@@ -7,50 +7,84 @@ Advanced configuration for Windows
 .. meta::
       :description: Optional configurations for the Splunk Distribution of OpenTelemetry Collector for Windows.
 
-The following sections describe available settings for configuring the Splunk Distribution of OpenTelemetry Collector for Windows.
+The Collector comes with a default configuration. To learn more, see :ref:`windows-config-ootb`.
+
+Configuration variables
+==========================================
+
+The following table provides a description of each variable:
+
+.. list-table::
+  :widths: 50 50
+  :header-rows: 1
+
+  * - Variable
+    - Description
+  * - ``${SPLUNK_ACCESS_TOKEN}``
+    - The Splunk access token to authenticate requests
+  * - ``${SPLUNK_API_URL}``
+    - The Splunk API URL. For example, ``https://api.us0.signalfx.com``
+  * - ``${SPLUNK_BUNDLE_DIR}``
+    - The location of your Smart Agent bundle for monitor functionality. For example, ``C:\Program Files\Splunk\OpenTelemetryCollector\agent-bundle``
+  * - ``${SPLUNK_CONFIG}``
+    - The path to the Collector config file. For example, ``C:\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml``
+  * - ``${SPLUNK_HEC_TOKEN}``
+    - The Splunk HEC authentication token
+  * - ``${SPLUNK_HEC_URL}``
+    - The Splunk HEC endpoint URL. For example, ``https://ingest.us0.signalfx.com/v1/log``
+  * - ``${SPLUNK_INGEST_URL}``
+    - The Splunk ingest URL. For example, ``https://ingest.us0.signalfx.com``
+  * - ``${SPLUNK_MEMORY_TOTAL_MIB}``
+    - Total memory in MiB allocated to the Collector. For example, ``512``
+  * - ``${SPLUNK_REALM}``
+    - The Splunk realm to send the data to. For example, ``us0``
+  * - ``${SPLUNK_TRACE_URL}``
+    - The Splunk trace endpoint URL. For example, ``https://ingest.us0.signalfx.com/v2/trace``
 
 Change the default configuration file
 ==========================================
 
-The Collector comes with a default configuration in the \\ProgramData\\Splunk\\OpenTelemetry Collector\\agent_config.yaml file. This configuration can be modified as needed. Possible configuration options can be found in the receivers, processors, exporters, and extensions folders of the following GitHub repositories:
+Before starting the ``splunk-otel-collector`` service, change the variables in the default configuration file to the appropriate values for your environment. Based on the specified installation parameters, the environment variables are saved to the HKLM:\SYSTEM\CurrentControlSet\Services\splunk-otel-collector registry key and set on the ``Environment`` entry.
 
-* :new-page:`OpenTelemetry Collector <https://github.com/open-telemetry/opentelemetry-collector>`
-* :new-page:`OpenTelemetry Collector Contrib <https://github.com/open-telemetry/opentelemetry-collector-contrib>`
+To modify any of the configuration values, run ``regedit`` and browse to the path.
 
-Before starting the ``splunk-otel-collector`` service, change the variables in the default configuration file to the appropriate values for your environment. The following table provides a description of each variable.
+Command line options
+==========================================
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 1
+To add or remove command line options for the ``splunk-otel-collector`` service, run ``regedit`` and modify the ``ImagePath`` value in the HKLM:\SYSTEM\CurrentControlSet\Services\splunk-otel-collector registry key. 
 
-   * - Variable
-     - Description
-   * - ``${SPLUNK_ACCESS_TOKEN}``
-     - The Splunk access token to authenticate requests
-   * - ``${SPLUNK_API_URL}``
-     - The Splunk API URL. For example, ``https://api.us0.signalfx.com``.
-   * - ``${SPLUNK_HEC_TOKEN}``
-     - The Splunk HEC authentication token
-   * - ``${SPLUNK_HEC_URL}``
-     - The Splunk HEC endpoint URL. For example, ``https://ingest.us0.signalfx.com/v1/log``.
-   * - ``${SPLUNK_INGEST_URL}``
-     - The Splunk ingest URL. For example, ``https://ingest.us0.signalfx.com``.
-   * - ``${SPLUNK_TRACE_URL}``
-     - The Splunk trace endpoint URL. For example, ``https://ingest.us0.signalfx.com/v2/trace``.
-   * - ``${SPLUNK_BUNDLE_DIR}``
-     - The location of your Smart Agent bundle for monitor functionality. For example, ``C:\Program Files\Splunk\OpenTelemetry Collector\agent-bundle``.
+Alternatively, run the following PowerShell command, replacing ``OPTIONS`` with the desired command line options:
 
-|br|
+.. code-block:: PowerShell
 
-Do the following after updating the variables in the default configuration file:
+  Set-ItemProperty -path "HKLM:\SYSTEM\CurrentControlSet\Services\splunk-otel-collector" -name "ImagePath" -value "C:\Program Files\Splunk\OpenTelemetry Collector\otelcol.exe OPTIONS"
 
-#. Start the service by rebooting the system or by running the following command in a PowerShell terminal::
+For example, to change the default exposed metrics address of the Collector to ``0.0.0.0:9090``, run the following PowerShell command:
 
-    PS> Start-Service splunk-otel-collector
-#. To modify the default path to the configuration file for the service, run ``regdit`` and modify the ``SPLUNK_CONFIG`` value in the ``HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Environment`` registry key, or run the following PowerShell command (replace PATH with the full path to the new configuration file)::
+.. code-block:: PowerShell
 
-    Set-ItemProperty -path "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" -name "SPLUNK_CONFIG" -value "PATH"
-#. After modifying the configuration file or registry key, apply the changes by restarting the system or by running the following PowerShell commands::
+  Set-ItemProperty -path "HKLM:\SYSTEM\CurrentControlSet\Services\splunk-otel-collector" -name "ImagePath" -value "C:\Program Files\Splunk\OpenTelemetry Collector\otelcol.exe --metrics-addr 0.0.0.0:9090"
 
-    Stop-Service splunk-otel-collector
-    Start-Service splunk-otel-collector
+Apply the changes
+-------------------------------------------
+
+After modifying the configuration file or registry key, apply the changes by restarting the system or running the following PowerShell commands:
+
+.. code-block:: PowerShell
+
+  Stop-Service splunk-otel-collector
+  Start-Service splunk-otel-collector
+
+Available command line options
+-------------------------------------------
+
+To see all available command line options, run the following PowerShell command:
+
+.. code-block:: PowerShell
+
+  & 'C:\Program Files\Splunk\OpenTelemetry Collector\otelcol.exe' --help
+
+
+
+
+
