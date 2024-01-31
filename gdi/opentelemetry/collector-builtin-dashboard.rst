@@ -7,7 +7,9 @@ Monitor the Collector with Splunk Observability Cloud's built-in dashboards
 .. meta::
       :description: Use the built-in Collector dashboard in Splunk Observability Cloud for a better understanding of how your Collector instances are doing.
 
-Splunk Observability Cloud provides built-in dashboards that give you immediate visibility into the technologies and services being used in your environment, including your deployed OTel Collector instances. Learn more about the available dashboards at :ref:`built-in-dashboards`.
+Splunk Observability Cloud provides built-in dashboards that give you immediate visibility into the technologies and services being used in your environment, including your deployed OTel Collector instances. 
+
+Learn more about the available built-in dashboards at and how to use them at :ref:`built-in-dashboards`.
 
 Access the built-in Collector dashboard
 ==============================================================
@@ -34,7 +36,11 @@ The built-in dashboard for the Collector has the following sections:
 Collector process metrics
 ----------------------------------
 
-TBC
+This section of the dashboard displays
+
+.. image:: /_images/gdi/collector/collector-builtin-dashboard-01.jpg
+      :width: 90%
+      :alt: Collector process metrics in the built-in dashboard
 
 .. _collector-builtin-dashboard-critical:
 
