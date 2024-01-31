@@ -39,7 +39,7 @@ Collector process metrics
 This section of the dashboard displays
 
 .. image:: /_images/gdi/collector/collector-builtin-dashboard-01.jpg
-      :width: 90%
+      :width: 100%
       :alt: Collector process metrics in the built-in dashboard
 
 .. _collector-builtin-dashboard-critical:
@@ -47,18 +47,30 @@ This section of the dashboard displays
 Critical monitoring
 ----------------------------------
 
-TBC
+This section of the dashboard displays
+
+.. image:: /_images/gdi/collector/collector-builtin-dashboard-02.jpg
+      :width: 100%
+      :alt: Collector critical monitoring in the built-in dashboard
 
 .. _collector-builtin-dashboard-secondary:
 
 Secondary monitoring
 ----------------------------------
 
-TBC
+This section of the dashboard displays
+
+.. image:: /_images/gdi/collector/collector-builtin-dashboard-03.jpg
+      :width: 100%
+      :alt: Collector secondary monitoring in the built-in dashboard
 
 .. _collector-builtin-dashboard-outbound:
 
 Outbound monitoring
 ----------------------------------
 
-TBC
+This section of the dashboard displays
+
+.. image:: /_images/gdi/collector/collector-builtin-dashboard-04.jpg
+      :width: 100%
+      :alt: Collector outbound metrics in the built-in dashboard
