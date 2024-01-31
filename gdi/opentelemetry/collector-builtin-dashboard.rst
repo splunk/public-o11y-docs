@@ -1,15 +1,15 @@
 .. _collector-builtin-dashboard:
 
 ********************************************************************************************
-Monitor the Collector with Splunk Observability Cloud's built-in dashboard
+Monitor the Collector with Splunk Observability Cloud's built-in dashboards
 ********************************************************************************************
 
 .. meta::
       :description: Use the built-in Collector dashboard in Splunk Observability Cloud for a better understanding of how your Collector instances are doing.
 
-Splunk Observability Cloud provides built-in dashboards that give you immediate visibility into the technologies and services being used in your environment, including your deployed Collector instances. Learn more at :ref:`built-in-dashboards`.
+Splunk Observability Cloud provides built-in dashboards that give you immediate visibility into the technologies and services being used in your environment, including your deployed OTel Collector instances. Learn more about the available dashboards at :ref:`built-in-dashboards`.
 
-Access the built-in dashboard
+Access the built-in Collector dashboard
 ==============================================================
 
 To access the Collector built-in dashboard:
@@ -19,7 +19,7 @@ To access the Collector built-in dashboard:
 #. Use the search bar or browse down to locate the OpenTelementry Collector tile.
 #. Select the link in the tile to access the built-in dashboard.
 
-Use the built-in dashboard
+Use the built-in Collector dashboard
 ==============================================================
 
 The built-in dashboard for the Collector has the following sections:
