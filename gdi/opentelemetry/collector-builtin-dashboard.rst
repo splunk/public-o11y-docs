@@ -53,13 +53,18 @@ This section of the built-in dashboard contains three charts with basic metrics 
 Critical monitoring
 ----------------------------------
 
-.. caution:: The information in this section is essential to understand the health of your system. Investigate any value above zero. 
+.. caution:: This section of the dashboard focuses on dropped data and is essential to understand the health of your system. Investigate any value above zero. 
 
-This section of the dashboard is structured in three columns, one for each type of available data: spans, metrics, and logs. For more information about the Splunk Observability Cloud data model, see :ref:`data-model`.
+This section is structured in three columns, one for each type of available data type: spans, metrics, and logs. For more information about the Splunk Observability Cloud data model, see :ref:`data-model`.
 
 .. image:: /_images/gdi/collector/collector-builtin-dashboard-02.jpg
       :width: 100%
       :alt: Collector critical monitoring in the built-in dashboard
+
+For each processed data type, you'll find metrics on:
+
+* Sending queue dropped spans/metric datapoints/log records
+* Droppeded spans/metric datapoints/log records per processor
 
 .. _collector-builtin-dashboard-secondary:
 
