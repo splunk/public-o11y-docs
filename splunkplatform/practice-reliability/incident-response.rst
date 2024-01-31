@@ -51,8 +51,6 @@ Splunk APM
 ===================================================================================
 APM collects traces and spans to monitor your distributed applications. You can investigate the root cause of an error with the service map or find the root cause of an error using Tag Spotlight. To learn how, see :ref:`service-map` and :ref:`troubleshoot-tag-spotlight`. For more examples of APM troubleshooting scenarios, see :ref:`apm-scenarios-intro`. 
 
-For a walkthrough of the APM UI and guidance on drilling down to the root cause of an incident, see the :new-page:`APM troubleshooting scenario <https://bossofopsando11y.com/apm/troubleshooting.html>`.
-
 Database Query Performance
 -------------------------------------------------------------------------------------
 Slow database queries can be another culprit of wider service availability issues. Respond to incidents faster by assessing whether database query time is contributing to availability or latency incidents. See :ref:`db-query-performance` to see how your databases are performing. The following image shows one organization's Database Query Performance dashboard.
