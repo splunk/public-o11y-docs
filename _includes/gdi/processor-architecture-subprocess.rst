@@ -159,11 +159,6 @@
      - Yes
      - Experimental
      - No
-   * - ``collectd/marathon``
-     - Yes
-     - Yes
-     - Experimental
-     - No
    * - ``collectd/mongodb``
      - Yes
      - Yes

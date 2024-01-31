@@ -4,7 +4,7 @@
 Instrument Python frameworks for Splunk Observability Cloud
 ***************************************************************
 
-.. meta:: 
+.. meta::
    :description: If you're instrumenting a Python app that uses Django or uWSGI, perform these additional steps after you've followed the common procedure for automatic instrumentation.
 
 If you're instrumenting a Python application or service that uses Django or uWSGI, follow these additional steps after you've followed all the steps in :ref:`instrument-python-applications`.
@@ -14,21 +14,21 @@ If you're instrumenting a Python application or service that uses Django or uWSG
 Instrument your Django application
 ========================================
 
-To automatically instrument Django applications, set the ``DJANGO_SETTINGS_MODULE`` environment variable to the same value in manage.py or wsgi.py. 
+To automatically instrument Django applications, set the ``DJANGO_SETTINGS_MODULE`` environment variable to the same value in manage.py or wsgi.py.
 
 For example, if your manage.py file sets the environment variable to mydjangoproject.settings and you start your project using ``./manage.py runserver``, you can run the following commands:
 
-.. tabs:: 
+.. tabs::
 
    .. code-tab:: bash Linux
 
          export DJANGO_SETTINGS_MODULE=mydjangoproject.settings
-         splunk-py-trace python3 ./manage.py runserver
+         splunk-py-trace python3 ./manage.py runserver --noreload
 
    .. code-tab:: shell Windows PowerShell
 
          $env:DJANGO_SETTINGS_MODULE=mydjangoproject.settings
-         splunk-py-trace python3 ./manage.py runserver
+         splunk-py-trace python3 ./manage.py runserver --noreload
 
 .. _uwsgi-instrumentation:
 
@@ -59,7 +59,7 @@ Place the snippet in the main Python script that uWSGI imports and loads.
 uWSGI and Flask
 -------------------------------------------
 
-When using both uSWGI and Flask, calling ``start_tracing()`` only auto-instruments new Flask instances. To instrument an existing Flask app, import and call the Flask instrumentor:
+When using both uSWGI and Flask, calling ``start_tracing()`` only autoinstruments new Flask instances. To instrument an existing Flask app, import and call the Flask instrumentor:
 
 .. code-block:: python
 

@@ -13,7 +13,7 @@ Control your metric ingestion volume with rules
 
 |hr|
 
-:strong:`Available in Enterprise Edition and Service Bureau`
+:strong:`Available in Enterprise Edition`
 
 |hr|
 

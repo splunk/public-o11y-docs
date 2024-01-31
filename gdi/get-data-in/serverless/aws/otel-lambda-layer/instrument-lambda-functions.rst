@@ -225,9 +225,33 @@ Slim feature
 
 The Slim feature reduces the size of Lambda packages by removing some files, including ``dist-info`` folders. Some of the files removed by the Slim feature are required by the OpenTelemetry Python autoinstrumentation. Deactivate the ``slim`` option in your serverless.yml file or define custom ``slimPatterns``. For more information, see https://github.com/serverless/serverless-python-requirements#slim-package on GitHub.
 
+
 .. _ec2-otel-collector-serverless:
 
-Send serverless spans directly to Splunk Observability Cloud
+Send spans to a Collector in data forwarding mode
+=====================================================================
+
+You can send data from multiple instrumented functions to a Collector running in data forwarding (gateway) mode in EC2. This helps aggregate data and reduce load.
+
+To send spans from the instrumented Lambda function to the Collector gateway running in EC2, do the following:
+
+#. Deploy the Collector in Gateway mode in a service your Lambda can reach, for example EC2. See :ref:`collector-gateway-mode`.
+#. Make sure that the Lambda functions you want to instrument can reach the Collector gateway in EC2 and are in the same VPC.
+#. Instrument the functions. See :ref:`install-otel-lambda-layer`.
+#. Navigate to :guilabel:`Configuration` > :guilabel:`Environment variables`, then select :guilabel:`Edit`.
+#. Add the following environment variables to your instrumented functions:
+
+   - ``OTEL_EXPORTER_OTLP_TRACES_ENDPOINT`` with the address of the EC2 instance that runs the gateway, for example `` 10.0.0.123:4317``
+   - ``OTEL_TRACES_EXPORTER`` with the value ``otlp``
+   - ``OTLP_EXPORTER_OTLP_TRACES_PROTOCOL`` with the value ``http/protobuf``
+   - ``SPLUNK_LAMBDA_LOCAL_COLLECTOR_ENABLED`` with the value ``false``
+
+#. If you've already set the access token and realm in the Collector configuration, delete the ``SPLUNK_ACCESS_TOKEN`` and ``SPLUNK_REALM`` environment variables.
+
+
+.. _send_directly_olly_cloud:
+
+Send spans directly to Splunk Observability Cloud
 =====================================================================
 
 By default, the Splunk OpenTelemetry Lambda layer sends telemetry to a Collector running alongside the Lambda.

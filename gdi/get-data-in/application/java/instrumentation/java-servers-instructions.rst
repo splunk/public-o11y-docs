@@ -33,7 +33,10 @@ Add the ``javaagent`` argument to the standalone configuration file:
          .. code-block:: shell
 
             set "JAVA_OPTS=%JAVA_OPTS% -javaagent:<Drive>:\path\to\splunk-otel-javaagent.jar"
-   
+
+.. note:: Make sure to install the Java agent at each of the Server Group levels.
+
+
 .. _jetty-javaagent:
 
 Jetty

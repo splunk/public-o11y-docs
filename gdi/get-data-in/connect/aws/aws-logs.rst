@@ -7,7 +7,11 @@ Collect logs from your AWS services
 .. meta::
   :description: Collect logs from your AWS services in Splunk Observability Cloud.
 
-.. caution:: Splunk Log Observer is no longer available for new users. You can continue to use Log Observer if you already have an entitlement.
+.. caution:: 
+  
+  Splunk Log Observer is no longer available for new users. If you have a Log Observer entitlement, you must transition to Splunk Cloud Platform or Splunk Enterprise. Read more at :ref:`lo-transition`.
+
+  You can also use the Data Manager to send AWS logs to Splunk Platform. Learn how at :new-page:`Onboard AWS in Data Manager <https://docs.splunk.com/Documentation/DM/1.8.2/User/AWSAbout>`.
 
 When setting up an AWS connection, you can choose to import logs from a Cloudwatch log group or an S3 bucket. 
 
@@ -33,7 +37,7 @@ Managing subscriptions
 
 Subscriptions are managed every 5 minutes, which is not configurable at the moment. If you decide to turn off the integration or a particular service, the job will attempt to remove those subscriptions.
   
-If a new log group is created for a service in the integration, Splunk Observability Cloud will add a subscription filter to this newly created log group. Afterwards, whenever new log events are added to the log group, AWS triggers ``splunk-aws-logs-collector`` lambda automatically in near real time. 
+If a new log group is created for a service in the integration, Splunk Observability Cloud adds a subscription filter to this newly created log group. Afterwards, whenever new log events are added to the log group, AWS triggers ``splunk-aws-logs-collector`` lambda automatically in near real time. 
 
 Which services can you collect logs from?
 ============================================

@@ -1,8 +1,8 @@
 .. _deployments-pivotal-cloudfoundry:
 
-****************************
-Pivotal Cloud Foundry 
-****************************
+********************************************************
+Deploy the Collector with Pivotal Cloud Foundry
+********************************************************
 
 .. meta::
       :description: Use Pivotal Cloud Foundry to install and configure the OpenTelemetry Collector. Use BOSH, the buildpack, or the Tanzu file.

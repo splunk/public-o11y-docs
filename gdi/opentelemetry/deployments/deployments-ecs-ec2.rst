@@ -1,8 +1,8 @@
 .. _deployments-ecs-ec2:
 
-*******************************
-Amazon ECS EC2 
-*******************************
+********************************************************
+Deploy the Collector with Amazon ECS EC2
+********************************************************
 
 .. meta::
       :description: Deploy the Splunk Observability Cloud OpenTelemetry Collector as a Daemon service in an Amazon ECS EC2 cluster.

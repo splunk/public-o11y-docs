@@ -47,7 +47,7 @@ configuration:
 
 .. code-block:: yaml
 
-   monitors:
+   receivers:
      smartagent/collectd/memory: 
        type: collectd/memory
        ... # Additional config
