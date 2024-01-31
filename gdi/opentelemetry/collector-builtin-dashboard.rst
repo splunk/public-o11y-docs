@@ -31,12 +31,18 @@ The built-in dashboard for the Collector has the following sections:
 * :ref:`collector-builtin-dashboard-secondary`
 * :ref:`collector-builtin-dashboard-outbound`
 
+Each section contains a set of charts with information relevant to your deployments. To know how to work with charts, and understand the types of charts available, see :ref:`data-visualization-charts`.
+
 .. _collector-builtin-dashboard-process:
 
 Collector process metrics
 ----------------------------------
 
-This section of the dashboard displays
+This section of the built-in dashboard contains three charts with basic metrics related to your Collector instances:
+
+* The amount of your Collector instances running
+* Your Collectors' memory usage, in MB 
+* Your Collector's total CPU user and system time, in seconds
 
 .. image:: /_images/gdi/collector/collector-builtin-dashboard-01.jpg
       :width: 100%
@@ -47,7 +53,9 @@ This section of the dashboard displays
 Critical monitoring
 ----------------------------------
 
-This section of the dashboard displays
+.. caution:: The information in this section is essential to understand the health of your system. Investigate any value above zero. 
+
+This section of the dashboard is structured in three columns, one for each type of available data: spans, metrics, and logs. For more information about the Splunk Observability Cloud data model, see :ref:`data-model`.
 
 .. image:: /_images/gdi/collector/collector-builtin-dashboard-02.jpg
       :width: 100%
@@ -58,7 +66,11 @@ This section of the dashboard displays
 Secondary monitoring
 ----------------------------------
 
-This section of the dashboard displays
+In this section, you'll find additional metrics, per processed data type, that can help you monitor and troubleshoot the behavior of your system:
+
+* Queue length
+* Failure rates
+* Refusal rates
 
 .. image:: /_images/gdi/collector/collector-builtin-dashboard-03.jpg
       :width: 100%
@@ -69,7 +81,7 @@ This section of the dashboard displays
 Outbound monitoring
 ----------------------------------
 
-This section of the dashboard displays
+Finally, Outbound monitoring shows the outbound data flow of your OTel Collectors. 
 
 .. image:: /_images/gdi/collector/collector-builtin-dashboard-04.jpg
       :width: 100%
