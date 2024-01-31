@@ -83,7 +83,7 @@ In-process function
 Initialize OpenTelemetry in the code
 =================================================
 
-After adding the dependencies, initialize OpenTelemetry in your function:
+After adding the dependencies, initialize OpenTelemetry in your function.
 
 Isolated worker process function
 ----------------------------------------------------
@@ -214,7 +214,7 @@ Define a startup function and decorate the assembly with it. The startup functio
 Instrument the code to send spans
 =================================================
 
-Next, instrument your code using OpenTelemetry. Use the following examples as a starting point to instrument your code.
+Next, instrument your code using OpenTelemetry. Use the following examples as a starting point to instrument your code. See :new-page:`<https://learn.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings?tabs=portal#get-started-in-the-azure-portal>` in Microsoft Azure documentation for steps to add environment variables to an Azure function.
 
 Isolated worker process function
 ----------------------------------------------------
