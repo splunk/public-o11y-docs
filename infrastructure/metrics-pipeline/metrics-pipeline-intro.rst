@@ -128,6 +128,26 @@ You create an aggregation rule that groups your data by the dimensions you want 
 The aggregated metric removes the ``container_id`` dimension and retains ``endpoint``, ``region``, and ``service``
 based on your rule. Your new metric volume is: 10 (endpoints) * 20 (regions) * 5 (services) = 1,000 MTS.
 
+.. _data-dropping:
+
+Data dropping rules
+===============================================================================
+
+When you have a new aggregated metric, you might no longer need the original unaggregated data. You
+can also drop a metric without adding an aggregation rule. Data dropping rules let you discard any data you don't want
+to monitor, so you can save storage space and reduce cardinality.
+
+.. note::
+    - You must be an admin to drop data.
+    - You can drop new incoming data, but you can't drop data that Splunk Observability Cloud has already ingested.
+    - You can't recover dropped data. Before you drop data, see :ref:`data-dropping-impact`.
+
+Example
+--------------------------------------------------------------------------------
+
+Once you have new aggregated metrics created by aggregation rules, you can drop the raw unaggregated data for
+``http.server.duration``.
+
 .. _mts-aggregation-rollup-period:
 
 MTS aggregation rollup period
@@ -171,26 +191,6 @@ Avoid these aggregation issues by using the following options:
 
 * Do your own MTS aggregation before sending your data by reconfiguring the OTel collector to drop unwanted dimensions.
 * Aggregate data using SignalFlow when you generate charts or create detectors.
-
-.. _data-dropping:
-
-Data dropping rules
-===============================================================================
-
-When you have a new aggregated metric, you might no longer need the original unaggregated data. You
-can also drop a metric without adding an aggregation rule. Data dropping rules let you discard any data you don't want
-to monitor, so you can save storage space and reduce cardinality.
-
-.. note::
-    - You must be an admin to drop data.
-    - You can drop new incoming data, but you can't drop data that Splunk Observability Cloud has already ingested.
-    - You can't recover dropped data. Before you drop data, see :ref:`data-dropping-impact`.
-
-Example
---------------------------------------------------------------------------------
-
-Once you have new aggregated metrics created by aggregation rules, you can drop the raw unaggregated data for
-``http.server.duration``.
 
 Scenario for metrics pipeline management
 ===============================================================================
