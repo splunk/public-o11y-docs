@@ -20,7 +20,6 @@ The Zero Configuration package provides the following benefits:
    :hidden:
    :maxdepth: 3
 
-   auto-instrumentation-dotnet-linux.rst
    auto-instrumentation-dotnet-k8s.rst
    auto-instrumentation-dotnet-windows.rst
 
@@ -30,7 +29,6 @@ The Zero Configuration package provides the following benefits:
 
 To install zero config for OpenTelemetry .NET, follow the instructions relevant to your platform:
 
-* :ref:`auto-instrumentation-dotnet-linux`
 * :ref:`auto-instrumentation-dotnet-k8s`
 * :ref:`auto-instrumentation-dotnet-windows`
 

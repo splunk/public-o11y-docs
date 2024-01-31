@@ -14,13 +14,10 @@ Requirements
 
 Zero Config Auto Instrumentation for .NET requires the following components: 
 
-* The :ref:`Splunk OTel Collector chart <helm-chart>`: It deploys the Collector and related resources, including the OpenTelemetry Operator.
-* The OpenTelemetry Operator, which manages auto-instrumentation of Kubernetes applications. See more in the :new-page:`OpenTelemetry GitHub repo <https://github.com/open-telemetry/opentelemetry-operator>`.
-* A Kubernetes instrumentation object ``opentelemetry.io/v1alpha1``, which configures auto-instrumentation settings for applications.
 * .NET version ``6.0`` or higher and supported .NET application libraries. For a list of supported libraries, see :ref:`supported-dotnet-libraries`.
 * x86 or AMD64 (x86-64) architecture. ARM architectures aren't supported.
 
-Deploy the Helm Chart with the Operator enabled
+Deploy the Helm Chart with the Kubernetes Operator
 =========================================================
 
 Add certifications and deploy the Helm Chart
@@ -33,7 +30,7 @@ The Operator requires certain TLS certificates to work. Use the following comman
    # Check if cert-manager is already installed, don't deploy a second cert-manager.
    kubectl get pods -l app=cert-manager --all-namespaces
 
-If a certification manager (or any other TLS certificate source) is not available in the cluster, then you'll need to deploy it using ``certmanager.enabled=true``. Use the following commands to deploy the Helm Chart.
+If a certification manager (or any other TLS certificate source) is not available in the cluster, deploy it using ``certmanager.enabled=true``. Use the following commands to deploy the Helm Chart.
 
 .. code-block:: yaml 
 
@@ -48,7 +45,7 @@ If a certification manager (or any other TLS certificate source) is not availabl
 Ingest traces
 ------------------------------------------------
 
-To properly ingest trace telemetry data, the attribute ``deployment.environment`` must be onboard the exported traces. The following table demonstrates the different methods for setting this attribute:
+To ingest trace telemetry data, the attribute ``deployment.environment`` must be onboard the exported traces. The following table demonstrates the different methods for setting this attribute:
 
 .. list-table::
   :header-rows: 1
@@ -68,19 +65,19 @@ To properly ingest trace telemetry data, the attribute ``deployment.environment`
     - Allows you to set ``deployment.environment`` at the level of individual deployments, daemonsets, or pods.
     - Employ the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable, assigning the value ``deployment.environment=prd``.
 
-The following examples demonstrate how to set the attribute using each method:
+The following examples show how to set the attribute using each method:
 
 .. tabs::
 
-    .. tab:: ``values.yaml``
+    .. tab:: Environment option
 
-      Add the environment variable using the ``extraEnvs`` option in the ``values.yaml`` file. This adds the ``deployment.environment`` attribute to all telemetry data the Collector receives, including data from automatically-instrumented pods.
+      Set the environment option in the ``values.yaml`` file. This adds the ``deployment.environment`` attribute to all telemetry data the Collector receives, including data from automatically-instrumented pods.
 
       .. code-block:: yaml
 
-          extraEnvs: [OTEL_RESOURCE_ATTRIBUTES=deployment.environment=prd]
+          environment: prd
 
-    .. tab:: ``values.yaml`` (Instrumentation spec)
+    .. tab:: Instrumentation spec
 
       Add the environment variable to the ``instrumentation`` spec as shown in the following example code. This method adds the ``deployment.environment`` attribute to all telemetry data from automatically-instrumented pods.
 
