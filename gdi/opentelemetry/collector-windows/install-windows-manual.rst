@@ -16,24 +16,17 @@ Before proceeding to install the Collector for Windows manually, check the :ref:
 
 .. _windows-manual-config-var:
 
-Configuration variables
-===============================
+Modify the default configuration
+==========================================
 
-All installation methods offer default configurations using environment variables. Before starting the ``splunk-otel-collector`` service, replace the following variables in the default configuration file with the appropriate values for your environment:
+All installation methods offer default configurations using environment variables. Before starting the ``splunk-otel-collector`` service, replace the variables in the default configuration file with the appropriate values for your environment. See :ref:`otel-windows-config` for more information.
 
-- ``${SPLUNK_ACCESS_TOKEN}``: The Splunk Observability Cloud access token with ingest authorization scope to authenticate requests.
-- ``${SPLUNK_API_URL}``: The Splunk API URL. For example, ``https://api.us0.signalfx.com``.
-- ``${SPLUNK_HEC_TOKEN}``: The Splunk HTTP Event Collector (HEC) authentication token.
-- ``${SPLUNK_HEC_URL}``: The Splunk HEC endpoint URL. For example, ``https://ingest.us0.signalfx.com/v1/log``.
-- ``${SPLUNK_INGEST_URL}``: The Splunk ingest URL. For example, ``https://ingest.us0.signalfx.com``.
-- ``${SPLUNK_TRACE_URL}``: The Splunk trace endpoint URL. For example, ``https://ingest.us0.signalfx.com/v2/trace``.
-- ``${SPLUNK_BUNDLE_DIR}``: The location of your Smart Agent bundle for monitor functionality. For example, ``C:\Program Files\Splunk\OpenTelemetry Collector\agent-bundle``.
+.. include:: /_includes/collector-env-vars.rst
 
 Configure proxy settings
 ----------------------------------
 
 To configure proxy settings to install and run the OpenTelemetry Collector, see :ref:`configure-proxy-collector`.
-
 
 .. _windows-installer:
 
