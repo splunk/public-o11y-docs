@@ -206,25 +206,26 @@ You can configure the collection interval and which performance counters you wan
 
 .. code-block:: yaml
 
-    windowsperfcounters:
-    collection_interval: <duration> # default = "1m"
-    initial_delay: <duration> # default = "1s"
-    metrics:
-        <metric name>:
+     windowsperfcounters:
+      collection_interval: <duration>
+      initial_delay: <duration>
+      metrics:
+        <metric name 1>:
           description: <description>
           unit: <unit type>
-          gauge:
-        <metric name>:
+          gauge: null
+        <metric name 2>:
           description: <description>
           unit: <unit type>
-          sum:
+          sum: null
           aggregation: <cumulative or delta>
           monotonic: <true or false>
-    perfcounters:
+      perfcounters:
         - object: <object name>
-          instances: [<instance name>]*
+          instances:
+            - <instance name>
           counters:
-          - name: <counter name>
+            - name: <counter name>
               metric: <metric name>
               attributes:
                 <key>: <value>
