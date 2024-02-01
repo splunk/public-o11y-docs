@@ -14,6 +14,11 @@ To instrument your Java application for Splunk Observability Cloud, you must def
 JBoss EAP and WildFly
 ==============================================
 
+Follow the instructions for your deployment mode.
+
+Standalone mode
+----------------------------------------------
+
 Add the ``javaagent`` argument to the standalone configuration file:
 
 .. tabs::
@@ -34,8 +39,18 @@ Add the ``javaagent`` argument to the standalone configuration file:
 
             set "JAVA_OPTS=%JAVA_OPTS% -javaagent:<Drive>:\path\to\splunk-otel-javaagent.jar"
 
-.. note:: Make sure to install the Java agent at each of the Server Group levels.
+Domain mode
+----------------------------------------------
 
+Edit the domain.xml file to add the following option under ``server-groups.server-group.jvm.jvm-options``:
+
+.. code-block:: xml
+
+   <option value="-javaagent:/path/to/splunk-otel-javaagent.jar"/>
+
+For more information, see the :new-page:`Red Hat documentation <https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html/configuration_guide/configuring_jvm_settings>`.
+
+.. note:: Make sure to install the Java agent at each of the Server Group levels.
 
 .. _jetty-javaagent:
 
