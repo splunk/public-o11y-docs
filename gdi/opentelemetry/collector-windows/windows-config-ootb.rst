@@ -9,7 +9,9 @@ Collector for Windows default configuration
 
 .. include:: /_includes/collector-components.rst
 
-The Collector configuration is stored in a :new-page:`YAML file <https://yaml.org/>` and specifies the behavior of the different components and services. See an overview of the elements and pipelines in the default configuration in the following sections.
+The Collector configuration is a :new-page:`YAML file <https://yaml.org/>` which specifies the behavior of the different components and services. By default, it's stored in ``\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml``.
+
+Find an overview of the elements and pipelines in the default configuration in the following sections.
 
 Default configuration 
 ========================================================
