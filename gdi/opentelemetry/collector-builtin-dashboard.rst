@@ -11,6 +11,13 @@ Splunk Observability Cloud provides built-in dashboards with charts that give yo
 
 Learn more about the available built-in dashboards at and how to use them at :ref:`built-in-dashboards`. To know how to work with charts, and understand the types of charts available, see :ref:`data-visualization-charts`.
 
+Understand the data in the built-in Collector dashboard 
+==============================================================
+
+The default configuration of the Splunk Distribution of the OpenTelementry Collector includes, among other components, the :ref:`prometheus-receiver` in the ``metrics/internal`` pipeline. This allows the receiver to send the Collector's internal metrics that feed the built-in dashboard to Splunk Observability Cloud.
+
+You can find the list of the Collector's internal metrics at :ref:`metrics-internal-collector`. 
+
 Access the built-in Collector dashboard
 ==============================================================
 
@@ -31,7 +38,7 @@ The built-in dashboard for the Collector has the following sections:
 * :ref:`collector-builtin-dashboard-secondary`
 * :ref:`collector-builtin-dashboard-outbound`
 
-Each section contains a set of charts that give you information relevant to your deployments. You can find the list of the Collector's internal metrics at :ref:`metrics-internal-collector`. 
+Each section contains a set of charts that give you information relevant to your deployments. 
 
 .. _collector-builtin-dashboard-process:
 
@@ -40,9 +47,9 @@ Collector process metrics
 
 This section of the built-in dashboard contains three charts with basic metrics related to your Collector instances:
 
-* The amount of your Collector instances running
-* Your Collectors' memory usage, in MB 
-* Your Collector's total CPU user and system time, in seconds
+* The number of Collector instances running
+* The Collectors' memory usage, in MB 
+* The Collectors' total CPU time in seconds, per instance
 
 .. image:: /_images/gdi/collector/collector-builtin-dashboard-01.jpg
       :width: 100%
@@ -86,7 +93,7 @@ In this section, you'll find additional metrics, per processed data type, that c
 Outbound monitoring
 ----------------------------------
 
-Finally, Outbound monitoring shows the outbound data flow of your OTel Collectors. 
+Finally, Outbound monitoring shows the metrics related to the scale of data flowing through the Collector. 
 
 .. image:: /_images/gdi/collector/collector-builtin-dashboard-04.jpg
       :width: 100%
