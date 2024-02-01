@@ -24,14 +24,14 @@ In the preceding example, the user navigates through the following sequence:
 
    In the Related Content bar, the user sees a tile showing logs related to the EC2 instance, so they click it.
 
-3. Splunk Observability Cloud takes them to Log Observer where they can drill down into the related logs to find the root cause of the problem.
+3. Splunk Observability Cloud takes the user to Log Observer where they can drill down into the related logs to find the root cause of the problem.
 
 .. note::  Related Content is different from data links, a separate capability, which lets you dynamically transfer contextual information about the property you're viewing to the resource, helping you get to relevant information faster. To learn more about data links, see :ref:`apm-create-data-links`.
 
 Prerequisites
 =================================================================
 
-Related Content relies on specific metadata that allow APM, Infrastructure Monitoring, and Log Observer to pass filters around Observability Cloud. 
+Related Content relies on specific metadata that allow APM, Infrastructure Monitoring, and Log Observer to pass filters around Splunk Observability Cloud. 
 
 The following sections list the metadata key names required to enable Related Content for each view in Splunk Observability Cloud. If your data does not have the field names listed here, Splunk Observability Cloud cannot correlate your related data.
 
@@ -60,9 +60,9 @@ The following Infrastructure Monitoring metadata keys are required to enable Rel
 - ``k8s.namespace.name``
 - ``kubernetes.workload.name``
 
-If you're using the Splunk Distribution of the OpenTelemetry Collector for Kubernetes, the required Infrastructure Monitoring metadata is provided. See more at :ref:`otel-install-k8s`.
+If you're using the default configuration of the Splunk Distribution of the OpenTelemetry Collector for Kubernetes, the required Infrastructure Monitoring metadata is provided. See more at :ref:`otel-install-k8s`.
 
-If you're using other configurations to collect infrastructure data, Related Content won't work out of the box.
+If you're using other distributions of the OpenTelemetry Collector or non-default configurations of the Splunk Distribution to collect infrastructure data, Related Content won't work out of the box.
 
 Log Observer
 -----------------------------------------------------------------
@@ -80,7 +80,7 @@ The following metadata keys are required to enable Related Content for Log Obser
 Enable Related Content
 =================================================================
 
-See :ref:`get-started-enablerelatedcontent` to learn how you can make any necessary updates to metadata key names to enable Related Content in Observability Cloud.
+See :ref:`get-started-enablerelatedcontent` to learn how you can make any necessary updates to metadata key names to enable Related Content in Splunk Observability Cloud.
 
 Where can I see Related Content?
 =================================================================
