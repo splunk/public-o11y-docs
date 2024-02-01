@@ -48,6 +48,8 @@ Edit the domain.xml file to add the following option under ``server-groups.serve
 
    <option value="-javaagent:/path/to/splunk-otel-javaagent.jar"/>
 
+For more information, see the :new-page:`Red Hat documentation <https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html/configuration_guide/configuring_jvm_settings>`.
+
 .. note:: Make sure to install the Java agent at each of the Server Group levels.
 
 .. _jetty-javaagent:
