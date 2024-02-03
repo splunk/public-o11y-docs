@@ -4,7 +4,7 @@ enabling real-time analysis of terabytes of machine data.
 
 [ht_toggle title=“Requirements” id=“” class=“” style=“” ]
 
-VictorOps Version Required: Starter, Growth, or Enterprise
+VictorOps Version Required: Starter, Growth, or Enterprise
 
 Graylog Version Required: 3.1+
 
@@ -27,18 +27,18 @@ Create VictorOps Notification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Open the web UI for Graylog, by default this is set to
-http://127.0.0.1:9000. From there, login and go to **Alerts >>
+http://127.0.0.1:9000. From there, login and go to **Alerts >>
 Notifications** and select **Create Notification**. Then, go ahead and
 give this notification a title and description that you'll remember.
-You'll then want to select **HTTP Notification** for notification type
-and copy the **Service API Endpoint** from above into the **URL** field.
+You'll then want to select :guilabel:`HTTP Notification` for notification type
+and copy the :guilabel:`Service API Endpoint` from above into the :guilabel:`URL` field.
 
 .. image:: images/graylog1-2.png
 
 Put the appropriate routing key at the end of the url and be sure to add
 it to Graylog's whitelisted URL's if you have that enabled.
 
-Next click **Execute Test Notification.** This should produce an info
+Next click **Execute Test Notification.** This should produce an info
 type alert on your timeline if everything is setup properly.
 
 .. image:: images/graylog2.png
@@ -62,7 +62,7 @@ just made and click **Done**.
 
 .. image:: images/graylog3.png
 
-VictorOps will automatically aggregate alerts with the same **Event
+Splunk On-Call automatically aggregates alerts with the same **Event
 Definition ID**.
 
 Troubleshooting
