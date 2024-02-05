@@ -21,14 +21,14 @@ Follow these steps to create an SLO.
 #. Select :guilabel:`Create SLO`.
 #. Select the service or metric you want to use as the system health indicator for your SLO.
 
-    Follow these steps to use a service as health indicator for your SLO
+    To use a service as a health indicator for your SLO, follow these steps:
 
         .. list-table::
           :header-rows: 1
           :widths: 40 60
 
           * - :strong:`Field name`
-            - :strong:`Description`
+            - :strong:`Actions`
           * - Metric type
             - Select :guilabel:`Service & endpoint` from the dropdown menu
           * - Environment
@@ -39,14 +39,14 @@ Follow these steps to create an SLO.
           * - Filters
             - Enter any additional dimension names and values you want to apply this SLO to
 
-    Follow these steps to use a custom metric as health indicator for your SLO
+    To use a custom metric as a health indicator for your SLO, follow these steps:
 
         .. list-table::
           :header-rows: 1
           :widths: 40 60
 
           * - :strong:`Field name`
-            - :strong:`Description`
+            - :strong:`Actions`
           * - Metric type
             - Select :guilabel:`Custom metric` from the dropdown menu
           * - Numerator metric
@@ -61,7 +61,7 @@ Follow these steps to create an SLO.
       :widths: 20 80
 
       * - :strong:`Field name`
-        - :strong:`Description`
+        - :strong:`Actions`
       * - Target (%)
         - Enter the target you want to set for this SLO. 
       * - Compliance window
@@ -73,7 +73,7 @@ Follow these steps to create an SLO.
       :header-rows: 1
       :widths: 20 80
 
-      * - :strong:`Field name`
+      * - :strong:`Alert`
         - :strong:`Description`
       * - Breach event
         - | Alerts when the service level indicator (SLI) doesn't meet the target over the specified compliance window. 
