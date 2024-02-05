@@ -7,13 +7,13 @@ Deploy the Collector with Ansible for Windows
 .. meta::
       :description: Describes how to install the Splunk Observability Cloud OpenTelemetry Collector Ansible role on Windows.
 
-Before installing the Ansible collection, check :ref:`otel-intro-resources` to:
+Before installing the Ansible collection, check :ref:`otel-intro` to verify the required resources:
 
 * Find your Splunk access token 
 * Find your Splunk realm
 * Check your exposed ports to make sure your environment doesn't have conflicts. You can change ports in the package's configuration.
 
-Requirements and supported versions
+Supported versions
 ==========================================
 
 Currently, the following Windows versions are supported:
@@ -22,7 +22,12 @@ Currently, the following Windows versions are supported:
 * Windows Server 2019 64-bit
 * Windows Server 2022 64-bit
 
-Ansible requires PowerShell 3.0 or higher and .NET 4.0 or higher to be installed on the Windows host. You must create and activate a WinRM listener. 
+Requirements
+==========================================
+
+Ansible requires PowerShell 3.0 or higher and .NET 4.0 or higher to be installed on the Windows host. 
+
+You must create and activate a WinRM listener. 
 
 You can find information on setting up the Windows host on the :new-page:`Ansible Documentation site <https://docs.ansible.com/>`.
 
@@ -57,7 +62,7 @@ The following example shows how to use the role in a playbook with minimal requi
           splunk_hec_token: YOUR_HEC_TOKEN
           splunk_realm: SPLUNK_REALM
 
-``splunk_hec_yoken``is optional.
+Note that ``splunk_hec_yoken`` is optional.
 
 Configuration variables
 ==========================================
