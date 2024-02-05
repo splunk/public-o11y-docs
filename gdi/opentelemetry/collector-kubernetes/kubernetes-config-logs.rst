@@ -100,7 +100,7 @@ For example, to send logs from the ``kube-system`` namespace to the ``k8s_events
     kubectl annotate namespace kube-system splunk.com/index=k8s_events
 
 Filter logs using pod or namespace annotations
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------------------------
 
 If ``logsCollection.containers.useSplunkIncludeAnnotation`` is ``false`` (default value), set the ``splunk.com/exclude`` annotation to ``true`` on pods or namespaces to exclude their logs from being ingested. For example:
 
@@ -123,7 +123,7 @@ If ``logsCollection.containers.useSplunkIncludeAnnotation`` is ``true``, set the
   kubectl annotate pod -n <my-namespace> <my-pod> splunk.com/include=true
 
 Filter source types
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------
 
 Use the ``splunk.com/sourcetype`` annotation on a pod to overwrite the ``sourcetype`` field. If not set, it will default to ``kube:container:CONTAINER_NAME``.
 
