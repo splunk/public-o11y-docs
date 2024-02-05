@@ -5,18 +5,16 @@ Notification Aggregation
 ************************************************************************
 
 .. meta::
-   :description: Learn how to manually take an on-call shift from someone in real-time. Ideal for unexpected absences from work when you're on-call.
+   :description: Splunk On-Call offers many notification options including email, SMS, phone, and push notifications. This topic highlights each of the different options.
 
-Splunk On-Call offers many notification options including email, SMS,
-phone, and push notifications. This article highlights each of the
+Splunk On-Call offers many notification options including email, SMS, phone, and push notifications. This topic highlights each of the
 different options.
 
-Please note that a maximum amount of 4 separate phone numbers (for
-SMS/Phone notifications) can be implemented into any given Splunk
+Please note that a maximum amount of 4 separate phone numbers for SMS/Phone notifications can be implemented into any given Splunk
 On-Call user profile.
 
-**Push**
-~~~~~~~~
+Push
+==========
 
 Push notifications are sent through the application. We use push for:
 
@@ -25,54 +23,52 @@ Push notifications are sent through the application. We use push for:
 -  Chats (timeline and private)
 -  Control Call
 
-When a push notification is used to deliver a page, you will have the
-option to acknowledge, reroute, or snooze the incident straight from the
-notification.
+When a push notification is used to deliver a page, you will have the option to acknowledge, reroute, or snooze the incident straight from the notification.
 
-.. image:: images/Phone.png
+.. image:: /_images/spoc/notif-types1.png
+    :width: 100%
+    :alt: Splunk On-Call push notification.
 
-**SMS**
-~~~~~~~
 
-SMS notifications can be used in your personal paging policy. The
-message you receive is, at most, 160 characters, and it displays the
-incident number, entity_display_name, and response code if 2 way SMS is
-supported. When you receive an SMS notification, two codes are included
-in the message so you can acknowledge and/or resolve the alert by
-responding with the correct five-digit code. Please note that these
-response codes expire after 1 hour.
+SMS
+===========
 
-.. image:: images/VO-SMS-example-screen.png
+SMS notifications can be used in your personal paging policy. The message you receive is, at most, 160 characters, and it displays the
+incident number, entity_display_name, and response code if two-way SMS is supported. When you receive an SMS notification, two codes are included in the message so you can acknowledge aor resolve the alert by responding with the correct five-digit code. These response codes expire after 1 hour.
+
+.. image:: /_images/spoc/notif-types2.png
+    :width: 100%
+    :alt: Splunk On-Call SMS notification.
+
 
 SMS Subscription Management
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+====================================
 
-You may stop and start our SMS notification subscription by replying to
-the message with STOP or START. Although, it is best to manage your
-notifications from the personal profile page in Splunk On-Call.
+You may stop and start our SMS notification subscription by replying to the message with STOP or START. Although, it is best to manage your notifications from the personal profile page in Splunk On-Call.
 
-**Email**
-~~~~~~~~~
+Email
+==============
 
-Emails can be used for pages. Emails can also be used as reminders that
-your Splunk On-Call instance is in `Maintenance
-Mode <https://help.victorops.com/knowledge-base/maintenance-mode/>`__,
-or that you have a gap in your schedule due to a `Scheduled
-Override <https://help.victorops.com/knowledge-base/scheduled-overrides/>`__ that
-is not covered.
+Emails can be used for pages. Emails can also be used as reminders that your Splunk On-Call instance is in :ref:`maintenance-mode`, or that you have a gap in your schedule due to a :ref:`scheduled-overrides` that is not covered.
 
-Paged incident: |notificationtype3|
+.. image:: /_images/spoc/notif-types3.png
+    :width: 100%
+    :alt: Splunk On-Call email notification.
 
 Scheduled Override:
 
-.. image:: images/Scheduled-Override.png
+.. image:: /_images/spoc/notif-types4.png
+    :width: 100%
+    :alt: Splunk On-Call scheduled override email.
 
 Maintenance Mode:
 
-.. image:: images/Maintence-mode.png
+.. image:: /_images/spoc/notif-types5.png
+    :width: 100%
+    :alt: Splunk On-Call scheduled maintenance override.
 
-**Phone**
-~~~~~~~~~
+Phone
+============
 
 Phone calls are used for paging. The “entity_display_name” field is read
 aloud and then an option to acknowledge or resolve the alert is offered.
@@ -80,10 +76,4 @@ aloud and then an option to acknowledge or resolve the alert is offered.
 -  Press 4 to acknowledge
 -  Press 6 to resolve
 
-For a list of phone numbers used by On-Call please refer to the
-following article:
-
-`VictorOps Phone
-Numbers <https://help.victorops.com/knowledge-base/mobile-app-getting-started/#add-victorops-to-your-contacts>`__
-
-.. |notificationtype3| image:: images/notificationtype3.png
+For a list of phone numbers used by Splunk On-Call, see :ref:`mobile-get-started`.

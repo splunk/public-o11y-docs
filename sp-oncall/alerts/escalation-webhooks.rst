@@ -77,24 +77,25 @@ HTTP Headers
 
 Once there is a webhook, it can be added to an escalation policy.
 
-.. image:: images/Add-execute-webhook-to-ep.png
+.. image:: /_images/spoc/webhooks-4.png
+    :width: 100%
+    :alt: Add the webshook to the escalation policy.
 
-Difference between Escalation and Custom Outgoing Webhooks
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-More information on Custom Outgoing Webhooks can be found
-`HERE <https://help.victorops.com/knowledge-base/custom-outbound-webhooks/>`__.
+Difference between escalation and custom outgoing webhooks
+----------------------------------------------------------------
 
-**Sample Scala Code for Reference**
+For more information on custom outgoing webhooks, see :ref:`custom-outbound-webhooks`.
+
+Sample Scala code for reference
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-import javax.crypto.Mac import javax.crypto.spec.SecretKeySpec import
-javax.xml.bind.DatatypeConverter def generateSignature(key: String, url:
-String, postData: Map[String, String]) = { val contents =
-postData.toList.sorted.foldLeft(url) { case (s, (key, value)) =>
-s”\ :math:`s`\ key$value” } val mac = Mac.getInstance(“HmacSHA1”)
-mac.init(new SecretKeySpec(key.getBytes, “HmacSHA1”))
-DatatypeConverter.printBase64Binary(mac.doFinal(contents.getBytes(“utf-8”)))
+.. code-block:: java
+   import javax.crypto.Mac 
+   import javax.crypto.spec.SecretKeySpec import javax.xml.bind.DatatypeConverter 
+   def generateSignature(key: String, url:String, postData: Map[String, String]) = { 
+      val contents =postData.toList.sorted.foldLeft(url) { case (s, (key, value)) =>s”\ :math:`s`\ key$value” } 
+      val mac = Mac.getInstance(“HmacSHA1”)
+      mac.init(new SecretKeySpec(key.getBytes, “HmacSHA1”))
+      DatatypeConverter.printBase64Binary(mac.doFinal(contents.getBytes(“utf-8”)))
 }
-
---------------
