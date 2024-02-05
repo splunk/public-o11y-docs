@@ -156,9 +156,23 @@ Set annotations to instrument .NET applications
 
 You can activate auto instrumentation for .NET applications before runtime.
 
-If the related Kubernetes object (deployment, daemonset, or pod) is not deployed, add the ``otel.splunk.com/inject-dotnet`` annotation to the application object YAML.
+.NET auto instrumentation uses annotations to set the .NET runtime identifiers (RIDs). Find the annotation that corresponds to your runtime environment and add it to the application object YAML.
 
-For example, given the following deployment YAML:
+.. list-table::
+  :header-rows: 1
+  :width: 100
+
+  * - RID
+    - Annotation 
+    - Notes
+  * - ``linux-x64``
+    - ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-x64"``
+    - This is the default value and you can omit it.
+  * - ``linux-musl-x64``
+    - ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-musl-x64"``
+    - Use this annotation for applications running in environments based on the ``musl`` library.
+
+For example, given the following deployment YAML on a ``linux-x64`` runtime environment:
 
     .. code-block:: yaml
 
@@ -174,7 +188,7 @@ For example, given the following deployment YAML:
             - name: my-dotnet-app
               image: my-dotnet-app:latest
 
-Activate auto instrumentation by adding ``otel.splunk.com/inject-dotnet: "true"`` to the ``spec``:
+Activate auto instrumentation by adding ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-x64"`` to the ``spec``:
 
     .. code-block:: yaml
       :emphasize-lines: 10
@@ -188,7 +202,7 @@ Activate auto instrumentation by adding ``otel.splunk.com/inject-dotnet: "true"`
         template:
           metadata:
             annotations:
-              otel.splunk.com/inject-dotnet: "true"
+              instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-x64"
           spec:
             containers:
             - name: my-dotnet-app
@@ -203,54 +217,57 @@ To deactivate automatic instrumentation, remove the annotation. The following co
 Verify instrumentation
 -----------------------------------------------
 
-To verify that the instrumentation was successful, run the following command on an individual pod. Your instrumented pod should contain an initContainer named ``opentelemetry-auto-instrumentation`` and the target application container should have several ``OTEL_*`` environment variables similar to those in the demo output below.
+To verify that the instrumentation was successful, run the following command on an individual pod:
 
 .. code-block:: bash
 
-   kubectl describe pod -n otel-demo -l app.kubernetes.io/name=opentelemetry-demo-frontend
-   # Name:             opentelemetry-demo-frontend-57488c7b9c-4qbfb
-   # Namespace:        otel-demo
-   # Annotations:      instrumentation.opentelemetry.io/inject-dotnet: true
-   # Status:           Running
-   # Init Containers:
-   #   opentelemetry-auto-instrumentation:
-   #     Command:
-   #       cp
-   #       -a
-   #       /autoinstrumentation/.
-   #       /otel-auto-instrumentation/
-   #     State:          Terminated
-   #       Reason:       Completed
-   #       Exit Code:    0
-   # Containers:
-   #   frontend:
-   #     State:          Running
-   #     Ready:          True
-   #     Environment:
-   #       FRONTEND_PORT:                              8080
-   #       FRONTEND_ADDR:                              :8080
-   #       AD_SERVICE_ADDR:                            opentelemetry-demo-adservice:8080
-   #       CART_SERVICE_ADDR:                          opentelemetry-demo-cartservice:8080
-   #       CHECKOUT_SERVICE_ADDR:                      opentelemetry-demo-checkoutservice:8080
-   #       CURRENCY_SERVICE_ADDR:                      opentelemetry-demo-currencyservice:8080
-   #       PRODUCT_CATALOG_SERVICE_ADDR:               opentelemetry-demo-productcatalogservice:8080
-   #       RECOMMENDATION_SERVICE_ADDR:                opentelemetry-demo-recommendationservice:8080
-   #       SHIPPING_SERVICE_ADDR:                      opentelemetry-demo-shippingservice:8080
-   #       WEB_OTEL_SERVICE_NAME:                      frontend-web
-   #       PUBLIC_OTEL_EXPORTER_OTLP_TRACES_ENDPOINT:  http://localhost:8080/otlp-http/v1/traces
-   #       NODE_OPTIONS:                                --require /otel-auto-instrumentation/autoinstrumentation.dotnet
-   #       SPLUNK_OTEL_AGENT:                           (v1:status.hostIP)
-   #       OTEL_SERVICE_NAME:                          opentelemetry-demo-frontend
-   #       OTEL_EXPORTER_OTLP_ENDPOINT:                http://$(SPLUNK_OTEL_AGENT):4317
-   #       OTEL_RESOURCE_ATTRIBUTES_POD_NAME:          opentelemetry-demo-frontend-57488c7b9c-4qbfb (v1:metadata.name)
-   #       OTEL_RESOURCE_ATTRIBUTES_NODE_NAME:          (v1:spec.nodeName)
-   #       OTEL_PROPAGATORS:                           tracecontext,baggage,b3
-   #       OTEL_RESOURCE_ATTRIBUTES:                   splunk.zc.method=autoinstrumentation-dotnet:0.41.1,k8s.container.name=frontend,k8s.deployment.name=opentelemetry-demo-frontend,k8s.namespace.name=otel-demo,k8s.node.name=$(OTEL_RESOURCE_ATTRIBUTES_NODE_NAME),k8s.pod.name=$(OTEL_RESOURCE_ATTRIBUTES_POD_NAME),k8s.replicaset.name=opentelemetry-demo-frontend-57488c7b9c,service.version=1.5.0-frontend
-   #     Mounts:
-   #       /otel-auto-instrumentation from opentelemetry-auto-instrumentation (rw)
-   # Volumes:
-   #   opentelemetry-auto-instrumentation:
-   #     Type:        EmptyDir (a temporary directory that shares a pod's lifetime)
+  kubectl describe pod <my-application-name> -n <my-namespace>
+
+Your instrumented pod should contain an initContainer named ``opentelemetry-auto-instrumentation`` and the target application container should have several ``OTEL_*`` environment variables similar to those in the demo output below.
+
+.. code-block:: bash
+
+    # Name:             dotnet-test-8499bc67dc-wn2fm
+    # Namespace:        dotnet-demo
+    # Labels:           app=dotnet-test
+    #                   pod-template-hash=8499bc67dc
+    # Annotations:      instrumentation.opentelemetry.io/inject-dotnet: true
+    #                   instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: linux-x64
+    # Status:           Running
+    # Init Containers:
+    #   opentelemetry-auto-instrumentation-dotnet:
+    #     Image:         ghcr.io/signalfx/splunk-otel-dotnet/splunk-otel-dotnet:v1.3.0
+    #     State:          Terminated
+    #       Reason:       Completed
+    #       Exit Code:    0
+    # Containers:
+    #   dotnet-test:
+    #     State:          Running
+    #     Ready:          True
+    #     Environment:
+    #     OTEL_DOTNET_AUTO_PLUGINS:            Splunk.OpenTelemetry.AutoInstrumentation.Plugin, Splunk.OpenTelemetry.AutoInstrumentation
+    #     OTEL_EXPORTER_OTLP_ENDPOINT:         http://splunk-otel-collector-agent:4318
+    #     CORECLR_ENABLE_PROFILING:            1
+    #     CORECLR_PROFILER:                    {918728DD-259F-4A6A-AC2B-B85E1B658318}
+    #     CORECLR_PROFILER_PATH:               /otel-auto-instrumentation-dotnet/linux-x64/OpenTelemetry.AutoInstrumentation.Native.so
+    #     DOTNET_STARTUP_HOOKS:                /otel-auto-instrumentation-dotnet/net/OpenTelemetry.AutoInstrumentation.StartupHook.dll
+    #     DOTNET_ADDITIONAL_DEPS:              /otel-auto-instrumentation-dotnet/AdditionalDeps
+    #     OTEL_DOTNET_AUTO_HOME:               /otel-auto-instrumentation-dotnet
+    #     DOTNET_SHARED_STORE:                 /otel-auto-instrumentation-dotnet/store
+    #     SPLUNK_OTEL_AGENT:                    (v1:status.hostIP)
+    #     OTEL_SERVICE_NAME:                   dotnet-test
+    #     OTEL_RESOURCE_ATTRIBUTES_POD_NAME:   dotnet-test-8499bc67dc-wkf98 (v1:metadata.name)
+    #     OTEL_RESOURCE_ATTRIBUTES_NODE_NAME:   (v1:spec.nodeName)
+    #     OTEL_PROPAGATORS:                    tracecontext,baggage,b3
+    #     OTEL_RESOURCE_ATTRIBUTES:            splunk.zc.method=splunk-otel-dotnet:v1.3.0,k8s.container.name=dotnet-test,k8s.deployment.name=dotnet-test,k8s.namespace.name=dotnet-demo,k8s.node.name=$(OTEL_RESOURCE_ATTRIBUTES_NODE_NAME),k8s.pod.name=$(OTEL_RESOURCE_ATTRIBUTES_POD_NAME),k8s.replicaset.name=dotnet-test-8499bc67dc,service.version=latest
+    #     Mounts:
+    #       /otel-auto-instrumentation-dotnet from opentelemetry-auto-instrumentation-dotnet (rw)
+    #       /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-j5wm6 (ro)
+    # Volumes:
+    #   opentelemetry-auto-instrumentation-dotnet:
+    #     Type:        EmptyDir (a temporary directory that shares a pod's lifetime)
+    #     Medium:
+    #     SizeLimit:   200Mi
 
 View results at Splunk Observability APM
 ===========================================================
@@ -266,14 +283,19 @@ You can add advanced configuration like activating custom sampling and including
 
 You can also use the methods shown in :ref:`zeroconfig-dotnet-traces` to configure your instrumentation with the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable and other environment variables. For example, if you want every span to include the key-value pair ``build.id=feb2023_v2``, set the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable:
 
-  .. code-block:: bash
+.. code-block:: bash
     
-     kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=build.id=feb2023_v2
+    kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=build.id=feb2023_v2
 
 See :ref:`advanced-dotnet-otel-configuration` for the full list of supported environment variables.
+
+Troubleshooting
+===========================================================
+
+To troubleshoot .NET auto instrumentation for Kubernetes, examine the logs located in ``/var/log/opentelemetry/dotnet`` within the instrumented pod. These logs provide valuable debugging insights.
 
 Learn more
 ===========================================================================
 
 * To learn more about how Zero Config Auto Instrumentation works in Splunk Observability Cloud, see :new-page:`more detailed documentation in GitHub <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/auto-instrumentation-install.md#how-does-auto-instrumentation-work>`.
-* Refer to :new-page:`the operator pattern in the Kubernetes documentation <https://kubernetes.io/docs/concepts/extend-kubernetes/operator/>` for more information.
+* See :new-page:`the operator pattern in the Kubernetes documentation <https://kubernetes.io/docs/concepts/extend-kubernetes/operator/>` for more information.
