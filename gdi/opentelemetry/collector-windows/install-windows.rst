@@ -210,7 +210,7 @@ To specify custom URLs for these downloads, use the ``collector_msi_url`` and ``
 
 .. _fluentd-manual-config-windows:
 
-Configure fluentd for log collection
+Configure Fluentd for log collection
 ====================================================================
 
 If you have a Log Observer entitlement or wish to collect logs for the target host with Fluentd, use the ``with_fluentd = 1`` option to also install Fluentd when installing the Collector. For example:
