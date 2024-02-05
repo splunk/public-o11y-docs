@@ -1,53 +1,73 @@
-When using the VictorOps web portal, you can elect to receive desktop
-notifications that may help draw your attention to new incidents while
-you are busy working on other things.  This article describes how to
-turn these notification on (or off) in common internet browsers.
+.. _desktop-notif:
 
---------------
+************************************************************************
+Configure desktop notifications
+************************************************************************
 
-.. image:: images/unnamed-1.png
+.. meta::
+   :description: Configure desktop notifications that may help draw your attention to new incidents.
+
+
+When using the VictorOps web portal, you can elect to receive desktop notifications that may help draw your attention to new incidents while you are busy working on other things. This topic describes how to turn these notification on (or off) in common internet browsers.
+
+
 
 Google Chrome
-=============
+==================
 
-Upon the first visit to portal.victorops.com, you will be prompted with
-the following pop-up:
+Upon the first visit to portal.victorops.com, you will be prompted with the following pop-up:
 
-.. image:: images/Screenshot-2017-06-01-14.32.47.png
 
- 
+.. image:: /_images/spoc/desktop1.png
+    :width: 100%
+    :alt: Allow desktop notifications.
 
-If you would like to enable/disable desktop notifications, follow these
-steps:
 
-1. Type *chrome://settings/* into your address bar
 
-2. Click *Show advanced settings*\ …
+If you would like to turn desktop notifications on or off, follow these steps:
 
-.. image:: images/Screenshot-2017-05-31-11.41.06.png
+1. Enter **chrome://settings/** into your address bar.
 
- 
+2. Select :guilabel:`Show advanced settings`.
 
-3. Click *Content settings…*
+.. image:: /_images/spoc/desktop2.png
+    :width: 100%
+    :alt: Allow desktop notifications.
 
-.. image:: images/Screenshot-2017-05-31-11.41.55.png
+3. Select :guilabel:`Content settings`
 
-4. Under Notifications, click *Manage exceptions…*
+.. image:: /_images/spoc/desktop3.png
+    :width: 100%
+    :alt: Allow desktop notifications.
 
-|image1| 5. Locate or type *https://portal.victorops.com:443*
+4. Under Notifications, select :guilabel:`Manage exceptions`.
 
-|image2| 6. If you would like to enable, click *Allow.*
+.. image:: /_images/spoc/desktop4.png
+    :width: 100%
+    :alt: Manage exceptions.
 
-7. If you would like to disable, click *Block.*
+5. Locate or type **https://portal.victorops.com:443**
 
---------------
+.. image:: /_images/spoc/desktop5.png
+    :width: 100%
+    :alt: Manage exceptions.
+
+6. If you would like to enable, select :guilabel:`Allow`.
+
+7. If you would like to disable, select :guilabel:`Block`.
+
+.. |image1| image:: images/Screenshot-2017-05-31-11.42.43.png
+.. |image2| image:: images/Screenshot-2017-05-31-11.43.48.png
+.. |image3| image:: images/Screenshot-2017-05-31-15.20.44.png
+.. |image4| image:: images/Screenshot-2017-06-01-15.06.20.png
+
 
  
 
 .. image:: images/yosemite-safai_icon.png
 
 Safari
-======
+==========
 
 Upon the first visit to portal.victorops.com, you will be prompted with
 the following pop-up:
@@ -135,7 +155,3 @@ follow the steps outlined below:
 
 7.If you would like to disable, click *Off*
 
-.. |image1| image:: images/Screenshot-2017-05-31-11.42.43.png
-.. |image2| image:: images/Screenshot-2017-05-31-11.43.48.png
-.. |image3| image:: images/Screenshot-2017-05-31-15.20.44.png
-.. |image4| image:: images/Screenshot-2017-06-01-15.06.20.png
