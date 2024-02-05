@@ -21,7 +21,7 @@ Follow these steps to create an SLO.
 #. Select :guilabel:`Create SLO`.
 #. Select the service or metric you want to use as the system health indicator for your SLO.
 
-    To use a service as a health indicator for your SLO, follow these steps:
+    To use a service as the health indicator for your SLO, follow these steps:
 
         .. list-table::
           :header-rows: 1
@@ -39,7 +39,7 @@ Follow these steps to create an SLO.
           * - Filters
             - Enter any additional dimension names and values you want to apply this SLO to
 
-    To use a custom metric as a health indicator for your SLO, follow these steps:
+    To use a custom metric as the health indicator for your SLO, follow these steps:
 
         .. list-table::
           :header-rows: 1
