@@ -11,6 +11,8 @@ Use this module to install and configure the Collector on Windows. Download and 
 
 On Windows systems, the :new-page:`puppetlabs/registry module <https://forge.puppet.com/modules/puppetlabs/registry>` is required to set the registry key/values, and the :new-page:`puppetlabs/powershell module <https://forge.puppet.com/modules/puppetlabs/powershell>` is required to run Powershell commands.
 
+.. caution:: On Windows, the Collector is installed as a Windows service and its environment variables are set at the service scope, so they're only available to the Collector service and not to the entire machine.
+
 Use the Puppet module
 ============================
 
