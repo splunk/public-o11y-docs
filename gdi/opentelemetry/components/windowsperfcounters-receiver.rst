@@ -29,6 +29,41 @@ Follow these steps to configure and activate the component:
 2. Configure the Windows Performance Counters receiver as described in the next section.
 3. Restart the Collector.
 
+View available performance counters
+---------------------------------------
+
+To see a list of available performance counters, use Windows PowerShell or the Windows Performance Monitor.
+
+.. tabs:: 
+  
+  .. tab:: PowerShell
+
+    In PowerShell, run the following command to list all performance counter sets:
+
+    .. code-block:: powershell
+
+      Get-Counter -ListSet *
+
+    To list the instances of each performance counter set, run the following command and replace ``<perf_object_name>`` with the name of the instances you want to find:
+
+    .. code-block:: powershell
+
+      Get-Counter -List "<perf_object_name>"
+    
+  .. tab:: Windows Performance Monitor
+    
+    Run the following command to open the Windows Performance Monitor:
+
+    .. code-block:: powershell
+
+      perfmon /sys
+
+    In the Windows Performance Monitor, select the green plus arrow to see a list of available performance counters. 
+
+    .. image:: /_images/gdi/windows-monitor.png
+      :width: 100%
+      :alt: The Add Counters screen of the Windows Performance Monitor displays a list of available Windows Performance Counters and a list of counters added to the performance monitor.
+
 Sample configurations
 ----------------------
 
@@ -68,8 +103,9 @@ To collect metrics from Windows performance counters, you need to define metrics
 Metric format
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+To report metrics in a specific format, define the metric and reference it in the corresponding counter, along with any applicable attributes. By default, the metric name corresponds to the name of the counter.
 
-To report metrics in a specific format, define the metric and reference it in the corresponding counter, along with any applicable attributes. Metrics can be of type ``sum`` or ``gauge``. Sum metrics support the ``aggregation`` and ``monotonic`` fields.
+Metrics can be of type ``sum`` or ``gauge``. Sum metrics support the ``aggregation`` and ``monotonic`` fields.
 
 
 .. list-table::
@@ -85,7 +121,7 @@ To report metrics in a specific format, define the metric and reference it in th
    - 
 
       - ``name``
-      - Metric key or name
+      - Metric key or name. Can be any non empty string.
       - String
       - Name of the counter
    - 
@@ -168,30 +204,31 @@ Configure collection interval and counters
 
 You can configure the collection interval and which performance counters you want to scrape. For example:
 
-.. code-block::
+.. code-block:: yaml
 
-   windowsperfcounters:
-   collection_interval: <duration> # default = "1m"
-   initial_delay: <duration> # default = "1s"
-   metrics:
-      <metric name>:
-         description: <description>
-         unit: <unit type>
-         gauge:
-      <metric name>:
-         description: <description>
-         unit: <unit type>
-         sum:
-         aggregation: <cumulative or delta>
-         monotonic: <true or false>
-   perfcounters:
-      - object: <object name>
-         instances: [<instance name>]*
-         counters:
-         - name: <counter name>
-            metric: <metric name>
-            attributes:
-               <key>: <value>
+     windowsperfcounters:
+      collection_interval: <duration>
+      initial_delay: <duration>
+      metrics:
+        <metric name 1>:
+          description: <description>
+          unit: <unit type>
+          gauge: null
+        <metric name 2>:
+          description: <description>
+          unit: <unit type>
+          sum: null
+          aggregation: <cumulative or delta>
+          monotonic: <true or false>
+      perfcounters:
+        - object: <object name>
+          instances:
+            - <instance name>
+          counters:
+            - name: <counter name>
+              metric: <metric name>
+              attributes:
+                <key>: <value>
 
 Scrape at different collection intervals
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
