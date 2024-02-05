@@ -69,10 +69,6 @@ Collector config output
          exporters:
            - signalfx
 
-.. note::
-
-   Learn more in :new-page:`the GitHub documentation <https://github.com/signalfx/splunk-otel-collector/tree/main/cmd/translatesfx>` on ``translatefx``.
-
 Use the configuration translation tool
 ==========================================================================
 
