@@ -37,7 +37,7 @@ Follow these steps to create an SLO.
             - * Search for the service you want to create an SLO for
               * (Optional) Add an endpoint for the selected service
           * - Filters
-            - Additional dimension names and values you want to apply this SLO to
+            - Enter any additional dimension names and values you want to apply this SLO to
 
     Follow these steps to use a custom metric as health indicator for your SLO
 
