@@ -11,7 +11,7 @@ When you create a test, you have the option to validate the configuration of you
 
 When to run a test or use try now to validate your test configuration 
 ========================================================================
-There are two types of runs in Splunk Synthetic Monitoring try now runs, and persisted runs. A persisted run executes on a schedule and run results are stored, and used for monitoring. Persisted runs are a result of any type of Browser, API, or Uptime test that runs on a schedule.  A try now run executes immediately and run results aren't stored. Try now runs are used to validate a test. Here is some guidance on when to use each type of run.
+There are two types of runs in Splunk Synthetic Monitoring try now runs, and persisted runs. A persisted run executes on a schedule and run results are stored, and used for monitoring. Persisted runs are a result of any type of Browser, API, or Uptime test that runs on a schedule.  A try now run executes immediately and results are ephemeral and don’t impact persisted run metrics. Try now runs are used to validate a test. Here is some guidance on when to use each type of run.
 
 .. list-table::
   :header-rows: 1
