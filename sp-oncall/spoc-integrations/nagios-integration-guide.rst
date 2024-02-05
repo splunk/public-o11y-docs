@@ -1,7 +1,15 @@
-About Nagios and Splunk On-Call
--------------------------------
+.. _nagios-spoc:
 
-The Splunk On-Call (formerly VictorOps) and Nagios integration supports
+************************************************************************
+About Nagios and Splunk On-Call
+************************************************************************
+
+.. meta::
+   :description: The Splunk On-Call and Nagios integration supports both Nagios Core and Nagios XI. Integrate Nagio and Splunk On-Call to allow teams to monitor and alert on their entire infrastructure, whether it be cloud, virtual, and/or physical IT environments.
+
+
+
+The Splunk On-Call and Nagios integration supports
 both Nagios Core and Nagios XI. Integrating
 `Nagios <https://www.nagios.org/>`__ and Splunk On-Call allows teams to
 monitor and alert on their entire infrastructure, whether it be cloud,

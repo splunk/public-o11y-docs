@@ -1,5 +1,11 @@
-About Splunk On-Call and Elasticsearch Watcher
-----------------------------------------------
+.. _elasticsesarch-watcher-spoc:
+
+Elasticsearch Watcher integration for Splunk On-Call
+***************************************************
+
+.. meta::
+    :description: Configure the Elasticsearch Watcher integration for Splunk On-Call.
+
 
 Elasticsearch is a distributed, RESTful search and analytics engine
 capable of solving a growing number of use cases.  Watcher is a plugin

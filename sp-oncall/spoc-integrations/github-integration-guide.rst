@@ -1,5 +1,13 @@
-About VictorOps and GitHub
---------------------------
+.. _github-spoc:
+
+GitHub integration for Splunk On-Call
+***************************************************
+
+.. meta::
+    :description: Configure the GitHub integration for Splunk On-Call.
+
+
+
 
 VictorOps's delivery insights endpoint integration
 with `GitHub <https://github.com/>`__ ensures better visibility into

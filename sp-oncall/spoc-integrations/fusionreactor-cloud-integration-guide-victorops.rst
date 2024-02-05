@@ -1,4 +1,14 @@
-FusionReactor Cloud moves FusionReactor from being an on-premise monitor
+.. _fusionreactor-cloud-spoc:
+
+FusionReactor Cloud integration for Splunk On-Call
+***************************************************
+
+.. meta::
+    :description: Configure the FusionReactor Cloud integration for Splunk On-Call.
+
+
+
+FusionReactor Cloud moves FusionReactor from being an on-premise monitor
 into a Hybrid monitoring solution - extending FR's feature set to
 enhance the monitoring, historic data analysis and alerting capability
 to new levels.  The following guide will walk you through this
