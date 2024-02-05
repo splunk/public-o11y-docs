@@ -69,6 +69,8 @@ The following table describes when and where in Splunk Observability Cloud you c
    * - Specific trace ID
      - Related log line
 
+.. _relatedcontent-collector:
+
 Related Content and the Splunk Distribution of the OpenTelemetry Collector metadata compatibility
 ==========================================================================================================
 
@@ -87,13 +89,24 @@ For example, say Splunk Observability Cloud receives the following telemetry dat
 
 - Splunk Log Observer receives a log with the metadata key ``trace.id:2b78e7c951497655``
 
-Although these refer to the same trace ID value, the log and the trace cannot be correlated in Splunk Observability Cloud because the field names, ``trace_id`` and ``trace.id`` do not match. 
+Although these refer to the same trace ID value, the log and the trace cannot be correlated in Splunk Observability Cloud because the field names, ``trace_id`` and ``trace.id``, do not match. 
 
 To solve this, rename your log metadata key ``trace.id`` to ``trace_id`` using the field copy processor in Logs Pipeline Management. Alternatively, you can re-instrument your log collection to make metadata key names align. 
 
 When the field names in APM and Log Observer match, the trace and the log with the same trace ID value can be correlated in Splunk Observability Cloud. Then, when you are viewing the trace in APM, you can select directly into the log with the same trace ID value and view the correlated log in Log Observer.
 
-Prerequisites and required metadata fields
+.. _relatedcontent-required-components:
+
+Required Collector components
+=================================================================
+
+If you're using the Splunk OTel Collector and want to ensure Related Content behaves correctly, verify that the  SignalFx exporter is included in your configuration. This exporter aggregates the metrics from the ``hostmetrics`` receiver and must be enabled for the ``metrics`` and ``traces`` pipelines. 
+
+The Collector uses the correlation flag of the SignalFx exporter to make relevant API calls to correlate your spans with the infrastructure metrics. This flag is enabled by default. To adjust the correlation option further, see the SignalFx exporter's options at :ref:`signalfx-exporter-settings`.
+
+.. _relatedcontent-required-fields:
+
+Required metadata fields
 =================================================================
 
 Related Content relies on specific metadata that allow APM, Infrastructure Monitoring, and Log Observer to pass filters around Splunk Observability Cloud. 
@@ -181,9 +194,7 @@ The following table describes the four methods for remapping log fields:
      - :strong:`Instructions`
 
    * - Splunk Observability Cloud Logs Pipeline Management
-     - Create and apply a field copy processor. See the
-       :strong:`Field copy processors` section in 
-       :ref:`logs-processors` to learn how. 
+     - Create and apply a field copy processor. See the :strong:`Field copy processors` section in :ref:`logs-processors` to learn how. 
        Note: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can use this method. If you are using Log Observer Connect, use one of other methods in this table.
 
    * - Log Field Aliasing
@@ -193,8 +204,7 @@ The following table describes the four methods for remapping log fields:
      - Configure your app to remap the necessary fields.
 
    * - Collector-side
-     - Use a Fluentd or FluentBit configuration. See
-       :ref:`Configure Fluentd to send logs <fluentd>` to learn how.
+     - Use a Fluentd or FluentBit configuration. See :ref:`Configure Fluentd to send logs <fluentd>` to learn how.
 
 When to use Log Field Aliasing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
