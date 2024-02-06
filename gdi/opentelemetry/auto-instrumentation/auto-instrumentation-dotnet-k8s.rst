@@ -241,7 +241,7 @@ Your instrumented pod should contain an initContainer named ``opentelemetry-auto
     #       Reason:       Completed
     #       Exit Code:    0
     # Containers:
-    #   dotnet-test:
+    #   my-dotnet-app:
     #     State:          Running
     #     Ready:          True
     #     Environment:
