@@ -71,13 +71,11 @@ table describes the limits for each pricing plan:
        * Hosts
        * Docker containers
        * Custom metrics
-       * High-resolution metrics
 
    * - Usage-based pricing
      - One or more of the following limits:
 
        * Custom metrics
-       * High-resolution metrics
 
 Notifications for cost-related limits
 -------------------------------------------
@@ -191,7 +189,6 @@ To track token usage, use one of the following metrics:
 
 -  sf.org.numResourcesMonitoredByToken (for hosts and containers)
 -  sf.org.numCustomMetricsByToken
--  sf.org.numHighResolutionMetricsByToken
 
 In your detector, filter these metrics using the property ``tokenName`` to identify the token you want to monitor.
 
