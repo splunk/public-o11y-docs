@@ -46,7 +46,7 @@ If you would like to turn desktop notifications on or off, follow these steps:
     :width: 100%
     :alt: Manage exceptions.
 
-5. Locate or type **https://portal.victorops.com:443**
+5. Locate or enter **https://portal.victorops.com:443**
 
 .. image:: /_images/spoc/desktop5.png
     :width: 100%
@@ -56,15 +56,8 @@ If you would like to turn desktop notifications on or off, follow these steps:
 
 7. If you would like to disable, select :guilabel:`Block`.
 
-.. |image1| image:: images/Screenshot-2017-05-31-11.42.43.png
-.. |image2| image:: images/Screenshot-2017-05-31-11.43.48.png
-.. |image3| image:: images/Screenshot-2017-05-31-15.20.44.png
-.. |image4| image:: images/Screenshot-2017-06-01-15.06.20.png
 
 
- 
-
-.. image:: images/yosemite-safai_icon.png
 
 Safari
 ==========
@@ -72,86 +65,88 @@ Safari
 Upon the first visit to portal.victorops.com, you will be prompted with
 the following pop-up:
 
-.. image:: images/Screenshot-2017-06-01-14.34.12.png
+.. image:: /_images/spoc/desktop8.png
+    :width: 100%
+    :alt: Allow alerts.
 
-If you would like to enable/disable desktop notifications please follow
+If you would like to turn desktop notifications on or off follow
 the steps outlined below:
 
-1. Navigate to *Safari >> Preferences*
+1. Navigate to :guilabel:`Safari` then :guilabel:`Preferences`.
 
-2. Click *Notifications.*
+2. Select :guilabel:`Notifications`.
 
-.. image:: images/Screenshot-2017-05-31-12.15.19.png
+.. image:: /_images/spoc/desktop9.png
+    :width: 100%
+    :alt: Allow notifications.
 
-3. Locate *portal.victorops.com*
+3. Locate **portal.victorops.com**
 
-.. image:: images/Screenshot-2017-05-31-12.16.27.png
+.. image:: /_images/spoc/desktop10.png
+    :width: 100%
+    :alt: Allow alerts.
 
-4.If you would like to enable, click *Allow.*
+4.If you would like to turn on permission, select :guilabel:`Allow`.
 
-5.If you would like to disable, click *Deny.*
+5.If you would like to turn off permission, select :guilabel:`Deny`.
 
---------------
 
-.. image:: images/firefox-256.e2c1fc556816.jpg
 
 Firefox
-=======
+==============
 
-Upon the first visit to portal.victorops.com, you will be prompted with
-the following pop-up:
+Upon the first visit to portal.victorops.com, you will be prompted with the following pop-up:
 
-.. image:: images/Screenshot-2017-05-31-15.18.02.png
+.. image:: /_images/spoc/desktop11.png
+    :width: 100%
+    :alt: Allow notifications pop-up.
 
-If you would like to enable/disable notification functionality please
-follow the steps outlined below:
+If you would like to turn notification functionality on or off follow the steps outlined below:
 
-1. Navigate to *portal.victorops.com*
+1. Navigate to **portal.victorops.com**
 
-2. Click the **ⓘ** to the left of the address bar that you placed the
-url in
+2. Select the information icon (**ⓘ**) to the left of the address bar that you placed the url in.
 
-3. If Receive Notifications is set to blocked, click the **X**
+3. If Receive Notifications is set to blocked, selct the **X**.
+   
+.. image:: /_images/spoc/desktop12.png
+    :width: 100%
+    :alt: Allow notifications pop-up.
 
-|image3| 4. After refreshing the page, you will be prompted to allow or
-block notifications from your VictorOps portal
+1. After refreshing the page, you will be prompted to allow or block notifications from your Splunk On-Call portal
+2. If you would like to turn notifications on, select :guilabel:`Allow Notifications`.
 
-.. image:: images/Screenshot-2017-05-31-15.18.02.png
+3. If you would like to turn notifications off, select :guilabel:`Don't Allow.`
 
-5. If you would like to enable, click *Allow Notifications*
-
-6. If you would like to disable, click *Don't Allow*
-
- 
-
---------------
-
-.. image:: images/microsoft-edge-logo-topic.png
 
 Edge
-====
+========
 
-Upon the first visit to portal.victorops.com, you will be prompted with
-the following pop-up:
+Upon the first visit to portal.victorops.com, you will be prompted with the following pop-up:
 
-.. image:: images/Screenshot-2017-06-01-15.05.10.png
+.. image:: /_images/spoc/desktop13.png
+    :width: 100%
+    :alt: Allow notifications pop-up.
 
-If you would like to enable/disable notification functionality please
-follow the steps outlined below:
+If you would like to turn notification functionality on or off  follow the steps outlined below:
 
-1. Navigate to *Settings*
+1. Navigate to :guilabel:`Settings`.
 
-2. Under *Advanced settings,* click *View advanced settings.* |image4|
+2. Under :guilabel:`Advanced settings` select :guilabel:`View advanced settings`.
 
- 
+.. image:: /_images/spoc/desktop14.png
+    :width: 100%
+    :alt: Allow notifications pop-up.
 
-4. Under Notifications, click *Manage*
+1. Under :guilabel:`Notifications`, select :guilabel:`Manage`.
 
-.. image:: images/edge_manage_notifications.png
+.. image:: /_images/spoc/desktop15.png
+    :width: 100%
+    :alt: Manage notifications.
 
-5. Locate *https://portal.victorops.com\ *
+5. Locate **https://portal.victorops.com\ **
 
-6.If you would like to enable, click *On*
+6.If you would like to turn on notifications, select :guilabel:`On`.
 
-7.If you would like to disable, click *Off*
+7.If you would like to turn off notifications, select :guilabel:`Off`.
 
