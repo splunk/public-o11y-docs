@@ -259,7 +259,7 @@ Your instrumented pod should contain an initContainer named ``opentelemetry-auto
     #     OTEL_RESOURCE_ATTRIBUTES_POD_NAME:   dotnet-test-8499bc67dc-wkf98 (v1:metadata.name)
     #     OTEL_RESOURCE_ATTRIBUTES_NODE_NAME:   (v1:spec.nodeName)
     #     OTEL_PROPAGATORS:                    tracecontext,baggage,b3
-    #     OTEL_RESOURCE_ATTRIBUTES:            splunk.zc.method=splunk-otel-dotnet:v1.3.0,k8s.container.name=dotnet-test,k8s.deployment.name=dotnet-test,k8s.namespace.name=dotnet-demo,k8s.node.name=$(OTEL_RESOURCE_ATTRIBUTES_NODE_NAME),k8s.pod.name=$(OTEL_RESOURCE_ATTRIBUTES_POD_NAME),k8s.replicaset.name=dotnet-test-8499bc67dc,service.version=latest
+    #     OTEL_RESOURCE_ATTRIBUTES:            splunk.zc.method=splunk-otel-dotnet:v1.3.0,k8s.container.name=my-dotnet-app,k8s.deployment.name=my-dotnet-app,k8s.namespace.name=monitoring,k8s.node.name=$(OTEL_RESOURCE_ATTRIBUTES_NODE_NAME),k8s.pod.name=$(OTEL_RESOURCE_ATTRIBUTES_POD_NAME),k8s.replicaset.name=my-dotnet-app-8499bc67dc,service.version=latest
     #     Mounts:
     #       /otel-auto-instrumentation-dotnet from opentelemetry-auto-instrumentation-dotnet (rw)
     #       /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-j5wm6 (ro)
