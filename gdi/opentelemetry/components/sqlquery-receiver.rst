@@ -1,15 +1,15 @@
-.. _tcp-logs-receiver:
+.. _sqlquery-receiver:
 
 *******************************************
-TCP log receiver
+SQL Query receiver
 *******************************************
 
 .. meta::
-      :description: The TCP log receiver collects logs over TCP connections.
+      :description: The SQL Query receiver runs custom SQL queries to generate metrics from a database connection.
 
-The TCP log receiver allows the Splunk Distribution of OpenTelemetry Collector to collect logs over TCP connections. The supported pipeline is ``logs``. See :ref:`otel-data-processing` for more information.
+The SQL Query receiver runs custom SQL queries to generate metrics from a database connection. The supported pipeline is ``metrics``. See :ref:`otel-data-processing` for more information.
 
-.. _get-started-tcp-receiver:
+.. _get-started-sql-query-receiver:
 
 Get started
 =================================================
@@ -22,7 +22,7 @@ Follow these steps to configure and activate the component:
   - :ref:`otel-install-windows`
   - :ref:`otel-install-k8s`
 
-2. Configure the TCP log receiver as described in the next section. 
+2. Configure the SQL Query receiver as described in the next section. 
 3. Restart the Collector.
 
 .. _tcp-receiver-sample-configs:
@@ -106,37 +106,9 @@ The ``omit_pattern`` setting can be used to omit the start/end pattern from each
 Supported encodings
 =================================================
 
-The following encodings are supported:
 
-.. list-table::
-  :widths: 30 70
-  :header-rows: 1
-  :width: 100%
 
-  * - Key
-    - Description
-
-  * - ``nop``
-    - No encoding validation. Treats the file as a stream of raw bytes.
-
-  * - ``utf-8``
-    - UTF-8 encoding.
-
-  * - ``utf-16le``
-    - UTF-16 encoding with little-endian byte order.
-
-  * - ``utf-16be``
-    - UTF-16 encoding with big-endian byte order.
-
-  * - ``ascii``
-    - ASCII encoding.
-
-  * - ``big5``
-    - The Big5 Chinese character encoding.
-
-Other less common encodings are supported on a best-effort basis. See the list of available encodings in :new-page:`https://www.iana.org/assignments/character-sets/character-sets.xhtml`.
-
-.. _tcp-receiver-settings:
+.. _sql-query-receiver-settings:
 
 Settings
 =================================================
@@ -145,10 +117,10 @@ The following table shows the configuration options for the TCP receiver:
 
 .. raw:: html
 
-    <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tool/main/cfg-metadata/receiver/tcplog.yaml"></div>
+    <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tool/main/cfg-metadata/receiver/sqlquery.yaml"></div>
 
 
-.. _troubleshoot-tcp-receiver:
+.. _troubleshoot-sql-query-receiver:
 
 Troubleshooting
 =================================================
