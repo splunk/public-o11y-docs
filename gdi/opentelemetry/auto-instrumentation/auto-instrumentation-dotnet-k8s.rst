@@ -236,7 +236,7 @@ Your instrumented pod should contain an initContainer named ``opentelemetry-auto
     # Status:           Running
     # Init Containers:
     #   opentelemetry-auto-instrumentation-dotnet:
-    #     Image:         ghcr.io/signalfx/splunk-otel-dotnet/splunk-otel-dotnet:v1.3.0
+    #     Image:         my-dotnet-app:latest
     #     State:          Terminated
     #       Reason:       Completed
     #       Exit Code:    0
