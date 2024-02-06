@@ -22,7 +22,7 @@ Follow these steps to filter for a span within a trace:
     a. Enter a specific ``traceId`` in the search bar. 
     b. Use the filters in :guilabel:`Traces` view to find a trace of interest.
 
-3. When you have found the trace you are interseted in,, select the :guilabel:`Trace ID` of the trace to open the trace :guilabel:`Waterfall`.  
+3. When you have found the trace you are interseted in, select the :guilabel:`Trace ID` of the trace to open the trace :guilabel:`Waterfall`.  
 4. Select :guilabel:`Add filters` to select span tag values to filter the trace waterfall to specific spans. Spans matching your filter are highlighted in blue. 
 
 Use span filter logic
