@@ -21,7 +21,7 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     Zero config auto instrumentation <zero-config.rst>
     Discover metric sources automatically <discovery-mode.rst>
     Use the Universal Forwarder <collector-with-the-uf.rst>
-    collector-builtin-dashboard.rst
+    Monitor the Collector with built-in dashboards <collector-builtin-dashboard.rst>
     Troubleshooting <troubleshooting.rst>
     Commands reference <otel-commands.rst>
     Migrate from the Smart Agent to the Collector <smart-agent/smart-agent-migration-to-otel-collector.rst>
