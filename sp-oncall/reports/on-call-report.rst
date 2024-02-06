@@ -7,84 +7,67 @@ Splunk On-Call On-Call review
 ************************************************************************
 
 .. meta::
-   :description: About the user roll in Splunk On-Call.
+   :description: Learn about the On-Call report in Splunk On-Call.
 
 
-About the Splunk On-Call, On-Call Review
-----------------------------------------
 
-[ht_toggle title=“Requirements” id=“” class=“” style=“” ]
+Requirements
+==================
 
-**Versions Supported: Enterprise** 
+This integration is compatible with the following versions of Splunk On-Call:
 
-**VictorOps Version Required: N/A SaaS**
+- Enterprise
 
-**What you need to know: The goal of this review is to provide a
-holistic overview of an individual and team's workload during a given
-amount of time.** 
+All users have the ability to reach out to Splunk On-Call support at any time with questions.
 
-[/ht_toggle]
+Live Chat: If you are logged into your Splunk On-Call instance, you will have the ability to Live Chat with the Splunk On-Call Support team.
 
-While being on-call can create accountability concerns and stress, this
-report portrays the story of our unsung on-call heroes, and can help
-make on-call suck less.
+This topic provides a holistic overview of an individual and team's workload during a given amount of time.
 
-.. raw:: html
 
-   <script type="text/javascript" id="vidyard_embed_code_magQDpWGo5rzPd8DJZm14A" src="//play.vidyard.com/magQDpWGo5rzPd8DJZm14A.js?v=3.1.1&amp;type=inline"></script>
-
-The On-Call Review provides an overview of your team's workload and a
-granular view of an individual's workload—whether that be on-call hours
-(time spent as the first step in an escalation policy), or an
-individual's involvement for specific incidents in Splunk On-Call.
+The On-Call Review provides an overview of your team's workload and a granular view of an individual's workload—whether that be on-call hours (time spent as the first step in an escalation policy), or an individual's involvement for specific incidents in Splunk On-Call.
 
 Customize the Splunk On-Call, On-Call Review
---------------------------------------------
+======================================================
 
- 
 
-|image1|
-~~~~~~~~
+.. image:: /_images/spoc/reports-oncall1.png
+    :width: 100%
+    :alt: An example of the on-call report.
 
-**Sorting**
-~~~~~~~~~~~
 
-You can sort by team to show a list of users associated with a team.
-Please note that when filtered by a specific team, this will show only
-the individual's workload associated with that team. To see the full
-workload of an individual, please select “All” under teams, and this
-will present all of an individual's workload.
+Sorting
+----------------
 
-.. image:: images/Sorting-On-Call-Review.png
+You can sort by team to show a list of users associated with a team. Note that when filtered by a specific team, this will show only
+the individual's workload associated with that team. To see the full workload of an individual, please select “All” under teams, and this will present all of an individual's workload.
 
-**Date Range Selection**
-~~~~~~~~~~~~~~~~~~~~~~~~
+.. image:: /_images/spoc/reports-oncall2.png
+    :width: 100%
+    :alt: You can sort by team.
 
-You can modify the specified hours associated with the report and this
-will be reflected in both the view portray on the page, as well as the
-associated CSVs.
+Date range selection
+----------------------------
 
-.. image:: images/On-Call-Review-Sort-by-Date-1.png
+You can modify the specified hours associated with the report and this will be reflected in both the view portray on the page, as well as the associated CSVs.
 
-CSV Download for On-Call Reports
+.. image:: /_images/spoc/reports-oncall3.png
+    :width: 100%
+    :alt: You can sort by date range.
+
+CSV Download for On-Call reports
 --------------------------------
 
-There are three different CSV downloads associated with this report.
-From the overview page, the CSV includes a list of users associated with
-the team including on-call hours (time spent in rotation in 1st step of
-an escalation policy), and incident involvement (engaged in any steps of
-incident remediation). On the user details page, there are two CSV
-download options: breakdown of on-call hours and from where they are
-derived, and also incident involvement including all steps in that
-incident.
+There are three different CSV downloads associated with this report. From the overview page, the CSV includes a list of users associated with the team including on-call hours (time spent in rotation in first step of an escalation policy), and incident involvement (engaged in any steps of incident remediation). On the user details page, there are two CSV download options: 
 
-.. image:: images/Export-CSV.png
+- breakdown of on-call hours and from where they are derived
+- incident involvement including all steps in that incident.
 
-**CSV Download for Large Incident On-Call Reports**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. image:: /_images/spoc/reports-oncall4.png
+    :width: 100%
+    :alt: CVS download button
 
-In order to see the full list of incidents per user when there are more
-than twenty steps involved in an incident or over 100 incidents, please
-download the CSV file.
+CSV download for large incident On-Call reports
+-------------------------------------------------------
 
-.. |image1| image:: images/Screen_Shot_2020-11-10_at_2_57_46_PM.png
+In order to see the full list of incidents per user when there are more than twenty steps involved in an incident or over 100 incidents,  download the CSV file.
