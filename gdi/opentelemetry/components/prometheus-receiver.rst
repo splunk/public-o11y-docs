@@ -69,7 +69,7 @@ To complete the configuration, include the receiver in the ``metrics`` pipeline 
 Scraper configuration
 ----------------------------------
 
-The Prometheus Receiver supports the most of the scrape configuration of Prometheus, including service discovery, through the ``config.scrape_configs`` section. In the ``scrape_config`` section of your configuration file you can specify a set of targets and parameters that describe how to scrape them. 
+The Prometheus receiver supports the most of the scrape configuration of Prometheus, including service discovery, through the ``config.scrape_configs`` section. In the ``scrape_config`` section of your configuration file you can specify a set of targets and parameters that describe how to scrape them. 
 
 For basic configurations, a single scrape configuration specifies a single job. You can configure static targets using the ``static_configs`` parameter. Dynamically discovered targets use service discovery mechanisms of Prometheus. In addition, the ``relabel_configs`` parameter allows advanced modifications to any target and its labels before scraping.
 

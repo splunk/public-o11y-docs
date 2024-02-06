@@ -91,24 +91,45 @@ Use :new-page:`regex101 <https://regex101.com/ >` to find a Golang regex that wo
 Manage log ingestion using annotations
 ===========================================================================
 
-The following annotations for log ingestion management are supported: 
+Use the ``splunk.com/index`` annotation on pods or namespaces to indicate which Splunk platform indexes you want to send logs to. Pod annotation will take precedence over namespace annotation when both are annotated. 
 
-* Use the ``splunk.com/index`` annotation on pods or namespaces to indicate which Splunk platform indexes you want to send logs to. Pod annotation will take precedence over namespace annotation when both are annotated. 
-
-  * For example, to send logs from the ``kube-system`` namespace to the ``k8s_events`` index, use the command: 
+For example, to send logs from the ``kube-system`` namespace to the ``k8s_events`` index, use the command: 
   
-  .. code-block:: yaml
-
+.. code-block:: bash
 
     kubectl annotate namespace kube-system splunk.com/index=k8s_events
 
-* Filter logs using pod or namespace annotations:
+Filter logs using pod or namespace annotations
+-----------------------------------------------------
 
-  * If ``logsCollection.containers.useSplunkIncludeAnnotation`` is ``false`` (default value), set the ``splunk.com/exclude`` annotation to ``true`` on pods or namespaces to exclude their logs from being ingested.
+If ``logsCollection.containers.useSplunkIncludeAnnotation`` is ``false`` (default value), set the ``splunk.com/exclude`` annotation to ``true`` on pods or namespaces to exclude their logs from being ingested. For example:
+
+.. code-block:: bash
+
+  # annotates a namespace
+  kubectl annotate namespace <my-namespace> splunk.com/exclude=true
+
+  # annotates a pod
+  kubectl annotate pod -n <my-namespace> <my-pod> splunk.com/exclude=true
   
-  * If ``logsCollection.containers.useSplunkIncludeAnnotation`` is ``true``, set the ``splunk.com/include`` annotation to ``true`` on pods or namespaces to only ingest their logs. All other logs will be ignored.
+If ``logsCollection.containers.useSplunkIncludeAnnotation`` is ``true``, set the ``splunk.com/include`` annotation to ``true`` on pods or namespaces to only ingest their logs. All other logs will be ignored. For example:
 
-* Use the ``splunk.com/sourcetype`` annotation on a pod to overwrite the ``sourcetype`` field. If not set, it will default to ``kube:container:CONTAINER_NAME``.
+.. code-block:: bash
+
+  # annotates a namespace
+  kubectl annotate namespace <my-namespace> splunk.com/include=true
+
+  # annotates a pod
+  kubectl annotate pod -n <my-namespace> <my-pod> splunk.com/include=true
+
+Filter source types
+----------------------------------
+
+Use the ``splunk.com/sourcetype`` annotation on a pod to overwrite the ``sourcetype`` field. If not set, it will default to ``kube:container:CONTAINER_NAME``.
+
+.. code-block:: bash
+
+  kubectl annotate pod -n <my-namespace> <my-pod> splunk.com/sourcetype=kube:apiserver-audit
 
 Review performance benchmarks
 ===========================================================================
