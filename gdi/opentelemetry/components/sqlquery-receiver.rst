@@ -25,8 +25,6 @@ Follow these steps to configure and activate the component:
 2. Configure the SQL Query receiver as described in the next section. 
 3. Restart the Collector.
 
-.. _tcp-receiver-sample-configs:
-
 Sample configuration
 -------------------------------------------------
 

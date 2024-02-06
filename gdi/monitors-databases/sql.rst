@@ -6,11 +6,9 @@ SQL
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the SQL monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
-SQL monitor type to gather database usage metrics from SQL queries on
-your databases.
+.. note:: If you're using the Splunk Distribution of the OpenTelemetry Collector and want to collect SQL metrics, use the native OTel component :ref:`sqlquery-receiver`.
+
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the SQL monitor type to gather database usage metrics from SQL queries on your databases.
 
 This integration is available for Kubernetes, Windows, and Linux.
 
