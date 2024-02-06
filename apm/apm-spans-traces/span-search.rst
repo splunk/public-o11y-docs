@@ -54,7 +54,7 @@ When viewing spans in the trace waterfall, note the following:
 View RUM session details
 ===========================
 
-For spans that also have RUM session details, RUM displays in the span, select the link view the session in RUM. Select the span and then select the :guilabel:`RUM Session` tab to view the RUM session details in the Trace Properties panel. You can also select the session ID to go to RUM. 
+For spans that also have RUM session details, the word RUM displays in the span. Select the RUM link to view the session in RUM. To view the RUM session details, select the span and then select the :guilabel:`RUM Session` tab in the Trace Properties panel. You can also select the session ID to go to RUM. 
 
 .. image:: /_images/apm/spans-traces/span-search-integrated-traces-splunk-show.png
   :width: 95%
