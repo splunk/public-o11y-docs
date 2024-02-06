@@ -147,7 +147,7 @@ Run the following to verify the resources are deployed correctly:
    # splunk-otel-collector-cert-manager-webhook              1          14m
    # splunk-otel-collector-opentelemetry-operator-mutation   3          14m
 
-   kubectl get otelinst -n {target_application_namespace}
+   kubectl get otelinst -n monitoring
    # NAME                          AGE   ENDPOINT
    # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
 
