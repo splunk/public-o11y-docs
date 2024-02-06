@@ -18,22 +18,30 @@ By default, the Rules Engine only uses wildcard matching. If you want to turn on
 Requirements
 ==================
 
-This feature is available in the following versions of Splunk On-Call:
+This integration is compatible with the following versions of Splunk On-Call:
 
 - Enterprise
+
+All users have the ability to reach out to Splunk On-Call support at any time with questions.
+
+Live Chat: If you are logged into your Splunk On-Call instance, you will have the ability to Live Chat with the Splunk On-Call Support team.
+
 
 Field names
 ==================
 
 When viewing an incident in the timeline, field names are on the left and values are on the right:
 
-.. image:: images/spoc/Alert-Rules-Engine-Matching-Conditions_Field-Values.png
-   :alt: VictorOps fields with field of entity_display name as 'This is an incident' highlighted.
+.. image:: /_images/spoc/matching1.png
+    :width: 100%
+    :alt: Field names on the left and values on the right.
 
 In the previous example, the field of interest is the ``entity_display_name`` field and the value that matters is the phrase ``This is an incident!``. The matching condition is the following:
 
-.. image:: images/spoc/Alert-Rules-Engine-Matching-Conditions_When-Matches.png
-   :alt: Alert Rules Engine, when entity_display_name matches *this is an incident* wildcard match set.
+.. image:: /_images/spoc/matching1.png
+    :width: 100%
+    :alt: Alert Rules Engine, when entity_display_name matches *this is an incident* wildcard match set.
+
 
 Wildcard matching
 ============================
@@ -122,10 +130,12 @@ In the following example, you want to capture ``disk space`` from the ``entity_i
 
 The matching condition for the first rule catches the first desired phrase and use variable expansion to import the value of the second field into a newly declared field.
 
-.. image:: images/spoc/Alert-Rules-Engine-Matching-Conditions_And-Logic.png
-   :alt: VictorOps Alert Rules Engine, when entity_id matches *disk space* set new_matching_field to ${{host_name}}
+.. image:: /_images/spoc/matching3.png
+    :width: 100%
+    :alt: Splunk On-Call Alert Rules Engine, when entity_id matches *disk space* set new_matching_field to ${{host_name}}
 
 The matching condition for the second rule, which you must position below the first rule, checks the newly declared field for the value ``stage-db-26`` and takes the appropriate action.
 
-.. image:: images/spoc/Alert-Rules-Engine-Matching-Conditions_And-Logic-2.png
-   :alt: VictorOps Alert Rules Engine, when new_matching_field matches *stage-db-26* set message_type to INFO
+.. image:: /_images/spoc/matching4.png
+    :width: 100%
+    :alt: VictorOps Alert Rules Engine, when new_matching_field matches *stage-db-26* set message_type to INFO

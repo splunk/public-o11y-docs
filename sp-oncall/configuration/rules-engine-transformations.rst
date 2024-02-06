@@ -1,180 +1,139 @@
 .. _rules-engine-transf:
 
 ************************************************************************
-Auto-Pause and High Alert lag settings
+Alert Rules Engine: Transformations
 ************************************************************************
 
 .. meta::
    :description: About the user roll in Splunk On-Call.
 
-**Versions Supported: Enterprise**
 
-**VictorOps Version Required: N/A SaaS**
+Requirements
+==================
 
-[/ht_toggle]
+This integration is compatible with the following versions of Splunk On-Call:
 
-An alert rule transformation is a way to change alert data before it
-arrives at your VictorOps timeline. Typing the name of an existing field
-into the rules engine's ‘alert field' box, allows you to overwrite that
-field with a new value of your choosing.
+- Enterprise
 
-Transformation actions can also add entirely new fields to an alert.
- This can be accomplished by typing the desired name of the field
-into the *alert field* section and assigning a value.
+All users have the ability to reach out to Splunk On-Call support at any time with questions.
 
---------------
+Live Chat: If you are logged into your Splunk On-Call instance, you will have the ability to Live Chat with the Splunk On-Call Support team.
 
-Transformation Uses
+
+
+An alert rule transformation is a way to change alert data before it arrives at your VictorOps timeline. Typing the name of an existing field into the rules engine's :guilabel:`alert field` box, allows you to overwrite that field with a new value of your choosing.
+
+Transformation actions can also add entirely new fields to an alert. This can be accomplished by typing the desired name of the field
+into the :guilabel:`alert field` section and assigning a value.
+
+
+
+Transformation uses
 ===================
 
---------------
 
 Changing the routing key
 ------------------------
 
-You can change the routing key of a particular set of alerts.  If you
-set up an integration to send all alerts to your *Database* team, but
-you want a particular subset of incidents related to a specific host
-(*db03*) to go to the *Development* team (routing_key = devs), try the
-following:
+You can change the routing key of a particular set of alerts. If you set up an integration to send all alerts to your *Database* team, but you want a particular subset of incidents related to a specific host (*db03*) to go to the :guilabel:`Development` team (routing_key = devs), try the following:
 
-   **When** entity_id **matches** \*db03\* **using** Wildcard Match
+   **When** entity_id **matches** *db03\* **using** Wildcard Match
 
-   **Set** routing_key **to** devs
+   **Set** routing_key **to** devs
 
---------------
 
 Adding a new alert field
 ------------------------
 
-In order to add a new field to an alert, you must first create a
-matching condition. For example, if every time a certain monitoring tool
-sends an alert you'd like to add a new field, you would would create a
-matching condition that states:
+In order to add a new field to an alert, you must first create a matching condition. For example, if every time a certain monitoring tool sends an alert you'd like to add a new field, you would would create a matching condition that states:
 
-   **When** monitoring_tool **matches** your_tool **using** Wildcard
-   Match
+   **When** monitoring_tool **matches** your_tool **using** Wildcard Match
 
-Add a new unique field to an alert by setting a **new_field_name** (or a
-name of your choosing), this will automatically create a new field. The
-value of the new field can be set anything you want. It would look
-similar to:
+Add a new unique field to an alert by setting a **new_field_name** (or a name of your choosing), this will automatically create a new field. The value of the new field can be set anything you want. It would look similar to:
 
-   **Set** new_field_name **to** value of new field
+   **Set** new_field_name **to** value of new field
 
-If you'd like the value of the new field to dynamically pull the
-contents of an existing field, use this syntax
+If you'd like the value of the new field to dynamically pull the contents of an existing field, use this syntax:
+
 **${{current_field_name}}**.
 
---------------
 
-Muting Noisy Alerts
+Muting noisy alerts
 -------------------
 
-Some alerts can be distracting and cause unnecessary paging in your
-account. By transforming the **message_type** field to INFO these noisy
-alerts can be muted. You can create the matching condition for whatever
-field the noisy alerts have in common. For example, if the every time
-the state_message included the word **spam** you wanted the message_type
-to be INFO you would create the following rule:
+Some alerts can be distracting and cause unnecessary paging in your account. By transforming the :guilabel:`message_type` field to INFO these noisy alerts can be muted. You can create the matching condition for whatever field the noisy alerts have in common. For example, if the every time the state_message included the word `spam` you wanted the message_type to be INFO you would create the following rule:
 
-   **When** state_message **matches** \*spam\* **using** Wildcard match
+   **When** state_message **matches** *spam* **using** Wildcard match
 
-   **Set** message_type **to** INFO
+   **Set** message_type **to** INFO
 
-**Timestamp Based Muting**
-~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To leverage timestamps to mute or adjust alerts use the Regex method and
-a chained rule. We recommend scoping the rule with a chain to only
-affect alerts for a specific routing_key or monitoring_tool.
 
-The following example will transform alerts to the teamA routing_key to
-INFO type on Thursday, Saturday, and Sunday UTC.
+Timestamp-based muting
+---------------------------
 
-   *Rule 1:*
+To leverage timestamps to mute or adjust alerts use the Regex method and a chained rule. We recommend scoping the rule with a chain to only affect alerts for a specific routing_key or monitoring_tool.
 
-   **When** routing_key **matches** teamA **using** Wildcard
+The following example will transform alerts to the teamA routing_key to INFO type on Thursday, Saturday, and Sunday UTC.
 
-   **Set** teamA **to a new value** ${{Alert_received_week_time_utc}}
+   Rule 1:
 
-   *Rule 2:* 
+   **When** routing_key **matches** teamA **using** Wildcard
 
-   **When** teamA **matches** \\d\*-W\\d\*-[467].\* **using** RegEx
+   **Set** teamA **to a new value** ${{Alert_received_week_time_utc}}
 
-   **Set** message_type **to new value** INFO
+   Rule 2:
 
-Our alert_received_week_time_utc field is a ISO8601 week date formatted
-timestamp. For example, 2020-W10-3TT17:38:32Z is the form
-YEAR-WEEK-DAY-TIME and the days are expressed 1-7 for Monday-Sunday. You
-may want to augment the example regular expression to account for
-timezone differences from UTC.
+   **When** teamA **matches** \\d\*-W\\d\*-[467].* **using** RegEx
 
-Below is an example of a rule that will only capture alerts that come in
-between 8 am and 12 pm UTC no matter the year, week, day of the week, or
-minutes of the hour. In the below case, we're only wanting to capture
-alerts between 8 am and 12 pm UTC, for that reason, we've broken down
-the rule as follows:
+   **Set** message_type **to new value** INFO
 
-   **When** Alert_received_time_utc **matches** .*T(0[8-9]|1[0-1]):.\*
+Our alert_received_week_time_utc field is a ISO8601 week date formatted timestamp. For example, 2020-W10-3TT17:38:32Z is the form
+YEAR-WEEK-DAY-TIME and the days are expressed 1-7 for Monday-Sunday. You may want to augment the example regular expression to account for timezone differences from UTC.
 
-   **Set** message_type **to** INFO
+Below is an example of a rule that will only capture alerts that come in between 8 am and 12 pm UTC no matter the year, week, day of the week, or minutes of the hour. In the below case, we're only wanting to capture alerts between 8 am and 12 pm UTC, for that reason, we've broken down the rule as follows:
 
---------------
+   **When** Alert_received_time_utc **matches** .*T(0[8-9]|1[0-1]):.\*
 
-Change the Appearance of Incidents and Notifications
-----------------------------------------------------
+   **Set** message_type **to** INFO
 
-By using `variable
-expansion <https://help.victorops.com/knowledge-base/transmogrifier-variable-expansion/>`__
-and transformations, you can alter alert fields. An example is changing
-the display name on an alert card. The display name field is called the
-**entity_display_name.** If you'd like to change this field to display
-another field, you would configure a rule like the following:
 
-   **When** entity_display_name **matches** * **using** Wildcard
+Change the appearance of incidents and notifications
+---------------------------------------------------------
 
-   **Set** entity_display_name **to** ${{field_you_choose}}
+By using variable expansion  and transformations, you can alter alert fields. An example is changing the display name on an alert card. The display name field is called the :guilabel:`entity_display_name`. If you'd like to change this field to display another field, you would configure a rule like the following:
 
---------------
+   **When** entity_display_name **matches** * **using** Wildcard
 
-Combining Multiple Different Alerts Into One Single Incident
-------------------------------------------------------------
+   **Set** entity_display_name **to** ${{field_you_choose}}
 
-To aggregate multiple alerts into one single incident, first find a
-value to match which associates multiple different incidents. Then,
-transform the entity_id field to a set value. By pre-determining the
-entity_id, VictorOps will automatically aggregate the alerts.
 
-   **When** entity_id **matches** disk\* **using** Wildcard Match
+Combining multiple different alerts into one single incident
+--------------------------------------------------------------------
 
-   **Set** entity_id **to** Disk Problems
+To aggregate multiple alerts into one single incident, first find a value to match which associates multiple different incidents. Then,
+transform the entity_id field to a set value. By pre-determining the entity_id, VictorOps will automatically aggregate the alerts.
 
-This rule will take any alert that has an entity_id that starts with
-disk and transform the entity_id to Disk Problems.
+   **When** entity_id **matches** disk* **using** Wildcard Match
 
---------------
+   **Set** entity_id **to** Disk Problems
 
-Transform/Create fields with RegEx
-----------------------------------
+This rule will take any alert that has an entity_id that starts with disk and transform the entity_id to Disk Problems.
 
-When dealing with text, there may be information you want to extract via
-RegEx capture groups. By using RegEx capture groups (contained in
-parenthesis\ **( )** ), you can add new alert fields or transform
-existing ones. This is similar to using wildcard matching.
 
-In this example, we use RegEx to look for “error” or “ERROR” in the
-subject field, then set the message_type to INFO as above to mute the
-noisy alert.
 
-   **When** subject **matches** ^((?!error|ERROR).)*$ **using** RegEx
+Transform or create fields with RegEx
+---------------------------------------------
 
-   **Set** message_type **to** INFO
+When dealing with text, there may be information you want to extract via RegEx capture groups. By using RegEx capture groups (contained in parenthesis  **( )** ), you can add new alert fields or transform existing ones. This is similar to using wildcard matching.
 
-For additional information on how to annotate alerts, `see this
-article <https://help.victorops.com/knowledge-base/transmogrifier-annotations>`__\ **.**
+In this example, we use RegEx to look for “error” or “ERROR” in the subject field, then set the message_type to INFO as above to mute the noisy alert.
 
---------------
+   **When** subject **matches** ^((?!error|ERROR).)*$ **using** RegEx
 
-**For help with AND/OR logic,** `see this
-article <https://help.victorops.com/knowledge-base/rules-engine-matching-conditions/>`__\ **.**
+   **Set** message_type **to** INFO
+
+For additional information on how to annotate alerts, see :ref:`rules-engine-annot`.
+
+
+For help with AND/OR logic, see :ref:`rules-engine-matching-conditions`.`
