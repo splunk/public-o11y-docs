@@ -148,7 +148,7 @@ Run the following to verify the resources are deployed correctly:
    # splunk-otel-collector-opentelemetry-operator-mutation   3          14m
 
    kubectl get otelinst -n monitoring
-   # NAME                          AGE   ENDPOINT
+   # NAME                            AGE   ENDPOINT
    # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
 
 Set annotations to instrument .NET applications
