@@ -203,6 +203,7 @@ Activate auto instrumentation by adding ``instrumentation.opentelemetry.io/otel-
           metadata:
             annotations:
               instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-x64"
+              instrumentation.opentelemetry.io/inject-dotnet: "monitoring/splunk-otel-collector"
           spec:
             containers:
             - name: my-dotnet-app
