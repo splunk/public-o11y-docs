@@ -176,7 +176,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`splunk-hec-receiver` (``splunk_hec``)
      - Accepts telemetry in the Splunk HEC format.
      - Metrics, logs, traces
-   * - :ref:`sqlquery-receiver` (``sql_query``)
+   * - :ref:`sqlquery-receiver` (``sqlquery``)
      - Runs custom SQL queries to generate metrics from a database connection.
      - Metrics
    * - ``statsd``
