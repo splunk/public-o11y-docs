@@ -278,6 +278,10 @@ You can also use the methods shown in :ref:`zeroconfig-java-traces` to configure
 
 See :ref:`advanced-java-otel-configuration` for the full list of supported environment variables.
 
+.. _troubleshooting-zeroconfig-java-k8s:
+
+.. include:: /_includes/gdi/troubleshoot-zeroconfig-k8s.rst
+
 Learn more
 ===========================================================================
 
