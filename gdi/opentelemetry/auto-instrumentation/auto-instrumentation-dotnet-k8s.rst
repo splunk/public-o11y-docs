@@ -229,7 +229,7 @@ Your instrumented pod should contain an initContainer named ``opentelemetry-auto
 
     # Name:             dotnet-test-8499bc67dc-wn2fm
     # Namespace:        dotnet-demo
-    # Labels:           app=dotnet-test
+    # Labels:           app=my-dotnet-app
     #                   pod-template-hash=8499bc67dc
     # Annotations:      instrumentation.opentelemetry.io/inject-dotnet: true
     #                   instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: linux-x64
