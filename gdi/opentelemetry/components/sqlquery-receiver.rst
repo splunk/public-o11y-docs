@@ -34,7 +34,10 @@ To activate the receiver add ``sqlquery`` to the ``receivers`` section of your c
 
     receivers:
       sqlquery:
-        xxxx
+        driver: your.driver
+        datasource: "your_data_source"
+        queries:
+          - sql: "your_query"
 
 Next, include the receiver in the ``metrics`` pipeline of the ``service`` section of your configuration file:
 
@@ -44,6 +47,8 @@ Next, include the receiver in the ``metrics`` pipeline of the ``service`` sectio
     pipelines:
       metrics:
         receivers: [sqlquery]
+
+See :ref:`sql-query-receiver-queries-example` for a complete config example.
 
 Advanced configuration
 ----------------------------------
@@ -69,7 +74,7 @@ See :ref:`sql-query-receiver-settings` for the full list of settings.
 Perform queries
 =================================================
 
-A query consists of a sql statement and one or more logs and/or metrics section: 
+A query consists of an SQL statement and one or more logs and/or metrics section: 
 
 * At least one log or one metric section is required. 
 * While it's technically possible to put both logs and metrics sections in a single query section, requirements for log and metric queries are quite different. 
@@ -96,6 +101,8 @@ Relevant optional fields include:
 * ``static_attributes``. The static attributes applied to the metrics.
 * ``start_ts_column``. The name of the column containing the start timestamp, the value of which is applied to the metric's start timestamp, otherwise the current time is used. It only applies to the ``sum`` metric type.
 * ``ts_column``. The name of the column containing the timestamp, the value of which is applied to the metric's timestamp. This can be current timestamp depending upon the time of last recorded metric's datapoint.
+
+.. _sql-query-receiver-queries-example:
 
 Example: Query a movie database
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
