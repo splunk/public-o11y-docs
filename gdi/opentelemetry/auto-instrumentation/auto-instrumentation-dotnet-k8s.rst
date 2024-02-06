@@ -149,7 +149,7 @@ Run the following to verify the resources are deployed correctly:
 
    kubectl get otelinst -n monitoring
    # NAME                            AGE   ENDPOINT
-   # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
+   # splunk-otel-collector   5m    http://$(SPLUNK_OTEL_AGENT):4317
 
 Set annotations to instrument .NET applications
 ===================================================================
