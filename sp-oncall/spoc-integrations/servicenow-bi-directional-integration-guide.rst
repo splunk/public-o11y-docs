@@ -1,3 +1,14 @@
+.. _snow-spoc:
+
+************************************************************************
+Get started as user
+************************************************************************
+
+.. meta::
+   :description: About the user roll in Splunk On-Call.
+
+
+
 **BEFORE YOU BEGIN: Action is required for your existing ServiceNow to
 Splunk On-Call (formerly VictorOps) Integration.**
 
