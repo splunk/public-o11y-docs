@@ -119,8 +119,20 @@ The following examples show how to set the attribute using each method:
       Set the ``environment`` option in the ``values.yaml`` file. This adds the ``deployment.environment`` attribute to all telemetry data the Collector receives, including data from automatically-instrumented pods.
 
       .. code-block:: yaml
+        :emphasize-lines: 7
 
+          clusterName: my-cluster
+
+          splunkObservability:
+            realm: <splunk_realm>
+            accessToken: <splunk_access_token>
+          
           environment: prd
+          
+          certmanager:
+            enabled: true
+          operator:
+            enabled: true
 
     .. tab:: Instrumentation spec
 
@@ -168,6 +180,15 @@ The following examples show how to set the attribute using each method:
         
           kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=environment=prd
 
+Deploy the Helm Chart
+---------------------------------
+
+After configuring values.yaml, use the following command to deploy the Helm Chart:
+
+.. code-block:: yaml 
+
+   helm install splunk-otel-collector -f ./my_values.yaml
+
 Verify all the OpenTelemetry resources are deployed successfully
 ==========================================================================
 
@@ -195,15 +216,6 @@ Run the following commands to verify the resources are deployed correctly:
    kubectl get otelinst -n <target_application_namespace>
    # NAME                          AGE   ENDPOINT
    # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
-
-Deploy the Helm Chart
----------------------------------
-
-After configuring values.yaml, use the following command to deploy the Helm Chart:
-
-.. code-block:: yaml 
-
-   helm install splunk-otel-collector -f ./my_values.yaml
 
 Set annotations to instrument Node.js applications
 ==============================================================
