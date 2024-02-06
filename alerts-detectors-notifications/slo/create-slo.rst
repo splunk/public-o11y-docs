@@ -1,7 +1,3 @@
-:orphan:
-
-.. include:: /_includes/slo/slo-preview-header.rst
-
 .. _create-slo:
 
 *****************************************************************************************
@@ -20,26 +16,43 @@ Create an SLO
 
 Follow these steps to create an SLO.
 
-#. From the landing page of Splunk Observability Cloud, go to :strong:`Service Level Objectives (SLOs)`.
+#. From the landing page of Splunk Observability Cloud, go to :strong:`Detectors & SLOs`.
+#. Select the :strong:`SLOs` tab.
 #. Select :guilabel:`Create SLO`.
-#. Choose the service you want to use as the system health indicator for your SLO.
+#. Select the service or metric you want to use as the system health indicator for your SLO.
 
-    .. list-table::
-      :header-rows: 1
-      :widths: 40 60
+    To use a service as the health indicator for your SLO, follow these steps:
 
-      * - :strong:`Field name`
-        - :strong:`Description`
-      * - Metric type
-        - Select :guilabel:`Service & endpoint` from the dropdown menu
-      * - Environment
-        - Open the dropdown menu and check the boxes for the environments where you want to apply this SLO
-      * - Service\:\endpoint
-        - * Search for the service you want to create an SLO for
-          * (Optional) Add an endpoint for the selected service
-      * - Filters
-        - Additional dimension names and values you want to apply this SLO to
+        .. list-table::
+          :header-rows: 1
+          :widths: 40 60
 
+          * - :strong:`Field name`
+            - :strong:`Actions`
+          * - Metric type
+            - Select :guilabel:`Service & endpoint` from the dropdown menu
+          * - Environment
+            - Open the dropdown menu and check the boxes for the environments where you want to apply this SLO
+          * - Service\:\endpoint
+            - * Search for the service you want to create an SLO for
+              * (Optional) Add an endpoint for the selected service
+          * - Filters
+            - Enter any additional dimension names and values you want to apply this SLO to
+
+    To use a custom metric as the health indicator for your SLO, follow these steps:
+
+        .. list-table::
+          :header-rows: 1
+          :widths: 40 60
+
+          * - :strong:`Field name`
+            - :strong:`Actions`
+          * - Metric type
+            - Select :guilabel:`Custom metric` from the dropdown menu
+          * - Numerator metric
+            - Search for the metric you want to use for the success request count
+          * - Denominator metric
+            - Search for the metric you want to use for the total request count
 
 #. Define your SLO and how to measure it.
 
@@ -48,7 +61,7 @@ Follow these steps to create an SLO.
       :widths: 20 80
 
       * - :strong:`Field name`
-        - :strong:`Description`
+        - :strong:`Actions`
       * - Target (%)
         - Enter the target you want to set for this SLO. 
       * - Compliance window
@@ -60,7 +73,7 @@ Follow these steps to create an SLO.
       :header-rows: 1
       :widths: 20 80
 
-      * - :strong:`Field name`
+      * - :strong:`Alert`
         - :strong:`Description`
       * - Breach event
         - | Alerts when the service level indicator (SLI) doesn't meet the target over the specified compliance window. 
