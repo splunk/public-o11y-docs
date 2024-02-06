@@ -227,7 +227,7 @@ Your instrumented pod should contain an initContainer named ``opentelemetry-auto
 
 .. code-block:: bash
 
-    # Name:             dotnet-test-8499bc67dc-wn2fm
+    # Name:             my-dotnet-app-8499bc67dc-wn2fm
     # Namespace:        monitoring
     # Labels:           app=my-dotnet-app
     #                   pod-template-hash=8499bc67dc
