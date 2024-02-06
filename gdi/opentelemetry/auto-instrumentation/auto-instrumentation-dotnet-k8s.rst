@@ -255,7 +255,7 @@ Your instrumented pod should contain an initContainer named ``opentelemetry-auto
     #     OTEL_DOTNET_AUTO_HOME:               /otel-auto-instrumentation-dotnet
     #     DOTNET_SHARED_STORE:                 /otel-auto-instrumentation-dotnet/store
     #     SPLUNK_OTEL_AGENT:                    (v1:status.hostIP)
-    #     OTEL_SERVICE_NAME:                   dotnet-test
+    #     OTEL_SERVICE_NAME:                   my-dotnet-app:latest
     #     OTEL_RESOURCE_ATTRIBUTES_POD_NAME:   my-dotnet-app-8499bc67dc-wkf98 (v1:metadata.name)
     #     OTEL_RESOURCE_ATTRIBUTES_NODE_NAME:   (v1:spec.nodeName)
     #     OTEL_PROPAGATORS:                    tracecontext,baggage,b3
