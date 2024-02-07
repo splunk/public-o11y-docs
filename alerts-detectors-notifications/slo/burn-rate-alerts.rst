@@ -42,6 +42,7 @@ Burn rate for a 99.9% SLO with a 30-day compliance window
     .. list-table::
       :header-rows: 1
       :widths: 20 20 20 20
+      :width: 100%
 
       * - :strong:`Long window`
         - :strong:`Short window`
@@ -62,6 +63,7 @@ Burn rate for a 99.9% SLO with a 7-day compliance window
     .. list-table::
       :header-rows: 1
       :widths: 20 20 20 20
+      :width: 100%
 
       * - :strong:`Long window`
         - :strong:`Short window`
