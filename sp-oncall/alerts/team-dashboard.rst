@@ -39,7 +39,7 @@ incident state, these filters allow for you to see only what is relevant
 to you. You can filter the incident table first by team status (with
 default team associations), as well as incident state.
 
-.. image:: images/Filters-scaled.jpg
+image: images/Filters-scaled.jpg
 
 Incident Table
 --------------
@@ -50,7 +50,7 @@ add responder, reroute, snooze, resolve), and see the status of
 incidents. You can also find annotation counts, chats, and associated
 alerts.
 
-.. image:: images/Incidents-scaled.jpg
+image: images/Incidents-scaled.jpg
 
 Manual Incident Creation
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -87,13 +87,13 @@ here, you can take the shift from a user from the pop over.
 To revert an on-call take, click the “clear take” button from the
 popover associated with your profile.
 
-.. image:: images/People-Table.jpg
+ images/People-Table.jpg
 
  
 
  
 
-.. image:: images/Take-On-Call.jpg
+ images/Take-On-Call.jpg
 
  
 
@@ -104,4 +104,4 @@ You can relay service status updates via statuspage.io by `following
 these
 instructions. <https://help.victorops.com/knowledge-base/victorops-statuspage-integration/>`__
 
-.. |image1| image:: images/Screen-Shot-2020-08-18-at-9.22.05-AM.png
+ images/Screen-Shot-2020-08-18-at-9.22.05-AM.png

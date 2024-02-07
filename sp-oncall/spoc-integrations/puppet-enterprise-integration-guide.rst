@@ -52,14 +52,14 @@ From the VictorOps web portal, select **Settings**, then **Alert
 Behavior**, then **Integrations**. Find and select the **Puppet
 Enterprise** integration option.
 
-.. figure:: images/voNav@2x.png
+.. figure:: _images/spoc/voNav@2x.png
    :alt: Find Puppet Enterprise integration in VictorOps
 
    Find Puppet Enterprise integration in VictorOps
 
 Capture the API Key from the URL String:
 
-.. image:: images/PuppetEnterprise1@2x.png
+.. image:: _images/spoc/PuppetEnterprise1@2x.png
 
 **Configure Puppet Enterprise in Splunk Enterprise**
 ----------------------------------------------------

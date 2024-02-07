@@ -77,21 +77,21 @@ appear slightly different on a particular user's device/OS)
 
 From your Android Settings, find the Splunk On-Call Mobile Application
 
-.. image:: images/Android-Battery-Saver-1@2x.png
+ images/Android-Battery-Saver-1@2x.png
 
 From the Splunk On-Call App, please select *Advanced* >> *Battery*
 
-.. image:: images/Android-Battery-Saver-2@2x.png
+ images/Android-Battery-Saver-2@2x.png
 
 From *Battery usage* settings you'll want *Battery optimization* >> *Not
 optimized* >> *All apps*
 
-.. image:: images/Android-Battery-Saver-3@2x.png
+ images/Android-Battery-Saver-3@2x.png
 
 From here, you'll **exempt** the VictorOps App from *Battery
 optimization*. Select done.
 
-.. image:: images/Android-Battery-Saver-4@2x.png
+ images/Android-Battery-Saver-4@2x.png
 
 **Intermittent Push Notifications**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -121,7 +121,7 @@ need to remove any phone numbers associated with the device, just the
 device itself)
 
 **From the mobile device:** 5. Re-install the Splunk On-Call Mobile app
-6. Log in to the Splunk On-Call app.
+1. Log in to the Splunk On-Call app.
 
 This process will redo the device association process and often clears
 up any issues with the app.

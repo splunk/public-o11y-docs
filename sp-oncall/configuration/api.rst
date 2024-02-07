@@ -31,7 +31,7 @@ on this page as well.
 
 *Note: Only Splunk On-Call admin users can create API Keys.*
 
-.. image:: images/Key.jpg
+ images/Key.jpg
 
 If you check the “Read-only” checkbox when creating an API key, the
 created key will only be able to perform GET requests.
@@ -55,12 +55,12 @@ The documentation for the VictorOps API allows you to try out the
 different calls in real-time. To get started select the **Read the API
 Documentation** link on the API settings page.
 
-.. image:: images/API-Documentation.jpg
+ images/API-Documentation.jpg
 
 This will bring you to the VictorOps API documentation. All available
 API calls are listed here.
 
-.. image:: images/Screen-Shot-2019-09-24-at-2.46.46-PM.png
+ images/Screen-Shot-2019-09-24-at-2.46.46-PM.png
 
 **Additional Endpoint Requests**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

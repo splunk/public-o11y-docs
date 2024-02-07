@@ -65,13 +65,13 @@ locations in the app!
    3) From your “Team Overrides” window click “**+**” in the upper right
       corner
 
-.. image:: images/Scheduled-override-form.png
+ images/Scheduled-override-form.png
 
  
 
  
 
-.. image:: images/Take-Override.png
+ images/Take-Override.png
 
  
 
@@ -97,9 +97,9 @@ View other teammates on-call shifts by clicking “View All”. From here
 you can take your teammates on-call by clicking “Take Shift” and clear
 it by clicking “Clear Take” or “Take Back”.
 
-.. image:: images/On-Call-Takes.png
+ images/On-Call-Takes.png
 
-.. image:: images/Take-On-Calls.png
+ images/Take-On-Calls.png
 
 .. |image1| image:: images/Calendar.png
 .. |image2| image:: images/Overrides_Preview.png

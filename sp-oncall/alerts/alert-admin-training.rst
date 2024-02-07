@@ -216,4 +216,4 @@ look**
 Alert Admin Checklist:
 ^^^^^^^^^^^^^^^^^^^^^^
 
-.. image:: images/spoc/Screen-Shot-2020-09-03-at-10.19.21-AM.png
+image:  _images/spoc/Screen-Shot-2020-09-03-at-10.19.21-AM.png

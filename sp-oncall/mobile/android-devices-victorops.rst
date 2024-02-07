@@ -71,7 +71,7 @@ You first want to open the Splunk On-Call app on your phone.
 1. Once opened, go to your **Settings** (three line icon)
 2. Then go to the **Notifications** tab.
 
-.. image:: images/Android-11-ss1-1.png
+ images/Android-11-ss1-1.png
 
 Once in the Notifications section you want to select **Incident
 Notifications**. Then, you will select  **Triggered Incidents** next.
@@ -90,7 +90,7 @@ In the Channel Settings now, you will want to do two things:
 2. Lastly, expand the **Advanced settings**, in there change the Sound
    setting to None. This is to avoid double sounds or ringtones.
 
-.. image:: images/Android-11-ss3.png
+ images/Android-11-ss3.png
 
 **Android Settings To Check**
 
@@ -107,7 +107,7 @@ You can get there a couple of ways.
 2. You can open your Android Settings and search for “Do Not
    Disturb”.
 
-.. image:: images/Android-11-ss4.png
+ images/Android-11-ss4.png
 
 Once you open the DND Settings, you will want to check one thing:
 
@@ -116,7 +116,7 @@ Once you open the DND Settings, you will want to check one thing:
    there. If you don't see it, press **Add Apps**, and find
    Splunk On-Call there.
 
-.. image:: images/Android-11-ss5-1.png
+ images/Android-11-ss5-1.png
 
 [/ht_toggle]
 
@@ -294,12 +294,12 @@ Android.
 From the Settings app, navigate to **Apps & notifications** > **App
 info** > **Splunk On-Call > App Notifications**.
 
-.. image:: images/Android-1.png
+ images/Android-1.png
 
 There are five events that generate notifications in Splunk On-Call, as
 highlighted below:
 
-.. image:: images/Android-Oreo-6.png
+ images/Android-Oreo-6.png
 
 You may set unique notification settings for each event by clicking on
 that category. Let's use **@Mentions** as the example. There are four
@@ -310,7 +310,7 @@ things to set:
 3. Change **Sound** to **None**
 4. Toggle on **Override Do Not Disturb**
 
-.. image:: images/Android-7@2x.png
+ images/Android-7@2x.png
 
 By setting **Importance** to **Urgent** and **Sound** to **None**, you
 will still receive a notification from Splunk On-Call for this event,
@@ -319,7 +319,7 @@ produced by the Splunk On-Call app. Please check that the notifications
 are enabled and that the importance is set to urgent for all five
 events.
 
-.. image:: images/Android-8@2x.png
+ images/Android-8@2x.png
 
 --------------
 
@@ -333,17 +333,17 @@ Notifications* select Import Splunk On-Call contact info (vCard). Make
 sure that Splunk On-Call is starred as a favorite contact in the native
 Contacts app on your phone.
 
-.. image:: images/Android-9@2x.png
+ images/Android-9@2x.png
 
 From the Settings app, navigate to Sound > Do Not Disturb preferences >
 Priority only Allows> Messages then select *From starred contacts
 only*. 
 
-.. image:: images/Android-10@2x.png
+ images/Android-10@2x.png
 
 Repeat this for Calls on the *Priority only allows* screen in addition.
 
-.. image:: images/Android-11@2x.png
+ images/Android-11@2x.png
 
 Be sure when using *Do Not Disturb* that you select *Priority Only* to
 allow Splunk On-Call notifications to pass through. *Do Not Disturb*
@@ -357,7 +357,7 @@ the top right corner and then verify you are in Priority only.
 
 Within the Splunk On-Call app navigate to Settings.
 
-.. image:: images/Android-12@2x.png
+ images/Android-12@2x.png
 
 Within each event (using **Triggered Incidents** as the example),
 enabled the **Override System Notification volume** as shown below.
@@ -365,7 +365,7 @@ Select a preferred sound for that event by clicking on **Override
 Sound**. With this setting enabled, Splunk On-Call will play that sound
 at MAX volume when you receive a notification for that event.
 
-.. image:: images/Android-13@2x.png
+ images/Android-13@2x.png
 
 *REMINDER: If you have configured native settings on your Android to
 also play a sound, the two sounds will play simultaneously. Refer to the
@@ -379,18 +379,18 @@ Splunk On-Call to override the native Do Not Disturb on your Android. If
 you have not set this permission yet, you will be prompted with the
 following warning:
 
-.. image:: images/triggered-incidents-insufficient-system-settings-1.png
+ images/triggered-incidents-insufficient-system-settings-1.png
 
 If you have already set the override permission, you will be prompted
 with the following message:
 
-.. image:: images/triggered-incidents-do-not-disturb-warning.png
+ images/triggered-incidents-do-not-disturb-warning.png
 
 Click *Continue* to be routed to the **Do Not Disturb Access** in your
 Android Device. Make sure to turn the toggle **On** next to the
 VictorOps app to give it access.
 
-.. image:: images/Android_VictorOps_Native_Do_Not_Disturb_Access.png
+ images/Android_VictorOps_Native_Do_Not_Disturb_Access.png
 
 --------------
 
@@ -403,7 +403,7 @@ notifications on logout**. This setting must be **disabled** to ensure
 that you continue to receive push notifications while you are logged out
 of the app.
 
-.. image:: images/Android-14@2x.png
+ images/Android-14@2x.png
 
 --------------
 
@@ -415,75 +415,75 @@ Volume Override (A7)
 
 **Step 1 - From Settings, select Apps**
 
-.. image:: images/A7-1.png
+ images/A7-1.png
 
 **Step 2 - From Apps, select Splunk On-Call**
 
-.. image:: images/A7-2.png
+ images/A7-2.png
 
 **Step 3 - From Splunk On-Call App info, select Permissions**
 
-.. image:: images/A7-3.png
+ images/A7-3.png
 
 **Step 4 - Within App permissions, verify that both Phone and Storage
 are “ON”**
 
-.. image:: images/A7-4.png
+ images/A7-4.png
 
 **Step 5 - Return to Splunk On-Call App info, select Notifications**
 
-.. image:: images/A7-5-1.png
+ images/A7-5-1.png
 
 **Step 6 - From Notifications, select Override Do Not Disturb**
 
-.. image:: images/A7-6.png
+ images/A7-6.png
 
 How to Enable Do Not Disturb Permissions (A7)
 
 **Step 1 - From Apps, select the gear icon in the upper right hand
 corner**
 
-.. image:: images/Step-1-A7-1.png
+ images/Step-1-A7-1.png
 
 **Step 2 - From Configure apps, select Special access**
 
-.. image:: images/Step-2-A7-1.png
+ images/Step-2-A7-1.png
 
 **Step 3 - From Special access, select Do Not Disturb access**
 
-.. image:: images/Step-3-A7-1.png
+ images/Step-3-A7-1.png
 
 **Step 4 - From Do Not Disturb Access, verify that VictorOps is “ON”**
 
-.. image:: images/Step-4-A7-1.png
+ images/Step-4-A7-1.png
 
 How to set your Android to Do Not Disturb (A7)
 
 **Step 1 - From Quick Settings, select Do not disturb:**
 
-.. image:: images/step1.png
+ images/step1.png
 
 **Step 2 - From Do not disturb, select Priority only and choose between
 “Until you turn this off” or a specified amount of time**
 
-.. image:: images/step-2.png
+ images/step-2.png
 
 How to enable notifications from the Splunk On-Call App during Do Not
 Disturb (A7)
 
 **Step 1 - From Sound, select Do not disturb**
 
-.. image:: images/step1-new.png
+ images/step1-new.png
 
 **Step 2 - From Do not disturb, select Priority only allows**
 
-.. image:: images/step2-new.png
+ images/step2-new.png
 
 **Step 3: From Priority only allows, change “Calls” to from starred
 contacts only (only select this option if Splunk On-Call has been saved
 as a starred contact, as mentioned above)**
 
-.. image:: images/step3-new.png
+ images/step3-new.png
 
 [/ht_toggle]
 
@@ -497,69 +497,69 @@ Volume Override (A6S)
 
 **Step 2 - From Applications, select Application manager**
 
-.. image:: images/2.png
+ images/2.png
 
 **Step 3 - From Application manager, select Splunk On-Call**
 
-.. image:: images/3.png
+ images/3.png
 
 **Step 4 - From VictorOps Application info, select Permissions**
 
-.. image:: images/4.png
+ images/4.png
 
 **Step 5 - Within App Permissions, verify that both Phone and Storage
 are “ON”**
 
-.. image:: images/5.png
+ images/5.png
 
 **Step 6 - Return to Splunk On-Call Application info, select
 Notifications**
 
-.. image:: images/6.png
+ images/6.png
 
 **Step 7 - From App notifications, turn “ON” Set as priority**
 
-.. image:: images/7.png
+ images/7.png
 
 **How to Enable Do Not Disturb Permissions (A6S)**
 
 **Step 1 - From Settings, select Lock screen and security**
 
-.. image:: images/1-1.png
+ images/1-1.png
 
 **Step 2 - From Lock screen and security, scroll to the bottom and
 select Do not disturb permission**
 
-.. image:: images/2-1.png
+ images/2-1.png
 
 **Step 3 - From Do not disturb permission, verify that Splunk On-Call is
 turned “ON”**
 
-.. image:: images/3-1.png
+ images/3-1.png
 
 **How to set your Android to Do Not Disturb (A6S)**
 
 **Step 1 - From Settings, select Sounds and vibration**
 
-.. image:: images/1-2.png
+ images/1-2.png
 
 **Step 2 - From Sounds and vibration, select Do Not Disturb**
 
-.. image:: images/2-2.png
+ images/2-2.png
 
 **Step 3 - From Do not Disturb, select Allow exceptions**
 
-.. image:: images/3-2.png
+ images/3-2.png
 
 **Step 4 - From Allow exceptions, select Custom and then Priority app
 notifications**
 
-.. image:: images/4-1.png
+ images/4-1.png
 
 **Step 5 - From Priority app notifications, verify that Splunk On-Call
 is turned “ON”**
 
-.. image:: images/5-1.png
+ images/5-1.png
 
 **Android 6 - Nexus (A6N)**
 
@@ -569,70 +569,70 @@ is turned “ON”**
 
 **Step 2 - From Apps, select Splunk On-Call**
 
-.. image:: images/2-3.png
+ images/2-3.png
 
 **Step 3 - From Splunk On-Call App info, select Permissions**
 
-.. image:: images/3-3.png
+ images/3-3.png
 
 **Step 4 - From App Permissions, verify both Phone and Storage are
 “On”**
 
-.. image:: images/4-2.png
+ images/4-2.png
 
 **Step 5 - Go Back to App Info, select Notifications**
 
-.. image:: images/5-2.png
+ images/5-2.png
 
 **Step 6 - From App Notifications, turn Treat as Priority**
 
-.. image:: images/6-1.png
+ images/6-1.png
 
 **How to enable Do Not Disturb permissions (A6N)**
 
 **Step 1 - From Settings, select Sound & notification**
 
-.. image:: images/1-4.png
+images/1-4.png
 
 **Step 2 - From Sound & notification, Do Not Disturb access**
 
-.. image:: images/2-4.png
+ images/2-4.png
 
 **Step 3 - From Do Not Disturb access, make sure Splunk On-Call is
 “On”**
 
-.. image:: images/3-4.png
+ images/3-4.png
 
 **How to set your Android to Do Not Disturb (A6N)**
 
 **Step 1 - From the Quick Settings screen, select Do not disturb**
 
-.. image:: images/12432134124.png
+ images/12432134124.png
 
 **Step 2 - From Do not disturb, select Priority Only**
 
-.. image:: images/adgasdf.png
+ images/adgasdf.png
 
 **How to enable notifications from the Splunk On-Call App during Do Not
 Disturb (A6N)**
 
 **Step 1 - From Settings, select Sound & notification**
 
-.. image:: images/1-5.png
+ images/1-5.png
 
 **Step 2 - From Sound & notification, select Do not disturb**
 
-.. image:: images/2-5.png
+ images/2-5.png
 
 **Step 3 - From Do not Disturb, select Priority only allows**
 
-.. image:: images/3-5.png
+ images/3-5.png
 
 **Step 4 - Within Priority only allows, select the types of
 alerts/notification types you want to receive from the Splunk On-Call
 App during Do Not Disturb**
 
-.. image:: images/4-3.png
+ images/4-3.png
 
 [/ht_toggle]
 
@@ -657,12 +657,12 @@ their phone is idle (in lock-screen), they will have the option to
 acknowledge the alert directly from the lock-screen notification without
 requiring that they unlock the phone and access the application first.
 
-.. image:: images/Android-Ack-from-Lock-1@2x.png
+ images/Android-Ack-from-Lock-1@2x.png
 
 After you have acknowledged an incident, you will receive a success
 notification confirming that your acknowledgment was successful.
 
-.. image:: images/Android-Ack-from-Lock-2@2x.png
+ images/Android-Ack-from-Lock-2@2x.png
 
 Acknowledgment via push notification may fail because performing the
 acknowledgment action requires that your phone is able to contact our
@@ -670,7 +670,7 @@ servers via HTTP. If an acknowledgment action fails, you will receive a
 subsequent push notification indicating that the acknowledgment failed
 and providing an opportunity to try again.
 
-.. image:: images/Android-Ack-from-Lock-3@2x.png
+ images/Android-Ack-from-Lock-3@2x.png
 
 [/ht_toggle]
 
@@ -681,17 +681,16 @@ notifications from Google Cloud Messenger to reliably receive push
 notifications. In the Android App, navigate to the *Settings* page by
 clicking the three-slider icon in the far bottom-right corner:
 
-.. image:: images/Android-Permissions-1.png
 
 Once here, scroll down to the *Notification Sound & Behavior* section.
 Find the option for “Use Alternate Push Service” and toggle it on.
 
-.. image:: images/Android-Alternative-push-notifications.png
+ images/Android-Alternative-push-notifications.png
 
 Your device will prompt you for access to the associated permissions.
 Click *Allow:*
 
-.. image:: images/Android-Permissions.png
+ images/Android-Permissions.png
 
 [/ht_toggle]
 
@@ -703,4 +702,4 @@ Click *Allow:*
 
 --------------
 
-.. |image1| image:: images/Android-11-ss5.png
+ images/Android-11-ss5.png

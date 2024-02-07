@@ -110,7 +110,7 @@ your Splunk On-Call contact >> Text Tone >> Toggle Emergency Bypass
 Notification Settings in the Splunk On-Call App
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: images/Incident-Settings.png
+ images/Incident-Settings.png
 
  
 
@@ -140,7 +140,7 @@ from the lock-screen.
 **NOTE:** This looks different on iPhone 6 and earlier versus iPhone 6s
 and later. 
 
-.. image:: images/Screen-Shot-2020-06-03-at-1.43.32-PM.png
+ images/Screen-Shot-2020-06-03-at-1.43.32-PM.png
 
  
 
@@ -167,7 +167,7 @@ iOS App Troubleshooting
 
 **Swipe across the screen from right to left with two fingers**
 
-.. image:: images/Swipe-Report.png
+ _images/spock/Swipe-Report.png
 
  
 
@@ -201,7 +201,7 @@ need to remove any phone numbers associated with the device, just the
 device itself)
 
 **From the mobile device:** 5. Re-install the Splunk On-Call Mobile app
-6. Log in to the Splunk On-Call app.
+1. Log in to the Splunk On-Call app.
 
 This process will redo the device association process and often clears
 up any issues with the app.
