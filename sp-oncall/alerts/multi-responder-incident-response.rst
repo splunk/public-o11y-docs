@@ -10,7 +10,7 @@ Multi-responder incidents
 
 Splunk On-Call allows you to quickly mobilize teams around an incident. While a regular incident only requires a single acknowledgement to stop paging, multi-responder incidents require responses from each user or escalation policy being paged.
 
-.. note:: The ability to manually invoke Multi-Responder Incident Response, as opposed to it being automatically invoked via a `Routing
+.. note:: The ability to manually invoke Multi-Responder Incident Response, as opposed to it being automatically invoked though a Routing
 Key, requires an Enterprise level of service.
 
 Cascading Escalation Policies

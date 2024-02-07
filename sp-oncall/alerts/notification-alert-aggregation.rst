@@ -5,8 +5,7 @@ Notification Aggregation
 ************************************************************************
 
 .. meta::
-   :description: Notifications begin to be aggregated when a large number of alerts are
-received in a short period of time.
+   :description: Notifications begin to be aggregated when a large number of alerts are received in a short period of time.
 
 
 Notifications begin to be aggregated when a large number of alerts are received in a short period of time. Splunk On-Call will automatically start this process when an alert storm is detected, to limit the number of notifications paging out. In order to completely mute all or specific alerts, see :ref:`rules-engine-transf`.

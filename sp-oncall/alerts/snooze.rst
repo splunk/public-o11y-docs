@@ -71,7 +71,7 @@ Now select a new expiration time for the snooze.
 
 
 Rerouting or resolving snoozed incidents
-=====================================
+==============================================
 
 Snoozed incidents can be rerouted or resolved. Both of these actions effectively end the snooze.
 
