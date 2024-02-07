@@ -97,7 +97,7 @@ You can assign multiple roles to individual users. The user receives a combinati
   * - read-only
     - Read-only access to most actions and pages including settings for most products except the subscription usage pages, and some admin pages.
   * - subscription usage 
-    - Access to Subscription usage page only, plus the read-only capabilities.
+    - Access to subscription usage page only, plus the read-only capabilities.
   * - power
     - Includes capabilities to access all components in Splunk Observability Cloud. Can access a subset of settings, and create, delete, and update charts, dashboards and detectors.
   * - admin
