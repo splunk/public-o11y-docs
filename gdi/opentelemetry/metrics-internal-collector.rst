@@ -12,6 +12,8 @@ These are the Collector's internal metrics, per component.
 SignalFx exporter metrics
 ============================================================================
 
+For more information about this component, see :ref:`signalfx-exporter`.
+
 .. list-table::
   :widths: 40 60
   :width: 100%
