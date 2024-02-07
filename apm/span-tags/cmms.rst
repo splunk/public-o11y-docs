@@ -12,15 +12,13 @@ Generate Monitoring MetricSets (MMS) with custom dimensions to glean meaningful 
 Prerequisites 
 ==============
 
-* You need to be a Splunk Observability Cloud Administrator. 
+* To add generate a Monitoring MetricSet, you must have an admin role. 
 
 * To create a new Monitoring MetricSet based on a span tag or process, you need to first index the span tag or process. See :ref:`apm-index-span-tags`. 
 
 * (Optional) If you are unfamiliar with Monitoring Metric Sets and Troubleshooting Metric Sets, start here:  :ref:`apm-metricsets`. 
 
 * (Optional) Review :ref:`metrics-dimensions-mts` for an overview of the concepts underpinning MetricSets. 
-
-
 
 How custom Monitoring MetricSets add value to your organization
 ======================================================================

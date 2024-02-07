@@ -82,7 +82,12 @@ The dashboard editor provides a lot of customization options for your charts, bu
 Create a detector from a dashboard
 ===================================
 
-To create a detector from a dashboard, select the bell icon within a specific chart in the dashboard and select :guilabel:`New detector from chart`. 
+Prerequisite
+---------------
+
+To create a detector from a dashboard, you must have the admin or power user role.
+
+To create a detector from a dashboard, select the bell icon within a specific chart in the dashboard and select :guilabel:`New Detector From Chart`. 
 
 If you don't have write permissions on the dashboard you're viewing, a Detector Linking pop-up informs you the detector is not linked directly to the dashboard. You can select :guilabel:`Ok` to proceed, or save a copy of the dashboard to gain write permissions so that you can create a linked detector based on your new dashboard. To learn more about linking detectors, see :ref:`linking-detectors`. 
 

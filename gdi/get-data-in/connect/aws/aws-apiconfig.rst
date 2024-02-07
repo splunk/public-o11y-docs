@@ -156,7 +156,7 @@ If you're retrieving AWS metrics polling CloudWatch APIs, keep in mind the follo
   
     - Use ``pollRate`` to configure the polling interval for metrics. 
     - Use ``metadataPollRate`` to configure the polling interval for metadata. 
-    - See :new-page:`how to configure the APIs in the developer portal <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-retrieve-integrations-query>` for more information.
+    - See :new-page:`how to configure the APIs developer portal <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-retrieve-integrations-query>` for more information.
 
 .. _activate-cw-metricstreams:
 .. _aws-api-connect-ms:
