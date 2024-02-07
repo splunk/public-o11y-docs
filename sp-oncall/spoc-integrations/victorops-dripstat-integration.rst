@@ -12,7 +12,7 @@ From the top navigation, select **Integrations**. 
 Select the **DripStat** integration and copy the **Service API
 Endpoint** to your clipboard.
 
-.. image:: images/Integrations_-_victorops-18.png
+..image images/Integrations_-_victorops-18.png
 
 **In DripStat**
 ---------------

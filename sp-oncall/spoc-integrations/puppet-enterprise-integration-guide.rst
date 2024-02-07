@@ -87,4 +87,4 @@ Variables which can be used in your notification can be found
 
    create an incident victorops puppet enterprise variable configuration
 
-.. |input victorops token in puppet enterprise configuration| image:: images/splPupConfig@2x.png
+.. |input victorops token in puppet enterprise configuration| image images/splPupConfig@2x.png

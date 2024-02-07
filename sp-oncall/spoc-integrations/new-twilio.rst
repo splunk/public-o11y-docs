@@ -102,7 +102,7 @@ in alphabetical order).
 
 Click into and enable the integration if you have not previously done
 so, then copy the *Service API Key*, and paste it into your desired note
-of choice.\ |image1|
+of choice.\ |image
 
 --------------
 
@@ -120,7 +120,7 @@ previously done so, then copy the *API ID* and one of your *API Keys*
 (if you have multiple created), and paste it into a note of your choice
 for future use.
 
-.. image:: images/API.png
+..image images/API.png
 
  
 
@@ -134,7 +134,7 @@ you want to notify. To get this, go to your VictorOps portal and select
 *Teams*. Copy the team name you want to use for this integration – in
 the example below we use the DevOps team.
 
-.. image:: images/Team-Name.png
+..image images/Team-Name.png
 
 To acquire the escalation policy name, we'll go one step further.  Click
 into your desired team, and go to the *Escalation Policies* tab, and
@@ -142,7 +142,7 @@ copy the name of the escalation policy you'd like to use – in the
 example below we use the Standard escalation policy from within the
 DevOps team.
 
-.. image:: images/Escalation-Policy-Name.png
+..image images/Escalation-Policy-Name.png
 
 Please note, you can notify multiple teams and escalation policies using
 the Live Call Routing Integration. If you would like to add more than
@@ -183,7 +183,7 @@ Below is the team slug for the DevOps team. *Note: For teams created
 after 2017 the team slug will be formatted similar to:
 team-35Rgt19gE35g3.*
 
-.. image:: images/URL.png
+..image images/URL.png
 
  
 
@@ -192,7 +192,7 @@ with the URL-friendly team slug associated to that team.  You'll paste
 the slug you'd copied into the Routing Key field and choose the Team and
 Escalation Policy it associates with in the Escalation Policies field.
 
-.. image:: images/Routing-Key.png
+..image images/Routing-Key.png
 
 This will assure that all incidents are sent to the correct escalation
 policy.
@@ -222,20 +222,20 @@ Once you have created an account in Twilio you will want to pin three
 items to the menu bar on the left. From your main Twilio console, click
 on “Explore Products” on the left hand side under the “Develop” tab.
 
-.. image:: images/twilio1.png
+..image images/twilio1.png
 
 First you will want to locate the *Voice* app under *Programmable
 Communications* and click on the *pin icon* located on the top right of
 the tile\_.\_ This will pin the app to the side bar for easy access
 later on.
 
-.. image:: images/twilio2.png
+..image images/twilio2.png
 
 Repeat this process to pin the *Phone Numbers* app (located under *Super
 Network*) and the *Functions (Beta)* app (located under *Developer
 Tools*).
 
-.. image:: images/twilio3.png
+..image images/twilio3.png
 
  
 
@@ -248,7 +248,7 @@ From the main console dashboard click on *Phone Numbers* and then
 *Manage*. Thenselect *Buy a Number,* if you haven't done so already, set
 the *Capabilities* to *Voice*, and click *Search*.
 
-.. image:: images/twilio4.png
+..image images/twilio4.png
 
 Once you find the number that bests suits your needs, click *Buy* for
 the number. The fee should be $1.00 monthly.
@@ -266,7 +266,7 @@ the bottom of the page until you see *Enhanced Programmable SIP
 Features.* Click *Disabled* under the name to enable the feature then
 save.
 
-.. image:: images/twilio5.png
+..image images/twilio5.png
 
 --------------
 
@@ -284,21 +284,21 @@ To navigate to the Functions feature from the Twilio console
 select *Runtime* from the left menu bar. Next select *Functions* and
 click the *Create Service* button.
 
-.. image:: images/Slice-1-4.png
+..image images/Slice-1-4.png
 
 Name the service “VictorOps-Live-Call-Routing” and click Next.
 
 On the next screen, click the blue “Add +” button and select Add
 Function.
 
-.. image:: images/Slice-2-1.png
+..image images/Slice-2-1.png
 
 You'll be directed to name the path for the function, which you should
 set as “/victorops-live-call-routing”.  Click elsewhere in the screen
 and some default code for the function will show on the righthand side
 of your screen.
 
-.. image:: images/Slice-3-1.png
+..image images/Slice-3-1.png
 
 --------------
 
@@ -320,7 +320,7 @@ Once you save your Function you will need to configure a few variables. 
 Under *Settings* towards the bottom of your screen, click on
 the *Environment Variables* option.
 
-.. image:: images/Slice-4-1.png
+..image images/Slice-4-1.png
 
 First, make sure *Add my Twilio Credentials (ACCOUNT_SID) and
 (AUTH_TOKEN) to ENV* is checked.
@@ -337,7 +337,7 @@ For **ESC_POL_1**, use the name of the target escalation policy. For
 Note that the **TEAM_1** and **ESC_POL_1** values are case sensitive,
 and have to match the Splunk On-Call spelling/capitalization exactly.
 
-.. image:: images/carter-testing-1483_twil_io___Twilio_Functions.jpg
+..image images/carter-testing-1483_twil_io___Twilio_Functions.jpg
 
 The “Key” column's inputs are listed below for convenient
 copying/pasting:
@@ -354,7 +354,7 @@ Similar to the inputs for Environment Variables, you'll enter Modules
 and Versions to match the below screenshot (again, order doesn't
 matter).
 
-.. image:: images/victorops-live-call-routing-2060_twil_io___Twilio_Functions.png
+..image images/victorops-live-call-routing-2060_twil_io___Twilio_Functions.png
 
 Again, for copy/paste convenience:
 
@@ -377,14 +377,14 @@ plan on using for this integration. From the left side Twilio menu,
 select *Phone Numbers* and then select the specific phone number you
 plan to use.
 
-.. image:: images/Active-Numbers.png
+..image images/Active-Numbers.png
 
 Under the **Voice and Fax** section set the **A CALL COMES
 IN** to *Function.*  Select *VictorOps-Live-Call-Routing* as
 the Service, *ui* as the Environment, */victorops-live-call-routing* as
 the Function Path.
 
-.. image:: images/Twilio-1-1.png
+..image images/Twilio-1-1.png
 
 --------------
 
@@ -411,7 +411,7 @@ then **TEAM_1**.
 
 The end result should look like so:
 
-.. image:: images/Evironmental-Variables-2.png
+..image images/Evironmental-Variables-2.png
 
 Each team added to this function should correspond to a unique Routing
 Key that was created during the “In VictorOps” step.
@@ -613,9 +613,9 @@ Environmental variables is incorrectly configured
 Double check that these values in your Twilio account exactly match the
 recommended ones below:
 
-.. image:: images/Environmental-Variables-1.png
+..image images/Environmental-Variables-1.png
 
-.. image:: images/Twilio_Cloud_Communications___Web_Service_API_for_building_Voice_and_SMS_Applications.jpg
+..image images/Twilio_Cloud_Communications___Web_Service_API_for_building_Voice_and_SMS_Applications.jpg
 
 **Problem 3:**  **‘There was an error retrieving the list of teams for
 your organization.'**
@@ -739,7 +739,7 @@ the v10 package of ‘got', we now must specify this version as 9.6.0. 
 Ensure all dependencies match the screenshot/table in the above
 “Configure Environmental Variables” section and re-try saving.
 
-.. image:: images/Voice-2.png
+..image images/Voice-2.png
 
 **Problem 15:** **The integration calls a seemingly random team, not the
 one you've specified within the Functions >> Configure section in
@@ -763,4 +763,4 @@ and immediately progress to the next one.
 **If you encounter any problems not listed here, please reach out to
 Splunk On-Call Support at spoc-support@splunk.com**
 
-.. |image1| image:: images/Twilio-Integrations-Page.png
+.. |image1 images/Twilio-Integrations-Page.png

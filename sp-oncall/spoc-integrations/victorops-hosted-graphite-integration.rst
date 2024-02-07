@@ -8,12 +8,12 @@ through the steps needed to integrate these two systems.
 From the main timeline go to **Settings** then **Alert
 Behavior** then **Integrations.** 
 
-.. image:: images/Integration-ALL-FINAL.png
+..image images/Integration-ALL-FINAL.png
 
 Select the **Hosted Graphite** integration and copy the **Service API
 Endpoint** to your clipboard.
 
-.. image:: images/Integrations_-_victorops-17.png
+..image images/Integrations_-_victorops-17.png
 
 **In Hosted Graphite**
 ----------------------

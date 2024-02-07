@@ -51,7 +51,7 @@ Follow these steps:
    2. For the action, select webhook
    3. Paste the Service Endpoint you copied to your clipboard from
       VictorOps for URI.
-   4. Enable the common alert schema should be toggled to YES.\ |image1|
+   4. Enable the common alert schema should be toggled to YES.\ |image
 
 5. Click OK
 6. Finally, make sure to link the newly created VictorOps action group
@@ -61,4 +61,4 @@ Alerts should now flow into the VictorOps timeline based on the trigger
 conditions. If you have any questions, please contact `VictorOps
 support <mailto:Support@victorops.com?Subject=Azure%20OMS%20VictorOps%20Integration>`__.
 
-.. |image1| image:: images/Screen_Shot_2019-12-19_at_11_43_54_AM.png
+.. |image1 images/Screen_Shot_2019-12-19_at_11_43_54_AM.png

@@ -6,7 +6,7 @@ explaining how to set up this simple integration.
 
  
 
-1. From the Wormly UI select ‘Alerts' and then ‘Contacts' |image1|
+1. From the Wormly UI select ‘Alerts' and then ‘Contacts' |image
 2. Next select ‘+ Create New Contact' and click on the Email contact
    type. Then enter a name for the contact (VictorOps Timeline for
    example). |image2|
@@ -23,7 +23,7 @@ explaining how to set up this simple integration.
    Test. You should get a result like the one pictured here. |image6|
 6. Hit ‘Update' and you are done.
 
-.. |image1| image:: images/wormly-integration@2x.png
+.. |image image:: images/wormly-integration@2x.png
 .. |image2| image:: images/wormly-2@2x.png
 .. |image3| image:: images/Integrations@2x.png
 .. |image4| image:: images/Integrations_-_VictorOps_Demo_7.png

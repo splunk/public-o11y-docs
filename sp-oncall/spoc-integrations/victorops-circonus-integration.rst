@@ -23,7 +23,7 @@ In Splunk On-Call, select *Settings >> Integrations >> Circonus*\ **.**
 
 --------------
 
-.. image:: images/Screenshot-2017-05-25-11.28.08.png
+..image images/Screenshot-2017-05-25-11.28.08.png
 
 If the integration has not yet been enabled, click the *Enable
 Integration* button to generate your endpoint URL as seen below.  Be
@@ -116,7 +116,7 @@ Next fill in the fields as shown. Make sure to paste in the Webhook URL
 from your Splunk On-Call Contact Group from Circonus into
 the *To:* field.
 
-.. image:: images/circonus3-1.png
+..image images/circonus3-1.png
 
 Paste in the following into the Payload field:
 
@@ -141,7 +141,7 @@ account whose metric is alerting. To link the Splunk On-Call user to the
 Circonus user, go to the User Profile page at Circonus and type in the
 Splunk On-Call username:
 
-.. image:: images/circonus4-1.png
+..image images/circonus4-1.png
 
 .. |circonus2| image:: images/circonus2.png
 .. |circonus3| image:: images/circonus3.png

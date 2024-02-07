@@ -69,7 +69,7 @@ Save the new tab and then login to VictorOps. After logging in you can
 remove the People Pane and Timeline display from the upper right hand
 corner of the UI giving you a clear view of just your incidents.
 
-.. image:: images/MT-FINAL.png
+.. image: images/MT-FINAL.png
 
 Now you can access the full VictorOps web interface right from Microsoft
 Teams. Next we will setup `Outbound
@@ -122,7 +122,7 @@ Connect Microsoft teams in VictorOps [single-channel]
 From the main timeline select **Integrations** then **Outgoing
 Webhooks** then **Add Webhook**.
 
-.. image:: images/FINAL-Int-OW.png
+.. image: images/FINAL-Int-OW.png
 
 Fill out the fields like so:
 
@@ -142,7 +142,7 @@ Description: Optional.
 
 Lastly, hit **Save** and you are done.
 
-.. image:: images/Outgoing-Webhook.png
+..image images/Outgoing-Webhook.png
 
 Now whenever an incident is generated in VictorOps you will see it come
 into your Microsoft Teams channel and then be able to ack and resolve it
@@ -188,7 +188,7 @@ Save the new tab and then login to VictorOps. After logging in you can
 remove the People Pane and Timeline display from the upper right hand
 corner of the UI giving you a clear view of just your incidents.
 
-.. image:: images/MT-FINAL.png
+..image images/MT-FINAL.png
 
 Now you can access the full VictorOps web interface right from Microsoft
 Teams. Repeat these steps for all the channels you want to have access
@@ -267,19 +267,19 @@ Key <https://help.victorops.com/knowledge-base/routing-keys/>`__ of the
 alert. To create the rule go to **Settings** then **Alert** **Rules
 Engine**.
 
-.. image:: images/NEW-Settings.png
+..image images/NEW-Settings.png
 
-Select **Add a Rule**\ |image1|
+Select **Add a Rule**\ |image
 
 Set the rule to match when “routing_key” matches “database” and then set
 a transformation where “team_key” matches the Channel key from Microsoft
 Teams “aaaa1111111111a11a1aaa111a11aa1a1”.
 
-.. image:: images/NEW_MT-Rules-1.png
+..image images/NEW_MT-Rules-1.png
 
 Repeat the previous step for as many channels as you need.
 
-.. image:: images/2-Rules.png
+..image images/2-Rules.png
 
 This will create an alert field every time the rule is matched so you
 can direct specific alerts to the associated channels. Now instead of
@@ -302,7 +302,7 @@ Webhooks.
 From the main timeline select **Integrations** then **Outgoing
 Webhooks** then **Add Webhook**.
 
-.. image:: images/FINAL-Int-OW.png
+..image images/FINAL-Int-OW.png
 
 Fill out the fields like so:
 
@@ -322,7 +322,7 @@ Description: Optional.
 
 Lastly, hit **Save** and you are done.
 
-.. image:: images/Outgoing-Webhook.png
+..image images/Outgoing-Webhook.png
 
 Now whenever an incident is generated in VictorOps you will see it come
 into your Microsoft Teams channel and then be able to ack and resolve it
@@ -343,6 +343,6 @@ support <mailto:Support@victorops.com?Subject=Microsoft%20Teams%20VictorOps%20In
 
 **Logo:**
 
-.. image:: images/5Yp_4_1e_400x400.png
+..images/5Yp_4_1e_400x400.png
 
-.. |image1| image:: images/Alert-Rules.png
+.. |image1 images/Alert-Rules.png

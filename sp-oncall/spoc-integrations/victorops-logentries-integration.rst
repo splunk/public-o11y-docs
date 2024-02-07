@@ -10,7 +10,7 @@ this integration.
 ----------------
 
 In VictorOps, select **Settings** *>>* **Alert Behavior** *>>*
-**Integrations** *>>* **Logentries** |image1|
+**Integrations** *>>* **Logentries** |image
 
 If the integration has not yet been enabled, click the “Enable
 Integration” button to generate your endpoint URL as seen below.  Please
@@ -18,7 +18,7 @@ copy that to your clipboard and be sure to replace the “$routing_key”
 section with the actual routing key you intend to use. (To view or
 configure route keys in VictorOps, click *Alert Behavior >> Route Keys*)
 
-.. image:: images/Integrations_-_VictorOps_Demo_19.png
+..image images/Integrations_-_VictorOps_Demo_19.png
 
  
 
@@ -60,4 +60,4 @@ VictorOps timeline with the associated severity level.
 
    log5
 
-.. |image1| image:: images/Integration-ALL-FINAL.png
+.. |image image:: images/Integration-ALL-FINAL.png

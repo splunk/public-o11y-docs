@@ -10,15 +10,15 @@ will walk you through these easy to set up integration.
 From the main timeline select **Settings** >> **Alert
 Behavior** >> **Integrations**
 
-.. image:: images/Integration-ALL-FINAL.png
+..image images/Integration-ALL-FINAL.png
 
 Select the **StatusCake** integration.
 
-.. image:: images/StatusCake-final.png
+..image images/StatusCake-final.png
 
 Copy the entire REST Endpoint URL to your clipboard.
 
-.. image:: images/StatusCake-2-final.png
+..image images/StatusCake-2-final.png
 
 **In StatusCake**
 -----------------

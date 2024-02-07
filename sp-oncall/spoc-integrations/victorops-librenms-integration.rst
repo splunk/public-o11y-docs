@@ -6,7 +6,7 @@ into VictorOps so you can make use of all that VictorOps has to offer.
 ----------------
 
 In VictorOps, select  *Integrations,* then search for LibreNMS under the
-*3rd Party Integrations* tab |image1|
+*3rd Party Integrations* tab |image
 
 If the integration has not yet been enabled, click the “Enable
 Integration” button to generate your endpoint URL as seen below.  Be
@@ -14,7 +14,7 @@ sure to replace the “$routing_key” section with the actual routing key
 you intend to use. (To view or configure route keys in VictorOps,
 click *Alert Behavior >> Route Keys*)
 
-.. image:: images/LibreNMS.png
+..image images/LibreNMS.png
 
  
 
@@ -50,9 +50,9 @@ A test LibreNMS incident will be sent into your VictorOps timeline.
 
  
 
-.. image:: images/Incident.png
+..image images/Incident.png
 
 And you are done! If you have any questions please reach out to
 victorops-support@splunk.com.
 
-.. |image1| image:: images/Integrations.png
+.. |image image:: images/Integrations.png

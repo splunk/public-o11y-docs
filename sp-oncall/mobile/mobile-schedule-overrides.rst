@@ -17,7 +17,7 @@ viewing your schedule at a glance, create an override for yourself, take
 a teammates override or take a teammates on-call while they are in need
 of some coverage.
 
-|image1|
+|image
 ~~~~~~~~
 
 Your Schedule
@@ -101,6 +101,6 @@ it by clicking “Clear Take” or “Take Back”.
 
  images/Take-On-Calls.png
 
-.. |image1| image:: images/Calendar.png
-.. |image2| image:: images/Overrides_Preview.png
-.. |image3| image:: images/Override-User-View.png
+.. |image1 images/Calendar.png
+.. |image2 images/Overrides_Preview.png
+.. |image3 images/Override-User-View.png

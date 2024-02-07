@@ -81,14 +81,14 @@ https://store.servicenow.com/sn_appstore_store.do#!/store/application/ad2abfc8db
 
 The following prompt will show up within Settings, click “Get Started”
 
-.. image:: images/VOSN_connect.png
+..image images/VOSN_connect.png
 
 After this, the following modal will appear with the information that
 you will need to input within Splunk On-Call. The “Finish” button will
 only appear active after you have entered your credentials within Splunk
 On-Call
 
-.. image:: images/VOSN_connect2.png
+..image images/VOSN_connect2.png
 
 **Enable ServiceNow In VictorOps**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -97,12 +97,12 @@ As an admin, navigate to **Integrations** >> **ServiceNow**.
 
 Click **Enable Integration**
 
-.. image:: images/Screen-Shot-2022-04-07-at-2.47.39-PM.png
+..image images/Screen-Shot-2022-04-07-at-2.47.39-PM.png
 
 After this, you will have the opportunity to enter the credentials from
 your ServiceNow instance as above.
 
-.. image:: images/Screen-Shot-2021-02-18-at-10.39.31-AM.png
+..image images/Screen-Shot-2021-02-18-at-10.39.31-AM.png
 
  
 
@@ -119,7 +119,7 @@ To edit Splunk On-Call incident states after saving, click the **Edit
 Integration** button. Here you may also reconfigure your ServiceNow
 *Connection Details.*
 
-.. image:: images/Screen-Shot-2022-04-07-at-2.38.30-PM.png
+..image images/Screen-Shot-2022-04-07-at-2.38.30-PM.png
 
  
 
@@ -138,13 +138,13 @@ incident reroutes to a specific user, the assignment group will be
 cleared. Updating an assignment group in ServiceNow will not affect
 paging behavior in Splunk On-Call.
 
-.. image:: images/Screen-Shot-2022-04-07-at-1.07.56-PM.png
+..image images/Screen-Shot-2022-04-07-at-1.07.56-PM.png
 
 Select **Add Mapping** to see available choices. *For the ServiceNow
 Assignment Group, start typing in the ‘filter' box to see the different
 available options.*
 
-.. image:: images/Screen-Shot-2022-04-07-at-3.01.58-PM.png
+..image images/Screen-Shot-2022-04-07-at-3.01.58-PM.png
 
 **User Mapping**
 
@@ -159,7 +159,7 @@ user to acknowledge an incident. If the Splunk On-Call incident goes
 back to a triggered state, the next person to acknowledge will populate
 the field.
 
-.. image:: images/VOSNAssignedTo.png
+..image images/VOSNAssignedTo.png
 
 **Incident Linking**
 
@@ -167,7 +167,7 @@ You can open and view the ServiceNow ticket by clicking the ServiceNow
 Incident Number in the left hand side panel of the Splunk On-Call
 Incident view.
 
-.. image:: images/Screen-Shot-2022-04-07-at-2.44.14-PM.png
+..image images/Screen-Shot-2022-04-07-at-2.44.14-PM.png
 
  
 
@@ -187,7 +187,7 @@ For example, to send all critical incidents to ServiceNow, use: When
 In this example, we are also providing resolution field information to
 enable auto-resolution of Incidents to ServiceNow.
 
-.. image:: images/SNOWrule1.png
+..image images/SNOWrule1.png
 
  
 
@@ -264,7 +264,7 @@ rules engine to supply the field values with the same syntax as before:
 In the example image below, the field value on the Splunk On-Call import
 table (in ServiceNow) is “victorops_custom_field”.
 
-.. image:: images/snowRuleEx10-2.png
+..image images/snowRuleEx10-2.png
 
 **Note:** If the field name in ServiceNow has capital letters in it,
 you'll want to replace them with lower case letters when creating the
@@ -284,7 +284,7 @@ Use “Incident Rules” to create custom logic that allows you to set logic
 as to when incidents are sent from ServiceNow to Splunk On-Call
 automatically.
 
-.. image:: images/VOSN_conditions.png
+..image images/VOSN_conditions.png
 
 **Manually Send Incidents from ServiceNow to Splunk On-Call**
 
@@ -293,7 +293,7 @@ incident with required information including assignment group, by
 clicking the button “Send to VictorOps” to manually send an incident to
 Splunk On-Call.
 
-.. image:: images/VOSN_manual.png
+..image images/VOSN_manual.png
 
 If you have any questions please contact `VictorOps
 support <mailto:Support@victorops.com?Subject=ServiceNow%20Express%20VictorOps%20Integration>`__.

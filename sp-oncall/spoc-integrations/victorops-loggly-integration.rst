@@ -7,7 +7,7 @@ Configuration Steps
  
 
 -  Begin by enabling the Email Endpoint integration under **Settings**
-   >> **Alert Behavior** >> **Integrations** >> **Loggly** |image1|
+   >> **Alert Behavior** >> **Integrations** >> **Loggly** |image
 
  
 
@@ -42,7 +42,7 @@ Configuration Steps
 Now whenever the search criteria is matched an incident will be posted
 in your VictorOps timeline alerting the correct people.
 
-.. |image1| image:: images/Loggly-final.png
+.. |image image:: images/Loggly-final.png
 .. |image2| image:: images/Loggly2-final.png
 .. |image3| image:: images/Loggly3-skitch.png
 .. |loggly2| image:: images/loggly2.png

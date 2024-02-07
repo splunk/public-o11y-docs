@@ -12,7 +12,7 @@ VictorOps with the below steps to receive alerts from Azure Monitor.
 
 First you must enable the Microsoft Azure integration.
 
-.. image:: images/Navigate-to-Integrations.png
+.. image images/Navigate-to-Integrations.png
 
 Select the **Microsoft Azure OMS** integration option.
 
@@ -22,7 +22,7 @@ Copy the **Service API Endpoint** to your clipboard. Make sure to
 update the `Routing
 Key <https://help.victorops.com/knowledge-base/routing-keys/>`__.
 
-.. image:: images/API-key-for-Azure-Integration.png
+.. image images/API-key-for-Azure-Integration.png
 
 **In Azure OMS**
 ----------------
@@ -49,7 +49,7 @@ Follow these steps:
 -  From the dashboard, select the Logic App you have just created.From
    the Logic App blade, select Logic App Designer
 -  For the trigger condition, select “**When an HTTP Request is
-   received**”\ |image1|
+   received**”\ |image
 
  
 
@@ -84,7 +84,7 @@ Select **HTTP - HTTP\ **
 -  Below is the code view of the body. This is the best spot to edit the
    values in the payload
 
-.. image:: images/Code-view-post-payload.png
+.. image images/Code-view-post-payload.png
 
 -  Once you finish editing the payload, double check all the values in
    the HTTP post action and save.
@@ -116,5 +116,5 @@ Alerts should now flow into the VictorOps timeline based on the trigger
 conditions. If you have any questions, please contact `VictorOps
 support <mailto:Support@victorops.com?Subject=Azure%20OMS%20VictorOps%20Integration>`__.
 
-.. |image1| image:: images/Logic-App-Designer.png
-.. |image2| image:: images/Response-200.png
+.. |image1 images/Logic-App-Designer.png
+.. |image2 images/Response-200.png

@@ -49,7 +49,7 @@ Settings >> New Remote Site*
 You can also use the Quick Find search tool and type Remote Site
 Settings.
 
-.. image:: images/Screen-Shot-2022-04-22-at-1.20.08-PM.png
+..image images/Screen-Shot-2022-04-22-at-1.20.08-PM.png
 
 --------------
 
@@ -88,7 +88,7 @@ of VictorOpsTimeLine.caseToVictor which is in every class and trigger.
       and `Resolve Case Test
       Class <https://github.com/victorops/monitoring_tool_releases/blob/master/VictorOps-salesforce/Resolve%20Case%20Test%20Class>`__.
 
-.. image:: images/Screen-Shot-2022-04-22-at-1.32.38-PM.png
+..image images/Screen-Shot-2022-04-22-at-1.32.38-PM.png
 
 -  Secondly, you will want to add the **Triggers**.
 
@@ -96,7 +96,7 @@ of VictorOpsTimeLine.caseToVictor which is in every class and trigger.
       tab, click on that to go to the page.
    -  Once in the Object Manager Page look for the **Case** object.
 
-.. image:: images/Screen-Shot-2022-04-22-at-1.45.38-PM.png
+..image images/Screen-Shot-2022-04-22-at-1.45.38-PM.png
 
 -  Once you open the Case Object page, look on the left side
    for **Triggers**.
@@ -108,7 +108,7 @@ of VictorOpsTimeLine.caseToVictor which is in every class and trigger.
    and `Resolve Case Apex
    Trigger <https://github.com/victorops/monitoring_tool_releases/blob/master/VictorOps-salesforce/Resolve%20Case%20Apex%20Trigger>`__.
 
-.. image:: images/Screen-Shot-2022-04-22-at-1.51.53-PM.png
+..image images/Screen-Shot-2022-04-22-at-1.51.53-PM.png
 
  
 

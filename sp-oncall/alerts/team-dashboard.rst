@@ -27,7 +27,7 @@ Page. <https://help.victorops.com/knowledge-base/timeline/>`__
 
 --------------
 
-|image1|
+|image1
 ========
 
 Filters
@@ -39,7 +39,7 @@ incident state, these filters allow for you to see only what is relevant
 to you. You can filter the incident table first by team status (with
 default team associations), as well as incident state.
 
-image: images/Filters-scaled.jpg
+image images/Filters-scaled.jpg
 
 Incident Table
 --------------

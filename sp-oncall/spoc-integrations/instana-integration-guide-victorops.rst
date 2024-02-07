@@ -51,6 +51,6 @@ Add this Alert Channel to an alerting configuration. It is possible to add a cha
 
 After creation your channel should look something like this:
 
-.. image:: images/VO_Alert_Channel_2.png
+.. image:: /_images/spoc/VO_Alert_Channel_2.png
         .. image:: /_images/spoc/VO_Alert_Channel_2.png
       :width: 90%

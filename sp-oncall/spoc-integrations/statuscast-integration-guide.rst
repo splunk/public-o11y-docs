@@ -20,7 +20,7 @@ Set up outgoing webhooks in Splunk On-Call
 
 In Splunk On-Call, navigate to :guilabel:`Integrations`, :guilabel:`Outgoing Webhooks` and select :guilabel:`Add Webhook`. This creates 2 separate outgoing webhooks as part of the setup.
 
-.. image:: images/spoc/statuscast-webhooks.png
+.. image:: _images/spoc/statuscast-webhooks.png
    :alt: Outgoing webhook creation dialog
 
 Fill out the following fields:
@@ -53,17 +53,17 @@ To complete the setup, configure your StatusCast account by following these step
 
 #. Select :menuselection:`New Monitor` and in the :guilabel:`Choose Provider` menu select :menuselection:`Splunk On-Call`:
 
-.. image:: images/spoc/statuscast-provider.png
+.. image:: _images/spoc/statuscast-provider.png
    :alt: Provider menu
 
 #. Enter the :guilabel:`Alert Name` for the monitor. This corresponds to the monitor name that set off an alert.
 
-.. image:: images/spoc/statuscast-alertname.png
+.. image:: _images/spoc/statuscast-alertname.png
    :alt: Alert name field
 
 #. Enter the :guilabel:`Authored by` value,  which defines who is the author of the incident. If you page is set to hide authors, they remain hidden.
 
-.. image:: images/spoc/statuscast-authoredby.png
+.. image:: _images/spoc/statuscast-authoredby.png
    :alt: Authored by field
 
 Other incident settings include :guilabel:`Type`, :guilabel:`Affected components`, :guilabel:`Subject`, and :guilabel:`Message`. They reflect the same general options you get when creating an incident. For more information on this process, see :new-page:`How do I post a new incident or status <https://statuscast.com/support/post-new-incident-status/>` in the StatusCast official documentation.

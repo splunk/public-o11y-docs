@@ -27,12 +27,12 @@ Splunk On-Call configuration
 
 From the main timeline, select :guilabel:`Settings`, :guilabel:`Alert Behavior`, :guilabel:`Integrations`, :guilabel:`AppOptics`.
 
-.. image:: images/spoc/800x320@2x.png
+.. image:: _images/spoc/800x320@2x.png
    :alt: Integrations menu
 
 If the integration has not yet been activated, select :guilabel:`Enable Integration` to generate your Service API Key:
 
-.. image:: images/spoc/AppOptics.png
+.. image:: _images/spoc/AppOptics.png
    :alt: API key
 
 Copy the Service API Key to your clipboard and determine which Splunk On-Call routing-key value you use for this integration. For more information on routing keys and best practices, see :ref:`routing-keys`.
@@ -42,10 +42,10 @@ AppOptics configuration
 
 From the :guilabel:`Organization Details` section, select :guilabel:`Notification Services`, :guilabel:`Splunk On-Call`, and then select :guilabel:`Add Configuration`.
 
-.. image:: images/spoc/librato_VO_option@2x.png
+.. image:: _images/spoc/librato_VO_option@2x.png
    :alt: Select Splunk On-Call
 
 Give the integration configuration a title, then paste the service API key and routing key you copied from Splunk On-Call, then save.
 
-.. image:: images/spoc/librato_VO_settings@2x.png
+.. image:: _images/spoc/librato_VO_settings@2x.png
    :alt: Save the changes

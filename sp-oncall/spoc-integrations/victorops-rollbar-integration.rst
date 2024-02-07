@@ -35,7 +35,7 @@ resolve. To do this, an access token from Rollbar will be needed to
 leverage the api. This token can be found under *Settings* >> *Project
 Access Tokens*, copy the value of the *post_client_item*.
 
-.. image:: images/Rollbar_access_token@2x.png
+..image images/Rollbar_access_token@2x.png
 
 In VictorOps, navigate to *Integrations >> Outgoing Webhooks*, and
 select **Add Webhook**. Use the following values for your configuration
@@ -49,7 +49,7 @@ and be sure to replace the access token with value copied from Rollbar.
 
 In the end, your webhook should look like the below screenshot.
 
-.. image:: images/Rollbar_recovery_webhook@2x.png
+..image images/Rollbar_recovery_webhook@2x.png
 
 .. |rollbar1| image:: images/Rollbar1.png
 .. |rollbar2| image:: images/Rollbar2.png

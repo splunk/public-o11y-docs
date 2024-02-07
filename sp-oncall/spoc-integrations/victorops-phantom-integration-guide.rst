@@ -44,36 +44,36 @@ navigating to **Phantom Apps**, search or scroll for **VictorOps** and
 press the green **Download** button. Depending on your version of
 Phantom, the VictorOps app may already be installed.
 
-.. image:: images/Apps_for_Phantom_edit.png
+..image images/Apps_for_Phantom_edit.png
 
 From within the Phantom UI, navigate to **Apps** >> **Install App** and
 drop the .rpm package in the available window. Keep in mind, VictorOps
 may already be available in the **Unconfigured Apps** section. You can
 check by searching VictorOps in the available search bar.
 
-.. image:: images/Phantom_Apps_Install_edit.png
+..image images/Phantom_Apps_Install_edit.png
 
 Next, navigate to **Apps** >> **Unconfigured Apps** >> **VictorOps** >>
 **Configure New Asset**.
 
-.. image:: images/phantom_configure_new_asset.png
+..image images/phantom_configure_new_asset.png
 
 It will open on the **Asset Info** tab, fill in any **Asset name** and
 **Asset description**.
 
-.. image:: images/asset_config_1.png
+..image images/asset_config_1.png
 
 Then hit the **Asset Settings** tab to fill in the **API ID**, **API
 Key**, and **Endpoint URL** copied earlier from VictorOps then hit
 **Save**.
 
-.. image:: images/asset_config2.png
+..image images/asset_config2.png
 
 Once Saved, the option to **Test Connectivity** will be available and if
 everything is configured correctly, you will get a success message
 similar to below.
 
-.. image:: images/test_connectivity_2.png
+..image images/test_connectivity_2.png
 
 At this point, you are successfully integrated and can configure the
 VictorOps asset to perform actions according to applicable playbooks.

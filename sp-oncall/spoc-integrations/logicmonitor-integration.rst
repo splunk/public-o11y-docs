@@ -43,7 +43,7 @@ LogicMonitor configuration
    -  Description: Send alert information to Splunk On-Call
    -  Select :guilabel:`Use different URLs or data formats to notify on various alert activity`.
 
-.. image:: images/spoc/LogicMonitor_final@2x.png
+.. image:: _images/spoc/LogicMonitor_final@2x.png
    :alt: Filled out form in LogicMonitor
 
 Create an alert method for each alert activity. Most of the configuration is the same except for two settings: the
@@ -86,7 +86,7 @@ alert activity and its corresponding message type defined in the post body. To d
 
 Repeat steps 1 through 4 for an alert status of Acknowledged and again for Cleared. For each, within the Alert Data change the ``message_type`` field to reflect the alert status. Map the field as follows and refer to the screenshot for clarification:
 
-.. image:: images/spoc/LogicMonitor_config@2x.png
+.. image:: _images/spoc/LogicMonitor_config@2x.png
    :alt: Alert data example
 
 Add annotations to alerts
@@ -101,10 +101,10 @@ Annotate the alert with:
 -  URL, View alert on LogicMonitor, ``${{ALERT_URL}}``
 -  URL, Go to LogicMonitor, ``${{CLIENT_URL}}``
 
-.. image:: images/spoc/Screen-Shot-2018-04-05-at-1.36.40-PM.png
+.. image:: _images/spoc/Screen-Shot-2018-04-05-at-1.36.40-PM.png
    :alt: Annotation examples
 
 After you save, direct links appears in the incident and alert cards to both URLs.
 
-.. image:: images/spoc/LogicMonitor_annotation@2x.png
+.. image:: _images/spoc/LogicMonitor_annotation@2x.png
    :alt: Sample annotations

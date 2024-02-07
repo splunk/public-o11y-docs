@@ -100,7 +100,7 @@ Alert section on the lefthand side.  Define your alert conditions and
 then under Notifications, click the plus button to select the
 notification channel you just configured.
 
-.. image:: images/Cmillane-testing_alert_lag_-_Grafana.jpg
+ images/Cmillane-testing_alert_lag_-_Grafana.jpg
 
 Be sure to save your changes.  The standard configuration is now
 complete.
@@ -125,7 +125,7 @@ In Splunk On-Call, add the following Rules Engine rule that will surface
 the image_url as an annotation to the incident. (Found by navigating to
 *Settings >> Alert Rules Engine)*
 
-.. image:: images/Screen-Shot-2020-06-24-at-4.37.01-PM.png
+ images/Screen-Shot-2020-06-24-at-4.37.01-PM.png
 
 Lastly, ensure that the image is hosted in a publicly accessible
 location so that Splunk On-Call can display it.  For further

@@ -10,15 +10,15 @@ integrate the two systems.
 From the main timeline go select **Settings** then **Alert
 Behavior** then **Integrations**.
 
-.. image:: images/settings-alert-behavior-integrations-e1480978368974.png
+..image images/settings-alert-behavior-integrations-e1480978368974.png
 
 Select the **Vivid Cortex** Integration.
 
-.. image:: images/Integrations_-_victorops-5.png
+..image images/Integrations_-_victorops-5.png
 
 Enable the integration and copy the “Service API Key” to your clipboard.
 
-.. image:: images/Integrations_-_victorops-6.png
+..image images/Integrations_-_victorops-6.png
 
 **In VividCortex**
 ------------------

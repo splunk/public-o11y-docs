@@ -31,7 +31,7 @@ Navigate to the AppDynamics integration page by visiting *Integrations
 If the integration has not yet been enabled, click the *Enable
 Integration* button.  Copy the “Service API Key” to your clipboard.
 
-.. image:: images/1-API-Key.png
+..image images/1-API-Key.png
 
 In AppDynamics
 ~~~~~~~~~~~~~~
@@ -121,7 +121,7 @@ Navigate to the AppDynamics integration page by visiting *Integrations
 If the integration has not yet been enabled, click the *Enable
 Integration* button.  Copy the *Service API Key* to your clipboard.
 
-|image1|
+|image
 ~~~~~~~~
 
 In AppDynamics
@@ -129,13 +129,13 @@ In AppDynamics
 From the main web portal select *Alert & Respond* then *HTTP Request
 Templates* and then *New*\ **.**
 
-.. image:: images/AppDynamics-1@2x.png
+..image images/AppDynamics-1@2x.png
 
  
 
 Give the Template a name (Splunk On-Call Test in below example).
 
-.. image:: images/AppDynamics-2@2x.png
+..image images/AppDynamics-2@2x.png
 
 Set a *Custom Templating Variable* with a field name of *message_type*
 and a value of *WARNING*.
@@ -255,4 +255,4 @@ You can now use the VictorOps HTTP Request Template with any of your
 alerts in AppDynamics. If you have any questions please `contact us at
 support <https://help.victorops.com/knowledge-base/important-splunk-on-call-support-changes-coming-nov-11th/>`__.
 
-.. |image1| image:: images/1-API-Key-1.png
+.. |image1 images/1-API-Key-1.png

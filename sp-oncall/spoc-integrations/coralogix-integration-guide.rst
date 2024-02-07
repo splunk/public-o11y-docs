@@ -48,7 +48,7 @@ Create a webhook
 
 #. Paste the URL that you previously copied from Splunk On-Call.
 
-.. image:: images/spoc/coralogix-webhook.png
+.. image:: _images/spoc/coralogix-webhook.png
    :alt: Coralogix webhook dialog
 
 #. Paste the following payload inside :guilabel:`Edit body`:
@@ -93,5 +93,5 @@ After you've created a webhook that points to Splunk On-Call, assign it to a Cor
 #. Select the Splunk On-Call webhook that you previously created.
 #. Save the alert.
 
-.. image:: images/spoc/coralogix-recipient.png
+.. image:: _images/spoc/coralogix-recipient.png
    :alt: Recipients dialog

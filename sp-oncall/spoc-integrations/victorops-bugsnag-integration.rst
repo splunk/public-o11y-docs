@@ -19,7 +19,7 @@ From the main timeline select **Integrations** *>>* **BugSnag**
 
 If the integration has not yet been enabled, click the “Enable
 Integration” button.  Copy the “Service API Key” to your clipboard.
-|image1|
+|image
 
 Once you have copied the API key to your clipboard, click on *Settings
 >> Routing Keys* page to find your routing key configuration.  Decide
@@ -59,4 +59,4 @@ Hit **save** and you are done!
 
    bugsnag4
 
-.. |image1| image:: images/Integration-Bugsnag-final.png
+.. |image1 images/Integration-Bugsnag-final.png

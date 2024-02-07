@@ -43,7 +43,7 @@ Enable GitHub Integration in VictorOps
 
 In VictorOps, click on *Settings >> Alert Behavior >> Integrations* 
 
-.. image:: images/integrations.png
+ images/integrations.png
 
 Then you'll want to find the Github Integration
 

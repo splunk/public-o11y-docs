@@ -10,14 +10,14 @@ notifications in the VictorOps timeline.
 In VictorOps, select *Settings >> Alert Behavior >> Integrations >>
 Uptime.com*\ **.**
 
-.. image:: images/vo-side-uptime@2x.png
+..image images/vo-side-uptime@2x.png
 
 If the integration has not yet been enabled, click the “Enable
 Integration” button to generate your API Key as seen below.
 
  
 
-.. image:: images/vo-uptime-2@2x.png
+..image images/vo-uptime-2@2x.png
 
 **In Uptime**
 -------------
@@ -25,11 +25,11 @@ Integration” button to generate your API Key as seen below.
 From the main Dashboard,
 select *Notifications* >> *Integrations* >> *New Profile*
 
-.. image:: images/uptime-slide-1.png
+..image images/uptime-slide-1.png
 
 After clicking on *New Profile*, a screen will appear. Select VictorOps
 as the provider type. Add the API Key from the VictorOps integration
-page, and add the desired routing key. |image1|\ Select **Save** and
+page, and add the desired routing key. |image\ Select **Save** and
 you're done!
 
-.. |image1| image:: images/Uptime-slide-2.png
+.. |image image:: images/Uptime-slide-2.png

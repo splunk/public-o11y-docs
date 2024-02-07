@@ -9,19 +9,19 @@ steps to integrate Sysdig with VictorOps.
 From the VictorOps web portal select **Settings** then **Alert
 Behavior** then **Integrations**.
 
-.. image:: images/settings-alert-behavior-integrations-e1480978368974.png
+..image images/settings-alert-behavior-integrations-e1480978368974.png
 
  
 
 Select the **Sysdig** Integration.
 
-.. image:: images/Integrations_-_victorops-9.png
+..image images/Integrations_-_victorops-9.png
 
  
 
 Copy the “Service API Key” to your clipboard.
 
-.. image:: images/Integrations_-_victorops-10.png
+..image images/Integrations_-_victorops-10.png
 
 **In Sysdig**
 -------------

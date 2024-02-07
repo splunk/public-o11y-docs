@@ -15,7 +15,7 @@ Activate the REST Endpoint Integration
 
 In Splunk On-Call, select :guilabel:`Integrations`, :guilabel:`3rd Party Integrations`, :guilabel:`REST - Generic`.
 
-.. image:: images/spoc/Rest-EndPoint-Integration-Page.jpg
+.. image:: _images/spoc/Rest-EndPoint-Integration-Page.jpg
    :alt: REST endpoint integration icon
 
 If the REST endpoint integration isn't activated, select :guilabel:`Enable` to generate your endpoint destination URL.
@@ -25,7 +25,7 @@ If the REST endpoint integration isn't activated, select :guilabel:`Enable` to g
 REST Endpoint Integration routing key
 ------------------------------------------------------
 
-.. image:: images/spoc/Rest_EndPoint_Enable_Pageblur.jpg
+.. image:: _images/spoc/Rest_EndPoint_Enable_Pageblur.jpg
    :alt: REST endpoint routing key, blurred
 
 The routing key used for this integration is included in the destination URL. Everything after the final forward slash must be replaced with your key. For example, assuming a routing_key value of ``database``:
@@ -105,7 +105,7 @@ The response looks like the following:
 
 The resulting incident in Splunk On-Call is as follows:
 
-.. image:: images/spoc/Incident-Card.jpg
+.. image:: _images/spoc/Incident-Card.jpg
    :alt: Incident in Splunk On-Call
 
 Resolve an incident
@@ -128,7 +128,7 @@ The response looks like the following:
 
 The resulting incident in Splunk On-Call is as follows:
 
-.. image:: images/spoc/Recovery-Incident-Card.jpg
+.. image:: _images/spoc/Recovery-Incident-Card.jpg
    :alt: Incident in Splunk On-Call
    
 cURL and incident response
@@ -152,13 +152,13 @@ When an incident is in an acknowledged state and a new alert with the same ``ent
 
 The following image shows the location of annotations in the incident:
 
-.. image:: images/spoc/Annotations-REST.jpg
+.. image:: /_images/spoc/Annotations-REST.jpg
    :alt: Annotations in incident
 
 Annotation payloads
 ---------------------------
 
-.. image:: images/spoc/Annotation-Payload.jpg
+.. image:: _images/spoc/Annotation-Payload.jpg
    :alt: Annotation payload
 
 There are 3 types of annotations accepted by Splunk On-Call through the following syntax. You can customize the title of your annotation at the end of your annotation syntax. For example, in the previous screenshot the title of the URL annotation appears in Splunk On-Call as ``Runbook``.

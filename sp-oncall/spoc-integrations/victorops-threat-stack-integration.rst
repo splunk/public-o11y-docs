@@ -8,20 +8,20 @@ timeline.
 ----------------
 
 From the VictorOps web portal, select **Settings** then **Alert
-Behavior** then **Integrations**. |image1|
+Behavior** then **Integrations**. |image
 
  
 
 Select the Threat Stack Integration
 
-.. image:: images/Integrations_-_victorops-7.png
+..image images/Integrations_-_victorops-7.png
 
  
 
 Enable the integration and copy the “Service API Endpoint” to your
 clipboard.
 
-.. image:: images/Integrations_-_victorops-8.png
+..image images/Integrations_-_victorops-8.png
 
 **In Threat Stack**
 -------------------
@@ -53,4 +53,4 @@ And you are done. If you have any questions or concerns please reach out
 to `VictorOps
 support <mailto:support@victorops.com?Subject=Threat%20Stack%20VictorOps%20Integration>`__.
 
-.. |image1| image:: images/settings-alert-behavior-integrations-e1480978368974.png
+.. |image image:: images/settings-alert-behavior-integrations-e1480978368974.png

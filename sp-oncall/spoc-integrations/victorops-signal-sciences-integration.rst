@@ -10,17 +10,17 @@ In VictorOps
 From the VictorOps web portal, select **Settings** >> **Alert
 Behavior** >> **Integrations**
 
-.. image:: images/Integration-ALL-FINAL.png
+..image images/Integration-ALL-FINAL.png
 
 Select the `Signal
 Sciences <https://www.signalsciences.com/>`__ integration option.
 
-|image1| Copy the **Service API Endpoint** to the clipboard.  Be sure to
+|image Copy the **Service API Endpoint** to the clipboard.  Be sure to
 replace the “$routing_key” section with the actual routing key you
 intend to use.  (To view or configure route keys in VictorOps,
 click **Alert Behavior**, then **Route Keys**)
 
-.. image:: images/Integrations-SignalSciences_vo_endpoint.png
+..image images/Integrations-SignalSciences_vo_endpoint.png
 
 In Signal Sciences
 ------------------
@@ -29,27 +29,27 @@ From the `Signal Sciences <https://www.signalsciences.com/>`__ web
 interface, click the **Configurations** drop down menu, then
 select **Integrations**.
 
-.. image:: images/Zoom_Meeting_ID__340-382-347.png
+..image images/Zoom_Meeting_ID__340-382-347.png
 
 Locate the “VictorOps alert” integration on the list of available
 integrations and click the **Add** button to the right.
 
-.. image:: images/Zoom_Meeting_ID__340-382-347__3_.png
+..image images/Zoom_Meeting_ID__340-382-347__3_.png
 
 Paste the “URL to notify” from the “In VictorOps” section into the
 “Webhook URL” field, select the events that will trigger an alert, then
 click **Add**.
 
-.. image:: images/Zoom_Meeting_ID__340-382-347__5_-1.png
+..image images/Zoom_Meeting_ID__340-382-347__5_-1.png
 
 You should now see “VictorOps alert” listed as a configured integration.
  Click **Test** to send a test alert to VictorOps.  Make sure that you
 see the alert show up in your VictorOps timeline.
 
-.. image:: images/Zoom_Meeting_ID__340-382-347__4_-2.png
+..image images/Zoom_Meeting_ID__340-382-347__4_-2.png
 
 You have completed setting up this integration.  If you have any
 questions, please contact `VictorOps
 support <mailto:Support@victorops.com?Subject=Signal%20Sciences%20VictorOps%20Integration>`__.
 
-.. |image1| image:: images/SignalSciences-final.png
+.. |image image:: images/SignalSciences-final.png

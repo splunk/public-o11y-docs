@@ -46,7 +46,7 @@ In Splunk On-Call
 
 From Splunk On-Call, navigate to :guilabel:`Integrations`, :guilabel:`3rd Party Integrations`, :guilabel:`Splunk Enterprise`, then select :guilabel:`Enable Integration`. Copy the API key to the clipboard to use in later steps.
 
-.. image:: images/spoc/Screen_Shot_2020-03-18_at_3_39_45_PM.png
+.. image:: _images/spoc/Screen_Shot_2020-03-18_at_3_39_45_PM.png
    :alt: Splunk Enterprise integration
 
 In Splunk Enterprise
@@ -56,17 +56,17 @@ In Splunk Base, search for Splunk On-Call. Select :guilabel:`Download` and accep
 
 Start Splunk and open the web UI in a browser. From the top navigation bar, expand the menu and select :guilabel:`Manage Apps`. Next, select :guilabel:`Install app from file`.
 
-.. image:: images/spoc/Screen-Shot-2019-09-30-at-10.40.30-AM.png
+.. image:: _images/spoc/Screen-Shot-2019-09-30-at-10.40.30-AM.png
    :alt: Install from file
 
 Choose the Splunk On-Call for Splunk app .tgz file you downloaded earlier, check :guilabel:`Upgrade app` to ensure your application is updated to the latest version. Next, select :guilabel:`Upload` then finish the process by restarting Splunk.
 
-.. image:: images/spoc/Screen-Shot-2019-09-30-at-10.58.01-AM.png
+.. image:: _images/spoc/Screen-Shot-2019-09-30-at-10.58.01-AM.png
    :alt: Upload an app
 
 Once Splunk has restarted, return to the :guilabel:`Manage Apps` page and select :guilabel:`Launch App` next to the Splunk On-Call Incident Management app. Continue the configuration in the Splunk On-Call Incident Response homepage.
 
-.. image:: images/spoc/photo34.png
+.. image:: _images/spoc/photo34.png
    :alt: Splunk On-Call configuration page
 
 Alert API key configuration
@@ -74,7 +74,7 @@ Alert API key configuration
 
 On the Alert API Key Configuration page, paste the API key copied earlier, along with any desired routing key from your Splunk On-Call organization. If the routing key is empty, alerts are routed to your default routing key. You can also access your API key by following the :guilabel:`Splunk On-Call Splunk Integration` link.
 
-.. image:: images/spoc/Screen-Shot-2020-04-28-at-3.39.35-PM.png
+.. image:: _images/spoc/Screen-Shot-2020-04-28-at-3.39.35-PM.png
    :alt: Alert API Key Configuration
 
 Testing configuration
@@ -95,12 +95,12 @@ For versions 1.0.21 and higher you can add your Splunk On-Call API ID and API Ke
 
 After the API Key and API ID are saved, select :guilabel:`Retrieve Routing Keys` to retrieve the most up to date list of your organizations routing keys.
 
-.. image:: images/spoc/Screen-Shot-2020-04-15-at-10.53.23-AM.png
+.. image:: _images/spoc/Screen-Shot-2020-04-15-at-10.53.23-AM.png
    :alt: Data API configuration
 
 When creating a Splunk On-Call alert action, a menu of all routing keys within your Splunk On-Call organization appears.
 
-.. image:: images/spoc/Screen-Shot-2020-03-26-at-9.13.19-AM.png
+.. image:: _images/spoc/Screen-Shot-2020-03-26-at-9.13.19-AM.png
    :alt: Menu with API keys
 
 Configure Splunk On-Call alert actions
@@ -108,17 +108,17 @@ Configure Splunk On-Call alert actions
 
 The following is an example of new alert based on a search. From a new search, select :guilabel:`Save As`, then select :guilabel:`Alert`.
 
-.. image:: images/spoc/Screen-Shot-2019-09-30-at-11.28.03-AM.png
+.. image:: _images/spoc/Screen-Shot-2019-09-30-at-11.28.03-AM.png
    :alt: Splunk search
 
 Give the alert a title, description, and permissions as well as a schedule. Under :guilabel:`+ Add Actions`, select :guilabel:`Splunk On-Call`.
 
-.. image:: images/spoc/Screen-Shot-2019-09-30-at-11.12.57-AM.png
+.. image:: _images/spoc/Screen-Shot-2019-09-30-at-11.12.57-AM.png
    :alt: Select Splunk On-Call
 
 Select the desired message type, and use the state message field to add a brief description of what this particular alert indicates. You can overwrite the default values for ``entity_id`` if desired. If no API key or routing key is selected, alerts are sent to the default values for these fields. Additionally, you can dynamically reference Splunk fields within these assignments using tokens.
 
-.. image:: images/spoc/Screen-Shot-2020-04-15-at-10.08.57-AM.png
+.. image:: _images/spoc/Screen-Shot-2020-04-15-at-10.08.57-AM.png
    :alt: Save as alert screen
 
 Once the specified conditions are met, an alert appears in your Splunk On-Call timeline.
@@ -128,7 +128,7 @@ Alert annotations
 
 In Splunk On-Call, under the Annotations tab in the incident, all Splunk alerts include an alert link that directs you back to the Splunk alert.
 
-.. image:: images/spoc/Screen-Shot-2020-01-21-at-1.16.44-PM.png
+.. image:: _images/spoc/Screen-Shot-2020-01-21-at-1.16.44-PM.png
    :alt: Alert annotations tab
 
 To add other incident annotations see :ref:`alert-rules-engine`.
@@ -138,7 +138,7 @@ Splunk and Splunk On-Call mapped fields
 
 The following table shows mapped Splunk and Splunk On-Call fields:
 
-.. image:: images/spoc/Screen-Shot-2020-09-02-at-9.56.58-AM.png
+.. image:: _images/spoc/Screen-Shot-2020-09-02-at-9.56.58-AM.png
    :alt: Table of mapped fields
 
 Configure Splunk Cloud Platform
@@ -149,7 +149,7 @@ In Splunk On-Call
 
 From the Splunk On-Call web portal, navigate to :guilabel:`Integrations`, :guilabel:`3rd Party Integrations`, :guilabel:`Splunk Enterprise`, then select :guilabel:`Enable Integration`. Copy the API key to the clipboard to use in later steps.
 
-.. image:: images/spoc/Screen_Shot_2020-03-18_at_3_39_45_PM.png
+.. image:: _images/spoc/Screen_Shot_2020-03-18_at_3_39_45_PM.png
    :alt: Copy API key
 
 .. _in-splunk-1:
@@ -162,7 +162,7 @@ Under :guilabel:`Apps`, select :guilabel:`Find More Apps`, then in the search ba
 Open the app to go to the Splunk On-Call Incident Response Home page, which guides you through setting up the account,
 configuring API keys, and testing alerts. Once your configuration is complete a check next to each configuration step appears.
 
-.. image:: images/spoc/photo34.png
+.. image:: _images/spoc/photo34.png
    :alt: Configuring Splunk On-Call inside Splunk Cloud
 
 Alert API key configuration
@@ -170,7 +170,7 @@ Alert API key configuration
 
 On the Alert API Key Configuration page, paste the API key copied earlier, along with any desired routing key from your Splunk On-Call organization. If the routing key is blank, alerts are routed to your default routing key. You can also access your API key by selecting :guilabel:`Splunk On-Call Splunk Integration`.
 
-.. image:: images/spoc/Screen-Shot-2020-04-28-at-3.39.35-PM.png
+.. image:: _images/spoc/Screen-Shot-2020-04-28-at-3.39.35-PM.png
    :alt: Alert API Key Configuration
 
 Data API configuration and routing keys
@@ -180,12 +180,12 @@ For versions 1.0.21 and higher, you can add your Splunk On-Call API ID and API K
 
 Once the API Key and API ID are saved, select :guilabel:`Retrieve Routing Keys` to retrieve the most up to date list of your organizations routing keys.
 
-.. image:: images/spoc/Screen-Shot-2020-04-15-at-10.53.23-AM.png
+.. image:: _images/spoc/Screen-Shot-2020-04-15-at-10.53.23-AM.png
    :alt: Data API configuration
 
 When creating a Splunk On-Call alert action, a menu with all routing keys within your Splunk On-Call organization appears.
 
-.. image:: images/spoc/Screen-Shot-2020-03-26-at-9.13.19-AM.png
+.. image:: _images/spoc/Screen-Shot-2020-03-26-at-9.13.19-AM.png
    :alt: API keys menu
 
 Test the configuration
@@ -205,17 +205,17 @@ Configuring Splunk On-Call alert actions
 
 The following is an example of setting up a new alert based on a search. From a new search select :guilabel:`Save As`, then select :guilabel:`Alert`.
 
-.. image:: images/spoc/Screen-Shot-2019-09-30-at-11.28.03-AM.png
+.. image:: _images/spoc/Screen-Shot-2019-09-30-at-11.28.03-AM.png
    :alt: New search in Splunk
 
 Give the alert a title, description, and permissions as well as configure the check schedule. Under :guilabel:` + Add Actions`, select :guilabel:`Splunk On-Call`.
 
-.. image:: images/spoc/Screen-Shot-2019-09-30-at-11.12.57-AM.png
+.. image:: _images/spoc/Screen-Shot-2019-09-30-at-11.12.57-AM.png
    :alt: Save as alert
 
 Select the desired message type, and use the state message field to add a brief description of what this particular alert indicates. You can overwrite the default values for ``entity_id`` if desired. If no API key or routing key is selected, alerts are sent to the default values for these fields. Additionally, you can reference Splunk fields within these assignments using tokens.
 
-.. image:: images/spoc/Screen-Shot-2020-04-15-at-10.08.57-AM.png
+.. image:: _images/spoc/Screen-Shot-2020-04-15-at-10.08.57-AM.png
    :alt: Save as alert API add actions menu
 
 Once the specified conditions are met, an alert appears in your Splunk On-Call timeline.
@@ -225,7 +225,7 @@ Alert annotations
 
 In Splunk On-Call, under the :guilabel:`Annotations` tab in the incident, all Splunk alerts include an alert link that directs you back to the Splunk alert.
 
-.. image:: images/spoc/Screen-Shot-2020-01-21-at-1.16.44-PM.png
+.. image:: _images/spoc/Screen-Shot-2020-01-21-at-1.16.44-PM.png
    :alt: Alert annotations tab
 
 To add other incident annotations, see :ref:`alert-rules-engine`.
@@ -239,7 +239,7 @@ Proxy settings
 
 A proxy configuration can be activated for the integration by navigating to :guilabel:`Configuration`. :guilabel:`Proxy Configuration`.
 
-.. image:: images/spoc/Screen-Shot-2020-03-27-at-10.47.12-AM-1.png
+.. image:: _images/spoc/Screen-Shot-2020-03-27-at-10.47.12-AM-1.png
    :alt: Proxy settings
 
 Alert recovery configuration
@@ -249,7 +249,7 @@ Once the Splunk for Splunk On-Call app is enabled (1.0.18 and higher), the Alert
 
 In the global recovery configuration, you can configure the polling interval (in seconds) as well as the number of inactive polls before sending a recovery. The following are the global default settings for Alert Recoveries:
 
-.. image:: images/spoc/Screen-Shot-2020-03-27-at-10.48.56-AM.png
+.. image:: _images/spoc/Screen-Shot-2020-03-27-at-10.48.56-AM.png
    :alt: Alert Recovery defaults
 
 At the individual alert level, under the Splunk On-Call Trigger Actions, you can find the :guilabel:`Enable Recovery` checkbox for the more granular setting. For versions 1.0.25 and higher you can set the Polling Interval as well as Inactive Poll count for each individual alert.
@@ -269,12 +269,12 @@ The following is an example of the format needed for the dynamic values.
 
 When creating the Splunk On-Call trigger action with dynamically pulled values from your search, select the parameter ``api_key`` as the API Key for the alerts as well as ``param.routing_key`` as the Routing Key for the alert.
 
-.. image:: images/spoc/Screen-Shot-2020-05-14-at-9.32.33-AM.png
+.. image:: _images/spoc/Screen-Shot-2020-05-14-at-9.32.33-AM.png
    :alt: Key parameters
 
 Any dynamic keys used in a Search will be added as in key in your Alert API Key Configuration.
 
-.. image:: images/spoc/Screen-Shot-2020-05-14-at-8.51.35-AM.png
+.. image:: _images/spoc/Screen-Shot-2020-05-14-at-8.51.35-AM.png
    :alt: Dynamic keys
 
 Search Head cluster setup
@@ -313,12 +313,12 @@ In Splunk ITSI Notable Event Aggregation Policies
 
 Navigate to :guilabel:`Configure`, :guilabel:`Notable Events Aggregation Policies` and select the name of the Aggregation Policy you want to alert Splunk On-Call.
 
-.. image:: images/spoc/Screen-Shot-2019-10-01-at-12.48.28-PM.png
+.. image:: _images/spoc/Screen-Shot-2019-10-01-at-12.48.28-PM.png
    :alt: Aggregation policy
 
 In the :guilabel:`Action Rules` tab, set your trigger conditions then select :guilabel:`Splunk On-Call` and configure your alert accordingly.
 
-.. image:: images/spoc/Screen-Shot-2019-10-01-at-12.52.03-PM.png
+.. image:: _images/spoc/Screen-Shot-2019-10-01-at-12.52.03-PM.png
    :alt: Action rules
 
 Keep the Alert Entity ID consistent for all Message Types (leave blank for default) across related actions. Splunk On-Call uses this field to identify incidents and correlate subsequent alerts with the original incident. Once configured correctly, ITSI automatically creates a Splunk On-Call incident.
@@ -328,7 +328,7 @@ Create a Splunk On-Call Incident
 
 Navigate to the :guilabel:`Action Rules` tab for the desired Aggregation Policy. For an action to create an incident in Splunk On-Call, set the conditions to :guilabel:`if the following event occurs: severity greater than Normal` then select :guilabel:`Splunk On-Call` and :guilabel:`Configure`.
 
-.. image:: images/spoc/Screen-Shot-2019-10-01-at-12.52.03-PM.png
+.. image:: _images/spoc/Screen-Shot-2019-10-01-at-12.52.03-PM.png
    :alt: Configure action rules
 
 The monitoring tool field and message type are the only fields that need to be set. The rest of the fields use default values. The default values are:
@@ -340,7 +340,7 @@ The monitoring tool field and message type are the only fields that need to be s
 -  State Message: ``$result.itsi_group_title``
 -  Routing Key: Default routing key (unless specified otherwise)
 
-.. image:: images/spoc/ITSI-image.png
+.. image:: _images/spoc/ITSI-image.png
    :alt: All tickets section
 
 -  This functionality requires the “Data API Keys” and organization name to be set up in the Splunk On-Call for Splunk app.
@@ -352,7 +352,7 @@ To Resolve a Splunk On-Call Incident
 
 Within the same Aggregation Policy, navigate to the :guilabel:`Action Rules` tab. To resolve the episode in ITSI, select :guilabel:`Change status to Resolved`. To resolve the corresponding incident in Splunk On-Call, set the conditions to :guilabel:`if the episode is broken`, then :guilabel:`Splunk On-Call` and select :guilabel:`Configure`.
 
-.. image:: images/spoc/Screen-Shot-2019-10-01-at-12.51.46-PM-1.png
+.. image:: _images/spoc/Screen-Shot-2019-10-01-at-12.51.46-PM-1.png
    :alt: Resolve incident
 
 Configure the action making sure to select RECOVERY as the message type and ITSI as the monitoring tool, other values are default values. The Alert Entity ID are the same as the initial alert so that Splunk On-Call resolves the corresponding incident if default values are used.
@@ -362,7 +362,7 @@ To acknowledge a Splunk On-Call incident manually
 
 Navigate to :guilabel:`Episode Review` then select the desired episode, :guilabel:`Actions`, and select :guilabel:`Splunk On-Call`.
 
-.. image:: images/spoc/Screen-Shot-2019-10-01-at-12.54.05-PM.png
+.. image:: _images/spoc/Screen-Shot-2019-10-01-at-12.54.05-PM.png
    :alt: Acknowledge incident
 
 Configure the action making sure to select ``ACKNOWLEDGEMENT`` as the message type and ITSI as the monitoring tool. Other values are default. The Alert Entity ID is the same as the initial alert so that Splunk On-Call acknowledges the corresponding incident if default values are used.
@@ -380,22 +380,22 @@ From the Splunk On-Call web portal, navigate to :guilabel:`Integrations`, :guila
 
 In Splunk SAI, navigate to :guilabel:`Settings`, :guilabel:`Notifications` and paste your API key and a routing key from your Splunk On-Call accountinto the respective fields. Select :guilabel:`Save Credentials`. 
 
-.. image:: images/spoc/VO-SAI.jpg
+.. image:: _images/spoc/VO-SAI.jpg
    :alt: Enter credentials for Splunk On-Call
 
 Under the :guilabel:`Investigate` page, select an entity.
 
-.. image:: images/spoc/alert1@2x.png
+.. image:: _images/spoc/alert1@2x.png
    :alt: Select an entity
 
 Navigate to the :guilabel:`Analysis tab` and select an alert graph, select the three dots and then select :guilabel:`Create Alert`.
 
-.. image:: images/spoc/Alert2@2x.png
+.. image:: _images/spoc/Alert2@2x.png
    :alt: Create alert
 
 From the alert creation, scroll to the bottom of the dialog and select how under what conditions the alert fires. For the notification method select :guilabel:`Splunk On-Call`. Select :guilabel:`Submit`.
 
-.. image:: images/spoc/alert3@2x.png
+.. image:: _images/spoc/alert3@2x.png
    :alt: Submit alert
 
 Splunk Enterprise Security
@@ -409,17 +409,17 @@ In Splunk Enterprise Security App
 
 In the Splunk Enterprise Security App navigate to the :guilabel:`Incident Review`. Once in Incident Review, select an incident you want to send to Splunk On-Call and select the menu under :guilabel:`Actions`. Next, select :guilabel:`Run Adaptive Response Action`.
 
-.. image:: images/spoc/Screen-Shot-2020-01-27-at-9.14.34-AM.png
+.. image:: _images/spoc/Screen-Shot-2020-01-27-at-9.14.34-AM.png
    :alt: Select Run Adaptative Response Action
 
 A dialog appears allowing you to add Splunk On-Call as a response action.
 
-.. image:: images/spoc/Screen-Shot-2020-01-27-at-9.14.46-AM.png
+.. image:: _images/spoc/Screen-Shot-2020-01-27-at-9.14.46-AM.png
    :alt: Select response action
 
 Once the response action has been dispatched you receive a confirmation.
 
-.. image:: images/spoc/Screen-Shot-2020-01-27-at-9.14.58-AM.png
+.. image:: _images/spoc/Screen-Shot-2020-01-27-at-9.14.58-AM.png
    :alt: Confirmation of response action
 
 

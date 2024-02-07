@@ -26,7 +26,7 @@ integration.
 
 1.  Login to dotcom monitor portal. From the dotcom monitor UI select
     **Configure** ==> **Alert Templates**  ==> **+ Create
-    Template**\ |image1|\ |image2|
+    Template**\ |image\ |image2|
 
 2.  Delete the pre-populated content in the Alert Template (seen in the
     picture below) and instead enter the following information for the
@@ -250,7 +250,7 @@ integration.
 
        </table>
 
-    .. image:: images/DM-3-final-1.png
+    ..image images/DM-3-final-1.png
 
 3.  Click on the **Update** button to save your Alert Template.
 
@@ -390,7 +390,7 @@ integration.
 
        </table>
 
-    .. image:: images/Screen-Shot-2018-01-12-at-1.25.27-PM.png
+    ..image images/Screen-Shot-2018-01-12-at-1.25.27-PM.png
 
 10. Click on the button **Update** to save this configuration.
 
@@ -403,11 +403,11 @@ integration.
     |image8|\ Congratulations! You've successfully sent your first alert
     from Dotcom monitor to Splunk On-Call!
 
-.. |image1| image:: images/DM-1-final-1.png
-.. |image2| image:: images/DM-2-final-2.png
-.. |image3| image:: images/DM-url-skitch.png
-.. |image4| image:: images/Dotcom-Monitor-VO2-8-final.png
-.. |image5| image:: images/Screen-Shot-2018-01-12-at-1.46.46-PM.png
-.. |image6| image:: images/Screen-Shot-2018-01-12-at-1.13.51-PM.png
-.. |image7| image:: images/Screen-Shot-2018-01-12-at-1.31.35-PM.png
-.. |image8| image:: images/Screen-Shot-2018-01-12-at-1.34.17-PM.png
+.. |image1 images/DM-1-final-1.png
+.. |image2 images/DM-2-final-2.png
+.. |image3 images/DM-url-skitch.png
+.. |image4 images/Dotcom-Monitor-VO2-8-final.png
+.. |image5 images/Screen-Shot-2018-01-12-at-1.46.46-PM.png
+.. |image6 images/Screen-Shot-2018-01-12-at-1.13.51-PM.png
+.. |image7| images/Screen-Shot-2018-01-12-at-1.31.35-PM.png
+.. |image8images/Screen-Shot-2018-01-12-at-1.34.17-PM.png

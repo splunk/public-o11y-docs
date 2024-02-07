@@ -38,14 +38,14 @@ To get started, download the Splunk On-Call Media Type from the Github repositor
 
 After that's downloaded, go into Zabbix and navigate to your media types. Select :guilabel:`Import`.
 
-.. image:: images/spoc/Zabbix_1.png
+.. image:: _images/spoc/Zabbix_1.png
    :alt: Import screen
 
 Select the XML file you downloaded earlier and select :guilabel:`Import` at the bottom of the screen. Keep the default values for importing media types as shown in the screenshot.
 
 After the import is successful, go back to your media types. A new media type labeled “Splunk On-Call” is available.Select it and scroll down to the values ``VO_ORGANIZATION_ID`` and ``VO_ORGANIZATION_KEY`` and fill them in with your Splunk On-Call org slug and Zabbix API key respectively. You can find your org slug in the URL of your Splunk On-Call instance (https://portal.victorops.com/client/). The Zabbix API key is located in your Splunk On-Call org under :guilabel:`Integrations`, :guilabel:`Zabbix`.
 
-.. image:: images/spoc/Zabbix2.png
+.. image:: _images/spoc/Zabbix2.png
    :alt: Zabbix fields
 
 Make sure to update the media type by selecting :guilabel:`Update`.
@@ -58,7 +58,7 @@ Zabbix User 5.0
 Create a new user and assign it to any desired group. Then associate the user, in this case, “Splunk On-Call Alert” with the media type. Fill in the :guilabel:`Send to` section in the Media tab with an appropriate Splunk On-Call Routing
 Key. You can also specify which severity of alerts is sent to Splunk On-Call here. The user needs read-write permissions so assign whatever permission level necessary.
 
-.. image:: images/spoc/Zabbix_5_0_4.png
+.. image:: i_mages/spoc/Zabbix_5_0_4.png
    :alt: Media tab
 
 Zabbix Action 5.0
@@ -66,17 +66,17 @@ Zabbix Action 5.0
 
 The next step is to create the action. You can customize alerting behavior by setting the action conditions.
 
-.. image:: images/spoc/Zabbix_5_0_5.png
+.. image:: _images/spoc/Zabbix_5_0_5.png
    :alt: Send to Splunk On-Call
 
 Head over to the operations tab and set up the operations and recovery operations to send a message to the Splunk On-Call user using the Splunk On-Call Media Type that you just created.
 
-.. image:: images/spoc/Zabbix_5_0_6.png
+.. image:: _images/spoc/Zabbix_5_0_6.png
    :alt: Operations tab
 
 With that, your Zabbix integration is set up. To test it, create a new alert in Zabbix and check the actions section on the dashboard to see if it was successful.
 
-.. image:: images/spoc/Zabbix_5_0_7.png
+.. image:: _images/spoc/Zabbix_5_0_7.png
    :alt: Zabbix test
 
 Zabbix 4.4 using webhooks 
@@ -91,12 +91,12 @@ Zabbix Media Type 4.4
 
 To get started, create a new media type from :guilabel:`Administration`, :guilabel:`Media Types`. Under :guilabel:`Type`, select :menuselection:`Webhook` and configure the parameters to match the following screenshot:
 
-.. image:: images/spoc/zabbix_webhook_mediatype-1.png
+.. image:: _images/spoc/zabbix_webhook_mediatype-1.png
    :alt: Webhook media type values
 
 Fill in the script section with the Javascript needed to construct the alert to Splunk On-Call.
 
-.. image:: images/spoc/zabbix_webhooks_script.png
+.. image:: _images/spoc/zabbix_webhooks_script.png
    :alt: Webhook script
 
 You can find the javascript in the GitHub repository at :new-page:`https://github.com/victorops/monitoring_tool_releases/blob/master/VictorOps-Zabbix4.4/victorops_zabbix_webhook.js <https://github.com/victorops/monitoring_tool_releases/blob/master/VictorOps-Zabbix4.4/victorops_zabbix_webhook.js>`.
@@ -106,7 +106,7 @@ Zabbix User 4.4
 
 Create a new user and assign it to any desired group. Then associate the user, in this case, “Splunk On-Call Alert”,  with the media type. Fill in the :guilabel:`Send to` section with an appropriate Splunk On-Call routing key. The user needs read-write permissions so assign whatever permission level necessary.
 
-.. image:: images/spoc/zabbix_user_mt.png
+.. image:: _images/spoc/zabbix_user_mt.png
    :alt: User permissions
 
 Zabbix Action 4.4
@@ -114,7 +114,7 @@ Zabbix Action 4.4
 
 Next create the action. You can customize alerting behavior by setting the action conditions. 
 
-.. image:: images/spoc/zabbix_action_1.png
+.. image:: _images/spoc/zabbix_action_1.png
    :alt: New action in Zabbix
 
 Then, update the :guilabel:`Operations` and :guilabel:`Recovery Operations` tabs with the appropriate JSON payload.
@@ -128,7 +128,7 @@ The payload for the :guilabel:`Recovery Operations` tab is available in the GitH
 
 As a last step, update the operations section on both tabs to send the notification to Splunk On-Call users through the Splunk On-Call Webhook media type. When completed, both tabs look like the following:
 
-.. image:: images/spoc/zabbix_action_operations.png
+.. image:: _images/spoc/zabbix_action_operations.png
    :alt: Action operations
 
 Ack-Back Setup 4.4-5.x
@@ -311,7 +311,7 @@ Configure multiple Zabbix servers
 
 If you want to use the Splunk On-Call integration on multiple Zabbix servers, you need to update the Zabbix Action so that it includes the ``MONITOR_NAME`` field. You must add this to both the Default and Recovery message bodies.
 
-.. image:: images/spoc/zabbix_mult_monitors.png
+.. image:: _images/spoc/zabbix_mult_monitors.png
    :alt: Multiple monitors
 
 The ``MONITOR_NAME`` field must be unique for each Zabbix server that has the plugin installed.
@@ -329,12 +329,12 @@ Routing incidents in Splunk On-Call
 
 Any incident created by notifications sent to Splunk On-Call is processed on the default routing rule. If you prefer to use another routing key in Splunk On-Call, you can modify the media for the Splunk On-Call Alert user and put your Splunk On-Call routing key in the :guilabel:`Send to` field.
 
-.. image:: images/spoc/zabbix_routing_1.png
+.. image:: _images/spoc/zabbix_routing_1.png
    :alt: Access the Splunk On-Call Alert user
 
 Change the :guilabel:`Send To` to the routing key you want to use:
 
-.. image:: images/spoc/zabbix_routing_2.png
+.. image:: _images/spoc/zabbix_routing_2.png
    :alt: New Send to value
 
 To create multiple or complex routing schemes, you might need to create new Zabbix actions, users and or media types for the routing keys involved.
@@ -345,7 +345,7 @@ Troubleshooting
 
 If you are seeing JSON errors on the Webhook action like the following picture, it means there is some invalid JSON characters in the item or trigger names and descriptions.
 
-.. image:: images/spoc/jsonerror1.png
+.. image:: _images/spoc/jsonerror1.png
    :alt: JSON error
 
 Uncomment lines 9, 11, 14, and 17 in the Splunk On-Call media type script to parse out quotes and new line characters. If this fails to fix your issue, you can augment the regular expression for other invalidating characters or reach out to Splunk support.

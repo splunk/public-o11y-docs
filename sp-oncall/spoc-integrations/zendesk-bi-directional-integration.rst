@@ -27,12 +27,12 @@ status change to “pending” (or whatever status you desire) in Zendesk.
 From the main timeline select *Integrations* then search for Zendesk in
 the *3rd Party Integrations* tab.
 
-.. image:: images/Integrations-page.png
+..image images/Integrations-page.png
 
 If the integration has not yet been enabled, click the *Enable
 Integration* button to generate your configuration values as seen here:
 
-.. image:: images/Zendesk-API-Key.png
+..image images/Zendesk-API-Key.png
 
 Copy this endpoint URL to your clipboard.  You will need it when
 configuring Zendesk.
@@ -68,25 +68,25 @@ Create a target
 From your Zendesk portal select the *Settings Gear* on the left
 side-menu.
 
-.. image:: images/Zendesk-Settings.png
+..image images/Zendesk-Settings.png
 
  
 
 Under the *Settings* section, select *Extensions.*
 
-.. image:: images/Extensions.png
+..image images/Extensions.png
 
  
 
 In the resulting menu, click on *add a target.*
 
-.. image:: images/Add-a-Target.png
+..image images/Add-a-Target.png
 
  
 
 Select the *HTTP Target* option.
 
-.. image:: images/HTTP.png
+..image images/HTTP.png
 
  
 
@@ -97,7 +97,7 @@ of *POST* and *Content type* of *JSON.*  Leave the *Basic
 Authentication* box unchecked and the *Test target* option selected and
 click *Submit.*
 
-.. image:: images/HTTP-Target.png
+..image images/HTTP-Target.png
 
  
 
@@ -111,7 +111,7 @@ Copy and paste in the following *JSON body*, and click *Submit.*
 If configured correctly, you should see a 200 success response similar
 to this.
 
-.. image:: images/zendesk_200_response@2x.png
+..image images/zendesk_200_response@2x.png
 
  
 
@@ -119,14 +119,14 @@ Check your VictorOps timeline for a new event.  This is an INFO message
 which will not create a new incident in VictorOps, but is intended only
 to confirm that Zendesk can successfully send events to VictorOps.
 
-.. image:: images/INFO-alert.png
+..image images/INFO-alert.png
 
  
 
 Finally, click the *x* to exit the success message.  Change the option
 to *Create target* and click *Submit.*
 
-.. image:: images/Create-Target.png
+..image images/Create-Target.png
 
 --------------
 
@@ -138,13 +138,13 @@ Configure Alerts to VictorOps
 In the left side-menu, locate the section for *Business Rules* and
 select *Triggers.*
 
-.. image:: images/Triggers.png
+..image images/Triggers.png
 
  
 
 From the *Triggers* menu select *Add trigger.*
 
-.. image:: images/Add-Trigger.png
+..image images/Add-Trigger.png
 
  
 
@@ -159,7 +159,7 @@ Note: You may alter these to further filter which conditions will alert
 VictorOps or to fit your specific work-flow if you do not wish to create
 a VictorOps incident for *every* new case.
 
-.. image:: images/Critical-Trigger.png
+..image images/Critical-Trigger.png
 
  
 
@@ -168,7 +168,7 @@ Under the *Actions* section, click *Add Action*.  In the first dropdown
 target.*  In the second dropdown (right), select the VictorOps target
 you created earlier.
 
-.. image:: images/Critical-Trigger-Payload.png
+..image images/Critical-Trigger-Payload.png
 
  
 
@@ -203,7 +203,7 @@ incident and stop paging and escalation.
 
 Conditions: **Status is Pending.**
 
-.. image:: images/Acknowldge-Trigger.png
+..image images/Acknowldge-Trigger.png
 
  
 
@@ -225,7 +225,7 @@ the incident.
 
 Conditions: **Status is Closed.**
 
-.. image:: images/Resolved-Trigger.png
+..image images/Resolved-Trigger.png
 
  
 
@@ -287,21 +287,21 @@ Generate the Zendesk API Key.
 
 In the left side-menu, locate the *Channels* section and click on *API.*
 
-.. image:: images/API.png
+..image images/API.png
 
  
 
 In the *Zendesk API* menu, on the *Settings* tab, make sure that *Token
 Access* is enabled and then click the “+” button to generate a new key.
 
-.. image:: images/Zendesk-Token-Access.png
+..image images/Zendesk-Token-Access.png
 
  
 
 Give the key a name.  Click the *Copy* button to copy the key you your
 clipboard, and click *Save*.
 
-.. image:: images/Zendesk-API-Key-1.png
+..image images/Zendesk-API-Key-1.png
 
  
 
@@ -311,7 +311,7 @@ Set Up the Outgoing Webhook
 Back in VictorOps, click *Integrations* >> *Outgoing Webhooks.* In the
 Outgoing Webhooks menu, click *Add Webhook.*
 
-.. image:: images/Outgoing-webhooks.png
+..image images/Outgoing-webhooks.png
 
  
 
@@ -330,7 +330,7 @@ status value to your preferred status):
 
 Finally, give the webhook a brief description and click *Save*.
 
-.. image:: images/Zendesk-webhook.png
+..image images/Zendesk-webhook.png
 
  
 

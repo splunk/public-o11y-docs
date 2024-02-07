@@ -16,7 +16,7 @@ In Splunk On-Call , select **Integrations** *>>* **SignalFx**
 If the integration has not yet been enabled, click the “Enable
 Integration” button to generate your endpoint URL as seen below.
 
-.. image:: images/SignalFX_VO@2x.png
+..image images/SignalFX_VO@2x.png
 
 **In SignalFx**
 ---------------
@@ -24,17 +24,17 @@ Integration” button to generate your endpoint URL as seen below.
 From the SignalFx web portal select **Integrations** then select
 the **VictorOps** integration option under **Notification Services**.
 
-.. image:: images/SF_Integration_page@2x-1.png
+..image images/SF_Integration_page@2x-1.png
 
 Select **Create New Integration**.
 
-.. image:: images/Create-New-Integration@2x.png
+..image images/Create-New-Integration@2x.png
 
 Give the integration a name and then paste in your Splunk On-Call
 generated URL that you copied from the Splunk On-Call portal. Hit
 **Save** and a validation message will appear.
 
-.. image:: images/sigfx_vo@2x.png
+..image images/sigfx_vo@2x.png
 
 Add a Splunk On-Call notification to a detector
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

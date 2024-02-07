@@ -82,7 +82,7 @@ In the Triggered Incidents section, you want to do a couple of things:
    a loud one!).
 2. Make sure you toggle and enable the option for “**Override System
    Notification Volume**”.
-3. Finally, Go to **Manage Channel Settings**. |image1|
+3. Finally, Go to **Manage Channel Settings**. |image
 
 In the Channel Settings now, you will want to do two things:
 

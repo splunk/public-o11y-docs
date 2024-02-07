@@ -33,7 +33,7 @@ give this notification a title and description that you'll remember.
 You'll then want to select :guilabel:`HTTP Notification` for notification type
 and copy the :guilabel:`Service API Endpoint` from above into the :guilabel:`URL` field.
 
-.. image:: images/graylog1-2.png
+ images/graylog1-2.png
 
 Put the appropriate routing key at the end of the url and be sure to add
 it to Graylog's whitelisted URL's if you have that enabled.
@@ -41,7 +41,7 @@ it to Graylog's whitelisted URL's if you have that enabled.
 Next click **Execute Test Notification.** This should produce an info
 type alert on your timeline if everything is setup properly.
 
-.. image:: images/graylog2.png
+ images/graylog2.png
 
 Now your notification is all setup! Be sure to click **Create/Update**
 to save this notification.
@@ -60,7 +60,7 @@ one. Then go to the **Notifications** tab of the **Event
 Definition** and click **Add Notification**. Select the notification you
 just made and click **Done**.
 
-.. image:: images/graylog3.png
+ images/graylog3.png
 
 Splunk On-Call automatically aggregates alerts with the same **Event
 Definition ID**.

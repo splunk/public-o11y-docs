@@ -26,7 +26,7 @@ Pulse.**
 If the integration has not yet been enabled, click the “Enable
 Integration” button.  Copy the “Service API Key” to your clipboard.
 
-.. image:: images/Integration-BMC-page-final.png
+..image images/Integration-BMC-page-final.png
 
 --------------
 

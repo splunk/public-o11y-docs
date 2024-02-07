@@ -38,7 +38,7 @@ In DataDog
 ----------
 
 Click “Integrations” in the sidebar menu, find the VictorOps
-integration, and click “Available” then “Install”. |image1|
+integration, and click “Available” then “Install”. |image
 
 In the resulting modal, click the configuration tab. Here you will be
 able to paste in your *VictorOps API Key* as well as include the
@@ -50,7 +50,7 @@ Finally, add @victorops- to your Datadog metric monitors. To ensure a
 monitor will auto-resolve the corresponding VictorOps incident, make
 sure that @victorops is selected in the monitor's notification step.
 
-.. image:: images/datadog-notify-@victorops.png
+..image images/datadog-notify-@victorops.png
 
 Finally, check that VictorOps has installed properly and you're done!
 
@@ -84,7 +84,7 @@ Next, you must create an Alert Rules Engine rule to conditionally fire
 the above webhook. To do so, navigate to *Settings >> Alert Rules
 Engine* and create the following rule:
 
-.. image:: images/Screen-Shot-2019-10-09-at-9.45.55-AM.png
+..image images/Screen-Shot-2019-10-09-at-9.45.55-AM.png
 
 When **monitoring_tool** matches **Datadog**
 
@@ -107,7 +107,7 @@ links to the Datadog UI. We recommend the following Rules Engine
 annotations, which can either independent or be added to the rule
 created previously:
 
-.. image:: images/Screen-Shot-2019-10-09-at-9.49.00-AM.png
+..image images/Screen-Shot-2019-10-09-at-9.49.00-AM.png
 
 When **monitoring_tool** matches **Datadog**
 
@@ -120,5 +120,5 @@ When **monitoring_tool** matches **Datadog**
    -  URL : Event Link: E - *Provides a clickable link to the event in
       the Datadog UI*
 
-.. |image1| image:: images/Screen-Shot-2019-10-09-at-9.31.19-AM.png
-.. |image2| image:: images/Screen-Shot-2019-10-09-at-9.35.26-AM.png
+.. |image1 images/Screen-Shot-2019-10-09-at-9.31.19-AM.png
+.. |image2 images/Screen-Shot-2019-10-09-at-9.35.26-AM.png

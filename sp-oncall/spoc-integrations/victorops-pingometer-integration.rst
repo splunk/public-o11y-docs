@@ -6,7 +6,7 @@ necessary steps to integrate your Pingometer alerts with VictorOps.
 -----------------
 
 In VictorOps, select **Settings** *>>* **Alert Behavior** *>>*
-**Integrations** *>>* **Pingometer** |image1|
+**Integrations** *>>* **Pingometer** |image
 
 If the integration has not yet been enabled, click the “Enable
 Integration” button to generate your endpoint URL as seen below.  Be
@@ -14,7 +14,7 @@ sure to replace the “$routing_key” section with the actual routing key
 you intend to use. (To view or configure route keys in VictorOps,
 click *Alert Behavior >> Route Keys*)
 
-.. image:: images/Pingometer-final.png
+..image images/Pingometer-final.png
 
 **In Pingometer:**
 ------------------
@@ -76,4 +76,4 @@ Key <http://victorops.force.com/knowledgebase/articles/Getting_Started/Incident-
 
 Hit submit and you are done!
 
-.. |image1| image:: images/Integration-ALL-FINAL.png
+.. |image image:: images/Integration-ALL-FINAL.png

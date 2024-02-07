@@ -22,7 +22,7 @@ shortcuts to the information that is most relevant to you. Quickly
 access your incidents, your teams incidents, who is currently on-call,
 along with next on-call, and much more!
 
-|image1|\ |image2|
+|image\ |image2|
 
 Home Page
 ~~~~~~~~~
@@ -57,7 +57,7 @@ Overrides click
 
  images/Overrides_Preview.png
 
-.. |image1| image:: images/Mobile-Home-Page_2.png
-.. |image2| image:: images/Mobile-Home-Page.png
-.. |image3| image:: images/Current-On-Call-Click.png
-.. |image4| image:: images/On-Call-Takes.png
+.. |image1 images/Mobile-Home-Page_2.png
+.. |image2 images/Mobile-Home-Page.png
+.. |image3  images/Current-On-Call-Click.png
+.. |image4  images/On-Call-Takes.png

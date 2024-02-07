@@ -8,7 +8,7 @@ person gets notified and you can collaborate with your team.
 ----------------
 
 In VictorOps, select **Settings** *>>* **Alert Behavior** *>>*
-**Integrations** *>>* **Raygun** |image1|
+**Integrations** *>>* **Raygun** |image
 
 If the integration has not yet been enabled, click the “Enable
 Integration” button to generate your endpoint URL as seen below.  Be
@@ -18,18 +18,18 @@ click *Alert Behavior >> Route Keys*)
 
  
 
-.. image:: images/Raygun-final.png
+..image images/Raygun-final.png
 
 **In Raygun**
 -------------
 
 Select **Integrations** from the left side bar. 
 
-.. image:: images/Raygun-Inte@2x.png
+..image images/Raygun-Inte@2x.png
 
 Select the **VictorOps** icon.
 
-.. image:: images/Raygun-VO-App@2x.png
+..image images/Raygun-VO-App@2x.png
 
 Select the **Setup** tab and then enter in your VictorOps API key and
 Routing Key.
@@ -46,4 +46,4 @@ Finally select **Save Changes** and you are done!
 
 If you have any questions please reach out to support@victorops.com.
 
-.. |image1| image:: images/Integration-ALL-FINAL.png
+.. |image image:: images/Integration-ALL-FINAL.png
