@@ -7,7 +7,7 @@ MySQL receiver
 .. meta::
       :description: The MySQL receiver allows the Splunk Distribution of OpenTelemetry Collector to query and retrieve metrics about MySQL's global status and InnoDB tables.
 
-The MySQL receiver Queries and retrieves metrics about MySQL's global status and InnoDB tables. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
+The MySQL receiver queries and retrieves metrics about MySQL's global status and InnoDB tables. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
 Prerequisites and requirements
 ====================================
@@ -93,7 +93,7 @@ The following settings are optional:
 
 * ``collection_interval``. ``10s`` by default. This receiver collects metrics on this interval. 
 
-  * This value must be a string readable by Golang's ParseDuration function. Learn more at Golang's official documentation at :new-page:`func ParseDuration <https://pkg.go.dev/time#ParseDuration>`. 
+  * This value must be a string readable by Golang's ParseDuration function. Learn more at Golang's official documentation at :new-page:`ParseDuration <https://pkg.go.dev/time#ParseDuration>`. 
   
   * Valid time units are ``ns``, ``us`` (or ``µs``), ``ms``, ``s``, ``m``, or ``h``.
 
