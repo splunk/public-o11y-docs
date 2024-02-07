@@ -126,6 +126,7 @@ Some profiler issues might be specific to the APM instrumentation. See the follo
 
 - :ref:`java-profiler-issues`
 - :ref:`nodejs-profiler-issues`
+- :ref:`dotnet-otel-profiler-issues`
 - :ref:`dotnet-profiler-issues`
 
 Deactivate profiling log data for specific hosts

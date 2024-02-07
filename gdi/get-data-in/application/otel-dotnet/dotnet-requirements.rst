@@ -81,6 +81,11 @@ Traces instrumentations
      - Experimental Beta
      - Community support
      - ``HTTPCLIENT``
+   * - Confluent.Kafka
+     - 1.4.0 to 3.0.0
+     - Experimental Beta
+     - Community support
+     - ``KAFKA``
    * - MassTransit |br| (Not supported on .NET Framework)
      - 8.0.0 and higher
      - Experimental Beta
@@ -189,7 +194,7 @@ Logs instrumentations
      - Support level
      - Instrumentation ID
    * - Microsoft.Extensions.Logging |br| (Not supported on .NET Framework)
-     - 6.0.0 and higher
+     - 8.0.0 and higher
      - Experimental Beta
      - Community support
      - ``ILOGGER`` |br| (Requires the trace instrumentation)

@@ -28,7 +28,7 @@ Set the required environment variables in your function's settings:
 
 #. Select your function in Function App.
 
-#. Go to :guilabel:`Settings`, then :guilabel:` Configuration`.
+#. Go to :guilabel:`Settings`, then :guilabel:`Configuration`.
 
 #. Select :strong:`New application setting` to add the following settings:
 
@@ -62,7 +62,7 @@ Isolated worker process function
    - :new-page:`OpenTelemetry <https://www.nuget.org/packages/OpenTelemetry>`
    - :new-page:`OpenTelemetry.Exporter.OpenTelemetryProtocol <https://www.nuget.org/packages/OpenTelemetry.Exporter.OpenTelemetryProtocol>`
    - :new-page:`OpenTelemetry.Instrumentation.Http <https://www.nuget.org/packages/OpenTelemetry.Instrumentation.Http>`
-   - :new-page:`OpenTelemetry.Instrumentation.AspNetCore <https://www.nuget.org/packages/OpenTelemetry.Instrumentation.AspNetCore>`
+   - :new-page:`OpenTelemetry.ResourceDetectors.Azure <https://www.nuget.org/packages/OpenTelemetry.ResourceDetectors.Azure>`
 
 In-process function
 ----------------------------------------------------
@@ -83,7 +83,7 @@ In-process function
 Initialize OpenTelemetry in the code
 =================================================
 
-After adding the dependencies, initialize OpenTelemetry in your function:
+After adding the dependencies, initialize OpenTelemetry in your function.
 
 Isolated worker process function
 ----------------------------------------------------
@@ -92,56 +92,56 @@ Add startup initialization in the Program.cs file:
 
 .. code-block:: csharp
 
+   using Microsoft.Extensions.DependencyInjection;
    using Microsoft.Extensions.Hosting;
+   using OpenTelemetry;
+   using OpenTelemetry.Exporter;
+   using OpenTelemetry.ResourceDetectors.Azure;
    using OpenTelemetry.Resources;
    using OpenTelemetry.Trace;
-   using OpenTelemetry;
    using System.Diagnostics;
-   using Microsoft.Extensions.DependencyInjection;
-   
-   TracerProvider? traceProvider = null;
-   
+
    // Get environment variables from function configuration
    // You need a valid Splunk Observability Cloud access token and realm
    var serviceName = Environment.GetEnvironmentVariable("WEBSITE_SITE_NAME") ?? "Unknown";
    var accessToken = Environment.GetEnvironmentVariable("SPLUNK_ACCESS_TOKEN")?.Trim();
    var realm = Environment.GetEnvironmentVariable("SPLUNK_REALM")?.Trim();
-   if (realm != null && accessToken != null)
-   {
-      var exportOpts = new OpenTelemetry.Exporter.OtlpExporterOptions();
-   // Ingest endpoint for traces, defined using the Splunk Observability Cloud realm
-      exportOpts.Endpoint = new Uri("https://ingest." + realm + ".signalfx.com/v2/trace/otlp");
-      exportOpts.Protocol = OpenTelemetry.Exporter.OtlpExportProtocol.HttpProtobuf;
-      exportOpts.Headers = "X-SF-TOKEN=" + accessToken;
-   
-      traceProvider = OpenTelemetry.Sdk.CreateTracerProviderBuilder()
-         .AddHttpClientInstrumentation(op =>
-         {
-               op.FilterHttpWebRequest = req => Activity.Current?.Parent != null;
-         })
-         .AddAspNetCoreInstrumentation()
-         .AddSource("*")
-         .AddSource(serviceName)
-         .SetSampler(new AlwaysOnSampler())
-   // Add resource attributes to all spans
-         .SetResourceBuilder(
-               ResourceBuilder.CreateDefault()
-               .AddService(serviceName: serviceName, serviceVersion: "1.0.0")
-               .AddAttributes(new Dictionary<String, Object>() {
-               { "faas.instance", Environment.GetEnvironmentVariable("WEBSITE_INSTANCE_ID") }
-               }))
-   // Use batch processor
-         .AddProcessor(new BatchActivityExportProcessor(
-               new OpenTelemetry.Exporter.OtlpTraceExporter(exportOpts)))
-         .Build();
-   }
-   
+
+   ArgumentNullException.ThrowIfNull(accessToken, "SPLUNK_ACCESS_TOKEN");
+   ArgumentNullException.ThrowIfNull(realm, "SPLUNK_REALM");
+
+   var tp = Sdk.CreateTracerProviderBuilder()
+      // Use Add[instrumentation-name]Instrumentation to instrument missing services
+      // Use Nuget to find different instrumentation libraries
+      .AddHttpClientInstrumentation(opts =>
+      {
+         // This filter prevents background (parent-less) http client activity
+         opts.FilterHttpWebRequest = req => Activity.Current?.Parent != null;
+         opts.FilterHttpRequestMessage = req => Activity.Current?.Parent != null;
+      })
+      // Use AddSource to add your custom DiagnosticSource source names
+      //.AddSource("My.Source.Name")
+      // Creates root spans for function executions
+      .AddSource("Microsoft.Azure.Functions.Worker")
+      .SetSampler(new AlwaysOnSampler())
+      .ConfigureResource(configure => configure
+         .AddService(serviceName: serviceName, serviceVersion: "1.0.0")
+         // See https://github.com/open-telemetry/opentelemetry-dotnet-contrib/tree/main/src/OpenTelemetry.ResourceDetectors.Azure
+         // for other types of Azure detectors
+         .AddDetector(new AppServiceResourceDetector()))
+      .AddOtlpExporter(opts =>
+      {
+         opts.Endpoint = new Uri($"https://ingest.{realm}.signalfx.com/v2/trace/otlp");
+         opts.Protocol = OtlpExportProtocol.HttpProtobuf;
+         opts.Headers = $"X-SF-TOKEN={accessToken}";
+      })
+      .Build();
+
    var host = new HostBuilder()
       .ConfigureFunctionsWorkerDefaults()
-      .ConfigureServices(services => 
-         services.AddSingleton(traceProvider))
+      .ConfigureServices(services => services.AddSingleton(tp))
       .Build();
-   
+
    host.Run();
 
 .. note:: When instrumenting isolated worker process functions, you can encapsulate startup initialization and parameters into other functions.
@@ -181,8 +181,8 @@ Define a startup function and decorate the assembly with it. The startup functio
             ArgumentNullException.ThrowIfNull(realm, "SPLUNK_REALM");
 
             var tp = Sdk.CreateTracerProviderBuilder()
-                // Use Add[instrumentation-name]Instrumentation to instrument missing services
-                // Use Nuget to find different instrumentation libraries
+               // Use Add[instrumentation-name]Instrumentation to instrument missing services
+               // Use Nuget to find different instrumentation libraries
                .AddHttpClientInstrumentation(opts => 
                   // This filter prevents background (parent-less) http client activity
                   opts.Filter = req => Activity.Current?.Parent != null)
@@ -195,13 +195,13 @@ Define a startup function and decorate the assembly with it. The startup functio
                   ResourceBuilder.CreateDefault()
                   .AddService(serviceName: serviceName, serviceVersion: "1.0.0")
                   .AddAttributes(new Dictionary<string, object>() {
-                        { "faas.instance", Environment.GetEnvironmentVariable("WEBSITE_INSTANCE_ID") }
+                     { "faas.instance", Environment.GetEnvironmentVariable("WEBSITE_INSTANCE_ID") }
                   }))
                .AddOtlpExporter(opts =>
                {
-                   opts.Endpoint = new Uri($"https://ingest.{realm}.signalfx.com/v2/trace/otlp");
-                   opts.Protocol = OtlpExportProtocol.HttpProtobuf;
-                   opts.Headers = $"X-SF-TOKEN={accessToken}";
+                  opts.Endpoint = new Uri($"https://ingest.{realm}.signalfx.com/v2/trace/otlp");
+                  opts.Protocol = OtlpExportProtocol.HttpProtobuf;
+                  opts.Headers = $"X-SF-TOKEN={accessToken}";
                })
                .Build();
 
@@ -214,7 +214,7 @@ Define a startup function and decorate the assembly with it. The startup functio
 Instrument the code to send spans
 =================================================
 
-Next, instrument your code using OpenTelemetry. Use the following examples as a starting point to instrument your code.
+Next, instrument your code using OpenTelemetry. Use the following examples as a starting point to instrument your code. See :new-page:`https://learn.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings <https://learn.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings>` in Microsoft Azure documentation for steps to add environment variables to an Azure function.
 
 Isolated worker process function
 ----------------------------------------------------

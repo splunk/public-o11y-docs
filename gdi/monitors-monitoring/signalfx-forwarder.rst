@@ -1,10 +1,12 @@
 .. _signalfx-forwarder:
 
-SignalFx Forwarder
-==================
+SignalFx Forwarder (deprecated)
+==================================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the SignalFX forwarder receiver. See benefits, install, configuration, and metrics
+
+.. note:: This integration is deprecated. If you're using the Splunk Distribution of the OpenTelemetry Collector and want to forward data to Splunk Observability Cloud, use the native OTLP receiver. See more at :new-page:`OTLP receiver <https://github.com/open-telemetry/opentelemetry-collector/tree/main/receiver/otlpreceiver>` GitHub documentation.
 
 The
 :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`

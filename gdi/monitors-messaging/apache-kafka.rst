@@ -176,8 +176,7 @@ The following table shows the configuration options for this monitor:
       - Specifies how to map JMX MBean values to metrics. If using a
          specific service monitor such as Cassandra, Kafka, or ActiveMQ,
          they come pre-loaded with a set of mappings, and any that you
-         add in this option will be merged with those. See GenericJMX
-         for more details.
+         add in this option will be merged with those. To learn more, see the :new-page:`Collectd documentation <https://www.collectd.org/documentation/manpages/collectd-java.html>`.
    - 
 
       - ``clusterName``

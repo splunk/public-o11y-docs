@@ -23,10 +23,27 @@ Follow these steps to configure and activate the component:
 2. Configure the Filelog receiver as described in the next section.
 3. Restart the Collector.
 
-Sample configurations
+Sample configuration
 --------------------------------
 
-To activate the Filelog receiver, add ``filelog`` to the ``receivers`` section of your configuration file, as in the following sample configurations. 
+To activate the Filelog receiver, add ``filelog`` to the ``receivers`` section of your configuration file:
+
+.. code-block:: yaml
+
+  receivers:
+    filelog:
+
+To complete the configuration, include the receiver in the ``logs`` pipeline of the ``service`` section of your configuration file:
+
+.. code:: yaml
+
+  service:
+    pipelines:
+      logs:
+        receivers: [filelog]
+
+Configuration examples
+--------------------------------
 
 This example shows how to tail a simple JSON file:
 
@@ -66,7 +83,7 @@ The receiver reads logs from the simple.log file, such as:
 ``2023-06-20 12:50:00 DEBUG This is a test debug message``
 
 Use operators to format logs
---------------------------------------------
+============================================
 
 The Filelog receiver uses operators to process logs into a desired format. Each operator fulfills a single responsibility, such as reading lines from a file, or parsing JSON from a field. You need to chain operators together in a pipeline to achieve your desired result.
 
@@ -163,13 +180,15 @@ The Filelog receiver supports the following encodings:
 	
 Other less common encodings are supported on a best-effort basis. See the list of available encodings in :new-page:`https://www.iana.org/assignments/character-sets/character-sets.xhtml <https://www.iana.org/assignments/character-sets/character-sets.xhtml>`.
 
-Advanced configurations
---------------------------------
+Advanced use cases
+============================================
 
-See a few configuration examples in the following sections. You can find more examples in the GitHub repository :new-page:`splunk-otel-collextor/examples <https://github.com/signalfx/splunk-otel-collector/tree/main/examples>`.
+See a few use cases for the Filelog receiver in the following sections. 
+
+You can find more examples in the GitHub repository :new-page:`splunk-otel-collextor/examples <https://github.com/signalfx/splunk-otel-collector/tree/main/examples>`.
 
 Send logs to Splunk Cloud
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------
 
 Use the following configuration to send logs to Splunk Cloud:
 
@@ -196,24 +215,21 @@ Use the following configuration to send logs to Splunk Cloud:
       source: "otel"
       sourcetype: "otel"
 
-
-
   receivers:
-  filelog:
-    include: [ /output/file.log ]
-    operators:
-      - type: regex_parser
-        regex: '(?P<before>.*)\d\d\d\d-\d\d\d-\d\d\d\d(?P<after>.*)'
-        parse_to: body.parsed
-        output: before_and_after
-      - id: before_and_after
-        type: add
-        field: body
-        value: EXPR(body.parsed.before + "XXX-XXX-XXXX" + body.parsed.after)
-
+    filelog:
+      include: [ /output/file.log ]
+      operators:
+        - type: regex_parser
+          regex: '(?P<before>.*)\d\d\d\d-\d\d\d-\d\d\d\d(?P<after>.*)'
+          parse_to: body.parsed
+          output: before_and_after
+        - id: before_and_after
+          type: add
+          field: body
+          value: EXPR(body.parsed.before + "XXX-XXX-XXXX" + body.parsed.after)
 
 Send truncated logs to Splunk Enterprise
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------
 
 Use the following configuration to truncate logs and send them to Splunk Enterprise:
 
@@ -221,7 +237,7 @@ Use the following configuration to truncate logs and send them to Splunk Enterpr
   :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/examples/otel-logs-truncate-splunk/otel-collector-config.yml
 
 Send sanitized logs to Splunk Enterprise
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------
 
 Use the following configuration to sanitize logs and send them to Splunk Enterprise.
 
@@ -229,7 +245,7 @@ Use the following configuration to sanitize logs and send them to Splunk Enterpr
   :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/examples/otel-logs-sanitization-splunk/otel-collector-config.yml
 
 Route logs to different indexes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------
 
 Use the following configuration to route logs to different Splunk indexes.
 
@@ -237,7 +253,7 @@ Use the following configuration to route logs to different Splunk indexes.
   :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/examples/otel-logs-processor-splunk/otel-collector-config.yml
 
 Associate log sources with source types 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------
 
 This example showcases how the Collector collects data from files and sends it to Splunk Enterprise, associating each source with a different source type. The source type is a default field that identifies the structure of an event, and determines how Splunk Enterprise formats the data during the indexing process.
 
@@ -247,7 +263,7 @@ This example showcases how the Collector collects data from files and sends it t
 Settings
 ======================
 
-.. note:: By default, no logs are read from a file that is not actively being written to because ``start_at`` defaults to ``end``.
+.. note:: By default, the receiver doesn't read logs from a file that is not actively being written to because ``start_at`` defaults to ``end``.
 
 The following table shows the configuration options for the Filelog receiver:
 

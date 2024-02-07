@@ -11,17 +11,20 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     :maxdepth: 5
     :hidden:
 
-    Migrate from the Smart Agent to the Collector <smart-agent-migration-to-otel-collector.rst>
     otel-requirements.rst
     components.rst
     install-the-collector.rst
-    configure-the-collector.rst
-    collector-how-to.rst
+    Collector for Kubernetes <collector-kubernetes/collector-kubernetes-intro.rst>
+    Collector for Linux <collector-linux/collector-linux-intro.rst>
+    Collector for Windows <collector-windows/collector-windows-intro.rst>     
+    deployments/otel-deployments.rst  
     Zero config auto instrumentation <zero-config.rst>
     Discover metric sources automatically <discovery-mode.rst>
     Use the Universal Forwarder <collector-with-the-uf.rst>
+    Monitor the Collector with built-in dashboards <collector-builtin-dashboard.rst>
     Troubleshooting <troubleshooting.rst>
     Commands reference <otel-commands.rst>
+    Migrate from the Smart Agent to the Collector <smart-agent/smart-agent-migration-to-otel-collector.rst>
     
 Use the Splunk Distribution of the OpenTelemetry Collector to receive, process, and export metric, trace, and log data and metadata for Splunk Observability Cloud.
 
@@ -33,11 +36,9 @@ Learn more about the Splunk Observability Cloud data model at :ref:`data-model`.
     <h2>How does the Collector work?<a name="collector-intro-how" class="headerlink" href="#collector-intro-how" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-The OpenTelemetry Collector is a tech-agnostic way to receive, process and export telemetry data.
+.. include:: /_includes/collector-works.rst
 
-After you've installed the Collector in your platform, update your config file to define the different Collector components (receivers, processors, and exporters) you want to use. However, receivers and exporters are not enabled until they are in a pipeline, as explained in the next paragraph. You can also add extensions that provide the OpenTelemetry Collector with additional functionality, such as diagnostics and health checks. Find the available components at :ref:`otel-components`.  
-
-Next, you need to configure your service pipelines to determine how to process your data. In the pipelines section you tie together the receivers, processors and exporters, designing the path your data takes. Multiple pipelines can be defined, and a single receiver or exporter definition can be used in multiple pipelines. A single pipeline can also have multiple receivers or exporters within it. Learn more at :ref:`otel-data-processing`. 
+Learn more at :ref:`otel-understand-use`.  
 
 .. raw:: html
 
@@ -111,7 +112,7 @@ The following table describes everything you need to start using the Collector:
   *   - Resource
       - Description
   *   - Access token
-      - Use an access token to track and manage your resource usage. Where you see ``<access_token>``, replace it with the name of your access token. See :ref:`admin-org-tokens`.
+      - Use an access token to track and manage your resource usage. Where you see ``<access_token>``, replace it with the name of your access token. Your access token needs to have the ingest authorization scope. See :ref:`admin-org-tokens`.
   *   - Realm
       - A realm is a self-contained deployment that hosts organizations. You can find your realm name on your profile page in the user interface. Where you see ``<REALM>``, replace it with the name of your organization's realm. See :new-page:`realms <https://dev.splunk.com/observability/docs/realms_in_endpoints/>`.   
   *   - Ports and endpoints
@@ -147,25 +148,37 @@ You can deploy the Collector in two modes: Host monitoring (agent) or data forwa
 
 Learn more at :ref:`otel-deployment-mode`.
 
+.. _collector-guided-install:
+
 .. raw:: html
 
   <embed>
-    <h3>Install the Collector<a name="collector-intro-install" class="headerlink" href="#collector-intro-install" title="Permalink to this headline">¶</a></h3>
+    <h3>Guided install for the Collector<a name="collector-guided-install" class="headerlink" href="#collector-guided-install" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-Learn how to install, deploy, upgrade or uninstall the Collector in :ref:`otel-install-platform`. Or use :ref:`our guided install <collector-guided-install>`.
+Splunk Observability Cloud offers a guided setup to install the Collector:
 
-This distribution is supported on and packaged for a variety of platforms, including:
+#. Log in to Splunk Observability Cloud.
+#. In the navigation menu, select :menuselection:`Data Management`.
+#. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+#. Select one of the platforms in the :guilabel:`Splunk OpenTelemetry Collector` section.
+#. Follow the step-by-step process provided in the platform's guided setup.
 
-- Kubernetes: :ref:`Helm <helm-chart>` (recommended) and :ref:`YAML <resource-yaml-manifests>`.
-- Linux: :ref:`installer script <linux-scripts>` (recommended), :ref:`Ansible <deployment-linux-ansible>`, :ref:`Puppet <deployment-linux-puppet>`, :ref:`Heroku <linux-heroku>`, and :ref:`manual <linux-manual>` (including DEB/RPM packages, Docker, and binary).
-- Windows: :ref:`installer script <windows-script>` (recommended), :ref:`Ansible <deployment-windows-ansible>`, :ref:`Puppet <deployment-windows-puppet>`, and :ref:`manual <otel-install-windows-manual>` (including MSI with GUI and PowerShell).
+.. raw:: html
 
-After you've installed the Collector, see: 
+  <embed>
+    <h3>Advanced install<a name="collector-intro-install" class="headerlink" href="#collector-intro-install" title="Permalink to this headline">¶</a></h3>
+  </embed>
 
-* :ref:`otel-configuration`  
-* :ref:`otel-configuration-ootb`
-* :ref:`otel-other-configuration-sources`
+The Splunk distribution of the OpenTelemetry Collector is supported on and packaged for a variety of platforms, including:
+
+* :ref:`Collector for Kubernetes <collector-kubernetes-intro>`
+* :ref:`Collector for Linux <collector-linux-intro>`
+* :ref:`Collector for Windows <collector-windows-intro>`   
+
+You can also deploy the Collector with tools such as Amazon ECS EC2, Amazon Fargate, Ansible, Nomad, PCF, or Puppet. Learn more at :ref:`otel_deployments`.
+
+See also :ref:`otel-other-configuration-sources`.
 
 .. _otel-monitoring:
 
@@ -175,7 +188,7 @@ After you've installed the Collector, see:
     <h2>Monitor the Collector<a name="otel-monitoring" class="headerlink" href="#otel-monitoring" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-The default configuration automatically scrapes the Collector's own metrics and sends the data using the ``signalfx`` exporter. A built-in dashboard provides information about the health and status of Collector instances. In addition, logs are automatically collected for the Collector and Journald processes.
+Splunk Observability Cloud offers you a wide array of monitoring features, including a built-in dashboard which provides out-of-the-box information about the health and status of your deployed OTel Collector instances. Learn more at :ref:`collector-builtin-dashboard`.
 
 The Collector also offers a :ref:`zPages extension <zpages-extension>`, which provides live data about the Collector. zPages are useful for in-process diagnostics without having to depend on any back end to examine traces or metrics.
 

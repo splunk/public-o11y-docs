@@ -74,7 +74,7 @@ You can then add the attributes processors to any compatible pipeline. For examp
    service:
      pipelines:
        traces:
-         receivers: [jaeger, otlp, smartagent/signalfx-forwarder, zipkin]
+         receivers: [jaeger, otlp, zipkin]
          processors:
          - attributes/traces
          - memory_limiter
@@ -82,7 +82,7 @@ You can then add the attributes processors to any compatible pipeline. For examp
          - resourcedetection
          exporters: [sapm, signalfx]
        metrics:
-         receivers: [hostmetrics, otlp, signalfx, smartagent/signalfx-forwarder]
+         receivers: [hostmetrics, otlp, signalfx]
          processors:
          - attributes/metrics
          - memory_limiter

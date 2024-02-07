@@ -1,8 +1,8 @@
 .. _deployments-nomad:
 
-****************************
-Nomad
-****************************
+********************************************************
+Deploy the Collector with Nomad
+********************************************************
 
 .. meta::
       :description: Deploy the Splunk Observability Cloud OpenTelemetry Collector using Nomad.

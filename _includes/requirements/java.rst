@@ -13,6 +13,7 @@ The following Java Virtual Machines (JVMs) are compatible:
 - IBM J9
 - Microsoft OpenJDK
 - OpenJDK
+- Oracle JDK
 - SAP SapMachine
 
 .. note:: AlwaysOn Profiling is not supported on Oracle JDK 8 and IBM J9.

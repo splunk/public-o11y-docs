@@ -1,12 +1,12 @@
 .. _disk:
 
-Disk and partition
-==================
+Disk and partition (deprecated)
+====================================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the disks monitor. See benefits, install, configuration, and metrics
 
-.. note:: If you're using the Splunk Distribution of OpenTelemetry Collector and want to collect disk I/O metrics, use the native OTel component :ref:`host-metrics-receiver`.
+.. note:: This integration is deprecated. If you're using the Splunk Distribution of the OpenTelemetry Collector and want to collect disk I/O metrics, use the native OTel component :ref:`host-metrics-receiver`.
 
 Configuration settings
 ----------------------
@@ -34,21 +34,6 @@ The following table shows the configuration options for this monitor:
       - IgnoreSelected
       - Ignore the designation of specific Disks
       - ``false``
-
-Metrics
--------
-
-The following metrics are available for this integration:
-
-.. raw:: html
- 
-      <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/collectd/disk/metadata.yaml"></div>
-
-
-Notes
-~~~~~
-
-.. include:: /_includes/metric-defs.rst
 
 Troubleshooting
 ---------------
