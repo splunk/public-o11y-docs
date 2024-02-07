@@ -26,6 +26,7 @@ Follow these steps to create an SLO.
         .. list-table::
           :header-rows: 1
           :widths: 40 60
+          :width: 100%
 
           * - :strong:`Field name`
             - :strong:`Actions`
@@ -44,6 +45,7 @@ Follow these steps to create an SLO.
         .. list-table::
           :header-rows: 1
           :widths: 40 60
+          :width: 100%
 
           * - :strong:`Field name`
             - :strong:`Actions`
@@ -59,7 +61,8 @@ Follow these steps to create an SLO.
     .. list-table::
       :header-rows: 1
       :widths: 20 80
-
+      :width: 100%
+      
       * - :strong:`Field name`
         - :strong:`Actions`
       * - Target (%)
@@ -72,6 +75,7 @@ Follow these steps to create an SLO.
     .. list-table::
       :header-rows: 1
       :widths: 20 80
+      :width: 100%
 
       * - :strong:`Alert`
         - :strong:`Description`
