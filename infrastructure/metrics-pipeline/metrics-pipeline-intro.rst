@@ -6,7 +6,7 @@ Introduction to metrics pipeline management
 ******************************************************
 
 .. meta::
-    :description: Introduction to metrics pipeline management in Splunk Infrastructure Monitoring
+    :description: Introduction to metrics pipeline management in Splunk Observability Cloud.
 
 |hr|
 
@@ -14,16 +14,10 @@ Introduction to metrics pipeline management
 
 |hr|
 
-.. meta::
-    :description: Introduction to metrics pipeline management in Splunk Observability Cloud.
-
-Metrics pipeline management is an evolution of Splunk Observability Cloud metrics platform that offers you solutions to
+Metrics pipeline management (MPM) is an evolution of the Splunk Observability Cloud metrics platform that offers you solutions to
 centrally manage metric cardinality.
 
-With metrics pipeline management, you have more control over how you ingest and store your metrics, so you can lower
-costs and improve monitoring performance without updating the configuration of your
-:ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>`. To remove data pre-ingest using the Collector,
-see :ref:`configure-remove`.
+With MPM, you have more control over how you ingest and store your metrics, so you can lower costs and improve monitoring performance without updating the configuration of your instance of the :ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>`. To remove data pre-ingest using the Collector, see :ref:`configure-remove`.
 
 What is metric cardinality?
 =============================
@@ -48,13 +42,7 @@ To learn more about MTS, see :ref:`metric-time-series`. To learn more about the 
 How does metrics pipeline management work?
 ========================================================
 
-The driving mechanisms behind metrics pipeline management are aggregation and data dropping. For each metric you send to
-Observability Cloud, you can control the metric volume with a set of aggregation and data dropping rules.
-
-.. note:: A new aggregated MTS has a resolution of 10 seconds. Metrics pipeline management rolls up the raw data
-   points received into one aggregated data point, for each MTS associated with the metric. If your systems emit data
-   points over a period that's much longer than 10 seconds, you might have difficulty reconciling your raw data with
-   the aggregated data. To learn more, see the section :ref:`mts-aggregation-rollup-period`.
+With MPM, for each metric you send to Splunk Observability Cloud you can control the metric volume with aggregation and data dropping rules:
 
 * Aggregation rules let you roll up your selected metric data into new metrics that take up less storage and increase
   computational performance. To learn more, see :ref:`aggregation`.
@@ -64,14 +52,21 @@ Observability Cloud, you can control the metric volume with a set of aggregation
 By aggregating combinations of dimensions that provide useful insights while dropping a large amount of the unaggregated
 raw data, you can significantly reduce your organization's data footprint.
 
+Aggregation rollup period
+--------------------------------------------------------------------------------
+
+A new aggregated MTS has a resolution of 10 seconds. MPM rolls up the raw data points received into one aggregated data point for each MTS associated with the metric. 
+
+If your systems emit data points over a period that's much longer than 10 seconds, you might have difficulty reconciling your raw data with the aggregated data. To learn more about the aggregation period and how to mitigate it, see the section :ref:`mts-aggregation-rollup-period`.
+
 .. _aggregation:
 
 Aggregation rules
---------------------------------------------------------------------------------
+========================================================
 
-Data you send from your services to Observability Cloud can have high cardinality. Instead of adjusting how you are
-sending in your data before you send it, aggregation lets you summarize your data in Observability Cloud based on
-dimensions you consider important.
+Data you send from your services to Splunk Observability Cloud can have high cardinality. Instead of adjusting how you are
+sending in your data before you send it, aggregation lets you summarize your data in Splunk Observability Cloud based on
+the dimensions you consider important.
 
 .. mermaid::
 
@@ -93,7 +88,7 @@ data points into the new MTS using ``sum``, ``min``, ``max``, ``count``, ``delta
 You can use the new aggregated MTS in the same way as any other MTS in Observability Cloud.
 
 How is this different from post-ingestion aggregation at query time?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------------------------------------
 
 When you configure charts or detectors, you can aggregate your data using analytic functions, such as ``sum``, and then
 group your data by specific dimensions, such as ``sum by region``. This aggregation occurs after Observability Cloud
@@ -104,7 +99,7 @@ you're storing fewer dimensions for each data point, and metrics pipeline manage
 save storage costs.
 
 Example
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------------------------------------
 
 You send a metric called ``http.server.duration`` for a containerized workload using Splunk Infrastructure Monitoring.
 
@@ -132,6 +127,26 @@ You create an aggregation rule that groups your data by the dimensions you want 
 
 The aggregated metric removes the ``container_id`` dimension and retains ``endpoint``, ``region``, and ``service``
 based on your rule. Your new metric volume is: 10 (endpoints) * 20 (regions) * 5 (services) = 1,000 MTS.
+
+.. _data-dropping:
+
+Data dropping rules
+===============================================================================
+
+When you have a new aggregated metric, you might no longer need the original unaggregated data. You
+can also drop a metric without adding an aggregation rule. Data dropping rules let you discard any data you don't want
+to monitor, so you can save storage space and reduce cardinality.
+
+.. note::
+    - You must be an admin to drop data.
+    - You can drop new incoming data, but you can't drop data that Splunk Observability Cloud has already ingested.
+    - You can't recover dropped data. Before you drop data, see :ref:`data-dropping-impact`.
+
+Example
+--------------------------------------------------------------------------------
+
+Once you have new aggregated metrics created by aggregation rules, you can drop the raw unaggregated data for
+``http.server.duration``.
 
 .. _mts-aggregation-rollup-period:
 
@@ -174,36 +189,15 @@ Solutions
 
 Avoid these aggregation issues by using the following options:
 
-* Do your own MTS aggregation before sending data to the system, by reconfiguring the OTel collector to drop unwanted dimensions.
+* Do your own MTS aggregation before sending your data by reconfiguring the OTel collector to drop unwanted dimensions.
 * Aggregate data using SignalFlow when you generate charts or create detectors.
-
-
-.. _data-dropping:
-
-Data dropping rules
-===============================================================================
-
-When you have a new aggregated metric, you might no longer need the original unaggregated data. You
-can also drop a metric without adding an aggregation rule. Data dropping rules let you discard any data you don't want
-to monitor, so you can save storage space and reduce cardinality.
-
-.. note::
-    - You must be an admin to drop data.
-    - You can drop new incoming data, but you can't drop data that Observability Cloud has already ingested.
-    - You can't recover dropped data. Before you drop data, see :ref:`data-dropping-impact`.
-
-Example
---------------------------------------------------------------------------------
-
-Once you have new aggregated metrics created by aggregation rules, you can drop the raw unaggregated data for
-``http.server.duration``.
 
 Scenario for metrics pipeline management
 ===============================================================================
 
 See :ref:`aggregate-drop-use-case`.
 
-Create your first metric rules
+Create your first MPM rules
 ===============================================================================
 
 To start using metrics pipeline management, see :ref:`use-metrics-pipeline`.

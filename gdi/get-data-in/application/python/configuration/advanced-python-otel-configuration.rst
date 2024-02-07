@@ -160,21 +160,5 @@ Configure the Python agent in your code
 
 If you can't set environment variables or can't use ``splunk-py-trace`` for setting configuration values at runtime, define the configuration settings in your code.
 
-The following example shows how all the configuration options you can pass to ``start_tracing()`` as arguments:
-
-.. code-block:: python
-
-   from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExporter
-   from splunk_otel.tracing import start_tracing
-
-   start_tracing(
-      service_name='my-python-service',
-      span_exporter_factories=[OTLPSpanExporter],
-      access_token='',
-      max_attr_length=1200,
-      trace_response_header_enabled=True,
-      resource_attributes={
-         'service.version': '3.1',
-         'deployment.environment': 'production',
-      })
+See :ref:`python-manual-instrumentation` for more information.
 

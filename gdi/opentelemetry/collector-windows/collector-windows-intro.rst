@@ -18,12 +18,19 @@ Get started with the Collector for Windows
    windows-upgrade.rst   
    windows-uninstall.rst
 
-To install and configure the Splunk Distribution of OpenTelemetry Collector for Windows, follow these docs:
+To install the Splunk Distribution of the OpenTelemetry Collector for Windows, follow these docs:
 
 * :ref:`otel-install-windows`
 * :ref:`otel-install-windows-manual`
+* :ref:`Windows deployment tools <windows-deployments>`
+
+See the default settings and configuration options at:
+
 * :ref:`windows-config-ootb`
 * :ref:`otel-windows-config`
+
+To upgrade or uninstall, see:
+
 * :ref:`otel-windows-upgrade`
 * :ref:`otel-windows-uninstall`
 

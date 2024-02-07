@@ -32,7 +32,7 @@ For advanced configuration options, see:
 * :ref:`otel-kubernetes-config-advanced`
 * :ref:`kubernetes-config-logs`
 
-See also:
+To upgrade or uninstall, see:
 
 * :ref:`otel-kubernetes-upgrade`
 * :ref:`otel-kubernetes-uninstall`
