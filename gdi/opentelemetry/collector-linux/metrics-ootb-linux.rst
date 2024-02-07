@@ -31,16 +31,6 @@ Container level metrics and dimensions
   
   The :strong:`Exported?` column indicates if the metric is finally sent to Splunk Observability Cloud after going through the Collector pipelines. 
 
-.. list-table::
-  :widths: 25 25 30 10 10
-  :width: 100%
-  :header-rows: 1
-
-  * - Metric name
-    - Metric description
-    - Attributes
-    - Translated?
-    - Exported?
 
 
 

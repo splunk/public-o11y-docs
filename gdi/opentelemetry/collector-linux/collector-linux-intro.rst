@@ -24,7 +24,7 @@ To install and configure the Splunk Distribution of OpenTelemetry Collector for 
 * :ref:`otel-install-linux`
 * :ref:`otel-install-linux-manual`
 * :ref:`linux-config-ootb`
-* By default, you'll obtain these :ref:`metrics <metrics-ootb-linux>` 
+* By default, you'll obtain these :ref:`metrics <ootb-metrics-linux>` 
 
 For advanced configuration options, see:
 
