@@ -61,7 +61,7 @@ This is the Splunk On-Call team name and associated escalation policy you want t
 
 To acquire the escalation policy name, select the desired team and select the :guilabel:`Escalation Policies` tab. Copy the name of the escalation policy you'd like to use.
 
-.. image:: _images/spoc/Escalation-Policy-Name.pngç
+.. image:: _images/spoc/Escalation-Policy-Name.png
    :alt: Escalation policy name
 
 You can notify multiple teams and escalation policies using the Live Call Routing Integration. If you want to add more than 1 team or escalation policy to the configuration, repeat this step for all of the teams and escalation policies that you want to get notified from.
