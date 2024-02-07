@@ -105,5 +105,5 @@ You can assign multiple roles to individual users. The user receives a combinati
   * - subscription usage and power user
     - All the capabilities of a power user, plus the ability to view the Subscription usage pages for the org.
   * - read_only and subscription usage
-    - All the capabilities of a read-only user, plus the ability to view the Subscription usage pages for the org.
+    - All the capabilities of a read-only user, plus the ability to view the subscription usage pages for the org.
 
