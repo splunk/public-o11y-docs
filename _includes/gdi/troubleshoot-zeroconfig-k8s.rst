@@ -10,6 +10,7 @@ Examine logs to make sure that the operator and cert manager are working.
 
 .. list-table:: 
   :header-rows: 1
+  :width: 100%
 
   * - Application
     - kubectl command
