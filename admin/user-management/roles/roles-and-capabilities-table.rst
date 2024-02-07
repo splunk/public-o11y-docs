@@ -16,7 +16,7 @@ Splunk Observability Clouds lets you restrict access to certain features to spec
 Metrics pipeline management
 ===============================================================================
 
-.. include:: /_includes/admin/roles-mpm.rst
+.. include:: /_includes/admin/roles_mpm.rst
 
 
 Log Observer and Log Observer Connect
