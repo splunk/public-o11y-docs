@@ -148,6 +148,11 @@ The following settings control tracing limits and attributes:
    * - ``SPLUNK_REDIS_INCLUDE_COMMAND_ARGS``
      - Not applicable
      - Whether to include the full Redis query in ``db.statement`` span attributes when using the Redis instrumentation. Default value is ``false``.
+   * - ``SPLUNK_GRAPHQL_RESOLVE_SPANS_ENABLED=``
+     - Not applicable
+     - Starting from version 2.7.0 of the instrumentation, GraphQL spans for resolvers are no longer generated. To collect resolve spans, set this environment variable to 
+       ``true``. The default value is ``false``.
+
 
 .. _trace-sampling-settings-nodejs:
 
