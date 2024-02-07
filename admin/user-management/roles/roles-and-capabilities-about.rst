@@ -55,7 +55,7 @@ Splunk Observability Cloud comes with the following roles predefined:
 
 
 
-Splunk Observability Cloud tokens also honor the role-based access control framework. Since tokens can now be assigned to roles, APIs inherit capabilities from their token. For example, an API using a token which is created with read-only role will inherit read-only permissions. This can be used take system backups with a reduced risk of introducing changes.
+Splunk Observability Cloud tokens also honor the role-based access control framework. Since tokens can now be assigned to roles, APIs inherit capabilities from their token. For example, an API using a token which is created with read-only role will inherit read-only permissions. This can be used to take system backups with a reduced risk of introducing changes.
 
 
 .. raw:: html
