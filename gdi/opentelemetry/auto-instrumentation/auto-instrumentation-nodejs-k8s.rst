@@ -1,5 +1,3 @@
-.. include:: /_includes/gdi/zero-config-preview-header.rst
-
 .. _auto-instrumentation-nodejs-k8s:
 
 ************************************************************************************
