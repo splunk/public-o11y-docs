@@ -95,7 +95,7 @@ You can assign multiple roles to individual users. The user receives a combinati
   * - :strong:`Role`
     - :strong:`Capabilities`
   * - read-only
-    - Read-only access to most actions and pages including settings for most products except: the Subscription usage pages, and some admin pages.
+    - Read-only access to most actions and pages including settings for most products except the subscription usage pages, and some admin pages.
   * - subscription usage 
     - Access to Subscription usage page only, plus the read-only capabilities.
   * - power
