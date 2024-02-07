@@ -28,7 +28,7 @@ sure to replace the “$routing_key” section with the actual routing key
 you intend to use. (To view or configure route keys in Splunk On-Call,
 click *Settings >> Routing Keys*)
 
-.. image:: images/PRTG-Email-final.png
+.. _image/spoc:: _image/spocs/PRTG-Email-final.png
 
  
 

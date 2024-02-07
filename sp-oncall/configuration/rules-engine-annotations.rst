@@ -20,7 +20,7 @@ All users have the ability to reach out to Splunk On-Call support at any time wi
 
 Live Chat: If you are logged into your Splunk On-Call instance, you will have the ability to Live Chat with the Splunk On-Call Support team.
 
-An annotation is a bit of information or link to a resource you can add to the payload of any incident that meets the matching condition for a rule. It can be a URL, an image URL, or a plain text Note. You can add multiple annotations to a single rule
+An annotation is a bit of information or link to a resource you can add to the payload of any incident that meets the matching condition for a rule. It can be a URL, an _image/spoc URL, or a plain text Note. You can add multiple annotations to a single rule
 by selecting :guilabel:`+ Add an Annotation`.
 
 URLs
@@ -49,15 +49,15 @@ Then, when the state_message of an alert matches Server is DOWN, the runbook app
 Image URLs
 =================
 
-Any image hosted at a URL can be rendered as an image in the payload of an incident.
+Any _image/spoc hosted at a URL can be rendered as an _image/spoc in the payload of an incident.
 
-.. note:: Splunk On-Call does not accept attachments and we do not store images. Any images annotated to incidents must be hosted and available via URL link.
+.. note:: Splunk On-Call does not accept attachments and we do not store _image/spocs. Any _image/spocs annotated to incidents must be hosted and available via URL link.
 
-If the payload from your monitoring tool includes an image URL in a field, you can use variable expansion to import the value of that field into the annotation as you see here.
+If the payload from your monitoring tool includes an _image/spoc URL in a field, you can use variable expansion to import the value of that field into the annotation as you see here.
 
    **When** field_of_your_choice **matches** * **using** wildcard
 
-   **Annotate the alert with:** Image URL [selected from dropdown] Load Graph [label] ${{load_graph_field_name_here}}
+   **Annotate the alert with:** _image/spoc URL [selected from dropdown] Load Graph [label] ${{load_graph_field_name_here}}
 
 
 
@@ -75,7 +75,7 @@ annotations can be automatically created by including fields with the proper syn
 .. note:: When an incident is in an acknowledged state and a new alert with the same entity_id comes into the Splunk On-Call Timeline the alert will be :ref:`aggregated <spoc-alert-aggregation>` under the open incident. Any new annotations carried in the most recent
 alert will be added to the annotation tab of the incident. The annotations will also be reflected within each alert payload.
 
-.. image:: /_images/spoc/annotations1.png
+.. _image/spoc:: /_images/spoc/annotations1.png
     :width: 100%
     :alt: Incident summary showing annotations field.
 
@@ -83,7 +83,7 @@ alert will be added to the annotation tab of the incident. The annotations will 
 Annotation Payloads
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. image:: /_images/spoc/annotations2.png
+.. _image/spoc:: /_images/spoc/annotations2.png
     :width: 100%
     :alt: Annotation Payload.
 

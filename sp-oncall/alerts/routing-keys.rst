@@ -31,7 +31,7 @@ Routing keys offer the ability to define whether a single acknowledgement will f
 
 If the Multi-Responder box is checked for a routing key, an acknowledgement will be required from a member of each defined escalation policy before the incident becomes fully acknowledged. To enable this on existing routing keys, hover your mouse over the routing key's row and click on the pencil icon that appears. You can now check the multi-responder box and then the checkmark to save your changes.
 
-.. image:: /_images/spoc/routing-keys.png
+.. _image/spoc:: /_images/spoc/routing-keys.png
     :width: 100%
     :alt: Select the edit pencil, then select multi-responder.
 

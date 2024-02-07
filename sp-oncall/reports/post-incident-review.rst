@@ -30,7 +30,7 @@ Narrowing the scope of post-incident review reports
 
 You may filter by Message Types including System Actions and Chat Messages, or by Routing Keys.
 
-.. image:: /_images/spoc/reports-post1.png
+.. _image/spoc:: /_images/spoc/reports-post1.png
     :width: 100%
     :alt: Post Incident Review screen, Filters highlighted showing.
 
@@ -40,7 +40,7 @@ You may hide any alert, action, or post by selecting the remove or minus (–) b
 
 Additionally, you may add notes to any alert, action, or post by selecting the note pad and pencil icon just to the right of the remove or minus (–) button. These notes will appear beneath the specific event card where the notation is assigned to help form a high-level analysis of what happened during an incident or event.
 
-.. image:: /_images/spoc/reports-post1.png
+.. _image/spoc:: /_images/spoc/reports-post1.png
     :width: 100%
     :alt: VictorOps incident with - and edit buttons left and right side by side highlighted.
 

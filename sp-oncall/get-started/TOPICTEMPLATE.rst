@@ -30,7 +30,7 @@ If you are facing any issues when trying to contact us, see XXXXXX Contacting Sp
 
 .. note:: To create or manage users, you must have administrator access. To get this access, an existing administrative adds it to your user profile. See :ref:`request-admin` for more information.
 
-.. image:: /_images/spoc/sso-troubleshoot1.png
+.. _image/spoc:: /_images/spoc/sso-troubleshoot1.png
     :width: 100%
     :alt: A 404 error message stating "Could not find credentials".
 

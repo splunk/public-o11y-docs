@@ -26,7 +26,7 @@ Select and deselect items in the Graph key to include the data points that are i
 
 -  Select and deselect items in the Graph Key to include the data points that are important to you.
 
-.. image:: /_images/spoc/reports-mttr1.png
+.. _image/spoc:: /_images/spoc/reports-mttr1.png
     :width: 100%
     :alt: Include the data points that are important to you.
 
@@ -37,7 +37,7 @@ Track response metrics with team filtering
 
 Track both your organization and team's MTTA and MTTR and incident metrics by leveraging the team filter. These are directly related to the associated team's escalation policies.
 
-.. image:: /_images/spoc/reports-mttr2.png
+.. _image/spoc:: /_images/spoc/reports-mttr2.png
     :width: 100%
     :alt: Track response metrics with team filtering.
 
@@ -46,7 +46,7 @@ Routing Key Filtering
 
 Target :ref:`specific or multiple routing keys <routing-keys>` to understand metrics around different components.
 
-.. image:: /_images/spoc/reports-mttr3.png
+.. _image/spoc:: /_images/spoc/reports-mttr3.png
     :width: 100%
     :alt: Routing Key Filtering.
 
@@ -58,7 +58,7 @@ Add specific goals against MTTA and MTTR goals. Track these in the daily, weekly
 
 Note: Goals are only saved on a user basis and not saved organization-wide.
 
-.. image:: /_images/spoc/reports-mttr4.png
+.. _image/spoc:: /_images/spoc/reports-mttr4.png
     :width: 100%
     :alt: MTTA & MTTR goal tracking.
 
@@ -70,7 +70,7 @@ Incident Volume by Date Range and Bucketing
 Aggregate MTTA and MTTR averages and incident volume by daily, weekly,
 and monthly buckets.
 
-.. image:: images/Time-Range.jpg
+.. _image/spoc:: _image/spocs/Time-Range.jpg
 
 --------------
 
@@ -82,7 +82,7 @@ with the selected segment filter. Click on a specific row to learn more
 about a specific incident, including its ACK/RES history, as well as the
 individual alert payload.
 
-.. image:: images/Incident-Details.jpg
+.. _image/spoc:: _image/spocs/Incident-Details.jpg
 
 --------------
 
