@@ -20,8 +20,8 @@ The Zero Configuration package provides the following benefits:
    :hidden:
    :maxdepth: 3
 
-   auto-instrumentation-dotnet-k8s.rst
-   auto-instrumentation-dotnet-windows.rst
+   Kubernetes <auto-instrumentation-dotnet-k8s.rst>
+   Windows <auto-instrumentation-dotnet-windows.rst>
 
 .. raw:: html
 

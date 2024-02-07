@@ -16,12 +16,44 @@ Zero Config Auto Instrumentation for .NET requires the following components:
 
 * .NET version ``6.0`` or higher and supported .NET application libraries. For a list of supported libraries, see :ref:`supported-dotnet-libraries`.
 * x86 or AMD64 (x86-64) architecture. ARM architectures aren't supported.
+* Your Splunk Observability Cloud realm and access token. For more information, see :ref:`admin-org-tokens`.
 
 Deploy the Helm Chart with the Kubernetes Operator
 =========================================================
 
-Add certifications and deploy the Helm Chart
---------------------------------------------------------
+To deploy the Helm Chart, configure a values.yaml file with the appropriate fields. The following table shows the required and optional fields for values.yaml:
+
+.. list-table::
+        :header-rows: 1
+        :width: 100%
+        :widths: 33 33 33
+
+        * - Field
+          - Value
+          - Notes
+        * - ``clusterName``
+          - Your desired cluster name
+          - Name of the Kubernetes cluster
+        * - ``splunkObservability.realm``
+          - Your Splunk Observability Cloud realm
+          - Deployment of the Splunk Observability Cloud instance
+        * - ``splunkObservability.accessToken``
+          - Your Splunk Observability Cloud access token
+          - Allows you to send telemetry data to Splunk Observability Cloud
+        * - ``certmanager.enabled``
+          - ``true``
+          - Optional. Only add this field if a certificate manager isn't available. See :ref:`dotnet-add-certificates`.
+        * - ``operator.enabled``
+          - ``true``
+          - Activates the OpenTelemetry Kubernetes Operator
+        * - ``environment``
+          - ``prd``
+          - Optional. See :ref:`zeroconfig-dotnet-traces`.
+
+.. _dotnet-add-certificates:
+
+Add certificates
+----------------------------------------
 
 The Operator requires certain TLS certificates to work. Use the following command to check whether a certification manager is available:
 
@@ -30,22 +62,27 @@ The Operator requires certain TLS certificates to work. Use the following comman
    # Check if cert-manager is already installed, don't deploy a second cert-manager.
    kubectl get pods -l app=cert-manager --all-namespaces
 
-If a certification manager (or any other TLS certificate source) is not available in the cluster, deploy it using ``certmanager.enabled=true``. Use the following commands to deploy the Helm Chart.
+If a certification manager isn't available in the cluster, then you'll need to add ``certmanager.enabled=true`` to your values.yaml file. For example:
 
-.. code-block:: yaml 
+.. code-block:: yaml
+  :emphasize-lines: 6,7
 
-   # If cert-manager is not deployed.
-   helm install splunk-otel-collector -f ./my_values.yaml --set certmanager.enabled=true,operator.enabled=true,environment=prd -n monitoring splunk-otel-collector-chart/splunk-otel-collector
-   
-   # If cert-manager is already deployed.
-   helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=prd -n monitoring splunk-otel-collector-chart/splunk-otel-collector
+  clusterName: my-cluster
+  splunkObservability:
+    realm: <splunk_realm>
+    accessToken: <splunk_access_token>
+  
+  certmanager:
+    enabled: true
+  operator:
+    enabled: true
 
 .. _zeroconfig-dotnet-traces:
 
 Ingest traces
 ------------------------------------------------
 
-To ingest trace telemetry data, the attribute ``deployment.environment`` must be onboard the exported traces. The following table demonstrates the different methods for setting this attribute:
+To ingest trace telemetry data, the attribute ``deployment.environment`` must be onboard the exported traces. The following table shows the different methods for setting this attribute:
 
 .. list-table::
   :header-rows: 1
@@ -74,8 +111,19 @@ The following examples show how to set the attribute using each method:
       Set the environment option in the ``values.yaml`` file. This adds the ``deployment.environment`` attribute to all telemetry data the Collector receives, including data from automatically-instrumented pods.
 
       .. code-block:: yaml
+        :emphasize-lines: 6
+
+          clusterName: my-cluster
+          splunkObservability:
+            realm: <splunk_realm>
+            accessToken: <splunk_access_token>
 
           environment: prd
+          
+          certmanager:
+            enabled: true
+          operator:
+            enabled: true
 
     .. tab:: Instrumentation spec
 
@@ -95,7 +143,7 @@ The following examples show how to set the attribute using each method:
                     - name: OTEL_RESOURCE_ATTRIBUTES
                       value: "deployment.environment=prd-canary-dotnet"
 
-    .. tab:: Deployment ``.yaml`` file
+    .. tab:: Deployment YAML
 
       Update the application deployment YAML file. This method adds the ``deployment.environment`` attribute to all telemetry data from pods that contain the specified environment variable.
 
@@ -115,7 +163,7 @@ The following examples show how to set the attribute using each method:
                   - name: OTEL_RESOURCE_ATTRIBUTES
                     value: "deployment.environment=prd"
 
-    .. tab:: ``kubectl``
+    .. tab:: kubectl
 
       Update the environment variable ``OTEL_RESOURCE_ATTRIBUTES`` using ``kubectl set env``. For example:
 
@@ -172,7 +220,52 @@ You can activate auto instrumentation for .NET applications before runtime.
     - ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-musl-x64"``
     - Use this annotation for applications running in environments based on the ``musl`` library.
 
-For example, given the following deployment YAML on a ``linux-x64`` runtime environment:
+The following example YAML files show how to add the appropriate annotations for auto instrumentation.
+
+.. tabs:: 
+
+  .. tab:: ``linux-x64``
+
+      Given the following deployment YAML on a ``linux-x64`` runtime environment:
+
+          .. code-block:: yaml
+
+            apiVersion: apps/v1
+            kind: Deployment
+            metadata:
+              name: my-dotnet-app
+              namespace: monitoring
+            spec:
+              template:
+                spec:
+                  containers:
+                  - name: my-dotnet-app
+                    image: my-dotnet-app:latest
+
+      Activate auto instrumentation by adding ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-x64"`` and ``instrumentation.opentelemetry.io/inject-dotnet: "monitoring/splunk-otel-collector"`` to the ``spec``:
+
+          .. code-block:: yaml
+            :emphasize-lines: 10,11
+
+            apiVersion: apps/v1
+            kind: Deployment
+            metadata:
+              name: my-dotnet-app
+              namespace: monitoring
+            spec:
+              template:
+                metadata:
+                  annotations:
+                    instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-x64"
+                    instrumentation.opentelemetry.io/inject-dotnet: "monitoring/splunk-otel-collector"
+                spec:
+                  containers:
+                  - name: my-dotnet-app
+                    image: my-dotnet-app:latest
+  
+  .. tab:: ``linux-musl-x64``
+
+    Given the following deployment YAML on a ``linux-x64`` runtime environment:
 
     .. code-block:: yaml
 
@@ -188,10 +281,10 @@ For example, given the following deployment YAML on a ``linux-x64`` runtime envi
             - name: my-dotnet-app
               image: my-dotnet-app:latest
 
-Activate auto instrumentation by adding ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-x64"`` to the ``spec``:
+    Activate auto instrumentation by adding ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-musl-x64"`` and ``instrumentation.opentelemetry.io/inject-dotnet: "monitoring/splunk-otel-collector"`` to the ``spec``:
 
     .. code-block:: yaml
-      :emphasize-lines: 10
+      :emphasize-lines: 10,11
 
       apiVersion: apps/v1
       kind: Deployment
@@ -202,7 +295,7 @@ Activate auto instrumentation by adding ``instrumentation.opentelemetry.io/otel-
         template:
           metadata:
             annotations:
-              instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-x64"
+              instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-musl-x64"
               instrumentation.opentelemetry.io/inject-dotnet: "monitoring/splunk-otel-collector"
           spec:
             containers:
@@ -290,10 +383,14 @@ You can also use the methods shown in :ref:`zeroconfig-dotnet-traces` to configu
 
 See :ref:`advanced-dotnet-otel-configuration` for the full list of supported environment variables.
 
-Troubleshooting
-===========================================================
+.. _troubleshoot-zeroconfig-dotnet:
 
-To troubleshoot .NET auto instrumentation for Kubernetes, examine the logs located in ``/var/log/opentelemetry/dotnet`` within the instrumented pod. These logs provide valuable debugging insights.
+.. include:: /_includes/gdi/troubleshoot-zeroconfig-k8s.rst
+
+Examine .NET logs
+---------------------------------
+
+For further troubleshooting insights, examine the logs located in ``/var/log/opentelemetry/dotnet`` within the instrumented pod.
 
 Learn more
 ===========================================================================
