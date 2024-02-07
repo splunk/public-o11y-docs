@@ -38,7 +38,7 @@ Validate certificates
 Ensure that certificates are available for use. Use the following command to search for certificates:
 
 .. code-block:: bash
-    
+
   kubectl get certificates
   # NAME                                          READY   SECRET                                                           AGE
   # splunk-otel-collector-operator-serving-cert   True    splunk-otel-collector-operator-controller-manager-service-cert   5m

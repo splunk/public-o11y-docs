@@ -157,15 +157,27 @@ Learn more at :ref:`Costs for AWS monitoring <aws-costs>`.
 
 To take advantage of the full benefits of the Splunk Observability Cloud platform, install the :ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>`.
 
+.. raw:: html
+
+  <embed>
+    <h3>Track your OpenTelemetry enablement<a name="install-splunk-otel-collector-enablement" class="headerlink" href="#install-splunk-otel-collector-enablement" title="Permalink to this headline">¶</a></h3>
+  </embed>
+
 To track the degree of OpenTelemetry enablement in your AWS integrations: 
 
 1. From Splunk Observability Cloud, go to :guilabel:`Data Management > AWS`.
 
-2. Select :guilabel:`OpenTelemetry Enabled` to see whether the OTel Collector is installed on each AWS EC2 instance. This helps you identify the instances that still need to be instrumented. For instances that are successfully instrumented, you can see which version of the OTel Collector is deployed.
+2. Select :guilabel:`OpenTelemetry Enabled` to see whether the OTel Collector is installed on each AWS EC2 instance or AWS EKS cluster. This helps you identify the instances that still need to be instrumented. 
 
 ..  image:: /_images/gdi/aws-collector-insights.jpg
   :width: 80%
   :alt: Amount of AWS entities with the Collector installed.
+
+3. For OTel Collector instances that are successfully instrumented, you can see which version of the Collector is deployed.  
+
+..  image:: /_images/gdi/aws-collector-insights-version.png
+  :width: 80%
+  :alt: Collector enablement in AWS EKS, with information on version installed
 
 .. _aws-connection-options-more:
 

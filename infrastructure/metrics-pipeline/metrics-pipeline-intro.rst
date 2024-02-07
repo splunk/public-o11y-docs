@@ -42,7 +42,7 @@ To learn more about MTS, see :ref:`metric-time-series`. To learn more about the 
 How does metrics pipeline management work?
 ========================================================
 
-With MPN, for each metric you send to Splunk Observability Cloud you can control the metric volume with aggregation and data dropping rules:
+With MPM, for each metric you send to Splunk Observability Cloud you can control the metric volume with aggregation and data dropping rules:
 
 * Aggregation rules let you roll up your selected metric data into new metrics that take up less storage and increase
   computational performance. To learn more, see :ref:`aggregation`.

@@ -1,8 +1,3 @@
-:orphan:
-
-.. include:: /_includes/slo/slo-preview-header.rst
-
-
 .. _slo-intro:
 
 ******************************************************************************************
@@ -13,12 +8,24 @@ Introduction to service level objective (SLO) management in Splunk Observability
     :description: Get started with service level objective (SLO) concepts and SLO in Splunk Observability Cloud
 
 
+.. toctree::
+    :maxdepth: 3
+    :hidden:
+
+    Measure and track your service health metrics with SLOs <create-slo>
+    View and manage SLOs <view-slo>
+    burn-rate-alerts
+
 Service level objective (SLO) management is a service level monitoring experience that helps you align your business needs with your engineering reliability goals.
 
 While you have always been able to use the data in Splunk Observability Cloud to monitor, troubleshoot, and optimize your services, SLO management provides a quantitative way to track the reliability and performance of your services. This allows teams to make the right investment trade-offs between product development and operational work.
 
-What is service level monitoring?
-=============================================
+.. raw:: html
+
+  <embed>
+    <h2>What is service level monitoring?<a name="service-level-monitoring-concepts" class="headerlink" href="#service-level-monitoring-concepts" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
 
 Service level monitoring is the process of measuring, tracking, and analyzing a variety of service level indicators (SLIs) associated with a given service. This process calculates the health of a deployed software or service and compares it against the service level agreement (SLA).
 
@@ -54,9 +61,11 @@ The following table defines key concepts in service level monitoring.
       - A unitless measurement of how quickly a service consumes the error budget during the compliance window of the SLO. Burn rate makes the SLO and error budget actionable, showing service owners when a current incident is serious enough to page an on-call responder.
       - For an SLO with a 30-day compliance window, a constant burn rate of 1 means your error budget is used up in exactly 30 days.
 
-    
-Create your first SLO
-==========================================
+.. raw:: html
+
+  <embed>
+    <h2>Create your first SLO<a name="create-first-slo" class="headerlink" href="#create-first-slo" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
 To start using SLO, see :ref:`create-slo`.
 
