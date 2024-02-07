@@ -16,7 +16,7 @@
 
   * - :strong:`Training`
     - Yes
-    - Yeso
+    - Yes
     - Yes
     - Yes
 
