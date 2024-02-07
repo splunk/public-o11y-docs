@@ -20,18 +20,38 @@ Learn more about the Collector's configuration and data processing at:
 * :ref:`otel-data-processing`
 * :ref:`signalfx-exporter`
 
-.. note:: To see the Collector's internal metrics, refer to :ref:`metrics-internal-collector`.
-
-Container level metrics and dimensions
+Metrics collected by the Collector for Linux
 ============================================================================
 
-.. caution:: 
-  
-  The :strong:`Translated?` column indicates whether the metric is translated by the SignalFx exporter.
-  
-  The :strong:`Exported?` column indicates if the metric is finally sent to Splunk Observability Cloud after going through the Collector pipelines. 
+.. note:: To see the Collector's internal metrics, refer to :ref:`metrics-internal-collector`.
 
-
-
-
+* ``cpu.idle``
+* ``cpu.num_processors``
+* ``cpu.utilization``
+* ``disk.summary_utilization``
+* ``disk.utilization``
+* ``disk_ops.total``
+* ``memory.total``
+* ``memory.utilization``
+* ``network.total``
+* ``scrape_duration_seconds``
+* ``scrape_samples_post_metric_relabeling``
+* ``scrape_samples_scraped``
+* ``scrape_series_added``
+* ``system.cpu.load_average.15m``
+* ``system.cpu.load_average.1m``
+* ``system.cpu.load_average.5m``
+* ``system.disk.io.total``
+* ``system.disk.operations``
+* ``system.disk.operations.total``
+* ``system.filesystem.usage``
+* ``system.memory.usage``
+* ``system.network.errors``
+* ``system.network.io``
+* ``system.network.io.total``
+* ``system.network.packets.total``
+* ``system.paging.operations``
+* ``up``
+* ``vmpage_io.swap.in``
+* ``vmpage_io.swap.out``
 
