@@ -158,7 +158,7 @@ The following image shows the location of annotations in the incident:
 Annotation payloads
 ---------------------------
 
-.. image:: _images/spoc/Annotation-Payload.jpg
+.. image:: _images/spoc/Annotation-Payload 2.jpg
    :alt: Annotation payload
 
 There are 3 types of annotations accepted by Splunk On-Call through the following syntax. You can customize the title of your annotation at the end of your annotation syntax. For example, in the previous screenshot the title of the URL annotation appears in Splunk On-Call as ``Runbook``.
