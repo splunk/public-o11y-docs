@@ -31,6 +31,7 @@ Collector components
     components/memory-ballast-extension
     components/memory-limiter-processor          
     components/mongodb-atlas-receiver
+    components/mysql-receiver
     components/oracledb-receiver
     components/otlp-exporter
     components/otlp-receiver         
@@ -142,6 +143,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`mongodb-atlas-receiver` (``mongodbatlas``)
      - Retrieves metrics from MongoDB Atlas using their monitoring APIs.
      - Metrics
+   * - :ref:`mysql-receiver` (``mysql``)
+     - Queries and retrieves metrics about MySQL's global status and InnoDB tables.
+     - Metrics      
    * - :ref:`oracledb` (``oracledb``) |br|
      - Connects to an Oracle Database instance and obtains metrics such as physical reads, CPU, time, and others.
      - Metrics

@@ -4,12 +4,24 @@
 Example Business Workflow configuration
 ***************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Review an example of how you can correlate logically-related traces with Business Workflows in Splunk Observability Cloud.
 
-Suppose you want to identify every trace that goes through ``service.example``. To do this, create a Business Workflow. The following example creates a service rule for ``service.example`` that creates workflows based on endpoints for the service. To follow along in the app, you must be an administrator.
+|hr|
+
+:strong:`Available in Enterprise Edition`
+
+|hr|
+
+Suppose you want to identify every trace that goes through ``service.example``. To do this, create a Business Workflow. The following example creates a service rule for ``service.example`` that creates workflows based on endpoints for the service. 
+
+Prerequisite
+=============
+
+To configure Business Workflows, you must have the admin role. 
+
+Steps
+=============
 
 1. Go to :strong:`Data Configuration > Business Workflow`.
 
@@ -19,7 +31,7 @@ Suppose you want to identify every trace that goes through ``service.example``. 
 
 4. Select ``service.example`` for the :strong:`Target Service`.
 
-5. Confirm that the :strong:`Source of Workflow Name` is set to ``Matched service:endpoint``. If it is not, select ``Matched service:endpoint`` from the drop-down menu.
+5. Confirm that the :strong:`Source of Workflow Name` is set to ``Matched service:endpoint``. If it is not, select ``Matched service:endpoint`` from the menu.
 
 6. Select :strong:`Create` to save your changes and create the rule.
 

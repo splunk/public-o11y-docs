@@ -13,13 +13,13 @@ When you set up Log Observer Connect, your Splunk Enterprise logs data remains i
 
 Region and version compatibility
 ==============================================================
-
 Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, jp0, and au0. Splunk Log Observer Connect is compatible with Splunk Enterprise 8.2 and higher. 
 
 .. note:: You can collect data using both the Splunk Distribution of OpenTelemetry Collector and the Universal Forwarder without submitting any duplicate telemetry data. See :ref:`collector-with-the-uf` to learn how.
 
 Prerequisites
 ==============================================================
+To set up Log Observer Connect for Splunk Enterprise, you must have an administrator role in Splunk Observability Cloud. You must also be an administrator in Splunk Enterprise.
 
 Ensure the following configuration in your Splunk Enterprise instance:
 
@@ -40,7 +40,6 @@ Ensure the following configuration in your Splunk Enterprise instance:
 
 Set up Log Observer Connect
 ==============================================================
-
 To set up Log Observer Connect for Splunk Enterprise, follow these steps:
 
 Splunk Observability Cloud

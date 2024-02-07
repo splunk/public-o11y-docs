@@ -13,6 +13,11 @@ An alias is an alternate name that you assign to a field, allowing you to use th
 
 :strong:`Field Aliasing` occurs at search time, not index time, so it does not transform your data. Field Aliasing does not rename or remove the original field name. When you alias a field, you can search for it by its original name or by any of its aliases.
 
+Prerequisites
+================================================================================
+To create field aliases, you must have an administrator or power user role in Splunk Observability Cloud.
+
+
 When to use Field Aliasing
 ================================================================================
 Use Field Aliasing when the following situations are true:

@@ -7,6 +7,12 @@ Configure Business Workflow rules
 .. meta::
    :description: Learn how Business Workflow rules make trace behavior in transaction processing explicit and transparent.
 
+|hr|
+
+:strong:`Available in Enterprise Edition`
+
+|hr|
+
 Business Workflow rules use span tags to make trace behavior in transaction processing explicit and transparent.
 
 You can create rules that correlate traces from a specific service or from multiple services that include the same global span tag. You must be an administrator to configure Business Workflow rules.
@@ -22,7 +28,7 @@ To configure a new rule from Splunk APM, follow these steps. There is a differen
 
 2. Select :strong:`New Rule`.
 
-3. Select one of the following options from the :strong:`Rule Type` drop-down:
+3. Select one of the following options from the :strong:`Rule Type` menu:
 
    .. list-table::
       :header-rows: 1
@@ -35,13 +41,13 @@ To configure a new rule from Splunk APM, follow these steps. There is a differen
         - Define workflows based on the value of a global tag in spans associated with a trace. This correlates traces that contain spans with the global tag.
 
       * - Service
-        - Define workflows based on traces that include a service you specify. When a trace matches the rule, you also see a specified tag value or endpoint associated with the trace for the service.
+        - Define workflows based on traces that include a service you select. When a trace matches the rule, you also see a specified tag value or endpoint associated with the trace for the service.
 
 4. Select a :strong:`Target Global Tag` or :strong:`Target Service` according to the :strong:`Rule Type` you selected.
 
    :strong:`Target Global Tag` prompts you to select an indexed global tag. When you select a tag, the rule correlates all traces with the global tag. The rule name is based on the global tag you select.
 
-   :strong:`Target Service` prompts you to select a service and specify the :strong:`Source of Workflow Name`, which is extra metadata to view about the workflow. You can select to correlate traces for a service by an endpoint for the initiating span or a span tag value.
+   :strong:`Target Service` prompts you to select a service and enter the :strong:`Source of Workflow Name`, which is extra metadata to view about the workflow. You can select to correlate traces for a service by an endpoint for the initiating span or a span tag value.
 
 5. Select :strong:`Create` to save your changes and create the rule.
 
