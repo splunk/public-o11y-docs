@@ -144,7 +144,7 @@ Using the waterfall chart, you can do the following:
 - Hover over a row of the timeline to view a pop-up message with detailed request timings for that resource.
 - Search resources in a page by keywords in the URL.
 - Use the tabs to filter the waterfall chart by resource type, including JS, CSS, Image, Media, JSON, and XML.
-- Download the raw HAR file.
+- Download the raw HAR file, using the :new-page:`API <https://dev.splunk.com/observability/reference/api/synthetics_artifacts/latest#endpoint-getartifactsbytestid>`.
 - Show or hide columns in the chart
 
 .. - Customize the statistics displayed for each request inline in the waterfall chart
