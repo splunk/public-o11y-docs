@@ -46,6 +46,6 @@ any of your BMC Truesight Pulse Alarms.
 `Boundary
 Documentation <https://help.boundary.com/hc/en-us/articles/202425491>`__
 
-.. |bmc1| image:: images/BMC1.png
-.. |bmc2| image:: images/BMC2.png
-.. |bmc5| image:: images/BMC5.png
+.. |bmc1| image:: _images/spoc/BMC1.png
+.. |bmc2| image:: _images/spoc/BMC2.png
+.. |bmc5| image:: _images/spoc/BMC5.png
