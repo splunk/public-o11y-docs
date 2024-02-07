@@ -1,4 +1,6 @@
-.. _users-assign-roles:
+.. _users-assign-roles-ph3:
+
+
 
 ********************************************************
 Assign roles to users in Splunk Observability Cloud
@@ -7,9 +9,11 @@ Assign roles to users in Splunk Observability Cloud
 .. meta::
    :description:  Manage users: Add one or more roles to a user in Observability Cloud.
 
-You can assign roles to existing and new users to determine what they can do and which features they can access in Splunk Observability Cloud. 
 
+   
+You can assign roles to existing and new users to determine what they can do and which features they can access in Splunk Observability Cloud. For example, certain roles allow users to create detectors or dashboards.
 
+Users can have multiple roles at the same time. See :ref:`roles-and-capabilities` for more information. For details about each role and the associated capabilities, see :ref:`roles-and-capabilities-table`.
 
 .. note:: To create or manage users, you must have administrator access. To get this access, an existing administrator adds it to your user profile. See :ref:`admin-manage-users` for more information.
 
@@ -31,7 +35,7 @@ To assign roles when inviting new users, follow these steps:
 #. From the left navigation menu, select :menuselection:`Settings` then :menuselection:`Users`.
 #. Select :guilabel:`Invite Users`.
 #. Enter the email addresses to invite.
-#. In the :guilabel:`Roles` field to select any of the available roles.
+#. Click the :guilabel:`Roles` field to select any of the available roles.
 #. Select :guilabel:`Send Invitation` to confirm.
 
 
@@ -60,7 +64,7 @@ To remove roles from a user that's already a member of your organization, follow
 #. In the :guilabel:`Manage Roles` dialog box, select one or more of the selected roles, then select the left-pointing arrow to move the roles back to the :guilabel:`Available Roles` panel.
 #. Select :guilabel:`Assign Roles` to confirm.
 
-.. note:: You can use the :guilabel:`Remove All` link to remove all available roles to a user.
+.. note:: You can use the :guilabel:`Remove All` link to add all available roles to a user.
 
 
 Edit roles for multiple users
@@ -81,3 +85,5 @@ Edit user roles using the API
 ===============================
 
 To view, add, or remove roles using the Observability Cloud REST API, see :new-page:`Organizations <https://dev.splunk.com/observability/reference/api/organizations/latest>` in the developer documentation.
+
+
