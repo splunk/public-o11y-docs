@@ -9,6 +9,11 @@ About roles in Splunk Observability Cloud
    :description: Learn how to how to manage user roles and capabilities (also called permissions).
 
 
+.. toctree::
+   :hidden:
+
+   Matrix of roles and capabilities <roles-and-capabilities-table>
+   Assign roles to users <users-assign-roles>
 
 |hr|
 
