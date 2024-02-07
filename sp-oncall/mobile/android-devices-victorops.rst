@@ -71,7 +71,7 @@ You first want to open the Splunk On-Call app on your phone.
 1. Once opened, go to your **Settings** (three line icon)
 2. Then go to the **Notifications** tab.
 
- images/Android-11-ss1-1.png
+_images/spoc/Android-11-ss1-1.png
 
 Once in the Notifications section you want to select **Incident
 Notifications**. Then, you will select  **Triggered Incidents** next.
@@ -90,7 +90,7 @@ In the Channel Settings now, you will want to do two things:
 2. Lastly, expand the **Advanced settings**, in there change the Sound
    setting to None. This is to avoid double sounds or ringtones.
 
- images/Android-11-ss3.png
+_images/spoc/Android-11-ss3.png
 
 **Android Settings To Check**
 
@@ -107,7 +107,7 @@ You can get there a couple of ways.
 2. You can open your Android Settings and search for “Do Not
    Disturb”.
 
- images/Android-11-ss4.png
+_images/spoc/Android-11-ss4.png
 
 Once you open the DND Settings, you will want to check one thing:
 
@@ -116,7 +116,7 @@ Once you open the DND Settings, you will want to check one thing:
    there. If you don't see it, press **Add Apps**, and find
    Splunk On-Call there.
 
- images/Android-11-ss5-1.png
+_images/spoc/Android-11-ss5-1.png
 
 [/ht_toggle]
 
@@ -139,7 +139,7 @@ Read on to learn how to set up Volume Override for VictorOps on Android.
 From the Settings app, navigate to **Apps & notifications** > **App
 info** > **Splunk On-Call > App Notifications**.
 
-.. figure:: images/Android_V9_1.png
+.. figure:: _images/spoc/Android_V9_1.png
    :alt: Navigate to app notifications in VictorOps
 
    Navigate to app notifications in VictorOps
@@ -147,7 +147,7 @@ info** > **Splunk On-Call > App Notifications**.
 There are seven events that generate notifications in Splunk On-Call, as
 highlighted below:
 
-.. figure:: images/Android_V9_2.png
+.. figure::_images/spoc/Android_V9_2.png
    :alt: seven events that generate notifications in VictorOps
 
    seven events that generate notifications in VictorOps
@@ -160,7 +160,7 @@ things to set:
    Override system notification volume setting, as outlined below)
 2. Toggle on **Override Do Not Disturb**
 
-.. figure:: images/Android_V9_3.png
+.. figure:: _images/spoc/Android_V9_3.png
    :alt: setting sound and override toggles in VictorOps for Android
 
    setting sound and override toggles in VictorOps for Android
@@ -181,7 +181,7 @@ From the Settings app, navigate to Sound > Do Not Disturb > Calls (found
 under the heading *Exceptions*) then select *From starred contacts
 only*.
 
-.. figure:: images/Android_V9_5.png
+.. figure:: _images/spoc/Android_V9_5.png
    :alt: Set up to receive notifications from starred contacts only
 
    Set up to receive notifications from starred contacts only
@@ -191,7 +191,7 @@ Not Disturb > Messages, events, & reminders (found under the
 heading *Exceptions*) then select *From starred contacts only* for
 *Allow messages*.
 
-.. figure:: images/Android_V9_6.png
+.. figure:: _images/spoc/Android_V9_6.png
    :alt: configure messages in Android to receive from victorops
 
    configure messages in Android to receive from victorops
@@ -213,7 +213,7 @@ what the device sound settings are.
 
 Within the Splunk On-Call app navigate to Settings.
 
-.. figure:: images/Android_V9_7.png
+.. figure:: _images/spoc/Android_V9_7.png
    :alt: Override Android settings with additional sound
 
    Override Android settings with additional sound
@@ -225,7 +225,7 @@ Sound**. With this setting enabled, Splunk On-Call will play that sound
 at MAX volume when you receive a notification for that event, regardless
 of system sound settings.
 
-.. figure:: images/Android_V9_8.png
+.. figure:: _images/spoc/Android_V9_8.png
    :alt: override system notification value in Android
 
    override system notification value in Android

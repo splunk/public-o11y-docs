@@ -14,7 +14,7 @@ and `iOS <https://help.victorops.com/knowledge-base/ios-application/>`__
 devices by navigating to *Settings >> Help and Support >>* *Add
 VictorOps to Your Contacts:*
 
- images/Add-Contacts-Android-1.png
+_images/spoc/Add-Contacts-Android-1.png
 
 **Short Code (US and Canada SMS only):**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
