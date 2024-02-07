@@ -1,338 +1,281 @@
-[ht_toggle title=“Requirements” id=“” class=“” style=“” ]
+.. _Zendesk-spoc:
 
-**Versions Supported:** N/A (SaaS)
+Zendesk integration for Splunk On-Call
+***************************************************
 
-**VictorOps Version Required: Enterprise (for Ack-Back function
-described in this article)**
+.. meta::
+    :description: Configure the Zendesk integration for Splunk On-Call.
 
-**What you need to know:**  This integration makes use of a feature,
-`Outbound
-Webhooks <https://help.victorops.com/knowledge-base/custom-outbound-webhooks/>`__.
-To get more information about this feature please reach out to your
-account executive or the VictorOps support team.
+<Add description of the integration here>
 
-[/ht_toggle]
+Requirements
+==================
 
-This guide walks you through the setup process for integrating Zendesk
-with VictorOps.  Once complete, Zendesk will be able to automatically
-trigger, acknowledge, and resolve incidents in VictorOps.  Additionally,
-acknowledgement of the incident on the VictorOps side can trigger a
-status change to “pending” (or whatever status you desire) in Zendesk.
+* This integration is compatible with the Enterprise version of Splunk On-Call:
+* This Zendesk integration makes use of outbound webhooks.
 
---------------
 
-**In VictorOps**
-================
+This guide walks you through the setup process for integrating Zendesk with Splunk On-call. Once complete, Zendesk can automatically trigger, acknowledge, and resolve incidents in Splunk On-call. Additionally,acknowledgement of the incident on the Splunk On-call side can trigger a status change in Zendesk.
 
-From the main timeline select *Integrations* then search for Zendesk in
-the *3rd Party Integrations* tab.
+In Splunk On-call
+==================
 
-..image images/Integrations-page.png
+From the main timeline select :guilabel:`Integrations` then search for Zendesk on the :guilabel:`3rd-Party Integrations` tab.
 
-If the integration has not yet been enabled, click the *Enable
-Integration* button to generate your configuration values as seen here:
+.. image:: images/Integrations-page.png
+   :alt: Integrations page
 
-..image images/Zendesk-API-Key.png
+If you haven't enabled the integration, select :guilabel:`Enable Integration` to generate your configuration values as seen in the following image:
 
-Copy this endpoint URL to your clipboard.  You will need it when
-configuring Zendesk.
+.. image:: images/Zendesk-API-Key.png
+   :alt: API key for Zendesk integration
 
-**Routing Key:**
-~~~~~~~~~~~~~~~~
+Copy this endpoint URL to your clipboard. You need it when configuring Zendesk.
 
-The routing key that will be used for this integration should be
-included in the destination URL.  It is essential that you replace what
-you see here with the actual routing key you intend to use.  Everything
-after the final forward slash must be replaced with the key you have
-configured in VictorOps.  For example, assuming a routing_key value of
-“database”:
+Routing key
+-----------------
 
-………36437/**$routing_key**    ==>   ……..36437/**database**
+Include the routing key for this integration in the destination URL. It is essential that you replace what you see here with the actual routing key you intend to use. Replave everything after the final forward slash with the key you configured in Splunk On-call. For example, assuming a routing_key value of "database":
 
-Routing keys in VictorOps can be set up and associated by clicking
-on *Settings >>  Routing Keys.*
+``.....36437/**$routing_key**`` becomes ``.....36437/database``
 
-For more information on routing keys and best practices, click
-`HERE <https://help.victorops.com/knowledge-base/routing-keys/>`__.
+You can set up routing keys in Splunk On-call under :guilabel:`Settings` then :guilabel:`Routing Keys`. For more information on routing keys and best practices, see :ref:`routing-keys`
 
---------------
+Create a target in Zendesk
+================================
 
- **In Zendesk**
-===============
+From your Zendesk portal, select :guilabel:`Settings` on the side-menu.
 
---------------
+.. image:: images/Zendesk-Settings.png
+   :alt: Zendesk settings
 
-Create a target
----------------
+Under the :guilabel:`Settings` section, select :guilabel:`Extensions.`
 
-From your Zendesk portal select the *Settings Gear* on the left
-side-menu.
+.. image:: images/Extensions.png
+   :alt: Zendesk extensions
 
-..image images/Zendesk-Settings.png
+In the resulting menu, select :guilabel:`add a target`.
 
- 
+.. image:: images/Add-a-Target.png
+   :alt: Add target in Zendesk extensions
 
-Under the *Settings* section, select *Extensions.*
+Select the :guilabel:`HTTP Target`` option.
 
-..image images/Extensions.png
+.. image:: images/HTTP.png
+   :alt: HTTP target option in Zendesk extensions
 
- 
+Give the HTTP target with a name. Paste the endpoint URL you copied from Splunk On-call with the valid routing key. Select a :guilabel:`Method`
+of :guilabel:`POST` and :guilabel:`Content type` of :guilabel:`JSON`. Leave the :guilabel:`Basic Authentication` box unselected and the :guilabel:`Test target` option selected and select :guilabel:`Submit`.
 
-In the resulting menu, click on *add a target.*
+.. image:: images/HTTP-Target.png
+   :alt: HTTP target configuration in Zendesk extensions
 
-..image images/Add-a-Target.png
+Copy and paste in the following JSON body and select :guilabel:`Submit`.
 
- 
+.. code-block:: json
 
-Select the *HTTP Target* option.
+   { 
+      "message_type":"info", 
+      "entity_id":"Test alert from Zendesk",
+      "state_message":"testing from Zendesk"
+   }
 
-..image images/HTTP.png
+If you configured the integration correctly, you see a 200 success response similar to this.
 
- 
+.. image:: images/zendesk_200_response@2x.png
+   :alt: 200 success response in HTTP target configuration in Zendesk
 
-Configure the HTTP target with an intuitive name.  Paste in the endpoint
-URL you copied from VictorOps (Be sure to change the routing_key value
-to a valid routing key as noted above).  Select a *Method*
-of *POST* and *Content type* of *JSON.*  Leave the *Basic
-Authentication* box unchecked and the *Test target* option selected and
-click *Submit.*
+Check your Splunk On-call timeline for a new event. This is an INFO message which doesn't create a new incident in Splunk On-call, but is intended only
+to confirm that Zendesk can successfully send events to Splunk On-call.
 
-..image images/HTTP-Target.png
+.. image:: images/INFO-alert.png
+   :alt: Splunk On-call test event
 
- 
+Finally, exit the success message. Change the option to :guilabel:`Create target` and select :guilabel:`Submit`.
 
-Copy and paste in the following *JSON body*, and click *Submit.*
+.. image:: images/Create-Target.png
+   :alt: Create target option in the HTTP target in Zendesk extensions
 
-{ “message_type”:“info”, “entity_id”:“Test alert from Zendesk”,
-“state_message”:“testing from Zendesk” }
+Configure alerts to Splunk On-call
+-----------------------------------
 
- 
+In the side-menu, locate the section for :guilabel:`Business Rules` and select :guilabel:`Triggers`.
 
-If configured correctly, you should see a 200 success response similar
-to this.
+.. image:: images/Triggers.png
+   :alt: Zendesk triggers
 
-..image images/zendesk_200_response@2x.png
+From the :guilabel:`Triggers` menu, select :guilabel:`Add trigger`.
 
- 
+.. image:: images/Add-Trigger.png
+   :alt: Add a trigger in Zendesk
 
-Check your VictorOps timeline for a new event.  This is an INFO message
-which will not create a new incident in VictorOps, but is intended only
-to confirm that Zendesk can successfully send events to VictorOps.
+Enter a name and description. Select :guilabel:`Add condition` and add the following 2 conditions:
 
-..image images/INFO-alert.png
+* Status is New
+* Ticket is Created
 
- 
+These 2 conditions create a Splunk On-call incident for every new case in Zendesk. You can alter these to further filter which conditions alert
+Splunk On-call to fit your specific workflow.
 
-Finally, click the *x* to exit the success message.  Change the option
-to *Create target* and click *Submit.*
+.. image:: images/Critical-Trigger.png
+   :alt: Trigger conditions
 
-..image images/Create-Target.png
+Under the :guilabel:`Actions` section, select :guilabel:`Add Action`. In the first dropdown menu, scroll to the :guilabel:`Notifications` sections and select :guilabe:`Notify target`. In the second dropdown menu, select the Splunk On-call target you created earlier.
 
---------------
+.. image:: images/Critical-Trigger-Payload.png
+   :alt: Configure trigger actions
 
-Configure Alerts to VictorOps
------------------------------
+Copy the following JSON payload and paste it into the :guilabel:`JSON body` field, then select :guilabel:`Create`.
 
- 
-
-In the left side-menu, locate the section for *Business Rules* and
-select *Triggers.*
-
-..image images/Triggers.png
-
- 
-
-From the *Triggers* menu select *Add trigger.*
-
-..image images/Add-Trigger.png
-
- 
-
- 
-
-Give the trigger an intuitive name and description.  Click *Add
-condition* and add the following two conditions:
-
-**- Status is New** **- Ticket is Created**
-
-Note: You may alter these to further filter which conditions will alert
-VictorOps or to fit your specific work-flow if you do not wish to create
-a VictorOps incident for *every* new case.
-
-..image images/Critical-Trigger.png
-
- 
-
-Under the *Actions* section, click *Add Action*.  In the first dropdown
-(left), scroll down to the *Notifications* sections and select *Notify
-target.*  In the second dropdown (right), select the VictorOps target
-you created earlier.
-
-..image images/Critical-Trigger-Payload.png
-
- 
-
-Copy the JSON payload below and paste it into the *JSON body* box, then
-click *Create.*
-
-**Critical Alert**
+Critical alert
 ~~~~~~~~~~~~~~~~~~
 
-{ “entity_id”:“{{ticket.id}}”, “message_type”:“CRITICAL”,
-“state_message”:“{{ticket.comments_formatted}}”,
-“monitoring_tool”:“Zendesk”, “alert_url”:“{{ticket.link}}”,
-“ticket_id”:“{{ticket.id}}”, “Ticket External
-I.D.”:“{{ticket.external_id}}”, “Ticket Origin”:“{{ticket.via}}”,
-“Ticket Status”:“{{ticket.status}}”, “Ticket
-Priority”:“{{ticket.priority}}” }
+This trigger opens a new incident in Splunk On-call. 
 
- 
+.. code-block:: json
+   { 
+      "entity_id":"{{ticket.id}}", 
+      "message_type":"CRITICAL",
+      "state_message":"{{ticket.comments_formatted}}",
+      "monitoring_tool":"Zendesk", 
+      "alert_url":"{{ticket.link}}",
+      "ticket_id":"{{ticket.id}}", 
+      "Ticket External I.D.":"{{ticket.external_id}}", 
+      "Ticket Origin":"{{ticket.via}}",
+      "Ticket Status":"{{ticket.status}}", 
+      "Ticket Priority":"{{ticket.priority}}" 
+   }
 
-This trigger will open a new incident in VictorOps.  You will now need
-to replicate this process to create two more triggers that will send
-alerts to VictorOps for acknowledgement and recovery events when cases
-are assigned or closed in Zendesk.  You will reuse the same target
-created earlier for each new trigger.  Again, you can change the trigger
-conditions to fit your specific needs.
+You need to replicate this process to create 2 more triggers that send alerts to Splunk On-call for acknowledgement and recovery events when cases
+are assigned or closed in Zendesk. Reuse the same target created earlier for each new trigger. You can change the trigger conditions to fit your specific needs.
 
-**Acknowledgement Alert**
+Acknowledgement alert
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This trigger will send acknowledgement alerts to VictorOps, to ack the
-incident and stop paging and escalation.
+This trigger sends acknowledgement alerts to Splunk On-call, to acknowledge the incident and stop paging and escalation.
 
-Conditions: **Status is Pending.**
+Condition
+* Status is Pending
 
-..image images/Acknowldge-Trigger.png
+.. image:: images/Acknowldge-Trigger.png
+   :alt: Acknowledge trigger
 
- 
+JSON payload:
 
-Payload:
+.. code-block:: json
+   { 
+      "entity_id":"{{ticket.id}}", 
+      "message_type":"ACKNOWLEDGEMENT",
+      "state_message":"{{ticket.comments_formatted}}",
+      "monitoring_tool":"Zendesk", 
+      "alert_url":"{{ticket.link}}",
+      "ticket_id":"{{ticket.id}}", 
+      "Ticket External I.D.":"{{ticket.external_id}}", 
+      "Ticket Origin":"{{ticket.via}}",
+      "Ticket Status":"{{ticket.status}}", 
+      "Ticket Priority":"{{ticket.priority}}" 
+   }
 
-{ “entity_id”:“{{ticket.id}}”, “message_type”:“ACKNOWLEDGEMENT”,
-“state_message”:“{{ticket.comments_formatted}}”,
-“monitoring_tool”:“Zendesk”, “alert_url”:“{{ticket.link}}”,
-“ticket_id”:“{{ticket.id}}”, “Ticket External
-I.D.”:“{{ticket.external_id}}”, “Ticket Origin”:“{{ticket.via}}”,
-“Ticket Status”:“{{ticket.status}}”, “Ticket
-Priority”:“{{ticket.priority}}” }
-
-**Resolved Alert**
+Resolved alert
 ~~~~~~~~~~~~~~~~~~
 
-This trigger will send recovery notifications to VictorOps to close out
-the incident.
+This trigger sends recovery notifications to Splunk On-call to close out the incident.
 
-Conditions: **Status is Closed.**
+Condition: 
+* Status is Closed
 
-..image images/Resolved-Trigger.png
+.. image:: images/Resolved-Trigger.png
+   :alt: Resolved trigger
 
- 
+JSON payload:
 
-Payload:
+.. code-block:: json
+   { 
+      "entity_id":"{{ticket.id}}", 
+      "message_type":"RECOVERY",
+      "state_message":"{{ticket.comments_formatted}}",
+      "monitoring_tool":"Zendesk", 
+      "alert_url":"{{ticket.link}}",
+      "ticket_id":"{{ticket.id}}", 
+      "Ticket External I.D.":"{{ticket.external_id}}", 
+      "Ticket Origin":"{{ticket.via}}",
+      "Ticket Status":"{{ticket.status}}", 
+      "Ticket Priority":"{{ticket.priority}}"
+   }
 
-{ “entity_id”:“{{ticket.id}}”, “message_type”:“RECOVERY”,
-“state_message”:“{{ticket.comments_formatted}}”,
-“monitoring_tool”:“Zendesk”, “alert_url”:“{{ticket.link}}”,
-“ticket_id”:“{{ticket.id}}”, “Ticket External
-I.D.”:“{{ticket.external_id}}”, “Ticket Origin”:“{{ticket.via}}”,
-“Ticket Status”:“{{ticket.status}}”, “Ticket
-Priority”:“{{ticket.priority}}” }
+(Optional) Acknowledge back 
+==============================
 
---------------
+Using Splunk On-call Custom Outgoing Webhooks, you can have the acknowledgement of a Zendesk incident in Splunk On-call automatically transition the related Zendesk case to a status you specify.
 
-Ack Back (optional)
-===================
+First, you need to build the appropriate destination URL for your Zendesk account. Certain parts of the URL must be URL encoded to function properly, so make sure you follow the structure exactly.
 
-Using our `Custom Outgoing
-Webhooks <https://help.victorops.com/knowledge-base/custom-outbound-webhooks/>`__
-feature, it is possible to have the acknowledgement of a Zendesk
-incident in VictorOps automatically transition the related Zendesk case
-to a status of *pending* (or whatever status you prefer).
+The following example built assumes the following:
 
-First you will need to build the appropriate destination URL for your
-Zendesk account like so.  Note that certain parts of the URL must be URL
-encoded in order to function properly, so make sure you follow this
-structure exactly.
-
-The example built below assumes the following:
-
--  The Zendesk subdomain is **company**.zendesk.com
--  The email address of a Zendesk user is **johnny.devops@company.com**
--  The API token generated by Zendesk is **abc123efg456hij789**
-   (Instructions for generating your API key in Zendesk below)
+-  The Zendesk subdomain is buttercupgames.zendesk.com
+-  The email address of a Zendesk user is alex@buttercupgames.com
+-  The API token generated by Zendesk is abc123efg456hij789. See :ref:`_Zendesk-api-token` for steps to create an API token.
 
 The Destination URL
 ~~~~~~~~~~~~~~~~~~~
 
 The structure of the URL is as follows:
 
-https://**{email-address}**/token:**{yourAPI-token}**\ @\ **{your-subdomain}**.zendesk.com/api/v2/tickets/${{ALERT.ticket_id}}.json
+``https://{email-address}/token:{yourAPI-token}@{your-subdomain}.zendesk.com/api/v2/tickets/${{ALERT.ticket_id}}.json``
 
-Given the example data above, the final URL would be the following:
+Given the example data, the final URL is as follows:
 
-https://**johnny.devops**\ %40\ **company.com**\ %2Ftoken:**abc123efg456hij789**\ @\ **company**.zendesk.com/api/v2/tickets/${{ALERT.ticket_id}}.json
+``https:/alex%40company.com%2Ftoken:abc123efg456hij789@company.zendesk.com/api/v2/tickets/${{ALERT.ticket_id}}.json``
 
-Note the following crucial elements:
+Here is a summary of the crucial encoding elements:
 
--  The “@” symbol in the email address is encoded as “%40”
--  The forward slash before the word *token* is encoded as “%2F”
--  The “@” symbol just before the sub-domain is **NOT encoded**.
--  The ${{ALERT.ticket_id}} phrase is not altered in any way (This
-   syntax is required to dynamically insert the Zendesk ticket ID into
-   the URL when the webhook is triggered)
+*  The @ symbol in the email address is encoded as ``%40``.
+*  The forward slash before the word token is encoded as ``%2F``.
+*  The @ symbol before the subdomain isn't encoded.
+*  ``${{ALERT.ticket_id}}`` isn't altered in any way. This syntax is required to dynamically insert the Zendesk ticket ID into the URL when the webhook is triggered.
 
-Generate the Zendesk API Key.
+.. _Zendesk-api-token:
+
+Generate a Zendesk API token
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In the left side-menu, locate the *Channels* section and click on *API.*
+In the side-menu, locate the :guilabel:`Channels` section and select :guilabel:`API`.
 
-..image images/API.png
+.. image:: images/API.png
+   :alt: API channel in Zendesk
 
- 
+Under :guilabel:`Zendesk API`, select the :guilabel:`Settings` tab. Turn on :guilabel:`Token Access` and then select the :guilabel:`+` to generate a new token.
 
-In the *Zendesk API* menu, on the *Settings* tab, make sure that *Token
-Access* is enabled and then click the “+” button to generate a new key.
+.. image:: images/Zendesk-Token-Access.png
+   :alt: Token access in Zendesk API
 
-..image images/Zendesk-Token-Access.png
+Give the token a name. select :guilabel:`Copy` button to copy the token to your clipboard, and select :guilabel:`Save`.
 
- 
+.. image:: images/Zendesk-API-Key-1.png
+   :alt: Copy new token in Zendesk API
 
-Give the key a name.  Click the *Copy* button to copy the key you your
-clipboard, and click *Save*.
-
-..image images/Zendesk-API-Key-1.png
-
- 
-
-Set Up the Outgoing Webhook
+Set up the Outgoing webhook
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Back in VictorOps, click *Integrations* >> *Outgoing Webhooks.* In the
-Outgoing Webhooks menu, click *Add Webhook.*
+In Splunk On-call, select :guilabel:`Integrations` then :guilabel:`Outgoing Webhooks`. Under Outgoing Webhooks, select :guilabel:`Add Webhook`.
 
-..image images/Outgoing-webhooks.png
+.. image:: images/Outgoing-webhooks.png
+   :alt: Add an outgoing webhook in Splunk On-call
 
- 
+* For :guilabel:`Event`, select :guilabel:`Incident-Acknowledged`.
+* For :guilabel:`Method`, select :guilabel:`PUT`.
+* For :guilabel:`Content Type`, select :guilabel:`application/json`.
+* In the :guilabel:`To` field, paste the complete destination URL described previously.
+* In the :guilabel:`Payload` field, paste the following payload. You can change the status value to your preferred status.
 
-For the *Event* dropdown, choose **Incident-Acknowledged.**
+.. code-block:: json
+   { 
+      "ticket":{ 
+         "status": "pending" 
+      } 
+   }
 
-For the *Method,* choose **PUT.**
+Finally, give the webhook a brief description and select :guilabel:`Save`.
 
-For the *Content Type,* choose **application/json.**
-
-In the *To:* box, paste the complete destination URL described above.
-
-In the *Payload:* box, paste the following payload (You can change the
-status value to your preferred status):
-
-{ “ticket”:{ “status”: “pending” } }
-
-Finally, give the webhook a brief description and click *Save*.
-
-..image images/Zendesk-webhook.png
-
- 
-
-If you have any questions please contact `VictorOps
-support <mailto:victorops-support@splunk.com?Subject=Zendesk%20VictorOps%20Integration>`__.
+.. image:: images/Zendesk-webhook.png
+   :alt: Outgoing webhook configuration in Splunk On-call
