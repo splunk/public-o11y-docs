@@ -822,4 +822,3 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Glossary <references/glossary>
-

@@ -71,7 +71,7 @@ Data point dropping metrics
      - One value per token, number of data points metrics pipeline management dropped when the aggregation metrics are more than the limit configured for your organization
 
    * - ``sf.org.numDatapointsDroppedInTimeout``
-     - Number of data points Splunk Observability Cloud didn't attempt to create because your account was throttled or limited in the previous few seconds, and creation was unlikely to succeed.
+     - Number of data points Splunk Observability Cloud didn't attempt to create because Splunk Observability Cloud throttled or limited your account in the previous few seconds, and creation was unlikely to succeed.
   
    * - ``sf.org.numDatapointsDroppedInTimeoutByToken``
      - Reserved for Infrastructure Monitoring internal use only.
