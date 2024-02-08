@@ -13,7 +13,7 @@ Requirements
 Versions Supported: N/A (SaaS)
 VictorOps Version Required: Standard andEnterprise
 
-The Incident Pane serves as a repository for recent activities in your Timeline. The Incident Pane, located to the right of the Timeline, houses alerts that come into VictorOps. We currently store seven days or 1,000 events worth of timeline alert history, whichever comes first. Historical data that fall outside of the aforementioned storage parameters of the Incident Pane may be obtained through the use of the :ref:`VictorOps API <https://help.victorops.com/knowledge-base/api/>`.
+The Incident Pane serves as a repository for recent activities in your Timeline. The Incident Pane, located to the right of the Timeline, houses alerts that come into VictorOps. We currently store seven days or 1,000 events worth of timeline alert history, whichever comes first. Historical data that fall outside of the aforementioned storage parameters of the Incident Pane may be obtained through the use of the :new-page:`VictorOps API <https://help.victorops.com/knowledge-base/api/>`.
 
 
 Incident Owner tabs

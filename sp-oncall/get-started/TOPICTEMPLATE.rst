@@ -28,7 +28,7 @@ Splunk Support Portal: You can open a Splunk On-Call support case in the Splunk 
 
 If you are facing any issues when trying to contact us, see XXXXXX Contacting Splunk On-Call Support XXXXXX
 
-.. note:: To create or manage users, you must have administrator access. To get this access, an existing administrative adds it to your user profile. See :ref:`request-admin` for more information.
+.. note:: To create or manage users, you must have administrator access. To get this access, an existing administrative adds it to your user profile. See for more information.
 
 .. image:: /_images/spoc/sso.png
     :width: 100%

@@ -40,7 +40,7 @@ Settings
 -------------
 
 -  If maintaining old incidents manually is not realistic for your organization, it might be useful to enable the :ref:`Auto-resolve <auto-resolve>` feature on your instance. This will allow you to set active incidents to resolve after a specified period of time.
--  If you have many alerts coming in that don't necessarily need to page anyone, you can use the :ref:`Alert Rules Engine <rules-ening-transf>` to transform them into Info alerts, which will appear on the timeline for tracking but not trigger an incident.
+-  If you have many alerts coming in that don't necessarily need to page anyone, you can use the :ref:`Alert Rules Engine <alert-rules-engine>` to transform them into Info alerts, which will appear on the timeline for tracking but not trigger an incident.
 
 onfiguration
 ---------------
@@ -48,7 +48,7 @@ onfiguration
 -  Get into the practice of sending system RESOLVE messages from your monitoring tools, in addition to the messages that create incidents. You can link these alerts by making sure they have an equivalent :strong:`entity_id`.
 -  Configuring your tools to make sure alerts for a single related event are associated will not only help with tracking but can also be extremely helpful in protecting you from Auto-Pause in the  midst of an alert storm. This is done by leveraging our `alert aggregation <spoc-alert-aggregation>`to reduce the number of active incidents in an organization, which will use the :strong:`entity_id` field to allow for related alerts to roll up under an initial triggered incident, rather than creating new ones for each message.
 
--  If setting :strong:`entity_id`in your monitoring tool is not an option, you can also leverage the :ref:`Alert Rules Engine <rules-ening-transf>` to manually set this field by matching on another related condition specific to the incidents you want to aggregate. For details, see :ref:`rules-engine-matching-conditions`.
+-  If setting :strong:`entity_id`in your monitoring tool is not an option, you can also leverage the :ref:`Alert Rules Engine <alert-rules-engine>` to manually set this field by matching on another related condition specific to the incidents you want to aggregate. For details, see :ref:`rules-engine-matching-conditions`.
 
 -  While alert aggregation can prevent you from Auto-Pause, it won't prevent you from Alert Lag. Even a single incident can cause this state if many alerts are being aggregated under it. If possible,  audit your monitoring tools to limit alerting to less than 150 messages per minute.
 

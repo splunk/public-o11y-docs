@@ -40,7 +40,7 @@ your “Action Library”.
 
 Select **E-mail Action**.
 
-.. image:: /_images/spoc/no_subject_-dscott_victorops_com-VictorOps_Mail.png
+.. image:: /_images/spoc/no_subject-dscott_victorops_com-VictorOps_Mail.png
 
 Enter “VictorOps CRITICAL” in the “Name:” field and paste the email
 address on your clipboard into the “Mail to:” field.

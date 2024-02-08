@@ -51,7 +51,7 @@ In the following image, in the Timeline, you will see incident #642 and four sub
     :alt: Incident 642 has four subsequent alerts tied to it.
 
 
-This alert aggregation works with Critical, Warning, and Ack'd message types as long the entity_id is shared between events. For more information regarding fields like entity_id and message_type, see :ref:`incident-fields-glossary.`
+This alert aggregation works with Critical, Warning, and Ack'd message types as long the entity_id is shared between events. For more information regarding fields like entity_id and message_type, see :ref:`incident-fields-glossary`.
 
 .. note:: 
    
