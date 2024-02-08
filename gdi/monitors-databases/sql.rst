@@ -8,19 +8,7 @@ SQL
 
 .. note:: If you're using the Splunk Distribution of the OpenTelemetry Collector and want to collect SQL metrics, use the native OTel component :ref:`sqlquery-receiver`.
 
-The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the SQL monitor type to gather database usage metrics from SQL queries on your databases.
-
-This integration is available for Kubernetes, Windows, and Linux.
-
-Benefits
---------
-
-.. include:: /_includes/benefits.rst
-
-Installation
-------------
-
-.. include:: /_includes/collector-installation.rst
+The SQL monitor gathers database usage metrics from SQL queries on your databases. It's available for Kubernetes, Windows, and Linux.
 
 Configuration
 -------------

@@ -59,7 +59,7 @@ These are the most relevant required configuration fields:
 * ``datasource``. The datasource value passed to ``sql.Open``. This is a driver-specific string usually consisting of at least a database name and connection information. This is sometimes referred to as the "connection string" in driver documentation. For example, ``host=localhost port=5432 user=me password=s3cr3t sslmode=disable``.
 * ``queries``. A list of queries, where a query is a sql statement and one or more logs and/or metrics sections. Learn more at :ref:`sql-query-receiver-queries`.
 
-Relevant optional fields include:
+Optional fields include:
 
 * ``collection_interval``. ``10s`` by default. The time interval between query executions. 
 * ``storage``. ``""`` by default. The ID of a storage extension to be used to track processed results.
