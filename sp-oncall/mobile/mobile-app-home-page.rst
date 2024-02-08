@@ -55,9 +55,9 @@ yourself, and you can take an unassigned override. For more on Scheduled
 Overrides click
 `here <https://help.victorops.com/knowledge-base/mobile-app-schedule-scheduled-overrides/>`__.
 
- images/Overrides_Preview.png
+/_images/spoc/Overrides_Preview.png
 
-.. |image1 images/Mobile-Home-Page_2.png
-.. |image2 images/Mobile-Home-Page.png
-.. |image3  images/Current-On-Call-Click.png
-.. |image4  images/On-Call-Takes.png
+.. |image1/_images/spoc/Mobile-Home-Page_2.png
+.. |image2/_images/spoc/Mobile-Home-Page.png
+.. |image3 /_images/spoc/Current-On-Call-Click.png
+.. |image4 /_images/spoc/On-Call-Takes.png

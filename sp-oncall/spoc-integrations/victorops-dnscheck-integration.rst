@@ -25,7 +25,7 @@ Click on **Integrations** *>>* **DNSCheck** 
 
 Within the DNSCheck integration page, click “Enable Integration”.
 
-..image images/Integration-DNS-Enable-final.png
+..image/_images/spoc/Integration-DNS-Enable-final.png
 
 This will generate the API Key you will need to provide in DNS Check.  
 
@@ -43,7 +43,7 @@ API Key (copied from Splunk On-Call Integration Settings in the step
 above) >> Include a routing key if desired (*dnscheck* will be the
 default) >> *Save*
 
-.. figure:: images/DSN4.png
+.. image:: /_images/spoc/DSN4.png
    :alt: dsn4
 
    dsn4

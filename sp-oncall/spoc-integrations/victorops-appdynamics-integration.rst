@@ -31,7 +31,7 @@ Navigate to the AppDynamics integration page by visiting *Integrations
 If the integration has not yet been enabled, click the *Enable
 Integration* button.  Copy the “Service API Key” to your clipboard.
 
-..image images/1-API-Key.png
+..image/_images/spoc/1-API-Key.png
 
 In AppDynamics
 ~~~~~~~~~~~~~~
@@ -129,13 +129,13 @@ In AppDynamics
 From the main web portal select *Alert & Respond* then *HTTP Request
 Templates* and then *New*\ **.**
 
-..image images/AppDynamics-1@2x.png
+..image/_images/spoc/AppDynamics-1@2x.png
 
  
 
 Give the Template a name (Splunk On-Call Test in below example).
 
-..image images/AppDynamics-2@2x.png
+..image/_images/spoc/AppDynamics-2@2x.png
 
 Set a *Custom Templating Variable* with a field name of *message_type*
 and a value of *WARNING*.
@@ -149,7 +149,7 @@ URL* using the following format:
 Example: (Assuming a routing_key value of “app-monitoring”)
 *https://alert.victorops.com/integrations/generic/20131114/alert//app-monitoring*
 
-.. figure:: images/saas4-1.png
+.. image:: /_images/spoc/saas4-1.png
    :alt: saas4
 
    saas4
@@ -223,7 +223,7 @@ code to **400** and the *Success Criteria* status code to **200.** 
 
 Make sure to **uncheck** the box for *Expected Payload* for both items.
 
-.. figure:: images/saas6.png
+.. image:: /_images/spoc/saas6.png
    :alt: saas6
 
    saas6
@@ -231,7 +231,7 @@ Make sure to **uncheck** the box for *Expected Payload* for both items.
 At the bottom of the page, make any changes to the settings you would
 like and then select **Save** and **Test.** 
 
-.. figure:: images/saas7.png
+.. image:: /_images/spoc/saas7.png
    :alt: saas7
 
    saas7
@@ -239,14 +239,14 @@ like and then select **Save** and **Test.** 
 When testing, add an Event Type Trigger with a count of 1 and hit **Run
 Test**.
 
-.. figure:: images/saas8.png
+.. image:: /_images/spoc/saas8.png
    :alt: saas8
 
    saas8
 
 Check your VictorOps timeline to make sure you get the associated alert.
 
-.. figure:: images/saas9.png
+.. image:: /_images/spoc/saas9.png
    :alt: saas9
 
    saas9
@@ -255,4 +255,4 @@ You can now use the VictorOps HTTP Request Template with any of your
 alerts in AppDynamics. If you have any questions please `contact us at
 support <https://help.victorops.com/knowledge-base/important-splunk-on-call-support-changes-coming-nov-11th/>`__.
 
-.. |image1 images/1-API-Key-1.png
+.. |image1/_images/spoc/1-API-Key-1.png

@@ -55,7 +55,7 @@ Configuring the Data Exporter
    certificates by checking the appropriate boxes.
 9. Click **Save**.
 
-..image images/Screen-Shot-2018-10-19-at-11.14.35-AM.png
+..image/_images/spoc/Screen-Shot-2018-10-19-at-11.14.35-AM.png
 
 The Data Exporter is now configured and will send two types of messages.
 The first is a ``test`` event to confirm the URL is working. This

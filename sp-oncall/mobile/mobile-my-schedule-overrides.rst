@@ -27,7 +27,7 @@ images/spoc/iOS-Calendar@2x.png
 You can access a weekly view by clicking into any particular day. Once
 there, you will be able to view schedules for the next six days.
 
- images/iOS-Calendar3@2x.png
+/_images/spoc/iOS-Calendar3@2x.png
 
 **Scheduling an Override- iOS**
 -------------------------------
@@ -35,7 +35,7 @@ there, you will be able to view schedules for the next six days.
 To schedule an override, click into the My Schedule view, and then press
 the (+) icon in the upper right hand corner of the screen.
 
- images/spoc/iOS-Calendar-Override3@2x.png
+/_images/spoc/spoc/iOS-Calendar-Override3@2x.png
 
  
 
@@ -43,31 +43,31 @@ Next, you'll be prompted to choose the timezone for which the override
 is to take place, the start time and the end time. Make sure to select
 “Create” when you're ready to schedule your override.
 
- images/iOS-Calendar-Override2@2x.png
+/_images/spoc/iOS-Calendar-Override2@2x.png
 
 To assign or to delete a scheduled override, swipe left and select
 “assign” or “delete”.
 
- images/Image-from-iOS-7.png
+/_images/spoc/Image-from-iOS-7.png
 
 When a user has been assigned to your scheduled override, you will see
 blue lines appear below the grey shift lines on the calendar view, as
 well as details below indicating who picked up each shift.
 
- images/iOS-Calendar-Overrides@2x.png
+/_images/spoc/iOS-Calendar-Overrides@2x.png
 
 A blue bar will NOT appear unless someone has been assigned to your
 scheduled override. Below the calendar, under ‘Schedule Overrides', when
 your override has yet to be re-assigned you will see an empty blue
 circle for the unassigned override.
 
- images/iOS-Calendar4@2x.png
+/_images/spoc/iOS-Calendar4@2x.png
 
 When accessing the weekly view, you will see the override in blue and
 any relevant details (i.e.; who is covering your override and for what
 escalation policy).
 
- images/iOS-Calendar2@2x.png
+/_images/spoc/iOS-Calendar2@2x.png
 
 Take a Schedule Override- iOS
 -----------------------------
@@ -79,7 +79,7 @@ overrides.
 
  
 
-.. figure:: images/Schedule-Overrides-iOS.png
+.. image:: /_images/spoc/Schedule-Overrides-iOS.png
    :alt: accept scheduled override in iOS
 
    accept scheduled override in iOS
@@ -95,12 +95,12 @@ on-call shifts and the orange circles indicate the current day. Below
 the calendar, you will see details about your current and next on-call
 shifts as well as your schedule overrides.
 
- images/Android-Calendar@2x.png
+/_images/spoc/Android-Calendar@2x.png
 
 You can access a weekly view by clicking into any particular day. Once
 there, you will be able to view schedules for the next seven days.
 
- images/Android-Calendar3@2x.png
+/_images/spoc/Android-Calendar3@2x.png
 
 **Scheduling an Override- Android**
 -----------------------------------
@@ -108,37 +108,37 @@ there, you will be able to view schedules for the next seven days.
 To schedule an override, click into the My Schedule view, and then press
 the blue (+) icon in the lower right hand corner of the screen.
 
- images/Android-Calendar2@2x.png
+/_images/spoc/Android-Calendar2@2x.png
 
 Next, you will be prompted to choose the timezone which the override is
 to take place, the start time, and the end time. Make sure to select
 “Create” when you are ready to schedule your override.
 
- images/Android-Calendar4@2x.png
+/_images/spoc/Android-Calendar4@2x.png
 
 To assign a schedule override or to delete a schedule override, swipe
 left and select “assign” or “delete”.
 
- images/Screenshot_20190219-100937.png
+/_images/spoc/Screenshot_20190219-100937.png
 
 When a user has been assigned to your scheduled override, you will see
 blue lines appear below the grey shift lines on the calendar view, as
 well as details below indicating who picked up each shift.
 
- images/Android-Calendar5@2x-1.png
+/_images/spoc/Android-Calendar5@2x-1.png
 
 A blue bar will NOT appear unless someone has been assigned to your
 scheduled override. Below the calendar, under ‘Schedule Overrides', when
 your override has yet to be re-assigned you will see an empty blue
 circle for the unassigned override.
 
- images/Android-Calendar6@2x.png
+/_images/spoc/Android-Calendar6@2x.png
 
 When accessing the weekly view, you will see the override in blue and
 any relevant details (i.e.; who is covering your override and for what
 escalation policy).
 
- images/Screenshot_20190215-154514.png
+/_images/spoc/Screenshot_20190215-154514.png
 
 Take a Schedule Override- Android
 ---------------------------------
@@ -148,7 +148,7 @@ on-call shift you wish to cover and select “Take Override”. Global
 admins will have the ability to “Take Override”, “Assign”, and “Delete”
 overrides. Users will only be able to take a schedule override.
 
-.. figure:: images/Schedule-Overrides-Android-2.png
+.. image:: /_images/spoc/Schedule-Overrides-Android-2.png
    :alt: accept scheduled override in Android
 
    accept scheduled override in Android

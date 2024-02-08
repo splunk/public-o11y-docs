@@ -110,7 +110,7 @@ your Splunk On-Call contact >> Text Tone >> Toggle Emergency Bypass
 Notification Settings in the Splunk On-Call App
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
- images/Incident-Settings.png
+/_images/spoc/Incident-Settings.png
 
  
 
@@ -140,7 +140,7 @@ from the lock-screen.
 **NOTE:** This looks different on iPhone 6 and earlier versus iPhone 6s
 and later. 
 
- images/Screen-Shot-2020-06-03-at-1.43.32-PM.png
+/_images/spoc/Screen-Shot-2020-06-03-at-1.43.32-PM.png
 
  
 
@@ -206,7 +206,7 @@ device itself)
 This process will redo the device association process and often clears
 up any issues with the app.
 
-.. |image1 images/IMG_2632.jpg
+.. |image1/_images/spoc/IMG_2632.jpg
 .. |image2 image:: /_images/spoc/IMG_2633.jpg
 .. |image3 image:: /_images/spoc/Image-from-iOS-23.png
 .. |image4 image:: /_images/spoc/Image-from-iOS-24.png

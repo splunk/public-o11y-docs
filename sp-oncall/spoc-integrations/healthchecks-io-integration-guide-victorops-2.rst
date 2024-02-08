@@ -8,49 +8,49 @@ In VictorOps
 From the VictorOps web portal, select **Settings**, then **Alert
 Behavior**, then **Integrations**.
 
- images/Integration-ALL-FINAL.png
+/_images/spoc/Integration-ALL-FINAL.png
 
 Select the **Healthchecks.io** integration option.
 
- images/Healthcheck-final.png
+/_images/spoc/Healthcheck-final.png
 
 Click **Enable Integration**.
 
- images/Healthcheck-2-final.png
+/_images/spoc/Healthcheck-2-final.png
 
 Copy the **Service API Endpoint** to the clipboard.  Be sure to replace
 the “$routing_key” section with the actual routing key you intend to
 use. (To view or configure route keys in VictorOps, click **Alert
 Behavior**, then **Route Keys**)
 
- images/Healthcheck-3-final.png
+/_images/spoc/Healthcheck-3-final.png
 
 In Healthchecks.io
 ------------------
 
 Login to the healthchecks.io web interface and click **INTEGRATIONS**.
 
- images/My_Checks_-_healthchecks_io.png
+/_images/spoc/My_Checks_-_healthchecks_io.png
 
 Under the “Add More” section, locate “VictorOps” and click **Add
 Integration**.
 
- images/Integrations_-_healthchecks_io.png
+/_images/spoc/Integrations_-_healthchecks_io.png
 
 Under “Integration Settings”, paste the “URL to notify” from the
 previous “In VictorOps” section into the “Post URL” field.  Click **Save
 Integration**.
 
- images/Add_VictorOps_-_healthchecks_io.png
+/_images/spoc/Add_VictorOps_-_healthchecks_io.png
 
 You should now see “VictorOps” listed as one of your integrations.
 
- images/Integrations_-_healthchecks_io-1.png
+/_images/spoc/Integrations_-_healthchecks_io-1.png
 
 You should start receiving alerts from healthchecks.io in your VictorOps
 timeline when they are generated.
 
- images/Timeline_-_VictorOps_Test.png
+/_images/spoc/Timeline_-_VictorOps_Test.png
 
 You have completed setting up this integration.  If you have any
 questions, please contact `VictorOps

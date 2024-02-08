@@ -23,7 +23,7 @@ From the main timeline select **Integrations** *>>* **Atatus.**
 If the integration has not yet been enabled, click the “Enable
 Integration” button.  Copy the “Service API Key” to your clipboard.
 
-..image images/Integration-Atatus-final.png
+..image/_images/spoc/Integration-Atatus-final.png
 
 2.  Once you have copied the API key to your clipboard, click
 on *Settings >> Routing Keys* page to find your routing key
@@ -31,7 +31,7 @@ configuration.  Decide which routing_key will be used with this
 integration and make sure it is associated to the correct team/s.  (You
 may need to create a new key)  Routing keys are case sensitive.
 
-.. figure:: images/atatus2.png
+.. image:: /_images/spoc/atatus2.png
    :alt: atatus2
 
    atatus2
@@ -47,7 +47,7 @@ may need to create a new key)  Routing keys are case sensitive.
 “VictorOps” tab.  Paste your API key and routing_key from Splunk
 On-Call, check the box for “Enable this integration” then click “Save”.
 
-.. figure:: images/atatus3.png
+.. image:: /_images/spoc/atatus3.png
    :alt: atatus3
 
    atatus3
@@ -68,7 +68,7 @@ Engine** and select “Add a rule”
 When **monitoring_tool** matches **Atatus** - Annotate alert with: - URL
 >> “Error Details” >> ${{details.errorUrl}}
 
-..image images/Integration-Atatus-Transmog-2-final-final.png
+..image/_images/spoc/Integration-Atatus-Transmog-2-final-final.png
 
 --------------
 
@@ -78,7 +78,7 @@ When **monitoring_tool** matches **Atatus** - Annotate alert with: - URL
 1. From the VictorOps integration settings page in Atatus, click on
 “Send test message”
 
-.. figure:: images/atatus6.png
+.. image:: /_images/spoc/atatus6.png
    :alt: atatus6
 
    atatus6

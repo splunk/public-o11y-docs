@@ -42,27 +42,27 @@ Select the StatusPage.io integration and click *Enable Integration.*
 In the resulting *StatusPage API Token* text box, paste in your
 StatusPage.io API Key:
 
-..image images/1-Insert-API-token-1.png
+..image/_images/spoc/1-Insert-API-token-1.png
 
 After doing so, select your proper StatusPage.io ID from the dropdown:
 
-..image images/2.-Select-page-ID.png
+..image/_images/spoc/2.-Select-page-ID.png
 
 And that's it! Now when you go back into the timeline you will see the
 StatusPage.io symbol in the upper right-hand corner of the UI.
 
-..image images/3.-SPIO-Icon-1.png
+..image/_images/spoc/3.-SPIO-Icon-1.png
 
  
 
 Selecting this will give you an option to create new StatusPage.io
 incidents using your existing templates:
 
-..image images/4.-New-SPIO.png
+..image/_images/spoc/4.-New-SPIO.png
 
  
 
 Or update existing incidents, all without having to leave the VictorOps
 UI.
 
-..image images/5.-Update-SPIO.png
+..image/_images/spoc/5.-Update-SPIO.png

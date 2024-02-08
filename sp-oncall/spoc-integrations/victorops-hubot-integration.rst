@@ -7,7 +7,7 @@ usual way. After giving your Hubot instance a name (just Hubot in the
 example below) you can then address it from the timeline with or without
 an @.
 
-.. figure:: images/hubot1.png
+.. image:: /_images/spoc/hubot1.png
    :alt: hubot1
 
    hubot1
@@ -79,9 +79,9 @@ and you will be able to all Hubot programatically.
 
  
 
-.. figure:: images/hubot3.png
+.. image:: /_images/spoc/hubot3.png
    :alt: hubot3
 
    hubot3
 
-.. |image1 images/Integrations_-_VictorOps_Demo_9.png
+.. |image1/_images/spoc/Integrations_-_VictorOps_Demo_9.png

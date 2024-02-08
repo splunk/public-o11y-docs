@@ -10,16 +10,16 @@ will walk you through the steps needed to configure this integration.
 From the main timeline select **Settings** >> **Alert Behavior**
 >> **Integrations**
 
-..image images/Integration-ALL-FINAL.png
+..image/_images/spoc/Integration-ALL-FINAL.png
 
 Select the **Observium** Integration.
 
-..image images/Observium-final.png
+..image/_images/spoc/Observium-final.png
 
 Enable the integration if it has not already been enabled, then copy the
 entire “Service API Endpoint” to your clipboard.
 
-..image images/Integrations_-_victorops-4.png
+..image/_images/spoc/Integrations_-_victorops-4.png
 
 **In Observium**
 ----------------
@@ -28,7 +28,7 @@ Create a new Contact, for the “Transport Method” select **VictorOps**.
 Make sure that the “Contact Status” is enabled. Set an appropriate
 routing key. Finally paste in the REST endpoint URL from your clipboard.
 
-.. figure:: images/Observium4.png
+.. image:: /_images/spoc/Observium4.png
    :alt: observium4
 
    observium4

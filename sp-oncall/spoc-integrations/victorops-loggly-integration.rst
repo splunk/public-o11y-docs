@@ -34,7 +34,7 @@ Configuration Steps
 -  Check **Send an email** and add the VictorOps email address. Make
    sure the alert is enabled, then select Submit.
 
--  .. figure:: images/loggly6.png
+-  .. image:: /_images/spoc/loggly6.png
       :alt: loggly6
 
       loggly6

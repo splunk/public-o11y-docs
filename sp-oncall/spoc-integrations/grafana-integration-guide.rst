@@ -46,7 +46,7 @@ From the main timeline navigate to *Integrations >> Grafana*
 Select the **Grafana** integration and copy the **Service API
 Endpoint** to your clipboard.
 
-.. figure:: images/Integrations_-_victorops-2.png
+.. image:: /_images/spoc/Integrations_-_victorops-2.png
    :alt: Copy service api endpoint for Grafana - VictorOps
 
    Copy service api endpoint for Grafana - VictorOps
@@ -57,14 +57,14 @@ Endpoint** to your clipboard.
 From the main dashboard, select the options menu then **Alerting** then
 **Notification Channels**.
 
-.. figure:: images/grafana4.png
+.. image:: /_images/spoc/grafana4.png
    :alt: Connect VictorOps in Grafana dash
 
    Connect VictorOps in Grafana dash
 
 Add a New Channel.
 
-.. figure:: images/kb-new-channel.png
+.. image:: /_images/spoc/kb-new-channel.png
    :alt: Ad a new channel in Grafana dash
 
    Ad a new channel in Grafana dash
@@ -78,14 +78,14 @@ Routing Keys <https://help.victorops.com/knowledge-base/routing-keys/>`__)
 
 You can now test and save the integration.
 
-.. figure:: images/kb-send-test.png
+.. image:: /_images/spoc/kb-send-test.png
    :alt: test and save integration in grafana dash
 
    test and save integration in grafana dash
 
 The resulting test alert in Splunk On-Call should look similar to this:
 
-.. figure:: images/kb-grafana-in-timeline.png
+.. image:: /_images/spoc/kb-grafana-in-timeline.png
    :alt: test alert in VictorOps - from Grafana
 
    test alert in VictorOps - from Grafana
@@ -100,7 +100,7 @@ Alert section on the lefthand side.  Define your alert conditions and
 then under Notifications, click the plus button to select the
 notification channel you just configured.
 
- images/Cmillane-testing_alert_lag_-_Grafana.jpg
+/_images/spoc/Cmillane-testing_alert_lag_-_Grafana.jpg
 
 Be sure to save your changes.  The standard configuration is now
 complete.
@@ -116,7 +116,7 @@ For those with Enterprise Splunk On-Call features, you can include the
 Grafana image of the alert in the notification. When configuring the
 notification channel in Grafana, select the box to **Include image**.
 
-.. figure:: images/kb-include-image.png
+.. image:: /_images/spoc/kb-include-image.png
    :alt: include grafana image of alert in victorops
 
    include grafana image of alert in victorops
@@ -125,7 +125,7 @@ In Splunk On-Call, add the following Rules Engine rule that will surface
 the image_url as an annotation to the incident. (Found by navigating to
 *Settings >> Alert Rules Engine)*
 
- images/Screen-Shot-2020-06-24-at-4.37.01-PM.png
+/_images/spoc/Screen-Shot-2020-06-24-at-4.37.01-PM.png
 
 Lastly, ensure that the image is hosted in a publicly accessible
 location so that Splunk On-Call can display it.  For further
@@ -136,12 +136,12 @@ article <https://grafana.com/docs/grafana/latest/alerting/old-alerting/notificat
 Your resulting Splunk On-Call incident should now include the image as
 an annotation:
 
-.. figure:: images/Screen-Shot-2019-01-25-at-12.39.42-PM.png
+.. image:: /_images/spoc/Screen-Shot-2019-01-25-at-12.39.42-PM.png
    :alt: grafana example image annotation
 
    grafana example image annotation
 
-.. figure:: images/kb-test-notification-with-image.png
+.. image:: /_images/spoc/kb-test-notification-with-image.png
    :alt: successful test - save notification in grafana
 
    successful test - save notification in grafana

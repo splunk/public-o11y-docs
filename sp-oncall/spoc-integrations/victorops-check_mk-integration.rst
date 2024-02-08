@@ -33,7 +33,7 @@ Configuration in CheckMK
    REST URL* textbox (with *REST Endpoint* *URL* selected in the
    dropdown
 
-..image images/0checkmk.png
+..image/_images/spoc/0checkmk.png
 
 Visit `CheckMK's
 documentation <https://docs.checkmk.com/latest/en/notifications_victorops.html>`__
@@ -124,14 +124,14 @@ status for the host.  You can look for logs in /var/log/victorops.
 Next, you will need to configure the contact settings from the Checkmk
 console. Start by selecting *Users*.
 
-.. figure:: images/checkmk2.png
+.. image:: /_images/spoc/checkmk2.png
    :alt: checkmk2
 
    checkmk2
 
 Make a *New User*.
 
-.. figure:: images/checkmk3.png
+.. image:: /_images/spoc/checkmk3.png
    :alt: checkmk3
 
    checkmk3
@@ -139,7 +139,7 @@ Make a *New User*.
 Configure the user.  Email is required even though no emails will be
 sent.  Disable logins for this user and add the user to a contact group.
 
-.. figure:: images/checkmk4.png
+.. image:: /_images/spoc/checkmk4.png
    :alt: checkmk4
 
    checkmk4
@@ -148,12 +148,12 @@ Enable notifications for the user and configure the notification method
 for “VictorOps” and “Call with the following parameters” as pictured
 here.
 
-..image images/check_mk-user-setttings@2x.png
+..image/_images/spoc/check_mk-user-setttings@2x.png
 
 Disable flapping and downtime events for hosts and services, as follows
 (VictorOps does not currently represent these states):
 
-..image images/check_mk-user-settings2@2x.png
+..image/_images/spoc/check_mk-user-settings2@2x.png
 
 You should then be able to send a test notification that will reach
 Splunk On-Call using the “send custom notification” features of either

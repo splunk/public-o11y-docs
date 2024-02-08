@@ -14,14 +14,14 @@ Behavior** then **Integrations**. |image
 
 Select the Threat Stack Integration
 
-..image images/Integrations_-_victorops-7.png
+..image/_images/spoc/Integrations_-_victorops-7.png
 
  
 
 Enable the integration and copy the “Service API Endpoint” to your
 clipboard.
 
-..image images/Integrations_-_victorops-8.png
+..image/_images/spoc/Integrations_-_victorops-8.png
 
 **In Threat Stack**
 -------------------
@@ -29,7 +29,7 @@ clipboard.
 From the main web portal select settings then integrations. Choose the
 VictorOps integration.
 
-.. figure:: images/threat2.png
+.. image:: /_images/spoc/threat2.png
    :alt: threat2
 
    threat2
@@ -37,14 +37,14 @@ VictorOps integration.
 Enter a name and description for the integration, the paste in the “Post
 URL” you copied from VictorOps.
 
-.. figure:: images/threat3.png
+.. image:: /_images/spoc/threat3.png
    :alt: threat3
 
    threat3
 
 Choose the Alert Severity you want to send to VictorOps.
 
-.. figure:: images/threat4.png
+.. image:: /_images/spoc/threat4.png
    :alt: threat4
 
    threat4

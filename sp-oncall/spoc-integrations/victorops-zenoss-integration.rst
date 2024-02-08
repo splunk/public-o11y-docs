@@ -142,7 +142,7 @@ Select “Events” and then “Triggers” |zenoss1|
 
 Select Notification and then “VictorOpsNotify”
 
-.. figure:: images/Zenoss2.png
+.. image:: /_images/spoc/Zenoss2.png
    :alt: zenoss2
 
    zenoss2
@@ -150,7 +150,7 @@ Select Notification and then “VictorOpsNotify”
 Select Content and then put the desired Routing Key after
 VO_ROUTING_KEY=
 
-.. figure:: images/Zenoss3.png
+.. image:: /_images/spoc/Zenoss3.png
    :alt: zenoss3
 
    zenoss3

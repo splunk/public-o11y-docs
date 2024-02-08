@@ -21,7 +21,7 @@ specified Humio Alert query returns a result.
 From the main timeline, select **Settings** *>>* **Alert Behavior** *>>*
 **Integrations** *>>* **Humio**
 
-..image images/Settings@2x.png
+..image/_images/spoc/Settings@2x.png
 
  
 
@@ -31,7 +31,7 @@ Be sure to replace the “$routing_key” section with the actual routing
 key you intend to use. (To view or configure route keys in VictorOps,
 click *Alert Behavior >> Route Keys*)
 
-..image images/Integrations_-_votest-vo2-5-kb.jpg
+..image/_images/spoc/Integrations_-_votest-vo2-5-kb.jpg
 
 --------------
 
@@ -43,11 +43,11 @@ your VictorOps integration.\ |image
 
 Next, at the top of the screen, click **Alerts**.
 
-..image images/sandbox___Search-kb.jpg
+..image/_images/spoc/sandbox___Search-kb.jpg
 
 Then go to Notifiers, New Notifier
 
-..image images/Notifier-kb.png
+..image/_images/spoc/Notifier-kb.png
 
 For **Notification Type**, click on the drop-down menu and select
 **VictorOps**.
@@ -67,7 +67,7 @@ Next, we'll create an Alert to utilize this Notifier with.
 
 Click on **Alerts** and then **New Alert**.
 
-..image images/Alert-kb.png
+..image/_images/spoc/Alert-kb.png
 
 You'll now define the criteria you would like to be notified for. In the
 example, we've set the criteria to be when a 400 error occurs.
@@ -83,11 +83,11 @@ criteria you've defined
 Finally, ensure that the ‘Enabled' box is checked, and then click
 **Create**.
 
-..image images/Alert-Creation-kb.png
+..image/_images/spoc/Alert-Creation-kb.png
 
 You're all set. Now whenever something in Humio matches the Alert
 criteria you've defined, you'll receive an alert within VictorOps at the
 cadence you've defined with the Notification Frequency.
 
-.. |image images/dataspaces-kb.png
-.. |image2 images/New-Notifier-kb.png
+.. |image/_images/spoc/dataspaces-kb.png
+.. |image2/_images/spoc/New-Notifier-kb.png

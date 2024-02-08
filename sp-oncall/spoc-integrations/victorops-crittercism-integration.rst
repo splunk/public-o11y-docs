@@ -20,9 +20,9 @@ Apteligent. Below is a short walkthrough.
    Integration” |crittercism7|
 8. If you have any questions contact support.
 
-.. |crittercism1 images/Crittercism1.png
-.. |crittercism2 images/Crittercism2.png
-.. |image1 images/apteligent_button.png
-.. |crittercism5 images/Crittercism5.png
-.. |crittercism6 images/Crittercism6.png
-.. |crittercism7 images/Crittercism7.png
+.. |crittercism1/_images/spoc/Crittercism1.png
+.. |crittercism2/_images/spoc/Crittercism2.png
+.. |image1/_images/spoc/apteligent_button.png
+.. |crittercism5/_images/spoc/Crittercism5.png
+.. |crittercism6/_images/spoc/Crittercism6.png
+.. |crittercism7/_images/spoc/Crittercism7.png

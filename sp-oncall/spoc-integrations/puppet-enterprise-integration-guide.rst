@@ -52,7 +52,7 @@ From the VictorOps web portal, select **Settings**, then **Alert
 Behavior**, then **Integrations**. Find and select the **Puppet
 Enterprise** integration option.
 
-.. figure:: _images/spoc/voNav@2x.png
+.. image:: _images/spoc/voNav@2x.png
    :alt: Find Puppet Enterprise integration in VictorOps
 
    Find Puppet Enterprise integration in VictorOps
@@ -81,10 +81,10 @@ action using the following values:
 Variables which can be used in your notification can be found
 `HERE <http://docs.splunk.com/Documentation/Splunk/7.1.3/AdvancedDev/ModAlertsLog>`__.
 
-.. figure:: images/splPupAlert@2x-2.png
+.. image:: /_images/spoc/splPupAlert@2x-2.png
    :alt: create an incident victorops puppet enterprise variable
    configuration
 
    create an incident victorops puppet enterprise variable configuration
 
-.. |input victorops token in puppet enterprise configuration| image images/splPupConfig@2x.png
+.. |input victorops token in puppet enterprise configuration| image/_images/spoc/splPupConfig@2x.png

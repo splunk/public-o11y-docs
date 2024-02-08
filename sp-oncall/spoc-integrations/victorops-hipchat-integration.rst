@@ -43,7 +43,7 @@ integration.
 
 From your online HipChat homepage, select *Integrations*.
 
-.. figure:: images/hip4.png
+.. image:: /_images/spoc/hip4.png
    :alt: hip4
 
    hip4
@@ -55,7 +55,7 @@ product name has changed to Splunk On-Call: |hip5|
 From the integration menu for VictorOps, select the *Install an
 integration from a descriptor url* option:
 
-.. figure:: images/hip6.png
+.. image:: /_images/spoc/hip6.png
    :alt: hip6
 
    hip6
@@ -64,7 +64,7 @@ Paste the *Add-on Capabilities URL* that you got from your Splunk
 On-Call HipChat integration page into the *Descriptor URL* box, then
 click *Install*.
 
-.. figure:: images/hip7.png
+.. image:: /_images/spoc/hip7.png
    :alt: hip7
 
    hip7
@@ -74,7 +74,7 @@ Splunk On-Call: **hip8**
 
 Finally, click *Install*:
 
-.. figure:: images/hip9.png
+.. image:: /_images/spoc/hip9.png
    :alt: hip9
 
    hip9
@@ -104,7 +104,7 @@ Outgoing Webhooks, both of which are Enterprise level features.
 Start by creating a custom integration.
 Select *Integrations* then *Build your own integration*.
 
-.. figure:: images/multi1.png
+.. image:: /_images/spoc/multi1.png
    :alt: multi1
 
    multi1
@@ -112,7 +112,7 @@ Select *Integrations* then *Build your own integration*.
 Select the room you want to create the integration for and give the
 integration a name.
 
-.. figure:: images/multi2.png
+.. image:: /_images/spoc/multi2.png
    :alt: multi2
 
    multi2
@@ -174,7 +174,7 @@ true, “message_format”: “text” }
 
 The final result should look something like:
 
-..image images/Screen-Shot-2017-10-23-at-12.43.26-PM.png
+..image/_images/spoc/Screen-Shot-2017-10-23-at-12.43.26-PM.png
 
 Additional webhooks can be created for other events in the Splunk
 On-Call system. If you have any questions please reach out to Splunk

@@ -22,7 +22,7 @@ by visiting *Integrations >> REST Endpoint*
 
 Copy the REST endpoint URL to your clipboard.
 
-..image images/rest-final.png
+..image/_images/spoc/rest-final.png
 
 **In Jenkins**
 --------------
@@ -30,14 +30,14 @@ Copy the REST endpoint URL to your clipboard.
 First, select the build or deployment you want to add VictorOps
 notifications for. Then select **Configure**.
 
-.. figure:: images/jenkins4.png
+.. image:: /_images/spoc/jenkins4.png
    :alt: jenkins4
 
    jenkins4
 
 Under “Build” select **Add build step** then **Execute shell**.
 
-.. figure:: images/jenkins5.png
+.. image:: /_images/spoc/jenkins5.png
    :alt: jenkins5
 
    jenkins5
@@ -51,7 +51,7 @@ VictorOps.
 If you wish to add additional Jenkins variables please see the available
 list by selecting the link below the Command Box:
 
-.. figure:: images/jenkins6.png
+.. image:: /_images/spoc/jenkins6.png
    :alt: jenkins6
 
    jenkins6

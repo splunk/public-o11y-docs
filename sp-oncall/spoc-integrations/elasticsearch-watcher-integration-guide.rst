@@ -48,7 +48,7 @@ Elastic Stack, it also provides a friendly user interface by which you
 can configure your Watch. From the Elastic Cloud homepage, navigate to
 Kibana – you may need to first enable it.
 
-.. figure:: images/Kibana@2x.png
+.. image:: /_images/spoc/Kibana@2x.png
    :alt: using Kibana to visualize elasticsearch
 
    using Kibana to visualize elasticsearch

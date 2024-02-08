@@ -44,14 +44,14 @@ Enabling VictorOps in Microsoft Teams [single-channel]
 First, select the channel you want to have access to VictorOps
 incidents. Select the **+** symbol at the top of the channel.
 
-.. figure:: images/General__VictorOps____Microsoft_Teams.png
+.. image:: /_images/spoc/General__VictorOps____Microsoft_Teams.png
    :alt: adding the victorops tab in microsoft teams
 
    adding the victorops tab in microsoft teams
 
 Select the **Website** option.
 
-.. figure:: images/General__VictorOps____Microsoft_Teams-1.png
+.. image:: /_images/spoc/General__VictorOps____Microsoft_Teams-1.png
    :alt: selecting website tab in microsoft teams
 
    selecting website tab in microsoft teams
@@ -60,7 +60,7 @@ Give the new tab a name (VictorOps for example) and then paste in the
 URL for your VictorOps web instance. The URL will be like:
 https://portal.victorops.com/client/**your_account_name**
 
-.. figure:: images/General__VictorOps____Microsoft_Teams-2.png
+.. image:: /_images/spoc/General__VictorOps____Microsoft_Teams-2.png
    :alt: naming your website in microsoft teams for victorops
 
    naming your website in microsoft teams for victorops
@@ -69,7 +69,7 @@ Save the new tab and then login to VictorOps. After logging in you can
 remove the People Pane and Timeline display from the upper right hand
 corner of the UI giving you a clear view of just your incidents.
 
-.. image: images/MT-FINAL.png
+.. image:/_images/spoc/MT-FINAL.png
 
 Now you can access the full VictorOps web interface right from Microsoft
 Teams. Next we will setup `Outbound
@@ -81,14 +81,14 @@ Send Alerts Into The Channel [single-channel]
 
 Select the channel **Setting** (three dots) then **Connectors**.
 
-.. figure:: images/General__VictorOps____Microsoft_Teams-4.png
+.. image:: /_images/spoc/General__VictorOps____Microsoft_Teams-4.png
    :alt: send alerts into the channel for victorops microsoft teams
 
    send alerts into the channel for victorops microsoft teams
 
 Search for “Incoming Webhook” and then **Add** a new one.
 
-.. figure:: images/General__VictorOps____Microsoft_Teams-5.png
+.. image:: /_images/spoc/General__VictorOps____Microsoft_Teams-5.png
    :alt: search for incoming webhooks in microsoft teams
 
    search for incoming webhooks in microsoft teams
@@ -97,7 +97,7 @@ Give the webhook a name (VictorOps for example) and upload an image for
 the integration. At the bottom of this article is a `VictorOps
 logo <#logo>`__ you may use. Then select **Create**.
 
-.. figure:: images/General__VictorOps____Microsoft_Teams-6.png
+.. image:: /_images/spoc/General__VictorOps____Microsoft_Teams-6.png
    :alt: name and create victorops webhook in microsoft teams
 
    name and create victorops webhook in microsoft teams
@@ -105,7 +105,7 @@ logo <#logo>`__ you may use. Then select **Create**.
 A URL will be generated. Copy this URL to your clipboard then
 select **Done**.
 
-.. figure:: images/General__VictorOps____Microsoft_Teams-7.png
+.. image:: /_images/spoc/General__VictorOps____Microsoft_Teams-7.png
    :alt: url generation for victorops webhook in microsoft teams
 
    url generation for victorops webhook in microsoft teams
@@ -122,7 +122,7 @@ Connect Microsoft teams in VictorOps [single-channel]
 From the main timeline select **Integrations** then **Outgoing
 Webhooks** then **Add Webhook**.
 
-.. image: images/FINAL-Int-OW.png
+.. image:/_images/spoc/FINAL-Int-OW.png
 
 Fill out the fields like so:
 
@@ -142,7 +142,7 @@ Description: Optional.
 
 Lastly, hit **Save** and you are done.
 
-..image images/Outgoing-Webhook.png
+..image/_images/spoc/Outgoing-Webhook.png
 
 Now whenever an incident is generated in VictorOps you will see it come
 into your Microsoft Teams channel and then be able to ack and resolve it
@@ -162,7 +162,7 @@ Enable VictorOps in Microsoft Teams [multi-channel]
 First, select the channels you want to have access to VictorOps
 incidents. Select the **+** symbol at the top of the channel.
 
-.. figure:: images/General__VictorOps____Microsoft_Teams.png
+.. image:: /_images/spoc/General__VictorOps____Microsoft_Teams.png
    :alt: select the channels you want to have access to VictorOps
    incidents
 
@@ -170,7 +170,7 @@ incidents. Select the **+** symbol at the top of the channel.
 
 Select the **Website** option.
 
-.. figure:: images/General__VictorOps____Microsoft_Teams-1.png
+.. image:: /_images/spoc/General__VictorOps____Microsoft_Teams-1.png
    :alt: Select the Website option.
 
    Select the Website option.
@@ -179,7 +179,7 @@ Give the new tab a name (VictorOps for example) and then paste in the
 URL for your VictorOps web instance. The URL will be like:
 https://portal.victorops.com/client/**your_account_name**
 
-.. figure:: images/General__VictorOps____Microsoft_Teams-2.png
+.. image:: /_images/spoc/General__VictorOps____Microsoft_Teams-2.png
    :alt: Give the new tab a name (VictorOps for example)
 
    Give the new tab a name (VictorOps for example)
@@ -188,7 +188,7 @@ Save the new tab and then login to VictorOps. After logging in you can
 remove the People Pane and Timeline display from the upper right hand
 corner of the UI giving you a clear view of just your incidents.
 
-..image images/MT-FINAL.png
+..image/_images/spoc/MT-FINAL.png
 
 Now you can access the full VictorOps web interface right from Microsoft
 Teams. Repeat these steps for all the channels you want to have access
@@ -207,14 +207,14 @@ section.
 
 Select the channel **Setting** (three dots) then **Connectors**.
 
-.. figure:: images/General__VictorOps____Microsoft_Teams-4.png
+.. image:: /_images/spoc/General__VictorOps____Microsoft_Teams-4.png
    :alt: Select the channel Setting (three dots) then Connectors
 
    Select the channel Setting (three dots) then Connectors
 
 Search for “Incoming Webhook” and then **Add** a new one.
 
-.. figure:: images/General__VictorOps____Microsoft_Teams-5.png
+.. image:: /_images/spoc/General__VictorOps____Microsoft_Teams-5.png
    :alt: Give the webhook a name
 
    Give the webhook a name
@@ -223,7 +223,7 @@ Give the webhook a name (VictorOps for example) and upload an image for
 the integration. At the bottom of this article is a `VictorOps
 logo <#logo>`__ you may use. Then select **Create**.
 
-.. figure:: images/General__VictorOps____Microsoft_Teams-6.png
+.. image:: /_images/spoc/General__VictorOps____Microsoft_Teams-6.png
    :alt: Give webhook a name and create webhook
 
    Give webhook a name and create webhook
@@ -231,7 +231,7 @@ logo <#logo>`__ you may use. Then select **Create**.
 A URL will be generated. Copy this URL to your clipboard then
 select **Done**.
 
-.. figure:: images/General__VictorOps____Microsoft_Teams-7.png
+.. image:: /_images/spoc/General__VictorOps____Microsoft_Teams-7.png
    :alt: copy url to clipboard and click done
 
    copy url to clipboard and click done
@@ -267,7 +267,7 @@ Key <https://help.victorops.com/knowledge-base/routing-keys/>`__ of the
 alert. To create the rule go to **Settings** then **Alert** **Rules
 Engine**.
 
-..image images/NEW-Settings.png
+..image/_images/spoc/NEW-Settings.png
 
 Select **Add a Rule**\ |image
 
@@ -275,11 +275,11 @@ Set the rule to match when “routing_key” matches “database” and then set
 a transformation where “team_key” matches the Channel key from Microsoft
 Teams “aaaa1111111111a11a1aaa111a11aa1a1”.
 
-..image images/NEW_MT-Rules-1.png
+..image/_images/spoc/NEW_MT-Rules-1.png
 
 Repeat the previous step for as many channels as you need.
 
-..image images/2-Rules.png
+..image/_images/spoc/2-Rules.png
 
 This will create an alert field every time the rule is matched so you
 can direct specific alerts to the associated channels. Now instead of
@@ -302,7 +302,7 @@ Webhooks.
 From the main timeline select **Integrations** then **Outgoing
 Webhooks** then **Add Webhook**.
 
-..image images/FINAL-Int-OW.png
+..image/_images/spoc/FINAL-Int-OW.png
 
 Fill out the fields like so:
 
@@ -322,7 +322,7 @@ Description: Optional.
 
 Lastly, hit **Save** and you are done.
 
-..image images/Outgoing-Webhook.png
+..image/_images/spoc/Outgoing-Webhook.png
 
 Now whenever an incident is generated in VictorOps you will see it come
 into your Microsoft Teams channel and then be able to ack and resolve it
@@ -345,4 +345,4 @@ support <mailto:Support@victorops.com?Subject=Microsoft%20Teams%20VictorOps%20In
 
 ..images/5Yp_4_1e_400x400.png
 
-.. |image1 images/Alert-Rules.png
+.. |image1/_images/spoc/Alert-Rules.png

@@ -344,7 +344,7 @@ From the web UI, you can configure aspects of the integration. For example, you 
 
 After you finish configuring your settings, save them.
 
-.. figure:: _images/spoc/VO-Slack-Save.png
+.. image:: _images/spoc/VO-Slack-Save.png
    :alt: Saving your settings - Splunk On-Call Slack integration
 
 Invite the Splunk On-Call Bot to the channel

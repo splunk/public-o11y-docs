@@ -27,7 +27,7 @@ which routing_key will be used with this integration and make sure it is
 associated to the correct team/s.  (You may need to create a new key)
  Routing keys are case sensitive.
 
-.. figure:: images/atatus2.png
+.. image:: /_images/spoc/atatus2.png
    :alt: atatus2
 
    atatus2
@@ -37,14 +37,14 @@ associated to the correct team/s.  (You may need to create a new key)
 
 From the main web client, go into Settings.
 
-.. figure:: images/bugsnag2.png
+.. image:: /_images/spoc/bugsnag2.png
    :alt: bugsnag2
 
    bugsnag2
 
 In settings, select **Team Notifications** and then **VictorOps**.
 
-.. figure:: images/bugsnag3.png
+.. image:: /_images/spoc/bugsnag3.png
    :alt: bugsnag3
 
    bugsnag3
@@ -54,9 +54,9 @@ in your “VictorOps API Key” and the appropriate
 `Routing <https://help.victorops.com/knowledge-base/routing-keys/>`__ key.
 Hit **save** and you are done!
 
-.. figure:: images/bugsnag4.png
+.. image:: /_images/spoc/bugsnag4.png
    :alt: bugsnag4
 
    bugsnag4
 
-.. |image1 images/Integration-Bugsnag-final.png
+.. |image1/_images/spoc/Integration-Bugsnag-final.png

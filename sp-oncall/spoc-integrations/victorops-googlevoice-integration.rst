@@ -22,7 +22,7 @@ button to see the drop-down menu and select *Legacy Google Voice*. By
 clicking on the *Legacy Google Voice* button, it will take you to a new
 tab specifically for your Voice account.
 
-.. figure:: images/1-Google2.png
+.. image:: /_images/spoc/1-Google2.png
    :alt: google3
 
    google3
@@ -30,14 +30,14 @@ tab specifically for your Voice account.
 If you don't have a number already, get one by selecting the *Get a
 Voice number* link.
 
-.. figure:: images/2-Google2.png
+.. image:: /_images/spoc/2-Google2.png
    :alt: google1
 
    google1
 
 Once you have a number go into settings.
 
-.. figure:: images/3-Google2.png
+.. image:: /_images/spoc/3-Google2.png
    :alt: google2
 
    google2
@@ -45,7 +45,7 @@ Once you have a number go into settings.
 Go into the “Voicemail & Text” section and select the “Add a new email
 address” link.
 
-.. figure:: images/4google2.png
+.. image:: /_images/spoc/4google2.png
    :alt: google3
 
    google3
@@ -55,12 +55,12 @@ Endpoint <https://help.victorops.com/knowledge-base/victorops-generic-email-endp
 from the VictorOps portal by navigating to *Integrations >> Email
 Endpoint*)
 
-..image images/Email-Integration.png
+..image/_images/spoc/Email-Integration.png
 
 Add the email to your Google Voice account and hit save. Make sure to
 include the correct routing key.
 
-.. figure:: images/5Google2.png
+.. image:: /_images/spoc/5Google2.png
    :alt: google5
 
    google5
@@ -69,12 +69,12 @@ A confirmation email will be sent into the VictorOps timeline. Copy out
 the confirmation link and enter it to a browser to verify the new email
 address.
 
-.. figure:: images/6google2-1.png
+.. image:: /_images/spoc/6google2-1.png
    :alt: google6
 
    google6
 
-.. figure:: images/google7.png
+.. image:: /_images/spoc/google7.png
    :alt: google7
 
    google7
@@ -82,7 +82,7 @@ address.
 Go back into the Voicemail & Text settings and select the “Email the
 message to” checkbox and select the VictorOps email endpoint.
 
-.. figure:: images/7google2.png
+.. image:: /_images/spoc/7google2.png
    :alt: google8
 
    google8
@@ -103,12 +103,12 @@ The subject line of the voicemail will always start with “New voicemail
 from” so create a wildcard match using that phrase. Then add a
 transformation that changes the **message_type** to **CRITICAL**:
 
-..image images/2-Rules-Engine-Rule.png
+..image/_images/spoc/2-Rules-Engine-Rule.png
 
 Test the integration by calling your google voice number and leaving a
 message. The transcription will appear in the **state_message** field.
 
-.. figure:: images/lastgoogle2-1.png
+.. image:: /_images/spoc/lastgoogle2-1.png
    :alt: google11
 
    google11

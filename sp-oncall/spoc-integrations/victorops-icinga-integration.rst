@@ -143,7 +143,7 @@ VictorOps_Service_Settings (~line 40) service object definitions:
       will be the string that appears after ‘/client/'.  An example can
       be found below, where ‘my-company' is the \_VO_ORGANIZATION_ID
 
-..image images/Timeline_-_Ops_Learning-1.jpg
+..image/_images/spoc/Timeline_-_Ops_Learning-1.jpg
 
 -  \_VO_ORGANIZATION_KEY (~line 25 & 26)
 
@@ -378,7 +378,7 @@ in ``/opt/victorops/nagios_plugin/icinga2_conf``**
 
 Once restarted, you should see 3 VictorOps services appear:
 
-.. figure:: images/icinga2.png
+.. image:: /_images/spoc/icinga2.png
    :alt: icinga2
 
    icinga2

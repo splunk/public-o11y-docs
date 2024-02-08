@@ -18,7 +18,7 @@ copy that to your clipboard and be sure to replace the “$routing_key”
 section with the actual routing key you intend to use. (To view or
 configure route keys in VictorOps, click *Alert Behavior >> Route Keys*)
 
-..image images/Integrations_-_VictorOps_Demo_19.png
+..image/_images/spoc/Integrations_-_VictorOps_Demo_19.png
 
  
 
@@ -27,7 +27,7 @@ configure route keys in VictorOps, click *Alert Behavior >> Route Keys*)
 
 From the main dashboard, select **Tags & Alerts** from the left sidebar.
 
-.. figure:: images/log2.png
+.. image:: /_images/spoc/log2.png
    :alt: log2
 
    log2
@@ -39,7 +39,7 @@ that alert. For example appending the term “warning” will create a
 warning alert in VictorOps, appending the term “critical” will create a
 critical incident in VictorOps (see example below).
 
-.. figure:: images/log3.png
+.. image:: /_images/spoc/log3.png
    :alt: log3
 
    log3
@@ -47,7 +47,7 @@ critical incident in VictorOps (see example below).
 Add your VictorOps email endpoint (copied from earlier steps) to the
 email addresses being notified by the Logentries “Alert Tag”.
 
-.. figure:: images/log4.png
+.. image:: /_images/spoc/log4.png
    :alt: log4
 
    log4
@@ -55,7 +55,7 @@ email addresses being notified by the Logentries “Alert Tag”.
 Now whenever the search is matched, and alert will be sent to the
 VictorOps timeline with the associated severity level.
 
-.. figure:: images/log5.png
+.. image:: /_images/spoc/log5.png
    :alt: log5
 
    log5

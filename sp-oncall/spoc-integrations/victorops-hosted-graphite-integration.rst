@@ -8,12 +8,12 @@ through the steps needed to integrate these two systems.
 From the main timeline go to **Settings** then **Alert
 Behavior** then **Integrations.** 
 
-..image images/Integration-ALL-FINAL.png
+..image/_images/spoc/Integration-ALL-FINAL.png
 
 Select the **Hosted Graphite** integration and copy the **Service API
 Endpoint** to your clipboard.
 
-..image images/Integrations_-_victorops-17.png
+..image/_images/spoc/Integrations_-_victorops-17.png
 
 **In Hosted Graphite**
 ----------------------
@@ -21,14 +21,14 @@ Endpoint** to your clipboard.
 From the main web interface select **Alerts** and then **Notification
 Channels.**
 
-.. figure:: images/hosted2.png
+.. image:: /_images/spoc/hosted2.png
    :alt: hosted2
 
    hosted2
 
 Next add a new **Notification Channel.**
 
-.. figure:: images/hosted3.png
+.. image:: /_images/spoc/hosted3.png
    :alt: hosted3
 
    hosted3
@@ -37,7 +37,7 @@ Select the **VictorOps** “Notification Type”, give the “Notification
 Channel” a name and then put in your API key you copied from the
 VictorOps web portal.
 
-.. figure:: images/hosted4.png
+.. image:: /_images/spoc/hosted4.png
    :alt: hosted4
 
    hosted4
@@ -46,7 +46,7 @@ Save your new VictorOps “Notification Channel”. Now you can use this
 channel when creating new “Alerts” in Hosted Graphite. To set up an
 alert go select **Alerts** from the left sidebar.
 
-.. figure:: images/hosted5.png
+.. image:: /_images/spoc/hosted5.png
    :alt: hosted5
 
    hosted5
@@ -54,7 +54,7 @@ alert go select **Alerts** from the left sidebar.
 When Creating or editing an alert select VictorOps as the “Notify me
 with…” option.
 
-.. figure:: images/hosted6.png
+.. image:: /_images/spoc/hosted6.png
    :alt: hosted6
 
    hosted6

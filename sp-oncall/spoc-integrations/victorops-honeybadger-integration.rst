@@ -8,11 +8,11 @@ steps needed to integrate Honeybadger with VictorOps.
 From the web portal, select **Settings** >> **Integrations** >>
 **HoneyBadger**
 
-..image images/Integration-ALL-FINAL.png
+..image/_images/spoc/Integration-ALL-FINAL.png
 
 Copy the API key to your clipboard.
 
-..image images/Honeybadger-final.png
+..image/_images/spoc/Honeybadger-final.png
 
 **In Honeybadger**
 ------------------
@@ -20,14 +20,14 @@ Copy the API key to your clipboard.
 From the web portal select **Settings** and then **Alerts &
 Integrations**.
 
-.. figure:: images/honey4.png
+.. image:: /_images/spoc/honey4.png
    :alt: honey4
 
    honey4
 
 Select the **VictorOps** integration option.
 
-.. figure:: images/honey5.png
+.. image:: /_images/spoc/honey5.png
    :alt: honey5
 
    honey5
@@ -35,7 +35,7 @@ Select the **VictorOps** integration option.
 Paste in your **VictorOps API Key** and add in the appropriate
 `Routing </articles/Getting_Started/Incident-Routing>`__ Key.
 
-.. figure:: images/honey6.png
+.. image:: /_images/spoc/honey6.png
    :alt: honey6
 
    honey6
@@ -43,7 +43,7 @@ Paste in your **VictorOps API Key** and add in the appropriate
 Fill out the rest of the form, test the integration to make sure the
 connection is successful. Finally hit save and you are done.
 
-.. figure:: images/honey7.png
+.. image:: /_images/spoc/honey7.png
    :alt: honey7
 
    honey7

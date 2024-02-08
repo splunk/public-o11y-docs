@@ -10,15 +10,15 @@ will walk you through these easy to set up integration.
 From the main timeline select **Settings** >> **Alert
 Behavior** >> **Integrations**
 
-..image images/Integration-ALL-FINAL.png
+..image/_images/spoc/Integration-ALL-FINAL.png
 
 Select the **StatusCake** integration.
 
-..image images/StatusCake-final.png
+..image/_images/spoc/StatusCake-final.png
 
 Copy the entire REST Endpoint URL to your clipboard.
 
-..image images/StatusCake-2-final.png
+..image/_images/spoc/StatusCake-2-final.png
 
 **In StatusCake**
 -----------------
@@ -28,7 +28,7 @@ select VictorOps from the drop down menu, enter in your REST Endpoint
 URL and give it an Alias. Finally select “ADD NEW 3RD PARTY NOTIFICATION
 SERVICE”.
 
-.. figure:: images/StatusCake4.png
+.. image:: /_images/spoc/StatusCake4.png
    :alt: statuscake4
 
    statuscake4
@@ -36,12 +36,12 @@ SERVICE”.
 You can then test the integration, and an info message will be sent into
 the VictorOps timeline.
 
-.. figure:: images/StatusCake5.png
+.. image:: /_images/spoc/StatusCake5.png
    :alt: statuscake5
 
    statuscake5
 
-.. figure:: images/StatusCake6.png
+.. image:: /_images/spoc/StatusCake6.png
    :alt: statuscake6
 
    statuscake6

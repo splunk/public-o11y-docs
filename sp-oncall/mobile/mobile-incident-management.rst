@@ -19,7 +19,7 @@ sort through.
 
  
 
- images/Your-incidents.png
+/_images/spoc/Your-incidents.png
 
  
 
@@ -28,7 +28,7 @@ Available Incident Actions from the Mobile App
 
  
 
- images/Filter.png
+/_images/spoc/Filter.png
 
  
 
@@ -60,7 +60,7 @@ available. From here you can **Create a Manual Incident**, **Enable
 Maintenance Mode**, and **Acknowledge All of Your Triggered
 Incidents.** 
 
- images/Manage-Incidents.png
+/_images/spoc/Manage-Incidents.png
 
 There are a number of actions that can be taken on an incident in the
 Splunk On-Call Mobile App.
@@ -71,7 +71,7 @@ Splunk On-Call Mobile App.
 -  `Add Conference
    Bridge <https://help.victorops.com/knowledge-base/conference-bridges/>`__
 
- images/Incident-Actions.png
+/_images/spoc/Incident-Actions.png
 
  
 
@@ -90,4 +90,4 @@ reroute, or snooze.
 
 **Swipe Right** on an incident to either acknowledge or resolve it.
 
- images/Incident-Shortcuts.png
+/_images/spoc/Incident-Shortcuts.png

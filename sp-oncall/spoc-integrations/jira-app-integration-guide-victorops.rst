@@ -48,7 +48,7 @@ Configuring Application Settings
    success, a new entry will appear in the *Connected VictorOps
    Organizations* section, and display a green “VALID” flag.
 
- images/1jira.png
+/_images/spoc/1jira.png
 
 **Configuring Jira Project Settings**
 -------------------------------------
@@ -89,7 +89,7 @@ incidents** dropdown.
 If you wish to disable such issue creation, deselect the **Allow issues
 to be created from incidents via the REST API** checkbox.
 
- images/2jira.png
+/_images/spoc/2jira.png
 
 Jira State Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -97,7 +97,7 @@ Jira State Configuration
 Defining state mapping allows Jira issues to remain synchronized as
 incidents move through their life cycle in VictorOps.
 
- images/3jira.png
+/_images/spoc/3jira.png
 
 **Creating a Splunk On-Call Incident Within Jira**
 --------------------------------------------------
@@ -121,4 +121,4 @@ issue view.
 4. Click the incident card's **Incident Details** link to display the
    incident in Splunk On-Call in a new browser tab.
 
- images/4jira.png
+/_images/spoc/4jira.png

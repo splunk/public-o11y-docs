@@ -77,7 +77,7 @@ navigate to the app. Under Inputs, select Create New Input and choose a
 type of data you would like Splunk to ingest from Splunk On-Call. For
 all data types the input configuration options will look like below:
 
-..image images/Screen_Shot_2020-08-06_at_9_58_34_AM.png
+..image/_images/spoc/Screen_Shot_2020-08-06_at_9_58_34_AM.png
 
 -  **Name** – this is a unique name for the data input. As a best
    practice, choose a name that accurately represents the input. For
@@ -519,4 +519,4 @@ all instance of <org_slug>.
 
 [/ht_toggle]
 
-.. |image1 images/Screen-Shot-2020-08-06-at-9.51.25-AM.png
+.. |image1/_images/spoc/Screen-Shot-2020-08-06-at-9.51.25-AM.png

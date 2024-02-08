@@ -43,13 +43,13 @@ Enable GitHub Integration in VictorOps
 
 In VictorOps, click on *Settings >> Alert Behavior >> Integrations* 
 
- images/integrations.png
+/_images/spoc/integrations.png
 
 Then you'll want to find the Github Integration
 
  
 
-.. figure:: images/Github-App-1@2x.png
+.. image:: /_images/spoc/Github-App-1@2x.png
    :alt: find github integration and enable it
 
    find github integration and enable it
@@ -63,14 +63,14 @@ Connecting VictorOps in GitHub
 
 First you'll want to sign-in.
 
-.. figure:: images/Github-App-4@2x.png
+.. image:: /_images/spoc/Github-App-4@2x.png
    :alt: sign in to github to find victorops
 
    sign in to github to find victorops
 
 Next select *Install.*
 
-.. figure:: images/Github-app-2@2x.png
+.. image:: /_images/spoc/Github-app-2@2x.png
    :alt: select install victorops in github
 
    select install victorops in github
@@ -80,14 +80,14 @@ Next select *Install.*
 Next, choose the repositories you want to integrate with then select
 *Install*.
 
-.. figure:: images/Installing_VictorOps.jpg
+.. image:: /_images/spoc/Installing_VictorOps.jpg
    :alt: choose repositories you want to integrate with in github
 
    choose repositories you want to integrate with in github
 
 Confirm your password and the integration is complete.
 
-.. figure:: images/Confirm_password.jpg
+.. image:: /_images/spoc/Confirm_password.jpg
    :alt: confirm your password to complete victorops github integration
 
    confirm your password to complete victorops github integration
@@ -99,7 +99,7 @@ select your user drop-down and then Settings in Github.
 
  
 
-.. figure:: images/Installed_GitHub_App_-_VictorOps.jpg
+.. image:: /_images/spoc/Installed_GitHub_App_-_VictorOps.jpg
    :alt: choose settings in github to adjust application settings
 
    choose settings in github to adjust application settings
@@ -109,7 +109,7 @@ select your user drop-down and then Settings in Github.
 Next, select Application settings and on the VictorOps option select
 **Configure**.
 
-.. figure:: images/Installed_GitHub_Apps.jpg
+.. image:: /_images/spoc/Installed_GitHub_Apps.jpg
    :alt: select configure to customize application settings in github
 
    select configure to customize application settings in github

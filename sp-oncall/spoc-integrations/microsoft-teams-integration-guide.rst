@@ -96,7 +96,7 @@ Channel button in the resulting card.
 -  Your mapping will now display in the Default Mapping table, where it
    can be edited or deleted.
 
-..image images/MS1.png
+..image/_images/spoc/MS1.png
 
 **Escalation Policy Mapping**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -126,9 +126,9 @@ Channel button in the resulting card.
 -  Your mapping will now display in the Escalation Policy Mapping table,
    where it can be edited or deleted.
 
-..image images/MS2.png
+..image/_images/spoc/MS2.png
 
-..image images/MS3.png
+..image/_images/spoc/MS3.png
 
 Splunk>VictorOps Bot Commands
 -----------------------------

@@ -250,7 +250,7 @@ integration.
 
        </table>
 
-    ..image images/DM-3-final-1.png
+    ..image/_images/spoc/DM-3-final-1.png
 
 3.  Click on the **Update** button to save your Alert Template.
 
@@ -390,7 +390,7 @@ integration.
 
        </table>
 
-    ..image images/Screen-Shot-2018-01-12-at-1.25.27-PM.png
+    ..image/_images/spoc/Screen-Shot-2018-01-12-at-1.25.27-PM.png
 
 10. Click on the button **Update** to save this configuration.
 
@@ -403,11 +403,11 @@ integration.
     |image8|\ Congratulations! You've successfully sent your first alert
     from Dotcom monitor to Splunk On-Call!
 
-.. |image1 images/DM-1-final-1.png
-.. |image2 images/DM-2-final-2.png
-.. |image3 images/DM-url-skitch.png
-.. |image4 images/Dotcom-Monitor-VO2-8-final.png
-.. |image5 images/Screen-Shot-2018-01-12-at-1.46.46-PM.png
-.. |image6 images/Screen-Shot-2018-01-12-at-1.13.51-PM.png
-.. |image7| images/Screen-Shot-2018-01-12-at-1.31.35-PM.png
+.. |image1/_images/spoc/DM-1-final-1.png
+.. |image2/_images/spoc/DM-2-final-2.png
+.. |image3/_images/spoc/DM-url-skitch.png
+.. |image4/_images/spoc/Dotcom-Monitor-VO2-8-final.png
+.. |image5/_images/spoc/Screen-Shot-2018-01-12-at-1.46.46-PM.png
+.. |image6/_images/spoc/Screen-Shot-2018-01-12-at-1.13.51-PM.png
+.. |image7|/_images/spoc/Screen-Shot-2018-01-12-at-1.31.35-PM.png
 .. |image8images/Screen-Shot-2018-01-12-at-1.34.17-PM.png

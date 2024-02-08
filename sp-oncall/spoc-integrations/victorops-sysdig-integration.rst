@@ -9,19 +9,19 @@ steps to integrate Sysdig with VictorOps.
 From the VictorOps web portal select **Settings** then **Alert
 Behavior** then **Integrations**.
 
-..image images/settings-alert-behavior-integrations-e1480978368974.png
+..image/_images/spoc/settings-alert-behavior-integrations-e1480978368974.png
 
  
 
 Select the **Sysdig** Integration.
 
-..image images/Integrations_-_victorops-9.png
+..image/_images/spoc/Integrations_-_victorops-9.png
 
  
 
 Copy the “Service API Key” to your clipboard.
 
-..image images/Integrations_-_victorops-10.png
+..image/_images/spoc/Integrations_-_victorops-10.png
 
 **In Sysdig**
 -------------
@@ -30,7 +30,7 @@ Select the S\ **ettings Menu** icon in the upper right corner
 then **Notifications.** Hit the plus next to **MY CHANNELS**, in the
 drop down menu Select **VictorOps**
 
-.. figure:: images/Sysdig2.png
+.. image:: /_images/spoc/Sysdig2.png
    :alt: sysdig2
 
    sysdig2
@@ -44,7 +44,7 @@ Cloud.”
 
 Finally hit **CREATE CHANNEL** and you are done.
 
-.. figure:: images/Sysdig3.png
+.. image:: /_images/spoc/Sysdig3.png
    :alt: sysdig3
 
    sysdig3

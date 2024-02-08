@@ -41,7 +41,7 @@ Get a holistic overview of all incidents coming into Splunk On-Call by
 selecting the \_A\__ll\_ drop-down, or take a deep dive into individual
 teams to uncover specific problem areas affecting your team.
 
- images/IFR-Team-Filter.jpg
+/_images/spoc/IFR-Team-Filter.jpg
 
 --------------
 
@@ -54,7 +54,7 @@ need attention, and the information to understand from where your
 incidents are coming. We give you four options to segment your
 incidents: integrations, host, service, or route key.
 
- images/IFR-Segmenting.jpg
+/_images/spoc/IFR-Segmenting.jpg
 
 --------------
 
@@ -64,7 +64,7 @@ Date Range & Bucketing
 See how incident trends impact your team on a daily, weekly, or monthly
 basis. It's up to you how granular your scope can be.
 
-. images/IFR-Display.jpg
+./_images/spoc/IFR-Display.jpg
 
 --------------
 
@@ -83,7 +83,7 @@ by clicking the *reset* button. Note: Hover state selection will not
 affect the contents of the CSV. To segment the CSV by a specific date
 range, adjust the date range rules.
 
- images/IFR-Hover.jpg
+/_images/spoc/IFR-Hover.jpg
 
 --------------
 

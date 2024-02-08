@@ -10,29 +10,29 @@ integrate the two systems.
 From the main timeline go select **Settings** then **Alert
 Behavior** then **Integrations**.
 
-..image images/settings-alert-behavior-integrations-e1480978368974.png
+..image/_images/spoc/settings-alert-behavior-integrations-e1480978368974.png
 
 Select the **Vivid Cortex** Integration.
 
-..image images/Integrations_-_victorops-5.png
+..image/_images/spoc/Integrations_-_victorops-5.png
 
 Enable the integration and copy the “Service API Key” to your clipboard.
 
-..image images/Integrations_-_victorops-6.png
+..image/_images/spoc/Integrations_-_victorops-6.png
 
 **In VividCortex**
 ------------------
 
 Select **Settings** then **Integrations**.
 
-.. figure:: images/VividCortex4.png
+.. image:: /_images/spoc/VividCortex4.png
    :alt: vividcortex4
 
    vividcortex4
 
 Then select **Create New Integration**.
 
-.. figure:: images/VividCortex5.png
+.. image:: /_images/spoc/VividCortex5.png
    :alt: vividcortex5
 
    vividcortex5
@@ -43,7 +43,7 @@ Key <https://help.victorops.com/knowledge-base/routing-keys/>`__, paste
 in your API Key you copied from VictorOps, select **Create
 Integration**. And you are done.  
 
-.. figure:: images/VividCortex6.png
+.. image:: /_images/spoc/VividCortex6.png
    :alt: vividcortex6
 
    vividcortex6

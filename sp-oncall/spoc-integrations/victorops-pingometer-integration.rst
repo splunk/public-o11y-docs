@@ -14,21 +14,21 @@ sure to replace the “$routing_key” section with the actual routing key
 you intend to use. (To view or configure route keys in VictorOps,
 click *Alert Behavior >> Route Keys*)
 
-..image images/Pingometer-final.png
+..image/_images/spoc/Pingometer-final.png
 
 **In Pingometer:**
 ------------------
 
 From the main Dashboard select **Account.**
 
-.. figure:: images/Pingometer3-.png
+.. image:: /_images/spoc/Pingometer3-.png
    :alt: pingometer3
 
    pingometer3
 
 From the Account page select **Extras.**
 
-.. figure:: images/Pingometer4-.png
+.. image:: /_images/spoc/Pingometer4-.png
    :alt: pingometer4
 
    pingometer4
@@ -36,7 +36,7 @@ From the Account page select **Extras.**
 Near the bottom of the page find the “VICTOROPS” option and
 select **Manage.**
 
-.. figure:: images/Pingometer5-.png
+.. image:: /_images/spoc/Pingometer5-.png
    :alt: pingometer5
 
    pingometer5
@@ -44,7 +44,7 @@ select **Manage.**
 Paste in your VictorOps API key that you have copied to your clipboard,
 and set the status to **ON**.
 
-.. figure:: images/Pingometer6.png
+.. image:: /_images/spoc/Pingometer6.png
    :alt: pingometer6
 
    pingometer6
@@ -54,14 +54,14 @@ different “Monitors” in Pingometer. To do so, select **Monitors** and
 then hit the dropdown next to the monitor you want to use and
 select **Edit.**
 
-.. figure:: images/Pingometer7.png
+.. image:: /_images/spoc/Pingometer7.png
    :alt: pingometer7
 
    pingometer7
 
 Select **Advanced**
 
-.. figure:: images/Pingometer8.png
+.. image:: /_images/spoc/Pingometer8.png
    :alt: pingometer8
 
    pingometer8
@@ -69,7 +69,7 @@ Select **Advanced**
 Near the bottom you will have an option to enter your `VictorOps Routing
 Key <http://victorops.force.com/knowledgebase/articles/Getting_Started/Incident-Routing/>`__ 
 
-.. figure:: images/Pingometer9.png
+.. image:: /_images/spoc/Pingometer9.png
    :alt: pingometer9
 
    pingometer9

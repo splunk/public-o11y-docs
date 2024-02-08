@@ -463,7 +463,7 @@ This message may mean that the function has not been properly assigned to your T
 If you encounter this error message when trying to save on the Configure page in Twilio (where Environment Variables and Dependencies are listed), this may be due to a recent change of the accepted values for the 'got' dependency.  Previously, we recommended people leave the version for this 'got' dependency blank, though with a recent change to
 the v10 package of 'got', we now must specify this version as 9.6.0.  Ensure all dependencies match the screenshot/table in the above “Configure Environment Variables” section and re-try saving.
 
-..image images/spoc/Voice-2.png
+..image/_images/spoc/spoc/Voice-2.png
    :alt: Voice configuration
 
 **Problem 15**: The integration calls a seemingly random team, not the one you've specified within the Functions >> Configure section in Twilio

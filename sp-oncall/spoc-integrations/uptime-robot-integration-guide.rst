@@ -42,7 +42,7 @@ In VictorOps, select Uptime Robot within the integrations page.
 If the integration has not yet been enabled, click the *Enable
 Integration* button to generate your endpoint URL as seen below.
 
-.. figure:: images/uptimerobot-integration-enabled.png
+.. image:: /_images/spoc/uptimerobot-integration-enabled.png
    :alt: Enable uptime integration
 
    Enable uptime integration
@@ -65,7 +65,7 @@ move on to The Uptime Robot UI.
 From the main dashboard select *My Settings*. Under “Alert
 Contacts\_”\_ select *Add Alert Contact.*
 
-..image images/Add-Alert-Contact.png
+..image/_images/spoc/Add-Alert-Contact.png
 
 Select *Web-Hook* for the *Alert Contact Type* and give it a *Friendly
 Name* and then paste your VictorOps “URL to Notify” into the box,
@@ -78,23 +78,23 @@ affect alert routing.
 Leave the POST Value blank, keep the JSON checkbox deselected, and,
 finally, select *Create Alert Contact*.
 
-.. figure:: images/uptime-robot-new-alert-contact-webhook.png
+.. image:: /_images/spoc/uptime-robot-new-alert-contact-webhook.png
    :alt: Create alert contact in Uptime Robot
 
    Create alert contact in Uptime Robot
 
 Your set-up should look similar to the configuration depicted below.
 
-..image images/Details-for-new-alert-contact.png
+..image/_images/spoc/Details-for-new-alert-contact.png
 
 To add this Alert Contact to one of your monitors select the gear icon
 next to the monitor and then *Edit* it.
 
-..image images/Edit-the-monitor.png
+..image/_images/spoc/Edit-the-monitor.png
 
 Select the VictorOps *Alert Contact* and then *Save Changes.*
 
-..image images/add-victorops-to-the-alerting.png
+..image/_images/spoc/add-victorops-to-the-alerting.png
 
 Now whenever an alert is triggered in Uptime Robot a message will be
 sent to the VictorOps timeline.

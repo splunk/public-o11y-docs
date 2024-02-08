@@ -17,14 +17,14 @@ endpoint.
 Retrieve your Site 24x7 endpoint URL. To do, so go to **Integrations >>
 Site 24/7**
 
-..image images/site-247.png
+..image/_images/spoc/site-247.png
 
  
 
 Select the Site 24x7 icon, **enable** the integration, then **copy the
 URL** to your clipboard.
 
-..image images/Site24x7-2@2x.png
+..image/_images/spoc/Site24x7-2@2x.png
 
 Please remember to replace the **$routing_key** with an actual Splunk
 On-Call routing key, as defined
@@ -36,7 +36,7 @@ On-Call routing key, as defined
 From the main web portal select **Admin** then **Third-Party
 Integration** then **Actions** then **Webhooks**.
 
-..image images/Nav@2x.png
+..image/_images/spoc/Nav@2x.png
 
 On the webhook configuration screen, fill in the values as follows and
 then click Save:
@@ -79,7 +79,7 @@ Value
 | Integration level                 | All Monitors                      |
 +-----------------------------------+-----------------------------------+
 
-..image images/site24x7-2.png
+..image/_images/spoc/site24x7-2.png
 
 Auto Resolve Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -90,7 +90,7 @@ be configured to state:
 
 When status matches \*UP\* using wildcard, set message_type to RECOVERY.
 
-..image images/Alert_Rules_Engine_-_votest-manoj.png
+..image/_images/spoc/Alert_Rules_Engine_-_votest-manoj.png
 
 Reach out to support if you need assistance!
 

@@ -14,14 +14,14 @@ sure to replace the “$routing_key” section with the actual routing key
 you intend to use. (To view or configure route keys in Splunk On-Call,
 click *Settings>> Routing Keys*)
 
-..image images/Integration-Desk-final.png
+..image/_images/spoc/Integration-Desk-final.png
 
 **In Desk.com**
 ---------------
 
 In the top left corner select the menu icon and then **Admin**.
 
-.. figure:: images/desk2.png
+.. image:: /_images/spoc/desk2.png
    :alt: desk2
 
    desk2
@@ -29,14 +29,14 @@ In the top left corner select the menu icon and then **Admin**.
 On the admin page select **APPS** then find “Custom Action” and
 select **Install**.
 
-.. figure:: images/desk3.png
+.. image:: /_images/spoc/desk3.png
    :alt: desk3
 
    desk3
 
 Next select **Install Custom Action.**
 
-.. figure:: images/desk4.png
+.. image:: /_images/spoc/desk4.png
    :alt: desk4
 
    desk4
@@ -46,14 +46,14 @@ method to none, paste in your Post URL that you copied from Splunk
 On-Call in the first step, then make sure the Action is set to active
 and then hit create.
 
-.. figure:: images/desk5.png
+.. image:: /_images/spoc/desk5.png
    :alt: desk5
 
    desk5
 
 On the next screen select **Add Action.**
 
-.. figure:: images/desk6.png
+.. image:: /_images/spoc/desk6.png
    :alt: desk6
 
    desk6
@@ -65,7 +65,7 @@ to a URL”. In the JSON to POST box paste in the following:
 
 Then select **Add Action**.
 
-.. figure:: images/desk7.png
+.. image:: /_images/spoc/desk7.png
    :alt: desk7
 
    desk7
@@ -74,14 +74,14 @@ Next you must add the action to a “Case Created” rule. To do this
 select **Cases** then under “Rules” select **Case Created** then **Add
 Rule**
 
-.. figure:: images/desk8.png
+.. image:: /_images/spoc/desk8.png
    :alt: desk8
 
    desk8
 
 Give the rule a name then hit **Add.** 
 
-.. figure:: images/desk9.png
+.. image:: /_images/spoc/desk9.png
    :alt: desk9
 
    desk9
@@ -90,7 +90,7 @@ Add any Condition you might want, then for the “Rule Actions” set it
 to **Trigger an App Action** and then choose the Splunk On-Call action
 you previously created. Finally hit Update and you are done.
 
-.. figure:: images/desk10.png
+.. image:: /_images/spoc/desk10.png
    :alt: desk10
 
    desk10

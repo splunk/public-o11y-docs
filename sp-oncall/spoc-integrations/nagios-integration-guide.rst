@@ -203,7 +203,7 @@ If the integration has not yet been enabled, click the “**Enable
 Integration**” button to generate your configuration values as seen
 here:
 
-.. figure:: images/Integrations_-_Ops_Learning-1.jpg
+.. image:: /_images/spoc/Integrations_-_Ops_Learning-1.jpg
    :alt: Enable Nagios integration - VictorOps
 
    Enable Nagios integration - VictorOps
@@ -472,7 +472,7 @@ Import the Configuration
 
 In the Nagios XI dashboard click *Configure* in the top menu:
 
-.. figure:: images/nagiosXI1.jpg
+.. image:: /_images/spoc/nagiosXI1.jpg
    :alt: Configure Nagios XI - VictorOps
 
    Configure Nagios XI - VictorOps
@@ -481,7 +481,7 @@ In the Nagios XI dashboard click *Configure* in the top menu:
 
 Click *Core Config Manager* in the left-hand menu:
 
-.. figure:: images/nagiosXI2.png
+.. image:: /_images/spoc/nagiosXI2.png
    :alt: Click Core Config Manager - Nagios XI
 
    Click Core Config Manager - Nagios XI
@@ -491,7 +491,7 @@ Click *Core Config Manager* in the left-hand menu:
 Click *Tools* -> *Import Config Files* in the left-hand menu.  Select
 the config from the file list, then click the “Import” button:
 
-.. figure:: images/nagiosXI3.png
+.. image:: /_images/spoc/nagiosXI3.png
    :alt: Config Nagios XI Import - Click Tools -> Import Config Files
 
    Config Nagios XI Import - Click Tools -> Import Config Files
@@ -504,7 +504,7 @@ to be changed to a “check command”.  Navigate to the *Core Config
 Manager*, and bring up the list of commands.  Then click the little
 configure icon for the “check_victorops_cmds” command:
 
-.. figure:: images/nagiosXI4.png
+.. image:: /_images/spoc/nagiosXI4.png
    :alt: enable ack-back through the Nagios XI UI
 
    enable ack-back through the Nagios XI UI
@@ -514,7 +514,7 @@ configure icon for the “check_victorops_cmds” command:
 Once in that dialog, change the command type to “check command” and
 save:
 
-.. figure:: images/nagiosXI5.png
+.. image:: /_images/spoc/nagiosXI5.png
    :alt: change the command type to “check command”
 
    change the command type to “check command”

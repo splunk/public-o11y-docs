@@ -60,7 +60,7 @@ and `iOS <https://help.victorops.com/knowledge-base/ios-application/>`__
 devices by  navigating to *Menu >> Notifications >>* *Add Splunk
 On-Call to Contacts*
 
- images/VO-Contact.png
+/_images/spoc/VO-Contact.png
 
 This will automatically create a new contact with all 5 numbers already
 included.
@@ -107,4 +107,4 @@ the *Paging Policies* tab.
 Once you've accessed your *Paging Policies*, select *Edit.* Select the
 step you'd like to *Edit* or *Add Step*.
 
-.. |image1 images/Settings.png
+.. |image1/_images/spoc/Settings.png

@@ -14,7 +14,7 @@ sure to replace the “$routing_key” section with the actual routing key
 you intend to use. (To view or configure route keys in VictorOps,
 click *Alert Behavior >> Route Keys*)
 
-..image images/LibreNMS.png
+..image/_images/spoc/LibreNMS.png
 
  
 
@@ -24,14 +24,14 @@ click *Alert Behavior >> Route Keys*)
 From the main dashboard select **Settings** (Gear Icon) and
 then **Global Settings**.
 
-.. figure:: images/libre2.png
+.. image:: /_images/spoc/libre2.png
    :alt: libre2
 
    libre2
 
 Select **Alerting Settings**.
 
-.. figure:: images/libre3.png
+.. image:: /_images/spoc/libre3.png
    :alt: libre3
 
    libre3
@@ -39,7 +39,7 @@ Select **Alerting Settings**.
 Find the **VictorOps** option and paste in your VictorOps “Post URL”. To
 test the integration hit **Test transport.**
 
-.. figure:: images/libre4.png
+.. image:: /_images/spoc/libre4.png
    :alt: libre4
 
    libre4
@@ -50,7 +50,7 @@ A test LibreNMS incident will be sent into your VictorOps timeline.
 
  
 
-..image images/Incident.png
+..image/_images/spoc/Incident.png
 
 And you are done! If you have any questions please reach out to
 victorops-support@splunk.com.

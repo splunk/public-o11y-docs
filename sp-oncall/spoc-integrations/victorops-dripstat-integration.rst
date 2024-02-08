@@ -12,7 +12,7 @@ From the top navigation, select **Integrations**. 
 Select the **DripStat** integration and copy the **Service API
 Endpoint** to your clipboard.
 
-..image images/Integrations_-_victorops-18.png
+..image/_images/spoc/Integrations_-_victorops-18.png
 
 **In DripStat**
 ---------------
@@ -20,7 +20,7 @@ Endpoint** to your clipboard.
 From the main dashboard select **Alerts** then the **Integrations** tab
 then choose the **VictorOps** integration.
 
-.. figure:: images/drip4.png
+.. image:: /_images/spoc/drip4.png
    :alt: drip4
 
    drip4
@@ -29,7 +29,7 @@ Enter in your Splunk On-Call API key and the appropriate `Routing
 Key <https://help.victorops.com/knowledge-base/routing-keys/>`__ for
 this integration. Then select **Save**.
 
-.. figure:: images/drip5.png
+.. image:: /_images/spoc/drip5.png
    :alt: drip5
 
    drip5
@@ -37,7 +37,7 @@ this integration. Then select **Save**.
 That's it! You can now manage the integration from the previous
 integration tab.
 
-.. figure:: images/drip6.png
+.. image:: /_images/spoc/drip6.png
    :alt: drip6
 
    drip6

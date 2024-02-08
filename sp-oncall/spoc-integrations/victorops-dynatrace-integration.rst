@@ -19,7 +19,7 @@ sure to replace the “$routing_key” section with the actual routing key
 you intend to use. (To view or configure route keys in VictorOps,
 click *Alert Behavior >> Route Keys*)
 
-..image images/Integrations_-_VictorOps_Demo_20.png
+..image/_images/spoc/Integrations_-_VictorOps_Demo_20.png
 
  
 
@@ -29,7 +29,7 @@ click *Alert Behavior >> Route Keys*)
 From the Dynatrace home screen, select the *Settings* option from the
 toolbar:
 
-.. figure:: images/dyna2.png
+.. image:: /_images/spoc/dyna2.png
    :alt: dyna2
 
    dyna2
@@ -37,14 +37,14 @@ toolbar:
 From the *Settings* menu, under the *Integration* section,
 choose *Problem notifications* and click on *Set up notifications*.
 
-.. figure:: images/dyna3.png
+.. image:: /_images/spoc/dyna3.png
    :alt: dyna3
 
    dyna3
 
 Choose the VictorOps integration.
 
-.. figure:: images/dyna4.png
+.. image:: /_images/spoc/dyna4.png
    :alt: dyna4
 
    dyna4
@@ -52,9 +52,9 @@ Choose the VictorOps integration.
 Give the integration a name and paste in the API key and the desired
 routing key from VictorOps, then click *Save.*
 
-.. figure:: images/dyna5.png
+.. image:: /_images/spoc/dyna5.png
    :alt: dyna5
 
    dyna5
 
-.. |image1 images/settings-alert-behavior-integrations-e1480978368974.png
+.. |image1/_images/spoc/settings-alert-behavior-integrations-e1480978368974.png

@@ -77,21 +77,21 @@ appear slightly different on a particular user's device/OS)
 
 From your Android Settings, find the Splunk On-Call Mobile Application
 
- images/Android-Battery-Saver-1@2x.png
+/_images/spoc/Android-Battery-Saver-1@2x.png
 
 From the Splunk On-Call App, please select *Advanced* >> *Battery*
 
- images/Android-Battery-Saver-2@2x.png
+/_images/spoc/Android-Battery-Saver-2@2x.png
 
 From *Battery usage* settings you'll want *Battery optimization* >> *Not
 optimized* >> *All apps*
 
- images/Android-Battery-Saver-3@2x.png
+/_images/spoc/Android-Battery-Saver-3@2x.png
 
 From here, you'll **exempt** the VictorOps App from *Battery
 optimization*. Select done.
 
- images/Android-Battery-Saver-4@2x.png
+/_images/spoc/Android-Battery-Saver-4@2x.png
 
 **Intermittent Push Notifications**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
