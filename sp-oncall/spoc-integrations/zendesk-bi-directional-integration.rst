@@ -11,9 +11,8 @@ Use the Zendesk integration for Splunk On-Call to automatically trigger, acknowl
 Requirements
 ==================
 
-* This integration is compatible with the Enterprise version of Splunk On-Call:
-* This Zendesk integration makes use of outbound webhooks.
-
+* The Zendesk integration is compatible with the Enterprise version of Splunk On-Call.
+* This optional acknowledge back steps make use of outbound webhooks.
 
 Enable the Zendesk integration in Splunk On-call
 ========================================================
