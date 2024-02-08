@@ -11,7 +11,7 @@ User training
 
 As a user, you are responsible for taking action on incidents that page you while you are on call. You have access to view and edit your own user information, view your on-call schedule, and the ability to take action on alerts.
 
-To learn more about all roles and permissions, see :ref:`user-roles-and-permissions`.
+To learn more about all roles and permissions, see :ref:`user-roles-permissions`.
 
 Your Resources as a User
 =============================
