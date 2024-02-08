@@ -262,7 +262,6 @@ The following table shows the configuration options for the SQL Query receiver:
 
     <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tool/main/cfg-metadata/receiver/sqlquery.yaml"></div>
 
-
 .. _troubleshoot-sql-query-receiver:
 
 Troubleshooting
