@@ -26,17 +26,17 @@ Login to the Mailhop web interface as an admin.
 
 From the Mailhop dashboard, click **Services**.
 
-..image:: /_images/spoc/Dashboard_-_Mailhop.png
+..image:: /_images/spoc/Dashboard-Mailhop.png
 
 Select your “Product/Service”.  In this example, we select **Business
 Plus**.
 
-..image:: /_images/spoc/Dashboard_-_Mailhop-1.png
+..image:: /_images/spoc/Dashboard-Mailhop-1.png
 
 Scroll down on the “Manage Product” page, then click **Launch Control
 Panel** on the “Product Information” tab.
 
-..image:: /_images/spoc/Dashboard_-_Mailhop-2.png
+..image:: /_images/spoc/Dashboard-Mailhop-2.png
 
 From the Mailhop Control Panel, select **Monitoring** from the menu of
 the left, then select **Alerting**.
@@ -64,7 +64,7 @@ Mailhop alerts should start showing up in your VictorOps timeline as
 they are generated after a 10-15 minute delay for the settings to take
 effect.
 
-..image:: /_images/spoc/Timeline_-_vops_davetesting.png
+..image:: /_images/spoc/Timeline-vops_davetesting.png
 
 You have completed setting up this integration.  If you have any
 questions, please contact `VictorOps

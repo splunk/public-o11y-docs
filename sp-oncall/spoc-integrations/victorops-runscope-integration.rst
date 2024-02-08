@@ -85,4 +85,4 @@ Now your alerts will look like this!
 
 ..image:: /_images/spoc/sample-Alert@2x.png
 
-.. |image image:: /_images/spoc/integrations.png
+.. |image| image:: /_images/spoc/integrations.png

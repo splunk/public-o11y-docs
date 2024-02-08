@@ -84,7 +84,7 @@ Navigate to **Integrations** >> **Pingdom (Email)**
 If the integration has not already been enabled, enable the integration
 and copy the email endpoint.
 
-..image:: /_images/spoc/3rd_Party_Integrations_-_EMStester-3.png
+..image:: /_images/spoc/3rd_Party_Integrations-EMStester-3.png
 
  
 

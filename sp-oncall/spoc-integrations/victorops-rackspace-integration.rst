@@ -13,7 +13,7 @@ sure to replace the “$routing_key” section with the actual routing key
 you intend to use. (To view or configure route keys in VictorOps,
 click *Alert Behavior >> Route Keys*)
 
-..image:: /_images/spoc/Integrations_-_VictorOps_Demo_17.png
+..image:: /_images/spoc/Integrations-VictorOps_Demo_17.png
 
 **In Rackspace**
 ----------------
@@ -69,4 +69,4 @@ this “Notification Plan”. Select **Create and Select Notification** then
 
    rackspace7
 
-.. |image image:: /_images/spoc/Integration-ALL-FINAL.png
+.. |image| image:: /_images/spoc/Integration-ALL-FINAL.png

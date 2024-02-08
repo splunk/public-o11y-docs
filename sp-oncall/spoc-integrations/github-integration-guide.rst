@@ -99,7 +99,7 @@ select your user drop-down and then Settings in Github.
 
  
 
-.. image:: /_images/spoc/Installed_GitHub_App_-_VictorOps.jpg
+.. image:: /_images/spoc/Installed_GitHub_App-VictorOps.jpg
    :alt: choose settings in github to adjust application settings
 
    choose settings in github to adjust application settings

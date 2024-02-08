@@ -46,4 +46,4 @@ Finally select **Save Changes** and you are done!
 
 If you have any questions please reach out to support@victorops.com.
 
-.. |image image:: /_images/spoc/Integration-ALL-FINAL.png
+.. |image| image:: /_images/spoc/Integration-ALL-FINAL.png

@@ -76,4 +76,4 @@ Key <http://victorops.force.com/knowledgebase/articles/Getting_Started/Incident-
 
 Hit submit and you are done!
 
-.. |image image:: /_images/spoc/Integration-ALL-FINAL.png
+.. |image| image:: /_images/spoc/Integration-ALL-FINAL.png

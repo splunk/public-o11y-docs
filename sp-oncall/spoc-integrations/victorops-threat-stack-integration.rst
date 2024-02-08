@@ -14,14 +14,14 @@ Behavior** then **Integrations**. |image
 
 Select the Threat Stack Integration
 
-..image:: /_images/spoc/Integrations_-_victorops-7.png
+..image:: /_images/spoc/Integrations-victorops-7.png
 
  
 
 Enable the integration and copy the “Service API Endpoint” to your
 clipboard.
 
-..image:: /_images/spoc/Integrations_-_victorops-8.png
+..image:: /_images/spoc/Integrations-victorops-8.png
 
 **In Threat Stack**
 -------------------
@@ -53,4 +53,4 @@ And you are done. If you have any questions or concerns please reach out
 to `VictorOps
 support <mailto:support@victorops.com?Subject=Threat%20Stack%20VictorOps%20Integration>`__.
 
-.. |image image:: /_images/spoc/settings-alert-behavior-integrations-e1480978368974.png
+.. |image| image:: /_images/spoc/settings-alert-behavior-integrations-e1480978368974.png

@@ -55,4 +55,4 @@ A test LibreNMS incident will be sent into your VictorOps timeline.
 And you are done! If you have any questions please reach out to
 victorops-support@splunk.com.
 
-.. |image image:: /_images/spoc/Integrations.png
+.. |image| image:: /_images/spoc/Integrations.png

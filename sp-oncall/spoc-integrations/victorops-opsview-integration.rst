@@ -15,7 +15,7 @@ sure to replace the “$routing_key” section with the actual routing key
 you intend to use. (To view or configure route keys in VictorOps,
 click *Alert Behavior >> Route Keys*)
 
-..image:: /_images/spoc/Integrations_-_VictorOps_Demo_18.png
+..image:: /_images/spoc/Integrations-VictorOps_Demo_18.png
 
  
 
@@ -44,4 +44,4 @@ And you're done!
 **Note:**\ * VictorOps only works with Nagios notifications, BSM
 notifications are not currently supported.*
 
-.. |image image:: /_images/spoc/Integration-ALL-FINAL.png
+.. |image| image:: /_images/spoc/Integration-ALL-FINAL.png

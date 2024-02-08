@@ -19,7 +19,7 @@ Select the **Observium** Integration.
 Enable the integration if it has not already been enabled, then copy the
 entire “Service API Endpoint” to your clipboard.
 
-..image:: /_images/spoc/Integrations_-_victorops-4.png
+..image:: /_images/spoc/Integrations-victorops-4.png
 
 **In Observium**
 ----------------

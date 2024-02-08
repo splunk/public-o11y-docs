@@ -53,7 +53,7 @@ seconds.”, tags: [“http”]}
 
 Confirm that the alert is displayed in your VictorOps timeline.
 
-..image:: /_images/spoc/Timeline_-_vops_davetesting-1.png
+..image:: /_images/spoc/Timeline-vops_davetesting-1.png
 
 You have completed setting up this integration.  If you have any
 questions, please contact `VictorOps

@@ -352,7 +352,7 @@ Invite the Splunk On-Call Bot to the channel
 
 In Slack, mention the ``@VictorOps`` bot user to add it to your channel if it doesn't automatically appear.
 
-.. image:: /_images/spoc/Slack_-_Splunk On-Call.png
+.. image:: /_images/spoc/Slack-Splunk On-Call.png
    :alt: In Slack - invite the bot
 
 Linking your Slack user to your Splunk On-Call User
@@ -377,10 +377,10 @@ Acknowledge and resolve in Slack
 
 Now that your user is linked you can interact with Splunk On-Call incidents from the Slack channel.
 
-.. image:: /_images/spoc/Slack_-_Splunk On-CallQA-2.png
+.. image:: /_images/spoc/Slack-Splunk On-CallQA-2.png
    :alt: Slack test incident
 
-.. image:: /_images/spoc/Slack_-_Splunk On-CallQA-3.png
+.. image:: /_images/spoc/Slack-Splunk On-CallQA-3.png
    :alt: Splunk On-Call Slack alert incident example
 
 In the Splunk On-Call Timeline, you're notified of Acknowledge and Resolve actions that occurred in Slack.

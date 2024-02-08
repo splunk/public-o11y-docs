@@ -90,7 +90,7 @@ be configured to state:
 
 When status matches \*UP\* using wildcard, set message_type to RECOVERY.
 
-..image:: /_images/spoc/Alert_Rules_Engine_-_votest-manoj.png
+..image:: /_images/spoc/Alert_Rules_Engine-votest-manoj.png
 
 Reach out to support if you need assistance!
 

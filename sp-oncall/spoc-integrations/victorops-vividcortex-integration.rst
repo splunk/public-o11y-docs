@@ -14,11 +14,11 @@ Behavior** then **Integrations**.
 
 Select the **Vivid Cortex** Integration.
 
-..image:: /_images/spoc/Integrations_-_victorops-5.png
+..image:: /_images/spoc/Integrations-victorops-5.png
 
 Enable the integration and copy the “Service API Key” to your clipboard.
 
-..image:: /_images/spoc/Integrations_-_victorops-6.png
+..image:: /_images/spoc/Integrations-victorops-6.png
 
 **In VividCortex**
 ------------------

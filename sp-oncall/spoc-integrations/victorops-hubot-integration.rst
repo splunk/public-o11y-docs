@@ -84,4 +84,4 @@ and you will be able to all Hubot programatically.
 
    hubot3
 
-.. |image1| _images/spoc/Integrations_-_VictorOps_Demo_9.png
+.. |image1| _images/spoc/Integrations-VictorOps_Demo_9.png

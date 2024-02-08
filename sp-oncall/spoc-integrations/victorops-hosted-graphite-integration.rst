@@ -13,7 +13,7 @@ Behavior** then **Integrations.** 
 Select the **Hosted Graphite** integration and copy the **Service API
 Endpoint** to your clipboard.
 
-..image:: /_images/spoc/Integrations_-_victorops-17.png
+..image:: /_images/spoc/Integrations-victorops-17.png
 
 **In Hosted Graphite**
 ----------------------

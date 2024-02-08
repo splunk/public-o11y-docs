@@ -30,27 +30,27 @@ In Healthchecks.io
 
 Login to the healthchecks.io web interface and click **INTEGRATIONS**.
 
-/_images/spoc/My_Checks_-_healthchecks_io.png
+/_images/spoc/My_Checks-healthchecks_io.png
 
 Under the “Add More” section, locate “VictorOps” and click **Add
 Integration**.
 
-/_images/spoc/Integrations_-_healthchecks_io.png
+/_images/spoc/Integrations-healthchecks_io.png
 
 Under “Integration Settings”, paste the “URL to notify” from the
 previous “In VictorOps” section into the “Post URL” field.  Click **Save
 Integration**.
 
-/_images/spoc/Add_VictorOps_-_healthchecks_io.png
+/_images/spoc/Add_VictorOps-healthchecks_io.png
 
 You should now see “VictorOps” listed as one of your integrations.
 
-/_images/spoc/Integrations_-_healthchecks_io-1.png
+/_images/spoc/Integrations-healthchecks_io-1.png
 
 You should start receiving alerts from healthchecks.io in your VictorOps
 timeline when they are generated.
 
-/_images/spoc/Timeline_-_VictorOps_Test.png
+/_images/spoc/Timeline-VictorOps_Test.png
 
 You have completed setting up this integration.  If you have any
 questions, please contact `VictorOps

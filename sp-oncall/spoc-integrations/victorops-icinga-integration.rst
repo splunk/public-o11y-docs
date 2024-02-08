@@ -143,7 +143,7 @@ VictorOps_Service_Settings (~line 40) service object definitions:
       will be the string that appears after ‘/client/'.  An example can
       be found below, where ‘my-company' is the \_VO_ORGANIZATION_ID
 
-..image:: /_images/spoc/Timeline_-_Ops_Learning-1.jpg
+..image:: /_images/spoc/Timeline-Ops_Learning-1.jpg
 
 -  \_VO_ORGANIZATION_KEY (~line 25 & 26)
 

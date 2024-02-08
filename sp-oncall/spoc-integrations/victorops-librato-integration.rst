@@ -14,7 +14,7 @@ integration.
 From the main timeline select *Settings >> Alert Behavior* >>
 Integrations >> *AppOptics*.
 
-..image:: /_images/spoc/Integrations_-_votest-vo2_kb-3.jpg
+..image:: /_images/spoc/Integrations-votest-vo2_kb-3.jpg
 
 If the integration has not yet been enabled, click the *Enable
 Integration* button to generate your Service API Key, as seen here:

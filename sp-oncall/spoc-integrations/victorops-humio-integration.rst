@@ -31,7 +31,7 @@ Be sure to replace the “$routing_key” section with the actual routing
 key you intend to use. (To view or configure route keys in VictorOps,
 click *Alert Behavior >> Route Keys*)
 
-..image:: /_images/spoc/Integrations_-_votest-vo2-5-kb.jpg
+..image:: /_images/spoc/Integrations-votest-vo2-5-kb.jpg
 
 --------------
 

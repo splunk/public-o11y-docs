@@ -25,7 +25,7 @@ In Splunk On-Call, navigate to the integrations page.
 
 If the Delivery Insights endpoint integration has not been activated, select :guilabel:`Enable` to generate your endpoint destination URL.
 
-.. image:: /_images/spoc/Integrations_-_Splunk On-Call_Events.jpg
+.. image:: /_images/spoc/Integrations-Splunk On-Call_Events.jpg
    :alt: Delivery Insights API endpoint
 
 .. note::
@@ -94,7 +94,7 @@ The following example JSON adds a message to the timeline:
 
 Here is the full timeline view of the previous Delivery Insights message:
 
-.. image:: /_images/spoc/Timeline_-_Splunk On-Call_Events.jpg
+.. image:: /_images/spoc/Timeline-Splunk On-Call_Events.jpg
    :alt: Timeline with Delivery Insights message
 
 Filters

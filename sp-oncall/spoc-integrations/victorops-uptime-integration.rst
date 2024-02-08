@@ -32,4 +32,4 @@ as the provider type. Add the API Key from the VictorOps integration
 page, and add the desired routing key. |image\ Select **Save** and
 you're done!
 
-.. |image image:: /_images/spoc/Uptime-slide-2.png
+.. |image| image:: /_images/spoc/Uptime-slide-2.png

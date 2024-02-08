@@ -71,7 +71,7 @@ ACTION**.
 
 Check for the notification in VictorOps.
 
-..image:: /_images/spoc/Timeline_-_VictorOps_Test-2.png
+..image:: /_images/spoc/Timeline-VictorOps_Test-2.png
 
 You have completed setting up this integration.  If you have any
 questions, please contact `VictorOps

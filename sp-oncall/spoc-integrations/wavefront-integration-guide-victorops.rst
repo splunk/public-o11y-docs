@@ -17,14 +17,14 @@ Select the **Wavefront** integration option.
 
 Click **Enable Integration**.
 
-..image:: /_images/spoc/Integrations_-_VictorOps_Test-23.png
+..image:: /_images/spoc/Integrations-VictorOps_Test-23.png
 
 Copy the **Service API Endpoint** to the clipboard.  Be sure to replace
 the “$routing_key” section with the actual routing key you intend to
 use. (To view or configure route keys in VictorOps, click **Alert
 Behavior**, then **Route Keys**)
 
-..image:: /_images/spoc/Integrations_-_VictorOps_Test-24.png
+..image:: /_images/spoc/Integrations-VictorOps_Test-24.png
 
 In Wavefront
 ------------

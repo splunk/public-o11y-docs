@@ -46,7 +46,7 @@ From the main timeline navigate to *Integrations >> Grafana*
 Select the **Grafana** integration and copy the **Service API
 Endpoint** to your clipboard.
 
-.. image:: /_images/spoc/Integrations_-_victorops-2.png
+.. image:: /_images/spoc/Integrations-victorops-2.png
    :alt: Copy service api endpoint for Grafana - VictorOps
 
    Copy service api endpoint for Grafana - VictorOps
@@ -100,7 +100,7 @@ Alert section on the lefthand side.  Define your alert conditions and
 then under Notifications, click the plus button to select the
 notification channel you just configured.
 
-/_images/spoc/Cmillane-testing_alert_lag_-_Grafana.jpg
+/_images/spoc/Cmillane-testing_alert_lag-Grafana.jpg
 
 Be sure to save your changes.  The standard configuration is now
 complete.

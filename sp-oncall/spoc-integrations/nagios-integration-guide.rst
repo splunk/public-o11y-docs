@@ -203,7 +203,7 @@ If the integration has not yet been enabled, click the “**Enable
 Integration**” button to generate your configuration values as seen
 here:
 
-.. image:: /_images/spoc/Integrations_-_Ops_Learning-1.jpg
+.. image:: /_images/spoc/Integrations-Ops_Learning-1.jpg
    :alt: Enable Nagios integration - VictorOps
 
    Enable Nagios integration - VictorOps
