@@ -143,6 +143,6 @@ Splunk On-Call username:
 
 ..image images/circonus4-1.png
 
-.. |circonus2| image:: /_images/circonus2.png
-.. |circonus3| image:: /_images/circonus3.png
-.. |circonus6| image:: /_images/circonus6.png
+.. |circonus2| image:: /_images/spoc/circonus2.png
+.. |circonus3| image:: /_images/spoc/circonus3.png
+.. |circonus6| image:: /_images/spoc/circonus6.png

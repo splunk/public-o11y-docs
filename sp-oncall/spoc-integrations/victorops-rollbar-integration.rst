@@ -51,5 +51,5 @@ In the end, your webhook should look like the below screenshot.
 
 ..image images/Rollbar_recovery_webhook@2x.png
 
-.. |rollbar1| image:: /_images/Rollbar1.png
-.. |rollbar2| image:: /_images/Rollbar2.png
+.. |rollbar1| image:: /_images/spoc/Rollbar1.png
+.. |rollbar2| image:: /_images/spoc/Rollbar2.png

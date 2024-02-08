@@ -433,4 +433,4 @@ match(“\*load\*”, service.name) } apply Notification “notify­devops­host
 to Service {     import “notify­victorops­host”     users = [“devops”]    
 assign where match(“\*.production.myorg.com”, host.name) }
 
-.. | image:: /_images/KB-icinga-service-api-key.png
+.. | image:: /_images/spoc/KB-icinga-service-api-key.png

@@ -172,4 +172,4 @@ configuration time.
 
 --------------
 
-.. |zenoss1| image:: /_images/Zenoss1.png
+.. |zenoss1| image:: /_images/spoc/Zenoss1.png

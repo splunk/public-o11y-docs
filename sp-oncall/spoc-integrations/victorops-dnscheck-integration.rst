@@ -55,4 +55,4 @@ For more information on routing incidents in Splunk On-Call, see
 `these <https://help.victorops.com/article-categories/alert-behavior-alert-behavior/>`__
 articles.
 
-.. |dsn3| image:: /_images/DSN3.png
+.. |dsn3| image:: /_images/spoc/DSN3.png

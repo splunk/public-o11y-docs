@@ -23,9 +23,9 @@ explaining how to set up this simple integration.
    Test. You should get a result like the one pictured here. |image6|
 6. Hit ‘Update' and you are done.
 
-.. |image image:: /_images/wormly-integration@2x.png
-.. |image2| image:: /_images/wormly-2@2x.png
-.. |image3| image:: /_images/Integrations@2x.png
-.. |image4| image:: /_images/Integrations_-_VictorOps_Demo_7.png
-.. |image5| image:: /_images/wormly-3@2x.png
-.. |image6| image:: /_images/800x320@2x-1.png
+.. |image image:: /_images/spoc/wormly-integration@2x.png
+.. |image2| image:: /_images/spoc/wormly-2@2x.png
+.. |image3| image:: /_images/spoc/Integrations@2x.png
+.. |image4| image:: /_images/spoc/Integrations_-_VictorOps_Demo_7.png
+.. |image5| image:: /_images/spoc/wormly-3@2x.png
+.. |image6| image:: /_images/spoc/800x320@2x-1.png
