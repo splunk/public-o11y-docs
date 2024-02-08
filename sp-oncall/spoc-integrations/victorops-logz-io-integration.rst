@@ -1,3 +1,6 @@
+Logz.io integration for Splunk On-Call
+**********************************************************
+
 Logz.io provides a cloud-based log analytics service with additional
 features such as predictive fault detection, alerts, multi-user access
 and role definitions.  The platform uses machine-learning algorithms to

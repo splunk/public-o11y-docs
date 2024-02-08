@@ -1,3 +1,6 @@
+Rollbar integration for Splunk On-Call
+**********************************************************
+
 The Rollbar integration for VictorOps allows you to send your Rollbar
 notification directly to the VictorOps timeline. Follow these easy steps
 to get the integration implemented.

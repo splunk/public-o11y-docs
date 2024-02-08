@@ -1,3 +1,6 @@
+Rackspace integration for Splunk On-Call
+**********************************************************
+
 Send your Rackspace alerts directly into the VictorOps timeline using
 the following guide.
 

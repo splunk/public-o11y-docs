@@ -1,3 +1,6 @@
+Icinga integration for Splunk On-Call
+**********************************************************
+
 [ht_toggle title=“Requirements” id=“” class=“” style=“” ]
 
 **Versions Supported:** Icinga 2.x and below (**Extra steps required for

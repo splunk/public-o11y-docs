@@ -1,3 +1,6 @@
+HoneyBadger integration for Splunk On-Call
+**********************************************************
+
 Honeybadger provides exception, uptime and performance monitoring to
 keep your web apps error-free. The following will guide you through the
 steps needed to integrate Honeybadger with VictorOps.

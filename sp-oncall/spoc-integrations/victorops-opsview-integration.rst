@@ -1,3 +1,6 @@
+OpsView integration for Splunk On-Call
+**********************************************************
+
 The VictorOps and Opsview integration will allow you to use VictorOps as
 a “Notification Method” for all your alerting needs. The following is a
 quick walkthrough of how to set up the Opsview integration with

@@ -1,3 +1,6 @@
+Wavefront integration for Splunk On-Call
+**********************************************************
+
 Wavefront is a cloud-hosted service where you send your time-series
 (metric) data – from CollectD, StatsD, JMX, Ruby's logger, AWS,
 anything. Then you can perform arbitrary mathematical operations on any

@@ -1,3 +1,6 @@
+Splunk Synthetic Monitoring integration for Splunk On-Call
+************************************************************
+
 Splunk Synthetic Monitoring verifies applications are performing well
 and alerts you to user experience problems before they impact your
 customers.  Integrating Splunk Synthetic Monitoring with Splunk On-Call

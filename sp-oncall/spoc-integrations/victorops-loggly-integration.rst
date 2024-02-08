@@ -1,3 +1,6 @@
+Loggly integration for Splunk On-Call
+**********************************************************
+
 Loggly provides cloud-based solutions for log management, allowing users
 to spot problems in real time and identify root causes.
 

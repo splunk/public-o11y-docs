@@ -1,8 +1,7 @@
 .. _sentry-integration:
 
-************************************************************************
-Matching conditions for the Rule Engine
-************************************************************************
+Sentry  integration for Splunk On-Call
+**********************************************************
 
 .. meta::
    :description: About the user roll in Splunk On-Call.

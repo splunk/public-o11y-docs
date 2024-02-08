@@ -1,3 +1,6 @@
+Riemann integration for Splunk On-Call
+**********************************************************
+
 Riemann aggregates events from your servers and applications with a
 powerful stream processing language.  The following guide will walk you
 through this integration.

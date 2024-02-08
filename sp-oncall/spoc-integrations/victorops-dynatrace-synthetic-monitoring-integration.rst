@@ -1,3 +1,6 @@
+Dynatrace Synthetic Monitoring integration for Splunk On-Call
+**************************************************************
+
 Dynatrace Synthetic Monitoring simulates customer journeys from
 thousands of locations around the world, using all major desktop and
 mobile browsers. The following guide will walk you through this

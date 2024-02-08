@@ -1,3 +1,6 @@
+TLS integration for Splunk On-Call
+**********************************************************
+
 Historically, Splunk On-Call has allowed customers to connect to our
 platform using older, less-secure encryption protocols (TLS versions
 prior to 1.2, SSLv3). This was to allow customers using older web client

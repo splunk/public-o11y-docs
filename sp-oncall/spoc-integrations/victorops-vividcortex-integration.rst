@@ -1,3 +1,6 @@
+VividCortex integration for Splunk On-Call
+**********************************************************
+
 VividCortex provides advanced monitoring for the most advanced
 opensource databases. The VictorOps integration with VividCortex makes
 use of the VictorOps REST endpoint to send alerts into the VictorOps

@@ -1,5 +1,5 @@
-About Splunk On-Call and Grafana
---------------------------------
+Grafana integration for Splunk On-Call
+******************************************************
 
 The Splunk On-Call and Grafana integration allows you to forward
 `Grafana <https://grafana.com/>`__ alerts and dashboards into Splunk

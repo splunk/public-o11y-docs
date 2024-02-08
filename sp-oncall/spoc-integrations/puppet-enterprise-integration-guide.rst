@@ -1,5 +1,5 @@
-About VictorOps and Puppet Enterprise
--------------------------------------
+Puppet Enterprise integration for Splunk On-Call
+**********************************************************
 
 The VictorOps and `Puppet
 Enterprise <https://puppet.com/products/puppet-enterprise>`__ integration

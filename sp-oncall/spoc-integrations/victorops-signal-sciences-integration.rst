@@ -1,3 +1,6 @@
+Signal Sciences integration for Splunk On-Call
+**********************************************************
+
 `Signal Sciences <https://www.signalsciences.com/>`__ gives you the
 insights you need to prioritize your security resources to address
 attacks as they occur.  With greater visibility and awareness, you can

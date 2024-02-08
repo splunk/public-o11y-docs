@@ -1,3 +1,6 @@
+Splunk Add-on integration for Splunk On-Call
+**********************************************************
+
 The Splunk Add-on for On-Call (VictorOps) is a downloadable add-on
 (similar to an app) that will ingest Splunk On-Call data into Splunk
 using the `Splunk On-Call public

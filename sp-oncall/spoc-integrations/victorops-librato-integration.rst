@@ -1,3 +1,6 @@
+Librato integration for Splunk On-Call
+**********************************************************
+
 Librato provides a complete solution for monitoring and understanding
 the metrics that impact your business at all levels of the stack.
 

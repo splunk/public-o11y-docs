@@ -1,3 +1,6 @@
+Graylog  integration for Splunk On-Call
+******************************************************
+
 `Graylog <https://www.graylog.org/>`__ is an open source centralized log
 management solution built to open standards for capturing, storing, and
 enabling real-time analysis of terabytes of machine data.

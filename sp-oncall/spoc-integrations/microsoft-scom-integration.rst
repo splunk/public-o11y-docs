@@ -1,3 +1,6 @@
+Microsoft SCOM integration for Splunk On-Call
+**********************************************************
+
 Please note: This is not an officially supported integration. Thanks to
 `Scott Ames <https://gist.github.com/ScottAmes>`__ for putting it
 together.

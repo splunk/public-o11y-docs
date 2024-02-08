@@ -1,3 +1,6 @@
+LogEntries integration for Splunk On-Call
+**********************************************************
+
 Logentries offers real-time log management and analytics at any scale.
 This integration allows you to send tagged Logentries alerts into
 VictorOps using the `Generic Email

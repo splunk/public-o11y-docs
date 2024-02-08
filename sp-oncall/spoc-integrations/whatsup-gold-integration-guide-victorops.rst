@@ -1,3 +1,6 @@
+WhatsUp Gold integration for Splunk On-Call
+**********************************************************
+
 WhatsUp Gold is network monitoring reimagined with advanced
 visualization features for faster decisions, intuitive workflows for
 improved productivity and the industry's most flexible licensing

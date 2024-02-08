@@ -1,3 +1,6 @@
+Microsoft teams integration for Splunk On-Call
+**********************************************************
+
 The VictorOps and Microsoft Teams application allows you to fire fight
 critical incidents from the tool of your choice. This application is
 completely bi-directional allowing you to see the entire payload of your

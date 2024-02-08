@@ -1,3 +1,6 @@
+Azure OMS integration for Splunk On-Call
+**********************************************************
+
 Microsoft Azure Monitor allows you to gain visibility and control across
 your hybrid cloud with simplified operations management and security.
 This integration allows you to make use of VictorOps incident management

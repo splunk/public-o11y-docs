@@ -1,3 +1,6 @@
+HP SiteScope integration for Splunk On-Call
+**********************************************************
+
 SiteScope monitors more than 100 different target types for critical
 health and performance characteristics. You can also extend your
 monitoring environment by creating your own monitor types and

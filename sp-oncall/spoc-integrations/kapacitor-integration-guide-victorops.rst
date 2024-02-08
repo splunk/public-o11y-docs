@@ -1,3 +1,6 @@
+Kapacitor integration for Splunk On-Call
+**********************************************************
+
 Kapacitor is an open source data processing framework that makes it easy
 to create alerts, run ETL jobs and detect anomalies.  The following
 guide will walk you through this integration.

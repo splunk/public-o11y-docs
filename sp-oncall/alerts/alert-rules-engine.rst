@@ -1,7 +1,7 @@
 .. _alert-rules-engine:
 
 ************************************************************************
-The Splunk On-Call Alert Rules Engine
+Splunk On-Call Alert Rules Engine
 ************************************************************************
 
 .. meta::

@@ -1,3 +1,6 @@
+SignalFx integration for Splunk On-Call
+**********************************************************
+
 SignalFX is a real-time cloud monitoring platform for infrastructure,
 microservices, and applications, collecting and analyzing metrics across
 your cloud environment. Integrating SignalFX with Splunk On-Call

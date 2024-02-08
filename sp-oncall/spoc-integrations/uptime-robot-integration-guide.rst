@@ -1,5 +1,5 @@
-About VictorOps and Uptime Robot
---------------------------------
+Uptime Robot integration for Splunk On-Call
+**********************************************************
 
 Every five minutes, `Uptime Robot <https://uptimerobot.com/>`__ can
 check up to fifty monitors to determine website downtime and

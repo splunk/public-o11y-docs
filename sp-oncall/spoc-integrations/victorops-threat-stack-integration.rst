@@ -1,3 +1,6 @@
+Threat Stack integration for Splunk On-Call
+**********************************************************
+
 Threat Stack enables growth-driven companies to scale with confidence by
 identifying and verifying insider threats, external attacks and data
 loss in real-time. The following guide will walk you through the steps

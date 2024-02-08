@@ -1,3 +1,6 @@
+DripStat integration for Splunk On-Call
+**********************************************************
+
 DripStat is the smartest Java APM, providing code level visibility in
 production. The Splunk On-Call (formerly VictorOps) integration allows
 you to send your DipStat alerts into the Splunk On-Call Timeline. The

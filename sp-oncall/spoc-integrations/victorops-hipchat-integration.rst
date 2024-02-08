@@ -1,3 +1,6 @@
+HipChat integration for Splunk On-Call
+**********************************************************
+
 [ht_toggle title=“Requirements” id=“” class=“” style=“” ]
 
 **Splunk On-Call Version Required: Starter / Growth** for **Single Room,

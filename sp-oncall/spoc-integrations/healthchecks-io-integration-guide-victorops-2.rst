@@ -1,3 +1,6 @@
+Healtchecks integration for Splunk On-Call
+******************************************************
+
 Healthchecks.io is a free and open source service. Setting up monitoring
 for your cron jobs only takes minutes.  The following guide will walk
 you through this integration.

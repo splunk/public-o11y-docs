@@ -1,3 +1,6 @@
+SumoLogic integration for Splunk On-Call
+**********************************************************
+
 **Sumo Logic** is the industry's leading, secure and purpose-built
 cloud-based machine data analytics service that leverages big data for
 real-time IT insights.

@@ -1,3 +1,6 @@
+SolarWindws integration for Splunk On-Call
+**********************************************************
+
 This guide will walk you through integrating SolarWinds Orion alerts to
 VictorOps using the SolarWinds API URL endpoint in VictorOps. SolarWinds
 Orion NPM is needed for the integration, and SAM for the ack-back

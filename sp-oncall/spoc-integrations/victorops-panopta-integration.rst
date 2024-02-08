@@ -1,3 +1,6 @@
+Panopta integration for Splunk On-Call
+**********************************************************
+
 Panopta provides Website & server monitoring for developers, IT
 managers, SaaS companies and Hosting Providers. Precision accuracy +
 intelligent alerting that scales w/ you.

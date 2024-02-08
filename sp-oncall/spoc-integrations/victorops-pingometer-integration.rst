@@ -1,3 +1,7 @@
+Pingometer integration for Splunk On-Call
+**********************************************************
+
+
 Pingometer is a service that monitors the uptime, downtime, and
 performance of websites. The following guide will walk you through the
 necessary steps to integrate your Pingometer alerts with VictorOps.

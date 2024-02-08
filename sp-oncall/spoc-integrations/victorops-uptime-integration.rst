@@ -1,3 +1,6 @@
+Uptime integration for Splunk On-Call
+**********************************************************
+
 Uptime will check your website at 1 minute intervals from 30 different
 locations across 7 continents.
 

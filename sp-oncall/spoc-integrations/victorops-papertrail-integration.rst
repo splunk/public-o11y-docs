@@ -1,3 +1,6 @@
+Papertrail integration for Splunk On-Call
+**********************************************************
+
 Papertrail offers frustration-free log management. Seamlessly manage
 logs from apps, servers, and cloud services. The following will guide
 you through the VictorOps integration with Papertrail.

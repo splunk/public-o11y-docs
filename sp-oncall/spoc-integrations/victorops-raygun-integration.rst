@@ -1,3 +1,6 @@
+Raygun integration for Splunk On-Call
+**********************************************************
+
 Raygun gives developers meaningful insights into problems affecting
 their applications. Discover issues - Understand the problem - Fix
 things faster. This integration between VictorOps and Raygun allows you

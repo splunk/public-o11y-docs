@@ -1,3 +1,6 @@
+Hubot integration for Splunk On-Call
+**********************************************************
+
 Hubot is your company's robot. Install it in your VictorOps timeline to
 dramatically improve employee efficiency.
 

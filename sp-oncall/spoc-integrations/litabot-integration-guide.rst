@@ -1,3 +1,6 @@
+Litabot integration for Splunk On-Call
+**********************************************************
+
 Please note: This is **not** an officially supported integration.
 
 This Lita adapter allows your bot to join your VictorOps timeline by

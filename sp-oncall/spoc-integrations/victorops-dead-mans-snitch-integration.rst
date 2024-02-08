@@ -1,3 +1,6 @@
+Dead Man's Snitch integration for Splunk On-Call
+**********************************************************
+
 The Dead Man's Snitch integration allows your snitches to automatically
 trigger incidents within On-Call.
 

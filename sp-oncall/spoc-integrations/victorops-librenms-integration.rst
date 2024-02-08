@@ -1,3 +1,6 @@
+LibreNMS integration for Splunk On-Call
+**********************************************************
+
 LibreNMS is an auto-discovering PHP/MySQL-based network monitoring
 system. This integration allows you to send all your LibreNMS alerts
 into VictorOps so you can make use of all that VictorOps has to offer.

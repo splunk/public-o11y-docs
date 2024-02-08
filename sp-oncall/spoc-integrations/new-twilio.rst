@@ -1,5 +1,5 @@
-About Twilio Live Call Routing and Splunk On-Call
--------------------------------------------------
+Twilio Live Call Routing integration for Splunk On-Call
+**********************************************************
 
 The Splunk On-Call (formerly VictorOps) and
 `Twilio <https://www.twilio.com/>`__ integration creates a live call

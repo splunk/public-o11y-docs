@@ -1,3 +1,6 @@
+Cabot integration for Splunk On-Call
+**********************************************************
+
 Please refer to the GitHub page below for instructions on downloading
 and installing the VictorOps-Cabot plugin:
 

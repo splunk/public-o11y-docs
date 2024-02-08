@@ -1,5 +1,5 @@
-About VictorOps and Puppet Tasks
---------------------------------
+Puppet Tasks integration for Splunk On-Call
+**********************************************************
 
 The VictorOps and `Puppet
 Tasks <https://puppet.com/docs/puppet/5.3/puppet_tasks.html>`__ integration

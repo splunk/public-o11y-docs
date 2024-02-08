@@ -1,5 +1,5 @@
-**HashiCorp Terraform**
------------------------
+HashiCorp Terraform integration for Splunk On-Call
+**********************************************************
 
 `HashiCorp's Terraform <https://terraform.io>`__ has emerged as a
 powerful tool for managing infrastructure as code. Teams can fully

@@ -1,5 +1,5 @@
-About Splunk On-Call and New Relic
-----------------------------------
+New Relic integration for Splunk On-Call
+**********************************************************
 
 Operations and development teams can use the New Relic integration in
 multiple ways to instrument browsers, JVMs, ruby apps, and more. Teams

@@ -1,7 +1,5 @@
-Splunk>VictorOps for MS Teams Integration
-=========================================
-
- 
+Microsoft Teams integration for Splunk On-Call
+**********************************************************
 
 [ht_message title=“Warning! This integration is not available yet!”
 id=“” class=“” style=“background-color: #ff9966;” ]

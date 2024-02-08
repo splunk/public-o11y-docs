@@ -1,3 +1,6 @@
+Hosted Graphite integration for Splunk On-Call
+**********************************************************
+
 Hosted Graphite allows  you to display your monitoring data on beautiful
 graphs and dashboards plus alerting. The following guide will walk you
 through the steps needed to integrate these two systems.

@@ -1,4 +1,4 @@
-.. instana-spoc:
+.. _instana-spoc:
 
 Instana Integration guide
 ********************************

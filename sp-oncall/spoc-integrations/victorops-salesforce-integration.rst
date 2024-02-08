@@ -1,3 +1,6 @@
+Salesforce integration for Splunk On-Call
+**********************************************************
+
 This integration is for Salesforce service cloud users with access to
 the developer tools. The integration triggers an incident in VictorOps
 upon the creation of a case in Salesforce and then resolves it when the

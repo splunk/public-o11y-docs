@@ -1,3 +1,6 @@
+Observium integration for Splunk On-Call
+**********************************************************
+
 Observium is a low-maintenance auto-discovering network monitoring
 platform supporting a wide range of device types, platforms and
 operating systems. The VictorOps integration allows you to send

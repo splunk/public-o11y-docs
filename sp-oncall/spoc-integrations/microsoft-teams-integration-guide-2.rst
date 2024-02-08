@@ -1,5 +1,5 @@
-About VictorOps and Microsoft Teams
------------------------------------
+Microsoft Teams integration for Splunk On-Call
+**********************************************************
 
 Create incidents in VictorOps and communicate to resolve them through
 Microsoft Teams. Through `Outgoing

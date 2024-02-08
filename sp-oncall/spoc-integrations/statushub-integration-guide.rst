@@ -1,3 +1,6 @@
+StatusHub integration for Splunk On-Call
+**********************************************************
+
 Statushub is a status page that connects with your monitoring tools to
 communicate infrastructure status to stakeholders.
 

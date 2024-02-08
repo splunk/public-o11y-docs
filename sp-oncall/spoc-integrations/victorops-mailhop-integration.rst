@@ -1,3 +1,6 @@
+Mailhop integration for Splunk On-Call
+**********************************************************
+
 Mailhop automatically backs up your email and acts as a queue while your
 email server is offline.  Mailhop can be configured to send alerts to
 VictorOps.  The following guide will walk you through this integration.
