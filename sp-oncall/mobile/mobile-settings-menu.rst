@@ -107,4 +107,4 @@ the *Paging Policies* tab.
 Once you've accessed your *Paging Policies*, select *Edit.* Select the
 step you'd like to *Edit* or *Add Step*.
 
-.. |image1/_images/spoc/Settings.png
+.. |image1| _images/spoc/Settings.png

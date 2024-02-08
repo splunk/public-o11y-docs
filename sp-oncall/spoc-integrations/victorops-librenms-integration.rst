@@ -14,7 +14,7 @@ sure to replace the “$routing_key” section with the actual routing key
 you intend to use. (To view or configure route keys in VictorOps,
 click *Alert Behavior >> Route Keys*)
 
-..image/_images/spoc/LibreNMS.png
+..image:: /_images/spoc/LibreNMS.png
 
  
 
@@ -50,7 +50,7 @@ A test LibreNMS incident will be sent into your VictorOps timeline.
 
  
 
-..image/_images/spoc/Incident.png
+..image:: /_images/spoc/Incident.png
 
 And you are done! If you have any questions please reach out to
 victorops-support@splunk.com.

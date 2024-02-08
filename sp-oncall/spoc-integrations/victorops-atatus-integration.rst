@@ -23,7 +23,7 @@ From the main timeline select **Integrations** *>>* **Atatus.**
 If the integration has not yet been enabled, click the “Enable
 Integration” button.  Copy the “Service API Key” to your clipboard.
 
-..image/_images/spoc/Integration-Atatus-final.png
+..image:: /_images/spoc/Integration-Atatus-final.png
 
 2.  Once you have copied the API key to your clipboard, click
 on *Settings >> Routing Keys* page to find your routing key
@@ -68,7 +68,7 @@ Engine** and select “Add a rule”
 When **monitoring_tool** matches **Atatus** - Annotate alert with: - URL
 >> “Error Details” >> ${{details.errorUrl}}
 
-..image/_images/spoc/Integration-Atatus-Transmog-2-final-final.png
+..image:: /_images/spoc/Integration-Atatus-Transmog-2-final-final.png
 
 --------------
 

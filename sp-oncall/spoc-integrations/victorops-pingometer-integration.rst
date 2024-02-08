@@ -14,7 +14,7 @@ sure to replace the “$routing_key” section with the actual routing key
 you intend to use. (To view or configure route keys in VictorOps,
 click *Alert Behavior >> Route Keys*)
 
-..image/_images/spoc/Pingometer-final.png
+..image:: /_images/spoc/Pingometer-final.png
 
 **In Pingometer:**
 ------------------

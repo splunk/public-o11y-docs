@@ -34,7 +34,7 @@ Copy the “Service API Key” to your keyboard.
 From your project select **Settings** then **Integrations**, search
 **VictorOps**.
 
-..image/_images/spoc/Screen_Shot_2019-12-16_at_11_59_42_AM.png
+..image:: /_images/spoc/Screen_Shot_2019-12-16_at_11_59_42_AM.png
 
 Paste in your API key, select the appropriate `Routing
 Key <https://help.victorops.com/knowledge-base/routing-keys/>`__. Next,

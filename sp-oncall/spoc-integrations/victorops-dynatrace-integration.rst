@@ -19,7 +19,7 @@ sure to replace the “$routing_key” section with the actual routing key
 you intend to use. (To view or configure route keys in VictorOps,
 click *Alert Behavior >> Route Keys*)
 
-..image/_images/spoc/Integrations_-_VictorOps_Demo_20.png
+..image:: /_images/spoc/Integrations_-_VictorOps_Demo_20.png
 
  
 
@@ -57,4 +57,4 @@ routing key from VictorOps, then click *Save.*
 
    dyna5
 
-.. |image1/_images/spoc/settings-alert-behavior-integrations-e1480978368974.png
+.. |image1| _images/spoc/settings-alert-behavior-integrations-e1480978368974.png

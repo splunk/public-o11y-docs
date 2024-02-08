@@ -22,7 +22,7 @@ by visiting *Integrations >> REST Endpoint*
 
 Copy the REST endpoint URL to your clipboard.
 
-..image/_images/spoc/rest-final.png
+..image:: /_images/spoc/rest-final.png
 
 **In Jenkins**
 --------------

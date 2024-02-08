@@ -55,7 +55,7 @@ Endpoint <https://help.victorops.com/knowledge-base/victorops-generic-email-endp
 from the VictorOps portal by navigating to *Integrations >> Email
 Endpoint*)
 
-..image/_images/spoc/Email-Integration.png
+..image:: /_images/spoc/Email-Integration.png
 
 Add the email to your Google Voice account and hit save. Make sure to
 include the correct routing key.
@@ -103,7 +103,7 @@ The subject line of the voicemail will always start with “New voicemail
 from” so create a wildcard match using that phrase. Then add a
 transformation that changes the **message_type** to **CRITICAL**:
 
-..image/_images/spoc/2-Rules-Engine-Rule.png
+..image:: /_images/spoc/2-Rules-Engine-Rule.png
 
 Test the integration by calling your google voice number and leaving a
 message. The transcription will appear in the **state_message** field.

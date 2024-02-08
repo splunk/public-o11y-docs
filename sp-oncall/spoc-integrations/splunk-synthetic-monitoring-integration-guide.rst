@@ -23,12 +23,12 @@ From the Rigor Monitoring web portal, select the 3 dot menu next to your
 profile icon in the upper righthand corner and select **Alert
 Webhooks**.
 
-..image/_images/spoc/Frame-6.png
+..image:: /_images/spoc/Frame-6.png
 
 Click the **+ New** button to create a new webhook and select **Splunk
 On-Call** as the type.
 
-..image/_images/spoc/Frame-5.png
+..image:: /_images/spoc/Frame-5.png
 
 Give the webhook a name and specify your trigger or triggers.  In the
 “send request to” box for each trigger, replace the default

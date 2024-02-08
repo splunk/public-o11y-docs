@@ -101,6 +101,6 @@ it by clicking “Clear Take” or “Take Back”.
 
 /_images/spoc/Take-On-Calls.png
 
-.. |image1/_images/spoc/Calendar.png
-.. |image2/_images/spoc/Overrides_Preview.png
-.. |image3/_images/spoc/Override-User-View.png
+.. |image1| _images/spoc/Calendar.png
+.. |image2| _images/spoc/Overrides_Preview.png
+.. |image3| _images/spoc/Override-User-View.png

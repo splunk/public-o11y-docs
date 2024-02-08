@@ -8,12 +8,12 @@ you through the VictorOps integration with Papertrail.
 From the main timeline select **Settings** >> **Alert
 Behavior** >> **Integrations**
 
-..image/_images/spoc/Integration-ALL-FINAL.png
+..image:: /_images/spoc/Integration-ALL-FINAL.png
 
 Select the **Papertrail** integration and copy the “Service API Key” to
 your clipboard.
 
-..image/_images/spoc/Papertrail-final.png
+..image:: /_images/spoc/Papertrail-final.png
 
  
 
@@ -22,14 +22,14 @@ your clipboard.
 
 From the **Events** screen select **Create Alert**.
 
-..image/_images/spoc/All_Systems_—_Example_Alert_—_Papertrail.png
+..image:: /_images/spoc/All_Systems_—_Example_Alert_—_Papertrail.png
 
  
 
 Select the **VictorOps** integration option under **Monitoring &
 Notifications**.
 
-..image/_images/spoc/Example_Alert_—_Papertrail.png
+..image:: /_images/spoc/Example_Alert_—_Papertrail.png
 
  
 
@@ -39,7 +39,7 @@ Key <https://help.victorops.com/knowledge-base/routing-keys/>`__ and
 “Message Type”. The “Message Type” options are listed in the Papertrail
 UI - “critical”, “warning”, “info”.
 
-..image/_images/spoc/Create_Alert_—_Papertrail.png
+..image:: /_images/spoc/Create_Alert_—_Papertrail.png
 
 Select **Create Alert** and you are done.
 

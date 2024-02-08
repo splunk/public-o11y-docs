@@ -29,7 +29,7 @@ sure to replace the “$routing_key” section with the actual routing key
 you intend to use. (To view or configure route keys in Splunk On-Call,
 click *Settings>> Routing Keys*)
 
-..image/_images/spoc/Catchpoint-skitch.png
+..image:: /_images/spoc/Catchpoint-skitch.png
 
 --------------
 
@@ -43,12 +43,12 @@ click *Settings>> Routing Keys*)
 
 3) Select *Template* and then *Add new*
 
-..image/_images/spoc/Screenshot-2017-05-18-15.33.00.png
+..image:: /_images/spoc/Screenshot-2017-05-18-15.33.00.png
 
 4) Give it a name (“VictorOps Integration” for example) and then set the
    Format to *JSON*
 
-..image/_images/spoc/API___Catchpoint_®.png
+..image:: /_images/spoc/API___Catchpoint_®.png
 
 5) Paste the following code in the *Template* section:
 
@@ -64,7 +64,7 @@ Node-:math:`{nodeDetails('`\ {nodeName}')}, Product-
 
 6) Select your newly created template, hit *Save,* and you're done!
 
-..image/_images/spoc/Screenshot-2017-05-18-15.43.31.png
+..image:: /_images/spoc/Screenshot-2017-05-18-15.43.31.png
 
 Also, if you're looking for additional variables to add to your payload,
 please seek out the Alert Webhook Macros in `the support section of the

@@ -116,5 +116,5 @@ Alerts should now flow into the VictorOps timeline based on the trigger
 conditions. If you have any questions, please contact `VictorOps
 support <mailto:Support@victorops.com?Subject=Azure%20OMS%20VictorOps%20Integration>`__.
 
-.. |image1/_images/spoc/Logic-App-Designer.png
-.. |image2/_images/spoc/Response-200.png
+.. |image1| _images/spoc/Logic-App-Designer.png
+.. |image2| _images/spoc/Response-200.png

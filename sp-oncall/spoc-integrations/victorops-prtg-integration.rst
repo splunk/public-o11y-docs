@@ -61,29 +61,29 @@ $webclient.Headers.Add(“Content-Type”,“application/json”)
 
 From your server's desktop, open **PRTG Enterprise Console**.
 
-..image/_images/spoc/Screenshot__24__png__15_documents__15_total_pages_.png
+..image:: /_images/spoc/Screenshot__24__png__15_documents__15_total_pages_.png
 
 In the PRTG Enterprise Console, select the **Setup** tab.
 
-..image/_images/spoc/Screenshot__25__png__15_documents__15_total_pages_.png
+..image:: /_images/spoc/Screenshot__25__png__15_documents__15_total_pages_.png
 
 Select **Notifications** under “Account Settings” on the left side of
 the screen.
 
-..image/_images/spoc/Screenshot__26__png__15_documents__15_total_pages_.png
+..image:: /_images/spoc/Screenshot__26__png__15_documents__15_total_pages_.png
 
 Click **Add new notification**.
 
-..image/_images/spoc/Screenshot__27__png__15_documents__15_total_pages_.png
+..image:: /_images/spoc/Screenshot__27__png__15_documents__15_total_pages_.png
 
 Enter “Splunk On-Call Notification” in the “Notification Name” field,
 then select **Always notify ASAP, never summarize** for “Method”.
 
-..image/_images/spoc/Screenshot__28__png__15_documents__15_total_pages_.png
+..image:: /_images/spoc/Screenshot__28__png__15_documents__15_total_pages_.png
 
 Scroll down, then select **EXECUTE PROGRAM**.
 
-..image/_images/spoc/Screenshot__31__png__15_documents__15_total_pages_.png
+..image:: /_images/spoc/Screenshot__31__png__15_documents__15_total_pages_.png
 
 Select **Prtgtovictorops.ps1** from the “Program File” dropdown menu,
 then paste the following into the “Parameter” field replacing
@@ -94,38 +94,38 @@ section.
 -DeviceId ‘%deviceid' -Name ‘%name' -Status ‘%status' -Down ‘%down'
 -DateTime ‘%datetime' -LinkDevice ‘%linkdevice' -Message ‘%message'
 
-..image/_images/spoc/Screenshot__32__png__15_documents__15_total_pages_-2.png
+..image:: /_images/spoc/Screenshot__32__png__15_documents__15_total_pages_-2.png
 
 Enter the credentials for the Windows administrator that originally
 installed PRTG, then click **Save**.
 
-..image/_images/spoc/Screenshot__32__png__15_documents__15_total_pages_-1.png
+..image:: /_images/spoc/Screenshot__32__png__15_documents__15_total_pages_-1.png
 
 Click on the **Test** link next to “VictorOps Notification”.
 
-..image/_images/spoc/Screenshot__33__png__15_documents__15_total_pages_.png
+..image:: /_images/spoc/Screenshot__33__png__15_documents__15_total_pages_.png
 
 Click **OK** in “Notification Test Results”.
 
-..image/_images/spoc/Screenshot__39__png__15_documents__15_total_pages_.png
+..image:: /_images/spoc/Screenshot__39__png__15_documents__15_total_pages_.png
 
 You should see an alert show up in your Splunk On-Call timeline.
 
 Select the **Devices** tab.
 
-..image/_images/spoc/Screenshot__33__png__15_documents__15_total_pages_-1.png
+..image:: /_images/spoc/Screenshot__33__png__15_documents__15_total_pages_-1.png
 
 Select the parent PRTG server connection.
 
-..image/_images/spoc/Screenshot__34__png__15_documents__15_total_pages_.png
+..image:: /_images/spoc/Screenshot__34__png__15_documents__15_total_pages_.png
 
 Select the **Notifications** tab.
 
-..image/_images/spoc/Screenshot__35__png__15_documents__15_total_pages_.png
+..image:: /_images/spoc/Screenshot__35__png__15_documents__15_total_pages_.png
 
 Click **Add State Trigger**.
 
-..image/_images/spoc/Screenshot__36__png__15_documents__15_total_pages_.png
+..image:: /_images/spoc/Screenshot__36__png__15_documents__15_total_pages_.png
 
 In this example, the trigger is set up for the “Warning” sensor state.
  You can modify these settings as you desire or create other triggers
@@ -133,7 +133,7 @@ for when sensors are “Down” for example, just make sure to
 select **VictorOps Notification** from the three dropdown menus after
 “perform”, then click **Save**.
 
-..image/_images/spoc/Screenshot__37__png__15_documents__15_total_pages_.png
+..image:: /_images/spoc/Screenshot__37__png__15_documents__15_total_pages_.png
 
 You have now completed setting up this integration.
 

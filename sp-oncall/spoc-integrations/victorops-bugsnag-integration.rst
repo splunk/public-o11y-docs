@@ -59,4 +59,4 @@ Hit **save** and you are done!
 
    bugsnag4
 
-.. |image1/_images/spoc/Integration-Bugsnag-final.png
+.. |image1| _images/spoc/Integration-Bugsnag-final.png

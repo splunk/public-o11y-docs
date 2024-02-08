@@ -14,14 +14,14 @@ Behavior** then **Integrations**. |image
 
 Select the Threat Stack Integration
 
-..image/_images/spoc/Integrations_-_victorops-7.png
+..image:: /_images/spoc/Integrations_-_victorops-7.png
 
  
 
 Enable the integration and copy the “Service API Endpoint” to your
 clipboard.
 
-..image/_images/spoc/Integrations_-_victorops-8.png
+..image:: /_images/spoc/Integrations_-_victorops-8.png
 
 **In Threat Stack**
 -------------------

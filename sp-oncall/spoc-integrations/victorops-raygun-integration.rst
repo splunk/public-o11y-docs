@@ -18,18 +18,18 @@ click *Alert Behavior >> Route Keys*)
 
  
 
-..image/_images/spoc/Raygun-final.png
+..image:: /_images/spoc/Raygun-final.png
 
 **In Raygun**
 -------------
 
 Select **Integrations** from the left side bar. 
 
-..image/_images/spoc/Raygun-Inte@2x.png
+..image:: /_images/spoc/Raygun-Inte@2x.png
 
 Select the **VictorOps** icon.
 
-..image/_images/spoc/Raygun-VO-App@2x.png
+..image:: /_images/spoc/Raygun-VO-App@2x.png
 
 Select the **Setup** tab and then enter in your VictorOps API key and
 Routing Key.

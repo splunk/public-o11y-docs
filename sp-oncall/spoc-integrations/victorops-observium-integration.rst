@@ -10,16 +10,16 @@ will walk you through the steps needed to configure this integration.
 From the main timeline select **Settings** >> **Alert Behavior**
 >> **Integrations**
 
-..image/_images/spoc/Integration-ALL-FINAL.png
+..image:: /_images/spoc/Integration-ALL-FINAL.png
 
 Select the **Observium** Integration.
 
-..image/_images/spoc/Observium-final.png
+..image:: /_images/spoc/Observium-final.png
 
 Enable the integration if it has not already been enabled, then copy the
 entire “Service API Endpoint” to your clipboard.
 
-..image/_images/spoc/Integrations_-_victorops-4.png
+..image:: /_images/spoc/Integrations_-_victorops-4.png
 
 **In Observium**
 ----------------

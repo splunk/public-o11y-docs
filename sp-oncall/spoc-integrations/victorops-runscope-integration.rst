@@ -27,7 +27,7 @@ If the integration has not yet been enabled, click the “*Enable
 Integration*” button to generate your endpoint URL as seen below. **Copy
 this key** to your clipboard.
 
-..image/_images/spoc/api_key@2x.png
+..image:: /_images/spoc/api_key@2x.png
 
 **In Runscope**
 ===============
@@ -36,16 +36,16 @@ Select API tests from the tab at the top of the UI and then **select the
 Test** you want to add the VictorOps integration to. In the below
 example we have selected “test”.
 
-..image/_images/spoc/rs_test@2x.png
+..image:: /_images/spoc/rs_test@2x.png
 
 From within the test select **Edit** from the side bar and then navigate
 to **Integrations** and then click **View All Services**.
 
-..image/_images/spoc/test_edit_integrations@2x.png
+..image:: /_images/spoc/test_edit_integrations@2x.png
 
 Find the **VictorOps** integration and select “*Connect VictorOps*”.
 
-..image/_images/spoc/connect_vo@2x.png
+..image:: /_images/spoc/connect_vo@2x.png
 
 Paste in your **API
 Key** and `Routing Key <https://help.victorops.com/knowledge-base/reroute-an-incident/>`__\ **.** Make
@@ -53,7 +53,7 @@ sure to select “*Automatically resolve incidents when test passes*” and
 to set the **Notification Threshold** to 1. Finish by clicking “*Connect
 Account*” and you're done!
 
-..image/_images/spoc/vo_rs_config@2x.png
+..image:: /_images/spoc/vo_rs_config@2x.png
 
 Recommended Rules Engine Rules
 ==============================
@@ -79,10 +79,10 @@ When **monitoring_tool** matches **Runscope**
 
 **URL** - **Go to Test - ${{test_url}}**
 
-..image/_images/spoc/transmog@2x.png
+..image:: /_images/spoc/transmog@2x.png
 
 Now your alerts will look like this!
 
-..image/_images/spoc/sample-Alert@2x.png
+..image:: /_images/spoc/sample-Alert@2x.png
 
 .. |image image:: /_images/spoc/integrations.png

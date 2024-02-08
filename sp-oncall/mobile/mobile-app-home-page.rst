@@ -57,7 +57,7 @@ Overrides click
 
 /_images/spoc/Overrides_Preview.png
 
-.. |image1/_images/spoc/Mobile-Home-Page_2.png
-.. |image2/_images/spoc/Mobile-Home-Page.png
+.. |image1| _images/spoc/Mobile-Home-Page_2.png
+.. |image2| _images/spoc/Mobile-Home-Page.png
 .. |image3 /_images/spoc/Current-On-Call-Click.png
 .. |image4 /_images/spoc/On-Call-Takes.png
