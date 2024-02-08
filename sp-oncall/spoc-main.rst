@@ -91,6 +91,7 @@ Welcome to Splunk On-Call
    scheduling/rotation-setup
    scheduling/schedule-examples
    scheduling/scheduled-overrides
+   spoc-integrations/integrations-main
 
 Splunk On-Call is incident management software that allows teams to maintain a culture of high availability without slowing down the innovation process. The moment something goes wrong, Splunk On-Call will spring people to action, automatically.
 
