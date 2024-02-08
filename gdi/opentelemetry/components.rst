@@ -49,6 +49,7 @@ Collector components
     components/splunk-apm-exporter
     components/splunk-hec-exporter
     components/splunk-hec-receiver
+    components/sqlquery-receiver     
     components/syslog-receiver 
     components/tcp-receiver     
     components/transform-processor
@@ -179,7 +180,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`splunk-hec-receiver` (``splunk_hec``)
      - Accepts telemetry in the Splunk HEC format.
      - Metrics, logs, traces
-   * - ``sqlquery``
+   * - :ref:`sqlquery-receiver` (``sqlquery``)
      - Runs custom SQL queries to generate metrics from a database connection.
      - Metrics
    * - ``statsd``
