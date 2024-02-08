@@ -109,7 +109,7 @@ You can automatically instrument your Java and Node.js applications along with t
 The following table shows the variables that you can configure for this Ansible role:
 
 .. list-table::
-   :widths: 50 50
+   :width: 100%
    :header-rows: 1
 
    * - Variable
@@ -126,6 +126,7 @@ The following table shows the variables that you can configure for this Ansible 
      - None
    * - ``splunk_otel_auto_instrumentation_java_agent_jar``
      - Determines the path to the Splunk OpenTelemetry Java agent. The default path is provided by the ``splunk-otel-auto-instrumentation`` package. If the path is changed from the default value, the path should be an existing file on the node. The specified path is added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The Java application on the node needs to be restarted separately for any change to take effect. The default value is ``/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar``.
+     - ``/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar``
    * - ``splunk_otel_auto_instrumentation_resource_attributes``
      - Configures the OpenTelemetry instrumentation resource attributes, for example, ``deployment.environment=prod``. The resource attributes are user-defined key-value pairs. The specified resource attributes are added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The applications on the node need to be restarted separately for any change to take effect. See :ref:`trace-configuration-java` for more information.
      - None
@@ -140,7 +141,7 @@ The following table shows the variables that you can configure for this Ansible 
      - ``false``
    * - ``splunk_otel_auto_instrumentation_with_auto_instrumentation_sdks``
      - The auto instrumentation SDKs to install and activate.
-     - ``%w(java nodejs)
+     - ``%w(java nodejs)``
    * - ``splunk_otel_auto_instrumentation_enable_metrics``
      - Activates or deactivates JVM metrics. 
      - ``false``
