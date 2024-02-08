@@ -78,7 +78,7 @@ SignalFx receiver metrics
   * - ``otelcol_receiver_accepted_spans``
     - Number of spans successfully pushed into the pipeline
 
-SVC metrics
+Support Vector Classifier metrics
 ============================================================================
 
 .. list-table::
@@ -104,7 +104,7 @@ SVC metrics
   * - ``otelcol_otelsvc_k8s_pod_updated``
     - Size of table containing pod info
 
-Process metrics
+Resource detection processor metrics
 ============================================================================
 
 .. list-table::
@@ -133,7 +133,7 @@ Process metrics
   * - ``otelcol_process_uptime``
     - Uptime of the process
 
-Processor
+Batch processor metrics
 ============================================================================
 
 .. list-table::
