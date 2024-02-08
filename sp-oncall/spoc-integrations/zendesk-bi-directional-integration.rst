@@ -285,16 +285,16 @@ Set up the outgoing webhook
 ----------------------------------------------
 
 1. In Splunk On-Call, select :guilabel:`Integrations` then :guilabel:`Outgoing Webhooks`. 
-2. Under Outgoing Webhooks, select :guilabel:`Add Webhook`.
-3. For :guilabel:`Event`, select :guilabel:`Incident-Acknowledged`.
-4. For :guilabel:`Method`, select :guilabel:`PUT`.
-5. For :guilabel:`Content Type`, select :guilabel:`application/json`.
-6. In the :guilabel:`To` field, paste the complete destination URL described previously.
 
    .. image:: /_images/spoc/Outgoing-webhooks.png
       :alt: Add an outgoing webhook in Splunk On-Call
       :width: 95%
 
+2. Under Outgoing Webhooks, select :guilabel:`Add Webhook`.
+3. For :guilabel:`Event`, select :guilabel:`Incident-Acknowledged`.
+4. For :guilabel:`Method`, select :guilabel:`PUT`.
+5. For :guilabel:`Content Type`, select :guilabel:`application/json`.
+6. In the :guilabel:`To` field, paste the complete destination URL described previously.
 7. In the :guilabel:`Payload` field, paste the following payload. You can change the status value to your preferred status.
 
    .. code-block:: json
