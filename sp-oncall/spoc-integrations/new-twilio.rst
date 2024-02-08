@@ -481,8 +481,7 @@ transcribe message*' note within the alert payload.
 Although voicemail will be transcribed and posted to your Splunk On-Call
 timeline, some users may prefer to listen to the actual voicemail. This
 can be done through the Twilio platform, which can be easily linked to
-from VictorOps using
-`annotations <https://help.victorops.com/knowledge-base/transmogrifier-annotations/>`__.
+from VictorOps using :ref:`annotations <rules-engine-annot>`.
 Create the below Rules Engine rule to easily link back to a specific
 call's history and to listen to or download the voicemail.
 

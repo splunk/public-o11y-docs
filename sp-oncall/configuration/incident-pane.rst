@@ -62,12 +62,7 @@ Once a Triggered incident has been ack'd and resolved, you may view it in the :g
     :alt: View resolved incidents on the Resolved tab.
 
 
-Also, note the `Control Call (Conference
-Calling) <https://help.victorops.com/knowledge-base/control-call-conference-calling/>`__
-and `Maintenance
-Mode <https://help.victorops.com/knowledge-base/maintenance-mode/>`__
-icons in the upper right-hand corner of the Incident Pane. Control Call is an Enterprise-level feature that enables quick and effective communication via conference call with your team when you're in the
-midst of a firefight. Maintenance Mode, on the other hand, allows you to temporarily silence alerts in order to complete work without unnecessarily paging on-call teammates. 
+Also, note the Control Call (Conference Calling) and Maintenance Mode icons in the upper right-hand corner of the Incident Pane. Control Call is an Enterprise-level feature that enables quick and effective communication via conference call with your team when you're in the midst of a firefight. Maintenance Mode, on the other hand, allows you to temporarily silence alerts in order to complete work without unnecessarily paging on-call teammates. 
 
 
 New triggered incident

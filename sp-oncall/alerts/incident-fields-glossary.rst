@@ -8,7 +8,7 @@ Incident fields Glossary
 .. meta::
    :description: Details about the fields in an incident.
 
-`Click here to skip to the Glossary of Fields <#glossary-of-fields>`__
+
 
 Incidents in your Splunk On-Call timeline function like a simple table with two columns: the field name, and the value of that field. Field
 names can be defined in two ways: 

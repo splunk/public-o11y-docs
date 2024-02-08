@@ -67,7 +67,7 @@ use of the Rules Engine.*
 In the alert details of Runscope alerts are several URLs which can
 quickly link a paged user to the test in question. These alerts can be
 made readily available by surfacing them as
-`annotations <https://help.victorops.com/knowledge-base/transmogrifier-annotations/>`__.
+:ref:`annotations <rules-engine-annot>`.
 The following alert rule will yield alerts of the form shown in the
 screenshot. For convenience, you can copy and paste the below
 information.

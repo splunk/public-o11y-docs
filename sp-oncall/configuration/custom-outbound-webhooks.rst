@@ -10,8 +10,7 @@ Custom outbound webhooks in Splunk On-Call
 
 Connect Splunk On-Call to the tool of your choice using our custom outgoing webhooks. Splunk On-Calls outbound webhooks can subscribe to a number of different Splunk On-Call actions such as incidents or chats. The webhook URL, method, content type, and payload are all configurable. Splunk On-Calls variables can be used as part of the payload so that the information being sent to third-party systems is dynamic. The following sections will walk you through setting up your first outbound webhook.
 
-**Please note**: The Splunk On-Call Outgoing Webhooks are an Enterprise
-service level feature and 
+
 
 Requirements
 ==================

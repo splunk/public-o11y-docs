@@ -15,6 +15,17 @@ the Team Admin role for team-specific add/remove permissions.
 **Adding Users**
 ----------------
 
+.. _manage-users:
+
+************************************************************************
+Manage users in Splunk On-Call
+************************************************************************
+
+.. meta::
+   :description: About the user resolved in Splunk On-Call.
+
+
+
 **Adding/Inviting User to VictorOps**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
