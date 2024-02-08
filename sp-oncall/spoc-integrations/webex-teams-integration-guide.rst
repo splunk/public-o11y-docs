@@ -51,7 +51,7 @@ Follow these steps to set up the Webex Teams integration:
    - :guilabel:`To`: Your webhook URL copied from Webex
    - :guilabel:`Payload`:
 
-      .. code-block:: json
+      .. code-block::
 
          { “markdown”:
          “:math:`{{ALERT.entity\_display\_name}}<br>`\ {{ALERT.state_message}}” }

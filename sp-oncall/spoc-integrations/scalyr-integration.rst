@@ -35,7 +35,7 @@ In Dataset, select :guilabel:`Alerts` then :guilabel:`Edit Alerts`.
 Edit the Alerts configuration file to specify Splunk On-Call as the alert recipient. To do this for all Dataset alerts, create or edit an ``alertAddress`` field at the top level of the file as shown in the following snippet, using
 your service API endpoint from the previous step:
 
-.. code-block:: json
+.. code-block::
 
    {
       alertAddress: "victorops:webhookUrl=https://alert.victorops.com/integrations/generic/20131114/alert/$api_key/$routing_key",
@@ -59,7 +59,7 @@ To send notifications to 1 or more email addresses in addition to Splunk On-Call
 
 If you only want to use Splunk On-Call for certain alerts, you can specify an ``alertAddress`` field for those alerts:
 
-.. code-block:: json
+.. code-block::
 
    {
       alertAddress: "email@example.com",

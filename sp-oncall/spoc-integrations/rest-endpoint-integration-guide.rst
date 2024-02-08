@@ -69,13 +69,13 @@ Expected Responses
 
 Success messages show the result and the ``entity_id`` of the incident. For example:
 
-.. code-block:: json
+.. code-block::
 
    { “result”:“success”, “entity_id”:“Your entity_id here” }
 
 Failure messages show the result as well as an error message explaining the reason for the failure. For example:
 
-.. code-block:: json
+.. code-block::
 
    { “result”:“failure”, “message”:“Missing fields: message_type” }
 
@@ -90,7 +90,7 @@ Trigger a critical incident
 
 The following request opens a new incident:
 
-.. code-block:: json
+.. code-block::
 
    { “message_type”:“CRITICAL”, “entity_id”:“disk
    space/db01.mycompany.com”, “entity_display_name”:“Critically Low Disk
@@ -99,7 +99,7 @@ The following request opens a new incident:
 
 The response looks like the following:
 
-.. code-block:: json
+.. code-block::
 
    { “result” : “success”, “entity_id” : “disk space/db01.mycompany.com” }
 
@@ -113,7 +113,7 @@ Resolve an incident
 
 The following request resolves the same incident opened in the previous example. Notice that the ``entity_id`` is the same, allowing Splunk On-Call to identify to which incident this request applies:
 
-.. code-block:: json
+.. code-block::
 
    { “message_type”:“RECOVERY”, “entity_id”:“disk
    space/db01.mycompany.com”, “entity_display_name”:“Critically Low Disk
@@ -122,7 +122,7 @@ The following request resolves the same incident opened in the previous example.
 
 The response looks like the following:
 
-.. code-block:: json
+.. code-block::
 
    { “result” : “success”, “entity_id” : “disk space/db01.mycompany.com” }
 
@@ -136,7 +136,7 @@ cURL and incident response
 
 You can also call the endpoint using cURL commands. For example:
 
-.. code-block:: shell
+.. code-block::
 
    curl -X POST -d ‘{“entity_id”:“ID of the
    incident”,“message_type”:“critical”,“state_message”:“hi, this is some
@@ -157,7 +157,7 @@ There are 3 types of annotations accepted by Splunk On-Call through the followin
 
 :strong:`URL: *vo_annotate.u.url*`
 
-.. code-block:: json
+.. code-block::
 
    { “monitoring_tool”: “API”, “message_type”:“INFO”,
    “entity_id”:“disk.space/db01”, “entity_display_name”:“Approaching Low
@@ -168,7 +168,7 @@ There are 3 types of annotations accepted by Splunk On-Call through the followin
 
 :strong:`Note: *vo_annotate.s.note*`
 
-.. code-block:: json 
+.. code-block:: 
 
    { “monitoring_tool”: “API”, “message_type”:“INFO”,
    “entity_id”:“disk.space/db01”, “entity_display_name”:“Approaching Low
@@ -181,7 +181,7 @@ There are 3 types of annotations accepted by Splunk On-Call through the followin
 
 :strong:`Image URL: *vo_annotate.i.image*`
 
-.. code-block:: json
+.. code-block::
 
    { “monitoring_tool”: “API”, “message_type”:“INFO”,
    “entity_id”:“disk.space/db01”, “entity_display_name”:“Approaching Low

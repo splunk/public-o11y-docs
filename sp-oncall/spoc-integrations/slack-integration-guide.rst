@@ -102,7 +102,7 @@ You can have annotations sent to a Slack channel using Custom Outgoing Webhooks.
 
 In the following payload, the ``title`` field carries the clickable link and the ``image_url`` is the rendered image as defined in the Rules Engine:
 
-.. code-block:: json
+.. code-block::
 
    { “channel”: “#general”, “username”: “Splunk On-Call”, “icon_url”:
    “https://victorops.com/assets/img/branding/logo-yellow-mark.png”,
@@ -207,7 +207,7 @@ Configure the following webhooks by selecting :guilabel:`Add Webhook` each time,
 -  To: Your Slack URL from step 8 of the basic setup
 -  Payload:
 
-   .. code-block:: json
+   .. code-block::
 
       { “channel”:
       “#\ :math:`{{ALERT.slack\_channel}}",  "username": "Splunk On-Call Chat (`\ {{CHAT.USER_ID}})”,
@@ -228,7 +228,7 @@ Configure the following webhooks by selecting :guilabel:`Add Webhook` each time,
 -  To: Your Slack URL from step 3 of the basic setup
 -  Payload:
 
-   .. code-block:: json
+   .. code-block::
 
       {
       “channel”:“#\ :math:`{{ALERT.slack\_channel}}",  "username":"Splunk On-Call",  "icon\_url":"https://victorops.com/assets/img/branding/logo-yellow-mark.png",  "attachments": \[  {  "title":"CRITICAL INCIDENT TRIGGERED",  "text": "<https://portal.victorops.com/client/`\ {{ALERT.org_slug}}#/incident/:math:`{{STATE.INCIDENT\_NAME}}|\*#`\ {{STATE.INCIDENT_NAME}}\*:
@@ -246,7 +246,7 @@ Configure the following webhooks by selecting :guilabel:`Add Webhook` each time,
 -  To: Your Slack URL from step 3 of the basic setup
 -  Payload:
 
-   .. code-block:: json
+   .. code-block::
 
       { “channel”:“#${{ALERT.slack_channel}}”, “username”:“Splunk On-Call”,
       “icon_url”:“https://victorops.com/assets/img/branding/logo-yellow-mark.png”,
@@ -266,7 +266,7 @@ Configure the following webhooks by selecting :guilabel:`Add Webhook` each time,
 -  To: Your Slack URL from step 3 of the basic setup
 -  Payload:
 
-   .. code-block:: json
+   .. code-block::
 
       { “channel”:“#${{ALERT.slack_channel}}”, “username”:“Splunk On-Call”,
       “icon_url”:“https://victorops.com/assets/img/branding/logo-yellow-mark.png”,

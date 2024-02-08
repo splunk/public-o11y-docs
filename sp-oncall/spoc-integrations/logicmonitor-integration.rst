@@ -59,7 +59,7 @@ alert activity and its corresponding message type defined in the post body. To d
 
 4. For the Alert Data paste the following message. Note that this sample assigns a value of ``CRITICAL`` to the ``message_type``:
 
-   .. code-block:: json
+   .. code-block::
 
       { “message_type”:“CRITICAL”, “state_message”:“##MESSAGE##”,
       “entity_id”:“##ALERTID##”, “monitoring_tool”:“LogicMonitor”,

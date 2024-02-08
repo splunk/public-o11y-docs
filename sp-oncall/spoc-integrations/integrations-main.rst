@@ -25,7 +25,6 @@ Splunk On-Call integrations
    graylog-integration-guide-victorops
    healthchecks-io-integration-guide-victorops-2
    instana-integration-guide-victorops
-   integrations-main
    jenkins-delivery-integration
    jira-app-integration-guide-victorops
    jira-integration-guide

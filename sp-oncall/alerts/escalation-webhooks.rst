@@ -90,7 +90,7 @@ For more information on custom outgoing webhooks, see :ref:`custom-outbound-webh
 Sample Scala code for reference
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. code-block:: java
+.. code-block::
 
    import javax.crypto.Mac 
    import javax.crypto.spec.SecretKeySpec import javax.xml.bind.DatatypeConverter 

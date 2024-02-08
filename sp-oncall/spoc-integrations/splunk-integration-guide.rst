@@ -455,11 +455,10 @@ Routing key retrieval is failing
 
 This can sometimes be caused by a firewall or multiple firewalls. To check to see if it is an internal network issue you can run the following cURL command:
 
-.. code-block:: shell
+.. code-block::
 
    curl -X POST
-   “`https://alert.victorops.com/integrations/generic/20131114/alert/SPLUNK_API_KEY <https://alert.victorops.com/integrations/generic/20131114/alert/SPLUNK_API_KEY>`__
-   –insecure -H”accept: application/json” -H “Content-Type:
+   https://alert.victorops.com/integrations/generic/20131114/alert/SPLUNK_API_KEY –insecure -H”accept: application/json” -H “Content-Type:
    application/json” -d ‘{“message_type”: “INFO”, “monitoring_tool”:
    “splunk”, “state_message”: “Test Alert”, “entity_display_name”: “Test
    Alert”}'\`

@@ -72,7 +72,7 @@ Test the integration
 
 In the :guilabel:`Publish message` page, add the following payload to the :guilabel:`Message` box. Do not change the formatting. Changes to the payload, including changes to the granularity of ``StateChangeTime`` to microseconds or nanoseconds, result in the failure of Cloudwatch incident delivery to Splunk On-Call.
 
-.. code-block:: json
+.. code-block::
 
    {“AlarmName”:“VictorOps - CloudWatch Integration TEST”,“NewStateValue”:“ALARM”,“NewStateReason”:“failure”,“StateChangeTime”:“2017-12-14T01:00:00.000Z”,“AlarmDescription”:“VictorOps
    - CloudWatch Integration TEST”}
