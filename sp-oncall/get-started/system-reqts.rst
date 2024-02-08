@@ -23,7 +23,7 @@ Please note: Custom browser extensions may interfere with web-client performance
 
 .. In the future, Splunk On-Call will support the Chromium version of Microsoft Edge, and eventually, discontinue support for IE11.
 
-For IP and Egress filtering, see XXXXXXXegress-filtering-cloudfareXXXXXXX.
+For IP and Egress filtering, see :ref:`egress-filtering-cloudfare`.
 
 Mobile Application
 ========================
@@ -35,5 +35,5 @@ Splunk On-Call supports Android devices running Android 6 or newer. Splunk On-Ca
 Incident Requirements
 =============================
 
-A JSON POST request is required to send an alert payload to the Splunk On-Call timeline. For required field variables, see XXXXXXincident-fields-glossaryXXXXXX.
+A JSON POST request is required to send an alert payload to the Splunk On-Call timeline. For required field variables, see :ref:`incident-fields-glossary`.
 

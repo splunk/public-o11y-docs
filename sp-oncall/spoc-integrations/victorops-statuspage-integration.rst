@@ -1,3 +1,5 @@
+.. _statuspage-integration:
+
 Statuspage integration for Splunk On-Call
 **********************************************************
 

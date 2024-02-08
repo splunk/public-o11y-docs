@@ -26,7 +26,7 @@ This means that a user can hold two roles. Here are the possible combinations:
 
 * User & Team Admin
 * Alert Admin & Team Admin
-* Stakeholders can be considered separate from all other roles as these users cannot be placed in any on-call schedules nor take action on incidents.  They can be added to existing incidents and notified through their defined contact methods for awareness.  For comprehensive information on stakeholders, see this XXXXXX stakeholders XXXXXX.
+* Stakeholders can be considered separate from all other roles as these users cannot be placed in any on-call schedules nor take action on incidents.  They can be added to existing incidents and notified through their defined contact methods for awareness.  For comprehensive information on stakeholders, see :ref:`stakeholders`.
 
 How to Change Global Roles
 ----------------------------------
@@ -35,9 +35,9 @@ Only Global admins can change the user roles, including the roles of other Globa
 
 To change a user's global role, navigate to :guilabel:`Users`, and select the name of the user to access their profile page. You may change the role of that user by selecting a new role from the Role dropdown. Your changes save automatically.
 
-For information on how to manage Team Admin permissions, see XXXXXX how-to-set-up-team-admins XXXXXX.
+For information on how to manage Team Admin permissions, see :ref:`team-admin-setup`.
 
-For more information regarding overall Admin permissions, including the Alert admin role, see  XXXXXXX manage-admin-permissions XXXXXXX.
+For more information regarding overall Admin permissions, including the Alert admin role, see  :ref:`user-roles-permissions`.
 
 
 

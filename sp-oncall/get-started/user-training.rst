@@ -21,7 +21,7 @@ Your Resources as a User
     - Live chat: If you are logged into your Splunk On-Call instance, you will have the ability to Live Chat with the Splunk On-Call Support team.
     - You can open a Splunk On-Call support case in the Splunk Support Portal:https://login.splunk.com/
 
-If you are facing any issues when trying to contact us please have a look XXXXXX `HERE <https://help.victorops.com/knowledge-base/important-splunk-on-call-support-changes-coming-nov-11th/>`
+
 
 Setting up your account
 ==========================

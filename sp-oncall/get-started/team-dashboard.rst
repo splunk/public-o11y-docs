@@ -13,7 +13,7 @@ The Splunk On-Call Team Dashboard provides a comprehensive overview of incidents
 
 All incidents derived from integrated monitoring tools in the incident table include  their respective logos to help you rapidly identify the source of an alert. Manually created incidents, along with incidents originating from the Email Endpoint or the REST API integrations, will remain logo free.
 
-Information Alerts can still be found on the XXXXXXX Timeline Page.
+Information Alerts can still be found on the Timeline Page.
 
 .. image:: /_images/spoc/team-dashboard.png
     :width: 100%
@@ -44,12 +44,12 @@ Quickly identify responsible parties during a firefight by easily seeing which p
 Manual Incident Creation
 ----------------------------
 
-You can create a manual incident from the team dashboard by selecting :guilabel:`Create Incident` in the top right corner.  For instructions, see XXXXXX manual-incident-creation file XXXXXX.
+You can create a manual incident from the team dashboard by selecting :guilabel:`Create Incident` in the top right corner.  For instructions, see :ref:`manual-incident-creation`.
 
 Incident War Rooms
 ----------------------------
 
-Access Incident Details directly from the Team Dashboard by selecting the incident number link. This will expand the incident and its event history in the Incident War Room XXXXXX link to war-room file XXXXXX. 
+Access Incident Details directly from the Team Dashboard by selecting the incident number link. This will expand the incident and its event history in the :ref:`Incident War Room <war-room>`. 
 
 People Table
 ==================
@@ -72,5 +72,5 @@ To revert an on-call take, click the “clear take” button from the popover as
 
 Status page
 ----------------
-You can relay service status updates via statuspage.io by following these instructions XXXXXX link to victorops-statuspage-integration fiel XXXXXX
+You can relay service status updates via statuspage.io by following these instructions in :ref:`statuspage-integration`.
 

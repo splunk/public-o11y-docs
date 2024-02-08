@@ -16,7 +16,7 @@ Live Chat: If you are logged into your Splunk On-Call instance, you will have th
 
 Splunk Support Portal: You can open a Splunk On-Call support case in the Splunk Support Portal :new-page:`Splunk Support Portal <https://login.splunk.com/>`.
 
-If you are facing any issues when trying to contact us, see XXXXXX Contacting Splunk On-Call Support XXXXXX
+
 
 Set up your account
 ================================
@@ -34,7 +34,7 @@ To set up your user account:
        - Your Primary Paging Policy should be the loudest and most attention-grabbing notification method. While your custom paging policy can be less aggressive for a configured period time that may not require such aggressive paging (i.e. during business hours).
        - Best Practice Tip: Include a phone call in the last step of your paging policy so that you are alerted in the noisiest way until you acknowledge the incident.
 
-#. Download Mobile App & Add Splunk On-Call to your contacts: Splunk On-Call can be easily added to your phone contacts from the mobile app. Navigate to :guilabel:`Notifications` and select Add Splunk On-Call to Contacts. Note: if you need Splunk On-Call notifications to override “Do Not Disturb” see XXXXXX our mobile application articles for directionsXXXXXX.
+#. Download Mobile App & Add Splunk On-Call to your contacts: Splunk On-Call can be easily added to your phone contacts from the mobile app. Navigate to :guilabel:`Notifications` and select Add Splunk On-Call to Contacts. Note: if you need Splunk On-Call notifications to override “Do Not Disturb” see :ref:`mobile-schedule-overrides`.
 
 #. View Your Schedule: Log in to the mobile app and select the calendar icon at the bottom of the screen to see when you are on-call. From within the web interface, navigate to :guilabel:`Teams` then :guilabel:`Your Team` and select :guilabel:`On-Call Schedule`.  
     - Best Practice Tip: You can copy and paste your personal calendar .ics file to your favorite calendar tools such as Google or Outlook.
