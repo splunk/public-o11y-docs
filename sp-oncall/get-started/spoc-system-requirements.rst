@@ -16,7 +16,7 @@ The Splunk On-Call web app supports the following browsers:
 
 In the future, Splunk On-Call will support the Chromium version of Microsoft Edge, and eventually discontinue support for IE11.
 
-For IP and Egress Filtering, see :ref: <ip-egress-filtering-spoc>`.
+For IP and Egress Filtering, see :ref:`ip-egress-filtering-spoc`.
 
 Mobile Application
 ============================

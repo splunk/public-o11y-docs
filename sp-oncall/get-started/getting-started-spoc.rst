@@ -30,18 +30,18 @@ Set up
 :ref:`Add Users <manage-users-spoc>`- The most important first step of setting up Splunk On-Call is adding users. To add new users:
 
 -  Leverage their email address in the portal (:guilabel:`Users`, then :guilabel:`Invite User`)
+  
 -  Utilize our API (ID & Key required, can be found in :guilabel:`Integrations` then :guilabel:`API`) 
    Uploading a lot of users? Reach out to us, and we'll help you out.
 
-- :ref:`Create Teams <configure-teams>`: Teams hold user lists, on-call shifts, and escalation policies. To
-create a team, navigate to the :menuselection:`Teams` section from the top nav bar. From the :menuselection:`Teams` page select  :guilabel:`Add Team`. Then choose a name.
+- :ref:`Create Teams <configure-teams>`: Teams hold user lists, on-call shifts, and escalation policies. To create a team, navigate to the :menuselection:`Teams` section from the top nav bar. From the :menuselection:`Teams` page select  :guilabel:`Add Team`. Then choose a name.
 
-   -  We recommend standardizing your team names to clearly delineate across teams. You can choose team names based on service, internal team name, and so on. Use whatever makes sense to your organization, but aim for consistency.
+    -  We recommend standardizing your team names to clearly delineate across teams. You can choose team names based on service, internal team name, and so on. Use whatever makes sense to your organization, but aim for consistency.
 
 
-:ref:`Invite Users <manage-users-spoc>` and Declare Admins - Once you've built a few teams, the next step is to add people. You can add invited users. Then, establish a hierarchy of users based on user roles. For example, admins, users, and :ref:`Team Admins <team-admin-setup>`.
+- :ref:`Invite Users <manage-users-spoc>` and Declare Admins - Once you've built a few teams, the next step is to add people. You can add invited users. Then, establish a hierarchy of users based on user roles. For example, admins, users, and :ref:`Team Admins <team-admin-setup>`.
 
-:ref:`Build Rotations <rotation-setup>`-  Rotations are your recurring on-call schedules—basically groups of on-call shifts. A shift is shared across a number of people.
+- :ref:`Build Rotations <rotation-setup>`-  Rotations are your recurring on-call schedules—basically groups of on-call shifts. A shift is shared across a number of people.
 
 -  You can also reach out to us for help setting up your custom rotation. 
    .. note:: A scheduled rotation doesn't automatically mean you're on-call; rotations need to be tied to an escalation policy.
@@ -51,7 +51,7 @@ create a team, navigate to the :menuselection:`Teams` section from the top nav b
 -  Best practice for setting up your escalation policy is to establish a minimum of three escalation paths: on-duty user, previous or next user in a rotation, and manager or team lead.
 -  :ref:`Read this post <mult-escalation-policies>` for more tips and tricks on how to manage multiple alert behaviors within a single team.
 
-:ref:`Configure Routing Keys <routing-keys>` - Routing keys tie the alerts from your monitoring tools to the specific team (or escalation policy) in Splunk On-Call. This helps get the right person on the problem and reduce alert noise for those unrelated to a specific incident. These can be found by navigating to :menuselection:`Settings` then :menuselection:`Routing Keys`.
+- :ref:`Configure Routing Keys <routing-keys>` - Routing keys tie the alerts from your monitoring tools to the specific team (or escalation policy) in Splunk On-Call. This helps get the right person on the problem and reduce alert noise for those unrelated to a specific incident. These can be found by navigating to :menuselection:`Settings` then :menuselection:`Routing Keys`.
 
 -  Keep them simple. Use the name of the team/policy that is handling the alerts, the service/host for the alert, monitoring tool the alert is coming from. Although routing keys are case insensitive, we recommend using all lowercase letters to prevent alerts from going to the default routing team.
 
@@ -60,7 +60,7 @@ create a team, navigate to the :menuselection:`Teams` section from the top nav b
 
 The final piece is to set up your custom integrations. Integrations will feed alerts into Splunk On-Call in order to create incidents which will then page out.
 
-- For a full list of integrations, see :ref:`<integrations-main-spoc>`.
+- For a full list of integrations, see :ref:`integrations-main-spoc`.
 - Can't find what you're looking for? Check out our :ref:`generic email <email-generic-spoc>` or `REST endpoints <spoc-rest-endpoint>`
 - We recommend setting up any chat integrations or non-alerting integrations before setting up your alerting integrations.
 

@@ -822,6 +822,16 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Get started TOGGLE <sp-oncall/get-started/admin-quick-start>
 
 .. toctree::
+   :maxdepth:   3
+
+   Get started TOGGLE <sp-oncall/reports/reports-main>  
+
+.. toctree::
+   :maxdepth:   3
+
+   Get started TOGGLE <sp-oncall/spoc-integrations/integrations-main>   
+
+.. toctree::
    :caption: Reference and Legal
    :maxdepth:   3
 

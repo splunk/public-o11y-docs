@@ -12,55 +12,41 @@ In order to add or delete users in the VictorOps platform, you must
 either have the Global Admin role for global add/remove permissions or
 the Team Admin role for team-specific add/remove permissions.
 
-**Adding Users**
+Adding Users
 ----------------
+.. there is no text between these headings in the original topic.
 
-.. _manage-users-spoc:
+Adding/Inviting User to VictorOps
+================================================
 
-************************************************************************
-Manage users in Splunk On-Call
-************************************************************************
+Inviting users to VictorOps can be done via the :new-page:`Public API <https://portal.victorops.com/public/api-docs.html?_ga=2.169602981.562369111.1519752971-1195437206.1519752971#/Users>` or via the *Users* tab by clicking “Invite User”.
 
-.. meta::
-   :description: About the user resolved in Splunk On-Call.
-
-
-
-**Adding/Inviting User to VictorOps**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Inviting users to VictorOps can be done via the `Public
-API <https://portal.victorops.com/public/api-docs.html?_ga=2.169602981.562369111.1519752971-1195437206.1519752971#/Users>`__
-or via the *Users* tab by clicking “Invite User”.
-
-When inviting users in the web UI, users are invited via their email and
-are able to create their own username.
+When inviting users in the web UI, users are invited via their email and are able to create their own username.
 
 To invite users via the API, Global Admin permissions are needed. Global
 admins will be able to set the user username when inviting users via the
 API.
 
-**Adding User to a Team**
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Adding User to a Team
+================================================
 
 Global Admins or Team Admins of the team are able to invite users to a
 team by selecting “Invite User” on the team's page.
 
-**Adding Users to a Shift**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Adding Users to a Shift
+================================================
 
 Once a rotation has been created with one or more shifts, users can be
 added to each shift by selecting the people icon next to the shift's
 name.
 
-**NOTE:** Users must be apart of the team before they are able to be
-added to a shift.
+.. note::  Users must be apart of the team before they are able to be added to a shift.
 
-**Removing Users**
-------------------
+Removing Users
+================================================
 
-**How user replacement is suggested by Splunk On-Call?**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+How user replacement is suggested by Splunk On-Call?
+-------------------------------------------------------------------
 
 When deleting a user from a team or organization:
 
@@ -84,21 +70,21 @@ When deleting a user from a team or organization:
    list of rotations, escalation policies that were changed and also are
    told if any overrides changed.
 
-**Manual user selection as replacement for user to be removed**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Manual user selection as replacement for user to be removed
+===================================================================
 
 If the manually selected user for replacement is not part of the team,
 then the user will be added to the team and replace the removed user in
 respective on-call rotations and escalation policies.
 
-**Removing a User from a Shift**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Removing a User from a Shift
+================================================
 
 To remove a user on a shift, click on the people icon next to the shift
 name and select to the “x”
 
-**Removing a User from a Team**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Removing a User from a Team
+================================================
 
 On the team's page under the *Users* tab, a trash icon next to the
 user's name will delete them from the team.
@@ -108,8 +94,8 @@ user is required to fill any holes the user being removed will open up.
 If the user being removed was deleted from all shifts they were apart
 of, the “replacement” user will act as a wash.
 
-**Removing a User from VictorOps**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Removing a User from VictorOps
+================================================
 
 When removing a user from the platform, first delete them from any
 shifts and teams the users is apart of. Once the user is removed from

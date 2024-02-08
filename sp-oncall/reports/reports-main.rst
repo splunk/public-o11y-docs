@@ -9,7 +9,9 @@ Splunk On-Call reports
 .. toctree::
    :hidden:
 
-   incident-frequency
-   mtta-mttr
-   reports
-   post-incident-review
+    </reports/incident-frequency>
+    </reports/mtta-mttr>
+    </reports/reports>
+    </reports/post-incident-review>
+
+About Splunk On-Call reports.

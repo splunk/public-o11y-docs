@@ -59,7 +59,7 @@ Integration milestones include the following:
 
 #. Determine necessary integrations.
 #. Create Splunk On-Call routing keys. :ref:`Routing Key Best Practice <routing-keys>`
-#. Configure integrations.  :ref:`Splunk On-Call Integration Guides <integrations-main>`
+#. Configure integrations.  :ref:`Splunk On-Call Integration Guides <integrations-main-spoc>`
 #. Test integrations and trigger test incidents. :ref:`Maintenance Mode <maintenance-mode>`
 
 
