@@ -52,4 +52,4 @@ You have completed setting up this integration.  If you have any
 questions, please contact `VictorOps
 support <mailto:Support@victorops.com?Subject=Signal%20Sciences%20VictorOps%20Integration>`__.
 
-.. |image image:: images/SignalSciences-final.png
+.. |image image:: /_images/SignalSciences-final.png

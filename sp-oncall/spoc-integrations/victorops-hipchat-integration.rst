@@ -180,5 +180,5 @@ Additional webhooks can be created for other events in the Splunk
 On-Call system. If you have any questions please reach out to Splunk
 On-Call support.
 
-.. |hip5| image:: images/hip5.png
-.. |multi3| image:: images/multi3.png
+.. |hip5| image:: /_images/hip5.png
+.. |multi3| image:: /_images/multi3.png

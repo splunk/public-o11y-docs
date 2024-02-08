@@ -39,32 +39,32 @@ Linking Splunk On-Call in AWS Simple Notification Service (SNS)
 
 From the main AWS Management Console, navigate to your SNS control panel.
 
-.. image:: _images/spoc/CW4-SNS@2x.png
+.. image:: /_images/spoc/CW4-SNS@2x.png
    :alt: AWS console
 
 From the SNS dashboard, select :guilabel:`Topics` and then select :guilabel:`Create topic`.
 
-.. image:: _images/spoc/CW5-Topics@2x.png
+.. image:: /_images/spoc/CW5-Topics@2x.png
    :alt: Create a topic
 
 Select :guilabel:`Standard` for Type. :guilabel:`Name` your Topic. Then, select :guilabel:`Create Topic`.
 
-.. image:: _images/spoc/Screen-Shot-2021-11-09-at-8.41.25-PM.png
+.. image:: /_images/spoc/Screen-Shot-2021-11-09-at-8.41.25-PM.png
    :alt: Create a topic
 
 After you've created your Splunk On-Call related Topic, create a :guilabel:`Subscription` to the new Topic you created.
 
-.. image:: _images/spoc/CW-7@2x.png
+.. image:: /_images/spoc/CW-7@2x.png
    :alt: Create subscription
 
 Define the protocol type as :guilabel:`HTTPS`, paste in the custom endpoint with the desired routing key.
 
-.. image:: _images/spoc/CW-9@2x.png
+.. image:: /_images/spoc/CW-9@2x.png
    :alt: Define the protocol type
 
 When your subscription is confirmed, select :guilabel:`Publish Message`.
 
-.. image:: _images/spoc/CW-10@2x-1.png
+.. image:: /_images/spoc/CW-10@2x-1.png
    :alt: Publish message
 
 Test the integration
@@ -77,17 +77,17 @@ In the :guilabel:`Publish message` page, add the following payload to the :guila
    {“AlarmName”:“VictorOps - CloudWatch Integration TEST”,“NewStateValue”:“ALARM”,“NewStateReason”:“failure”,“StateChangeTime”:“2017-12-14T01:00:00.000Z”,“AlarmDescription”:“VictorOps
    - CloudWatch Integration TEST”}
 
-.. image:: _images/spoc/CW-13-Publish-Message-body@2x-1.png
+.. image:: /_images/spoc/CW-13-Publish-Message-body@2x-1.png
    :alt: Publish message to topic
 
 After you've published a message to a topic with the required Splunk On-Call payload, a green bar shows a success message in CloudWatch.
 
-.. image:: _images/spoc/CW-11-green-success-bar@2x.png
+.. image:: /_images/spoc/CW-11-green-success-bar@2x.png
    :alt: Success message in CloudWatch
 
 Navigate back to Splunk On-Call to see the new incident created.
 
-.. image:: _images/spoc/Screen-Shot-2019-09-03-at-9.59.45-AM.png
+.. image:: /_images/spoc/Screen-Shot-2019-09-03-at-9.59.45-AM.png
    :alt: New incident created
 
 To send in a ``RECOVERY`` to Splunk On-Call, replace the ``Alarm`` variable in the field ``NewStateValue`` to ``OK`` in the provided payload and publish the message again:
@@ -101,19 +101,19 @@ Auto-recovery alarms from CloudWatch
 
 Cloudwatch is where you set the alerts that triggers the event that sends Splunk On-Call an incident.
 
-.. image:: _images/spoc/Screen-Shot-2021-11-10-at-5.09.41-PM.png
+.. image:: /_images/spoc/Screen-Shot-2021-11-10-at-5.09.41-PM.png
    :alt: Alarms section
 
 When setting up the alarm, or if you are editing one that you have already, the second step is to configure the actions for the notifications. Make sure you set two different trigger notifications, one for ``In Alarm`` and another for ``OK``.
 
 Set the first notification as ``In Alarm``. Then make sure you tie this notification to the topic you just created in SNS. Select :guilabel:`Add Notification` after that.
 
-.. image:: _images/spoc/Screen-Shot-2021-11-10-at-5.19.09-PM.png
+.. image:: /_images/spoc/Screen-Shot-2021-11-10-at-5.19.09-PM.png
    :alt: Add notificaiton
 
 Set the second notification as ``OK``. Make sure again you set the right topic. Select :guilabel:`Next` or :guilabel:`Update Alarm` at the end of the page.
 
-.. image:: _images/spoc/Screen-Shot-2021-11-10-at-5.22.01-PM.png
+.. image:: /_images/spoc/Screen-Shot-2021-11-10-at-5.22.01-PM.png
    :alt: Set second notification
 
 If the ``In-Alert`` event that triggered in AWS resolves itself, it sends an ``OK`` or Recovery alert to Splunk On-Call, resolving the incident in Splunk On-Callº.

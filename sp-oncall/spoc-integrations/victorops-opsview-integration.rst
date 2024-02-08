@@ -44,4 +44,4 @@ And you're done!
 **Note:**\ * VictorOps only works with Nagios notifications, BSM
 notifications are not currently supported.*
 
-.. |image image:: images/Integration-ALL-FINAL.png
+.. |image image:: /_images/Integration-ALL-FINAL.png

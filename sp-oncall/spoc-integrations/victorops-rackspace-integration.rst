@@ -69,4 +69,4 @@ this “Notification Plan”. Select **Create and Select Notification** then
 
    rackspace7
 
-.. |image image:: images/Integration-ALL-FINAL.png
+.. |image image:: /_images/Integration-ALL-FINAL.png

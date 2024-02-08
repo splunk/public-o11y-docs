@@ -48,7 +48,7 @@ You need your Splunk On-Call API ID and API Key to complete this configuration. 
 
 To locate your API ID and Key, navigate back to the Integrations page, then select the API tab. Activate the API if you have not previously done so, then copy the API ID and one of your API Keys to the clipboard.
 
-.. image:: _images/spoc/API.png
+.. image:: /_images/spoc/API.png
    :alt: API configuration
 
 Splunk On-Call team name and escalation policy name
@@ -56,12 +56,12 @@ Splunk On-Call team name and escalation policy name
 
 This is the Splunk On-Call team name and associated escalation policy you want to notify. To get this, go to your Splunk On-Call portal and select :guilabel:`Teams`. Copy the team name you want to use for this integration.
 
-.. image:: _images/spoc/Team-Name.png
+.. image:: /_images/spoc/Team-Name.png
    :alt: Select team name
 
 To acquire the escalation policy name, select the desired team and select the :guilabel:`Escalation Policies` tab. Copy the name of the escalation policy you'd like to use.
 
-.. image:: _images/spoc/Escalation-Policy-Name.png
+.. image:: /_images/spoc/Escalation-Policy-Name.png
    :alt: Escalation policy name
 
 You can notify multiple teams and escalation policies using the Live Call Routing Integration. If you want to add more than 1 team or escalation policy to the configuration, repeat this step for all of the teams and escalation policies that you want to get notified from.
@@ -82,12 +82,12 @@ Routing Keys
 
 To route the incidents created by the Twilio integration to the correct teams in Splunk On-Call, specific routing keys need to be created. After choosing the team and escalation policy you want to use for the integration, copy the URL-friendly team slug out of Splunk On-Call.
 
-.. image:: _images/spoc/URL.png
+.. image:: /_images/spoc/URL.png
    :alt: API URL exampleº
 
 Next go to :guilabel:`Settings`, :guilabel:`Routing Keys` and create a new routing key with the URL-friendly team slug associated to that team. Paste the slug you copied into the Routing Key field and select the Team and Escalation Policy it associates with in the Escalation Policies field.
 
-.. image:: _images/spoc/Routing-Key.png
+.. image:: /_images/spoc/Routing-Key.png
    :spoc: Select policy and teams
 
 This assures that all incidents are sent to the correct escalation policy.
@@ -101,18 +101,18 @@ The remaining configuration takes place in Twilio. This integration requires tha
 
 After you have created an account in Twilio pin 3 items to the menu bar on the left. From your main Twilio console, select :guilabel:`Explore Products`` on the left hand side under the :guilabel:`Develop` tab.
 
-.. image:: _images/spoc/twilio1.png
+.. image:: /_images/spoc/twilio1.png
    :alt: Twilio console
 
 Locate the Voice app under :guilabel:`Programmable Communications` and select the pin icon located on the top right of
 the tile. This pins the app to the side bar for easy access later on.
 
-.. image:: _images/spoc/twilio2.png
+.. image:: /_images/spoc/twilio2.png
    :alt: Pin an application
 
 Repeat this process to pin the Phone Numbers app and the Functions app.
 
-.. image:: _images/spoc/twilio3.png
+.. image:: /_images/spoc/twilio3.png
    :alt: Pin remaining apps
 
 Acquiring a Twilio phone number
@@ -120,7 +120,7 @@ Acquiring a Twilio phone number
 
 From the main console dashboard select Phone Numbers and then :guilabel:`Manage`. Then select :guilabel:`Buy a Number` if you haven't done so already, and set the :guilabel:`Capabilities` to :menuselection:`Voice`. Select :guilabel:`Search`.
 
-.. image:: _images/spoc/twilio4.png
+.. image:: /_images/spoc/twilio4.png
    :alt: Search for Capabilities
 
 Once you find the number that bests suits your needs, select :guilabel:`Buy` for the number.
@@ -132,7 +132,7 @@ To turn on some features used in Live Call Routing, you need to activate Enhance
 
 To do this, go to :guilabel:`Voice`, :guilabel:`Settings`, :guilabel:`General`. Scroll down to the bottom of the page until you see :guilabel:`Enhanced Programmable SIP Features`. Select :guilabel:`Disabled` to turn on the feature and save.
 
-.. image:: _images/spoc/twilio5.png
+.. image:: /_images/spoc/twilio5.png
    :alt: Turn on SIP features
 
 Twilio Functions
@@ -142,12 +142,12 @@ This integration uses Twilio's Functions.
 
 To navigate to the Functions feature from the Twilio console, select :guilabel:`Runtime` from the menu. Next select :guilabel:`Functions` and select :guilabel:`Create Service`.
 
-.. image:: _images/spoc/Slice-1-4.png
+.. image:: /_images/spoc/Slice-1-4.png
    :alt: Create service in Twilio Functions
 
 Name the service ``Splunk On-Call-Live-Call-Routing`` and select :guilabel:`Next`. On the next screen, select :guilabel:`Add +` and then select :guilabel:`Add Function`.
 
-.. image:: _images/spoc/Slice-2-1.png
+.. image:: /_images/spoc/Slice-2-1.png
    :alt: Add function
 
 Name the path for the function as ``/victorops-live-call-routing``. Click away to see the default code generated by Twilio.
@@ -166,14 +166,14 @@ Configure environment variables
 
 Once you save your Function you need to configure a few variables. Under :guilabel:`Settings` towards the bottom of your screen, select :guilabel:`Environment Variables`.
 
-.. image:: _images/spoc/Slice-4-1.png
+.. image:: /_images/spoc/Slice-4-1.png
    :alt: Environment variables
 
 Make sure :guilabel:`Add my Twilio Credentials (ACCOUNT_SID)` and :guilabel:`(AUTH_TOKEN) to ENV` are checked.
 
 Add  ll the environment variables shown in the screenshot. Note that the ``TEAM_1`` and ``ESC_POL_1`` values are case sensitive and must match the Splunk On-Call spelling and capitalization exactly.
 
-.. image:: _images/spoc/carter-testing-1483_twil_io___Twilio_Functions.jpg
+.. image:: /_images/spoc/carter-testing-1483_twil_io___Twilio_Functions.jpg
    :alt: Environment variables example
 
 The :guilabel:`Key` column's inputs are the following:
@@ -191,7 +191,7 @@ Configure dependencies
 In the same section, select :guilabel:`Dependencies`. Make sure the Node Version selected on the menu is Node
 v16. Then, similar to the inputs for Environment Variables, enter the Modules and Versions to match the following screenshot.
 
-.. image:: _images/spoc/victorops-live-call-routing-2060_twil_io___Twilio_Functions.png
+.. image:: /_images/spoc/victorops-live-call-routing-2060_twil_io___Twilio_Functions.png
    :alt: Dependencies configuration
 
 The list of modules and versions is the following:
@@ -210,12 +210,12 @@ Add function to a phone number
 
 The last step in Twilio is to add the function to the phone number you plan on using for this integration. From the left side Twilio menu, select :guilabel:`Phone Numbers` and then select the specific phone number you plan to use.
 
-.. image:: _images/spoc/Active-Numbers.png
+.. image:: /_images/spoc/Active-Numbers.png
    :alt: Select phone number
 
 Under the :guilabel:`Voice and Fax` section set the :guilabel:`A CALL COMES IN` to :guilabel:`Function`. Select :guilabel:`Splunk On-Call-Live-Call-Routing` as the Service, :guilabel:`ui` as the Environment, and ``victorops-live-call-routing`` as the Function Path.
 
-.. image:: _images/spoc/Twilio-1-1.png
+.. image:: /_images/spoc/Twilio-1-1.png
    :alt: Configure A CALL COMES IN
 
 After saving these changes, Twilio changes the Function to a Webhook. While different in name, these operate
@@ -241,7 +241,7 @@ option of ``Please press 1 to reach an On-Call representative or press 2 to leav
 
 The end result looks like the following screenshot:
 
-.. image:: _images/spoc/Evironmental-Variables-2.png
+.. image:: /_images/spoc/Evironmental-Variables-2.png
    :alt: Teams listing
 
 Each team added to this function corresponds to a unique Routing Key created during the Routing Keys step.
@@ -270,7 +270,7 @@ If you want to prevent the live-calling functionality of this integration that t
 
 In Twilio, navigate to :guilabel:`Develop`, :guilabel:`Functions`, :guilabel:`Services` and locate the service you'd previously created. Next, select :guilabel:`Environment Variables` at the bottom of the screen and add a new Environment Variable. Set the Key as ``NO_CALL`` and Value as ``TRUE``.
 
-.. image:: _images/spoc/NO_CALL-scaled.jpg
+.. image:: /_images/spoc/NO_CALL-scaled.jpg
    :alt: Configuring NO_CALL
 
 Once this is added, select :guilabel:`Deploy All` to push your changes.
@@ -282,7 +282,7 @@ If you want to prevent the ability for a caller to leave a voicemail if no on-ca
 
 In Twilio, navigate to :guilabel:`Develop`, :guilabel:`Functions`, :guilabel:`Services` and locate the service you'd previously created. Next, select on :guilabel:`Environment Variables` at the bottom of the screen and add a new Environment Variable. Set the Key as ``NO_VOICEMAIL`` and Value as ``TRUE``.
 
-.. image:: _images/spoc/NO_VOICEMAIL.jpg
+.. image:: /_images/spoc/NO_VOICEMAIL.jpg
    :alt: Configuring NO_VOICEMAIL
 
 Once this is added, select :guilabel:`Deploy All` to push your changes.
@@ -305,12 +305,12 @@ Four new Environment Variables need to be added to connect the Twilio account to
 
 The ``SENDGRID_API_SECRET`` value is the API Key you previously copied in SendGrid, the ``TO_EMAIL_ADDRESS`` is the email address you want the email send to.
 
-.. image:: _images/spoc/SendGrid-Env-Variables-2.jpg
+.. image:: /_images/spoc/SendGrid-Env-Variables-2.jpg
    :alt: Sendgrid configuration in Twilio
 
 Select :guilabel:`Dependencies` to add the ``@sendgrid/mail 7.6.0`` dependency.
 
-.. image:: _images/spoc/SendGrid-dependency.jpg
+.. image:: /_images/spoc/SendGrid-dependency.jpg
    :alt: Add dependency
 
 After you've added these new environment variables and new dependency, select :guilabel:`Deploy All`. Now, when a caller leaves a voicemail, an email is sent to the ``TO_EMAIL`` value you've specified that includes the voicemail transcription and recording URL.
@@ -373,10 +373,10 @@ Environment variables is incorrectly configured
 Check that these values in your Twilio account exactly match the
 recommended ones:
 
-.. image:: _images/spoc/Environmental-Variables-1.png
+.. image:: /_images/spoc/Environmental-Variables-1.png
    :alt: Recommended environment variables
 
-.. image:: _images/spoc/Twilio_Cloud_Communications___Web_Service_API_for_building_Voice_and_SMS_Applications.jpg
+.. image:: /_images/spoc/Twilio_Cloud_Communications___Web_Service_API_for_building_Voice_and_SMS_Applications.jpg
    :alt: Annotations
 
 **Problem 3**:  'There was an error retrieving the list of teams for

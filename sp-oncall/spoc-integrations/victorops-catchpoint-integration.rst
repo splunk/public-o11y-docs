@@ -73,4 +73,4 @@ you may add as many variables as you want, but customizing the
 parameters of the existing Template may result in degraded
 functionality.
 
-.. |catchpoint2| image:: _images/spoc/catchpoint2.png
+.. |catchpoint2| image:: /_images/spoc/catchpoint2.png

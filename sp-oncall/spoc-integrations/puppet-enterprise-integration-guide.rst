@@ -59,7 +59,7 @@ Enterprise** integration option.
 
 Capture the API Key from the URL String:
 
-.. image:: _images/spoc/PuppetEnterprise1@2x.png
+.. image:: /_images/spoc/PuppetEnterprise1@2x.png
 
 **Configure Puppet Enterprise in Splunk Enterprise**
 ----------------------------------------------------

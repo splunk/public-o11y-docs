@@ -66,7 +66,7 @@ To create custom alert templates for Splunk OnCall in AlertSite:
 
        .. note:: You can use another subject, but make sure it includes the word :strong:`CRITICAL` and does not include the *$STATUS* variable.
 
-      .. image:: _images/spoc/error-template.png
+      .. image:: /_images/spoc/error-template.png
          :width: 90%
          :alt: Ensure the subject field includes the word Critical rather than variables.
 
@@ -75,7 +75,7 @@ To create custom alert templates for Splunk OnCall in AlertSite:
     #. Filter the template list to show only *Alert Type: Site Clear*.
     #. Select the **AlertSite Template** for **Site Clear** with the delivery method of Text.
     
-      .. image:: _images/spoc/base-clear-template.png
+      .. image:: /_images/spoc/base-clear-template.png
          :width: 90%
          :alt: Select the delivery method of Text.
 
@@ -87,7 +87,7 @@ To create custom alert templates for Splunk OnCall in AlertSite:
 
       .. note:: The subject must be exactly the same as in the error template, but with the *OK* word instead of *CRITICAL*.
 
-      .. image:: _images/spoc/clear-template.png
+      .. image:: /_images/spoc/clear-template.png
          :width: 90%
          :alt: The subject must be exactly the same as in the error template, but with the OK word instead of CRITICAL.
 
@@ -95,7 +95,7 @@ To create custom alert templates for Splunk OnCall in AlertSite:
 
 You can see the created templates on the template list:
 
-   .. image:: _images/spoc/victorops-templates.png
+   .. image:: /_images/spoc/victorops-templates.png
       :width: 90%
       :alt: The templates you created appear on the template list.
 
@@ -113,7 +113,7 @@ Next, you need to add the Splunk OnCall email endpoint that you generated in :re
     -  Mode - *E-mail (text format)\ *
 
 
-      .. image:: _images/spoc/add-victorops-recipient.png
+      .. image:: /_images/spoc/add-victorops-recipient.png
          :width: 90%
          :alt: Add the email address generated in an earlier step 
 
@@ -121,7 +121,7 @@ Next, you need to add the Splunk OnCall email endpoint that you generated in :re
 #. Select the created recipient and click :guilabel:`Edit Recipient`.
 #. On the :guilabel:`Availability Alerts` tab, set the option to Alert whenever an error clears. This is needed to automatically resolve incidents in Splunk OnCall when an error clears in AlertSite.
 
-      .. image:: _images/spoc/availability-alerts-settings.png
+      .. image:: /_images/spoc/availability-alerts-settings.png
          :width: 90%
          :alt: Set the option to Alert whenever an error clears.
 

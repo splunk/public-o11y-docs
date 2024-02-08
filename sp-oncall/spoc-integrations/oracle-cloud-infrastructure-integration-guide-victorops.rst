@@ -31,25 +31,25 @@ Oracle Cloud Infrastructure configuration
 
 From the Oracle Cloud console navigate to :guilabel:`Solutions and Platform Monitoring`, :guilabel:`Alarm Definitions`.
 
-.. image:: _images/spoc/OCI-1.jpg
+.. image:: /_images/spoc/OCI-1.jpg
    :alt: Location of Alarm Definitions in OCI
 
 Select :guilabel:`Create Alarm`. On this screen define your alarm and configure the desired alarm metrics and trigger rules.
 
-.. image:: _images/spoc/Create-Alarm.jpg
+.. image:: /_images/spoc/Create-Alarm.jpg
    :alt: Create alarm in OCI
 
 After the alarm configuration is complete, the :guilabel:`Notifications` section populates at the bottom of the :guilabel:`Create Alarm` page. Select :guilabel:`Create a topic`.
 
-.. image:: _images/spoc/Create-a-topic.jpg
+.. image:: /_images/spoc/Create-a-topic.jpg
    :alt: Create a new topic in OCI
 
 Provide a topic name. Under :guilabel:`Subscription Protocol`, select :guilabel:`HTTPS`. Paste the service endpoint URL copied in previous step. Replace ``$routing_key`` in the URL with the value of the routing key you have configured.
 
-.. image:: _images/spoc/URL.jpg
+.. image:: /_images/spoc/URL.jpg
    :alt: Select protocol
 
-.. image:: _images/spoc/Configure-URL.jpg
+.. image:: /_images/spoc/Configure-URL.jpg
    :alt: Create topic and subscription
 
 After creating the topic, select :guilabel:`Save alarm`.
@@ -58,5 +58,5 @@ Now, navigate back to Splunk On-Call. An initial ``INFO`` alert from Oracle Clou
 
 As the last step, paste the URL into a browser to see a topic subscription confirmation message like the following:
 
-.. image:: _images/spoc/OCI-Confirmation.jpg
+.. image:: /_images/spoc/OCI-Confirmation.jpg
    :alt: Confirmation message for the subscription in OCI

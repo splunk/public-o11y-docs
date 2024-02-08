@@ -27,13 +27,13 @@ Splunk On-Call configuration
 
 Log in to the Splunk On-Call portal and select :guilabel:`Integrations`, :guilabel:`Email Generic`.
 
-.. image:: _images/spoc/Integrations-Page-1.png
+.. image:: /_images/spoc/Integrations-Page-1.png
    :alt: Email endpoint integration
 
 Select :guilabel:`Enable Integration` to generate your email endpoint address. After you activate it, the integration generates the generic email endpoint address. Select whether non-parseable emails are treated as info or critical alerts
 under :guilabel:`Email Options`.
 
-.. image:: _images/spoc/Email-Integration-page-1.png
+.. image:: /_images/spoc/Email-Integration-page-1.png
    :alt: Email options
 
 
@@ -81,12 +81,12 @@ Sample incident
 
 The following example email results in the creation of a new incident that is routed to the team "Lost".
 
-.. image:: _images/spoc/Sent-Email-3.png
+.. image:: /_images/spoc/Sent-Email-3.png
    :alt: Sample subject
 
 The resulting incident looks like the following:
 
-.. image:: _images/spoc/Incident-1.png
+.. image:: /_images/spoc/Incident-1.png
    :alt: Incident triggered
 
 You can acknowledge the previous sample incident by sending the same email but replacing the keyword ``CRITICAL`` with the keyword ``ACKNOWLEDGEMENT``. To resolve it, replace the keyword ``ACKNOWLEDGEMENT`` with the keywords ``RESOLVED`` or ``OK``.
@@ -112,7 +112,7 @@ Recommended Rules Engine rules
 
 You can limit sending alerts through the email integration depending on the flexibility you have over your email system. If you have the ability to modify the subject line and body of the email you can transform critical alerts into a recovery state. For this use case, see the following sample rule. Note the spaces on either side of the keyword ``UP``.
 
-.. image:: _images/spoc/Rules-Engine-1.png
+.. image:: /_images/spoc/Rules-Engine-1.png
    :alt: Sample rule for Rules Engine
 
 This rule looks for the keyword or phrase ``UP`` in the email body (``state_message`` in the payload) using wildcard

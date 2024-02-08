@@ -24,7 +24,7 @@ Splunk On-Call configuration
 
 From the Splunk On-Call web portal select :guilabel:`Integrations`, :guilabel:`CloudWisdom`. Select  the :guilabel:`CloudWisdom` integration and copy the :guilabel:`Service API Endpoint` to your clipboard.
 
-.. image:: _images/spoc/Screen-Shot-2020-05-20-at-11.11.52-AM.png
+.. image:: /_images/spoc/Screen-Shot-2020-05-20-at-11.11.52-AM.png
    :alt: CloudWisdom integration screen
 
 Make sure to add the appropriate Routing Key to the end of the URL. For more information on routing keys or instructions on creating a new one, see :ref:`routing-keys`.
@@ -43,7 +43,7 @@ Create a Splunk On-Call webhook notification
 
 3. Select :guilabel:`Add Webhook`.
 
-.. image:: _images/spoc/Screen-Shot-2020-04-17-at-11.05.45-AM.png
+.. image:: /_images/spoc/Screen-Shot-2020-04-17-at-11.05.45-AM.png
    :alt: Add webhook screen
 
 4. Complete the following fields:
@@ -58,7 +58,7 @@ Create a Splunk On-Call webhook notification
 
 5. Select :guilabel:`Test` and :guilabel:`Save`.
 
-.. image:: _images/spoc/Screen-Shot-2020-04-17-at-12.08.30-PM.png
+.. image:: /_images/spoc/Screen-Shot-2020-04-17-at-12.08.30-PM.png
    :alt: Fill out fields in CloudWisdom
 
 Apply notification to a policy
@@ -68,7 +68,7 @@ Apply notification to a policy
 
 2. Select :guilabel:`+ New Policy` or edit an existing one. A dialog appears.
 
-.. image:: _images/spoc/Screen-Shot-2020-04-17-at-11.14.04-AM.png
+.. image:: /_images/spoc/Screen-Shot-2020-04-17-at-11.14.04-AM.png
    :alt: New policy dialog
 
 3. Complete the policy's :guilabel:`Scope` and :guilabel:`Conditions`.
@@ -77,7 +77,7 @@ Apply notification to a policy
 
 5. Select :guilabel:`Webhook` as the notification type.
 
-.. image:: _images/spoc/Screen-Shot-2020-04-17-at-11.17.34-AM.png
+.. image:: /_images/spoc/Screen-Shot-2020-04-17-at-11.17.34-AM.png
    :alt: Select notification type
 
 6. Select the Splunk On-Call webhook notification you created.

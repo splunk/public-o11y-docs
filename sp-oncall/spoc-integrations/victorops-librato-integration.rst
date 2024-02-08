@@ -42,6 +42,6 @@ key.\ |librato6|
 
 Hit “create service” and you are done!
 
-.. |librato1| image:: images/librato1.png
-.. |librato2| image:: images/librato2.png
-.. |librato6| image:: images/librato6.png
+.. |librato1| image:: /_images/librato1.png
+.. |librato2| image:: /_images/librato2.png
+.. |librato6| image:: /_images/librato6.png

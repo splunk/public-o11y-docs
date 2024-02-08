@@ -85,4 +85,4 @@ Now your alerts will look like this!
 
 ..image images/sample-Alert@2x.png
 
-.. |image image:: images/integrations.png
+.. |image image:: /_images/integrations.png

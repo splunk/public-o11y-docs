@@ -25,7 +25,7 @@ In Splunk On-Call, navigate to the integrations page.
 
 If the Delivery Insights endpoint integration has not been activated, select :guilabel:`Enable` to generate your endpoint destination URL.
 
-.. image:: _images/spoc/Integrations_-_Splunk On-Call_Events.jpg
+.. image:: /_images/spoc/Integrations_-_Splunk On-Call_Events.jpg
    :alt: Delivery Insights API endpoint
 
 .. note::
@@ -94,7 +94,7 @@ The following example JSON adds a message to the timeline:
 
 Here is the full timeline view of the previous Delivery Insights message:
 
-.. image:: _images/spoc/Timeline_-_Splunk On-Call_Events.jpg
+.. image:: /_images/spoc/Timeline_-_Splunk On-Call_Events.jpg
    :alt: Timeline with Delivery Insights message
 
 Filters
@@ -106,5 +106,5 @@ From the main timeline, select the filter icon and then select :guilabel:`Messag
 
 The Delivery Insights Quick Filter is next to the All Filters menu, as indicated in the following image. The Quick Filter is a switch: turning it on filters the timeline for all Delivery Insights messages that have been preselected in the manual filter. If none of the messages are selected, the timeline shows all Delivery Insights messages.
 
-.. image:: _images/spoc/Delivery-Insights-Filter.png
+.. image:: /_images/spoc/Delivery-Insights-Filter.png
    :alt: Filter for Delivery Insights

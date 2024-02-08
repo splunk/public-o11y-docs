@@ -22,12 +22,12 @@ In Splunk On-call
 
 From the main timeline select :guilabel:`Integrations` then search for Zendesk on the :guilabel:`3rd-Party Integrations` tab.
 
-.. image:: images/Integrations-page.png
+.. image:: /_images/Integrations-page.png
    :alt: Integrations page
 
 If you haven't enabled the integration, select :guilabel:`Enable Integration` to generate your configuration values as seen in the following image:
 
-.. image:: images/Zendesk-API-Key.png
+.. image:: /_images/Zendesk-API-Key.png
    :alt: API key for Zendesk integration
 
 Copy this endpoint URL to your clipboard. You need it when configuring Zendesk.
@@ -46,28 +46,28 @@ Create a target in Zendesk
 
 From your Zendesk portal, select :guilabel:`Settings` on the side-menu.
 
-.. image:: images/Zendesk-Settings.png
+.. image:: /_images/Zendesk-Settings.png
    :alt: Zendesk settings
 
 Under the :guilabel:`Settings` section, select :guilabel:`Extensions.`
 
-.. image:: images/Extensions.png
+.. image:: /_images/Extensions.png
    :alt: Zendesk extensions
 
 In the resulting menu, select :guilabel:`add a target`.
 
-.. image:: images/Add-a-Target.png
+.. image:: /_images/Add-a-Target.png
    :alt: Add target in Zendesk extensions
 
 Select the :guilabel:`HTTP Target`` option.
 
-.. image:: images/HTTP.png
+.. image:: /_images/HTTP.png
    :alt: HTTP target option in Zendesk extensions
 
 Give the HTTP target with a name. Paste the endpoint URL you copied from Splunk On-call with the valid routing key. Select a :guilabel:`Method`
 of :guilabel:`POST` and :guilabel:`Content type` of :guilabel:`JSON`. Leave the :guilabel:`Basic Authentication` box unselected and the :guilabel:`Test target` option selected and select :guilabel:`Submit`.
 
-.. image:: images/HTTP-Target.png
+.. image:: /_images/HTTP-Target.png
    :alt: HTTP target configuration in Zendesk extensions
 
 Copy and paste in the following JSON body and select :guilabel:`Submit`.
@@ -82,18 +82,18 @@ Copy and paste in the following JSON body and select :guilabel:`Submit`.
 
 If you configured the integration correctly, you see a 200 success response similar to this.
 
-.. image:: images/zendesk_200_response@2x.png
+.. image:: /_images/zendesk_200_response@2x.png
    :alt: 200 success response in HTTP target configuration in Zendesk
 
 Check your Splunk On-call timeline for a new event. This is an INFO message which doesn't create a new incident in Splunk On-call, but is intended only
 to confirm that Zendesk can successfully send events to Splunk On-call.
 
-.. image:: images/INFO-alert.png
+.. image:: /_images/INFO-alert.png
    :alt: Splunk On-call test event
 
 Finally, exit the success message. Change the option to :guilabel:`Create target` and select :guilabel:`Submit`.
 
-.. image:: images/Create-Target.png
+.. image:: /_images/Create-Target.png
    :alt: Create target option in the HTTP target in Zendesk extensions
 
 Configure alerts to Splunk On-call
@@ -101,12 +101,12 @@ Configure alerts to Splunk On-call
 
 In the side-menu, locate the section for :guilabel:`Business Rules` and select :guilabel:`Triggers`.
 
-.. image:: images/Triggers.png
+.. image:: /_images/Triggers.png
    :alt: Zendesk triggers
 
 From the :guilabel:`Triggers` menu, select :guilabel:`Add trigger`.
 
-.. image:: images/Add-Trigger.png
+.. image:: /_images/Add-Trigger.png
    :alt: Add a trigger in Zendesk
 
 Enter a name and description. Select :guilabel:`Add condition` and add the following 2 conditions:
@@ -117,12 +117,12 @@ Enter a name and description. Select :guilabel:`Add condition` and add the follo
 These 2 conditions create a Splunk On-call incident for every new case in Zendesk. You can alter these to further filter which conditions alert
 Splunk On-call to fit your specific workflow.
 
-.. image:: images/Critical-Trigger.png
+.. image:: /_images/Critical-Trigger.png
    :alt: Trigger conditions
 
 Under the :guilabel:`Actions` section, select :guilabel:`Add Action`. In the first dropdown menu, scroll to the :guilabel:`Notifications` sections and select :guilabe:`Notify target`. In the second dropdown menu, select the Splunk On-call target you created earlier.
 
-.. image:: images/Critical-Trigger-Payload.png
+.. image:: /_images/Critical-Trigger-Payload.png
    :alt: Configure trigger actions
 
 Copy the following JSON payload and paste it into the :guilabel:`JSON body` field, then select :guilabel:`Create`.
@@ -157,7 +157,7 @@ This trigger sends acknowledgement alerts to Splunk On-call, to acknowledge the 
 Condition
 * Status is Pending
 
-.. image:: images/Acknowldge-Trigger.png
+.. image:: /_images/Acknowldge-Trigger.png
    :alt: Acknowledge trigger
 
 JSON payload:
@@ -184,7 +184,7 @@ This trigger sends recovery notifications to Splunk On-call to close out the inc
 Condition: 
 * Status is Closed
 
-.. image:: images/Resolved-Trigger.png
+.. image:: /_images/Resolved-Trigger.png
    :alt: Resolved trigger
 
 JSON payload:
@@ -241,17 +241,17 @@ Generate a Zendesk API token
 
 In the side-menu, locate the :guilabel:`Channels` section and select :guilabel:`API`.
 
-.. image:: images/API.png
+.. image:: /_images/API.png
    :alt: API channel in Zendesk
 
 Under :guilabel:`Zendesk API`, select the :guilabel:`Settings` tab. Turn on :guilabel:`Token Access` and then select the :guilabel:`+` to generate a new token.
 
-.. image:: images/Zendesk-Token-Access.png
+.. image:: /_images/Zendesk-Token-Access.png
    :alt: Token access in Zendesk API
 
 Give the token a name. select :guilabel:`Copy` button to copy the token to your clipboard, and select :guilabel:`Save`.
 
-.. image:: images/Zendesk-API-Key-1.png
+.. image:: /_images/Zendesk-API-Key-1.png
    :alt: Copy new token in Zendesk API
 
 Set up the Outgoing webhook
@@ -259,7 +259,7 @@ Set up the Outgoing webhook
 
 In Splunk On-call, select :guilabel:`Integrations` then :guilabel:`Outgoing Webhooks`. Under Outgoing Webhooks, select :guilabel:`Add Webhook`.
 
-.. image:: images/Outgoing-webhooks.png
+.. image:: /_images/Outgoing-webhooks.png
    :alt: Add an outgoing webhook in Splunk On-call
 
 * For :guilabel:`Event`, select :guilabel:`Incident-Acknowledged`.
@@ -277,5 +277,5 @@ In Splunk On-call, select :guilabel:`Integrations` then :guilabel:`Outgoing Webh
 
 Finally, give the webhook a brief description and select :guilabel:`Save`.
 
-.. image:: images/Zendesk-webhook.png
+.. image:: /_images/Zendesk-webhook.png
    :alt: Outgoing webhook configuration in Splunk On-call

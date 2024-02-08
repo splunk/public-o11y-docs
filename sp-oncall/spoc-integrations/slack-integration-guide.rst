@@ -180,7 +180,7 @@ As a last step, create rules to associate your Slack channels to their appropria
 
 For the transform, use ``alert field = slack_channel AND new value = (Slack channel name here)``, like in the following example. Don't include a sign before the channel name.
 
-.. image:: _images/spoc/Transmog2@2x.png
+.. image:: /_images/spoc/Transmog2@2x.png
    :alt: Transform rule
 
 If you have many Slack channels and many routing keys, you need 1 rule per Splunk On-Call routing_key. Configure one Rules Engine rule per routing key to send routed alerts to specific slack channels.
@@ -194,7 +194,7 @@ Outgoing webhooks
 
 You can copy and paste the following templated payload. To add more variables to your payload, see the :guilabel:`Available Variables` column next to the payload. As long as you have the required Rules Engine rules, no editing of the payload is required.
 
-.. image:: _images/spoc/Slack-2-MC-5@2x.png
+.. image:: /_images/spoc/Slack-2-MC-5@2x.png
    :alt: Configuring outgoing webhooks with Splunk On-Call
 
 Configure the following webhooks by selecting :guilabel:`Add Webhook` each time, then scroll down to the new window.
@@ -284,7 +284,7 @@ End result in Slack
 In Slack, each channel see incident activity based on routing key for the configured webhooks. As you can see in the
 following image there's a incoming triggered event, Acknowledged event, Resolved event, and a Chat.
 
-.. image:: _images/spoc/Slack-2-MC-6@2x.png
+.. image:: /_images/spoc/Slack-2-MC-6@2x.png
    :alt: Incoming Triggered event, Acknowledged event, Resolved event, and a Chat
 
 
@@ -301,37 +301,37 @@ In Splunk On-Call
 
 From the Splunk On-Call web portal select :guilabel:`Settings`, :guilabel:`Alert Behavior`, :guilabel:`Integrations`.
 
-.. image:: _images/spoc/integrations.png
+.. image:: /_images/spoc/integrations.png
    :alt: Integrations menu
 
 Next, select the Slack integration tile.
 
-.. image:: _images/spoc/New-Slack-Enable-1.0.png
+.. image:: /_images/spoc/New-Slack-Enable-1.0.png
    :alt: Splunk On-Call - Finding Slack on Integrations Module
 
 Then select :guilabel:`Enable Integration.`. This brings up a Slack authentication screen to first pick the team you want to integrate with and then to log in.
 
-.. image:: _images/spoc/Slack-Sign-in-to-your-Workspace.png
+.. image:: /_images/spoc/Slack-Sign-in-to-your-Workspace.png
    :alt: Slack authentication screen on victorops
 
 Then, enter your email and password.
 
-.. image:: _images/spoc/Slack.png
+.. image:: /_images/spoc/Slack.png
    :alt: Email and password prompt for integration screen
 
 Next, authorize the application.
 
-.. image:: _images/spoc/Authorize_access_to_your_account___Splunk On-CallQA_Slack.png
+.. image:: /_images/spoc/Authorize_access_to_your_account___Splunk On-CallQA_Slack.png
    :alt: Integration authorization - Slack and Splunk On-Call
 
 Once authorized, select a Slack channel.
 
-.. image:: _images/spoc/Slack-select-your-Slack-channel.png
+.. image:: /_images/spoc/Slack-select-your-Slack-channel.png
    :alt: Choosing a Slack channel
 
 Finally, you are redirected back to Splunk On-Call and a message shows that the Authentication is successful.
 
-.. image:: _images/spoc/Slack-VO-Sucess.png
+.. image:: /_images/spoc/Slack-VO-Sucess.png
    :alt: Authentication success
 
 Splunk On-Call web interface Settings
@@ -339,7 +339,7 @@ Splunk On-Call web interface Settings
 
 From the web UI, you can configure aspects of the integration. For example, you can select a Slack channel you'd like to integrate with and control the message notifications from Splunk On-Call to Slack.
 
-.. image:: _images/spoc/VO-integration-configuration.png
+.. image:: /_images/spoc/VO-integration-configuration.png
    :alt: Select a channel
 
 After you finish configuring your settings, save them.
@@ -352,7 +352,7 @@ Invite the Splunk On-Call Bot to the channel
 
 In Slack, mention the ``@VictorOps`` bot user to add it to your channel if it doesn't automatically appear.
 
-.. image:: _images/spoc/Slack_-_Splunk On-Call.png
+.. image:: /_images/spoc/Slack_-_Splunk On-Call.png
    :alt: In Slack - invite the bot
 
 Linking your Slack user to your Splunk On-Call User
@@ -360,12 +360,12 @@ Linking your Slack user to your Splunk On-Call User
 
 From Slack, you can use the Slash command ``/linkuser`` to generate a link that initiates the linking process.
 
-.. image:: _images/spoc/In-Slack-linkuser-.png
+.. image:: /_images/spoc/In-Slack-linkuser-.png
    :alt: Using linkuser command to link Slack with Splunk On-Call
 
 After running the ``/linkuser`` command, log into your Splunk On-Call account to be notified that your user is linked.
 
-.. image:: _images/spoc/Slack-linkuser-Salck-and-VO-connected-.png
+.. image:: /_images/spoc/Slack-linkuser-Salck-and-VO-connected-.png
    :alt: Notification of link
 
 Once you're connected you can acknowledge incidents in Slack. If you do not link your user, incident actions in Slack aren't passed to Splunk On-Call.
@@ -377,15 +377,15 @@ Acknowledge and resolve in Slack
 
 Now that your user is linked you can interact with Splunk On-Call incidents from the Slack channel.
 
-.. image:: _images/spoc/Slack_-_Splunk On-CallQA-2.png
+.. image:: /_images/spoc/Slack_-_Splunk On-CallQA-2.png
    :alt: Slack test incident
 
-.. image:: _images/spoc/Slack_-_Splunk On-CallQA-3.png
+.. image:: /_images/spoc/Slack_-_Splunk On-CallQA-3.png
    :alt: Splunk On-Call Slack alert incident example
 
 In the Splunk On-Call Timeline, you're notified of Acknowledge and Resolve actions that occurred in Slack.
 
-.. image:: _images/spoc/Slack-New-Timeline.png
+.. image:: /_images/spoc/Slack-New-Timeline.png
    :alt: Splunk On-Call timeline slack notification
 
 
@@ -398,7 +398,7 @@ The basic configuration links your Splunk On-Call timeline, bidirectionally, to 
 
 #. From the Splunk On-Call Timeline select :guilabel:`Settings`, :guilabel:`Alert Behavior`, :guilabel:`Integrations`.
 
-   .. image:: _images/spoc/integrations.png
+   .. image:: /_images/spoc/integrations.png
       :alt: Integrations screen
 
 #. Scroll down and select the :guilabel:`Slack (webhook)` integration button. If the integration has not been activated, select :guilabel:`Enable Integration`.
@@ -423,7 +423,7 @@ The basic configuration links your Splunk On-Call timeline, bidirectionally, to 
 
 #. Select :guilabel:`Add Configuration`.
 
-   .. image:: _images/spoc/SlackAddOutgoingConfig@2x-1.png
+   .. image:: /_images/spoc/SlackAddOutgoingConfig@2x-1.png
       :alt: Add Configuration.
 
 #.  Select :guilabel:`Add Outgoing WebHooks Integration`.
@@ -437,5 +437,5 @@ The basic configuration links your Splunk On-Call timeline, bidirectionally, to 
 #. Navigate to your main timeline in Splunk On-Call, and enter any text into one of the two chat bars and press the Enter or Return key. The chat appears in your Slack channel. Reply to the chat from within Slack and to see the
 response in the Splunk On-Call timeline.
 
-.. image:: _images/spoc/Slack-legacy-App-Timeline.png
+.. image:: /_images/spoc/Slack-legacy-App-Timeline.png
    :alt: Enter any text into one of the two chat bars and press Enter or Return

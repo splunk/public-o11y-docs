@@ -34,24 +34,24 @@ Jira configuration
 
 From the main web interface, select the cog in the upper right hand corner and then :guilabel:`System.`
 
-.. image:: _images/spoc/Jnew1.png
+.. image:: /_images/spoc/Jnew1.png
    :alt: Select webhooks in Jira
 
 In the left side bar under “Advanced” select :guilabel:`WebHooks`.
 
-.. image:: _images/spoc/jnew2.png
+.. image:: /_images/spoc/jnew2.png
    :alt: Select webhooks in Jira
 
 Select :guilabel:`+ Create a Webhook`. Give the WebHook a name, set the status to :guilabel:`Enabled`, and paste in the Splunk On-Call Jira URL.
 
-.. image:: _images/spoc/jnew3.png
+.. image:: /_images/spoc/jnew3.png
    :alt: Select + Create a Webhook
 
 You have the options to use specific JQL queries to send only certain issues.
 
 Next select the events you want to send to Splunk On-Call for. The example sends a webhook whenever an issue is created, updated or deleted.
 
-.. image:: _images/spoc/jnew4.png
+.. image:: /_images/spoc/jnew4.png
    :alt: Select the events you would like to have a webhook sent to SPoC
 
 Deselect :guilabel:`Exclude body` so that Jira sends JSON, then select :guilabel:`Create`.
@@ -66,7 +66,7 @@ Jira issues based on actions in Splunk On-Call. Start with using the Rules Engin
 
 For example you might want to adjust the severity level of an alert based on the priority that was set in Jira or the ``Jira.issue.fields.priority.name``. For all Jira issues with a priority of Sev 4 to create ``WARNING`` alerts in Splunk On-Call, the rule looks as follows:
 
-.. image:: _images/spoc/Screen-Shot-2019-08-14-at-11.00.20-AM.png
+.. image:: /_images/spoc/Screen-Shot-2019-08-14-at-11.00.20-AM.png
    :alt: Sample rule
 
 To send information based on actions in Splunk On-Call back into Jira you need to configure outbound webhooks. You can do things such as update the status of a ticket when the incident is acknowledged in Splunk On-Call, or add a
@@ -89,7 +89,7 @@ Set the ``To`` field to the Jira REST endpoint for issue comments. Set the paylo
 
 The final result looks like so:
 
-.. image:: _images/spoc/Jira-Webhook-Example2.png
+.. image:: /_images/spoc/Jira-Webhook-Example2.png
    :alt: Jira webhook example
 
 Now every time a chat is entered into the timeline a comment is added to the issue in Jira.
@@ -116,32 +116,32 @@ Jira configuration
 Set up an incoming mail handler for the project you want to receive issues from Splunk On-Call. To do so, select
 :guilabel:`Settings` (gear icon) and then :guilabel:`System`.
 
-.. image:: _images/spoc/Jira1.png
+.. image:: /_images/spoc/Jira1.png
    :alt: Set up an Incoming mail handler
 
 In the sidebar select :guilabel:`Incoming Mail`.
 
-.. image:: _images/spoc/Jira2.png
+.. image:: /_images/spoc/Jira2.png
    :alt: Select Incoming Mail
 
 Select :guilabel:`Add Incoming mail handler`.
 
-.. image:: _images/spoc/Jira3.png
+.. image:: /_images/spoc/Jira3.png
    :alt: Add incoming mail handler
 
 Give it a name and select the appropriate handler you want to use for this integration, like :guilabel:`Create a new issue or add a comment to an existing issue`. Then select :guilabel:`Next`.
 
-.. image:: _images/spoc/Jira4.png
+.. image:: /_images/spoc/Jira4.png
    :alt: Create a new issue or add a comment to an existing issue
 
 Select the project you want to associate this integration with, then select :guilabel:`Add`. In this example you select the :guilabel:`Splunk On-Call Critical Incidents`.
 
-.. image:: _images/spoc/Jira5.png
+.. image:: /_images/spoc/Jira5.png
    :alt: Adding VictorOps Critical Incidents project
 
 Retrieve the email address associated to the project. To do this go into your projects administration page and select :guilabel:`Email requests`. Copy the email you want to use to your clipboard.
 
-.. image:: _images/spoc/Jira6.png
+.. image:: /_images/spoc/Jira6.png
    :alt: Projects administration page and select Email requests
 
 Splunk On-Call configuration

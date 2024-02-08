@@ -29,7 +29,7 @@ Dataset configuration
 
 In Dataset, select :guilabel:`Alerts` then :guilabel:`Edit Alerts`.
 
-.. image:: _images/spoc/Scalyr_integration_alerts.png
+.. image:: /_images/spoc/Scalyr_integration_alerts.png
    :alt: Location of Alerts in Dataset
 
 Edit the Alerts configuration file to specify Splunk On-Call as the alert recipient. To do this for all Dataset alerts, create or edit an ``alertAddress`` field at the top level of the file as shown in the following snippet, using

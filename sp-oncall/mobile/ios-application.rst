@@ -207,7 +207,7 @@ This process will redo the device association process and often clears
 up any issues with the app.
 
 .. |image1 images/IMG_2632.jpg
-.. |image2 image:: images/IMG_2633.jpg
-.. |image3 image:: images/Image-from-iOS-23.png
-.. |image4 image:: images/Image-from-iOS-24.png
-.. |image5 image:: images/Favorites.png
+.. |image2 image:: /_images/IMG_2633.jpg
+.. |image3 image:: /_images/Image-from-iOS-23.png
+.. |image4 image:: /_images/Image-from-iOS-24.png
+.. |image5 image:: /_images/Favorites.png

@@ -26,7 +26,7 @@ Turn on the integration
 
 In Splunk On-Call, select :guilabel:`Settings`, :guilabel:`Alert Behavior`, :guilabel:`Integrations`, and then select :guilabel:`Jenkins Integration (Build Systems)`.
 
-.. image:: _images/spoc/800x320@2x.png
+.. image:: /_images/spoc/800x320@2x.png
    :alt: Turn on the integration
 
 If the Delivery Insights endpoint integration isn't active, select :guilabel:`Enable` to generate your endpoint destination URL. Copy the URL to your clipboard.
@@ -36,21 +36,21 @@ Jenkins configuration
 
 Add Splunk On-Call Delivery Insights to the job of your choice by selecting :guilabel:`Configure`.
 
-.. image:: _images/spoc/alert-core__Jenkins_.jpg
+.. image:: /_images/spoc/alert-core__Jenkins_.jpg
    :alt: Configure menu in Jenkins
 
 Under :guilabel:`Job Notifications`, select :guilabel:`Add Endpoint`.
 
-.. image:: _images/spoc/benchmark-pull-requests_Config__Jenkins_.jpg
+.. image:: /_images/spoc/benchmark-pull-requests_Config__Jenkins_.jpg
    :alt: Add endpoint button location
 
 Paste your Jenkins endpoint in the URL field, then select :guilabel:`Add Endpoint`. Make sure to save your configurations and you are done.
 
-.. image:: _images/spoc/benchmark-pull-requests_Config__Jenkins_-1.jpg
+.. image:: /_images/spoc/benchmark-pull-requests_Config__Jenkins_-1.jpg
    :alt: Configuration screen in Jenkins
 
 Your Jenkins build information appears from the timeline with quick links to bring you to the event.
 
-.. image:: _images/spoc/Timeline_-_Splunk On-Call_Events-2.jpg
+.. image:: /_images/spoc/Timeline_-_Splunk On-Call_Events-2.jpg
    :alt: Jenkins information in the timeline
 

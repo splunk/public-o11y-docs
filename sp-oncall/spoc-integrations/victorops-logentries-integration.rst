@@ -60,4 +60,4 @@ VictorOps timeline with the associated severity level.
 
    log5
 
-.. |image image:: images/Integration-ALL-FINAL.png
+.. |image image:: /_images/Integration-ALL-FINAL.png

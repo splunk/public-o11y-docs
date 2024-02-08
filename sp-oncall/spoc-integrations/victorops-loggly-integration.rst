@@ -42,10 +42,10 @@ Configuration Steps
 Now whenever the search criteria is matched an incident will be posted
 in your VictorOps timeline alerting the correct people.
 
-.. |image image:: images/Loggly-final.png
-.. |image2| image:: images/Loggly2-final.png
-.. |image3| image:: images/Loggly3-skitch.png
-.. |loggly2| image:: images/loggly2.png
-.. |loggly3| image:: images/loggly3.png
-.. |loggly4| image:: images/loggly4.png
-.. |loggly5| image:: images/loggly5.png
+.. |image image:: /_images/Loggly-final.png
+.. |image2| image:: /_images/Loggly2-final.png
+.. |image3| image:: /_images/Loggly3-skitch.png
+.. |loggly2| image:: /_images/loggly2.png
+.. |loggly3| image:: /_images/loggly3.png
+.. |loggly4| image:: /_images/loggly4.png
+.. |loggly5| image:: /_images/loggly5.png
