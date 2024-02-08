@@ -20,7 +20,7 @@ To enable the AlertSite integration in Splunk OnCall to be able to trigger and r
 
 #. In Splunk OnCall, navigate to :guilabel:`Settings`, then :guilabel:`Alert Behavior`. Select :guilabel:`Integrations` and select AlertSite.
 
-    .. image:: /_images/spoc/Integration-alertsite.png
+    .. image:: /_images/spoc/integration-alertsite.png
       :width: 90%
       :alt: Under All integrations, select the AlertSite logo.
 
