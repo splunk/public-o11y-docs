@@ -27,7 +27,7 @@ The Team page is your central location for configuring teams, schedules, rotatio
 Set up
 ----------
 
-:ref:`Add Users <manage-users>`- The most important first step of setting up Splunk On-Call is adding users. To add new users:
+:ref:`Add Users <manage-users-spoc>`- The most important first step of setting up Splunk On-Call is adding users. To add new users:
 
 -  Leverage their email address in the portal (:guilabel:`Users`, then :guilabel:`Invite User`)
 -  Utilize our API (ID & Key required, can be found in :guilabel:`Integrations` then :guilabel:`API`) 
@@ -39,7 +39,7 @@ create a team, navigate to the :menuselection:`Teams` section from the top nav b
    -  We recommend standardizing your team names to clearly delineate across teams. You can choose team names based on service, internal team name, and so on. Use whatever makes sense to your organization, but aim for consistency.
 
 
-:ref:`Invite Users <manage-users>` and Declare Admins - Once you've built a few teams, the next step is to add people. You can add invited users. Then, establish a hierarchy of users based on user roles. For example, admins, users, and :ref:`Team Admins <team-admin-setup>`.
+:ref:`Invite Users <manage-users-spoc>` and Declare Admins - Once you've built a few teams, the next step is to add people. You can add invited users. Then, establish a hierarchy of users based on user roles. For example, admins, users, and :ref:`Team Admins <team-admin-setup>`.
 
 :ref:`Build Rotations <rotation-setup>`-  Rotations are your recurring on-call schedules—basically groups of on-call shifts. A shift is shared across a number of people.
 
@@ -60,7 +60,7 @@ create a team, navigate to the :menuselection:`Teams` section from the top nav b
 
 The final piece is to set up your custom integrations. Integrations will feed alerts into Splunk On-Call in order to create incidents which will then page out.
 
-- For a full list of integrations, see :ref:`<integrations-main>`.
+- For a full list of integrations, see :ref:`<integrations-main-spoc>`.
 - Can't find what you're looking for? Check out our :ref:`generic email <email-generic-spoc>` or `REST endpoints <spoc-rest-endpoint>`
 - We recommend setting up any chat integrations or non-alerting integrations before setting up your alerting integrations.
 

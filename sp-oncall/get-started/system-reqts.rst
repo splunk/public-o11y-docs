@@ -23,7 +23,7 @@ Please note: Custom browser extensions may interfere with web-client performance
 
 .. In the future, Splunk On-Call will support the Chromium version of Microsoft Edge, and eventually, discontinue support for IE11.
 
-For IP and Egress filtering, see :ref:`egress-filtering-cloudfare`.
+For IP and Egress filtering, see :ref:`<egress-filtering-cloudfare>`.
 
 Mobile Application
 ========================

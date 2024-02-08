@@ -44,7 +44,7 @@ Quickly identify responsible parties during a firefight by easily seeing which p
 Manual Incident Creation
 ----------------------------
 
-You can create a manual incident from the team dashboard by selecting :guilabel:`Create Incident` in the top right corner.  For instructions, see :ref:`manual-incident-creation`.
+You can create a manual incident from the team dashboard by selecting :guilabel:`Create Incident` in the top right corner.  For instructions, see :ref:`manual-incident`.
 
 Incident War Rooms
 ----------------------------

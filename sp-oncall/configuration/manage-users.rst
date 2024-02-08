@@ -15,7 +15,7 @@ the Team Admin role for team-specific add/remove permissions.
 **Adding Users**
 ----------------
 
-.. _manage-users:
+.. _manage-users-spoc:
 
 ************************************************************************
 Manage users in Splunk On-Call

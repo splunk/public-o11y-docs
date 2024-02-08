@@ -1,4 +1,4 @@
-.. _integrations-main:
+.. _integrations-main-spoc:
 
 Splunk On-Call integrations
 ******************************************

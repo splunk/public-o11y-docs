@@ -36,7 +36,7 @@ Recommendations to be a Successful Alert Admin
 
 *  Optimize Splunk On-Call configuration to achieve the desired workflow: Determine which alerts from your monitoring tools need to be sent into Splunk On-Call. Ensure admins for your monitoring tools are assigned alert admin permissions in Splunk On-Call in order to configure the integrations. Only send critical, actionable alerts into Splunk On-Call. Avoid unnecessary or noisy alerts – This will help reduce alert fatigue and make it easier to manage your incidents. 
 
-* Familiarize yourself with Splunk On-Call Reports: Splunk On-Call has four reports that can be utilized to evaluate your incident response, identify and correct weaknesses, and track on-call user metrics. For details on the available reports, see :ref:`<reports>`.
+* Familiarize yourself with Splunk On-Call Reports: Splunk On-Call has four reports that can be utilized to evaluate your incident response, identify and correct weaknesses, and track on-call user metrics. For details on the available reports, see :ref:`<reports-main>`.
 * Global Alert Configuration & Settings:  Configuring your global alert settings will improve your workflow and ensure no alert goes unresolved. 
     - Auto-Resolve & Pop-Out-Of-Ack
     - Incident Creation based on Entity State
