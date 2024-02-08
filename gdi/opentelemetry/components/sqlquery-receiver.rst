@@ -246,7 +246,7 @@ The ``datasource`` format for MySQL is ``user:password@tcp(host:port)/databasena
 
 Keep in mind the following:
 
-* A query that produces a ``NUL`` value logs a warning. 
+* A query that produces a ``NULL`` value logs a warning. 
 * A configuration that references the column that produces a ``NULL`` value logs an additional error. 
 
 In either case, the receiver continues to operate.
