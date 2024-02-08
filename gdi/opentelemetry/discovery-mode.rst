@@ -44,7 +44,7 @@ Discovery mode supports the following host services and applications:
      - Receiver
 
    * - MySQL
-     - MySQL receiver.
+     - MySQL receiver. See :ref:`mysql-receiver`.
 
    * - PostgreSQL
      - PostgreSQL receiver. See :ref:`postgresql-receiver`.
