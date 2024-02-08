@@ -103,7 +103,7 @@ You can see the created templates on the template list:
 Adding Splunk OnCall to Alert Recipients
 --------------------------------------------
 
-Next, you need to add the Splunk OnCall email endpoint that you generated in :ref:`alertsite-spoc:` as an alert recipient in AlertSite:
+Next, you need to add the Splunk OnCall email endpoint that you generated in :ref:`alertsite-spoc` as an alert recipient in AlertSite:
 
 #. In the AlertSite, navigate to :guilabel:`Alerts` then :guilabel:`Alert Recipient`.
 #. Select :guilabel:`+ New Recipient`.

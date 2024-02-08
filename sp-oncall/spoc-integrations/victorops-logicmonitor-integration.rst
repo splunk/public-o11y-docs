@@ -1,5 +1,9 @@
 .. _logicmonitor-legacy:
 
+*******************************************************************************
+LogicMonitor legacy integration for Splunk On-Call
+*******************************************************************************
+
 **This integration has been updated and all accounts setting up new
 LogicMonitor integrations should instead refer to** `this
 page <https://help.victorops.com/knowledge-base/victorops-logicmonitor2-integration/>`__\ *\ *\ **.

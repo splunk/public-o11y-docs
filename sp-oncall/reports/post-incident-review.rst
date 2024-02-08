@@ -50,6 +50,6 @@ Additionally, you may add notes to any alert, action, or post by selecting the n
 
 By selecting Alert Payload you may reveal the fields and values associated with a particular incident card.
 
-Annotations through the :ref:`Alert Rules Engine <ules-engine-annot>` will also surface in the Post-Incident Report.
+Annotations through the :ref:`Alert Rules Engine <rules-engine-annot>` will also surface in the Post-Incident Report.
 
 Once your Post-Incident review report is complete, select :guilabel:`Save` the top right corner. After the report is created it can be printed, turned into a PDF, or opened again for further editing.
