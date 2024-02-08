@@ -39,7 +39,7 @@ click *Settings>> Routing Keys*)
 **In Catchpoint**
 =================
 
-1) Navigate to *Settings* >> *API.* |catchpoint2|
+1) Navigate to *Settings* >> *API.* |catchpoint2
 
 2) Under Alert Webhook set the status to Active, Paste in your “API URL”
    that you got in Splunk On-Call.

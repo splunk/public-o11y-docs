@@ -145,7 +145,6 @@ sent.  Disable logins for this user and add the user to a contact group.
 .. image:: /_images/spoc/checkmk4.png
    :alt: checkmk4
 
-   checkmk4
 
 Enable notifications for the user and configure the notification method
 for “VictorOps” and “Call with the following parameters” as pictured

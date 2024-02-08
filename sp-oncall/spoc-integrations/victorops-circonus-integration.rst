@@ -59,12 +59,14 @@ corner and the *Contact Groups*.
 
  
 
-Create a new *Contact Group*.\ |circonus2|
+Create a new *Contact Group*.\ 
+.. image circonus2
 
  
 
 Give it a name, select *VictorOps* for the *Use Third Party* option,
-then hit *OK*.\ |circonus3|
+then hit *OK*.\ 
+.. circonus3
 
  
 
@@ -97,7 +99,8 @@ only creates incidents when needed.
 
 That's it! You can send a test message, just to make sure everything is
 configured appropriately, and an info message will be sent into the
-Splunk On-Call timeline.\ |circonus6|
+Splunk On-Call timeline.\ 
+.. circonus6
 
 --------------
 

@@ -39,11 +39,16 @@ In BMC Truesight Pulse
 First, add the Splunk On-Call “Action” to your BMC Truesight Pulse
 account. Click “Settings” on left toolbar to open the dialog and go to
 Actions tab. Click on the “Add Action” button and select “VictorOps” on
-the next screen and click “Add”.\ |bmc1| |bmc2|
+the next screen and click “Add”.\ 
+
+.. bmc1 image bmc2 image
 
 Give the “Action” a name, paste in your API key, select the severity
 level and add your Routing Key. Now hit save and you are done setting up
-the VictorOps “Action”. |bmc5| Now you can use the VictorOps action with
+the VictorOps “Action”. 
+
+.. |bmc5 
+Now you can use the VictorOps action with
 any of your BMC Truesight Pulse Alarms.
 
 `Boundary
