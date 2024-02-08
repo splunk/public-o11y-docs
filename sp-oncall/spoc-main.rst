@@ -66,7 +66,6 @@ Welcome to Splunk On-Call
    configuration/victorops-go-alert-library
    configuration/waiting-room
    deprecation-of-splunk-on-call-phone-notifications-to-china
-   get-started/TOPICTEMPLATE
    get-started/admin-permissions
    get-started/egress-filtering-cloudflare
    get-started/getting-started-spoc
