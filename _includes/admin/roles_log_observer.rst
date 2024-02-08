@@ -7,7 +7,7 @@
     - :strong:`Admin`
     - :strong:`Power user`
     - :strong:`Usage`
-    - :strong:`Read-only`
+    - :strong:`Read_only`
 
 
   * - :strong:`View Timeline`
