@@ -15,8 +15,7 @@ A rotation is a recurring schedule, that consists of one or more shifts, with me
 
 A rotation may be used as a step in a team's escalation policy.
 
-.. note:: Being scheduled for a rotation does not necessarily mean that you're on-call unless the rotation is part of the team's escalation
-policy. For details about escalation policies, see :ref:`team-escalation-policy`.
+.. note:: Being scheduled for a rotation does not necessarily mean that you're on-call unless the rotation is part of the team's escalation policy. For details about escalation policies, see :ref:`team-escalation-policy`.
 
 There are three different types of shifts available in a rotation: 
 * 24/7 
@@ -38,8 +37,7 @@ To create an on-call rotation:
     A few things to note about Partial Day Rotations:
        - Option for weekly or daily handoff
        - Daily Handoff has a maximum of 12 days
-       - If using daily handoff, 7 days will not rotate the same as 1 week. The system will hand off every 7 shifts not every 7 calendar
-      days. Days where there are no shifts scheduled, will be skipped. For example, if the shift is Monday-Fridau, the handoff will skip the weekend because there are no shifts on the weekend.
+       - If using daily handoff, 7 days will not rotate the same as 1 week. The system will hand off every 7 shifts not every 7 calendar days. Days where there are no shifts scheduled, will be skipped. For example, if the shift is Monday-Fridau, the handoff will skip the weekend because there are no shifts on the weekend.
 #. Select :guilabel:`Save Rotation` to save the shift.
 #. Once your rotation is saved, a week-long rotation preview will appear with an :guilabel:`Add Members` tab. Select :guilabel:`Select a member to add…` and a dropdown will reveal all members that can be added. Select one or more members to add to the shift. These members will be added in the order they were clicked.
       ..note:: Users can be added more than once in the shift order. To re-arrange the order of users, easily drag and drop the users to the desired order. To remove a user from the shift order, select the X next to the user's name.

@@ -27,7 +27,9 @@ Click on the *Settings* Menu in the bottom right corner of the
 application, click on the Notifications button, then   to find choose
 **Add Splunk On-Call to Your Contacts.**
 
-|image\ |image2|
+|image1|
+
+|image2|
 
 This will automatically create a new contact with all of the Splunk
 On-Call numbers already included.
@@ -63,9 +65,10 @@ Below are permissions settings we highly recommend for your iOS device:
 -  Navigate to *Notifications (Badges, Sounds, Banners)* and make sure
    that all settings are turned **ON**.
 
-|image3|\ |image4|
+|image3|
 
- 
+|image4|
+
 
 Do Not Disturb Mode
 ~~~~~~~~~~~~~~~~~~~
@@ -206,8 +209,8 @@ device itself)
 This process will redo the device association process and often clears
 up any issues with the app.
 
-.. |image1| _images/spoc/IMG_2632.jpg
-.. |image2 image:: /_images/spoc/IMG_2633.jpg
-.. |image3 image:: /_images/spoc/Image-from-iOS-23.png
-.. |image4 image:: /_images/spoc/Image-from-iOS-24.png
-.. |image5 image:: /_images/spoc/Favorites.png
+.. |image1| image:: /_images/spoc/IMG_2632.jpg
+.. |image2| image:: /_images/spoc/IMG_2633.jpg
+.. |image3| image:: /_images/spoc/Image-from-iOS-23.png
+.. |image4| image:: /_images/spoc/Image-from-iOS-24.png
+.. |image5| image:: /_images/spoc/Favorites.png

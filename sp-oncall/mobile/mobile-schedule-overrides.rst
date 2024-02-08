@@ -17,8 +17,7 @@ viewing your schedule at a glance, create an override for yourself, take
 a teammates override or take a teammates on-call while they are in need
 of some coverage.
 
-|image
-~~~~~~~~
+|image1|
 
 Your Schedule
 ~~~~~~~~~~~~~
@@ -43,7 +42,9 @@ will find any active scheduled overrides for your team. By selecting
 “View All” you can view your teammates overrides, create a new override
 for yourself, or take an unassigned override.
 
-|image2|\ |image3|
+|image2|
+
+|image3|
 
  
 
@@ -65,13 +66,13 @@ locations in the app!
    3) From your “Team Overrides” window click “**+**” in the upper right
       corner
 
-/_images/spoc/Scheduled-override-form.png
+.. image:: /_images/spoc/Scheduled-override-form.png
 
  
 
  
 
-/_images/spoc/Take-Override.png
+.. image:: /_images/spoc/Take-Override.png
 
  
 
@@ -97,10 +98,10 @@ View other teammates on-call shifts by clicking “View All”. From here
 you can take your teammates on-call by clicking “Take Shift” and clear
 it by clicking “Clear Take” or “Take Back”.
 
-/_images/spoc/On-Call-Takes.png
+.. image:: /_images/spoc/On-Call-Takes.png
 
-/_images/spoc/Take-On-Calls.png
+.. image:: /_images/spoc/Take-On-Calls.png
 
-.. |image1| _images/spoc/Calendar.png
-.. |image2| _images/spoc/Overrides_Preview.png
-.. |image3| _images/spoc/Override-User-View.png
+.. |image1| image:: /_images/spoc/Calendar.png
+.. |image2| image:: /_images/spoc/Overrides_Preview.png
+.. |image3| image:: /_images/spoc/Override-User-View.png

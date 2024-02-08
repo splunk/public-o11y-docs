@@ -1,4 +1,4 @@
-.. _single-sign-sso:
+.. _single-sign-sso-google:
 
 ************************************************************************
 Configure Single Sign-On for Splunk On-Call
@@ -7,9 +7,6 @@ Configure Single Sign-On for Splunk On-Call
 .. meta::
    :description: Enable Splunk On-Call SSO for your organization. 
 
-
-
-
 Requirements
 ==================
 
@@ -17,8 +14,7 @@ This integration is compatible with the following versions of Splunk On-Call:
 
 - Full-Stack
 
-To enable single sign-on (SSO) for your organization, you will need to provide an updated metadata file and your IDP. If you are
-interested in setting up SSO, please contact :ref:`Splunk On-Call Support <spoc-support>`.
+To enable single sign-on (SSO) for your organization, you will need to provide an updated metadata file and your IDP. If you are interested in setting up SSO, please contact :ref:`Splunk On-Call Support <spoc-support>`.
 
 
 
@@ -38,7 +34,7 @@ Instructions to complete the SSO configuration with Splunk On-Call and your IDP 
 - 
 
 
-.. _sso-google-spoc::
+.. _sso-google-spoc:
 
 Google Apps
 ================

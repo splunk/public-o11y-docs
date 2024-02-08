@@ -91,6 +91,7 @@ Sample Scala code for reference
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: java
+
    import javax.crypto.Mac 
    import javax.crypto.spec.SecretKeySpec import javax.xml.bind.DatatypeConverter 
    def generateSignature(key: String, url:String, postData: Map[String, String]) = { 
@@ -98,4 +99,4 @@ Sample Scala code for reference
       val mac = Mac.getInstance(“HmacSHA1”)
       mac.init(new SecretKeySpec(key.getBytes, “HmacSHA1”))
       DatatypeConverter.printBase64Binary(mac.doFinal(contents.getBytes(“utf-8”)))
-}
+   }

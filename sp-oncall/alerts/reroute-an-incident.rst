@@ -5,8 +5,7 @@ Re-route incidents
 ************************************************************************
 
 .. meta::
-   :description: Splunk On-Call offers the ability to route an existing incident to
-individual users, teams of users or escalation policies.
+   :description: Splunk On-Call offers the ability to route an existing incident to individual users, teams of users or escalation policies.
 
 
 Sometimes, users who are paged for an issue may need to reroute the incident, either to another team, or to a specific individual. Splunk On-Call offers the ability to route an existing incident to

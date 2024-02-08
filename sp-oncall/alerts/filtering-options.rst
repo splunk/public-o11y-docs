@@ -13,15 +13,13 @@ Filtering is a useful tool to isolate only the messages, notifications and incid
 Timeline Filtering:
 ========================
 
-To filter  your timeline: 
+To filter your timeline: 
 
 #. In the main Timeline select the filters icon.
 
-* Here you will see two tabs with the the options to filter by Routing Keys and Message Types. The Routing Keys filter allows you to filter
-the timeline to see only Incidents that are associated to your Routing Key teams.
+* Here you will see two tabs with the the options to filter by Routing Keys and Message Types. The Routing Keys filter allows you to filter the timeline to see only Incidents that are associated to your Routing Key teams.
 
-* The Message Types filter allows you to filter the timeline by message type, so that you can selectively view Alerts, Chats, System Actions,
-and Delivery Insights. Here you can uncheck the messages you would like to exclude from your timeline.
+* The Message Types filter allows you to filter the timeline by message type, so that you can selectively view Alerts, Chats, System Actions, and Delivery Insights. Here you can uncheck the messages you would like to exclude from your timeline.
 
 Incident Filtering:
 -------------------
@@ -47,7 +45,6 @@ People Pane allows you to filter by Teams or by Users along with a custom search
 Main Page Filtering:
 --------------------
 
-* Within the Timeline, you have 3 panes; People, Timeline, and Incidents. You can filter these panes under the :guilabel: `Customize View` button on the
-top right of the page. 
+* Within the Timeline, you have 3 panes; People, Timeline, and Incidents. You can filter these panes under the :guilabel: `Customize View` button on the top right of the page. 
 * When you click on People, Timeline, or Incidents, it will hide that pane. 
 * When Hiding the Timeline and People Panes, the Incident Pane is reactive, and it moves from a Card View to a Table View. From here you can sort by incident number, description, and date. This gives you an organized high-level view of the incidents in your organization.

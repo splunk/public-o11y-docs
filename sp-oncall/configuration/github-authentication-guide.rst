@@ -1,4 +1,4 @@
-.. _user-role:
+.. _github-auth-spoc:
 
 ************************************************************************
 Log in with GitHub authentication
@@ -20,8 +20,8 @@ Existing Splunk On-Call Users
 If you already have a Splunk On-Call user name:
 
 #. From the :guilabel:`Sign in` page, select :guilabel:`Sign in with GitHub`. You'll  be redirected to GitHub and prompted for your login credentials. If you're currently logged in to GitHub in your browser, skip to step 3.
-#. Enter your GitHub login credentials and select :ref:`Sign in`. If you have two-factor authentication enabled through GitHub, verify your account by entering the verification code.
-#. Select :guilabel:`Authorize VictorOps`to sign in using GitHub  authentication.
+#. Enter your GitHub login credentials and select :guilabel:`Sign in`. If you have two-factor authentication enabled through GitHub, verify your account by entering the verification code.
+#. Select :guilabel:`Authorize VictorOps` to log in using GitHub authentication.
 
     .. image:: /_images/spoc/github-auth.png
        :width: 100%

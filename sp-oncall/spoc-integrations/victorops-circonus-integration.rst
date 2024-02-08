@@ -23,7 +23,7 @@ In Splunk On-Call, select *Settings >> Integrations >> Circonus*\ **.**
 
 --------------
 
-..image:: /_images/spoc/Screenshot-2017-05-25-11.28.08.png
+.. image:: /_images/spoc/Screenshot-2017-05-25-11.28.08.png
 
 If the integration has not yet been enabled, click the *Enable
 Integration* button to generate your endpoint URL as seen below.  Be
@@ -101,8 +101,6 @@ Splunk On-Call timeline.\ |circonus6|
 **Sending Acknowledgements to Circonus**
 ----------------------------------------
 
---------------
-
 To send acknowledgements back to Circonus we will use Splunk On-Call's
 `Custom Outbound
 Webhooks <https://help.victorops.com/knowledge-base/custom-outbound-webhooks/>`__.
@@ -116,7 +114,7 @@ Next fill in the fields as shown. Make sure to paste in the Webhook URL
 from your Splunk On-Call Contact Group from Circonus into
 the *To:* field.
 
-..image:: /_images/spoc/circonus3-1.png
+.. image:: /_images/spoc/circonus3-1.png
 
 Paste in the following into the Payload field:
 
@@ -141,7 +139,7 @@ account whose metric is alerting. To link the Splunk On-Call user to the
 Circonus user, go to the User Profile page at Circonus and type in the
 Splunk On-Call username:
 
-..image:: /_images/spoc/circonus4-1.png
+.. image:: /_images/spoc/circonus4-1.png
 
 .. |circonus2| image:: /_images/spoc/circonus2.png
 .. |circonus3| image:: /_images/spoc/circonus3.png

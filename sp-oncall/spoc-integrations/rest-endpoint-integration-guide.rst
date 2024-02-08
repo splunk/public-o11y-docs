@@ -150,16 +150,8 @@ By adding an annotation field to the alert payload you can include annotations i
 
 When an incident is in an acknowledged state and a new alert with the same ``entity_id`` comes into the Splunk On-Call Timeline, the alert is aggregated under the open incident. See :ref:`spoc-alert-aggregation`. Any new annotations carried in the most recent alert are added to the annotation tab of the incident. The annotations are also reflected within each alert payload.
 
-The following image shows the location of annotations in the incident:
-
-.. image:: /_images/spoc/Annotations-REST.jpg
-   :alt: Annotations in incident
-
 Annotation payloads
 ---------------------------
-
-.. image:: /_images/spoc/Annotation-Payload 2.jpg
-   :alt: Annotation payload
 
 There are 3 types of annotations accepted by Splunk On-Call through the following syntax. You can customize the title of your annotation at the end of your annotation syntax. For example, in the previous screenshot the title of the URL annotation appears in Splunk On-Call as ``Runbook``.
 

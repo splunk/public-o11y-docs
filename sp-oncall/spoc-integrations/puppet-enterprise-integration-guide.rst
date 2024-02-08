@@ -52,7 +52,7 @@ From the VictorOps web portal, select **Settings**, then **Alert
 Behavior**, then **Integrations**. Find and select the **Puppet
 Enterprise** integration option.
 
-.. image:: _images/spoc/voNav@2x.png
+.. image:: /_images/spoc/voNav@2x.png
    :alt: Find Puppet Enterprise integration in VictorOps
 
    Find Puppet Enterprise integration in VictorOps
@@ -67,7 +67,7 @@ Capture the API Key from the URL String:
 Navigate to **Puppet Enterprise Add-on in Splunk Enterprise** >>
 **Configuration** >> **Add-on Setting**  >> Input VictorOps Token
 
-|input victorops token in puppet enterprise configuration|\ **Creating a VictorOps Incident**
+**Creating a VictorOps Incident**
 ---------------------------------------------------------------------------------------------
 
 Within Splunk Enterprise goto the Alerts Tab and setup the search and
@@ -82,9 +82,4 @@ Variables which can be used in your notification can be found
 `HERE <http://docs.splunk.com/Documentation/Splunk/7.1.3/AdvancedDev/ModAlertsLog>`__.
 
 .. image:: /_images/spoc/splPupAlert@2x-2.png
-   :alt: create an incident victorops puppet enterprise variable
-   configuration
-
-   create an incident victorops puppet enterprise variable configuration
-
-.. |input victorops token in puppet enterprise configuration| image/_images/spoc/splPupConfig@2x.png
+   :alt: create an incident victorops puppet enterprise variable configuration

@@ -2,7 +2,7 @@
 .. _incident-fields-glossary:
 
 
-*******************************************
+********************************************
 Incident fields Glossary
 ********************************************
 .. meta::
@@ -58,8 +58,7 @@ Possible values:
 - ACKNOWLEDGEMENT: Moves the incident from a triggered to acknowledged state and stops the escalation and paging.
 - RECOVERY or OK: Resolves the incident and also stops escalation and paging if still active.
 
-.. note:: If an alert is received with a different value in the ``message_type`` field than these recognized ones, it will be accepted as
-an INFO severity alert.
+.. note:: If an alert is received with a different value in the ``message_type`` field than these recognized ones, it will be accepted as an INFO severity alert.
 
 ``entity_id``
 ^^^^^^^^^^^^^^^^^^^^^
@@ -175,7 +174,8 @@ The standard character limit for most payload fields is 1024. Notable exceptions
 
   * - :strong:`message_type`
     - WARNING	
-    - May open a new incident depending on configuration (Settings>>Integrations)	Behavior controlled by options chosen in :guilabel:`Settings`, then :guilabel:`Integration` and :guilabel:`Create incidents for entities in [ ] state`.
+    - May open a new incident depending on configuration (Settings>>Integrations)
+    - Behavior controlled by options chosen in :guilabel:`Settings`, then :guilabel:`Integration` and :guilabel:`Create incidents for entities in [ ] state`.
   
   * - :strong:`message_type`
     - ACKNOWLEDGEMENT	
@@ -191,7 +191,6 @@ The standard character limit for most payload fields is 1024. Notable exceptions
     - RECOVERY or OK	
     - Resolves incident and stops escalation and paging.	
     - Change field to this value to resolve an incident. This is useful with legacy email integrations.
-
 
   * - :strong:`monitor_name`
     - Any	
@@ -230,7 +229,7 @@ The standard character limit for most payload fields is 1024. Notable exceptions
     - Large field used for passing verbose information about the incident.
        - This field is consistently displayed in email notifications (full) and sometimes SMS, Push, or Phone call notifications (following the ``entity_display_name`` as space and character limits allow).	
        - Pull values from other fields to add more useful information to the message users receive when they are notified of a new incident.
-  
+    - 
 
   * - :strong:`state_start_time`
     - Date or Time	

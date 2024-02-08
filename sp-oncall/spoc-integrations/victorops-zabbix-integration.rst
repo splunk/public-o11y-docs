@@ -58,7 +58,7 @@ Zabbix User 5.0
 Create a new user and assign it to any desired group. Then associate the user, in this case, “Splunk On-Call Alert” with the media type. Fill in the :guilabel:`Send to` section in the Media tab with an appropriate Splunk On-Call Routing
 Key. You can also specify which severity of alerts is sent to Splunk On-Call here. The user needs read-write permissions so assign whatever permission level necessary.
 
-.. image:: i_mages/spoc/Zabbix_5_0_4.png
+.. image:: /_images/spoc/Zabbix_5_0_4.png
    :alt: Media tab
 
 Zabbix Action 5.0

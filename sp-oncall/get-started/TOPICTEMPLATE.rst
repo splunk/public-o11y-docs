@@ -1,11 +1,11 @@
-.. _user-role:
+.. _topic-template-spoc:
 
 ************************************************************************
 Get started as user
 ************************************************************************
 
 .. meta::
-   :description: About the user roll in Splunk On-Call.
+   :description: About the user resolved in Splunk On-Call.
 
 
 As a user, you are responsible for taking action on incidents that page you while you are on call. You have access to view and edit your own user information, view your on-call schedule, and the ability to take action on alerts. For permissions and capabilities for all roles, see :ref:`user-roles-permissions`.
@@ -30,7 +30,7 @@ If you are facing any issues when trying to contact us, see XXXXXX Contacting Sp
 
 .. note:: To create or manage users, you must have administrator access. To get this access, an existing administrative adds it to your user profile. See :ref:`request-admin` for more information.
 
-.. _image/spoc:: /_images/spoc/sso-troubleshoot1.png
+.. image:: /_images/spoc/sso.png
     :width: 100%
     :alt: A 404 error message stating "Could not find credentials".
 
@@ -50,6 +50,10 @@ If you are facing any issues when trying to contact us, see XXXXXX Contacting Sp
      - Yes
      - 
      - 
+     - 
+     - 
+
+
 Set up your account
 ================================
 

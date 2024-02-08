@@ -41,11 +41,13 @@ Enable the New Relic Integration in Splunk On-Call
 From the main timeline select *Integrations >> 3rd Party Integrations >>
 New Relic.*
 
-|image\ If the integration hasn't yet been enabled, click on
+|image1|
+
+If the integration hasn't yet been enabled, click on
 the *Enable Integration* button to generate your API Keys.  Copy the top
 full URL to your clipboard for use later in New Relic.
 
-..image:: /_images/spoc/New-Relic-2-1-scaled.jpg
+.. image:: /_images/spoc/New-Relic-2-1-scaled.jpg
 
 --------------
 
@@ -55,16 +57,16 @@ Link Splunk On-Call with New Relic
 Bring up the New Relic *Alerts & AI* interface and click into
 the *Workflows* section.  Add a new workflow.
 
-..image:: /_images/spoc/New-Relic-1-scaled.jpg
+.. image:: /_images/spoc/New-Relic-1-scaled.jpg
 
 Provide a name for the workflow, define your filtering and muting
 sections, then choose *Webhook* under *Notify*.
 
-..image:: /_images/spoc/New-Relic-2.jpg
+.. image:: /_images/spoc/New-Relic-2.jpg
 
 Choose *Select Destination*, then *Create new destination*
 
-..image:: /_images/spoc/New-Relic-3-scaled.jpg
+.. image:: /_images/spoc/New-Relic-3-scaled.jpg
 
 Paste in the New Relic endpoint address you copied earlier into the
 *Endpoint URL* section.  Be sure to replace the trailing $routing_key
@@ -72,7 +74,7 @@ with the actual routing key you intend to use for the alert.  For more
 info on routing keys, please see `this
 article <https://help.victorops.com/knowledge-base/routing-keys/>`__.
 
-..image:: /_images/spoc/New-Relic-3-1.jpg
+.. image:: /_images/spoc/New-Relic-3-1.jpg
 
 After saving the destination, update the payload provided for the
 webhook.  Below is our recommended payload, though you're welcome to
@@ -103,12 +105,8 @@ workflows that notify different Webhook Channels, each holding different
 routing keys.  This will allow you to route alerts to the appropriate
 groups in Splunk On-Call.
 
---------------
-
 Legacy Version of New Relic
 ---------------------------
-
---------------
 
 .. raw:: html
 
@@ -133,10 +131,10 @@ Legacy Version of New Relic
       ``https://alert.victorops.com/integrations/newrelic/20140115/alert/--key--/--routing--``
    -  Select *Integrate with WebHooks* |newrelic13|
 
-.. |image1| _images/spoc/New-Relic-1-1-scaled.jpg
-.. |image2| _images/spoc/Cursor_and_Applied_Intelligence___Edit_channel___Alerts___AI___Workflow_Builder___Alerts___AI___Workflows___New_Relic_One.jpg
-.. |newrelic9| _images/spoc/newrelic9.png
-.. |newrelic10| _images/spoc/newrelic10.png
-.. |newrelic11| _images/spoc/newrelic11.png
-.. |newrelic12| _images/spoc/newrelic12.png
-.. |newrelic13| _images/spoc/newrelic13.png
+.. |image1| image:: /_images/spoc/New-Relic-1-1-scaled.jpg
+.. |image2| image:: /_images/spoc/Cursor_and_Applied_Intelligence___Edit_channel___Alerts___AI___Workflow_Builder___Alerts___AI___Workflows___New_Relic_One.jpg
+.. |newrelic9| image:: /_images/spoc/newrelic9.png
+.. |newrelic10| image:: /_images/spoc/newrelic10.png
+.. |newrelic11| image:: /_images/spoc/newrelic11.png
+.. |newrelic12| image:: /_images/spoc/newrelic12.png
+.. |newrelic13| image:: /_images/spoc/newrelic13.png

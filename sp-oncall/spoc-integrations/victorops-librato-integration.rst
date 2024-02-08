@@ -14,12 +14,12 @@ integration.
 From the main timeline select *Settings >> Alert Behavior* >>
 Integrations >> *AppOptics*.
 
-..image:: /_images/spoc/Integrations-votest-vo2_kb-3.jpg
+.. image:: /_images/spoc/Integrations-votest-vo2_kb-3.jpg
 
 If the integration has not yet been enabled, click the *Enable
 Integration* button to generate your Service API Key, as seen here:
 
-..image:: /_images/spoc/Librato.png
+.. image:: /_images/spoc/Librato.png
 
 Copy the *Service API Key* to your clipboard and determine which
 VictorOps routing-key value will be used for this integration.  For more

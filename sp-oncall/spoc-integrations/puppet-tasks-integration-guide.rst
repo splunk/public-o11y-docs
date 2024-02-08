@@ -46,20 +46,15 @@ Behavior**, >> **Integrations**. Find and select **Puppet Tasks**.
 .. image:: /_images/spoc/voNav@2x.png
    :alt: enable puppet tasks integration in victorops
 
-   enable puppet tasks integration in victorops
-
 **Capture the API Key from the URL String:**
 
 .. image:: /_images/spoc/voPuppet@2x.png
    :alt: capture puppet tasks api key
 
-   capture puppet tasks api key
-
 **Configure Puppet Tasks in Splunk Enterprise**
 -----------------------------------------------
 
-Navigate to **Puppet Tasks for Actionable Alerts in Splunk Enterprise**
->> **Configuration** >> **Add-on Setting**  >> Input VictorOps Token
+Navigate to **Puppet Tasks for Actionable Alerts in Splunk Enterprise**, **Configuration**, **Add-on Setting**, Input VictorOps Token
 
 .. image:: /_images/spoc/splPupNav@2x.png
    :alt: Configure puppet tasks in splunk enterprise
@@ -76,15 +71,11 @@ pass to VictorOps. Configure the action using the following values:
 -  Severity: CRITICAL
 -  Host: :math:`certname`
 
-.. image:: /_images/spoc/splPupAlert@2x.png
-   :alt: Trigger alert in VictorOps via puppet tasks
-
-   Trigger alert in VictorOps via puppet tasks
+   .. image:: /_images/spoc/splPupAlert@2x.png
+      :alt: Trigger alert in VictorOps via puppet tasks
 
 Upon triggering this alert, you should see a corresponding alert in your
 VictorOps timeline.
 
 .. image:: /_images/spoc/voAlert@2x.png
    :alt: puppet tasks alert in victorops
-
-   puppet tasks alert in victorops

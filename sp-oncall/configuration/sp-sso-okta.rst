@@ -1,4 +1,4 @@
-.. _sso-okta:
+.. _sso-okta-spoc:
 
 ************************************************************************
 Configure Single Sign-On for Okta and Splunk On-Call
@@ -26,11 +26,11 @@ Administrator Setup
 
 Instructions to complete the SSO configuration with Splunk On-Call and your IDP are provided for:
 
-- :ref:`sso-okta-spoc`
+- :ref:`sso-okta-spoc-setup`
 - :ref:`sso-google-spoc`
 - 
 
-.. _sso-okta-spoc::
+.. _sso-okta-spoc-setup:
 
 Okta
 ==========

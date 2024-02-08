@@ -33,11 +33,9 @@ Setting up your account
 #. Set up your Personal Paging Policies: Your paging policy determines how Splunk On-Call notifies you of an incident.
    Include multiple steps and multiple notification types** in your policy that increase in noise such as push to SMS to a phone call.
    
-    ..note:: the last step of your paging policy will repeat until the incident is acknowledged. Quick video on** `Personal Paging
-   Policies <https://share.vidyard.com/watch/gpRuaMFxCK8wZyB9oFRXBA?>`
+   .. note:: the last step of your paging policy will repeat until the incident is acknowledged. Quick video on** `Personal Paging Policies <https://share.vidyard.com/watch/gpRuaMFxCK8wZyB9oFRXBA?>`
 
-    Best Practice tips: 
-       - Your Primary Paging Policy should be the loudest and most attention-grabbing notification method. While your custom paging policy can be less aggressive for a configured period time that may not require such aggressive paging, for example, during business hours.- - Include a phone call in the last step of your paging policy so that you are alerted in the noisiest way until you acknowledge the incident.
+   Your Primary Paging Policy should be the loudest and most attention-grabbing notification method. While your custom paging policy can be less aggressive for a configured period time that may not require such aggressive paging, for example, during business hours.- - Include a phone call in the last step of your paging policy so that you are alerted in the noisiest way until you acknowledge the incident.
 
 #. Download Mobile App & Add Splunk On-Call to your contacts: Splunk On-Call can be easily added to your phone contacts from the mobile app Just navigate to the :menuselection:`Notifications` menu and select :guilabel:`Add Splunk On-Call to Contacts`. If you need Splunk On-Call notifications to override :guilabel:`Do Not Disturb` settings see our mobile application articles for directions.
 #. View Your Schedule: Login to the mobile app and select the calendar icon at the bottom of the screen to see when you are on-call. Navigate to :guilabel:`Teams`, then :guilabel:`Your Team`, and :guilabel:`On-Call Schedule`. Quick video on `viewing an On-call

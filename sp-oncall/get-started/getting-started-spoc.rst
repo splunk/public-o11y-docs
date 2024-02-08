@@ -1,4 +1,4 @@
-.. _about-spoc
+.. _about-spoc:
 
 ************************************************************************
 What is Splunk On-Call?
@@ -59,7 +59,7 @@ XXXXXX`Configure Routing Keys <https://help.victorops.com/knowledge-base/routing
    -  Matching team name: CloudOps (team) = cloudops (routing key)
    -  Matching monitoring tool: Splunk (tool) = splunk (routing key)
 
-XXXXXX `Integrations <https://victorops.com/integrations/>`XXXXXX - The final piece is to set up your custom integrations. Integrations will feed alerts into Splunk On-Call in order to create incidents which will then page out.
+The final piece is to set up your custom integrations. Integrations will feed alerts into Splunk On-Call in order to create incidents which will then page out.
 
 - For a full list of integrations, see XXXXXX` <https://help.victorops.com/article-categories/integrations/>`XXXXXX
 - Can't find what you're looking for? Check out our XXXXXX`generic email <https://help.victorops.com/knowledge-base/victorops-generic-email-endpoint/>`XXXXXX or XXXXXX`REST endpoints <https://help.victorops.com/knowledge-base/victorops-restendpoint-integration/>`XXXXXX
@@ -132,9 +132,7 @@ How to find the right incident information:
 
 - Details/Payload - contains preconfigured alert data from your monitoring tools related to the incident.
 - Incident Specific Timeline* - captures all Splunk On-Call events related to the incident.
-- `Annotations <https://help.victorops.com/knowledge-base/transmogrifier-annotations/>`- additional context added by the `Rules
-   Engine <https://help.victorops.com/knowledge-base/transmogrifier/>` rules you've setup. Can annotate links, notes, and images to be
-   delivered in hand with the alert payload.
+- `Annotations <https://help.victorops.com/knowledge-base/transmogrifier-annotations/>`- additional context added by the `Rules Engine <https://help.victorops.com/knowledge-base/transmogrifier/>` rules you've setup. Can annotate links, notes, and images to be delivered in hand with the alert payload.
 
 On-call Awareness
 -------------------------

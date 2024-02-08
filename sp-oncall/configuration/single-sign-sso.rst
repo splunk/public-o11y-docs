@@ -43,7 +43,7 @@ Instructions to complete the SSO configuration with Splunk On-Call and your IDP 
 
 
 
-.. _sso-onelogin-spoc::
+.. _sso-onelogin-spoc:
 
 
 OneLogin
@@ -54,7 +54,7 @@ If you are configuring SSO for OneLogin, the Default relay state is:
    https://portal.victorops.com/auth/sso/<<org-slug-here>>
 
 
-.. _sso-azure-spoc::
+.. _sso-azure-spoc:
 
 
 Azure Active Directory (SAML-based Sign-on)
@@ -68,7 +68,7 @@ If you are configuring SSO for Azure Active Directory, use the following values:
 -  Relay State: https://portal.victorops.com/auth/sso/<<org-slug-here>>
 
 
-.. _sso-aws-spoc::
+.. _sso-aws-spoc:
 
 AWS IAM Identity Center - SAML
 -------------------------------------------------------

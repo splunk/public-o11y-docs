@@ -72,7 +72,7 @@ Stop Flag
 
 At the bottom of any rule setup window, there is an option to stop processing after the rule has been applied.
 
-.. image:: /_images/spoc/rules-manage4.png
+.. image:: /_images/spoc/stop-flag.png
     :width: 100%
     :alt: Stop processing after the rule has been applied.
     

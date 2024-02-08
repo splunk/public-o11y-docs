@@ -46,11 +46,14 @@ Splunk On-Call aggregates alerts based on the entity_id field value within the i
 
 In the following image, in the Timeline, you will see incident #642 and four subsequent alerts tethered to it. If an Incident is in an Ack'd or Critical state while multiple alerts with the same entity_id continue to arrive in the Timeline, then the alerts will roll up under the incident and only page out based on the original  alert.
 
-.. image:: /_images/spoc/nofif-alert-agg1.png
+.. image:: /_images/spoc/notif-alert-agg1.png
     :width: 100%
     :alt: Incident 642 has four subsequent alerts tied to it.
 
 
 This alert aggregation works with Critical, Warning, and Ack'd message types as long the entity_id is shared between events. For more information regarding fields like entity_id and message_type, see :ref:`incident-fields-glossary.`
 
-.. _note:: Alerts aggregating under a Warning message_type will aggregate normally unless the message_type value of the alert changes status from Warning to Critical. If this value changes in status from its source then any Ack'd incident will "Pop off of Ack" and return to a triggered state to start paging an on-call user.
+.. note:: 
+   
+   Alerts aggregating under a Warning message_type aggregates normally unless the message_type value of the alert changes status from Warning to Critical. If this value changes in status from its source then any Ack'd incident pops off of Ack and return to a triggered state to start paging an on-call user.
+

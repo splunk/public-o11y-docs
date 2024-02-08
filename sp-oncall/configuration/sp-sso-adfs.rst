@@ -1,6 +1,6 @@
 .. _sso-adfs-spoc:
 
-***************************************************************************************
+*****************************************************************************************
 Configure Active Directory Federation Services Single Sign-On for Splunk On-Call
 *****************************************************************************************
 
@@ -36,10 +36,10 @@ Instructions to complete the SSO configuration with Splunk On-Call and your IDP 
 - :ref:`sso-okta-spoc`
 - :ref:`sso-google-spoc`
 - :ref:`sso-onelogin-spoc`
-- :ref:`sso-adfs-spoc`
+- :ref:`sso-adfs-ac-spoc`
 
 
-.. _sso-adfs-spoc::
+.. _sso-adfs-ac-spoc:
 
 
 Active Directory Federation Services (ADFS)

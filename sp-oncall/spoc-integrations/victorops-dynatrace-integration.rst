@@ -11,7 +11,7 @@ Dynatrace notifications with VictorOps.
 ----------------
 
 In VictorOps, select *Settings >> Alert Behavior >> Integrations >>
-Dynatrace*\ **.** |image
+Dynatrace*\ **.** |image1|
 
 If the integration has not yet been enabled, click the “Enable
 Integration” button to generate your endpoint URL as seen below.  Be
@@ -19,7 +19,7 @@ sure to replace the “$routing_key” section with the actual routing key
 you intend to use. (To view or configure route keys in VictorOps,
 click *Alert Behavior >> Route Keys*)
 
-..image:: /_images/spoc/Integrations-VictorOps_Demo_20.png
+.. image:: /_images/spoc/Integrations-VictorOps_Demo_20.png
 
  
 
@@ -57,4 +57,4 @@ routing key from VictorOps, then click *Save.*
 
    dyna5
 
-.. |image1| _images/spoc/settings-alert-behavior-integrations-e1480978368974.png
+.. |image1| image:: /_images/spoc/settings-alert-behavior-integrations-e1480978368974.png

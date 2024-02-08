@@ -25,7 +25,7 @@ Click on **Integrations** *>>* **DNSCheck** 
 
 Within the DNSCheck integration page, click “Enable Integration”.
 
-..image:: /_images/spoc/Integration-DNS-Enable-final.png
+.. image:: /_images/spoc/Integration-DNS-Enable-final.png
 
 This will generate the API Key you will need to provide in DNS Check.  
 

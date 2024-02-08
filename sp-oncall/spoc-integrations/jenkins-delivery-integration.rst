@@ -50,7 +50,3 @@ Paste your Jenkins endpoint in the URL field, then select :guilabel:`Add Endpoin
    :alt: Configuration screen in Jenkins
 
 Your Jenkins build information appears from the timeline with quick links to bring you to the event.
-
-.. image:: /_images/spoc/Timeline-Splunk On-Call_Events-2.jpg
-   :alt: Jenkins information in the timeline
-

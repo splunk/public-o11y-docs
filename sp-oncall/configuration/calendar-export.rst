@@ -58,8 +58,7 @@ Events imported from an .ics to an existing calendar become part of that calenda
 Google Calendar
 ---------------------
 
-.. note:: Important note about Splunk On-Call calendars and Google: When changes are made to your schedules and escalation policies in Splunk On-Call, those changes are immediately written to the .ics calendar file in our system, and are thus are immediately available to calendar tools. However, this process is a *pull* only operation, whereby Google Calendar must actively reach out to Splunk On-Call to retrieve the most recent version of the calendar at the provided URL. Google calendar tends to perform this action infrequently, and at seemingly random
-intervals. The refresh rate cannot be configured (or known) by Google users. For this reason, changes made to your schedules in Splunk On-Call may not be reflected in Google for up to as many as 20 - 30 hours after changes are made in Splunk On-Call. If you need to force a refresh, see :ref:`force-refresh` in a following section of this topic.
+.. note:: Important note about Splunk On-Call calendars and Google: When changes are made to your schedules and escalation policies in Splunk On-Call, those changes are immediately written to the .ics calendar file in our system, and are thus are immediately available to calendar tools. However, this process is a *pull* only operation, whereby Google Calendar must actively reach out to Splunk On-Call to retrieve the most recent version of the calendar at the provided URL. Google calendar tends to perform this action infrequently, and at seemingly random intervals. The refresh rate cannot be configured (or known) by Google users. For this reason, changes made to your schedules in Splunk On-Call may not be reflected in Google for up to as many as 20 - 30 hours after changes are made in Splunk On-Call. If you need to force a refresh, see :ref:`force-refresh` in a following section of this topic.
 
 Import Splunk On-Call Calendar to Google
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -103,7 +102,7 @@ Now follow the directions above to add a calendar by URL, except you will append
 
 The resulting URL should appear like this example:
 
-:mono:`https://portal.victorops.com/api/v1/org/<your-organization-name>/team/<your-team-name>/calendar/24B13BBABXXXXXXXXXXXXXXX1E203D11.ics?nocache``
+``https://portal.victorops.com/api/v1/org/<your-organization-name>/team/<your-team-name>/calendar/24B13BBABXXXXXXXXXXXXXXX1E203D11.ics?nocache``
 
 This will cause Google to contact that URL and pull the latest version of the .ics file, including your most recent changes, instead of loading the cached version. However, it is important to note that this only forces a refresh once, after which the new URL (including the nocache statement) will now be cached. In order to perform this
 operation a second time, you will have to increment the nocache statement with a number each time: ?nocache1, ?nocache2, ?nocache3, and so on.
@@ -115,9 +114,9 @@ Subscribe to an Outlook calendar
 
 To subscribe to a calendar in Outlook:
 
-#. On the Outlook navigation bar, select the App Launcher (|App launcher|) icon then select :guilabel:`Calendar`.
+#. On the Outlook navigation bar, select the App Launcher icon then select :guilabel:`Calendar`.
 #. Under the :menuselection:`Outlook Calendar` navigation bar, select the :menuselection:`New` down
-   arrow. Select :menuselection:`Add Calendar`. 
+   arrow. Select :menuselection:`Add Calendar`.
 
    .. image:: /_images/spoc/calendar-outlook1.png
       :width: 100%

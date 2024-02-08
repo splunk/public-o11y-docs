@@ -30,7 +30,7 @@ Follow these steps to set up the Webex Teams integration:
 
 #. When prompted, provide a webhook name and select a space for the webhook.
 
-   ..image:: /_images/spoc/spoc/webex-webhooks.jpg
+   .. image:: /_images/spoc/spoc/webex-webhooks.jpg
       :alt: Incoming webhooks app
 
 #. Select :guilabel:`Add` and copy the Webhook URL to your clipboard.
@@ -78,7 +78,7 @@ To do so, navigate back to the outgoing webhook you created under :guilabel:`Int
 #. Skip down to the :guilabel:`Transform these alert fields` section and set ``webexteams-field`` to the portion of the
 URL you copied earlier. The following image shows a sample resulting URL:
 
-..image:: /_images/spoc/spoc/webex-rules.jpg
+.. image:: /_images/spoc/spoc/webex-rules.jpg
    :alt: Fields for configuring Webex notifications
 
 #. Save the rule.

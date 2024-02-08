@@ -19,15 +19,21 @@ The integration supports the following Splunk versions:
 The following roles and capabilities are required:
 
 -  For v.1.0.23 or newer
+
    -  Setup and configuration require:
-      -  admin
-      -  victorops_admin and admin_all_objects
-      -  list_storage_passwords and admin_all_objects
+
+      * admin
+      * victorops_admin and admin_all_objects
+      * list_storage_passwords and admin_all_objects
+
    -  Usage and testing require:
-      -  admin
-      -  victorops_admin
-      -  victorops_user
+
+      * admin
+      * victorops_admin
+      * victorops_user
+
 -  For v.1.0.18 or lower to setup and configuration require to grant th following:
+
    -  list_storage_passwords AND admin_all_objects
 
 For on-premises installation, open port 443 for outgoing communication with Splunk On-Call. The full URL used is the following format:

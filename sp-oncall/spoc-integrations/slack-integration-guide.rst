@@ -160,7 +160,7 @@ The first rule adds the slugified version of your organization name, also known 
 
 For the matching condition of this rule, specify:
 
-.. code.block:: text
+.. code-block:: text
 
    When entity_id matches *
 
@@ -321,9 +321,6 @@ Then, enter your email and password.
 
 Next, authorize the application.
 
-.. image:: /_images/spoc/Authorize_access_to_your_account___Splunk On-CallQA_Slack.png
-   :alt: Integration authorization - Slack and Splunk On-Call
-
 Once authorized, select a Slack channel.
 
 .. image:: /_images/spoc/Slack-select-your-Slack-channel.png
@@ -344,16 +341,13 @@ From the web UI, you can configure aspects of the integration. For example, you 
 
 After you finish configuring your settings, save them.
 
-.. image:: _images/spoc/VO-Slack-Save.png
+.. image:: /_images/spoc/VO-Slack-Save.png
    :alt: Saving your settings - Splunk On-Call Slack integration
 
 Invite the Splunk On-Call Bot to the channel
 -----------------------------------------------
 
 In Slack, mention the ``@VictorOps`` bot user to add it to your channel if it doesn't automatically appear.
-
-.. image:: /_images/spoc/Slack-Splunk On-Call.png
-   :alt: In Slack - invite the bot
 
 Linking your Slack user to your Splunk On-Call User
 ------------------------------------------------------
@@ -377,17 +371,7 @@ Acknowledge and resolve in Slack
 
 Now that your user is linked you can interact with Splunk On-Call incidents from the Slack channel.
 
-.. image:: /_images/spoc/Slack-Splunk On-CallQA-2.png
-   :alt: Slack test incident
-
-.. image:: /_images/spoc/Slack-Splunk On-CallQA-3.png
-   :alt: Splunk On-Call Slack alert incident example
-
 In the Splunk On-Call Timeline, you're notified of Acknowledge and Resolve actions that occurred in Slack.
-
-.. image:: /_images/spoc/Slack-New-Timeline.png
-   :alt: Splunk On-Call timeline slack notification
-
 
 Legacy Slack Webhook guide
 ===============================

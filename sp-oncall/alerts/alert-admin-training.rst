@@ -1,4 +1,4 @@
-.. _alert-admin:
+.. _alert-admin-training:
 
 ************************************************************************
 Alert Admin user training

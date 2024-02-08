@@ -144,7 +144,7 @@ If you would like to turn notification functionality on or off  follow the steps
     :width: 100%
     :alt: Manage notifications.
 
-5. Locate **https://portal.victorops.com\ **
+5. Locate https://portal.victorops.com
 
 6.If you would like to turn on notifications, select :guilabel:`On`.
 

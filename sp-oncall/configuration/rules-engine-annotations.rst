@@ -37,7 +37,7 @@ Common Example: Appending a URL to a Runbook to the Alert
 
 The Rule:
 
-   **When** state_message **matches** *Server is DOWN\
+   **When** state_message **matches** Server is DOWN
 
    **Annotate the alert with:** URL [select from dropdown] Runbook
    [label linked to url]
@@ -72,10 +72,9 @@ Adding Annotations via Alert Fields
 The Alert Rules Engine isn't the only way annotations can be added to alerts. If alerts are being directed to a REST-style integration,
 annotations can be automatically created by including fields with the proper syntax in the alert payload.
 
-.. note:: When an incident is in an acknowledged state and a new alert with the same entity_id comes into the Splunk On-Call Timeline the alert will be :ref:`aggregated <spoc-alert-aggregation>` under the open incident. Any new annotations carried in the most recent
-alert will be added to the annotation tab of the incident. The annotations will also be reflected within each alert payload.
+.. note:: When an incident is in an acknowledged state and a new alert with the same entity_id comes into the Splunk On-Call Timeline the alert will be :ref:`aggregated <spoc-alert-aggregation>` under the open incident. Any new annotations carried in the most recent alert will be added to the annotation tab of the incident. The annotations will also be reflected within each alert payload.
 
-.. _image/spoc:: /_images/spoc/annotations1.png
+.. image:: /_images/spoc/annotations1.png
     :width: 100%
     :alt: Incident summary showing annotations field.
 
@@ -83,7 +82,7 @@ alert will be added to the annotation tab of the incident. The annotations will 
 Annotation Payloads
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. _image/spoc:: /_images/spoc/annotations2.png
+.. image:: /_images/spoc/annotations2.png
     :width: 100%
     :alt: Annotation Payload.
 
@@ -95,12 +94,13 @@ Example Payloads
 URL: `vo_annotate.u.url`
                         
 .. code-block:: 
-{ “monitoring_tool”: “API”, “message_type”:“INFO”,
-“entity_id”:“disk.space/db01”, “entity_display_name”:“Approaching Low
-Disk Space on DB01”, “state_message”:“The disk is really really full.
-Here is a bunch of information about the problem”,
-“vo_annotate.u.Runbook”:“https://help.victorops.com/knowledge-base/rest-endpoint-integration-guide/”
-}
+
+   { “monitoring_tool”: “API”, “message_type”:“INFO”,
+   “entity_id”:“disk.space/db01”, “entity_display_name”:“Approaching Low
+   Disk Space on DB01”, “state_message”:“The disk is really really full.
+   Here is a bunch of information about the problem”,
+   “vo_annotate.u.Runbook”:“https://help.victorops.com/knowledge-base/rest-endpoint-integration-guide/”
+   }
 
 Note: `vo_annotate.s.note``
                           
@@ -108,20 +108,22 @@ Note: `vo_annotate.s.note``
 .. note:: Annotations have a 1124 character limit.
 
 .. code-block::
-{ “monitoring_tool”: “API”, “message_type”:“INFO”,
-“entity_id”:“disk.space/db01”, “entity_display_name”:“Approaching Low
-Disk Space on DB01”, “state_message”:“The disk is really really full.
-Here is a bunch of information about the problem”,
-“vo_annotate.s.Note”:“Once Disk Space is critically low there will be an
-incident!” }
+
+   { “monitoring_tool”: “API”, “message_type”:“INFO”,
+   “entity_id”:“disk.space/db01”, “entity_display_name”:“Approaching Low
+   Disk Space on DB01”, “state_message”:“The disk is really really full.
+   Here is a bunch of information about the problem”,
+   “vo_annotate.s.Note”:“Once Disk Space is critically low there will be an
+   incident!” }
 
 Image URL: *vo_annotate.i.image*
                                 
 
 .. code-block::
-{ “monitoring_tool”: “API”, “message_type”:“INFO”,
-“entity_id”:“disk.space/db01”, “entity_display_name”:“Approaching Low
-Disk Space on DB01”, “state_message”:“The disk is really really full.
-Here is a bunch of information about the problem”,
-“vo_annotate.i.Graph”:“https://community.iotawatt.com/uploads/db6340/original/1X/266a3917cc86317830ae9cda3e91c7689a6c73a7.png”
-}
+
+   { “monitoring_tool”: “API”, “message_type”:“INFO”,
+   “entity_id”:“disk.space/db01”, “entity_display_name”:“Approaching Low
+   Disk Space on DB01”, “state_message”:“The disk is really really full.
+   Here is a bunch of information about the problem”,
+   “vo_annotate.i.Graph”:“https://community.iotawatt.com/uploads/db6340/original/1X/266a3917cc86317830ae9cda3e91c7689a6c73a7.png”
+   }

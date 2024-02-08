@@ -8,11 +8,11 @@ steps needed to integrate Honeybadger with VictorOps.
 From the web portal, select **Settings** >> **Integrations** >>
 **HoneyBadger**
 
-..image:: /_images/spoc/Integration-ALL-FINAL.png
+.. image:: /_images/spoc/Integration-ALL-FINAL.png
 
 Copy the API key to your clipboard.
 
-..image:: /_images/spoc/Honeybadger-final.png
+.. image:: /_images/spoc/Honeybadger-final.png
 
 **In Honeybadger**
 ------------------

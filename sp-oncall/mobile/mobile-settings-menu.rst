@@ -29,7 +29,9 @@ incident!
 `iOS <https://itunes.apple.com/us/app/victorops/id696974262?mt=8>`__ &
 `Android <https://play.google.com/store/apps/details?id=com.victorops.androidclient&hl=en>`__
 
-|image\ Important Settings
+|image|
+
+Important Settings
 ----------------------------
 
  
@@ -107,4 +109,4 @@ the *Paging Policies* tab.
 Once you've accessed your *Paging Policies*, select *Edit.* Select the
 step you'd like to *Edit* or *Add Step*.
 
-.. |image1| _images/spoc/Settings.png
+.. |image| image:: /_images/spoc/Settings.png

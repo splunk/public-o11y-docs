@@ -143,7 +143,7 @@ VictorOps_Service_Settings (~line 40) service object definitions:
       will be the string that appears after ‘/client/'.  An example can
       be found below, where ‘my-company' is the \_VO_ORGANIZATION_ID
 
-..image:: /_images/spoc/Timeline-Ops_Learning-1.jpg
+.. image:: /_images/spoc/Timeline-Ops_Learning-1.jpg
 
 -  \_VO_ORGANIZATION_KEY (~line 25 & 26)
 
@@ -156,7 +156,7 @@ Icinga*\ **.**
 
 If the integration has not yet been enabled, click the “Enable
 Integration” button to generate your configuration values as seen here:
-|image
+|image1|
 
 Also required:
 
@@ -433,4 +433,4 @@ match(“\*load\*”, service.name) } apply Notification “notify­devops­host
 to Service {     import “notify­victorops­host”     users = [“devops”]    
 assign where match(“\*.production.myorg.com”, host.name) }
 
-.. | image:: /_images/spoc/KB-icinga-service-api-key.png
+.. |image1| image:: /_images/spoc/KB-icinga-service-api-key.png

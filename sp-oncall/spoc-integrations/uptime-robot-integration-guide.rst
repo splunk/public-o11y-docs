@@ -65,7 +65,7 @@ move on to The Uptime Robot UI.
 From the main dashboard select *My Settings*. Under “Alert
 Contacts\_”\_ select *Add Alert Contact.*
 
-..image:: /_images/spoc/Add-Alert-Contact.png
+.. image:: /_images/spoc/Add-Alert-Contact.png
 
 Select *Web-Hook* for the *Alert Contact Type* and give it a *Friendly
 Name* and then paste your VictorOps “URL to Notify” into the box,
@@ -85,16 +85,16 @@ finally, select *Create Alert Contact*.
 
 Your set-up should look similar to the configuration depicted below.
 
-..image:: /_images/spoc/Details-for-new-alert-contact.png
+.. image:: /_images/spoc/Details-for-new-alert-contact.png
 
 To add this Alert Contact to one of your monitors select the gear icon
 next to the monitor and then *Edit* it.
 
-..image:: /_images/spoc/Edit-the-monitor.png
+.. image:: /_images/spoc/Edit-the-monitor.png
 
 Select the VictorOps *Alert Contact* and then *Save Changes.*
 
-..image:: /_images/spoc/add-victorops-to-the-alerting.png
+.. image:: /_images/spoc/add-victorops-to-the-alerting.png
 
 Now whenever an alert is triggered in Uptime Robot a message will be
 sent to the VictorOps timeline.

@@ -110,16 +110,16 @@ Initial Setup (In Okta)
 3. In the search bar, search for “\ **VictorOps (Beta)**\ “. Click on
    “VictorOps (Beta) in results to open.
 
-..image:: /_images/spoc/Screen-Shot-2022-04-13-at-3.27.18-PM.png
+.. image:: /_images/spoc/Screen-Shot-2022-04-13-at-3.27.18-PM.png
 
 4. Once the page loads, click on “**Add**” button.
 
-..image:: /_images/spoc/Screen-Shot-2022-04-13-at-3.29.25-PM.png
+.. image:: /_images/spoc/Screen-Shot-2022-04-13-at-3.29.25-PM.png
 
 -  The Application label should auto-populate with the name VictorOps
    (Beta) but please feel free to rename this label and click **Next**.
 
-..image:: /_images/spoc/Screen-Shot-2022-04-13-at-3.29.37-PM.png
+.. image:: /_images/spoc/Screen-Shot-2022-04-13-at-3.29.37-PM.png
 
 5. In the page that loads, click on **SAML 2.0** radio button.
 
@@ -129,7 +129,7 @@ find the identifier, login to your Splunk On-Call account and view the
 URL in the browser address bar. In the example screenshot below, “Your
 Org Slug” is the organization identifier.
 
-..image:: /_images/spoc/Screen-Shot-2022-04-13-at-3.31.20-PM.png
+.. image:: /_images/spoc/Screen-Shot-2022-04-13-at-3.31.20-PM.png
 
 -  In the **Default RelayState** text box add:
 
@@ -143,9 +143,9 @@ https://portal.victorops.com/auth/ulm/sso/**{your-org-identifier}**
 7. Copy the URL linked to the **Identity Provider metadata** link to
 your clipboard, and click **Done**.
 
-..image:: /_images/spoc/Screen-Shot-2022-04-13-at-3.58.19-PM.png
+.. image:: /_images/spoc/Screen-Shot-2022-04-13-at-3.58.19-PM.png
 
-..image:: /_images/spoc/Screen-Shot-2022-04-13-at-3.55.48-PM.png
+.. image:: /_images/spoc/Screen-Shot-2022-04-13-at-3.55.48-PM.png
 
  
 
@@ -186,7 +186,7 @@ the integration.
 5. Copy the token and save it in a temporary place as you will need it
 in subsequent steps.
 
-..image:: /_images/spoc/Screen-Shot-2022-04-13-at-5.32.23-PM.png
+.. image:: /_images/spoc/Screen-Shot-2022-04-13-at-5.32.23-PM.png
 
 Provisioning Setup (In Okta)
 
@@ -196,7 +196,7 @@ proceeding with following instructions.*
 1. Go to VictorOps (Beta) application in Okta and click
 on **Provisioning** tab and click **Configure API Integration**.
 
-..image:: /_images/spoc/Screen-Shot-2022-04-13-at-5.35.32-PM.png
+.. image:: /_images/spoc/Screen-Shot-2022-04-13-at-5.35.32-PM.png
 
 2. Select **Enable API integration** and paste the API token copied from
 Splunk On-Call (step 5 from **In Splunk On-Call** section above).
@@ -207,7 +207,7 @@ working correctly between Okta and Splunk On-Call. Click **Save**.
 select **Enable** for **Create Users** and **Deactivate
 Users.** Click **Save**.
 
-..image:: /_images/spoc/Screen-Shot-2022-04-13-at-5.37.00-PM.png
+.. image:: /_images/spoc/Screen-Shot-2022-04-13-at-5.37.00-PM.png
 
 Final Steps
 
@@ -216,7 +216,7 @@ Once the above steps are done, your configuration for SSO SCIM is ready.
 groups or users.** The provisioned users can use the Okta application
 (chiclet) to log into Splunk On-Call using SSO.
 
-..image:: /_images/spoc/Screen-Shot-2022-04-20-at-9.54.49-AM.png
+.. image:: /_images/spoc/Screen-Shot-2022-04-20-at-9.54.49-AM.png
 
  
 

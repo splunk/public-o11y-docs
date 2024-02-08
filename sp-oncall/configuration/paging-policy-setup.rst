@@ -39,7 +39,7 @@ Note that it is still necessary to add the contact method to your Paging Policy 
     :alt: Verify your phone number.
 
 
-.. _personal-paging::
+.. _personal-paging:
 
 Configure Your Personal Paging Policy
 =================================================

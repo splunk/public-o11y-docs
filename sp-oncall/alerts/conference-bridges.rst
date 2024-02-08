@@ -35,10 +35,6 @@ From the War Room, pre-set conference bridge information may be added so additio
 
 Note, you will not be able to select pre-set conference bridges from the incident pane.
 
-.. image:: /_images/spoc/confbridge2.png
-    :width: 100%
-    :alt: You can add up to 25 conference bridges.
-
 Creating an Ad-Hoc Conference Bridge
 =============================================
 

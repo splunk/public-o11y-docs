@@ -22,7 +22,9 @@ shortcuts to the information that is most relevant to you. Quickly
 access your incidents, your teams incidents, who is currently on-call,
 along with next on-call, and much more!
 
-|image\ |image2|
+|image1|
+
+|image2|
 
 Home Page
 ~~~~~~~~~
@@ -44,9 +46,9 @@ teammates on-call by clicking “Take Shift” and clear it by clicking
 “Clear Take” or “Take Back”. For more on Manual On-Call Takes click
 `here <https://help.victorops.com/knowledge-base/mobile-app-sched…eduled-overrides/>`__.
 
-|image3|\ |image4|
+|image3|
 
- 
+|image4|
 
 **Scheduled Overrides:** Finally, at the bottom of the Home Page you
 will see your teams scheduled overrides. By selecting “View All” you can
@@ -57,7 +59,7 @@ Overrides click
 
 /_images/spoc/Overrides_Preview.png
 
-.. |image1| _images/spoc/Mobile-Home-Page_2.png
-.. |image2| _images/spoc/Mobile-Home-Page.png
-.. |image3 /_images/spoc/Current-On-Call-Click.png
-.. |image4 /_images/spoc/On-Call-Takes.png
+.. |image1| image:: /_images/spoc/Mobile-Home-Page_2.png
+.. |image2| image:: /_images/spoc/Mobile-Home-Page.png
+.. |image3| image:: /_images/spoc/Current-On-Call-Click.png
+.. |image4| image:: /_images/spoc/On-Call-Takes.png

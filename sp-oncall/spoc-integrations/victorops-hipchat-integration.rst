@@ -126,9 +126,7 @@ https://**YOUR_DOMAIN**.hipchat.com/v2/room/**ROOM_ID**/notification?auth_token=
 
 Save your new custom integration.
 
---------------
-
-.. _in-splunk-on-call-1:
+.. _in-splunk-on-call-hipchat:
 
 **In Splunk On-Call**
 ---------------------
@@ -174,7 +172,7 @@ true, “message_format”: “text” }
 
 The final result should look something like:
 
-..image:: /_images/spoc/Screen-Shot-2017-10-23-at-12.43.26-PM.png
+.. image:: /_images/spoc/Screen-Shot-2017-10-23-at-12.43.26-PM.png
 
 Additional webhooks can be created for other events in the Splunk
 On-Call system. If you have any questions please reach out to Splunk

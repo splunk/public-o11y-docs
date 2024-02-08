@@ -1,7 +1,7 @@
 .. _elasticsesarch-watcher-spoc:
 
 Elasticsearch Watcher integration for Splunk On-Call
-***************************************************
+******************************************************
 
 .. meta::
     :description: Configure the Elasticsearch Watcher integration for Splunk On-Call.

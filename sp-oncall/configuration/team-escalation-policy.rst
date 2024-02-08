@@ -27,8 +27,7 @@ Steps to Creating an Escalation Policy
 
 #. Select a time delay for Step 1 of your escalation policy. The time delay you select for Step 1 will be in reference to either when the incident reaches Splunk On-Call or from when the escalation policy is called out by another escalation policy.
     All subsequent steps will have the time delay reference the previous step, not the incident's beginning. That is, if Step 1 has a time delay of 5 minutes and Step 2 has a time delay of 10 minutes then paging for Step 2 will not be triggered until 15 minutes after the incident reaches Splunk On-Call.
-    Best practice tip: We recommend selecting 'immediately' for the first step of an escalation policy,  unless you desire a waiting room
-type functionality. For information on setting up a waiting room escalation policy, see :ref:`waiting-room`.
+    Best practice tip: We recommend selecting 'immediately' for the first step of an escalation policy,  unless you desire a waiting room type functionality. For information on setting up a waiting room escalation policy, see :ref:`waiting-room`.
 
 #. Select an Escalation Action for Step 1. Access the different escalation actions by clicking on the “Select an escalation” dropdown menu and then scroll down to see all available options. The blue plus box allows for multiple actions to be performed simultaneously within one escalation policy step if desired. 
 
@@ -47,7 +46,7 @@ A number of escalation actions are available. The different options are as follo
 
    * - Execute Policy
      - This action provides the ability to invoke a different escalation policy
-     - 
+
    * - Notify the on-duty users in rotation
      - Our most common type of escalation action, this notifies the currently on-duty users in the rotation you specify. If there is no on-call user scheduled in a rotation at the time when this escalation action is triggered, the resulting behavior is that no page will occur in this step. The time delay before the next step will remain as configured. For example, if an incident triggers an Escalation Policy during off-hours and there is no one on call in the rotation to immediately page, the escalation policy will page no one and then wait however long is specified before executing step two.
 
@@ -64,25 +63,19 @@ A number of escalation actions are available. The different options are as follo
    * - Notify every member of this team
      - This will notify every member of the team that the escalation policy is created for regardless of the time of day. All users on the team will be paged for an incident, but only one user is required to ack the incident. 
 
-    * - Execute webhook
-     - This will execute the `Escalation Webhook <https://help.victorops.com/knowledge-base/escalation-webhooks/>`__
-         of your choosing
+   * - Execute webhook
+     - This will execute the `Escalation Webhook <https://help.victorops.com/knowledge-base/escalation-webhooks/>`__ of your choosing
 
-    * - Send an email to email address
+   * - Send an email to email address
      - This will send an email to the email address you specify
- 
-  
+
 #. Add additional escalation policy steps. Include multiple steps to assure that an incident is not missed.
 
 #. Select :guilabel:`Save` to save the escalation policy at the bottom of the page.
 
-#. Attach the escalation policy to the desired Routing Key by selecting :guilabel:`Set Up Routing`. Routing keys are a key link to connect incidents to one of your established Escalation Policies. For more information on routing keys, see :ref:`routing-keys`.
-    If no routing keys are connected to the escalation policy then it will only be active if called out specifically in a manual incident or
-“execute policy” step of another escalation policy.
+#. Attach the escalation policy to the desired Routing Key by selecting :guilabel:`Set Up Routing`. Routing keys are a key link to connect incidents to one of your established Escalation Policies. For more information on routing keys, see :ref:`routing-keys`. If no routing keys are connected to the escalation policy then it will only be active if called out specifically in a manual incident or “execute policy” step of another escalation policy.
 
-      ..note:: Only Global and Alert Admins can configure and edit routing keys. Work with a user with these permission levels to assure your
-escalation policy is connected to the correct routing key.
-
+.. note:: Only Global and Alert Admins can configure and edit routing keys. Work with a user with these permission levels to assure your sescalation policy is connected to the correct routing key.
 
 
 Features and Benefits of using Multiple Escalation Policies

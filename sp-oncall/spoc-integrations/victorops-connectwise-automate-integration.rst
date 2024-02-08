@@ -9,56 +9,58 @@ In VictorOps
 From the VictorOps web portal, select **Settings** >> **Alert Behavior**
 >> **Integrations**.
 
-..image:: /_images/spoc/Integration-ALL-FINAL.png
+.. image:: /_images/spoc/Integration-ALL-FINAL.png
 
 Select the **Email** integration option.
 
-..image:: /_images/spoc/Integration-Email-final.png
+.. image:: /_images/spoc/Integration-Email-final.png
 
 Click **Enable Integration**.
 
-|image\ Copy the **Email Address** to the clipboard.  Be sure to
+|image1|
+
+Copy the **Email Address** to the clipboard.  Be sure to
 replace the “$routing_key” section with the actual routing key you
 intend to use. (To view or configure route keys in VictorOps,
 click **Alert Behavior**, then **Route Keys**).  Select how you would
 like an alert to be categorized when an email is not parsable from the
 “Email Options” dropdown menu.
 
-..image:: /_images/spoc/Integration-Email-3-final.png
+.. image:: /_images/spoc/Integration-Email-3-final.png
 
 In ConnectWise Automate
 -----------------------
 
 From the ConnectWise Automate Control Center, select **Dashboard**.
 
-..image:: /_images/spoc/Screenshot__5__png__11_documents__11_total_pages_.png
+.. image:: /_images/spoc/Screenshot__5__png__11_documents__11_total_pages_.png
 
 Select **Management** from the “System Dashboard”.
 
-..image:: /_images/spoc/Screenshot__6__png__11_documents__11_total_pages_.png
+.. image:: /_images/spoc/Screenshot__6__png__11_documents__11_total_pages_.png
 
 Select the **Alert Templates** tab.
 
-..image:: /_images/spoc/Screenshot__7__png__11_documents__11_total_pages_.png
+.. image:: /_images/spoc/Screenshot__7__png__11_documents__11_total_pages_.png
 
 Click on **New Template**.
 
-..image:: /_images/spoc/Screenshot__8__png__11_documents__11_total_pages_.png
+.. image:: /_images/spoc/Screenshot__8__png__11_documents__11_total_pages_.png
 
 Enter a name for the alert template in the “Name” field, then
 click **Add Alerts**.
 
-..image:: /_images/spoc/Screenshot__9__png__11_documents__11_total_pages_.png
+.. image:: /_images/spoc/Screenshot__9__png__11_documents__11_total_pages_.png
 
 Click **New Alert**.
 
-..image:: /_images/spoc/Screenshot__21__png.png
+.. image:: /_images/spoc/Screenshot__21__png.png
 
 Check the “Warning” and “Error” boxes for “Email” under “Alert Actions”,
 then check “Everyday” next to “Select the days of the week to use these
 template settings.”
 
-..image:: /_images/spoc/Screenshot__10__png__11_documents__11_total_pages_.png
+.. image:: /_images/spoc/Screenshot__10__png__11_documents__11_total_pages_.png
 
 Paste the following code into the “Alert Message on Success” and “Alert
 Message on Failure” fields.
@@ -68,26 +70,26 @@ computerName:%COMPUTERNAME% locationName:%LOCATIONNAME%
 fieldName:%FIELDNAME% result:%RESULT% failCount:%FailCount% when:%when%
 contactName:%ContactName%
 
-..image:: /_images/spoc/Screenshot__11__png__11_documents__11_total_pages_.png
+.. image:: /_images/spoc/Screenshot__11__png__11_documents__11_total_pages_.png
 
 Select the “Alert Contact” option that you want to associate this alert
 with, then click **Save**.
 
-..image:: /_images/spoc/Screenshot__11__png__11_documents__11_total_pages_-1.png
+.. image:: /_images/spoc/Screenshot__11__png__11_documents__11_total_pages_-1.png
 
 Close windows until you are back at the “System Dashboard” window, then
 select the **Config** tab.
 
-..image:: /_images/spoc/Screenshot__6__png__11_documents__11_total_pages_-1.png
+.. image:: /_images/spoc/Screenshot__6__png__11_documents__11_total_pages_-1.png
 
 In the “System” tab, paste the “Email Address” from the “In VictorOps”
 section into the “Support Email” field, then configure the SMTP and POP
 settings, then click **Save**.
 
-..image:: /_images/spoc/Screenshot__20__png__11_documents__11_total_pages_.png
+.. image:: /_images/spoc/Screenshot__20__png__11_documents__11_total_pages_.png
 
 You have completed setting up this integration.  If you have any
 questions, please contact `VictorOps
 support <mailto:Support@victorops.com?Subject=ConnectWise%20Automate%20VictorOps%20Integration>`__.
 
-.. |image1| _images/spoc/Integration-Email-2-final.png
+.. |image1| image:: /_images/spoc/Integration-Email-2-final.png

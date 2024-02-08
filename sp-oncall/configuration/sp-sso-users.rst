@@ -47,12 +47,12 @@ Mobile Applications
 The Splunk On-Call client for your mobile device will also present a link on the login screen, offering the option to use your SSO credentials.
 
 iOS or Android SSO Login
------------------------
+-------------------------
 
 On the login screen, select :guilabel:`Sign in with Enterprise SSO`. This link will take you to a form prompting for your Organization Slug. After you enter your company's Organization Slug, you are redirected to your
 IDP login page in a mobile browser. Once you log in through the IDP you are automatically logged into Splunk On-Call.
 
-.. _sso-linking::
+.. _sso-linking:
 
 First-Time SSO Login
 ========================

@@ -5,8 +5,7 @@ Custom outbound webhooks in Splunk On-Call
 ************************************************************************
 
 .. meta::
-   :description: Connect Splunk On-Call to the tool of your choice using our custom
-outgoing webhooks.
+   :description: Connect Splunk On-Call to the tool of your choice using our custom outgoing webhooks.
 
 
 Connect Splunk On-Call to the tool of your choice using our custom outgoing webhooks. Splunk On-Calls outbound webhooks can subscribe to a number of different Splunk On-Call actions such as incidents or chats. The webhook URL, method, content type, and payload are all configurable. Splunk On-Calls variables can be used as part of the payload so that the information being sent to third-party systems is dynamic. The following sections will walk you through setting up your first outbound webhook.
@@ -44,7 +43,7 @@ The different event types are shown in the table:
 
    * - All-Chats 
      - Webhook will fire anytime any chat is placed into the main timeline. This includes all incident chats and any chat entered from a third party chat integration. 
-   * Any-Incident 
+   * - Any-Incident 
      - Webhook will fire anytime any incident is created, acknowledged and resolved. 
    * - Any-On-Call  
      - Webhook will fire anytime there is any form of on-call change, both going on-call and going off-call.   

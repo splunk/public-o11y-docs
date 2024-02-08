@@ -10,7 +10,10 @@ Apteligent. Below is a short walkthrough.
    (“VictorOps Integration” in the example) |crittercism2|
 3. To obtain the URL for this integration, go into **Integrations**.
 4. Select **Apteligent**, then copy the link for the “Service API
-   Endpoint\ **.”** |image
+   Endpoint\ **.”** 
+   
+   |image1|
+
 5. Paste in the “Service API Endpoint” as a “URL.” |crittercism5|
 6. Make sure to switch out **$routing_key** for the appropriate key that
    will route to the team you want notified for all Apteligent alerts.
@@ -20,9 +23,9 @@ Apteligent. Below is a short walkthrough.
    Integration” |crittercism7|
 8. If you have any questions contact support.
 
-.. |crittercism1| _images/spoc/Crittercism1.png
-.. |crittercism2| _images/spoc/Crittercism2.png
-.. |image1| _images/spoc/apteligent_button.png
-.. |crittercism5| _images/spoc/Crittercism5.png
-.. |crittercism6| _images/spoc/Crittercism6.png
-.. |crittercism7| _images/spoc/Crittercism7.png
+.. |crittercism1| image:: /_images/spoc/Crittercism1.png
+.. |crittercism2| image:: /_images/spoc/Crittercism2.png
+.. |image1| image:: /_images/spoc/apteligent_button.png
+.. |crittercism5| image:: /_images/spoc/Crittercism5.png
+.. |crittercism6| image:: /_images/spoc/Crittercism6.png
+.. |crittercism7| image:: /_images/spoc/Crittercism7.png

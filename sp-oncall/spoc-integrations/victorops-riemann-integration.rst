@@ -8,15 +8,15 @@ In VictorOps
 From the VictorOps web portal, select **Settings** >> **Alert
 Behavior** >> **Integrations**
 
-..image:: /_images/spoc/Integration-ALL-FINAL.png
+.. image:: /_images/spoc/Integration-ALL-FINAL.png
 
 Select the **Riemann** integration option.
 
-..image:: /_images/spoc/Riemann-final.png
+.. image:: /_images/spoc/Riemann-final.png
 
 Copy the **Service API Key** to the clipboard.
 
-..image:: /_images/spoc/Riemann-2-final.png
+.. image:: /_images/spoc/Riemann-2-final.png
 
 In Riemann
 ==========
@@ -53,7 +53,7 @@ seconds.”, tags: [“http”]}
 
 Confirm that the alert is displayed in your VictorOps timeline.
 
-..image:: /_images/spoc/Timeline-vops_davetesting-1.png
+.. image:: /_images/spoc/Timeline-vops_davetesting-1.png
 
 You have completed setting up this integration.  If you have any
 questions, please contact `VictorOps

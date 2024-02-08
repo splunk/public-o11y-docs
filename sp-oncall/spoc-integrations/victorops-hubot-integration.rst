@@ -21,7 +21,7 @@ Configuration Steps
    Integration” button to generate your endpoint URL as seen below.  Be
    sure to replace the “$routing_key” section with the actual routing
    key you intend to use. (To view or configure route keys in VictorOps,
-   click *Alert Behavior >> Route Keys*) |image
+   click *Alert Behavior >> Route Keys*) |image1|
 
 3. If you have not already, install Hubot according to these
    instructions: https://hubot.github.com/docs/
@@ -84,4 +84,4 @@ and you will be able to all Hubot programatically.
 
    hubot3
 
-.. |image1| _images/spoc/Integrations-VictorOps_Demo_9.png
+.. |image1| image:: /_images/spoc/Integrations-VictorOps_Demo_9.png

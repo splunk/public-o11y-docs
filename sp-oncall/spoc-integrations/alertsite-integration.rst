@@ -11,7 +11,7 @@ AlertSite by SMARTBEAR integration
 AlertSite by SMARTBEAR provides advanced synthetic monitoring platform for APIs, mobile and web applications. The Splunk OnCall integration with AlertSite allows you to send alerts into the Splunk OnCall timeline by using
 the generic email endpoint. The following guide will walk you through this integration.
 
-.. alertsite-spoc:
+.. _alertsite-spoc:
 
 In Splunk OnCall
 =============================
@@ -34,11 +34,11 @@ To enable the AlertSite integration in Splunk OnCall to be able to trigger and r
 
     db212e48-……8669\:strong:`+databaseteam`\ @alert.victorops.com
 
-   Team routing keys are configured at the bottom of the Settings > Integrations page. For details, see `Routing
-Keys <http://help.victorops.com/knowledge-base/routing-keys/>`.
+   Team routing keys are configured at the bottom of the Settings > Integrations page. For details, see `Routing Keys <http://help.victorops.com/knowledge-base/routing-keys/>`. 
+
 #. If you do not use routing, remove the *+$routing_key* part, including the plus sign, so that the email looks like this:
 
-    db212e48-……8669@alert.victorops.com
+   ``db212e48-……8669@alert.victorops.com``
 
 
 
@@ -108,10 +108,9 @@ Next, you need to add the Splunk OnCall email endpoint that you generated in :re
 #. In the AlertSite, navigate to :guilabel:`Alerts` then :guilabel:`Alert Recipient`.
 #. Select :guilabel:`+ New Recipient`.
 #. In the dialog that appears, enter the following:
-    -  Name - any name, for example, *Splunk OnCall*
-    -  Recipient - the email address you generated in Splunk OnCall
-    -  Mode - *E-mail (text format)\ *
-
+    -  Name: any name, for example, *Splunk OnCall*
+    -  Recipient: the email address you generated in Splunk OnCall
+    -  Mode: E-mail (text format)
 
       .. image:: /_images/spoc/add-victorops-recipient.png
          :width: 90%

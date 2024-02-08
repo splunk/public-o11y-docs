@@ -1,4 +1,4 @@
-.. _team-dashboard:
+.. _incident-review-spoc:
 
 ************************************************************************
 About the Splunk On-Call Post Incident Review
@@ -25,10 +25,8 @@ remain logo free.
 Information Alerts can still be found on the `Timeline
 Page. <https://help.victorops.com/knowledge-base/timeline/>`__
 
---------------
+|image|
 
-|image1
-========
 
 Filters
 -------
@@ -53,14 +51,14 @@ alerts.
 image: _images/spoc/Incidents-scaled.jpg
 
 Manual Incident Creation
-~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can create a manual incident from the team dashboard by selecting
 “Create Incident” in the top right corner `following these
 instructions <https://help.victorops.com/knowledge-base/manual-incident-creation/>`__.
 
 Incident War Rooms
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Access *Incident Details* directly from the *Team Dashboard* by clicking
 the *incident number* link—this will expand the incident and its event
@@ -104,4 +102,4 @@ You can relay service status updates via statuspage.io by `following
 these
 instructions. <https://help.victorops.com/knowledge-base/victorops-statuspage-integration/>`__
 
-_images/spoc/Screen-Shot-2020-08-18-at-9.22.05-AM.png
+.. |image| image:: /_images/spoc/Screen-Shot-2020-08-18-at-9.22.05-AM.png

@@ -7,19 +7,13 @@ Incident Pane
 .. meta::
    :description: About the Incident pane in Splunk On-Call which displays incoming alerts.
 
-
-
 Requirements
 =======================
 
 Versions Supported: N/A (SaaS)
 VictorOps Version Required: Standard andEnterprise
 
-
-
-
-
-The Incident Pane serves as a repository for recent activities in your Timeline. The Incident Pane, located to the right of the Timeline, houses alerts that come into VictorOps. We currently store seven days or 1,000 events worth of timeline alert history, whichever comes first. Historical data that fall outside of the aforementioned storage parameters of the Incident Pane may be obtained through the use of the :ref:`VictorOps API <https://help.victorops.com/knowledge-base/api/>`. 
+The Incident Pane serves as a repository for recent activities in your Timeline. The Incident Pane, located to the right of the Timeline, houses alerts that come into VictorOps. We currently store seven days or 1,000 events worth of timeline alert history, whichever comes first. Historical data that fall outside of the aforementioned storage parameters of the Incident Pane may be obtained through the use of the :ref:`VictorOps API <https://help.victorops.com/knowledge-base/api/>`.
 
 
 Incident Owner tabs
@@ -56,14 +50,14 @@ incidents to ack, re-route, or snooze.
 From the :guilabel:`Acked` tab, you may select a single incident or multiple
 incidents to Resolve, reroute, or snooze.
 
-.. image:: /_images/spoc/incident-ack.png
+.. image:: /_images/spoc/incidents-ack.png
     :width: 100%
     :alt: Select a response.
 
 
 Once a Triggered incident has been ack'd and resolved, you may view it in the :guilabel:`Resolved` tab. Here, and in the other tabs, you may select a single incident to review. You may also pop the incident details out into separate window for easier viewing.
 
-.. image:: /_images/spoc/incident-resolved.png
+.. image:: /_images/spoc/incidents-resolved.png
     :width: 100%
     :alt: View resolved incidents on the Resolved tab.
 
@@ -95,7 +89,7 @@ Once the triggered incident appears under the :guilabel:`Triggered` incident tab
 
 You also have the option to acknowledge multiple incidents at one time. In order to do this, you select the box on the left corner of the triggered incident in the incident pane.
 
-.. image:: /_images/spoc/incident-resolved.png
+.. image:: /_images/spoc/incidents-resolved.png
     :width: 100%
     :alt: Acknowledge multiple incidents.
 
