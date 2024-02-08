@@ -108,7 +108,7 @@ In the side-menu, locate the section for :guilabel:`Business Rules` and select :
 
 .. image:: /_images/spoc/Triggers.png
    :alt: Zendesk triggers
-   :width: 95%
+   :width: 75%
 
 From the :guilabel:`Triggers` menu, select :guilabel:`Add trigger`.
 
@@ -126,13 +126,13 @@ Splunk On-call to fit your specific workflow.
 
 .. image:: /_images/spoc/Critical-Trigger.png
    :alt: Trigger conditions
-   :width: 95%
+   :width: 75%
 
 Under the :guilabel:`Actions` section, select :guilabel:`Add Action`. In the first dropdown menu, scroll to the :guilabel:`Notifications` sections and select :guilabel:`Notify target`. In the second dropdown menu, select the Splunk On-call target you created earlier.
 
 .. image:: /_images/spoc/Critical-Trigger-Payload.png
    :alt: Configure trigger actions
-   :width: 95%
+   :width: 75%
 
 Copy the following JSON payload and paste it into the :guilabel:`JSON body` field, then select :guilabel:`Create`.
 
@@ -169,7 +169,7 @@ Condition
 
 .. image:: /_images/spoc/Acknowldge-Trigger.png
    :alt: Acknowledge trigger
-   :width: 95%
+   :width: 75%
 
 JSON payload:
 
