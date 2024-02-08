@@ -132,7 +132,7 @@ On-call Awareness
 -------------------------
 
 - When am I on-call? - your user card within the People Pane will display your current and upcoming on-call shift information. Your
-   profile also contains an :ref:`on-call calendar export <https://help.victorops.com/knowledge-base/calendar-export/>` link for 3rd party calendars.
+   profile also contains an :ref:`on-call calendar export <calendar-export>` link for 3rd party calendars.
 
 - Who else is on-call with me? - the Splunk On-Call oak leaf icon on a user card in the People Pane denotes a person as being on-call
    currently.
@@ -145,9 +145,9 @@ On-call Awareness
 Coverage Activities
 --------------------------
 
-- `Scheduled Overrides <https://help.victorops.com/knowledge-base/scheduled-overrides/>` - allow users to request on-call coverage for any planned absence.
+- :ref:`Scheduled Overrides <scheduled-overrides>` - allow users to request on-call coverage for any planned absence.
 
-- `Manual Take On-Call <https://help.victorops.com/knowledge-base/manual-take-call/>` - take someone's on-call shift one-off. On-call personnel change in real time.
+- :ref:`Manual Take On-Call <manual-take-call>` - take someone's on-call shift one-off. On-call personnel change in real time.
 
 
 How does an incident get to me?

@@ -36,8 +36,7 @@ Recommendations to be a Successful Alert Admin
 
 *  Optimize Splunk On-Call configuration to achieve the desired workflow: Determine which alerts from your monitoring tools need to be sent into Splunk On-Call. Ensure admins for your monitoring tools are assigned alert admin permissions in Splunk On-Call in order to configure the integrations. Only send critical, actionable alerts into Splunk On-Call. Avoid unnecessary or noisy alerts – This will help reduce alert fatigue and make it easier to manage your incidents. 
 
-* Familiarize yourself with Splunk On-Call Reports: Splunk On-Call has four reports that can be utilized to evaluate your incident response, identify and correct weaknesses, and track on-call user metrics. For details on the available reports, see XXXXXXX reports XXXXXXX.
-  
+* Familiarize yourself with Splunk On-Call Reports: Splunk On-Call has four reports that can be utilized to evaluate your incident response, identify and correct weaknesses, and track on-call user metrics. For details on the available reports, see :ref:`<reports>`.
 * Global Alert Configuration & Settings:  Configuring your global alert settings will improve your workflow and ensure no alert goes unresolved. 
     - Auto-Resolve & Pop-Out-Of-Ack
     - Incident Creation based on Entity State
@@ -45,4 +44,4 @@ Recommendations to be a Successful Alert Admin
   
 * Understand Maintenance Mode and when to use it: Maintenance Mode allows you to temporarily mute alerts in order to complete server maintenance, or other work, without unnecessarily disrupting your teammates with incident paging. It does not prevent alerts from entering Splunk On-Call; it only stops specific alerts from paging on-call users. Note: Global and Alert Admins can begin Maintenance Mode.
 
-* Get to know the Splunk On-Call API: Only Global Admins have the ability to enable the Splunk On-Call API and create API keys. The API can be used to pull Splunk On-Call data, make scripts, etc. You can access the public API XXXXXX HERE XXXXXX as well as from the API tab under Integrations. Use your API ID and up to five keys to perform calls.  
+* Get to know the Splunk On-Call API: Only Global Admins have the ability to enable the Splunk On-Call API and create API keys. The API can be used to pull Splunk On-Call data, make scripts, etc. You can access the :new-page:`public API <https://portal.victorops.com/public/api-docs.html?_ga=2.169602981.562369111.1519752971-1195437206.1519752971#/Users>` as well as from the API tab under Integrations. Use your API ID and up to five keys to perform calls.  

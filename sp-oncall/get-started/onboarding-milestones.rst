@@ -35,7 +35,7 @@ The user milestones include the following:
        - :ref:`team-admin`
        - :ref:`alert-admin`
 #. Set Primary Paging policies:
-    - XXXXXX Paging Policies Best Practices
+    - :ref:`primary-paging`
 #. Implement user training with the :ref:`user-role`.
 
 Team milestones
@@ -45,11 +45,11 @@ Team milestones include the following:
 
 #. Create Teams and assign Team Admins.
 #. Create On-Call schedules, including:
-   - XXXXXX Rotation options
-   - XXXXXX Schedule examples
+   - :ref:`rotation-setup`
+   - :ref:`schedule-examples`
 #. Implementation of Team Workflows, including:
-   - XXXXXX Create escalation policies.
-   - XXXXXX Tips and tricks for multiple escalation policies.
+   - :ref:`Create escalation policies <team-escalation-policy>`.
+   - :ref:`Tips and tricks for multiple escalation policies <mult-escalation-policies>`.
 
 
 Integration milestones
@@ -58,9 +58,9 @@ Integration milestones
 Integration milestones include the following:
 
 #. Determine necessary integrations.
-#. Create Splunk On-Call routing keys. `Routing Key Best Practice <https://help.victorops.com/knowledge-base/routing-keys/>`__
-#. Configure integrations.  `Splunk On-Call Integration Guides <https://help.victorops.com/article-categories/integrations/>`__
-#. Test integrations and trigger test incidents. `Maintenance Mode <https://help.victorops.com/knowledge-base/maintenance-mode/>`
+#. Create Splunk On-Call routing keys. :ref:`Routing Key Best Practice <routing-keys>`
+#. Configure integrations.  :ref:`Splunk On-Call Integration Guides <integrations-main>`
+#. Test integrations and trigger test incidents. :ref:`Maintenance Mode <maintenance-mode>`
 
 
 Go Live milestones
@@ -71,5 +71,5 @@ Go Live milestones include the following:
 #. Ensure all Splunk On-Call users have completed their User Trainings.
 #. Internal & External Resources made available, including:
    - Create internal documentation for Splunk On-Call 
-   - XXXXXX Familiarize all Splunk On-Call users with the Splunk On-Call resources
+   - Familiarize all Splunk On-Call users with the Splunk On-Call resources
 #. Go Live!
