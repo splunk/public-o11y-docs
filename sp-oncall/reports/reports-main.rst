@@ -7,11 +7,11 @@ Splunk On-Call reports
     :description: Configure the AlertSite integration for Splunk OnCall.
 
 .. toctree::
-   :hidden:
+    :hidden:
 
-    </reports/incident-frequency>
-    </reports/mtta-mttr>
-    </reports/reports>
-    </reports/post-incident-review>
+    incident-frequency-report
+    mtta-mttr-report
+    on-call-report
+    post-incident-review
 
 About Splunk On-Call reports.
