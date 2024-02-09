@@ -11,7 +11,11 @@ Ingest Google Cloud Platform log data
 .. toctree::
    :hidden:
 
-.. caution:: Splunk Log Observer is no longer available for new users. You can continue to use Log Observer if you already have an entitlement.
+.. caution:: 
+
+   Splunk Log Observer is no longer available for new users. If you have a Log Observer entitlement, you must transition to Splunk Cloud Platform or Splunk Enterprise. Read more at :ref:`lo-transition`.
+
+   You can also use the Data Manager to send GCP logs to Splunk Platform. Learn how at :new-page:`Onboard GCP in Data Manager <https://docs.splunk.com/Documentation/DM/1.8.2/User/GCPAbout>`.
 
 To send GCP logging data to Splunk Observability Cloud's Log Observer, create a Pub/Sub subscription and use the :new-page:`Pub/Sub to Splunk Dataflow template <https://cloud.google.com/dataflow/docs/guides/templates/provided-streaming#cloudpubsubtosplunk>` to create a Dataflow job. The Dataflow job takes messages from the Pub/Sub subscription, converts payloads into Splunk HTTP Event Collector (HEC) event format, and forwards them to Splunk Observability Cloud, where the whole event (JSON payload and its information) is ingested.    
 
@@ -28,7 +32,7 @@ To send GCP logs to Splunk Observability Cloud:
 
    - Change the token in the sample syntax (``token=your-splunk-hec-token``) to a Splunk Observability Cloud organization access token with ingest permission. For more information about organization access tokens, see :ref:`admin-org-tokens`.
 
-   - Change the URL in the sample syntax (``url=your-splunk-hec-url``) to point to the real-time log data ingest endpoint for Splunk Observability Cloud: ``https://ingest.{REALM}.signalfx.com``. For example, ``https://ingest.{REALM}.signalfx.com:443``.
+   - Change the URL in the sample syntax (``url=your-splunk-hec-url``) to point to the real-time log data ingest endpoint for Splunk Observability Cloud: ``https://ingest.{REALM}.signalfx.com/v1/log``.
 
 Manage delivery failures
 ------------------------------------------------

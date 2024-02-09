@@ -80,6 +80,12 @@ Ingest API endpoints
 You can use the REST API to send telemetry directly to Splunk Observability Cloud. This might be useful when you can't use the Splunk Distribution of OpenTelemetry Collector or when you have specific networking or security requirements. See :ref:`rest-api-ingest` for more information. If your organization has stringent networking security policies that apply to sending data to third parties, see :ref:`allow-services`.
 
 
+Private connectivity
+-------------------------------------------------------------
+
+If you prefer not to send data to Splunk public endpoints using HTTPS, you can use AWS Private Link to ingest data from sources deployed on AWS. See :ref:`aws-privatelink` for more information.
+
+
 Data retention
 -------------------------------------------------------------
 
@@ -127,7 +133,7 @@ You can update or expand your Splunk Observability Cloud subscription any time d
 - Add products and features to your subscription.
 - Upgrade to enterprise edition licensing with Service Bureau features.
 
-Observability Cloud informs about the need for renewal through a banner that appears 15 days prior to the subscription expiration date. For more information on subscription renewals, contact your Splunk sales representative.
+Splunk Observability Cloud informs about the need for renewal through a banner that appears 15 days prior to the subscription expiration date. For more information on subscription renewals, contact your Splunk sales representative.
 
 On expiration date, a 15-day grace period starts. During the grace period, users see a banner when logging in reminding them of the expiration. After the grace period, the subscription enters suspended mode, which lasts 30 days and during which users can't log in. After the 30 day suspension, the account is terminated and the data stored on the account is deleted.
 
@@ -157,7 +163,7 @@ Splunk Observability Cloud is available in the following global regions. Each Cl
      - :strong:`AWS regions`
      - :strong:`Google Cloud regions`
      - :strong:`Splunk Observability Cloud realm`
-   * - Observability Cloud
+   * - Splunk Observability Cloud
      - 
         * US: Oregon (us-west-2), Virginia (us-east-1)
         * Europe: Dublin (eu-west-1)
@@ -213,8 +219,9 @@ The following components are available for each global region. Each Cloud provid
        * Europe: Dublin (eu-west-1)
        * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
      - 
+       * US: Oregon (us-west-1)
      - 
-       * us0, us1
+       * us0, us1, us2
        * eu0
        * au0, jp0
    * - Real User Monitoring (RUM)
@@ -230,12 +237,14 @@ The following components are available for each global region. Each Cloud provid
        * au0
    * - Synthetic Monitoring
      - 
-       * US: Oregon (us-west-2),
+       * US: Oregon (us-west-2), Virginia (us-east-1)
        * Europe: Dublin (eu-west-1)
+       * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
      - 
      -
-       * us0
+       * us0, us1
        * eu0
+       * au0, jp0
 
 
 Realm to region equivalence

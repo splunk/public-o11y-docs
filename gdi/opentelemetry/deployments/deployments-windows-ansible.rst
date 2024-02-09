@@ -1,43 +1,71 @@
 .. _deployment-windows-ansible:
 
-**********************
-Ansible for Windows
-**********************
+********************************************************
+Deploy the Collector with Ansible for Windows
+********************************************************
 
 .. meta::
       :description: Describes how to install the Splunk Observability Cloud OpenTelemetry Collector Ansible role on Windows.
 
-Before installing the Ansible collection, do the following:
+Before installing the Ansible collection, check :ref:`otel-intro` to verify the required resources:
 
-* Find your :ref:`Splunk access token <otel-using>`
-* Find your :ref:`Splunk realm <otel-using>`
-* Check :ref:`exposed ports <otel-using>` to make sure your environment doesn't have conflicts. Ports can be changed in the package's configuration.
+* Find your Splunk access token 
+* Find your Splunk realm
+* Check your exposed ports to make sure your environment doesn't have conflicts. You can change ports in the package's configuration.
 
-Ansible requires PowerShell 3.0 or newer and at least .NET 4.0 to be installed on the Windows host. A WinRM listener should be created and activated. You can find information on setting up the Windows host on the :new-page:`Ansible Documentation site <https://docs.ansible.com/>`.
+Supported versions
+==========================================
+
+Currently, the following Windows versions are supported:
+
+* Windows Server 2016 64-bit
+* Windows Server 2019 64-bit
+* Windows Server 2022 64-bit
+
+Requirements
+==========================================
+
+Ansible requires PowerShell 3.0 or higher and .NET 4.0 or higher to be installed on the Windows host. 
+
+You must create and activate a WinRM listener. 
+
+You can find information on setting up the Windows host on the :new-page:`Ansible Documentation site <https://docs.ansible.com/>`.
+
+Install and use the Collector with Ansible 
+============================================================
+
+.. caution:: On Windows, the Collector is installed as a Windows service and its environment variables are set at the service scope, so they're only available to the Collector service and not to the entire machine.
 
 Run the following command to install the Ansible collection from Ansible Galaxy:
 
 .. code-block:: PowerShell
 
-   ansible-galaxy collection install signalfx.splunk_otel_collector
+  ansible-galaxy collection install signalfx.splunk_otel_collector
 
-To use this role, include the ``signalfx.splunk_otel_collector.collector role`` invocation in your playbook. Note that this role requires root access. The following example shows how to use the role in a playbook with minimal required configuration:
+To use the Splunk OpenTelemetry Collector role, include the ``signalfx.splunk_otel_collector.collector role`` invocation in your playbook. Note that this role requires root access. For more information, see :new-page:`Splunk OpenTelemetry Collector Ansible Role <https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/ansible/roles/collector>`.
+
+The following example shows how to use the role in a playbook with minimal required configuration:
 
 .. code-block:: PowerShell
 
-   - name: Install the Splunk Distribution of OpenTelemetry Collector
-     hosts: all
-     become: yes
-     # Setting the "become: yes" tag generates the following error message:
-     # "The Powershell family is incompatible with the sudo become plugin". 
-     # Remove the "become: yes" tag.
-     tasks:
-       - name: "Include splunk_otel_collector"
-         include_role:
-           name: "signalfx.splunk_otel_collector.collector"
-         vars:
-           splunk_access_token: YOUR_ACCESS_TOKEN
-           splunk_realm: SPLUNK_REALM
+  - name: Install the Splunk Distribution of OpenTelemetry Collector
+    hosts: all
+    become: yes
+    # For Windows "become: yes" will raise error.
+    # "The Powershell family is incompatible with the sudo become plugin". Remove "become: yes" tag to run on Windows
+    tasks:
+      - name: "Include splunk_otel_collector"
+        include_role:
+          name: "signalfx.splunk_otel_collector.collector"
+        vars:
+          splunk_access_token: YOUR_ACCESS_TOKEN
+          splunk_hec_token: YOUR_HEC_TOKEN
+          splunk_realm: SPLUNK_REALM
+
+Note that ``splunk_hec_yoken`` is optional.
+
+Configuration variables
+==========================================
 
 The following table describes the variables that can be configured for this role:
 

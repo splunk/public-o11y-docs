@@ -9,7 +9,7 @@ Instrument your .NET AWS Lambda function for Splunk Observability Cloud
 
 You can instrument a .NET lambda function to send traces to Splunk Observability Cloud using the following OpenTelemetry template. The template uses these packages:
 
-* :new-page:`OpenTelemetry <https://www.nuget.org/packages/OpenTelemetry0>`
+* :new-page:`OpenTelemetry <https://www.nuget.org/packages/OpenTelemetry>`
 * :new-page:`OpenTelemetry.Exporter.OpenTelemetryProtocol <https://www.nuget.org/packages/OpenTelemetry.Exporter.OpenTelemetryProtocol>` 
 * :new-page:`OpenTelemetry.Instrumentation.AWS <https://www.nuget.org/packages/OpenTelemetry.Instrumentation.AWS>`
 * :new-page:`OpenTelemetry.Instrumentation.AWSLambda <https://www.nuget.org/packages/OpenTelemetry.Instrumentation.AWSLambda>`
@@ -66,11 +66,10 @@ To instrument a .NET function in AWS Lambda for Splunk APM, follow these steps:
                .AddHttpClientInstrumentation()
                .AddAWSInstrumentation()
                // Use AddSource to add your custom DiagnosticSource source names
-               .AddSource(SourceName)
+               //.AddSource("My.Source.Name")
                .SetSampler(new AlwaysOnSampler())
                .AddAWSLambdaConfigurations(opts => opts.DisableAwsXRayContextExtraction = true)
-               .SetResourceBuilder(
-                  ResourceBuilder.CreateDefault()
+               .ConfigureResource(configure => configure
                      .AddService(serviceName, serviceVersion: "1.0.0")
                      // Different resource detectors can be found at
                      // https://github.com/open-telemetry/opentelemetry-dotnet-contrib/tree/main/src/OpenTelemetry.ResourceDetectors.AWS#usage

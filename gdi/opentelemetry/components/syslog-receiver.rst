@@ -23,21 +23,32 @@ Follow these steps to configure and activate the component:
 2. Configure the Syslog receiver as described in the next section.
 3. Restart the Collector.
 
-Sample configurations
+Sample configuration
 --------------------------------
 
 To activate the Syslog receiver, add ``syslog`` to the ``receivers`` section of your configuration file, as in the following sample configurations. See :ref:`syslog-receiver-settings` for more details.
 
 .. code-block:: yaml
 
-
   receivers:
     syslog:
+
+To complete the configuration, include the receiver in the ``logs`` pipeline of the ``service`` section of your
+configuration file:
+
+.. code:: yaml
+
+  service:
+    pipelines:
+      logs:
+        receivers: [syslog]
+
+Configuration examples
+--------------------------------------------
 
 This example shows how to configure logs received using TCP:
 
 .. code-block:: yaml
-
 
   receivers:
     syslog:
@@ -49,13 +60,20 @@ This example shows how to configure logs received using UDP:
 
 .. code-block:: yaml
 
-
   receivers:
     syslog:
       udp:
         listen_address: "0.0.0.0:54526"
       protocol: rfc3164
       location: UTC    
+
+Advanced configurations
+--------------------------------
+
+You can find more examples in the GitHub repository :new-page:`splunk-otel-collextor/examples <https://github.com/signalfx/splunk-otel-collector/tree/main/examples>`.
+
+Use cases
+======================
 
 Configure your connection
 --------------------------------
@@ -78,7 +96,7 @@ You can use the following fields to configure the Syslog receiver with a TCP con
   
   * ``ca_file``.	Path to the CA certificate. For a client this verifies the server certificate. For a server this verifies client certificates. If empty, it uses the system's root CA.
   
-  * ``client_ca_file``. Optional. Path to the TLS certificate the server uses to verify a client certificate. This sets the ClientCAs and ClientAuth to RequireAndVerifyClientCert in the TLSConfig. See :new-page:`godoc.org/crypto/tls#Config` for more information.
+  * ``client_ca_file``. Optional. Path to the TLS certificate the server uses to verify a client certificate. This sets the ClientCAs and ClientAuth to RequireAndVerifyClientCert in the TLSConfig. See :new-page:`https://godoc.org/crypto/tls#Config` for more information.
 
 Configure UDP
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -123,11 +141,6 @@ Parsers with embedded operations
 You can configure many parsing operators to embed certain follow-up operations such as timestamp and severity parsing. 
 
 For more information, see the the GitHub entry on complex parsers at :new-page:`Parsers <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/pkg/stanza/docs/types/parsers.md#complex-parsers>`.
-
-Advanced configurations
---------------------------------
-
-You can find more examples in the GitHub repository :new-page:`splunk-otel-collextor/examples <https://github.com/signalfx/splunk-otel-collector/tree/main/examples>`.
 
 .. _syslog-receiver-settings:
 

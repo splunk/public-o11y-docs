@@ -15,11 +15,13 @@ Splunk Log Observer Connect
     scp
     set-up-logconnect
     LOconnect-troubleshoot
+    LOconnect-default-index
     LOconnect-scenario
     timeline
     queries
     raw-logs-display
     keyword
+    open-logs-splunk
     alias
     logs-individual-log-connect
     message-field
@@ -38,6 +40,8 @@ Splunk Log Observer Connect
 
 - :ref:`logs-LOconnect-troubleshoot`
 
+- :ref:`LOconnect-default-index`
+
 - :ref:`logs-LOconnect-scenario`
 
 - :ref:`logs-timeline`
@@ -47,6 +51,8 @@ Splunk Log Observer Connect
 - :ref:`logs-raw-logs-display`
 
 - :ref:`logs-keyword`
+
+- :ref:`open-logs-splunk`
 
 - :ref:`logs-alias`
 

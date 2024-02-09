@@ -7,16 +7,54 @@ OTLP exporter
 .. meta::
       :description: The OTLP exporter allows the OpenTelemetry Collector to send metrics, traces, and logs through gRPC using the OTLP format. Read on to learn how to configure the component.
 
-The OTLP exporter sends metrics, traces, and logs through gRPC using the OTLP format. See :ref:`otel-data-processing` for more information.
+The OTLP exporter sends metrics, traces, and logs through gRPC using the OTLP format. See :ref:`otel-data-processing` for more information. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. By default, this exporter requires TLS and provides queued retry capabilities.
 
-By default, this exporter requires TLS and provides queued retry capabilities. 
+Read more about the OTLP format at the OTel repo :new-page:`OpenTelemetry Protocol Specification <https://github.com/open-telemetry/opentelemetry-proto/blob/main/docs/specification.md>`.
 
-For information on the OTLP/HTTP exporter, see :ref:`otlphttp-exporter`.
+.. note:: For information on the OTLP/HTTP exporter, see :ref:`otlphttp-exporter`. For information on the OTLP receiver, see :ref:`otlp-receiver`.
 
 Get started
 ======================
 
-The OTLP exporter is included in the Splunk Distribution of OpenTelemetry Collector default configuration in host monitoring (agent) mode for all data pipelines: ``metrics``, ``traces``, and ``logs``. Learn more in :ref:`otel-configuration-ootb` and :ref:`otel-deployment-mode`.
+.. note:: 
+  
+  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector when deploying in data forwarding (gateway) mode. See :ref:`otel-deployment-mode` for more information. 
+  
+  For details about the default configuration, see :ref:`otel-kubernetes-config`, :ref:`linux-config-ootb`, or :ref:`windows-config-ootb`. You can customize your configuration any time as explained in this document.
+
+Follow these steps to configure and activate the component:
+
+1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+  
+  - :ref:`otel-install-linux`
+  - :ref:`otel-install-windows`
+  - :ref:`otel-install-k8s`
+
+2. Configure the exporter as described in the next section.
+3. Restart the Collector.
+
+Sample configuration
+--------------------------------
+
+To activate the component, add ``otlp`` to the ``exporters`` section of your configuration file:
+
+.. code-block:: yaml
+
+  exporters:
+    otlp:
+
+The OTLP exporter is included in the Splunk Distribution of OpenTelemetry Collector default configuration in all data pipelines: ``metrics``, ``traces``, and ``logs``. 
+
+.. code-block:: yaml
+
+  service:
+    pipelines:
+      metrics:
+        processors: [otlp]
+      logs:
+        processors: [otlp]
+      traces:
+        processors: [otlp]
 
 The following settings are required:
 
@@ -31,13 +69,12 @@ The following settings are required:
   * By default, ``tls: insecure`` is set to ``true``. 
   * Mutual TLS (mTLS) is also supported. See more at :new-page:`TLS/mTLS configuration <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/configtls/README.md#tls--mtls-configuration>` in GitHub.
 
-Sample configurations
+Configuration examples
 --------------------------------
 
 This is a sample configuration for the exporter:
 
 .. code-block:: yaml
-
 
   exporters:
     otlp:

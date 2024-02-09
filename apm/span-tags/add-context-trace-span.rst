@@ -7,7 +7,7 @@ Add context to spans with span tags in Splunk APM
 .. meta::
    :description: Learn how to use span tags to slice and dice service performance by dimensions in Splunk APM.
 
-Enrich the context of the spans you send to Splunk APM by adding span tags. Span tags are key-value pairs that provide additional metadata about spans in a trace. In OpenTelemetry, span tags are known as ``attributes``. 
+Enrich the context of the spans you send to Splunk APM by adding span tags. Span tags are key-value pairs that provide additional metadata about spans in a trace. In OpenTelemetry, span tags are ``attributes``. 
 
 There are two ways to add span tags to your spans:
 
@@ -15,6 +15,11 @@ There are two ways to add span tags to your spans:
   * Add span tags as OpenTelemetry attributes to spans when you send data to the Splunk Distribution of OpenTelemetry Collector. This option lets you add span tags to spans in bulk. See :ref:`otel-span-tags` to learn how.
 
 If you deploy the Splunk Distribution of OpenTelemetry Collector as a gateway to centrally manage data collection from multiple services, you might want to instrument your application to define span tags and manage other span tags with the Collector. 
+
+Prerequisite
+================
+
+To add span tags, you must have an admin role. 
 
 .. _span-tag-naming:
 
@@ -70,7 +75,7 @@ The following examples show how to create a custom tag for an existing span:
 
       customizedSpan = trace.get_current_span()
 
-      customizedSpan.set_attribute("my.attribute", "value");
+      customizedSpan.set_attribute("my.attribute", "value")
 
       # You can also set global tags using the OTEL_RESOURCE_ATTRIBUTES	
       # environment variable, which accepts a list of comma-separated key-value

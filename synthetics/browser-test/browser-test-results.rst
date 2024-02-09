@@ -144,7 +144,7 @@ Using the waterfall chart, you can do the following:
 - Hover over a row of the timeline to view a pop-up message with detailed request timings for that resource.
 - Search resources in a page by keywords in the URL.
 - Use the tabs to filter the waterfall chart by resource type, including JS, CSS, Image, Media, JSON, and XML.
-- Download the raw HAR file.
+- Download the raw HAR file, using the :new-page:`API <https://dev.splunk.com/observability/reference/api/synthetics_artifacts/latest#endpoint-getartifactsbytestid>`.
 - Show or hide columns in the chart
 
 .. - Customize the statistics displayed for each request inline in the waterfall chart
@@ -157,8 +157,6 @@ Filmstrip
 :strong:`Available in Enterprise Edition.`
 
 The filmstrip offers a screenshot of site performance at specific intervals on a timeline, so that you can see how the page responds in real time. By default, the filmstrip provides a screenshot and the time in milliseconds for every visual change as the page loads. You can also use the interval selector to view screenshots for every 100 milliseconds, 500 milliseconds, and one second. 
-
-Within the filmstrip, you can use the :guilabel:`Download Screen Captures` button to download a zip file of .jpg images of all of the screenshots the test captured. 
 
 .. _video:
 

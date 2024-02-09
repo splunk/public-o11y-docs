@@ -162,7 +162,7 @@ integration:
       - Specifies how to map JMX MBean values to metrics. If using a
          specific service monitor such as Cassandra, Kafka, or ActiveMQ,
          they come pre-loaded with a set of mappings, and any that you
-         add in this option are merged with those.
+         add in this option are merged with those. To learn more, see the :new-page:`Collectd documentation <https://www.collectd.org/documentation/manpages/collectd-java.html>`.
 
 The **nested** ``mBeanDefinitions`` configuration object has the
 following fields:

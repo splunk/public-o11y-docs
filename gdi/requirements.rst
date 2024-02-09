@@ -36,6 +36,11 @@ The following host and application monitors are available. Refer to each service
 
 .. include:: /_includes/application-receiver-table.rst
 
+Processor architecture
+-------------------------------------------------------------
+
+For information on processor architectures supported by the Collector and the bundled Smart Agent monitors, see :ref:`collector-architecture`.
+
 
 Application monitoring (APM)
 ==================================================

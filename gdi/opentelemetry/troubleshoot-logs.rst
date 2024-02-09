@@ -14,7 +14,7 @@ Here are some common issues related to log collection on the Collector.
 Source isn't generating logs
 =========================================
 
-If using Linux, run the following commands to check if the source is generating logs:
+If using Linux, run the following commands to check if the source is generating Collector logs:
 
 .. code-block:: bash
 
@@ -22,7 +22,7 @@ If using Linux, run the following commands to check if the source is generating 
   journalctl -u my-service.service -f
 
 
-If using Windows, run the following command to check if the source is generating logs:
+If using Windows, run the following command to check if the source is generating Collector logs:
 
 .. code-block:: shell
 

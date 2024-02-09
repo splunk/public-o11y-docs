@@ -70,7 +70,7 @@ Initialize this code snippet to set up session replay through Splunk CDN.
 
 
 
-Use session replay through Splunk NPM
+Use session replay through NPM
 --------------------------------------------
 Use the following command to set up session replay with NPM through a package named ``@splunk/otel-web-session-recorder``.
 

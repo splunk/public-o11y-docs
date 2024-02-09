@@ -122,9 +122,10 @@ Steps
 
 - To integrate with Amazon Web Services, use the method that better suits your environment:
 
-   - :ref:`Connect to AWS using the guided setup <aws-wizardconfig>`
-   - :ref:`Connect to AWS using the API <get-configapi>`
-   - :ref:`Connect to AWS using Terraform <terraform-config>`
+   - :ref:`Polling (default) <aws-connect-polling>`: Use either Splunk's UI wizard or the Splunk Observability Cloud API
+   - :ref:`Streaming (Splunk-managed) <aws-connect-ms>`: Use either the UI wizard or the Splunk Observability Cloud API
+   - :ref:`Streaming (AWS-managed) <aws-console-ms>`: Connect and manage Metric Streams from the AWS console
+   - :ref:`Splunk Terraform <terraform-config>`: Use this if you already manage your infrastructure as code by deploying through Terraform
 
 - To integrate with Google Cloud Platform services, use the method that best suits your environment:
 

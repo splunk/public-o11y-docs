@@ -101,14 +101,14 @@ Containers
 
 There are numerous attributes for services running in containers, such as ``container.id``, ``container.name``, or ``container.image.name``. 
 
-Learn more in the OpenTelemetry GitHub repo at :new-page:`Container semantic conventions <https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/resource/semantic_conventions/container.md>`.
+Learn more in the OpenTelemetry GitHub repo at :new-page:`Container semantic conventions <https://github.com/open-telemetry/semantic-conventions/blob/main/model/resource/container.yaml>`.
 
 Hosts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There are numerous attributes for services running in hosts, such as ``host.id``, ``host.name``, or ``host.arch``. 
 
-Learn more in the OpenTelemetry GitHub repo at :new-page:`Host semantic conventions <https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/resource/semantic_conventions/host.md>`.
+Learn more in the OpenTelemetry GitHub repo at :new-page:`Host semantic conventions <https://github.com/open-telemetry/semantic-conventions/blob/main/model/resource/host.yaml>`.
 
 Deployment environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -122,7 +122,7 @@ Cloud
 
 There are attributes that capture information for services running in public cloud environments, such ``cloud.provider``, ``cloud.account.id``, or ``cloud.region``.
 
-Learn more in the OpenTelemetry GitHub repo at :new-page:`Cloud semantic conventions <https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/resource/semantic_conventions/cloud.md>`.
+Learn more in the OpenTelemetry GitHub repo at :new-page:`Cloud semantic conventions <https://github.com/open-telemetry/semantic-conventions/blob/main/model/resource/cloud.yaml>`.
 
 .. caution:: Some cloud providers, such as GCP, define semantic conventions specific to their offering. Check Google official documentation for more information.
 

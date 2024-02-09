@@ -27,6 +27,12 @@ Host receiver metrics appear in Infrastructure Monitoring. You can use them to c
 Get started
 ======================
 
+.. note:: 
+  
+  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information. 
+  
+  For details about the default configuration, see :ref:`otel-kubernetes-config`, :ref:`linux-config-ootb`, or :ref:`windows-config-ootb`. You can customize your configuration any time as explained in this document.
+
 Follow these steps to configure and activate the component:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
@@ -38,7 +44,7 @@ Follow these steps to configure and activate the component:
 2. Configure the receiver as described in the next section.
 3. Restart the Collector.
 
-.. note:: Metrics produced by this receiver count towards the custom metric ingestion limit. See :ref:`sys-limits`.
+.. note:: Data ingested into Splunk Observability Cloud is subject to system limits. See :ref:`per-product-limits` for more information. 
 
 Collect container host metrics (Linux)
 ---------------------------------------

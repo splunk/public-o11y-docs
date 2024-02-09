@@ -25,9 +25,7 @@ This is the collection of scenarios available for Splunk Observability Cloud.
   * - :ref:`Splunk Observability Cloud <get-started-o11y>`    
     - :ref:`scenario-security`
   * - :ref:`OpenTelemetry <otel-intro>`
-    - :ref:`otel-collector-scenario`
-  * - :ref:`OpenTelemetry <otel-intro>`
-    - :ref:`auto-instrumentation-java-operator`     
+    - :ref:`otel-collector-scenario`   
   * - :ref:`Alerts and detectors <scenarios-alerts-detectors>`
     - :ref:`monitor-server-latency`
   * - :ref:`Alerts and detectors <scenarios-alerts-detectors>`    
@@ -94,6 +92,9 @@ This is the collection of scenarios available for Splunk Observability Cloud.
     - :ref:`api-test-scenario`
   * - :ref:`Synthetic Monitoring <synth-landing>`     
     - :ref:`uptime-test-scenario`
-  * - :ref:`Log Observer <logs-intro-logconnect>`
+  * - :ref:`Log Observer Connect <logs-intro-logconnect>`
     - :ref:`logs-LOconnect-scenario`
+  * - :ref:`Splunk platform integration <scenarios-integration-scenario-landing>`
+    - :ref:`integration-scenario1`
+
 

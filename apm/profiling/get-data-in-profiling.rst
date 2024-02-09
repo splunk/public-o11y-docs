@@ -3,7 +3,7 @@
 Get data into Splunk APM AlwaysOn Profiling
 ******************************************************
 
-.. meta:: 
+.. meta::
    :description: Follow these instructions to get data into Splunk APM AlwaysOn Profiling.
 
 Follow these instructions to get profiling into Splunk APM AlwaysOn Profiling.
@@ -31,7 +31,7 @@ If you're deploying the Splunk Distribution of OpenTelemetry Collector using Hel
 
 .. code-block:: bash
 
-   --set splunkObservability.profilingEnabled='true' 
+   --set splunkObservability.profilingEnabled='true'
 
 You can also edit the parameter in the values.yaml file itself. For example:
 
@@ -67,7 +67,7 @@ Follow these instructions to get profiling data into Splunk APM using AlwaysOn P
 Instrument your application or service
 ---------------------------------------------------------------
 
-AlwaysOn Profiling requires APM tracing data to correlate stack traces to your application requests. To instrument your application for Splunk APM, follow the steps for the appropriate programming language: 
+AlwaysOn Profiling requires APM tracing data to correlate stack traces to your application requests. To instrument your application for Splunk APM, follow the steps for the appropriate programming language:
 
 .. list-table::
    :header-rows: 1
@@ -78,14 +78,23 @@ AlwaysOn Profiling requires APM tracing data to correlate stack traces to your a
      - :strong:`Documentation`
    * - Java
      - Splunk Distribution of OpenTelemetry Java version 1.14.2 or higher
+
+       OpenJDK versions 15.0 to 17.0.8 are not supported for memory profiling. See :new-page:`https://bugs.openjdk.org/browse/JDK-8309862` in the JDK bug tracker for more information.
      - * :ref:`instrument-java-applications`
        * :ref:`profiling-configuration-java`
    * - Node.js
      - Splunk Distribution of OpenTelemetry JS version 2.0 or higher
      - :ref:`instrument-nodejs-applications`
-   * - .NET
+   * - .NET (OpenTelemetry)
+     - Splunk Distribution of OpenTelemetry .NET version 1.3.0 or higher
+     - :ref:`instrument-otel-dotnet-applications`
+   * - .NET (SignalFx)
      - SignalFx Instrumentation for .NET version 1.0.0 or higher
      - :ref:`instrument-dotnet-applications`
+   * - Python
+     - Splunk Distribution of OpenTelemetry Python version 1.15 or higher
+     - * :ref:`instrument-python-applications`
+       * :ref:`profiling-configuration-python`
 
 .. note:: See :ref:`apm-data-retention` for information on profiling data retention.
 
@@ -96,7 +105,7 @@ Activate AlwaysOn Profiling
 
 After you've instrumented your service for Splunk Observability Cloud and checked that APM data is getting into Splunk APM, activate AlwaysOn Profiling.
 
-To activate AlwaysOn Profiling, follow the steps for the appropriate programming language: 
+To activate AlwaysOn Profiling, follow the steps for the appropriate programming language:
 
 .. tabs::
 
@@ -112,20 +121,20 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
       - Check that the OTLP endpoint that exports profiling data is set correctly:
          - The profiling-specific endpoint is configured through the ``splunk.profiler.logs-endpoint`` system property or the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable.
          - If that endpoint is not set, then the generic OTLP endpoint is used, configured through the ``otel.exporter.otlp.endpoint`` system property or the ``OTEL_EXPORTER_OTLP_ENDPOINT`` environment variable.
-         - If that endpoint is not set either, it defaults to \http://localhost:4317.
-         -  For non-Kubernetes deployments, the OTLP endpoint has to point to \http://${COLLECTOR_IP}:4317. If the collector and the profiled application run on the same host, then use \http://localhost:4317. Otherwise, make sure there are no firewall rules blocking access to port 4317 from the profiled host to the collector host.
-         -  For Kubernetes deployments, the OTLP endpoint has to point to \http://$(K8S_NODE_IP):4317 where the ``K8S_NODE_IP`` is fetched from the Kubernetes downstream API by setting the environment configuration on the Kubernetes pod running the application. For example:
+         - If that endpoint is not set either, it defaults to ``http://localhost:4317``.
+         -  For non-Kubernetes deployments, the OTLP endpoint has to point to ``http://${COLLECTOR_IP}:4317``. If the collector and the profiled application run on the same host, then use ``http://localhost:4317``. Otherwise, make sure there are no firewall rules blocking access to port 4317 from the profiled host to the collector host.
+         -  For Kubernetes deployments, the OTLP endpoint has to point to ``http://$(K8S_NODE_IP):4317`` where the ``K8S_NODE_IP`` is fetched from the Kubernetes downstream API by setting the environment configuration on the Kubernetes pod running the application. For example:
         
             .. code-block:: yaml
 
-               env:  
+               env:
                - name: K8S_NODE_IP
                  valueFrom:
                    fieldRef:
                      apiVersion: v1
                      fieldPath: status.hostIP
       - Port 9943 is the default port for the SignalFx receiver in the collector distribution. If you change this port in your collector configuration, you need to pass the custom port to the JVM.
-      
+
       The following example shows how to activate the profiler using the system property:
 
       .. code-block:: bash
@@ -140,23 +149,25 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-java`.
 
+      .. note:: AlwaysOn Profiling is not supported on Oracle JDK 8 and IBM J9.
+
    .. group-tab:: Node.js
 
       :strong:`Requirements`
 
-      AlwaysOn Profiling requires Node 16 and higher.
+      AlwaysOn Profiling requires Node.js 16 and higher.
 
       :strong:`Instrumentation`
 
       - Activate the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
       - Activate memory profiling by setting the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.
       - Check the OTLP the endpoint in the ``splunk.profiler.logs-endpoint`` system property or the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable:
-         -  For non-Kubernetes deployments, the OTLP endpoint has to point to \http://${COLLECTOR_IP}:4317. If the collector and the profiled application run on the same host, then use \http://localhost:4317. Otherwise, make sure there are no firewall rules blocking access to port 4317 from the profiled host to the collector host.
-         -  For Kubernetes deployments, the OTLP endpoint has to point to \http://$(K8S_NODE_IP):4317 where the ``K8S_NODE_IP`` is fetched from the Kubernetes downstream API by setting the environment configuration on the Kubernetes pod running the application. For example:
+         -  For non-Kubernetes deployments, the OTLP endpoint has to point to ``http://${COLLECTOR_IP}:4317``. If the collector and the profiled application run on the same host, then use ``http://localhost:4317``. Otherwise, make sure there are no firewall rules blocking access to port 4317 from the profiled host to the collector host.
+         -  For Kubernetes deployments, the OTLP endpoint has to point to ``http://$(K8S_NODE_IP):4317`` where the ``K8S_NODE_IP`` is fetched from the Kubernetes downstream API by setting the environment configuration on the Kubernetes pod running the application. For example:
         
             .. code-block:: yaml
 
-               env:  
+               env:
                - name: K8S_NODE_IP
                  valueFrom:
                    fieldRef:
@@ -177,7 +188,26 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-nodejs`.
 
-   .. group-tab:: .NET
+   .. group-tab:: .NET (OTel)
+
+      .. note::
+         AlwaysOn Profiling for .NET (OTel) is in beta development. This feature is provided by Splunk to you "as is" without any warranties, maintenance and support, or service-level commitments. Use of this feature is subject to the :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`.
+
+      :strong:`Requirements`
+
+      AlwaysOn Profiling requires .NET 6.0 or higher.
+
+      .. note:: .NET Framework is not supported.
+
+      :strong:`Instrumentation`
+
+      - Activate the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true`` for your .NET process.
+      - Activate memory profiling by setting the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.
+      - ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable by default points to http://localhost:4318/v1/logs. It can be reconfigured to the Splunk Distribution of OpenTelemetry Collector.
+
+      For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-otel-dotnet`.
+
+   .. group-tab:: .NET (SFx)
 
       :strong:`Requirements`
 
@@ -192,10 +222,54 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
       - Activate the profiler by setting the ``SIGNALFX_PROFILER_ENABLED`` environment variable to ``true`` for your .NET process.
       - Activate memory profiling by setting the ``SIGNALFX_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.
-      - Make sure that the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to \http://localhost:4317.
-      - Check that the ``SIGNALFX_PROFILER_LOGS_ENDPOINT`` environment variable points to \http://localhost:4318/v1/logs or to the Splunk Distribution of OpenTelemetry Collector.
 
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-dotnet`.
+
+   .. group-tab:: Python
+
+      .. note::
+         AlwaysOn Profiling for Python is in beta development. This feature is provided by Splunk to you "as is" without any warranties, maintenance and support, or service-level commitments. Use of this feature is subject to the :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`.
+
+      :strong:`Requirements`
+
+      AlwaysOn Profiling requires Python 3.7.2 or higher.
+
+      :strong:`Instrumentation`
+
+      Activate the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true`` or call the ``start_profiling`` function in your application code.
+
+      Check the OTLP endpoint in the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable:
+
+         - For non-Kubernetes environments, make sure that the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://localhost:4317``.
+         - For Kubernetes deployments, the OTLP endpoint has to point to ``http://$(K8S_NODE_IP):4317`` where the ``K8S_NODE_IP`` is fetched from the Kubernetes downstream API by setting the environment configuration on the Kubernetes pod running the application. For example:
+
+            .. code-block:: yaml
+
+               env:
+               - name: K8S_NODE_IP
+                 valueFrom:
+                   fieldRef:
+                     apiVersion: v1
+                     fieldPath: status.hostIP
+
+      The following example shows how to activate the profiler from your application's code:
+
+      .. code-block:: python
+
+         from splunk_otel.profiling import start_profiling
+
+         # Activates CPU profiling
+         # All arguments are optional
+         start_profiling(
+            service_name='my-python-service',
+            resource_attributes={
+               'service.version': '3.1'
+               'deployment.environment': 'production',
+            }
+            endpoint='http://localhost:4317'
+         )
+
+      For more configuration options, see :ref:`profiling-configuration-python`.
 
 .. _profiling-check-data-coming-in:
 
@@ -204,10 +278,10 @@ Check that Splunk Observability Cloud is receiving profiling data
 
 After you set up and activate AlwaysOn Profiling, check that profiling data is coming in:
 
-1. Log in to Splunk Observability Cloud. 
+1. Log in to Splunk Observability Cloud.
 2. In the navigation menu, select :menuselection:`APM`.
 3. In Splunk APM, select :guilabel:`AlwaysOn Profiling`.
-4. Select a service, and switch from the CPU view to the Memory view. 
+4. Select a service, and switch from the CPU view to the Memory view.
 5. If your service runs in multiple instances, select the instance that you're interested in by selecting the host, container, and process ID.
 6. If you've activated memory profiling, explore memory metrics. See :ref:`profiling-memory-metrics`.
 
@@ -221,6 +295,10 @@ Follow these steps to set up AlwaysOn Profiling with a collector in data forward
 .. mermaid::
 
    flowchart LR
+
+      accTitle: Example gateway deployment diagram
+      accDescr: Step one. Point the instrumentation agent to the collector in host (agent) monitoring mode. Step two. Configure the collector in host (agent) monitoring mode. Step three. Configure the collector in data forwarding (gateway) mode. Step four. Send data to Splunk Observability Cloud.
+
    instrumentation["`**(1)** Instrumentation agent`"] --> collector["`**(2)** Collector in host (agent) monitoring mode`"] --> datacollector["`**(3)** Collector in data forwarding (gateway) mode`"] --> SOC["`**(4)** Splunk Observability Cloud`"]
 
 #. Point the instrumentation agent to the OTLP gRPC receiver for the collector in host monitoring (agent) mode. The OTLP gRPC receiver must be running on the same host and port as the collector in host monitoring (agent) mode.

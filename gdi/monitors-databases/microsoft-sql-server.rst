@@ -20,7 +20,7 @@ Benefits
 Installation
 ------------
 
-.. include:: /_includes/collector-installation-linux.rst
+.. include:: /_includes/collector-installation.rst
 
 Microsoft SQL installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -36,11 +36,11 @@ Microsoft SQL Server host. To create this login, follow these steps:
 
    USE master;
    GO
-   CREATE LOGIN [signalfxagent] WITH PASSWORD = '<YOUR PASSWORD HERE>';
+   CREATE LOGIN [<user_id>] WITH PASSWORD = '<YOUR PASSWORD HERE>';
    GO
-   GRANT VIEW SERVER STATE TO [signalfxagent];
+   GRANT VIEW SERVER STATE TO [<user_id>];
    GO
-   GRANT VIEW ANY DEFINITION TO [signalfxagent];
+   GRANT VIEW ANY DEFINITION TO [<user_id>];
    GO
 
 Configuration
@@ -192,21 +192,20 @@ TCP/IP is deactivated
 
 In some Windows-based SQL Server instances, TCP/IP has been deactivated
 by default. You might encounter this in a Microsoft Azure service
-instance. If you see error messages similar to
-``Cannot read handshake packet: read tcp: wsarecv: An existing connection was forcibly closed by the remote host.``,
+instance. If you see error messages similar to ``Cannot read handshake packet: read tcp: wsarecv: An existing connection was forcibly closed by the remote host.``,
 you need to explicitly activate TCP/IP for the instance.
 
 1. Verify agent configurations are correct.
 
 2. In your SQL Server instance, activate TCP/IP. To do this, select
-   **Start**, then **Administrative Tools**, then **Computer
-   Management**.
+   :guilabel:`Start`, then :guilabel:`Administrative Tools`, then :guilabel:`Computer
+   Management`.
 
-3. In the ``Computer Management`` sidebar, select **Services and
-   Applications**, then **SQL Server Configuration Manager**, then **SQL
-   Server Network Configuration**.
+3. In the :guilabel:`Computer Management` sidebar, select :menuselection:`Services and
+   Applications`, then :menuselection:`SQL Server Configuration Manager`, then :menuselection:`SQL
+   Server Network Configuration`.
 
-4. Select **Protocols for ``<YOUR SQL SERVER NAME>``**.
+4. Select :menuselection:`Protocols for <YOUR SQL SERVER NAME>`.
 
-5. In the protocol list, right-click the **TCP/IP** protocol and select
-   **Enable**.
+5. In the protocol list, right-click the :strong:`TCP/IP` protocol and select
+   :strong:`Enable`.

@@ -21,13 +21,31 @@ Instrument back-end applications to send spans to Splunk APM
    Instrument applications written in other programming languages <other-languages>
    Send spans from the Istio service mesh <istio/istio>
 
-Instrument your back-end services and applications to send metrics and traces to Splunk Observability Cloud.
-You can send metrics and traces from back-end applications to Splunk Observability Cloud through the Splunk Distribution of OpenTelemetry Collector, or you can send metrics and traces directly to Splunk Observability Cloud using the API.
+You can instrument your back-end services and applications to send metrics and traces to Splunk Observability Cloud. 
+
+.. raw:: html
+
+   <embed>
+      <h2>How to send application data to Splunk Observability Cloud<a name="otel-apm-send" class="headerlink" href="#otel-apm-send" title="Permalink to this headline">¶</a></h2>
+   </embed>
+
+You have the following options to send app and service data to Splunk Observability Cloud:
+
+* Use the Splunk Distribution of OpenTelemetry Collector to send metrics and traces from back-end applications. 
+   
+   * Available languages include Java, Node.js, .NET, Go, Python, Ruby, and PHP.
+
+   * Learn more about the Collector at :ref:`otel-intro`, including the :ref:`zero-config`.
+
+* Send metrics and traces directly to Splunk Observability Cloud using the API. See more in our :new-page:`dev portal documentation <https://dev.splunk.com/observability/docs/apm/send_traces>`. 
 
 .. mermaid::
 
    flowchart LR
 
+      accTitle: Back-end instrumentation diagram 
+      accDescr: OpenTelemetry instrumentation encompasses back-end applications and serverless functions. Instrumentation sends back-end application metrics, traces, and logs to the Splunk Distribution of OpenTelemetry Collector, which sends them to Splunk APM. Instrumentation also sends back-end application metrics, traces, and logs to Splunk APM through the API. Instrumentation sends serverless function metrics, traces, and logs to Splunk APM using the API. 
+               
       subgraph "\nOpenTelemetry instrumentation"
 
 
@@ -46,6 +64,16 @@ You can send metrics and traces from back-end applications to Splunk Observabili
       A -- "traces, metrics, logs (API)" --> M
       B -- "traces, metrics, logs (API)" --> M
 
+.. raw:: html
+
+   <embed>
+      <h3>Limitations to using the API<a name="otel-apm-send-api" class="headerlink" href="#otel-apm-send-api" title="Permalink to this headline">¶</a></h3>
+   </embed>
+
+If you send your APM data directly to Splunk Observability Cloud without using the Collector, keep in mind the following limitations:
+
+* APM billing data might be inaccurate. Learn more at :ref:`apm-billing-usage-index`.
+* APM monitoring correlation might not work as expected, impacting Related Content. To use Related Content, refer to :ref:`get-started-relatedcontent`.
 
 .. raw:: html
 
@@ -72,6 +100,6 @@ You can also send traces from applications written in languages for which Splunk
 
 To learn more about the data collected by Splunk Observability Cloud, see:
 
-- :ref:`data-model`.
-- :ref:`get-started-metrics`.
-- :ref:`span-attributes`.
+- :ref:`data-model`
+- :ref:`get-started-metrics`
+- :ref:`span-attributes`

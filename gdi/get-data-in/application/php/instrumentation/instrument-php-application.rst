@@ -73,7 +73,7 @@ Follow these steps to automatically instrument your application:
 
             SetEnv SIGNALFX_SERVICE_NAME="<my-service-name>"
             SetEnv SIGNALFX_ENDPOINT_URL='http://localhost:9080/v1/trace'
-            SetEnv SIGNALFX_TRACE_GLOBAL_TAGS="deployment.environment<my_environment>"
+            SetEnv SIGNALFX_TRACE_GLOBAL_TAGS="deployment.environment:<my_environment>"
 
       .. tab:: Terminal
 
@@ -161,32 +161,38 @@ The following example shows how to update a deployment to expose environment var
 
    apiVersion: apps/v1
    kind: Deployment
+   metadata:
+     name: my-deployment
    spec:
-      selector:
-         matchLabels:
-            app: your-application
-      template:
-         spec:
-            containers:
-            - name: myapp
-               env:
-                  - name: SIGNALFX_PHP_LIBRARY
-                  valueFrom:
-                     fieldRef:
-                        fieldPath: status.hostIP
-                  - name: SIGNALFX_SERVICE_NAME
-                    value: "<service-name>"
-                  - name: SIGNALFX_ENDPOINT_URL
-                    value: "http://<endpoint>:9080/v1/trace"
-                  - name: SIGNALFX_TRACE_GLOBAL_TAGS
-                    value: "deployment.environment:<my_environment>"
+     selector:
+       matchLabels:
+         app: your-application
+     template:
+       metadata:
+         labels:
+           app: your-application
+       spec:
+         containers:
+         - name: myapp
+           image: <image-name>
+           env:
+             - name: SIGNALFX_PHP_LIBRARY
+               valueFrom:
+                 fieldRef:
+                   fieldPath: status.hostIP
+             - name: SIGNALFX_SERVICE_NAME
+               value: "<service-name>"
+             - name: SIGNALFX_ENDPOINT_URL
+               value: "http://<endpoint>:9080/v1/trace"
+             - name: SIGNALFX_TRACE_GLOBAL_TAGS
+               value: "deployment.environment:<my_environment>"
 
 Next, configure the PHP instrumentation for Splunk Observability Cloud. See :ref:`advanced-php-configuration` for more information.
 
 .. _export-directly-to-olly-cloud-php:
 
 Send data directly to Splunk Observability Cloud
----------------------------------------------------
+=====================================================
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
@@ -217,3 +223,8 @@ The realm name appears in the :guilabel:`Organizations` section.
 Next, configure the PHP instrumentation for Splunk Observability Cloud. See :ref:`advanced-php-configuration` for more information.
 
 .. note:: For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
+
+Specify the source host 
+-----------------------------------------------
+
+.. include:: /_includes/gdi/apm-api-define-host.rst

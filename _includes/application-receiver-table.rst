@@ -358,11 +358,6 @@
      - :strong:`X`
      -
      -
-   * - :ref:`Mesos Marathon <marathon>`
-     - :strong:`X`
-     -
-     -
-
    * - :ref:`Microsoft .NET <microsoft-dotnet>`
      - :strong:`X`
      -
@@ -523,7 +518,7 @@
      -
      -
 
-   * - :ref:`SignalFx Forwarder <signalfx-forwarder>`
+   * - :ref:`signalfx-forwarder`
      - :strong:`X`
      - :strong:`X`
      -

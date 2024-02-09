@@ -112,11 +112,13 @@ If you need to add custom attributes to spans or want to manually generate spans
 .. _enable_profiling_java:
 
 Activate AlwaysOn Profiling
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------
 
 To activate AlwaysOn Profiling, use the following system property argument. You can also use the ``SPLUNK_PROFILER_ENABLED`` environment variable. For more information, see :ref:`profiling-intro`.
 
 To activate memory profiling, set the ``splunk.profiler.memory.enabled`` system property or the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after activating AlwaysOn Profiling.
+
+.. note:: OpenJDK versions 15.0 to 17.0.8 are not supported for memory profiling. See :new-page:`https://bugs.openjdk.org/browse/JDK-8309862` in the JDK bug system for more information. 
 
 The following example shows how to activate the profiler using the system property:
 
@@ -135,7 +137,7 @@ See :ref:`get-data-in-profiling` for more information. For more settings, see :r
 .. _enable_automatic_metric_collection:
 
 Activate metrics collection
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------
 
 To activate automatic metric collection, activate the metrics feature using a system property argument. You can also use the ``SPLUNK_METRICS_ENABLED`` environment variable.
 
@@ -153,7 +155,7 @@ If your metrics endpoint is different than the default value, set the ``SPLUNK_M
 .. _ignore_endpoints_java:
 
 Ignore specific endpoints
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------------
 
 By default, the Java agent collects traces from all the endpoints of your application. To ignore specific endpoints, use the ``rules`` sampler and define ``drop`` rules.
 
@@ -189,63 +191,53 @@ Deploy the Java agent in Kubernetes
 
 To deploy the Java agent in Kubernetes, follow these steps:
 
-1. :ref:`docker_java_agent`
-2. :ref:`configure_kubernetes_java`
+#. Edit the Dockerfile for your application image to add the following commands:
 
-.. _docker_java_agent:
+   .. code-block:: docker
 
-Deploy the Java agent in Docker
------------------------------------------------------------
+      # Adds the latest version of the Splunk Java agent
+      ADD https://github.com/signalfx/splunk-otel-java/releases/latest/download/splunk-otel-javaagent.jar .
+      # Modifies the entry point
+      ENTRYPOINT ["java","-javaagent:splunk-otel-javaagent.jar","-jar","./<myapp>.jar"]
 
-To deploy the Java agent in Docker, do the following:
+#. Configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
 
-1. Edit the Dockerfile for your application image to add the following commands:
+   The following example shows how to update a deployment to expose environment variables by adding the agent configuration under the ``.spec.template.spec.containers.env`` section:
 
-.. code-block:: docker
+   .. code-block:: yaml
 
-   # Adds the latest version of the Splunk Java agent
-   ADD https://github.com/signalfx/splunk-otel-java/releases/latest/download/splunk-otel-javaagent.jar .
-   # Modifies the entry point
-   ENTRYPOINT ["java","-javaagent:splunk-otel-javaagent.jar","-jar","./<myapp>.jar"]
+      apiVersion: apps/v1
+      kind: Deployment
+      spec:
+      selector:
+         matchLabels:
+            app: your-application
+      template:
+         spec:
+            containers:
+            - name: myapp
+               env:
+                  - name: SPLUNK_OTEL_AGENT
+                  valueFrom:
+                     fieldRef:
+                        fieldPath: status.hostIP
+                  - name: OTEL_EXPORTER_OTLP_ENDPOINT
+                  value: "http://$(SPLUNK_OTEL_AGENT):4317"
+                  - name: OTEL_SERVICE_NAME
+                  value: "<serviceName>"
+                  - name: OTEL_RESOURCE_ATTRIBUTES
+                  value: "deployment.environment=<environmentName>"
 
-2. Use ``ENV`` commands to set environment variables for the Java agent. To activate metrics or profiling, add the required ``-Dotel`` argument to the ``ENTRYPOINT`` list.
+.. note:: You can also deploy instrumentation using the Kubernetes Operator. See :ref:`auto-instrumentation-java-k8s`.
 
-When you deploy the Java agent with your application build, you ensure that the Java agent is launched with tracing.
+.. _java-agent-cloudfoundry:
 
-.. _configure_kubernetes_java:
+Deploy the Java agent in Cloudfoundry
+=======================================================
 
-Configure Kubernetes to run the agent
------------------------------------------------------------
+To instrument a Java application in Cloudfoundry, use the Splunk OpenTelemetry Java Agent buildpack framework. The framework automatically instruments your application to send traces to Splunk Observability Cloud.
 
-To configure your application in Kubernetes to use the Java agent, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
-
-The following example shows how to update a deployment to expose environment variables by adding the agent configuration under the ``.spec.template.spec.containers.env`` section:
-
-.. code-block:: yaml
-
-   apiVersion: apps/v1
-   kind: Deployment
-   spec:
-     selector:
-       matchLabels:
-         app: your-application
-     template:
-       spec:
-         containers:
-           - name: myapp
-             env:
-               - name: SPLUNK_OTEL_AGENT
-                 valueFrom:
-                   fieldRef:
-                     fieldPath: status.hostIP
-               - name: OTEL_EXPORTER_OTLP_ENDPOINT
-                 value: "http://$(SPLUNK_OTEL_AGENT):4317"
-               - name: OTEL_SERVICE_NAME
-                 value: "<serviceName>"
-               - name: OTEL_RESOURCE_ATTRIBUTES
-                 value: "deployment.environment=<environmentName>"
-
-.. note:: You can also deploy instrumentation using the Kubernetes Operator. See :ref:`auto-instrumentation-operator`.
+See :new-page:`https://github.com/cloudfoundry/java-buildpack/blob/main/docs/framework-splunk_otel_java_agent.md <https://github.com/cloudfoundry/java-buildpack/blob/main/docs/framework-splunk_otel_java_agent.md>` for instructions.
 
 .. _export-directly-to-olly-cloud-java:
 
@@ -281,6 +273,11 @@ The realm name appears in the :guilabel:`Organizations` section.
 For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
 
 .. caution:: This procedure applies to spans and traces. To send AlwaysOn Profiling data, you must use the OTel Collector.
+
+Specify the source host 
+-----------------------------------------------------------
+
+.. include:: /_includes/gdi/apm-api-define-host.rst
 
 .. _instrument_aws_lambda_functions:
 

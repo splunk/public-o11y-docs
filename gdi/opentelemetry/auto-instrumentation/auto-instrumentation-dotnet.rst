@@ -1,4 +1,4 @@
-.. include:: /_includes/gdi/zero-config-preview-header.rst
+
 
 .. _auto-instrumentation-dotnet:
 
@@ -15,6 +15,8 @@ The Zero Configuration package provides the following benefits:
 
 - You can start streaming traces and monitor distributed applications with Splunk APM in minutes.
 - You don't need to configure or instrument your .NET back-end services or applications before deployment.
+
+.. note:: For details on the .NET supported versions, see :ref:`dotnet-requirements`.
 
 .. _install-the-package-dotnet:
 
@@ -45,6 +47,17 @@ Configure the .NET instrumentation
 ==========================================================
 
 To configure the instrumentation, see :ref:`advanced-dotnet-configuration`.
+
+Uninstall auto instrumentation
+=====================================
+
+To uninstall zero config auto instrumentation for .NET, run the following command in PowerShell:
+
+.. code-block:: powershell
+
+   $MyProgram = Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\uninstall\* | Where { $_.DisplayName -eq "SignalFx .NET Tracing 64-bit" }
+
+   cmd /c $MyProgram.UninstallString
 
 .. _upgrade-the-package-dotnet:
 

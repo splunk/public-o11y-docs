@@ -12,15 +12,13 @@ Generate Monitoring MetricSets (MMS) with custom dimensions to glean meaningful 
 Prerequisites 
 ==============
 
-* You need to be a Splunk Observability Cloud Administrator. 
+* To add generate a Monitoring MetricSet, you must have an admin role. 
 
 * To create a new Monitoring MetricSet based on a span tag or process, you need to first index the span tag or process. See :ref:`apm-index-span-tags`. 
 
 * (Optional) If you are unfamiliar with Monitoring Metric Sets and Troubleshooting Metric Sets, start here:  :ref:`apm-metricsets`. 
 
 * (Optional) Review :ref:`metrics-dimensions-mts` for an overview of the concepts underpinning MetricSets. 
-
-
 
 How custom Monitoring MetricSets add value to your organization
 ======================================================================
@@ -52,7 +50,7 @@ You can generate a Monitoring MetricSet in three ways:
 * endpoint-level MMS for specific endpoints within a given service
 * orient both service-level MMS and endpoint-level MMS for all endpoints within a service
 
-Choose the best option for your needs to allocate your organization's cardinality entitlement efficiently. See :ref:`reduce-cardinality` to learn more. 
+Select the best option for your needs to allocate your organization's cardinality entitlement efficiently. See :ref:`reduce-cardinality` to learn more. 
 
 You can also filter by specific tag values to further reduce the cardinality of your MMS. All custom MMS include service-level metrics. In addition, you can generate endpoint-level metrics.
 
@@ -84,11 +82,11 @@ Follow these steps to create a Monitoring MetricSet.
 1. To get to the :guilabel:`APM MetricSets` page, do one of the following: 
   
    a. In Splunk APM, select :guilabel:`APM Configuration` and select :guilabel:`APM MetricSets` from the menu. The APM MetricSets page opens.
-   b. From anywhere in Splunk Observability Cloud, select :guilabel:`Settings` in the left navigation bar and select :guilabel:`APM MetricSets` under :guilabel:`Data Configuration`.   
+   b. From anywhere in Splunk Observability Cloud, select :guilabel:`Settings` in the navigation bar and select :guilabel:`APM MetricSets` under :guilabel:`Data Configuration`.   
 
 2. On the :guilabel:`APM MetricSets` page, you have two options:
     
-   * If you have already indexed the span tag or process you are interested in, it appears in the list of MetricSets and is already generating Troubleshooting MetricSets. Select the edit icon for that span tag to open the :guilabel:`Edit MetricSet` dialog box and add a Monitoring MetricSet to your configuration using the following steps. 
+   * If you have already indexed the span tag or process, it appears in the list of MetricSets and is already generating Troubleshooting MetricSets. Select the edit icon for that span tag to open the :guilabel:`Edit MetricSet` dialog box and add a Monitoring MetricSet to your configuration using the following steps. 
    * If you haven't already indexed the tag or process, select :strong:`New MetricSet`. Enter the :strong:`Name` of a span tag or process you want to index. Then continue with the following steps.
 
 3. The :strong:`Scope` determines how APM associates the span tag or process with services in a trace. Enter the service or services for which you want to create a Monitoring MetricSet in the :guilabel:`Service` field. You can only create custom dimensionalized MMS for service-level indexed span tags. You can't create custom MMS for globally indexed span tags. 
@@ -111,12 +109,12 @@ Follow these steps to create a Monitoring MetricSet.
 
 8. Your new metric set shows under :strong:`Pending MetricSets` section of the table with an :guilabel:`Analyzing` status while the cardinality check runs. You might have to wait a few moments for the check to run. 
 
-   .. caution:: Your pending MetricSet expires after one hour. If your MetricSet times out before you enable it, rerun the analysis. 
+   .. caution:: Your pending MetricSet expires after one hour. If your MetricSet times out before you enable it, run the analysis again. 
 
 9.  After the cardinality check has run, review the cardinality and enable your new MetricSet.
 
    * If the cardinality impact of indexing this new MetricSet is acceptable, select the check mark under :guilabel:`Actions` to enable your Troubleshooting MetricSet. 
-   * If the check times out before you enable the MetricSet, rerun the analysis.
+   * If the check times out before you enable the MetricSet, run the analysis again .
    * If the check shows as failed, your cardinality is too high to create the new MetricSet. You can edit the MetricSet to adjust the configuration to reduce cardinality or you can select the x to delete the pending Metricset.
 
    The following example shows a cardinality check. 
@@ -154,7 +152,7 @@ Metrics and dimensions of Monitoring MetricSets
 Each MMS has a set of metrics and dimensions for spans and traces you can use to monitor and alert on service performance. 
 
 To prevent overcounting metrics in aggregations, the built-in dashboards and charts in Splunk APM automatically exclude custom dimensionalized MMS. 
-Custom dimensionalized MMS have a marker dimension, ``sf_dimensionalized: true``, to enable this filtering.
+Custom dimensionalized MMS have a marker dimension, ``sf_dimensionalized: true``, to include custom dimensionalized MMS.
 
 When you create your dashboards and charts, you can exclude custom dimensionalized MMS by adding a filter on ``!sf_dimensionalized: true``. 
 If you want to look at the time series of a custom dimensionalized MMS in your charts, filter on ``sf_dimensionalized: true`` and then aggregate by the custom dimension you want to look at. 
@@ -184,6 +182,8 @@ Service metrics and dimensions
 
 Workflow metrics and dimensions
 ---------------------------------
+
+These workflow metrics are created by default when you create a Business Workflow. Custom MMS are not available for Business Workflows.
 
 .. list-table::
    :header-rows: 1

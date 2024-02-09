@@ -7,8 +7,7 @@ Oracle Database receiver
 .. meta::
       :description: The Oracle Database receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from Oracle Database by connecting to it.
 
-The Oracle Database receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from Oracle Database. The receiver connects to an Oracle Database instance and obtains metrics such as the number of physical reads, cumulative CPU
-time, and others. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
+The Oracle Database receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from Oracle Database. The receiver connects to an Oracle Database instance and obtains metrics such as the number of physical reads, cumulative CPU time, and others. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
 Get started
 ======================

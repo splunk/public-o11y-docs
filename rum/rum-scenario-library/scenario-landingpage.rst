@@ -14,11 +14,9 @@ The following scenarios feature examples from Buttercup Industries, a fictitious
 
    scenario-monitoring
    spa-custom-event
-   identify-span-problems
    rum-mobile-scenario
 
 * :ref:`scenario-monitoring`
 * :ref:`spa-custom-event`
-* :ref:`rum-identify-span-problems`
 * :ref:`rum-mobile-scenario`
 * :ref:`rum-built-in-dashboards`

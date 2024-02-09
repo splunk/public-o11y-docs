@@ -68,20 +68,3 @@ Chart resolution and data retention
 
 The resolution of a metric time series in a chart is affected by amount of time that the time series has existed.
 This time, or age, controls the data retention policy for the time series. To learn more, see :ref:`get-started-retention`.
-
-Resolution and data retention policies
-=============================================================================
-
-Data is retained at different resolutions depending on how long ago the data was received. Retention period is officially managed in days since the length of each month is different. Therefore, the number of months is only an approximation to the number of days in the actual retention period.  
-
-The policies for data retention are:
-
-- 1 second for 8 days (to allow week over week comparisons)
-
-- 1 minute for 32 days (to allow month over month comparisons)
-
-- 5 minutes for 96 days (to allow quarter over quarter comparisons)
-
-- 1 hour for 384 days (approximately 13 months, to allow year over year comparisons)
-
-.. note:: Custom events are retained in the platform for a year.

@@ -95,13 +95,18 @@ To change the deployment mode, modify ``SPLUNK_CONFIG`` for the path to the gate
 Kubernetes
 ----------------------------------
 
-The Collector for Kubernetes has different deployment options. You can configure them using the ``enabled`` field in their respective Helm value mappings. See :ref:`otel-kubernetes-config-advanced` for information on how to access your configuration yaml. 
+The Collector for Kubernetes has different deployment options. You can configure them using the ``enabled`` field in their respective Helm value mappings. See :ref:`otel-kubernetes-config-advanced` for information on how to access your configuration yaml.
 
 The main deployment modes are:
 
 * Default, which includes the ``agent`` deamonset and the ``clusterReceiver`` deployment component.
 * All collector modes, which includes ``agent`` deamonset, and the ``clusterReceiver`` and the ``gateway`` components.
-* Network explorer deployment mode, which uses the ``networkExplorer.kernelCollector`` daemonset and ``networkExplorer.k8sCollector`` config. See more in :ref:`network-explorer-setup`.
+
+By default, the ``agent`` daemonset deploys a pod running the OpenTelemetry Collector agent in each node of your Kubernetes cluster. The agent pods gather data from your applications, services, and other objects running in their respective nodes, then send the data to Splunk Observability Cloud.
+
+.. image:: /_images/gdi/k8s-daemonset.png
+   :width: 60%
+   :alt: This Kubernetes cluster contains three nodes. Each node contains an OpenTelemetry Collector agent pod that sends telemetry data to Splunk Observability Cloud.
 
 For more information on the components on each mode, see :ref:`helm-chart-components`.
 
@@ -277,7 +282,15 @@ If you want to use the :ref:`signalfx-exporter` for metrics on both agent and ga
 
 .. code-block:: yaml
 
-   :emphasize-lines: 10,11
+   receivers:
+      hostmetrics:
+         collection_interval: 10s
+         scrapers:
+            cpu:
+            disk:
+            filesystem:
+            memory:
+            network:
 
    exporters:
       # Traces
