@@ -28,23 +28,23 @@ Change instrumentation versions (Kubernetes only)
 By default, the Splunk Distribution of OpenTelemetry Collector uses the latest version of the related instrumentation library. To change the version of your instrumentation library, follow these steps:
 
 #. Open your ``values.yaml`` file. 
-#. In the instrumentation language section, change the ``tag`` value to match your desired version. See the following example YAML:
+#. In the instrumentation language section, change the ``tag`` value to match your desired version. The following example changes the Java instrumentation version to ``v1.27.0``.
 
     .. code-block:: yaml
         :emphasize-lines: 12
 
         clusterName: myCluster
         splunkObservability:
-        realm: <splunk-realm>
-        accessToken: <splunk-access-token>
+          realm: <splunk-realm>
+          accessToken: <splunk-access-token>
         environment: prd
         certmanager:
           enabled: true
         operator:
           enabled: true
         java:
-        repository: ghcr.io/signalfx/splunk-otel-java/splunk-otel-java
-        tag: v1.27.0
+          repository: ghcr.io/signalfx/splunk-otel-java/splunk-otel-java
+          tag: v1.27.0
 
 #. Reinstall the Splunk OTel Collector Chart with the following command:
 
@@ -113,7 +113,7 @@ To learn more about the gateway mode, see :ref:`collector-gateway-mode`.
         Follow these steps to activate gateway mode in Kubernetes:
 
         #. Open the ``values.yaml`` file that you used to install the ``splunk-otel-collector-chart``.
-        #. Edit the ``gateway.enabled`` value to ``true``. See the following example:
+        #. Edit the ``gateway.enabled`` value to ``true``. The following example activates gateway mode:
 
             .. code-block:: yaml
                 :emphasize-lines: 12
@@ -124,12 +124,12 @@ To learn more about the gateway mode, see :ref:`collector-gateway-mode`.
                 accessToken: <splunk-access-token>
                 environment: prd
                 certmanager:
-                enabled: true
+                  enabled: true
                 operator:
-                enabled: true
+                  enabled: true
                 
                 gateway:
-                enabled: true
+                  enabled: true
 
         #. Reinstall the Splunk OTel Collector Chart with the following command:
 
