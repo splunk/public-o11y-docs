@@ -60,7 +60,7 @@ In the CloudWatch metrics option, select :guilabel:`Streaming (Splunk-managed)` 
 When you activate Metric Streams:
 
 * Make sure you :ref:`add these additional permissions <metricstreams_iampolicy>` to your IAM policy. 
-* Update your settings and deploy a CloudFormation template. See :ref:`aws-cloudformation`.
+* Update your settings and deploy a CloudFormation template in order to create Kinesis Firehose. See :ref:`aws-cloudformation`.
 * You can also deploy CloudFormation with Terraform. See :new-page:`Terraform Setup for Creating Kinesis Firehose to Send CloudWatch Metric Stream <https://github.com/signalfx/aws-terraform-templates/tree/main>`.
 
 .. _aws-wizard-prepare-ms:
