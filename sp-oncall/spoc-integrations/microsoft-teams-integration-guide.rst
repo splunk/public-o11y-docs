@@ -1,5 +1,10 @@
+.. _Micrsoft-Teams-spoc:
+
 Splunk>VictorOps app for Microsoft Teams
 **********************************************************
+
+.. meta::
+    :description: Configure the VictorOps>Splunk app for Microsoft Teams.
 
 Use the Splunk>VictorOps app in Microsoft Teams to handle critical incidents from the tool of your choice. This application is bi-directional so you can see the entire payload of your incidents, acknowledge and resolve incidents. Splunk On-Call maps your Microsoft Teams user so that all reporting is accurate and no information is lost.
 
