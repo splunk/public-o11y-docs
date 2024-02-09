@@ -6,34 +6,34 @@
   * - :strong:`Permission`
     - :strong:`Admin`
     - :strong:`Power user`
-    - :strong:`Read-only`
-    - :strong:`Subscription usage`
+    - :strong:`Usage`
+    - :strong:`Read_only`
 
 
   * - :strong:`View Timeline`
     - Yes
     - Yes
     - Yes
-    - No
+    - Yes
 
 
   * - :strong:`Live Tail`
     - Yes
     - Yes
     - Yes
-    - No
+    - Yes
 
   * - :strong:`Search and filter logs`
     - Yes
     - Yes
     - Yes
-    - No
+    - Yes
 
   * - :strong:`Aggregate logs`
     - Yes
     - Yes
     - Yes
-    - No
+    - Yes
 
   * - :strong:`Create and manage field aliases`
     - Yes
@@ -45,7 +45,7 @@
     - Yes
     - Yes
     - Yes
-    - No
+    - Yes
 
   * - :strong:`Create and manage log processing rules`
     - Yes
@@ -56,7 +56,7 @@
   * - :strong:`Apply processing rules across historical data`
     - Yes
     - Yes
-    - Yes
+    - No
     - No
 
   * - :strong:`Save and share Log Observer queries`
@@ -98,8 +98,8 @@
   * - :strong:`View org subscription usage`
     - Yes
     - No
-    - No
     - Yes
+    - No
 
   * - :strong:`Set up Log Observer Connect connection to Splunk platform`
     - Yes

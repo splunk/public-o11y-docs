@@ -61,7 +61,7 @@ When adding the SignalFx exporter, configure both the metrics and logs pipelines
 Send histogram metrics in OTLP format
 -------------------------------------------
 
-The Splunk Distribution of OpenTelemetry Collector supports OTLP histogram metrics starting from version 0.86 and higher. See :ref:`explicit-bucket-histograms` for more information.
+The Splunk Distribution of OpenTelemetry Collector supports OTLP histogram metrics starting from version 0.94 and higher. See :ref:`explicit-bucket-histograms` for more information.
 
 To send histogram data to Splunk Observability Cloud, set the ``send_otlp_histogram`` option to ``true``. For example:
 

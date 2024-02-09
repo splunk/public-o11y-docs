@@ -46,8 +46,14 @@ To create a MySQL user for this monitor, run the following commands:
     -- Permissions for the stats options
     GRANT REPLICATION CLIENT ON *.* TO '<username>'@'localhost';
 
-The new user only has enough privileges to connect to the database.
-Additional privileges are not required.
+The new user only has enough privileges to connect to the database. Additional privileges are not required.
+
+.. note:: If you want to define seperate DB names to connect to, then you have to grant at least SELECT permission to the user.
+
+
+
+GRANT SELECT ON <db_name>.* TO '<user_name>'@'localhost';
+
 
 Considerations on localhost
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

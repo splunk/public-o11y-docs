@@ -1,17 +1,17 @@
 .. list-table::
   :widths: 20,20,20,20,20
 
-  * - :strong:`Capability`
+  * - :strong:`Permission`
     - :strong:`Admin`
     - :strong:`Power user`
-    - :strong:`Read_only`
     - :strong:`Usage`
+    - :strong:`Read_only`
 
   * - :strong:`View MetricSets`
     - Yes
     - Yes
     - Yes
-    - No
+    - Yes
   
   * - :strong:`Create, edit, and delete MetricSets`
     - Yes
@@ -23,7 +23,7 @@
     - Yes
     - Yes
     - Yes
-    - No
+    - Yes
 
   * - :strong:`Create, edit, and delete Business Workflows`
     - Yes
@@ -35,7 +35,7 @@
     - Yes
     - Yes
     - Yes
-    - No
+    - Yes
 
   * - :strong:`Configure extended trace retention settings`
     - Yes

@@ -12,6 +12,12 @@ Sensitive data such as email addresses, credit card information, and social secu
 
 Sensitive data might fall within the categories of personally identifiable information (PII), customer-identifiable information (CII), cardholder data (CHD), or protected health information (PHI). It is necessary to protect these types of data to ensure compliance with industry requirements such as the Payment Card Industry Data Security Standard (PCI DSS), the Health Insurance Portability and Accountability Act (HIPAA), and the General Data Protection Regulation (GDPR). 
 
+Prerequisite
+=============
+
+To configure sensitive data in Splunk APM, you must have the admin role.
+
+
 .. _collector-remove-data:
 
 Remove sensitive data using the Splunk Distribution of OpenTelemetry Collector

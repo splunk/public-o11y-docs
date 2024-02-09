@@ -44,7 +44,7 @@ Discovery mode supports the following host services and applications:
      - Receiver
 
    * - MySQL
-     - Smart Agent with collectd/mysql monitor type. See :ref:`mysql`.
+     - MySQL receiver. See :ref:`mysql-receiver`.
 
    * - PostgreSQL
      - PostgreSQL receiver. See :ref:`postgresql-receiver`.

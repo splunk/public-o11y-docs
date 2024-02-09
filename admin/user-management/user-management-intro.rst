@@ -5,7 +5,7 @@ Manage users and teams
 ********************************************************************************
 
 .. meta::
-   :description: Learn how to manage users and teams.
+   :description: Learn how to manage users, teams and roles.
 
 .. toctree::
    :hidden:

@@ -85,7 +85,9 @@ Currently, Splunk Observability Cloud only supports explicit bucket histograms.
 Get histogram data into Splunk Observability Cloud
 ===========================================================
 
-The Splunk Distribution of OpenTelemetry Collector fully supports explicit bucket histogram metrics starting from version 0.86 through the ``send_otlp_histogram`` setting of the SignalFx exporter. You can collect histogram data using a variety of receivers, including the :ref:`Prometheus receiver <prometheus-receiver>`.
+You can collect histogram data using a variety of receivers, including the :ref:`Prometheus receiver <prometheus-receiver>`, and send them to Splunk Observability Cloud using the OpenTelemetry Collector.
+
+The Splunk Distribution of OpenTelemetry Collector fully supports explicit bucket histogram metrics. You can send histogram metric using the OTLP exporter or, starting from version 0.94, through the SignalFx exporter.
 
 For instructions on how to get histogram data into Splunk Observability Cloud, see :ref:`enable-histograms-export`.
 
@@ -103,9 +105,9 @@ Migrate your dashboards, functions, charts, and detectors
 
 To migrate your existing dashboards, functions, charts, and detectors to histograms, follow these steps:
 
-1. Make sure that you're sending histogram data using the Splunk Distribution of OpenTelemetry Collector version 0.86 or higher. Lower versions can't send histogram data in OTLP format.
+1. Make sure that you're sending histogram data using the Splunk Distribution of OpenTelemetry Collector version 0.94 or higher. Lower versions can't send histogram data in OTLP format using the SignalFx exporter.
 
-2. Start sending histogram metrics. See :ref:`explicit-bucket-histograms` for more information on how to activate this feature in the Collector.
+2. Start sending histogram metrics through the OTLP exporter or the SignalFx exporter. See :ref:`enable-histograms-export` for more information on how to activate this feature in the Collector.
 
 3. Edit your charts to use the new ``histogram()`` function. See :new-page:`histogram() <https://dev.splunk.com/observability/docs/signalflow/functions/histogram>` in the SignalFlow reference documentation.
 
