@@ -22,7 +22,7 @@ To learn more about the ``values.yaml`` file, see <placeholder>.
 
 .. _change-zeroconfig-version:
 
-Change instrumentation versions
+Change instrumentation versions (Kubernetes only)
 ====================================================
 
 By default, the Splunk Distribution of OpenTelemetry Collector uses the latest version of the related instrumentation library. To change the version of your instrumentation library, follow these steps:
@@ -68,25 +68,33 @@ Change ingested telemetry data
 
 You can edit the types of telemetry data that auto instrumentation ingests. By default, auto instrumentation only collects traces and metrics.
 
-To change the collected data types, edit the ``metricsEnabled``, ``tracesEnabled``, or ``logsEnabled`` fields in your ``values.yaml`` file.
+.. tabs::
 
-The following example activates log collection:
+    .. tab:: Linux
 
-.. code-block:: yaml
-    :emphasize-lines: 7
+        Lorem ipsum
 
-    clusterName: myCluster
-    splunkObservability: 
-      realm: <splunk-realm>
-      accessToken: <splunk-access-token>
-      metricsEnabled: true
-      tracesEnabled: true 
-      logsEnabled: true
+    .. tab:: Kubernetes
 
-    certmanager:
-      enabled: true
-    operator:
-      enabled: true
+        To change the collected data types, edit the ``metricsEnabled``, ``tracesEnabled``, or ``logsEnabled`` fields in your ``values.yaml`` file.
+
+        The following example activates log collection:
+
+        .. code-block:: yaml
+            :emphasize-lines: 7
+
+            clusterName: myCluster
+            splunkObservability: 
+              realm: <splunk-realm>
+              accessToken: <splunk-access-token>
+              metricsEnabled: true
+              tracesEnabled: true 
+              logsEnabled: true
+
+            certmanager:
+              enabled: true
+            operator:
+              enabled: true
 
 
 .. _deploy-in-gateway:
@@ -98,29 +106,33 @@ The Splunk OTel Collector Chart uses the agent mode by default. Activating gatew
 
 To learn more about the gateway mode, see :ref:`collector-gateway-mode`.
 
-Follow these steps to activate gateway mode:
+.. tabs:: 
 
-#. Open the ``values.yaml`` file that you used to install the ``splunk-otel-collector-chart``.
-#. Edit the ``gateway.enabled`` value to ``true``. See the following example:
+    .. tab:: Kubernetes
 
-    .. code-block:: yaml
-        :emphasize-lines: 12
+        Follow these steps to activate gateway mode in Kubernetes:
 
-        clusterName: myCluster
-        splunkObservability:
-          realm: <splunk-realm>
-          accessToken: <splunk-access-token>
-        environment: prd
-        certmanager:
-          enabled: true
-        operator:
-          enabled: true
-        
-        gateway:
-          enabled: true
+        #. Open the ``values.yaml`` file that you used to install the ``splunk-otel-collector-chart``.
+        #. Edit the ``gateway.enabled`` value to ``true``. See the following example:
 
-#. Reinstall the Splunk OTel Collector Chart with the following command:
+            .. code-block:: yaml
+                :emphasize-lines: 12
 
-   .. code-block:: bash
+                clusterName: myCluster
+                splunkObservability:
+                realm: <splunk-realm>
+                accessToken: <splunk-access-token>
+                environment: prd
+                certmanager:
+                enabled: true
+                operator:
+                enabled: true
+                
+                gateway:
+                enabled: true
 
-      helm install splunk-otel-collector -f values.yaml
+        #. Reinstall the Splunk OTel Collector Chart with the following command:
+
+        .. code-block:: bash
+
+            helm install splunk-otel-collector -f values.yaml
