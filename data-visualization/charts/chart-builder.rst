@@ -19,7 +19,7 @@ If you are editing an existing chart, you might want to start by configuring plo
 Specify a signal for a plot line
 =============================================================================
 
-A signal is the :term:`metric` you want to plot on the chart, to which you might add filters and/or apply analytics. Plot lines, or plots, are the building blocks of charts. A chart has one or more plots, and each plot is composed of the :term:`metric time series<Metric time series>` represented by the signal and its properties and dimensions, any filters, and any analytics applied.
+A signal is the :term:`metric` or histogram metric you want to plot on the chart, to which you might add filters and apply analytics. Plot lines, or plots, are the building blocks of charts. A chart has one or more plots, and each plot is composed of the :term:`metric time series<Metric time series>` or histogram metric represented by the signal and its properties and dimensions, any filters, and any analytics applied.
 
 .. note:: Instead of a metric, you can also enter a :ref:`time series expression<expression>` to create a composite or derived metric, specify an :ref:`event<chart-events>` to be displayed on the chart, or :ref:`link a detector to a chart<link-detector-to-chart>` to display its alert status on the chart.
 
@@ -29,10 +29,9 @@ To access Chart Builder, open the navigation :strong:`Menu` and select :strong:`
 Enter a metric name or tag
 -------------------------------------------------------------------
 
-If you know the name of the metric you want to view, you can simply type its name directly into the :strong:`Signal` field on the :strong:`Plot Editor` tab. Splunk Observability Cloud uses type-ahead search to show you any metrics that match what you are typing.
+If you know the name of the metric or histogram metric you want to view, enter its name directly into the :strong:`Signal` field on the :strong:`Plot Editor` tab. Splunk Observability Cloud uses type-ahead search to show you any metrics that match what you are typing.
 
-Splunk Observability Cloud lets you build a chart to plot a signal for which you have not yet started sending data. Type in the name of the metric you expect to plot and press Enter. When data starts arriving for that signal, it is displayed on the chart.
-
+Splunk Observability Cloud lets you build a chart to plot a signal for which you have not yet started sending data. Enter the name of the metric or histogram metric you expect to plot and select :guilabel:`Enter`. When data starts arriving for that signal, it is displayed on the chart.
 
 .. _wildcards:
 
@@ -42,6 +41,8 @@ Use wildcards
 You can use wildcards when entering a metric name into the :strong:`Signal` field.
 
 If your metrics follow the naming conventions for Graphite metrics, see :ref:`graphite-options` for information on using Graphite wildcards and node aliasing.
+
+.. note:: Wildcard searches return results across all data types. For example, ``histogram.*`` returns all metrics and histogram metrics with names matching the search query.
 
 .. _find-metric:
 
