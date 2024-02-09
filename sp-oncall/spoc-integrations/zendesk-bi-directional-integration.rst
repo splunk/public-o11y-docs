@@ -125,6 +125,8 @@ Configure alerts from Zendesk to Splunk On-Call
 
 3. Enter a name and description. Select :guilabel:`Add condition` and add the following 2 conditions. These 2 conditions create a Splunk On-Call incident for every new case in Zendesk. You can alter these to further filter which conditions alert Splunk On-Call to fit your specific workflow.
 
+Conditions:
+
 * Status is New
 * Ticket is Created
 
@@ -168,8 +170,7 @@ Acknowledgement alert
 
 This trigger sends acknowledgement alerts to Splunk On-Call, to acknowledge the incident and stop paging and escalation.
 
-Condition
-* Status is Pending
+Condition: Status is Pending
 
 .. image:: /_images/spoc/Acknowldge-Trigger.png
    :alt: Acknowledge trigger
@@ -197,9 +198,7 @@ Resolved alert
 
 This trigger sends recovery notifications to Splunk On-Call to close out the incident.
 
-Condition: 
-
-* Status is Closed
+Condition: Status is Closed
 
 .. image:: /_images/spoc/Resolved-Trigger.png
    :alt: Resolved trigger
@@ -273,9 +272,9 @@ Generate a Zendesk API token
       :alt: Token access in Zendesk API
       :width: 95%
 
-3. Give the token a name. 
-4. Select :guilabel:`Copy` button to copy the token to your clipboard.
-5. Select :guilabel:`Save`.
+5. Give the token a name. 
+6. Select :guilabel:`Copy` button to copy the token to your clipboard.
+7. Select :guilabel:`Save`.
 
    .. image:: /_images/spoc/Zendesk-API-Key-1.png
       :alt: Copy new token in Zendesk API
