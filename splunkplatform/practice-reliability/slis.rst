@@ -7,7 +7,7 @@ Measure and alert on SLIs
 .. meta::
    :description: SLIs, SLOs, and SLAs in Observability Cloud
 
-Splunk Observability Cloud provides prepackaged solutions for monitoring your service level indicators (SLIs). You can also define your own signals with custom detectors and alert on the data most important to your teams.
+Splunk Observability Cloud provides prepackaged solutions for monitoring your service level indicators (SLIs) and service level objectives (SLOs). You can also define your own signals with custom detectors and alert on the data most important to your teams.
 
 For a better understanding of how you can use Splunk Observability Cloud with other Splunk platform products, see :ref:`scenarios-integration-scenario-landing` for sample use cases.
 
