@@ -36,9 +36,7 @@ Splunk On-Call integrations
    microsoft-azure-oms-integration-guide-victorops
    microsoft-scom-integration
    microsoft-teams-integration-guide
-   microsoft-teams-integration-guide-2
    nagios-integration-guide
-   new-ms-teams
    new-relic-integration-guide
    new-twilio
    opsdash-integration
