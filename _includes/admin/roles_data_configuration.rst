@@ -1,4 +1,5 @@
 .. list-table::
+  :header-rows: 1
   :widths: 20,20,20,20,20
 
   * - :strong:`Permission`
@@ -10,8 +11,8 @@
   * - :strong:`View Global Data Links`
     - Yes
     - Yes
-    - No
-    - No
+    - Yes
+    - Yes
 
   * - :strong:`Create, delete, or clone Global Data Links`
     - Yes
