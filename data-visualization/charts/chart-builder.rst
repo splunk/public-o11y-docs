@@ -139,7 +139,7 @@ When you select a histogram metric as the signal for your plot, rollup is handle
 The default histogram function for all histogram metrics is ``percentile(90)``. 
 
 .. image:: /_images/data-visualization/charts/histogram-in-chart.png
-   :width: 50%
+   :width: 80%
 
 To change the histogram function, select :guilabel:`P90` and select a different function you want to use from the :strong:`Function` dropdown menu. For more information on histogram function and supported methods, see :new-page:`histogram() <https://dev.splunk.com/observability/docs/signalflow/functions/histogram>` in the SignalFlow reference documentation.
 
