@@ -1,0 +1,59 @@
+Location ID,Display Name,World Region,IP Addresses,Provider
+aws-af-south-1, AWS - Cape Town, Africa, "13.245.193.173, 13.245.49.208, 13.246.166.232", Amazon
+aws-af-south-1-los-1, AWS LZ - Lagos, Africa, "96.0.46.67", Amazon (Local Zone)
+aws-ap-east-1, AWS - Hong Kong, Asia Pacific, "16.163.205.194, 18.166.118.92, 43.198.165.151", Amazon
+aws-ap-northeast-1, AWS - Tokyo, Asia Pacific, "13.112.255.31, 54.249.77.33, 57.180.149.207", Amazon
+aws-ap-northeast-1-tpe-1, AWS LZ - Taipei, Asia Pacific, "15.220.82.103", Amazon (Local Zone)
+aws-ap-northeast-2, AWS - Seoul, Asia Pacific, "13.209.34.113, 3.34.167.248, 52.79.49.136", Amazon
+aws-ap-northeast-3, AWS - Osaka, Asia Pacific, "13.208.127.226, 15.152.126.11, 15.168.123.72", Amazon
+aws-ap-south-1, AWS - Mumbai, Asia Pacific, "13.200.240.162, 13.234.71.89, 3.109.113.71", Amazon
+aws-ap-south-1-ccu-1, AWS LZ - Kolkata, Asia Pacific, "96.0.64.96", Amazon (Local Zone)
+aws-ap-south-1-del-1, AWS LZ - Delhi, Asia Pacific, "15.220.136.8", Amazon (Local Zone)
+aws-ap-south-2, AWS - Hyderabad, Asia Pacific, "18.60.84.141, 18.61.134.171, 18.61.204.232", Amazon
+aws-ap-southeast-1, AWS - Singapore, Asia Pacific, "13.215.198.240, 18.136.55.216, 54.254.180.122", Amazon
+aws-ap-southeast-1-bkk-1, AWS LZ - Bangkok, Asia Pacific, "15.220.241.3", Amazon (Local Zone)
+aws-ap-southeast-2, AWS - Sydney, Asia Pacific, "13.239.156.96, 52.62.21.104, 52.64.225.2", Amazon
+aws-ap-southeast-2-per-1, AWS LZ - Perth, Asia Pacific, "96.0.4.173", Amazon (Local Zone)
+aws-ap-southeast-3, AWS - Jakarta, Asia Pacific, "108.137.196.150, 108.137.35.240, 43.218.179.162", Amazon
+aws-ap-southeast-4, AWS - Melbourne, Asia Pacific, "16.51.117.134, 16.51.119.136, 16.51.98.103", Amazon
+aws-ca-central-1, AWS - Montreal, North America, "15.156.105.249, 3.97.176.134, 52.60.210.169", Amazon
+aws-eu-central-1, AWS - Frankfurt, Europe, "18.158.40.48, 18.199.44.118, 3.73.186.85", Amazon
+aws-eu-central-1-ham-1, AWS LZ - Hamburg, Europe, "15.220.153.215", Amazon (Local Zone)
+aws-eu-central-1-waw-1, AWS LZ - Warsaw, Europe, "15.220.66.85", Amazon (Local Zone)
+aws-eu-central-2, AWS - Zurich, Europe, "16.62.181.146, 16.62.185.225, 16.63.187.66", Amazon
+aws-eu-north-1, AWS - Stockholm, Europe, "13.48.226.196, 13.49.202.70, 13.51.38.73", Amazon
+aws-eu-north-1-cph-1, AWS LZ - Copenhagen, Europe, "96.0.25.116", Amazon (Local Zone)
+aws-eu-north-1-hel-1, AWS LZ - Helsinki, Europe, "15.220.168.175", Amazon (Local Zone)
+aws-eu-south-1, AWS - Milan, Europe, "15.160.37.149, 18.102.183.198, 35.152.39.175", Amazon
+aws-eu-south-2, AWS - Spain, Europe, "18.100.248.92, 18.101.43.218, 18.101.51.170", Amazon
+aws-eu-west-1, AWS - Dublin, Europe, "18.203.31.23, 3.255.26.224, 52.209.225.143", Amazon
+aws-eu-west-2, AWS - London, Europe, "13.41.216.151, 18.132.53.221, 18.168.87.90", Amazon
+aws-eu-west-3, AWS - Paris, Europe, "13.36.65.161, 13.37.19.109, 15.188.191.215", Amazon
+aws-me-central-1, AWS - UAE, Middle East, "3.28.77.181, 3.29.248.188, 3.29.253.117", Amazon
+aws-me-south-1, AWS - Bahrain, Middle East, "15.184.106.63, 16.24.49.4, 16.24.6.11", Amazon
+aws-me-south-1-mct-1, AWS LZ - Muscat, Middle East, "15.220.161.162", Amazon (Local Zone)
+aws-sa-east-1, AWS - São Paulo, South America, "15.229.173.175, 18.231.6.171, 54.232.218.183", Amazon
+aws-us-east-1, AWS - N. Virginia, North America, "44.221.32.91, 54.208.135.244, 54.81.44.104", Amazon
+aws-us-east-1-atl-1, AWS LZ - Atlanta, North America, "15.181.81.54", Amazon (Local Zone)
+aws-us-east-1-bos-1, AWS LZ - Boston, North America, "68.66.117.28", Amazon (Local Zone)
+aws-us-east-1-bue-1, AWS LZ - Buenos Aires, South America, "15.220.120.193", Amazon (Local Zone)
+aws-us-east-1-chi-1, AWS LZ - Chicago, North America, "15.181.178.204", Amazon (Local Zone)
+aws-us-east-1-dfw-1, AWS LZ - Dallas, North America, "15.181.197.208", Amazon (Local Zone)
+aws-us-east-1-iah-1, AWS LZ - Houston, North America, "72.41.4.54", Amazon (Local Zone)
+aws-us-east-1-lim-1, AWS LZ - Lima, South America, "96.0.20.180", Amazon (Local Zone)
+aws-us-east-1-mci-1, AWS LZ - Kansas City, North America, "15.181.98.232", Amazon (Local Zone)
+aws-us-east-1-mia-1, AWS LZ - Miami, North America, "64.187.138.50", Amazon (Local Zone)
+aws-us-east-1-msp-1, AWS LZ - Minneapolis, North America, "15.181.48.149", Amazon (Local Zone)
+aws-us-east-1-nyc-1, AWS LZ - New York City, North America, "15.181.161.141", Amazon (Local Zone)
+aws-us-east-1-phl-1, AWS LZ - Philadelphia, North America, "15.181.144.125", Amazon (Local Zone)
+aws-us-east-1-qro-1, AWS LZ - Querétaro, North America, "15.220.187.70", Amazon (Local Zone)
+aws-us-east-1-scl-1, AWS LZ - Santiago, South America, "96.0.51.96", Amazon (Local Zone)
+aws-us-east-2, AWS - Ohio, North America, "18.117.213.46, 3.129.163.194, 3.136.204.118", Amazon
+aws-us-west-1, AWS - N. California, North America, "18.144.128.164, 54.176.7.26", Amazon
+aws-us-west-2, AWS - Oregon, North America, "35.163.107.254, 35.83.100.179, 44.232.58.249", Amazon
+aws-us-west-2-den-1, AWS LZ - Denver, North America, "15.181.17.69", Amazon (Local Zone)
+aws-us-west-2-las-1, AWS LZ - Las Vegas, North America, "15.220.16.240", Amazon (Local Zone)
+aws-us-west-2-lax-1, AWS LZ - Los Angeles, North America, "15.254.28.238, 15.254.3.95", Amazon (Local Zone)
+aws-us-west-2-pdx-1, AWS LZ - Portland, North America, "15.220.0.199", Amazon (Local Zone)
+aws-us-west-2-phx-1, AWS LZ - Phoenix, North America, "15.181.128.244", Amazon (Local Zone)
+aws-us-west-2-sea-1, AWS LZ - Seattle, North America, "15.181.4.16", Amazon (Local Zone)
