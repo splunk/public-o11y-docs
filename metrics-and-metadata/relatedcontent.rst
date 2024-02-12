@@ -76,7 +76,7 @@ Related Content and the Splunk Distribution of the OpenTelemetry Collector metad
 
 Splunk Observability Cloud uses OpenTelemetry to correlate telemetry types. To enable this ability, your telemetry field names or metadata key names must exactly match the metadata key names used by both OpenTelemetry and Splunk Observability Cloud.
 
-When you deploy the Splunk Distribution of the OpenTelemetry Collector with it's default configuration to send your telemetry data to Splunk Observability Cloud, your metadata key names are automatically mapped correctly. 
+When you deploy the Splunk Distribution of the OpenTelemetry Collector with its default configuration to send your telemetry data to Splunk Observability Cloud, your metadata key names are automatically mapped correctly. 
 
 .. caution:: If you don't use the Splunk Distribution of OpenTelemetry Collector, or you use a non-default configuration, your telemetry data might have metadata key names that are not consistent with those used by Splunk Observability Cloud and OpenTelemetry, and Related Content might not work. In that case, you must change your metadata key names.
 
@@ -100,7 +100,7 @@ When the field names in APM and Log Observer match, the trace and the log with t
 Required Collector components
 =================================================================
 
-If you're using the Splunk Distribution of OpenTelemetry Collector or another distribution or the [upstream Collector](https://docs.splunk.com/observability/en/gdi/other-ingestion-methods/upstream-collector.html#using-upstream-otel) and want to ensure Related Content in Splunk Observability Cloud behaves correctly, verify that the  SignalFx exporter is included in your configuration. This exporter aggregates the metrics from the ``hostmetrics`` receiver and must be enabled for the ``metrics`` and ``traces`` pipelines. 
+If you're using the Splunk Distribution of OpenTelemetry Collector, another distribution of the Collector, or the :ref:`upstream Collector <using-upstream-otel>` and want to ensure Related Content in Splunk Observability Cloud behaves correctly, verify that the  SignalFx exporter is included in your configuration. This exporter aggregates the metrics from the ``hostmetrics`` receiver and must be enabled for the ``metrics`` and ``traces`` pipelines. 
 
 The Collector uses the correlation flag of the SignalFx exporter to make relevant API calls to correlate your spans with the infrastructure metrics. This flag is enabled by default. To adjust the correlation option further, see the SignalFx exporter's options at :ref:`signalfx-exporter-settings`.
 
