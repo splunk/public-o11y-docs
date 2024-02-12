@@ -89,7 +89,7 @@ Splunk On-Call integrations
    victorops-hp-sitescope-integration
    victorops-hubot-integration
    victorops-humio-integration
-   victorops-icinga-integration
+   icinga-integration.rst
    victorops-jenkins-integration
    victorops-librato-integration
    victorops-librenms-integration
