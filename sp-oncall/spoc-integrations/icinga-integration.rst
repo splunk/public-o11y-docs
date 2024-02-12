@@ -166,7 +166,7 @@ Splunk On-Call command poll (acknowledge back)
 --------------------------------------------------
 
 This service polls Splunk On-Call for commands to run on your Icinga server. This service is turned off by default. The purpose is to allow commands issued at Splunk On-Call to be relayed to your Icinga monitor. At this time, the only commands allowed by this service are host and service acknowledgements.
-See :ref:`ack-back:`.
+See :ref:`ack-back`.
 
 Splunk On-Call status resync (manual/auto)
 ----------------------------------------------
