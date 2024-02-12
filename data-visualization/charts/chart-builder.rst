@@ -49,9 +49,9 @@ If your metrics follow the naming conventions for Graphite metrics, see :ref:`gr
 Use the Metrics Sidebar to find a metric
 -------------------------------------------------------------------
 
-You can also choose the signal by using the Metrics Sidebar to search for metric names, instead of typing one in directly. Click :strong:`Browse` next to the :strong:`Signal` field to display the Metrics Sidebar.
+You can also choose the signal by using the Metrics Sidebar to search for metric and histogram metric names, instead of typing one in directly. Select :strong:`Browse` next to the :strong:`Signal` field to display the Metrics Sidebar.
 
-In the Metrics Sidebar, select the :strong:`Find Metrics` option to search for metrics. Using the Metrics Sidebar is the same as described in :ref:`use-metrics-sidebar`, except that each selected metric is added as a plot in the chart, instead of as one or more new charts.
+In the Metrics Sidebar, select the :strong:`Find Metrics` option to search for metrics and histogram metrics. Using the Metrics Sidebar is the same as described in :ref:`use-metrics-sidebar`, except that each selected metric is added as a plot in the chart, instead of as one or more new charts.
 
 For information about how to use the :strong:`Find Events` option, see :ref:`chart-events-as-occur`.
 
@@ -120,12 +120,32 @@ As you filter a signal, tokens representing the filter options are added to the 
 
 .. _choosing-rollup:
 
-View and change a plot's rollup type
+View and change a plot's rollup or histogram function
 =============================================================================
 
-Every signal has a default :term:`rollup` associated with it, which will be displayed as :strong:`Auto`. If the rollup label says :strong:`Multiple`, it means that different rollup functions have been applied to different metric time series (MTS) on the same plot. This happens when the rollup setting is left as default, and the plot contains metric time series that have different metric types. MTS on the same plot can have different metric types if the plot contains a wildcard query that matches many different metrics. It can also happen if the plot contains one metric, but that metric is used to record different types of measurements.
+Change rollup for metrics
+------------------------------
+
+Every signal has a default :term:`rollup` associated with it, which is displayed as :strong:`Auto`. If the rollup label says :strong:`Multiple`, it means that different rollup functions have been applied to different metric time series (MTS) on the same plot. This happens when the rollup setting is left as default, and the plot contains metric time series that have different metric types. MTS on the same plot can have different metric types if the plot contains a wildcard query that matches many different metrics. It can also happen if the plot contains one metric, but that metric is used to record different types of measurements.
 
 Rollups are used to adjust the chart resolution as necessary to effectively display the chart data. For more information, see :ref:`data-resolution-rollups-charts`.
+
+
+Change histogram function for histogram metrics
+--------------------------------------------------
+
+When you select a histogram metric as the signal for your plot, rollup is handled by Splunk Observability Cloud and can't be changed. Instead of rollup, you need to use histogram functions to define how histogram data is interpreted and represented on your chart.
+
+The default histogram function for all histogram metrics is ``percentile(90)``. 
+
+.. image:: /_images/data-visualization/charts/histogram-in-chart.png
+   :width: 50%
+
+To change the histogram function, select :guilabel:`P90` and select a different function you want to use from the :strong:`Function` dropdown menu. For more information on histogram function and supported methods, see :new-page:`histogram() <https://dev.splunk.com/observability/docs/signalflow/functions/histogram>` in the SignalFlow reference documentation.
+
+.. image:: /_images/data-visualization/charts/change-histogram-function.png
+   :width: 50%
+
 
 
 .. _plot-analytics:
