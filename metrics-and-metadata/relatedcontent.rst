@@ -100,7 +100,7 @@ When the field names in APM and Log Observer match, the trace and the log with t
 Required Collector components
 =================================================================
 
-If you're using the Splunk OTel Collector and want to ensure Related Content behaves correctly, verify that the  SignalFx exporter is included in your configuration. This exporter aggregates the metrics from the ``hostmetrics`` receiver and must be enabled for the ``metrics`` and ``traces`` pipelines. 
+If you're using the Splunk Distribution of OpenTelemetry Collector or another distribution or the [upstream Collector](https://docs.splunk.com/observability/en/gdi/other-ingestion-methods/upstream-collector.html#using-upstream-otel) and want to ensure Related Content in Splunk Observability Cloud behaves correctly, verify that the  SignalFx exporter is included in your configuration. This exporter aggregates the metrics from the ``hostmetrics`` receiver and must be enabled for the ``metrics`` and ``traces`` pipelines. 
 
 The Collector uses the correlation flag of the SignalFx exporter to make relevant API calls to correlate your spans with the infrastructure metrics. This flag is enabled by default. To adjust the correlation option further, see the SignalFx exporter's options at :ref:`signalfx-exporter-settings`.
 
