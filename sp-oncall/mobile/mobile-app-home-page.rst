@@ -8,58 +8,42 @@ Navigating the Splunk On-Call mobile app
    :description: About the user roll in Splunk On-Call.
 
 
-Navigating the VictorOps Mobile App
------------------------------------
 
-[video width=“1920” height=“1080”
-mp4=“https://help.victorops.com/wp-content/uploads/Mobile-Home-Screen.mp4”][/video]
 
- 
+Within the VictorOps Mobile App you'll find on-call actions and information at your fingertips. The Mobile App home page provides quick
+shortcuts to the information that is most relevant to you. Quickly access your incidents, your teams incidents, who is currently on-call, along with next on-call, and more.
 
-Within the VictorOps Mobile App you'll find on-call actions and
-information at your fingertips. The Mobile App home page provides quick
-shortcuts to the information that is most relevant to you. Quickly
-access your incidents, your teams incidents, who is currently on-call,
-along with next on-call, and much more!
+.. image:: /_images/spoc/mob-home1.png
+    :width: 100%
+    :alt: Mobile home page
 
-|image1|
+.. image:: /_images/spoc/mob-home2.png
+    :width: 100%
+    :alt: Mobile home page.
 
-|image2|
+Home page
+=================
 
-Home Page
-~~~~~~~~~
+On-Call Status: Your on-call status will be found at the very top of your home page for fast access to your current on-call status.
 
-**On-Call Status**: Your on-call status will be found at the very top of
-your home page for fast access to your current on-call status.
+This status will also let you know when you are on-call till or when you are on-call next. :guilabel:`You're On-Call` in blue when you are currently on-call and :guilabel:`You're Not On-Call` in black when you are not currently on-call.
 
-This status will also let you know when you are on-call till or when you
-are on-call next. “You're On-Call” in blue when you are currently
-on-call and “You're Not On-Call” in black when you are not currently
-on-call.
+Incidents: From the Mobile App Home Page you can quickly access your incidents along with any incidents currently assigned to your team.
 
-**Incidents:** From the Mobile App Home Page you can quickly access your
-incidents along with any incidents currently assigned to your team.
+Teammates Currently On-Call & On-Call Takes: View other team mates on-call shifts by selecting :guilabel:`View All`. From here you can take your teammates on-call by selecting :guilabel:`Take Shift` and clear it by selecting :guilabel:`Clear Take` or :guilabel:`Take Back`. For more on Manual On-Call Takes, see :ref:`mobile-sched-overrides`.
 
-**Teammates Currently On-Call & On-Call Takes:** View other teammates
-on-call shifts by clicking “View All”. From here you can take your
-teammates on-call by clicking “Take Shift” and clear it by clicking
-“Clear Take” or “Take Back”. For more on Manual On-Call Takes click
-`here <https://help.victorops.com/knowledge-base/mobile-app-sched…eduled-overrides/>`__.
 
-|image3|
+.. image:: /_images/spoc/mob-home3.png
+    :width: 100%
+    :alt: Select View All to view other team mates' shifts.
 
-|image4|
+.. image:: /_images/spoc/mob-home4.png
+    :width: 100%
+    :alt: Select Take Shift to take a team mate's shift.
 
-**Scheduled Overrides:** Finally, at the bottom of the Home Page you
-will see your teams scheduled overrides. By selecting “View All” you can
-view your teammates overrides, you can create a new override for
-yourself, and you can take an unassigned override. For more on Scheduled
-Overrides click
-`here <https://help.victorops.com/knowledge-base/mobile-app-schedule-scheduled-overrides/>`__.
+Scheduled Overrides: Finally, at the bottom of the Home Page you will see your teams scheduled overrides. By selecting :guilabel:`View All` you can view your teammates overrides, you can create a new override for yourself, and you can take an unassigned override. For more on Scheduled Overrides, see :ref:`mobile-app-schedule-scheduled-overrides`.
 
-/_images/spoc/Overrides_Preview.png
 
-.. |image1| image:: /_images/spoc/Mobile-Home-Page_2.png
-.. |image2| image:: /_images/spoc/Mobile-Home-Page.png
-.. |image3| image:: /_images/spoc/Current-On-Call-Click.png
-.. |image4| image:: /_images/spoc/On-Call-Takes.png
+.. image:: /_images/spoc/mob-home5.png
+    :width: 100%
+    :alt: View all shift overrides.

@@ -5,11 +5,11 @@ Get started with the mobile app
 ************************************************************************
 
 .. meta::
-   :description: About t
+   :description: Configure your Splunk On-Call mobile app.
 
 
 
-Splunk On-Call is incident management software that allows teams to maintain a culture of high availability without slowing down the innovation process. The moment something goes wrong, Splunk On-Call will spring people to action, automatically. Splunk On-Call is a mobile-first platform so please take the time to configure your mobile app settings!
+Splunk On-Call is incident management software that allows teams to maintain a culture of high availability without slowing down the innovation process. Splunk On-Call is a mobile-first platform so please take the time to configure your mobile app settings!
 
 
 
