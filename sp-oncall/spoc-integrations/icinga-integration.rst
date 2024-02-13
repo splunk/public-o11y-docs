@@ -1,6 +1,6 @@
 .. _Icinga-spoc:
 
-Icinga instegration for Splunk On-Call
+Icinga integration for Splunk On-Call
 **********************************************************
 
 .. meta::
