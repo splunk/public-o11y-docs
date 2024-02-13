@@ -118,7 +118,7 @@ Splunk On-Call integrations
    victorops-signal-sciences-integration
    victorops-signalfx-integration
    victorops-solarwinds-integration
-   victorops-stackdriver-integration
+   GCP-monitoring-integration.rst
    victorops-statuscake-integration
    victorops-statuspage-integration
    victorops-sumologic-integration
