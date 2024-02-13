@@ -17,7 +17,7 @@ Practice reliability with Splunk Observability Cloud and the Splunk platform
     Collaborate on observability <collaboration>
    
 
-With the Splunk platform (Splunk Cloud Platform or Splunk Enterprise), you can manually perform tasks to maintain or increase the reliability of your systems through Splunk searches and log analysis. With Splunk Observability Cloud, on the other hand, you can monitor your system and measure its current state based on the data it generates in the form of logs, metrics, traces, and user sessions. In other words, you can perform observability to ensure reliability. 
+Using the Splunk platform (Splunk Cloud Platform or Splunk Enterprise) with Splunk Observability Cloud gives you unified visibility across any environment and any deployment. Engineering, ITOps, and security teams can share data, context, and workflows to see how a problem originating anywhere in their environment impacts both their digital customer experience and their business. You can find and fix problems faster, as well as improve reliability overall so that fewer problems occur. 
 
 Splunk Observability Cloud lets you to do the following:
 
