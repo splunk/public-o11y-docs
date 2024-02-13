@@ -41,7 +41,7 @@ Teammates Currently On-Call & On-Call Takes: View other team mates on-call shift
     :width: 100%
     :alt: Select Take Shift to take a team mate's shift.
 
-Scheduled Overrides: Finally, at the bottom of the Home Page you will see your teams scheduled overrides. By selecting :guilabel:`View All` you can view your teammates overrides, you can create a new override for yourself, and you can take an unassigned override. For more on Scheduled Overrides, see :ref:`mobile-app-schedule-scheduled-overrides`.
+Scheduled overrides: Finally, at the bottom of the Home Page you will see your teams scheduled overrides. By selecting :guilabel:`View All` you can view your teammates overrides, you can create a new override for yourself, and you can take an unassigned override. For more on Scheduled overrides, see :ref:`mobile-sched-overrides`.
 
 
 .. image:: /_images/spoc/mob-home5.png

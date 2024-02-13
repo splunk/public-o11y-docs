@@ -12,8 +12,8 @@ Splunk On-Call Mobile App Settings
 
 The Splunk On-Call mobile app has many helpful settings to be aware of. Understanding the features and capabilities of your Splunk On-Call mobile app will ensure that you never miss an on-call notification or an incident.
 
--  For iOS-specific settings,  see :ref:`ios-application`
--  For Android-specific settings, see :ref:`android-devices-victorops`
+-  For iOS-specific settings,  see :ref:`spoc-ios`
+-  For Android-specific settings, see :ref:`spoc-android`
 
 Mobile App Downloads:
 - iOS :new-page:`https://itunes.apple.com/us/app/victorops/id696974262?mt=8`
