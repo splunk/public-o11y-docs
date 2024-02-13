@@ -15,13 +15,13 @@ Create a trial for your organization
 If you have a Splunk technical contact, they can create a Splunk Observability Cloud trial for your organization and provide you with the link to log in to your trial organization. Alternatively, you can sign up for a trial. See :ref:`o11y-trial`.
 
 Decide how to manage user access
--------------------------------------
+========================================
 
 There are 3 options for managing user access:
 
-#. Use an external LDAP and control access through Single Sign On (SSO). See :ref:`sso-label` for more information.
-#. Use Splunk Observability Cloud user management to allow access through a username and password. See :ref:`user-managment-intro`.
-#. Use Splunk Cloud as the unified identity provider. See :ref:`unified-id-unified-identity` for more information.
+#. Use an external Lightweight Directory Access Protocol (LDAP) and control access through Single Sign On (SSO). See :ref:`sso-label` for more information.
+#. Use Splunk Observability Cloud user management to allow access using a username and password. See :ref:`user-managment-intro`.
+#. Use Splunk Cloud Platform as the unified identity provider. See :ref:`unified-id-unified-identity` for more information.
 
 (Optional) Request a custom URL for your organization
 =========================================================
@@ -31,24 +31,26 @@ Create a Splunk support request to request a custom URL for your organization, f
 (Optional) Further separate teams and functionality using the parent-child setup
 =====================================================================================
 
-If you want to create separate environments you can use parent-child organizations. Perhaps you want a development environment and a production environment or you want to make sure Team A is fully separated from Team B. Parent-child orgs are 2 or more separate organizations, where your original organization is the parent organization which include your original usage entitlement. You can then have 1 or more orgs as child organizations within the parent organiation. The organiations are fully separated, including users and data. You can request a parent-child organization setup by creating support case. See :ref:`support` for support contact options.
+If you want to create separate environments you can use parent-child organizations. Perhaps you want a development environment and a production environment or you want to make sure Team A is fully separated from Team B. Parent-child orgs are 2 or more separate organizations, where your original organization is the parent organization which includes your original usage entitlement. You can then have 1 or more orgs as child organizations within the parent organization. The organizations are fully separated, including users and data. You can request a parent-child organization setup by creating support case. See :ref:`support` for support contact options.
 
 Plan your teams structure and token management to control access
 =====================================================================================
 
-If you plan to roll out the Splunk Observability Cloud across your enterprise footprint and thus have multiple internal customers, you likely have different access requirements for the various features of the product. To manage these internal customers you can use the teams feature to organize users together in a team and manage them as a unit.
+If you plan to roll out Splunk Observability Cloud across your enterprise footprint you likely have multiple internal customers and different access requirements for the various features in Splunk Observability Cloud. To manage these internal customers, you can use the teams feature to organize users together in a team and manage them as a unit.
 
-Teams
----------
+Plan your team structure
+---------------------------
 
-A user with admin role can manage teams, this includes adding and removing regular users and assigning a team admin. By default, users can choose to join or leave teams at will. For larger organizations, you might want to enable enhanced team security. This is especially useful if the teams are assigned a certain amount of usage rights with their associated tokens (See below).
+A user with admin role can manage teams, this includes adding and removing regular users and assigning a team admin. 
 
-You can also assign team-specific notifications for alerts triggered by the detectors that you set up. Team-specific notifications allow your different teams to have different escalation methods for their alerts.
+By default, users can join or leave teams at will. For larger organizations, you might want enhanced team security. See :ref:`enhanced-team-security`. This is especially useful if the teams are assigned a certain amount of usage rights with their associated tokens (See below).
 
-Tokens
-----------
+You can also assign team-specific notifications for alerts triggered by the detectors that you set up. Team-specific notifications let your different teams to have different escalation methods for their alerts. See :ref:`dmin-team-notifications`.
 
-Tokens are used to secure the data ingest and API calls for sending data to Splunk Observability Cloud. Tokens are valid for 1 year and can be extended for another 60 days. As a platform owner, you can disable tokens and delete tokens that are no longer valid. Your organization has a default token that is automatically generated when the organization is initially created. It is a good practice to regularly disable and rotate tokens.
+Manage your tokens
+--------------------
+
+Use tokens to secure the data ingest and API calls to Splunk Observability Cloud. Tokens are valid for 1 year and you can extend a token for another 60 days. As a platform owner, you can disable tokens and delete tokens that are no longer valid. Your organization has a default token that is automatically generated when the organization is initially created. It is a good practice to regularly disable and rotate tokens.
 
 You can also set limits for data ingestion for your tokens. Use limits to control how many metrics are ingested per token. Limits protect against unexpected data-ingestion overage by ensuring teams can't over consume.
 
