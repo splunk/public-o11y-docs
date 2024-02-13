@@ -1,7 +1,7 @@
 .. _phase2:
 
 
-Rolling out Splunk Observability Cloud: Pilot phase
+Admin onboarding guide: Pilot phase
 ****************************************************************
 
 
@@ -22,7 +22,7 @@ Guidance on OTEL naming conventions
 
 In order to start creating charts and detectors in Splunk Observability Cloud, it is recommended that you define a proper standard for the naming convention of the metrics name. For the best practices in setting up a consistent hierarchical naming convention for metrics, see :ref:`XXXXX`  This will make it easier to find metrics and identify its usage by utilizing the name of the metric.
 
-If your organiation uses host-based O11y licensing, your OTEL naming convention must include the right OTEL host naming convention to roll up usage and telemetry correctly.  Accurate usage counting for host-based orgs requires the right data naming convention for pods.  If your do not follow this naming convention, in-product usage data and usage telemetry might be unreliable.  This must be set up correctly for accurate usage measurement.
+If your organization uses host-based O11y licensing, your OTEL naming convention must include the right OTEL host naming convention to roll up usage and telemetry correctly. Accurate usage counting for host-based orgs requires the right data naming convention for pods.  If your do not follow this naming convention, in-product usage data and usage telemetry might be unreliable.  This must be set up correctly for accurate usage measurement.
 
 .. caution:: Don't remove the Kubernetes attributes process from your configuration. Default attributes such as k8s.pod.name are required by Splunk Observability Cloud.
 

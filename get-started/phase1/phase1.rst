@@ -1,6 +1,6 @@
 .. _phase1:
 
-Get started with Splunk Observability Cloud: Onboarding phase
+Admin onboarding guide: Onboarding phase
 ****************************************************************
 
 .. toctree::
