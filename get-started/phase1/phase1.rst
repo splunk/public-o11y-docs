@@ -7,9 +7,9 @@ Admin onboarding guide: Onboarding phase
    :hidden:
    :maxdepth: 3
 
-   phase1/team-user-admin
-   phase1/arch-gdi
-   phase1/rollout-plan
+   team-user-admin
+   arch-gdi
+   rollout-plan
 
 Your goal in the onboarding phase is to understand the platform and make sure your onboarding team is ready to support the rest of the organization. During the onboarding phase, your main focus is on technical incubation and training of the staff responsible for the overall management of Splunk Observability Cloud. This is defined into 3 high-level sets of activities:
 
