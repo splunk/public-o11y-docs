@@ -1,4 +1,4 @@
-.. _tls-security-protocol
+.. _tls-security-protocol:
 
 ************************************************************************
 TLS integration for Splunk On-Call

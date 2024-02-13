@@ -17,9 +17,11 @@ shortcuts to the information that is most relevant to you. Quickly access your i
     :width: 100%
     :alt: Mobile home page
 
+
 .. image:: /_images/spoc/mob-home2.png
     :width: 100%
     :alt: Mobile home page.
+
 
 Home page
 =================
