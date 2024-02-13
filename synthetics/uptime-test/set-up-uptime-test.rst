@@ -28,6 +28,7 @@ Follow these steps to set up a HTTP Uptime test:
 #. In the :guilabel:`Name` field, enter a name for your test. You will use this name to identify data from the test in your alerts and reports. 
 #. In the :guilabel:`URL` field, paste the URL for the page you want to test, including ``http`` or ``https``.
 #. As you build your test, you can use :guilabel:`Try now` to check that the configuration of your test is valid. Run results aren't stored. For more, see :ref:`try-now`.  
+#. (Optional) Turn on automatic test retry in the event a test initially fails. 
 
 .. _configure-port-test:
 

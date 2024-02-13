@@ -36,6 +36,7 @@ Follow these steps to set up a Browser test:
 #. As you build your test, you can use :guilabel:`Try now` to check that the configuration of your test is valid. Try now results are ephemeral and don’t impact persisted run metrics. For more, see :ref:`try-now`. 
 
 #. (Optional) Add a wait time before a step executes. See, :ref:`browser-wait-times`.
+#. (Optional) Turn on automatic test retry in the event a test initially fails. 
 
 #. Save your test. 
 

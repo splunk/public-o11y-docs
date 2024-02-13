@@ -20,6 +20,7 @@ Follow these steps to set up an API test:
 #. Beside :guilabel:`Steps`, select :guilabel:`Add requests` to add requests to your API test. The requests setup page opens. 
 #. Add as many requests as you would like to include in your test, including setup and validation steps. 
 #. As you build your test, you can use :guilabel:`Try now` to check that the configuration of your test is valid. Try now results are ephemeral and don’t impact persisted run metrics. For more, see :ref:`try-now`. 
+#. (Optional) Turn on automatic test retry in the event a test initially fails. 
 
 .. _api-test-steps:
 
