@@ -7,7 +7,7 @@ MTTA and MTTR reports
 ************************************************************************
 
 .. meta::
-   :description: About the user roll in Splunk On-Call.
+   :description: About the Response Metrics MTTA (Mean Time to Acknowledge) and MTTR (Mean Time to Resolve) reports in Splunk On-Call.
 
 The Response Metrics MTTA (Mean Time to Acknowledge) and MTTR (Mean Time to Resolve) Report tells the story of your investment in Splunk On-Call and the practice of DevOps. Track evolution and goals over time, and tell key stakeholders the story by relaying key metrics directly related to the cost of downtime.
 
@@ -84,127 +84,21 @@ individual alert payload.
 CSV Download
 ============
 
-The data delivered in the CSV will reflect the date range and team
-segmenting designed in the setting views. Changing the segment by
-filters and date range bucketing will have no effect on the contents of
-the download.
+The data delivered in the CSV will reflect the date range and team segmenting designed in the setting views. Changing the segment by
+filters and date range bucketing will have no effect on the contents of the download.
 
-Things to note about the CSV
-----------------------------
+Things to note about the CSV:
 
 -  Timestamps are at millisecond granularity
 -  CSV is sorted by Incident ID in descending order
 
 CSV File Column Headings
-~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
-When downloading the Response Metrics CSV file you can expect to find
-the following columns to include the unit of time/timezone that the
-incident is recorded in. Time related column headings will appear in
-this format as of 12/16/2019
-
-.. raw:: html
-
-   <table width="343">
-
-.. raw:: html
-
-   <tbody>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
+When downloading the Response Metrics CSV file you can expect to find the following columns to include the unit of time/timezone that the incident is recorded in. Time related column headings will appear in this format:
 
 Time to Acknowledge (seconds)
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
 Time to Resolve (seconds)
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
 Incident Start Time (UTC)
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
 Acknowledge Time (UTC)
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
 Resolve Time (UTC)
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </tbody>
-
-.. raw:: html
-
-   </table>
