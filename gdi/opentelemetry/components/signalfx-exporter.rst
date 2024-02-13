@@ -82,7 +82,6 @@ The following example instructs the exporter to send only the ``cpu.interrupt`` 
 
 .. code-block:: yaml
 
-
    exporters:
      signalfx:
        include_metrics:
@@ -287,6 +286,15 @@ Translation rules currently allow the following actions:
 .. _default-translation-rules-sfx-exporter:
 
 .. include:: /_includes/gdi/default-translation-metrics.rst
+
+.. _drop-histogram-metrics:
+
+Drop histogram metrics
+===================================================
+
+In case of high cardinality metrics, dropping histogram buckets might be useful. To drop histogram metrics, set ``drop_histogram_buckets`` to ``true``.
+
+When ``drop_histogram_buckets`` is activated, histogram buckets are dropped instead of being translated to datapoints with the ``_bucket`` suffix. Only datapoints with ``_sum``, ``_count``, ``_min``, and ``_max`` are sent through the exporter.
 
 .. _signalfx-exporter-settings:
 
