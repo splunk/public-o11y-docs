@@ -88,11 +88,13 @@ To create a new muting rule from scratch:
 Configure your muting rule
 =============================================================================
 
-Configure your muting rule:
+The following screenshot shows the muting rule dialog box: 
 
 .. image:: /_images/alerts-detectors-notifications/muting-notifications/mutingrule-modal2.png
       :width: 90%
       :alt: Configure a muting rule
+
+To create a new muting rule, follow these steps:
 
 #. Use :guilabel:`Add property` to add or modify one or more properties for which you want to mute notifications. If using groups, you can also type :strong:`sf_tags` to find a list of tags. When you add more than one property, the muting rule interprets the properties using the AND logical operator.
 #. Include a :guilabel:`Reason` for the muting rule. The text you enter in this field is displayed when you hover over a rule in the :guilabel:`Muting Rules` tab, and can help others understand why alerts are being muted.
