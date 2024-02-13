@@ -14,4 +14,9 @@ Splunk On-Call reports
     on-call-report
     post-incident-review
 
-About Splunk On-Call reports.
+Splunk On-Call provides 4 default reports:
+
+- :ref:`incident-frequency-report`
+- :ref:`mtta-mttr-report`
+- :ref:`on-call-report`
+- :ref:`post-incident-review`
