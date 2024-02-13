@@ -33,6 +33,7 @@ The SignalFx Instrumentation for .NET provides the following features:
 
 - Collection and reporting of all spans
 - AlwaysOn Profiling for CPU and memory
+- Database Query Performance (from version 1.4.0)
 - B3 and W3C headers for context propagation
 - Zipkin trace exporter to send spans as JSON
 - Support for existing custom instrumentation through OpenTracing
