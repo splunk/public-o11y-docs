@@ -15,7 +15,7 @@ The following config options are common to all monitors, which can be used with 
 
 .. list-table::
    :header-rows: 1
-   :widths: 30 10 10 10 40
+   :widths: 25 10 10 10 45
    :width: 100%
 
    *  - Config option	
@@ -25,6 +25,7 @@ The following config options are common to all monitors, which can be used with 
       - Description
 
    *  - ``type``		
+      - 
       - no	
       - ``string``	
       - The type of the monitor
