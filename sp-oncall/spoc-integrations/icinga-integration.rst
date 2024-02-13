@@ -313,10 +313,10 @@ You can find these steps in the README.md file in /opt/victorops/nagios_plugin/i
 
 #. Restart Icinga 2.
 
-After Icinga restarts, you see 3 VictorOps services:
+After Icinga restarts, you see 3 VictorOps services as shown in the following image.
 
 .. image:: /_images/spoc/icinga2.png
-   :alt: icinga2
+   :alt: 3 VictorOps services in Icinga
 
 Routing configuration for Incinga version 2
 ------------------------------------------------
