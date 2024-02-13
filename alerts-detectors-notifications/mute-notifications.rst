@@ -90,8 +90,8 @@ Configure your muting rule
 
 Configure your muting rule:
 
-.. image:: /_images/alerts-detectors-notifications/muting-notifications/mutingrule-modal.png
-      :width: 65%
+.. image:: /_images/alerts-detectors-notifications/muting-notifications/mutingrule-modal2.png
+      :width: 90%
       :alt: Configure a muting rule
 
 #. Use :guilabel:`Add property` to add (or modify) one or more properties for which you want to mute notifications. If using groups, you can also type :strong:`sf_tags` to find a list of tags. When you add more than one property, the muting rule interprets the properties using the AND logical operator.
