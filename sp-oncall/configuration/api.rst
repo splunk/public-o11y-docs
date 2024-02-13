@@ -1,6 +1,5 @@
 .. _spoc-api:
 
-
 ************************************************************************
 Splunk On-Call API
 ************************************************************************
@@ -9,64 +8,49 @@ Splunk On-Call API
    :description: Learn how to manually take an on-call shift from someone in real-time. Ideal for unexpected absences from work when you're on-call.
 
 
-Follow these steps to configure API calls within your Splunk On-Call
-account. To see all available API calls and configuration steps please
-visit the `API
-Documentation <https://portal.victorops.com/public/api-docs.html>`__
-page.
+Follow these steps to configure API calls within your Splunk On-Call account. To see all available API calls and configuration steps  visit the :new-page:`API Documentation <https://portal.victorops.com/public/api-docs.html>` page.
 
-The Splunk On-Call API will allow users to take the custom actions they
-want and gather the information they need. The following article will
-walk you through what it takes to get started with the API and outline
-some of the limits currently in place.
+The Splunk On-Call API will allow users to take the custom actions they want and gather the information they need. The following topic will walk you through what it takes to get started with the API and outline some of the limits currently in place.
 
---------------
 
-**API Configuration in Splunk On-Call**
----------------------------------------
 
-To access the API, navigate to Integrations >> API. From here you can
-retrieve your API ID and create API Keys. Your API calls will be tallied
-on this page as well.
+API Configuration in Splunk On-Call
+================================================
 
-*Note: Only Splunk On-Call admin users can create API Keys.*
+To access the API, navigate to :guilabel:`Integrations`, then :guilabel:`API`. From here you can retrieve your API ID and create API Keys. Your API calls will be tallied on this page as well.
 
-_images/spoc/Key.jpg
+.. note:: Only Splunk On-Call admin users can create API Keys.
 
-If you check the “Read-only” checkbox when creating an API key, the
-created key will only be able to perform GET requests.
+.. image:: /_images/spoc/api1.png
+    :width: 100%
+    :alt: Select New Key to add API keys.
 
-**API Usage and Limits**
-~~~~~~~~~~~~~~~~~~~~~~~~
+If you select :guilabel:`Read-only` when creating an API key, the created key will only be able to perform GET requests.
 
--  All packages (Starter, Growth, and Enterprise) have unlimited API
-   calls.
--  There is virtually no limit to the number of API keys you may create
-   in your Splunk On-Call organization.
--  Each individual call is rate-limited. For specific details please
-   `review the
-   documentation <https://portal.victorops.com/public/api-docs.html>`__
-   for the specific call or contact Splunk On-Call support.
+API Usage and Limits
+--------------------------
 
-**Interactive API Documentation**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-  All packages (Starter, Growth, and Enterprise) have unlimited API calls.
+-  There is virtually no limit to the number of API keys you may create in your Splunk On-Call organization.
+-  Each individual call is rate-limited. For specific details, see `the API documentation <https://portal.victorops.com/public/api-docs.html>` for the specific call or contact Splunk On-Call support.
 
-The documentation for the VictorOps API allows you to try out the
-different calls in real-time. To get started select the **Read the API
-Documentation** link on the API settings page.
+Interactive API Documentation
+-----------------------------------
 
-_images/spoc/API-Documentation.jpg
+The documentation for the Splunk On-Call API allows you to try out the different calls in real-time. To get started select the :guilabel:`Read the API Documentation` link on the API settings page.
 
-This will bring you to the VictorOps API documentation. All available
-API calls are listed here.
+.. image:: /_images/spoc/api2.png
+    :width: 100%
+    :alt: Follow the link on the API settings page to try API calls in real-time.
 
-_images/spoc/Screen-Shot-2019-09-24-at-2.46.46-PM.png
+This will bring you to the Splunk On-Call API documentation. All available API calls are listed here.
 
-**Additional Endpoint Requests**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. image:: /_images/spoc/api3.png
+    :width: 100%
+    :alt: The Splunk On-Call API documentation.
 
-If there is an API endpoint you would like to see added
-`HERE <https://portal.victorops.com/public/api-docs.html>`__ please let
-us know! This is a growing document and we want your input. Please reach
-out to On-Call Support via the Splunk Support Portal or in-product chat
-with any additional requests.
+
+Additional Endpoint Requests
+-------------------------------------
+
+If there is an API endpoint you would like to see added to the public API site, let us know. Reach out to On-Call Support via the Splunk Support Portal or in-product chat with any additional requests.
