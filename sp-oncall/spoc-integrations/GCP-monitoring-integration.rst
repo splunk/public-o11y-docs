@@ -20,9 +20,9 @@ In Google Cloud Platform
 
 1. Navigate to :guilabel:`Monitoring` then :guilabel:`Alerting` then select :guilabel:`EditNotification Channels` option.
 2. Scroll to :guilabel:`Webhooks` and select :guilabel:`Add New`.
-3. Under the :guilabel:`Endpoint URL` enter the address you copied from your Splunk On-Call Stackdriver integration page. 
+3. Under the :guilabel:`Endpoint URL` enter the address you copied from your Splunk On-Call GCP Monitoring integration page. 
 4. Enter your display name in :guilabel:`Display Name`, for example, Splunk On-Call.
 5. Leave :guilabel:`Use HTTP Basic Auth` unselected.
 6. Select :guilabel:`Test Connection`. The :guilabel:`Test Connection` button doesn't trigger an incident in Splunk On-Call but you have to select it to save. To test the integration you need to manually trigger an alert in GCP Monitoring.
 7. Select :guilabel:`Save`.
-8. Add the on-Call (VictorOps) Webhook Notification Channel you just created to your desired Alerting Policies.
+8. Add the on-call webhook notification channel you created to your desired alerting policies.
