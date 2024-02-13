@@ -94,10 +94,11 @@ Configure your muting rule:
       :width: 90%
       :alt: Configure a muting rule
 
-#. Use :guilabel:`Add property` to add (or modify) one or more properties for which you want to mute notifications. If using groups, you can also type :strong:`sf_tags` to find a list of tags. When you add more than one property, the muting rule interprets the properties using the AND logical operator.
-#. Specify the :guilabel:`Schedule` during which notifications are muted (muting period) using the predefined periods or by creating a custom period. You can also mute indefinitely.
+#. Use :guilabel:`Add property` to add or modify one or more properties for which you want to mute notifications. If using groups, you can also type :strong:`sf_tags` to find a list of tags. When you add more than one property, the muting rule interprets the properties using the AND logical operator.
 #. Include a :guilabel:`Reason` for the muting rule. The text you enter in this field is displayed when you hover over a rule in the :guilabel:`Muting Rules` tab, and can help others understand why alerts are being muted.
-#. Select whether you want to clear any existing alerts that match the conditions you have set. If you're muting certain alerts to address a known problem, you might want to clear existing alerts so you are starting from a clean slate. Clearing these alerts also notifies downstream systems, such as VictorOps, OpsGenie, and PagerDuty.
+#. Specify the :guilabel:`Schedule` during which notifications are muted (muting period) using the predefined periods or by creating a custom period. You can also mute indefinitely.
+#. (Optional) If the rule follows a schedule, you can set a recurrence period for the muting rule. A scheduled muting rule can repeat on a daily or weekly basis. Select :menuselection:`Custom` to set a custom recurrence period.
+#. Select whether you want to clear any existing alerts that match the conditions you have set. If you're muting certain alerts to address a known problem, you might want to clear existing alerts so you are starting from a clean slate. Clearing these alerts also notifies downstream systems, such as Splunk On-Call, OpsGenie, and PagerDuty.
 #. Select whether you want to receive notifications for alerts that are still active when the muting period ends.
 #. Select :guilabel:`Next` to view a summary of the muting conditions. If you want to turn on the muting rule, select :guilabel:`Save`. It can take up to a minute before a new muting rule goes into effect.
 
