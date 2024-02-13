@@ -8,15 +8,15 @@ Google Cloud Platform (GCP) Monitoring integration for Splunk On-Call
 
 Google Cloud Platform (GCP) Monitoring (formerly Stackdriver) provides full-stack intelligent monitoring of infrastructure, systems, and apps. Use this guide to integrate GCP Monitoring with Splunk On-Call.
 
-In Splunk On-Call
-========================
+Enable the GCP Monitoring integration in Splunk On-Call
+=========================================================
 
 1. In Splunk On-Call, select :guilabel:`Settings` then :guilabel:`Alert Behavior` then :guilabel:`Integrations` then :guilabel:`GCP Monitoring`.
 2. To turn on the integration, select :guilabel:`Enable Integration`. Your endpoint URL is generated. 
 3. Replace the ``$routing_key`` portion of the URL with the actual routing key you want to use. The integration can't send alerts if the routing key is empty. To view or configure routing keys in Splunk On-Call, select :guilabel:`Alert Behavior` then :guilabel:`Route Keys`.
 
-In Google Cloud Platform
-==============================
+Create a webhook in n Google Cloud Platform
+==============================================
 
 1. Navigate to :guilabel:`Monitoring` then :guilabel:`Alerting` then select :guilabel:`EditNotification Channels` option.
 2. Scroll to :guilabel:`Webhooks` and select :guilabel:`Add New`.
