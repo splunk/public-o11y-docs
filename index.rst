@@ -26,7 +26,7 @@ Splunk Observability Cloud overview :ref:`welcome`
 .. rst-class:: newcard
 
 :strong:`Get started`
-Get started with Splunk Observability Cloud :ref:`get-started-306090`
+Admin guide for onboarding Splunk Observability Cloud :ref:`admin-onboarding-guide`
 
 .. rst-class:: newcard
 
@@ -275,7 +275,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Get started <get-started/get-started-306090>
+   Get started <get-started/admin-onboarding-guide>
 
 .. toctree::
    :maxdepth:   3
