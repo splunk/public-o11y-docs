@@ -192,7 +192,7 @@ The following resource detectors are available:
      - ``azure.app.service.stamp``, ``cloud.platform``, ``cloud.provider``, ``cloud.resource_id``, ``cloud.region``, ``deployment.environment``, ``host.id``, ``service.instance.id``, ``service.name``
      - Experimental Beta
      - Community support
-   * - ``CONTAINER``
+   * - ``CONTAINER`` |br| (Not supported on .NET Framework)
      - Container detector. For example, Docker or Podman containers.
      - ``container.id``
      - Experimental Beta
@@ -243,8 +243,12 @@ The following settings control instrumentations and tracing behavior:
      - Maximum number of links per span. Default value is ``1000``.
    * - ``OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT``
      - Maximum length of strings for attribute values. Values larger than the limit are truncated. Default value is ``1200``. Empty values are treated as infinity.
+   * - ``OTEL_DOTNET_AUTO_ENTITYFRAMEWORKCORE_SET_DBSTATEMENT_FOR_TEXT``
+     - Whether the Entity Framework Core instrumentation can pass SQL statements through the ``db.statement`` attribute. Queries might contain sensitive information. If set to ``false``, `db.statement` is recorded only for executing stored procedures. The default value is ``false``.
    * - ``OTEL_DOTNET_AUTO_GRAPHQL_SET_DOCUMENT``
      - Whether the GraphQL instrumentation can pass raw queries as a ``graphql.document`` attribute. As queries might contain sensitive information, the default value is ``false``.
+   * - ``OTEL_DOTNET_AUTO_SQLCLIENT_SET_DBSTATEMENT_FOR_TEXT``
+     - Whether the SQL Client instrumentation can pass SQL statements through the ``db.statement`` attribute. Queries might contain sensitive information. If set to ``false``, ``db.statement`` is recorded only for executing stored procedures. Not supported on .NET Framework for ``System.Data.SqlClient``. The default value is ``false``.
    * - ``OTEL_DOTNET_AUTO_TRACES_ADDITIONAL_LEGACY_SOURCES``
      - Comma-separated list of additional legacy source names to be added to the tracer at the startup. Use it to capture ``System.Diagnostics.Activity`` objects created without using the ``System.Diagnostics.ActivitySource`` API.
 
