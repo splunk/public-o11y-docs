@@ -400,8 +400,6 @@ You can also use the methods shown in :ref:`zeroconfig-dotnet-traces` to configu
 
 See :ref:`advanced-dotnet-otel-configuration` for the full list of supported environment variables.
 
-.. _troubleshoot-zeroconfig-dotnet:
-
 .. include:: /_includes/gdi/troubleshoot-zeroconfig-k8s.rst
 
 Examine .NET logs
