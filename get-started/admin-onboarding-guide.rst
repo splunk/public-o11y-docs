@@ -20,7 +20,10 @@ Use this get-started guide to follow the most common journey for admins who are 
 #. The pilot phase - set up standards and procedures for end users, like development teams and site reliability engineers. See :ref:`phase2`.
 #. The expansion and optimization phase - carry forward best practices and frameworks established during the pilot rollout to your infrastructure, applications, and teams. See :ref:`phase3`.
 
-.. image:: /_images/admin/admin-onboarding-guide-diagram.png
+.. image:: /_images/admin/admin-onboarding-guide-phases.png
    :alt: This image shows the admin onboarding guide phases
+   :width: 80%
+   :align: center
+
 
 
