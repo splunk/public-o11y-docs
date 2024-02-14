@@ -241,8 +241,9 @@ The following components are available for each global region. Each Cloud provid
        * Europe: Dublin (eu-west-1)
        * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
      - 
+       * US: Oregon (us-west-1)
      -
-       * us0, us1
+       * us0, us1, us2
        * eu0
        * au0, jp0
 
