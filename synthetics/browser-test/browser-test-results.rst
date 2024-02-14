@@ -156,7 +156,7 @@ Filmstrip
 -----------
 :strong:`Available in Enterprise Edition.`
 
-The filmstrip offers a screenshot of site performance at specific intervals on a timeline, so that you can see how the page responds in real time. By default, the filmstrip provides a screenshot and the time in milliseconds for every visual change as the page loads. You can also use the interval selector to view screenshots for every 100 milliseconds, 500 milliseconds, and one second. The recommended maximum number of steps for optimal performance is 35. The maximum data per filmstrip is 2GB. 
+The filmstrip offers a screenshot of site performance at specific intervals on a timeline, so that you can see how the page responds in real time. By default, the filmstrip provides a screenshot and the time in milliseconds for every visual change as the page loads. You can also use the interval selector to view screenshots for every 100 milliseconds, 500 milliseconds, and one second. The maximum number of steps for optimal performance is 35. The maximum data per filmstrip is 2GB. If your filmstrip is larger than 2GB, the remaining video isn't colleceted but all the other metrics are still collected.
 
 .. _video:
 
