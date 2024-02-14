@@ -272,25 +272,14 @@ The following example shows how to install the Collector on Linux using discover
 
    .. code-block:: text
 
-      Partially discovered "smartagent/collectd/mysql" using "host_observer" endpoint "(host_observer)[::]-3306-TCP-1757": Make sure y
-      our user credentials are correctly specified using the `--set splunk.discovery.receivers.smartagent/collectd/mysql.config.username="<username>"` and `--set splunk.discovery.receivers.smartagent/collect
-      d/mysql.config.password="<password>"` command or the `SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_collectd_x2f_mysql_CONFIG_username="<username>"` and `SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_collectd_
-      x2f_mysql_CONFIG_password="<password>"` environment variables. (evaluated "{\"collectdInstance\":\"monitor-smartagentcollectdmysqlreceiver_creatorhost_observerendpoint3306host_observer3306TCP1757\",\"k
-      ind\":\"receiver\",\"message\":\"mysql plugin: Failed to connect to database splunk.discovery.default at server ::: Access denied for user 'splunk.discovery.default'@'localhost' (using password: YES)\"
-      ,\"monitorType\":\"collectd/mysql\"}")
+      Partially discovered "mysql" using "docker_observer" endpoint "acb7cf9f5d674b8bb83487e043857d98c42b93f2214f114b2228e86932b2cde2:3306": Make sure your user credentials are correctly specified using the `--set splunk.discovery.receivers.mysql.config.username="<username>"` and `--set splunk.discovery.receivers.mysql.config.password="<password>"` command or the `SPLUNK_DISCOVERY_RECEIVERS_mysql_CONFIG_username="<username>"` and `SPLUNK_DISCOVERY_RECEIVERS_mysql_CONFIG_password="<password>"` environment variables. (evaluated "{\"error\":\"Error 1045 (28000): Access denied for user 'splunk.discovery.default'@'172.17.0.1' (using password: YES)\",\"kind\":\"receiver\",\"message\":\"Failed to fetch InnoDB stats\"}")
 
 #. Provide the necessary credentials by creating the properties.discovery.yaml file in the `/etc/otel/collector/config.d` directory with the following content:
 
    .. code-block:: yaml
 
-      splunk.discovery:
-        receivers:
-          smartagent/collectd/mysql:
-            enabled: true
-            config:
-              username: "<username>"
-              password: "<password>"
-              databases: "[{name: '<database name>'}]"
+      splunk.discovery.receivers.mysql.config.username: "<username>"
+      splunk.discovery.receivers.mysql.config.password: "<password>"
 
 #. Restart the Collector with the following command:
 
@@ -308,7 +297,8 @@ The following example shows how to install the Collector on Linux using discover
 
    .. code-block:: text
 
-      Successfully discovered "smartagent/collectd/mysql" using "host_observer" endpoint "(host_observer)[::]-3306-TCP-1757".
+      Successfully discovered "mysql" using "docker_observer" endpoint "abcdef1234:3306".
+
 
 Troubleshooting
 ======================
