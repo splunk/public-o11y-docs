@@ -13,13 +13,6 @@ Learn how to configure Splunk zero config auto instrumentation for the advanced 
 * Override auto instrumentation settings
 * Deploy auto instrumentation in gateway mode
 
-Using the values.yaml file
-================================
-
-Configuring auto instrumentation requires editing a ``values.yaml`` file. This file contains fields and values that allow you to install the Splunk Distribution of OpenTelemetry Collector through the Helm Chart.
-
-To learn more about the ``values.yaml`` file, see <placeholder>. 
-
 .. _change-zeroconfig-version:
 
 Change instrumentation versions (Kubernetes only)
@@ -95,6 +88,21 @@ You can edit the types of telemetry data that auto instrumentation ingests. By d
               enabled: true
             operator:
               enabled: true
+
+Activate Profiling and metrics collection
+----------------------------------------------------
+
+You can activate CPU and memory profiling, as well as automatic metrics collection, by updating the environment variables for your instrumentation.
+
+.. tabs:: 
+
+    .. tab:: Linux
+
+      To activate the settings in Linux, edit the environment variables located in the auto instrumentation configuration file.
+
+      For example, to activate Profiling in Linux, open the ``.conf`` file located in the ``/etc/splunk/zeroconfig`` directory. Next, set the environment variable ``SPLUNK_PROFILER_ENABLED=true``. 
+
+      .. note:: If you're using ``systemd``, the environment variables are instead located in ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
 
 
 .. _deploy-in-gateway:
