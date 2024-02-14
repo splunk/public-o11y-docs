@@ -45,24 +45,30 @@ A user with admin role can manage teams, this includes adding and removing regul
 
 By default, users can join or leave teams at will. For larger organizations, you might want enhanced team security. See :ref:`enhanced-team-security`. This is especially useful if the teams are assigned a certain amount of usage rights with their associated tokens (See below).
 
-You can also assign team-specific notifications for alerts triggered by the detectors that you set up. Team-specific notifications let your different teams to have different escalation methods for their alerts. See :ref:`dmin-team-notifications`.
+You can also assign team-specific notifications for alerts triggered by the detectors that you set up. Team-specific notifications let your different teams to have different escalation methods for their alerts. See :ref:`admin-team-notifications`.
 
 Manage your tokens
 --------------------
 
-Use tokens to secure the data ingest and API calls to Splunk Observability Cloud. Tokens are valid for 1 year and you can extend a token for another 60 days. As a platform owner, you can disable tokens and delete tokens that are no longer valid. Your organization has a default token that is automatically generated when the organization is initially created. It is a good practice to regularly disable and rotate tokens.
+Use tokens to secure the data ingest and API calls to Splunk Observability Cloud. Tokens are valid for 1 year and can be extended for another 60 days. Your organization has a default token that is automatically generated when the organization is initially created. 
+
+As an admin, you can deactivate tokens that are no longer needed. Create a plan to regularly deactivate and rotate tokens.
 
 You can also set limits for data ingestion for your tokens. Use limits to control how many metrics are ingested per token. Limits protect against unexpected data-ingestion overage by ensuring teams can't over consume.
+
+See :ref:`admin-tokens` for more information about tokens.
 
 Team and token naming
 -------------------------
 
-You want to determine a naming convention for teams to ensure uniformity and easy identification when assigning access tokens to control data ingest limits.One of the more common best practices is to align team and token names, for example:
+In advance of team and token creation, determine a naming convention for teams and tokens. This helps you to track token assignments and control data ingest limits. Aligning team and token names also helps you to identify token owners when viewing the usage reports. For example, you can align team and token names:
 
 * Team name: FRONTEND_DEV_TEAM 
 * Token name: FRONTEND_DEV_TEAM_INGEST, FRONTEND_DEV_TEAM_API, FRONTEND_DEV_TEAM_RUM
 
-Aligning team and token names makes it easier to identify the owners of tokens when viewing the usage reports.
+See :ref:`admin-manage-usage`.
+
+
 
 
 
