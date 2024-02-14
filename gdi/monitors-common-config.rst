@@ -102,7 +102,7 @@ The following config options are common to all monitors, which can be used with 
       - ``list of objects``	
       - A list of datapoint filters. These filters allow you to comprehensively define which datapoints to exclude by metric name or dimension set, as well as the ability to define overrides to re-include metrics excluded by previous patterns within the same filter item. 
 
-   *  - ``disableHostDimensions	
+   *  - ``disableHostDimensions``	
       - ``false``	
       - no	
       - ``bool``	
