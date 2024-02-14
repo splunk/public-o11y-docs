@@ -340,6 +340,8 @@ User authentication and access
 
 You can configure authentication using Single-sign on (SSO) integrations implementing SAML 2.0, such as Ping, Okta, or AzureAD. See :ref:`sso-about` for more information.
 
+To control what your Splunk Observability Cloud users can do, you assign them roles that have a defined set of specific capabilities. See :ref:`roles-and-capabilities` for more information.
+
 For additional information, see:
 
 - :ref:`authentication-intro`
@@ -403,9 +405,13 @@ For additional information, see :ref:`support`.
 Users and authentication
 ===========================================================
 
-You are responsible for creating and administering your users' accounts, the authentication method, and global password policies. You can configure Splunk Observability Cloud to use SAML authentication for single sign-on (SSO). To use multifactor authentication, you must use a SAML 2.0 identity provider that supports multifactor authentication. Only SHA-256 signatures in the SAML message between your IdP and Splunk Observability Cloud are supported. You are responsible for the SAML configuration of your IdP including the use of SHA-256 signatures. See :ref:`sso-about`.
+You are responsible for creating and administering your users's accounts, the roles and capabilities assigned to them, the authentication method, and global password policies. To control what your Splunk Observability Cloud users can do, you assign them roles that have a defined set of specific capabilities. You can assign roles using Splunk Observability Cloud in the browser or through the REST API. See :ref:`users-assign-roles`.
+
+Roles give Splunk Observability Cloud users access to features and permission to perform tasks and searches. Each user account is assigned one or more roles. Each role contains a set of capabilities. Splunk Observability Cloud provides the admin role, which has the capabilities required to administer Splunk Observability Cloud. See :ref:`roles-and-capabilities`.
+
+You can configure Splunk Observability Cloud to use SAML authentication for single sign-on (SSO). To use multifactor authentication, you must use a SAML 2.0 identity provider that supports multifactor authentication. Only SHA-256 signatures in the SAML message between your IdP and Splunk Observability Cloud are supported. You are responsible for the SAML configuration of your IdP including the use of SHA-256 signatures. See :ref:`sso-about`.
 
 Unified identity
 ----------------------------------------------------
 
-When Splunk Cloud Platform customers purchase or start a trial of Splunk Observability Cloud, users can access both platforms using a single identity. A user's role-based access to Splunk Cloud Platform indexes carries over to Splunk Observability Cloud. Administrators can set up all users in a central location, Splunk Cloud Platform. Users can log into Splunk Observability Cloud with SSO using their Splunk Cloud Platform credentials. Users can examine logs from the Splunk Cloud Platform instance in Log Observer Connect upon provisioning with no additional setup. See :ref:`unified-id-unified-identity` for more information.
+When Splunk Cloud Platform customers purchase or start a trial of Splunk Observability Cloud, users can access both platforms using a single identity. A user’s role-based access to Splunk Cloud Platform indexes carries over to Splunk Observability Cloud. Administrators can set up all users in a central location, Splunk Cloud Platform. Users can log into Splunk Observability Cloud with SSO using their Splunk Cloud Platform credentials. Users can examine logs from the Splunk Cloud Platform instance in Log Observer Connect upon provisioning with no additional setup. See :ref:`unified-id-unified-identity` for more information.
