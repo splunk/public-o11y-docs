@@ -1,3 +1,9 @@
+.. admonition:: Preview: Zero Configuration Automatic Instrumentation
+
+    Zero Configuration Automatic Instrumentation for Kubernetes .NET applications is in preview.
+
+    Preview features are provided by Splunk to you “as is” without any warranties, maintenance and support, or service level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it at any time. Use of preview features is subject to the :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`.
+
 .. _auto-instrumentation-dotnet-k8s:
 
 ************************************************************************************
@@ -383,7 +389,7 @@ View results in Splunk APM
 
 The Operator intercepts and alters the Kubernetes API requests to create and update annotated pods, the internal pod application containers are instrumented, and trace and metrics data populates the :ref:`APM dashboard <apm-dashboards>`. 
 
-If you don't see data in Splunk APM after 2 to 5 minutes, try verifying the instrumentation again. See :ref:`_troubleshoot-zeroconfig-dotnet` for additional troubleshooting guidance.
+If you don't see data in Splunk APM after 2 to 5 minutes, try verifying the instrumentation again. See :ref:`troubleshoot-zeroconfig-dotnet` for additional troubleshooting guidance.
 
 (Optional) Configure the instrumentation
 ===========================================================
@@ -399,6 +405,8 @@ You can also use the methods shown in :ref:`zeroconfig-dotnet-traces` to configu
     kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=build.id=feb2023_v2
 
 See :ref:`advanced-dotnet-otel-configuration` for the full list of supported environment variables.
+
+.. _troubleshoot-zeroconfig-dotnet:
 
 .. include:: /_includes/gdi/troubleshoot-zeroconfig-k8s.rst
 
