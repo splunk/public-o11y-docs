@@ -5,23 +5,32 @@ Zero Configuration Automatic Instrumentation for Kubernetes .NET applications
 ************************************************************************************
 
 .. meta::
-   :description: Use the Collector with the upstream Kubernetes Operator for automatic instrumentation to easily add observability code to your application, enabling it to produce telemetry data.
+   :description: Use the Collector with the Kubernetes Operator for automatic instrumentation to easily add observability code to your application and produce telemetry data.
 
-You can use the OTel Collector with an upstream Operator in a Kubernetes environment to automatically instrument your .NET applications. 
+Use the OTel Collector with the Operator in a Kubernetes environment to automatically instrument your .NET applications. By using zero configuration automatic instrumentation, you can quickly send .NET application data to Splunk APM without configuring the OpenTelemetry Collector or changing your application code.
+
+To install zero configuration automatic instrumentation for .NET applications, complete the following steps:
+
+#. :ref:`deploy-helm-chart-dotnet-k8s`
+#. :ref:`verify-otel-resources-dotnet-k8s`
+#. :ref:`set-dotnet-annotations-k8s`
+#. :ref:`view-results-dotnet-k8s`
 
 Requirements
 ================================================================
 
 Zero Config Auto Instrumentation for .NET requires the following components: 
 
-* .NET version ``6.0`` or higher and supported .NET application libraries. For a list of supported libraries, see :ref:`supported-dotnet-libraries`.
+* .NET version 6.0 or higher and supported .NET application libraries. For a list of supported libraries, see :ref:`supported-dotnet-libraries`.
 * x86 or AMD64 (x86-64) architecture. ARM architectures aren't supported.
 * Your Splunk Observability Cloud realm and access token. For more information, see :ref:`admin-org-tokens`.
+
+.. _deploy-helm-chart-dotnet-k8s:
 
 Deploy the Helm Chart with the Kubernetes Operator
 =========================================================
 
-To deploy the Helm Chart, configure a values.yaml file with the appropriate fields. The following table shows the required and optional fields for values.yaml:
+To deploy the Helm Chart, create a values.yaml file and populate it with the appropriate fields. The following table shows the required and optional fields for values.yaml:
 
 .. list-table::
         :header-rows: 1
@@ -55,7 +64,7 @@ To deploy the Helm Chart, configure a values.yaml file with the appropriate fiel
 Add certificates
 ----------------------------------------
 
-The Operator requires certain TLS certificates to work. Use the following command to check whether a certification manager is available:
+The Operator requires TLS certificates to work. Use the following command to check whether a certification manager is available:
 
 .. code-block:: yaml
 
@@ -79,10 +88,10 @@ If a certification manager isn't available in the cluster, then you'll need to a
 
 .. _zeroconfig-dotnet-traces:
 
-Ingest traces
+Set the deployment environment
 ------------------------------------------------
 
-To ingest trace telemetry data, the attribute ``deployment.environment`` must be onboard the exported traces. The following table shows the different methods for setting this attribute:
+To ingest trace telemetry data, the attribute ``deployment.environment`` must be included in the exported traces. The following table shows the different methods for setting this attribute:
 
 .. list-table::
   :header-rows: 1
@@ -92,14 +101,14 @@ To ingest trace telemetry data, the attribute ``deployment.environment`` must be
   * - Method
     - Scope
     - Implementation
-  * - Through the ``values.yaml`` file ``environment`` configuration
+  * - Through the values.yaml file ``environment`` configuration
     - Applies the attribute to all telemetry data (metrics, logs, traces) exported through the collector.
-    - The chart will set an attribute processor to add ``deployment.environment=prd`` to all telemetry data processed by the collector.
-  * - Through the ``values.yaml`` file and ``operator.instrumentation.spec.env`` or ``operator.instrumentation.spec.{instrumentation_library}.env`` configuration
-    - Allows you to set ``deployment.environment`` either for all auto-instrumented applications collectively or per auto-instrumentation language.
+    - The chart sets an attribute processor to add ``deployment.environment=prd`` to all telemetry data processed by the collector.
+  * - Through the values.yaml file and ``operator.instrumentation.spec.env`` or ``operator.instrumentation.spec.{instrumentation_library}.env`` configuration
+    - Sets ``deployment.environment`` either for all auto-instrumented applications collectively or per auto-instrumentation language.
     - Add the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable, setting its value to ``deployment.environment=prd``.
   * - Through your Kubernetes application deployment, daemonset, or pod specification
-    - Allows you to set ``deployment.environment`` at the level of individual deployments, daemonsets, or pods.
+    - Sets ``deployment.environment`` at the level of individual deployments, daemonsets, or pods.
     - Employ the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable, assigning the value ``deployment.environment=prd``.
 
 The following examples show how to set the attribute using each method:
@@ -108,7 +117,7 @@ The following examples show how to set the attribute using each method:
 
     .. tab:: Environment option
 
-      Set the environment option in the ``values.yaml`` file. This adds the ``deployment.environment`` attribute to all telemetry data the Collector receives, including data from automatically-instrumented pods.
+      Set the environment option in the values.yaml file. This adds the ``deployment.environment`` attribute to all telemetry data the Collector receives, including data from automatically-instrumented pods.
 
       .. code-block:: yaml
         :emphasize-lines: 6
@@ -170,11 +179,13 @@ The following examples show how to set the attribute using each method:
       .. code-block:: bash
         
           kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=environment=prd
+
+.. _verify-otel-resources-dotnet-k8s:
       
-Verify all the OpenTelemetry resources are deployed successfully
+Check that all the OpenTelemetry resources are deployed successfully
 ==========================================================================
 
-Resources include the Collector, the Operator, webhook, an instrumentation.
+Resources include the Collector, the Operator, a webhook, and an instrumentation.
 
 Run the following to verify the resources are deployed correctly:
 
@@ -199,12 +210,14 @@ Run the following to verify the resources are deployed correctly:
    # NAME                            AGE   ENDPOINT
    # splunk-otel-collector   5m    http://$(SPLUNK_OTEL_AGENT):4317
 
+.. _set-dotnet-annotations-k8s:
+
 Set annotations to instrument .NET applications
 ===================================================================
 
-You can activate auto instrumentation for .NET applications before runtime.
+To instrument your .NET applications, add an annotation to your Kubernetes object yaml.
 
-.NET auto instrumentation uses annotations to set the .NET runtime identifiers (RIDs). Find the annotation that corresponds to your runtime environment and add it to the application object YAML.
+.NET automatic instrumentation uses annotations to set the .NET runtime identifiers (RIDs). Find the annotation that corresponds to your runtime environment and add it to the application object YAML.
 
 .. list-table::
   :header-rows: 1
@@ -317,7 +330,7 @@ To verify that the instrumentation was successful, run the following command on 
 
   kubectl describe pod <my-application-name> -n <my-namespace>
 
-Your instrumented pod should contain an initContainer named ``opentelemetry-auto-instrumentation`` and the target application container should have several ``OTEL_*`` environment variables similar to those in the demo output below.
+Your instrumented pod should contain an initContainer named ``opentelemetry-auto-instrumentation`` and the target application container should have several ``OTEL_*`` environment variables similar to those in the following demo output:
 
 .. code-block:: bash
 
@@ -363,17 +376,21 @@ Your instrumented pod should contain an initContainer named ``opentelemetry-auto
     #     Medium:
     #     SizeLimit:   200Mi
 
-View results at Splunk Observability APM
+.. _view-results-dotnet-k8s:
+
+View results in Splunk APM
 ===========================================================
 
-Allow the Operator to do the work. The Operator intercepts and alters the Kubernetes API requests to create and update annotated pods, the internal pod application containers are instrumented, and trace and metrics data populates the :ref:`APM dashboard <apm-dashboards>`. 
+The Operator intercepts and alters the Kubernetes API requests to create and update annotated pods, the internal pod application containers are instrumented, and trace and metrics data populates the :ref:`APM dashboard <apm-dashboards>`. 
+
+If you don't see data in Splunk APM after 2 to 5 minutes, try verifying the instrumentation again. See :ref:`_troubleshoot-zeroconfig-dotnet` for additional troubleshooting guidance.
 
 (Optional) Configure the instrumentation
 ===========================================================
 
 You can configure the Splunk Distribution of OpenTelemetry .NET to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started.
 
-You can add advanced configuration like activating custom sampling and including custom data in the reported spans with environment variables and .NET system properties. To do so, use the ``values.yaml`` file and  ``operator.instrumentation.sampler`` configuration. For more information, see the :new-page:`documentation in GitHub <https://github.com/open-telemetry/opentelemetry-operator/blob/main/docs/api.md#instrumentationspecsampler>` and :new-page:`example in GitHub <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/enable-operator-and-auto-instrumentation/instrumentation/instrumentation-add-trace-sampler.yaml>`.
+You can add advanced configuration like activating custom sampling and including custom data in the reported spans with environment variables and .NET system properties. To do so, use the values.yaml file and  ``operator.instrumentation.sampler`` configuration. For more information, see the :new-page:`documentation in GitHub <https://github.com/open-telemetry/opentelemetry-operator/blob/main/docs/api.md#instrumentationspecsampler>` and :new-page:`example in GitHub <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/enable-operator-and-auto-instrumentation/instrumentation/instrumentation-add-trace-sampler.yaml>`.
 
 You can also use the methods shown in :ref:`zeroconfig-dotnet-traces` to configure your instrumentation with the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable and other environment variables. For example, if you want every span to include the key-value pair ``build.id=feb2023_v2``, set the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable:
 
