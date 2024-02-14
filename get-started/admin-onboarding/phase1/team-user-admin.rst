@@ -68,6 +68,11 @@ In advance of team and token creation, determine a naming convention for teams a
 
 See :ref:`admin-manage-usage`.
 
+Next step
+===============
+
+:ref:`phase1-arch-gdi`.
+
 
 
 
