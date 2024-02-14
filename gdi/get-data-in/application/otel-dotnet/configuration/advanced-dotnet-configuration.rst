@@ -116,7 +116,7 @@ The following settings control the AlwaysOn Profiling feature for the .NET instr
    * - ``SPLUNK_PROFILER_CALL_STACK_INTERVAL``
      - Frequency with which call stacks are sampled, in milliseconds. The default value is ``10000`` milliseconds.
 
-.. note:: For more information on AlwaysOn Profiling, see :ref:`profiling-intro`.
+.. note:: AlwaysOn Profiling for .NET is compatible with .NET 6.0 and higher. For more information on AlwaysOn Profiling, see :ref:`profiling-intro`.
 
 .. _dotnet-otel-trace-propagation-settings:
 
