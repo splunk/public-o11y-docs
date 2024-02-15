@@ -37,6 +37,7 @@ Follow these steps to set up a Browser test:
 
 #. (Optional) Add a wait time before a step executes. See, :ref:`browser-wait-times`.
 
+
 #. Save your test. 
 
 
@@ -368,6 +369,11 @@ Set custom headers
 --------------------------
 
 Specify custom headers to send with each request. For example, you can add a header in your request to filter out requests from analytics on the back end by sending a specific header in the requests. You can also use custom headers to set cookies. 
+
+The default user agent is the given one for the selected device, which updates whenever the Chrome version changes for synthetic runners. You can customize the user agent header for specific domains by adding a custom header. If a domain is not specified, the top-level user agent setting takes precedence. 
+
+
+
 
 
 .. _browser-auth:
