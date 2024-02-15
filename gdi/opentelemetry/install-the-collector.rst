@@ -44,6 +44,32 @@ The Splunk Distribution of OpenTelemetry Collector is supported on Kubernetes, L
   
 See also :ref:`other deployment tools and options <otel_deployments>`.
 
+.. raw:: html
+
+  <embed>
+    <h3>Verify the Docker image of the Collector<a name="collector-verify-docker" class="headerlink" href="#collector-verify-docker" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
+Docker images of the Collector are automatically signed.
+
+If you need to verify and trust your software package, use the following public key to verify the Docker images of the Collector:
+
+.. code-block::
+
+  -----BEGIN PUBLIC KEY-----
+  MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEjbR3fb+NBu5+DAd9vXd8BbQLGIvw
+  Y4en+W7HbbIO9jzwUNuBpPRMRWW1jM5uDHjtI3kH7JpmMkEmi3S9Hb1Rdw==
+  -----END PUBLIC KEY-----
+
+Images are signed using ``cosign``. To verify them:
+
+#. Save the public key to a file. For example, ``cosign.pub``.
+#. Run the following command:
+
+.. code-block:: 
+
+  cosign verify --key cosign.pub quay.io/signalfx/splunk-otel-collector:0.82.0
+
 .. _otel-config-options:
 
 .. raw:: html
