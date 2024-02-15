@@ -3,16 +3,25 @@
 Onboarding phase: Configure your user and team administration
 ****************************************************************
 
-#. Create a trial for your organization.
-#. Decide how to manage user access.
-#. (Optional) Request a custom URL for your organization.
-#. (Optional) Further separate teams and functionality using the parent-child setup.
-#. Plan your teams structure and token management to control access.
+.. meta::
+    :description: 
+
+NEED WORDS
+
+#. :ref:`phase1-create-trial`
+#. :ref:`phase1-user-access`
+#. :ref:`phase1-custom-URL`
+#. :ref:`phase1-teams-tokens`
+#. :ref:`phase1-parent-child`
+
+.. _phase1-create-trial:
 
 Create a trial for your organization 
 ========================================
 
 If you have a Splunk technical contact, they can create a Splunk Observability Cloud trial for your organization and provide you with the link to log in to your trial organization. Alternatively, you can sign up for a trial. See :ref:`o11y-trial`.
+
+.. _phase1-user-access:
 
 Decide how to manage user access
 ========================================
@@ -23,15 +32,14 @@ There are 3 options for managing user access:
 #. Use Splunk Observability Cloud user management to allow access using a username and password. See :ref:`user-managment-intro`.
 #. Use Splunk Cloud Platform as the unified identity provider. See :ref:`unified-id-unified-identity` for more information.
 
+.. _phase1-custom-URL:
+
 (Optional) Request a custom URL for your organization
 =========================================================
 
 Create a Splunk support request to request a custom URL for your organization, for example, acme.signalfx.com. See :ref:`support` for support contact options.
 
-(Optional) Further separate teams and functionality using the parent-child setup
-=====================================================================================
-
-If you want to create separate environments you can use parent-child organizations. Perhaps you want a development environment and a production environment or you want to make sure Team A is fully separated from Team B. Parent-child orgs are 2 or more separate organizations, where your original organization is the parent organization which includes your original usage entitlement. You can then have 1 or more orgs as child organizations within the parent organization. The organizations are fully separated, including users and data. You can request a parent-child organization setup by creating support case. See :ref:`support` for support contact options.
+.. _phase1-teams-tokens:
 
 Plan your teams structure and token management to control access
 =====================================================================================
@@ -67,6 +75,15 @@ In advance of team and token creation, determine a naming convention for teams a
 * Token name: FRONTEND_DEV_TEAM_INGEST, FRONTEND_DEV_TEAM_API, FRONTEND_DEV_TEAM_RUM
 
 See :ref:`admin-manage-usage`.
+
+.. _phase1-parent-child:
+
+(Optional) Consider a parent-child setup to further separate your teams
+=====================================================================================
+
+If you want to create separate environments you can use parent-child organizations. Perhaps you want a development environment and a production environment or you want to make sure Team A is fully separated from Team B. Parent-child orgs are 2 or more separate organizations, where your original organization is the parent organization which includes your original usage entitlement. You can then have 1 or more orgs as child organizations within the parent organization. The organizations are fully separated, including users and data. You can request a parent-child organization setup by creating support case. See :ref:`support` for support contact options.
+
+WHAT DOCS ARE AVAILABLE FOR THIS?
 
 Next step
 ===============
