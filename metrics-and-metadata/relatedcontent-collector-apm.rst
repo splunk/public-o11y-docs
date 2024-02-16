@@ -39,7 +39,7 @@ To learn more, see :ref:`signalfx-exporter`.
 Correlation flag 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The correlation flag of the SignalFx exporter allows the Collector to make relevant API calls to correlate your spans with the infrastructure metrics. It's ``enabled`` by default.
+By default, correlation is activated, utilizing standard SignalFx exporter configurations. This setup enables the Collector to execute relvant API calls, thereby linking your spans with the associated infrastructure metrics.
 
 The SignalFx exporter must be enabled for both the metrics and traces pipelines. To adjust the correlation option further, see the SignalFx exporter's options at :ref:`signalfx-exporter-settings`.
 
