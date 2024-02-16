@@ -55,15 +55,15 @@ Use the following configuration:
 
 To learn more, see :ref:`resourcedetection-processor`.
 
-``resource/add_environment`` processor (Optional)
+``resource/add_environment`` processor (optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The APM charts require the environment span tag to be set correctly. 
+APM charts require the environment span attribute to be set correctly. 
 
-To set this span tag you have two options:
+To set this attribute you have two options:
 
-* Configure the span tag in the instrumentation
-* Use this processor to inserts a ``deployment.environment`` span tag to all spans 
+* Configure the attribute in instrumentation
+* Use this processor to insert a ``deployment.environment`` span attribute to all spans 
 
 To learn more, see :ref:`resourcedetection-processor`.
 
