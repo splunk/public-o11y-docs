@@ -9,7 +9,7 @@ Migration guide for OpenTelemetry Java 2.0 metrics
 
 OpenTelemetry Java Instrumentation 2.x contains a set of breaking changes, introduced as part of recent OpenTelemetry HTTP semantic convention updates. Versions 2.0 and higher of the Splunk Distribution of OpenTelemetry Java are fully compatible with these changes.
 
-Follow the steps in this guide to migrate to 2.0 metrics and HTTP semantinc conventions, and convert your IMM, APM, and RUM custom reporting to the new metrics format.
+Follow the steps in this guide to migrate to 2.0 metrics and HTTP semantic conventions, and convert your IMM, APM, and RUM custom reporting to the new metrics format.
 
 .. note:: AlwaysOn Profiling metrics are not impacted by this change.
 
@@ -52,7 +52,7 @@ The duplication and double-publishing of metrics follows a set of predefined rul
 
 The grace period for receiving and processing duplicated metric at no additional cost lasts six months, starting with the release of the Java agent version 2.0 on <DATE>. Migration support is available for 12 months after the release of version 2.0 and will be deprecated at the 18 months mark.
 
-.. note:: After the grace period, duplicated metric data is billed as custom metric data. Make sure to turn off the Data Migration stream after you've completed the migration to avoir surcharges.
+.. note:: After the grace period, duplicated metric data is billed as custom metric data. Make sure to turn off the Data Migration stream after you've completed the migration to avoid surcharges.
 
 
 .. _migrate-java-steps:
