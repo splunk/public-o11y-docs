@@ -824,6 +824,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Mobile app TOGGLE <sp-oncall/mobile/mobile-getting-started>
+
+
+.. toctree::
+   :maxdepth:   3
+
    Get started TOGGLE <sp-oncall/reports/reports-main>  
 
 .. toctree::

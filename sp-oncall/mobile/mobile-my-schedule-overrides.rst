@@ -8,40 +8,36 @@ Managing schedules on Splunk On-Call for mobile
    :description: About the user roll in Splunk On-Call.
 
 
-This article will help you navigate the My Schedule feature on both iOS
-and Android systems. With My Schedule, you are able to easily view your
-on-call schedule and upcoming on-call shifts as well as schedule
-overrides right from your mobile device!
+Configure the My Schedule feature on both iOS and Android systems. With My Schedule, you are able to easily view your
+on-call schedule and upcoming on-call shifts as well as schedule overrides right from your mobile device.
 
-**My Schedule- iOS**
---------------------
+My Schedule on iOS
+=========================
 
-First, click the calendar icon at the bottom navigation bar of the
-application to be taken to your on-call calendar. Grey lines indicate
-on-call shifts and the orange circles indicate the current day. Below
-the calendar, you will see details about your current and next on-call
-shifts.
+Select the calendar icon at the bottom navigation bar of the application to be taken to your on-call calendar. Grey lines indicate on-call shifts and the orange circles indicate the current day. Below the calendar, you will see details about your current and next on-call shifts.
 
-images/spoc/iOS-Calendar@2x.png
+.. image:: /_images/spoc/sched-overrride1.png
+    :width: 100%
+    :alt: Select the calendar icon at the bottom navigation bar of the application to be taken to your on-call calendar.
 
-You can access a weekly view by clicking into any particular day. Once
-there, you will be able to view schedules for the next six days.
+You can access a weekly view by clicking into any particular day. Once there, you will be able to view schedules for the next six days.
 
-/_images/spoc/iOS-Calendar3@2x.png
+.. image:: /_images/spoc/sched-overrride2.png
+    :width: 100%
+    :alt: Select a day to view the next six days' schedule.
 
-**Scheduling an Override- iOS**
+Scheduling an Override - iOS
 -------------------------------
 
-To schedule an override, click into the My Schedule view, and then press
-the (+) icon in the upper right hand corner of the screen.
+To schedule an override, select the :guilabel:`My Schedule` view, and then select the (+) icon in the upper right hand corner of the screen.
 
-/_images/spoc/spoc/iOS-Calendar-Override3@2x.png
+.. image:: /_images/spoc/sched-overrride3.jpg
+    :width: 100%
+    :alt: Under My Schedule, select the plus (+) icon.
 
- 
 
-Next, you'll be prompted to choose the timezone for which the override
-is to take place, the start time and the end time. Make sure to select
-“Create” when you're ready to schedule your override.
+
+Next, you'll be prompted to choose the timezone for which the override is to take place, the start time and the end time. Make sure to select :guilabel:`Create` when you're ready to schedule your override.
 
 /_images/spoc/iOS-Calendar-Override2@2x.png
 

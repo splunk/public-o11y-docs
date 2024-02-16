@@ -9,6 +9,20 @@ Get started with the mobile app
 
 
 
+.. toctree::
+    :hidden:
+
+    mobile-app-home-page
+    mobile-settings-menu
+    ios-application
+    android-devices-victorops
+    mobile-incident-management
+    mobile-personal-paging-policies
+    mobile-my-schedule-overrides
+    mobile-schedule-overrides
+    mobile-troubleshooting
+
+
 Splunk On-Call is incident management software that allows teams to maintain a culture of high availability without slowing down the innovation process. Splunk On-Call is a mobile-first platform so please take the time to configure your mobile app settings!
 
 

@@ -60,7 +60,6 @@ Splunk On-Call integrations
    statuscast-integration-guide
    statushub-integration-guide
    thousandeyes-integration-guide
-   tls-security-protocol
    twilio-live-call-routing-guide
    twilio-sms-integration-guide
    uptime-robot-integration-guide
