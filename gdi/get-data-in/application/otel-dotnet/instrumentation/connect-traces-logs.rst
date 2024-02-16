@@ -19,7 +19,7 @@ The following is an example of logs produced by a sample console application:
    2024-02-15 15:23:17 2024-02-15T13:23:17.704Z    info    ResourceLog #0
    2024-02-15 15:23:17 Resource SchemaURL: 
    2024-02-15 15:23:17 Resource attributes:
-   2024-02-15 15:23:17      -> splunk.distro.version: Str(1.4.0.0)
+   2024-02-15 15:23:17      -> splunk.distro.version: Str(1.4.0)
    2024-02-15 15:23:17      -> container.id: Str(c894cdb646a29616b5f713195cf810be898ca99c311cac8d9d25d8561dd6964b)
    2024-02-15 15:23:17      -> telemetry.distro.name: Str(splunk-otel-dotnet)
    2024-02-15 15:23:17      -> telemetry.distro.version: Str(1.4.0)
