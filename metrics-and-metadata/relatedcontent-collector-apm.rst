@@ -2,7 +2,7 @@
 .. _get-started-enablerelatedcontent:
 
 ***********************************************************************************
-Configue the Collector to enable Related Content for Infra and APM
+Configure the Collector to enable Related Content for Infra and APM
 ***********************************************************************************
 
 .. meta::
@@ -124,7 +124,7 @@ If you need to run the Opentelemetry Collector in both host monitoring (agent) a
 
 For more information, see :ref:`otel-deployment-mode`.
 
-Agent
+Configure the agent
 -----------------------------------------------------------------
 
 Follow the same steps as mentioned in the previous section and include the following changes:
@@ -217,10 +217,10 @@ Here are the relevant config snippets from each section:
         processors: [memory_limiter, batch, resourcedetection]
         exporters: [otlp]
 
-Gateway
+Configure the gateway
 -----------------------------------------------------------------
 
-In Gateway mode, the relevant receivers to match the exporters from the Agent. In addition, you need to make the following changes.
+In gateway mode, the relevant receivers to match the exporters from the Agent. In addition, you need to make the following changes.
 
 ``http_forwarder`` extension
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -277,7 +277,7 @@ Here are the relevant config snippets from each section:
         processors: [memory_limiter, batch]
         exporters: [signalfx]
 
-Use the ``signalfx`` exporter on both Collector modes
+Use the SignalFx exporter on both Collector modes
 ============================================================================================================================
 
 Alternatively, if you want to use the SignalFx exporter for metrics on both host monitoring (agent) and data forwarding (gateway) modes, you need to disable the aggregation at the gateway. To do so, you must set the ``translation_rules`` and ``exclude_metrics`` to empty lists.
