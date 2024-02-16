@@ -78,8 +78,8 @@ Logs produced by an application always have the following set of OpenTelemetry :
 * ``telemetry.sdk.language`` with constant value of ``dotnet``
 * ``telemetry.sdk.version`` with current version of ``OpenTelemetry .NET SDK``
 * ``telemetry.distro.name`` with constant value of ``splunk-otel-dotnet``
-* ``telemetry.distro.version`` with current version of ``OpenTelemetry .NET instrumentation``
-* ``splunk.distro.version`` with current version of ``Splunk Distribution of OpenTelemetry .NET``
+* ``telemetry.distro.version`` with current version of ``Splunk Distribution of OpenTelemetry .NET``
+* ``splunk.distro.version`` with current version of ``Splunk Distribution of OpenTelemetry .NET`` (deprecated attribute)
 
 Additionally, the instrumentation adds the following attributes:
 
