@@ -265,16 +265,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Scenarios <get-started/scenario-landing>
-
-.. toctree::
-   :maxdepth:   3
-
-   Tutorials <get-started/tutorials>
-
-.. toctree::
-   :maxdepth:   3
-
    About Mobile TOGGLE <get-started/intro-to-mobile>
 
 .. toctree::
@@ -286,8 +276,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Contribute to our documentation <get-started/contribute>
-
-
 
 .. toctree::
    :maxdepth:   3
@@ -303,6 +291,20 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Support <get-started/support>
+
+.. toctree::
+   :caption: Scenarios and Tutorials
+   :maxdepth:   2
+
+.. toctree::
+   :maxdepth:   3
+
+   Scenarios <get-started/scenario-landing>
+
+.. toctree::
+   :maxdepth:   3
+
+   Tutorials <get-started/tutorials>   
 
 .. toctree::
    :caption: Splunk platform users
