@@ -15,7 +15,7 @@ For an introduction to Related Content, see :ref:`get-started-relatedcontent`.
 Configure the Collector in host monitoring (agent) mode to enable Related Content 
 ==========================================================================================================
 
-To view your infrastructure data in the APM service dashboards, you need to enable certain components in the OpenTelemetry Collector. To learn more, see :ref:`components` and :ref:`data-processing`.
+To view your infrastructure data in the APM service dashboards, you need to enable certain components in the OpenTelemetry Collector. To learn more, see :ref:`otel-components` and :ref:`otel-data-processing`.
 
 Collector configuration in host monitoring mode
 -----------------------------------------------------------------
@@ -27,7 +27,7 @@ These are the configuration details required:
 
 Enable ``cpu``, ``memory``, ``filesystem`` and ``network`` to collect their metrics.  
 
-To learn more, see :ref:`hostmetrics-receiver`.
+To learn more, see :ref:`host-metrics-receiver`.
 
 ``signalfx`` exporter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
