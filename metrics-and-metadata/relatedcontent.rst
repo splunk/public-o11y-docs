@@ -1,12 +1,11 @@
 .. _get-started-relatedcontent:
-.. _get-started-enablerelatedcontent:
 
 *****************************************************************
 Related Content in Splunk Observability Cloud
 *****************************************************************
 
 .. meta::
-   :description: Ensure metadata keys are correct to enable full Related Content functionality.
+   :description: Related Content functionality: introduction, requirements, how to use.
 
 The Related Content feature automatically correlates and presents data between different views within Splunk Observability Cloud.
 
@@ -83,7 +82,7 @@ When you deploy the Splunk Distribution of the OpenTelemetry Collector with its 
 Configure the Collector to enable APM Related Content 
 -----------------------------------------------------------------
 
-The APM Service Dashboards include charts that indicate the health of the underlying infrastructure. The default configuration of the Splunk Distribution of the OpenTelemetry Collector automatically configures this for you, but when specifying a custom configuration it is important to keep the following in mind. See :ref:`relatedcontent-collector-apm`.
+The APM service dashboards include charts that indicate the health of the underlying infrastructure. The default configuration of the Splunk Distribution of the OpenTelemetry Collector automatically configures this for you, but if you're using a custom configuration, read :ref:`relatedcontent-collector-apm`.
 
 Metadata compatibility example
 -----------------------------------------------------------------
