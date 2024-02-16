@@ -74,10 +74,11 @@ Individual log records, if exported inside the scope of an active activity, cont
 
 Logs produced by an application always have the following set of OpenTelemetry :new-page:`resource attributes <https://github.com/open-telemetry/opentelemetry-specification/tree/4f23dce407b6fcaba34a049df7c3d41cdd58cb77/specification/resource/semantic_conventions>`:
 
-* ``telemetry.sdk.name``` with constant value of ``opentelemetry``
+* ``telemetry.sdk.name`` with constant value of ``opentelemetry``
 * ``telemetry.sdk.language`` with constant value of ``dotnet``
 * ``telemetry.sdk.version`` with current version of ``OpenTelemetry .NET SDK``
-* ``telemetry.auto.version`` with current version of ``OpenTelemetry .NET instrumentation``
+* ``telemetry.distro.name`` with constant value of ``splunk-otel-dotnet``
+* ``telemetry.distro.version`` with current version of ``OpenTelemetry .NET instrumentation``
 * ``splunk.distro.version`` with current version of ``Splunk Distribution of OpenTelemetry .NET``
 
 Additionally, the instrumentation adds the following attributes:
