@@ -63,7 +63,7 @@ Splunk On-Call integrations
    twilio-live-call-routing-guide
    twilio-sms-integration-guide
    uptime-robot-integration-guide
-   victorops-appdynamics-integration
+   appdynamics-integration
    victorops-atatus-integration
    victorops-bmc-truesight-pulse-integration
    victorops-bugsnag-integration

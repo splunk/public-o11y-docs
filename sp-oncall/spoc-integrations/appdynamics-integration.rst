@@ -1,0 +1,215 @@
+AppDynamics integration for Splunk On-Call
+**********************************************************
+
+.. meta::
+    :description: Configure the AppDynamics integration for Splunk On-Call.
+
+Use the AppDynamics integration with Splunk On-Call to utilize Splunk On-Call as an alerting extension within AppDynamics. The alerting extension enables AppDynamics to post events and custom alerts to the Splunk On-Call timeline. The payload of the alert includes information related to the alert including a link to AppDynamics for a thorough diagnosis of the event.
+
+Requirements
+==================
+
+Versions Supported: On Premise and SaaS versions
+
+Splunk On-Call Version Required:** Starter, Growth, or Enterprise
+
+Enable the integration in Splunk On-Call
+=================================================
+
+1. Go to :guilabel:`Integrations` then :guilabel:`AppDynamics`.
+2. Select :guilabel:`Enable Integration`. 
+3. Copy the :guilabel:`Service API Key` to your clipboard.
+
+.. image:: /_images/spoc/1-API-Key.png
+
+Configure the AppDynamics On Premise version
+=================================================
+
+1. Download the VictorOps Alerting Extension zip from the AppDynamics Exchange: :new-page:`http://community.appdynamics.com/t5/AppDynamics-eXchange/idb-p/extensions`.
+2. Unzip the victorops-alert.zip file into <CONTROLLER_HOME_DIR>/custom/actions/. Unzipping creates the following directory: <CONTROLLER_HOME_DIR>/custom/actions/victorops-alert.
+3. Add the following XML to the custom actions element in the custom.xml file in the <CONTROLLER_HOME_DIR>/custom/actions/ directory:
+
+   .. code-block:: xml
+
+      <custom-actions>
+         victorops-alert
+      <!-- For Linux/Unix *.sh -->
+         victorops-alert.sh
+      <!-- For windows *.bat -->
+         <!--<executable>victorops-alert.bat</executable>-->
+      </custom-actions>
+
+   If the custom.xml file doesn't exist in the <CONTROLLER_HOME_DIR>/custom/actions/ directory create one with the following XML:
+
+   .. code-block:: xml
+
+      <custom-actions>
+         victorops-alert
+      <!-- For Linux/Unix *.sh -->
+         victorops-alert.sh
+      <!-- For windows *.bat -->
+         <!--<executable>victorops-alert.bat</executable>-->
+      </custom-actions>
+
+4. Update the config.yaml file in <CONTROLLER_HOME_DIR>/custom/actions/victorops-alert with your API key, routing key, protocol, and Splunk On-Call host.
+
+   .. code-block:: yaml
+      
+      #VictorOps Org Key 
+      voOrganizationKey: "<YOUR_SERVICE_API_KEY>"
+
+      #VictorOps Routing Key 
+      voRoutingKey: "<YOUR_ROUTING_KEY>"
+
+      #scheme used (http/https) 
+      protocol: "https"
+
+      #VictorOps host 
+      voAlertHost: "<alert.victorops.com>"
+
+      #VictorOps url path 
+      voAlertUrlPath: "</integrations/generic/20131114/alert>"
+
+      #http timeouts 
+      connectTimeout: 10000 
+      socketTimeout: 10000
+
+      #control level of details in VO alert 
+      showDetails: false
+
+5. To create a custom action, first refer to the following topics in the AppDynamics docs:
+
+   * :new-page:`http://docs.appdynamics.com/display/PRO14S/Custom+Actions`
+   * :new-page:`http://docs.appdynamics.com/display/PRO14S/Build+an+Alerting+Extension`
+
+   To use this extension as a custom action:
+   
+   #. In AppDynamics, go to :guilabel:`Alert & Respond` then :guilabel:`Actions`. 
+   #. Select :guilabel:`Create Action`. 
+   #. Select :guilabel:`Custom Action` then :guilabel:`OK`. 
+   #. In the drop-down menu, you can find the action called victorops-alert.
+
+Configure the AppDynamics SaaS version
+==========================================
+
+1. In AppDynamics, select :guilabel:`Alert & Respond` then :guilabel:`HTTP Request Templates` then :guilabel:`New`.
+
+   .. image:: /_images/spoc/AppDynamics-1@2x.png
+
+2. Give the Template a name. For exampke, Splunk On-Call Test is used in the following example.
+
+   .. image:: /_images/spoc/AppDynamics-2@2x.png
+
+3. Set a Custom Templating Variable with a field name of message_type and a value of WARNING.
+
+4. Under :guilabel:`Request URL` set the Method to POST.
+
+5. Enter your :guilabel:`Raw URL` field. Use the following format: 
+   
+   ``https://alert.victorops.com/integrations/generic/20131114/alert/<YOUR_SERVICE_API_KEY>/<YOUR_ROUTING_KEY>``
+
+   .. image:: /_images/spoc/saas4-1.png
+      :alt: saas4
+
+
+6. No custom headers are required.
+
+7. Under :guilabel:`Payload`, select the MIME Type of ``application/json``.
+
+8. Paste the following payload into the box in AppDynamics:
+
+   .. code-block:: 
+
+      #foreach(${eventList} in ${fullEventsByTypeMap.values()})
+
+         #foreach(${event} in ${eventList})
+
+            #if ($event.eventType == "POLICY_OPEN_CRITICAL")
+
+                  #set ( $message_type = "CRITICAL" )
+
+            #elseif ($event.eventType == "POLICY_UPGRADED")
+
+                  #set ( $message_type = "CRITICAL" )
+
+            #elseif ($event.eventType == "ERROR")
+
+                  #set ( $message_type = "CRITICAL" )
+
+            #elseif ($event.eventType == "APPLICATION_ERROR")
+
+                  #set ( $message_type = "CRITICAL" )
+
+            #elseif ($event.eventType == "POLICY_CLOSE_WARNING")
+
+                  #set ( $message_type = "RECOVERY" )
+
+            #elseif ($event.eventType == "POLICY_CLOSE_CRITICAL")
+
+                  #set ( $message_type = "RECOVERY" )
+
+            #elseif ($event.eventType == "POLICY_CANCELED_CRITICAL")
+
+                  #set ( $message_type = "RECOVERY" )
+
+            #else
+
+                  #set ( $message_type = "WARNING" )
+
+            #end
+
+         {
+
+            "message_type":"${message_type}",
+
+            "entity_id":"${latestEvent.incident.id}",
+
+            "state_message":"${event.eventMessage}",
+
+            "alert_url":"${event.deepLink}",
+
+            "ad_event_type":"${event.eventType}",
+
+            "monitoring_tool":"AppDynamics"
+
+         }
+
+         #end
+
+         #end
+
+
+Under *Response Handling Criteria* set the *Failure Criteria* status code to **400** and the *Success Criteria* status code to **200.** 
+
+Make sure to **uncheck** the box for *Expected Payload* for both items.
+
+.. image:: /_images/spoc/saas6.png
+   :alt: saas6
+
+   saas6
+
+At the bottom of the page, make any changes to the settings you would like and then select **Save** and **Test.**
+
+.. image:: /_images/spoc/saas7.png
+   :alt: saas7
+
+   saas7
+
+When testing, add an Event Type Trigger with a count of 1 and hit **Run Test**.
+
+.. image:: /_images/spoc/saas8.png
+   :alt: saas8
+
+   saas8
+
+Check your VictorOps timeline to make sure you get the associated alert.
+
+.. image:: /_images/spoc/saas9.png
+   :alt: saas9
+
+   saas9
+
+You can now use the VictorOps HTTP Request Template with any of your alerts in AppDynamics. If you have any questions please `contact us at
+support <https://help.victorops.com/knowledge-base/important-splunk-on-call-support-changes-coming-nov-11th/>`__.
+
+.. |image1| image:: /_images/spoc/1-API-Key-1.png
