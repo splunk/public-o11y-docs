@@ -39,6 +39,8 @@ How to set up Unified Identity
 ==========================================================================================
 You can pair only one Splunk Cloud Platform instance with one Splunk Observability Cloud instance at a time. The integration is a 1:1 mapping of one ad-hoc Splunk Cloud Search Head Unit with one Splunk Observability Cloud instance. Customers with multiple Splunk Observability Cloud organizations must choose one to pair with the chosen Splunk Cloud Platform instance.
 
+Set up Unified Identity if you are new to Splunk Observability Cloud
+------------------------------------------------------------------------------------------
 Splunk Cloud Platform customers who want to purchase Splunk Observability Cloud must take the following actions to set up Unified Identity:
 
 1. Inform your Splunk sales representative that you want to purchase Splunk Observability Cloud or start a trial. The sales representative initiates a Splunk Observability Cloud trial that is already integrated with their Splunk Cloud Platform instance. 
@@ -47,6 +49,38 @@ Splunk Cloud Platform customers who want to purchase Splunk Observability Cloud 
 
 3. In the Splunk Cloud Platform instance you want to pair with Splunk Observability Cloud, create a custom role called ``o11y_access`` and assign it to all Splunk Cloud Platform users who you want to give access to Splunk Observability Cloud. See :new-page:`Create and manage roles with Splunk Web <https://docs.splunk.com/Documentation/Splunk/latest/Security/Addandeditroles#Add_or_edit_a_role>` for more information on Splunk Cloud Platform roles. Follow only the instructions in the :guilabel:`Add or edit a role` section. Note that you do not need to assign the role any capabilities or indexes. If you do not create and assign the custom role ``o11y_access``, users receive the following error message when trying to log in to Splunk Observability Cloud: "You do not have access to Splunk Observability Cloud. Contact your Splunk Cloud Platform administrator for assistance."
 
+
+Set up Unified Identity if you already have Splunk Observability Cloud
+------------------------------------------------------------------------------------------
+Customers who already have a Splunk Cloud Platform account and a Splunk Observability Cloud account must take the following actions to set up Unified Identity:
+
+1. Turn on token authentication to allow Splunk Observability Cloud to view your Splunk Cloud Platform logs. See :new-page:`Enable or disable token authentication <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how.
+
+2. Obtain a user API access token (session token) from your Splunk Observability Cloud account. See :ref:`admin-api-access-tokens` to learn how.
+
+3. To pair orgs, open Terminal and enter the following Admin Config Services (ACS) command:
+
+   ``acs observability pair --o11y-access-token "GrkvoDav1M-FNyxdONtK2Q" --server "https://staging.admin.splunk.com"``
+
+   Replace the access token, ``GrkvoDav1M-FNyxdONtK2Q`` in the example above, with the user API access token you retrieved from Splunk Observability Cloud in previous step.
+
+   The pairing command returns a pairing id:
+
+   .. image:: /_images/splunkplatform/pairingID.png
+     :width: 75%
+     :alt: This screenshot shows the response in Terminal showing the pairing id for the new pairing.
+
+4. You can use the pairing ID to get the current status of the pairing. To get the status, run the following ACS command:
+
+   ``acs observability pairing-status-by-id --pairing-id "GGPH8FPAAAA" --o11y-access-token "GrkvoDav1M-FNyxdONtK2Q" --server "https://staging.admin.splunk.com"``
+
+   Replace the pairing id and the access token with your own values. The system returns a status message showing whether or not the pairing was a success. 
+
+   .. image:: /_images/splunkplatform/unifiedID-pairingSuccess.png
+     :width: 75%
+     :alt: This screenshot shows a success status for the new pairing.
+
+5. In the Splunk Cloud Platform instance you want to pair with Splunk Observability Cloud, create a custom role called ``o11y_access`` and assign it to all Splunk Cloud Platform users who you want to give access to Splunk Observability Cloud. See :new-page:`Create and manage roles with Splunk Web <https://docs.splunk.com/Documentation/Splunk/latest/Security/Addandeditroles#Add_or_edit_a_role>` for more information on Splunk Cloud Platform roles. Follow only the instructions in the :guilabel:`Add or edit a role` section. Note that you do not need to assign the role any capabilities or indexes. If you do not create and assign the custom role ``o11y_access``, users receive the following error message when trying to log in to Splunk Observability Cloud: "You do not have access to Splunk Observability Cloud. Contact your Splunk Cloud Platform administrator for assistance."
 
 .. _unified-id-user-provisioning:
 
