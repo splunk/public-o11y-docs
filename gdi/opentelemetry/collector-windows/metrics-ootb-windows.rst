@@ -54,4 +54,3 @@ Metrics collected by the Collector for Windows
 * ``up``
 * ``vmpage_io.swap.in``
 * ``vmpage_io.swap.out``
-
