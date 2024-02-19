@@ -22,7 +22,7 @@ Indentation issues are one of the most common causes of Collector configuration 
 
 Save the file and run ``otelcol validate --config=sample.yaml``. See how the Collector complains:
 
-.. code-text:: bash
+.. code-block:: bash
 
    Error: failed to get config: cannot unmarshal the configuration: 1 error(s) decoding:
 
