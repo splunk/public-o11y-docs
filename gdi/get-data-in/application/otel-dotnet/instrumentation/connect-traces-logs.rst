@@ -69,9 +69,9 @@ Trace metadata in log statements
 
 Individual log records, if exported inside the scope of an active activity, contain the following trace context information:
 
-* ``TraceId``
-* ``SpanId``
-* ``TraceFlags``
+* Trace identifier
+* Span identifier
+* Trace flags
 
 Logs produced by an application always have the following set of OpenTelemetry :new-page:`resource attributes <https://github.com/open-telemetry/opentelemetry-specification/tree/4f23dce407b6fcaba34a049df7c3d41cdd58cb77/specification/resource/semantic_conventions>`:
 
