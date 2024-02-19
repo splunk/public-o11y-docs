@@ -7,7 +7,7 @@ Internal metrics of the Collector
 .. meta::
       :description: Internal metrics for the Collector.
 
-These are the Collector's internal metrics, per component.
+These are the Collector's internal metrics.
 
 .. list-table::
   :widths: 40 60
@@ -116,14 +116,14 @@ These are the Collector's internal metrics, per component.
   * - ``otelcol_processor_groupbyattrs_log_groups``
     - Distribution of groups extracted for logs
 
+  * - ``otelcol_processor_groupbyattrs_log_groups_bucket``
+    - Distribution of groups extracted for logs bucket histogram
+
   * - ``otelcol_processor_groupbyattrs_log_groups_count``
     - Distribution of groups extracted for logs count histogram
 
   * - ``otelcol_processor_groupbyattrs_log_groups_sum``
     - Distribution of groups extracted for logs sum histogram 
-
-  * - ``otelcol_processor_groupbyattrs_log_groups_bucket``
-    - Distribution of groups extracted for logs bucket histogram
 
   * - ``otelcol_processor_refused_log_records``
     - Number of refused log records
