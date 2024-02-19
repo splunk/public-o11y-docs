@@ -1,7 +1,7 @@
 .. _ootb-metrics-windows:
 
 ****************************************************************
-Collected metrics and dimensions for Windows
+Collected metrics for Windows
 ****************************************************************
 
 .. meta::

@@ -1,7 +1,7 @@
 .. _ootb-metrics-linux:
 
 ****************************************************************
-Collected metrics and dimensions for Linux
+Collected metrics for Linux
 ****************************************************************
 
 .. meta::
