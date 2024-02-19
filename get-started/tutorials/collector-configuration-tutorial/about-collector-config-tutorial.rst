@@ -8,8 +8,8 @@ Tutorial: Configure the Splunk Distribution of OpenTelemetry Collector on a Linu
     :description: Follow this tutorial for a walkthrough of configuring the Splunk Distribution of OpenTelemetry Collector to collect telemetry in common situations.
 
 .. toctree::
-    :hidden:
-    :maxdepth: 3
+   :hidden:
+   :maxdepth: 3
 
    collector-config-tutorial-start
    collector-config-tutorial-edit
