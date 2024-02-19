@@ -7,7 +7,7 @@ Migration guide for OpenTelemetry Java 2.0 metrics
 .. meta::
   :description: OpenTelemetry Java Instrumentation 2.x contains a set of breaking changes, introduced as part of recent OpenTelemetry HTTP semantic convention updates.
 
-OpenTelemetry Java Instrumentation 2.x contains a set of breaking changes, introduced as part of recent OpenTelemetry HTTP semantic convention updates. Versions 2.0 and higher of the Splunk Distribution of OpenTelemetry Java are fully compatible with these changes.
+OpenTelemetry Java Instrumentation 2.x contains a set of breaking changes, introduced as part of recent OpenTelemetry HTTP semantic convention updates. Versions 2.0 and higher of the Splunk Distribution of OpenTelemetry Java are fully compatible with the updated semantic conventions.
 
 Follow the steps in this guide to migrate to 2.0 metrics and HTTP semantic conventions, and convert your IMM, APM, and RUM custom reporting to the new metrics format.
 
@@ -33,20 +33,16 @@ If you're already instrumenting your Java services using the Splunk Distribution
 .. include:: /_includes/requirements/java.rst
 
 
+.. _java-metrics-grace-period:
+
 Data migration manager
 ----------------------------------------------
 
-The Data Migration Management feature in ::guilabel:`Settings`, ::guilabel:`Data Configuration` lets you manage the migration process for metric streams. For each supported process, you can activate or deactivate the migration of data, see the number of MTS migrated, and the duration of the grace period.
+Due to the changes in metric names, upgrading to Java OTel 2.x might break existing dashboards, detectors, and other features. To prevent sudden loss of access to custom reporting elements, use the Data migration manager, which transforms and duplicates metric data in 1.x and the 2.x formats for a limited period of time at no additional cost.
+
+The Data Migration Management feature in :guilabel:`Settings`, :guilabel:`Data Configuration` helps you manage the migration process for metric streams. For each supported process, you can activate or deactivate the migration of data, see the number of MTS migrated, and the duration of the grace period.
 
 .. add screenshot
-
-
-.. _java-metrics-grace-period:
-
-Metric data redundancy grace period
------------------------------------------------
-
-To prevent sudden loss of access to custom reporting elements, the Metrics Pipeline Manager transforms and duplicates metric data in both 1.x and the 2.x formats for a limited period of time with no additional cost.
 
 The duplication and double-publishing of metrics follows a set of predefined rules that are activated when you decide to migrate. The metric rules are treated as system rules and can't be edited. See :ref:`metrics-pipeline-arm`.
 
