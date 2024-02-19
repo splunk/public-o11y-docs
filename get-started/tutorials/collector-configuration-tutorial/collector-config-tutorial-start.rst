@@ -78,7 +78,7 @@ All Collector configurations consists of the following components described in Y
 - Connectors: Join two pipelines, acting as both exporter and receiver.
 - Extensions: Accessories that expand the capabilities of the Collector.
 
-For example, the following configuration contains a receiver, a processor, an exporter, and an extension:
+Use your favorite code or text editor to create a new configuration file. Save it as sample.yaml and add the following section, which describe a receiver, a processor, an exporter, and an extension:
 
 .. code-block:: yaml
 
@@ -103,7 +103,7 @@ For example, the following configuration contains a receiver, a processor, an ex
        tls:
          insecure: true
 
-All components are connected in pipelines through the special ``service`` section. For example:
+All components are connected in pipelines through the special ``service`` section. Add the following fragment at the end of the sample.yaml file:
 
 .. code-block:: yaml
 

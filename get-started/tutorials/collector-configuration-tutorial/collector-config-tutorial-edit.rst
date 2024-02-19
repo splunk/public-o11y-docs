@@ -1,8 +1,8 @@
 .. _collector-config-tutorial-edit:
 
-***************************************************************
-Edit the configuration to activate a new receiver and exporter
-***************************************************************
+**********************************************************************
+Part 2: Edit the configuration to activate a new receiver and exporter
+**********************************************************************
 sudo systemctl restart splunk-otel-collector
 
 
