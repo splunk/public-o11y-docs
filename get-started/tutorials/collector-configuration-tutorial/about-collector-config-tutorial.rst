@@ -17,6 +17,8 @@ Tutorial: Configure the Splunk Distribution of OpenTelemetry Collector on a Linu
    collector-config-tutorial-apply
    collector-config-tutorial-troubleshoot
 
+The Splunk Distribution of OpenTelemetry Collector is a distribution of OpenTelemetry Collector that includes :ref:`otel-components`, installers, and default settings so that it's ready to work with Splunk Observability Cloud.
+
 Follow this tutorial for a walkthrough of configuring the Splunk Distribution of OpenTelemetry Collector to collect telemetry in common situations.
 
 .. raw:: html

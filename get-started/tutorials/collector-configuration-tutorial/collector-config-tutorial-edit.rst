@@ -3,6 +3,14 @@
 ***************************************************************
 Edit the configuration to activate a new receiver and exporter
 ***************************************************************
+sudo systemctl restart splunk-otel-collector
+
+
+
+Install the Collector
+=======================================
+
+To get started, install the 
 
 
 Next step
