@@ -41,13 +41,9 @@ Follow the tutorial parts in order:
 
 1. Learn about the location and structure of the Collector configuration file. See :ref:`collector-config-tutorial-start`.
 
-2. Edit the configuration to activate a new receiver and exporter. See :ref:`collector-config-tutorial-edit`.
+2. Edit the configuration to activate a new receiver and processor. See :ref:`collector-config-tutorial-edit`.
 
-3. Configure a processor to filter data before sending telemetry. See :ref:`collector-config-tutorial-filter`.
-
-4. Apply the configuration and restart the Collector. See :ref:`collector-config-tutorial-apply`.
-
-5. Troubleshoot common configuration issues. See :ref:`collector-config-tutorial-troubleshoot`.
+3. Troubleshoot common configuration issues. See :ref:`collector-config-tutorial-troubleshoot`.
 
 The tutorial uses the Ubuntu package of the Splunk Distribution of OpenTelemetry Collector.
 
