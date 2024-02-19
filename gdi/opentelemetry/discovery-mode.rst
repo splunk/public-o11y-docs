@@ -59,6 +59,10 @@ Discovery mode supports the following host services and applications:
    * - Redis
      - Redis receiver.
 
+Discovery mode is available for the following platforms:
+
+- Linux
+- Kubernetes
 
 Discover active metric sources
 =========================================

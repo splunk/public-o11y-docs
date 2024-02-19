@@ -165,7 +165,7 @@ The following example shows how to create a new attribute based on the value of 
          # Creates four new attributes (defined in pattern) from the
          # value of the http.url attribute
        - key: "http.url"
-           pattern: ^(?P<http_protocol>.*):\/\/(?P<http_domain>.*)\/(?P<http_path>.*)(\?|\&)(?P<http_query_params>.*)
+           pattern: ^(?P<http_protocol>.*):\\/\\/(?P<http_domain>.*)\\/(?P<http_path>.*)(\\?|\\&)(?P<http_query_params>.*)
            action: extract
 
 Backfill spans that are missing an attribute
