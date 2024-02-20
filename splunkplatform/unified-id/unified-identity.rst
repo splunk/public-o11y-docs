@@ -95,7 +95,7 @@ Users will receive an email telling them to authenticate to Splunk Observability
 
 User provisioning
 ==========================================================================================
-The integration automatically maps Splunk Cloud Platform roles to the following Splunk Observability Cloud roles:
+If your organization already has a Splunk Observability Cloud account, existing roles do not change. If you are purchasing Splunk Observability Cloud for the first time, the integration automatically maps Splunk Cloud Platform roles to the following Splunk Observability Cloud roles:
 
 .. list-table::
    :header-rows: 1
