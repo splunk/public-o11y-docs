@@ -315,7 +315,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
     <h2>Next steps<a name="next-steps" class="headerlink" href="#next-steps" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-Read on to learn how to:
+See the following docs:
 
-* :ref:`otel-install-platform`.
-* :ref:`otel-configuration`.
+* :ref:`otel-install-platform`
+* :ref:`collector-how-to`
