@@ -14,7 +14,7 @@ The SignalFx receiver is a native OpenTelemetry component that allows the Splunk
 The SignalFx receiver accepts:
 
 * Metrics in the SignalFx proto format. For more information, see :new-page:`SignalFx metrics protobuf <https://github.com/signalfx/com_signalfx_metrics_protobuf>`.
-* Events (Logs) in the SignalFx proto format. For more information, see :new-page:`Send Traces, Metrics, and Events <https://dev.splunk.com/observability/reference/api/ingest_data/latest>` in the Splunk Developer Program documentation.
+* Events (logs) in the SignalFx proto format. For more information, see :new-page:`Send Traces, Metrics, and Events <https://dev.splunk.com/observability/reference/api/ingest_data/latest>` in the Splunk Developer Program documentation.
 
 Get started
 ======================
