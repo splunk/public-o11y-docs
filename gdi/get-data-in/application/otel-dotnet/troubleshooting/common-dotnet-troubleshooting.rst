@@ -114,7 +114,7 @@ Check that AlwaysOn Profiling is activated
 
 The .NET instrumentation logs the string ``ContinuousProfiler::StartThreadSampling`` started at ``info`` log level. To check whether AlwaysOn Profiling is activated, search your logs for strings similar to the following:
 
-.. code-block:: bash 
+.. code-block:: bash
 
    10/12/23 12:10:31.962 PM [12096|22036] [info] ContinuousProfiler::StartThreadSampling
 
