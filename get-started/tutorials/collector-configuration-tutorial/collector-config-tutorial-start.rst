@@ -35,7 +35,7 @@ After you've set the environment variables, run the following command in the sam
    curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh;
    sudo sh /tmp/splunk-otel-collector.sh --realm $SPLUNK_REALM --memory $SPLUNK_MEMORY_TOTAL_MIB -- $SPLUNK_ACCESS_TOKEN
 
-Wain until the following message appears:
+Wait until the following message appears:
 
 .. code-block:: text
 
