@@ -187,9 +187,6 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
    .. group-tab:: .NET
 
-      .. note::
-         AlwaysOn Profiling for .NET is in beta development. This feature is provided by Splunk to you "as is" without any warranties, maintenance and support, or service-level commitments. Use of this feature is subject to the :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`.
-
       :strong:`Requirements`
 
       AlwaysOn Profiling requires .NET 6.0 or higher.
