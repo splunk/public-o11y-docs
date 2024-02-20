@@ -7,6 +7,13 @@ Internal metrics of the Collector
 .. meta::
       :description: Internal metrics for the Collector.
 
+Find the complete list of the Collector's internal metrics and what to use them for.
+
+.. _metrics-internal-collector-list:
+
+List of internal metrics of the Collector
+====================================================
+
 These are the Collector's internal metrics.
 
 .. list-table::
@@ -161,8 +168,37 @@ These are the Collector's internal metrics.
   * - ``otelcol_scraper_scraped_metric_points``
     - Number of metric points successfully scraped
 
+.. _metrics-internal-collector-use:
 
+Use internal metrics to monitor your Collector instance 
+=========================================================================
 
+You can use the Collector's internal metrics to monitor the behavior of the Collector and identify performance issues.
+
+Monitor data flow and detect data loss
+------------------------------------------------------------
+
+To ensure data is flowing correctly, use the ``otelcol_receiver_accepted_spans`` and ``otelcol_receiver_accepted_metric_points`` metrics for information about the data ingested by the Collector, and ``otecol_exporter_sent_spans`` and ``otelcol_exporter_sent_metric_points`` for information about exported data.
+
+Use ``otelcol_processor_dropped_spans`` and ``otelcol_processor_dropped_metric_points`` to detect data loss. Small losses shouldn't be considered outages, so depending on your requirements, set up a minimal time window before alerting.
+
+Detect receive failures
+------------------------------------------------------------
+
+Sustained rates of ``otelcol_receiver_refused_spans`` and ``otelcol_receiver_refused_metric_points`` indicate too many errors returned to clients. Depending on the deployment and the client's resilience this may indicate data loss at the clients.
+
+Sustained rates of ``otelcol_exporter_send_failed_spans`` and ``otelcol_exporter_send_failed_metric_points`` indicate that the Collector is not able to export data as expected. It doesn't imply data loss per se since there could be retries but a high rate of failures could indicate issues with the network or the back-end receiving the data.
+
+Control queue length
+------------------------------------------------------------
+
+Use the queue-retry mechanism (available in most exporters) as the retry mechanism for the Collector: 
+
+To check if your queue capacity is enough, compare ``otelcol_exporter_queue_capacity``, which indicates the capacity of the retry queue in batches, and ``otelcol_exporter_queue_size``, which indicates the current size of retry queue. 
+
+``otelcol_exporter_enqueue_failed_spans``, ``otelcol_exporter_enqueue_failed_metric_points`` and ``otelcol_exporter_enqueue_failed_log_records`` indicate the number of span/metric points/log records failed to be added to the sending queue. If your queue is full, decrease your sending rate or horizontally scale collectors.
+
+The queue-retry mechanism also supports logging for monitoring. Check your logs for messages like "Dropping data because sending_queue is full".
 
 
 
