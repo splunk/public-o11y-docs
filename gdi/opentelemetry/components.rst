@@ -12,8 +12,8 @@ Collector components
     :hidden:
 
     components/a-components-receivers.rst
-    components/a-components-exporters.rst
     components/a-components-processors.rst
+    components/a-components-exporters.rst
     components/a-components-extensions.rst        
 
 The OpenTelemetry Collector includes the following component types:
