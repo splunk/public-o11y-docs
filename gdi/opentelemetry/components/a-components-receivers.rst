@@ -61,8 +61,8 @@ The following receivers are available:
 * :ref:`splunk-hec-receiver`
 * :ref:`sqlquery-receiver`     
 * :ref:`syslog-receiver` 
-* :ref:`tcp-receiver`     
-* :ref:`udp-receiver`
+* :ref:`tcp-logs-receiver`     
+* :ref:`udp-logs-receiver`
 * :ref:`windowsperfcounters-receiver`
 * :ref:`zipkin-receiver` 
 
