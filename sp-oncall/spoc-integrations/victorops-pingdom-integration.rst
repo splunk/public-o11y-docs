@@ -19,44 +19,44 @@ of websites.
 In VictorOps
 ============
 
-In VictorOps, select **Integrations** *>>* **Pingdom (Webhook)**
+In VictorOps, select **Integrations** *>>* **Pingdom (Webhook)**
 
 If the integration has not yet been enabled, click the *Enable
-Integration* button to generate your endpoint URL as seen below.  Be
+Integration* button to generate your endpoint URL as seen below. Be
 sure to replace the “$routing_key” section with the actual routing key
-you intend to use. It is essential that you replace what you see here
-with the actual routing key you intend to use.  Everything after the
-final forward slash must be replaced with you your key.  For example,
+you intend to use. It is essential that you replace what you see here
+with the actual routing key you intend to use. Everything after the
+final forward slash must be replaced with you your key. For example,
 assuming a routing_key value of “database”:
 
-………36437/**$routing_key**    ==>   ……..36437/**database**
+………36437/**$routing_key** ==>  ……..36437/**database**
 
 .. image:: /_images/spoc/Screen_Shot_2019-10-09_at_11_47_13_AM.png
 
 Routing keys in VictorOps can be set up and associated by clicking
-on *Settings >> Route Keys.*
+on *Settings >> Route Keys.*
 
 For more information on routing keys and best practices, click
 `HERE <https://help.victorops.com/knowledge-base/routing-keys/>`__.
 
 
-In Pingdom
+In Pingdom
 ==========
 
 Select “Integrations” from the menu bar on the left, click the
-“Integrations” option, then click “Add integration”.
+“Integrations” option,then click “Add integration”.
 
-In the *Add Integration* window, use the drop-down menu for *Type* to
-select *Webhook*.  Give the webhook a name and paste in the webhook URL
-provided by VictorOps.  Be sure to replace the “$routing_key” section
+In the *Add Integration* window, use the drop-down menu for *Type* to
+select *Webhook*. Give the webhook a name and paste in the webhook URL
+provided by VictorOps. Be sure to replace the “$routing_key” section
 with your actual `routing
 key <https://help.victorops.com/knowledge-base/routing-keys/>`__.
- Finally, click *Save Integration*.
+Finally, click *Save Integration*.
 
 .. image:: /_images/spoc/Screen-Shot-2019-10-09-at-11.48.22-AM.png
 
 When creating or editing checks, scroll to the bottom of the settings to
-select the new integration you have just added.  It is not necessary to
+select the new integration you have just added. It is not necessary to
 include any alerting actions for the webhook to function.
 
 .. image:: /_images/spoc/Screen-Shot-2019-10-09-at-11.52.47-AM.png
@@ -68,20 +68,18 @@ Email Endpoint Integration
 In VictorOps (Email)
 --------------------
 
-Navigate to **Integrations** >> **Pingdom (Email)**
+Navigate to **Integrations** >> **Pingdom (Email)**
 
 .. image:: /_images/spoc/Screen-Shot-2019-10-09-at-12.56.21-PM.png
 
- 
 
 If the integration has not already been enabled, enable the integration
 and copy the email endpoint.
 
 .. image:: /_images/spoc/3rd_Party_Integrations-EMStester-3.png
 
- 
 
-*The Routing Key* (+$routing_key) can be used to route an email endpoint
+*The Routing Key* (+$routing_key) can be used to route an email endpoint
 initiated incident to a specific team or teams within VictorOps. You
 will want to be sure to replace $routing_key within the Email endpoint
 address with a valid routing_key found within your VictorOps instance.
