@@ -1,7 +1,6 @@
 Pingdom integration for Splunk On-Call
 **********************************************************
 
-[ht_toggle title=“Requirements” id=“” class=“” style=“” ]
 
 **Versions Supported:** N/A (SaaS)
 
@@ -11,7 +10,6 @@ Full-Stack
 **What you need to know:** This integration uses Pingdoms webhooks
 feature to send alerts to VictorOps\ **.**
 
-[/ht_toggle]
 
 Pingdom is a service that tracks the uptime, downtime, and performance
 of websites.
@@ -41,7 +39,7 @@ For more information on routing keys and best practices, click
 
 
 In Pingdom
-==========
+===========
 
 Select “Integrations” from the menu bar on the left, click the
 “Integrations” option,then click “Add integration”.
@@ -66,7 +64,6 @@ Email Endpoint Integration
 ==========================
 
 In VictorOps (Email)
---------------------
 
 Navigate to **Integrations** >> **Pingdom (Email)**
 
@@ -85,7 +82,6 @@ will want to be sure to replace $routing_key within the Email endpoint
 address with a valid routing_key found within your VictorOps instance.
 
 In Pingdom (Email)
-------------------
 
 Navigate to *Users and Teams* in the side-menu of Pingdom and select
 *Users*.
