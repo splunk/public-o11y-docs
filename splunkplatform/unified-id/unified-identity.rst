@@ -64,7 +64,7 @@ Customers who already have a Splunk Cloud Platform account and a Splunk Observab
 
 3. To pair orgs, open Terminal and enter the following Admin Config Services (ACS) command:
 
-   ``acs observability pair --o11y-access-token "GrkvoDav1M-FNyxdONtK2Q" --server "https://staging.admin.splunk.com"``
+   ``acs observability pair --o11y-access-token "GrkvoDav1M-FNyxdONtK2Q"``
 
    Replace the access token, ``GrkvoDav1M-FNyxdONtK2Q`` in the example above, with the user API access token you retrieved from Splunk Observability Cloud in previous step.
 
@@ -76,7 +76,7 @@ Customers who already have a Splunk Cloud Platform account and a Splunk Observab
 
 4. You can use the pairing ID to get the current status of the pairing. To get the status, run the following ACS command:
 
-   ``acs observability pairing-status-by-id --pairing-id "GGPH8FPAAAA" --o11y-access-token "GrkvoDav1M-FNyxdONtK2Q" --server "https://staging.admin.splunk.com"``
+   ``acs observability pairing-status-by-id --pairing-id "GGPH8FPAAAA" --o11y-access-token "GrkvoDav1M-FNyxdONtK2Q"``
 
    Replace the pairing id and the access token with your own values. The system returns a status message showing whether or not the pairing was a success. 
 
