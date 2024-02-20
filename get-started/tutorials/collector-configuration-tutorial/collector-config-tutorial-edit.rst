@@ -105,3 +105,12 @@ Next step
 This completes the second part of the tutorial.
 
 To learn how to troubleshoot common Collector configuration issues continue to :ref:`collector-config-tutorial-troubleshoot`.
+
+
+Learn more
+========================================
+
+To learn more about the Collector install and components, see the following resources:
+
+- :ref:`otel-intro`
+- :ref:`otel-install-linux`

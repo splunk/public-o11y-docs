@@ -1,7 +1,7 @@
 .. _collector-config-tutorial-start:
 
 ******************************************************************
-Part 1: Location and structure of the Collector configuration file
+Part 1: Install the Collector and locate the configuration file
 ******************************************************************
 
 
