@@ -1,7 +1,7 @@
-.. _otel-components:
+.. _otel-components-processors:
 
 ******************************************
-Collector components
+Collector components: Processors
 ******************************************
 
 .. meta::
@@ -11,10 +11,16 @@ Collector components
     :titlesonly:
     :hidden:
 
-    components/a-components-receivers.rst
-    components/a-components-exporters.rst
-    components/a-components-processors.rst
-    components/a-components-extensions.rst        
+    attributes-processor
+    batch-processor
+    filter-processor
+    groupbyattrs-processor    
+    kubernetes-attributes-processor
+    memory-limiter-processor          
+    resource-processor
+    resourcedetection-processor
+    span-processor
+    transform-processor
 
 The OpenTelemetry Collector includes the following component types:
 

@@ -1,20 +1,21 @@
-.. _otel-components:
+.. _otel-components-extensions:
 
 ******************************************
-Collector components
+Collector components: Extensions
 ******************************************
 
 .. meta::
     :description: Learn about the components that make up the Splunk Observability Cloud OpenTelemetry Collector.
 
 .. toctree::
+    :maxdepth: 4
     :titlesonly:
     :hidden:
 
-    components/a-components-receivers.rst
-    components/a-components-exporters.rst
-    components/a-components-processors.rst
-    components/a-components-extensions.rst        
+    basic-auth-extension
+    health-check-extension
+    memory-ballast-extension
+    zpages-extension    
 
 The OpenTelemetry Collector includes the following component types:
 

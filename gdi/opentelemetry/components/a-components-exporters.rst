@@ -1,20 +1,23 @@
-.. _otel-components:
+.. _otel-components-exporters:
 
 ******************************************
-Collector components
+Collector components: Exporters
 ******************************************
 
 .. meta::
     :description: Learn about the components that make up the Splunk Observability Cloud OpenTelemetry Collector.
 
 .. toctree::
+    :maxdepth: 4
     :titlesonly:
     :hidden:
 
-    components/a-components-receivers.rst
-    components/a-components-exporters.rst
-    components/a-components-processors.rst
-    components/a-components-extensions.rst        
+    logging-exporter
+    otlp-exporter
+    otlphttp-exporter            
+    signalfx-exporter
+    splunk-apm-exporter
+    splunk-hec-exporter
 
 The OpenTelemetry Collector includes the following component types:
 
