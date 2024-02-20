@@ -1,8 +1,8 @@
-.. _correlate-traces-with-logs-dotnet:
-
 .. caution:: The SignalFx Instrumentation for .NET is deprecated and will reach End of Life on February 20, 2025. Use the OpenTelemetry instrumentation for .NET, see :ref:`get-started-dotnet-otel`. The OpenTelemetry instrumentation for .NET is actively developed and is compatible with the latest versions of .NET. To migrate from the SignalFx instrumentation, see :ref:`migrate-signalfx-dotnet-to-dotnet-otel`.
 
-****************************************************************
+.. _correlate-traces-with-logs-dotnet:
+
+***************************************************************
 Connect .NET trace data with logs for Splunk Observability Cloud
 ****************************************************************
 

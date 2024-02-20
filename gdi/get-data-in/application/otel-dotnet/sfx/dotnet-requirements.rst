@@ -1,6 +1,6 @@
-.. _dotnet-requirements:
-
 .. caution:: The SignalFx Instrumentation for .NET is deprecated and will reach End of Life on February 20, 2025. Use the OpenTelemetry instrumentation for .NET, see :ref:`get-started-dotnet-otel`. The OpenTelemetry instrumentation for .NET is actively developed and is compatible with the latest versions of .NET. To migrate from the SignalFx instrumentation, see :ref:`migrate-signalfx-dotnet-to-dotnet-otel`.
+
+.. _dotnet-requirements:
 
 *************************************************************
 .NET instrumentation compatibility and requirements

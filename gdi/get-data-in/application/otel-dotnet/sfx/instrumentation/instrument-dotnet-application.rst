@@ -1,6 +1,6 @@
-.. _instrument-dotnet-applications:
-
 .. caution:: The SignalFx Instrumentation for .NET is deprecated and will reach End of Life on February 20, 2025. Use the OpenTelemetry instrumentation for .NET, see :ref:`get-started-dotnet-otel`. The OpenTelemetry instrumentation for .NET is actively developed and is compatible with the latest versions of .NET. To migrate from the SignalFx instrumentation, see :ref:`migrate-signalfx-dotnet-to-dotnet-otel`.
+
+.. _instrument-dotnet-applications:
 
 ***************************************************************************
  .NET application for Splunk Observability Cloud
@@ -302,6 +302,25 @@ When instrumenting an Azure WebJob in App Service, add the following settings. R
         - ``0``
 
 .. caution:: Set ``SIGNALFX_AZURE_APP_SERVICES`` to ``0`` when instrumenting WebJobs. Keep a separate App Service for the WebJob, so that you can use separate settings for your application and for the background service.
+
+.. _sfx-dotnet-profiling:
+
+Activate AlwaysOn Profiling
+==============================================================
+
+AlwaysOn Profiling requires .NET 6.0 or higher.
+
+Limited support is available for the following legacy versions of .NET:
+
+   - CPU profiling: .NET Core 3.1 and .NET 5.x
+   - Memory profiling: .NET Core 5.x
+
+To activate AlwaysOn Profiling, do the following:
+
+- Activate the profiler by setting the ``SIGNALFX_PROFILER_ENABLED`` environment variable to ``true`` for your .NET process.
+- Activate memory profiling by setting the ``SIGNALFX_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.
+
+For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-dotnet`.
 
 .. _kubernetes_dotnet:
 
