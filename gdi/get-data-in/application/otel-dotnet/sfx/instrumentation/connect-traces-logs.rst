@@ -1,5 +1,7 @@
 .. _correlate-traces-with-logs-dotnet:
 
+.. caution:: The SignalFx Instrumentation for .NET is deprecated and will reach End of Life on February 20, 2025. Use the OpenTelemetry instrumentation for .NET, see :ref:`get-started-dotnet-otel`. The OpenTelemetry instrumentation for .NET is actively developed and is compatible with the latest versions of .NET. To migrate from the SignalFx instrumentation, see :ref:`migrate-signalfx-dotnet-to-dotnet-otel`.
+
 ****************************************************************
 Connect .NET trace data with logs for Splunk Observability Cloud
 ****************************************************************
@@ -102,7 +104,7 @@ NLog
 When using the ``JsonLayout`` layout and NLog version 4.4.10 and higher, you can add all contextual properties by setting the ``includeMdlc`` attribute to ``true``. For example:
 
 .. code-block:: xml
-   
+
    <layout xsi:type="JsonLayout" includeMdlc="true"> <!-- includeMdlc property available in NLog 4.4.10+ -->
       <!-- existing configuration -->
    </layout>
@@ -110,11 +112,11 @@ When using the ``JsonLayout`` layout and NLog version 4.4.10 and higher, you can
 You can also add the context fields explicitly. For example:
 
 .. code-block:: xml
-   
+
    <layout xsi:type="JsonLayout">
       <!-- existing configuration -->
       <attribute name="trace_id" layout="${mdc:item=trace_id}"/>
-      <attribute name="span_id" layout="${mdc:item=span_id}"/>    
+      <attribute name="span_id" layout="${mdc:item=span_id}"/>
       <attribute name="service.name" layout="${mdc:item=service.name}"/>
       <attribute name="service.version" layout="${mdc:item=service.version}"/>
       <attribute name="deployment.environment" layout="${mdc:item=deployment.environment}"/>
@@ -123,7 +125,7 @@ You can also add the context fields explicitly. For example:
 When using the custom layout, add the context fields manually. Values must be wrapped in quotation marks. For example:
 
 .. code-block::
-   
+
    <target
    // existing configuration
    layout="${longdate}|${uppercase:${level}}|${logger}|{trace_id=&quot;${mdc:item=trace_id}&quot;,span_id=&quot;${mdc:item=span_id}&quot;,service.name=&quot;${mdc:item=service.name}&quot;,service.version=&quot;${mdc:item=service.version}&quot;,deployment.environment=&quot;${mdc:item=deployment.environment}&quot;}|${message}"
@@ -139,7 +141,7 @@ To extract the trace context that you want to inject, enrich the ``LoggerConfigu
    var loggerConfiguration = new LoggerConfiguration()
       .Enrich.FromLogContext() // addition
 
-When using the output template, you can either use the ``{Properties}`` placeholder to print all contextual properties or add context fields manually. 
+When using the output template, you can either use the ``{Properties}`` placeholder to print all contextual properties or add context fields manually.
 
 When adding context fields manually, wrap the values in quotation marks. For example:
 
@@ -147,7 +149,7 @@ When adding context fields manually, wrap the values in quotation marks. For exa
 
    "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] trace_id=\"{trace_id}\" span_id=\"{span_id}\" service.name=\"{service_name}\" service.version=\"{service_version}\" deployment.environment=\"{deployment_environment}\"{NewLine}{Message:lj}{NewLine}{Exception}"
 
-The instrumentation uses the underscore character as separator for field names (``_``), as Serilog doesn't support property names that use the dot separator (``.``). To ingest log data, define the following conversion rules: 
+The instrumentation uses the underscore character as separator for field names (``_``), as Serilog doesn't support property names that use the dot separator (``.``). To ingest log data, define the following conversion rules:
 
 - ``service_name`` to ``service.name``
 - ``service_version`` to ``service.version``
@@ -162,7 +164,7 @@ When using the ``NetEscapades.Extensions.Logging.RollingFile`` package, activate
 
 .. code-block:: csharp
 
-   Host.ConfigureLogging(builder => 
+   Host.ConfigureLogging(builder =>
       builder.AddFile(opts =>
       {
          opts.FileName = "logs";
@@ -179,4 +181,4 @@ Log correlation also works when ILogger is wrapping other supported loggers.
 Sample applications
 ============================================
 
-To download several sample applications that show how to configure log correlation, see https://github.com/signalfx/signalfx-dotnet-tracing/tree/main/tracer/samples/AutomaticTraceIdInjection on GitHub.
+To download several sample applications that show how to configure log correlation, see :new-page:`https://github.com/signalfx/signalfx-dotnet-tracing/tree/main/tracer/samples/AutomaticTraceIdInjection` on GitHub.

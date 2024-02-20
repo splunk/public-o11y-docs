@@ -1,5 +1,7 @@
 .. _dotnet-requirements:
 
+.. caution:: The SignalFx Instrumentation for .NET is deprecated and will reach End of Life on February 20, 2025. Use the OpenTelemetry instrumentation for .NET, see :ref:`get-started-dotnet-otel`. The OpenTelemetry instrumentation for .NET is actively developed and is compatible with the latest versions of .NET. To migrate from the SignalFx instrumentation, see :ref:`migrate-signalfx-dotnet-to-dotnet-otel`.
+
 *************************************************************
 .NET instrumentation compatibility and requirements
 *************************************************************
@@ -17,7 +19,7 @@ Ensure you are using supported .NET versions
 The SignalFx Instrumentation for .NET supports the following .NET versions:
 
 - Instrumentation for traces and metrics:
-   
+
    -  .NET 6.0 and .NET 7.0
    -  .NET Framework 4.6.2 and higher
 
@@ -48,7 +50,7 @@ Supported libraries
 
 The SignalFx Instrumentation for .NET instruments the following libraries:
 
-.. list-table:: 
+.. list-table::
    :widths: 60 40
    :width: 100%
    :header-rows: 1

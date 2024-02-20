@@ -1,13 +1,15 @@
 .. _advanced-dotnet-configuration:
 
+.. caution:: The SignalFx Instrumentation for .NET is deprecated and will reach End of Life on February 20, 2025. Use the OpenTelemetry instrumentation for .NET, see :ref:`get-started-dotnet-otel`. The OpenTelemetry instrumentation for .NET is actively developed and is compatible with the latest versions of .NET. To migrate from the SignalFx instrumentation, see :ref:`migrate-signalfx-dotnet-to-dotnet-otel`.
+
 ********************************************************************
 Configure the SignalFx Instrumentation for .NET
 ********************************************************************
 
-.. meta:: 
+.. meta::
    :description: Configure the SignalFx Instrumentation for .NET to suit your instrumentation needs, such as correlating traces with logs and activating custom sampling.
 
-You can configure the SignalFx Instrumentation for .NET to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started. More advanced settings are also available. 
+You can configure the SignalFx Instrumentation for .NET to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started. More advanced settings are also available.
 
 .. _configuration-methods-dotnet:
 
@@ -45,7 +47,7 @@ General settings
 
 The following settings are common to most instrumentation scenarios:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :width: 100%
    :widths: 40 60
@@ -53,7 +55,7 @@ The following settings are common to most instrumentation scenarios:
    * - Setting
      - Description
    * - ``SIGNALFX_ENV``
-     - The value for the ``deployment.environment`` tag added to all spans.	
+     - The value for the ``deployment.environment`` tag added to all spans.
    * - ``SIGNALFX_SERVICE_NAME``
      - The name of the application or service. If not set, the instrumentation looks for a suitable default name. See :ref:`dotnet-default-service-name`.
    * - ``SIGNALFX_VERSION``
@@ -78,7 +80,7 @@ Exporter settings
 
 The following settings control trace exporters and their endpoints:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :width: 100%
    :widths: 40 60
@@ -94,7 +96,7 @@ The following settings control trace exporters and their endpoints:
    * - ``SIGNALFX_METRICS_ENDPOINT_URL``
      - The URL to where the metrics exporter sends metrics. The default value is ``http://localhost:9943/v2/datapoint``. Setting a value overrides the ``SIGNALFX_REALM`` environment variable.
    * - ``SIGNALFX_TRACE_PARTIAL_FLUSH_ENABLED``
-     - Activate to export traces that contain a minimum number of closed spans, as defined by ``SIGNALFX_TRACE_PARTIAL_FLUSH_MIN_SPANS``. The default value is ``false``.	
+     - Activate to export traces that contain a minimum number of closed spans, as defined by ``SIGNALFX_TRACE_PARTIAL_FLUSH_MIN_SPANS``. The default value is ``false``.
    * - ``SIGNALFX_TRACE_PARTIAL_FLUSH_MIN_SPANS``
      - Minimum number of closed spans in a trace before it's exported. The default value is ``500``. Requires the value of the ``SIGNALFX_TRACE_PARTIAL_FLUSH_ENABLED`` environment variable to be ``true``.
 
@@ -105,7 +107,7 @@ Trace propagation settings
 
 The following settings control trace propagation:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :width: 100%
    :widths: 40 60
@@ -122,7 +124,7 @@ The following settings control trace propagation:
 
 The following settings control the AlwaysOn Profiling feature for the .NET instrumentation:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :width: 100%
    :widths: 40 60
@@ -147,7 +149,7 @@ Metrics settings
 
 The following settings control metric collection:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :width: 100%
    :widths: 40 60
@@ -166,7 +168,7 @@ Instrumentation settings
 
 The following settings control instrumentations and tracing behavior:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :width: 100%
    :widths: 40 60
@@ -189,7 +191,7 @@ Library-specific instrumentation settings
 
 The following settings control the behavior of specific instrumentations:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :width: 100%
    :widths: 40 60
@@ -203,7 +205,7 @@ The following settings control the behavior of specific instrumentations:
    * - ``SIGNALFX_INSTRUMENTATION_ELASTICSEARCH_TAG_QUERIES``
      - Activates the tagging of a ``PostData`` command as ``db.statement``. It might introduce overhead for direct streaming users. The default value is ``true``.
    * - ``SIGNALFX_INSTRUMENTATION_MONGODB_TAG_COMMANDS``
-     - Activates the tagging of a ``BsonDocument`` command as ``db.statement``. The default value is ``true``.	
+     - Activates the tagging of a ``BsonDocument`` command as ``db.statement``. The default value is ``true``.
    * - ``SIGNALFX_INSTRUMENTATION_REDIS_TAG_COMMANDS``
      - Activates the tagging of Redis commands as ``db.statement``. The default value is ``true``.
    * - ``SIGNALFX_TRACE_DELAY_WCF_INSTRUMENTATION_ENABLED``
@@ -213,7 +215,7 @@ The following settings control the behavior of specific instrumentations:
    * - ``SIGNALFX_TRACE_HTTP_CLIENT_EXCLUDED_URL_SUBSTRINGS``
      - Comma-separated list of URL substrings. Matching URLs are ignored by the tracer. For example, ``subdomain,xyz,login,download``.
    * - ``SIGNALFX_TRACE_KAFKA_CREATE_CONSUMER_SCOPE_ENABLED``
-     - Activate to close consumer scope upon entering a method and starting a new one on method exit. The default value is ``true``.	
+     - Activate to close consumer scope upon entering a method and starting a new one on method exit. The default value is ``true``.
    * - ``SIGNALFX_TRACE_ROUTE_TEMPLATE_RESOURCE_NAMES_ENABLED``
      - Activate to base ASP.NET span and resource names on routing configuration, if applicable. The default value is ``true``.
 
@@ -226,10 +228,10 @@ To connect Real User Monitoring (RUM) requests from mobile and web applications 
 
 .. code-block::
 
-   Access-Control-Expose-Headers: Server-Timing 
+   Access-Control-Expose-Headers: Server-Timing
    Server-Timing: traceparent;desc="00-<serverTraceId>-<serverSpanId>-01"
 
-The ``Server-Timing`` header contains the ``traceId`` and ``spanId`` parameters in ``traceparent`` format. W3C tracecontext and W3C baggage context propagation is activated by default. For more information, see the Server-Timing and traceparent documentation on the W3C website. 
+The ``Server-Timing`` header contains the ``traceId`` and ``spanId`` parameters in ``traceparent`` format. W3C tracecontext and W3C baggage context propagation is activated by default. For more information, see the Server-Timing and traceparent documentation on the W3C website.
 
 .. note:: If you need to deactivate trace response headers, set ``SIGNALFX_TRACE_RESPONSE_HEADER_ENABLED`` to ``false``.
 
@@ -242,7 +244,7 @@ Query string settings
 
 The following settings control the inclusion of query strings in the ``http.url`` tag for ASP.NET Core instrumented applications.
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :width: 100%
    :widths: 40 60
@@ -271,7 +273,7 @@ Diagnostic logging settings
 
 The following settings control the internal logging of the SignalFx Instrumentation for .NET:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :width: 100%
    :widths: 40 60
@@ -312,6 +314,6 @@ By default, the SignalFx Instrumentation for .NET retrieves the service name by 
 
 #. If the entry assembly is not available, the instrumentation tries to use the current process name. The process name can be ``dotnet`` if launched directly using an assembly. For example, ``dotnet InstrumentedApp.dll``.
 
-If all the steps fail, the service name defaults to ``UnknownService``. 
+If all the steps fail, the service name defaults to ``UnknownService``.
 
 To override the default service name, set the ``SIGNALFX_SERVICE_NAME`` environment variable.
