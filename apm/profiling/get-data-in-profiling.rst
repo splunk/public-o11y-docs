@@ -85,7 +85,7 @@ AlwaysOn Profiling requires APM tracing data to correlate stack traces to your a
    * - Node.js
      - Splunk Distribution of OpenTelemetry JS version 2.0 or higher
      - :ref:`instrument-nodejs-applications`
-   * - .NET (OpenTelemetry)
+   * - .NET
      - Splunk Distribution of OpenTelemetry .NET version 1.3.0 or higher
      - :ref:`instrument-otel-dotnet-applications`
    * - Python
