@@ -27,7 +27,7 @@ Check that you've instrumented your application
 
 You can extract AlwaysOn Profiling data only if you've instrumented your application or service for Splunk APM. If the APM instrumentation is not loading or isn't working, the profiler cannot work.
 
-To solve this, check that you've instrumented your application and that the application is sending trace data to APM. See :ref:`profiling-setup-step-instrument`. 
+To solve this, check that you've instrumented your application and that the application is sending trace data to APM. See :ref:`profiling-setup-step-instrument`.
 
 .. _profiling-pipeline-setup:
 
@@ -95,7 +95,7 @@ Check the following configurations:
    * Finally, if neither is set, the default value of ``http://localhost:4317``
 #. The OTel collector is running, the port is open and accessible from the host where the profiled application is running.
 #. The receiver for OTLP/gRPC is turned on in the OTel collector configuration.
-#. The profiling pipeline is turned on in OTel collector configuration. 
+#. The profiling pipeline is turned on in OTel collector configuration.
 
 .. _no-call-stacks:
 
@@ -127,7 +127,6 @@ Some profiler issues might be specific to the APM instrumentation. See the follo
 - :ref:`java-profiler-issues`
 - :ref:`nodejs-profiler-issues`
 - :ref:`dotnet-otel-profiler-issues`
-- :ref:`dotnet-profiler-issues`
 
 Deactivate profiling log data for specific hosts
 ==============================================================

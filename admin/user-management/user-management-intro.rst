@@ -13,8 +13,6 @@ Manage users and teams
    Manage teams TOGGLE <teams/manage-teams>
    Manage users TOGGLE <users/manage-users>
    Manage roles TOGGLE <roles/roles-and-capabilities-about>
-  
-
 
 The foundational tasks of configuring your org include adding users, assigning them to teams, and managing roles and access permissions for users. Most organizations plan to roll Splunk Observability Cloud  out across their enterprise footprint and will have multiple internal customers. Often it involves different requirements when using the various features of the product.
 
@@ -30,7 +28,7 @@ Teams can also assign :ref:`team specific notification <admin-team-notifications
 
 Determining naming convention for teams is essential to ensure uniformity and easily identified when assigning access tokens to be able to control data ingest limits. One of the more common best practices is to synch Team and Token names such as:
 
-Team name: FRONTEND_DEV_TEAM 
-Token name: FRONTEND_DEV_TEAM_INGEST, FRONTEND_DEV_TEAM_API, FRONTEND_DEV_TEAM_RUM
+- Team name: ``FRONTEND_DEV_TEAM``
+- Token name: ``FRONTEND_DEV_TEAM_INGEST``, ``FRONTEND_DEV_TEAM_API``, ``FRONTEND_DEV_TEAM_RUM``
 
-This will make it easier to identify the owners of tokens when viewing the usage reports.
+This makes it easier to identify the owners of tokens when viewing the usage reports.

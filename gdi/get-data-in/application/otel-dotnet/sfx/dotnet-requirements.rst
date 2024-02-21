@@ -1,3 +1,9 @@
+.. caution::
+
+   The SignalFx Instrumentation for .NET is deprecated as of February 21, 2024 and will reach End of Support on February 21 2025. Until then, only critical security fixes and bug fixes will be provided. After the date, the library will be archived and no longer maintained.
+
+   New customers instrumenting the .NET ecosystem should use the :ref:`Splunk Distribution of OpenTelemetry .NET <instrument-otel-dotnet-applications>`. Existing customers should consider migrating to Splunk Distribution of OpenTelemetry .NET which offers similar capabilities. To learn how to migrate, see :ref:`migrate-signalfx-dotnet-to-dotnet-otel`.
+
 .. _dotnet-requirements:
 
 *************************************************************
@@ -17,7 +23,7 @@ Ensure you are using supported .NET versions
 The SignalFx Instrumentation for .NET supports the following .NET versions:
 
 - Instrumentation for traces and metrics:
-   
+
    -  .NET 6.0 and .NET 7.0
    -  .NET Framework 4.6.2 and higher
 
@@ -48,7 +54,7 @@ Supported libraries
 
 The SignalFx Instrumentation for .NET instruments the following libraries:
 
-.. list-table:: 
+.. list-table::
    :widths: 60 40
    :width: 100%
    :header-rows: 1

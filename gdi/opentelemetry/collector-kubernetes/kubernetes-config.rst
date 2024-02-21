@@ -301,6 +301,16 @@ For example, use the following configuration to activate automatic detection of 
     istio: true
     prometheus: true
 
+.. _otel-kubernetes-discovery-mode:
+
+Activate discovery mode on the Collector
+============================================
+
+Use the discovery mode of the Splunk Distribution of OpenTelemetry Collector to detect metric sources and create
+a configuration based on the results.
+
+See :ref:`discovery-mode-k8s` for instructions on how to activate discovery mode in the Helm chart.
+
 .. _otel-kubernetes-deactivate-telemetry:
 
 Deactivate particular types of telemetry
