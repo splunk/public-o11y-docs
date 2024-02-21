@@ -55,26 +55,17 @@ You have the ability to created a schedule override from three different locatio
     :alt:
 
 
-**How to take a scheduled override:**
+Take a scheduled override:
 
-Any unassigned scheduled overrides will have a “Take” button next to
-them, denoting that they have not yet been covered. Click “Take” and
-then confirm again in the popup window to assign the override to
-yourself.
+Any unassigned scheduled overrides will have a :guilabel:`Take` button next to them, denoting that they have not yet been covered. Select :guilabel:`Take`and then confirm again in the popup window to assign the override to yourself.
 
- 
 
-**Teammates Currently On-Call & On-Call Takes**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-View other teammates on-call shifts by clicking “View All”. From here
-you can take your teammates on-call by clicking “Take Shift” and clear
-it by clicking “Clear Take” or “Take Back”.
+Teammates Currently On-Call & On-Call Takes
+------------------------------------------------
 
-.. image:: /_images/spoc/On-Call-Takes.png
+View other teammates on-call shifts by selecting :guilabel:`View All`. From here you can take your teammates on-call by selecting :guilabel:`Take Shift` and clear it by selecting :guilabel:`Clear Take` or :guilabel:`Take Back`.
 
-.. image:: /_images/spoc/Take-On-Calls.png
-
-.. |image1| image:: /_images/spoc/Calendar.png
-.. |image2| image:: /_images/spoc/Overrides_Preview.png
-.. |image3| image:: /_images/spoc/Override-User-View.png
+.. image:: /_images/spoc/sched-mobile5.png
+    :width: 100%
+    :alt:
