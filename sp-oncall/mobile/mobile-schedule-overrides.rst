@@ -1,8 +1,7 @@
 .. _mobile-schedule-overrides:
 
-
 ************************************************************************
-Schedule and Scheduled Overrides from the Mobile App
+Schedule and scheduled overrides from the mobile app
 ************************************************************************
 
 .. meta::
@@ -11,76 +10,50 @@ Schedule and Scheduled Overrides from the Mobile App
 
 
 
-Within the Splunk On-Call Mobile App you can access your schedule and
-make schedule changes on the go and from anywhere. Capabilities include
-viewing your schedule at a glance, create an override for yourself, take
-a teammates override or take a teammates on-call while they are in need
-of some coverage.
+Within the Splunk On-Call mobile app you can access your schedule and make schedule changes on the go and from anywhere. Capabilities include viewing your schedule at a glance, create an override for yourself, take a teammates override or take a teammates on-call while they are in need of some coverage.
 
-|image1|
+.. image:: /_images/spoc/sched-mobile1.png
+    :width: 100%
+    :alt: Schedule overrides on the Splunk On-Call mobile app.
 
-Your Schedule
-~~~~~~~~~~~~~
+Your schedule
+-----------------------
 
-From the schedule tab in the navigation bar you are automatically
-viewing your personalized schedule, including your **calendar
-overview**, your **current or next on-call**, and any **active
-overrides** you may have.
+From the schedule tab in the navigation bar you are automatically viewing your personalized schedule, including your calendar
+overview, your current or next on-call, and any active overrides you may have.
 
--  On-Call is represented by a **teal line**
--  Overrides that have already been assigned/taken are represented by a
-   **blue line**
+-  On-Call is represented by a teal line
+-  Overrides that have already been assigned/taken are represented by a blue line
 -  Overrides that are unassigned are represented by a **red line**
 
- 
 
 Scheduled Overrides
-~~~~~~~~~~~~~~~~~~~
+------------------------
 
-**Where to find existing overrides:** At the bottom of the Home Page you
-will find any active scheduled overrides for your team. By selecting
-“View All” you can view your teammates overrides, create a new override
-for yourself, or take an unassigned override.
+At the bottom of the Home Page you will find any active scheduled overrides for your team. By selecting :guilabel:`Select All` you can view your teammates overrides, create a new override for yourself, or take an unassigned override.
 
-|image2|
+.. image:: /_images/spoc/sched-mobile2.png
+    :width: 100%
+    :alt:
 
-|image3|
+Create a scheduled override:
 
- 
+You have the ability to created a schedule override from three different locations in the app.
 
-**How to create a scheduled override:**
+#. From the home page by selecting :guilabel:`Create Override`
 
-You have the ability to created a schedule override from three different
-locations in the app!
+#. From the Calendar page select :guilabel:`Add`.
 
--  
+#. From your :guilabel:`Team overrides` window, select :guilabel:`**+**` in the upper right corner
 
-   1) From the home page by clicking “**Create Override**”
+.. image:: /_images/spoc/sched-mobile3.png
+    :width: 100%
+    :alt:
 
--  
+.. image:: /_images/spoc/sched-mobile4.png
+    :width: 100%
+    :alt:
 
-   2) From the Calendar page click “\ **Add**\ '
-
--  
-
-   3) From your “Team Overrides” window click “**+**” in the upper right
-      corner
-
-.. image:: /_images/spoc/Scheduled-override-form.png
-
- 
-
- 
-
-.. image:: /_images/spoc/Take-Override.png
-
- 
-
- 
-
- 
-
- 
 
 **How to take a scheduled override:**
 

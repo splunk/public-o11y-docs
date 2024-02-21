@@ -130,23 +130,23 @@ When a user has been assigned to your scheduled override, you will see blue line
 
 A blue bar will not appear unless someone has been assigned to your scheduled override. Below the calendar, under :guilabel:`Schedule Overrides`, when your override has yet to be re-assigned you will see an empty blue circle for the unassigned override.
 
-/_images/spoc/Android-Calendar6@2x.png
+.. image:: /_images/spoc/sched-android7.jpg
+    :width: 100%
+    :alt: 
 
-When accessing the weekly view, you will see the override in blue and
-any relevant details (i.e.; who is covering your override and for what
-escalation policy).
+When accessing the weekly view, you will see the override in blue and any relevant details, for example, who is covering your override and for what escalation policy.
 
-/_images/spoc/Screenshot_20190215-154514.png
+.. image:: /_images/spoc/sched-android8.jpg
+    :width: 100%
+    :alt: 
 
 Take a Schedule Override- Android
 ---------------------------------
 
-To take a users on-call head to their profile and swipe left on the
-on-call shift you wish to cover and select “Take Override”. Global
-admins will have the ability to “Take Override”, “Assign”, and “Delete”
-overrides. Users will only be able to take a schedule override.
+To take a users on-call head to their profile and swipe left on the on-call shift you wish to cover and select :guilabel:`Take Overrides`. Global admins will have the ability to take uverride, assign, and delete overrides. Users will only be able to take a schedule override.
 
-.. image:: /_images/spoc/Schedule-Overrides-Android-2.png
-   :alt: accept scheduled override in Android
+.. image:: /_images/spoc/sched-android9.jpg
+    :width: 100%
+    :alt:  Accept scheduled override in Android,
 
-   accept scheduled override in Android
+
