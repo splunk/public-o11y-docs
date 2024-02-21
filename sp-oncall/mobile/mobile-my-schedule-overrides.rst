@@ -5,14 +5,17 @@ Managing schedules on Splunk On-Call for mobile
 ************************************************************************
 
 .. meta::
-   :description: About the user roll in Splunk On-Call.
+   :description: Configure your on-call schedule on a mobile device.
 
 
 Configure the My Schedule feature on both iOS and Android systems. With My Schedule, you are able to easily view your
 on-call schedule and upcoming on-call shifts as well as schedule overrides right from your mobile device.
 
+
+
+
 My Schedule on iOS
-=========================
+------------------------
 
 Select the calendar icon at the bottom navigation bar of the application to be taken to your on-call calendar. Grey lines indicate on-call shifts and the orange circles indicate the current day. Below the calendar, you will see details about your current and next on-call shifts.
 
@@ -39,48 +42,45 @@ To schedule an override, select the :guilabel:`My Schedule` view, and then selec
 
 Next, you'll be prompted to choose the timezone for which the override is to take place, the start time and the end time. Make sure to select :guilabel:`Create` when you're ready to schedule your override.
 
-/_images/spoc/iOS-Calendar-Override2@2x.png
+.. image:: /_images/spoc/sched-overrride4.jpg
+    :width: 100%
+    :alt: Select Create to schedule the override.
 
-To assign or to delete a scheduled override, swipe left and select
-“assign” or “delete”.
+To assign or to delete a scheduled override, swipe left and select :guilabel:`Assign` or :guilabel:`Delete`.
 
-/_images/spoc/Image-from-iOS-7.png
+.. image:: /_images/spoc/sched-override5.jpg
+    :width: 100%
+    :alt: Swipe left to either Assign or Delete.
 
-When a user has been assigned to your scheduled override, you will see
-blue lines appear below the grey shift lines on the calendar view, as
-well as details below indicating who picked up each shift.
+When a user has been assigned to your scheduled override, you will see blue lines appear below the grey shift lines on the calendar view, as well as details below indicating who picked up each shift.
 
-/_images/spoc/iOS-Calendar-Overrides@2x.png
+.. image:: /_images/spoc/sched-override6.jpg
+    :width: 100%
+    :alt:
 
-A blue bar will NOT appear unless someone has been assigned to your
-scheduled override. Below the calendar, under ‘Schedule Overrides', when
-your override has yet to be re-assigned you will see an empty blue
-circle for the unassigned override.
+A blue bar will NOT appear unless someone has been assigned to your scheduled override. Below the calendar, under :guilabel:`Schedule Overrides`, when your override has yet to be re-assigned you will see an empty blue circle for the unassigned override.
 
-/_images/spoc/iOS-Calendar4@2x.png
+.. image:: /_images/spoc/sched-override7.jpg
+    :width: 100%
+    :alt: A blue circle indicates unassigned overrides.
 
-When accessing the weekly view, you will see the override in blue and
-any relevant details (i.e.; who is covering your override and for what
-escalation policy).
+When accessing the weekly view, you will see the override in blue and any relevant details, for example,  who is covering your override and for what escalation policy.
 
-/_images/spoc/iOS-Calendar2@2x.png
+.. image:: /_images/spoc/sched-override8.jpg
+    :width: 100%
+    :alt: Overrides appear on the weekly calendar view in blue.
 
 Take a Schedule Override- iOS
 -----------------------------
 
-To take a users on-call head to their profile and swipe left on the
-on-call shift you wish to cover and select “Take Override”. Global
-admins will have the ability to “Take Override”, “Assign”, and “Delete”
-overrides.
+To take a users on-call head to their profile and swipe left on the on-call shift you wish to cover and select :guilabel:`Take Overrides`. Global admins will have the ability to take override, assign, and delete overrides.
 
- 
 
-.. image:: /_images/spoc/Schedule-Overrides-iOS.png
-   :alt: accept scheduled override in iOS
+.. image:: /_images/spoc/sched-override9.jpg
+    :width: 100%
+    :alt: Accept scheduled override in iOS.
 
-   accept scheduled override in iOS
 
- 
 
 **My Schedule- Android**
 ------------------------
