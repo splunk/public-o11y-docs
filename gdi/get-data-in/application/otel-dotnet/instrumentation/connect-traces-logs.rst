@@ -7,8 +7,7 @@ Connect .NET trace data with logs using OpenTelemetry instrumentation
 .. meta::
    :description: Automatic correlation between logs and traces provided by the Splunk Distribution of OpenTelemetry .NET.
 
-The Splunk Distribution of OpenTelemetry .NET automatically exports logs enriched with tracing context from any application that uses logging API from 
-:new-page:`Microsoft.Extensions.Logging <https://www.nuget.org/packages/Microsoft.Extensions.Logging>` for logging.
+The Splunk Distribution of OpenTelemetry .NET automatically exports logs enriched with tracing context from any application that uses logging API from :new-page:`Microsoft.Extensions.Logging <https://www.nuget.org/packages/Microsoft.Extensions.Logging>` for logging.
 
 Application logs are enriched with tracing metadata and then exported to a local instance of the OpenTelemetry Collector in ``OTLP`` format.
 

@@ -85,12 +85,9 @@ AlwaysOn Profiling requires APM tracing data to correlate stack traces to your a
    * - Node.js
      - Splunk Distribution of OpenTelemetry JS version 2.0 or higher
      - :ref:`instrument-nodejs-applications`
-   * - .NET (OpenTelemetry)
+   * - .NET
      - Splunk Distribution of OpenTelemetry .NET version 1.3.0 or higher
      - :ref:`instrument-otel-dotnet-applications`
-   * - .NET (SignalFx)
-     - SignalFx Instrumentation for .NET version 1.0.0 or higher
-     - :ref:`instrument-dotnet-applications`
    * - Python
      - Splunk Distribution of OpenTelemetry Python version 1.15 or higher
      - * :ref:`instrument-python-applications`
@@ -188,7 +185,7 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-nodejs`.
 
-   .. group-tab:: .NET (OTel)
+   .. group-tab:: .NET
 
       :strong:`Requirements`
 
@@ -203,24 +200,6 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
       - ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable by default points to http://localhost:4318/v1/logs. It can be reconfigured to the Splunk Distribution of OpenTelemetry Collector.
 
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-otel-dotnet`.
-
-   .. group-tab:: .NET (SFx)
-
-      :strong:`Requirements`
-
-      AlwaysOn Profiling requires .NET 6.0 or higher.
-
-      Limited support is available for the following legacy versions of .NET:
-
-         - CPU profiling: .NET Core 3.1 and .NET 5.x
-         - Memory profiling: .NET Core 5.x
-
-      :strong:`Instrumentation`
-
-      - Activate the profiler by setting the ``SIGNALFX_PROFILER_ENABLED`` environment variable to ``true`` for your .NET process.
-      - Activate memory profiling by setting the ``SIGNALFX_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.
-
-      For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-dotnet`.
 
    .. group-tab:: Python
 
