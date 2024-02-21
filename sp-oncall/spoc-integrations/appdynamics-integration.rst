@@ -48,7 +48,7 @@ Configure the AppDynamics On Premise version
       <!-- For Linux/Unix *.sh -->
          victorops-alert.sh
       <!-- For windows *.bat -->
-         <!--<executable>victorops-alert.bat</executable>-->
+         <!--victorops-alert.bat -->
       </custom-actions>
 
 4. Update the config.yaml file in <CONTROLLER_HOME_DIR>/custom/actions/victorops-alert with your API key, routing key, protocol, and Splunk On-Call host.
@@ -114,9 +114,7 @@ Configure the AppDynamics SaaS version
 
 6. No custom headers are required.
 
-7. Under :guilabel:`Payload`, select the MIME Type of ``application/json``.
-
-8. Paste the following payload into the box in AppDynamics:
+7. Under :guilabel:`Payload`, select the MIME Type of ``application/json`` and paste the following payload. This payload includes the default AppDynamics alert payload which is commented out and allows only the JSON that is required for successful ingestion to Splunk On-Call:
 
    .. code-block:: 
 
@@ -176,19 +174,19 @@ Configure the AppDynamics SaaS version
 
          #end
 
-         #end
+      #end
 
 
-Under *Response Handling Criteria* set the *Failure Criteria* status code to **400** and the *Success Criteria* status code to **200.** 
+8. Under :guilabel:`Response Handling Criteria` set the :guilabel:`Failure Criteria` status code to 400 and the :guilabel:`Success Criteria` status code to 200.
 
-Make sure to **uncheck** the box for *Expected Payload* for both items.
+9. Uncheck :guilabel:`Expected Payload` for both failure and success criteria.
 
 .. image:: /_images/spoc/saas6.png
    :alt: saas6
 
    saas6
 
-At the bottom of the page, make any changes to the settings you would like and then select **Save** and **Test.**
+10. At the bottom of the page, make your changes to the settings and then select :guilabel:`Save` and `Test`.
 
 .. image:: /_images/spoc/saas7.png
    :alt: saas7
