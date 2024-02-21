@@ -9,9 +9,8 @@ Use the AppDynamics integration with Splunk On-Call to utilize Splunk On-Call as
 Requirements
 ==================
 
-Versions Supported: On Premise and SaaS versions
-
-Splunk On-Call Version Required:** Starter, Growth, or Enterprise
+* AppDynamics versions supported: On Premise and SaaS versions
+* Splunk On-Call version required: Starter, Growth, or Enterprise
 
 Enable the integration in Splunk On-Call
 =================================================
@@ -21,6 +20,7 @@ Enable the integration in Splunk On-Call
 3. Copy the :guilabel:`Service API Key` to your clipboard.
 
 .. image:: /_images/spoc/1-API-Key.png
+   :alt: AppDynamics in Splunk On-Call integrations 
 
 Configure the AppDynamics On Premise version
 =================================================
@@ -95,12 +95,11 @@ Configure the AppDynamics SaaS version
 1. In AppDynamics, select :guilabel:`Alert & Respond` then :guilabel:`HTTP Request Templates` then :guilabel:`New`.
 
    .. image:: /_images/spoc/AppDynamics-1@2x.png
+      :alt: Create a new HTTP request template in AppDynamics
 
-2. Give the Template a name. For exampke, Splunk On-Call Test is used in the following example.
+2. Give the Template a name. For example, Splunk On-Call Test.
 
-   .. image:: /_images/spoc/AppDynamics-2@2x.png
-
-3. Set a Custom Templating Variable with a field name of message_type and a value of WARNING.
+3. Set a custom templating variable with a field name of message_type and a value of WARNING.
 
 4. Under :guilabel:`Request URL` set the Method to POST.
 
@@ -108,9 +107,8 @@ Configure the AppDynamics SaaS version
    
    ``https://alert.victorops.com/integrations/generic/20131114/alert/<YOUR_SERVICE_API_KEY>/<YOUR_ROUTING_KEY>``
 
-   .. image:: /_images/spoc/saas4-1.png
-      :alt: saas4
-
+   .. image:: /_images/spoc/AppDynamics-2@2x.png
+      :alt: Configure your new HTTP request template in AppDynamics
 
 6. No custom headers are required.
 
@@ -182,32 +180,23 @@ Configure the AppDynamics SaaS version
 9. Uncheck :guilabel:`Expected Payload` for both failure and success criteria.
 
 .. image:: /_images/spoc/saas6.png
-   :alt: saas6
-
-   saas6
+   :alt: Configure response handling criteria in AppDynamics
 
 10. At the bottom of the page, make your changes to the settings and then select :guilabel:`Save` and `Test`.
 
 .. image:: /_images/spoc/saas7.png
-   :alt: saas7
+   :alt: Configure settings of your HTTP request template in AppDynamics
 
-   saas7
-
-When testing, add an Event Type Trigger with a count of 1 and hit **Run Test**.
+11. To test, add an Event Type Trigger with a count of 1 and select :guilabel:`Run Test`.
 
 .. image:: /_images/spoc/saas8.png
-   :alt: saas8
+   :alt: Test your HTTP request template in AppDynamics
 
-   saas8
-
-Check your VictorOps timeline to make sure you get the associated alert.
+12. Check your Splunk On-Call timeline for your associated alert.
 
 .. image:: /_images/spoc/saas9.png
-   :alt: saas9
+   :alt: AppDynamics alert in Splunk On-Call
 
-   saas9
+You can now use the Splunk On-Call HTTP Request Template with any of your alerts in AppDynamics. 
 
-You can now use the VictorOps HTTP Request Template with any of your alerts in AppDynamics. If you have any questions please `contact us at
-support <https://help.victorops.com/knowledge-base/important-splunk-on-call-support-changes-coming-nov-11th/>`__.
-
-.. |image1| image:: /_images/spoc/1-API-Key-1.png
+.. image:: /_images/spoc/1-API-Key-1.png
