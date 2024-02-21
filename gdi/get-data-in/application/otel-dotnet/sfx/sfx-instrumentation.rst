@@ -1,12 +1,17 @@
-.. _get-started-dotnet:
+.. caution::
+
+   The SignalFx Instrumentation for .NET is deprecated as of February 21, 2024 and will reach End of Support on February 21 2025. Until then, only critical security fixes and bug fixes will be provided. After the date, the library will be archived and no longer maintained.
+
+   New customers instrumenting the .NET ecosystem should use the :ref:`Splunk Distribution of OpenTelemetry .NET <instrument-otel-dotnet-applications>`. Existing customers should consider migrating to Splunk Distribution of OpenTelemetry .NET which offers similar capabilities. To learn how to migrate, see :ref:`migrate-signalfx-dotnet-to-dotnet-otel`.
+
+.. _sfx-library-deprecated:
 
 ************************************************************
-Instrument .NET applications for Splunk Observability Cloud
+SignalFx Instrumentation for .NET (Deprecated)
 ************************************************************
-
 
 .. meta::
-   :description: Instrument your .NET application to export metrics and spans to Splunk Observability Cloud.
+   :description: The SignalFx Instrumentation for .NET is deprecated. Migrate to the Splunk Distribution of OpenTelemetry .NET to use the latest features.
 
 .. toctree::
    :hidden:
@@ -20,8 +25,6 @@ Instrument .NET applications for Splunk Observability Cloud
    Troubleshoot the .NET instrumentation <troubleshooting/common-dotnet-troubleshooting>
 
 The SignalFx Instrumentation for .NET provides automatic instrumentation for popular .NET libraries and frameworks to collect and send telemetry data to Splunk Observability Cloud.
-
-.. note:: To use the OpenTelemetry instrumentation for .NET, see :ref:`get-started-dotnet-otel`. The OpenTelemetry instrumentation for .NET is actively developed and is compatible with the latest versions of .NET.
 
 .. raw:: html
 
