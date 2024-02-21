@@ -21,6 +21,7 @@ Enable the integration in Splunk On-Call
 
 .. image:: /_images/spoc/1-API-Key.png
    :alt: AppDynamics in Splunk On-Call integrations 
+   :width: 95%
 
 Configure the AppDynamics On Premise version
 =================================================
@@ -96,6 +97,7 @@ Configure the AppDynamics SaaS version
 
    .. image:: /_images/spoc/AppDynamics-1@2x.png
       :alt: Create a new HTTP request template in AppDynamics
+      :width: 95%
 
 2. Give the Template a name. For example, Splunk On-Call Test.
 
@@ -109,6 +111,7 @@ Configure the AppDynamics SaaS version
 
    .. image:: /_images/spoc/AppDynamics-2@2x.png
       :alt: Configure your new HTTP request template in AppDynamics
+      :width: 95%
 
 6. No custom headers are required.
 
@@ -181,22 +184,24 @@ Configure the AppDynamics SaaS version
 
 .. image:: /_images/spoc/saas6.png
    :alt: Configure response handling criteria in AppDynamics
+   :width: 95%
 
 10. At the bottom of the page, make your changes to the settings and then select :guilabel:`Save` and `Test`.
 
 .. image:: /_images/spoc/saas7.png
    :alt: Configure settings of your HTTP request template in AppDynamics
+   :width: 95%
 
 11. To test, add an Event Type Trigger with a count of 1 and select :guilabel:`Run Test`.
 
 .. image:: /_images/spoc/saas8.png
    :alt: Test your HTTP request template in AppDynamics
+   :width: 75%
 
 12. Check your Splunk On-Call timeline for your associated alert.
 
 .. image:: /_images/spoc/saas9.png
    :alt: AppDynamics alert in Splunk On-Call
+   :width: 75%
 
 You can now use the Splunk On-Call HTTP Request Template with any of your alerts in AppDynamics. 
-
-.. image:: /_images/spoc/1-API-Key-1.png
