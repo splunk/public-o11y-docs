@@ -1,3 +1,9 @@
+.. caution::
+
+   The SignalFx Instrumentation for .NET is deprecated as of February 21, 2024 and will reach End of Support on February 21 2025. Until then, only critical security fixes and bug fixes will be provided. After the date, the library will be archived and no longer maintained.
+
+   New customers instrumenting the .NET ecosystem should use the :ref:`Splunk Distribution of OpenTelemetry .NET <instrument-otel-dotnet-applications>`. Existing customers should consider migrating to Splunk Distribution of OpenTelemetry .NET which offers similar capabilities. To learn how to migrate, see :ref:`migrate-signalfx-dotnet-to-dotnet-otel`.
+
 .. _common-dotnet-troubleshooting:
 
 *******************************************************************
@@ -41,7 +47,7 @@ The SignalFx Instrumentation for .NET logs its configuration using ``INF`` log m
 
 You can activate debug logging to obtain more information about the issue:
 
-#. Set the ``SIGNALFX_TRACE_DEBUG`` environment variable to ``true`` before starting your instrumented application. 
+#. Set the ``SIGNALFX_TRACE_DEBUG`` environment variable to ``true`` before starting your instrumented application.
 
 #. Run your application or service and generate some activity.
 
@@ -52,7 +58,7 @@ You can activate debug logging to obtain more information about the issue:
 
 You can change the default location by updating the ``SIGNALFX_TRACE_LOG_DIRECTORY`` environment variable. See :ref:`dotnet-debug-logging-settings` for more information and settings.
 
-.. note:: If you've enabled debug logging and restarted the application, but you don't find any logs in the previous locations, check that other APM agents aren't running or aren't installed on the host. Multiple APM agents might prevent the SignalFx Instrumentation for .NET from instrumenting the application. 
+.. note:: If you've enabled debug logging and restarted the application, but you don't find any logs in the previous locations, check that other APM agents aren't running or aren't installed on the host. Multiple APM agents might prevent the SignalFx Instrumentation for .NET from instrumenting the application.
 
 .. caution:: Activate debug logging only when needed. Debug mode requires more resources.
 
@@ -113,7 +119,7 @@ Check that AlwaysOn Profiling is activated
 
 The .NET instrumentation logs the string ``AlwaysOnProfiler::MemoryProfiling`` started at ``info`` log level. To check whether AlwaysOn Profiling is activated, search your logs for strings similar to the following:
 
-.. code-block:: bash 
+.. code-block:: bash
 
    10/12/22 12:10:31.962 PM [12096|22036] [info] AlwaysOnProfiler::MemoryProfiling started.
 

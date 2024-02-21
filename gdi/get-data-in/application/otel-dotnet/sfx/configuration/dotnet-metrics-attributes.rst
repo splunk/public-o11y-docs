@@ -1,10 +1,16 @@
+.. caution::
+
+   The SignalFx Instrumentation for .NET is deprecated as of February 21, 2024 and will reach End of Support on February 21 2025. Until then, only critical security fixes and bug fixes will be provided. After the date, the library will be archived and no longer maintained.
+
+   New customers instrumenting the .NET ecosystem should use the :ref:`Splunk Distribution of OpenTelemetry .NET <instrument-otel-dotnet-applications>`. Existing customers should consider migrating to Splunk Distribution of OpenTelemetry .NET which offers similar capabilities. To learn how to migrate, see :ref:`migrate-signalfx-dotnet-to-dotnet-otel`.
+
 .. _dotnet-metrics-attributes:
 
 ***************************************************************
 Metrics collected by the SignalFx Instrumentation for .NET
 ***************************************************************
 
-.. meta:: 
+.. meta::
    :description: The SignalFx Instrumentation for .NET collects the following runtime and trace metrics.
 
 The SignalFx Instrumentation for .NET can collect runtime and trace metrics. To learn about the different metric types, see :ref:`metric-types`.
@@ -58,7 +64,7 @@ The following dimensions are automatically added to all metrics exported by the 
 
 The SignalFx Instrumentation for .NET can collect the following runtime metrics:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 40 10 50
    :width: 100%
@@ -80,7 +86,7 @@ The SignalFx Instrumentation for .NET can collect the following runtime metrics:
      - Count of bytes currently in use by live objects in the GCP heap.
    * - ``process.runtime.dotnet.gc.allocations.size``
      - Cumulative counter
-     - Count of bytes allocated on the managed GCP heap since the process started. Only available for .NET Core.	
+     - Count of bytes allocated on the managed GCP heap since the process started. Only available for .NET Core.
    * - ``process.runtime.dotnet.gc.committed_memory.size``
      - Gauge
      - Amount of committed virtual memory for the managed GCP heap, as observed during the last garbage collection. Only available for .NET 6 and higher.
@@ -101,7 +107,7 @@ Process metrics
 
 The SignalFx Instrumentation for .NET can collect the following process metrics:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 40 10 50
    :width: 100%
@@ -111,19 +117,19 @@ The SignalFx Instrumentation for .NET can collect the following process metrics:
      - Description
    * - ``process.memory.usage``
      - Gauge
-     - The amount of physical memory allocated for this process.	
+     - The amount of physical memory allocated for this process.
    * - ``process.memory.virtual``
      - Gauge
-     - The amount of committed virtual memory for this process.	
+     - The amount of committed virtual memory for this process.
    * - ``process.cpu.time``
      - CumulativeCounter
-     - Total CPU seconds broken down by different states, such as user and system.	
+     - Total CPU seconds broken down by different states, such as user and system.
    * - ``process.cpu.utilization`` (deprecated)
      - Gauge
      - Difference in ``process.cpu.time`` since the last measurement, divided by the elapsed time and number of CPUs available to the process.
    * - ``process.threads``
      - Gauge
-     - Process threads count.	
+     - Process threads count.
 
 .. _dotnet-aspnetcore-metrics:
 
@@ -132,7 +138,7 @@ ASP.NET Core metrics
 
 The SignalFx Instrumentation for .NET can collect the following ASP.NET Core metrics:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 40 10 50
    :width: 100%
@@ -173,7 +179,7 @@ IIS application pools use special accounts that don't appear in the list of user
 The following example shows how to add an IIS application pool account to the ``Performance Monitoring Users`` group from a command prompt with Administrator permissions:
 
 .. code-block:: shell
-   
+
    net localgroup "Performance Monitor Users" "IIS APPPOOL\DefaultAppPool" /add
 
 .. _dotnet-trace-metrics:
@@ -183,7 +189,7 @@ Trace metrics
 
 The SignalFx Instrumentation for .NET can collect the following trace metrics:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 40 10 50
    :width: 100%
