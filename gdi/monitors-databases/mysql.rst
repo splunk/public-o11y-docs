@@ -6,9 +6,9 @@ MySQL
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the MySQL monitor. See benefits, install, configuration, and metrics
 
-.. note:: The Smart Agent receiver used with the MySQL monitor type is deprecated.
+.. note:: The Smart Agent receiver used with the MySQL monitor type is now deprecated.
    
-   Use the :ref:`MySQL receiver <_sql>` to retrieve metrics instead.
+   Use the :ref:`MySQL receiver < _sql>` to retrieve metrics instead.
 
 The
 :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
