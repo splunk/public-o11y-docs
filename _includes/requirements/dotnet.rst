@@ -2,12 +2,16 @@ The Splunk Distribution of OpenTelemetry .NET supports the following .NET versio
 
 - Instrumentation for traces and metrics:
 
-   - .NET 6.0 and higher
+   - .NET 6.0 - End of Support - November 12, 2024
+   - .NET 7.0 - End of Support - May 14, 2024
+   - .NET 8.0 - End of Support - November 10, 2026
    - .NET Framework 4.6.2 and higher
 
 - AlwaysOn Profiling:
 
-   - .NET 6.0 and higher
+   - .NET 6.0 - End of Support - November 12, 2024
+   - .NET 7.0 - End of Support - May 14, 2024
+   - .NET 8.0 - End of Support - November 10, 2026
 
       .. note:: .NET Framework is not supported.
 
