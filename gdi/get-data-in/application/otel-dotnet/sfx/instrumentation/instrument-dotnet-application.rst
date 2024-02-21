@@ -1,3 +1,9 @@
+.. caution::
+
+   The SignalFx Instrumentation for .NET is deprecated as of February 21, 2024 and will reach End of Support on February 21 2025. Until then, only critical security fixes and bug fixes will be provided. After the date, the library will be archived and no longer maintained.
+
+   New customers instrumenting the .NET ecosystem should use the :ref:`Splunk Distribution of OpenTelemetry .NET <instrument-otel-dotnet-applications>`. Existing customers should consider migrating to Splunk Distribution of OpenTelemetry .NET which offers similar capabilities. To learn how to migrate, see :ref:`migrate-signalfx-dotnet-to-dotnet-otel`.
+
 .. _instrument-dotnet-applications:
 
 ***************************************************************************
@@ -19,7 +25,7 @@ To generate all the basic installation commands for your environment and applica
 #. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`.NET guided setup <https://login.signalfx.com/#/gdi/scripted/dotnet-tracing/step-1?category=product-apm&gdiState=%7B"integrationId":"dotnet-tracing"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the navigation menu, select :menuselection:`Data Management`. 
+   #. In the navigation menu, select :menuselection:`Data Management`.
 
    #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 
@@ -117,7 +123,7 @@ Follow these steps to automatically instrument your application:
 
 #. Run your application.
 
-If no data appears in APM, see :ref:`common-dotnet-troubleshooting`.  
+If no data appears in APM, see :ref:`common-dotnet-troubleshooting`.
 
 If you need to add custom attributes to spans or want to manually generate spans, instrument your .NET application or service manually. See :ref:`dotnet-manual-instrumentation`.
 
@@ -141,7 +147,7 @@ To activate automatic metric collection, set the ``SIGNALFX_TRACE_METRICS_ENABLE
 
 To activate runtime metrics, set the ``SIGNALFX_RUNTIME_METRICS_ENABLED`` environment variable to ``true``.
 
-See :ref:`dotnet-metrics-attributes` for more information about the metrics collected by the instrumentation. For more metric settings, see :ref:`dotnet-metric-settings`. 
+See :ref:`dotnet-metrics-attributes` for more information about the metrics collected by the instrumentation. For more metric settings, see :ref:`dotnet-metric-settings`.
 
 .. note:: Runtime metrics are always collected if AlwaysOn Profiling is activated.
 
@@ -301,6 +307,25 @@ When instrumenting an Azure WebJob in App Service, add the following settings. R
 
 .. caution:: Set ``SIGNALFX_AZURE_APP_SERVICES`` to ``0`` when instrumenting WebJobs. Keep a separate App Service for the WebJob, so that you can use separate settings for your application and for the background service.
 
+.. _sfx-dotnet-profiling:
+
+Activate AlwaysOn Profiling
+==============================================================
+
+AlwaysOn Profiling requires .NET 6.0 or higher.
+
+Limited support is available for the following legacy versions of .NET:
+
+   - CPU profiling: .NET Core 3.1 and .NET 5.x
+   - Memory profiling: .NET Core 5.x
+
+To activate AlwaysOn Profiling, do the following:
+
+- Activate the profiler by setting the ``SIGNALFX_PROFILER_ENABLED`` environment variable to ``true`` for your .NET process.
+- Activate memory profiling by setting the ``SIGNALFX_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.
+
+For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-dotnet`.
+
 .. _kubernetes_dotnet:
 
 Deploy the .NET instrumentation in Kubernetes
@@ -327,7 +352,7 @@ The following example shows how to update a deployment to expose environment var
                  valueFrom:
                    fieldRef:
                      fieldPath: status.hostIP
-               - name: SIGNALFX_ENDPOINT_URL 
+               - name: SIGNALFX_ENDPOINT_URL
                  value: "http://$(SPLUNK_OTEL_AGENT):9411/api/v2/spans"
                - name: SIGNALFX_SERVICE_NAME
                  value: '<name-of-your-service>'
@@ -365,7 +390,7 @@ To bypass the OTel Collector and send data directly to Splunk Observability Clou
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
 
 #. Open the navigation menu in Splunk Observability Cloud.
 #. Select :menuselection:`Settings`.
@@ -377,7 +402,7 @@ For more information on the ingest API endpoints, see :new-page:`Send APM traces
 
 .. caution:: This procedure applies to spans and traces. To send AlwaysOn Profiling data, you must use the OTel Collector.
 
-Specify the source host 
+Specify the source host
 --------------------------------------------------------------------
 
 .. include:: /_includes/gdi/apm-api-define-host.rst

@@ -18,6 +18,7 @@ Instrument .NET applications for Splunk Observability Cloud (OpenTelemetry)
    Manual instrumentation <instrumentation/manual-dotnet-instrumentation>
    Performance overhead <performance>
    Troubleshoot the .NET instrumentation <troubleshooting/common-dotnet-troubleshooting>
+   SignalFx Instrumentation for .NET (Deprecated) TOGGLE <sfx/sfx-instrumentation>
    Migrate from SignalFx Instrumentation for .NET <troubleshooting/migrate-signalfx-dotnet-to-dotnet-otel>
 
 The Splunk Distribution of OpenTelemetry .NET provides automatic instrumentation for popular .NET libraries and frameworks to collect and send telemetry to Splunk Observability Cloud.
@@ -36,6 +37,12 @@ The Splunk Distribution of OpenTelemetry .NET provides the following features:
 - W3C headers with baggage for context propagation by default
 - OTLP over HTTP exporter to send spans to the Splunk OTel Collector
 - OpenTelemetry and Splunk Observability Cloud semantic conventions
+
+.. note::
+
+   The SignalFx Instrumentation for .NET is deprecated as of February 21, 2024 and will reach End of Support on February 21 2025. Until then, only critical security fixes and bug fixes will be provided. After the date, the library will be archived and no longer maintained.
+
+   New customers instrumenting the .NET ecosystem should use the :ref:`Splunk Distribution of OpenTelemetry .NET <instrument-otel-dotnet-applications>`. Existing customers should consider migrating to Splunk Distribution of OpenTelemetry .NET which offers similar capabilities. To learn how to migrate, see :ref:`migrate-signalfx-dotnet-to-dotnet-otel`.
 
 .. raw:: html
 
