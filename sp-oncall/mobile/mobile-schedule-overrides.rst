@@ -57,7 +57,7 @@ You have the ability to created a schedule override from three different locatio
 
 Take a scheduled override:
 
-Any unassigned scheduled overrides will have a :guilabel:`Take` button next to them, denoting that they have not yet been covered. Select :guilabel:`Take`and then confirm again in the popup window to assign the override to yourself.
+Any unassigned scheduled overrides will have a :guilabel:`Take` button next to them, denoting that they have not yet been covered. Select :guilabel:`Take` and then confirm again in the popup window to assign the override to yourself.
 
 
 
