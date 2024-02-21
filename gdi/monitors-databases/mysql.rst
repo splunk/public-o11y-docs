@@ -4,7 +4,7 @@ MySQL
 =======
 
 .. meta::
-   :description: Use this Splunk Observability Cloud integration for the MySQL monitor. See benefits, install, configuration, and metrics
+   :description: Use this Splunk Observability Cloud integration for the MySQL monitor. See benefits, install, configuration, and metrics.
 
 .. note:: The Smart Agent receiver used with the MySQL monitor type is now deprecated.
    
