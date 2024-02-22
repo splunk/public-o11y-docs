@@ -4,11 +4,10 @@
 Manually instrument PHP applications for Splunk Observability Cloud
 ********************************************************************
 
-.. meta:: 
+.. meta::
    :description: Manually instrument your PHP application to add custom attributes to spans or manually generate metrics. Keep reading to learn how to manually instrument your PHP application for Splunk Observability Cloud.
 
-The Splunk Distribution of OpenTelemetry .NET automatic instrumentation provides a base you can build on by adding
-your own manual instrumentation. By using both automatic and manual instrumentation, you can better instrument the logic and functionality of your applications, clients, and frameworks.
+The OpenTelemetry instrumentation for PHP provides a base you can build on by adding your own manual instrumentation. By using both automatic and manual instrumentation, you can better instrument the logic and functionality of your applications, clients, and frameworks.
 
 .. _custom-traces-otel-php:
 
@@ -17,31 +16,47 @@ Create custom traces
 
 To create custom spans and traces, follow these steps:
 
-1. Install the Splunk Distribution of OpenTelemetry .NET. See :ref:`install-dotnet-otel-instrumentation`.
+1. Create a ``TracerProvider`` if you aren't using an instrumentation library:
 
-2. Add the ``System.Diagnostics.DiagnosticSource`` dependency to your project:
+   .. code-block:: php
 
-   .. code:: xml
+      $tracerProvider = Globals::tracerProvider();
 
-      <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="7.0.2" />
+2. Create a tracer:
 
-3. Create an ``ActivitySource`` instance:
+   .. code-block:: php
 
-   .. code:: csharp
+      // Acquire the tracer only where needed
 
-      private static readonly ActivitySource RegisteredActivity = new ActivitySource("Examples.ManualInstrumentations.Registered");
+      $tracer = $tracerProvider->getTracer(
+         'instrumentation-scope-name', // Name (Required)
+         'instrumentation-scope-version', // Version
+         'http://example.com/my-schema', // Schema URL
+         ['foo' => 'bar'] // Resource attributes
+      );
 
-4. Create an ``Activity``. Optionally, set tags:
+3. Create spans:
 
-   .. code:: csharp
+   .. code:: php
 
-      using (var activity = RegisteredActivity.StartActivity("Main"))
-      {
-         activity?.SetTag("foo", "bar1");
-         // your logic for Main activity
+      <?php
+      public function roll($rolls) {
+         $span = $this->tracer->spanBuilder("rollTheDice")->startSpan();
+         $result = [];
+         for ($i = 0; $i < $rolls; $i++) {
+            $result[] = $this->rollOnce();
+         }
+         $span->end();
+         return $result;
       }
 
-5. Register your ``ActivitySource`` by setting the ``OTEL_DOTNET_AUTO_TRACES_ADDITIONAL_SOURCES`` environmental variable. You can set the value to either ``Examples.ManualInstrumentations.Registered`` or to ``Examples.ManualInstrumentations.*``, which registers the entire prefix.
+4. Optionally, set attributes:
+
+   .. code:: php
+
+      $span->setAttribute(TraceAttributes::CODE_FUNCTION, 'rollOnce');
+      $span->setAttribute(TraceAttributes::CODE_FILEPATH, __FILE__);
+
 
 .. _custom-metrics-otel-php:
 
@@ -50,32 +65,41 @@ Create custom metrics
 
 To create custom metrics, follow these steps:
 
-1. Add the ``System.Diagnostics.DiagnosticSource`` dependency to your project:
+1. Add the following dependencies:
 
-   .. code:: xml
+   .. code:: php
 
-      <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="7.0.2" />
+      use OpenTelemetry\SDK\Metrics\MetricExporter\ConsoleMetricExporterFactory;
+      use OpenTelemetry\SDK\Metrics\MeterProvider;
+      use OpenTelemetry\SDK\Metrics\MetricReader\ExportingReader;
 
-2. Create a ``Meter`` instance:
+      require 'vendor/autoload.php';
 
-   .. code:: csharp
+2. Create a ``MeterProvider``:
 
-      using var meter = new Meter("My.Application", "1.0");
+   .. code:: php
 
-3. Create an ``Instrument`` instance:
+      $reader = new ExportingReader((new ConsoleMetricExporterFactory())->create());
 
-   .. code:: csharp
+      $meterProvider = MeterProvider::builder()
+         ->addReader($reader)
+         ->build();
 
-      var counter = meter.CreateCounter<long>("custom.counter", description: "Custom counter's description");
+3. Create an instrument. For example, a gauge:
 
-4. Update the ``Instrument`` value:
+   .. code:: php
 
-   .. code:: csharp
-
-      counter.Add(1);
-
-5. Register your ``Meter`` with OpenTelemetry.AutoInstrumentation by setting the ``OTEL_DOTNET_AUTO_METRICS_ADDITIONAL_SOURCES`` environment variable:
-
-   .. code:: bash
-
-      OTEL_DOTNET_AUTO_METRICS_ADDITIONAL_SOURCES=My.Application
+      $queue = [
+         'job1',
+         'job2',
+         'job3',
+      ];
+      $reader = $meterProvider
+         ->getMeter('demo_meter')
+         ->createObservableGauge('queued', 'jobs', 'The number of jobs enqueued')
+         ->observe(static function (ObserverInterface $observer) use (&$queue): void {
+            $observer->observe(count($queue));
+         });
+      $reader->collect();
+      array_pop($queue);
+      $reader->collect();
