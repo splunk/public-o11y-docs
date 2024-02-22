@@ -9,7 +9,7 @@ OpenTelemetry PHP instrumentation compatibility and requirements
 
 .. include:: /_includes/requirements/php.rst
 
-.. _supported-php-libraries:
+.. _supported-php-otel-libraries:
 
 Supported libraries and frameworks
 =================================================
