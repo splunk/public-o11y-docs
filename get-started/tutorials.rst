@@ -11,9 +11,9 @@ Splunk Observability Cloud tutorials
     :hidden:
     :maxdepth: 3
 
-    tutorials/k8s-infrastructure-tutorial/about-k8s-tutorial
-    tutorials/aws-tutorial/about-aws-tutorial
-    tutorials/k8s-java-traces-tutorial/about-k8s-java-traces-tutorial
+    About K8s <tutorials/k8s-infrastructure-tutorial/about-k8s-tutorial>
+    AWS tutorial <tutorials/aws-tutorial/about-aws-tutorial>
+    K8S Java traces <tutorials/k8s-java-traces-tutorial/about-k8s-java-traces-tutorial>
 
 Read the following tutorials to learn how to understand and use Splunk Observability Cloud. 
 

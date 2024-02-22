@@ -11,7 +11,7 @@ Splunk Observability Cloud scenarios
     :maxdepth: 3
     :hidden:
 
-    scenarios/scenario-cross
+    Scenarios TOGGLE <scenarios/scenario-cross>
 
 This is the collection of scenarios available for Splunk Observability Cloud. 
 

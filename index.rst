@@ -294,7 +294,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
 .. toctree::
    :caption: Scenarios and tutorials
-   :maxdepth:   2
+   :maxdepth:   4
 
 .. toctree::
    :maxdepth:   3
@@ -304,7 +304,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Tutorials <get-started/tutorials>   
+   Tutorials TOGGLE <get-started/tutorials>   
 
 .. toctree::
    :caption: Splunk platform users
