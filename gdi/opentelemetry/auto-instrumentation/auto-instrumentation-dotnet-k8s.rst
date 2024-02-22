@@ -186,6 +186,17 @@ The following examples show how to set the attribute using each method:
         
           kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=environment=prd
 
+.. _zeroconfig-dotnet-deploy:
+
+Deploy the Helm Chart
+------------------------------------------------------
+
+After configuring values.yaml, use the following command to deploy the Helm Chart and install the OpenTelemetry Collector:
+
+.. code-block:: bash
+
+  helm install splunk-otel-collector -f ./values.yaml
+
 .. _verify-otel-resources-dotnet-k8s:
       
 Check that all the OpenTelemetry resources are deployed successfully
