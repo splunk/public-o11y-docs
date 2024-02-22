@@ -1,4 +1,4 @@
-.. _syn-donwntimes:
+.. _syn-downtimes:
 
 ************************************************************
 Schedule a downtime configuration for tests
