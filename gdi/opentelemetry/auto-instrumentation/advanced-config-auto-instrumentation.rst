@@ -13,7 +13,7 @@ Through advanced customization, you can achieve the following tasks:
 
 * :ref:`Change instrumentation version <change-zeroconfig-version>`
 * :ref:`Override auto instrumentation settings <override-zeroconfig-settings>`
-* :ref:`Deploy auto instrumentation in gateway mode <_deploy-in-gateway>`
+* :ref:`Deploy auto instrumentation in gateway mode <deploy-in-gateway>`
 
 .. _change-zeroconfig-version:
 
