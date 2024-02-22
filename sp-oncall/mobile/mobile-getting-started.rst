@@ -53,6 +53,8 @@ As with iOS devices, editing and creating Primary Paging Policies and Custom Pag
 
 Once you've accessed your Paging Policies, select :guilabel:`Paging Policies`. Select the step you'd like to edit or add steps to.
 
+.. spoc-numbers::
+
 Add Splunk On-Call to your contacts
 -----------------------------------
 

@@ -5,142 +5,112 @@ iOS for mobile Splunk On-Call
 ************************************************************************
 
 .. meta::
-   :description: About the user roll in Splunk On-Call.
-
-
-This article will help iOS users understand the features and
-capabilities that are specific to the iOS version of the Splunk On-Call
+   :description: This topic will help iOS users understand the features and capabilities that are specific to the iOS version of the Splunk On-Call
 mobile application.
 
-Add Splunk On-Call Contact
---------------------------
 
-Splunk On-Call uses a total of six source phone numbers for delivery of
-phone call and SMS notifications in the US. (`Full list
-here <http://help.victorops.com/knowledge-base/victorops-phone-numbers/>`__) 
-This is part of a load balancing strategy that helps us ensure timely
-delivery of notifications. Luckily, you do not need to manually create a
-contact and add these numbers.  There is a feature within the app that
-will do this for you.
+This topic will help iOS users understand the features and capabilities that are specific to the iOS version of the Splunk On-Call
+mobile application.
 
-Click on the *Settings* Menu in the bottom right corner of the
-application, click on the Notifications button, then   to find choose
-**Add Splunk On-Call to Your Contacts.**
+Add Splunk On-Call contact numbers
+====================================
 
-|image1|
+Splunk On-Call uses a total of six source phone numbers for delivery of phone call and SMS notifications in the US.  For the full list of numbers, see :ref:`spoc-numbers`. This is part of a load balancing strategy that helps us ensure timely delivery of notifications. You do not need to manually create a contact and add these numbers. There is a feature within the app that will do this for you.
 
-|image2|
+Select the :guilabel:`Settings` menu in the bottom right corner of the application, select the :guilabel:`Notifications` button, then  choose :guilabel:`Add Splunk On-Call to Your Contacts`.
 
-This will automatically create a new contact with all of the Splunk
-On-Call numbers already included.
+.. image:: /_images/spoc/mob-ios1.png
+    :width: 100%
+    :alt: Select Notifications.
+    
+.. image:: /_images/spoc/mob-ios2.png
+    :width: 100%
+    :alt: Select Add Splunk On-Call to Contacts.     
 
-This will give you the ability to **add Splunk On-Call to your
-Favorites**, in order to ensure that calls from Splunk On-Call are able
-to **override Do Not Disturb mode**.  It also allows you to give the
-Splunk On-Call contact “\ **Emergency Bypass”** capabilities, ensuring
-that you will always get your phone and SMS notifications regardless of
-the state of your phone (provided it is turned on).
+This will automatically create a new contact with all of the Splunk On-Call numbers already included.
 
---------------
+This will give you the ability to add Splunk On-Call to your Favorites, in order to ensure that calls from Splunk On-Call are able
+to override Do Not Disturb mode. It also allows you to give the Splunk On-Call contact Emergency Bypass capabilities, ensuring that you will always get your phone and SMS notifications regardless of the state of your phone provided it is turned on.
+
 
 iOS App Permission Settings
----------------------------
+==================================
 
-Having the appropriate permissions and settings on your device is
-crucial to ensuring that you receive all of your Splunk On-Call
+Having the appropriate permissions and settings on your device is crucial to ensuring that you receive all of your Splunk On-Call
 notifications.
 
-Below are permissions settings we highly recommend for your iOS device:
+Below are permissions settings we highly recommend for your iOS device.
 
-**General App Permissions**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+General App Permissions
+------------------------------
 
--  Navigate to your iOS *Settings*. Scroll down to the application
-   settings and select Splunk On-Call.
--  In the Splunk On-Call settings, make sure *Cellular Data* is **ON**
--  Make sure Push Notifications permissions are **ON**. **NOTE:** If
-   Push Notification permissions are not granted to the Splunk On-Call
-   app, the device will not register with Splunk On-Call and hence will
-   not appear in your user profile.
--  Navigate to *Notifications (Badges, Sounds, Banners)* and make sure
-   that all settings are turned **ON**.
+-  Navigate to your iOS :guilabel:`Settings`. Scroll down to the application settings and select Splunk On-Call.
+-  In the Splunk On-Call settings, make sure :guilabel:`Cellular Data` is On.
+-  Make sure Push Notifications permissions are On.
+  
+   ..note:: If Push Notification permissions are not granted to the Splunk On-Call app, the device will not register with Splunk On-Call and hence will not appear in your user profile.
 
-|image3|
+-  Navigate to :guilabel:`Notifications (Badges, Sounds, Banners)` and make sure that all settings are turned On.
 
-|image4|
+.. image:: /_images/spoc/mob-ios3.png
+    :width: 100%
+
+
+.. image:: /_images/spoc/mob-ios4.png
+    :width: 100%
 
 
 Do Not Disturb Mode
-~~~~~~~~~~~~~~~~~~~
+=========================
 
 Push Notifications
-^^^^^^^^^^^^^^^^^^
+-----------------------------
 
--  To override Do Not Disturb mode for paging Push notifications, ensure
-   that the *Allow Critical Alerts* toggle is enabled as defined in the
-   above section
--  Next, navigate to the settings section of the app,
-   then *Notifications*
--  Enable the toggle for *Incidents are Critical Alerts*
+-  To override Do Not Disturb mode for paging Push notifications, ensure that the :guilabel:`Allow Critical Alerts` toggle is enabled as defined in the preceding section.
+-  Next, navigate to the :guilabel:`Settings` section of the app, then :guilabel:`Notifications`.
+-  Enable the toggle for :guilabel:`Incidents are Critical Alerts`
 
-SMS/Phone Calls
-^^^^^^^^^^^^^^^
+SMS or Phone Calls
+-------------------------
 
--  |image5|\ Splunk On-Call must be added as a contact
--  Then add Splunk On-Call as a favorite in your contacts list
--  To add Splunk On-Call as a favorite, you will want to go to your
-   Contacts >> Splunk On-Call Contact >> Add to Favorites
--  Be sure to have the proper  *Do Not Disturb* settings enabled. To do
-   so, select *Settings >> Do Not Disturb >>*  Allow Calls from
-   *Favorites*
+-  Splunk On-Call must be added as a contact.
+-  Then add Splunk On-Call as a favorite in your contacts list.
+-  To add Splunk On-Call as a favorite, you will want to go to your :guilabel:`Contacts`, then :guilabel:`Splunk On-Call Contacts`, and then select :guilabel:`Add to Favorites`.
+-  Be sure to have the proper Do Not Disturb settings enabled. To do so, select :guilabel:`Settings`, the  :guilabel:`Do Not Disturb`, and then select :guilabel:`Allow Calls from Favorites`.
 
-This will allow you to receive calls and SMS messages when you are in
-*Do Not Disturb*.
+This will allow you to receive calls and SMS messages when you are in Do Not Disturb.
 
---------------
 
 Emergency Bypass
-~~~~~~~~~~~~~~~~
+========================
 
-You have the option to set Splunk On-Call as an Emergency Bypass
-contact. This will allow the Splunk On-Call contact to contact you when
-you're in *Do Not Disturb*, without adding the contact as a favorite.
+You have the option to set Splunk On-Call as an Emergency Bypass contact. This will allow the Splunk On-Call contact to contact you when
+you're in Do Not Disturb, without adding the contact as a favorite.
 
-To add Splunk On-Call as an Emergency Bypass contact, go to Contacts >>
-your Splunk On-Call contact >> Text Tone >> Toggle Emergency Bypass
-**ON**
+To add Splunk On-Call as an Emergency Bypass contact, go to :guilabel:`Contacts`, then your :guilabel:`Splunk On-Call Contact`, then select :guilabel:`Text Tone`. Turn on :guilabel:`Toggle Emergency Bypass`.
 
-Notification Settings in the Splunk On-Call App
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Notification settings in the Splunk On-Call app
+-------------------------------------------------------
 
-/_images/spoc/Incident-Settings.png
+.. image:: /_images/spoc/mob-ios5.png
+    :width: 100%
 
- 
 
-Within your Splunk On-Call Settings Menu, you can edit your Notification
-sounds preferences.
+Within your Splunk On-Call Settings Menu, you can edit your Notification sounds preferences.
 
--  Select Incident Notifications >> Sounds
--  Customize sound settings for Triggered Incidents/Resolved Incidents
--  Here you will also find your lock screen options for Incident
-   Previews and Incident Quick Actions, these are automatically set to
-   **ON**.
+-  Select :guilabel:`Incident Notifications`, then :guilabel:`Sounds`.
+-  Customize sound settings for Triggered or Resolved Incidents.
+-  Here you will also find your lock screen options for Incident Previews and Incident Quick Actions, these are automatically set to
+   On.
 
- 
 
- 
-
---------------
 
 Ack From Lock Screen
 --------------------
 
-One of the Splunk On-Call notification options is a push notification to
-your iOS device. When being notified via PUSH notification while your
-phone locked, you have the convenience to acknowledge the alert directly
-from the lock-screen.
+One of the Splunk On-Call notification options is a push notification to your iOS device. When being notified via PUSH notification while your phone locked, you have the convenience to acknowledge the alert directly from the lock-screen.
 
-**NOTE:** This looks different on iPhone 6 and earlier versus iPhone 6s
+.. note:: This looks different on iPhone 6 and earlier versus iPhone 6s
 and later. 
 
 /_images/spoc/Screen-Shot-2020-06-03-at-1.43.32-PM.png
@@ -156,11 +126,7 @@ and later. 
 -  After you have acknowledged an incident, you'll receive a success
    notification confirming that your acknowledgment was successful
 
- 
 
- 
-
- 
 
 iOS App Troubleshooting
 -----------------------
@@ -172,24 +138,12 @@ iOS App Troubleshooting
 
  _images/spock/Swipe-Report.png
 
- 
 
- 
 
- 
-
--  Swipe from **right to lef**\ t with **two fingers** and this window
-   will appear
+-  Swipe from right to left with two fingers and this window will appear
 -  Select ‘**Report a Bug**' or ‘**Suggest an Improvement**'
--  From there you will be prompted in another screen where you can add
-   more information to your report, take a screen recording, screenshot,
-   or attach a screenshot from your Camera Roll
+-  From there you will be prompted in another screen where you can add more information to your report, take a screen recording, screenshot, or attach a screenshot from your camera roll.
 
- 
-
- 
-
- 
 
 **Reset your Mobile Device in Splunk On-Call:**
 
@@ -209,8 +163,4 @@ device itself)
 This process will redo the device association process and often clears
 up any issues with the app.
 
-.. |image1| image:: /_images/spoc/IMG_2632.jpg
-.. |image2| image:: /_images/spoc/IMG_2633.jpg
-.. |image3| image:: /_images/spoc/Image-from-iOS-23.png
-.. |image4| image:: /_images/spoc/Image-from-iOS-24.png
-.. |image5| image:: /_images/spoc/Favorites.png
+

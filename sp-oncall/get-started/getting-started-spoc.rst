@@ -13,7 +13,6 @@ What is Splunk On-Call?
     onboarding-milestones
     spoc-support
     spoc-system-requirements
-    spoc-system-requirements
     admin-permissions
     admin-quick-start
     alert-admin
