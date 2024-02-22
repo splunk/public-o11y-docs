@@ -69,7 +69,7 @@ Splunk On-Call integrations
    victorops-bugsnag-integration
    victorops-cabot-integration
    victorops-catchpoint-integration
-   victorops-check_mk-integration
+   check_mk-integration
    victorops-circonus-integration
    victorops-connectwise-automate-integration
    victorops-crittercism-integration
