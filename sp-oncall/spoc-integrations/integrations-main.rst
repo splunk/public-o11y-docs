@@ -119,7 +119,7 @@ Splunk On-Call integrations
    victorops-solarwinds-integration
    GCP-monitoring-integration.rst
    victorops-statuscake-integration
-   victorops-statuspage-integration
+   statuspage-integration
    victorops-sumologic-integration
    victorops-sysdig-integration
    victorops-threat-stack-integration
