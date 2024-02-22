@@ -9,14 +9,14 @@ Migrate from the SignalFx Tracing Library for PHP
 
 The agent of the Splunk Distribution of OpenTelemetry .NET is an alternative to the SignalFx Instrumentation for .NET. To migrate from the SignalFx instrumentation, follow these instructions.
 
-.. _requirements-splunk-dotnet-otel-migration:
+.. _requirements-splunk-php-otel-migration:
 
 Compatibility and requirements
 ==========================================================
 
-For a complete list of requirements, see :ref:`dotnet-otel-requirements`.
+For a complete list of requirements, see :ref:`php-otel-requirements`.
 
-.. _migrate-to-splunk-dotnet-otel-agent:
+.. _migrate-to-splunk-php-otel-agent:
 
 Migrate to the Splunk Distribution of OpenTelemetry .NET
 ========================================================
@@ -30,7 +30,7 @@ To migrate from the SignalFx Instrumentation for .NET to the Splunk Distribution
 
 If you manually instrumented your code with OpenTracing, activate OpenTracing support by setting the ``OTEL_DOTNET_AUTO_OPENTRACING_ENABLED`` environment variable to ``true``.
 
-.. _changes-functionality-dotnet-otel:
+.. _changes-functionality-php-otel:
 
 Changes in functionality
 =======================================================

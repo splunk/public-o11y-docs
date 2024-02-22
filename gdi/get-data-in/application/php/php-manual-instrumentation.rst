@@ -10,7 +10,7 @@ Manually instrument PHP applications for Splunk Observability Cloud
 The Splunk Distribution of OpenTelemetry .NET automatic instrumentation provides a base you can build on by adding
 your own manual instrumentation. By using both automatic and manual instrumentation, you can better instrument the logic and functionality of your applications, clients, and frameworks.
 
-.. _custom-traces-otel-dotnet:
+.. _custom-traces-otel-php:
 
 Create custom traces
 ===============================
@@ -43,7 +43,7 @@ To create custom spans and traces, follow these steps:
 
 5. Register your ``ActivitySource`` by setting the ``OTEL_DOTNET_AUTO_TRACES_ADDITIONAL_SOURCES`` environmental variable. You can set the value to either ``Examples.ManualInstrumentations.Registered`` or to ``Examples.ManualInstrumentations.*``, which registers the entire prefix.
 
-.. _custom-metrics-otel-dotnet:
+.. _custom-metrics-otel-php:
 
 Create custom metrics
 ===============================
