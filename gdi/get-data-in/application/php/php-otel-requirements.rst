@@ -9,6 +9,17 @@ OpenTelemetry PHP instrumentation compatibility and requirements
 
 .. include:: /_includes/requirements/php.rst
 
+.. _php-otel-connector-requirement:
+
+Install and configure the Splunk Distribution of OpenTelemetry Collector
+======================================================================================================
+
+To send application traces and spans to Splunk Observability Cloud, install the Splunk Distribution of OpenTelemetry Collector for your platform. The following distributions are available:
+
+- Splunk OTel Collector for Linux. See :ref:`otel-install-linux`.
+- Splunk OTel Collector for Windows. See :ref:`otel-install-windows`.
+- Splunk OTel Collector for Kubernetes. See :ref:`otel-install-k8s`.
+
 .. _supported-php-otel-libraries:
 
 Supported libraries and frameworks

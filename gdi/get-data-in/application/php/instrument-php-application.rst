@@ -5,36 +5,68 @@ Instrument your PHP application for Splunk Observability Cloud (OpenTelemetry)
 *******************************************************************************
 
 .. meta::
-   :description: The Splunk Distribution of OpenTelemetry .NET automatically instruments .NET applications, Windows services running .NET applications, and ASP.NET applications deployed on IIS. Follow these steps to get started.
+   :description: The OpenTelemetry instrumentation automatically instruments PHP applications using a PHP extension and available instrumentation libraries. Follow these steps to get started.
 
-The Splunk Distribution of OpenTelemetry .NET automatically instruments .NET applications, Windows services running .NET applications, and ASP.NET applications deployed on IIS.
+The OpenTelemetry instrumentation automatically instruments PHP applications using a PHP extension and available instrumentation libraries. You can send telemetry to the Splunk Distribution of OpenTelemetry Collector or directly to the Splunk Observability Cloud ingest endpoint.
 
-To get started, use the guided setup, follow the instructions manually, or auto-instrument your application. See :ref:`auto-instrumentation-dotnet` for more information.
- 
+To get started, use the guided setup or follow the instructions manually.
+
 Generate customized instructions using the guided setup
 ====================================================================
 
-To generate all the basic installation commands for your environment and application, use the .NET OpenTelemetry guided setup. To access the .NET OpenTelemetry guided setup, follow these steps:
+To generate all the basic installation commands for your environment and application, use the PHP OpenTelemetry guided setup. To access the PHP OpenTelemetry guided setup, follow these steps:
 
 #. Log in to Splunk Observability Cloud.
-#. Open the :new-page:`.NET OpenTelemetry guided setup <https://login.signalfx.com/#/gdi/scripted/otel-dotnet-tracing/>`. Optionally, you can navigate to the guided setup on your own:
+#. Open the :new-page:`PHP OpenTelemetry guided setup <https://login.signalfx.com/#/gdi/scripted/php-dotnet-tracing/>`. Optionally, you can navigate to the guided setup on your own:
 
    #. In the navigation menu, select :menuselection:`Data Management`.
    #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
    #. In the integration filter menu, select :guilabel:`By Product`.
    #. Select the :guilabel:`APM` product.
-   #. Select the :guilabel:`.NET (OpenTelemetry)` tile to open the .NET OpenTelemetry guided setup.
+   #. Select the :guilabel:`.PHP (OpenTelemetry)` tile to open the PHP OpenTelemetry guided setup.
 
 
-Install the Splunk Distribution of OpenTelemetry .NET manually
+Install the Splunk Distribution of OpenTelemetry PHP manually
 ==================================================================
 
+Follow these steps to install and automatically instrument your PHP application:
 
+1. Check that you meet the requirements. See :ref:`php-otel-requirements`.
 
-Configure the instrumentation
----------------------------------------------
+2. Install the OpenTelemetry PHP extension using PECL:
 
-For advanced configuration of the .NET automatic instrumentation, like changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
+   .. code-block:: bash
+
+      sudo apt-get install gcc make autoconf
+      pecl install opentelemetry
+
+3. Add the extension to your php.ini file:
+
+   .. code-block:: ini
+
+      [opentelemetry]
+      extension=opentelemetry.so
+
+4. Install the required instrumentations you need using Composer:
+
+   .. code-block:: bash
+
+      php composer.phar install open-telemetry/exporter-otlp:^1.0.3
+      php composer.phar install php-http/guzzle7-adapter:^1.0
+
+   You can also install additional instrumentations. See :ref:`supported-php-otel-libraries`.
+
+5. Configure the basic settings in your php.ini file or using environment variables:
+
+   .. code-block:: bash
+
+      OTEL_PHP_AUTOLOAD_ENABLED=true \
+      OTEL_SERVICE_NAME="<your-service-name>" \
+      OTEL_RESOURCE_ATTRIBUTES="deployment.environment=<your_env>" \
+
+6. Run your application.
+
+   See the :new-page:`OpenTelemetry PHP examples <https://github.com/signalfx/tracing-examples/tree/main/opentelemetry-tracing/opentelemetry-php>` in GitHub for sample instrumentation scenarios.
 
 
 .. _export-directly-to-olly-cloud-php-otel:
@@ -44,19 +76,12 @@ Send data directly to Splunk Observability Cloud
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
-To bypass the OTel Collector and send data directly to Splunk Observability Cloud, set the following environment variables:
+To bypass the Collector and send data directly to Splunk Observability Cloud, set the following environment variables:
 
-.. tabs::
+.. code-block:: shell
 
-   .. code-tab:: shell Windows PowerShell
-
-      $env:SPLUNK_ACCESS_TOKEN=<access_token>
-      $env:SPLUNK_REALM=<realm>
-
-   .. code-tab:: shell Linux
-
-      export SPLUNK_ACCESS_TOKEN=<access_token>
-      export SPLUNK_REALM=<realm>
+   OTEL_EXPORTER_OTLP_TRACES_HEADERS=x-sf-token=<access_token>
+   OTEL_EXPORTER_OTLP_ENDPOINT=https://ingest.<realm>.signalfx.com/trace/otlp
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
