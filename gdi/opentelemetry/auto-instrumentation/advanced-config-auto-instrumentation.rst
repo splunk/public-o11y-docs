@@ -7,11 +7,13 @@ Advanced customization for zero config auto instrumentation
 .. meta::
     :description: Learn how to customize Splunk zero config auto instrumentation for advanced scenarios.
 
-Learn how to customize Splunk zero config auto instrumentation for the advanced scenarios. After reading this doc, you can:
+Learn how to customize Splunk zero config auto instrumentation for the advanced scenarios. 
 
-* Change instrumentation version
-* Override auto instrumentation settings
-* Deploy auto instrumentation in gateway mode
+Through advanced customization, you can achieve the following tasks:
+
+* :ref:`Change instrumentation version <change-zeroconfig-version>`
+* :ref:`Override auto instrumentation settings <override-zeroconfig-settings>`
+* :ref:`Deploy auto instrumentation in gateway mode <_deploy-in-gateway>`
 
 .. _change-zeroconfig-version:
 
