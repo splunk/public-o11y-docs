@@ -3,71 +3,50 @@
 Statuspage integration for Splunk On-Call
 **********************************************************
 
-[ht_toggle title=“Requirements” id=“” class=“” style=“” ]
+Use the Splunk On-Call integration with StatusPage.io to provide real-time, updated status messages to stakeholders. Use templates or create new incidents that update Statuspage.io subscribers from within the Splunk On-Call.
 
-**Versions Supported: N/A (SaaS)** 
-
-**VictorOps Version Required: Full-Stack only**
-
-**What you need to know: Creating templates in StatusPage.io will make
-them accessible in On-Call.**
-
-[/ht_toggle]
-
-The On-Call integration with `StatusPage.io <http://statuspage.io>`__
-allows you to provide real-time, updated status messages to both
-internal and external stakeholders seamlessly, without having to leave
-the fire-fight in the main timeline. Today the integration is
-person-to-person, meaning that users may leverage templates or create
-new incidents that update Statuspage.io subscribers from within the
-On-Call interface.
-
-The following guide will walk you through this simple integration.
-
---------------
-
-**In StatusPage.io**
+Requirements
 ====================
 
-From the main admin portal, select your user icon in the bottom
-left-hand corner and then click **API info**.
+* Splunk On-Call version required: Full-Stack
 
-On the resulting page, under **Organization API keys** copy the desired
-API Key to your clipboard.
+Obtain your organization API key from StatusPage.io
+========================================================
 
---------------
+1. Select your user icon in the bottom left-hand corner and then select :guilabel:`API info`.
+2. Under :guilabel:`Organization API keys` copy the API key to your clipboard.
 
-**In On-Call**
-==============
+Configure the integration in Splunk On-Call
+===============================================
 
-From the main timeline, select *Integrations >> StatusPage.io*
+1. Go to :guilabel:`Integrations` then :guilabel:`StatusPage.io`.
+2. Select :guilabel:`Enable Integration`. 
+3. Paste your StatusPage.io API Key in :guilabel:`StatusPage API Token`.
 
-Select the StatusPage.io integration and click *Enable Integration.*
+   .. image:: /_images/spoc/1-Insert-API-token-1.png
+      :alt: Enable the integration and provide your API key
+      :width: 95%
 
-In the resulting *StatusPage API Token* text box, paste in your
-StatusPage.io API Key:
+4. Select your StatusPage.io ID from the drop-down menu:
 
-.. image:: /_images/spoc/1-Insert-API-token-1.png
+   .. image:: /_images/spoc/2.-Select-page-ID.png
+      :alt: Select your Statuspage.io ID
+      :width: 95%
 
-After doing so, select your proper StatusPage.io ID from the dropdown:
-
-.. image:: /_images/spoc/2.-Select-page-ID.png
-
-And that's it! Now when you go back into the timeline you will see the
-StatusPage.io symbol in the upper right-hand corner of the UI.
+Go the timeline in Splunk On-Call to find the StatusPage.io icon in the upper right-hand corner. Select the StatusPage.io icon for options to create new StatusPage.io incidents.
 
 .. image:: /_images/spoc/3.-SPIO-Icon-1.png
+   :alt: StatusPage.io icon
+   :width: 95%
 
- 
-
-Selecting this will give you an option to create new StatusPage.io
-incidents using your existing templates:
+When you create a new incident you can use a template or populate the incident details manually: 
 
 .. image:: /_images/spoc/4.-New-SPIO.png
+   :alt: Create a new StatusPage incident
+   :width: 95%
 
- 
-
-Or update existing incidents, all without having to leave the VictorOps
-UI.
+You can also update existing incidents:
 
 .. image:: /_images/spoc/5.-Update-SPIO.png
+   :alt: Update an existing StatusPage incident
+   :width: 95%
