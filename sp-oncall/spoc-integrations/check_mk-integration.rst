@@ -29,7 +29,7 @@ Configure CheckMK
 
 1. Create a notification in CheckMK.
 2. For the :guilabel:`Notification Method`, select :guilabel:`VictorOps`.
-3. Select  :guilabel:`REST Endpoint URL`` selected in the drop-down menu.
+3. Select  :guilabel:`REST Endpoint URL` selected in the drop-down menu.
 4. Enter the REST endpoint URL you copied previously from Splunk On-Call in the :guilabel:`VictorOPS REST URL` field. 
 
 .. image:: /_images/spoc/0checkmk.png
