@@ -293,13 +293,13 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Support <get-started/support>
 
 .. toctree::
-   :caption: Scenarios and Tutorials
+   :caption: Scenarios and tutorials
    :maxdepth:   2
 
 .. toctree::
    :maxdepth:   3
 
-   Scenarios <get-started/scenario-landing>
+   Scenarios TOGGLE <get-started/scenario-landing>
 
 .. toctree::
    :maxdepth:   3
