@@ -8,7 +8,7 @@ MySQL
 
 .. note:: The Smart Agent receiver used with the MySQL monitor type is now deprecated.
    
-   Use the :ref:`MySQL receiver <_mysql-receiver>` to retrieve metrics instead.
+   Use the :ref:`MySQL receiver <mysql-receiver>` to retrieve metrics instead.
 
 The
 :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
