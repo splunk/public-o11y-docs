@@ -1,7 +1,10 @@
-.. _statuspage-integration:
+.. _Statuspage-spoc:
 
 Statuspage integration for Splunk On-Call
 **********************************************************
+
+.. meta::
+    :description: Configure the Statuspage integration for Splunk On-Call.
 
 Use the Splunk On-Call integration with Statuspage to provide real-time, updated status messages to stakeholders. Use templates or create new incidents that update Statuspage subscribers from within the Splunk On-Call.
 

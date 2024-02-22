@@ -1,5 +1,11 @@
+.. _Datadog-spoc:
+
 Datadog integration for Splunk On-Call
 **********************************************************
+
+
+.. meta::
+    :description: Configure the Datadog integration for Splunk On-Call.
 
 Use the Datadog integration with Splunk On-Call to send content from Datadog into the timeline using @ mentions in the Datadog event stream. 
 

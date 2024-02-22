@@ -1,5 +1,10 @@
+.. _Uptime-Robot-spoc:
+
 Uptime Robot integration for Splunk On-Call
 **********************************************************
+
+.. meta::
+    :description: Configure the Uptime Robot integration for Splunk On-Call.
 
 You can integrate Splunk On-Call with Uptime Robot to notify stakeholders of application performance issues and downtime. Set monitors and thresholds in Uptime Robot and manage associated on-call rotations and calendars, alert rules, and escalation policies in Splunk On-Call. 
 

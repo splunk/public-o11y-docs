@@ -1,3 +1,5 @@
+.. _AppDynamics-spoc:
+
 AppDynamics integration for Splunk On-Call
 **********************************************************
 
