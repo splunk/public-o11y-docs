@@ -1,10 +1,13 @@
 Datadog integration for Splunk On-Call
 **********************************************************
 
+Use the Datadog integration with Splunk On-Call to send content from Datadog into the timeline using @ mentions in the Datadog event stream. 
+
+Requirements
+=================
+
 * Splunk On-Call version required:** Starter, Growth, or Enterprise
 * Annotating the links to your incidents provided by Datadog requires the use of the Splunk On-Call rules engine which is an Enterprise feature
-
-The Datadog integration with Splunk On-Call, allows you to send content from Datadog into the timeline using @ mentions in the Datadog event stream. 
 
 Enable the integration in Splunk On-Call
 ============================================
@@ -13,25 +16,32 @@ Enable the integration in Splunk On-Call
 2. Select :guilabel:`Enable Integration`. 
 3. Copy the :guilabel:`Service API Key` to your clipboard.
 
-.. image:: /_images/spoc/Screen-Shot-2019-10-09-at-9.31.19-AM.png
-
 Configure Datadog
 ====================
 
 1. Select :guilabel:`Integrations` in the sidebar menu, find the VictorOps integration, and select :guilabel:`Available` then :guilabel:`Install`. 
+
+   .. image:: /_images/spoc/Screen-Shot-2019-10-09-at-9.31.19-AM.png
+      :alt: Datadog integrations
+      :width: 75%
+
 2. In the dialog box, select the configuration tab. 
 3. Paste in your service API key you obtained from Splunk On-Call, as well as, the Splunk On-Call routing key you want to use and select :guilabel:`Update Configuration`.
 
-.. image:: /_images/spoc/Screen-Shot-2019-10-09-at-9.35.26-AM.png
+   .. image:: /_images/spoc/Screen-Shot-2019-10-09-at-9.35.26-AM.png
+      :alt: Datadog VictorOps integration configuration
+      :width: 95%
 
-4. Add ``@victorops`` to your Datadog metric monitors. To ensure a monitor auto-resolves the corresponding VictorOps incident, make sure that @victorops is selected in the monitor's notification step.
+4. Add ``@victorops`` to your Datadog metric monitors. To ensure a monitor autoresolves the corresponding VictorOps incident, make sure that @victorops is selected in the monitor's notification step.
 
-.. image:: /_images/spoc/datadog-notify-@victorops.png
+   .. image:: /_images/spoc/datadog-notify-@victorops.png
+      :alt: VictorOps mention in Datadog metric monitors
+      :width: 75%
 
-Resolve the DataDog Monitor from Splunk On-Call
+Resolve the DataDog monitor from Splunk On-Call
 ====================================================
 
-Typically it is best to let Datadog, the source of the incident, resolve monitor incidents. However, if you would like to resolve the incident from Splunk On-Call, here are the steps to do so.
+Typically it is best to let Datadog, the source of the incident, resolve monitor incidents. However, if you want to resolve the incident from Splunk On-Call, here are the steps to do so.
 
 Requirements
 -----------------
@@ -65,18 +75,10 @@ Steps
 
 .. image:: /_images/spoc/Screen-Shot-2019-10-09-at-9.45.55-AM.png
 
-Recommended alert rules engine rule
------------------------------------
+(Optional) Additional alert rules engine rule transformations
+-------------------------------------------------------------------
 
-Datadog alerts typically include links to your alerts that you can annotate to automatically render snapshot images and provide links to Datadog. We recommend the following rules engine annotations:
-
-Requirements
------------------
-
-Custom Outgoing Webhooks and the Alert Rules Engine are Enterprise features.
-
-Steps
-----------
+Datadog alerts typically include links to your alerts that you can annotate to automatically render snapshot images and provide links to Datadog. You can also make some additional rules engine transformations:
 
 #. When :guilabel:`monitoring_tool` matches :guilabel:`Datadog`
 #. Under :guilabel:`Transform these alert fields`
@@ -85,5 +87,3 @@ Steps
    * Select :guilabel:`URL` then :guilabel:`Event Link` then :guilabel:`${{event_url}}`. This transformation provides a link to the event in Datadog.
 
 .. image:: /_images/spoc/Screen-Shot-2019-10-09-at-9.49.00-AM.png
-
-

@@ -73,7 +73,7 @@ Splunk On-Call integrations
    victorops-circonus-integration
    victorops-connectwise-automate-integration
    victorops-crittercism-integration
-   victorops-datadog-integration
+   datadog-integration
    victorops-dead-mans-snitch-integration
    victorops-desk-com-integration
    victorops-dnscheck-integration
