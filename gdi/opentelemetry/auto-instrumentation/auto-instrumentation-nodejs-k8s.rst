@@ -29,7 +29,7 @@ Zero Config Auto Instrumentation for Node.js requires the following components:
 Deploy the Helm Chart with the Kubernetes Operator
 =================================================================
 
-To deploy the Helm Chart, create a file called values.yaml. This file defines the settings to activate or deactivate when installing the OpenTelemetry Collector with the Helm Chart.
+To deploy the Helm Chart, create a file called values.yaml. In this file, you can define the settings to activate or deactivate when installing the OpenTelemetry Collector with the Helm Chart.
 
 Populate values.yaml with the following fields and values:
 
