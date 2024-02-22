@@ -7,6 +7,28 @@ What is Splunk On-Call?
 .. meta::
    :description: About the team admin roll in Splunk On-Call.
 
+.. toctree::
+    :hidden:
+
+    onboarding-milestones
+    spoc-support
+    spoc-system-requirements
+    spoc-system-requirements
+    admin-permissions
+    admin-quick-start
+    alert-admin
+    egress-filtering-cloudflare
+    global-admin
+    stakeholders
+    team-admin-setup
+    team-dashboard
+    timeline
+    tls-security-protocol
+    user-roles-permissions
+    user-training
+    usernames
+
+
 
 Splunk On-Call is incident management software that allows teams to maintain a culture of high availability without slowing down the
 innovation process. The moment something goes wrong, Splunk On-Call will spring people to action, automatically.

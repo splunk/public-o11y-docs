@@ -15,7 +15,7 @@ You have actionable access to your incidents from anywhere using the Splunk On-C
 incidents from the home page with the ability to quickly drill down into the incident details, without the clutter of other teams incidents to sort through.
 
 
-.. image:: /_images/spoc/mob-incident1.png
+.. image:: /_images/spoc/mob-incident1.jpg
     :width: 100%
 
 
@@ -40,7 +40,7 @@ There are a number of actions that can be taken on an incident in the Splunk On-
 -  :ref:`Add Responders <multi-responder>`
 -  `Add Conference Bridge <conference-bridges>`
 
-.. image:: /_images/spoc/mob-incident2.png
+.. image:: /_images/spoc/mob-incident2.jpg
     :width: 100%
 
 

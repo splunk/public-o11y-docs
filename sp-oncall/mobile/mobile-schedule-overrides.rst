@@ -66,6 +66,6 @@ Teammates Currently On-Call & On-Call Takes
 
 View other teammates on-call shifts by selecting :guilabel:`View All`. From here you can take your teammates on-call by selecting :guilabel:`Take Shift` and clear it by selecting :guilabel:`Clear Take` or :guilabel:`Take Back`.
 
-.. image:: /_images/spoc/sched-mobile5.png
+.. image:: /_images/spoc/sched-mobile5.jpg
     :width: 100%
     :alt:
