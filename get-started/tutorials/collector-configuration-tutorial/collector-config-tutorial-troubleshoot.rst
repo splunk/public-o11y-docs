@@ -116,6 +116,25 @@ In your Linux machine, open the following URL in the browser to check the status
    }
 
 
+Monitor your collectors using the built-in dashboard
+=======================================================
+
+Splunk Observability Cloud includes a built-in dashboard that helps you monitor the status of all the collectors you've deployed. The dashboard uses telemetry sent by the :ref:`prometheus-receiver` in the ``metrics/internal`` pipeline.
+
+To access the Collector built-in dashboard:
+
+#. Log in to Splunk Observability Cloud.
+#. Select :guilabel:`Dashboards` on the left navigation menu.
+#. Use the search bar or browse down to locate the OpenTelementry Collector tile.
+#. Select the link in the tile to access the built-in dashboard.
+
+.. image:: /_images/gdi/collector/collector-builtin-dashboard-02.jpg
+      :width: 100%
+      :alt: Collector critical monitoring in the built-in dashboard
+
+For more information on the Collector dashboard, see :ref:`collector-builtin-dashboard`.
+
+
 Generate a report for customer support
 ===============================================
 
@@ -150,3 +169,4 @@ To learn more about concepts in this tutorial, see:
 - :ref:`otel-commands`
 - :ref:`otel-data-processing`
 - :ref:`otel-troubleshooting`
+- :ref:`collector-builtin-dashboard`

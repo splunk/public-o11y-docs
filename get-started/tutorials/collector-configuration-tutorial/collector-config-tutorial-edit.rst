@@ -41,6 +41,7 @@ Adding an empty entry like in the previous example is sometimes enough to get st
 After you've added the ``syslog`` receiver, make sure to add it to the receivers's list under ``service.pipelines``. In this case, the pipeline type is ``logs``, as syslog collect logs:
 
 .. code-block:: yaml
+   :emphasize-lines: 8
 
    service:
      pipelines:
@@ -84,7 +85,28 @@ In the agent_config.yaml file, locate the ``processors`` section and add the :re
 
 The filter processor supports multiple filter operations using regular expressions and the :new-page:`OpenTelemetry Transformation Language (OTTL) <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/pkg/ottl/README.md>`. When configuring a processor for the first time, take some time to read its documentation.
 
-Save the file before applying the configuration.
+The last step requires adding the filter processor to the same logs pipeline that requires processing:
+
+.. code-block:: yaml
+   :emphasize-lines: 13
+
+   service:
+     pipelines:
+     #
+     # Other pipelines
+     #
+       logs:
+         # Add syslog at the end of the list
+         receivers: [fluentforward, otlp, syslog]
+         processors:
+         - memory_limiter
+         - batch
+         - resourcedetection
+         - filter/severity_text
+         exporters: [splunk_hec, splunk_hec/profiling]
+
+
+Save the agent_config.yaml configuration file and continue to the next step.
 
 
 Restart the Collector
@@ -114,3 +136,4 @@ To learn more about the Collector install and components, see the following reso
 
 - :ref:`otel-intro`
 - :ref:`otel-install-linux`
+

@@ -41,7 +41,11 @@ Wain until the following message appears:
 
    The Splunk OpenTelemetry Collector for Linux has been successfully installed.
 
-Open Splunk Observability Cloud and go to :guilabel:`Infrastructure` to see the data coming from your Linux machine.
+Open Splunk Observability Cloud and go to :guilabel:`Infrastructure` to see the data coming from your Linux machine. The following screenshot shows typical host metrics coming into Splunk Observability Cloud.
+
+.. image:: /_images/gdi/get-started/host-demo.png
+      :width: 90%
+      :alt: Collector metrics in Splunk Infrastructure Monitoring
 
 .. note:: You can generate a prefilled install command using the :new-page:`Collector guided setup <https://login.signalfx.com/#/gdi/scripted/otel-connector-v2/step-1?category=use-case-infrastructure&gdiState=%7B%22integrationId%22:%22otel-connector-v2%22%7D>` in Splunk Observability Cloud.
 
@@ -114,7 +118,7 @@ All components are connected in pipelines through the special ``service`` sectio
          - otlp
          processors:
          - batch
-         exporters: 
+         exporters:
          - otlp
      # Extensions don't go inside pipelines
      extensions: [health_check]
