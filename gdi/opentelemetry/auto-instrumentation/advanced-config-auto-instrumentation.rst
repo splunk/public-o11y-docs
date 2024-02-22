@@ -1,13 +1,13 @@
 .. _advanced-config-auto-instrumentation:
 
 *************************************************************************
-Advanced configuration for zero config auto instrumentation
+Advanced customization for zero config auto instrumentation
 *************************************************************************
 
 .. meta::
-    :description: Learn how to configure Splunk zero config auto instrumentation for advanced scenarios.
+    :description: Learn how to customize Splunk zero config auto instrumentation for advanced scenarios.
 
-Learn how to configure Splunk zero config auto instrumentation for the advanced scenarios. After reading this doc, you can:
+Learn how to customize Splunk zero config auto instrumentation for the advanced scenarios. After reading this doc, you can:
 
 * Change instrumentation version
 * Override auto instrumentation settings
@@ -47,7 +47,11 @@ By default, the Splunk Distribution of OpenTelemetry Collector uses the latest v
 
 .. note:: If you don't see the ``java`` field in your ``values.yaml`` file, then you have to add the field and the ``repository`` value before changing the version. The repository value is always ``ghcr.io/signalfx/splunk-otel-java/splunk-otel-java``.
 
-To see a list of the available releases for each instrumentation language, see the OpenTelemetry documentation: :new-page:`https://opentelemetry.io/docs/languages/#status-and-releases`.
+See the following pages for information about previous versions for each language:
+
+* Java: :ref:`java-otel-requirements`
+* Node.js: :ref:`nodejs-otel-requirements`
+* .NET: :ref:`dotnet-otel-requirements`
 
 .. _override-zeroconfig-settings:
 
@@ -56,32 +60,83 @@ Override auto instrumentation settings
 
 You can override default auto instrumentation settings to use features such as profiling and runtime metrics collection. 
 
-Activate AlwaysOn Profiling (Linux only)
+Activate AlwaysOn Profiling
 ----------------------------------------------------
 
 You can activate CPU and memory profiling by updating the environment variables for your instrumentation. AlwaysOn Profiling continuously collects stack traces so that you can discover which lines of code are slowing your processes down. To learn more about Profiling, see :ref:`profiling-intro`.
 
-Follow these steps to activate AlwaysOn Profiling: 
+.. tabs:: 
 
-#. Open the <language>.conf file located in the ``/etc/splunk/zeroconfig`` directory. 
-#. Set the environment variable ``SPLUNK_PROFILER_ENABLED=true`` for CPU profiling, and ``SPLUNK_PROFILER_MEMORY_ENABLED=true`` for memory profiling.
-#. Restart your applications.
+  .. tab:: Linux 
 
-.. note:: If you're using ``systemd``, the environment variables are instead located in ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
+      Follow these steps to activate AlwaysOn Profiling in Linux: 
+
+      #. Open the <language>.conf file located in the ``/etc/splunk/zeroconfig`` directory. 
+      #. Set the environment variable ``SPLUNK_PROFILER_ENABLED=true`` for CPU profiling, and ``SPLUNK_PROFILER_MEMORY_ENABLED=true`` for memory profiling.
+      #. Restart your applications.
+
+      .. note:: If you're using ``systemd``, the environment variables are instead located in ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
+            
+      To sample call stacks from a specific interval, change the ``SPLUNK_PROFILER_CALL_STACK_INTERVAL`` setting to your desired interval in milliseconds. The default value is ``10000``.
+
+      For example, ``SPLUNK_PROFILER_CALL_STACK_INTERVAL=5000`` sets the call stack interval to 5000 milliseconds.
+  
+  .. tab:: Kubernetes
+
+      You can configure AlwaysOn Profiling in Kubernetes by editing the values.yaml file for the Helm Chart.
+
+      Follow these steps to activate Profiling for a language:
+
+      #. Open the values.yaml file.
+      #. In the ``operator.instrumentation.spec.<language>.env`` section, add the ``SPLUNK_PROFILER_ENABLED=true`` environment variable and the ``SPLUNK_PROFILER_CALL_STACK_INTERVAL`` environment variable.
+
+          For example, the following values.yaml file configures AlwaysOn Profiling to sample call stacks from a 5000 millisecond interval:
+
+          .. code-block:: yaml
+
+            operator:
+              enabled: true
+              instrumentation:  
+                spec:
+                  nodejs:
+                    repository: ghcr.io/signalfx/splunk-otel-js/splunk-otel-js
+                    tag: v2.7.0
+                    env:
+                    # Activates AlwaysOn Profiling for Node.js
+                    - name: SPLUNK_PROFILER_ENABLED
+                      value: true
+                    # Samples call stacks from a 5000 millisecond interval. 
+                    # If excluded, the Collector samples from a 10000 millisecond interval.
+                    - name: SPLUNK_PROFILER_CALL_STACK_INTERVAL
+                      value: 5000
       
-To sample call stacks from a specific interval, change the ``SPLUNK_PROFILER_CALL_STACK_INTERVAL`` setting to your desired interval in milliseconds. 
+      #. Reinstall the Splunk OTel Collector Chart with the following command:
 
-For example, ``SPLUNK_PROFILER_CALL_STACK_INTERVAL=10000`` sets the call stack interval to 10000 milliseconds.
+            .. code-block:: bash
+
+                helm install splunk-otel-collector -f values.yaml
 
 Activate runtime metrics collection (Linux only)
 ----------------------------------------------------
 
 You can activate runtime metrics collection by updating the environment variables for your instrumentation. This setting configures the agent to collect additional metrics from your application. 
 
-Follow these steps to activate runtime metrics collection:
+To activate runtime metrics globally, add the ``--enable-metrics`` flag upon installation. For example: 
 
-#. Open the <language>.confg file located in the ``/etc/splunk/zeroconfig`` directory.
-#. Set the environment variable ``SPLUNK_METRICS_ENABLED=-rue``.
+.. code-block:: bash
+  :emphasize-lines: 4
+
+  curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+  sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --deployment-environment prod \
+  --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN> \
+  --enable-metrics
+
+You can also activate runtime metrics collection for individual languages. By using this approach, you can determine which runtime metrics the Collector sends at a language-level.
+
+To activate runtime metrics collection for an individual language, follow these steps:
+
+#. Open the <language>.conf file located in the ``/etc/splunk/zeroconfig`` directory.
+#. Set the environment variable ``SPLUNK_METRICS_ENABLED=true``.
 #. Restart your applications.
 
 .. _deploy-in-gateway:
@@ -97,7 +152,7 @@ To learn more about the gateway mode, see :ref:`collector-gateway-mode`.
 
     .. tab:: Linux
 
-        You can't deploy auto instrumentation in gateway mode for Linux, but you can send collected data from auto instrumentation to an existing gateway deployment.
+        You can't directly deploy auto instrumentation in gateway mode for Linux, but you can send collected data from auto instrumentation to an existing gateway deployment.
 
         Follow these steps to send data to a gateway deployment of the OpenTelemetry Collector:
 
@@ -105,7 +160,7 @@ To learn more about the gateway mode, see :ref:`collector-gateway-mode`.
         #. Set the environment variable ``OTEL_EXPORTER_OTLP_ENDPOINT=<gateway_endpoint>`` where <gateway_endpoint> is the port of your gateway deployment.
         #. Restart your applications.
 
-        The auto instrumentation now sends data to your gateway deployment.
+        The auto instrumentation now sends data to your gateway deployment. 
 
     .. tab:: Kubernetes
 
@@ -114,7 +169,7 @@ To learn more about the gateway mode, see :ref:`collector-gateway-mode`.
         Follow these steps to activate gateway mode in Kubernetes:
 
         #. Open the values.yaml file.
-        #. Edit the ``gateway.enabled`` value to ``true``. The following example activates gateway mode:
+        #. Set the ``gateway.enabled`` value to ``true``. The following example activates gateway mode:
 
             .. code-block:: yaml
                 :emphasize-lines: 12
@@ -140,6 +195,8 @@ To learn more about the gateway mode, see :ref:`collector-gateway-mode`.
 
 Additional settings
 ===================================
+
+There are many other settings you can customize in zero configuration auto instrumentation.
 
 For a list of settings that you can change in Linux, see the following resources:
 
