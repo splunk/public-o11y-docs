@@ -43,7 +43,7 @@ Wait until the following message appears:
 
 Open Splunk Observability Cloud and go to :guilabel:`Infrastructure` to see the data coming from your Linux machine. The following screenshot shows typical host metrics coming into Splunk Observability Cloud.
 
-.. image:: /_images/gdi/get-started/host-demo.png
+.. image:: /_images/get-started/host-demo.png
       :width: 90%
       :alt: Collector metrics in Splunk Infrastructure Monitoring
 

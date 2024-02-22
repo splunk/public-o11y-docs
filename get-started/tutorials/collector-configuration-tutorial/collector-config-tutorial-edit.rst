@@ -1,8 +1,8 @@
 .. _collector-config-tutorial-edit:
 
-**********************************************************************
+***********************************************************************
 Part 2: Edit the configuration to activate a new receiver and processor
-**********************************************************************
+***********************************************************************
 
 You edit the Collector configuration when you need to add new components, functionalities, or settings. For example, the Splunk Distribution of OpenTelemetry Collector includes preconfigured :ref:`otel-components` that collect metrics and prepare the Collector to export data to Splunk Observability Cloud.
 
