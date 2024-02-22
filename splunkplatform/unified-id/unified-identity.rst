@@ -5,20 +5,20 @@ Unified Identity: Splunk Cloud Platform and Splunk Observability Cloud
 ******************************************************************************************
 
 .. meta::
-   :description: This page describes and links to setup pages for each component of Observability Cloud.
+   :description: This page describes Unified Identity between Splunk Cloud Platform and Splunk Observability Cloud, including how to set it up.
 
 Splunk Cloud Platform offers Unified Identity with Splunk Observability Cloud.
 
 What is Unified Identity?
 ==========================================================================================
-When Splunk Cloud Platform customers purchase Splunk Observability Cloud, users can access both platforms using a single identity. Users can log into Splunk Observability Cloud with SSO using their Splunk Cloud Platform credentials. Splunk Cloud Platform serves as the Identity Provider (IdP). You can use a third party identity provider, such as Okta, but you will lose the benefits of the integrated experience. See :ref:`unified-identity-benefits`.
+Unified Identity is the integration of Splunk Cloud Platform and Splunk Observability Cloud. Users can access both platforms using a single identity by logging into Splunk Observability Cloud with SSO using their Splunk Cloud Platform credentials. Splunk Cloud Platform serves as the Identity Provider (IdP). You can use a third party identity provider, such as Okta, but you will lose the benefits of the integrated experience. See :ref:`unified-identity-benefits`.
 
 When you integrate your Splunk Cloud Platform and Splunk Observability Cloud instances and activate Unified Identity, administrators can set up all users in a central location, Splunk Cloud Platform. Splunk Cloud Platform admins control user and data access permissions for both platforms separately in respective products. For more information, see :ref:`admin-manage-users`. To learn about user roles and permissions in Splunk Cloud Platform, see :new-page:`About configuring role-based user access <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/Aboutusersandroles>`. The integration extends permissions to access data indexed in Splunk Cloud Platform to Splunk Observability Cloud applications with no administrative overhead. See :ref:`unified-id-user-provisioning` for more information.
 
 
 Who can access Single Sign On (SSO) and the benefits of Unified Identity?
 ==========================================================================================
-Currently, Splunk Cloud Platform customers who purchase Splunk Observability Cloud can access Unified Identity between Splunk Cloud Platform and Splunk Observability Cloud. Users must be on Splunk Cloud Platform version 9.x and higher. The AWS region for your Splunk Cloud Platform instance must be the same as your Splunk Observability Cloud instance realm.
+All customers who have both Splunk Cloud Platform and Splunk Observability Cloud can access Unified Identity. Users must be on Splunk Cloud Platform version 9.x and higher. The AWS region for your Splunk Cloud Platform instance must be the same as your Splunk Observability Cloud instance realm.
 
 .. _unified-identity-benefits:
 
@@ -51,8 +51,6 @@ Splunk Cloud Platform customers who want to purchase Splunk Observability Cloud 
 
 2. Turn on token authentication to allow Splunk Observability Cloud to view your Splunk Cloud Platform logs. See :new-page:`Enable or disable token authentication <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how.
 
-3. In the Splunk Cloud Platform instance you want to pair with Splunk Observability Cloud, create a custom role called ``o11y_access`` and assign it to all Splunk Cloud Platform users who you want to give access to Splunk Observability Cloud. See :new-page:`Create and manage roles with Splunk Web <https://docs.splunk.com/Documentation/Splunk/latest/Security/Addandeditroles#Add_or_edit_a_role>` for more information on Splunk Cloud Platform roles. Follow only the instructions in the :guilabel:`Add or edit a role` section. Note that you do not need to assign the role any capabilities or indexes. If you do not create and assign the custom role ``o11y_access``, users receive the following error message when trying to log in to Splunk Observability Cloud: "You do not have access to Splunk Observability Cloud. Contact your Splunk Cloud Platform administrator for assistance."
-
 
 Existing Splunk Observability Cloud customers
 ------------------------------------------------------------------------------------------
@@ -84,18 +82,24 @@ Customers who already have a Splunk Cloud Platform account and a Splunk Observab
      :width: 90%
      :alt: This screenshot shows a success status for the new pairing.
 
-5. In the Splunk Cloud Platform instance you want to pair with Splunk Observability Cloud, create a custom role called ``o11y_access`` and assign it to all Splunk Cloud Platform users who you want to give access to Splunk Observability Cloud. See :new-page:`Create and manage roles with Splunk Web <https://docs.splunk.com/Documentation/Splunk/latest/Security/Addandeditroles#Add_or_edit_a_role>` for more information on Splunk Cloud Platform roles. Follow only the instructions in the :guilabel:`Add or edit a role` section. Note that you do not need to assign the role any capabilities or indexes. If you do not create and assign the custom role ``o11y_access``, users receive the following error message when trying to log in to Splunk Observability Cloud: "You do not have access to Splunk Observability Cloud. Contact your Splunk Cloud Platform administrator for assistance."
 
-Users will receive an email telling them to authenticate to Splunk Observability Cloud using the new authentication method throuth Splunk Cloud Platform SSO. Note that users can continue to use the previous local login method unless you disable it. If you want to force all users to authenticate through Splunk Cloud Platform SSO, reach out to Splunk Customer Support.
-
-
+Users will receive an email telling them to authenticate to Splunk Observability Cloud using the new authentication method through Splunk Cloud Platform SSO. Note that users can continue to use their previous login method. If you want to force all users to authenticate through Splunk Cloud Platform SSO, reach out to Splunk Customer Support to disable local login. To disable login through a third party identity provider, go to :strong:`Data Management`` in Observability Cloud, select the appropriate integration (for example, Okta), and select :strong:`Deactivate`. 
 
 
 .. _unified-id-user-provisioning:
 
 User provisioning
 ==========================================================================================
-If your organization already has a Splunk Observability Cloud account, existing roles do not change. If you are purchasing Splunk Observability Cloud for the first time, the integration automatically maps Splunk Cloud Platform roles to the following Splunk Observability Cloud roles:
+To benefit from Unified Identity, all users must have the following:
+
+- a Splunk Cloud Platform user with the ``o11y_access`` role
+
+- a Splunk Observability Cloud user
+
+
+Existing Splunk Cloud Platform users
+------------------------------------------------------------------------------------------
+In Splunk Cloud Platform, create the custom role ``o11y_access`` and assign it to all users who you want to grant access to Splunk Observability Cloud. If the user does not exist in Observability Cloud, the integration automatically creates a user in Observability Cloud and maps Splunk Cloud Platform roles to the following Observability Cloud roles:
 
 .. list-table::
    :header-rows: 1
@@ -116,7 +120,17 @@ If your organization already has a Splunk Observability Cloud account, existing 
 
 The mapping process is defined by the system, and a user cannot change it at provisioning time or after. 
 
-To add a new user to Splunk Observability Cloud after the integration is complete, a Splunk Cloud Platform administrator must create a new local account in Splunk Cloud Platform or provision a new user with a third party IdP (if Splunk Cloud Platform is not used as IdP). A new user is added to Splunk Cloud Platform after they log in for the first time. At that point, the user can log in to Splunk Observability Cloud with their Splunk Cloud Platform permissions.
+Existing Splunk Observability Cloud users
+------------------------------------------------------------------------------------------
+If an existing Observability Cloud user does not have a Splunk Cloud Platform role, create a Splunk Cloud Platform user for them and give it the ``o11y_access`` role. The user can now access Splunk Cloud Platform (with access only to indexes that you assign to them) and can sign into Observability Cloud with SSO using their Splunk Cloud Platform credentials. The user retains their existing Observability Cloud role. 
+
+If an existing Observability Cloud user already has a Splunk Cloud Platform user, assign to the user the ``o11y_access`` role in the Splunk Cloud Platform instance that is paired with Splunk Observability Cloud
+
+, create a custom role called ``o11y_access`` and assign it to all Splunk Cloud Platform users who you want to give access to Splunk Observability Cloud. See :new-page:`Create and manage roles with Splunk Web <https://docs.splunk.com/Documentation/Splunk/latest/Security/Addandeditroles#Add_or_edit_a_role>` for more information on Splunk Cloud Platform roles. Follow only the instructions in the :guilabel:`Add or edit a role` section. Note that you do not need to assign the role any capabilities or indexes. If you do not create and assign the custom role ``o11y_access``, users receive the following error message when trying to log in to Splunk Observability Cloud: "You do not have access to Splunk Observability Cloud. Contact your Splunk Cloud Platform administrator for assistance."
+
+New users
+------------------------------------------------------------------------------------------
+To add a new user to Splunk Observability Cloud after the integration is complete, a Splunk Cloud Platform administrator must create a new local user in Splunk Cloud Platform or provision a new user with a third party IdP (if Splunk Cloud Platform is not used as IdP). A new user is added to Splunk Cloud Platform after they log in for the first time. At that point, the user can log in to Splunk Observability Cloud with their Splunk Cloud Platform permissions.
 
 .. note:: You can use a third party identity provider other than Splunk Cloud Platform, but you will lose the benefits of the integrated experience. See :ref:`unified-identity-benefits`.
 
