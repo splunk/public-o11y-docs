@@ -4,7 +4,11 @@ MySQL
 =======
 
 .. meta::
-   :description: Use this Splunk Observability Cloud integration for the MySQL monitor. See benefits, install, configuration, and metrics
+   :description: Use this Splunk Observability Cloud integration for the MySQL monitor. See benefits, install, configuration, and metrics.
+
+.. note:: The Smart Agent receiver used with the MySQL monitor type is now deprecated.
+   
+   Use the :ref:`MySQL receiver <mysql-receiver>` to retrieve metrics instead.
 
 The
 :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
@@ -115,8 +119,6 @@ section of your configuration file:
    service:
      pipelines:
        metrics:
-         receivers: [smartagent/mysql]
-       logs:
          receivers: [smartagent/mysql]
 
 Configuration settings
