@@ -25,6 +25,7 @@ To generate all the basic installation commands for your environment and applica
    #. Select the :guilabel:`APM` product.
    #. Select the :guilabel:`.PHP (OpenTelemetry)` tile to open the PHP OpenTelemetry guided setup.
 
+.. _install-php-otel-instrumentation:
 
 Install the Splunk Distribution of OpenTelemetry PHP manually
 ==================================================================
