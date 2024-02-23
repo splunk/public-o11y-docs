@@ -343,7 +343,7 @@ For example, if you want every span to include the key-value pair ``build.id=feb
 
 You can also use the methods shown in :ref:`zeroconfig-nodejs-traces` to configure your instrumentation with the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable and other environment variables.
 
-See :ref:`advanced-nodejs-otel-configuration` for the full list of supported environment variables.
+See :ref:`advanced-config-auto-instrumentation` for more information.
 
 .. _troubleshooting-zeroconfig-nodejs-k8s:
 
