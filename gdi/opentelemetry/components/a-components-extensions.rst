@@ -13,6 +13,7 @@ Collector components: Extensions
     :hidden:
 
     basic-auth-extension
+    docker-observer-extension
     health-check-extension
     memory-ballast-extension
     zpages-extension    
@@ -24,6 +25,7 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
 The following extensions are available:
 
 * :ref:`basic-auth-extension`
+* :ref:`docker-observer-extension`
 * Docker observer extension
 * ECS observer extension
 * File storage extension
