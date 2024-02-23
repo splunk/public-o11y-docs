@@ -93,6 +93,8 @@ User provisioning
 ==========================================================================================
 To benefit from Unified Identity, all users must have a Splunk Cloud Platform user with the ``o11y_access`` role.
 
+.. _existing-scp-users:
+
 Existing Splunk Cloud Platform users
 ------------------------------------------------------------------------------------------
 In Splunk Cloud Platform, create the custom role ``o11y_access`` and assign it to all users who you want to grant access to Splunk Observability Cloud. See :new-page:`Create and manage roles with Splunk Web <https://docs.splunk.com/Documentation/Splunk/latest/Security/Addandeditroles#Add_or_edit_a_role>` for more information on Splunk Cloud Platform roles. Follow only the instructions in the :guilabel:`Add or edit a role` section. Note that you do not need to assign the role any capabilities or indexes. 
@@ -153,7 +155,7 @@ Follow these steps at first login to Splunk Observability Cloud:
 
 2. Provide your Splunk Cloud Platform credentials. If you get the :strong:`No access` error message, contact your administrator. See :ref:`no-access-error` for more information.
 
-3. Enter and confirm your email. If you already have an Observability Cloud user, enter the email associated with it to link it to your Splunk Cloud Platform user. If you enter an email address that does not exist in Observability Cloud, the system creates a new Observability Cloud user and assigns it a role based on the role mapping table in the ABC section.
+3. Enter and confirm your email. If you already have an Observability Cloud user, enter the email associated with it to link it to your Splunk Cloud Platform user. If you enter an email address that does not exist in Observability Cloud, the system creates a new Observability Cloud user and assigns it a role based on the role mapping table in the :ref:`existing-scp-users` section.
 
 4. You then receive an e-mail to verify your identity. Verify your identity in the e-mail to be authenticated in Splunk Observability Cloud. After authentication, the Observability Cloud user can only see logs data in Log Observer that their Splunk Cloud Platform user has permissions to see. 
 
