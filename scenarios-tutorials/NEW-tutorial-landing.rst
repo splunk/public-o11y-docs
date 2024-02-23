@@ -1,4 +1,3 @@
-.. _im-tutorialsNEW:
 
 ************************************************************
 Splunk Observability Cloud tutorials

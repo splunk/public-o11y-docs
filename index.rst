@@ -299,12 +299,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Scenarios TOGGLE <scenarios-tutorials/scenario-landingNEW>
+   Scenarios TOGGLE <scenarios-tutorials/NEW-scenario-landing>
 
 .. toctree::
    :maxdepth:   3
 
-   Tutorials TOGGLE <scenarios-tutorials/tutorialsNEW>   
+   Tutorials TOGGLE <scenarios-tutorials/NEW-tutorial-landing>   
 
 .. toctree::
    :caption: Splunk platform users
