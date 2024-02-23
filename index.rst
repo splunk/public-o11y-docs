@@ -296,9 +296,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: Scenarios and tutorials
    :maxdepth:   4
 
-.. toctree::
-   :maxdepth:   3
-
    Scenarios TOGGLE <scenarios-tutorials/NEW-scenario-landing>
 
 .. toctree::
