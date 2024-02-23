@@ -15,6 +15,7 @@ What are custom rules in Splunk RUM?
 
 Write custom rules to group together URLs with common components based on your specifications. Customizing rules allows you to streamline the organization of your data in Splunk RUM in a way that makes the most sense to you and your organization. You can group URLs by both path and domain. 
 
+Custom URL grouping rules are also needed to generate page-level metrics (rum.node.*) in Splunk RUM.
 
 Write a custom rule
 =======================
