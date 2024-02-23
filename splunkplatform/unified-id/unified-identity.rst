@@ -99,7 +99,6 @@ In Splunk Cloud Platform, create the custom role ``o11y_access`` and assign it t
 
 .. note:: If you do not create and assign the custom role ``o11y_access``, users receive the following error message when trying to log in to Observability Cloud: "You do not have access to Splunk Observability Cloud. Contact your Splunk Cloud Platform administrator for assistance."
 
-
 If the user does not exist in Observability Cloud, the integration automatically creates a user in Observability Cloud and maps Splunk Cloud Platform roles to the following Observability Cloud roles:
 
 .. list-table::
@@ -124,15 +123,15 @@ The mapping process is defined by the system, and a user cannot change it at pro
 
 Existing Splunk Observability Cloud users
 ------------------------------------------------------------------------------------------
-If an existing Observability Cloud user does not have a Splunk Cloud Platform account, create a Splunk Cloud Platform user for them and give it the ``o11y_access`` role. You do not need to assign the role any capabilities or indexes. The user can now access Splunk Cloud Platform (with access only to indexes that you assign to them) and can sign into Observability Cloud with SSO using their Splunk Cloud Platform credentials. The Observability Cloud user retains their existing Observability Cloud role.
+If an existing Observability Cloud user does not have a Splunk Cloud Platform account, create a Splunk Cloud Platform user for them and give it the ``o11y_access`` role. You do not need to assign the ``o11y_access`` role any capabilities or indexes. The user can now access Splunk Cloud Platform and can sign into Observability Cloud with SSO using their Splunk Cloud Platform credentials. Splunk Cloud Platform and Observability Cloud Log Observer respect index access assigned to the user in Splunk Cloud Platform. The Observability Cloud user retains their existing Observability Cloud role. 
 
-If an existing Observability Cloud user already has a Splunk Cloud Platform user, assign to the user the ``o11y_access`` role in the Splunk Cloud Platform instance that is paired with Splunk Observability Cloud.
+If an existing Observability Cloud user already has a Splunk Cloud Platform user, assign the ``o11y_access`` role to the user in the Splunk Cloud Platform instance.
 
 New users
 ------------------------------------------------------------------------------------------
 To add a new user to Splunk Observability Cloud after the integration is complete, a Splunk Cloud Platform administrator must do the following:
 
-1. Create a new local user in Splunk Cloud Platform or provision a new user with a third party IdP. 
+1. Create a new user in Splunk Cloud Platform either locally or through a third party IdP. 
 
 2. Give the new user the custom ``o11y_access`` role. 
    You do not need to assign the role any capabilities or indexes. 
@@ -152,18 +151,11 @@ Follow these steps at first login to Splunk Observability Cloud:
 
 1. Select :strong:`Sign in with Splunk Cloud`.
 
-2. Provide your Splunk Cloud Platform credentials. If your Splunk Cloud Platform user has an associated email, the :strong:`Email` field autopopulates. If your Splunk Cloud Platform user does not have an associated email, you must enter your email address twice. Make sure to use the same email address that you use to sign in to Splunk Cloud Platform. If you get the :strong:`No access` error message, contact your administrator. See :ref:`no-access-error` for more information.
+2. Provide your Splunk Cloud Platform credentials. If you get the :strong:`No access` error message, contact your administrator. See :ref:`no-access-error` for more information.
 
-3. You then receive an e-mail to verify your identity. Verify your identity in the e-mail to be authenticated in Splunk Observability Cloud. After authentication, you can access all Splunk Cloud Platform data that your Splunk Cloud Platform role has permissions to access in Splunk Observability Cloud applications. If you see an Internal Server Error, follow these steps.
+3. Enter and confirm your email. If you already have an Observability Cloud user, enter the email associated with it to link it to your Splunk Cloud Platform user. If you enter an email address that does not exist in Observability Cloud, the system creates a new Observability Cloud user and assigns it a role based on the role mapping table in the ABC section.
 
-    a. Remove the verification code from the text box.
-
-    b. Re-enter the verification code you received in the confirmation email.
-
-    c. If you still see the Internal Server Error, select :strong:`Restart verification process`, then check for a second confirmation    email, retrieve the new verification code, and enter it in the text box. If you continue to see the Internal Server Error, file a ticket with Splunk Support.
-  
-    d. Check your role in Splunk Observability Cloud. If you should have an admin role inherited from Splunk Cloud Platform but you see a power role in Splunk Observability Cloud instead, open a support ticket with your Splunk Cloud Platform admin to request admin status in Splunk Observability Cloud.
-
+4. You then receive an e-mail to verify your identity. Verify your identity in the e-mail to be authenticated in Splunk Observability Cloud. After authentication, the Observability Cloud user can only see logs data in Log Observer that their Splunk Cloud Platform user has permissions to see. 
 
 After the first login, you do not need to provide your Splunk Cloud Platform credentials again. On subsequent logins, if you are already logged in to Splunk Cloud Platform, select :strong:`Sign in with Splunk Cloud` and you are automatically signed in to Splunk Observability Cloud.
 
