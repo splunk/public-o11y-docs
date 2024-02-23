@@ -1,3 +1,5 @@
+.. orphan::
+
 .. _about-k8s-imm:
 .. _about-k8s-tutorial:
 
