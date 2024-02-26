@@ -29,6 +29,7 @@ For any dynamically instantiated receiver that retrieves metrics matching the su
 
 For any receiver that can establish a connection with a service, but not receive the expected metrics, discovery mode suggests which properties to set, or what extensions or settings to configure on the service to successfully retrieve telemetry. You can define any target-specific configuration values that are required, for example authentication information, using discovery properties to tune the discovery process.
 
+When running in Kubernetes, discovery mode tests bundled metric receiver configurations against the endpoints discovered by the ``k8s_observer`` observer. Successfully discovered instances are then incorporated in the existing service configuration.
 
 Supported host services and applications
 =========================================
@@ -44,7 +45,7 @@ Discovery mode supports the following host services and applications:
      - Receiver
 
    * - MySQL
-     - Smart Agent with collectd/mysql monitor type. See :ref:`mysql`.
+     - MySQL receiver. See :ref:`mysql-receiver`.
 
    * - PostgreSQL
      - PostgreSQL receiver. See :ref:`postgresql-receiver`.
@@ -58,6 +59,10 @@ Discovery mode supports the following host services and applications:
    * - Redis
      - Redis receiver.
 
+Discovery mode is available for the following platforms:
+
+- Linux
+- Kubernetes
 
 Discover active metric sources
 =========================================
@@ -90,6 +95,63 @@ When discovery mode can't access a discovered service to extract metric data, it
 
       curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
       sudo sh /tmp/splunk-otel-collector.sh --realm <realm> – <token> --mode agent --discovery
+
+.. _discovery-mode-k8s:
+
+Discovery mode in Kubernetes
+=================================================
+
+You can configure the DaemonSet from the Splunk Distribution of OpenTelemetry Collector for Kubernetes to run in discovery mode. Edit the properties to add required credentials or service-specific information.
+
+The following example shows how to activate discovery mode in the Helm chart and adds authentication properties for PostgreSQL service discovery:
+
+.. code-block:: yaml
+
+   agent:
+
+     #...
+
+     discovery:
+       enabled: true # Turned off by default
+       properties:
+         extensions:
+           k8s_observer:
+             config:
+               auth_type: serviceAccount  # Default auth_type value
+         receivers:
+           postgres:
+             config:
+               # Environment variables populated by secret data
+               username: '${env:POSTGRES_USER}'
+               password: '${env:POSTGRES_PASSWORD}'
+               tls:
+                 insecure: true
+
+   # ...
+
+   extraEnvs:
+      # Environment variables using a manually created secret
+      - name: POSTGRES_USER
+        valueFrom:
+          secretKeyRef:
+            name: postgres-monitoring
+            key: username
+      - name: POSTGRES_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            name: postgres-monitoring
+            key: password
+
+To check discovery progress and statement evaluations, see the agent startup logs or use kubectl. For example:
+
+.. code-block:: shell
+
+   $ kubectl -n monitoring logs splunk-otel-collector-agent | grep -i disco
+   Discovering for next 10s...
+   Successfully discovered "postgresql" using "k8s_observer" endpoint "k8s_observer/e8a10f52-4f2a-468c-be7b-7f3c673b1c8e/(5432)".
+   Discovery complete.
+
+.. note:: By default, the ``docker_observer`` and ``host_observer`` extensions are turned off for discovery in the Helm chart.
 
 .. _custom-discovery-props:
 
@@ -150,7 +212,6 @@ You can override or add properties by creating the ``etc/otel/collector/config.d
 
 You can use the ``--discovery-properties=<filepath.yaml>`` argument to load discovery mode properties that you don't want to share with other Collectors. If you specify discovery properties using this argument, properties contained in ``config.d/properties.discovery.yaml`` are ignored.
 
-
 Create custom configurations
 ---------------------------------------------
 
@@ -198,14 +259,14 @@ Usage example
 
 The following example shows how to install the Collector on Linux using discovery mode to find a MySQL database and retrieve metrics.
 
-#. Install the Collector on the host where MySQL is running.  Include the ``--discovery`` flag:
+#. Install the Collector on the host where MySQL is running. Include the ``--discovery`` flag:
 
    .. code-block:: shell
     
       curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
-      sudo sh /tmp/splunk-otel-collector.sh --realm <realm> – <token> --mode agent --discovery
+      sudo sh /tmp/splunk-otel-collector.sh --realm <realm> - <token> --mode agent --discovery
 
-#. Retrieve the Collector logs with the following command and review the output of the discovery process: 
+#. Retrieve the Collector logs with the following command and review the output of the discovery process:
 
    .. code-block:: shell
 
@@ -215,45 +276,36 @@ The following example shows how to install the Collector on Linux using discover
 
    .. code-block:: text
 
-      Partially discovered "smartagent/collectd/mysql" using "host_observer" endpoint "(host_observer)[::]-3306-TCP-1757": Make sure y
-      our user credentials are correctly specified using the `--set splunk.discovery.receivers.smartagent/collectd/mysql.config.username="<username>"` and `--set splunk.discovery.receivers.smartagent/collect
-      d/mysql.config.password="<password>"` command or the `SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_collectd_x2f_mysql_CONFIG_username="<username>"` and `SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_collectd_
-      x2f_mysql_CONFIG_password="<password>"` environment variables. (evaluated "{\"collectdInstance\":\"monitor-smartagentcollectdmysqlreceiver_creatorhost_observerendpoint3306host_observer3306TCP1757\",\"k
-      ind\":\"receiver\",\"message\":\"mysql plugin: Failed to connect to database splunk.discovery.default at server ::: Access denied for user 'splunk.discovery.default'@'localhost' (using password: YES)\"
-      ,\"monitorType\":\"collectd/mysql\"}")
+      Partially discovered "mysql" using "docker_observer" endpoint "acb7cf9f5d674b8bb83487e043857d98c42b93f2214f114b2228e86932b2cde2:3306": Make sure your user credentials are correctly specified using the `--set splunk.discovery.receivers.mysql.config.username="<username>"` and `--set splunk.discovery.receivers.mysql.config.password="<password>"` command or the `SPLUNK_DISCOVERY_RECEIVERS_mysql_CONFIG_username="<username>"` and `SPLUNK_DISCOVERY_RECEIVERS_mysql_CONFIG_password="<password>"` environment variables. (evaluated "{\"error\":\"Error 1045 (28000): Access denied for user 'splunk.discovery.default'@'172.17.0.1' (using password: YES)\",\"kind\":\"receiver\",\"message\":\"Failed to fetch InnoDB stats\"}")
 
-#. Provide the necessary credentials by creating the properties.discovery.yaml file in the `/etc/otel/collector/config.d` directory with the following content: 
+#. Provide the necessary credentials by creating the properties.discovery.yaml file in the `/etc/otel/collector/config.d` directory with the following content:
 
    .. code-block:: yaml
 
-      splunk.discovery:
-        receivers:
-          smartagent/collectd/mysql:
-            enabled: true
-            config:
-              username: "<username>"
-              password: "<password>"
-              databases: "[{name: '<database name>'}]"
+      splunk.discovery.receivers.mysql.config.username: "<username>"
+      splunk.discovery.receivers.mysql.config.password: "<password>"
 
-#. Restart the Collector with the following command: 
+#. Restart the Collector with the following command:
 
    .. code-block:: shell
 
       sudo systemctl restart splunk-otel-collector
 
-#. Tail the Collector logs again to confirm that it has discovered the MySQL database successfully: 
+#. Tail the Collector logs again to confirm that it has discovered the MySQL database successfully:
 
    .. code-block:: shell
 
       journalctl -u splunk-otel-collector -f
 
-#. When successful, the logs include a line similar to the following: 
+#. When successful, the logs include a line similar to the following:
 
    .. code-block:: text
 
-      Successfully discovered "smartagent/collectd/mysql" using "host_observer" endpoint "(host_observer)[::]-3306-TCP-1757".
+      Successfully discovered "mysql" using "docker_observer" endpoint "abcdef1234:3306".
+
 
 Troubleshooting
 ======================
 
 .. include:: /_includes/troubleshooting-components.rst
+

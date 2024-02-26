@@ -1,9 +1,10 @@
 
 
 .. list-table::
+  :header-rows: 1
   :widths: 20,20,20,20,20
 
-  * - :strong:`Capability`
+  * - :strong:`Permission`
     - :strong:`Admin`
     - :strong:`Power user`
     - :strong:`Usage`
@@ -74,7 +75,7 @@
     - * Yes, when enhanced team security is disabled
       * No, when enhanced team security is enabled. A user must be added by an Admin or Team Manager
     - No
-    - Not applicable: A Team Member is already on a team and doesn't need to join.
+    - No
 
   * - :strong:`Add or remove team member`
     - Yes

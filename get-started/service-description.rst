@@ -133,7 +133,7 @@ You can update or expand your Splunk Observability Cloud subscription any time d
 - Add products and features to your subscription.
 - Upgrade to enterprise edition licensing with Service Bureau features.
 
-Observability Cloud informs about the need for renewal through a banner that appears 15 days prior to the subscription expiration date. For more information on subscription renewals, contact your Splunk sales representative.
+Splunk Observability Cloud informs about the need for renewal through a banner that appears 15 days prior to the subscription expiration date. For more information on subscription renewals, contact your Splunk sales representative.
 
 On expiration date, a 15-day grace period starts. During the grace period, users see a banner when logging in reminding them of the expiration. After the grace period, the subscription enters suspended mode, which lasts 30 days and during which users can't log in. After the 30 day suspension, the account is terminated and the data stored on the account is deleted.
 
@@ -163,7 +163,7 @@ Splunk Observability Cloud is available in the following global regions. Each Cl
      - :strong:`AWS regions`
      - :strong:`Google Cloud regions`
      - :strong:`Splunk Observability Cloud realm`
-   * - Observability Cloud
+   * - Splunk Observability Cloud
      - 
         * US: Oregon (us-west-2), Virginia (us-east-1)
         * Europe: Dublin (eu-west-1)
@@ -219,8 +219,9 @@ The following components are available for each global region. Each Cloud provid
        * Europe: Dublin (eu-west-1)
        * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
      - 
+       * US: Oregon (us-west-1)
      - 
-       * us0, us1
+       * us0, us1, us2
        * eu0
        * au0, jp0
    * - Real User Monitoring (RUM)
@@ -240,8 +241,9 @@ The following components are available for each global region. Each Cloud provid
        * Europe: Dublin (eu-west-1)
        * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
      - 
+       * US: Oregon (us-west-1)
      -
-       * us0, us1
+       * us0, us1, us2
        * eu0
        * au0, jp0
 
@@ -338,6 +340,8 @@ User authentication and access
 
 You can configure authentication using Single-sign on (SSO) integrations implementing SAML 2.0, such as Ping, Okta, or AzureAD. See :ref:`sso-about` for more information.
 
+To control what your Splunk Observability Cloud users can do, you assign them roles that have a defined set of specific capabilities. See :ref:`roles-and-capabilities` for more information.
+
 For additional information, see:
 
 - :ref:`authentication-intro`
@@ -401,7 +405,11 @@ For additional information, see :ref:`support`.
 Users and authentication
 ===========================================================
 
-You are responsible for creating and administering your users' accounts, the authentication method, and global password policies. You can configure Splunk Observability Cloud to use SAML authentication for single sign-on (SSO). To use multifactor authentication, you must use a SAML 2.0 identity provider that supports multifactor authentication. Only SHA-256 signatures in the SAML message between your IdP and Splunk Observability Cloud are supported. You are responsible for the SAML configuration of your IdP including the use of SHA-256 signatures. See :ref:`sso-about`.
+You are responsible for creating and administering your users's accounts, the roles and capabilities assigned to them, the authentication method, and global password policies. To control what your Splunk Observability Cloud users can do, you assign them roles that have a defined set of specific capabilities. You can assign roles using Splunk Observability Cloud in the browser or through the REST API. See :ref:`users-assign-roles-ph3`.
+
+Roles give Splunk Observability Cloud users access to features and permission to perform tasks and searches. Each user account is assigned one or more roles. Each role contains a set of capabilities. Splunk Observability Cloud provides the admin role, which has the capabilities required to administer Splunk Observability Cloud. See :ref:`roles-and-capabilities`.
+
+You can configure Splunk Observability Cloud to use SAML authentication for single sign-on (SSO). To use multifactor authentication, you must use a SAML 2.0 identity provider that supports multifactor authentication. Only SHA-256 signatures in the SAML message between your IdP and Splunk Observability Cloud are supported. You are responsible for the SAML configuration of your IdP including the use of SHA-256 signatures. See :ref:`sso-about`.
 
 Unified identity
 ----------------------------------------------------

@@ -12,7 +12,7 @@ You can monitor host metrics with Splunk Observability Cloud. Before you can sta
 - :ref:`get-started-linux`
 - :ref:`get-started-windows`
 
-Observability Cloud provides infrastructure monitoring capabilities powered by the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`. If you're also exporting logs from hosts and want to learn about how to view logs in Observability Cloud, see :ref:`get-started-logs`.
+Splunk Observability Cloud provides infrastructure monitoring capabilities powered by the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`. If you're also exporting logs from hosts and want to learn about how to view logs in Splunk Observability Cloud, see :ref:`get-started-logs`.
 
 You can also export and monitor data related to hosts, as described in the following table.
 

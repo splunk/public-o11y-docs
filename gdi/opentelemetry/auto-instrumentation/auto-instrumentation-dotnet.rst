@@ -16,52 +16,33 @@ The Zero Configuration package provides the following benefits:
 - You can start streaming traces and monitor distributed applications with Splunk APM in minutes.
 - You don't need to configure or instrument your .NET back-end services or applications before deployment.
 
+.. note:: For details on the .NET supported versions, see :ref:`dotnet-requirements`.
+
+.. toctree::
+   :hidden:
+   :maxdepth: 3
+   
+   Kubernetes <auto-instrumentation-dotnet-k8s.rst>
+   Windows <auto-instrumentation-dotnet-windows.rst>
+
+
 .. _install-the-package-dotnet:
 
-Install the package
-=========================================================
 
-By default, the installer script only installs the Collector. If you add the ``with_dotnet_instrumentation`` parameter, the script also downloads and installs the SignalFx Instrumentation for .NET. 
+  
+.. raw:: html
 
-Run the PowerShell script with the ``with_dotnet_instrumentation`` parameter, as shown in the following example:
+   <h2>Install Zero Configuration Auto Instrumentation</h2>
 
-.. code-block:: powershell
-   :emphasize-lines: 3
+To install zero config for OpenTelemetry .NET, follow the instructions relevant to your platform:
 
-   & {Set-ExecutionPolicy Bypass -Scope Process -Force; `
-   $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); `
-   $params = @{access_token = "<access_token>"; realm = "<realm>"; mode = "agent"; with_dotnet_instrumentation = "`$true"; deployment_env = "<environment_name>"}; `
-   Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
+* :ref:`auto-instrumentation-dotnet-k8s`
+* :ref:`auto-instrumentation-dotnet-windows`
 
-Do the following to customize the command:
+.. raw:: html
 
-- Replace ``<environment_name>`` with the label for the target environment.
-- Replace ``<access_token>`` with a valid Splunk Observability Cloud access token. To obtain an access token, see :ref:`admin-api-access-tokens`.
-- Replace ``<realm>`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, open the navigation menu in Splunk Observability Cloud, select :menuselection:`Settings`, and then select your username. The realm name appears in the :guilabel:`Organizations` section.
+   <h2>Learn more</h2>
 
-.. _configure-the-package-dotnet:
-
-Configure the .NET instrumentation
-==========================================================
-
-To configure the instrumentation, see :ref:`advanced-dotnet-configuration`.
-
-Uninstall auto instrumentation
-=====================================
-
-To uninstall zero config auto instrumentation for .NET, run the following command in PowerShell:
-
-.. code-block:: powershell
-
-   $MyProgram = Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\uninstall\* | Where { $_.DisplayName -eq "SignalFx .NET Tracing 64-bit" }
-
-   cmd /c $MyProgram.UninstallString
-
-.. _upgrade-the-package-dotnet:
-
-Upgrade the package
-==========================
-
-You can upgrade the package by installing a new version of the SignalFx Instrumentation for .NET. See :ref:`instrument-dotnet-applications`.
-
-.. include:: /_includes/troubleshooting-components.rst
+* Auto instrumentation sends trace data to Splunk APM. To learn more, see :ref:`wcidw-apm`
+* For more information about the Splunk Distribution of OpenTelemetry .NET, see :ref:`get-started-dotnet-otel`.
+* For information about performance, see :ref:`dotnet-otel-performance`.

@@ -285,6 +285,11 @@ For more information on the ingest API endpoints, see :new-page:`Send APM traces
 
 .. caution:: This procedure applies to spans and traces. To send AlwaysOn Profiling data, you must use the OTel Collector.
 
+Specify the source host 
+-----------------------------------------------------------
+
+.. include:: /_includes/gdi/apm-api-define-host.rst
+
 .. _instrument_aws_lambda_functions:
 
 Instrument Lambda functions

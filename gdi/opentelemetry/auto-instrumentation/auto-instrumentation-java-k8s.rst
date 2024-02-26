@@ -7,22 +7,51 @@ Zero Configuration Automatic Instrumentation for Kubernetes Java applications
 .. meta::
    :description: Use the Collector with the upstream Kubernetes Operator for automatic instrumentation to easily add observability code to your application, enabling it to produce telemetry data.
 
-You can use the OTel Collector with an upstream Operator in a Kubernetes environment to automatically instrument your Java applications. 
+Use the OTel Collector with the Operator in a Kubernetes environment to automatically instrument your Java applications. By using zero configuration automatic instrumentation, you can quickly send Java application data to Splunk APM without configuring the OpenTelemetry Collector or changing your application code.
+
+To install zero configuration automatic instrumentation for Java, complete the following steps:
+
+#. :ref:`deploy-helm-chart-java-k8s`
+#. :ref:`java-k8s-verify-resources`
+#. :ref:`k8s-java-set-annotations`
+#. :ref:`java-k8s-view-results`
 
 Requirements
 ================================================================
 
 Zero Config Auto Instrumentation for Java requires the following components: 
 
-* The :ref:`Splunk OTel Collector chart <helm-chart>`: It deploys the Collector and related resources, including the OpenTelemetry Operator.
-* The OpenTelemetry Operator, which manages auto-instrumentation of Kubernetes applications. See more in the :new-page:`OpenTelemetry GitHub repo <https://github.com/open-telemetry/opentelemetry-operator>`.
-* A Kubernetes instrumentation object ``opentelemetry.io/v1alpha1``, which configures auto-instrumentation settings for applications.
+* Java 11 or higher and supported libraries. See :ref:`java-otel-requirements` for more information.
+* Your Splunk Observability Cloud realm and access token with ingest scope. For more information, see :ref:`admin-org-tokens`.
 
-Deploy the Helm Chart with the Operator enabled
-=========================================================
+.. _deploy-helm-chart-java-k8s:
 
-Add certifications and deploy the Helm Chart
---------------------------------------------------------
+Deploy the Helm Chart with the Kubernetes Operator
+=================================================================
+
+To deploy the Helm Chart, create a file called values.yaml. In this file, you can define the settings to activate or deactivate when installing the OpenTelemetry Collector with the Helm Chart.
+
+Populate values.yaml with the following fields and values:
+
+.. code-block:: yaml
+
+  clusterName: <your_cluster_name>
+
+  # Your Splunk Observability Cloud realm and access token
+  splunkObservability:
+    realm: <splunk_realm>
+    accessToken: <splunk_access_token>
+  
+  # Activates the OpenTelemetry Kubernetes Operator
+  operator:
+    enabled: true
+
+You might need to populate the file with additional values depending on your environment. See :ref:`java-add-certificates` and :ref:`zeroconfig-java-traces` for more information.
+
+.. _java-add-certificates:
+
+Add certificates
+----------------------------------------
 
 The Operator requires certain TLS certificates to work. Use the following command to check whether a certification manager is available:
 
@@ -31,19 +60,25 @@ The Operator requires certain TLS certificates to work. Use the following comman
    # Check if cert-manager is already installed, don't deploy a second cert-manager.
    kubectl get pods -l app=cert-manager --all-namespaces
 
-If a certification manager (or any other TLS certificate source) is not available in the cluster, then you'll need to deploy it using ``certmanager.enabled=true``. Use the following commands to deploy the Helm Chart.
+If a certification manager isn't available in the cluster, then you'll need to add ``certmanager.enabled=true`` to your values.yaml file. For example:
 
-.. code-block:: yaml 
+.. code-block:: yaml
+  :emphasize-lines: 7,8
 
-   # If cert-manager is not deployed.
-   helm install splunk-otel-collector -f ./my_values.yaml --set certmanager.enabled=true,operator.enabled=true,environment=prd -n monitoring splunk-otel-collector-chart/splunk-otel-collector
-   
-   # If cert-manager is already deployed.
-   helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=prd -n monitoring splunk-otel-collector-chart/splunk-otel-collector
+  clusterName: my-cluster
+
+  splunkObservability:
+    realm: <splunk_realm>
+    accessToken: <splunk_access_token>
+  
+  certmanager:
+    enabled: true
+  operator:
+    enabled: true
 
 .. _zeroconfig-java-traces:
 
-Ingest traces
+Set the deployment environment
 ------------------------------------------------
 
 To properly ingest trace telemetry data, the attribute ``deployment.environment`` must be onboard the exported traces. The following table demonstrates the different methods for setting this attribute:
@@ -56,31 +91,44 @@ To properly ingest trace telemetry data, the attribute ``deployment.environment`
   * - Method
     - Scope
     - Implementation
-  * - Through the ``values.yaml`` file ``environment`` configuration
+  * - Through the values.yaml file ``environment`` configuration
     - Applies the attribute to all telemetry data (metrics, logs, traces) exported through the collector.
     - The chart will set an attribute processor to add ``deployment.environment=prd`` to all telemetry data processed by the collector.
-  * - Through the ``values.yaml`` file and ``operator.instrumentation.spec.env`` or ``operator.instrumentation.spec.{instrumentation_library}.env`` configuration
+  * - Through the values.yaml file and ``operator.instrumentation.spec.env`` or ``operator.instrumentation.spec.{instrumentation_library}.env`` configuration
     - Allows you to set ``deployment.environment`` either for all auto-instrumented applications collectively or per auto-instrumentation language.
     - Add the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable, setting its value to ``deployment.environment=prd``.
   * - Through your Kubernetes application deployment, daemonset, or pod specification
     - Allows you to set ``deployment.environment`` at the level of individual deployments, daemonsets, or pods.
     - Employ the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable, assigning the value ``deployment.environment=prd``.
 
-The following examples demonstrate how to set the attribute using each method:
+The following examples show how to set the attribute using each method:
 
 .. tabs::
 
     .. tab:: Environment option
 
-      Set the ``environment`` option in the ``values.yaml`` file. This adds the ``deployment.environment`` attribute to all telemetry data the Collector receives, including data from automatically-instrumented pods.
+
+      Set the ``environment`` option in the values.yaml file. This adds the ``deployment.environment`` attribute to all telemetry data the Collector receives, including data from automatically-instrumented pods.
 
       .. code-block:: yaml
+        :emphasize-lines: 7
 
+          clusterName: my-cluster
+
+          splunkObservability:
+            realm: <splunk_realm>
+            accessToken: <splunk_access_token>
+          
           environment: prd
+          
+          certmanager:
+            enabled: true
+          operator:
+            enabled: true
 
     .. tab:: Instrumentation spec
 
-      Add the environment variable to the ``values.yaml`` instrumentation spec as shown in the following example code. This method adds the ``deployment.environment`` attribute to all telemetry data from automatically-instrumented pods.
+      Add the environment variable to the values.yaml instrumentation spec as shown in the following example code. This method adds the ``deployment.environment`` attribute to all telemetry data from automatically-instrumented pods.
 
       .. code-block:: yaml
 
@@ -123,11 +171,22 @@ The following examples demonstrate how to set the attribute using each method:
       .. code-block:: bash
         
           kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=environment=prd
-      
+
+Deploy the Helm Chart
+---------------------------------
+
+After configuring values.yaml, use the following command to deploy the Helm Chart:
+
+.. code-block:: bash
+
+   helm install splunk-otel-collector -f ./values.yaml
+
+.. _java-k8s-verify-resources:
+
 Verify all the OpenTelemetry resources are deployed successfully
 ==========================================================================
 
-Resources include the Collector, the Operator, webhook, an instrumentation.
+Resources include the Collector, the Operator, webhook, and instrumentation.
 
 Run the following commands to verify the resources are deployed correctly:
 
@@ -148,61 +207,63 @@ Run the following commands to verify the resources are deployed correctly:
    # splunk-otel-collector-cert-manager-webhook              1          14m
    # splunk-otel-collector-opentelemetry-operator-mutation   3          14m
 
-   kubectl get otelinst -n {target_application_namespace}
+   kubectl get otelinst -n <target_application_namespace>
    # NAME                          AGE   ENDPOINT
    # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
 
+.. _k8s-java-set-annotations:
+
 Set annotations to instrument Java applications
-===================================================================
+==============================================================
 
 You can activate auto instrumentation for Java applications before runtime.
 
-If the related Kubernetes object (deployment, daemonset, or pod) is not deployed, add the ``otel.splunk.com/inject-java`` annotation to the application object YAML.
+If the related Kubernetes object (deployment, daemonset, or pod) is not deployed, add the ``instrumentation.opentelemetry.io/inject-java`` annotation to the application object YAML.
 
 For example, given the following deployment YAML:
 
-    .. code-block:: yaml
+.. code-block:: yaml
 
-      apiVersion: apps/v1
-      kind: Deployment
-      metadata:
-        name: my-java-app
-        namespace: monitoring
-      spec:
-        template:
-          spec:
-            containers:
-            - name: my-java-app
-              image: my-java-app:latest
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: my-java-app
+      namespace: monitoring
+    spec:
+      template:
+        spec:
+          containers:
+          - name: my-java-app
+            image: my-java-app:latest
 
-Activate auto instrumentation by adding ``otel.splunk.com/inject-java: "true"`` to the ``spec``:
+Activate auto instrumentation by adding ``instrumentation.opentelemetry.io/inject-java: "true"`` to the ``spec``:
 
-    .. code-block:: yaml
-      :emphasize-lines: 10
+.. code-block:: yaml
+    :emphasize-lines: 10
 
-      apiVersion: apps/v1
-      kind: Deployment
-      metadata:
-        name: my-java-app
-        namespace: monitoring
-      spec:
-        template:
-          metadata:
-            annotations:
-              otel.splunk.com/inject-java: "true"
-          spec:
-            containers:
-            - name: my-java-app
-              image: my-java-app:latest
-    
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: my-java-app
+      namespace: monitoring
+    spec:
+      template:
+        metadata:
+          annotations:
+            instrumentation.opentelemetry.io/inject-java: "true"
+        spec:
+          containers:
+          - name: my-java-app
+            image: my-java-app:latest
+
 To deactivate automatic instrumentation, remove the annotation. The following command removes the annotation for automatic instrumentation, deactivating it:
 
 .. code-block:: bash
 
-  kubectl patch deployment <my-deployment> -n <my-namespace> --type=json -p='[{"op": "remove", "path": "/spec/template/metadata/annotations/instrumentation.opentelemetry.io~1inject-java"}]'
+   kubectl patch deployment <my-deployment> -n <my-namespace> --type=json -p='[{"op": "remove", "path": "/spec/template/metadata/annotations/instrumentation.opentelemetry.io~1inject-java"}]'
 
 Verify instrumentation
------------------------------------------------
+----------------------------------------
 
 To verify that the instrumentation was successful, run the following command on an individual pod:
 
@@ -258,6 +319,9 @@ The instrumented pod contains an initContainer named ``opentelemetry-auto-instru
    #   opentelemetry-auto-instrumentation:
    #     Type:        EmptyDir (a temporary directory that shares a pod's lifetime)
 
+
+.. _java-k8s-view-results:
+
 View results at Splunk Observability APM
 ===========================================================
 
@@ -268,7 +332,7 @@ Allow the Operator to do the work. The Operator intercepts and alters the Kubern
 
 You can configure the Splunk Distribution of OpenTelemetry Java to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started.
 
-You can add advanced configuration like activating custom sampling and including custom data in the reported spans with environment variables and Java system properties. To do so, use the ``values.yaml`` file and  ``operator.instrumentation.sampler`` configuration. For more information, see the :new-page:`documentation in GitHub <https://github.com/open-telemetry/opentelemetry-operator/blob/main/docs/api.md#instrumentationspecsampler>` and :new-page:`example in GitHub <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/enable-operator-and-auto-instrumentation/instrumentation/instrumentation-add-trace-sampler.yaml>`.
+You can add advanced configuration like activating custom sampling and including custom data in the reported spans with environment variables and Java system properties. To do so, use the values.yaml file and  ``operator.instrumentation.sampler`` configuration. For more information, see the :new-page:`documentation in GitHub <https://github.com/open-telemetry/opentelemetry-operator/blob/main/docs/api.md#instrumentationspecsampler>` and :new-page:`example in GitHub <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/enable-operator-and-auto-instrumentation/instrumentation/instrumentation-add-trace-sampler.yaml>`.
 
 You can also use the methods shown in :ref:`zeroconfig-java-traces` to configure your instrumentation with the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable and other environment variables. For example, if you want every span to include the key-value pair ``build.id=feb2023_v2``, set the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable:
 
@@ -277,6 +341,10 @@ You can also use the methods shown in :ref:`zeroconfig-java-traces` to configure
      kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=build.id=feb2023_v2
 
 See :ref:`advanced-java-otel-configuration` for the full list of supported environment variables.
+
+.. _troubleshooting-zeroconfig-java-k8s:
+
+.. include:: /_includes/gdi/troubleshoot-zeroconfig-k8s.rst
 
 Learn more
 ===========================================================================

@@ -200,12 +200,31 @@ If no data appears in APM, see :ref:`common-dotnet-otel-troubleshooting`.
 
 .. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your .NET application or service manually. See :ref:`dotnet-otel-manual-instrumentation`.
 
+.. _activate-profiling-dotnet-otel:
+
+Activate AlwaysOn Profiling
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To activate AlwaysOn Profiling, set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
+
+To activate memory profiling, set the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after activating AlwaysOn Profiling.
+
+See :ref:`get-data-in-profiling` for more information. For more settings, see :ref:`profiling-configuration-otel-dotnet`.
+
 .. _configure-otel-dotnet:
 
 Configure the instrumentation
 ---------------------------------------------
 
 For advanced configuration of the .NET automatic instrumentation, like changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
+
+Database Query Performance settings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Starting from version 1.4.0, the .NET OTel instrumentation collects database queries for Database Query Performance. See :ref:`db-query-performance`.
+
+SQL statements might contain sensitive information. To configure this behavior, see ``OTEL_DOTNET_AUTO_SQLCLIENT_SET_DBSTATEMENT_FOR_TEXT`` and ``OTEL_DOTNET_AUTO_ENTITYFRAMEWORKCORE_SET_DBSTATEMENT_FOR_TEXT`` in :ref:`dotnet-otel-instrumentation-settings`.
+
 
 .. _otel-dotnet-nuget-pkg:
 
@@ -304,7 +323,7 @@ To install the .NET automatic instrumentation on Windows hosts that are offline,
 .. _export-directly-to-olly-cloud-dotnet-otel:
 
 Send data directly to Splunk Observability Cloud
----------------------------------------------------
+====================================================================
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
@@ -331,6 +350,11 @@ In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, f
 #. Select your username.
 
 The realm name appears in the :guilabel:`Organizations` section.
+
+Specify the source host 
+----------------------------------------------
+
+.. include:: /_includes/gdi/apm-api-define-host.rst
 
 .. _uninstall-otel-dotnet:
 

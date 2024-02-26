@@ -253,7 +253,7 @@ See the instrumentation documentation for your application language:
 
 - :ref:`Instrument Node.js applications <get-started-nodejs>`
 
-- :ref:`Instrument .NET applications <get-started-dotnet>`
+- :ref:`Instrument .NET applications <get-started-dotnet-otel>`
 
 - :ref:`Instrument Go applications <get-started-go>`
 

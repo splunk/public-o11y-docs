@@ -92,8 +92,16 @@ The following table shows SignalFx Instrumentation for .NET environment variable
      - ``OTEL_BSP_MAX_QUEUE_SIZE``. The default value is ``2048``.
    * - ``SIGNALFX_PROPAGATORS``
      - ``OTEL_PROPAGATORS``. The default values are ``tracecontext, baggage``. Also available: ``b3multi, b3``.
+   * - ``SIGNALFX_PROFILER_ENABLED``
+     - ``SPLUNK_PROFILER_ENABLED``
+   * - ``SIGNALFX_PROFILER_MEMORY_ENABLED``
+     - ``SPLUNK_PROFILER_MEMORY_ENABLED``
+   * - ``SIGNALFX_PROFILER_LOGS_ENDPOINT``
+     - ``SPLUNK_PROFILER_LOGS_ENDPOINT``
+   * - ``SIGNALFX_PROFILER_CALL_STACK_INTERVAL``
+     - ``SPLUNK_PROFILER_CALL_STACK_INTERVAL``
 
-For more information about Splunk Java OTel settings, see :ref:`advanced-dotnet-otel-configuration`.
+For more information about Splunk OTel .NET settings, see :ref:`advanced-dotnet-otel-configuration`.
 
 Library-specific instrumentation settings
 --------------------------------------------------------

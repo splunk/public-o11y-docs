@@ -190,7 +190,16 @@ For example:
   clusterName: my-k8s-cluster
   cloudProvider: aws
 
-.. _otel-kubernetes-config-profiling:
+.. _otel-kubernetes-config-hostnetwork:
+
+Configure the agent's use of the host network
+======================================================
+
+By default, ``agent.hostNetwork`` is set to ``true``. This grants DaemonSet pods of the agent access to the node's host network, allowing them to monitor specific elements. Enable this setting to monitor certain control plane components and integrations that require host network access.
+
+Set ``agent.hostNetwork`` to ``false`` to turn off host network access. This might be necessary to comply with certain organization security policies. If host network access is disabled, the agent's monitoring capabilities might be limited.
+
+This value is disregarded for Windows.
 
 Activate AlwaysOn Profiling
 =================================
@@ -291,6 +300,16 @@ For example, use the following configuration to activate automatic detection of 
   autodetect:
     istio: true
     prometheus: true
+
+.. _otel-kubernetes-discovery-mode:
+
+Activate discovery mode on the Collector
+============================================
+
+Use the discovery mode of the Splunk Distribution of OpenTelemetry Collector to detect metric sources and create
+a configuration based on the results.
+
+See :ref:`discovery-mode-k8s` for instructions on how to activate discovery mode in the Helm chart.
 
 .. _otel-kubernetes-deactivate-telemetry:
 
