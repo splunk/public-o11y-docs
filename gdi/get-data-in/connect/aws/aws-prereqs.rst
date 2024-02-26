@@ -236,6 +236,7 @@ These are these permissions to allow Splunk Observability Cloud to collect AWS t
 - ``"lambda:GetAlias"``
 - ``"lambda:ListFunctions"``
 - ``"lambda:ListTags"``
+- ``"rds:DescribeDBClusters"``
 - ``"rds:DescribeDBInstances"``
 - ``"rds:ListTagsForResource"``
 - ``"redshift:DescribeClusters"``

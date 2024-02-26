@@ -363,7 +363,7 @@
      -
      -
 
-   * - :ref:`Microsoft .NET runtime <get-started-dotnet>`
+   * - :ref:`Microsoft .NET runtime <get-started-dotnet-otel>`
      - :strong:`X`
      -
      -
