@@ -8,7 +8,9 @@ Send traces to Splunk Observability Cloud using the gRPC endpoint
 .. meta::
    :description: You can send traces to Splunk Observability Cloud in OTLP format using the gRPC endpoint.
 
-You can send traces to Splunk Observability Cloud in OTLP format using the gRPC endpoint. This is useful when you need to bypass the OpenTelemetry Collector due to network or application requirements and want to sent data in OTLP format.
+The Splunk Distribution of the OpenTelemetry Collector uses native OTel components such as the :ref:`otlp-exporter` and the :ref:`otlphttp-exporter` to send traces in OTLP format to Splunk Observability Cloud. 
+
+However, you can also send traces directly to Splunk Observability Cloud in OTLP format using the gRPC endpoint. This is useful when you need to bypass the OpenTelemetry Collector due to network or application requirements and want to sent data in OTLP format.
 
 .. note:: To send data using the REST API endpoints, see :ref:`rest-api-ingest`.
 
@@ -33,7 +35,6 @@ Configure the Splunk OpenTelemetry Collector
 To send traces directly to the gRPC ingest endpoint, add the following lines to the ``exporters`` section of your Collector configuration file:
 
 .. code-block:: yaml
-
 
    exporters:
      otlp:
