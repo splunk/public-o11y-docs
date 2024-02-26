@@ -108,7 +108,7 @@ type:
       - ``watchMethod``
       - no
       - ``string``
-      - Method for watching changes to files (“ionotify” or “poll”). The
+      - Method for watching changes to files (“inotify” or “poll”). The
          default value is ``poll``.
    - 
 
