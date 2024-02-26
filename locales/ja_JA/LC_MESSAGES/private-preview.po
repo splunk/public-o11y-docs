@@ -1,0 +1,866 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023 Splunk, Inc
+# This file is distributed under the same license as the Splunk package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Splunk\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-18 11:06+0000\n"
+"PO-Revision-Date: 2024-02-26 16:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: ja_JA <LL@li.org>\n"
+"Language: ja_JA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:-1
+msgid "Learn how to how to manage user roles and capabilities (also called permissions)."
+msgstr "ユーザーのロールと機能（アクセス許可とも呼ばれる）を管理する方法を学びます。"
+
+#: ../../<rst_prolog>:18
+msgid "Take shift"
+msgstr "シフトを引き受ける"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:7
+msgid "About roles in Splunk Observability Cloud"
+msgstr "Splunk Observability Cloud のロールについて"
+
+#: ../../_includes/private-preview.rst:1
+msgid "Preview: Role-based access"
+msgstr "プレビュー：ロールベースのアクセス"
+
+#: ../../_includes/private-preview.rst:3
+msgid ""
+"Preview features are provided by Splunk to you “as is” without any warranties, maintenance and support, or service level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it at any time. Use of preview features is subject to the :new-page:`Splunk "
+"General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`."
+msgstr ""
+"プレビュー機能は、Splunkからお客様に「現状のまま」提供されるものであり、いかなる保証、メンテナンス、サポート、サービスレベルのコミットメントも行われるものではありません。Splunkはこのプレビュー機能を独自の判断で利用可能にし、また、いつでも中止することができます。プレビュー機能の使用は、:new-page:"
+"`Splunk一般規約<https://www.splunk.com/en_us/legal/splunk-general-terms.html>` に従うものとします。"
+
+#: ../../_includes/private-preview.rst:5
+msgid "Use these links to navigate to the topics for role-based access control (RBAC):"
+msgstr "ロールベースのアクセス制御（RBAC）に関するトピックに移動するには、次のリンクを使用してください："
+
+#: ../../_includes/private-preview.rst:7
+msgid ":ref:`roles-and-capabilities`"
+msgstr ":ref:`roles-and-capabilities`"
+
+#: ../../_includes/private-preview.rst:8
+msgid ":ref:`roles-and-capabilities-table`"
+msgstr ":ref:`roles-and-capabilities-table`"
+
+#: ../../_includes/private-preview.rst:9
+msgid ":ref:`users-assign-roles-ph3`"
+msgstr ":ref:`users-assign-roles-ph3`"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:14 ../../private-preview/rbac/roles-and-capabilities-about.rst:18 ../../private-preview/rbac/roles-and-capabilities-table.rst:16 ../../private-preview/rbac/roles-and-capabilities-table.rst:20
+msgid "|hr|"
+msgstr "|hr|"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:16 ../../private-preview/rbac/roles-and-capabilities-table.rst:18
+msgid ":strong:`Available in Enterprise Edition`"
+msgstr ":strong:`Enterprise Editionで利用できる機能`"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:21
+msgid ""
+"Splunk Observability Clouds lets you restrict access to certain features to specific groups of users using role-based access control (RBAC). You assign roles to users. A role contains a set of capabilities. These capabilities define what actions are available to roles. For example, capabilities "
+"determine whether someone with a particular role has capabilities to create detectors or dashboards. For details about each role and the associated capabilities, see :ref:`roles-and-capabilities-table`."
+msgstr ""
+"Splunk Observability Clouds では、ロールベースのアクセス制御 (RBAC) を使用して、特定のユーザーグループに対して特定の機能へのアクセスを制限できます。ユーザーにはロールを割り当てます。ロールには一連の機能が含まれています。これらの機能は、ロールがどのようなアクションを実行できるかを定義します。たとえ"
+"ば、能力によって、特定のロールを持つ人がディテクターまたはダッシュボードを作成する能力を持っているかどうかが決まります。各ロールと関連する能力の詳細については、:ref:`roles-and-capabilities-table` を参照してください。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:23
+msgid ""
+"The new roles provide more restricted access. This supports scenarios where additional teams such as external vendors or teams that might belong to other business units, only need read-only access. Role-based access control lets you restrict users to the least-required capabilities, helping you "
+"meet compliance, business, or architectural requirements. By assigning the least required capabilties, you can help prevent users from making unwanted changes."
+msgstr ""
+"新しいロールは、より制限されたアクセスを提供します。これは、外部ベンダーや他のビジネスユニットに属するチームなど、追加チームが読み取り専用アクセスのみを必要とするシナリオをサポートします。ロールベースのアクセス制御により、ユーザーを必要最小限の機能に制限することができ、コンプライアンス、ビジネス、"
+"またはアーキテクチャの要件を満たすことができます。最低限必要な機能を割り当てることで、ユーザーが不要な変更を行うのを防ぐことができます。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:25
+msgid "Additionally, Splunk Observability Cloud role-based access control aligns with roles available in Splunk Cloud Platform, providing a consistent user and capability-based experience across Splunk Cloud Platform and Splunk Observability CLoud."
+msgstr "さらに、Splunk Observability Cloud のロールベースのアクセス制御は、Splunk Cloud Platform で利用可能なロールと整合しており、Splunk Cloud Platform と Splunk Observability Cloud で一貫したユーザーと能力ベースのエクスペリエンスを提供します。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:35
+msgid "Splunk Observability Cloud comes with the following roles predefined:"
+msgstr "Splunk Observability Cloud には、以下のロールがあらかじめ定義されています："
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:41 ../../private-preview/rbac/roles-and-capabilities-about.rst:91
+msgid ":strong:`Role`"
+msgstr ":strong:`ロール`"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:42
+msgid ":strong:`Description`"
+msgstr ":strong:`説明`"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:43 ../../private-preview/rbac/roles-and-capabilities-about.rst:99
+msgid "admin"
+msgstr "admin"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:44
+msgid "This role has the most capabilities assigned to it. An admin user has full privileges across Splunk Observability Cloud."
+msgstr "このロールには最も多くの機能が割り当てられています。adminユーザーは、Splunk Observability Cloud全体で全権限を持ちます。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:45 ../../private-preview/rbac/roles-and-capabilities-about.rst:97
+msgid "power"
+msgstr "power"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:46
+msgid "This role can access all components in Splunk Observability Cloud, access a subset of settings, and create, delete, and update charts, dashboards and detectors. This is the default role assigned to users."
+msgstr "このロールは Splunk Observability Cloud のすべてのコンポーネントにアクセスし、設定のサブセットにアクセスし、チャート、ダッシュボード、ディテクターを作成、削除、更新できます。これはユーザーに割り当てられたデフォルトのロールです。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:47
+msgid "usage"
+msgstr "usage"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:48
+msgid "This role allows a user to view the subscription usage page without being an admin. This role also has read_only privileges."
+msgstr "このロールは、ユーザーが管理者でなくてもサブスクリプションの使用状況ページを表示できるようにします。このロールにはread_only権限もあります。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:49
+msgid "read_only"
+msgstr "read_only"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:50
+msgid "This role can access all pages and objects that a power user can, but cannot create, edit, or delete objects. They have limited access to the Settings pages."
+msgstr "このロールは、power ユーザーがアクセスできるすべてのページとオブジェクトにアクセスできますが、オブジェクトの作成、編集、削除はできません。設定ページへのアクセスは制限されています。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:54
+msgid ""
+"Splunk Observability Cloud tokens also honor the role-based access control framework. Since tokens can now be assigned to roles, APIs inherit capabilities from their token. For example, an API using a token which is created with read-only role will inherit read-only permissions. This can be used "
+"take system backups with a reduced risk of introducing changes."
+msgstr ""
+"Splunk Observability Cloud トークンは、ロールベースのアクセス制御フレームワークにも対応しています。トークンにロールを割り当てることができるようになったため、API はトークンの機能を継承します。例えば、読み取り専用ロールで作成されたトークンを使用する API は、読み取り専用のアクセス許可を継承します。こ"
+"れにより、変更を加えるリスクを低減したシステムバックアップを取ることができます。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:63
+msgid "Session token APIs inherit the user's role capabilities."
+msgstr "セッショントークンAPIは、ユーザーのロール機能を継承します。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:64
+msgid "Org tokens with API authorization scope can be assigned to predefined roles from the user interface."
+msgstr "API認証スコープを持つ組織トークンは、ユーザーインターフェイスから定義済みのロールに割り当てることができます。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:65
+msgid "RUM or INGEST tokens can't be assigned a role."
+msgstr "RUM または INGEST トークンにロールを割り当てることはできません。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:67
+msgid "APIs honor capabilities based on the role defined to their token. This is important to have strict role-based security control both from the front end and the backend."
+msgstr "APIは、トークンに定義されたロールに基づいた機能を利用します。これは、フロントエンドとバックエンドの両方から厳密なロールベースのセキュリティ制御を行うために重要です。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:69
+msgid "APIs using Session Token - Session Tokens inherit individual user's role capabilities."
+msgstr "セッショントークンを使用するAPI - セッショントークンは、個々のユーザーのロールの機能を継承します。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:70
+msgid ""
+"APIs using Org Tokens - Similar to users and teams, even org tokens can be assigned a predefined role and inherit those capabilities. For example, if you are taking system backups on a regular basis, you can use read-only org token APIs to take those backups without worrying about accidental "
+"changes with APIs that have full capabilities."
+msgstr ""
+"組織トークンを使用する API - ユーザーやチームと同様に、組織トークンにも事前に定義されたロールを割り当てることができ、その機能を継承することができます。例えば、定期的にシステムのバックアップを取る場合、読み取り専用の組織トークン API を使ってバックアップを取れば、全機能を持つAPIで誤って変更を加えてし"
+"まう心配がなくなります。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:84
+msgid ""
+"You can assign multiple roles to individual users. The user receives a combination of capabilities inherited from all of their roles. Additionally, if you revoke a role from a user the change takes effect immediately. The cache is invalidated and the user no longer has access to the capabilities "
+"associated with the role that was revoked."
+msgstr ""
+"個々のユーザーに複数のロールを割り当てることができます。ユーザーは、すべてのロールから継承された機能の組み合わせを受け取ります。さらに、ユーザーからロールを取り消すと、変更は直ちに有効になります。キャッシュは無効になり、そのユーザーは取り消されたロールに関連する機能にアクセスできなくなります。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:92
+msgid ":strong:`Capabilities`"
+msgstr ":strong:`機能`"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:93
+msgid "read-only"
+msgstr "read-only"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:94
+msgid "Read-only access to most actions and pages including settings for most products except: the Subscription usage pages, and some admin pages."
+msgstr "サブスクリプション利用ページと一部の管理ページを除く、ほとんどの製品の設定を含むほとんどのアクションとページへの読み取り専用アクセス権。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:95
+msgid "subscription usage"
+msgstr "subscription usage"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:96
+msgid "Access to Subscription usage page only, plus the read-only capabilities."
+msgstr "サブスクリプション利用ページへのアクセスのみ、および読み取り専用機能。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:98
+msgid "Includes capabilities to access all components in Splunk Observability Cloud. Can access a subset of settings, and create, delete, and update charts, dashboards and detectors."
+msgstr "Splunk Observability Cloud のすべてのコンポーネントにアクセスする機能が含まれています。設定のサブセットにアクセスし、チャート、ダッシュボード、ディテクターを作成、削除、更新できます。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:100
+msgid "An admin user has full privileges across Splunk Observability Cloud."
+msgstr "admin ユーザーは Splunk Observability Cloud 全体で完全な権限を持ちます。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:101
+msgid "subscription usage and power user"
+msgstr "subscription usage and power user"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:102
+msgid "All the capabilities of a power user, plus the ability to view the Subscription usage pages for the org."
+msgstr "power ユーザーの全機能に加え、組織のサブスクリプション利用ページを表示することができます。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:103
+msgid "read_only and subscription usage"
+msgstr "read_only and subscription usage"
+
+#: ../../private-preview/rbac/roles-and-capabilities-about.rst:104
+msgid "All the capabilities of a read-only user, plus the ability to view the Subscription usage pages for the org."
+msgstr "読み取り専用ユーザーのすべての機能に加えて、その組織のサブスクリプション利用ページを表示することができます。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:-1
+msgid "Matrix of Splunk Observability Cloud user roles and capabilities."
+msgstr "Splunk Observability Cloudのユーザーのロールと機能のマトリクス。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:7
+msgid "Splunk Observability Cloud roles and capabilities"
+msgstr "Splunk Observability Cloud のロールと機能"
+
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:22
+msgid ""
+"Splunk Observability Cloud lets you restrict access to certain features to specific groups of users using role-based access control. You assign roles to users. A role contains a set of capabilities. These capabilities define what actions are available to roles. For example, capabilities determine "
+"whether someone with a particular role has capabilities to create detectors or dashboards."
+msgstr ""
+"Splunk Observability Cloud では、ロールベースのアクセス制御を使用して、特定のユーザーグループに対して特定の機能へのアクセスを制限できます。ユーザーにロールを割り当てます。ロールには一連の機能が含まれています。これらの能力は、ロールがどのようなアクションを利用できるかを定義します。たとえば、特定の"
+"ロールを持つユーザーがディテクターやダッシュボードを作成する権限を持っているかどうかは、権限によって決まります。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:27
+msgid "Metrics pipeline management"
+msgstr "メトリクスパイプライン管理"
+
+#: ../../_includes/admin/roles_alerts_detectors.rst:6 ../../_includes/admin/roles_log_observer.rst:6 ../../_includes/admin/roles_mpm.rst:6 ../../_includes/admin/roles_navs_dashbds.rst:6 ../../_includes/admin/rum-roles-caps.rst:4 ../../_includes/admin/synth-roles-caps.rst:4
+msgid ":strong:`Permission`"
+msgstr ":strong:`アクセス許可`"
+
+#: ../../_includes/admin/roles_alerts_detectors.rst:7 ../../_includes/admin/roles_apm.rst:5 ../../_includes/admin/roles_data_configuration.rst:5 ../../_includes/admin/roles_help_support.rst:6 ../../_includes/admin/roles_log_observer.rst:7 ../../_includes/admin/roles_mpm.rst:7
+#: ../../_includes/admin/roles_navigation.rst:7 ../../_includes/admin/roles_navs_dashbds.rst:7 ../../_includes/admin/rum-roles-caps.rst:5 ../../_includes/admin/synth-roles-caps.rst:5
+msgid ":strong:`Admin`"
+msgstr ":strong:`管理者（admin）`"
+
+#: ../../_includes/admin/roles_alerts_detectors.rst:8 ../../_includes/admin/roles_apm.rst:6 ../../_includes/admin/roles_data_configuration.rst:6 ../../_includes/admin/roles_help_support.rst:7 ../../_includes/admin/roles_log_observer.rst:8 ../../_includes/admin/roles_mpm.rst:8
+#: ../../_includes/admin/roles_navigation.rst:8 ../../_includes/admin/roles_navs_dashbds.rst:8 ../../_includes/admin/rum-roles-caps.rst:6 ../../_includes/admin/synth-roles-caps.rst:6
+msgid ":strong:`Power user`"
+msgstr ":strong:`パワーユーザー`"
+
+#: ../../_includes/admin/roles_alerts_detectors.rst:9 ../../_includes/admin/roles_apm.rst:8 ../../_includes/admin/roles_data_configuration.rst:7 ../../_includes/admin/roles_help_support.rst:8 ../../_includes/admin/roles_mpm.rst:9 ../../_includes/admin/roles_navigation.rst:9
+#: ../../_includes/admin/roles_navs_dashbds.rst:9 ../../_includes/admin/rum-roles-caps.rst:7 ../../_includes/admin/synth-roles-caps.rst:7
+msgid ":strong:`Usage`"
+msgstr ":strong:`使用状況`"
+
+#: ../../_includes/admin/roles_alerts_detectors.rst:10 ../../_includes/admin/roles_apm.rst:7 ../../_includes/admin/roles_data_configuration.rst:8 ../../_includes/admin/roles_help_support.rst:9 ../../_includes/admin/roles_mpm.rst:10 ../../_includes/admin/roles_navigation.rst:10
+#: ../../_includes/admin/roles_navs_dashbds.rst:10 ../../_includes/admin/rum-roles-caps.rst:8 ../../_includes/admin/synth-roles-caps.rst:8
+msgid ":strong:`Read_only`"
+msgstr ":strong:`Read_only`"
+
+#: ../../_includes/admin/roles_mpm.rst:13
+msgid ":strong:`View metrics pipeline management metric summary (no ruleset)`"
+msgstr ":strong:`メトリクスパイプライン管理メトリクスサマリーを表示する（ルールセットなし）`"
+
+#: ../../_includes/admin/roles_alerts_detectors.rst:14 ../../_includes/admin/roles_alerts_detectors.rst:15 ../../_includes/admin/roles_alerts_detectors.rst:16 ../../_includes/admin/roles_alerts_detectors.rst:17 ../../_includes/admin/roles_alerts_detectors.rst:21
+#: ../../_includes/admin/roles_alerts_detectors.rst:22 ../../_includes/admin/roles_alerts_detectors.rst:27 ../../_includes/admin/roles_alerts_detectors.rst:28 ../../_includes/admin/roles_alerts_detectors.rst:33 ../../_includes/admin/roles_alerts_detectors.rst:34
+#: ../../_includes/admin/roles_alerts_detectors.rst:39 ../../_includes/admin/roles_alerts_detectors.rst:40 ../../_includes/admin/roles_alerts_detectors.rst:41 ../../_includes/admin/roles_alerts_detectors.rst:42 ../../_includes/admin/roles_alerts_detectors.rst:45
+#: ../../_includes/admin/roles_alerts_detectors.rst:46 ../../_includes/admin/roles_alerts_detectors.rst:51 ../../_includes/admin/roles_alerts_detectors.rst:52 ../../_includes/admin/roles_alerts_detectors.rst:57 ../../_includes/admin/roles_alerts_detectors.rst:58
+#: ../../_includes/admin/roles_alerts_detectors.rst:63 ../../_includes/admin/roles_alerts_detectors.rst:64 ../../_includes/admin/roles_alerts_detectors.rst:69 ../../_includes/admin/roles_alerts_detectors.rst:70 ../../_includes/admin/roles_alerts_detectors.rst:75
+#: ../../_includes/admin/roles_alerts_detectors.rst:76 ../../_includes/admin/roles_alerts_detectors.rst:77 ../../_includes/admin/roles_alerts_detectors.rst:78 ../../_includes/admin/roles_alerts_detectors.rst:81 ../../_includes/admin/roles_alerts_detectors.rst:82 ../../_includes/admin/roles_apm.rst:11
+#: ../../_includes/admin/roles_apm.rst:12 ../../_includes/admin/roles_apm.rst:13 ../../_includes/admin/roles_apm.rst:17 ../../_includes/admin/roles_apm.rst:23 ../../_includes/admin/roles_apm.rst:24 ../../_includes/admin/roles_apm.rst:25 ../../_includes/admin/roles_apm.rst:29
+#: ../../_includes/admin/roles_apm.rst:35 ../../_includes/admin/roles_apm.rst:36 ../../_includes/admin/roles_apm.rst:37 ../../_includes/admin/roles_apm.rst:41 ../../_includes/admin/roles_data_configuration.rst:11 ../../_includes/admin/roles_data_configuration.rst:17
+#: ../../_includes/admin/roles_data_configuration.rst:18 ../../_includes/admin/roles_data_configuration.rst:23 ../../_includes/admin/roles_data_configuration.rst:29 ../../_includes/admin/roles_data_configuration.rst:30 ../../_includes/admin/roles_data_configuration.rst:31
+#: ../../_includes/admin/roles_data_configuration.rst:32 ../../_includes/admin/roles_help_support.rst:12 ../../_includes/admin/roles_help_support.rst:18 ../../_includes/admin/roles_log_observer.rst:14 ../../_includes/admin/roles_log_observer.rst:15 ../../_includes/admin/roles_log_observer.rst:16
+#: ../../_includes/admin/roles_log_observer.rst:21 ../../_includes/admin/roles_log_observer.rst:22 ../../_includes/admin/roles_log_observer.rst:23 ../../_includes/admin/roles_log_observer.rst:27 ../../_includes/admin/roles_log_observer.rst:28 ../../_includes/admin/roles_log_observer.rst:29
+#: ../../_includes/admin/roles_log_observer.rst:33 ../../_includes/admin/roles_log_observer.rst:34 ../../_includes/admin/roles_log_observer.rst:35 ../../_includes/admin/roles_log_observer.rst:39 ../../_includes/admin/roles_log_observer.rst:40 ../../_includes/admin/roles_log_observer.rst:45
+#: ../../_includes/admin/roles_log_observer.rst:46 ../../_includes/admin/roles_log_observer.rst:47 ../../_includes/admin/roles_log_observer.rst:51 ../../_includes/admin/roles_log_observer.rst:52 ../../_includes/admin/roles_log_observer.rst:57 ../../_includes/admin/roles_log_observer.rst:58
+#: ../../_includes/admin/roles_log_observer.rst:59 ../../_includes/admin/roles_log_observer.rst:63 ../../_includes/admin/roles_log_observer.rst:64 ../../_includes/admin/roles_log_observer.rst:69 ../../_includes/admin/roles_log_observer.rst:70 ../../_includes/admin/roles_log_observer.rst:71
+#: ../../_includes/admin/roles_log_observer.rst:75 ../../_includes/admin/roles_log_observer.rst:76 ../../_includes/admin/roles_log_observer.rst:81 ../../_includes/admin/roles_log_observer.rst:82 ../../_includes/admin/roles_log_observer.rst:87 ../../_includes/admin/roles_log_observer.rst:93
+#: ../../_includes/admin/roles_log_observer.rst:99 ../../_includes/admin/roles_log_observer.rst:100 ../../_includes/admin/roles_log_observer.rst:102 ../../_includes/admin/roles_log_observer.rst:105 ../../_includes/admin/roles_mpm.rst:14 ../../_includes/admin/roles_mpm.rst:15
+#: ../../_includes/admin/roles_mpm.rst:16 ../../_includes/admin/roles_mpm.rst:17 ../../_includes/admin/roles_mpm.rst:21 ../../_includes/admin/roles_mpm.rst:22 ../../_includes/admin/roles_mpm.rst:23 ../../_includes/admin/roles_mpm.rst:24 ../../_includes/admin/roles_mpm.rst:27
+#: ../../_includes/admin/roles_mpm.rst:33 ../../_includes/admin/roles_mpm.rst:34 ../../_includes/admin/roles_mpm.rst:39 ../../_includes/admin/roles_mpm.rst:40 ../../_includes/admin/roles_mpm.rst:45 ../../_includes/admin/roles_mpm.rst:46 ../../_includes/admin/roles_mpm.rst:51
+#: ../../_includes/admin/roles_mpm.rst:52 ../../_includes/admin/roles_mpm.rst:57 ../../_includes/admin/roles_mpm.rst:58 ../../_includes/admin/roles_mpm.rst:63 ../../_includes/admin/roles_mpm.rst:64 ../../_includes/admin/roles_mpm.rst:69 ../../_includes/admin/roles_navigation.rst:13
+#: ../../_includes/admin/roles_navigation.rst:14 ../../_includes/admin/roles_navigation.rst:15 ../../_includes/admin/roles_navigation.rst:16 ../../_includes/admin/roles_navigation.rst:19 ../../_includes/admin/roles_navigation.rst:25 ../../_includes/admin/roles_navigation.rst:31
+#: ../../_includes/admin/roles_navigation.rst:37 ../../_includes/admin/roles_navigation.rst:39 ../../_includes/admin/roles_navigation.rst:43 ../../_includes/admin/roles_navigation.rst:44 ../../_includes/admin/roles_navigation.rst:45 ../../_includes/admin/roles_navigation.rst:46
+#: ../../_includes/admin/roles_navigation.rst:49 ../../_includes/admin/roles_navigation.rst:55 ../../_includes/admin/roles_navigation.rst:56 ../../_includes/admin/roles_navigation.rst:57 ../../_includes/admin/roles_navigation.rst:58 ../../_includes/admin/roles_navigation.rst:61
+#: ../../_includes/admin/roles_navigation.rst:67 ../../_includes/admin/roles_navigation.rst:68 ../../_includes/admin/roles_navigation.rst:74 ../../_includes/admin/roles_navigation.rst:81 ../../_includes/admin/roles_navigation.rst:82 ../../_includes/admin/roles_navigation.rst:87
+#: ../../_includes/admin/roles_navigation.rst:88 ../../_includes/admin/roles_navigation.rst:90 ../../_includes/admin/roles_navs_dashbds.rst:13 ../../_includes/admin/roles_navs_dashbds.rst:14 ../../_includes/admin/roles_navs_dashbds.rst:15 ../../_includes/admin/roles_navs_dashbds.rst:16
+#: ../../_includes/admin/roles_navs_dashbds.rst:19 ../../_includes/admin/roles_navs_dashbds.rst:20 ../../_includes/admin/roles_navs_dashbds.rst:25 ../../_includes/admin/rum-roles-caps.rst:11 ../../_includes/admin/rum-roles-caps.rst:12 ../../_includes/admin/rum-roles-caps.rst:13
+#: ../../_includes/admin/rum-roles-caps.rst:14 ../../_includes/admin/rum-roles-caps.rst:17 ../../_includes/admin/rum-roles-caps.rst:18 ../../_includes/admin/rum-roles-caps.rst:23 ../../_includes/admin/rum-roles-caps.rst:24 ../../_includes/admin/rum-roles-caps.rst:25
+#: ../../_includes/admin/rum-roles-caps.rst:26 ../../_includes/admin/rum-roles-caps.rst:29 ../../_includes/admin/rum-roles-caps.rst:30 ../../_includes/admin/rum-roles-caps.rst:31 ../../_includes/admin/rum-roles-caps.rst:32 ../../_includes/admin/rum-roles-caps.rst:35
+#: ../../_includes/admin/rum-roles-caps.rst:36 ../../_includes/admin/rum-roles-caps.rst:37 ../../_includes/admin/rum-roles-caps.rst:38 ../../_includes/admin/rum-roles-caps.rst:41 ../../_includes/admin/rum-roles-caps.rst:42 ../../_includes/admin/rum-roles-caps.rst:43
+#: ../../_includes/admin/rum-roles-caps.rst:44 ../../_includes/admin/rum-roles-caps.rst:47 ../../_includes/admin/rum-roles-caps.rst:48 ../../_includes/admin/rum-roles-caps.rst:49 ../../_includes/admin/rum-roles-caps.rst:50 ../../_includes/admin/rum-roles-caps.rst:53
+#: ../../_includes/admin/rum-roles-caps.rst:54 ../../_includes/admin/rum-roles-caps.rst:59 ../../_includes/admin/rum-roles-caps.rst:60 ../../_includes/admin/synth-roles-caps.rst:11 ../../_includes/admin/synth-roles-caps.rst:12 ../../_includes/admin/synth-roles-caps.rst:17
+#: ../../_includes/admin/synth-roles-caps.rst:18 ../../_includes/admin/synth-roles-caps.rst:19 ../../_includes/admin/synth-roles-caps.rst:20 ../../_includes/admin/synth-roles-caps.rst:24 ../../_includes/admin/synth-roles-caps.rst:30 ../../_includes/admin/synth-roles-caps.rst:31
+#: ../../_includes/admin/synth-roles-caps.rst:32 ../../_includes/admin/synth-roles-caps.rst:33 ../../_includes/admin/synth-roles-caps.rst:36
+msgid "Yes"
+msgstr "あり"
+
+#: ../../_includes/admin/roles_mpm.rst:20
+msgid ":strong:`View metrics pipeline management metric summary with rulesets`"
+msgstr ":strong:`メトリクスパイプライン管理メトリクスサマリーをルールセットで表示する`"
+
+#: ../../_includes/admin/roles_mpm.rst:26
+msgid ":strong:`Edit default data routing`"
+msgstr ":strong:`デフォルトデータルーティングを編集する`"
+
+#: ../../_includes/admin/roles_alerts_detectors.rst:23 ../../_includes/admin/roles_alerts_detectors.rst:24 ../../_includes/admin/roles_alerts_detectors.rst:29 ../../_includes/admin/roles_alerts_detectors.rst:30 ../../_includes/admin/roles_alerts_detectors.rst:35
+#: ../../_includes/admin/roles_alerts_detectors.rst:36 ../../_includes/admin/roles_alerts_detectors.rst:47 ../../_includes/admin/roles_alerts_detectors.rst:48 ../../_includes/admin/roles_alerts_detectors.rst:53 ../../_includes/admin/roles_alerts_detectors.rst:54
+#: ../../_includes/admin/roles_alerts_detectors.rst:59 ../../_includes/admin/roles_alerts_detectors.rst:60 ../../_includes/admin/roles_alerts_detectors.rst:65 ../../_includes/admin/roles_alerts_detectors.rst:66 ../../_includes/admin/roles_alerts_detectors.rst:71
+#: ../../_includes/admin/roles_alerts_detectors.rst:72 ../../_includes/admin/roles_alerts_detectors.rst:83 ../../_includes/admin/roles_alerts_detectors.rst:84 ../../_includes/admin/roles_apm.rst:14 ../../_includes/admin/roles_apm.rst:18 ../../_includes/admin/roles_apm.rst:19
+#: ../../_includes/admin/roles_apm.rst:20 ../../_includes/admin/roles_apm.rst:26 ../../_includes/admin/roles_apm.rst:30 ../../_includes/admin/roles_apm.rst:31 ../../_includes/admin/roles_apm.rst:32 ../../_includes/admin/roles_apm.rst:38 ../../_includes/admin/roles_apm.rst:42
+#: ../../_includes/admin/roles_apm.rst:43 ../../_includes/admin/roles_apm.rst:44 ../../_includes/admin/roles_data_configuration.rst:12 ../../_includes/admin/roles_data_configuration.rst:13 ../../_includes/admin/roles_data_configuration.rst:14 ../../_includes/admin/roles_data_configuration.rst:19
+#: ../../_includes/admin/roles_data_configuration.rst:20 ../../_includes/admin/roles_data_configuration.rst:24 ../../_includes/admin/roles_data_configuration.rst:25 ../../_includes/admin/roles_data_configuration.rst:26 ../../_includes/admin/roles_help_support.rst:13
+#: ../../_includes/admin/roles_help_support.rst:14 ../../_includes/admin/roles_help_support.rst:15 ../../_includes/admin/roles_help_support.rst:19 ../../_includes/admin/roles_help_support.rst:20 ../../_includes/admin/roles_help_support.rst:21 ../../_includes/admin/roles_log_observer.rst:17
+#: ../../_includes/admin/roles_log_observer.rst:24 ../../_includes/admin/roles_log_observer.rst:30 ../../_includes/admin/roles_log_observer.rst:36 ../../_includes/admin/roles_log_observer.rst:41 ../../_includes/admin/roles_log_observer.rst:42 ../../_includes/admin/roles_log_observer.rst:48
+#: ../../_includes/admin/roles_log_observer.rst:53 ../../_includes/admin/roles_log_observer.rst:54 ../../_includes/admin/roles_log_observer.rst:60 ../../_includes/admin/roles_log_observer.rst:65 ../../_includes/admin/roles_log_observer.rst:66 ../../_includes/admin/roles_log_observer.rst:72
+#: ../../_includes/admin/roles_log_observer.rst:77 ../../_includes/admin/roles_log_observer.rst:78 ../../_includes/admin/roles_log_observer.rst:83 ../../_includes/admin/roles_log_observer.rst:84 ../../_includes/admin/roles_log_observer.rst:88 ../../_includes/admin/roles_log_observer.rst:89
+#: ../../_includes/admin/roles_log_observer.rst:90 ../../_includes/admin/roles_log_observer.rst:95 ../../_includes/admin/roles_log_observer.rst:96 ../../_includes/admin/roles_log_observer.rst:101 ../../_includes/admin/roles_log_observer.rst:106 ../../_includes/admin/roles_log_observer.rst:107
+#: ../../_includes/admin/roles_log_observer.rst:108 ../../_includes/admin/roles_mpm.rst:28 ../../_includes/admin/roles_mpm.rst:29 ../../_includes/admin/roles_mpm.rst:30 ../../_includes/admin/roles_mpm.rst:35 ../../_includes/admin/roles_mpm.rst:36 ../../_includes/admin/roles_mpm.rst:41
+#: ../../_includes/admin/roles_mpm.rst:42 ../../_includes/admin/roles_mpm.rst:47 ../../_includes/admin/roles_mpm.rst:48 ../../_includes/admin/roles_mpm.rst:53 ../../_includes/admin/roles_mpm.rst:54 ../../_includes/admin/roles_mpm.rst:59 ../../_includes/admin/roles_mpm.rst:60
+#: ../../_includes/admin/roles_mpm.rst:65 ../../_includes/admin/roles_mpm.rst:66 ../../_includes/admin/roles_mpm.rst:73 ../../_includes/admin/roles_mpm.rst:74 ../../_includes/admin/roles_navigation.rst:20 ../../_includes/admin/roles_navigation.rst:21 ../../_includes/admin/roles_navigation.rst:22
+#: ../../_includes/admin/roles_navigation.rst:26 ../../_includes/admin/roles_navigation.rst:27 ../../_includes/admin/roles_navigation.rst:28 ../../_includes/admin/roles_navigation.rst:32 ../../_includes/admin/roles_navigation.rst:33 ../../_includes/admin/roles_navigation.rst:34
+#: ../../_includes/admin/roles_navigation.rst:38 ../../_includes/admin/roles_navigation.rst:40 ../../_includes/admin/roles_navigation.rst:50 ../../_includes/admin/roles_navigation.rst:51 ../../_includes/admin/roles_navigation.rst:52 ../../_includes/admin/roles_navigation.rst:62
+#: ../../_includes/admin/roles_navigation.rst:63 ../../_includes/admin/roles_navigation.rst:64 ../../_includes/admin/roles_navigation.rst:69 ../../_includes/admin/roles_navigation.rst:83 ../../_includes/admin/roles_navigation.rst:84 ../../_includes/admin/roles_navigation.rst:89
+#: ../../_includes/admin/roles_navs_dashbds.rst:21 ../../_includes/admin/roles_navs_dashbds.rst:22 ../../_includes/admin/roles_navs_dashbds.rst:26 ../../_includes/admin/roles_navs_dashbds.rst:27 ../../_includes/admin/roles_navs_dashbds.rst:28 ../../_includes/admin/rum-roles-caps.rst:19
+#: ../../_includes/admin/rum-roles-caps.rst:20 ../../_includes/admin/rum-roles-caps.rst:55 ../../_includes/admin/rum-roles-caps.rst:56 ../../_includes/admin/rum-roles-caps.rst:61 ../../_includes/admin/rum-roles-caps.rst:62 ../../_includes/admin/synth-roles-caps.rst:13
+#: ../../_includes/admin/synth-roles-caps.rst:14 ../../_includes/admin/synth-roles-caps.rst:25 ../../_includes/admin/synth-roles-caps.rst:26 ../../_includes/admin/synth-roles-caps.rst:27 ../../_includes/admin/synth-roles-caps.rst:37 ../../_includes/admin/synth-roles-caps.rst:38
+#: ../../_includes/admin/synth-roles-caps.rst:39
+msgid "No"
+msgstr "なし"
+
+#: ../../_includes/admin/roles_mpm.rst:32
+msgid ":strong:`Add data routing exception rule`"
+msgstr ":strong:`データルーティング例外ルールを追加する`"
+
+#: ../../_includes/admin/roles_mpm.rst:38
+msgid ":strong:`Edit data routing exception rule`"
+msgstr ":strong:`データルーティング例外ルールを編集する`"
+
+#: ../../_includes/admin/roles_mpm.rst:44
+msgid ":strong:`Activate, deactivate, or delete data routing exception rule`"
+msgstr ":strong:`データルーティング例外ルールを有効化、無効化、削除する`"
+
+#: ../../_includes/admin/roles_mpm.rst:50
+msgid ":strong:`Add MTS aggregation rule`"
+msgstr ":strong:`MTS 集計ルールを追加する`"
+
+#: ../../_includes/admin/roles_mpm.rst:56
+msgid ":strong:`Edit MTS aggregation rule`"
+msgstr ":strong:`MTS 集計ルールを編集する`"
+
+#: ../../_includes/admin/roles_mpm.rst:62
+msgid ":strong:`Activate, deactivate, or delete MTS aggregation rule`"
+msgstr ":strong:`MTS 集計ルールを有効化、無効化、削除する`"
+
+#: ../../_includes/admin/roles_mpm.rst:68
+msgid ":strong:`Delete entire metrics pipeline management ruleset`"
+msgstr ":strong:`メトリクスパイプライン管理ルールセット全体を削除する`"
+
+#: ../../_includes/admin/roles_mpm.rst:70
+msgid ""
+"Yes, if default routing is real-time storage and the user deletes all aggregation rules. No, if default routing is Drop Data and the user deletes all aggregation rules. Metrics pipeline management doesn't delete the ruleset. An Admin needs to change the routing to real-time storage and delete the "
+"ruleset."
+msgstr ""
+"デフォルトのルーティングがリアルタイムストレージで、ユーザーがすべての集計ルールを削除する場合は、権限あり。デフォルトのルーティングが［Drop Data］で、ユーザーがすべての集計ルールを削除する場合は、権限なし。メトリクスパイプライン管理は、ルールセットの削除はしません。管理者がルーティングをリアルタイ"
+"ムストレージに変更して、ルールセットを削除する必要があります。"
+
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:33
+msgid "Log Observer and Log Observer Connect"
+msgstr "Log Observer と Log Observer Connect"
+
+#: ../../_includes/admin/roles_log_observer.rst:9
+msgid ":strong:`Read-only`"
+msgstr ":strong:`読み取り専用`"
+
+#: ../../_includes/admin/roles_log_observer.rst:10
+msgid ":strong:`Subscription usage`"
+msgstr ":strong:`サブスクリプションの使用状況`"
+
+#: ../../_includes/admin/roles_log_observer.rst:13
+msgid ":strong:`View Timeline`"
+msgstr ":strong:`タイムラインを表示する`"
+
+#: ../../_includes/admin/roles_log_observer.rst:20
+msgid ":strong:`Live Tail`"
+msgstr ":strong:`Live Tail`"
+
+#: ../../_includes/admin/roles_log_observer.rst:26
+msgid ":strong:`Search and filter logs`"
+msgstr ":strong:`ログを検索およびフィルターする`"
+
+#: ../../_includes/admin/roles_log_observer.rst:32
+msgid ":strong:`Aggregate logs`"
+msgstr ":strong:`ログを集計する`"
+
+#: ../../_includes/admin/roles_log_observer.rst:38
+msgid ":strong:`Create and manage field aliases`"
+msgstr ":strong:`フィールドエイリアスを作成および管理する`"
+
+#: ../../_includes/admin/roles_log_observer.rst:44
+msgid ":strong:`View individual log details`"
+msgstr ":strong:`個々のログの詳細を表示する`"
+
+#: ../../_includes/admin/roles_log_observer.rst:50
+msgid ":strong:`Create and manage log processing rules`"
+msgstr ":strong:`ログ処理ルールを作成および管理する`"
+
+#: ../../_includes/admin/roles_log_observer.rst:56
+msgid ":strong:`Apply processing rules across historical data`"
+msgstr ":strong:`過去のデータに処理ルールを適用する`"
+
+#: ../../_includes/admin/roles_log_observer.rst:62
+msgid ":strong:`Save and share Log Observer queries`"
+msgstr ":strong:`Log Observer クエリを保存および共有する`"
+
+#: ../../_includes/admin/roles_log_observer.rst:68
+msgid ":strong:`Add logs data to Splunk Observability Cloud dashboards`"
+msgstr ":strong:`ログデータを Splunk Observability Cloud ダッシュボードに追加する`"
+
+#: ../../_includes/admin/roles_log_observer.rst:74
+msgid ":strong:`Transform data with log processing rules`"
+msgstr ":strong:`ログ処理ルールでデータを変換する`"
+
+#: ../../_includes/admin/roles_log_observer.rst:80
+msgid ":strong:`Create and manage log metricization rules`"
+msgstr ":strong:`ログのメトリクス化ルールを作成および管理する`"
+
+#: ../../_includes/admin/roles_log_observer.rst:86
+msgid ":strong:`Create new S3 connection to allow infinite logging rules`"
+msgstr ":strong:`無限のロギングルールを可能にする新しい S3 接続を作成する`"
+
+#: ../../_includes/admin/roles_log_observer.rst:92
+msgid ":strong:`Create and manage infinite logging rules`"
+msgstr ":strong:`無限のロギングルールを作成および管理する`"
+
+#: ../../_includes/admin/roles_log_observer.rst:94
+msgid "Yes - after admin creates S3 connection"
+msgstr "権限あり - 管理者がS3接続を作成した後"
+
+#: ../../_includes/admin/roles_log_observer.rst:98 ../../_includes/admin/roles_navigation.rst:36
+msgid ":strong:`View org subscription usage`"
+msgstr ":strong:`組織のサブスクリプション使用状況を表示する`"
+
+#: ../../_includes/admin/roles_log_observer.rst:104
+msgid ":strong:`Set up Log Observer Connect connection to Splunk platform`"
+msgstr ":strong:`Splunk プラットフォームに Log Observer Connect 接続をセットアップする`"
+
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:39
+msgid "Alerts and detectors roles and capabilities"
+msgstr "アラートとディテクターのロールと機能"
+
+#: ../../_includes/admin/roles_alerts_detectors.rst:13
+msgid ":strong:`View alerts`"
+msgstr ":strong:`アラートを表示する`"
+
+#: ../../_includes/admin/roles_alerts_detectors.rst:20
+msgid ":strong:`Create a new detector`"
+msgstr ":strong:`新しいディテクターを作成する`"
+
+#: ../../_includes/admin/roles_alerts_detectors.rst:26
+msgid ":strong:`Resolve an alert`"
+msgstr ":strong:`アラートを解決する`"
+
+#: ../../_includes/admin/roles_alerts_detectors.rst:32
+msgid ":strong:`Subscribe to notifications for a detector`"
+msgstr ":strong:`ディテクターの通知の受信を登録する`"
+
+#: ../../_includes/admin/roles_alerts_detectors.rst:38
+msgid ":strong:`View detectors`"
+msgstr ":strong:`ディテクターを表示する`"
+
+#: ../../_includes/admin/roles_alerts_detectors.rst:44
+msgid ":strong:`Manage subscriptions for a detector`"
+msgstr ":strong:`ディテクターのサブスクリプションを管理する`"
+
+#: ../../_includes/admin/roles_alerts_detectors.rst:50
+msgid ":strong:`Update permissions for a detector`"
+msgstr ":strong:`ディテクターのアクセス許可を更新する`"
+
+#: ../../_includes/admin/roles_alerts_detectors.rst:56
+msgid ":strong:`Link a detector to teams`"
+msgstr ":strong:`ディテクターをチームにリンクする`"
+
+#: ../../_includes/admin/roles_alerts_detectors.rst:62
+msgid ":strong:`Delete, edit, mute, or clone a detector`"
+msgstr ":strong:`ディテクターを削除、編集、ミュート、複製する`"
+
+#: ../../_includes/admin/roles_alerts_detectors.rst:68
+msgid ":strong:`Disable, clone, or update an AutoDetect detector`"
+msgstr ":strong:`AutoDetect ディテクターを無効化、複製、更新する`"
+
+#: ../../_includes/admin/roles_alerts_detectors.rst:74
+msgid ":strong:`View muting rules for a detector`"
+msgstr ":strong:`ディテクターのミュートルールを表示する`"
+
+#: ../../_includes/admin/roles_alerts_detectors.rst:80
+msgid ":strong:`Create or delete muting rules for a detector`"
+msgstr ":strong:`ディテクターのミュートルールを作成および削除する`"
+
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:44
+msgid "Infrastructure Monitoring navigators"
+msgstr "Infrastructure Monitoring ナビゲーター"
+
+#: ../../_includes/admin/roles_navs_dashbds.rst:1
+msgid ":header-rows: 1"
+msgstr ":header-rows: 1"
+
+#: ../../_includes/admin/roles_navs_dashbds.rst:12
+msgid ":strong:`View navigator`"
+msgstr ":strong:`ナビゲーターを表示する`"
+
+#: ../../_includes/admin/roles_navs_dashbds.rst:18
+msgid ":strong:`Edit navigator`"
+msgstr ":strong:`ナビゲーターを編集する`"
+
+#: ../../_includes/admin/roles_navs_dashbds.rst:24
+msgid ":strong:`Delete navigator`"
+msgstr ":strong:`ナビゲーターを削除する`"
+
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:50
+msgid "Splunk Synthetic Monitoring"
+msgstr "Splunk Synthetic Monitoring"
+
+#: ../../_includes/admin/synth-roles-caps.rst:10
+msgid ":strong:`Create, delete, or update test`"
+msgstr ":strong:`テストを作成、削除、更新する`"
+
+#: ../../_includes/admin/synth-roles-caps.rst:16
+msgid ":strong:`Read test`"
+msgstr ":strong:`テストを読む`"
+
+#: ../../_includes/admin/synth-roles-caps.rst:23
+msgid ":strong:`Create or delete private location`"
+msgstr ":strong:`プライベートロケーションを作成または削除する`"
+
+#: ../../_includes/admin/synth-roles-caps.rst:29
+msgid ":strong:`Read private location`"
+msgstr ":strong:`プライベートな場所を読む`"
+
+#: ../../_includes/admin/synth-roles-caps.rst:35
+msgid ":strong:`Create, read, or delete private location token`"
+msgstr ":strong:`プライベートロケーショントークンを作成、読み取り、削除する`"
+
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:58
+msgid "Splunk Real User Monitoring"
+msgstr "Splunk Real User Monitoring"
+
+#: ../../_includes/admin/rum-roles-caps.rst:10
+msgid ":strong:`View RUM homepage`"
+msgstr ":strong:`RUMのホームページを表示する`"
+
+#: ../../_includes/admin/rum-roles-caps.rst:16
+msgid ":strong:`Create detector`"
+msgstr ":strong:`ディテクターを作成する`"
+
+#: ../../_includes/admin/rum-roles-caps.rst:22
+msgid ":strong:`View session search`"
+msgstr ":strong:`セッション検索を表示する`"
+
+#: ../../_includes/admin/rum-roles-caps.rst:28
+msgid ":strong:`View app overview dashboard`"
+msgstr ":strong:`アプリ概要ダッシュボードを表示する`"
+
+#: ../../_includes/admin/rum-roles-caps.rst:34
+msgid ":strong:`View tag spotlight`"
+msgstr ":strong:`Tag Spotlight を表示する`"
+
+#: ../../_includes/admin/rum-roles-caps.rst:40
+msgid ":strong:`View session detail page`"
+msgstr ":strong:`セッションの詳細ページを表示する`"
+
+#: ../../_includes/admin/rum-roles-caps.rst:46
+msgid ":strong:`View URL grouping rule`"
+msgstr ":strong:`URL グループ化ルールを表示する`"
+
+#: ../../_includes/admin/rum-roles-caps.rst:52
+msgid ":strong:`Create, delete, or deactivate URL grouping rule`"
+msgstr ":strong:`URL グループ化ルールを作成、削除、無効化する`"
+
+#: ../../_includes/admin/rum-roles-caps.rst:58
+msgid ":strong:`Edit or filter URL grouping rule`"
+msgstr ":strong:`URL グループ化ルールを編集またはフィルターする`"
+
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:64
+msgid "Splunk Application Performance Monitoring"
+msgstr "Splunk Application Performance Monitoring"
+
+#: ../../_includes/admin/roles_apm.rst:4 ../../_includes/admin/roles_data_configuration.rst:4 ../../_includes/admin/roles_help_support.rst:5 ../../_includes/admin/roles_navigation.rst:6
+msgid ":strong:`Capability`"
+msgstr ":strong:`機能`"
+
+#: ../../_includes/admin/roles_apm.rst:10
+msgid ":strong:`View MetricSets`"
+msgstr ":strong:`MetricSet を表示する`"
+
+#: ../../_includes/admin/roles_apm.rst:16
+msgid ":strong:`Create, edit, and delete MetricSets`"
+msgstr ":strong:`MetricSet を作成、編集、削除する`"
+
+#: ../../_includes/admin/roles_apm.rst:22
+msgid ":strong:`View Business Workflows`"
+msgstr ":strong:`ビジネスワークフローを表示する`"
+
+#: ../../_includes/admin/roles_apm.rst:28
+msgid ":strong:`Create, edit, and delete Business Workflows`"
+msgstr ":strong:`ビジネスワークフローを作成、編集、削除する`"
+
+#: ../../_includes/admin/roles_apm.rst:34
+msgid ":strong:`View extended trace retention settings`"
+msgstr ":strong:`トレース保持の拡張設定を表示する`"
+
+#: ../../_includes/admin/roles_apm.rst:40
+msgid ":strong:`Configure extended trace retention settings`"
+msgstr ":strong:`トレース保持の拡張設定を設定する`"
+
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:68
+msgid "Settings"
+msgstr "設定"
+
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:71
+msgid "General settings"
+msgstr "一般設定"
+
+#: ../../_includes/admin/roles_navigation.rst:12
+msgid ":strong:`View General Settings`"
+msgstr ":strong:`一般設定を表示する`"
+
+#: ../../_includes/admin/roles_navigation.rst:18
+msgid ":strong:`View Organization Overview`"
+msgstr ":strong:`組織概要を表示する`"
+
+#: ../../_includes/admin/roles_navigation.rst:24
+msgid ":strong:`View org access tokens`"
+msgstr ":strong:`組織アクセストークンを表示する`"
+
+#: ../../_includes/admin/roles_navigation.rst:30
+msgid ":strong:`Create, activate, edit, or deactivate an org access token`"
+msgstr ":strong:`組織アクセストークンを作成、有効化、編集、無効化する`"
+
+#: ../../_includes/admin/roles_navigation.rst:42
+msgid ":strong:`View Users`"
+msgstr ":strong:`ユーザーを表示する`"
+
+#: ../../_includes/admin/roles_navigation.rst:48
+msgid ":strong:`Invite, edit, or remove users`"
+msgstr ":strong:`ユーザーを招待、編集、削除する`"
+
+#: ../../_includes/admin/roles_navigation.rst:54
+msgid ":strong:`View Teams`"
+msgstr ":strong:`チームを表示する`"
+
+#: ../../_includes/admin/roles_navigation.rst:60
+msgid ":strong:`Create or delete team`"
+msgstr ":strong:`チームを作成または削除する`"
+
+#: ../../_includes/admin/roles_navigation.rst:66
+msgid ":strong:`Edit team name and description`"
+msgstr ":strong:`チーム名と説明を編集する`"
+
+#: ../../_includes/admin/roles_navigation.rst:70 ../../_includes/admin/roles_navigation.rst:76
+msgid "Yes, when enhanced team security is disabled"
+msgstr "チームセキュリティ強化が無効の場合、権限あり"
+
+#: ../../_includes/admin/roles_navigation.rst:71
+msgid "No, when enhanced team security is enabled"
+msgstr "チームセキュリティ強化が有効の場合、権限なし"
+
+#: ../../_includes/admin/roles_navigation.rst:73
+msgid ":strong:`Join team`"
+msgstr ":strong:`チームに参加する`"
+
+#: ../../_includes/admin/roles_navigation.rst:75
+msgid "Not applicable: A Team Manager doesn't join a team. Only an existing Team Member can be assigned this role."
+msgstr "該当なし：チームマネージャーはチームに参加しません。このロールは、既存のチームメンバーにのみ割り当てることができます。"
+
+#: ../../_includes/admin/roles_navigation.rst:77
+msgid "No, when enhanced team security is enabled. A user must be added by an Admin or Team Manager"
+msgstr "チームセキュリティ強化が有効の場合、権限なし。管理者またはチームマネージャーによってユーザーを追加する必要があります。"
+
+#: ../../_includes/admin/roles_navigation.rst:78
+msgid "Not applicable: A Team Member is already on a team and doesn't need to join."
+msgstr "該当なし：チームメンバーはすでにチームに所属しており、参加する必要はありません。"
+
+#: ../../_includes/admin/roles_navigation.rst:80
+msgid ":strong:`Add or remove team member`"
+msgstr ":strong:`チームメンバーを追加または削除する`"
+
+#: ../../_includes/admin/roles_navigation.rst:86
+msgid ":strong:`Edit notification policy`"
+msgstr ":strong:`通知ポリシーを編集する`"
+
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:77
+msgid "Data configuration"
+msgstr "データ設定"
+
+#: ../../_includes/admin/roles_data_configuration.rst:10
+msgid ":strong:`View Global Data Links`"
+msgstr ":strong:`グローバルデータリンクを表示する`"
+
+#: ../../_includes/admin/roles_data_configuration.rst:16
+msgid ":strong:`Create, delete, or clone Global Data Links`"
+msgstr ":strong:`グローバルデータリンクを作成、削除、複製する`"
+
+#: ../../_includes/admin/roles_data_configuration.rst:22
+msgid ":strong:`View Incident Managent`"
+msgstr ":strong:`Incident Management を表示する`"
+
+#: ../../_includes/admin/roles_data_configuration.rst:28
+msgid ":strong:`View APM MetricSets`"
+msgstr ":strong:` APM MetricSet を表示する`"
+
+#: ../../private-preview/rbac/roles-and-capabilities-table.rst:83
+msgid "Help and support"
+msgstr "ヘルプとサポート"
+
+#: ../../_includes/admin/roles_help_support.rst:11
+msgid ":strong:`Show Chat`"
+msgstr ":strong:`チャットを表示する`"
+
+#: ../../_includes/admin/roles_help_support.rst:17
+msgid ":strong:`Training`"
+msgstr ":strong:`トレーニング`"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:-1
+msgid "Manage users: Add one or more roles to a user in Observability Cloud."
+msgstr "ユーザーを管理する：Observability Cloud のユーザーに 1 つまたは複数のロールを追加します。"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:9
+msgid "Assign roles to users in Splunk Observability Cloud"
+msgstr "Splunk Observability Cloud のユーザーにロールを割り当てる"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:18
+msgid "You can assign roles to existing and new users to determine what they can do and which features they can access in Splunk Observability Cloud. For example, certain roles allow users to create detectors or dashboards."
+msgstr "既存ユーザーや新規ユーザーにロールを割り当てることで、Splunk Observability Cloud で何ができるか、どの機能にアクセスできるかを決めることができます。例えば、特定のロールによってユーザーはディテクターやダッシュボードを作成できます。"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:20
+msgid "Users can have multiple roles at the same time. See :ref:`roles-and-capabilities` for more information. For details about each role and the associated capabilities, see :ref:`roles-and-capabilities-table`."
+msgstr "ユーザーは同時に複数のロールを持つことができる。詳細は :ref:`roles-and-capabilities` を参照してください。各ロールと関連する機能の詳細については、:ref:`roles-and-capabilities-table` を参照してください。"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:22
+msgid "To create or manage users, you must have administrator access. To get this access, an existing administrative adds it to your user profile. See :ref:`request-admin` for more information."
+msgstr "ユーザーを作成または管理するには、管理者権限が必要です。このアクセス権を得るには、既存の管理者があなたのユーザープロファイルにこのアクセス権を追加します。詳細は、:ref:`request-admin` を参照してください。"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:25
+msgid "View roles assigned to users"
+msgstr "ユーザーに割り当てられたロールを表示する"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:27
+msgid "To see the roles assigned to users in your organization, follow these steps:"
+msgstr "組織内のユーザーに割り当てられたロールを確認するには、以下の手順に従います："
+
+#: ../../private-preview/rbac/users-assign-roles.rst:29 ../../private-preview/rbac/users-assign-roles.rst:39 ../../private-preview/rbac/users-assign-roles.rst:51 ../../private-preview/rbac/users-assign-roles.rst:65 ../../private-preview/rbac/users-assign-roles.rst:79
+msgid "From the left navigation menu, select :menuselection:`Settings` then :menuselection:`Users`."
+msgstr "左のナビゲーションメニューから、:menuselection:`Settings`、:menuselection:`Users` の順に選択します。"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:30
+msgid "The roles for all users are in the :guilabel:`Roles` column of the table."
+msgstr "全ユーザーのロールは、テーブルの :guilabel:`Roles` 列にあります。"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:35
+msgid "Assign roles when inviting new users"
+msgstr "新規ユーザーの招待時にロールを割り当てる"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:37
+msgid "To assign roles when inviting new users, follow these steps:"
+msgstr "新規ユーザーを招待する際にロールを割り当てるには、以下の手順に従います："
+
+#: ../../private-preview/rbac/users-assign-roles.rst:40
+msgid "Select :guilabel:`Invite Users`."
+msgstr ":guilabel:`Invite Users` を選択します。"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:41
+msgid "Enter the email addresses to invite."
+msgstr "招待するメールアドレスを入力します。"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:42
+msgid "Click the :guilabel:`Roles` field to select any of the available roles."
+msgstr ":guilabel:`Roles` フィールドをクリックして、利用可能なロールのいずれかを選択します。"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:43
+msgid "Select :guilabel:`Send Invitation` to confirm."
+msgstr ":guilabel:`Send Invitation` を選択して確定します。"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:47
+msgid "Assign roles to an existing user"
+msgstr "既存のユーザーにロールを割り当てる"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:49
+msgid "To assign roles to a user that's already a member of your organization, follow these steps:"
+msgstr "すでに組織のメンバーであるユーザーにロールを割り当てるには、以下の手順に従います："
+
+#: ../../private-preview/rbac/users-assign-roles.rst:52 ../../private-preview/rbac/users-assign-roles.rst:66
+msgid "Find the name of the user."
+msgstr "ユーザー名を検索します。"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:53 ../../private-preview/rbac/users-assign-roles.rst:67
+msgid "Select the :guilabel:`Actions` (|verticaldots|) menu icon next the username, then select :menuselection:`Manage Roles`."
+msgstr "ユーザー名の隣にある :guilabel:`Actions` (|verticaldots|) メニューアイコンを選択し、次に :menuselection:`Manage Roles` を選択します。"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:54
+msgid "In the :guilabel:`Manage Roles` dialog box, select one or more of the available roles, then select the right-pointing arrow to move the roles to the :guilabel:`Selected Roles` panel."
+msgstr ":guilabel:`Manage Roles` ダイアログボックスで、利用可能なロールを1つまたは複数選択し、右向き矢印を選択してロールを :guilabel:`Selected Roles` パネルに移動します。"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:55 ../../private-preview/rbac/users-assign-roles.rst:69
+msgid "Select :guilabel:`Assign Roles` to confirm."
+msgstr ":guilabel:`Assign Roles` を選択して確定します。"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:57
+msgid "You can use the :guilabel:`Add All` link to add all available roles to a user."
+msgstr ":guilabel:`Add All` リンクを使用して、あるユーザーが利用可能なすべてのロールを追加することができます。"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:61
+msgid "Remove roles from an existing user"
+msgstr "既存のユーザーからロールを削除する"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:63
+msgid "To remove roles from a user that's already a member of your organization, follow these steps:"
+msgstr "すでに組織のメンバーであるユーザーからロールを削除するには、以下の手順に従います："
+
+#: ../../private-preview/rbac/users-assign-roles.rst:68
+msgid "In the :guilabel:`Manage Roles` dialog box, select one or more of the selected roles, then select the left-pointing arrow to move the roles back to the :guilabel:`Available Roles` panel."
+msgstr ":guilabel:`Manage Roles` ダイアログボックスで、現在選択されているロールを1つまたは複数選択し、左向き矢印を選択してロールを :guilabel:`Available Roles` パネルに戻します。"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:71
+msgid "You can use the :guilabel:`Remove All` link to add all available roles to a user."
+msgstr ":guilabel:`Remove All` リンクを使用して、あるユーザーが利用可能なすべてのロールを追加することができます。"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:75
+msgid "Edit roles for multiple users"
+msgstr "複数のユーザーのロールを編集する"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:77
+msgid "To edit roles for multiple users at the same time, follow these steps:"
+msgstr "複数のユーザーのロールを同時に編集するには、以下の手順に従います："
+
+#: ../../private-preview/rbac/users-assign-roles.rst:80
+msgid "Find users using the search bar."
+msgstr "検索バーを使用してユーザーを検索します。"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:81
+msgid "Select the users you want to edit."
+msgstr "編集するユーザーを選択します。"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:82
+msgid "Select ``-`` or ``+`` in the :guilabel:`Roles` bar at the bottom of the table to remove or add roles."
+msgstr "テーブル下部の :guilabel:`Roles` バーで ``-`` または ``+`` を選択して、ロールを削除または追加します。"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:83
+msgid "In the dialog box, select the roles you want to remove or add, depending on your previous choice."
+msgstr "ダイアログボックスで、前回の選択状況に応じて、削除または追加するロールを選択します。"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:84
+msgid "Confirm your selection."
+msgstr "選択を確定します。"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:89
+msgid "Edit user roles using the API"
+msgstr "APIを使用してユーザーロールを編集する"
+
+#: ../../private-preview/rbac/users-assign-roles.rst:91
+msgid "To view, add, or remove roles using the Observability Cloud REST API, see :new-page:`Organizations <https://dev.splunk.com/observability/reference/api/organizations/latest>` in the developer documentation."
+msgstr "Observability CloudのREST APIを使用してロールを表示、追加、削除するには、開発者向けドキュメントの :new-page:`組織<https://dev.splunk.com/observability/reference/api/organizations/latest>` を参照してください。"
