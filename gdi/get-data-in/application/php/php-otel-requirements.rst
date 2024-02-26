@@ -27,7 +27,7 @@ Supported libraries and frameworks
 
 The SignalFx Tracing Library for PHP instruments the following libraries and frameworks:
 
-.. list-table:: 
+.. list-table::
    :widths: 60 40
    :width: 100%
    :header-rows: 1
@@ -35,11 +35,11 @@ The SignalFx Tracing Library for PHP instruments the following libraries and fra
    * - Library
      - Version
    * - CodeIgniter
-     - 4.0 and higher 
+     - 4.0 and higher
    * - ExtAmqp
      - All supported PHP versions
    * - Guzzle
-     - All supported PHP versions
+     - 7.0 and higher
    * - HttpAsyncClient
      - 2.x
    * - IO
@@ -55,7 +55,7 @@ The SignalFx Tracing Library for PHP instruments the following libraries and fra
    * - Slim
      - 4.x
    * - Symfony
-     - All supported PHP versions
+     - 5.4 and higher
    * - Wordpress
      - All supported PHP versions
    * - Yii

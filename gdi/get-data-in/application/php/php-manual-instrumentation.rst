@@ -79,7 +79,7 @@ To create custom metrics, follow these steps:
 
    .. code:: php
 
-      $reader = new ExportingReader((new ConsoleMetricExporterFactory())->create());
+      $reader = Globals::meterProvider();
 
       $meterProvider = MeterProvider::builder()
          ->addReader($reader)

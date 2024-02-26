@@ -63,10 +63,10 @@ The following table shows SignalFx Tracing Library for PHP environment variables
    * - ``SIGNALFX_GLOBAL_TAGS``
      - ``OTEL_RESOURCE_ATTRIBUTES``
    * - ``SIGNALFX_ACCESS_TOKEN``
-     - ``SPLUNK_ACCESS_TOKEN``
+     - Handled by the Splunk Collector
    * - ``SIGNALFX_REALM``
-     - ``SPLUNK_REALM``
+     - Handled by the Splunk Collector
    * - ``SIGNALFX_ENDPOINT_URL``
-     - ``OTEL_EXPORTER_OTLP_ENDPOINT``
+     - ``OTEL_EXPORTER_OTLP_TRACES_ENDPOINT``
    * - ``SIGNALFX_METRICS_ENDPOINT_URL``
      - ``OTEL_EXPORTER_OTLP_ENDPOINT``
