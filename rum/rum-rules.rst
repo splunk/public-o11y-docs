@@ -269,7 +269,7 @@ Use cases
 The following examples outline how to apply a rule to group URLs together according to the use case you want to solve. 
 
 
-Use a <?> wildcard to group URLs by product ID 
+Use a <*> wildcard to group URLs by product ID 
 -----------------------------------------------
 Suppose you are an online retailer and you want to group together URLs by product ID. In this example, the product ID is the letter, number combination after ``/merchandise/`` in the path of the URL. 
 
@@ -284,9 +284,9 @@ Suppose you are an online retailer and you want to group together URLs by produc
         * ``example.com/merchandise/i139sd``
         * ``example.com/merchandise/71239``
         * ``example.com/merchandise/8fsd72``
-     - ``/merchandise/<?>``
+     - ``/merchandise/<*>``
      - The result groups together all URLs with the same product ID:
-       ``https://example.com/merchandise/<?>``
+       ``https://example.com/merchandise/<*>``
        
 For this example, you need to first create a domain rule like this: 
 
