@@ -43,6 +43,8 @@ To create custom spans and traces, follow these steps:
 
 4. Register your ``ActivitySource`` by setting the ``OTEL_DOTNET_AUTO_TRACES_ADDITIONAL_SOURCES`` environmental variable. You can set the value to either ``Examples.ManualInstrumentations.Registered`` or to ``Examples.ManualInstrumentations.*``, which registers the entire prefix.
 
+See the :new-page:`OpenTelemetry official documentation <https://opentelemetry.io/docs/languages/net/instrumentation/#traces>` for additional information and examples.
+
 .. _custom-metrics-otel-dotnet:
 
 Create custom metrics
@@ -79,3 +81,5 @@ To create custom metrics, follow these steps:
    .. code:: bash
 
       OTEL_DOTNET_AUTO_METRICS_ADDITIONAL_SOURCES=My.Application
+
+See the :new-page:`OpenTelemetry official documentation <https://opentelemetry.io/docs/languages/net/instrumentation/#metrics` for additional information and examples.
