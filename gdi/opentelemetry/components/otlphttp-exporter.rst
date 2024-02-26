@@ -13,7 +13,7 @@ You can also use the OTLP exporter for advanced options to send data using the O
 
 If you need to bypass the Collector and send data in the OTLP format directly to Splunk Observability Cloud:
 
-* To send metrics, use the ``otlp`` endpoint. Find out more in the dev portal at :new-page:`Sending data points <https://dev.splunk.com/observability/docs/datamodel/ingest>`. Note that this option only accepts protobuf payloads.  
+* To send metrics, use the otlp endpoint. Find out more in the dev portal at :new-page:`Sending data points <https://dev.splunk.com/observability/docs/datamodel/ingest>`. Note that this option only accepts protobuf payloads.  
   
 * To send traces, use the gRCP endpoint. For more information, see :ref:`grpc-data-ingest`.
 
