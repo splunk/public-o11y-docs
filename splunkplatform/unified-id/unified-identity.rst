@@ -11,7 +11,7 @@ Splunk Cloud Platform offers Unified Identity with Splunk Observability Cloud.
 
 What is Unified Identity?
 ==========================================================================================
-Unified Identity is the integration of Splunk Cloud Platform and Splunk Observability Cloud. Users can access both platforms using a single identity by logging into Splunk Observability Cloud with SSO using their Splunk Cloud Platform credentials. Splunk Cloud Platform serves as the Identity Provider (IdP). You can use a third party identity provider, such as Okta, but you will lose the benefits of the integrated experience. See :ref:`unified-identity-benefits`.
+Unified Identity is the integration of Splunk Cloud Platform and Splunk Observability Cloud. Users can access both platforms using a single identity by logging into Splunk Observability Cloud with SSO using their Splunk Cloud Platform credentials. Splunk Cloud Platform serves as the Identity Provider (IdP). You can use a third party identity provider, such as Okta, but you will lose the benefits of the integrated experience. See :ref:`unified-identity-benefits`
 
 When you integrate your Splunk Cloud Platform and Splunk Observability Cloud instances and activate Unified Identity, administrators can set up all users in a central location, Splunk Cloud Platform. Splunk Cloud Platform admins control user and data access permissions for both platforms separately in respective products. For more information, see :ref:`admin-manage-users`. To learn about user roles and permissions in Splunk Cloud Platform, see :new-page:`About configuring role-based user access <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/Aboutusersandroles>`. The integration extends permissions to access data indexed in Splunk Cloud Platform to Splunk Observability Cloud applications with no administrative overhead. See :ref:`unified-id-user-provisioning` for more information.
 
@@ -120,7 +120,7 @@ If the user does not exist in Observability Cloud, the integration automatically
      - power
 
 
-The mapping process is defined by the system, and a user cannot change it at provisioning time or after. 
+The system defines the mapping process, and a user cannot change it at provisioning time or after. The mapping is strictly from Splunk Cloud Platform to Splunk Observability Cloud, and not the reverse.
 
 
 Existing Splunk Observability Cloud users
