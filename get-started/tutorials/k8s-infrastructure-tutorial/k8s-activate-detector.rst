@@ -8,7 +8,7 @@ Now that you have data flowing into Splunk Observability Cloud and you can explo
 
 To create an alert, first create a detector that monitors data for conditions you want to be alerted about. When a condition you want to be alerted about is met, the detector issues an alert.
 
-1. Access the chart you want to create a detector from. This example creates a detector based on the :guilabel:`Memory Used %` chart in :ref:`Monitor Windows Server and Linux hosts using the Hosts navigator <host-navigator-imqs>`.
+1. Access the chart you want to create a detector from. This example creates a detector based on the :guilabel:`Memory Used %` chart.
 2. Select the :guilabel:`Get Alerts` icon in the upper right of a chart. Some chart data have built-in templates that make it easy for you to create detectors for useful alert conditions. For example, in the :guilabel:`Memory Used %` chart, there is a detector template called :guilabel:`Memory utilization % greater than historical norm`.
 
 .. image:: /_images/infrastructure/images-k8s-infrastructure-tutorial/k8s-new-detector.png

@@ -1,5 +1,3 @@
-.. include:: /_includes/gdi/zero-config-preview-header.rst
-
 .. _auto-instrumentation-nodejs-k8s:
 
 ************************************************************************************
@@ -9,25 +7,51 @@ Zero Configuration Automatic Instrumentation for Kubernetes Node.js applications
 .. meta::
    :description: Use the Collector with the upstream Kubernetes Operator for automatic instrumentation to easily add observability code to your application, enabling it to produce telemetry data.
 
-You can use the OTel Collector with an upstream Operator in a Kubernetes environment to automatically instrument your Node.js applications. 
+Use the OTel Collector with the Operator in a Kubernetes environment to automatically instrument your Node.js applications. By using zero configuration automatic instrumentation, you can quickly send Node.js application data to Splunk APM without configuring the OpenTelemetry Collector or changing your application code.
 
-.. note::
-   For a specific example of how a customer automatically instruments a Node.js application, see :new-page:`https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/enable-operator-and-auto-instrumentation/otel-demo-nodejs.md`.
+To install zero configuration automatic instrumentation for Node.js, complete the following steps:
+
+#. :ref:`deploy-helm-chart-nodejs-k8s`
+#. :ref:`nodejs-k8s-verify-resources`
+#. :ref:`nodejs-k8s-set-annotations`
+#. :ref:`nodejs-k8s-view-results`
 
 Requirements
 ================================================================
 
 Zero Config Auto Instrumentation for Node.js requires the following components: 
 
-* The :ref:`Splunk OTel Collector chart <helm-chart>`: It deploys the Collector and related resources, including the OpenTelemetry Operator.
-* The OpenTelemetry Operator, which manages auto-instrumentation of Kubernetes applications. See more in the :new-page:`OpenTelemetry GitHub repo <https://github.com/open-telemetry/opentelemetry-operator>`.
-* A Kubernetes instrumentation object ``opentelemetry.io/v1alpha1``, which configures auto-instrumentation settings for applications.
+* Node.js version 14 or higher and supported libraries. See :ref:`nodejs-otel-requirements` for more information.
+* Your Splunk Observability Cloud realm and access token with ingest scope. For more information, see :ref:`admin-org-tokens`.
 
-Deploy the Helm Chart with the Operator enabled
+.. _deploy-helm-chart-nodejs-k8s:
+
+Deploy the Helm Chart with the Kubernetes Operator
 =================================================================
 
-Add certifications and deploy the Helm Chart
------------------------------------------------------
+To deploy the Helm Chart, create a file called values.yaml. In this file, you can define the settings to activate or deactivate when installing the OpenTelemetry Collector with the Helm Chart.
+
+Populate values.yaml with the following fields and values:
+
+.. code-block:: yaml
+
+  clusterName: <your_cluster_name>
+
+  # Your Splunk Observability Cloud realm and access token
+  splunkObservability:
+    realm: <splunk_realm>
+    accessToken: <splunk_access_token>
+  
+  # Activates the OpenTelemetry Kubernetes Operator
+  operator:
+    enabled: true
+
+You might need to populate the file with additional values depending on your environment. See :ref:`nodejs-add-certificates` and :ref:`zeroconfig-nodejs-traces` for more information.
+
+.. _nodejs-add-certificates:
+
+Add certificates
+----------------------------------------
 
 The Operator requires certain TLS certificates to work. Use the following command to check whether a certification manager is available:
 
@@ -36,19 +60,25 @@ The Operator requires certain TLS certificates to work. Use the following comman
    # Check if cert-manager is already installed, don't deploy a second cert-manager.
    kubectl get pods -l app=cert-manager --all-namespaces
 
-If a certification manager (or any other TLS certificate source) is not available in the cluster, then you'll need to deploy it using ``certmanager.enabled=true``. Use the following commands to deploy the Helm Chart.
+If a certification manager isn't available in the cluster, then you'll need to add ``certmanager.enabled=true`` to your values.yaml file. For example:
 
-.. code-block:: yaml 
+.. code-block:: yaml
+  :emphasize-lines: 7,8
 
-   # If cert-manager is not deployed.
-   helm install splunk-otel-collector -f ./my_values.yaml --set certmanager.enabled=true,operator.enabled=true,environment=prd -n monitoring splunk-otel-collector-chart/splunk-otel-collector
+  clusterName: my-cluster
 
-   # If cert-manager is already deployed.
-   helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=prd -n monitoring splunk-otel-collector-chart/splunk-otel-collector
+  splunkObservability:
+    realm: <splunk_realm>
+    accessToken: <splunk_access_token>
+  
+  certmanager:
+    enabled: true
+  operator:
+    enabled: true
 
 .. _zeroconfig-nodejs-traces:
 
-Ingest traces
+Set the deployment environment
 ------------------------------------------------
 
 To properly ingest trace telemetry data, the attribute ``deployment.environment`` must be onboard the exported traces. The following table demonstrates the different methods for setting this attribute:
@@ -61,31 +91,44 @@ To properly ingest trace telemetry data, the attribute ``deployment.environment`
   * - Method
     - Scope
     - Implementation
-  * - Through the ``values.yaml`` file ``environment`` configuration
+  * - Through the values.yaml file ``environment`` configuration
     - Applies the attribute to all telemetry data (metrics, logs, traces) exported through the collector.
     - The chart will set an attribute processor to add ``deployment.environment=prd`` to all telemetry data processed by the collector.
-  * - Through the ``values.yaml`` file and ``operator.instrumentation.spec.env`` or ``operator.instrumentation.spec.{instrumentation_library}.env`` configuration
+  * - Through the values.yaml file and ``operator.instrumentation.spec.env`` or ``operator.instrumentation.spec.{instrumentation_library}.env`` configuration
     - Allows you to set ``deployment.environment`` either for all auto-instrumented applications collectively or per auto-instrumentation language.
     - Add the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable, setting its value to ``deployment.environment=prd``.
   * - Through your Kubernetes application deployment, daemonset, or pod specification
     - Allows you to set ``deployment.environment`` at the level of individual deployments, daemonsets, or pods.
     - Employ the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable, assigning the value ``deployment.environment=prd``.
 
-The following examples demonstrate how to set the attribute using each method:
+The following examples show how to set the attribute using each method:
 
 .. tabs::
 
     .. tab:: Environment option
 
-      Set the ``environment`` option in the ``values.yaml`` file. This adds the ``deployment.environment`` attribute to all telemetry data the Collector receives, including data from automatically-instrumented pods.
+
+      Set the ``environment`` option in the values.yaml file. This adds the ``deployment.environment`` attribute to all telemetry data the Collector receives, including data from automatically-instrumented pods.
 
       .. code-block:: yaml
+        :emphasize-lines: 7
 
+          clusterName: my-cluster
+
+          splunkObservability:
+            realm: <splunk_realm>
+            accessToken: <splunk_access_token>
+          
           environment: prd
+          
+          certmanager:
+            enabled: true
+          operator:
+            enabled: true
 
     .. tab:: Instrumentation spec
 
-      Add the environment variable to the ``values.yaml`` instrumentation spec as shown in the following example code. This method adds the ``deployment.environment`` attribute to all telemetry data from automatically-instrumented pods.
+      Add the environment variable to the values.yaml instrumentation spec as shown in the following example code. This method adds the ``deployment.environment`` attribute to all telemetry data from automatically-instrumented pods.
 
       .. code-block:: yaml
 
@@ -129,6 +172,17 @@ The following examples demonstrate how to set the attribute using each method:
         
           kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=environment=prd
 
+Deploy the Helm Chart
+---------------------------------
+
+After configuring values.yaml, use the following command to deploy the Helm Chart:
+
+.. code-block:: bash
+
+   helm install splunk-otel-collector -f ./values.yaml
+
+.. _nodejs-k8s-verify-resources:
+
 Verify all the OpenTelemetry resources are deployed successfully
 ==========================================================================
 
@@ -156,6 +210,8 @@ Run the following commands to verify the resources are deployed correctly:
    kubectl get otelinst -n <target_application_namespace>
    # NAME                          AGE   ENDPOINT
    # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
+
+.. _nodejs-k8s-set-annotations:
 
 Set annotations to instrument Node.js applications
 ==============================================================
@@ -263,6 +319,8 @@ Instrumented pods contain an initContainer named ``opentelemetry-auto-instrument
    #   opentelemetry-auto-instrumentation:
    #     Type:        EmptyDir (a temporary directory that shares a pod's lifetime)
 
+.. _nodejs-k8s-view-results:
+
 View results at Splunk Observability APM
 ==========================================================
 
@@ -287,9 +345,13 @@ You can also use the methods shown in :ref:`zeroconfig-nodejs-traces` to configu
 
 See :ref:`advanced-nodejs-otel-configuration` for the full list of supported environment variables.
 
+.. _troubleshooting-zeroconfig-nodejs-k8s:
+
+.. include:: /_includes/gdi/troubleshoot-zeroconfig-k8s.rst
+
 Learn more
 ===========================================================================
 
 * To learn more about how Zero Config Auto Instrumentation works in Splunk Observability Cloud, see :new-page:`more detailed documentation in GitHub <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/auto-instrumentation-install.md#how-does-auto-instrumentation-work>`.
-* Refer to :new-page:`the operator pattern in the Kubernetes documentation <https://kubernetes.io/docs/concepts/extend-kubernetes/operator/>` for more information.
+* See :new-page:`the operator pattern in the Kubernetes documentation <https://kubernetes.io/docs/concepts/extend-kubernetes/operator/>` for more information.
 

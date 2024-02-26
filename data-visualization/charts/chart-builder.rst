@@ -60,15 +60,17 @@ For information about how to use the :strong:`Find Events` option, see :ref:`cha
 Enter a time series expression instead of a signal
 -------------------------------------------------------------------
 
-Another valid entry in the :strong:`Signal` field is a time series expression: a mathematical expression that depends on one or more of the other plots in the chart. Expressions are useful for ratios, rates of change, or any other composite or derived metric you can think of that can be specified using a formula.
+Another valid entry in the :strong:`Signals` field is a time series expression: a mathematical expression that depends on one or more of the other plots in the chart. Expressions are useful for ratios, rates of change, or any other composite or derived metric you can think of that can be specified using a formula.
+
+Select :strong:`Enter Formula` to enter a formula in the :strong:`Signals` field.
 
 For example, suppose you want to display the percentage of cache hits for a system. If plot A displays a count of cache hits, and plot B displays a count of cache misses, you can use the following formula in plot C to display the percentage of cache hits::
 
    (A/(A+B)) * 100
 
-Click :strong:`Enter Formula` to enter a formula in the :strong:`Signal` field.
+To see only the composite metric C on the chart, select the eye icon to the left of plots A and B to hide them from the display.
 
-.. note:: To see only the composite metric (in this case, C, the percentage value) on the chart, click the eye icon to the left of plots A and B to hide them from the display.
+.. note:: The formula field only accepts arithmetic symbols (``+``, ``/``, ``-``, ``*``), parenthesis, numbers, and letters representing the plot keys.
 
 
 Determine the kind of entry a plot is displaying

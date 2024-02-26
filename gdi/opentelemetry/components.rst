@@ -31,6 +31,7 @@ Collector components
     components/memory-ballast-extension
     components/memory-limiter-processor          
     components/mongodb-atlas-receiver
+    components/mysql-receiver
     components/oracledb-receiver
     components/otlp-exporter
     components/otlp-receiver         
@@ -48,6 +49,7 @@ Collector components
     components/splunk-apm-exporter
     components/splunk-hec-exporter
     components/splunk-hec-receiver
+    components/sqlquery-receiver     
     components/syslog-receiver 
     components/tcp-receiver     
     components/transform-processor
@@ -142,6 +144,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`mongodb-atlas-receiver` (``mongodbatlas``)
      - Retrieves metrics from MongoDB Atlas using their monitoring APIs.
      - Metrics
+   * - :ref:`mysql-receiver` (``mysql``)
+     - Queries and retrieves metrics about MySQL's global status and InnoDB tables.
+     - Metrics      
    * - :ref:`oracledb` (``oracledb``) |br|
      - Connects to an Oracle Database instance and obtains metrics such as physical reads, CPU, time, and others.
      - Metrics
@@ -175,7 +180,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`splunk-hec-receiver` (``splunk_hec``)
      - Accepts telemetry in the Splunk HEC format.
      - Metrics, logs, traces
-   * - ``sqlquery``
+   * - :ref:`sqlquery-receiver` (``sqlquery``)
      - Runs custom SQL queries to generate metrics from a database connection.
      - Metrics
    * - ``statsd``

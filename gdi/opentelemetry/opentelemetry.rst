@@ -21,6 +21,7 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     Zero config auto instrumentation <zero-config.rst>
     Discover metric sources automatically <discovery-mode.rst>
     Use the Universal Forwarder <collector-with-the-uf.rst>
+    Monitor the Collector with built-in dashboards <collector-builtin-dashboard.rst>
     Troubleshooting <troubleshooting.rst>
     Commands reference <otel-commands.rst>
     Migrate from the Smart Agent to the Collector <smart-agent/smart-agent-migration-to-otel-collector.rst>
@@ -111,7 +112,7 @@ The following table describes everything you need to start using the Collector:
   *   - Resource
       - Description
   *   - Access token
-      - Use an access token to track and manage your resource usage. Where you see ``<access_token>``, replace it with the name of your access token. See :ref:`admin-org-tokens`.
+      - Use an access token to track and manage your resource usage. Where you see ``<access_token>``, replace it with the name of your access token. Your access token needs to have the ingest authorization scope. See :ref:`admin-org-tokens`.
   *   - Realm
       - A realm is a self-contained deployment that hosts organizations. You can find your realm name on your profile page in the user interface. Where you see ``<REALM>``, replace it with the name of your organization's realm. See :new-page:`realms <https://dev.splunk.com/observability/docs/realms_in_endpoints/>`.   
   *   - Ports and endpoints
@@ -187,7 +188,7 @@ See also :ref:`otel-other-configuration-sources`.
     <h2>Monitor the Collector<a name="otel-monitoring" class="headerlink" href="#otel-monitoring" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-The default configuration automatically scrapes the Collector's own metrics and sends the data using the ``signalfx`` exporter. A built-in dashboard provides information about the health and status of Collector instances. In addition, logs are automatically collected for the Collector and Journald processes.
+Splunk Observability Cloud offers you a wide array of monitoring features, including a built-in dashboard which provides out-of-the-box information about the health and status of your deployed OTel Collector instances. Learn more at :ref:`collector-builtin-dashboard`.
 
 The Collector also offers a :ref:`zPages extension <zpages-extension>`, which provides live data about the Collector. zPages are useful for in-process diagnostics without having to depend on any back end to examine traces or metrics.
 

@@ -1,3 +1,9 @@
+.. caution::
+
+   The SignalFx Tracing Library for PHP is deprecated as of February 21, 2024 and will reach End of Support on February 21 2025. Until then, only critical security fixes and bug fixes will be provided. After the date, the library will be archived and no longer maintained.
+
+   New and existing users should consider using OpenTelemetry PHP instrumentation  which offers similar capabilities. To learn how to use OpenTelmetry PHP instrumentation refer to OpenTelemetry official documentation.
+
 .. _instrument-php-applications:
 
 ***************************************************************************
@@ -192,7 +198,7 @@ Next, configure the PHP instrumentation for Splunk Observability Cloud. See :ref
 .. _export-directly-to-olly-cloud-php:
 
 Send data directly to Splunk Observability Cloud
----------------------------------------------------
+=====================================================
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
@@ -223,3 +229,8 @@ The realm name appears in the :guilabel:`Organizations` section.
 Next, configure the PHP instrumentation for Splunk Observability Cloud. See :ref:`advanced-php-configuration` for more information.
 
 .. note:: For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
+
+Specify the source host 
+-----------------------------------------------
+
+.. include:: /_includes/gdi/apm-api-define-host.rst

@@ -39,15 +39,16 @@ The following Windows versions. All versions require using PowerShell 3.0 or new
 * Windows Server 2019 64-bit
 * Windows Server 2022 64-bit
 
-Getting started
-========================
+.. caution:: On Windows, the Collector is installed as a Windows service and its environment variables are set at the service scope, so they're only available to the Collector service and not to the entire machine.
+
+Install and use the Collector with Chef
+============================================================
 
 Download the Chef cookbook from the :new-page:`Chef Supermarket <https://supermarket.chef.io/cookbooks/splunk_otel_collector>`, which is the site for community cookbooks. 
 
 To install the Collector, include the ``splunk_otel_collector::default`` recipe in the ``run_list``, and set the attributes on the node's ``run_state``. The following is an example configuration that shows how to configure the required ``splunk_access_token`` attribute and some optional attributes:
 
 .. code-block:: yaml
-
 
     {
         "splunk-otel-collector": {
@@ -126,142 +127,118 @@ For Linux, the cookbook accepts the attributes described in the following table:
      - Destination path to the Fluentd configuration file on the node. Only applicable if ``$with_fluentd`` is set to ``true``.
      - ``/etc/otel/collector/fluentd/fluent.conf``
 
-.. _chef-zero-config-java:
+.. _chef-zero-config:
 
-Configure auto instrumentation for Java (Linux only)
--------------------------------------------------------------
+Configure auto instrumentation for Java and Node.js (Linux only)
+------------------------------------------------------------------
 
-You can automatically instrument your Java applications along with the Collector installation. Auto instrumentation removes the need to install and configure the Java agent separately. See :ref:`configure-auto-instrumentation` for more information. 
+You can automatically instrument your Java and Node.js applications along with the Collector installation. Auto instrumentation removes the need to install and configure OpenTelemetry agents separately. See :ref:`zero-config` for more information.  The applications to be instrumented on the node need to be started or restarted separately after installation or any configuration changes for auto instrumentation to take effect.
 
-The following table shows the variables that can be configured for this Chef cookbook:
+The following table shows the variables that can be configured with this Chef cookbook:
 
 .. list-table::
-   :widths: 20 30 50
+   :widths: 20 50 30
    :header-rows: 1
 
    * - Name
      - Description
      - Default value
    * - ``with_auto_instrumentation``
-     - Whether to install or manage :ref:`auto-instrumentation-java`. When set to ``true``, the ``splunk-otel-auto-instrumentation`` deb/rpm package is downloaded and installed from the Collector repository. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
+     - Whether to install or manage :ref:`auto-instrumentation-nodejs` and :ref:`auto-instrumentation-java`. When set to ``true``, the ``splunk-otel-auto-instrumentation`` deb/rpm package is downloaded and installed from the Collector repository.
      - ``false``
    * - ``auto_instrumentation_version``
-     - Version of the ``splunk-otel-auto-instrumentation`` package to install, for example, ``0.50.0``. The minimum supported version is ``0.48.0``. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
+     - Version of the ``splunk-otel-auto-instrumentation`` package to install, for example, ``0.50.0``. The minimum supported version is ``0.48`` for Java and ``0.87.0`` for Node.js.
      - ``latest``
+   * - ``auto_instrumentation_systemd``
+     - Whether to activate and configure the auto instrumentation for ``systemd`` services only. If set to ``true``, the auto instrumentation automatically environment variables are added to ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
+     - ``false``
    * - ``auto_instrumentation_ld_so_preload``
-     - By default, the ``/etc/ld.so.preload`` file on the node is configured for the ``/usr/lib/splunk-instrumentation/libsplunk.so`` shared object library provided by the ``splunk-otel-auto-instrumentation`` package and is required for auto instrumentation. Configure this variable to include additional library paths, for example, ``/path/to/my.library.so``. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
+     - By default, the ``/etc/ld.so.preload`` file on the node is configured for the ``/usr/lib/splunk-instrumentation/libsplunk.so`` shared object library provided by the ``splunk-otel-auto-instrumentation`` package and is required for system-wide auto instrumentation. Configure this variable to include additional library paths, for example, ``/path/to/my.library.so``.
      - ``''``
-   * - ``auto_instrumentation_java_agent_path``
-     - Path to the Splunk OpenTelemetry Java agent. The default path is provided by the ``splunk-otel-auto-instrumentation`` package. If the path is changed from the default value, the path should be an existing file on the node. The specified path is added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect. 
-     - ``/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar``
    * - ``auto_instrumentation_resource_attributes``
-     - Configure the OpenTelemetry instrumentation resource attributes, for example, ``deployment.environment=prod``. The specified resource attributes are added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
+     - Configure the OpenTelemetry instrumentation resource attributes, for example, ``deployment.environment=prd,my.key=my.value`` (comma-separated string of ``key=value`` pairs). The specified resource attributes are added to the ``/etc/splunk/zeroconfig/node.conf`` configuration file on the node, or ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf`` if using the ``systemd`` installation method.
      - ``''``
    * - ``auto_instrumentation_service_name``
-     - Explicitly sets the service name for the instrumented Java application, for example, ``my.service``. By default, the service name is automatically derived from the arguments of the Java executable on the node. However, if this variable is set to a non-empty value, the value overrides the derived service name and is added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
+     - Explicitly sets the service name for all instrumented applications on the node, for example, ``my.service``. By default, the service name is automatically derived for each instrumented application. However, if this variable is set to a non-empty value, the value overrides the derived service names.
      - ``''``
-   * - ``auto_instrumentation_generate_service_name``
-     - Set to ``false`` to prevent the preloader from setting the ``OTEL_SERVICE_NAME`` environment variable.
-     - ``true``
-   * - ``auto_instrumentation_disable_telemetry``
-     - Prevents the preloader from sending the ``splunk.linux-autoinstr.executions`` metric to the Collector.
-     - ``false``
    * - ``auto_instrumentation_enable_profiler``
-     - Activates or deactibvates AlwaysOn CPU Profiling.
+     - Activates or deactivates AlwaysOn CPU Profiling. To learn more, see :ref:`profiling-configuration-nodejs`.
      - ``false``
    * - ``auto_instrumentation_enable_profiler_memory``
-     - Activates or deactivates AlwaysOn Memory Profiling.
+     - Activates or deactivates AlwaysOn Memory Profiling. To learn more, see :ref:`profiling-configuration-nodejs`.
      - ``false``
    * - ``auto_instrumentation_enable_metrics``
-     - Activates or deactivates JVM metrics. 
+     - Activates or deactivates exporting instrumentation metrics.
      - ``false``
+   * - ``auto_instrumentation_otlp_endpoint``
+     - Sets the OTLP gRPC endpoint that receives traces. Only applicable for OpenTelemetry Collector versions ``0.87.0`` and higher.
+     - ``http://127.0.0.1:4317``
+   * - ``with_auto_instrumentation_sdks``
+     - The auto instrumentation language SDKs to install and activate.
+     - ``%w(java nodejs)``
+   * - ``auto_instrumentation_java_agent_path``
+     - Path to the Splunk OpenTelemetry Java agent. The default path is provided by the ``splunk-otel-auto-instrumentation`` package. If the path is changed from the default value, the path should be an existing file on the node.
+     - ``/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar``
+   * - ``auto_instrumentation_npm_path``
+     - The path to the pre-installed ``npm`` command, e.g. ``/my/custom/path/to/npm``.
+     - ``npm``
 
-Attributes for Windows
-===========================
-For Windows, the cookbook accepts the attributes described in the following table:
+Configure auto instrumentation for SignalFx .NET (Windows only)
+=================================================================
+
+You can automatically instrument your .NET applications along with the Collector installation. Auto instrumentation removes the need to install and configure the SignalFx .NET agent separately. See :ref:`zero-config` for more information. 
+
+The cookbook accepts the attributes described in the following table:
 
 .. list-table:: 
-   :widths: 25 45 30
+   :widths: 20 50 30
    :header-rows: 1
 
    * - Name
      - Description
      - Default value
-   * - ``collector_version``
-     - Version of the Collector package to install, for example, ``0.25.0``. The version should correspond to :new-page:`Github Releases <https://github.com/signalfx/splunk-otel-collector/releases>` without the preceding ``v``. Note that on Linux, the latest Collector version is installed if this parameter is not specified.
-     - None
-   * - ``splunk_access_token``
-     - The Splunk access token to authenticate requests. This attribute is required.
-     - None
-   * - ``splunk_realm``
-     - Which realm to send the data to, for example, ``us0``. The Splunk ingest and API URLs are inferred by this value. The ``SPLUNK_REALM`` environment variable is set with this value for the collector service. This attribute is required.
-     - None
-   * - ``splunk_ingest_url``
-     - Sets the Splunk ingest URL explicitly instead of the URL inferred by the ``$splunk_realm`` parameter. The ``SPLUNK_INGEST_URL`` environment variable is set with this value for the Collector service.
-     - ``https://ingest.${splunk_realm}.signalfx.com``
-   * - ``splunk_api_url``
-     - Sets the Splunk API URL explicitly instead of the URL inferred by the ``$splunk_realm`` parameter. The ``SPLUNK_API_URL`` environment variable is set with this value for the Collector service.
-     - ``https://api.${splunk_realm}.signalfx.com``
-   * - ``splunk_trace_url``
-     - Sets the Splunk trace endpoint URL explicitly instead of the URL inferred by the ``$splunk_ingest_url`` parameter. The ``SPLUNK_TRACE_URL`` environment variable is set with this value for the Collector service.
-     - ``${splunk_ingest_url}/v2/trace``
-   * - ``splunk_hec_url``
-     - Sets the Splunk HEC endpoint URL explicitly instead of the URL inferred by the ``$splunk_ingest_url`` parameter. The ``SPLUNK_HEC_URL`` environment variable is set with this value for the Collector service.
-     - ``${splunk_ingest_url}/v1/log``
-   * - ``splunk_hec_token``
-     - Sets the Splunk HEC authentication token if different than ``$splunk_access_token``. The ``SPLUNK_HEC_TOKEN`` environment variable is set with this value for the Collector service.    
-     - ``$splunk_access_token``
-   * - ``splunk_bundle_dir``
-     - The path to the Smart Agent bundle directory. The default path is provided by the Collector package. If the specified path is changed from the default value, the path should be an existing directory on the node. The ``SPLUNK_BUNDLE_DIR`` environment variable is set to this value for the Collector service. 
-     - ``/usr/lib/splunk-otel-collector/agent-bundle``
-   * - ``splunk_collectd_dir``
-     - The path to the collectd configuration directory for the Smart Agent bundle. The default path is provided by the Collector package. If the specified path is changed from the default value, the path should be an existing directory on the node. The ``SPLUNK_COLLECTD_DIR`` environment variable is set to this value for the Collector service. 
-     - ``%ProgramFiles%\Splunk\OpenTelemetry Collector\agent-bundle\run\collectd``
-   * - ``splunk_memory_total_mib``
-     - Total memory in MIB to allocate to the Collector; automatically calculates the ballast size. The ``SPLUNK_MEMORY_TOTAL_MIB`` environment variable is set to this value for the Collector service. 
-     - ``512``
-   * - ``splunk_ballast_size_mib``
-     - Sets the ballast size for the Collector explicitly instead of the value calculated from the ``$splunk_memory_total_mib`` parameter. This should be set to 1/3 to 1/2 of configured memory. The ``SPLUNK_BALLAST_SIZE_MIB`` environment variable is set to this value for the Collector service. 
-     - ``"``
-   * - ``collector_config_source``
-     - The source path to the Collector configuration YAML file. This file is copied to the ``$collector_config_dest`` path on the node. See the :new-page:`source attribute <https://puppet.com/docs/puppet/latest/types/file.html#file-attribute-source>` of the file resource for the supported value types. The default source file is provided by the Collector package.
-     - ``%ProgramFiles%\Splunk\OpenTelemetry Collector\agent_config.yaml``
-   * - ``collector_config_dest``
-     - Destination path of the Collector configuration file on the node. The ``SPLUNK_CONFIG`` environment variable is set with this value for the Collector service.
-     - ``%PROGRAMDATA%\Splunk\OpenTelemetry Collector\agent_config.yaml``
-   * - ``node['splunk_otel_collector']['collector_config']``
-     -  The Collector configuration object. Everything underneath this object gets directly converted to YAML and becomes the Collector configuration file. Using this option preempts ``collector_config_source`` functionality.
-     -  ``{}``
-   * - ``service_user`` and ``$service_group``
-     - Sets the user or group ownership for the Collector service. The user or group is created if they do not exist.
-     - ``splunk-otel-collector``
-   * - ``package_stage``
-     - The Collector package repository stage to use. Can be ``release``, ``beta``, or ``test``.
-     - ``release``
-   * - ``with_fluentd``
-     - Whether to install or manage Fluentd and dependencies for log collection. On Linux, the dependencies include ``capng_c`` for activating Linux capabilities, ``fluent-plugin-systemd`` for systemd journal log collection, and the required libraries and development tools.
-     - ``true``
-   * - ``fluentd_version``
-     -  Version of the td-agent (Fluentd) package to install 
-     -  ``4.3.1`` 
-   * - ``fluentd_config_source``
-     - Source path to the Fluentd configuration file. This file is copied to the ``$fluentd_config_dest`` path on the node. See the :new-page:`source attribute <https://puppet.com/docs/puppet/latest/types/file.html#file-attribute-source>` of the file resource for the supported value types. The default source file is provided by the Collector package. Only applicable if ``$with_fluentd`` is set to ``true``.
-     - ``%SYSTEMDRIVE%\opt\td-agent\etc\td-agent\td-agent.conf``
-   * - ``with_auto_instrumentation``
-     - Whether to install or manage :ref:`auto-instrumentation-java`. When set to ``true``, the ``splunk-otel-auto-instrumentation`` deb/rpm package is downloaded and installed from the Collector repository. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
+   * - ``with_signalfx_dotnet_instrumentation``
+     - Whether to install or manage :ref:`auto-instrumentation-dotnet`. When set to ``true``, the ``signalfx-dotnet-tracing`` MSI package will be downloaded and installed, and the Windows registry will be updated based on other configuration options.
      - ``false``
-   * - ``auto_instrumentation_version``
-     - Version of the ``splunk-otel-auto-instrumentation`` package to install, for example, ``0.50.0``. The minimum supported version is ``0.48.0``. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
-     - ``latest``
-   * - ``auto_instrumentation_ld_so_preload``
-     - By default, the ``/etc/ld.so.preload`` file on the node is configured for the ``/usr/lib/splunk-instrumentation/libsplunk.so`` shared object library provided by the ``splunk-otel-auto-instrumentation`` package and is required for auto instrumentation. Configure this variable to include additional library paths, for example, ``/path/to/my.library.so``. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
+   * - ``signalfx_dotnet_auto_instrumentation_version``
+     - Version of the ``signalfx-dotnet-tracing`` MSI package to download and install.
+     - ``1.1.0``
+   * - ``signalfx_dotnet_auto_instrumentation_msi_url``
+     - Specify the URL to download the MSI from a custom host, for example ``https://my.host/signalfx-dotnet-tracing-1.0.0-x64.msi``. If specified, the ``signalfx_dotnet_auto_instrumentation_version`` option is ignored.
+     - ``https://github.com/signalfx/signalfx-dotnet-tracing/releases/download/v{{ signalfx_dotnet_auto_instrumentation_version }}/signalfx-dotnet-tracing-{{ signalfx_dotnet_auto_instrumentation_version }}-x64.msi``
+   * - ``signalfx_dotnet_auto_instrumentation_iisreset``
+     - By default, the ``iisreset.exe`` command will be executed after installation/configuration in order for any changes to take effect for IIS applications. Set this option to ``false`` to skip this step if IIS is managed separately or is not applicable.
+     -  ``false``
+   * - ``signalfx_dotnet_auto_instrumentation_system_wide``
+     - Whether to configure auto instrumentation for all .NET applications on the node. When set to ``true``, all attributes and environment variables are added to the ``HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment`` registry key.
+     - ``false``
+   * - ``signalfx_dotnet_auto_instrumentation_environment``
+     - Sets the deployment environment variable that is reported to Splunk APM, for example ``production``. The value is assigned to the ``SIGNALFX_ENV`` environment variable in the Windows registry.
      - ``''``
-   * - ``auto_instrumentation_java_agent_path``
-     - Path to the Splunk OpenTelemetry Java agent. The default path is provided by the ``splunk-otel-auto-instrumentation`` package. If the path is changed from the default value, the path should be an existing file on the node. The specified path is added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect. 
-     - ``/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar``
-   * - ``auto_instrumentation_resource_attributes``
-     - Configure the OpenTelemetry instrumentation resource attributes, for example, ``deployment.environment=prod``. The specified resource attributes are added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
+   * - ``signalfx_dotnet_auto_instrumentation_service_name``
+     - Sets the service name for the instrumented application, for example, ``my-service``. The value is assigned to the ``SIGNALFX_SERVICE_NAME`` environment variable in the Windows registry.
      - ``''``
-   * - ``auto_instrumentation_service_name``
-     - Explicitly sets the service name for the instrumented Java application, for example, ``my.service``. By default, the service name is automatically derived from the arguments of the Java executable on the node. However, if this variable is set to a non-empty value, the value overrides the derived service name and is added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
-     - ``''``
+   * - ``signalfx_dotnet_auto_instrumentation_enable_profiler``
+     - Activates or deactivates AlwaysOn Profiling. The value will be assigned to the ``SIGNALFX_PROFILER_ENABLED`` environment variable in the Windows registry.
+     - ``false``
+   * - ``signalfx_dotnet_auto_instrumentation_enable_profiler_memory``
+     - Activates or deactivates AlwaysOn Memory Profiling. The value will be assigned to the ``SIGNALFX_PROFILER_MEMORY_ENABLED`` environment variable in the Windows registry.
+     - ``false``
+   * - ``signalfx_dotnet_auto_instrumentation_additional_options``
+     - Hash of additional options to be added to the Windows registry in addition to the options above. To learn more, see :ref:`advanced-dotnet-configuration`.
+     - ``{}``
+
+Additional environment variables
+======================================================
+
+Use ``collector_additional_env_vars`` to include any additional environment variables from the Collector configuration file for the Collector's service. ``{}`` by default. 
+
+For example, if the Collector's configuration file includes references to ``${MY_CUSTOM_VAR1}`` and ``${MY_CUSTOM_VAR2}``, specify the following to allow the Collector service to expand these variables:
+
+.. code-block:: yaml
+
+  collector_additional_env_vars: {'MY_CUSTOM_VAR1' => 'value1', 'MY_CUSTOM_VAR2' => 'value2'}
+
+On Linux, the variables/values will be added to the ``/etc/otel/collector/splunk-otel-collector.conf`` systemd environment file. 
+
+On Windows, the variables/values will be added to the Environment value under the ``HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\splunk-otel-collector`` registry key.

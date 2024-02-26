@@ -4,8 +4,6 @@
 Set up Splunk APM
 *****************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn how to set up Splunk APM to get started monitoring applications.
 
@@ -46,4 +44,3 @@ The following resources provide additional information about Splunk APM:
 
 * For an overview of important terms and concepts in Splunk APM, see :ref:`apm-key-concepts`.
 * For a series of Splunk APM scenarios, see :ref:`apm-scenarios-intro`.
-* For a set of interactive walkthroughs of Splunk APM, see :new-page:`APM Scenarios <https://quickdraw.splunk.com/redirect/?product=Observability&location=apm-walkthrough&version=current>`. 
