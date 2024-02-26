@@ -86,10 +86,5 @@ To bypass the Collector and send data directly to Splunk Observability Cloud, se
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
+To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
-#. Open the navigation menu in Splunk Observability Cloud.
-#. Select :menuselection:`Settings`.
-#. Select your username.
-
-The realm name appears in the :guilabel:`Organizations` section.

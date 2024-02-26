@@ -19,13 +19,7 @@ The gRPC ingest endpoint for traces is ``ingest.<realm>.signalfx.com:443``, wher
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-To find the realm name of your account, follow these steps: 
-
-#. Open the navigation menu in Splunk Observability Cloud.
-#. Select :menuselection:`Settings`.
-#. Select your username. 
-
-The realm name appears in the :guilabel:`Organizations` section.
+To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
 Configure the Splunk OpenTelemetry Collector
 -----------------------------------------------
