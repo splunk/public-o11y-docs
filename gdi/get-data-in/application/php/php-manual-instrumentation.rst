@@ -79,11 +79,7 @@ To create custom metrics, follow these steps:
 
    .. code:: php
 
-      $reader = Globals::meterProvider();
-
-      $meterProvider = MeterProvider::builder()
-         ->addReader($reader)
-         ->build();
+      $meterProvider = Globals::meterProvider();
 
 3. Create an instrument. For example, a gauge:
 
