@@ -7,8 +7,8 @@ OpenTelemetry Java 2.0 also includes new metrics. For a full list of OpenTelemet
   :width: 100%
   :widths: 30 70
   
-  * - Old name (Micrometer)
-    - New name or OTel Java 2.0 equivalent
+  * - 1.x name (Micrometer)
+    - 2.0 name or OTel Java 2.0 equivalent
   * - ``runtime.jvm.classes.loaded``
     - ``jvm.class.count``
   * - ``runtime.jvm.classes.unloaded``
@@ -90,4 +90,4 @@ OpenTelemetry Java 2.0 also includes new metrics. For a full list of OpenTelemet
   * - ``executor.tasks.completed``
     - No equivalent
 
-For more information on the HTTP semantic convention changes, see :new-page:`HTTP semantic convention migration guide <https://github.com/open-telemetry/semantic-conventions/blob/main/docs/http/migration-guide.md#summary-of-changes>`.
+For more information on the HTTP semantic convention changes, see :new-page:`HTTP semantic convention stability migration guide <https://github.com/open-telemetry/semantic-conventions/blob/main/docs/http/migration-guide.md#summary-of-changes>` on GitHub.
