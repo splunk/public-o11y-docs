@@ -21,7 +21,7 @@ The following instructions assume that you're sending Java application metrics u
 To migrate from OpenTelemetry Java 1.x to OpenTelemetry Java 2.x, meet the following requirements:
 
 - Splunk Distribution of OpenTelemetry Collector version 0.95 or higher deployed
-- Administrator permissions in Splunk Observability Cloud. See :ref:`roles-phase1`
+- Administrator permissions in Splunk Observability Cloud. See :ref:`roles-table-phase`
 
 If you're already instrumenting your Java services using the Splunk Distribution of OpenTelemetry Java 1.x or the equivalent upstream instrumentation, you can already migrate to the version 2.0 and higher of the Java agent.
 
