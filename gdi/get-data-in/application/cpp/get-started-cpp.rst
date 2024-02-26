@@ -126,7 +126,7 @@ Follow these steps to create spans:
 
 For more information about the types of spans you can create, see :new-page:`https://opentelemetry.io/docs/languages/cpp/instrumentation/#traces`.
 
-The local instance of the OpenTelemetry Collector listens for these spans and sends them to Splunk Observability Cloud. You can then see your data in Splunk APM.
+While the application is running, your local instance of the OpenTelemetry Collector listens for these spans and sends them to Splunk Observability Cloud. You can then see your data in Splunk APM.
 
 .. _cpp-send-data-directly:
 
