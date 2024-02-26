@@ -5,8 +5,7 @@ iOS for mobile Splunk On-Call
 ************************************************************************
 
 .. meta::
-   :description: This topic will help iOS users understand the features and capabilities that are specific to the iOS version of the Splunk On-Call
-mobile application.
+   :description: This topic will help iOS users understand the features and capabilities that are specific to the iOS version of the Splunk On-Call mobile application.
 
 
 This topic will help iOS users understand the features and capabilities that are specific to the iOS version of the Splunk On-Call
@@ -15,7 +14,7 @@ mobile application.
 Add Splunk On-Call contact numbers
 ====================================
 
-Splunk On-Call uses a total of six source phone numbers for delivery of phone call and SMS notifications in the US.  For the full list of numbers, see :ref:`spoc-numbers`. This is part of a load balancing strategy that helps us ensure timely delivery of notifications. You do not need to manually create a contact and add these numbers. There is a feature within the app that will do this for you.
+Splunk On-Call uses a total of six source phone numbers for delivery of phone call and SMS notifications in the US.  For the full list of numbers, see :ref:`mobile-get-started`. This is part of a load balancing strategy that helps us ensure timely delivery of notifications. You do not need to manually create a contact and add these numbers. There is a feature within the app that will do this for you.
 
 Select the :guilabel:`Settings` menu in the bottom right corner of the application, select the :guilabel:`Notifications` button, then  choose :guilabel:`Add Splunk On-Call to Your Contacts`.
 
@@ -110,21 +109,11 @@ Ack From Lock Screen
 
 One of the Splunk On-Call notification options is a push notification to your iOS device. When being notified via PUSH notification while your phone locked, you have the convenience to acknowledge the alert directly from the lock-screen.
 
-.. note:: This looks different on iPhone 6 and earlier versus iPhone 6s
-and later. 
 
-/_images/spoc/Screen-Shot-2020-06-03-at-1.43.32-PM.png
 
- 
-
- 
-
--  By Swiping to the left, you will see Manage \| View \| Clear to
-   select from
--  For iPhone 6s and later, press hard to activate the 3D touch feature
-   and reveal all of the actions and options you can take
--  After you have acknowledged an incident, you'll receive a success
-   notification confirming that your acknowledgment was successful
+-  By Swiping to the left, you will see Manage \| View \| Clear to select from
+-  For iPhone 6s and later, press hard to activate the 3D touch feature and reveal all of the actions and options you can take
+-  After you have acknowledged an incident, you'll receive a success notification confirming that your acknowledgment was successful
 
 
 

@@ -72,5 +72,5 @@ To revert an on-call take, click the “clear take” button from the popover as
 
 Status page
 ----------------
-You can relay service status updates via statuspage.io by following these instructions in :ref:`statuspage-integration`.
+You can relay service status updates via statuspage.io by following these instructions in :ref:`Statuspage-spoc`.
 
