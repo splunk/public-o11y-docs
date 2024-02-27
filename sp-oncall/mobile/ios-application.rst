@@ -111,7 +111,7 @@ One of the Splunk On-Call notification options is a push notification to your iO
 
 
 
--  By Swiping to the left, you will see Manage \| View \| Clear to select from
+-  By Swiping to the left, you will see :guilabel:`Manage | View | Clear` to select from
 -  For iPhone 6s and later, press hard to activate the 3D touch feature and reveal all of the actions and options you can take
 -  After you have acknowledged an incident, you'll receive a success notification confirming that your acknowledgment was successful
 
@@ -120,36 +120,39 @@ One of the Splunk On-Call notification options is a push notification to your iO
 iOS App Troubleshooting
 -----------------------
 
-**How to Submit a Swipe Report**
+How to submit a swipe report
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Swipe across the screen from right to left with two fingers**
+Swipe across the screen from right to left with two fingers
 
- _images/spock/Swipe-Report.png
+.. image:: /_images/spoc/mob-ios6.png
+    :width: 100%
 
 
 
 -  Swipe from right to left with two fingers and this window will appear
--  Select ‘**Report a Bug**' or ‘**Suggest an Improvement**'
+-  Select :guilabel:`Report a Bug` or :guilabel:`Suggest an Improvement`
 -  From there you will be prompted in another screen where you can add more information to your report, take a screen recording, screenshot, or attach a screenshot from your camera roll.
 
 
-**Reset your Mobile Device in Splunk On-Call:**
+Reset your mobile device in Splunk On-Call:
 
-From your mobile device: 1. Log out of the mobile app (Click the
-settings icon (gear)) 2. Delete the mobile app from your device
-entirely.
+From your mobile device: 
+#. Log out of the mobile app by selecting the settings icon (gear). 
+#. Delete the mobile app from your device entirely.
 
-**From the webUI:** 3. Log in to your account and access your personal
-profile (Click your username in the top right corner and select “Your
-profile”) 4. Delete the device from your contact methods (You do not
-need to remove any phone numbers associated with the device, just the
-device itself)
+From the webUI: 
 
-**From the mobile device:** 5. Re-install the Splunk On-Call Mobile app
-1. Log in to the Splunk On-Call app.
+#. Log in to your account and access your personal profile by selecting your username in the top right corner. Select “Your
+profile” 
+#. Delete the device from your contact methods. You do not need to remove any phone numbers associated with the device, just the
+device itself.
 
-This process will redo the device association process and often clears
-up any issues with the app.
+From the mobile device:
+
+#. Re-install the Splunk On-Call Mobile app.
+#. Log in to the Splunk On-Call app.
+
+This process will redo the device association process and often clears up any issues with the app.
 
 

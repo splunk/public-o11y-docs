@@ -13,19 +13,21 @@ What is Splunk On-Call?
     onboarding-milestones
     spoc-support
     spoc-system-requirements
+    system-reqts
     admin-permissions
     admin-quick-start
     alert-admin
     egress-filtering-cloudflare
     global-admin
     stakeholders
-    team-admin-setup
+    team-admin
     team-dashboard
     timeline
     tls-security-protocol
     user-roles-permissions
     user-training
     usernames
+    user-role.rst
 
 
 
