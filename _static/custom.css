@@ -309,3 +309,7 @@ a.external:not(.image-reference):after {
    background-size: contain;
    display: inline-block;
 }
+
+.relations{
+    display: none !important;
+}
