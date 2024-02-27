@@ -82,7 +82,7 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
 
           acs observability pairing-status-by-id --pairing-id "GGPH8FPAAAA" --o11y-access-token "GrkvoDav1M-FNyxdONtK2Q"
 
-   Replace the pairing id and the access token with your own values. The system returns a status message showing whether or not the pairing was a success. 
+  Replace the pairing id and the access token with your own values. The system returns a status message showing whether or not the pairing was a success. 
 
    .. image:: /_images/splunkplatform/unifiedID-pairingSuccess.png
      :width: 90%
