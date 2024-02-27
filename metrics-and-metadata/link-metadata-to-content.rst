@@ -17,6 +17,8 @@ Global data links let you link metadata displayed in Splunk Observability Cloud 
 
 * Kibana logs
 
+* Splunk RUM 
+
 In Observability Cloud, metadata (data about your data) includes :ref:`dimensions <metadata-dimension>`, :ref:`properties <custom-properties>`, and :ref:`tags <metadata-infra-tags>`. Metadata displays in the following locations in the product:
 
 * Alerts
