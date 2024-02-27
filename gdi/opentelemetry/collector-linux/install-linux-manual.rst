@@ -175,8 +175,8 @@ If you prefer to install the Collector without the installer script or the Debia
 
 Note that:
 
-* Find the releases in GitHub at :new-page:`Splunk OTel Collector releases <https://github.com/signalfx/splunk-otel-collector/releases>`.
 * You need to have root privileges.
+* Find the releases in GitHub at :new-page:`Splunk OTel Collector releases <https://github.com/signalfx/splunk-otel-collector/releases>`.
 * To install the ``setcap`` dependency and the Collector package, replace ``<path to splunk-otel-collector deb/rpm>`` with the local path to the downloaded Collector package.
 
 .. tabs:: 
@@ -288,7 +288,7 @@ To upgrade the Auto Instrumentation package, run:
 
          sudo dpkg -i <path to splunk-otel-auto-instrumentation deb>
 
-   .. tab:: RPM with yum 
+   .. tab:: RPM 
 
       .. code-block:: bash
 
