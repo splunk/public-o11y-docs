@@ -99,17 +99,15 @@ The following examples show how to create a custom tag for an existing span:
 
    .. code-tab:: csharp .NET
 
-      // SignalFx Instrumentation for .NET
+      // Splunk Distribution of OpenTelemetry .NET
 
-      using OpenTracing;
-      using OpenTracing.Util;
+      using var myActivity = MyActivitySource.StartActivity("SayHello");
 
-      // A scope for the span must already exist
+      activity?.SetTag("operation.value", 1);
+      activity?.SetTag("operation.name", "Saying hello!");
+      activity?.SetTag("operation.other-stuff", new int[] { 1, 2, 3 });
 
-      var span = scope.Span;
-      span.SetTag("some.tag", "some value");
-
-      // You can also set global tags using the SIGNALFX_GLOBAL_TAGS 
+      // You can also set global tags using the OTEL_RESOURCE_ATTRIBUTES
       // environment variable, which accepts a list of comma-separated key-value
       // pairs. For example, key1:val1,key2:val2.
 
@@ -135,28 +133,19 @@ The following examples show how to create a custom tag for an existing span:
          // Other activities
       }
 
-      // You can also set global tags using the OTEL_RESOURCE_ATTRIBUTES	
+      // You can also set global tags using the OTEL_RESOURCE_ATTRIBUTES
       // environment variable, which accepts a list of comma-separated key-value
-      // pairs. For example, key1:val1,key2:val2. 
+      // pairs. For example, key1:val1,key2:val2.
 
    .. code-tab:: ruby Ruby
 
-      # SignalFx Ruby Tracing Library
+      # OpenTelemetry Ruby
 
-      require "splunk/otel"
+      require "opentelemetry/sdk"
 
-      module BasicExample
-         def some_spans
-            Splunk::Otel.configure
-            tracer = OpenTelemetry.tracer_provider.tracer("mytracer")
-            # Create a span with custom attributes or tags
-            tracer.in_span("basic-example-span-1", attributes: { "hello" => "world", "some.number" => 1024 }) do |_span|
-               tracer.in_span("basic-example-span-2") do |span|
-               # Add span attributes after creation
-               span.set_attribute("animals", ["splunk", "observability"])
-               end
-            end
-         end
+      current_span = OpenTelemetry::Trace.current_span
+
+      current_span.set_attribute("animals", ["elephant", "tiger"])
 
       # You can also set global tags using the OTEL_RESOURCE_ATTRIBUTES	
       # environment variable, which accepts a list of comma-separated key-value
@@ -166,17 +155,27 @@ The following examples show how to create a custom tag for an existing span:
       
       <?php
 
-      // SignalFx PHP Tracing Library
+      // OpenTelemetry PHP
 
       use SignalFx\GlobalTracer;
 
-      $tracer = GlobalTracer::get(); //  Will provide the tracer instance used by provided instrumentations
-      $customizedSpan = $tracer->startActiveSpan('myApplicationLogic')->getSpan();
-      $customizedSpan->setTag('some.tag', 'some value');
+      private function rollOnce() {
+         $parent = OpenTelemetry\API\Trace\Span::getCurrent();
+         $scope = $parent->activate();
+         try {
+            $span = $this->tracer->spanBuilder("rollTheDice")->startSpan();
+            $result = random_int(1, 6);
+            $span->setAttribute('dicelib.rolled', $result);
+            $span->end();
+         } finally {
+            $scope->detach();
+         }
+         return $result;
+      }
 
       // You can also set global tags using the SIGNALFX_TRACE_GLOBAL_TAGS
       // environment variable, which accepts a list of comma-separated key-value
-      // pairs. For example: key1:val1,key2:val2. 
+      // pairs. For example: key1:val1,key2:val2.
       ?>
 
 .. _otel-span-tags: 
