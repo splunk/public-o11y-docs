@@ -56,7 +56,7 @@ Splunk Cloud Platform customers who want to purchase Splunk Observability Cloud 
 
 Existing Splunk Observability Cloud customers
 ------------------------------------------------------------------------------------------
-Customers who already have a Splunk Cloud Platform account and a Splunk Observability Cloud account must take the following actions to set up Unified Identity:
+If you already have a Splunk Cloud Platform account and a Splunk Observability Cloud account, take the following actions to set up Unified Identity:
 
 1. Turn on token authentication to allow Splunk Observability Cloud to view your Splunk Cloud Platform logs. See :new-page:`Enable or disable token authentication <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how.
 
@@ -64,6 +64,8 @@ Customers who already have a Splunk Cloud Platform account and a Splunk Observab
 
 3. To pair orgs, open Terminal and enter the following Admin Config Services (ACS) command:
 
+   .. code-block:: bash
+    
    ``acs observability pair --o11y-access-token "GrkvoDav1M-FNyxdONtK2Q"``
 
    Replace the access token, ``GrkvoDav1M-FNyxdONtK2Q`` in the example above, with the user API access token you retrieved from Splunk Observability Cloud in previous step.
@@ -76,6 +78,8 @@ Customers who already have a Splunk Cloud Platform account and a Splunk Observab
 
 4. You can use the pairing id to get the current status of the pairing. To get the status, run the following ACS command:
 
+  .. code-block:: bash
+
    ``acs observability pairing-status-by-id --pairing-id "GGPH8FPAAAA" --o11y-access-token "GrkvoDav1M-FNyxdONtK2Q"``
 
    Replace the pairing id and the access token with your own values. The system returns a status message showing whether or not the pairing was a success. 
@@ -85,7 +89,7 @@ Customers who already have a Splunk Cloud Platform account and a Splunk Observab
      :alt: This screenshot shows a success status for the new pairing.
 
 
-Users will receive an email telling them to authenticate to Splunk Observability Cloud using the new authentication method through Splunk Cloud Platform SSO. Note that users can continue to use their previous login method. If you want to force all users to authenticate through Splunk Cloud Platform SSO, reach out to Splunk Customer Support to disable local login. To disable login through a third party identity provider, go to :strong:`Data Management` in Observability Cloud, select the appropriate integration (for example, Okta), and select :strong:`Deactivate`. 
+Users will receive an email telling them to authenticate to Splunk Observability Cloud using the new authentication method through Splunk Cloud Platform SSO. Note that users can continue to use their previous login method. If you want to force all users to authenticate through Splunk Cloud Platform SSO, reach out to Splunk Customer Support to deactivate local login. To deactivate login through a third party identity provider, go to :strong:`Data Management` in Observability Cloud, select the appropriate integration (for example, Okta), and select :strong:`Deactivate`. 
 
 .. _unified-id-user-provisioning:
 
