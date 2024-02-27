@@ -66,7 +66,7 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
 
    .. code-block:: bash
     
-   ``acs observability pair --o11y-access-token "GrkvoDav1M-FNyxdONtK2Q"``
+           ``acs observability pair --o11y-access-token "GrkvoDav1M-FNyxdONtK2Q"``
 
    Replace the access token, ``GrkvoDav1M-FNyxdONtK2Q`` in the example above, with the user API access token you retrieved from Splunk Observability Cloud in previous step.
 
@@ -80,7 +80,7 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
 
   .. code-block:: bash
 
-   ``acs observability pairing-status-by-id --pairing-id "GGPH8FPAAAA" --o11y-access-token "GrkvoDav1M-FNyxdONtK2Q"``
+          ``acs observability pairing-status-by-id --pairing-id "GGPH8FPAAAA" --o11y-access-token "GrkvoDav1M-FNyxdONtK2Q"``
 
    Replace the pairing id and the access token with your own values. The system returns a status message showing whether or not the pairing was a success. 
 
