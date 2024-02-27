@@ -119,6 +119,12 @@ If the user does not exist in Observability Cloud, the integration automatically
    * - user
      - power
 
+   * - n/a
+     - usage
+
+   * - n/a
+     - read_only
+
 
 The system defines the mapping process, and a user cannot change it at provisioning time or after. The mapping is strictly from Splunk Cloud Platform to Splunk Observability Cloud, and not the reverse.
 
