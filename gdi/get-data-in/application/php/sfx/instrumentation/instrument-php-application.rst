@@ -2,7 +2,7 @@
 
    The SignalFx Tracing Library for PHP is deprecated as of February 21, 2024 and will reach End of Support on February 21 2025. Until then, only critical security fixes and bug fixes will be provided. After the date, the library will be archived and no longer maintained.
 
-   New and existing users should consider using OpenTelemetry PHP instrumentation  which offers similar capabilities. To learn how to use OpenTelmetry PHP instrumentation refer to OpenTelemetry official documentation.
+   If you want to instrument new or existing PHP applications, use :ref:`OpenTelemetry PHP instrumentation <get-started-php>`, which offers similar capabilities.
 
 .. _instrument-php-applications:
 
@@ -218,19 +218,13 @@ To bypass the OTel Collector and send data directly to Splunk Observability Clou
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
-
-#. Open the navigation menu in Splunk Observability Cloud.
-#. Select :menuselection:`Settings`.
-#. Select your username. 
-
-The realm name appears in the :guilabel:`Organizations` section.
+To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
 Next, configure the PHP instrumentation for Splunk Observability Cloud. See :ref:`advanced-php-configuration` for more information.
 
 .. note:: For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
 
-Specify the source host 
+Specify the source host
 -----------------------------------------------
 
 .. include:: /_includes/gdi/apm-api-define-host.rst

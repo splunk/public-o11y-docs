@@ -42,7 +42,7 @@ Set the required environment variables in your function's settings:
       * - ``SPLUNK_ACCESS_TOKEN``
         - Your Splunk access token. To obtain an access token, see :ref:`admin-api-access-tokens`.
       * - ``SPLUNK_REALM``
-        - Your Splunk Observability Cloud realm, for example ``us0``. To find the realm name of your account, open the navigation menu in Splunk Observability Cloud, select :menuselection:`Settings`, and select your username. The realm name appears in the :guilabel:`Organizations` section.
+        - Your Splunk Observability Cloud realm, for example ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
 #. Add any other settings you might need.
 
