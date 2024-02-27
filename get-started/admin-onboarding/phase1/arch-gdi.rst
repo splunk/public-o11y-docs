@@ -34,20 +34,29 @@ It is important that you understand the concepts of the OpenTelemetry Collector.
 Gather requirements and create an architecture prototype
 ==========================================================
 
-To create an initial architecture solution for Splunk Observability Cloud in your organization you need to gather requirements to create a architecture prototype. 
+To create an initial architecture solution for Splunk Observability Cloud in your organization you need to gather requirements to create an architecture prototype. 
 
-1. Start by building a small prototype system. To do so, you need to get familiar with setting up and connecting applications to Splunk Observability Cloud. Set up an initial OpenTelemetry Collector onto 1 of the the more commonly used platforms, such as a VM instance or a Kubernetes cluster. See :ref:`infrastructure-infrastructure` and :ref:`otel-intro` for more information.
+1. Get familiar with setting up and connecting applications to Splunk Observability Cloud. Set up an initial OpenTelemetry Collector onto 1 of the the more commonly used platforms, such as a VM instance or a Kubernetes cluster. See :ref:`infrastructure-infrastructure` and :ref:`otel-intro` for more information.
 2. In most cases you also need to connect Splunk Observability Cloud to your cloud provider. See :ref:`supported-data-sources` for supported integrations. 
-3. You also need to make decisions on the OTel deployment mode you want to use. See :ref:`otel-deployment-mode` for more information.
-4. the configurations of the OpenTelemetry agent either in native (single host) or in Kubernetes mode.
-5. To support creation of charts and detectors in Splunk Observability Cloud, define a naming convention for the metrics names. See :ref:`metric-dimension-names`.
-6. Select at least one application or service to collect metrics from as part of your prototype. This helps you see how the corresponding dashboards and detectors are created when your metrics are received by Splunk Observability Cloud. Some example services to include as a prototype are an Nginx server, an Apache web server, or a database such as MySQL using OpenTelemetry receivers. See :ref:`nginx`, :ref:`apache-httpserver`, and, :ref:`mysql`.
-7. Get familiar with he Splunk Observability Cloud platform receivers for various applications and services. See :ref:`monitor-data-sources`. Each receiver has corresponding dashboards and detectors that are automatically created for each integration once the receiver reaches more than 50,000 datapoints. See :ref:`built-in-dashboards` and :ref:`autodetect`.
+3. You also need to make decisions on the OTel deployment mode you want to use. There are 2 modes: host (agent) and data forwarding (gateway). Host (agent) mode is the default mode. See :ref:`otel-deployment-mode` for more information.
+4. To support creation of charts and detectors in Splunk Observability Cloud, define a naming convention for the metrics names. See :ref:`metric-dimension-names`.
+5. Select at least one application or service to collect metrics from as part of your prototype. This helps you see how the corresponding dashboards and detectors are created when your metrics are received by Splunk Observability Cloud. Some example services to include as a prototype are an Nginx server, an Apache web server, or a database such as MySQL using OpenTelemetry receivers. See :ref:`nginx`, :ref:`apache-httpserver`, and, :ref:`mysql`.
+6. Get familiar with the Splunk Observability Cloud platform receivers for various applications and services. See :ref:`monitor-data-sources`. Each receiver has corresponding dashboards and detectors that are automatically created for each integration once the receiver reaches more than 50,000 datapoints. See :ref:`built-in-dashboards` and :ref:`autodetect`.
 
 .. _phase1-network:
 
 Analyze your required network communication
 =============================================
+
+Analyze network communication required (what talks to what, which ports need to be open, what protocols to use, proxy considerations)
+
+After the initial architecture session has been completed, the next step is to analyze which protocols to use. This allows preconfiguration of the ports by looking into which ports need to open in the firewall and what protocols need to be enabled or disabled in the OTel collector.  Note on configuring a proxy if this is required by your organization.
+
+Some of the things that need to be considered, for example if there is a need for backwards compatibility for any older applications that provide traces and spans in its instrumentation, such as jaeger, zipkin etc.
+
+https://docs.splunk.com/observability/en/admin/authentication/allow-services.html#configure-proxy-settings-for-the-collector
+
+https://docs.splunk.com/observability/en/gdi/opentelemetry/exposed-endpoints.html#otel-exposed-endpoints
 
 .. _phase1-metrics:
 
