@@ -9,7 +9,7 @@ Zero Configuration Auto Instrumentation for Windows .NET applications
 .. meta::
     :description: How to activate zero configuration automatic instrumentation for Linux .NET applications and thus collect and send traces to Splunk Application Performance Monitoring (APM) without altering your code.
 
-Zero Configuration Auto Instrumentation for OpenTelemetry .NET activates automatic instrumentation for .NET applications running on Linux. After installing the package, you must start or restart any .NET applications that you want to instrument.
+Zero Configuration Auto Instrumentation for OpenTelemetry .NET activates automatic instrumentation for .NET applications running on Windows. After installing the package, you must start or restart any .NET applications that you want to instrument.
 
 Install the package
 =========================================================
