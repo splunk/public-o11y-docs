@@ -71,7 +71,19 @@ You can activate CPU and memory profiling by updating the environment variables 
 
   .. tab:: Linux 
 
-      Follow these steps to activate AlwaysOn Profiling in Linux: 
+      To activate profiling globally, add the ``--enable-profiler`` flag upon installation for CPU profiling, or ``--enable-profiler-memory`` flag for memory profiling. For example: 
+
+      .. code-block:: bash
+        :emphasize-lines: 4
+
+        curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+        sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --deployment-environment prod \
+        --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN> \
+        --enable-profiler --enable-profiler-memory
+
+      You can also activate profiling for individual languages. By using this approach, you can determine which languages profiling gathers call stacks from.
+
+      Follow these steps to activate AlwaysOn Profiling for an individual language: 
 
       #. Open the <language>.conf file located in the ``/etc/splunk/zeroconfig`` directory. 
       #. Set the environment variable ``SPLUNK_PROFILER_ENABLED=true`` for CPU profiling, and ``SPLUNK_PROFILER_MEMORY_ENABLED=true`` for memory profiling.
@@ -108,7 +120,7 @@ You can activate CPU and memory profiling by updating the environment variables 
                     - name: SPLUNK_PROFILER_ENABLED
                       value: true
                     # Samples call stacks from a 5000 millisecond interval. 
-                    # If excluded, the Collector samples from a 10000 millisecond interval.
+                    # If excluded, samples from a 10000 millisecond interval by default.
                     - name: SPLUNK_PROFILER_CALL_STACK_INTERVAL
                       value: 5000
       
