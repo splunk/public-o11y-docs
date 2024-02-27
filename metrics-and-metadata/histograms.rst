@@ -51,7 +51,6 @@ Histograms contain data that you can use to calculate percentiles and other stat
 For example, if you're sending the ``service.response_time.upper_90`` and ``service.response_time.upper_95`` metrics to track the response time of a key service in your infrastructure at the 90th and 95th percentiles, you can send histogram data for the entire distribution of response times, eliminating the need of sending 2 separate MTS.
 
 
-
 .. _explicit-bucket-histograms:
 
 Explicit bucket histograms
@@ -79,40 +78,7 @@ For example, the following Java code creates an OpenTelemetry histogram with exp
 
 .. note:: Currently, Splunk Observability Cloud supports only explicit bucket histograms.
 
-.. _histograms-gdi:
-
 Get histogram data into Splunk Observability Cloud
-===========================================================
+======================================================
 
-You can collect histogram data using a variety of receivers, including the Prometheus receiver, and send them to Splunk Observability Cloud using the OpenTelemetry Collector. See :ref:`Prometheus receiver <prometheus-receiver>`.
-
-The Splunk Distribution of OpenTelemetry Collector supports explicit bucket histogram metrics. You can send histogram metric using the OTLP exporter or, starting from version 0.94, through the SignalFx exporter.
-
-For instructions on how to get histogram data into Splunk Observability Cloud, see :ref:`enable-histograms-export`.
-
-Send histogram data using the API
------------------------------------------------------------
-
-If you need to bypass the OpenTelemetry Collector, send histogram data directly to Splunk Observability Cloud using the ``/v2/datapoint/otlp`` endpoint of the ingest API. The endpoint accepts data in OTLP format, serialized as Protobuf.
-
-To learn how to send histogram metric data using the API, see :new-page:`/datapoint/otlp <https://dev.splunk.com/observability/reference/api/ingest_data/latest#endpoint-send-otlp-metrics>` in the Splunk Developer Portal.
-
-
-.. _migrate-histograms:
-
-Migrate your dashboards, functions, charts, and detectors
-===========================================================
-
-To migrate your existing dashboards, functions, charts, and detectors to histograms, follow these steps:
-
-1. Make sure that you're sending histogram data using the Splunk Distribution of OpenTelemetry Collector version 0.94 or higher. Lower versions can't send histogram data in OTLP format using the SignalFx exporter.
-
-2. Start sending histogram metrics through the OTLP exporter or the SignalFx exporter. See :ref:`enable-histograms-export` for more information on how to activate this feature in the Collector.
-
-3. Edit your charts to use the new ``histogram()`` function. See :new-page:`histogram() <https://dev.splunk.com/observability/docs/signalflow/functions/histogram_function/>` in the SignalFlow reference documentation.
-
-
-Troubleshooting
-======================
-
-.. include:: /_includes/troubleshooting-components.rst
+For instructions on how to get histogram data into Splunk Observability Cloud and how to migrate existing reporting elements, see :ref:`histograms-gdi`.
