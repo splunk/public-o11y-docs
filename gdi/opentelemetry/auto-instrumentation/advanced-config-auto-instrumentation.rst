@@ -212,7 +212,7 @@ Additional settings
 
 There are many other settings you can customize in zero configuration auto instrumentation.
 
-For a list of settings that you can change in Linux, see the following resources:
+For a list of settings that you can change for each language, see the following resources:
 
 .. list-table::
   :header-rows: 1
