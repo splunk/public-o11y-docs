@@ -148,17 +148,16 @@ Use the following configuration to collect and log CPU metrics. The ``cat`` comm
        # Semantic versioning is a formal convention for determining the version
        # number of new software releases.
 
-.. _linux-packages:
+.. _linux-packages-repo:
 
 Install the Collector for Linux with package repositories
 =================================================================
 
-All Intel, AMD, and ARM systemd-based operating systems are supported, including CentOS, Debian, Oracle, Red Hat, and Ubuntu. Manually installing an integration is useful for containerized environments, or if you want to use other common deployment options.
+Splunk Observability Cloud supports all Intel, AMD, and ARM systemd-based operating systems, including CentOS, Debian, Oracle, Red Hat, and Ubuntu. Manually installing an integration is useful for containerized environments, or if you want to use other common deployment options.
 
-Splunk Observability Cloud provides a default configuration for each installation method. Each installation method has its own set of environment variables, and their values depend on the installation method, as well as your specific needs.
+Each installation method comes with a default configuration with its own set of environment variables, and their values depend on the installation method, as well as your specific needs.
 
-.. note::
-   systemctl is the main tool used to examine and control the state of the systemd system and service manager. systemctl is a requirement to run the Collector as a service. If you don't have systemctl, you need to start the Collector manually.
+.. caution:: You need ``systemctl`` to run the Collector as a service, since it's the main tool used to examine and control the state of the systemd system and service manager. Otherwise, you need to run the Collector. 
 
 .. _linux-packages-debian:
 
@@ -255,6 +254,52 @@ See also:
 
 * :ref:`linux-packages-post`
 
+.. _linux-packages:
+
+Install the Collector for Linux with downloaded packages
+--------------------------------------------------------------
+
+If you prefer to install the Collector without the installer script or the Debian/RPM repositories, download the individual Debian or RPM package from the GitHub releases page and install it as shown below. 
+
+Note that:
+
+* You need to have root privileges.
+* To install the ``setcap`` dependency and the Collector package, replace ``<path to splunk-otel-collector deb/rpm>`` with the local path to the downloaded Collector package.
+
+.. tabs:: 
+
+   .. tab:: Debian 
+
+      .. code-block:: bash
+
+         apt-get update && apt-get install -y libcap2-bin  # Required for enabling cap_dac_read_search and cap_sys_ptrace capabilities on the Collector
+         dpkg -i <path to splunk-otel-collector deb>
+
+   .. tab:: RPM with yum 
+
+      .. code-block:: bash
+
+         yum install -y libcap  # Required for enabling cap_dac_read_search and cap_sys_ptrace capabilities on the Collector
+         rpm -ivh <path to splunk-otel-collector rpm>
+
+   .. tab:: RPM with dnf 
+
+      .. code-block:: bash
+
+         dnf install -y libcap  # Required for enabling cap_dac_read_search and cap_sys_ptrace capabilities on the Collector
+         rpm -ivh <path to splunk-otel-collector rpm>
+
+   .. tab:: RPM with zypper 
+
+      .. code-block:: bash         
+
+         zypper install -y libcap-progs  # Required for enabling cap_dac_read_search and cap_sys_ptrace capabilities on the Collector
+         rpm -ivh <path to splunk-otel-collector rpm>
+
+See also:
+
+* :ref:`linux-packages-post`
+
 .. _linux-packages-post:
 
 Post-install configuration for Debian/RPM 
@@ -288,6 +333,7 @@ The following applies:
    .. code-block:: 
 
       sudo journalctl -u splunk-otel-collector
+
 
 .. _linux-binary-file:
 
@@ -351,7 +397,6 @@ Next steps
 
 After you've installed the Collector, you can perform these actions:
 
-* :ref:`Configure the Collector <otel-configuration>`.
 * Use :ref:`Infrastructure Monitoring <get-started-infrastructure>` to track the health of your infrastructure.
 * Use :ref:`APM <get-started-apm>` to monitor the performance of applications.
 * Use :ref:`Log Observer Connect <logs-intro-logconnect>` to analyze log events and troubleshoot issues with your services.
