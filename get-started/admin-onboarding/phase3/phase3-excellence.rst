@@ -2,7 +2,7 @@
 
 
 
-Center of Excellence
+Expansion and optimization phase part 3: Center of excellence
 *******************************************************************************
 
 After you complete the onboarding phase, the pilot phase, and the expansion and optimization phase, you can maintain your setup by creating internal documentation that tracks the following:

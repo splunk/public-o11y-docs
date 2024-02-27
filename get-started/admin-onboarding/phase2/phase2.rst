@@ -1,7 +1,7 @@
 .. _phase2:
 
 
-Admin onboarding guide: Pilot phase
+Admin onboarding guide phase 2: Pilot phase
 ****************************************************************
 
 
