@@ -11,9 +11,10 @@ You can use the OpenTelemetry Collector to send traces from C++ applications to 
 
 Follow these steps to instrument your C++ application:
 
-#. Add the required dependencies
-#. Initialize the OpenTelemetry tracer
-#. Generate spans for your application
+#. :ref:`Install the Splunk Distribution of OpenTelemetry Collector <cpp-install-collector>`
+#. :ref:`Add the required dependencies <cpp-dependencies>`
+#. :ref:`Initialize the OpenTelemetry tracer <cpp-otel-tracer>`
+#. :ref:`Generate spans for your application <cpp-generate-spans>`
 
 .. _cpp-prerequisites:
 
@@ -26,11 +27,23 @@ Before starting, make sure you've installed the following components:
 * A C++ compiler supporting C++ versions 14 and higher
 * Make
 * CMake version 3.20 or higher
-* A running instance of the Splunk Distribution of OpenTelemetry Collector.
+
+.. _cpp-install-collector:
+
+\1. Install and configure the Splunk Distribution of OpenTelemetry Collector
+=================================================================================
+
+To send application traces and spans to Splunk Observability Cloud, install the Splunk Distribution of OpenTelemetry Collector for your platform. The following distributions are available:
+
+* :ref:`Linux <collector-linux-intro>`
+* :ref:`Kubernetes <collector-kubernetes-intro>`
+* :ref:`Windows <collector-windows-intro>`
+
+After installing the Collector, make sure that you have an instance of the Collector running in your environment.
 
 .. _cpp-dependencies:
 
-\1. Add the required dependencies
+\2. Add the required dependencies
 ===========================================
 
 Before you get started with instrumentation, the OpenTelemetry Collector requires several dependencies.
@@ -57,7 +70,7 @@ In your CMakeLists.txt file, add the following code to include these dependencie
 
 .. _cpp-otel-tracer:
 
-\2. Initialize the OpenTelemetry tracer
+\3. Initialize the OpenTelemetry tracer
 ===========================================
 
 The OpenTelemetry tracer runs alongside your C++ application, generating telemetry data when the application receives calls.
@@ -104,7 +117,7 @@ To start the tracer, add the following code to your main.cpp file. This code add
 
 .. _cpp-generate-spans:
 
-\3. Generate spans for your application
+\4. Generate spans for your application
 ===========================================
 
 The OpenTelemetry Collector gathers spans that your application generates. To start this process, create spans for the operations you want to track by editing your application code.
@@ -118,7 +131,7 @@ Follow these steps to create spans:
         auto provider = opentelemetry::trace::Provider::GetTracerProvider();
         auto tracer = provider->GetTracer("foo_library", "1.0.0");
 
-#. Start a span.
+#. Start a span. Your application emits the span whenever the associated operation is called.
 
     .. code-block:: cpp
 
