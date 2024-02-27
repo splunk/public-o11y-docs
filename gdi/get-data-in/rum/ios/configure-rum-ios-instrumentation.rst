@@ -62,7 +62,7 @@ Use the following settings to configure the iOS RUM library:
    * - Option
      - Description
    * - :code:`realm`
-     - The name of your organization's realm, for example, ``us0``. To find the realm name of your account, open the left navigation menu in Splunk Observability Cloud, select :menuselection:`Settings`, and then select your username. The realm name appears in the :guilabel:`Organizations` section.
+     - The name of your organization's realm, for example, ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
    * - :code:`rumAuth`
      - RUM token that authorizes the agent to send telemetry data to Splunk Observability Cloud. To generate a RUM access token, see :ref:`rum-access-token`.
    * - :code:`beaconUrl`

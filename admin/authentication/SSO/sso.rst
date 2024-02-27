@@ -12,9 +12,9 @@ Configure SSO integrations for Splunk Observability Cloud
 Splunk Observability Cloud provides SSO login service integrations that let your users log in using a third-party
 identity provider (IdP) that uses SAML SSO. Observability Cloud supports SSO initiated by the IdP.
 
-Observability Cloud also supports SSO initiated by Observability Cloud, and this option lets your users log in to Infrastructure Monitoring using a custom URL you specify.
+Splunk Observability Cloud also supports SSO initiated by Observability Cloud, and this option lets your users log in to Infrastructure Monitoring using a custom URL you specify.
 
-Observability Cloud supports the following SSO integrations:
+Splunk Observability Cloud supports the following SSO integrations:
 
 -  :ref:`Splunk Cloud Platform<unified-id-unified-identity>`
 -  :ref:`Microsoft Active Directory Federation Services (ADFS)<sso-adfs>`

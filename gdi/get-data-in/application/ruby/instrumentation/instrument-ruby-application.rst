@@ -180,17 +180,11 @@ If you need to send data directly to Splunk Observability Cloud, set the followi
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
-
-#. Open the navigation menu in Splunk Observability Cloud.
-#. Select :menuselection:`Settings`.
-#. Select your username. 
-
-The realm name appears in the :guilabel:`Organizations` section.
+To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
 .. note:: For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
 
-Specify the source host 
+Specify the source host
 ---------------------------------------------
 
 .. include:: /_includes/gdi/apm-api-define-host.rst

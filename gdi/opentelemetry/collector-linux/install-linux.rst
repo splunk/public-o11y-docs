@@ -39,7 +39,7 @@ To install the package using the installer script, follow these steps:
 #. Download and run the installer script.
 #. Replace the following variables for your environment:
 
-* ``SPLUNK_REALM``: This is the Realm to send data to. The default is ``us0``. See :new-page:`realms <https://dev.splunk.com/observability/docs/realms_in_endpoints/>`.
+* ``SPLUNK_REALM``: This is the Realm to send data to. The default is ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 * ``SPLUNK_MEMORY_TOTAL_MIB``: This is the total allocated memory in mebibytes (MiB). For example, ``512`` allocates 512 MiB (500 x 2^20 bytes) of memory.
 * ``SPLUNK_ACCESS_TOKEN``: This is the base64-encoded access token for authenticating data ingest requests. See :ref:`admin-org-tokens`.
 

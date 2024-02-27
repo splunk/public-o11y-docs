@@ -22,7 +22,7 @@ Prerequisites
 
    - To get an access token, see :ref:`admin-api-access-tokens`.
 
-   - To find the realm name of your account, open the navigation menu in Splunk Observability Cloud. Select :menuselection:`Settings`, and then select your username. The realm name appears in the :guilabel:`Organizations` section.
+   - To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
 - You must have ``npm`` to install the Node.js auto instrumentation package. 
 

@@ -2,7 +2,7 @@
 
    The SignalFx Tracing Library for PHP is deprecated as of February 21, 2024 and will reach End of Support on February 21 2025. Until then, only critical security fixes and bug fixes will be provided. After the date, the library will be archived and no longer maintained.
 
-   New and existing users should consider using OpenTelemetry PHP instrumentation  which offers similar capabilities. To learn how to use OpenTelmetry PHP instrumentation refer to OpenTelemetry official documentation.
+   If you want to instrument new or existing PHP applications, use :ref:`OpenTelemetry PHP instrumentation <get-started-php>`, which offers similar capabilities.
 
 .. _php-requirements:
 
@@ -13,7 +13,15 @@ PHP instrumentation compatibility and requirements
 .. meta::
     :description: This is what you need to instrument PHP applications for Splunk Observability Cloud.
 
-.. include:: /_includes/requirements/php.rst
+The SignalFx Tracing Library for PHP supports PHP version 7.0 or higher running on the Zend engine.
+
+Supported web servers are:
+
+- Apache
+- php-fpm
+- php-cli
+
+.. note:: The library is not compatible with Windows environments.
 
 .. _supported-php-libraries:
 
