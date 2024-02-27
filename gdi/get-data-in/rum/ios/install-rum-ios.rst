@@ -122,13 +122,7 @@ Follow these steps to initialize the iOS RUM package.
          [builder setApplicationName:@"<your_app_name>"];
          [builder build];
 
-   * ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
-
-         1. Open the navigation menu in Splunk Observability Cloud.
-         2. Select :menuselection:`Settings`.
-         3. Select your username.
-
-      The realm name appears in the :guilabel:`Organizations` section.
+   * ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
    * To generate a RUM access token, see :ref:`rum-access-token`.
 
@@ -208,13 +202,7 @@ Initialize the crash reporting module with your configuration parameters:
       // Initialize crash reporting module after the iOS agent
       [SplunkRumCrashReporting start]
 
-* ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
-
-      1. Open the navigation menu in Splunk Observability Cloud.
-      2. Select :menuselection:`Settings`.
-      3. Select your username. 
-
-   The realm name appears in the :guilabel:`Organizations` section.
+* ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
 * To generate a RUM access token, see :ref:`rum-access-token`.
 

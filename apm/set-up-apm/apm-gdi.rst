@@ -119,7 +119,7 @@ In the following table, follow the instrumentation steps for the language that e
      - :ref:`get-started-ruby`
 
    * - PHP
-     - SignalFx Tracing Library for PHP
+     - OpenTelemetry instrumentation for PHP
      - :ref:`get-started-php`
 
 After you instrument your applications, you're ready to verify that your data is coming in.

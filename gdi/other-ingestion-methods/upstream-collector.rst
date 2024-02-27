@@ -19,6 +19,8 @@ If you need to use the upstream Collector due to technical or practical reasons,
 
 .. note:: Splunk participates in the OpenTelemetry project and is committed to its growth. Features developed for the Splunk distribution are regularly added to the upstream Collector for the benefit of the entire community. The goal is for all Splunk distributions to eventually become snapshots of the OpenTelemetry Contrib Collector project.
 
+.. _otel-feature-comparison:
+
 Feature comparison
 ===================================
 
