@@ -52,6 +52,14 @@ The SignalFx Tracing Library for PHP instruments the following libraries and fra
      - All supported PHP versions
    * - PDO
      - All supported PHP versions
+   * - PSR-3 (Logging Interface)
+     - 1.0 and higher
+   * - PSR-14 (Event Dispatcher)
+     - 1.0 and higher
+   * - PSR-15 (HTTP Server Request Handlers)
+     - 1.0 and higher
+   * - PSR-18 (HTTP Client)
+     - 1.0 and higher
    * - Slim
      - 4.x
    * - Symfony
