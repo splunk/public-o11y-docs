@@ -1,8 +1,8 @@
 .. _deployment-linux-ansible:
 
-**********************
-Ansible for Linux
-**********************
+********************************************************
+Deploy the Collector with Ansible for Linux
+********************************************************
 
 .. meta::
       :description: Describes how to install the Splunk Observability Cloud OpenTelemetry Collector Ansible role on Linux.
@@ -20,11 +20,11 @@ The following Linux distributions and versions are supported:
 
 Before installing the Ansible collection, do the following:
 
-* Find your :ref:`Splunk access token <otel-using>`
-* Find your :ref:`Splunk realm <otel-using>`
+* Find your :ref:`Splunk access token <otel-using>`.
+* Find your :ref:`Splunk realm <otel-using>`.
 * Check :ref:`exposed ports <otel-using>` to make sure your environment doesn't have conflicts. Ports can be changed in the package's configuration.
 
-Ansible Galaxy is the Ansible official hub for sharing Ansible content. See :new-page:`Ansible Collection for the Splunk Distribution of OpenTelemetry Collector <https://galaxy.ansible.com/signalfx/splunk_otel_collector>` for more information about the playbook. 
+Ansible Galaxy is the Ansible official hub for sharing Ansible content. See :new-page:`Ansible Collection for the Splunk Distribution of OpenTelemetry Collector <https://galaxy.ansible.com/signalfx/splunk_otel_collector>` for more information about the playbook.
 
 Run the following command to install the Ansible collection from Ansible Galaxy:
 
@@ -59,7 +59,7 @@ The following table describes the variables that can be configured for this role
    * - ``splunk_access_token``
      - The Splunk access token to authenticate requests. This attribute is required.
    * - ``splunk_realm``
-     - The realm to send the data to. This variable is set with this value for the service. The default value is ``us0``.
+     - The realm to send the data to. This variable is set with this value for the service. The default value is ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
    * - ``splunk_ingest_url``
      - The Splunk ingest URL, for example, ``https://ingest.us0.signalfx.com``. This variable is set with this value for the service. The default value is ``https://ingest.{{ splunk_realm }}.signalfx.com``. 
    * - ``splunk_api_url``

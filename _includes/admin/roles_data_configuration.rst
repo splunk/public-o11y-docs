@@ -1,7 +1,8 @@
 .. list-table::
+  :header-rows: 1
   :widths: 20,20,20,20,20
 
-  * - :strong:`Capability`
+  * - :strong:`Permission`
     - :strong:`Admin`
     - :strong:`Power user`
     - :strong:`Usage`
@@ -9,21 +10,16 @@
 
   * - :strong:`View Global Data Links`
     - Yes
-    - No
-    - No
-    - No
+    - Yes
+    - Yes
+    - Yes
 
   * - :strong:`Create, delete, or clone Global Data Links`
     - Yes
-    - Yes
+    - No
     - No
     - No
 
-  * - :strong:`View Incident Managent`
-    - Yes
-    - No
-    - No
-    - No
 
   * - :strong:`View APM MetricSets`
     - Yes

@@ -9,9 +9,63 @@ Smart Agent receiver
 
 The Smart Agent receiver is a native OTel component that lets you use Smart Agent monitors through the Splunk Distribution of OpenTelemetry Collector. Supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
-The Smart Agent receiver is fully supported only on amd64 linux platforms. Support for ARM64 is experimental starting from the Splunk Distribution of OpenTelemetry Collector version 0.73 and higher. For a list of supported monitors, see :ref:`collector-architecture`.
+The Smart Agent receiver is fully supported only on AMD64 Linux and Windows platforms. Support for ARM64 is experimental starting from the Splunk Distribution of OpenTelemetry Collector version 0.73 and higher.
 
 .. note:: For instructions on how to migrate from the Smart Agent to the Splunk Distribution of OpenTelemetry Collector, see :ref:`migrate-from-sa-to-otel`.
+
+.. _architecture-support:
+
+Supported monitors
+=================================
+
+The Smart Agent bundle provides the following monitor types for each platform:
+
+.. list-table::
+  :header-rows: 1
+  :width: 100%
+
+  * - Platform
+    - Monitor types
+  * - Linux (AMD64 and ARM64)
+    - * collectd subprocess
+      * sfxcollectd Python
+      * Java/JMX with OpenJDK runtime
+  * - Windows (AMD64)
+    - * sfxcollectd Python
+
+For more information about monitors included in the agent bundle, see :ref:`subprocess-monitors-support-matrices`.
+
+.. _native-monitor-support-matrices:
+
+Native Smart Agent monitors
+--------------------------------------------------------------
+
+Native Smart Agent monitors are grouped into three types:
+
+* Standalone
+* Prometheus
+* Telegraf
+
+The following matrices list support for each monitor in each architecture.
+
+.. include:: /_includes/gdi/processor-architecture-native.rst
+
+.. _subprocess-monitors-support-matrices:
+
+Subprocess Smart Agent monitors 
+--------------------------------------------------------------
+
+Support for Smart Agent receiver monitor types is experimental for ARM64 starting from the Splunk Distribution of OpenTelemetry Collector version 0.73 and higher. Using the Smart Agent receiver with monitor types is not supported for ppc64le architectures.
+
+Subprocess monitor types are those that initiate the creation and management of a child process where metric gathering occurs. There are three major subprocess monitor types: 
+
+* ``collectd`` and its associated ``collectd/GenericJMX`` plugin-based integrations
+* ``sfxcollectd``
+* ``JMX``
+
+These types derive from integrations that produce metrics in the Smart Agent and are not reflective of the current ability to run arbitrary Python or Java applications.
+
+.. include:: /_includes/gdi/processor-architecture-subprocess.rst
 
 Benefits
 =================================
@@ -23,7 +77,7 @@ For a list of monitor data sources, see :ref:`monitor-data-sources`.
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the Smart Agent receiver with the ``signalfx-forwarder`` and ``processlist`` monitors when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information.
+By default, the Splunk Distribution of OpenTelemetry Collector includes the Smart Agent receiver with the ``processlist`` monitor when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information.
 
 For each Smart Agent monitor you want to add to the Collector, add a Smart Agent receiver. After you've configured a Smart Agent monitor in the Collector, each Smart Agent receiver behaves like the corresponding Smart Agent monitor. 
 
@@ -58,7 +112,7 @@ You can then add the receiver to any compatible pipeline. For example:
 
 If you use a monitor that updates dimension properties or tags, for example ``postgresql``, add the name of your SignalFx exporter in the ``dimensionClients`` field in Smart Agent receiver configuration block. If you don't set any exporter in the ``dimensionClients`` field, the receiver tries to use the pipeline to which it's connected. If you don't require dimension updates, you can use an empty array (``[]``) to deactivate it.
 
-.. caution:: Don't remove the ``smartagent/signalfx-forwarder`` and ``smartagent/processlist`` receivers from the configuration. System processes and Smart Agent telemetry depend on both receivers's configurations.
+.. caution:: Don't remove the ``smartagent/processlist`` receiver from the configuration. System processes and Smart Agent telemetry depend on the receiver's configuration.
 
 .. _otel-sareceiver-extrametrics:
 

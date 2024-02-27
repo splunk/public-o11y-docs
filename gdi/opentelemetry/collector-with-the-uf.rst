@@ -7,13 +7,9 @@ Use the Splunk Universal Forwarder with the Collector
 .. meta::
       :description: Manage your data ingestion manually by deploying the Splunk Distribution of OpenTelemetry Collector alongside the Splunk Universal Forwarder (UF) on each virtual machine (VM).
 
+While Splunk Observability Cloud uses the OpenTelemetry Collector as the agent to capture traces, metrics, and logs, Splunk Enterprise Cloud uses the Splunk Universal Forwarder to capture logs and some metrics, which are also stored as logs. Learn more at :new-page:`Splunk Universal Forwarder (UF) <https://docs.splunk.com/Documentation/Forwarder>`.
 
-Splunk Enterprise Cloud and Splunk Observability Cloud currently use different data collection agents:
-
-- Enterprise Cloud uses the :new-page:`Splunk Universal Forwarder (UF) <https://docs.splunk.com/Documentation/Forwarder>` to capture logs and some metrics, which are also stored as logs.
-- Splunk Observability Cloud uses OpenTelemetry to capture traces, metrics, and logs. Logs are captured using Fluentd, which is deactivated by default.
-
-You can manage your data ingestion manually by deploying the Splunk Distribution of OpenTelemetry Collector alongside the UF on each virtual machine (VM).This solution is applicable for VM environments for operating systems that are currently supported by both Splunk Observability Cloud and Enterprise and Cloud, running in common environments such as AWS EC2, GCE, Azure VMs, and VMWare.
+You can also deploy the Splunk Distribution of OpenTelemetry Collector alongside the Splunk Universal Forwarder (UF) on your virtual machines (VM) to manage your data ingestion, including logs, manually. This solution is applicable for VM environments for operating systems that are currently supported by both Splunk Observability Cloud and Enterprise and Cloud, running in common environments such as AWS EC2, GCE, Azure VMs, and VMWare.
 
 .. note::
 
@@ -30,6 +26,8 @@ The benefits of using the Universal Forwarder with the Collector are:
 - You can use Splunk Observability Cloud alongside Enterprise or Enterprise Cloud without capturing and submitting any duplicate telemetry data.
 - When used with :ref:`Splunk Log Observer Connect <logs-intro-logconnect>`, you can take advantage of effectively all Splunk Observability Cloud logging functionality, including :ref:`Related Content <get-started-relatedcontent>`.
 - You do not have to update existing UF deployments.
+
+.. note:: In Kubernetes environments, native OTel log collection is supported by default. See more at :ref:`kubernetes-config-logs`.
 
 Collect data with the Collector and Universal Forwarder
 ===========================================================
@@ -74,3 +72,4 @@ To collect data with the Collector and the UF:
    #. To capture the name of the service, set the ``OTEL_SERVICE_NAME`` environment variable in the configuration file. On Linux, run ``export OTEL_SERVICE_NAME=<yourServiceName>``. On Windows Powershell, run ``$env:OTEL_SERVICE_NAME=<yourServiceName>``. See :new-page:`https://github.com/open-telemetry/opentelemetry-specification/blob/main/spec-compliance-matrix.md#environment-variables  <https://github.com/open-telemetry/opentelemetry-specification/blob/main/spec-compliance-matrix.md#environment-variables>` on GitHub to view additional OpenTelemetry specification environment variables.
 
 #. Restart both agents.
+

@@ -1,7 +1,7 @@
 .. _otel-components:
 
 ******************************************
-Components
+Collector components
 ******************************************
 
 .. meta::
@@ -23,6 +23,7 @@ Components
     components/health-check-extension
     components/host-metrics-receiver
     components/jaeger-receiver    
+    components/jmx-receiver    
     components/kubelet-stats-receiver
     components/kubernetes-attributes-processor
     components/kubernetes-cluster-receiver
@@ -30,8 +31,10 @@ Components
     components/memory-ballast-extension
     components/memory-limiter-processor          
     components/mongodb-atlas-receiver
+    components/mysql-receiver
     components/oracledb-receiver
     components/otlp-exporter
+    components/otlp-receiver         
     components/otlphttp-exporter            
     components/postgresql-receiver
     components/prometheus-receiver
@@ -42,11 +45,15 @@ Components
     components/signalfx-exporter
     components/signalfx-receiver
     components/smartagent-receiver
+    components/span-processor
     components/splunk-apm-exporter
     components/splunk-hec-exporter
     components/splunk-hec-receiver
-    components/syslog-receiver      
+    components/sqlquery-receiver     
+    components/syslog-receiver 
+    components/tcp-receiver     
     components/transform-processor
+    components/udp-receiver
     components/windowsperfcounters-receiver
     components/zipkin-receiver 
     components/zpages-extension    
@@ -58,9 +65,9 @@ The OpenTelemetry Collector includes the following component types:
 * :ref:`Exporters <collector-components-exporters>`: Send data to one or more backends or destinations. 
 * :ref:`Extensions <collector-components-extensions>`: Extend the capabilities of the Collector.
 
-You can activate components by configuring :ref:`pipelines <otel-data-processing>` in the Collector configuration. See :ref:`otel-configuration` to learn how to define multiple instances of components as well as their pipelines.
+You can activate components by configuring :ref:`service pipelines <otel-data-processing>` in the Collector configuration. See :ref:`otel-configuration` to learn how to define multiple instances of components as well as their pipelines.
 
-The Splunk Distribution of OpenTelemetry Collector includes and supports the following components.
+The Splunk Distribution of OpenTelemetry Collector includes and supports the components listed on this doc.
 
 .. note:: The following lists might not contain all the latest additions. For a complete list of Collector components, including components that aren't included in the Splunk Distribution of OpenTelemetry Collector, see the ``opentelemetry-contrib`` repository in GitHub.
 
@@ -110,9 +117,18 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`jaeger-receiver` (``jaeger``)
      - Receives trace data in Jaeger format.
      - Traces
+   * - :ref:`jmx-receiver` (``jmx``)
+     - Works in conjunction with the :new-page:`OpenTelemetry JMX Metric Gatherer <https://github.com/open-telemetry/opentelemetry-java-contrib/blob/main/jmx-metrics/README.md>` to report metrics from an MBean server.
+     - Metrics
    * - ``journald``
      - Parses Journald events from the systemd journal. The ``journalctl`` binary must be in the same ``$PATH`` of the agent.
      - Logs
+   * - ``kafkametrics``
+     - Collects Kafka metrics such as brokers, topics, partitions, and consumer groups from Kafka server, and converts them to OTLP format.
+     - Metrics
+   * - ``kafka``
+     - Receives metrics, logs, and traces from Kafka. Metrics and logs only support the OTLP format.
+     - Metrics, logs, traces
    * - :ref:`kubernetes-cluster-receiver` (``k8s_cluster``)
      - Collects cluster-level metrics from the Kubernetes API server. It uses the Kubernetes API to listen for updates. You can use a single instance of this receiver to monitor a cluster.
      - Metrics
@@ -122,22 +138,19 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``k8sobjects``
      - Collects objects from the Kubernetes API server. Supports authentication through service accounts only.
      - Logs
-   * - ``kafkametrics``
-     - Collects Kafka metrics such as brokers, topics, partitions, and consumer groups from Kafka server, and converts them to OTLP format.
-     - Metrics
-   * - ``kafka``
-     - Receives metrics, logs, and traces from Kafka. Metrics and logs only support the OTLP format.
-     - Metrics, logs, traces
    * - :ref:`kubelet-stats-receiver` (``kubeletstats``)
      - Pulls pod metrics from the API server on a kubelet.
      - Metrics
    * - :ref:`mongodb-atlas-receiver` (``mongodbatlas``)
      - Retrieves metrics from MongoDB Atlas using their monitoring APIs.
      - Metrics
+   * - :ref:`mysql-receiver` (``mysql``)
+     - Queries and retrieves metrics about MySQL's global status and InnoDB tables.
+     - Metrics      
    * - :ref:`oracledb` (``oracledb``) |br|
      - Connects to an Oracle Database instance and obtains metrics such as physical reads, CPU, time, and others.
      - Metrics
-   * - ``otlp``
+   * - :ref:`otlp-receiver` (``otlp``)
      - Receives data through gRPC or HTTP using OTLP format.
      - Metrics, logs, traces
    * - :ref:`postgresql-receiver` (``postgresql``)
@@ -167,7 +180,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`splunk-hec-receiver` (``splunk_hec``)
      - Accepts telemetry in the Splunk HEC format.
      - Metrics, logs, traces
-   * - ``sqlquery``
+   * - :ref:`sqlquery-receiver` (``sqlquery``)
      - Runs custom SQL queries to generate metrics from a database connection.
      - Metrics
    * - ``statsd``
@@ -176,8 +189,11 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`syslog-receiver` (``syslog``)
      - Parses syslog messages received over TCP or UDP.
      - Logs
-   * - ``tcplog``
+   * - :ref:`tcp-logs-receiver` (``tcplog``)
      - Receives logs over TCP.
+     - Logs
+   * - :ref:`udp-logs-receiver` (``udplog``) 
+     - Receives logs over UDP.
      - Logs
    * - ``windowseventlog``
      - Tails and parses logs from the Windows Event log API.
@@ -239,7 +255,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``routing``
      - Reads a header from the incoming HTTP request or reads a resource attribute, and then directs the trace information to specific exporters based on the value.
      - Metrics, logs, traces
-   * - ``span``
+   * - :ref:`span-processor` (``span``)
      - Modifies either the span name or attributes of a span based on the span name.
      - Traces
    * - ``tail_sampling``
@@ -334,7 +350,6 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
      - Provides a mechanism to set configuration options that are applicable to all instances of the Smart Agent receiver. Allows to migrate your existing Smart Agent configuration to the Splunk Distribution of OpenTelemetry Collector. 
    * - :ref:`zpages-extension` (``zpages``) 
      - Activates an extension that serves zPages, an HTTP endpoint that provides live data for debugging different components.
-
 
 .. raw:: html
 

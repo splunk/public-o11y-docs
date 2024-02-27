@@ -123,6 +123,35 @@ Application metrics are collected by default. See :ref:`python-otel-metrics` for
 
 If no data appears in APM, see :ref:`common-python-troubleshooting`.
 
+.. _enable-profiling-python:
+
+Activate AlwaysOn Profiling
+------------------------------------------------
+
+.. note::
+   AlwaysOn Profiling for Python is in beta development. This feature is provided by Splunk to you "as is" without any warranties, maintenance and support, or service-level commitments. Use of this feature is subject to the :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`.
+
+To activate AlwaysOn Profiling, set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true`` or call the ``start_profiling`` function in your application code.
+
+The following example shows how to activate the profiler from your application code:
+
+.. code-block:: python
+
+         from splunk_otel.profiling import start_profiling
+
+         # Activates CPU profiling
+         # All arguments are optional
+         start_profiling(
+            service_name='my-python-service', 
+            resource_attributes={
+               'service.version': '3.1'
+               'deployment.environment': 'production', 
+            }
+            endpoint='http://localhost:4317'
+         ) 
+
+See :ref:`get-data-in-profiling` for more information. For additional settings, see :ref:`profiling-configuration-python`.
+
 .. _configure-python-instrumentation:
 
 Configure the Python agent
@@ -135,7 +164,7 @@ For advanced configuration of the Python agent, like changing trace propagation 
 .. _kubernetes_python_agent:
 
 Deploy the Python agent in Kubernetes
-----------------------------------------------------
+===================================================
 
 To deploy the Python agent in Kubernetes, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
 
@@ -168,7 +197,7 @@ The following example shows how to update a deployment to expose environment var
 .. _export-directly-to-olly-cloud-python:
 
 Send data directly to Splunk Observability Cloud
-----------------------------------------------------
+==========================================================
 
 By default, the agent sends all telemetry to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
@@ -190,19 +219,18 @@ To send data directly to Splunk Observability Cloud, set the following environme
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
-
-#. Open the navigation menu in Splunk Observability Cloud.
-#. Select :menuselection:`Settings`.
-#. Select your username. 
-
-The realm name appears in the :guilabel:`Organizations` section. 
+To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
 .. note:: For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
+
+Specify the source host
+----------------------------------------------------
+
+.. include:: /_includes/gdi/apm-api-define-host.rst
 
 .. _instrument_aws_python_functions:
 
 Instrument Lambda functions
-----------------------------------------------------
+=============================================
 
 You can instrument AWS Lambda functions using the Splunk OpenTelemetry Lambda Layer. See :ref:`instrument-aws-lambda-functions` for more information.

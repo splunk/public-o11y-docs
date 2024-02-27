@@ -1,13 +1,14 @@
 
 
 .. list-table::
+  :header-rows: 1
   :widths: 20,20,20,20,20
 
   * - :strong:`Permission`
     - :strong:`Admin`
     - :strong:`Power user`
     - :strong:`Usage`
-    - :strong:`Read-only`
+    - :strong:`Read_only`
 
 
   * - :strong:`View Timeline`
@@ -45,7 +46,7 @@
     - Yes
     - Yes
     - Yes
-    - No
+    - Yes
 
   * - :strong:`Create and manage log processing rules`
     - Yes
@@ -56,7 +57,7 @@
   * - :strong:`Apply processing rules across historical data`
     - Yes
     - Yes
-    - Yes
+    - No
     - No
 
   * - :strong:`Save and share Log Observer queries`
@@ -97,9 +98,9 @@
 
   * - :strong:`View org subscription usage`
     - Yes
-    - Yes
     - No
     - Yes
+    - No
 
   * - :strong:`Set up Log Observer Connect connection to Splunk platform`
     - Yes

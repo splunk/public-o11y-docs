@@ -74,7 +74,7 @@ You can then add the attributes processors to any compatible pipeline. For examp
    service:
      pipelines:
        traces:
-         receivers: [jaeger, otlp, smartagent/signalfx-forwarder, zipkin]
+         receivers: [jaeger, otlp, zipkin]
          processors:
          - attributes/traces
          - memory_limiter
@@ -82,7 +82,7 @@ You can then add the attributes processors to any compatible pipeline. For examp
          - resourcedetection
          exporters: [sapm, signalfx]
        metrics:
-         receivers: [hostmetrics, otlp, signalfx, smartagent/signalfx-forwarder]
+         receivers: [hostmetrics, otlp, signalfx]
          processors:
          - attributes/metrics
          - memory_limiter
@@ -165,7 +165,7 @@ The following example shows how to create a new attribute based on the value of 
          # Creates four new attributes (defined in pattern) from the
          # value of the http.url attribute
        - key: "http.url"
-           pattern: ^(?P<http_protocol>.*):\/\/(?P<http_domain>.*)\/(?P<http_path>.*)(\?|\&)(?P<http_query_params>.*)
+           pattern: ^(?P<http_protocol>.*):\\/\\/(?P<http_domain>.*)\\/(?P<http_path>.*)(\\?|\\&)(?P<http_query_params>.*)
            action: extract
 
 Backfill spans that are missing an attribute

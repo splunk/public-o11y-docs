@@ -115,6 +115,28 @@ For backward compatibility with the SignalFx Python Tracing Library, use the b3m
 
       $env:OTEL_PROPAGATORS=b3multi
 
+.. _profiling-configuration-python:
+
+Python settings for AlwaysOn Profiling
+====================================================
+
+The following settings control the AlwaysOn Profiling feature for the Python agent:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - Environment variable
+     - Description
+   * - ``SPLUNK_PROFILER_ENABLED``
+     - Activates AlwaysOn Profiling. The default value is ``false``. 
+   * - ``SPLUNK_PROFILER_LOGS_ENDPOINT``
+     - The collector endpoint for profiler logs. By default, it takes the value of ``http://localhost:4317``.
+   * - ``SPLUNK_PROFILER_CALL_STACK_INTERVAL``
+     - The frequency of call stack sampling, in milliseconds. The default value is ``1000``.
+   * - ``SPLUNK_PROFILER_INCLUDE_INTERNAL_STACKS``
+     - Determines whether to include stack traces from internal profiler threads. The default value is ``false``.
+
 .. _server-trace-information-python:
 
 Server trace information
@@ -138,21 +160,5 @@ Configure the Python agent in your code
 
 If you can't set environment variables or can't use ``splunk-py-trace`` for setting configuration values at runtime, define the configuration settings in your code.
 
-The following example shows how all the configuration options you can pass to ``start_tracing()`` as arguments:
-
-.. code-block:: python
-
-   from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExporter
-   from splunk_otel.tracing import start_tracing
-
-   start_tracing(
-      service_name='my-python-service',
-      span_exporter_factories=[OTLPSpanExporter],
-      access_token='',
-      max_attr_length=1200,
-      trace_response_header_enabled=True,
-      resource_attributes={
-         'service.version': '3.1',
-         'deployment.environment': 'production',
-      })
+See :ref:`python-manual-instrumentation` for more information.
 

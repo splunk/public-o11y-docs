@@ -1,8 +1,8 @@
 .. _deployments-salt:
 
-****************************
-Salt
-****************************
+********************************************************
+Deploy the Collector with Salt 
+********************************************************
 
 .. meta::
       :description: Deploy the Splunk Observability Cloud OpenTelemetry Collector using a Salt formula.
@@ -67,7 +67,7 @@ For Linux, the formula accepts the attributes described in the following table:
      - The Splunk access token to authenticate requests. This attribute is required.
      - None
    * - ``splunk_realm``
-     - Which realm to send the data to, for example, ``us0``. The Splunk ingest and API URLs are inferred by this value. The ``SPLUNK_REALM`` environment variable is set with this value for the collector service. This attribute is required.
+     - Which realm to send the data to, for example, ``us0``. The Splunk ingest and API URLs are inferred by this value. The ``SPLUNK_REALM`` environment variable is set with this value for the collector service. This attribute is required. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
      - None
    * - ``splunk_ingest_url``
      - Sets the Splunk ingest URL explicitly instead of the URL inferred by the ``$splunk_realm`` parameter. The ``SPLUNK_INGEST_URL`` environment variable is set with this value for the Collector service.

@@ -148,6 +148,32 @@ The following settings control tracing limits and attributes:
    * - ``SPLUNK_REDIS_INCLUDE_COMMAND_ARGS``
      - Not applicable
      - Whether to include the full Redis query in ``db.statement`` span attributes when using the Redis instrumentation. Default value is ``false``.
+   * - ``SPLUNK_GRAPHQL_RESOLVE_SPANS_ENABLED=``
+     - Not applicable
+     - Starting from version 2.7.0 of the instrumentation, GraphQL spans for resolvers are no longer generated. To collect resolve spans, set this environment variable to 
+       ``true``. The default value is ``false``.
+
+
+.. _trace-sampling-settings-nodejs:
+
+Samplers configuration
+===============================================================
+
+The following settings control trace sampling:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 70
+   :width: 100%
+
+   * - Environment variable
+     - Description
+   * - ``OTEL_TRACES_SAMPLER``
+     - Sampler to use. The default value is ``parentbased_always_on``. Possible values are: ``always_on``, ``always_off``, ``parentbased_always_on``, ``parentbased_always_off``, ``traceidratio``, ``parentbased_traceidratio``. See :new-page:`Built-in samplers <https://github.com/open-telemetry/opentelemetry-js/blob/main/packages/opentelemetry-sdk-trace-base/README.md#built-in-samplers>` in the official OpenTelemetry documentation for more information.
+
+   * - ``OTEL_TRACES_SAMPLER_ARG``
+     - Semicolon-separated list of rules for the ``rules`` sampler. For example, when setting the sampler to ``parentbased_traceidratio`` you can set the ratio using a number in the 0 to 1 range: |br| |br| ``OTEL_TRACES_SAMPLER_ARG=0.25``.
+
 
 .. _trace-exporters-settings-nodejs:
 
@@ -286,7 +312,7 @@ The following settings activate runtime metrics collection:
      - Description
    * - ``SPLUNK_METRICS_ENABLED``
      - Activated by calling ``start``.
-     - Activates metrics collection. The default value is ``false``. For more information on Node metrics, see :ref:`nodejs-otel-metrics`.
+     - Activates metrics collection. The default value is ``false``. For more information on Node.js metrics, see :ref:`nodejs-otel-metrics`.
    * - ``SPLUNK_METRICS_ENDPOINT``
      - ``metrics.endpoint``
      - The metrics endpoint. Takes precedence over ``OTEL_EXPORTER_OTLP_METRICS_ENDPOINT``. When ``SPLUNK_REALM`` is used, the default value is ``https://ingest.<realm>.signalfx.com/v2/datapoint/otlp``.

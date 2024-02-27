@@ -4,6 +4,9 @@
 Welcome
 **********
 
+.. meta::
+    :description: Welcome to Splunk Observability Cloud documentation. Learn about the basic elements of Splunk Observability Cloud and all it can do for you.
+
 .. imagetarget:: _images/get-started/o11y-user-doc-hero-banner-v2.svg
    :alt: Welcome
    :width: 97.3%
@@ -13,7 +16,7 @@ Welcome
 .. rst-class:: newparawithicon
 
 :icon-info:`.` :strong:`Welcome to Splunk Observability Cloud`
-Learn the basic elements of Splunk Observability Cloud and all it can do for you.
+Learn about the basic elements of Splunk Observability Cloud and all it can do for you.
 
 .. rst-class:: newcard
 
@@ -214,7 +217,7 @@ Collect user sessions :ref:`browser-rum-gdi`
 .. rst-class:: newcard
 
 :strong:`.NET`
-Collect traces :ref:`get-started-dotnet`
+Collect traces :ref:`get-started-dotnet-otel`
 
 .. rst-class:: newcard
 
@@ -267,6 +270,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Tutorials <get-started/tutorials>
+
+.. toctree::
+   :maxdepth:   3
+
    About Mobile TOGGLE <get-started/intro-to-mobile>
 
 .. toctree::
@@ -289,13 +297,18 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Free trial experience <get-started/o11y-trial>
+
+.. toctree::
+   :maxdepth:   3
+
    Support <get-started/support>
 
 .. toctree::
    :caption: Splunk platform users
    :maxdepth:   3
 
-   Splunk Observability Cloud and the Splunk platform <splunkplatform/splunkplatform-landing>
+   Splunk Observability Cloud and the Splunk platform <splunkplatform/practice-reliability/splunkplatform-landing>
 
 .. toctree::
    :maxdepth:   3
@@ -305,17 +318,10 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Measure and alert on your SLIs <splunkplatform/practice-reliability/slis>
+   Use case scenarios <splunkplatform/scenarios/integration-scenario-landing>
 
 .. toctree::
    :maxdepth:   3
-
-   Respond to incidents <splunkplatform/practice-reliability/incident-response>
-
-.. toctree::
-   :maxdepth:   3
-
-   Collaborate on observability <splunkplatform/practice-reliability/collaboration>
 
 .. toctree::
    :caption: Administer Splunk Observability Cloud
@@ -382,6 +388,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Private connectivity TOGGLE <gdi/private-connectivity/private-connectivity-landing>
 
 .. toctree::
+   :maxdepth: 4
+
+   Splunk Distribution of the OpenTelemetry Collector TOGGLE <gdi/opentelemetry/opentelemetry>
+
+.. toctree::
    :maxdepth:   3
 
    Collect infrastructure metrics and logs TOGGLE <gdi/get-data-in/compute/compute>
@@ -390,7 +401,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   4
 
    Instrument back-end services TOGGLE <gdi/get-data-in/application/application>
-
 
 .. toctree::
    :maxdepth:   3
@@ -406,11 +416,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Available host and application monitors TOGGLE <gdi/index>
-
-.. toctree::
-   :maxdepth: 4
-
-   Splunk Distribution of OpenTelemetry Collector TOGGLE <gdi/opentelemetry/opentelemetry>
 
 .. toctree::
    :maxdepth: 3
@@ -470,7 +475,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Read and write permissions <data-visualization/permissions>
 
 .. toctree::
-   :caption: Alerts and detectors
+   :caption: Alerts, detectors, and SLOs
    :maxdepth:   3
 
    Introduction to alerts and detectors <alerts-detectors-notifications/alerts-detectors-notifications>
@@ -553,6 +558,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Service level objectives TOGGLE <alerts-detectors-notifications/slo/slo-intro>
+
+.. toctree::
+   :maxdepth:   3
+
 .. toctree::
    :caption: Application Performance Monitoring
    :maxdepth:   3
@@ -621,15 +631,9 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Key concepts <infrastructure/terms-concepts>
 
 .. toctree::
-   :maxdepth:   2
-
-   Quick start tutorial <infrastructure/quickstart-imm>
-
-.. toctree::
    :maxdepth:   3
 
    infrastructure/infrastructure
-
 
 .. toctree::
    :maxdepth:   3
@@ -704,6 +708,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    rum/sensitive-data-rum
 
+
 .. toctree::
    :maxdepth:   3
 
@@ -718,6 +723,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    rum/error-aggregates
+
+.. toctree::
+   :maxdepth:   3
+
+   rum/rum-identify-span-problems
 
 .. toctree::
    :maxdepth:   3
@@ -800,52 +810,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    Configure your tests TOGGLE <synthetics/test-config/test-config>
 
-.. toctree::
-   :caption: Incident Intelligence
-   :maxdepth:   3
-
-   Introduction to Splunk Incident Intelligence <incident-intelligence/intro-to-incident-intelligence>
-
-.. toctree::
-   :maxdepth:   3
-
-   incident-intelligence/incident-intelligence-overview
-
-.. toctree::
-   :maxdepth:   3
-
-   incident-intelligence/key-concepts
-
-.. toctree::
-   :maxdepth:   3
-
-   Set up Incident Intelligence <incident-intelligence/set-up-incident-intelligence>
-
-.. toctree::
-   :maxdepth:   3
-
-   Ingest alerts in Incident Intelligence TOGGLE <incident-intelligence/ingest-alerts/ingest-alerts>
-
-.. toctree::
-   :maxdepth:   3
-
-   incident-intelligence/create-configure-incident-policies
-
-.. toctree::
-   :maxdepth:   4
-
-   Create and manage on-call schedules TOGGLE <incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules>
-
-.. toctree::
-   :maxdepth:   3
-
-   Respond to and manage incidents TOGGLE <incident-intelligence/respond-manage-incidents/respond-manage-incidents>
-
-.. toctree::
-   :maxdepth:   3
-
-   Manage notifications from Incident Intelligence TOGGLE <incident-intelligence/manage-notifications/manage-notifications.rst>
-
 
 .. toctree::
    :caption: Reference and Legal
@@ -858,4 +822,3 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Glossary <references/glossary>
-

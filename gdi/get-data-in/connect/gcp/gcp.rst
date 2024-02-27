@@ -137,17 +137,7 @@ To configure your GCP service, follow these steps:
 
 .. _gcp-projects:
 
-.. raw:: html
-
-   <embed>
-      <h4>Configure multiple GCP projects<a name="gcp-projects" class="headerlink" href="#gcp-projects" title="Permalink to this headline">¶</a></h4>
-   </embed>
-
-To monitor multiple GCP projects with the integration you have two options: 
-
-* Repeat the steps described in this section for each one of the projects. 
-
-* Follow the instructions in GCP :new-page:`Overview of viewing metrics for multiple projects <https://cloud.google.com/monitoring/settings>` to attach monitored projects to the one you've already configured.
+.. note:: To monitor multiple GCP projects, repeat the steps described in this section for each one of the projects.
 
 .. _gcp-three:
 
@@ -226,7 +216,23 @@ To connect using Terraform, see :ref:`terraform-config`.
 
 To take advantage of the full benefits of the Splunk Observability Cloud platform, install the :ref:`OpenTelemetry Collector <otel-intro>`. 
 
-The Collector offers a higher degree of customization than the GCP integration, and you might prefer it if you want to see metrics at a resolution lower than one minute, or when you need fine-grained control over the filtering of what metrics are sent.     
+.. raw:: html
+
+  <embed>
+    <h3>Track your OpenTelemetry enablement<a name="install-splunk-otel-collector-enablement" class="headerlink" href="#install-splunk-otel-collector-enablement" title="Permalink to this headline">¶</a></h3>
+  </embed>
+
+To track the degree of OpenTelemetry enablement in your GCP integrations: 
+
+1. From Splunk Observability Cloud, go to :guilabel:`Data Management > Google Cloud Platform`.
+
+2. Select :guilabel:`OpenTelemetry Enabled` to see whether the OTel Collector is installed on each GCE instance or GKE cluster. This helps you identify the instances that still need to be instrumented. 
+
+..  image:: /_images/gdi/gcp-collector-insights.png
+  :width: 80%
+  :alt: Amount of GCP entities with the Collector installed.  
+
+3. For OTel Collector instances that are successfully instrumented, you can see which version of the Collector is deployed.  
 
 .. _next-gcp-steps:
 

@@ -1,11 +1,13 @@
 .. _otel-install-platform:
+.. _otel-configuration:
+.. _otel-understand-use:
 
 ***********************************************************************************
-Install and deploy the Collector 
+Get started: Understand and use the Collector  
 ***********************************************************************************
 
 .. meta::
-      :description: Describes platform-specific installation information for the Splunk Distribution of OpenTelemetry Collector.
+      :description: Describes platform-specific installation information for the Splunk Distribution of OpenTelemetry Collector. Also covers how to configure the Splunk Distribution of OpenTelemetry Collector. There are a variety of default configuration files available, as well additional components that can be configured.
 
 .. toctree::
     :maxdepth: 4
@@ -13,136 +15,203 @@ Install and deploy the Collector
     :hidden:
 
     Deployment modes <deployment-modes.rst>
-    Kubernetes <install-k8s.rst>
-    Linux (script) <install-linux.rst>
-    Linux (manual) <install-linux-manual.rst>    
-    Windows (script) <install-windows.rst>
-    Windows (manual) <install-windows-manual.rst>
-    deployments/otel-deployments.rst
-    otel-upgrade.rst
-    uninstall-the-collector.rst
+    other-configuration-sources.rst
+    data-processing.rst
+    tags.rst
+    collector-how-to.rst
+    Remove data pre-ingest <configure-remove.rst>    
+    environment-variables.rst
+    Internal metrics <metrics-internal-collector.rst>    
 
-See the available options to install the Splunk Distribution of the OpenTelemetry Collector.
+For a quick overview of the Collector, see :ref:`otel-intro`.  
 
-.. _collector-guided-install:
+Get started with the available options to install, deploy, and configure the Splunk Distribution of the OpenTelemetry Collector. Next, learn how to use the Collector.
+
+* See :ref:`collector-architecture` for compatible CPU architectures and operating systems. 
+* See :ref:`otel-deployment-mode` for information on the two deployment modes for the Collector: :ref:`host monitoring (agent) mode <collector-agent-mode>`, and :ref:`data forwarding (gateway) mode <collector-gateway-mode>`.
 
 .. raw:: html
 
   <embed>
-    <h2>Guided install for the Collector<a name="collector-guided-install" class="headerlink" href="#collector-guided-install" title="Permalink to this headline">¶</a></h2>
+    <h2>Install the Collector using packages and deployment tools<a name="collector-package-install" class="headerlink" href="#collector-package-install" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-Splunk Observability Cloud offers a guided setup to install the Collector:
+The Splunk Distribution of OpenTelemetry Collector is supported on Kubernetes, Linux, Windows, and Mac. Use one of the following packages to gather data for Splunk Observability Cloud:
 
-#. Log in to Splunk Observability Cloud.
-
-#. In the navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+* :ref:`collector-kubernetes-intro`
+* :ref:`collector-linux-intro`
+* :ref:`collector-windows-intro`
   
-#. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
-
-#. Select one of the platforms in the :guilabel:`Splunk OpenTelemetry Collector` section.
-
-#. Follow the step-by-step process provided in the platform's guided setup.
-
-.. raw:: html
-
-  <embed>
-    <h2>Install using packages and deployment tools<a name="collector-package-install" class="headerlink" href="#collector-package-install" title="Permalink to this headline">¶</a></h2>
-  </embed>
-
-The Splunk Distribution of OpenTelemetry Collector is supported on Kubernetes, Linux, Windows, and Mac. See :ref:`collector-architecture` for compatible CPU architectures and operating systems.
-
-Deploy one of the following packages to gather data for Infrastructure Monitoring, APM, and Log Observer:
-
-* Splunk Distribution of OpenTelemetry Collector for Kubernetes or ``splunk-otel-collector-chart``. See :ref:`Install on Kubernetes <otel-install-k8s>`. You can also install the Kubernetes Operator for Auto Instrumentation, as explained in :ref:`Install the Collector with the Kubernetes Operator for Auto Instrumentation <auto-instrumentation-operator>`.
-* Splunk Distribution of OpenTelemetry Collector for Linux or ``splunk-otel-collector``. See :ref:`Install on Linux (script) <otel-install-linux>` or :ref:`Install on Linux (manual) <otel-install-linux-manual>`, including instructions to install using the :ref:`binary file <linux-binary-file>`.
-* Splunk Distribution of OpenTelemetry Collector for Windows or ``splunk-otel-collector``. See :ref:`Install on Windows (script) <otel-install-windows>` or :ref:`Install on Windows (manual) <otel-install-windows-manual>`, including instructions for the :ref:`binary file <windows-binary>`.
-
 See also :ref:`other deployment tools and options <otel_deployments>`.
 
-.. raw:: html
-
-  <embed>
-    <h2>Components of the Collector<a name="collector-components-index" class="headerlink" href="#collector-components-index" title="Permalink to this headline">¶</a></h2>
-  </embed>
-
-The Collector uses the components listed in the following table:
-
-.. list-table::
-  :width: 100%
-  :widths: 20 80
-  :header-rows: 1
-
-  * - Component
-    - Description
-  * - :ref:`Receivers <monitor-data-sources>`
-    - Get data into the Collector using receivers. Receivers, which can be push or pull based, support one or more data sources. You must configure one or more receivers. By default, no receivers are configured.
-  * - Processors
-    - Control the data you send using processors. Processors sit between receivers and exporters, reading and sometimes operating on data as it flows through the pipeline. Processors are optional, but you should include processors in your configuration. The order in which processors are listed in the ``processors`` section of the configuration is relevant.
-  * - Exporters
-    - Send data to one or more destinations using exporters. Exporters, which can be push or pull based, support one or more data sources.
-
-To learn more about Collector components, see :ref:`otel-components`.
-
-When configured, activate these components using pipelines within the service section of the configuration. 
+.. _collector-verify-docker:
 
 .. raw:: html
 
   <embed>
-    <h2>Collector services<a name="collector-service" class="headerlink" href="#collector-service" title="Permalink to this headline">¶</a></h2>
+    <h3>Verify the Docker image of the Collector<a name="collector-verify-docker" class="headerlink" href="#collector-verify-docker" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-The service section of the Collector contains two subsections: extensions and pipelines. The extensions section is where you optionally activate any extensions you have configured, and the pipelines section is where you define one or more pipelines, each of which consists of receivers, processors (optional), and exporters. The service section's two subsections are described in the following table.
+Docker images of the Collector are automatically signed.
+
+If you need to verify and trust your software package, use the following public key to verify the Docker images of the Collector:
+
+.. code-block::
+
+  -----BEGIN PUBLIC KEY-----
+  MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAw+sL4Mx2Ip9AxTSp7Iw2
+  k69tlJ8RqYNngJyecOLLiQkubgIQdnAkQurTfCPCuCHChvGGw3WCV617oJR25D0h
+  NzOvS9wIXc1mEdsHCFbOuAVnJ7GLALmci6sR09jPiQnl2X58+edI/2g6j77G1Lz3
+  B/aOK4p70Ro2TTE6Xj6XACeLkAZGu1W3UQfrJiYkGz4PovWMyeF2J88RcwrrdOLn
+  i5iFeLR5EL8TtoQCXUyqJFpuXpBkLbMedrpZAODqBcg3iwfeACcguO2X1cCWFXM+
+  ubN1fzf2c+WrO3sg8io1cHTctX2GG+9r7DbqRuo0Ejj2D0fTi/JoVBCTXNxn2Drg
+  L86Y5+mtpUN+MlnzZRFEbCqN2fC9CO1LlriD+3NKAuW7OVM10S/+eHApUQi1Ao5A
+  ABfjRxHWn2SISC5pmgYDeg90Lf0BTjX2+qn1HuJXDZUyD1XEeXedqE+/m9mgEU2s
+  uYOqk6ecD/qowv2gvkwd742XvfpZhaMCdehtVJwB5HLAv4VtQQYLECgMrqipAALy
+  bAExcAb0i16mMJi2QCPh44BrzcLQW/SZxYr9sg3IQXWBE84XbuzSyHJwBjvyxgf5
+  2+TlQ3bUY73ssOe/WV3FAdDHh0ekQdOKO4plPPMXmdYCH2dY5ji5bunY+kKHayT7
+  pqX7nYPWHh4c2RvHkE3Tth8CAwEAAQ==
+  -----END PUBLIC KEY-----
+
+Images are signed using ``cosign``. To verify them:
+
+#. Save the public key to a file. For example, ``cosign.pub``.
+#. Run the following command:
+
+.. code-block:: 
+
+  cosign verify --key cosign.pub quay.io/signalfx/splunk-otel-collector:<collector-version>
+
+.. _otel-config-options:
+
+.. raw:: html
+
+  <embed>
+    <h2>Configure the Collector: Config files, auto-config, and other configuration sources<a name="otel-config-options" class="headerlink" href="#otel-config-options" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
+Use these configurations to change the default settings in each Collector package:
+
+* Kubernetes: :ref:`Helm configuration <otel-kubernetes-config>`, :ref:`advanced config <otel-kubernetes-config-advanced>`, and :ref:`log config <otel-kubernetes-config-logs>`
+* :ref:`otel-linux-config`
+* :ref:`otel-windows-config`
+
+.. note:: Splunk Observability Cloud offers several options for no-hassle, zero-config Auto Instrumentation. Learn more at :ref:`Splunk OpenTelemetry Zero Configuration Auto Instrumentation <zero-config>`.
+
+.. _otel-config-multiple-files:
+
+.. raw:: html
+
+  <embed>
+    <h3>Use multiple configuration files<a name="otel-config-multiple-files" class="headerlink" href="#otel-config-multiple-files" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
+To define multiple config files simultaneously use:
+
+.. code-block::
+
+  ./otelcol --config=file:/path/to/first/file --config=file:/path/to/second/file
+
+.. _otel-config-additional-components:
+
+.. raw:: html
+
+  <embed>
+    <h3>Additional configuration sources<a name="otel-config-additional-components" class="headerlink" href="#otel-config-additional-components" title="Permalink to this headline">¶</a></h3>
+  </embed>
+
+You can also use these additional :ref:`configuration sources <otel-other-configuration-sources>`:
+
+* :ref:`Environment variable (Alpha) <env-variable-config-source>`
+* :ref:`etcd2 (Alpha) <etcd2-config-source>`
+* :ref:`Include config source (Beta) <include-config-source>`
+* :ref:`Vault (Alpha) <vault-config-source>`
+* :ref:`Zookeeper (Alpha) <zookeeper-config-source>`
+
+.. _otel-config-logs:
+
+.. raw:: html
+
+  <embed>
+    <h2>Configure log collection<a name="otel-config-logs" class="headerlink" href="#otel-config-logs" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
+The Collector can capture logs using Fluentd, but this option is deactivated by default.
+
+* For Kubernetes, native OpenTelemetry log collection is supported by default. See more at :ref:`kubernetes-config-logs`.
+* For Linux and Windows environments (physical hosts and virtual machines), use the Universal Forwarder to send logs to the Splunk platform. See more at :ref:`collector-with-the-uf`.
+
+.. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance. 
+
+.. raw:: html
+
+  <embed>
+    <h3>Configure Fluentd<a name="otel-fluentd-artifacts" class="headerlink" href="#otel-fluentd-artifacts" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
+You can use the Fluentd receiver to collect logs. 
+
+Common sources such as filelog, journald, and Windows Event Viewer are included in the installation. The following table describes the artifacts in the Fluentd directory:
 
 .. list-table::
-  :width: 100%
-  :widths: 20 80
+  :widths: 25 75
   :header-rows: 1
 
-  * - Component
+  * - Configuration
     - Description
-  * - Extension
-    - Provide capabilities that can be added to the Collector, but which do not require direct access to telemetry data and are not part of pipelines.
-  * - Pipeline
-    - :ref:`Pipelines <otel-data-processing>` can be traces, metrics, or logs. They consist of a set of receivers, processors, and exporters, and define the path of the ingested data element. Each receiver, processor, and exporter must be defined in the configuration outside of the service section to be included in a pipeline.
+  * - fluent.conf or td-agent.conf
+    - These are the main Fluentd configuration files used to forward events to the Collector. The file locations are ``/etc/otel/collector/fluentd/fluent.conf`` on Linux and ``C:\opt\td-agent\etc\td-agent\td-agent.conf`` on Windows. By default, these files configure Fluentd to include custom Fluentd sources and forward all log events with the ``@SPLUNK`` label to the Collector.
+  * - conf.d
+    - This directory contains the custom Fluentd configuration files. The location is ``/etc/otel/collector/fluentd/conf.d`` on Linux and ``\opt\td-agent\etc\td-agent\conf.d`` on Windows. All files in this directory ending with the .conf extension are automatically included by Fluentd, including ``\opt\td-agent\etc\td-agent\conf.d\eventlog.conf`` on Windows.
+  * - splunk-otel-collector.conf
+    - This is the drop-in file for the Fluentd service on Linux. Use this file to override the default Fluentd configuration path in favor of the custom Fluentd configuration file for Linux (fluent.conf).
 
-Here's an example configuration:
+The following is a sample configuration to collect custom logs:
 
-.. code-block:: yaml
+.. code-block:: xml
 
+  <source>
+    @type tail
+    @label @SPLUNK
+    <parse>
+      @type none
+    </parse>
+    path /path/to/my/custom.log
+    pos_file /var/log/td-agent/my-custom-logs.pos
+    tag my-custom-logs
+  </source>
 
-  receivers:
-    otlp:
-      protocols:
-        grpc:
-        http:
+To learn more about the Fluentd receiver, see :ref:`fluentd-receiver`.
 
-  processors:
-    batch:
+.. raw:: html
 
-  exporters:
-    otlp:
-      endpoint: otelcol:4317
+  <embed>
+    <h2>Use the Collector<a name="collector-use-index" class="headerlink" href="#collector-use-index" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
-  extensions:
-    health_check:
-    pprof:
-    zpages:
+.. include:: /_includes/collector-works.rst
 
-  service:
-    extensions: [health_check,pprof,zpages]
-    pipelines:
-      traces:
-        receivers: [otlp]
-        processors: [batch]
-        exporters: [otlp]
-      metrics:
-        receivers: [otlp]
-        processors: [batch]
-        exporters: [otlp]
-      logs:
-        receivers: [otlp]
-        processors: [batch]
-        exporters: [otlp]
+See also the following documents to understand how the Collector works, and how to use it:
 
+* :ref:`otel-tags`
+* :ref:`collector-how-to`
+* :ref:`configure-remove`
 
+.. raw:: html
+
+  <embed>
+    <h3>Components and services of the Collector<a name="collector-components-index" class="headerlink" href="#collector-components-index" title="Permalink to this headline">¶</a></h3>
+  </embed>
+
+.. include:: /_includes/collector-components.rst
+
+.. raw:: html
+
+  <embed>
+    <h2>Collector variables and internal metrics<a name="collector-internal" class="headerlink" href="#collector-internal" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
+The Collector operates using these environmental variables and internal metrics:
+
+* :ref:`collector-env-var`
+* :ref:`metrics-internal-collector`

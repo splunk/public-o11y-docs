@@ -120,7 +120,6 @@ The resulting :guilabel:`Group Metrics` tab shows a breakdown of the top 100 val
 
 You can order both tables by the number of matching traces.
 
-
 Trace Analyzer trace limits
 ==================================
 
@@ -135,7 +134,6 @@ Within the Trace Analyzer interface, there are 3 different display limits, numbe
 ..  image:: /_images/apm/trace-analyzer/TraceAnalyzerLimit.png
     :width: 95%
     :alt: Elements of the Trace Analyzer user interface that have trace limits, described in the list after this image.
-
 
 Learn more
 =====================

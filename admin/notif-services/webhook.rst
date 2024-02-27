@@ -13,7 +13,7 @@ triggers the detector and when a clear condition clears the alert.
 .. note::
 
    * To add a webhook as a detector alert recipient, you must have administrator access. To get this access,
-     an existing administrator adds it to your user profile. See :ref:`request-admin` for more information.
+     an existing administrator adds it to your user profile. See :ref:`admin-manage-users` for more information.
    * If your webhook endpoint fails to respond to a detector notification, Observability Cloud retries the
      notification for up to 24 hours. If your endpoint still doesn't respond, you don't receive the notification.
 

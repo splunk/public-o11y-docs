@@ -1,4 +1,5 @@
 .. list-table::
+  :header-rows: 1
   :widths: 20,20,20,20,20
 
   * - :strong:`Permission`
@@ -33,6 +34,12 @@
     - Yes
 
   * - :strong:`Create, read, or delete private location token`
+    - Yes
+    - No
+    - No
+    - No
+
+  * - :strong:`Create, read, or delete runners`
     - Yes
     - No
     - No

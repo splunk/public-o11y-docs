@@ -12,6 +12,12 @@ The Zipkin receiver gathers spans from Zipkin versions 1 and 2. The supported pi
 Get started
 ======================
 
+.. note:: 
+  
+  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information. 
+  
+  For details about the default configuration, see :ref:`otel-kubernetes-config`, :ref:`linux-config-ootb`, or :ref:`windows-config-ootb`. You can customize your configuration any time as explained in this document.
+
 Follow these steps to configure and activate the component:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
@@ -23,19 +29,25 @@ Follow these steps to configure and activate the component:
 2. Configure the Zipkin receiver as described in the next section.
 3. Restart the Collector.
 
-Sample configurations
+Sample configuration
 --------------------------------
 
 To activate the Zipkin receiver, add ``zipkin`` to the ``receivers`` section of your configuration file, as in the following sample configurations. 
 
-See :ref:`zipkin-receiver-settings` for more details.
-
 .. code-block:: yaml
-
 
   receivers:
     zipkin:
       endpoint: 0.0.0.0:9412
+
+To complete the configuration, include the receiver in the ``traces`` pipeline of the ``service`` section of your configuration file. For example:
+
+.. code:: yaml
+
+  service:
+    pipelines:
+      traces:
+        receivers: [zipkin]              
 
 The following settings are configurable:
 
@@ -43,7 +55,7 @@ The following settings are configurable:
 * ``parse_string_tags``: If enabled, the receiver attempts to parse string tags or binary annotations into int/bool/float. ``false`` by default.
 
 Additional settings
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------
 
 The Zipkin receiver uses helper files for additional capabilities:
 

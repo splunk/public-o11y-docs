@@ -153,7 +153,7 @@ The following example shows how to update a deployment to expose environment var
 .. _export-directly-to-olly-cloud-go:
 
 Send data directly to Splunk Observability Cloud
---------------------------------------------------------------------
+==================================================================
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
@@ -165,6 +165,7 @@ If you need to send data directly to Splunk Observability Cloud, set the followi
 
       export SPLUNK_ACCESS_TOKEN=<access_token>
       export SPLUNK_REALM=<realm>
+      export OTEL_METRICS_EXPORTER=none
 
    .. code-tab:: shell Windows PowerShell
 
@@ -173,12 +174,11 @@ If you need to send data directly to Splunk Observability Cloud, set the followi
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+To find your Splunk realm, see :ref:`Note about realms <about-realms>`. 
 
-#. Open the navigation menu in Splunk Observability Cloud.
-#. Select :menuselection:`Settings`.
-#. Select your username. 
+For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>` and :new-page:`Send data points <https://dev.splunk.com/observability/docs/datamodel/ingest#Send-data-points>`.
 
-The realm name appears in the :guilabel:`Organizations` section. 
+Specify the source host 
+--------------------------------------------------------------------
 
-.. note:: For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
+.. include:: /_includes/gdi/apm-api-define-host.rst

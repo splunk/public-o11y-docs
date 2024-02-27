@@ -7,11 +7,17 @@ Private Connectivity using AWS PrivateLink
 .. meta::
   :description: Connect to AWS using PrivateLink.
 
-You can use Amazon Web Services (AWS) PrivateLink to secure your traffic from your AWS environment to your Splunk Observability Cloud environment without exposing it to the Internet. 
+You can use Amazon Web Services (AWS) PrivateLink to secure your metric and traces traffic from your AWS environment to your Splunk Observability Cloud environment without exposing it to the Internet. 
 
-AWS PrivateLink connects your Virtual Private Cloud (VPC) to your AWS services, treating them as if they were in your VPC. You can create and use VPC endpoints to securely access AWS services and control the specific API endpoints and sites. To learn more, see the AWS PrivateLink documentation at :new-page:`https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html <https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html>`.
+AWS PrivateLink connects your Virtual Private Cloud (VPC) to your AWS services, treating them as if they were in your VPC. You can create and use VPC endpoints to securely access AWS services and control the specific API endpoints and sites. To learn more, see the AWS PrivateLink documentation at :new-page:`What is AWS PrivateLink? <https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html>`.
 
-The following diagram shows an overview of how AWS PrivateLink works: 
+.. note:: 
+  
+  To send logs to Splunk Observability Cloud, use :ref:`lo-connect-landing`. 
+  
+  To send logs securely, use :new-page:`Private connectivity in Splunk Cloud Platform <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/Privateconnectivityenable>`.
+
+The following diagram shows an overview of how AWS PrivateLink for Splunk Observability Cloud works: 
 
 .. source in Lucidchart: https://lucid.app/lucidchart/21f1cd02-7b2c-4654-a1b8-18c80a903fee/edit?shared=true&page=0_0&invitationId=inv_2f660037-6a85-4b98-9025-212b16c6b5a2#
 
@@ -55,31 +61,31 @@ AWS PrivateLink endpoint URLs
     - :new-page:`private-ingest.jp0.signalfx.com <http://private-ingest.jp0.signalfx.com/>`
     - :new-page:`private-api.jp0.signalfx.com <http://private-api.jp0.signalfx.com/>`
     - Coming soon
-    - Coming soon
+    - :new-page:`private-stream.jp0.signalfx.com <http://private-stream.jp0.signalfx.com/>`
 
   * - ap-southeast-2
     - :new-page:`private-ingest.au0.signalfx.com <http://private-ingest.au0.signalfx.com/>`
     - :new-page:`private-api.au0.signalfx.com <http://private-api.au0.signalfx.com/>`
     - Coming soon
-    - Coming soon
+    - :new-page:`private-stream.au0.signalfx.com <http://private-stream.au0.signalfx.com/>`
 
   * - eu-west-1
     - :new-page:`private-ingest.eu0.signalfx.com <http://private-ingest.eu0.signalfx.com/>`
     - :new-page:`private-api.eu0.signalfx.com <http://private-api.eu0.signalfx.com/>`
     - Coming soon
-    - Coming soon
+    - :new-page:`private-stream.eu0.signalfx.com <http://private-stream.eu0.signalfx.com/>`
 
   * - us-east-1
     - :new-page:`private-ingest.us0.signalfx.com <http://private-ingest.us0.signalfx.com/>`
     - :new-page:`private-api.us0.signalfx.com <http://private-api.us0.signalfx.com/>`
     - Coming soon
-    - Coming soon
+    - :new-page:`private-stream.us0.signalfx.com <http://private-stream.us0.signalfx.com/>`
 
   * - us-west-2
     - :new-page:`private-ingest.us1.signalfx.com <http://private-ingest.us1.signalfx.com/>`
     - :new-page:`private-api.us1.signalfx.com <http://private-api.us1.signalfx.com/>`
     - Coming soon
-    - Coming soon
+    - :new-page:`private-stream.us1.signalfx.com <http://private-stream.us1.signalfx.com/>`
 
 .. _aws-privatelink-service-names:
 
@@ -101,31 +107,31 @@ AWS PrivateLink service names
     - com.amazonaws.vpce.ap-northeast-1.vpce-svc-086c8167a74323e5a
     - com.amazonaws.vpce.ap-northeast-1.vpce-svc-06e1951072fcabaaa
     - Coming soon
-    - Coming soon
+    - com.amazonaws.vpce.ap-northeast-1.vpce-svc-0aebd0dfe769cc20b
 
   * - ap-southeast-2
     - com.amazonaws.vpce.ap-southeast-2.vpce-svc-01e4e31c294754b6e
     - com.amazonaws.vpce.ap-southeast-2.vpce-svc-0d1d69a0b1bf003cd
     - Coming soon
-    - Coming soon
+    - com.amazonaws.vpce.ap-southeast-2.vpce-svc-006a9808c3bf97fc1
 
   * - eu-west-1
     - com.amazonaws.vpce.eu-west-1.vpce-svc-01c194b2265ecb86e
     - com.amazonaws.vpce.eu-west-1.vpce-svc-07b08296ff84e17a0
     - Coming soon
-    - Coming soon
+    - com.amazonaws.vpce.eu-west-1.vpce-svc-0d036df6dbc6ddadb
 
   * - us-east-1
     - com.amazonaws.vpce.us-east-1.vpce-svc-0336437d577075951
     - com.amazonaws.vpce.us-east-1.vpce-svc-089b68950f5be1c22
     - Coming soon
-    - Coming soon
+    - com.amazonaws.vpce.us-east-1.vpce-svc-0c7d803ea7ebe3157
 
   * - us-west-2
     - com.amazonaws.vpce.us-west-2.vpce-svc-06376c4a9be288ee9
     - com.amazonaws.vpce.us-west-2.vpce-svc-0da2bbb45fa4c3a6b
     - Coming soon
-    - Coming soon
+    - com.amazonaws.vpce.us-west-2.vpce-svc-0d78b8dec1a837389
 
 Configure your AWS PrivateLink VPC endpoints
 =================================================================
@@ -152,6 +158,7 @@ Reach out to Splunk Customer Support with the following information to include y
   
   * Ingest
   * API
+  * Stream
 
 Review the ways you can contact Splunk Customer Support at :ref:`Splunk Observability Cloud support <support>`.
 
@@ -206,7 +213,7 @@ To create a VPC endpoint, follow these steps:
 
 9. Review the configuration details and select :guilabel:`Create Endpoint`.
 
-10. Wait for Splunk Customer Support's confirmation before proceeding to :ref:`aws-privatelink-step4`. 
+10. Before proceeding to :ref:`aws-privatelink-step4`, confirm with Splunk Customer Support that you created the endpoint, that the service name has been verified, and that Support has enabled the endpoint urls.
 
 .. _aws-privatelink-step4:
 

@@ -93,6 +93,31 @@ The following settings control trace exporters and their endpoints:
    * - ``SPLUNK_ACCESS_TOKEN``
      - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Required if you need to send data to the Splunk Observability Cloud ingest endpoint. See :ref:`admin-tokens`.
 
+.. _profiling-configuration-otel-dotnet:
+
+.NET OTel settings for AlwaysOn Profiling
+===============================================
+
+The following settings control the AlwaysOn Profiling feature for the .NET instrumentation:
+
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 40 60
+
+   * - Environment variable
+     - Description
+   * - ``SPLUNK_PROFILER_ENABLED``
+     - Activates AlwaysOn Profiling. The default value is ``false``.
+   * - ``SPLUNK_PROFILER_MEMORY_ENABLED``
+     - Activates memory profiling. The default value is ``false``.
+   * - ``SPLUNK_PROFILER_LOGS_ENDPOINT``
+     - The collector endpoint for profiler logs. The default value is ``http://localhost:4318/v1/logs``.
+   * - ``SPLUNK_PROFILER_CALL_STACK_INTERVAL``
+     - Frequency with which call stacks are sampled, in milliseconds. The default value is ``10000`` milliseconds.
+
+.. note:: AlwaysOn Profiling for .NET is compatible with .NET 6.0 and higher. For more information on AlwaysOn Profiling, see :ref:`profiling-intro`.
+
 .. _dotnet-otel-trace-propagation-settings:
 
 Trace propagation settings
@@ -126,8 +151,7 @@ The following settings control trace sampling:
      - Description
    * - ``OTEL_TRACES_SAMPLER``
      - Sampler to use. The default value is ``parentbased_always_on``. Supported values are ``always_on``, ``always_off``, ``traceidratio``, ``parentbased_always_on``, ``parentbased_always_off``, and ``parentbased_traceidratio``.
-   * - ``OTEL_TRACES_SAMPLER_ARG``
-     - Semicolon-separated list of rules for the ``rules`` sampler. The default value is ``1.0``.
+
 
 .. _resource-detector-settings-dotnet-otel:
 
@@ -168,9 +192,24 @@ The following resource detectors are available:
      - ``azure.app.service.stamp``, ``cloud.platform``, ``cloud.provider``, ``cloud.resource_id``, ``cloud.region``, ``deployment.environment``, ``host.id``, ``service.instance.id``, ``service.name``
      - Experimental Beta
      - Community support
-   * - ``CONTAINER``
+   * - ``CONTAINER`` |br| (Not supported on .NET Framework)
      - Container detector. For example, Docker or Podman containers.
      - ``container.id``
+     - Experimental Beta
+     - Community support
+   * - ``HOST``
+     - Host detector.
+     - ``host.name``
+     - Experimental Beta
+     - Community support
+   * - ``PROCESS``
+     - Process detector.
+     - ``process.pid``
+     - Experimental Beta
+     - Community support
+   * - ``PROCESSRUNTIME``
+     - Process Runtime detector.
+     - ``process.runtime.description``, ``process.runtime.name``, ``process.runtime.version``
      - Experimental Beta
      - Community support
 
@@ -204,8 +243,12 @@ The following settings control instrumentations and tracing behavior:
      - Maximum number of links per span. Default value is ``1000``.
    * - ``OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT``
      - Maximum length of strings for attribute values. Values larger than the limit are truncated. Default value is ``1200``. Empty values are treated as infinity.
+   * - ``OTEL_DOTNET_AUTO_ENTITYFRAMEWORKCORE_SET_DBSTATEMENT_FOR_TEXT``
+     - Whether the Entity Framework Core instrumentation can pass SQL statements through the ``db.statement`` attribute. Queries might contain sensitive information. If set to ``false``, `db.statement` is recorded only for executing stored procedures. The default value is ``false``.
    * - ``OTEL_DOTNET_AUTO_GRAPHQL_SET_DOCUMENT``
      - Whether the GraphQL instrumentation can pass raw queries as a ``graphql.document`` attribute. As queries might contain sensitive information, the default value is ``false``.
+   * - ``OTEL_DOTNET_AUTO_SQLCLIENT_SET_DBSTATEMENT_FOR_TEXT``
+     - Whether the SQL Client instrumentation can pass SQL statements through the ``db.statement`` attribute. Queries might contain sensitive information. If set to ``false``, ``db.statement`` is recorded only for executing stored procedures. Not supported on .NET Framework for ``System.Data.SqlClient``. The default value is ``false``.
    * - ``OTEL_DOTNET_AUTO_TRACES_ADDITIONAL_LEGACY_SOURCES``
      - Comma-separated list of additional legacy source names to be added to the tracer at the startup. Use it to capture ``System.Diagnostics.Activity`` objects created without using the ``System.Diagnostics.ActivitySource`` API.
 
@@ -223,15 +266,15 @@ The following settings control which instrumentations are activated. See :ref:`d
    * - ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED``
      - Activates or deactivates all trace instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable. Can't be set using the web.config or app.config files.
    * - ``OTEL_DOTNET_AUTO_TRACES_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED``
-     - Activates or deactivates a specific trace instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED`` environment variable. Can't be set using the web.config or app.config files.
+     - Activates or deactivates a specific trace instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED`` environment variable. Can't be set using the web.config or app.config files. See :ref:`supported-dotnet-otel-libraries` for a complete list of supported instrumentations and their names.
    * - ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_ENABLED``
      - Activates or deactivates all metric instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable. Can't be set using the web.config or app.config files.
    * - ``OTEL_DOTNET_AUTO_METRICS_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED``
-     - Activates or deactivates a specific metric instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_ENABLED`` environment variable. Can't be set using the web.config or app.config files.
+     - Activates or deactivates a specific metric instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_ENABLED`` environment variable. Can't be set using the web.config or app.config files. See :ref:`supported-dotnet-otel-libraries` for a complete list of supported instrumentations and their names.
    * - ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED``
      - Activates or deactivates all log instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable. Can't be set using the web.config or app.config files.
    * - ``OTEL_DOTNET_AUTO_LOGS_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED``
-     - Activates or deactivates a specific log instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED`` environment variable. Can't be set using the web.config or app.config files.
+     - Activates or deactivates a specific log instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED`` environment variable. Can't be set using the web.config or app.config files. See :ref:`supported-dotnet-otel-libraries` for a complete list of supported instrumentations and their names.
 
 .. _server-trace-information-dotnet-otel:
 

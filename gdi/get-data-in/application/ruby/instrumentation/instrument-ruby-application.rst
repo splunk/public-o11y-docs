@@ -60,6 +60,7 @@ Follow these steps to automatically instrument your application using the Ruby a
       .. code-block:: ruby
 
          require "splunk/otel"
+         require "opentelemetry/instrumentation/all"
          Splunk::Otel.configure(auto_instrument: true)
 
 #. Set the ``OTEL_SERVICE_NAME`` environment variable:
@@ -103,14 +104,14 @@ If no data appears in APM, see :ref:`common-ruby-troubleshooting`.
 If you want to manually install and activate instrumentation libraries, see :ref:`ruby-manual-instrumentation`.
 
 Instrument Ruby on Rails applications
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------------
 
 To instrument a Ruby on Rails application, see :ref:`instrument-ruby-rails`.
 
 .. _ruby-enable-server-timing:
 
 Activate server timing for RUM
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------------
 
 You can connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data produced by your Ruby application or service. For more information, see :ref:`server-trace-information-ruby`.
 
@@ -126,7 +127,7 @@ For advanced configuration of the Ruby agent, like changing trace propagation fo
 .. _kubernetes_ruby_agent:
 
 Deploy the Ruby agent in Kubernetes
----------------------------------------------
+==================================================================
 
 To deploy the Ruby agent in Kubernetes, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
 
@@ -159,7 +160,7 @@ The following example shows how to update a deployment to expose environment var
 .. _export-directly-to-olly-cloud-ruby:
 
 Send data directly to Splunk Observability Cloud
---------------------------------------------------
+==================================================================
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
@@ -179,19 +180,18 @@ If you need to send data directly to Splunk Observability Cloud, set the followi
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
-
-#. Open the navigation menu in Splunk Observability Cloud.
-#. Select :menuselection:`Settings`.
-#. Select your username. 
-
-The realm name appears in the :guilabel:`Organizations` section.
+To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
 .. note:: For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
+
+Specify the source host
+---------------------------------------------
+
+.. include:: /_includes/gdi/apm-api-define-host.rst
 
 .. _instrument_aws_ruby_functions:
 
 Instrument Lambda functions
-----------------------------------
+==================================================================
 
 You can instrument AWS Lambda functions using the Splunk OpenTelemetry Lambda Layer. See :ref:`instrument-aws-lambda-functions` for more information.

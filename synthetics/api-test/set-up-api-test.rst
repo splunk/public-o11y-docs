@@ -19,9 +19,23 @@ Follow these steps to set up an API test:
 #. In the :guilabel:`Name` field, enter a name for your test. 
 #. Beside :guilabel:`Steps`, select :guilabel:`Add requests` to add requests to your API test. The requests setup page opens. 
 #. Add as many requests as you would like to include in your test, including setup and validation steps. 
-#. As you build your test, you can use :guilabel:`Try now` to check that the configuration of your test is valid. Run results aren't stored. For more, see :ref:`try-now`. 
+#. As you build your test, you can use :guilabel:`Try now` to check that the configuration of your test is valid. Try now results are ephemeral and don’t impact persisted run metrics. For more, see :ref:`try-now`. 
 
 .. _api-test-steps:
+
+
+Custom properties 
+--------------------
+Custom properties are key-value pairs you can assign to dimensions of existing MTSes after ingest. Custom properties are single-valued and don’t support multiple values, like ``region:northamerica`` or ``environment:prod``.
+
+Key requirements:
+
+* Keys must start with an uppercase or lowercase letter. Keys can't start with special characters or numbers. 
+* The remainder of the key can contain letters, numbers, underscores and hyphens.
+* Keys can’t be named test_id or test.
+* Key size can't exceed 128 characters. 
+
+See, :ref:`custom-properties`. 
 
 Add requests to your API test
 ------------------------------------
@@ -42,4 +56,4 @@ Follow these steps to add requests to your API test:
 
 Example
 ==================
-For an example, see  :ref:`api-test-scenario`.
+For an example, see :ref:`api-test-scenario`.

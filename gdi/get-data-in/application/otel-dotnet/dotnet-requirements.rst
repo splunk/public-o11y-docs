@@ -52,10 +52,15 @@ Traces instrumentations
      - Third-party support
      - ``AZURE``
    * - Elastic.Clients.Elasticsearch
-     - 8.0.0 and higher
+     - 8.0.0 to 8.9.3. |br| (Higher versions are supported by Elastic.Transport)
      - Experimental Beta
      - Third-party support
      - ``ELASTICSEARCH``
+   * - Elastic.Transport
+     - 0.4.16 and higher
+     - Experimental Beta
+     - Third-party support
+     - ``ELASTICTRANSPORT``
    * - Microsoft.EntityFrameworkCore |br| (Not supported on .NET Framework)
      - 6.0.12 and higher
      - Experimental Beta
@@ -76,6 +81,11 @@ Traces instrumentations
      - Experimental Beta
      - Community support
      - ``HTTPCLIENT``
+   * - Confluent.Kafka
+     - 1.4.0 to 3.0.0
+     - Experimental Beta
+     - Community support
+     - ``KAFKA``
    * - MassTransit |br| (Not supported on .NET Framework)
      - 8.0.0 and higher
      - Experimental Beta
@@ -106,8 +116,8 @@ Traces instrumentations
      - Experimental Beta
      - Third-party support
      - ``NSERVICEBUS``
-   * - Microsoft.Data.SqlClient and |br| System.Data.SqlClient
-     - Version 3.* is not supported on .NET Framework
+   * - Microsoft.Data.SqlClient, |br| System.Data.SqlClient, |br| System.Data 
+     - Version 3.* is not supported on .NET Framework |br| 4.8.5 and higher |br| versions shipped with .NET Framework
      - Experimental Beta
      - Community support
      - ``SQLCLIENT``
@@ -184,7 +194,7 @@ Logs instrumentations
      - Support level
      - Instrumentation ID
    * - Microsoft.Extensions.Logging |br| (Not supported on .NET Framework)
-     - 6.0.0 and higher
+     - 8.0.0 and higher
      - Experimental Beta
      - Community support
      - ``ILOGGER`` |br| (Requires the trace instrumentation)

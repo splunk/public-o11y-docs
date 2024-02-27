@@ -78,10 +78,10 @@ set up the data mapping from PingOne to Observability Cloud, follow these steps:
 #. Select :guilabel:`Attribute Mappings`.
 #. Insert the following information in the PingOne text fields:
 
-   * User.FirstName -> Given Name
-   * User.LastName -> Family Name
-   * User.email -> Email Address
-   * PersonImmutableID -> User ID
+   * User.FirstName = Given Name
+   * User.LastName = Family Name
+   * User.email = Email Address
+   * PersonImmutableID = User ID
 
 #. Select :guilabel:`Save`
 #. To enable the new PingOne SAML application, toggle the switch at the top of the page.

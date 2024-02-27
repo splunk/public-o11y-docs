@@ -21,7 +21,7 @@ To configure the Browser RUM agent, edit the object passed to the ``SplunkRum.in
    <script>
          SplunkRum.init(
          {
-            beaconEndpoint: 'https://rum-ingest.us0.signalfx.com/v1/rum'
+            beaconEndpoint: 'https://rum-ingest.us0.signalfx.com/v1/rum',
             rumAccessToken: 'ABC123...789',
             applicationName: 'my-awesome-app',
             version: '1.0.1'
@@ -112,7 +112,7 @@ To activate or deactivate specific Browser RUM instrumentations, compose and pas
               ],
             },
             longtask: false, // Deactivates monitoring for longtasks
-            websockets: true, // Activates monitoring for websockets
+            websocket: true, // Activates monitoring for websockets
          },
       });
 
@@ -158,7 +158,7 @@ The following table contains all the properties supported by the ``instrumentati
    * - ``visibility``
      - ``false``
      - Activates the collection of visibility events. See :ref:`browser-rum-data-visibility-events`.
-   * - ``websockets``
+   * - ``websocket``
      - ``false``
      - Activates the collection of websocket lifecycle events. See :ref:`browser-rum-data-websockets`.
    * - ``webvitals``

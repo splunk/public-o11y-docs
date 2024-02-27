@@ -104,7 +104,7 @@ Metrics
 
 The following metrics, resource attributes, and attributes are available.
 
-.. note:: The SignalFx exporter excludes some available metrics by default. Learn more about default metric filters in :ref:`list-excluded-metrics`.
+.. note:: The SignalFx exporter excludes some available metrics by default. Learn more about default metric filters in :ref:`list-excluded-metrics`. See :ref:`ootb-metrics-k8s` to see how the Collector processes Kubernetes metrics.
 
 .. raw:: html
 

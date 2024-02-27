@@ -17,7 +17,7 @@ Keep in mind you might also need the following access tokens:
 
 .. _api-access-token:
 
-Retrieve you user API access token (session token)
+Retrieve your user API access token (session token)
 =========================================================
 
 Observability Cloud automatically generates a user API access token every time you log in.
@@ -26,7 +26,7 @@ To retrieve it:
 
 #. On the left nav menu, select :strong:`Settings`.
 #. Select your profile name.
-#. Select :strong:`Show API Access Token`.
+#. Select :strong:`Show User API Access Token`.
 #. If you need it, :strong:`Copy` the token to your clipboard.
 #. If you keep your Account Settings screen open, select :strong:`Hide` to prevent others from seeing your token.
 
