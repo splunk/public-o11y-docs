@@ -49,7 +49,7 @@ To set custom permissions after the Collector has been installed, use:
 
 .. _linux-manual-env-var:
 
-Permissions
+Environmental variables
 ===================================
 
 If you use :ref:`linux-docker`, :ref:`linux-binary-file`, or :ref:`linux-tar`, you can use environmental variables to configure the Collector. The following environmental variables are required:
@@ -321,7 +321,7 @@ If you require log collection, perform the following steps to install Fluentd an
 
    * Option 1: Update the default config file at /etc/td-agent/td-agent.conf provided by the Fluentd package to collect the desired log events and forward them to ``127.0.0.1:8006``.
 
-   * Option 2: The installed Collector package provides a custom Fluentd config file (/etc/otel/collector/fluentd/fluent.conf) to collect log events from many popular services (/etc/otel/collector/fluentd/conf.d/*.conf) and forwards them to ``127.0.0.1:8006``. To use these files, copy the /etc/otel/collector/fluentd/splunk-otel-collector.conf systemd environment file to /etc/systemd/system/td-agent.service.d/splunk-otel-collector.conf in order to override the default config file path for the Fluentd service.
+   * Option 2: The installed Collector package provides a custom Fluentd config file /etc/otel/collector/fluentd/fluent.conf to collect log events from many popular services and forwards them to ``127.0.0.1:8006``. To use these files, you need to override the default config file path for the Fluentd service. To do this, copy the systemd environment file from /etc/otel/collector/fluentd/splunk-otel-collector.conf to /etc/systemd/system/td-agent.service.d/splunk-otel-collector.conf.
 
 #. Ensure that the ``td-agent`` service user/group has permissions to access to the config file(s) from the previous step.
 
