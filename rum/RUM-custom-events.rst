@@ -115,6 +115,13 @@ The following examples show how to create a custom event for browser, Android, a
          ]
          SplunkRum.reportEvent(name: "testEvent", attributes: dictionary)
 
+header
+=======
+
+* :ref:`spa-custom-event`
+* :ref:`custom-events-dash`
+* :ref:`rum-custom-event-metrics`
+
 Advanced configurations
 ========================
 
