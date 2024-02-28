@@ -30,6 +30,8 @@ This topic introduces important terminology and concepts in Splunk RUM for Brows
       - A field name that is an attribute of your span. Use tags to filter events. 
     * - :ref:`example-session`
       - A session that contains a certain behavior you want to analyze.
+    * - :rum-session-details:
+      -  Expanded view of each session with waterfall view of events.  
     * - :ref:`rum-app-launch`
       - A crash happens when a user encounters an error and has to exit the app.
     * - :ref:`rum-web-vitals`
@@ -146,6 +148,15 @@ For example, suppose you want to see the slowest load time for the web vital LCP
 
 
 
+.. _rum-session-details:
+
+Session details 
+===============
+
+In session details you can search by sesion ID and toggle between raw and parsed views of the session.
+
+* Raw: All of the information available for the session.  
+* Parsed: A curated view of the custom tags and unique values exlcuding all default tags. 
 
 .. _span-id-rum:
 
