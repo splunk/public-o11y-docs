@@ -78,15 +78,15 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`jmx-receiver` (``jmx``)
      - Works in conjunction with the :new-page:`OpenTelemetry JMX Metric Gatherer <https://github.com/open-telemetry/opentelemetry-java-contrib/blob/main/jmx-metrics/README.md>` to report metrics from an MBean server.
      - Metrics
-   * - ``journald``
+   * - :ref:`journald-receiver` (``journald``)
      - Parses Journald events from the systemd journal. The ``journalctl`` binary must be in the same ``$PATH`` of the agent.
      - Logs
-   * - ``kafkametrics``
-     - Collects Kafka metrics such as brokers, topics, partitions, and consumer groups from Kafka server, and converts them to OTLP format.
-     - Metrics
-   * - ``kafka``
+   * - :ref:`kafka-receiver` (``kafka``)
      - Receives metrics, logs, and traces from Kafka. Metrics and logs only support the OTLP format.
      - Metrics, logs, traces
+   * - :ref:`kafkametrics-receiver` (``kafkametrics``)
+     - Collects Kafka metrics such as brokers, topics, partitions, and consumer groups from Kafka server, and converts them to OTLP format.
+     - Metrics
    * - :ref:`kubernetes-cluster-receiver` (``k8s_cluster``)
      - Collects cluster-level metrics from the Kubernetes API server. It uses the Kubernetes API to listen for updates. You can use a single instance of this receiver to monitor a cluster.
      - Metrics

@@ -22,7 +22,10 @@ Collector components: Receivers
     fluentd-receiver
     host-metrics-receiver
     jaeger-receiver    
-    jmx-receiver    
+    jmx-receiver
+    journald-receiver
+    kafka-receiver 
+    kafkametrics-receiver         
     kubelet-stats-receiver
     kubernetes-cluster-receiver     
     mongodb-atlas-receiver
@@ -55,7 +58,10 @@ The following receivers are available:
 * :ref:`fluentd-receiver`
 * :ref:`host-metrics-receiver`
 * :ref:`jaeger-receiver`    
-* :ref:`jmx-receiver`    
+* :ref:`jmx-receiver`
+* :ref:`journald-receiver`
+* :ref:`kafka-receiver`    
+* :ref:`kafkametrics-receiver`    
 * :ref:`kubelet-stats-receiver`
 * :ref:`kubernetes-cluster-receiver`     
 * :ref:`mongodb-atlas-receiver`
