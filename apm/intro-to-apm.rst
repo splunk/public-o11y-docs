@@ -10,8 +10,11 @@ Collect :ref:`traces and spans<apm-traces-spans>` to monitor your distributed ap
 
 For scenarios using Splunk APM, see :ref:`apm-scenarios-intro`.
 
-Get your data into Splunk APM
-======================================
+.. raw:: html
+
+  <embed>
+    <h2>Get your data into Splunk APM</h2><a name="gdi-apm" class="headerlink" href="#gdi-apm" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
 To start using APM, see :ref:`Set up Splunk APM <apm>`.
 
@@ -21,10 +24,9 @@ For information about Splunk APM scenarios, see :ref:`apm-scenarios-intro`.
 
 To see an example of using Splunk Observability Cloud components together, see :ref:`get-started-scenario`.
 
-.. _wcidw-apm:
+.. raw:: html
 
-What can you do with Splunk APM?
-=========================================
+    <h2>What can you do with Splunk APM?</h2>
 
 The following table provides an overview of what you can do with Splunk APM:
 
