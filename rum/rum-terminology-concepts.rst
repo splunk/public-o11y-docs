@@ -30,7 +30,7 @@ This topic introduces important terminology and concepts in Splunk RUM for Brows
       - A field name that is an attribute of your span. Use tags to filter events. 
     * - :ref:`example-session`
       - A session that contains a certain behavior you want to analyze.
-    * - :rum-session-details:
+    * - :ref:`rum-session-details`:
       -  Expanded view of each session with waterfall view of events.  
     * - :ref:`rum-app-launch`
       - A crash happens when a user encounters an error and has to exit the app.
