@@ -11,7 +11,6 @@ You can use the OpenTelemetry Collector to send traces from C++ applications to 
 
 Follow these steps to instrument your C++ application:
 
-#. :ref:`Install the Splunk Distribution of OpenTelemetry Collector <cpp-install-collector>`
 #. :ref:`Add the required dependencies <cpp-dependencies>`
 #. :ref:`Initialize the OpenTelemetry tracer <cpp-otel-tracer>`
 #. :ref:`Generate spans for your application <cpp-generate-spans>`
@@ -23,17 +22,11 @@ Prerequisities
 
 Before starting, make sure you've installed the following components:
 
-* Git
 * A C++ compiler supporting C++ versions 14 and higher
 * Make
 * CMake version 3.20 or higher
 
-.. _cpp-install-collector:
-
-\1. Install and configure the Splunk Distribution of OpenTelemetry Collector
-=================================================================================
-
-To send application traces and spans to Splunk Observability Cloud, install the Splunk Distribution of OpenTelemetry Collector for your platform. The following distributions are available:
+Additionally, you need to install the Splunk Distribution of OpenTelemetry Collector. The following distributions are available:
 
 * :ref:`Linux <collector-linux-intro>`
 * :ref:`Kubernetes <collector-kubernetes-intro>`
@@ -41,14 +34,39 @@ To send application traces and spans to Splunk Observability Cloud, install the 
 
 After installing the Collector, make sure that you have an instance of the Collector running in your environment.
 
-.. _cpp-dependencies:
+.. _cpp-opentelemetry-build:
 
-\2. Add the required dependencies
+1. Build the OpenTelemetry C++ libraries
 ===========================================
 
-Before you get started with instrumentation, the OpenTelemetry Collector requires several dependencies.
+To instrument your C++ code, install and build the OpenTelemetry C++ libraries. Follow these steps: 
 
-In your CMakeLists.txt file, add the following code to include these dependencies.
+#. In your project directory, create a new directory called ``opentelemetry-cpp``. 
+
+#. In the ``opentelemetry-cpp`` directory, clone the OpenTelemetry C++ repository:
+
+    .. code-block:: bash
+
+        git clone https://github.com/open-telemetry/opentelemetry-cpp.git
+
+#. Next, run the following commands to build the OpenTelemetry C++ libraries:
+
+    .. code-block:: bash 
+
+        cd opentelemetry-cpp
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+
+.. _cpp-dependencies:
+
+2. Add the required dependencies
+===========================================
+
+Before you get started with instrumentation, the OpenTelemetry instrumentation for C++ requires several dependencies.
+
+In your CMakeLists.txt file, add the following code to include these dependencies:
 
 .. code-block:: cpp
 
@@ -70,7 +88,7 @@ In your CMakeLists.txt file, add the following code to include these dependencie
 
 .. _cpp-otel-tracer:
 
-\3. Initialize the OpenTelemetry tracer
+3. Initialize the OpenTelemetry tracer
 ===========================================
 
 The OpenTelemetry tracer runs alongside your C++ application, generating telemetry data when the application receives calls.
@@ -117,7 +135,7 @@ To start the tracer, add the following code to your main.cpp file. This code add
 
 .. _cpp-generate-spans:
 
-\4. Generate spans for your application
+4. Generate spans for your application
 ===========================================
 
 The OpenTelemetry Collector gathers spans that your application generates. To start this process, create spans for the operations you want to track by editing your application code.
@@ -148,15 +166,38 @@ Send data directly to Splunk Observability Cloud
 
 By default, all data goes to the local instance of the Splunk Distribution of OpenTelemetry Collector. 
 
-If you need to send data directly to Splunk Observability Cloud, set the following environment variables:
+If you need to send data directly to Splunk Observability Cloud, follow these steps:
 
-.. code-block:: bash
+#. Rebuild the OpenTelemetry C++ client and include the ``-DWITH_OTLP_GRPC=ON`` flag.
+#. Configure the exporter to send data to an OTLP endpoint in your ``main.cpp`` code. For example:
 
-    OTEL_EXPORTER_OTLP_PROTOCOL=grpc
-    OTEL_EXPORTER_OTLP_TRACES_HEADERS=x-sf-token=<access_token>
-    OTEL_EXPORTER_OTLP_ENDPOINT=https://ingest.<realm>.signalfx.com
+   .. code-block:: cpp
 
-Replace ``<realm>`` with your Splunk Observability Cloud realm and ``<access-token>`` with your Splunk Observability Cloud access token with ingest permissions.
+        namespace otlp = opentelemetry::exporter::otlp;
+
+        void InitTracer()
+        {
+            trace_sdk::BatchSpanProcessorOptions bspOpts{};
+            // creates a new options object and sets the OTLP endpoint URL
+            otlp::OtlpHttpExporterOptions opts;
+            opts.url = "http://localhost:4318/v1/traces";
+
+            // pass the options object as an argument for the exporter creator
+            auto exporter = otlp::OtlpHttpExporterFactory::Create(opts);
+            auto processor = trace_sdk::BatchSpanProcessorFactory::Create(std::move(exporter), bspOpts);
+            std::shared_ptr<trace_api::TracerProvider> provider = trace_sdk::TracerProviderFactory::Create(std::move(processor));
+            trace_api::Provider::SetTracerProvider(provider);
+        }
+
+#. Set the following environment variables:
+
+    .. code-block:: bash
+
+        OTEL_EXPORTER_OTLP_PROTOCOL=grpc
+        OTEL_EXPORTER_OTLP_TRACES_HEADERS=x-sf-token=<access_token>
+        OTEL_EXPORTER_OTLP_ENDPOINT=https://ingest.<realm>.signalfx.com
+
+    Replace ``<realm>`` with your Splunk Observability Cloud realm and ``<access-token>`` with your Splunk Observability Cloud access token with ingest permissions.
 
 To learn more about realms and access tokens, see :ref:`admin-org-tokens`.
 
@@ -166,3 +207,6 @@ Learn more
 ===========================================
 
 For a walkthrough that uses a sample C++ application, see :new-page:`https://opentelemetry.io/docs/languages/cpp/`. This walkthrough uses the upstream OpenTelemetry Collector, not the Splunk Distribution.
+
+OpenTelemetry C++ also has several example configurations. To view them, see :new-page:`https://github.com/open-telemetry/opentelemetry-cpp/tree/main/examples`.
+
