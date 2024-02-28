@@ -7,11 +7,11 @@ View dependencies among your services in the service map
 .. meta::
    :description: Learn about the service map displays for your services in Splunk APM. 
 
-The service map displays the dependencies and connections among your instrumented and inferred services in APM. The map is dynamically generated based on your selections in the time range, environment, workflow, service, and tag filters. See :ref:`apm-inferred-services` to learn more about inferred services in APM.
-
-You can use the service map to identify dependencies, performance bottlenecks, and error propagation. 
+The service map displays the dependencies and connections among your instrumented and inferred services in APM. The map is dynamically generated based on your selections in the time range, environment, workflow, service, and tag filters. You can use the service map to identify dependencies, performance bottlenecks, and error propagation. 
 
 For a detailed scenario involving the service map, see :ref:`service-map`. 
+
+See :ref:`apm-inferred-services` to learn more about inferred services in APM.
 
 The following screenshot shows an example service map: 
 
