@@ -198,10 +198,10 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`memory-limiter-processor` (``memory_limiter``) 
      - Prevents out of memory situations on the Splunk Distribution of OpenTelemetry Collector.
      - Metrics, logs, traces
-   * - ``metricstransform``
+   * - :ref:`metrics-transform-processor` (``metricstransform``) 
      - Renames metrics, and adds, renames, or deletes label keys and values.
      - Metrics
-   * - ``probabilisticsampler``
+   * - :ref:`probabilistic-sampler-processor` (``probabilisticsampler``) 
      - Provides samples based on hash values determined by trace IDs.
      - Traces
    * - :ref:`resource-processor` (``resource``)
@@ -210,13 +210,13 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`resourcedetection-processor` (``resourcedetection``)
      - Detects resource information from the host, in a format that conforms to the OpenTelemetry resource semantic conventions, and appends or overrides the resource value in telemetry data with this information.
      - Metrics, logs, traces
-   * - ``routing``
+   * - :ref:`routing-processor` (``routing``) 
      - Reads a header from the incoming HTTP request or reads a resource attribute, and then directs the trace information to specific exporters based on the value.
      - Metrics, logs, traces
    * - :ref:`span-processor` (``span``)
      - Modifies either the span name or attributes of a span based on the span name.
      - Traces
-   * - ``tail_sampling``
+   * - :ref:`tail-sampling-processor` (``tail_sampling``) 
      - Samples traces based on a set of defined policies. All spans for a given trace must be received by the same Collector instance for effective sampling decisions.
      - Traces
    * - :ref:`transform-processor` (``transform``)
