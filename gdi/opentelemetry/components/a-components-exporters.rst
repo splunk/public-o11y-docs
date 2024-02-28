@@ -12,6 +12,9 @@ Collector components: Exporters
     :titlesonly:
     :hidden:
 
+    awss3-exporter
+    file-exporter
+    kafka-exporter    
     logging-exporter
     otlp-exporter
     otlphttp-exporter            
@@ -21,6 +24,9 @@ Collector components: Exporters
 
 The following exporters are available:
 
+* :ref:`awss3-exporter`
+* :ref:`file-exporter`
+* :ref:`kafka-exporter`
 * :ref:`logging-exporter`
 * :ref:`otlp-exporter`
 * :ref:`otlphttp-exporter`            

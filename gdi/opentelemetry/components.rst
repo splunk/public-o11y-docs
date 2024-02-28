@@ -241,10 +241,13 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - Name
      - Description
      - Pipeline types
-   * - ``file``
+   * - :ref:`awss3-exporter` (``awss3``) 
+     - This exporter targets to support proto/json format. 
+     - Metrics, logs, traces
+   * - :ref:`file-exporter` (``file``)
      - Writes pipeline data to a JSON file in Protobuf JSON encoding using the OpenTelemetry protocol. 
      - Metrics, logs, traces
-   * - ``kafka``
+   * - :ref:`kafka-exporter` (``kafka``)
      - Exports metrics, logs, and traces to Kafka using a synchronous producer. 
      - Metrics, logs, traces
    * - :ref:`logging-exporter` (``logging``)
@@ -256,9 +259,6 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`otlphttp-exporter` (``otlphttp``)
      - Exports data in OTLP format over the HTTP protocol. 
      - Metrics, logs, traces
-   * - :ref:`splunk-apm-exporter` (``sapm``)
-     - Allows the Splunk Distribution of OpenTelemetry Collector to export traces from multiple nodes or services in a single batch. 
-     - Traces  
    * - :ref:`signalfx-exporter` (``signalfx``)
      - Sends metrics, events, and trace correlation to Splunk Observability Cloud. 
      - Logs (events), metrics, traces (trace to metric correlation only)
