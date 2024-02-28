@@ -60,10 +60,10 @@ Here are some recommendations to build your development pipeline:
 Identify a naming convention for the deployment environments
 -----------------------------------------------------------------
 
-It is recommended you use defining deployment environments to avoid overlapping configuration between other deployment of the same applications. For example, development, staging, production. For details about defining deployment environments, see :ref:`https://docs.splunk.com/Observability/apm/set-up-apm/environments.html#setting-the-deployment-environment-span-tag`.
+It is recommended you use defining deployment environments to avoid overlapping configuration between other deployment of the same applications. For example, development, staging, production. For details about defining deployment environments, see https://docs.splunk.com/Observability/apm/set-up-apm/environments.html#setting-the-deployment-environment-span-tag.
 Another recommendation to further utilize the filtering of Splunk Application Monitoring data is to define teams, functions, and other tags such as database name or frontend application name. 
 
-This can be accomplished by utilizing the standard method of adding attributes to a trace or span using the OpenTelemetry environment variables: OTEL_RESOURCE_ATTRIBUTES. For details on adding attributes, see :ref:`https://github.com/splunk/observability-workshop/blob/main/content/en/resources/otel_tagging.md#best-practices-for-creating-custom-attributes`. For more information on how to add context to spans tags, see :ref:`https://docs.splunk.com/observability/apm/span-tags/add-context-trace-span.html#follow-span-tag-naming-conventions`.
+This can be accomplished by utilizing the standard method of adding attributes to a trace or span using the OpenTelemetry environment variables: OTEL_RESOURCE_ATTRIBUTES. For details on adding attributes, see https://github.com/splunk/observability-workshop/blob/main/content/en/resources/otel_tagging.md#best-practices-for-creating-custom-attributes. For more information on how to add context to spans tags, see https://docs.splunk.com/observability/apm/span-tags/add-context-trace-span.html#follow-span-tag-naming-conventions.
 
 
 Establish a consistent set of best practices on the use of Splunk instrumentation libraries
@@ -73,10 +73,10 @@ At this point you have enough information and experience with configuring both t
 
 Items should at least include the following:
 
-* Which environment variables and command line parameters to set for the auto-instrumentation agents. For more information, see :ref:`https://docs.splunk.com/Observability/apm/set-`.
-* Guide on how to enable :ref:`AlwaysOn Profiling <https://docs.google.com/document/d/1hpzkmO5c8cz35x3ofa-MC0JGmsazaPQov-7k_f5Mml8/edit?pli=1#heading=h.8rdrmmc6xzqh>` if required. 
-* Instructions how to configure logs to add tracing information. This is language dependent. For a  Java example, see :ref:`https://docs.splunk.com/Observability/gdi/get-data-in/application/java/instrumentation/connect-traces-logs.html`.
-* A guide that to the naming conventions for metrics, and environments. For details on metric naming conventions, see :ref:`https://docs.google.com/document/d/1hpzkmO5c8cz35x3ofa-MC0JGmsazaPQov-7k_f5Mml8/edit?pli=1#heading=h.wm48ywczbj4`. For details on environment naming conventions, see :ref:`https://docs.google.com/document/d/1hpzkmO5c8cz35x3ofa-MC0JGmsazaPQov-7k_f5Mml8/edit?pli=1#heading=h.nly13uf61hgz`.
+* Which environment variables and command line parameters to set for the auto-instrumentation agents. For more information, see https://docs.splunk.com/Observability/apm/set-.
+* Guide on how to enable https://docs.google.com/document/d/1hpzkmO5c8cz35x3ofa-MC0JGmsazaPQov-7k_f5Mml8/edit?pli=1#heading=h.8rdrmmc6xzqh if required. 
+* Instructions how to configure logs to add tracing information. This is language dependent. For a  Java example, see https://docs.splunk.com/Observability/gdi/get-data-in/application/java/instrumentation/connect-traces-logs.html.
+* A guide that to the naming conventions for metrics, and environments. For details on metric naming conventions, see https://docs.google.com/document/d/1hpzkmO5c8cz35x3ofa-MC0JGmsazaPQov-7k_f5Mml8/edit?pli=1#heading=h.wm48ywczbj4. For details on environment naming conventions, see https://docs.google.com/document/d/1hpzkmO5c8cz35x3ofa-MC0JGmsazaPQov-7k_f5Mml8/edit?pli=1#heading=h.nly13uf61hgz.
 
 
 
@@ -95,6 +95,6 @@ It is recommended to work closely with your Splunk Sales Engineer (SE) or Splunk
 Setup training plan for internal users
 ===============================================
 
-Splunk has a set of training available to help you with your onboarding journey and best practices. It is strongly recommended to utilize the provided free online training courses. For a list of free and paid courses, see :ref:`https://www.splunk.com/en_us/training/free-courses/overview.html#observability`.
+Splunk has a set of training available to help you with your onboarding journey and best practices. It is strongly recommended to utilize the provided free online training courses. For a list of free and paid courses, see https://www.splunk.com/en_us/training/free-courses/overview.html#observability.
 
-If building a center of excellence is required by your organization, the following certification path is available for :ref:`Splunk O11y Cloud Certified Metrics User <https://www.splunk.com/en_us/training/course-catalog.html?filters=filterGroup2SplunkO11yCloudCertifiedMetricsUser>`.
+If building a center of excellence is required by your organization, the following certification path is available for :Splunk O11y Cloud Certified Metrics User <https://www.splunk.com/en_us/training/course-catalog.html?filters=filterGroup2SplunkO11yCloudCertifiedMetricsUser>.
