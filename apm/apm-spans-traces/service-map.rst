@@ -72,7 +72,7 @@ You can configure specific metadata to activate Related Content in your service 
 
 When configured, you can select tiles in the Related Content bar to seamlessly navigate from 1 view to another in Splunk Observability Cloud. The following animation shows a user navigating from APM to Infrastructure Monitoring. See :ref:`get-started-relatedcontent` for information about how to configure related content to display in your service map. 
 
-..  image:: /_images/get-started/service-map-related-content-global-search-rename.gif
+..  image:: /_images/apm/spans-traces/service-map-related-content-global-search-rename.gif
     :alt: Using Related Content in Splunk Observability Cloud.
 
 Share your view of the service map
