@@ -16,11 +16,13 @@ Admin guide for onboarding Splunk Observability Cloud
 
 Use this get-started guide to follow the most common journey for admins who are onboarding Splunk Observability Cloud in their organization. There are 3 distinct phases to onboarding journey for Splunk Observability Cloud: 
 
-#. The onboarding phase - activities that connect Splunk Observability Cloud to your existing software framework. See :ref:`phase1`.
+#. The onboarding phase - activities that connect Splunk Observability Cloud to your existing software framework. 
+   
+   See :ref:`phase1`.
 #. The pilot phase - set up standards and procedures for end users, like development teams and site reliability engineers. See :ref:`phase2`.
 #. The expansion and optimization phase - carry forward best practices and frameworks established during the pilot rollout to your infrastructure, applications, and teams. See :ref:`phase3`.
 
-.. image:: /_images/admin/admin-onboarding-phases.png
+.. image:: /_images/get-started/Admin-Onboarding-Guide-Diagram.svg
    :alt: This image shows the admin onboarding guide phases
    :width: 80%
    :align: center
