@@ -45,7 +45,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - Name
      - Description
      - Pipeline types
-   * - ``azureeventhub``
+   * - :ref:`azureeventhub-receiver` (``azureeventhub``) 
      - Pulls logs from an Azure event hub.
      - Logs
    * - ``carbon``
@@ -298,7 +298,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
      - Accepts HTTP requests and optionally adds headers and forwards them. The RequestURIs of the original requests are preserved by the extension. 
    * - :ref:`host-observer-extension` (``host_observer``) 
      - Looks at the current host for listening network endpoints. Uses the /proc file system and requires the ``SYS_PTRACE`` and ``DAC_READ_SEARCH`` capabilities so that it can determine what processes own the listening sockets. See :ref:`receiver-creator-receiver` for more information.
-   * - ``k8s_observer``
+   * - :ref:`kubernetes-observer-extension` (``k8s_observer``)
      - Uses the Kubernetes API to discover pods running on the local node. See :ref:`receiver-creator-receiver` for more information.
    * - :ref:`memory-ballast-extension` (``memory_ballast``)
      - Configures the memory ballast for the Collector process, either as a size in megabytes or as a size expressed as a percentage of the total memory. Sufficient ballast enhances the stability of Collector deployments.

@@ -12,6 +12,7 @@ Collector components: Receivers
     :titlesonly:
     :hidden:
 
+    azureeventhub-receiver
     databricks-receiver
     filelog-receiver   
     fluentd-receiver
@@ -40,6 +41,7 @@ Collector components: Receivers
 
 The following receivers are available:
 
+* :ref:`azureeventhub-receiver`
 * :ref:`databricks-receiver`
 * :ref:`filelog-receiver`   
 * :ref:`fluentd-receiver`
