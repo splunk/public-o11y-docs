@@ -23,7 +23,7 @@ To generate all the basic installation commands for your environment and applica
    #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
    #. In the integration filter menu, select :guilabel:`By Product`.
    #. Select the :guilabel:`APM` product.
-   #. Select the :guilabel:`.PHP (OpenTelemetry)` tile to open the PHP OpenTelemetry guided setup.
+   #. Select the :guilabel:`PHP (OpenTelemetry)` tile to open the PHP OpenTelemetry guided setup.
 
 .. _install-php-otel-instrumentation:
 
