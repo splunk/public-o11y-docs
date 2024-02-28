@@ -286,15 +286,15 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
      - Description
    * - :ref:`basic-auth-extension` (``basicauth``)
      - Implements both ``configauth.ServerAuthenticator`` and ``configauth.ClientAuthenticator`` to authenticate clients and servers using basic authentication. The authenticator type has to be set to ``basicauth``.      
-   * - ``docker_observer``
+   * - :ref:`docker-observer-extension` (``docker_observer``)
      - Detects and reports container endpoints discovered through the Docker API. Only containers that are in the state of ``Running`` and not ``Paused`` emit endpoints.
-   * - ``ecs_observer``
+   * - :ref:`ecs-observer-extension` (``ecs_observer``)
      - Uses the ECS and EC2 API to discover Prometheus scrape targets from all running tasks and filter them based on service names, task definitions, and container labels. Only compatible with the Prometheus receiver.
-   * - ``file_storage``
+   * - :ref:`file-storage-extension` (``file_storage``)
      - Persists state to the local file system. Requires read and write access to a diectory.
    * - :ref:`health-check-extension` (``health_check``)
      - Activates an HTTP URL that can be probed to check the status of the OpenTelemetry Collector. You can also use this extension as a liveness or readiness probe on Kubernetes.
-   * - ``http_forwarder``
+   * - :ref:`http-forwarder-extension` (``http_forwarder``)
      - Accepts HTTP requests and optionally adds headers and forwards them. The RequestURIs of the original requests are preserved by the extension. 
    * - ``host_observer``
      - Looks at the current host for listening network endpoints. Uses the /proc file system and requires the ``SYS_PTRACE`` and ``DAC_READ_SEARCH`` capabilities so that it can determine what processes own the listening sockets. See :ref:`receiver-creator-receiver` for more information.
