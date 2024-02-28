@@ -26,7 +26,7 @@ Access the service map
 Use these steps to access the service map in Splunk APM: 
 
 #. Log into Splunk Observability Cloud. 
-#. Select the :guilabel:`APM` icon in the navigation bar. 
+#. Select :guilabel:`APM` in the navigation bar. 
 #. Select :guilabel:`Service Map` on the APM landing page. The service map view opens, with the service map in the center. 
 
 Using the service map, you can do the following: 
@@ -49,7 +49,7 @@ Perform breakdowns in the service map
 
 The following screenshot shows an example service map in which the ``paymentservice`` node is broken down by endpoint, showing that errors with the payment service are occurring in the ``/Charge`` endpoint. 
 
-..  image:: /_images/apm/spans-traces/service-map-02-breakdown.png
+..  image:: /_images/apm/spans-traces/service-map-breakdown-global-search-rename.png
     :width: 95%
     :alt: This screenshot shows an example of the service map in Splunk APM. The ``paymentservice`` node is broken down by endpoint, showing that errors with that service are arising in the ``/Charge`` endpoint.
 
@@ -70,7 +70,7 @@ Configure Related Content for your service map
 
 You can configure specific metadata to activate Related Content in your service map. Related Content automatically correlates data between APM, Infrastructure Monitoring, and Log Observer to pass filters around Observability Cloud.
 
-When configured, you can select tiles in the Related Content bar to seamlessly navigate from one view to another in Observability Cloud. The following animation shows a user navigating from APM to Infrastructure Monitoring to Log Observer. See :ref:`get-started-relatedcontent` for information about how to configure related content to display in your service map. 
+When configured, you can select tiles in the Related Content bar to seamlessly navigate from 1 view to another in Splunk Observability Cloud. The following animation shows a user navigating from APM to Infrastructure Monitoring to Log Observer. See :ref:`get-started-relatedcontent` for information about how to configure related content to display in your service map. 
 
 ..  image:: /_images/get-started/Related1.gif
     :alt: Using Related Content in Observability Cloud.
