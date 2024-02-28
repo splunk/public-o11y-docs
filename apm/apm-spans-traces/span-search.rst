@@ -61,12 +61,12 @@ For spans that also have RUM session details, the word RUM displays in the span.
   :alt: The integration of RUM within traces shows a link to RUM and the RUM session details in the Trace Properties panel
 
 
-Explore logs and infrastructure for each span
+Explore logs for each span
 ====================================================
 
-If you turned on Related Content, you can jump to related logs and infrastructure data, when available, for each trace and its spans. The following image shows the related logs in Log Observer for a specific trace.
+If you turned on Related Content, you can jump to related logs, when available, for each trace and its spans. The following image shows the related logs in Log Observer for a specific trace.
 
-.. image:: /_images/apm/spans-traces/span-search-related-content.png
+.. image:: /_images/apm/spans-traces/span-search-related-content-rm-infra.png
   :width: 95%
   :alt: Related logs tile in the trace view.
 
