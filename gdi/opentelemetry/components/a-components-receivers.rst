@@ -27,7 +27,9 @@ Collector components: Receivers
     kafka-receiver 
     kafkametrics-receiver         
     kubelet-stats-receiver
-    kubernetes-cluster-receiver     
+    kubernetes-cluster-receiver  
+    kubernetes-events-receiver 
+    kubernetes-objects-receiver  
     mongodb-atlas-receiver
     mysql-receiver
     oracledb-receiver
@@ -35,14 +37,18 @@ Collector components: Receivers
     postgresql-receiver
     prometheus-receiver
     receiver-creator-receiver
+    redis-receiver
+    sapm-receiver
     simple-prometheus-receiver
     signalfx-receiver
     smartagent-receiver
     splunk-hec-receiver
-    sqlquery-receiver     
+    sqlquery-receiver 
+    statsd-receiver    
     syslog-receiver 
     tcp-receiver     
     udp-receiver
+    windowseventlog-receiver
     windowsperfcounters-receiver
     zipkin-receiver 
 
@@ -64,6 +70,8 @@ The following receivers are available:
 * :ref:`kafkametrics-receiver`    
 * :ref:`kubelet-stats-receiver`
 * :ref:`kubernetes-cluster-receiver`     
+* :ref:`kubernetes-events-receiver`
+* :ref:`kubernetes-objects-receiver`
 * :ref:`mongodb-atlas-receiver`
 * :ref:`mysql-receiver`
 * :ref:`oracledb-receiver`
@@ -71,14 +79,18 @@ The following receivers are available:
 * :ref:`postgresql-receiver`
 * :ref:`prometheus-receiver`
 * :ref:`receiver-creator-receiver`
+* :ref:`redis-receiver`
+* :ref:`sapm-receiver`
 * :ref:`simple-prometheus-receiver`
 * :ref:`signalfx-receiver`
 * :ref:`smartagent-receiver`
 * :ref:`splunk-hec-receiver`
-* :ref:`sqlquery-receiver`     
+* :ref:`sqlquery-receiver` 
+* :ref:`statsd-receiver`    
 * :ref:`syslog-receiver` 
 * :ref:`tcp-logs-receiver`     
 * :ref:`udp-logs-receiver`
+* :ref:`windowseventlog-receiver`
 * :ref:`windowsperfcounters-receiver`
 * :ref:`zipkin-receiver` 
 

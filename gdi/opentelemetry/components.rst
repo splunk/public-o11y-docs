@@ -90,10 +90,10 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`kubernetes-cluster-receiver` (``k8s_cluster``)
      - Collects cluster-level metrics from the Kubernetes API server. It uses the Kubernetes API to listen for updates. You can use a single instance of this receiver to monitor a cluster.
      - Metrics
-   * - ``k8s_events``
+   * - :ref:`kubernetes-events-receiver` (``k8s_events``)
      - Collects all new and updated events from the Kubernetes API server. Supports authentication through service accounts only.
      - Logs
-   * - ``k8sobjects``
+   * - :ref:`kubernetes-objects-receiver` (``k8sobjects``)
      - Collects objects from the Kubernetes API server. Supports authentication through service accounts only.
      - Logs
    * - :ref:`kubelet-stats-receiver` (``kubeletstats``)
@@ -123,10 +123,10 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`receiver-creator-receiver` (``receiver_creator``)
      - Instantiates other receivers at runtime based on whether observed endpoints match a configured rule. To use the receiver creator, configure one or more observer extensions to discover networked endpoints.
      - N/A
-   * - ``redis``
+   * - :ref:`redis-receiver` (``redis``)
      - Retrieves Redis ``INFO`` data from a specific Redis instance and builds metrics from it.
      - Metrics
-   * - ``sapm``
+   * - :ref:`sapm-receiver` (``sapm``)
      - Receives traces from other collectors or from the SignalFx Smart Agent.
      - Traces
    * - :ref:`signalfx-receiver` (``signalfx``)
@@ -141,7 +141,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`sqlquery-receiver` (``sqlquery``)
      - Runs custom SQL queries to generate metrics from a database connection.
      - Metrics
-   * - ``statsd``
+   * - :ref:`statsd-receiver` (``statsd``)
      - Collects StatsD messages to generate metrics.
      - Metrics
    * - :ref:`syslog-receiver` (``syslog``)
@@ -153,7 +153,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`udp-logs-receiver` (``udplog``) 
      - Receives logs over UDP.
      - Logs
-   * - ``windowseventlog``
+   * - :ref:`windowseventlog-receiver` (``windowseventlog``)
      - Tails and parses logs from the Windows Event log API.
      - Logs
    * - :ref:`windowsperfcounters-receiver` (``windowsperfcounters``) (Windows only)
