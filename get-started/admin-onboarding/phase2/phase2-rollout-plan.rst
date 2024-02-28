@@ -8,7 +8,7 @@ Pilot phase part 1: Plan your rollout
 Guidance on OTEL naming conventions
 ========================================
 
-In order to start creating charts and detectors in Splunk Observability Cloud, it is recommended that you define a proper standard for the naming convention of the metrics name. For the best practices in setting up a consistent hierarchical naming convention for metrics, see :ref:`XXXXX`  This will make it easier to find metrics and identify its usage by utilizing the name of the metric.
+In order to start creating charts and detectors in Splunk Observability Cloud, it is recommended that you define a proper standard for the naming convention of the metrics name. For the best practices in setting up a consistent hierarchical naming convention for metrics, see XXXXX  This will make it easier to find metrics and identify its usage by utilizing the name of the metric.
 
 If your organization uses host-based O11y licensing, your OTEL naming convention must include the right OTEL host naming convention to roll up usage and telemetry correctly. Accurate usage counting for host-based orgs requires the right data naming convention for pods.  If your do not follow this naming convention, in-product usage data and usage telemetry might be unreliable.  This must be set up correctly for accurate usage measurement.
 
@@ -36,25 +36,25 @@ Set up an application framework
 
 #. Identify initial metric, trace and log integrations and enabling them in the Splunk Observability Cloud
 #. Identify a naming convention for the deployment environments for Splunk Application Performance Monitoring
-#. Establish a consistent set of best practices on the use of Splunks (auto) instrumentation libraries in your developer best practices.
+#. Establish a consistent set of best practices on the use of Splunk (auto) instrumentation libraries in your developer best practices.
 
 .. _enable_integrations:
 
 Identify and enable initial metric, trace and log integrations
 ------------------------------------------------------------------
 
-Identify application tools that are used as part of services that the pilot team supports, such as database, message bus, and so on. Verify that the development languages used are supported by the OTel community. For details, see :ref:`https://opentelemetry.io/docs/instrumentation/`.
+Identify application tools that are used as part of services that the pilot team supports, such as database, message bus, and so on. Verify that the development languages used are supported by the OTel community. For details, see https://opentelemetry.io/docs/instrumentation/.
 
-Clearly define a list of libraries required to support applications and those that are supported by OpenTelemetry to determine which applications require auto or manual instrumentation. For a list of languages supported by OpenTelemetry, see :ref:`https://github.com/open-telemetry/opentelemetry-java-instrumentation/blob/main/docs/supported-libraries.md`
+Clearly define a list of libraries required to support applications and those that are supported by OpenTelemetry to determine which applications require auto or manual instrumentation. For a list of languages supported by OpenTelemetry, see https://github.com/open-telemetry/opentelemetry-java-instrumentation/blob/main/docs/supported-libraries.md
 
 Here are some recommendations to build your development pipeline: 
-* Utilize the OTel zero configuration client(s) on the hosts or Kubernetes. For details, see :ref:`https://docs.splunk.com/Observability/gdi/opentelemetry/zero-config.html`.
-* Utilize the OTel auto instrumentation to the containers or virtual machines. For details, see :ref:`https://docs.splunk.com/Observability/apm/set-up-apm/apm-gdi.html#instrument-your-applications-and-services-to-get-spans-into-splunk-apm`.
+* Utilize the OTel zero configuration client(s) on the hosts or Kubernetes. For details, see https://docs.splunk.com/Observability/gdi/opentelemetry/zero-config.html.
+* Utilize the OTel auto instrumentation to the containers or virtual machines. For details, see https://docs.splunk.com/Observability/apm/set-up-apm/apm-gdi.html#instrument-your-applications-and-services-to-get-spans-into-splunk-apm.
 * Identify the proper environment variables according to specific use cases. 
 * Each development language has its own settings, for example Java, Node.js, and .NET.
-    * For Java information, see :ref:`https://docs.splunk.com/Observability/gdi/get-data-in/application/java/configuration/advanced-java-otel-configuration.html#configure-the-java-agent-for-splunk-observability-cloud`.
-    * For Node.js information, see :ref:`https://docs.splunk.com/Observability/gdi/get-data-in/application/nodejs/instrumentation/instrument-nodejs-application.html#install-the-splunk-distribution-of-opentelemetry-js-manually`.
-    * For .NET information, see :ref:`https://docs.splunk.com/Observability/gdi/get-data-in/application/dotnet/instrumentation/instrument-dotnet-application.html#instrument-a-net-application-for-splunk-observability-cloud`.
+     * For Java information, see https://docs.splunk.com/Observability/gdi/get-data-in/application/java/configuration/advanced-java-otel-configuration.html#configure-the-java-agent-for-splunk-observability-cloud.
+     * For Node.js information, see https://docs.splunk.com/Observability/gdi/get-data-in/application/nodejs/instrumentation/instrument-nodejs-application.html#install-the-splunk-distribution-of-opentelemetry-js-manually.
+     * For .NET information, see https://docs.splunk.com/Observability/gdi/get-data-in/application/dotnet/instrumentation/instrument-dotnet-application.html#instrument-a-net-application-for-splunk-observability-cloud.
 
 
 Identify a naming convention for the deployment environments

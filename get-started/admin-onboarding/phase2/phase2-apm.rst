@@ -28,9 +28,9 @@ Customize Splunk APM experience
 
 Once the initial Splunk APM onboarding process has been completed, it is recommended that the teams familiarize themselves with customizing Splunk APM such as indexing additional span tags or enabling database query performance. It is very important to understand how to set up a deployment environment as this will allow data to not overlap with configurations in other deployment from similar applications.
 
-* For details about indexing additional span tags, see :ref:`https://docs.splunk.com/Observability/apm/set-up-apm/customize-apm.html#index-additional-span-tags`.
-* For details about enableing database query performance, see :ref:`https://docs.splunk.com/Observability/apm/set-up-apm/customize-apm.html#enable-database-query-performance`.
-* For details about setting up a deployment environment, see :ref:`https://docs.splunk.com/Observability/apm/set-up-apm/environments.html#setting-the-deployment-environment-span-tag`.
+* For details about indexing additional span tags, see https://docs.splunk.com/Observability/apm/set-up-apm/customize-apm.html#index-additional-span-tags.
+* For details about enableing database query performance, see https://docs.splunk.com/Observability/apm/set-up-apm/customize-apm.html#enable-database-query-performance.
+* For details about setting up a deployment environment, see https://docs.splunk.com/Observability/apm/set-up-apm/environments.html#setting-the-deployment-environment-span-tag.
 
 
 Understand how to track service performance dashboards
@@ -38,12 +38,12 @@ Understand how to track service performance dashboards
 
 It is important to understand how to familiarize the Splunk APM built-in dashboards, this is important to help troubleshoot issues related to services, endpoints, business workflows and its underlying infrastructure in real time. Several key charts and dashboard within Splunk APM to pay attention to are the APM Service dashboard, Business Workflows and Service Map.
 
-For details about troubleshooting issues related to services, endpoints, and more, see :ref:`https://docs.splunk.com/Observability/apm/apm-alert-visualize/apm-dashboards.html#track-service-performance-using-dashboards-in-splunk-apm`.
+For details about troubleshooting issues related to services, endpoints, and more, see https://docs.splunk.com/Observability/apm/apm-alert-visualize/apm-dashboards.html#track-service-performance-using-dashboards-in-splunk-apm.
 
 Utilize Database Query Performance
 ---------------------------------------------
 
-To pinpoint the database that is causing slowness in your application and to see slow or frequently executed aggregate queries, with historical trends, it is recommended that teams are familiar with Splunk APM Database Query Performance functionality. For details, see :ref: `https://docs.splunk.com/Observability/apm/db-query-perf/db-query-performance.html#db-query-performance`. 
+To pinpoint the database that is causing slowness in your application and to see slow or frequently executed aggregate queries, with historical trends, it is recommended that teams are familiar with Splunk APM Database Query Performance functionality. For details, see https://docs.splunk.com/Observability/apm/db-query-perf/db-query-performance.html#db-query-performance. 
 
 Database Query Performance finds trends in aggregate database queries without the need of database instrumentation. This helps the SRE or service owner to know whether an increase in the latency or error rate of a service is related to a database. If it is, it can help identify which database and which specific query is contributing to the most latency and resolve it by involving the database administrator or the owner of the service that's making the slow database call. 
 
@@ -52,9 +52,9 @@ Another use case example: a SRE or Service Owner wants to see if the new release
 Correlate traces to track Business Workflows
 --------------------------------------------------
 
-Utilizing Splunk APM Business Workflows allow an easy way of grouping relevant traces based on their initiating operation, or any other tag/endpoint on a downstream service. For details, see :ref:`https://docs.splunk.com/Observability/apm/workflows/workflows.html#correlate-traces-to-track-business-workflows`. 
+Utilizing Splunk APM Business Workflows allow an easy way of grouping relevant traces based on their initiating operation, or any other tag/endpoint on a downstream service. For details, see https://docs.splunk.com/Observability/apm/workflows/workflows.html#correlate-traces-to-track-business-workflows. 
 
-This is important in order to monitor end-to-end KPIs and find root causes and bottlenecks. Configuration for Splunk APM Business Workflows are based on any service:operation or tag in the transaction path. Each trace can only belong to one Business Workflow, so the rules in the configuration modal have priority ordering. For example, if a trace can match multiple rules only the highest priority rule will apply. For more information about naming conventions for tagging with OTel, refer to :ref:`https://github.com/splunk/observability-workshop/blob/main/content/en/resources/otel_tagging.md`.
+This is important in order to monitor end-to-end KPIs and find root causes and bottlenecks. Configuration for Splunk APM Business Workflows are based on any service:operation or tag in the transaction path. Each trace can only belong to one Business Workflow, so the rules in the configuration modal have priority ordering. For example, if a trace can match multiple rules only the highest priority rule will apply. For more information about naming conventions for tagging with OTel, refer to https://github.com/splunk/observability-workshop/blob/main/content/en/resources/otel_tagging.md.
 
 For the service:endpoint naming rule, if a trace contains multiple endpoints of the service, the earliest service:endpoint span is used for the workflow name.
 
