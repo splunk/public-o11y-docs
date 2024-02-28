@@ -7,7 +7,7 @@ View dependencies among your services in the service map
 .. meta::
    :description: Learn about the service map displays for your services in Splunk APM. 
 
-The service map, located in Splunk APM :guilabel:`Explore` view, displays the dependencies and connections among your instrumented and inferred services in APM. The map is dynamically generated based on your selections in the time range, environment, workflow, service, and tag filters. See :ref:`apm-inferred-services` to learn more about inferred services in APM.
+The service map displays the dependencies and connections among your instrumented and inferred services in APM. The map is dynamically generated based on your selections in the time range, environment, workflow, service, and tag filters. See :ref:`apm-inferred-services` to learn more about inferred services in APM.
 
 You can use the service map to identify dependencies, performance bottlenecks, and error propagation. 
 
@@ -15,9 +15,9 @@ For a detailed scenario involving the service map, see :ref:`service-map`.
 
 The following screenshot shows an example service map: 
 
-..  image:: /_images/apm/spans-traces/service-map-01.png
+..  image:: /_images/apm/spans-traces/service-map-global-search-rename.png
     :width: 95%
-    :alt: This screenshot shows an example of the service map in Splunk APM Explore view.
+    :alt: An example of the service map in Splunk APM Service Map.
 
 
 Access the service map
@@ -27,7 +27,7 @@ Use these steps to access the service map in Splunk APM:
 
 #. Log into Splunk Observability Cloud. 
 #. Select the :guilabel:`APM` icon in the navigation bar. 
-#. Select :guilabel:`Explore` on the APM Landing Page. The Explore view opens, with the service map in the center. 
+#. Select :guilabel:`Service Map` on the APM landing page. The service map view opens, with the service map in the center. 
 
 Using the service map, you can do the following: 
 
@@ -51,13 +51,13 @@ The following screenshot shows an example service map in which the ``paymentserv
 
 ..  image:: /_images/apm/spans-traces/service-map-02-breakdown.png
     :width: 95%
-    :alt: This screenshot shows an example of the service map in Splunk APM Explore view. The ``paymentservice`` node is broken down by endpoint, showing that errors with that service are arising in the ``/Charge`` endpoint.
+    :alt: This screenshot shows an example of the service map in Splunk APM. The ``paymentservice`` node is broken down by endpoint, showing that errors with that service are arising in the ``/Charge`` endpoint.
 
 The following screenshot shows the same service map with an additional breakdown on the ``checkoutservice`` by endpoint. This shows that the errors occurring in the ``/Charge`` endpoint of the ``paymentservice`` originate in the ``/placeOrder`` endpoint of the ``checkoutservice``. 
 
 ..  image:: /_images/apm/spans-traces/service-map-03-breakdown.png
     :width: 95%
-    :alt: This screenshot shows an example of the service map in Splunk APM Explore view. The ``paymentservice`` and ``checkoutservice`` nodes are broken down by endpoint.
+    :alt: This screenshot shows an example of the service map in Splunk APM. The ``paymentservice`` and ``checkoutservice`` nodes are broken down by endpoint.
 
 To breakdown the service map:
 
