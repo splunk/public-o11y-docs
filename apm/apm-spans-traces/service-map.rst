@@ -68,12 +68,12 @@ To breakdown the service map:
 Configure Related Content for your service map
 ==============================================
 
-You can configure specific metadata to activate Related Content in your service map. Related Content automatically correlates data between APM, Infrastructure Monitoring, and Log Observer to pass filters around Observability Cloud.
+You can configure specific metadata to activate Related Content in your service map. Related Content automatically correlates data between APM, Infrastructure Monitoring, and Log Observer to pass filters around Splunk Observability Cloud.
 
-When configured, you can select tiles in the Related Content bar to seamlessly navigate from 1 view to another in Splunk Observability Cloud. The following animation shows a user navigating from APM to Infrastructure Monitoring to Log Observer. See :ref:`get-started-relatedcontent` for information about how to configure related content to display in your service map. 
+When configured, you can select tiles in the Related Content bar to seamlessly navigate from 1 view to another in Splunk Observability Cloud. The following animation shows a user navigating from APM to Infrastructure Monitoring. See :ref:`get-started-relatedcontent` for information about how to configure related content to display in your service map. 
 
-..  image:: /_images/get-started/Related1.gif
-    :alt: Using Related Content in Observability Cloud.
+..  image:: /_images/get-started/service-map-related-content-global-search-rename.gif
+    :alt: Using Related Content in Splunk Observability Cloud.
 
 Share your view of the service map
 ======================================
