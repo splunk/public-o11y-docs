@@ -156,7 +156,7 @@ Session details
 In session details you can search by sesion ID and toggle between raw and parsed views of the session.
 
 * Raw: All of the information available for the session.  
-* Parsed: A curated view of the custom tags and unique values exlcuding all default tags and XHR requests. 
+* Parsed: A curated view of the custom tags and unique values excluding all default tags and XHR requests. 
 
 .. _span-id-rum:
 
