@@ -44,8 +44,8 @@ Span and trace limits
      - 100,000 spans per trace
      - Spans are dropped after you reach the limit. 
    * - Trace size 
-     - 16 MB
-     - Spans are dropped from traces that exceed the 16 MB limit and are not analyzed by Splunk APM.  
+     - 8 MB
+     - Traces have a limit of 8 MB. The most recent spans within a trace are displayed until the 8 MB limit is reached.
    * - Span accumulation duration
      - 10 minutes
      - When a specific trace ID reaches this limit, subsequent spans are grouped into another trace segment. 
