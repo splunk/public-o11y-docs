@@ -18,11 +18,11 @@ This integration is compatible with the following versions of Splunk On-Call:
 - Enterprise
 
 
-**Sumo Logic** is the industry's leading secure and purpose-built
+Sumo Logic is the industry's leading secure and purpose-built
 cloud-based machine data analytics service that leverages big data for
 real-time IT insights.
 
-This integration uses Sumo Logic's “Connections” option to send
+This integration uses the Sumo Logic “Connections” option to send
 webhooks to the Splunk On-Call REST endpoint, creating incidents in the
 timeline. The following guide describes the steps needed to
 integrate the two platforms.
