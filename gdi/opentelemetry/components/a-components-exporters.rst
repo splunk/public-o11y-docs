@@ -22,7 +22,7 @@ Collector components: Exporters
     splunk-apm-exporter
     splunk-hec-exporter
 
-The following exporters are available:
+The following exporters are available in the Splunk Distribution of OpenTelemetry Collector:
 
 * :ref:`awss3-exporter`
 * :ref:`file-exporter`
