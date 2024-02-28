@@ -48,19 +48,19 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`azureeventhub-receiver` (``azureeventhub``) 
      - Pulls logs from an Azure event hub.
      - Logs
-   * - ``carbon``
+   * - :ref:`carbon-receiver` (``carbon``)
      - Receives metrics in Carbon plaintext protocol.
      - Metrics
-   * - ``cloudfoundry``
+   * - :ref:`cloudfoundry-receiver` (``cloudfoundry``)
      - Connects to the Reverse Log Proxy (RLP) gateway of Cloud Foundry to extract metrics.
      - Metrics
-   * - ``collectd``
+   * - :ref:`collectd-receiver` (``collectd``)
      - Receives data exported through the CollectD ``write_http`` plugin. Only supports the JSON format.
      - Metrics
    * - :ref:`databricks_receiver` (``databricks``)
      - Uses the Databricks API to generate metrics about the operation of a Databricks instance.
      - Metrics
-   * - ``discovery``
+   * - :ref:`discovery-receiver` (``discovery``)
      - Wraps the receiver creator to facilitate the discovery of metric collection targets. See :ref:`discovery_mode`.
      - Logs
    * - :ref:`filelog-receiver` (``filelog``)

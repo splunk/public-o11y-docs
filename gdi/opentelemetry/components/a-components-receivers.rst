@@ -13,7 +13,11 @@ Collector components: Receivers
     :hidden:
 
     azureeventhub-receiver
+    carbon-receiver
+    cloudfoundry-receiver
+    collectd-receiver
     databricks-receiver
+    discovery-receiver
     filelog-receiver   
     fluentd-receiver
     host-metrics-receiver
@@ -42,7 +46,11 @@ Collector components: Receivers
 The following receivers are available:
 
 * :ref:`azureeventhub-receiver`
+* :ref:`carbon-receiver`
+* :ref:`cloudfoundry-receiver`
+* :ref:`collectd-receiver`
 * :ref:`databricks-receiver`
+* :ref:`discovery-receiver`
 * :ref:`filelog-receiver`   
 * :ref:`fluentd-receiver`
 * :ref:`host-metrics-receiver`
