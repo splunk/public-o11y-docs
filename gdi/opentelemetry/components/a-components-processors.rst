@@ -34,7 +34,7 @@ The following processors are available:
 * :ref:`groupbyattrs-processor`    
 * :ref:`kubernetes-attributes-processor`
 * :ref:`memory-limiter-processor`    
-* :ref:`metrics-transform-processor `  
+* :ref:`metrics-transform-processor`  
 * :ref:`probabilistic-sampler-processor`    
 * :ref:`resource-processor`
 * :ref:`resourcedetection-processor`
