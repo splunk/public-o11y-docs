@@ -275,11 +275,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Admin onboarding guide <get-started/admin-onboarding/admin-onboarding-guide>
-
-.. toctree::
-   :maxdepth:   3
-
    Get started <get-started/o11y>
 
 .. toctree::
@@ -306,8 +301,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Contribute to our documentation <get-started/contribute>
-
-
 
 .. toctree::
    :maxdepth:   3
@@ -348,6 +341,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    admin/admin
+
+.. toctree::
+   :maxdepth:   3
+
+Admin onboarding guide TOGGLE <admin/admin-onboarding/admin-onboarding-guide>
 
 .. toctree::
    :maxdepth:   3
