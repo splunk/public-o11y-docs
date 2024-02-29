@@ -241,6 +241,11 @@ Collect traces :ref:`get-started-php`
 
 .. rst-class:: newcard
 
+:strong:`C++`
+Collect traces :ref:`get-started-cpp`
+
+.. rst-class:: newcard
+
 :strong:`All supported integrations`
 View a list of all supported integrations :ref:`supported-data-sources`
 
