@@ -345,7 +345,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-Admin onboarding guide TOGGLE <admin/admin-onboarding/admin-onboarding-guide>
+   Admin onboarding guide TOGGLE <admin/admin-onboarding/admin-onboarding-guide>
 
 .. toctree::
    :maxdepth:   3
