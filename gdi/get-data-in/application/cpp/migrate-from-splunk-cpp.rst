@@ -36,4 +36,16 @@ Change configuration settings
 
 Options passed through ``splunk::OpenTelemetryOptions`` are no longer supported. 
 
-If you passed any options through ``splunk::OpenTelemetryOptions``, change these options to environment variables.
+If you passed any options through ``splunk::OpenTelemetryOptions``, change these options to environment variables. 
+
+For example, if you set the following option in your C++ code: 
+
+.. code-block:: cpp
+
+    splunk::OpenTelemetryOptions options = splunk::OpenTelemetryOptions().WithServiceName("my-service")
+
+Change the option to an environment variable by deleting the previous code and running the following command:
+
+.. code-block:: bash
+
+    export OTEL_SERVICE_NAME="my-service"
