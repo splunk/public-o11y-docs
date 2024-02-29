@@ -201,6 +201,68 @@ Set ``agent.hostNetwork`` to ``false`` to turn off host network access. This mig
 
 This value is disregarded for Windows.
 
+.. _otel-kubernetes-config-add-components:
+
+Add additional components to the configuration
+======================================================
+
+To use any additional OTel component or legacy integration, add it the relevant sections of the configuration file, including the pipelines. See more at :ref:`otel-data-processing`.
+
+For a full list of available components and how to configure them, see :ref:`otel-components`. For a list of available application integrations, see :ref:`monitor-data-sources`.
+
+Add a native OTel component
+-----------------------------------------------------------------------------
+
+If you want to activate the MySQL receiver, add ``mysql`` to the ``receivers`` section of your configuration file:
+
+.. code:: yaml
+
+  receivers:
+    mysql:
+      endpoint: localhost:3306
+      username: otel
+      password: ${env:MYSQL_PASSWORD}
+      database: otel
+      collection_interval: 10s
+      initial_delay: 1s
+      statement_events:
+        digest_text_limit: 120
+        time_limit: 24h
+        limit: 250
+
+Next, include the receiver in the ``metrics`` pipeline of the ``service`` section of your configuration file:
+
+.. code:: yaml
+
+  service:
+    pipelines:
+      metrics:
+        receivers:
+          - mysql
+
+Add a legacy integration
+-----------------------------------------------------------------------------
+
+If you want to use a non-native OTel component, such as the RabbitMQ integration, you need to use the Smart Agent receiver as well.
+
+For example:
+
+.. code:: yaml
+
+  receivers:
+    smartagent/rabbitmq:
+      type: collectd/rabbitmq
+      ...  # Additional config
+
+Next, add the monitor to the ``service.pipelines.metrics.receivers`` section of your configuration file:
+
+.. code:: yaml
+
+  service:
+    pipelines:
+      metrics:
+        receivers: [smartagent/rabbitmq]
+
 Activate AlwaysOn Profiling
 =================================
 
