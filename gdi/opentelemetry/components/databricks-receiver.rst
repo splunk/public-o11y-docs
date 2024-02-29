@@ -1,4 +1,5 @@
 .. _databricks_receiver:
+.. _databricks-receiver:
 
 ********************************************
 Databricks receiver
