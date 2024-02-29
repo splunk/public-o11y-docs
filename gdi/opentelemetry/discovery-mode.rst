@@ -53,7 +53,7 @@ Discovery mode supports the following host services and applications:
      - Smart Agent with collectd/nginx monitor type. See :ref:`nginx`.
 
    * - Redis
-     - Redis receiver.
+     - Redis receiver. See :ref:`redis-receiver`.
 
 Discovery mode is available for the following platforms:
 
