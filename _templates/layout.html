@@ -59,11 +59,13 @@
 <script>
     const getBarConfig = () => {
         const customTheme = ``;
+        const language = window.location.pathname.includes('/ja/') ? 'ja' : 'en';
 
         return {
             customTheme,
             env: window.location.hostname.includes('splunk') ? 'prod' : 'dev',
-            language: 'en',
+            language: language,
+            suiLanguage: language,
             layoutTemplate: "docsResultLayout",
             showSearchButton: false,
             searchBarRedirectUrl: 'https://docs.splunk.com/observability/en/search.html',
