@@ -143,7 +143,7 @@
               if (path.includes('/' + lang + '/')) {
                 $(this).addClass('active-lang').css({
                   "font-weight": "bold",
-                  "color": "white"
+                  "color": "red"
                 });
               } else {
                 $(this).removeClass('active-lang').removeAttr('style');
@@ -153,9 +153,23 @@
 
           setActiveLanguage();
 
+          function constructNewPath(lang) {
+            var currentPath = window.location.pathname;
+            var pathSegments = currentPath.split('/');
+            var langIndex = pathSegments.findIndex(segment => $('.lang').map(function() { return $(this).data('lang'); }).get().includes(segment));
+
+            if (langIndex > -1) {
+              pathSegments[langIndex] = lang;
+            } else {
+              pathSegments.splice(1, 0, lang);
+            }
+
+            return pathSegments.join('/');
+          }
+
           $('.lang').click(function() {
             var lang = $(this).data('lang');
-            var newPath = '/observability/' + lang + '/';
+            var newPath = constructNewPath(lang);
             window.location.pathname = newPath;
 
             setActiveLanguage();
