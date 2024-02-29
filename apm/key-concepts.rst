@@ -73,7 +73,6 @@ Splunk APM is an Application Performance Monitoring solution that collects every
    * - :ref:`Troubleshooting MetricSets (TMS)<tms-concept>`
      - Metric time series used for high-cardinality troubleshooting of identities in APM and for historical comparison among spans and workflows.
  
-
 .. raw:: html
 
   <embed>
@@ -144,8 +143,6 @@ See :ref:`get-started-application` to learn more about instrumenting services.
   </embed>
 
 A specific action performed by a service. Each operation in an instrumented service is  captured in an individual spans. 
-
-.. _service-concept:
 
 .. raw:: html
 
