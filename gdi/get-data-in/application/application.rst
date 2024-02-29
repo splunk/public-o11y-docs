@@ -15,9 +15,8 @@ Instrument back-end applications to send spans to Splunk APM
    Instrument a .NET application TOGGLE <otel-dotnet/get-started>
    Instrument a Go application TOGGLE <go/get-started>
    Instrument a Python application TOGGLE <python/get-started>
-   Instrument a Ruby application TOGGLE <ruby/get-started>
+   Instrument a Ruby application TOGGLE <ruby/get-started-ruby>
    Instrument a PHP application TOGGLE <php/get-started>
-   Instrument a Ruby application (upstream) TOGGLE <upstream-ruby/get-started-ruby>
    Instrument applications written in other programming languages <other-languages>
    Send spans from the Istio service mesh <istio/istio>
 

@@ -4,6 +4,7 @@
 Instrument Ruby applications for Splunk Observability Cloud
 **************************************************************
 
+.. caution:: The Splunk Distribution for OpenTelemetry Ruby is deprecated in favor of the upstream OpenTelemetry instrumentation for Ruby. To use the upstream instrumentation, see :ref:`get-started-upstream-ruby`.
 
 .. meta::
    :description: Instrument Ruby applications automatically to export spans and metrics to Splunk Observability Cloud.
