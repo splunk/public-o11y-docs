@@ -13,7 +13,7 @@ For scenarios using Splunk APM, see :ref:`apm-scenarios-intro`.
 .. raw:: html
 
   <embed>
-    <h2>Get your data into Splunk APM</h2><a name="gdi-apm" class="headerlink" href="#gdi-apm" title="Permalink to this headline">¶</a></h2>
+    <h2>Get your data into Splunk APM<a name="gdi-apm" class="headerlink" href="#gdi-apm" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 To start using APM, see :ref:`Set up Splunk APM <apm>`.
@@ -26,7 +26,9 @@ To see an example of using Splunk Observability Cloud components together, see :
 
 .. raw:: html
 
-    <h2>What can you do with Splunk APM?</h2>
+  <embed>
+    <h2>What can you do with Splunk APM?<a name="wcid-apm" class="headerlink" href="#wcid-apm" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
 The following table provides an overview of what you can do with Splunk APM:
 
