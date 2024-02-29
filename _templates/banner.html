@@ -102,6 +102,9 @@
         <li class="nav-item">
           <a class="nav-link newnavbar" href="https://www.splunk.com/en_us/training/course-catalog.html?sort=Newest&filters=filterGroup4SplunkObservabilityCloud%2CfilterGroup4SplunkSyntheticMonitoring%2CfilterGroup4SplunkInfrastructureMonitoring%2CfilterGroup4SplunkITSI%2CfilterGroup4SplunkAPM%2CfilterGroup4SplunkOnCall%2CfilterGroup4SplunkRUM%2CfilterGroup4SplunkLogObserver%2CfilterGroup4SplunkInsights" target="_blank">Training</a>
         </li>
+        <li class="nav-item nav-lang">
+          <span class="en-lang">EN</span> | <span class="ja-lang">JA</span>
+        </li>
         <li class="nav-item">
           <a class="nav-link newnavbar" href="https://www.splunk.com/en_us/download/infrastructure-monitoring.html" target="_blank" style="
           font-size: 12px;
@@ -117,6 +120,44 @@
 
       </ul>
       </div>
+
+      <style>
+        .nav-lang{
+          margin-top: 15px;
+        }
+        .active-lang {
+          font-weight: bold;
+          color: white;
+        }
+      </style>
+      <script>
+        $(document).ready(function() {
+          function setActiveLanguage() {
+            var path = window.location.pathname;
+            $('.lang').each(function() {
+              var lang = $(this).data('lang');
+              if (path.includes('/' + lang + '/')) {
+                $(this).addClass('active-lang').css({
+                  "font-weight": "bold",
+                  "color": "white"
+                });
+              } else {
+                $(this).removeClass('active-lang').removeAttr('style');
+              }
+            });
+          }
+
+          setActiveLanguage();
+
+          $('.lang').click(function() {
+            var lang = $(this).data('lang');
+            var newPath = '/observability/' + lang + '/';
+            window.location.pathname = newPath;
+
+            setActiveLanguage();
+          });
+        });
+      </script>
 
       <div id="mobileSideBar">
         {%- block sidebar2 %}{{ sidebar() }}{% endblock %}
