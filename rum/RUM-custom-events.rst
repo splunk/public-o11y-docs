@@ -118,6 +118,7 @@ The following examples show how to create a custom event for browser, Android, a
 Next steps with custom events 
 =================================== 
 
+For examples, dashboards, and metrics related to custom events see: 
 
 * :ref:`spa-custom-event`
 * :ref:`custom-events-dash`
