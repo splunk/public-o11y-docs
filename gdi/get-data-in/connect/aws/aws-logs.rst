@@ -5,39 +5,15 @@ Collect logs from your AWS services
 ****************************************
 
 .. meta::
-  :description: Collect logs from your AWS services in Splunk Observability Cloud.
+  :description: Collect logs from your AWS services in Splunk.
 
-.. caution:: 
-  
-  Splunk Log Observer is no longer available for new users. If you have a Log Observer entitlement, you must transition to Splunk Cloud Platform or Splunk Enterprise. Read more at :ref:`lo-transition`.
+Log collection is not available in Splunk Observability Cloud. Instead, you can use the Data Manager to send AWS logs to Splunk Platform. Learn how at :new-page:`Onboard AWS in Data Manager <https://docs.splunk.com/Documentation/DM/1.8.2/User/AWSAbout>`. If you have a Log Observer entitlement, you must transition to Splunk Cloud Platform or Splunk Enterprise. Read more at :ref:`lo-transition`.
 
-  You can also use the Data Manager to send AWS logs to Splunk Platform. Learn how at :new-page:`Onboard AWS in Data Manager <https://docs.splunk.com/Documentation/DM/1.8.2/User/AWSAbout>`.
-
-When setting up an AWS connection, you can choose to import logs from a Cloudwatch log group or an S3 bucket. 
-
-To set up log collection, follow these steps:
-
-1. Open the link to a :ref:`CloudFormation template <aws-cloudformation>`. 
-2. Adjust the settings. 
-3. Deploy the template to create ``splunk-aws-logs-collector``, an AWS Lambda function used to transform log entries, enrich them with metadata, and send them to Splunk Observability Cloud.
+To query logs, use Log Observer Connect. See more at :ref:`logs-intro-logconnect`.
 
 .. note::
 
   If you experience any issues getting logs from AWS, see :ref:`aws-ts-logs`.
-
-How does log collection work?
-============================================
-
-The Splunk Observability Cloud back end runs a periodic job which goes through CloudWatch log groups and services in your account. This job adds the appropriate subscriptions and notifications to trigger the ``splunk-aws-logs-collector`` function. 
-
-Splunk Observability Cloud adds subscription filters to log groups for the selected services in the integration, or for all of the supported services when none is selected. For instance, if you select ``AWS/Lambda`` in the integration, Splunk Observability Cloud will add subscription filters to ``/aws/lambda/*`` log groups only. Splunk Observability Cloud doesn't capture logs from all CloudWatch log groups.
-
-Managing subscriptions
------------------------------------
-
-Subscriptions are managed every 5 minutes, which is not configurable at the moment. If you decide to turn off the integration or a particular service, the job will attempt to remove those subscriptions.
-  
-If a new log group is created for a service in the integration, Splunk Observability Cloud adds a subscription filter to this newly created log group. Afterwards, whenever new log events are added to the log group, AWS triggers ``splunk-aws-logs-collector`` lambda automatically in near real time. 
 
 Which services can you collect logs from?
 ============================================
