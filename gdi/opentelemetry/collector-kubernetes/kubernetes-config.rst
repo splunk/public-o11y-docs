@@ -213,7 +213,7 @@ For a full list of available components and how to configure them, see :ref:`ote
 Add a native OTel component
 -----------------------------------------------------------------------------
 
-If you want to activate the MySQL receiver, add ``mysql`` to the ``receivers`` section of your configuration file:
+For example, if you want to activate the MySQL receiver, add ``mysql`` to the ``receivers`` section of your configuration file:
 
 .. code:: yaml
 
