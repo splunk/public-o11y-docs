@@ -4,7 +4,7 @@
 RUM subscription and usage metrics 
 ***************************************************************************
 
-Splunk RUM offers three metrics you can use to track your subscription usage. You can use these metrics to create charts, dashboards, and set alerts. Your usage data is monthly. 
+Splunk RUM offers three metrics you can use to track your subscription usage. You can use these metrics to create charts, dashboards, and set alerts. Usage data is based on a monthly cadence. 
 
 Each metric has two dimensions:
 
