@@ -144,6 +144,8 @@ See :ref:`get-started-application` to learn more about instrumenting services.
 
 A specific action performed by a service. Each operation in an instrumented service is  captured in an individual spans. 
 
+.. _service-concept:
+
 .. raw:: html
 
   <embed>
@@ -287,7 +289,7 @@ To learn more, see:
 .. raw:: html
 
   <embed>
-    <h2>MetricSets<a name="metricset-spans" class="headerlink" href="#metricset-spans" title="Permalink to this headline">¶</a></h2>
+    <h2>MetricSets<a name="metricset-concept" class="headerlink" href="#metricset-concept" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 MetricSets are the central type of metric data that power Splunk APM. 
