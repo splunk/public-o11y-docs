@@ -22,6 +22,16 @@ Installation
 
 .. include:: /_includes/collector-installation.rst
 
+Authentication
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This integration supports Windows and SQL authentication.
+
+- Windows authentication doesn't require a username and password, as it uses the account where the Collector is running.
+- SQL authentication uses the account you configure for the integration. See :ref:`sql-installation-user`.
+
+.. _sql-installation-user
+
 Microsoft SQL installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -190,10 +200,7 @@ Troubleshooting
 TCP/IP is deactivated
 ~~~~~~~~~~~~~~~~~~~~~
 
-In some Windows-based SQL Server instances, TCP/IP has been deactivated
-by default. You might encounter this in a Microsoft Azure service
-instance. If you see error messages similar to ``Cannot read handshake packet: read tcp: wsarecv: An existing connection was forcibly closed by the remote host.``,
-you need to explicitly activate TCP/IP for the instance.
+In some Windows-based SQL Server instances, TCP/IP has been deactivated by default. You might encounter this in a Microsoft Azure service instance. If you see error messages similar to ``Cannot read handshake packet: read tcp: wsarecv: An existing connection was forcibly closed by the remote host.``, you need to explicitly activate TCP/IP for the instance.
 
 1. Verify agent configurations are correct.
 
@@ -205,7 +212,7 @@ you need to explicitly activate TCP/IP for the instance.
    Applications`, then :menuselection:`SQL Server Configuration Manager`, then :menuselection:`SQL
    Server Network Configuration`.
 
-4. Select :menuselection:`Protocols for <YOUR SQL SERVER NAME>`.
+4. Select :menuselection:`Protocols for <your_sql_server_name>`.
 
 5. In the protocol list, right-click the :strong:`TCP/IP` protocol and select
    :strong:`Enable`.
