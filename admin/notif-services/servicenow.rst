@@ -1,16 +1,17 @@
 .. _servicenow:
 
-
 **************************************************************************
 Send alert notifications to ServiceNow using Splunk Observability Cloud
 **************************************************************************
 
 .. meta::
-      :description: Configure Observability Cloud to send alerts to ServiceNow when a detector alert condition is met and when the condition clears.
+      :description: Configure Splunk Observability Cloud to send alerts to ServiceNow when a detector alert condition is met and when the condition clears.
 
 You can configure Splunk Observability Cloud to automatically send alert notifications to ServiceNow when a detector alert condition is met and when the alert clears.
 
-To send Observability Cloud alert notifications to ServiceNow, complete the following configuration tasks:
+.. note:: This configuration guide doesn't cover every type of integration you can create in Splunk Observability Cloud, and your configuration may vary from the examples shown here.
+
+To send Splunk Observability Cloud alert notifications to ServiceNow, complete the following configuration tasks:
 
 * :ref:`servicenow1`
 
@@ -18,21 +19,21 @@ To send Observability Cloud alert notifications to ServiceNow, complete the foll
 
 * :ref:`servicenow2`
 
-   You must be an Observability Cloud administrator to complete this task.
+   You must be a Splunk Observability Cloud administrator to complete this task.
 
 * :ref:`servicenow3`
 
 
 .. _servicenow1:
 
-Step 1: Create a ServiceNow user for your Observability Cloud integration
+Step 1: Create a ServiceNow user for your Splunk Observability Cloud integration
 =================================================================================
 
-In this step, you create a ServiceNow user that you can use to receive alert notifications from Observability Cloud. You must be a ServiceNow administrator to complete this task.
+In this step, you create a ServiceNow user that you can use to receive alert notifications from Splunk Observability Cloud. You must be a ServiceNow administrator to complete this task.
 
 If you have an existing ServiceNow user that you want to use to receive alert notifications, the user has the :strong:`web_service_admin` and :strong:`itil` roles assigned, and you know the user ID and password, you can skip to :ref:`servicenow2`.
 
-To set up a ServiceNow user for your Observability Cloud integration:
+To set up a ServiceNow user for your Splunk Observability Cloud integration:
 
 #. Log in to ServiceNow.
 
@@ -59,12 +60,12 @@ To set up a ServiceNow user for your Observability Cloud integration:
 
 .. _servicenow2:
 
-Step 2: Create a ServiceNow integration in Observability Cloud
+Step 2: Create a ServiceNow integration in Splunk Observability Cloud
 =================================================================================
 
-You must be an Observability Cloud administrator to complete this task.
+You must be a Splunk Observability Cloud administrator to complete this task.
 
-To create a ServiceNow integration in Observability Cloud:
+To create a ServiceNow integration in Splunk Observability Cloud:
 
 #. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`ServiceNow guided setup <https://login.signalfx.com/#/integrations/integrations/servicenow>`. Optionally, you can navigate to the guided setup on your own:
@@ -84,24 +85,37 @@ To create a ServiceNow integration in Observability Cloud:
 #. In the :strong:`Password` field, enter the password from ServiceNow in :ref:`servicenow1`.
 #. In the :strong:`Instance Name` field, enter your ServiceName instance name. For example, the instance name must use the format ``example.service-now.com``. Do not include a leading ``https://`` or a trailing ``/``. Additionally, you cannot use local ServiceNow instances.
 
-   To troubleshoot potential blind server-side request forgeries (SSRF), Observability Cloud has included ``\*.service-now.com`` on an allow list. As a result, if you enter a domain name that is rejected by Observability Cloud, contact :ref:`support` to update the allow list of domain names.
+   To troubleshoot potential blind server-side request forgeries (SSRF), Splunk Observability Cloud has included ``\*.service-now.com`` on an allow list. As a result, if you enter a domain name that is rejected by Splunk Observability Cloud, contact :ref:`support` to update the allow list of domain names.
 
-#. Select :strong:`Incident`, :strong:`Problem`, or :strong:`Event` to indicate the issue type you want the integration to create in ServiceNow. If necessary, you can create a second integration using the other issue type. This lets you create an incident issue for one detector rule and a problem issue for another detector rule.
+#. Select :strong:`Incident`, :strong:`Problem`, or :strong:`Event` to indicate the issue type you want the integration to create in ServiceNow. If necessary, you can create a second integration using the other issue type. This lets you create an incident issue for one detector rule and a problem issue for another detector rule. The following table shows the roles required to create each issue type:
+
+    .. list-table:: 
+      :header-rows: 1
+      :width: 100
+
+      * - Issue type
+        - Role needed
+      * - Problem
+        - ``user_admin``, ``itil``
+      * - Incident
+        - ``user_admin``, ``itil``
+      * - Event
+        - None
 
 #. :strong:`Save`.
 
-#. If Observability Cloud can validate the ServiceNow username, password, and instance name combination, a :strong:`Validated!` success message displays. If an error displays instead, make sure that the values you entered match the values in ServiceNow.
+#. If Splunk Observability Cloud can validate the ServiceNow username, password, and instance name combination, a :strong:`Validated!` success message displays. If an error displays instead, make sure that the values you entered match the values in ServiceNow.
 
 
 .. _servicenow3:
 
-Step 3: Add a ServiceNow integration as a detector alert recipient in Observability Cloud
+Step 3: Add a ServiceNow integration as a detector alert recipient in Splunk Observability Cloud
 =================================================================================================
 
 ..
   once the detector docs are migrated - this step may be covered in those docs and can be removed from these docs. below link to :ref:`detectors` and :ref:`receiving-notifications` instead once docs are migrated
 
-To add a ServiceNow integration as a detector alert recipient in Observability Cloud:
+To add a ServiceNow integration as a detector alert recipient in Splunk Observability Cloud:
 
 #. Create or edit a detector that you want to configure to send alert notifications using your ServiceNow integration.
 
@@ -113,11 +127,11 @@ To add a ServiceNow integration as a detector alert recipient in Observability C
 
 #. Activate and save the detector.
 
-Observability Cloud sends an alert notification to create an incident in ServiceNow when the detector triggers an alert. When the alert clears, it sends a notification that sets the incident state to :strong:`Resolved`.
+Splunk Observability Cloud sends an alert notification to create an incident in ServiceNow when the detector triggers an alert. When the alert clears, it sends a notification that sets the incident state to :strong:`Resolved`.
 
-For :strong:`Incident` and :strong:`Problem` issues, the ServiceNow integration sets the :strong:`Impact` and :strong:`Urgency` fields on the ServiceNow issue based on the Observability Cloud alert severity (see :ref:`severity`).
+For :strong:`Incident` and :strong:`Problem` issues, the ServiceNow integration sets the :strong:`Impact` and :strong:`Urgency` fields on the ServiceNow issue based on the Splunk Observability Cloud alert severity (see :ref:`severity`). When you clear alerts for :strong:`Problem` and :strong:`Incident` issues, Splunk Observability Cloud marks them as :strong:`Resolved`.
 
-The following table shows the Observability Cloud severity for :strong:`Incident` and :strong:`Problem` issues:
+The following table shows the Splunk Observability Cloud severity for :strong:`Incident` and :strong:`Problem` issues:
 
 .. list-table::
    :header-rows: 1
@@ -135,9 +149,9 @@ The following table shows the Observability Cloud severity for :strong:`Incident
      - 3
 
 
-For :strong:`Event` issues, the ServiceNow integration sets the :strong:`Severity` of the issue based on the Observability Cloud alert severity (see :ref:`severity`).
+For :strong:`Event` issues, the ServiceNow integration sets the :strong:`Severity` of the issue based on the Splunk Observability Cloud alert severity (see :ref:`severity`). The :strong:`Event` integration also creates an event whenever an alert is sent or cleared.
 
-The following table shows the Observability Cloud severity for :strong:`Event` issues:
+The following table shows the Splunk Observability Cloud severity for :strong:`Event` issues:
 
 .. list-table::
    :header-rows: 1
