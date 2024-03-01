@@ -153,7 +153,7 @@ For example, suppose you want to see the slowest load time for the web vital LCP
 Session details 
 ===============
 
-In session details you can search by sesion ID and toggle between raw and parsed views of the session.
+In session details you can search by session ID and toggle between raw and parsed views of the session.
 
 * Raw: All of the information available for the session.  
 * Parsed: A curated view of the custom tags and unique values excluding all default tags and XHR requests. 
