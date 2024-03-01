@@ -71,10 +71,6 @@ The following table compares the Splunk Distribution of OpenTelemetry Collector 
     - Yes
     - Yes, when using Splunk exporters
 
-  * - RUM correlation
-    - Yes
-    - No
-
 Prerequisites
 ===================================================
 
