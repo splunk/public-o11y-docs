@@ -138,12 +138,6 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
 
                   /opt/nodejs-otel-handler
 
-               .. code-tab:: shell Ruby
-
-                  /opt/ruby-otel-handler
-
-                  .. note:: The Graviton2 ARM64 architecture is not supported for Ruby Lambda functions.
-
                .. tab:: Golang
 
                   Don't set the ``AWS_LAMBDA_EXEC_WRAPPER`` environment variable.
