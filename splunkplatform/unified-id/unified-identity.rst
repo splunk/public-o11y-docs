@@ -56,6 +56,7 @@ Splunk Cloud Platform customers who want to purchase Splunk Observability Cloud 
 
 Existing Splunk Observability Cloud customers
 ------------------------------------------------------------------------------------------
+
 If you already have a Splunk Cloud Platform account and a Splunk Observability Cloud account, take the following actions to set up Unified Identity:
 
 1. Turn on token authentication to allow Splunk Observability Cloud to view your Splunk Cloud Platform logs. See :new-page:`Enable or disable token authentication <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how.
@@ -75,6 +76,9 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
    .. image:: /_images/splunkplatform/pairingID.png
      :width: 90%
      :alt: This screenshot shows the response in Terminal showing the pairing id for the new pairing.
+
+   .. note:: If you haven't installed ACS command-line tool, see :new-page:`Administer Splunk Cloud Platform using the ACS CLI
+<https://docs.splunk.com/Documentation/SplunkCloud/latest/Config/ACSCLI>`.
 
 4. You can use the pairing id to get the current status of the pairing. To get the status, run the following ACS command:
 
