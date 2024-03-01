@@ -1,4 +1,4 @@
-.. _ruby-manual-instrumentation:
+.. _ruby-manual-instrumentation-distro:
 
 **********************************************************************
 Manually instrument Ruby applications for Splunk Observability Cloud

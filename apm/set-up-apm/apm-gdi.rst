@@ -115,7 +115,7 @@ In the following table, follow the instrumentation steps for the language that e
      - :ref:`get-started-python`
 
    * - Ruby
-     - Splunk Distribution of OpenTelemetry Ruby
+     - OpenTelemetry instrumentation for Ruby
      - :ref:`get-started-ruby`
 
    * - PHP

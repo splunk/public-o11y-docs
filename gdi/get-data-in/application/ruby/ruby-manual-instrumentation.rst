@@ -1,4 +1,4 @@
-.. _ruby-manual-instrumentation-upstream:
+.. _ruby-manual-instrumentation:
 
 **********************************************************************
 Manually instrument Ruby applications for Splunk Observability Cloud
@@ -84,6 +84,4 @@ For an example, see :new-page:`Rails 7 example <https://github.com/signalfx/splu
 Manual instrumentation for spans and events
 ===========================================
 
-For examples of manual instrumentation for Ruby, see the official OpenTelemetry documentation.
-
-.. note:: Manual OTel instrumentation is fully compatible with Splunk automatic Ruby instrumentation and is fully supported by Splunk.
+For examples of manual instrumentation for Ruby, see the official OpenTelemetry documentation: :new-page:`https://opentelemetry.io/docs/languages/ruby/instrumentation/`.

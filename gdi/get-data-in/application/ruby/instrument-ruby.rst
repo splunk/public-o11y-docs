@@ -1,4 +1,4 @@
-.. _instrument-ruby-upstream:
+.. _instrument-ruby-applications:
 
 ************************************************************************
 Instrument your Ruby application for Splunk Observability Cloud
@@ -9,7 +9,7 @@ Instrument your Ruby application for Splunk Observability Cloud
 
 You can use the OpenTelemetry Collector to send traces from Ruby applications to Splunk APM. 
 
-.. _upstream-ruby-prereqs:
+.. _ruby-prereqs:
 
 Prerequisities
 ==================================
@@ -43,7 +43,7 @@ To instrument your Ruby application, follow these steps:
         bundle add opentelemetry-sdk opentelemetry-instrumentation-all
 
 
-#. In your project directory, create a file called config/initializers/opentelemetry.rb with the following code: 
+#. In your project directory, create a file called opentelemetry.rb in config/initializers/ with the following code: 
 
     .. code-block:: ruby
 
@@ -89,6 +89,10 @@ If you need to send data directly to Splunk Observability Cloud, follow these st
         export OTEL_EXPORTER_OTLP_ENDPOINT="http://localhost:4317"
 
     Replace ``<realm>`` with your Splunk Observability Cloud realm and ``<access-token>`` with your Splunk Observability Cloud access token with ingest permissions.
+
+    To obtain an access token, see :ref:`admin-api-access-tokens`.
+
+    To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
 #. Restart your application. 
 

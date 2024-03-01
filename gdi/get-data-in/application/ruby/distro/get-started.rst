@@ -1,10 +1,10 @@
-.. _get-started-ruby:
+.. _get-started-ruby-distro:
 
 **************************************************************
 Instrument Ruby applications for Splunk Observability Cloud
 **************************************************************
 
-.. caution:: The Splunk Distribution for OpenTelemetry Ruby is deprecated in favor of the upstream OpenTelemetry instrumentation for Ruby. To use the upstream instrumentation, see :ref:`get-started-upstream-ruby`.
+.. caution:: The Splunk Distribution for OpenTelemetry Ruby is deprecated in favor of the upstream OpenTelemetry instrumentation for Ruby. To migrate from the Splunk agent to the OpenTelemetry instrumentation, see :ref:`migrate-from-splunk-ruby`.
 
 .. meta::
    :description: Instrument Ruby applications automatically to export spans and metrics to Splunk Observability Cloud.
@@ -31,4 +31,4 @@ To instrument your Ruby application, follow these steps:
 
 For more information, see :ref:`splunk-ruby-otel-dist`.
 
-.. note:: The SignalFx Ruby tracing library is deprecated and will reach End of Support on September 30th, 2023. To migrate to the Splunk Distribution of OpenTelemetry Ruby, see :ref:`migrate-signalfx-ruby-agent-to-otel`.
+.. note:: The SignalFx Ruby tracing library is deprecated and will reach End of Support on September 30th, 2023. To migrate to the Splunk Distribution of OpenTelemetry Ruby, see :ref:`migrate-signalfx-ruby-agent-to-otel-distro`.

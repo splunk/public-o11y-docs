@@ -12,7 +12,7 @@ The Splunk Distribution of OpenTelemetry Ruby is deprecated. Use this guide to l
 Compatibility and requirements
 =============================================
 
-Make sure that you have the correct requirements for the OpenTelemetry Ruby instrumentation. See :ref:`ruby-otel-requirements-upstream`.
+Make sure that you have the correct requirements for the OpenTelemetry Ruby instrumentation. See :ref:`ruby-otel-requirements`.
 
 Migrate to the OpenTelemetry instrumentation for Ruby 
 ==================================================================
@@ -20,7 +20,7 @@ Migrate to the OpenTelemetry instrumentation for Ruby
 To migrate from the Splunk instrumentation for Ruby to the OpenTelemetry instrumentation for Ruby, follow these steps:
 
 #. Uninstall the Splunk Ruby agent.
-#. Install and activate the OpenTelemetry instrumentation for Ruby. See :ref:`instrument-ruby-upstream`.
+#. Install and activate the OpenTelemetry instrumentation for Ruby. See :ref:`instrument-ruby-applications`.
 #. Restart the server and application.
 
 Uninstall the Splunk Ruby agent
@@ -32,4 +32,4 @@ If you've installed the Splunk Ruby agent, uninstall it using the following comm
 
     gem uninstall <splunk-ruby-gem>
 
-Replace ``<splunk-ruby-gem>`` with each Splunk Ruby agent gems that you've added to your Gemfile. 
+Replace ``<splunk-ruby-gem>`` with each Splunk Ruby agent gem that you've added to your Gemfile. 

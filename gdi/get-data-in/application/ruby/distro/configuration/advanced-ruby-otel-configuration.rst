@@ -1,4 +1,4 @@
-.. _advanced-ruby-otel-configuration:
+.. _advanced-ruby-otel-configuration-distro:
 
 ********************************************************************
 Configure the Ruby agent for Splunk Observability Cloud
@@ -11,7 +11,7 @@ You can configure the Ruby agent from the Splunk Distribution of OpenTelemetry R
 
 The following sections describe all available settings for configuring the Ruby agent, including options for activating new features that are unique to the Splunk Distribution of OpenTelemetry Ruby.
 
-.. _main-ruby-agent-settings:
+.. _main-ruby-agent-settings-distro:
 
 General settings
 =========================================================================
@@ -32,7 +32,7 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
 
 To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-ruby`.
 
-.. _trace-configuration-ruby:
+.. _trace-configuration-ruby-distro:
 
 Trace configuration
 =======================================================
@@ -61,7 +61,7 @@ The following settings control tracing limits and attributes:
    * - ``OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT``
      - Maximum length of strings for attribute values. Values larger than the limit are truncated. The default value is ``12000``.
 
-.. _trace-exporters-settings-ruby:
+.. _trace-exporters-settings-ruby-distro:
 
 Exporters configuration
 ===============================================================
@@ -80,7 +80,7 @@ The following settings control trace exporters and their endpoints:
 
 The Splunk Distribution of OpenTelemetry Ruby uses the OTLP gRPC span exporter by default.
 
-.. _trace-propagation-configuration-ruby:
+.. _trace-propagation-configuration-ruby-distro:
 
 Propagators configuration
 =======================================================
@@ -107,7 +107,7 @@ For backward compatibility with the SignalFx Ruby Tracing Library, use the b3mul
 
       $env:OTEL_PROPAGATORS=b3multi
 
-.. _server-trace-information-ruby:
+.. _server-trace-information-ruby-distro:
 
 Server trace information
 ==============================================

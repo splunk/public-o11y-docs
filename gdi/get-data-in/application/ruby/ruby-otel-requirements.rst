@@ -1,4 +1,4 @@
-.. _ruby-otel-requirements-upstream:
+.. _ruby-otel-requirements:
 
 *************************************************************
 OpenTelemetry Ruby compatibility and requirements
@@ -9,14 +9,14 @@ OpenTelemetry Ruby compatibility and requirements
 
 Meet these requirements to instrument Ruby applications for Splunk Observability Cloud.
 
-.. _supported-ruby-libraries-upstream:
+.. _supported-ruby-libraries:
 
 Supported libraries and frameworks
 =================================================
 
 The OpenTelemetry instrumentation for Ruby instruments numerous libraries and packages. For a complete list, see :new-page:`Supported libraries <https://github.com/open-telemetry/opentelemetry-ruby-contrib/tree/main/instrumentation>` in the OpenTelemetry documentation.
 
-.. _ruby-requirements-upstream:
+.. _ruby-requirements:
 
 Ensure you have supported Ruby and library versions
 ==============================================================
@@ -24,7 +24,7 @@ Ensure you have supported Ruby and library versions
 .. include:: /_includes/requirements/ruby.rst
 
 
-.. _ruby-otel-connector-requirement-upstream:
+.. _ruby-otel-connector-requirement:
 
 Install and configure the Splunk OpenTelemetry Collector
 ==============================================================
