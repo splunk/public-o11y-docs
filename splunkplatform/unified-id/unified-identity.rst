@@ -71,14 +71,13 @@ If you already have a Splunk Cloud Platform account and a Splunk Observability C
 
    Replace the access token, ``GrkvoDav1M-FNyxdONtK2Q`` in the example above, with the user API access token you retrieved from Splunk Observability Cloud in previous step.
 
+   .. note:: If you haven't installed the ACS command-line tool, see :new-page:`Administer Splunk Cloud Platform using the ACS CLI <https://docs.splunk.com/Documentation/SplunkCloud/latest/Config/ACSCLI>`.
+
    The pairing command returns a pairing id:
 
    .. image:: /_images/splunkplatform/pairingID.png
      :width: 90%
      :alt: This screenshot shows the response in Terminal showing the pairing id for the new pairing.
-
-   .. note:: If you haven't installed ACS command-line tool, see :new-page:`Administer Splunk Cloud Platform using the ACS CLI
-<https://docs.splunk.com/Documentation/SplunkCloud/latest/Config/ACSCLI>`.
 
 4. You can use the pairing id to get the current status of the pairing. To get the status, run the following ACS command:
 
