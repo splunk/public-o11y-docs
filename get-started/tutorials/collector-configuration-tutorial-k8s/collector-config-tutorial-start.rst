@@ -1,7 +1,7 @@
 .. _collector-config-tutorial-start-k8s:
 
 ******************************************************************
-Part 1: Monitor a demo Kubernetes cluster on your machine
+Part 1: Set up and monitor a Kubernetes cluster on your machine
 ******************************************************************
 
 To follow this tutorial, you need a Kubernetes environment on your machine. A convenient way of setting up a demo Kubernetes environment is through Minikube, Podman, and Helm.
@@ -9,6 +9,8 @@ To follow this tutorial, you need a Kubernetes environment on your machine. A co
 - Minikube creates a local Kubernetes cluster.
 - Podman runs containers in Kubernetes.
 - Helm helps configure Kubernetes.
+
+The following steps assume that you're using macOS as the host operating system.
 
 .. note:: You don't need Podman if you already have a container runtime installed, such as Docker.
 
@@ -60,7 +62,7 @@ To test your newly created cluster, run the following command:
 
    minikube dashboard
 
-The empty Kubernetes dashboard appears in your browser, meaning that you still haven't deployed a containerized app in the cluster.
+The empty Kubernetes dashboard appears in your browser, meaning that you still haven't deployed a containerized app.
 
 
 Install the Splunk Distribution of OpenTelemetry Collector
@@ -76,7 +78,10 @@ Run the following commands to install the Helm chart for the Collector:
    helm repo update
    helm install --set="splunkObservability.accessToken=<access_token>,clusterName=splunkTutorial,splunkObservability.realm=<realm>,gateway.enabled=false,splunkObservability.profilingEnabled=true,environment=splunkTutorialEnv" --generate-name splunk-otel-collector-chart/splunk-otel-collector
 
-To obtain an access token, see :ref:`admin-api-access-tokens`.
+Replace ``<realm>`` and ``<access_token>`` in the install command with your realm and access token.
+
+- To obtain an access token, see :ref:`admin-api-access-tokens`.
+- To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
 After successfully installing the Helm chart, messages similar to the following appear:
 
@@ -91,7 +96,9 @@ After successfully installing the Helm chart, messages similar to the following 
    NOTES:
    Splunk OpenTelemetry Collector is installed and configured to send data to Splunk Observability realm <realm>.
 
-Open Splunk Observability Cloud and go to :guilabel:`Infrastructure`, :guilabel:`Kubernetes`, :guilabel:`K8s nodes` to see the data coming from your local Kubernetes clusters. Filter to show only the ``splunkTutorial`` cluster.
+Open Splunk Observability Cloud and go to :guilabel:`Infrastructure`, :guilabel:`Kubernetes`, :guilabel:`K8s nodes` to see the data coming from your local Kubernetes clusters. Filter to only show the ``splunkTutorial`` cluster.
+
+The following image shows data coming from the demo ``splunkTutorial`` cluster:
 
 .. image:: /_images/get-started/k8s-demo.png
       :width: 90%
@@ -105,7 +112,7 @@ Next step
 
 This completes the first part of the tutorial.
 
-To learn how to edit the configuration to add new components, continue to :ref:`collector-config-tutorial-edit`.
+To learn how to edit the configuration, continue to :ref:`collector-config-tutorial-edit-k8s`.
 
 
 Learn more
@@ -113,6 +120,5 @@ Learn more
 
 To learn more about the Collector configuration format and structure, see the following resources:
 
-- :ref:`linux-config-ootb`
-- :ref:`otel-install-linux`
-- :new-page:`Configuration <https://opentelemetry.io/docs/collector/configuration/>` at OpenTelemetry.io
+- :ref:`otel-install-k8s`
+- :ref:`ootb-metrics-k8s`

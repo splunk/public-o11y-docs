@@ -25,9 +25,11 @@ Follow this tutorial for a walkthrough of configuring the Splunk Distribution of
 
 After completing this tutorial, you can accomplish the following:
 
-* Configure the Splunk Distribution of OpenTelemetry Collector.
+* Create a demo Kubernetes cluster on your machine.
 
-* Add, remove, or configure Collector components.
+* Configure the OpenTelemetry Collector using the Helm chart.
+
+* Configure the Collector to filter and send logs to Splunk Cloud.
 
 * Troubleshoot common configuration issues.
 
@@ -37,13 +39,12 @@ After completing this tutorial, you can accomplish the following:
 
 Follow the tutorial parts in order:
 
-1. Learn about the location and structure of the Collector configuration file. See :ref:`collector-config-tutorial-start-k8s`.
+1. Set up and monitor a Kubernetes cluster on your machine. See :ref:`collector-config-tutorial-start-k8s`.
 
-2. Edit the configuration to activate a new receiver and processor. See :ref:`collector-config-tutorial-edit-k8s`.
+2. Edit and apply the configuration to filter and send logs to Splunk Cloud. See :ref:`collector-config-tutorial-edit-k8s`.
 
 3. Troubleshoot common configuration issues. See :ref:`collector-config-tutorial-troubleshoot-k8s`.
 
-The tutorial uses the Ubuntu package of the Splunk Distribution of OpenTelemetry Collector.
 
 .. raw:: html
 
