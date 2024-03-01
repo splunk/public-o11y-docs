@@ -30,7 +30,7 @@ This integration supports Windows and SQL authentication.
 - Windows authentication doesn't require a username and password, as it uses the account where the Collector is running.
 - SQL authentication uses the account you configure for the integration. See :ref:`sql-installation-user`.
 
-.. _sql-installation-user
+.. _sql-installation-user:
 
 Microsoft SQL installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
