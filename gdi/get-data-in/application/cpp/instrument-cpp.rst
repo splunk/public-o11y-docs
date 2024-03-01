@@ -71,25 +71,14 @@ In your CMakeLists.txt file, add the following code to include these dependencie
 
 .. code-block:: cpp
 
-    include_directories(${OPENTELEMETRY_ROOT}/api/include)
-    include_directories(${OPENTELEMETRY_ROOT}/sdk/include)
-    include_directories(${OPENTELEMETRY_ROOT}/sdk/src)
-    include_directories(${OPENTELEMETRY_ROOT}/exporters/ostream/include)
-
-    find_library(OPENTELEMETRY_COMMON_LIB NAMES libopentelemetry_common.a HINTS "${OPENTELEMETRY_ROOT}/build/sdk/src/common" NO_DEFAULT_PATH)
-    find_library(OPENTELEMETRY_TRACE_LIB NAMES libopentelemetry_trace.a HINTS "${OPENTELEMETRY_ROOT}/build/sdk/src/trace" NO_DEFAULT_PATH)
-    find_library(OPENTELEMETRY_EXPORTER_LIB NAMES libopentelemetry_exporter_ostream_span.a HINTS "${OPENTELEMETRY_ROOT}/build/exporters/ostream" NO_DEFAULT_PATH)
-    find_library(OPENTELEMETRY_RESOURCE_LIB NAMES libopentelemetry_resources.a HINTS "${OPENTELEMETRY_ROOT}/build/sdk/src/resource" NO_DEFAULT_PATH)
-
-    if(OPENTELEMETRY_COMMON_LIB AND OPENTELEMETRY_TRACE_LIB AND OPENTELEMETRY_EXPORTER_LIB AND OPENTELEMETRY_RESOURCE_LIB)
-        message(STATUS "Found opentelemetry libraries")
-    else()
-        message(SEND_ERROR "Did not find opentelemetry libraries")
-    endif()
+    find_package(opentelemetry-cpp CONFIG REQUIRED)
+    
+    target_include_directories(foo PRIVATE ${OPENTELEMETRY_CPP_INCLUDE_DIRS})
+    target_link_libraries(foo PRIVATE ${OPENTELEMETRY_CPP_LIBRARIES})
 
 .. _cpp-otel-tracer:
 
-3. Initialize the OpenTelemetry tracer
+1. Initialize the OpenTelemetry tracer
 ===========================================
 
 The OpenTelemetry tracer runs alongside your C++ application, generating telemetry data when the application receives calls.
