@@ -1,4 +1,4 @@
-.. _mongodb-atlas-receiver:
+.. _mongodb-receiver:
 
 ***********************
 MongoDB receiver

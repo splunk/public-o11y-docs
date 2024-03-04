@@ -99,6 +99,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`kubelet-stats-receiver` (``kubeletstats``)
      - Pulls pod metrics from the API server on a kubelet.
      - Metrics
+   * - :ref:`mongodb-receiver` (``mongodb``)
+     - Fetches stats from a MongoDB instance using the Golang ``mongo`` driver. 
+     - Metrics
    * - :ref:`mongodb-atlas-receiver` (``mongodbatlas``)
      - Retrieves metrics from MongoDB Atlas using their monitoring APIs.
      - Metrics
@@ -140,6 +143,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
      - Metrics, logs, traces
    * - :ref:`sqlquery-receiver` (``sqlquery``)
      - Runs custom SQL queries to generate metrics from a database connection.
+     - Metrics
+   * - :ref:`sshcheck-receiver` (``sshcheck``)
+     - Creates stats by connecting to an SSH server, might be an SFTP server.
      - Metrics
    * - :ref:`statsd-receiver` (``statsd``)
      - Collects StatsD messages to generate metrics.

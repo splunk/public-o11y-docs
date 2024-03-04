@@ -30,6 +30,7 @@ Collector components: Receivers
     kubernetes-cluster-receiver  
     kubernetes-events-receiver 
     kubernetes-objects-receiver  
+    mongodb-receiver
     mongodb-atlas-receiver
     mysql-receiver
     oracledb-receiver
@@ -44,6 +45,7 @@ Collector components: Receivers
     smartagent-receiver
     splunk-hec-receiver
     sqlquery-receiver 
+    sshcheck-receiver
     statsd-receiver    
     syslog-receiver 
     tcp-receiver     
@@ -72,6 +74,7 @@ The following receivers are available:
 * :ref:`kubernetes-cluster-receiver`     
 * :ref:`kubernetes-events-receiver`
 * :ref:`kubernetes-objects-receiver`
+* :ref:`mongodb-receiver`
 * :ref:`mongodb-atlas-receiver`
 * :ref:`mysql-receiver`
 * :ref:`oracledb-receiver`
@@ -86,6 +89,7 @@ The following receivers are available:
 * :ref:`smartagent-receiver`
 * :ref:`splunk-hec-receiver`
 * :ref:`sqlquery-receiver` 
+* :ref:`sshcheck-receiver`
 * :ref:`statsd-receiver`    
 * :ref:`syslog-receiver` 
 * :ref:`tcp-logs-receiver`     
