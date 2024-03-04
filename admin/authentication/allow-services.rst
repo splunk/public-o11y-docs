@@ -202,5 +202,6 @@ If you're unable to allow all URLs as described in :ref:`allow-urls`, ensure tha
    
    # For DEB/RPM collector packages
    splunk.jfrog.io 
+   jfrog-prod-use1-shared-virginia-main.s3.amazonaws.com
    
 .. note:: For more information, see the :new-page:`Endpoint Summary <https://dev.splunk.com/observability/docs/apibasics/api_list>` topic in the Observability Cloud Developer Guide.
