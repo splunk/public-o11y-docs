@@ -145,7 +145,7 @@
                   "font-weight": "bold",
                   "color": "red"
                 });
-                updateLinks(lang); // Call updateLinks here to handle specific URL changes.
+                updateLinks(lang);
               } else {
                 $(this).removeClass('active-lang').removeAttr('style');
               }
@@ -167,12 +167,10 @@
           }
 
           function updateLinks(lang) {
-            // Update the navbar-brand href
             var baseUrl = "https://docs.splunk.com/Observability";
             if(lang === "ja") {
               $(".navbar-brand").attr("href", baseUrl + "/ja/");
             } else {
-              // Default or other languages' behavior
               $(".navbar-brand").attr("href", baseUrl);
             }
 
