@@ -9,7 +9,7 @@ Pilot phase part 2: Initial pilot rollout for Splunk Infrastructure Monitoring
 During this part of the journey, focus on onboarding a number of teams. These teams will represent use cases that can be used to show the power and benefit of the solution to the rest of your organization. 
 
 These tasks can be separated according to product components. There will be one set for each of:
-* Splunk Infrastructure Monitoring and 
+* Splunk Infrastructure Monitoring (this topic), and 
 * :ref:`Splunk Application Performance Monitoring <phase2-apm>`
 
 
@@ -22,9 +22,9 @@ This part of the journey prepares you to monitor critical solutions and brings b
 #. :ref:`expand-team`
 #. :ref:`otel-reqts`
 #. :ref:`Advance configuration using OTel collector (for example, token as a secret, Kubernetes distribution) <adv-conf-otel>`
-#. Create custom dashboard configuration using charts based on ingested metrics
-#. Configure detectors and alerts for specific metric conditions
-#. Planning considerations, dimensions and properties
+#. :ref:`custom-dash-charts-metrics`
+#. :ref:`detect-alert-config`
+#. :ref:`plan-dimensions`
 #. Add O11y in CI/CD pipeline (provide default dashboards)
 #. Implement custom templates
 #. Standardize automation using the REST API implementation
@@ -73,6 +73,7 @@ As you are getting ready to roll out the first teams, it is recommended that you
 * For details on other methods, see :new-page:`https://docs.splunk.com/Observability/gdi/opentelemetry/other-configuration-sources.html#otel-other-configuration-sources`.
 
 
+.. _custom-dash-charts-metrics:
 
 Help create custom dashboard configuration using charts based on ingested metrics
 ====================================================================================
@@ -80,31 +81,34 @@ Help create custom dashboard configuration using charts based on ingested metric
 As the metrics data is being sent to Splunk Observability Cloud, it is recommended to start creating Custom dashboards, combining the metrics from different tools and services. Additional resources to help with this can be found here: 
 
 * For details on free training, see :new-page:`https://www.splunk.com/en_us/training/free-courses/overview.html#observability`
-* For details about the dashboard best practice guide, see https://docs.splunk.com/Observability/data-visualization/dashboards/dashboards-best-practices.html. 
+* For details about the dashboard best practice guide, see :ref:`dashboards-best-practices`. 
 * Coordinate with your Splunk SE to either register for the regular Splunk Observability Cloud workshop https://splunk.github.io/observability-workshop/latest/en/index.html.
+.. IS THIS AN INTERNAL ONLY COURSE? 
 
-
+.. _detect-alert-config:
 
 Detector and alert configuration for specific metric conditions
---------------------------------------------------------------------
+======================================================================
 
 As with the custom dashboards, the newly onboarded teams have the benefits of the out-of-the-box auto detectors. It is important to ensure the teams understand how to develop their own sets of detectors according to each of their use cases. They will want to adapt existing or create their own detectors. Additional resources to help with this can be found here: free training, best practice guide & liaise with your Splunk SE to either register for the regular Splunk Observability Cloud workshop.
 
-* For details on free training, see https://www.splunk.com/en_us/training/free-courses/overview.html#observability
-* For details about the dashboard best practice guide, see https://docs.splunk.com/Observability/data-visualization/dashboards/dashboards-best-practices.html. 
+* For details on free training, see :new-page:`https://www.splunk.com/en_us/training/free-courses/overview.html#observability`
+* For details about the dashboard best practice guide, see :ref:`dashboards-best-practices`. 
 * Coordinate with your Splunk SE to either register for the regular Splunk Observability Cloud workshop https://splunk.github.io/observability-workshop/latest/en/index.html.
 
 
+.. _plan-dimensions:
+
 Planning considerations for dimensions and properties
--------------------------------------------------------------
+=========================================================
 
 After initial onboarding of metrics data, It is strongly recommended to review the name and the amount of metrics each teams are ingesting. Make sure the ingest data match the agreed naming convention for dimensions and properties.
 Often, guidance is needed to address the name and type of dimensions required to ingest into Splunk IM.
 
 It is important to ensure the teams follow the naming convention setup for metrics. This will help faster development of charts and alerts and also to create alerts that can detect across a whole range of hosts and nodes.
 
-* For details about dimensions, see https://docs.splunk.com/Observability/metrics-and-metadata/metrics-dimensions-mts.html#dimensions.
-* For details about properties, see https://docs.splunk.com/Observability/metrics-and-metadata/metrics-dimensions-mts.html#custom-properties.
+* For details about dimensions, see :ref:`metadata-dimension`.
+* For details about properties, see :ref:`custom-properties`.
 * For details about naming conventions for metrics, see https://docs.google.com/document/d/1hpzkmO5c8cz35x3ofa-MC0JGmsazaPQov-7k_f5Mml8/edit?pli=1#heading=h.wm48ywczbj4.
 
 Add Splunk Observability Cloud to your CI/CD pipeline 

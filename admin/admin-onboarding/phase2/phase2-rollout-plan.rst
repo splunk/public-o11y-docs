@@ -40,35 +40,35 @@ Set up an application framework
 
 .. _enable_integrations:
 
-Identify and enable initial metric, trace and log integrations
-------------------------------------------------------------------
+Identify and enable initial metric, trace, and log integrations
+===================================================================
 
-Identify application tools that are used as part of services that the pilot team supports, such as database, message bus, and so on. Verify that the development languages used are supported by the OTel community. For details, see https://opentelemetry.io/docs/instrumentation/.
+Identify application tools that are used as part of services that the pilot team supports, such as database, message bus, and so on. Verify that the development languages used are supported by the OTel community. For details, see :new-page:`https://opentelemetry.io/docs/instrumentation/`.
 
-Clearly define a list of libraries required to support applications and those that are supported by OpenTelemetry to determine which applications require auto or manual instrumentation. For a list of languages supported by OpenTelemetry, see https://github.com/open-telemetry/opentelemetry-java-instrumentation/blob/main/docs/supported-libraries.md
+Clearly define a list of libraries required to support applications and those that are supported by OpenTelemetry to determine which applications require auto or manual instrumentation. For a list of languages supported by OpenTelemetry, see :new-page:`https://github.com/open-telemetry/opentelemetry-java-instrumentation/blob/main/docs/supported-libraries.md`.
 
 Here are some recommendations to build your development pipeline: 
-* Utilize the OTel zero configuration client(s) on the hosts or Kubernetes. For details, see https://docs.splunk.com/Observability/gdi/opentelemetry/zero-config.html.
-* Utilize the OTel auto instrumentation to the containers or virtual machines. For details, see https://docs.splunk.com/Observability/apm/set-up-apm/apm-gdi.html#instrument-your-applications-and-services-to-get-spans-into-splunk-apm.
+* Utilize the OTel zero configuration client(s) on the hosts or Kubernetes. For details, see :ref:`zero-config`.
+* Utilize the OTel auto instrumentation to the containers or virtual machines. For details, see :ref:`apm-gdi`.
 * Identify the proper environment variables according to specific use cases. 
 * Each development language has its own settings, for example Java, Node.js, and .NET.
     
-    * For Java information, see https://docs.splunk.com/Observability/gdi/get-data-in/application/java/configuration/advanced-java-otel-configuration.html#configure-the-java-agent-for-splunk-observability-cloud.
-    * For Node.js information, see https://docs.splunk.com/Observability/gdi/get-data-in/application/nodejs/instrumentation/instrument-nodejs-application.html#install-the-splunk-distribution-of-opentelemetry-js-manually.
-    * For .NET information, see https://docs.splunk.com/Observability/gdi/get-data-in/application/dotnet/instrumentation/instrument-dotnet-application.html#instrument-a-net-application-for-splunk-observability-cloud.
+    * For Java information, see :ref:`advanced-java-otel-configuration`.
+    * For Node.js information, see :ref:`instrument-nodejs-applications`.
+    * For .NET information, see :ref:`instrument-otel-dotnet-applications`.
 
 
 Identify a naming convention for the deployment environments
------------------------------------------------------------------
+=================================================================
 
-It is recommended you use defining deployment environments to avoid overlapping configuration between other deployment of the same applications. For example, development, staging, production. For details about defining deployment environments, see https://docs.splunk.com/Observability/apm/set-up-apm/environments.html#setting-the-deployment-environment-span-tag.
+It is recommended you use defined deployment environments to avoid overlapping configuration between other deployment of the same applications. For example, development, staging, production. For details about defining deployment environments, see :ref:`apm-environments`.
 Another recommendation to further utilize the filtering of Splunk Application Monitoring data is to define teams, functions, and other tags such as database name or frontend application name. 
 
-This can be accomplished by utilizing the standard method of adding attributes to a trace or span using the OpenTelemetry environment variables: OTEL_RESOURCE_ATTRIBUTES. For details on adding attributes, see https://github.com/splunk/observability-workshop/blob/main/content/en/resources/otel_tagging.md#best-practices-for-creating-custom-attributes. For more information on how to add context to spans tags, see https://docs.splunk.com/observability/apm/span-tags/add-context-trace-span.html#follow-span-tag-naming-conventions.
+This can be accomplished by utilizing the standard method of adding attributes to a trace or span using the OpenTelemetry environment variables: OTEL_RESOURCE_ATTRIBUTES. For details on adding attributes, see :new-page::`https://github.com/splunk/observability-workshop/blob/main/content/en/resources/otel_tagging.md#best-practices-for-creating-custom-attributes`. For more information on how to add context to spans tags, see :ref:`apm-add-context-trace-span`.
 
 
-Establish a consistent set of best practices on the use of Splunk instrumentation libraries
-------------------------------------------------------------------------------------------------
+Establish best practices for the use of Splunk instrumentation libraries
+===================================================================================================
 
 At this point you have enough information and experience with configuring both the OpenTelemetry Agent and (auto instrumentation libraries). You should be able to define guides for the teams that you want to onboard.
 
