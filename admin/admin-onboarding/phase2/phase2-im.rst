@@ -83,6 +83,7 @@ As the metrics data is being sent to Splunk Observability Cloud, it is recommend
 * For details on free training, see :new-page:`https://www.splunk.com/en_us/training/free-courses/overview.html#observability`
 * For details about the dashboard best practice guide, see :ref:`dashboards-best-practices`. 
 * Coordinate with your Splunk SE to either register for the regular Splunk Observability Cloud workshop https://splunk.github.io/observability-workshop/latest/en/index.html.
+
 .. IS THIS AN INTERNAL ONLY COURSE? 
 
 .. _detect-alert-config:

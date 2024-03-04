@@ -8,7 +8,7 @@ Pilot phase part 1: Plan your rollout
 Guidance on OTEL naming conventions
 ========================================
 
-In order to start creating charts and detectors in Splunk Observability Cloud, it is recommended that you define a proper standard for the naming convention of the metrics name. For the best practices in setting up a consistent hierarchical naming convention for metrics, see XXXXX  This will make it easier to find metrics and identify its usage by utilizing the name of the metric.
+In order to start creating charts and detectors in Splunk Observability Cloud, it is recommended that you define a proper standard for the naming convention of the metrics name. This will make it easier to find metrics and identify its usage by utilizing the name of the metric.
 
 If your organization uses host-based O11y licensing, your OTEL naming convention must include the right OTEL host naming convention to roll up usage and telemetry correctly. Accurate usage counting for host-based orgs requires the right data naming convention for pods.  If your do not follow this naming convention, in-product usage data and usage telemetry might be unreliable.  This must be set up correctly for accurate usage measurement.
 
@@ -58,6 +58,8 @@ Here are some recommendations to build your development pipeline:
     * For .NET information, see :ref:`instrument-otel-dotnet-applications`.
 
 
+.. _convention-deploy:
+
 Identify a naming convention for the deployment environments
 =================================================================
 
@@ -66,6 +68,8 @@ Another recommendation to further utilize the filtering of Splunk Application Mo
 
 This can be accomplished by utilizing the standard method of adding attributes to a trace or span using the OpenTelemetry environment variables: OTEL_RESOURCE_ATTRIBUTES. For details on adding attributes, see :new-page::`https://github.com/splunk/observability-workshop/blob/main/content/en/resources/otel_tagging.md#best-practices-for-creating-custom-attributes`. For more information on how to add context to spans tags, see :ref:`apm-add-context-trace-span`.
 
+
+.. _best-libraries:
 
 Establish best practices for the use of Splunk instrumentation libraries
 ===================================================================================================
@@ -96,6 +100,6 @@ It is recommended to work closely with your Splunk Sales Engineer (SE) or Splunk
 Setup training plan for internal users
 ===============================================
 
-Splunk has a set of training available to help you with your onboarding journey and best practices. It is strongly recommended to utilize the provided free online training courses. For a list of free and paid courses, see https://www.splunk.com/en_us/training/free-courses/overview.html#observability.
+Splunk has a set of training available to help you with your onboarding journey and best practices. It is strongly recommended to utilize the provided free online training courses. For a list of free and paid courses, see :new-page:`https://www.splunk.com/en_us/training/free-courses/overview.html#observability`.
 
-If building a center of excellence is required by your organization, the following certification path is available for :Splunk O11y Cloud Certified Metrics User <https://www.splunk.com/en_us/training/course-catalog.html?filters=filterGroup2SplunkO11yCloudCertifiedMetricsUser>.
+If building a center of excellence is required by your organization, the following certification path is available for :new-page:`Splunk O11y Cloud Certified Metrics Users <https://www.splunk.com/en_us/training/course-catalog.html?filters=filterGroup2SplunkO11yCloudCertifiedMetricsUser>`.
