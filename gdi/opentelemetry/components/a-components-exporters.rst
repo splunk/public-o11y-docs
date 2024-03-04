@@ -14,10 +14,12 @@ Collector components: Exporters
 
     awss3-exporter
     file-exporter
-    kafka-exporter    
+    kafka-exporter
+    loadbalancing-exporter    
     logging-exporter
     otlp-exporter
-    otlphttp-exporter            
+    otlphttp-exporter
+    pulsar-exporter            
     signalfx-exporter
     splunk-apm-exporter
     splunk-hec-exporter
@@ -27,9 +29,11 @@ The following exporters are available in the Splunk Distribution of OpenTelemetr
 * :ref:`awss3-exporter`
 * :ref:`file-exporter`
 * :ref:`kafka-exporter`
+* :ref:`loadbalancing-exporter`
 * :ref:`logging-exporter`
 * :ref:`otlp-exporter`
-* :ref:`otlphttp-exporter`            
+* :ref:`otlphttp-exporter`
+* :ref:`pulsar-exporter`            
 * :ref:`signalfx-exporter`
 * :ref:`splunk-apm-exporter`
 * :ref:`splunk-hec-exporter`
