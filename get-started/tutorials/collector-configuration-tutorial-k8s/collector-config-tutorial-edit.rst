@@ -1,18 +1,21 @@
 .. _collector-config-tutorial-edit-k8s:
 
 ***********************************************************************
-Part 2: Edit the configuration to activate a new receiver and processor
+Part 2: Edit the configuration to filter and send logs to Splunk Cloud
 ***********************************************************************
 
-You edit the Collector configuration when you need to add new components, functionalities, or settings. For example, the Splunk Distribution of OpenTelemetry Collector includes preconfigured :ref:`otel-components` that collect metrics and prepare the Collector to export data to Splunk Observability Cloud.
+You edit the Collector configuration when you need to add new components, functionalities, or settings. For example, the Splunk Distribution of OpenTelemetry Collector includes configured :ref:`otel-components` that collect metrics and prepare the Collector to export data to Splunk Observability Cloud.
 
-In the following steps, you're going to add several components to the default Collector configuration and restart the Collector service to apply the changes. The components you're going to add are the following:
+In the following steps, you're going to edit the Collector configuration using the Helm chart to filter logs and send them to Splunk Cloud Platform. The components you're going to add are the following:
 
 - :ref:`syslog-receiver` to collect logs over TCP.
-- :ref:`filter-processor` to filter data you've collected using the receiver.
+- :ref:`filter-processor` to filter logs from your pods.
 
 Locate the default configuration file
 =======================================
+
+helm install --set="splunkObservability.accessToken=n79JFIhE1X22WUM61yUn5Q,clusterName=splunkTutorial,splunkObservability.realm=us0,gateway.enabled=false,splunkPlatform.endpoint=https://http-inputs-splunktutorial.splunkcloud.com: 443/services/collector/event,splunkPlatform.token=hectoken,splunkObservability.profilingEnabled=true,environment=splunkTutorial" --generate-name splunk-otel-collector-chart/splunk-otel-collector
+
 
 Using your favorite code or text editor, open the agent_config.yaml file in ``/etc/otel/collector``. As in Part 1 you deployed the Collector in host monitoring (agent) mode, this is the configuration file you need to edit.
 
