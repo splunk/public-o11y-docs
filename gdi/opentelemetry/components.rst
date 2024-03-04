@@ -159,6 +159,12 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`udp-logs-receiver` (``udplog``) 
      - Receives logs over UDP.
      - Logs
+   * - :ref:`vcenter-receiver` (``vcenter``) 
+     - Supports ESXi and vCenter.
+     - Metrics
+   * - :ref:`wavefront-receiver` (``wavefront``) 
+     - Accepts metrics and depends on the ``carbon`` receiver proto and transport.
+     - Metrics      
    * - :ref:`windowseventlog-receiver` (``windowseventlog``)
      - Tails and parses logs from the Windows Event log API.
      - Logs

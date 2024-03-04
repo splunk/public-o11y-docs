@@ -50,6 +50,8 @@ Collector components: Receivers
     syslog-receiver 
     tcp-receiver     
     udp-receiver
+    vcenter-receiver
+    wavefront-receiver
     windowseventlog-receiver
     windowsperfcounters-receiver
     zipkin-receiver 
@@ -94,6 +96,8 @@ The following receivers are available:
 * :ref:`syslog-receiver` 
 * :ref:`tcp-logs-receiver`     
 * :ref:`udp-logs-receiver`
+* :ref:`vcenter-receiver` 
+* :ref:`wavefront-receiver`
 * :ref:`windowseventlog-receiver`
 * :ref:`windowsperfcounters-receiver`
 * :ref:`zipkin-receiver` 
