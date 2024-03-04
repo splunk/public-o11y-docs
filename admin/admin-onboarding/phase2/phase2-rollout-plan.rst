@@ -52,9 +52,9 @@ Here are some recommendations to build your development pipeline:
 * Utilize the OTel auto instrumentation to the containers or virtual machines. For details, see https://docs.splunk.com/Observability/apm/set-up-apm/apm-gdi.html#instrument-your-applications-and-services-to-get-spans-into-splunk-apm.
 * Identify the proper environment variables according to specific use cases. 
 * Each development language has its own settings, for example Java, Node.js, and .NET.
-     * For Java information, see https://docs.splunk.com/Observability/gdi/get-data-in/application/java/configuration/advanced-java-otel-configuration.html#configure-the-java-agent-for-splunk-observability-cloud.
-     * For Node.js information, see https://docs.splunk.com/Observability/gdi/get-data-in/application/nodejs/instrumentation/instrument-nodejs-application.html#install-the-splunk-distribution-of-opentelemetry-js-manually.
-     * For .NET information, see https://docs.splunk.com/Observability/gdi/get-data-in/application/dotnet/instrumentation/instrument-dotnet-application.html#instrument-a-net-application-for-splunk-observability-cloud.
+    * For Java information, see https://docs.splunk.com/Observability/gdi/get-data-in/application/java/configuration/advanced-java-otel-configuration.html#configure-the-java-agent-for-splunk-observability-cloud.
+    * For Node.js information, see https://docs.splunk.com/Observability/gdi/get-data-in/application/nodejs/instrumentation/instrument-nodejs-application.html#install-the-splunk-distribution-of-opentelemetry-js-manually.
+    * For .NET information, see https://docs.splunk.com/Observability/gdi/get-data-in/application/dotnet/instrumentation/instrument-dotnet-application.html#instrument-a-net-application-for-splunk-observability-cloud.
 
 
 Identify a naming convention for the deployment environments

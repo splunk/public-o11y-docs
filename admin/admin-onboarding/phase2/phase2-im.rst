@@ -5,22 +5,23 @@ Pilot phase part 2: Initial pilot rollout for Splunk Infrastructure Monitoring
 ********************************************************************************
 
 
-During the next part of the journey, focus on onboarding a number of teams. These teams will represent use cases that can be used to show the power and benefit of the solution to the rest of your organization. 
+
+During this part of the journey, focus on onboarding a number of teams. These teams will represent use cases that can be used to show the power and benefit of the solution to the rest of your organization. 
 
 These tasks can be separated according to product components. There will be one set for each of:
 * Splunk Infrastructure Monitoring and 
-* Splunk Application Performance Monitoring.
+* :ref:`Splunk Application Performance Monitoring <phase2-apm>`
 
 
-30 - 60 Days: Infrastructure Monitoring
+Onboarding Infrastructure Monitoring
 ==============================================
 
 This part of the journey prepares you to monitor critical solutions and brings business value based on custom metrics. This phase includes the following steps:
 
-#. Onboard launching production IM based application
-#. Expand the teams beyond the initial set of admins, prepare for internal roll-out from the base team to the first user groups
-#. Understand OTel sizing requirements
-#. Advance configuration using OTel collector (for example, token as a secret, Kubernetes distribution)
+#. :ref:`onboard-imm-apps`
+#. :ref:`expand-team`
+#. :ref:`otel-reqts`
+#. :ref:`Advance configuration using OTel collector (for example, token as a secret, Kubernetes distribution) <adv-conf-otel>`
 #. Create custom dashboard configuration using charts based on ingested metrics
 #. Configure detectors and alerts for specific metric conditions
 #. Planning considerations, dimensions and properties
@@ -30,47 +31,55 @@ This part of the journey prepares you to monitor critical solutions and brings b
 #. Enable automation using the Terraform implementation
 #. Finalize customer framework and adoption protocol for faster rollout
 
+.. _onboard-imm-apps:
 
 Onboard launching production Infrastructure Monitoring based applications
-----------------------------------------------------------------------------------
+=======================================================================================
 
 For each of the participating teams, identify which services are required as part of the application and proceed with installing the OpenTelemetry agent. Remember to also configure the receivers and pipeline for these services. This will create the default dashboards and detectors for the services such as databases, Messagebus, and OS platform.
 
 Once these dashboards and detectors are set up, the teams can use these out of the box to observe their application data or create their own custom dashboards.
 
-Expand the team beyond the initial set of admins, prepare for internal roll-out to the first user groups
-----------------------------------------------------------------------------------------------------------
+.. _expand-team:
 
-Depending how you are managing users in your organization in Splunk Observability Cloud or using Single Sign-On (SSO), it is necessary to assign the right roles to the new users. For details on managing users, see https://docs.splunk.com/Observability/admin/users/manage-users.html.
-If you are using teams, you may want to enable enhanced security so you can assign team managers. For details on enhanced security, see Manage users <https://docs.splunk.com/Observability/admin/teams/manage-membership.html#turn-on-enhanced-team-security> and https://docs.splunk.com/Observability/admin/teams/manage-membership.html#team-roles-and-permissions. If you are utilizing child orgs functionality, it is recommended that you assign local admins by delegating the admin functionality of the child org fully to the teams assigned to that child org.
+Expand the team and prepare for internal roll-out to the first user groups
+=================================================================================================================
+
+Depending how you are managing users in your organization in Splunk Observability Cloud or using Single Sign-On (SSO), it is necessary to assign the right roles to the new users. For details on managing users, see :ref:`admin-manage-users`.
+
+If you are using teams, you may want to enable enhanced security so you can assign team managers. For details on enhanced security, see Manage users :ref:`enhanced-team-security` and :ref:`admin-manage-team-membership`. If you are utilizing child orgs functionality, it is recommended that you assign local admins by delegating the admin functionality of the child org fully to the teams assigned to that child org.
 
 Ensure users are aware of the first-time login procedure:
+
 When a user logs in to Splunk Observability Cloud using SSO for the first time, the user will receive an email with a link. The user must click the link for authentication purposes. This email validation will only take place for first-time users.
 
 Splunk Observability Cloud supports Just-In-Time user creation, which means that if a user does not exist in Splunk Observability Cloud, then the user's account will be created upon first login attempt.
 
+.. _otel-reqts:
 
 Understand OTEL sizing requirements
-------------------------------------------
+==========================================
 
-At this point it is recommended that you start scaling up the use of the OTel agents and understand the OTel sizing guidelines. For details about the sizing guidelines, see https://github.com/signalfx/splunk-otel-collector/blob/main/docs/sizing.md. This is especially important on platforms such as Kubernetes where there can be a sudden growth from various autoscaling services.  Ensure that the OTel agents can allocate sufficient memory and CPU needed to aid with a smooth rollout.
+At this point it is recommended that you start scaling up the use of the OTel agents and understand the OTel sizing guidelines. For details about the sizing guidelines, see :ref:`otel-sizing`. This is especially important on platforms such as Kubernetes where there can be a sudden growth from various autoscaling services.  Ensure that the OTel agents can allocate sufficient memory and CPU needed to aid with a smooth rollout.
+
+.. _adv-conf-otel:
 
 Advance configurations using OTel collector 
---------------------------------------------------------
+====================================================
 
-As you are getting ready to roll out the first teams, it is recommended that you start looking at further securing the OpenTelemetry Collector for Kubernetes. For details, see https://docs.splunk.com/Observability/gdi/opentelemetry/security.html. You can store your token as a secret or use different methods to securely store tokens, user and password information outside the configuration.yaml for the OTel agent.
+As you are getting ready to roll out the first teams, it is recommended that you start looking at further securing the OpenTelemetry Collector for Kubernetes. For details, see :ref:`otel-security`. You can store your token as a secret or use different methods to securely store tokens, user and password information outside the configuration.yaml for the OTel agent.
 
-* For details on storing the token as a secrets, see https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/advanced-configuration.md#provide-tokens-as-a-secret.
-* For details on other methods, see https://docs.splunk.com/Observability/gdi/opentelemetry/other-configuration-sources.html#otel-other-configuration-sources.
+* For details on storing the token as a secrets, see :new-page:`https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/advanced-configuration.md#provide-tokens-as-a-secret`.
+* For details on other methods, see :new-page:`https://docs.splunk.com/Observability/gdi/opentelemetry/other-configuration-sources.html#otel-other-configuration-sources`.
 
 
 
-Help create Custom dashboard configuration using charts based on ingested metrics
-----------------------------------------------------------------------------------------
+Help create custom dashboard configuration using charts based on ingested metrics
+====================================================================================
 
 As the metrics data is being sent to Splunk Observability Cloud, it is recommended to start creating Custom dashboards, combining the metrics from different tools and services. Additional resources to help with this can be found here: 
 
-* For details on free training, see https://www.splunk.com/en_us/training/free-courses/overview.html#observability
+* For details on free training, see :new-page:`https://www.splunk.com/en_us/training/free-courses/overview.html#observability`
 * For details about the dashboard best practice guide, see https://docs.splunk.com/Observability/data-visualization/dashboards/dashboards-best-practices.html. 
 * Coordinate with your Splunk SE to either register for the regular Splunk Observability Cloud workshop https://splunk.github.io/observability-workshop/latest/en/index.html.
 
