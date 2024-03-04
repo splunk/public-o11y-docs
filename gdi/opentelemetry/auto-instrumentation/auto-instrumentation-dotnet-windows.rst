@@ -11,6 +11,8 @@ Zero Configuration Auto Instrumentation for Windows .NET applications
 
 Zero Configuration Auto Instrumentation for OpenTelemetry .NET activates automatic instrumentation for .NET applications running on Windows. After installing the package, you must start or restart any .NET applications that you want to instrument.
 
+.. note:: The SignalFx instrumentation for .NET is deprecated and will reach end of support on February 21, 2025. To learn how to migrate from SignalFx .NET to OpenTelemetry .NET, see :ref:`migrate-signalfx-dotnet-to-dotnet-otel`.
+
 Install the package
 =========================================================
 
@@ -44,7 +46,7 @@ To configure the instrumentation, see :ref:`advanced-dotnet-otel-configuration`.
 Upgrade the package
 ==========================
 
-You can upgrade the package by installing a new version of the Splunk Distribution of OpenTelemetry Collector for .NET. See :ref:`instrument-otel-dotnet-applications`.
+The instrumentation uses OpenTelemetry .NET version 1.4.0. You can upgrade the package by installing a new version of the Splunk Distribution of OpenTelemetry Collector for .NET. See :ref:`instrument-otel-dotnet-applications`.
 
 Troubleshooting
 ===========================
