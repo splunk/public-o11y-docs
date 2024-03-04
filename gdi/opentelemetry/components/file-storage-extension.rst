@@ -7,10 +7,7 @@ File storage extension
 .. meta::
       :description: Uses the ECS and EC2 API to discover Prometheus scrape targets.
 
-.. note:: Document coming soon!
+The Splunk Distribution of the OpenTelemetry Collector supports the File storage extension. Documentation is planned for a future release.
 
-The Splunk Distribution of the OpenTelemetry Collector supports the File storage extension, but it is not yet documented. 
-
-To find information about this component, see the documentation in the GitHub repository at :new-page:`File storage extension <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/storage/filestorage>`.
-
+To find information about this component in the meantime, see :new-page:`File storage extension <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/storage/filestorage>` on GitHub.
 
