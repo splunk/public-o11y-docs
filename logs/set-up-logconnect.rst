@@ -11,14 +11,16 @@ Set up Log Observer Connect by integrating Log Observer with Splunk Enterprise. 
 
 When you set up Log Observer Connect, your Splunk Enterprise logs data remains in Splunk Enterprise. Log Observer Connect does not store or index your logs data. There is no additional charge for Log Observer Connect.
 
+.. note:: You can collect data using both the Splunk Distribution of the OpenTelemetry Collector and the Universal Forwarder without submitting any duplicated telemetry data. See :ref:`collector-with-the-uf` to learn how.
+
 Region and version compatibility
 ==============================================================
-Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, jp0, and au0. Splunk Log Observer Connect is compatible with Splunk Enterprise 8.2 and higher. 
 
-.. note:: You can collect data using both the Splunk Distribution of OpenTelemetry Collector and the Universal Forwarder without submitting any duplicate telemetry data. See :ref:`collector-with-the-uf` to learn how.
+Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, jp0, and au0, and is compatible with Splunk Enterprise 8.2 and higher. 
 
 Prerequisites
 ==============================================================
+
 To set up Log Observer Connect for Splunk Enterprise, you must have an administrator role in Splunk Observability Cloud. You must also be an administrator in Splunk Enterprise.
 
 Ensure the following configuration in your Splunk Enterprise instance:
@@ -34,7 +36,6 @@ Ensure the following configuration in your Splunk Enterprise instance:
   - au0: ``13.54.193.47``, ``13.55.9.109``, ``54.153.190.59``
 
 * Expose port ``8089`` to all the IPs of the realms you're using. Log Observer Connect needs to be able to access the search head on port ``8089``. It doesn't need to directly access the deployer or indexers. For example, if you have a search head cluster with load balancer in front of the members of the search head cluster, you would allow the incoming traffic to the load balancer.
-
 
 .. caution:: Check with your security team before you add these IPs to the allow list of your firewall rules or to your security groups in AWS.
 

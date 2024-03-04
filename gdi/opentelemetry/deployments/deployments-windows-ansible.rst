@@ -79,7 +79,7 @@ The following table describes the variables that can be configured for this role
    * - ``splunk_access_token``
      - The Splunk access token to authenticate requests. This attribute is required.
    * - ``splunk_realm``
-     - The realm to send the data to. This variable is set with this value for the service. The default value is ``us0``.
+     - The realm to send the data to. This variable is set with this value for the service. The default value is ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
    * - ``splunk_ingest_url``
      - The Splunk ingest URL, for example, ``https://ingest.us0.signalfx.com``. This variable is set with this value for the service. The default value is ``https://ingest.{{ splunk_realm }}.signalfx.com``. 
    * - ``splunk_api_url``

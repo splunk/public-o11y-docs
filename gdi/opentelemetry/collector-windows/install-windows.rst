@@ -109,7 +109,7 @@ The Windows installer script supports the following options:
      - The token used to send metric data to Splunk.
      -
    * - ``realm``
-     - The Splunk realm to use. The ingest, API, trace, and HEC endpoint URLs are automatically created using this value.
+     - The Splunk realm to use. The ingest, API, trace, and HEC endpoint URLs are automatically created using this value. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
      - ``us0``
    * - ``memory``
      - Total memory in MIB to allocate to the Collector. Automatically calculates the ballast size. See :ref:`otel-sizing` for more information.

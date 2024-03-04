@@ -76,7 +76,7 @@ For example, the following option turns on the Bunyan instrumentation while keep
 
 The previous settings only apply to instrumentations loaded by the Splunk Distribution of OpenTelemetry JS by default. When using the programmatic API to supply a list of user-specified instrumentations, they have no effect. For a complete list of available instrumentations, see :ref:`Requirements <nodes-requirements>`.
 
-.. note:: Use Trace Analyzer in Splunk APM to explore the spans from your application and identify instrumentations you don't need. See :ref:`trace-search-concept` for more information.
+.. note:: Use Trace Analyzer in Splunk APM to explore the spans from your application and identify instrumentations you don't need. See :ref:`trace-analyzer` for more information.
 
 Reduce manual instrumentation to a minimum
 ----------------------------------------------------------------

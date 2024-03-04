@@ -100,13 +100,7 @@ Follow these steps to instrument your application with the CDN:
 
    * In the URL of the script, replace ``<version>`` with a version from the :new-page:`Releases page in GitHub <https://github.com/signalfx/splunk-otel-js-web/releases>`.
 
-   * ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
-
-         1. Open the navigation menu in Splunk Observability Cloud.
-         2. Select :menuselection:`Settings`.
-         3. Select your username.
-
-      The realm name appears in the :guilabel:`Organizations` section.
+   * ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
    * To generate a RUM access token, see :ref:`rum-access-token`.
 

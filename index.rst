@@ -84,7 +84,7 @@ Monitor server and cluster metrics :ref:`wcidw-imm`
 .. rst-class:: newcard
 
 :strong:`Application Performance Monitoring`
-Monitor back-end app and service traces :ref:`wcidw-apm`
+Monitor back-end app and service traces :ref:`get-started-apm`
 
 .. rst-class:: newcard
 
@@ -217,7 +217,7 @@ Collect user sessions :ref:`browser-rum-gdi`
 .. rst-class:: newcard
 
 :strong:`.NET`
-Collect traces :ref:`get-started-dotnet`
+Collect traces :ref:`get-started-dotnet-otel`
 
 .. rst-class:: newcard
 

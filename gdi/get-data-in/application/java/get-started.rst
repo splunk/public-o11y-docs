@@ -33,5 +33,3 @@ To instrument your Java application, follow these steps:
 
 You can also automatically instrument your Java applications along with the Splunk Distribution of OpenTelemetry Collector installation. Automatic instrumentation removes the need to install and configure the Java agent separately. See :ref:`auto-instrumentation-java` for the installation instructions.
 
-.. note:: The SignalFx Java Agent is deprecated and will reach End of Support on December 17th, 2022. To migrate to the Splunk Distribution of OpenTelemetry Java, see :ref:`migrate-signalfx-java-agent-to-otel`.
-

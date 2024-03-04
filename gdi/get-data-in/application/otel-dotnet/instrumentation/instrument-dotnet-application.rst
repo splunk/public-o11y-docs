@@ -28,7 +28,7 @@ To generate all the basic installation commands for your environment and applica
 Install the Splunk Distribution of OpenTelemetry .NET manually
 ==================================================================
 
-Follow these instructions to install the Splunk Distribution of OpenTelemetry .NET:
+If you don't use the guided setup, follow these instructions to manually install the Splunk Distribution of OpenTelemetry .NET:
 
 - :ref:`install-dotnet-otel-instrumentation`
 - :ref:`configure-otel-dotnet`
@@ -343,13 +343,7 @@ To bypass the OTel Collector and send data directly to Splunk Observability Clou
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
-
-#. Open the navigation menu in Splunk Observability Cloud.
-#. Select :menuselection:`Settings`.
-#. Select your username.
-
-The realm name appears in the :guilabel:`Organizations` section.
+To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
 Specify the source host 
 ----------------------------------------------
