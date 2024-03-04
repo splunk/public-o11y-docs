@@ -1,21 +1,21 @@
 .. caution::
 
-   The SignalFx Tracing Library for PHP is deprecated as of February 21, 2024 and will reach End of Support on February 21 2025. Until then, only critical security fixes and bug fixes will be provided. After the date, the library will be archived and no longer maintained.
+   The SignalFx Tracing Library for PHP is deprecated as of February 21, 2024 and will reach End of Support (EOS) on February 21 2025. Until then, only critical security fixes and bug fixes will be provided. After the EOS date, the library will be archived and no longer maintained.
 
-   If you want to instrument new or existing PHP applications, use :ref:`OpenTelemetry PHP instrumentation <get-started-php>`, which offers similar capabilities.
+   If you want to instrument new or existing PHP applications, use :ref:`OpenTelemetry PHP instrumentation <get-started-php>`, which offers similar functionalities.
 
 .. _php-requirements:
 
-*************************************************************
-PHP instrumentation compatibility and requirements
-*************************************************************
+***************************************************************
+PHP instrumentation compatibility and requirements (deprecated)
+***************************************************************
 
 .. meta::
     :description: This is what you need to instrument PHP applications for Splunk Observability Cloud.
 
 The SignalFx Tracing Library for PHP supports PHP version 7.0 or higher running on the Zend engine.
 
-Supported web servers are:
+PHP instrumentation is supported for these web servers:
 
 - Apache
 - php-fpm
@@ -30,7 +30,7 @@ Supported libraries and frameworks
 
 The SignalFx Tracing Library for PHP instruments the following libraries and frameworks:
 
-.. list-table:: 
+.. list-table::
    :widths: 60 40
    :width: 100%
    :header-rows: 1
@@ -40,7 +40,7 @@ The SignalFx Tracing Library for PHP instruments the following libraries and fra
    * - CakePHP
      - 2.x
    * - CodeIgniter
-     - 2.2 and higher 
+     - 2.2 and higher
    * - Curl
      - All supported PHP versions
    * - Drupal
@@ -72,7 +72,7 @@ The SignalFx Tracing Library for PHP instruments the following libraries and fra
    * - Symfony
      - 3.3, 3.4, 4.x, 5.x
    * - Wordpress
-     - 4.8, 5.5 and higher
+     - 4.8 or 5.5 and higher
    * - Yii
      - 2.0 
    * - Zend

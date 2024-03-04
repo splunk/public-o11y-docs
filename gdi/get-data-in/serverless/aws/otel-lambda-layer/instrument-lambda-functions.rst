@@ -29,7 +29,7 @@ To generate a template that instruments your Lambda function using the Splunk Op
 Install the Splunk OpenTelemetry Lambda layer manually
 ==================================================================
 
-Follow these instructions to install the Splunk OpenTelemetry Lambda layer:
+If you don't use the guided setup, follow these instructions to manually install the Splunk OpenTelemetry Lambda layer:
 
 - :ref:`otel-lambda-layer-requirements`
 - :ref:`install-otel-lambda-layer`
