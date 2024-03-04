@@ -15,6 +15,7 @@ Collector components: Extensions
     basic-auth-extension
     docker-observer-extension
     ecs-observer-extension
+    ecstask-observer-extension
     file-storage-extension
     health-check-extension
     host-observer-extension
@@ -34,6 +35,7 @@ The following extensions are available:
 * :ref:`basic-auth-extension`
 * :ref:`docker-observer-extension`
 * :ref:`ecs-observer-extension`
+* :ref:`ecstask-observer-extension`
 * :ref:`file-storage-extension`
 * :ref:`health-check-extension`
 * :ref:`host-observer-extension`

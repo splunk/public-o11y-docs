@@ -262,6 +262,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`kafka-exporter` (``kafka``)
      - Exports metrics, logs, and traces to Kafka using a synchronous producer. 
      - Metrics, logs, traces
+   * - :ref:`loadbalancing-exporter` (``loadbalancing``)
+     - Exports spans, metrics and logs depending on the ``routing_key`` configured.
+     - Metrics, logs, traces
    * - :ref:`logging-exporter` (``logging``)
      - Exports data to the console. By default, ``logging`` doesn't send its output to Windows Event Viewer. Run the Splunk Distribution of OpenTelemetry Collector directly from the PowerShell terminal to send output to the Windows Event Viewer.
      - Metrics, logs, traces
@@ -271,6 +274,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`otlphttp-exporter` (``otlphttp``)
      - Exports data in OTLP format over the HTTP protocol. 
      - Metrics, logs, traces
+   * - :ref:`pulsar-exporter` (``pulsar``)
+     - Exports logs, metrics, and traces to Pulsar. 
+     - Metrics, logs, traces     - 
    * - :ref:`signalfx-exporter` (``signalfx``)
      - Sends metrics, events, and trace correlation to Splunk Observability Cloud. 
      - Logs (events), metrics, traces (trace to metric correlation only)
@@ -302,6 +308,8 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
      - Detects and reports container endpoints discovered through the Docker API. Only containers that are in the state of ``Running`` and not ``Paused`` emit endpoints.
    * - :ref:`ecs-observer-extension` (``ecs_observer``)
      - Uses the ECS and EC2 API to discover Prometheus scrape targets from all running tasks and filter them based on service names, task definitions, and container labels. Only compatible with the Prometheus receiver.
+   * - :ref:`ecstask-observer-extension` (``ecs_task_observer``)
+     - Detects and reports container endpoints for the running ECS task of which your Collector instance is a member.
    * - :ref:`file-storage-extension` (``file_storage``)
      - Persists state to the local file system. Requires read and write access to a diectory.
    * - :ref:`health-check-extension` (``health_check``)
