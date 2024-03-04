@@ -27,9 +27,9 @@ This part of the journey prepares you to monitor critical solutions and brings b
 #. :ref:`plan-dimensions`
 #. :ref:`ci-cd`
 #. :ref:`templates-detect`
-#. Standardize automation using the REST API implementation
-#. Enable automation using the Terraform implementation
-#. Finalize customer framework and adoption protocol for faster rollout
+#. :ref:`automation-api`
+#. :ref:`automation-terraform`
+#. :ref:`customer-framework`
 
 .. _onboard-imm-apps:
 
@@ -136,6 +136,10 @@ Custom template for detectors or alerts implementation
 
 Creating custom templates is recommended for teams to unify various detectors created by users within the teams. This will prevent duplication for detectors with similar alerting requirements. Another common way to easily deploy detectors templates is to utilize Terraform. For more information about Terraform, see https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs/resources/detector.
 
+
+
+.. _automation-api:
+
 Setup guidance for automation using the REST API implementation
 ==================================================================================================================
 
@@ -150,6 +154,7 @@ It is recommended to build templates necessary to onboard the remaining teams.
 * For details about using APIs to extract detectors, see https://dev.splunk.com/observability/reference/api/detectors/latest#endpoint-retrieve-detectors-query.
 
 
+.. _automation-terraform:
 
 Automation using the Terraform implementation
 =========================================================
@@ -164,7 +169,10 @@ To migrate from existing dashboard groups, dashboards and detectors to terraform
 * For information on using Terraform, see https://docs.splunk.com/Observability/gdi/get-data-in/connect/aws/aws-terraformconfig.html.
 * For details about using the REST APIs for use cases, see https://docs.google.com/document/d/1hpzkmO5c8cz35x3ofa-MC0JGmsazaPQov-7k_f5Mml8/edit?pli=1#heading=h.vfpef5ojgu3e.
 
+
+.. _customer-framework:
+
 Finalizing customer framework and adoption protocol for faster rollout
-=========================================================
+===============================================================================
 
 It is important to have regular updates and review sessions to incorporate lessons learned as more teams start to onboard with Splunk Observability Cloud. It is essential to review the feedback from the initial onboarding teams. Start utilizing resources available to your org by engaging with your Splunk Observability Cloud SE or Professional Services resources. These resources will be able to help with best practices and help with faster rollout.
