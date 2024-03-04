@@ -14,7 +14,7 @@ Impact and benefits of dropping data
 
 |hr|
 
-:strong:`Available in Enterprise Edition and Service Bureau`
+:strong:`Available in Enterprise Edition`
 
 |hr|
 

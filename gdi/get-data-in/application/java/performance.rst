@@ -45,7 +45,7 @@ Consider turning off instrumentations that you don't need or are producing too m
 
 For example, the following option turns off the JDBC instrumentation: ``-Dotel.instrumentation.jdbc.enabled=false``
 
-.. note:: Use Trace Analyzer in Splunk APM to explore the spans from your application and identify instrumentations you don't need. See :ref:`trace-search-concept` for more information.
+.. note:: Use Trace Analyzer in Splunk APM to explore the spans from your application and identify instrumentations you don't need. See :ref:`trace-analyzer` for more information.
 
 Allocate more memory for the application
 ----------------------------------------------------------------

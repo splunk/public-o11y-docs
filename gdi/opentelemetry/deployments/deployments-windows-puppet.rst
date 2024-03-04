@@ -11,6 +11,8 @@ Use this module to install and configure the Collector on Windows. Download and 
 
 On Windows systems, the :new-page:`puppetlabs/registry module <https://forge.puppet.com/modules/puppetlabs/registry>` is required to set the registry key/values, and the :new-page:`puppetlabs/powershell module <https://forge.puppet.com/modules/puppetlabs/powershell>` is required to run Powershell commands.
 
+.. caution:: On Windows, the Collector is installed as a Windows service and its environment variables are set at the service scope, so they're only available to the Collector service and not to the entire machine.
+
 Use the Puppet module
 ============================
 
@@ -45,7 +47,7 @@ The class accepts the parameters described in the following table:
      - The Splunk access token to authenticate requests. This attribute is required.
      - None
    * - ``splunk_realm``
-     - Which realm to send the data to, for example, ``us0``. The Splunk ingest and API URLs are inferred by this value. The ``SPLUNK_REALM`` environment variable is set with this value for the collector service. This attribute is required.
+     - Which realm to send the data to, for example, ``us0``. The Splunk ingest and API URLs are inferred by this value. The ``SPLUNK_REALM`` environment variable is set with this value for the collector service. This attribute is required. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
      - None
    * - ``splunk_ingest_url``
      - Sets the Splunk ingest URL explicitly instead of the URL inferred by the ``$splunk_realm`` parameter. The ``SPLUNK_INGEST_URL`` environment variable is set with this value for the Collector service.

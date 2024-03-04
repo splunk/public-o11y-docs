@@ -26,7 +26,7 @@ To retrieve it:
 
 #. On the left nav menu, select :strong:`Settings`.
 #. Select your profile name.
-#. Select :strong:`Show API Access Token`.
+#. Select :strong:`Show User API Access Token`.
 #. If you need it, :strong:`Copy` the token to your clipboard.
 #. If you keep your Account Settings screen open, select :strong:`Hide` to prevent others from seeing your token.
 

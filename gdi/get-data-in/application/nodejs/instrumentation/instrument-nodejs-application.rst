@@ -33,7 +33,7 @@ To generate all the basic installation commands for your environment and applica
 Install the Splunk Distribution of OpenTelemetry JS manually
 ==================================================================
 
-Follow these instructions to install the Splunk Distribution of OpenTelemetry JS:
+If you don't use the guided setup, follow these instructions to manually install the Splunk Distribution of OpenTelemetry JS:
 
 - :ref:`install-enable-nodejs-agent`
    - :ref:`enable_profiling_nodejs`
@@ -158,7 +158,7 @@ Instrument your application programmatically
 
 To have even finer control over the tracing pipeline, instrument your Node.js application programmatically.
 
-To instrument your application programmatically, add the following lines at the beginning of your entry point script, before any instrumentation function is called:
+To instrument your application programmatically, add the following lines at the beginning of your entry point script before calling any instrumentation function:
 
 .. code-block:: javascript
 
@@ -218,34 +218,44 @@ For a list of supported instrumentations, see :new-page:`https://github.com/open
 Deploy the Node.js distribution in Kubernetes
 =======================================================
 
-To deploy the Splunk Distribution of OpenTelemetry JS in Kubernetes, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
+To deploy the Collector for Node.js in a Kubernetes environment, follow these steps:
 
-The following example shows how to update a deployment to expose environment variables by adding the OpenTelemetry configuration under the ``.spec.template.spec.containers.env`` section:
+#. Edit the Dockerfile for your application image to add the following commands:
 
-.. code-block:: yaml
+   .. code-block:: docker
 
-   apiVersion: apps/v1
-   kind: Deployment
-   spec:
-     selector:
-       matchLabels:
-         app: your-application
-     template:
-       spec:
-         containers:
-           - name: myapp
-             env:
-               - name: SPLUNK_OTEL_AGENT
-                 valueFrom:
-                   fieldRef:
-                     fieldPath: status.hostIP
-               - name: OTEL_EXPORTER_OTLP_ENDPOINT
-                 value: "http://$(SPLUNK_OTEL_AGENT):4317"
-               - name: OTEL_SERVICE_NAME
-                 value: "<serviceName>"
-               - name: OTEL_RESOURCE_ATTRIBUTES
-                 value: "deployment.environment=<environmentName>"
+      # Install the @splunk/otel package
+      RUN npm install @splunk/otel
+      # Set appropriate permissions
+      RUN chmod -R go+r /node_modules/@splunk/otel
 
+#. Configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
+
+   The following example shows how to update a deployment to expose environment variables by adding the OpenTelemetry configuration under the ``.spec.template.spec.containers.env`` section:
+
+   .. code-block:: yaml
+
+      apiVersion: apps/v1
+      kind: Deployment
+      spec:
+      selector:
+         matchLabels:
+            app: your-application
+      template:
+         spec:
+            containers:
+            - name: myapp
+               env:
+                  - name: SPLUNK_OTEL_AGENT
+                  valueFrom:
+                     fieldRef:
+                        fieldPath: status.hostIP
+                  - name: OTEL_EXPORTER_OTLP_ENDPOINT
+                  value: "http://$(SPLUNK_OTEL_AGENT):4317"
+                  - name: OTEL_SERVICE_NAME
+                  value: "<serviceName>"
+                  - name: OTEL_RESOURCE_ATTRIBUTES
+                  value: "deployment.environment=<environmentName>"
 
 .. _export-directly-to-olly-cloud-nodejs:
 
@@ -270,19 +280,18 @@ If you need to send data directly to Splunk Observability Cloud, set the followi
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
-
-#. Open the navigation menu in Splunk Observability Cloud.
-#. Select :menuselection:`Settings`.
-#. Select your username.
-
-The realm name appears in the :guilabel:`Organizations` section.
+To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
 For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
 
 .. caution:: This procedure applies to spans and traces. To send AlwaysOn Profiling data, you must use the OTel Collector.
 
-Instrument Lambda functions
+Specify the source host 
 -----------------------------------------------------
+
+.. include:: /_includes/gdi/apm-api-define-host.rst
+
+Instrument Lambda functions
+=============================================================
 
 You can instrument AWS Lambda functions using the Splunk OpenTelemetry Lambda Layer. See :ref:`instrument-aws-lambda-functions` for more information.

@@ -70,7 +70,7 @@ You can install the ``splunk-otel-auto-instrumentation`` package in the followin
             
             Next, ensure the service is running and restart your application. See :ref:`verify-install` and :ref:`start-restart-java-apps`. 
       
-         .. tab:: ``systemd``
+         .. tab:: systemd
 
             Run the installer script with the ``--with-systemd-instrumentation`` option, as shown in the following example. Replace  ``<SPLUNK_REALM>`` and ``<SPLUNK_ACCESS_TOKEN>`` with your Splunk Observability Cloud realm and token, respectively.
             
@@ -146,11 +146,11 @@ You can install the ``splunk-otel-auto-instrumentation`` package in the followin
 
    .. tab:: Chef
 
-      See :ref:`chef-zero-config-java`.
+      See :ref:`chef-zero-config`.
 
    .. tab:: Puppet
 
-      See :ref:`puppet-zero-config-java`.
+      See :ref:`puppet-zero-config`.
       
    .. tab:: Salt
 

@@ -25,9 +25,7 @@ This is the collection of scenarios available for Splunk Observability Cloud.
   * - :ref:`Splunk Observability Cloud <get-started-o11y>`    
     - :ref:`scenario-security`
   * - :ref:`OpenTelemetry <otel-intro>`
-    - :ref:`otel-collector-scenario`
-  * - :ref:`OpenTelemetry <otel-intro>`
-    - :ref:`auto-instrumentation-java-operator`     
+    - :ref:`otel-collector-scenario`   
   * - :ref:`Alerts and detectors <scenarios-alerts-detectors>`
     - :ref:`monitor-server-latency`
   * - :ref:`Alerts and detectors <scenarios-alerts-detectors>`    
@@ -46,6 +44,8 @@ This is the collection of scenarios available for Splunk Observability Cloud.
     - :ref:`troubleshoot-business-workflows`
   * - :ref:`APM <apm-scenarios-intro>`
     - :ref:`apm-scenario-trace-analyzer`
+  * - :ref:`APM <apm-scenarios-intro>`
+    - :ref:`apm-scenario-trace-analyzer-trace-duration`
   * - :ref:`APM <apm-scenarios-intro>`
     - :ref:`monitor-services`
   * - :ref:`APM <apm-scenarios-intro>`

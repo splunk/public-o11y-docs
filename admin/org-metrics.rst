@@ -140,7 +140,7 @@ dropped:
    ``sf.org.numCustomMetrics``.
 
    To learn more about custom MTS, see
-   :ref:`About custom, bundled, and high-resolution metrics <about-custom-high-res>`
+   :ref:`About custom and bundled metrics <about-custom>`
 
 -  ``sf.org.limit.customMetricTimeSeries`` (gauge): Maximum number of
    active custom MTS.

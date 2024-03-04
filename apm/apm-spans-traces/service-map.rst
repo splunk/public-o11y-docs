@@ -7,17 +7,17 @@ View dependencies among your services in the service map
 .. meta::
    :description: Learn about the service map displays for your services in Splunk APM. 
 
-The service map, located in Splunk APM :guilabel:`Explore` view, displays the dependencies and connections among your instrumented and inferred services in APM. The map is dynamically generated based on your selections in the time range, environment, workflow, service, and tag filters. See :ref:`apm-inferred-services` to learn more about inferred services in APM.
-
-You can use the service map to identify dependencies, performance bottlenecks, and error propagation. 
+The service map displays the dependencies and connections among your instrumented and inferred services in APM. The map is dynamically generated based on your selections in the time range, environment, workflow, service, and tag filters. You can use the service map to identify dependencies, performance bottlenecks, and error propagation. 
 
 For a detailed scenario involving the service map, see :ref:`service-map`. 
 
+See :ref:`apm-inferred-services` to learn more about inferred services in APM.
+
 The following screenshot shows an example service map: 
 
-..  image:: /_images/apm/spans-traces/service-map-01.png
+..  image:: /_images/apm/spans-traces/service-map-global-search-rename.png
     :width: 95%
-    :alt: This screenshot shows an example of the service map in Splunk APM Explore view.
+    :alt: An example of the service map in Splunk APM Service Map.
 
 
 Access the service map
@@ -26,8 +26,8 @@ Access the service map
 Use these steps to access the service map in Splunk APM: 
 
 #. Log into Splunk Observability Cloud. 
-#. Select the :guilabel:`APM` icon in the navigation bar. 
-#. Select :guilabel:`Explore` on the APM Landing Page. The Explore view opens, with the service map in the center. 
+#. Select :guilabel:`APM` in the navigation bar. 
+#. Select :guilabel:`Service Map` on the APM landing page. The service map view opens, with the service map in the center. 
 
 Using the service map, you can do the following: 
 
@@ -49,15 +49,15 @@ Perform breakdowns in the service map
 
 The following screenshot shows an example service map in which the ``paymentservice`` node is broken down by endpoint, showing that errors with the payment service are occurring in the ``/Charge`` endpoint. 
 
-..  image:: /_images/apm/spans-traces/service-map-02-breakdown.png
+..  image:: /_images/apm/spans-traces/service-map-breakdown-global-search-rename.png
     :width: 95%
-    :alt: This screenshot shows an example of the service map in Splunk APM Explore view. The ``paymentservice`` node is broken down by endpoint, showing that errors with that service are arising in the ``/Charge`` endpoint.
+    :alt: This screenshot shows an example of the service map in Splunk APM. The ``paymentservice`` node is broken down by endpoint, showing that errors with that service are arising in the ``/Charge`` endpoint.
 
 The following screenshot shows the same service map with an additional breakdown on the ``checkoutservice`` by endpoint. This shows that the errors occurring in the ``/Charge`` endpoint of the ``paymentservice`` originate in the ``/placeOrder`` endpoint of the ``checkoutservice``. 
 
 ..  image:: /_images/apm/spans-traces/service-map-03-breakdown.png
     :width: 95%
-    :alt: This screenshot shows an example of the service map in Splunk APM Explore view. The ``paymentservice`` and ``checkoutservice`` nodes are broken down by endpoint.
+    :alt: This screenshot shows an example of the service map in Splunk APM. The ``paymentservice`` and ``checkoutservice`` nodes are broken down by endpoint.
 
 To breakdown the service map:
 
@@ -68,12 +68,12 @@ To breakdown the service map:
 Configure Related Content for your service map
 ==============================================
 
-You can configure specific metadata to activate Related Content in your service map. Related Content automatically correlates data between APM, Infrastructure Monitoring, and Log Observer to pass filters around Observability Cloud.
+You can configure specific metadata to activate Related Content in your service map. Related Content automatically correlates data between APM, Infrastructure Monitoring, and Log Observer to pass filters around Splunk Observability Cloud.
 
-When configured, you can select tiles in the Related Content bar to seamlessly navigate from one view to another in Observability Cloud. The following animation shows a user navigating from APM to Infrastructure Monitoring to Log Observer. See :ref:`get-started-relatedcontent` for information about how to configure related content to display in your service map. 
+When configured, you can select tiles in the Related Content bar to seamlessly navigate from 1 view to another in Splunk Observability Cloud. The following animation shows a user navigating from APM to Infrastructure Monitoring. See :ref:`get-started-relatedcontent` for information about how to configure related content to display in your service map. 
 
-..  image:: /_images/get-started/Related1.gif
-    :alt: Using Related Content in Observability Cloud.
+..  image:: /_images/apm/spans-traces/service-map-related-content-global-search-rename.gif
+    :alt: Using Related Content in Splunk Observability Cloud.
 
 Share your view of the service map
 ======================================

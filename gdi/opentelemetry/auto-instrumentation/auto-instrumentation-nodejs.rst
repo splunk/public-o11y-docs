@@ -1,5 +1,3 @@
-.. include:: /_includes/gdi/zero-config-preview-header.rst
-
 .. _auto-instrumentation-nodejs:
 
 *************************************************************************
@@ -12,8 +10,9 @@ Splunk OpenTelemetry Zero Config Auto Instrumentation for Node.js
 .. toctree::
     :hidden:
 
-    Kubernetes <auto-instrumentation-nodejs-k8s>
     Linux <auto-instrumentation-nodejs-linux>
+    Kubernetes <auto-instrumentation-nodejs-k8s>
+    
 
 Splunk OpenTelemetry (OTel) Zero Configuration Auto Instrumentation for Node.js automatically instruments supported Node.js libraries in running applications to capture distributed traces. 
 The Splunk OpenTelemetry Collector receives the distributed traces and forwards them to Splunk Application Performance Monitoring (APM) in Splunk Observability Cloud. 
@@ -37,7 +36,7 @@ This feature provides the following benefits:
 
    - To get an access token, see :ref:`admin-api-access-tokens`.
 
-   - To find the realm name of your account, open the navigation menu in Splunk Observability Cloud. Select :menuselection:`Settings`, and then select your username. The realm name appears in the :guilabel:`Organizations` section.
+   - To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
 .. raw:: html
 

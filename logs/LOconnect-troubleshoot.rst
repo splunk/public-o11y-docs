@@ -34,3 +34,34 @@ To limit Splunk platform indexes for Log Observer Connect users, a Splunk Enterp
 5. On the :guilabel:`Capabilities` tab, deselect ``indexes_list_all`` to prevent Log Observer Connect users from seeing all Splunk platform indexes. 
 
 
+The connection appears to work, but there are no logs
+========================================================================
+
+Cause
+------------------------------------------------------------------------
+The index in your Splunk platform instance does not contain logs. Alternatively, you did not select a specific index in Log Observer Connect.
+
+Solution
+------------------------------------------------------------------------
+Select an index in your Splunk platform instance that contains logs. Select a specific index in Log Observer Connect.
+
+
+The connection appears to work, but the index I need is not selectable
+========================================================================
+There are two possible causes of this problem. 
+
+Cause 1
+------------------------------------------------------------------------
+You are trying to target an internal index.
+
+Solution 1
+------------------------------------------------------------------------
+Do not try to target an internal index. Internal indexes start with “_” such as “_internal”. Internal indexes are not compatible with Log Observer Connect.
+
+Cause 2
+------------------------------------------------------------------------
+You are selecting an index in an orphaned app.
+
+Solution 2
+------------------------------------------------------------------------
+Indexes defined in orphaned apps do not appear for the REST endpoint /services/data/indexes. Move indexes defined in orphaned apps to a different indexes.conf. In Splunk Cloud Platform, this requires assistance from Splunk Support. In Splunk enterprise, it requires server command line access.

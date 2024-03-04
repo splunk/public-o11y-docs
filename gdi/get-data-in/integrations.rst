@@ -427,7 +427,7 @@ The following AWS services send data to Infrastructure Monitoring:
     - :strong:`X`
     - 
     - 
-    - 
+    - :strong:`X`
 
   * - AWS/NetworkELB
     - AWS Elastic Load Balancing (Network Load Balancers)

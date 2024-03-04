@@ -358,17 +358,12 @@
      - :strong:`X`
      -
      -
-   * - :ref:`Mesos Marathon <marathon>`
-     - :strong:`X`
-     -
-     -
-
    * - :ref:`Microsoft .NET <microsoft-dotnet>`
      - :strong:`X`
      -
      -
 
-   * - :ref:`Microsoft .NET runtime <get-started-dotnet>`
+   * - :ref:`Microsoft .NET runtime <get-started-dotnet-otel>`
      - :strong:`X`
      -
      -

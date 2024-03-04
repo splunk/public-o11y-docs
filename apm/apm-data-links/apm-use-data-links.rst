@@ -25,13 +25,13 @@ Access global data links for a service
 
 #. On the :guilabel:`Services` tab, select the :guilabel:`More` icon for the service you're investigating. The menu displays global data links for the service.
 
-**To view global data links for a service on the Explore page:**
+**To view global data links for a service on the service map:**
 
 #. Open the Observability Cloud main menu.
 
 #. Select :guilabel:`APM`. The Overview page displays.
 
-#. In the sidebar, select the :guilabel:`Explore` card. The Explore page displays.
+#. In the sidebar, select the :guilabel:`Service Map` card. 
 
 #. In the service map, select the service you're investigating. The service detail drawer displays.
 

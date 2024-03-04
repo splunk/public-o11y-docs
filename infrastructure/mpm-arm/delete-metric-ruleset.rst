@@ -13,7 +13,7 @@ Delete a metrics ruleset
 
 |hr|
 
-:strong:`Available in Enterprise Edition and Service Bureau`
+:strong:`Available in Enterprise Edition`
 
 |hr|
 

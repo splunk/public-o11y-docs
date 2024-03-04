@@ -99,7 +99,7 @@ Monitor server and cluster metrics :ref:`wcidw-imm`
 .. rst-class:: newcard
 
 :strong:`Application Performance Monitoring`
-Monitor back-end app and service traces :ref:`wcidw-apm`
+Monitor back-end app and service traces :ref:`get-started-apm`
 
 .. rst-class:: newcard
 
@@ -232,7 +232,7 @@ Collect user sessions :ref:`browser-rum-gdi`
 .. rst-class:: newcard
 
 :strong:`.NET`
-Collect traces :ref:`get-started-dotnet`
+Collect traces :ref:`get-started-dotnet-otel`
 
 .. rst-class:: newcard
 
@@ -493,7 +493,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Read and write permissions <data-visualization/permissions>
 
 .. toctree::
-   :caption: Alerts and detectors
+   :caption: Alerts, detectors, and SLOs
    :maxdepth:   3
 
    Introduction to alerts and detectors <alerts-detectors-notifications/alerts-detectors-notifications>
@@ -576,6 +576,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Service level objectives TOGGLE <alerts-detectors-notifications/slo/slo-intro>
+
+.. toctree::
+   :maxdepth:   3
+
 .. toctree::
    :caption: Application Performance Monitoring
    :maxdepth:   3
@@ -642,11 +647,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Key concepts <infrastructure/terms-concepts>
-
-.. toctree::
-   :maxdepth:   3
-
-   Quick start tutorial <infrastructure/quickstart-imm>
 
 .. toctree::
    :maxdepth:   3
@@ -840,4 +840,3 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Glossary <references/glossary>
-

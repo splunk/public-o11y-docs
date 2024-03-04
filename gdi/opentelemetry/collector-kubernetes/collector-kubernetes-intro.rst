@@ -31,8 +31,14 @@ For advanced configuration options, see:
 
 * :ref:`otel-kubernetes-config-advanced`
 * :ref:`kubernetes-config-logs`
+<<<<<<< HEAD
 
 See also:
+=======
+* :ref:`discovery-mode-k8s`
+
+To upgrade or uninstall, see:
+>>>>>>> main
 
 * :ref:`otel-kubernetes-upgrade`
 * :ref:`otel-kubernetes-uninstall`

@@ -28,7 +28,7 @@ Set the required environment variables in your function's settings:
 
 #. Select your function in Function App.
 
-#. Go to :guilabel:`Settings`, then :guilabel:` Configuration`.
+#. Go to :guilabel:`Settings`, then :guilabel:`Configuration`.
 
 #. Select :strong:`New application setting` to add the following settings:
 
@@ -42,7 +42,7 @@ Set the required environment variables in your function's settings:
       * - ``SPLUNK_ACCESS_TOKEN``
         - Your Splunk access token. To obtain an access token, see :ref:`admin-api-access-tokens`.
       * - ``SPLUNK_REALM``
-        - Your Splunk Observability Cloud realm, for example ``us0``. To find the realm name of your account, open the navigation menu in Splunk Observability Cloud, select :menuselection:`Settings`, and select your username. The realm name appears in the :guilabel:`Organizations` section.
+        - Your Splunk Observability Cloud realm, for example ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
 #. Add any other settings you might need.
 
@@ -83,7 +83,7 @@ In-process function
 Initialize OpenTelemetry in the code
 =================================================
 
-After adding the dependencies, initialize OpenTelemetry in your function:
+After adding the dependencies, initialize OpenTelemetry in your function.
 
 Isolated worker process function
 ----------------------------------------------------
@@ -214,7 +214,7 @@ Define a startup function and decorate the assembly with it. The startup functio
 Instrument the code to send spans
 =================================================
 
-Next, instrument your code using OpenTelemetry. Use the following examples as a starting point to instrument your code.
+Next, instrument your code using OpenTelemetry. Use the following examples as a starting point to instrument your code. See :new-page:`https://learn.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings <https://learn.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings>` in Microsoft Azure documentation for steps to add environment variables to an Azure function.
 
 Isolated worker process function
 ----------------------------------------------------
