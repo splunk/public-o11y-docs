@@ -25,8 +25,8 @@ This part of the journey prepares you to monitor critical solutions and brings b
 #. :ref:`custom-dash-charts-metrics`
 #. :ref:`detect-alert-config`
 #. :ref:`plan-dimensions`
-#. Add O11y in CI/CD pipeline (provide default dashboards)
-#. Implement custom templates
+#. :ref:`ci-cd`
+#. :ref:`templates-detect`
 #. Standardize automation using the REST API implementation
 #. Enable automation using the Terraform implementation
 #. Finalize customer framework and adoption protocol for faster rollout
@@ -112,25 +112,32 @@ It is important to ensure the teams follow the naming convention setup for metri
 * For details about properties, see :ref:`custom-properties`.
 * For details about naming conventions for metrics, see https://docs.google.com/document/d/1hpzkmO5c8cz35x3ofa-MC0JGmsazaPQov-7k_f5Mml8/edit?pli=1#heading=h.wm48ywczbj4.
 
+
+
+.. _ci-cd:
+
 Add Splunk Observability Cloud to your CI/CD pipeline 
------------------------------------------------------------------------------------------------------------
+=========================================================
 
 During this phase, there should already be some deployment of exporters and pipelines for OTel agents. For teams that are familiar with tools such as ansible, chef, puppet or equivalent, utilizing these exporter and pipeline templates using OTel will be recommended.
 
 Adding different services into the pipeline will be recommended at this point, for example adding a database into the pipeline. Note also the ability to utilize OpenTelemetry Collector Contrib (upstream), or send data using the REST APIs, and also send metrics using client libraries.
 
-* For details about adding receives for a database, see https://docs.splunk.com/observability/gdi/databases.html#configure-application-receivers-for-databases.
-* For information about using the upstream OTEL Collector, see https://docs.splunk.com/observability/gdi/other-ingestion-methods/upstream-collector.html#send-telemetry-using-the-opentelemetry-collector-contrib-project.
-* For details on Rest APIs, see https://docs.splunk.com/observability/gdi/other-ingestion-methods/rest-APIs-for-datapoints.html#rest-api-ingest.
-* For details on sendind metrics using client libraries, see https://dev.splunk.com/observability/docs/signalflow/messages/information_messages_specification/?_gl=1*1n3gjs1*_ga*NDUwMTM2Mzg1LjE2ODU0NjEwMDE.*_ga_GS7YF8S63Y*MTY5MDI0NzIzNy4yOS4xLjE2OTAyNTEzNTQuMC4wLjA.*_ga_5EPM2P39FV*MTY5MDI0NDQzMy4zMi4xLjE2OTAyNTEzNTQuMC4wLjA.&_ga=2.157251965.771853185.1690144202-450136385.1685461001#SignalFlow-client-libraries,
+* For details about adding receives for a database, see :ref:`databases`.
+* For information about using the upstream OTEL Collector, see :ref:`using-upstream-otel`.
+* For details on Rest APIs, see :ref:`rest-api-ingest`.
+* For details on sending metrics using client libraries, see :new-page:`SignalFlow information messages <https://dev.splunk.com/observability/docs/signalflow/messages/information_messages_specification/?_gl=1*1n3gjs1*_ga*NDUwMTM2Mzg1LjE2ODU0NjEwMDE.*_ga_GS7YF8S63Y*MTY5MDI0NzIzNy4yOS4xLjE2OTAyNTEzNTQuMC4wLjA.*_ga_5EPM2P39FV*MTY5MDI0NDQzMy4zMi4xLjE2OTAyNTEzNTQuMC4wLjA.&_ga=2.157251965.771853185.1690144202-450136385.1685461001#SignalFlow-client-libraries>`.
+
+
+.. _templates-detect:
 
 Custom template for detectors or alerts implementation
----------------------------------------------------------------
+=========================================================
 
 Creating custom templates is recommended for teams to unify various detectors created by users within the teams. This will prevent duplication for detectors with similar alerting requirements. Another common way to easily deploy detectors templates is to utilize Terraform. For more information about Terraform, see https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs/resources/detector.
 
 Setup guidance for automation using the REST API implementation
---------------------------------------------------------------------------
+==================================================================================================================
 
 It is recommended to familiarize with the REST API functions available for Splunk Observability Cloud..
 The REST API can be used to extract charts, dashboards, or detectors from the Splunk Observability Cloud backend. Most common use of the REST API is to send historical MTS to Splunk Observability Cloud using the backfill API to correct previously ingested MTS data.
@@ -145,7 +152,7 @@ It is recommended to build templates necessary to onboard the remaining teams.
 
 
 Automation using the Terraform implementation
----------------------------------------------------------
+=========================================================
 
 Splunk Observability Cloud has a Terraform provider that allows you to automate a large number of deployments using Terraform. The Terraform provider utilizes the Splunk Observability Cloud REST API for several use cases.
 
@@ -158,6 +165,6 @@ To migrate from existing dashboard groups, dashboards and detectors to terraform
 * For details about using the REST APIs for use cases, see https://docs.google.com/document/d/1hpzkmO5c8cz35x3ofa-MC0JGmsazaPQov-7k_f5Mml8/edit?pli=1#heading=h.vfpef5ojgu3e.
 
 Finalizing customer framework and adoption protocol for faster rollout
-----------------------------------------------------------------------------
+=========================================================
 
 It is important to have regular updates and review sessions to incorporate lessons learned as more teams start to onboard with Splunk Observability Cloud. It is essential to review the feedback from the initial onboarding teams. Start utilizing resources available to your org by engaging with your Splunk Observability Cloud SE or Professional Services resources. These resources will be able to help with best practices and help with faster rollout.

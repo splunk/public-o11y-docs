@@ -80,13 +80,13 @@ Items should at least include the following:
 
 * Which environment variables and command line parameters to set for the auto-instrumentation agents. For more information, see https://docs.splunk.com/Observability/apm/set-.
 * Guide on how to enable https://docs.google.com/document/d/1hpzkmO5c8cz35x3ofa-MC0JGmsazaPQov-7k_f5Mml8/edit?pli=1#heading=h.8rdrmmc6xzqh if required. 
-* Instructions how to configure logs to add tracing information. This is language dependent. For a  Java example, see https://docs.splunk.com/Observability/gdi/get-data-in/application/java/instrumentation/connect-traces-logs.html.
+* Instructions how to configure logs to add tracing information. This is language dependent. For a  Java example, see :ref:`correlate-traces-with-logs-java`.
 * A guide that to the naming conventions for metrics, and environments. For details on metric naming conventions, see https://docs.google.com/document/d/1hpzkmO5c8cz35x3ofa-MC0JGmsazaPQov-7k_f5Mml8/edit?pli=1#heading=h.wm48ywczbj4. For details on environment naming conventions, see https://docs.google.com/document/d/1hpzkmO5c8cz35x3ofa-MC0JGmsazaPQov-7k_f5Mml8/edit?pli=1#heading=h.nly13uf61hgz.
 
 
 
 
-
+.. _splunk-se:
 
 Utilize Splunk expert to help with support
 ============================================================
@@ -95,7 +95,7 @@ It is recommended to work closely with your Splunk Sales Engineer (SE) or Splunk
 
 
 
-
+: _get-trained:
 
 Setup training plan for internal users
 ===============================================
