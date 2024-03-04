@@ -9,5 +9,5 @@ Pulsar exporter
 
 The Splunk Distribution of the OpenTelemetry Collector supports the Pulsar exporter. Documentation is planned for a future release.
 
-To find information about this component in the meantime, see :new-page:`Pulsar exporter <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter/loadbalancingexporter>` on GitHub.
+To find information about this component in the meantime, see :new-page:`Pulsar exporter <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter/pulsarexporter>` on GitHub.
 
