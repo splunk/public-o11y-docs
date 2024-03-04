@@ -15,7 +15,7 @@ Instrument Erlang applications for Splunk Observability Cloud
 
 You can send application traces and metrics from your Erlang applications to Splunk Observability Cloud using the OpenTelemetry instrumentation for Erlang.
 
-To instrument your Rust applications, follow these steps:
+To instrument your Erlang applications, follow these steps:
 
 #. Make sure you've met the prerequisites. See :ref:`requirements-erlang`
 #. Instrument your application. See :ref:`instrument-erlang`
