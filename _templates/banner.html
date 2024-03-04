@@ -145,13 +145,12 @@
                   "font-weight": "bold",
                   "color": "red"
                 });
+                updateLinks(lang);
               } else {
                 $(this).removeClass('active-lang').removeAttr('style');
               }
             });
           }
-
-          setActiveLanguage();
 
           function constructNewPath(lang) {
             var currentPath = window.location.pathname;
@@ -167,6 +166,22 @@
             return pathSegments.join('/');
           }
 
+          function updateLinks(lang) {
+            var baseUrl = "https://docs.splunk.com/Observability";
+            if(lang === "ja") {
+              $(".navbar-brand").attr("href", baseUrl + "/ja/");
+            } else {
+              $(".navbar-brand").attr("href", baseUrl);
+            }
+
+            var serviceDescUrl = "https://docs.splunk.com/observability";
+            if(lang === "ja") {
+              $("a.nav-link.newnavbar").attr("href", serviceDescUrl + "/ja/get-started/service-description.html");
+            } else {
+              $("a.nav-link.newnavbar").attr("href", serviceDescUrl + "/en/get-started/service-description.html");
+            }
+          }
+
           $('.lang').click(function() {
             var lang = $(this).data('lang');
             var newPath = constructNewPath(lang);
@@ -174,6 +189,8 @@
 
             setActiveLanguage();
           });
+
+          setActiveLanguage();
         });
       </script>
 
