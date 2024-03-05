@@ -94,11 +94,6 @@ You can instrument applications in each of these languages using official Splunk
 
 To send spans from the Istio service mesh, see :ref:`get-started-istio`.
 
-You can also send traces from applications written in languages for which Splunk instrumentation isn't available:
-
-- :ref:`Erlang <apm-instrumentation-other-langs>`
-- :ref:`Rust <apm-instrumentation-other-langs>`
-
 To learn more about the data collected by Splunk Observability Cloud, see:
 
 - :ref:`data-model`

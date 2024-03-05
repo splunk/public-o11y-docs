@@ -40,7 +40,7 @@ This is a configuration example for the extension:
 
   extensions:
     zpages:
-      endpoint: "localhost:56888"
+      endpoint: "localhost:55679"
 
 To complete the configuration, include the extension in the ``service`` section of your configuration file:
 

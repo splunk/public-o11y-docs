@@ -7,11 +7,19 @@ OTLP exporter
 .. meta::
       :description: The OTLP exporter allows the OpenTelemetry Collector to send metrics, traces, and logs through gRPC using the OTLP format. Read on to learn how to configure the component.
 
-The OTLP exporter sends metrics, traces, and logs through gRPC using the OTLP format. See :ref:`otel-data-processing` for more information. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. By default, this exporter requires TLS and provides queued retry capabilities.
+The OTLP exporter sends metrics, traces, and logs through gRPC using the OTLP format. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information. By default, this exporter requires TLS and provides queued retry capabilities. 
+
+To send OTLP data through HTTP, use the OTLP/HTTP exporter. Learn how at :ref:`otlphttp-exporter`. 
+
+If you need to bypass the Collector and send data in the OTLP format directly to Splunk Observability Cloud:
+
+* To send metrics, use the OTLP endpoint. Find out more in the dev portal at :new-page:`Sending data points <https://dev.splunk.com/observability/docs/datamodel/ingest>`. Note that this option only accepts protobuf payloads.   
+  
+* To send traces, use the gRPC endpoint. For more information, see :ref:`grpc-data-ingest`.
 
 Read more about the OTLP format at the OTel repo :new-page:`OpenTelemetry Protocol Specification <https://github.com/open-telemetry/opentelemetry-proto/blob/main/docs/specification.md>`.
 
-.. note:: For information on the OTLP/HTTP exporter, see :ref:`otlphttp-exporter`. For information on the OTLP receiver, see :ref:`otlp-receiver`.
+.. note:: For information on the OTLP receiver, see :ref:`otlp-receiver`.
 
 Get started
 ======================

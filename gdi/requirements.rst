@@ -103,7 +103,7 @@ PHP
 
 .. include:: /_includes/requirements/php.rst
 
-See :ref:`php-requirements` for more information.
+See :ref:`php-otel-requirements` for more information.
 
 
 AWS Lambda functions
