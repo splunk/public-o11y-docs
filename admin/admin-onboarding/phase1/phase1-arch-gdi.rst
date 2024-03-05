@@ -93,14 +93,18 @@ The OpenTelemetry Collector automatically reads and detects different types of h
 
 The OpenTelemetry Collector adds dimensions, metric tags, and span attributes or tags. The most common metadata entry is the name of the host, which can come from different sources with different names. See :ref:`metrics-dimensions-mts` for details on the metadata the collector adds. 
 
-To retrieve the metadata, use the Resource Detection Processor in the pipeline section of the OpenTelemetry Agent Configuration. The Resource Detection Processor allows you to modify your metadata as needed. 
+To retrieve the metadata, use the resource detection processor in the pipeline section of the OpenTelemetry Agent Configuration. The resource detection processor allows you to modify your metadata as needed. 
 
 Before installing the OpenTelemetry Collector on a host, verify the resource detection module inside the configuration file of the OpenTelemetry Collector matches the preferred metadata source. The order determines which of the sources are used. See :ref:`resourcedetection-processor`.
 
 .. _phase1-3rd-party:
 
-Collect data from 3rd-party metrics providers
+Collect data from third-party metrics providers
 ==========================================================
+
+When using the Splunk Distribution of OpenTelemetry Collector you can receivers to collect metrics data from third-party providers. For example, the Prometheus receiver can scrape metrics data from any application that exposes a Prometheus endpoint. See :ref:`prometheus-receiver`.
+
+See :ref:`monitor-data-sources` to see a list of receivers.
 
 .. _phase1-apm:
 
@@ -114,7 +118,7 @@ Add an auto-instrumentation library to a service to send traces to Splunk APM
 
 .. _phase1-zero-config:
 
-(Optional) Consider the zero-config implementation for .Net & Java
+(Optional) Consider the zero-config implementation for .Net and Java
 ===================================================================
 
 .. _phase1-profiling:
