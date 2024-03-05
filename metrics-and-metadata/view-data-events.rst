@@ -42,30 +42,20 @@ Event values must meet certain criteria. Invalid payloads are dropped, and you c
 
 These are the valid values for events:
 
-	c.maxDimValueLen = conf.Int("signalboost.dao.dimension.maximumValueLength", 256)
-	c.maxDpDimLen = conf.Int("sbingest.dao.datapoint.dimension.maximumLength", 36)
-	c.maxEventDimCount = conf.Int("sbingest.dao.event.dimension.maximumLength", 36)
-	c.maxDimKeyLen = conf.Int("sbingest.dao.dimension.maximumKeyLength", 128)
-	c.maxEventDimValueLen = conf.Int("signalboost.dao.event.dimension.maximumValueLength", 256)
-	c.MaxEventPropertiesAllowed = conf.Int("signalboost.dao.event.properties.maximumLength", 1024)
-	c.maxEventDimKeyLen = conf.Int("sbingest.dao.event.dimension.maximumKeyLength", 128)
-	c.propertiesAllowed = conf.Str("sbingest.stream.properties.allowed", "trace_chain, message")
-	c.dimensionsBlocked = conf.Str("tscreation.perOrgBlockedPrefixes", "{}")
-
-	c.totalTagAnnotationDataSize = conf.Int("sbingest.spans.totalTagAnnotationDataSizeInBytes", 131072)
-	c.maxSpanNameSize = conf.Int("sf.sbingest.spans.maxNameSize", 1024)
-	c.enableSpanFailureResponse = conf.Bool("sf.sbingest.spans.enableFailureResponse", true)
-
-	// Note: on update of dmn tag or span tag Allowed restart of sbingest is required
-	// json list of tag names
-	c.spanTagAllowed = conf.Str("sf.sbingest.spans.tagAllowedList", `["sf_metricized","sf_source","sf_count","sf_cluster","sf_initiator","sf_serviceMesh","sf_dimensionalized"]`)
-	// json list of dimension tag names that will be Allowed from sbingest.
-	c.dmsTagAllowed = conf.Str("sf.sbingest.dms.tagAllowedList", `["sf_workflow","sf_source","sf_hires","sf_hasService","sf_serviceMesh","sf_dimensionalized","sf_ua_browsername","sf_ua_osname","sf_node_type","sf_node_name","sf_environment","sf_product","sf_operation","sf_functionId"]`)
-
-	// Whether or not to allow slashes or periods in dim and property names
-	c.allowSlashDot = conf.Bool("sf.sbingest.allowSlashDot", true)
-	c.DropLoggerConfig.Load(conf)
-
+* c.maxDimValueLen = conf.Int("signalboost.dao.dimension.maximumValueLength", 256)
+* c.maxDpDimLen = conf.Int("sbingest.dao.datapoint.dimension.maximumLength", 36)
+* c.maxEventDimCount = conf.Int("sbingest.dao.event.dimension.maximumLength", 36)
+* c.maxDimKeyLen = conf.Int("sbingest.dao.dimension.maximumKeyLength", 128)
+* c.maxEventDimValueLen = conf.Int("signalboost.dao.event.dimension.maximumValueLength", 256)
+* c.MaxEventPropertiesAllowed = conf.Int("signalboost.dao.event.properties.maximumLength", 1024)
+* c.maxEventDimKeyLen = conf.Int("sbingest.dao.event.dimension.maximumKeyLength", 128)
+* c.propertiesAllowed = conf.Str("sbingest.stream.properties.allowed", "trace_chain, message")
+* c.dimensionsBlocked = conf.Str("tscreation.perOrgBlockedPrefixes", "{}")
+* c.totalTagAnnotationDataSize = conf.Int("sbingest.spans.totalTagAnnotationDataSizeInBytes", 131072)
+* c.maxSpanNameSize = conf.Int("sf.sbingest.spans.maxNameSize", 1024)
+* c.enableSpanFailureResponse = conf.Bool("sf.sbingest.spans.enableFailureResponse", true)
+* c.spanTagAllowed = conf.Str("sf.sbingest.spans.tagAllowedList", `["sf_metricized","sf_source","sf_count","sf_cluster","sf_initiator","sf_serviceMesh","sf_dimensionalized"]`)
+* c.dmsTagAllowed = conf.Str("sf.sbingest.dms.tagAllowedList", `["sf_workflow","sf_source","sf_hires","sf_hasService","sf_serviceMesh","sf_dimensionalized","sf_ua_browsername","sf_ua_osname","sf_node_type","sf_node_name","sf_environment","sf_product","sf_operation","sf_functionId"]`)
 
 .. _custom-event:
 
@@ -124,10 +114,12 @@ View events
 
 You can add any of the event types described in :ref:`how-events-created` to a chart (see :ref:`chart-events`) or to an :ref:`event feed chart on a dashboard <dashboard-event-feed>`.
 
+.. _events-sidebar:
+
 Recent events are also visible in the Events sidebar, available from the navigation bar when you are viewing any dashboard. Click the Show Sidebar icon, then select the :guilabel:`Event Feed` tab.
 
 .. image:: /_images/images-charts/events/show-metrics-sidebar.png
-   :width: 75%
+   :width: 70%
    :alt: Event Feed sidebar open on the side
 
 The events list in the sidebar indicates the severity of each event and whether it was a trigger event (solid triangle) or clear event (hollow triangle). The sidebar also indicates if an event was a custom event (hollow diamond).
@@ -135,7 +127,7 @@ The events list in the sidebar indicates the severity of each event and whether 
 When you hover over an event in the Event Feed sidebar, a vertical line is shown in all the charts at the time the event occurred. The event line makes it easy for you to visualize correlations between metric values and the event.
 
 .. image:: /_images/images-charts/events/event-line.png
-   :width: 75%
+   :width: 70%
    :alt: Event line in all charts
 
 When you select an event in the Event Feed sidebar, you can see details about the event and, for events associated with alerts, an option to open the detector that generated the event. If the event is associated with a currently active alert, you'll also see an option to resolve the alert.
