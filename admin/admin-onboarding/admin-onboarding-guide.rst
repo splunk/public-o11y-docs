@@ -21,9 +21,9 @@ Use this get-started guide to follow the most common journey for admins who are 
    :width: 95%
    :align: center
 
-#. :ref:`phase1`.
-#. :ref:`phase2`.
-#. :ref:`phase3`.
+#. See :ref:`phase1`.
+#. See :ref:`phase2`.
+#. See :ref:`phase3`.
 
 
 
