@@ -111,6 +111,10 @@ See :ref:`monitor-data-sources` to see a list of receivers.
 Get familiar with the Splunk Observability APM concepts
 ==========================================================
 
+Splunk APM provides end-to-end visibility to help identify issues such as errors and latency across all tags of a service. Splunk APM produces infinite cardinality metrics and full-fidelity traces. Splunk APM also measures RED (Request, Error, Duration) metrics. 
+
+Familiarize yourself with the key concepts of Splunk APM as Splunk APM is utilizes the OpenTelemetry standard for Application Performance Monitoring. See :ref:`apm-key-concepts`.
+
 .. _phase1-auto-instrument:
 
 Add an auto-instrumentation library to a service to send traces to Splunk APM
