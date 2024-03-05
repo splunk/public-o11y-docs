@@ -186,14 +186,14 @@ The following example shows how to update a deployment to expose environment var
          - name: myapp
            image: <image-name>
            env:
-             - name: SIGNALFX_PHP_LIBRARY
+             - name: HOST_IP
                valueFrom:
                  fieldRef:
                    fieldPath: status.hostIP
              - name: SIGNALFX_SERVICE_NAME
                value: "<service-name>"
              - name: SIGNALFX_ENDPOINT_URL
-               value: "http://<endpoint>:9080/v1/trace"
+               value: "http://$(host_ip):9411/api/v2/spans"
              - name: SIGNALFX_TRACE_GLOBAL_TAGS
                value: "deployment.environment:<my_environment>"
 
