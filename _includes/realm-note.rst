@@ -1,4 +1,4 @@
-.. note:: Note about realms
+.. note:: About realms
 
    A realm is a self-contained deployment of Splunk Observability Cloud in which your organization is hosted. Different realms have different API endpoints. For example, the endpoint for sending data in the ``us1`` realm is ``https://ingest.us1.signalfx.com``, while the endpoint for sending data in the ``eu0`` realm is ``https://ingest.eu0.signalfx.com``.
 

@@ -102,6 +102,9 @@
         <li class="nav-item">
           <a class="nav-link newnavbar" href="https://www.splunk.com/en_us/training/course-catalog.html?sort=Newest&filters=filterGroup4SplunkObservabilityCloud%2CfilterGroup4SplunkSyntheticMonitoring%2CfilterGroup4SplunkInfrastructureMonitoring%2CfilterGroup4SplunkITSI%2CfilterGroup4SplunkAPM%2CfilterGroup4SplunkOnCall%2CfilterGroup4SplunkRUM%2CfilterGroup4SplunkLogObserver%2CfilterGroup4SplunkInsights" target="_blank">Training</a>
         </li>
+        <li class="nav-item nav-lang">
+          <span class="lang" data-lang="en">EN</span> | <span class="lang" data-lang="ja">JA</span>
+        </li>
         <li class="nav-item">
           <a class="nav-link newnavbar" href="https://www.splunk.com/en_us/download/infrastructure-monitoring.html" target="_blank" style="
           font-size: 12px;
@@ -117,6 +120,78 @@
 
       </ul>
       </div>
+
+      <style>
+        .nav-lang{
+          margin-top: 18px;
+          color:darkgrey;
+        }
+        .active-lang {
+          font-weight: bold;
+          color: white !important;
+        }
+        .lang{
+          cursor:pointer;
+        }
+      </style>
+      <script>
+        $(document).ready(function() {
+          function setActiveLanguage() {
+            var path = window.location.pathname;
+            $('.lang').each(function() {
+              var lang = $(this).data('lang');
+              if (path.includes('/' + lang + '/')) {
+                $(this).addClass('active-lang').css({
+                  "font-weight": "bold",
+                  "color": "red"
+                });
+                updateLinks(lang);
+              } else {
+                $(this).removeClass('active-lang').removeAttr('style');
+              }
+            });
+          }
+
+          function constructNewPath(lang) {
+            var currentPath = window.location.pathname;
+            var pathSegments = currentPath.split('/');
+            var langIndex = pathSegments.findIndex(segment => $('.lang').map(function() { return $(this).data('lang'); }).get().includes(segment));
+
+            if (langIndex > -1) {
+              pathSegments[langIndex] = lang;
+            } else {
+              pathSegments.splice(1, 0, lang);
+            }
+
+            return pathSegments.join('/');
+          }
+
+          function updateLinks(lang) {
+            var currentPath = window.location.pathname;
+            var lang = "en";
+            if(currentPath.includes('/ja/')) {
+              lang = "ja";
+            }
+
+            $("a.nav-link.newnavbar").each(function() {
+              var href = $(this).attr("href");
+              if(href && (href.includes('observability/en/') || href.includes('Observability/en/'))) {
+                $(this).attr("href", href.replace('observability/en/', 'observability/' + lang + '/'));
+              }
+            });
+          }
+
+          $('.lang').click(function() {
+            var lang = $(this).data('lang');
+            var newPath = constructNewPath(lang);
+            window.location.pathname = newPath;
+
+            setActiveLanguage();
+          });
+
+          setActiveLanguage();
+        });
+      </script>
 
       <div id="mobileSideBar">
         {%- block sidebar2 %}{{ sidebar() }}{% endblock %}
