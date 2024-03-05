@@ -7,13 +7,13 @@ Advanced customization for zero config auto instrumentation
 .. meta::
     :description: Learn how to customize Splunk zero config auto instrumentation for advanced scenarios.
 
-Learn how to customize Splunk zero config auto instrumentation for the advanced scenarios. 
+Learn how to customize Splunk zero config auto instrumentation for advanced scenarios. 
 
 Through advanced customization, you can achieve the following tasks:
 
 * :ref:`Change instrumentation version <change-zeroconfig-version>`
 * :ref:`Override auto instrumentation settings <override-zeroconfig-settings>`
-* :ref:`Deploy auto instrumentation in gateway mode <deploy-in-gateway>`
+* :ref:`Use auto instrumentation with gateway mode <deploy-in-gateway>`
 
 .. _change-zeroconfig-version:
 
@@ -26,7 +26,7 @@ By default, the Splunk Distribution of OpenTelemetry Collector uses the latest v
 #. In the instrumentation language section, change the ``tag`` value to match your desired version. The following example changes the Java instrumentation version to ``v1.27.0``.
 
     .. code-block:: yaml
-        :emphasize-lines: 12
+        :emphasize-lines: 14
 
         clusterName: myCluster
         splunkObservability:
@@ -37,15 +37,17 @@ By default, the Splunk Distribution of OpenTelemetry Collector uses the latest v
           enabled: true
         operator:
           enabled: true
-        java:
-          repository: ghcr.io/signalfx/splunk-otel-java/splunk-otel-java
-          tag: v1.27.0
+          instrumentation:
+            spec: 
+              java:
+                repository: ghcr.io/signalfx/splunk-otel-java/splunk-otel-java
+                tag: v1.27.0
 
-#. Reinstall the Splunk OTel Collector Chart with the following command:
+#. Reinstall the Splunk OTel Collector Chart with the following command. Replace [CURRENT_VERSION] with the current version of your splunk-otel-collector-chart.
 
     .. code-block:: bash
 
-        helm install splunk-otel-collector -f values.yaml
+        helm upgrade splunk-otel-collector splunk-otel-collector-chart/splunk-otel-collector --version [CURRENT_VERSION] -f values.yaml
 
 .. note:: If you don't see the ``java`` field in your ``values.yaml`` file, then you have to add the field and the ``repository`` value before changing the version. The repository value is always ``ghcr.io/signalfx/splunk-otel-java/splunk-otel-java``.
 
@@ -60,7 +62,7 @@ See the following pages for information about previous versions for each languag
 Override auto instrumentation settings
 ====================================================
 
-You can override default auto instrumentation settings to use features such as profiling and runtime metrics collection. 
+You can override default auto instrumentation settings to use features for profiling and runtime metrics collection. 
 
 Activate AlwaysOn Profiling
 ----------------------------------------------------
@@ -113,22 +115,20 @@ You can activate CPU and memory profiling by updating the environment variables 
               instrumentation:  
                 spec:
                   nodejs:
-                    repository: ghcr.io/signalfx/splunk-otel-js/splunk-otel-js
-                    tag: v2.7.0
                     env:
-                    # Activates AlwaysOn Profiling for Node.js
-                    - name: SPLUNK_PROFILER_ENABLED
-                      value: true
-                    # Samples call stacks from a 5000 millisecond interval. 
-                    # If excluded, samples from a 10000 millisecond interval by default.
-                    - name: SPLUNK_PROFILER_CALL_STACK_INTERVAL
-                      value: 5000
+                      # Activates AlwaysOn Profiling for Node.js
+                      - name: SPLUNK_PROFILER_ENABLED
+                        value: true
+                      # Samples call stacks from a 5000 millisecond interval. 
+                      # If excluded, samples from a 10000 millisecond interval by default.
+                      - name: SPLUNK_PROFILER_CALL_STACK_INTERVAL
+                        value: 5000
       
-      #. Reinstall the Splunk OTel Collector Chart with the following command:
+      #. Reinstall the Splunk OTel Collector Chart with the following command. Replace [CURRENT_VERSION] with the current version of your splunk-otel-collector-chart.
 
             .. code-block:: bash
 
-                helm install splunk-otel-collector -f values.yaml
+                helm upgrade splunk-otel-collector splunk-otel-collector-chart/splunk-otel-collector --version [CURRENT_VERSION] -f values.yaml
 
 Activate runtime metrics collection (Linux only)
 ----------------------------------------------------
@@ -155,7 +155,7 @@ To activate runtime metrics collection for an individual language, follow these 
 
 .. _deploy-in-gateway:
 
-Use auto instrumentation in gateway mode 
+Use auto instrumentation with gateway mode 
 ===========================================================
 
 The Splunk OTel Collector Chart uses the agent mode by default. Activating gateway mode deploys an instance of the OpenTelemetry Collector in a separate container, and this instance collects data from the entire cluster.
@@ -178,34 +178,58 @@ To learn more about the gateway mode, see :ref:`collector-gateway-mode`.
 
     .. tab:: Kubernetes
 
-        You can change the Collector deployment mode in Kubernetes. If you change the deployment mode to gateway, the instrumentation automatically routes data to the gateway deployment.
+        You can send data to an endpoint of a Collector instance running in gateway mode.
 
-        Follow these steps to activate gateway mode in Kubernetes:
+        Follow these steps to send data to a gateway endpoint:
 
         #. Open the values.yaml file.
-        #. Set the ``gateway.enabled`` value to ``true``. The following example activates gateway mode:
+        #. Set the ``operator.instrumentation.spec.exporter.endpoint`` value to the gateway endpoint. For example:
 
             .. code-block:: yaml
-                :emphasize-lines: 12
+                :emphasize-lines: 13
 
                 clusterName: myCluster
                 splunkObservability:
-                realm: <splunk-realm>
-                accessToken: <splunk-access-token>
+                  realm: <splunk-realm>
+                  accessToken: <splunk-access-token>
                 environment: prd
                 certmanager:
                   enabled: true
                 operator:
                   enabled: true
-                
-                gateway:
-                  enabled: true
+                  instrumentation:
+                    spec:
+                      exporter:
+                        endpoint: <gateway-endpoint>
 
-        #. Reinstall the Splunk OTel Collector Chart with the following command:
+        #. Reinstall the Splunk OTel Collector Chart with the following command. Replace [CURRENT_VERSION] with the current version of your splunk-otel-collector-chart.
 
             .. code-block:: bash
 
-                helm install splunk-otel-collector -f values.yaml
+                helm upgrade splunk-otel-collector splunk-otel-collector-chart/splunk-otel-collector --version [CURRENT_VERSION] -f values.yaml
+
+        You can also automatically send data to a deployed gateway endpoint by setting ``agent.enabled: false`` and ``gateway.enabled: true`` in your values.yaml file. For example:
+
+        .. code-block:: yaml
+          :emphasize-lines: 12, 14
+
+          clusterName: myCluster
+          splunkObservability:
+            realm: <splunk-realm>
+            accessToken: <splunk-access-token>
+          environment: prd
+          certmanager:
+            enabled: true
+          operator:
+            enabled: true
+                
+          agent:
+            enabled: false
+          gateway:
+            enabled: true
+        
+        Using this configuration, auto instrumentation automatically sends data to a running gateway endpoint.
+
 
 Additional settings
 ===================================
