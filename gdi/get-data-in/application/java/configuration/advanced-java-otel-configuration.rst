@@ -4,7 +4,7 @@
 Configure the Java agent for Splunk Observability Cloud
 ********************************************************************
 
-.. meta:: 
+.. meta::
    :description: Configure the agent of the Splunk Distribution of OpenTelemetry Java to suit most of your instrumentation needs, like correlating traces with logs, activating custom sampling, and more.
 
 You can configure the Java agent from the Splunk Distribution of OpenTelemetry Java to suit most of your instrumentation needs. In most cases, modifying the basic configuration is enough to get started. More advanced settings are also available.
@@ -48,7 +48,7 @@ General settings
 
 The following settings are specific to the Splunk Distribution of OpenTelemetry Java:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :width: 100%
    :widths: 40 60
@@ -71,7 +71,7 @@ Trace configuration
 
 The following settings control tracing limits and attributes:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :width: 100%
    :widths: 40 60
@@ -169,7 +169,7 @@ Propagators configuration
 
 The following settings control trace propagation:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
 
    * - Environment variable
@@ -184,7 +184,7 @@ For backward compatibility with older versions of the Splunk Distribution of Ope
    .. code-tab:: shell Linux
 
       export OTEL_PROPAGATORS=b3multi
-   
+
    .. code-tab:: shell Windows PowerShell
 
       $env:OTEL_PROPAGATORS=b3multi
@@ -196,7 +196,7 @@ Java settings for AlwaysOn Profiling
 
 The following settings control the AlwaysOn Profiling feature for the Java agent:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :width: 100%
    :widths: 40 60
@@ -219,7 +219,7 @@ The following settings control the AlwaysOn Profiling feature for the Java agent
      - Frequency with which call stacks are sampled, in milliseconds. The default value is 10000 milliseconds. |br| |br| System property: ``splunk.profiler.call.stack.interval``
    * - ``SPLUNK_PROFILER_MEMORY_ENABLED``
      - Activates memory profiling with all the options. To activate or deactivate specific memory profiling options, set their values explicitly.
-        * The default value is ``false``. 
+        * The default value is ``false``.
         * Requires ``splunk.profiler.enabled`` to be set to ``true``.
         * Activating memory profiling sets the value of ``splunk.metrics.enabled`` to ``true``.
        
@@ -235,6 +235,7 @@ The following settings control the AlwaysOn Profiling feature for the Java agent
 
 For more information on AlwaysOn Profiling, see :ref:`profiling-intro`.
 
+
 .. _metrics-configuration-java:
 
 Metrics collection settings
@@ -246,17 +247,17 @@ The following settings control metrics collection for the Java agent:
    :header-rows: 1
    :width: 100%
    :widths: 40 60
-   
+
    * - Environment variable
      - Description
    * - ``SPLUNK_METRICS_ENABLED``
      - Activates exporting metrics. See :ref:`java-otel-metrics-attributes` for more information.
         - Default is ``true``.
-        - If you activate memory profiling using the ``splunk.profiler.memory.enabled`` property, the value of ``splunk.metrics.enabled`` is set to ``true``. 
+        - If you activate memory profiling using the ``splunk.profiler.memory.enabled`` property, the value of ``splunk.metrics.enabled`` is set to ``true``.
 
        System property: ``splunk.metrics.enabled``
-   * - ``SPLUNK_METRICS_ENDPOINT``
-     - The OTel collector metrics endpoint. Default is ``http://localhost:9943``. |br| |br| System property: ``splunk.metrics.endpoint``
+   * - ``OTEL_EXPORTER_OTLP_METRICS_ENDPOINT``
+     - The OTLP metrics endpoint to connect to. Must be a URL with a scheme of either HTTP or HTTPS based on the use of TLS. Default is ``http://localhost:4317`` when the protocol is gRPC, and ``http://localhost:4318/v1/metrics`` when the protocol is ``http/protobuf``. |br| |br| System property: ``otel.exporter.otlp.metrics.endpoint``
    * - ``SPLUNK_METRICS_EXPORT_INTERVAL``
      - Deprecated. Use ``OTEL_METRIC_EXPORT_INTERVAL`` instead. See :new-page:`Periodic exporting MetricReader <https://opentelemetry.io/docs/specs/otel/configuration/sdk-environment-variables/#periodic-exporting-metricreader>` in the official OpenTelemetry documentation.
 
