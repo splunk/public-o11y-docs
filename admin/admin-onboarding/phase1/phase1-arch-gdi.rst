@@ -3,7 +3,7 @@
 Onboarding phase part 2: Design your architecture and get data in
 *********************************************************************
 
-NEED WORDS
+In the second part of the onboarding phase you get familiar with important concepts, gather requirements, and begin integrating Splunk Observability Cloud into your existing environment.
 
 .. meta::
     :description: 
