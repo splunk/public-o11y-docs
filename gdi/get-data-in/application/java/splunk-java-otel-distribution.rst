@@ -23,7 +23,7 @@ In addition to the features of the OpenTelemetry Instrumentation for Java, like 
 - Collection of data about application servers, stored as server span attributes. See :ref:`webengine-attributes-java-otel`.
 - Automatic injection of trace metadata into application logs. See :ref:`correlate-traces-with-logs-java`.
 
-The agent of the Splunk Distribution of OpenTelemetry Java is supported by Splunk and is updated frequently, bringing bug fixes and new features to you before they are integrated in the upstream OTel repositories.
+The agent of the Splunk Distribution of OpenTelemetry Java is supported by Splunk and is updated frequently, bringing bug fixes and new features to you before they are integrated in the upstream OTel repositories. See :new-page:`Upstream in the Splexicon <https://docs.splunk.com/Splexicon:Upstream>`.
 
 .. caution:: Use the Splunk Distribution of OpenTelemetry Java instead of the upstream OpenTelemetry instrumentation and OpenTelemetry SDK. Splunk supports only upstream OTel components as part of the Splunk Distribution of OpenTelemetry Java.
 

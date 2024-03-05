@@ -193,7 +193,7 @@ The following example shows how to update a deployment to expose environment var
              - name: SIGNALFX_SERVICE_NAME
                value: "<service-name>"
              - name: SIGNALFX_ENDPOINT_URL
-               value: "http://$(host_ip):9411/api/v2/spans"
+               value: "http://$(HOST_IP):9411/api/v2/spans"
              - name: SIGNALFX_TRACE_GLOBAL_TAGS
                value: "deployment.environment:<my_environment>"
 
