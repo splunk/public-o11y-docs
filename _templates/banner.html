@@ -145,13 +145,12 @@
                   "font-weight": "bold",
                   "color": "red"
                 });
+                updateLinks(lang);
               } else {
                 $(this).removeClass('active-lang').removeAttr('style');
               }
             });
           }
-
-          setActiveLanguage();
 
           function constructNewPath(lang) {
             var currentPath = window.location.pathname;
@@ -167,6 +166,21 @@
             return pathSegments.join('/');
           }
 
+          function updateLinks(lang) {
+            var currentPath = window.location.pathname;
+            var lang = "en";
+            if(currentPath.includes('/ja/')) {
+              lang = "ja";
+            }
+
+            $("a.nav-link.newnavbar").each(function() {
+              var href = $(this).attr("href");
+              if(href && (href.includes('observability/en/') || href.includes('Observability/en/'))) {
+                $(this).attr("href", href.replace('observability/en/', 'observability/' + lang + '/'));
+              }
+            });
+          }
+
           $('.lang').click(function() {
             var lang = $(this).data('lang');
             var newPath = constructNewPath(lang);
@@ -174,6 +188,8 @@
 
             setActiveLanguage();
           });
+
+          setActiveLanguage();
         });
       </script>
 
