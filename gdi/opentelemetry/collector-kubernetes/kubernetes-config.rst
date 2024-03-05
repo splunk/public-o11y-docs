@@ -199,7 +199,7 @@ To use any additional OTel component, integration or legacy monitor, add it the 
 
 For a full list of available components and how to configure them, see :ref:`otel-components`. For a list of available application integrations, see :ref:`monitor-data-sources`.
 
-Where to add the new component or integration: agent or cluster receiver?
+How to collect data: agent or cluster receiver?
 -----------------------------------------------------------------------------
 
 Read the following table to decide which option to chose to collect your data:
@@ -215,16 +215,20 @@ Read the following table to decide which option to chose to collect your data:
 
   * - Where is data collected?
     - At the node level.
-    - At the Kubernetes service level.
+    - At the Kubernetes service level, through a single point.
 
   * - Advantages
-    - * Granularity: This option ensures that you capture the complete picture of your RabbitMQ cluster's performance and health. This approach provides detailed insights into each node's operations, which is crucial for diagnosing issues and optimizing performance.
-      * Fault Tolerance: If a node becomes isolated or experiences issues, its metrics are still being collected independently. This gives you visibility into problems affecting individual nodes, which might be missed if collecting metrics through a single point.
-    - Simplicity: This option simplifies the setup and management. Use this in environments where operational simplicity is a priority or the RabbitMQ cluster is simple and has only 1 node.
+    - * Granularity: This option ensures that you capture the complete picture of your cluster's performance and health. 
+      * Fault tolerance: If a node becomes isolated or experiences issues, its metrics are still being collected independently. This gives you visibility into problems affecting individual nodes.
+    - Simplicity: This option simplifies the setup and management. 
 
   * - Considerations
-    - Complexity: Managing and configuring agents on each node can increase operational complexity, specifically agent configuration file management can be more complex.
-    - Might miss data: This option might result in a partial view of your cluster's health and performance. If the service collects metrics only from a subset of nodes, you might miss critical metrics from parts of your cluster.
+    - Complexity: Managing and configuring agents on each node can increase operational complexity, specifically agent config file management.
+    - Uncomplete data: This option might result in a partial view of your cluster's health and performance. If the service collects metrics only from a subset of nodes, you might miss critical metrics from parts of your cluster.
+
+  * - Use cases
+    - Use this in environments where you need detailed insights into each node's operations. This allows better issue diagnosing and optimizing performance. 
+    - Use this in environments where operational simplicity is a priority, or if your cluster is already simple and has only 1 node.
 
 Example: Add the MySQL receiver
 -----------------------------------------------------------------------------

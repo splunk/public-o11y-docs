@@ -41,7 +41,7 @@ The Helm chart works with default configurations of the main Kubernetes distribu
    - Minikube was created to spin up various past versions of Kubernetes.
    - Minikube versions don't necessarily align with Kubernetes versions. For example, the :new-page:`Minikube v1.27.1 releases notes <https://github.com/kubernetes/minikube/releases/tag/v1.27.1>` state the default Kubernetes version was bumped to v1.25.2.
 
-While the chart should work for other Kubernetes distributions, the :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` configuration file could require additional updates.
+While the chart should work for other Kubernetes distributions, the default :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` configuration file could require additional updates.
 
 .. _helm-chart-components:
 
@@ -51,6 +51,8 @@ Helm chart components
 The Helm chart for the Collector has three components: agent, cluster receiver, and gateway (optional).
 
 For use cases about the different components, see the GitHub documentation :new-page:`Splunk OpenTelemetry Collector Helm Chart Components: Use Cases <https://github.com/jvoravong/splunk-otel-collector-chart/blob/Feature-components-doc/docs/components.md#use-cases>`.
+
+EXPLAIN EACH COMPONENT MORE
 
 Agent component
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
