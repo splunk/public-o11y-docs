@@ -121,14 +121,7 @@ In the following table, follow the instrumentation steps for the language that e
    * - PHP
      - OpenTelemetry instrumentation for PHP
      - :ref:`get-started-php`
-   
-   * - Rust
-     - OpenTelemetry instrumentation for Rust
-     - :ref:`get-started-rust`
 
-   * - Erlang
-     - OpenTelemetry instrumentation for Erlang
-     - :ref:`get-started-erlang`
 
 After you instrument your applications, you're ready to verify that your data is coming in.
 
