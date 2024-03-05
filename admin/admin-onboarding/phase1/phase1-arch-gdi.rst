@@ -19,8 +19,7 @@ NEED WORDS
 #. :ref:`phase1-zero-config`
 #. :ref:`phase1-profiling`
 #. :ref:`phase1-logs`
-#. :ref:`phase1-dashboards`
-#. :ref:`phase1-detectors`
+#. :ref:`phase1-dashboards-detectors`
 
 .. _phase1-otel:
 
@@ -129,7 +128,7 @@ Focus on auto instrumentation and confirm that the existing setup allows spans a
 .. _phase1-zero-config:
 
 (Optional) Consider the Zero Configuration Auto Instrumentation for Java, .NET, or Node.js
-================================================================================
+====================================================================================================
 
 If you are deploying numerous of similar services written in Java, .NET, or Node.js, you can deploy the OpenTelemetry collector and enable the Zero Configuration for Auto Instrumentation. Once you have installed this feature, any Java, .NET, or Node.js application that runs on your node or Kubernetes cluster.  Use zero config if you don't have access to the source code or the ability to change the deployment.
 
@@ -144,19 +143,30 @@ Use AlwaysOn Profiling for deeper analysis of the behavior of select application
 
 See :ref:`profiling-intro`.
 
-
 .. _phase1-logs:
 
 Log data source review (Log Observer Connect for Splunk Cloud Platform and Splunk Enterprise)
 ================================================================================================
 
-.. _phase1-dashboards:
+Enable SC SSO through Unified Identity (GA in FY25 for paid/post-trial orgids - pre-sales use this trial request process to setup orgid with a specific EC stack)
+Setup LOC - Get started with Log Observer Connect
+If you manage Splunk Enterprise in a data center or public cloud and want to begin using Log Observer Connect, see Set up Log Observer Connect for Splunk Enterprise.
+If you use Splunk Cloud Platform and want to integrate Log Observer Connect, see Set up Log Observer Connect for Splunk Cloud Platform.
+Splunk log settings: Compress the logs exiting SC - admin setting "disableCompression:false" 
 
-Review the default dashboards 
+If Splunk Log Observer Connect is enabled in your org, follow the Log Observer Connect to enable integration with Splunk Cloud or Splunk Enterprise instance.
+This will allow Splunk Observability Cloud to automatically relate logs with infrastructure and trace data. These log data are available in the Log Observer Connect. This can also be added into Splunk Observability Cloud dashboards.
+
+.. _phase1-dashboards-detectors:
+
+Review the default dashboards and detectors
 ==========================================================
 
-.. _phase1-detectors:
+Splunk Observability Cloud automatically adds the built-in-dashboards for each integration you use once it 50,000 ingest data points. Review these built-in dashboards when they are available.
 
-Review the default detectors
-==========================================================
+Splunk Observability Cloud also automatically adds the auto-detect detectors that correspond to the integrations you are using. You can find auto-detect detectors under :guilabel:`Alert & Detectors` then :guilabel:`Detectors`. They are marked with a :guilabel:`Auto` icon. You can copy the auto-detect detectors and customize them.
+
+See :ref:`dashboards` and :guilabel:`_autodetect`. 
+
+
 
