@@ -11,7 +11,7 @@ Connect to Azure and send data to Splunk Observability Cloud
   :hidden:
 
   Azure metrics <azure-metrics>
-  Azure logs <azure-logs-ingestion>
+  Send Azure logs to Splunk Platform <azure-logs-ingestion>
 
 Splunk Observability Cloud provides an integration with Microsoft Azure, lets you travel through Azure entities, and includes built-in dashboards to help you monitor Azure services. 
 
