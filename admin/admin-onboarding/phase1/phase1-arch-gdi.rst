@@ -168,5 +168,10 @@ Splunk Observability Cloud also automatically adds the auto-detect detectors tha
 
 See :ref:`dashboards` and :guilabel:`_autodetect`. 
 
+Next step
+===============
+
+:ref:`phase2`.
+
 
 
