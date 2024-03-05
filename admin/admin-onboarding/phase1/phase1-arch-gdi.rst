@@ -108,10 +108,10 @@ See :ref:`monitor-data-sources` to see a list of receivers.
 
 .. _phase1-apm:
 
-Get familiar with the Splunk Observability APM concepts
-==========================================================
+Get familiar with the Splunk Observability APM and its concepts
+==================================================================
 
-Splunk APM provides end-to-end visibility to help identify issues such as errors and latency across all tags of a service. Splunk APM produces infinite cardinality metrics and full-fidelity traces. Splunk APM also measures RED (Request, Error, Duration) metrics. 
+Splunk APM provides end-to-end visibility to help identify issues such as errors and latency across all tags of a service. Splunk APM produces infinite cardinality metrics and full-fidelity traces. Splunk APM also measures RED (Request, Error, Duration) metrics. See :ref:`apm-orientation`.
 
 Familiarize yourself with the key concepts of Splunk APM as Splunk APM is utilizes the OpenTelemetry standard for Application Performance Monitoring. See :ref:`apm-key-concepts`.
 
@@ -120,15 +120,30 @@ Familiarize yourself with the key concepts of Splunk APM as Splunk APM is utiliz
 Add an auto-instrumentation library to a service to send traces to Splunk APM
 ==================================================================================
 
+To send traces to Splunk APM, you need to deploy an auto instrumentation agent according to your application library. See :ref:`instrument-applications`.
+
+You can also use the zero config auto instrumentation implementation for Java of .NET, described in the following section. 
+
+Focus on auto instrumentation and confirm that the existing setup allows spans and traces to be captured by the OpenTelemetry agent and forwarded successfully to Splunk Observability Cloud. Once this is completed, traces and spans show in the Splunk APM according to services provided.   
+
 .. _phase1-zero-config:
 
-(Optional) Consider the zero-config implementation for .Net and Java
-===================================================================
+(Optional) Consider the Zero Configuration Auto Instrumentation for Java, .NET, or Node.js
+================================================================================
+
+If you are deploying numerous of similar services written in Java, .NET, or Node.js, you can deploy the OpenTelemetry collector and enable the Zero Configuration for Auto Instrumentation. Once you have installed this feature, any Java, .NET, or Node.js application that runs on your node or Kubernetes cluster.  Use zero config if you don't have access to the source code or the ability to change the deployment.
+
+See :ref:`zero-config`.
 
 .. _phase1-profiling:
 
-Turn on AlwaysOn Profiling to continuously collect stack traces
-=================================================================
+(Optional) Turn on AlwaysOn Profiling to collect stack traces
+============================================================================
+
+Use AlwaysOn Profiling for deeper analysis of the behavior of select applications. Code profiling collects snapshots of the CPU call stacks and collects snapshots of memory usage. Use this profiling data to gain insights into your code behavior to troubleshoot performance issues. For example, you can identify bottlenecks and memory leaks and potential optimizations.
+
+See :ref:`profiling-intro`.
+
 
 .. _phase1-logs:
 
