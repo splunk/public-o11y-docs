@@ -125,3 +125,8 @@ During this phase, most processes can be automated and new services can be added
 Onboard all teams/users
 ================================================================================================================
 During this phase, all users and teams can be onboarded into Splunk Observability Cloud. It is recommended to turn on the enhanced teams security to identify teams managers vs. users within the teams and who can access which dashboards and detectors and who can modify this information vs. view only users within the teams.
+
+Next step
+===============
+
+:ref:`phase3-apm`

@@ -141,3 +141,8 @@ Onboard launching production APM based application
 
 For each of the teams, send traces to Splunk APM for production environment, make sure the teams learn what they can do with Splunk APM and customize the Splunk APM experience. The scenarios in :ref:`phase3` can help you with an interactive walkthrough of Splunk APM.
 
+Next step
+===============
+
+:ref:`_phase3`
+

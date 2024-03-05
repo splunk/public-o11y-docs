@@ -40,3 +40,8 @@ Once Splunk APM is fully deployed, it is recommended to understand how to create
 Onboard all production applications
 ================================================================================================================
 During this phase, most processes can be automated and new services can be added into the Splunk Observability Cloud system. You can continue expanding the OTel agent configuration library for all production applications. These should populate all the necessary metrics to build the desired charts/dashboards and detectors. Continue onboard all production applications.
+
+Next step
+===============
+
+:ref:`phase3-excellence`

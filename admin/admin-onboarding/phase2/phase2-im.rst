@@ -176,3 +176,8 @@ Finalizing customer framework and adoption protocol for faster rollout
 ===============================================================================
 
 It is important to have regular updates and review sessions to incorporate lessons learned as more teams start to onboard with Splunk Observability Cloud. It is essential to review the feedback from the initial onboarding teams. Start utilizing resources available to your org by engaging with your Splunk Observability Cloud SE or Professional Services resources. These resources will be able to help with best practices and help with faster rollout.
+
+Next step
+===============
+
+:ref:`phase2-apm`

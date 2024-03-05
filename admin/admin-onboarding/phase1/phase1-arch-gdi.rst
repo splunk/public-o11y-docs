@@ -164,7 +164,7 @@ See :ref:`dashboards` and :guilabel:`_autodetect`.
 Next step
 ===============
 
-:ref:`phase2`.
+:ref:`phase2`
 
 
 
