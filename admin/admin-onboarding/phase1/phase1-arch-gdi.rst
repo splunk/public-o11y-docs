@@ -145,17 +145,10 @@ See :ref:`profiling-intro`.
 
 .. _phase1-logs:
 
-Log data source review (Log Observer Connect for Splunk Cloud Platform and Splunk Enterprise)
+Set up Log Observer Connect for Splunk Cloud Platform or Splunk Enterprise
 ================================================================================================
 
-Enable SC SSO through Unified Identity (GA in FY25 for paid/post-trial orgids - pre-sales use this trial request process to setup orgid with a specific EC stack)
-Setup LOC - Get started with Log Observer Connect
-If you manage Splunk Enterprise in a data center or public cloud and want to begin using Log Observer Connect, see Set up Log Observer Connect for Splunk Enterprise.
-If you use Splunk Cloud Platform and want to integrate Log Observer Connect, see Set up Log Observer Connect for Splunk Cloud Platform.
-Splunk log settings: Compress the logs exiting SC - admin setting "disableCompression:false" 
-
-If Splunk Log Observer Connect is enabled in your org, follow the Log Observer Connect to enable integration with Splunk Cloud or Splunk Enterprise instance.
-This will allow Splunk Observability Cloud to automatically relate logs with infrastructure and trace data. These log data are available in the Log Observer Connect. This can also be added into Splunk Observability Cloud dashboards.
+If your organization has an entitlement for Splunk Log Observer Connect Splunk Observability Cloud can automatically relate logs with infrastructure and trace data. To set up Log Observer Connect, see :ref:`logs-set-up-logconnect` or :ref:`logs-scp`. 
 
 .. _phase1-dashboards-detectors:
 
