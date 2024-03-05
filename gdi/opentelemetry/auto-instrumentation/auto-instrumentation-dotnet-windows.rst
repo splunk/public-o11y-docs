@@ -16,7 +16,7 @@ Zero Configuration Auto Instrumentation for OpenTelemetry .NET activates automat
 Install the package
 =========================================================
 
-By default, the installer script only installs the Collector. If you add the ``with_dotnet_instrumentation`` parameter, the script also downloads and installs the Splunk Distribution of OpenTelemetry Collector for .NET. 
+By default, the installer script only installs the Collector. If you add the ``with_dotnet_instrumentation`` parameter, the script also downloads and installs the Splunk Distribution of OpenTelemetry .NET. 
 
 Run the PowerShell script with the ``with_dotnet_instrumentation`` parameter, as shown in the following example:
 
@@ -46,7 +46,7 @@ To configure the instrumentation, see :ref:`advanced-dotnet-otel-configuration`.
 Upgrade the package
 ==========================
 
-The instrumentation uses OpenTelemetry .NET version 1.4.0. You can upgrade the package by installing a new version of the Splunk Distribution of OpenTelemetry Collector for .NET. See :ref:`instrument-otel-dotnet-applications`.
+You can upgrade the package by installing a new version of the Splunk Distribution of OpenTelemetry .NET. See :ref:`instrument-otel-dotnet-applications`.
 
 Troubleshooting
 ===========================
