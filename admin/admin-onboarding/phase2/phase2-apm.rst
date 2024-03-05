@@ -144,5 +144,5 @@ For each of the teams, send traces to Splunk APM for production environment, mak
 Next step
 ===============
 
-:ref:`_phase3`
+:ref:`phase3`
 
