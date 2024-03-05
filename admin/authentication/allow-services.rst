@@ -163,7 +163,13 @@ If your organization's networking security policies require you to individually 
 
    \*.<YOUR_REALM>.signalfx.com
 
-If you're unable to allow all URLs as shown here, see :ref:`allow-domains`.
+You also need to allow the following URLs:
+
+* packages.treasuredata.com
+* splunk.jfrog.io 
+* jfrog-prod-use1-shared-virginia-main.s3.amazonaws.com
+
+If you're unable to allow all the URLs listed in this section, see :ref:`allow-domains`.
 
 .. _allow-domains:
 
