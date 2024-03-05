@@ -207,15 +207,15 @@ Read the following table to decide which option to chose to collect your data:
 .. list-table:: 
   :header-rows: 1
   :width: 100%
-  :widths: 25 25 25 
+  :widths: 20 40 40 
 
   * - 
     - Collect via the Collector agent 
     - Collect via the the Collector cluster receiver 
 
   * - Where is data collected?
-    - At the node level
-    - At the Kubernetes service level
+    - At the node level.
+    - At the Kubernetes service level.
 
   * - Advantages
     - * Granularity: This option ensures that you capture the complete picture of your RabbitMQ cluster's performance and health. This approach provides detailed insights into each node's operations, which is crucial for diagnosing issues and optimizing performance.
