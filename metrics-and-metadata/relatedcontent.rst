@@ -7,7 +7,7 @@ Related Content in Splunk Observability Cloud
 .. meta::
    :description: Related Content functionality: introduction, requirements, how to use.
 
-The Related Content feature automatically correlates and presents data between different views within Splunk Observability Cloud.
+The Related Content panel automatically correlates and presents data between different views within Splunk Observability Cloud. Splunk Cloud Platform also has the Related Content panel where users can see previews of observability data that correlates to search results in the Search app. For more information, see :new-page:`Preview Splunk Observability Cloud data <https://quickdraw.splunk.com/redirect/?product=Observability&location=related.content.observability&version=current>`.
 
 Use Related Content 
 ==========================================================================================================
