@@ -70,15 +70,15 @@ Use the following configuration to bump resource limits for the agent:
         cpu: 500m
         memory: 1Gi
 
-Resources allocated to cluster receiver deployment should be based on the cluster size. For a cluster with 100 nodes you would need the following resources:
+Set the resources allocated to your cluster receiver deployment based on the cluster size. For example, for a cluster with 100 nodes alllocate these resources:
 
 .. code-block:: yaml
 
-clusterReceiver:
-  resources:
-    limits:
-      cpu: 1
-      memory: 2Gi
+  clusterReceiver:
+    resources:
+      limits:
+        cpu: 1
+        memory: 2Gi
 
 
 

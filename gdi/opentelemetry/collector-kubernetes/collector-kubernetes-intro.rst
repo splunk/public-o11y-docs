@@ -13,13 +13,14 @@ Get started with the Collector for Kubernetes
 
    Install the Collector for Kubernetes <install-k8s.rst>
    Kubernetes (EKS Add-on) <install-k8s-addon-eks.rst>
-   kubernetes-config.rst
-   kubernetes-config-advanced.rst
-   kubernetes-config-logs.rst
+   Configure with Helm <kubernetes-config.rst>
+   Advanced config <kubernetes-config-advanced.rst>
+   Configure logs and events <kubernetes-config-logs.rst>
    Default Kubernetes metrics <metrics-ootb-k8s.rst>
-   kubernetes-upgrade.rst
-   kubernetes-uninstall.rst
+   Upgrade <kubernetes-upgrade.rst>
+   Uninstall <kubernetes-uninstall.rst>
    troubleshoot-k8s.rst
+   troubleshoot-k8s-container.rst
    kubernetes-support.rst
 
 To install and configure the Splunk Distribution of the OpenTelemetry Collector for Kubernetes, follow these docs:
