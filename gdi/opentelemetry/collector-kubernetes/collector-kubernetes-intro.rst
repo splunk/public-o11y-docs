@@ -19,9 +19,9 @@ Get started with the Collector for Kubernetes
    Default Kubernetes metrics <metrics-ootb-k8s.rst>
    Upgrade <kubernetes-upgrade.rst>
    Uninstall <kubernetes-uninstall.rst>
-   troubleshoot-k8s.rst
-   troubleshoot-k8s-container.rst
-   kubernetes-support.rst
+   Troubleshoot <troubleshoot-k8s.rst>
+   Troubleshoot containers <troubleshoot-k8s-container.rst>
+   Support <kubernetes-support.rst>
 
 To install and configure the Splunk Distribution of the OpenTelemetry Collector for Kubernetes, follow these docs:
 

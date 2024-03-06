@@ -9,20 +9,24 @@ Troubleshoot the Collector for Kubernetes containers
 
 .. note:: For general troubleshooting, see :ref:`otel-troubleshooting` and :ref:`troubleshoot-k8s`.
 
-This topic describes how to troubleshoot incompatibility issues. A Kubernetes cluster using an incompatible container runtime for its version or configuration could experience the following issues cluster-wide:
+Kubernetes requires you to install a container runtime on each node in the cluster so that pods can run there. The compatibility level of a specific Kubernetes version and container runtime can vary, so :ref:`use a version of Kubernetes and a container runtime that are known to be compatible <check-runtimes>`. 
+
+Container runtimes such as containerd, CRI-O, Docker, and Mirantis Kubernetes Engine (formerly Docker Enterprise/UCP) are supported. For more information about runtimes, see :new-page:`Container runtime <https://kubernetes.io/docs/setup/production-environment/container-runtimes/>`.
+
+A Kubernetes cluster using an incompatible container runtime for its version or configuration might experience the following issues:
 
 - Stats from containers, pods, or nodes being absent or malformed. As a result, the Collector that requires these stats does not produce the desired corresponding metrics.
 - Containers, pods, and nodes fail to start successfully or stop cleanly.
 - The kubelet process on a node is in a defunct state.
-
-Kubernetes requires you to install a :new-page:`container runtime <https://kubernetes.io/docs/setup/production-environment/container-runtimes/>`` on each node in the cluster so that pods can run there. The compatibility level of a specific Kubernetes version and container runtime can vary, so :ref:`use a version of Kubernetes and a container runtime that are known to be compatible <check-runtimes>`. Multiple container runtimes such as containerd, CRI-O, Docker, and Mirantis Kubernetes Engine (formerly Docker Enterprise/UCP) are all supported. 
 
 .. _check-runtimes:
 
 Check the container runtime compatibility
 =============================================================================================
 
-First, run ``kubectl get nodes -o wide`` to determine what version of Kubernetes and container runtime are being used. The ``-o wide`` flag prints the output in the plain-text format with any additional information. For pods, the node name is included. In the following example, ``node-1`` uses Kubernetes 1.19.6 and containerd 1.4.1:
+First, run ``kubectl get nodes -o wide`` to determine what version of Kubernetes and container runtime are being used. 
+
+The ``-o wide`` flag prints the output in the plain-text format with any additional information. For pods, the node name is included. In the following example, ``node-1`` uses Kubernetes 1.19.6 and containerd 1.4.1:
 
    .. code-block:: yaml
 
@@ -39,7 +43,7 @@ Next, verify that you are using a container runtime compatible with your Kuberne
 
 .. _check-integrity:
 
-Check the integrity of Kubelet Summary API stats
+Check the integrity of your environment stats
 ==========================================================
 
 Use the Kubelet Summary API to verify container, pod, and node stats. The Kubelet provides the Summary API to discover and retrieve per-node summarized stats available through the ``/stats`` endpoint.
