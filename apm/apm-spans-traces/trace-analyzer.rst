@@ -138,7 +138,10 @@ Within the Trace Analyzer interface, there are 3 different display limits, numbe
 Learn more
 =====================
 
-See the following links for more information on Trace Analyzer: 
+See the following links for more information on Trace Analyzer and traces in Splunk APM: 
 
 * :ref:`apm-scenario-trace-analyzer`
 * :ref:`apm-scenario-trace-analyzer-trace-duration`
+* :ref:`apm-download-traces`
+* :ref:`apm-special-traces`
+* :ref:`apm-extended-trace-retention`
