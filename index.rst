@@ -25,13 +25,13 @@ Splunk Observability Cloud overview :ref:`welcome`
 
 .. rst-class:: newcard
 
-:strong:`Admin onboarding guide`
-Admin guide for onboarding Splunk Observability Cloud :ref:`admin-onboarding-guide`
+:strong:`Scenarios`
+Collection of scenarios for Splunk Observability Cloud :ref:`scenario-landing`
 
 .. rst-class:: newcard
 
-:strong:`Scenarios`
-Collection of scenarios for Splunk Observability Cloud :ref:`scenario-landing`
+:strong:`Admin onboarding guide`
+Admin guide for onboarding Splunk Observability Cloud :ref:`admin-onboarding-guide`
 
 .. rst-class:: newcard
 
