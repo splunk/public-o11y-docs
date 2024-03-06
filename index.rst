@@ -5,7 +5,7 @@ Welcome
 **********
 
 .. meta::
-    :description: Welcome to Splunk Observability Cloud documentation. Learn about the basic elements of Splunk Observability Cloud and all it can do for you.
+    :description: Welcome to Splunk Observability Cloud documentation. Learn about the basic elements of Splunk Observability Cloud.
 
 .. imagetarget:: _images/get-started/o11y-user-doc-hero-banner-v2.svg
    :alt: Welcome
