@@ -61,7 +61,7 @@ To open Trace Analyzer, select :guilabel:`Traces` in Splunk APM and select :guil
 
 To explore your trace data, use the following controls, which are numbered as callouts in the image. Additional details for each callout follow the image:
 
-..  image:: /_images/apm/trace-analyzer/TraceAnalyzerControls+duration.png
+..  image:: /_images/apm/trace-analyzer/TraceAnalyzerControlsDuration.png
     :width: 95%
     :alt: Elements of the Trace Analyzer user interface, described in the list after this image.
 
