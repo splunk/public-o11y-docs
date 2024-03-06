@@ -42,9 +42,9 @@ Event values must meet certain criteria. Invalid payloads are dropped, and you c
 
 These are the valid values for events:
 
-* c.maxDimValueLen = conf.Int("signalboost.dao.dimension.maximumValueLength", 256)
+* Maximum length: 256 characters
 * c.maxDpDimLen = conf.Int("sbingest.dao.datapoint.dimension.maximumLength", 36)
-* c.maxEventDimCount = conf.Int("sbingest.dao.event.dimension.maximumLength", 36)
+* Maximum number of dimensions: 36
 * c.maxDimKeyLen = conf.Int("sbingest.dao.dimension.maximumKeyLength", 128)
 * c.maxEventDimValueLen = conf.Int("signalboost.dao.event.dimension.maximumValueLength", 256)
 * c.MaxEventPropertiesAllowed = conf.Int("signalboost.dao.event.properties.maximumLength", 1024)
@@ -54,8 +54,6 @@ These are the valid values for events:
 * c.totalTagAnnotationDataSize = conf.Int("sbingest.spans.totalTagAnnotationDataSizeInBytes", 131072)
 * c.maxSpanNameSize = conf.Int("sf.sbingest.spans.maxNameSize", 1024)
 * c.enableSpanFailureResponse = conf.Bool("sf.sbingest.spans.enableFailureResponse", true)
-* c.spanTagAllowed = conf.Str("sf.sbingest.spans.tagAllowedList", `["sf_metricized","sf_source","sf_count","sf_cluster","sf_initiator","sf_serviceMesh","sf_dimensionalized"]`)
-* c.dmsTagAllowed = conf.Str("sf.sbingest.dms.tagAllowedList", `["sf_workflow","sf_source","sf_hires","sf_hasService","sf_serviceMesh","sf_dimensionalized","sf_ua_browsername","sf_ua_osname","sf_node_type","sf_node_name","sf_environment","sf_product","sf_operation","sf_functionId"]`)
 
 .. _custom-event:
 
