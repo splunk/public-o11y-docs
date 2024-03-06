@@ -35,11 +35,6 @@ Collection of scenarios for Splunk Observability Cloud :ref:`scenario-landing`
 
 .. rst-class:: newcard
 
-:strong:`Tutorials`
-Collection of tutorials for Splunk Observability Cloud :ref:`im-tutorials`
-
-.. rst-class:: newcard
-
 :strong:`Service description`
 Benefits and service terms of Splunk Observability Cloud :ref:`o11y-service-description`
 
