@@ -1,4 +1,4 @@
-.. orphan::
+:orphan:
 
 .. _im-tutorials:
 

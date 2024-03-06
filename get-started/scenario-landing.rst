@@ -1,6 +1,4 @@
-.. orphan::
-
-.. _scenario-landing:
+:orphan:
 
 ******************************************************************************************************
 Splunk Observability Cloud scenarios

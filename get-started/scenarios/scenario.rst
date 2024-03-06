@@ -1,4 +1,4 @@
-.. orphan::
+:orphan:
 
 .. _get-started-scenario:
 
