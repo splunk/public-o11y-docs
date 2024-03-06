@@ -221,7 +221,7 @@ For more information:
 
 If you want to send data to Splunk Enterprise using the Collector, the following applies:
 
-* For Kubernetes, Splunk Enterprise supports receiving metrics and logs from the Collector. Trace collection is not supported.
-* For Linux and Windows environments (physical hosts and virtual machines), Splunk Enterprise is not compatible with the Collector. Instead, use the Universal Forwarder to send metrics, traces, and logs to the Splunk platform. See more at :ref:`collector-with-the-uf`.
+* For Kubernetes environments, use the Collector to send metrics and logs to Splunk Enterprise. Trace collection is not supported.
+* For Linux and Windows environments (physical hosts and virtual machines), use the Universal Forwarder to send metrics and logs to the Splunk platform. See more at :ref:`collector-with-the-uf`. Alternatively, you can use the Collector to forward data to the Splunk platform, but this option is not supported.
 
 
