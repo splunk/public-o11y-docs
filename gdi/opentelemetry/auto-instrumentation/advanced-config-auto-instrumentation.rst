@@ -43,11 +43,11 @@ By default, the Splunk Distribution of OpenTelemetry Collector uses the latest v
                 repository: ghcr.io/signalfx/splunk-otel-java/splunk-otel-java
                 tag: v1.27.0
 
-#. Reinstall the Splunk OTel Collector Chart with the following command. Replace [CURRENT_VERSION] with the current version of your splunk-otel-collector-chart.
+#. Reinstall the Splunk OTel Collector Chart with the following command. Replace <CURRENT_VERSION> with the current version of your splunk-otel-collector-chart.
 
     .. code-block:: bash
 
-        helm upgrade splunk-otel-collector splunk-otel-collector-chart/splunk-otel-collector --version [CURRENT_VERSION] -f values.yaml
+        helm upgrade splunk-otel-collector splunk-otel-collector-chart/splunk-otel-collector --version <CURRENT_VERSION> -f values.yaml
 
 .. note:: If you don't see the ``java`` field in your ``values.yaml`` file, then you have to add the field and the ``repository`` value before changing the version. The repository value is always ``ghcr.io/signalfx/splunk-otel-java/splunk-otel-java``.
 
@@ -124,11 +124,11 @@ You can activate CPU and memory profiling by updating the environment variables 
                       - name: SPLUNK_PROFILER_CALL_STACK_INTERVAL
                         value: 5000
       
-      #. Reinstall the Splunk OTel Collector Chart with the following command. Replace [CURRENT_VERSION] with the current version of your splunk-otel-collector-chart.
+      #. Reinstall the Splunk OTel Collector Chart with the following command. Replace <CURRENT_VERSION> with the current version of your splunk-otel-collector-chart.
 
             .. code-block:: bash
 
-                helm upgrade splunk-otel-collector splunk-otel-collector-chart/splunk-otel-collector --version [CURRENT_VERSION] -f values.yaml
+                helm upgrade splunk-otel-collector splunk-otel-collector-chart/splunk-otel-collector --version <CURRENT_VERSION> -f values.yaml
 
 Activate runtime metrics collection (Linux only)
 ----------------------------------------------------
@@ -202,11 +202,11 @@ To learn more about the gateway mode, see :ref:`collector-gateway-mode`.
                       exporter:
                         endpoint: <gateway-endpoint>
 
-        #. Reinstall the Splunk OTel Collector Chart with the following command. Replace [CURRENT_VERSION] with the current version of your splunk-otel-collector-chart.
+        #. Reinstall the Splunk OTel Collector Chart with the following command. Replace <CURRENT_VERSION> with the current version of your splunk-otel-collector-chart.
 
             .. code-block:: bash
 
-                helm upgrade splunk-otel-collector splunk-otel-collector-chart/splunk-otel-collector --version [CURRENT_VERSION] -f values.yaml
+                helm upgrade splunk-otel-collector splunk-otel-collector-chart/splunk-otel-collector --version <CURRENT_VERSION> -f values.yaml
 
         You can also automatically send data to a deployed gateway endpoint by setting ``agent.enabled: false`` and ``gateway.enabled: true`` in your values.yaml file. For example:
 
