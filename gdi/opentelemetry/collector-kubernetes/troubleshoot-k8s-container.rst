@@ -1,12 +1,13 @@
-.. _tshoot-k8s-container-runtimes:
-.. _troubleshoot-k8s:
+.. _troubleshoot-k8s-container:
 
 ***************************************************************
-Troubleshoot the Collector for Kubernetes 
+Troubleshoot the Collector for Kubernetes containers
 ***************************************************************
 
 .. meta::
-    :description: Describes the Kubernetes and container runtimes in the Splunk Distribution of OpenTelemetry Collector.
+    :description: Describes troubleshooting specific to the Collector for Kubernetes containers.
+
+.. note:: For general troubleshooting, see :ref:`otel-troubleshooting` and :ref:`troubleshoot-k8s`.
 
 This topic describes how to troubleshoot incompatibility issues. A Kubernetes cluster using an incompatible container runtime for its version or configuration could experience the following issues cluster-wide:
 
