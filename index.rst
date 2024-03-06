@@ -20,13 +20,23 @@ Learn about the basic elements of Splunk Observability Cloud and all it can do f
 
 .. rst-class:: newcard
 
-:strong:`Service description`
-Benefits and service terms of Splunk Observability Cloud :ref:`o11y-service-description`
+:strong:`Overview`
+Splunk Observability Cloud overview :ref:`welcome`
 
 .. rst-class:: newcard
 
 :strong:`Scenarios`
-Collection of scenarios for Splunk Observability Cloud :ref:`scenario-landing`
+A collection of scenarios for Splunk Observability Cloud :ref:`scenario-landing`
+
+.. rst-class:: newcard
+
+:strong:`Tutorials`
+A collection of tutorials for Splunk Observability Cloud :ref:`tutorial-landing`
+
+.. rst-class:: newcard
+
+:strong:`Service description`
+Benefits and service terms of Splunk Observability Cloud :ref:`o11y-service-description`
 
 .. rst-class:: newcard
 

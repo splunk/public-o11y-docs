@@ -1,3 +1,4 @@
+.. _tutorial-landing:
 
 ************************************************************
 Splunk Observability Cloud tutorials
