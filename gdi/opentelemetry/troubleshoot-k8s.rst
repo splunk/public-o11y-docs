@@ -1,4 +1,5 @@
 .. _tshoot-k8s-container-runtimes:
+.. _troubleshoot-k8s:
 
 ***************************************************************
 Troubleshoot the Collector for Kubernetes 
@@ -19,6 +20,7 @@ Kubernetes requires you to install a :new-page:`container runtime <https://kuber
 
 Check the container runtime compatibility
 =============================================================================================
+
 First, run ``kubectl get nodes -o wide`` to determine what version of Kubernetes and container runtime are being used. The ``-o wide`` flag prints the output in the plain-text format with any additional information. For pods, the node name is included. In the following example, ``node-1`` uses Kubernetes 1.19.6 and containerd 1.4.1:
 
    .. code-block:: yaml
@@ -38,6 +40,7 @@ Next, verify that you are using a container runtime compatible with your Kuberne
 
 Check the integrity of Kubelet Summary API stats
 ==========================================================
+
 Use the Kubelet Summary API to verify container, pod, and node stats. The Kubelet provides the Summary API to discover and retrieve per-node summarized stats available through the ``/stats`` endpoint.
 
    - The following examples show how to verify that the CPU, memory, and networks stats the Collector uses to generate Kubelet Stats Receiver metrics are present. You can expand these techniques to evaluate other Kubernetes stats that are available. 
@@ -295,7 +298,6 @@ For reference, the following table shows the mappings for the container stat nam
      - ``container.memory.page_faults``
    * - ``container.memory.majorPageFaults``
      - ``container.memory.major_page_faults``
-
 
 Reported incompatible Kubernetes and container runtime issues
 =======================================================================
