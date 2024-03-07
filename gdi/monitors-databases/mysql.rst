@@ -1,7 +1,7 @@
 .. _mysql:
 
-MySQL
-=======
+MySQL (deprecated)
+=====================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the MySQL monitor. See benefits, install, configuration, and metrics.
