@@ -115,6 +115,8 @@ CloudWatch Metric Streams supports filtering by namespace and metric name but do
 
 By default, Splunk Observability Cloud brings in data from all supported AWS services associated with your account. See :ref:`Supported integrations in Splunk Observability Cloud <aws-integrations>`.
 
+If you're polling data, by default Splunk Observability Cloud only imports AWS's recommended stats.
+
 To manage the amount of data to import, see :ref:`aws-infra-import`.  
 
 .. _aws-data-availability:
