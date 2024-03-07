@@ -340,7 +340,7 @@ You can also use the methods shown in :ref:`zeroconfig-java-traces` to configure
     
      kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=build.id=feb2023_v2
 
-See :ref:`advanced-java-otel-configuration` for the full list of supported environment variables.
+See :ref:`advanced-config-auto-instrumentation` for more information.
 
 .. _troubleshooting-zeroconfig-java-k8s:
 
