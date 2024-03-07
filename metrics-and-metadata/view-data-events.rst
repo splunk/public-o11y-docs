@@ -42,18 +42,15 @@ Event values must meet certain criteria. Invalid payloads are dropped, and you c
 
 These are the valid values for events:
 
-* Maximum length: 256 characters
-* c.maxDpDimLen = conf.Int("sbingest.dao.datapoint.dimension.maximumLength", 36)
-* Maximum number of dimensions: 36
-* c.maxDimKeyLen = conf.Int("sbingest.dao.dimension.maximumKeyLength", 128)
-* c.maxEventDimValueLen = conf.Int("signalboost.dao.event.dimension.maximumValueLength", 256)
-* c.MaxEventPropertiesAllowed = conf.Int("signalboost.dao.event.properties.maximumLength", 1024)
-* c.maxEventDimKeyLen = conf.Int("sbingest.dao.event.dimension.maximumKeyLength", 128)
-* c.propertiesAllowed = conf.Str("sbingest.stream.properties.allowed", "trace_chain, message")
-* c.dimensionsBlocked = conf.Str("tscreation.perOrgBlockedPrefixes", "{}")
-* c.totalTagAnnotationDataSize = conf.Int("sbingest.spans.totalTagAnnotationDataSizeInBytes", 131072)
-* c.maxSpanNameSize = conf.Int("sf.sbingest.spans.maxNameSize", 1024)
-* c.enableSpanFailureResponse = conf.Bool("sf.sbingest.spans.enableFailureResponse", true)
+* Maximum dimension value length: 256 characters
+* Maximum length of the dimension key data point: 36 characters
+* Maximum number of dimensions of an event: 36
+* Maximum length of the dimension key: 128 characters 
+* Maximum length of the dimension value: 256 characters
+* Maximum amount of properties allowed per event: 1024
+* Maximum length of a the dimension key value: 128 characters
+* Total tag annotation data size: 131,072
+* Maximum size of the span name: 1024 characters
 
 .. _custom-event:
 
