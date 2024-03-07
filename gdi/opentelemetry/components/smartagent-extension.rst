@@ -9,5 +9,5 @@ Smart Agent extension
 
 The Splunk Distribution of the OpenTelemetry Collector supports the Smart Agent extension. Documentation is planned for a future release. 
 
-To find information about this component in the meantime, see :new-page:` Smart Agent extension <https://github.com/signalfx/splunk-otel-collector/tree/main/pkg/extension/smartagentextension>` on GitHub.
+To find information about this component in the meantime, see :new-page:`Smart Agent extension <https://github.com/signalfx/splunk-otel-collector/tree/main/pkg/extension/smartagentextension>` on GitHub.
 
