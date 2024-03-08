@@ -72,7 +72,7 @@ If a proxy is required by your organization, see :ref:`allow-services`.
 Analyze how to collect metrics from cloud providers
 ==========================================================================
 
-You need to integrate with cloud providers, such as, AWS, Azure, or GCP to allow data ingestion into Splunk Observability Cloud. It is recommended to pay attention to the filtering section in each Cloud provider. Using the Cloud providers' filters helps refine what data you bring in to Splunk Observability Cloud.
+To ingest data from cloud providers, such as, AWS, Azure, or GCP, you need to set up cloud integrations. Pay attention to the filtering section in each Cloud provider. Using the Cloud providers' filters helps refine what data you bring in to Splunk Observability Cloud.
 
 To monitor a cloud-based host, install the Splunk OTel collector on each host to send host metrics to Splunk Observability Cloud. You can limit the host metrics you send by excluding specific metrics that you do not need to monitor from consumed from the cloud provider. Excluding metrics from being consumed offers the following advantages:
 
