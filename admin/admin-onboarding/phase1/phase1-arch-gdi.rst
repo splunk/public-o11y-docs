@@ -130,7 +130,7 @@ Focus on autoinstrumentation and confirm that the existing setup allows spans an
 (Optional) Consider the Zero Configuration Auto Instrumentation
 ====================================================================================================
 
-If you are deploying numerous of similar services written in Java, .NET, or Node.js, you can deploy the OpenTelemetry collector and enable the Zero Configuration for Auto Instrumentation. Once you have installed this feature, any Java, .NET, or Node.js application that runs on your node or Kubernetes cluster.  Use zero config if you don't have access to the source code or the ability to change the deployment.
+If you are deploying numerous similar services written in Java, .NET, or Node.js, you can deploy the OpenTelemetry collector and enable the Zero Configuration for Auto Instrumentation. Once you have installed this feature, any Java, .NET, or Node.js application that runs on your node or Kubernetes cluster.  Use zero config if you don't have access to the source code or the ability to change the deployment.
 
 See :ref:`zero-config`.
 
