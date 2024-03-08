@@ -7,15 +7,7 @@ Redis receiver
 .. meta::
       :description: The Redis receiver retrieves Redis ``INFO`` data from a specific Redis instance and builds metrics from it.
 
-Get started
-======================
-
-The Redis receiver is designed to retrieve Redis ``INFO`` data from a single Redis instance, build metrics from that data, and send them to the next consumer at a configurable interval.
-
-Understand the Redis receiver and the ``INFO`` command
-----------------------------------------------------------------------
-
-The Redis ``INFO`` command returns information and statistics about a Redis server. The Redis receiver extracts values from the result and converts them to OpenTelemetry metrics. 
+The Redis receiver is designed to retrieve Redis ``INFO`` data from a single Redis instance, build metrics from that data, and send them to the next consumer at a configurable interval. The Redis ``INFO`` command returns information and statistics about a Redis server. The Redis receiver extracts values from the result and converts them to OpenTelemetry metrics. 
 
 For example, the Redis ``INFO`` command returns ``used_cpu_sys``, which indicates the system CPU consumed by the Redis server, expressed in seconds, since the start of the Redis instance. The Redis receiver turns this data into a gauge with a metric name of ``redis.cpu.time`` and a unit value of seconds.
 
@@ -24,7 +16,21 @@ For more information, see :
 * :new-page:`Redis commands info <https://redis.io/commands/info>`
 * The list of Redis receiver metrics at :ref:`redis-receiver-metrics`
 
-Configure the Redis receiver
+Get started
+======================
+
+Follow these steps to configure and activate the component:
+
+1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+   
+   - :ref:`otel-install-linux`
+   - :ref:`otel-install-windows`
+   - :ref:`otel-install-k8s`
+
+2. Configure the receiver creator receiver as described in the next section.
+3. Restart the Collector.
+
+Sample configuration
 ----------------------------------------------------------------------
 
 To activate the Redis receiver manually in the Collector configuration, add ``redis`` to the ``receivers`` section of your configuration file, as shown in the following example:

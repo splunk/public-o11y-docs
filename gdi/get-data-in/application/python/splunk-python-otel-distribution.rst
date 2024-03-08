@@ -20,7 +20,7 @@ In addition to the features of the OpenTelemetry Instrumentation for Python, lik
 - Instrumentation for HTTP server frameworks that returns server trace information in HTTP responses. See :ref:`server-trace-information-python`.
 - Automatic injection of trace metadata into application logs. See :ref:`correlate-traces-with-logs-python`.
 
-The agent of the Splunk Distribution of OpenTelemetry Python is supported by Splunk and is updated frequently, bringing bug fixes and new features to you before they are integrated in the upstream OTel repositories.
+The agent of the Splunk Distribution of OpenTelemetry Python is supported by Splunk and is updated frequently, bringing bug fixes and new features to you before they are integrated in the upstream OTel repositories. See :new-page:`Upstream in the Splexicon <https://docs.splunk.com/Splexicon:Upstream>`.
 
 .. caution:: Use the Splunk Distribution of OpenTelemetry Python instead of the upstream OpenTelemetry instrumentation and SDK. Splunk supports upstream OTel components as part of the Splunk Distribution of OpenTelemetry Python.
 

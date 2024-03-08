@@ -167,19 +167,18 @@
           }
 
           function updateLinks(lang) {
-            var baseUrl = "https://docs.splunk.com/Observability";
-            if(lang === "ja") {
-              $(".navbar-brand").attr("href", baseUrl + "/ja/");
-            } else {
-              $(".navbar-brand").attr("href", baseUrl);
+            var currentPath = window.location.pathname;
+            var lang = "en";
+            if(currentPath.includes('/ja/')) {
+              lang = "ja";
             }
 
-            var serviceDescUrl = "https://docs.splunk.com/observability";
-            if(lang === "ja") {
-              $("a.nav-link.newnavbar").attr("href", serviceDescUrl + "/ja/get-started/service-description.html");
-            } else {
-              $("a.nav-link.newnavbar").attr("href", serviceDescUrl + "/en/get-started/service-description.html");
-            }
+            $("a.nav-link.newnavbar").each(function() {
+              var href = $(this).attr("href");
+              if(href && (href.includes('observability/en/') || href.includes('Observability/en/'))) {
+                $(this).attr("href", href.replace('observability/en/', 'observability/' + lang + '/'));
+              }
+            });
           }
 
           $('.lang').click(function() {
