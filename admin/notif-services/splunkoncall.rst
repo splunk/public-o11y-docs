@@ -84,7 +84,7 @@ To create a Splunk On-Call integration in Observability Cloud:
 
 #. By default, the name of the integration is :strong:`VictorOps`. Give your integration a unique and descriptive name. For information about the downstream use of this name, see :new-page-ref:`About naming your integrations <naming-note>`.
 #. In the :strong:`Post URL` field, enter the service API endpoint URL value you copied from Splunk On-Call in :ref:`oncall1`.
-#. strong:`Save`.
+#. :strong:`Save`.
 #. If Splunk Observability Cloud can validate the Splunk On-Call service API endpoint URL, a :strong:`Validated!` success message displays. If you get an error, make sure that the URL value you entered matches the value displayed in Splunk On-Call in :ref:`oncall1`.
 
 
