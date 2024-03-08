@@ -119,7 +119,7 @@ Familiarize yourself with the key concepts of Splunk APM, such as the OpenTeleme
 Add an auto-instrumentation library to a service to send traces to Splunk APM
 ==================================================================================
 
-To send traces to Splunk APM, you need to deploy an auto instrumentation agent according to your application library. See :ref:`instrument-applications`.
+To send traces to Splunk APM, you need to deploy an autoinstrumentation agent for each programming language or language runtime. See :ref:`instrument-applications`.
 
 You can also use the Zero Config auto instrumentation implementation for Java of .NET, described in the following section. 
 
