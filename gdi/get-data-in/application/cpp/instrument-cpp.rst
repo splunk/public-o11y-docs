@@ -98,16 +98,22 @@ To start the tracer, add the following code to your main.cpp file. This code add
     namespace trace_api = opentelemetry::trace;
     namespace trace_sdk = opentelemetry::sdk::trace;
     namespace trace_exporter = opentelemetry::exporter::trace;
+    namespace otlp = opentelemetry::exporter::otlp;
 
     namespace {
         void InitTracer() {
-            auto exporter  = trace_exporter::OStreamSpanExporterFactory::Create();
-            auto processor = trace_sdk::SimpleSpanProcessorFactory::Create(std::move(exporter));
-            std::shared_ptr<opentelemetry::trace::TracerProvider> provider =
-            trace_sdk::TracerProviderFactory::Create(std::move(processor));
-            //set the global trace provider
+            trace_sdk::BatchSpanProcessorOptions bspOpts{};
+            // creates a new options object and sets the OTLP endpoint URL
+            otlp::OtlpHttpExporterOptions opts;
+            opts.url = "http://localhost:4318/v1/traces";
+
+            // pass the options object as an argument for the exporter creator
+            auto exporter = otlp::OtlpHttpExporterFactory::Create(opts);
+            auto processor = trace_sdk::BatchSpanProcessorFactory::Create(std::move(exporter), bspOpts);
+            std::shared_ptr<trace_api::TracerProvider> provider = trace_sdk::TracerProviderFactory::Create(std::move(processor));
             trace_api::Provider::SetTracerProvider(provider);
         }
+
         void CleanupTracer() {
             std::shared_ptr<opentelemetry::trace::TracerProvider> none;
             trace_api::Provider::SetTracerProvider(none);
@@ -156,38 +162,15 @@ Send data directly to Splunk Observability Cloud
 
 By default, all data goes to the local instance of the Splunk Distribution of OpenTelemetry Collector. 
 
-If you need to send data directly to Splunk Observability Cloud, follow these steps:
+If you need to send data directly to Splunk Observability Cloud set the following environment variables:
 
-#. Rebuild the OpenTelemetry C++ client and include the ``-DWITH_OTLP_GRPC=ON`` flag.
-#. Configure the exporter to send data to an OTLP endpoint in your ``main.cpp`` code. For example:
+.. code-block:: bash
 
-   .. code-block:: cpp
+    OTEL_EXPORTER_OTLP_PROTOCOL=grpc
+    OTEL_EXPORTER_OTLP_TRACES_HEADERS=x-sf-token=<access_token>
+    OTEL_EXPORTER_OTLP_ENDPOINT=https://ingest.<realm>.signalfx.com
 
-        namespace otlp = opentelemetry::exporter::otlp;
-
-        void InitTracer()
-        {
-            trace_sdk::BatchSpanProcessorOptions bspOpts{};
-            // creates a new options object and sets the OTLP endpoint URL
-            otlp::OtlpHttpExporterOptions opts;
-            opts.url = "http://localhost:4318/v1/traces";
-
-            // pass the options object as an argument for the exporter creator
-            auto exporter = otlp::OtlpHttpExporterFactory::Create(opts);
-            auto processor = trace_sdk::BatchSpanProcessorFactory::Create(std::move(exporter), bspOpts);
-            std::shared_ptr<trace_api::TracerProvider> provider = trace_sdk::TracerProviderFactory::Create(std::move(processor));
-            trace_api::Provider::SetTracerProvider(provider);
-        }
-
-#. Set the following environment variables:
-
-    .. code-block:: bash
-
-        OTEL_EXPORTER_OTLP_PROTOCOL=grpc
-        OTEL_EXPORTER_OTLP_TRACES_HEADERS=x-sf-token=<access_token>
-        OTEL_EXPORTER_OTLP_ENDPOINT=https://ingest.<realm>.signalfx.com
-
-    Replace ``<realm>`` with your Splunk Observability Cloud realm and ``<access-token>`` with your Splunk Observability Cloud access token with ingest permissions.
+Replace ``<realm>`` with your Splunk Observability Cloud realm and ``<access-token>`` with your Splunk Observability Cloud access token with ingest permissions.
 
 To learn more about realms and access tokens, see :ref:`admin-org-tokens`.
 
