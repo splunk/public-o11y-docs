@@ -52,7 +52,7 @@ These are the valid values for events:
 
 * Maximum length of the dimension key name of an event: 128 characters.
 
-  * For example, if a dimension's key:value pair is ("mydim", "myvalue"), ''mydim'' is limited to 256 characters. 
+  * For example, if a dimension's key:value pair is ("mydim", "myvalue"), ''mydim'' is limited to 128 characters. 
   * If the value length is longer, then the event is dropped.
 
 * Maximum length of the dimension value of an event: 256 characters.
@@ -66,7 +66,7 @@ These are the valid values for events:
 
 * Maximum length of the property key name of an event: 128 characters.
 
-  * For example, if a property's key:value pair is ("myproperty", "myvalue"), "myproperty" is limited to 256 characters. 
+  * For example, if a property's key:value pair is ("myproperty", "myvalue"), "myproperty" is limited to 128 characters. 
   * If the value length is longer, then the event is dropped.
 
 * Maximum length of the property value of an event: 256 characters.
