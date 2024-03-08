@@ -26,7 +26,7 @@ In the second part of the onboarding phase you get familiar with important conce
 Get familiar with OpenTelemetry concepts 
 ==========================================================
 
-It is important that you understand the concepts of the OpenTelemetry Collector. Pay special attention to configuration of receivers, processors, exporters, and connectors since most OpenTelemetry configurations have each of these pipeline components. 
+Spend some time to understand the concepts of the OpenTelemetry Collector. Pay special attention to configuration of receivers, processors, exporters, and connectors since most OpenTelemetry configurations have each of these pipeline components. 
 
 See :new-page:`https://opentelemetry.io/docs/collector/` and :new-page:`https://opentelemetry.io/docs/collector/configuration/`.
 
