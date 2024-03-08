@@ -125,7 +125,13 @@ You can create a global data link that passes information about an APM service, 
 
 For example, you can specify a custom URL like this to transfer the context of a service to a URL: :code:`https://www.example.com/search/?field={{key}}&value={{value}}&service={{properties.sf_service}}&st={{start_time}}&et={{end_time}}`.
 
-For parameters that you can use to transfer context in custom URLs, see :ref:`apm-data-links-parameters`. For detailed steps for creating global data links to a custom URL, see :ref:`link-metadata-to-content`.
+Learn more
+---------------
+
+* For detailed steps for creating global data links to a custom URL, see :ref:`link-metadata-to-content`.
+* See an :ref:`example-global-data-link-config`.
+* For parameters that you can use to transfer context in custom URLs, see :ref:`apm-data-links-parameters`. 
+
 
 .. _apm-data-link-inferred-service:
 
