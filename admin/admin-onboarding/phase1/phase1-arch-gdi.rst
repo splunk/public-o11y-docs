@@ -123,7 +123,7 @@ To send traces to Splunk APM, you need to deploy an auto instrumentation agent a
 
 You can also use the Zero Config auto instrumentation implementation for Java of .NET, described in the following section. 
 
-Focus on auto instrumentation and confirm that the existing setup allows spans and traces to be captured by the OpenTelemetry agent and forwarded successfully to Splunk Observability Cloud. Once this is completed, traces and spans show in the Splunk APM according to services provided.   
+Focus on autoinstrumentation and confirm that the existing setup allows spans and traces to be captured by the OpenTelemetry agent and forwarded successfully to Splunk Observability Cloud. After this is completed, traces and spans show in the Splunk APM according to services provided.   
 
 .. _phase1-zero-config:
 
