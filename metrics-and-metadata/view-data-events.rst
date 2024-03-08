@@ -38,19 +38,41 @@ By reusing event types, you can add an event type to a chart, then view all even
 Valid values for events
 -----------------------------
 
-Event values must meet certain criteria. Invalid payloads are dropped, and you can track them with org metrics such as ``sf.org.numEventsDroppedInvalidByToken``. 
+Event values must meet certain criteria. Invalid payloads are dropped, and you can track them with org metrics such as ``sf.org.numEventsDroppedInvalidByToken``. See more at :ref:`org-metrics`.
 
 These are the valid values for events:
 
-* Maximum dimension value length: 256 characters
-* Maximum length of the dimension key data point: 36 characters
-* Maximum number of dimensions of an event: 36
-* Maximum length of the dimension key: 128 characters 
-* Maximum length of the dimension value: 256 characters
-* Maximum amount of properties allowed per event: 1024
-* Maximum length of a the dimension key value: 128 characters
-* Total tag annotation data size: 131,072
-* Maximum size of the span name: 1024 characters
+* Maximum length of the event type (or event name): 256 characters.
+
+  * If the value length is longer, then the event is dropped.
+
+* Maximum number of dimensions allowed for an event: 36.
+
+  * If the number of dimensions on an event is greater, the event is dropped.
+
+* Maximum length of the dimension key name of an event: 128 characters.
+
+  * For example, if a dimension's key:value pair is ("mydim", "myvalue"), ''mydim'' is limited to 256 characters. 
+  * If the value length is longer, then the event is dropped.
+
+* Maximum length of the dimension value of an event: 256 characters.
+
+  * For example, if a dimension's key:value pair is ("mydim", "myvalue"), ''myvalue'' is limited to 256 characters. 
+  * If the value length is longer, then the event is dropped.
+
+* Maximum number of properties allowed for an event: 1024.
+
+  * If the number of properties on an event is greater, the event is dropped.
+
+* Maximum length of the property key name of an event: 128 characters.
+
+  * For example, if a property's key:value pair is ("myproperty", "myvalue"), "myproperty" is limited to 256 characters. 
+  * If the value length is longer, then the event is dropped.
+
+* Maximum length of the property value of an event: 256 characters.
+
+  * For example, if a property's key:value pair is ("myproperty", "myvalue"), ''myvalue'' is limited to 256 characters. 
+  * If the value length is longer, then the event is dropped.
 
 .. _custom-event:
 

@@ -60,7 +60,9 @@ Read more on metrics in :ref:`get-started-metrics`.
 Use descriptive names 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Metric names can have up to 256 characters. Use names that help you identify what the metric is related to. 
+Metric names can have up to 256 characters. If the value is longer, the metric might be dropped.
+
+Use names that help you identify what the metric is related to. 
 
 .. list-table::
   :widths: 25 25 
@@ -121,20 +123,26 @@ Dimensions are arbitrary key-value pairs you associate with metrics. While metri
 
 Dimensions can be numeric or nonnumeric. Some dimensions, such as host name and value, come from a system you're monitoring. You can also create your own dimensions. 
 
-Dimension name requirements
+Dimension key and value requirements
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Dimension names have the following requirements:
+Dimension key names are UTF-8 strings with a maximum length of 128 characters (512 bytes).
 
-* UTF-8 string, maximum length of 128 characters (512 bytes).
-* Dimension values can have a maximum length of 256 characters.
+* For example, if a dimension's key:value pair is ("mydim", "myvalue"), ''mydim'' is limited to 256 characters. 
 * Must start with an uppercase or lowercase letter. The rest of the name can contain letters, numbers, underscores (_) and hyphens (-), and periods (.).
 * Must not start with the underscore character (_).
 * Must not start with the prefix :code:`sf_`, except for dimensions defined by Observability Cloud such as :code:`sf_hires`.
 * Must not start with the prefix :code:`aws_`, :code:`gcp_`, or :code:`azure_`.
-*  Dimension values are UTF-8 strings with a maximum length of 256 UTF-8 characters (1024 bytes). Numbers are represented as numeric strings.
-* You can have up to 36 dimensions per MTS. If this limit is exceeded, the data point is dropped, and a message is logged.
-* To ensure readability, keep names and values to 40 characters or less.
+
+Dimension values are UTF-8 strings with a maximum length of 256 UTF-8 characters (1024 bytes). 
+
+* For example, if a dimension's key:value pair is ("mydim", "myvalue"), ''myvalue'' is limited to 256 characters. 
+* If the value is longer, then the datapoint might be dropped.
+* Numbers are represented as numeric strings.
+
+You can have up to 36 dimensions per MTS. If this limit is exceeded, the data point is dropped, and a message is logged.
+
+To ensure readability, keep names and values to 40 characters or less.
 
 For example:
 
