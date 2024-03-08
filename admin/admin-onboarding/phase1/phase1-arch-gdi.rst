@@ -101,7 +101,7 @@ Before installing the OpenTelemetry Collector on a host, verify the resource det
 Collect data from third-party metrics providers
 ==========================================================
 
-When using the Splunk Distribution of OpenTelemetry Collector you can receivers to collect metrics data from third-party providers. For example, the Prometheus receiver can scrape metrics data from any application that exposes a Prometheus endpoint. See :ref:`prometheus-receiver`.
+When using the Splunk Distribution of OpenTelemetry Collector you can use receivers to collect metrics data from third-party providers. For example, the Prometheus receiver can scrape metrics data from any application that exposes a Prometheus endpoint. See :ref:`prometheus-receiver`.
 
 See :ref:`monitor-data-sources` to see a list of receivers.
 
