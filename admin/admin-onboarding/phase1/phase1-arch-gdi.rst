@@ -63,7 +63,7 @@ Analyze your required network communication
 
 Analyze your required network communication. This includes determining what talks to what, which ports need to be open, what protocols to use, and proxy considerations. 
 
-See :ref:`otel-exposed-endpoints` to determine which ports need to open in the firewall and what protocols need to be enabled or disabled in the OTel collector. 
+See :ref:`otel-exposed-endpoints` to determine which ports need to open in the firewall and what protocols need to be turned on or off in the Collector. 
 
 If a proxy is required by your organization, see :ref:`allow-services`.
 
