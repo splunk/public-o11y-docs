@@ -1,7 +1,7 @@
 .. _phase2-im:
 
 
-Pilot phase part 2: Initial pilot rollout for Splunk Infrastructure Monitoring
+Pilot part 2: Initial pilot rollout for Splunk Infrastructure Monitoring
 ********************************************************************************
 
 

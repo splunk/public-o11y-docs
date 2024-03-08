@@ -1,6 +1,6 @@
 .. _phase2-apm:
 
-Pilot phase part 2: Initial pilot rollout for Splunk Application Performance Monitoring
+Pilot part 2: Initial pilot rollout for Splunk Application Performance Monitoring
 *****************************************************************************************
 
 As with the Splunk Infrastructure Monitoring section, during this second part of the journey the focus is to bring into the system initial launching APM teams with a lot of microservices or connections to many services.

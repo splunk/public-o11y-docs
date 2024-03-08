@@ -1,6 +1,6 @@
 .. _phase1-team-user-admin:
 
-Onboarding phase part 1: Configure your user and team administration
+Onboarding part 1: Configure your user and team administration
 **********************************************************************
 
 .. meta::

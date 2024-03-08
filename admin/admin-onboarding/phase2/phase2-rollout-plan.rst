@@ -1,6 +1,6 @@
 .. _phase2-rollout-plan:
 
-Pilot phase part 1: Plan your rollout
+Pilot part 1: Plan your rollout
 ****************************************************************
 
 .. _naming_conventions:

@@ -2,7 +2,7 @@
 
 
 
-Expansion and optimization phase part 2: Splunk Application Performance Monitoring
+Expansion and optimization part 2: Splunk Application Performance Monitoring
 *************************************************************************************
 
 To expand and optimize Splunk Infrastructure Monitoring, you must do the following:

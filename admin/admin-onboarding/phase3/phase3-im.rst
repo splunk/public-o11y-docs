@@ -1,7 +1,7 @@
 .. _phase3-im:
 
 
-Expansion and optimization phase part 1: Splunk Infrastructure Monitoring
+Expansion and optimization part 1: Splunk Infrastructure Monitoring
 *******************************************************************************
 
 To expand and optimize Splunk Infrastructure Monitoring, you must do the following:

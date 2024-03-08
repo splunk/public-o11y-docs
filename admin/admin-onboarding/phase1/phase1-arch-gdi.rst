@@ -1,6 +1,6 @@
 .. _phase1-arch-gdi:
 
-Onboarding phase part 2: Design your architecture and get data in
+Onboarding part 2: Design your architecture and get data in
 *********************************************************************
 
 In the second part of the onboarding phase you get familiar with important concepts, gather requirements, and begin integrating Splunk Observability Cloud into your existing environment.
@@ -28,7 +28,7 @@ Get familiar with OpenTelemetry concepts
 
 Spend some time to understand the concepts of the OpenTelemetry Collector. Pay special attention to configuration of receivers, processors, exporters, and connectors since most OpenTelemetry configurations have each of these pipeline components. 
 
-See :new-page:`https://opentelemetry.io/docs/collector/` and :new-page:`https://opentelemetry.io/docs/collector/configuration/`.
+See :new-page:`https://opentelemetry.io/docs/concepts/`.
 
 .. _phase1-arch-proto:
 
@@ -52,7 +52,7 @@ To create an initial architecture solution for Splunk Observability Cloud in you
 5. Select at least one application or service to collect metrics from as part of your prototype. This helps you see how the corresponding dashboards and detectors are created when your metrics are received by Splunk Observability Cloud. Some example services to include as a prototype are an Nginx server, an Apache web server, or a database such as MySQL using OpenTelemetry receivers. 
 
    See :ref:`nginx`, :ref:`apache-httpserver`, and, :ref:`mysql`.
-6. Get familiar with the Splunk Observability Cloud platform receivers for various applications and services. Each receiver has corresponding dashboards and detectors that are automatically created for each integration once the receiver reaches more than 50,000 datapoints. 
+6. Get familiar with the Splunk Observability Cloud receivers for various applications and services. Each receiver has corresponding dashboards and detectors that are automatically created for each integration once the receiver reaches more than 50,000 datapoints. 
 
    See :ref:`monitor-data-sources`, :ref:`built-in-dashboards`, and :ref:`autodetect`.
 
@@ -65,7 +65,7 @@ Analyze your required network communication. This includes determining what talk
 
 See :ref:`otel-exposed-endpoints` to determine which ports need to open in the firewall and what protocols need to be turned on or off in the Collector. 
 
-If a proxy is required by your organization, see :ref:`allow-services`.
+If your organization requires a proxy, see :ref:`allow-services`.
 
 .. _phase1-metrics:
 
@@ -76,8 +76,8 @@ To ingest data from cloud providers, such as, AWS, Azure, or GCP, you need to se
 
 To monitor a cloud-based host, install the Splunk OTel collector on each host to send host metrics to Splunk Observability Cloud. You can limit the host metrics you send by excluding specific metrics that you do not need to monitor from consumed from the cloud provider. Excluding metrics from being consumed offers the following advantages:
 
-* Controls which host is monitored, instead of all hosts
-* Retrieves advanced metrics without incurring extra cost
+* Controls which host is monitored, instead of all hosts.
+* Retrieves advanced metrics without incurring extra cost.
 * Allows you to send metrics at a higher frequency without incurring extra cost, such as every 10 seconds (default), instead of every 5 minutes or more, which is the typical default for cloud providers. 
 
 See :ref:`get-started-connect` and :ref:`otel_deployments`.
@@ -116,7 +116,7 @@ Familiarize yourself with the key concepts of Splunk APM, such as the OpenTeleme
 
 .. _phase1-auto-instrument:
 
-Add an auto-instrumentation library to a service to send traces to Splunk APM
+Add an auto instrumentation library to a service to send traces to Splunk APM
 ==================================================================================
 
 To send traces to Splunk APM, you need to deploy an autoinstrumentation agent for each programming language or language runtime. See :ref:`instrument-applications`.
