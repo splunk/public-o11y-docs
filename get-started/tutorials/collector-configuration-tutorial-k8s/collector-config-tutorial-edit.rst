@@ -1,142 +1,153 @@
 .. _collector-config-tutorial-edit-k8s:
 
 ***********************************************************************
-Part 2: Edit the configuration to filter and send logs to Splunk Cloud
+Part 2: Edit the configuration to filter and send logs to Splunk
 ***********************************************************************
 
-You edit the Collector configuration when you need to add new components, functionalities, or settings. For example, the Splunk Distribution of OpenTelemetry Collector includes configured :ref:`otel-components` that collect metrics and prepare the Collector to export data to Splunk Observability Cloud.
+Now that you've installed the Splunk Distribution of OpenTelemetry Collector in your local Kubernetes cluster, you can edit the default configuration to modify or extend the capabilities of the Collector, for example by adding different :ref:`otel-components` or by editing existing settings.
 
-In the following steps, you're going to edit the Collector configuration using the Helm chart to filter logs and send them to Splunk Cloud Platform. The components you're going to add are the following:
+In the following steps, you're going to edit the configuration of the Collector using several YAML files and Helm. At the end of this part of the tutorial, you'll be able to:
 
-- :ref:`syslog-receiver` to collect logs over TCP.
-- :ref:`filter-processor` to filter logs from your pods.
+1. Activate logs collection using :ref:`filelog-receiver` and the OpenTelemetry protocol (OTLP).
+2. Filter logs using :ref:`filter-processor`.
+3. Export the filtered logs to Splunk Cloud Platform.
 
-Locate the default configuration file
+
+Examine the default values.yaml file
 =======================================
 
-helm install --set="splunkObservability.accessToken=n79JFIhE1X22WUM61yUn5Q,clusterName=splunkTutorial,splunkObservability.realm=us0,gateway.enabled=false,splunkPlatform.endpoint=https://http-inputs-splunktutorial.splunkcloud.com: 443/services/collector/event,splunkPlatform.token=hectoken,splunkObservability.profilingEnabled=true,environment=splunkTutorial" --generate-name splunk-otel-collector-chart/splunk-otel-collector
+By default, the Helm chart for the Splunk Distribution of OpenTelemetry Collector deploys the Collector with predefined settings. All possible settings are documented in the values.yaml file. To modify the configuration, you either override existing settings or add new settings using YAML files or command-line arguments.
+
+:new-page:`Download the default values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` file and open it using your favorite code or text editor. Take a moment to scroll through the values.yaml file and examine its structure.
 
 
-Using your favorite code or text editor, open the agent_config.yaml file in ``/etc/otel/collector``. As in Part 1 you deployed the Collector in host monitoring (agent) mode, this is the configuration file you need to edit.
+Configure the Splunk HEC endpoint and token
+============================================
 
-Take a moment to scroll through the configuration file. Notice that the agent configuration included in the Splunk distribution already contains several essential components, such as the host metrics receiver and the HEC exporter.
+The Splunk OpenTelemetry Collector for Kubernetes collects logs by default. To send the logs to Splunk Cloud Platform, you need to add the Splunk HEC endpoint and token to the configuration. See :ref:`hec-endpoints`.
 
-Add the syslog receiver
-======================================
+1. Create a new YAML file, for example, hec.yaml.
 
-Next, add the :ref:`syslog-receiver`. Open the configuration file and add ``syslog:`` inside the ``receivers`` section:
+2. Open the hec.yaml file in a code or text editor.
+
+3. Paste the following snippet:
+
+   .. code-block:: yaml
+
+      splunkPlatform:
+        endpoint: "<your_hec_endpoint>"
+        token: "<your_hec_token>"
+
+4. Optionally, set a different ``index`` if you're using a different index for this tutorial:
+
+   .. code-block:: yaml
+
+      splunkPlatform:
+        endpoint: "<your_hec_endpoint>"
+        token: "<your_hec_token>"
+        index: "<your_index>"
+
+5. Save the file.
+
+
+Create a filter processor configuration
+==========================================
+
+Create a new file called filter.yaml next to the hec.yaml file you've created in the previous step.
+
+Open the file in your code or text editor and add the following snippet:
 
 .. code-block:: yaml
 
-   receivers:
-     syslog:
+   agent:
+     config:
+       processors:
+         filter/exclude_logs_from_pod:
+           logs:
+             exclude:
+               match_type: regexp
+               resource_attributes:
+                 - key: k8s.pod.name
+                   value: '^(podNameX)$'
+         filter/exclude_logs_from_node:
+           logs:
+             exclude:
+               match_type: regexp
+               resource_attributes:
+                 - key: k8s.node.name
+                   value: '^(nodeNameX)$'
+       service:
+         pipelines:
+           logs:
+             processors:
+               - memory_limiter
+               - k8sattributes
+               - filter/logs
+               - batch
+               - resourcedetection
+               - resource
+               - resource/logs
+               - filter/exclude_logs_from_pod
+               - filter/exclude_logs_from_node
 
-Adding an empty entry like in the previous example is sometimes enough to get started, as components often use default values. In the case of the syslog receiver, you might need to define an address and a protocol:
+The previous snippet instructs Helm to add filter processor settings to the agent configuration and add them to the logs pipeline together with the default processors. The filters exclude logs from matching pods and nodes.
 
-.. code-block:: yaml
-
-   receivers:
-     syslog:
-       tcp:
-         listen_address: "0.0.0.0:54526"
-       protocol: rfc5424
-
-After you've added the ``syslog`` receiver, make sure to add it to the receivers's list under ``service.pipelines``. In this case, the pipeline type is ``logs``, as syslog collect logs:
-
-.. code-block:: yaml
-   :emphasize-lines: 8
-
-   service:
-     pipelines:
-     #
-     # Other pipelines
-     #
-       logs:
-         # Add syslog at the end of the list
-         receivers: [fluentforward, otlp, syslog]
-         processors:
-         - memory_limiter
-         - batch
-         - resourcedetection
-         exporters: [splunk_hec, splunk_hec/profiling]
-
-Save the agent_config.yaml configuration file and continue to the next step.
+Save the filter.yaml configuration file and continue to the next step.
 
 
-Add the filter processor
-====================================
+Apply the new configuration
+=====================================
 
-Now that you've configured the Collector to receive syslog logs, you're going to add the filter processor to exclude all syslog messages with severity level 5 (informational), so that you only export more severe logs.
+To apply the configuration to the Collector running on your Kubernetes cluster, run the following command from the directory that contains the YAML files:
 
-An example of logs that you want to filter is the following:
+.. code-block:: bash
+
+   helm upgrade --reuse-values -f ./filter.yaml -f ./values.yaml splunk-otel-collector-1709226095 splunk-otel-collector-chart/splunk-otel-collector --set="splunkPlatform.insecureSkipVerify=true"
+
+Use the Tab key to autocomplete the file names, the release, and the chart you installed in part 1. Notice the following about the command:
+
+- ``--reuse-values`` ensures that the Collector only updates the settings you provide.
+- ``splunkPlatform.insecureSkipVerify=true`` turns off SSL, as Splunk Cloud Platform free trials don't support it.
+- ``--set`` is a way of defining settings through the command line. You can use this method as an alternative to passing YAML files.
+
+.. caution:: Don't set ``insecureSkipVerify`` to ``true`` in production environments, as it might compromise the security of your data. In this tutorial, you need to turn off SSL because trial stacks don't support it.
+
+After upgrading the configuration, Helm shows messages similar to the following:
 
 .. code-block:: text
 
-   *Apr 29 03:02:42: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to down
+   Release "splunk-otel-collector-1709226095" has been upgraded. Happy Helming!
+   NAME: splunk-otel-collector-1709226095
+   LAST DEPLOYED: Thu Mar  7 19:23:30 2024
+   NAMESPACE: default
+   STATUS: deployed
+   REVISION: 3
+   TEST SUITE: None
+   NOTES:
+   Splunk OpenTelemetry Collector is installed and configured to send data to Splunk Platform endpoint "https://<your-splunk-cloud-trial-stack>.splunkcloud.com:8088/services/collector".
 
-In the agent_config.yaml file, locate the ``processors`` section and add the :ref:`filter-processor`. The following snippet filters logs to exclude all messages with severity level 5 or lower:
+   Splunk OpenTelemetry Collector is installed and configured to send data to Splunk Observability realm us0.
 
-.. code-block:: yaml
+If you need to restart your local cluster, run ``minikube stop`` followed by ``minikube start``.
 
-      processors:
-        filter/severity_text:
-          logs:
-            exclude:
-              match_type: regexp
-                severity_texts:
-                - -[5-7]-
+Check that logs are getting to Splunk Cloud
+==================================================
 
-The filter processor supports multiple filter operations using regular expressions and the :new-page:`OpenTelemetry Transformation Language (OTTL) <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/pkg/ottl/README.md>`. When configuring a processor for the first time, take some time to read its documentation.
+Open your Splunk Cloud Platform trial and go to :guilabel:`Search & Reporting`. Enter ``index="main"`` and press Enter to see the logs coming from your local Kubernetes cluster.
 
-The last step requires adding the filter processor to the same logs pipeline that requires processing:
-
-.. code-block:: yaml
-   :emphasize-lines: 13
-
-   service:
-     pipelines:
-     #
-     # Other pipelines
-     #
-       logs:
-         # Add syslog at the end of the list
-         receivers: [fluentforward, otlp, syslog]
-         processors:
-         - memory_limiter
-         - batch
-         - resourcedetection
-         - filter/severity_text
-         exporters: [splunk_hec, splunk_hec/profiling]
-
-
-Save the agent_config.yaml configuration file and continue to the next step.
-
-
-Restart the Collector
-=====================================
-
-To apply the configuration to the Collector running on your Linux machine, restart the Collector service:
-
-.. code-block:: yaml
-
-   sudo systemctl restart splunk-otel-collector
-
-This ensures that the Collector reads the new settings and behaves accordingly.
-
-
-Next step
-=====================================
-
-This completes the second part of the tutorial.
-
-To learn how to troubleshoot common Collector configuration issues continue to :ref:`collector-config-tutorial-troubleshoot`.
+.. image:: /_images/get-started/logs-cloud.png
+      :width: 90%
+      :alt: Kubernetes logs sent to Splunk Cloud
 
 
 Learn more
-========================================
+====================================
 
-To learn more about the Collector install and components, see the following resources:
+This completes the tutorial.
 
-- :ref:`otel-intro`
-- :ref:`otel-install-linux`
+To learn more about the Collector installation and components, see the following resources:
+
+- :ref:`otel-install-k8s`
+- :ref:`otel-kubernetes-config`
+- :ref:`splunk-hec-exporter`
 
