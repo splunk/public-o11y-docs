@@ -88,7 +88,7 @@ See :ref:`get-started-connect` and :ref:`otel_deployments`.
 Configure and implement host and Kubernetes metrics
 ==========================================================
 
-The OpenTelemetry Collector automatically reads and detects different types of host or Kubernetes metadata from the OS or from the cloud providers. See :ref:`host-metrics-receiver` or :ref:`otel-kubernetes-config` for more information about host or Kubernetes metadata. 
+The OpenTelemetry Collector automatically reads and detects different types of host or Kubernetes metadata from operating systems or from the cloud providers. See :ref:`host-metrics-receiver` or :ref:`otel-kubernetes-config` for more information about host or Kubernetes metadata. 
 
 The OpenTelemetry Collector adds dimensions, metric tags, and span attributes or tags. The most common metadata entry is the name of the host, which can come from different sources with different names. See :ref:`metrics-dimensions-mts` for details on the metadata the collector adds. 
 
