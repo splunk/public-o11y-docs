@@ -6,7 +6,7 @@ Onboarding part 1: Configure your user and team administration
 .. meta::
     :description: 
 
-In the first part of the onboarding phase you make foundational decisions about your organization in Splunk Observability Cloud, including, user access management, team structure, and token management. 
+In the first part of the onboarding phase you make foundational decisions about your organization in Splunk Observability Cloud, including, user access management, team structure, and token management. TEST
 
 #. :ref:`phase1-create-trial`
 #. :ref:`phase1-user-access`
