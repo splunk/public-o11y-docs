@@ -1,6 +1,6 @@
 .. _phase3:
 
-Admin onboarding guide phase 3: Expansion and optimization phase
+Admin onboarding guide phase 3: Expansion and optimization
 *******************************************************************************
 
 .. toctree::

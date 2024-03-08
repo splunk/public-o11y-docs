@@ -1,6 +1,6 @@
 .. _phase1:
 
-Admin onboarding guide phase 1: Onboarding phase
+Admin onboarding guide phase 1: Onboarding 
 ****************************************************************
 
 .. meta::
