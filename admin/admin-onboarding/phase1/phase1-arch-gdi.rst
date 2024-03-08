@@ -112,7 +112,7 @@ Get familiar with Splunk APM and its concepts
 
 Splunk APM provides end-to-end visibility to help identify issues such as errors and latency across all tags of a service. Splunk APM produces infinite cardinality metrics and full-fidelity traces. Splunk APM also measures RED (Request, Error, Duration) metrics. See :ref:`apm-orientation`.
 
-Familiarize yourself with the key concepts of Splunk APM as Splunk APM is utilizes the OpenTelemetry standard for Application Performance Monitoring. See :ref:`apm-key-concepts`.
+Familiarize yourself with the key concepts of Splunk APM, such as the OpenTelemetry standard for Application Performance Monitoring. See :ref:`apm-key-concepts`.
 
 .. _phase1-auto-instrument:
 
