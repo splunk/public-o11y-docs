@@ -422,20 +422,20 @@ For more information on these properties, including acceptable values and constr
       - aws_root_device_type
       - Type of root device that the instance uses
 
-
 .. _cloudwatch-ec2-optimization-data:
 
-Amazon EC2 metadata for AWS Optimizer
+Splunk Observability Cloud's Optimizer for AWS EC2 Cost & Usage
 -------------------------------------------------------------------
 
-Infrastructure Monitoring AWS Optimizer helps you find cost-saving opportunities and underutilized investments in EC2. AWS Optimizer shows you usage patterns and cost attribution by InstanceType, AWS Region, and AWS Availability Zone. AWS Optimizer also shows you categories specific to your setup, such as Service, Team, and all other dimensions that come from EC2 instance tags.
+Splunk Observability Cloud's Optimizer for AWS EC2 cost & usage gives you actionable insight into cost-saving opportunities, underutilized investments, usage patterns, and cost attribution.
 
-AWS Optimizer generates metrics from usage and cost data imported by calls to the AWS API. These generated metrics let you visualize and analyze EC2 usage and costs, as shown in built-in dashboards. You can also create detectors based on AWS Optimizer metrics. These detectors send real-time alerts for unexpected changes in cost or usage patterns.
+Splunk Observability Cloud retrieves cost and usage data from AWS and derives metrics with which you can visualize EC2 usage and approximated costs by InstanceType, AWS Region, AWS availability zone, and categories specific to your setup, such as Service, Team, or any other dimensions that are sourced from EC2 instance tags. You can also create detectors based on this data, so you can get alerted in real-time on unexpected changes in cost or usage patterns.
 
-* To learn more about visualizing and analyzing the metrics, see :ref:`built-in-dashboards`.
-* To learn more about creating detectors, see :ref:`create-detectors`.
+Optimizer for AWS EC2 cost & usage does not include AWS Billing data and data for EC2 Spot Instances.
 
-To import the usage and cost data, make sure the following lines are in your AWS Policy Document. To learn how to view and modify your AWS Policy Document, see :ref:`get-started-aws`:
+If you have multiple AWS Accounts, you must include them all in your Splunk Observability Cloud AWS integration and have “EC2 cost and usage data” option selected as an imported data type. If this is not the case, the generated metrics will not reflect accurate values.
+
+To import usage data, make sure the following lines are in your AWS Policy Document:
 
 .. code-block:: none
 
@@ -446,13 +446,8 @@ To import the usage and cost data, make sure the following lines are in your AWS
    "ec2:DescribeReservedInstancesModifications",
    "organizations:DescribeOrganization",
 
-
-Notes on using AWS Optimizer:
-
-* AWS Optimizer is only available in Splunk Observability Cloud Enterprise Edition.
-* The imported data does not include AWS billing data.
-* Infrastructure Monitoring doesn't import data or generate metrics for EC2 Spot Instances.
-* If you have multiple AWS accounts, you need to add a Infrastructure Monitoring AWS integration for each account, and each integration must have :strong:`Import data for AWS Optimizer` selected. If you don't set this option, your generated metrics might contain inaccurate values.
+* To learn more about visualizing and analyzing the metrics, see :ref:`built-in-dashboards`.
+* To learn more about creating detectors, see :ref:`create-detectors`.
 
 .. _cloudwatch-ecs-metadata:
 
