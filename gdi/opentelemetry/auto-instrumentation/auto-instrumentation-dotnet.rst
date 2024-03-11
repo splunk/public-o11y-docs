@@ -43,6 +43,6 @@ To install zero config for OpenTelemetry .NET, follow the instructions relevant 
 
    <h2>Learn more</h2>
 
-* Auto instrumentation sends trace data to Splunk APM. To learn more, see :ref:`wcidw-apm`
+* Auto instrumentation sends trace data to Splunk APM. To learn more, see :ref:`get-started-apm`
 * For more information about the Splunk Distribution of OpenTelemetry .NET, see :ref:`get-started-dotnet-otel`.
 * For information about performance, see :ref:`dotnet-otel-performance`.

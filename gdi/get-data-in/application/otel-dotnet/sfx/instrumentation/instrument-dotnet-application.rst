@@ -38,7 +38,7 @@ To generate all the basic installation commands for your environment and applica
 Install the SignalFx Instrumentation for .NET manually
 ==================================================================
 
-Follow these instructions to install the SignalFx Instrumentation for .NET:
+If you don't use the guided setup, follow these instructions to manually install the SignalFx Instrumentation for .NET:
 
 - :ref:`install-dotnet-instrumentation`
 - :ref:`instrument-windows-service`
@@ -246,7 +246,7 @@ To instrument an application or service in Azure App Service, follow these steps
       * - ``SIGNALFX_ACCESS_TOKEN``
         - Your Splunk access token. To obtain an access token, see :ref:`admin-api-access-tokens`.
       * - ``SIGNALFX_REALM``
-        - ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, open the navigation menu in Splunk Observability Cloud, select :menuselection:`Settings`, and select your username. The realm name appears in the :guilabel:`Organizations` section.
+        - ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
       * - ``SIGNALFX_SERVICE_NAME``
         - The name of your service or application.
       * - ``SIGNALFX_ENV``

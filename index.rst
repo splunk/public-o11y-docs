@@ -84,7 +84,7 @@ Monitor server and cluster metrics :ref:`wcidw-imm`
 .. rst-class:: newcard
 
 :strong:`Application Performance Monitoring`
-Monitor back-end app and service traces :ref:`wcidw-apm`
+Monitor back-end app and service traces :ref:`get-started-apm`
 
 .. rst-class:: newcard
 

@@ -23,13 +23,13 @@ To view your organization's APM subscription usage, go to :guilabel:`Settings` t
 How APM calculates usage
 ========================
 
-APM uses Splunk Observability Cloud metrics to calculate usage for traces analyzed per minute (TAPM) and host subscription plans. Entitlements for host subscription plans are based on the number of hosts and containers sending data to APM. Entitlements for TAPM subscription plans are based on the number of traces you send to APM per minute.
+APM uses Splunk Observability Cloud metrics to calculate usage for traces-analyzed-per-minute (TAPM) and host subscription plans. Entitlements for host subscription plans are based on the number of hosts and containers sending data to APM. Entitlements for TAPM subscription plans are based on the number of traces you send to APM per minute.
 
 As a result, the metrics for calculating usage depend on the subscription plan type. See the following sections for more information about how APM calculates usage for each subscription plan type. To confirm the plan for your organization, view the :guilabel:`Subscription` panel on the Subscription Usage page.
 
 To see all of the organization metrics for APM, see :ref:`Usage metrics for Splunk Observability Cloud <org-metrics>`.
 
-To see the usage charts and metrics for your subscription plan, go to :guilabel:`Settings > Subscription Usage` and select the :strong:`APM` tab. Depending on your org subscription model, this might be :guilabel:`Settings > Billing and Usage`. The following sections detail the metrics for TAPM and host subscription plans respectively.
+To see the usage charts and metrics for your subscription plan, go to :guilabel:`Settings` then  :guilabel:`Subscription Usage` and select the :strong:`APM` tab. Depending on your org subscription model, this might be :guilabel:`Settings` then :guilabel:`Billing and Usage`. The following sections detail the metrics for TAPM and host subscription plans respectively.
 
 .. _tapm_subscription_plans:
 
@@ -94,23 +94,11 @@ The following metrics power the charts in your APM Subscription Usage page with 
 How APM calculates usage 
 ==========================
 
-APM provides a value for each usage metric the system collects for each subscription usage period. The billed value is the higher of these metric values:
-
-- The average per-minute usage throughout the usage period.
-
-- 50% of the peak usage for the usage period.
+APM provides a value for each usage metric the system collects for each subscription usage period. The billed value is the average per-minute usage throughout the usage period.
 
 Every chart on the APM Billing and Usage page plots these metrics so you can monitor the billed value for each metric.
 
-The detailed usage report for each usage period provides the billed value for each usage metric. The following example illustrates how the billed value is based on the higher value of the usage metrics for a usage period:
-
-.. code-block:: none
-
-   # The billed TAPM value for this month is: 47064
-
-   # The average TAPM value for this month is: 31516
-
-   # The halfpeak TAPM value for this month is: 47064
+The detailed usage report for each usage period provides the billed value for each usage metric.
 
 For more information about APM usage reports, see :ref:`view-apm-billing-reports`.
 

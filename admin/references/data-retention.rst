@@ -25,8 +25,8 @@ The following table shows the retention time period for each data type in Infras
      - :strong:`Retention`
    * - 1 to 60-second resolution
      - 
-       * Standard contract: 8 days
-       * Enterprise contract: 3 months 
+       * Standard license edition: 8 days
+       * Enterprise license edition: 3 months 
    * - 1 minute resolution and more (one-minute roll-ups)
      - 
        * 13 months
@@ -110,8 +110,8 @@ The following table shows the retention time period for each data type in Splunk
      - :strong:`Retention`
    * - Run results  
      - 
-       * Standard contract: 8 days
-       * Enterprise contract: 3 months 
+       * Standard license edition: 8 days
+       * Enterprise license edition: 3 months 
    * - Metric data 
      - 
        * 13 months for both Standard and Enterprise.

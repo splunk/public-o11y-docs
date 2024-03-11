@@ -69,13 +69,7 @@ If you can't find telemetry for your iOS app in Splunk RUM, try the following:
    * The RUM token must be active and part of the org you are trying to send data to.
    * The realm must be the same as your organization's realm.
 
-To find the realm name of your account, follow these steps: 
-
-1. Open the navigation menu in Splunk Observability Cloud.
-2. Select :menuselection:`Settings`.
-3. Select your username. 
-
-The realm name appears in the :guilabel:`Organizations` section.
+To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
 If you've defined a custom ``beaconUrl``, make sure the value is correct.
 
