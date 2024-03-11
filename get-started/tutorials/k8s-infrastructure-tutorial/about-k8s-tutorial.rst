@@ -2,7 +2,7 @@
 .. _about-k8s-tutorial:
 
 *****************************************************************************************
-Tutorial: monitor your Kubernetes environment in Splunk Observability Cloud
+Tutorial: Monitor your Kubernetes environment in Splunk Observability Cloud
 *****************************************************************************************
 
 .. meta::

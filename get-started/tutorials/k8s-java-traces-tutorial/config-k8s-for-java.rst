@@ -30,7 +30,7 @@ Configure the values.yaml file for the Helm Chart
 Now, you need to configure Helm to correctly install the Splunk Distribution of OpenTelemetry Collector: 
 
 #. Create a new directory called :guilabel:`spring-petclinic-app` to store the files for Helm. 
-#. In the spring-petlcinic-app directory, create a file called :guilabel:`values.yaml`. This file stores keys and values that configure the Splunk Distribution of OpenTelemetry Collector through the Helm Chart. 
+#. In the spring-petclinic-app directory, create a file called :guilabel:`values.yaml`. This file stores keys and values that configure the Splunk Distribution of OpenTelemetry Collector through the Helm Chart. 
 #. Using the following table, add keys and values to values.yaml:
 
     .. list-table::
