@@ -37,7 +37,7 @@ In DripStat
 
 You can now manage the integration from the previous Integration tab.
 
-    .. image:: /_images/spoc/dripstat6.png
+    .. image:: /_images/spoc/drip6.png
        :width: 100%
        :alt: Connected Integration window.
 

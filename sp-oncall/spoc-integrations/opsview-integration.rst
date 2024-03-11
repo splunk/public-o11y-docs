@@ -5,8 +5,7 @@ VividCortex integration for Splunk On-Call
 ************************************************************************
 
 .. meta::
-   :description: The Splunk On-Call and Opsview integration will allow you to use VictorOps as
-a “Notification Method” for all your alerting needs.
+   :description: The Splunk On-Call and Opsview integration will allow you to use Splunk On-Call as a “Notification Method” for all your alerting needs.
 
 
 The Splunk On-Call and Opsview integration will allow you to use Splunk On-Call as a Notification Method for all your alerting needs. The following is a quick walkthrough of how to set up the Opsview integration with Splunk On-Call:
@@ -30,26 +29,25 @@ In Splunk On-Call
 In Opsview
 ===================
 
-From the main Dashboard select **settings** then **Notifications
-Methods.**
+#. From the main dashboard, select :guilabel:`Settings`, then :guilabel:`Notification Methods`.
 
-.. image:: /_images/spoc/OpsView2-300x128.png
+.. image:: /_images/spoc/opsview3.png
+    :width: 100%
 
-Select the **VictorOps** notification method 
 
-.. image:: /_images/spoc/OpsView3-300x127.png
+#. Select the :guilabel:`VictorOps` (Splunk On-Call) notification method.
 
-Make the notification method Active, and then add your routing key in
-the **Contact Variables** input, and your API key in the **API
-Key** input.
+.. image:: /_images/spoc/opsview4.png
+    :width: 100%
 
-.. image:: /_images/spoc/OpsView4-300x110.png
+
+#. Make the notification method Active, and then add your routing key in the :guilabel:`Contact Variables`, and your API key in the :guilabel:`API Key` input.
+
+.. image:: /_images/spoc/opsview5.png
+    :width: 100%
 
 You are then able to test the integration.
 
-And you're done!
 
-**Note:**\ * VictorOps only works with Nagios notifications, BSM
-notifications are not currently supported.*
+.. Note:: Splunk On-Call only works with Nagios notifications, BSM notifications are not currently supported.
 
-.. |image1| image:: /_images/spoc/Integration-ALL-FINAL.png

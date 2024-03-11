@@ -95,7 +95,7 @@ Splunk On-Call integrations
    victorops-logentries-integration
    victorops-loggly-integration
    victorops-logicmonitor-integration
-   victorops-logz-io-integration
+   logz-io-integration
    victorops-mailhop-integration
    victorops-monitis-integration
    victorops-observium-integration

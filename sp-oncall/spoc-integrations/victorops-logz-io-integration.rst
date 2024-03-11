@@ -1,83 +1,85 @@
+
+.. _logz-io-integration:
+
+************************************************************************
 Logz.io integration for Splunk On-Call
-**********************************************************
+************************************************************************
 
-Logz.io provides a cloud-based log analytics service with additional
-features such as predictive fault detection, alerts, multi-user access
-and role definitions.  The platform uses machine-learning algorithms to
-find critical log events before they impact operations, providing users
-with information about their systems and applications.  The following
-guide will walk you through this integration.
+.. meta::
+   :description: Logz.io provides a cloud-based log analytics service with additional features such as predictive fault detection, alerts, multi-user access and role definitions.
 
-In VictorOps
-------------
+Logz.io provides a cloud-based log analytics service with additional features such as predictive fault detection, alerts, multi-user access and role definitions. The platform uses machine-learning algorithms to find critical log events before they impact operations, providing users with information about their systems and applications. The following guide will walk you through this integration.
 
-In VictorOps, click on **Settings** >> **Alert Behavior**
->> **Integrations** >> **REST** integration option\_.\_
+In Splunk On-Call
+============================
 
-.. image:: /_images/spoc/integrations.png
+#. In Splunk On-Call, navigate to :guilabel:`Settings`, then :guilabel:`Alert Behavior`.
+#. Select :guilabel:`Integrations`, then the :guilabel:`REST` integration option.
+#. If the REST endpoint integration has not been enabled, select the green :guilabel:`Enable` button to generate your endpoint destination URL. 
+#. Copy the :strong:`URL to notify``:strong: to the clipboard.
 
-If the REST endpoint integration has not been enabled, click the
-green **Enable** button to generate your endpoint destination URL.  Copy
-the **URL to notify** to the clipboard.
-
-.. image:: /_images/spoc/REST-Endpoint-final.png
+.. image:: /_images/spoc/logz1.png
+    :width: 100%
 
 In Logz.io
-----------
+===================
 
-From the Logz.io web interface, click on **Alerts**.
+#. From the Logz.io web interface, click on :guilabel:`Alerts`.
 
-.. image:: /_images/spoc/Logz_web_interface.png
+.. image:: /_images/spoc/logz2.png
+    :width: 100%
 
-Select **ALERT ENDPOINTS**.
+#. Select :guilabel:`ALERT ENDPOINTS`.
 
-.. image:: /_images/spoc/Logz_alert_def.png
+.. image:: /_images/spoc/logz3.png
+    :width: 100%
 
-Click **Create a New Endpoint**.
 
-.. image:: /_images/spoc/Logz_create_new_endpoint.png
+#. Select :guilabel:`Create a New Endpoint`.
 
-In the “ADD A NEW ENDPOINT” form, select **Custom** from the “Type”
-dropdown list.  Fill out the “Name” and “Description” fields.  Paste
-the **URL to notify** from the “In VictorOps” section into the “URL”
-field.  Select **POST** for the “Method”.  Finally, paste the text below
-into the “Body” field, then click **SAVE**.
+.. image:: /_images/spoc/logz5.png
+    :width: 100%
+
+#. In the :strong:`ADD A NEW ENDPOINT` form, select the Custom type. 
+#. Fill out the Name and Description fields.  
+#. Paste the :strong:`URL to notify` from the :strong:`In VictorOps`` section into the URL field.
+#. Select POST for the Method. 
+#. Finally, paste the text below into the :strong:`Body`` field, then :guilabel:`Save`.
 
 { “message_type”: “CRITICAL”, “entity_id”: “{{alert_title}}”,
 “entity_display_name”: “{{alert_description}}”, “alert_severity”:
 “{{alert_severity}}”, “state_message”: “{{alert_event_samples}}”,
 “monitoring_tool”: “Logz.io” }
 
-.. image:: /_images/spoc/Logz_add_a_new_end-1.png
+.. image:: /_images/spoc/logz4.png
+    :width: 100%
 
-Click on **logz.io** to return to the main tab.
+#. Click on :strong:`logz.io` logo to return to the main tab.
 
-.. image:: /_images/spoc/Logz_back_to_main.png
+.. image:: /_images/spoc/logz6.png
+    :width: 100%
 
-You can now add the VictorOps notification endpoint to your alerts.  In
-order to test the notification endpoint, click on **Create Alert**.
+#. You can now add the Splunk On-Call notification endpoint to your alerts. In order to test the notification endpoint, click on :strong:`Create Alert`.
 
-.. image:: /_images/spoc/Logz_create_alert.png
+.. image:: /_images/spoc/logz7.png
+    :width: 100%
 
-Select **Equal to** from the “Condition” dropdown menu.  Enter “99” in
-the “Threshold” field, then click **Continue**.
+#. Select :strong:`Equal to` from the :strong:`Condition`` dropdown menu. Enter :strong:`99` in the :strong:`Threshold` field, then select :strong:`Continue`.
 
-.. image:: /_images/spoc/Logz_io.png
+.. image:: /_images/spoc/logz8.png
+    :width: 100%
 
-Enter a name in the “Name” field, then click **CONTINUE**.
+#. Enter a name in the :strong:`Name` field, then click :strong:`CONTINUE`.
 
-.. image:: /_images/spoc/Logz_definitions.png
+#. Set :strong:`Suppress notifications for` to :strong:`5 minutes`, then select :strong:`SplunSplunk On-Call` (formerly VictorOps) from the :strong:`Notifications endpoint` dropdown menu, then click :strong:`CREATE ALERT`.
 
-Set “Suppress notifications for” **5 MINUTES**, then
-select **VictorOps** from the “Notifications endpoint” dropdown menu,
-the click **CREATE ALERT**.
+.. image:: /_images/spoc/logz9.png
+    :width: 100%
 
-.. image:: /_images/spoc/Logz_triggers.png
 
-Confirm that an alert shows up in the VictorOps timeline.
+#. Confirm that an alert shows up in the Splunk On-Call timeline.
 
-.. image:: /_images/spoc/Logz_vo_confirm.png
+.. image:: /_images/spoc/logz91.png
+    :width: 100%
 
-You have completed setting up this integration.  If you have any
-questions, please contact `VictorOps
-support <mailto:Support@victorops.com?Subject=Logz.io%20VictorOps%20Integration>`__.
+You have completed setting up this integration. 
