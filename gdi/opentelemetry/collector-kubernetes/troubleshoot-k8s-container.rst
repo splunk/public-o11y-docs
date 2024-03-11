@@ -1,52 +1,95 @@
-.. _tshoot-k8s-container-runtimes:
+.. _troubleshoot-k8s-container:
 
 ***************************************************************
-Troubleshoot the Collector for Kubernetes 
+Troubleshoot the Collector for Kubernetes containers
 ***************************************************************
 
 .. meta::
-    :description: Describes the Kubernetes and container runtimes in the Splunk Distribution of OpenTelemetry Collector.
+    :description: Describes troubleshooting specific to the Collector for Kubernetes containers.
 
-This topic describes how to troubleshoot incompatibility issues. A Kubernetes cluster using an incompatible container runtime for its version or configuration could experience the following issues cluster-wide:
+.. note:: For general troubleshooting, see :ref:`otel-troubleshooting` and :ref:`troubleshoot-k8s`.
+
+Verify if your container is running out of memory
+=======================================================================
+
+Even if you didn't provide enough resources for the Collector containers, under normal circumstances the Collector doesn't run out of memory (OOM). This can only happen if the Collector is heavily throttled by the backend and exporter sending queue growing faster than collector can control memory utilization. In that case you should see ``429`` errors for metrics and traces or ``503`` errors for logs. 
+
+For example:
+
+.. code-block:: 
+
+  2021-11-12T00:22:32.172Z	info	exporterhelper/queued_retry.go:325	Exporting failed. Will retry the request after interval.	{"kind": "exporter", "name": "sapm", "error": "server responded with 429", "interval": "4.4850027s"}
+  2021-11-12T00:22:38.087Z	error	exporterhelper/queued_retry.go:190	Dropping data because sending_queue is full. Try increasing queue_size.	{"kind": "exporter", "name": "sapm", "dropped_items": 1348}
+
+If you can't fix throttling by bumping limits on the backend or reducing amount of data sent through the Collector, you can avoid OOMs by reducing the sending queue of the failing exporter. For example, you can reduce ``sending_queue`` for the ``sapm`` exporter:
+
+.. code-block:: yaml
+
+  agent:
+    config:
+      exporters:
+        sapm:
+          sending_queue:
+            queue_size: 512
+
+You can apply a similar configuration to any other failing exporter.
+
+Kubernetes and container runtime compatibility
+=============================================================================================
+
+Kubernetes requires you to install a container runtime on each node in the cluster so that pods can run there. The Splunk Distribution of the Collector for Kubernetes supports container runtimes such as containerd, CRI-O, Docker, and Mirantis Kubernetes Engine (formerly Docker Enterprise/UCP).
+
+A Kubernetes cluster using an incompatible container runtime for its version or configuration might experience the following issues:
 
 - Stats from containers, pods, or nodes being absent or malformed. As a result, the Collector that requires these stats does not produce the desired corresponding metrics.
 - Containers, pods, and nodes fail to start successfully or stop cleanly.
 - The kubelet process on a node is in a defunct state.
 
-Kubernetes requires you to install a :new-page:`container runtime <https://kubernetes.io/docs/setup/production-environment/container-runtimes/>`` on each node in the cluster so that pods can run there. The compatibility level of a specific Kubernetes version and container runtime can vary, so :ref:`use a version of Kubernetes and a container runtime that are known to be compatible <check-runtimes>`. Multiple container runtimes such as containerd, CRI-O, Docker, and Mirantis Kubernetes Engine (formerly Docker Enterprise/UCP) are all supported. 
+The compatibility level of a specific Kubernetes version and container runtime can vary, so use a version of Kubernetes and a container runtime that are known to be compatible. Learn how at ::ref:`check-runtimes`. 
+
+For more information about runtimes, see :new-page:`Container runtime <https://kubernetes.io/docs/setup/production-environment/container-runtimes/>`.
 
 .. _check-runtimes:
 
-Check the container runtime compatibility
-=============================================================================================
-First, run ``kubectl get nodes -o wide`` to determine what version of Kubernetes and container runtime are being used. The ``-o wide`` flag prints the output in the plain-text format with any additional information. For pods, the node name is included. In the following example, ``node-1`` uses Kubernetes 1.19.6 and containerd 1.4.1:
+Troubleshoot the container runtime compatibility
+--------------------------------------------------------------------
 
-   .. code-block:: yaml
+To check if you're having compatibility issues with Kubernets and the container runtime, follow these steps:
 
+#. Run ``kubectl get nodes -o wide`` to determine what version of Kubernetes and container runtime are being used. 
+
+  The ``-o wide`` flag prints the output in the plain-text format with any additional information. For pods, the node name is included. In the following example, ``node-1`` uses Kubernetes 1.19.6 and containerd 1.4.1:
+
+    .. code-block:: yaml
 
       kubectl get nodes -o wide
       NAME         STATUS   VERSION   CONTAINER-RUNTIME
       node-1       Ready    v1.19.6   containerd://1.4.1
 
-Next, verify that you are using a container runtime compatible with your Kubernetes version. Refer to the following vendor documentation to see the container runtime compatibility:
+#. Verify that you are using a container runtime compatible with your Kubernetes version. Refer to the following vendor documentation to see the container runtime compatibility:
 
-   - :new-page:`containerd <https://containerd.io/releases/#kubernetes-support>`
-   - :new-page:`CRI-O <https://github.com/cri-o/cri-o#compatibility-matrix-cri-o--kubernetes>`
-   - :new-page:`Mirantis <https://docs.mirantis.com/container-cloud/latest/compat-matrix.html>`
+  - :new-page:`containerd <https://containerd.io/releases/#kubernetes-support>`
+  - :new-page:`CRI-O <https://github.com/cri-o/cri-o#compatibility-matrix-cri-o--kubernetes>`
+  - :new-page:`Mirantis <https://docs.mirantis.com/container-cloud/latest/compat-matrix.html>`
 
-.. _check-integrity:
+#. Check the integrity of your container stats. See how at :ref:`ts-k8s-stats`.
 
-Check the integrity of Kubelet Summary API stats
-==========================================================
+.. _ts-k8s-stats:
+
+Check the integrity of your container stats
+--------------------------------------------------------------------
+
 Use the Kubelet Summary API to verify container, pod, and node stats. The Kubelet provides the Summary API to discover and retrieve per-node summarized stats available through the ``/stats`` endpoint.
 
-   - The following examples show how to verify that the CPU, memory, and networks stats the Collector uses to generate Kubelet Stats Receiver metrics are present. You can expand these techniques to evaluate other Kubernetes stats that are available. 
-   - All of the stats shown in these examples should be present unless otherwise noted. If your output is missing stats or your stat values appear to be in a different format, your Kubernetes cluster and container runtime might not be fully compatible.
+The following examples show how to verify that the CPU, memory, and networks stats the Collector uses to generate Kubelet Stats Receiver metrics are present. You can expand these techniques to evaluate other Kubernetes stats that are available. 
+
+All of the stats shown in these examples should be present unless otherwise noted. If your output is missing stats or your stat values appear to be in a different format, your Kubernetes cluster and container runtime might not be fully compatible.
 
 .. _verify-node-stats:
 
 Verify a node's stats
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 To verify a node's stats:
 
 1. Run the following command to get the names of the nodes in your cluster to pull raw resource usage stats from one of the nodes:
@@ -133,7 +176,8 @@ For reference, the following table shows the mapping for the node stat names to 
 .. _verify-pod-stats:
 
 Verify a pod's stats
-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. note::
    
    You must complete steps 1 and 2 in :ref:`verify-node-stats` before completing this section.
@@ -224,10 +268,9 @@ For reference, the following table shows the mapping for the pod stat names to t
 .. _verify-container-stats:
 
 Verify a container's stats
-----------------------------------
-.. note::
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   You must complete steps 1 and 2 in both :ref:`verify-node-stats` and :ref:`verify-pod-stats` before completing this section.
+.. note:: Carry out steps 1 and 2 in both :ref:`verify-node-stats` and :ref:`verify-pod-stats` before completing this section.
 
 To verify a container's stats:
 
@@ -296,20 +339,17 @@ For reference, the following table shows the mappings for the container stat nam
    * - ``container.memory.majorPageFaults``
      - ``container.memory.major_page_faults``
 
-
 Reported incompatible Kubernetes and container runtime issues
-=======================================================================
+--------------------------------------------------------------------
 
-.. note:: Note
-
-   Managed Kubernetes services might use a modified container runtime, and the service provider might have applied custom patches or bug fixes that are not present within an unmodified container runtime.
+.. note:: Managed Kubernetes services might use a modified container runtime, and the service provider might have applied custom patches or bug fixes that are not present within an unmodified container runtime.
 
 This section describes known incompatibilities and container runtime issues.
 
 containerd with Kubernetes 1.21.0 to 1.21.11 
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When using Kubernetes 1.21.0 to 1.21.11 with containerd, memory and network stats or metrics can be missing. The following is a list of affected metrics:
+When using Kubernetes 1.21.0 to 1.21.11 with containerd, memory and network stats or metrics might be missing. The following is a list of affected metrics:
 
 - ``k8s.pod.network.io{direction="receive"}`` or ``pod_network_receive_bytes_total``
 -  ``k8s.pod.network.errors{direction="receive"}`` or ``pod_network_receive_errors_total``
@@ -327,7 +367,7 @@ Try one of the following workarounds to resolve the issue:
 - Upgrade containerd to version 1.4.x or 1.5.x.
 
 containerd 1.4.0 to 1.4.12 with Kubernetes 1.22.0 to 1.22.8 
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When using Kubernetes 1.22.0 to 1.22.8 with containerd 1.4.0 to 1.4.12, memory and network stats or metrics can be missing. The following is a list of affected metrics:
 
@@ -348,11 +388,10 @@ Try one of the following workarounds to resolve the issue:
 - Upgrade containerd to at least version 1.4.13 or 1.5.0 to fix the missing pod memory metrics.
 
 containerd with Kubernetes 1.23.0 to 1.23.6
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 When using Kubernetes versions 1.23.0 to 1.23.6 with containerd, memory stats or metrics can be missing. The following is a list of affected metrics: 
 
 - ``k8s.pod.memory.available``
 
 At this time, there is no workaround for this issue. 
-
-
