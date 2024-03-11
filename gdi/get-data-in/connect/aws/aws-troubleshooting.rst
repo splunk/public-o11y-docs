@@ -14,8 +14,8 @@ If you experience issues when connecting Splunk Observability Cloud to your Amaz
 
 .. _aws-ts-valid-connection:
 
-Error validating AWS connection
-================================
+Error validating your AWS connection
+=========================================
 
 The automatic attempt to validate a connection that you just configured fails, so there is no connection between Splunk Observability Cloud and your AWS account.
 
