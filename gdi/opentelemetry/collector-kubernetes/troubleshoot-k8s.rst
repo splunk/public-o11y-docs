@@ -79,8 +79,3 @@ Set the resources allocated to your cluster receiver deployment based on the clu
       limits:
         cpu: 1
         memory: 2Gi
-
-
-
-
-
