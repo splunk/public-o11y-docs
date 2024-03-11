@@ -36,7 +36,6 @@ In addition, include the following information:
 * Logs from problematic pods:
 
   * ``kubectl logs my-splunk-otel-collector-agent-fzn4q otel-collector > my-splunk-otel-collector-agent.log``
-  * ``kubectl logs my-splunk-otel-collector-agent-fzn4q fluentd > my-splunk-otel-collector-agent-fluentd.log``
   * ``kubectl logs my-splunk-otel-collector-k8s-cluster-receiver-7545499bc7-vqdsl > my-splunk-otel-collector-k8s-cluster-receiver.log``
 
 .. note:: You can use the ``kubectl-splunk`` support bundle script to gather this information. Find it at the :new-page:`Splunk kubectl GitHub repository <https://github.com/signalfx/kubectl-splunk/blob/main/docs/kubectl-splunk_support.md>`.
