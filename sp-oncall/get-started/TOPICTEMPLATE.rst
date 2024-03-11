@@ -1,4 +1,4 @@
-:orphan:
+
 
 .. _topic-template-spoc:
 

@@ -78,7 +78,7 @@ Splunk On-Call integrations
    victorops-desk-com-integration
    victorops-dnscheck-integration
    victorops-dotcommonitor-integration
-   victorops-dripstat-integration
+   dripstat-integration
    victorops-dynatrace-integration
    victorops-dynatrace-synthetic-monitoring-integration
    victorops-googlevoice-integration
@@ -99,7 +99,7 @@ Splunk On-Call integrations
    victorops-mailhop-integration
    victorops-monitis-integration
    victorops-observium-integration
-   victorops-opsview-integration
+   opsview-integration
    victorops-panopta-integration
    victorops-papertrail-integration
    victorops-phantom-integration-guide
@@ -125,7 +125,7 @@ Splunk On-Call integrations
    victorops-threat-stack-integration
    victorops-uptime-integration
    victorops-uservoice-integration
-   victorops-vividcortex-integration
+   vividcortex-integration
    victorops-wormly-integration
    victorops-zabbix-integration
    victorops-zenoss-integration
