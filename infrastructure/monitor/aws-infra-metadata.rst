@@ -424,7 +424,7 @@ For more information on these properties, including acceptable values and constr
 
 .. _cloudwatch-ec2-optimization-data:
 
-Optimizer for AWS EC2 Cost & Usage
+Splunk Observability Cloud's Optimizer for AWS EC2 Cost & Usage
 -------------------------------------------------------------------
 
 Splunk Observability Cloud's Optimizer for AWS EC2 cost & usage gives you actionable insight into cost-saving opportunities, underutilized investments, usage patterns, and cost attribution.
