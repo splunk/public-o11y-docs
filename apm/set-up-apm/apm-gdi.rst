@@ -22,7 +22,7 @@ Before you begin the setup process, consider the following:
 
 .. note:: Add span tags to your spans
 
-  Span tags, known as "attributes" in OpenTelemetry, add crucial context to your spans to enable troubleshooting and analysis. You can add tags to your spans either during instrumentation or in a processor added to the YAML configuration file of the OpenTelemetry Collector you're using to aggregate data from multiple services. 
+  Span tags, known as "attributes" in OpenTelemetry, add crucial context to your spans to enable troubleshooting and analysis. You can add tags to your spans either during instrumentation or in a processor added to the YAML configuration file of the OpenTelemetry Collector you're using to aggregate data from multiple services. See :ref:`otel-tags` for more information.
   
   The ``deployment.environment`` tag is particularly useful because it enables you to filter your Splunk APM by deployment environment. To learn more about the environment tag, see :ref:`apm-environments`.
   
@@ -64,15 +64,15 @@ See the following table for more information about deploying the Splunk Distribu
      - :strong:`Documentation`
 
    * - Kubernetes
-     - Splunk Distribution of OpenTelemetry Collector for Kubernetes 
+     - Splunk Distribution of OpenTelemetry Collector for Kubernetes
      - :ref:`get-started-k8s`
 
    * - Linux
-     - Splunk Distribution of OpenTelemetry Collector for Linux 
+     - Splunk Distribution of OpenTelemetry Collector for Linux
      - :ref:`get-started-linux`
 
    * - Windows
-     - Splunk Distribution of OpenTelemetry Collector for Windows 
+     - Splunk Distribution of OpenTelemetry Collector for Windows
      - :ref:`get-started-windows`
 
 .. _instrument-applications:
@@ -119,12 +119,11 @@ In the following table, follow the instrumentation steps for the language that e
      - :ref:`get-started-ruby`
 
    * - PHP
-     - SignalFx Tracing Library for PHP
+     - OpenTelemetry instrumentation for PHP
      - :ref:`get-started-php`
 
-After you instrument your applications, you're ready to verify that your data is coming in.
 
-.. note:: To instrument applications or services written in languages other than the ones listed here, see :ref:`apm-instrumentation-other-langs`.
+After you instrument your applications, you're ready to verify that your data is coming in.
 
 .. _verify-apm-data:
 

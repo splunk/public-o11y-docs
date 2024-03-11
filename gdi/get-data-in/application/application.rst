@@ -17,11 +17,9 @@ Instrument back-end applications to send spans to Splunk APM
    Instrument a Python application TOGGLE <python/get-started>
    Instrument a Ruby application TOGGLE <ruby/get-started>
    Instrument a PHP application TOGGLE <php/get-started>
-   Instrument a .NET application (SignalFx) TOGGLE <dotnet/get-started>
-   Instrument applications written in other programming languages <other-languages>
    Send spans from the Istio service mesh <istio/istio>
 
-You can instrument your back-end services and applications to send metrics and traces to Splunk Observability Cloud. 
+You can instrument your back-end services and applications to send metrics and traces to Splunk Observability Cloud.
 
 .. raw:: html
 
@@ -31,21 +29,21 @@ You can instrument your back-end services and applications to send metrics and t
 
 You have the following options to send app and service data to Splunk Observability Cloud:
 
-* Use the Splunk Distribution of OpenTelemetry Collector to send metrics and traces from back-end applications. 
-   
+* Use the Splunk Distribution of OpenTelemetry Collector to send metrics and traces from back-end applications.
+
    * Available languages include Java, Node.js, .NET, Go, Python, Ruby, and PHP.
 
    * Learn more about the Collector at :ref:`otel-intro`, including the :ref:`zero-config`.
 
-* Send metrics and traces directly to Splunk Observability Cloud using the API. See more in our :new-page:`dev portal documentation <https://dev.splunk.com/observability/docs/apm/send_traces>`. 
+* Send metrics and traces directly to Splunk Observability Cloud using the API. See more in our :new-page:`dev portal documentation <https://dev.splunk.com/observability/docs/apm/send_traces>`.
 
 .. mermaid::
 
    flowchart LR
 
       accTitle: Back-end instrumentation diagram 
-      accDescr: OpenTelemetry instrumentation encompasses back-end applications and serverless functions. Instrumentation sends back-end application metrics, traces, and logs to the Splunk Distribution of OpenTelemetry Collector, which sends them to Splunk APM. Instrumentation also sends back-end application metrics, traces, and logs to Splunk APM through the API. Instrumentation sends serverless function metrics, traces, and logs to Splunk APM using the API. 
-               
+      accDescr: OpenTelemetry instrumentation encompasses back-end applications and serverless functions. Instrumentation sends back-end application metrics, traces, and logs to the Splunk Distribution of OpenTelemetry Collector, which sends them to Splunk APM. Instrumentation also sends back-end application metrics, traces, and logs to Splunk APM through the API. Instrumentation sends serverless function metrics, traces, and logs to Splunk APM using the API.
+
       subgraph "\nOpenTelemetry instrumentation"
 
 
@@ -92,11 +90,6 @@ You can instrument applications in each of these languages using official Splunk
 - :ref:`PHP <get-started-php>`
 
 To send spans from the Istio service mesh, see :ref:`get-started-istio`.
-
-You can also send traces from applications written in languages for which Splunk instrumentation isn't available:
-
-- :ref:`Erlang <apm-instrumentation-other-langs>`
-- :ref:`Rust <apm-instrumentation-other-langs>`
 
 To learn more about the data collected by Splunk Observability Cloud, see:
 

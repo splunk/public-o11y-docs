@@ -1,11 +1,11 @@
 .. _ootb-metrics-linux:
 
 ****************************************************************
-Collected metrics and dimensions for Linux
+Collected metrics for Linux
 ****************************************************************
 
 .. meta::
-      :description: Out-of-the-box metrics and dimensions obtained with the Collector for Kubernetes.
+      :description: Out-of-the-box metrics and dimensions obtained with the Collector for Linux.
 
 
 The following sections list the collected metrics when you use the default configuration for the Collector for Linux in host monitoring (agent) mode. 

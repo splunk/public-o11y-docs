@@ -1,9 +1,3 @@
-.. admonition:: Preview: Zero Configuration Automatic Instrumentation
-
-    Zero Configuration Automatic Instrumentation for Kubernetes .NET applications is in preview.
-
-    Preview features are provided by Splunk to you “as is” without any warranties, maintenance and support, or service level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it at any time. Use of preview features is subject to the :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`.
-
 .. _auto-instrumentation-dotnet-k8s:
 
 ************************************************************************************
@@ -36,34 +30,24 @@ Zero Config Auto Instrumentation for .NET requires the following components:
 Deploy the Helm Chart with the Kubernetes Operator
 =========================================================
 
-To deploy the Helm Chart, create a values.yaml file and populate it with the appropriate fields. The following table shows the required and optional fields for values.yaml:
+To deploy the Helm Chart, create a file called values.yaml. This file defines the settings to activate or deactivate when installing the OpenTelemetry Collector with the Helm Chart.
 
-.. list-table::
-        :header-rows: 1
-        :width: 100%
-        :widths: 33 33 33
+Populate values.yaml with the following fields and values:
 
-        * - Field
-          - Value
-          - Notes
-        * - ``clusterName``
-          - Your desired cluster name
-          - Name of the Kubernetes cluster
-        * - ``splunkObservability.realm``
-          - Your Splunk Observability Cloud realm
-          - Deployment of the Splunk Observability Cloud instance
-        * - ``splunkObservability.accessToken``
-          - Your Splunk Observability Cloud access token
-          - Allows you to send telemetry data to Splunk Observability Cloud
-        * - ``certmanager.enabled``
-          - ``true``
-          - Optional. Only add this field if a certificate manager isn't available. See :ref:`dotnet-add-certificates`.
-        * - ``operator.enabled``
-          - ``true``
-          - Activates the OpenTelemetry Kubernetes Operator
-        * - ``environment``
-          - ``prd``
-          - Optional. See :ref:`zeroconfig-dotnet-traces`.
+.. code-block:: yaml
+
+  clusterName: <your_cluster_name>
+
+  # Your Splunk Observability Cloud realm and access token
+  splunkObservability:
+    realm: <splunk_realm>
+    accessToken: <splunk_access_token>
+  
+  # Activates the OpenTelemetry Kubernetes Operator
+  operator:
+    enabled: true
+
+You might need to populate the file with additional values depending on your environment. See :ref:`dotnet-add-certificates` and :ref:`zeroconfig-dotnet-traces` for more information.
 
 .. _dotnet-add-certificates:
 
@@ -185,6 +169,17 @@ The following examples show how to set the attribute using each method:
       .. code-block:: bash
         
           kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=environment=prd
+
+.. _zeroconfig-dotnet-deploy:
+
+Deploy the Helm Chart
+------------------------------------------------------
+
+After configuring values.yaml, use the following command to deploy the Helm Chart and install the OpenTelemetry Collector:
+
+.. code-block:: bash
+
+  helm install splunk-otel-collector -f ./values.yaml splunk-otel-collector-chart/splunk-otel-collector
 
 .. _verify-otel-resources-dotnet-k8s:
       

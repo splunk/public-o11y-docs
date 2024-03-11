@@ -1,7 +1,3 @@
-.. caution:: Preview: Discovery mode in Splunk Distribution of OpenTelemetry Collector
-
-    Preview features described in this document are provided by Splunk to you "as is" without any warranties, maintenance and support, or service-level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it at any time. Use of preview features is subject to the :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`.
-
 .. _discovery_mode:
 
 ***************************************************************************
@@ -18,7 +14,7 @@ Discovery mode can detect several types of metric sources on the host, such as d
 
 The main advantage of using discovery mode is that you don't need to manually update the OpenTelemetry Collector configuration for supported metric sources. This is helpful in environments when you deploy and activate host services dynamically or when adding a new supported target database to your infrastructure.
 
-.. note:: Discovery mode is available starting from version 0.72.0 and higher of the Splunk Distribution of the OpenTelemetry Collector.
+.. note:: Update the Collector to version 0.94.0 and higher to activate automatic service discovery.
 
 How discovery mode works
 ==========================================
@@ -57,8 +53,12 @@ Discovery mode supports the following host services and applications:
      - Smart Agent with collectd/nginx monitor type. See :ref:`nginx`.
 
    * - Redis
-     - Redis receiver.
+     - Redis receiver. See :ref:`redis-receiver`.
 
+Discovery mode is available for the following platforms:
+
+- Linux
+- Kubernetes
 
 Discover active metric sources
 =========================================

@@ -30,7 +30,7 @@ To generate all the basic installation commands for your environment and applica
 Install the Splunk Distribution of OpenTelemetry Go manually
 ==================================================================
 
-Follow these instructions to install the Splunk Distribution of OpenTelemetry Go.
+If you don't use the guided setup, follow these instructions to manually install the Splunk Distribution of OpenTelemetry Go.
 
 .. _install-enable-go-instrumentation:
 
@@ -174,13 +174,7 @@ If you need to send data directly to Splunk Observability Cloud, set the followi
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
-
-#. Open the navigation menu in Splunk Observability Cloud.
-#. Select :menuselection:`Settings`.
-#. Select your username. 
-
-The realm name appears in the :guilabel:`Organizations` section. 
+To find your Splunk realm, see :ref:`Note about realms <about-realms>`. 
 
 For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>` and :new-page:`Send data points <https://dev.splunk.com/observability/docs/datamodel/ingest#Send-data-points>`.
 
