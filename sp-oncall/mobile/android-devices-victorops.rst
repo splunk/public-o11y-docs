@@ -9,14 +9,14 @@ Android mobile devices for Splunk On-Call
 
 
 Requirements
-------------
+=================
 
 Android devices running Android 6 or newer. Splunk On-Call no longer supports the mobile app for Android versions 5 and below.
 
 .. note:: Using custom ROMs (or those provided by the device manufacturer) can alter the settings and functionality described herein. If your device utilizes a custom/manufacturer-furnished ROM, please refer to the owner's manual (or other applicable literature) provided by the ROM developer.
 
 Best Practices
---------------
+===================
 
 If you are unable to download the Splunk On-Call app from your playstore, please download it :new-page:`here <http://download.victorops.com/VictorOps.apk>`.
 
@@ -29,7 +29,7 @@ Here are the things you can do to minimize your risk of missing a notification f
 
 
 Notification Delivery
----------------------
+=============================
 
 There are a number of different settings on the Android platform that affect the delivery of Splunk On-Call notifications to your device. Due to the critical nature of Splunk On-Call notifications, it is imperative that you correctly configure your settings in Android and test those notifications before you go on call. This article describes how to ensure that Splunk On-Call can reach you despite the current state of your phone (unless it is turned off).
 
@@ -93,11 +93,12 @@ Once you open the DND Settings, you will want to check one thing:
 
 
 
-Other Features
---------------
+Other features
+====================
+
 
 Ack from Locked Screen
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------
 
 One of the Splunk On-Call notification options is a push notification to the user's Android device. When a user is notified in this fashion, while their phone is idle in lock-screen, they will have the option to acknowledge the alert directly from the lock-screen notification without requiring that they unlock the phone and access the application first.
 
@@ -106,7 +107,7 @@ After you have acknowledged an incident, you will receive a success notification
 Acknowledgment through push notification may fail because performing the acknowledgment action requires that your phone is able to contact our servers over HTTP. If an acknowledgment action fails, you will receive a subsequent push notification indicating that the acknowledgment failed and providing an opportunity to try again.
 
 Alternate Push Service
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------
 
 The Alternate Push Service allows users who are unable to receive notifications from Google Cloud Messenger to reliably receive push
 notifications. In the Android App, navigate to the :guilabel:`Settings` page by clicking the three-slider icon in the far bottom-right corner.
@@ -118,6 +119,6 @@ Once here, scroll down to the :guilabel:`Notification Sound & Behavior` section.
 Your device will prompt you for access to the associated permissions. Select :guilabel:`Allow`
 
 Troublehooting
-^^^^^^^^^^^^^^^^^^^^
+---------------------
 
 See :ref:`mobile-troubleshoot`

@@ -101,15 +101,13 @@ Splunk On-Call user make sure to select, next to *Alert recipients*,
    :alt: Add user or contact menu
 
 Next, under contact details, give your contact a name. Give
-the contact a name that makes sense for the alert destination
- (such as Splunk). Then paste the Splunk On-Call Pingdom Email endpoint
+the contact a name that makes sense for the alert destination (such as Splunk). Then paste the Splunk On-Call Pingdom Email endpoint
 into the contact method. Save the user by clicking :guilabel:`Add User`.
 
 .. image:: /_images/spoc/Screen_Shot_2019-10-09_at_12_31_46_PM.png
    :alt: Adding a contact name
 
-Now under Experience Monitoring, add your new contact to your
-desired checks. 
+Now under Experience Monitoring, add your new contact to your desired checks. 
 
 You add the user to your desired checks by editing a
 check and selecting that user for '*Who to alert?*'. Once selected and

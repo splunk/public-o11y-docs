@@ -64,8 +64,7 @@ Give the Connection a name and description and pPaste in the URL you got
 from the Splunk On-Call portal. No Authorization Header is needed. 
 Copy the following JSON payload and paste it into the “Payload” box.
 
-.. note:: Depending on your scheduled search settings, you may want to use
-:guilabel:`SearchQuery` for the "state\_message" field in place of :guilabel:`SearchDescription`.
+.. note:: Depending on your scheduled search settings, you may want to use :guilabel:`SearchQuery` for the "state\_message" field in place of :guilabel:`SearchDescription`.
 
 .. code-block:: none
 

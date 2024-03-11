@@ -1,19 +1,23 @@
+
+.. _dripstat-integration:
+
+************************************************************************
 DripStat integration for Splunk On-Call
-**********************************************************
+************************************************************************
 
-DripStat is the smartest Java APM, providing code level visibility in
-production. The Splunk On-Call (formerly VictorOps) integration allows
-you to send your DipStat alerts into the Splunk On-Call Timeline. The
-following guide will walk you through how to setup this simple
-integration. 
+.. meta::
+   :description: The Splunk On-Call (formerly VictorOps) integration allows you to send your DipStat alerts into the Splunk On-Call Timeline.
 
-**In Splunk On-Call**
----------------------
 
-From the top navigation, select **Integrations**. 
 
-Select the **DripStat** integration and copy the **Service API
-Endpoint** to your clipboard.
+DripStat is the smartest Java APM, providing code level visibility in production. The Splunk On-Call  integration allows you to send your DipStat alerts into the Splunk On-Call Timeline. The following guide will walk you through how to setup this integration.
+
+In Splunk On-Call
+======================
+
+From the top navigation, select :guilabel:`Integrations`.
+
+Select the :guilabel:`DripStat` integration and copy the `Service API Endpoint` to your clipboard.
 
 .. image:: /_images/spoc/Integrations-victorops-18.png
 
