@@ -1,20 +1,24 @@
 .. _collector-config-tutorial-edit-k8s:
 
-***********************************************************************
-Part 2: Edit the configuration to filter and send logs to Splunk
-***********************************************************************
+***************************************************************************
+Part 2: Edit the Collector configuration to filter and send logs to Splunk
+***************************************************************************
 
-Now that you've installed the Splunk Distribution of OpenTelemetry Collector in your local Kubernetes cluster, you can edit the default configuration to modify or extend the capabilities of the Collector, for example by adding different :ref:`otel-components` or by editing existing settings.
+In the previous part of this tutorial, you installed the Splunk Distribution of OpenTelemetry Collector in your local Kubernetes cluster. See :ref:`about-collector-configuration-tutorial-k8s` for an overview of the tutorial.
 
-In the following steps, you're going to edit the configuration of the Collector using YAML files and Helm. At the end of this part of the tutorial, you'll be able to:
+You can now edit the default configuration to modify or extend the capabilities of the Collector, for example by adding different components or by editing existing settings.
 
-1. Activate logs collection using :ref:`filelog-receiver` and the OpenTelemetry protocol (OTLP).
-2. Filter logs using :ref:`filter-processor`.
+In the following steps, you'll edit the configuration of the Collector using YAML files and Helm. At the end of this part of the tutorial, you'll be able to:
+
+1. Activate logs collection using the Filelog receiver and the OpenTelemetry protocol (OTLP).
+
+2. Filter logs using the filter processor.
+
 3. Export the filtered logs to Splunk Cloud Platform.
 
 
-Examine the default values.yaml file
-=======================================
+Download and examine the default values.yaml file
+=====================================================
 
 By default, the Helm chart for the Splunk Distribution of OpenTelemetry Collector deploys the Collector with predefined settings. All possible settings are documented in the values.yaml file. To modify the configuration, you either override existing settings or add new settings using YAML files or command-line arguments.
 
@@ -28,7 +32,7 @@ Configure the Splunk HEC endpoint and token
 
 The Splunk OpenTelemetry Collector for Kubernetes collects logs by default. To send the logs to Splunk Cloud Platform, you need to add the Splunk HEC endpoint and token to the configuration. See :ref:`hec-endpoints`.
 
-1. Create a new YAML file, for example, hec.yaml.
+1. Create a new YAML file. For example, hec.yaml.
 
 2. Open the hec.yaml file in a code or text editor.
 
@@ -106,7 +110,9 @@ To apply the configuration to the Collector running on your Kubernetes cluster, 
 
    helm upgrade --reuse-values -f ./filter.yaml -f ./values.yaml splunk-otel-collector-1709226095 splunk-otel-collector-chart/splunk-otel-collector --set="splunkPlatform.insecureSkipVerify=true"
 
-Use the Tab key to autocomplete the file names, the release, and the chart you installed in part 1. Notice the following about the command:
+Use the Tab key to autocomplete the file names, the release, and the chart you installed in part 1. 
+
+Notice the following parts of the command:
 
 - ``--reuse-values`` ensures that the Collector only updates the settings you provide.
 - ``splunkPlatform.insecureSkipVerify=true`` turns off SSL, as Splunk Cloud Platform free trials don't support it.
@@ -123,8 +129,6 @@ After upgrading the configuration, Helm shows messages similar to the following:
    LAST DEPLOYED: Thu Mar  7 19:23:30 2024
    NAMESPACE: default
    STATUS: deployed
-   REVISION: 3
-   TEST SUITE: None
    NOTES:
    Splunk OpenTelemetry Collector is installed and configured to send data to Splunk Platform endpoint "https://<your-splunk-cloud-trial-stack>.splunkcloud.com:8088/services/collector".
 
@@ -141,11 +145,12 @@ Open your Splunk Cloud Platform trial and go to :guilabel:`Search & Reporting`. 
       :width: 90%
       :alt: Kubernetes logs sent to Splunk Cloud
 
+As you can see, the logs from your Kubernetes cluster are getting to Splunk Cloud.
 
 Learn more
 ====================================
 
-This completes the tutorial.
+This completes the tutorial. You've created a local Kubernetes cluster, configured it, and sent the logs to a Splunk Cloud trial. Well done!
 
 To learn more about the Collector installation and components, see the following resources:
 

@@ -4,13 +4,19 @@
 Part 1: Set up and monitor a Kubernetes cluster on your machine
 ******************************************************************
 
-To follow this tutorial, you need a Kubernetes environment on your machine. A convenient way of setting up a demo Kubernetes environment is through Minikube, Podman, and Helm.
+To follow the tutorial, you need a Kubernetes environment on your machine. See :ref:`about-collector-configuration-tutorial-k8s` for an overview of the tutorial.
+
+A convenient way of setting up a demo Kubernetes environment is through Minikube, Podman, and Helm. Each tool has a specific purpose:
 
 - Minikube creates a local Kubernetes cluster.
 - Podman runs containers in Kubernetes.
 - Helm helps configure Kubernetes.
 
-The following steps assume that you're using macOS as the host operating system.
+The following steps assume that you're using macOS as the host operating system. You also need the Homebrew package manager. If you don't have Homebrew installed, run the following command first:
+
+.. code-block:: bash
+
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 .. note:: You don't need Podman if you already have a container runtime installed, such as Docker.
 
@@ -22,12 +28,6 @@ Open a terminal session and install Minikube, Helm, and Podman using Homebrew:
 .. code-block:: bash
 
    brew install minikube helm podman
-
-If you don't have Homebrew installed, run the following command first:
-
-.. code-block:: bash
-
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 Check that you've installed all the requirements by running the following commands:
 
@@ -62,7 +62,7 @@ To test your newly created cluster, run the following command:
 
    minikube dashboard
 
-The empty Kubernetes dashboard appears in your browser, meaning that you still haven't deployed a containerized app.
+The Kubernetes dashboard appears empty in your browser, meaning that you still haven't deployed a containerized app. Your next step installs the first containerized app, the Collector, in your cluster.
 
 
 Install the Splunk Distribution of OpenTelemetry Collector
@@ -78,10 +78,12 @@ Run the following commands to install the Helm chart for the Collector:
    helm repo update
    helm install --set="splunkObservability.accessToken=<access_token>,clusterName=splunkTutorial,splunkObservability.realm=<realm>,gateway.enabled=false,splunkObservability.profilingEnabled=true,environment=splunkTutorialEnv" --generate-name splunk-otel-collector-chart/splunk-otel-collector
 
-Replace ``<realm>`` and ``<access_token>`` in the install command with your realm and access token.
+Replace ``<realm>`` and ``<access_token>`` in the installation command with your realm and access token.
 
 - To obtain an access token, see :ref:`admin-api-access-tokens`.
 - To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
+
+.. note:: You can generate a prefilled Helm command using the :new-page:`Collector guided setup <https://login.signalfx.com/#/gdi/scripted/otel-connector-v2/step-2?category=use-case-infrastructure&gdiState=%7B%22integrationId%22:%22otel-connector-v2%22,%22platform%22:%22kubernetes%22,%22gateway%22:%22false%22,%22provider%22:%22%22,%22distro%22:%22%22,%22logCollection%22:%22%22,%22input_profiling%22:%22true%22%7D>` in Splunk Observability Cloud.
 
 After successfully installing the Helm chart, messages similar to the following appear:
 
@@ -94,6 +96,10 @@ After successfully installing the Helm chart, messages similar to the following 
    NOTES:
    Splunk OpenTelemetry Collector is installed and configured to send data to Splunk Observability realm <realm>.
 
+
+Check that data is coming into Splunk Observability Cloud
+============================================================
+
 Open Splunk Observability Cloud and go to :guilabel:`Infrastructure`, :guilabel:`Kubernetes`, :guilabel:`K8s nodes` to see the data coming from your local Kubernetes clusters. Filter to only show the ``splunkTutorial`` cluster.
 
 The following image shows data coming from the demo ``splunkTutorial`` cluster:
@@ -102,15 +108,13 @@ The following image shows data coming from the demo ``splunkTutorial`` cluster:
       :width: 90%
       :alt: Collector metrics in Splunk Infrastructure Monitoring
 
-.. note:: You can generate a prefilled Helm command using the :new-page:`Collector guided setup <https://login.signalfx.com/#/gdi/scripted/otel-connector-v2/step-2?category=use-case-infrastructure&gdiState=%7B%22integrationId%22:%22otel-connector-v2%22,%22platform%22:%22kubernetes%22,%22gateway%22:%22false%22,%22provider%22:%22%22,%22distro%22:%22%22,%22logCollection%22:%22%22,%22input_profiling%22:%22true%22%7D>` in Splunk Observability Cloud.
-
 
 Next step
 =======================================
 
-This completes the first part of the tutorial.
+This completes the first part of the tutorial. You've created a local Kubernetes cluster and deployed the Collector as a containerized app.
 
-To learn how to edit the configuration, continue to :ref:`collector-config-tutorial-edit-k8s`.
+Next, you'll edit the configuration to send logs to Splunk Cloud Platform. Continue to :ref:`collector-config-tutorial-edit-k8s`.
 
 
 Learn more
