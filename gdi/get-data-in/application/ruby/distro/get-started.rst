@@ -31,4 +31,4 @@ To instrument your Ruby application, follow these steps:
 
 For more information, see :ref:`splunk-ruby-otel-dist`.
 
-.. note:: The SignalFx Ruby tracing library is deprecated and will reach End of Support on September 30th, 2023. To migrate to the Splunk Distribution of OpenTelemetry Ruby, see :ref:`migrate-signalfx-ruby-agent-to-otel-distro`.
+.. note:: The SignalFx Ruby tracing library has reached end of support. To migrate to the Splunk Distribution of OpenTelemetry Ruby, see :ref:`migrate-signalfx-ruby-agent-to-otel-distro`.
