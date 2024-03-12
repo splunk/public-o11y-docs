@@ -1,8 +1,8 @@
 .. _get-started-ruby-distro:
 
-**************************************************************
+***************************************************************
 Instrument Ruby applications for Splunk Observability Cloud
-**************************************************************
+***************************************************************
 
 .. caution:: The Splunk Distribution for OpenTelemetry Ruby is deprecated in favor of the upstream OpenTelemetry instrumentation for Ruby. To migrate from the Splunk agent to the OpenTelemetry instrumentation, see :ref:`migrate-from-splunk-ruby`.
 
