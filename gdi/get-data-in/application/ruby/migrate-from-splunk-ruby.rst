@@ -30,6 +30,4 @@ If you've installed the Splunk Ruby agent, uninstall it using the following comm
 
 .. code-block:: bash
 
-    gem uninstall <splunk-ruby-gem>
-
-Replace ``<splunk-ruby-gem>`` with each Splunk Ruby agent gem that you've added to your Gemfile. 
+    gem uninstall splunk-otel

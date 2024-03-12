@@ -7,16 +7,16 @@ Manually instrument Ruby applications for Splunk Observability Cloud
 .. meta:: 
    :description: Manually instrument your Ruby application when you need to add custom attributes to spans or want to manually generate spans. Keep reading to learn how to manually instrument your Ruby application for Splunk Observability Cloud. 
 
-Instrumenting applications automatically using the agent of the Splunk Distribution of OpenTelemetry Ruby covers most needs. Manually instrumenting your application is only necessary when, for example, you need to add custom attributes to spans or need to manually generate spans.
+Instrumenting applications automatically using the OpenTelemetry instrumentation for Ruby covers most needs. Manually instrumenting your application is only necessary when, for example, you need to add custom attributes to spans or need to manually generate spans.
 
 Libraries installation
 =========================================
 
-With manual instrumentation, you can install and activate instrumentation libraries separately. This lets you control which gems Ruby retrieves when building your project. 
+With manual instrumentation, you can install and activate instrumentation libraries separately or altogether. This lets you control which gems Ruby retrieves when building your project. 
 
 To learn how to manually instrument a Ruby application, see :new-page:`https://opentelemetry.io/docs/instrumentation/ruby/manual/` at OpenTelemetry.io.
 
-To install and activate an instrumentation library manually:
+To install and activate an individual instrumentation library manually:
 
 #. Install the instrumentation library using ``gem install`` or by including it in the project's Gemfile. For example, to install the Sinatra instrumentation, add the following to your Gemfile:
 
@@ -24,13 +24,31 @@ To install and activate an instrumentation library manually:
       
       gem "opentelemetry-instrumentation-sinatra", "~> 0.21"
 
-#. In a block passed to the ``Splunk::Otel.configure`` method, configure the SDK to use each of the instrumentation libraries. In the case of the Sinatra instrumentation, the block would look like the following example:
+#. In a block passed to the ``OpenTelemetry::sdk.configure`` method, configure the SDK to use each of the instrumentation libraries. In the case of the Sinatra instrumentation, the block would look like the following example:
 
    .. code-block:: ruby
 
-      require "splunk/otel"
-      Splunk::Otel.configure do |c|
-      c.use "OpenTelemetry::Instrumentation::Sinatra", { opt: "value" }
+      require "opentelemetry/sdk"
+      OpenTelemetry::SDK.configure do |c|
+         c.use "OpenTelemetry::Instrumentation::Sinatra", { opt: "value" }
+      end
+
+To install all instrumentation libraries, follow these steps:
+
+#. Install the OpenTelemetry instrumentation libraries:
+
+   .. code-block:: bash
+
+         bundle add opentelemetry-sdk opentelemetry-instrumentation-all
+
+#. In a block passed to the ``OpenTelemetry::sdk.configure`` method, configure the SDK to use all instrumentation libraries:
+
+   .. code-block:: ruby
+
+      require "opentelemetry/sdk"
+      require "opentelemetry/instrumentation/all"
+      OpenTelemetry::SDK.configure do |c|
+         c.use_all()
       end
 
 .. _instrument-ruby-rails-upstream:
@@ -57,9 +75,9 @@ To instrument a Ruby on Rails application, follow these steps:
    .. code:: ruby
 
       # config/initializers/opentelemetry.rb
-      require "splunk/otel"
+      require "opentelemetry/sdk"
       ...
-      Splunk::Otel.configure do |c|
+      OpenTelemetry::SDK.configure do |c|
       c.use_all()
       end
 
@@ -67,7 +85,7 @@ To instrument a Ruby on Rails application, follow these steps:
 
    .. code:: ruby
 
-      Splunk::Otel.configure do |c|
+      OpenTelemetry::SDK.configure do |c|
       c.use_all({ 'OpenTelemetry::Instrumentation::ActiveRecord' => { enabled: false } })
       end
 
@@ -75,7 +93,7 @@ To instrument a Ruby on Rails application, follow these steps:
 
    .. code:: ruby
 
-      Splunk::Otel.configure do |c|
+      OpenTelemetry::SDK.configure do |c|
       c.use 'OpenTelemetry::Instrumentation::Rails'
       end
 

@@ -84,8 +84,6 @@ If you need to send data directly to Splunk Observability Cloud, follow these st
 
     .. code-block:: bash
 
-        export SPLUNK_REALM="<splunk-realm>"
-        export SPLUNK_ACCESS_TOKEN="<splunk-access-token>"
         export OTEL_EXPORTER_OTLP_ENDPOINT="http://localhost:4317"
 
     Replace ``<realm>`` with your Splunk Observability Cloud realm and ``<access-token>`` with your Splunk Observability Cloud access token with ingest permissions.
