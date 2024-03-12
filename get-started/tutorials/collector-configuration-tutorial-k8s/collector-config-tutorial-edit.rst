@@ -20,6 +20,8 @@ By default, the Helm chart for the Splunk Distribution of OpenTelemetry Collecto
 
 :new-page:`Download the default values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` file and open it using your favorite code or text editor. Take a moment to scroll through the values.yaml file and examine its structure.
 
+.. note:: As you'll create and edit Helm configurations during this tutorial, create a directory you can use to store the files and find them later on.
+
 
 Configure the Splunk HEC endpoint and token
 ============================================

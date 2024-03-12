@@ -91,8 +91,6 @@ After successfully installing the Helm chart, messages similar to the following 
    LAST DEPLOYED: Thu Feb 29 18:01:36 2024
    NAMESPACE: default
    STATUS: deployed
-   REVISION: 1
-   TEST SUITE: None
    NOTES:
    Splunk OpenTelemetry Collector is installed and configured to send data to Splunk Observability realm <realm>.
 

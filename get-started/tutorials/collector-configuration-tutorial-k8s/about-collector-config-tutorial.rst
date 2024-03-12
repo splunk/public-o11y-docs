@@ -44,7 +44,7 @@ Follow the tutorial parts in order:
 
     <h2>Prerequisites</h2>
 
-To get the most out of this tutorial, you need an operating system capable of running minikube and Helm, such as Linux, Windows, or macOS. This tutorial uses macOS as the operating system.
+To get the most out of this tutorial, you need an operating system capable of running Minikube and Helm, such as Linux, Windows, or macOS. This tutorial uses macOS as the operating system.
 
 Additionally, you must have your Splunk Observability Cloud realm and access token to deploy the Splunk Distribution of OpenTelemetry Collector. For more information, see :ref:`admin-org-tokens`.
 
