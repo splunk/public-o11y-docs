@@ -4,9 +4,11 @@ Sumo Logic integration for Splunk On-Call
 ***************************************************
 
 .. meta::
-    :description: Configure the <integrationName> integration for Splunk On-Call.
+    :description: Configure the Sumo Logic integration for Splunk On-Call.
 
-<Add description of the integration here>
+Sumo Logic is the industry's leading secure and purpose-built
+cloud-based machine data analytics service that leverages big data for
+real-time IT insights.
 
 Requirements
 ==================
@@ -18,13 +20,9 @@ This integration is compatible with the following versions of Splunk On-Call:
 - Enterprise
 
 
-Sumo Logic is the industry's leading secure and purpose-built
-cloud-based machine data analytics service that leverages big data for
-real-time IT insights.
-
 This integration uses the Sumo Logic “Connections” option to send
 webhooks to the Splunk On-Call REST endpoint, creating incidents in the
-timeline. The following guide describes the steps needed to
+timeline. The remainder of this guide describes the steps needed to
 integrate the two platforms.
 
 Splunk On-Call configuration
@@ -39,7 +37,7 @@ actual routing key you intend to use.
 Sumo Logic configuration
 ---------------------------
 
-From the main dashboard select **Manage** then **Connections.**
+From the main dashboard, select **Manage** then **Connections.**
 
 .. image:: /_images/spoc/Sumo2.png
    :alt: sumo2
@@ -60,9 +58,10 @@ Select the **Webhook** connection type.
 
    sumo4
 
-Give the Connection a name and description and pPaste in the URL you got
+Give the connection a name and description and paste in the URL you got
 from the Splunk On-Call portal. No Authorization Header is needed. 
-Copy the following JSON payload and paste it into the “Payload” box.
+
+Copy the following JSON payload and paste it into the “Payload” box:
 
 .. note:: Depending on your scheduled search settings, you may want to use :guilabel:`SearchQuery` for the "state\_message" field in place of :guilabel:`SearchDescription`.
 
