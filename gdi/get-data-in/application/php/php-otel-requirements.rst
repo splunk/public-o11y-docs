@@ -25,7 +25,7 @@ To send application traces and spans to Splunk Observability Cloud, install the 
 Supported libraries and frameworks
 =================================================
 
-The SignalFx Tracing Library for PHP instruments the following libraries and frameworks:
+The OpenTelemetry instrumentation supports the following libraries:
 
 .. list-table::
    :widths: 60 40

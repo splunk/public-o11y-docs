@@ -7,14 +7,16 @@ Zero Configuration Auto Instrumentation for Windows .NET applications
 .. _install-the-package-dotnet:
 
 .. meta::
-    :description: How to activate zero configuration automatic instrumentation for Linux .NET applications and thus collect and send traces to Splunk Application Performance Monitoring (APM) without altering your code.
+    :description: How to activate zero configuration automatic instrumentation for Windows .NET applications and thus collect and send traces to Splunk Application Performance Monitoring (APM) without altering your code.
 
 Zero Configuration Auto Instrumentation for OpenTelemetry .NET activates automatic instrumentation for .NET applications running on Windows. After installing the package, you must start or restart any .NET applications that you want to instrument.
+
+.. note:: The SignalFx instrumentation for .NET is deprecated and will reach end of support on February 21, 2025. To learn how to migrate from SignalFx .NET to OpenTelemetry .NET, see :ref:`migrate-signalfx-dotnet-to-dotnet-otel`.
 
 Install the package
 =========================================================
 
-By default, the installer script only installs the Collector. If you add the ``with_dotnet_instrumentation`` parameter, the script also downloads and installs the SignalFx Instrumentation for .NET. 
+By default, the installer script only installs the Collector. If you add the ``with_dotnet_instrumentation`` parameter, the script also downloads and installs the Splunk Distribution of OpenTelemetry .NET. 
 
 Run the PowerShell script with the ``with_dotnet_instrumentation`` parameter, as shown in the following example:
 
@@ -37,14 +39,14 @@ Do the following to customize the command:
 Configure the .NET instrumentation
 ==========================================================
 
-To configure the instrumentation, see :ref:`advanced-dotnet-configuration`.
+To configure the instrumentation, see :ref:`advanced-dotnet-otel-configuration`.
 
 .. _upgrade-the-package-dotnet:
 
 Upgrade the package
 ==========================
 
-You can upgrade the package by installing a new version of the SignalFx Instrumentation for .NET. See :ref:`instrument-dotnet-applications`.
+You can upgrade the package by installing a new version of the Splunk Distribution of OpenTelemetry .NET. See :ref:`instrument-otel-dotnet-applications`.
 
 Troubleshooting
 ===========================

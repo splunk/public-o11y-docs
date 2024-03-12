@@ -150,7 +150,7 @@ You can control data import with the following options:
 Control data import using namespaces
 --------------------------------------------------------------------------------
 
-To limit the amount of AWS data to import, reduce the number of namespaces to pull data from:
+To limit the amount of AWS data to import, reduce the number of namespaces (services) to pull data from:
 
 * Specify a subset of :strong:`built-in namespaces` to import data from. On the UI, go to :guilabel:`Select built-in services to collect data from`, then choose the specific namespaces you want to work with. You can specify multiple built-in services.
    
@@ -175,7 +175,7 @@ You can specify filters to limit the data you want to import for a specific name
 
   * If you're polling AWS data, you can filter built-in services with synced metadata based on AWS tags, metric names, or dimensions. Filters can either be inclusive or exclusive. 
 
-  * If you're streaming AWS data, you can filter built-in services with synced metadata by metric name and dimensions. You can only use inclusive filters.
+  * If you're streaming AWS data, you can filter built-in services with synced metadata by metric name and dimensions. You can only use inclusive filters. Tag filtering is not available.
 
   * For services without metadata (including custom namespaces), you can only filter by metric names.
 

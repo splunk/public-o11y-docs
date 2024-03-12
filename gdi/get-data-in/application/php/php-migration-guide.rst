@@ -33,13 +33,15 @@ To migrate from the SignalFx Tracing Library for PHP to the OpenTelemetry instru
 Uninstall the SignalFx Tracing Library for PHP
 ---------------------------------------------------
 
-To uninstall the SignalFx Tracing Library for PHP, run the following command:
+1. To uninstall the SignalFx Tracing Library for PHP, run the following command:
 
 .. code-block:: shell
 
    php signalfx-setup.php --uninstall
 
-Make sure that your .ini file doesn't contain references to ``signalfx-tracing.so`` and that the extension file has been removed. Optionally, you can delete the /opt/signalfx/signalfx-library directory.
+2. Make sure that your INI file doesn't contain references to ``signalfx-tracing.so`` and that the extension file is removed.
+
+3. Optionally, delete the /opt/signalfx/signalfx-library directory.
 
 .. _changes-functionality-php-otel:
 

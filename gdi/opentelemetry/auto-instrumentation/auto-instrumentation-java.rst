@@ -61,6 +61,6 @@ Follow the instructions from the following list:
     <h2>Learn more</h2>
   </embed>
 
-- Instrumentation sends trace data to Splunk APM. Learn :ref:`what you can do with Splunk APM <wcidw-apm>`.
+- Instrumentation sends trace data to Splunk APM. Learn :ref:`get-started-apm`.
 - Learn more about the :ref:`features of the Splunk Distribution of OpenTelemetry Java <splunk-java-otel-dist>`.
 - :ref:`java-otel-performance`.

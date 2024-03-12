@@ -1,8 +1,8 @@
 .. caution::
 
-   The SignalFx Tracing Library for PHP is deprecated as of February 21, 2024 and will reach End of Support on February 21 2025. Until then, only critical security fixes and bug fixes will be provided. After the date, the library will be archived and no longer maintained.
+   The SignalFx Tracing Library for PHP is deprecated as of February 21, 2024 and will reach End of Support (EOS) on February 21 2025. Until then, only critical security fixes and bug fixes will be provided. After the EOS date, the library will be archived and no longer maintained.
 
-   If you want to instrument new or existing PHP applications, use :ref:`OpenTelemetry PHP instrumentation <get-started-php>`, which offers similar capabilities.
+   If you want to instrument new or existing PHP applications, use :ref:`OpenTelemetry PHP instrumentation <get-started-php>`, which offers similar functionalities.
 
 .. _advanced-php-configuration:
 
@@ -20,9 +20,9 @@ The following sections describe all available settings for configuring the Signa
 General settings
 =========================================================================
 
-The following settings are specific to the Splunk Distribution of OpenTelemetry Python:
+Use the following settings to configure the SignalFx Tracing Library for PHP:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
 
    * - Environment variable
@@ -46,7 +46,7 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
    * - ``SIGNALFX_CAPTURE_REQUEST_HEADERS``
      - Comma-separated list of incoming request headers to turn into spans. For example, ``User-Agent`` is captured as ``http.request.headers.user_agent``.
    * - ``SIGNALFX_ACCESS_TOKEN``
-     - Splunk authentication token that lets the library send data directly to Splunk Observability Cloud. Unset by default. Not required unless you need to send data to the Splunk Observability Cloud ingest endpoint. See :ref:`export-directly-to-olly-cloud-php` for more information.
+     - Splunk Observability Cloud authentication token that lets the library send data directly to Splunk Observability Cloud. Unset by default. Not required unless you need to send data to the Splunk Observability Cloud ingest endpoint. See :ref:`export-directly-to-olly-cloud-php` for more information.
 
 .. _tracing-cli-sessions:
 
@@ -61,7 +61,7 @@ To trace the CLI SAPI functionality, you have to activate it manually using the 
    php artisan migrate:fresh
    php myTracedCliScript.php
 
-.. caution:: This SAPI is deactivated by default to avoid undesired tracing of system activity.
+This SAPI is deactivated by default to avoid undesired tracing of system activity.
 
 .. _server-trace-information-php:
 
@@ -72,9 +72,9 @@ To connect Real User Monitoring (RUM) requests from mobile and web applications 
 
 .. code-block::
 
-   Access-Control-Expose-Headers: Server-Timing 
+   Access-Control-Expose-Headers: Server-Timing
    Server-Timing: traceparent;desc="00-<serverTraceId>-<serverSpanId>-01"
 
-The ``Server-Timing`` header contains the ``traceId`` and ``spanId`` parameters in ``traceparent`` format. For more information, see the Server-Timing and traceparent documentation on the W3C website.
+The ``Server-Timing`` header contains the ``traceId`` and ``spanId`` parameters in ``traceparent`` format. For more information, see the ``Server-Timing`` and ``traceparent`` documentation on the W3C website.
 
 .. note:: If you need to deactivate trace response headers, set ``SIGNALFX_TRACE_RESPONSE_HEADER_ENABLED`` to ``false`` or set the ``signalfx.trace.response_header_enabled`` option in your INI file to ``false``.

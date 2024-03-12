@@ -1,7 +1,7 @@
 .. _instrument-php-otel-applications:
 
 *******************************************************************************
-Instrument your PHP application for Splunk Observability Cloud (OpenTelemetry)
+Instrument your PHP application for Splunk Observability Cloud
 *******************************************************************************
 
 .. meta::
@@ -9,7 +9,7 @@ Instrument your PHP application for Splunk Observability Cloud (OpenTelemetry)
 
 The OpenTelemetry PHP extension automatically instruments PHP applications using a PHP extension and available instrumentation libraries. You can send telemetry to the Splunk Distribution of OpenTelemetry Collector or directly to the Splunk Observability Cloud ingest endpoint.
 
-To get started, use the guided setup or follow the instructions manually.
+To get started, use the guided setup or follow the instructions to install manually.
 
 Generate customized instructions using the guided setup
 ====================================================================
@@ -30,11 +30,11 @@ To generate all the basic installation commands for your environment and applica
 Install the Splunk Distribution of OpenTelemetry PHP manually
 ==================================================================
 
-Follow these steps to install and automatically instrument your PHP application:
+If you don't use the guided setup, follow these steps to manually install and automatically instrument your PHP application:
 
 1. Check that you meet the requirements. See :ref:`php-otel-requirements`.
 
-2. Install the OpenTelemetry PHP extension using PECL:
+2. Install the OpenTelemetry PHP extension using PECL in the command line:
 
    .. code-block:: bash
 

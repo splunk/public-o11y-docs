@@ -32,7 +32,7 @@ To generate all the basic installation commands for your environment and applica
 Install the Splunk Distribution of OpenTelemetry Ruby manually
 ==================================================================
 
-Follow these instructions to install the Splunk Distribution of OpenTelemetry Ruby:
+If you don't use the guided setup, follow these instructions to manually install the Splunk Distribution of OpenTelemetry Ruby:
 
 - :ref:`install-enable-ruby-agent`
 - :ref:`configure-ruby-instrumentation`

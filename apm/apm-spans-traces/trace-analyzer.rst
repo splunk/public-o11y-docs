@@ -57,11 +57,11 @@ The following table presents what each APM tool is best suited for:
 Explore your trace data
 =========================
 
-To open Trace Analyzer, select :guilabel:`Traces` in Splunk APM and select :guilabel:`Switch to Trace Analyzer`. To switch back to the classic traces view, select :guilabel:`Switch to Classic View`. See :ref:`trace-search` for more info about the classic traces view.
+To open Trace Analyzer, select :guilabel:`Traces` in Splunk APM and select :guilabel:`Switch to Trace Analyzer`. To switch back to the classic Traces page, select :guilabel:`Switch to Classic View`. See :ref:`trace-search` for more info about the classic traces view.
 
 To explore your trace data, use the following controls, which are numbered as callouts in the image. Additional details for each callout follow the image:
 
-..  image:: /_images/apm/trace-analyzer/TraceAnalyzerControls+duration.png
+..  image:: /_images/apm/trace-analyzer/TraceAnalyzerControlsDuration.png
     :width: 95%
     :alt: Elements of the Trace Analyzer user interface, described in the list after this image.
 
@@ -138,7 +138,10 @@ Within the Trace Analyzer interface, there are 3 different display limits, numbe
 Learn more
 =====================
 
-See the following links for more information on Trace Analyzer: 
+See the following links for more information on Trace Analyzer and traces in Splunk APM: 
 
 * :ref:`apm-scenario-trace-analyzer`
 * :ref:`apm-scenario-trace-analyzer-trace-duration`
+* :ref:`apm-download-traces`
+* :ref:`apm-special-traces`
+* :ref:`apm-extended-trace-retention`

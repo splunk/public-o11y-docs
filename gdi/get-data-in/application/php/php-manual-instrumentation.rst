@@ -11,12 +11,12 @@ The OpenTelemetry instrumentation for PHP provides a base you can build on by ad
 
 .. _custom-traces-otel-php:
 
-Create custom traces
+Create custom spans and traces
 ===============================
 
 To create custom spans and traces, follow these steps:
 
-1. Create a ``TracerProvider`` if you aren't using an instrumentation library:
+1. Create a ``TracerProvider`` entry point if you aren't using an instrumentation library:
 
    .. code-block:: php
 
@@ -50,7 +50,7 @@ To create custom spans and traces, follow these steps:
          return $result;
       }
 
-4. Optionally, set attributes:
+4. Optionally, set attributes to enrich your spans's metadata:
 
    .. code:: php
 
@@ -75,7 +75,7 @@ To create custom metrics, follow these steps:
 
       require 'vendor/autoload.php';
 
-2. Create a ``MeterProvider``:
+2. Create a ``MeterProvider`` entry point:
 
    .. code:: php
 

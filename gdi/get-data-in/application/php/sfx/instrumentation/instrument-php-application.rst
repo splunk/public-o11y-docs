@@ -1,13 +1,13 @@
 .. caution::
 
-   The SignalFx Tracing Library for PHP is deprecated as of February 21, 2024 and will reach End of Support on February 21 2025. Until then, only critical security fixes and bug fixes will be provided. After the date, the library will be archived and no longer maintained.
+   The SignalFx Tracing Library for PHP is deprecated as of February 21, 2024 and will reach End of Support (EOS) on February 21 2025. Until then, only critical security fixes and bug fixes will be provided. After the EOS date, the library will be archived and no longer maintained.
 
-   If you want to instrument new or existing PHP applications, use :ref:`OpenTelemetry PHP instrumentation <get-started-php>`, which offers similar capabilities.
+   If you want to instrument new or existing PHP applications, use :ref:`OpenTelemetry PHP instrumentation <get-started-php>`, which offers similar functionalities.
 
 .. _instrument-php-applications:
 
 ***************************************************************************
-Instrument your PHP application for Splunk Observability Cloud
+Instrument your PHP application for Splunk Observability Cloud (deprecated)
 ***************************************************************************
 
 .. meta::
@@ -38,7 +38,7 @@ To generate all the basic installation commands for your environment and applica
 Install the SignalFx Tracing Library for PHP manually
 ==================================================================
 
-Follow these instructions to install the SignalFx Tracing Library for PHP:
+If you don't use the guided setup, follow these instructions to manually install the SignalFx Tracing Library for PHP:
 
 #. :ref:`install-php-instrumentation`
 #. :ref:`deploy-php`
@@ -54,7 +54,7 @@ Follow these steps to automatically instrument your application:
 #. Check that you meet the requirements. See :ref:`php-requirements`.
 
 #. Download the installation script from the following location:
-   
+
    .. code-block:: shell
 
       curl -LO  https://github.com/signalfx/signalfx-php-tracing/releases/latest/download/signalfx-setup.php
@@ -89,7 +89,7 @@ Follow these steps to automatically instrument your application:
             export SIGNALFX_ENDPOINT_URL='http://localhost:9080/v1/trace'
             export SIGNALFX_TRACE_GLOBAL_TAGS="deployment.environment:<my_environment>"
 
-         .. caution:: Set environment variables globally or using the start script of your PHP application.
+         Set environment variables globally or using the start script of your PHP application.
 
 #. Restart your server.
 
@@ -109,7 +109,7 @@ You can use the ``signalfx-setup.php`` script to set INI file options without ha
 .. code-block:: shell
 
    php signalfx-setup.php --update-config --signalfx.endpoint_url=http://172.17.0.1:9080/v1/trace
-   
+
 This is useful for options common to all PHP services running in the system, like endpoints.
 
 .. _deploy-php:
@@ -117,7 +117,11 @@ This is useful for options common to all PHP services running in the system, lik
 Deploy the PHP instrumentation in your environment
 =====================================================
 
-You can deploy the PHP instrumentation in Docker, Kubernetes, or send data directly to Splunk Observability Cloud. See the following sections for more information.
+You can deploy the PHP instrumentation in Docker or, Kubernetes, or you can send data directly to Splunk Observability Cloud. See the following sections for instructions for your environment:
+
+* :ref:`docker_php`
+* :ref:`kubernetes_php`
+* :ref:`export-directly-to-olly-cloud-php`
 
 .. _docker_php:
 
@@ -140,7 +144,7 @@ You can deploy the PHP instrumentation using Docker. Follow these steps to get s
       php signalfx-setup.php --update-config --signalfx.access_token=<access_token>
       php signalfx-setup.php --update-config --signalfx.service_name=<service-name>
 
-#. Add a line to the script to start the application using ``supervisorctl``, ``supervisord``, ``systemd``, or similar. The following example uses ``supervisorctl``:
+#. Add a line to the script to start the application using the ``supervisorctl``, ``supervisord``, ``systemd``, or a similar command. The following example uses ``supervisorctl``:
 
    .. code-block:: shell
 
@@ -148,9 +152,9 @@ You can deploy the PHP instrumentation using Docker. Follow these steps to get s
 
 #. Add a command to run the newly created shell script at the end of the Dockerfile.
 
-#. Rebuild the container using ``docker build``.
+#. Rebuild the container using the ``docker build`` command.
 
-Next, configure the PHP instrumentation for Splunk Observability Cloud. See :ref:`advanced-php-configuration` for more information.
+Next, configure the PHP instrumentation for Splunk Observability Cloud. See :ref:`advanced-php-configuration`.
 
 .. caution:: Make sure to deactivate the ``Xdebug`` extension, as it's not compatible with the PHP instrumentation.
 
@@ -182,23 +186,23 @@ The following example shows how to update a deployment to expose environment var
          - name: myapp
            image: <image-name>
            env:
-             - name: SIGNALFX_PHP_LIBRARY
+             - name: HOST_IP
                valueFrom:
                  fieldRef:
                    fieldPath: status.hostIP
              - name: SIGNALFX_SERVICE_NAME
                value: "<service-name>"
              - name: SIGNALFX_ENDPOINT_URL
-               value: "http://<endpoint>:9080/v1/trace"
+               value: "http://$(HOST_IP):9411/api/v2/spans"
              - name: SIGNALFX_TRACE_GLOBAL_TAGS
                value: "deployment.environment:<my_environment>"
 
-Next, configure the PHP instrumentation for Splunk Observability Cloud. See :ref:`advanced-php-configuration` for more information.
+Next, configure the PHP instrumentation for Splunk Observability Cloud. See :ref:`advanced-php-configuration`.
 
 .. _export-directly-to-olly-cloud-php:
 
 Send data directly to Splunk Observability Cloud
-=====================================================
+-----------------------------------------------------
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
@@ -216,6 +220,8 @@ To bypass the OTel Collector and send data directly to Splunk Observability Clou
       export SIGNALFX_ACCESS_TOKEN=<access_token>
       export SIGNALFX_ENDPOINT_URL=https://ingest.<realm>.signalfx.com/v2/trace/signalfxv1
 
+.. include:: /_includes/gdi/apm-api-define-host.rst
+
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
 To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
@@ -223,8 +229,3 @@ To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 Next, configure the PHP instrumentation for Splunk Observability Cloud. See :ref:`advanced-php-configuration` for more information.
 
 .. note:: For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
-
-Specify the source host
------------------------------------------------
-
-.. include:: /_includes/gdi/apm-api-define-host.rst

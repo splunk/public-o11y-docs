@@ -179,7 +179,7 @@ After configuring values.yaml, use the following command to deploy the Helm Char
 
 .. code-block:: bash
 
-  helm install splunk-otel-collector -f ./values.yaml
+  helm install splunk-otel-collector -f ./values.yaml splunk-otel-collector-chart/splunk-otel-collector
 
 .. _verify-otel-resources-dotnet-k8s:
       
