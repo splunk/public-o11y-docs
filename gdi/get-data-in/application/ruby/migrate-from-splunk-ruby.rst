@@ -7,7 +7,7 @@ Migrate from the Splunk Ruby agent to the OpenTelemetry instrumentation for Ruby
 .. meta:: 
     :description: Learn how to migrate from the deprecated Splunk Distribution of OpenTelemetry Ruby to the upstream OpenTelemetry instrumentation for Ruby.
 
-The Splunk Distribution of OpenTelemetry Ruby is deprecated. Use this guide to learn how to migrate from the Splunk Ruby agent to the upstream OpenTelemetry instrumentation for Ruby.
+The Splunk Distribution of OpenTelemetry Ruby has been deprecated as of March 8, 2024, and will reach end of support on March 8, 2025. Use this guide to learn how to migrate from the Splunk Ruby agent to the upstream OpenTelemetry instrumentation for Ruby.
 
 Compatibility and requirements
 =============================================

@@ -4,7 +4,7 @@
 Instrument Ruby applications for Splunk Observability Cloud
 ***************************************************************
 
-.. caution:: The Splunk Distribution for OpenTelemetry Ruby is deprecated in favor of the upstream OpenTelemetry instrumentation for Ruby. To migrate from the Splunk agent to the OpenTelemetry instrumentation, see :ref:`migrate-from-splunk-ruby`.
+.. caution:: The Splunk Distribution for OpenTelemetry Ruby has been deprecated since March 8, 2024, and it will reach end of support on March 8, 2025. To migrate from the Splunk Ruby agent to the OpenTelemetry instrumentation for Ruby, see :ref:`migrate-from-splunk-ruby`.
 
 .. meta::
    :description: Instrument Ruby applications automatically to export spans and metrics to Splunk Observability Cloud.
