@@ -38,7 +38,7 @@ To generate all the basic installation commands for your environment and applica
 Install the SignalFx Instrumentation for .NET manually
 ==================================================================
 
-Follow these instructions to install the SignalFx Instrumentation for .NET:
+If you don't use the guided setup, follow these instructions to manually install the SignalFx Instrumentation for .NET:
 
 - :ref:`install-dotnet-instrumentation`
 - :ref:`instrument-windows-service`

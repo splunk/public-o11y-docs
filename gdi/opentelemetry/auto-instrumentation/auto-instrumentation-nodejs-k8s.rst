@@ -179,7 +179,7 @@ After configuring values.yaml, use the following command to deploy the Helm Char
 
 .. code-block:: bash
 
-   helm install splunk-otel-collector -f ./values.yaml
+   helm install splunk-otel-collector -f ./values.yaml splunk-otel-collector-chart/splunk-otel-collector
 
 .. _nodejs-k8s-verify-resources:
 
@@ -343,7 +343,7 @@ For example, if you want every span to include the key-value pair ``build.id=feb
 
 You can also use the methods shown in :ref:`zeroconfig-nodejs-traces` to configure your instrumentation with the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable and other environment variables.
 
-See :ref:`advanced-nodejs-otel-configuration` for the full list of supported environment variables.
+See :ref:`advanced-config-auto-instrumentation` for more information.
 
 .. _troubleshooting-zeroconfig-nodejs-k8s:
 

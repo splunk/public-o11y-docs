@@ -30,7 +30,7 @@ To generate all the basic installation commands for your environment and applica
 Install the Splunk Distribution of OpenTelemetry Java manually
 ==================================================================
 
-Follow these instructions to install the Splunk Distribution of OpenTelemetry Java:
+If you don't use the guided setup, follow these instructions to manually install the Splunk Distribution of OpenTelemetry Java:
 
 - :ref:`install-enable-jvm-agent`
    - :ref:`enable_profiling_java`

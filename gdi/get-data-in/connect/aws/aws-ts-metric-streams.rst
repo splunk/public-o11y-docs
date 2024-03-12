@@ -11,7 +11,7 @@ See the following topics when experiencing Metric Streams issues from AWS.
 
 .. note::
 
-  See also :ref:`aws-troubleshooting` and :ref:`aws-ts-logs`.
+  See also :ref:`aws-troubleshooting`.
 
 I've enabled Metric Streams in my AWS integration but I do not see any metrics streaming in
 ==================================================================================================

@@ -99,6 +99,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`kubelet-stats-receiver` (``kubeletstats``)
      - Pulls pod metrics from the API server on a kubelet.
      - Metrics
+   * - :ref:`mongodb-receiver` (``mongodb``)
+     - Fetches stats from a MongoDB instance using the Golang ``mongo`` driver. 
+     - Metrics
    * - :ref:`mongodb-atlas-receiver` (``mongodbatlas``)
      - Retrieves metrics from MongoDB Atlas using their monitoring APIs.
      - Metrics
@@ -141,6 +144,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`sqlquery-receiver` (``sqlquery``)
      - Runs custom SQL queries to generate metrics from a database connection.
      - Metrics
+   * - :ref:`sshcheck-receiver` (``sshcheck``)
+     - Creates stats by connecting to an SSH server, might be an SFTP server.
+     - Metrics
    * - :ref:`statsd-receiver` (``statsd``)
      - Collects StatsD messages to generate metrics.
      - Metrics
@@ -153,6 +159,12 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`udp-logs-receiver` (``udplog``) 
      - Receives logs over UDP.
      - Logs
+   * - :ref:`vcenter-receiver` (``vcenter``) 
+     - Supports ESXi and vCenter.
+     - Metrics
+   * - :ref:`wavefront-receiver` (``wavefront``) 
+     - Accepts metrics and depends on the ``carbon`` receiver proto and transport.
+     - Metrics      
    * - :ref:`windowseventlog-receiver` (``windowseventlog``)
      - Tails and parses logs from the Windows Event log API.
      - Logs
@@ -250,6 +262,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`kafka-exporter` (``kafka``)
      - Exports metrics, logs, and traces to Kafka using a synchronous producer. 
      - Metrics, logs, traces
+   * - :ref:`loadbalancing-exporter` (``loadbalancing``)
+     - Exports spans, metrics and logs depending on the ``routing_key`` configured.
+     - Metrics, logs, traces
    * - :ref:`logging-exporter` (``logging``)
      - Exports data to the console. By default, ``logging`` doesn't send its output to Windows Event Viewer. Run the Splunk Distribution of OpenTelemetry Collector directly from the PowerShell terminal to send output to the Windows Event Viewer.
      - Metrics, logs, traces
@@ -259,6 +274,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`otlphttp-exporter` (``otlphttp``)
      - Exports data in OTLP format over the HTTP protocol. 
      - Metrics, logs, traces
+   * - :ref:`pulsar-exporter` (``pulsar``)
+     - Exports logs, metrics, and traces to Pulsar. 
+     - Metrics, logs, traces     - 
    * - :ref:`signalfx-exporter` (``signalfx``)
      - Sends metrics, events, and trace correlation to Splunk Observability Cloud. 
      - Logs (events), metrics, traces (trace to metric correlation only)
@@ -290,6 +308,8 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
      - Detects and reports container endpoints discovered through the Docker API. Only containers that are in the state of ``Running`` and not ``Paused`` emit endpoints.
    * - :ref:`ecs-observer-extension` (``ecs_observer``)
      - Uses the ECS and EC2 API to discover Prometheus scrape targets from all running tasks and filter them based on service names, task definitions, and container labels. Only compatible with the Prometheus receiver.
+   * - :ref:`ecstask-observer-extension` (``ecs_task_observer``)
+     - Detects and reports container endpoints for the running ECS task of which your Collector instance is a member.
    * - :ref:`file-storage-extension` (``file_storage``)
      - Persists state to the local file system. Requires read and write access to a diectory.
    * - :ref:`health-check-extension` (``health_check``)

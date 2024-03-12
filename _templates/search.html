@@ -95,6 +95,7 @@
             eventCallback: parentCallback
         }
 
+        const language = window.location.pathname.includes('/ja/') ? 'ja' : 'en';
         return {
             customTheme,
             sortOptions,
@@ -102,7 +103,8 @@
             facets: "source_name_s,docProduct_s,docVersion_s",
             enableDateRangeFilter: true,
             env: window.location.hostname.includes('splunk') ? 'prod' : 'dev',
-            language: "en",
+            language: language,
+            suiLanguage: language,
             layoutTemplate: "docsResultLayout",
             analytics,
             analyticsConfig: {

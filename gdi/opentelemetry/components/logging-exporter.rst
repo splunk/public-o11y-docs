@@ -76,6 +76,15 @@ Available verbosity levels are ``basic``, ``normal``, and ``detailed``. The corr
          
 .. note:: The ``detailed`` verbosity level might increase resource consumption on the host. Deactivate the logging exporter after you've obtained sufficient samples.
 
+Review collected logs
+--------------------------
+
+To review logs produced by the logging exporter, run the following command:
+
+.. code-block:: bash
+
+   journalctl -u splunk-otel-collector.service -f
+
 Sample configurations
 ----------------------
 

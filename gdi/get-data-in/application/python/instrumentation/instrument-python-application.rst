@@ -33,7 +33,7 @@ To generate all the basic installation commands for your environment and applica
 Install the Splunk Distribution of OpenTelemetry Python manually
 ==================================================================
 
-Follow these instructions to install the Splunk Distribution of OpenTelemetry Python:
+If you don't use the guided setup, follow these instructions to manually install the Splunk Distribution of OpenTelemetry Python:
 
 - :ref:`install-enable-python-agent`
 - :ref:`configure-python-instrumentation`
