@@ -6,7 +6,7 @@ Part 2: Edit the configuration to filter and send logs to Splunk
 
 Now that you've installed the Splunk Distribution of OpenTelemetry Collector in your local Kubernetes cluster, you can edit the default configuration to modify or extend the capabilities of the Collector, for example by adding different :ref:`otel-components` or by editing existing settings.
 
-In the following steps, you're going to edit the configuration of the Collector using several YAML files and Helm. At the end of this part of the tutorial, you'll be able to:
+In the following steps, you're going to edit the configuration of the Collector using YAML files and Helm. At the end of this part of the tutorial, you'll be able to:
 
 1. Activate logs collection using :ref:`filelog-receiver` and the OpenTelemetry protocol (OTLP).
 2. Filter logs using :ref:`filter-processor`.
