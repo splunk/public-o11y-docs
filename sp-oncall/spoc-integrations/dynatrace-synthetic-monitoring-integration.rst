@@ -1,32 +1,40 @@
+.. _dynatrace-synthetic-monitoring:
+
+************************************************************************
 Dynatrace Synthetic Monitoring integration for Splunk On-Call
-**************************************************************
+************************************************************************
 
-Dynatrace Synthetic Monitoring simulates customer journeys from
-thousands of locations around the world, using all major desktop and
-mobile browsers. The following guide will walk you through this
-integration.
+.. meta::
+   :description: Dynatrace Synthetic Monitoring simulates customer journeys from thousands of locations around the world, using all major desktop and
+mobile browsers.
 
-In VictorOps
-------------
 
-From the VictorOps web portal, select **Settings** >> **Alert Behavior**
->> **Integrations**
+
+Dynatrace Synthetic Monitoring simulates customer journeys from thousands of locations around the world, using all major desktop and
+mobile browsers. The following guide will walk you through this integration.
+
+In Splunk On-Call
+========================
+
+#. From the Splunk On-Call web portal, select :guilabel:`Settings`, then :guilabel:`Alert Behaviors`. Finally, select :`Integrations`. 
 
 .. image:: /_images/spoc/Integration-ALL-FINAL.png
+    :width: 100%
 
-Select the **Dynatrace Synthetic** integration option.
+#. Select the :guilabel:`Dynatrace Synthetic` integration option.
 
-.. image:: /_images/spoc/Screen-Shot-2018-08-27-at-1.43.57-PM.png
+.. image:: /_images/spoc/dyna-synth-1.png
+    :width: 100%
 
-Copy the **Service API Key** to the clipboard.
+#. Copy the :guilabel:`Service API Key` to the clipboard.
 
-.. image:: /_images/spoc/Integration-Dynatrace-Page-final.png
+.. image:: /_images/spoc/dyna-synth-2.png
+    :width: 100%
 
-In Dynatrace Synthetic Monitoring
----------------------------------
+In Dynatrace Synthetic Monitoring
+=============================================
 
-From the Dynatrace Synthetic Monitoring web interface, click the menu
-icon in the upper-left corner, then select **Alerts** from the dropdown.
+#. From the Dynatrace Synthetic Monitoring web interface, select the menu icon in the upper-left corner, then select :guilabel:`Alerts` from the dropdown.
 
 .. image:: /_images/spoc/Operational_summary-Dynatrace_Synthetic.png
 
