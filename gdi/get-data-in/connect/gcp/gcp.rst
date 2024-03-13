@@ -245,6 +245,6 @@ To track the degree of OpenTelemetry enablement in your GCP integrations:
 To validate your setup, examine the details of your GCP integration as displayed in the list at the end of the setup page.
 
 * For details about the metrics provided by an GCP integration, see :ref:`gcp-metrics`.
-* To send logs from Azure to Splunk Observability Cloud, follow the instructions in :ref:`gcp-logs`.
+* To send logs from GCP to Splunk Observability Cloud, follow the instructions in :ref:`gcp-logs`.
 * Learn about Splunk Observability Cloud's :ref:`GCP Infrastructure Monitoring options <infrastructure-gcp>`. 
 * To learn more about Splunk Observability Cloud's data model, refer to :ref:`data-model`.
