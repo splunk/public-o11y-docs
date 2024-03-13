@@ -80,7 +80,7 @@ Splunk On-Call integrations
    victorops-dotcommonitor-integration
    dripstat-integration
    victorops-dynatrace-integration
-   victorops-dynatrace-synthetic-monitoring-integration
+   dynatrace-synthetic-monitoring-integration
    victorops-googlevoice-integration
    victorops-hipchat-integration
    victorops-honeybadger-integration
@@ -90,7 +90,7 @@ Splunk On-Call integrations
    victorops-humio-integration
    icinga-integration.rst
    victorops-jenkins-integration
-   victorops-librato-integration
+   librato-integration
    victorops-librenms-integration
    victorops-logentries-integration
    victorops-loggly-integration
