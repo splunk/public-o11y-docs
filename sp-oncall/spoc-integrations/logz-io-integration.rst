@@ -15,8 +15,8 @@ In Splunk On-Call
 
 #. In Splunk On-Call, navigate to :guilabel:`Settings`, then :guilabel:`Alert Behavior`.
 #. Select :guilabel:`Integrations`, then the :guilabel:`REST` integration option.
-#. If the REST endpoint integration has not been enabled, select the green :guilabel:`Enable` button to generate your endpoint destination URL. 
-#. Copy the :strong:`URL to notify``:strong: to the clipboard.
+#. If the REST endpoint integration has not been enabled, select the green :guilabel:`Enable` button to generate your endpoint destination URL.
+#. Copy the :strong:`URL to notify` to the clipboard.
 
 .. image:: /_images/spoc/logz1.png
     :width: 100%

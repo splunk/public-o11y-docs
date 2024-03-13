@@ -1,3 +1,7 @@
+:orphan:
+
+.. START COPYING FROM THE LINE BELOW ..
+
 
 
 .. _topic-template-spoc:
