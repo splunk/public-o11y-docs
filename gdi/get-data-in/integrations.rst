@@ -329,7 +329,7 @@ The following AWS services send data to Infrastructure Monitoring:
     - :strong:`X`
     -
     - :strong:`X`
-    - 
+    - :strong:`X`
 
   * - AWS/Kinesis
     - Amazon Kinesis Streams
