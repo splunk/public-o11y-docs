@@ -14,6 +14,7 @@ Splunk On-Call integrations
    aws-cloudwatch-integration-guide
    azure-monitoring-integration-guide-victorops
    big-panda-integration-guide
+   bmc-truesight-pulse-integration
    cloudwisdom-integration
    coralogix-integration-guide
    delivery-insights-integration
@@ -65,7 +66,6 @@ Splunk On-Call integrations
    uptime-robot-integration-guide
    appdynamics-integration
    victorops-atatus-integration
-   victorops-bmc-truesight-pulse-integration
    victorops-bugsnag-integration
    victorops-cabot-integration
    victorops-catchpoint-integration
