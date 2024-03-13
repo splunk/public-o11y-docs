@@ -209,7 +209,7 @@ These are these permissions to allow Splunk Observability Cloud to collect AWS t
 - ``"ec2:DescribeReservedInstancesModifications"``
 - ``"ec2:DescribeTags"``
 - ``"ec2:DescribeVolumes"``
-- ``"ecS:DescribeClusters"``
+- ``"ecs:DescribeClusters"``
 - ``"ecs:DescribeServices"``
 - ``"ecs:DescribeTasks"``
 - ``"ecs:ListClusters"``
@@ -226,6 +226,8 @@ These are these permissions to allow Splunk Observability Cloud to collect AWS t
 - ``"elasticmapreduce:ListClusters"``
 - ``"es:DescribeElasticsearchDomain"``
 - ``"es:ListDomainNames"``
+- ``"kafka:DescribeClusterV2"``
+- ``"kafka:ListClustersV2"``
 - ``"kinesis:DescribeStream"``
 - ``"kinesis:ListShards"``
 - ``"kinesis:ListStreams"``
