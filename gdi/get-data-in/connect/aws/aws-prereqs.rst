@@ -209,7 +209,7 @@ These are these permissions to allow Splunk Observability Cloud to collect AWS t
 - ``"ec2:DescribeReservedInstancesModifications"``
 - ``"ec2:DescribeTags"``
 - ``"ec2:DescribeVolumes"``
-- ``"ecS:DescribeClusters"``
+- ``"ecs:DescribeClusters"``
 - ``"ecs:DescribeServices"``
 - ``"ecs:DescribeTasks"``
 - ``"ecs:ListClusters"``
