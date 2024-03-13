@@ -1,4 +1,4 @@
-.. _instrument-ruby-applications:
+.. _instrument-ruby-applications-distro:
 
 ***************************************************************
 Instrument your Ruby application for Splunk Observability Cloud
@@ -99,7 +99,7 @@ Follow these steps to automatically instrument your application using the Ruby a
 
          $env:OTEL_RESOURCE_ATTRIBUTES='deployment.environment=<envtype>,service.version=<version>'
 
-If no data appears in APM, see :ref:`common-ruby-troubleshooting`.
+If no data appears in APM, see :ref:`common-ruby-troubleshooting-distro`.
 
 If you want to manually install and activate instrumentation libraries, see :ref:`ruby-manual-instrumentation`.
 
@@ -113,7 +113,7 @@ To instrument a Ruby on Rails application, see :ref:`instrument-ruby-rails`.
 Activate server timing for RUM
 ---------------------------------------------
 
-You can connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data produced by your Ruby application or service. For more information, see :ref:`server-trace-information-ruby`.
+You can connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data produced by your Ruby application or service. For more information, see :ref:`server-trace-information-ruby-distro`.
 
 .. _configure-ruby-instrumentation:
 
@@ -122,7 +122,7 @@ Configure the Ruby agent
 
 In most cases, the only configuration setting you need to enter is the service name. You can also define other basic settings, like the deployment environment, the service version, and the endpoint, among others.
 
-For advanced configuration of the Ruby agent, like changing trace propagation formats, correlating traces and logs, or configuring server trace data, see :ref:`advanced-ruby-otel-configuration`.
+For advanced configuration of the Ruby agent, like changing trace propagation formats, correlating traces and logs, or configuring server trace data, see :ref:`advanced-ruby-otel-configuration-distro`.
 
 .. _kubernetes_ruby_agent:
 

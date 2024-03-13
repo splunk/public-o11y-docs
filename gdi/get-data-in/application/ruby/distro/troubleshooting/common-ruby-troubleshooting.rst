@@ -1,4 +1,4 @@
-.. _common-ruby-troubleshooting:
+.. _common-ruby-troubleshooting-distro:
 
 ******************************************************************
 Troubleshoot Ruby instrumentation for Splunk Observability Cloud
@@ -9,16 +9,16 @@ Troubleshoot Ruby instrumentation for Splunk Observability Cloud
 
 When you instrument a Ruby application using the Splunk Distribution of OpenTelemetry Ruby and you don't see your data in Splunk Observability Cloud, follow these troubleshooting steps.
 
-.. _basic-ruby-troubleshooting:
+.. _basic-ruby-troubleshooting-distro:
 
 Steps for troubleshooting Ruby OpenTelemetry issues
 =======================================================
 
 The following steps can help you troubleshoot Ruby instrumentation issues:
 
-#. :ref:`enable-ruby-debug-logging`.
+#. :ref:`enable-ruby-debug-logging-distro`.
 
-.. _enable-ruby-debug-logging:
+.. _enable-ruby-debug-logging-distro:
 
 Activate debug logging
 ==========================================================
@@ -31,7 +31,7 @@ Debug logging increases the verbosity of the Ruby instrumentation. This can help
 
 Make sure to unset the environment variable after the issue is resolved, as its output might overload systems if left on indefinitely.
 
-.. _ruby-trace-exporter-issues:
+.. _ruby-trace-exporter-issues-distro:
 
 Trace exporter issues
 =====================================================

@@ -17,7 +17,7 @@ Features of the Splunk Distribution of OpenTelemetry Ruby
 In addition to all the features of the OpenTelemetry Instrumentation for Ruby, like bundled exporters and propagators, the agent provides additional custom features:
 
 - Configured to send trace and span data to Splunk Observability Cloud using the OTel Collector..
-- Instrumentation for HTTP server frameworks that returns server trace information in HTTP responses. See :ref:`server-trace-information-ruby`.
+- Instrumentation for HTTP server frameworks that returns server trace information in HTTP responses. See :ref:`server-trace-information-ruby-distro`.
 - Automatic injection of trace metadata into application logs. See :ref:`correlate-traces-with-logs-ruby`.
 
 The agent of the Splunk Distribution of OpenTelemetry Ruby is supported by Splunk and is updated frequently, bringing bug fixes and new features to you before they are integrated in the upstream OTel repositories. See :new-page:`Upstream in the Splexicon <https://docs.splunk.com/Splexicon:Upstream>`.
@@ -29,9 +29,9 @@ Defaults of the Splunk Distribution of OpenTelemetry Ruby
 
 The Splunk Distribution of OpenTelemetry Ruby has the following default settings for context propagation, exporters, and trace settings:
 
-- W3C tracecontext and W3C baggage context propagation is activated by default. You can also configure B3 propagation. See :ref:`trace-propagation-configuration-ruby`.
+- W3C tracecontext and W3C baggage context propagation is activated by default. You can also configure B3 propagation. See :ref:`trace-propagation-configuration-ruby-distro`.
 - The OTLP gRPC exporter is configured by default to send spans to the local :ref:`Splunk OpenTelemetry Collector <otel-intro>`.
-- Unlimited defaults for trace configuration to support full-fidelity tracing. See :ref:`trace-configuration-ruby`.
+- Unlimited defaults for trace configuration to support full-fidelity tracing. See :ref:`trace-configuration-ruby-distro`.
 
 Support for previous versions
 =========================================================
