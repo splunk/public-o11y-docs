@@ -17,6 +17,7 @@ Instrument back-end applications to send spans to Splunk APM
    Instrument a Python application TOGGLE <python/get-started>
    Instrument a Ruby application TOGGLE <ruby/get-started-ruby>
    Instrument a PHP application TOGGLE <php/get-started>
+   Instrument a C++ application TOGGLE <cpp/get-started-cpp>
    Send spans from the Istio service mesh <istio/istio>
 
 You can instrument your back-end services and applications to send metrics and traces to Splunk Observability Cloud.
@@ -88,6 +89,7 @@ You can instrument applications in each of these languages using official Splunk
 - :ref:`Python <get-started-python>`
 - :ref:`Ruby <get-started-ruby>`
 - :ref:`PHP <get-started-php>`
+- :ref:`C++ <get-started-cpp>`
 
 To send spans from the Istio service mesh, see :ref:`get-started-istio`.
 
