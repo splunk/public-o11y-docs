@@ -70,6 +70,18 @@ If you don't use the guided setup, follow these steps to manually install and au
    See the :new-page:`OpenTelemetry PHP examples <https://github.com/signalfx/tracing-examples/tree/main/opentelemetry-tracing/opentelemetry-php>` in GitHub for sample instrumentation scenarios.
 
 
+.. _activate_rum_apm_php:
+
+Connect RUM to APM through server trace data
+===================================================================
+
+To connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data, add the OpenTelemetry server timing propagator as a dependency:
+
+.. code-block:: shell
+
+   php composer.phar install open-telemetry/opentelemetry-propagation-server-timing:^0.0.2
+
+
 .. _export-directly-to-olly-cloud-php-otel:
 
 Send data directly to Splunk Observability Cloud

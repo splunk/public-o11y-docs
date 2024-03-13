@@ -115,6 +115,8 @@ Add assertions
 
 You can make an assertion on two values. Add two parameters along with the comparison that you would like to perform between the two. There are three types of comparisons: string, numeric, and regular expression. For string and numeric comparisons, values are coerced to the comparison type before the comparison is made. For a regular expression comparison, the first parameter is a string and the second parameter is a regular expression. An assertion step fails if the assertion is false when the step runs.
 
+* Use :strong:`matches` to compare the string to a regex pattern.
+* Use :strong:`contains` checks for a substring.
 
 
 Example
