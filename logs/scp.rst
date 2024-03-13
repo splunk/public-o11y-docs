@@ -97,7 +97,7 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
 
 .. _download-certificate:
 
-1. Secure a connection to your Splunk Cloud Platform instance in Splunk Observability Cloud. To get help from Splunk Support, :ref:`Submit a support ticket <support-ticket>`. To do it yourself, add your public IPv4 address to your Splunk Cloud Platform allow list by following instructions in :new-page:`Add subnets to IP allow lists <https://docs.splunk.com/Documentation/SplunkCloud/latest/Admin/ConfigureIPAllowList#Add_subnets_to_IP_allow_lists>`. 
+8. Secure a connection to your Splunk Cloud Platform instance in Splunk Observability Cloud. To get help from Splunk Support, :ref:`Submit a support ticket <support-ticket>`. To do it yourself, add your public IPv4 address to your Splunk Cloud Platform allow list by following instructions in :new-page:`Add subnets to IP allow lists <https://docs.splunk.com/Documentation/SplunkCloud/latest/Admin/ConfigureIPAllowList#Add_subnets_to_IP_allow_lists>`. 
 
    If you are in a GCP environment, add the following additional IP addresses to your Splunk Cloud Platform allow list:
 
@@ -107,7 +107,7 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
    
          * 35.247.86.219/32
       
-2. Access your Splunk Cloud Platform management port (e.g. abc.splunkcloud.com:8089) and use your browser's secure connection to download the certificate.
+9. Access your Splunk Cloud Platform management port (e.g. abc.splunkcloud.com:8089) and use your browser's secure connection to download the certificate.
 
    a. For example, in the Chrome browser, select the lock icon in the address bar, then select :guilabel:`Connection is secure`.
 
@@ -127,11 +127,11 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
          :width: 60%
          :alt: This screenshot shows how to finish downloading a certificate in Google Chrome.
 
-3.  Go back to the Log Observer Connect guided setup and select :guilabel:`Next`. Enter your service account username, password, and Splunk platform URL, then upload the certificate you downloaded in the previous step to complete the guided setup.
+10.  Go back to the Log Observer Connect guided setup and select :guilabel:`Next`. Enter your service account username, password, and Splunk platform URL, then upload the certificate you downloaded in the previous step to complete the guided setup.
 
-4.  Remove your IPv4 address from the IP allowlist that you added in step 8. If you are in a GCP environment, do not remove the additional GCP IP addresses that you added in step 8.
+11.  Remove your IPv4 address from the IP allowlist that you added in step 8. If you are in a GCP environment, do not remove the additional GCP IP addresses that you added in step 8.
 
-5.  Make sure to give each connection a unique name on the final page of the Log Observer Connect guided setup.
+12.  Make sure to give each connection a unique name on the final page of the Log Observer Connect guided setup.
 
    .. note:: Manage concurrent search limits using your current strategy in Splunk Cloud Platform. All searches initiated by Log Observer Connect users go through the service account you create in Splunk Cloud Platform. For each active Log Observer Connect user, four back-end searches occur when a user performs a search in Log Observer Connect. For example, if there are three users accessing Log Observer Connect at the same time, the service account for Log Observer Connect initiates approximately 12 searches in Splunk Cloud Platform.
 
