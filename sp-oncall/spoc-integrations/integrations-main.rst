@@ -6,6 +6,8 @@ Splunk On-Call integrations
 .. meta::
     :description: Configure the AlertSite integration for Splunk OnCall.
 
+.. Rename all "victorops" instances and insert in the list in alphabetical order
+
 .. toctree::
    :hidden:
 
@@ -83,8 +85,6 @@ Splunk On-Call integrations
    webex-teams-integration-guide
    whatsup-gold-integration-guide-victorops
    zendesk-bi-directional-integration
-
-   .. Rename and insert in the previous list in alphabetical order
 
    victorops-bugsnag-integration
    victorops-cabot-integration
