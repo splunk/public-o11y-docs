@@ -1,41 +1,51 @@
+.. _observium-spoc:
+
 Observium integration for Splunk On-Call
-**********************************************************
+************************************************
 
-Observium is a low-maintenance auto-discovering network monitoring
-platform supporting a wide range of device types, platforms and
-operating systems. The VictorOps integration allows you to send
-Observium notifications into the VictorOps timeline. The following guide
-will walk you through the steps needed to configure this integration.
+.. meta::
+    :description: Configure the Observium integration for Splunk On-Call.
 
-**In VictorOps**
-----------------
+Observium is an autodiscovering network monitoring platform supporting a wide range of device types, platforms, and operating systems. The Splunk On-Call integration allows you to send Observium notifications into the Splunk On-Call timeline. The following guide walks you through the steps needed to configure this integration.
 
-From the main timeline select **Settings** >> **Alert Behavior**
->> **Integrations**
+
+Requirements
+==================
+
+This integration is compatible with the following versions of Splunk On-Call:
+
+- Starter
+- Growth
+- Enterprise
+
+
+Splunk On-Call configuration
+==============================
+
+From the main timeline select :guilabel:`Settings`, :guilabel:`Alert Behavior`, :guilabel:`Integrations`.
 
 .. image:: /_images/spoc/Integration-ALL-FINAL.png
+   :alt: Search for an integration
 
-Select the **Observium** Integration.
+Select the :guilabel:`Observium` Integration.
 
 .. image:: /_images/spoc/Observium-final.png
+   :alt: Observium integration
 
-Enable the integration if it has not already been enabled, then copy the
-entire “Service API Endpoint” to your clipboard.
+Turn on the integration, then copy the service API endpoint to your clipboard.
 
 .. image:: /_images/spoc/Integrations-victorops-4.png
+   :alt: API endpoint URL for Observium
 
-**In Observium**
-----------------
+Observium configuration
+=======================================
 
-Create a new Contact, for the “Transport Method” select **VictorOps**.
-Make sure that the “Contact Status” is enabled. Set an appropriate
-routing key. Finally paste in the REST endpoint URL from your clipboard.
+In Observium, create a new contact. For the :strong:`Transport Method`, select :guilabel:`Splunk On-Call`.
+
+Make sure that the :strong:`Contact Status` is turned on. Set an appropriate routing key and paste the REST endpoint URL from your clipboard.
 
 .. image:: /_images/spoc/Observium4.png
-   :alt: observium4
+   :alt: Configuring the new contact
 
-   observium4
+Select :guilabel:`Save Changes` to complete the integration.
 
-Select **Save Changes** and you are done. If you have any issues please
-reach out to `VictorOps
-support <mailto:support@victorops.com?Subject=Observium%20VictorOps%20Integration>`__.
