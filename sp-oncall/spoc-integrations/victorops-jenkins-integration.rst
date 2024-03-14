@@ -25,13 +25,13 @@ This integration is compatible with the following versions of Splunk On-Call:
 The remainder of this topic walks you through the Jenkins integration with Splunk On-Call.
 
 .. note::
-   There are two Jenkins integrations, this one with Splunk On-Call and the :new-page:`Jenkins Delivery Insights Integration https://help.victorops.com/knowledge-base/victorops-jenkins2-integration/`,
-   which sends you notifications in the Timeline about build status.
+   There are two Jenkins integrations, this one with Splunk On-Call, and the :new-page:`Jenkins Delivery Insights Integration https://help.victorops.com/knowledge-base/victorops-jenkins2-integration/`,
+   which sends notifications to the Timeline about build status.
 
 Splunk On-Call configuration
 ------------------------------
 
-Navigate to the Integrations page and find the REST endpoint integration by visiting *Integrations >> REST Endpoint*
+Navigate to the Integrations page and find the REST endpoint integration by visiting :guilabel:`Integrations >> REST Endpoint`.
 
 Copy the REST endpoint URL to your clipboard.
 
@@ -40,14 +40,14 @@ Copy the REST endpoint URL to your clipboard.
 Jenkins configuration
 ------------------------
 
-First, select the build or deployment you want to add Splunk On-Call notifications for, then select **Configure**.
+Select the build or deployment you want to add Splunk On-Call notifications for, then select :guilabel:`Configure`.
 
 .. image:: /_images/spoc/jenkins4.png
    :alt: jenkins4
 
    jenkins4
 
-Under “Build,” select **Add build step** then **Execute shell**.
+Under “Build,” select :guilabel:`Add build step`, then :guilabel:`Execute shell`.
 
 .. image:: /_images/spoc/jenkins5.png
    :alt: jenkins5
@@ -61,11 +61,11 @@ Paste the following cURL command into the “Command” box. Make sure to replac
    curl -X POST --header 'Accept: application/json' --data '{ "entity_id": "'${BUILD_NAME}'", "message_type": "INFO", "state_message": "Jenkins Build: '${BUILD_DISPLAY_NAME}' is underway", "BUILD_ID": "'${BUILD_ID}'" }' '**SPLUNKONCALL_REST_ENDPOINT_URL**'
 
 
-To add additional Jenkins variables, see the available list by selecting the :guilabel:`available environment variables` link:
+To add additional Jenkins variables, select the :guilabel:`available environment variables` link to see the available list:
 
 .. image:: /_images/spoc/jenkins6.png
    :alt: jenkins6
 
    jenkins6
 
-Make sure to save your configuration. Then you are done.
+Save your configuration, then you are done.

@@ -44,22 +44,22 @@ For more information on routing keys and best practices, see :new-page:`Routing 
 Pingdom configuration
 ======================
 
-Select "Integrations" from the menu bar on the left, click the
-"Integrations" option,then click "Add integration".
+Select :guilabel:`Integrations` from the menu bar, click the "Integrations" option, then click :guilabel:`Add integratiopn`.
 
-In the *Add Integration* window, use the drop-down menu for *Type* to
-select *Webhook*. Give the webhook a name and paste in the webhook URL
+In the :guilabel:`Add Integration` window, use the drop-down menu for :guilabel:`Type` to
+select :guilabel:`Webhook`. Give the webhook a name, and paste in the webhook URL
 provided by Splunk On-Call. Be sure to replace the "$routing_key" section
 with your actual `routing
 key <https://help.victorops.com/knowledge-base/routing-keys/>`__.
-Finally, click *Save Integration*.
+
+Click :guilabel:`Save Integration`.
 
 .. image:: /_images/spoc/Screen-Shot-2019-10-09-at-11.48.22-AM.png
    :alt: Add Integration window
 
 
 When creating or editing checks, scroll to the bottom of the settings to
-select the new integration you have just added. It is not necessary to
+select the new integration you have just added. You don't need to
 include any alerting actions for the webhook to function.
 
 .. image:: /_images/spoc/Screen-Shot-2019-10-09-at-11.52.47-AM.png
@@ -67,11 +67,15 @@ include any alerting actions for the webhook to function.
 
 
 Email endpoint integration
-==========================
+============================
 
-In Splunk On-Call (Email)
+Email endpoint integration is accomplished though tasks in Splunk On-Call and Pingdom.
 
-Navigate to **Integrations** >> **Pingdom (Email)**
+
+Splunk On-Call (Email) configuration
+----------------------------------------
+
+Navigate to :guilabel:`Integrations >> Pingdom (Email)`.
 
 .. image:: /_images/spoc/Screen-Shot-2019-10-09-at-12.56.21-PM.png
    :alt: Pingdom integrations email option
@@ -84,33 +88,32 @@ and copy the email endpoint.
    :alt: Pingdom email endpoint example
 
 
-*The Routing Key* (+$routing_key) can be used to route an email endpoint-
-initiated incident to a specific team or teams within Splunk. Replace $routing_key within the Email endpoint
-address with a valid routing_key found in your Splunk On-Call instance.
+:guilabel:`Routing Key` (+$routing_key) can be used to route an email endpoint-
+initiated incident to a specific team or teams within Splunk. Replace $routing_key in the email endpoint
+address with a valid routing_key from your Splunk On-Call instance.
 
-In Pingdom (Email)
+Pingdom (Email) configuration
+----------------------------------------
 
-Navigate to *Users and Teams* in the side-menu of Pingdom and select
-*Users*.
+Navigate to :guilabel:`Users and Teams` in Pingdom and select :guilabel:`Users`.
 
-Select '\ *Add User'*. When creating the new
-Splunk On-Call user make sure to select, next to *Alert recipients*,
-*Contact; can only receive alerts*.
+Select :guilabel:`Add User`. When creating the new
+Splunk On-Call user make sure to select, next to :guilabel:`Alert recipients`,
+:guilabel:`Contact; can only receive alerts`.
 
 .. image:: /_images/spoc/Screen-Shot-2019-10-09-at-12.28.04-PM-1.png
    :alt: Add user or contact menu
 
-Next, under contact details, give your contact a name. Give
-the contact a name that makes sense for the alert destination (such as Splunk). Then paste the Splunk On-Call Pingdom Email endpoint
+In contact details, give your contact a name that makes sense for the alert destination (such as Splunk). Then paste the Splunk On-Call Pingdom Email endpoint
 into the contact method. Save the user by clicking :guilabel:`Add User`.
 
 .. image:: /_images/spoc/Screen_Shot_2019-10-09_at_12_31_46_PM.png
    :alt: Adding a contact name
 
-Now under Experience Monitoring, add your new contact to your desired checks. 
+Under Experience Monitoring, add your new contact to your desired checks. 
 
 You add the user to your desired checks by editing a
-check and selecting that user for '*Who to alert?*'. Once selected and
+check and selecting that user for :guilabel:`Add Who to alert?`. Once selected and
 saved, this check alerts your Splunk On-Call email endpoint.
 
 .. image:: /_images/spoc/Screen-Shot-2019-10-09-at-12.38.25-PM.png

@@ -37,29 +37,28 @@ actual routing key you intend to use.
 Sumo Logic configuration
 ---------------------------
 
-From the main dashboard, select **Manage** then **Connections.**
+From the main dashboard, select :guilabel:`Manage`, and then :guilabel:`Connections`.
 
 .. image:: /_images/spoc/Sumo2.png
    :alt: sumo2
 
    sumo2
 
-Add a new Connection.
+Add a new connection:
 
 .. image:: /_images/spoc/Sumo3.png
    :alt: sumo3
 
    sumo3
 
-Select the **Webhook** connection type.
+Select the :guilabel:`Webhook` connection type.
 
 .. image:: /_images/spoc/Sumo4.png
    :alt: sumo4
 
    sumo4
 
-Give the connection a name and description and paste in the URL you got
-from the Splunk On-Call portal. No Authorization Header is needed. 
+Give the connection a name and description and paste in the URL you got from the Splunk On-Call portal. No Authorization Header is needed. 
 
 Copy the following JSON payload and paste it into the “Payload” box:
 
@@ -93,11 +92,9 @@ Add as many additional fields to the payload as you want.
 
    sumo6
 
-Make sure to test the connection and verify that you receive a 200 response
-code.
+Make sure to test the connection and verify that you receive a 200 response code.
 
-Lastly, add the Splunk On-Call connection to one of your
-scheduled searches. To do this, select **Library** and then choose one
+Lastly, add the Splunk On-Call connection to one of your scheduled searches. To do this, select :guilabel:`Library` and then choose one
 of your searches.
 
 .. image:: /_images/spoc/Sumo7.png
@@ -112,7 +109,7 @@ From the search screen, select :guilabel:`Edit`.
 
    sumo8
 
-Select to **Edit this search's schedule >**
+Select  :guilabel:`Edit this search's schedule`.
 
 .. image:: /_images/spoc/Sumo9.png
    :alt: sumo9
@@ -123,7 +120,7 @@ Under “Alert Type” select :guilabel:`Webhook` and then choose
 the Splunk On-Call webhook set up earlier.
 
 You also have the option to "Customize Payload" for individual searches,
-becasue you can add or edit any field on a per-search basis.
+because you can add or edit any field on a per-search basis.
 
 Finally, click :guilabel:`Save`.
 
