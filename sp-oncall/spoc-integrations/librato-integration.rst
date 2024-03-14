@@ -39,14 +39,14 @@ First go to :guilabel:`Account Settings`
 .. image:: /_images/spoc/librato-3.png
     :width: 100%
 
-Select :guilabel:`Services` in the left side bar, and then select **VictorOps** (now called Splunk On-Call).
+Select :guilabel:`Services` in the left side bar, and then select :guilabel:`VictorOps`, now called Splunk On-Call.
 
-.. image:: /_images/spoc/librato-4.png
+.. image:: /_images/spoc/librato4.png
     :width: 100%
 
 Configure the new Splunk On-Call service by giving it a title, then enter your Splunk On-Call Service API Key that you'd copied earlier and Routing key.
 
-Hit “create service” and you are done.
+Select :guilabel:`Create service`.
 
 .. image:: /_images/spoc/librato-5.png
     :width: 100%
