@@ -35,6 +35,7 @@ Splunk On-Call integrations
    graylog-integration-guide-victorops
    healthchecks-io-integration-guide-victorops-2
    hosted-graphite-integration
+   hp-sitescope-integration
    icinga-integration.rst
    instana-integration-guide-victorops
    jenkins-delivery-integration
@@ -100,7 +101,6 @@ Splunk On-Call integrations
    victorops-googlevoice-integration
    victorops-hipchat-integration
    victorops-honeybadger-integration
-   victorops-hp-sitescope-integration
    victorops-hubot-integration
    victorops-humio-integration
    victorops-jenkins-integration
