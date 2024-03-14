@@ -11,10 +11,10 @@ Use the OTel Collector with the Operator in a Kubernetes environment to automati
 
 To install zero configuration automatic instrumentation for Java, complete the following steps:
 
-#. :ref:`deploy-helm-chart-java-k8s`
-#. :ref:`java-k8s-verify-resources`
-#. :ref:`k8s-java-set-annotations`
-#. :ref:`java-k8s-view-results`
+#. :ref:`Deploy the Helm Chart with the Kubernetes Operator <deploy-helm-chart-java-k8s>`
+#. :ref:`Verify all OpenTelemetry resources are deployed correctly <java-k8s-verify-resources>`
+#. :ref:`Set annotations to instrument Java applications <k8s-java-set-annotations>`
+#. :ref:`View results in Splunk APM <java-k8s-view-results>`
 
 Requirements
 ================================================================
@@ -26,7 +26,7 @@ Zero Config Auto Instrumentation for Java requires the following components:
 
 .. _deploy-helm-chart-java-k8s:
 
-Deploy the Helm Chart with the Kubernetes Operator
+1. Deploy the Helm Chart with the Kubernetes Operator
 =================================================================
 
 To deploy the Helm Chart, create a file called values.yaml. In this file, you can define the settings to activate or deactivate when installing the OpenTelemetry Collector with the Helm Chart.
@@ -153,9 +153,9 @@ The following examples show how to set the attribute using each method:
             apiVersion: apps/v1
             kind: Deployment
             metadata:
-            name: my-java-app
+              name: my-java-app
             spec:
-            template:
+              template:
                spec:
                   containers:
                   - name: my-java-app
@@ -179,11 +179,19 @@ After configuring values.yaml, use the following command to deploy the Helm Char
 
 .. code-block:: bash
 
-   helm install splunk-otel-collector -f ./values.yaml splunk-otel-collector-chart/splunk-otel-collector
+   helm install splunk-otel-collector -f ./values.yaml splunk-otel-collector-chart/splunk-otel-collector --namespace monitoring
+
+You can change the name of the Collector and the namespace in which you install the Collector. 
+
+For example, to change the name of the Collector to ``otel-collector`` and install it in the ``o11y``` namespace, use the following command:
+
+.. code-block:: bash
+
+   helm install otel-collector -f ./values.yaml splunk-otel-collector-chart/splunk-otel-collector --namespace o11y
 
 .. _java-k8s-verify-resources:
 
-Verify all the OpenTelemetry resources are deployed successfully
+2. Verify all the OpenTelemetry resources are deployed successfully
 ==========================================================================
 
 Resources include the Collector, the Operator, webhook, and instrumentation.
@@ -193,7 +201,6 @@ Run the following commands to verify the resources are deployed correctly:
 .. code-block:: yaml
    
    kubectl  get pods -n monitoring
-   # NAME                                                          READY
    # NAMESPACE     NAME                                                            READY   STATUS
    # monitoring    splunk-otel-collector-agent-lfthw                               2/2     Running
    # monitoring    splunk-otel-collector-cert-manager-6b9fb8b95f-2lmv4             1/1     Running
@@ -203,7 +210,7 @@ Run the following commands to verify the resources are deployed correctly:
    # monitoring    splunk-otel-collector-opentelemetry-operator-56c4ddb4db-zcjgh   2/2     Running
 
    kubectl get mutatingwebhookconfiguration.admissionregistration.k8s.io -n monitoring
-   # NAME                                      WEBHOOKS   AGE
+   # NAME                                                    WEBHOOKS   AGE
    # splunk-otel-collector-cert-manager-webhook              1          14m
    # splunk-otel-collector-opentelemetry-operator-mutation   3          14m
 
@@ -213,12 +220,12 @@ Run the following commands to verify the resources are deployed correctly:
 
 .. _k8s-java-set-annotations:
 
-Set annotations to instrument Java applications
+3. Set annotations to instrument Java applications
 ==============================================================
 
 You can activate auto instrumentation for Java applications before runtime.
 
-If the related Kubernetes object (deployment, daemonset, or pod) is not deployed, add the ``instrumentation.opentelemetry.io/inject-java`` annotation to the application object YAML.
+If the related Kubernetes object (deployment, daemonset, or pod) is not deployed, add the ``instrumentation.opentelemetry.io/inject-java: "true"`` annotation to the application object YAML.
 
 For example, given the following deployment YAML:
 
@@ -255,6 +262,13 @@ Activate auto instrumentation by adding ``instrumentation.opentelemetry.io/injec
           containers:
           - name: my-java-app
             image: my-java-app:latest
+
+Applying annotations in a different namespace
+------------------------------------------------
+
+If the current namespace isn't ``monitoring``, change the annotation to specify the namespace in which you installed the OpenTelemetry Collector. 
+
+For example, if the current namespace is ``<my-other-namespace>`` and you installed the Collector in ``monitoring``, set the annotation to ``"instrumentation.opentelemetry.io/inject-java": "monitoring/splunk-otel-collector"``.
 
 To deactivate automatic instrumentation, remove the annotation. The following command removes the annotation for automatic instrumentation, deactivating it:
 
@@ -322,7 +336,7 @@ The instrumented pod contains an initContainer named ``opentelemetry-auto-instru
 
 .. _java-k8s-view-results:
 
-View results at Splunk Observability APM
+4. View results at Splunk Observability APM
 ===========================================================
 
 Allow the Operator to do the work. The Operator intercepts and alters the Kubernetes API requests to create and update annotated pods, the internal pod application containers are instrumented, and trace and metrics data populates the :ref:`APM dashboard <apm-dashboards>`. 
