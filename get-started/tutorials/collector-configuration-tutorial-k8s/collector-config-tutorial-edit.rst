@@ -44,7 +44,7 @@ The Splunk OpenTelemetry Collector for Kubernetes collects logs by default. To s
         endpoint: "<your_hec_endpoint>"
         token: "<your_hec_token>"
 
-   If you're using a different index for this tutorial, set an index to match the index you're using:
+   For logs, the ``main`` index is the default. If you're using a different index for this tutorial, set an index to match the index you're using:
 
    .. code-block:: yaml
 
@@ -54,6 +54,8 @@ The Splunk OpenTelemetry Collector for Kubernetes collects logs by default. To s
         index: "<your_index>"
 
 4. Save the file.
+
+With this configuration file, you can deploy a functional Collector that sends logs to Splunk Cloud Platform.
 
 
 Create a filter processor configuration file
@@ -96,7 +98,7 @@ Open the file in your code or text editor and add the following snippet:
                - filter/exclude_logs_from_pod
                - filter/exclude_logs_from_node
 
-The previous snippet instructs Helm to add filter processor settings to the agent configuration and add them to the logs pipeline together with the default processors. The filters exclude logs from matching pods and nodes.
+The previous snippet instructs Helm to add filter processor settings to the agent configuration and add them to the logs pipeline together with the default processors. The filters exclude logs from matching pods and nodes that match the specified regular expressions.
 
 Save the filter.yaml configuration file and continue to the next step.
 
@@ -115,8 +117,8 @@ Use the Tab key to autocomplete the file names, the release, and the chart you i
 Notice the following parts of the command:
 
 - ``--reuse-values`` ensures that the Collector updates only the settings you provide.
-- ``splunkPlatform.insecureSkipVerify=true`` turns off SSL, since Splunk Cloud Platform free trials don't support it.
 - ``--set`` defines settings through the command line. You can use this method as an alternative to passing YAML files.
+- ``splunkPlatform.insecureSkipVerify=true`` turns off SSL, since Splunk Cloud Platform free trials don't support it.
 
 .. caution:: Don't set ``insecureSkipVerify`` to ``true``  in production environments, since it might compromise the security of your data. In this tutorial, you need to turn off SSL because trial versions of Splunk Cloud Platform don't support it.
 
@@ -139,7 +141,7 @@ Check that logs are received by Splunk Cloud Platform
 ======================================================
 
 1. Log in to Splunk Cloud Platform and go to the :guilabel:`Search & Reporting` app.
-2. In the search bar, enter :strong:`index="main"` to see the logs coming from your local Kubernetes cluster:
+2. In the search bar, enter :strong:`index="<your_index>"` to see the logs coming from your local Kubernetes cluster:
 
 .. image:: /_images/get-started/logs-cloud.png
       :width: 90%
