@@ -45,6 +45,7 @@ Splunk On-Call integrations
    oracle-cloud-infrastructure-integration-guide-victorops
    outlyer-integration-guide-victorops
    prometheus-integration
+   prtg-integration
    prtg-integrations
    puppet-enterprise-integration-guide
    puppet-tasks-integration-guide
@@ -105,7 +106,6 @@ Splunk On-Call integrations
    victorops-phantom-integration-guide
    victorops-pingdom-integration
    victorops-pingometer-integration
-   victorops-prtg-integration
    victorops-rackspace-integration
    victorops-raygun-integration
    victorops-riemann-integration
