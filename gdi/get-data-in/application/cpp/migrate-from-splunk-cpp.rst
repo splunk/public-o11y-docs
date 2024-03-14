@@ -7,7 +7,7 @@ Migrate from the Splunk instrumentation for C++ to the OpenTelemetry instrumenta
 .. meta:: 
     :description: Learn how to migrate from the deprecated Splunk C++ agent to the upstream OpenTelemetry Collector. 
 
-The upstream OpenTelemetry instrumentation for C++ replaces the Splunk instrumentation for C++. The Splunk instrumentation for C++ is deprecated as of March 8, 2024 and will reach end of support on September 15, 2025.
+The upstream OpenTelemetry instrumentation for C++ replaces the Splunk instrumentation for C++. The Splunk instrumentation for C++ has been deprecated as of March 15, 2024 and will reach end of support on September 15, 2025.
 
 Follow these steps to migrate from the Splunk instrumentation to the OpenTelemetry instrumentation.
 
