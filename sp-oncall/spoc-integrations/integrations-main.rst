@@ -12,7 +12,7 @@ Splunk On-Call integrations
    alertsite-integration
    appdynamics-integration
    appoptics-integration
-   atatus-integration   
+   atatus-integration
    aws-cloudwatch-integration-guide
    azure-monitoring-integration-guide-victorops
    big-panda-integration-guide
@@ -134,5 +134,5 @@ Splunk On-Call integrations
    whatsup-gold-integration-guide-victorops
    zendesk-bi-directional-integration
 
-add list of integrations here.
+.. add list of integrations here.
 
