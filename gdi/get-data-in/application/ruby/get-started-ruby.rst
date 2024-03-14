@@ -23,4 +23,4 @@ To instrument your Ruby application, follow these steps:
 #. Check compatibility and requirements. See :ref:`ruby-otel-requirements`.
 #. Instrument your Ruby application. See :ref:`instrument-ruby-applications`.
 
-.. note:: The Splunk Distribution for OpenTelemetry Ruby has been deprecated as of March 8, 2024, and will reach end of support on March 8, 2025. To use the upstream OpenTelemetry instrumentation for Ruby, see :ref:`get-started-ruby`.
+.. note:: The Splunk Distribution for OpenTelemetry Ruby has been deprecated as of March 15, 2024, and will reach end of support on March 15, 2025. To use the upstream OpenTelemetry instrumentation for Ruby, see :ref:`get-started-ruby`.
