@@ -22,7 +22,7 @@ This integration is compatible with the following versions of Splunk On-Call:
 PowerShell script
 ==============================
 
-Change ``$RoutingKey`` to the routing key you would like to pass in or remove it to send it to the default key. See :ref:``routing-keys`.
+Change ``$RoutingKey`` to the routing key you would like to pass in or remove it to send it to the default key. See :ref:`routing-keys`.
 
 If your alerts are coming into Splunk On-Call but going to the wrong team, you might have to hardcode the routing key into the URL on lines 57 and 67 of the script instead of using the ``$RoutingKey`` variable.
 

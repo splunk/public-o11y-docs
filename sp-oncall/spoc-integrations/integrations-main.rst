@@ -18,16 +18,22 @@ Splunk On-Call integrations
    big-panda-integration-guide
    bmc-truesight-pulse-integration
    cloudwisdom-integration
+   check_mk-integration
    coralogix-integration-guide
+   datadog-integration
+   dripstat-integration
+   dynatrace-synthetic-monitoring-integration
    delivery-insights-integration
    elasticsearch-watcher-integration-guide
    fusionreactor-cloud-integration-guide-victorops
+   GCP-monitoring-integration.rst
    generic-email-endpoint
    github-integration-guide
    grafana-integration-guide
    graylog-integration-guide-victorops
    healthchecks-io-integration-guide-victorops-2
    hosted-graphite-integration
+   icinga-integration.rst
    instana-integration-guide-victorops
    jenkins-delivery-integration
    jira-app-integration-guide-victorops
@@ -35,7 +41,9 @@ Splunk On-Call integrations
    kapacitor-integration-guide
    litabot-integration-guide
    loadster-integration-guide
+   librato-integration
    logicmonitor-integration
+   logz-io-integration
    manage-victorops-using-terraform
    microsoft-azure-oms-integration-guide-victorops
    microsoft-scom-integration
@@ -43,7 +51,9 @@ Splunk On-Call integrations
    nagios-integration-guide
    new-relic-integration-guide
    new-twilio
+   observium-integration
    opsdash-integration
+   opsview-integration
    oracle-cloud-infrastructure-integration-guide-victorops
    outlyer-integration-guide-victorops
    prometheus-integration
@@ -69,39 +79,37 @@ Splunk On-Call integrations
    twilio-live-call-routing-guide
    twilio-sms-integration-guide
    uptime-robot-integration-guide
+   wavefront-integration-guide-victorops
+   webex-teams-integration-guide
+   whatsup-gold-integration-guide-victorops
+   zendesk-bi-directional-integration
+
+   .. Rename and insert in the previous list in alphabetical order
+
    victorops-bugsnag-integration
    victorops-cabot-integration
    victorops-catchpoint-integration
-   check_mk-integration
    victorops-circonus-integration
    victorops-connectwise-automate-integration
    victorops-crittercism-integration
-   datadog-integration
    victorops-dead-mans-snitch-integration
    victorops-desk-com-integration
    victorops-dnscheck-integration
    victorops-dotcommonitor-integration
-   dripstat-integration
    victorops-dynatrace-integration
-   dynatrace-synthetic-monitoring-integration
    victorops-googlevoice-integration
    victorops-hipchat-integration
    victorops-honeybadger-integration
    victorops-hp-sitescope-integration
    victorops-hubot-integration
    victorops-humio-integration
-   icinga-integration.rst
    victorops-jenkins-integration
-   librato-integration
    victorops-librenms-integration
    victorops-logentries-integration
    victorops-loggly-integration
    victorops-logicmonitor-integration
-   logz-io-integration
    victorops-mailhop-integration
    victorops-monitis-integration
-   victorops-observium-integration
-   opsview-integration
    victorops-panopta-integration
    victorops-papertrail-integration
    victorops-phantom-integration-guide
@@ -117,7 +125,6 @@ Splunk On-Call integrations
    victorops-signal-sciences-integration
    victorops-signalfx-integration
    victorops-solarwinds-integration
-   GCP-monitoring-integration.rst
    victorops-statuscake-integration
    statuspage-integration
    victorops-sumologic-integration
@@ -129,10 +136,6 @@ Splunk On-Call integrations
    victorops-wormly-integration
    victorops-zabbix-integration
    victorops-zenoss-integration
-   wavefront-integration-guide-victorops
-   webex-teams-integration-guide
-   whatsup-gold-integration-guide-victorops
-   zendesk-bi-directional-integration
 
-.. add list of integrations here.
+.. Add list of integrations here.
 
