@@ -10,7 +10,9 @@ Splunk On-Call integrations
    :hidden:
 
    alertsite-integration
+   appdynamics-integration
    appoptics-integration
+   atatus-integration   
    aws-cloudwatch-integration-guide
    azure-monitoring-integration-guide-victorops
    big-panda-integration-guide
@@ -67,8 +69,6 @@ Splunk On-Call integrations
    twilio-live-call-routing-guide
    twilio-sms-integration-guide
    uptime-robot-integration-guide
-   appdynamics-integration
-   victorops-atatus-integration
    victorops-bugsnag-integration
    victorops-cabot-integration
    victorops-catchpoint-integration
