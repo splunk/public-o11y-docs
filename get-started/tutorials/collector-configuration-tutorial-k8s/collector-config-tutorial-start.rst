@@ -12,13 +12,14 @@ A convenient way of setting up a demo Kubernetes environment is through Minikube
 - Podman runs containers in Kubernetes.
 - Helm helps configure Kubernetes.
 
-The following steps assume that you're using macOS as the host operating system. You also need the Homebrew package manager. If you don't have Homebrew installed, run the following command first:
+.. note:: You don't need Podman if you already have a container runtime installed, such as Docker.
+
+The following steps assume that you're using macOS as the host operating system. You also need the Homebrew package manager. If you don't have Homebrew installed, run the following command first in your terminal:
 
 .. code-block:: bash
 
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-.. note:: You don't need Podman if you already have a container runtime installed, such as Docker.
 
 Install the requirements
 ==========================================
@@ -29,7 +30,7 @@ Open a terminal session and install Minikube, Helm, and Podman using Homebrew:
 
    brew install minikube helm podman
 
-Check that you've installed all the requirements by running the following commands:
+Check that you installed all the requirements by running the following commands:
 
 .. code-block:: bash
 
@@ -41,7 +42,7 @@ Check that you've installed all the requirements by running the following comman
    # version.BuildInfo{Version:"v3.14.2", ...}
 
 
-Spin a Kubernetes cluster
+Create a local Kubernetes cluster
 ===========================================
 
 To start the local Kubernetes cluster to use in this tutorial, run the following command:
@@ -81,9 +82,9 @@ Run the following commands to install the Helm chart for the Collector:
 Replace ``<realm>`` and ``<access_token>`` in the installation command with your realm and access token.
 
 - To obtain an access token, see :ref:`admin-api-access-tokens`.
-- To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
+- To find your Splunk Observability Cloud realm, see :ref:`Note about realms <about-realms>`.
 
-.. note:: You can generate a prefilled Helm command using the :new-page:`Collector guided setup <https://login.signalfx.com/#/gdi/scripted/otel-connector-v2/step-2?category=use-case-infrastructure&gdiState=%7B%22integrationId%22:%22otel-connector-v2%22,%22platform%22:%22kubernetes%22,%22gateway%22:%22false%22,%22provider%22:%22%22,%22distro%22:%22%22,%22logCollection%22:%22%22,%22input_profiling%22:%22true%22%7D>` in Splunk Observability Cloud.
+.. note:: You can also generate a prefilled Helm command using the :new-page:`Collector guided setup <https://login.signalfx.com/#/gdi/scripted/otel-connector-v2/step-2?category=use-case-infrastructure&gdiState=%7B%22integrationId%22:%22otel-connector-v2%22,%22platform%22:%22kubernetes%22,%22gateway%22:%22false%22,%22provider%22:%22%22,%22distro%22:%22%22,%22logCollection%22:%22%22,%22input_profiling%22:%22true%22%7D>` in Splunk Observability Cloud.
 
 After successfully installing the Helm chart, messages similar to the following appear:
 
