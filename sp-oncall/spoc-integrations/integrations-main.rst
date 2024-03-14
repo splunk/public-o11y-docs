@@ -30,7 +30,7 @@ Splunk On-Call integrations
    jenkins-delivery-integration
    jira-app-integration-guide-victorops
    jira-integration-guide
-   kapacitor-integration-guide-victorops
+   kapacitor-integration-guide
    litabot-integration-guide
    loadster-integration-guide
    logicmonitor-integration
