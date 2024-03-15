@@ -58,11 +58,11 @@ The following image shows CPU stack frames for a Java application.
 Switch to view CPU or memory
 -------------------------------------------------
 
-You can switch the view of the AlwaysOn Profiling flame graph between :guilabel:`CPU` and :guilabel:`Memory` . Memory data are only available if you've activated memory profiling. See :ref:`profiling-setup-enable-profiler`.
+You can switch the view of the AlwaysOn Profiling flame graph between :guilabel:`CPU` and :guilabel:`Memory`. Memory data is only available if you activated memory profiling. See :ref:`profiling-setup-enable-profiler`.
 
 The following image shows the memory profiling flame graph for a Java application:
 
-   .. image:: /_images/apm/profiling/memory-profiling-metrics_1.gif
+   .. image:: /_images/apm/profiling/memory-profiling-metrics_1.png
       :alt: Sample memory flame graph for a Java application.
 
 Frame table
@@ -78,10 +78,10 @@ When you select a frame, an information dialog appears with the amount of call s
 .. image:: /_images/apm/profiling/profiling-thread-info.png
    :alt: Information panel on a highlighted thread.
 
-Filters
+Filter your flame graph
 -------------------------------------
 
-In the AlwaysOn Profiling flame graph, bars have random colors to let you identify lines of code faster. Within each bar you can find the class name, file name, and line of code for the method called by your application. You can use this information as a filter, so that only the functions you're looking for are visible. You can also filter stack traces by their thread state, environment, and service.
+In the AlwaysOn Profiling flame graph, within each bar you can find the class name, file name, and line of code for the method called by your application. You can use this information as a filter, so only the functions you're looking for are visible. You can also filter stack traces by environment, service, service instance, and thread state. Use :guilabel:`Linked to Spans` to narrow down the call stacks to only focus on snapshots where APM was receiving spans from your application.  
 
 .. image:: /_images/apm/profiling/profiling-bars3.png
    :alt: Bars in the profiling flame graph.
