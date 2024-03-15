@@ -19,12 +19,12 @@ To access the flame graph for your instrumented application or service in Splunk
 .. image:: /_images/apm/profiling/profiling-from-apm.png
    :alt: Filtering the flame graph and table in AlwaysOn Profiling.
 
-Use the flame graph
+Get familiar with the flame graph
 ============================================
 
 AlwaysOn Profiling is constantly taking snapshots, or stack traces, of your application's code. Because reading through thousands of stack traces isn't practical, AlwaysOn Profiling aggregates and summarizes profiling data, providing a convenient way to explore call stacks.
 
-Stack frames
+Interpret stack frames
 ----------------------------------------------
 
 Each bar in the flame graph is a stack frame, tied to a function in your code. AlwaysOn Profiling extracts the stack frames by aggregating all call stacks during a period of time. When several stack traces start with the same frames, the bars representing those frames merge into a single bar.
@@ -55,17 +55,7 @@ The following image shows CPU stack frames for a Java application.
 .. .. image:: /_images/apm/profiling/group-frames.gif
    :alt: Grouping and ungrouping stack frames.
 
-Switch to view CPU or memory
--------------------------------------------------
-
-You can switch the view of the AlwaysOn Profiling flame graph between :guilabel:`CPU` and :guilabel:`Memory`. Memory data is only available if you activated memory profiling. See :ref:`profiling-setup-enable-profiler`.
-
-The following image shows the memory profiling flame graph for a Java application:
-
-   .. image:: /_images/apm/profiling/memory-profiling-metrics_1.png
-      :alt: Sample memory flame graph for a Java application.
-
-Frame table
+Interpret the frame table
 ----------------------------------------------
 
 In the AlwaysOn Profiling table, :guilabel:`Count` shows how many times a line appeared in stack traces. :guilabel:`Self time` is the time spent executing the function, minus the time spent calling other functions. A high self time value might also indicate performance issues. Though, in some cases, it might mean the thread is idle and doesn't consume resources. The following image shows the flame graph with the frame table highlighted: of threads:
@@ -83,10 +73,20 @@ Filter your flame graph
 
 In the AlwaysOn Profiling flame graph, within each bar you can find the class name, file name, and line of code for the method called by your application. You can use this information as a filter, so only the functions you're looking for are visible. You can also filter stack traces by environment, service, service instance, and thread state. Use :guilabel:`Linked to Spans` to narrow down the call stacks to only focus on snapshots where APM was receiving spans from your application.  
 
-.. image:: /_images/apm/profiling/profiling-bars3.png
-   :alt: Bars in the profiling flame graph.
+.. image:: /_images/apm/profiling/profiling-filters.png
+   :alt: Available filters in the profiling.
 
 The flame graph of AlwaysOn Profiling stacks all bars from top to bottom, following the hierarchy between function calls. The root or topmost bar is the start of the call stack. The depth of each stack in the flame graph shows the sequence of function calls, until there are no more descendants. There is no horizontal order, as the flame graph arranges bars to save space.
+
+Switch to view CPU or memory
+-------------------------------------------------
+
+You can switch the view of the AlwaysOn Profiling flame graph between :guilabel:`CPU` and :guilabel:`Memory`. Memory data is only available if you activated memory profiling. See :ref:`profiling-setup-enable-profiler`.
+
+The following image shows the memory profiling flame graph for a Java application:
+
+   .. image:: /_images/apm/profiling/memory-profiling-metrics_1.png
+      :alt: Sample memory flame graph for a Java application.
 
 Use the flame graph to identify and confirm issues
 ===================================================
