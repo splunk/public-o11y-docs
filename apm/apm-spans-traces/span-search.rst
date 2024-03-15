@@ -54,8 +54,8 @@ Span links connect spans that don't have a direct parent-child relationship but 
 Span link scenarios
 ---------------------
 
-* Batch message processing - In batch message processing a producer produces 2 messages separately. A consumer consumes both messages in 1 batch and processes them together. In batch message processing producers don't invoke a consumer and consumers aren't directly related to a producer. The relationship between processed spans to the produced spans is captured in the span link.
-* Carry context across a trusted gateway - Gateways can terminate the original context. When using gateways the original context is preserved as the span link.
+* Batch message processing - In batch message processing, a producer sends 2 messages separately. A consumer consumes both messages in 1 batch and processes them together. In batch message processing producers don't invoke a consumer and consumers aren't directly related to a producer. The relationship between received spans to the produced spans is captured in the span link.
+* Carry context across a trusted gateway - When using gateways they can terminate the original context. You can use span links to perserve the original context when using gateways.
 
 You can view span links on spans in the trace waterfall view. Select the link to see the correlated spans and traces then select the span or the trace to navigate to the span.
 
