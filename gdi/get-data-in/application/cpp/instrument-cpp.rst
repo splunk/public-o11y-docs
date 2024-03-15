@@ -11,7 +11,7 @@ You can use the OpenTelemetry Collector to send traces from C++ applications to 
 
 Follow these steps to instrument your C++ application:
 
-#. :ref:`cpp-opentelemetry-build`
+#. :ref:`Build the OpenTelemetry C++ libraries <cpp-opentelemetry-build>`
 #. :ref:`Add the required dependencies <cpp-dependencies>`
 #. :ref:`Initialize the OpenTelemetry tracer <cpp-otel-tracer>`
 #. :ref:`Generate spans for your application <cpp-generate-spans>`
@@ -78,7 +78,7 @@ In your CMakeLists.txt file, add the following code to include these dependencie
 
 .. _cpp-otel-tracer:
 
-1. Initialize the OpenTelemetry tracer
+3. Initialize the OpenTelemetry tracer
 ===========================================
 
 The OpenTelemetry tracer runs alongside your C++ application, generating telemetry data when the application receives calls.
