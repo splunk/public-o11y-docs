@@ -319,7 +319,7 @@ a.external:not(.image-reference):after {
     background: white;
     width: 152px;
     height: 79px;
-    margin-bottom: -55px;
+    margin-bottom: -57px;
     margin-left: -12px;
     margin-top: -41px;
 }
@@ -327,6 +327,6 @@ a.external:not(.image-reference):after {
 .logoimage{
     position: absolute;
     left: 10px !important;
-    top: -2px !important;
+    top: -1px !important;
     width: 130px !important;
 }
