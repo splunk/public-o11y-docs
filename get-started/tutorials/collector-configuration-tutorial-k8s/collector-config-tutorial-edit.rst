@@ -98,7 +98,7 @@ Open the file in your code or text editor and add the following snippet:
                - filter/exclude_logs_from_pod
                - filter/exclude_logs_from_node
 
-The previous snippet instructs Helm to add filter processor settings to the agent configuration and add them to the logs pipeline together with the default processors. The filters exclude logs from matching pods and nodes that match the specified regular expressions.
+The previous snippet instructs Helm to add filter processor settings to the agent configuration and add them to the logs pipeline together with the default processors. The filters exclude logs from pods and nodes that match the specified regular expressions.
 
 Save the filter.yaml configuration file and continue to the next step.
 
