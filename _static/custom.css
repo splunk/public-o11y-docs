@@ -326,6 +326,6 @@ a.external:not(.image-reference):after {
 .logoimage{
     position: absolute;
     left: 15px !important;
-    top: -1px !important;
-    width: 120px !important;
+    top: 3px !important;
+    width: 114px !important;
 }
