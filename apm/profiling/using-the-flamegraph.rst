@@ -75,7 +75,7 @@ In the AlwaysOn Profiling flame table, each stack frame is labeled with the clas
 .. image:: /_images/apm/profiling/profiling-class-file-line.png
    :alt: Stack frame breakdown showing class, file name, and line of code.
 
-You can search the details of the stack frame as a filter, so only the functions you're looking for are visible. 
+You can search the details of the stack frame so only the functions you're looking for are visible. 
 
 You can also filter stack traces by environment, service, service instance, and thread state. Use :guilabel:`Linked to Spans` to narrow down the call stacks to only focus on snapshots where APM was receiving spans from your application.  
 
