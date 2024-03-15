@@ -12,7 +12,7 @@ You can visualize aggregated stack traces using the flame graph in AlwaysOn Prof
 Accessing the flame graph
 ============================================
 
-To access the flame graph for your instrumented application or service in Splunk APM, select a service and then select the :guilabel:`AlwaysOn Profiling` section of the details panel.
+To access the flame graph for your instrumented application or service in Splunk APM, select a service and then select the :guilabel:`AlwaysOn Profiling` section of the details panel. You can also select :guilabel:`AlwaysOn Profiling` from the APM landing page and then select a service in the service filter.
 
 .. note:: If the AlwaysOn Profiling section is not visible, see :ref:`profiling-troubleshooting`.
 
@@ -23,6 +23,8 @@ Get familiar with the flame graph
 ============================================
 
 AlwaysOn Profiling is constantly taking snapshots, or stack traces, of your application's code. Because reading through thousands of stack traces isn't practical, AlwaysOn Profiling aggregates and summarizes profiling data, providing a convenient way to explore call stacks.
+
+The flame graph in AlwaysOn Profiling stacks bars from top to bottom, following the hierarchy between function calls, to create a stack frame. The topmost bar, also called the root, is the start of the call stack. The depth of each stack in the flame graph shows the sequence of function calls, until there are no more descendants. There is no horizontal order, as the flame graph arranges bars to save space.
 
 Interpret stack frames
 ----------------------------------------------
@@ -41,9 +43,9 @@ The width of each bar is a meaningful indicator as to the performance of your co
    * - Type
      - Meaning of stack frame width
    * - CPU
-     - How often a function appears in stack traces. CPU usage relative to other stack traces.
+     - Frequency that a function appears in stack traces. CPU usage relative to other stack traces.
    * - Memory
-     - How much memory is allocated by a function relative to other stack traces
+     - Memory allocation by function relative to other stack traces
 
 The following image shows CPU stack frames for a Java application.
 
@@ -63,20 +65,22 @@ In the AlwaysOn Profiling table, :guilabel:`Count` shows how many times a line a
 .. image:: /_images/apm/profiling/frame-table.png
    :alt: Information panel on a highlighted thread.
 
-When you select a frame, an information dialog appears with the amount of call stacks where the code is present. Select :guilabel:`Show Thread Info` to see which threads contributed call stacks. The following image shows the frame information panel with a list of threads:
+When you select a frame, an information dialog appears with the amount of call stacks where the code is present. Select :guilabel:`Show Thread Info` to see which threads contributed call stacks. 
 
-.. image:: /_images/apm/profiling/profiling-thread-info.png
-   :alt: Information panel on a highlighted thread.
-
-Filter your flame graph
+Search and filter your flame graph
 -------------------------------------
 
-In the AlwaysOn Profiling flame graph, within each bar you can find the class name, file name, and line of code for the method called by your application. You can use this information as a filter, so only the functions you're looking for are visible. You can also filter stack traces by environment, service, service instance, and thread state. Use :guilabel:`Linked to Spans` to narrow down the call stacks to only focus on snapshots where APM was receiving spans from your application.  
+In the AlwaysOn Profiling flame table, each stack frame is labeled with the class name, file name, and line of code for the method called by your application. This same information is available when you hover over bars in the flame graph. The following image shows a stack frame with its class, file name, and line of code highlighted. 
+
+.. image:: /_images/apm/profiling/profiling-class-file-line.png
+   :alt: Stack frame breakdown showing class, file name, and line of code.
+
+You can search the details of the stack frame as a filter, so only the functions you're looking for are visible. 
+
+You can also filter stack traces by environment, service, service instance, and thread state. Use :guilabel:`Linked to Spans` to narrow down the call stacks to only focus on snapshots where APM was receiving spans from your application.  
 
 .. image:: /_images/apm/profiling/profiling-filters.png
    :alt: Available filters in the profiling.
-
-The flame graph of AlwaysOn Profiling stacks all bars from top to bottom, following the hierarchy between function calls. The root or topmost bar is the start of the call stack. The depth of each stack in the flame graph shows the sequence of function calls, until there are no more descendants. There is no horizontal order, as the flame graph arranges bars to save space.
 
 Switch to view CPU or memory
 -------------------------------------------------
