@@ -56,7 +56,7 @@ Span link scenarios
 
 You can view span links on spans in the trace waterfall view. Select the link to see the correlated spans and traces. You can select the span or the trace to navigate to the span.
 
-.. image:: /_images/apm/spans-traces/span-search-span-links.png
+.. image:: /_images/apm/spans-traces/span-search-span-links.gif
   :width: 95%
   :alt: User selects a span link select a connected span to navigate to.
 
