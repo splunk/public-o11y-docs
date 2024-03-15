@@ -313,3 +313,20 @@ a.external:not(.image-reference):after {
 .relations{
     display: none !important;
 }
+
+.logo-span{
+    display: block;
+    background: white;
+    width: 152px;
+    height: 79px;
+    margin-bottom: -55px;
+    margin-left: -12px;
+    margin-top: -41px;
+}
+
+.logoimage{
+    position: absolute;
+    left: 10px !important;
+    top: -2px !important;
+    width: 130px !important;
+}
