@@ -240,8 +240,8 @@ The following AWS services send data to Infrastructure Monitoring:
     - :strong:`X`
     - :strong:`X`
 
-  * - AWS/ElasticInterface
-    - Amazon Elastic Interface
+  * - AWS/ElasticInference
+    - Amazon Elastic Inference
     - :strong:`X`
     - 
     - 
