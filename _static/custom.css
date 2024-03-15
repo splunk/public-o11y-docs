@@ -316,7 +316,6 @@ a.external:not(.image-reference):after {
 
 .logo-span{
     display: block;
-    background: white;
     width: 152px;
     height: 79px;
     margin-bottom: -57px;
