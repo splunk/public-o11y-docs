@@ -12,34 +12,26 @@ You can visualize aggregated stack traces using the flame graph in AlwaysOn Prof
 Accessing the flame graph
 ============================================
 
-You can access the flame graph for your instrumented application or service in the following ways:
+To access the flame graph for your instrumented application or service in Splunk APM, select a service and then select the :guilabel:`AlwaysOn Profiling` section of the details panel.
 
-- In Splunk APM, select a service and then select the :guilabel:`AlwaysOn Profiling` section of the details panel.
+.. note:: If the AlwaysOn Profiling section is not visible, see :ref:`profiling-troubleshooting`.
 
-   .. image:: /_images/apm/profiling/profiling-from-apm.png
-      :alt: Filtering the flame graph and table in AlwaysOn Profiling.
+.. image:: /_images/apm/profiling/profiling-from-apm.png
+   :alt: Filtering the flame graph and table in AlwaysOn Profiling.
 
-- When viewing the details of a span in Splunk APM, select :guilabel:`View in AlwaysOn Profiler` to open the flame graph for a 10-minute window around the span duration.
-
-   .. image:: /_images/apm/profiling/profiling-profile-available2.png
-      :alt: Filtering the flame graph and table in AlwaysOn Profiling.
-
-.. note:: If the :guilabel:`AlwaysOn Profiling` section is not visible, see :ref:`profiling-troubleshooting`.
-
-Understanding the flame graph
+Use the flame graph
 ============================================
 
-AlwaysOn Profiling is constantly taking snapshots, or stack traces, of your application's code. Because reading through thousands of stack traces is not practical, AlwaysOn Profiling aggregates and summarizes profiling data, providing a convenient way to explore call stacks.
+AlwaysOn Profiling is constantly taking snapshots, or stack traces, of your application's code. Because reading through thousands of stack traces isn't practical, AlwaysOn Profiling aggregates and summarizes profiling data, providing a convenient way to explore call stacks.
 
 Stack frames
 ----------------------------------------------
 
 Each bar in the flame graph is a stack frame, tied to a function in your code. AlwaysOn Profiling extracts the stack frames by aggregating all call stacks during a period of time. When several stack traces start with the same frames, the bars representing those frames merge into a single bar.
 
-.. image:: /_images/apm/profiling/profiling-bars.png
-   :alt: Filtering the flame graph and table in AlwaysOn Profiling.
+Gray bars in the stack frame are system-level packages. Green bars are your custom code. 
 
-The width of each bar is an important clue to the performance of your code. The wider a bar or stack frame is, the more often the related function appears in stack traces, which might mean that the frame consumes more resources relative to the other stack frames.
+The width of each bar is a meaningful indicator as to the performance of your code. The wider a bar or stack frame is, the more often the related function appears in stack traces, which might mean that the frame consumes more resources relative to the other stack frames.
 
 .. list-table::
    :header-rows: 1
@@ -53,27 +45,35 @@ The width of each bar is an important clue to the performance of your code. The 
    * - Memory
      - How much memory is allocated by a function relative to other stack traces
 
-You can group stack frames and turn them into the root frame by selecting the tile button that appears after expanding a stack frame. Select the button again to restore the view. You can also select the :guilabel:`Total` frame at any time to go back. The following animation shows how to group and ungroup stack frames:
+The following image shows CPU stack frames for a Java application.
 
-.. image:: /_images/apm/profiling/group-frames.gif
+.. image:: /_images/apm/profiling/profiling-stack-frames.png
+   :alt: Filtering the flame graph and table in AlwaysOn Profiling.
+
+.. You can group stack frames and turn them into the root frame by selecting the tile button that appears after expanding a stack frame. Select the button again to restore the view. You can also select the :guilabel:`Total` frame at any time to go back. The following animation shows how to group and ungroup stack frames:
+
+.. .. image:: /_images/apm/profiling/group-frames.gif
    :alt: Grouping and ungrouping stack frames.
 
-CPU and memory
+Switch to view CPU or memory
 -------------------------------------------------
 
-You can switch the view of the AlwaysOn Profiling flame graph between :guilabel:`CPU` and :guilabel:`Memory` at any time. Memory data only appears if you've activated memory profiling. See :ref:`profiling-setup-enable-profiler`.
+You can switch the view of the AlwaysOn Profiling flame graph between :guilabel:`CPU` and :guilabel:`Memory` . Memory data are only available if you've activated memory profiling. See :ref:`profiling-setup-enable-profiler`.
 
 The following image shows the memory profiling flame graph for a Java application:
 
-   .. image:: /_images/apm/profiling/prof-flame-graph.png
+   .. image:: /_images/apm/profiling/memory-profiling-metrics_1.gif
       :alt: Sample memory flame graph for a Java application.
 
 Frame table
 ----------------------------------------------
 
-In the AlwaysOn Profiling table, :guilabel:`Count` shows how many times a line appeared in stack traces, while :guilabel:`Self time` expresses the time spent executing the function, minus the time spent calling other functions. A high self time value can also indicate performance issues. In some cases it might mean the thread is idle and doesn't consume resources.
+In the AlwaysOn Profiling table, :guilabel:`Count` shows how many times a line appeared in stack traces. :guilabel:`Self time` is the time spent executing the function, minus the time spent calling other functions. A high self time value might also indicate performance issues. Though, in some cases, it might mean the thread is idle and doesn't consume resources. The following image shows the flame graph with the frame table highlighted: of threads:
 
-When you select a frame, an information panel appears with the amount of call stacks where the code is present. Select :guilabel:`Show thread info` to see which threads contributed call stacks. The following image shows the frame information panel with a list of threads:
+.. image:: /_images/apm/profiling/frame-table.png
+   :alt: Information panel on a highlighted thread.
+
+When you select a frame, an information dialog appears with the amount of call stacks where the code is present. Select :guilabel:`Show Thread Info` to see which threads contributed call stacks. The following image shows the frame information panel with a list of threads:
 
 .. image:: /_images/apm/profiling/profiling-thread-info.png
    :alt: Information panel on a highlighted thread.
@@ -95,7 +95,7 @@ In most cases, you open the flame graph following the lead of a problematic span
 
 The top bars of the flame graph, which are the widest, frequently represent framework code, and might be less relevant for troubleshooting. To highlight your application components, type function or class names in the filter and scroll to the highlighted bars. Select each bar to maximize their width and drill down into the methods called from that function.
 
-The structure of each flame graph depends on the amount of profiling data and on the behavior of the application. Forks in the flame graph indicate different code paths in the data set. Whenever a function calls other functions, its bar has several bars underneath. The wider a bar, the more calls to the function AlwaysOn Profiling captured.
+The structure of each flame graph depends on the amount of profiling data and on the behavior of the application. Forks in the flame graph indicate different code paths in the dataset. Whenever a function calls other functions, its bar has several bars underneath. The wider a bar, the more calls to the function AlwaysOn Profiling captured.
 
 When you're examining a frame, the flame graph shows the flow of the code from that point onwards by stacking other frames underneath. Any unusual pattern in the calls originated by the frame can imply issues in your application's code or opportunities for optimization.
 
