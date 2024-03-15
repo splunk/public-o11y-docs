@@ -19,6 +19,11 @@ To access the flame graph for your instrumented application or service in Splunk
 .. image:: /_images/apm/profiling/profiling-from-apm.png
    :alt: Filtering the flame graph and table in AlwaysOn Profiling.
 
+.. - When viewing the details of a span in Splunk APM, select :guilabel:`View in AlwaysOn Profiler` to open the flame graph for a 10-minute window around the span duration.
+
+   .. image:: /_images/apm/profiling/profiling-profile-available2.png
+      :alt: Filtering the flame graph and table in AlwaysOn Profiling.
+
 Get familiar with the flame graph
 ============================================
 
