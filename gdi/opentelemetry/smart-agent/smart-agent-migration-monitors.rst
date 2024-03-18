@@ -23,7 +23,7 @@ Use native OTel components to monitor you applications or services
 
 Some smart Agent monitors are being deprecated and reaching end of support. During this period only critical security and bug fixes are provided. When end of support is reached, the monitor will be removed and no longer be supported.
 
-If a monitor has been deprecated, you no longer can use it with the Smart Agent receiver to send data to Splunk Observability Cloud. Instead, use a native OTel receiver to monitor you applications or services. Find the list of available receivers at :ref:`otel-components-receivers`.
+If a monitor has been deprecated, you can no longer use it with the Smart Agent receiver to send data to Splunk Observability Cloud. Instead, use a native OTel receiver to monitor you applications or services. Find the list of available receivers at :ref:`otel-components-receivers`.
 
 .. _migration-monitors-legacy:
 
