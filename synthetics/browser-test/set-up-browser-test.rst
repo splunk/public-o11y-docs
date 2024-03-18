@@ -81,6 +81,8 @@ Troubleshoot unsupported steps
 ------------------------------------------
 If your recording contains unsupported steps, you need to edit the step to reformat it into one of the supported Synthetic Browser step types. The following table shows how Google Chrome Recorder step names and code snippets map to their counterparts in Splunk Synthetic Browser tests. These examples use Buttercup Games, a fictitious game company.
 
+
+
 .. list-table::
    :header-rows: 1
    :widths: 50 50 
@@ -441,6 +443,16 @@ Interactive metrics are on by default. You can turn off interactive metrics in a
 * First CPU idle: Time until the page is minimally interactive and responds to user input.
 * Time to interactive: Time from the start of the first request until receiving the first byte of the first non-redirect request. ``3xx`` redirects increases this time. This metric is available for HTTP Uptime tests, but not Port Uptime tests.
 * Lighthouse score: A weighted aggregation of several Browser test metric values calculated using v6 of the Lighthouse scoring algorithm. See :new-page:`https://web.dev/vitals/` in the Google developer documentation to learn more about Lighthouse scoring.
+
+
+
+.. _browser-custom-props:
+
+Custom properties
+----------------------
+Use key:value pairs to create custom properties to filter and group dashboards, charts, and create alerts. A list of suggested custom properties is available for each test based on the tags associated with your tes. For example: ``env:test``, ``role:developer``, ``product:rum``.  
+
+
 
 Example
 ==================
