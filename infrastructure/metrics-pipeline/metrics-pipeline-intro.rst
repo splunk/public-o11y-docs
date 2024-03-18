@@ -192,14 +192,20 @@ Avoid these aggregation issues by using the following options:
 * Do your own MTS aggregation before sending your data by reconfiguring the OTel collector to drop unwanted dimensions.
 * Aggregate data using SignalFlow when you generate charts or create detectors.
 
-Scenario for metrics pipeline management
+.. _mpm-limitations:
+
+Metric pipeline management limitations
 ===============================================================================
 
-See :ref:`aggregate-drop-use-case`.
+The following limitations apply:
 
-Create your first MPM rules
+* Metrics pipeline management is not available for metrics ingested through the ``https://ingest.signalfx.com/v1/collectd`` endpoint.
+* Internal org metrics cannot be aggregated. To learn more, see :ref:`org-metrics`. Note that aggregation for CMS metrics is available.
+
+Learn more
 ===============================================================================
 
-To start using metrics pipeline management, see :ref:`use-metrics-pipeline`.
+To start using MPM, see:
 
-.. note:: Metrics pipeline management is not available for metrics ingested through the ``https://ingest.signalfx.com/v1/collectd`` endpoint.
+* :ref:`use-metrics-pipeline`.
+* :ref:`aggregate-drop-use-case`.
