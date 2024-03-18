@@ -68,35 +68,34 @@ By default, the Splunk Distribution of OpenTelemetry Collector includes the attr
 You can then add the attributes processors to any compatible pipeline. For example:
 
 .. code-block:: yaml
+  :emphasize-lines: 6,14,22
 
-   :emphasize-lines: 6, 14, 22
-
-   service:
-     pipelines:
-       traces:
-         receivers: [jaeger, otlp, zipkin]
-         processors:
-         - attributes/traces
-         - memory_limiter
-         - batch
-         - resourcedetection
-         exporters: [sapm, signalfx]
-       metrics:
-         receivers: [hostmetrics, otlp, signalfx]
-         processors:
-         - attributes/metrics
-         - memory_limiter
-         - batch
-         - resourcedetection
-         exporters: [signalfx]
-       logs:
-         receivers: [fluentforward, otlp]
-         processors:
-         - attributes/logs
-         - memory_limiter
-         - batch
-         - resourcedetection
-         exporters: [splunk_hec]
+  service:
+    pipelines:
+      traces:
+        receivers: [jaeger, otlp, zipkin]
+        processors:
+        - attributes/traces
+        - memory_limiter
+        - batch
+        - resourcedetection
+        exporters: [sapm, signalfx]
+      metrics:
+        receivers: [hostmetrics, otlp, signalfx]
+        processors:
+        - attributes/metrics
+        - memory_limiter
+        - batch
+        - resourcedetection
+        exporters: [signalfx]
+      logs:
+        receivers: [fluentforward, otlp]
+        processors:
+        - attributes/logs
+        - memory_limiter
+        - batch
+        - resourcedetection
+        exporters: [splunk_hec]
 
 To include or exclude attributes use any of the following properties:
 
