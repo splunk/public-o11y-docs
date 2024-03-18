@@ -12,7 +12,7 @@ Use Smart Agent monitors with the Collector
 
 The Smart Agent receiver and its associated extension are Collector components that allow you to add legacy SignalFx Smart Agent monitors to the pipelines of your Splunk Distribution of OpenTelemetry Collector. Many monitors also require a Smart Agent release bundle, which the Splunk Distribution of OpenTelemetry Collector installs on supported x86_64/amd64 platforms.
 
-Learn more at :ref:`smartagent-receiver` and :rerf:`otel-components`.
+Learn more at :ref:`smartagent-receiver` and :ref:`otel-components`.
 
 For a list of available application monitors, see :ref:`monitor-data-sources`.
 
@@ -21,9 +21,9 @@ For a list of available application monitors, see :ref:`monitor-data-sources`.
 Use native OTel components to monitor you applications or services
 =====================================================================================
 
-Smart Agent monitors are being deprecated and reaching end of support. During this period only critical security and bug fixes are provided. When end of support is reached, the monitor will be removed and no longer be supported.
+Some smart Agent monitors are being deprecated and reaching end of support. During this period only critical security and bug fixes are provided. When end of support is reached, the monitor will be removed and no longer be supported.
 
-If a monitor is deprecated, you no longer can use it with the Smart Agent receiver to send data to Splunk Observability Cloud. Instead, use a native OTel receiver to monitor you applications or services. Find the list of available receivers at :ref:`otel-components-receivers`.
+If a monitor has been deprecated, you no longer can use it with the Smart Agent receiver to send data to Splunk Observability Cloud. Instead, use a native OTel receiver to monitor you applications or services. Find the list of available receivers at :ref:`otel-components-receivers`.
 
 .. _migration-monitors-legacy:
 
