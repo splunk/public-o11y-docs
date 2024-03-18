@@ -246,7 +246,7 @@ The following is an example YAML configuration file with default values where ap
 
 .. _use-translatefx:
 
-1. Translate the Smart Agent configuration file using translatesfx
+4. Translate the Smart Agent configuration file using translatesfx
 =====================================================================================
 
 ``translatesfx`` is a command-line tool provided by Splunk Observability Cloud that helps you translate your existing Smart Agent YAML configuration file into a configuration that can be used by the Collector. To learn how to use it, see :ref:`Configuration translation tool <otel-translation-tool>`.
@@ -306,7 +306,7 @@ Configure ``ballastextension`` and the ``memory_limiter`` processor on every Col
 
 .. _deploy-non-prod-updated-config:
 
-1. Deploy the Collector to the non-production environment using the updated configuration file
+6. Deploy the Collector to the non-production environment using the updated configuration file
 ===================================================================================================
 
 Complete the necessary updates and translation of the configuration file, and restart the Collector on the non-production environment using the updated file.
