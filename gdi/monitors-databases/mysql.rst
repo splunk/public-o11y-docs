@@ -8,14 +8,11 @@ MySQL (deprecated)
 
 .. caution:: 
    
-   The MySQL monitor is now deprecated and will reach of End of Support on _____. You can no longer use it alongside the Smart Agent receiver to send data to Splunk Observability Cloud. Instead, use the native OpenTelemetry MySQL receiver. See more at :ref:`MySQL receiver <mysql-receiver>`.
-   
+   The MySQL monitor is now deprecated and will reach of End of Support on _____. You can no longer use it with the Smart Agent receiver to send data to Splunk Observability Cloud. Instead, use the native OpenTelemetry MySQL receiver. See more at :ref:`MySQL receiver <mysql-receiver>` and :ref:`migration-monitors`.
+
    During this period only critical security and bug fixes are provided. When end of support is reached, the monitor will be removed and no longer be supported.
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
-MySQL monitor type to retrieve metrics and logs from MySQL.
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the MySQL monitor type to retrieve metrics and logs from MySQL.
 
 This monitor connects to a MySQL instance and reports on the values
 returned by a ``SHOW STATUS`` command, which include the following:
