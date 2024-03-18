@@ -290,6 +290,12 @@ Instrument an application running within a Docker container
 
 An example of a Dockerfile that instruments a .NET application running inside a Docker container is available in the :new-page:`splunk/observability-content-contrib <https://github.com/splunk/observability-content-contrib/tree/main/integration-examples/splunk-otel-dotnet-docker>` repository on GitHub.
 
+Instrument Azure Web Apps
+---------------------------------------------------------------
+
+To instrument applications or services running on Azure Web Apps, see :ref:`instrument-dotnet-azure-webapp`.
+
+
 .. _windows-offline-install-otel-dotnet:
 
 Offline installation for Windows
