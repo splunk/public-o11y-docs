@@ -1,52 +1,52 @@
 .. _sentry-integration:
 
-Sentry  integration for Splunk On-Call
+Sentry integration for Splunk On-Call
 **********************************************************
 
 .. meta::
-   :description: About the user roll in Splunk On-Call.
+    :description: Configure the Sentry integration for Splunk On-Call.
 
-**Versions Supported:** N/A (SaaS)
+Sentry's real-time error tracking gives you insight into production deployments and information to reproduce and fix
+crashes. This integration sends all your Sentry alerts into the Splunk On-Call timeline
 
-**VictorOps Version Required:** **Starter, Growth,** or **Enterprise**
+Requirements
+==================
 
-**What you need to know:  Sentry's real-time error tracking gives you
-insight into production deployments and information to reproduce and fix
-crashes. This simple to set up integration sends all your Sentry alerts
-into the VictorOps timeline.**
+This integration is compatible with the following versions of Splunk On-Call:
 
-[/ht_toggle]
+- Starter
+- Growth
+- Enterprise
 
-**In Splunk On-Call**
----------------------
+Splunk On-Call configuration
+--------------------------------
 
-In Splunk On-call, select *Integrations >> Sentry.io*.
+1. In Splunk On-Call, select :guilabel:`Integrations` then :guilabel:`Sentry.io`
 
-If the integration has not yet been enabled, click the *Enable
-Integration* button to generate your Service API Key.
+2. If the integration has not yet been enabled, click the :guilabel:`Enable Integration` button to generate your Service API Key.
 
-Copy the “Service API Key” to your keyboard.
+3. Copy the “Service API Key” to your keyboard.
 
-**In Sentry**
--------------
+Sentry configuration
+-----------------------
 
-From your project select **Settings** then **Integrations**, search
-**VictorOps**.
+From your project select :guilabel:`Settings` then :guilabel:`Integrations` and search
+:guilabel:`Splunk On-Call`.
 
 .. image:: /_images/spoc/Screen_Shot_2019-12-16_at_11_59_42_AM.png
 
-Paste in your API key, select the appropriate `Routing
+Paste in your API key, select the appropriate `Routing
 Key <https://help.victorops.com/knowledge-base/routing-keys/>`__. Next,
-select **Save Changes** and then **Enable Plugin**.
+select :guilabel:`Save Changes` and then :guilabel:`Enable Plugin`.
 
-In order to send alerts using the VictorOps service you will need to
-have an alert rule (found at Settings >> Alerts) which specifies which
-alerts will utilize the service. For an initial verification that alerts
-will pass to VictorOps you an create a rule to trigger on “any event”
-which notifies the VictorOps service. You may need to spoof an alert to
-reach VictorOps.
+To send alerts using Splunk On-Call, you need to
+have an alert rule (found at :guilabel:`Settigns >> Alerts`) that specifies which
+alerts utilize the service. For an initial verification that alerts
+will pass to Splunk On-Call, you can create a rule to trigger on “any event”
+that notifies the Splunk On-Call service. You may need to spoof an alert to
+reach Splunk On-Call.
 
-You are done. If you have any questions please reach out to the
-`VictorOps
-support <mailto:support@victorops.com?Subject=Sentry.io%20VictorOps%20Integration>`__
+Questions? Reach out to the 
+`Splunk On-Call
+support <mailto:support@victorops.com?Subject=Sentry.io%20Splunk On-Call%20Integration>`__
 team.

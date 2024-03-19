@@ -6,8 +6,7 @@ Sumo Logic integration for Splunk On-Call
 .. meta::
     :description: Configure the Sumo Logic integration for Splunk On-Call.
 
-Sumo Logic is the industry's leading secure and purpose-built
-cloud-based machine data analytics service that leverages big data for
+Sumo Logic is a leading secure and purpose-built cloud-based machine data analytics service that leverages big data for
 real-time IT insights.
 
 Requirements
@@ -20,7 +19,7 @@ This integration is compatible with the following versions of Splunk On-Call:
 - Enterprise
 
 
-This integration uses the Sumo Logic “Connections” option to send
+This integration uses the Sumo Logic :guilabel:`Connections` option to send
 webhooks to the Splunk On-Call REST endpoint, creating incidents in the
 timeline. The remainder of this guide describes the steps needed to
 integrate the two platforms.
@@ -122,7 +121,7 @@ the Splunk On-Call webhook set up earlier.
 You also have the option to "Customize Payload" for individual searches,
 because you can add or edit any field on a per-search basis.
 
-Finally, click :guilabel:`Save`.
+Click :guilabel:`Save`.
 
 .. image:: /_images/spoc/Sumo10.png
    :alt: sumo10

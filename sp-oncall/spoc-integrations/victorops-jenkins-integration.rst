@@ -31,41 +31,41 @@ The remainder of this topic walks you through the Jenkins integration with Splun
 Splunk On-Call configuration
 ------------------------------
 
-Navigate to the Integrations page and find the REST endpoint integration by visiting :guilabel:`Integrations >> REST Endpoint`.
+1. Navigate to the Integrations page and find the REST endpoint integration by visiting :guilabel:`Integrations >> REST Endpoint`.
 
-Copy the REST endpoint URL to your clipboard.
+2. Copy the REST endpoint URL to your clipboard.
 
 .. image:: /_images/spoc/rest-final.png
 
 Jenkins configuration
 ------------------------
 
-Select the build or deployment you want to add Splunk On-Call notifications for, then select :guilabel:`Configure`.
+1. Select the build or deployment you want to add Splunk On-Call notifications for, then select :guilabel:`Configure`.
 
 .. image:: /_images/spoc/jenkins4.png
    :alt: jenkins4
 
    jenkins4
 
-Under “Build,” select :guilabel:`Add build step`, then :guilabel:`Execute shell`.
+2. Under “Build,” select :guilabel:`Add build step`, then :guilabel:`Execute shell`.
 
 .. image:: /_images/spoc/jenkins5.png
    :alt: jenkins5
 
    jenkins5
 
-Paste the following cURL command into the “Command” box. Make sure to replace the “SPLUNKONCALL_REST_ENDPOINT_URL” with the URL you copied from Splunk On-Call.
+3. Paste the following cURL command into the “Command” box. Make sure to replace the “SPLUNKONCALL_REST_ENDPOINT_URL” with the URL you copied from Splunk On-Call.
 
 .. code-block:: none
 
    curl -X POST --header 'Accept: application/json' --data '{ "entity_id": "'${BUILD_NAME}'", "message_type": "INFO", "state_message": "Jenkins Build: '${BUILD_DISPLAY_NAME}' is underway", "BUILD_ID": "'${BUILD_ID}'" }' '**SPLUNKONCALL_REST_ENDPOINT_URL**'
 
 
-To add additional Jenkins variables, select the :guilabel:`available environment variables` link to see the available list:
+4. To add additional Jenkins variables, select the :guilabel:`available environment variables` link to see the available list:
 
 .. image:: /_images/spoc/jenkins6.png
    :alt: jenkins6
 
    jenkins6
 
-Save your configuration, then you are done.
+5. Save your configuration, then you are done.
