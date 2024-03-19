@@ -52,10 +52,10 @@ The Helm chart for the Collector has three components: agent, cluster receiver, 
 
 For use cases about the different components, see the GitHub documentation :new-page:`Splunk OpenTelemetry Collector Helm Chart Components: Use Cases <https://github.com/jvoravong/splunk-otel-collector-chart/blob/Feature-components-doc/docs/components.md#use-cases>`.
 
-EXPLAIN EACH COMPONENT MORE
-
 Agent component
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The agent component is deployed to each node in the Kubernetes cluster as a DaemonSet, and monitors all the data sources within each node.
 
 The agent component consists of the following config files:
 
@@ -76,6 +76,8 @@ The agent component consists of the following config files:
 
 Cluster receiver component
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The cluster receiver component runs as a single pod in the cluster created by a deployment, and collects data from a single location. Use this component in scenarios where telemetry data is available from a cluster-wide service or endpoint.
 
 The cluster receiver component consists of the following config files:
 
@@ -101,6 +103,8 @@ The cluster receiver component consists of the following config files:
 
 Gateway component (optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The gateway component serves as an intermediary. It receives, processes, enriches, and forwards data, enhancing data exportation. Use it primarily in larger clusters to scale monitoring capabilities.
 
 The gateway component consists of the following config files:
 

@@ -211,7 +211,7 @@ Read the following table to decide which option to chose to collect your data:
 
   * - 
     - Collect via the Collector agent 
-    - Collect via the the Collector cluster receiver 
+    - Collect via the Collector cluster receiver 
 
   * - Where is data collected?
     - At the node level.
@@ -227,8 +227,8 @@ Read the following table to decide which option to chose to collect your data:
     - Uncomplete data: This option might result in a partial view of your cluster's health and performance. If the service collects metrics only from a subset of nodes, you might miss critical metrics from parts of your cluster.
 
   * - Use cases
-    - Use this in environments where you need detailed insights into each node's operations. This allows better issue diagnosing and optimizing performance. 
-    - Use this to collect metrics from application pods that have multiple replicas that can be running on multiple nodes.
+    - - Use this in environments where you need detailed insights into each node's operations. This allows better issue diagnosing and optimizing performance. 
+      - Use this to collect metrics from application pods that have multiple replicas that can be running on multiple nodes.
     - Use this in environments where operational simplicity is a priority, or if your cluster is already simple and has only 1 node.
 
 Example: Add the MySQL receiver
