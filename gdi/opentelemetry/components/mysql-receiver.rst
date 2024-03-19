@@ -44,7 +44,7 @@ Follow these steps to configure and activate the component:
 Sample configuration
 ----------------------
 
-To activate the eceiver, add ``mysql`` to the ``receivers`` section of your configuration file:
+To activate the receiver, add ``mysql`` to the ``receivers`` section of your configuration file:
 
 .. code:: yaml
 
