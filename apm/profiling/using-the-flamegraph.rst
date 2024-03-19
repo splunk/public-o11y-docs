@@ -12,17 +12,21 @@ You can visualize aggregated stack traces using the flame graph in AlwaysOn Prof
 Accessing the flame graph
 ============================================
 
-To access the flame graph for your instrumented application or service in Splunk APM, select a service and then select the :guilabel:`AlwaysOn Profiling` section of the details panel. You can also select :guilabel:`AlwaysOn Profiling` from the APM landing page and then select a service in the service filter.
+You can access the flame graph for your instrumented application or service in the following places:
 
-.. note:: If the AlwaysOn Profiling section is not visible, see :ref:`profiling-troubleshooting`.
+To access the flame graph for your instrumented application or service in Splunk APM, select a service and then select the :guilabel:`AlwaysOn Profiling` section of the details panel. 
 
 .. image:: /_images/apm/profiling/profiling-from-apm.png
    :alt: Filtering the flame graph and table in AlwaysOn Profiling.
 
-.. - When viewing the details of a span in Splunk APM, select :guilabel:`View in AlwaysOn Profiler` to open the flame graph for a 10-minute window around the span duration.
+When viewing the details of a span in Splunk APM, select :guilabel:`View in AlwaysOn Profiler` to open the flame graph for a 10-minute window around the span duration.
 
    .. image:: /_images/apm/profiling/profiling-profile-available2.png
       :alt: Filtering the flame graph and table in AlwaysOn Profiling.
+
+You can also select :guilabel:`AlwaysOn Profiling` from the APM landing page and then select a service in the service filter.
+
+.. note:: If the AlwaysOn Profiling section is not visible, see :ref:`profiling-troubleshooting`.
 
 Get familiar with the flame graph
 ============================================
