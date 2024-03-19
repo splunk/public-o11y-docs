@@ -8,7 +8,7 @@ Use Smart Agent monitors with the Collector
 .. meta::
    :description: Describes how to use Smart Agent monitors with the Smart Agent Receiver in the Collector.
 
-.. caution:: Smart Agent monitors are being deprecated and will no longer be available to send data to Splunk Observability Cloud. Instead, use the native OpenTelemetry receivers. See :ref:`migration-monitors-native`.
+.. caution:: Smart Agent monitors are being deprecated and will no longer be available to send data to Splunk Observability Cloud when they reach End of Support. Instead, you can use native OpenTelemetry receivers to gather data with the OTel Collector. See :ref:`migration-monitors-native`.
 
 The Smart Agent receiver and its associated extension are Collector components that allow you to add legacy SignalFx Smart Agent monitors to the pipelines of your Splunk Distribution of OpenTelemetry Collector. Many monitors also require a Smart Agent release bundle, which the Splunk Distribution of OpenTelemetry Collector installs on supported x86_64/amd64 platforms.
 
@@ -21,9 +21,9 @@ For a list of available application monitors, see :ref:`monitor-data-sources`.
 Use native OTel components to monitor you applications or services
 =====================================================================================
 
-Some smart Agent monitors are being deprecated and reaching end of support. During this period only critical security and bug fixes are provided. When end of support is reached, the monitor will be removed and no longer be supported.
+Some Smart Agent monitors are being deprecated, and during this period only critical security and bug fixes are provided. When End of Support is reached, the monitor will be removed and no longer be supported, and you won't be able to use it with the Smart Agent receiver to send data to Splunk Observability Cloud.
 
-If a monitor has been deprecated, you can no longer use it with the Smart Agent receiver to send data to Splunk Observability Cloud. Instead, use a native OTel receiver to monitor you applications or services. Find the list of available receivers at :ref:`otel-components-receivers`.
+If a monitor has been deprecated, you can use a native OTel receiver to monitor you applications or services instead. Find the list of available receivers at :ref:`otel-components-receivers`.
 
 .. _migration-monitors-legacy:
 
