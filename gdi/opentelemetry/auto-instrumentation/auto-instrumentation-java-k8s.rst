@@ -209,14 +209,22 @@ Run the following commands to verify the resources are deployed correctly:
    # monitoring    splunk-otel-collector-k8s-cluster-receiver-856f5fbcf9-pqkwg     1/1     Running
    # monitoring    splunk-otel-collector-opentelemetry-operator-56c4ddb4db-zcjgh   2/2     Running
 
+The pods running in your namespace must include the following:
+
+.. code-block:: yaml
+
    kubectl get mutatingwebhookconfiguration.admissionregistration.k8s.io -n monitoring
    # NAME                                                    WEBHOOKS   AGE
    # splunk-otel-collector-cert-manager-webhook              1          14m
    # splunk-otel-collector-opentelemetry-operator-mutation   3          14m
 
-   kubectl get otelinst -n <target_application_namespace>
+The namespace must have a running instance of the OpenTelemetry Collector. The name of this instance matches the name of the Collector instance that you installed in :ref:`deploy-helm-chart-java-k8s`.
+
+.. code-block:: yaml
+
+   kubectl get otelinst -n monitoring
    # NAME                          AGE   ENDPOINT
-   # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
+   # splunk-otel-collector          3m   http://$(SPLUNK_OTEL_AGENT):4317
 
 .. _k8s-java-set-annotations:
 
@@ -268,7 +276,11 @@ Applying annotations in a different namespace
 
 If the current namespace isn't ``monitoring``, change the annotation to specify the namespace in which you installed the OpenTelemetry Collector. 
 
-For example, if the current namespace is ``<my-other-namespace>`` and you installed the Collector in ``monitoring``, set the annotation to ``"instrumentation.opentelemetry.io/inject-java": "monitoring/splunk-otel-collector"``.
+For example, if the current namespace is ``<my-namespace>`` and you installed the Collector in ``monitoring``, set the annotation to ``"instrumentation.opentelemetry.io/inject-java": "monitoring/splunk-otel-collector"``:
+
+.. code-block:: bash
+
+  kubectl patch deployment <my-deployment> -n <my-namespace> -p '{"spec":{"template":{"metadata":{"annotations":{"instrumentation.opentelemetry.io/inject-java":"monitoring/splunk-otel-collector"}}}}}'
 
 To deactivate automatic instrumentation, remove the annotation. The following command removes the annotation for automatic instrumentation, deactivating it:
 
