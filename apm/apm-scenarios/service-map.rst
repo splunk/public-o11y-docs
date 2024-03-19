@@ -20,7 +20,11 @@ To troubleshoot the invalid request error reports, Kai takes the following steps
 Kai opens the service map
 ===========================
 
-To investigate the downstream service causing the error, Kai selects the :strong:`Service Map` card in Splunk APM to open the service map for troubleshooting. Kai looks through the real-time service map, which contains nodes and dependencies of services instrumented in Splunk APM. 
+To investigate the downstream service causing the error, Kai searches for "service map" and selects the navigation item in the search results to go directly to the Service Map in APM. Kai looks through the real-time service map, which contains nodes and dependencies of services instrumented in Splunk APM. 
+
+..  image:: /_images/apm/apm-use-cases/search-for-service-map.gif
+    :width: 65%
+    :alt: This animation shows Kai using the search to search for service map and select the navigation item in the search results. 
 
 .. _root-cause-errors:
 
