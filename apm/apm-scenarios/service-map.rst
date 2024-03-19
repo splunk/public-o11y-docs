@@ -23,7 +23,7 @@ Kai opens the service map
 To investigate the downstream service causing the error, Kai searches for "service map" and selects the navigation item in the search results to go directly to the Service Map in APM. Kai looks through the real-time service map, which contains nodes and dependencies of services instrumented in Splunk APM. 
 
 ..  image:: /_images/apm/apm-use-cases/search-for-service-map.gif
-    :width: 65%
+    :width: 95%
     :alt: This animation shows Kai using the search to search for service map and select the navigation item in the search results. 
 
 .. _root-cause-errors:
