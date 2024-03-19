@@ -228,6 +228,7 @@ Read the following table to decide which option to chose to collect your data:
 
   * - Use cases
     - Use this in environments where you need detailed insights into each node's operations. This allows better issue diagnosing and optimizing performance. 
+    - Use this to collect metrics from application pods that have multiple replicas that can be running on multiple nodes.
     - Use this in environments where operational simplicity is a priority, or if your cluster is already simple and has only 1 node.
 
 Example: Add the MySQL receiver
