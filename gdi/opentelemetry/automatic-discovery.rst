@@ -43,6 +43,15 @@ When you deploy the Collector with automatic discovery activated, the Collector 
 
     <h2>Get started</h2>
 
+To get started, follow these links for the type of application you want to gather telemetry data from:
+
+* :ref:`Java <auto-instrumentation-java>`
+* :ref:`.NET <auto-instrumentation-dotnet>`
+* :ref:`Node.js <auto-instrumentation-nodejs>`
+* :ref:`Third-party <discovery-mode>`
+
+To learn about advanced configuration for discovering back-end applications, see :ref:`advanced-config-auto-instrumentation`.
+
 
 
 
