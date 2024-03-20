@@ -89,6 +89,7 @@ Splunk On-Call integrations
    webex-teams-integration-guide
    whatsup-gold-integration-guide-victorops
    zendesk-bi-directional-integration
+   zenoss-integration
 
    victorops-bugsnag-integration
    victorops-cabot-integration
@@ -135,7 +136,6 @@ Splunk On-Call integrations
    vividcortex-integration
    victorops-wormly-integration
    victorops-zabbix-integration
-   victorops-zenoss-integration
 
 .. Add list of integrations here.
 
