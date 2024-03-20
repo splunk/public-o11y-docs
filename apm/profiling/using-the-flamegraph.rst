@@ -14,7 +14,8 @@ Accessing the flame graph
 
 You can access the flame graph for your instrumented application or service in the following places:
 
-* Your Splunk APM service menu.
+* Your Splunk APM service map.
+* When viewing the details of a span in the trace waterfall view.
 * The Splunk APM landing page.
 
 To access the flame graph for your instrumented application or service in Splunk APM, select a service and then select the :guilabel:`AlwaysOn Profiling` section of the details panel. 
@@ -22,7 +23,7 @@ To access the flame graph for your instrumented application or service in Splunk
 .. image:: /_images/apm/profiling/profiling-from-apm.png
    :alt: Filtering the flame graph and table in AlwaysOn Profiling.
 
-When viewing the details of a span in Splunk APM, select :guilabel:`View in AlwaysOn Profiler` to open the flame graph for a 10-minute window around the span duration.
+When viewing the details of a span in the trace waterfall view in Splunk APM, select :guilabel:`View in AlwaysOn Profiler` to open the flame graph for a 10-minute window around the span duration.
 
    .. image:: /_images/apm/profiling/profiling-profile-available2.png
       :alt: Filtering the flame graph and table in AlwaysOn Profiling.
