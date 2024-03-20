@@ -11,10 +11,10 @@ Use the OTel Collector with the Operator in a Kubernetes environment to automati
 
 To install zero configuration automatic instrumentation for .NET applications, complete the following steps:
 
-#. :ref:`deploy-helm-chart-dotnet-k8s`
-#. :ref:`verify-otel-resources-dotnet-k8s`
-#. :ref:`set-dotnet-annotations-k8s`
-#. :ref:`view-results-dotnet-k8s`
+#. :ref:`Deploy the Helm Chart with the Kubernetes Operator <deploy-helm-chart-dotnet-k8s>`
+#. :ref:`Verify all OpenTelemetry resources are deployed correctly <verify-otel-resources-dotnet-k8s>`
+#. :ref:`Set annotations to instrument .NET applications <set-dotnet-annotations-k8s>`
+#. :ref:`View results in Splunk APM <view-results-dotnet-k8s>`
 
 Requirements
 ================================================================
@@ -27,7 +27,7 @@ Zero Config Auto Instrumentation for .NET requires the following components:
 
 .. _deploy-helm-chart-dotnet-k8s:
 
-Deploy the Helm Chart with the Kubernetes Operator
+\1. Deploy the Helm Chart with the Kubernetes Operator
 =========================================================
 
 To deploy the Helm Chart, create a file called values.yaml. This file defines the settings to activate or deactivate when installing the OpenTelemetry Collector with the Helm Chart.
@@ -175,18 +175,28 @@ The following examples show how to set the attribute using each method:
 Deploy the Helm Chart
 ------------------------------------------------------
 
-After configuring values.yaml, use the following command to deploy the Helm Chart and install the OpenTelemetry Collector:
+After configuring values.yaml, use the following command to deploy the Helm Chart:
 
 .. code-block:: bash
 
-  helm install splunk-otel-collector -f ./values.yaml splunk-otel-collector-chart/splunk-otel-collector
+   helm install splunk-otel-collector -f ./values.yaml splunk-otel-collector-chart/splunk-otel-collector --namespace monitoring
+
+You can change the name of the Collector instance and the namespace in which you install the Collector. 
+
+For example, to change the name of the Collector instance to ``otel-collector`` and install it in the ``o11y`` namespace, use the following command:
+
+.. code-block:: bash
+
+   helm install otel-collector -f ./values.yaml splunk-otel-collector-chart/splunk-otel-collector --namespace o11y
 
 .. _verify-otel-resources-dotnet-k8s:
       
-Check that all the OpenTelemetry resources are deployed successfully
+\2. Check that all the OpenTelemetry resources are deployed successfully
 ==========================================================================
 
-Resources include the Collector, the Operator, a webhook, and an instrumentation.
+Helm deploys the OpenTelemetry resources as Kubernetes pods. These resources include the Collector, the Operator, webhook, and instrumentation. 
+
+Each resource has a prefix containing the helm release name that you set in :ref:`zeroconfig-dotnet-deploy`. For example, if you set the Collector instance name to ``otel-collector``, each pod name is prefixed with ``otel-collector``.
 
 Run the following to verify the resources are deployed correctly:
 
@@ -202,10 +212,18 @@ Run the following to verify the resources are deployed correctly:
    # monitoring    splunk-otel-collector-k8s-cluster-receiver-856f5fbcf9-pqkwg     1/1     Running
    # monitoring    splunk-otel-collector-opentelemetry-operator-56c4ddb4db-zcjgh   2/2     Running
 
+The pods running in your namespace must include the following:
+
+.. code-block:: yaml
+
    kubectl get mutatingwebhookconfiguration.admissionregistration.k8s.io -n monitoring
    # NAME                                      WEBHOOKS   AGE
    # splunk-otel-collector-cert-manager-webhook              1          14m
    # splunk-otel-collector-opentelemetry-operator-mutation   3          14m
+
+The namespace must have a running instance of the OpenTelemetry Collector. The name of this Collector instance matches the name that you set in :ref:`zeroconfig-dotnet-deploy`.
+
+.. code-block:: yaml
 
    kubectl get otelinst -n monitoring
    # NAME                            AGE   ENDPOINT
@@ -213,7 +231,7 @@ Run the following to verify the resources are deployed correctly:
 
 .. _set-dotnet-annotations-k8s:
 
-Set annotations to instrument .NET applications
+\3. Set annotations to instrument .NET applications
 ===================================================================
 
 To instrument your .NET applications, add an annotation to your Kubernetes object yaml.
@@ -315,12 +333,26 @@ The following example YAML files show how to add the appropriate annotations for
             containers:
             - name: my-dotnet-app
               image: my-dotnet-app:latest
-    
+
+Applying annotations in a different namespace
+------------------------------------------------
+
+If the current namespace isn't ``monitoring``, change the annotation to specify the namespace in which you installed the OpenTelemetry Collector. 
+
+For example, if the current namespace is ``<my-namespace>`` and you installed the Collector in ``monitoring``, set the annotation to ``"instrumentation.opentelemetry.io/inject-dotnet": "monitoring/splunk-otel-collector"``:
+
+.. code-block:: bash
+
+  kubectl patch deployment <my-deployment> -n <my-namespace> -p '{"spec":{"template":{"metadata":{"annotations":{"instrumentation.opentelemetry.io/inject-dotnet":"monitoring/splunk-otel-collector"}}}}}'
+
+Deactivate automatic instrumentation
+-----------------------------------------
+
 To deactivate automatic instrumentation, remove the annotation. The following command removes the annotation for automatic instrumentation, deactivating it:
 
-    .. code-block:: bash
+.. code-block:: bash
 
-      kubectl patch deployment <my-deployment> -n <my-namespace> --type=json -p='[{"op": "remove", "path": "/spec/template/metadata/annotations/instrumentation.opentelemetry.io~1inject-dotnet"}]'
+    kubectl patch deployment <my-deployment> -n <my-namespace> --type=json -p='[{"op": "remove", "path": "/spec/template/metadata/annotations/instrumentation.opentelemetry.io~1inject-dotnet"}]'
 
 Verify instrumentation
 -----------------------------------------------
@@ -379,7 +411,7 @@ Your instrumented pod should contain an initContainer named ``opentelemetry-auto
 
 .. _view-results-dotnet-k8s:
 
-View results in Splunk APM
+\4. View results in Splunk APM
 ===========================================================
 
 The Operator intercepts and alters the Kubernetes API requests to create and update annotated pods, the internal pod application containers are instrumented, and trace and metrics data populates the :ref:`APM dashboard <apm-dashboards>`. 

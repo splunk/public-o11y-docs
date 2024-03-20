@@ -11,10 +11,10 @@ Use the OTel Collector with the Operator in a Kubernetes environment to automati
 
 To install zero configuration automatic instrumentation for Node.js, complete the following steps:
 
-#. :ref:`deploy-helm-chart-nodejs-k8s`
-#. :ref:`nodejs-k8s-verify-resources`
-#. :ref:`nodejs-k8s-set-annotations`
-#. :ref:`nodejs-k8s-view-results`
+#. :ref:`Deploy the Helm Chart with the Kubernetes Operator <deploy-helm-chart-nodejs-k8s>`
+#. :ref:`Verify all OpenTelemetry resources are deployed correctly <nodejs-k8s-verify-resources>`
+#. :ref:`Set annotations to instrument Node.js applications <nodejs-k8s-set-annotations>`
+#. :ref:`View results in Splunk APM <nodejs-k8s-view-results>`
 
 Requirements
 ================================================================
@@ -26,7 +26,7 @@ Zero Config Auto Instrumentation for Node.js requires the following components:
 
 .. _deploy-helm-chart-nodejs-k8s:
 
-Deploy the Helm Chart with the Kubernetes Operator
+\1. Deploy the Helm Chart with the Kubernetes Operator
 =================================================================
 
 To deploy the Helm Chart, create a file called values.yaml. In this file, you can define the settings to activate or deactivate when installing the OpenTelemetry Collector with the Helm Chart.
@@ -172,6 +172,8 @@ The following examples show how to set the attribute using each method:
         
           kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=environment=prd
 
+.. _k8s-nodejs-deploy-command:
+
 Deploy the Helm Chart
 ---------------------------------
 
@@ -179,14 +181,24 @@ After configuring values.yaml, use the following command to deploy the Helm Char
 
 .. code-block:: bash
 
-   helm install splunk-otel-collector -f ./values.yaml splunk-otel-collector-chart/splunk-otel-collector
+   helm install splunk-otel-collector -f ./values.yaml splunk-otel-collector-chart/splunk-otel-collector --namespace monitoring
+
+You can change the name of the Collector instance and the namespace in which you install the Collector. 
+
+For example, to change the name of the Collector instance to ``otel-collector`` and install it in the ``o11y`` namespace, use the following command:
+
+.. code-block:: bash
+
+   helm install otel-collector -f ./values.yaml splunk-otel-collector-chart/splunk-otel-collector --namespace o11y
 
 .. _nodejs-k8s-verify-resources:
 
-Verify all the OpenTelemetry resources are deployed successfully
+\2. Verify all the OpenTelemetry resources are deployed successfully
 ==========================================================================
 
-Resources include the Collector, the Operator, webhook, and instrumentation.
+Helm deploys the OpenTelemetry resources as Kubernetes pods. These resources include the Collector, the Operator, webhook, and instrumentation. 
+
+Each resource has a prefix containing the helm release name that you set in :ref:`k8s-nodejs-deploy-command`. For example, if you set the Collector instance name to ``otel-collector``, each pod name is prefixed with ``otel-collector``.
 
 Run the following commands to verify the resources are deployed correctly:
 
@@ -202,10 +214,18 @@ Run the following commands to verify the resources are deployed correctly:
    # monitoring    splunk-otel-collector-k8s-cluster-receiver-856f5fbcf9-pqkwg     1/1     Running
    # monitoring    splunk-otel-collector-opentelemetry-operator-56c4ddb4db-zcjgh   2/2     Running
 
+The pods running in your namespace must include the following:
+
+.. code-block:: yaml
+
    kubectl get mutatingwebhookconfiguration.admissionregistration.k8s.io -n monitoring
    # NAME                                      WEBHOOKS   AGE
    # splunk-otel-collector-cert-manager-webhook              1          14m
    # splunk-otel-collector-opentelemetry-operator-mutation   3          14m
+
+The namespace must have a running instance of the OpenTelemetry Collector. The name of this Collector instance matches the name that you set in :ref:`k8s-nodejs-deploy-command`.
+
+.. code-block:: yaml
 
    kubectl get otelinst -n <target_application_namespace>
    # NAME                          AGE   ENDPOINT
@@ -213,7 +233,7 @@ Run the following commands to verify the resources are deployed correctly:
 
 .. _nodejs-k8s-set-annotations:
 
-Set annotations to instrument Node.js applications
+\3. Set annotations to instrument Node.js applications
 ==============================================================
 
 You can activate auto instrumentation for Node.js applications before runtime.
@@ -255,6 +275,20 @@ Activate auto instrumentation by adding ``instrumentation.opentelemetry.io/injec
           containers:
           - name: my-nodejs-app
             image: my-nodejs-app:latest
+
+Applying annotations in a different namespace
+------------------------------------------------
+
+If the current namespace isn't ``monitoring``, change the annotation to specify the namespace in which you installed the OpenTelemetry Collector. 
+
+For example, if the current namespace is ``<my-namespace>`` and you installed the Collector in ``monitoring``, set the annotation to ``"instrumentation.opentelemetry.io/inject-nodejs": "monitoring/splunk-otel-collector"``:
+
+.. code-block:: bash
+
+   kubectl patch deployment <my-deployment> -n <my-namespace> -p '{"spec":{"template":{"metadata":{"annotations":{"instrumentation.opentelemetry.io/inject-nodejs":"monitoring/splunk-otel-collector"}}}}}'
+
+Deactivate automatic instrumentation
+-------------------------------------------------
 
 To deactivate automatic instrumentation, remove the annotation. The following command removes the annotation for automatic instrumentation, deactivating it:
 
@@ -321,7 +355,7 @@ Instrumented pods contain an initContainer named ``opentelemetry-auto-instrument
 
 .. _nodejs-k8s-view-results:
 
-View results at Splunk Observability APM
+\4. View results at Splunk Observability APM
 ==========================================================
 
 Allow the Operator to do the work. The Operator intercepts and alters the Kubernetes API requests to create and update annotated pods, the internal pod application containers are instrumented, and trace and metrics data populates the :ref:`APM dashboard <apm-dashboards>`.
