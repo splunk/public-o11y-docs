@@ -238,7 +238,7 @@ The namespace must have a running instance of the OpenTelemetry Collector. The n
 
 You can activate auto instrumentation for Node.js applications before runtime.
 
-If the related Kubernetes object (deployment, daemonset, or pod) is not deployed, add the ``instrumentation.opentelemetry.io/inject-nodejs`` annotation to the application object YAML.
+If the related Kubernetes object (deployment, daemonset, or pod) is not deployed, add the ``instrumentation.opentelemetry.io/inject-nodejs: "true"`` annotation to the application object YAML.
 
 For example, given the following deployment YAML:
 
