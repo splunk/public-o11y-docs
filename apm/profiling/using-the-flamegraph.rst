@@ -42,7 +42,7 @@ Each bar in the flame graph is a stack frame, tied to a function in your code. A
 
 Gray bars in the stack frame are system-level packages. Green bars are your custom code. 
 
-The width of each bar is a meaningful indicator as to the performance of your code. The wider a bar or stack frame is, the more often the related function appears in stack traces, which might mean that the frame consumes more resources relative to the other stack frames.
+The width of each bar is a meaningful indicator of your code's performance. The wider a bar or stack frame is, the more often the related function appears in stack traces, which might mean that the frame consumes more resources relative to the other stack frames.
 
 .. list-table::
    :header-rows: 1
