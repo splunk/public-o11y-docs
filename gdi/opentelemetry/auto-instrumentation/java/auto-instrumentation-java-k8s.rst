@@ -11,10 +11,10 @@ Use the OTel Collector with the Operator in a Kubernetes environment to automati
 
 To install zero configuration automatic instrumentation for Java, complete the following steps:
 
-#. :ref:`deploy-helm-chart-java-k8s`
-#. :ref:`java-k8s-verify-resources`
-#. :ref:`k8s-java-set-annotations`
-#. :ref:`java-k8s-view-results`
+#. :ref:`Deploy the Helm Chart with the Kubernetes Operator <deploy-helm-chart-java-k8s>`
+#. :ref:`Verify all OpenTelemetry resources are deployed correctly <java-k8s-verify-resources>`
+#. :ref:`Set annotations to instrument Java applications <k8s-java-set-annotations>`
+#. :ref:`View results in Splunk APM <java-k8s-view-results>`
 
 Requirements
 ================================================================
@@ -153,9 +153,9 @@ The following examples show how to set the attribute using each method:
             apiVersion: apps/v1
             kind: Deployment
             metadata:
-            name: my-java-app
+              name: my-java-app
             spec:
-            template:
+              template:
                spec:
                   containers:
                   - name: my-java-app
@@ -172,6 +172,8 @@ The following examples show how to set the attribute using each method:
         
           kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=environment=prd
 
+.. _k8s-java-deploy-command:
+
 Deploy the Helm Chart
 ---------------------------------
 
@@ -179,21 +181,30 @@ After configuring values.yaml, use the following command to deploy the Helm Char
 
 .. code-block:: bash
 
-   helm install splunk-otel-collector -f ./values.yaml splunk-otel-collector-chart/splunk-otel-collector
+   helm install splunk-otel-collector -f ./values.yaml splunk-otel-collector-chart/splunk-otel-collector --namespace monitoring
+
+You can change the name of the Collector instance and the namespace in which you install the Collector. 
+
+For example, to change the name of the Collector instance to ``otel-collector`` and install it in the ``o11y`` namespace, use the following command:
+
+.. code-block:: bash
+
+   helm install otel-collector -f ./values.yaml splunk-otel-collector-chart/splunk-otel-collector --namespace o11y
 
 .. _java-k8s-verify-resources:
 
 Verify all the OpenTelemetry resources are deployed successfully
 ==========================================================================
 
-Resources include the Collector, the Operator, webhook, and instrumentation.
+Helm deploys the OpenTelemetry resources as Kubernetes pods. These resources include the Collector, the Operator, webhook, and instrumentation. 
+
+Each resource has a prefix containing the helm release name that you set in :ref:`k8s-java-deploy-command`. For example, if you set the Collector instance name to ``otel-collector``, each pod name is prefixed with ``otel-collector``.
 
 Run the following commands to verify the resources are deployed correctly:
 
 .. code-block:: yaml
    
    kubectl  get pods -n monitoring
-   # NAME                                                          READY
    # NAMESPACE     NAME                                                            READY   STATUS
    # monitoring    splunk-otel-collector-agent-lfthw                               2/2     Running
    # monitoring    splunk-otel-collector-cert-manager-6b9fb8b95f-2lmv4             1/1     Running
@@ -202,14 +213,22 @@ Run the following commands to verify the resources are deployed correctly:
    # monitoring    splunk-otel-collector-k8s-cluster-receiver-856f5fbcf9-pqkwg     1/1     Running
    # monitoring    splunk-otel-collector-opentelemetry-operator-56c4ddb4db-zcjgh   2/2     Running
 
+The pods running in your namespace must include the following:
+
+.. code-block:: yaml
+
    kubectl get mutatingwebhookconfiguration.admissionregistration.k8s.io -n monitoring
-   # NAME                                      WEBHOOKS   AGE
+   # NAME                                                    WEBHOOKS   AGE
    # splunk-otel-collector-cert-manager-webhook              1          14m
    # splunk-otel-collector-opentelemetry-operator-mutation   3          14m
 
-   kubectl get otelinst -n <target_application_namespace>
+The namespace must have a running instance of the OpenTelemetry Collector. The name of this Collector instance matches the name that you set in :ref:`k8s-java-deploy-command`.
+
+.. code-block:: yaml
+
+   kubectl get otelinst -n monitoring
    # NAME                          AGE   ENDPOINT
-   # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
+   # splunk-otel-collector          3m   http://$(SPLUNK_OTEL_AGENT):4317
 
 .. _k8s-java-set-annotations:
 
@@ -218,7 +237,7 @@ Set annotations to instrument Java applications
 
 You can activate auto instrumentation for Java applications before runtime.
 
-If the related Kubernetes object (deployment, daemonset, or pod) is not deployed, add the ``instrumentation.opentelemetry.io/inject-java`` annotation to the application object YAML.
+If the related Kubernetes object (deployment, daemonset, or pod) is not deployed, add the ``instrumentation.opentelemetry.io/inject-java: "true"`` annotation to the application object YAML.
 
 For example, given the following deployment YAML:
 
@@ -255,6 +274,20 @@ Activate auto instrumentation by adding ``instrumentation.opentelemetry.io/injec
           containers:
           - name: my-java-app
             image: my-java-app:latest
+
+Applying annotations in a different namespace
+------------------------------------------------
+
+If the current namespace isn't ``monitoring``, change the annotation to specify the namespace in which you installed the OpenTelemetry Collector. 
+
+For example, if the current namespace is ``<my-namespace>`` and you installed the Collector in ``monitoring``, set the annotation to ``"instrumentation.opentelemetry.io/inject-java": "monitoring/splunk-otel-collector"``:
+
+.. code-block:: bash
+
+  kubectl patch deployment <my-deployment> -n <my-namespace> -p '{"spec":{"template":{"metadata":{"annotations":{"instrumentation.opentelemetry.io/inject-java":"monitoring/splunk-otel-collector"}}}}}'
+
+Deactivate automatic instrumentation
+---------------------------------------------
 
 To deactivate automatic instrumentation, remove the annotation. The following command removes the annotation for automatic instrumentation, deactivating it:
 
