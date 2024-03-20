@@ -76,7 +76,7 @@ The following image shows a stack frame with its class, file name, and line of c
 Interpret the frame table
 ----------------------------------------------
 
-In the AlwaysOn Profiling table, :guilabel:`Count` shows how many times a line appeared in stack traces. :guilabel:`Self time` is the time spent executing the function, minus the time spent calling other functions. A high self time value might also indicate performance issues. Though, in some cases, it might mean the thread is idle and doesn't consume resources. The following image shows the flame graph with the frame table highlighted: of threads:
+In the AlwaysOn Profiling table, :guilabel:`Count` shows how many times a line appeared in stack traces. :guilabel:`Self time` is the time spent executing the function, minus the time spent calling other functions. A high self time value might also indicate performance issues. Though, in some cases, it might mean the thread is idle and doesn't consume resources. The following image shows the flame graph with the frame table of threads highlighted:
 
 .. image:: /_images/apm/profiling/frame-table.png
    :alt: Information panel on a highlighted thread.
