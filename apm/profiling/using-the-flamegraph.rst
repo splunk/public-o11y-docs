@@ -61,6 +61,13 @@ The following image shows CPU stack frames for a Java application.
 .. image:: /_images/apm/profiling/profiling-stack-frames.png
    :alt: Filtering the flame graph and table in AlwaysOn Profiling.
 
+In the AlwaysOn Profiling flame table, each stack frame is labeled with the class name, file name, and line of code for the method called by your application. This same information is available when you hover over bars in the flame graph. Select or hover over a frame to view the following information:
+
+The following image shows a stack frame with its class, file name, and line of code highlighted.
+
+.. image:: /_images/apm/profiling/profiling-class-file-line.png
+   :alt: Stack frame breakdown showing class, file name, and line of code.
+
 .. You can group stack frames and turn them into the root frame by selecting the tile button that appears after expanding a stack frame. Select the button again to restore the view. You can also select the :guilabel:`Total` frame at any time to go back. The following animation shows how to group and ungroup stack frames:
 
 .. .. image:: /_images/apm/profiling/group-frames.gif
@@ -78,11 +85,6 @@ When you select a frame, an information dialog appears with the amount of call s
 
 Search and filter your flame graph
 -------------------------------------
-
-In the AlwaysOn Profiling flame table, each stack frame is labeled with the class name, file name, and line of code for the method called by your application. This same information is available when you hover over bars in the flame graph. The following image shows a stack frame with its class, file name, and line of code highlighted. 
-
-.. image:: /_images/apm/profiling/profiling-class-file-line.png
-   :alt: Stack frame breakdown showing class, file name, and line of code.
 
 You can search the details of the stack frame so only the functions you're looking for are visible. 
 
