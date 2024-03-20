@@ -26,19 +26,26 @@ Available host and application monitors in Splunk Observability Cloud
   Prometheus TOGGLE <prometheus>
   monitors-common-config
 
-.. note:: The SignalFx Smart Agent has reached End of Support. While the agent can capture and export telemetry to Splunk Observability Cloud, Splunk no longer provides any support, feature updates, security, or bug fixes. Such requests are not bound by any SLAs.
+.. note:: 
+  
+  The SignalFx Smart Agent has reached End of Support. While the agent can capture and export telemetry to Splunk Observability Cloud, Splunk no longer provides any support, feature updates, security, or bug fixes. Such requests are not bound by any SLAs.
 
-  Note that this only affects the agent; Smart Agent integrations and application receivers are available and supported through the Splunk Distribution of OpenTelemetry Collector. Native OpenTelemetry receivers are supported as well.
+  Smart Agent integrations and application receivers are available and supported through the Splunk Distribution of the OpenTelemetry Collector. 
+  
+You can monitor dozens of applications and services with Splunk Observability Cloud with both native OTel components and legacy Smart Agent monitors. 
 
-To find an integration for your application or service, see the alphabetical listing of receivers on this page, or use the navigation menu to browse for receivers by application category. 
+Native OTel receivers
+================================================================
 
-If available, you can use native OpenTelemetry components instead of Smart Agent application receivers to send data to Splunk Observability Cloud. For instance, you can use the OpenTelemetry native Prometheus receiver to gather metrics from any software, tool, or service that exposes metrics in the Prometheus format, such as Ansible Tower (AWX), CockroachDB, Docker Daemon, Doorman, Etcd, Flink, Grafana, PATROL, Traefik, or Zipkin. For more information, see :ref:`prometheus-receiver`.
+If available, you can use native OpenTelemetry receivers. For instance, you can use the OpenTelemetry native Prometheus receiver to gather metrics from any software, tool, or service that exposes metrics in the Prometheus format, such as Ansible Tower (AWX), CockroachDB, Docker Daemon, Doorman, Etcd, Flink, Grafana, PATROL, Traefik, or Zipkin. For more information, see :ref:`prometheus-receiver`.
 
-* To install the Splunk Distribution of OpenTelemetry Collector, see :ref:`otel-intro`.
-* To see native OpenTelemetry receivers, see :ref:`otel-components`. 
-* To learn about metrics, see :ref:`metrics-landing`.
-* To learn about monitoring infrastructure metrics, see :ref:`get-started-compute`.
+These are the available OTel receivers:
 
-You can also use Smart Agent application receivers and monitors with the Collector and the Smart Agent receiver, a native OpenTelemetry component, to send data to Splunk Observability Cloud. For more information, see :ref:`Smart Agent receiver <smartagent-receiver>`.
+.. include:: /_includes/gdi/otel-receivers-table.rst
 
-.. include:: /_includes/application-receiver-table.rst
+Legacy monitors
+================================================================
+
+You can also use Smart Agent application receivers and monitors with the Collector and the Smart Agent receiver, a native OpenTelemetry component, to send data to Splunk Observability Cloud. For more information, see :ref:`migration-monitors`.
+
+.. include:: /_includes/gdi/application-receiver-table.rst

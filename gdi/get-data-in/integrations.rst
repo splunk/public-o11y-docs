@@ -15,14 +15,9 @@ This page provides the list of integrations supported by Splunk Observability Cl
 Amazon Web Services
 ----------------------------------
 
-To learn about AWS and Splunk Observability Cloud, read the following: 
+To learn about AWS and Splunk Observability Cloud, read :ref:`get-started-aws`.
 
-* :ref:`get-started-aws`
-* Refer to the AWS official documentation for a list of the available AWS metrics and other data, or read about :ref:`the metadata Splunk Observability Cloud provides <aws-infra-metadata>`
-* :ref:`aws-logs`
-* :ref:`infrastructure-aws`
-
-The following AWS services send data to Infrastructure Monitoring:
+You can collect data from the following AWS services:
 
 .. list-table::
   :header-rows: 1
@@ -672,16 +667,11 @@ The following applies to the collected logs and metadata listed in the table:
 Google Cloud Platform services
 -----------------------------------------------
 
-To learn about GCP and Splunk Observability Cloud, read the following: 
+To learn about GCP and Splunk Observability Cloud, read :ref:`get-started-gcp`.
 
-* :ref:`get-started-gcp`
-* :ref:`gcp-metrics`
-* :ref:`gcp-logs`
-* :ref:`infrastructure-gcp`
+Splunk Observability Cloud supports certain services by default, but you can add any other GCP service you need to monitor. See :ref:`Start the integration <gcp-three>`. 
 
-Observability Cloud supports certain services by default, but you can add any other GCP service you need to monitor, as explained in :ref:`step 8 of Start the integration <gcp-three>`. 
-
-The following GCP services send metrics to Infrastructure Monitoring out-of-the-box:
+You can collect data from the following GCP services out-of-the-box:
 
 .. list-table::
   :header-rows: 1
@@ -791,14 +781,9 @@ The following GCP services send metrics to Infrastructure Monitoring out-of-the-
 Microsoft Azure services
 ----------------------------------
 
-To learn about Azure and Splunk Observability Cloud, read the following: 
+To learn about Azure and Splunk Observability Cloud, read :ref:`get-started-azure`.
 
-* :ref:`get-started-azure`
-* :ref:`azure-metrics`
-* :ref:`ingest-azure-log-data`
-* :ref:`infrastructure-azure`
-
-The following Azure services send metrics to Infrastructure Monitoring out-of-the-box:
+You can collect data from the following Azure services out-of-the-box:
 
 .. list-table::
   :header-rows: 1
@@ -1144,16 +1129,18 @@ Instrument your web and mobile front-end applications to send metrics, web vital
 
 For more information, see :ref:`get-started-rum`.
 
-
 Application receivers
 --------------------------------------------
 
-An application receiver gathers metrics from its associated application and the host the application is running on and sends them to Infrastructure Monitoring.
+An application receiver gathers metrics from its associated application and the host the application is running on and sends them to Splunk Observability Cloud.
 
+These are the native OTel receivers available:
 
+.. include:: /_includes/gdi/otel-receivers-table.rst
 
-.. include:: /_includes/application-receiver-table.rst
+These are the legacy application and services monitors:
 
+.. include:: /_includes/gdi/application-receiver-table.rst
 
 Community integrations
 ---------------------------------------------------------------------------------
@@ -1175,7 +1162,6 @@ For information about these integrations:
 #. In the integration filter menu, select :guilabel:`All`.
 #. In the :guilabel:`Search` field, search for the name of the community integration.
 #. Select the community integration tile to display its details.
-
 
 Notification services
 --------------------------------------------
