@@ -23,6 +23,7 @@ Splunk On-Call integrations
    check_mk-integration
    coralogix-integration-guide
    datadog-integration
+   dotcommonitor-integration
    dripstat-integration
    dynatrace-synthetic-monitoring-integration
    delivery-insights-integration
@@ -46,6 +47,7 @@ Splunk On-Call integrations
    loadster-integration-guide
    librato-integration
    logicmonitor-integration
+   loggly-integration
    logz-io-integration
    manage-victorops-using-terraform
    microsoft-azure-oms-integration-guide-victorops
@@ -59,6 +61,7 @@ Splunk On-Call integrations
    opsview-integration
    oracle-cloud-infrastructure-integration-guide-victorops
    outlyer-integration-guide-victorops
+   papertrail-integration
    prometheus-integration
    prtg-integration
    prtg-integrations
@@ -96,7 +99,6 @@ Splunk On-Call integrations
    victorops-dead-mans-snitch-integration
    victorops-desk-com-integration
    victorops-dnscheck-integration
-   victorops-dotcommonitor-integration
    victorops-dynatrace-integration
    victorops-googlevoice-integration
    victorops-hipchat-integration
@@ -106,12 +108,10 @@ Splunk On-Call integrations
    victorops-jenkins-integration
    victorops-librenms-integration
    victorops-logentries-integration
-   victorops-loggly-integration
    victorops-logicmonitor-integration
    victorops-mailhop-integration
    victorops-monitis-integration
    victorops-panopta-integration
-   victorops-papertrail-integration
    victorops-phantom-integration-guide
    victorops-pingdom-integration
    victorops-pingometer-integration
