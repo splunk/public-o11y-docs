@@ -18,8 +18,7 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     Collector for Linux <collector-linux/collector-linux-intro.rst>
     Collector for Windows <collector-windows/collector-windows-intro.rst>     
     deployments/otel-deployments.rst  
-    Zero config auto instrumentation <zero-config.rst>
-    Discover metric sources automatically <discovery-mode.rst>
+    Automatic discovery <automatic-discovery.rst>
     Use the Universal Forwarder <collector-with-the-uf.rst>
     Monitor the Collector with built-in dashboards <collector-builtin-dashboard.rst>
     Troubleshooting <troubleshooting.rst>
