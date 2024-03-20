@@ -40,8 +40,7 @@ Configuration
 
    |loggly3|
 
-6.  Name the user and paste the email address you generated in as the user's email
-   address, then select :guilabel:`Submit`.
+6.  Name the user and paste the email address you generated in as the user's email address, then select :guilabel:`Submit`.
 
    |loggly4|
 
