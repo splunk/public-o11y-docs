@@ -26,7 +26,7 @@ Zero Config Auto Instrumentation for Node.js requires the following components:
 
 .. _deploy-helm-chart-nodejs-k8s:
 
-\1. Deploy the Helm Chart with the Kubernetes Operator
+Deploy the Helm Chart with the Kubernetes Operator
 =================================================================
 
 To deploy the Helm Chart, create a file called values.yaml. In this file, you can define the settings to activate or deactivate when installing the OpenTelemetry Collector with the Helm Chart.
@@ -193,7 +193,7 @@ For example, to change the name of the Collector instance to ``otel-collector`` 
 
 .. _nodejs-k8s-verify-resources:
 
-\2. Verify all the OpenTelemetry resources are deployed successfully
+Verify all the OpenTelemetry resources are deployed successfully
 ==========================================================================
 
 Helm deploys the OpenTelemetry resources as Kubernetes pods. These resources include the Collector, the Operator, webhook, and instrumentation. 
@@ -233,7 +233,7 @@ The namespace must have a running instance of the OpenTelemetry Collector. The n
 
 .. _nodejs-k8s-set-annotations:
 
-\3. Set annotations to instrument Node.js applications
+Set annotations to instrument Node.js applications
 ==============================================================
 
 You can activate auto instrumentation for Node.js applications before runtime.
@@ -355,7 +355,7 @@ Instrumented pods contain an initContainer named ``opentelemetry-auto-instrument
 
 .. _nodejs-k8s-view-results:
 
-\4. View results at Splunk Observability APM
+View results at Splunk Observability APM
 ==========================================================
 
 Allow the Operator to do the work. The Operator intercepts and alters the Kubernetes API requests to create and update annotated pods, the internal pod application containers are instrumented, and trace and metrics data populates the :ref:`APM dashboard <apm-dashboards>`.

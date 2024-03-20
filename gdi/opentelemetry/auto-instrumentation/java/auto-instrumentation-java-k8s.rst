@@ -26,7 +26,7 @@ Zero Config Auto Instrumentation for Java requires the following components:
 
 .. _deploy-helm-chart-java-k8s:
 
-\1. Deploy the Helm Chart with the Kubernetes Operator
+Deploy the Helm Chart with the Kubernetes Operator
 =================================================================
 
 To deploy the Helm Chart, create a file called values.yaml. In this file, you can define the settings to activate or deactivate when installing the OpenTelemetry Collector with the Helm Chart.
@@ -193,7 +193,7 @@ For example, to change the name of the Collector instance to ``otel-collector`` 
 
 .. _java-k8s-verify-resources:
 
-\2. Verify all the OpenTelemetry resources are deployed successfully
+Verify all the OpenTelemetry resources are deployed successfully
 ==========================================================================
 
 Helm deploys the OpenTelemetry resources as Kubernetes pods. These resources include the Collector, the Operator, webhook, and instrumentation. 
@@ -232,7 +232,7 @@ The namespace must have a running instance of the OpenTelemetry Collector. The n
 
 .. _k8s-java-set-annotations:
 
-\3. Set annotations to instrument Java applications
+Set annotations to instrument Java applications
 ==============================================================
 
 You can activate auto instrumentation for Java applications before runtime.
@@ -355,7 +355,7 @@ The instrumented pod contains an initContainer named ``opentelemetry-auto-instru
 
 .. _java-k8s-view-results:
 
-\4. View results at Splunk Observability APM
+View results at Splunk Observability APM
 ===========================================================
 
 Allow the Operator to do the work. The Operator intercepts and alters the Kubernetes API requests to create and update annotated pods, the internal pod application containers are instrumented, and trace and metrics data populates the :ref:`APM dashboard <apm-dashboards>`. 

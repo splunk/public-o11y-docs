@@ -27,7 +27,7 @@ Zero Config Auto Instrumentation for .NET requires the following components:
 
 .. _deploy-helm-chart-dotnet-k8s:
 
-\1. Deploy the Helm Chart with the Kubernetes Operator
+Deploy the Helm Chart with the Kubernetes Operator
 =========================================================
 
 To deploy the Helm Chart, create a file called values.yaml. This file defines the settings to activate or deactivate when installing the OpenTelemetry Collector with the Helm Chart.
@@ -191,7 +191,7 @@ For example, to change the name of the Collector instance to ``otel-collector`` 
 
 .. _verify-otel-resources-dotnet-k8s:
       
-\2. Check that all the OpenTelemetry resources are deployed successfully
+Check that all the OpenTelemetry resources are deployed successfully
 ==========================================================================
 
 Helm deploys the OpenTelemetry resources as Kubernetes pods. These resources include the Collector, the Operator, webhook, and instrumentation. 
@@ -231,7 +231,7 @@ The namespace must have a running instance of the OpenTelemetry Collector. The n
 
 .. _set-dotnet-annotations-k8s:
 
-\3. Set annotations to instrument .NET applications
+Set annotations to instrument .NET applications
 ===================================================================
 
 To instrument your .NET applications, add an annotation to your Kubernetes object yaml.
@@ -411,7 +411,7 @@ Your instrumented pod should contain an initContainer named ``opentelemetry-auto
 
 .. _view-results-dotnet-k8s:
 
-\4. View results in Splunk APM
+View results in Splunk APM
 ===========================================================
 
 The Operator intercepts and alters the Kubernetes API requests to create and update annotated pods, the internal pod application containers are instrumented, and trace and metrics data populates the :ref:`APM dashboard <apm-dashboards>`. 
