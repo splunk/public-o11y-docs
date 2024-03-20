@@ -82,6 +82,7 @@ Splunk On-Call integrations
    statuscast-integration-guide
    statushub-integration-guide
    thousandeyes-integration-guide
+   threat-stack-integration
    twilio-live-call-routing-guide
    twilio-sms-integration-guide
    uptime-robot-integration-guide
@@ -130,7 +131,6 @@ Splunk On-Call integrations
    statuspage-integration
    victorops-sumologic-integration
    victorops-sysdig-integration
-   victorops-threat-stack-integration
    victorops-uptime-integration
    victorops-uservoice-integration
    vividcortex-integration
