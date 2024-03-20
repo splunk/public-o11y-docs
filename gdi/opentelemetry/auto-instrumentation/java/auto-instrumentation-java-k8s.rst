@@ -21,7 +21,7 @@ Requirements
 
 Zero Config Auto Instrumentation for Java requires the following components: 
 
-* Java 11 or higher and supported libraries. See :ref:`java-otel-requirements` for more information.
+* Java 8 or higher and supported libraries. See :ref:`java-otel-requirements` for more information.
 * Your Splunk Observability Cloud realm and access token with ingest scope. For more information, see :ref:`admin-org-tokens`.
 
 .. _deploy-helm-chart-java-k8s:
