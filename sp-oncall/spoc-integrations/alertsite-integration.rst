@@ -6,8 +6,6 @@ AlertSite by SMARTBEAR integration
 .. meta::
     :description: Configure the AlertSite integration for Splunk OnCall.
 
-
-
 AlertSite by SMARTBEAR provides advanced synthetic monitoring platform for APIs, mobile and web applications. The Splunk OnCall integration with AlertSite allows you to send alerts into the Splunk OnCall timeline by using
 the generic email endpoint. The following guide will walk you through this integration.
 
