@@ -10,8 +10,11 @@ Automatic discovery
 .. toctree::
     :hidden:
 
-    Zero config auto instrumentation <automatic-discovery/zero-config>
-    Discovery mode <automatic-discovery/discovery-mode>
+    Java <automatic-discovery/auto-instrumentation/auto-instrumentation-java>
+    .NET <automatic-discovery/auto-instrumentation/auto-instrumentation-dotnet>
+    Node.js <automatic-discovery/auto-instrumentation/auto-instrumentation-nodejs>
+    Third-party applications <automatic-discovery/discovery-mode>
+    Advanced configuration for back-end applications <automatic-discovery/auto-instrumentation/advanced-config-auto-instrumentation>
 
 .. _automatic-discovery-intro:
 
@@ -21,12 +24,7 @@ Automatic discovery
 
 Automatic discovery is a special feature of the Splunk Distribution of OpenTelemetry Collector that automatically finds sources of telemetry data running in your system. 
 
-There are two types of automatic discovery features:
-
-.. Names will probably be changed in the near future.
-
-* Zero configuration auto instrumentation, which discovers telemetry data from back-end applications.
-* Discovery mode, which discovers telemetry data from third-party applications.
+You can use automatic discovery to find telemetry sources, including back-end applications and third-party applications.
 
 Using automatic discovery, you can gather telemetry data from your services without having to configure the OpenTelemetry Collector. 
 
