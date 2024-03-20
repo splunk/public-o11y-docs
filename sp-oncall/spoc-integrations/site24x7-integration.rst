@@ -43,37 +43,38 @@ From the 24x7 portal, select :guilabel:`Admin`, :guilabel:`Third-Party Integrati
 In the Webhooks configuration screen, fill in the values as follows and then click :guilabel:`Save`.
 
 
-+-----------------------------------+-----------------------------------+
-| Field name                        | Value                             |
-+-----------------------------------+-----------------------------------+
-| Integration name                  | victorops                         |
-+-----------------------------------+-----------------------------------+
-| Hook URL                          | <url_from_victorops_account>      |
-+-----------------------------------+-----------------------------------+
-| HTTP Method                       | POST                              |
-+-----------------------------------+-----------------------------------+
-| Post as JSON                      | TRUE                              |
-+-----------------------------------+-----------------------------------+
-| Send Incident Parameters          | TRUE                              |
-+-----------------------------------+-----------------------------------+
-| Send Custom Parameters            | TRUE                              |
-+-----------------------------------+-----------------------------------+
-| Custom Parameters                 | ``{``                             |
-|                                   |  ``"message_type": "critical",``  |
-|                                   |                                   |
-|                                   |  `                                |
-|                                   | `"monitoring_tool": "Site24x7",`` |
-|                                   |                                   |
-|                                   |  ``"stat                          |
-|                                   | e_message": "$INCIDENT_REASON",`` |
-|                                   |                                   |
-|                                   |  ``"entity_dis                    |
-|                                   | play_name": "$INCIDENT_REASON",   |
-|                                   |      "entity_id":"$MONITORNAME"`` |
-|                                   | ``}``                             |
-+-----------------------------------+-----------------------------------+
-| Integration level                 | All Monitors                      |
-+-----------------------------------+-----------------------------------+
+.. list-table::
+    :widths: 50 50
+    :width: 100%
+    :header-rows: 1
+
+    * - Field name
+      - Value
+
+    * - Integration name 
+      - ``victorops``
+    * - Hook URL
+      - ``<url_from_victorops_account>``
+    * - HTTP Method
+      - ``POST``
+    * - Post as JSON
+      - ``true``
+    * - Send Incident Parameters
+      - ``true``
+    * - Send Custom Parameters
+      - ``true``
+    * - Custom parameters
+      - 
+          .. code-block::
+            
+             {
+                 "message_type": "critical",
+                 "monitoring_tool": "Site24x7",
+                 "state_message": "$INCIDENT_REASON",
+                 "entity_display_name": "$INCIDENT_REASON",       "entity_id":"$MONITORNAME"
+              }
+    * - Integration level
+      - All Monitors
 
 .. image:: /_images/spoc/site24x7-2.png
 
