@@ -1,81 +1,56 @@
+.. _puppettasks-spoc:
+
 Puppet Tasks integration for Splunk On-Call
-**********************************************************
+***************************************************
 
-The VictorOps and `Puppet
-Tasks <https://puppet.com/docs/puppet/5.3/puppet_tasks.html>`__ integration
-allows teams to identify and quickly take action around infrastructure
-incidents. Send alerts into VictorOps so teams can collaborate around
-the fix for the incident, then use Puppet Tasks to run actions that help
-resolve problems within your remote infrastructure. DevOps and IT teams
-can maintain a speedy software development and CI/CD pipeline while
-continuing to drive reliability with the VictorOps and Puppet Tasks
-integration.
+.. meta::
+    :description: Configure the Puppet Tasks integration for Splunk On-Call.
 
-Combine the visibility and collaboration of VictorOps with the
-capability to quickly automate and run commands with Puppet Tasks.
+The Splunk On-Call and Puppet Tasks integration allows teams to identify and quickly take action around infrastructure
+incidents. Send alerts into Splunk On-Call so teams can collaborate around the fix for the incident, then use Puppet Tasks to run actions that help resolve problems within your remote infrastructure. DevOps and IT teams can maintain a speedy software development and CI/CD pipeline while continuing to drive reliability with the Splunk On-Call and Puppet Tasks integration.
 
-Alert, Collaborate, and Remediate Critical Incidents
+Requirements
+==================
 
--  Allow VictorOps to digest critical alerts from remote infrastructure,
-   then leverage Puppet Tasks to initiate actions to remediate incidents
--  Centralize on-call incident management functionality–on-call
-   scheduling, alert routing, and escalations–with actionable incident
-   response and collaboration
--  Work cross-functionally to communicate about infrastructure errors
-   and alerts
--  Automate alerting and on-call response workflows and run commands
-   through remote infrastructure to efficiently resolve incidents and
-   keep track of incident history
+This integration is compatible with the following versions of Splunk On-Call:
 
-[ht_toggle title=“Requirements” id=“” class=“” style=“” ]
+- Enterprise
 
-**Versions Supported: Puppet Enterprise 2018.1.1+**  or newer
+The integration supports Puppet Enterprise 2018.1.1 and higher.
 
-**VictorOps Subscription Required:** **Full-Stack**
+Activate Puppet Tasks in Splunk On-Call
+======================================================
 
-**Local Machine:** None
-
-[/ht_toggle]
-
-**Enable Puppet Tasks in VictorOps**
-------------------------------------
-
-From the VictorOps web portal, select **Settings** >> **Alert
-Behavior**, >> **Integrations**. Find and select **Puppet Tasks**.
+From the Splunk On-Call web portal, select :guilabel:`Settings`, :guilabel:`Alert Behavior`, :guilabel:`Integrations`. Find and select :guilabel:`Puppet Tasks`.
 
 .. image:: /_images/spoc/voNav@2x.png
-   :alt: enable puppet tasks integration in victorops
+   :alt: Activate puppet tasks integration
 
-**Capture the API Key from the URL String:**
+Capture the API Key from the URL String:
 
 .. image:: /_images/spoc/voPuppet@2x.png
-   :alt: capture puppet tasks api key
+   :alt: Capture Puppet Tasks api key
 
-**Configure Puppet Tasks in Splunk Enterprise**
------------------------------------------------
+Configure Puppet Tasks in Splunk Enterprise
+======================================================
 
-Navigate to **Puppet Tasks for Actionable Alerts in Splunk Enterprise**, **Configuration**, **Add-on Setting**, Input VictorOps Token
+Go to :guilabel:`Puppet Tasks for Actionable Alerts in Splunk Enterprise`, :guilabel:`Configuration`, :guilabel:`Add-on Setting`, and enter your Splunk On-Call Token.
 
 .. image:: /_images/spoc/splPupNav@2x.png
-   :alt: Configure puppet tasks in splunk enterprise
+   :alt: Configure Puppet Tasks in Splunk Enterprise
 
-   Configure puppet tasks in splunk enterprise
+Create a Splunk On-Call incident
+======================================================
 
-**Create a VictorOps Incident**
--------------------------------
+Within Splunk Enterprise, go to the :guilabel:`Alerts` tab, set up a search for a critical event, and specify the type of notification you would like to pass to Splunk On-Call. Configure the action using the following values:
 
-Within Splunk Enterprise, go to the Alerts Tab, set up a search for a
-critical event, and specify the type of notification you would like to
-pass to VictorOps. Configure the action using the following values:
-
--  Severity: CRITICAL
--  Host: :math:`certname`
+-  Severity: ``CRITICAL``
+-  Host: ``certname``
 
    .. image:: /_images/spoc/splPupAlert@2x.png
-      :alt: Trigger alert in VictorOps via puppet tasks
+      :alt: Trigger alert in Splunk On-Call
 
-Upon triggering this alert, you should see a corresponding alert in your
-VictorOps timeline.
+Upon triggering this alert, you should see a corresponding alert in your Splunk On-Call timeline.
 
 .. image:: /_images/spoc/voAlert@2x.png
-   :alt: puppet tasks alert in victorops
+   :alt: Puppet Tasks Alert in Splunk On-Call
