@@ -33,7 +33,7 @@ Supported integrations in Splunk Observability Cloud
   Applications: Networks TOGGLE <network>
   Applications: Orchestration TOGGLE <orchestration>
   Applications: Prometheus TOGGLE <prometheus>
-  Login services <https://docs.splunk.com/observability/en/admin/authentication/SSO/sso-about.html>  
+  Login services </admin/authentication/SSO/sso>  
 
 This page provides the list of integrations supported by Splunk Observability Cloud.
 
