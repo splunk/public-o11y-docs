@@ -23,7 +23,7 @@ Deepu opens Tag Spotlight and selects the affected service
 
 Deepu uses search to search for Tag Spotlight and selects the navigation result to go to Tag Spotlight. They select the paymentservice. 
 
-..  image:: /_images/apm/apm-use-cases/TagSpotlightScenario_OpenTagSpotlight.gif
+..  image:: /_images/apm/apm-use-cases/TagSpotlightScenario_OpenTagSpotilght.gif
     :width: 99%
     :alt: This animation shows the user searching for Tag Spotlight and selecting the payment service in the Tag Spotlight filter. 
 
