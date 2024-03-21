@@ -21,7 +21,13 @@ To learn how to index span tags to generate Troubleshooting MetricSets, see :ref
 View service performance by indexed span tags with Tag Spotlight
 ================================================================
 
-Access Tag Spotlight from the :strong:`Tag Spotlight` tab of the APM landing page to analyze the performance of every indexed span tag value for a service. You can break down performance for each tag by either requests and errors or latency. 
+Access Tag Spotlight from the :strong:`Tag Spotlight` panel of the APM landing page. You can also use the search in the top toolbar to search for Tag Spotlight and select the navigation result to navigate to Tag Spotlight.
+
+..  image:: /_images/apm/apm-use-cases/tag-spotlight-02.gif
+    :width: 99%
+    :alt: This animation shows the user searching for Tag Spotlight. 
+
+You can break down performance for each tag by either requests and errors or latency. 
 
 Follow these steps to navigate to Tag Spotlight for a specific service:
 
