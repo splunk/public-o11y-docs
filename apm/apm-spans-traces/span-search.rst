@@ -51,10 +51,7 @@ Span links connect spans that don't have a direct parent-child relationship but 
 * See :new-page:`https://opentelemetry.io/docs/concepts/signals/traces/#span-links` to learn about the OpenTelemetry concept.
 * See :new-page:`https://opentelemetry.io/docs/languages/java/instrumentation/#create-spans-with-links` for instrumentation details.
 
-You can use span links to preserve connected span context in the following scenarios:
-
-* Batch message processing - In batch message processing, a producer sends 2 messages separately. A consumer consumes both messages in 1 batch and processes them together. In batch message processing producers don't invoke a consumer and consumers aren't directly related to a producer. The relationship between received spans to the produced spans is captured in the span link.
-* Carry context across a trusted gateway - When using gateways they can terminate the original context. You can use span links to perserve the original context when using gateways.
+Span links preserve span context when producer spans create jobs that are asynchronously processed later. These jobs might be a remote job that is added to a job queue or a local job handled by an event listener. In this case, span links connect to the consumer spans that represent the processing of jobs created by the producer that might start long after the producer span has already ended.
 
 You can view span links on spans in the trace waterfall view. Select the link to see the correlated spans and traces then select the span or the trace to navigate to the span.
 
