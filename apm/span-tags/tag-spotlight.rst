@@ -23,7 +23,7 @@ View service performance by indexed span tags with Tag Spotlight
 
 Access Tag Spotlight from the :strong:`Tag Spotlight` panel of the APM landing page. You can also use the search in the top toolbar to search for Tag Spotlight and select the navigation result to navigate to Tag Spotlight.
 
-..  image:: /_images/apm/apm-use-cases/tag-spotlight-02.gif
+..  image:: /_images/apm/span-tags/tag-spotlight-02.gif
     :width: 99%
     :alt: This animation shows the user searching for Tag Spotlight. 
 
