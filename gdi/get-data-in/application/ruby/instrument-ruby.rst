@@ -86,7 +86,7 @@ If you need to send data directly to Splunk Observability Cloud, follow these st
 
         export OTEL_EXPORTER_OTLP_ENDPOINT="http://ingest.<realm>.signalfx.com"
         export OTEL_EXPORTER_OTLP_PROTOCOL="grpc"
-        export OTEL_EXPORTER_OTLP_TRACES_HEADERS="x-sf-token=<access_token>""
+        export OTEL_EXPORTER_OTLP_TRACES_HEADERS="x-sf-token=<access_token>"
 
     Replace ``<realm>`` with your Splunk Observability Cloud realm and ``<access-token>`` with your Splunk Observability Cloud access token with ingest permissions.
 
