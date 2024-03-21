@@ -33,7 +33,9 @@ Supported integrations in Splunk Observability Cloud
   Applications: Networks TOGGLE <network>
   Applications: Orchestration TOGGLE <orchestration>
   Applications: Prometheus TOGGLE <prometheus>
+  Notification services </admin/notif-services/admin-notifs-index>  
   Login services </admin/authentication/SSO/sso>  
+  Data link destinations </metrics-and-metadata/link-metadata-to-content>
 
 This page provides the list of integrations supported by Splunk Observability Cloud.
 
@@ -146,32 +148,6 @@ These are the available Smart Agent monitors:
 .. raw:: html
 
    <embed>
-      <h2>Community integrations<a name="community-integrations" class="headerlink" href="#community-integrations" title="Permalink to this headline">¶</a></h2>
-   </embed>
-
-The following integrations are available:
-
-- Istio
-- Jaeger
-- Linkerd
-- Micrometer
-- Prometheus
-- Spring Boot
-- Telegraf Agent
-- Zipkin
-
-For information about these integrations:
-
-#. Log in to Splunk Observability Cloud.
-#. In the navigation menu, select :menuselection:`Data Management`. 
-#. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
-#. In the integration filter menu, select :guilabel:`All`.
-#. In the :guilabel:`Search` field, search for the name of the community integration.
-#. Select the community integration tile to display its details.
-
-.. raw:: html
-
-   <embed>
       <h2>Notification services<a name="notification-services" class="headerlink" href="#notification-services" title="Permalink to this headline">¶</a></h2>
    </embed>
 
@@ -223,6 +199,32 @@ Data links let you link metadata to the following destinations outside of Splunk
 - Kibana
 
 For more information about creating data links, see :ref:`link-metadata-to-content`.
+
+.. raw:: html
+
+   <embed>
+      <h2>Community integrations<a name="community-integrations" class="headerlink" href="#community-integrations" title="Permalink to this headline">¶</a></h2>
+   </embed>
+
+The following integrations are available:
+
+- Istio
+- Jaeger
+- Linkerd
+- Micrometer
+- Prometheus
+- Spring Boot
+- Telegraf Agent
+- Zipkin
+
+For information about these integrations:
+
+#. Log in to Splunk Observability Cloud.
+#. In the navigation menu, select :menuselection:`Data Management`. 
+#. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+#. In the integration filter menu, select :guilabel:`All`.
+#. In the :guilabel:`Search` field, search for the name of the community integration.
+#. Select the community integration tile to display its details.
 
 .. raw:: html
 
