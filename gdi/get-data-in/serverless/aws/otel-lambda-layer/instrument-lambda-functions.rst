@@ -26,18 +26,21 @@ To generate a template that instruments your Lambda function using the Splunk Op
 
    #. Select the :guilabel:`AWS Lambda` tile to open the AWS Lambda guided setup.
 
+
 Install the Splunk OpenTelemetry Lambda layer manually
 ==================================================================
 
-If you don't use the guided setup, follow these instructions to manually install the Splunk OpenTelemetry Lambda layer:
+If you don't use the guided setup, follow these instructions to manually install the Splunk OpenTelemetry Lambda layer for Java, Python, or Node.js functions:
 
 - :ref:`otel-lambda-layer-requirements`
 - :ref:`install-otel-lambda-layer`
 - :ref:`set-env-vars-otel-lambda`
 
-To instrument .NET functions, see :ref:`dotnet-serverless-instrumentation`.
+.NET and Go functions require different instructions:
 
-For Python functions using the Serverless Framework, see :ref:`serverless-framework-support-aws`.
+- To instrument .NET functions, see :ref:`dotnet-serverless-instrumentation`.
+- To instrument Go functions, see :ref:`go-serverless-instrumentation`.
+
 
 .. _otel-lambda-layer-requirements:
 
@@ -49,8 +52,8 @@ Check compatibility and requirements
 
 .. _install-otel-lambda-layer:
 
-Install the AWS Lambda layer
-----------------------------------------------
+Install the AWS Lambda layer for your language
+-------------------------------------------------
 
 Follow these steps to instrument your function using the Splunk OpenTelemetry Lambda layer:
 
@@ -62,21 +65,79 @@ Follow these steps to instrument your function using the Splunk OpenTelemetry La
 
    .. tabs::
 
-      .. tab:: Standard x86_64
+      .. tab:: Java
+
+         :strong:`x86_64`
 
          .. github:: yaml
-            :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm.md
+            :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm-java.md
 
-      .. tab:: Graviton2 ARM64
+         :strong:`Graviton2 ARM64`
 
          .. github:: yaml
-            :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm-arm.md
+            :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm-java-arm.md
+
+      .. tab:: Node.js
+
+         :strong:`x86_64`
+
+         .. github:: yaml
+            :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm-js.md
+
+         :strong:`Graviton2 ARM64`
+
+         .. github:: yaml
+            :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm-js-arm.md
+
+      .. tab:: Python
+
+         :strong:`x86_64`
+
+         .. github:: yaml
+            :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm-python.md
+
+         :strong:`Graviton2 ARM64`
+
+         .. github:: yaml
+            :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm-python-arm.md
+
+         .. note:: For Python functions using the Serverless Framework, see :ref:`serverless-framework-support-aws`.
 
 #. Paste the selected ARN in the :guilabel:`Specify an ARN` field and select :guilabel:`Add`.
 
 #. Check that the Splunk layer appears in the :guilabel:`Layers` table.
 
-.. note:: You can automate the update of the Lambda layer using the AWS CLI or other automation tools.
+#. (Optional) Repeat the previous steps to install the Collector layer. If you don't want to use a local Collector, you must specify the address of a Collector in data forwarding mode. See :ref:`ec2-otel-collector-serverless`.
+
+   .. tabs::
+
+      .. tab:: Standard x86_64
+
+         .. github:: yaml
+            :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm-collector.md
+
+      .. tab:: Graviton2 ARM64
+
+         .. github:: yaml
+            :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm-collector-arm.md
+
+#. (Optional) Repeat the previous steps to install Lambda metrics extension layer for Splunk Infrastructure Monitoring.
+
+   .. tabs::
+
+      .. tab:: Standard x86_64
+
+         .. github:: yaml
+            :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-lambda-metrics.md
+
+      .. tab:: Graviton2 ARM64
+
+         .. github:: yaml
+            :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-lambda-metrics-arm.md
+
+
+.. note:: You can automate the update of the Lambda layers using the AWS CLI or other automation tools.
+
 
 .. _set-env-vars-otel-lambda:
 
@@ -138,12 +199,6 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
 
                   /opt/nodejs-otel-handler
 
-               .. tab:: Golang
-
-                  Don't set the ``AWS_LAMBDA_EXEC_WRAPPER`` environment variable.
-
-                  See :ref:`go-serverless-instrumentation`.
-
       * - ``OTEL_SERVICE_NAME``
         - The name of your service.
 
@@ -154,70 +209,26 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
 
 To configure the mode of metric ingest, see :ref:`metrics-configuration-lambda`.
 
-.. note:: By default, the layer sends telemetry to a Collector instance on `localhost`.
+.. note:: By default, the layer sends telemetry to a Collector instance on `localhost` using the Collector layer. If you don't want to use a local Collector, you must specify the address of a Collector in data forwarding mode. See :ref:`ec2-otel-collector-serverless`.
 
-.. _go-serverless-instrumentation:
+.. _unified-layer-support:
 
-Instrument Go functions in AWS Lambda
----------------------------------------------------
+Using a unified layer for all languages
+------------------------------------------------
 
-To instrument a Go function in AWS Lambda for Splunk APM, follow these steps:
+If needed, you can use a Lambda layer that contains all supported language runtimes, as well as the Collector and the metric extension. Use the following ARNs to install the bundles.
 
-#. Run the following commands to install the ``otellambda`` and the Splunk OTel Go distribution:
+.. tabs::
 
-   .. code-block:: bash
+   .. tab:: Standard x86_64
 
-      go get -u go.opentelemetry.io/contrib/instrumentation/github.com/aws/aws-lambda-go/otellambda
-      go get -u github.com/signalfx/splunk-otel-go/distro
+      .. github:: yaml
+         :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm.md
 
-#. Create a wrapper for the OpenTelemetry instrumentation in your function's code. For example:
+   .. tab:: Graviton2 ARM64
 
-   .. code-block:: go
-
-      package main
-
-      import (
-         "context"
-         "fmt"
-
-         "github.com/aws/aws-lambda-go/lambda"
-         "github.com/signalfx/splunk-otel-go/distro"
-         "go.opentelemetry.io/contrib/instrumentation/github.com/aws/aws-lambda-go/otellambda"
-         "go.opentelemetry.io/otel"
-      )
-
-      func main() {
-         distro.Run()
-         flusher := otel.GetTracerProvider().(otellambda.Flusher)
-         lambda.Start(otellambda.InstrumentHandler(HandleRequest, otellambda.WithFlusher(flusher)))
-      }
-
-      type MyEvent struct {
-         Name string `json:"name"`
-      }
-
-      func HandleRequest(ctx context.Context, name MyEvent) (string, error) {
-         return fmt.Sprintf("Hello %s!", name.Name), nil
-      }
-
-.. note:: For a full example, see :new-page:`https://github.com/signalfx/tracing-examples/blob/main/opentelemetry-tracing/opentelemetry-lambda/go/example.go <https://github.com/signalfx/tracing-examples/blob/main/opentelemetry-tracing/opentelemetry-lambda/go/example.go>` on GitHub.
-
-.. _serverless-framework-support-aws:
-
-Serverless Framework support
----------------------------------------------------
-
-Some features of the Serverless Framework might impact OpenTelemetry tracing of Python Lambda functions.
-
-Python libraries compression
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The ``zip`` feature of ``pythonRequirements`` allows packing and deploying Lambda dependencies as compressed files. To instrument packages compressed using the Serverless Framework, set the ``SPLUNK_LAMBDA_SLS_ZIP`` environment variable to ``true``. For more information, see https://github.com/serverless/serverless-python-requirements#dealing-with-lambdas-size-limitations on GitHub.
-
-Slim feature
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The Slim feature reduces the size of Lambda packages by removing some files, including ``dist-info`` folders. Some of the files removed by the Slim feature are required by the OpenTelemetry Python autoinstrumentation. Deactivate the ``slim`` option in your serverless.yml file or define custom ``slimPatterns``. For more information, see https://github.com/serverless/serverless-python-requirements#slim-package on GitHub.
+      .. github:: yaml
+         :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm-arm.md
 
 
 .. _ec2-otel-collector-serverless:
@@ -254,6 +265,7 @@ To send spans directly to Splunk Observability Cloud from an AWS Lambda function
 
 - ``OTEL_EXPORTER_OTLP_TRACES_PROTOCOL`` with the value ``http/protobuf``
 - ``OTEL_EXPORTER_OTLP_TRACES_ENDPOINT`` with the value ``https://ingest.<realm>.signalfx.com/v2/trace/otlp``, substituting ``<realm>`` with the name of your organization's realm.
+
 
 .. _check-otel-lambda-data:
 
