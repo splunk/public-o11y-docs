@@ -18,7 +18,7 @@ Region and version availability
 
 Splunk Log Observer Connect is available in the following Splunk Observability realms: us0, us1, us2, eu0, jp0, and au0. It's not available for Splunk Cloud Platform trials and is not supported in GovCloud regions.  
 
-Splunk Log Observer Connect is compatible with Splunk Cloud Platform versions 8.2 and higher. 
+Splunk Log Observer Connect is compatible with Splunk Cloud Platform versions 9.0.2209 and higher. 
 
 Prerequisites
 ==============================================================
