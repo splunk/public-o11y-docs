@@ -36,11 +36,6 @@ If you don't use the guided setup, follow these instructions to manually install
 - :ref:`install-otel-lambda-layer`
 - :ref:`set-env-vars-otel-lambda`
 
-.NET and Go functions require different instructions:
-
-- To instrument .NET functions, see :ref:`dotnet-serverless-instrumentation`.
-- To instrument Go functions, see :ref:`go-serverless-instrumentation`.
-
 
 .. _otel-lambda-layer-requirements:
 
@@ -65,38 +60,34 @@ Follow these steps to instrument your function using the Splunk OpenTelemetry La
 
    .. tabs::
 
-      .. tab:: Java
-
-         :strong:`x86_64`
+      .. tab:: Java x86_64
 
          .. github:: yaml
             :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm-java.md
 
-         :strong:`Graviton2 ARM64`
+      .. tab:: Java Graviton2 ARM64
 
          .. github:: yaml
             :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm-java-arm.md
 
-      .. tab:: Node.js
-
-         :strong:`x86_64`
+      .. tab:: Node.js x86_64
 
          .. github:: yaml
             :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm-js.md
 
-         :strong:`Graviton2 ARM64`
+      .. tab:: Node.js Graviton2 ARM64
 
          .. github:: yaml
             :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm-js-arm.md
 
-      .. tab:: Python
-
-         :strong:`x86_64`
+      .. tab:: Python x86_64
 
          .. github:: yaml
             :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm-python.md
 
-         :strong:`Graviton2 ARM64`
+         .. note:: For Python functions using the Serverless Framework, see :ref:`serverless-framework-support-aws`.
+
+      .. tab:: Python x86_64 Graviton2 ARM64
 
          .. github:: yaml
             :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm-python-arm.md
@@ -107,7 +98,7 @@ Follow these steps to instrument your function using the Splunk OpenTelemetry La
 
 #. Check that the Splunk layer appears in the :guilabel:`Layers` table.
 
-#. (Optional) Repeat the previous steps to install the Collector layer. If you don't want to use a local Collector, you must specify the address of a Collector in data forwarding mode. See :ref:`ec2-otel-collector-serverless`.
+#. Repeat the previous steps to install the Collector layer. If you don't want to use a local Collector, you must specify the address of a Collector in data forwarding mode. See :ref:`ec2-otel-collector-serverless`.
 
    .. tabs::
 
