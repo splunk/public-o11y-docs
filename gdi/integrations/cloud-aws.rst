@@ -6,7 +6,7 @@ Available Amazon Web Services integrations
 ********************************************************************************
 
 .. meta::
-   :description: Landing for application receivers for cache and memory applications in Splunk Observability Cloud.
+   :description: Landing for available AWS services.
 
 To learn about AWS and Splunk Observability Cloud, read :ref:`get-started-aws`.
 
