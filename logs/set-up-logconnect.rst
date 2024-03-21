@@ -16,7 +16,7 @@ When you set up Log Observer Connect, your Splunk Enterprise logs data remains i
 Region and version compatibility
 ==============================================================
 
-Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, jp0, and au0, and is compatible with Splunk Enterprise 8.2 and higher. 
+Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, jp0, and au0, and is compatible with Splunk Enterprise 9.0.1 and higher. 
 
 Prerequisites
 ==============================================================
