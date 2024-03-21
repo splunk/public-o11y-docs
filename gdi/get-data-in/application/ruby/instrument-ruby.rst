@@ -80,7 +80,7 @@ If you need to send data directly to Splunk Observability Cloud, follow these st
             c.use_all() # activates all instrumentation
         end
 
-#. Change the endpoint that the application sends data to by updating the environment variables. Use the following commands:
+#. Set the endpoint to Splunk Observability Cloud and send data using the grpc protocol. Use the following commands:
 
     .. code-block:: bash
 
