@@ -200,7 +200,7 @@ Metric pipeline management limitations
 Metrics pipeline management is not available for: 
 
 * Metrics ingested through the ``https://ingest.signalfx.com/v1/collectd`` endpoint.
-* Splunk Observability Cloud's :ref:`org-metrics`. 
+* Splunk Observability Cloud's :ref:`org metrics <org-metrics>`. 
 * APM's :ref:`MetricSets <apm-metricsets>`.
 
 Learn more
