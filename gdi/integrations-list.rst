@@ -36,6 +36,7 @@ Supported integrations in Splunk Observability Cloud
   Notification services </admin/notif-services/admin-notifs-index>  
   Login services </admin/authentication/SSO/sso>  
   Data link destinations </metrics-and-metadata/link-metadata-to-content>
+  Community and other <integrations/community-integrations>
 
 This page provides the list of integrations supported by Splunk Observability Cloud.
 
@@ -59,9 +60,9 @@ See the available services for each Cloud services provider at:
 
 See :ref:`get-started-compute` for information on how to collect data for:
 
-* Kubernetes
-* Linux
-* Windows
+* :ref:`Kubernetes <get-started-k8s>`
+* :ref:`Linux <get-started-linux>`
+* :ref:`Microsoft Windows <get-started-windows>`
 
 .. raw:: html
 
@@ -203,7 +204,7 @@ For more information about creating data links, see :ref:`link-metadata-to-conte
 .. raw:: html
 
    <embed>
-      <h2>Community integrations<a name="community-integrations" class="headerlink" href="#community-integrations" title="Permalink to this headline">¶</a></h2>
+      <h2>Community and other integrations<a name="community-integrations" class="headerlink" href="#community-integrations" title="Permalink to this headline">¶</a></h2>
    </embed>
 
 The following integrations are available:
@@ -217,19 +218,10 @@ The following integrations are available:
 - Telegraf Agent
 - Zipkin
 
-For information about these integrations:
-
-#. Log in to Splunk Observability Cloud.
-#. In the navigation menu, select :menuselection:`Data Management`. 
-#. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
-#. In the integration filter menu, select :guilabel:`All`.
-#. In the :guilabel:`Search` field, search for the name of the community integration.
-#. Select the community integration tile to display its details.
-
 .. raw:: html
 
    <embed>
-      <h2>Other integrations<a name="other-integrations" class="headerlink" href="#other-integrations" title="Permalink to this headline">¶</a></h2>
+      <h3>Other integrations<a name="other-integrations" class="headerlink" href="#other-integrations" title="Permalink to this headline">¶</a></h3>
    </embed>
 
 Other integrations include:
