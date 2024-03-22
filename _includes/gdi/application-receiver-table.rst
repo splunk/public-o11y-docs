@@ -129,11 +129,6 @@
      -
      -
 
-   * - :ref:`Databricks Receiver <databricks_receiver>`  
-     - :strong:`X`
-     -
-     -
-
    * - :ref:`Disk and partition <disk>`
      - :strong:`X`
      -
@@ -219,11 +214,6 @@
      -
      -
 
-   * - :ref:`Host metrics receiver <host-metrics-receiver>`
-     - :strong:`X`
-     -
-     -
-
    * - :ref:`Host process <processes>`
      - :strong:`X`
      -
@@ -259,7 +249,7 @@
      -
      -
 
-   * - :ref:`Java metrics receiver <java-monitor>`
+   * - :ref:`Java metrics <java-monitor>`
      - :strong:`X`
      -
      -
@@ -299,11 +289,6 @@
      -
      - :strong:`X`
 
-   * - :ref:`Kubernetes Cluster Receiver <kubernetes-cluster-receiver>`
-     - :strong:`X`
-     -
-     - :strong:`X`
-
    * - :ref:`Kubernetes controller manager <kube-controller-manager>`
      - :strong:`X`
      -
@@ -328,11 +313,6 @@
      - :strong:`X`
      -
      - :strong:`X`
-
-   * - :ref:`Kubelet Stats Receiver <kubelet-stats-receiver>`
-     - :strong:`X`
-     -
-     - 
 
    * - :ref:`Logparser<telegraf-logparser>`
      -
@@ -388,11 +368,6 @@
      -
      - 
 
-   * - :ref:`MongoDB Atlas receiver <mongodb-atlas-receiver>`
-     - :strong:`X`
-     -
-     - 
-
    * - :ref:`MySQL <mysql>`
      - :strong:`X`
      -
@@ -443,11 +418,6 @@
      -
      -
 
-   * - :ref:`Oracle Database receiver <oracledb>`
-     - :strong:`X`
-     -
-     -  
-
    * - :ref:`PHP FPM <collectd-php-fpm>`
      - :strong:`X`
      -
@@ -489,11 +459,6 @@
      -
 
    * - :ref:`Prometheus Node exporter <prometheus-node>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`Prometheus receiver <prometheus-receiver>`
      - :strong:`X`
      -
      -
