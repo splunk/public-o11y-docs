@@ -80,11 +80,13 @@ If you need to send data directly to Splunk Observability Cloud, follow these st
             c.use_all() # activates all instrumentation
         end
 
-#. Change the endpoint that the application sends data to by updating the environment variable. For example, if your OpenTelemetry Collector instance is listening on ``localhost:4317``, use the following commands:
+#. Set the endpoint to Splunk Observability Cloud and send data using the grpc protocol. Use the following commands:
 
     .. code-block:: bash
 
-        export OTEL_EXPORTER_OTLP_ENDPOINT="http://localhost:4317"
+        export OTEL_EXPORTER_OTLP_ENDPOINT="http://ingest.<realm>.signalfx.com"
+        export OTEL_EXPORTER_OTLP_PROTOCOL="grpc"
+        export OTEL_EXPORTER_OTLP_TRACES_HEADERS="x-sf-token=<access_token>"
 
     Replace ``<realm>`` with your Splunk Observability Cloud realm and ``<access-token>`` with your Splunk Observability Cloud access token with ingest permissions.
 

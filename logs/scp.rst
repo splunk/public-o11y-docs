@@ -18,7 +18,7 @@ Region and version availability
 
 Splunk Log Observer Connect is available in the following Splunk Observability realms: us0, us1, us2, eu0, jp0, and au0. It's not available for Splunk Cloud Platform trials and is not supported in GovCloud regions.  
 
-Splunk Log Observer Connect is compatible with Splunk Cloud Platform versions 8.2 and higher. 
+Splunk Log Observer Connect is compatible with Splunk Cloud Platform versions 9.0.2209 and higher. 
 
 Prerequisites
 ==============================================================
@@ -107,23 +107,23 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
    
          * 35.247.86.219/32
       
-9. Access your Splunk Cloud Platform management port (e.g. abc.splunkcloud.com:8089) and use your browser's secure connection to download the certificate.
+9. Access your Splunk Cloud Platform management port (for example, stackname.splunkcloud.com:8089) and use your browser's secure connection to download the certificate.
 
    a. For example, in the Chrome browser, select the lock icon in the address bar, then select :guilabel:`Connection is secure`.
 
-      .. image:: /_images/logs/chrome-secure1.png
+      .. image:: /_images/logs/chrome-secure1A.png
          :width: 50%
          :alt: This screenshot shows how to find the lock icon for secure download in Google Chrome.
    
    b. Next, select :guilabel:`Certificate is valid`.
 
-      .. image:: /_images/logs/chrome-secure2.png
+      .. image:: /_images/logs/chrome-secure2A.png
          :width: 50%
          :alt: This screenshot shows how to download a certificate in Google Chrome.
 
    c. On the :guilabel:`Details` tab, select :guilabel:`Export`.
 
-      .. image:: /_images/logs/chrome-secure3.png
+      .. image:: /_images/logs/chrome-secure3A.png
          :width: 60%
          :alt: This screenshot shows how to finish downloading a certificate in Google Chrome.
 
