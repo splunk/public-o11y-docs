@@ -197,10 +197,11 @@ Avoid these aggregation issues by using the following options:
 Metric pipeline management limitations
 ===============================================================================
 
-The following limitations apply:
+Metrics pipeline management is not available for: 
 
-* Metrics pipeline management is not available for metrics ingested through the ``https://ingest.signalfx.com/v1/collectd`` endpoint.
-* Internal org metrics cannot be aggregated. To learn more, see :ref:`org-metrics`. Note that aggregation for CMS metrics is available.
+* Metrics ingested through the ``https://ingest.signalfx.com/v1/collectd`` endpoint.
+* Splunk Observability Cloud's :ref:`org-metrics`. 
+* APM's :ref:`MetricSets <apm-metricsets>`.
 
 Learn more
 ===============================================================================
