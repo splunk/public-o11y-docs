@@ -207,7 +207,7 @@ For more information about creating data links, see :ref:`link-metadata-to-conte
       <h2>Community and other integrations<a name="community-integrations" class="headerlink" href="#community-integrations" title="Permalink to this headline">¶</a></h2>
    </embed>
 
-The following integrations are available:
+The following Community integrations are available:
 
 - Istio
 - Jaeger
