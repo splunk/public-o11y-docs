@@ -28,8 +28,6 @@ To learn more, see the following:
 
 - :ref:`apm-span-tags`
 
-- :ref:`Troubleshooting MetricSets`
-
 - :ref:`apm-index-tag-tips`
 
 
