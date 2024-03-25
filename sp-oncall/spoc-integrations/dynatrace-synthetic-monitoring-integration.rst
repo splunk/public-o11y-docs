@@ -35,73 +35,67 @@ In Dynatrace Synthetic Monitoring
 
 #. From the Dynatrace Synthetic Monitoring web interface, select the menu icon in the upper-left corner, then select :guilabel:`Alerts` from the dropdown.
 
-.. image:: /_images/spoc/Operational_summary-Dynatrace_Synthetic.png
+.. image:: /_images/spoc/dyna-synth-3.png
+    :width: 100%
 
-.. image:: /_images/spoc/Operational_summary-Dynatrace_Synthetic-1.png
+.. image:: /_images/spoc/dyna-synth-4.png
+    :width: 100%
 
-Select the **Alert Destinations** tab.
+#. Select :guilabel:`Alert Destinations`.
 
 .. image:: /_images/spoc/Alerts-Dynatrace_Synthetic.png
+    :width: 100%
 
-Click **Create an alert destination**.
+#. Select :guilabel:`Create an alert destination`.
 
 .. image:: /_images/spoc/Alerts-Dynatrace_Synthetic-1.png
+    :width: 100%
 
-Select **VictorOps** from the “Format” dropdown menu, then enter
-appropriate values for “Name” and “Routing_key”, and paste the “API key”
-from the “In VictorOps” section.  Click **Create**.
+#. Select :strong:`VictorOps` from the :guilabel:`Format`` menu, then enter appropriate values for :strong:`Name`` and :strong:`Routing_key`. Paste the API key from the :guilabel:`In VictorOps` (Splunk On-Call) section. 
+
+#. Select :guilabel:`Create`.
 
 .. image:: /_images/spoc/Alerts-Dynatrace_Synthetic-9.png
+    :width: 100%
 
- 
 
-Select the **Alert Configuration** tab.
+#. Select the :guilabel:`Alert Configuration` tab.
 
 .. image:: /_images/spoc/Alerts-Dynatrace_Synthetic-3.png
+    :width: 100%
 
-For a test that that you want to associate the alert with,
-click **Action**, then select **Edit** from the dropdown menu.
+#. For a test that that you want to associate the alert with, select :guilabel:`Action`, then select :guilabel:`Edit` from the dropdown menu.
 
 .. image:: /_images/spoc/Alerts-Dynatrace_Synthetic-4.png
+    :width: 100%
 
-Select either the **Test Level Alerts** tab or the **Step Level Alerts**
-tab, then select the type of alert from the left side of the tab that
-you want to configure.
+#. Select either the :guilabel:`Test Level Alerts` tab or the :guilabel:`Step Level Alerts` tab, then select the type of alert from the left side of the tab that you want to configure.
 
 .. image:: /_images/spoc/Alerts-Dynatrace_Synthetic-5.png
+    :width: 100%
 
-For testing, make sure to have “Activation” set to **On** (you can
-change this after testing if you want).  Configure the alert settings
-how you want, then click **Add Notification** near the bottom of the
+#. For testing, make sure to have :menuselection:`Activation` set to :strong:`On`. You can change the Activation setting after testing if you want. Configure the alert settings how you want, then select :guilabel:`Add Notification` near the bottom of the
 page.
 
 .. image:: /_images/spoc/Alerts-Dynatrace_Synthetic-6.png
+    :width: 100%
 
-Set “Reminders Frequency” and “Level” to the values you want, then set
-“Destination/Subject” to the “Alert Destination” that you created
-earlier.  Click **Update and Finish** to complete the process or
-click **Add Notification** to add another notification with different
-settings.
+#. Set :guilabel:`Reminders Frequency` and :guilabel:`Level`` to the values you want, then set :guilabel:`Destination/Subject` to the Alert Destination that you created earlier. Select :guilabel:`Update and Finish` to complete the process or select :guilabel:`Add Notification` to add another notification with different settings.
 
 .. image:: /_images/spoc/Alerts-Dynatrace_Synthetic-7.png
 
-Click on the **Action** dropdown for the test you just updated, the
-select **Send sample alerts**.
+#. Select the :guilabel:`Action` dropdown for the test you just updated, the select :menuselection:`Send sample alerts`.
 
 .. image:: /_images/spoc/Alerts-Dynatrace_Synthetic_and_Managing_Alerts-Synthetic_Monitoring-Dynatrace_Community-2.png
 
-Select the Alert to test, then click **Send Alerts**.
+#. Select the alert to test, then select :guilabel:`Send Alerts`.
 
 .. image:: /_images/spoc/Alerts-Dynatrace_Synthetic-8.png
 
-Confirm that you received the test alert in your VictorOps timeline.
+#. Confirm that you received the test alert in your Splunk On-Call timeline.
 
 .. image:: /_images/spoc/Timeline-Ops_Testing.png
 
- 
 
- 
 
-You have completed setting up this integration.  If you have any
-questions, please contact `VictorOps
-support <mailto:Support@victorops.com?Subject=Dynatrace%20Synthetic%20Monitoring%20VictorOps%20Integration>`__.
+You have completed setting up this integration. 
