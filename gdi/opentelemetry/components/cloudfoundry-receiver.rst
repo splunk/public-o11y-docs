@@ -57,7 +57,7 @@ The receiver has the following configuration options:
 * ``uaa.password``. :strong:`Required`. Password of the UAA user.
 
 
-The ``rlp_gateway`` configuration section also inherits configuration options from :ref:`HTTP Client Configuration <https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/confighttp#client-configuration>`.
+The ``rlp_gateway`` configuration section also inherits configuration options from :new-page:`HTTP Client Configuration <https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/confighttp#client-configuration>`.
 
 Configuration examples
 --------------------------------------------
