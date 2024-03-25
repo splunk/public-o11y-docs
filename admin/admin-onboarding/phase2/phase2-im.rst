@@ -53,7 +53,7 @@ Ensure users are aware of the first-time login procedure:
 
 When a user logs in to Splunk Observability Cloud using SSO for the first time, the user receives an email with a link. The user must select the link to authenticate. This email validation is only necessary for the user's first login.  
 
-Splunk Observability Cloud supports Just-In-Time user creation, which means that if a user does not exist in Splunk Observability Cloud, then the user's account will be created upon first login attempt.
+Splunk Observability Cloud supports just-in-time user creation, which means that if a user doesn't exist in Splunk Observability Cloud, then an account is created upon first login.
 
 .. _otel-reqts:
 
