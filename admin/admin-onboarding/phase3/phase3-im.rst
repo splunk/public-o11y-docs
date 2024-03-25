@@ -4,7 +4,7 @@
 Expansion and optimization part 1: Splunk Infrastructure Monitoring
 *******************************************************************************
 
-To expand and optimize Splunk Infrastructure Monitoring, you must do the following:
+To expand and optimize Splunk Infrastructure Monitoring, do the following:
    
 1. :ref:`expand-im1`
 
@@ -35,96 +35,185 @@ To expand and optimize Splunk Infrastructure Monitoring, you must do the followi
 
 Build advanced dashboards and charts
 ================================================================================================================
-It is important to familiarize the teams with creating and customizing dashboards. Take advantage of the ability to mirror dashboards and modify the dashboards including dashboard filters and dashboard variables. Utilize the text notes and event feeds that can be added into the dashboards. Also familiarize the teams with data links to be able to dynamically link a dashboard to another dashboard or external system such as Splunk APM or a custom URL to Splunk Cloud Platform.
+It is important to familiarize teams with creating and customizing dashboards. Take advantage of the ability to mirror and modify dashboards. Learn to use dashboard filters and dashboard variables. Ensure teams know how to add text notes and event feeds to the dashboards. Familiarize teams with data links so that they can dynamically link a dashboard to another dashboard, an external system, Splunk APM, or to Splunk Cloud Platform. See :ref:`link-metadata-to-content` to learn more.
+
+For comprehensive documentation on dashboards and charts, see the following:
+
+- :ref:`dashboards`
+
+- :ref:`data-visualization-charts`
+
 
 .. _expand-im2:
 
 Build advanced detectors
 ================================================================================================================
-It is important to familiarize the teams with advanced detectors, this will bring great advantage to utilize the Splunk IM product. These sets of advanced detectors are basically taking the basic list of Alert conditions and enhancing it to take into account the different types of functions, such as additional firing or clearing conditions for the alerts, or comparing two main functions using population_comparison, etc. Here is an example of SLX detectors utilizing the advanced SignalFlow library.
+Maximize your use of Splunk Infrastructure Monitoring by familiarizing your teams with advanced detectors. Advanced detectors enhance the basic list of alert conditions to take into account the different types of functions, such as additional firing, alert clearing conditions, or comparing two main functions using population_comparison.
+
+To learn more, see the following:
+
+- :ref:`get-started-detectoralert`
+
+- :ref:`scenarios-alerts-detectors`
+
+- :ref:`autodetect`
+
+- :ref:`create-detectors`
+
+- :ref:`linking-detectors`
+
+- :ref:`auto-clearing-alerts`
+
 
 .. _expand-im3:
 
-Automate token rotation process
+Automate the token rotation process
 ================================================================================================================
-As the various tokens do expire after a year, it is important to understand how to rotate the token gracefully using an automated process via an API call. Once the API is run for a given token, this will create a new token while the old token will continue to work until the time specified in grace_period. Update the old token value with new token value (wherever it is used) within time specified in grace_period.
+As tokens expire after a year, it is important to understand how to rotate the token gracefully using an automated process via an API call. For a given token, while the API runs to create a new token, the old token continues to work until the time specified in grace_period. Wherever the old token is in use, update the old token value with the new token value within the time specified in grace_period.
 
-For example, a token used for ingesting Metrics and Trace data that is used by the Kubernetes cluster (this stored in a Kubernetes secret) can be rotated using the API, and the new token can be stored directly into the secret in the Kubernetes cluster as part of the automation so the application can automatically retrieve the new token.
+Let's look at an example. You can use the API to rotate a token that a Kubernetes cluster uses to ingest metrics and trace data. The API generates a new token that can be stored directly into the secret in the Kubernetes cluster as part of the automation so that the application can automatically retrieve the new token.
+
+To learn more, see the following:
+
+- :ref:`admin-tokens`
+
+- :ref:`admin-api-access-tokens`
+
+- :ref:`admin-tokens`
+
+- :ref:`admin-org-tokens`
+
 
 .. _expand-im4:
 
 Identify and review MTTR reduction
 ================================================================================================================
-It is important to understand why reducing MTTR (total time from start of issue to resolution of issue) is critical when using Splunk Observability Cloud. Several use case for reason of slow MTTR:
-The right people aren’t in the room (once the root cause is identified, you need to make sure you have the right people to actually fix the issue and/or the people to approve the remediation)
-Lack of insight into effects on other systems (without proper insight into how infrastructure and applications interconnect it takes time to analyze the possible effects of a remediation procedure)
-Manual remediation procedure (i.e. teams are too busy responding to and investigating incidents to build automation and improve systems)
-Non updated runbooks (without proper incident analysis and reporting, incident remediation runbooks are not updated and improved)
-The following example of scenario for auto-remediation using Splunk IM: a deployment happened, this caused an issue, which triggered an alert, which triggered a rollback, total time from deployment went to latency and requests are back to normal in under 4 min! 
+A primary purpose of Splunk Observability Cloud is to reduce the MTTR,  Mean Time to Resolution, of an issue. A slow MTTR can be the result of many factors.
+
+One factor might be the right people aren’t involved when an issue begins. After identifying the root cause, you must have the appropriate people to actually fix the issue, as well as the appropriate people to approve the remediation.
+
+Another factor causing slow MTTR can be a lack of insight into the effects on other systems. Without proper insight into how infrastructure and applications interconnect, it takes time to analyze the possible effects of a remediation procedure. 
+
+A third cause of slow MTTR can be that teams are using manual remediation procedures. Often teams don't have time to build automation and improve systems because they are too busy investigating and responding to incidents.
+
+A fourth factor can be that teams do not have time to update runbooks. Without proper incident analysis and reporting, incident remediation runbooks do not include critical information for resolving incidents.
+
+With Splunk Infrastructure Monitoring, the following scenario is common:
+
+1. A deployment happened.
+
+2. The deployment caused an incident. 
+
+3. The incident triggered an alert.
+
+4. The alert triggered a rollback.
+
+The total latency between the deployment and rollback was less than 4 minutes, at which point requests are back to normal. To learn more, see :ref:`practice-reliability-incident-response`.
+
 
 .. _expand-im5:
 
 Utilize Metrics Pipeline Management tools to reduce cardinality of MTS
 ================================================================================================================
-Understand that as metrics data usage grows (cardinality) in Splunk IM, cost will also increase, at the same time also understand that not all data is equal or important. Metrics Pipeline Management (MPM) functionality within Splunk IM has a mechanism to streamline some of the storage and processing, it also evolves the metric analytics platform into a multi-tier platform. This functionality helps reduce overall monitoring cost and optimized ROI (Return of Investment) by storing less critical metrics data at a much lower cost. 
-MPM also provides reports to identify where to optimize usage. MPM has rule-based metrics aggregation and filtering on dimensions to help reduce MTS volume, it also allows users to drop dimensions that are not needed. These can be configured through User Interface, API and Terraform.
+It is important to understand the following:
+
+- As metrics data usage, or cardinality, grows in Splunk IM, the cost increases.
+
+- Not all data is equal or important. 
+
+You can reduce overall monitoring cost and optimize your return on investment by storing less critical metrics data at a much lower cost. To do this, utilize Metrics Pipeline Management (MPM) functionality within Splunk Infrastructure Monitoring. MPM has a mechanism to streamline some of the storage and processing and to evolve the metric analytics platform into a multi-tier platform. MPM also provides reports to identify where to optimize usage. MPM has rule-based metrics aggregation and filtering on dimensions to help reduce MTS volume. MPM also allows users to drop dimensions that are not needed. You can configure dimensions through User Interface, API, and Terraform.
+
+For comprehesive documentation on MPM, see :ref:`metrics-pipeline-arm`.
 
 .. _expand-im6:
 
 Set up Network Explorer to monitor network environment
 ================================================================================================================
-Splunk Distribution of OpenTelemetry Collector Helm chart allows you to configure Network Explorer. Network Explorer inspects packets to capture network performance data with eBPF (extended Berkeley Packet Filter) technology which is run by linux kernel. eBPF allows programs to run in the OS when certain kernel events occur:
+Splunk Distribution of OpenTelemetry Collector Helm chart allows you to configure Network Explorer. Network Explorer inspects packets to capture network performance data with eBPF (extended Berkeley Packet Filter) technology which is run by Linux Kernel. eBPF allows programs to run in the operating system when the following kernel events occur:
 
 - Run eBPF when TCP handshake is complete
 
 - Run eBPF when TCP receives an acknowledgement for a packet
 
-Network Explorer captures network data that is passed onto the reducer and then to the Splunk OTel Collector. Note that in order for Splunk OTel Collector to work with Network Explorer, it needs to be installed in gateway mode.
-Upon successful installation, the Network Explorer navigator will be present in the “Infrastructure” tab in the Splunk IM User Interface, you can also check the metrics sf.org.numNPMMetrics will be non zero.
+Network Explorer captures network data that is passed on to the reducer and then to the Splunk OTel Collector. Note that in order for Splunk OTel Collector to work with Network Explorer, you must install it in gateway mode. Upon successful installation, the Network Explorer navigator will be present on the :guilabel:`Infrastructure` tab in Splunk Infrastructure Monitoring.
+
+For comprehesive documentation on Network Explorer, see :ref:`network-explorer`.
+
 
 .. _expand-im7:
 
 Analyze and troubleshoot usage, limits and throttles
 ================================================================================================================
-To view Splunk Observability Cloud Subscription Usage data within your org, you must have an administrative privilege. It is important to understand the two types of subscriptions usage, host based and MTS based plans. It is recommended that an admin of an org familiarize themselves with how to read the various reports available such as monthly usage report, hourly usage report, dimension report, and custom metric report. 
+To view Splunk Observability Cloud Subscription Usage data within your org, you must be an admin. It is important to understand the two types of subscriptions usage: host-based and MTS-based. An admin of an organization must know how to read the various reports available such as monthly usage reports, hourly usage reports, dimension reports, and custom metric reports. 
 
-It is also essential to understand the system limits for Splunk IM. This will help to ensure your Splunk IM experience is optimized without overall degradation when these limits are exceeded. Make sure you are aware of all the various limits. 
-Note also on data retention in Splunk IM.
+An admin must also understand the system limits for Splunk Infrastructure Monitoring to avoid overall degradation when your organization exceeds the limits. To learn more, see the following:
+
+- :ref:`sys-limits`
+
+- :ref:`data-o11y`
+
 
 .. _expand-im8:
 
 Automate key workflows to further accelerate onboarding and standardize consistent practices 
 ================================================================================================================
-It is recommended to automate the onboarding process workflow during this phase. For example: teams creation, token ingestion, HEC token for Log Observer Connect, and token rotation.
-Also consider prescriptive onboarding guides for instrumentation such as Splunk OTel Zero configuration installation, or utilizing separate instrumentation agents, including predefining required environment variables.
-It is recommended to use Splunk Observability Cloud REST APIs to automatically assign default dashboards and detectors to new teams via automation.
+We recommend automating the onboarding process workflow during the expansion and optimization phase. For example, automate teams creation, token ingestion, HEC token for Log Observer Connect, and token rotation. Also consider prescriptive onboarding guides for instrumentation, such as Splunk OTel Zero configuration installation, or utilizing separate instrumentation agents, including predefining required environment variables. Use Splunk Observability Cloud REST APIs to automatically assign default dashboards and detectors to new teams via automation.
+
+To learn more, see the following:
+
+- :ref:`zero-config`
+
+- :ref:`dashboards-best-practices`
+
 
 .. _expand-im9:
 
-Identify more complex/customized use cases to further enhance value and ROI
+Identify complex and customized use cases to further enhance value and return on investment
 ================================================================================================================
-During this phase, it is recommended to start identifying more complex use cases relevant to each of the teams requirements. 
-Some example use case scenarios: How to handle huge volumes of infrastructure data? How to increase developer efficiency to solve problems during deployment? How to utilize Splunk Observability Cloud to be able to monitor and control consumption rates of Kubernetes? How to improve ROI (Return of Investment)? How to improve MTTD/MTTR? How to ensure and improve customer experience 4 9’s of availability?
+During the expansion and optimization phase, start identifying more complex use cases relevant to each of the teams' requirements. 
+Some example use case scenarios are the following: 
+
+- How to handle huge volumes of infrastructure data
+
+- How to increase developer efficiency to solve problems during deployment
+
+- How to utilize Splunk Observability Cloud to monitor and control consumption rates of Kubernetes 
+
+- How to improve ROI (Return on Investment)
+
+-  How to improve MTTR (Mean Time To Resolution) 
+
+- How to ensure and improve customer experience 
+
 
 .. _expand-im10:
 
-Get internal feedback from O11y product with key user teams/admins and submit Splunk Ideas for Feature Requests
+Get feedback from Splunk Observability Cloud and submit feature requests to Splunk Ideas
 ================================================================================================================
-It is recommended to stay closely informed of any product enhancement from Splunk Observability  Cloud by engaging with Splunk SE (Sales Engineers), Splunk CSM (Customer Success Manager) and discussing any issues or concerns related to the product. Utilize the Splunk Ideas to submit any feature requests or upvote on existing ideas if it is relevant to your feature requests.
+Stay up-to-date on product enhancements from Splunk Observability Cloud by engaging with Splunk Sales Engineers, Splunk Customer Success Managers and discussing any issues or concerns related to the product. Utilize the Splunk Ideas to submit any feature requests or upvote existing ideas if they are relevant to your feature requests.
 
-This will help to drive and improve Splunk Observability Cloud product strategy.
+You can help to drive and improve Splunk Observability Cloud product strategy.
+
 
 .. _expand-im11:
 
 Onboard all production applications
 ================================================================================================================
-During this phase, most processes can be automated and new services can be added into the Splunk Observability Cloud system. You can continue expanding the OTel agent configuration library for all production applications. These should populate all the necessary metrics to build the desired charts/dashboards and detectors. Continue onboard all production applications.
+During this phase, most processes can be automated and new services can be added into the Splunk Observability Cloud system. You can continue expanding the OTel agent configuration library for all production applications. Populate all the necessary metrics to build the desired charts, dashboards, and detectors. Continue to onboard all production applications.
+
 
 .. _expand-im12:
 
 Onboard all teams/users
 ================================================================================================================
-During this phase, all users and teams can be onboarded into Splunk Observability Cloud. It is recommended to turn on the enhanced teams security to identify teams managers vs. users within the teams and who can access which dashboards and detectors and who can modify this information vs. view only users within the teams.
+During this phase, you can onboard all users and teams into Splunk Observability Cloud. Turn on the enhanced teams security to identify team managers and users. This security within the teams lets you control who can view and who can and modify each dashboard and detector within the teams.
+
+To learn more, see the following:
+
+- :ref:`user-managment-intro`
+
+- :ref:`enhanced-team-security`
+
 
 Next step
 ===============
