@@ -1,13 +1,13 @@
 .. _cloudfoundry-receiver:
 
 ****************************
-Cloudfoundry receiver
+Cloud Foundry receiver
 ****************************
 
 .. meta::
       :description: Connects to the Reverse Log Proxy (RLP) gateway of Cloud Foundry to extract metrics.
 
-The Cloudfoundry receiver allows the Splunk Distribution of the OpenTelemetry Collector to connect to the Reverse Log Proxy (RLP) gateway of Cloud Foundry, typically available at the URL https://log-stream.<cf-system-domain>, and extract metrics. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
+The Cloud Foundry receiver allows the Splunk Distribution of the OpenTelemetry Collector to connect to the Reverse Log Proxy (RLP) gateway of Cloud Foundry and extract metrics. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
 Get started
 ======================
@@ -43,6 +43,22 @@ configuration file:
       metrics:
         receivers: [cloudfoundry]
 
+Configuration settings
+--------------------------------
+
+The receiver has the following configuration options:
+
+* ``rlp_gateway.endpoint``. :strong:`Required`. URL of the RLP gateway, typically ``https://log-stream.<cf-system-domain>``.
+* ``rlp_gateway.tls.insecure_skip_verify``. ``false`` by default. Whether to skip TLS verify for the RLP gateway endpoint.
+* ``rlp_gateway.shard_id``. Metrics are load balanced among receivers that use the same shard ID, therefore use this if there are multiple receivers which must both receive all the metrics instead of them being balanced between them.
+* ``uaa.endpoint``. :strong:`Required`. URL of the UAA provider, typically ``https://uaa.<cf-system-domain>``.
+* ``uaa.tls.insecure_skip_verify``. ``false`` by default. Whether to skip TLS verify for the UAA endpoint.
+* ``uaa.username``. :strong:`Required`. Name of the UAA user.
+* ``uaa.password``. :strong:`Required`. Password of the UAA user.
+
+
+The ``rlp_gateway`` configuration section also inherits configuration options from :ref:`HTTP Client Configuration <https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/confighttp#client-configuration>`.
+
 Configuration examples
 --------------------------------------------
 
@@ -63,7 +79,6 @@ See this sample config:
           insecure_skip_verify: false
         username: "otelclient"
         password: "changeit"
-
 
 See also:
 
