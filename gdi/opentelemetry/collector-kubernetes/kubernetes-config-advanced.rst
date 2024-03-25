@@ -20,11 +20,12 @@ For basic Helm chart configuration, see :ref:`otel-kubernetes-config`. For log c
 Override the default configuration
 ==============================================================
 
-You can override the default configuration to use your own. To do this, include a custom configuration using the ``agent.config``, ``clusterReceiver.config``, or ``gateway.config`` parameter in the values.yaml file. Examples of the default :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>`, :new-page:`agent <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/default/rendered_manifests/configmap-agent.yaml>`, and :new-page:`cluster receiver <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/default/rendered_manifests/configmap-cluster-receiver.yaml>`, and :new-page:`gateway <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/collector-all-modes/rendered_manifests/configmap-gateway.yaml>` confirgurtation are available. For example:
+You can override the default configuration to use your own. To do this, include a custom configuration using the ``agent.config``, ``clusterReceiver.config``, or ``gateway.config`` parameter in the values.yaml file. Find examples at :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>`, :new-page:`agent <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/default/rendered_manifests/configmap-agent.yaml>`, :new-page:`cluster receiver <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/default/rendered_manifests/configmap-cluster-receiver.yaml>`, and :new-page:`gateway <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/collector-all-modes/rendered_manifests/configmap-gateway.yaml>`.
+
+For example:
 
 .. code-block:: yaml
  
-
   agent:
     config:
       processors:
