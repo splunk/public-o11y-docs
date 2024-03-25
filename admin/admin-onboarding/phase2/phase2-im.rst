@@ -106,7 +106,7 @@ Planning considerations for dimensions and properties
 After initial onboarding of metrics data, It is strongly recommended to review the name and the amount of metrics each teams are ingesting. Make sure the ingest data match the agreed naming convention for dimensions and properties.
 Often, guidance is needed to address the name and type of dimensions required to ingest into Splunk IM.
 
-It is important to ensure the teams follow the naming convention setup for metrics. This will help faster development of charts and alerts and also to create alerts that can detect across a whole range of hosts and nodes.
+Ensure the teams follow the naming convention setup for metrics. This helps with faster development of charts and alerts and also allows you to create alerts that can detect across a whole range of hosts and nodes.
 
 * For details about dimensions, see :ref:`metadata-dimension`.
 * For details about properties, see :ref:`custom-properties`.
