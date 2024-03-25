@@ -42,7 +42,7 @@ Once these dashboards and detectors are set up, the teams can use these out of t
 
 .. _expand-team:
 
-Expand the team and prepare for internal roll-out to the first user groups
+Expand the team and prepare for internal rollout to the first user groups
 =================================================================================================================
 
 Depending how you are managing users in your organization in Splunk Observability Cloud or using Single Sign-On (SSO), it is necessary to assign the right roles to the new users. For details on managing users, see :ref:`admin-manage-users`.
