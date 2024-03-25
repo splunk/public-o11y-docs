@@ -6,7 +6,7 @@ Pilot part 2: Initial pilot rollout for Splunk Infrastructure Monitoring
 
 
 
-During this part of the journey, focus on onboarding a number of teams. These teams will represent use cases that can be used to show the power and benefit of the solution to the rest of your organization. 
+During this part of the journey, focus on onboarding a number of teams. These teams represent use cases to show the power and benefit of the solution to the rest of your organization. 
 
 These tasks can be separated according to product components. There will be one set for each of:
 * Splunk Infrastructure Monitoring (this topic), and 
