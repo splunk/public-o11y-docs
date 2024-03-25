@@ -51,7 +51,7 @@ If you are using teams, you may want to enable enhanced security so you can assi
 
 Ensure users are aware of the first-time login procedure:
 
-When a user logs in to Splunk Observability Cloud using SSO for the first time, the user will receive an email with a link. The user must click the link for authentication purposes. This email validation will only take place for first-time users.
+When a user logs in to Splunk Observability Cloud using SSO for the first time, the user receives an email with a link. The user must select the link to authenticate. This email validation is only necessary for the user's first login.  
 
 Splunk Observability Cloud supports Just-In-Time user creation, which means that if a user does not exist in Splunk Observability Cloud, then the user's account will be created upon first login attempt.
 
