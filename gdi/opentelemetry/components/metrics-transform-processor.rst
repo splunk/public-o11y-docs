@@ -38,7 +38,7 @@ Follow these steps to configure and activate the component:
 3. Restart the Collector.
 
 Sample configuration
-----------------------
+--------------------------------------------
 
 To activate the resource processor, add ``metricstransform`` to the ``processors`` section of your configuration file. 
 
@@ -132,7 +132,7 @@ See :ref:`metrics-transform-processor-operations` to understand the operations, 
 .. _metrics-transform-processor-operations:
 
 Available operations
-======================
+====================================
 
 The processor can perform the following operations:
 
@@ -181,7 +181,7 @@ To create a new metric from an existing metric, apply this configuration:
 .. _metrics-transform-example-create-new-metric-labels:
 
 Example: Create a new metric from an existing metric with matching label values
---------------------------------------------------------------------
+------------------------------------------------------------------------------------------
 
 To create a new metric from an existing metric with matching label values, apply this configuration:
 
@@ -199,7 +199,7 @@ To create a new metric from an existing metric with matching label values, apply
 .. _metrics-transform-example-create-new-metric-label-regexp:
 
 Example: Create a new metric from an existing metric with matching label values with regexp
---------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
 
 To create a new metric from an existing metric with matching label values with regexp, apply this configuration:
 
@@ -447,15 +447,6 @@ Example: Group Metrics
 --------------------------------------------------------------------
 
 To group Metrics, apply this configuration:
-
-.. code-block:: yaml
-
-.. _metrics-transform-example-create-new-metric:
-
-Example: Create a new metric from an existing metric
---------------------------------------------------------------------
-
-To create a new metric from an existing metric, apply this configuration:
 
 .. code-block:: yaml
 
