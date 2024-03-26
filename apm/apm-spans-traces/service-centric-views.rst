@@ -1,18 +1,25 @@
-:orphan:
-
 .. _apm-service-centric-views:
 
 .. admonition:: Preview: Service-centric views
-
-    Preview features described in this document are provided by Splunk to you "as is" without any warranties, maintenance and support, or service-level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it at any time. Use of preview features is subject to the :new-page:`Splunk Pre-Release Agreement for Hosted Services <https://www.splunk.com/en_us/legal/pre-release-agreement-for-hosted-services.html>`.
     
-Use service-centric views for a complete view of your service health 
+Use service views for a complete view of your service health 
 *****************************************************************************
 
 .. meta::
-   :description: Learn how to use service-centric views in Splunk APM for a complete view of your service health.
+   :description: Learn how to use service views in Splunk APM for a complete view of your service health.
 
-Service owners can use the service-centric view in Splunk APM to get a complete view of their service health in a single pane of glass. The service-centric view includes availability, dependencies, request, error, and duration (RED) metrics, top endpoints, logs, runtime metrics, and infrastructure metrics for a selected service. To access service-centric views, select a service from the APM landing page.
+Service owners can use the service view in Splunk APM to get a complete view of their service health in a single pane of glass. The service view includes availability, dependencies, request, error, and duration (RED) metrics, top endpoints, logs, runtime metrics, and infrastructure metrics for a selected service. 
+
+Access the service view for your service
+===========================================
+
+You can access the service view for a specific service within the service map. Start by selecting :guilabel:`Service Map` on the APM landing page. Select a service in the service map, then select :guilabel:`Service view` in the panel.
+
+..  image:: /_images/apm/spans-traces/service-view-access.png
+    :width: 95%
+    :alt: Screenshot of the service view button within the service map when a service is selected. 
+
+You can also access the service view for a specific service by selecting the service from the APM landing page.
 
 Use the service metrics to monitor the health of your service
 =====================================================================
