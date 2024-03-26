@@ -26,8 +26,6 @@ Alternatively, you can manually install the Collector. To learn how, see :ref:`o
 Prerequisites
 ==========================
 
-These are the requirements for the Splunk Distribution of the OpenTelemetry Collector for Windows depending on the installation method:
-
 .. include:: /_includes/requirements/collector-windows.rst
 
 .. _windows-script:
