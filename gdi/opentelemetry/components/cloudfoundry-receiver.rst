@@ -56,8 +56,7 @@ The receiver has the following configuration options:
 * ``uaa.username``. :strong:`Required`. Name of the UAA user.
 * ``uaa.password``. :strong:`Required`. Password of the UAA user.
 
-
-The ``rlp_gateway`` configuration section also inherits configuration options from :new-page:`HTTP Client Configuration <https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/confighttp#client-configuration>`.
+To understand how to authenticate the RLP gateway, see :ref:`cloudfoundry-receiver-authenticate`. The ``rlp_gateway`` configuration section also inherits configuration options from the :new-page:`HTTP Client Configuration <https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/confighttp#client-configuration>`.
 
 Configuration examples
 --------------------------------------------
@@ -113,6 +112,8 @@ See also:
       password: "test"
       tls:
         insecure_skip_verify: true
+
+.. _cloudfoundry-receiver-authenticate:
 
 Authenticate the RLP gateway
 ===============================
