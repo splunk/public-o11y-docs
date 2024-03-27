@@ -190,6 +190,8 @@ On top of the required permissions, you also need to include the specific permis
 
 These are these permissions to allow Splunk Observability Cloud to collect AWS tags and properties:
 
+- ``"airflow:ListEnvironments"``
+- ``"airflow:GetEnvironment"``
 - ``"apigateway:GET"``
 - ``"autoscaling:DescribeAutoScalingGroups"``
 - ``"cloudformation:ListResources"``
