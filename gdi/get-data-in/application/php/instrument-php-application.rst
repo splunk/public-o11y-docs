@@ -36,17 +36,32 @@ If you don't use the guided setup, follow these steps to manually install and au
 
 2. Install the OpenTelemetry PHP extension using PECL in the command line:
 
-   .. code-block:: bash
+   .. tabs::
 
-      sudo apt-get install gcc make autoconf
-      pecl install opentelemetry
+      .. code-tab:: shell Linux
+
+         sudo apt-get install gcc make autoconf
+         pecl install opentelemetry
+
+      .. tab:: Windows
+
+         Download the precompiled DLL file from the :new-page:`releases page <https://github.com/open-telemetry/opentelemetry-php-instrumentation/releases/latest>` on GitHub.
+
+         Make sure to place the DLL in your extensions's directory, as defined by the value of ``extension_dir`` in your php.ini file.
 
 3. Add the extension to your php.ini file:
 
-   .. code-block:: ini
+   .. tabs::
 
-      [opentelemetry]
-      extension=opentelemetry.so
+      .. code-tab:: ini Linux
+
+         [opentelemetry]
+         extension=opentelemetry.so
+
+      .. code-tab:: ini Windows
+
+         [opentelemetry]
+         extension=php_opentelemetry.dll
 
 4. Install the required instrumentations you need using Composer:
 
@@ -68,6 +83,18 @@ If you don't use the guided setup, follow these steps to manually install and au
 6. Run your application.
 
    See the :new-page:`OpenTelemetry PHP examples <https://github.com/signalfx/tracing-examples/tree/main/opentelemetry-tracing/opentelemetry-php>` in GitHub for sample instrumentation scenarios.
+
+
+.. _activate_rum_apm_php:
+
+Connect RUM to APM through server trace data
+===================================================================
+
+To connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data, add the OpenTelemetry server timing propagator as a dependency:
+
+.. code-block:: shell
+
+   php composer.phar install open-telemetry/opentelemetry-propagation-server-timing:^0.0.2
 
 
 .. _export-directly-to-olly-cloud-php-otel:

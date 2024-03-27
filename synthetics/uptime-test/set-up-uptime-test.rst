@@ -72,19 +72,20 @@ There are many reasons why you might want to configure advanced settings for you
 * Filtering out requests from analytics on the back end by sending a specific header in the requests.
 * Running a test on a pre-production site that has a self-signed certificate.
 
-Custom properties 
---------------------
-Custom properties are key-value pairs you can assign to dimensions of existing MTSes after ingest. Custom properties are single-valued and don’t support multiple values, like ``region:northamerica`` or ``environment:prod``.
+..
+        Custom properties 
+        --------------------
+        Custom properties are key-value pairs you can assign to dimensions of existing MTSes after ingest. Custom properties are single-valued and don’t support multiple values, like ``region:northamerica`` or ``environment:prod``.
 
-Key requirements:
+        Key requirements:
 
-* Keys must start with an uppercase or lowercase letter. Keys can't start with special characters or numbers. 
-* The remainder of the key can contain letters, numbers, underscores and hyphens.
-* Keys can’t be named test_id or test.
-* Key size can't exceed 128 characters. 
+        * Keys must start with an uppercase or lowercase letter. Keys can't start with special characters or numbers. 
+        * The remainder of the key can contain letters, numbers, underscores and hyphens.
+        * Keys can’t be named test_id or test.
+        * Key size can't exceed 128 characters. 
 
 
-See, :ref:`custom-properties`. 
+        See, :ref:`custom-properties`. 
 
 
 .. _uptime-request-time:
@@ -115,6 +116,8 @@ Add assertions
 
 You can make an assertion on two values. Add two parameters along with the comparison that you would like to perform between the two. There are three types of comparisons: string, numeric, and regular expression. For string and numeric comparisons, values are coerced to the comparison type before the comparison is made. For a regular expression comparison, the first parameter is a string and the second parameter is a regular expression. An assertion step fails if the assertion is false when the step runs.
 
+* Use :strong:`matches` to compare the string to a regex pattern.
+* Use :strong:`contains` checks for a substring.
 
 
 Example

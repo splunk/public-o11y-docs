@@ -106,6 +106,9 @@ M
    metric
       Metrics are the primary form of data you send into Splunk Infrastructure Monitoring. A metric is a periodic measurement that is represented as a numerical value. The same metric can be reported from multiple sources or emitters. Typically, each unique combination of a source and a metric results in a :term:`metric time series<metric time series>`.
 
+   metric cardinality
+      Metric cardinality is the number of unique metric time series (MTS) produced by a combination of metric name and its associated dimensions. Therefore, a metric has high cardinality when it has a high number of dimension keys, and a high number of possible unique values for those dimension keys.
+
    metric time series
       A metric time series (MTS) is defined by the unique combination of a metric and a set of dimensions (which may be empty). The most common dimension is a source, like a host or instance for infrastructure metrics, or an application component or service tier for application metrics. The output of analytics pipelines are also metric time series.
 

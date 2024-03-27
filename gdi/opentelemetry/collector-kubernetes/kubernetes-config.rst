@@ -11,7 +11,7 @@ After you've :ref:`installed the Collector for Kubernetes <otel-install-k8s>`, t
 
 .. caution:: 
 
-  The :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` file lists all supported configurable parameters for the Helm chart, along with a detailed explanation of each parameter. :strong:`Review it to understand how to configure this chart`.
+  The :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` file lists and explains all supported configurable parameters for the Helm chart components. See :ref:`helm-chart-components` for more information. :strong:`Review it to understand how to configure this chart`.
 
   The Helm chart can also be configured to support different use cases, such as trace sampling and sending data through a proxy server. See :new-page:`Examples of chart configuration <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/README.md>` for more information.
 
@@ -189,6 +189,139 @@ For example:
     realm: us0
   clusterName: my-k8s-cluster
   cloudProvider: aws
+
+.. _otel-kubernetes-config-add-components:
+
+Add additional components to the configuration
+======================================================
+
+To use any additional OTel component, integration or legacy monitor, add it the relevant sections of the configuration file. Depending on your requirements, you might want to include it in the ``agent`` or the ``clusterReceiver`` component section of the configuration. See more at :ref:`helm-chart-components`.
+
+For a full list of available components and how to configure them, see :ref:`otel-components`. For a list of available application integrations, see :ref:`monitor-data-sources`.
+
+How to collect data: agent or cluster receiver?
+-----------------------------------------------------------------------------
+
+Read the following table to decide which option to chose to collect your data:
+
+.. list-table:: 
+  :header-rows: 1
+  :width: 100%
+  :widths: 20 40 40 
+
+  * - 
+    - Collect via the Collector agent 
+    - Collect via the Collector cluster receiver 
+
+  * - Where is data collected?
+    - At the node level.
+    - At the Kubernetes service level, through a single point.
+
+  * - Advantages
+    - * Granularity: This option ensures that you capture the complete picture of your cluster's performance and health. 
+      * Fault tolerance: If a node becomes isolated or experiences issues, its metrics are still being collected independently. This gives you visibility into problems affecting individual nodes.
+    - Simplicity: This option simplifies the setup and management. 
+
+  * - Considerations
+    - Complexity: Managing and configuring agents on each node can increase operational complexity, specifically agent config file management.
+    - Uncomplete data: This option might result in a partial view of your cluster's health and performance. If the service collects metrics only from a subset of nodes, you might miss critical metrics from parts of your cluster.
+
+  * - Use cases
+    - - Use this in environments where you need detailed insights into each node's operations. This allows better issue diagnosing and optimizing performance. 
+      - Use this to collect metrics from application pods that have multiple replicas that can be running on multiple nodes.
+    - Use this in environments where operational simplicity is a priority, or if your cluster is already simple and has only 1 node.
+
+Example: Add the MySQL receiver
+-----------------------------------------------------------------------------
+
+This example shows how to add the :ref:`mysql-receiver` to your configuration file.
+
+Add the MySQL receiver in the ``agent`` section
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To use the Collector agent daemonset to collect ``mysql`` metrics from every node the agent is deployed to, add this to your configuration:
+
+.. code:: yaml
+
+  agent:
+    config:
+      receivers:
+        mysql:
+          endpoint: localhost:3306
+          ...
+
+Add the MySQL receiver in the ``clusterReceiver`` section
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To use the Collector cluster receiver deployment to collect ``mysql`` metrics from a single endpoint, add this to your configuration:
+
+.. code:: yaml
+
+  clusterReceiver:
+    config:
+      receivers:
+        mysql:
+          endpoint: mysql-k8s-service:3306
+          ...
+
+Example: Add the Rabbit MQ monitor
+-----------------------------------------------------------------------------
+
+This example shows how to add the :ref:`rabbitmq` integration to your configuration file.
+
+Add RabbitMQ in the ``agent`` section
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you want to activate the RabbitMQ monitor in the Collector agent daemonset, add ``mysql`` to the ``receivers`` section of your agent section in the configuration file:
+
+.. code:: yaml
+
+  agent:
+    config:
+      receivers:
+        smartagent/rabbitmq:
+          type: collectd/rabbitmq
+          host: localhost
+          port: 5672
+          username: otel
+          password: ${env:RABBITMQ_PASSWORD}
+
+Next, include the receiver in the ``metrics`` pipeline of the ``service`` section of your configuration file:
+
+.. code:: yaml
+
+  service:
+    pipelines:
+      metrics:
+        receivers:
+          - smartagent/rabbitmq
+
+Add RabbitMQ in the ``clusterReceiver`` section
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Similarly, if you want to activate the RabbitMQ monitor in the cluster receiver, add ``mysql`` to the ``receivers`` section of your cluster receiver section in the configuration file:
+
+.. code:: yaml
+
+  clusterReceiver:
+    config:
+      receivers:
+        smartagent/rabbitmq:
+          type: collectd/rabbitmq
+          host: rabbitmq-service
+          port: 5672
+          username: otel
+          password: ${env:RABBITMQ_PASSWORD}
+
+Next, include the receiver in the ``metrics`` pipeline of the ``service`` section of your configuration file:
+
+.. code:: yaml
+
+  service:
+    pipelines:
+      metrics:
+        receivers:
+          - smartagent/rabbitmq
 
 .. _otel-kubernetes-config-hostnetwork:
 

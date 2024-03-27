@@ -34,7 +34,7 @@ Available host and application monitors
 
 The following host and application monitors are available. Refer to each service for detailed compatibility and requirements information.
 
-.. include:: /_includes/application-receiver-table.rst
+.. include:: /_includes/gdi/application-receiver-table.rst
 
 Processor architecture
 -------------------------------------------------------------

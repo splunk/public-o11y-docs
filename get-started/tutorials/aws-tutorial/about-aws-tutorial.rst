@@ -1,7 +1,7 @@
 .. _about-aws-tutorial:
 
 *****************************************************************************************
-Tutorial: monitor your AWS environment in Splunk Observability Cloud
+Tutorial: Monitor your AWS environment in Splunk Observability Cloud
 *****************************************************************************************
 
 .. meta::

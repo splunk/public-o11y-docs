@@ -24,7 +24,10 @@ Sign up for the trial
 
 If this is your first experience with Splunk Observability Cloud, here's how you can sign up for your free trial.
 
-#. Navigate to :new-page:`https://www.splunk.com/en_us/download/o11y-cloud-free-trial.html`. 
+#. Navigate to one of the following URLs:
+    * For AWS regions, see :new-page:`https://www.splunk.com/en_us/download/o11y-cloud-free-trial.html`. 
+    * For GCP regions, see :new-page:`https://www.splunk.com/en_us/download/observability-for-google-cloud-environments.html`
+  
 #. In the free trial sign-up window, select the location closest to the region you are in. Options include: United States, Europe, Asia Pacific (Australia), Asia Pacific (Japan). Select :guilabel:`Next`.
 #. Enter your contact information. Note:
     - The name and email address is used to create the first user on the system and is granted the admin role automatically.
