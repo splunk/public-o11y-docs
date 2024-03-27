@@ -9,7 +9,7 @@ Automatic discovery and configuration for third-party applications in Kubernetes
 
 .. _discovery-mode-k8s:
 
-Discovery mode in Kubernetes
+Deploy the Collector with automatic discovery
 =================================================
 
 You can configure the DaemonSet from the Splunk Distribution of OpenTelemetry Collector for Kubernetes to run in discovery mode. Edit the properties to add required credentials or service-specific information.

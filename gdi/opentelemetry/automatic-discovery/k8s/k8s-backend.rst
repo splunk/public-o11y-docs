@@ -22,14 +22,6 @@ Automatic discovery for Kubernetes can detect and configure the following applic
 * .NET
 * Node.js
 
-.. _k8s-auto-discovery-key-concepts:
-
-.. raw:: html
-
-    <h2>Key concepts</h2>
-
-Using 
-
 .. _get-started-auto-discovery-backend-k8s:
 
 .. raw:: html
