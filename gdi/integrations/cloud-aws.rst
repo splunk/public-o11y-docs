@@ -403,6 +403,20 @@ You can collect data from the following AWS services:
     - 
     - 
 
+  * - AWS/MWAA (component metrics)
+    - Amazon CloudWatch Logs
+    - :strong:`X`
+    - 
+    -
+    - :strong:`X`
+
+  * - AmazonMWAA (environment metrics)
+    - Amazon CloudWatch Logs
+    - :strong:`X`
+    - 
+    -
+    - :strong:`X`
+
   * - AWS/NATGateway
     - Amazon VPC (NAT gateway)
     - :strong:`X`
