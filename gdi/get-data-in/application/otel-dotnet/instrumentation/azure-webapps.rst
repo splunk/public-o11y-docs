@@ -18,7 +18,7 @@ Set the required environment variables for your application.
 
 #. Select your application in Azure Web App.
 
-#. Go to :guilabel:`Settings`, :guilabel:` Configuration`.
+#. Go to :guilabel:`Settings`, :guilabel:`Configuration`.
 
 #. Select :guilabel:`New application setting` to add the following settings:
 
