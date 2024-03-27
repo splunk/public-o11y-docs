@@ -59,7 +59,7 @@ In Splunk Enterprise, follow the instructions in the guided setup for the integr
       
 2. Select the role you want to use for the Log Observer Connect service account. The service account is a user role that can access the specific Splunk Enterprise indexes that you want your users to search in Log Observer Connect. 
       
-3. On the :guilabel:`Capabilities` tab, ensure that ``edit_tokens_own`` is selected. Also, ensure that ``indexes_list_all`` is not selected.
+3. On the :guilabel:`Capabilities` tab, ensure that ``edit_tokens_own`` and ``search`` are selected. Also, ensure that ``indexes_list_all`` is not selected.
 
       .. image:: /_images/logs/CapabilitiesTab1.png
          :width: 100%
