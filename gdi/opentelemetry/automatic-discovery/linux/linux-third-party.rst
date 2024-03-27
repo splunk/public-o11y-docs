@@ -1,64 +1,14 @@
-.. _discovery_mode:
+.. _linux-third-party:
 
-***************************************************************************
-Discover and configure metrics sources automatically
-***************************************************************************
+**********************************************************************************
+Automatic discovery and configuration for third-party applications in Linux
+**********************************************************************************
 
-.. meta::
-      :description: Use the discovery mode of the Splunk Distribution of OpenTelemetry Collector to detect metric sources and collect metrics automatically.
+.. meta:: 
+    :description: Learn how to use automatic discovery and configuration to gather data from third-party applications running in Linux environments.
 
-Use the discovery mode of the Splunk Distribution of OpenTelemetry Collector to detect metric sources and create
-a configuration based on the results.
 
-Discovery mode can detect several types of metric sources on the host, such as databases and servers. With this information, the Collector generates configuration you can modify and adopt, or incorporate into your exiting configuration automatically by default.
 
-The main advantage of using discovery mode is that you don't need to manually update the OpenTelemetry Collector configuration for supported metric sources. This is helpful in environments when you deploy and activate host services dynamically or when adding a new supported target database to your infrastructure.
-
-.. note:: Update the Collector to version 0.94.0 and higher to activate automatic service discovery.
-
-How discovery mode works
-==========================================
-
-When you run the Collector in discovery mode, it tests built-in configurations for supported metric receivers against endpoints discovered on your platform by observer extensions. This happens before starting the Collector service.
-
-For any dynamically instantiated receiver that retrieves metrics matching the success criteria, the Collector translates the discovery configuration to a receiver creator instance with the known working rules, as well as the required observer extension. See :ref:`receiver-creator-receiver` for more information. At the same time, the Collector adds the configuration to the ``metrics`` pipeline at runtime.
-
-For any receiver that can establish a connection with a service, but not receive the expected metrics, discovery mode suggests which properties to set, or what extensions or settings to configure on the service to successfully retrieve telemetry. You can define any target-specific configuration values that are required, for example authentication information, using discovery properties to tune the discovery process.
-
-When running in Kubernetes, discovery mode tests bundled metric receiver configurations against the endpoints discovered by the ``k8s_observer`` observer. Successfully discovered instances are then incorporated in the existing service configuration.
-
-Supported host services and applications
-=========================================
-
-Discovery mode supports the following host services and applications:
-
-.. list-table::
-   :width: 100%
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Service
-     - Receiver
-
-   * - MySQL
-     - MySQL receiver. See :ref:`mysql-receiver`.
-
-   * - PostgreSQL
-     - PostgreSQL receiver. See :ref:`postgresql-receiver`.
-
-   * - OracleDB
-     - Oracle DB receiver. See :ref:`oracledb`.
-
-   * - NGINX
-     - Smart Agent with collectd/nginx monitor type. See :ref:`nginx`.
-
-   * - Redis
-     - Redis receiver. See :ref:`redis-receiver`.
-
-Discovery mode is available for the following platforms:
-
-- Linux
-- Kubernetes
 
 Discover active metric sources
 =========================================
@@ -83,7 +33,7 @@ The ``--dry-run`` option ensures that the resulting configuration isn't applied 
    and `SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_postgresql_CONFIG_params_x3a__x3a_password="<password>"`
    environment variables.
 
-When discovery mode can't access a discovered service to extract metric data, it provides instructions and the original log error message. In the example, discovery mode can't authenticate to the discovered PostgreSQL server due to missing or incorrect credentials, which you can provide through custom discovery properties. See :ref:`custom-discovery-props`.
+When automatic discovery can't access a discovered service to extract metric data, it provides instructions and the original log error message. In the example, discovery mode can't authenticate to the discovered PostgreSQL server due to missing or incorrect credentials, which you can provide through custom discovery properties. See :ref:`custom-discovery-props`.
 
 .. note:: The Linux installation script of the Collector supports the ``--discovery`` option. When turning on discovery mode through the installation script, the resulting configuration is applied directly to the ``metrics`` pipeline. For example:
 
@@ -91,63 +41,6 @@ When discovery mode can't access a discovered service to extract metric data, it
 
       curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
       sudo sh /tmp/splunk-otel-collector.sh --realm <realm> – <token> --mode agent --discovery
-
-.. _discovery-mode-k8s:
-
-Discovery mode in Kubernetes
-=================================================
-
-You can configure the DaemonSet from the Splunk Distribution of OpenTelemetry Collector for Kubernetes to run in discovery mode. Edit the properties to add required credentials or service-specific information.
-
-The following example shows how to activate discovery mode in the Helm chart and adds authentication properties for PostgreSQL service discovery:
-
-.. code-block:: yaml
-
-   agent:
-
-     #...
-
-     discovery:
-       enabled: true # Turned off by default
-       properties:
-         extensions:
-           k8s_observer:
-             config:
-               auth_type: serviceAccount  # Default auth_type value
-         receivers:
-           postgres:
-             config:
-               # Environment variables populated by secret data
-               username: '${env:POSTGRES_USER}'
-               password: '${env:POSTGRES_PASSWORD}'
-               tls:
-                 insecure: true
-
-   # ...
-
-   extraEnvs:
-      # Environment variables using a manually created secret
-      - name: POSTGRES_USER
-        valueFrom:
-          secretKeyRef:
-            name: postgres-monitoring
-            key: username
-      - name: POSTGRES_PASSWORD
-        valueFrom:
-          secretKeyRef:
-            name: postgres-monitoring
-            key: password
-
-To check discovery progress and statement evaluations, see the agent startup logs or use kubectl. For example:
-
-.. code-block:: shell
-
-   $ kubectl -n monitoring logs splunk-otel-collector-agent | grep -i disco
-   Discovering for next 10s...
-   Successfully discovered "postgresql" using "k8s_observer" endpoint "k8s_observer/e8a10f52-4f2a-468c-be7b-7f3c673b1c8e/(5432)".
-   Discovery complete.
-
-.. note:: By default, the ``docker_observer`` and ``host_observer`` extensions are turned off for discovery in the Helm chart.
 
 .. _custom-discovery-props:
 
@@ -250,6 +143,7 @@ To define a custom directory for discovery settings, use the ``--config-dir`` op
 
     otelcol --discovery --config-dir <custom_path>
 
+
 Usage example
 ======================
 
@@ -304,4 +198,3 @@ Troubleshooting
 ======================
 
 .. include:: /_includes/troubleshooting-components.rst
-
