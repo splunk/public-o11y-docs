@@ -269,6 +269,8 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
       {
         "Effect": "Allow",
         "Action": [
+          "airflow:ListEnvironments",
+          "airflow:GetEnvironment",
           "apigateway:GET",
           "autoscaling:DescribeAutoScalingGroups",
           "cloudformation:ListResources",
@@ -309,6 +311,8 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
           "elasticmapreduce:ListClusters",
           "es:DescribeElasticsearchDomain",
           "es:ListDomainNames",
+          "kafka:DescribeClusterV2",
+          "kafka:ListClustersV2",
           "kinesis:DescribeStream",
           "kinesis:ListShards",
           "kinesis:ListStreams",
