@@ -15,7 +15,7 @@ You can access the service view for a specific service in several places.
 
 You can search for the service using the search in the top toolbar.
 
-..  image:: /_images/apm/spans-traces/service-view-global-search.png
+..  image:: /_images/apm/spans-traces/service-view-global-search.gif
     :width: 95%
     :alt: Animation showing a user searching for the checkoutservice and selecting the service result. 
 
@@ -37,30 +37,25 @@ Service metrics
 
 Use the following metrics in the :guilabel:`Service metrics` section to monitor the health of your service. Collapse sub-sections that are not relevant to you to customize your service view.
 
-..  image:: /_images/apm/spans-traces/service-centric-view-overview.png
+..  image:: /_images/apm/spans-traces/service-view-service-metrics.gif
     :width: 95%
-    :alt: This screenshot shows the service metrics for a service in the service view. 
+    :alt: This animation shows the service metrics for a service in the service view. The user select a chart to view example traces.
 
-* Availability SLI - The availablity service-level indicator (SLI) shows the percentage of time your service was available in the last 30 days. The chart shows successful and unsuccessful requests.
-* Dependency map - The dependency map shows the immediate upstream and downstream dependencies for the service you are viewing. Select :guilabel:`View full service map` to go to the service map.
-* Request rate - The request rate chart shows streaming request data for the service. If you have detectors for the service request rate configured, triggered alerts display below the chart. Select the chart to view example traces. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* Requests latency distribution - The request latency distribution chart shows p50, p90, and p99 latency data for the service. If you have detectors for the service latency configured, triggered alerts display below the chart. Select the chart to view example traces. The blue dot on the chart indicates the data is streaming, that is, you don't need to refresh to see new data.
-* Error rate - The error rate chart shows streaming error data for the service. If you have detectors for the service error rate configured, triggered alerts display below the chart. Select the chart to view example traces. The blue dot on the chart indicates the data is streaming. You don't need to refresh to see new data.
-* Dependency time - The dependency time chart shows the latency for each of the downstream systems. Select the chart to see details about each system category. Systems are categorized as follows:
-   *  Internal - instrumented services
-   *  External - uninstrumented, inferrred services
+* Availability SLI - The availability service-level indicator (SLI) shows the percentage of time your service was available in the last 30 days. The chart shows successful and unsuccessful requests.
+* Service map - The service map shows the immediate upstream and downstream dependencies for the service you are viewing. Hover over the chart and select :guilabel:`View full service map` to go to the service map.
+* Service requests - The service requests chart shows streaming request data for the service. If you have detectors for the service requests configured, triggered alerts display below the chart. Select the chart to view example traces. Select the alert icon to view alert details.
+* Service latency - The service latency chart shows p50, p90, and p99 latency data for the service. If you have detectors for the service latency configured, triggered alerts display below the chart. Select the chart to view example traces. Select the alert icon to view alert details.
+* Service error - The service error chart shows streaming error data for the service. If you have detectors for the service error rate configured, triggered alerts display below the chart. Select the chart to view example traces. Select the alert icon to view alert details.
+* Dependency latency by type - The dependency latency by type chart shows the latency for each of the downstream systems. Select the chart to see details about each system category. Systems are categorized as follows:
+   *  Services - instrumented services
    *  Databases
-   *  Queues
-
-
-..  image:: /_images/apm/spans-traces/service-centric-view-endpoints.png
-    :width: 95%
-    :alt: This screenshot shows the top endpoints for a service in the service-centric view. 
+   *  Inferred services - uninstrumented, inferred services
+   *  Pub/sub queues
 
 Logs
 ------------
 
-Select :guilabel:`Configure Service View` to add a query for the logs you want to display for your service. See :ref:`configure-service-view` for steps.
+Select :guilabel:`Configure service view` to add a query for the logs you want to display for your service. See :ref:`configure-service-view` for steps.
 
 ..  image:: /_images/apm/spans-traces/service-centric-view-logs.png
     :width: 95%
@@ -111,15 +106,15 @@ View endpoints for your service
 
 * Top endpoints- Top endpoints shows up to 5 endpoints for the service. Use the search field to search for specific endpoints. Use the sort drop-down list to change how endpoints are sorted. Select :guilabel:`Explore in APM` to navigate to Endpoint Performance.
 
-Go to code profiling view for your service
+Go to the code profiling view for your service
 =====================================================
 
-Select :guilabel:`Code profiling` to navigate to the code profiling view of AlwaysOn Profiling filtered for your service. See :ref:`profiling-intro` to learn more about AlwaysOn Profiling.
+Select :guilabel:`Code profiling` to go to the  code profiling view of AlwaysOn Profiling filtered for your service. See :ref:`profiling-intro` to learn more about AlwaysOn Profiling.
 
 Go to the memory profiling view for your service
 =======================================================
 
-Select :guilabel:`Memory profiling` to navigate to memory profiling view of AlwaysOn Profiling filtered for your service. See :ref:`profiling-intro` to learn more about AlwaysOn Profiling. 
+Select :guilabel:`Memory profiling` to go to the memory profiling view of AlwaysOn Profiling filtered for your service. See :ref:`profiling-intro` to learn more about AlwaysOn Profiling. 
 
 .. _configure-service-view:
 
