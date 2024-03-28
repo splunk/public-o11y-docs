@@ -285,6 +285,8 @@ Use a ratio of 1 CPU to 2 GB of memory. By default, the Collector is configured 
 
 Configure ``ballastextension`` and the ``memory_limiter`` processor on every Collector instance, as shown in the following examples:
 
+TBC
+
 .. code-block:: yaml
 
 

@@ -11,10 +11,36 @@ Apply the following changes to the Collector configuration files for specific ve
 
   For every configuration update use the default agent config as a reference.
 
+.. _collector-update-memory-ballast:
+
+From 0.96.1 to 0.97.0
+------------------------------------
+
+``memory_ballast`` is no longer effective. You can now control garbage collection with a soft memory limit using the ``SPLUNK_MEMORY_TOTAL_MIB`` env var, which is set to 90% of the total memory by default. For more information, see :ref:`collector-env-var`. 
+
+Follow these steps to ensure your Collector instances work correctly:
+
+* If you haven't customized ``memory_ballast``, remove it from the configuration.
+
+* If you have customized ``memory_ballast`` using ``SPLUNK_BALLAST_SIZE_MIB`` (or ``extensions::memory_ballast::size_mib config``), remove the ``memory_ballast`` extension and use the ``GOMEMLIMIT`` environment variable to set a custom soft memory limit:
+
+  * To increase frequency of garbage collection set ``GOMEMLIMIT`` to a higher value than the default 90% of total memory.
+
+  * To decrease frequency of garbage collection set ``GOMEMLIMIT`` to a lower value than the default 90% of total memory.
+
+  * For more information, see :new-page:`Go environment variables <https://pkg.go.dev/runtime>`.
+
+From 0.68.0 to 0.69.0
+------------------------------------
+
+The ``gke`` and ``gce`` resource detectors in the ``resourcedetection`` processor have been replaced with the ``gcp`` resource detector. If you have ``gke`` and ``gce`` detectors configured in the ``resourcedetection`` processor, update your configuration accordingly.
+
+For more information, see :ref:`resourcedetection-processor`.
+
 From 0.41.0 to 0.42.0
 ------------------------------------
 
-The Splunk OpenTelemetry Collector used to evaluate user configuration twice and this required escaping of each ``$`` symbol with ``$$`` to prevent unwanted environment variable expansion. The issue was fixed in the 0.42.0 version. Any occurrences of ``$$`` in your configuration need to be replaced with ``$``.
+The Splunk Distribution of the OpenTelemetry Collector used to evaluate user configuration twice and this required escaping of each ``$`` symbol with ``$$`` to prevent unwanted environment variable expansion. The issue was fixed in the 0.42.0 version. Any occurrences of ``$$`` in your configuration need to be replaced with ``$``.
 
 From 0.35.0 to 0.36.0
 ------------------------------------

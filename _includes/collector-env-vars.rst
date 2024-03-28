@@ -14,8 +14,8 @@ Splunk-specific environment variables are listed on the table below:
     *   - ``SPLUNK_API_URL`` 
         - The Splunk API URL. For example, https://api.us0.signalfx.com
         - Yes
-    *   - ``SPLUNK_BALLAST_SIZE_MIB`` 
-        - Use it to set the ballast size for the Collector explicitly instead of the value calculated from ``SPLUNK_MEMORY_LIMIT_MIB``. Set it to 1/3 to 1/2 of the configured memory
+    *   - ``SPLUNK_BALLAST_SIZE_MIB`` (deprecated)
+        - ``memory_ballast`` is deprecated. If you're using this variable, see :ref:`how to update your configuration <collector-update-memory-ballast>`.
         - No
     *   - ``SPLUNK_BUNDLE_DIR`` 
         - The path to the Smart Agent bundle. For example, ``/usr/lib/splunk-otel-collector/agent-bundle``
