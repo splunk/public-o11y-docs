@@ -80,7 +80,7 @@ Follow these steps to create a new Microsoft Entra ID application:
 Set your subscription permissions:
 
   #. In the Azure portal, look for your :guilabel:`Subscriptions`.
-  #. Find a subscription you want to monitor, and navigate to :menuselection:`Access control (IAM)`
+  #. Find a subscription you want to monitor, and navigate to :menuselection:`Access control (IAM)`.
   #. Select :menuselection:`Add`, then select :menuselection:`Add role assignment`.
   #. On the :guilabel:`Add role assignment page`, perform the following steps:
       * From the :guilabel:`Role` drop-down list, select the :menuselection:`Monitoring Reader` role.
