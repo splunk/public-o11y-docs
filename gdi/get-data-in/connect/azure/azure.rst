@@ -15,7 +15,7 @@ Connect to Azure and send data to Splunk Observability Cloud
 
 Splunk Observability Cloud provides an integration with Microsoft Azure, lets you travel through Azure entities, and includes built-in dashboards to help you monitor Azure services. 
 
-See the list of :ref:`available Azure services <azure-integrations>`.
+For a list of supported Azure services, see :ref:`azure-integrations`.
 
 .. note:: 
 
@@ -120,13 +120,19 @@ To create the integration, enter the following information:
   
   * :guilabel:`Azure` for all other Azure connections.
   
-* Select the services you want to monitor. By default, all services are selected. Use the pop-up menu to narrow down to specific services.
+* Select the services you want to monitor. By default, all services supported by Splunk Observability Cloud are selected. Use the pop-up menu to narrow down to specific services. For a list of supported Azure services, see :ref:`azure-integrations`.
 
 * Select the subscriptions you want to monitor.
   
 * Optional: Use the :guilabel:`Add Tag` button to create a tag if you want to monitor only tagged data sources, filling out the ``tag name`` and ``tag value`` fields separately to create a tag pair.
 
-* Add any additional services.
+* Add any additional Azure resources or services you want to monitor that are not fully supported by Splunk Observability Cloud. If you add the same resource type to both services and additional services, Splunk Observability Cloud ignores the duplication.
+
+  * Any resource type you specify as an additional service must meet the following criteria:
+
+    * The resource is an Azure generic resource. For resource types that have hierarchical structure, only the root resource type is a generic resource. For example, a Storage Account type can have a File Service type, and a File Service type can have a File Storage type. In this case, only Storage Account is a generic resource.
+
+    * The resource stores its metrics in Azure Monitor. To learn more about Azure Monitor, refer to the Microsoft Azure documentation.
 
 * Select the rate, in seconds, at which you want Splunk Observability Cloud to poll Azure for metric data, with 60 seconds (default) as the minimum unit, and 600 seconds (10 minutes) as the maximum unit. 
 
