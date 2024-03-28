@@ -12,3 +12,4 @@ Automatic discovery and configuration for Linux
 
     Language runtimes <linux/linux-backend>
     Third-party applications <linux/linux-third-party>
+    Advanced customization <linux/linux-advanced-config>

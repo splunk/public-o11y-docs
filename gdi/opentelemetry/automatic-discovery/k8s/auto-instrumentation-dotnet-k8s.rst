@@ -1,7 +1,7 @@
 .. _auto-instrumentation-dotnet-k8s:
 
 ************************************************************************************
-Zero Configuration Automatic Instrumentation for Kubernetes .NET applications
+Automatic discovery for Kubernetes .NET applications
 ************************************************************************************
 
 .. meta::

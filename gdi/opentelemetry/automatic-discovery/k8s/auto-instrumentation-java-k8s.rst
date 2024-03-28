@@ -1,15 +1,15 @@
 .. _auto-instrumentation-java-k8s:
 
 ************************************************************************************
-Zero Configuration Automatic Instrumentation for Kubernetes Java applications
+Automatic discovery for Kubernetes Java applications
 ************************************************************************************
 
 .. meta::
    :description: Use the Collector with the upstream Kubernetes Operator for automatic instrumentation to easily add observability code to your application, enabling it to produce telemetry data.
 
-Use the OTel Collector with the Operator in a Kubernetes environment to automatically instrument your Java applications. By using zero configuration automatic instrumentation, you can quickly send Java application data to Splunk APM without configuring the OpenTelemetry Collector or changing your application code.
+Use the OTel Collector with the Operator in a Kubernetes environment to automatically instrument your Java applications. By using automatic discovery, you can quickly send Java application data to Splunk APM without configuring the OpenTelemetry Collector or changing your application code.
 
-To install zero configuration automatic instrumentation for Java, complete the following steps:
+To install automatic discovery for Java, complete the following steps:
 
 #. :ref:`deploy-helm-chart-java-k8s`
 #. :ref:`java-k8s-verify-resources`
@@ -19,7 +19,7 @@ To install zero configuration automatic instrumentation for Java, complete the f
 Requirements
 ================================================================
 
-Zero Config Auto Instrumentation for Java requires the following components: 
+Automatic discovery for Java requires the following components: 
 
 * Java 8 or higher and supported libraries. See :ref:`java-otel-requirements` for more information.
 * Your Splunk Observability Cloud realm and access token with ingest scope. For more information, see :ref:`admin-org-tokens`.

@@ -7,6 +7,19 @@ Automatic discovery and configuration for third-party applications in Kubernetes
 .. meta:: 
     :description: Learn how to use automatic discovery and configuration to send data from your third-party applications in Kubernetes to Splunk Observability Cloud.
 
+.. intro paragraph
+
+How automatic discovery works
+================================================
+
+When you run the Collector with automatic discovery, it tests built-in configurations for supported metric receivers against endpoints discovered on your platform by observer extensions. This happens before starting the Collector service.
+
+For any dynamically instantiated receiver that retrieves metrics matching the success criteria, the Collector translates the discovery configuration to a receiver creator instance with the known working rules, as well as the required observer extension. See :ref:`receiver-creator-receiver` for more information. At the same time, the Collector adds the configuration to the ``metrics`` pipeline at runtime.
+
+For any receiver that can establish a connection with a service, but not receive the expected metrics, discovery mode suggests which properties to set, or what extensions or settings to configure on the service to successfully retrieve telemetry. You can define any target-specific configuration values that are required, for example authentication information, using discovery properties to tune the discovery process.
+
+When running in Kubernetes, discovery mode tests bundled metric receiver configurations against the endpoints discovered by the ``k8s_observer`` observer. Successfully discovered instances are then incorporated in the existing service configuration.
+
 .. _discovery-mode-k8s:
 
 Deploy the Collector with automatic discovery

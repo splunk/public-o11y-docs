@@ -1,15 +1,15 @@
 .. _auto-instrumentation-nodejs-k8s:
 
 ************************************************************************************
-Zero Configuration Automatic Instrumentation for Kubernetes Node.js applications
+Automatic discovery for Kubernetes Node.js applications
 ************************************************************************************
 
 .. meta::
    :description: Use the Collector with the upstream Kubernetes Operator for automatic instrumentation to easily add observability code to your application, enabling it to produce telemetry data.
 
-Use the OTel Collector with the Operator in a Kubernetes environment to automatically instrument your Node.js applications. By using zero configuration automatic instrumentation, you can quickly send Node.js application data to Splunk APM without configuring the OpenTelemetry Collector or changing your application code.
+Use the OTel Collector with the Operator in a Kubernetes environment to automatically instrument your Node.js applications. By using automatic discovery, you can quickly send Node.js application data to Splunk APM without configuring the OpenTelemetry Collector or changing your application code.
 
-To install zero configuration automatic instrumentation for Node.js, complete the following steps:
+To install automatic discovery for Node.js, complete the following steps:
 
 #. :ref:`deploy-helm-chart-nodejs-k8s`
 #. :ref:`nodejs-k8s-verify-resources`
@@ -19,7 +19,7 @@ To install zero configuration automatic instrumentation for Node.js, complete th
 Requirements
 ================================================================
 
-Zero Config Auto Instrumentation for Node.js requires the following components: 
+Automatic discovery for Node.js requires the following components: 
 
 * Node.js version 14 or higher and supported libraries. See :ref:`nodejs-otel-requirements` for more information.
 * Your Splunk Observability Cloud realm and access token with ingest scope. For more information, see :ref:`admin-org-tokens`.

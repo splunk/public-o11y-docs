@@ -7,6 +7,13 @@ Discover and configure metrics sources automatically
 .. meta::
       :description: Use the discovery mode of the Splunk Distribution of OpenTelemetry Collector to detect metric sources and collect metrics automatically.
 
+.. toctree::
+   :hidden:
+
+   Kubernetes <automatic-discovery/discovery-kubernetes>
+   Linux <automatic-discovery/discovery-linux>
+   Windows <automatic-discovery/discovery-windows>
+
 Use the automatic discovery mode of the Splunk Distribution of OpenTelemetry Collector to detect metric sources and create
 a configuration based on the results.
 
@@ -16,31 +23,11 @@ The main advantage of using automatic discovery is that you don't need to manual
 
 .. note:: Update the Collector to version 0.94.0 and higher to activate automatic service discovery.
 
-.. toctree::
-   :hidden:
-
-   Kubernetes <automatic-discovery/discovery-kubernetes>
-   Linux <automatic-discovery/discovery-linux>
-   Windows <automatic-discovery/discovery-windows>
-   Advanced configuration <automatic-discovery/advanced-config-auto-instrumentation>
-
-.. raw:: html
-  
-  <h2>How automatic discovery works</h2>
-
-When you run the Collector with automatic discvoery, it tests built-in configurations for supported metric receivers against endpoints discovered on your platform by observer extensions. This happens before starting the Collector service.
-
-For any dynamically instantiated receiver that retrieves metrics matching the success criteria, the Collector translates the discovery configuration to a receiver creator instance with the known working rules, as well as the required observer extension. See :ref:`receiver-creator-receiver` for more information. At the same time, the Collector adds the configuration to the ``metrics`` pipeline at runtime.
-
-For any receiver that can establish a connection with a service, but not receive the expected metrics, discovery mode suggests which properties to set, or what extensions or settings to configure on the service to successfully retrieve telemetry. You can define any target-specific configuration values that are required, for example authentication information, using discovery properties to tune the discovery process.
-
-When running in Kubernetes, discovery mode tests bundled metric receiver configurations against the endpoints discovered by the ``k8s_observer`` observer. Successfully discovered instances are then incorporated in the existing service configuration.
-
 .. raw:: html
 
   <h2>Supported language runtimes</h2>
 
-The following table shows the supported platforms and language runtimes:
+The following table shows which language runtimes are supported on each platform:
 
 .. list-table::
    :header-rows: 1
