@@ -12,10 +12,10 @@ Memory Ballast extension (deprecated)
 
 .. include:: /_includes/collector-upgrade-memory-ballast.rst
 
-The Memory Ballast extension enables applications to configure memory ballast for processing.
-
 Get started
 ======================
+
+The Memory Ballast extension enables applications to configure memory ballast for processing.
 
 Follow these steps to configure and activate the component:
 
