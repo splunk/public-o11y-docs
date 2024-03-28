@@ -55,7 +55,7 @@ You can view span links on spans in the trace waterfall view. Select the link to
 
 .. image:: /_images/apm/spans-traces/span-search-span-links.gif
   :width: 95%
-  :alt: User selects a span link select a connected span to navigate to.
+  :alt: User selects a span link and selects a connected span to navigate to.
 
 View RUM session details
 ===========================
