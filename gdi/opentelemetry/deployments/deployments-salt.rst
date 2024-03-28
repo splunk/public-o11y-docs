@@ -94,7 +94,7 @@ For Linux, the formula accepts the attributes described in the following table:
      - Total memory in MIB to allocate to the Collector; automatically calculates the ballast size. The ``SPLUNK_MEMORY_TOTAL_MIB`` environment variable is set to this value for the Collector service. 
      - ``512``
    * - ``splunk_ballast_size_mib``
-     - ``memory_ballast`` is deprecated. If you're using this extension, see :ref:`how to update your configuration <collector-update-memory-ballast>`
+     - ``memory_ballast`` is deprecated. If you're using this extension, see :ref:`how to update your configuration <collector-upgrade-memory-ballast>`
      - 1/3 of the ``splunk_memory_total_mib`` total
    * - ``splunk_otel_collector_config_source``
      - The source path to a Collector configuration YAML file on your control host that is uploaded and set in place of ``splunk_otel_collector_config`` in remote hosts. To use a custom Collector configuration, add the configuration file in the Salt dir. For example, ``salt://templates/agent_config.yaml``.

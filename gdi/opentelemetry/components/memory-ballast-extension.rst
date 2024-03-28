@@ -1,4 +1,5 @@
 .. _memory-ballast-extension:
+.. _collector-upgrade-memory-ballast:
 
 ********************************************************
 Memory Ballast extension (deprecated)
@@ -7,7 +8,9 @@ Memory Ballast extension (deprecated)
 .. meta::
       :description: Use the Memory Ballast extension to allow your applications to configure memory ballast for processing.
 
-.. caution:: ``memory_ballast`` is deprecated. If you're using this extension, see :ref:`how to update your configuration <collector-update-memory-ballast>`.
+.. caution:: The ``memory_ballast`` extension is deprecated and has been removed starting in Collector version 0.97.0. If you're using this extension, read on to learn how to update your configuration. 
+
+.. include:: /_includes/collector-upgrade-memory-ballast.rst
 
 The Memory Ballast extension enables applications to configure memory ballast for processing.
 
