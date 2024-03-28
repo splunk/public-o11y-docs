@@ -321,7 +321,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`kubernetes-observer-extension` (``k8s_observer``)
      - Uses the Kubernetes API to discover pods running on the local node. See :ref:`receiver-creator-receiver` for more information.
    * - :ref:`memory-ballast-extension` (``memory_ballast``)
-     - Configures the memory ballast for the Collector process, either as a size in megabytes or as a size expressed as a percentage of the total memory. Sufficient ballast enhances the stability of Collector deployments.
+     - ``memory_ballast`` is deprecated. If you're using this extension, see :ref:`how to update your configuration <collector-update-memory-ballast>`
    * - :ref:`pprof-extension` (``pprof``)
      - Activates the golang ``net/http/pprof`` endpoint, which is used to collect performance profiles and investigate issues with a service.
    * - :ref:`smartagent-extension` (``smartagent``) 
