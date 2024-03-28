@@ -120,6 +120,8 @@ For backward compatibility with the SignalFx Python Tracing Library, use the b3m
 Python settings for AlwaysOn Profiling
 ====================================================
 
+.. note:: Only CPU profiling is supported.
+
 The following settings control the AlwaysOn Profiling feature for the Python agent:
 
 .. list-table::
