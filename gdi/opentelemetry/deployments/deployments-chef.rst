@@ -97,7 +97,7 @@ For Linux, the cookbook accepts the attributes described in the following table:
      - Total memory in MIB to allocate to the Collector; automatically calculates the ballast size. The ``SPLUNK_MEMORY_TOTAL_MIB`` environment variable is set to this value for the Collector service. 
      - ``512``
    * - ``splunk_ballast_size_mib``
-     - ``memory_ballast`` is deprecated. If you're using this extension, see :ref:`how to update your configuration <collector-update-memory-ballast>`
+     - ``memory_ballast`` is deprecated. If you're using this extension, see :ref:`how to update your configuration <collector-upgrade-memory-ballast>`
      - ``"``
    * - ``collector_config_source``
      - The source path to the Collector configuration YAML file. This file is copied to the ``$collector_config_dest`` path on the node. See the :new-page:`source attribute <https://puppet.com/docs/puppet/latest/types/file.html#file-attribute-source>` of the file resource for the supported value types. The default source file is provided by the Collector package.
