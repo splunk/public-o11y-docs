@@ -49,7 +49,7 @@ View connected spans and traces using span links
 Span links connect spans that don't have a direct parent-child relationship but are otherwise causally related. Span links help you to manage operations in distributed systems, where operations don't follow linear execution patterns. Use span links to preserve span context when producer spans create jobs that are asynchronously processed later. These might be remote jobs that are added to a job queue or local jobs handled by an event listener. In this case, span links connect to the consumer spans that represent the processing of the jobs created by the producer that might start long after the producer span has ended.
 
 * See :new-page:`https://opentelemetry.io/docs/concepts/signals/traces/#span-links` to learn about the OpenTelemetry concept.
-* See :new-page:`https://opentelemetry.io/docs/languages/java/instrumentation/#create-spans-with-links` for instrumentation details.
+* See :new-page:`https://opentelemetry.io/docs/languages/java/instrumentation/#create-spans-with-links` for instrumentation details, including instructions for how to create span links.
 
 You can view span links on spans in the trace waterfall view. Select the link to see the correlated spans and traces then select the span or the trace to navigate to the span.
 
