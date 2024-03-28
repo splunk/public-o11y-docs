@@ -57,12 +57,6 @@ The following table specifies the permissions required for GCP integrations:
    *  - :strong:`Permission`
       - :strong:`Required?`
 
-   *  - ``monitoring.metricDescriptors.list``
-      - Yes
-
-   *  - ``monitoring.timeSeries.list``
-      - Yes
-
    *  - ``compute.instances.list``
       - Yes, if the Compute Engine service is activated
 
