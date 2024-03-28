@@ -17,7 +17,7 @@ For information about how to access global data links, see :ref:`apm-use-data-li
 Prerequisite
 ================
 
-To create global data links, tou must have the admin role. 
+To create global data links, you must have the admin role. 
 
 .. _apm-data-links-parameters:
 
