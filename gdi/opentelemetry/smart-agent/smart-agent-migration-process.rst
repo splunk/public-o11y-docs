@@ -283,19 +283,9 @@ If a Collector handles both trace and metric data, then both must be accounted f
 
 Use a ratio of 1 CPU to 2 GB of memory. By default, the Collector is configured to use 512 MB of memory.
 
-Configure ``ballastextension`` and the ``memory_limiter`` processor on every Collector instance, as shown in the following examples:
-
-TBC
+Configure the ``memory_limiter`` processor on every Collector instance, as shown in the following examples:
 
 .. code-block:: yaml
-
-
-   extensions:
-      memory_ballast:
-         size_mib:
-
-.. code-block:: yaml
-
 
    processors:
       memory_limiter:
@@ -304,7 +294,8 @@ TBC
          spike_limit_mib:
 
 .. note::
-   The ballast should be configured to be 1/3 to 1/2 of the memory allocated to the Collector. The ``memory_limiter`` processor should be the first processor defined in the pipeline (immediately after the receivers).
+   
+   Define the ``memory_limiter`` processor as the first processor in the pipeline, immediately after the receivers.
 
 .. _deploy-non-prod-updated-config:
 
