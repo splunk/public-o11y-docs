@@ -101,7 +101,7 @@ The following programming languages have instrumentation available:
    * - Python (in beta)
      - Splunk Distribution of OpenTelemetry Python version 1.15 or higher
 
-      Only CPU profiling is supported at the moment.
+       Only CPU profiling is supported.
      - * :ref:`instrument-python-applications`
        * :ref:`profiling-configuration-python`
 
