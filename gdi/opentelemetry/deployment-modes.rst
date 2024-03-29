@@ -182,7 +182,8 @@ The following example shows how to configure the Collector in host monitoring (a
       # Traces
       otlp:
          endpoint: "${SPLUNK_GATEWAY_URL}:4317"
-         insecure: true
+         tls:
+            insecure: true
       # Metrics, events, and APM correlation calls
       signalfx:
          access_token: "${SPLUNK_ACCESS_TOKEN}"
