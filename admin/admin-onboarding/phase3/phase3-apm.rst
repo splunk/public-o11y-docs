@@ -5,7 +5,7 @@
 Expansion and optimization part 2: Splunk Application Performance Monitoring
 *************************************************************************************
 
-To expand and optimize Splunk Infrastructure Monitoring, you must do the following:
+To expand and optimize Splunk Infrastructure Monitoring, do the following:
 
 1. :ref:`optimize-data`
 
@@ -18,7 +18,7 @@ To expand and optimize Splunk Infrastructure Monitoring, you must do the followi
 
 .. _optimize-data:
 
-Optimize data usage; Analyze cardinality contribution of indexed span tags and processes
+Optimize data usage
 ================================================================================================================
 Indexed tags are used to produce Troubleshooting MetricSets (TMS) and give visual insights through breakdowns for nodes and edges. Utilize Tag Spotlight. Filter SLIs to specific tag values. Filter the service map. Indexed tags can include endpoint or operation. Indexed tags automatically generate SLIs and breakdowns. It is important to understand the cardinality contribution when indexing a span tag, so understanding how to manage these TMS cardinality is essential.
 

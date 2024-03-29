@@ -170,8 +170,7 @@ To learn more, see the following:
 
 Identify complex and customized use cases to further enhance value and return on investment
 ================================================================================================================
-During the expansion and optimization phase, start identifying more complex use cases relevant to each of the teams' requirements. 
-Some example use case scenarios are the following: 
+During the expansion and optimization phase, start identifying the teams' requirements and developing a plan to address the requirements. Some examples of things teams might need are the following: 
 
 - How to handle huge volumes of infrastructure data
 
