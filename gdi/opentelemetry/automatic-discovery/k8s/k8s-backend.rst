@@ -27,12 +27,12 @@ The Collector and Kubernetes operator listen for requests to your application an
 Get started
 ==============================
 
-To install automatic discovery for Java, complete the following steps:
+To install automatic discovery for Kubernetes, complete the following steps:
 
-#. :ref:`deploy-helm-chart-java-k8s`
-#. :ref:`java-k8s-verify-resources`
-#. :ref:`k8s-java-set-annotations`
-#. :ref:`java-k8s-view-results`
+#. :ref:`k8s-auto-discovery-deploy-helm-chart`
+#. :ref:`k8s-auto-discovery-verify-resources`
+#. :ref:`k8s-auto-discovery-set-annotations`
+#. :ref:`k8s-auto-discovery-view-results`
 
 .. _k8s-backend-requirements:
 
@@ -62,7 +62,7 @@ Make sure you've also installed the components specific to your language runtime
 
         Node.js version 14 or higher and supported libraries. See :ref:`nodejs-otel-requirements` for more information.
 
-.. _deploy-helm-chart-java-k8s:
+.. _k8s-auto-discovery-deploy-helm-chart:
 
 Deploy the Helm Chart with the Kubernetes Operator
 =================================================================
@@ -84,9 +84,9 @@ Populate values.yaml with the following fields and values:
   operator:
     enabled: true
 
-You might need to populate the file with additional values depending on your environment. See :ref:`java-add-certificates` and :ref:`zeroconfig-java-traces` for more information.
+You might need to populate the file with additional values depending on your environment. See :ref:`k8s-auto-discovery-add-certificates-add-certificates` and :ref:`k8s-auto-discovery-setup-traces` for more information.
 
-.. _java-add-certificates:
+.. _k8s-auto-discovery-add-certificates:
 
 Add certificates
 ----------------------------------------
@@ -114,7 +114,7 @@ If a certification manager isn't available in the cluster, then you'll need to a
   operator:
     enabled: true
 
-.. _zeroconfig-java-traces:
+.. _k8s-auto-discovery-setup-traces:
 
 Set the deployment environment
 ------------------------------------------------
@@ -210,6 +210,8 @@ The following examples show how to set the attribute using each method:
         
           kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=environment=prd
 
+.. _k8s-auto-discovery-helmchart-name:
+
 Deploy the Helm Chart
 ---------------------------------
 
@@ -219,7 +221,15 @@ After configuring values.yaml, use the following command to deploy the Helm Char
 
    helm install splunk-otel-collector -f ./values.yaml splunk-otel-collector-chart/splunk-otel-collector
 
-.. _java-k8s-verify-resources:
+You can change the name of the Collector instance and the namespace in which you install the Collector. 
+
+For example, to change the name of the Collector instance to ``otel-collector`` and install it in the ``o11y`` namespace, use the following command:
+
+.. code-block:: bash
+
+   helm install otel-collector -f ./values.yaml splunk-otel-collector-chart/splunk-otel-collector --namespace o11y
+
+.. _k8s-auto-discovery-verify-resources:
 
 Verify all the OpenTelemetry resources are deployed successfully
 ==========================================================================
@@ -240,16 +250,25 @@ Run the following commands to verify the resources are deployed correctly:
    # monitoring    splunk-otel-collector-k8s-cluster-receiver-856f5fbcf9-pqkwg     1/1     Running
    # monitoring    splunk-otel-collector-opentelemetry-operator-56c4ddb4db-zcjgh   2/2     Running
 
+
+The pods running in your namespace must include the following:
+
+.. code-block:: yaml
+
    kubectl get mutatingwebhookconfiguration.admissionregistration.k8s.io -n monitoring
    # NAME                                      WEBHOOKS   AGE
    # splunk-otel-collector-cert-manager-webhook              1          14m
    # splunk-otel-collector-opentelemetry-operator-mutation   3          14m
 
+The namespace must have a running instance of the OpenTelemetry Collector. The name of this Collector instance matches the name that you set in :ref:`k8s-auto-discovery-helmchart-name`.
+
+.. code-block:: yaml
+
    kubectl get otelinst -n <target_application_namespace>
    # NAME                          AGE   ENDPOINT
    # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
 
-.. _k8s-java-set-annotations:
+.. _k8s-auto-discovery-set-annotations:
 
 Set annotations to instrument applications
 ==============================================================
@@ -262,59 +281,207 @@ The annotation you set depends on the language runtime you're using. You can set
 
     .. tab:: Java
 
-        ``instrumentation.opentelemetry.io/inject-java``
+        Add the ``instrumentation.opentelemetry.io/inject-java`` annotation to the application object YAML.
+
+        For example, given the following deployment YAML:
+
+        .. code-block:: yaml
+
+            apiVersion: apps/v1
+            kind: Deployment
+            metadata:
+            name: my-java-app
+            namespace: monitoring
+            spec:
+            template:
+                spec:
+                containers:
+                - name: my-java-app
+                    image: my-java-app:latest
+
+        Activate auto instrumentation by adding ``instrumentation.opentelemetry.io/inject-java: "true"`` to the ``spec``:
+
+        .. code-block:: yaml
+            :emphasize-lines: 10
+
+            apiVersion: apps/v1
+            kind: Deployment
+            metadata:
+            name: my-java-app
+            namespace: monitoring
+            spec:
+            template:
+                metadata:
+                annotations:
+                    instrumentation.opentelemetry.io/inject-java: "true"
+                spec:
+                containers:
+                - name: my-java-app
+                    image: my-java-app:latest
     
     .. tab:: .NET
 
-        ``instrumentation.opentelemetry.io/inject-dotnet``
+        Add the ``instrumentation.opentelemetry.io/inject-dotnet`` annotation to the application object YAML.
 
-        
+        Depending on your environment, you'll need to add another annotation. See the following table for details:
+
+        .. list-table::
+            :header-rows: 1
+            :width: 100
+
+            * - RID
+                - Annotation 
+                - Notes
+            * - ``linux-x64``
+                - ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-x64"``
+                - This is the default value and you can omit it.
+            * - ``linux-musl-x64``
+                - ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-musl-x64"``
+                - Use this annotation for applications running in environments based on the ``musl`` library.
+
+        .. tabs:: 
+
+            .. tab:: ``linux-x64``
+
+                Given the following deployment YAML on a ``linux-x64`` runtime environment:
+
+                .. code-block:: yaml
+
+                    apiVersion: apps/v1
+                    kind: Deployment
+                    metadata:
+                    name: my-dotnet-app
+                    namespace: monitoring
+                    spec:
+                    template:
+                        spec:
+                        containers:
+                        - name: my-dotnet-app
+                            image: my-dotnet-app:latest
+
+                Activate auto instrumentation by adding ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-x64"`` and ``instrumentation.opentelemetry.io/inject-dotnet: "monitoring/splunk-otel-collector"`` to the ``spec``:
+
+                .. code-block:: yaml
+                    :emphasize-lines: 10,11
+
+                    apiVersion: apps/v1
+                    kind: Deployment
+                    metadata:
+                    name: my-dotnet-app
+                    namespace: monitoring
+                    spec:
+                    template:
+                        metadata:
+                        annotations:
+                            instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-x64"
+                            instrumentation.opentelemetry.io/inject-dotnet: "monitoring/splunk-otel-collector"
+                        spec:
+                            containers:
+                            - name: my-dotnet-app
+                            image: my-dotnet-app:latest
+            
+            .. tab:: ``linux-musl-x64``
+
+                Given the following deployment YAML on a ``linux-x64`` runtime environment:
+
+                .. code-block:: yaml
+
+                    apiVersion: apps/v1
+                    kind: Deployment
+                    metadata:
+                    name: my-dotnet-app
+                    namespace: monitoring
+                    spec:
+                    template:
+                        spec:
+                        containers:
+                        - name: my-dotnet-app
+                            image: my-dotnet-app:latest
+
+                Activate auto instrumentation by adding ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-musl-x64"`` and ``instrumentation.opentelemetry.io/inject-dotnet: "monitoring/splunk-otel-collector"`` to the ``spec``:
+
+                .. code-block:: yaml
+                :emphasize-lines: 10,11
+
+                    apiVersion: apps/v1
+                    kind: Deployment
+                    metadata:
+                    name: my-dotnet-app
+                    namespace: monitoring
+                    spec:
+                    template:
+                        metadata:
+                        annotations:
+                            instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-musl-x64"
+                            instrumentation.opentelemetry.io/inject-dotnet: "monitoring/splunk-otel-collector"
+                        spec:
+                        containers:
+                        - name: my-dotnet-app
+                            image: my-dotnet-app:latest
 
     .. tab:: Node.js
 
-        ``instrumentation.opentelemetry.io/inject-nodejs``
+        Add the ``instrumentation.opentelemetry.io/inject-nodejs`` annotation to the application object YAML.
 
-For example, given the following deployment YAML:
+        For example, given the following deployment YAML:
 
-.. code-block:: yaml
+        .. code-block:: yaml
 
-    apiVersion: apps/v1
-    kind: Deployment
-    metadata:
-      name: my-java-app
-      namespace: monitoring
-    spec:
-      template:
-        spec:
-          containers:
-          - name: my-java-app
-            image: my-java-app:latest
+            apiVersion: apps/v1
+            kind: Deployment
+            metadata:
+            name: my-nodejs-app
+            namespace: monitoring
+            spec:
+            template:
+                spec:
+                containers:
+                - name: my-nodejs-app
+                    image: my-nodejs-app:latest
 
-Activate auto instrumentation by adding ``instrumentation.opentelemetry.io/inject-java: "true"`` to the ``spec``:
+        Activate auto instrumentation by adding ``instrumentation.opentelemetry.io/inject-nodejs: "true"`` to the ``spec``:
 
-.. code-block:: yaml
-    :emphasize-lines: 10
+        .. code-block:: yaml
+            :emphasize-lines: 10
 
-    apiVersion: apps/v1
-    kind: Deployment
-    metadata:
-      name: my-java-app
-      namespace: monitoring
-    spec:
-      template:
-        metadata:
-          annotations:
-            instrumentation.opentelemetry.io/inject-java: "true"
-        spec:
-          containers:
-          - name: my-java-app
-            image: my-java-app:latest
+            apiVersion: apps/v1
+            kind: Deployment
+            metadata:
+            name: my-nodejs-app
+            namespace: monitoring
+            spec:
+            template:
+                metadata:
+                annotations:
+                    instrumentation.opentelemetry.io/inject-nodejs: "true"
+                spec:
+                containers:
+                - name: my-nodejs-app
+                    image: my-nodejs-app:latest
 
-To deactivate automatic instrumentation, remove the annotation. The following command removes the annotation for automatic instrumentation, deactivating it:
+Applying annotations in a different namespace
+------------------------------------------------
+
+If the current namespace isn't ``monitoring``, change the annotation to specify the namespace in which you installed the OpenTelemetry Collector. 
+
+For example, if the current namespace is ``<my-namespace>`` and you installed the Collector in ``monitoring``, set the annotation to ``"instrumentation.opentelemetry.io/inject-<application_language>": "monitoring/splunk-otel-collector"``:
 
 .. code-block:: bash
 
-   kubectl patch deployment <my-deployment> -n <my-namespace> --type=json -p='[{"op": "remove", "path": "/spec/template/metadata/annotations/instrumentation.opentelemetry.io~1inject-java"}]'
+  kubectl patch deployment <my-deployment> -n <my-namespace> -p '{"spec":{"template":{"metadata":{"annotations":{"instrumentation.opentelemetry.io/inject-<application_language>":"monitoring/splunk-otel-collector"}}}}}'
+
+Replace ``<application_language>`` with the language of the application you want to discover.
+
+Deactivate automatic discovery
+-----------------------------------------------
+
+To deactivate automatic discovery, remove the annotation. The following command removes the annotation for automatic discovery, deactivating it:
+
+.. code-block:: bash
+
+   kubectl patch deployment <my-deployment> -n <my-namespace> --type=json -p='[{"op": "remove", "path": "/spec/template/metadata/annotations/instrumentation.opentelemetry.io~1inject-<application_language>"}]'
+
+Replace ``<application_language>`` with the language of the application for which you want to deactivate discovery.
 
 Verify instrumentation
 ----------------------------------------
@@ -374,7 +541,7 @@ The instrumented pod contains an initContainer named ``opentelemetry-auto-instru
    #     Type:        EmptyDir (a temporary directory that shares a pod's lifetime)
 
 
-.. _java-k8s-view-results:
+.. _k8s-auto-discovery-view-results:
 
 View results at Splunk Observability APM
 ===========================================================
@@ -384,11 +551,11 @@ Allow the Operator to do the work. The Operator intercepts and alters the Kubern
 (Optional) Configure the instrumentation
 ===========================================================
 
-You can configure the Splunk Distribution of OpenTelemetry Java to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started.
+You can configure the Splunk Distribution of OpenTelemetry Collector to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started.
 
-You can add advanced configuration like activating custom sampling and including custom data in the reported spans with environment variables and Java system properties. To do so, use the values.yaml file and  ``operator.instrumentation.sampler`` configuration. For more information, see the :new-page:`documentation in GitHub <https://github.com/open-telemetry/opentelemetry-operator/blob/main/docs/api.md#instrumentationspecsampler>` and :new-page:`example in GitHub <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/enable-operator-and-auto-instrumentation/instrumentation/instrumentation-add-trace-sampler.yaml>`.
+You can add advanced configuration like activating custom sampling and including custom data in the reported spans with environment variables and system properties. To do so, use the values.yaml file and  ``operator.instrumentation.sampler`` configuration. For more information, see the :new-page:`documentation in GitHub <https://github.com/open-telemetry/opentelemetry-operator/blob/main/docs/api.md#instrumentationspecsampler>` and :new-page:`example in GitHub <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/enable-operator-and-auto-instrumentation/instrumentation/instrumentation-add-trace-sampler.yaml>`.
 
-You can also use the methods shown in :ref:`zeroconfig-java-traces` to configure your instrumentation with the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable and other environment variables. For example, if you want every span to include the key-value pair ``build.id=feb2023_v2``, set the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable:
+You can also use the methods shown in :ref:`k8s-auto-discovery-setup-traces` to configure your instrumentation with the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable and other environment variables. For example, if you want every span to include the key-value pair ``build.id=feb2023_v2``, set the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable:
 
   .. code-block:: bash
     
@@ -396,7 +563,7 @@ You can also use the methods shown in :ref:`zeroconfig-java-traces` to configure
 
 See :ref:`advanced-config-auto-instrumentation` for more information.
 
-.. _troubleshooting-zeroconfig-java-k8s:
+.. _troubleshooting-k8s-auto-discovery:
 
 .. include:: /_includes/gdi/troubleshoot-zeroconfig-k8s.rst
 
