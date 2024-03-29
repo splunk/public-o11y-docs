@@ -114,7 +114,7 @@ See :ref:`profiling-intro` to learn more about troubleshooting with AlwaysOn Pro
 Launch APM for production applications
 =======================================================
 
-For each of your teams, start sending traces to Splunk APM for production environment. Share this guide to make sure the teams learn what they can do with Splunk APM and customize the Splunk APM experience. The scenarios in :ref:`phase3` can help you with an interactive walkthrough of Splunk APM.
+For each of your teams, start sending traces to Splunk APM for production environments. Share this guide and :ref:`get-started-apm` with your teams so they learn what they can do with Splunk APM and customize the Splunk APM experience. 
 
 Next step
 ===============
