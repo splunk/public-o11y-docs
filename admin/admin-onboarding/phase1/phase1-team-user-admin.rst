@@ -6,7 +6,7 @@ Onboarding part 1: Configure your user and team administration
 .. meta::
     :description: 
 
-In the first part of the onboarding phase you make foundational decisions about your organization in Splunk Observability Cloud, including, user access management, team structure, and token management. 
+In the first part of the onboarding phase, you make foundational decisions about your organization in Splunk Observability Cloud, including, user access management, team structure, and token management. To configure your users and teams, do the following:
 
 #. :ref:`phase1-create-trial`
 #. :ref:`phase1-user-access`
@@ -44,21 +44,21 @@ Create a Splunk support request to request a custom URL for your organization, f
 Plan your teams structure and token management to control access
 =====================================================================================
 
-If you plan to roll out Splunk Observability Cloud across your enterprise footprint you likely have multiple internal customers and different access requirements for the various features in Splunk Observability Cloud. To manage these internal customers, you can use the teams feature to organize users together in a team and manage them as a unit.
+If you plan to roll out Splunk Observability Cloud across your enterprise you likely have multiple internal customers with different access requirements for the various features in Splunk Observability Cloud. To manage these internal customers, you can use the teams feature to organize users together in a team and manage them as a unit.
 
 Plan your team structure
 ---------------------------
 
 A user with admin role can manage teams, this includes adding and removing regular users and assigning a team admin. 
 
-By default, users can join or leave teams at will. For larger organizations, you might want enhanced team security. See :ref:`enhanced-team-security`. This is especially useful if the teams are assigned a certain amount of usage rights with their associated tokens (See below).
+By default, users can join or leave teams at will. For larger organizations, you might want enhanced team security. Enhanced team security is useful if the teams are assigned a certain amount of usage rights with their associated tokens. See :ref:`enhanced-team-security`. 
 
 You can also assign team-specific notifications for alerts triggered by the detectors that you set up. Team-specific notifications let your different teams to have different escalation methods for their alerts. See :ref:`admin-team-notifications`.
 
 Manage your tokens
 --------------------
 
-Use tokens to secure the data ingest and API calls to Splunk Observability Cloud. Tokens are valid for 1 year and can be extended for another 60 days. Your organization has a default token that is automatically generated when the organization is initially created. 
+Use tokens to secure data ingest and API calls to Splunk Observability Cloud. Tokens are valid for 1 year and can be extended for another 60 days. Your organization has a default token that is automatically generated when the organization is created. 
 
 As an admin, you can deactivate tokens that are no longer needed. Create a plan to regularly deactivate and rotate tokens.
 
@@ -82,8 +82,6 @@ See :ref:`admin-manage-usage`.
 =====================================================================================
 
 If you want to create separate environments you can use parent-child organizations. Perhaps you want a development environment and a production environment or you want to make sure Team A is fully separated from Team B. Parent-child orgs are 2 or more separate organizations, where your original organization is the parent organization which includes your original usage entitlement. You can then have 1 or more orgs as child organizations within the parent organization. The organizations are fully separated, including users and data. You can request a parent-child organization setup by creating support case. See :ref:`support` for support contact options.
-
-WHAT DOCS ARE AVAILABLE FOR THIS?
 
 Next step
 ===============
