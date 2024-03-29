@@ -36,15 +36,13 @@ To learn more, see the following:
 
 Identify and address bottlenecks in code and architecture using AlwaysOn Profiling
 ================================================================================================================
-Utilizing AlwaysOn Profiling in development environments helps identify bottlenecks within the code before enabling AlwaysOn Profiling in production environments. If you have an application or service using Java, Node.js or .NET, enable CPU profiling to get intra-service visibility to identify code issues that lead to a slow service. This also helps identify inefficiencies to reduce infrastructure footprint and spend.
+Utilizing AlwaysOn Profiling in development environments helps identify bottlenecks within the code before turning on AlwaysOn Profiling in production environments. If you have an application or service using Java, Node.js or .NET, turn on CPU profiling to get intra-service visibility to identify code issues that lead to a slow service. This also helps identify inefficiencies to reduce infrastructure footprint and spend.
 
 To learn more, see the following:
 
 - :ref:`profiling-intro`
 
 - :ref:`profiling-scenario-landingpage`
-
-- :ref:`profiling-troubleshooting`
 
 
 .. _data-links-apm:

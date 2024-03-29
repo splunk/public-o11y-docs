@@ -16,8 +16,8 @@ Admin onboarding guide phase 2: Pilot
    Part 2: Initial pilot rollout for Splunk Infrastructure Monitoring <phase2-im>
    Part 3: Initial pilot rollout for Splunk Application Performance Monitoring <phase2-apm>
 
-In the pilot phase your goal is to onboarding teams. These teams represent use cases that show the power and benefit of Splunk Observability Cloud to the rest of the organization. Your focus in the pilot phase is to roll out initial pilots of Splunk Infrastructure Monitoring and Splunk Application Performance monitoring. There are 3 high-level sets of activities described in more detail in the following topics:
+In the pilot phase your goal is to onboarding teams. These teams represent use cases that show the power and benefit of Splunk Observability Cloud to the rest of the organization. Your focus in the pilot phase is to roll out initial pilots of Splunk Infrastructure Monitoring and Splunk Application Performance monitoring. There are 3 high-level sets of activities described in the following topics:
 
-#. :ref:`Part 1: Plan your rollout <phase2-rollout-plan>`
-#. :ref:`Part 2: Initial pilot rollout for Splunk Infrastructure Monitoring <phase2-im>`.
-#. :ref:`Part 3: Initial pilot rollout for Splunk Application Performance Monitoring <phase2-apm>`.
+* :ref:`Part 1: Plan your rollout <phase2-rollout-plan>`
+* :ref:`Part 2: Initial pilot rollout for Splunk Infrastructure Monitoring <phase2-im>`.
+* :ref:`Part 3: Initial pilot rollout for Splunk Application Performance Monitoring <phase2-apm>`.

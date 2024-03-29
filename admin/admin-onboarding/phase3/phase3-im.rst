@@ -71,7 +71,7 @@ Automate the token rotation process
 ================================================================================================================
 As tokens expire after a year, it is important to understand how to rotate the token gracefully using an automated process via an API call. For a given token, while the API runs to create a new token, the old token continues to work until the time specified in grace_period. Wherever the old token is in use, update the old token value with the new token value within the time specified in grace_period.
 
-Let's look at an example. You can use the API to rotate a token that a Kubernetes cluster uses to ingest metrics and trace data. The API generates a new token that can be stored directly into the secret in the Kubernetes cluster as part of the automation so that the application can automatically retrieve the new token.
+Fo example, you can use the API to rotate a token that a Kubernetes cluster uses to ingest metrics and trace data. The API generates a new token that can be stored directly into the secret in the Kubernetes cluster as part of the automation so that the application can automatically retrieve the new token.
 
 To learn more, see the following:
 
@@ -88,9 +88,9 @@ To learn more, see the following:
 
 Identify and review MTTR reduction
 ================================================================================================================
-A primary purpose of Splunk Observability Cloud is to reduce the MTTR,  Mean Time to Resolution, of an issue. A slow MTTR can be the result of many factors.
+A primary purpose of Splunk Observability Cloud is to reduce the Mean Time to Resolution (MTTR), of an issue. A slow MTTR can be the result of many factors.
 
-One factor might be the right people aren’t involved when an issue begins. After identifying the root cause, you must have the appropriate people to actually fix the issue, as well as the appropriate people to approve the remediation.
+One factor might be the right people aren't involved when an issue begins. After identifying the root cause, you must have the appropriate people to actually fix the issue, as well as the appropriate people to approve the remediation.
 
 Another factor causing slow MTTR can be a lack of insight into the effects on other systems. Without proper insight into how infrastructure and applications interconnect, it takes time to analyze the possible effects of a remediation procedure. 
 
@@ -135,7 +135,7 @@ Splunk Distribution of OpenTelemetry Collector Helm chart allows you to configur
 
 - Run eBPF when TCP receives an acknowledgement for a packet
 
-Network Explorer captures network data that is passed on to the reducer and then to the Splunk OTel Collector. Note that in order for Splunk OTel Collector to work with Network Explorer, you must install it in gateway mode. Upon successful installation, the Network Explorer navigator will be present on the :guilabel:`Infrastructure` tab in Splunk Infrastructure Monitoring.
+Network Explorer captures network data that is passed on to the reducer and then to the Splunk OTel Collector. For Splunk OTel Collector to work with Network Explorer, you must install it in gateway mode. Upon successful installation, the Network Explorer navigator is present on the :guilabel:`Infrastructure` tab in Splunk Infrastructure Monitoring.
 
 For comprehesive documentation on Network Explorer, see :ref:`network-explorer`.
 
@@ -144,7 +144,7 @@ For comprehesive documentation on Network Explorer, see :ref:`network-explorer`.
 
 Analyze and troubleshoot usage, limits and throttles
 ================================================================================================================
-To view Splunk Observability Cloud Subscription Usage data within your org, you must be an admin. It is important to understand the two types of subscriptions usage: host-based and MTS-based. An admin of an organization must know how to read the various reports available such as monthly usage reports, hourly usage reports, dimension reports, and custom metric reports. 
+To view Splunk Observability Cloud Subscription Usage data within your org, you must be an admin. It is important to understand the 2 types of subscriptions usage: host-based and MTS-based. An admin of an organization must know how to read the various reports available such as monthly usage reports, hourly usage reports, dimension reports, and custom metric reports. 
 
 An admin must also understand the system limits for Splunk Infrastructure Monitoring to avoid overall degradation when your organization exceeds the limits. To learn more, see the following:
 
@@ -157,6 +157,7 @@ An admin must also understand the system limits for Splunk Infrastructure Monito
 
 Automate key workflows to further accelerate onboarding and standardize consistent practices 
 ================================================================================================================
+
 We recommend automating the onboarding process workflow during the expansion and optimization phase. For example, automate teams creation, token ingestion, HEC token for Log Observer Connect, and token rotation. Also consider prescriptive onboarding guides for instrumentation, such as Splunk OTel Zero configuration installation, or utilizing separate instrumentation agents, including predefining required environment variables. Use Splunk Observability Cloud REST APIs to automatically assign default dashboards and detectors to new teams via automation.
 
 To learn more, see the following:
@@ -176,11 +177,11 @@ During the expansion and optimization phase, start identifying the teams' requir
 
 - How to increase developer efficiency to solve problems during deployment
 
-- How to utilize Splunk Observability Cloud to monitor and control consumption rates of Kubernetes 
+- How to use Splunk Observability Cloud to monitor and control consumption rates of Kubernetes 
 
 - How to improve ROI (Return on Investment)
 
--  How to improve MTTR (Mean Time To Resolution) 
+- How to improve MTTR (Mean Time To Resolution) 
 
 - How to ensure and improve customer experience 
 
