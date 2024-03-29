@@ -1,4 +1,4 @@
-.. _k8s-backend:
+.. _k8s-backend-auto-discovery:
 
 ********************************************************************************
 Automatic discovery and configuration for back-end applications in Kubernetes
@@ -84,7 +84,7 @@ Populate values.yaml with the following fields and values:
   operator:
     enabled: true
 
-You might need to populate the file with additional values depending on your environment. See :ref:`k8s-auto-discovery-add-certificates-add-certificates` and :ref:`k8s-auto-discovery-setup-traces` for more information.
+You might need to populate the file with additional values depending on your environment. See :ref:`k8s-auto-discovery-add-certificates` and :ref:`k8s-auto-discovery-setup-traces` for more information.
 
 .. _k8s-auto-discovery-add-certificates:
 
@@ -561,7 +561,7 @@ You can also use the methods shown in :ref:`k8s-auto-discovery-setup-traces` to 
     
      kubectl set env deployment/<my-deployment> OTEL_RESOURCE_ATTRIBUTES=build.id=feb2023_v2
 
-See :ref:`advanced-config-auto-instrumentation` for more information.
+See :ref:`k8s-advanced-auto-discovery-config` for more information.
 
 .. _troubleshooting-k8s-auto-discovery:
 

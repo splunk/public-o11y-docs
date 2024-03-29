@@ -35,4 +35,4 @@ Learn more
 
 See :ref:`get-started-apm` to learn how to use Splunk APM to gather insights about your data.
 
-See :ref:`zero-config` for more information about Splunk Zero Configuration Auto Instrumentation.
+See :ref:`discovery_mode` for more information about automatic discovery.

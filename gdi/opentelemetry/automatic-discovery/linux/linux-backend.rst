@@ -107,7 +107,7 @@ Using the installer script, you can install automatic discovery and activate aut
                             --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN> \
                             --enable-profiler --enable-profiler-memory --enable-metrics
                             
-                        Next, ensure the service is running and restart your application. See :ref:`verify-install` and :ref:`start-restart-java-apps`. 
+                        Next, ensure the service is running and restart your application. See :ref:`auto-discovery-linux-verify` and :ref:`auto-discovery-linux-restart-apps`. 
                 
                     .. tab:: systemd
 
@@ -141,7 +141,7 @@ Using the installer script, you can install automatic discovery and activate aut
                             --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN> \
                             --enable-profiler --enable-profiler-memory --enable-metrics
                             
-                        Next, ensure the service is running and restart your application. See :ref:`verify-install` and :ref:`start-restart-java-apps`. 
+                        Next, ensure the service is running and restart your application. See :ref:`auto-discovery-linux-verify` and :ref:`auto-discovery-linux-restart-apps`. 
 
             .. tab::  Linux packages
 
@@ -176,8 +176,8 @@ Using the installer script, you can install automatic discovery and activate aut
 
                         sudo systemctl start splunk-otel-collector
 
-                5. :ref:`verify-install`.
-                6. :ref:`start-restart-java-apps`.
+                5. :ref:`auto-discovery-linux-verify`.
+                6. :ref:`auto-discovery-linux-restart-apps`.
 
             .. tab:: Ansible
 
@@ -239,7 +239,7 @@ Using the installer script, you can install automatic discovery and activate aut
                             --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN> \
                             --enable-profiler --enable-profiler-memory --enable-metrics
 
-                        Next, ensure the collector service is running and restart your Node.js application(s). See :ref:`verify-js-agent-install` and :ref:`start-restart-js-apps`. 
+                        Next, ensure the collector service is running and restart your Node.js application(s). See :ref:`auto-discovery-linux-verify` and :ref:`auto-discovery-linux-restart-apps`. 
 
                     .. tab:: systemd
 
@@ -264,7 +264,7 @@ Using the installer script, you can install automatic discovery and activate aut
                             --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN> \
                             --enable-profiler --enable-profiler-memory --enable-metrics
 
-                        Next, ensure the collector service is running and restart your Node.js application(s). See :ref:`verify-js-agent-install` and :ref:`start-restart-js-apps`.  
+                        Next, ensure the collector service is running and restart your Node.js application(s). See :ref:`auto-discovery-linux-verify` and :ref:`auto-discovery-linux-restart-apps`.  
 
             
             .. tab:: Chef
@@ -319,12 +319,11 @@ To learn more, see the following resources:
 * Java: :ref:`advanced-java-otel-configuration`.
 * Node.js: :ref:`advanced-nodejs-otel-configuration`.
 
-.. _update-js-zeroconfig-linux:
+.. _auto-discovery-upgrade-package:
 
 Update zero config auto instrumentation
 ============================================
 
-To update the Node.js agent to the latest provided version, you must first update the ``splunk-otel-auto-instrumentation`` package. To learn more, see :ref:`upgrade-the-package`.
 
 .. tabs:: 
 
@@ -399,6 +398,76 @@ To update the Node.js agent to the latest provided version, you must first updat
                 You can also upgrade using the same package repositories as the Collector. See :new-page:`Debian or RPM packages <https://docs.splunk.com/Observability/gdi/opentelemetry/install-linux.html#debian-or-rpm-packages>` for more information.
 
     .. tab:: Node.js 
+
+        To update the Node.js agent to the latest provided version, you must first update the ``splunk-otel-auto-instrumentation`` package.
+
+        You can upgrade the package by using the package repository or by using Debian or RPM packages. 
+
+        .. tabs:: 
+
+            .. tab:: Package repository
+
+                If you installed the package using the installer script, or if you configured the Debian or RPM package repositories manually, run the following commands according to your platform. Upgrading the package requires ``root`` privileges. 
+
+                .. tabs:: 
+
+                    .. tab:: Debian
+
+                        Run the following commands:
+
+                        .. code-block:: bash
+
+                            sudo apt-get update
+                            sudo apt-get --only-upgrade splunk-otel-auto-instrumentation
+
+                        You might see a prompt to keep or overwrite the configuration file at ``/usr/lib/splunk-instrumentation/instrumentation.conf``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
+
+                    .. tab:: RPM
+
+                        For the RPM package management system, run the following commands:
+
+                        yum:
+
+                        .. code-block:: bash
+
+                            sudo yum upgrade splunk-otel-auto-instrumentation
+
+                        dnf: 
+
+                        .. code-block:: bash
+
+                            sudo dnf upgrade splunk-otel-auto-instrumentation
+
+                        zypper:
+
+                        .. code-block:: bash
+
+                            sudo zypper refresh
+                            sudo zypper update splunk-otel-auto-instrumentation
+
+                        After you've upgraded the packages, manually start or restart the Java applications on the host for the changes to take effect.
+
+            .. tab:: Debian/RPM packages
+
+                To manually upgrade the package:
+
+                1. Download the ``splunk-auto-auto-instrumentation`` Debian or RPM package for the target system from the :new-page:`GitHub Releases page <https://github.com/signalfx/splunk-otel-collector/releases>`.
+
+                2. Run the following commands to install the package. Replace ``<path to splunk-otel-auto-instrumentation deb/rpm>`` with the local path to the downloaded package:
+
+                .. tabs::
+
+                    .. code-tab:: bash Debian
+                    
+                        sudo dpkg -i <path to splunk-otel-auto-instrumentation deb>
+                    
+                    .. code-tab:: bash RPM
+                    
+                        sudo rpm -Uvh <path to splunk-otel-auto-instrumentation rpm>
+
+                After upgrading the Debian package, you might see a prompt to keep or overwrite the configuration file at ``/usr/lib/splunk-instrumentation/instrumentation.conf``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
+
+                You can also upgrade using the same package repositories as the Collector. See :new-page:`Debian or RPM packages <https://docs.splunk.com/Observability/gdi/opentelemetry/install-linux.html#debian-or-rpm-packages>` for more information.
 
         After updating the ``splunk-otel-auto-instrumentation`` package, run the following command:
 

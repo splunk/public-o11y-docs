@@ -34,7 +34,7 @@ You have the following options to send app and service data to Splunk Observabil
 
    * Available languages include Java, Node.js, .NET, Go, Python, Ruby, and PHP.
 
-   * Learn more about the Collector at :ref:`otel-intro`, including the :ref:`zero-config`.
+   * Learn more about the Collector at :ref:`otel-intro`, including :ref:`discovery_mode`.
 
 * Send metrics and traces directly to Splunk Observability Cloud using the API. See more in our :new-page:`dev portal documentation <https://dev.splunk.com/observability/docs/apm/send_traces>`.
 

@@ -132,7 +132,7 @@ For Linux, the cookbook accepts the attributes described in the following table:
 Configure auto instrumentation for Java and Node.js (Linux only)
 ------------------------------------------------------------------
 
-You can automatically instrument your Java and Node.js applications along with the Collector installation. Auto instrumentation removes the need to install and configure OpenTelemetry agents separately. See :ref:`zero-config` for more information.  The applications to be instrumented on the node need to be started or restarted separately after installation or any configuration changes for auto instrumentation to take effect.
+You can automatically instrument your Java and Node.js applications along with the Collector installation using automatic discovery. Automatic discovery removes the need to install and configure OpenTelemetry agents separately. See :ref:`discovery_mode` for more information.  The applications to be instrumented on the node need to be started or restarted separately after installation or any configuration changes for auto instrumentation to take effect.
 
 The following table shows the variables that can be configured with this Chef cookbook:
 
@@ -144,7 +144,7 @@ The following table shows the variables that can be configured with this Chef co
      - Description
      - Default value
    * - ``with_auto_instrumentation``
-     - Whether to install or manage :ref:`auto-instrumentation-nodejs` and :ref:`auto-instrumentation-java`. When set to ``true``, the ``splunk-otel-auto-instrumentation`` deb/rpm package is downloaded and installed from the Collector repository.
+     - Whether to install or manage automatic discovery for Java and Node.js. When set to ``true``, the ``splunk-otel-auto-instrumentation`` deb/rpm package is downloaded and installed from the Collector repository. To learn more, see :ref:`linux-backend-auto-discovery`.
      - ``false``
    * - ``auto_instrumentation_version``
      - Version of the ``splunk-otel-auto-instrumentation`` package to install, for example, ``0.50.0``. The minimum supported version is ``0.48`` for Java and ``0.87.0`` for Node.js.
@@ -186,7 +186,7 @@ The following table shows the variables that can be configured with this Chef co
 Configure auto instrumentation for SignalFx .NET (Windows only)
 =================================================================
 
-You can automatically instrument your .NET applications along with the Collector installation. Auto instrumentation removes the need to install and configure the SignalFx .NET agent separately. See :ref:`zero-config` for more information. 
+You can automatically instrument your .NET applications along with the Collector installation using automatic discovery. Automatic discovery removes the need to install and configure the SignalFx .NET agent separately. See :ref:`discovery_mode` for more information. 
 
 The cookbook accepts the attributes described in the following table:
 
@@ -198,7 +198,7 @@ The cookbook accepts the attributes described in the following table:
      - Description
      - Default value
    * - ``with_signalfx_dotnet_instrumentation``
-     - Whether to install or manage :ref:`auto-instrumentation-dotnet`. When set to ``true``, the ``signalfx-dotnet-tracing`` MSI package will be downloaded and installed, and the Windows registry will be updated based on other configuration options.
+     - Whether to install or manage automatic discovery for .NET. When set to ``true``, the ``signalfx-dotnet-tracing`` MSI package will be downloaded and installed, and the Windows registry will be updated based on other configuration options. To learn more, see :ref:`windows-backend-auto-discovery`
      - ``false``
    * - ``signalfx_dotnet_auto_instrumentation_version``
      - Version of the ``signalfx-dotnet-tracing`` MSI package to download and install.

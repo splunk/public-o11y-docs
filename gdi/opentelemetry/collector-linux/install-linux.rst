@@ -154,10 +154,10 @@ If you already installed Fluentd on a host, install the Collector without Fluent
 
 .. _configure-auto-instrumentation:
 
-Configure automatic instrumentation for Java
+Configure automatic discovery for Java
 --------------------------------------------
 
-You can also automatically instrument your Java applications along with the Collector installation. Auto instrumentation removes the need to install and configure the Java agent separately. See :ref:`auto-instrumentation-java` for the installation instructions. For more information on Java instrumentation, see :ref:`get-started-java`.
+You can also automatically instrument your Java applications along with the Collector installation. Automatic discovery removes the need to install and configure the Java agent separately. See :ref:`linux-backend-auto-discovery` for the installation instructions. For more information on Java instrumentation, see :ref:`get-started-java`.
 
 
 
@@ -240,7 +240,7 @@ The Linux installer script supports the following options:
      - Whether to install and configure fluentd to forward log events to the Collector. See :ref:`fluentd-manual-config-linux` for more information.
      - ``--without-fluentd``
    * - ``--with[out]-instrumentation``
-     - Whether to install and configure the splunk-otel-auto-instrumentation package. See :ref:`zero-config` for more information.
+     - Whether to install and configure the splunk-otel-auto-instrumentation package. See :ref:`linux-backend-auto-discovery` for more information.
      - ``--without-instrumentation``
    * - ``--deployment-environment <value>``
      - Set the ``deployment.environment`` resource attribute to the specified value. Only applicable if the ``--with-instrumentation`` option is also specified.

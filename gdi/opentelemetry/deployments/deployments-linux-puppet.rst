@@ -113,7 +113,7 @@ The class accepts the parameters described in the following table:
 Configure auto instrumentation for Java and Node.js (Linux only)
 ====================================================================
 
-You can automatically instrument your Java and Node.js applications along with the Collector installation. Auto instrumentation removes the need to install and configure the Java or Node.js agents. See :ref:`zero-config` for more information. 
+You can automatically instrument your Java and Node.js applications along with the Collector installation using automatic discovery. Automatic discovery removes the need to install and configure the Java or Node.js agents. See :ref:`discovery_mode` for more information. 
 
 The following table shows the variables that you can configure for this Puppet module:
 
@@ -125,7 +125,7 @@ The following table shows the variables that you can configure for this Puppet m
      - Description
      - Default value
    * - ``with_auto_instrumentation``
-     - Whether to install or manage :ref:`auto-instrumentation-java` and :ref:`auto-instrumentation-nodejs`. When set to ``true``, the ``splunk-otel-auto-instrumentation`` deb/rpm package is downloaded and installed from the Collector repository. The applications on the node need to be restarted after installation for auto instrumentation to take effect.
+     - Whether to install or manage automatic discovery for Java and Node.js. When set to ``true``, the ``splunk-otel-auto-instrumentation`` deb/rpm package is downloaded and installed from the Collector repository. The applications on the node need to be restarted after installation for auto instrumentation to take effect. To learn more, see :ref:`linux-backend-auto-discovery`.
      - ``false``
    * - ``auto_instrumentation_version``
      - Version of the ``splunk-otel-auto-instrumentation`` package to install, for example, ``0.50.0``. The minimum supported version is ``0.48.0`` for Java and ``0.87.0`` for Node.js. The Java and Node.js applications on the node need to be restarted after installation for auto instrumentation to take effect.

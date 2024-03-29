@@ -203,7 +203,7 @@ See the features available for the Collector:
 
 * See how to perform common actions and tasks with the Collector at :ref:`collector-how-to`. For example, learn how to :ref:`collector-remove-data` to strip data out of your telemetry, including PII.
 * Learn about the discovery mode to detect metrics. See :ref:`discovery_mode`.
-* Activate auto-instrumentation so that the Collector can automatically grab traces from your application, and add metrics for certain types of calls. See :ref:`zero-config`.
+* Activate automatic discovery so that the Collector can automatically grab traces from your application, and add metrics for certain types of calls. See :ref:`discovery_mode`.
 
 For more information:
 

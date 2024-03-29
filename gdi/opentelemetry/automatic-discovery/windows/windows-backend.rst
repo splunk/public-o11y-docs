@@ -1,4 +1,4 @@
-.. _windows-backend:
+.. _windows-backend-auto-discovery:
 
 ****************************************************************
 Automatic discovery for back-end applications in Windows

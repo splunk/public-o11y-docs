@@ -135,7 +135,7 @@ The following table shows the variables that can be configured for this Salt mod
      - Description 
      - Default value
    * - ``install_auto_instrumentation``
-     - Whether to install or manage :ref:`auto-instrumentation-java`. When set to ``true``, the ``splunk-otel-auto-instrumentation`` deb/rpm package is downloaded and installed from the Collector repository. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
+     - Whether to install or manage automatic discovery for Java. When set to ``true``, the ``splunk-otel-auto-instrumentation`` deb/rpm package is downloaded and installed from the Collector repository. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect. To learn more, see :ref:`linux-backend-auto-discovery`.
      - ``false``
    * - ``auto_instrumentation_version``
      - Version of the ``splunk-otel-auto-instrumentation`` package to install, for example, ``0.50.0``. The minimum supported version is ``0.48.0``. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.

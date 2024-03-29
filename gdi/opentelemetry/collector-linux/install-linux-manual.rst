@@ -299,8 +299,10 @@ Auto Instrumentation agents
 
 The ``splunk-otel-auto-instrumentation`` deb/rpm package installs and supports configuration for the following Auto Instrumentation agents:
 
-* :ref:`auto-instrumentation-java`
-* :ref:`auto-instrumentation-nodejs`
+* Java
+* Node.js
+
+To learn more, see :ref:`linux-backend-auto-discovery`.
 
 .. _linux-packages-fluentd:
 
