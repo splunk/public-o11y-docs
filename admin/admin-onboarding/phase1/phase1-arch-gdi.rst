@@ -155,7 +155,7 @@ Review the default dashboards and detectors
 
 Splunk Observability Cloud automatically adds built-in-dashboards for each integration you use once it ingests 50,000 data points. Review these built-in dashboards when they are available.
 
-Splunk Observability Cloud also automatically adds the auto-detect detectors that correspond to the integrations you are using. You can find auto-detect detectors under :guilabel:`Alert & Detectors` then :guilabel:`Detectors`. They are marked with a :guilabel:`Auto` icon. You can copy the auto-detect detectors and customize them.
+Splunk Observability Cloud also automatically adds the AutoDetect detectors that correspond to the integrations you are using. You can copy the auto-detect detectors and customize them.
 
 See :ref:`dashboards` and :ref:`autodetect`. 
 
