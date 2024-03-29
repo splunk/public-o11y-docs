@@ -36,17 +36,32 @@ If you don't use the guided setup, follow these steps to manually install and au
 
 2. Install the OpenTelemetry PHP extension using PECL in the command line:
 
-   .. code-block:: bash
+   .. tabs::
 
-      sudo apt-get install gcc make autoconf
-      pecl install opentelemetry
+      .. code-tab:: shell Linux
+
+         sudo apt-get install gcc make autoconf
+         pecl install opentelemetry
+
+      .. tab:: Windows
+
+         Download the precompiled DLL file from the :new-page:`releases page <https://github.com/open-telemetry/opentelemetry-php-instrumentation/releases/latest>` on GitHub.
+
+         Make sure to place the DLL in your extensions's directory, as defined by the value of ``extension_dir`` in your php.ini file.
 
 3. Add the extension to your php.ini file:
 
-   .. code-block:: ini
+   .. tabs::
 
-      [opentelemetry]
-      extension=opentelemetry.so
+      .. code-tab:: ini Linux
+
+         [opentelemetry]
+         extension=opentelemetry.so
+
+      .. code-tab:: ini Windows
+
+         [opentelemetry]
+         extension=php_opentelemetry.dll
 
 4. Install the required instrumentations you need using Composer:
 

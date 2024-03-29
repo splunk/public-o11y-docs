@@ -192,14 +192,21 @@ Avoid these aggregation issues by using the following options:
 * Do your own MTS aggregation before sending your data by reconfiguring the OTel collector to drop unwanted dimensions.
 * Aggregate data using SignalFlow when you generate charts or create detectors.
 
-Scenario for metrics pipeline management
+.. _mpm-limitations:
+
+Metric pipeline management limitations
 ===============================================================================
 
-See :ref:`aggregate-drop-use-case`.
+Metrics pipeline management is not available for: 
 
-Create your first MPM rules
+* Metrics ingested through the ``https://ingest.signalfx.com/v1/collectd`` endpoint.
+* Splunk Observability Cloud's :ref:`org metrics <org-metrics>`. 
+* APM's :ref:`MetricSets <apm-metricsets>`.
+
+Learn more
 ===============================================================================
 
-To start using metrics pipeline management, see :ref:`use-metrics-pipeline`.
+To start using MPM, see:
 
-.. note:: Metrics pipeline management is not available for metrics ingested through the ``https://ingest.signalfx.com/v1/collectd`` endpoint.
+* :ref:`use-metrics-pipeline`.
+* :ref:`aggregate-drop-use-case`.
