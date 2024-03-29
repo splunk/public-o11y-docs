@@ -117,18 +117,16 @@ To familiarize yourself with the key concepts of Splunk APM, see :ref:`apm-key-c
 Add an auto instrumentation library to a service to send traces to Splunk APM
 ==================================================================================
 
-To send traces to Splunk APM, you need to deploy an autoinstrumentation agent for each programming language or language runtime. See :ref:`instrument-applications`.
+To send traces to Splunk APM, you need to either deploy an auto instrumentation agent for each programming language or language runtime or use the Zero Config auto instrumentation implementation for Java of .NET, described in the following section. 
 
-You can also use the Zero Config auto instrumentation implementation for Java of .NET, described in the following section. 
-
-Focus on autoinstrumentation and confirm that the existing setup allows spans and traces to be captured by the OpenTelemetry agent and forwarded successfully to Splunk Observability Cloud. After this is completed, traces and spans show in the Splunk APM according to services provided.   
+See :ref:`instrument-applications`.  
 
 .. _phase1-zero-config:
 
 (Optional) Consider the Zero Configuration Auto Instrumentation
 ====================================================================================================
 
-If you are deploying numerous similar services written in Java, .NET, or Node.js, you can deploy the OpenTelemetry collector and enable the Zero Configuration for Auto Instrumentation. Once you have installed this feature, any Java, .NET, or Node.js application that runs on your node or Kubernetes cluster.  Use zero config if you don't have access to the source code or the ability to change the deployment.
+If you are deploying numerous similar services written in Java, .NET, or Node.js, you can deploy the OpenTelemetry collector and enable the Zero Configuration for Auto Instrumentation. Use zero config if you don't have access to the source code or the ability to change the deployment. 
 
 See :ref:`zero-config`.
 
@@ -137,7 +135,7 @@ See :ref:`zero-config`.
 (Optional) Turn on AlwaysOn Profiling to collect stack traces
 ============================================================================
 
-Use AlwaysOn Profiling for deeper analysis of the behavior of select applications. Code profiling collects snapshots of the CPU call stacks and collects snapshots of memory usage. Use this profiling data to gain insights into your code behavior to troubleshoot performance issues. For example, you can identify bottlenecks and memory leaks and potential optimizations.
+Use AlwaysOn Profiling for deeper analysis of the behavior of select applications. Code profiling collects snapshots of the CPU call stacks and memory usage. After you get profiling data into Splunk Observability Cloud, you can explore stack traces directly from APM and visualize the performance and memory allocation of each component using the flame graph. Use this profiling data to gain insights into your code behavior to troubleshoot performance issues. For example, you can identify bottlenecks and memory leaks for potential optimization.
 
 See :ref:`profiling-intro`.
 
@@ -146,18 +144,20 @@ See :ref:`profiling-intro`.
 Set up Log Observer Connect for Splunk Cloud Platform or Splunk Enterprise
 ================================================================================================
 
-If your organization has an entitlement for Splunk Log Observer Connect Splunk Observability Cloud can automatically relate logs with infrastructure and trace data. To set up Log Observer Connect, see :ref:`logs-set-up-logconnect` or :ref:`logs-scp`. 
+If your organization has an entitlement for Splunk Log Observer Connect, Splunk Observability Cloud can automatically relate logs to infrastructure and trace data. 
+
+See :ref:`logs-set-up-logconnect` or :ref:`logs-scp`. 
 
 .. _phase1-dashboards-detectors:
 
 Review the default dashboards and detectors
 ==========================================================
 
-Splunk Observability Cloud automatically adds the built-in-dashboards for each integration you use once it 50,000 ingest data points. Review these built-in dashboards when they are available.
+Splunk Observability Cloud automatically adds built-in-dashboards for each integration you use once it ingests 50,000 data points. Review these built-in dashboards when they are available.
 
 Splunk Observability Cloud also automatically adds the auto-detect detectors that correspond to the integrations you are using. You can find auto-detect detectors under :guilabel:`Alert & Detectors` then :guilabel:`Detectors`. They are marked with a :guilabel:`Auto` icon. You can copy the auto-detect detectors and customize them.
 
-See :ref:`dashboards` and :guilabel:`_autodetect`. 
+See :ref:`dashboards` and :ref:`autodetect`. 
 
 Next step
 ===============
