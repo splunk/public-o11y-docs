@@ -330,14 +330,14 @@ The annotation you set depends on the language runtime you're using. You can set
             :width: 100
 
             * - RID
-                - Annotation 
-                - Notes
+              - Annotation 
+              - Notes
             * - ``linux-x64``
-                - ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-x64"``
-                - This is the default value and you can omit it.
+              - ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-x64"``
+              - This is the default value and you can omit it.
             * - ``linux-musl-x64``
-                - ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-musl-x64"``
-                - Use this annotation for applications running in environments based on the ``musl`` library.
+              - ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-musl-x64"``
+              - Use this annotation for applications running in environments based on the ``musl`` library.
 
         .. tabs:: 
 
