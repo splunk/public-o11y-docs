@@ -67,8 +67,3 @@ To learn more, see the following:
 Onboard all production applications
 ================================================================================================================
 During the expansion and optimization phase, you can automate most processes and add new services into Splunk Observability Cloud. You can continue expanding the OTel agent configuration library for all production applications, which populates all the necessary metrics to build the desired charts, dashboards, and detectors. Continue to onboard all production applications.
-
-Next step
-===============
-
-:ref:`phase3-excellence`

@@ -102,8 +102,6 @@ Setup training plan for internal users
 
 Splunk has a set of training available to help you with your onboarding journey and best practices. It is strongly recommended to utilize the provided free online training courses. For a list of free and paid courses, see :new-page:`https://www.splunk.com/en_us/training/free-courses/overview.html#observability`.
 
-If building a center of excellence is required by your organization, the following certification path is available for :new-page:`Splunk O11y Cloud Certified Metrics Users <https://www.splunk.com/en_us/training/course-catalog.html?filters=filterGroup2SplunkO11yCloudCertifiedMetricsUser>`.
-
 Next step
 ===============
 
