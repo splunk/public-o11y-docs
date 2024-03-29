@@ -26,7 +26,7 @@ Customize Splunk APM for your organization
 Get familiar with the options to customize Splunk APM to accommodate your organization. The following are some example customizations to consider using:
 
 * The most common customization is to index specific span tags that are important to your organization. As a Splunk APM administrator, you can index additional span tags to generate custom request, error, and duration (RED) metrics for tag values within a service. Indexed span tags are used throughout APM as filter values and values to use to break down views like the service map. 
-* You might also want to enable Database Query Performance to pinpoint whether a database is causing slowness in your applications. Database query performance finds trends in aggregate database queries without the need of database instrumentation. This helps service owners determine whether an increase in the latency or error rate of a service is related to a database. You can then use Database Query Performance to identify which database and query is contributing to the latency.  
+* You might also want to turn on Database Query Performance to pinpoint whether a database is causing slowness in your applications. Database query performance finds trends in aggregate database queries without the need of database instrumentation. This helps service owners determine whether an increase in the latency or error rate of a service is related to a database. You can then use Database Query Performance to identify which database and query is contributing to the latency.  
 * You can use Business Workflows to group traces based on their initiating operation or another tag or endpoint. Use Business Workflows you can monitor end-to-end KPIs and find root causes and bottlenecks. 
 
 See :ref:`customize-apm` for an overview of customization options for APM.
@@ -34,7 +34,7 @@ See :ref:`customize-apm` for an overview of customization options for APM.
 Set up deployment environments
 ===================================
 
-You likely want to set up various deployment environments. A deployment environment is a distinct deployment of your system or application that allows you to set up configurations that don’t overlap with configurations in other deployments of the same application. Separate deployment environments are often used for different stages of the development process, such as development, staging, and production. For this pilot rollout, you might choose to start with only 1 deployment environment, for example a development or staging environment that facilitates testing. 
+You likely want to set up various deployment environments. A deployment environment is a distinct deployment of your system or application that allows you to set up configurations that don't overlap with configurations in other deployments of the same application. Separate deployment environments are often used for different stages of the development process, such as development, staging, and production. For this pilot rollout, you might choose to start with only 1 deployment environment, for example a development or staging environment that facilitates testing. 
 
 For details about setting up a deployment environment, see :ref:`apm-environments`.
 
@@ -105,7 +105,7 @@ See :ref:`apm-alerts`.
 Learn how to troubleshoot using AlwaysOn Profiling
 ==============================================================
 
-If you enable AlwaysOn Profiling you can perform deeper analysis of the behavior of select applications. Code profiling collects snapshots of the CPU call stacks and collects snapshots of memory usage. 
+If you turn on AlwaysOn Profiling you can perform deeper analysis of the behavior of select applications. Code profiling collects snapshots of the CPU call stacks and collects snapshots of memory usage. 
 
 See :ref:`profiling-intro` to learn more about troubleshooting with AlwaysOn Profiling.
 

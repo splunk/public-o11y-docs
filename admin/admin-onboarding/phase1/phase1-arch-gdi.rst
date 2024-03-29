@@ -35,7 +35,7 @@ See :new-page:`https://opentelemetry.io/docs/concepts/`.
 Create an architecture prototype
 ==========================================================
 
-Create a prototype architecture solution for Splunk Observability Cloud in your organization. Do the the following to create a prototype:
+Create a prototype architecture solution for Splunk Observability Cloud in your organization. Do the following to create a prototype:
 
 1. Get familiar with setting up and connecting applications to Splunk Observability Cloud. Set up an initial OpenTelemetry Collector onto 1 of the commonly used platforms, such as a VM instance or a Kubernetes cluster. 
 
@@ -63,7 +63,7 @@ Analyze your required network communication
 
 Analyze your required network communication. This includes determining what talks to what, which ports need to be open, which protocols to use, and proxy considerations. 
 
-See :ref:`otel-exposed-endpoints` to determine which ports need to open in the firewall and what protocols need to be turned on or off in the Collector. 
+See :ref:`otel-exposed-endpoints` to determine which ports you need to open in the firewall and what protocols you need to turn on or off in the Collector. 
 
 If your organization requires a proxy, see :ref:`allow-services`.
 
@@ -74,9 +74,9 @@ Analyze how to collect metrics from cloud providers
 
 To monitor a cloud-based host, install the Splunk OTel collector on each host to send host metrics to Splunk Observability Cloud. Use the Cloud providers' filters to refine what data you bring in to Splunk Observability Cloud. You can limit the host metrics you send by excluding specific metrics that you don't need to monitor from the cloud provider. Excluding metrics from being consumed offers the following advantages:
 
-* Controls which host is monitored, instead of all hosts.
-* Retrieves advanced metrics without incurring extra cost.
-* Allows you to send metrics at a higher frequency without incurring extra cost, such as every 10 seconds (default) instead of every 5 minutes or more, which is the typical default for cloud providers. 
+* You can control which host you monitor, instead of all hosts.
+* You can retrieve advanced metrics without incurring extra cost.
+* You can send metrics at a higher frequency without incurring extra cost, such as every 10 seconds (default) instead of every 5 minutes or more, which is the typical default for cloud providers. 
 
 See :ref:`get-started-connect` and :ref:`otel_deployments`.
 
@@ -90,7 +90,7 @@ The OpenTelemetry Collector automatically reads and detects different types of h
 
 The OpenTelemetry Collector adds dimensions, metric tags, and span attributes (also known as tags). The most common metadata entry is the name of the host, which can come from different sources with different names. See :ref:`metrics-dimensions-mts` for details on the metadata the collector adds. 
 
-To retrieve the metadata, use the resource detection processor in the pipeline section of the OpenTelemetry Agent Configuration. The resource detection processor allows you to modify your metadata as needed. 
+To retrieve and modify your metadata, use the resource detection processor in the pipeline section of the OpenTelemetry Agent Configuration. 
 
 Before installing the OpenTelemetry Collector on a host, verify the resource detection module inside the configuration file of the OpenTelemetry Collector matches the preferred metadata source. The order determines which of the sources are used. See :ref:`resourcedetection-processor`.
 
@@ -123,7 +123,7 @@ See :ref:`instrument-applications`.
 
 .. _phase1-zero-config:
 
-(Optional) Consider the Zero Configuration Auto Instrumentation
+(Optional) Consider using Zero Configuration Auto Instrumentation
 ====================================================================================================
 
 If you are deploying numerous similar services written in Java, .NET, or Node.js, you can deploy the OpenTelemetry collector and enable the Zero Configuration for Auto Instrumentation. Use zero config if you don't have access to the source code or the ability to change the deployment. 
@@ -155,7 +155,7 @@ Review the default dashboards and detectors
 
 Splunk Observability Cloud automatically adds built-in-dashboards for each integration you use once it ingests 50,000 data points. Review these built-in dashboards when they are available.
 
-Splunk Observability Cloud also automatically adds the AutoDetect detectors that correspond to the integrations you are using. You can copy the auto-detect detectors and customize them.
+Splunk Observability Cloud also automatically adds the AutoDetect detectors that correspond to the integrations you are using. You can copy the AutoDetect detectors and customize them.
 
 See :ref:`dashboards` and :ref:`autodetect`. 
 
