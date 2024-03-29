@@ -389,20 +389,6 @@ Command line arguments take precedence over environment variables. This applies 
        # Semantic versioning is a formal convention for determining the version
        # number of new software releases.
 
-If the custom configuration includes a ``memory_limiter`` processor, then the ``ballast_size_mib`` parameter should be the same as the ``SPLUNK_BALLAST_SIZE_MIB`` environment variable. For example:
-
-.. code-block:: bash
-
-   extensions:
-     memory_ballast:
-     # In general, the ballast should be set to 1/3 of the Collector's memory.
-     # The ballast is a large allocation of memory that provides stability to the heap.
-     # The limit should be 90% of the Collector's memory.
-     # Specify the ballast size by setting the value of the 
-     # SPLUNK_BALLAST_SIZE_MIB env variable.
-     # The total memory size must be more than 99 MiB for the Collector to start.
-        size_mib: ${SPLUNK_BALLAST_SIZE_MIB}
-
 Use the following configuration to collect and log CPU metrics. The ``cat`` command assigns the ``CONFIG_YAML`` parameter to the YAML. The ``docker run`` command expands and assigns the parameter ``CONFIG_YAML`` to the environment variable ``SPLUNK_CONFIG_YAML``. Note that YAML requires whitespace indentation to be maintained.
 
 .. code-block:: bash
