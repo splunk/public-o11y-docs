@@ -382,42 +382,42 @@ The annotation you set depends on the language runtime you're using. You can set
             
             .. tab:: ``linux-musl-x64``
 
-                Given the following deployment YAML on a ``linux-x64`` runtime environment:
+                Given the following deployment YAML on a ``linux-musl-x64`` runtime environment:
 
                 .. code-block:: yaml
 
                     apiVersion: apps/v1
                     kind: Deployment
                     metadata:
-                    name: my-dotnet-app
-                    namespace: monitoring
+                      name: my-dotnet-app
+                      namespace: monitoring
                     spec:
-                    template:
+                      template:
                         spec:
-                        containers:
-                        - name: my-dotnet-app
-                            image: my-dotnet-app:latest
+                          containers:
+                           - name: my-dotnet-app
+                             image: my-dotnet-app:latest
 
                 Activate auto instrumentation by adding ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-musl-x64"`` and ``instrumentation.opentelemetry.io/inject-dotnet: "monitoring/splunk-otel-collector"`` to the ``spec``:
 
                 .. code-block:: yaml
-                :emphasize-lines: 10,11
+                  :emphasize-lines: 10,11
 
                     apiVersion: apps/v1
                     kind: Deployment
                     metadata:
-                    name: my-dotnet-app
-                    namespace: monitoring
+                      name: my-dotnet-app
+                      namespace: monitoring
                     spec:
                     template:
-                        metadata:
+                      metadata:
                         annotations:
                             instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-musl-x64"
                             instrumentation.opentelemetry.io/inject-dotnet: "monitoring/splunk-otel-collector"
-                        spec:
+                      spec:
                         containers:
                         - name: my-dotnet-app
-                            image: my-dotnet-app:latest
+                          image: my-dotnet-app:latest
 
     .. tab:: Node.js
 
