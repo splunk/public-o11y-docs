@@ -237,99 +237,99 @@ If your recording contains unsupported steps, you need to edit the step to refor
 .. tabs:: 
 
 
- .. tab:: ``waitForElement``:
+      .. tab:: ``waitForElement``:
 
-          .. code-block:: javascript
+               .. code-block:: javascript
 
-              {
-                            // Google Chrome Recorder
-                  "type": "waitForElement",
-                  "selectors": [
-                     [
-                        "body",
-                        "#homepage_example",
-                        ".css-4t2fjl",
-                        ".eanm77i0"
-                     ]
-                  ]
-                  }
+                  {
+                                 // Google Chrome Recorder
+                        "type": "waitForElement",
+                        "selectors": [
+                           [
+                              "body",
+                              "#homepage_example",
+                              ".css-4t2fjl",
+                              ".eanm77i0"
+                           ]
+                        ]
+                        }
 
- .. tab:: ``assert_element_present``:
+      .. tab:: ``assert_element_present``:
 
-          .. code-block:: javascript
+               .. code-block:: javascript
 
-              {
-              // Splunk Synthetic Monitoring code snippet 
-                  "name": "",
-                  "type": "assert_element_present",
-                  "wait_for_nav": false,
-                  "selector_type": "css",
-                  "selector": "body,#homepage_example, .css-4t2fjl, .eanm77i0"
-               }
-
-
-.. tabs:: 
-
-
- .. tab:: ``waitForElement`` visible false:
-         
-         .. code-block:: javascript
-
-            {
-                          // Google Chrome Recorder
-               "type": "waitForElement",
-               "selectors": [
-                  [
-                     "body",
-                     "#homepage_product_brand-example",
-                     ".css-4t2fjl",
-                     ".eanm77i0"
-                  ]
-               ],
-               "visible": false
-            }
-
- .. tab:: ``assert_element_not_present``:
-      
-         .. code-block:: javascript
-
-              {
-              // Splunk Synthetic Monitoring code snippet 
-                  "name": "",
-                  "type": "assert_element_not_present",
-                  "wait_for_nav": false,
-                  "selector_type": "css",
-                  "selector": "body,#homepage_product_brand-example"
-                  }
+                  {
+                  // Splunk Synthetic Monitoring code snippet 
+                        "name": "",
+                        "type": "assert_element_present",
+                        "wait_for_nav": false,
+                        "selector_type": "css",
+                        "selector": "body,#homepage_example, .css-4t2fjl, .eanm77i0"
+                     }
 
 
 .. tabs:: 
 
 
- .. tab:: ``customStep``:      
-         .. code-block:: javascript
+      .. tab:: ``waitForElement`` visible false:
+               
+               .. code-block:: javascript
 
-            {
-                          // Google Chrome Recorder
-               "type": "customStep",
-               "timeout": 5000,
-               "target": "main",
-               "name": "customParam",
-               "parameters": {}
-            }
+                  {
+                              // Google Chrome Recorder
+                     "type": "waitForElement",
+                     "selectors": [
+                        [
+                           "body",
+                           "#homepage_product_brand-example",
+                           ".css-4t2fjl",
+                           ".eanm77i0"
+                        ]
+                     ],
+                     "visible": false
+                  }
+
+      .. tab:: ``assert_element_not_present``:
+            
+               .. code-block:: javascript
+
+                  {
+                  // Splunk Synthetic Monitoring code snippet 
+                        "name": "",
+                        "type": "assert_element_not_present",
+                        "wait_for_nav": false,
+                        "selector_type": "css",
+                        "selector": "body,#homepage_product_brand-example"
+                        }
 
 
-  .. tab:: ``run_javascript``:
+.. tabs:: 
 
-         .. code-block:: javascript
 
-            {
-            // Splunk Synthetic Monitoring code snippet 
-               "name": "Unsupported step customStep",
-               "type": "run_javascript",
-               "value": "",
-               "wait_for_nav": false
-            }
+      .. tab:: ``customStep``:      
+               .. code-block:: javascript
+
+                  {
+                              // Google Chrome Recorder
+                     "type": "customStep",
+                     "timeout": 5000,
+                     "target": "main",
+                     "name": "customParam",
+                     "parameters": {}
+                  }
+
+
+      .. tab:: ``run_javascript``:
+
+               .. code-block:: javascript
+
+                  {
+                  // Splunk Synthetic Monitoring code snippet 
+                     "name": "Unsupported step customStep",
+                     "type": "run_javascript",
+                     "value": "",
+                     "wait_for_nav": false
+                  }
 
 
                   
