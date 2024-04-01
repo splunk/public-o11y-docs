@@ -83,6 +83,41 @@ If your recording contains unsupported steps, you need to edit the step to refor
 
 
 
+
+.. tabs:: 
+
+       .. tab:: navigate
+
+          .. code-block:: javascript
+
+             {
+              // Google Chrome Recorder
+               "type": "navigate",
+               "url": "www.buttercupgames.com",
+               "assertedEvents": [
+                  {
+                     "type": "navigation",
+                     "url": "www.buttercupgames.com",
+                     "title": "Buttercup Games"
+                  }
+               ]
+               }
+
+       .. tab:: go_to_url
+
+          .. code-block:: javascript
+
+               {
+               // Splunk Synthetic Monitoring code snippet 
+               "name": "Go to URL",
+               "type": "go_to_url",
+               "url": "www.buttercupgames.com",
+               "wait_for_nav": true
+               }
+
+
+               
+
 .. list-table::
    :header-rows: 1
    :widths: 50 50 
