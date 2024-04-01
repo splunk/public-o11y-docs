@@ -78,15 +78,13 @@ Follow these steps to import a JSON file from Google Chrome Recorder to a new or
 
 
 Troubleshoot unsupported steps
-------------------------------------------
+=======================================
 If your recording contains unsupported steps, you need to edit the step to reformat it into one of the supported Synthetic Browser step types. The following table shows how Google Chrome Recorder step names and code snippets map to their counterparts in Splunk Synthetic Browser tests. These examples use Buttercup Games, a fictitious game company.
-
-
 
 
 .. tabs:: 
 
-       .. tab:: navigate
+       .. tab:: ``navigate``
 
           .. code-block:: javascript
 
@@ -103,7 +101,7 @@ If your recording contains unsupported steps, you need to edit the step to refor
                ]
                }
 
-       .. tab:: go_to_url
+       .. tab:: ``go_to_url``
 
           .. code-block:: javascript
 
@@ -115,74 +113,41 @@ If your recording contains unsupported steps, you need to edit the step to refor
                "wait_for_nav": true
                }
 
+.. tabs:: 
 
-               
+       .. tab:: ``click`` with resulting navigation
 
-.. list-table::
-   :header-rows: 1
-   :widths: 50 50 
-   :class: fix-width
-
-   * - :strong:`Google Chrome Recorder snippet`
-     - :strong:`Synthetic snippet`
-
-   * - ``navigate``:
-
-         .. code-block:: javascript
+          .. code-block:: javascript
 
                {
-               "type": "navigate",
-               "url": "www.buttercupgames.com",
-               "assertedEvents": [
-                  {
-                     "type": "navigation",
-                     "url": "www.buttercupgames.com",
-                     "title": "Buttercup Games"
-                  }
-               ]
-               }
-
-     - ``go_to_url`` :
-     
-         .. code-block:: javascript
-
-               {
-               "name": "Go to URL",
-               "type": "go_to_url",
-               "url": "www.buttercupgames.com",
-               "wait_for_nav": true
-               }
-
-   * - ``click`` with resulting navigation:
-
-         .. code-block:: javascript
-
-               {
-               "type": "click",
-               "target": "main",
-               "selectors": [
-                  [
-                     "div:nth-of-type(2) > div:nth-of-type(2) a > div"
+               // Google Chrome Recorder
+                  "type": "click",
+                  "target": "main",
+                  "selectors": [
+                     [
+                        "div:nth-of-type(2) > div:nth-of-type(2) a > div"
+                     ],
+                     [
+                        "xpath//html/body/main/div/div/div[2]/div[2]/div/a/div"
+                     ]
                   ],
-                  [
-                     "xpath//html/body/main/div/div/div[2]/div[2]/div/a/div"
+                  "offsetY": 211,
+                  "offsetX": 164,
+                  "assertedEvents": [
+                     {
+                        "type": "navigation",
+                        "url": "www.buttercupgames.com/product/example",
+                        "title": "Buttercup Games"
+                     }
                   ]
-               ],
-               "offsetY": 211,
-               "offsetX": 164,
-               "assertedEvents": [
-                  {
-                     "type": "navigation",
-                     "url": "www.buttercupgames.com/product/example",
-                     "title": "Buttercup Games"
-                  }
-               ]
+               }
+       .. tab:: ``click_element`` with resulting navigation:
 
-     - ``click_element`` with resulting navigation:
+          .. code-block:: javascript
 
-         .. code-block:: javascript
+              {
+               // Splunk Synthetic Monitoring code snippet 
 
-               {
                   "name": "",
                   "type": "click_element",
                   "selector_type": "css",
@@ -190,12 +155,18 @@ If your recording contains unsupported steps, you need to edit the step to refor
                   "wait_for_nav": true
                }
 
-   * - ``click`` without resulting navigation:
 
-         .. code-block:: javascript
 
-               {
-               "type": "click",
+
+.. tabs:: 
+
+       .. tab:: ``click`` without resulting navigation:
+
+          .. code-block:: javascript
+
+             {
+              // Google Chrome Recorder
+              "type": "click",
                "target": "main",
                "selectors": [
                   [
@@ -208,15 +179,16 @@ If your recording contains unsupported steps, you need to edit the step to refor
                "offsetY": 211,
                "offsetX": 164,
                "assertedEvents": []
+              
                }
 
+       .. tab:: ``click_element`` without resulting navigation:
 
-
-     - ``click_element`` without resulting navigation:
-
-         .. code-block:: javascript
-
+          .. code-block:: javascript
+           
                {
+                  // Splunk Synthetic Monitoring code snippet 
+
                   "name": "",
                   "type": "click_element",
                   "selector_type": "css",
@@ -224,11 +196,14 @@ If your recording contains unsupported steps, you need to edit the step to refor
                   "wait_for_nav": false
                }
 
-   * - ``change``:
+.. tabs:: 
 
-         .. code-block:: javascript
+       .. tab:: ``change``:
 
-               {
+          .. code-block:: javascript
+           
+             {
+              // Google Chrome Recorder
                   "type": "change",
                   "value": "5",
                   "selectors": [
@@ -242,26 +217,32 @@ If your recording contains unsupported steps, you need to edit the step to refor
                   "target": "main"
                   }
 
+      .. tab:: ``enter_value``:
 
-     - ``enter_value``:
+               .. code-block:: javascript
 
-         .. code-block:: javascript
+                  {
+                  // Splunk Synthetic Monitoring code snippet 
+                        "name": "",
+                        "type": "enter_value",
+                        "selector_type": "id",
+                        "selector": "quantity",
+                        "option_selector_type": "index",
+                        "option_selector": "5",
+                        "wait_for_nav": false
+                        }
+
+
+
+.. tabs:: 
+
+
+ .. tab:: ``waitForElement``:
+
+          .. code-block:: javascript
 
               {
-                  "name": "",
-                  "type": "enter_value",
-                  "selector_type": "id",
-                  "selector": "quantity",
-                  "option_selector_type": "index",
-                  "option_selector": "5",
-                  "wait_for_nav": false
-                  }
-
-   * - ``waitForElement``:
-
-         .. code-block:: javascript
-
-              {
+                            // Google Chrome Recorder
                   "type": "waitForElement",
                   "selectors": [
                      [
@@ -273,13 +254,12 @@ If your recording contains unsupported steps, you need to edit the step to refor
                   ]
                   }
 
+ .. tab:: ``assert_element_present``:
 
-
-     - ``assert_element_present``:
-
-         .. code-block:: javascript
+          .. code-block:: javascript
 
               {
+              // Splunk Synthetic Monitoring code snippet 
                   "name": "",
                   "type": "assert_element_present",
                   "wait_for_nav": false,
@@ -287,11 +267,16 @@ If your recording contains unsupported steps, you need to edit the step to refor
                   "selector": "body,#homepage_example, .css-4t2fjl, .eanm77i0"
                }
 
-   * - ``waitForElement`` visible false:
 
+.. tabs:: 
+
+
+ .. tab:: ``waitForElement`` visible false:
+         
          .. code-block:: javascript
 
             {
+                          // Google Chrome Recorder
                "type": "waitForElement",
                "selectors": [
                   [
@@ -304,23 +289,28 @@ If your recording contains unsupported steps, you need to edit the step to refor
                "visible": false
             }
 
-
-     - ``assert_element_not_present``:
-
+ .. tab:: ``assert_element_not_present``:
+      
          .. code-block:: javascript
 
               {
+              // Splunk Synthetic Monitoring code snippet 
                   "name": "",
                   "type": "assert_element_not_present",
                   "wait_for_nav": false,
                   "selector_type": "css",
                   "selector": "body,#homepage_product_brand-example"
                   }
-   * - ``customStep``:
 
+
+.. tabs:: 
+
+
+ .. tab:: ``customStep``:      
          .. code-block:: javascript
 
             {
+                          // Google Chrome Recorder
                "type": "customStep",
                "timeout": 5000,
                "target": "main",
@@ -329,16 +319,242 @@ If your recording contains unsupported steps, you need to edit the step to refor
             }
 
 
-     - ``run_javascript``:
+  .. tab:: ``run_javascript``:
 
          .. code-block:: javascript
 
             {
+            // Splunk Synthetic Monitoring code snippet 
                "name": "Unsupported step customStep",
                "type": "run_javascript",
                "value": "",
                "wait_for_nav": false
             }
+
+
+                  
+..
+   .. list-table::
+      :header-rows: 1
+      :widths: 50 50 
+      :class: fix-width
+
+      * - :strong:`Google Chrome Recorder snippet`
+      - :strong:`Synthetic snippet`
+
+      * - ``navigate``:
+
+            .. code-block:: javascript
+
+                  {
+                  "type": "navigate",
+                  "url": "www.buttercupgames.com",
+                  "assertedEvents": [
+                     {
+                        "type": "navigation",
+                        "url": "www.buttercupgames.com",
+                        "title": "Buttercup Games"
+                     }
+                  ]
+                  }
+
+      - ``go_to_url`` :
+      
+            .. code-block:: javascript
+
+                  {
+                  "name": "Go to URL",
+                  "type": "go_to_url",
+                  "url": "www.buttercupgames.com",
+                  "wait_for_nav": true
+                  }
+
+      * - ``click`` with resulting navigation:
+
+            .. code-block:: javascript
+
+                  {
+                  "type": "click",
+                  "target": "main",
+                  "selectors": [
+                     [
+                        "div:nth-of-type(2) > div:nth-of-type(2) a > div"
+                     ],
+                     [
+                        "xpath//html/body/main/div/div/div[2]/div[2]/div/a/div"
+                     ]
+                  ],
+                  "offsetY": 211,
+                  "offsetX": 164,
+                  "assertedEvents": [
+                     {
+                        "type": "navigation",
+                        "url": "www.buttercupgames.com/product/example",
+                        "title": "Buttercup Games"
+                     }
+                  ]
+
+      - ``click_element`` with resulting navigation:
+
+            .. code-block:: javascript
+
+                  {
+                     "name": "",
+                     "type": "click_element",
+                     "selector_type": "css",
+                     "selector": "div:nth-of-type(2) > div:nth-of-type(2) a > div",
+                     "wait_for_nav": true
+                  }
+
+      * - ``click`` without resulting navigation:
+
+            .. code-block:: javascript
+
+                  {
+                  "type": "click",
+                  "target": "main",
+                  "selectors": [
+                     [
+                        "div:nth-of-type(2) > div:nth-of-type(2) a > div"
+                     ],
+                     [
+                        "xpath//html/body/main/div/div/div[2]/div[2]/div/a/div"
+                     ]
+                  ],
+                  "offsetY": 211,
+                  "offsetX": 164,
+                  "assertedEvents": []
+                  }
+
+
+
+      - ``click_element`` without resulting navigation:
+
+            .. code-block:: javascript
+
+                  {
+                     "name": "",
+                     "type": "click_element",
+                     "selector_type": "css",
+                     "selector": "div:nth-of-type(2) > div:nth-of-type(2) a > div",
+                     "wait_for_nav": false
+                  }
+
+      * - ``change``:
+
+            .. code-block:: javascript
+
+                  {
+                     "type": "change",
+                     "value": "5",
+                     "selectors": [
+                        [
+                           "#quantity"
+                        ],
+                        [
+                           "xpath///*[@id=\"quantity\"]"
+                        ]
+                     ],
+                     "target": "main"
+                     }
+
+
+      - ``enter_value``:
+
+            .. code-block:: javascript
+
+               {
+                     "name": "",
+                     "type": "enter_value",
+                     "selector_type": "id",
+                     "selector": "quantity",
+                     "option_selector_type": "index",
+                     "option_selector": "5",
+                     "wait_for_nav": false
+                     }
+
+      * - ``waitForElement``:
+
+            .. code-block:: javascript
+
+               {
+                     "type": "waitForElement",
+                     "selectors": [
+                        [
+                           "body",
+                           "#homepage_example",
+                           ".css-4t2fjl",
+                           ".eanm77i0"
+                        ]
+                     ]
+                     }
+
+
+
+      - ``assert_element_present``:
+
+            .. code-block:: javascript
+
+               {
+                     "name": "",
+                     "type": "assert_element_present",
+                     "wait_for_nav": false,
+                     "selector_type": "css",
+                     "selector": "body,#homepage_example, .css-4t2fjl, .eanm77i0"
+                  }
+
+      * - ``waitForElement`` visible false:
+
+            .. code-block:: javascript
+
+               {
+                  "type": "waitForElement",
+                  "selectors": [
+                     [
+                        "body",
+                        "#homepage_product_brand-example",
+                        ".css-4t2fjl",
+                        ".eanm77i0"
+                     ]
+                  ],
+                  "visible": false
+               }
+
+
+      - ``assert_element_not_present``:
+
+            .. code-block:: javascript
+
+               {
+                     "name": "",
+                     "type": "assert_element_not_present",
+                     "wait_for_nav": false,
+                     "selector_type": "css",
+                     "selector": "body,#homepage_product_brand-example"
+                     }
+      * - ``customStep``:
+
+            .. code-block:: javascript
+
+               {
+                  "type": "customStep",
+                  "timeout": 5000,
+                  "target": "main",
+                  "name": "customParam",
+                  "parameters": {}
+               }
+
+
+      - ``run_javascript``:
+
+            .. code-block:: javascript
+
+               {
+                  "name": "Unsupported step customStep",
+                  "type": "run_javascript",
+                  "value": "",
+                  "wait_for_nav": false
+               }
 
    
 
