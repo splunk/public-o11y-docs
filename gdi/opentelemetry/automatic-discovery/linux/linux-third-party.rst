@@ -7,6 +7,8 @@ Automatic discovery and configuration for third-party applications in Linux
 .. meta:: 
     :description: Learn how to use automatic discovery and configuration to gather data from third-party applications running in Linux environments.
 
+.. note:: Update the Collector to version 0.94.0 and higher to activate automatic service discovery.
+
 .. intro paragraph
 
 How automatic discovery works

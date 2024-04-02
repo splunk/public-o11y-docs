@@ -7,6 +7,8 @@ Automatic discovery and configuration for third-party applications in Kubernetes
 .. meta:: 
     :description: Learn how to use automatic discovery and configuration to send data from your third-party applications in Kubernetes to Splunk Observability Cloud.
 
+.. note:: Update the Collector to version 0.94.0 and higher to activate automatic service discovery.
+
 .. intro paragraph
 
 How automatic discovery works

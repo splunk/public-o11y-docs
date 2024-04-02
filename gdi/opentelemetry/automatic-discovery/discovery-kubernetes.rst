@@ -24,7 +24,7 @@ Using automatic discovery for Kubernetes, you can find language runtimes and thi
 
     <h2>Applications</h2>
 
-Automatic discovery for Kubernetes supports both back-end applications (such as Java and Node.js) as well as third-party applications.
+Automatic discovery for Kubernetes supports both back-end applications (such as Java and Node.js) as well as third-party applications (such as databases, web servers, and message queues).
 
 To use automatic discovery for back-end applications, see :ref:`k8s-backend-auto-discovery`. 
 
