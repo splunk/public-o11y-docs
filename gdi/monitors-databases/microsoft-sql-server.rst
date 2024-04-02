@@ -91,7 +91,7 @@ configuration:
 
    receivers:
      smartagent/sqlserver:
-        type: telegraf/sqserver
+        type: telegraf/sqlserver
         host: <host_name>
         port: 1433
         userID: <user_id>
