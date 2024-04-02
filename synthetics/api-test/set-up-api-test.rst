@@ -23,20 +23,22 @@ Follow these steps to set up an API test:
 
 .. _api-test-steps:
 
+Custom properties
+----------------------
+Add custom properties in the test creation page in advanced settings. Use key:value pairs to create custom properties to filter and group dashboards, charts, and create alerts. A list of suggested custom properties is available for each test based on the tags associated with your test. For example: ``env:test``, ``role:developer``, ``product:rum``. When you have multiple key:value pairs the logic is AND among the results. So in this case, the results show all tests for the RUM product with a developer role in the environment test. 
 
-..
-        Custom properties 
-        --------------------
-        Custom properties are key-value pairs you can assign to dimensions of existing MTSes after ingest. Custom properties are single-valued and don’t support multiple values, like ``region:northamerica`` or ``environment:prod``.
 
-        Key requirements:
+Custom properties are single-valued and don’t support multiple values, like ``region:northamerica`` or ``environment:prod``. For each test, you can only use one and unique key, for example you can have ``env1:test`` and ``env:test`` in the same test, but you can't have ``env:test``, and ``env:prod``. 
 
-        * Keys must start with an uppercase or lowercase letter. Keys can't start with special characters or numbers. 
-        * The remainder of the key can contain letters, numbers, underscores and hyphens.
-        * Keys can’t be named test_id or test.
-        * Key size can't exceed 128 characters. 
 
-        See, :ref:`custom-properties`. 
+Key requirements:
+
+   * Keys must start with an uppercase or lowercase letter. Keys can't start with special characters or numbers. 
+   * The remainder of the key can contain letters, numbers, underscores and hyphens.
+   * Keys can’t be named ``test_id`` or ``test``.
+   * Key size can't exceed 128 characters. 
+
+   See, :ref:`custom-properties`. 
 
 
 Add requests to your API test
