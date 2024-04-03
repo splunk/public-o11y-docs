@@ -15,25 +15,8 @@
 
 The SignalFx Instrumentation for .NET automatically instruments .NET applications, Windows services running .NET applications, ASP.NET applications deployed on IIS, and Azure App Service applications.
 
-To get started, use the guided setup or follow the instructions manually.
+To get started, follow the instructions to install the SignalFx Instrumentation for .NET manually.
 
-Generate customized instructions using the guided setup
-===================================================================
-
-To generate all the basic installation commands for your environment and application, use the .NET guided setup. To access the .NET guided setup, follow these steps:
-
-#. Log in to Splunk Observability Cloud.
-#. Open the :new-page:`.NET guided setup <https://login.signalfx.com/#/gdi/scripted/dotnet-tracing/step-1?category=product-apm&gdiState=%7B"integrationId":"dotnet-tracing"%7D>`. Optionally, you can navigate to the guided setup on your own:
-
-   #. In the navigation menu, select :menuselection:`Data Management`.
-
-   #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
-
-   #. In the integration filter menu, select :guilabel:`By Product`.
-
-   #. Select the :guilabel:`APM` product.
-
-   #. Select the :guilabel:`.NET` tile to open the .NET guided setup.
 
 Install the SignalFx Instrumentation for .NET manually
 ==================================================================
