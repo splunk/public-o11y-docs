@@ -9,7 +9,7 @@ Link APM services, traces, and spans to relevant resources
 
 Create global data links to link Splunk APM properties, such as services, traces, spans, and span tags, to relevant resources. For example, you can link APM properties to Infrastructure Monitoring dashboards, Splunk instances, Kibana logs, or custom URLs.
 
-Global data links are also useful because they can dynamically transfer contextual information about the property you're viewing to the linked resource, helping you get to relevant information faster.
+You can also use global data links to dynamically transfer contextual information about the property you're viewing to the linked resource, helping you get to relevant information faster.
 
 For information about how to access global data links, see :ref:`apm-use-data-links`.
 
@@ -17,14 +17,14 @@ For information about how to access global data links, see :ref:`apm-use-data-li
 Prerequisite
 ================
 
-To create global data links, tou must have the admin role. 
+To create global data links, you must have the admin role. 
 
 .. _apm-data-links-parameters:
 
 Parameters to create global data links for APM properties
 ============================================================
 
-When you create a global data link for an APM property, you can transfer the property's context parameter values to dashboards and custom URLs. Here are the APM properties and their context parameters.
+When you create a global data link for an APM property, you can transfer the context parameter values for the property to dashboards and custom URLs. Here are the APM properties and their context parameters.
 
 .. list-table::
    :header-rows: 1
@@ -59,15 +59,15 @@ When you create a global data link for an APM property, you can transfer the pro
 Link APM properties to Splunk Infrastructure Monitoring dashboards
 =====================================================================
 
-You can create a global data link that passes information about APM services, traces, and spans to custom dashboards available in Splunk Observability Cloud. When you select a global data link to an Infrastructure Monitoring dashboard, the entire context of the property you were viewing transfers to the dashboard. For example, if you were viewing a service, the global data link transfers information about any endpoints you filtered for, including any filters for selected endpoints, the selected environment or environments, and any tags you filtered for within the selected time range to the dashboard.
+You can create a global data link that passes information about APM services, traces, and spans to custom dashboards available in Splunk Observability Cloud. When you select a global data link to an Infrastructure Monitoring dashboard, the entire context of the property you were viewing transfers to the dashboard. For example, if you were viewing a service, the global data link transfers information about any endpoints you filtered for, the selected environments, and any tags you filtered for within the selected time range to the dashboard.
 
-The following task describes how to create a global data link for a service that links to an Infrastructure Monitoring dashboard. You can set up a global data link for any service, or a specific service.
+The following task describes how to create a global data link for a service that links to an Infrastructure Monitoring dashboard. You can set up a global data link for any service or a specific service.
 
-#. In the Observability Cloud main menu, select :guilabel:`Settings` > :guilabel:`Global Data Links`.
+#. In the Splunk Observability Cloud main menu, select :guilabel:`Settings` then :guilabel:`Global Data Links`.
 #. Select :strong:`New Link`.
 #. Enter a :strong:`Link Label`. This is what you select when you want to use the global data link to drill down into a specific service. For example, you might enter :strong:`Trace Ingest Dashboard`.
-#. For :strong:`Show On`, select :strong:`Any Value of` and enter :strong:`sf_service` to associate the global data link with every service. If you want to create the global data link for a specific service, select :strong:`Property:Value Pair` instead and enter :strong:`sf_service:<yourServiceName>` for the service you want to create the global data link for.
-#. If you want the global data link to display based on the :strong:`Show On` value and one or more additional conditions, select :strong:`Add Conditions`. To define a condition based on a property name, select :strong:`Any Value of` and enter a property name. To define a condition based on a property name and a specific value, select :strong:`Property:Value Pair` and enter a property name and value pair. If you define multiple conditions, all conditions must be met for the link to display.
+#. For :strong:`Show On`, select :strong:`Any Value of` and enter :strong:`sf_service` to associate the global data link with every service. If you want to create the global data link for a specific service, select :strong:`Property:Value Pair` and enter :strong:`sf_service:<yourServiceName>` for the service you want to create the global data link for.
+#. If you want the global data link to display based on the :strong:`Show On` value and 1 or more additional conditions, select :strong:`Add Conditions`. To define a condition based on a property name, select :strong:`Any Value of` and enter a property name. To define a condition based on a property name and a specific value, select :strong:`Property:Value Pair` and enter a property name and value pair. If you define multiple conditions, all conditions must be met for the link to display.
 #. Select :strong:`Choose Dashboard` and select the dashboard you want to associate with the global data link.
 #. Select :strong:`Save`. When you view a service that matches the :strong:`Show On` value, you can carry the entire context of the service to the dashboard.
 
@@ -83,7 +83,7 @@ Create a global data link for each APM property that you want to connect to logs
 
 The following task describes how to create a global data link for a trace ID. The global data link runs a Splunk search query for log events that include a specific trace ID in a Splunk instance. The process is the same for creating a global data link for a service, span ID, or span tag: use a :strong:`Show On` value for the property you want to create a global data link for.
 
-#. In the Observability Cloud main menu, select :guilabel:`Settings` > :guilabel:`Global Data Links`.
+#. In the Splunk Observability Cloud main menu, select :guilabel:`Settings` then :guilabel:`Global Data Links`.
 #. Select :strong:`New Link`.
 #. Enter a :strong:`Link Label`. This is what you select when you want to use the global data link to drill down into a specific trace ID. For example, you might enter :strong:`Splunk Cloud Platform Search`.
 #. For :strong:`Link to`, select :strong:`Splunk`.
@@ -104,7 +104,7 @@ You can create a global data link that passes information about an APM service, 
 
 The following task describes how to create a global data link for a log filter in Kibana for a selected trace ID. You can also filter on other APM properties: use a :strong:`Show On` value for the property you want to create a global data link for.
 
-#. Open the Observability Cloud main menu.
+#. Open the Splunk Observability Cloud main menu.
 #. Hover over :guilabel:`Data Configuration` and select :guilabel:`Global Data Links`.
 #. Select :strong:`New Link`.
 #. Enter a :strong:`Link Label`. This is what you select when you want to use the global data link to drill down into a specific trace ID. For example, you might enter :strong:`Kibana filter`.
@@ -121,11 +121,16 @@ The following task describes how to create a global data link for a log filter i
 Transfer APM context in a custom URL
 =======================================
 
-You can create a global data link that passes information about an APM service, trace, or span to a custom URL. For parameters that you can use to transfer context in custom URLs, see :ref:`apm-data-links-parameters`.
+You can create a global data link that passes information about an APM service, trace, or span to a custom URL. 
 
-For example, you can specify a custom URL like this one to transfer the context of a service to a URL: :code:`https://www.example.com/search/?field={{key}}&value={{value}}&service={{properties.sf_service}}&st={{start_time}}&et={{end_time}}`.
+For example, you can specify a custom URL like this to transfer the context of a service to a URL: :code:`https://www.example.com/search/?field={{key}}&value={{value}}&service={{properties.sf_service}}&st={{start_time}}&et={{end_time}}`.
 
-For more information about creating global data links to a custom URL, see :ref:`link-metadata-to-content`.
+Learn more
+---------------
+
+* For detailed steps for creating global data links to a custom URL, see :ref:`link-metadata-to-content`.
+* See an :ref:`example-global-data-link-config`.
+* For parameters that you can use to transfer context in custom URLs, see :ref:`apm-data-links-parameters`. 
 
 
 .. _apm-data-link-inferred-service:
@@ -135,4 +140,4 @@ Link databases and inferred services to Infrastructure Monitoring dashboards
 
 Create a global data link specifically for a single inferred service to associate a dashboard with the inferred service as the top-ranked dashboard. The top-ranked dashboard is the :strong:`View Dashboard` option in the :strong:`Monitoring` tab when you view a service from the service list or service map. Triggers for global data links for dashboards that use wildcards (:strong:`*`) for service names can't be top-ranked dashboards for inferred services.
 
-For example, a dashboard associated with a global data link that contains a :strong:`Show On` value of :strong:`sf_service:*` can't be a top-ranked dashboard for an inferred service. To create a global data link that acts as a default dashboard for an inferred service from the :strong:`Monitoring` tab, the :strong:`Show On` value must include the name of the inferred service. For instance, if you are creating a global data link for a default dashboard for the inferred service ``mydb``, the :strong:`Show On` value must be :strong:`sf_service:mydb`.
+For example, a dashboard associated with a global data link that contains a :strong:`Show On` value of ``sf_service:*`` can't be a top-ranked dashboard for an inferred service. To create a global data link that acts as a default dashboard for an inferred service from the :strong:`Monitoring` tab, the :strong:`Show On` value must include the name of the inferred service. For instance, if you are creating a global data link for a default dashboard for the inferred service ``mydb``, the :strong:`Show On` value must be ``sf_service:mydb``.

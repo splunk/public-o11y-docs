@@ -25,18 +25,20 @@ Follow these steps to set up an API test:
 .. _api-test-steps:
 
 
-Custom properties 
---------------------
-Custom properties are key-value pairs you can assign to dimensions of existing MTSes after ingest. Custom properties are single-valued and don’t support multiple values, like ``region:northamerica`` or ``environment:prod``.
+..
+        Custom properties 
+        --------------------
+        Custom properties are key-value pairs you can assign to dimensions of existing MTSes after ingest. Custom properties are single-valued and don’t support multiple values, like ``region:northamerica`` or ``environment:prod``.
 
-Key requirements:
+        Key requirements:
 
-* Keys must start with an uppercase or lowercase letter. Keys can't start with special characters or numbers. 
-* The remainder of the key can contain letters, numbers, underscores and hyphens.
-* Keys can’t be named test_id or test.
-* Key size can't exceed 128 characters. 
+        * Keys must start with an uppercase or lowercase letter. Keys can't start with special characters or numbers. 
+        * The remainder of the key can contain letters, numbers, underscores and hyphens.
+        * Keys can’t be named test_id or test.
+        * Key size can't exceed 128 characters. 
 
-See, :ref:`custom-properties`. 
+        See, :ref:`custom-properties`. 
+
 
 Add requests to your API test
 ------------------------------------

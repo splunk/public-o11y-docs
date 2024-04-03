@@ -433,6 +433,9 @@ br {
     max-height: calc(15px + 100%);
 }
 
+.navbar-brand{
+    margin-top:5px;
+}
 .navbar .container-fluid{
     position:relative;
 }

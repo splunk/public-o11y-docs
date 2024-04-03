@@ -17,7 +17,9 @@ Global data links let you link metadata displayed in Splunk Observability Cloud 
 
 * Kibana logs
 
-In Observability Cloud, metadata (data about your data) includes :ref:`dimensions <metadata-dimension>`, :ref:`properties <custom-properties>`, and :ref:`tags <metadata-infra-tags>`. Metadata displays in the following locations in the product:
+* Splunk RUM 
+
+In Splunk Observability Cloud, metadata (data about your data) includes :ref:`dimensions <metadata-dimension>`, :ref:`properties <custom-properties>`, and :ref:`tags <metadata-infra-tags>`. Metadata displays in the following locations in the product:
 
 * Alerts
 
@@ -41,11 +43,11 @@ In Observability Cloud, metadata (data about your data) includes :ref:`dimension
 
    * Spans
 
-For example, here is a global data link displaying for a host property on a dashboard. The global data link leads to an :strong:`EC2 Cost and Usage` dashboard in Observability Cloud, where the system automatically narrows the dashboard is automatically show data that's relevant to the :strong:`server4` host.
+For example, here is a global data link displaying for a host property on a dashboard. The global data link leads to an :strong:`EC2 Cost and Usage` dashboard in Splunk Observability Cloud, where the system automatically narrows the dashboard is automatically show data that's relevant to the :strong:`server4` host.
 
 .. image:: /_images/admin/gdl-ec2-cost-and-usage.png
   :width: 100%
-  :alt: This screenshot shows a data table displaying a global data link that leads to an EC2 Cost and Usage dashboard in Observability Cloud.
+  :alt: This screenshot shows a data table displaying a global data link that leads to an EC2 Cost and Usage dashboard in Splunk Observability Cloud.
 
 For more examples of global data links displayed in context, see :ref:`access-global-data-link`.
 
@@ -71,11 +73,11 @@ Create a global data link
 
 This procedure describes how to create a global data link for any available metadata using the Global Data Link page.
 
-For information about how to create a global data link using the Observability Cloud API, see the :new-page:`Link Metadata to Related Content <https://dev.splunk.com/observability/docs/administration/datalinks/>` topic in the Observability Cloud Developer Guide.
+For information about how to create a global data link using the Splunk Observability Cloud API, see the :new-page:`Link Metadata to Related Content <https://dev.splunk.com/observability/docs/administration/datalinks/>` topic in the Observability Cloud Developer Guide.
 
 For information about how to create a global data link for Splunk APM properties, see :ref:`apm-create-data-links`.
 
-#. Open the Observability Cloud navigation :strong:`Menu`.
+#. Open the Splunk Observability Cloud navigation :strong:`Menu`.
 
 #. Hover over :strong:`Data Configuration` and select :strong:`Global Data Links`.
 
@@ -133,15 +135,15 @@ For information about how to create a global data link for Splunk APM properties
 
 #. If you select a :strong:`Link to` value of :strong:`Custom URL`, :strong:`Splunk`, or :strong:`Kibana`, the :strong:`Minimum Time Window` field appears. The time window is the interval during which the system captured the chart, dashboard, service map, or trace data. If this interval is shorter than the minimum time window value you select here, the global data link adjusts the start time to an earlier time so the interval is as long as the minimum time window.
 
-#. If you select a :strong:`Link to` value of :strong:`Custom URL`, :strong:`Splunk`, or :strong:`Kibana`, the :strong:`Property mapping` options appear. Use property mapping if your :strong:`URL` value contains Observability Cloud key names and values that are referred to differently in the external system you're linking to.
+#. If you select a :strong:`Link to` value of :strong:`Custom URL`, :strong:`Splunk`, or :strong:`Kibana`, the :strong:`Property mapping` options appear. Use property mapping if your :strong:`URL` value contains Splunk Observability Cloud key names and values that are referred to differently in the external system you're linking to.
 
-    For example, you can use property mapping to map an Observability Cloud key name, such as :strong:`host`, to an external system key name, such as :strong:`hostname`. You can also use property mapping to map an Observability key name, such as :strong:`host`, and key value, such as :strong:`west-internal-123456`, to an external system key name, such as :strong:`hostname`, and key value, such as :strong:`123456-west-int`.
+    For example, you can use property mapping to map a Splunk Observability Cloud key name, such as :strong:`host`, to an external system key name, such as :strong:`hostname`. You can also use property mapping to map an Observability key name, such as :strong:`host`, and key value, such as :strong:`west-internal-123456`, to an external system key name, such as :strong:`hostname`, and key value, such as :strong:`123456-west-int`.
 
-    To use property mapping, select :strong:`Choose a Property` to select an Observability Cloud key name or key name and value pair. Then, enter the external key name or key name and value pair that you want to map to in the :strong:`External Term` field.
+    To use property mapping, select :strong:`Choose a Property` to select a Splunk Observability Cloud key name or key name and value pair. Then, enter the external key name or key name and value pair that you want to map to in the :strong:`External Term` field.
 
 #. Select :strong:`Save`.
 
-Alternatively, here are some other locations in Observability Cloud where you can access the ability to create global data links:
+Alternatively, here are some other locations in Splunk Observability Cloud where you can access the ability to create global data links:
 
 - When you view an alert message that includes data links, select the :guilabel:`More` menu (|more|) next to a data link and select :guilabel:`Configure data links`.
 
@@ -157,7 +159,7 @@ Alternatively, here are some other locations in Observability Cloud where you ca
 Example custom URL global data link configuration
 -------------------------------------------------------
 
-To help illustrate the impact of the field values you enter on the :guilabel:`Global Data Links` page, here's an example configuration for a global data link to a custom URL:
+To illustrate the field values you enter on the :guilabel:`Global Data Links` page, here's an example configuration for a global data link to a custom URL:
 
 .. image:: /_images/admin/gdl-create.png
   :width: 100%
@@ -186,12 +188,13 @@ For more global data link configuration examples, see the following topics. Whil
 
 .. _access-global-data-link:
 
-Access :guilabel:`Global Data Links`
+Access global data links
 ===================================================
 
-After you've created a global data link, it displays for your specified metadata in any of the following relevant areas of Observability Cloud. While you must be an administrator to create a global data link, anyone can access the global data links you create.
+After you've created a global data link, it displays for your specified metadata in any of the following relevant areas of Splunk Observability Cloud. While you must be an administrator to create a global data link, anyone can access the global data links you create.
 
-- Data tables
+Data tables
+--------------
 
   .. image:: /_images/admin/gdl-in-data-table.png
     :width: 100%
@@ -199,7 +202,8 @@ After you've created a global data link, it displays for your specified metadata
 
   For information about data tables, see :ref:`show-data-table`.
 
-- List charts
+List charts
+-------------
 
   .. image:: /_images/admin/gdl-in-list-chart.png
     :width: 100%
@@ -207,7 +211,8 @@ After you've created a global data link, it displays for your specified metadata
 
   For information about list charts, see :ref:`list-charts`.
 
-- Alert messages
+Alert messages
+-----------------
 
   .. image:: /_images/admin/gdl-in-alert.png
     :width: 100%
@@ -215,7 +220,8 @@ After you've created a global data link, it displays for your specified metadata
 
   For information about alerts, see :ref:`view-alerts`.
 
-- Service names and trace IDs in Splunk Application Performance Monitoring (APM)
+Service names and trace IDs in Splunk Application Performance Monitoring (APM)
+----------------------------------------------------------------------------------
 
   .. image:: /_images/admin/gdl-in-apm.png
     :width: 100%
@@ -228,5 +234,4 @@ Next steps
 ===================================================
 
 - To learn how to create global data links for Splunk Application Performance Monitoring (APM) properties, see :ref:`apm-create-data-links`.
-
 - To learn how data links behave when multiple data links are available for a property, see :ref:`click-on-link`.

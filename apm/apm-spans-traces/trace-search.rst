@@ -1,15 +1,14 @@
 .. _trace-search:
 
-***************************************
-Explore your traces using Trace Search
-***************************************
+Explore your traces using the classic Traces page
+********************************************************
 
 .. meta::
-   :description: Learn how to explore your traces using Trace Search.
+   :description: Learn how to explore your traces using classic trace search.
 
-Use Splunk APM's Trace Search to search through full fidelity trace data to find a specific trace you're interested in. Trace search searches all currently retained traces; see :ref:`apm-data-retention` to learn more about the default trace retention period. 
+Use Splunk APM's Traces page to search through full-fidelity trace data to find a specific trace you're interested in. The Traces page searches all currently retained traces; see :ref:`apm-data-retention` to learn more about the default trace retention period. 
 
-Use these steps to navigate to :guilabel:`Trace Search`:
+Use these steps to navigate to the classic :guilabel:`Traces` page:
 
 #. From the Splunk Observability Cloud landing page, select :guilabel:`APM`.
 #. From the APM landing page, select :guilabel:`Traces`. A list of recent traces opens. 

@@ -26,29 +26,7 @@ Alternatively, you can manually install the Collector. To learn how, see :ref:`o
 Prerequisites
 ==========================
 
-These are the requirements for the Splunk Distribution of the OpenTelemetry Collector for Windows depending on the installation method:
-
-.. list-table::
-  :header-rows: 1
-  :widths: 40 60
-  :width: 100%
-
-  * - Install method
-    - Supported versions (64-bit)
-  * - Installer script
-    - Windows 2012, 2016, 2019, 2022
-  * - Windows installer (MSI)
-    - Windows 2012, 2016, 2019, 2022
-  * - Ansible
-    - Windows 2012, 2016, 2019, 2022
-  * - Chef
-    - Windows 2019, 2022
-  * - Nomad
-    - Windows 2012, 2016, 2019
-  * - Puppet
-    - Windows 2012, 2016, 2019
-  * - Docker
-    - Windows 2019, 2022
+.. include:: /_includes/requirements/collector-windows.rst
 
 .. _windows-script:
 
@@ -109,7 +87,7 @@ The Windows installer script supports the following options:
      - The token used to send metric data to Splunk.
      -
    * - ``realm``
-     - The Splunk realm to use. The ingest, API, trace, and HEC endpoint URLs are automatically created using this value.
+     - The Splunk realm to use. The ingest, API, trace, and HEC endpoint URLs are automatically created using this value. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
      - ``us0``
    * - ``memory``
      - Total memory in MIB to allocate to the Collector. Automatically calculates the ballast size. See :ref:`otel-sizing` for more information.

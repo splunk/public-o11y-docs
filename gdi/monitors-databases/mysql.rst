@@ -4,7 +4,11 @@ MySQL
 =======
 
 .. meta::
-   :description: Use this Splunk Observability Cloud integration for the MySQL monitor. See benefits, install, configuration, and metrics
+   :description: Use this Splunk Observability Cloud integration for the MySQL monitor. See benefits, install, configuration, and metrics.
+
+.. note:: The Smart Agent receiver used with the MySQL monitor type is now deprecated.
+   
+   Use the :ref:`MySQL receiver <mysql-receiver>` to retrieve metrics instead.
 
 The
 :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
@@ -51,8 +55,9 @@ The new user only has enough privileges to connect to the database. Additional p
 .. note:: If you want to define seperate DB names to connect to, then you have to grant at least SELECT permission to the user.
 
 
+.. code:: sql
 
-GRANT SELECT ON <db_name>.* TO '<user_name>'@'localhost';
+    GRANT SELECT ON <db_name>.* TO '<user_name>'@'localhost';
 
 
 Considerations on localhost
@@ -114,8 +119,6 @@ section of your configuration file:
    service:
      pipelines:
        metrics:
-         receivers: [smartagent/mysql]
-       logs:
          receivers: [smartagent/mysql]
 
 Configuration settings

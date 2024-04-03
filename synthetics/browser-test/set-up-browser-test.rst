@@ -38,6 +38,7 @@ Follow these steps to set up a Browser test:
 #. (Optional) Add a wait time before a step executes. See, :ref:`browser-wait-times`.
 #. (Optional) Turn on automatic test retry in the event a test initially fails. 
 
+
 #. Save your test. 
 
 
@@ -341,19 +342,19 @@ There are many reasons why you might want to configure advanced settings for you
 * Running a test on a pre-production site that has a self-signed certificate.
 
 
+..
+      Custom properties 
+      --------------------
+      Custom properties are key-value pairs you can assign to dimensions of existing MTSes after ingest. Custom properties are single-valued and don’t support multiple values, like ``region:northamerica`` or ``environment:prod``.
 
-Custom properties 
---------------------
-Custom properties are key-value pairs you can assign to dimensions of existing MTSes after ingest. Custom properties are single-valued and don’t support multiple values, like ``region:northamerica`` or ``environment:prod``.
+      Key requirements:
 
-Key requirements:
+      * Keys must start with an uppercase or lowercase letter. Keys can't start with special characters or numbers. 
+      * The remainder of the key can contain letters, numbers, underscores and hyphens.
+      * Keys can’t be named test_id or test.
+      * Key size can't exceed 128 characters. 
 
-* Keys must start with an uppercase or lowercase letter. Keys can't start with special characters or numbers. 
-* The remainder of the key can contain letters, numbers, underscores and hyphens.
-* Keys can’t be named test_id or test.
-* Key size can't exceed 128 characters. 
-
-See, :ref:`custom-properties`. 
+      See, :ref:`custom-properties`. 
 
 
 .. _browser-cookies:
@@ -369,6 +370,11 @@ Set custom headers
 --------------------------
 
 Specify custom headers to send with each request. For example, you can add a header in your request to filter out requests from analytics on the back end by sending a specific header in the requests. You can also use custom headers to set cookies. 
+
+The default user agent is the given one for the selected device, which updates whenever the Chrome version changes for synthetic runners. You can customize the user agent header for specific domains by adding a custom header. If a domain is not specified, the top-level user agent setting takes precedence. 
+
+
+
 
 
 .. _browser-auth:

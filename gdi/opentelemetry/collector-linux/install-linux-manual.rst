@@ -8,14 +8,14 @@ Install the Collector for Linux manually
 .. meta::
       :description: Describes how to install the Splunk Distribution of OpenTelemetry Collector for Linux manually.
 
-The Splunk Distribution of OpenTelemetry Collector for Linux is a package that provides integrated collection and forwarding for all data types. To install the package manually, read this doc.
+The Splunk Distribution of the OpenTelemetry Collector for Linux is a package that provides integrated collection and forwarding for all data types. To install the package manually, read this doc.
 
 .. note:: You can also install the package using :ref:`the installer script <linux-scripts>` or :ref:`deployment and configuration management tools <linux-deployments>`.
 
 Splunk offers the following manual configuration options:
 
+* :ref:`linux-packages-repo`
 * :ref:`linux-docker`
-* :ref:`linux-packages`
 * :ref:`linux-binary-file`
 * :ref:`linux-tar`
 
@@ -29,7 +29,7 @@ You need at least these capabilities to allow the Collector to run without root 
 * ``cap_dac_read_search``: Allows to bypass file read permission checks, and directory read and execute permission checks.
 * ``cap_sys_ptrace``: Allows to trace, manage, and transfer data for arbitrary processes.
 
-Learn more about :new-page:`these recommended capabilities <https://man7.org/linux/man-pages/man7/capabilities.7.html>`.  
+Learn more about these recommended capabilities in :new-page:`Linux capabilities - manual page <https://man7.org/linux/man-pages/man7/capabilities.7.html>`.  
 
 .. note::   
 
@@ -47,12 +47,296 @@ To set custom permissions after the Collector has been installed, use:
 
    setcap {CUSTOM_CAPABILITIES}=+eip /usr/bin/otelcol
 
+.. _linux-manual-env-var:
+
+Environmental variables
+===================================
+
+If you use :ref:`linux-docker`, :ref:`linux-binary-file`, or :ref:`linux-tar`, you can use environmental variables to configure the Collector. The following environmental variables are required:
+
+* ``SPLUNK_REALM`` (no default): Which realm to send the data to. For example: ``us0``.
+* ``SPLUNK_ACCESS_TOKEN`` (no default): Access token to authenticate requests.
+
+.. _linux-packages-repo:
+
+Install the Collector for Linux with package repositories
+=================================================================
+
+Splunk Observability Cloud supports all Intel, AMD, and ARM systemd-based operating systems, including CentOS, Debian, Oracle, Red Hat, and Ubuntu. Manually installing an integration is useful for containerized environments, or if you want to use other common deployment options.
+
+Each installation method comes with a default configuration with its own set of environment variables, and their values depend on the installation method, as well as your specific needs.
+
+.. caution:: You need ``systemctl`` to run the Collector as a service, since it's the main tool used to examine and control the state of the systemd system and service manager. Otherwise, you need to run the Collector. 
+
+.. _linux-packages-debian:
+
+Install the Collector for Linux with Debian
+--------------------------------------------------------------
+
+To install the Collector for Linux using a Debian package, set up the package repository and install the Collector package:
+
+.. code-block:: bash
+
+   curl -sSL https://splunk.jfrog.io/splunk/otel-collector-deb/splunk-B3CD4420.gpg > /etc/apt/trusted.gpg.d/splunk.gpg
+   echo 'deb https://splunk.jfrog.io/splunk/otel-collector-deb release main' > /etc/apt/sources.list.d/splunk-otel-collector.list
+   apt-get update
+   apt-get install -y splunk-otel-collector
+
+   # Optional: install Splunk OpenTelemetry Auto Instrumentation
+   apt-get install -y splunk-otel-auto-instrumentation
+
+See also:
+
+* :ref:`linux-packages-post`
+* :ref:`linux-packages-auto`
+* :ref:`linux-packages-fluentd`
+
+.. _linux-packages-rpm:
+
+Install the Collector for Linux with RPM
+--------------------------------------------------------------
+
+To install the Collector for Linux using a RPM package, set up the package repository and install the Collector package:
+
+.. tabs:: 
+
+   .. tab:: yum 
+
+      .. code-block:: bash
+
+         yum install -y libcap  # Required for enabling cap_dac_read_search and cap_sys_ptrace capabilities on the Collector
+
+         cat <<EOH > /etc/yum.repos.d/splunk-otel-collector.repo
+         [splunk-otel-collector]
+         name=Splunk OpenTelemetry Collector Repository
+         baseurl=https://splunk.jfrog.io/splunk/otel-collector-rpm/release/\$basearch
+         gpgcheck=1
+         gpgkey=https://splunk.jfrog.io/splunk/otel-collector-rpm/splunk-B3CD4420.pub
+         enabled=1
+         EOH
+
+         yum install -y splunk-otel-collector
+
+         # Optional: install Splunk OpenTelemetry Auto Instrumentation
+         yum install -y splunk-otel-auto-instrumentation
+
+   .. tab:: dnf 
+
+      .. code-block:: bash
+
+         dnf install -y libcap  # Required for enabling cap_dac_read_search and cap_sys_ptrace capabilities on the Collector
+
+         cat <<EOH > /etc/yum.repos.d/splunk-otel-collector.repo
+         [splunk-otel-collector]
+         name=Splunk OpenTelemetry Collector Repository
+         baseurl=https://splunk.jfrog.io/splunk/otel-collector-rpm/release/\$basearch
+         gpgcheck=1
+         gpgkey=https://splunk.jfrog.io/splunk/otel-collector-rpm/splunk-B3CD4420.pub
+         enabled=1
+         EOH
+
+         dnf install -y splunk-otel-collector
+
+         # Optional: install Splunk OpenTelemetry Auto Instrumentation
+         dnf install -y splunk-otel-auto-instrumentation
+
+   .. tab:: zypper 
+
+      .. code-block:: bash
+
+         zypper install -y libcap-progs  # Required for enabling cap_dac_read_search and cap_sys_ptrace capabilities on the Collector
+
+         cat <<EOH > /etc/zypp/repos.d/splunk-otel-collector.repo
+         [splunk-otel-collector]
+         name=Splunk OpenTelemetry Collector Repository
+         baseurl=https://splunk.jfrog.io/splunk/otel-collector-rpm/release/\$basearch
+         gpgcheck=1
+         gpgkey=https://splunk.jfrog.io/splunk/otel-collector-rpm/splunk-B3CD4420.pub
+         enabled=1
+         EOH
+
+         zypper install -y splunk-otel-collector
+
+         # Optional: install Splunk OpenTelemetry Auto Instrumentation
+         zypper install -y splunk-otel-auto-instrumentation
+
+See also:
+
+* :ref:`linux-packages-post`
+* :ref:`linux-packages-auto`
+* :ref:`linux-packages-fluentd`
+
+.. _linux-packages:
+
+Install the Collector for Linux with downloaded packages
+--------------------------------------------------------------
+
+If you prefer to install the Collector without the installer script or the Debian/RPM repositories, download the individual Debian or RPM package from the GitHub releases page and install it as shown below. 
+
+Note that:
+
+* You need to have root privileges.
+* Find the releases in GitHub at :new-page:`Splunk OTel Collector releases <https://github.com/signalfx/splunk-otel-collector/releases>`.
+* To install the ``setcap`` dependency and the Collector package, replace ``<path to splunk-otel-collector deb/rpm>`` with the local path to the downloaded Collector package.
+
+.. tabs:: 
+
+   .. tab:: Debian 
+
+      .. code-block:: bash
+
+         apt-get update && apt-get install -y libcap2-bin  # Required for enabling cap_dac_read_search and cap_sys_ptrace capabilities on the Collector
+         dpkg -i <path to splunk-otel-collector deb>
+
+   .. tab:: RPM with yum 
+
+      .. code-block:: bash
+
+         yum install -y libcap  # Required for enabling cap_dac_read_search and cap_sys_ptrace capabilities on the Collector
+         rpm -ivh <path to splunk-otel-collector rpm>
+
+   .. tab:: RPM with dnf 
+
+      .. code-block:: bash
+
+         dnf install -y libcap  # Required for enabling cap_dac_read_search and cap_sys_ptrace capabilities on the Collector
+         rpm -ivh <path to splunk-otel-collector rpm>
+
+   .. tab:: RPM with zypper 
+
+      .. code-block:: bash         
+
+         zypper install -y libcap-progs  # Required for enabling cap_dac_read_search and cap_sys_ptrace capabilities on the Collector
+         rpm -ivh <path to splunk-otel-collector rpm>
+
+See also:
+
+* :ref:`linux-packages-post`
+* :ref:`linux-packages-auto`
+* :ref:`linux-packages-fluentd`
+
+.. _linux-packages-post:
+
+Post-install configuration for Debian/RPM 
+--------------------------------------------------------------
+
+The following applies:
+
+* The default configuration file is installed in /etc/otel/collector/agent_config.yaml, if it doesn't already exist.
+
+* The /etc/otel/collector/splunk-otel-collector.conf environment file is required to start the ``splunk-otel-collector`` systemd service.
+
+  * The service automatically starts if this file exists during install or upgrade. 
+
+  * A sample environment file is installed to /etc/otel/collector/splunk-otel-collector.conf.example, and it includes the required environment variables for the default config. To use this sample file, set the variables as you require, and save the file as /etc/otel/collector/splunk-otel-collector.conf.
+
+* You must restart the service for any changes to the config file or environment file to take effect. To start or restart the service, run:
+
+   .. code-block:: 
+
+      sudo systemctl restart splunk-otel-collector
+
+
+* To check the splunk-otel-collector service status, run:
+
+   .. code-block:: 
+
+      sudo systemctl status splunk-otel-collector
+
+* To view the ``splunk-otel-collector`` service logs and errors in the ``systemd`` journal run:
+
+   .. code-block:: 
+
+      sudo journalctl -u splunk-otel-collector
+
+.. _linux-packages-auto:
+
+Auto Instrumentation with Debian and RPM packages
+--------------------------------------------------------------
+
+If you prefer to install the Collector without the installer script or the Debian/RPM repositories, download the individual Debian or RPM package from the GitHub releases page and install it as shown below. 
+
+Note that:
+
+* You need to have root privileges.
+* Download the appropriate ``splunk-otel-auto-instrumentation`` Debian or RPM package for the target system in GitHub at :new-page:`Splunk OTel Collector releases <https://github.com/signalfx/splunk-otel-collector/releases>`.
+* Replace ``<path to splunk-otel-auto-instrumentation deb/rpm>`` with the local path to the downloaded Auto Instrumentation package.
+
+Run the following commands to install the Auto Instrumentation package:
+
+.. tabs:: 
+
+   .. tab:: Debian 
+
+      .. code-block:: bash
+
+         dpkg -i <path to splunk-otel-auto-instrumentation deb>
+
+   .. tab:: RPM 
+
+      .. code-block:: bash
+
+         rpm -ivh <path to splunk-otel-auto-instrumentation rpm>
+
+To upgrade the Auto Instrumentation package, run:
+
+.. tabs:: 
+
+   .. tab:: Debian 
+
+      .. code-block:: bash
+
+         sudo dpkg -i <path to splunk-otel-auto-instrumentation deb>
+
+   .. tab:: RPM 
+
+      .. code-block:: bash
+
+         sudo rpm -Uvh <path to splunk-otel-auto-instrumentation rpm>
+
+Auto Instrumentation agents
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``splunk-otel-auto-instrumentation`` deb/rpm package installs and supports configuration for the following Auto Instrumentation agents:
+
+* :ref:`auto-instrumentation-java`
+* :ref:`auto-instrumentation-nodejs`
+
+.. _linux-packages-fluentd:
+
+Install and configure Fluentd for log collection
+--------------------------------------------------------------
+
+If you require log collection, perform the following steps to install Fluentd and forward collected log events to the Collector. This requires root privileges.
+
+#. Install, configure, and start the Collector as described in :ref:`linux-packages-repo`. The Collector's default configuration file listens for log events on ``127.0.0.1:8006`` and sends them to Splunk Observability Cloud.
+
+#. Install the ``td-agent`` package appropriate for the Linux distribution/version of the target system. Find the package in :new-page:`Fluentd installation <https://docs.fluentd.org/installation>`. 
+
+   * If necessary, install the ``capng_c`` plugin and dependencies to enable Linux capabilities, for example ``cap_dac_read_search`` and/or ``cap_dac_override``. This requires ``td-agent`` version 4.1 or higher. See :new-page:`Linux capabilities <https://docs.fluentd.org/deployment/linux-capability>`.
+
+   * If necessary, install the ``fluent-plugin-systemd`` plugin to collect log events from the systemd journal. See :new-page:`Fluent plugin systemd <https://github.com/fluent-plugin-systemd/fluent-plugin-systemd >`.
+
+#. Configure Fluentd to collect log events and forward them to the Collector:
+
+   * Option 1: Update the default config file at /etc/td-agent/td-agent.conf provided by the Fluentd package to collect the desired log events and forward them to ``127.0.0.1:8006``.
+
+   * Option 2: The installed Collector package provides a custom Fluentd config file /etc/otel/collector/fluentd/fluent.conf to collect log events from many popular services and forwards them to ``127.0.0.1:8006``. To use these files, you need to override the default config file path for the Fluentd service. To do this, copy the systemd environment file from /etc/otel/collector/fluentd/splunk-otel-collector.conf to /etc/systemd/system/td-agent.service.d/splunk-otel-collector.conf.
+
+#. Ensure that the ``td-agent`` service user/group has permissions to access to the config file(s) from the previous step.
+
+#. Restart the Fluentd service to apply the changes by running ``systemctl restart td-agent``.
+
+#. View Fluentd service logs and errors in /var/log/td-agent/td-agent.log.
+
+See :new-page:`Fluentd configuration <https://docs.fluentd.org/configuration>` for general Fluentd configuration details.
+
 .. _linux-docker:
 
 Docker
 ===================================
 
-The Linux docker image of the Splunk Distribution of OpenTelemetry Collector contains a multiarch manifest that specifies the images for AMD64, ARM64, and ppc64le architectures. Docker uses this manifest to download the correct image for the target platform.
+The Linux docker image of the Splunk Distribution of the OpenTelemetry Collector contains a multiarch manifest that specifies the images for AMD64, ARM64, and ppc64le architectures. Docker uses this manifest to download the correct image for the target platform.
 
 Run the following command to install the package using Docker:
 
@@ -83,8 +367,6 @@ See :new-page:`docker-compose.yml <https://github.com/signalfx/splunk-otel-colle
 .. note:: 
    If you are running the Collector in ``--read-only`` mode and using any Smart Agent receiver's legacy collectd monitor types, you need to provide a writable config directory similar to ``--read-only --tmpfs /usr/lib/splunk-otel-collector/agent-bundle/run:uid=999,gid=999`` (default) or as configured by the Smart Agent extension's ``collectd::configDir`` path.
 
-
-
 Create a custom Docker configuration
 --------------------------------------------------------------
 
@@ -106,20 +388,6 @@ Command line arguments take precedence over environment variables. This applies 
        # Use a semantic versioning (semver) tag instead of the ``latest`` tag.
        # Semantic versioning is a formal convention for determining the version
        # number of new software releases.
-
-If the custom configuration includes a ``memory_limiter`` processor, then the ``ballast_size_mib`` parameter should be the same as the ``SPLUNK_BALLAST_SIZE_MIB`` environment variable. For example:
-
-.. code-block:: bash
-
-   extensions:
-     memory_ballast:
-     # In general, the ballast should be set to 1/3 of the Collector's memory.
-     # The ballast is a large allocation of memory that provides stability to the heap.
-     # The limit should be 90% of the Collector's memory.
-     # Specify the ballast size by setting the value of the 
-     # SPLUNK_BALLAST_SIZE_MIB env variable.
-     # The total memory size must be more than 99 MiB for the Collector to start.
-        size_mib: ${SPLUNK_BALLAST_SIZE_MIB}
 
 Use the following configuration to collect and log CPU metrics. The ``cat`` command assigns the ``CONFIG_YAML`` parameter to the YAML. The ``docker run`` command expands and assigns the parameter ``CONFIG_YAML`` to the environment variable ``SPLUNK_CONFIG_YAML``. Note that YAML requires whitespace indentation to be maintained.
 
@@ -149,75 +417,6 @@ Use the following configuration to collect and log CPU metrics. The ``cat`` comm
        # Use a semantic versioning (semver) tag instead of the ``latest`` tag.
        # Semantic versioning is a formal convention for determining the version
        # number of new software releases.
-
-.. _linux-packages:
-
-Debian or RPM packages
-===================================
-
-All Intel, AMD, and ARM systemd-based operating systems are supported, including CentOS, Debian, Oracle, Red Hat, and Ubuntu. Manually installing an integration is useful for containerized environments, or if you want to use other common deployment options.
-
-Splunk Observability Cloud provides a default configuration for each installation method. Each installation method has its own set of environment variables, and their values depend on the installation method, as well as your specific needs.
-
-.. note::
-   systemctl is the main tool used to examine and control the state of the systemd system and service manager. systemctl is a requirement to run the Collector as a service. If you don't have systemctl, you need to start the Collector manually.
-
-Do the following to install the package using a Debian or RPM package:
-
-#. Set up the package repository and install the package, as shown in the following examples. The first example shows the Debian package and the subsequent examples show the RPM package. A default configuration is installed to /etc/otel/collector/agent_config.yaml, if it does not already exist::
-
-    # Debian
-    curl -sSL https://splunk.jfrog.io/splunk/otel-collector-deb/splunk-B3CD4420.gpg > /etc/apt/trusted.gpg.d/splunk.gpg
-    echo 'deb https://splunk.jfrog.io/splunk/otel-collector-deb release main' > /etc/apt/sources.list.d/splunk-otel-collector.list
-    apt-get update
-    apt-get install -y splunk-otel-collector
-
-    # RPM with yum
-    yum install -y libcap
-    # Required for activating cap_dac_read_search and cap_sys_ptrace capabilities.
-
-    cat <<EOH > /etc/yum.repos.d/splunk-otel-collector.repo
-    [splunk-otel-collector]
-    name=Splunk Distribution of OpenTelemetry Collector Repository
-    baseurl=https://splunk.jfrog.io/splunk/otel-collector-rpm/release/\$basearch
-    gpgcheck=1
-    gpgkey=https://splunk.jfrog.io/splunk/otel-collector-rpm/splunk-B3CD4420.pub
-    enabled=1
-    EOH
-
-    yum install -y splunk-otel-collector
-
-    # RPM with dnf
-    dnf install -y libcap
-    # Required for activating cap_dac_read_search and cap_sys_ptrace capabilities.
-
-    cat <<EOH > /etc/yum.repos.d/splunk-otel-collector.repo
-    [splunk-otel-collector]
-    name=Splunk Distribution of OpenTelemetry Collector Repository
-    baseurl=https://splunk.jfrog.io/splunk/otel-collector-rpm/release/\$basearch
-    gpgcheck=1
-    gpgkey=https://splunk.jfrog.io/splunk/otel-collector-rpm/splunk-B3CD4420.pub
-    enabled=1
-    EOH
-
-    dnf install -y splunk-otel-collector
-
-    # RPM with zypper
-    zypper install -y libcap-progs
-    # Required for activating cap_dac_read_search and cap_sys_ptrace capabilities.
-
-    cat <<EOH > /etc/zypp/repos.d/splunk-otel-collector.repo
-    [splunk-otel-collector]
-    name=Splunk Distribution of OpenTelemetry Collector Repository
-    baseurl=https://splunk.jfrog.io/splunk/otel-collector-rpm/release/\$basearch
-    gpgcheck=1
-    gpgkey=https://splunk.jfrog.io/splunk/otel-collector-rpm/splunk-B3CD4420.pub
-    enabled=1
-    EOH
-
-    zypper install -y splunk-otel-collector
-#. Configure the splunk-otel-collector.conf environment file with the appropriate variables. You need this environment file to start the ``splunk-otel-collector`` systemd service. When you install the package in step 1, a sample environment file is installed to /etc/otel/collector/splunk-otel-collector.conf.example. This file includes the required environment variables for the default configuration.
-#. Run ``sudo systemctl restart splunk-otel-collector.service`` to start or restart the service.
 
 .. _linux-binary-file:
 
@@ -281,7 +480,6 @@ Next steps
 
 After you've installed the Collector, you can perform these actions:
 
-* :ref:`Configure the Collector <otel-configuration>`.
 * Use :ref:`Infrastructure Monitoring <get-started-infrastructure>` to track the health of your infrastructure.
 * Use :ref:`APM <get-started-apm>` to monitor the performance of applications.
 * Use :ref:`Log Observer Connect <logs-intro-logconnect>` to analyze log events and troubleshoot issues with your services.

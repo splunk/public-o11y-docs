@@ -79,7 +79,7 @@ The following table describes the variables that can be configured for this role
    * - ``splunk_access_token``
      - The Splunk access token to authenticate requests. This attribute is required.
    * - ``splunk_realm``
-     - The realm to send the data to. This variable is set with this value for the service. The default value is ``us0``.
+     - The realm to send the data to. This variable is set with this value for the service. The default value is ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
    * - ``splunk_ingest_url``
      - The Splunk ingest URL, for example, ``https://ingest.us0.signalfx.com``. This variable is set with this value for the service. The default value is ``https://ingest.{{ splunk_realm }}.signalfx.com``. 
    * - ``splunk_api_url``
@@ -105,7 +105,7 @@ The following table describes the variables that can be configured for this role
    * - ``splunk_memory_total_mib``
      - The amount of allocated memory in MiB. The default value is ``512``, or 500 x 2^20 bytes, of memory .
    * - ``splunk_ballast_size_mib``
-     - The set memory ballast size in MiB. The default value is 1/3 of the value set in ``splunk_memory_total_mib``.
+     - ``memory_ballast`` is deprecated. If you're using this extension, see :ref:`how to update your configuration <collector-upgrade-memory-ballast>`
    * - ``install_fluentd``
      - The option to install or manage Fluentd and dependencies for log collection. The default value is ``false``.
    * - ``td_agent_version``

@@ -29,7 +29,7 @@ To generate a template that instruments your Lambda function using the Splunk Op
 Install the Splunk OpenTelemetry Lambda layer manually
 ==================================================================
 
-Follow these instructions to install the Splunk OpenTelemetry Lambda layer:
+If you don't use the guided setup, follow these instructions to manually install the Splunk OpenTelemetry Lambda layer:
 
 - :ref:`otel-lambda-layer-requirements`
 - :ref:`install-otel-lambda-layer`
@@ -102,7 +102,7 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
         - Description
 
       * - ``SPLUNK_REALM``
-        - To find the realm of your Splunk Observability Cloud account, open the navigation menu in Splunk Observability Cloud, select :menuselection:`Settings`, and select your username. The realm name appears in the :guilabel:`Organizations` section.
+        - To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
       * - ``SPLUNK_ACCESS_TOKEN``
         - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. See :ref:`Authentication token <admin-tokens>`. To send data to a Splunk OTel Collector in EC2, see :ref:`ec2-otel-collector-serverless`.
@@ -137,12 +137,6 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
                .. code-tab:: shell Node.js
 
                   /opt/nodejs-otel-handler
-
-               .. code-tab:: shell Ruby
-
-                  /opt/ruby-otel-handler
-
-                  .. note:: The Graviton2 ARM64 architecture is not supported for Ruby Lambda functions.
 
                .. tab:: Golang
 
