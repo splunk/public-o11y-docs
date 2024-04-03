@@ -24,9 +24,10 @@ To modify any of the configuration values, run ``regedit`` and browse to the pat
 Configure memory allocation
 ----------------------------------
 
-To configure memory allocation, use the ``memory`` parameter.
+To configure memory allocation, use the ``memory`` parameter, which sets the environment variable ``SPLUNK_MEMORY_TOTAL_MIB``.
 
-By default, the Collector is configured to use 512 MB (500 x 2^20 bytes) of memory. To increase this setting to allocate more memory, replace ``SPLUNK_MEMORY_TOTAL_MIB`` with the desired integer value.
+* By default, the Collector is configured to use 512 MiB (500 x 2^20 bytes) of memory. 
+* To modify this setting, replace ``SPLUNK_MEMORY_TOTAL_MIB`` with the desired integer value.
 
 .. code-block:: PowerShell
 
@@ -49,7 +50,7 @@ To specify custom URLs for these downloads, use the ``collector_msi_url`` and ``
 
 .. code-block:: PowerShell
 
-  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"; collector_msi_url = "COLLECTOR_MSI_URL"; fluentd_msi_url = "FLUENTD_MSI_URL"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
+  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "<SPLUNK_ACCESS_TOKEN>"; realm = "<SPLUNK_REALM>"; collector_msi_url = "<COLLECTOR_MSI_URL>"; fluentd_msi_url = "<FLUENTD_MSI_URL>"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
 
 .. _fluentd-manual-config-windows:
 
@@ -60,7 +61,7 @@ If you have a Log Observer entitlement or wish to collect logs for the target ho
 
 .. code-block:: PowerShell
 
-  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"; with_fluentd = 1}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
+  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "<SPLUNK_ACCESS_TOKEN>"; realm = "<SPLUNK_REALM>"; with_fluentd = 1}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
 
 When activated, the Fluentd service is configured by default to collect and forward log events with the ``@SPLUNK`` label to the Collector, which then
 send these events to the HEC ingest endpoint determined by the ``realm = "<SPLUNK_REALM>"`` option.

@@ -37,8 +37,9 @@ The Windows installer script installs the following packages:
 
 * Dotnet autoinstrumentation, if enabled. See :ref:`get-started-dotnet-otel`.
 * Fluentd, if enabled. See :ref:`fluentd-manual-config-windows`.
-* Java JDK and JRE.
 * JMX metric gatherer.
+* For Docker environments only, Java JDK and JRE.
+
 
 .. _windows-script:
 
