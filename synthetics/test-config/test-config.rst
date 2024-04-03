@@ -1,7 +1,7 @@
 .. _test-config:
 
 ***************************************************
-Configure your tests
+Manage synthetic tests
 ***************************************************
 
 .. meta::
@@ -136,7 +136,7 @@ Choosing informative names for your tests and alerts helps organize content. Her
 * Add a description about the purpose of the test like the workflow, process, performance, or data source.
 
 .. image:: /_images/synthetics/ButtercupGames-naming-convention.png
-      :width: 99%
+      :width: 60%
       :alt: This image shows two Browser tests with the prefix [ButtercupGames].
 
 
@@ -162,3 +162,15 @@ Follow these guidelines to troubleshoot a broken test.
 #. Duplicate the step and repeat the steps in your test until you find the broken step. 
 #. Verify that there is one instance only of the selector you want to use in your test. If the selector appears more than once your test might break again in the future. Unique selectors provide optimal test performance. 
 #. Update your tests with your findings. 
+
+.. raw:: html
+
+  <embed>
+    <h2>Filter tests</h2>
+  </embed>
+
+You can filter by test type, key:value pairs, and more. 
+
+.. image:: /_images/synthetics/syn-filter-test.png
+      :width: 60%
+      :alt: This image shows the filter env:prod for all tests on the Synthetic homepage..
