@@ -82,7 +82,7 @@ By selecting specific dimensions to keep, you can aggregate your data points int
 creating a specific view of dimensions that are important. You can then obtain a more simplified and concentrated view
 of your data when you don't need to view metrics across all dimensions.
 
-.. caution:: You can only create aggregation rules using your metrics' dimensions. Aggregation using custom properties is not supported. For more information on each type of metadata, refer to :ref:`metrics-dimensions-mts`.
+.. caution:: You can only create aggregation rules using your metrics' dimensions. Aggregation using custom properties or tags is not supported. For more information on each type of metadata, refer to :ref:`metrics-dimensions-mts`.
 
 When you select specific dimensions, metrics pipeline management generates a new metric. The system creates new MTS
 based on the dimensions you select and rolls up data points for each MTS. By default, aggregation rules roll up the
@@ -205,7 +205,7 @@ Metrics pipeline management is not available for the following types of metrics:
 * Splunk Observability Cloud's :ref:`org metrics <org-metrics>`. 
 * APM's :ref:`MetricSets <apm-metricsets>`.
 
-You can only create aggregation rules using your metrics' dimensions. Aggregation using custom properties is not supported. For more information on each type of metadata, refer to :ref:`metrics-dimensions-mts`.
+ADD AGGEGATION NOTE HERE
 
 Learn more
 ===============================================================================
