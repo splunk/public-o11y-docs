@@ -169,7 +169,7 @@ Follow these guidelines to troubleshoot a broken test.
     <h2>Filter tests</h2>
   </embed>
 
-You can filter by test type, key:value pairs, and more. 
+You can filter by test type, key-value pairs, and more. 
 
 .. image:: /_images/synthetics/syn-filter-test.png
       :width: 60%
