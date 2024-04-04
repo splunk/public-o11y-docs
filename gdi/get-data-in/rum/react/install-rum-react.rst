@@ -1,3 +1,5 @@
+.. note:: This library instruments React Native applications for Android and iOS devices. For React web instrumentation, see :ref:`browser-rum-gdi`.
+
 .. _react-rum-install:
 
 **************************************************************
@@ -19,7 +21,6 @@ Check compatibility and requirements
 ===============================================
 
 .. include:: /_includes/requirements/react.rst
-
 
 .. _rum-react-install:
 
