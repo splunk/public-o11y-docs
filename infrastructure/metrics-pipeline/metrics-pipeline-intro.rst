@@ -205,7 +205,10 @@ Metrics pipeline management is not available for the following types of metrics:
 * Splunk Observability Cloud's :ref:`org metrics <org-metrics>`. 
 * APM's :ref:`MetricSets <apm-metricsets>`.
 
-ADD AGGEGATION NOTE HERE
+Aggregation rules limitations
+--------------------------------------------------------------------------------
+
+You can only create aggregation rules using your metrics' dimensions. Aggregation using custom properties or tags is not supported. For more information on each type of metadata, refer to :ref:`metrics-dimensions-mts`.
 
 Learn more
 ===============================================================================
