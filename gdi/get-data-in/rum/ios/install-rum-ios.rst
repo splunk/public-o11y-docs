@@ -296,3 +296,10 @@ How to contribute
 =========================================================
 
 The Splunk OpenTelemetry Instrumentation for iOS is open-source software. You can contribute to its improvement by creating pull requests in GitHub. To learn more, see the :new-page:`contributing guidelines <https://github.com/signalfx/splunk-otel-ios/blob/main/CONTRIBUTING.md>` in GitHub.
+
+Next steps
+================
+
+* To add custom attributes, adapt the instrumentation to your environment and application, customize sampling, and more, see :ref:`configure-ios-instrumentation`.
+* To check that your data is in your Splunk RUM for Mobile instance, see :ref:`rum-check-mobile-data`.
+* To troubleshoot, see :ref:`common-ios-troubleshooting`.

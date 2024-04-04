@@ -133,10 +133,12 @@ For example:
 .. _metricstreams_iampolicy:
 .. _aws-iam-policy-ms:
 
-Permissions for Metric Streams
+Permissions for Splunk-managed Metric Streams
 -----------------------------------------------------------
 
-Besides the :ref:`required permissions <aws-iam-policy-required>`, include these permissions to allow Splunk Observability Cloud to collect AWS metrics using CloudWatch Metric Streams:
+.. note:: If you're using AWS-managed Metric Streams these permissions are not required. For more information, see :ref:`aws-console-ms`.
+
+If you're using Splunk-managed Metric Streams to collect AWS CloudWatch metrics, you need the :ref:`permissions required for Splunk Observability Cloud <aws-iam-policy-required>` as well as these permissions:
 
 - ``"cloudwatch:DeleteMetricStream"``
 - ``"cloudwatch:GetMetricStream"``
@@ -190,6 +192,8 @@ On top of the required permissions, you also need to include the specific permis
 
 These are these permissions to allow Splunk Observability Cloud to collect AWS tags and properties:
 
+- ``"airflow:ListEnvironments"``
+- ``"airflow:GetEnvironment"``
 - ``"apigateway:GET"``
 - ``"autoscaling:DescribeAutoScalingGroups"``
 - ``"cloudformation:ListResources"``
@@ -209,7 +213,7 @@ These are these permissions to allow Splunk Observability Cloud to collect AWS t
 - ``"ec2:DescribeReservedInstancesModifications"``
 - ``"ec2:DescribeTags"``
 - ``"ec2:DescribeVolumes"``
-- ``"ecS:DescribeClusters"``
+- ``"ecs:DescribeClusters"``
 - ``"ecs:DescribeServices"``
 - ``"ecs:DescribeTasks"``
 - ``"ecs:ListClusters"``
@@ -226,6 +230,8 @@ These are these permissions to allow Splunk Observability Cloud to collect AWS t
 - ``"elasticmapreduce:ListClusters"``
 - ``"es:DescribeElasticsearchDomain"``
 - ``"es:ListDomainNames"``
+- ``"kafka:DescribeClusterV2"``
+- ``"kafka:ListClustersV2"``
 - ``"kinesis:DescribeStream"``
 - ``"kinesis:ListShards"``
 - ``"kinesis:ListStreams"``
@@ -265,6 +271,8 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
       {
         "Effect": "Allow",
         "Action": [
+          "airflow:ListEnvironments",
+          "airflow:GetEnvironment",
           "apigateway:GET",
           "autoscaling:DescribeAutoScalingGroups",
           "cloudformation:ListResources",
@@ -305,6 +313,8 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
           "elasticmapreduce:ListClusters",
           "es:DescribeElasticsearchDomain",
           "es:ListDomainNames",
+          "kafka:DescribeClusterV2",
+          "kafka:ListClustersV2",
           "kinesis:DescribeStream",
           "kinesis:ListShards",
           "kinesis:ListStreams",

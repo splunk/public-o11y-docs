@@ -45,6 +45,15 @@ All Splunk Synthetic Monitoring metrics contain the following dimensions:
    * - ``test_type``
      - The test type dimension for Browser tests is set to ``browser``.
 
+   * - ``test``
+     - The test property is the human readable name of the ``test_id``.
+
+   * - ``location``
+     - The location property is the human readable name of the ``location_id`` .
+
+
+All metrics have a ``test_id`` and ``location_id`` dimension. The ``test`` and ``location`` properties are attached to those dimensions respectively. The ``test_id`` and ``location_id`` properties are generated where possible to make the data more readable. 
+
 .. _test-level-metrics:
 
 Test-level metrics in Browser tests
