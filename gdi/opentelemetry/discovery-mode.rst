@@ -1,7 +1,7 @@
 .. _discovery_mode:
 
 ***************************************************************************
-Discover and configure metrics sources automatically
+Automatic discovery and configuration
 ***************************************************************************
 
 .. meta::
