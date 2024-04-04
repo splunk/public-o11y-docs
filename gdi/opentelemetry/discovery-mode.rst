@@ -21,36 +21,28 @@ Automatic discovery can detect several types of metric sources on the host, such
 
 The main advantage of using automatic discovery is that you don't need to manually update the OpenTelemetry Collector configuration for supported metric sources. This is helpful in environments when you deploy and activate host services dynamically or when adding a new supported target database to your infrastructure.
 
-.. note:: Update the Collector to version 0.94.0 and higher to activate automatic service discovery.
-
 .. raw:: html
 
   <h2>Supported language runtimes</h2>
 
-The following table shows which language runtimes are supported on each platform:
+The following table shows the platforms that support each language runtime:
 
 .. list-table::
    :header-rows: 1
-   :width: 60%
-   :widths: 15 15 15 15
+   :width: 100%
+   :widths: 30 70
 
-   * - Application/language
-     - Supported for Linux
-     - Supported for Windows
-     - Supported for Kubernetes
+   * - Language runtime
+     - Platforms
    * - Java
-     - Yes
-     - No
-     - Yes
+     - * :ref:`Linux <linux-backend-auto-discovery>`
+       * :ref:`Kubernetes <k8s-backend-auto-discovery>`
    * - .NET
-     - No
-     - Yes
-     - Yes
+     - * :ref:`Kubernetes <k8s-backend-auto-discovery>`
+       * :ref:`Windows <windows-backend-auto-discovery>`
    * - Node.js
-     - Yes
-     - No
-     - Yes
-
+     - * :ref:`Linux <linux-backend-auto-discovery>`
+       * :ref:`Kubernetes <k8s-backend-auto-discovery>`
 
 .. raw:: html
   

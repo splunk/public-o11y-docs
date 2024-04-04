@@ -5,7 +5,7 @@ Automatic discovery and configuration for Kubernetes
 ************************************************************************
 
 .. meta:: 
-    :description: draft
+    :description: Get started with automatic discovery and configuration for Kubernetes environments. Deploy automatic discovery to automatically find applications running in your environment and send data from them to Splunk Observability Cloud.
 
 .. toctree::
     :hidden:
@@ -14,15 +14,13 @@ Automatic discovery and configuration for Kubernetes
     Third-party applications <k8s/k8s-third-party>
     Advanced customization <k8s/k8s-advanced-config>
 
-.. raw:: html
+Automatic discovery and configuration for Kubernetes automatically finds applications running in your Kubernetes environments and captures telemetry data from them. The Splunk Distribution of OpenTelemetry Collector receives this data and sends it to Splunk Observability Cloud.
 
-    <h2>Overview</h2>
-
-Using automatic discovery for Kubernetes, you can find language runtimes and third-party applications. 
+Using automatic discovery, you don't have to manually instrument or configure your applications before deploying them. 
 
 .. raw:: html
 
-    <h2>Applications</h2>
+    <h2>Get started</h2>
 
 Automatic discovery for Kubernetes supports both back-end applications (such as Java and Node.js) as well as third-party applications (such as databases, web servers, and message queues).
 

@@ -7,9 +7,9 @@ Automatic discovery and configuration for third-party applications in Linux
 .. meta:: 
     :description: Learn how to use automatic discovery and configuration to gather data from third-party applications running in Linux environments.
 
-.. note:: Update the Collector to version 0.94.0 and higher to activate automatic service discovery.
+You can use automatic discovery and configuration to find third-party applications (such as databases and web servers) running in your Linux environment. Automatic discovery gathers telemetry data from these applications and sends it to Splunk Observability Cloud.
 
-.. intro paragraph
+.. note:: Update the Collector to version 0.94.0 and higher to activate automatic service discovery.
 
 How automatic discovery works
 ==========================================
