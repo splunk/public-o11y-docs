@@ -24,9 +24,9 @@ To expand and optimize Splunk Infrastructure Monitoring, do the following:
 
 9. :ref:`expand-im9`
 
-10. :ref:`Onboard all production applications <expand-im11>`
+10. :ref:`expand-im11`
 
-11. :ref:`Onboard all users and teams <expand-im12>`
+11. :ref:`expand-im12`
 
 
 .. _expand-im1:
@@ -192,7 +192,7 @@ During this phase, you can automate most processes can be automated and new serv
 
 .. _expand-im12:
 
-Onboard all teams/users
+Onboard all users and teams
 ================================================================================================================
 During this phase, you can onboard all users and teams into Splunk Observability Cloud. Turn on the enhanced teams security to identify team managers and users. Use enhance security within the teams to control who can view and who can and modify each dashboard and detector within the teams.
 
