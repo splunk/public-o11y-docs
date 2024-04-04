@@ -26,7 +26,7 @@ Configure memory allocation
 
 To configure memory allocation, use the ``memory`` parameter, which sets the environment variable ``SPLUNK_MEMORY_TOTAL_MIB``.
 
-* By default, the Collector is configured to use 512 MiB (500 x 2^20 bytes) of memory. 
+* By default, the Collector is configured to use 512 MiB of memory. 
 * To modify this setting, replace ``SPLUNK_MEMORY_TOTAL_MIB`` with the desired integer value.
 
 .. code-block:: PowerShell
