@@ -210,8 +210,10 @@ Example with ``--config``
 Next steps
 ==================================
 
-Once you have installed the package, you can perform these actions:
+After you have installed the package, see:
 
+* :ref:`windows-config-ootb`.
+* :ref:`otel-windows-config`.
+* :ref:`collector-how-to`.
 * :ref:`use-navigators-imm`.
 * View logs and errors in the Windows Event Viewer. Search for "view logs and errors" on :new-page:`Microsoft documentation site <https://docs.microsoft.com/en-us/>` for more information.
-* :ref:`apm`.
