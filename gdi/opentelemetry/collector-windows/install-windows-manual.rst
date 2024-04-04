@@ -23,6 +23,8 @@ All installation methods offer default configurations using environment variable
 
 .. include:: /_includes/collector-env-vars.rst
 
+.. note:: When configuring additional settings, use service, process, or terminal scopes.  
+
 Configure proxy settings
 ----------------------------------
 
