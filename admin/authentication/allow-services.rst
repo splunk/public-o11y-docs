@@ -25,7 +25,7 @@ Ensure that you give the proxy the ability to resolve the network names and make
 
 .. _otel-connector:
 
-Use the Splunk Distribution of OpenTelemetry Collector
+Use the Splunk Distribution of the OpenTelemetry Collector
 =======================================================================
 
 Use the :new-page:`Splunk Distribution of OpenTelemetry Collector <https://docs.splunk.com/Observability/gdi/opentelemetry/deployment-modes.html>` in data forwarding (gateway) mode. You can forward metrics locally to the Splunk Distribution of OpenTelemetry Collector, which serves as your local store-and-forward service for telemetry.
