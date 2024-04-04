@@ -9,19 +9,19 @@
     - :strong:`usage`
     - :strong:`read_only`
 
-  * - :strong:`View dashboard`
+  * - :strong:`View dashboards`
     - Yes
     - Yes
     - Yes
     - Yes
 
-  * - :strong:`Edit dashboard`
+  * - :strong:`Edit dashboards`
     - Yes
     - Yes
     - No
     - No
 
-  * - :strong:`Delete dashboard`
+  * - :strong:`Delete dashboards`
     - Yes
     - Yes
     - No
