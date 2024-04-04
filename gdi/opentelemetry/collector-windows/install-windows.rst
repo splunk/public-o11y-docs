@@ -69,6 +69,8 @@ If you need to activate TLS in PowerShell, use the command:
 
   [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
 
+.. caution:: Starting from version 0.89, the installer for the Splunk Distribution of the OpenTelemetry Collector for Windows sets its configuration using environment variables at service level instead of global level. When configuring additional settings, use service, process, or terminal scopes.
+
 .. _otel-installer-options-windows:
 .. _windows-script-options:
 
