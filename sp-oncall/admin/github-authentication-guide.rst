@@ -9,9 +9,9 @@ Log in with GitHub authentication
 
 
 
-When logging into Splunk On-Call, you may decide to do so via GitHub authentication. If you have a GitHub account, whether you're a new Splunk On-Calls user or an existing one, you can log in using GitHub authentication.
+When logging into Splunk On-Call, you may decide to do so using GitHub authentication. If you have a GitHub account, whether you're a new Splunk On-Calls user or an existing one, you can log in using GitHub authentication.
 
-The Splunk On-Call Sign in page is available at: :new-page:`Splunk On-Call <https://portal.victorops.com/membership/>`.
+The Splunk On-Call sign in page is available at: :new-page:`Splunk On-Call <https://portal.victorops.com/membership/>`.
 
 
 Existing Splunk On-Call Users

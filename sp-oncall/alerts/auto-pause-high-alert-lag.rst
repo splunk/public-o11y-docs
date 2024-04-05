@@ -5,7 +5,7 @@ Auto-Pause and High Alert lag settings
 ************************************************************************
 
 .. meta::
-   :description: About the user roll in Splunk On-Call.
+   :description: About the user role in Splunk On-Call.
 
 
 What is Auto-Pause?

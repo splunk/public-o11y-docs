@@ -828,12 +828,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Get started TOGGLE <sp-oncall/reports/reports-main>  
+   Reports TOGGLE <sp-oncall/reports/reports-main>  
 
 .. toctree::
    :maxdepth:   3
 
-   Get started TOGGLE <sp-oncall/spoc-integrations/integrations-main>   
+   Integrations with Splunk On-Call TOGGLE <sp-oncall/spoc-integrations/integrations-main>   
 
 .. toctree::
    :caption: Reference and Legal

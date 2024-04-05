@@ -5,7 +5,7 @@ Maintenance mode
 ************************************************************************
 
 .. meta::
-   :description: About the user roll in Splunk On-Call.
+   :description: About the user role in Splunk On-Call.
 
 
 

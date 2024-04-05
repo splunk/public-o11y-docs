@@ -5,7 +5,7 @@ Configure a Waiting Room for incidents
 ************************************************************************
 
 .. meta::
-   :description: About the user roll in Splunk On-Call.
+   :description: About the user role in Splunk On-Call.
 
 
 Many resilient monitoring systems will automatically resolve a problem without any human interaction required. Paging users for incidents that could auto-resolve creates unnecessary noise for your on-call users. To avoid this issue, you may want to set up a waiting room. 

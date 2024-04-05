@@ -7,8 +7,14 @@ Configure Single Sign-On for Splunk On-Call
 .. meta::
    :description: Enable Splunk On-Call SSO for your organization. 
 
+.. toctree::
+   :hidden: 
 
-
+   sso-okta-spoc
+   sso-google-spoc
+   sso-onelogin-spoc
+   sso-azure-spoc
+   sso-aws-spoc
 
 Requirements
 ==================

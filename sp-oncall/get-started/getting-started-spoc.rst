@@ -5,29 +5,20 @@ What is Splunk On-Call?
 ************************************************************************
 
 .. meta::
-   :description: About the team admin roll in Splunk On-Call.
+   :description: About  Splunk On-Call.
 
 .. toctree::
     :hidden:
 
     onboarding-milestones
-    spoc-support
-    spoc-system-requirements
-    system-reqts
-    admin-permissions
-    admin-quick-start
-    alert-admin
-    egress-filtering-cloudflare
-    global-admin
-    stakeholders
-    team-admin
-    team-dashboard
-    timeline
-    tls-security-protocol
-    user-roles-permissions
-    user-training
-    usernames
-    user-role.rst
+   egress-filtering-cloudflare
+   spoc-support
+   spoc-system-requirements
+   spoc-system-requirements
+   team-dashboard
+   timeline
+   tls-security-protocol
+ 
 
 
 

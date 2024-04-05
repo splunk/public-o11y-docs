@@ -7,6 +7,23 @@ Splunk On-Call user roles and permissions
 .. meta::
    :description: Splunk On-Call system requirements, including browsers, mobile support, and incident requirements.
 
+.. toctree::
+   :hidden:
+
+   add-user
+   admin-permissions
+   admin-quick-start
+   alert-admin-training
+   alert-admin
+   configure-teams
+   manage-users
+   global-admin
+   team-admin-setup
+   team-admin
+   user-role
+   user-roles-permissions
+   user-training
+   usernames
 
 
 User Roles and Permissions

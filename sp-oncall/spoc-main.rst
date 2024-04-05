@@ -12,6 +12,8 @@ Welcome to Splunk On-Call
 .. toctree::
    :hidden:
 
+   Configure Single sign-on TOGGLE <admin/sso/single-sign-sso>
+   Select user roles TOGGLE user-roles-permissions
    Get Started <get-started/admin-quick-start>
    alerts/ack-back
    alerts/alert-admin-training
@@ -95,4 +97,9 @@ Welcome to Splunk On-Call
 
 Splunk On-Call is incident management software that allows teams to maintain a culture of high availability without slowing down the innovation process. The moment something goes wrong, Splunk On-Call will spring people to action, automatically.
 
+Access the following topics to learn about Splunk On-Call:
 
+-  :ref:`Configure Single sign-on TOGGLE <admin/sso/single-sign-sso>``
+-  :ref:`About user roles TOGGLE <user-roles-permissions>`
+-  
+-  
