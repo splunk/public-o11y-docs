@@ -98,10 +98,12 @@ If you're seeing the following error in your logs, it might mean that the Python
    E0908 16:23:32.337704280    5881 ssl_transport_security.cc:1468] Handshake failed with fatal error SSL_ERROR_SSL: error:10000095:SSL routines:OPENSSL_internal:ERROR_PARSING_EXTENSION.
    E0908 16:23:32.556405854    5881 ssl_transport_security.cc:1468] Handshake failed with fatal error SSL_ERROR_SSL: error:10000095:SSL routines:OPENSSL_internal:ERROR_PARSING_EXTENSION.
 
-To solve this issue, use the Jaeger exporter instead. See :ref:`trace-exporters-settings-python`.
+To solve this issue, use another exporter or send data to Splunk Observability Cloud directly. See :ref:`trace-exporters-settings-python` and :ref:`export-directly-to-olly-cloud-python`.
 
 Jaeger can't export spans
 ------------------------------------------------------
+
+.. note:: The Jaeger exporter is no longer supported for Python. Use the OTLP exporter or send data to Splunk Observability Cloud directly. See :ref:`export-directly-to-olly-cloud-python` for more information.
 
 If you're exporting trace data using the Jaeger exporter, errors in your logs might mean the Python agent can't send trace data to the OTel Collector, Smart Agent (now deprecated), or Splunk Cloud Platform:
 
