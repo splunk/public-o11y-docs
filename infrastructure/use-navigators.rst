@@ -61,7 +61,7 @@ The following table shows how instances are sorted in each view:
 
 For information on customizing the content and format of the navigator, including filtering, grouping, and more, see :ref:`customize-navigator`.
 
-For interactive walkthroughs of how to use navigators in Infrastructure Monitoring to troubleshoot your web server or observe your application and the underlying infrastructure, see :new-page:`Splunk Infrastructure Monitoring web server troubleshooting scenario <https://bossofopsando11y.com/imt/webserver-troubleshooting.html>` and :new-page:`Splunk Infrastructure Monitoring application monitoring scenario <https://bossofopsando11y.com/imt/application-monitoring.html>`.
+For interactive walkthroughs of how to use navigators in Infrastructure Monitoring to troubleshoot your web server or observe your application and the underlying infrastructure, see :new-page:`Splunk Infrastructure Monitoring web server troubleshooting scenario <https://splunko11y.com/imt/webserver-troubleshooting.html>` and :new-page:`Splunk Infrastructure Monitoring application monitoring scenario <https://splunko11y.com/imt/application-monitoring.html>`.
 
 For a list of all the navigators available, see :ref:`navigators-list-imm`.
 
