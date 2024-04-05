@@ -18,6 +18,7 @@ Troubleshoot the Collector
 
 Here are some common issues that you might encounter when using the OpenTelemetry Collector and the Splunk Distribution of the OpenTelemetry Collector, and tips on how to address them. 
 
+* :new-page:`OpenTelemetry Project troublehooting docs in GitHub <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md>`
 * :ref:`otel-splunk-collector-tshoot`
 * :ref:`tshoot-logs`
 * :ref:`otel-support-checklist`
