@@ -205,7 +205,7 @@ The following is a sample of the default configuration file:
 
 .. code-block:: bash
 
-   auto_instrumentation_java_agent_path=/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar
+   JAVA_TOOL_OPTIONS=-javaagent:/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar
 
 By default, the configuration file only specifies one parameter, ``java_agent_jar``, which points to the path of the installed Java Instrumentation Agent.
 
@@ -213,7 +213,7 @@ The following is a sample configuration that sets the service name and environme
 
 .. code-block:: bash
 
-   auto_instrumentation_java_agent_path=/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar
+   JAVA_TOOL_OPTIONS=-javaagent:/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar
    OTEL_SERVICE_NAME=default.service
    OTEL_RESOURCE_ATTRIBUTES=deployment.environment=test
    SPLUNK_PROFILER_ENABLED=true
@@ -237,7 +237,7 @@ The following table shows the supported parameters for the ``/usr/lib/splunk-ins
    * - Parameter
      - Description
      - Required
-   * - ``auto_instrumentation_java_agent_path``
+   * - ``JAVA_TOOLS_OPTIONS``
      - The full path to the JAR file provided by the installer.
      -  Yes
    * - ``OTEL_SERVICE_NAME``
