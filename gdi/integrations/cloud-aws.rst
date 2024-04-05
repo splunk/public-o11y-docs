@@ -23,7 +23,7 @@ You can collect data from the following AWS services:
     - :strong:`Provides metrics`
     - :strong:`Provides traces`
     - :strong:`Provides logs`
-    - :strong:`Provides metadata`
+    - :strong:`Provides metadata (4)`
 
   * - AWS/ACMPrivateCA
     - ACM Private CA
@@ -667,3 +667,4 @@ The following applies to the collected logs and metadata listed in the table:
 #. CloudWatch Logs only
 #. EC2 tags & properties only
 #. Logs collected by the CloudWatch agent stored in CloudWatch Logs
+#. Metadata in this context refers to AWS tags and properties
