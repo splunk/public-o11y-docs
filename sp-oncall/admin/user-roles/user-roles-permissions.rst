@@ -21,7 +21,6 @@ Splunk On-Call user roles and permissions
    team-admin-setup
    team-admin
    user-role
-   user-roles-permissions
    user-training
    usernames
 

@@ -7,6 +7,26 @@ Incident Pane
 .. meta::
    :description: About the Incident pane in Splunk On-Call which displays incoming alerts.
 
+
+.. toctree::
+    :hidden:
+
+    manual-incident-creation
+    manual-take-call
+    multi-responder-incident-response
+    reroute-an-incident
+    rules-engine-annotations
+    rules-engine-managing-rules
+    rules-engine-matching-conditions
+    rules-engine-stop-flag
+    rules-engine-transformations
+    rules-engine-variable-expansion
+    similar-incidents
+    stakeholders
+
+
+
+
 Requirements
 =======================
 

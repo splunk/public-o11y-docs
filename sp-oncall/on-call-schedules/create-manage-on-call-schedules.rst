@@ -12,16 +12,12 @@ Create and manage on-call schedules
 .. toctree::
    :hidden:
 
-   Scenarios: Schedules in Incident Intelligence TOGGLE <scenarios-schedules/scenarios-schedules>
-   create-on-call-schedule
-   sync-on-call-schedule
-   whos-on-call
-   reassign-shift
+   rotation-setup
+   schedule-examples
+   scheduled-overrides
 
 Use the following topics to learn how to create and manage schedules, see who's on call, and reassign shifts:
 
-* :ref:`ii-create-on-call-schedule`
-* :ref:`ii-scenarios-schedules`
-* :ref:`ii-sync-on-call-schedule`
-* :ref:`ii-whos-on-call`
-* :ref:`reassign-shift`
+* :ref:`rotation-setup`
+* :ref:`schedule-examples`
+* :ref:`scheduled-overrides`

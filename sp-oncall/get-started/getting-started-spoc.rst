@@ -8,12 +8,11 @@ What is Splunk On-Call?
    :description: About  Splunk On-Call.
 
 .. toctree::
-    :hidden:
+   :hidden:
 
-    onboarding-milestones
+   onboarding-milestones
    egress-filtering-cloudflare
    spoc-support
-   spoc-system-requirements
    spoc-system-requirements
    team-dashboard
    timeline

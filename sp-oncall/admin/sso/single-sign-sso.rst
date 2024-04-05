@@ -10,11 +10,10 @@ Configure Single Sign-On for Splunk On-Call
 .. toctree::
    :hidden: 
 
-   sso-okta-spoc
-   sso-google-spoc
-   sso-onelogin-spoc
-   sso-azure-spoc
-   sso-aws-spoc
+   sp-sso-okta
+   sp-sso-google
+   sp-sso-adfs
+   sp-sso-users
 
 Requirements
 ==================
