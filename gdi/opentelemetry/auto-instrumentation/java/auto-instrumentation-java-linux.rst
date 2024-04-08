@@ -205,7 +205,7 @@ The following is a sample of the default configuration file:
 
 .. code-block:: bash
 
-   java_agent_jar=/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar
+   JAVA_TOOL_OPTIONS=-javaagent:/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar
 
 By default, the configuration file only specifies one parameter, ``java_agent_jar``, which points to the path of the installed Java Instrumentation Agent.
 
@@ -213,12 +213,12 @@ The following is a sample configuration that sets the service name and environme
 
 .. code-block:: bash
 
-   java_agent_jar=/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar
-   service_name=default.service
-   resource_attributes=deployment.environment=test
-   enable_profiler=true
-   enable_profiler_memory=true
-   enable_metrics=true
+   JAVA_TOOL_OPTIONS=-javaagent:/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar
+   OTEL_SERVICE_NAME=default.service
+   OTEL_RESOURCE_ATTRIBUTES=deployment.environment=test
+   SPLUNK_PROFILER_ENABLED=true
+   SPLUNK_PROFILER_MEMORY_ENABLED=true
+   SPLUNK_METRICS_ENABLED=true
 
 The :ref:`supported-parameters` section discusses additional parameters you can set in the configuration file.
 
@@ -237,29 +237,23 @@ The following table shows the supported parameters for the ``/usr/lib/splunk-ins
    * - Parameter
      - Description
      - Required
-   * - ``java_agent_jar``
+   * - ``JAVA_TOOLS_OPTIONS``
      - The full path to the JAR file provided by the installer.
      -  Yes
-   * - ``service_name``
+   * - ``OTEL_SERVICE_NAME``
      - An optional parameter that specifies a unique identifier for a particular host. If you set this parameter, all instrumented Java applications on the host have their service name set using the  ``OTEL_SERVICE_NAME`` environment variable. If this parameter isn't set, the shared object assigns a generated name.
      - No
-   * - ``resource_attributes`` 
+   * - ``OTEL_RESOURCE_ATTRIBUTES`` 
      - Contains a comma-separated list of name-value pairs of the form ``name=value``. Use this attribute to add extra tags to the generated trace data. |br| If you installed the package with the installer script and specified the ``--deployment-environment <your_env>`` when you ran the script, the ``deployment.environment=<your_env>`` resource attribute is automatically added to the configuration.
-     - No  
-   * - ``generate_service_name``
-     - Set to ``false`` to prevent the preloader from setting the ``OTEL_SERVICE_NAME`` environment variable. In that case, the instrumentation library tries to determine the service name automatically.
-     - No
-   * - ``enable_profiler``
+     - No 
+   * - ``SPLUNK_PROFILER_ENABLED``
      - Set to ``true`` to activate AlwaysOn Profiling (CPU). See :ref:`profiling-intro`.
      - No
-   * - ``enable_profiler_memory``
+   * - ``SPLUNK_PROFILER_MEMORY_ENABLED``
      - Set to ``true`` to activate AlwaysOn Profiling (Memory). See :ref:`profiling-memory-metrics`.
      - No
-   * - ``enable_metrics``
+   * - ``SPLUNK_METRICS_ENABLED``
      - Set to ``true``  to activate metric collection. See :ref:`java-otel-metrics-attributes`.
-     - No
-   * - ``disable_telemetry``
-     - Set to ``true`` to prevent the preloader from sending the ``splunk.linux-autoinstr.executions`` metric to the local collector.
      - No
 
 The ``/etc/ld.so.preload`` file is automatically created or updated with the default path to the installed instrumentation library. If necessary, custom library paths can be manually added to this file.

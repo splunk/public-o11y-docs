@@ -292,8 +292,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    Contribute to our documentation <get-started/contribute>
 
-
-
 .. toctree::
    :maxdepth:   3
 
@@ -380,7 +378,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   gdi/get-data-in/integrations
+   Available integrations TOGGLE <gdi/integrations-list>
 
 .. toctree::
    :maxdepth:   3
@@ -416,11 +414,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:  3
 
    Instrument front-end applications TOGGLE <gdi/get-data-in/rum/rum-instrumentation>
-
-.. toctree::
-   :maxdepth:   3
-
-   Available host and application monitors TOGGLE <gdi/index>
 
 .. toctree::
    :maxdepth: 3

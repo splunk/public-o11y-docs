@@ -1,7 +1,7 @@
 .. _aws-console-ms:
 
 ***********************************************************************************
-Connect Splunk Observability Cloud with Metric Streams from the AWS console
+Connect Splunk Observability Cloud with AWS-managed Metric Streams 
 ***********************************************************************************
 
 .. meta::

@@ -3,10 +3,10 @@
   :widths: 20,20,20,20,20
 
   * - :strong:`Permission`
-    - :strong:`Admin`
-    - :strong:`Power user`
-    - :strong:`Usage`
-    - :strong:`Read_only`
+    - :strong:`admin`
+    - :strong:`power`
+    - :strong:`usage`
+    - :strong:`read_only`
 
   * - :strong:`View RUM homepage`
     - Yes

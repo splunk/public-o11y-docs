@@ -31,7 +31,7 @@ See the table for a complete list of exposed ports and endpoints:
   * - ``http(s)://0.0.0.0:[4317|4318]``
     - OTLP receiver using gRPC and http
   * - ``http(s)://0.0.0.0:6060``
-    - :new-page:`HTTP forwarder <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/httpforwarder>` used to receive Smart Agent ``apiUrl`` data
+    - HTTP forwarder used to receive Smart Agent ``apiUrl`` data
   * - ``http(s)://0.0.0.0:7276``
     - SAPM trace receiver
   * - ``http://localhost:8888/metrics``

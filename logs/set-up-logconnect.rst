@@ -16,7 +16,7 @@ When you set up Log Observer Connect, your Splunk Enterprise logs data remains i
 Region and version compatibility
 ==============================================================
 
-Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, jp0, and au0, and is compatible with Splunk Enterprise 8.2 and higher. 
+Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, jp0, and au0, and is compatible with Splunk Enterprise 9.0.1 and higher. 
 
 Prerequisites
 ==============================================================
@@ -27,7 +27,7 @@ Ensure the following configuration in your Splunk Enterprise instance:
 
 * Token authentication is active on your Log Observer Connect service account. See :new-page:`Securing Splunk Enterprise: Enable or disable token authentication <https://docs.splunk.com/Documentation/Splunk/latest/Security/EnableTokenAuth>` to learn how.
 
-* Allow these IPs:
+* Make sure you can access these IP addresses from the Splunk Enterprise host or network:
 
   - us0: ``34.199.200.84``, ``52.20.177.252``, ``52.201.67.203``, ``54.89.1.85``
   - us1: ``44.230.152.35``, ``44.231.27.66``, ``44.225.234.52``, ``44.230.82.104``
@@ -59,7 +59,7 @@ In Splunk Enterprise, follow the instructions in the guided setup for the integr
       
 2. Select the role you want to use for the Log Observer Connect service account. The service account is a user role that can access the specific Splunk Enterprise indexes that you want your users to search in Log Observer Connect. 
       
-3. On the :guilabel:`Capabilities` tab, ensure that ``edit_tokens_own`` is selected. Also, ensure that ``indexes_list_all`` is not selected.
+3. On the :guilabel:`Capabilities` tab, ensure that ``edit_tokens_own`` and ``search`` are selected. Also, ensure that ``indexes_list_all`` is not selected.
 
       .. image:: /_images/logs/CapabilitiesTab1.png
          :width: 100%
