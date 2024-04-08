@@ -16,9 +16,15 @@ Authentication and Security
    allow-services
 
 
+As you configure your Splunk Observability Cloud environment, security and authentication are crucial. Use authentication tokens to authenticate Splunk Observability Cloud API requests, track API usage, and control your use of resources. 
 
-One of the first steps in getting started with Observability Cloud is setting up your organization. In Observability Cloud, an organization, or account, is the highest-level security grouping. For example, other organizations and their users can't access the data in your organization.
+Single-sign on (SSO) integrations implement SAML 2.0 for exchanging authentication and authorization information between an identity provider (IdP) such as Ping, Okta, Microsoft Entra ID (formerly Azure Active Directory), or OneLogin and a service provider (SP) such as Splunk Observability Cloud. When you set up a new SSO integration in Splunk Observability Cloud, you authorize Splunk Observability Cloud to trust information from a particular IdP and use it for logging in users in an organization.
 
-To set up your organization, create and carry out a plan for addressing the tasks described in this topic. Many of these tasks require administrator access, and you might need to perform some administrative tasks on a regular basis after your initial setup.
+Manage network and user access with the following topics:
+
+- :ref:`Configure Authentication tokens <admin-tokens>`
+- :ref:`Configure Single Sign On <sso-about>`
+- :ref:`Allow Splunk Observability Cloud services in your network <allow-services>`
+
 
 
