@@ -27,7 +27,7 @@ Ensure the following configuration in your Splunk Enterprise instance:
 
 * Token authentication is active on your Log Observer Connect service account. See :new-page:`Securing Splunk Enterprise: Enable or disable token authentication <https://docs.splunk.com/Documentation/Splunk/latest/Security/EnableTokenAuth>` to learn how.
 
-* Allow these IPs:
+* Make sure you can access these IP addresses from the Splunk Enterprise host or network:
 
   - us0: ``34.199.200.84``, ``52.20.177.252``, ``52.201.67.203``, ``54.89.1.85``
   - us1: ``44.230.152.35``, ``44.231.27.66``, ``44.225.234.52``, ``44.230.82.104``
