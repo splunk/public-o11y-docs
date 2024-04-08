@@ -78,10 +78,9 @@ At this point you have enough information and experience with configuring both t
 
 Items should at least include the following:
 
-* Which environment variables and command line parameters to set for the auto-instrumentation agents. For more information, see https://docs.splunk.com/Observability/apm/set-.
-* Guide on how to enable https://docs.google.com/document/d/1hpzkmO5c8cz35x3ofa-MC0JGmsazaPQov-7k_f5Mml8/edit?pli=1#heading=h.8rdrmmc6xzqh if required. 
-* Instructions how to configure logs to add tracing information. This is language dependent. For a  Java example, see :ref:`correlate-traces-with-logs-java`.
-* A guide that to the naming conventions for metrics, and environments. For details on metric naming conventions, see https://docs.google.com/document/d/1hpzkmO5c8cz35x3ofa-MC0JGmsazaPQov-7k_f5Mml8/edit?pli=1#heading=h.wm48ywczbj4. For details on environment naming conventions, see https://docs.google.com/document/d/1hpzkmO5c8cz35x3ofa-MC0JGmsazaPQov-7k_f5Mml8/edit?pli=1#heading=h.nly13uf61hgz.
+* Which environment variables and command line parameters to set for the auto-instrumentation agents. For more information, see :ref:`advanced-java-otel-configuration` and :ref:`otel-install-linux-manual`.
+* Instructions how to configure logs to add tracing information. This is language dependent. For a Java example, see :ref:`correlate-traces-with-logs-java`.
+* A guide that to the naming conventions for metrics, and environments. For details on metric naming conventions, see :ref:`metric-dimension-names`. For naming environments, you can set the deployment environment as a span tag, which allows you to filter your APM by environments of interest. See :ref:`deployment-env-spantag` to learn more.
 
 
 
