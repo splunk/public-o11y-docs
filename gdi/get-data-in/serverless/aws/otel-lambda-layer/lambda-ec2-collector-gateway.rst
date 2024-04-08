@@ -116,15 +116,11 @@ To send spans from the instrumented Lambda function to the Collector gateway run
 #. If you've already set the access token and realm in the Collector configuration, delete the ``SPLUNK_ACCESS_TOKEN`` and ``SPLUNK_REALM`` environment variables.
 
 
-.. _set-env-vars-otel-lambda:
-
 .. include:: /_includes/gdi/lambda-configuration.rst
 
 
-.. _send_directly_olly_cloud:
-
 .. include:: /_includes/gdi/send-spans-directly-lambda.rst
-   
+
 
 
 Check that data appears in Splunk Observability Cloud
