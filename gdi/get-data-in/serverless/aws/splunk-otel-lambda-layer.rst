@@ -11,6 +11,8 @@ Instrument AWS Lambda functions for Splunk Observability Cloud
    :hidden:
 
    Instrument your Lambda function <otel-lambda-layer/instrument-lambda-functions>
+   Use separate layers <lambda-language-layers>
+   Use a Collector in EC2 <lambda-ec2-collector-gateway>
    .NET lambda functions <otel-lambda-layer/dotnet-lambdas>
    Go lambda functions <otel-lambda-layer/go-lambdas>
    Advanced configuration <otel-lambda-layer/advanced-configuration>
