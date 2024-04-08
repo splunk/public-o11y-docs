@@ -134,19 +134,12 @@ Rollups are used to adjust the chart resolution as necessary to effectively disp
 Change histogram function for histogram metrics
 --------------------------------------------------
 
-Because histogram data must be summarized by combining the buckets in the histogram together, when you select a histogram metric as the signal for your plot, rollup is handled by Splunk Observability Cloud as a sum of the bucket values. You can't make changes to the rollup configuration for histogram data. Instead of rollup, use histogram functions to define how histogram data is interpreted and represented on your chart.
+Because histogram data must be summarized by combining the buckets in the histogram together, when you use a histogram metric as the signal for your plot, you must add a histogram function to define how histogram data is interpreted and represented on your chart.
 
-The default histogram function for all histogram metrics is ``percentile(90)``. 
-
-.. image:: /_images/data-visualization/charts/histogram-in-chart.png
-   :width: 80%
-
-To change the histogram function, select :guilabel:`P90` and select a different function you want to use from the :strong:`Function` dropdown menu. For more information on histogram function and supported methods, see :new-page:`histogram() <https://dev.splunk.com/observability/docs/signalflow/functions/histogram>` in the SignalFlow reference documentation.
+To add a histogram function, select :guilabel:`Select function` and choose a function from the :strong:`Histogram function` dropdown menu. For more information on histogram function and supported methods, see :new-page:`histogram() <https://dev.splunk.com/observability/docs/signalflow/functions/histogram>` in the SignalFlow reference documentation.
 
 .. image:: /_images/data-visualization/charts/change-histogram-function.png
    :width: 50%
-
-
 
 .. _plot-analytics:
 
