@@ -14,7 +14,7 @@ You can collect data from the following AWS services:
 
 .. list-table::
   :header-rows: 1
-  :widths: 40 40 15 15 15 15
+  :widths: 30 30 10 10 10 10
   :width: 100%
   :class: monitor-table
 
@@ -23,7 +23,7 @@ You can collect data from the following AWS services:
     - :strong:`Provides metrics`
     - :strong:`Provides traces`
     - :strong:`Provides logs`
-    - :strong:`Provides metadata (4)`
+    - :strong:`Provides metadata (tags/properties) (4)`
 
   * - AWS/ACMPrivateCA
     - ACM Private CA
