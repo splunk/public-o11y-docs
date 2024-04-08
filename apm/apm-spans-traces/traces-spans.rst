@@ -41,7 +41,7 @@ Spans and traces form the backbone of application monitoring in Splunk APM. Use 
     <h2>What are services?</h2>
   </embed>
 
-Services are the key components of the systems you can monitor with Splunk APM. To learn more about the types of services in Splunk APM, see :ref:`service-concept`. 
+Services are the key components of the systems you can monitor with Splunk APM. 
 
 
 .. raw:: html

@@ -11,7 +11,7 @@ SignalFx exporter
 
 The SignalFx exporter is a native OTel component that allows the OpenTelemetry Collector to send metrics and events to SignalFx endpoints. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
-.. note:: While the SignalFx Smart Agent has reached End of Support, OTel native components such as the Smart Agent receiver, the SignalFx receiver, and the SignalFx exporter are available and supported. For information on the receivers, see :ref:`smartagent-receiver`: and :ref:`signalfx-receiver`.
+While the SignalFx Smart Agent has reached End of Support, OTel native components such as the Smart Agent receiver, the SignalFx receiver, and the SignalFx exporter are available and supported. For information on the receivers, see :ref:`smartagent-receiver`: and :ref:`signalfx-receiver`.
 
 Get started
 ======================
@@ -292,6 +292,17 @@ Translation rules currently allow the following actions:
 .. _default-translation-rules-sfx-exporter:
 
 .. include:: /_includes/gdi/default-translation-metrics.rst
+
+.. _drop-histogram-metrics:
+
+Drop histogram metrics
+===================================================
+
+In case of high cardinality metrics, dropping histogram buckets might be useful. To drop histogram metrics, set ``drop_histogram_buckets`` to ``true``.
+
+When ``drop_histogram_buckets`` is activated, histogram buckets are dropped instead of being translated to datapoints with the ``_bucket`` suffix. Only datapoints with ``_sum``, ``_count``, ``_min``, and ``_max`` are sent through the exporter.
+
+.. _signalfx-exporter-settings:
 
 Settings
 ======================

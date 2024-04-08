@@ -33,7 +33,11 @@ You can apply any of the following actions on collected attributes of spans, met
    * - ``convert``
      - Converts an attribute to another type, as specified in the ``converted_type`` parameter, which can be either ``int``, ``double``, or ``string``.
 
-.. note:: To include or exclude whole spans, logs, or metrics, use the filter processor. See :ref:`filter-processor`.
+.. note:: 
+  
+  Use the Metrics transform processor to rename metrics, or add, rename or delete label keys and values. You can also use it to perform scaling and aggregations on metrics across labels or label values. See :ref:`metrics-transform-processor`.
+
+  To include or exclude whole spans, logs, or metrics, use the filter processor. See :ref:`filter-processor`.
 
 Get started
 ======================
@@ -68,35 +72,34 @@ By default, the Splunk Distribution of OpenTelemetry Collector includes the attr
 You can then add the attributes processors to any compatible pipeline. For example:
 
 .. code-block:: yaml
+  :emphasize-lines: 6,14,22
 
-   :emphasize-lines: 6, 14, 22
-
-   service:
-     pipelines:
-       traces:
-         receivers: [jaeger, otlp, zipkin]
-         processors:
-         - attributes/traces
-         - memory_limiter
-         - batch
-         - resourcedetection
-         exporters: [sapm, signalfx]
-       metrics:
-         receivers: [hostmetrics, otlp, signalfx]
-         processors:
-         - attributes/metrics
-         - memory_limiter
-         - batch
-         - resourcedetection
-         exporters: [signalfx]
-       logs:
-         receivers: [fluentforward, otlp]
-         processors:
-         - attributes/logs
-         - memory_limiter
-         - batch
-         - resourcedetection
-         exporters: [splunk_hec]
+  service:
+    pipelines:
+      traces:
+        receivers: [jaeger, otlp, zipkin]
+        processors:
+        - attributes/traces
+        - memory_limiter
+        - batch
+        - resourcedetection
+        exporters: [sapm, signalfx]
+      metrics:
+        receivers: [hostmetrics, otlp, signalfx]
+        processors:
+        - attributes/metrics
+        - memory_limiter
+        - batch
+        - resourcedetection
+        exporters: [signalfx]
+      logs:
+        receivers: [fluentforward, otlp]
+        processors:
+        - attributes/logs
+        - memory_limiter
+        - batch
+        - resourcedetection
+        exporters: [splunk_hec]
 
 To include or exclude attributes use any of the following properties:
 
@@ -165,7 +168,7 @@ The following example shows how to create a new attribute based on the value of 
          # Creates four new attributes (defined in pattern) from the
          # value of the http.url attribute
        - key: "http.url"
-           pattern: ^(?P<http_protocol>.*):\/\/(?P<http_domain>.*)\/(?P<http_path>.*)(\?|\&)(?P<http_query_params>.*)
+           pattern: ^(?P<http_protocol>.*):\\/\\/(?P<http_domain>.*)\\/(?P<http_path>.*)(\\?|\\&)(?P<http_query_params>.*)
            action: extract
 
 Backfill spans that are missing an attribute

@@ -100,10 +100,8 @@ Ordering considerations
 
 If multiple detectors insert the same attribute name, only the first detector is considered. For example, if you use the ``eks`` and ``ec2`` detectors, the value of the ``cloud.platform`` attribute is ``aws_eks`` instead of ``ec2``.
 
-When using multiple detectors, follow this order:
+When using multiple AWS detectors, follow this order: ``lambda``, ``elastic_beanstalk``, ``eks``, ``ecs``, ``ec2``.
 
-* AWS: ``lambda``, ``elastic_beanstalk``, ``eks``, ``ecs``, ``ec2``
-* GCP: ``gke``, ``gce``
 
 Detect resources and collect data 
 ==============================================

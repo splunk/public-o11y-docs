@@ -27,7 +27,7 @@ While you have always been able to use the data in Splunk Observability Cloud to
   </embed>
 
 
-Service level monitoring is the process of measuring, tracking, and analyzing a variety of service level indicators (SLIs) associated with a given service. This process calculates the health of a deployed software or service and compares it against the service level agreement (SLA).
+Service level monitoring is the process of measuring, tracking, and analyzing a variety of service level indicators (SLIs) associated with a given service. You can then compare the health of a deployed software or service against your business goals.
 
 The following table defines key concepts in service level monitoring.
 

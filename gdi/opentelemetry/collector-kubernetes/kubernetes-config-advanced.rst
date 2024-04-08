@@ -20,26 +20,36 @@ For basic Helm chart configuration, see :ref:`otel-kubernetes-config`. For log c
 Override the default configuration
 ==============================================================
 
-You can override the default configuration to use your own. To do this, include a custom configuration using the ``agent.config`` parameter in the values.yaml file. For example:
+You can override the default configuration to use your own. To do this, include a custom configuration using the ``agent.config``, ``clusterReceiver.config``, or ``gateway.config`` parameter in the values.yaml file. Find examples at :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>`, :new-page:`agent <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/default/rendered_manifests/configmap-agent.yaml>`, :new-page:`cluster receiver <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/default/rendered_manifests/configmap-cluster-receiver.yaml>`, and :new-page:`gateway <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/collector-all-modes/rendered_manifests/configmap-gateway.yaml>`.
+
+For example:
 
 .. code-block:: yaml
  
-
   agent:
-    enabled: true
-
-  # Metric collection from k8s control plane components.
-    controlPlaneMetrics:
-      apiserver:
-        enabled: true
-      controllerManager:
-        enabled: true
-      coredns:
-        enabled: false
-      proxy:
-        enabled: true
-      scheduler:
-        enabled: false
+    config:
+      processors:
+        # Exclude logs from pods named 'podNameX'
+        filter/exclude_logs_from_pod:
+          logs:
+            exclude:
+              match_type: regexp
+              resource_attributes:
+                - key: k8s.pod.name
+                  value: '^(podNameX)$'
+      # Define the logs pipeline with the default values as well as your new processor component
+        service:
+        pipelines:
+          logs:
+            processors:
+              - memory_limiter
+              - k8sattributes
+              - filter/logs
+              - batch
+              - resourcedetection
+              - resource
+              - resource/logs
+              - filter/exclude_logs_from_pod
 
 This custom configuration is merged into the default agent configuration.
 

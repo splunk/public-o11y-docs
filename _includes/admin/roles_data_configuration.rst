@@ -1,17 +1,18 @@
 .. list-table::
+  :header-rows: 1
   :widths: 20,20,20,20,20
 
   * - :strong:`Permission`
-    - :strong:`Admin`
-    - :strong:`Power user`
-    - :strong:`Usage`
-    - :strong:`Read_only`
+    - :strong:`admin`
+    - :strong:`power`
+    - :strong:`usage`
+    - :strong:`read_only`
 
   * - :strong:`View Global Data Links`
     - Yes
     - Yes
-    - No
-    - No
+    - Yes
+    - Yes
 
   * - :strong:`Create, delete, or clone Global Data Links`
     - Yes

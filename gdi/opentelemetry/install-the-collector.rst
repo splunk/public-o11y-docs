@@ -44,6 +44,63 @@ The Splunk Distribution of OpenTelemetry Collector is supported on Kubernetes, L
   
 See also :ref:`other deployment tools and options <otel_deployments>`.
 
+.. _collector-verify-docker:
+
+.. raw:: html
+
+  <embed>
+    <h3>Verify the Docker image of the Collector<a name="collector-verify-docker" class="headerlink" href="#collector-verify-docker" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
+Docker images of the Collector are automatically signed.
+
+If you need to verify and trust your software package, use the following public key to verify the Docker images of the Collector for versions 0.93 or higher:
+
+.. code-block::
+
+  -----BEGIN PUBLIC KEY-----
+  MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAnQi0COAQC5XgALFAyTW3
+  JXiHvXJLIFKK+LKS8iVo0Ec2tsABJ5usp5yCYTENJHoS1fLC5XcY5nyM4fqxjWJK
+  3FqDa/inWkryNgpW8Mx5LhjGiIxiBiMnONFh0cZNctbQ7mNTBZgisiwThDTOovtW
+  660MCCeZdPAMdSHaDym7GWAQi1tVWMioI2r9s5DUbwbzK5z9z/HZuX9Su2KJxxG6
+  TagdZB6EyhkdyV/LR1ud5R/5P2ouRt/DpIj/iSRnkTV28wDRSf//QR75SiyDW2zo
+  ph5MmkD88H5aTw22cJ35sFo3S+NLxakrQZzyH1G4oY6vpQ8h0hMYJ9zAJZxA/kzN
+  mLZ/V4QVj8tkJaj7igcOKpfatQUu7n6HapCLhoNAcrnDskf23V4PxUJ+MIAN2vwP
+  SUMTI2rKrEPpilAKup4l7EsxX2Dm73umh/xyWaKlpw8kAsB9dLuSj3gnh/k3SX6q
+  wWkQASkbjBRe+iPrkVcRNfOvIHp/bg8kd5q4JwEIDh4x/JEf/l6zLpEar8hh2dSW
+  VbbHBd5Xo9Ge5BjwXOcoDhvUQqNJdLBJruhvhn7Ogy5Paw5TGhdawfjxT2yXeqbE
+  Juv6qdo/mSimkpR8lkQT7OsfAQbCPeyFvZKb22hXj6tCTVJncwCJLe/FBdXJhRep
+  Y6NEdmKZLGodXv4zLNVr7SkCAwEAAQ==
+  -----END PUBLIC KEY----
+
+For older Collector versions, use this public key: 
+
+.. code-block::
+
+  -----BEGIN PUBLIC KEY-----
+  MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAw+sL4Mx2Ip9AxTSp7Iw2
+  k69tlJ8RqYNngJyecOLLiQkubgIQdnAkQurTfCPCuCHChvGGw3WCV617oJR25D0h
+  NzOvS9wIXc1mEdsHCFbOuAVnJ7GLALmci6sR09jPiQnl2X58+edI/2g6j77G1Lz3
+  B/aOK4p70Ro2TTE6Xj6XACeLkAZGu1W3UQfrJiYkGz4PovWMyeF2J88RcwrrdOLn
+  i5iFeLR5EL8TtoQCXUyqJFpuXpBkLbMedrpZAODqBcg3iwfeACcguO2X1cCWFXM+
+  ubN1fzf2c+WrO3sg8io1cHTctX2GG+9r7DbqRuo0Ejj2D0fTi/JoVBCTXNxn2Drg
+  L86Y5+mtpUN+MlnzZRFEbCqN2fC9CO1LlriD+3NKAuW7OVM10S/+eHApUQi1Ao5A
+  ABfjRxHWn2SISC5pmgYDeg90Lf0BTjX2+qn1HuJXDZUyD1XEeXedqE+/m9mgEU2s
+  uYOqk6ecD/qowv2gvkwd742XvfpZhaMCdehtVJwB5HLAv4VtQQYLECgMrqipAALy
+  bAExcAb0i16mMJi2QCPh44BrzcLQW/SZxYr9sg3IQXWBE84XbuzSyHJwBjvyxgf5
+  2+TlQ3bUY73ssOe/WV3FAdDHh0ekQdOKO4plPPMXmdYCH2dY5ji5bunY+kKHayT7
+  pqX7nYPWHh4c2RvHkE3Tth8CAwEAAQ==
+  -----END PUBLIC KEY-----
+
+Images are signed using ``cosign``. To verify them:
+
+#. Save the public key to a file. For example, ``cosign.pub``.
+#. Run the following command:
+
+.. code-block:: 
+
+  cosign verify --insecure-ignore-tlog --key cosign.pub quay.io/signalfx/splunk-otel-collector:<collector-version>
+
 .. _otel-config-options:
 
 .. raw:: html

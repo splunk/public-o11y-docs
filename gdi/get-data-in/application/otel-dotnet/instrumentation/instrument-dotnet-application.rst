@@ -28,7 +28,7 @@ To generate all the basic installation commands for your environment and applica
 Install the Splunk Distribution of OpenTelemetry .NET manually
 ==================================================================
 
-Follow these instructions to install the Splunk Distribution of OpenTelemetry .NET:
+If you don't use the guided setup, follow these instructions to manually install the Splunk Distribution of OpenTelemetry .NET:
 
 - :ref:`install-dotnet-otel-instrumentation`
 - :ref:`configure-otel-dotnet`
@@ -218,6 +218,14 @@ Configure the instrumentation
 
 For advanced configuration of the .NET automatic instrumentation, like changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
 
+Database Query Performance settings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Starting from version 1.4.0, the .NET OTel instrumentation collects database queries for Database Query Performance. See :ref:`db-query-performance`.
+
+SQL statements might contain sensitive information. To configure this behavior, see ``OTEL_DOTNET_AUTO_SQLCLIENT_SET_DBSTATEMENT_FOR_TEXT`` and ``OTEL_DOTNET_AUTO_ENTITYFRAMEWORKCORE_SET_DBSTATEMENT_FOR_TEXT`` in :ref:`dotnet-otel-instrumentation-settings`.
+
+
 .. _otel-dotnet-nuget-pkg:
 
 Install the OpenTelemetry .NET instrumentation using the NuGet packages
@@ -282,6 +290,12 @@ Instrument an application running within a Docker container
 
 An example of a Dockerfile that instruments a .NET application running inside a Docker container is available in the :new-page:`splunk/observability-content-contrib <https://github.com/splunk/observability-content-contrib/tree/main/integration-examples/splunk-otel-dotnet-docker>` repository on GitHub.
 
+Instrument Azure Web Apps
+---------------------------------------------------------------
+
+To instrument applications or services running on Azure Web Apps, see :ref:`instrument-dotnet-azure-webapp`.
+
+
 .. _windows-offline-install-otel-dotnet:
 
 Offline installation for Windows
@@ -335,13 +349,7 @@ To bypass the OTel Collector and send data directly to Splunk Observability Clou
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
-
-#. Open the navigation menu in Splunk Observability Cloud.
-#. Select :menuselection:`Settings`.
-#. Select your username.
-
-The realm name appears in the :guilabel:`Organizations` section.
+To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
 Specify the source host 
 ----------------------------------------------

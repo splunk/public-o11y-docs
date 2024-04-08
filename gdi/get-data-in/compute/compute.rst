@@ -16,11 +16,31 @@ Collect infrastructure metrics and logs
 
 Deploy the Splunk Distribution of the OpenTelemetry Collector on your infrastructure to start sending data to Splunk Observability Cloud. For an overview of the Collector, see :ref:`otel-intro`.
 
-See the following topics to set up the Collector on each of these hosts:
+.. list-table::
+   :header-rows: 1
+   :widths: 40 20 20 20
+   :width: 100%
+   :class: monitor-table
 
-- :ref:`get-started-k8s`
-- :ref:`get-started-linux`
-- :ref:`get-started-windows`
+   * - :strong:`Data source`
+     - :strong:`Provides metrics`
+     - :strong:`Provides traces`
+     - :strong:`Provides logs`
+
+   * - :ref:`Kubernetes <get-started-k8s>`
+     - :strong:`X`
+     - :strong:`X`
+     - :strong:`X`
+
+   * - :ref:`Linux <get-started-linux>`
+     - :strong:`X`
+     - :strong:`X`
+     -
+
+   * - :ref:`Microsoft Windows <get-started-windows>`
+     - :strong:`X`
+     - :strong:`X`
+     -
 
 .. raw:: html
 

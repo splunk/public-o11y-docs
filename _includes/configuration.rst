@@ -6,4 +6,5 @@ To use this integration of a Smart Agent monitor with the Collector:
 
 -  See how to :ref:`migration-monitors`.
 -  See how to set up the :ref:`smartagent-receiver`.
+-  For a list of common configuration options, refer to :ref:`monitors-common-config`.
 -  Learn more about the Collector at :ref:`otel-understand-use`.

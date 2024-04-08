@@ -11,7 +11,7 @@ Connect to Google Cloud Platform
    :hidden:
 
    GCP metrics <gcp-metrics>
-   GCP logs <gcp-logs>   
+   Send GCP logs to Splunk Platform <gcp-logs>   
 
 With a Google Cloud Platform (GCP) integration in Splunk Observability Cloud, you can track your Google Cloud Monitoring metrics and monitor your GCP services in one place. To configure a GCP integration with Splunk Infrastructure Monitoring, check the prerequisites and follow the instructions on this document. You can also :ref:`use the API <gcp-api>` to connect to GCP. 
 
@@ -56,12 +56,6 @@ The following table specifies the permissions required for GCP integrations:
 
    *  - :strong:`Permission`
       - :strong:`Required?`
-
-   *  - ``monitoring.metricDescriptors.list``
-      - Yes
-
-   *  - ``monitoring.timeSeries.list``
-      - Yes
 
    *  - ``compute.instances.list``
       - Yes, if the Compute Engine service is activated
@@ -245,6 +239,6 @@ To track the degree of OpenTelemetry enablement in your GCP integrations:
 To validate your setup, examine the details of your GCP integration as displayed in the list at the end of the setup page.
 
 * For details about the metrics provided by an GCP integration, see :ref:`gcp-metrics`.
-* To send logs from Azure to Splunk Observability Cloud, follow the instructions in :ref:`gcp-logs`.
+* To send logs from GCP to Splunk Observability Cloud, follow the instructions in :ref:`gcp-logs`.
 * Learn about Splunk Observability Cloud's :ref:`GCP Infrastructure Monitoring options <infrastructure-gcp>`. 
 * To learn more about Splunk Observability Cloud's data model, refer to :ref:`data-model`.

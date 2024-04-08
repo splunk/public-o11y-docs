@@ -138,7 +138,7 @@ The following table explains the different columns in an hourly usage detail rep
      - Name of the MTS category: host or container.
 
    * - Token Id 
-     - ID of the token associated with the category, if any. Containers or hosts with TokenId 0 are generated when detectors are created. They aren't duplicates, and are not used in billing.
+     - ID of the token associated with the category, if any. The row with TokenId value 0 displays the aggregate count of metrics time series (MTS) reported from that entity, including data ingested without any tokens.
   
    * - Token Name
      - Name of the token associated with the category, if any.
