@@ -92,10 +92,6 @@ The following infrastructure metrics are available:
 * Pod disk usage
 * Pod network utilization
 
-..  image:: /_images/apm/spans-traces/service-centric-view-infra-metrics.png
-    :width: 95%
-    :alt: This screenshot shows the infrastructure metrics for a service in the service-centric view. 
-
 View Tag Spotlight view for your service
 =====================================================
 
