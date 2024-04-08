@@ -69,15 +69,15 @@ Follow these steps to instrument your function using the Splunk OpenTelemetry La
 
    .. tabs::
 
-   .. tab:: Standard x86_64
+      .. tab:: Standard x86_64
 
-      .. github:: yaml
-         :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm.md
+         .. github:: yaml
+            :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm.md
 
-   .. tab:: Graviton2 ARM64
+      .. tab:: Graviton2 ARM64
 
-      .. github:: yaml
-         :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm-arm.md
+         .. github:: yaml
+            :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm-arm.md
 
 #. Paste the selected ARN in the :guilabel:`Specify an ARN` field and select :guilabel:`Add`.
 

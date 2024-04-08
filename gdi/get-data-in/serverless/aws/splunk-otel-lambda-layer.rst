@@ -11,8 +11,8 @@ Instrument AWS Lambda functions for Splunk Observability Cloud
    :hidden:
 
    Instrument your Lambda function <otel-lambda-layer/instrument-lambda-functions>
-   Use separate layers <lambda-language-layers>
-   Use a Collector in EC2 <lambda-ec2-collector-gateway>
+   Use separate layers <otel-lambda-layer/lambda-language-layers>
+   Use a Collector in EC2 <otel-lambda-layer/lambda-ec2-collector-gateway>
    .NET lambda functions <otel-lambda-layer/dotnet-lambdas>
    Go lambda functions <otel-lambda-layer/go-lambdas>
    Advanced configuration <otel-lambda-layer/advanced-configuration>
@@ -21,10 +21,36 @@ Instrument AWS Lambda functions for Splunk Observability Cloud
 
 Use the Splunk OpenTelemetry Lambda Layer to automatically instrument AWS Lambda functions to send application metrics and traces to Splunk APM. The layer supports numerous programming languages through integrated wrappers, and includes a metrics extension that collects high-resolution, low-latency metrics every time the function runs.
 
-To instrument your AWS Lambda function using the Splunk OpenTelemetry Lambda Layer, follow these steps:
+.. raw:: html
 
-#. :ref:`otel-lambda-layer-requirements`.
-#. :ref:`install-otel-lambda-layer`.
-#. :ref:`set-env-vars-otel-lambda`.
+  <embed>
+    <h2>Select the deployment mode<a name="lambda-deployment-modes" class="headerlink" href="#lambda-deployment-modes" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
+To instrument your AWS Lambda function using the Splunk OpenTelemetry Lambda Layer, select the deployment mode that best adapts to your needs.
+
+.. list-table::
+    :widths: 40 60
+    :width: 100
+    :header-rows: 1
+
+    * - Deployment mode
+      - When to use
+
+    * - :ref:`All-in-one <instrument-aws-lambda-functions>`
+      - All components are in a single layer, including the Collector. This is the easiest deployment method and is recommended for production environments.
+
+    * - :ref:`Separate layers <instrument-aws-lambda-functions-modular>`
+      - Use separate layers for your language or runtime, Collector, and metric extension. This method reduces performance overhead.
+
+    * - :ref:`Separate layers with EC2 gateway <instrument-aws-lambda-functions-ec2>`
+      - Use a layer for your language or runtime and configure the Collector in data forwarding mode in EC2. This is the lightest instrumentation method, though it requires more configuration.
+
+
+.. raw:: html
+
+  <embed>
+    <h2>Collect metrics and logs from CloudWatch<a name="cloudwatch-collect-lambda" class="headerlink" href="#cloudwatch-collect-lambda" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
 Splunk Observability Cloud can also collect AWS Lambda metrics and logs from AWS CloudWatch. See :ref:`get-started-aws` for more information on how to connect Splunk Observability Cloud to your AWS services.
