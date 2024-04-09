@@ -3,17 +3,12 @@
 Use the service view for a complete view of your service health 
 *****************************************************************************
 
-.. questions: 
-.. How is environment selected when I first navigate to SCV?
-.. There's no configuration for logs now?
-.. Document that database and sub/pub queues unsupported
-
 .. meta::
    :description: Learn how to use service views in Splunk APM for a complete view of your service health.
 
 Service owners can use the service view in Splunk APM to get a complete view of their service health in a single pane of glass. The service view includes availability, dependencies, request, error, and duration (RED) metrics, top endpoints, logs, runtime metrics, and infrastructure metrics for a selected service. 
 
-.. note:: The service view is available for instrumented services that send spans with a service.name.
+.. note:: The service view is available for instrumented services that send spans with a service.name value.
 
 Access the service view for your service
 ===========================================
@@ -37,7 +32,7 @@ Finally, you can also access the service view for a specific service by selectin
 Use the service overview to monitor the health of your service
 =====================================================================
 
-Use the following sections to monitor the health of your service.
+When you open the service view an environment is selected based on your recently viewed environments. Adjust the environment and time range filters if necessary. Use the following sections to monitor the health of your service.
 
 Service metrics
 ------------------
@@ -104,10 +99,6 @@ View logs for your service
 Select :guilabel:`Logs` to view logs for the environment and service you are viewing. 
 
 .. note:: The environment must have a corresponding Log Observer Connect connection with at least 1 index for logs to display.
-
-..  image:: /_images/apm/spans-traces/service-centric-view-logs.png
-    :width: 95%
-    :alt: This screenshot shows the logs for a service in the service-centric view. 
 
 Go to the code profiling view for your service
 =====================================================
