@@ -198,6 +198,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`batch-processor` (``batch``)
      - Accepts spans, metrics, or logs and places them into batches. Batching helps better compress the data and reduce the number of outgoing connections required to transmit the data. This processor supports both size-based and time-based batching.
      - Metrics, logs, traces
+   * - :ref:`cumulative-to-delta-processor` (``cumulativetodelta``)
+     - Convert cumulative monotonic metrics to delta aggretation temporality. This enhances the usage of cumulativeº metrics in Splunk Observability Cloud.
+     - Metrics
    * - :ref:`filter-processor` (``filter``)
      - Can be configured to include or exclude metrics based on metric name in the case of the ``strict`` or ``regexp`` match types, or based on other metric attributes in the case of the ``expr`` match type.
      - Metrics
