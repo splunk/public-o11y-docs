@@ -69,7 +69,7 @@ Considerations about statefulness
 Because the cumulative to delta processor calculates delta aggregation using previous values of metrics, it is accurate only if the metric is continuously sent to the same instance of the Collector. The cumulative to delta processor might not work as expected in deployments that use multiple collectors.
 
 
-.. _resource-processor-settings:
+.. _cumulative-to-delta-processor-settings:
 
 Settings
 ======================
