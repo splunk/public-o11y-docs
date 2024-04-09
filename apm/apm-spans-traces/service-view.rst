@@ -101,7 +101,7 @@ View endpoints for your service
 View logs for your service
 ===============================
 
-Select :guilabel:`Configure service view` to add a query for the logs you want to display for your service. See :ref:`configure-service-view` for steps.
+Select :guilabel:`Configure service view` to add a query for the logs you want to display for your service. 
 
 ..  image:: /_images/apm/spans-traces/service-centric-view-logs.png
     :width: 95%
