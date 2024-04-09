@@ -72,6 +72,8 @@ Instrument your back-end applications to send spans to Splunk APM to view runtim
 Infrastructure metrics
 -----------------------
 
+If you are using the Splunk Distribution of the OpenTelemetry Collector and the SignalFx Exporter, infrastructure metrics for the environment and service you are viewing display. See :ref:`otel-intro` and :ref:`signalfx-exporter`.
+
 The following infrastructure metrics are available:
 
 * Host CPU usage
