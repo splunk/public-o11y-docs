@@ -60,7 +60,7 @@ Use the following metrics in the :guilabel:`Service metrics` section to monitor 
 Runtime metrics
 -----------------
 
-Turn on AlwaysOn profiling to view the following runtime metrics are available:
+Instrument your back-end applications to send spans to Splunk APM to view runtime metrics. The following runtime metrics are available for Java, Node.js, and .NET in the service view. See :ref:`get-started-application`.
 
 * Memory usage
 * Allocation rate
