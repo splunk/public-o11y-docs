@@ -13,6 +13,36 @@ The Splunk Distribution of OpenTelemetry Collector supports explicit bucket hist
 
 .. include:: /_includes/gdi/histograms.rst
 
+.. _bucket-histograms-best-practices:
+
+Best practices when sending bucket histogram data
+===========================================================
+
+When sending bucket histogram data to Splunk Observability Cloud, follow these best practices:
+
+* Send minimum and maximum values, unless you're sending cumulative data. The minimum value must be lower than the maximum value, otherwise the datapoint is dropped.
+
+* Use less than 31 buckets when sending custom histograms. Histograms with more than 31 buckets are dropped.
+
+* Make sure that bucket boundaries don't overlap or repeat. Order the bucket boundaries when sending them.
+
+* Send values as signed integer, float, or numeric string in decimal or fixed-point notation. Splunk Observability Cloud stores them as 64-bit integers.
+
+* Check that the sum of all histogram buckets is equal to the ``count`` field, and that the size of bucket boundaries is equal to the bucket count minus 1. Histograms that don't comply with these criteria are dropped.
+
+* When sending cumulative data, for example from Prometheus, use delta aggregation temporality. See :ref:`delta-temporality` for instructions on how to configure delta temporality in your system.
+
+.. _delta-temporality:
+
+Send histograms with delta aggregation temporality
+===========================================================
+
+Sending cumulative histogram data using delta aggregation temporality ensures that data in Splunk Observability Cloud is accurate. For example, cumulative histograms lack minimum and maximum values.
+
+To activate delta aggretation temporality in your instrumentation, set the ``OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE`` environment variable to ``delta``. See the :new-page:`compliance matrix <https://github.com/open-telemetry/opentelemetry-specification/blob/main/spec-compliance-matrix.md#environment-variables>` in the OpenTelemetry Specification repository to check SDK support for your language.
+
+While activating delta temporality in the OpenTelemetry instrumentation is preferred, you can also use the Cumulative to delta processor in the Splunk Distribution of OpenTelemetry Collector to convert cumulative metrics to delta aggregation temporality. See :ref:`cumulative-to-delta-processor` for more information.
+
 
 Send histogram data using the API
 ===========================================================

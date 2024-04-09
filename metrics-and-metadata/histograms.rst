@@ -78,6 +78,7 @@ For example, the following Java code creates an OpenTelemetry histogram with exp
 
 .. note:: Currently, Splunk Observability Cloud supports only explicit bucket histograms.
 
+
 Get histogram data into Splunk Observability Cloud
 ======================================================
 
