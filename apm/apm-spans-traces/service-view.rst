@@ -13,6 +13,8 @@ Use the service view for a complete view of your service health
 
 Service owners can use the service view in Splunk APM to get a complete view of their service health in a single pane of glass. The service view includes availability, dependencies, request, error, and duration (RED) metrics, top endpoints, logs, runtime metrics, and infrastructure metrics for a selected service. 
 
+.. note:: The service view is available for instrumented services that send spans with a service.name.
+
 Access the service view for your service
 ===========================================
 
@@ -53,9 +55,9 @@ Use the following metrics in the :guilabel:`Service metrics` section to monitor 
 * Service error - The service error chart shows streaming error data for the service. If you have detectors for the service error rate configured, triggered alerts display below the chart. Select the chart to view example traces. Select the alert icon to view alert details.
 * Dependency latency by type - The dependency latency by type chart shows the latency for each of the downstream systems. Select the chart to see details about each system category. Systems are categorized as follows:
    *  Services - instrumented services
-   *  Databases
+   *  Databases - not yet supported
    *  Inferred services - uninstrumented, inferred services
-   *  Pub/sub queues
+   *  Pub/sub queues - not yet supported
 
 Runtime metrics
 -----------------
@@ -71,8 +73,6 @@ Instrument your back-end applications to send spans to Splunk APM to view runtim
 * GC overhead
 * Thread count
 * Thread pools
-
-See :ref:`profiling-intro`.
 
 Infrastructure metrics
 -----------------------
@@ -96,12 +96,14 @@ Select :guilabel:`Tag Spotlight` to view Tag Spotlight view filtered for your se
 View endpoints for your service
 =================================
 
-* Top endpoints- Top endpoints shows up to 5 endpoints for the service. Use the search field to search for specific endpoints. Use the sort drop-down list to change how endpoints are sorted. Select :guilabel:`Explore in APM` to navigate to Endpoint Performance.
+Select the :guilabel:`Endpoints` tab to view endpoints for the service. Use the search field to search for specific endpoints. Use the sort drop-down list to change how endpoints are sorted. Select an endpoint to view endpoint details or go to Tag Spotlight, traces, code profiling, or the dashboard for the endpoint.
 
 View logs for your service
 ===============================
 
-Select :guilabel:`Configure service view` to add a query for the logs you want to display for your service. 
+Select :guilabel:`Logs` to view logs for the environment and service you are viewing. 
+
+.. note:: The environment must have a corresponding Log Observer Connect connection with at least 1 index for logs to display.
 
 ..  image:: /_images/apm/spans-traces/service-centric-view-logs.png
     :width: 95%
