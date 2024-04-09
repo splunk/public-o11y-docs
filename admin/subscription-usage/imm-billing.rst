@@ -71,8 +71,6 @@ When creating the detector, you can use these metrics as signals on the :guilabe
    *  -  Custom metrics
       -  ``sf.org.numCustomMetrics``
 
-
-
 Also, consider using one of the following conditions on the :guilabel:`Alert condition` tab:
 
 - :ref:`Static Threshold<static-threshold>` condition: Set the threshold to a relatively high percentage of your limit.
@@ -91,5 +89,6 @@ If you are approaching or over your limit in any area, you have a few options av
 * If you have Enterprise Edition, you can manage costs associated with sending in data by setting limits on access tokens. See :ref:`admin-manage-usage` for more information.
 * If you have a Standard Edition pricing plan, you can upgrade your subscription to Enterprise Edition, which includes support for monitoring more containers and custom metrics per host. 
 * Purchase support for increasing your limits on any of these items. 
-  
+* Consider archiving your MTS. Archived metrics cost 1/1o of real-time metrics. 
+
 To get help with understanding which option is best for your organization, contact :ref:`support`.
