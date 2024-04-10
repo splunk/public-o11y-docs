@@ -1,5 +1,3 @@
-:orphan:
-
 .. _get-started-scenario:
 
 ******************************************************************************************************
@@ -32,7 +30,6 @@ This scenario describes how Kai, an SRE, and Deepu, a service owner, perform the
 #. :ref:`take-preventative-action-xpuc`
 
 For a video version of this scenario, watch :new-page:`the Splunk Observability Cloud Demo <https://www.splunk.com/en_us/resources/videos/watch-splunks-observability-cloud-demo.html>`.
-
 
 .. _receive-alerts-xpuc:
 
