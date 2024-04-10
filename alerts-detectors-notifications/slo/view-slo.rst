@@ -45,6 +45,6 @@ To add an SLI chart to a dashboard, follow these steps:
 #. On the :strong:`Service Level Objectives (SLOs)` page, select the more icon (|more|) next to the SLO you want to add to a dashboard.
 #. In the actions menu, select :menuselection:`Add to dashboard..`.
 #. Search for an existing dashboard or create a new dashboard.
-#. Select :strong:`OK` to add the SLO to the dashboard.
+#. Select :strong:`OK` to add the SLI chart to the dashboard.
 
 .. note:: You must have write permission for a dashboard to add an SLI chart to it.
