@@ -29,7 +29,7 @@ Ensure the following configuration in your Splunk Cloud instance:
 
 * Token authentication is enabled for your Log Observer Connect service account in your Splunk Cloud Platform instance. See :new-page:`Securing Splunk Cloud Platform: Enable or disable token authentication token <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how. 
 
-* Allow these IPs:
+* Allow these IPs in the :guilabel:`IP allow list` settings. See :new-page:`https://docs.splunk.com/Documentation/SplunkCloud/9.1.2312/Admin/ConfigureIPAllowList`.
 
   - us0: ``34.199.200.84``, ``52.20.177.252``, ``52.201.67.203``, ``54.89.1.85``
   - us1: ``44.230.152.35``, ``44.231.27.66``, ``44.225.234.52``, ``44.230.82.104``
