@@ -16,7 +16,6 @@ Tutorial: Monitor your Kubernetes environment in Splunk Observability Cloud
     k8s-install-otel
     k8s-monitor-with-navigators
     k8s-activate-detector
-    about-k8s-tutorial
 
 Deploy the Splunk Distribution of OpenTelemetry Collector in a Kubernetes cluster and start monitoring your Kubernetes platform using Splunk Observability Cloud.
 

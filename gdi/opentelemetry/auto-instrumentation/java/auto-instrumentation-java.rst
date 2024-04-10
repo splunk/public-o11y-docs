@@ -14,6 +14,7 @@ Splunk OpenTelemetry Zero Configuration Auto Instrumentation for Java
 
    Linux <auto-instrumentation-java-linux>
    Kubernetes <auto-instrumentation-java-k8s>
+   k8s-java-traces-tutorial/about-k8s-java-traces-tutorial.rst
 
 Splunk OpenTelemetry (OTel) Zero Configuration Auto Instrumentation for Java automatically instruments supported Java libraries in running applications to capture distributed traces. The Splunk OpenTelemetry Collector receives the distributed traces and forwards them to Splunk Application Performance Monitoring (APM) in Splunk Observability Cloud. 
 

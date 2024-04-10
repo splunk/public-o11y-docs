@@ -22,6 +22,8 @@ Get started with the Collector for Kubernetes
    Troubleshoot <troubleshoot-k8s.rst>
    Troubleshoot containers <troubleshoot-k8s-container.rst>
    Support <kubernetes-support.rst>
+   k8s-infrastructure-tutorial/about-k8s-tutorial
+   collector-configuration-tutorial-k8s/about-collector-config-tutorial.rst
 
 To install and configure the Splunk Distribution of the OpenTelemetry Collector for Kubernetes, follow these docs:
 

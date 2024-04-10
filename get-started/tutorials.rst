@@ -14,7 +14,6 @@ Splunk Observability Cloud tutorials
     :maxdepth: 3
 
     tutorials/collector-configuration-tutorial/about-collector-config-tutorial
-    tutorials/collector-configuration-tutorial-k8s/about-collector-config-tutorial
     tutorials/aws-tutorial/about-aws-tutorial
     tutorials/k8s-java-traces-tutorial/about-k8s-java-traces-tutorial
 
