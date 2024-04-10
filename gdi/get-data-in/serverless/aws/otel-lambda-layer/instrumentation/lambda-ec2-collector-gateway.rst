@@ -86,6 +86,8 @@ Follow these steps to instrument your function using the Splunk OpenTelemetry La
 
 .. note:: You can automate the update of the Lambda layers using the AWS CLI or other automation tools.
 
+.. include:: /_includes/gdi/lambda-configuration.rst
+
 
 .. _ec2-otel-collector-serverless:
 
@@ -105,13 +107,6 @@ To send spans from the instrumented Lambda function to the Collector gateway run
    - ``SPLUNK_LAMBDA_LOCAL_COLLECTOR_ENABLED`` with the value ``false``
 
 #. If you've already set the access token and realm in the Collector configuration, delete the ``SPLUNK_ACCESS_TOKEN`` and ``SPLUNK_REALM`` environment variables.
-
-
-.. include:: /_includes/gdi/lambda-configuration.rst
-
-
-.. include:: /_includes/gdi/send-spans-directly-lambda.rst
-
 
 
 Check that data appears in Splunk Observability Cloud
