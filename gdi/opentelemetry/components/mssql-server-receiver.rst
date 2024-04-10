@@ -14,8 +14,6 @@ Prerequisites and requirements
 
 This receiver supports MySQL version 8.0.
 
-.. _mysql-receiver-reqs-metrics:
-
 Requirements to collect metrics
 -------------------------------------------
 
@@ -109,7 +107,7 @@ The following settings are optional:
 
   * ``limit``. ``250`` by default.  Limit of records, which is maximum number of generated metrics.
 
-.. _mysql-receiver-settings:
+.. _mssql-server-receiver-settings:
 
 Settings
 ======================
@@ -118,9 +116,9 @@ The following table shows the configuration options for the MySQL receiver:
 
 .. raw:: html
 
-  <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/mysql.yaml"></div>
+  <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/myssql.yaml"></div>
 
-.. _mysql-receiver-metrics:
+.. _mssql-server-receiver-metrics:
 
 Metrics
 =======================
@@ -129,7 +127,7 @@ The following metrics, resource attributes, and attributes, are available.
 
 .. raw:: html
 
-  <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/mysqlreceiver.yaml"></div>
+  <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/mssqlreceiver.yaml"></div>
 
 .. include:: /_includes/activate-deactivate-native-metrics.rst
 
