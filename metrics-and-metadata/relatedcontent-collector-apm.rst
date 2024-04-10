@@ -104,6 +104,8 @@ Here are the relevant config snippets from each section:
       access_token: "${SPLUNK_ACCESS_TOKEN}"
       api_url: "${SPLUNK_API_URL}"
       ingest_url: "${SPLUNK_INGEST_URL}"
+      sync_host_metadata: true
+      correlation:
 
   service:
     extensions: [health_check, http_forwarder, zpages]
