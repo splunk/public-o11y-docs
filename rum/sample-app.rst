@@ -12,7 +12,7 @@ There are two demo applications for you to explore for RUM for Mobile.
 Android demo app 
 ===================
 
-The splunk-otel-android library includes a demo application called sample-app that you can use to test the RUM product. To build and run the sample application, you need to configure a :code:`local.properties` file in the root of the project. To learn more about realms, see :ref:`Note about realms<about-realms>`.
+The splunk-otel-android library includes a demo application called sample-app that you can use to test the RUM product. To build and run the sample application, you need to configure a :code:`local.properties` file in the root of the project. To learn more about realms, see :ref:`Note about realms <about-realms>`.
 
 To access the sample app, see the :new-page:`sample-app <https://github.com/signalfx/splunk-otel-android/tree/main/sample-app>` in the splunk-otel-android project on GitHub.  
 

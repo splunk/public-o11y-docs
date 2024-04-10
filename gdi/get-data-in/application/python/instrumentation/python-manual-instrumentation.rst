@@ -68,7 +68,8 @@ To create custom spans and traces, follow these steps:
             print("Reticulating splines...")
             # When the 'with' block goes out of scope, the 'span' is closed
 
-For more examples, see the Manual instrumentation docs at https://opentelemetry.io/docs/instrumentation/python/manual/.
+
+For more examples, see the :new-page:`OpenTelemetry official documentation <https://opentelemetry.io/docs/instrumentation/python/manual/>`.
 
 
 .. _custom-metrics-python:
@@ -165,7 +166,7 @@ To create custom metrics, follow the steps depending on the type of metric instr
                description="Mean temperature of the city",
             )
 
-For more examples, see the Manual instrumentation docs at https://opentelemetry.io/docs/instrumentation/python/manual/.
+For more examples, see the :new-page:`OpenTelemetry official documentation <https://opentelemetry.io/docs/instrumentation/python/manual/>`.
 
 
 Frameworks that require manual instrumentation

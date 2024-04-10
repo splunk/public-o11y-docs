@@ -68,7 +68,6 @@ You can specify content in the :new-page:`template stanza <https://www.nomadproj
    processors:
      batch: null
      memory_limiter:
-       ballast_size_mib: ${SPLUNK_BALLAST_SIZE_MIB}
        check_interval: 2s
        limit_mib: ${SPLUNK_MEMORY_LIMIT_MIB}
    exporters:

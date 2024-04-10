@@ -21,7 +21,7 @@ In addition to the features of the OpenTelemetry Instrumentation for Node.js, li
 - Instrumentation for HTTP server frameworks that returns server trace information in HTTP responses. See :ref:`server-trace-information-nodejs`.
 - Automatic injection of trace metadata into application logs. See :ref:`correlate-traces-with-logs-nodejs`.
 
-The Splunk Distribution of OpenTelemetry JS is supported by Splunk and is updated frequently, bringing bug fixes and new features to you before they are integrated in the upstream OTel repositories.
+The Splunk Distribution of OpenTelemetry JS is supported by Splunk and is updated frequently, bringing bug fixes and new features to you before they are integrated in the upstream OTel repositories. See :new-page:`Upstream in the Splexicon <https://docs.splunk.com/Splexicon:Upstream>`.
 
 .. caution:: Use the Splunk Distribution of OpenTelemetry JS instead of the upstream OpenTelemetry JavaScript Client. Splunk supports only upstream OTel components as part of the Splunk Distribution of OpenTelemetry JS.
 

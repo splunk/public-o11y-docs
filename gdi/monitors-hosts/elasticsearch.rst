@@ -304,8 +304,7 @@ collects enhanced (custom) metrics:
       - get
 
 The ``enableEnhancedNodeIndicesStats`` option takes a list of index
-stats groups for which enhanced stats will be collected. See Nodes stats
-API for a comprehensive list of all available groups.
+stats groups for which enhanced stats will be collected. See :new-page:`Nodes stats API <https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-nodes-stats.html#node-indices-stats>` for a comprehensive list of all available groups.
 
 Note that the ``enableEnhancedIndexStatsForIndexGroups`` configuration
 option is similar to the ``enableEnhancedNodeIndicesStats``

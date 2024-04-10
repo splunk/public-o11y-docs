@@ -4,10 +4,10 @@
   :width: 100%
 
   * - :strong:`Permission`
-    - :strong:`Admin`
-    - :strong:`Power user`
-    - :strong:`Usage`
-    - :strong:`Read_only`
+    - :strong:`admin`
+    - :strong:`power`
+    - :strong:`usage`
+    - :strong:`read_only`
 
   * - :strong:`Show Chat`
     - Yes

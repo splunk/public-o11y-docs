@@ -17,6 +17,7 @@ Scenarios for troubleshooting errors and monitoring application performance usin
     troubleshoot-business-workflows
     specific-trace
     troubleshoot-traces
+    troubleshoot-slow-traces
     monitor-services
     monitor-business-workflows
     configure-business-workflows
@@ -40,6 +41,7 @@ Site reliability engineers, service owners, engineering executives, and performa
 - :ref:`troubleshoot-business-workflows`
 - :ref:`specific-trace`
 - :ref:`apm-scenario-trace-analyzer`
+- :ref:`apm-scenario-trace-analyzer-trace-duration`
 - :ref:`profiling-scenario`
 
 .. raw:: html

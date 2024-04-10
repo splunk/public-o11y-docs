@@ -12,17 +12,16 @@ Connect AWS to Splunk Observability Cloud
 
   AWS authentication and supported regions <aws-prereqs>
   Compare connection options <aws-compare-connect>
-  Connect to AWS via polling from the Splunk console <aws-connect-polling>
-  Connect to AWS with Metrics Streams from the Splunk console <aws-connect-ms>
-  Connect Metric Streams from the AWS console <aws-console-ms>  
+  Connect via polling <aws-connect-polling>
+  Connect with Splunk-managed Metrics Streams <aws-connect-ms>
+  Connect with AWS-managed Metric Streams <aws-console-ms>  
   Connect to AWS using the Splunk API <aws-apiconfig>  
   Connect to AWS with Terraform <aws-terraformconfig>
-  Collect logs from AWS <aws-logs>
+  Send AWS logs to Splunk Platform <aws-logs>
   CloudFormation templates <aws-cloudformation>
   Next steps <aws-post-install>
   Troubleshoot your AWS connection <aws-troubleshooting>
   Troubleshoot Metric Streams <aws-ts-metric-streams>
-  Troubleshoot logs <aws-ts-logs>
   GetMetricStatistics API deprecation notice <aws-api-notice>
 
 You have several data ingestion and connection methods when it comes to monitoring your Amazon Web Services (AWS) data in Splunk Observability Cloud. 

@@ -1,14 +1,13 @@
 .. _get-started-relatedcontent:
-.. _get-started-enablerelatedcontent:
 
 *****************************************************************
 Related Content in Splunk Observability Cloud
 *****************************************************************
 
 .. meta::
-   :description: Ensure metadata keys are correct to enable full Related Content functionality.
+   :description: Related Content functionality: introduction, requirements, how to use.
 
-The Related Content feature automatically correlates and presents data between different views within Splunk Observability Cloud.
+The Related Content panel automatically correlates and presents data between different views within Splunk Observability Cloud. Splunk Cloud Platform also has the Related Content panel where users can see previews of observability data that correlates to search results in the Search app. For more information, see :new-page:`Preview Splunk Observability Cloud data <https://quickdraw.splunk.com/redirect/?product=Observability&location=related.content.observability&version=current>`.
 
 Use Related Content 
 ==========================================================================================================
@@ -71,14 +70,19 @@ The following table describes when and where in Splunk Observability Cloud you c
 
 .. _relatedcontent-collector:
 
-Related Content and the Splunk Distribution of the OpenTelemetry Collector metadata compatibility
+Use the Splunk Distribution of the OpenTelemetry Collector to enable Related Content
 ==========================================================================================================
 
 Splunk Observability Cloud uses OpenTelemetry to correlate telemetry types. To enable this ability, your telemetry field names or metadata key names must exactly match the metadata key names used by both OpenTelemetry and Splunk Observability Cloud.
 
-When you deploy the Splunk Distribution of the OpenTelemetry Collector with its default configuration to send your telemetry data to Splunk Observability Cloud, your metadata key names are automatically mapped correctly. 
+When you deploy the Splunk Distribution of the OpenTelemetry Collector with its default configuration to send your telemetry data to Splunk Observability Cloud, your metadata key names are automatically mapped correctly. To learn more about the Collector, see :ref:`otel-intro`.
 
 .. caution:: If you don't use the Splunk Distribution of OpenTelemetry Collector, or you use a non-default configuration, your telemetry data might have metadata key names that are not consistent with those used by Splunk Observability Cloud and OpenTelemetry, and Related Content might not work. In that case, you must change your metadata key names.
+
+Configure the Collector to enable APM Related Content 
+-----------------------------------------------------------------
+
+The APM service dashboards include charts that indicate the health of the underlying infrastructure. The default configuration of the Splunk Distribution of the OpenTelemetry Collector automatically configures this for you, but if you're using a custom configuration, read :ref:`relatedcontent-collector-apm`.
 
 Metadata compatibility example
 -----------------------------------------------------------------
