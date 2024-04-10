@@ -74,7 +74,7 @@ Because the cumulative to delta processor calculates delta aggregation using pre
 Settings
 ======================
 
-The following table shows the configuration options for the resource processor:
+The following table shows the configuration options for the cumulative to delta processor:
 
 .. raw:: html
 
