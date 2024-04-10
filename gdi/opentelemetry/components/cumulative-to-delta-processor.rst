@@ -9,7 +9,7 @@ Cumulative to delta processor
 
 The cumulative to delta processor is an OpenTelemetry Collector component that converts monotonic, cumulative sum, and histogram metrics to monotonic metrics with delta aggregation temporality. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
-Converting metrics from cumulative to delta temporality is useful when sending cumulative histogram data because cumulative histograms are difficult to process in the platform. Since the processor is stateful, it works best when data is always sent to the same instance of the Collector. See :ref:`statefulness-delta-considerations`.
+Converting metrics from cumulative to delta temporality is useful when sending cumulative histogram data because cumulative histograms are difficult to process in the platform. Since the processor is stateful, don't use it when sending data from multiple Collector instances. See :ref:`statefulness-delta-considerations`.
 
 .. note:: Non-monotonic sums and exponential histograms are not supported.
 
@@ -44,12 +44,15 @@ configuration file, as shown in the following example:
                   - <metric_2_name>
                   - <metric_n_name>
                match_type: strict
+         #
+         #  Exclude rules take precedence over include rules
+         #
          exclude:
                metrics:
                   - ".*metric.*"
                match_type: regexp
 
-.. note:: If you don't specify include or exclude lists, the processor converts all cumulative sum or histogram metrics to delta aggregation temporality.
+Use ``include`` and ``exclude`` rules to define which metrics you want to convert to delta temporality. If you don't specify include or exclude lists, the processor converts all cumulative sum or histogram metrics to delta temporality.
 
 To complete the configuration, include the receiver in any pipeline of the ``service`` section of your
 configuration file. For example:
