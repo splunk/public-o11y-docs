@@ -1,7 +1,7 @@
 Send spans directly to Splunk Observability Cloud
 =====================================================================
 
-By default, the Splunk OpenTelemetry Lambda layer sends telemetry to a Collector running alongside the Lambda.
+By default, the Splunk OpenTelemetry Lambda layer sends telemetry to a Collector instance running alongside the Lambda.
 
 To send spans directly to Splunk Observability Cloud from an AWS Lambda function instrumented using the Splunk Lambda layer add the following environment variables:
 

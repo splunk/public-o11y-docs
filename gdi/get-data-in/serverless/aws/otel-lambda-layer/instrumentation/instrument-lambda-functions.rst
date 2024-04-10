@@ -7,6 +7,14 @@ Instrument your AWS Lambda function for Splunk Observability Cloud
 .. meta::
    :description: The Splunk OpenTelemetry Lambda layer automatically instruments your AWS Lambda functions for many programming languages. Follow these steps to get started.
 
+.. toctree::
+   :hidden:
+
+   Instrument your Lambda using multiple layers <lambda-language-layers>
+   Instrument your Lambda with a Collector in EC2 <lambda-ec2-collector-gateway>
+   .NET lambda functions <dotnet-lambdas>
+   Go lambda functions <go-lambdas>
+
 Use the Splunk OpenTelemetry Lambda layer to automatically instrument your AWS Lambda functions for many programming languages. To get started, use the guided setup or follow the instructions manually.
 
 Generate customized instructions using the guided setup
