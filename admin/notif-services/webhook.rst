@@ -86,13 +86,13 @@ You must be an Observability Cloud administrator to complete this task.
      - Enter the shared secret you established in :ref:`webhook1`.
    
    * - Headers
-     - (Optional) Enter any key-value pair you want Observability Cloud to add to HTTP requests sent to the Webhook's external site.
+     - (Optional) Enter any HTTP header and value you want to add to HTTP requests sent to the Webhook's external site.
 
 #. Select :guilabel:`Next`.
 #. On the :strong:`Customize message` page, you see the default payload for a webhook integration. You can customize your payload to make sure responders have the context needed to resolve the issues.
 
   For a full list of supported variables and examples, see :new-page:`Integrate Webhook` <https://dev.splunk.com/observability/docs/integrations/webhook_integration_overview>` in the :emphasis:`Splunk Observability Cloud Developers Guide`.
-  
+
 #. Select :guilabel:`Next`.
 #. Review your integration and select :guilabel:`Save`.
 
