@@ -22,6 +22,7 @@ Learn more about the Splunk Observability Cloud platform with the following cros
 - :ref:`get-started-scenario`
 - :ref:`otel-collector-scenario`
 
-See how you can use Splunk Observability Cloud with the Splunk platform to resolve problems more efficiently in the following scenario:
+The following use case scenarios demonstrate how you can use Splunk Observability Cloud with the Splunk platform:
 
 - :ref:`integration-scenario1`
+- :ref:`logs-LOconnect-scenario`
