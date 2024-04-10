@@ -311,12 +311,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: Scenarios and tutorials
    :maxdepth:   4
 
-   Scenarios <scenarios-tutorials/NEW-scenario-landing>
+   Scenarios <scenarios-tutorials/scenario-landing>
 
 .. toctree::
    :maxdepth:   3
 
-   Tutorials <scenarios-tutorials/NEW-tutorial-landing>   
+   Tutorials <scenarios-tutorials/tutorial-landing>   
 
 .. toctree::
    :caption: Splunk platform users

@@ -4,6 +4,13 @@
 Splunk Observability Cloud scenarios
 ******************************************************************************************************
 
+.. toctree::
+    :maxdepth: 3
+    :hidden:
+
+    scenario-cross
+
+
 .. meta::
   :description: Collection of scenarios available for Splunk Observability Cloud.
 

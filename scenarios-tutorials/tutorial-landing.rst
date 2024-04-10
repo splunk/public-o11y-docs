@@ -7,11 +7,11 @@ Splunk Observability Cloud tutorials
 .. meta::
   :description: Tutorials and quickstart guides to get started monitoring your infrastructure with Splunk Observability Cloud.
 
-Read the following tutorials to learn how to understand and use Splunk Observability Cloud. 
+Read the following tutorials to learn how to understand and use Splunk Observability Cloud:
 
-* :ref:`about-k8s-tutorial`
-* :ref:`about-collector-configuration-tutorial-k8s`
 * :ref:`about-collector-configuration-tutorial`
+* :ref:`about-collector-configuration-tutorial-k8s`
+* :ref:`about-k8s-tutorial`
 * :ref:`about-aws-tutorial`
 * :ref:`about-k8s-java-traces-tutorial`
 
