@@ -91,8 +91,8 @@ You must be an Observability Cloud administrator to complete this task.
 #. Select :guilabel:`Next`.
 #. On the :strong:`Customize message` page, you see the default payload for a webhook integration. You can customize your payload to make sure responders have the context needed to resolve the issues.
 
-  For a full list of supported variables and examples, see 
-:new-page:`Integrate Webhook` <https://dev.splunk.com/observability/docs/integrations/webhook_integration_overview>` in the :emphasis:`Splunk Observability Cloud Developers Guide`.
+  For a full list of supported variables and examples, see :new-page:`Integrate Webhook` <https://dev.splunk.com/observability/docs/integrations/webhook_integration_overview>` in the :emphasis:`Splunk Observability Cloud Developers Guide`.
+  
 #. Select :guilabel:`Next`.
 #. Review your integration and select :guilabel:`Save`.
 
