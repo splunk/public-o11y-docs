@@ -32,6 +32,7 @@ Collector components: Receivers
     kubernetes-objects-receiver  
     mongodb-receiver
     mongodb-atlas-receiver
+    mssq-server-receiver
     mysql-receiver
     oracledb-receiver
     otlp-receiver                
