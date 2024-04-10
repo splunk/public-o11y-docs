@@ -10,11 +10,7 @@ Instrument AWS Lambda functions for Splunk Observability Cloud
 .. toctree::
    :hidden:
 
-   Instrument your Lambda function <otel-lambda-layer/instrument-lambda-functions>
-   Use separate layers <otel-lambda-layer/lambda-language-layers>
-   Use a Collector in EC2 <otel-lambda-layer/lambda-ec2-collector-gateway>
-   .NET lambda functions <otel-lambda-layer/dotnet-lambdas>
-   Go lambda functions <otel-lambda-layer/go-lambdas>
+   Instrument your Lambda function <otel-lambda-layer/instrumentation/instrument-lambda-functions>
    Advanced configuration <otel-lambda-layer/advanced-configuration>
    Metrics and dimensions <otel-lambda-layer/lambda-metrics>
    Troubleshooting <otel-lambda-layer/troubleshooting-lambda-layer>
@@ -24,7 +20,7 @@ Use the Splunk OpenTelemetry Lambda Layer to automatically instrument AWS Lambda
 .. raw:: html
 
   <embed>
-    <h2>Select the deployment mode<a name="lambda-deployment-modes" class="headerlink" href="#lambda-deployment-modes" title="Permalink to this headline">¶</a></h2>
+    <h2>Select the deployment mode for your Lambda function<a name="lambda-deployment-modes" class="headerlink" href="#lambda-deployment-modes" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 To instrument your AWS Lambda function using the Splunk OpenTelemetry Lambda Layer, select the deployment mode that best adapts to your needs.
@@ -46,6 +42,17 @@ To instrument your AWS Lambda function using the Splunk OpenTelemetry Lambda Lay
     * - :ref:`Separate layers with EC2 gateway <instrument-aws-lambda-functions-ec2>`
       - Use a layer for your language or runtime and configure the Collector in data forwarding mode in EC2. This is the lightest instrumentation method, though it requires more configuration.
 
+
+.. raw:: html
+
+  <embed>
+    <h2>.NET and Go functions<a name="additional-lambda-instructions" class="headerlink" href="#additional-lambda-instructions" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
+.NET and Go functions require additional instructions:
+
+* :ref:`dotnet-serverless-instrumentation`
+* :ref:`go-serverless-instrumentation`
 
 .. raw:: html
 

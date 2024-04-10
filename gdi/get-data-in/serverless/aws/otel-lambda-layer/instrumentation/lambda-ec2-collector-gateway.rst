@@ -7,7 +7,7 @@ Instrument your AWS Lambda function using a Collector gateway in EC2
 .. meta::
    :description: The Splunk OpenTelemetry Lambda layer automatically instruments your AWS Lambda functions for many programming languages. Follow these steps to get started.
 
-You can automatically instrument your Lambda function for Splunk Observability Cloud using a layer for your runtime and a Collector gateway in EC2. This can further reduce overhead.
+You can automatically instrument your Lambda function for Splunk Observability Cloud using a layer for your runtime and a Collector gateway in EC2. This helps aggregate data and reduce load.
 
 Follow these instructions to install the Splunk OpenTelemetry Lambda layer for Java, Python, or Node.js functions:
 
@@ -98,8 +98,6 @@ Follow these steps to instrument your function using the Splunk OpenTelemetry La
 
 Set up a Collector gateway in EC2
 =====================================================================
-
-You can send data from multiple instrumented functions to a Collector running in data forwarding (gateway) mode in EC2. This helps aggregate data and reduce load.
 
 To send spans from the instrumented Lambda function to the Collector gateway running in EC2, do the following:
 
