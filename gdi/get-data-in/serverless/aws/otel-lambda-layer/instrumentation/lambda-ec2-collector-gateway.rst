@@ -9,14 +9,7 @@ Instrument your AWS Lambda function using a Collector gateway in EC2
 
 You can automatically instrument your Lambda function for Splunk Observability Cloud using a layer for your runtime and a Collector gateway in EC2. This helps aggregate data and reduce load.
 
-Follow these instructions to install the Splunk OpenTelemetry Lambda layer for Java, Python, or Node.js functions:
-
-- :ref:`otel-lambda-layer-requirements`
-- :ref:`install-otel-lambda-layer`
-- :ref:`set-env-vars-otel-lambda`
-- :ref:`ec2-otel-collector-serverless`
-
-See :ref:`instrument-aws-lambda-functions` for the default deployment instructions.
+Follow these instructions to install the Splunk OpenTelemetry Lambda layer for Java, Python, or Node.js functions. See :ref:`instrument-aws-lambda-functions` for the default deployment instructions.
 
 
 Check compatibility and requirements

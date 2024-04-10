@@ -9,13 +9,7 @@ Instrument your AWS Lambda function using separate layers
 
 You can automatically instrument your Lambda function for Splunk Observability Cloud using layers only for your runtime or language. This can significantly reduce overhead.
 
-Follow these instructions to install the Splunk OpenTelemetry Lambda layer for Java, Python, or Node.js functions:
-
-- :ref:`otel-lambda-layer-requirements`
-- :ref:`install-otel-lambda-layer`
-- :ref:`set-env-vars-otel-lambda`
-
-See :ref:`instrument-aws-lambda-functions` for the default deployment instructions.
+Follow these instructions to install the Splunk OpenTelemetry Lambda layer for Java, Python, or Node.js functions. See :ref:`instrument-aws-lambda-functions` for the default deployment instructions.
 
 
 Check compatibility and requirements

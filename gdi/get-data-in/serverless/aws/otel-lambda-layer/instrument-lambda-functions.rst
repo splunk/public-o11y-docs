@@ -10,15 +10,18 @@ Instrument your AWS Lambda function for Splunk Observability Cloud
 .. toctree::
    :hidden:
 
-   Instrument your Lambda using multiple layers <lambda-language-layers>
-   Instrument your Lambda with a Collector in EC2 <lambda-ec2-collector-gateway>
-   .NET lambda functions <dotnet-lambdas>
-   Go lambda functions <go-lambdas>
+   Instrument your Lambda using multiple layers <instrumentation/lambda-language-layers>
+   Instrument your Lambda with a Collector in EC2 <instrumentation/lambda-ec2-collector-gateway>
+   .NET lambda functions <instrumentation/dotnet-lambdas>
+   Go lambda functions <instrumentation/go-lambdas>
 
 Use the Splunk OpenTelemetry Lambda layer to automatically instrument your AWS Lambda functions for many programming languages. To get started, use the guided setup or follow the instructions manually.
 
-Generate customized instructions using the guided setup
-====================================================================
+.. raw:: html
+
+  <embed>
+    <h2>Generate customized instructions using the guided setup <a name="lambda-instructions" class="headerlink" href="#lambda-instructions" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
 To generate a template that instruments your Lambda function using the Splunk OpenTelemetry Lambda layer, use the AWS Lambda guided setup. To access the AWS Lambda guided setup, follow these steps:
 
@@ -34,38 +37,38 @@ To generate a template that instruments your Lambda function using the Splunk Op
 
    #. Select the :guilabel:`AWS Lambda` tile to open the AWS Lambda guided setup.
 
+.. raw:: html
 
-Install the Splunk OpenTelemetry Lambda layer manually
-==================================================================
+  <embed>
+    <h2>Install the Splunk OpenTelemetry Lambda layer manually <a name="lambda-manual-install" class="headerlink" href="#lambda-manual-install" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
-If you don't use the guided setup, follow these instructions to manually install the Splunk OpenTelemetry Lambda layer:
+If you don't use the guided setup, follow these instructions to manually install the Splunk OpenTelemetry Lambda layer.
 
-- :ref:`otel-lambda-layer-requirements`
-- :ref:`install-otel-lambda-layer`
-- :ref:`set-env-vars-otel-lambda`
+.. raw:: html
 
-
-.. _otel-lambda-layer-requirements:
-
-Check compatibility and requirements
-----------------------------------------------
+  <embed>
+    <h3>Check compatibility and requirements <a name="otel-lambda-layer-requirements" class="headerlink" href="#otel-lambda-layer-requirements" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
 .. include:: /_includes/requirements/lambda.rst
 
+.. raw:: html
 
-Considerations on sizing and scaling
-----------------------------------------------
+  <embed>
+    <h3>Considerations on sizing and scaling <a name="otel-lambda-layer-sizing" class="headerlink" href="#otel-lambda-layer-sizing" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
 The default version of the layer supports multiple runtimes and includes the Collector, as well as the metrics extension layer. If you need to reduce performance overhead, consider the following deployment methods:
 
 - :ref:`instrument-aws-lambda-functions-modular`
 - :ref:`instrument-aws-lambda-functions-ec2`
 
+.. raw:: html
 
-.. _install-otel-lambda-layer:
-
-Install the AWS Lambda layer for your language
--------------------------------------------------
+  <embed>
+    <h2>Install the all-in-one AWS Lambda layer <a name="otel-lambda-layer-all-in-one" class="headerlink" href="#otel-lambda-layer-all-in-one" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
 Follow these steps to instrument your function using the Splunk OpenTelemetry Lambda layer:
 
@@ -105,9 +108,11 @@ If you don't want to use a local Collector, you must specify the address of a Co
 
 .. include:: /_includes/gdi/send-spans-directly-lambda.rst
 
+.. raw:: html
 
-
-Check that data appears in Splunk Observability Cloud
-=====================================================================
+  <embed>
+    <h2>Check that data appears in Splunk Observability Cloud
+ <a name="otel-lambda-check" class="headerlink" href="#otel-lambda-check" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
 Each time the AWS Lambda function runs, trace and metric data appears in Splunk Observability Cloud. If no data appears, see :ref:`troubleshooting-lambda-layer`.
