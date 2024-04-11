@@ -34,14 +34,14 @@ When sending bucket histogram data to Splunk Observability Cloud, follow these b
 
 .. _delta-temporality:
 
-Send histograms with delta aggregation temporality
+Considerations on delta aggregation temporality
 ===========================================================
 
-Sending cumulative histogram data using delta aggregation temporality ensures that data in Splunk Observability Cloud is accurate. For example, cumulative histograms lack minimum and maximum values.
+Delta aggregation temporality ensures that histogram data in Splunk Observability Cloud is accurate. For example, cumulative histograms lack minimum and maximum values if delta aggregation isn't activated: this might cause a P90 percentile to fall above the maximum observed value.
 
 To activate delta aggretation temporality in your instrumentation, set the ``OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE`` environment variable to ``delta``. See the :new-page:`compliance matrix <https://github.com/open-telemetry/opentelemetry-specification/blob/main/spec-compliance-matrix.md#environment-variables>` in the OpenTelemetry Specification repository to check SDK support for your language.
 
-While activating delta temporality in the OpenTelemetry instrumentation is preferred, you can also use the Cumulative to delta processor in the Splunk Distribution of OpenTelemetry Collector to convert cumulative metrics to delta aggregation temporality. See :ref:`cumulative-to-delta-processor` for more information.
+While activating delta temporality in the OpenTelemetry instrumentation is the preferred way, you can also use the cumulative to delta processor in the OpenTelemetry Collector to convert cumulative metrics to delta aggregation temporality. See :ref:`cumulative-to-delta-processor` for more information.
 
 
 Send histogram data using the API
