@@ -27,13 +27,13 @@ Follow these steps to configure and activate the component:
    - :ref:`otel-install-windows`
    - :ref:`otel-install-k8s`
 
-2. Configure the resource processor as described in the next section.
+2. Configure the span processor as described in the next section.
 3. Restart the Collector.
 
 Sample configurations
 ----------------------
 
-To activate the resource processor, add ``span`` to the ``processors`` section of your configuration file, as shown in the following example:
+To activate the span processor, add ``span`` to the ``processors`` section of your configuration file, as shown in the following example:
 
 .. code:: yaml
 
@@ -99,7 +99,7 @@ See the following example:
 Extract attributes from a span name
 --------------------------------------------
 
-The ``span``processor takes a list of regular expressions to match the span name against, and extracts attributes from it based on subexpressions. It must be specified under the ``to_attributes`` section.
+The ``span`` processor takes a list of regular expressions to match the span name against, and extracts attributes from it based on subexpressions. It must be specified under the ``to_attributes`` section.
 
 To extract attributes from a span name, use the following settings:
 

@@ -11,7 +11,7 @@ After you've :ref:`installed the Collector for Kubernetes <otel-install-k8s>`, t
 
 .. caution:: 
 
-  The :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` file lists all supported configurable parameters for the Helm chart, along with a detailed explanation of each parameter. :strong:`Review it to understand how to configure this chart`.
+  The :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` file lists and explains all supported configurable parameters for the Helm chart components. See :ref:`helm-chart-components` for more information. :strong:`Review it to understand how to configure this chart`.
 
   The Helm chart can also be configured to support different use cases, such as trace sampling and sending data through a proxy server. See :new-page:`Examples of chart configuration <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/README.md>` for more information.
 
@@ -59,7 +59,7 @@ For example:
     accessToken: xxxxxx
     realm: us0
   clusterName: my-k8s-cluster
-  distribution: gke   
+  distribution: gke
 
 Configure Google Kubernetes Engine 
 -----------------------------------------------------------------------------
@@ -130,6 +130,25 @@ This distribution operates similarly to the ``eks`` distribution, but with the f
    * The configured cluster receiver is deployed as a two-replica StatefulSet instead of a Deployment, and uses a Kubernetes Observer extension that discovers the cluster's nodes and, on the second replica, its pods for user-configurable receiver creator additions.Using this observer dynamically creates the Kubelet Stats receiver instances that report kubelet metrics for all observed Fargate nodes. The first replica monitors the cluster with a ``k8s_cluster`` receiver, and the second cluster monitors all kubelets except its own (due to an EKS/Fargate networking restriction).
    * The first replica's Collector monitors the second's kubelet. This is made possible by a Fargate-specific ``splunk-otel-eks-fargate-kubeletstats-receiver-node`` node label. The Collector ClusterRole for ``eks/fargate`` allows the ``patch`` verb on ``nodes`` resources for the default API groups to allow the cluster receiver's init container to add this node label for designated self monitoring.
 
+.. _otel-kubernetes-config-clustername:
+
+Configure the cluster name
+============================================
+
+Use the ``clusterName`` parameter to specify the name of the Kubernetes cluster. This parameter is optional for the ``eks``, ``eks/fargate``, ``gke``, and ``gke/autopilot`` distributions, but required for all of others.
+
+Apply the following to configure your cluster name:
+
+.. code-block:: bash
+
+  --set clusterName=my-k8s-cluster
+
+For example:
+
+.. code-block:: yaml
+
+  clusterName: my-k8s-cluster
+
 .. _otel-kubernetes-config-environment:
 
 Configure the deployment environment
@@ -138,7 +157,6 @@ Configure the deployment environment
 If applicable, use the ``environment`` parameter to specify an additional ``deployment.environment`` attribute to be added to all telemetry data. This attribute helps Splunk Observability Cloud users investigate data coming from different sources separately. Example values include ``development``, ``staging``, and ``production``.
 
 .. code-block:: yaml
-
 
   splunkObservability:
     accessToken: xxxxxx
@@ -172,7 +190,149 @@ For example:
   clusterName: my-k8s-cluster
   cloudProvider: aws
 
-.. _otel-kubernetes-config-profiling:
+.. _otel-kubernetes-config-add-components:
+
+Add additional components to the configuration
+======================================================
+
+To use any additional OTel component, integration or legacy monitor, add it the relevant sections of the configuration file. Depending on your requirements, you might want to include it in the ``agent`` or the ``clusterReceiver`` component section of the configuration. See more at :ref:`helm-chart-components`.
+
+For a full list of available components and how to configure them, see :ref:`otel-components`. For a list of available application integrations, see :ref:`monitor-data-sources`.
+
+How to collect data: agent or cluster receiver?
+-----------------------------------------------------------------------------
+
+Read the following table to decide which option to chose to collect your data:
+
+.. list-table:: 
+  :header-rows: 1
+  :width: 100%
+  :widths: 20 40 40 
+
+  * - 
+    - Collect via the Collector agent 
+    - Collect via the Collector cluster receiver 
+
+  * - Where is data collected?
+    - At the node level.
+    - At the Kubernetes service level, through a single point.
+
+  * - Advantages
+    - * Granularity: This option ensures that you capture the complete picture of your cluster's performance and health. 
+      * Fault tolerance: If a node becomes isolated or experiences issues, its metrics are still being collected independently. This gives you visibility into problems affecting individual nodes.
+    - Simplicity: This option simplifies the setup and management. 
+
+  * - Considerations
+    - Complexity: Managing and configuring agents on each node can increase operational complexity, specifically agent config file management.
+    - Uncomplete data: This option might result in a partial view of your cluster's health and performance. If the service collects metrics only from a subset of nodes, you might miss critical metrics from parts of your cluster.
+
+  * - Use cases
+    - - Use this in environments where you need detailed insights into each node's operations. This allows better issue diagnosing and optimizing performance. 
+      - Use this to collect metrics from application pods that have multiple replicas that can be running on multiple nodes.
+    - Use this in environments where operational simplicity is a priority, or if your cluster is already simple and has only 1 node.
+
+Example: Add the MySQL receiver
+-----------------------------------------------------------------------------
+
+This example shows how to add the :ref:`mysql-receiver` to your configuration file.
+
+Add the MySQL receiver in the ``agent`` section
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To use the Collector agent daemonset to collect ``mysql`` metrics from every node the agent is deployed to, add this to your configuration:
+
+.. code:: yaml
+
+  agent:
+    config:
+      receivers:
+        mysql:
+          endpoint: localhost:3306
+          ...
+
+Add the MySQL receiver in the ``clusterReceiver`` section
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To use the Collector cluster receiver deployment to collect ``mysql`` metrics from a single endpoint, add this to your configuration:
+
+.. code:: yaml
+
+  clusterReceiver:
+    config:
+      receivers:
+        mysql:
+          endpoint: mysql-k8s-service:3306
+          ...
+
+Example: Add the Rabbit MQ monitor
+-----------------------------------------------------------------------------
+
+This example shows how to add the :ref:`rabbitmq` integration to your configuration file.
+
+Add RabbitMQ in the ``agent`` section
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you want to activate the RabbitMQ monitor in the Collector agent daemonset, add ``mysql`` to the ``receivers`` section of your agent section in the configuration file:
+
+.. code:: yaml
+
+  agent:
+    config:
+      receivers:
+        smartagent/rabbitmq:
+          type: collectd/rabbitmq
+          host: localhost
+          port: 5672
+          username: otel
+          password: ${env:RABBITMQ_PASSWORD}
+
+Next, include the receiver in the ``metrics`` pipeline of the ``service`` section of your configuration file:
+
+.. code:: yaml
+
+  service:
+    pipelines:
+      metrics:
+        receivers:
+          - smartagent/rabbitmq
+
+Add RabbitMQ in the ``clusterReceiver`` section
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Similarly, if you want to activate the RabbitMQ monitor in the cluster receiver, add ``mysql`` to the ``receivers`` section of your cluster receiver section in the configuration file:
+
+.. code:: yaml
+
+  clusterReceiver:
+    config:
+      receivers:
+        smartagent/rabbitmq:
+          type: collectd/rabbitmq
+          host: rabbitmq-service
+          port: 5672
+          username: otel
+          password: ${env:RABBITMQ_PASSWORD}
+
+Next, include the receiver in the ``metrics`` pipeline of the ``service`` section of your configuration file:
+
+.. code:: yaml
+
+  service:
+    pipelines:
+      metrics:
+        receivers:
+          - smartagent/rabbitmq
+
+.. _otel-kubernetes-config-hostnetwork:
+
+Configure the agent's use of the host network
+======================================================
+
+By default, ``agent.hostNetwork`` is set to ``true``. This grants DaemonSet pods of the agent access to the node's host network, allowing them to monitor specific elements. Enable this setting to monitor certain control plane components and integrations that require host network access.
+
+Set ``agent.hostNetwork`` to ``false`` to turn off host network access. This might be necessary to comply with certain organization security policies. If host network access is disabled, the agent's monitoring capabilities might be limited.
+
+This value is disregarded for Windows.
 
 Activate AlwaysOn Profiling
 =================================
@@ -273,6 +433,16 @@ For example, use the following configuration to activate automatic detection of 
   autodetect:
     istio: true
     prometheus: true
+
+.. _otel-kubernetes-discovery-mode:
+
+Activate discovery mode on the Collector
+============================================
+
+Use the discovery mode of the Splunk Distribution of OpenTelemetry Collector to detect metric sources and create
+a configuration based on the results.
+
+See :ref:`discovery-mode-k8s` for instructions on how to activate discovery mode in the Helm chart.
 
 .. _otel-kubernetes-deactivate-telemetry:
 

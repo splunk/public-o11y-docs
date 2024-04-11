@@ -13,7 +13,7 @@ Data tools in Splunk Observability Cloud
 
    Metric finder and metadata catalogue <metrics-finder-metadata-catalog>
    Related Content <relatedcontent>
-   Enable Related Content <enablerelatedcontent>
+   relatedcontent-collector-apm.rst
    Global data links <link-metadata-to-content>
 
 Splunk Observability Cloud provides a wide array of features and tools to help you manage, understand, and leverage your data:

@@ -13,7 +13,7 @@ Metrics pipeline management in Splunk Infrastructure Monitoring
 
 |hr|
 
-:strong:`Available in Enterprise Edition and Service Bureau`
+:strong:`Available in Enterprise Edition`
 
 |hr|
 

@@ -6,16 +6,13 @@ Host process list
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the processlist monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
-``processlist`` monitor type to report the running processes for a host,
-similar to the output of the ``top`` or ``ps`` commands on \*nix
-systems. The output format is a special base64-encoded event that
-appears under the Infrastructure view for a specific host. Historical
-process information is not retained on Splunk Observability Cloud.
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+``processlist`` monitor type to report the running processes for a host, similar to the output of the ``top`` or ``ps`` commands on \*nix
+systems. The output format is a special base64-encoded event that appears under the Infrastructure view for a specific host. 
 
-This integration is available on Linux and Windows.
+After you turn this integration on, you'll be able to monitor host metrics in Splunk Observability Cloud. Learn how at :ref:`infrastructure-hosts`. Splunk Observability Cloud doesn't retain historical process information.
+
+This integration is available on Linux only.
 
 Benefits
 --------

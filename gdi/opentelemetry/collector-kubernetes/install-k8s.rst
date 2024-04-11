@@ -41,7 +41,7 @@ The Helm chart works with default configurations of the main Kubernetes distribu
    - Minikube was created to spin up various past versions of Kubernetes.
    - Minikube versions don't necessarily align with Kubernetes versions. For example, the :new-page:`Minikube v1.27.1 releases notes <https://github.com/kubernetes/minikube/releases/tag/v1.27.1>` state the default Kubernetes version was bumped to v1.25.2.
 
-While the chart should work for other Kubernetes distributions, the :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` configuration file could require additional updates.
+While the chart should work for other Kubernetes distributions, the default :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` configuration file could require additional updates.
 
 .. _helm-chart-components:
 
@@ -54,6 +54,8 @@ For use cases about the different components, see the GitHub documentation :new-
 
 Agent component
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The agent component is deployed to each node in the Kubernetes cluster as a DaemonSet, and monitors all the data sources within each node.
 
 The agent component consists of the following config files:
 
@@ -74,6 +76,8 @@ The agent component consists of the following config files:
 
 Cluster receiver component
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The cluster receiver component runs as a single pod in the cluster created by a deployment, and collects data from a single location. Use this component in scenarios where telemetry data is available from a cluster-wide service or endpoint.
 
 The cluster receiver component consists of the following config files:
 
@@ -99,6 +103,8 @@ The cluster receiver component consists of the following config files:
 
 Gateway component (optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The gateway component serves as an intermediary. It receives, processes, enriches, and forwards data, enhancing data exportation. Use it primarily in larger clusters to scale monitoring capabilities.
 
 The gateway component consists of the following config files:
 
@@ -149,7 +155,7 @@ Depending on your destination, you need:
 
 * To send data to ``splunkObservability``:
 
-   * ``splunkObservability.accessToken``. Your Splunk Observability org access token. See :ref:`admin-org-tokens`.
+   * ``splunkObservability.accessToken``. Your Splunk Observability Cloud org access token with ingest authorization scope. See :ref:`admin-org-tokens`.
    * ``splunkObservability.realm``. Splunk realm to send telemetry data to. The default is ``us0``. See :new-page:`realms <https://dev.splunk.com/observability/docs/realms_in_endpoints/>`.
 
 .. note:: The default Splunk platform index used by the Collector for Kubernetes is ``main``.

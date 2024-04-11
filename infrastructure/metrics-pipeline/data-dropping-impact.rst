@@ -11,7 +11,7 @@ Impact and benefits of dropping data
 
 |hr|
 
-:strong:`Available in Enterprise Edition and Service Bureau`
+:strong:`Available in Enterprise Edition`
 
 |hr|
 
@@ -24,7 +24,7 @@ Considerations when dropping data
 
 Before you decide to drop unaggregated raw data for your metric, consider the following impacts:
 
-- You can only drop new incoming data. Existing data can't be dropped.
+- You can drop new incoming data, but you can't drop existing data.
 - You can't recover dropped data.
 - Detectors using the metric or custom properties you drop will misfire alerts or stop alerting.
 - Charts using the metric or custom properties you drop will stop reporting new data.

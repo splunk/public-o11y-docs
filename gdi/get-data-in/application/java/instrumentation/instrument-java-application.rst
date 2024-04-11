@@ -30,7 +30,7 @@ To generate all the basic installation commands for your environment and applica
 Install the Splunk Distribution of OpenTelemetry Java manually
 ==================================================================
 
-Follow these instructions to install the Splunk Distribution of OpenTelemetry Java:
+If you don't use the guided setup, follow these instructions to manually install the Splunk Distribution of OpenTelemetry Java:
 
 - :ref:`install-enable-jvm-agent`
    - :ref:`enable_profiling_java`
@@ -191,61 +191,42 @@ Deploy the Java agent in Kubernetes
 
 To deploy the Java agent in Kubernetes, follow these steps:
 
-1. :ref:`docker_java_agent`
-2. :ref:`configure_kubernetes_java`
+#. Edit the Dockerfile for your application image to add the following commands:
 
-.. _docker_java_agent:
+   .. code-block:: docker
 
-Deploy the Java agent in Docker
------------------------------------------------------------
+      # Adds the latest version of the Splunk Java agent
+      ADD https://github.com/signalfx/splunk-otel-java/releases/latest/download/splunk-otel-javaagent.jar .
+      # Modifies the entry point
+      ENTRYPOINT ["java","-javaagent:splunk-otel-javaagent.jar","-jar","./<myapp>.jar"]
 
-To deploy the Java agent in Docker, do the following:
+#. Configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
 
-1. Edit the Dockerfile for your application image to add the following commands:
+   The following example shows how to update a deployment to expose environment variables by adding the agent configuration under the ``.spec.template.spec.containers.env`` section:
 
-.. code-block:: docker
+   .. code-block:: yaml
 
-   # Adds the latest version of the Splunk Java agent
-   ADD https://github.com/signalfx/splunk-otel-java/releases/latest/download/splunk-otel-javaagent.jar .
-   # Modifies the entry point
-   ENTRYPOINT ["java","-javaagent:splunk-otel-javaagent.jar","-jar","./<myapp>.jar"]
-
-2. Use ``ENV`` commands to set environment variables for the Java agent. To activate metrics or profiling, add the required ``-Dotel`` argument to the ``ENTRYPOINT`` list.
-
-When you deploy the Java agent with your application build, you ensure that the Java agent is launched with tracing.
-
-.. _configure_kubernetes_java:
-
-Configure Kubernetes to run the agent
------------------------------------------------------------
-
-To configure your application in Kubernetes to use the Java agent, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
-
-The following example shows how to update a deployment to expose environment variables by adding the agent configuration under the ``.spec.template.spec.containers.env`` section:
-
-.. code-block:: yaml
-
-   apiVersion: apps/v1
-   kind: Deployment
-   spec:
-     selector:
-       matchLabels:
-         app: your-application
-     template:
-       spec:
-         containers:
-           - name: myapp
-             env:
-               - name: SPLUNK_OTEL_AGENT
-                 valueFrom:
-                   fieldRef:
-                     fieldPath: status.hostIP
-               - name: OTEL_EXPORTER_OTLP_ENDPOINT
-                 value: "http://$(SPLUNK_OTEL_AGENT):4317"
-               - name: OTEL_SERVICE_NAME
-                 value: "<serviceName>"
-               - name: OTEL_RESOURCE_ATTRIBUTES
-                 value: "deployment.environment=<environmentName>"
+      apiVersion: apps/v1
+      kind: Deployment
+      spec:
+      selector:
+         matchLabels:
+            app: your-application
+      template:
+         spec:
+            containers:
+            - name: myapp
+               env:
+                  - name: SPLUNK_OTEL_AGENT
+                  valueFrom:
+                     fieldRef:
+                        fieldPath: status.hostIP
+                  - name: OTEL_EXPORTER_OTLP_ENDPOINT
+                  value: "http://$(SPLUNK_OTEL_AGENT):4317"
+                  - name: OTEL_SERVICE_NAME
+                  value: "<serviceName>"
+                  - name: OTEL_RESOURCE_ATTRIBUTES
+                  value: "deployment.environment=<environmentName>"
 
 .. note:: You can also deploy instrumentation using the Kubernetes Operator. See :ref:`auto-instrumentation-java-k8s`.
 
@@ -281,17 +262,16 @@ If you need to send data directly to Splunk Observability Cloud, set the followi
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
-
-#. Open the navigation menu in Splunk Observability Cloud.
-#. Select :menuselection:`Settings`.
-#. Select your username.
-
-The realm name appears in the :guilabel:`Organizations` section.
+To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
 For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
 
 .. caution:: This procedure applies to spans and traces. To send AlwaysOn Profiling data, you must use the OTel Collector.
+
+Specify the source host 
+-----------------------------------------------------------
+
+.. include:: /_includes/gdi/apm-api-define-host.rst
 
 .. _instrument_aws_lambda_functions:
 
