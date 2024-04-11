@@ -45,6 +45,11 @@ To upgrade or uninstall, see:
 
 .. note:: If you have any installation or configuration issues, refer to :ref:`otel-troubleshooting` and :ref:`troubleshoot-k8s`.
 
+For a walkthrough of common tasks related to the OpenTelemetry Collector for Kubernetes, see:
+
+* :ref:`_about-k8s-tutorial`
+* :ref:`_about-collector-configuration-tutorial-k8s`
+
 
 
 
