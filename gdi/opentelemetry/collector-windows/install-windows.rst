@@ -28,6 +28,19 @@ Prerequisites
 
 .. include:: /_includes/requirements/collector-windows.rst
 
+.. _windows-otel-packages:
+
+Included packages
+==========================
+
+The Windows installer script installs the following packages:
+
+* Dotnet autoinstrumentation, if enabled. See :ref:`get-started-dotnet-otel`.
+* Fluentd, if enabled. See :ref:`fluentd-manual-config-windows`.
+* JMX metric gatherer.
+* For Docker environments only, Java JDK and JRE.
+
+
 .. _windows-script:
 
 Install the Collector using the script
@@ -55,6 +68,8 @@ If you need to activate TLS in PowerShell, use the command:
 .. code-block:: PowerShell
 
   [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
+
+.. caution:: Starting from version 0.89, the installer for the Splunk Distribution of the OpenTelemetry Collector for Windows sets its configuration using environment variables at service level instead of global level. When configuring additional settings, use service, process, or terminal scopes.
 
 .. _otel-installer-options-windows:
 .. _windows-script-options:
@@ -156,79 +171,6 @@ The Splunk Distribution of the OpenTelemetry Collector comes with a default conf
 
 For more information about the Collector's environment variables, see :ref:`collector-env-var`.
 
-Configure memory allocation
-----------------------------------
-
-To configure memory allocation, use the ``memory`` parameter.
-
-By default, the Collector is configured to use 512 MB (500 x 2^20 bytes) of memory. To increase this setting to allocate more memory, replace ``SPLUNK_MEMORY_TOTAL_MIB`` with the desired integer value.
-
-.. code-block:: PowerShell
-
-  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"; memory = "SPLUNK_MEMORY_TOTAL_MIB"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
-
-Read more about Collector sizing in :ref:`otel-sizing`.
-
-Configure proxy settings
-----------------------------------
-
-To configure proxy settings to install and run the OpenTelemetry Collector, see :ref:`configure-proxy-collector`.
-
-Custom MSI URLs
-----------------------------------
-
-By default, the Collector MSI is downloaded from :new-page:`https://dl.signalfx.com <https://dl.signalfx.com>` and
-the Fluentd MSI is downloaded from :new-page:`https://packages.treasuredata.com <https://packages.treasuredata.com>`.  
-
-To specify custom URLs for these downloads, use the ``collector_msi_url`` and ``fluentd_msi_url`` options. Replace ``COLLECTOR_MSI_URL`` and ``FLUENTD_MSI_URL`` with the URLs to the desired MSI packages to install:
-
-.. code-block:: PowerShell
-
-  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"; collector_msi_url = "COLLECTOR_MSI_URL"; fluentd_msi_url = "FLUENTD_MSI_URL"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
-
-.. _fluentd-manual-config-windows:
-
-Configure Fluentd for log collection
-====================================================================
-
-If you have a Log Observer entitlement or wish to collect logs for the target host with Fluentd, use the ``with_fluentd = 1`` option to also install Fluentd when installing the Collector. For example:
-
-.. code-block:: PowerShell
-
-  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"; with_fluentd = 1}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
-
-When activated, the Fluentd service is configured by default to collect and forward log events with the ``@SPLUNK`` label to the Collector, which then
-send these events to the HEC ingest endpoint determined by the ``realm = "<SPLUNK_REALM>"`` option.
-For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
-
-To configure the package to send log events to a custom HTTP Event Collector (HEC) endpoint URL with a token different than ``<SPLUNK_ACCESS_TOKEN>``, you can specify the following parameters for the installer script:
-
-* ``hec_url = "<SPLUNK_HEC_URL>"``
-* ``hec_token = "<SPLUNK_HEC_TOKEN>"``
-
-For example (replace the ``<SPLUNK...>`` values in the command for your configuration):
-
-.. code-block:: PowerShell
-
-  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "<SPLUNK_ACCESS_TOKEN>"; realm = "<SPLUNK_REALM>"; hec_url = "<SPLUNK_HEC_URL>"; hec_token = "<SPLUNK_HEC_TOKEN>"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
-
-The installation creates the main fluentd configuration file  ``<drive>\opt\td-agent\etc\td-agent\td-agent.conf``, where ``<drive>`` is the drive letter for the fluentd installation directory.
-
-You can add custom fluentd source configuration files to the ``<drive>\opt\td-agent\etc\td-agent\conf.d``
-directory after installation.
-
-Note the following:
-
-* In this directory, fluentd includes all files with the .conf extension.
-* By default, fluentd collects from the Windows Event Log. See ``<drive>\opt\td-agent\etc\td-agent\conf.d\eventlog.conf`` for the default configuration.
-
-After any configuration modification, apply the changes by restarting the system or running the following PowerShell commands:
-
-.. code-block:: PowerShell
-
-  Stop-Service fluentdwinsvc
-  Start-Service fluentdwinsvc
-
 .. _windows-deployments:
 
 Deployment tools
@@ -269,9 +211,11 @@ Next steps
 
 After you have installed the package, see:
 
+* :ref:`windows-config-ootb`.
+* :ref:`otel-windows-config`.
+* :ref:`collector-how-to`.
 * :ref:`use-navigators-imm`.
 * View logs and errors in the Windows Event Viewer. Search for "view logs and errors" on :new-page:`Microsoft documentation site <https://docs.microsoft.com/en-us/>` for more information.
-* :ref:`apm`.
 
 
 
