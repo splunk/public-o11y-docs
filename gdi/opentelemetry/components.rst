@@ -267,7 +267,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`kafka-exporter` (``kafka``)
      - Exports metrics, logs, and traces to Kafka using a synchronous producer. 
      - Metrics, logs, traces
-   * - :ref:`loadbalancingexporter` (``loadbalancing``)
+   * - :ref:`loadbalancing-exporter` (``loadbalancing``)
      - Exports metrics, logs, and traces to different back-ends.
      - Metrics, logs, traces
    * - :ref:`logging-exporter` (``logging``)
