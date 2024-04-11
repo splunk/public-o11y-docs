@@ -24,6 +24,12 @@ Follow these steps to set up an API test:
 
 .. _api-test-steps:
 
+Auto-retry 
+----------------
+
+Run a test again automatically if it fails without any user intervention. It's a best practice to turn on auto-retry to reduce unnecessary failures from temporary interruptions like a network issue, timeouts, or other issues. Auto-retry runs do not impact subscription usage, only the completed run result counts towards your license usage.
+
+
 Custom properties
 ----------------------
 Add custom properties in the test creation page in advanced settings. Use key-value pairs to create custom properties to filter and group dashboards, charts, and create alerts. A list of suggested custom properties is available for each test based on the tags associated with your test. For example: ``env:test``, ``role:developer``, ``product:rum``. When you have multiple key-value pairs the logic is AND among the results. So in this case, the results show all tests for the RUM product with a developer role in the environment test. 
