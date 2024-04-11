@@ -34,7 +34,7 @@ For a video version of this scenario, watch :new-page:`the Splunk Observability 
 .. _receive-alerts-xpuc:
 
 Receive alerts about outlier behavior
-=================================================================================
+========================================
 
 #. Kai, the SRE on call, receives an alert showing that the number of purchases on the Buttercup Games site has dropped significantly in the past hour and the checkout completion rate is too low. Kai trusts that these are true outlier behaviors because the alert rule their team set up in Splunk Observability Cloud takes into account the time and day of week as a dynamic baseline, rather than using a static threshold.
 
