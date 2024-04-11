@@ -63,6 +63,9 @@ For Linux, the formula accepts the attributes described in the following table:
    * - ``collector_version``
      - Version of the Collector package to install, for example, ``0.25.0``. The version should correspond to :new-page:`Github Releases <https://github.com/signalfx/splunk-otel-collector/releases>` without the preceding ``v``. Note that on Linux, the latest Collector version is installed if this parameter is not specified.
      - None
+   * - ``gomemlimit``
+     - Replaces ``splunk_ballast_size_mib`` starting in Collector version 0.97.0. Learn more at :ref:`how to update memory ballast in your configuration <collector-upgrade-memory-ballast>`
+     - 90% of ``SPLUNK_TOTAL_MEM_MIB``    
    * - ``splunk_access_token``
      - The Splunk access token to authenticate requests. This attribute is required.
      - None
