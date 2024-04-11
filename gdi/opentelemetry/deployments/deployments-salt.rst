@@ -65,7 +65,7 @@ For Linux, the formula accepts the attributes described in the following table:
      - None
    * - ``gomemlimit``
      - Replaces ``splunk_ballast_size_mib`` starting in Collector version 0.97.0. Learn more at :ref:`how to update memory ballast in your configuration <collector-upgrade-memory-ballast>`
-     - 90% of ``SPLUNK_TOTAL_MEM_MIB``    
+     - 90% of ``splunk_total_mem_mib``    
    * - ``splunk_access_token``
      - The Splunk access token to authenticate requests. This attribute is required.
      - None
