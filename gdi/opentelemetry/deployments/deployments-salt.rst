@@ -63,6 +63,9 @@ For Linux, the formula accepts the attributes described in the following table:
    * - ``collector_version``
      - Version of the Collector package to install, for example, ``0.25.0``. The version should correspond to :new-page:`Github Releases <https://github.com/signalfx/splunk-otel-collector/releases>` without the preceding ``v``. Note that on Linux, the latest Collector version is installed if this parameter is not specified.
      - None
+   * - ``gomemlimit``
+     - Replaces ``splunk_ballast_size_mib`` starting in Collector version 0.97.0. Learn more at :ref:`how to update memory ballast in your configuration <collector-upgrade-memory-ballast>`.
+     - 90% of ``splunk_total_mem_mib``    
    * - ``splunk_access_token``
      - The Splunk access token to authenticate requests. This attribute is required.
      - None
@@ -94,7 +97,7 @@ For Linux, the formula accepts the attributes described in the following table:
      - Total memory in MIB to allocate to the Collector; automatically calculates the ballast size. The ``SPLUNK_MEMORY_TOTAL_MIB`` environment variable is set to this value for the Collector service. 
      - ``512``
    * - ``splunk_ballast_size_mib``
-     - ``memory_ballast`` is deprecated. If you're using this extension, see :ref:`how to update your configuration <collector-upgrade-memory-ballast>`
+     - ``splunk_ballast_size_mib`` is deprecated starting on Collector version 0.97.0. If you're using it, see :ref:`how to update your configuration <collector-upgrade-memory-ballast>`.
      - 1/3 of the ``splunk_memory_total_mib`` total
    * - ``splunk_otel_collector_config_source``
      - The source path to a Collector configuration YAML file on your control host that is uploaded and set in place of ``splunk_otel_collector_config`` in remote hosts. To use a custom Collector configuration, add the configuration file in the Salt dir. For example, ``salt://templates/agent_config.yaml``.
