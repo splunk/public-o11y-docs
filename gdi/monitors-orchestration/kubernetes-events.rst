@@ -28,7 +28,8 @@ Benefits
 
 .. include:: /_includes/benefits-events.rst
 
-## Installation
+Installation
+------------
 
 .. include:: /_includes/collector-installation.rst
 
