@@ -38,3 +38,6 @@ To upgrade or uninstall, see:
 
 .. note:: If you have any installation or configuration issues, refer to :ref:`otel-troubleshooting`.
 
+For a walkthrough of common tasks related to the OpenTelemetry Collector for Kubernetes, see:
+
+* :ref:`about-collector-configuration-tutorial`
