@@ -5,16 +5,16 @@ Load balancing exporter
 ***************************************************
 
 .. meta::
-    :description: The load balancing exporter exports spans, metrics, and log to different back-ends that you can define.
+    :description: The load balancing exporter exports spans, metrics, and log to different back ends that you can define.
 
-The load balancing exporter is an OpenTelemetry Collector component that can export spans, metrics, and logs to multiple different back-ends. The supported pipeline types are ``metrics``, ``traces``, and ``logs``.
+The load balancing exporter is an OpenTelemetry Collector component that can export spans, metrics, and logs to multiple back ends. The supported pipeline types are ``metrics``, ``traces``, and ``logs``.
 
 .. _loadbalancing-exporter-benefits:
 
 Benefits
 ============================
 
-The load balancing exporter can send telemetry data to multiple back-ends at once using a routing policy. You can use routing policies to sort telemetry data into groups and map these groups to specific endpoints.
+The load balancing exporter can send telemetry data to multiple back ends at once using a routing policy. You can use routing policies to sort telemetry data into groups and map these groups to specific endpoints.
 
 Using the load balancing exporter, you can also send data to other running instances of the OpenTelemetry Collector through Collector endpoints. For example, you can send all traces to one running instance of the Collector and all logs to another running instance. Using this method, you can process or manipulate your data in separate Collector environments.
 
@@ -23,7 +23,7 @@ Using the load balancing exporter, you can also send data to other running insta
 Get started
 ============================
 
-To use the load balancing exporter, provide a list of back-ends that can receive telemetry data.
+To use the load balancing exporter, provide a list of back ends that can receive telemetry data.
 
 You can provide a static list of IP addresses, or a DNS host name to resolve. See :ref:`loadbalancing-sample-configs` for example configurations of the load balancing exporter that use each type of list.
 
@@ -34,7 +34,7 @@ Routing keys
 
 The load balancing exporter can export spans, metrics, and logs depending on the ``routing_key`` configured. 
 
-The ``routing_key`` groups spans, metrics, and logs together. For example, the load balancing exporter sends all spans that belong to the same ``traceID`` to the same back-end.
+The ``routing_key`` groups spans, metrics, and logs together. For example, the load balancing exporter sends all spans that belong to the same ``traceID`` to the same back end.
 
 The following table shows options for the ``routing_key``:
 
@@ -65,7 +65,7 @@ This section details some example configurations for the load balancing exporter
 Static list
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The following example uses a static list of host names to configure the load balancing exporter for separate back-ends:
+The following example uses a static list of host names to configure the load balancing exporter for separate back ends:
 
 .. code-block:: yaml
 
