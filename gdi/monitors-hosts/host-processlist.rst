@@ -12,7 +12,7 @@ systems. The output format is a special base64-encoded event that appears under 
 
 After you turn this integration on, you'll be able to monitor host metrics in Splunk Observability Cloud. Learn how at :ref:`infrastructure-hosts`. Splunk Observability Cloud doesn't retain historical process information.
 
-This integration is available on Linux only.
+This integration is available on Linux and Window.
 
 Benefits
 --------
