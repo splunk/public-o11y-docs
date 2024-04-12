@@ -16,6 +16,10 @@ Benefits
 
 The Prometheus receiver can scrape metrics data from any application that exposes a Prometheus endpoint. The receiver converts Prometheus metrics to OpenTelemetry metrics while preserving metric names, values, timestamps, and labels. You can also reuse your existing Prometheus configurations.
 
+See a complete list of third-party applications compatible with Prometheus in Prometheus' official documentation at :new-page:`Prometheus exporters <https://prometheus.io/docs/instrumenting/exporters/>`.
+
+Learn more at :ref:`prometheus-generic`.
+
 Get started
 ========================
 
