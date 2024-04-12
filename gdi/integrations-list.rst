@@ -107,7 +107,7 @@ For more information, see :ref:`get-started-rum`.
 .. raw:: html
 
    <embed>
-      <h2>OpenTelemetry receivers<a name="cloud-services" class="headerlink" href="#cloud-services" title="Permalink to this headline">¶</a></h2>
+      <h2>OpenTelemetry receivers<a name="native-otel-receivers" class="headerlink" href="#native-otel-receivers" title="Permalink to this headline">¶</a></h2>
    </embed>
 
 Learn more at :ref:`OpenTelemetry receivers <otel-components-receivers>`.
