@@ -17,7 +17,7 @@ Configuration variables
 Change the default configuration file
 ==========================================
 
-Before starting the ``splunk-otel-collector`` service, change the variables in the default configuration file to the appropriate values for your environment. Based on the specified installation parameters, the environment variables are saved to the HKLM:\SYSTEM\CurrentControlSet\Services\splunk-otel-collector registry key and set on the ``Environment`` entry.
+Before starting the ``splunk-otel-collector`` service, change the variables in the default configuration file to the appropriate values for your environment. Based on the specified installation parameters, the environment variables are saved to the ``HKLM:\SYSTEM\CurrentControlSet\Services\splunk-otel-collector`` registry key and set on the ``Environment`` entry.
 
 To modify any of the configuration values, run ``regedit`` and browse to the path.
 
@@ -98,7 +98,7 @@ After any configuration modification, apply the changes by restarting the system
 Command line options
 ==========================================
 
-To add or remove command line options for the ``splunk-otel-collector`` service, run ``regedit`` and modify the ``ImagePath`` value in the HKLM:\SYSTEM\CurrentControlSet\Services\splunk-otel-collector registry key. 
+To add or remove command line options for the ``splunk-otel-collector`` service, run ``regedit`` and modify the ``ImagePath`` value in the ``HKLM:\SYSTEM\CurrentControlSet\Services\splunk-otel-collector`` registry key. 
 
 Alternatively, run the following PowerShell command, replacing ``OPTIONS`` with the desired command line options:
 
