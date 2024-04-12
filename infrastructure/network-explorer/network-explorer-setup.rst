@@ -160,7 +160,7 @@ Make sure that the otel-ebpf-values.yaml file has the ``endpoint.address`` optio
 
    kubectl get svc | grep splunk-otel-collector-gateway
 
-You can see the :new-page:`OpenTelemetry Collector eBPF values file <https://github.com/open-telemetry/opentelemetry-helm-charts/blob/main/charts/opentelemetry-ebpf/values.yaml>` for more details.
+See the :new-page:`OpenTelemetry Collector eBPF values file <https://github.com/open-telemetry/opentelemetry-helm-charts/blob/main/charts/opentelemetry-ebpf/values.yaml>` for more details.
 
 The OpenTelemetry Collector eBPF Helm chart requires kernel headers to run the kernel in each Kubernetes node. The kernel collector installs the headers automatically unless your nodes don't have access to the internet.
 
