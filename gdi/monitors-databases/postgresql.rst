@@ -1,7 +1,7 @@
 .. _postgresql:
 
-PostgreSQL
-==========
+PostgreSQL (deprecated)
+==============================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the PostgreSQL monitor. See benefits, install, configuration, and metrics

@@ -1,7 +1,7 @@
 .. _kong:
 
-Kong Gateway
-============
+Kong Gateway (deprecated)
+====================================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for Kong analytics. See benefits, install, configuration, and metrics
