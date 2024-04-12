@@ -21,25 +21,31 @@ You can collect data from the following Azure services out-of-the-box:
   * - :strong:`Resource name`
     - :strong:`Resource type`
 
+  * - Azure Analysis Services 
+    - microsoft.analysisservices/servers
+  
   * - API Management	
     - microsoft.apimanagement/service
 
   * - App Service	
-    - microsoft.web/sites  
-
-  * - App Service	
-    - microsoft.web/serverfarms
-
-  * - App Service	
-    - microsoft.web/sites/slots
+    - microsoft.web
 
   * - App Service	
     - microsoft.web/hostingenvironments/multirolepools
 
   * - App Service	
-    - microsoft.web/hostingenvironments/workerpools 
+    - microsoft.web/hostingenvironments/workerpools
 
-  * - Application Gateway
+  * - App Service	
+    - microsoft.web/serverfarms
+
+  * - App Service	
+    - microsoft.web/sites  
+
+  * - App Service	
+    - microsoft.web/sites/slots
+
+  * - Application Gateway 
     - microsoft.network/applicationgateways
 
   * - Automation	
@@ -62,6 +68,9 @@ You can collect data from the following Azure services out-of-the-box:
 
   * - Azure Database for MySQL	
     - microsoft.dbformysql/servers
+
+  * - Azure Database for MySQL (flexible server)	
+    - microsoft.dbformysql/flexibleservers
 
   * - Azure Database for PostgreSQL	
     - microsoft.dbforpostgresql/servers
@@ -111,11 +120,32 @@ You can collect data from the following Azure services out-of-the-box:
   * - Container Registry	
     - microsoft.containerregistry/registries
 
-  * - Content Delivery Network (CDN)	
+  * - Content Delivery Network (CDN) Web App Firewall Policies	
     - microsoft.cdn/cdnwebapplicationfirewallpolicies
+
+  * - Content Delivery Network (CDN) Profiles	
+    - microsoft.cdn/profiles
 
   * - Customer Insights	
     - microsoft.customerinsights/hubs
+
+  * - Data Factory	
+    - microsoft.datafactory
+
+  * - Data Factory	
+    - microsoft.datafactory/datafactories
+
+  * - Data Factory	
+    - microsoft.datafactory/factories
+
+  * - Data Lake Analytics	
+    - microsoft.datalakeanalytics/accounts
+
+  * - Data Lake Store	
+    - microsoft.datalakestore/accounts
+
+  * - Data Protection Backup Vaults 
+    - microsoft.dataprotection/backupvaults
 
   * - Event Grid (domains)	
     - microsoft.eventgrid/domains
@@ -135,18 +165,6 @@ You can collect data from the following Azure services out-of-the-box:
   * - Event Hubs	
     - microsoft.eventhub/namespaces
 
-  * - Data Factory	
-    - microsoft.datafactory/datafactories
-
-  * - Data Factory	
-    - microsoft.datafactory/factories
-
-  * - Data Lake Analytics	
-    - microsoft.datalakeanalytics/accounts
-
-  * - Data Lake Store	
-    - microsoft.datalakestore/accounts
-
   * - ExpressRoute	
     - microsoft.network/expressroutecircuits
 
@@ -154,16 +172,19 @@ You can collect data from the following Azure services out-of-the-box:
     - microsoft.hdinsight/clusters
 
   * - Iot Hub	
-    - microsoft.devices/iothubs
-
-  * - Iot Hub	
-    - microsoft.devices/provisioningservices
+    - microsoft.devices
 
   * - Iot Hub	
     - microsoft.devices/elasticpools
 
   * - Iot Hub	
     - microsoft.devices/elasticpools/iothubtenants
+
+  * - Iot Hub	
+    - microsoft.devices/iothubs
+
+  * - Iot Hub	
+    - microsoft.devices/provisioningservices
 
   * - Key Vault	
     - microsoft.keyvault/vaults
@@ -182,6 +203,9 @@ You can collect data from the following Azure services out-of-the-box:
 
   * - Power BI	
     - microsoft.powerbidedicated/capacities
+
+  * - Recovery Services Vaults	
+    - microsoft.recoveryservices/vaults
 
   * - Redis Cache	
     - microsoft.cache/redis
@@ -239,3 +263,4 @@ You can collect data from the following Azure services out-of-the-box:
 
   * - VPN Gateway	
     - microsoft.network/virtualnetworkgateways
+
