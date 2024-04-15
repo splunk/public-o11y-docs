@@ -82,6 +82,8 @@ When issues are detected, discovery mode suggests which parameters and environme
 
 .. note:: By default, the duration of the discovery process is 10 seconds, which you can increase by setting the ``SPLUNK_DISCOVERY_DURATION`` environment variable. For example: ``export SPLUNK_DISCOVERY_DURATION = 20s``.
 
+For more details, including advanced customization settings, see :ref:`customize-third-party-settings-linux`.
+
 Usage example
 ======================
 

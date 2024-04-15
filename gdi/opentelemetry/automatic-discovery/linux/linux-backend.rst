@@ -321,7 +321,7 @@ To learn more, see the following resources:
 
 .. _auto-discovery-upgrade-package:
 
-Update zero config auto instrumentation
+Update automatic discovery and configuration
 ============================================
 
 

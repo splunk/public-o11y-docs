@@ -17,9 +17,11 @@ Discover metric sources automatically
 Use automatic discovery and configuration with the Splunk Distribution of OpenTelemetry Collector to detect metric sources and create
 a configuration based on the results.
 
+The following diagram shows the process of using automatic discovery and configuration to find metric sources:
+
 .. mermaid::
    
-   flowchart TB
+   flowchart LR
 
       accTitle: Automatic discovery and configuration process diagram
       accDescr: Step one. Connect to your cloud environment. Step two. Ensure the OpenTelemetry Collector is running. Step three. Run your application.
@@ -31,6 +33,10 @@ a configuration based on the results.
       Z["Run your application"]
       
       X --> Y --> Z
+
+.. raw:: html
+
+  <h2>Benefits</h2>
 
 Automatic discovery and configuration can detect several types of metric sources on the host, such as language runtimes, databases, and servers. With this information, the Collector generates configuration you can modify and adopt, or incorporate into your exiting configuration automatically by default.
 
@@ -44,8 +50,8 @@ The following table shows the platforms that support each language runtime:
 
 .. list-table::
    :header-rows: 1
-   :width: 60%
-   :widths: 15 15 15 15
+   :width: 100%
+   :widths: 25 25 25 25
 
    * - Application/language
      - Supported for Linux

@@ -26,7 +26,7 @@ Next, select the service. A page with detailed APM data opens:
 
 You've now successfully deployed and instrumented a Java application in Kubernetes, and you can now see your data in Splunk APM. 
 
-See the :ref:`learn-more-k8s-java-traces` section for additional resources about Splunk APM and Splunk Zero Configuration Auto Instrumentation.
+See the :ref:`learn-more-k8s-java-traces` section for additional resources about Splunk APM and Splunk automatic discovery and configuration.
 
 .. _learn-more-k8s-java-traces:
 

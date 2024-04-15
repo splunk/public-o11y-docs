@@ -13,7 +13,7 @@ Through advanced customization, you can achieve the following tasks:
 
 * :ref:`Override automatic discovery settings <override-default-settings-linux>`
 * :ref:`Use automatic discovery with gateway mode <use-with-gateway-linux>`
-* :ref:`Customize discovery settings <customize-third-party-settings-linux>`
+* :ref:`Customize discovery settings for third-party applications <customize-third-party-settings-linux>`
 
 .. _override-default-settings-linux:
 
@@ -95,10 +95,10 @@ The auto instrumentation now sends data to your gateway deployment.
 
 .. _customize-third-party-settings-linux:
 
-Customize discovery settings
-==========================================
+Customize discovery settings for third-party applications
+====================================================================
 
-By default, discovery mode reads the built-in configuration provided by the Collector executable. You can provide your own configuration to modify settings or adjust the existing configuration in case of a partial discovery status.
+By default, automatic discovery reads the built-in configuration provided by the Collector executable. You can provide your own configuration to modify settings or adjust the existing configuration in case of a partial discovery status.
 
 The priority order for discovery configuration values from lowest to highest is:
 

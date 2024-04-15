@@ -7,7 +7,7 @@ Advanced customization for automatic discovery in Kubernetes
 .. meta:: 
     :description: Learn how to customize your deployment of automatic discovery in a Kubernetes environment.
 
-Learn how to customize Splunk zero config auto instrumentation for advanced scenarios. 
+Learn how to customize Splunk automatic discovery and configuration for advanced scenarios. 
 
 Through advanced customization, you can achieve the following tasks:
 
@@ -160,7 +160,7 @@ Using this configuration, auto instrumentation automatically sends data to a run
 Additional settings
 ===================================
 
-There are many other settings you can customize in zero configuration auto instrumentation.
+There are many other settings you can customize in automatic discovery and configuration.
 
 For a list of settings that you can change for each language, see the following resources:
 
