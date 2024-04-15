@@ -14,6 +14,8 @@ In the first part of the onboarding phase, you make foundational decisions about
 #. :ref:`phase1-teams-tokens`
 #. :ref:`phase1-parent-child`
 
+To start at the beginning of the admin onboarding journey, see :ref:`admin-onboarding-guide`. 
+
 .. _phase1-create-trial:
 
 Create a trial for your organization 

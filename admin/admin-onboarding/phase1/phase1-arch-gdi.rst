@@ -18,6 +18,8 @@ In the second part of the onboarding phase, get familiar with important concepts
 #. :ref:`phase1-logs`
 #. :ref:`phase1-dashboards-detectors`
 
+To start at the beginning of the admin onboarding journey, see :ref:`admin-onboarding-guide`. To start at the beginning of the onboarding phase, see :ref:`phase1-team-user-admin:`.
+
 .. _phase1-otel:
 
 Get familiar with OpenTelemetry concepts 
