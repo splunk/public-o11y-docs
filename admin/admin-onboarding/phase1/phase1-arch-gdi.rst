@@ -15,8 +15,6 @@ In the second part of the onboarding phase, get familiar with important concepts
 #. :ref:`phase1-host-k8s`
 #. :ref:`phase1-3rd-party`
 #. :ref:`phase1-apm`
-#. :ref:`phase1-auto-instrument`
-#. :ref:`phase1-profiling`
 #. :ref:`phase1-logs`
 #. :ref:`phase1-dashboards-detectors`
 
@@ -25,7 +23,7 @@ In the second part of the onboarding phase, get familiar with important concepts
 Get familiar with OpenTelemetry concepts 
 ==========================================================
 
-Spend some time to understand the concepts of the OpenTelemetry Collector. Pay special attention to configuration of receivers, processors, exporters, and connectors since most OpenTelemetry configurations have each of these pipeline components. 
+Spend some time to understand the concepts of the OpenTelemetry Collector. Pay special attention to configuring receivers, processors, exporters, and connectors since most OpenTelemetry configurations have each of these pipeline components. 
 
 See :new-page:`https://opentelemetry.io/docs/concepts/`.
 
@@ -104,8 +102,8 @@ See :ref:`monitor-data-sources` to see a list of receivers.
 
 .. _phase1-apm:
 
-Get familiar with Splunk APM and its concepts
-==================================================================
+Bring data in for use in Splunk APM
+======================================
 
 Splunk Application Performance (APM) provides end-to-end visibility to help identify issues such as errors and latency across all tags of a service. Splunk APM produces infinite cardinality metrics and full-fidelity traces. Splunk APM also measures request, error, and duration (RED) metrics. See :ref:`apm-orientation`.
 
@@ -114,7 +112,7 @@ To familiarize yourself with the key concepts of Splunk APM, see :ref:`apm-key-c
 .. _phase1-auto-instrument:
 
 Add an auto instrumentation library to a service to send traces to Splunk APM
-==================================================================================
+---------------------------------------------------------------------------------
 
 To send traces to Splunk APM, you need to either deploy an auto instrumentation agent for each programming language or language runtime or use the Zero Configuration auto instrumentation implementation for Java, .NET, or Node.js. 
 
@@ -127,7 +125,7 @@ See :ref:`zero-config`.
 .. _phase1-profiling:
 
 (Optional) Turn on AlwaysOn Profiling to collect stack traces
-============================================================================
+-----------------------------------------------------------------
 
 Use AlwaysOn Profiling for deeper analysis of the behavior of select applications. Code profiling collects snapshots of the CPU call stacks and memory usage. After you get profiling data into Splunk Observability Cloud, you can explore stack traces directly from APM and visualize the performance and memory allocation of each component using the flame graph. 
 

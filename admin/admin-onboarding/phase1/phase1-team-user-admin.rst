@@ -46,6 +46,16 @@ Plan your teams structure and token management to control access
 
 If you plan to roll out Splunk Observability Cloud across your organization you likely have multiple internal customers with different access requirements for the various features in Splunk Observability Cloud. To manage these internal customers, you can use the teams feature to organize users together in a team and manage them as a unit.
 
+Define team and token naming conventions
+------------------------------------------
+
+Before creating teams and tokens, determine your naming convention. This helps you to track token assignments and control data ingest limits. Aligning team and token names also helps you to identify token owners when viewing the usage reports. For example, you can align team and token names in the following way:
+
+* Team name: FRONTEND_DEV_TEAM 
+* Token names: FRONTEND_DEV_TEAM_INGEST, FRONTEND_DEV_TEAM_API, FRONTEND_DEV_TEAM_RUM
+
+See :ref:`admin-manage-usage`.
+
 Plan your team structure
 ---------------------------
 
@@ -65,16 +75,6 @@ With the admin role, you can deactivate tokens that are no longer needed. Create
 You can also set limits for data ingestion for your tokens. Use limits to control how many metrics are ingested per token. Limits protect against unexpected data ingestion overage by ensuring teams can't over consume.
 
 See :ref:`admin-tokens` for more information about tokens.
-
-Define team and token naming conventions
-------------------------------------------
-
-Before creating teams and tokens, determine your naming convention. This helps you to track token assignments and control data ingest limits. Aligning team and token names also helps you to identify token owners when viewing the usage reports. For example, you can align team and token names in the following way:
-
-* Team name: FRONTEND_DEV_TEAM 
-* Token names: FRONTEND_DEV_TEAM_INGEST, FRONTEND_DEV_TEAM_API, FRONTEND_DEV_TEAM_RUM
-
-See :ref:`admin-manage-usage`.
 
 .. _phase1-parent-child:
 
