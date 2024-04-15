@@ -83,16 +83,16 @@ The SignalFx Instrumentation for .NET can collect the following runtime metrics:
      - Heap size, as observed during the last garbage collection.
    * - ``process.runtime.dotnet.gc.objects.size``
      - Gauge
-     - Count of bytes currently in use by live objects in the GCP heap.
+     - Count of bytes currently in use by live objects in the GC heap.
    * - ``process.runtime.dotnet.gc.allocations.size``
      - Cumulative counter
-     - Count of bytes allocated on the managed GCP heap since the process started. Only available for .NET Core.
+     - Count of bytes allocated on the managed GC heap since the process started. Only available for .NET Core.
    * - ``process.runtime.dotnet.gc.committed_memory.size``
      - Gauge
-     - Amount of committed virtual memory for the managed GCP heap, as observed during the last garbage collection. Only available for .NET 6 and higher.
+     - Amount of committed virtual memory for the managed GC heap, as observed during the last garbage collection. Only available for .NET 6 and higher.
    * - ``process.runtime.dotnet.gc.pause.time``
      - Counter
-     - Number of milliseconds spent in GCP pause. Only available for .NET Core.
+     - Number of milliseconds spent in GC pause. Only available for .NET Core.
    * - ``process.runtime.dotnet.monitor.lock_contention.count``
      - Cumulative counter
      - Contentions count when trying to acquire a monitor lock since the process started.
