@@ -1,11 +1,11 @@
 .. _discovery_mode:
 
 ***************************************************************************
-Automatic discovery and configuration
+Discover metric sources automatically
 ***************************************************************************
 
 .. meta::
-      :description: Use the discovery mode of the Splunk Distribution of OpenTelemetry Collector to detect metric sources and collect metrics automatically.
+      :description: Use automatic discovery and configuration with the Splunk Distribution of OpenTelemetry Collector to detect metric sources and collect metrics automatically.
 
 .. toctree::
    :hidden:
@@ -14,7 +14,7 @@ Automatic discovery and configuration
    Linux <automatic-discovery/discovery-linux>
    Windows <automatic-discovery/discovery-windows>
 
-Use the automatic discovery mode of the Splunk Distribution of OpenTelemetry Collector to detect metric sources and create
+Use automatic discovery and configuration with the Splunk Distribution of OpenTelemetry Collector to detect metric sources and create
 a configuration based on the results.
 
 Automatic discovery can detect several types of metric sources on the host, such as language runtimes, databases, and servers. With this information, the Collector generates configuration you can modify and adopt, or incorporate into your exiting configuration automatically by default.
