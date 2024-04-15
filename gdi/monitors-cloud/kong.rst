@@ -1,16 +1,12 @@
 .. _kong:
 
-Kong Gateway (deprecated)
+Kong Gateway 
 ====================================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for Kong analytics. See benefits, install, configuration, and metrics
 
-.. caution:: 
-   
-   The Kong monitor is now deprecated and will reach of End of Support on October 31st, 2024. During this period only critical security and bug fixes are provided. When End of Support is reached, the monitor will be removed and no longer be supported, and you won't be able to use it to send data to Splunk Observability Cloud. 
-
-To monitor your Kong traffic metrics with the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` use the :ref:`Prometheus receiver <prometheus-receiver>`. The receiver uses the Kong metrics Prometheus endpoint, which emits metrics for configurable request and response lifecycle groups, including:
+To monitor your Kong traffic metrics with the :ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>` use the native OTel :ref:`Prometheus receiver <prometheus-receiver>`. The receiver uses the Kong metrics Prometheus endpoint, which emits metrics for configurable request and response lifecycle groups, including:
 
 -  Counters for response counts
 -  Counters for cumulative response and request sizes
@@ -23,14 +19,20 @@ You can partition request and response lifecycle groups by:
 -  Request HTTP Method
 -  Response HTTP Status Code
 
-In addition, the integration provides system-wide connection statistics,
-including:
+In addition, the integration provides system-wide connection statistics, including:
 
 -  A counter for total fielded requests
 -  Gauges for active connections and their various states
 -  A gauge for database connectivity
 
-To learn more about the Kong metrics Prometheus endpoint, see :new-page:`Kong Docs on Prometheus <https://docs.konghq.com/hub/kong-inc/prometheus>`. 
+To learn more: 
+
+* About the Kong metrics Prometheus endpoint, see the official :new-page:`Kong documentation on Prometheus <https://docs.konghq.com/hub/kong-inc/prometheus>`. 
+* About using the Prometheus receiver to monitor applications, see :ref:`prometheus-generic`.
+
+.. caution:: 
+   
+   The Kong monitor is now deprecated and will reach of End of Support on October 31st, 2024. During this period only critical security and bug fixes are provided. When End of Support is reached, the monitor will be removed and no longer be supported, and you won't be able to use it to send data to Splunk Observability Cloud. 
 
 Benefits
 --------
@@ -45,12 +47,12 @@ Installation
 Kong installation
 ~~~~~~~~~~~~~~~~~
 
-Follow the official Kong instructions to expose the Prometheus metrics endpoint. To learn how, see :new-page:`Kong Docs on Prometheus <https://docs.konghq.com/hub/kong-inc/prometheus>`.
+Follow the official Kong instructions to expose the Prometheus metrics endpoint. To learn how, see the official :new-page:`Kong documentation on Prometheus <https://docs.konghq.com/hub/kong-inc/prometheus>`. 
 
 Configuration
 -------------
 
-Configure the Prometheus receiver with Kong:
+Configure the Prometheus receiver with Kong as shown:
 
 .. code:: yaml
 
