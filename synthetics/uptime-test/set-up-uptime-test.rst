@@ -95,6 +95,13 @@ Key requirements:
    See, :ref:`custom-properties`. 
 
 
+
+Auto-retry 
+----------------
+
+Run a test again automatically if it fails without any user intervention. It's a best practice to turn on auto-retry to reduce unnecessary failures from temporary interruptions like a network issue, timeouts, or other issues. Auto-retry runs do not impact subscription usage, only the completed run result counts towards your subscription usage.
+
+
 .. _uptime-request-time:
 
 Select an HTTP method
