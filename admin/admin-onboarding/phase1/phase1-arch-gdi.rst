@@ -114,9 +114,12 @@ To familiarize yourself with the key concepts of Splunk APM, see :ref:`apm-key-c
 Add an auto instrumentation library to a service to send traces to Splunk APM
 ---------------------------------------------------------------------------------
 
-To send traces to Splunk APM, you need to either deploy an auto instrumentation agent for each programming language or language runtime or use the Zero Configuration auto instrumentation implementation for Java, .NET, or Node.js. 
+To send traces to Splunk APM, you need to deploy an auto instrumentation agent for each programming language or language runtime. To deploy an auto instrumentation agent, see :ref:`instrument-applications`.  
 
-To deploy an auto instrumentation agent, see :ref:`instrument-applications`.  
+.. _phase1-zero-config:
+
+(Optional) Use the Zero Configuration auto instrumentation implementation
+----------------------------------------------------------------------------
 
 If you are deploying many similar services written in Java, .NET, or Node.js, deploy the OpenTelemetry Collector and enable the Zero Configuration for Auto Instrumentation. Use zero configuration if you don't have access to the source code or the ability to change the deployment. 
 
