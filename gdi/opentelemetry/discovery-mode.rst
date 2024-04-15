@@ -17,9 +17,24 @@ Discover metric sources automatically
 Use automatic discovery and configuration with the Splunk Distribution of OpenTelemetry Collector to detect metric sources and create
 a configuration based on the results.
 
-Automatic discovery can detect several types of metric sources on the host, such as language runtimes, databases, and servers. With this information, the Collector generates configuration you can modify and adopt, or incorporate into your exiting configuration automatically by default.
+.. mermaid::
+   
+   flowchart TB
 
-The main advantage of using automatic discovery is that you don't need to manually update the OpenTelemetry Collector configuration for supported metric sources. This is helpful in environments when you deploy and activate host services dynamically or when adding a new supported target database to your infrastructure.
+      accTitle: Automatic discovery and configuration process diagram
+      accDescr: Step one. Connect to your cloud environment. Step two. Ensure the OpenTelemetry Collector is running. Step three. Run your application.
+
+      X["Connect to your cloud environment"]
+
+      Y["Deploy the Splunk Distribution \n of OpenTelemetry Collector in your environment"]
+
+      Z["Run your application"]
+      
+      X --> Y --> Z
+
+Automatic discovery and configuration can detect several types of metric sources on the host, such as language runtimes, databases, and servers. With this information, the Collector generates configuration you can modify and adopt, or incorporate into your exiting configuration automatically by default.
+
+The main advantage of using automatic discovery is that you don't need to manually instrument applications or manually configure the Splunk Distribution of OpenTelemetry Collector. 
 
 .. raw:: html
 
@@ -29,20 +44,25 @@ The following table shows the platforms that support each language runtime:
 
 .. list-table::
    :header-rows: 1
-   :width: 100%
-   :widths: 30 70
+   :width: 60%
+   :widths: 15 15 15 15
 
-   * - Language runtime
-     - Platforms
+   * - Application/language
+     - Supported for Linux
+     - Supported for Windows
+     - Supported for Kubernetes
    * - Java
-     - * :ref:`Linux <linux-backend-auto-discovery>`
-       * :ref:`Kubernetes <k8s-backend-auto-discovery>`
+     - Yes. See :ref:`linux-backend-auto-discovery`
+     - No
+     - Yes. See :ref:`k8s-backend-auto-discovery`
    * - .NET
-     - * :ref:`Kubernetes <k8s-backend-auto-discovery>`
-       * :ref:`Windows <windows-backend-auto-discovery>`
+     - No
+     - Yes. See :ref:`windows-backend-auto-discovery`
+     - Yes. See :ref:`k8s-backend-auto-discovery`
    * - Node.js
-     - * :ref:`Linux <linux-backend-auto-discovery>`
-       * :ref:`Kubernetes <k8s-backend-auto-discovery>`
+     - Yes. See :ref:`linux-backend-auto-discovery`
+     - No
+     - Yes. See :ref:`k8s-backend-auto-discovery`
 
 .. raw:: html
   

@@ -7,12 +7,13 @@ Advanced customization for automatic discovery in Linux
 .. meta:: 
     :description: Learn how to customize your deployment of automatic discovery in a Linux environment.
 
-Learn how to customize Splunk zero config auto instrumentation for advanced scenarios. 
+Learn how to customize automatic discovery and configuration for advanced scenarios. 
 
 Through advanced customization, you can achieve the following tasks:
 
-* :ref:`Override auto instrumentation settings <override-default-settings-linux>`
-* :ref:`Use auto instrumentation with gateway mode <use-with-gateway-linux>`
+* :ref:`Override automatic discovery settings <override-default-settings-linux>`
+* :ref:`Use automatic discovery with gateway mode <use-with-gateway-linux>`
+* :ref:`Customize discovery settings <customize-third-party-settings-linux>`
 
 .. _override-default-settings-linux:
 
@@ -92,10 +93,87 @@ Follow these steps to send data to a gateway deployment of the OpenTelemetry Col
 
 The auto instrumentation now sends data to your gateway deployment. 
 
-Additional settings
-===================================
+.. _customize-third-party-settings-linux:
 
-There are many other settings you can customize in zero configuration auto instrumentation.
+Customize discovery settings
+==========================================
+
+By default, discovery mode reads the built-in configuration provided by the Collector executable. You can provide your own configuration to modify settings or adjust the existing configuration in case of a partial discovery status.
+
+The priority order for discovery configuration values from lowest to highest is:
+
+- Default ``bundle.d`` component configuration files, built into the Collector executable
+- ``config.d/<receivers or extensions>/*.discovery.yaml`` component configuration files
+- ``config.d/properties.discovery.yaml`` properties file content in mapped form
+- ``config.d/properties.discovery.yaml`` properties file content using ``--set`` form
+- ``SPLUNK_DISCOVERY_<xyz>`` property environment variables available to the Collector process
+- ``--set splunk.discovery.<xyz>`` property command line options
+
+.. _configd-file:
+
+Define properties through the properties file
+------------------------------------------------
+
+You can override or add properties by creating the ``etc/otel/collector/config.d/properties.discovery.yaml`` file. Each mapped property in the file overrides existing discovery settings. For example:
+
+   .. code-block:: yaml
+
+
+      splunk.discovery:
+        receivers:
+          postgresql:
+            username: "${PG_USERNAME_ENVVAR}"
+            password: "${PG_PASSWORD_ENVVAR}"
+
+You can use the ``--discovery-properties=<filepath.yaml>`` argument to load discovery mode properties that you don't want to share with other Collectors. If you specify discovery properties using this argument, properties contained in ``config.d/properties.discovery.yaml`` are ignored.
+
+Create custom configurations
+---------------------------------------------
+
+To create custom discovery configurations, follow these steps:
+
+#. Navigate to the ``config.d`` folder in ``/etc/otel/collector/config.d`` on Linux.
+#. Create a ``<name>.discovery.yaml`` file and place it inside a subdirectory of ``config.d``, for example ``extensions`` or ``receivers`` where ``<name>`` is the name of the component you want to use.
+#. Edit the ``<name>.discovery.yaml`` files to add the desired configuration. For example, if you're adding a receiver, discovery mode loads the content inside the ``receivers`` object of the Collector configuration.
+
+Custom configurations consist of the fields you want to override in the default configuration. For example:
+
+.. code-block:: yaml
+
+    # <some-receiver-type-with-optional-name.discovery.yaml>
+      <receiver_type>(/<receiver_name>):
+         enabled: <true | false> # true by default
+         rule:
+            <observer_type>(/<observer_name>): <receiver creator rule for this observer>
+         config:
+            default:
+               <default embedded receiver config>
+            <observer_type>(/<observer_name>):
+               <observer-specific config items, merged with `default`>
+         status:
+            metrics:
+               <discovery receiver metric status entries>
+            statements:
+               <discovery receiver statement status entries>
+
+Use the ``--dry-run`` option to check the resulting discovery configuration before using it with the Collector.
+
+See the :new-page:`Discovery receiver README file <https://github.com/signalfx/splunk-otel-collector/blob/main/internal/receiver/discoveryreceiver/README.md>` for more information.
+
+Define a custom configuration directory
+-----------------------------------------------------
+
+To define a custom directory for discovery settings, use the ``--config-dir`` option as in the example:
+
+.. code-block:: text
+
+    otelcol --discovery --config-dir <custom_path>
+
+
+Additional settings for language runtimes
+=============================================
+
+There are many other settings you can customize using automatic discovery and configuration.
 
 For a list of settings that you can change for each language, see the following resources:
 
