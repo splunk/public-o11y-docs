@@ -1,12 +1,13 @@
 .. list-table::
+  :header-rows: 1
   :widths: 20,20,20,20,20
   :width: 100%
 
-  * - :strong:`Capability`
-    - :strong:`Admin`
-    - :strong:`Power user`
-    - :strong:`Usage`
-    - :strong:`Read_only`
+  * - :strong:`Permission`
+    - :strong:`admin`
+    - :strong:`power`
+    - :strong:`usage`
+    - :strong:`read_only`
 
   * - :strong:`Show Chat`
     - Yes
@@ -16,7 +17,7 @@
 
   * - :strong:`Training`
     - Yes
-    - Yeso
+    - Yes
     - Yes
     - Yes
 

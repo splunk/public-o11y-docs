@@ -20,11 +20,11 @@ The following Linux distributions and versions are supported:
 
 Before installing the Ansible collection, do the following:
 
-* Find your :ref:`Splunk access token <otel-using>`
-* Find your :ref:`Splunk realm <otel-using>`
+* Find your :ref:`Splunk access token <otel-using>`.
+* Find your :ref:`Splunk realm <otel-using>`.
 * Check :ref:`exposed ports <otel-using>` to make sure your environment doesn't have conflicts. Ports can be changed in the package's configuration.
 
-Ansible Galaxy is the Ansible official hub for sharing Ansible content. See :new-page:`Ansible Collection for the Splunk Distribution of OpenTelemetry Collector <https://galaxy.ansible.com/signalfx/splunk_otel_collector>` for more information about the playbook. 
+Ansible Galaxy is the Ansible official hub for sharing Ansible content. See :new-page:`Ansible Collection for the Splunk Distribution of OpenTelemetry Collector <https://galaxy.ansible.com/signalfx/splunk_otel_collector>` for more information about the playbook.
 
 Run the following command to install the Ansible collection from Ansible Galaxy:
 
@@ -56,10 +56,12 @@ The following table describes the variables that can be configured for this role
    
    * - Variable
      - Description
+   * - ``gomemlimit``
+     - Replaces ``splunk_ballast_size_mib`` starting in Collector version 0.97.0. It allows limiting memory usage in the GO runtime, helping enhance garbage collection and prevent out of memory situations. Learn more at :ref:`how to update memory ballast in your configuration <collector-upgrade-memory-ballast>`. Default value is 90% of ``splunk_total_mem_mib``.   
    * - ``splunk_access_token``
      - The Splunk access token to authenticate requests. This attribute is required.
    * - ``splunk_realm``
-     - The realm to send the data to. This variable is set with this value for the service. The default value is ``us0``.
+     - The realm to send the data to. This variable is set with this value for the service. The default value is ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
    * - ``splunk_ingest_url``
      - The Splunk ingest URL, for example, ``https://ingest.us0.signalfx.com``. This variable is set with this value for the service. The default value is ``https://ingest.{{ splunk_realm }}.signalfx.com``. 
    * - ``splunk_api_url``
@@ -89,7 +91,7 @@ The following table describes the variables that can be configured for this role
    * - ``splunk_memory_total_mib``
      - The amount of allocated memory in MiB. The default value is ``512``, or 500 x 2^20 bytes, of memory .
    * - ``splunk_ballast_size_mib``
-     - The set memory ballast size in MiB. The default value is 1/3 of the value set in ``splunk_memory_total_mib``.
+     - ``splunk_ballast_size_mib`` is deprecated starting on Collector version 0.97.0. If you're using it, see :ref:`how to update your configuration <collector-upgrade-memory-ballast>`.
    * - ``install_fluentd``
      - The option to install or manage Fluentd and dependencies for log collection. The dependencies include ``capng_c`` for activating Linux capabilities, ``fluent-plugin-systemd`` for systemd journal log collection, and the required libraries or development tools. The default value is ``false``.
    * - ``td_agent_version``

@@ -309,3 +309,23 @@ a.external:not(.image-reference):after {
    background-size: contain;
    display: inline-block;
 }
+
+.relations{
+    display: none !important;
+}
+
+.logo-span{
+    display: block;
+    width: 152px;
+    height: 79px;
+    margin-bottom: -57px;
+    margin-left: -12px;
+    margin-top: -41px;
+}
+
+.logoimage{
+    position: absolute;
+    left: 15px !important;
+    top: 3px !important;
+    width: 114px !important;
+}

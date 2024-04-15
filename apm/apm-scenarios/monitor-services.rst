@@ -18,7 +18,7 @@ These are the steps Deepu takes to monitor the payment service using a Splunk AP
 Deepu opens the APM Service dashboard for the payment service
 ===============================================================
 
-From the :guilabel:`APM Overview`, Deepu selects :guilabel:`Explore` to enter the service map. Deepu selects the ``paymentservice`` node and selects :guilabel:`View Dashboard` on the sidebar.
+From the :guilabel:`APM Overview`, Deepu selects :guilabel:`Service Map` to access the service map. Deepu selects the ``paymentservice`` node and selects :guilabel:`View Dashboard` on the sidebar.
 
 ..  image:: /_images/apm/apm-use-cases/MonitorServices.png
     :width: 99%

@@ -16,7 +16,12 @@ Get started
 
 Follow these steps to configure and activate the component:
 
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform. See :ref:`otel-install-platform`. 
+1. Deploy the Splunk Distribution of the OpenTelemetry Collector to your host or container platform:
+
+  - :ref:`otel-install-linux`
+  - :ref:`otel-install-windows`
+  - :ref:`otel-install-k8s`
+
 2. Configure the TCP log receiver as described in the next section. 
 3. Restart the Collector.
 

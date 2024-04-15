@@ -49,7 +49,7 @@ To link a detector to a team, follow these steps:
 .. _remove-link-detector-team:
 
 Remove the link between a detector and a team
---------------------------------------------------------------------------------
+--------------------------------------------------------------------------
 
 To remove a link between a detector and a team, you need to have write permission for the detector. To learn more, see :ref:`detector-manage-permissions`.
 

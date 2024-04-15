@@ -9,7 +9,7 @@ Memory profiling metrics
 
 AlwaysOn Profiling provides memory metrics that you can use to build dashboards and set up alerts. The following image shows a sample dashboard of JVM memory metrics for a service:
 
-..  image:: /_images/apm/profiling/memory-profiling-metrics.png
+..  image:: /_images/apm/profiling/memory-profiling-metrics_1.png
     :alt: Sample dashboard with memory profiling metric data.
 
 For more information on dashboards, see :ref:`dashboard-create-customize`.

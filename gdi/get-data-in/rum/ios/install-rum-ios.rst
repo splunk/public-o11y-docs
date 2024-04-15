@@ -122,13 +122,7 @@ Follow these steps to initialize the iOS RUM package.
          [builder setApplicationName:@"<your_app_name>"];
          [builder build];
 
-   * ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
-
-         1. Open the navigation menu in Splunk Observability Cloud.
-         2. Select :menuselection:`Settings`.
-         3. Select your username.
-
-      The realm name appears in the :guilabel:`Organizations` section.
+   * ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
    * To generate a RUM access token, see :ref:`rum-access-token`.
 
@@ -208,13 +202,7 @@ Initialize the crash reporting module with your configuration parameters:
       // Initialize crash reporting module after the iOS agent
       [SplunkRumCrashReporting start]
 
-* ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
-
-      1. Open the navigation menu in Splunk Observability Cloud.
-      2. Select :menuselection:`Settings`.
-      3. Select your username. 
-
-   The realm name appears in the :guilabel:`Organizations` section.
+* ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
 * To generate a RUM access token, see :ref:`rum-access-token`.
 
@@ -308,3 +296,10 @@ How to contribute
 =========================================================
 
 The Splunk OpenTelemetry Instrumentation for iOS is open-source software. You can contribute to its improvement by creating pull requests in GitHub. To learn more, see the :new-page:`contributing guidelines <https://github.com/signalfx/splunk-otel-ios/blob/main/CONTRIBUTING.md>` in GitHub.
+
+Next steps
+================
+
+* To add custom attributes, adapt the instrumentation to your environment and application, customize sampling, and more, see :ref:`configure-ios-instrumentation`.
+* To check that your data is in your Splunk RUM for Mobile instance, see :ref:`rum-check-mobile-data`.
+* To troubleshoot, see :ref:`common-ios-troubleshooting`.

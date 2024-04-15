@@ -84,7 +84,7 @@ Monitor server and cluster metrics :ref:`wcidw-imm`
 .. rst-class:: newcard
 
 :strong:`Application Performance Monitoring`
-Monitor back-end app and service traces :ref:`wcidw-apm`
+Monitor back-end app and service traces :ref:`get-started-apm`
 
 .. rst-class:: newcard
 
@@ -217,7 +217,7 @@ Collect user sessions :ref:`browser-rum-gdi`
 .. rst-class:: newcard
 
 :strong:`.NET`
-Collect traces :ref:`get-started-dotnet`
+Collect traces :ref:`get-started-dotnet-otel`
 
 .. rst-class:: newcard
 
@@ -238,6 +238,11 @@ Collect traces :ref:`get-started-nodejs`
 
 :strong:`PHP`
 Collect traces :ref:`get-started-php`
+
+.. rst-class:: newcard
+
+:strong:`C++`
+Collect traces :ref:`get-started-cpp`
 
 .. rst-class:: newcard
 
@@ -286,8 +291,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Contribute to our documentation <get-started/contribute>
-
-
 
 .. toctree::
    :maxdepth:   3
@@ -375,7 +378,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   gdi/get-data-in/integrations
+   Available integrations TOGGLE <gdi/integrations-list>
 
 .. toctree::
    :maxdepth:   3
@@ -403,22 +406,17 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Instrument back-end services TOGGLE <gdi/get-data-in/application/application>
 
 .. toctree::
-   :maxdepth:   3
+   :maxdepth:   4
 
    Instrument serverless functions TOGGLE <gdi/get-data-in/serverless/instrument-serverless-functions>
 
 .. toctree::
-   :maxdepth:  3
+   :maxdepth:  4
 
    Instrument front-end applications TOGGLE <gdi/get-data-in/rum/rum-instrumentation>
 
 .. toctree::
-   :maxdepth:   3
-
-   Available host and application monitors TOGGLE <gdi/index>
-
-.. toctree::
-   :maxdepth: 3
+   :maxdepth: 4
 
    gdi/other-ingestion-methods/other-data-ingestion-methods
 
@@ -475,7 +473,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Read and write permissions <data-visualization/permissions>
 
 .. toctree::
-   :caption: Alerts and detectors
+   :caption: Alerts, detectors, and SLOs
    :maxdepth:   3
 
    Introduction to alerts and detectors <alerts-detectors-notifications/alerts-detectors-notifications>
@@ -554,6 +552,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    alerts-detectors-notifications/alert-message-variables-reference
+
+.. toctree::
+   :maxdepth:   3
+
+   Service level objectives TOGGLE <alerts-detectors-notifications/slo/slo-intro>
 
 .. toctree::
    :maxdepth:   3
@@ -817,4 +820,3 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Glossary <references/glossary>
-

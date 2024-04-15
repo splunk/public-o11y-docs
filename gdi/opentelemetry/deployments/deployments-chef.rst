@@ -39,15 +39,16 @@ The following Windows versions. All versions require using PowerShell 3.0 or new
 * Windows Server 2019 64-bit
 * Windows Server 2022 64-bit
 
-Getting started
-========================
+.. caution:: On Windows, the Collector is installed as a Windows service and its environment variables are set at the service scope, so they're only available to the Collector service and not to the entire machine.
+
+Install and use the Collector with Chef
+============================================================
 
 Download the Chef cookbook from the :new-page:`Chef Supermarket <https://supermarket.chef.io/cookbooks/splunk_otel_collector>`, which is the site for community cookbooks. 
 
 To install the Collector, include the ``splunk_otel_collector::default`` recipe in the ``run_list``, and set the attributes on the node's ``run_state``. The following is an example configuration that shows how to configure the required ``splunk_access_token`` attribute and some optional attributes:
 
 .. code-block:: yaml
-
 
     {
         "splunk-otel-collector": {
@@ -71,11 +72,14 @@ For Linux, the cookbook accepts the attributes described in the following table:
    * - ``collector_version``
      - Version of the Collector package to install, for example, ``0.25.0``. The version should correspond to :new-page:`Github Releases <https://github.com/signalfx/splunk-otel-collector/releases>` without the preceding ``v``. Note that on Linux, the latest Collector version is installed if this parameter is not specified.
      - None
+   * - ``gomemlimit``
+     - Replaces ``splunk_ballast_size_mib`` starting in Collector version 0.97.0. It allows limiting memory usage in the GO runtime, helping enhance garbage collection and prevent out of memory situations. Learn more at :ref:`how to update memory ballast in your configuration <collector-upgrade-memory-ballast>`.
+     - 90% of ``splunk_total_mem_mib``     
    * - ``splunk_access_token``
      - The Splunk access token to authenticate requests. This attribute is required.
      - None
    * - ``splunk_realm``
-     - Which realm to send the data to, for example, ``us0``. The Splunk ingest and API URLs are inferred by this value. The ``SPLUNK_REALM`` environment variable is set with this value for the collector service. This attribute is required.
+     - Which realm to send the data to, for example, ``us0``. The Splunk ingest and API URLs are inferred by this value. The ``SPLUNK_REALM`` environment variable is set with this value for the collector service. This attribute is required. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
      - None
    * - ``splunk_ingest_url``
      - Sets the Splunk ingest URL explicitly instead of the URL inferred by the ``$splunk_realm`` parameter. The ``SPLUNK_INGEST_URL`` environment variable is set with this value for the Collector service.
@@ -96,7 +100,7 @@ For Linux, the cookbook accepts the attributes described in the following table:
      - Total memory in MIB to allocate to the Collector; automatically calculates the ballast size. The ``SPLUNK_MEMORY_TOTAL_MIB`` environment variable is set to this value for the Collector service. 
      - ``512``
    * - ``splunk_ballast_size_mib``
-     - Sets the ballast size for the Collector explicitly instead of the value calculated from the ``$splunk_memory_total_mib`` parameter. This should be set to 1/3 to 1/2 of configured memory. The ``SPLUNK_BALLAST_SIZE_MIB`` environment variable is set to this value for the Collector service. 
+     - ``splunk_ballast_size_mib`` is deprecated starting on Collector version 0.97.0. If you're using it, see :ref:`how to update your configuration <collector-upgrade-memory-ballast>`.
      - ``"``
    * - ``collector_config_source``
      - The source path to the Collector configuration YAML file. This file is copied to the ``$collector_config_dest`` path on the node. See the :new-page:`source attribute <https://puppet.com/docs/puppet/latest/types/file.html#file-attribute-source>` of the file resource for the supported value types. The default source file is provided by the Collector package.
@@ -226,3 +230,18 @@ The cookbook accepts the attributes described in the following table:
    * - ``signalfx_dotnet_auto_instrumentation_additional_options``
      - Hash of additional options to be added to the Windows registry in addition to the options above. To learn more, see :ref:`advanced-dotnet-configuration`.
      - ``{}``
+
+Additional environment variables
+======================================================
+
+Use ``collector_additional_env_vars`` to include any additional environment variables from the Collector configuration file for the Collector's service. ``{}`` by default. 
+
+For example, if the Collector's configuration file includes references to ``${MY_CUSTOM_VAR1}`` and ``${MY_CUSTOM_VAR2}``, specify the following to allow the Collector service to expand these variables:
+
+.. code-block:: yaml
+
+  collector_additional_env_vars: {'MY_CUSTOM_VAR1' => 'value1', 'MY_CUSTOM_VAR2' => 'value2'}
+
+On Linux, the variables/values will be added to the ``/etc/otel/collector/splunk-otel-collector.conf`` systemd environment file. 
+
+On Windows, the variables/values will be added to the Environment value under the ``HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\splunk-otel-collector`` registry key.

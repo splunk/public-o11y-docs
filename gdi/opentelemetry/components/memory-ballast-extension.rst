@@ -1,22 +1,21 @@
 .. _memory-ballast-extension:
+.. _collector-upgrade-memory-ballast:
 
-****************************
-Memory Ballast extension
-****************************
+********************************************************
+Memory Ballast extension (deprecated)
+********************************************************
 
 .. meta::
       :description: Use the Memory Ballast extension to allow your applications to configure memory ballast for processing.
 
-The Memory Ballast extension enables applications to configure memory ballast for processing.
+.. caution:: The ``memory_ballast`` extension is deprecated and has been removed starting in Collector version 0.97.0. If you're using this extension, read on to learn how to update your configuration. 
+
+.. include:: /_includes/collector-upgrade-memory-ballast.rst
 
 Get started
 ======================
 
-.. note:: 
-  
-  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information. 
-  
-  For details about the default configuration, see :ref:`otel-kubernetes-config`, :ref:`linux-config-ootb`, or :ref:`windows-config-ootb`. You can customize your configuration any time as explained in this document.
+The Memory Ballast extension enables applications to configure memory ballast for processing.
 
 Follow these steps to configure and activate the component:
 

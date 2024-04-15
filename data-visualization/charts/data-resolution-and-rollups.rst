@@ -156,7 +156,7 @@ Observability Cloud has the following rollup functions:
 * :strong:`Sum`: (default for :ref:`counter <metric-types>` metrics): Returns the sum of all data points in the MTS reporting interval
 * :strong:`Average` (default for :ref:`gauge<gauges>` metrics): Returns the average value of all data points in the MTS reporting interval
 * :strong:`Min`: Returns the minimum data point value seen in the MTS reporting interval
-* :strong:`Count`: Returns the number of data points in the MTS reporting interval
+* :strong:`Count`: Returns the total number of data points in the MTS reporting interval
 * :strong:`Max`: Returns the maximum value seen in the MTS reporting interval
 * :strong:`Latest`: Returns the value of the last data point received in the MTS reporting interval
 * :strong:`Lag`: Returns the average time in milliseconds each data point's timestamp and the time that Observability Cloud receives it.
@@ -168,6 +168,19 @@ Observability Cloud has the following rollup functions:
     the data point for the current time interval and the data point for the previous time interval. The Delta rollup
     is always non-negative; if the value of a cumulative counter data point is smaller than the previous value, the
     delta is the new value, not the negative difference.
+
+Sum and Count
+^^^^^^^^^^^^^^^^^^^^
+
+:strong:`Sum` adds up the values of all the MTS in the reporting interval. :strong:`Count` indicates how many individual MTS there are. If there are data with 4 MTS different only in the purpose dimension:
+
+* 48 CUSTOM
+* 28 AUTO_DETECT
+* 17 SLO_ALERTING
+* 2 NAMED_TOKEN
+  
+When you add (sum) them you get 95 (48 + 28 + 17 + 2). When you count them you get 4 because this is how many individual MTS we have.
+If you added a filter :strong:`purpose=CUSTOM`, the sum would be 48 and count would be 1.
 
 .. _interpret-chart-rollups:
 
@@ -390,9 +403,7 @@ The following table describes the difference between rollups and analytical func
 How rollups, resolution, and analytics functions affect chart data
 =============================================================================
 
-The following table shows you the results of some combinations of rollups, 
-resolutions, and analytics aggregation functions. 
-Use these examples to help you build charts that contain the information you need.
+The following table shows you the results of some combinations of rollups, resolutions, and analytics aggregation functions.  Use these examples to help you build charts that contain the information you need.
 
 .. note:: Both the "Average" rollup type and the "Mean" analytics function perform the same type of computation, although they have different names.
 

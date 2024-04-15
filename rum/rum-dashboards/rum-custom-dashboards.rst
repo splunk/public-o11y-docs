@@ -37,6 +37,8 @@ Use case
 
 The following use case features an example from Kai, a site reliability engineer at Buttercup Industries, a fictitious e-commerce company.
 
+.. _custom-events-dash:
+
 Monitor custom events and page level metrics
 ---------------------------------------------
 

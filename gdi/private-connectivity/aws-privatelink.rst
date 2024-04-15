@@ -7,11 +7,17 @@ Private Connectivity using AWS PrivateLink
 .. meta::
   :description: Connect to AWS using PrivateLink.
 
-You can use Amazon Web Services (AWS) PrivateLink to secure your traffic from your AWS environment to your Splunk Observability Cloud environment without exposing it to the Internet. 
+You can use Amazon Web Services (AWS) PrivateLink to secure your metric and traces traffic from your AWS environment to your Splunk Observability Cloud environment without exposing it to the Internet. 
 
-AWS PrivateLink connects your Virtual Private Cloud (VPC) to your AWS services, treating them as if they were in your VPC. You can create and use VPC endpoints to securely access AWS services and control the specific API endpoints and sites. To learn more, see the AWS PrivateLink documentation at :new-page:`https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html <https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html>`.
+AWS PrivateLink connects your Virtual Private Cloud (VPC) to your AWS services, treating them as if they were in your VPC. You can create and use VPC endpoints to securely access AWS services and control the specific API endpoints and sites. To learn more, see the AWS PrivateLink documentation at :new-page:`What is AWS PrivateLink? <https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html>`.
 
-The following diagram shows an overview of how AWS PrivateLink works: 
+.. note:: 
+  
+  To send logs to Splunk Observability Cloud, use :ref:`lo-connect-landing`. 
+  
+  To send logs securely, use :new-page:`Private connectivity in Splunk Cloud Platform <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/Privateconnectivityenable>`.
+
+The following diagram shows an overview of how AWS PrivateLink for Splunk Observability Cloud works: 
 
 .. source in Lucidchart: https://lucid.app/lucidchart/21f1cd02-7b2c-4654-a1b8-18c80a903fee/edit?shared=true&page=0_0&invitationId=inv_2f660037-6a85-4b98-9025-212b16c6b5a2#
 

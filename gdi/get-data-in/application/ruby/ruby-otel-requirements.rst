@@ -1,11 +1,11 @@
 .. _ruby-otel-requirements:
 
 *************************************************************
-Ruby agent compatibility and requirements
+OpenTelemetry Ruby compatibility and requirements
 *************************************************************
 
 .. meta::
-    :description: This is what you need to instrument any Ruby application using the Splunk OTel Ruby agent.
+    :description: This is what you need to instrument any Ruby application using the OpenTelemetry instrumentation for Ruby.
 
 Meet these requirements to instrument Ruby applications for Splunk Observability Cloud.
 
@@ -14,7 +14,7 @@ Meet these requirements to instrument Ruby applications for Splunk Observability
 Supported libraries and frameworks
 =================================================
 
-The Splunk Distribution of OpenTelemetry Ruby instruments numerous libraries and packages. For a complete list, see :new-page:`Supported libraries <https://github.com/open-telemetry/opentelemetry-ruby-contrib/tree/main/instrumentation>` in the OpenTelemetry documentation.
+The OpenTelemetry instrumentation for Ruby instruments numerous libraries and packages. For a complete list, see :new-page:`Supported libraries <https://github.com/open-telemetry/opentelemetry-ruby-contrib/tree/main/instrumentation>` in the OpenTelemetry documentation.
 
 .. _ruby-requirements:
 
