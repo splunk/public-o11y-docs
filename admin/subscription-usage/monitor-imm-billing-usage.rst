@@ -60,7 +60,7 @@ Metric resolution does not affect billing in host-based plans. To learn more, se
 Archived metrics
 -------------------------------------------------------------------------------------
 
-If you archive any of your metrics using Metrics Pipeline Managent, those will be carged at 1/10 of regular, real-time metrics. For more information, see :ref:`metrics-pipeline-intro`.
+If you archive any of your metrics using Metrics Pipeline Management, those will be charged at 1/10th the cost of regular, real-time metrics. For more information, see :ref:`metrics-pipeline-intro`.
 
 .. _using-page:
 

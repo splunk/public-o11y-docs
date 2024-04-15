@@ -89,6 +89,6 @@ If you are approaching or over your limit in any area, you have a few options av
 * If you have Enterprise Edition, you can manage costs associated with sending in data by setting limits on access tokens. See :ref:`admin-manage-usage` for more information.
 * If you have a Standard Edition pricing plan, you can upgrade your subscription to Enterprise Edition, which includes support for monitoring more containers and custom metrics per host. 
 * Purchase support for increasing your limits on any of these items. 
-* Consider archiving your MTS. Archived metrics cost 1/10 of real-time metrics. 
+* Consider archiving your MTS using Metrics Pipeline Management. Archived metrics cost 1/10th of real-time metrics. See more at :ref:`metrics-pipeline-intro`.
 
 To get help with understanding which option is best for your organization, contact :ref:`support`.
