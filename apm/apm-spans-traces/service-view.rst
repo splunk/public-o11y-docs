@@ -98,7 +98,13 @@ Select the :guilabel:`Endpoints` tab to view endpoints for the service. Use the 
 View logs for your service
 ===============================
 
-Select :guilabel:`Logs` to view logs for the environment and service you are viewing. By default, logs are displayed for all indices that correspond to first listed Log Observer Connect connection. To select a different connection or refine which indices logs are pulled from, select :guilabel:`Configure service view`. The connection and indices you select are saved for your organization for each unique service and environment combination.
+Select :guilabel:`Logs` to view logs for the environment and service you are viewing. By default, logs are displayed for all indices that correspond to first listed Log Observer Connect connection. To select a different connection or refine which indices logs are pulled from, select :guilabel:`Configure service view`. 
+
+1. In the :guilabel:`Log Observer Connect Index` drop-down list, select the Log Observer Connect connection, then select the corresponding indices you want to pull logs from. 
+2. Select :guilabel:`Apply`
+3. Select :guilabel:`Save changes`.
+
+The connection and indices you select are saved for all users in your organization for each unique service and environment combination.
 
 Go to the code profiling view for your service
 =====================================================
@@ -110,6 +116,16 @@ Go to the memory profiling view for your service
 
 Select :guilabel:`Memory profiling` to go to the memory profiling view of AlwaysOn Profiling filtered for your service. See :ref:`profiling-intro` to learn more about AlwaysOn Profiling. 
 
+Configure the service view
+=====================================================================
+
+Select :guilabel:`Configure service view` to modify the Log Observer Connect connection and indices for the logs you want to display for your service.
+
+1. In the :guilabel:`Log Observer Connect Index` drop-down list, select the Log Observer Connect connection, then select the corresponding indices you want to pull logs from. 
+2. Select :guilabel:`Apply`
+3. Select :guilabel:`Save changes`.
+
+The connection and indices you select are saved for all users in your organization for each unique service and environment combination.
 
 
 
