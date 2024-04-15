@@ -179,6 +179,9 @@ The following example shows how to configure the Collector in host monitoring (a
          ingest_url: "http://${SPLUNK_GATEWAY_URL}:9943"
          sync_host_metadata: true
          correlation:
+      # Logs
+      otlp:
+         endpoint: "${SPLUNK_GATEWAY_URL}:4317"         
    # More exporters
 
    service:
@@ -196,6 +199,8 @@ The following example shows how to configure the Collector in host monitoring (a
             receivers: [prometheus/internal]
             processors: [memory_limiter, batch, resourcedetection]
             exporters: [signalfx]
+         logs:   
+            exporters: [otlp]
       # More pipelines
 
 Gateway configuration
