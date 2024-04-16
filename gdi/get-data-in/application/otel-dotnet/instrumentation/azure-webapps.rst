@@ -5,9 +5,9 @@ Instrument .NET Azure Web App for Splunk Observability Cloud
 ***********************************************************************
 
 .. meta::
-   :description: You can instrument applications or services running on Azure Web App Service using the Splunk Distribution of OpenTelemetry .NET. Follow these instructions to get started.
+   :description: You can instrument applications or services running on Azure Web App Service using the OpenTelemetry .NET SDK. Follow these instructions to get started.
 
-You can instrument applications or services running on Azure Web App Service using the Splunk Distribution of OpenTelemetry .NET. Follow these instructions to get started.
+You can instrument applications or services running on Azure Web App Service using the OpenTelemetry .NET SDK. Follow these instructions to get started.
 
 .. _azure-webapp-step-1:
 

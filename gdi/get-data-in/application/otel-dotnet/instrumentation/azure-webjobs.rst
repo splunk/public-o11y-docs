@@ -5,9 +5,9 @@ Instrument .NET Azure WebJobs for Splunk Observability Cloud
 ***********************************************************************
 
 .. meta::
-   :description: You can instrument applications or services running on Azure WebJobs using the Splunk Distribution of OpenTelemetry .NET. Follow these instructions to get started.
+   :description: You can instrument applications or services running on Azure WebJobs using the OpenTelemetry .NET SDK. Follow these instructions to get started.
 
-You can instrument applications or services running on Azure WebJobs using the Splunk Distribution of OpenTelemetry .NET. Follow these instructions to get started.
+You can instrument applications or services running on Azure WebJobs using the OpenTelemetry .NET SDK. Follow these instructions to get started.
 
 .. _azure-webjob-step-1:
 
