@@ -116,7 +116,8 @@ After adding the dependencies, create an OpenTelemetry helper for your applicati
                     })
                     // Use AddSource to add your custom DiagnosticSource source names
                     //.AddSource("My.Source.Name")
-                    .AddSource("Splunk.Azure.WebJob")
+                    // Automatically creates the root span with function start
+                    .AddSource(SplunkFunctionAttribute.ActivitySourceName)
                     .SetSampler(new AlwaysOnSampler())
                     .ConfigureResource(cfg => cfg
                         .AddService(serviceName: serviceName, serviceVersion: "1.0.0")
@@ -149,7 +150,9 @@ After adding the dependencies, create an OpenTelemetry helper for your applicati
 
     internal class SplunkFunctionAttribute : FunctionInvocationFilterAttribute
     {
-        private static readonly ActivitySource ActivitySource = new("Splunk.Azure.WebJob");
+        public const string ActivitySourceName = "Splunk.Azure.WebJob";
+
+        private static readonly ActivitySource ActivitySource = new(ActivitySourceName);
 
         private Activity? _currentActivity;
 
@@ -192,6 +195,20 @@ Use the helper you created in the Program.cs file:
     {
         context.AddSplunkOpenTelemetry();
     })
+
+Use the SplunkFunctionAttribute with every defined WebJobs Function.
+See the example how to properly attribute your function.
+
+.. code-block:: csharp
+
+    public class Functions
+    {
+        [SplunkFunction]
+        public void ProcessTimer([TimerTrigger("1/5 * * * * *")] TimerInfo timerInfo, ILogger logger)
+        {
+            logger.LogInformation("Hello World!");
+        }
+    }
 
 .. _azure-webjobs-step-4:
 
