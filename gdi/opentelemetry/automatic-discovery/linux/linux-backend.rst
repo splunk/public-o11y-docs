@@ -58,7 +58,7 @@ To install and use automatic discovery for Linux, follow these steps:
 Install the package
 =======================================
 
-Using the installer script, you can install automatic discovery and activate automatic discovery for either all supported applications on the host via the system-wide method or only for applications running as ``systemd`` services. 
+Using the installer script, you can install and activate automatic discovery for either all supported applications on the host via the system-wide method or only for applications running as ``systemd`` services. 
 
 
 .. tabs:: 
@@ -69,9 +69,9 @@ Using the installer script, you can install automatic discovery and activate aut
 
             .. tab:: Installer script
 
-                Using the installer script, you can install the auto instrumentation package for Java and activate auto instrumentation for Java for either all supported Java applications on the host via the system-wide method or for only Java applications running as ``systemd`` services.
+                Using the installer script, you can install the automatic discovery package for Java and activate automatic discovery for Java for either all supported Java applications on the host via the system-wide method or for only Java applications running as ``systemd`` services.
 
-                .. note:: By default, auto instrumentation is activated for both Java and Node.js when using the installer script. To deactivate auto instrumentation for Node.js, add the ``--without-instrumentation-sdk node`` or ``--with-instrumentation-sdk java`` option in the installer script command.
+                .. note:: By default, automatic discovery is activated for both Java and Node.js when using the installer script. To deactivate automatic discovery for Node.js, add the ``--without-instrumentation-sdk node`` or ``--with-instrumentation-sdk java`` option in the installer script command.
                 
                 .. tabs:: 
 
@@ -86,7 +86,7 @@ Using the installer script, you can install automatic discovery and activate aut
 
                         .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option.
 
-                        The system-wide auto instrumentation method automatically adds environment variables to ``/etc/splunk/zeroconfig/java.conf``.
+                        The system-wide automatic discovery method automatically adds environment variables to ``/etc/splunk/zeroconfig/java.conf``.
 
                         To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <env>`` option. Replace ``<env>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
 
@@ -208,9 +208,9 @@ Using the installer script, you can install automatic discovery and activate aut
 
             .. tab:: Installer script
 
-                Using the installer script, you can install the auto instrumentation package for Node.js and activate auto instrumentation for Node.js for either all supported Node.js applications on the host via the system-wide method or for only Node.js applications running as ``systemd`` services.
+                Using the installer script, you can install and activate automatic discovery for Node.js for either all supported Node.js applications on the host via the system-wide method or for only Node.js applications running as ``systemd`` services.
 
-                .. note:: By default, auto instrumentation is activated for both Java and Node.js when using the installer script. To deactivate auto instrumentation for Java, add the ``--without-instrumentation-sdk java`` or ``--with-instrumentation-sdk node`` option in the installer script command.
+                .. note:: By default, automatic discovery is activated for both Java and Node.js when using the installer script. To deactivate automatic discovery for Java, add the ``--without-instrumentation-sdk java`` or ``--with-instrumentation-sdk node`` option in the installer script command.
 
                 .. tabs::
 
@@ -227,7 +227,7 @@ Using the installer script, you can install automatic discovery and activate aut
 
                             .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option. 
 
-                        The system-wide auto instrumentation method automatically adds environment variables to ``/etc/splunk/zeroconfig/node.conf``.
+                        The system-wide automatic discovery method automatically adds environment variables to ``/etc/splunk/zeroconfig/node.conf``.
 
                         You can activate AlwaysOn Profiling for CPU and memory, as well as metrics, using additional options, as in the following example:
 
@@ -250,7 +250,7 @@ Using the installer script, you can install automatic discovery and activate aut
                                 curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
                                 sudo sh /tmp/splunk-otel-collector.sh --with-systemd-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
                             
-                            The ``systemd`` auto instrumentation method automatically adds environment variables to ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
+                            The ``systemd`` automatic discovery method automatically adds environment variables to ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
 
                             .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option.
 
@@ -303,7 +303,7 @@ If the service fails to start, check that the ``SPLUNK_REALM`` and ``SPLUNK_ACCE
 Start your applications
 ------------------------------------------------
 
-For auto instrumentation to take effect, you must either restart the host or manually start or restart any applications on the host where you installed the package. You must restart the host or applications after installing the automatic discovery package for the first time and whenever you make any changes to the configuration file. 
+For automatic discovery to take effect, you must either restart the host or manually start or restart any applications on the host where you installed the package. You must restart the host or applications after installing the automatic discovery package for the first time and whenever you make any changes to the configuration file. 
 
 After your applications are running, you can verify your data. See :ref:`auto-discovery-view-results-linux`. You can also configure instrumentation settings. See :ref:`auto-discovery-configure-linux`. 
 
@@ -477,7 +477,7 @@ Update automatic discovery and configuration
             sudo npm install /usr/lib/splunk-instrumentation/splunk-otel-js.tgz
 
 
-        The default auto instrumentation configuration expects the Node.js agent to be installed under the ``/usr/lib/splunk-instrumentation/splunk-otel-js`` path. 
+        The default automatic discovery configuration expects the Node.js agent to be installed under the ``/usr/lib/splunk-instrumentation/splunk-otel-js`` path. 
 
         If the Node.js agent is installed under a different path, manually update the path for the ``NODE_OPTIONS`` environment variable in either ``/etc/splunk/zeroconfig/node.conf`` for system-wide services or ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf`` for ``systemd`` services. For example:
 

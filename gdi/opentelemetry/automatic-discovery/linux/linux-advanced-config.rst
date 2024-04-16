@@ -17,10 +17,10 @@ Through advanced customization, you can achieve the following tasks:
 
 .. _override-default-settings-linux:
 
-Override default instrumentation settings
+Override default automatic discovery settings
 =====================================================
 
-You can override default auto instrumentation settings to use features for profiling and runtime metrics collection. 
+You can override default automatic discovery settings to use features for profiling and runtime metrics collection. 
 
 Activate AlwaysOn Profiling
 --------------------------------------
@@ -83,7 +83,7 @@ The Splunk OTel Collector Chart uses the agent mode by default. Activating gatew
 
 To learn more about the gateway mode, see :ref:`collector-gateway-mode`.
 
-You can't directly deploy auto instrumentation in gateway mode for Linux, but you can send collected data from auto instrumentation to an existing gateway deployment.
+You can't directly deploy automatic discovery in gateway mode for Linux, but you can send collected data from automatic discovery to an existing gateway deployment.
 
 Follow these steps to send data to a gateway deployment of the OpenTelemetry Collector:
 
@@ -91,7 +91,7 @@ Follow these steps to send data to a gateway deployment of the OpenTelemetry Col
 #. Set the environment variable ``OTEL_EXPORTER_OTLP_ENDPOINT=<gateway_endpoint>`` where <gateway_endpoint> is the port of your gateway deployment.
 #. Restart your applications.
 
-The auto instrumentation now sends data to your gateway deployment. 
+The Collector now sends data to your gateway deployment. 
 
 .. _customize-third-party-settings-linux:
 

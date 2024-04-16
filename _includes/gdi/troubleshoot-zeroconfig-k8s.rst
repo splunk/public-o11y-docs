@@ -1,7 +1,7 @@
 Troubleshooting
 ======================================
 
-If you're having trouble setting up auto instrumentation, see the following troubleshooting guidelines.
+If you're having trouble setting up automatic discovery, see the following troubleshooting guidelines.
 
 Check the logs for failures
 --------------------------------------

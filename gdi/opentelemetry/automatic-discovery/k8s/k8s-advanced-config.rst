@@ -12,8 +12,8 @@ Learn how to customize Splunk automatic discovery and configuration for advanced
 Through advanced customization, you can achieve the following tasks:
 
 * :ref:`Change the version of your instrumentation library <change-instrumentation-version-k8s>`
-* :ref:`Override auto instrumentation settings <override-default-settings-k8s>`
-* :ref:`Use auto instrumentation with gateway mode <use-with-gateway-k8s>`
+* :ref:`Override automatic discovery settings <override-default-settings-k8s>`
+* :ref:`Use automatic discovery with gateway mode <use-with-gateway-k8s>`
 
 .. _change-instrumentation-version-k8s:
 
@@ -62,7 +62,7 @@ See the following pages for information about previous versions for each languag
 Override default instrumentation settings
 ======================================================
 
-You can override default auto instrumentation settings to use features for profiling.
+You can override default automatic discovery settings to use features for profiling.
 
 Configure AlwaysOn Profiling
 ----------------------------------------
@@ -155,7 +155,7 @@ You can also automatically send data to a deployed gateway endpoint by setting `
     gateway:
       enabled: true
         
-Using this configuration, auto instrumentation automatically sends data to a running gateway endpoint.
+Using this configuration, automatic discovery automatically sends data to a running gateway endpoint.
 
 Additional settings
 ===================================

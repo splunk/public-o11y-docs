@@ -292,4 +292,4 @@ Other settings
    * - Environment variable
      - Description
    * - ``OTEL_JAVAAGENT_ENABLED``
-     - Globally activates the Java agent automatic instrumentation. The default value is ``true``. Useful for deactivating auto instrumentation in testing scenarios or pipelines. |br| |br| System property: ``otel.javaagent.enabled`` 
+     - Globally activates the Java agent automatic instrumentation. The default value is ``true``. Useful for deactivating automatic discovery in testing scenarios or pipelines. |br| |br| System property: ``otel.javaagent.enabled`` 

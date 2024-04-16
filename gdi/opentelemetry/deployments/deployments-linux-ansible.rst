@@ -101,10 +101,10 @@ The following table describes the variables that can be configured for this role
 
 .. _ansible-zero-config-java:
 
-Configure auto instrumentation for Java (Linux only)
+Configure automatic discovery for Java (Linux only)
 ======================================================
 
-You can automatically instrument your Java applications along with the Collector installation. Auto instrumentation removes the need to install and configure the Java agent separately. See :ref:`configure-auto-instrumentation` for more information. 
+You can automatically instrument your Java applications along with the Collector installation. Automatic discovery removes the need to install and configure the Java agent separately. See :ref:`configure-auto-instrumentation` for more information. 
 
 The following table shows the variables that can be configured for this Ansible role:
 
@@ -115,11 +115,11 @@ The following table shows the variables that can be configured for this Ansible 
    * - Variable
      - Description
    * - ``install_splunk_otel_auto_instrumentation``
-     - Available on Linux only. Installs or manages Auto Instrumentation for Java. When set to ``true``, the ``splunk-otel-auto-instrumentation`` Debian or RPM package is downloaded and installed from the Collector repository. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect. The default value is ``false``.
+     - Available on Linux only. Installs or manages automatic discovery for Java. When set to ``true``, the ``splunk-otel-auto-instrumentation`` Debian or RPM package is downloaded and installed from the Collector repository. The Java application on the node needs to be started or restarted separately after installation for automatic discovery to take effect. The default value is ``false``.
    * - ``splunk_otel_auto_instrumentation_version``
      - Available on Linux only. Determines the version of the ``splunk-otel-auto-instrumentation`` package to install, for example, ``0.50.0``. The minimum supported version is ``0.48.0``. The Java application on the node needs to be restarted separately for any change to take effect. The default value is ``latest``.
    * - ``splunk_otel_auto_instrumentation_ld_so_preload``
-     - Available on Linux only. By default, the ``/etc/ld.so.preload`` file on the node is configured for the ``/usr/lib/splunk-instrumentation/libsplunk.so`` shared object library, which is provided by the ``splunk-otel-auto-instrumentation`` package and is required for auto instrumentation. You can configure this variable to include additional library paths, for example, ``/path/to/my.library.so``. Use this option if you need to include custom or other shared object library files to be preloaded for your applications, in addition to the ``/usr/lib/splunk-instrumentation/libsplunk.so`` file.The Java application on the node needs to be restarted separately for any change to take effect.
+     - Available on Linux only. By default, the ``/etc/ld.so.preload`` file on the node is configured for the ``/usr/lib/splunk-instrumentation/libsplunk.so`` shared object library, which is provided by the ``splunk-otel-auto-instrumentation`` package and is required for automatic discovery. You can configure this variable to include additional library paths, for example, ``/path/to/my.library.so``. Use this option if you need to include custom or other shared object library files to be preloaded for your applications, in addition to the ``/usr/lib/splunk-instrumentation/libsplunk.so`` file.The Java application on the node needs to be restarted separately for any change to take effect.
    * - ``splunk_otel_auto_instrumentation_java_agent_jar``
      - Available on Linux only. Determines the path to the Splunk OpenTelemetry Java agent. The default path is provided by the ``splunk-otel-auto-instrumentation`` package. If the path is changed from the default value, the path should be an existing file on the node. The specified path is added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The Java application on the node needs to be restarted separately for any change to take effect. The default value is ``/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar``.
    * - ``splunk_otel_auto_instrumentation_resource_attributes``

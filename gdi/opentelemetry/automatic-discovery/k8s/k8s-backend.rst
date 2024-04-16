@@ -299,7 +299,7 @@ The annotation you set depends on the language runtime you're using. You can set
                 - name: my-java-app
                     image: my-java-app:latest
 
-        Activate auto instrumentation by adding ``instrumentation.opentelemetry.io/inject-java: "true"`` to the ``spec``:
+        Activate automatic discovery by adding ``instrumentation.opentelemetry.io/inject-java: "true"`` to the ``spec``:
 
         .. code-block:: yaml
             :emphasize-lines: 10
@@ -359,7 +359,7 @@ The annotation you set depends on the language runtime you're using. You can set
                         - name: my-dotnet-app
                             image: my-dotnet-app:latest
 
-                Activate auto instrumentation by adding ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-x64"`` and ``instrumentation.opentelemetry.io/inject-dotnet: "monitoring/splunk-otel-collector"`` to the ``spec``:
+                Activate automatic discovery by adding ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-x64"`` and ``instrumentation.opentelemetry.io/inject-dotnet: "monitoring/splunk-otel-collector"`` to the ``spec``:
 
                 .. code-block:: yaml
                     :emphasize-lines: 10,11
@@ -398,7 +398,7 @@ The annotation you set depends on the language runtime you're using. You can set
                            - name: my-dotnet-app
                              image: my-dotnet-app:latest
 
-                Activate auto instrumentation by adding ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-musl-x64"`` and ``instrumentation.opentelemetry.io/inject-dotnet: "monitoring/splunk-otel-collector"`` to the ``spec``:
+                Activate automatic discovery by adding ``instrumentation.opentelemetry.io/otel-dotnet-auto-runtime: "linux-musl-x64"`` and ``instrumentation.opentelemetry.io/inject-dotnet: "monitoring/splunk-otel-collector"`` to the ``spec``:
 
                 .. code-block:: yaml
                   :emphasize-lines: 10,11
@@ -439,7 +439,7 @@ The annotation you set depends on the language runtime you're using. You can set
                 - name: my-nodejs-app
                     image: my-nodejs-app:latest
 
-        Activate auto instrumentation by adding ``instrumentation.opentelemetry.io/inject-nodejs: "true"`` to the ``spec``:
+        Activate automatic discovery by adding ``instrumentation.opentelemetry.io/inject-nodejs: "true"`` to the ``spec``:
 
         .. code-block:: yaml
             :emphasize-lines: 10
