@@ -102,10 +102,13 @@ Plot different metric types sharing the same name
 ---------------------------------------------------------------
 When you send multiple metric types, for example, counter metric and histogram metric, with the same name to Observability Cloud, the system assumes all of these metrics are not histogram. 
 
-In this case, if you want to plot a metric as histogram, do the following steps:
+In this case, if you want to plot a metric as histogram, do the following steps to edit the SignalFlow program:
 
    #. Select :guilabel:`View SignalFlow` on the :strong:`Plot Editor` tab.
-   #. Change the ``data()`` function to ``histogram()``.
+   #. Change the ``data()`` function to ``histogram()``. For example, change ``data('service_latency')`` to ``histogram('service_latency')``.
+   #. Add a supported method to the SignalFlow program. For example, ``histogram('service_latency').sum()``.
+
+For more information on histogram function and supported methods, see :new-page:`histogram() <https://dev.splunk.com/observability/docs/signalflow/functions/histogram>` in the SignalFlow reference documentation.
 
 .. _filter-signal:
 
@@ -118,7 +121,7 @@ For example, you might want to look at the latencies for a service, but only for
 
 As filters are applied, the data shown in the chart updates in real-time, as a way of helping you confirm that you are making the desired selection. For more information on specifying filters, including specifying :code:`NOT` filters and using multiple filters, see :ref:`filter-dashboard-charts`. The instructions for filtering a signal are the same as those for specifying a filter override.
 
-.. note:: If you choose to allow data matching the filter condition or missing the property, as discussed in :ref:`choosing-data-to-allow`, data missing the property is excluded if you apply an analytics function and then group by that property. To do this, click :strong:`Add Analytics`, select a function, and then select a :strong:`Group by` value.
+.. note:: If you choose to allow data matching the filter condition or missing the property, as discussed in :ref:`choosing-data-to-allow`, data missing the property is excluded if you apply an analytics function and then group by that property. To do this, select :strong:`Add Analytics`, select a function, and then select a :strong:`Group by` value.
 
 .. _filter-overrides:
 
@@ -155,7 +158,7 @@ To add a histogram function, select :guilabel:`Select function` and choose a fun
 Apply analytics to a plot
 =============================================================================
 
-You can apply :term:`analytics` to the time series on this plot. When you click :strong:`Add Analytics`, a list of available functions displays. Splunk Observability Cloud supports not only basic function, such as :ref:`Sum<sum>`, :ref:`Count<count>`, and :ref:`Mean<mean>`, but also more powerful functions like :ref:`Percentile<percentile>`, :ref:`Timeshift<timeshift>`, :ref:`Top/Bottom<top-bottom>`, and :ref:`Exclude<exclude>`. Hover over a function to see a brief description.
+You can apply :term:`analytics` to the time series on this plot. When you select :strong:`Add Analytics`, a list of available functions displays. Splunk Observability Cloud supports not only basic function, such as :ref:`Sum<sum>`, :ref:`Count<count>`, and :ref:`Mean<mean>`, but also more powerful functions like :ref:`Percentile<percentile>`, :ref:`Timeshift<timeshift>`, :ref:`Top/Bottom<top-bottom>`, and :ref:`Exclude<exclude>`. Hover over a function to see a brief description.
 
 .. note:: Some analytics functions have the same name as certain rollup types, but they work in very different ways. For information on how rollups and analytics work together, see :ref:`rollups-analytics-interactions`.
 
@@ -183,7 +186,7 @@ View detailed metric data
 
 When you hover over a chart, the plot line for the time series you are focused on is highlighted, and information about the data point displays.
 
-To see detailed information about data points in a chart, select the :strong:`Data Table` tab. If you haven't pinned a point on the chart, values for the most recent data in the chart display. Alternatively, you can click in the chart to pin a point in time and display the :strong:`Data Table` tab.
+To see detailed information about data points in a chart, select the :strong:`Data Table` tab. If you haven't pinned a point on the chart, values for the most recent data in the chart display. Alternatively, you can select in the chart to pin a point in time and display the :strong:`Data Table` tab.
 
 .. note:: If you edited a :ref:`plot name <plot-name>` or specified :ref:`display units<plot-display-units>` in the chart builder, this information displays when you hover over the chart and in the :strong:`Data Table`. For example, instead of seeing ``250`` as a value, you might see ``250 ms`` (where you specified :strong:`ms` as a suffix) or ``$250/millisecond`` (where you specified :strong:`$` as a prefix and :strong:`/millisecond` as a suffix).
 
@@ -198,7 +201,7 @@ Use the :strong:`Chart Options` tab to specify which :ref:`columns to display<da
 
 .. _export-data-table:
 
-You can export data from the :strong:`Data Table` tab to a CSV file. To do this, click the :strong:`Export as CSV` icon at the top right of the tab.
+You can export data from the :strong:`Data Table` tab to a CSV file. To do this, select the :strong:`Export as CSV` icon at the top right of the tab.
 
 
 .. _chart-events:
@@ -248,11 +251,11 @@ To make it easier to spot correlations between events and metric values, you can
 Manually add custom events
 -------------------------------------------------------------------
 
-To manually add a custom event to a chart, select the :strong:`Events` tab. If you want to add an event at a time that is visible on the chart, click the chart to pin that time.
+To manually add a custom event to a chart, select the :strong:`Events` tab. If you want to add an event at a time that is visible on the chart, select the chart to pin that time.
 
--  If there are events displayed in the events list, click :strong:`Add new event` icon in the last column.
+-  If there are events displayed in the events list, select :strong:`Add new event` icon in the last column.
 
--  If there are no events listed, click the :strong:`add new event` link.
+-  If there are no events listed, select the :strong:`add new event` link.
 
 If you have pinned a time, that time displays in the :strong:`Create Event` dialog box. Otherwise, the current time displays.
 
@@ -272,7 +275,7 @@ On the :strong:`Plot Editor` tab, a new event plot line displays in your chart f
 View and manage event information
 -------------------------------------------------------------------
 
-You can see more information about an event by clicking the event on the :strong:`Events` tab. If the notification for an event was :ref:`muted<mute-notifications>`, that will be indicated.
+You can see more information about an event by selecting the event on the :strong:`Events` tab. If the notification for an event was :ref:`muted<mute-notifications>`, that will be indicated.
 
 Click a custom event to edit it or mark it for deletion.
 
@@ -296,7 +299,7 @@ Click the eye icon on the far left of the plot line to show or hide the plot lin
 
 To hide all plot lines except one, alt-click (or option-click) the eye icon for the plot line you want to display. This can be useful when a chart contains multiple plots and you need to focus on just one. To return to the previous view, alt-click the eye icon again for the visible plot line.
 
-To show or hide all plot lines, click the eye icon above the plot lines and select :strong:`All` or :strong:`None`.
+To show or hide all plot lines, select the eye icon above the plot lines and select :strong:`All` or :strong:`None`.
 
 
 .. _plot-name:
@@ -304,7 +307,7 @@ To show or hide all plot lines, click the eye icon above the plot lines and sele
 Plot name
 -------------------------------------------------------------------
 
-By default, plots are assigned letters of the alphabet to distinguish them from one another. The plot name specifies the text displayed in list charts, detector signals, the :strong:`Data Table` tab, and so forth. By default, the name is the metric or event name plus any analytics applied. To change the plot name, click the name and enter the desired text.
+By default, plots are assigned letters of the alphabet to distinguish them from one another. The plot name specifies the text displayed in list charts, detector signals, the :strong:`Data Table` tab, and so forth. By default, the name is the metric or event name plus any analytics applied. To change the plot name, select the name and enter the desired text.
 
 You can also use plot names to ensure that plots representing similar metrics and dimensions are displayed in different colors. For more information, see :ref:`color-metric`.
 
@@ -370,7 +373,7 @@ You can choose the number of digits that are used for Y-axis values by specifyin
 Set options in the plot configuration panel
 =============================================================================
 
-The plot configuration panel lets you set options in addition to those you can set on the signal line. To display the panel, click the :strong:`Configure plot` icon (gear) next to the :strong:`plot actions` menu (|more|) in the last column of the plot line.
+The plot configuration panel lets you set options in addition to those you can set on the signal line. To display the panel, select the :strong:`Configure plot` icon (gear) next to the :strong:`plot actions` menu (|more|) in the last column of the plot line.
 
 The options that are available depend on the type of chart. No chart type supports all the available options.
 
@@ -561,19 +564,19 @@ Work with SignalFlow
 
 As discussed in :ref:`get-started-signalflow`, the heart of the Splunk Observability Cloud platform is a streaming, real-time analytics engine that executes computations written in a flexible language named SignalFlow. A stream is a request for data, like an expression that references another assigned stream.
 
-A stream is represented as a plot line in the graphical plot-builder UI. You can view and edit the SignalFlow underlying a chart by clicking :strong:`View SignalFlow` while on the :strong:`Plot Editor` tab.
+A stream is represented as a plot line in the graphical plot-builder UI. You can view and edit the SignalFlow underlying a chart by selecting :strong:`View SignalFlow` while on the :strong:`Plot Editor` tab.
 
--	To show or hide a sidebar that displays the plot label, click the sidebar/caret icon at far right.
+-	To show or hide a sidebar that displays the plot label, select the sidebar/caret icon at far right.
 
--	To show or hide plot configuration options when viewing the sidebar, click the plot label or the settings icon (gear).
+-	To show or hide plot configuration options when viewing the sidebar, select the plot label or the settings icon (gear).
 
--	To return to the graphical plot-builder view, click :strong:`View builder`.
+-	To return to the graphical plot-builder view, select :strong:`View builder`.
 
 By default, when any chart is opened in the chart builder, Splunk Observability Cloud first attempts to render it in graphical plot-builder mode. The chart builder opens in SignalFlow mode only if the chart cannot be represented in the graphical plot-builder.
 
 Converting a chart from SignalFlow to the graphical plot-builder might change the formatting of the SignalFlow. For example, extra spaces might be removed, or parentheses might be added.
 
-When you edit the SignalFlow that powers a chart, or when you create a chart by writing SignalFlow, you must follow the guidelines below to ensure that the chart can be edited in the graphical plot-builder mode as well. If any element of the SignalFlow in a chart does not follow these guidelines, attempting to convert to graphical plot-builder mode by clicking :strong:`View builder` results in an error.
+When you edit the SignalFlow that powers a chart, or when you create a chart by writing SignalFlow, you must follow the guidelines below to ensure that the chart can be edited in the graphical plot-builder mode as well. If any element of the SignalFlow in a chart does not follow these guidelines, attempting to convert to graphical plot-builder mode by selecting :strong:`View builder` results in an error.
 
 .. 	contents:: Summary of guidelines
    	:local:
