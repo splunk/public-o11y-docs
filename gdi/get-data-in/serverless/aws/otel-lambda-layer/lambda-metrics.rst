@@ -5,9 +5,9 @@ AWS Lambda metrics and dimensions for Splunk Observability Cloud
 ****************************************************************
 
 .. meta::
-   :description: The Splunk Lambda Extension of the Splunk OpenTelemetry Lambda Layer collects high-resolution, low-latency metrics on AWS Lambda function execution. Read on to browse the metrics that the layer collects.
+   :description: The Splunk Lambda Extension of the Splunk OpenTelemetry Lambda layer collects high-resolution, low-latency metrics on AWS Lambda function execution. Read on to browse the metrics that the layer collects.
 
-The Splunk Lambda Extension of the Splunk OpenTelemetry Lambda Layer collects high-resolution, low-latency metrics each time the AWS Lambda function runs, including cold start, invocation count, function lifetime, and termination condition.
+The Splunk Lambda Extension of the Splunk OpenTelemetry Lambda layer collects high-resolution, low-latency metrics each time the AWS Lambda function runs, including cold start, invocation count, function lifetime, and termination condition.
 
 AWS Lambda metrics
 ============================================

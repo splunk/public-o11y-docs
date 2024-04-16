@@ -84,7 +84,6 @@ The following programming languages have instrumentation available:
    * - Node.js
      - Splunk Distribution of OpenTelemetry JS version 2.0 or higher
 
-       .NET versions 6.0 and higher are supported in AlwaysOn Profiling. .NET Framework is not supported. 
      - * :ref:`instrument-nodejs-applications`
        * :ref:`profiling-configuration-nodejs`
    * - .NET (OpenTelemetry)
@@ -95,10 +94,14 @@ The following programming languages have instrumentation available:
        * :ref:`profiling-configuration-otel-dotnet`
    * - .NET (SignalFx)
      - SignalFx Instrumentation for .NET version 1.0.0 or higher
+
+       .NET versions 6.0 and higher are supported in AlwaysOn Profiling. .NET Framework is not supported. 
      - * :ref:`instrument-dotnet-applications`
        * :ref:`profiling-configuration-dotnet`
    * - Python (in beta)
      - Splunk Distribution of OpenTelemetry Python version 1.15 or higher
+
+       Only CPU profiling is supported.
      - * :ref:`instrument-python-applications`
        * :ref:`profiling-configuration-python`
 

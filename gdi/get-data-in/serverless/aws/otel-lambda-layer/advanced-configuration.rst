@@ -1,15 +1,15 @@
 .. _advanced-lambda-layer-configuration:
 
 *****************************************************
-Configure the Splunk OpenTelemetry Lambda Layer
+Configure the Splunk OpenTelemetry Lambda layer
 *****************************************************
 
 .. meta::
-   :description: Configure the agent of the Splunk OpenTelemetry Lambda Layer through environment variables to suit most of your instrumentation needs for AWS Lambda functions.
+   :description: Configure the agent of the Splunk OpenTelemetry Lambda layer through environment variables to suit most of your instrumentation needs for AWS Lambda functions.
 
-You can configure the Splunk OpenTelemetry Lambda Layer to suit most of your instrumentation needs. In most cases, modifying the basic configuration is enough to get started. See :ref:`set-env-vars-otel-lambda`.
+You can configure the Splunk OpenTelemetry Lambda layer to suit most of your instrumentation needs. In most cases, modifying the basic configuration is enough to get started. See :ref:`set-env-vars-otel-lambda`.
 
-You can modify the following settings to fully configure the Lambda layer, including options for activating new features that are unique to the Splunk OpenTelemetry Lambda Layer.
+You can modify the following settings to fully configure the Lambda layer, including options for activating new features that are unique to the Splunk OpenTelemetry Lambda layer.
 
 .. _main-lambda-agent-settings:
 
@@ -121,7 +121,7 @@ For more information, see :ref:`splunk-otel-lambda-metrics`.
 Server trace information
 ==============================================
 
-To connect Real User Monitoring (RUM) requests from mobile and web applications with serverless trace data, the Splunk OpenTelemetry Lambda Layer adds the following response headers to HTTP responses:
+To connect Real User Monitoring (RUM) requests from mobile and web applications with serverless trace data, the Splunk OpenTelemetry Lambda layer adds the following response headers to HTTP responses:
 
 .. code-block::
 

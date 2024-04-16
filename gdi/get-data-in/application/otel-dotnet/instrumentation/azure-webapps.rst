@@ -5,9 +5,9 @@ Instrument .NET Azure Web App for Splunk Observability Cloud
 ***********************************************************************
 
 .. meta::
-   :description: You can instrument applications or services running on Azure Web App Service using the Splunk Distribution of OpenTelemetry .NET. Follow these instructions to get started.
+   :description: You can instrument applications or services running on Azure Web App Service using the OpenTelemetry .NET SDK. Follow these instructions to get started.
 
-You can instrument applications or services running on Azure Web App Service using the Splunk Distribution of OpenTelemetry .NET. Follow these instructions to get started.
+You can instrument applications or services running on Azure Web App Service using the OpenTelemetry .NET SDK. Follow these instructions to get started.
 
 .. _azure-webapp-step-1:
 
@@ -75,22 +75,34 @@ After adding the dependencies, create an OpenTelemetry helper for your applicati
     using OpenTelemetry.Resources;
     using OpenTelemetry.Trace;
     using System.Diagnostics;
+
     namespace <YourNamespaceHere>.Extensions;
+
     public static class SplunkOpenTelemetry
     {
-        public static WebApplicationBuilder AddSplunkOpenTelemetry(this WebApplicationBuilder builder)
+        private static readonly string AccessToken;
+        private static readonly string Realm;
+
+        static SplunkOpenTelemetry()
         {
             // Get environment variables from function configuration
             // You need a valid Splunk Observability Cloud access token and realm
+            AccessToken = Environment.GetEnvironmentVariable("SPLUNK_ACCESS_TOKEN")?.Trim()
+                ?? throw new ArgumentNullException("SPLUNK_ACCESS_TOKEN");
+
+            Realm = Environment.GetEnvironmentVariable("SPLUNK_REALM")?.Trim()
+                ?? throw new ArgumentNullException("SPLUNK_REALM");
+        }
+
+        public static WebApplicationBuilder AddSplunkOpenTelemetry(this WebApplicationBuilder builder)
+        {
             var serviceName = Environment.GetEnvironmentVariable("WEBSITE_SITE_NAME") ?? "Unknown";
-            var accessToken = Environment.GetEnvironmentVariable("SPLUNK_ACCESS_TOKEN")?.Trim();
-            var realm = Environment.GetEnvironmentVariable("SPLUNK_REALM")?.Trim();
             var enableTraceResponseHeaderValue = Environment.GetEnvironmentVariable("SPLUNK_TRACE_RESPONSE_HEADER_ENABLED")?.Trim();
+
             // See https://github.com/open-telemetry/opentelemetry-dotnet-contrib/tree/main/src/OpenTelemetry.ResourceDetectors.Azure
             // for other types of Azure detectors
             var resourceDetector = new AppServiceResourceDetector();
-            ArgumentNullException.ThrowIfNull(accessToken, "SPLUNK_ACCESS_TOKEN");
-            ArgumentNullException.ThrowIfNull(realm, "SPLUNK_REALM");
+
             builder.Services.AddOpenTelemetry()
                 .WithTracing(t => t
                     // Use Add[instrumentation-name]Instrumentation to instrument missing services
@@ -124,9 +136,9 @@ After adding the dependencies, create an OpenTelemetry helper for your applicati
                         .AddDetector(resourceDetector))
                     .AddOtlpExporter(opts =>
                     {
-                        opts.Endpoint = new Uri($"https://ingest.{realm}.signalfx.com/v2/trace/otlp");
+                        opts.Endpoint = new Uri($"https://ingest.{Realm}.signalfx.com/v2/trace/otlp");
                         opts.Protocol = OtlpExportProtocol.HttpProtobuf;
-                        opts.Headers = $"X-SF-TOKEN={accessToken}";
+                        opts.Headers = $"X-SF-TOKEN={AccessToken}";
                     }))
                 .WithMetrics(m => m
                     // Use Add[instrumentation-name]Instrumentation to instrument missing services
@@ -140,20 +152,24 @@ After adding the dependencies, create an OpenTelemetry helper for your applicati
                         .AddDetector(resourceDetector))
                     .AddOtlpExporter(opts =>
                     {
-                        opts.Endpoint = new Uri($"https://ingest.{realm}.signalfx.com/v2/datapoint/otlp");
-                        opts.Headers = $"X-SF-TOKEN={accessToken}";
+                        opts.Endpoint = new Uri($"https://ingest.{Realm}.signalfx.com/v2/datapoint/otlp");
+                        opts.Headers = $"X-SF-TOKEN={AccessToken}";
                     }));
+
             return builder;
         }
+
         private static class ServerTimingHeader
         {
-            public const string Key = "Server-Timing";
+            private const string Key = "Server-Timing";
             private const string ExposeHeadersHeaderName = "Access-Control-Expose-Headers";
+
             public static void SetHeaders<T>(Activity activity, T carrier, Action<T, string, string> setter)
             {
                 setter(carrier, Key, ToHeaderValue(activity));
                 setter(carrier, ExposeHeadersHeaderName, Key);
             }
+
             private static string ToHeaderValue(Activity activity)
             {
                 var sampled = ((int)activity.Context.TraceFlags).ToString("D2");
@@ -164,7 +180,7 @@ After adding the dependencies, create an OpenTelemetry helper for your applicati
 
 Use the helper you created in the Program.cs file:
 
-.. code-block:: csharp
+.. code-block::
 
     var builder = WebApplication.CreateBuilder(args);
     var app = builder

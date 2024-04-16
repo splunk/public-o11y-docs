@@ -11,10 +11,12 @@ Collector components
     :titlesonly:
     :hidden:
 
+
     Receivers <components/a-components-receivers.rst>
     Processors <components/a-components-processors.rst>
     Exporters <components/a-components-exporters.rst>
     Extensions <components/a-components-extensions.rst>        
+
 
 The OpenTelemetry Collector includes the following component types:
 
@@ -198,6 +200,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`batch-processor` (``batch``)
      - Accepts spans, metrics, or logs and places them into batches. Batching helps better compress the data and reduce the number of outgoing connections required to transmit the data. This processor supports both size-based and time-based batching.
      - Metrics, logs, traces
+   * - :ref:`cumulative-to-delta-processor` (``cumulativetodelta``)
+     - Convert cumulative monotonic metrics to delta aggretation temporality. This enhances the usage of cumulative metrics in Splunk Observability Cloud.
+     - Metrics
    * - :ref:`filter-processor` (``filter``)
      - Can be configured to include or exclude metrics based on metric name in the case of the ``strict`` or ``regexp`` match types, or based on other metric attributes in the case of the ``expr`` match type.
      - Metrics
@@ -263,7 +268,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
      - Exports metrics, logs, and traces to Kafka using a synchronous producer. 
      - Metrics, logs, traces
    * - :ref:`loadbalancing-exporter` (``loadbalancing``)
-     - Exports spans, metrics and logs depending on the ``routing_key`` configured.
+     - Exports metrics, logs, and traces to different back-ends.
      - Metrics, logs, traces
    * - :ref:`logging-exporter` (``logging``)
      - Exports data to the console. By default, ``logging`` doesn't send its output to Windows Event Viewer. Run the Splunk Distribution of OpenTelemetry Collector directly from the PowerShell terminal to send output to the Windows Event Viewer.

@@ -406,17 +406,17 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Instrument back-end services TOGGLE <gdi/get-data-in/application/application>
 
 .. toctree::
-   :maxdepth:   3
+   :maxdepth:   4
 
    Instrument serverless functions TOGGLE <gdi/get-data-in/serverless/instrument-serverless-functions>
 
 .. toctree::
-   :maxdepth:  3
+   :maxdepth:  4
 
    Instrument front-end applications TOGGLE <gdi/get-data-in/rum/rum-instrumentation>
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 4
 
    gdi/other-ingestion-methods/other-data-ingestion-methods
 
