@@ -30,12 +30,12 @@ If you're already instrumenting your Java services using the Splunk Distribution
 
 .. _java-metrics-grace-period:
 
-Prevent loss of data using the Data Migration tool
+Use the Data Migration tool
 =======================================================
 
 Due to the changes in metric names, upgrading to Java OTel 2.x might break existing dashboards, detectors, and other features. To prevent sudden loss of access to custom reporting elements, use the Data Migration tool, which transforms and duplicates metric data in 1.x to the 2.x formats for a limited period of time at no additional cost.
 
-Use Data Migration Management to manage the migration process for metric streams. For each supported process, you can turn on and off the data migration, see the number of Metric Time Series (MTS) migrated, and view the grace period duration. The duplication and double-publishing of metrics follows a set of predefined rules that are activated when you decide to migrate. The metric rules are treated as system rules and can't be edited.
+Use Data Migration to manage the migration process for metric streams. For each supported process, you can turn on and off the data migration, see the number of Metric Time Series (MTS) migrated, and view the grace period duration. The duplication and double-publishing of metrics follows a set of predefined rules that are activated when you decide to migrate. The metric rules are treated as system rules and can't be edited.
 
 .. add screenshot
 
