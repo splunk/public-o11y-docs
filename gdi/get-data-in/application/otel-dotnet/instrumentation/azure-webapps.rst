@@ -67,7 +67,7 @@ Initialize OpenTelemetry in the code
 
 After adding the dependencies, create an OpenTelemetry helper for your application:
 
-.. code-block::
+.. code-block:: csharp
 
     using OpenTelemetry.Exporter;
     using OpenTelemetry.Metrics;
@@ -155,7 +155,7 @@ After adding the dependencies, create an OpenTelemetry helper for your applicati
                         opts.Endpoint = new Uri($"https://ingest.{Realm}.signalfx.com/v2/datapoint/otlp");
                         opts.Headers = $"X-SF-TOKEN={AccessToken}";
                     }));
-                    
+
             return builder;
         }
 
