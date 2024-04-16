@@ -17,6 +17,8 @@ Use access tokens to:
 
 .. note:: By default, only users who are administrators can search for and view all access tokens. You can change this default when you create or update an access token.
 
+We need to put a note here saying "Power users who have access to tokens in an org will see a banner but only admins will get an email saying that the tokens need to be rotated." Or something of this nature, as this is causing confusion for customers when power users see the banner and do not understand why.
+
 Token expiry 
 ================
 
