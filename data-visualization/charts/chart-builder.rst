@@ -106,6 +106,7 @@ In this case, if you want to plot a metric as histogram, do the following steps 
 
    #. Select :guilabel:`View SignalFlow` on the :strong:`Plot Editor` tab.
    #. Change the ``data()`` function to ``histogram()``. For example, change ``data('service_latency')`` to ``histogram('service_latency')``.
+   #. Remove the ``publish()`` method as it's not supported for the ``histogram()`` function.
    #. Add a supported method to the SignalFlow program. For example, ``histogram('service_latency').sum()``.
 
 For more information on histogram function and supported methods, see :new-page:`histogram() <https://dev.splunk.com/observability/docs/signalflow/functions/histogram>` in the SignalFlow reference documentation.
