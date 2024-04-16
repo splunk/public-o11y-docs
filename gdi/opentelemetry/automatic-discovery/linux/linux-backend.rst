@@ -181,7 +181,7 @@ Using the installer script, you can install and activate automatic discovery for
 
             .. tab:: Ansible
 
-                See :ref:`ansible-zero-config-java`.
+                See :ref:`ansible-zero-config`.
 
             .. tab:: Chef
 
