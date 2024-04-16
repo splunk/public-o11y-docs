@@ -8841,7 +8841,7 @@ msgid "Log in to Splunk Observability Cloud."
 msgstr "Splunk Observability Cloud にログインします。"
 
 #: ../../infrastructure/quickstart-imm.rst:93 ../../infrastructure/quickstart-imm.rst:237
-msgid "In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page."
+msgid "In the left navigation menu, select :menuselection:`Data Management` to open the :strong:`Integrate Your Data` page."
 msgstr "左のナビゲーションメニューで、:menuselection:`Data Management` を選択し、Integrate Your Data ページを開きます。"
 
 #: ../../infrastructure/quickstart-imm.rst:95

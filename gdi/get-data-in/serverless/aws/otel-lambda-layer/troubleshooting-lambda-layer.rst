@@ -1,7 +1,7 @@
 .. _troubleshooting-lambda-layer:
 
 ******************************************************
-Troubleshoot the Splunk OpenTelemetry Lambda Layer
+Troubleshoot the Splunk OpenTelemetry Lambda layer
 ******************************************************
 
 .. meta::
@@ -62,7 +62,7 @@ For instructions on how to define a custom exporter endpoint, see :ref:`trace-ex
 Deactivate instrumentations that load automatically
 =====================================================
 
-Some of the wrappers included in the Splunk OpenTelemetry Lambda Layer load instrumentations for popular libraries or frameworks automatically. To deactivate instrumentations that load automatically, follow these steps:
+Some of the wrappers included in the Splunk OpenTelemetry Lambda layer load instrumentations for popular libraries or frameworks automatically. To deactivate instrumentations that load automatically, follow these steps:
 
 .. tabs::
 
