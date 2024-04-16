@@ -20,11 +20,9 @@ Use access tokens to:
 Token expiry 
 ================
 
-Access tokens expire one year after the creation date. For access tokens created prior to February 28, 2022, the expiration date remains 5 years from the creation date. You can rotate a token before it expires using Splunk Observability Cloud APIs. For details, see :new-page:`Org Token <https://dev.splunk.com/observability/reference/api/org_tokens/latest>` in the developer documentation.
+Access tokens expire one year after the creation date. For access tokens created prior to February 28, 2022, the expiration date remains 5 years from the creation date. You can rotate a token before it expires using the Splunk Observability Cloud API. For details, see :ref:`access-token-rotate`.
 
 All of an organizations admins will receive an email 30 days before a token in their org expires. The email includes a link to the Splunk Observability Cloud user interface that displays a list of expiring tokens. These email notifications are sent to all org admins and can't be customized.
-
-You can't rotate tokens after they expire. If you don't rotate a token before it expires, you must create a new token to replace it.
 
 The default access token
 ===========================
@@ -150,6 +148,43 @@ To create an access token:
    #. To remove a team or user, select the delete icon (:strong:`X`) next to the team or username.
 #. To create the new token, select :guilabel:`Create`.
 
+
+.. _access-token-rotate:
+
+Rotate an access token
+==============================
+
+You can rotate an access token using the Splunk Observability Cloud API. This creates a new secret for the token and deactivates the token's previous secret. Optionally, you can provide a grace period before the previous token secret expires.
+
+You can't rotate tokens after they expire. If you don't rotate a token before it expires, you must create a new token to replace it.
+
+.. note:: You must be a Splunk Observability Cloud admin to rotate a token. 
+
+To rotate an access token, use the ``POST /token/{name}/rotate`` endpoint in the Splunk Observability Cloud API. An API call to rotate a token looks like this:
+
+.. code-block:: bash
+
+   curl -X  POST "https://api.{realm}.signalfx.com/v2/token/{name}/rotate?graceful={gracePeriod}" \
+      -H "Content-type: application/json" \
+      -H "X-SF-TOKEN: <api-token-value>"
+
+Follow these steps:
+
+#. Enter your Splunk realm in the ``realm`` field.
+#. Enter your API access token in the ``api-token-value`` field. To find or create an API access token, see :ref:`admin-api-access-tokens`.
+#. Provide the name of the token you want to rotate in the ``name`` field.
+#. Optionally, provide a grace period, in seconds, in the ``gracePeriod`` field.
+#. Call the API endpoint to rotate the token.
+
+For example, the following API call rotates ``myToken`` and sets a grace period of 604800 seconds (7 days) before the previous token secret expires.
+
+.. code-block:: bash
+
+   curl -X POST "https://api.us0.signalfx.com/v2/token/myToken/rotate?graceful=6048000" \
+      -H "Content-type: application/json" \
+      -H "X-SF-TOKEN: <123456abcd>"
+
+To learn more about this endpoint and to see more examples of requests and responses, see the :new-page:`Splunk developer documentation <https://dev.splunk.com/observability/reference/api/org_tokens/latest#endpoint-rotate-token-secret>`. 
 
 Rename an access token
 =========================

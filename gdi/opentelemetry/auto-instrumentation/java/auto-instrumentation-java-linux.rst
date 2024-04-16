@@ -142,7 +142,7 @@ You can install the ``splunk-otel-auto-instrumentation`` package in the followin
 
    .. tab:: Ansible
 
-      See :ref:`ansible-zero-config-java`.
+      See :ref:`ansible-zero-config`.
 
    .. tab:: Chef
 

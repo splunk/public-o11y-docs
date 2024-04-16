@@ -24,7 +24,7 @@ Get Kubernetes data into Splunk Observability Cloud
 -----------------------------------------------------------
 
 1. Log in to Splunk Observability Cloud.
-2. Select the :guilabel:`Add Integration` button or in the left navigation menu, select :guilabel:`Data Management` to open the Integrate Your Data page.
+2. Select the :guilabel:`Add Integration` button or in the left navigation menu, select :guilabel:`Data Management` to open the :strong:`Integrate Your Data` page.
 3. Select :guilabel:`Deploy the Splunk OpenTelemetry Collector`, and select :guilabel:`Next`. The Install Configuration screen displays.
 4. In the :guilabel:`Platform` menu, select :guilabel:`Kubernetes`. The setup guide opens.
 

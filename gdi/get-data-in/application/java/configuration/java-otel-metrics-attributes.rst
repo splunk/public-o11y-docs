@@ -178,10 +178,10 @@ The agent collects the following heap pressure metrics:
     - Description
   * - ``runtime.jvm.gc.overhead``
     - Gauge
-    - An approximation of the percentage of CPU time used by GCP activities over the last lookback period or since monitoring began, whichever is shorter, in the range [0..1].
+    - An approximation of the percentage of CPU time used by GC activities over the last lookback period or since monitoring began, whichever is shorter, in the range [0..1].
   * - ``runtime.jvm.memory.usage.after.gc``
     - Gauge
-    - The percentage of long-lived heap pool used after the last GCP event, in the range [0..1].
+    - The percentage of long-lived heap pool used after the last GC event, in the range [0..1].
 
 .. _jvm-memory-metrics:
 
@@ -205,7 +205,7 @@ The agent collects the following memory metrics:
         - Requires to activate memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag.
   * - ``process.runtime.jvm.memory.reclaimed``
     - Counter
-    - Total number of bytes reclaimed by the GCP since the previous data point was emitted. Notes: 
+    - Total number of bytes reclaimed by the GC since the previous data point was emitted. Notes: 
         - This metric might be inaccurate for concurrent garbage collectors such as Shenandoah or ZGC. 
         - Use the rate per second rollup.
         - Requires to activate memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag. 

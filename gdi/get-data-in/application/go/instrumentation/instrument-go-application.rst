@@ -119,10 +119,10 @@ If no data appears in APM, see :ref:`common-go-troubleshooting`.
 
 .. _kubernetes_go:
 
-Deploy the Go instrumentation in Kubernetes
+Deploy the Go instrumentation in Kubernetes or Azure
 --------------------------------------------------------------------
 
-To deploy the Go instrumentation in Kubernetes, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
+To deploy the Go instrumentation in Kubernetes or Azure, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
 
 The following example shows how to update a deployment to expose environment variables by adding the OTel configuration under the ``.spec.template.spec.containers.env`` section:
 

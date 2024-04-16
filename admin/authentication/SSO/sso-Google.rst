@@ -23,7 +23,7 @@ To learn more, see :new-page-ref:`admin-manage-users`.
    yet been added as an organization user.
 
 #. Log in to Splunk Observability Cloud.
-#. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+#. In the left navigation menu, select :menuselection:`Data Management` to open the :strong:`Integrate Your Data` page.
 #. In the integration filter menu, select :guilabel:`All`.
 #. In the :guilabel:`Search` field, search for :guilabel:`Google Sign-In`.
 #. Select the :guilabel:`Google Sign-In` tile to open the Google Sign-In page.

@@ -296,7 +296,6 @@ The following example shows how to retrieve ``faas`` attributes:
                return new OkObjectResult(responseMessage);
          }
       }
-   }
 
 .. _azure-functions-step-5:
 
