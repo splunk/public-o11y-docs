@@ -33,7 +33,7 @@ Before you instrument and configure Splunk RUM for your React Native application
 
 1. Log in to Splunk Observability Cloud.
 
-2. In the navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+2. In the navigation menu, select :menuselection:`Data Management` to open the :strong:`Integrate Your Data` page.
 
 3. In the integration filter menu, select :guilabel:`By Use Case`.
 

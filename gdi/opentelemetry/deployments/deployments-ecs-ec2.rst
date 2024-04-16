@@ -19,7 +19,7 @@ To access the guided setup for AWS integration, perform the following steps:
 
 #. Log in to Splunk Observability Cloud.
 #. On the navigation menu, select :guilabel:`Data Management`.
-#. On the Integrate Your Data page, select the tile for :guilabel:`Amazon ECS EC2`.
+#. On the :strong:`Integrate Your Data` page, select the tile for :guilabel:`Amazon ECS EC2`.
 #. Follow the steps provided in the guided setup.
 
 Getting started

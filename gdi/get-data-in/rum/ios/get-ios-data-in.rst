@@ -30,7 +30,7 @@ To generate all the basic installation commands for your environment and applica
 
 2. Open the :new-page:`iOS Instrumentation guided setup <https://login.signalfx.com/#/gdi/scripted/ios/step-1?category=use-case-user-experience&gdiState=%7B"integrationId":"ios"%7D>`. Optionally, you can navigate to the guided setup on your own:
    
-   3. In the navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+   3. In the navigation menu, select :menuselection:`Data Management` to open the :strong:`Integrate Your Data` page.
 
    4. In the integration filter menu, select :guilabel:`By Use Case`.
 
