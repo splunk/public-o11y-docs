@@ -1147,7 +1147,7 @@ msgid "When you configure the Google SSO integration for a domain, everyone in t
 msgstr "ドメインにGoogle SSOインテグレーションを設定すると、組織ユーザーとしてまだ追加されていなくても、ドメイン内の全員が組織にアクセスできるようになります。"
 
 #: ../../admin/authentication/SSO/sso-Google.rst:26
-msgid "In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page."
+msgid "In the left navigation menu, select :menuselection:`Data Management` to open the :strong:`Integrate Your Data` page."
 msgstr "左のナビゲーションメニューで、:menuselection:`Data Management` を選択し、「データのインテグレーション」ページを開きます。"
 
 #: ../../admin/authentication/SSO/sso-Google.rst:28 ../../admin/authentication/SSO/sso-Google.rst:48
