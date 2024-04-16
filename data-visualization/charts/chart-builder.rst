@@ -1,15 +1,15 @@
 .. _chart-builder:
 
 *******************************************************************************
-Plot metrics and events using Chart Builder in Splunk Observability Cloud
+Plot metrics and events using chart builder in Splunk Observability Cloud
 *******************************************************************************
 
 .. meta::
-  :description: This document describes how to use the Chart Builder to display metric data and events on charts. Charts are made up of signals (metrics and events) that can be displayed in various ways. Types of charts available include line, area, column, histogram, single value, heatmap, list, event feed, and text note.
+  :description: This document describes how to use the chart builder to display metric data and events on charts. Charts are made up of signals (metrics and events) that can be displayed in various ways. Types of charts available include line, area, column, histogram, single value, heatmap, list, event feed, and text note.
 
-Charts are highly customizable. This topic describes how to use Chart Builder's tools and options to customize your charts to display signals (metrics and events) in an intuitive and compelling way.
+Charts are highly customizable. This topic describes how to use chart builder's tools and options to customize your charts to display signals (metrics and events) in an intuitive and compelling way.
 
-.. note:: Use the Chart Builder only if you are already familiar with Splunk Observability Cloud charts and are ready to dive into its more advanced features. For a simpler approach to creating charts, see :ref:`simple-charts-dashboards`.
+.. note:: Use the chart builder only if you are already familiar with Splunk Observability Cloud charts and are ready to dive into its more advanced features. For a simpler approach to creating charts, see :ref:`simple-charts-dashboards`.
 
 If you are editing an existing chart, you might want to start by configuring plot lines already on the chart (see :ref:`plot-options` and :ref:`plot-config-panel`).
 
@@ -23,7 +23,8 @@ A signal is the :term:`metric` or histogram metric you want to plot on the chart
 
 .. note:: Instead of a metric, you can also enter a :ref:`time series expression<expression>` to create a composite or derived metric, specify an :ref:`event<chart-events>` to be displayed on the chart, or :ref:`link a detector to a chart<link-detector-to-chart>` to display its alert status on the chart.
 
-To access Chart Builder, open the navigation :strong:`Menu` and select :strong:`Dashboards`. In the :strong:`Create` menu (+), select :strong:`Chart`.
+To access chart builder, open the navigation :strong:`Menu` and select :strong:`Dashboards`. In the :strong:`Create` menu (+), select :strong:`Chart`.
+
 
 
 Enter a metric name or tag
@@ -97,6 +98,14 @@ A chart can contain many plots. After adding multiple plots, you might want to r
 
 You might also want different plots to have different colors or other visualization settings. For more information on customizing a plot, see :ref:`plot-config-panel`.
 
+Plot different metric types sharing the same name
+---------------------------------------------------------------
+When you send multiple metric types, for example, counter metric and histogram metric, with the same name to Observability Cloud, the system assumes all of these metrics are not histogram. 
+
+In this case, if you want to plot a metric as histogram, do the following steps:
+
+   #. Select :guilabel:`View SignalFlow` on the :strong:`Plot Editor` tab.
+   #. Change the ``data()`` function to ``histogram()``.
 
 .. _filter-signal:
 
@@ -131,7 +140,7 @@ Every signal has a default :term:`rollup` associated with it, which is displayed
 Rollups are used to adjust the chart resolution as necessary to effectively display the chart data. For more information, see :ref:`data-resolution-rollups-charts`.
 
 
-Change histogram function for histogram metrics
+Add histogram function for histogram metrics
 --------------------------------------------------
 
 Because histogram data must be summarized by combining the buckets in the histogram together, when you use a histogram metric as the signal for your plot, you must add a histogram function to define how histogram data is interpreted and represented on your chart.
@@ -176,7 +185,7 @@ When you hover over a chart, the plot line for the time series you are focused o
 
 To see detailed information about data points in a chart, select the :strong:`Data Table` tab. If you haven't pinned a point on the chart, values for the most recent data in the chart display. Alternatively, you can click in the chart to pin a point in time and display the :strong:`Data Table` tab.
 
-.. note:: If you edited a :ref:`plot name <plot-name>` or specified :ref:`display units<plot-display-units>` in the Chart Builder, this information displays when you hover over the chart and in the :strong:`Data Table`. For example, instead of seeing ``250`` as a value, you might see ``250 ms`` (where you specified :strong:`ms` as a suffix) or ``$250/millisecond`` (where you specified :strong:`$` as a prefix and :strong:`/millisecond` as a suffix).
+.. note:: If you edited a :ref:`plot name <plot-name>` or specified :ref:`display units<plot-display-units>` in the chart builder, this information displays when you hover over the chart and in the :strong:`Data Table`. For example, instead of seeing ``250`` as a value, you might see ``250 ms`` (where you specified :strong:`ms` as a suffix) or ``$250/millisecond`` (where you specified :strong:`$` as a prefix and :strong:`/millisecond` as a suffix).
 
 When you move the cursor through different areas on a chart, the plot line under the cursor is highlighted, and the detail line for that plot line is highlighted. You might have to scroll through the :strong:`Data Table` tab to find the highlighted information. If you have pinned a value, that value displays in the first column of the table, and you can compare other values to it as you move the cursor.
 
@@ -558,13 +567,13 @@ A stream is represented as a plot line in the graphical plot-builder UI. You can
 
 -	To show or hide plot configuration options when viewing the sidebar, click the plot label or the settings icon (gear).
 
--	To return to the graphical plot-builder view, click :strong:`View Builder`.
+-	To return to the graphical plot-builder view, click :strong:`View builder`.
 
-By default, when any chart is opened in the Chart Builder, Splunk Observability Cloud first attempts to render it in graphical plot-builder mode. The Chart Builder opens in SignalFlow mode only if the chart cannot be represented in the graphical plot-builder.
+By default, when any chart is opened in the chart builder, Splunk Observability Cloud first attempts to render it in graphical plot-builder mode. The chart builder opens in SignalFlow mode only if the chart cannot be represented in the graphical plot-builder.
 
 Converting a chart from SignalFlow to the graphical plot-builder might change the formatting of the SignalFlow. For example, extra spaces might be removed, or parentheses might be added.
 
-When you edit the SignalFlow that powers a chart, or when you create a chart by writing SignalFlow, you must follow the guidelines below to ensure that the chart can be edited in the graphical plot-builder mode as well. If any element of the SignalFlow in a chart does not follow these guidelines, attempting to convert to graphical plot-builder mode by clicking :strong:`View Builder` results in an error.
+When you edit the SignalFlow that powers a chart, or when you create a chart by writing SignalFlow, you must follow the guidelines below to ensure that the chart can be edited in the graphical plot-builder mode as well. If any element of the SignalFlow in a chart does not follow these guidelines, attempting to convert to graphical plot-builder mode by clicking :strong:`View builder` results in an error.
 
 .. 	contents:: Summary of guidelines
    	:local:
@@ -683,7 +692,7 @@ Graphite options for plots
 Use Graphite-style wildcards
 -------------------------------------------------------------------
 
-Many Graphite users are accustomed to its :new-page:`wildcard conventions <http://graphite.readthedocs.org/en/latest/render_api.html#paths-and-wildcards>`, and use them actively to generate the custom charts that they want. Splunk Observability Cloud supports the use of those conventions in the signal (metric or event) field of the Splunk Observability Cloud Chart Builder, including asterisks, character lists and ranges, or value lists. However, there are some differences between the behavior of Graphite wildcards and regular wildcards.
+Many Graphite users are accustomed to its :new-page:`wildcard conventions <http://graphite.readthedocs.org/en/latest/render_api.html#paths-and-wildcards>`, and use them actively to generate the custom charts that they want. Splunk Observability Cloud supports the use of those conventions in the signal (metric or event) field of the Splunk Observability Cloud chart builder, including asterisks, character lists and ranges, or value lists. However, there are some differences between the behavior of Graphite wildcards and regular wildcards.
 
 For example, for a regular wildcard query, :code:`jvm.*` returns anything that starts with :code:`jvm.`, even if there are subsequent dots in the name. For example, for :code:`jvm.*`, :code:`jvm.foo`, :code:`jvm.foo.bar`, and :code:`jvm.foo.bar.foo` would all be returned.
 
