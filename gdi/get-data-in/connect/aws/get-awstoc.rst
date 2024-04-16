@@ -9,6 +9,7 @@ Connect AWS to Splunk Observability Cloud
 
 .. toctree::
   :hidden:
+  :maxdepth: 5
 
   AWS authentication and supported regions <aws-prereqs>
   Compare connection options <aws-compare-connect>
