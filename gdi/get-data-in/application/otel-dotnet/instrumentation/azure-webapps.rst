@@ -67,7 +67,7 @@ Initialize OpenTelemetry in the code
 
 After adding the dependencies, create an OpenTelemetry helper for your application:
 
-.. code-block:: csharp
+.. code-block::
 
     using OpenTelemetry.Exporter;
     using OpenTelemetry.Metrics;
@@ -180,7 +180,7 @@ After adding the dependencies, create an OpenTelemetry helper for your applicati
 
 Use the helper you created in the Program.cs file:
 
-.. code-block:: csharp
+.. code-block::
 
     var builder = WebApplication.CreateBuilder(args);
     var app = builder

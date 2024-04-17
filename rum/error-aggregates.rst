@@ -17,7 +17,7 @@ Errors are aggregated based on the stack trace. The error stack trace contains t
      - :strong:`How errors are grouped together`
    * - Errors have a stack trace
      - Errors are grouped by the hash ID of the stack trace
-   * - Errors don't have a stack trace 
+   * - Error groups are generated with a stack trace
      - Errors are grouped by the hash ID of the message and error type
    * - Errors don't have an error message
      - Errors are grouped by the hash ID of the error type

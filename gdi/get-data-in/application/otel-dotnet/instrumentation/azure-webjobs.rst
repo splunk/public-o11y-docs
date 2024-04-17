@@ -64,7 +64,7 @@ Initialize OpenTelemetry in the code
 
 After adding the dependencies, create an OpenTelemetry helper for your application:
 
-.. code-block:: csharp
+.. code-block::
 
     using Microsoft.Azure.WebJobs;
     using Microsoft.Azure.WebJobs.Host;
@@ -188,7 +188,7 @@ After adding the dependencies, create an OpenTelemetry helper for your applicati
 
 Use the helper you created in the Program.cs file:
 
-.. code-block:: csharp
+.. code-block::
 
     var builder = new HostBuilder()
     .ConfigureWebJobs(context =>
@@ -199,7 +199,7 @@ Use the helper you created in the Program.cs file:
 Use the SplunkFunctionAttribute with every defined WebJobs Function.
 See the example how to properly attribute your function.
 
-.. code-block:: csharp
+.. code-block::
 
     public class Functions
     {
