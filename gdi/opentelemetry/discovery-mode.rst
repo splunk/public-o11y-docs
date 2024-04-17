@@ -18,7 +18,7 @@ Use automatic discovery and configuration with the Splunk Distribution of OpenTe
 
 Automatic discovery and configuration helps you quickly get started with Splunk Application Performance Monitoring (APM) and Splunk Infrastructure Monitoring.
 
-The following diagram shows the process of using automatic discovery and configuration to find metric sources:
+The following diagram shows the process of using automatic discovery and configuration to find data sources:
 
 .. mermaid::
    
@@ -27,13 +27,14 @@ The following diagram shows the process of using automatic discovery and configu
       accTitle: Automatic discovery and configuration process diagram
       accDescr: Step one. Connect to your cloud environment. Step two. Ensure the OpenTelemetry Collector is running. Step three. Run your application.
 
-      X["Connect to your cloud environment"]
+      X["Connect to your \n cloud environment"]
 
-      Y["Deploy the Splunk Distribution \n of OpenTelemetry Collector in your environment"]
+      Y["Deploy the Splunk Distribution \n of OpenTelemetry Collector \n in your environment"]
 
       Z["Run your application"]
       
       X --> Y --> Z
+      \n
 
 Automatic discovery and configuration can detect several types of data sources on the host or Kubernetes cluster, such as language runtimes, databases, and web servers. With this information, the Collector generates configuration you can modify and adopt, or incorporate into your exiting configuration automatically by default.
 
