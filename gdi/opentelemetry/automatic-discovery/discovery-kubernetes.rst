@@ -22,7 +22,7 @@ Using automatic discovery, you don't have to manually instrument or configure yo
 
     <h2>Get started</h2>
 
-Automatic discovery for Kubernetes supports both back-end applications (such as Java and Node.js) as well as third-party applications (such as databases, web servers, and message queues).
+Automatic discovery for Kubernetes supports both back-end applications (such as Java and Node.js) as well as third-party applications (such as databases and web servers).
 
 To use automatic discovery for back-end applications, see :ref:`k8s-backend-auto-discovery`. 
 

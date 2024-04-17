@@ -5,7 +5,7 @@ Discover metric sources automatically
 ***************************************************************************
 
 .. meta::
-      :description: Use automatic discovery and configuration with the Splunk Distribution of OpenTelemetry Collector to detect metric sources and collect metrics automatically.
+      :description: Use automatic discovery and configuration with the Splunk Distribution of OpenTelemetry Collector to collect metrics and traces automatically and easily get started with Splunk Application Performance Monitoring and Splunk Infrastructure Monitoring.
 
 .. toctree::
    :hidden:
@@ -14,8 +14,9 @@ Discover metric sources automatically
    Linux <automatic-discovery/discovery-linux>
    Windows <automatic-discovery/discovery-windows>
 
-Use automatic discovery and configuration with the Splunk Distribution of OpenTelemetry Collector to detect metric sources and create
-a configuration based on the results.
+Use automatic discovery and configuration with the Splunk Distribution of OpenTelemetry Collector to collect metrics and traces automatically. 
+
+Automatic discovery and configuration helps you quickly get started with Splunk Application Performance Monitoring (APM) and Splunk Infrastructure Monitoring.
 
 The following diagram shows the process of using automatic discovery and configuration to find metric sources:
 
@@ -34,11 +35,11 @@ The following diagram shows the process of using automatic discovery and configu
       
       X --> Y --> Z
 
-.. raw:: html
+Automatic discovery and configuration can detect several types of data sources on the host or Kubernetes cluster, such as language runtimes, databases, and web servers. With this information, the Collector generates configuration you can modify and adopt, or incorporate into your exiting configuration automatically by default.
 
-  <h2>Benefits</h2>
+Using this capability, you can automatically instrument your back-end applications such as Java or .NET without any additional installation or configuration steps. With automatic discovery, you can quickly get started with Splunk APM. 
 
-Automatic discovery and configuration can detect several types of metric sources on the host, such as language runtimes, databases, and servers. With this information, the Collector generates configuration you can modify and adopt, or incorporate into your exiting configuration automatically by default.
+For third party applications such as databases, web servers, the Collector generates configuration you can modify and adopt, or incorporate into your existing configuration automatically by default.
 
 The main advantage of using automatic discovery is that you don't need to manually instrument applications or manually configure the Splunk Distribution of OpenTelemetry Collector. 
 
@@ -75,6 +76,11 @@ The following table shows the platforms that support each language runtime:
   <h2>Supported host services and applications</h2>
 
 Automatic discovery for third-party applications is supported for Linux and Kubernetes.
+
+To get started with automatic discovery for third-party applications, see the instructions corresponding to your environment:
+
+* Linux: :ref:`linux-third-party`
+* Kubernetes: :ref:`k8s-third-party`
 
 Automatic discovery supports the following host services and applications:
 
