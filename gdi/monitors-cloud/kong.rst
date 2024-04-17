@@ -32,7 +32,7 @@ To learn more:
 
 .. caution:: 
    
-   The Kong monitor is now deprecated and will reach of End of Support on October 31st, 2024. During this period only critical security and bug fixes are provided. When End of Support is reached, the monitor will be removed and no longer be supported, and you won't be able to use it to send data to Splunk Observability Cloud. 
+   The Kong monitor is deprecated and is no longer supported. Do not use it to send data to Splunk Observability Cloud. 
 
 Benefits
 --------
