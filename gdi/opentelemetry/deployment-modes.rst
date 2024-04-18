@@ -234,10 +234,9 @@ To set the Collector in data forwarding (gateway) mode to receiving data from an
 
    exporters:
       # Traces (Agent)
-      otlp:
-         endpoint: "https://ingest.${SPLUNK_REALM}.signalfx.com:443"
-         headers:
-               "X-SF-Token": "${SPLUNK_ACCESS_TOKEN}"
+      sapm:
+         access_token: "${SPLUNK_ACCESS_TOKEN}"
+         endpoint: "https://ingest.${SPLUNK_REALM}.signalfx.com/v2/trace"
       # Metrics + Events (Agent)
       signalfx:
          access_token: "${SPLUNK_ACCESS_TOKEN}"
@@ -257,7 +256,7 @@ To set the Collector in data forwarding (gateway) mode to receiving data from an
             processors:
             - memory_limiter
             - batch
-            exporters: [otlp]
+            exporters: [sapm]
          metrics:
             receivers: [otlp]
             processors: [memory_limiter, batch]
