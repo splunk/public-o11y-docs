@@ -19,7 +19,7 @@ This receiver and pipeline enable the collection of the Collector's internal met
 Scrape any service that emits metrics in Prometheus format
 ------------------------------------------------------------------
 
-OYou can also use the Prometheus receiver to connect Splunk Observability Cloud with any service that can export their existing data as Prometheus metrics. See a complete list of third-party applications compatible with Prometheus in Prometheus' official documentation at :new-page:`Prometheus exporters <https://prometheus.io/docs/instrumenting/exporters/>`.
+You can also use the Prometheus receiver to connect Splunk Observability Cloud with any service that can export their existing data as Prometheus metrics. See a complete list of third-party applications compatible with Prometheus in Prometheus' official documentation at :new-page:`Prometheus exporters <https://prometheus.io/docs/instrumenting/exporters/>`.
 
 Configure the Prometheus receiver to scrape metrics from a third-party app: Apache Flink 
 ============================================================================================
