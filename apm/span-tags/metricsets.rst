@@ -7,7 +7,7 @@ Learn about MetricSets in APM
 .. meta::
    :description: Learn about MetricSets in Splunk Observability Cloud. MetricSets are categories of metrics about traces and spans in Splunk APM.
 
-MetricSets are key indicators, such as request rate, error rate, and durations, calculated based on your traces and spans in Splunk APM. There are two categories of MetricSets: Troubleshooting MetricSets (TMS), used for high-cardinality troubleshooting, and Monitoring MetricSets (MMS), used for real-time monitoring.
+MetricSets are key indicators, such as request rate, error rate, and durations, calculated based on your traces and spans in Splunk APM. There are 2 categories of MetricSets: Troubleshooting MetricSets (TMS), used for high-cardinality troubleshooting, and Monitoring MetricSets (MMS), used for real-time monitoring.
 
 MetricSets are specific to Splunk APM, but Monitoring MetricSets are similar to the metric time series used in Splunk Infrastructure Monitoring to populate charts and generate alerts. See the following :ref:`monitoring-metricsets` section for more information.
 
@@ -41,7 +41,7 @@ TMS appear on the :ref:`service map <apm-service-map>` and in Tag Spotlight. You
 What is the TMS retention period?
 -----------------------------------
 
-Observability Cloud retains TMS for the same amount of time as raw traces. By default, the retention period is 8 days.
+Splunk Observability Cloud retains TMS for the same amount of time as raw traces. By default, the retention period is 8 days.
 
 For more details about Troubleshooting MetricSets, see :ref:`apm-index-tag-tips`. 
 
@@ -55,7 +55,7 @@ Monitoring MetricSets are metric time series that power the real-time monitoring
 Available MMS metrics
 -----------------------
 
-Each MMS includes six metrics. For each metric, there is one MTS with responses ``sf_error: true`` or ``sf_error: false``.
+Each MMS includes 6 metrics. For each metric, there is 1 metric time series (MTS) with responses ``sf_error: true`` or ``sf_error: false``.
 
 * ``count`` - request count
 * ``duration.min`` - minimum request duration
@@ -76,7 +76,7 @@ Spans might lack a ``kind`` value, or have a different ``kind`` value, in the fo
 What is the MMS retention period?
 -----------------------------------
 
-Observability Cloud stores MMS for 13 months by default.
+Splunk Observability Cloud stores MMS for 13 months by default.
 
 Comparing Monitoring MetricSets and Troubleshooting MetricSets
 =================================================================
