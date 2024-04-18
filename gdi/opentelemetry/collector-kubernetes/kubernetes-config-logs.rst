@@ -192,9 +192,9 @@ Collect Kubernetes events
 
 To see Kubernetes events as part of the :strong:`Events Feed` section in charts, set ``splunkObservability.infrastructureMonitoringEventsEnabled`` to ``true``. The cluster receiver will be configured with a Smart Agent receiver using the ``kubernetes-events`` monitor to send custom events.
 
-To collect Kubernetes events as logs for Log Observer or Log Observer Connect using the Collector, you need to add ``k8sObjects`` to your configuration file, and set ``logsEnabled`` to ``true`` in either ``splunkObservability`` or ``splunkPlatform``. Events are processed in the ``logs`` pipeline.
+To collect Kubernetes events as logs for Log Observer or Log Observer Connect using the Collector, you need to add ``clusterReceiver.k8sObjects`` to your configuration file, and set ``logsEnabled`` to ``true`` in either ``splunkObservability`` or ``splunkPlatform``. Events are processed in the ``logs`` pipeline.
 
-``k8sObjects`` has the following fields:
+``clusterReceiver.k8sObjects`` has the following fields:
 
 * ``name``. :strong:`Required`. Name of the object, for example ``pods`` or ``namespaces``.
 
@@ -216,7 +216,7 @@ For example:
 
 .. code:: yaml
 
-  k8sObjects:
+  clusterReceiver.k8sObjects:
     - name: pods
       mode: pull
       label_selector: environment in (production),tier in (frontend)
