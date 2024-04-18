@@ -5,7 +5,7 @@ Send alert notifications to a webhook using Splunk Observability Cloud
 *************************************************************************
 
 .. meta::
-      :description: Configure Observability Cloud to send alerts to a webhook when an alert condition triggers the detector and when the condition clears.
+      :description: Configure Splunk Observability Cloud to send alerts to a webhook when an alert condition triggers the detector and when the condition clears.
 
 You can configure Splunk Observability Cloud to automatically send alert notifications to a webhook when a condition triggers the detector and when a clear condition clears the alert.
 
@@ -13,10 +13,10 @@ You can configure Splunk Observability Cloud to automatically send alert notific
 
    * To add a webhook as a detector alert recipient, you must have administrator access. To get this access,
      an existing administrator adds it to your user profile. See :ref:`admin-manage-users` for more information.
-   * If your webhook endpoint fails to respond to a detector notification, Observability Cloud retries the
+   * If your webhook endpoint fails to respond to a detector notification, Splunk Observability Cloud retries the
      notification for up to 24 hours. If your endpoint still doesn't respond, you don't receive the notification.
 
-To send Observability Cloud alert notifications to a webhook, complete the following configuration tasks:
+To send Splunk Observability Cloud alert notifications to a webhook, complete the following configuration tasks:
 
 * :ref:`webhook1`
 
@@ -29,13 +29,13 @@ To send Observability Cloud alert notifications to a webhook, complete the follo
 Step 1: Create a webhook
 ===========================
 
-Create a webhook that listens for and receives Observability Cloud alert notification requests.
+Create a webhook that listens for and receives Splunk Observability Cloud alert notification requests.
 
 Your webhook must use a secure (HTTPS) connection and must support Transport Layer Security (TLS) 1.2 or higher.
 
 To help secure your webhook, establish a shared secret string. When you create the webhook notification integration,
-you enter this string in one of the input fields. Observability Cloud uses the string as part of a cryptographic
-algorithm that generates a unique message code for your notification. Observability Cloud then inserts
+you enter this string in one of the input fields. Splunk Observability Cloud uses the string as part of a cryptographic
+algorithm that generates a unique message code for your notification. Splunk Observability Cloud then inserts
 the code in the header of the outgoing webhook notification request. When your code receives the request, use the same
 algorithm, including the shared secret string, to generate a code. If the codes are identical, the
 the request to your webhook is secure and valid.
@@ -45,14 +45,14 @@ To learn more about the shared secret string, the cryptographic algorithm, and t
 the :emphasis:`Splunk Observability Cloud Developers Guide`.
 
 Your webhook must return a HTTP ``200 OK`` response code immediately after you receive the request.
-If Observability Cloud does not receive a 200 response code within a certain time frame, it retries the request.
+If Splunk Observability Cloud does not receive a 200 response code within a certain time frame, it retries the request.
 
 .. _webhook2:
 
-Step 2: Create a webhook integration in Observability Cloud
+Step 2: Create a webhook integration in Splunk Observability Cloud
 =================================================================================
 
-You must be an Observability Cloud administrator to complete this task.
+You must be a Splunk Observability Cloud administrator to complete this task.
 
 #. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`Webhook guided setup <https://login.signalfx.com/#/integrations/webhook>`. Alternatively, you can navigate to the guided setup on your own:
@@ -99,10 +99,10 @@ You must be an Observability Cloud administrator to complete this task.
 
 .. _webhook3:
 
-Step 3: Add a webhook integration as a detector alert recipient in Observability Cloud
+Step 3: Add a webhook integration as a detector alert recipient in Splunk Observability Cloud
 =================================================================================================
 
-To add a webhook integration as a detector alert recipient in Observability Cloud:
+To add a webhook integration as a detector alert recipient in Splunk Observability Cloud:
 
 #. Create or edit a detector that you want to configure to send alert notifications using your webhook integration.
 
