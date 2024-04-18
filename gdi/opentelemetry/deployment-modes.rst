@@ -23,6 +23,16 @@ The following image shows the architecture for the standalone mode:
 .. image:: /_images/gdi/splunk-otel-collector-standalone-arch.png 
    :alt: This image shows the architecture for the standalone host monitoring (agent) mode.   
 
+Host monitoring (agent) mode deployed with the installer script or Helm chart
+--------------------------------------------------------------------------------------
+
+The default configurations for the :ref:`Linux installer script <otel-install-linux>`, :ref:`Windows installer script <otel-install-windows>`, and for certain :ref:`Helm charts <otel-install-k8s>` deploy the Collector without Fluentd.
+
+The architecure looks as follows:
+
+.. image:: /_images/gdi/splunk-otel-collector-recommended-arch.png
+   :alt: This image shows the architecture for Helm chart and installer script deployments.    
+
 When to use host monitoring (agent) mode
 -------------------------------------------------------------------------------
 
