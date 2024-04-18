@@ -11,7 +11,7 @@ The :ref:`Splunk Observability Cloud platform <get-started-o11y>` provides you w
 
 With Splunk Observability Cloud's features, you'll be able to build charts and dashboards, and set up alerts and other system notification methods. This will help you better understand the performance of your systems and services, detect anomalies, or plan deployments and enhancements.
 
-Use Splunk Observability Cloud search to quickly locate the service, traceID, dashboard, chart, or metrics-based content. For more details, see :ref:`gsearch`.
+Use Splunk Observability Cloud search to quickly locate the service, traceID, dashboard, chart, or metrics-based content you are interested in. For details, see :ref:`gsearch`.
 
 Quick overview of Splunk Observability Cloud data types
 ========================================================

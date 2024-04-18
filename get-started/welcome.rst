@@ -19,7 +19,7 @@ Choose from :ref:`over 100 supported open standards-based integrations <supporte
 
 When you send data from each layer of your full-stack environment to Observability Cloud, it transforms raw metrics, traces, and logs into actionable insights in the form of dashboards, visualizations, alerts, and more. To learn more about Observability Cloud's data model, refer to :ref:`data-model`.
 
-Splunk Observability Cloud's suite of products and features allow you to quickly and intelligently respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward. Use Splunk Observability Cloud search to quickly locate the service, traceID, dashboard, chart, or metrics-based content. For more details, see :ref:`gsearch`.
+Splunk Observability Cloud's suite of products and features allow you to quickly and intelligently respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward. Use Splunk Observability Cloud search to quickly locate the service, traceID, dashboard, chart, or metrics-based content you are interested in. For details, see :ref:`gsearch`.
 
 The following diagram provides a high-level view of how each Observability Cloud product plays its part to provide you with full-stack observability:
 
