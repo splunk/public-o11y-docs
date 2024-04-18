@@ -41,6 +41,7 @@ Supported search prefixes include:
 - trace (APM trace)
 - service (APM service)
 - business workflow (APM workflow)
+  
 .. - index (Log index) PI2
 .. - saved query (Log saved query)
 .. - infrastructure (infrastructure navigator)
