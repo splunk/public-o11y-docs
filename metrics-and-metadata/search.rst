@@ -21,7 +21,9 @@ The search capability is currently limited to Splunk APM, dashboards, charts, In
 Supported search prefixes
 ===============================
 
-Narrow your search results to specific types of objects by using one of the supported search prefixes to indicate what type of information you're searching for. Supported search prefixes include:
+Narrow your search results to specific types of objects by using one of the supported search prefixes to indicate what type of information you're searching for. While wildcard characters are not supported, search will match on substrings. 
+
+Supported search prefixes include:
 
 - metric search
 - dashboard
@@ -34,7 +36,7 @@ Narrow your search results to specific types of objects by using one of the supp
 - dimension
 - tag
 - property
-- navigation
+- navigation (takes you to the corresponding page)
 - action
 - trace (APM trace)
 - service (APM service)
