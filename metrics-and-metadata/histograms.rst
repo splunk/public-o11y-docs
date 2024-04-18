@@ -46,7 +46,7 @@ See :ref:`slo-intro` for more information.
 Histogram instead of calculated metrics
 -----------------------------------------------------------
 
-Histograms contain data that you can use to calculate percentiles and other statistics in Splunk Observability Cloud instead of calculating them using your infrastructure. Sending histograms also results in less MTS sent, which has a positive impact on your subscription usage.
+Histograms contain data that you can use to calculate percentiles and other statistics in Splunk Observability Cloud instead of calculating them using your infrastructure. Sending histograms also results in fewer MTS sent, which reduces your subscription usage.
 
 For example, if you're sending the ``service.response_time.upper_90`` and ``service.response_time.upper_95`` metrics to track the response time of a key service in your infrastructure at the 90th and 95th percentiles, you can send histogram data for the entire distribution of response times, eliminating the need of sending 2 separate MTS.
 
