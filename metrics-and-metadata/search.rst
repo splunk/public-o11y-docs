@@ -23,15 +23,30 @@ Supported search prefixes
 
 Narrow your search results to specific types of objects by using one of the supported search prefixes to indicate what type of information you're searching for. Supported search prefixes include:
 
-- service
-- navigator
+- metric search
 - dashboard
 - chart
-- doc (limited)
+- team
+- metric
+- integration
+- detector
+- help
+- dimension
+- tag
+- property
+- navigation
+- action
+- trace (APM trace)
+- service (APM service)
+- business workflow (APM workflow)
+.. - index (Log index) PI2
+.. - saved query (Log saved query)
+.. - infrastructure (infrastructure navigator)
 
 Use the prefix in a 'key value pair' format to narrow your search. For example, enter ``service: checkoutservice`` to search for a service named ``checkoutservice``. 
 
 You can also search using only the prefix to search for all objects of that type.
+
 
 How to use observability search
 =====================================
