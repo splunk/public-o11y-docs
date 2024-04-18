@@ -235,6 +235,9 @@ To set the Collector in data forwarding (gateway) mode to receiving data from an
    exporters:
       # Traces (Agent)
       otlp:
+         endpoint: "https://ingest.${SPLUNK_REALM}.signalfx.com:443"
+         headers:
+               "X-SF-Token": "${SPLUNK_ACCESS_TOKEN}"
       # Metrics + Events (Agent)
       signalfx:
          access_token: "${SPLUNK_ACCESS_TOKEN}"
