@@ -30,7 +30,7 @@ Histograms are useful to compare different datasets at a glance, and to identify
 When to use histogram metrics
 ===========================================================
 
-Histograms can summarize data in ways that are difficult to reproduce using other metrics. With histogram buckets, you can explore the distribution of your continuous data over time without needing to analyze the entire dataset to see all of the data points. At the same time, histograms help reduce usage of your subscription through multi-rollup, which allows to aggregate multiple metrics time series (MTS) into a single MTS.
+Histograms can summarize data in ways that are difficult to reproduce using other metrics. With histogram buckets, you can explore the distribution of your continuous data over time without needing to analyze the entire dataset to see all of the data points. At the same time, histograms help reduce usage of your subscription through multi-rollup, which allows you to aggregate multiple metrics time series (MTS) into a single MTS.
 
 
 Service level objectives (SLO)
