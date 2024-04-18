@@ -50,6 +50,11 @@ Data forwarding (gateway) mode is typically deployed per cluster, data center, o
 
 For the default gateway config file see :new-page:`data forwarding (gateway) mode configuration in GitHub <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/gateway_config.yaml>`.
 
+The following image shows the architecture for the data forwarding (gateway) mode:
+
+.. image:: /_images/gdi/splunk-otel-collector-recommended-gateway-arch.png
+   :alt: This image shows the architecture for the advanced mode.    
+
 .. note:: To forward metrics and metadata in data forwarding (gateway) mode, see :ref:`collector-gateway-metrics-issue`.
 
 When to use data forwarding (gateway) mode
