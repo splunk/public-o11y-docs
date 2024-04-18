@@ -23,6 +23,16 @@ The following image shows the architecture for the standalone mode:
 .. image:: /_images/gdi/splunk-otel-collector-standalone-arch.png 
    :alt: This image shows the architecture for the standalone host monitoring (agent) mode.   
 
+Host monitoring (agent) mode deployed with the installer script or Helm chart
+--------------------------------------------------------------------------------------
+
+The default configurations for the :ref:`Linux installer script <otel-install-linux>`, :ref:`Windows installer script <otel-install-windows>`, and for certain :ref:`Helm charts <otel-install-k8s>` deploy the Collector without Fluentd.
+
+The architecure looks as follows:
+
+.. image:: /_images/gdi/splunk-otel-collector-recommended-arch.png
+   :alt: This image shows the architecture for Helm chart and installer script deployments.    
+
 When to use host monitoring (agent) mode
 -------------------------------------------------------------------------------
 
@@ -39,6 +49,11 @@ Data forwarding (gateway) mode
 Data forwarding (gateway) mode is typically deployed per cluster, data center, or region. The Collector in gateway mode collects data from one or more Collectors running in standalone agent mode and sends it to Splunk Observability Cloud. 
 
 For the default gateway config file see :new-page:`data forwarding (gateway) mode configuration in GitHub <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/gateway_config.yaml>`.
+
+The following image shows the architecture for the data forwarding (gateway) mode:
+
+.. image:: /_images/gdi/splunk-otel-collector-recommended-gateway-arch.png
+   :alt: This image shows the architecture for the advanced mode.    
 
 .. note:: To forward metrics and metadata in data forwarding (gateway) mode, see :ref:`collector-gateway-metrics-issue`.
 
