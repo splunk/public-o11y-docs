@@ -100,7 +100,10 @@ You might also want different plots to have different colors or other visualizat
 
 Plot different metric types sharing the same name
 ---------------------------------------------------------------
-When you send multiple metric types, for example, counter metric and histogram metric, with the same name to Observability Cloud, the system assumes all of these metrics are not histogram. 
+
+When you send multiple metric types, for example, counter metric and histogram metric, to Splunk Observability Cloud, it is best to use distinct names in order to avoid complications with data processing and analytics.
+
+If you use the same name for different metric types, Splunk Observability Cloud assumes all of these metrics are not histogram. 
 
 In this case, if you want to plot a metric as histogram, do the following steps to edit the SignalFlow program:
 
