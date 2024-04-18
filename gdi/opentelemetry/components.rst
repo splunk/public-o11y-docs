@@ -59,9 +59,6 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`collectd-receiver` (``collectd``)
      - Receives data exported through the CollectD ``write_http`` plugin. Only supports the JSON format.
      - Metrics
-   * - :ref:`databricks_receiver` (``databricks``)
-     - Uses the Databricks API to generate metrics about the operation of a Databricks instance.
-     - Metrics
    * - :ref:`discovery-receiver` (``discovery``)
      - Wraps the receiver creator to facilitate the discovery of metric collection targets. See :ref:`discovery_mode`.
      - Logs
