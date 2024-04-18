@@ -200,6 +200,8 @@ The following example shows how to configure the Collector in host monitoring (a
             processors: [memory_limiter, batch, resourcedetection]
             exporters: [signalfx]
          logs:   
+            receivers: [otlp]
+            processors: [memory_limiter, batch, resourcedetection]
             exporters: [otlp]
       # More pipelines
 
