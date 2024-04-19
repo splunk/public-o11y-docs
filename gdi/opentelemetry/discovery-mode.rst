@@ -40,7 +40,7 @@ Automatic discovery and configuration can detect several types of data sources o
 
 Using this capability, you can automatically instrument your back-end applications such as Java or .NET without any additional installation or configuration steps. With automatic discovery, you can quickly get started with Splunk APM. 
 
-For third party applications such as databases, web servers, the Collector generates configuration you can modify and adopt, or incorporate into your existing configuration automatically by default.
+For third-party applications such as databases and web servers, the Collector generates configuration you can modify and adopt, or incorporate into your existing configuration automatically by default.
 
 The main advantage of using automatic discovery is that you don't need to manually instrument applications or manually configure the Splunk Distribution of OpenTelemetry Collector. 
 
