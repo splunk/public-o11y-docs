@@ -7,9 +7,9 @@ Kubernetes objects receiver
 .. meta::
       :description: Collects objects from the Kubernetes API server. Supports authentication through service accounts only.
 
-The Kubernetes Objects receiver collects objects from the Kubernetes API server.
+The Kubernetes Objects receiver collects objects from the Kubernetes API server. 
 
-Currently this receiver supports authentication via service accounts only. 
+.. note:: This receiver supports authentication via service accounts only at the moment. 
 
 Get started
 ======================
@@ -45,72 +45,74 @@ Main settings
 
 These are the main configuration properties:
 
-* auth_type (default = serviceAccount): Determines how to authenticate to the K8s API server. This can be one of none (for no auth), serviceAccount (to use the standard service account token provided to the agent pod), or kubeConfig to use credentials from ~/.kube/config.
+* ``auth_type``. ``serviceAccount`` by default. Determines how to authenticate to the Kubernetes API server. Values include none (for no authentication), ``serviceAccount`` (to use the standard service account token provided to the agent pod), or ``kubeConfig`` to use credentials from ``~/.kube/config``.
 
-* name: Name of the resource object to collect
+* ``name``. Name of the resource object to collect.
 
-* mode: define in which way it collects this type of object, either "poll" or "watch".
+* ``mode``. Defines how the object is collected:
 
-  * pull mode will read all objects of this type use the list API at an interval.
+  * ``pull`` mode reads all objects of this type that use the list API at an interval.
 
-  * watch mode will do setup a long connection using the watch API to just get updates.
+  * ``watch`` mode sets up a long connection using the watch API to just get updates.
 
-* label_selector: select objects by label(s)
+* ``label_selector``. Select objects by label(s).
 
-* field_selector: select objects by field(s)
+* ``field_selector``. Select objects by field(s).
 
-* interval: the interval at which object is pulled, default 60 minutes. Only useful for pull mode.
+* ``interval``. ``60m`` (minutes) by default. In ``pull`` mode, the interval at which the object is pulled. 
 
-* exclude_watch_type: allows excluding specific watch types. Valid values are ADDED, MODIFIED, DELETED, BOOKMARK, and ERROR. Only usable in watch mode.
+* ``exclude_watch_type``. In ``watch`` mode, it allows excluding specific watch types. Valid values are ``ADDED``, ``MODIFIED``, ``DELETED``, ``BOOKMARK``, and ``ERROR``. 
 
-* resource_version allows watch resources starting from a specific version (default = 1). Only available for watch mode. If not specified, the receiver will do an initial list to get the resourceVersion before starting the watch. See Efficient Detection of Change for details on why this is necessary.
+* ``resource_version``. ``1`` by default. In ``watch`` mode, it allows watch resources starting from a specific version. If not specified, the receiver will do an initial list to get the ``resourceVersion`` before starting the watch. See Kubernetes' :new-page:`Efficient Detection of Change <https://kubernetes.io/docs/reference/using-api/api-concepts/#efficient-detection-of-changes>` for details on why this is necessary.
 
-* namespaces: An array of namespaces to collect events from. (default = all)
+* ``namespaces``. ``all`` by default. An array of namespaces to collect events from. 
 
-* group: API group name. It is an optional config. When given resource object is present in multiple groups, use this config to specify the group to select. By default, it will select the first group. For example, events resource is available in both v1 and events.k8s.io/v1 APIGroup. In this case, it will select v1 by default.
+* ``group``. Optional. API group name. When a given resource object is present in multiple groups, use this field to specify which group to select. By default, it selects the first group. 
+
+  * For example, if the ``events`` resource is available in both the ``v1`` and ``events.k8s.io/v1`` APIGroup, it will select ``v1`` by default.
 
 See more at :ref:`kubernetes-objects-receiver-settings`.
 
 Configure the resources for the Kubernetes deployment
 ==================================================================
 
-Follow these sections to set up the various Kubernetes resources required for the deployment.
+Follow these sections to set up the various Kubernetes resources required to deploy the Collector with the receiver.
 
 Configuration
 --------------------------------------
 
-Create a ConfigMap with the config for otelcontribcol. Replace OTLP_ENDPOINT with valid value.
+Create a ConfigMap with the config for ``otelcontribcol``, replacing ``OTLP_ENDPOINT`` with a valid value.
 
 .. code-block:: yaml
 
-cat <<EOF | kubectl apply -f -
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: otelcontribcol
-  labels:
-    app: otelcontribcol
-data:
-  config.yaml: |
-    receivers:
-      k8sobjects:
-        objects:
-          - name: pods
-            mode: pull
-          - name: events
-            mode: watch
-    exporters:
-      otlp:
-        endpoint: <OTLP_ENDPOINT>
-        tls:
-          insecure: true
+   cat <<EOF | kubectl apply -f -
+   apiVersion: v1
+   kind: ConfigMap
+   metadata:
+     name: otelcontribcol
+     labels:
+       app: otelcontribcol
+   data:
+     config.yaml: |
+       receivers:
+         k8sobjects:
+           objects:
+             - name: pods
+               mode: pull
+             - name: events
+               mode: watch
+       exporters:
+         otlp:
+           endpoint: <OTLP_ENDPOINT>
+           tls:
+             insecure: true
 
-    service:
-      pipelines:
-        logs:
-          receivers: [k8sobjects]
-          exporters: [otlp]
-EOF
+       service:
+         pipelines:
+           logs:
+             receivers: [k8sobjects]
+             exporters: [otlp]
+   EOF
 
 Service account
 --------------------------------------
@@ -127,61 +129,66 @@ Create a service account for the Collector to use.
          app: otelcontribcol
       name: otelcontribcol
 
-RBAC
+Role-based access control (RBAC)
 --------------------------------------
 
-Use the below commands to create a ClusterRole with required permissions and a ClusterRoleBinding to grant the role to the service account created above. Following config will work for collecting pods and events only. You need to add appropriate rule for collecting other objects.
+Use the commands in this section to create a ``ClusterRole`` with the required permissions and a ``ClusterRoleBinding`` to grant the role to the service account created in the previous section. 
 
-When using watch mode you must also specify list verb so that the receiver has permission to do its initial list if no resource_version was supplied or a list to recover from 410 Gone scenarios.
+.. note:: This example will only collect pods and events. To collect other objects, add the appropriate rules.
+
+When using ``watch`` mode you must also specify the ``list`` verb so that the receiver has permission to do its initial list if no ``resource_version`` was supplied, or use a list to recover from 410 Gone scenarios. Learn more in the official Kubernetes documentation at :new-page:`"410 Gone" responses <https://kubernetes.io/docs/reference/using-api/api-concepts/#410-gone-responses>`. 
 
 .. code-block:: yaml
 
-<<EOF | kubectl apply -f -
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: otelcontribcol
-  labels:
-    app: otelcontribcol
-rules:
-- apiGroups:
-  - ""
-  resources:
-  - events
-  - pods
-  verbs:
-  - get
-  - list
-  - watch
-- apiGroups: 
-  - "events.k8s.io"
-  resources:
-  - events
-  verbs:
-  - watch
-  - list
-EOF
-<<EOF | kubectl apply -f -
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: otelcontribcol
-  labels:
-    app: otelcontribcol
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: otelcontribcol
-subjects:
-- kind: ServiceAccount
-  name: otelcontribcol
-  namespace: default
-EOF
+   <<EOF | kubectl apply -f -
+   apiVersion: rbac.authorization.k8s.io/v1
+   kind: ClusterRole
+   metadata:
+     name: otelcontribcol
+     labels:
+       app: otelcontribcol
+   rules:
+   - apiGroups:
+     - ""
+     resources:
+     - events
+     - pods
+     verbs:
+     - get
+     - list
+     - watch
+   - apiGroups: 
+     - "events.k8s.io"
+     resources:
+     - events
+     verbs:
+     - watch
+     - list
+   EOF
+
+.. code-block:: yaml
+
+   <<EOF | kubectl apply -f -
+   apiVersion: rbac.authorization.k8s.io/v1
+   kind: ClusterRoleBinding
+   metadata:
+     name: otelcontribcol
+     labels:
+       app: otelcontribcol
+   roleRef:
+     apiGroup: rbac.authorization.k8s.io
+     kind: ClusterRole
+     name: otelcontribcol
+   subjects:
+   - kind: ServiceAccount
+     name: otelcontribcol
+     namespace: default
+   EOF
 
 Deployment
 --------------------------------------
 
-Create a Deployment to deploy the Collector. Deploy the Kubernetes Objects receiver as one replica, otherwise it'll produce duplicated data.
+Deploy the Collector with the Kubernetes Objects receiver as one replica, otherwise it'll produce duplicated data.
 
 .. code-block:: yaml
 
