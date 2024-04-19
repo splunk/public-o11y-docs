@@ -116,7 +116,7 @@ The class accepts the parameters described in the following table:
 Configure automatic discovery for Java and Node.js (Linux only)
 ====================================================================
 
-You can automatically instrument your Java and Node.js applications along with the Collector installation using automatic discovery. Automatic discovery removes the need to install and configure the Java or Node.js agents. See :ref:`discovery_mode` for more information. 
+You can automatically instrument your Java and Node.js applications along with the Collector installation using automatic discovery. Automatic discovery (formerly zero configuration auto instrumentation) removes the need to install and configure the Java or Node.js agents. See :ref:`discovery_mode` for more information. 
 
 The following table shows the variables that you can configure for this Puppet module:
 

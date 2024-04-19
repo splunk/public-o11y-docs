@@ -106,7 +106,7 @@ The following table describes the variables that can be configured for this role
 Configure automatic discovery for Java (Linux only)
 ======================================================
 
-You can automatically discover and instrument your Java applications along with the Collector installation. Automatic discovery removes the need to install and configure the Java agent separately. See :ref:`configure-auto-instrumentation` for more information. 
+You can automatically discover and instrument your Java applications along with the Collector installation. Automatic discovery (formerly zero configuration auto instrumentation) removes the need to install and configure the Java agent separately. See :ref:`configure-auto-instrumentation` for more information. 
 
 The following table shows the variables that you can configure for this Ansible role:
 

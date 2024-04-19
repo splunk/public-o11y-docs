@@ -14,7 +14,7 @@ Discover metric sources automatically
    Linux <automatic-discovery/discovery-linux>
    Windows <automatic-discovery/discovery-windows>
 
-Use automatic discovery and configuration with the Splunk Distribution of OpenTelemetry Collector to collect metrics and traces automatically. 
+Use automatic discovery and configuration (formerly Zero Configuration Automatic Instrumentation) with the Splunk Distribution of OpenTelemetry Collector to collect metrics and traces automatically. 
 
 Automatic discovery and configuration helps you quickly get started with Splunk Application Performance Monitoring (APM) and Splunk Infrastructure Monitoring.
 
