@@ -31,15 +31,6 @@ To activate the Kubernetes Objects receiver manually in the Collector configurat
          group: events.k8s.io
          namespaces: [default]
 
-To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your configuration file:
-
-.. code:: yaml
-
-   service:
-     pipelines:
-       metrics:
-         receivers: [k8objects]
-
 Main settings
 --------------------------------------
 
@@ -85,7 +76,6 @@ Create a ConfigMap with the config for ``otelcontribcol``, replacing ``OTLP_ENDP
 
 .. code-block:: yaml
 
-   cat <<EOF | kubectl apply -f -
    apiVersion: v1
    kind: ConfigMap
    metadata:
@@ -112,7 +102,6 @@ Create a ConfigMap with the config for ``otelcontribcol``, replacing ``OTLP_ENDP
            logs:
              receivers: [k8sobjects]
              exporters: [otlp]
-   EOF
 
 Service account
 --------------------------------------
@@ -121,7 +110,6 @@ Create a service account for the Collector to use.
 
 .. code-block:: yaml
 
-   <<EOF | kubectl apply -f -
    apiVersion: v1
    kind: ServiceAccount
    metadata:
@@ -140,7 +128,6 @@ When using ``watch`` mode you must also specify the ``list`` verb so that the re
 
 .. code-block:: yaml
 
-   <<EOF | kubectl apply -f -
    apiVersion: rbac.authorization.k8s.io/v1
    kind: ClusterRole
    metadata:
@@ -164,11 +151,9 @@ When using ``watch`` mode you must also specify the ``list`` verb so that the re
      verbs:
      - watch
      - list
-   EOF
 
 .. code-block:: yaml
 
-   <<EOF | kubectl apply -f -
    apiVersion: rbac.authorization.k8s.io/v1
    kind: ClusterRoleBinding
    metadata:
@@ -183,7 +168,6 @@ When using ``watch`` mode you must also specify the ``list`` verb so that the re
    - kind: ServiceAccount
      name: otelcontribcol
      namespace: default
-   EOF
 
 Deployment
 --------------------------------------
@@ -192,7 +176,6 @@ Deploy the Collector with the Kubernetes Objects receiver as one replica, otherw
 
 .. code-block:: yaml
 
-   <<EOF | kubectl apply -f -
    apiVersion: apps/v1
    kind: Deployment
    metadata:
@@ -224,8 +207,6 @@ Deploy the Collector with the Kubernetes Objects receiver as one replica, otherw
              configMap:
                name: otelcontribcol
 
-   EOF
-
 .. _kubernetes-objects-receiver-settings:
 
 Settings
@@ -236,15 +217,6 @@ The following table shows the configuration options for the receiver:
 .. raw:: html
 
    <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/k8sobjects.yaml"></div>
-
-Metrics
-=====================
-
-The following metrics, resource attributes, and attributes are available.
-
-.. raw:: html
-
-   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/k8sobjectsreceiver.yaml"></div>
 
 Troubleshooting
 ======================
