@@ -36,7 +36,7 @@ The measurement precision of Troubleshooting MetricSets is 10 seconds. Splunk AP
 Where can I use TMS within Splunk APM?
 ----------------------------------------
 
-TMS appear on the service map and in Tag Spotlight. You can use TMS to filter the service map and create breakdowns across the values of a given indexed span tag or process. 
+TMS appear on the service map and in Tag Spotlight. Use TMS to filter the service map and create breakdowns across the values of a given indexed span tag or process. 
 
 See :ref:`apm-service-map` and :ref:`apm-tag-spotlight`.
 
@@ -143,7 +143,12 @@ Workflow metrics and dimensions are created by default when you create a Busines
 * ``sf_workflow``
 * ``sf_error``
 
-What is the MMS retention period?
+Where can I use MMS within Splunk APM?
+----------------------------------------
+
+Use MMS for alerting and real-time monitoring in Splunk APM.
+
+MMS retention period
 -----------------------------------
 
 Splunk Observability Cloud stores MMS for 13 months by default.
