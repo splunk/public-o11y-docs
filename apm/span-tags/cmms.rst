@@ -23,7 +23,7 @@ Prerequisites
 How custom Monitoring MetricSets add value to your organization
 ======================================================================
 
-APM generates a collection of MMS by default; see :ref:`mms-dimensions`. You can create additional MMS with custom dimensions to filter and aggregate the default generated metrics by a specific indexed span tag or process such as ``version`` or ``cloud.provider``.
+APM generates a collection of MMS by default; see :ref:`monitoring-metricsets`. You can create additional MMS with custom dimensions to filter and aggregate the default generated metrics by a specific indexed span tag or process such as ``version`` or ``cloud.provider``.
 
 You can create custom MMS at the service level and the endpoint (span) level. When you create a custom dimension for a service-level MMS, APM generates MMS that include the six service-level metrics listed in :ref:`service-mms`, with your chosen indexed span tag or process as a custom dimension. If you select to add endpoint-level metrics as well, APM generates MMS that include the six span-level metrics listed in :ref:`endpoint-mms`, with your chosen indexed span tag or process as a custom dimension. 
 
@@ -156,92 +156,3 @@ Custom dimensionalized MMS have a marker dimension, ``sf_dimensionalized: true``
 
 When you create your dashboards and charts, you can exclude custom dimensionalized MMS by adding a filter on ``!sf_dimensionalized: true``. 
 If you want to look at the time series of a custom dimensionalized MMS in your charts, filter on ``sf_dimensionalized: true`` and then aggregate by the custom dimension you want to look at. 
-
-The following tables provide the metrics and dimensions for MMS based on services, workflows, spans, and traces:
-
-.. _service-mms: 
-
-Service metrics and dimensions
----------------------------------
-
-.. list-table::
-   :header-rows: 1
-
-   * - :strong:`Metrics`
-     - :strong:`Dimensions`
-
-   * - - ``service.request.count``
-       - ``service.request.duration.ns.min``
-       - ``service.request.duration.ns.median``
-       - ``service.request.duration.ns.max``
-       - ``service.request.duration.ns.p90``
-       - ``service.request.duration.ns.p99``
-     - - ``sf_environment``
-       - ``sf_service``
-       - ``sf_error``
-
-Workflow metrics and dimensions
----------------------------------
-
-These workflow metrics are created by default when you create a Business Workflow. Custom MMS are not available for Business Workflows.
-
-.. list-table::
-   :header-rows: 1
-
-   * - :strong:`Metrics`
-     - :strong:`Dimensions`
-
-   * - - ``workflows.count``
-       - ``workflows.duration.ns.min``
-       - ``workflows.duration.ns.median``
-       - ``workflows.duration.ns.max``
-       - ``workflows.duration.ns.p90``
-       - ``workflows.duration.ns.p99``
-     - - ``sf_environment``
-       - ``sf_workflow``
-       - ``sf_error``
-
-.. _endpoint-mms:
-
-Span (endpoint-level) metrics and dimensions
-----------------------------------------------
-
-.. list-table::
-   :header-rows: 1
-
-   * - :strong:`Metrics`
-     - :strong:`Dimensions`
-
-   * - - ``spans.count``
-       - ``spans.duration.ns.min``
-       - ``spans.duration.ns.median``
-       - ``spans.duration.ns.max``
-       - ``spans.duration.ns.p90``
-       - ``spans.duration.ns.p99``
-     - - ``sf_environment``
-       - ``sf_service``
-       - ``sf_operation``
-       - ``sf_kind``
-       - ``sf_error``
-       - ``sf_httpMethod``, where relevant
-
-Trace metrics and dimensions
----------------------------------
-
-.. list-table::
-   :header-rows: 1
-
-   * - :strong:`Metrics`
-     - :strong:`Dimensions`
-
-   * - - ``traces.count``
-       - ``traces.duration.ns.min``
-       - ``traces.duration.ns.median``
-       - ``traces.duration.ns.max``
-       - ``traces.duration.ns.p90``
-       - ``traces.duration.ns.p99``
-     - - ``sf_environment``
-       - ``sf_service``
-       - ``sf_operation``
-       - ``sf_httpMethod``
-       - ``sf_error``
