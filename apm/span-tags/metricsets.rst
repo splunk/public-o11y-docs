@@ -69,7 +69,7 @@ Available MMS metrics and dimensions
 MMS are available for the following APM components:
 
 - service.request
-- spans
+- spans 
 - traces
 - workflows (Workflow metrics are created by default when you create a Business Workflow. Custom MMS are not available for Business Workflows.)
 
@@ -96,10 +96,10 @@ For each metric, there is 1 metric time series (MTS) with responses ``sf_error: 
         - ``<component>`` with a ``median`` function
     *   - Percentile request duration
         - ``<component>.duration.ns.p90`` 
-        - ``<component`` with a ``percentile`` function
+        - ``<component`` with a ``percentile`` function and a percentile ``value``
     *   - Percentile request duration
         - ``<component>.duration.ns.p99`` 
-        - ``<component>`` with a ``percentile`` function
+        - ``<component>`` with a ``percentile`` function and a percentile ``value``
     *   - Maximum request duration
         - ``<component>.duration.ns.max`` 
         - ``<component>`` with a ``max`` function
