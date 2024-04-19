@@ -36,7 +36,7 @@ The following diagram shows the process of using automatic discovery and configu
       X --> Y --> Z
       \n
 
-Automatic discovery and configuration can detect several types of data sources on the host or Kubernetes cluster, such as language runtimes, databases, and web servers. With this information, the Collector generates configuration you can modify and adopt, or incorporate into your exiting configuration automatically by default.
+Automatic discovery and configuration can detect several types of data sources on the host or Kubernetes cluster, such as language runtimes, databases, and web servers. 
 
 Using this capability, you can automatically instrument your back-end applications such as Java or .NET without any additional installation or configuration steps. With automatic discovery, you can quickly get started with Splunk APM. 
 
