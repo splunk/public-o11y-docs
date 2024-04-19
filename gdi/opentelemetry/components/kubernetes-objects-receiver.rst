@@ -7,7 +7,7 @@ Kubernetes objects receiver
 .. meta::
       :description: Collects objects from the Kubernetes API server. Supports authentication through service accounts only.
 
-The Kubernetes Objects receiver collects objects from the Kubernetes API server. 
+The Kubernetes Objects receiver collects objects from the Kubernetes API server. The supported pipeline is ``logs``. See :ref:`otel-data-processing` and :ref:`kubernetes-config-logs` for more information.
 
 .. note:: This receiver supports authentication via service accounts only at the moment. 
 
@@ -30,6 +30,15 @@ To activate the Kubernetes Objects receiver manually in the Collector configurat
          mode: watch
          group: events.k8s.io
          namespaces: [default]
+
+To complete the configuration, include the receiver in the ``logs`` pipelines of the ``service`` section of your configuration file. For example:
+
+.. code:: yaml
+
+    {{- if and (eq (include "splunk-otel-collector.objectsEnabled" .) "true") (eq (include "splunk-otel-collector.logsEnabled" .) "true") }}
+    logs/objects:
+      receivers:
+        - k8sobjects
 
 Main settings
 --------------------------------------
