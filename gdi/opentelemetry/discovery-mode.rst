@@ -34,7 +34,6 @@ The following diagram shows the process of using automatic discovery and configu
       Z["Run your application"]
       
       X --> Y --> Z
-      \n
 
 Automatic discovery and configuration can detect several types of data sources on the host or Kubernetes cluster, such as language runtimes, databases, and web servers. 
 
