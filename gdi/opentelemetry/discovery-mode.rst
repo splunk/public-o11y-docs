@@ -1,7 +1,7 @@
 .. _discovery_mode:
 
 ***************************************************************************
-Discover metric sources automatically
+Discover telemetry sources automatically
 ***************************************************************************
 
 .. meta::
