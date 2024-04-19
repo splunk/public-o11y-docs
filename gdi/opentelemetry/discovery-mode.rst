@@ -55,7 +55,7 @@ The following table shows the platforms that support each language runtime:
    :width: 100%
    :widths: 25 25 25 25
 
-   * - Application/language
+   * - Application language
      - Supported for Linux
      - Supported for Windows
      - Supported for Kubernetes
