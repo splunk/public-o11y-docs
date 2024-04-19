@@ -91,18 +91,19 @@ For each metric, there is 1 metric time series (MTS) with responses ``sf_error: 
     *   - Minimum request duration
         - ``<component>.duration.ns.min`` 
         - ``<component>`` with a ``min`` function 
+    *   - Maximum request duration
+        - ``<component>.duration.ns.max`` 
+        - ``<component>`` with a ``max`` function
     *   - Median request duration
         - ``<component>.duration.ns.median`` 
         - ``<component>`` with a ``median`` function
     *   - Percentile request duration
         - ``<component>.duration.ns.p90`` 
-        - ``<component`` with a ``percentile`` function and a percentile ``value``
+        - ``<component>`` with a ``percentile`` function and a percentile ``value``
     *   - Percentile request duration
         - ``<component>.duration.ns.p99`` 
         - ``<component>`` with a ``percentile`` function and a percentile ``value``
-    *   - Maximum request duration
-        - ``<component>.duration.ns.max`` 
-        - ``<component>`` with a ``max`` function
+
 
 Each MMS has a set of dimensions you can use to monitor and alert on service performance. 
 
