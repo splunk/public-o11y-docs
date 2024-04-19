@@ -1,17 +1,28 @@
-.. _auto-instrumentation-dotnet-windows:
+.. _windows-backend-auto-discovery:
 
-***********************************************************************************************
-Zero Configuration Auto Instrumentation for Windows .NET applications
-***********************************************************************************************
+****************************************************************
+Automatic discovery for back-end applications in Windows
+****************************************************************
 
-.. _install-the-package-dotnet:
+.. meta:: 
+    :description: draft
 
-.. meta::
-    :description: How to activate zero configuration automatic instrumentation for Windows .NET applications and thus collect and send traces to Splunk Application Performance Monitoring (APM) without altering your code.
+Automatic discovery can detect the following types of applications in your Windows environment:
 
-Zero Configuration Auto Instrumentation for OpenTelemetry .NET activates automatic instrumentation for .NET applications running on Windows. After installing the package, you must start or restart any .NET applications that you want to instrument.
+Automatic discovery and configuration for OpenTelemetry .NET activates automatic instrumentation for .NET applications running on Windows. After installing the package, you must start or restart any .NET applications that you want to instrument.
 
 .. note:: The SignalFx instrumentation for .NET is deprecated and will reach end of support on February 21, 2025. To learn how to migrate from SignalFx .NET to OpenTelemetry .NET, see :ref:`migrate-signalfx-dotnet-to-dotnet-otel`.
+
+Get started
+==================================================
+
+To get started with automatic discovery for Windows, follow these steps:
+
+#. :ref:`windows-install-package`
+#. :ref:`configure-the-package-dotnet`
+#. :ref:`upgrade-the-package-dotnet`
+
+.. _windows-install-package:
 
 Install the package
 =========================================================
@@ -43,8 +54,8 @@ To configure the instrumentation, see :ref:`advanced-dotnet-otel-configuration`.
 
 .. _upgrade-the-package-dotnet:
 
-Upgrade the package
-==========================
+(Optional) Upgrade the package
+==================================
 
 You can upgrade the package by installing a new version of the Splunk Distribution of OpenTelemetry .NET. See :ref:`instrument-otel-dotnet-applications`.
 

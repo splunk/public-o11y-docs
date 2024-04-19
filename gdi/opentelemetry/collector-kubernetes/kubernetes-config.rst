@@ -341,7 +341,7 @@ AlwaysOn Profiling in Splunk APM continuously captures stack traces, helping you
 
 The Collector ingests profiling data using the ``logs`` pipeline.
 
-Learn more at :ref:`zero-config` and :ref:`profiling-intro`.
+Learn more at :ref:`discovery_mode` and :ref:`profiling-intro`.
 
 Set up profiling 
 -------------------------------------------

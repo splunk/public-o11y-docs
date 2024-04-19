@@ -396,7 +396,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Splunk Distribution of the OpenTelemetry Collector TOGGLE <gdi/opentelemetry/opentelemetry>
 
 .. toctree::
-   :maxdepth:   3
+   :maxdepth:   4
 
    Collect infrastructure metrics and logs TOGGLE <gdi/get-data-in/compute/compute>
 
