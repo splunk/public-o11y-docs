@@ -63,8 +63,10 @@ Spans might lack a ``kind`` value, or have a different ``kind`` value, in the fo
 * The span originates in self-initiating operations or inferred services
 * An error in instrumentation occurs.
 
-Available MMS metrics and dimensions
-----------------------------------------
+In addition to the following default MMS, you can create custom MMS. See :ref:`cmms`.
+
+Available default MMS metrics and dimensions
+-----------------------------------------------
 
 MMS are available for the following APM components:
 
