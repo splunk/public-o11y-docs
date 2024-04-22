@@ -98,7 +98,9 @@ Select the :guilabel:`Endpoints` tab to view endpoints for the service. Use the 
 View logs for your service
 ===============================
 
-Select :guilabel:`Logs` to view logs for the environment and service you are viewing. By default, logs are displayed for all indices that correspond to first listed Log Observer Connect connection. To select a different connection or refine which indices logs are pulled from, select :guilabel:`Configure service view`. 
+Select :guilabel:`Logs` to view logs for the environment and service you are viewing. By default, logs are displayed for all indices that correspond to first listed Log Observer Connect connection. Logs are filtered by the service you are viewing using the ``service.name`` value. If your logs do not have a ``service.name`` value, you can create an alias under :guilabel:`Settings` then :guilabel:`Logs Field Aliasing`.
+
+To select a different connection or refine which indices logs are pulled from, select :guilabel:`Configure service view`. 
 
 1. In the :guilabel:`Log Observer Connect Index` drop-down list, select the Log Observer Connect connection, then select the corresponding indices you want to pull logs from. 
 2. Select :guilabel:`Apply`
