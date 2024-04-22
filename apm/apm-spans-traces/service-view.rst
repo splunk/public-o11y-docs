@@ -98,7 +98,7 @@ Select the :guilabel:`Endpoints` tab to view endpoints for the service. Use the 
 View logs for your service
 ===============================
 
-Select :guilabel:`Logs` to view logs for the environment and service you are viewing. By default, logs are displayed for all indices that correspond to first listed Log Observer Connect connection. Logs are filtered by the service you are viewing using the ``service.name`` value. If your logs do not have a ``service.name`` value, you can create an alias under :guilabel:`Settings` then :guilabel:`Logs Field Aliasing`.
+Select :guilabel:`Logs` to view logs for the environment and service you are viewing. By default, logs are displayed for all indices that correspond to first listed Log Observer Connect connection. Logs are filtered by the service you are viewing using the ``service.name`` value. If your logs do not have a ``service.name`` value, you can create an alias in Splunk Web. See :new-page:`Create field aliases in Splunk Web <https://docs.splunk.com/Documentation/SplunkCloud/9.0.2305/Knowledge/Addaliasestofields>`.
 
 To select a different connection or refine which indices logs are pulled from, select :guilabel:`Configure service view`. 
 
@@ -111,7 +111,7 @@ The connection and indices you select are saved for all users in your organizati
 Go to the code profiling view for your service
 =====================================================
 
-Select :guilabel:`Code profiling` to go to the  code profiling view of AlwaysOn Profiling filtered for your service. See :ref:`profiling-intro` to learn more about AlwaysOn Profiling.
+Select :guilabel:`Code profiling` to go to the code profiling view of AlwaysOn Profiling filtered for your service. See :ref:`profiling-intro` to learn more about AlwaysOn Profiling.
 
 Go to the memory profiling view for your service
 =======================================================
