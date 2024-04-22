@@ -7,14 +7,14 @@ Search in Splunk Observability Cloud
 .. meta::
   :description: Learn about how to use the Splunk Observability Cloud search feature to quickly navigate to the objects you want to see.
 
-Use the search capability from the Splunk Observability Cloud top navigation bar to search for Splunk Application Performance Monitoring (APM) services, traceIDs, dashboards, charts, and more. Regardless of where you are in the Observability Cloud, you can use the search capability to find metrics-based targets.
+Use the search from the Splunk Observability Cloud top navigation bar to search for Splunk Application Performance Monitoring (APM) services, traceIDs, dashboards, charts, and more. Regardless of where you are in the Observability Cloud, you can use the search capability to find metrics-based targets.
 
 Prerequisites
 =====================
 
-The search capability will only show results for Splunk APM if your organization has access to Splunk APM. 
+Search only shows results for Splunk APM if your organization has access to Splunk APM. 
 
-The search capability is currently limited to Splunk APM, dashboards, charts, Infrastructure Monitoring navigators, and docs results.
+Search is currently limited to Splunk APM, dashboards, charts, Infrastructure Monitoring navigators, and docs results.
 
 .. _prefix:
 
@@ -56,8 +56,8 @@ How to use observability search
 
 You can either search a specific term, or define what type of object you're looking for by using one of the supported prefixes to narrow the search to specific result types. This allows you to search for a specific object, if you know the type and name. Or, you can search by prefix type if you're unsure of the name. 
 
-#. Navigate to the top right hand corner and locate the magnifying glass icon. 
-#. Select the search icon (magnifying glass) to launch search. From there, type in the service name you want to search. The following example, searches for “checkoutservice.” The results include APM services, dashboards and more. 
+#. Navigate to the top right-hand corner and locate the magnifying glass icon. 
+#. Select the search icon (magnifying glass) to launch search. From there, enter the service name you want to search. The following example, searches for “checkoutservice.” The results include APM services, dashboards and more. 
 
     .. image:: /_images/images-ui/search-apm.png
        :width: 100%
