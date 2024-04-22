@@ -114,7 +114,9 @@ Each MMS has a set of dimensions you can use to monitor and alert on service per
 Service dimensions
 ---------------------------------
 * ``sf_environment``
+* ``deployment.environment`` - This dimension is only available for histogram MMS.
 * ``sf_service``
+* ``service.name`` - This dimension is only available for histogram MMS.
 * ``sf_error``
 
 .. _endpoint-mms:
@@ -123,7 +125,9 @@ Span dimensions
 ----------------------------------------------
 
 * ``sf_environment``
+* ``deployment.environment`` - This dimension is only available for histogram MMS.
 * ``sf_service``
+* ``service.name`` - This dimension is only available for histogram MMS.
 * ``sf_operation``
 * ``sf_kind``
 * ``sf_error``
@@ -132,7 +136,9 @@ Span dimensions
 Trace dimensions
 ---------------------------------
 * ``sf_environment``
+* ``deployment.environment`` - This dimension is only available for histogram MMS.
 * ``sf_service``
+* ``service.name`` - This dimension is only available for histogram MMS.
 * ``sf_operation``
 * ``sf_httpMethod``
 *  ``sf_error``
@@ -143,6 +149,7 @@ Workflow dimensions
 Workflow metrics and dimensions are created by default when you create a Business Workflow. 
 
 * ``sf_environment``
+* ``deployment.environment``
 * ``sf_workflow``
 * ``sf_error``
 
