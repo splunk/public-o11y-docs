@@ -147,7 +147,22 @@ Workflow metrics and dimensions are created by default when you create a Busines
 Where can I use MMS within Splunk APM?
 ----------------------------------------
 
-Use MMS for alerting and real-time monitoring in Splunk APM.
+Use MMS for alerting and real-time monitoring in Splunk APM. You can create charts, dashboards, and alerts based on Monitoring MetricSets. 
+
+.. list-table::
+   :header-rows: 1
+   :widths: 15, 50
+
+   * - :strong:`Task`
+     - :strong:`Documentation`
+   * - Create charts
+     - :ref:`create-charts`
+   * - Create dashboards
+     - :ref:`dashboard-create-customize`
+   * - Create an alert 
+     - :ref:`apm-alerts`
+   * - Monitor services in APM dashboards 
+     - :ref:`Track service performance using dashboards in Splunk APM<apm-dashboards>
 
 MMS retention period
 -----------------------------------
