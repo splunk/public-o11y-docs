@@ -7,7 +7,7 @@ Generate a Monitoring MetricSet with a custom dimension
 .. meta::
    :description: Learn how to generate a Monitoring MetricSet with a custom dimension. 
 
-Generate Monitoring MetricSets (MMS) with custom dimensions to monitor your services in real time. Splunk APM provides a default set of MMS, but you can configure additional MMS using indexed span tags to create custom dimensions. You can use your MMS to create custom charts, dashboards, and detectors to keep track of what matters most to your team. See :ref:`pm-alert-visualize`. 
+Generate Monitoring MetricSets (MMS) with custom dimensions to monitor your services in real time. Splunk APM provides a default set of MMS, but you can configure additional MMS using indexed span tags to create custom dimensions. You can use your MMS to create custom charts, dashboards, and detectors to keep track of what matters most to your team. See :ref:`charts-dashboards-alerts`. 
 
 To learn about the default MMS in Splunk APM, see :ref:`monitoring-metricsets`. 
 
@@ -29,7 +29,7 @@ APM generates a collection of MMS by default; see :ref:`monitoring-metricsets`. 
 
 You can create custom MMS at the service level and the endpoint (span) level. When you create a custom dimension for a service-level MMS, APM generates MMS that include the service-level metrics with your chosen indexed span tag or process as a custom dimension. If you add endpoint-level metrics as well, APM generates MMS that include span-level metrics, with your chosen indexed span tag or process as a custom dimension. 
 
-When you create an MMS with a custom dimension, you can use this custom dimension to create charts, dashboards, and alerts. See :ref:`pm-alert-visualize`. 
+When you create an MMS with a custom dimension, you can use this custom dimension to create charts, dashboards, and alerts. See :ref:`charts-dashboards-alerts`. 
 
 To learn more about a specific scenario for custom MMS: :ref:`custom-metricset`.
 
@@ -126,6 +126,8 @@ Follow these steps to create a Monitoring MetricSet.
       :alt: This image shows the cardinality check for a Monitoring MetricSet. 
 
 .. note:: Splunk APM replaces dots with underscores in dimension names for MMS time series.
+
+.. _charts-dashboards-alerts:
 
 Set up charts, dashboards, and alerts for custom dimensions
 ==================================================================

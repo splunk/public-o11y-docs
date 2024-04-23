@@ -171,7 +171,7 @@ Use MMS for alerting and real-time monitoring in Splunk APM. You can create char
    * - Create an alert 
      - :ref:`apm-alerts`
    * - Monitor services in APM dashboards 
-     - :ref:`Track service performance using dashboards in Splunk APM<apm-dashboards>
+     - :ref:`Track service performance using dashboards in Splunk APM<apm-dashboards>`
 
 MMS retention period
 -----------------------------------
