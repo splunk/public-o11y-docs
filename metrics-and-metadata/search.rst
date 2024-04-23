@@ -21,7 +21,7 @@ Search is currently limited to Splunk APM, dashboards, charts, Infrastructure Mo
 Supported search prefixes
 ===============================
 
-Narrow your search results to specific types of objects by using one of the supported search prefixes to indicate what type of information you're searching for. While wildcard characters are not supported, search will match on substrings. 
+Narrow your search results to specific types of objects by using one of the supported search prefixes to indicate what type of information you're searching for. While wildcard characters are not supported, search does match on substrings. 
 
 Supported search prefixes include:
 
