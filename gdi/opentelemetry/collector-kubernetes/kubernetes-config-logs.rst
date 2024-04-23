@@ -227,7 +227,7 @@ For example:
       group: events.k8s.io
       namespaces: [default]
   
-For more information, see the Github documentation for the cluster receiver Helm chart deployment at :new-page:`Kubernetes objects collection using OpenTelemetry Kubernetes Object Receiver <https://github.com/signalfx/splunk-otel-collector-chart/blob/da261f5c75444e50cc68e93164587bfec43b7270/helm-charts/splunk-otel-collector/values.yaml#L466C5>`.
+For more information, see :ref:`kubernetes-objects-receiver` and the Github documentation for the cluster receiver Helm chart deployment at :new-page:`Kubernetes objects collection using OpenTelemetry Kubernetes Object Receiver <https://github.com/signalfx/splunk-otel-collector-chart/blob/da261f5c75444e50cc68e93164587bfec43b7270/helm-charts/splunk-otel-collector/values.yaml#L466C5>`.
 
 Collect journald events
 ----------------------------------
