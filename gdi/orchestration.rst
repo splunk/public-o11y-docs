@@ -18,6 +18,7 @@ Configure application receivers for orchestration
    monitors-orchestration/kubernetes-controller-manager
    monitors-orchestration/kubernetes-events
    monitors-orchestration/kubernetes-network-stats
+   opentelemetry/components/kubernetes-objects-receiver
    monitors-orchestration/kubernetes-proxy
    monitors-orchestration/kubernetes-scheduler
    opentelemetry/components/kubelet-stats-receiver
@@ -32,6 +33,7 @@ These application receivers gather metrics from their associated orchestration-r
 * :ref:`kube-controller-manager`
 * :ref:`kubernetes-events`
 * :ref:`kubelet-stats`
+* :ref:`kubernetes-objects-receiver`
 * :ref:`kubernetes-proxy`
 * :ref:`kubernetes-scheduler`
 * :ref:`kubelet-stats-receiver`
