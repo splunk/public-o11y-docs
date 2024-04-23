@@ -36,6 +36,7 @@ Follow these steps to set up a Browser test:
 #. As you build your test, you can use :guilabel:`Try now` to check that the configuration of your test is valid. Try now results are ephemeral and don’t impact persisted run metrics. For more, see :ref:`try-now`. 
 
 #. (Optional) Add a wait time before a step executes. See, :ref:`browser-wait-times`.
+#. (Optional) Turn on automatic test retry in the event a test initially fails. 
 
 
 #. Save your test. 
@@ -594,6 +595,11 @@ There are many reasons why you might want to configure advanced settings for you
 * Running a test on a pre-production site that has a self-signed certificate.
 
 
+
+Auto-retry 
+----------------
+
+Run a test again automatically if it fails without any user intervention. It's a best practice to turn on auto-retry to reduce unnecessary failures from temporary interruptions like a network issue, timeouts, or other issues. Auto-retry runs do not impact subscription usage, only the completed run result counts towards your subscription usage.
 
 
 .. _browser-cookies:
