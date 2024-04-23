@@ -7,7 +7,7 @@ Available AWS CloudWatch metadata
 .. meta::
    :description: List of Splunk Infrastructure Monitoring AWS integration imported AWS metadata.
 
-Infrastructure Monitoring automatically imports AWS metadata for the selected AWS resources listed in this document. Metadata is imported as a property attached to the ``AWSUniqueId`` dimension of a CloudWatch metric. 
+Infrastructure Monitoring automatically imports AWS metadata for the selected AWS resources listed in this document. Metadata is imported as properties attached to the ``AWSUniqueId`` dimension of a CloudWatch metric. 
 
 Keep in mind metadata might take up to 15 minutes to arrive.
 
