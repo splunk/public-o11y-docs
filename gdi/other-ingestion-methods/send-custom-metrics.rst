@@ -27,7 +27,6 @@ The following example shows a custom Prometheus receiver that scrapes a live end
 
 .. code-block:: yaml
 
-
   prometheus/custom:
     config:
       scrape_configs:
@@ -40,7 +39,6 @@ Make sure that the new receiver is the ``metrics`` pipeline of the configuration
 
 .. code-block:: yaml
 
-
     metrics:
       receivers: [ prometheus/custom, otlp, ... ]
       processors: [ memory_limiter, batch, resourcedetection ]
@@ -51,7 +49,7 @@ See :ref:`prometheus-receiver` for more information.
 Add the required dependencies
 --------------------------------------------------
 
-To send custom infrastructure or service metrics from the code of your application, or from a script that queries a service at regular intervals, add the required dependencies, including OpenTelemetry packages. 
+To send custom infrastructure or service metrics from the code of your application, or from a script that queries a service at regular intervals, add the required dependencies, including OpenTelemetry packages.
 
 The following example shows dependencies for a Python script that send metrics every time it's run by ``cron``:
 
