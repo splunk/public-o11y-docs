@@ -104,25 +104,25 @@ Avoid these aggregation issues by using the following options:
 * Do your own MTS aggregation before sending your data by reconfiguring the OTel collector to drop unwanted dimensions.
 * Aggregate data using SignalFlow when you generate charts or create detectors.
 
-Benefits of using metric pipeline management
+Benefits of aggregating using metric pipeline management
 =============================================================================
 
 Use MPM instead of aggregation at query time
 ----------------------------------------------------------------
 
-Although you can use SignalFlow to aggregate MTS, by applying the "group by" option, this aggregation is different from MPM aggregation:
+Although you can use SignalFlow to aggregate MTS by applying the "group by" option, this aggregation is different from MPM aggregation:
 
 * MPM aggregates MTS before storing the MTS in the Splunk Observability Cloud database.
 * SignalFlow stores MTS in the database before doing the aggregation.
 * SignalFlow can't help you remove high-cardinality dimensions, and it can't drop MTS you don't need. 
 * MPM aggregation occurs before raw MTS ingestion is complete, so you can eliminate high-cardinality dimensions and drop data you don't want.
 
-Use MPM instead of Splunk Distribution of the OpenTelemetry Collector changes
+Use MPM instead of modifying the Splunk Distribution of the OpenTelemetry Collector 
 ------------------------------------------------------------------------------------------------
 
-When you use MPM, you don't have to modify the configuration of your Splunk Distribution of the OpenTelemetry Collector. You can still use the configuration to ingest data, remove high-cardinality dimensions, drop MTS you don't need, and route MTS to the low-cost data tier after you ingest OpenTelemetry data. 
+When you use MPM, you don't have to modify the configuration of your Splunk Distribution of the OpenTelemetry Collector. With MPM you can remove high-cardinality dimensions, drop MTS you don't need, and route MTS to the low-cost data tier after you ingest OpenTelemetry data. 
 
-To learn how to remove data before using the Collector by modifying the configuration, see :ref:`configure-remove`.
+To learn how to remove data before ingestion by modifying the Collector configuration, see :ref:`configure-remove`.
 
 .. _use-metrics-pipeline:
 
