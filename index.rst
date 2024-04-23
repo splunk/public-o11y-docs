@@ -434,6 +434,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Use internal search <metrics-and-metadata/search>
+
+.. toctree::
+   :maxdepth:   3
+
    Metrics, metadata and events TOGGLE <metrics-and-metadata/metrics-landing>
 
 .. toctree::

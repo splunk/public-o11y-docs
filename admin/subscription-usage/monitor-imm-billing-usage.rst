@@ -56,6 +56,13 @@ Metric resolution
 
 Metric resolution does not affect billing in host-based plans. To learn more, see :ref:`metric-resolution`.
 
+.. _about-archived-metrics:
+
+Archived metrics
+-------------------------------------------------------------------------------------
+
+If you archive any of your metrics using Metrics Pipeline Management, those will be charged at 1/10th the cost of regular, real-time metrics. For more information, see :ref:`metrics-pipeline-intro`.
+
 .. _using-page:
 
 Access Infrastructure Monitoring usage reports
