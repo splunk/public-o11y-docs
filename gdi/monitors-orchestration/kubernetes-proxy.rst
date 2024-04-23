@@ -24,7 +24,8 @@ Benefits
 
 .. include:: /_includes/benefits.rst
 
-## Installation
+Installation
+------------
 
 .. include:: /_includes/collector-installation.rst
 

@@ -82,7 +82,7 @@ To install the Collector for Linux using a Debian package, set up the package re
    apt-get update
    apt-get install -y splunk-otel-collector
 
-   # Optional: install Splunk OpenTelemetry Auto Instrumentation
+   # Optional: install Splunk OpenTelemetry automatic discovery for language runtimes
    apt-get install -y splunk-otel-auto-instrumentation
 
 See also:
@@ -299,8 +299,10 @@ Auto Instrumentation agents
 
 The ``splunk-otel-auto-instrumentation`` deb/rpm package installs and supports configuration for the following Auto Instrumentation agents:
 
-* :ref:`auto-instrumentation-java`
-* :ref:`auto-instrumentation-nodejs`
+* Java
+* Node.js
+
+To learn more, see :ref:`linux-backend-auto-discovery`.
 
 .. _linux-packages-fluentd:
 

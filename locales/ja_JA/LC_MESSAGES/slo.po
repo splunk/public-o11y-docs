@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-07 09:20+0000\n"
-"PO-Revision-Date: 2024-02-26 16:12+0000\n"
+"PO-Revision-Date: 2024-04-17 16:22+0100\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -28,7 +28,7 @@ msgstr "シフトを引き受ける"
 
 #: ../../_includes/slo/slo-preview-header.rst:1 ../../slo/slo-preview-sitemap.rst:3
 msgid "Preview: Service level objective (SLO) management"
-msgstr "プレビューサービスレベル目標（SLO）管理"
+msgstr "プレビュー：サービスレベル目標（SLO）管理"
 
 #: ../../_includes/slo/slo-preview-header.rst:3 ../../slo/slo-preview-sitemap.rst:5
 msgid ""
@@ -44,19 +44,19 @@ msgstr ":ref:`slo-preview-sitemap` を参照してトピックの全リストを
 
 #: ../../_includes/slo/slo-preview-header.rst:7 ../../slo/slo-preview-sitemap.rst:16
 msgid ":ref:`slo-intro`"
-msgstr ":ref:`slo-intro`"
+msgstr ":ref:`slo-intro` "
 
 #: ../../_includes/slo/slo-preview-header.rst:8 ../../slo/slo-preview-sitemap.rst:17
 msgid ":ref:`create-slo`"
-msgstr ":ref:`create-slo`"
+msgstr ":ref:`create-slo` "
 
 #: ../../_includes/slo/slo-preview-header.rst:9 ../../slo/slo-preview-sitemap.rst:18
 msgid ":ref:`burn-rate-alerts`"
-msgstr ":ref:`burn-rate-alerts`"
+msgstr ":ref:`burn-rate-alerts` "
 
 #: ../../_includes/slo/slo-preview-header.rst:10 ../../slo/slo-preview-sitemap.rst:19
 msgid ":ref:`view-slo`"
-msgstr ":ref:`view-slo`"
+msgstr ":ref:`view-slo` "
 
 #: ../../slo/burn-rate-alerts.rst:9
 msgid "Burn rate alerts"
@@ -118,19 +118,19 @@ msgstr "99.9％のSLOで30日間のコンプライアンスウィンドウを設
 
 #: ../../slo/burn-rate-alerts.rst:50 ../../slo/burn-rate-alerts.rst:70
 msgid ":strong:`Long window`"
-msgstr ":strong:`ロングウィンドウ`"
+msgstr ":strong:`ロングウィンドウ` "
 
 #: ../../slo/burn-rate-alerts.rst:51 ../../slo/burn-rate-alerts.rst:71
 msgid ":strong:`Short window`"
-msgstr ":strong:`ショートウィンドウ`"
+msgstr ":strong:`ショートウィンドウ` "
 
 #: ../../slo/burn-rate-alerts.rst:52 ../../slo/burn-rate-alerts.rst:72
 msgid ":strong:`Error budget consumed`"
-msgstr ":strong:`消費されたエラー予算`"
+msgstr ":strong:`消費されたエラー予算` "
 
 #: ../../slo/burn-rate-alerts.rst:53 ../../slo/burn-rate-alerts.rst:73
 msgid ":strong:`Burn rate threshold`"
-msgstr ":strong:`燃焼率のしきい値`"
+msgstr ":strong:`燃焼率のしきい値` "
 
 #: ../../slo/burn-rate-alerts.rst:54 ../../slo/burn-rate-alerts.rst:74
 msgid "1 hour"
@@ -218,11 +218,11 @@ msgstr "SLO のシステム健全性インジケータとして使用するサ�
 
 #: ../../slo/create-slo.rst:31 ../../slo/create-slo.rst:50 ../../slo/create-slo.rst:63
 msgid ":strong:`Field name`"
-msgstr ":strong:`フィールド名`"
+msgstr ":strong:`フィールド名` "
 
 #: ../../slo/create-slo.rst:32 ../../slo/create-slo.rst:51 ../../slo/create-slo.rst:64
 msgid ":strong:`Description`"
-msgstr ":strong:`説明`"
+msgstr ":strong:`説明` "
 
 #: ../../slo/create-slo.rst:33
 msgid "Metric type"
@@ -358,15 +358,15 @@ msgstr "次の表は、サービスレベルモニタリングのキーコンセ
 
 #: ../../slo/slo-intro.rst:31
 msgid ":strong:`Concept`"
-msgstr ":strong:`コンセプト`"
+msgstr ":strong:`コンセプト` "
 
 #: ../../slo/slo-intro.rst:32
 msgid ":strong:`Definition`"
-msgstr ":strong:`定義`"
+msgstr ":strong:`定義` "
 
 #: ../../slo/slo-intro.rst:33
 msgid ":strong:`Examples`"
-msgstr ":strong:`例`"
+msgstr ":strong:`例` "
 
 #: ../../slo/slo-intro.rst:35
 msgid "Service level indicator (SLI)"

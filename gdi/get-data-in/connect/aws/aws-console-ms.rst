@@ -34,7 +34,7 @@ To access the guided setup for the AWS integration, perform the following steps:
 
   - On the navigation menu, select :menuselection:`Data Management`. 
   - Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
-  - On the Integrate Your Data page, select the tile for :strong:`Amazon Web Services`.
+  - On the :strong:`Integrate Your Data` page, select the tile for :strong:`Amazon Web Services`.
 
 Next, follow the steps provided in the guided setup:
 

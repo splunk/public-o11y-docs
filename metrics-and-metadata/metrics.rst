@@ -133,6 +133,9 @@ There are three types of metrics: gauge, cumulative counter, and counter. See mo
   * - Counter
     - Number of new occurrences or items since the last measurement
     - The number of packets that fail to reach their destinations over each 24-hour period
+  * - Histograms
+    - Distribution of measurements across time. Splunk Observability Cloud supports explicit bucket histograms.
+    - Response time (performance) or successful screen loads (availability)
 
 Metric category
 ----------------------
