@@ -1,7 +1,7 @@
 .. _aws-infra-metadata:
 
 ******************************************
-Available AWS CloudWatch metadata
+Available AWS metadata
 ******************************************
 
 .. meta::
