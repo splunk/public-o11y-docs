@@ -2,7 +2,7 @@
 .. _metrics-usage-report:
 
 ************************************************************************
-Understand your metrics usage with metrics usage report
+Understand your metrics usage with the metrics usage report
 ************************************************************************
 
 
