@@ -32,7 +32,7 @@ Splunk Observability Cloud works with the following data types:
 Next steps: Tools and analytics
 ========================================================
 
-Observability Cloud provides a wide array of features and tools to help you manage, understand, and leverage your data. For more details, refer to :ref:`data-tools-landing`.
+Observability Cloud provides a wide array of features and tools to help you manage, understand, and leverage your data. For more details, see :ref:`data-tools-landing`.
 
 For advanced analytics, use SignalFlow to analyze incoming data and write custom chart and detector analytics. See more at :ref:`signalflow-analytics-intro`.
 
