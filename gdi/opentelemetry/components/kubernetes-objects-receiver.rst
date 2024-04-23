@@ -35,7 +35,6 @@ To complete the configuration, include the receiver in the ``logs`` pipelines of
 
 .. code:: yaml
 
-    {{- if and (eq (include "splunk-otel-collector.objectsEnabled" .) "true") (eq (include "splunk-otel-collector.logsEnabled" .) "true") }}
     logs/objects:
       receivers:
         - k8sobjects
