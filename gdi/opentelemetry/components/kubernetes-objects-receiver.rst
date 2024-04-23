@@ -14,30 +14,48 @@ The Kubernetes Objects receiver collects objects from the Kubernetes API server.
 Get started
 ======================
 
-To activate the Kubernetes Objects receiver manually in the Collector configuration, add ``k8sobjects`` to the ``receivers`` section of your configuration file, as shown in the following example:
+To activate the Kubernetes Objects receiver, use this Helm configuration:
 
 .. code:: yaml
 
-   k8sobjects:
-     auth_type: serviceAccount
-     objects:
-       - name: pods
-         mode: pull
-         label_selector: environment in (production),tier in (frontend)
-         field_selector: status.phase=Running
-         interval: 15m
-       - name: events
-         mode: watch
-         group: events.k8s.io
-         namespaces: [default]
-
+  k8sObjects:
+    - name: pods
+      mode: pull
+      label_selector: environment in (production),tier in (frontend)
+      field_selector: status.phase=Running
+      interval: 15m
+    - name: events
+      mode: watch
+      group: events.k8s.io
+      namespaces: [default]
+  
 To complete the configuration, include the receiver in the ``logs`` pipelines of the ``service`` section of your configuration file. For example:
 
 .. code:: yaml
 
     logs/objects:
       receivers:
-        - k8sobjects
+        - k8sObjects
+
+Activate the receiver manually
+--------------------------------------
+
+To activate the Kubernetes Objects receiver manually in the Collector configuration, add ``k8sobjects`` to the ``receivers`` section of your configuration file, as shown in the following example:
+
+.. code:: yaml
+
+  k8sobjects:
+    auth_type: serviceAccount
+    objects:
+      - name: pods
+        mode: pull
+        label_selector: environment in (production),tier in (frontend)
+        field_selector: status.phase=Running
+        interval: 15m
+      - name: events
+        mode: watch
+        group: events.k8s.io
+        namespaces: [default]
 
 Main settings
 --------------------------------------
