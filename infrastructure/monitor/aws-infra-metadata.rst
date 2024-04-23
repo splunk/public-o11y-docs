@@ -1,18 +1,24 @@
 .. _aws-infra-metadata:
 
-**********************************
-AWS CloudWatch metadata
-**********************************
+******************************************
+Available AWS metadata
+******************************************
 
 .. meta::
    :description: List of Splunk Infrastructure Monitoring AWS integration imported AWS metadata.
 
-Infrastructure Monitoring automatically imports AWS metadata for imported AWS CloudWatch metrics. Keep in mind metadata might take up to 15 minutes to arrive.
+Infrastructure Monitoring automatically imports AWS metadata for the selected AWS resources listed in this document. Metadata is imported as properties attached to the ``AWSUniqueId`` dimension of a CloudWatch metric. 
 
-.. note::
-   Observability Cloud creates a new property name by converting the original AWS property name to `snake_case` and adding the prefix `aws_` prefix.
+Keep in mind metadata might take up to 15 minutes to arrive.
+
+.. note:: This document does not include AWS Lambda metadata.
+
+AWS property names in Splunk Observability Cloud
+=============================================================================
+
+Splunk Observability Cloud creates a new property name by converting the original AWS property name to `snake_case` and adding the `aws_` prefix.
    
-   For example, `DBClusterIdentifier` becomes `aws_db_cluster_identifier`.
+For example, `DBClusterIdentifier` becomes `aws_db_cluster_identifier`.
 
 .. _aws_common_properties:
 
