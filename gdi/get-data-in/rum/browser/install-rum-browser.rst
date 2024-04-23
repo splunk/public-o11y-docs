@@ -100,13 +100,7 @@ Follow these steps to instrument your application with the CDN:
 
    * In the URL of the script, replace ``<version>`` with a version from the :new-page:`Releases page in GitHub <https://github.com/signalfx/splunk-otel-js-web/releases>`.
 
-   * ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
-
-         1. Open the navigation menu in Splunk Observability Cloud.
-         2. Select :menuselection:`Settings`.
-         3. Select your username.
-
-      The realm name appears in the :guilabel:`Organizations` section.
+   * ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
    * To generate a RUM access token, see :ref:`rum-access-token`.
 
@@ -212,6 +206,12 @@ Use one the following methods to load and initialize the Browser RUM agent, in o
 
 If you defer the loading of the Browser RUM agent, make sure other scripts are also deferred to preserve the initialization order. Note that asynchronously loaded scripts are not supported.
 
+Set up Session Replay
+================================================
+
+With Session Replay you can replay a session to take a look at exactly what the user experienced and make informed decisions about what to do next.
+
+See :ref:`rum-session-replay` for instructions on how to set up and configure Session Replay.
 
 .. _modify-spans:
 

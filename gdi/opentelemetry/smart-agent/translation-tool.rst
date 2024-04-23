@@ -97,16 +97,3 @@ When translatesfx runs, it sends the translated Collector configuration to the s
 .. code-block:: none
 
    % translatesfx /etc/signalfx/sa-config.yaml > /etc/signalfxotel-config.yaml
-
-From the GUI
-------------------------------
-
-#. Access the Smart Agent configuration converter at :new-page:`https://bossofopsando11y.com/configurator/saconverter <https://bossofopsando11y.com/configurator/saconverter>`. 
-#. Paste your Smart Agent configuration in the :menuselection:`Smart Agent YAML` section of the GUI.
-
-The corresponding translated Collector configuration file is populated in the OpenTelemetry YAML section.
-
-.. image:: /_images/gdi/3886-sa-configuration-tool.png
-   :width: 80%
-   :alt: View your translated configuration file. 
-

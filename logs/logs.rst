@@ -52,7 +52,7 @@ To send logs from your hosts and containers to Log Observer, follow these instru
 
 1. Log in to Splunk Observability Cloud.
 
-2. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+2. In the left navigation menu, select :menuselection:`Data Management` to open the :strong:`Integrate Your Data` page.
 
 3. On the :strong:`Integrate Your Data` page in Observability Cloud, select the tile for the platform you want to import logs from. You can select Windows, Kubernetes, or Linux. The guided setup for your platform appears.
 
@@ -71,7 +71,7 @@ To send logs from Amazon Web Services to Log Observer, follow these instructions
 
 1. Log in to Splunk Observability Cloud.
 
-2. In the left navigation menu, select :menuselection:`Data Management` to display the Integrate Your Data page.
+2. In the left navigation menu, select :menuselection:`Data Management` to display the :strong:`Integrate Your Data` page.
 
 3. Select :guilabel:`Add Integration`. 
    
@@ -127,7 +127,7 @@ See :ref:`logs-aggregations` to learn how to perform more aggregations.
 
 Ensure severity key is correctly mapped
 --------------------------------------------------
-The severity key is a field that all logs contain. It has the values ``Debug``, ``Error``, ``Info``, ``Unknown``, and ``Warning``. Because the ``severity`` field in many logs is called ``level``, Log Observer automatically remaps the log field ``level`` to ``severity``.
+The severity key is a field that all logs contain. It has the values ``DEBUG``, ``ERROR``, ``INFO``, ``UNKNOWN``, and ``WARNING``. Because the ``severity`` field in many logs is called ``level``, Log Observer automatically remaps the log field ``level`` to ``severity``.
 
 If your logs call the ``severity`` key by a different name, that's okay. To ensure that Log Observer can read your field, transform your field name to ``severity`` using a Field Copy Processor. See :ref:`field-copy-processors` to learn how.
 

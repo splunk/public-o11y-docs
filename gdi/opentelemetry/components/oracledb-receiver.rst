@@ -1,4 +1,5 @@
 .. _oracledb:
+.. _oracledb-receiver:
 
 ****************************
 Oracle Database receiver

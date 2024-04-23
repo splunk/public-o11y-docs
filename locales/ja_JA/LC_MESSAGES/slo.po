@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-07 09:20+0000\n"
-"PO-Revision-Date: 2023-10-19 16:32+0100\n"
+"PO-Revision-Date: 2024-04-17 16:22+0100\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: ../../slo/burn-rate-alerts.rst:-1
 msgid "How burn rate alerting works in Splunk Observability Cloud SLO."
@@ -24,37 +24,39 @@ msgstr "Splunk Observability Cloud SLO における燃焼率アラートの仕�
 
 #: ../../<rst_prolog>:18
 msgid "Take shift"
-msgstr "テイク・シフト"
+msgstr "シフトを引き受ける"
 
 #: ../../_includes/slo/slo-preview-header.rst:1 ../../slo/slo-preview-sitemap.rst:3
 msgid "Preview: Service level objective (SLO) management"
-msgstr "プレビューサービスレベル目標（SLO）管理"
+msgstr "プレビュー：サービスレベル目標（SLO）管理"
 
 #: ../../_includes/slo/slo-preview-header.rst:3 ../../slo/slo-preview-sitemap.rst:5
 msgid ""
 "Preview features are provided by Splunk to you \"as is\" without any warranties, maintenance and support, or service level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it "
 "at any time. Use of preview features is subject to the :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`."
-msgstr "プレビュー機能は、いかなる保証、メンテナンス、サポート、サービスレベルの約束もなく、Splunk からお客様に「現状のまま」提供されます。Splunk は独自の判断でこのプレビュー機能を提供し、いつでも中止することができます。プレビュー機能の使用は、:new-page:`Splunk 一般規約<https://www.splunk.com/en_us/legal/splunk-general-terms.html>` に従うものとします。"
+msgstr ""
+"プレビュー機能は、いかなる保証、メンテナンス、サポート、サービスレベルの約束もなく、Splunk からお客様に「現状のまま」提供されます。Splunk は独自の判断でこのプレビュー機能を提供し、いつでも中止することができます。プレビュー機能の"
+"使用は、:new-page:`Splunk 一般規約<https://www.splunk.com/en_us/legal/splunk-general-terms.html>` に従うものとします。"
 
 #: ../../_includes/slo/slo-preview-header.rst:5
 msgid "See :ref:`slo-preview-sitemap` for the complete list of topics, or use these links to navigate to the high-level topics for SLO management:"
-msgstr "トピックの全リストは、:ref:`slo-preview-sitemap` を参照するか、以下のリンクを使用して SLO 管理の上位トピックに移動する："
+msgstr ":ref:`slo-preview-sitemap` を参照してトピックの全リストを確認するか、以下のリンクを使用してSLO管理の上位トピックに移動してください："
 
 #: ../../_includes/slo/slo-preview-header.rst:7 ../../slo/slo-preview-sitemap.rst:16
 msgid ":ref:`slo-intro`"
-msgstr ":ref:`slo-intro`"
+msgstr ":ref:`slo-intro` "
 
 #: ../../_includes/slo/slo-preview-header.rst:8 ../../slo/slo-preview-sitemap.rst:17
 msgid ":ref:`create-slo`"
-msgstr ":ref:`create-slo`"
+msgstr ":ref:`create-slo` "
 
 #: ../../_includes/slo/slo-preview-header.rst:9 ../../slo/slo-preview-sitemap.rst:18
 msgid ":ref:`burn-rate-alerts`"
-msgstr ":ref:`burn-rate-alerts`"
+msgstr ":ref:`burn-rate-alerts` "
 
 #: ../../_includes/slo/slo-preview-header.rst:10 ../../slo/slo-preview-sitemap.rst:19
 msgid ":ref:`view-slo`"
-msgstr ":ref:`view-slo`"
+msgstr ":ref:`view-slo` "
 
 #: ../../slo/burn-rate-alerts.rst:9
 msgid "Burn rate alerts"
@@ -62,37 +64,37 @@ msgstr "燃焼率アラート"
 
 #: ../../slo/burn-rate-alerts.rst:14
 msgid "Burn rate is a unitless measurement of how quickly a service consumes the error budget during the compliance window of the service level objective (SLO)."
-msgstr "バーンレートは、サービスレベル目標（SLO）のコンプライアンスウィンドウの間に、サービスがエラーバジェットをどれだけ早く消費するかの単位なしの測定値である。"
+msgstr "燃焼率は、サービスレベル目標（SLO）のコンプライアンスウィンドウの間に、サービスがエラー予算をどれだけ早く消費するかの単位なしの測定値です。"
 
 #: ../../slo/burn-rate-alerts.rst:16
 msgid "For example, for a compliance window of 30 days, a constant burn rate of 1 means your error budget is used up in exactly 30 days, a constant burn rate of 2 means the error budget is used up in 15 days, and so on."
-msgstr "例えば、コンプライアンス・ウインドウが30日の場合、一定の燃焼率1はエラー予算がちょうど30日で使い切られることを意味し、一定の燃焼率2はエラー予算が15日で使い切られることを意味する。"
+msgstr "例えば、コンプライアンスウィンドウが30日の場合、一定の燃焼率1はエラー予算がちょうど30日で使い切られることを意味し、一定の燃焼率2はエラー予算が15日で使い切られることを意味します。"
 
 #: ../../slo/burn-rate-alerts.rst:18
 msgid ""
 "Splunk Observability Cloud implements multiwindow, multi-burn-rate alerting to let you know when the rate of consumption of your service level objective (SLO) error budget exceeds a healthy burn rate threshold for the length of "
 "your specified compliance window."
-msgstr "Splunk Observability Cloud は、マルチウィンドウ、マルチバーンレートアラートを実装し、サービスレベル目標 (SLO) エラー予算の消費率が、指定したコンプライアンスウィンドウの長さに対して健全なバーンレートしきい値を超えた場合に通知します。"
+msgstr "Splunk Observability Cloud は、マルチウィンドウ、マルチ燃焼率アラートを実装し、サービスレベル目標 (SLO) エラー予算の消費率が、指定したコンプライアンスウィンドウの長さに対して健全な燃焼率しきい値を超えた場合に通知します。"
 
 #: ../../slo/burn-rate-alerts.rst:21
 msgid "Error budget calculation"
-msgstr "エラー予算計算"
+msgstr "エラー予算の計算"
 
 #: ../../slo/burn-rate-alerts.rst:23
 msgid "Error budget measures the difference between actual and desired performance. For example, an SLO with a 99.9% target has an error budget of 0.1%."
-msgstr "エラーバジェットは、実際の実績と望ましい実績の差を測定する。例えば、99.9%を目標とするSLOのエラーバジェットは0.1%である。"
+msgstr "エラー予算は、実際の実績と望ましい実績の差を測定します。例えば、99.9%を目標とするSLOのエラー予算は0.1%です。"
 
 #: ../../slo/burn-rate-alerts.rst:25
 msgid "\\text{Error budget} = \\text{100%} - \\text{SLO target}"
-msgstr "\\\text{エラー予算} = \\\text{100%}-\text{SLO target}"
+msgstr "\\\text{エラー予算} = \\\text{100%} - \\\text{SLO 目標}"
 
 #: ../../slo/burn-rate-alerts.rst:31
 msgid "How multiwindow, multi-burn-rate alerts work"
-msgstr "マルチウィンドウ、マルチバーンレートアラートの仕組み"
+msgstr "マルチウィンドウ、マルチ燃焼率アラートの仕組み"
 
 #: ../../slo/burn-rate-alerts.rst:33
 msgid "Burn rate alerting in Splunk Observability Cloud uses a long window and a short window to check how fast the service consumes the error budget as an alert is triggered against the burn rate threshold."
-msgstr "Splunk Observability Cloud のバーンレートアラートは、バーンレートしきい値に対してアラートがトリガーされる際に、長いウィンドウと短いウィンドウを使用して、サービスがエラーバジェットを消費する速さをチェックします。"
+msgstr "Splunk Observability Cloud の燃焼率アラートは、燃焼率しきい値に対してアラートがトリガーされる際に、ロングウィンドウとショートウィンドウを使用して、サービスがエラー予算を消費する速さをチェックします。"
 
 #: ../../slo/burn-rate-alerts.rst:35
 msgid "Splunk Observability Cloud uses the following formula to calculate burn rate thresholds for the alerting mechanism:"
@@ -100,33 +102,35 @@ msgstr "Splunk Observability Cloud は、アラートメカニズムの燃焼率
 
 #: ../../slo/burn-rate-alerts.rst:37
 msgid "\\text{Burn rate threshold} = \\frac{\\text{SLO compliance window (in hours) * Error budget consumed}}{\\text{Long window (in hours) * 100%}}"
-msgstr "\\\text{燃焼率しきい値} = \\frac{\text{SLO遵守ウィンドウ（単位時間） * 消費したエラー予算}}}{\text{ロングウィンドウ（単位時間） * 100%}}"
+msgstr "\\\text{燃焼率しきい値} = \\frac{\\\text{SLO コンプライアンスウィンドウ (単位：時間) * 消費したエラー予算}}{\\\text{ロングウィンドウ (単位：時間) * 100%}}"
 
 #: ../../slo/burn-rate-alerts.rst:41
 msgid ""
 "The following tables show the burn rate threshold estimates for different long and short windows. Short windows are 1/12 of the long windows, as suggested by Google. To learn more, see :new-page:`Alerting on SLOs <https://sre."
 "google/workbook/alerting-on-slos/>` on Google's Site Reliability Workbook."
-msgstr "以下の表は、異なるロング・ウィンドウとショート・ウィンドウに対する燃焼率のしきい値の推定値を示している。ショートウィンドウは、Googleが提案するように、ロングウィンドウの1/12です。詳しくは、:new-page:`Alerting on SLOs<https://sre.google/workbook/alerting-on-slos/>` on Google's Site Reliability Workbookをご覧ください。"
+msgstr ""
+"以下の表は、異なるロングウィンドウとショートウィンドウに対する燃焼率のしきい値の推定値を示しています。ショートウィンドウは、Googleが提案するように、ロングウィンドウの1/12です。詳しくは、Google の Site Reliability Workbook の :"
+"new-page:`Alerting on SLOs<https://sre.google/workbook/alerting-on-slos/>` をご覧ください。"
 
 #: ../../slo/burn-rate-alerts.rst:44
 msgid "Burn rate for a 99.9% SLO with a 30-day compliance window"
-msgstr "99.9％のSLOで30日間の遵守期間を設けた場合の燃焼率"
+msgstr "99.9％のSLOで30日間のコンプライアンスウィンドウを設けた場合の燃焼率"
 
 #: ../../slo/burn-rate-alerts.rst:50 ../../slo/burn-rate-alerts.rst:70
 msgid ":strong:`Long window`"
-msgstr ":strong:`ロング・ウィンドウ`"
+msgstr ":strong:`ロングウィンドウ` "
 
 #: ../../slo/burn-rate-alerts.rst:51 ../../slo/burn-rate-alerts.rst:71
 msgid ":strong:`Short window`"
-msgstr ":strong:`ショート・ウィンドウ`"
+msgstr ":strong:`ショートウィンドウ` "
 
 #: ../../slo/burn-rate-alerts.rst:52 ../../slo/burn-rate-alerts.rst:72
 msgid ":strong:`Error budget consumed`"
-msgstr ":strong:`消費されたエラー予算`"
+msgstr ":strong:`消費されたエラー予算` "
 
 #: ../../slo/burn-rate-alerts.rst:53 ../../slo/burn-rate-alerts.rst:73
 msgid ":strong:`Burn rate threshold`"
-msgstr ":strong:`燃焼率のしきい値`"
+msgstr ":strong:`燃焼率のしきい値` "
 
 #: ../../slo/burn-rate-alerts.rst:54 ../../slo/burn-rate-alerts.rst:74
 msgid "1 hour"
@@ -162,7 +166,7 @@ msgstr "6"
 
 #: ../../slo/burn-rate-alerts.rst:64
 msgid "Burn rate for a 99.9% SLO with a 7-day compliance window"
-msgstr "99.9％のSLOで7日間の遵守期間を設けた場合の燃焼率"
+msgstr "99.9％のSLOで7日間のコンプライアンスウィンドウを設けた場合の燃焼率"
 
 #: ../../slo/burn-rate-alerts.rst:76
 msgid "10%"
@@ -182,11 +186,11 @@ msgstr "5.6"
 
 #: ../../slo/create-slo.rst:-1
 msgid "Learn how to create a service level objective (SLO) in Splunk Observability Cloud."
-msgstr "Splunk Observability Cloud でサービスレベル目標 (SLO) を作成する方法をご紹介します。"
+msgstr "Splunk Observability Cloud でサービスレベル目標 (SLO) を作成する方法を学習します。"
 
 #: ../../slo/create-slo.rst:9
 msgid "Measure and track your service health metrics with service level objectives (SLOs)"
-msgstr "サービスレベル目標（SLO）を用いて、サービスの健全性指標を測定および追跡する。"
+msgstr "サービスレベル目標（SLO）を用いて、サービスの健全性メトリクスを測定および追跡します。"
 
 #: ../../slo/create-slo.rst:15
 msgid "For each service that you use to indicate system health in Splunk Observability Cloud, you can define an SLO and how to measure it."
@@ -194,7 +198,7 @@ msgstr "Splunk Observability Cloud でシステムの健全性を示すために
 
 #: ../../slo/create-slo.rst:19
 msgid "Create an SLO"
-msgstr "SLOの作成"
+msgstr "SLO を作成する"
 
 #: ../../slo/create-slo.rst:21
 msgid "Follow these steps to create an SLO."
@@ -202,11 +206,11 @@ msgstr "SLO を作成するには、以下の手順に従ってください。"
 
 #: ../../slo/create-slo.rst:23
 msgid "From the landing page of Splunk Observability Cloud, go to :strong:`Service Level Objectives (SLOs)`."
-msgstr "Splunk Observability Cloud のランディングページから、:strong:`Service Level Objectives (SLOs)` にアクセスしてください。"
+msgstr "Splunk Observability Cloud のランディングページから、:strong:`サービスレベル目標 (SLO) ` にアクセスしてください。"
 
 #: ../../slo/create-slo.rst:24
 msgid "Select :guilabel:`Create SLO`."
-msgstr ":guilabel:`Create SLO` を選択する。"
+msgstr ":guilabel:`Create SLO` を選択します。"
 
 #: ../../slo/create-slo.rst:25
 msgid "Choose the service you want to use as the system health indicator for your SLO."
@@ -214,19 +218,19 @@ msgstr "SLO のシステム健全性インジケータとして使用するサ�
 
 #: ../../slo/create-slo.rst:31 ../../slo/create-slo.rst:50 ../../slo/create-slo.rst:63
 msgid ":strong:`Field name`"
-msgstr ":strong:`フィールド名`"
+msgstr ":strong:`フィールド名` "
 
 #: ../../slo/create-slo.rst:32 ../../slo/create-slo.rst:51 ../../slo/create-slo.rst:64
 msgid ":strong:`Description`"
-msgstr ":strong:`Description`"
+msgstr ":strong:`説明` "
 
 #: ../../slo/create-slo.rst:33
 msgid "Metric type"
-msgstr "メートル法"
+msgstr "メトリクスタイプ"
 
 #: ../../slo/create-slo.rst:34
 msgid "Select :guilabel:`Service & endpoint` from the dropdown menu"
-msgstr "ドロップダウンメニューから :guilabel:`Service & endpoint` を選択"
+msgstr "ドロップダウンメニューから :guilabel:`Service & endpoint` を選択します"
 
 #: ../../slo/create-slo.rst:35
 msgid "Environment"
@@ -234,7 +238,7 @@ msgstr "環境"
 
 #: ../../slo/create-slo.rst:36
 msgid "Open the dropdown menu and check the boxes for the environments where you want to apply this SLO"
-msgstr "ドロップダウンメニューを開き、この SLO を適用する環境のボックスにチェックを入れます。"
+msgstr "ドロップダウンメニューを開き、この SLO を適用する環境のボックスにチェックを入れます"
 
 #: ../../slo/create-slo.rst:37
 msgid "Service\\:\\endpoint"
@@ -242,11 +246,11 @@ msgstr "Service\\:\\endpoint"
 
 #: ../../slo/create-slo.rst:38
 msgid "Search for the service you want to create an SLO for"
-msgstr "SLOを作成したいサービスを検索する。"
+msgstr "SLO を作成するサービスを検索します。"
 
 #: ../../slo/create-slo.rst:39
 msgid "(Optional) Add an endpoint for the selected service"
-msgstr "(オプション）選択したサービスのエンドポイントを追加する。"
+msgstr "（オプション）選択したサービスのエンドポイントを追加します。"
 
 #: ../../slo/create-slo.rst:40
 msgid "Filters"
@@ -254,11 +258,11 @@ msgstr "フィルター"
 
 #: ../../slo/create-slo.rst:41
 msgid "Additional dimension names and values you want to apply this SLO to"
-msgstr "この SLO を適用する追加のディメンジョン名と値"
+msgstr "この SLO を適用する追加のディメンション名と値"
 
 #: ../../slo/create-slo.rst:44
 msgid "Define your SLO and how to measure it."
-msgstr "SLOとその測定方法を定義する。"
+msgstr "SLOとその測定方法を定義します。"
 
 #: ../../slo/create-slo.rst:52
 msgid "Target (%)"
@@ -266,15 +270,15 @@ msgstr "目標(%)"
 
 #: ../../slo/create-slo.rst:53
 msgid "Enter the target you want to set for this SLO."
-msgstr "この SLO に設定する目標を入力する。"
+msgstr "この SLO に設定する目標を入力します。"
 
 #: ../../slo/create-slo.rst:54
 msgid "Compliance window"
-msgstr "コンプライアンス・ウィンドウ"
+msgstr "コンプライアンスウィンドウ"
 
 #: ../../slo/create-slo.rst:55
 msgid "Select a compliance window for this SLO from the dropdown menu."
-msgstr "ドロップダウンメニューから、この SLO の遵守ウィンドウを選択します。"
+msgstr "ドロップダウンメニューから、この SLO のコンプライアンスウィンドウを選択します。"
 
 #: ../../slo/create-slo.rst:57
 msgid "Set up alerting for your SLO. You can subscribe to get notifications for the following alerts."
@@ -286,11 +290,11 @@ msgstr "違反イベント"
 
 #: ../../slo/create-slo.rst
 msgid "Alerts when the service level indicator (SLI) doesn't meet the target over the specified compliance window."
-msgstr "サービス・レベル・インジケータ(SLI)が、指定されたコンプライアンス・ウィンドウを越えて目標を満たさない場合にアラートを表示します。"
+msgstr "サービスレベルインジケータ(SLI)が、指定されたコンプライアンスウィンドウを越えて目標を満たさない場合にアラートを表示します。"
 
 #: ../../slo/create-slo.rst
 msgid ":strong:`Note:` Breach event alerting is selected by default and always runs in the background."
-msgstr ":strong:`注：` 違反イベント警告はデフォルトで選択されており、常にバックグラウンドで実行される。"
+msgstr ":strong:`注：` 違反イベントアラートはデフォルトで選択されており、常にバックグラウンドで実行されます。"
 
 #: ../../slo/create-slo.rst:68 ../../slo/slo-intro.rst:49
 msgid "Error budget"
@@ -298,7 +302,7 @@ msgstr "エラー予算"
 
 #: ../../slo/create-slo.rst:69
 msgid "Alerts when the remaining error budget is less than 10% of the estimated error budget for the compliance window."
-msgstr "残りのエラーバジェットが、コンプライアンスウィンドウの推定エラーバジェットの10%未満である場合に警告を発する。"
+msgstr "残りのエラー予算が、コンプライアンスウィンドウの推定エラー予算の10%未満である場合にアラートを発します。"
 
 #: ../../slo/create-slo.rst:70 ../../slo/slo-intro.rst:53
 msgid "Burn rate"
@@ -306,7 +310,7 @@ msgstr "燃焼率"
 
 #: ../../slo/create-slo.rst:71
 msgid "Alerts when the rate of consumption of your SLO error budget exceeds a healthy threshold for the specified compliance window. To learn more, see :ref:`burn-rate-alerts`."
-msgstr "SLO エラーバジェットの消費率が、指定されたコンプライアンスウィンドウの健全な閾値を超えた場合にアラートを発します。詳細については、:ref:`burn-rate-alerts` を参照してください。"
+msgstr "SLO エラー予算の消費率が、指定されたコンプライアンスウィンドウの健全なしきい値を超えた場合にアラートを発します。詳細については、:ref:`burn-rate-alerts` を参照してください。"
 
 #: ../../slo/create-slo.rst:73
 msgid "Splunk Observability Cloud automatically generates a name for your SLO. You can change this auto-generated name, as long as the SLO name is unique."
@@ -314,59 +318,63 @@ msgstr "Splunk Observability Cloud は SLO の名前を自動的に生成しま�
 
 #: ../../slo/create-slo.rst:75
 msgid "Select :guilabel:`Create` to create the SLO."
-msgstr ":guilabel:`Create` を選択して SLO を作成する。"
+msgstr ":guilabel:`Create` を選択して SLO を作成します。"
 
 #: ../../slo/slo-intro.rst:-1
 msgid "Get started with service level objective (SLO) concepts and SLO in Splunk Observability Cloud"
-msgstr "Splunk Observability Cloud でサービスレベル目標 (SLO) の概念と SLO を始める"
+msgstr "Splunk Observability Cloud でサービスレベル目標 (SLO) の概念と SLO の使用を開始する"
 
 #: ../../slo/slo-intro.rst:10
 msgid "Introduction to service level objective (SLO) management in Splunk Observability Cloud"
-msgstr "Splunk Observability Cloudにおけるサービスレベル目標（SLO）管理の紹介"
+msgstr "Splunk Observability Cloudにおけるサービスレベル目標（SLO）管理の概要"
 
 #: ../../slo/slo-intro.rst:16
 msgid "Service level objective (SLO) management is a service level monitoring experience that helps you align your business needs with your engineering reliability goals."
-msgstr "サービス・レベル目標（SLO）管理は、ビジネス・ニーズとエンジニアリングの信頼性目標を整合させるためのサービス・レベル・モニタリングです。"
+msgstr "サービスレベル目標（SLO）管理は、ビジネスニーズとエンジニアリングの信頼性目標を整合させるためのサービスレベルモニタリングです。"
 
 #: ../../slo/slo-intro.rst:18
 msgid ""
 "While you have always been able to use the data in Splunk Observability Cloud to monitor, troubleshoot, and optimize your services, SLO management provides a quantitative way to track the reliability and performance of your "
 "services. This allows teams to make the right investment trade-offs between product development and operational work."
-msgstr "これまでも Splunk Observability Cloud のデータを使用して、サービスの監視、トラブルシューティング、最適化を行うことができましたが、SLO 管理はサービスの信頼性とパフォーマンスを定量的に追跡する方法を提供します。これにより、チームは製品開発と運用業務の間で適切な投資のトレードオフを行うことができます。"
+msgstr ""
+"これまでも Splunk Observability Cloud のデータを使用して、サービスの監視、トラブルシューティング、最適化を行うことができましたが、SLO 管理はサービスの信頼性とパフォーマンスを定量的に追跡する方法を提供します。これにより、チームは"
+"製品開発と運用業務の間で適切な投資のトレードオフを行うことができます。"
 
 #: ../../slo/slo-intro.rst:21
 msgid "What is service level monitoring?"
-msgstr "サービスレベル・モニタリングとは何か？"
+msgstr "サービスレベルモニタリングとは何ですか？"
 
 #: ../../slo/slo-intro.rst:23
 msgid ""
 "Service level monitoring is the process of measuring, tracking, and analyzing a variety of service level indicators (SLIs) associated with a given service. This process calculates the health of a deployed software or service "
 "and compares it against the service level agreement (SLA)."
-msgstr "サービス・レベル・モニタリングは、特定のサービスに関連するさまざまなサービス・レベル指標（SLI）を測定、追跡、分析するプロセスです。このプロセスでは、デプロイされたソフトウェアまたはサービスの健全性を計算し、サービス・レベル合意（SLA）と比較します。"
+msgstr ""
+"サービスレベルモニタリングは、特定のサービスに関連するさまざまなサービスレベル指標（SLI）を測定、追跡、分析するプロセスです。このプロセスでは、デプロイされたソフトウェアまたはサービスの健全性を計算し、サービスレベルアグリーメン"
+"ト (SLA) と比較します。"
 
 #: ../../slo/slo-intro.rst:25
 msgid "The following table defines key concepts in service level monitoring."
-msgstr "次の表は、サービス・レベル・モニタリングの主要概念を定義したものである。"
+msgstr "次の表は、サービスレベルモニタリングのキーコンセプトを定義したものです。"
 
 #: ../../slo/slo-intro.rst:31
 msgid ":strong:`Concept`"
-msgstr ":strong:`Concept`"
+msgstr ":strong:`コンセプト` "
 
 #: ../../slo/slo-intro.rst:32
 msgid ":strong:`Definition`"
-msgstr ":strong:`定義`"
+msgstr ":strong:`定義` "
 
 #: ../../slo/slo-intro.rst:33
 msgid ":strong:`Examples`"
-msgstr ":strong:`例`"
+msgstr ":strong:`例` "
 
 #: ../../slo/slo-intro.rst:35
 msgid "Service level indicator (SLI)"
-msgstr "サービス・レベル・インジケータ（SLI）"
+msgstr "サービスレベルインジケータ（SLI）"
 
 #: ../../slo/slo-intro.rst:36
 msgid "An SLI is a quantitative measurement showing some health of a service, expressed as a metric or combination of metrics."
-msgstr "SLIは、サービスの健全性を示す定量的な測定値で、メトリクスまたはメトリクスの組み合わせとして表されます。"
+msgstr "SLIは、サービスの健全性を示す定量的な測定値で、1 つのメトリクスまたはメトリクスの組み合わせとして表されます。"
 
 #: ../../slo/slo-intro.rst:37
 msgid "Availability SLI: Proportion of requests that resulted in a successful response"
@@ -374,61 +382,67 @@ msgstr "可用性SLI: 応答に成功したリクエストの割合"
 
 #: ../../slo/slo-intro.rst:38
 msgid "Performance SLI: Proportion of requests that loaded in < 100 ms"
-msgstr "パフォーマンスSLI：100ミリ秒未満でロードされたリクエストの割合"
+msgstr "パフォーマンスSLI：100 ミリ秒未満でロードされたリクエストの割合"
 
 #: ../../slo/slo-intro.rst:40
 msgid "Service level objective (SLO)"
-msgstr "サービス・レベル目標（SLO）"
+msgstr "サービスレベル目標（SLO）"
 
 #: ../../slo/slo-intro.rst:41
 msgid ""
 "An SLO defines a target for an SLI and a compliance period over which that target must be met. An SLO contains 3 elements: an SLI, a target, and a compliance period. Compliance periods can be calendar, such as monthly, or "
 "rolling, such as past 30 days."
-msgstr "SLOは、SLIの目標と、その目標を達成するための遵守期間を定義する。SLOには、SLI、目標、遵守期間の3つの要素が含まれる。遵守期間は、月単位などのカレンダー、または過去30日などのローリングが可能です。"
+msgstr ""
+"SLOは、SLIの目標と、その目標を達成するためのコンプライアンス期間を定義します。SLOには、SLI、目標、コンプライアンス期間の3つの要素が含まれます。コンプライアンス期間は、月単位などのカレンダー、または過去30日などのローリングが可能"
+"です。"
 
 #: ../../slo/slo-intro.rst:42
 msgid "Availability SLI over a calendar period: Our service must respond successfully to 95% of requests in a month"
-msgstr "カレンダー期間における可用性SLI：当社のサービスは、1ヶ月間に95％のリクエストに正常に応答する必要があります。"
+msgstr "カレンダー期間における可用性SLI：当社のサービスは、1 か月間に95％のリクエストに正常に応答する必要があります。"
 
 #: ../../slo/slo-intro.rst:43
 msgid "Performance SLI over a rolling period: Our service must respond to 99% of requests in < 100 ms over a 7-day period"
-msgstr "パフォーマンスSLI7日間にわたり、リクエストの99%に100ms未満で応答すること。"
+msgstr "ローリング期間にわたるパフォーマンス SLI：当社のサービスは、7日間でリクエストの 99% に 100 ミリ秒未満で応答する必要があります。"
 
 #: ../../slo/slo-intro.rst:45
 msgid "Service level agreement (SLA)"
-msgstr "サービス・レベル合意（SLA）"
+msgstr "サービスレベルアグリーメント (SLA)"
 
 #: ../../slo/slo-intro.rst:46
 msgid "An SLA is a contractual agreement that indicates service levels your users can expect from your organization. If an SLA is not met, there can be financial consequences."
-msgstr "SLAは、ユーザーが組織から期待できるサービスレベルを示す契約上の合意です。SLAが守られない場合、金銭的な影響が生じる可能性があります。"
+msgstr "SLAは、ユーザーが組織から期待できるサービスレベルを示す契約上の合意です。SLAが守られない場合、財政的な影響が生じる可能性があります。"
 
 #: ../../slo/slo-intro.rst:47
 msgid "An customer service SLA indicates that 90% of support requests received on a normal support day must have a response within 6 hours."
-msgstr "カスタマーサービスSLAでは、通常のサポート日に受けたサポートリクエストの90%は、6時間以内に回答しなければならないと定めている。"
+msgstr "カスタマーサービスSLAでは、通常のサポート日に受けたサポートリクエストの90%は、6時間以内に回答しなければならないと定めています。"
 
 #: ../../slo/slo-intro.rst:50
 msgid ""
 "A measurement of how your SLI performs relative to your SLO over a period of time. Error budget measures the difference between actual and desired performance. It determines how unreliable your service might be during this "
 "period and serves as a signal when you need to take corrective action."
-msgstr "一定期間におけるSLOに対するSLIの相対的なパフォーマンスを測定するもの。エラーバジェットは、実際のパフォーマンスと望ましいパフォーマンスの差を測定します。この期間中にサービスがどの程度信頼できないかを判断し、是正措置を講じる必要がある場合のシグナルとなります。"
+msgstr ""
+"一定期間におけるSLOに対するSLIの相対的なパフォーマンスを測定するもの。エラー予算は、実際のパフォーマンスと望ましいパフォーマンスの差を測定します。この期間中にサービスがどの程度信頼できないかを判断し、是正措置を講じる必要がある場"
+"合のシグナルとなります。"
 
 #: ../../slo/slo-intro.rst:51
 msgid "Our service can respond to 1% of requests in >100 ms over a 7 day period."
-msgstr "私たちのサービスは、7日間で100ミリ秒を超えるリクエストの1％に応答することができます。"
+msgstr "当社のサービスは、7 日間で 100 ミリ秒を超えるリクエストの 1% に応答することができます。"
 
 #: ../../slo/slo-intro.rst:54
 msgid ""
 "A unitless measurement of how quickly a service consumes the error budget during the compliance window of the SLO. Burn rate makes the SLO and error budget actionable, showing service owners when a current incident is serious "
 "enough to page an on-call responder."
-msgstr "SLO のコンプライアンスウィンドウの間に、サービスがエラーバジェットをどれだけ早く消費するかを示す単位なしの測定値。バーンレートは、SLOとエラーバジェットを実行可能なものにし、現在のインシデントがオンコールレスポンダーを呼び出すのに十分な深刻さであることをサービス所有者に示します。"
+msgstr ""
+"SLO のコンプライアンスウィンドウの間に、サービスがエラー予算をどれだけ早く消費するかを示す単位なしの測定値。燃焼率は、SLOとエラー予算を実行可能なものにし、現在のインシデントがオンコールレスポンダーを呼び出すのに十分な深刻さであ"
+"ることをサービス所有者に示します。"
 
 #: ../../slo/slo-intro.rst:55
 msgid "For an SLO with a 30-day compliance window, a constant burn rate of 1 means your error budget is used up in exactly 30 days."
-msgstr "30日間のコンプライアンスウィンドウを持つSLOの場合、一定の燃焼率1は、エラー予算がちょうど30日で使い切られることを意味する。"
+msgstr "30日間のコンプライアンスウィンドウを持つSLOの場合、一定の燃焼率1は、エラー予算がちょうど30日で使い切られることを意味します。"
 
 #: ../../slo/slo-intro.rst:59
 msgid "Create your first SLO"
-msgstr "最初のSLOを作成する"
+msgstr "最初の SLO を作成する"
 
 #: ../../slo/slo-intro.rst:61
 msgid "To start using SLO, see :ref:`create-slo`."
@@ -436,19 +450,19 @@ msgstr "SLO の使用を開始するには、:ref:`create-slo` を参照して�
 
 #: ../../slo/slo-preview-sitemap.rst:12
 msgid "Contents: Service level objective (SLO) management preview documentation"
-msgstr "内容サービスレベル目標（SLO）管理プレビュー文書"
+msgstr "内容サービスレベル目標（SLO）管理プレビュードキュメント"
 
 #: ../../slo/slo-preview-sitemap.rst:14
 msgid "Use the following links to navigate the documentation set for the preview of SLO management:"
-msgstr "以下のリンクを使用して、SLO 管理のプレビューのための文書一式をナビゲートする："
+msgstr "以下のリンクを使用して、SLO 管理のプレビューのためのドキュメント一式をナビゲートします："
 
 #: ../../slo/view-slo.rst:-1
 msgid "View a summary of all SLOs and manage SLOs in your organization."
-msgstr "すべてのSLOの概要を表示し、組織内のSLOを管理する。"
+msgstr "すべてのSLOの概要を表示し、組織内のSLOを管理します。"
 
 #: ../../slo/view-slo.rst:11
 msgid "View and manage service level objectives (SLOs)"
-msgstr "サービスレベル目標（SLO）の表示と管理"
+msgstr "サービスレベル目標（SLO）を表示および管理する"
 
 #: ../../slo/view-slo.rst:16
 msgid "You can view a list of existing SLOs and manage your SLOs after creating them."
@@ -456,27 +470,28 @@ msgstr "既存のSLOのリストを表示し、SLO作成後にSLOを管理する
 
 #: ../../slo/view-slo.rst:19
 msgid "View a list of all SLOs"
-msgstr "すべてのSLOのリストを見る"
+msgstr "すべての SLO のリストを表示する"
 
 #: ../../slo/view-slo.rst:21
 msgid "To view all existing SLOs, from the landing page of Splunk Observability Cloud, go to :strong:`Service Level Objectives (SLOs)`. The table view gives you a summary of SLO status, budget remaining, and burn rate alerting."
-msgstr "既存の SLO をすべて表示するには、Splunk Observability Cloud のランディングページから :strong:`Service Level Objectives (SLOs)` にアクセスします。テーブルビューでは、SLO のステータス、残り予算、燃焼率アラートの概要が表示されます。"
+msgstr ""
+"既存の SLO をすべて表示するには、Splunk Observability Cloud のランディングページから :strong:`サービスレベル目標（SLO）` にアクセスします。テーブルビューでは、SLO のステータス、残り予算、燃焼率アラートの概要が表示されます。"
 
 #: ../../slo/view-slo.rst:24
 msgid "Edit an SLO"
-msgstr "SLOの編集"
+msgstr "SLO を編集する"
 
 #: ../../slo/view-slo.rst:26 ../../slo/view-slo.rst:34
 msgid "On the :strong:`Service Level Objectives (SLOs)` page, select the more icon (|more|) next to the SLO you want to edit."
-msgstr ":strong:`サービスレベル目標（SLO）` ページで、編集する SLO の横にある詳細アイコン（|more| ）を選択します。"
+msgstr ":strong:`サービスレベル目標（SLO）` ページで、編集する SLO の横にある詳細アイコン（|more|）を選択します。"
 
 #: ../../slo/view-slo.rst:27
 msgid "In the actions menu, select :menuselection:`Edit`."
-msgstr "アクションメニューで、:menuselection:`Edit` を選択する。"
+msgstr "アクションメニューで、:menuselection:`Edit` を選択します。"
 
 #: ../../slo/view-slo.rst:28
 msgid "Make changes to the SLO on the editing screen."
-msgstr "編集画面で SLO に変更を加える。"
+msgstr "編集画面で SLO に変更を加えます。"
 
 #: ../../slo/view-slo.rst:29
 msgid "Select :guilabel:`Save` to save your changes."
@@ -484,16 +499,16 @@ msgstr ":guilabel:`Save` を選択して変更を保存します。"
 
 #: ../../slo/view-slo.rst:32
 msgid "Delete an SLO"
-msgstr "SLOの削除"
+msgstr "SLO を削除する"
 
 #: ../../slo/view-slo.rst:35
 msgid "In the actions menu, select :menuselection:`Delete`."
-msgstr "アクションメニューで、:menuselection:`Delete` を選択する。"
+msgstr "アクションメニューで、:menuselection:`Delete` を選択します。"
 
 #: ../../slo/view-slo.rst:36
 msgid "Select :guilabel:`Delete` on the dialog box to confirm."
-msgstr "ダイアログボックスで :guilabel:`Delete` を選択して確定する。"
+msgstr "ダイアログボックスで :guilabel:`Delete` を選択して確定します。"
 
 #: ../../slo/view-slo.rst:38
 msgid "You can't recover a deleted SLO."
-msgstr "削除された SLO は復元できない。"
+msgstr "削除された SLO は復元できません。"

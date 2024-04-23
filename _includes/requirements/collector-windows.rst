@@ -1,10 +1,25 @@
-The Collector supports the following Windows versions:
+The Collector supports the following Windows versions, depending on the installation method:
 
-* Windows Server 2012 64-bit
-* Windows Server 2016 64-bit
-* Windows Server 2019 64-bit
-* Windows Server 2022 64-bit
-* Windows 10 Home
-* Windows 10 Pro
+.. list-table::
+  :header-rows: 1
+  :widths: 40 60
+  :width: 100%
+
+  * - Install method
+    - Supported versions (64-bit)
+  * - Installer script
+    - Windows 10 Pro and Home, Windows Server 2016, 2019, 2022
+  * - Windows installer (MSI)
+    - Windows 10 Pro and Home, Windows Server 2016, 2019, 2022
+  * - Ansible
+    - Windows 10 Pro and Home, Windows Server 2016, 2019, 2022
+  * - Chef
+    - Windows 10 Pro and Home, Windows Server 2019, 2022
+  * - Nomad
+    - Windows 10 Pro and Home, Windows Server 2016, 2019
+  * - Puppet
+    - Windows 10 Pro and Home, Windows Server 2016, 2019
+  * - Docker
+    - Windows 10 Pro and Home, Windows Server 2019, 2022
 
 .. note:: PowerShell 3.0 or higher is required.

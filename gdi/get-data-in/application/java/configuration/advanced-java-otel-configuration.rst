@@ -253,11 +253,9 @@ The following settings control metrics collection for the Java agent:
    * - ``SPLUNK_METRICS_ENABLED``
      - Activates exporting metrics. See :ref:`java-otel-metrics-attributes` for more information.
         - Default is ``true``.
-        - If you activate memory profiling using the ``splunk.profiler.memory.enabled`` property, the value of ``splunk.metrics.enabled`` is set to ``true``.
-
-       System property: ``splunk.metrics.enabled``
+        - If you activate memory profiling using the ``splunk.profiler.memory.enabled`` property, the value of ``splunk.metrics.enabled`` is set to ``true``. |br| |br| System property: ``splunk.metrics.enabled``
    * - ``OTEL_EXPORTER_OTLP_METRICS_ENDPOINT``
-     - The OTLP metrics endpoint to connect to. Must be a URL with a scheme of either HTTP or HTTPS based on the use of TLS. Default is ``http://localhost:4317`` when the protocol is gRPC, and ``http://localhost:4318/v1/metrics`` when the protocol is ``http/protobuf``. |br| |br| System property: ``otel.exporter.otlp.metrics.endpoint``
+     - The OTLP metrics endpoint to connect to. Must be a URL with a scheme of either HTTP or HTTPS based on the use of TLS. Default is ``http://localhost:4317`` when the protocol is gRPC, and ``http://localhost:4318/v1/metrics`` when the protocol is ``http/protobuf``.  System property: ``otel.exporter.otlp.metrics.endpoint``
    * - ``SPLUNK_METRICS_EXPORT_INTERVAL``
      - Deprecated. Use ``OTEL_METRIC_EXPORT_INTERVAL`` instead. See :new-page:`Periodic exporting MetricReader <https://opentelemetry.io/docs/specs/otel/configuration/sdk-environment-variables/#periodic-exporting-metricreader>` in the official OpenTelemetry documentation.
 
@@ -296,4 +294,4 @@ Other settings
    * - Environment variable
      - Description
    * - ``OTEL_JAVAAGENT_ENABLED``
-     - Globally activates the Java agent automatic instrumentation. The default value is ``true``. Useful for deactivating auto instrumentation in testing scenarios or pipelines. |br| |br| System property: ``otel.javaagent.enabled``
+     - Globally activates the Java agent automatic instrumentation. The default value is ``true``. Useful for deactivating automatic discovery in testing scenarios or pipelines. |br| |br| System property: ``otel.javaagent.enabled``.

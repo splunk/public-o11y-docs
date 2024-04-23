@@ -11,17 +11,31 @@ Set up Log Observer Connect by integrating Log Observer with Splunk Cloud Platfo
 
 When you set up Log Observer Connect, your logs data remains in your Splunk Cloud Platform instance and is accessible only to Log Observer Connect. Log Observer Connect does not store or index your logs data. There is no additional charge for Log Observer Connect.
 
+.. note:: You can collect data using both the Splunk Distribution of the OpenTelemetry Collector and the Universal Forwarder without submitting any duplicated telemetry data. See :ref:`collector-with-the-uf` to learn how.
+
 Region and version availability
 ==============================================================
 
-Splunk Log Observer Connect is available in the following Splunk Observability realms: us0, us1, us2, eu0, jp0, and au0. Splunk Log Observer Connect is compatible with Splunk Cloud Platform versions 8.2 and higher. Splunk Log Observer Connect is not available for Splunk Cloud Platform trials and is not supported in GovCloud regions. 
+Splunk Log Observer Connect is available in the following Splunk Observability realms: us0, us1, us2, eu0, jp0, and au0. It's not available for Splunk Cloud Platform trials and is not supported in GovCloud regions.  
 
-.. note:: You can collect data using both the Splunk Distribution of OpenTelemetry Collector and the universal forwarder without submitting any duplicate telemetry data. See :ref:`collector-with-the-uf` to learn how.
+Splunk Log Observer Connect is compatible with Splunk Cloud Platform versions 9.0.2209 and higher. 
 
 Prerequisites
 ==============================================================
-Ensure that token authentication is enabled for your Log Observer Connect service account in your Splunk Cloud Platform instance. See :new-page:`Securing Splunk Cloud Platform: Enable or disable token authentication token <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how. 
+
 To configure the Splunk Cloud service account user in the following section you must have the sc_admin role.
+
+Ensure the following configuration in your Splunk Cloud instance:
+
+* Token authentication is enabled for your Log Observer Connect service account in your Splunk Cloud Platform instance. See :new-page:`Securing Splunk Cloud Platform: Enable or disable token authentication token <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how. 
+
+* Allow these IPs in the :guilabel:`IP allow list` settings. See :new-page:`https://docs.splunk.com/Documentation/SplunkCloud/9.1.2312/Admin/ConfigureIPAllowList`.
+
+  - us0: ``34.199.200.84``, ``52.20.177.252``, ``52.201.67.203``, ``54.89.1.85``
+  - us1: ``44.230.152.35``, ``44.231.27.66``, ``44.225.234.52``, ``44.230.82.104``
+  - eu0: ``108.128.26.145``, ``34.250.243.212``, ``54.171.237.247``
+  - jp0: ``35.78.47.79``, ``35.77.252.198``, ``35.75.200.181``
+  - au0: ``13.54.193.47``, ``13.55.9.109``, ``54.153.190.59``
 
 Set up Log Observer Connect
 ==============================================================
@@ -49,7 +63,7 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
       
 2. Select the role you want to use for the Log Observer Connect service account. The service account is a user role that can access the specific Splunk Cloud Platform indexes that you want your users to search in Log Observer Connect. 
       
-3. On the :guilabel:`Capabilities` tab, ensure that ``edit_tokens_own`` is selected. Also, ensure that ``indexes_list_all`` is not selected.
+3. On the :guilabel:`Capabilities` tab, ensure that ``edit_tokens_own`` and ``search`` are selected. Also, ensure that ``indexes_list_all`` is not selected.
 
       .. image:: /_images/logs/CapabilitiesTab1.png
          :width: 100%
@@ -69,7 +83,7 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
          :width: 100%
          :alt: This screenshot shows recommended configuration for role search job limit and user search job limit.
 
-6. Now, in the :guilabel:`Role search time window limit` section of the :guilabel:`Resources` tab, select :guilabel:`Custom time` and enter 2,592,000 seconds (30 days) for the maximum time window for searches for this role. For the earliest searchable event time for this role,  select :guilabel:`Custom time` and enter 7,776,000 seconds (90 days). In the :guilabel:`Disk space limit` section enter a :guilabel:`Standard search limit` of 1000 MB.
+6. Now, in the :guilabel:`Role search time window limit` section of the :guilabel:`Resources` tab, select :guilabel:`Custom time` and enter 2592000 seconds (30 days) for the maximum time window for searches for this role. Do not use commas when entering numbers. For the earliest searchable event time for this role,  select :guilabel:`Custom time` and enter 7776000 seconds (90 days). In the :guilabel:`Disk space limit` section enter a :guilabel:`Standard search limit` of 1000 MB.
 
       .. image:: /_images/logs/ResourcesTab2.png
          :width: 100%
@@ -79,7 +93,7 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
    
       .. image:: /_images/logs/CreateUser.png
          :width: 100%
-         :alt: This screenshot shows the Create user page in Splunk Cloud Platform where you can assign a user to the service account role.
+         :alt: The Create user page in Splunk Cloud Platform where you can assign a user to the service account role.
 
 .. _download-certificate:
 
@@ -93,31 +107,31 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
    
          * 35.247.86.219/32
       
-9. Access your Splunk Cloud Platform management port (e.g. abc.splunkcloud.com:8089) and use your browser's secure connection to download the certificate.
+9. Access your Splunk Cloud Platform management port (for example, stackname.splunkcloud.com:8089) and use your browser's secure connection to download the certificate.
 
    a. For example, in the Chrome browser, select the lock icon in the address bar, then select :guilabel:`Connection is secure`.
 
-      .. image:: /_images/logs/chrome-secure1.png
+      .. image:: /_images/logs/chrome-secure1A.png
          :width: 50%
          :alt: This screenshot shows how to find the lock icon for secure download in Google Chrome.
    
    b. Next, select :guilabel:`Certificate is valid`.
 
-      .. image:: /_images/logs/chrome-secure2.png
+      .. image:: /_images/logs/chrome-secure2A.png
          :width: 50%
          :alt: This screenshot shows how to download a certificate in Google Chrome.
 
    c. On the :guilabel:`Details` tab, select :guilabel:`Export`.
 
-      .. image:: /_images/logs/chrome-secure3.png
+      .. image:: /_images/logs/chrome-secure3A.png
          :width: 60%
          :alt: This screenshot shows how to finish downloading a certificate in Google Chrome.
 
-10. Go back to the Log Observer Connect guided setup and select :guilabel:`Next`. Enter your service account username, password, and Splunk platform URL, then upload the certificate you downloaded in the previous step to complete the guided setup.
+10.  Go back to the Log Observer Connect guided setup and select :guilabel:`Next`. Enter your service account username, password, and Splunk platform URL, then upload the certificate you downloaded in the previous step to complete the guided setup.
 
-11. Remove your IPv4 address from the IP allowlist that you added in step 8. If you are in a GCP environment, do not remove the additional GCP IP addresses that you added in step 8.
+11.  Remove your IPv4 address from the IP allowlist that you added in step 8. If you are in a GCP environment, do not remove the additional GCP IP addresses that you added in step 8.
 
-12. Make sure to give each connection a unique name on the final page of the Log Observer Connect guided setup.
+12.  Make sure to give each connection a unique name on the final page of the Log Observer Connect guided setup.
 
    .. note:: Manage concurrent search limits using your current strategy in Splunk Cloud Platform. All searches initiated by Log Observer Connect users go through the service account you create in Splunk Cloud Platform. For each active Log Observer Connect user, four back-end searches occur when a user performs a search in Log Observer Connect. For example, if there are three users accessing Log Observer Connect at the same time, the service account for Log Observer Connect initiates approximately 12 searches in Splunk Cloud Platform.
 

@@ -15,30 +15,13 @@
 
 The SignalFx Instrumentation for .NET automatically instruments .NET applications, Windows services running .NET applications, ASP.NET applications deployed on IIS, and Azure App Service applications.
 
-To get started, use the guided setup or follow the instructions manually.
+To get started, follow the instructions to install the SignalFx Instrumentation for .NET manually.
 
-Generate customized instructions using the guided setup
-===================================================================
-
-To generate all the basic installation commands for your environment and application, use the .NET guided setup. To access the .NET guided setup, follow these steps:
-
-#. Log in to Splunk Observability Cloud.
-#. Open the :new-page:`.NET guided setup <https://login.signalfx.com/#/gdi/scripted/dotnet-tracing/step-1?category=product-apm&gdiState=%7B"integrationId":"dotnet-tracing"%7D>`. Optionally, you can navigate to the guided setup on your own:
-
-   #. In the navigation menu, select :menuselection:`Data Management`.
-
-   #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
-
-   #. In the integration filter menu, select :guilabel:`By Product`.
-
-   #. Select the :guilabel:`APM` product.
-
-   #. Select the :guilabel:`.NET` tile to open the .NET guided setup.
 
 Install the SignalFx Instrumentation for .NET manually
 ==================================================================
 
-Follow these instructions to install the SignalFx Instrumentation for .NET:
+If you don't use the guided setup, follow these instructions to manually install the SignalFx Instrumentation for .NET:
 
 - :ref:`install-dotnet-instrumentation`
 - :ref:`instrument-windows-service`
@@ -246,7 +229,7 @@ To instrument an application or service in Azure App Service, follow these steps
       * - ``SIGNALFX_ACCESS_TOKEN``
         - Your Splunk access token. To obtain an access token, see :ref:`admin-api-access-tokens`.
       * - ``SIGNALFX_REALM``
-        - ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, open the navigation menu in Splunk Observability Cloud, select :menuselection:`Settings`, and select your username. The realm name appears in the :guilabel:`Organizations` section.
+        - ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
       * - ``SIGNALFX_SERVICE_NAME``
         - The name of your service or application.
       * - ``SIGNALFX_ENV``

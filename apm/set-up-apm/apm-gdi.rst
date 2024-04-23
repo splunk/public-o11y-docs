@@ -115,16 +115,15 @@ In the following table, follow the instrumentation steps for the language that e
      - :ref:`get-started-python`
 
    * - Ruby
-     - Splunk Distribution of OpenTelemetry Ruby
+     - OpenTelemetry instrumentation for Ruby
      - :ref:`get-started-ruby`
 
    * - PHP
-     - SignalFx Tracing Library for PHP
+     - OpenTelemetry instrumentation for PHP
      - :ref:`get-started-php`
 
-After you instrument your applications, you're ready to verify that your data is coming in.
 
-.. note:: To instrument applications or services written in languages other than the ones listed here, see :ref:`apm-instrumentation-other-langs`.
+After you instrument your applications, you're ready to verify that your data is coming in.
 
 .. _verify-apm-data:
 

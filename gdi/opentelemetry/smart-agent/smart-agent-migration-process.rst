@@ -246,7 +246,7 @@ The following is an example YAML configuration file with default values where ap
 
 .. _use-translatefx:
 
-1. Translate the Smart Agent configuration file using translatesfx
+4. Translate the Smart Agent configuration file using translatesfx
 =====================================================================================
 
 ``translatesfx`` is a command-line tool provided by Splunk Observability Cloud that helps you translate your existing Smart Agent YAML configuration file into a configuration that can be used by the Collector. To learn how to use it, see :ref:`Configuration translation tool <otel-translation-tool>`.
@@ -283,17 +283,9 @@ If a Collector handles both trace and metric data, then both must be accounted f
 
 Use a ratio of 1 CPU to 2 GB of memory. By default, the Collector is configured to use 512 MB of memory.
 
-Configure ``ballastextension`` and the ``memory_limiter`` processor on every Collector instance, as shown in the following examples:
+Configure the ``memory_limiter`` processor on every Collector instance, as shown in the following examples:
 
 .. code-block:: yaml
-
-
-   extensions:
-      memory_ballast:
-         size_mib:
-
-.. code-block:: yaml
-
 
    processors:
       memory_limiter:
@@ -302,11 +294,12 @@ Configure ``ballastextension`` and the ``memory_limiter`` processor on every Col
          spike_limit_mib:
 
 .. note::
-   The ballast should be configured to be 1/3 to 1/2 of the memory allocated to the Collector. The ``memory_limiter`` processor should be the first processor defined in the pipeline (immediately after the receivers).
+   
+   Define the ``memory_limiter`` processor as the first processor in the pipeline, immediately after the receivers.
 
 .. _deploy-non-prod-updated-config:
 
-1. Deploy the Collector to the non-production environment using the updated configuration file
+6. Deploy the Collector to the non-production environment using the updated configuration file
 ===================================================================================================
 
 Complete the necessary updates and translation of the configuration file, and restart the Collector on the non-production environment using the updated file.

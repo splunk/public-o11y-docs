@@ -96,3 +96,5 @@ To export query results, follow these steps:
 3. Select :strong:`CSV` or :strong:`JSON`. 
 
 4. Click :strong:`Download`.
+
+.. note:: Use :guilabel:`Open in Splunk Platform` if the logs are stored in Splunk Cloud Platform or Splunk Enterprise. You cannot export logs directly when using Log Observer Connect.

@@ -7,7 +7,7 @@ Metrics and attributes collected by the Splunk OTel Java agent
 .. meta::
   :description: The Splunk Distribution of OpenTelemetry Java collects the following application metrics data and WebEngine attributes. You can also collect custom metrics through Micrometer.
 
-The agent of the Splunk Distribution of OpenTelemetry Java collects the following application metrics data and attributes in addition to all that the upstream OpenTelemetry agent collects. To learn about the different metric types, see :ref:`metric-types`. 
+The agent of the Splunk Distribution of OpenTelemetry Java collects the following application metrics data and attributes in addition to all that the upstream OpenTelemetry agent collects. To learn about the different metric types, see :ref:`metric-types`.
 
 .. caution:: OpenTelemetry Java Instrumentation 2.x contains a set of breaking changes, introduced as part of recent OpenTelemetry HTTP semantic convention updates. To migrate, see :ref:`java-metrics-migration-guide`.
 
@@ -172,10 +172,10 @@ The agent collects the following heap pressure metrics:
     - Description
   * - ``runtime.jvm.gc.overhead``
     - Gauge
-    - An approximation of the percentage of CPU time used by GCP activities over the last lookback period or since monitoring began, whichever is shorter, in the range [0..1].
+    - An approximation of the percentage of CPU time used by GC activities over the last lookback period or since monitoring began, whichever is shorter, in the range [0..1].
   * - ``runtime.jvm.memory.usage.after.gc``
     - Gauge
-    - The percentage of long-lived heap pool used after the last GCP event, in the range [0..1].
+    - The percentage of long-lived heap pool used after the last GC event, in the range [0..1].
 
 .. _jvm-memory-metrics:
 
@@ -194,7 +194,13 @@ The agent collects the following memory metrics:
     - Description
   * - ``jvm.memory.allocated``
     - Counter
-    - Total number of bytes allocated by JVM threads since the previous data point was emitted.
+    - Total number of bytes allocated by JVM threads since the previous data point was emitted. 
+        - Use the rate per second rollup.
+        - Requires to activate memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag.
+  * - ``process.runtime.jvm.memory.reclaimed``
+    - Counter
+    - Total number of bytes reclaimed by the GC since the previous data point was emitted. Notes: 
+        - This metric might be inaccurate for concurrent garbage collectors such as Shenandoah or ZGC.
         - Use the rate per second rollup.
         - Requires to activate memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag.
   * - ``runtime.jvm.buffer.count``

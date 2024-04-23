@@ -25,8 +25,9 @@ Business Workflows generate Monitoring and Troubleshooting MetricSets for traces
 
 You can also filter your Troubleshooting view to display only transactions for specific Business Workflows.
 
-Prerequisite
-=============
+.. raw:: html
+
+      <h2>Prerequisite</h2>
 
 To configure Business Workflows, you must have the admin role. 
 
