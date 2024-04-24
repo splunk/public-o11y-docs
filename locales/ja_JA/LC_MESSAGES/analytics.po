@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-18 11:06+0000\n"
-"PO-Revision-Date: 2023-12-21 17:39+0000\n"
+"POT-Creation-Date: 2024-02-23 17:21+0000\n"
+"PO-Revision-Date: 2024-04-18 10:44+0100\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -16,15 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: ../../analytics/infrastructure-monitoring-analytics.rst:-1
 msgid "Splunk infrastructure monitoring analytics overview, rollup policies, signalflow instructions, and analytics aggregations and transformations"
 msgstr "Splunk Infrastructure Monitoring分析の概要、ロールアップ・ポリシー、SignalFlow命令、分析の集約と変換"
-
-#: ../../<rst_prolog>:18
-msgid "Take shift"
-msgstr "シフトの引き受け"
 
 #: ../../analytics/infrastructure-monitoring-analytics.rst:5
 msgid "Splunk Infrastructure Monitoring analytics"
@@ -55,7 +51,7 @@ msgid ""
 "Each set of time series in a plot line has a common metric type, whether a gauge, counter or cumulative counter. The metric type determines the default visualization :new-page-ref:`rollups <rollups>` that is applied to the time series data. The defaults in each case are chosen to ensure "
 "that values displayed are accurate and stable across different chart resolutions."
 msgstr ""
-"プロット・ライン内の時系列の各セットは、ゲージ、カウンタ、累積カウンタなどの共通のメトリクス・タイプを持っています。メトリクス・タイプによって、時系列データに適用されるデフォルトの可視化 :new-page-ref:`rollups <rollups>` を決定します。それぞれの場合のデフォルトは、表示される値が正確で、さま"
+"プロット・ライン内の時系列の各セットは、ゲージ、カウンター、累積カウンターなどの共通のメトリクスタイプを持っています。メトリクスタイプによって、時系列データに適用されるデフォルトの可視化 :new-page-ref:`rollups <rollups>` を決定します。それぞれの場合のデフォルトは、表示される値が正確で、さま"
 "ざまなチャート解像度で安定するように選択されます。"
 
 #: ../../analytics/infrastructure-monitoring-analytics.rst:23
@@ -76,27 +72,27 @@ msgstr ""
 "これらの平均値をプロットします。一般的に、これはデータをより正確に表現しますが、実際のメトリクスによっては望ましくないかもしれませんが、山と谷を平均化するという副作用もあります。"
 
 #: ../../analytics/infrastructure-monitoring-analytics.rst:29
-msgid "If you prefer to see sampled values, you can select the :strong:`Latest` rollup, or if you prefer to see the peaks and valleys, you can select the :strong:`Max` or :strong:`Min` rollups, respectively."
-msgstr "サンプリングされた値を見たい場合は、:strong:`Latest` のロールアップを選択し、ピークと谷を見たい場合は、それぞれ :strong:`Max` または :strong:`Min` のロールアップを選択することができます。"
+msgid "If you prefer to see sampled values, you can select the :strong:`Latest`rollup, or if you prefer to see the peaks and valleys, you can select the :strong:`Max` or :strong:`Min` rollups, respectively."
+msgstr "サンプリングされた値を見たい場合は、:strong:`最新` のロールアップを選択し、ピークと谷を見たい場合は、それぞれ :strong:`最大` または :strong:`最小` のロールアップを選択することができます。"
 
 #: ../../analytics/infrastructure-monitoring-analytics.rst:31
 msgid ""
 "For a counter or cumulative counter, the chosen rollup affects not only the accuracy, but more generally how the chart behaves as you change the time range. For example, you have a counter, sent as a high-resolution metric, that tells you how many responses a server handled per 1‑second "
 "interval. If you use a rollup of :strong:`Rate/sec` rather than the default :strong:`Sum` rollup, then in a chart with a time range small enough to show the time series at its native resolution, values are reported as follows:"
 msgstr ""
-"カウンタや累積カウンタの場合、選択したロールアップは精度だけでなく、時間範囲を変更したときのチャートの動作にも影響します。たとえば、高解像度のメトリクスとして送信されるカウンタがあり、サーバが 1 秒間隔で処理したレスポンスの数がわかるとします。デフォルトの :strong:`Sum` のロールアップではな"
-"く、:strong:`Rate/sec` のロールアップを使用した場合、時系列を本来の解像度で表示するのに十分な小さい時間範囲のチャートでは、値は以下のように報告されます："
+"カウンターや累積カウンターの場合、選択したロールアップは精度だけでなく、時間範囲を変更したときのチャートの動作にも影響します。たとえば、高解像度のメトリクスとして送信されるカウンターがあり、サーバーが1秒間隔で処理したレスポンスの数がわかるとします。デフォルトの :strong:`合計` のロールアップ"
+"ではなく、:strong:`Rate/sec` のロールアップを使用した場合、時系列を本来の解像度で表示するのに十分な小さい時間範囲のチャートでは、値は以下のように報告されます："
 
 #: ../../analytics/infrastructure-monitoring-analytics.rst:33
 msgid ""
 "For a counter, each reported :strong:`Rate/sec` value is shown normalized by the interval, for example, number of responses during each 1‑second interval, divided by 1 (for data coming in every second), number of responses during each 5‑second interval, divided by 5 (for data coming in "
 "every 5 seconds) etc."
-msgstr "カウンタの場合、:strong:`Rate/sec` の各報告値は、インターバルで正規化されて表示されます。例えば、各1秒インターバル中のレスポンス数を1で割った値（1秒ごとにデータが来る場合）、各5秒インターバル中のレスポンス数を5で割った値（5秒ごとにデータが来る場合）などです。"
+msgstr "カウンターの場合、:strong:`Rate/sec` の各報告値は、インターバルで正規化されて表示されます。例えば、各1秒インターバル中のレスポンス数を1で割った値（1秒ごとにデータが来る場合）、各5秒インターバル中のレスポンス数を5で割った値（5秒ごとにデータが来る場合）などです。"
 
 #: ../../analytics/infrastructure-monitoring-analytics.rst:35
 msgid "For a cumulative counter, the default rollup is :strong:`Delta`, so each reported :strong:`Rate/sec` value is the delta from the last data point normalized by the interval, divided by 1 (for data coming in every second), divided by 5 (for data coming in every 5 seconds), etc."
 msgstr ""
-"累積カウンタの場合、デフォルトのロールアップは :strong:`デルタ` です。したがって、報告される各 :strong:`Rate/sec` 値は、インターバルで正規化された最後のデータポイントからのデルタであり、1で割った値（1秒ごとに入ってくるデータの場合）、5で割った値（5秒ごとに入ってくるデータの場合）などです。"
+"累積カウンターの場合、デフォルトのロールアップは :strong:`デルタ` です。したがって、報告される各 :strong:`Rate/sec` 値は、インターバルで正規化された最後のデータポイントからのデルタであり、1で割った値（1秒ごとに入ってくるデータの場合）、5で割った値（5秒ごとに入ってくるデータの場合）などです。"
 
 #: ../../analytics/infrastructure-monitoring-analytics.rst:37
 msgid "If you then change the time range, such that each data point to plot represents, say, a 4‑minute interval, then values are reported as follows:"
@@ -104,14 +100,14 @@ msgstr "次に、プロットする各データポイントが例えば4分間�
 
 #: ../../analytics/infrastructure-monitoring-analytics.rst:39
 msgid "For a counter, each data point is the sum of all the responses during that 4‑minute interval, divided by 240 (the number of seconds in that interval)."
-msgstr "カウンタの場合、各データポイントは、その4分間のインターバル中のすべての回答の合計を240（そのインターバルの秒数）で割ったものです。"
+msgstr "カウンターの場合、各データポイントは、その4分間のインターバル中のすべての回答の合計を240（そのインターバルの秒数）で割ったものです。"
 
 #: ../../analytics/infrastructure-monitoring-analytics.rst:41
 msgid "For a cumulative counter, each data point is the sum of delta rollups over the interval (delta rollups are the differences between successive data points), divided by 240 (the number of seconds in the interval)."
-msgstr "累積カウンタの場合、各データポイントは、インターバル中のデルタ・ロールアップ（デルタ・ロールアップは連続するデータポイント間の差）の合計を240（インターバルの秒数）で割ったものです。"
+msgstr "累積カウンターの場合、各データポイントは、インターバル中のデルタ・ロールアップ（デルタ・ロールアップは連続するデータポイント間の差）の合計を240（インターバルの秒数）で割ったものです。"
 
 #: ../../analytics/infrastructure-monitoring-analytics.rst:43
-msgid "In all likelihood, this has an impact similar to the :strong:`Average` rollup for a gauge: it provides an accurate representation of the data, and one whose visualization is aligned with how you typically use line or area charts."
+msgid "In all likelihood, this has an impact similar to the :strong:`Average`rollup for a gauge: it provides an accurate representation of the data, and one whose visualization is aligned with how you typically use line or area charts."
 msgstr "おそらくこれは、:strong:`平均` ゲージのロールアップと同じような影響を与えます。データの正確な表現を提供し、折れ線グラフやエリア・チャートを通常使用する方法と同じように視覚化されます。"
 
 #: ../../analytics/infrastructure-monitoring-analytics.rst:45
@@ -120,7 +116,7 @@ msgid ""
 "case, as the sum rollup occurs over a 1‑second interval. In a chart with a four-minute interval, however, the values shown are the sum of all values during the 240 seconds. This is likely to generate a value that is significantly higher than the normalized rate per second rollup, and "
 "depending on the nature of your metric, it may be what you are looking for."
 msgstr ""
-"対照的に、:strong:`Sum` のような異なるロールアップを選択した場合、チャートの解像度が異なると、チャートの動作が変わります。時系列を本来の解像度で表示するのに十分な小さな時間範囲のチャートでは、合計のロールアップが1秒間隔で発生するため、報告される各値は秒あたりのレートの場合と同じです。しか"
+"対照的に、:strong:`合計` のような異なるロールアップを選択した場合、チャートの解像度が異なると、チャートの動作が変わります。時系列を本来の解像度で表示するのに十分な小さな時間範囲のチャートでは、合計のロールアップが1秒間隔で発生するため、報告される各値は秒あたりのレートの場合と同じです。しか"
 "し、4分間隔のチャートでは、表示される値は240秒間のすべての値の合計となります。これは、正規化された1秒あたりのレートのロールアップよりもかなり高い値を生成する可能性が高く、メトリクスの性質によっては、あなたが求めているものかもしれません。"
 
 #: ../../analytics/infrastructure-monitoring-analytics.rst:47
@@ -136,8 +132,8 @@ msgid ""
 "SignalFlow computations often involve both data and corresponding metadata - dimensions, properties, or tags. For example, when a mean is computed across CPU utilization metrics received from server instances spread out across multiple regions or availability zones, you can group them by "
 "the regions or availability zones, so that you can discern whether one is running hotter than the next at the aggregate level."
 msgstr ""
-"SignalFlowの計算には、多くの場合、データと対応するメタデータ（ディメンション、プロパティ、またはタグ）の両方が含まれます。たとえば、複数のリージョンまたはアベイラビリティ・ゾーンに分散するサーバ・インスタンスから受信したCPU使用率メトリクス全体で平均を計算する場合、リージョンまたはアベイラビ"
-"リティ・ゾーンごとにそれらをグループ化し、集約レベルで1つが次のものよりも高温で動作しているかどうかを識別できるようにすることができます。"
+"SignalFlowの計算には、多くの場合、データと対応するメタデータ（ディメンション、プロパティ、またはタグ）の両方が含まれます。たとえば、複数のリージョンまたはアベイラビリティ・ゾーンに分散するサーバー・インスタンスから受信したCPU使用率メトリクス全体で平均を計算する場合、リージョンまたはアベイラ"
+"ビリティ・ゾーンごとにそれらをグループ化し、集約レベルで1つが次のものよりも高温で動作しているかどうかを識別できるようにすることができます。"
 
 #: ../../analytics/infrastructure-monitoring-analytics.rst:56
 msgid ""
@@ -213,8 +209,8 @@ msgid ""
 "Streams are local to a particular analytics query or computation, and several distinct jobs may query for the same underlying metric time series data. Detectors evaluate conditions involving one or more streams, typically comparisons between streams over a period of time. For example, the "
 "condition for a detector could be \"disk utilization is greater than 80% for 90% of 10 minutes,\" or, \"average database latency is above 5 seconds and the number of database calls is at least 20% of the one day average.\""
 msgstr ""
-"ストリームは、特定の分析クエリまたは計算に対してローカルであり、複数の異なるジョブが、同じ基礎となるメトリック時系列データに対してクエリを実行する可能性があります。ディテクターは、1 つまたは複数のストリームに関係する条件（通常は一定期間にわたるストリーム間の比較）を評価します。たとえば、"
-"「ディスク使用率が 10 分間の 90%で 80%を超えている」、「データベースの平均待ち時間が 5 秒を超え、データベースの呼び出し回数が 1 日平均の少なくとも 20%である」などがディテクターの条件となります。"
+"ストリームは、特定の分析クエリまたは計算に対してローカルであり、複数の異なるジョブが、同じ基礎となるメトリック時系列データに対してクエリを実行する可能性があります。ディテクターは、1つまたは複数のストリームに関係する条件（通常は一定期間にわたるストリーム間の比較）を評価します。たとえば、"
+"「ディスク使用率が10分間の90%で 80%を超えている」、「データベースの平均待ち時間が5秒を超え、データベースの呼び出し回数が1日平均の少なくとも20%である」などがディテクターの条件となります。"
 
 #: ../../analytics/signalflow.rst:30
 msgid "For more information about stream objects, see :new-page:`Streams as variables <https://dev.splunk.com/observability/docs/signalflow/#Streams-as-variables>`."
@@ -229,7 +225,7 @@ msgid "If you want to create custom charts and detector analytics, see :new-page
 msgstr "カスタムチャートやディテクター分析を作成したい場合は、『Splunk Observability Cloud 開発者ガイド』の :new-page:`SignalFlowを使用してデータを分析する<https://dev.splunk.com/observability/docs/signalflow/>` を参照してください。"
 
 #: ../../analytics/signalflow.rst:37
-msgid "You can also run SignalFlow programs directly. For more information, see the :new-page:`SignalFlow API <https://dev.splunk.com/observability/docs/signalflow#SignalFlow-API/>` topic in the Splunk Observability Cloud Developer Guide."
+msgid "You can also run SignalFlow programs directly. For more information, see the :new-page:`SignalFlow API <https://dev.splunk.com/observability/docs/signalflow#SignalFlow-API/>`topic in the Splunk Observability Cloud Developer Guide."
 msgstr "SignalFlow プログラムを直接実行することもできます。詳細については、Splunk Observability Cloud Developer Guide の :new-page:`SignalFlow API<https://dev.splunk.com/observability/docs/signalflow#SignalFlow-API/>` トピックを参照してください。"
 
 #: ../../analytics/signalflow.rst:42
@@ -245,7 +241,7 @@ msgid ""
 "Aggregations operate across all of the data points at a single instance in time, for example the mean CPU utilization across a group of five servers at time t, t+1, t+2, and so on. The output of an aggregation is a single :term:`metric time series <Metric time series>` (MTS), where each "
 "data point represents the aggregation of all the data points over a specific period of time. For more information, see :new-page:`Aggregations <https://dev.splunk.com/observability/docs/signalflow/#Aggregations>`."
 msgstr ""
-"例えば、時刻 t、t+1、t+2 における 5 台のサーバグループの平均 CPU 使用率などです。集約の出力は、単一の :term:`メトリック時系列<Metric time series>` (MTS)であり、各データポイントは、特定の期間におけるすべてのデータポイントの集約を表します。詳細については、:new-page:`集計<https://dev.splunk."
+"例えば、時刻 t、t+1、t+2 における5台のサーバーグループの平均 CPU 使用率などです。集約の出力は、単一の :term:`メトリック時系列<Metric time series>` (MTS)であり、各データポイントは、特定の期間におけるすべてのデータポイントの集約を表します。詳細については、:new-page:`集計<https://dev.splunk."
 "com/observability/docs/signalflow/#Aggregations>` を参照。"
 
 #: ../../analytics/signalflow.rst:48
@@ -254,15 +250,15 @@ msgid ""
 "as an aggregation, and set AWS instance type as the group-by criterion. The output will show one MTS per AWS instance type."
 msgstr ""
 "集計には、Group Byという追加オプションが利用できます。group-byフィールドが指定された場合、group-by基準で指定されたプロパティの MTS 共有値が一緒に集計されます。たとえば、平均 CPU負荷を AWSインスタンスタイプ別にグループ化して計算できます。Mean関数を集計として追加し、AWSインスタンスタイプを "
-"group-by基準として設定します。出力には、AWSインスタンスタイプごとに 1つのMTSが表示されます。"
+"group-by基準として設定します。出力には、AWSインスタンスタイプごとに1つのMTSが表示されます。"
 
 #: ../../analytics/signalflow.rst:50
 msgid ""
 "Transformations operate in parallel on each MTS over a window of time and yield one output time series for each input time series. For example, the average CPU utilization for five servers over a rolling window of one day will display five MTS; each output value will be the moving average "
 "for that MTS over the previous 24 hours. For more information, see :new-page:`Transformations <https://dev.splunk.com/observability/docs/signalflow/#Transformations>`."
 msgstr ""
-"変換は各 MTS に対し時間ウィンドウ上で並列に実行され、各入力時系列に対し 1 つの出力時系列が得られます。たとえば、5 台のサーバの 1 日の平均 CPU 使用率は、5 つの MTS を表示し、各出力値はその MTS の過去 24 時間の移動平均となります。詳細については、:new-page:`変換<https://dev.splunk.com/"
-"observability/docs/signalflow/#Transformations>` を参照してください。"
+"変換は各 MTS に対し時間ウィンドウ上で並列に実行され、各入力時系列に対し1つの出力時系列が得られます。たとえば、5台のサーバーの1日の平均 CPU 使用率は、5つの MTS を表示し、各出力値はその MTS の過去24時間の移動平均となります。詳細については、:new-page:`変換<https://dev.splunk.com/observability/"
+"docs/signalflow/#Transformations>` を参照してください。"
 
 #: ../../analytics/signalflow.rst:52
 #, fuzzy
@@ -277,7 +273,7 @@ msgstr "移動ウィンドウの変換"
 msgid ""
 "In the following example of a moving window transformation chart, each line represents the Mean CPU utilization across four servers. The grey line represents the mean value for each data point over the preceding minute. The magenta line represents the mean value for each data point over the "
 "preceding hour rolling window."
-msgstr "以下の移動窓変換チャートの例では、各線は 4 台のサーバの平均 CPU 使用率を表しています。灰色の線は、直前 1 分間の各データポイントの平均値を表します。マゼンタの線は、直前の 1 時間のローリング・ウィンドウにおける各データポイントの平均値を表します。"
+msgstr "以下の移動窓変換チャートの例では、各線は4台のサーバーの平均 CPU 使用率を表しています。灰色の線は、直前1分間の各データポイントの平均値を表します。マゼンタの線は、直前の1時間のローリング・ウィンドウにおける各データポイントの平均値を表します。"
 
 #: ../../analytics/signalflow.rst:55
 msgid "This image shows a rolling window transformation chart. Two CPU utilization functions appear in the chart."
@@ -383,7 +379,7 @@ msgid ""
 "The :guilabel:`Hide partial values` setting lets you optimize the output of a calendar window function, based on whether you are interested only in the final values calculated at the ends of cycles, as well as partial values calculated during a cycle. For example, if you have a cycle length "
 "of one day, hiding partial values means that you will only see one value for each day; you won't see how values change during the course of the day."
 msgstr ""
-" :guilabel:`Hide partial values` 設定により、カレンダー・ウィンドウ関数の出力を最適化することができます。これは、サイクルの終了時に計算された最終的な値と、サイクル中に計算された部分的な値のどちらに関心があるかに基づきます。たとえば、サイクルの長さが1日の場合、部分的な値を非表示にすると、各日"
+":guilabel:`Hide partial values` 設定により、カレンダー・ウィンドウ関数の出力を最適化することができます。これは、サイクルの終了時に計算された最終的な値と、サイクル中に計算された部分的な値のどちらに関心があるかに基づきます。たとえば、サイクルの長さが1日の場合、部分的な値を非表示にすると、各日"
 "の値が1つだけ表示されます。"
 
 #: ../../analytics/signalflow.rst:117
@@ -408,7 +404,7 @@ msgstr "単一値チャートは、現在までに報告された最大待ち時
 
 #: ../../analytics/signalflow.rst:132
 msgid "Timeshift for calendar windows"
-msgstr "カレンダーウィンドウのタイムシフト"
+msgstr "カレンダー・ウィンドウのタイムシフト"
 
 #: ../../analytics/signalflow.rst:134
 msgid ""
@@ -506,7 +502,7 @@ msgstr "SignalFlowと分析"
 
 #: ../../analytics/signalflow-analytics-intro.rst:18
 msgid ":new-page:`SignalFlow <https://dev.splunk.com/observability/docs/signalflow/>` is the analytics engine at the heart of Splunk Observability Cloud. It runs computation that allow you to analyze incoming data and write custom chart and detector analytics."
-msgstr " :new-page:`SignalFlow<https://dev.splunk.com/observability/docs/signalflow/>` は Splunk Observability Cloud の中核をなす分析エンジンです。入力データを分析し、カスタムチャートとディテクター分析を書くことができる計算を実行します。"
+msgstr ":new-page:`SignalFlow<https://dev.splunk.com/observability/docs/signalflow/>` は Splunk Observability Cloud の中核をなす分析エンジンです。入力データを分析し、カスタムチャートとディテクター分析を書くことができる計算を実行します。"
 
 #: ../../analytics/signalflow-analytics-intro.rst:20
 msgid "You can use the following SignalFlow components to create custom analytics for your data:"
@@ -531,3 +527,6 @@ msgstr "SignalFlow の使用方法については、:ref:`get-started-signalflow
 #: ../../analytics/signalflow-analytics-intro.rst:28
 msgid "For more information on Splunk Infrastructure Monitoring analytics, see :ref:`infrastructure-monitoring-analytics`."
 msgstr "Splunk Infrastructure Monitoring 分析の詳細については、:ref:`infrastructure-monitoring-analytics` を参照してください。"
+
+#~ msgid "Take shift"
+#~ msgstr "シフトの引き受け"

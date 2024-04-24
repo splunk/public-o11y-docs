@@ -228,7 +228,7 @@ To deploy the Java agent in Kubernetes, follow these steps:
                   - name: OTEL_RESOURCE_ATTRIBUTES
                   value: "deployment.environment=<environmentName>"
 
-.. note:: You can also deploy instrumentation using the Kubernetes Operator. See :ref:`auto-instrumentation-java-k8s`.
+.. note:: You can also deploy instrumentation using the Kubernetes Operator. See :ref:`k8s-backend-auto-discovery` for more information.
 
 .. _java-agent-cloudfoundry:
 

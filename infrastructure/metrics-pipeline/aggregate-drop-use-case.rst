@@ -10,7 +10,7 @@ Scenario: Combine aggregation and dropping rules to control your metric cardinal
 
 |hr|
 
-:strong:`Available in Enterprise Edition`
+:strong:`Available in Enterprise Edition`. For more information, see :ref:`sd-subscriptions`.
 
 |hr|
 
@@ -56,12 +56,9 @@ By combining aggregation and data dropping rules, Kai and Skyler have successful
 Learn more
 ===============
 
-To learn more about aggregation, see :ref:`aggregation`.
+To learn more, see the following docs:
 
-To learn more about data dropping, see :ref:`data-dropping`.
-
-To learn more about metrics usage report, see :ref:`metrics-usage-report`.
-
-For more information on how to create metric rules, see :ref:`use-metrics-pipeline`. 
-
-For more information on the impact of dropping data, see :ref:`data-dropping-impact`. 
+* :ref:`metrics-pipeline-intro`
+* :ref:`mpm-rule-routing`
+* :ref:`mpm-rule-agreggation`
+* :ref:`metrics-usage-report`

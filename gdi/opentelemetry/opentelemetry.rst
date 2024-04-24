@@ -18,8 +18,7 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     Collector for Linux <collector-linux/collector-linux-intro.rst>
     Collector for Windows <collector-windows/collector-windows-intro.rst>     
     deployments/otel-deployments.rst  
-    Zero config auto instrumentation <zero-config.rst>
-    Discover metric sources automatically <discovery-mode.rst>
+    Automatic discovery and configuration <discovery-mode.rst>
     Use the Universal Forwarder <collector-with-the-uf.rst>
     Monitor the Collector with built-in dashboards <collector-builtin-dashboard.rst>
     Troubleshooting <troubleshooting.rst>
@@ -91,7 +90,7 @@ Also, the customizations in the Splunk distribution include these additional fea
 
 * Better defaults for Splunk products
 * Discovery mode for metric sources
-* Zero configuration auto instrumentation
+* Automatic discovery and configuration
 * Fluentd for log capture, deactivated by default
 * Tools to support migration from SignalFx products
 
@@ -203,8 +202,8 @@ The Collector also offers a :ref:`zPages extension <zpages-extension>`, which pr
 See the features available for the Collector:
 
 * See how to perform common actions and tasks with the Collector at :ref:`collector-how-to`. For example, learn how to :ref:`collector-remove-data` to strip data out of your telemetry, including PII.
-* Learn about the discovery mode to detect metrics. See :ref:`discovery_mode`.
-* Activate auto-instrumentation so that the Collector can automatically grab traces from your application, and add metrics for certain types of calls. See :ref:`zero-config`.
+* Learn about automatic discovery and configuration (formerly zero configuration auto instrumentation) to detect telemetry data. See :ref:`discovery_mode`.
+* Activate automatic discovery so that the Collector can automatically grab traces from your application, and add metrics for certain types of calls. See :ref:`discovery_mode`.
 
 For more information:
 
