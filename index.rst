@@ -12,6 +12,12 @@ Welcome
    :width: 97.3%
    :target: https://docs.splunk.com/Observability/get-started/o11y.html#nav-Get-started
 
+.. raw:: html
+
+    <div class="instrumentation" section="settings" url="/observability/en/_static/instrumentation.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>
+
+
+
 .. role:: icon-info
 .. rst-class:: newparawithicon
 

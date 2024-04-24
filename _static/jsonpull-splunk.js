@@ -1,5 +1,203 @@
 $(document).ready(function () {
 
+   $('.instrumentation').each(function () {
+      let url = $(this).attr('url');
+      let renamingDict = JSON.parse($(this).attr('data-renaming') || '{}');
+      let section = $(this).attr('section') || 'instrumentation'; // Default to 'instrumentation' if not specified
+
+      function rename(key) {
+         return renamingDict[key] || key;
+      }
+
+      function generateIndexTable(data) {
+         let columns = new Set();
+         data.forEach(item => Object.keys(item).forEach(key => columns.add(key)));
+         let columnsArray = Array.from(columns);
+
+         let table = $('<table class="generated-table docutils align-default" id="indexTable"><tr></tr></table>');
+         columnsArray.forEach(col => table.find('tr').append(`<th>${rename(col)}</th>`));
+
+         data.forEach((item, index) => {
+            let row = $('<tr></tr>');
+            columnsArray.forEach(col => {
+               if (item[col] !== undefined) {
+                  if (Array.isArray(item[col]) && isComplex(item[col])) {
+                     let anchorId = `detail-${index}-${col}-header`;
+                     row.append(`<td><a href="#${anchorId}">Details</a></td>`);
+                  } else if (Array.isArray(item[col]) && item[col].length === 1 && !isComplex(item[col][0])) {
+                     row.append(`<td>${item[col][0]}</td>`);
+                  } else if (isComplex(item[col]) && !Array.isArray(item[col])) {
+                     let subTableHtml = generateSubtableHtmlForSingleObject(item[col]);
+                     row.append(`<td>${subTableHtml}</td>`);
+                  } else if (Array.isArray(item[col])) {
+                     row.append(`<td>${item[col].map(subItem => subItem instanceof Object ? JSON.stringify(subItem) : subItem).join(', ')}</td>`);
+                  } else {
+                     row.append(`<td>${item[col]}</td>`);
+                  }
+               } else {
+                  row.append('<td></td>');
+               }
+            });
+            table.append(row);
+         });
+
+         return table;
+      }
+
+      function generateSubtables(data) {
+         let subtables = [];
+         data.forEach((item, index) => {
+            Object.keys(item).forEach(key => {
+               if (Array.isArray(item[key]) && isComplex(item[key])) {
+                  let headingId = `detail-${index}-${key}-header`;
+                  let heading = $(`<h2 id="${headingId}">${rename(key)}</h2>`);
+
+                  let subTable = $(`<table border="1" id="detail-${index}-${key}"></table>`);
+                  const allKeys = [...new Set(item[key].flatMap(Object.keys))];
+
+                  let headers = $('<tr></tr>');
+                  allKeys.forEach(subKey => {
+                     if (subKey === 'traces') {
+                        return;
+                     }
+                     headers.append(`<th>${subKey}</th>`);
+                  });
+                  subTable.append(headers);
+
+                  item[key].forEach(subItem => {
+                     let subRow = $('<tr></tr>');
+                     allKeys.forEach(subKey => {
+                        if (subKey === 'traces') {
+                           return;
+                        }
+                        let cellValue = handleNestedData(subItem[subKey]);
+                        if (cellValue !== '') {
+                           subRow.append(`<td>${cellValue}</td>`);
+                        }
+                     });
+                     subTable.append(subRow);
+                  });
+
+                  let container = $('<div></div>');
+                  container.append(heading);
+                  container.append(subTable);
+
+                  $('.instrumentation').append(container);
+                  subtables.push(container);
+               }
+            });
+         });
+         return subtables;
+      }
+
+      function handleNestedData(value) {
+         if (value instanceof Object) {
+            if (Array.isArray(value)) {
+               let nestedTable = '<table border="1">';
+               let headersAdded = false;
+               value.forEach(item => {
+                  let row = '<tr>';
+                  Object.entries(item).forEach(([key, val], index) => {
+                     if (!headersAdded) {
+                        nestedTable += `<th>${key}</th>`;
+                     }
+                     row += `<td>${handleNestedData(val)}</td>`;
+                  });
+                  nestedTable += row + '</tr>';
+                  headersAdded = true;
+               });
+               return nestedTable + '</table>';
+            } else {
+               let nestedTable = '<table border="1">';
+               Object.entries(value).forEach(([key, val]) => {
+                  nestedTable += `<tr><th>${key}</th><td>${handleNestedData(val)}</td></tr>`;
+               });
+               return nestedTable + '</table>';
+            }
+         }
+         return value || '';
+      }
+
+      function isComplex(item) {
+         return Array.isArray(item) ? item.some(isComplex) : (typeof item === 'object' && !(item instanceof Date) && !(item instanceof String));
+      }
+
+
+      function generateSubtableHtmlForSingleObject(data) {
+         let html = '<table border="1">';
+         Object.keys(data).forEach(key => {
+            html += `<tr><td>${key}</td><td>${data[key]}</td></tr>`;
+         });
+         html += '</table>';
+         return html;
+      }
+
+      function removeEmptyTables() {
+         $('.instrumentation > div').each(function () {
+            let container = $(this);
+            let h2 = container.find('h2');
+            let mainTable = container.find('table').first();
+
+            function isTableEffectivelyEmpty(table) {
+
+               let textNodes = table.find('td').contents().filter(function () {
+                  return this.nodeType === 3 && $.trim(this.nodeValue).length > 0;
+               });
+
+               if (textNodes.length > 0) {
+                  return false;
+               }
+
+               let allCells = table.find('td');
+               for (let i = 0; i < allCells.length; i++) {
+                  let cell = $(allCells[i]);
+                  let nestedTables = cell.find('table');
+                  if (nestedTables.length > 0) {
+                     for (let j = 0; j < nestedTables.length; j++) {
+                        let nestedTable = $(nestedTables[j]);
+                        if (!isTableEffectivelyEmpty(nestedTable)) {
+                           return false;
+                        }
+                     }
+                  } else if ($.trim(cell.text()).length > 0) {
+                     return false;
+                  }
+               }
+
+               return true;
+            }
+
+            if (isTableEffectivelyEmpty(mainTable)) {
+               let h2Id = h2.attr('id');
+               $('#indexTable a[href="#' + h2Id + '"]').closest('td').html('');
+               container.remove();
+            }
+         });
+      }
+
+
+      $.ajax({
+         url: url,
+         dataType: 'text',
+         success: function (response) {
+            const yamlData = jsyaml.load(response);
+            if (yamlData && yamlData[section]) {
+               const indexTable = generateIndexTable(yamlData[section]);
+               $('.instrumentation').append(indexTable);
+               const subtables = generateSubtables(yamlData[section]);
+               subtables.forEach(subtable => {
+                  $('.instrumentation').append(subtable);
+               });
+            } else {
+               $('.instrumentation').append(`<div class="admonition caution">No data for section '${section}'.</div>`);
+            }
+            removeEmptyTables();
+         },
+         error: function () {
+            $('.instrumentation').append('<div class="admonition caution">Error loading or parsing YAML file.</div>');
+         }
+      });
+   });
 
    $('.metrics-config').each(function () {
       if ($(this).data('processed')) {
