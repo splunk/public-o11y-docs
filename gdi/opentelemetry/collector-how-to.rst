@@ -31,8 +31,10 @@ Browse the table below to learn how to carry out common tasks with the Splunk Di
     - :ref:`otel-tags`   
   * - Remove attributes
     - :ref:`attributes-processor` 
+  * - Collect custom metrics	
+    - :new-page:`Receive any custom metric with the Collector <https://opentelemetry.io/blog/2023/any-metric-receiver/>`
   * - Collect Prometheus metrics	
-    - :ref:`prometheus-receiver`     
+    - :ref:`prometheus-receiver`        
   * - Collect logs	
     - :ref:`filelog-receiver`
   * - Collect Kubernetes events 
