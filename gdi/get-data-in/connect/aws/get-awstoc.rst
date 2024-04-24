@@ -164,9 +164,9 @@ To take advantage of the full benefits of the Splunk Observability Cloud platfor
 
 To track the degree of OpenTelemetry enablement in your AWS integrations: 
 
-1. From Splunk Observability Cloud, go to :guilabel:`Data Management > AWS`.
+1. From Splunk Observability Cloud, go to :guilabel:`Data Management > Deployed integrations > AWS`.
 
-2. Select :guilabel:`OpenTelemetry Enabled` to see whether the OTel Collector is installed on each AWS EC2 instance or AWS EKS cluster. This helps you identify the instances that still need to be instrumented. 
+2. Select either the :guilabel:`AWS EC2` or :guilabel:`AWS EKS` tabs to see whether the OTel Collector is installed on each AWS EC2 instance or AWS EKS cluster. This helps you identify the instances that still need to be instrumented. 
 
 ..  image:: /_images/gdi/aws-collector-insights.jpg
   :width: 80%
