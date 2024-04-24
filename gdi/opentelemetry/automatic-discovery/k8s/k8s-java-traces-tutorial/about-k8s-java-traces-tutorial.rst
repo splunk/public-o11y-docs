@@ -9,7 +9,7 @@ Tutorial: Capture traces from a Java application in Kubernetes
 
 .. toctree::
     :hidden:
-    :maxdepth: 3
+    :maxdepth: 4
 
     config-k8s-for-java.rst
     deploy-collector-k8s-java.rst

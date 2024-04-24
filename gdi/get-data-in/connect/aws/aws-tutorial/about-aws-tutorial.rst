@@ -9,7 +9,7 @@ Tutorial: Monitor your AWS environment in Splunk Observability Cloud
 
 .. toctree::
     :hidden:
-    :maxdepth: 3
+    :maxdepth: 5
 
     tutorial-aws-start
     tutorial-aws-use
