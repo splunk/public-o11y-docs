@@ -140,7 +140,7 @@ To submit a support ticket, follow these steps:
       OrgID: <enter-orgid>
       Realm: <enter-realm>
       Instance Name: <instance-name>
-      Request: Please securely open our Splunk Cloud Platform instance management port (8089) and add the IP addresses of the above realm to our allow list. Also, please provide us with the SSL certificate chain in this ticket so that we can enable Log Observer Connect.
+      Request: Please securely open our Splunk Cloud Platform instance management port (8089) and add the IP addresses of the above realm to our allow list so that we can enable Log Observer Connect.
 
 Troubleshooting
 ==============================================================
