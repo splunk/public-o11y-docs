@@ -26,12 +26,12 @@ Splunk Observability Cloud overview :ref:`welcome`
 .. rst-class:: newcard
 
 :strong:`Scenarios`
-A collection of scenarios for Splunk Observability Cloud :ref:`scenario-landing`
+A collection of scenarios for using Splunk Observability Cloud to address your goals :ref:`scenario-landing`
 
 .. rst-class:: newcard
 
 :strong:`Tutorials`
-A collection of tutorials for Splunk Observability Cloud :ref:`tutorial-landing`
+A collection of task-based tutorials to achieve a goal in Splunk Observability Cloud :ref:`tutorial-landing`
 
 .. rst-class:: newcard
 
