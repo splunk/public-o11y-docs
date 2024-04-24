@@ -366,7 +366,6 @@ Starting from version 0.17.0 and higher, you can configure the RUM agent to use 
 .. code-block:: javascript
    :emphasize-lines: 7,8,9
 
-   <script>
       SplunkRum.init({
          realm: '<realm>',
          rumAccessToken: '<your_rum_token>',
@@ -376,7 +375,6 @@ Starting from version 0.17.0 and higher, you can configure the RUM agent to use 
             otlp: true
          },
       });
-   </script>
 
 When setting the ``beaconEndpoint`` manually, use ``https://rum-ingest.<realm>.signalfx.com/v1/rumotlp`` as the OTLP endpoint. The endpoint is set automatically when ``exporter.otlp`` is ``true`` and a ``realm`` is configured.
 
