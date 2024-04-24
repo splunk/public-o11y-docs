@@ -13,6 +13,7 @@ Automatic discovery and configuration for Kubernetes
     Language runtimes <k8s/k8s-backend>
     Third-party applications <k8s/k8s-third-party>
     Advanced customization <k8s/k8s-advanced-config>
+    k8s/k8s-java-traces-tutorial/about-k8s-java-traces-tutorial
 
 Automatic discovery and configuration for Kubernetes automatically finds applications running in your Kubernetes environments and captures telemetry data from them. The Splunk Distribution of OpenTelemetry Collector receives this data and sends it to Splunk Observability Cloud.
 
