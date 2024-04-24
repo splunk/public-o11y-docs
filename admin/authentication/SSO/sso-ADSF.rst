@@ -50,7 +50,7 @@ To create a new ADFS integration in Observability Cloud:
 #. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`ADFS guided setup <https://login.signalfx.com/#/integrations/adfs/description>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the left navigation menu, select :menuselection:`Data Management`.
+   #. In the left navigation menu, select :menuselection:`Data Management > Available integrations`.
 
    #. Select :guilabel:`Add Integration`.
 
