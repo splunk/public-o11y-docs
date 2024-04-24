@@ -16,7 +16,6 @@ Collector components: Receivers
     carbon-receiver
     cloudfoundry-receiver
     collectd-receiver
-    databricks-receiver
     discovery-receiver
     filelog-receiver   
     fluentd-receiver

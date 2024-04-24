@@ -29,7 +29,7 @@ Ensure the following configuration in your Splunk Cloud instance:
 
 * Token authentication is enabled for your Log Observer Connect service account in your Splunk Cloud Platform instance. See :new-page:`Securing Splunk Cloud Platform: Enable or disable token authentication token <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how. 
 
-* Allow these IPs:
+* Allow these IPs in the :guilabel:`IP allow list` settings. See :new-page:`https://docs.splunk.com/Documentation/SplunkCloud/9.1.2312/Admin/ConfigureIPAllowList`.
 
   - us0: ``34.199.200.84``, ``52.20.177.252``, ``52.201.67.203``, ``54.89.1.85``
   - us1: ``44.230.152.35``, ``44.231.27.66``, ``44.225.234.52``, ``44.230.82.104``
@@ -83,7 +83,7 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
          :width: 100%
          :alt: This screenshot shows recommended configuration for role search job limit and user search job limit.
 
-6. Now, in the :guilabel:`Role search time window limit` section of the :guilabel:`Resources` tab, select :guilabel:`Custom time` and enter 2,592,000 seconds (30 days) for the maximum time window for searches for this role. For the earliest searchable event time for this role,  select :guilabel:`Custom time` and enter 7,776,000 seconds (90 days). In the :guilabel:`Disk space limit` section enter a :guilabel:`Standard search limit` of 1000 MB.
+6. Now, in the :guilabel:`Role search time window limit` section of the :guilabel:`Resources` tab, select :guilabel:`Custom time` and enter 2592000 seconds (30 days) for the maximum time window for searches for this role. Do not use commas when entering numbers. For the earliest searchable event time for this role,  select :guilabel:`Custom time` and enter 7776000 seconds (90 days). In the :guilabel:`Disk space limit` section enter a :guilabel:`Standard search limit` of 1000 MB.
 
       .. image:: /_images/logs/ResourcesTab2.png
          :width: 100%

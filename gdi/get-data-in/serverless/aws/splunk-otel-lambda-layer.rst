@@ -11,21 +11,53 @@ Instrument AWS Lambda functions for Splunk Observability Cloud
    :hidden:
 
    Instrument your Lambda function <otel-lambda-layer/instrument-lambda-functions>
-   .NET lambda functions <dotnet-lambdas>
    Advanced configuration <otel-lambda-layer/advanced-configuration>
    Metrics and dimensions <otel-lambda-layer/lambda-metrics>
    Troubleshooting <otel-lambda-layer/troubleshooting-lambda-layer>
-   SignalFx Lambda wrappers <signalfx-lambda-wrappers>
-   Migrate from Lambda wrappers <otel-lambda-layer/migrate-signalfx-lambda-wrappers>
 
-Use the Splunk OpenTelemetry Lambda Layer to automatically instrument AWS Lambda functions to send application metrics and traces to Splunk APM. The layer supports numerous programming languages through integrated wrappers, and includes a metrics extension that collects high-resolution, low-latency metrics every time the function runs.
+Use the Splunk OpenTelemetry Lambda layer to automatically instrument AWS Lambda functions to send application metrics and traces to Splunk APM. The layer supports numerous programming languages through integrated wrappers, and includes a metrics extension that collects high-resolution, low-latency metrics every time the function runs.
 
-To instrument your AWS Lambda function using the Splunk OpenTelemetry Lambda Layer, follow these steps:
+.. raw:: html
 
-#. :ref:`otel-lambda-layer-requirements`.
-#. :ref:`install-otel-lambda-layer`.
-#. :ref:`set-env-vars-otel-lambda`.
+  <embed>
+    <h2>Select the deployment mode for your AWS Lambda function<a name="lambda-deployment-modes" class="headerlink" href="#lambda-deployment-modes" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
+To instrument your AWS Lambda function using the Splunk OpenTelemetry Lambda layer, select the deployment mode that best adapts to your needs.
+
+.. list-table::
+    :widths: 40 60
+    :width: 100
+    :header-rows: 1
+
+    * - Deployment mode
+      - When to use
+
+    * - :ref:`All-in-one (default) <instrument-aws-lambda-functions>`
+      - All components are in a single layer, including the Collector. This is the most comprehensive deployment method and is suited for production environments.
+
+    * - :ref:`Separate layers <instrument-aws-lambda-functions-modular>`
+      - Use separate layers for your language or runtime, Collector, and metric extension. This method reduces performance overhead.
+
+    * - :ref:`Separate layers with EC2 gateway <instrument-aws-lambda-functions-ec2>`
+      - Use a layer for your language or runtime and configure the Collector in data forwarding mode in EC2. This is the instrumentation method that uses the least resources, though it requires more configuration.
+
+
+.. raw:: html
+
+  <embed>
+    <h2>.NET and Go functions<a name="additional-lambda-instructions" class="headerlink" href="#additional-lambda-instructions" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
+.NET and Go functions require additional instructions:
+
+* :ref:`dotnet-serverless-instrumentation`
+* :ref:`go-serverless-instrumentation`
+
+.. raw:: html
+
+  <embed>
+    <h2>Collect metrics and logs from AWS CloudWatch<a name="cloudwatch-collect-lambda" class="headerlink" href="#cloudwatch-collect-lambda" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
 Splunk Observability Cloud can also collect AWS Lambda metrics and logs from AWS CloudWatch. See :ref:`get-started-aws` for more information on how to connect Splunk Observability Cloud to your AWS services.
-
-.. note:: The :ref:`SignalFx Lambda wrappers <signalfx-lambda-wrappers>` are deprecated. To migrate to the Splunk OpenTelemetry Lambda Layer, see :ref:`migrate-signalfx-lambda-wrappers`.

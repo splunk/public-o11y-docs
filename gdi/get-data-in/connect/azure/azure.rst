@@ -99,7 +99,7 @@ From Splunk Observability Cloud, connect to Azure using the :new-page:`Microsoft
 
 Optionally, you can navigate to the guided setup on your own:
 
-  #. In the navigation menu, select :menuselection:`Data Management > Add Integration` to open the Integrate Your Data page.
+  #. In the navigation menu, select :menuselection:`Data Management > Add Integration` to open the :strong:`Integrate Your Data` page.
 
   #. In the integration filter menu, go to :guilabel:`By Use Case`, and select the :guilabel:`Monitor Infrastructure` use case.
 

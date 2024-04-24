@@ -47,11 +47,7 @@ The following table compares the Splunk Distribution of OpenTelemetry Collector 
     - Yes, for host monitoring (agent) and data forwarding (gateway) modes
     - No
 
-  * - Zero config automatic instrumentation
-    - Yes
-    - No
-
-  * - Discovery mode
+  * - Automatic discovery and configuration
     - Yes
     - No
 
