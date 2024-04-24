@@ -14,7 +14,7 @@ Splunk Observability Cloud scenarios
 .. meta::
   :description: Collection of scenarios available for Splunk Observability Cloud.
 
-This is the collection of scenarios available for Splunk Observability Cloud. 
+This is the collection of scenarios available for Splunk Observability Cloud. Use scenarios to understand how to use Splunk Observability Cloud products and features to address your real-life goals.
 
 .. list-table::
   :header-rows: 1
