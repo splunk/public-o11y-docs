@@ -22,6 +22,8 @@ Get started with the Collector for Kubernetes
    Troubleshoot <troubleshoot-k8s.rst>
    Troubleshoot containers <troubleshoot-k8s-container.rst>
    Support <kubernetes-support.rst>
+   k8s-infrastructure-tutorial/about-k8s-tutorial
+   collector-configuration-tutorial-k8s/about-collector-config-tutorial.rst
 
 To install and configure the Splunk Distribution of the OpenTelemetry Collector for Kubernetes, follow these docs:
 
@@ -42,6 +44,11 @@ To upgrade or uninstall, see:
 * :ref:`otel-kubernetes-uninstall`
 
 .. note:: If you have any installation or configuration issues, refer to :ref:`otel-troubleshooting` and :ref:`troubleshoot-k8s`.
+
+For a walkthrough of common tasks related to the OpenTelemetry Collector for Kubernetes, see:
+
+* :ref:`about-k8s-tutorial`
+* :ref:`about-collector-configuration-tutorial-k8s`
 
 
 

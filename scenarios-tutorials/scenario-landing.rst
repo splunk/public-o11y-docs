@@ -4,14 +4,15 @@
 Splunk Observability Cloud scenarios
 ******************************************************************************************************
 
-.. meta::
-  :description: Collection of scenarios available for Splunk Observability Cloud.
-
 .. toctree::
     :maxdepth: 3
     :hidden:
 
-    scenarios/scenario-cross
+    scenario-cross
+
+
+.. meta::
+  :description: Collection of scenarios available for Splunk Observability Cloud.
 
 This is the collection of scenarios available for Splunk Observability Cloud. 
 
@@ -44,8 +45,6 @@ This is the collection of scenarios available for Splunk Observability Cloud.
     - :ref:`troubleshoot-business-workflows`
   * - :ref:`APM <apm-scenarios-intro>`
     - :ref:`apm-scenario-trace-analyzer`
-  * - :ref:`APM <apm-scenarios-intro>`
-    - :ref:`apm-scenario-trace-analyzer-trace-duration`
   * - :ref:`APM <apm-scenarios-intro>`
     - :ref:`monitor-services`
   * - :ref:`APM <apm-scenarios-intro>`
