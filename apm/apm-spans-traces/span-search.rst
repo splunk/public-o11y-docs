@@ -53,7 +53,7 @@ When a trace contains multiple repeated spans, the spans are collapsed into 1 ro
   :alt: Repeated spans in trace waterfall view
 
 Identify the services that contribute spans to a trace
-====================================================
+=======================================================
 
 The colors of spans in the waterfall help differentiate the services contributing spans to a trace. If every span in the trace is from the same service, all spans appear in the same color. If there are 4 different services involved, the spans are in 4 different colors, to differentiate the service they're from.
 
