@@ -52,7 +52,7 @@ $(document).ready(function () {
                   let headingId = `detail-${index}-${key}-header`;
                   let heading = $(`<h2 id="${headingId}">${rename(key)}</h2>`);
 
-                  let subTable = $(`<table class="generated-table docutils align-default" id="detail-${index}-${key}"></table>`);
+                  let subTable = $(`<table style="width:100%" class="generated-table docutils align-default" id="detail-${index}-${key}"></table>`);
                   const allKeys = [...new Set(item[key].flatMap(Object.keys))];
 
                   let headers = $('<tr></tr>');
