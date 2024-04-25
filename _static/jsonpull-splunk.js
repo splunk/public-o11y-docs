@@ -22,7 +22,7 @@ $(document).ready(function () {
          data.forEach(item => Object.keys(item).forEach(key => columns.add(key)));
          let columnsArray = Array.from(columns);
 
-         let table = $('<table class="generated-table docutils align-default" id="indexTable"><tr></tr></table>');
+         let table = $('<table class="generated-table docutils align-default" id="indexTable"><thead><tr></tr></thead></table>');
          columnsArray.forEach(col => table.find('tr').append(`<th>${rename(col)}</th>`));
 
          data.forEach((item, index) => {
@@ -61,17 +61,17 @@ $(document).ready(function () {
                if (Array.isArray(item[key]) && isComplex(item[key])) {
                   let headingId = `detail-${index}-${key}-header`;
                   let context = item?.keys?.[0] ?? '';
-                  let heading = $(`<h2 id="${headingId}">${context} ${rename(key)}</h2>`);
+                  let heading = $(`<h2 id="${headingId}">${context} ` + ' ' + ` ${rename(key)}</h2>`);
 
                   let subTable = $(`<table style="width:100%" class="generated-table docutils align-default" id="detail-${index}-${key}"></table>`);
                   const allKeys = [...new Set(item[key].flatMap(Object.keys))];
 
-                  let headers = $('<tr></tr>');
+                  let headers = $('<thead><tr></tr></thead>');
                   allKeys.forEach(subKey => {
                      if (subKey === 'traces') {
                         return;
                      }
-                     headers.append(`<th class="head">${rename(subKey)}</th>`);
+                     headers.find('tr').append(`<th class="head">${rename(subKey)}</th>`);
                   });
                   subTable.append(headers);
 
@@ -112,14 +112,14 @@ $(document).ready(function () {
                let nestedTable = '<table border="1">';
                let headersAdded = false;
                value.forEach(item => {
-                  let row = '<tr>';
+                  let row = '<thead><tr>';
                   Object.entries(item).forEach(([key, val], index) => {
                      if (!headersAdded) {
                         nestedTable += `<th class="head">${key}</th>`;
                      }
                      row += `<td>${handleNestedData(val)}</td>`;
                   });
-                  nestedTable += row + '</tr>';
+                  nestedTable += row + '</tr></thead>';
                   headersAdded = true;
                });
                return nestedTable + '</table>';
