@@ -52,7 +52,7 @@ $(document).ready(function () {
                   let headingId = `detail-${index}-${key}-header`;
                   let heading = $(`<h2 id="${headingId}">${rename(key)}</h2>`);
 
-                  let subTable = $(`<table border="1" id="detail-${index}-${key}"></table>`);
+                  let subTable = $(`<table class="generated-table docutils align-default" id="detail-${index}-${key}"></table>`);
                   const allKeys = [...new Set(item[key].flatMap(Object.keys))];
 
                   let headers = $('<tr></tr>');
@@ -72,7 +72,12 @@ $(document).ready(function () {
                         }
                         let cellValue = handleNestedData(subItem[subKey]);
                         if (cellValue !== '') {
-                           subRow.append(`<td>${cellValue}</td>`);
+                           const urlPattern = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([\/\w .-]*)*\/?$/;
+                           if (urlPattern.test(cellValue)) {
+                              subRow.append(`<td><a href="${cellValue}" target="_blank">External Link</a></td>`);
+                           } else {
+                              subRow.append(`<td>${cellValue}</td>`);
+                           }
                         }
                      });
                      subTable.append(subRow);
