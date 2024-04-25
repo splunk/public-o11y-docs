@@ -14,7 +14,7 @@ Welcome
 
 .. raw:: html
 
-    <div class="instrumentation" section="settings" url="/en/feature/DOCS-1897/_static/instrumentation.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>
+    <div class="instrumentation" section="instrumentations" url="/en/feature/DOCS-1897/_static/instrumentation.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>
 
 
 
