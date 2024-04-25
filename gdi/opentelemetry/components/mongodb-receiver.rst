@@ -7,28 +7,32 @@ MongoDB receiver
 .. meta::
       :description: The MongoDB receiver fetches stats from a MongoDB instance using the golang mongo driver. 
 
-The MongoDB receiver fetches metrics from standalone MongoDB clusters, including non-Atlas managed MongoDB Servers. The supported pipeline types is ``metrics``. See :ref:`otel-data-processing` for more information. 
+The MongoDB receiver fetches metrics from standalone MongoDB clusters, including non-Atlas managed MongoDB servers. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information. 
 
-Stats are collected via MongoDB's ``dbStats`` and ``serverStatus`` commands. 
+The receiver collects stats with MongoDB's ``dbStats`` and ``serverStatus`` commands, and uses the golang mongo driver. See more at :new-page:`Mongo Go driver documentation <https://github.com/mongodb/mongo-go-driver>`.
 
-The receiver uses the golang mongo driver. See more at :new-page:`Mongo Go driver documentation <https://github.com/mongodb/mongo-go-driver>`.
+Prerequisites
+======================
 
-This receiver supports MongoDB versions 4.0+ and 5.0. 
+The MongoDB receiver supports MongoDB versions 4.0+ and 5.0. 
 
-Mongodb recommends to set up a least privilege user (LPU) with a clusterMonitor role in order to collect metrics. Please refer to lpu.sh for an example of how to configure these permissions.
+Mongodb recommends to set up a least privilege user (LPU) with a ``clusterMonitor`` role in order to collect metrics. 
+
+* For information on MongoDB's roles, see :new-page:`MongoDB built-in roles <https://www.mongodb.com/docs/v5.0/reference/built-in-roles/#mongodb-authrole-clusterMonitor>`.
+* For an example of how to configure these permissions, see :new-page:`lpu.sh <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/mongodbreceiver/testdata/integration/scripts/lpu.sh>`.
 
 Get started
 ======================
 
 Follow these steps to configure and activate the component:
 
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+1. Deploy the Splunk Distribution of the OpenTelemetry Collector to your host or container platform:
    
    - :ref:`otel-install-linux`
    - :ref:`otel-install-windows`
    - :ref:`otel-install-k8s`
 
-2. Configure the MongoDB Atlas receiver as described in the next section.
+2. Configure the receiver as described in the next section.
 3. Restart the Collector.
 
 Sample configurations
@@ -65,27 +69,27 @@ Configuration options
 
 The following settings are optional:
 
-* ``hosts``. ``[localhost:27017]``by default. List of ``host:port`` or Unix domain socket endpoints.
+* ``hosts``. ``[localhost:27017]`` by default. List of ``host:port`` or Unix domain socket endpoints.
 
-  * For standalone MongoDB deployments this is the hostname and port of the mongod instance
+  * For standalone MongoDB deployments this is the hostname and port of the mongod instance.
 
-  * For replica sets specify the hostnames and ports of the Mongodb instances that are in the replica set configuration. If the ``replica_set`` field is specified, nodes will be autodiscovered.
+  * For replica sets specify the hostnames and ports of the mongod instances that are in the replica set configuration. If the ``replica_set`` field is specified, nodes will be autodiscovered.
 
-  * For a sharded MongoDB deployment, please specify a list of the ``mongos`` hosts.
+  * For a sharded MongoDB deployment, specify a list of the ``mongos`` hosts.
 
-* ``username``: If authentication is required, the user can with clusterMonitor permissions can be provided here.
+* ``username``: If authentication is required, provide the ``clusterMonitor`` permissions here.
 
-* ``password``: If authentication is required, the password can be provided here.
+* ``password``: If authentication is required, provide the password here.
 
-* ``collection_interval``. ``1m`` by default. This receiver collects metrics on an interval. This value must be a string readable by Golang's time.ParseDuration. Valid time units are ns, us (or µs), ms, s, m, h.
+* ``collection_interval``. ``1m`` by default. This receiver collects metrics on an interval. Valid time units are ``ns``, ``us`` (or ``µs``), ``ms``, ``s``, ``m``, ``h``. This value must be a string readable by Golang's time parseDuration. Learn more at :new-page:`ParseDuration <https://pkg.go.dev/time#ParseDuration>`.
 
-* ``initial_delay`` (default = 1s): defines how long this receiver waits before starting.
+* ``initial_delay``. ``1s`` by default. Defines how long this receiver waits before starting.
 
-* ``replica_set``: If the deployment of MongoDB is a replica set then this allows users to specify the replica set name which allows for autodiscovery of other nodes in the replica set.
+* ``replica_set``: If the deployment of MongoDB is a replica set, use this to specify the replica set name which allows for autodiscovery of other nodes in the replica set.
 
-* ``timeout``: (default = 1m) The timeout of running commands against mongo.
+* ``timeout``. ``1m`` by default. The timeout of running commands against mongo.
 
-* ``tls``: (defaults defined here): TLS control. By default insecure settings are rejected and certificate verification is on.
+* ``tls``: TLS control. By default insecure settings are rejected and certificate verification is on. See more at :new-page:`TLS Configuration Settings <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/configtls/README.md>`.
 
 Settings
 ======================
