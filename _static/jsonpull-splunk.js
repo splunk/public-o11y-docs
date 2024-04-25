@@ -109,17 +109,14 @@ $(document).ready(function () {
       function handleNestedData(value) {
          if (value instanceof Object) {
             if (Array.isArray(value)) {
-               let nestedTable = '<table border="1">';
+               let nestedTable = '<table>';
                let headersAdded = false;
                value.forEach(item => {
-                  let row = '<thead><tr>';
+                  let row = '<tr>';
                   Object.entries(item).forEach(([key, val], index) => {
-                     if (!headersAdded) {
-                        nestedTable += `<th class="head">${key}</th>`;
-                     }
                      row += `<td>${handleNestedData(val)}</td>`;
                   });
-                  nestedTable += row + '</tr></thead>';
+                  nestedTable += row + '</tr>';
                   headersAdded = true;
                });
                return nestedTable + '</table>';
