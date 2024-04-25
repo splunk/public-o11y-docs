@@ -40,7 +40,27 @@ To filter data on the landing page, perform the following steps:
 #. Select :guilabel:`Apply filter`
 #. (Optional) Repeat steps 2 through 5 for any other filters you want to apply.
 
-Filters that you apply on the Infrastructure Monitoring landing page persist in the navigators accessed through cards on  that page, so that you see only the instances you’re interested in.
+Filters that you apply on the Infrastructure Monitoring landing page persist in the navigators accessed through cards on that page, so that you see only relevant instances.
+
+Source cards on the landing page default briefly to a grayed-out loading state while your filter or filters are applied to available data sources. If no data matches the parameters of a filter that you have applied, the system returns a “No Matching Result” error message.
+
+ .. note:: Applying any filter narrows the range of filters available to you in that session, because Splunk Infrastructure Monitoring uses your input to determine what subset of filters applies to the data you want. You can't, for example, mix AWS (Amazon Web Services) filters with GCP (Google Cloud Platform) filters.
+
+Splunk Infrastructure Monitoring adds filters to the URL for the data source to which they apply. You can bookmark filtered views for later reference or to share with other people on your team.
+
+Remove a filter
+----------------------
+
+You remove a filter in either of the following ways:
+
+- On the Splunk Infrastructure Monitoring landing page, click the X on the filter label you want to rescind. 
+
+- From within a navigator, click :guilabel:`All infrastructure`. This returns you to the Infrastructure landing page in its default state, without filters. 
+
+ .. note:: To return to the Infrastructure landing page from within a navigator without losing filters you've already set up, use the back button on your web browser.
+
+When you remove a filter, any data source cards from your configuration that had been hidden because they were filtered out reappear on your landing page.Data source cards can also display unexpectedly if an entity that was dormant because no data was found for it changes state and becomes active. 
+
 
 
    
