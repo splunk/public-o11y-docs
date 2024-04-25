@@ -1,9 +1,17 @@
 $(document).ready(function () {
 
+   let converter = new showdown.Converter(
+       {
+          simplifiedAutoLink: true,
+          excludeTrailingPunctuationFromURLs: true,
+          literalMidWordUnderscores: true
+       });
+
    $('.instrumentation').each(function () {
       let url = $(this).attr('url');
       let renamingDict = JSON.parse($(this).attr('data-renaming') || '{}');
       let section = $(this).attr('section') || 'instrumentation'; // Default to 'instrumentation' if not specified
+      let selfSelector = $(this);
 
       function rename(key) {
          return renamingDict[key] || key;
@@ -32,7 +40,7 @@ $(document).ready(function () {
                   } else if (Array.isArray(item[col])) {
                      row.append(`<td>${item[col].map(subItem => subItem instanceof Object ? JSON.stringify(subItem) : subItem).join(', ')}</td>`);
                   } else {
-                     row.append(`<td>${item[col]}</td>`);
+                     row.append('<td>' + converter.makeHtml(item[col]) + '</td>');
                   }
                } else {
                   row.append('<td></td>');
@@ -47,10 +55,13 @@ $(document).ready(function () {
       function generateSubtables(data) {
          let subtables = [];
          data.forEach((item, index) => {
-            Object.keys(item).forEach(key => {
+            Object.keys(item).forEach((key) => {
+
+
                if (Array.isArray(item[key]) && isComplex(item[key])) {
                   let headingId = `detail-${index}-${key}-header`;
-                  let heading = $(`<h2 id="${headingId}">${rename(key)}</h2>`);
+                  let context = item?.keys?.[0] ?? '';
+                  let heading = $(`<h2 id="${headingId}">${context} ${rename(key)}</h2>`);
 
                   let subTable = $(`<table style="width:100%" class="generated-table docutils align-default" id="detail-${index}-${key}"></table>`);
                   const allKeys = [...new Set(item[key].flatMap(Object.keys))];
@@ -60,7 +71,7 @@ $(document).ready(function () {
                      if (subKey === 'traces') {
                         return;
                      }
-                     headers.append(`<th>${subKey}</th>`);
+                     headers.append(`<th class="head">${rename(subKey)}</th>`);
                   });
                   subTable.append(headers);
 
@@ -74,9 +85,9 @@ $(document).ready(function () {
                         if (cellValue !== '') {
                            const urlPattern = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([\/\w .-]*)*\/?$/;
                            if (urlPattern.test(cellValue)) {
-                              subRow.append(`<td><a href="${cellValue}" target="_blank">External Link</a></td>`);
+                              subRow.append(`<td><a class="new-page reference external" href="${cellValue}" target="_blank">External Link</a></td>`);
                            } else {
-                              subRow.append(`<td>${cellValue}</td>`);
+                              subRow.append('<td>' + converter.makeHtml(cellValue) + '</td>');
                            }
                         }
                      });
@@ -87,7 +98,7 @@ $(document).ready(function () {
                   container.append(heading);
                   container.append(subTable);
 
-                  $('.instrumentation').append(container);
+                  $(selfSelector).append(container);
                   subtables.push(container);
                }
             });
@@ -104,7 +115,7 @@ $(document).ready(function () {
                   let row = '<tr>';
                   Object.entries(item).forEach(([key, val], index) => {
                      if (!headersAdded) {
-                        nestedTable += `<th>${key}</th>`;
+                        nestedTable += `<th class="head">${key}</th>`;
                      }
                      row += `<td>${handleNestedData(val)}</td>`;
                   });
@@ -138,7 +149,7 @@ $(document).ready(function () {
       }
 
       function removeEmptyTables() {
-         $('.instrumentation > div').each(function () {
+         $(selfSelector).find('div').each(function () {
             let container = $(this);
             let h2 = container.find('h2');
             let mainTable = container.find('table').first();
@@ -188,18 +199,18 @@ $(document).ready(function () {
             const yamlData = jsyaml.load(response);
             if (yamlData && yamlData[section]) {
                const indexTable = generateIndexTable(yamlData[section]);
-               $('.instrumentation').append(indexTable);
+               $(selfSelector).append(indexTable);
                const subtables = generateSubtables(yamlData[section]);
                subtables.forEach(subtable => {
-                  $('.instrumentation').append(subtable);
+                  $(selfSelector).append(subtable);
                });
             } else {
-               $('.instrumentation').append(`<div class="admonition caution">No data for section '${section}'.</div>`);
+               $(selfSelector).append(`<div class="admonition caution">No data for section '${section}'.</div>`);
             }
             removeEmptyTables();
          },
          error: function () {
-            $('.instrumentation').append('<div class="admonition caution">Error loading or parsing YAML file.</div>');
+            $(selfSelector).append('<div class="admonition caution">Error loading or parsing YAML file.</div>');
          }
       });
    });
@@ -272,13 +283,6 @@ $(document).ready(function () {
    $.ajaxSetup({
       cache: true
    });
-
-   let converter = new showdown.Converter(
-      {
-         simplifiedAutoLink: true,
-         excludeTrailingPunctuationFromURLs: true,
-         literalMidWordUnderscores: true
-      });
 
    $.getScript('https://public-sites--signalfx-com.s3.us-east-1.amazonaws.com/cdn/integrations-docs/integrations-docs.js', function () {
       $('.metrics-table').each(function () {
