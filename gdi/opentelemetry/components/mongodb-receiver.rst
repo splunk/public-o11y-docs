@@ -16,7 +16,7 @@ Prerequisites
 
 The MongoDB receiver supports MongoDB versions 4.0+ and 5.0. 
 
-Mongodb recommends to set up a least privilege user (LPU) with a ``clusterMonitor`` role in order to collect metrics. 
+MongoDB recommends to set up a least privilege user (LPU) with a ``clusterMonitor`` role in order to collect metrics. 
 
 * For information on MongoDB's roles, see :new-page:`MongoDB built-in roles <https://www.mongodb.com/docs/v5.0/reference/built-in-roles/#mongodb-authrole-clusterMonitor>`.
 * For an example of how to configure these permissions, see :new-page:`lpu.sh <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/mongodbreceiver/testdata/integration/scripts/lpu.sh>`.
