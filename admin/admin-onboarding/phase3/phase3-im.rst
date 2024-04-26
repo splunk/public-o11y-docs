@@ -233,16 +233,16 @@ During the expansion and optimization phase, start identifying your teams' prima
 
 Onboard all production applications
 ================================================================================================================
-During this phase, you can automate most processes can be automated and new services can be added into the Splunk Observability Cloud system. You can continue expanding the OTel agent configuration library for all production applications. Populate all the necessary metrics to build the desired charts, dashboards, and detectors. Continue to onboard all production applications.
+During this phase, you can automate most processes and add new services into Splunk Observability Cloud. You can continue expanding the OTel agent configuration library for all production applications. Populate all the necessary metrics to build the desired charts, dashboards, and detectors. Continue to onboard all production applications.
 
 
 .. _expand-im12:
 
 Onboard all users and teams
 ================================================================================================================
-During this phase, you can onboard all users and teams into Splunk Observability Cloud. Turn on the enhanced teams security to identify team managers and users. Use enhance security within the teams to control who can view and who can and modify each dashboard and detector within the teams.
+During this phase, you can onboard all users and teams into Splunk Observability Cloud. Turn on enhanced team security to identify team managers and users. Use enhanced security within teams to control who can view and who can modify each dashboard and detector.
 
-To learn more, see the following:
+To learn more, see the following topics:
 
 - :ref:`user-managment-intro`
 
@@ -252,4 +252,4 @@ To learn more, see the following:
 Next step
 ===============
 
-:ref:`phase3-apm`
+Next, see :ref:`phase3-apm`.
