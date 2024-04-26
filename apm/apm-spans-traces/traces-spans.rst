@@ -16,11 +16,11 @@ Manage services, spans, and traces in Splunk APM
    trace-search
    trace-analyzer
    traces-special-cases
-   extended-trace-retention
-   download-traces
    span-search
-   apm-errors
+   download-traces
+   extended-trace-retention
    span-formats
+   apm-errors
 
 
 Spans and traces form the backbone of application monitoring in Splunk APM. Use the following topics to learn about spans and traces and manage your spans and traces effectively, so that you can get the most out of APM full-fidelity tracing: 
@@ -29,13 +29,13 @@ Spans and traces form the backbone of application monitoring in Splunk APM. Use 
 * :ref:`apm-service-view`
 * :ref:`apm-inferred-services`
 * :ref:`trace-search`
-* 
+* :ref:`trace-analyzer`
 * :ref:`apm-special-traces`
 * :ref:`span-search`
 * :ref:`apm-download-traces`
 * :ref:`apm-extended-trace-retention`
 * :ref:`apm-supported-span-formats`
-* * :ref:`apm-errors`
+* :ref:`apm-errors`
 
 
 .. raw:: html
