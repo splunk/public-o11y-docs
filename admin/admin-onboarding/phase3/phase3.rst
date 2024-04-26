@@ -10,9 +10,10 @@ Admin onboarding guide phase 3: Expansion and optimization
    Part 1: Expand and optimize Splunk Infrastructure Monitoring <phase3-im>
    Part 2: Expand and optimize Splunk Application Performance Monitoring <phase3-apm>
 
-In the expansion and optimization phase, you solidify the best practices and frameworks from the pilot phase and apply them to a wider pool of infrastructure, applications, and teams. You begin by expanding and optimizing Splunk Application Performance Monitoring and Splunk Infrastructure Monitoring. See the following topics to learn how:
+After completing :ref:`phase1` and `phase2`, you are ready for phase 3, expansion and optimization.
+In phase 3, you solidify the best practices and frameworks from the pilot phase and apply them to a wider pool of infrastructure, applications, and teams. You begin by expanding and optimizing Splunk Application Performance Monitoring and Splunk Infrastructure Monitoring. Complete the following topics:
 
-* :ref:`Part 1: Expand and optimize Splunk Infrastructure Monitoring <phase3-im>`
-* :ref:`Part 2: Expand and optimize Splunk Application Performance Monitoring <phase3-apm>`
+1 :ref:`Expansion and optimization part 1: Splunk Infrastructure Monitoring <phase3-im>`.
+2 :ref:`Expansion and optimization part 2: Splunk Application Performance Monitoring <phase3-apm>`.
 
 
