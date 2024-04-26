@@ -27,6 +27,10 @@ The Splunk Distribution of OpenTelemetry .NET provides automatic instrumentation
 
 .. raw:: html
 
+    <div class="instrumentation" section="metadata" url="/en/feature/DOCS-1897/_static/instrumentation.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>
+
+.. raw:: html
+
   <embed>
     <h2>Features of the Splunk Distribution of OpenTelemetry .NET<a name="features" class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
   </embed>
