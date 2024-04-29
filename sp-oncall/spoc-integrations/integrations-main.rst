@@ -55,7 +55,6 @@ Splunk On-Call integrations
    microsoft-teams-integration-guide
    nagios-integration-guide
    new-relic-integration-guide
-   new-twilio
    observium-integration
    opsdash-integration
    opsview-integration
@@ -84,6 +83,7 @@ Splunk On-Call integrations
    sysdig-integration
    thousandeyes-integration-guide
    threat-stack-integration
+   twilio-live-call-routing-integration
    twilio-live-call-routing-guide
    twilio-sms-integration-guide
    uptime-robot-integration-guide

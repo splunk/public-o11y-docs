@@ -6,7 +6,6 @@ CheckMK integration for Splunk On-Call
 .. meta::
     :description: Configure the CheckMK integration for Splunk On-Call.
 
-
 Requirements
 ================
 

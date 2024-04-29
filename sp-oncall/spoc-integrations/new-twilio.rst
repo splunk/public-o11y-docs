@@ -1,5 +1,10 @@
+.. _twilio-live-call-routing-spoc:
+
 Twilio live call routing integration for Splunk On-Call
 **********************************************************
+
+.. meta::
+    :description: Configure the Twilio live call routing integration for Splunk On-Call.
 
 The Splunk On-Call (formerly VictorOps) and Twilio integration creates a live call routing and alerting system to improve MTTA and MTTR for DevOps and IT operations teams.
 
@@ -84,7 +89,7 @@ The integration ignores any time delay configured between each escalation policy
 If 1 of the steps in your escalation policy is to execute a policy, the policy called out will not be executed. Only policy steps that call
 out rotations or users are executed.
 
-.. routing-keys::
+.. _routing-keys:
 
 Routing keys
 -----------------
@@ -96,7 +101,7 @@ To route the incidents created by the Twilio integration to the correct teams in
 
 .. image:: /_images/spoc/URL.png
 
-Next go to :guilabel:`Settings` then :guilabel:`Routing Keys`. create a new routing key with the URL-friendly team slug associated to that team. Paste the slug in the :guilbael:`Routing Key`` field and select the team and escalation policy in the :guilabel:`Escalation Policies` field.
+Next go to :guilabel:`Settings` then :guilabel:`Routing Keys`. create a new routing key with the URL-friendly team slug associated to that team. Paste the slug in the :guilabel:`Routing Key`` field and select the team and escalation policy in the :guilabel:`Escalation Policies` field.
 
 .. image:: /_images/spoc/Routing-Key.png
 
@@ -110,7 +115,7 @@ Configure Splunk On-Call in Twilio
 
 The remaining configuration is in Twilio. You  have to have a Twilio account and Twilio phone number. 
 
-In your Twilio account, pin 3 items to the menu bar. Select :guilabel:`Develop` then :guilable:`Explore Products`.
+In your Twilio account, pin 3 items to the menu bar. Select :guilabel:`Develop` then :guilabel:`Explore Products`.
 
 .. image:: /_images/spoc/twilio1.png
 
@@ -122,7 +127,7 @@ Repeat this process to pin the :guilabel:`Phone Numbers` app located under :guil
 
 .. image:: /_images/spoc/twilio3.png
 
-.. get-phone-number::
+.. _get-phone-number:
 
 Get a Twilio phone number
 -----------------------------
@@ -146,7 +151,7 @@ To activate some features used in Live Call Routing, you need to activate :guila
 
 .. image:: /_images/spoc/twilio5.png
 
-.. twilio-functions::
+.. _twilio-functions:
 
 Configure a Twilio function
 ---------------------------------
@@ -178,7 +183,7 @@ Add the function code
 #. Delete the default code.  
 #. Copy the code from the following link: :new-page:`https://github.com/victorops/twilio-live-call-routing/blob/master/Splunk-On-Call-Twilio`.
 #. Paste the copied code in your function.
-#. Select :guilabe:`Save`.
+#. Select :guilabel:`Save`.
 
 Configure environment variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -203,12 +208,12 @@ The following table includes the key column inputs:
    :widths: 100
 
     * - Keys
-    * - TEAM_1
-    * - ESC_POL_1
-    * - NUMBER_OF_MENUS
-    * - VICTOROPS_API_ID
-    * - VICTOROPS_API_KEY
-    * - VICTOROPS_TWILIO_SERVICE_API_KEY
+      - TEAM_1
+      - ESC_POL_1
+      - NUMBER_OF_MENUS
+      - VICTOROPS_API_ID
+      - VICTOROPS_API_KEY
+      - VICTOROPS_TWILIO_SERVICE_API_KEY
 
 .. note:: 
    :strong:`TEAM_1` and :strong:`ESC_POL_1` values are case sensitive and have to match the Splunk On-Call format exactly.
@@ -238,7 +243,7 @@ The last step in Twilio is to add the function to the phone number you plan on u
 
    .. image:: /_images/spoc/Active-Numbers.png
 
-#. Under the :guilavel:`Voice and Fax` section, set the :guilabel:`A CALL COMES IN` to :guilabel:`Function`.
+#. Under the :guilabel:`Voice and Fax` section, set the :guilabel:`A CALL COMES IN` to :guilabel:`Function`.
 #. Select :guilabel:`VictorOps-Live-Call-Routing` as the :guilabel:`Service`.
 #. Select :guilabel:`ui` as the :guilabel:`Environment`.
 #. Select :guilabel:`/victorops-live-call-routing` as the :guilabel:`Function Path`.
@@ -317,8 +322,8 @@ If you want use the Polly.Salli voice, follow these steps:
 
 #. Go to your VictorOps function. Depending on whether you set this up in Twilio's Functions Classic UI or their new Functions
 Services UI, the function is in slightly different places.
-    #. If you set up integration in Twilio's Functions Classic UI go to :guilabel:`Functions` then :guilabel:`Overview` then :guilabel:`Manage Services` then :guilabel:`VictorOps Live Call Routing` then :guilabel:`Functions`.
-    #. If you set up the in tegration in Twilio's new Services UI, go to :guilabel:`Functions` then :guilabel:`Services`` then :guilabel:`Manage Services` then :guilabel:`VictorOps-Live-Call-Routing` then :guilabel:`Functions`.
+   #. If you set up integration in Twilio's Functions Classic UI go to :guilabel:`Functions` then :guilabel:`Overview` then :guilabel:`Manage Services` then :guilabel:`VictorOps Live Call Routing` then :guilabel:`Functions`.
+   #. If you set up the in tegration in Twilio's new Services UI, go to :guilabel:`Functions` then :guilabel:`Services`` then :guilabel:`Manage Services` then :guilabel:`VictorOps-Live-Call-Routing` then :guilabel:`Functions`.
 #. In line 82 in the code for the function, approximately, find a line that says: ``'woman';`` and replace it with ``'Polly.Salli';``.
 #. In line 28, approximately, find this line ``greeting: 'Welcome to Victor Ops Live Call Routing.',``
 #. Change the word ``Live`` to ``Lyve`` so that the end result looks like: ``greeting: 'Welcome to Victor Ops Lyve Call Routing.',``.
