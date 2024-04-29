@@ -277,13 +277,20 @@ If a service has any active alerts, you can view a list of the service's alerts 
 #. Search for the navigator that you want to view. 
 #. Under the navigator title, select the text displaying the number of alerts. Alert numbers and types vary depending on the navigator. 
 
-For the following example navigator, the user selects :guilabel:`90 Critical alerts`. 
+For the following example navigator, the user selected :guilabel:`90 Critical alerts`. 
 
 .. image:: /_images/infrastructure/navigator-alerts.png
         :width: 50%
         :alt: This image shows a navigator with 90 critical alerts active
 
 Selecting this text opens a detailed view of the navigator with a list of active alerts shown on the sidebar.
+
+.. _view-navigators-from-alerts:
+
+View navigators using alerts
+---------------------------------------------
+
+When you are troubleshooting or investigating an alert, you can jump right from the modal window displaying the alert to the related Infrastructure Monitoring navigator without losing contextual metadata from the alert, which is automatically applied as filters for the involved navigator.   
 
 .. _remove-navigator:
 
