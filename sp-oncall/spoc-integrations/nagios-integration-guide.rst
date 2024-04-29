@@ -1,6 +1,6 @@
 .. _nagios-spoc:
 
-About Nagios and Splunk On-Call
+Nagios Core and Nagios XI integration for Splunk On-Call
 ************************************************************************
 
 .. meta::
