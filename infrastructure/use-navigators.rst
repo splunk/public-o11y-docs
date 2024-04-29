@@ -290,7 +290,15 @@ Selecting this text opens a detailed view of the navigator with a list of active
 View navigators using alerts
 ---------------------------------------------
 
-When you are troubleshooting or investigating an alert, you can jump right from the modal window displaying the alert to the related Infrastructure Monitoring navigator without losing contextual metadata from the alert, which is automatically applied as filters for the involved navigator.   
+When you are investigating an alert, you can click from the modal window displaying that alert into the related Infrastructure Monitoring navigator without losing contextual metadata from the alert, which is automatically applied as filters for the involved navigator. 
+
+Variables passed automatically from alerts to navigators include the time that the alert occurred, the name of the alerting entity (for example, K8.ClusterName, K8.NodeName, K8.PodName), and the metric that triggered the alert by crossing a designated threshold.
+
+This "alert to navigator experience" makes for faster troubleshooting.
+
+
+
+
 
 .. _remove-navigator:
 
