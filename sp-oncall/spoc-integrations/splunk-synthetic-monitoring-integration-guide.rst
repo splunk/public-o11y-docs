@@ -1,56 +1,42 @@
+.. _splunk-synthetics-spoc:
+
 Splunk Synthetic Monitoring integration for Splunk On-Call
 ************************************************************
 
-Splunk Synthetic Monitoring verifies applications are performing well
-and alerts you to user experience problems before they impact your
-customers.  Integrating Splunk Synthetic Monitoring with Splunk On-Call
-allows you to send alert notifications into the Splunk On-Call timeline.
+.. meta::
+    :description: Configure the Splunk Synthetic Monitoring integration for Splunk On-Call.
 
-You must be an administrator in Splunk Synthetic Monitoring and a Global
-or Alert Admin in Splunk On-Call to establish this integration.
+Splunk Synthetic Monitoring verifies applications are performing well and alerts you to user experience problems before they impact your
+customers. Integrate Splunk Synthetic Monitoring with Splunk On-Call to send alert notifications into the Splunk On-Call timeline.
 
-**In Splunk On-Call**
----------------------
+Requirements
+======================
 
-In Splunk On-Call, select **Integrations** *>>* **Splunk Synthetic
-Monitoring**
+You must be an administrator in Splunk Synthetic Monitoring and a Global or Alert Admin in Splunk On-Call to configure this integration.
 
-If the integration has not yet been enabled, click the “Enable
-Integration” button to generate your endpoint URL.  Copy this URL to
-your clipboard.
+Configure Splunk On-Call
+==============================
 
-**In Splunk Synthetic Monitoring (Rigor)**
-------------------------------------------
+1. In Splunk On-Call, select :guilabel:`Integrations` then :guilabel:`Splunk Synthetic Monitoring`. 
+2. Select :guilabel:`Enable Integration` to generate your endpoint URL. Copy the endpoint URL for use in the next steps.
 
-From the Rigor Monitoring web portal, select the 3 dot menu next to your
-profile icon in the upper righthand corner and select **Alert
-Webhooks**.
+Configure Splunk Synthetic Monitoring
+==========================================
 
-.. image:: /_images/spoc/Frame-6.png
+#. In Splunk Synthetic Monitoring, select the 3-dot menu next to your profile icon and select :guilabel:`Alert Webhooks`.
 
-Click the **+ New** button to create a new webhook and select **Splunk
-On-Call** as the type.
+   .. image:: /_images/spoc/Frame-6.png
+    :width: 65%
+    :alt: Select Alert Webhooks from the 3-dot menu in Splunk Synthetic Monitoring.
 
-.. image:: /_images/spoc/Frame-5.png
+#. Select :guilabel:`New` to create a new webhook and select :guilabel:`Splunk On-Call` as the type.
 
-Give the webhook a name and specify your trigger or triggers.  In the
-“send request to” box for each trigger, replace the default
-*https://alert.victorops.com/integrations/<<YOUR_VICTOROPS_REST_ENDPOINT>>*
-with the URL you'd previously copied.
+   .. image:: /_images/spoc/Frame-5.png
+    :width: 95%
+    :alt: Select New to create a new webhook in Splunk Synthetic Monitoring.
 
-On each trigger, also replace the trailing $routing_key value with the
-Splunk On-Call routing key you'd like this webhook to hit.  For more
-information on routing keys, see `this
-article. <https://help.victorops.com/knowledge-base/routing-keys/>`__
-
-You're welcome to leave the payloads at their default values, or if you
-find it more appropriate, replace the default variables with ones more
-catered towards your use case.
-
-Once finished, click the **Test** button to test the integration out. 
-This will send and alert with your specified payloads into the Splunk
-On-Call timeline.
-
-Lastly, hit the **Create** button at the bottom of the screen to save
-your Alert Webhook.  Splunk Synthetic Monitoring will now send a
-notification to Splunk On-Call whenever the trigger conditions are met.
+#. Give the webhook a name and specify your triggers. In :guilabel:`Send request to` for each trigger, replace the default ``https://alert.victorops.com/integrations/<<YOUR_VICTOROPS_REST_ENDPOINT>>`` with the URL you copied from Splunk On-Call. 
+#. On each trigger, replace the trailing ``$routing_key`` value with the Splunk On-Call routing key you want this webhook to call. For more information on routing keys, see :ref:`routing-keys`.
+#. You can leave the default values for payloads or replace the default variables with variables for your use case.
+#. Select :guilabel:`Test` to test the integration. This sends and alert with your specified payloads into the Splunk On-Call timeline.
+#. Select :guilabel:`Create` to save your Alert Webhook. Splunk Synthetic Monitoring will now send a notification to Splunk On-Call whenever the trigger conditions are met.

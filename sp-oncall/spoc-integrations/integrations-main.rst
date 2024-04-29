@@ -91,7 +91,6 @@ Splunk On-Call integrations
    whatsup-gold-integration-guide-victorops
    zendesk-bi-directional-integration
    zenoss-integration
-
    victorops-bugsnag-integration
    victorops-cabot-integration
    victorops-catchpoint-integration
