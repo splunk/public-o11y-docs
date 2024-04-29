@@ -27,7 +27,7 @@ From the Splunk On-Call web portal select :guilabel:`Integrations`, :guilabel:`C
 .. image:: /_images/spoc/Screen-Shot-2020-05-20-at-11.11.52-AM.png
    :alt: CloudWisdom integration screen
 
-Make sure to add the appropriate Routing Key to the end of the URL. For more information on routing keys or instructions on creating a new one, see :ref:`routing-keys`.
+Make sure to add the appropriate Routing Key to the end of the URL. For more information on routing keys or instructions on creating a new one, see :ref:`spoc-routing-keys`.
 
 CloudWisdom configuration
 ============================

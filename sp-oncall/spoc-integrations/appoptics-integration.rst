@@ -35,7 +35,7 @@ If the integration has not yet been activated, select :guilabel:`Enable Integrat
 .. image:: /_images/spoc/AppOptics.png
    :alt: API key
 
-Copy the Service API Key to your clipboard and determine which Splunk On-Call routing-key value you use for this integration. For more information on routing keys and best practices, see :ref:`routing-keys`.
+Copy the Service API Key to your clipboard and determine which Splunk On-Call routing-key value you use for this integration. For more information on routing keys and best practices, see :ref:`spoc-routing-keys`.
 
 AppOptics configuration
 ========================

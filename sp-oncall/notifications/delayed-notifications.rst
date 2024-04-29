@@ -27,7 +27,7 @@ To configure a delayed notification:
     :width: 100%
     :alt: Create a new team.
 
-#. Finally setup a :ref:`Routing Key <routing-keys>` so that alerts can be sent directly to this new team.
+#. Finally setup a :ref:`Routing Key <spoc-routing-keys>` so that alerts can be sent directly to this new team.
 
 You can now use this team for two forms of delayed notifications.
 

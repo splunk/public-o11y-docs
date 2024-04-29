@@ -31,7 +31,7 @@ If the integration isn't active, select :guilabel:`Enable Integration`. Copy the
 .. image:: /_images/spoc/Integration-Atatus-final.png
    :alt: Atatus integration
 
-After you have copied the API key to your clipboard, select :guilabel:`Settings`, :guilabel:`Routing Keys` to find your routing key configuration. See :ref:`routing-keys`.
+After you have copied the API key to your clipboard, select :guilabel:`Settings`, :guilabel:`Routing Keys` to find your routing key configuration. See :ref:`spoc-routing-keys`.
 
 .. image:: /_images/spoc/atatus2.png
    :alt: Routing keys for Atatus

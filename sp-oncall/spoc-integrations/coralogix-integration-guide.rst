@@ -30,7 +30,7 @@ Follow these steps in Splunk On-Call to set up the integration:
 #. After you've copied the URL, select :guilabel:`Settings`, :guilabel:`Routing Keys` to find your routing key
 configuration.
 
-#. Decide which routing key you want to use with the integration and make sure it's associated to the correct escalation policies. For more information on routing keys or instructions on creating a new one, see :ref:`routing-keys`.
+#. Decide which routing key you want to use with the integration and make sure it's associated to the correct escalation policies. For more information on routing keys or instructions on creating a new one, see :ref:`spoc-routing-keys`.
 
 Coralogix configuration
 ===================================

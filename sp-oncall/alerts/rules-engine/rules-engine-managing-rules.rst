@@ -1,16 +1,16 @@
 .. _rules-engine-rules:
 
 ************************************************************************
-Custom outbound webhooks in Splunk On-Call
+Rules Engine: custom outbound webhooks in Splunk On-Call
 ************************************************************************
 
 .. meta::
    :description: About the user roll in Splunk On-Call.
 
 
-
 Requirements
-==================
+====================
+
 
 This integration is compatible with the following versions of Splunk On-Call:
 
@@ -36,7 +36,7 @@ Select the symbols at the right side of the bar to edit or view a rule.
 Options include the ability to turn rules on or off, delete, and preview. Rules are turned on by default.
 
 Preview
-==============
+=================
 
 To use the preview window, set your matching condition and then select the edit symbol (three horizontal lines) and select :guilabel:`Preview`. The preview option opens a small window on the right side of your rules that will display any recent events in your timeline which meet the matching condition you have set.
 
@@ -44,8 +44,9 @@ This allows you to view the content of your alerts without having to switch back
 
 To close the preview window, select the edit symbol again and choose :guilabel:`Close Preview`.
 
+
 Scope limiting
-====================
+========================
 
 You may encounter situations where wildcard matching is required for a commonly occurring phrase (“down” or “database” for example).  Matching on such a common phrase can cause your rule to be unintentionally applied to alerts that you do not wish to alter. This problem can be solved by using a sequence of sequential rules to limit the scope of the wildcard matching condition.
 
@@ -67,8 +68,9 @@ The matching condition for this rule catches all alerts from New Relic. It then 
      
 This second rule, which must be positioned below the first, matches on the new field created by the first rule, using wildcard matching to catch the phrase “staging”, and then takes the appropriate action. This limits the scope of the wildcard matching rule to only alerts from New Relic.
 
-Stop Flag
----------
+Stop flag
+---------------------
+
 
 At the bottom of any rule setup window, there is an option to stop processing after the rule has been applied.
 
@@ -76,5 +78,5 @@ At the bottom of any rule setup window, there is an option to stop processing af
     :width: 100%
     :alt: Stop processing after the rule has been applied.
     
-Every alert sent to VictorOps, runs through the list of rules from top to bottom before reaching the timeline. This check box allows you to stop an alert from continuing to process through subsequent rules. This has performance advantages (speeds up processing of the alert) and allows you to prevent subsequent rules from overwriting the current rule after it has acted upon the alert.
+Every alert sent to Splunk On-Call, runs through the list of rules from top to bottom before reaching the timeline. This check box allows you to stop an alert from continuing to process through subsequent rules. This has performance advantages (speeds up processing of the alert) and allows you to prevent subsequent rules from overwriting the current rule after it has acted upon the alert.
 

@@ -30,7 +30,7 @@ Turn on AWS Cloudwatch in Splunk On-Call
 
 In Splunk On-Call, select :guilabel:`Integrations`, :guilabel:`AWS CloudWatch`.
 
-If the integration has not yet been activated, select :guilabel:`Enable Integration` to generate your endpoint URL. Be sure to replace the ``$routing_key`` section of your new endpoint with the routing key you want to use. If no routing key is included as part of the endpoint URL, the subscription isn't confirmed. See :ref:`routing-keys` for more information.
+If the integration has not yet been activated, select :guilabel:`Enable Integration` to generate your endpoint URL. Be sure to replace the ``$routing_key`` section of your new endpoint with the routing key you want to use. If no routing key is included as part of the endpoint URL, the subscription isn't confirmed. See :ref:`spoc-routing-keys` for more information.
 
 You can point multiple SNS subscriptions to the same AWS CloudWatch endpoint in Splunk On-Call. The subscription isn't confirmed if it hits a different endpoint.
 

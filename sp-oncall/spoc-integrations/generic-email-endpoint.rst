@@ -51,7 +51,7 @@ Your On-Call email endpoint address consists of 3 parts:
       70ysj-6ks..(endpoint key)..9284\ **+database**\ @alert.victorops.com
 
    Routing keys in On-Call are case-sensitive and must match the routing key name in the routing segment of the email
-   endpoint. For more information on setting up routing keys, see :ref:`routing-keys`.
+   endpoint. For more information on setting up routing keys, see :ref:`spoc-routing-keys`.
 
    .. note:: if your email provider prohibits using a ``+`` sign, try with a dot (``.``).
 

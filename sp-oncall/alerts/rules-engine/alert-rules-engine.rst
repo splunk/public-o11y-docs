@@ -8,6 +8,16 @@ Splunk On-Call Alert Rules Engine
    :description: The Splunk On-Call Alert Rules Engine is a rules engine that allows you to set certain conditions, and trigger custom actions when those conditions are met.
 
 
+.. toctree::
+    :hidden:
+
+    rules-engine-rules
+    rules-engine-annotations
+    rules-engine-matching-conditions
+    rules-engine-stop-flag
+    rules-engine-transformations
+    rules-engine-variable-expansion
+
 
 Requirements
 ==================

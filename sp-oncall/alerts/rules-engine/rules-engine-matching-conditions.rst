@@ -5,7 +5,7 @@ Matching conditions for the Rule Engine
 ************************************************************************
 
 .. meta::
-   :description: About the user roll in Splunk On-Call.
+   :description: About matching conditions in rules for Splunk On-Call alerts.
 
 
 .. meta::

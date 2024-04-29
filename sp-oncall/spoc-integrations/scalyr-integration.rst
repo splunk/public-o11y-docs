@@ -22,7 +22,7 @@ Splunk On-Call configuration
 
 From the Splunk On-Call web portal select :guilabel:`Settings`, :guilabel:`Alert Behavior`, :guilabel:`Integrations`. Select the Dataset (Scalyr) integration and copy the service API endpoint to your clipboard.
 
-Make sure to add the appropriate routing key to the end of the URL. See :ref:`routing-keys` for more information.
+Make sure to add the appropriate routing key to the end of the URL. See :ref:`spoc-routing-keys` for more information.
 
 Dataset configuration
 ====================================

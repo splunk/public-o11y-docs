@@ -26,12 +26,12 @@ Splunk On-Call is incident management software that allows teams to maintain a c
 Access the following topics to learn about Splunk On-Call:
 
 -  :ref:`About user roles <user-roles-permissions>`
--  :ref:`Configure Single sign-on TOGGLE <single-sign-sso>`
--  :ref:`Get Started <admin-quick-start> `
--  :ref:`User roles TOGGLE <user-roles-permissions>`
--  :ref:`Incidents TOGGLE <incident-pane>`
--  :ref:`Manage schedules TOGGLE <create-manage-on-call-schedules>`
--  :ref:`Reports TOGGLE <reports-main>`
--  :ref:`Mobile TOGGLE <mobile-get-started>`
--  :ref:`Integrations TOGGLE <integrations-main>`
+-  :ref:`Configure Single sign-on <single-sign-sso>`
+-  :ref:`Get started <admin-quick-start>`
+-  :ref:`User roles <user-roles-permissions>`
+-  :ref:`Incidents <incident-pane>`
+-  :ref:`Manage schedules <create-manage-on-call-schedules>`
+-  :ref:`Reports <reports-main>`
+-  :ref:`Mobile <mobile-get-started>`
+-  :ref:`Integrations  <integrations-main>`
 

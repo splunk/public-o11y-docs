@@ -21,7 +21,7 @@ Select the :guilabel:`OpsDash` integration and copy the :guilabel:`Service API E
 .. image:: /_images/spoc/OpsDash-final.png
    :alt: OpsDash integration screen
 
-Make sure to add the appropriate routing key to the end of the URL. See :ref:`routing-keys` for more information.
+Make sure to add the appropriate routing key to the end of the URL. See :ref:`spoc-routing-keys` for more information.
 
 In OpsDash
 ======================

@@ -44,7 +44,7 @@ Track both your organization and team's MTTA and MTTR and incident metrics by le
 Routing Key Filtering
 =====================
 
-Target :ref:`specific or multiple routing keys <routing-keys>` to understand metrics around different components.
+Target :ref:`specific or multiple routing keys <spoc-routing-keys>` to understand metrics around different components.
 
 .. image:: /_images/spoc/reports-mttr3.png
     :width: 100%

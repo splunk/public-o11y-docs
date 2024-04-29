@@ -36,7 +36,7 @@ Customize the endpoint URL to use your routing key
 
 Customize the service API endpoint URL to use the routing key for the Zendesk integration. To do so, replace  ``$routing_key`` with your routing key. For example, assuming a routing_key value of "database": ``.....36437/$routing_key` becomes ``.....36437/database``
 
-You can set up routing keys in Splunk On-Call under :guilabel:`Settings` then :guilabel:`Routing Keys`. For more information on routing keys and best practices, see :ref:`routing-keys`
+You can set up routing keys in Splunk On-Call under :guilabel:`Settings` then :guilabel:`Routing Keys`. For more information on routing keys and best practices, see :ref:`spoc-routing-keys`
 
 Create a target in Zendesk
 ================================

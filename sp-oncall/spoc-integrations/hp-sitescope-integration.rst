@@ -24,7 +24,7 @@ Splunk On-Call configuration
 
 From the Splunk On-Call web portal, select :guilabel:`Integrations`. From the resulting list of integration options, select :guilabel:`HP SiteScope`.
 
-Copy the :guilabel:`Service Email` to the clipboard. Make sure to replace the ``$routing_key`` section with the routing key you want to use. See :ref:`routing-keys`.
+Copy the :guilabel:`Service Email` to the clipboard. Make sure to replace the ``$routing_key`` section with the routing key you want to use. See :ref:`spoc-routing-keys`.
 
 
 HP SiteScope configuration

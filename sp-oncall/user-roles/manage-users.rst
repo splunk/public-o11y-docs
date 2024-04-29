@@ -8,18 +8,13 @@ Managing Splunk On-Call users
    :description: About the user roll in Splunk On-Call.
 
 
-In order to add or delete users in the VictorOps platform, you must
-either have the Global Admin role for global add/remove permissions or
-the Team Admin role for team-specific add/remove permissions.
+In order to add or delete users in the Splunk On-Call platform, you must either have the Global Admin role for global add or remove permissions or the Team Admin role for team-specific add or remove permissions.
 
-Adding Users
-----------------
-.. there is no text between these headings in the original topic.
 
-Adding/Inviting User to VictorOps
+Inviting User to Splunk On-Call
 ================================================
 
-Inviting users to VictorOps can be done via the :new-page:`Public API <https://portal.victorops.com/public/api-docs.html?_ga=2.169602981.562369111.1519752971-1195437206.1519752971#/Users>` or via the *Users* tab by clicking “Invite User”.
+Inviting users to Splunk On-Call can be done via the :new-page:`Public API <https://portal.victorops.com/public/api-docs.html?_ga=2.169602981.562369111.1519752971-1195437206.1519752971#/Users>` or via the *Users* tab by clicking “Invite User”.
 
 When inviting users in the web UI, users are invited via their email and are able to create their own username.
 

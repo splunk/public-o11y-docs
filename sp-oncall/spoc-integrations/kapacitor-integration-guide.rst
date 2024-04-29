@@ -24,7 +24,7 @@ Splunk On-Call configuration
 
 From the Splunk On-Call web portal, select :guilabel:`Integrations`. From the resulting list of integration options, select :guilabel:`Kapacitor`, then :guilabel:`Enable Integration`.
 
-Copy the :guilabel:`Service API Key` to the clipboard. Make sure to replace ``$routing_key`` with a valid routing key. See :ref:`routing-keys`.
+Copy the :guilabel:`Service API Key` to the clipboard. Make sure to replace ``$routing_key`` with a valid routing key. See :ref:`spoc-routing-keys`.
 
 Kapacitor configuration
 ================================

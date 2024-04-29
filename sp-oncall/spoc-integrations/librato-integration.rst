@@ -28,7 +28,7 @@ If the integration has not yet been enabled, select :guilabel:`Enable Integratio
 .. image:: /_images/spoc/librato-2.png
     :width: 100%
 
-Copy the Service API Key to your clipboard and determine which Splunk On-Call routing-key value will be used for this integration. For more information on routing keys and best practices, see :ref:`routing-keys`. 
+Copy the Service API Key to your clipboard and determine which Splunk On-Call routing-key value will be used for this integration. For more information on routing keys and best practices, see :ref:`spoc-routing-keys`. 
 
 
 In Librato

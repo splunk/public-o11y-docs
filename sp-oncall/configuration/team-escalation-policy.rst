@@ -73,7 +73,7 @@ A number of escalation actions are available. The different options are as follo
 
 #. Select :guilabel:`Save` to save the escalation policy at the bottom of the page.
 
-#. Attach the escalation policy to the desired Routing Key by selecting :guilabel:`Set Up Routing`. Routing keys are a key link to connect incidents to one of your established Escalation Policies. For more information on routing keys, see :ref:`routing-keys`. If no routing keys are connected to the escalation policy then it will only be active if called out specifically in a manual incident or “execute policy” step of another escalation policy.
+#. Attach the escalation policy to the desired Routing Key by selecting :guilabel:`Set Up Routing`. Routing keys are a key link to connect incidents to one of your established Escalation Policies. For more information on routing keys, see :ref:`spoc-routing-keys`. If no routing keys are connected to the escalation policy then it will only be active if called out specifically in a manual incident or “execute policy” step of another escalation policy.
 
 .. note:: Only Global and Alert Admins can configure and edit routing keys. Work with a user with these permission levels to assure your sescalation policy is connected to the correct routing key.
 

@@ -34,7 +34,7 @@ The routing key used for this integration is included in the destination URL. Ev
 
 You can set up and associate routing keys in Splunk On-Call by selecting :guilabel:`Settings`, :guilabel:`Routing Keys`.
 
-For more information on routing keys and best practices, see :ref:`routing-keys`.
+For more information on routing keys and best practices, see :ref:`spoc-routing-keys`.
 
 Recommended settings
 ============================================

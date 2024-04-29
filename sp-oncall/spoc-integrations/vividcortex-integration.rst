@@ -43,7 +43,7 @@ In VividCortex
     :width: 100%
 
 
-#. Select the Splunk On-Call (formerly VictorOps) integration. Give the integration a name, make sure to add the appropriate Routing Key. For more information about Routing keys, see :ref:`routing-keys`.
+#. Select the Splunk On-Call (formerly VictorOps) integration. Give the integration a name, make sure to add the appropriate Routing Key. For more information about Routing keys, see :ref:`spoc-routing-keys`.
 
 #. Paste in the API Key you copied from Splunk On-Call, select :guilabel:`Create Integration`. 
 

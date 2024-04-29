@@ -23,7 +23,7 @@ Splunk On-Call configuration
 ================================
 
 Go to :guilabel:`Integrations` and select :guilabel:`Sensu`, then select :guilabel:`Enable Integration` to generate the API endpoint URL. Copy the service API endpoint to your clipboard and replace the ``$routing_key`` piece at the
-end of the API endpoint with a valid routing key. See :ref:`routing-keys`.
+end of the API endpoint with a valid routing key. See :ref:`spoc-routing-keys`.
 
 Edit the Splunk On-Call.json file
 ====================================

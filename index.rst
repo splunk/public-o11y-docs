@@ -833,7 +833,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Get started TOGGLE <sp-oncall/get-started/getting-started-spoc>
+   Administrator get started TOGGLE <sp-oncall/get-started/getting-started-spoc>
+
+.. toctree::
+   :maxdepth:   3
+
+   Create and manage on-call schedules TOGGLE <sp-oncall/on-call-schedules/on-call-schedules-main>
 
 .. toctree::
    :maxdepth:   3

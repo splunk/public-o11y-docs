@@ -26,37 +26,53 @@ Get started with the mobile app
 Splunk On-Call is incident management software that allows teams to maintain a culture of high availability without slowing down the innovation process. Splunk On-Call is a mobile-first platform so please take the time to configure your mobile app settings!
 
 
+.. raw:: html
 
-Mobile Getting Started Guide
-=================================
+  <embed>
+    <h2>Mobile Getting Started Guide</h2>
+  </embed>
+
+
 
 :strong:`Mobile app download`: :new-page:`iOS <https://itunes.apple.com/us/app/victorops/id696974262?mt=8>`
 :strong:`Android <https://play.google.com/store/apps/details?id=com.victorops.androidclient&hl=en>`
 
 
-Primary Paging Policy
------------------------
+.. raw:: html
+
+  <embed>
+    <h2>Primary Paging Policy</h2>
+  </embed>
+
 
 It is important that you have a diverse and robust Primary Paging Policy in place so this is the first setting we recommend configuring. This article will help you navigate to and edit the Personal Paging Policy feature on both iOS and Android systems. Within the Splunk On-Call Mobile App, you are able to easily view and update your paging policies from iOS and Android devices.
 
-iOS
-^^^^^^
+.. raw:: html
+
+  <embed>
+    <h3>iOS</h3>
+  </embed>
 
 In the Splunk On-Call Mobile App, select the :guilabel:`Users` icon at the bottom of your iOS device's screen. Then select the person icon from the :guilabel:`Users` page.
 
 From your User Profile page, you may select the :guilabel:`Paging Policies` tab to view your current configuration. If you'd like to change your paging policy select *Edit*. Here you may delete, update, or add steps to your Primary Paging Policy and Custom Paging Policies from your iOS device. Once complete, be sure to save your changes.
 
-Android
-^^^^^^^^^^^
+.. raw:: html
+
+  <embed>
+    <h3>Android</h3>
+  </embed>
 
 As with iOS devices, editing and creating Primary Paging Policies and Custom Paging Policies in the Splunk On-Call Mobile App is only a few clicks away. Select the :guilabel:`Users` icon at the bottom, then select the person from the resulting Users page. Finally, select the :guilabel:`Paging Policies` tab.
 
 Once you've accessed your Paging Policies, select :guilabel:`Paging Policies`. Select the step you'd like to edit or add steps to.
 
+.. raw:: html
 
+  <embed>
+    <h2>Add Splunk On-Call to your contacts</h2>
+  </embed>
 
-Add Splunk On-Call to your contacts
------------------------------------
 
 Splunk On-Call will contact you for triggered incidents using the below phone numbers and our shortcode. You may add these numbers to your contacts in the Mobile App for both Android  and iOS devices by navigating to :guilabel:`Settings`, :guilabel:`Notifications` and then, :guilabel:`Add VictorOps to Your Contacts`
 
@@ -65,13 +81,21 @@ Splunk On-Call will contact you for triggered incidents using the below phone nu
     :alt: Add Splunk On-Call to your contacts.
 
 
-Short Code (US and Canada SMS only)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. raw:: html
+
+  <embed>
+    <h3>Short Code (US and Canada SMS only)</h3>
+  </embed>
+
 
 842867
 
-Long Codes:
-^^^^^^^^^^^^^^^
+.. raw:: html
+
+  <embed>
+    <h3>Long Codes (US and Canada SMS only)</h3>
+  </embed>
+
 
 303.653.9527
 
@@ -83,8 +107,13 @@ Long Codes:
 
 303.835.0913
 
-International Numbers:
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. raw:: html
+
+  <embed>
+    <h3>International Numbers:</h3>
+  </embed>
+
+
 
 Australia (Phone only): +61 2 6190 1305
 
@@ -104,8 +133,11 @@ United Kingdom (SMS only): +44 7782 360801
 
 
 
-Policy change on Phone Notifications to China (country code +86)
-----------------------------------------------------------------
+.. raw:: html
 
-For information regarding our recent policy change to deprecate Phone
-(Voice) notifications to China ( country code +86), see :ref:`deprecated-china`.
+  <embed>
+    <h2>Policy change on Phone Notifications to China (country code +86)</h2>
+  </embed>
+
+
+For information regarding our recent policy change to deprecate Phone (Voice) notifications to China ( country code +86), see :ref:`deprecated-china`.

@@ -29,7 +29,7 @@ Select the Site 24x7 icon, activate the integration, then copy the URL to your c
 .. image:: /_images/spoc/Site24x7-2@2x.png
    :alt: Copy URL from integration
 
-Remember to replace the ``$routing_key`` with the Splunk On-Call routing key you want to use. See :ref:`routing-keys`.
+Remember to replace the ``$routing_key`` with the Splunk On-Call routing key you want to use. See :ref:`spoc-routing-keys`.
 
 
 Site 24x7 configuration
