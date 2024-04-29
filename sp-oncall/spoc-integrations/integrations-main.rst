@@ -83,7 +83,6 @@ Splunk On-Call integrations
    sysdig-integration
    thousandeyes-integration-guide
    threat-stack-integration
-   twilio-live-call-routing-integration
    twilio-live-call-routing-guide
    twilio-sms-integration-guide
    uptime-robot-integration-guide
