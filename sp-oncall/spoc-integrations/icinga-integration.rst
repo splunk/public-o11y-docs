@@ -96,8 +96,7 @@ The VictorOps configuration file defines where to route the Icinga alert, amongs
    
    .. code-block::
 
-      mv /opt/victorops/nagios_plugin/nagios_conf/victorops.cfg
-      /usr/local/nagios/etc
+      mv /opt/victorops/nagios_plugin/nagios_conf/victorops.cfg /usr/local/nagios/etc
 
 2. Open the victorops.cfg file and configure the following required values in both the VictorOps_Contact_Settings (~line 20) contact and VictorOps_Service_Settings (~line 40) service object definitions.
 
