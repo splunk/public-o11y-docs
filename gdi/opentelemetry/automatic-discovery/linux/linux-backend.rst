@@ -49,7 +49,7 @@ Make sure you've also installed the components specific to your language runtime
 
         .NET version 6.0 or higher and supported libraries. See :ref:`dotnet-otel-requirements` for more information.
 
-        Automatic discovery for .NET is only supported for x86-64 and AMD64 architectures.
+        Automatic discovery for .NET is only supported for x86_64/AMD64 architectures.
 
 Get started
 ===============================
