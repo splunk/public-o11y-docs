@@ -3,6 +3,10 @@
 Rapid7 integration for Splunk On-Call
 **********************************************************
 
+.. meta::
+    :description: Configure Rapid7 integration for Splunk On-Call.
+
+
 Rapid7 helps you reduce risk across your entire connected environment so your company can focus on what matters most. 
 
 Requirements
