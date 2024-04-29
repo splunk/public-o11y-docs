@@ -9,7 +9,7 @@ Instrument your .NET application for Splunk Observability Cloud (OpenTelemetry)
 
 The Splunk Distribution of OpenTelemetry .NET automatically instruments .NET applications, Windows services running .NET applications, and ASP.NET applications deployed on IIS.
 
-To get started, use the guided setup, follow the instructions manually, or auto-instrument your application. See :ref:`auto-instrumentation-dotnet` for more information.
+To get started, use the guided setup, follow the instructions manually, or automatically instrument your application. See :ref:`discovery_mode` for more information.
 
 Generate customized instructions using the guided setup
 ====================================================================

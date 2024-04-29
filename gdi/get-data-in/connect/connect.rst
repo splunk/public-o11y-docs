@@ -10,6 +10,7 @@ Connect to your cloud service provider
 
 .. toctree::
    :hidden:
+   :maxdepth: 5
 
    Connect to AWS <aws/get-awstoc>
    Connect to Azure <azure/azure>

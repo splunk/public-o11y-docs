@@ -82,7 +82,7 @@ To install the Collector for Linux using a Debian package, set up the package re
    apt-get update
    apt-get install -y splunk-otel-collector
 
-   # Optional: install Splunk OpenTelemetry Auto Instrumentation
+   # Optional: install Splunk OpenTelemetry automatic discovery for language runtimes
    apt-get install -y splunk-otel-auto-instrumentation
 
 See also:
@@ -299,8 +299,10 @@ Auto Instrumentation agents
 
 The ``splunk-otel-auto-instrumentation`` deb/rpm package installs and supports configuration for the following Auto Instrumentation agents:
 
-* :ref:`auto-instrumentation-java`
-* :ref:`auto-instrumentation-nodejs`
+* Java
+* Node.js
+
+To learn more, see :ref:`linux-backend-auto-discovery`.
 
 .. _linux-packages-fluentd:
 
@@ -315,7 +317,7 @@ If you require log collection, perform the following steps to install Fluentd an
 
    * If necessary, install the ``capng_c`` plugin and dependencies to enable Linux capabilities, for example ``cap_dac_read_search`` and/or ``cap_dac_override``. This requires ``td-agent`` version 4.1 or higher. See :new-page:`Linux capabilities <https://docs.fluentd.org/deployment/linux-capability>`.
 
-   * If necessary, install the ``fluent-plugin-systemd`` plugin to collect log events from the systemd journal. See :new-page:`Fluent plugin systemd <https://github.com/fluent-plugin-systemd/fluent-plugin-systemd >`.
+   * If necessary, install the ``fluent-plugin-systemd`` plugin to collect log events from the systemd journal. See :new-page:`Fluent plugin systemd <https://github.com/fluent-plugin-systemd/fluent-plugin-systemd>`.
 
 #. Configure Fluentd to collect log events and forward them to the Collector:
 
@@ -361,8 +363,6 @@ Run the following command to run an interactive bash shell on the container and 
 .. code-block:: bash
 
    docker exec -it containerID bash
-
-See :new-page:`docker-compose.yml <https://github.com/signalfx/splunk-otel-collector/blob/main/examples/docker-compose/docker-compose.yml>` in GitHub to download a ``docker-compose`` example.
 
 .. note:: 
    If you are running the Collector in ``--read-only`` mode and using any Smart Agent receiver's legacy collectd monitor types, you need to provide a writable config directory similar to ``--read-only --tmpfs /usr/lib/splunk-otel-collector/agent-bundle/run:uid=999,gid=999`` (default) or as configured by the Smart Agent extension's ``collectd::configDir`` path.

@@ -9,5 +9,3 @@ HTTP forwarder extension
 
 The Splunk Distribution of the OpenTelemetry Collector supports the HTTP forwarder extension. Documentation is planned for a future release.
 
-To find information about this component in the meantime, see :new-page:`HTTP forwarder extension <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/httpforwarder>` on GitHub.
-

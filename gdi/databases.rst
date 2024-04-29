@@ -15,7 +15,6 @@ Configure application receivers for databases
    monitors-databases/apache-spark
    monitors-databases/cassandra
    monitors-databases/consul
-   opentelemetry/components/databricks-receiver
    monitors-databases/etcd
    monitors-databases/exec-input
    monitors-databases/hadoop
@@ -39,7 +38,6 @@ These application receivers gather metrics from their associated database-relate
 * :ref:`spark`
 * :ref:`cassandra`
 * :ref:`consul`
-* :ref:`databricks_receiver`
 * :ref:`etcd`
 * :ref:`exec-input`
 * :ref:`hadoop`

@@ -245,17 +245,22 @@ To deploy the Collector for Node.js in a Kubernetes environment, follow these st
          spec:
             containers:
             - name: myapp
-               env:
-                  - name: SPLUNK_OTEL_AGENT
-                  valueFrom:
-                     fieldRef:
-                        fieldPath: status.hostIP
-                  - name: OTEL_EXPORTER_OTLP_ENDPOINT
-                  value: "http://$(SPLUNK_OTEL_AGENT):4317"
-                  - name: OTEL_SERVICE_NAME
-                  value: "<serviceName>"
-                  - name: OTEL_RESOURCE_ATTRIBUTES
-                  value: "deployment.environment=<environmentName>"
+              image: your-app-image
+              env:
+               - name: SPLUNK_OTEL_AGENT
+                 valueFrom:
+                   fieldRef:
+                     fieldPath: status.hostIP
+               - name: OTEL_EXPORTER_OTLP_ENDPOINT
+                 value: "http://$(SPLUNK_OTEL_AGENT):4317"
+               - name: OTEL_SERVICE_NAME
+                 value: "<serviceName>"
+               - name: OTEL_RESOURCE_ATTRIBUTES
+                 value: "deployment.environment=<environmentName>"
+              command:
+               - node
+               - -r @splunk/otel/instrument
+               - <your-app>.js
 
 .. _export-directly-to-olly-cloud-nodejs:
 

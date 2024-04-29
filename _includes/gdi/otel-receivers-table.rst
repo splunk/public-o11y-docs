@@ -2,7 +2,6 @@
 * :ref:`carbon-receiver`
 * :ref:`cloudfoundry-receiver`
 * :ref:`collectd-receiver`
-* :ref:`databricks-receiver`
 * :ref:`discovery-receiver`
 * :ref:`filelog-receiver`   
 * :ref:`fluentd-receiver`

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-07 09:20+0000\n"
-"PO-Revision-Date: 2023-11-27 18:56+0000\n"
+"POT-Creation-Date: 2024-02-23 17:21+0000\n"
+"PO-Revision-Date: 2024-04-17 16:22+0100\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -16,15 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: ../../references/glossary.rst:-1
 msgid "Learn about common terms and concepts in Splunk Observability Cloud."
 msgstr "Splunk Observability Cloudの一般的な用語と概念について説明します。"
-
-#: ../../<rst_prolog>:18
-msgid "Take shift"
-msgstr "シフトする"
 
 #: ../../references/glossary.rst:5
 msgid "Glossary for Splunk Observability Cloud"
@@ -56,13 +52,13 @@ msgid ""
 "An alert is triggered when the conditions for a detector rule are met. For example, a detector monitoring the number of application requests has a rule that produces an alert if the number is below a static threshold, for example, 20 requests per minute, and/or above a calculated one, for example, the mean + 3 standard deviations "
 "above the number of requests per minute over the past hour."
 msgstr ""
-"アラートは、ディテクタールールの条件が満たされたときにトリガされます。例えば、アプリケーションのリクエスト数を監視するあるディテクターは、リクエスト数が静的閾値（例えば1分あたり20リクエスト）を下回る場合、および／または計算された閾値（例えば過去1時間の1分あたりのリクエスト数の平均＋3標準偏差）を上回る場合にアラートを生成するルール"
-"を持っています。"
+"アラートは、ディテクタールールの条件が満たされたときにトリガーされます。例えば、アプリケーションのリクエスト数を監視するあるディテクターは、リクエスト数が静的閾値（例えば1分あたり20リクエスト）を下回る場合、および／または計算された閾値（例えば過去1時間の1分あたりのリクエスト数の平均＋3標準偏差）を上回る場合にアラートを生成するルー"
+"ルを持っています。"
 
 #: ../../references/glossary.rst:21
 #, fuzzy
-msgid "When an alert is triggered, the detector also creates an :term:`event` and might optionally send a :term:`notification`. All currently active alerts can be viewed under Alerts & Detectors"
-msgstr "アラートがトリガーされると、ディテクターは :term:`event` も作成し、オプションで :term:`notification` を送信する場合もあります。 現在アクティブになっているアラートはすべて「アラートとディテクター」で確認できます。"
+msgid "When an alert is triggered, the detector also creates an :term:`event`and might optionally send a :term:`notification`. All currently active alerts can be viewed under Alerts & Detectors"
+msgstr "アラートがトリガーされると、ディテクターは :term:`event` も作成し、オプションで :term:`notification` を送信する場合もあります。現在アクティブになっているアラートはすべて「アラートとディテクター」で確認できます。"
 
 #: ../../references/glossary.rst:22
 msgid "analytics"
@@ -124,7 +120,7 @@ msgstr "ディテクターは、ユーザーの関心対象の条件について
 #: ../../references/glossary.rst:48
 #, fuzzy
 msgid "Those conditions are expressed as one or more rules that trigger an alert when the conditions in the rules are met. Individual rules in a detector are labeled according to criticality: Info, Warning, Minor, Major, and Critical."
-msgstr "これらの条件は、条件が満たされたときにアラートをトリガする1つまたは複数のルールとして表されます。ディテクター内の個々のルールは、重大度に応じて「情報」、「警告」、「マイナー」、「メジャー」、「クリティカル」のラベルを付されます。"
+msgstr "これらの条件は、条件が満たされたときにアラートをトリガーする1つまたは複数のルールとして表されます。ディテクター内の個々のルールは、重大度に応じて「情報」、「警告」、「マイナー」、「メジャー」、「クリティカル」のラベルを付されます。"
 
 #: ../../references/glossary.rst:50
 #, fuzzy
@@ -280,7 +276,7 @@ msgid "muting rule"
 msgstr "ミュートルール"
 
 #: ../../references/glossary.rst:116
-msgid "A muting rule defines a period of time during which :term:`notifications<notification>` for specified :term:`alerts<alert>` will not be sent.  See :ref:`mute-notifications`."
+msgid "A muting rule defines a period of time during which :term:`notifications<notification>` for specified :term:`alerts<alert>`will not be sent.  See :ref:`mute-notifications`."
 msgstr "ミュートルールは、指定した :term:`アラート<alert>` の :term:`通知<notification>` を送信しない期間を定義するものです。:ref:`mute-notifications` を参照してください。"
 
 #: ../../references/glossary.rst:119
@@ -388,8 +384,8 @@ msgid ""
 "The Splunk Distribution of OpenTelemetry Collector is a package that bundles the Splunk Distribution of OpenTelemetry Collector with additional components to provide integrated collection and forwarding of traces, metrics, and logs for a specific platform. Configuring the Splunk Distribution of OpenTelemetry Collector uses the :"
 "term:`agent deployment method <Agent (deployment method)>`."
 msgstr ""
-"Splunk Distribution of OpenTelemetry Collectorは、Splunk Distribution of OpenTelemetry Collectorと追加コンポーネントをバンドリングし、特定のプラットフォーム向けにトレース、メトリクス、ログの統合的収集と転送を提供するパッケージです。Splunk Distribution of OpenTelemetry Collectorの設定には、:term:`エージェントのデプロイ方法 <Agent "
-"(deployment method)>` を使用します。"
+"Splunk Distribution of OpenTelemetry Collectorは、Splunk Distribution of OpenTelemetry Collectorと追加コンポーネントをバンドリングし、特定のプラットフォーム向けにトレース、メトリクス、ログの統合的収集と転送を提供するパッケージです。Splunk Distribution of OpenTelemetry Collectorの設定には、:term:`エージェントのデプロイ方法` を使用し"
+"ます。"
 
 #: ../../references/glossary.rst:171
 msgid "T"
@@ -430,3 +426,6 @@ msgstr "Splunk Observability Cloudに含まれるコンポーネントの一部�
 #: ../../references/third-party-credits.rst:12
 msgid "Credits available as a compressed CSV file for download: :download:`Splunk Observability Cloud third-party software<Splunk_Observability_Cloud_Credits.zip>`."
 msgstr "クレジットは圧縮CSVファイルとしてダウンロード可能です： :download:`Splunk Observability Cloud third-party software<Splunk_Observability_Cloud_Credits.zip>`。"
+
+#~ msgid "Take shift"
+#~ msgstr "シフトする"
