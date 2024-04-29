@@ -15,6 +15,8 @@ Through advanced customization, you can achieve the following tasks:
 * :ref:`Use automatic discovery with gateway mode <use-with-gateway-linux>`
 * :ref:`Customize discovery settings for third-party applications <customize-third-party-settings-linux>`
 
+.. note:: For advanced customization options in Kubernetes, see :ref:`k8s-advanced-auto-discovery-config`.
+
 .. _override-default-settings-linux:
 
 Override default automatic discovery settings
