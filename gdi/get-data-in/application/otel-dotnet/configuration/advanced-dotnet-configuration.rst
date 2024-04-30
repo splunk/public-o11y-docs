@@ -127,40 +127,9 @@ The following settings control resource detectors:
 
 The following resource detectors are available:
 
-.. list-table::
-   :header-rows: 1
-   :width: 100%
+.. raw:: html
 
-   * - Detector ID
-     - Description
-     - Attributes
-     - Maturity level
-     - Support level
-   * - ``AZUREAPPSERVICE``
-     - Azure App Service detector.
-     - ``azure.app.service.stamp``, ``cloud.platform``, ``cloud.provider``, ``cloud.resource_id``, ``cloud.region``, ``deployment.environment``, ``host.id``, ``service.instance.id``, ``service.name``
-     - Experimental Beta
-     - Community support
-   * - ``CONTAINER`` |br| (Not supported on .NET Framework)
-     - Container detector. For example, Docker or Podman containers.
-     - ``container.id``
-     - Experimental Beta
-     - Community support
-   * - ``HOST``
-     - Host detector.
-     - ``host.name``
-     - Experimental Beta
-     - Community support
-   * - ``PROCESS``
-     - Process detector.
-     - ``process.pid``
-     - Experimental Beta
-     - Community support
-   * - ``PROCESSRUNTIME``
-     - Process Runtime detector.
-     - ``process.runtime.description``, ``process.runtime.name``, ``process.runtime.version``
-     - Experimental Beta
-     - Community support
+    <div class="instrumentation" section="resourcedetectors" url="/en/feature/DOCS-1897/_static/instrumentation.yaml" data-renaming='{"key": "Identifier", "description": "Description", "attributes": "Attributes", "id": "ID", "stability": "Stability", "support", "Support", "dependencies": "Dependencies", "name": "Name", "source_href", "Source", "package_href": "Package URL", "version": "Version", "stability": "Stability"}'></div>
 
 .. _dotnet-otel-instrumentation-settings:
 
