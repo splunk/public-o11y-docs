@@ -129,7 +129,7 @@ The following resource detectors are available:
 
 .. raw:: html
 
-    <div class="instrumentation" section="resourcedetectors" url="/en/feature/DOCS-1897/_static/instrumentation.yaml" data-renaming='{"key": "Identifier", "description": "Description", "attributes": "Attributes", "id": "ID", "stability": "Stability", "support", "Support", "dependencies": "Dependencies", "name": "Name", "source_href", "Source", "package_href": "Package URL", "version": "Version", "stability": "Stability"}'></div>
+    <div class="instrumentation" section="resourcedetectors" url="/en/feature/DOCS-1897/_static/instrumentation.yaml" data-renaming='{"key": "Identifier", "description": "Description", "attributes": "Attributes", "id": "ID", "stability": "Stability", "support": "Support", "dependencies": "Dependencies", "name": "Name", "source_href": "Source", "package_href": "Package URL", "version": "Version", "stability": "Stability"}'></div>
 
 .. _dotnet-otel-instrumentation-settings:
 
