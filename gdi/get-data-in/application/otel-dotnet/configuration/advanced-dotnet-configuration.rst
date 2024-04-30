@@ -46,7 +46,7 @@ The following settings are common to most instrumentation scenarios:
 
 .. raw:: html
 
-    <div class="instrumentation" section="settings" url="/en/feature/DOCS-1897/_static/instrumentation.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>
+    <div class="instrumentation" section="settings" group="category" filter="general" url="/en/feature/DOCS-1897/_static/instrumentation.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>
 
 .. _dotnet-otel-exporter-settings:
 
@@ -55,19 +55,10 @@ Exporter settings
 
 The following settings control trace exporters and their endpoints:
 
-.. list-table::
-   :header-rows: 1
-   :width: 100%
-   :widths: 40 60
+.. raw:: html
 
-   * - Setting
-     - Description
-   * - ``OTEL_EXPORTER_OTLP_ENDPOINT``
-     - The URL to where traces and metrics are sent. The default value is ``http://localhost:4318``. Setting a value overrides the ``SPLUNK_REALM`` environment variable.
-   * - ``SPLUNK_REALM``
-     - The name of your organization's realm, for example, ``us0``. When you set the realm, telemetry is sent directly to the ingest endpoint of Splunk Observability Cloud, bypassing the Splunk Distribution of OpenTelemetry Collector.
-   * - ``SPLUNK_ACCESS_TOKEN``
-     - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Required if you need to send data to the Splunk Observability Cloud ingest endpoint. See :ref:`admin-tokens`.
+    <div class="instrumentation" section="settings" group="category" filter="exporter" url="/en/feature/DOCS-1897/_static/instrumentation.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>
+
 
 .. _profiling-configuration-otel-dotnet:
 
@@ -101,15 +92,10 @@ Trace propagation settings
 
 The following settings control trace propagation:
 
-.. list-table::
-   :header-rows: 1
-   :width: 100%
-   :widths: 40 60
+.. raw:: html
 
-   * - Setting
-     - Description
-   * - ``OTEL_PROPAGATORS``
-     - Comma-separated list of propagators for the tracer. The default value is ``tracecontext,baggage``. Supported values are ``b3multi``, ``b3``, ``tracecontext``, and ``baggage``.
+    <div class="instrumentation" section="settings" group="category" filter="trace propagation" url="/en/feature/DOCS-1897/_static/instrumentation.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>
+
 
 .. _trace-sampling-settings-dotnet-otel:
 
@@ -118,15 +104,9 @@ Samplers configuration
 
 The following settings control trace sampling:
 
-.. list-table::
-   :header-rows: 1
-   :widths: 30 70
-   :width: 100%
+.. raw:: html
 
-   * - Environment variable
-     - Description
-   * - ``OTEL_TRACES_SAMPLER``
-     - Sampler to use. The default value is ``parentbased_always_on``. Supported values are ``always_on``, ``always_off``, ``traceidratio``, ``parentbased_always_on``, ``parentbased_always_off``, and ``parentbased_traceidratio``.
+    <div class="instrumentation" section="settings" group="category" filter="sampler" url="/en/feature/DOCS-1897/_static/instrumentation.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>
 
 
 .. _resource-detector-settings-dotnet-otel:
@@ -138,17 +118,10 @@ You can use resource detectors to retrieve additional attributes for your applic
 
 The following settings control resource detectors:
 
-.. list-table::
-   :header-rows: 1
-   :widths: 30 70
-   :width: 100%
+.. raw:: html
 
-   * - Environment variable
-     - Description
-   * - ``OTEL_DOTNET_AUTO_RESOURCE_DETECTOR_ENABLED``
-     - Activates or deactivates all resource detectors. The default values is ``true``.
-   * - ``OTEL_DOTNET_AUTO_{DECTECTOR}_RESOURCE_DETECTOR_ENABLED``
-     - Activates or deactivates a specific resource detector, where ``{DETECTOR}`` is the uppercase identifier of the resource detector you want to activate. Overrides ``OTEL_DOTNET_AUTO_RESOURCE_DETECTOR_ENABLED``.
+    <div class="instrumentation" section="settings" group="category" filter="resource detector" url="/en/feature/DOCS-1897/_static/instrumentation.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>
+
 
 .. _list-resource-detectors-dotnet:
 
@@ -196,37 +169,9 @@ Instrumentation settings
 
 The following settings control instrumentations and tracing behavior:
 
-.. list-table::
-   :header-rows: 1
-   :width: 100%
-   :widths: 40 60
+.. raw:: html
 
-   * - Setting
-     - Description
-   * - ``OTEL_SERVICE_NAME``
-     - Name of the service or application you're instrumenting. Takes precedence over the service name defined in the ``OTEL_RESOURCE_ATTRIBUTES`` variable.
-   * - ``OTEL_RESOURCE_ATTRIBUTES``
-     - Comma-separated list of resource attributes added to every reported span. For example, ``key1=val1,key2=val2``.
-   * - ``OTEL_DOTNET_AUTO_TRACES_ADDITIONAL_SOURCES``
-     - Comma-separated list of additional ``System.Diagnostics.ActivitySource`` names to be added to the tracer at startup. Use it to capture spans from manual instrumentation.
-   * - ``OTEL_DOTNET_AUTO_METRICS_ADDITIONAL_SOURCES``
-     - Comma-separated list of additional ``System.Diagnostics.Metrics.Meter`` names to be added to the meter at the startup. Use it to capture custom metrics.
-   * - ``OTEL_SPAN_ATTRIBUTE_COUNT_LIMIT``
-     - Maximum number of attributes per span. Default value is unlimited.
-   * - ``OTEL_SPAN_EVENT_COUNT_LIMIT``
-     - Maximum number of events per span. Default value is unlimited.
-   * - ``OTEL_SPAN_LINK_COUNT_LIMIT``
-     - Maximum number of links per span. Default value is ``1000``.
-   * - ``OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT``
-     - Maximum length of strings for attribute values. Values larger than the limit are truncated. Default value is ``1200``. Empty values are treated as infinity.
-   * - ``OTEL_DOTNET_AUTO_ENTITYFRAMEWORKCORE_SET_DBSTATEMENT_FOR_TEXT``
-     - Whether the Entity Framework Core instrumentation can pass SQL statements through the ``db.statement`` attribute. Queries might contain sensitive information. If set to ``false``, `db.statement` is recorded only for executing stored procedures. The default value is ``false``.
-   * - ``OTEL_DOTNET_AUTO_GRAPHQL_SET_DOCUMENT``
-     - Whether the GraphQL instrumentation can pass raw queries as a ``graphql.document`` attribute. As queries might contain sensitive information, the default value is ``false``.
-   * - ``OTEL_DOTNET_AUTO_SQLCLIENT_SET_DBSTATEMENT_FOR_TEXT``
-     - Whether the SQL Client instrumentation can pass SQL statements through the ``db.statement`` attribute. Queries might contain sensitive information. If set to ``false``, ``db.statement`` is recorded only for executing stored procedures. Not supported on .NET Framework for ``System.Data.SqlClient``. The default value is ``false``.
-   * - ``OTEL_DOTNET_AUTO_TRACES_ADDITIONAL_LEGACY_SOURCES``
-     - Comma-separated list of additional legacy source names to be added to the tracer at the startup. Use it to capture ``System.Diagnostics.Activity`` objects created without using the ``System.Diagnostics.ActivitySource`` API.
+    <div class="instrumentation" section="settings" group="category" filter="instrumentation" url="/en/feature/DOCS-1897/_static/instrumentation.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>
 
 The following settings control which instrumentations are activated. See :ref:`disable-instrumentations-otel-dotnet` for more information.
 
@@ -275,25 +220,10 @@ Diagnostic logging settings
 
 The following settings control the internal logging of the Splunk Distribution of OpenTelemetry .NET:
 
-.. list-table::
-   :header-rows: 1
-   :width: 100%
-   :widths: 40 60
+.. raw:: html
 
-   * - Setting
-     - Description
-   * - ``OTEL_LOG_LEVEL``
-     - Sets the logging level for instrumentation log messages. Possible values are ``none``, ``error``, ``warn``, ``info``, and ``debug``. The default value is ``info``. Can't be set using the web.config or app.config files.
-   * - ``OTEL_DOTNET_AUTO_LOG_DIRECTORY``
-     - Directory of the .NET tracer logs. The default value is ``/var/log/opentelemetry/dotnet`` for Linux, and ``%ProgramData%\OpenTelemetry .NET AutoInstrumentation\logs`` for Windows. Can't be set using the web.config or app.config files.
-   * - ``OTEL_DOTNET_AUTO_TRACES_CONSOLE_EXPORTER_ENABLED``
-     - Whether the traces console exporter is activated. The default value is ``false``.
-   * - ``OTEL_DOTNET_AUTO_METRICS_CONSOLE_EXPORTER_ENABLED``
-     - Whether the metrics console exporter is activated. The default value is ``false``.
-   * - ``OTEL_DOTNET_AUTO_LOGS_CONSOLE_EXPORTER_ENABLED``
-     - Whether the logs console exporter is activated. The default value is ``false``.The default value is ``false``.
-   * - ``OTEL_DOTNET_AUTO_LOGS_INCLUDE_FORMATTED_MESSAGE``
-     - Whether the log state have to be formatted. The default value is ``false``.
+    <div class="instrumentation" section="settings" group="category" filter="diagnostic logging" url="/en/feature/DOCS-1897/_static/instrumentation.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>
+
 
 .. _dotnet-otel-default-service-name:
 
