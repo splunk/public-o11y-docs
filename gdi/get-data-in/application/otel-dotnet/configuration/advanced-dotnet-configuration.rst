@@ -46,7 +46,7 @@ The following settings are common to most instrumentation scenarios:
 
 .. raw:: html
 
-    <div class="instrumentation" section="settings" url="/en/feature/DOCS-1897/_static/instrumentation.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>
+    <div class="instrumentation" section="settings" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>
 
 .. _dotnet-otel-exporter-settings:
 

@@ -21,7 +21,7 @@ List of metrics
 
 .. raw:: html
 
-    <div class="instrumentation" section="metrics" url="/en/feature/DOCS-1897/_static/instrumentation.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>
+    <div class="instrumentation" section="metrics" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>
 
 .. _dotnet-runtime-otel-metrics:
 
@@ -268,4 +268,4 @@ Resource detectors
 
 .. raw:: html
 
-    <div class="instrumentation" section="resourcedetectors" url="/en/feature/DOCS-1897/_static/instrumentation.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>
+    <div class="instrumentation" section="resourcedetectors" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>

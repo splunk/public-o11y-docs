@@ -21,7 +21,7 @@ Dependencies
 
 .. raw:: html
 
-    <div class="instrumentation" section="dependencies" url="/en/feature/DOCS-1897/_static/instrumentation.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>
+    <div class="instrumentation" section="dependencies" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>
 
 
 .. _supported-dotnet-otel-libraries:
@@ -33,7 +33,7 @@ The Splunk Distribution of OpenTelemetry .NET instruments the following librarie
 
 .. raw:: html
 
-    <div class="instrumentation" section="instrumentations" url="/en/feature/DOCS-1897/_static/instrumentation.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals", "source_href": "Source"}'></div>
+    <div class="instrumentation" section="instrumentations" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals", "source_href": "Source"}'></div>
 
 .. _dotnet-otel-collector-requirement:
 

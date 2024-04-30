@@ -93,7 +93,7 @@ $(document).ready(function () {
                         let cellValue = handleNestedData(subItem[subKey]);
                         if (cellValue !== '') {
                            const urlPattern = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([\/\w .-]*)*\/?$/;
-                           if (urlPattern.test(cellValue)) {
+                           if (urlPattern.test(cellValue) && cellValue.length > 25) {
                               subRow.append(`<td><a class="new-page reference external" href="${cellValue}" target="_blank">External Link</a></td>`);
                            } else {
                               subRow.append('<td>' + converter.makeHtml(cellValue) + '</td>');
