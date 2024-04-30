@@ -44,33 +44,9 @@ General settings
 
 The following settings are common to most instrumentation scenarios:
 
-.. list-table::
-   :header-rows: 1
-   :width: 100%
-   :widths: 40 60
+.. raw:: html
 
-   * - Setting
-     - Description
-   * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
-     - Activated by default. Adds server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-dotnet-otel`. The default value is ``true``.
-   * - ``OTEL_DOTNET_AUTO_EXCLUDE_PROCESSES``
-     - Names of the executable files that you don't want the profiler to instrument. Supports multiple semicolon-separated values, for example: ``ReservedProcess.exe;powershell.exe``. Notice that applications launched using dotnet MyApp.dll have process name ``dotnet`` or ``dotnet.exe``. Can't be set using the web.config or app.config files.
-   * - ``OTEL_DOTNET_AUTO_TRACES_ENABLED``
-     - Traces are collected by default. To deactivate trace collection, set the environment variable to ``false``. Data from custom or manual instrumentation is not affected.
-   * - ``OTEL_DOTNET_AUTO_METRICS_ENABLED``
-     - Metrics are collected by default. To deactivate metric collection, set the environment variable to ``false``. Data from custom or manual instrumentation is not affected.
-   * - ``OTEL_DOTNET_AUTO_LOGS_ENABLED``
-     - Logs are collected by default. To deactivate log collection, set the environment variable to ``false``. Data from custom or manual instrumentation is not affected.
-   * - ``OTEL_DOTNET_AUTO_OPENTRACING_ENABLED``
-     - Activates the OpenTracing tracer. The default value is ``false``. See :ref:`migrate-signalfx-dotnet-to-dotnet-otel` for more information.
-   * - ``OTEL_DOTNET_AUTO_NETFX_REDIRECT_ENABLED``
-     - Activates immediate redirection of the assemblies used by the automatic instrumentation on the .NET Framework. The default values is ``true``. Can't be set using the web.config or app.config files.
-   * - ``OTEL_DOTNET_AUTO_FLUSH_ON_UNHANDLEDEXCEPTION``
-     - Controls whether the telemetry data is flushed when an ``AppDomain.UnhandledException`` event is raised. Set to ``true`` when experiencing missing telemetry at the same time of unhandled exceptions.
-   * - ``OTEL_DOTNET_AUTO_RULE_ENGINE_ENABLED``
-     - Activates RuleEngine. The default values is ``true``. RuleEngine increases the stability of the instrumentation by validating assemblies for unsupported scenarios.
-   * - ``OTEL_DOTNET_AUTO_FAIL_FAST_ENABLED``
-     - Activate to let the process fail when automatic instrumentation can't be executed. This setting is for debugging purposes, don't use it in production environments. The default value is ``false``. Can't be set using the web.config or app.config files.
+    <div class="instrumentation" section="settings" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>
 
 .. _dotnet-otel-exporter-settings:
 
