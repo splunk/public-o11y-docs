@@ -15,6 +15,8 @@ Through advanced customization, you can achieve the following tasks:
 * :ref:`Override automatic discovery settings <override-default-settings-k8s>`
 * :ref:`Use automatic discovery with gateway mode <use-with-gateway-k8s>`
 
+.. note:: For advanced customization options in Linux, see :ref:`linux-advanced-auto-discovery-config`.
+
 .. _change-instrumentation-version-k8s:
 
 Change instrumentation version
