@@ -13,9 +13,10 @@ Use aggregation rules to control your data volume
 
 |hr|
 
-Data you send from your services to Splunk Observability Cloud can have high cardinality. Instead of adjusting how you are
-sending in your data before you send it, aggregation lets you summarize your data in Splunk Observability Cloud based on
+Data you send from your services to Splunk Observability Cloud can have high cardinality. Instead of adjusting how you send in your data before you send it, aggregation lets you summarize your data in Splunk Observability Cloud based on
 the dimensions you consider important.
+
+See the following diagram to understand how aggregation works:
 
 .. mermaid::
 
@@ -70,7 +71,7 @@ Scenario: You want to continue monitoring endpoints, regions, and services for y
 
 In this case, you can create an aggregation rule that groups your data by the dimensions you want to keep. The aggregated metric removes the ``container_id`` dimension and retains ``endpoint``, ``region``, and ``service`` based on your rule. 
 
-Your new metric volume is: 10 (endpoints) * 20 (regions) * 5 (services) = 1,000 MTS.
+Your new metric volume is: 10 endpoints * 20 regions * 5 services = 1,000 MTS.
 
 .. _mts-aggregation-rollup-period:
 
@@ -134,14 +135,14 @@ Create aggregation rules for a metric
 To access and create the aggregation rules for a metric follow these steps:
 
 #. Access your Splunk Observability Cloud account.
-#. In the left nav, select :guilabel:`Settings > Metrics Pipeline Management` to access the landing screen with a list of all your metrics and a summary of their rulesets. 
+#. In the left navigation menu, select :guilabel:`Settings > Metrics Pipeline Management` to access the landing screen with a list of all your metrics and a summary of their rulesets. 
 #. Select or search for a metric to access the metric's summary page.
 #. In the :guilabel:`Added by rule` tile, select :guilabel:`Add`. 
 #. In the :guilabel:`Create aggregation rule` dialog, complete the options:
   
   * Name your rule.
   * Filter incoming data to a specific MTS population. Search for dimension keys or values to narrow down the associated metric time series (MTS).
-  * Configure the dimensions settings. Search for dimensions and select either :strong:`Keep` or :strong:`Drop`. Splunk Observability Cloud saves the dimensions you keep in the new aggregated MTS, and removes the dropped dimensions.
+  * Configure the dimensions settings. Search for dimensions and select either :strong:`Keep` or :strong:`Drop`. Splunk Observability Cloud saves the dimensions you keep in the new aggregated MTS and removes the dropped dimensions.
 
 .. note:: You cannot aggregate histogram metrics.
 
@@ -153,8 +154,8 @@ Edit, deactivate, or delete an aggregation rule
 To edit, activate/deactivate, or delete an existing routing exception rule, perform the following steps:
 
 #. Access your Splunk Observability Cloud account.
-#. In the left nav, select :guilabel:`Settings > Metrics Pipeline Management` to access the landing screen with a list of all your metrics and a summary of their rulesets. 
+#. In the left navigation menu, select :guilabel:`Settings > Metrics Pipeline Management` to access the landing screen with a list of all your metrics and a summary of their rulesets. 
 #. Select or search for a metric to access the metric's summary page.
-#. From the list of rules, find the one you want to change, then select any of the available options in the :guilabel:`More actions (⋮ icon)` menu.
+#. From the list of rules, find the metric you want to change, then select any of the available options in the :guilabel:`More actions (⋮)` menu.
 
 
