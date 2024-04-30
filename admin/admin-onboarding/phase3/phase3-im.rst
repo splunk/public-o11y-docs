@@ -47,8 +47,7 @@ For comprehensive documentation on these tasks, see the following topics:
 
 - :ref:`data-visualization-charts`
 
-- :ref:`:ref:link-metadata-to-content``
-
+- :ref:`link-metadata-to-content`
 
 .. _expand-im2:
 
