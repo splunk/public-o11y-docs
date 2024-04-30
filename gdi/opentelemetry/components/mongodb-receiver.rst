@@ -11,6 +11,8 @@ The MongoDB receiver fetches metrics from standalone MongoDB clusters, including
 
 The receiver collects stats with MongoDB's ``dbStats`` and ``serverStatus`` commands, and uses the golang mongo driver. See more at :new-page:`Mongo Go driver documentation <https://github.com/mongodb/mongo-go-driver>`.
 
+.. note:: The MongoDB receiver doesn't support out-of-the-box dashboards and navigators yet, but are planned for a future release.
+
 Prerequisites
 ======================
 
