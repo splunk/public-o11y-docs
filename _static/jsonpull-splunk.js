@@ -10,47 +10,56 @@ $(document).ready(function () {
    $('.instrumentation').each(function () {
       let url = $(this).attr('url');
       let renamingDict = JSON.parse($(this).attr('data-renaming') || '{}');
-      let section = $(this).attr('section') || 'instrumentation'; // Default to 'instrumentation' if not specified
+      let section = $(this).attr('section') || 'instrumentation';
+      let group = $(this).attr('group') || '';
+      let filter = $(this).attr('filter') || '';
       let selfSelector = $(this);
 
       function rename(key) {
          return renamingDict[key] || key;
       }
 
-      function generateIndexTable(data) {
+      function generateIndexTable(data, group, filter) {
          let columns = new Set();
          data.forEach(item => Object.keys(item).forEach(key => columns.add(key)));
+
+         if (group && columns.has(group)) {
+            columns.delete(group);
+         }
          let columnsArray = Array.from(columns);
 
          let table = $('<table class="generated-table docutils align-default" id="indexTable"><thead><tr></tr></thead></table>');
          columnsArray.forEach(col => table.find('tr').append(`<th>${rename(col)}</th>`));
 
          data.forEach((item, index) => {
-            let row = $('<tr></tr>');
-            columnsArray.forEach(col => {
-               if (item[col] !== undefined) {
-                  if (Array.isArray(item[col]) && isComplex(item[col])) {
-                     let anchorId = `detail-${index}-${col}-header`;
-                     row.append(`<td><a href="#${anchorId}">Details</a></td>`);
-                  } else if (Array.isArray(item[col]) && item[col].length === 1 && !isComplex(item[col][0])) {
-                     row.append(`<td>${item[col][0]}</td>`);
-                  } else if (isComplex(item[col]) && !Array.isArray(item[col])) {
-                     let subTableHtml = generateSubtableHtmlForSingleObject(item[col]);
-                     row.append(`<td>${subTableHtml}</td>`);
-                  } else if (Array.isArray(item[col])) {
-                     row.append(`<td>${item[col].map(subItem => subItem instanceof Object ? JSON.stringify(subItem) : subItem).join(', ')}</td>`);
+            if (!filter || item[group] === filter) {
+               let row = $('<tr></tr>');
+               columnsArray.forEach(col => {
+                  if (item[col] !== undefined) {
+                     if (Array.isArray(item[col]) && isComplex(item[col])) {
+                        let anchorId = `detail-${index}-${col}-header`;
+                        row.append(`<td><a href="#${anchorId}">Details</a></td>`);
+                     } else if (Array.isArray(item[col]) && item[col].length === 1 && !isComplex(item[col][0])) {
+                        row.append(`<td>${item[col][0]}</td>`);
+                     } else if (isComplex(item[col]) && !Array.isArray(item[col])) {
+                        let subTableHtml = generateSubtableHtmlForSingleObject(item[col]);
+                        row.append(`<td>${subTableHtml}</td>`);
+                     } else if (Array.isArray(item[col])) {
+                        row.append(`<td>${item[col].map(subItem => subItem instanceof Object ? JSON.stringify(subItem) : subItem).join(', ')}</td>`);
+                     } else {
+                        row.append('<td>' + converter.makeHtml(item[col]) + '</td>');
+                     }
                   } else {
-                     row.append('<td>' + converter.makeHtml(item[col]) + '</td>');
+                     row.append('<td></td>');
                   }
-               } else {
-                  row.append('<td></td>');
-               }
-            });
-            table.append(row);
+               });
+               table.append(row);
+            }
          });
 
          return table;
       }
+
 
       function generateSubtables(data) {
          let subtables = [];
@@ -109,27 +118,39 @@ $(document).ready(function () {
       function handleNestedData(value) {
          if (value instanceof Object) {
             if (Array.isArray(value)) {
-               let nestedTable = '<table>';
-               let headersAdded = false;
+               let nestedTable = '<table class="generated-table docutils align-default" style="width: 100%">';
+
+               if (value.length > 0) {
+                  let headers = value[0];
+                  let headerRow = '<tr><thead>';
+                  Object.keys(headers).forEach(key => {
+                     headerRow += `<th class="head">${rename(key)}</th>`;
+                  });
+                  nestedTable += headerRow + '</thead></tr>';
+               }
+
                value.forEach(item => {
                   let row = '<tr>';
-                  Object.entries(item).forEach(([key, val], index) => {
+                  Object.entries(item).forEach(([key, val]) => {
                      row += `<td>${handleNestedData(val)}</td>`;
                   });
                   nestedTable += row + '</tr>';
-                  headersAdded = true;
                });
-               return nestedTable + '</table>';
+
+               nestedTable += '</table>';
+               return nestedTable;
             } else {
                let nestedTable = '<table border="1">';
                Object.entries(value).forEach(([key, val]) => {
                   nestedTable += `<tr><th>${key}</th><td>${handleNestedData(val)}</td></tr>`;
                });
-               return nestedTable + '</table>';
+               nestedTable += '</table>';
+               return nestedTable;
             }
          }
          return value || '';
       }
+
 
       function isComplex(item) {
          return Array.isArray(item) ? item.some(isComplex) : (typeof item === 'object' && !(item instanceof Date) && !(item instanceof String));
@@ -137,7 +158,7 @@ $(document).ready(function () {
 
 
       function generateSubtableHtmlForSingleObject(data) {
-         let html = '<table border="1">';
+         let html = '<table>';
          Object.keys(data).forEach(key => {
             html += `<tr><td>${key}</td><td>${data[key]}</td></tr>`;
          });
@@ -188,14 +209,13 @@ $(document).ready(function () {
          });
       }
 
-
       $.ajax({
          url: url,
          dataType: 'text',
          success: function (response) {
             const yamlData = jsyaml.load(response);
             if (yamlData && yamlData[section]) {
-               const indexTable = generateIndexTable(yamlData[section]);
+               const indexTable = generateIndexTable(yamlData[section], group, filter);
                $(selfSelector).append(indexTable);
                const subtables = generateSubtables(yamlData[section]);
                subtables.forEach(subtable => {
