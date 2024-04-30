@@ -15,7 +15,7 @@ Use data routing to keep, archive, or discard your metrics
 
 Use data routing to choose how to ingest and store all the metric time series (MTS) that have the same metric. Routing options include to keep metrics in real-time, archive them, or drop them altogether. 
 
-Routing exception rules let you modify the behavior of data routing. See :ref:`<mpm-rule-routing-exception>`.
+Routing exception rules let you modify the behavior of data routing. See :ref:`mpm-rule-routing-exception`.
 
 .. _mpm-rule-routing-view:  
 
