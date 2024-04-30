@@ -255,10 +255,3 @@ NServiceBus
    * - ``nservicebus.messaging.failures``
      - Cumulative counter
      - Number of messages unsuccessfully processed by the endpoint.
-
-Resource detectors
-==============================
-
-.. raw:: html
-
-    <div class="instrumentation" section="resourcedetectors" url="/en/feature/DOCS-1897/_static/instrumentation.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>
