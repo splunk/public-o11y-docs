@@ -6,14 +6,14 @@ Pilot phase part 1: Plan your rollout
 
 Use the following information to guide your implementation of IM or APM. 
 
-- <naming_conventions>
-- <pilots>
-- <framework>
-- <enable_integrations>
-- <convention-deploy>
-- <best-libraries>
-- <splunk-se>
-- <get-trained>
+- :ref:`<naming_conventions>`
+- :ref:`<pilots>`
+- :ref:`<framework>`
+- :ref:`<enable_integrations>`
+- :ref:`<convention-deploy>`
+- :ref:`<best-libraries>`
+- :ref:`<splunk-se>`
+- :ref:`<get-trained>`
 
 
 
@@ -85,7 +85,7 @@ Identify a naming convention for the deployment environments
 To avoid overlapping configurations across other deployments of the same application, use defined deployment environments. For details about defining deployment environments, see :ref:`apm-environments`.
 You can also define teams, functions, and other tags to further utilize APM data filtering, for example, database name or frontend application name.
 
-You can use the standard method to add attributes to a trace of span using the OpenTelemetry environment variables: OTel_RESOURCE_ATTRIBUTES. For details on adding attributes, see :new-page::`https://github.com/splunk/observability-workshop/blob/main/content/en/resources/otel_tagging.md#best-practices-for-creating-custom-attributes`. For more information on how to add context to spans tags, see :ref:`apm-add-context-trace-span`.
+You can use the standard method to add attributes to a trace of span using the OpenTelemetry environment variables: OTel_RESOURCE_ATTRIBUTES. For details on adding attributes, see :new-page::`<https://github.com/splunk/observability-workshop/blob/main/content/en/resources/otel_tagging.md#best-practices-for-creating-custom-attributes>`. For more information on how to add context to spans tags, see :ref:`apm-add-context-trace-span`.
 
 
 .. _best-libraries:
@@ -100,7 +100,7 @@ Items should include the following:
 .. : First URL is broken
 
 * Which environment variables and command line parameters to set for the auto-instrumentation agents. For more information, see :ref:`advanced-java-otel-configuration` and :ref:`otel-install-linux-manual`.
-* How to enable https://docs.google.com/document/d/1hpzkmO5c8cz35x3ofa-MC0JGmsazaPQov-7k_f5Mml8/edit?pli=1#heading=h.8rdrmmc6xzqh if required. 
+* How to enable :ref:`AlwaysOn Profiling <phase1-profiling>`.
 * How to configure logs to add tracing information, depending on language. For a  Java example, see :ref:`correlate-traces-with-logs-java`.
 * Naming conventions for metrics and environments. For details on metric naming conventions, see :ref:`metric-dimension-names`. For naming environments, you can set the deployment environment as a span tag, which allows you to filter your APM by environments of interest. See :ref:`apm-environments` to learn more.
 

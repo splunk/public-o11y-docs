@@ -77,7 +77,7 @@ Create custom dashboards using charts based on ingested metrics
 As the metrics data is being sent to Splunk Observability Cloud, start creating Custom dashboards by combining metrics from different tools and services. See the following resources: 
 
 * See :ref:`dashboards-best-practices`.
-* For details on free training, see :new-page:`Free training <https://www.splunk.com/en_us/training/free-courses/overview.html#observability>` 
+* For details on free training, see :new-page:`Free training <https://www.splunk.com/en_us/training/free-courses/overview.html#observability>`. 
 * Coordinate with your Splunk Sales Engineer to register for the Splunk Observability Cloud workshop. 
 
 
@@ -89,9 +89,9 @@ Detector and alert configuration for specific metric conditions
 
 As with the custom dashboards, onboarded the pilot team with the prepackaged :ref:`autodetect <autodetect-intro>` detectors. Ensure that your teams understand how to develop their own sets of detectors according to each of their use cases, such as by adapting existing detectors or creating their own detectors. See the following resources: 
 
-* For details on free training, see :new-page:`https://www.splunk.com/en_us/training/free-courses/overview.html#observability`
+* For details on free training, see :new-page:`Free training <https://www.splunk.com/en_us/training/free-courses/overview.html#observability>`.
 * For details about the dashboard best practice guide, see :ref:`dashboards-best-practices`. 
-* Coordinate with your Splunk SE to either register for the regular Splunk Observability Cloud workshop https://splunk.github.io/observability-workshop/latest/en/index.html.
+
 
 
 .. _plan-dimensions:
