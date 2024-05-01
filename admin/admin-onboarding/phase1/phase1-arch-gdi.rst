@@ -18,7 +18,8 @@ In the second part of the onboarding phase, get familiar with important concepts
 #. :ref:`phase1-logs`
 #. :ref:`phase1-dashboards-detectors`
 
-To start at the beginning of the admin onboarding journey, see :ref:`admin-onboarding-guide`. To start at the beginning of the onboarding phase, see :ref:`phase1-team-user-admin`.
+.. note::
+    Work closely with your Splunk Sales Engineer or Splunk Customer Success Manager throughout your onboarding process. They can help you fine tune your Splunk Observability Cloud journey and provide best practices, training, and workshop advice.
 
 .. _phase1-otel:
 

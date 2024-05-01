@@ -28,6 +28,8 @@ To expand and optimize Splunk Infrastructure Monitoring, complete the following 
 
 11. :ref:`expand-im12`
 
+.. note::
+    Work closely with your Splunk Sales Engineer or Splunk Customer Success Manager throughout your onboarding process. They can help you fine tune your Splunk Observability Cloud journey and provide best practices, training, and workshop advice.
 
 .. _expand-im1:
 

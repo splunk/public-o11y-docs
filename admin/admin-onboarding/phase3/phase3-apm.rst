@@ -1,7 +1,5 @@
 .. _phase3-apm:
 
-
-
 Expansion and optimization part 2: Splunk Application Performance Monitoring
 *************************************************************************************
 
@@ -15,6 +13,8 @@ To expand and optimize Splunk Infrastructure Monitoring, complete the following 
 
 4. :ref:`onboard-apps`
 
+.. note::
+    Work closely with your Splunk Sales Engineer or Splunk Customer Success Manager throughout your onboarding process. They can help you fine tune your Splunk Observability Cloud journey and provide best practices, training, and workshop advice.
 
 .. _optimize-data:
 

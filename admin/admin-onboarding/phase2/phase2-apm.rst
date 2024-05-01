@@ -1,6 +1,6 @@
 .. _phase2-apm:
 
-Pilot phase part 2: Initial pilot rollout for Splunk Application Performance Monitoring
+Pilot phase part 3: Initial pilot rollout for Splunk Application Performance Monitoring
 *****************************************************************************************
 
 As with the Splunk Infrastructure Monitoring pilot rollout, your initial pilot rollout for Application Performance Monitoring (APM) focuses on bringing initial pilot teams with many microservices or connections to services, into APM.
@@ -17,6 +17,9 @@ The rollout includes:
 #. :ref:`apm-detectors`
 #. :ref:`always-on-trouble`
 #. :ref:`launch-apm`
+
+.. note::
+    Work closely with your Splunk Sales Engineer or Splunk Customer Success Manager throughout your onboarding process. They can help you fine tune your Splunk Observability Cloud journey and provide best practices, training, and workshop advice.
 
 .. _customize-APM-exp:
 

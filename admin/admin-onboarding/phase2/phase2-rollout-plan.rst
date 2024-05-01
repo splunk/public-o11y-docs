@@ -11,8 +11,10 @@ Use the following information to guide your implementation of IM or APM.
 - :ref:`enable_integrations`
 - :ref:`convention-deploy`
 - :ref:`best-libraries`
-- :ref:`splunk-se`
 - :ref:`get-trained`
+
+.. note::
+    Work closely with your Splunk Sales Engineer or Splunk Customer Success Manager throughout your onboarding process. They can help you fine tune your Splunk Observability Cloud journey and provide best practices, training, and workshop advice.
 
 .. _naming_conventions:
 
@@ -96,17 +98,9 @@ Include the following items in our guide:
 * How to configure logs to add tracing information, depending on language. For a  Java example, see :ref:`correlate-traces-with-logs-java`.
 * Naming conventions for metrics and environments. For details on metric naming conventions, see :ref:`metric-dimension-names`. For naming environments, you can set the deployment environment as a span tag, which allows you to filter your APM by environments of interest. See :ref:`apm-environments` to learn more.
 
-
-.. _splunk-se:
-
-Use Splunk experts for support
-============================================================
-
-Work closely with your Splunk Sales Engineer or Splunk Customer Success Manager throughout your onboarding process. They can help you fine tune your Splunk Observability Cloud journey and provide best practices, training, and workshop advice.
-
 .. _get-trained:
 
-Setup training plans for users
+Set up training plans for pilot users
 ===============================================
 
 Splunk has training available to help you with your onboarding journey and best practices. For a list of free Splunk Observability Cloud courses, see :new-page:`Free training<https://www.splunk.com/en_us/training/free-courses/overview.html#observability>`.
@@ -116,4 +110,4 @@ If building a center of excellence is required by your organization, the followi
 Next step
 ===============
 
-:ref:`phase2-im`
+Next, begin your initial pilot rollout for Splunk Infrastructure Monitoring. See :ref:`phase2-im`

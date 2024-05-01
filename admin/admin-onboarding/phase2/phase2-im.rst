@@ -4,15 +4,9 @@
 Pilot phase part 2: Initial pilot rollout for Splunk Infrastructure Monitoring
 ********************************************************************************
 
+During this part of the pilot, focus on onboarding your pilot teams to Splunk Infrastructure Monitoring. 
 
-
-During this part of the pilot, focus on onboarding a number of teams. These teams will represent use cases that can be used to show the power and benefit of the solution to the rest of your organization. 
-
-These tasks can be separated according to product components. In this phase, you onboard Infrastructure Monitoring. See, :ref:`Splunk Application Performance Monitoring <phase2-apm>` for steps to onboard Application Performance Monitoring. 
-
-
-
-This part of the implementation prepares you to monitor critical solutions and brings business value based on custom metrics. This phase includes the following steps:
+This part of the implementation prepares you to monitor critical solutions and brings business value based on custom metrics. To onboard Infrastructure Monitoring, complete the following tasks:
 
 #. :ref:`onboard-imm-apps`
 #. :ref:`expand-team`
@@ -27,14 +21,22 @@ This part of the implementation prepares you to monitor critical solutions and b
 #. :ref:`automation-terraform`
 #. :ref:`customer-framework`
 
+.. note::
+    Work closely with your Splunk Sales Engineer or Splunk Customer Success Manager throughout your onboarding process. They can help you fine tune your Splunk Observability Cloud journey and provide best practices, training, and workshop advice.
+
 .. _onboard-imm-apps:
 
-Launch Infrastructure Monitoring based applications
+Launch Infrastructure Monitoring applications
 =======================================================================================
 
-For each of the participating teams, identify which services you want to ingest data from and proceed with installing the OpenTelemetry agent. Configure the receivers and pipeline for these services. This creates the default dashboards and detectors for the services such as databases, Messagebus, and OS platform.
+#. For each of the participating teams, identify which services you want to ingest data from.
+#. Install the OpenTelemetry (OTel) agent. 
+#. Configure the receivers and pipeline for these services. This creates the default dashboards and detectors for the services such as databases, message bus, and OS platform.
 
-After you set up these dashboards and detectors, the pilot teams can use these :ref:`Built-in dashboards <built-in-dashboards>` to observe their application data or :ref:`create their own custom dashboards <dashboard-create-customize>`.
+After you set up these dashboards and detectors, the pilot teams can use the built-in dashboards  to observe their application data or create their own custom dashboards.
+
+* See :ref:`built-in-dashboards`.
+* See :ref:`dashboard-create-customize`.
 
 .. _expand-team:
 
@@ -60,7 +62,7 @@ Before you start scaling up the use of the OTel agents, consider the OTel sizing
 
 .. _adv-conf-otel:
 
-Complete advanced configurations for the Collector 
+Complete advanced configurations for the OTel Collector 
 ====================================================
 
 As you  get ready to roll out your first teams, further securing the OpenTelemetry collector. For details, see :ref:`otel-security`. You can store your token as a secret or use different methods to securely store tokens, user and password information outside the configuration.yaml for the OTel agent.
@@ -176,4 +178,4 @@ As you onboard more teams with Splunk Observability Cloud, maintain review sessi
 Next step
 ===============
 
-:ref:`phase2-apm`
+Next, begin your initial pilot rollout for Splunk Application Performance Monitoring.  :ref:`phase2-apm`
