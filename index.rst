@@ -833,7 +833,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Administrator get started TOGGLE <sp-oncall/get-started/getting-started-spoc>
+   Administrator get started TOGGLE <sp-oncall/admin/get-started/getting-started-spoc>
 
 .. toctree::
    :maxdepth:   3

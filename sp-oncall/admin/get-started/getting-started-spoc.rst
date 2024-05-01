@@ -1,7 +1,7 @@
 .. _about-spoc:
 
 ************************************************************************
-What is Splunk On-Call?
+Getting Started Guide for Splunk On-Call Admins
 ************************************************************************
 
 .. meta::
@@ -11,6 +11,10 @@ What is Splunk On-Call?
    :hidden:
 
    onboarding-milestones
+   Manage users TOGGLE </user-roles/manage-users>
+   <Create teams /user-roles/configure-teams>
+   </on-call-schedules/rotation-setup>
+   </configuration/team-escalation-policy>   
    egress-filtering-cloudflare
    spoc-support
    spoc-system-requirements
@@ -20,15 +24,6 @@ What is Splunk On-Call?
  
 
 
-
-Splunk On-Call is incident management software that allows teams to maintain a culture of high availability without slowing down the
-innovation process. The moment something goes wrong, Splunk On-Call will spring people to action, automatically.
-
-
-We offer two getting started guides: one for admins and one for users.
-
-Getting Started Guide for Admins
-=====================================
 
 The Team page is your central location for configuring teams, schedules, rotations, and escalation policies.
 
@@ -127,7 +122,7 @@ Incident Actions
 Different scenarios require different actions when dealing with an
 incident.
 
--  Acknowledgment -  can be executed via Push, SMS, or Phone notification & within the web/mobile clients. Will cease paging and  assign you to the incident.
+-  Acknowledgment -  can be executed via Push, SMS, or Phone notification & within the web/mobile clients. Will cease paging and assign you to the incident.
 -  :ref:`Snooze <snooze>` - can be executed within the web/mobile clients. Will cease paging of an incident for a defined time period. When the time period is reached, the incident will then be retriggered and begin paging out again.
 -  :ref:`Reroute <reroute-an-incident>`- can be executed within the web/mobile clients. Redirects an incident to a user(s) or escalation policy(s).
 -  Resolve -can be executed via Push, SMS, or Phone notification and within the web or mobile clients. Will end the incident as being complete - no further action needed.

@@ -1,7 +1,7 @@
 .. _usernames:
 
 *************************************
-Usernames and Best Practices
+Usernames and best practices
 *************************************
 
 .. meta::

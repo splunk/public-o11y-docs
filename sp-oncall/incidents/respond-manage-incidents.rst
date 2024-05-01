@@ -11,20 +11,18 @@ Respond and manage incidents
 .. toctree::
     :hidden:
 
+    incident-pane
     manual-incident
     manual-take-call
     multi-responder
     reroute-an-incident
-    TOGGLE rules-engine-rules
     similar-incidents
-    stakeholders
 
 
-:ref:`manual-incident-creation`
+
+:ref:`manual-incident`
 :ref:`manual-take-call`
 :ref:`reroute-an-incident`
 :ref:`multi-responder-incident-response`
 
-Rules Engine
 
-:ref:`rules-engine-managing-rules`

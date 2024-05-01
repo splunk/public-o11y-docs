@@ -11,7 +11,7 @@ Splunk On-Call Alert Rules Engine
 .. toctree::
     :hidden:
 
-    rules-engine-rules
+    rules-engine-managing-rules
     rules-engine-annotations
     rules-engine-matching-conditions
     rules-engine-stop-flag
