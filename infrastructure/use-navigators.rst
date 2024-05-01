@@ -290,7 +290,11 @@ Selecting this text opens a detailed view of the navigator with a list of active
 View navigators using alerts
 ---------------------------------------------
 
-When you are investigating an alert, you can refer at a glance to :guilabel:`Infrastructure` in the Next Steps section of the modal window displaying that alert to find a link to the related Infrastructure Monitoring navigator, and then click on the provided link to open the navigator without losing contextual metadata from the alert. Relevant metadata is automatically passed to the navigator. 
+When you are investigating an alert, you can refer at a glance to :guilabel:`Infrastructure` in the Next Steps section of the modal window displaying that alert for a link to the relevant Infrastructure Monitoring navigator. Click on that link to open the navigator without losing contextual metadata from the alert. Applicable metadata passes automatically from the alert to the navigator. 
+
+.. image:: /_images/infrastructure/alert-to-nav.png
+        :width: 50%
+        :alt: This image shows an alert with a clickable link to an EC2 navigator
 
 Variable data passed from alerts to navigators includes the time that the alert occurred, and relevant metrics and properties from the alert.
 
