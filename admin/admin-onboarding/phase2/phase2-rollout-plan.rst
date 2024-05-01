@@ -15,21 +15,17 @@ Use the following information to guide your implementation of IM or APM.
 - :ref:`<splunk-se>`
 - :ref:`<get-trained>`
 
-
-
-
-
-
 .. _naming_conventions:
 
 Define your OpenTelemetry naming conventions
 =========================================================
 
-To make it easy to find metrics and identify usage, define a standard naming convention for your metrics.
+When deploying OpenTelemetry in a large organization, it's critical to define a standardized naming convention for tagging and a governance process to ensure the convention is adhered to. Standardized naming also makes it easier to find metrics and identify usage. See :ref:`metric-dimension-names` and :new-page:`Naming conventions for tagging with OpenTelemetry and Splunk<https://splunk.github.io/observability-workshop/latest/en/resources/otel_tagging/index.html>`.
 
-If your organization uses host-based observabilityy licensing, your OTel naming convention must include the right OTel host naming convention to track usage and telemetry correctly. You must use the right data naming convention for pods to ensure accurate usage counting for host-based organizations.  If you do not follow a naming convention, in-product usage data and usage telemetry might be unreliable.  
+There are a few cases where incorrect naming affects in-product usage data:  
 
-.. caution:: Don't remove the Kubernetes attributes process from your configuration. Default attributes such as ``k8s.pod.name`` are required by Splunk Observability Cloud.
+* If your organization uses host-based Splunk Observability Cloud licensing, your OpenTelemetry naming convention must use the OpenTelemetry host semantic convention to track usage and telemetry correctly. See :new-page:`the OpenTelemetry semantic conventions for hosts<https://github.com/open-telemetry/semantic-conventions/blob/main/docs/resource/host.md>`.
+* You must use the Kubernetes attributes processor for Kubernetes pods to ensure standard naming and accurate usage counting for host-based organizations. See :ref:`kubernetes-attributes-processor`. 
 
 .. _pilots:
 
