@@ -1,19 +1,18 @@
 .. _phase2-rollout-plan:
 
-Pilot phase part 1: Plan your rollout
+Pilot phase part 1: Plan your pilot rollout
 ****************************************************************
-
 
 Use the following information to guide your implementation of IM or APM. 
 
-- :ref:`<naming_conventions>`
-- :ref:`<pilots>`
-- :ref:`<framework>`
-- :ref:`<enable_integrations>`
-- :ref:`<convention-deploy>`
-- :ref:`<best-libraries>`
-- :ref:`<splunk-se>`
-- :ref:`<get-trained>`
+- :ref:`naming_conventions`
+- :ref:`pilots`
+- :ref:`framework`
+- :ref:`enable_integrations`
+- :ref:`convention-deploy`
+- :ref:`best-libraries`
+- :ref:`splunk-se`
+- :ref:`get-trained`
 
 .. _naming_conventions:
 
@@ -46,7 +45,7 @@ To avoid duplicating efforts, create a single service even if they are utilized 
 Set up an application framework
 =======================================
 
-Once you know which teams are participating in the pilot and collected their requirements, complete the following:
+Once you know which teams are participating in the pilot and have collected their requirements, complete the following:
 
 #. :ref:`Identify initial metric, trace, and log integrations <enable_integrations>` and enable them in the Splunk Observability Cloud
 #. :ref:`Identify a naming convention <convention-deploy>` for the deployment environments for Splunk Application Performance Monitoring (APM).
@@ -65,8 +64,7 @@ Next, build your development pipeline:
 
 * Use the OTel Zero Configuration auto-instrumentation on the hosts or Kubernetes. For details, see :ref:`zero-config`.
 * Use the OTel automatic instrumentation for the containers or virtual machines. For details, see :ref:`apm-gdi`.
-* Identify the proper environment variables according to specific use cases. 
-* Each development language has its own settings, for example:
+* Identify the proper environment variables according to specific use cases. Each development language has its own settings, for example:
     
     * For Java information, see :ref:`advanced-java-otel-configuration`.
     * For Node.js information, see :ref:`instrument-nodejs-applications`.
@@ -79,10 +77,10 @@ Identify a naming convention for the deployment environments
 ------------------------------------------------------------------
 
 To avoid overlapping configurations across other deployments of the same application, use defined deployment environments. For details about defining deployment environments, see :ref:`apm-environments`.
+
 You can also define teams, functions, and other tags to further utilize APM data filtering, for example, database name or frontend application name.
 
-You can use the standard method to add attributes to a trace of span using the OpenTelemetry environment variables: OTel_RESOURCE_ATTRIBUTES. For details on adding attributes, see :new-page::`<https://github.com/splunk/observability-workshop/blob/main/content/en/resources/otel_tagging.md#best-practices-for-creating-custom-attributes>`. For more information on how to add context to spans tags, see :ref:`apm-add-context-trace-span`.
-
+You can use the standard method to add attributes to a trace of span using the OpenTelemetry environment variables. For more information on how to add context to spans tags, see :ref:`apm-add-context-trace-span`.
 
 .. _best-libraries:
 
