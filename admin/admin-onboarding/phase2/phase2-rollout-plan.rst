@@ -1,57 +1,76 @@
 .. _phase2-rollout-plan:
 
-Pilot part 1: Plan your rollout
+Pilot phase part 1: Plan your rollout
 ****************************************************************
+
+
+Use the following information to guide your implementation of IM or APM. 
+
+- <naming_conventions>
+- <pilots>
+- <framework>
+- <enable_integrations>
+- <convention-deploy>
+- <best-libraries>
+- <splunk-se>
+- <get-trained>
+
+
+
+
+
 
 .. _naming_conventions:
 
-Guidance on OTEL naming conventions
-========================================
+Define your OpenTelemetry naming conventions
+=========================================================
 
-In order to start creating charts and detectors in Splunk Observability Cloud, it is recommended that you define a proper standard for the naming convention of the metrics name. This will make it easier to find metrics and identify its usage by utilizing the name of the metric.
+To make it easy to find metrics and identify usage, define a standard naming convention for your metrics.
 
-If your organization uses host-based O11y licensing, your OTEL naming convention must include the right OTEL host naming convention to roll up usage and telemetry correctly. Accurate usage counting for host-based orgs requires the right data naming convention for pods.  If your do not follow this naming convention, in-product usage data and usage telemetry might be unreliable.  This must be set up correctly for accurate usage measurement.
+If your organization uses host-based observabilityy licensing, your OTel naming convention must include the right OTel host naming convention to track usage and telemetry correctly. You must use the right data naming convention for pods to ensure accurate usage counting for host-based organizations.  If you do not follow a naming convention, in-product usage data and usage telemetry might be unreliable.  
 
-.. caution:: Don't remove the Kubernetes attributes process from your configuration. Default attributes such as k8s.pod.name are required by Splunk Observability Cloud.
+.. caution:: Don't remove the Kubernetes attributes process from your configuration. Default attributes such as ``k8s.pod.name`` are required by Splunk Observability Cloud.
 
 .. _pilots:
 
 Identify pilot teams and projects
 =====================================
 
-Identify pilot teams and projects with approximate timelines and capacity requirements.
+After you integrate initial applications, start planning the initial roll-out to your organization's pilot teams. Identify your pilot teams and projects with approximate timelines and capacity requirements.
 
-Once initial applications are integrated into the Splunk Observability Cloud, the next step is to start planning the initial roll out to your organization's pilot teams.
+There are 2 types of pilot teams to consider:
 
-There are two types of pilot teams to be consider:
-* A set of teams that are ready or have started a new project and have been using common technologies used by the majority of the teams.
+* A set of teams that are ready or have started a new project and are using common technologies used by most teams.
 * A set of teams that have been using a non-standard technology.
 
-It will be beneficial if services created by each team can be utilized by the other teams, to avoid duplicating efforts. If there are questions regarding stand alone applications or services, please reach out to the technical contact at Splunk.
+To avoid duplicating efforts, create a single service even if they are utilized by multiple teams.
 
 .. _framework:
 
 Set up an application framework
 =======================================
 
-#. Identify initial metric, trace and log integrations and enabling them in the Splunk Observability Cloud
-#. Identify a naming convention for the deployment environments for Splunk Application Performance Monitoring
-#. Establish a consistent set of best practices on the use of Splunk (auto) instrumentation libraries in your developer best practices.
+Once you know which teams are participating in the pilot and collected their requirements, complete the following:
+
+#. :ref:`Identify initial metric, trace, and log integrations <enable_integrations>` and enable them in the Splunk Observability Cloud
+#. :ref:`Identify a naming convention <convention-deploy>` for the deployment environments for Splunk Application Performance Monitoring (APM).
+#. :ref:`Establish a consistent set of best practices <best-libraries>` for using Splunk auto-instrumentation libraries.
 
 .. _enable_integrations:
 
 Identify and enable initial metric, trace, and log integrations
-===================================================================
+------------------------------------------------------------------------
 
-Identify application tools that are used as part of services that the pilot team supports, such as database, message bus, and so on. Verify that the development languages used are supported by the OTel community. For details, see :new-page:`https://opentelemetry.io/docs/instrumentation/`.
+Identify application tools that are used as part of services that the pilot team supports, such as database, message bus, and so on. Verify that the development languages used are supported by OpenTelemetry. For details, see :new-page:`https://opentelemetry.io/docs/instrumentation/`.
 
-Clearly define a list of libraries required to support applications and those that are supported by OpenTelemetry to determine which applications require auto or manual instrumentation. For a list of languages supported by OpenTelemetry, see :new-page:`https://github.com/open-telemetry/opentelemetry-java-instrumentation/blob/main/docs/supported-libraries.md`.
+Define a list of libraries required to support applications and those that are supported by OpenTelemetry to determine which applications require auto or manual instrumentation. For a list of languages supported by OpenTelemetry, see :new-page:`https://github.com/open-telemetry/opentelemetry-java-instrumentation/blob/main/docs/supported-libraries.md`.
 
-Here are some recommendations to build your development pipeline: 
-* Utilize the OTel zero configuration client(s) on the hosts or Kubernetes. For details, see :ref:`zero-config`.
-* Utilize the OTel auto instrumentation to the containers or virtual machines. For details, see :ref:`apm-gdi`.
+Next, build your development pipeline: 
+
+* Use the OTel Zero Configuration auto-instrumentation on the hosts or Kubernetes. For details, see :ref:`zero-config`.
+* Use the OTel automatic instrumentation for the containers or virtual machines. For details, see :ref:`apm-gdi`.
 * Identify the proper environment variables according to specific use cases. 
-* Each development language has its own settings, for example Java, Node.js, and .NET.
+* Each development language has its own settings, for example:
     
     * For Java information, see :ref:`advanced-java-otel-configuration`.
     * For Node.js information, see :ref:`instrument-nodejs-applications`.
@@ -61,45 +80,51 @@ Here are some recommendations to build your development pipeline:
 .. _convention-deploy:
 
 Identify a naming convention for the deployment environments
-=================================================================
+------------------------------------------------------------------
 
-It is recommended you use defined deployment environments to avoid overlapping configuration between other deployment of the same applications. For example, development, staging, production. For details about defining deployment environments, see :ref:`apm-environments`.
-Another recommendation to further utilize the filtering of Splunk Application Monitoring data is to define teams, functions, and other tags such as database name or frontend application name. 
+To avoid overlapping configurations across other deployments of the same application, use defined deployment environments. For details about defining deployment environments, see :ref:`apm-environments`.
+You can also define teams, functions, and other tags to further utilize APM data filtering, for example, database name or frontend application name.
 
-This can be accomplished by utilizing the standard method of adding attributes to a trace or span using the OpenTelemetry environment variables: OTEL_RESOURCE_ATTRIBUTES. For details on adding attributes, see :new-page::`https://github.com/splunk/observability-workshop/blob/main/content/en/resources/otel_tagging.md#best-practices-for-creating-custom-attributes`. For more information on how to add context to spans tags, see :ref:`apm-add-context-trace-span`.
+You can use the standard method to add attributes to a trace of span using the OpenTelemetry environment variables: OTel_RESOURCE_ATTRIBUTES. For details on adding attributes, see :new-page::`https://github.com/splunk/observability-workshop/blob/main/content/en/resources/otel_tagging.md#best-practices-for-creating-custom-attributes`. For more information on how to add context to spans tags, see :ref:`apm-add-context-trace-span`.
 
 
 .. _best-libraries:
 
-Establish best practices for the use of Splunk instrumentation libraries
-===================================================================================================
+Establish best practices for Splunk instrumentation libraries
+-------------------------------------------------------------------------------
 
-At this point you have enough information and experience with configuring both the OpenTelemetry Agent and (auto instrumentation libraries). You should be able to define guides for the teams that you want to onboard.
+At this point you have some experience with configuration of the OpenTelemetry agent and autoinstrumentation libraries so, create guides for teams that you want to onboard.
 
-Items should at least include the following:
+Items should include the following:
+
+.. : First URL is broken
 
 * Which environment variables and command line parameters to set for the auto-instrumentation agents. For more information, see :ref:`advanced-java-otel-configuration` and :ref:`otel-install-linux-manual`.
-* Instructions how to configure logs to add tracing information. This is language dependent. For a Java example, see :ref:`correlate-traces-with-logs-java`.
-* A guide that to the naming conventions for metrics, and environments. For details on metric naming conventions, see :ref:`metric-dimension-names`. For naming environments, you can set the deployment environment as a span tag, which allows you to filter your APM by environments of interest. See :ref:`deployment-env-spantag` to learn more.
+* How to enable https://docs.google.com/document/d/1hpzkmO5c8cz35x3ofa-MC0JGmsazaPQov-7k_f5Mml8/edit?pli=1#heading=h.8rdrmmc6xzqh if required. 
+* How to configure logs to add tracing information, depending on language. For a  Java example, see :ref:`correlate-traces-with-logs-java`.
+* Naming conventions for metrics and environments. For details on metric naming conventions, see :ref:`metric-dimension-names`. For naming environments, you can set the deployment environment as a span tag, which allows you to filter your APM by environments of interest. See :ref:`apm-environments` to learn more.
+
 
 
 
 
 .. _splunk-se:
 
-Utilize Splunk expert to help with support
+Use Splunk experts for support
 ============================================================
 
-It is recommended to work closely with your Splunk Sales Engineer (SE) or Splunk Customer Success Manager (CSM) throughout your onboarding process. They can help fine tune your Splunk Observability Cloud journey and best practices as well as providing advice on training and workshops.
+Work closely with your Splunk Sales Engineer or Splunk Customer Success Manager throughout your onboarding process. They can help you fine tune your Splunk Observability Cloud journey and provide best practices, training,  and workshop advice.
 
 
 
-: _get-trained:
+.. _get-trained:
 
 Setup training plan for internal users
 ===============================================
 
-Splunk has a set of training available to help you with your onboarding journey and best practices. It is strongly recommended to utilize the provided free online training courses. For a list of free and paid courses, see :new-page:`https://www.splunk.com/en_us/training/free-courses/overview.html#observability`.
+Splunk has training available to help you with your onboarding journey and best practices. For a list of free and paid courses, see :new-page:`https://www.splunk.com/en_us/training/free-courses/overview.html#observability`.
+
+If building a center of excellence is required by your organization, the following certification path is available for :new-page:`Splunk O11y Cloud Certified Metrics Users <https://www.splunk.com/en_us/training/course-catalog.html?filters=filterGroup2SplunkO11yCloudCertifiedMetricsUser>`.
 
 Next step
 ===============
