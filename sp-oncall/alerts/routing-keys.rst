@@ -1,5 +1,6 @@
-.. _spoc-routing-keys:
+:orphan:
 
+.. _spoc-routing-keys:
 
 ************************************************************************
 Create Routing Keys in Splunk On-Call

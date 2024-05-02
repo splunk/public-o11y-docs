@@ -1,4 +1,6 @@
-.. _about-spoc:
+:orphan:
+
+.. _get-started-users:
 
 ************************************************************************
 Getting started guide for Splunk On-Call users
@@ -10,15 +12,9 @@ Getting started guide for Splunk On-Call users
 .. toctree::
    :hidden:
 
-   
- 
-
-
 Mobile downloads are available at:
 - :new-page:`iOS <https://itunes.apple.com/us/app/victorops/id696974262?mt=8>` 
 - :new-page:`Android <https://play.google.com/store/apps/details?id=com.victorops.androidclient&hl=en>`
-
-
 
 Main Dashboard layout
 ---------------------------

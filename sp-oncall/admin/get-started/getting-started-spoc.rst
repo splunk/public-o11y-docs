@@ -11,19 +11,16 @@ Getting Started Guide for Splunk On-Call Admins
    :hidden:
 
    onboarding-milestones
-   Manage users TOGGLE </user-roles/manage-users>
-   <Create teams /user-roles/configure-teams>
-   </on-call-schedules/rotation-setup>
-   </configuration/team-escalation-policy>   
+   Manage users TOGGLE <../../user-roles/manage-users>
+   Create teams <../../user-roles/configure-teams>
+   Rotations and shifts <../../on-call-schedules/rotation-setup>
+   Team escalation policy <../../configuration/team-escalation-policy>
    egress-filtering-cloudflare
    spoc-support
    spoc-system-requirements
    team-dashboard
-   timeline
+   Timeline <../../user-roles/timeline>
    tls-security-protocol
- 
-
-
 
 The Team page is your central location for configuring teams, schedules, rotations, and escalation policies.
 

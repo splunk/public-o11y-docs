@@ -55,6 +55,7 @@ Splunk On-Call integrations
    microsoft-teams-integration-guide
    nagios-integration-guide
    new-relic-integration-guide
+   new-twilio
    observium-integration
    opsdash-integration
    opsview-integration

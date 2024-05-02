@@ -1,3 +1,5 @@
+:orphan:
+
 .. _respond-manage-incidents:
 
 ************************************************************************
@@ -12,17 +14,15 @@ Respond and manage incidents
     :hidden:
 
     incident-pane
-    manual-incident
+    manual-incident-creation
     manual-take-call
-    multi-responder
+    multi-responder-incident-response
     reroute-an-incident
     similar-incidents
-
-
 
 :ref:`manual-incident`
 :ref:`manual-take-call`
 :ref:`reroute-an-incident`
-:ref:`multi-responder-incident-response`
+:ref:`multi-responder`
 
 

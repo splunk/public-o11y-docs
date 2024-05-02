@@ -100,7 +100,7 @@ Sending alerts to Splunk On-Call is done via a shell script that requires the Na
 Still within the nagios.cfg file, add this line which tells Nagios where to find your Splunk On-Call Configuration file using your unique file path. This line read similar to: ``cfg_file=/usr/local/nagios/etc/victorops.cfg``
 
 Modify your VictorOps configuration file
----------------------------------------
+----------------------------------------
 
 This file defines where the Nagios alert routes to (more info in *Routing Incidents* section below), amongst other variables.
 
@@ -417,7 +417,7 @@ Import the configuration
       :alt: change the command type to "check command"
 
 Send Alerts to Splunk On-Call
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
 You are now be able to enable active checks on the "VictorOps Command Poll" service through the Nagios XI interface.
 

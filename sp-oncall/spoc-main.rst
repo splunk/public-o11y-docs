@@ -13,8 +13,9 @@ Welcome to Splunk On-Call
    :hidden:
 
    Configure Single sign-on TOGGLE <admin/sso/single-sign-sso>
-   Get Started <get-started/admin-quick-start> 
-   User roles TOGGLE <user-roles-permissions>
+   Get Started <admin/get-started/getting-started-spoc>
+   System requirements <admin/get-started/system-reqts>
+   User roles TOGGLE <user-roles/user-roles-permissions>
    Incidents TOGGLE <incidents/incident-pane>
    Manage schedules TOGGLE <on-call-schedules/create-manage-on-call-schedules>
    Reports TOGGLE <reports/reports-main>

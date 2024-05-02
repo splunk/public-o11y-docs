@@ -89,12 +89,10 @@ The integration ignores any time delay configured between each escalation policy
 If 1 of the steps in your escalation policy is to execute a policy, the policy called out will not be executed. Only policy steps that call
 out rotations or users are executed.
 
-.. _routing-keys:
-
 Routing keys
 -----------------
 
-To route the incidents created by the Twilio integration to the correct teams in Splunk On-Call, create routing keys. After choosing the team and escalation policy you want to use for the integration, copy the URL-friendly team slug from Splunk On-Call. The following image shows tthe team slug for the DevOps team. 
+To route the incidents created by the Twilio integration to the correct teams in Splunk On-Call, create routing keys. After choosing the team and escalation policy you want to use for the integration, copy the URL-friendly team slug from Splunk On-Call. The following image shows tthe team slug for the DevOps team.
 
 .. note:: 
    For teams created after 2017 the team slug is formatted similar to: ``team-35Rgt19gE35g3``.
@@ -201,21 +199,16 @@ Next, you need to configure a few variables.
     * For :strong:`ESC_POL_1`, use the name of the target escalation policy. 
     * For :strong:`NUMBER_OF_MENUS`, enter 0 unless you want a multi-team phone tree (see below).
 
-The following table includes the key column inputs:
+The following list includes the key column inputs:
 
-.. list-table::
-   :header-rows: 1
-   :widths: 100
+   * ``TEAM_1``
+   * ``ESC_POL_1``
+   * ``NUMBER_OF_MENUS``
+   * ``VICTOROPS_API_ID``
+   * ``VICTOROPS_API_KEY``
+   * ``VICTOROPS_TWILIO_SERVICE_API_KEY``
 
-    * - Keys
-      - TEAM_1
-      - ESC_POL_1
-      - NUMBER_OF_MENUS
-      - VICTOROPS_API_ID
-      - VICTOROPS_API_KEY
-      - VICTOROPS_TWILIO_SERVICE_API_KEY
-
-.. note:: 
+.. note::
    :strong:`TEAM_1` and :strong:`ESC_POL_1` values are case sensitive and have to match the Splunk On-Call format exactly.
 
    .. image:: /_images/spoc/carter-testing-1483_twil_io___Twilio_Functions.jpg
@@ -232,7 +225,7 @@ Configure dependencies
 
 A green check mark displays next to the function and a "Deployed to environment" message displays at the bottom of the logs. I takes 5-15 seconds for functions to deploy. 
 
-.. add-function-to-phone::
+.. _add-function-to-phone:
 
 Add function to a phone number
 --------------------------------
@@ -272,7 +265,7 @@ The end result looks like the following image:
 
 .. image:: /_images/spoc/Evironmental-Variables-2.png
 
-Each team added to this function must correspond to a unique Routing Key. See :ref:`routing-keys`.
+Each team added to this function must correspond to a unique Routing Key. See :ref:`spoc-routing-keys`.
 
 Multiple phone numbers to route to different Teams
 -------------------------------------------------------
@@ -320,15 +313,16 @@ If you set this integration up prior to May 7th, 2020, the voice that Twilio use
 
 If you want use the Polly.Salli voice, follow these steps:
 
-#. Go to your VictorOps function. Depending on whether you set this up in Twilio's Functions Classic UI or their new Functions
-Services UI, the function is in slightly different places.
+#. Go to your VictorOps function. Depending on whether you set this up in Twilio's Functions Classic UI or their new Functions Services UI, the function is in slightly different places.
+
    #. If you set up integration in Twilio's Functions Classic UI go to :guilabel:`Functions` then :guilabel:`Overview` then :guilabel:`Manage Services` then :guilabel:`VictorOps Live Call Routing` then :guilabel:`Functions`.
    #. If you set up the in tegration in Twilio's new Services UI, go to :guilabel:`Functions` then :guilabel:`Services`` then :guilabel:`Manage Services` then :guilabel:`VictorOps-Live-Call-Routing` then :guilabel:`Functions`.
+
 #. In line 82 in the code for the function, approximately, find a line that says: ``'woman';`` and replace it with ``'Polly.Salli';``.
 #. In line 28, approximately, find this line ``greeting: 'Welcome to Victor Ops Live Call Routing.',``
 #. Change the word ``Live`` to ``Lyve`` so that the end result looks like: ``greeting: 'Welcome to Victor Ops Lyve Call Routing.',``.
 #. Make an equivalent edit on line 38, approximately. Change the word ``Live`` to ``Lyve``. This forces the voice to pronounce the word correctly.
-#. Select :guilabel:`Save` then :guilabel:`Deploy All`` button. 
+#. Select :guilabel:`Save` then :guilabel:`Deploy All`` button.
 
 A confirmation message displays letting you know the deploy has been successful.
 

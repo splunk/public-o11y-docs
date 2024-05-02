@@ -19,7 +19,7 @@ Configure Splunk On-Call
 
 #. From the main timeline, select :guilabel:`Integrations` then :guilabel:`3rd Party Integrations` then :guilabel:`Rapid7`.
 #. Select :guilabel:`Enable Integration`. Copy the URL to notify for use in the next steps.
-#. Select :guilabel:`Settings` then :guilabel:`Routing Keys` to find your routing key configuration. Decide which routing key you want to use with this integration and make sure it is associated to the correct escalation policies. For more information on routing keys, see :ref:`routing-keys`.
+#. Select :guilabel:`Settings` then :guilabel:`Routing Keys` to find your routing key configuration. Decide which routing key you want to use with this integration and make sure it is associated to the correct escalation policies. For more information on routing keys, see :ref:`spoc-routing-keys`.
 
 Configure the Data Exporter in Rapid7
 ========================================

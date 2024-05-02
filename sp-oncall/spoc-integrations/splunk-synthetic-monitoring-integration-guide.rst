@@ -36,7 +36,7 @@ Configure Splunk Synthetic Monitoring
     :alt: Select New to create a new webhook in Splunk Synthetic Monitoring.
 
 #. Give the webhook a name and specify your triggers. In :guilabel:`Send request to` for each trigger, replace the default ``https://alert.victorops.com/integrations/<<YOUR_VICTOROPS_REST_ENDPOINT>>`` with the URL you copied from Splunk On-Call. 
-#. On each trigger, replace the trailing ``$routing_key`` value with the Splunk On-Call routing key you want this webhook to call. For more information on routing keys, see :ref:`routing-keys`.
+#. On each trigger, replace the trailing ``$routing_key`` value with the Splunk On-Call routing key you want this webhook to call. For more information on routing keys, see :ref:`spoc-routing-keys`.
 #. You can leave the default values for payloads or replace the default variables with variables for your use case.
 #. Select :guilabel:`Test` to test the integration. This sends and alert with your specified payloads into the Splunk On-Call timeline.
 #. Select :guilabel:`Create` to save your Alert Webhook. Splunk Synthetic Monitoring will now send a notification to Splunk On-Call whenever the trigger conditions are met.
