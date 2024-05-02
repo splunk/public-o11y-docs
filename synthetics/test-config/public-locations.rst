@@ -63,3 +63,13 @@ US2
    :file: us2-public-locations.csv
    :widths: 10, 10, 10, 10, 20
    :header-rows: 1
+
+
+JSON file of public locations 
+====================================
+
+Here are public location in JSON format: :download:`<syn-public-locations-json.zip>`. 
+
+
+
+
