@@ -11,7 +11,7 @@ The MongoDB receiver fetches metrics from standalone MongoDB clusters, including
 
 The receiver collects stats with MongoDB's ``dbStats`` and ``serverStatus`` commands, and uses the golang mongo driver. See more at :new-page:`Mongo Go driver documentation <https://github.com/mongodb/mongo-go-driver>`.
 
-.. note:: Out-of-the-box dashboards and navigators are not supported for the MongoDB receiver yet, but are planned for a future release.
+.. note:: Out-of-the-box dashboards and navigators aren't supported for the MongoDB receiver yet, but are planned for a future release.
 
 Prerequisites
 ======================
@@ -105,19 +105,13 @@ The following table shows the configuration options for the MongoDB receiver:
 Metrics
 =====================
 
-The following metrics are available with versions:
-
-* ``mongodb.extent.count`` < 4.4 with mmapv1 storage engine
-* ``mongodb.session.count`` >= 3.0 with wiredTiger storage engine
-* ``mongodb.cache.operations`` >= 3.0 with wiredTiger storage engine
-* ``mongodb.connection.count`` with attribute ``active`` is available >= 4.0
-* ``mongodb.index.access.count`` >= 4.0
-
 The following metrics, resource attributes, and attributes are available.
 
 .. raw:: html
 
    <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/mongodbreceiver.yaml"></div>
+
+* ``mongodb.extent.count`` is available for versions under 4.4 with mmapv1 storage engine.
 
 .. include:: /_includes/activate-deactivate-native-metrics.rst
 
