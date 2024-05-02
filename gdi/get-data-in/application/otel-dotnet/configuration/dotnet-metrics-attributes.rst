@@ -16,13 +16,6 @@ Configure metrics collection
 
 Metric collection is activated by default. To configure metric settings, see :ref:`dotnet-otel-instrumentation-settings`.
 
-List of metrics
-=====================================================
-
-.. raw:: html
-
-    <div class="instrumentation" section="metrics" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>
-
 .. _dotnet-runtime-otel-metrics:
 
 .NET runtime metrics
@@ -262,10 +255,3 @@ NServiceBus
    * - ``nservicebus.messaging.failures``
      - Cumulative counter
      - Number of messages unsuccessfully processed by the endpoint.
-
-Resource detectors
-==============================
-
-.. raw:: html
-
-    <div class="instrumentation" section="resourcedetectors" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Info", "instrumented_components": "Components", "signals": "Signals"}'></div>
