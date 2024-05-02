@@ -105,7 +105,7 @@ The following table shows the configuration options for the MongoDB receiver:
 Metrics
 =====================
 
-The following metric are available with versions:
+The following metrics are available with versions:
 
 * ``mongodb.extent.count`` < 4.4 with mmapv1 storage engine
 * ``mongodb.session.count`` >= 3.0 with wiredTiger storage engine
