@@ -5,25 +5,13 @@ MSSQL server receiver
 ****************************
 
 .. meta::
-      :description: The MSSQL server receiver allows the Splunk Distribution of OpenTelemetry Collector to query and retrieve metrics about MySQL's global status and InnoDB tables.
+      :description: The Microsft SQL server receiver grabs metrics from a Microsoft SQL Server instance. 
 
-The MySQL receiver queries and retrieves metrics about MySQL's global status and InnoDB tables. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
+The MSSQL Server receiver queries and retrieves metrics from Microsoft SQL Server instances. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
-Prerequisites and requirements
-====================================
+The receiver works by either using the Windows Performance Counters, or by directly connecting to the instance and querying it. Windows Performance Counters are only available when running on Windows.
 
-This receiver supports MySQL version 8.0.
-
-Requirements to collect metrics
--------------------------------------------
-
-The following applies:
-
-* To collect most metrics, you need to be able to execute ``SHOW GLOBAL STATUS``.
-* Some metrics don't appear if their corresponding feature is inactive.
-* To collect optional metrics you must specify them your configuration. 
-
-For the full list of available metrics, see :ref:`mysql-receiver-metrics`.
+.. note:: Make sure to run the Collector as an administrator in order to collect all performance counters for metrics.
 
 Get started
 ======================
@@ -36,28 +24,25 @@ Follow these steps to configure and activate the component:
   - :ref:`otel-install-windows`
   - :ref:`otel-install-k8s`
 
-2. Configure the MySQL receiver as described in the next section.
+2. Configure the MSSQL Server receiver as described in the next section.
 3. Restart the Collector.
 
 Sample configuration
 ----------------------
 
-To activate the receiver, add ``mysql`` to the ``receivers`` section of your configuration file:
+To activate the receiver, add ``sqlserver`` to the ``receivers`` section of your configuration file:
 
 .. code:: yaml
 
   receivers:
-    mysql:
-      endpoint: localhost:3306
-      username: otel
-      password: ${env:MYSQL_PASSWORD}
-      database: otel
-      collection_interval: 10s
-      initial_delay: 1s
-      statement_events:
-        digest_text_limit: 120
-        time_limit: 24h
-        limit: 250
+      sqlserver:
+        collection_interval: 10s
+      sqlserver/1:
+        collection_interval: 5s
+        username: sa
+        password: securepassword
+        server: 0.0.0.0
+        port: 1433
 
 Next, include the receiver in the ``metrics`` pipeline of the ``service`` section of your configuration file:
 
@@ -67,45 +52,44 @@ Next, include the receiver in the ``metrics`` pipeline of the ``service`` sectio
     pipelines:
       metrics:
         receivers:
-          - mysql
+          - sqlserver
+
+Configure a named instance on Windows
+--------------------------------------------
+
+If you're using a named instance on Windows, you need to specify a computer and instance name, for example:
+
+.. code:: yaml
+
+    receivers:
+      sqlserver:
+        collection_interval: 10s
+        computer_name: CustomServer
+        instance_name: CustomInstance
+        resource_attributes:
+          sqlserver.computer.name:
+            enabled: true
+          sqlserver.instance.name:
+            enabled: true
+
+Advanced configuration
+--------------------------------------------
 
 The following settings are optional:
 
-* ``endpoint``. ``localhost:3306`` by default.
+* ``collection_interval``. ``10s`` by default. The internal at which the receiver emits metrics.
+* ``instance_name``. Optional. The instance name identifies the specific SQL Server instance being monitored. If unspecified, metrics are scraped from all instances. If configured, you must also set ``computer_name`` when running on Windows.
 
-* ``tls``. Defines the TLS configuration to use. If ``tls`` is not set, the default is to disable TLS connections.
+These are the optional direct connection options:
 
-  * ``insecure``. ``false`` by default. Set to ``true`` to disable TLS connections.
+* ``username``. The username used to connect to the SQL Server instance.
+* ``password``. The password used to connect to the SQL Server instance.
+* ``server``. IP address or hostname of the SQL Server instance to connect to.
+* ``port``. Port of the SQL Server instance to connect to.
 
-  * ``insecure_skip_verify``. ``false`` by default. Set to ``true`` to enable TLS but not verify the certificate.
+The following are Windows-specific optional options:
 
-  * ``server_name_override``. Use this to set the ServerName in the TLSConfig.
-
-* ``username``. ``root`` by default.
-
-* ``password``. The password to the username.
-
-* ``allow_native_passwords``. ``true`` by default.
-
-* ``database``. The database name. If unspecified, metrics are collected for all databases.
-
-* ``collection_interval``. ``10s`` by default. This receiver collects metrics on this interval. 
-
-  * This value must be a string readable by Golang's ParseDuration function. Learn more at Golang's official documentation at :new-page:`ParseDuration <https://pkg.go.dev/time#ParseDuration>`. 
-  
-  * Valid time units are ``ns``, ``us`` (or ``µs``), ``ms``, ``s``, ``m``, or ``h``.
-
-* ``initial_delay``. ``1s`` by default. Defines how long this receiver waits before starting.
-
-* ``transport``. ``tcp`` by default. Defines the network to use to connect to the server.
-
-* ``statement_events``. Additional configuration for the queries that build ``mysql.statement_events.count`` and ``mysql.statement_events.wait.time`` metrics:
-
-  * ``digest_text_limit``. ``120`` by default. Maximum length of ``digest_text``. Longer text is truncated.
-
-  * ``time_limit``. ``24h`` by default.  Maximum time from since the statements have been observed last time.
-
-  * ``limit``. ``250`` by default.  Limit of records, which is maximum number of generated metrics.
+* ``computer_name``. The computer name identifies the SQL Server name or IP address of the computer being monitored. If specified, ``instance_name`` is also required. This option is ignored in non-Windows environments.
 
 .. _mssql-server-receiver-settings:
 
@@ -116,7 +100,7 @@ The following table shows the configuration options for the MySQL receiver:
 
 .. raw:: html
 
-  <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/myssql.yaml"></div>
+  <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/sqlserver.yaml"></div>
 
 .. _mssql-server-receiver-metrics:
 
@@ -127,7 +111,7 @@ The following metrics, resource attributes, and attributes, are available.
 
 .. raw:: html
 
-  <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/mssqlreceiver.yaml"></div>
+  <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/sqlserverreceiver.yaml"></div>
 
 .. include:: /_includes/activate-deactivate-native-metrics.rst
 

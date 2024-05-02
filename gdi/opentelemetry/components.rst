@@ -105,6 +105,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`mongodb-atlas-receiver` (``mongodbatlas``)
      - Retrieves metrics from MongoDB Atlas using their monitoring APIs.
      - Metrics
+   * - :ref:`mssql-server-receiver` (``sqlserver``)
+     - Grabs metrics from a Microsoft SQL Server instance. 
+     - Metrics    
    * - :ref:`mysql-receiver` (``mysql``)
      - Queries and retrieves metrics about MySQL's global status and InnoDB tables.
      - Metrics      
