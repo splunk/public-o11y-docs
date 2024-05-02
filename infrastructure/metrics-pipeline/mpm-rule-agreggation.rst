@@ -18,6 +18,7 @@ the dimensions you consider important.
 
 See the following diagram to understand how aggregation works:
 
+
 .. mermaid::
 
    flowchart LR

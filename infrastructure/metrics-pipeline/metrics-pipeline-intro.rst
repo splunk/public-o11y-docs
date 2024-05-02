@@ -30,6 +30,8 @@ If you add another dimension ``region`` with 3 unique values: ``us-east``, ``us-
 
 Even though ``http.server.duration`` only has 2 dimensions, metric cardinality is already 9 since each dimension has multiple possible values.
 
+For more information, see :ref:`metrics-pipeline-intro-more`.
+
 High cardinality in your system 
 ----------------------------------------------------------------
 
@@ -118,6 +120,7 @@ Histogram metrics limitations
 
 You cannot archive or aggregate histogram metrics. By default, they are routed to the real-time tier, and you can drop them with rules as well.
 
+.. _metrics-pipeline-intro-more:
 
 Learn more
 ===============================================================================
