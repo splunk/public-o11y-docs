@@ -96,7 +96,7 @@ The following are Windows-specific optional options:
 Settings
 ======================
 
-The following table shows the configuration options for the MySQL receiver:
+The following table shows the configuration options for the Microsoft SQL server receiver:
 
 .. raw:: html
 
