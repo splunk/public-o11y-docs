@@ -96,7 +96,7 @@ Splunk On-Call integrations
    uptime-robot-integration-guide
    wavefront-integration-guide-victorops
    webex-teams-integration-guide
-   whatsup-gold-integration-guide-victorops
+   whatsup-gold-integration-guide
    zendesk-bi-directional-integration
    zenoss-integration
 
