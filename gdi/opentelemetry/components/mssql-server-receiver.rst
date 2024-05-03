@@ -1,13 +1,13 @@
 .. _mssql-server-receiver:
 
-****************************
+************************************
 Microsoft SQL server receiver
-****************************
+************************************
 
 .. meta::
       :description: The Microsft SQL server receiver grabs metrics from a Microsoft SQL Server instance. 
 
-The MSSQL Server receiver queries and retrieves metrics from Microsoft SQL Server instances. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
+The Microsoft SQL Server receiver queries and retrieves metrics from Microsoft SQL Server instances. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
 The receiver works by either using the Windows Performance Counters, or by directly connecting to the instance and querying it. Windows Performance Counters are only available when running on Windows.
 
