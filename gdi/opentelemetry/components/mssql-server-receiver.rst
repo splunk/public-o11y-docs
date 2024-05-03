@@ -77,7 +77,7 @@ Advanced configuration
 
 The following settings are optional:
 
-* ``collection_interval``. ``10s`` by default. The internal at which the receiver emits metrics.
+* ``collection_interval``. ``10s`` by default. The interval at which the receiver emits metrics.
 * ``instance_name``. Optional. The instance name identifies the specific SQL Server instance being monitored. If unspecified, metrics are scraped from all instances. If configured, you must also set ``computer_name`` when running on Windows.
 
 These are the optional direct connection options:
