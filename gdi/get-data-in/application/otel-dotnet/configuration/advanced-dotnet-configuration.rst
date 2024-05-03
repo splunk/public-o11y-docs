@@ -46,7 +46,7 @@ The following settings are common to most instrumentation scenarios:
 
 .. raw:: html
 
-    <div class="instrumentation" section="settings" group="category" filter="general" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
+    <div class="instrumentation" section="settings" group="category" filter="general" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
 
 .. _dotnet-otel-exporter-settings:
 
@@ -57,7 +57,7 @@ The following settings control trace exporters and their endpoints:
 
 .. raw:: html
 
-    <div class="instrumentation" section="settings" group="category" filter="exporter" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
+    <div class="instrumentation" section="settings" group="category" filter="exporter" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
 
 
 .. _profiling-configuration-otel-dotnet:
@@ -94,7 +94,7 @@ The following settings control trace propagation:
 
 .. raw:: html
 
-    <div class="instrumentation" section="settings" group="category" filter="trace propagation" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
+    <div class="instrumentation" section="settings" group="category" filter="trace propagation" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
 
 
 .. _trace-sampling-settings-dotnet-otel:
@@ -106,7 +106,7 @@ The following settings control trace sampling:
 
 .. raw:: html
 
-    <div class="instrumentation" section="settings" group="category" filter="sampler" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
+    <div class="instrumentation" section="settings" group="category" filter="sampler" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
 
 
 .. _resource-detector-settings-dotnet-otel:
@@ -120,7 +120,7 @@ The following settings control resource detectors:
 
 .. raw:: html
 
-    <div class="instrumentation" section="settings" group="category" filter="resource detector" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
+    <div class="instrumentation" section="settings" group="category" filter="resource detector" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
 
 
 .. _list-resource-detectors-dotnet:
@@ -129,7 +129,7 @@ The following resource detectors are available:
 
 .. raw:: html
 
-    <div class="instrumentation" section="resource_detectors" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"key": "Identifier", "description": "Description", "attributes": "Attributes", "id": "ID", "stability": "Stability", "support": "Support", "dependencies": "Dependencies", "name": "Name", "source_href": "Source", "package_href": "Package URL", "version": "Version", "stability": "Stability"}'></div>
+    <div class="instrumentation" section="resource_detectors" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet/metadata.yaml" data-renaming='{"key": "Identifier", "description": "Description", "attributes": "Attributes", "id": "ID", "stability": "Stability", "support": "Support", "dependencies": "Dependencies", "name": "Name", "source_href": "Source", "package_href": "Package URL", "version": "Version", "stability": "Stability"}'></div>
 
 .. _dotnet-otel-instrumentation-settings:
 
@@ -140,7 +140,7 @@ The following settings control instrumentations and tracing behavior:
 
 .. raw:: html
 
-    <div class="instrumentation" section="settings" group="category" filter="instrumentation" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
+    <div class="instrumentation" section="settings" group="category" filter="instrumentation" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
 
 The following settings control which instrumentations are activated. See :ref:`disable-instrumentations-otel-dotnet` for more information.
 
@@ -191,7 +191,7 @@ The following settings control the internal logging of the Splunk Distribution o
 
 .. raw:: html
 
-    <div class="instrumentation" section="settings" group="category" filter="diagnostic logging" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
+    <div class="instrumentation" section="settings" group="category" filter="diagnostic logging" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
 
 
 .. _dotnet-otel-default-service-name:
