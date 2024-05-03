@@ -23,7 +23,7 @@ This integration is compatible with the following versions of Splunk On-Call:
 
 
 Steps to get started
-==================
+======================
 
 Create a new file named ``sp-oncall.tf`` and paste the following content:
 

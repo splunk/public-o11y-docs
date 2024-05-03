@@ -51,7 +51,7 @@ Splunk On-Call integrations
    logicmonitor-integration
    loggly-integration
    logz-io-integration
-   manage-victorops-using-terraform
+   manage-splunk-oncall-using-terraform
    microsoft-azure-oms-integration-guide-victorops
    microsoft-scom-integration
    microsoft-teams-integration-guide
