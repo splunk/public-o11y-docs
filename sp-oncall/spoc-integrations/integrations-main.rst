@@ -24,6 +24,7 @@ Splunk On-Call integrations
    coralogix-integration-guide
    datadog-integration
    dotcommonitor-integration
+   dnscheck-integration
    dripstat-integration
    dynatrace-synthetic-monitoring-integration
    dead-mans-snitch-integration
@@ -99,12 +100,10 @@ Splunk On-Call integrations
    zenoss-integration
 
    victorops-bugsnag-integration
-   victorops-cabot-integration
    victorops-catchpoint-integration
    victorops-circonus-integration
    victorops-connectwise-automate-integration
    victorops-crittercism-integration
-   victorops-dnscheck-integration
    victorops-dynatrace-integration
    victorops-googlevoice-integration
    victorops-hipchat-integration

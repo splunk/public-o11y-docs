@@ -6,7 +6,9 @@ HoneyBadger integration for Splunk On-Call
 .. meta::
     :description: Configure the HoneyBadger integration for Splunk On-Call.
 
-Honeybadger provides exception, uptime and performance monitoring to keep your web apps error-free. The following will guide you through the steps needed to integrate Honeybadger with Splunk On-Call. Requirements
+Honeybadger provides exception, uptime and performance monitoring to keep your web apps error-free. The following will guide you through the steps needed to integrate Honeybadger with Splunk On-Call.
+
+Requirements
 ==================
 
 This integration is compatible with the following versions of Splunk On-Call:

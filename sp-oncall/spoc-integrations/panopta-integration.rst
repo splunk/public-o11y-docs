@@ -41,19 +41,13 @@ Make sure to add the appropriate routing key to your endpoint URL. See :ref:`spo
 Panopta configuration
 =====================================
 
-From the Alerting menu in the control panel, select the :guilabel:`Integrations` tab.
+1. From the Alerting menu in the control panel, select the :guilabel:`Integrations` tab.
 
-.. image:: /_images/spoc/New_Splunk On-Call_Integration-Google_Docs.png
+2. Select the webhooks integration.
 
-Select the webhooks integration.
+3. Name the integration. Under the :guilabel:`Incident Webhook` tab, set the request method to POST, and the postback URL as the Splunk On-Call REST endpoint URL from the previous step.
 
-.. image:: /_images/spoc/New_Splunk On-Call_Integration-Google_Docs-1.png
-
-Name the integration. Under the :guilabel:`Incident Webhook` tab, set the request method to POST, and the postback URL as the Splunk On-Call REST endpoint URL from the previous step.
-
-.. image:: /_images/spoc/New_Splunk On-Call_Integration-Google_Docs-2.png
-
-Select a raw payload as your payload type, then copy the following JSON snippet in the code box:
+4. Select a raw payload as your payload type, then copy the following JSON snippet in the code box:
 
 ```json
 {"message_type":"CRITICAL","entity_id":"$name", "state_message":"$items - $reasons","monitoring_tool":"Panopta"}
