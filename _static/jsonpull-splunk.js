@@ -32,28 +32,32 @@ $(document).ready(function () {
          columnsArray.forEach(col => table.find('tr').append(`<th>${rename(col)}</th>`));
 
          data.forEach((item, index) => {
-            if (!filter || item[group] === filter) {
-               let row = $('<tr></tr>');
-               columnsArray.forEach(col => {
-                  if (item[col] !== undefined) {
-                     if (Array.isArray(item[col]) && isComplex(item[col])) {
-                        let anchorId = `detail-${index}-${col}-header`;
-                        row.append(`<td><a href="#${anchorId}">Details</a></td>`);
-                     } else if (Array.isArray(item[col]) && item[col].length === 1 && !isComplex(item[col][0])) {
-                        row.append(`<td>${item[col][0]}</td>`);
-                     } else if (isComplex(item[col]) && !Array.isArray(item[col])) {
-                        let subTableHtml = generateSubtableHtmlForSingleObject(item[col]);
-                        row.append(`<td>${subTableHtml}</td>`);
-                     } else if (Array.isArray(item[col])) {
-                        row.append(`<td>${item[col].map(subItem => subItem instanceof Object ? JSON.stringify(subItem) : subItem).join(', ')}</td>`);
+            try{
+               if (!filter || item[group] === filter) {
+                  let row = $('<tr></tr>');
+                  columnsArray.forEach(col => {
+                     if (item[col] !== undefined) {
+                        if (Array.isArray(item[col]) && isComplex(item[col])) {
+                           let anchorId = `detail-${index}-${col}-header`;
+                           row.append(`<td><a href="#${anchorId}">Details</a></td>`);
+                        } else if (Array.isArray(item[col]) && item[col].length === 1 && !isComplex(item[col][0])) {
+                           row.append(`<td>${item[col][0]}</td>`);
+                        } else if (isComplex(item[col]) && !Array.isArray(item[col])) {
+                           let subTableHtml = generateSubtableHtmlForSingleObject(item[col]);
+                           row.append(`<td>${subTableHtml}</td>`);
+                        } else if (Array.isArray(item[col])) {
+                           row.append(`<td>${item[col].map(subItem => subItem instanceof Object ? JSON.stringify(subItem) : subItem).join(', ')}</td>`);
+                        } else {
+                           row.append('<td>' + converter.makeHtml(item[col]) + '</td>');
+                        }
                      } else {
-                        row.append('<td>' + converter.makeHtml(item[col]) + '</td>');
+                        row.append('<td></td>');
                      }
-                  } else {
-                     row.append('<td></td>');
-                  }
-               });
-               table.append(row);
+                  });
+                  table.append(row);
+               }
+            }catch(err){
+               console.log(err);
             }
          });
 

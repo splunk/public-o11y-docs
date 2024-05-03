@@ -17,6 +17,7 @@
 * :ref:`kubernetes-objects-receiver`
 * :ref:`mongodb-receiver`
 * :ref:`mongodb-atlas-receiver`
+* :ref:`mssql-server-receiver` 
 * :ref:`mysql-receiver`
 * :ref:`oracledb-receiver`
 * :ref:`otlp-receiver`                

@@ -84,6 +84,7 @@ If you don't use the guided setup, follow these steps to manually install and au
 
    See the :new-page:`OpenTelemetry PHP examples <https://github.com/signalfx/tracing-examples/tree/main/opentelemetry-tracing/opentelemetry-php>` in GitHub for sample instrumentation scenarios.
 
+To configure the instrumentation, see :ref:`php-settings-otel`.
 
 .. _activate_rum_apm_php:
 
@@ -115,3 +116,30 @@ To obtain an access token, see :ref:`admin-api-access-tokens`.
 
 To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
+.. _php-settings-otel:
+
+Instrumentation settings
+=========================================================================
+
+You can configure the OpenTelemetry PHP extension using the following settings.
+
+General settings
+------------------------
+
+.. raw:: html
+
+    <div class="instrumentation" section="settings" group="category" filter="general" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/opentelemetry-php-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
+
+Exporter settings
+------------------------
+
+.. raw:: html
+
+    <div class="instrumentation" section="settings" group="category" filter="exporter" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/opentelemetry-php-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
+
+Instrumentation settings
+------------------------
+
+.. raw:: html
+
+    <div class="instrumentation" section="settings" group="category" filter="instrumentation" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/opentelemetry-php-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
