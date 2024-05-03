@@ -63,6 +63,7 @@ Splunk On-Call integrations
    opsview-integration
    oracle-cloud-infrastructure-integration-guide-victorops
    outlyer-integration-guide-victorops
+   panopta-integration
    papertrail-integration
    prometheus-integration
    prtg-integration
@@ -95,6 +96,7 @@ Splunk On-Call integrations
    whatsup-gold-integration-guide-victorops
    zendesk-bi-directional-integration
    zenoss-integration
+
    victorops-bugsnag-integration
    victorops-cabot-integration
    victorops-catchpoint-integration
@@ -114,7 +116,6 @@ Splunk On-Call integrations
    victorops-logicmonitor-integration
    victorops-mailhop-integration
    victorops-monitis-integration
-   victorops-panopta-integration
    victorops-phantom-integration-guide
    victorops-pingdom-integration
    victorops-pingometer-integration
