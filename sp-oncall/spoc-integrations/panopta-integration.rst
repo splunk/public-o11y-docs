@@ -29,7 +29,7 @@ In the Splunk On-Call portal go to :guilabel:`Settings`, :guilabel:`Alert Behavi
 Select the :menuselection:`Panopta` integration.
 
 .. image:: /_images/spoc/Panopta-final.png
-   :alt: Panopta integrationº
+   :alt: Panopta integration
 
 Copy the service API endpoint URL.
 
