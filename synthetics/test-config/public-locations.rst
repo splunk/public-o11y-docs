@@ -68,7 +68,7 @@ US2
 JSON file of public locations 
 ====================================
 
-Here are public location in JSON format: :download:`<syn-public-locations-json.zip>`. 
+Here are public location in JSON format: :download:`<SynPublicLocations.zip>`. 
 
 
 
