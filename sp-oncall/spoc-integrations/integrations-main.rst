@@ -6,7 +6,7 @@ Splunk On-Call integrations
 .. meta::
     :description: Configure the AlertSite integration for Splunk OnCall.
 
-.. Rename all "victorops" instances and insert in the list in alphabetical order
+.. Rename all "victorops" instances and insert in the list in alphabetical order 
 
 .. toctree::
    :hidden:
@@ -26,7 +26,9 @@ Splunk On-Call integrations
    dotcommonitor-integration
    dripstat-integration
    dynatrace-synthetic-monitoring-integration
+   dead-mans-snitch-integration
    delivery-insights-integration
+   desk-com-integration
    elasticsearch-watcher-integration-guide
    fusionreactor-cloud-integration-guide-victorops
    GCP-monitoring-integration.rst
@@ -81,6 +83,7 @@ Splunk On-Call integrations
    splunking-victorops-data
    statuscast-integration-guide
    statushub-integration-guide
+   statuspage-integration
    sysdig-integration
    thousandeyes-integration-guide
    threat-stack-integration
@@ -98,8 +101,6 @@ Splunk On-Call integrations
    victorops-circonus-integration
    victorops-connectwise-automate-integration
    victorops-crittercism-integration
-   dead-mans-snitch-integration
-   victorops-desk-com-integration
    victorops-dnscheck-integration
    victorops-dynatrace-integration
    victorops-googlevoice-integration
@@ -128,7 +129,6 @@ Splunk On-Call integrations
    victorops-signalfx-integration
    victorops-solarwinds-integration
    victorops-statuscake-integration
-   statuspage-integration
    victorops-sumologic-integration
    victorops-uptime-integration
    victorops-uservoice-integration
