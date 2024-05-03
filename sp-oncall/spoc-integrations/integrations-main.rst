@@ -75,6 +75,7 @@ Splunk On-Call integrations
    rapid7-integration-guide
    rest-endpoint-integration-guide
    scalyr-integration
+   signal-sciences-integration
    sensu-integration
    sentry-integration-guide-victorops
    servicenow-bi-directional-integration-guide
@@ -125,7 +126,6 @@ Splunk On-Call integrations
    victorops-runscope-integration
    victorops-salesforce-integration
    victorops-scout-integration
-   victorops-signal-sciences-integration
    victorops-signalfx-integration
    victorops-solarwinds-integration
    victorops-statuscake-integration
