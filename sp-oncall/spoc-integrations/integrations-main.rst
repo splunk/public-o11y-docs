@@ -35,7 +35,7 @@ Splunk On-Call integrations
    generic-email-endpoint
    github-integration-guide
    grafana-integration-guide
-   graylog-integration-guide-victorops
+   graylog-integration-guide
    healthchecks-io-integration-guide-victorops-2
    hosted-graphite-integration
    hp-sitescope-integration
