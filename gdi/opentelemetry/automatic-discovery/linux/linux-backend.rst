@@ -198,17 +198,17 @@ Using the installer script, you can install and activate automatic discovery for
 
     .. tab:: Node.js 
 
-        The installer script installs the Node.js package using the ``npm install`` command. To specify a custom path to ``npm`` for installation, use the ``--npm-path <path>`` option as in the following example:
-
-        .. code-block:: bash
-
-            --npm-path /custom/path/to/npm
-
         .. tabs::
 
             .. tab:: Installer script
 
                 Using the installer script, you can install and activate automatic discovery for Node.js for either all supported Node.js applications on the host via the system-wide method or for only Node.js applications running as ``systemd`` services.
+
+                The installer script installs the Node.js package using the ``npm install`` command. To specify a custom path to ``npm`` for installation, use the ``--npm-path <path>`` option as in the following example:
+
+                .. code-block:: bash
+
+                    --npm-path /custom/path/to/npm
 
                 .. note:: By default, automatic discovery is activated for both Java and Node.js when using the installer script. To deactivate automatic discovery for Java, add the ``--without-instrumentation-sdk java`` or ``--with-instrumentation-sdk node`` option in the installer script command.
 
