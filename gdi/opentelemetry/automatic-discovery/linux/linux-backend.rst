@@ -266,7 +266,10 @@ Using the installer script, you can install and activate automatic discovery for
 
                         Next, ensure the collector service is running and restart your Node.js application(s). See :ref:`auto-discovery-linux-verify` and :ref:`auto-discovery-linux-restart-apps`.  
 
-            
+            .. tab:: Ansible
+
+                See :ref:`ansible-zero-config`.
+
             .. tab:: Chef
 
                 See :ref:`chef-zero-config`.
