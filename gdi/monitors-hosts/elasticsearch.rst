@@ -13,7 +13,7 @@ Elasticsearch monitor type to collect node, cluster, and index level
 stats from Elasticsearch.
 
 By default, this integration only collects cluster-level and index-level
-stats from the current master in an Elasticsearch cluster. You can
+stats from the current primary in an Elasticsearch cluster. You can
 override this using the ``clusterHealthStatsMasterOnly`` and
 ``indexStatsMasterOnly`` configuration options respectively.
 
@@ -184,7 +184,7 @@ The following table shows the configuration options for this monitor:
       - ``indexStatsMasterOnly``
       - no
       - ``bool``
-      - Collect index stats only from Master node (**default:**
+      - Collect index stats only from primary node (**default:**
          ``true``)
    - 
 
@@ -198,7 +198,7 @@ The following table shows the configuration options for this monitor:
       - ``clusterHealthStatsMasterOnly``
       - no
       - ``bool``
-      - Whether or not non master nodes should report cluster health
+      - Whether or not non primary nodes should report cluster health
          (**default:** ``true``)
    - 
 
@@ -250,7 +250,7 @@ The following table shows the configuration options for this monitor:
       - no
       - ``bool``
       - Activate Cluster level stats. These stats report only from
-         master Elasticserach nodes. (**default:** ``false``)
+         primary Elasticserach nodes. (**default:** ``false``)
    - 
 
       - ``enableEnhancedIndexStatsForIndexGroups``
