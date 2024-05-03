@@ -1,7 +1,7 @@
 .. _mssql-server-receiver:
 
 ****************************
-MSSQL server receiver
+Microsoft SQL server receiver
 ****************************
 
 .. meta::
