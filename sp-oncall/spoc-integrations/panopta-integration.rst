@@ -44,17 +44,14 @@ Panopta configuration
 From the Alerting menu in the control panel, select the :guilabel:`Integrations` tab.
 
 .. image:: /_images/spoc/New_Splunk On-Call_Integration-Google_Docs.png
-   :alt: Integrations tab
 
 Select the webhooks integration.
 
 .. image:: /_images/spoc/New_Splunk On-Call_Integration-Google_Docs-1.png
-   :alt: Webhooks integration
 
 Name the integration. Under the :guilabel:`Incident Webhook` tab, set the request method to POST, and the postback URL as the Splunk On-Call REST endpoint URL from the previous step.
 
 .. image:: /_images/spoc/New_Splunk On-Call_Integration-Google_Docs-2.png
-   :alt: Set the endpoint
 
 Select a raw payload as your payload type, then copy the following JSON snippet in the code box:
 
