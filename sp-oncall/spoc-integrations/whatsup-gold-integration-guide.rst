@@ -27,73 +27,36 @@ From the Splunk On-Call web portal, select :guilabel:`Settings`, then :guilabel:
 .. image:: /_images/spoc/settings-alert-behavior-integrations-e1480978368974.png
    :alt: Integrations screen
 
-Select the :guilabel:`WhatsUp Gold` integration.
-
-.. image:: /_images/spoc/Integrations-Splunk On-Call_Test-1.png
-   :alt: WhatsUp Gold integration
-
-Select :guilabel:`Enable Integration`.
-
-.. image:: /_images/spoc/Integrations-Splunk On-Call_Test-10.png
-   :alt: Activate integration
+Select the :guilabel:`WhatsUp Gold` integration and then select :guilabel:`Enable Integration`.
 
 Copy the :guilabel:`Service Email` to your clipboard and make sure to replace ``$routing_key`` with the route you want to use. See :ref:`spoc-routing-keys`.
-
-.. image:: /_images/spoc/Integrations-Splunk On-Call_Test-11.png
-   :alt: Routing key
 
 WhatsUp Gold configuration
 ====================================
 
 From the WhatsUp Gold web interface, select :guilabel:`Settings`, then :guilabel:`Actions & Alerts`, then :guilabel:`Actions and Policies`.
 
-.. image:: /_images/spoc/screen_shots_for_WUG2017-nate_victorops_com-Splunk On-Call_Mail.png
-   :alt: Actions and policies
+1. Select :guilabel:`+` to add a new action to your action library.
 
-From the :guilabel:`Actions and Policies` page, select :guilabel:`+` to add a new action to
-your action library.
+2. Select :guilabel:`E-mail Action`.
 
-.. image:: /_images/spoc/Fwd__screen_shots_for_WUG2017-dscott_victorops_com-Splunk On-Call_Mail-1.png
-   :alt: Add a new action
+3. Enter :guilabel:`Splunk On-Call CRITICAL` in the :guilabel:`Name:` field and paste the email address on your clipboard into the :guilabel:`Mail to:` field.
 
-Select :guilabel:`E-mail Action`.
+4. Select the :guilabel:`Mail Content` tab, then add ``Is Critical`` to the end of the :guilabel:`Subject` field. 
 
-.. image:: /_images/spoc/no_subject-dscott_victorops_com-Splunk On-Call_Mail.png
-   :alt: Email action
-
-Enter :guilabel:`Splunk On-Call CRITICAL` in the :guilabel:`Name:` field and paste the email address on your clipboard into the :guilabel:`Mail to:` field.
-
-.. image:: /_images/spoc/Capture_4_PNG.png
-   :alt: Configure email action
-
-Select the :guilabel:`Mail Content` tab, then add ``Is Critical`` to the end of the :guilabel:`Subject` field. Select :guilabel:`OK` to save.
-
-.. image:: /_images/spoc/Fwd__screen_shots_for_WUG2017-dscott_victorops_com-Splunk On-Call_Mail-2.png
-   :alt: Save email action
+5. Select :guilabel:`OK` to save.
 
 Repeat the last 4 steps, entering ``Splunk On-Call RECOVERY`` instead of ``Splunk On-Call CRITICAL`` in the :guilabel:`Name` field and adding ``Is Recovery`` instead of ``Is Critical`` in the :guilabel:`Subject` field.
 
-.. image:: /_images/spoc/Fwd__screen_shots_for_WUG2017-dscott_victorops_com-Splunk On-Call_Mail-3.png
-   :alt: Repeat steps for recovery action
+1. Select :guilabel:`+` under :guilabel:`Action Policies`.
 
-Select :guilabel:`+` under :guilabel:`Action Policies`.
+2. Enter ``Splunk On-Call`` into the :guilabel:`Policy name` field, then select :guilabel:`Add`.
 
-.. image:: /_images/spoc/Fwd__screen_shots_for_WUG2017-dscott_victorops_com-Splunk On-Call_Mail-4.png
-   :alt: Action policies
+3. Select :guilabel:`Splunk On-Call CRITICAL` from the :guilabel:`Select an action from the Action Library` menu, then select :guilabel:`Down` from the :guilabel:`Execute the action on the following state change` menu.
 
-Enter ``Splunk On-Call`` into the :guilabel:`Policy name` field, then select :guilabel:`Add`.
-
-.. image:: /_images/spoc/Fwd__screen_shots_for_WUG2017-dscott_victorops_com-Splunk On-Call_Mail-9.png
-   :alt: Policy name
-
-Select :guilabel:`Splunk On-Call CRITICAL` from the :guilabel:`Select an action from the Action Library` menu, then select :guilabel:`Down` from the :guilabel:`Execute the action on the following state change` menu, then select :guilabel:`OK`.
-
-.. image:: /_images/spoc/Capture_13__1__PNG.png
-   :alt: Select an action
+4. Select :guilabel:`OK`.
 
 Repeat the last 2 steps, selecting ``Splunk On-Call RECOVERY`` instead of ``Splunk On-Call CRITICAL`` from the :guilabel:`Select an action from the Action Library` menu and selecting :guilabel:`Up` instead of :guilabel:`Down` from the :guilabel:`Execute the action on the following state change` menu.
 
 Select :guilabel:`OK` in the :guilabel:`New Action Policy` window.
 
-.. image:: /_images/spoc/Fwd__screen_shots_for_WUG2017-dscott_victorops_com-Splunk On-Call_Mail-8.png
-   :alt: Repeat the steps for recovery
