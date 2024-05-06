@@ -12,10 +12,15 @@ Welcome to Splunk On-Call
 .. toctree::
    :hidden:
 
+<<<<<<< Updated upstream
    Configure Single sign-on TOGGLE <admin/sso/single-sign-sso>
    Get Started <admin/get-started/getting-started-spoc>
    System requirements <admin/get-started/system-reqts>
    User roles TOGGLE <user-roles/user-roles-permissions>
+=======
+   Get Started <get-started/admin-quick-start> 
+   User roles TOGGLE <user-roles-permissions>
+>>>>>>> Stashed changes
    Incidents TOGGLE <incidents/incident-pane>
    Manage schedules TOGGLE <on-call-schedules/create-manage-on-call-schedules>
    Reports TOGGLE <reports/reports-main>

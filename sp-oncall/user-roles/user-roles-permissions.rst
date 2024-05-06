@@ -44,6 +44,39 @@ This means that a user can hold two roles. Here are the possible combinations:
 * Alert Admin & Team Admin
 * Stakeholders can be considered separate from all other roles as these users cannot be placed in any on-call schedules nor take action on incidents.  They can be added to existing incidents and notified through their defined contact methods for awareness.  For comprehensive information on stakeholders, see :ref:`stakeholders`.
 
+Learn about the following user roles and the permissions associated with each role:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
+
+   * - :strong:`Role`
+     - :strong:`Description`
+
+
+   * - :ref:`Global admin <global-admin>
+     - * The highest level of permissions in the Splunk On-Call platform 
+       * Responsible for the overall workflow and management of integrations and users.
+       * Access to all functionality across the platform including scheduling, integrations, teams, and users.
+
+
+   * - :ref:`Alert admin <alert-admin>`
+     - * Responsible for managing alert configuration, integrations, and their workflow.
+       * Permissions are organization-wide.
+
+   * - :ref:`Team admin <team-admin>`
+     - * There can be multiple Team Admins within a single team. 
+       * Responsible for a team's on-call schedules, escalation policies, and the overall management of the users who are apart of your team.
+
+   * - :ref:`User <user-training>`
+     - * There can be multiple Team Admins within a single team. 
+       * Responsible for a team's on-call schedules, escalation policies, and the overall management of the users who are apart of your team.
+
+   * - :ref:`Stakeholder <stakeholders>`
+     - * A read-only user role that cannot take actions within the platform. 
+       * Receives paging notifications and has limited access to the Splunk On-Call platform. 
+
+
 How to Change Global Roles
 ----------------------------------
 

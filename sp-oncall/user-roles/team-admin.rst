@@ -5,13 +5,13 @@ Get started as a Team admin
 ************************************************************************
 
 .. meta::
-   :description: About the team admin roll in Splunk On-Call.
+   :description: About the team admin role in Splunk On-Call.
 
 
 
 If you are new to Splunk On-Call a great place to start is with the topic :ref:`user-role`. Once you a familiar with your user permissions, learn about the Alert admin role.
 
-A user can be elevated to a Team Admin for one or more teams. Likewise, there may be multiple Team Admins within a single team. As a Team Admin, you're responsible for a team.s on-call schedules, escalation policies, and the overall management of the users who are apart of your team. Team admins have permission to take the following actions: 
+A user can be elevated to a Team Admin for one or more teams. Likewise, there can be multiple Team Admins within a single team. As a Team Admin, you're responsible for a team's on-call schedules, escalation policies, and the overall management of the users who are apart of your team. Team admins have permission to take the following actions: 
 
 Permissions specific to a Team Admin:
 

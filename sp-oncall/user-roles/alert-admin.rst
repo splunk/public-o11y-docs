@@ -5,7 +5,7 @@ Get started as an Alert admin
 ************************************************************************
 
 .. meta::
-   :description: About the alert admin  roll in Splunk On-Call.
+   :description: About the alert admin  role in Splunk On-Call.
 
 
 

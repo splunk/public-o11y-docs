@@ -9,7 +9,7 @@ Set up Team Admins in Splunk On-Call
 
 
 
-The Team Admin permission is an Enterprise level feature and can be assigned to Splunk On-Call users on a team-by-basis. A User may be promoted to a Team Admin role from the Users list within a team. Once promoted to Team Admin, that User has permissions to manage all aspects of that team. 
+The Team Admin permission is an Enterprise level feature and can be assigned to Splunk On-Call users on a team-by-basis. A User may be promoted to a Team Admin role from the user list within a team. Once promoted to Team Admin, that uiser has permissions to manage all aspects of that team. 
 
 .. note:: The Team Admin role is not related to role-based access control (RBAC). It is an additional role that allows a user additional permissions compared to other users on that team.
 
@@ -20,20 +20,20 @@ This integration is compatible with the following versions of Splunk On-Call:
 
 - Enterprise
 
-You must be a Global Admin to create the first Team Admin on a team.
+You must be a Global admin to create the first Team admin on a team.
 
-Assign a user the Team Admin role
+Assign a user the Team admin role
 ==========================================
 
-A user with the role of Global Admin is required to create the first Team Admin* on a team. 
+A user with the role of Global admin is required to create the first Team Admin on a team. 
 
-#. Navigate to the Users tab within a specific team. 
-#. Select the pencil icon on the right-hand side to promote a User to a Team Admin.
-#. Select :guilabel:`Confirm` when prompted to give this user Team Admin permissions. In the Users Table, the Team Admin role will display as user. In the column labeled “teams” an asterisk (*) next to the team name indicates they are a team admin for that team.
+#. Navigate to the :guilabel:`Users` tab within a specific team. 
+#. Select the pencil icon on the right-hand side to promote a user to a Team admin.
+#. Select :guilabel:`Confirm` when prompted to give this user Team admin permissions. In the Users Table, the Team Admin role will display as user. In the column labeled “teams” an asterisk (*) next to the team name indicates they are a team admin for that team.
 
-As a Team Admin, that user has a higher level of permissions. They are able to manage all scheduling aspects for the respective team, add users to their team, and schedule overrides. Team Admins can also promote other users to Team Admins. This allows teams to be more self-sufficient.
+As a Team admin, that user has a higher level of permissions. They are able to manage all scheduling aspects for the respective team, add users to their team, and schedule overrides. Team Admins can also promote other users to Team Admins. This allows teams to be more self-sufficient.
 
-If you need to demote a Team Admin back to a User role, use the same pencil icon to the right of the user's name.
+If you need to demote a Team Admin back to a user role, use the same pencil icon to the right of the user's name.
 
 ..note::  Designate at least one Team Admin per team. This lightens the administrative tasks of Global Admins.
 
