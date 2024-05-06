@@ -1,10 +1,4 @@
-<<<<<<< Updated upstream
-:orphan:
-
-.. _get-started-users:
-=======
 .. _spoc-user-guide:
->>>>>>> Stashed changes
 
 ************************************************************************
 Getting started guide for Splunk On-Call users
@@ -13,16 +7,13 @@ Getting started guide for Splunk On-Call users
 .. meta::
    :description: About  Splunk On-Call.
 
-<<<<<<< Updated upstream
-.. toctree::
-   :hidden:
-=======
 
->>>>>>> Stashed changes
 
 Mobile downloads are available at:
 - :new-page:`iOS <https://itunes.apple.com/us/app/victorops/id696974262?mt=8>` 
 - :new-page:`Android <https://play.google.com/store/apps/details?id=com.victorops.androidclient&hl=en>`
+
+
 
 Main Dashboard layout
 ---------------------------
