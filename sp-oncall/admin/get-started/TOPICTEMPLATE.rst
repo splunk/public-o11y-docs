@@ -59,6 +59,12 @@ Splunk Support Portal: You can open a Splunk On-Call support case in the Splunk 
      - 
 
 
+.. raw:: html
+
+  <embed>
+    <h2>Information required</h2>
+  </embed>
+
 Set up your account
 ================================
 

@@ -835,6 +835,18 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    Administrator get started TOGGLE <sp-oncall/admin/get-started/getting-started-spoc>
 
+
+.. toctree::
+   :maxdepth:   3
+
+   Configure Splunk On-Call TOGGLE </sp-oncall/admin/get-started/admin-getting-started>
+
+
+.. toctree::
+   :maxdepth:   3
+
+   User management TOGGLE <sp-oncall/user-roles/user-roles-permissions>
+
 .. toctree::
    :maxdepth:   3
 

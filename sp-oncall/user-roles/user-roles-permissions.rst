@@ -10,23 +10,31 @@ Splunk On-Call user roles and permissions
 .. toctree::
    :hidden:
 
-   add-user
-   admin-permissions
    admin-quick-start
-   alert-admin-training
-   alert-admin
-   configure-teams
+   getting-started-user
+   add-user
    manage-users
+   usernames
+   configure-teams
+   admin-permissions
+   alert-admin
+   alert-admin-training
    global-admin
-   team-admin-setup
    team-admin
+   team-admin-setup
    user-role
    user-training
-   usernames
+   stakeholders
 
 
-User Roles and Permissions
-================================
+
+.. raw:: html
+
+  <embed>
+    <h2>User Roles and Permissions</h2>
+  </embed>
+
+
 
 There are five roles in Splunk On-Call:
 
@@ -54,7 +62,7 @@ Learn about the following user roles and the permissions associated with each ro
      - :strong:`Description`
 
 
-   * - :ref:`Global admin <global-admin>
+   * - :ref:`Global admin <global-admin>`
      - * The highest level of permissions in the Splunk On-Call platform 
        * Responsible for the overall workflow and management of integrations and users.
        * Access to all functionality across the platform including scheduling, integrations, teams, and users.
@@ -77,8 +85,12 @@ Learn about the following user roles and the permissions associated with each ro
        * Receives paging notifications and has limited access to the Splunk On-Call platform. 
 
 
-How to Change Global Roles
-----------------------------------
+.. raw:: html
+
+  <embed>
+    <h2>How to Change Global Roles</h2>
+  </embed>
+
 
 Only Global admins can change the user roles, including the roles of other Global admins.
 
@@ -89,9 +101,13 @@ For information on how to manage Team Admin permissions, see :ref:`team-admin-se
 For more information regarding overall Admin permissions, including the Alert admin role, see  :ref:`user-roles-permissions`.
 
 
+.. raw:: html
 
-How to change Stakeholder Roles
--------------------------------------
+  <embed>
+    <h2>How to change Stakeholder Roles</h2>
+  </embed>
+
+
 
 Users can be converted to or from a stakeholder role with the assistance of the support team.  Note that Stakeholders are priced differently from all other user roles so additional charges may be incurred if converting someone from a stakeholder to another role.
 
@@ -101,9 +117,12 @@ If interested in a stakeholder conversion, please contact the Support team and i
 
 The following tables provide a detailed breakdown of the specific permissions for each role.
 
+.. raw:: html
 
-User Permissions
------------------------
+  <embed>
+    <h2>User Permissions</h2>
+  </embed>
+
 
 The following table identifies the user management capabilities of each Splunk On-Call role.
 
@@ -175,8 +194,12 @@ The following table identifies the user management capabilities of each Splunk O
      - 
 
 
-Team management
------------------------
+
+.. raw:: html
+
+  <embed>
+    <h2>Team management</h2>
+  </embed>
 
 The following table identifies the team management capabilities of each Splunk On-Call role.
 
@@ -269,8 +292,12 @@ The following table identifies the team management capabilities of each Splunk O
      - 
 
 
-Alert and incident management
--------------------------------------
+.. raw:: html
+
+  <embed>
+    <h2>Alert and incident management</h2>
+  </embed>
+
 
 The following table identifies the alert and incident management capabilities of each Splunk On-Call role.
 
@@ -355,9 +382,11 @@ The following table identifies the alert and incident management capabilities of
      - 
      - 
 
+.. raw:: html
 
-On-Call actions
--------------------------------------
+  <embed>
+    <h2>On-Call actions</h2>
+  </embed>
 
 The following table identifies the on-call actions each Splunk On-Call role can perform.
 
@@ -436,8 +465,12 @@ The following table identifies the on-call actions each Splunk On-Call role can 
      - 
 
 
-Billing
--------------------------------------
+.. raw:: html
+
+  <embed>
+    <h2>Billing</h2>
+  </embed>
+
 
 The following table identifies the billing capabilities of each Splunk On-Call role.
 
@@ -480,8 +513,13 @@ The following table identifies the billing capabilities of each Splunk On-Call r
      - 
      - 
 
-Reporting
--------------------------------------
+.. raw:: html
+
+  <embed>
+    <h2>Reporting</h2>
+  </embed>
+
+
 
 The following table identifies the reporting capabilities of each Splunk On-Call role.
 
