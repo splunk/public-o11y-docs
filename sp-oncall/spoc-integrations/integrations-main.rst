@@ -51,6 +51,7 @@ Splunk On-Call integrations
    litabot-integration-guide
    loadster-integration-guide
    librato-integration
+   logentries-integration
    logicmonitor-integration
    loggly-integration
    logz-io-integration
@@ -113,7 +114,6 @@ Splunk On-Call integrations
    victorops-humio-integration
    victorops-jenkins-integration
    victorops-librenms-integration
-   victorops-logentries-integration
    victorops-logicmonitor-integration
    victorops-mailhop-integration
    victorops-monitis-integration
