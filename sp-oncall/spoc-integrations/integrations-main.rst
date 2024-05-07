@@ -38,7 +38,7 @@ Splunk On-Call integrations
    github-integration-guide
    grafana-integration-guide
    graylog-integration-guide
-   healthchecks-io-integration-guide-victorops-2
+   healthchecks-io-integration-guide
    honeybadger-integration
    hosted-graphite-integration
    hp-sitescope-integration
