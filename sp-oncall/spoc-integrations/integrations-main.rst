@@ -16,7 +16,7 @@ Splunk On-Call integrations
    appoptics-integration
    atatus-integration
    aws-cloudwatch-integration-guide
-   azure-monitoring-integration-guide-victorops
+   azure-monitoring-integration-guide
    big-panda-integration-guide
    bmc-truesight-pulse-integration
    cloudwisdom-integration
