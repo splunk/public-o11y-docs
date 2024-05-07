@@ -130,30 +130,6 @@ The following settings control instrumentations and tracing behavior:
 
     <div class="instrumentation" section="settings" group="category" filter="instrumentation" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
 
-The following settings control which instrumentations are activated. See :ref:`disable-instrumentations-otel-dotnet` for more information.
-
-.. list-table::
-   :header-rows: 1
-   :width: 100%
-   :widths: 40 60
-
-   * - Setting
-     - Description
-   * - OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED
-     - Activates or deactivates all instrumentations. The default value is ``true``.  Can't be set using the web.config or app.config files.
-   * - OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED
-     - Activates or deactivates all trace instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable. Can't be set using the web.config or app.config files.
-   * - OTEL_DOTNET_AUTO_TRACES_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED
-     - Activates or deactivates a specific trace instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED`` environment variable. Can't be set using the web.config or app.config files. See :ref:`supported-dotnet-otel-libraries` for a complete list of supported instrumentations and their names.
-   * - OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_ENABLED
-     - Activates or deactivates all metric instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable. Can't be set using the web.config or app.config files.
-   * - OTEL_DOTNET_AUTO_METRICS_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED
-     - Activates or deactivates a specific metric instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_ENABLED`` environment variable. Can't be set using the web.config or app.config files. See :ref:`supported-dotnet-otel-libraries` for a complete list of supported instrumentations and their names.
-   * - OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED
-     - Activates or deactivates all log instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable. Can't be set using the web.config or app.config files.
-   * - OTEL_DOTNET_AUTO_LOGS_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED
-     - Activates or deactivates a specific log instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED`` environment variable. Can't be set using the web.config or app.config files. See :ref:`supported-dotnet-otel-libraries` for a complete list of supported instrumentations and their names.
-
 .. _server-trace-information-dotnet-otel:
 
 Server trace information
