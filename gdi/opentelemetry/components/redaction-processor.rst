@@ -108,9 +108,33 @@ Settings
 
 The following table shows the configuration options for the redaction processor:
 
-.. raw:: html
+.. list-table::
+  :header-rows: 1
+  :widths: 20 20 60
 
-   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/processor/redaction.yaml"></div>
+  * - Name
+    - Type
+    - Description
+
+  * - ``allow_all_keys``
+    - bool
+    - Allows all span attribute keys. Set this to ``true`` to disable the ``allowed_keys`` list. The list of blocked values is applied regardless. If you just want to block values, set this to ``true``.
+
+  * - ``allowed_keys``
+    - string
+    - List of allowed span attribute keys. Span attributes not on the list are removed. The list fails if it's empty. To allow all keys, you need to set ``allow_all_keys``.
+
+  * - ``ignored_keys``
+    - string
+    - List of span attribute keys that are not redacted. Span attributes in this list are allowed to pass through the filter without being changed or removed.
+
+  * - ``blocked_values``
+    - string
+    - List of regular expressions for blocking values of allowed span attributes. Values that match are masked.
+
+  * - ``summary``
+    - string
+    - Controls the verbosity level of the diagnostic attributes that the processor adds to the spans when it redacts or masks other attributes. In some contexts a list of redacted attributes leaks information, while it's valuable when integrating and testing a new configuration. Possible values are ``debug``, ``info``, and ``silent``.
 
 Troubleshooting
 ======================
