@@ -5,13 +5,11 @@ Redaction processor
 ****************************
 
 .. meta::
-      :description: Deletes span attributes that don't match a list of allowed span attributes. It also masks span attribute values that match a blocked value list.
+      :description: The Redaction processor deletes span attributes that don't match a list of allowed span attributes. It also masks span attribute values that match a blocked value list.
 
-The Redaction processor is an OpenTelemetry Collector component that deletes span attributes that don't match a list of allowed span attributes. It also masks span attribute values that match a blocked value list. 
+The Redaction processor is an OpenTelemetry Collector component that deletes span attributes that don't match a list of allowed span attributes. It also masks span attribute values that match a blocked value list. Span attributes that aren't on the allowed list are removed before any value checks are done.
 
 The supported pipeline type is ``traces``. See :ref:`otel-data-processing` for more information.
-
-
 
 Get started
 ======================
@@ -77,8 +75,31 @@ Next, include the processor in the required pipelines of the ``service`` section
       traces:
         processors: [redaction]
 
+How does the processor work?
+---------------------------------------------------
 
+Ignored attributes are processed first so they're always allowed and never blocked. This field should only be used where you know the data is always safe to send to the telemetry system.
 
+Only span attributes included on the list of allowed keys list are retained. If ``allowed_keys`` is empty, then no span attributes are allowed. All span attributes are removed in that case. To keep all span attributes, you should explicitly set ``allow_all_keys`` to ``true``.
+
+``blocked_values`` applies to the values of the allowed keys. If the value of an allowed key matches the regular expression for a blocked value, the matching part of the value is then masked with a fixed length of asterisks. For example, if notes is on the list of allowed keys, then the ``notes`` span attribute is retained. However, if there is a value such as a credit card number in the notes field that matched a regular expression on the list of blocked values, then that value is masked.
+
+Use cases
+======================
+
+Typical use-cases include:
+
+* Prevent sensitive fields from accidentally leaking into traces
+* Ensure compliance with legal, privacy, or security requirements
+
+Data protection
+---------------------------------------------------
+
+The EU General Data Protection Regulation (GDPR) prohibits the transfer of any personal data like birthdates, addresses, or IP addresses across borders without explicit consent from the data subject. Popular trace aggregation services are located in US, not in EU. You can use the redaction processor to scrub personal data from your data.
+
+PRC legislation prohibits the transfer of geographic coordinates outside of the PRC. Popular trace aggregation services are located in US, not in the PRC. You can use the redaction processor to scrub geographic coordinates from your data.
+
+Payment Card Industry (PCI) Data Security Standards prohibit logging certain things or storing them unencrypted. You can use the redaction processor to scrub them from your traces.
 
 .. _redaction-processor-settings:
 
