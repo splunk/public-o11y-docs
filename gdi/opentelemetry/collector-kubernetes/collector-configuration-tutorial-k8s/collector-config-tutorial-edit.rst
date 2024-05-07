@@ -110,7 +110,7 @@ To apply the configuration to the Collector running on your Kubernetes cluster, 
 
 .. code-block:: bash
 
-   helm upgrade --reuse-values -f ./filter.yaml -f ./values.yaml splunk-otel-collector-1709226095 splunk-otel-collector-chart/splunk-otel-collector --set="splunkPlatform.insecureSkipVerify=true"
+   helm upgrade --reuse-values -f ./filter.yaml -f ./hec.yaml splunk-otel-collector-1709226095 splunk-otel-collector-chart/splunk-otel-collector --set="splunkPlatform.insecureSkipVerify=true"
 
 Use the Tab key to autocomplete the file names, the release, and the chart you installed in part 1 of this tutorial.
 
