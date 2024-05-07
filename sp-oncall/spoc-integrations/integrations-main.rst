@@ -74,6 +74,7 @@ Splunk On-Call integrations
    prtg-integrations
    puppet-enterprise-integration-guide
    puppet-tasks-integration-guide
+   rackspace-integration
    rapid7-integration-guide
    rest-endpoint-integration-guide
    scalyr-integration
@@ -117,11 +118,9 @@ Splunk On-Call integrations
    victorops-librenms-integration
    victorops-logicmonitor-integration
    victorops-mailhop-integration
-   victorops-monitis-integration
    victorops-phantom-integration-guide
    victorops-pingdom-integration
    victorops-pingometer-integration
-   victorops-rackspace-integration
    victorops-raygun-integration
    victorops-riemann-integration
    victorops-rollbar-integration
@@ -131,7 +130,6 @@ Splunk On-Call integrations
    victorops-solarwinds-integration
    victorops-statuscake-integration
    victorops-sumologic-integration
-   victorops-uservoice-integration
    vividcortex-integration
    victorops-wormly-integration
    victorops-zabbix-integration
