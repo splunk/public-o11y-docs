@@ -93,6 +93,7 @@ Splunk On-Call integrations
    threat-stack-integration
    twilio-live-call-routing-guide
    twilio-sms-integration-guide
+   uptime-integration
    uptime-robot-integration-guide
    wavefront-integration-guide-victorops
    webex-teams-integration-guide
@@ -130,7 +131,6 @@ Splunk On-Call integrations
    victorops-solarwinds-integration
    victorops-statuscake-integration
    victorops-sumologic-integration
-   victorops-uptime-integration
    victorops-uservoice-integration
    vividcortex-integration
    victorops-wormly-integration
