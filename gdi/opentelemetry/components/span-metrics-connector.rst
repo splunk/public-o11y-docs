@@ -128,51 +128,51 @@ Configuration options
 
 The following settings can be optionally configured:
 
-* histogram (default: explicit): Use to configure the type of histogram to record calculated from spans duration measurements. Must be either explicit or exponential.
+* ``histogram``. ``explicit`` by default. Use it to configure the type of histogram to record calculated from spans duration measurements. Must be either ``explicit`` or ``exponential``.
 
-  * disable (default: false): Disable all histogram metrics.
+  * ``disable``. ``false`` by default. Disables all histogram metrics.
 
-  * unit (default: ms): The time unit for recording duration measurements. calculated from spans duration measurements. One of either: ms or s.
+  * ``unit``. ``ms`` by default. The time unit for recording duration measurements, calculated from spans duration measurements. Possible values ar ``ms`` or ``s``.
 
-  * explicit:
+  * ``explicit``:
 
-    * buckets: the list of durations defining the duration histogram time buckets. Default buckets: [2ms, 4ms, 6ms, 8ms, 10ms, 50ms, 100ms, 200ms, 400ms, 800ms, 1s, 1400ms, 2s, 5s, 10s, 15s]
+    * ``buckets``. The list of durations defining the duration histogram time buckets. Default buckets: ``[2ms, 4ms, 6ms, 8ms, 10ms, 50ms, 100ms, 200ms, 400ms, 800ms, 1s, 1400ms, 2s, 5s, 10s, 15s]``.
 
-  * exponential:
+  * ``exponential``:
 
-    * max_size (default: 160) the maximum number of buckets per positive or negative number range.
+    * ``max_size``. ``160`` by default. The maximum number of buckets per positive or negative number range.
 
-* dimensions: the list of dimensions to add together with the default dimensions defined above.
+* ``dimensions``. The list of dimensions to add together with the default dimensions defined above.
 
-  * Each additional dimension is defined with a name which is looked up in the span's collection of attributes or resource attributes (AKA process tags) such as ip, host.name or region.
+  * Each additional dimension is defined with a name which is looked up in the span's collection of attributes or resource attributes (process tags) such as ``ip``, ``host.name`` or ``region``.
 
-  * If the named attribute is missing in the span, the optional provided default is used.
+  * If the ``named`` attribute is missing in the span, the optional provided default is used.
 
   * If no default is provided, this dimension will be omitted from the metric.
 
-* ``exclude_dimensions``: the list of dimensions to be excluded from the default set of dimensions. Use to exclude unneeded data from metrics.
+* ``exclude_dimensions``. The list of dimensions to be excluded from the default set of dimensions. Use to exclude unneeded data from metrics.
 
-* ``dimensions_cache_size`` (default: 1000): the size of cache for storing Dimensions to improve collectors memory usage. Must be a positive number.
+* ``dimensions_cache_size``. ``1000`` by default. The size of cache for storing Dimensions to improve Collectors' memory usage. Must be a positive number.
 
-* ``resource_metrics_cache_size``. ``1000``by default. The size of the cache holding metrics for a service. This is mostly relevant for cumulative temporality to avoid memory leaks and correct metric timestamp resets.
+* ``resource_metrics_cache_size``. ``1000`` by default. The size of the cache holding metrics for a service. This is mostly relevant for cumulative temporality to avoid memory leaks and correct metric timestamp resets.
 
-* aggregation_temporality (default: AGGREGATION_TEMPORALITY_CUMULATIVE): Defines the aggregation temporality of the generated metrics. One of either AGGREGATION_TEMPORALITY_CUMULATIVE or AGGREGATION_TEMPORALITY_DELTA.
+* ``aggregation_temporality``. ``AGGREGATION_TEMPORALITY_CUMULATIVE`` by default. Defines the aggregation temporality of the generated metrics. Possible values are ``AGGREGATION_TEMPORALITY_CUMULATIVE`` or ``AGGREGATION_TEMPORALITY_DELTA``.
 
-* namespace: Defines the namespace of the generated metrics. If namespace provided, generated metric name will be added namespace. prefix.
+* ``namespace``. Defines the namespace of the generated metrics. If a namespace's provided, the prefix ``namespace.`` is added to the generated metric name.
 
-* metrics_flush_interval (default: 60s): Defines the flush interval of the generated metrics.
+* ``metrics_flush_interval``. ``60`` by default. Defines the flush interval of the generated metrics.
 
-* metrics_expiration (default: 0): Defines the expiration time as time.Duration, after which, if no new spans are received, metrics will no longer be exported. Setting to 0 means the metrics will never expire (default behavior).
+* ``metrics_expiration``. ``0`` by default. Defines the expiration time as ``time.Duration``, after which, if no new spans are received, metrics will no longer be exported. If you set it to ``0`` metrics will never expire.
 
-* exemplars: Use to configure how to attach exemplars to metrics.
+* ``exemplars``. Use them to configure how to attach exemplars to metrics.
 
-  * enabled (default: false): enabling will add spans as Exemplars to all metrics. Exemplars are only kept for one flush interval.
+  * ``enabled``. ``faulse`` by default. Enabling it will add spans as Exemplars to all metrics. Exemplars are only kept for one flush interval.
 
-* events: Use to configure the events metric.
+* ``events``. Use it to configure the events metric.
 
-  * enabled: (default: false): enabling will add the events metric.
+  * ``enabled``. ``false`` by default. Enabling it adds the events metric.
 
-  * dimensions: (mandatory if enabled) the list of the span's event attributes to add as dimensions to the events metric, which will be included on top of the common and configured dimensions for span and resource attributes.
+  * ``dimensions``: Mandatory if ``events`` is enabled. The list of the span's event attributes to add as dimensions to the events metric, which will be included on top of the common and configured dimensions for span and resource attributes.
 
 * ``resource_metrics_key_attributes``. Filter the resource attributes used to produce the resource metrics key map hash. Use this in case changing resource attributes (e.g. process id) are breaking counter metrics.
 
@@ -201,40 +201,47 @@ Other improvements include:
 Use the Span Metrics connector with Prometheus components
 ====================================================================
 
-The ``spanmetrics`` connector can be used with Prometheus exporter components.
+The ``spanmetrics`` connector can be used with Prometheus exporter components such as :ref:`prometheus-receiver`.
 
-For some functionality of the exporters, e.g. like generation of the target_info metric the incoming spans resource scope attributes must contain service.name and service.instance.id attributes.
+For some functionality of the exporters, for example, to generate the ``target_info`` metric, the incoming spans resource scope attributes must contain the ``service.name`` and ``service.instance.id`` attributes.
 
-Let's look at the example of using the spanmetrics connector with the prometheusremotewrite exporter:
+Let's look at the example of using the ``spanmetrics`` connector with the ``prometheusremotewrite`` exporter:
 
-receivers:
-  otlp:
-    protocols:
-      http:
-      grpc:
+.. code-block:: yaml
 
-exporters:
-  prometheusremotewrite:
-    endpoint: http://localhost:9090/api/v1/write
-    target_info:
-      enabled: true
+  receivers:
+    otlp:
+      protocols:
+        http:
+        grpc:
 
-connectors:
-  spanmetrics:
-    namespace: span.metrics
+  exporters:
+    prometheusremotewrite:
+      endpoint: http://localhost:9090/api/v1/write
+      target_info:
+        enabled: true
 
-service:
-  pipelines:
-    traces:
-      receivers: [otlp]
-      exporters: [spanmetrics]
-    metrics:
-      receivers: [spanmetrics]
-      exporters: [prometheusremotewrite]
-This configures the spanmetrics connector to generate metrics from received spans and export the metrics to the Prometheus Remote Write exporter. The target_info metric will be generated for each resource scope, while OpenTelemetry metric names and attributes will be normalized to be compliant with Prometheus naming rules. For example, the generated calls OTel sum metric can result in multiple Prometheus calls_total (counter type) time series and the target_info time series. For example:
+  connectors:
+    spanmetrics:
+      namespace: span.metrics
 
-target_info{job="shippingservice", instance="...", ...} 1
-calls_total{span_name="/Address", service_name="shippingservice", span_kind="SPAN_KIND_SERVER", status_code="STATUS_CODE_UNSET", ...} 142
+  service:
+    pipelines:
+      traces:
+        receivers: [otlp]
+        exporters: [spanmetrics]
+      metrics:
+        receivers: [spanmetrics]
+        exporters: [prometheusremotewrite]
+
+This configures the ``spanmetrics`` connector to generate metrics from received spans and export those metrics to the Prometheus Remote Write exporter. The ``target_info`` metric is generated for each resource scope, while OpenTelemetry metric names and attributes are normalized to be compliant with Prometheus naming rules. 
+
+For example, the generated calls OTel sum metric can result in multiple Prometheus ``calls_total`` (counter type) time series and the ``target_info`` time series. See below:
+
+.. code-block:: 
+
+  target_info{job="shippingservice", instance="...", ...} 1
+  calls_total{span_name="/Address", service_name="shippingservice", span_kind="SPAN_KIND_SERVER", status_code="STATUS_CODE_UNSET", ...} 142
 
 .. _span-metrics-connector-settings:
 
