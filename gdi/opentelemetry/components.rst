@@ -25,7 +25,7 @@ The OpenTelemetry Collector includes the following component types:
 * :ref:`Processors <collector-components-processors>`: Perform operations on data before it's exported. For example, filtering.
 * :ref:`Exporters <collector-components-exporters>`: Send data to one or more backends or destinations. 
 * :ref:`Extensions <collector-components-extensions>`: Extend the capabilities of the Collector.
-* :ref:`Connectors <collector-components-connectors>`: Sending telemetry data between different collector pipelines.
+* :ref:`Connectors <collector-components-connectors>`: Send telemetry data between different collector pipelines.
 
 You can activate components by configuring :ref:`service pipelines <otel-data-processing>` in the Collector configuration. See :ref:`otel-configuration` to learn how to define multiple instances of components as well as their pipelines.
 
@@ -358,7 +358,7 @@ Each pipeline in the OpenTelemetry Collector acts on one type of telemetry data.
      - Pipeline types
    * - :ref:`span-metrics-connector` (``spanmetrics``)
      - Aggregates Request, Error and Duration (R.E.D) OpenTelemetry metrics from span data.
-     - Spans, metrics
+     - Traces, metrics
 
 .. raw:: html
 
