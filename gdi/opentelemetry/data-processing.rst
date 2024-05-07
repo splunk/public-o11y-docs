@@ -97,7 +97,7 @@ Attribute values expressing a numerical value of zero, an empty string, or an em
 
 Attribute values of ``null`` are not valid and attempting to set a ``null`` value is undefined behavior.
 
-``null`` values are not allowed in arrays. However, if it is impossible to make sure that no ``null`` values are accepted (for example, in languages that do not have appropriate compile-time type checking), ``null`` values within arrays MUST be preserved as-is (that is, passed on to span processors/exporters as ``null``). If exporters do not support exporting ``null`` values, you can replace those values by 0, ``false``, or empty strings. Changing these values is required for map and dictionary structures represented as two arrays with indices that are kept in sync (for example, two attributes ``header_keys`` and ``header_values``, both containing an array of strings to represent a mapping ``header_keys[i] -> header_values[i]``).
+``null`` values are not allowed in arrays. However, if it is impossible to make sure that no ``null`` values are accepted (for example, in languages that do not have appropriate compile-time type checking), ``null`` values within arrays MUST be preserved as-is (that is, passed on to processors or exporters as ``null``). If exporters do not support exporting ``null`` values, you can replace those values by 0, ``false``, or empty strings. Changing these values is required for map and dictionary structures represented as two arrays with indices that are kept in sync (for example, two attributes ``header_keys`` and ``header_values``, both containing an array of strings to represent a mapping ``header_keys[i] -> header_values[i]``).
 
 Labels
 -----------------------------------------

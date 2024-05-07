@@ -1,11 +1,14 @@
 .. _span-processor:
 
 ****************************
-Span processor
+Span processor (deprecated)
 ****************************
 
 .. meta::
       :description: Use the span processor to modify the span name based on its attributes or extract span attributes from the span name.
+
+
+.. caution:: This processor is depecrated. Use :ref:`span-metrics-connector` instead.
 
 The span processor allows you to:
 
