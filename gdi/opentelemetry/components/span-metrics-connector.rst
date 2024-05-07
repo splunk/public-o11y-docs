@@ -179,7 +179,7 @@ The following settings can be optionally configured:
 .. _span-metrics-connector-migration:
 
 Migrate from the Span Metrics processor to the Span Metrics connector
-====================================================================
+================================================================================================
 
 The ``spanmetrics`` connector is a port of the :ref:`span-processor`, but with multiple improvements and breaking changes. It was done to bring the spanmetrics connector closer to the OpenTelemetry specification and make the component agnostic to exporters logic. 
 

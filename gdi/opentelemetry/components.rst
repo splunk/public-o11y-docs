@@ -15,7 +15,8 @@ Collector components
     Receivers <components/a-components-receivers.rst>
     Processors <components/a-components-processors.rst>
     Exporters <components/a-components-exporters.rst>
-    Extensions <components/a-components-extensions.rst>        
+    Extensions <components/a-components-extensions.rst>  
+    Connectors <components/a-components-connectors.rst>            
 
 
 The OpenTelemetry Collector includes the following component types:
@@ -28,7 +29,7 @@ The OpenTelemetry Collector includes the following component types:
 
 You can activate components by configuring :ref:`service pipelines <otel-data-processing>` in the Collector configuration. See :ref:`otel-configuration` to learn how to define multiple instances of components as well as their pipelines.
 
-The Splunk Distribution of OpenTelemetry Collector includes and supports the components listed on this doc.
+The Splunk Distribution of the OpenTelemetry Collector includes and supports the components listed on this doc.
 
 .. note:: The following lists might not contain all the latest additions. For a complete list of Collector components, including components that aren't included in the Splunk Distribution of OpenTelemetry Collector, see the ``opentelemetry-contrib`` repository in GitHub.
 
