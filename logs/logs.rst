@@ -125,7 +125,7 @@ See :ref:`logs-aggregations` to learn how to perform more aggregations.
 
 .. _severity-key:
 
-Ensure severity key is correctly mapped
+Ensure correct mapping of severity key 
 --------------------------------------------------
 The severity key is a field that all logs contain. It has the values ``DEBUG``, ``ERROR``, ``INFO``, ``UNKNOWN``, and ``WARNING``. Because the ``severity`` field in many logs is called ``level``, Log Observer automatically remaps the log field ``level`` to ``severity``.
 

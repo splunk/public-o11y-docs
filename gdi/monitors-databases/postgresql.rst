@@ -50,7 +50,7 @@ The following table shows the configuration options for the
       - ``masterDBName``
       - no
       - ``string``
-      - The “master” database to which the agent first connects to query
+      - The primary database to which the agent first connects to query
          the list of databases available in the server. This database
          should be accessible to the user specified with
          ``connectionString`` and ``params`` below, and that user should

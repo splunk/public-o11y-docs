@@ -28,7 +28,7 @@ $(document).ready(function () {
          }
          let columnsArray = Array.from(columns);
 
-         let table = $('<table class="generated-table docutils align-default" id="indexTable"><thead><tr></tr></thead></table>');
+         let table = $('<table class="generated-table docutils align-default" style="width: 100%" id="indexTable"><thead><tr></tr></thead></table>');
          columnsArray.forEach(col => table.find('tr').append(`<th>${rename(col)}</th>`));
 
          data.forEach((item, index) => {
@@ -74,7 +74,7 @@ $(document).ready(function () {
                if (Array.isArray(item[key]) && isComplex(item[key])) {
                   let headingId = `detail-${index}-${key}-header`;
                   let context = item?.keys?.[0] ?? '';
-                  let heading = $(`<h2 id="${headingId}">${context} ` + ' ' + ` ${rename(key)}</h2>`);
+                  let heading = $(`<h3 id="${headingId}">${context} ` + ' ' + ` ${rename(key)}</h3>`);
 
                   let subTable = $(`<table style="width:100%" class="generated-table docutils align-default" id="detail-${index}-${key}"></table>`);
                   const allKeys = [...new Set(item[key].flatMap(Object.keys))];
@@ -162,7 +162,7 @@ $(document).ready(function () {
 
 
       function generateSubtableHtmlForSingleObject(data) {
-         let html = '<table>';
+         let html = '<table style="width: 100%">';
          Object.keys(data).forEach(key => {
             html += `<tr><td>${key}</td><td>${data[key]}</td></tr>`;
          });
@@ -173,7 +173,7 @@ $(document).ready(function () {
       function removeEmptyTables() {
          $(selfSelector).find('div').each(function () {
             let container = $(this);
-            let h2 = container.find('h2');
+            let h3 = container.find('h3');
             let mainTable = container.find('table').first();
 
             function isTableEffectivelyEmpty(table) {
@@ -206,8 +206,8 @@ $(document).ready(function () {
             }
 
             if (isTableEffectivelyEmpty(mainTable)) {
-               let h2Id = h2.attr('id');
-               $('#indexTable a[href="#' + h2Id + '"]').closest('td').html('');
+               let h3Id = h3.attr('id');
+               $('#indexTable a[href="#' + h3Id + '"]').closest('td').html('');
                container.remove();
             }
          });

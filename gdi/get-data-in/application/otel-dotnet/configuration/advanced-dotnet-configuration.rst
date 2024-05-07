@@ -46,7 +46,7 @@ The following settings are common to most instrumentation scenarios:
 
 .. raw:: html
 
-    <div class="instrumentation" section="settings" group="category" filter="general" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
+    <div class="instrumentation" section="settings" group="category" filter="general" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
 
 .. _dotnet-otel-exporter-settings:
 
@@ -57,7 +57,7 @@ The following settings control trace exporters and their endpoints:
 
 .. raw:: html
 
-    <div class="instrumentation" section="settings" group="category" filter="exporter" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
+    <div class="instrumentation" section="settings" group="category" filter="exporter" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
 
 
 .. _profiling-configuration-otel-dotnet:
@@ -67,21 +67,9 @@ The following settings control trace exporters and their endpoints:
 
 The following settings control the AlwaysOn Profiling feature for the .NET instrumentation:
 
-.. list-table::
-   :header-rows: 1
-   :width: 100%
-   :widths: 40 60
+.. raw:: html
 
-   * - Environment variable
-     - Description
-   * - ``SPLUNK_PROFILER_ENABLED``
-     - Activates AlwaysOn Profiling. The default value is ``false``.
-   * - ``SPLUNK_PROFILER_MEMORY_ENABLED``
-     - Activates memory profiling. The default value is ``false``.
-   * - ``SPLUNK_PROFILER_LOGS_ENDPOINT``
-     - The collector endpoint for profiler logs. The default value is ``http://localhost:4318/v1/logs``.
-   * - ``SPLUNK_PROFILER_CALL_STACK_INTERVAL``
-     - Frequency with which call stacks are sampled, in milliseconds. The default value is ``10000`` milliseconds.
+    <div class="instrumentation" section="settings" group="category" filter="profiling" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
 
 .. note:: AlwaysOn Profiling for .NET is compatible with .NET 6.0 and higher. For more information on AlwaysOn Profiling, see :ref:`profiling-intro`.
 
@@ -94,7 +82,7 @@ The following settings control trace propagation:
 
 .. raw:: html
 
-    <div class="instrumentation" section="settings" group="category" filter="trace propagation" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
+    <div class="instrumentation" section="settings" group="category" filter="trace propagation" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
 
 
 .. _trace-sampling-settings-dotnet-otel:
@@ -106,7 +94,7 @@ The following settings control trace sampling:
 
 .. raw:: html
 
-    <div class="instrumentation" section="settings" group="category" filter="sampler" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
+    <div class="instrumentation" section="settings" group="category" filter="sampler" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
 
 
 .. _resource-detector-settings-dotnet-otel:
@@ -120,7 +108,7 @@ The following settings control resource detectors:
 
 .. raw:: html
 
-    <div class="instrumentation" section="settings" group="category" filter="resource detector" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
+    <div class="instrumentation" section="settings" group="category" filter="resource detector" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
 
 
 .. _list-resource-detectors-dotnet:
@@ -129,7 +117,7 @@ The following resource detectors are available:
 
 .. raw:: html
 
-    <div class="instrumentation" section="resource_detectors" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"key": "Identifier", "description": "Description", "attributes": "Attributes", "id": "ID", "stability": "Stability", "support": "Support", "dependencies": "Dependencies", "name": "Name", "source_href": "Source", "package_href": "Package URL", "version": "Version", "stability": "Stability"}'></div>
+    <div class="instrumentation" section="resource_detectors" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet/metadata.yaml" data-renaming='{"key": "Identifier", "description": "Description", "attributes": "Attributes", "id": "ID", "stability": "Stability", "support": "Support", "dependencies": "Dependencies", "name": "Name", "source_href": "Source", "package_href": "Package URL", "version": "Version", "stability": "Stability"}'></div>
 
 .. _dotnet-otel-instrumentation-settings:
 
@@ -140,31 +128,7 @@ The following settings control instrumentations and tracing behavior:
 
 .. raw:: html
 
-    <div class="instrumentation" section="settings" group="category" filter="instrumentation" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
-
-The following settings control which instrumentations are activated. See :ref:`disable-instrumentations-otel-dotnet` for more information.
-
-.. list-table::
-   :header-rows: 1
-   :width: 100%
-   :widths: 40 60
-
-   * - Setting
-     - Description
-   * - ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``
-     - Activates or deactivates all instrumentations. The default value is ``true``.  Can't be set using the web.config or app.config files.
-   * - ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED``
-     - Activates or deactivates all trace instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable. Can't be set using the web.config or app.config files.
-   * - ``OTEL_DOTNET_AUTO_TRACES_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED``
-     - Activates or deactivates a specific trace instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED`` environment variable. Can't be set using the web.config or app.config files. See :ref:`supported-dotnet-otel-libraries` for a complete list of supported instrumentations and their names.
-   * - ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_ENABLED``
-     - Activates or deactivates all metric instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable. Can't be set using the web.config or app.config files.
-   * - ``OTEL_DOTNET_AUTO_METRICS_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED``
-     - Activates or deactivates a specific metric instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_ENABLED`` environment variable. Can't be set using the web.config or app.config files. See :ref:`supported-dotnet-otel-libraries` for a complete list of supported instrumentations and their names.
-   * - ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED``
-     - Activates or deactivates all log instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable. Can't be set using the web.config or app.config files.
-   * - ``OTEL_DOTNET_AUTO_LOGS_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED``
-     - Activates or deactivates a specific log instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED`` environment variable. Can't be set using the web.config or app.config files. See :ref:`supported-dotnet-otel-libraries` for a complete list of supported instrumentations and their names.
+    <div class="instrumentation" section="settings" group="category" filter="instrumentation" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
 
 .. _server-trace-information-dotnet-otel:
 
@@ -191,7 +155,7 @@ The following settings control the internal logging of the Splunk Distribution o
 
 .. raw:: html
 
-    <div class="instrumentation" section="settings" group="category" filter="diagnostic logging" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
+    <div class="instrumentation" section="settings" group="category" filter="diagnostic logging" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
 
 
 .. _dotnet-otel-default-service-name:
