@@ -41,6 +41,8 @@ Set the required environment variables in your function's settings:
         - Your Splunk access token. To obtain an access token, see :ref:`admin-api-access-tokens`.
       * - ``SPLUNK_REALM``
         - Your Splunk Observability Cloud realm, for example ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
+      * - ``NODE_OPTIONS``
+        - Specify NodeJS options to preload instrumentation module: ``--require ./dist/src/instrumentation.js``
 
 #. Add any other settings you might need.
 
