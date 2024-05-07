@@ -43,7 +43,7 @@ Splunk On-Call integrations
    hosted-graphite-integration
    hp-sitescope-integration
    icinga-integration.rst
-   instana-integration-guide-victorops
+   instana-integration-guide
    jenkins-delivery-integration
    jira-app-integration-guide-victorops
    jira-integration-guide

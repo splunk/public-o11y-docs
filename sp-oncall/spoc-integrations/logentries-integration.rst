@@ -24,9 +24,10 @@ In Splunk On-Call, select :guilabel:`Settings`, :guilabel:`Alert Behavior`, :gui
 
 |image1|
 
-If the integration isn't active, select :guilabel:`Enable Integration` to generate your endpoint URL. Copy the URL to the clipboard and replace the ``$routing_key`` fragment with the routing key you want to use. See :ref:`spoc-routing-keys`.:guilabel:`
+If the integration isn't active, select :guilabel:`Enable Integration` to generate your endpoint URL. Copy the URL to the clipboard and replace the ``$routing_key`` fragment with the routing key you want to use. See :ref:`spoc-routing-keys`.
 
-.. image:: /_images/spoc/Integrations-Splunk On-Call_Demo_19.png:guilabel:`
+.. image:: /_images/spoc/Integrations-Splunk On-Call_Demo_19.png
+   :alt: Activate the integration
 
 LogEntries configuration
 ==============================
