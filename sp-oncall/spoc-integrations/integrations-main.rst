@@ -22,6 +22,7 @@ Splunk On-Call integrations
    cloudwisdom-integration
    check_mk-integration
    coralogix-integration-guide
+   crittercism-integration
    datadog-integration
    dotcommonitor-integration
    dnscheck-integration
@@ -105,7 +106,6 @@ Splunk On-Call integrations
    victorops-catchpoint-integration
    victorops-circonus-integration
    victorops-connectwise-automate-integration
-   victorops-crittercism-integration
    victorops-dynatrace-integration
    victorops-googlevoice-integration
    victorops-hipchat-integration
