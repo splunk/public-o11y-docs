@@ -24,8 +24,6 @@ In Splunk On-Call, select :guilabel:`Settings`, :guilabel:`Alert Behavior`, :gui
 
 If the integration isn't active, select :guilabel:`Enable Integration` to generate your endpoint URL. Replace the ``$routing_key`` placeholder with the routing key you want to use. See :ref:`spoc-routing-keys`.
 
-.. image:: /_images/spoc/Integrations-Splunk On-Call_Demo_17.png
-   :alt: Routing key
 
 Rackspace configuration
 ====================================
