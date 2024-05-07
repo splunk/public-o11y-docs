@@ -234,13 +234,13 @@ For example, to change the name of the Collector instance to ``otel-collector`` 
 Verify all the OpenTelemetry resources are deployed successfully
 ==========================================================================
 
-Resources include the Collector, the Operator, webhook, and instrumentation.
+Resources include the Collector, the Operator, webhook, and instrumentation. Run the following commands to verify the resources are deployed correctly.
 
-Run the following commands to verify the resources are deployed correctly:
+The pods running in the collector namespace must include the following:
 
 .. code-block:: yaml
    
-   kubectl  get pods -n monitoring
+   kubectl get pods
    # NAME                                                          READY
    # NAMESPACE     NAME                                                            READY   STATUS
    # monitoring    splunk-otel-collector-agent-lfthw                               2/2     Running
@@ -250,21 +250,20 @@ Run the following commands to verify the resources are deployed correctly:
    # monitoring    splunk-otel-collector-k8s-cluster-receiver-856f5fbcf9-pqkwg     1/1     Running
    # monitoring    splunk-otel-collector-opentelemetry-operator-56c4ddb4db-zcjgh   2/2     Running
 
-
-The pods running in your namespace must include the following:
+The webhooks in the collector namespace must include the following:
 
 .. code-block:: yaml
 
-   kubectl get mutatingwebhookconfiguration.admissionregistration.k8s.io -n monitoring
+   kubectl get mutatingwebhookconfiguration.admissionregistration.k8s.io
    # NAME                                      WEBHOOKS   AGE
    # splunk-otel-collector-cert-manager-webhook              1          14m
    # splunk-otel-collector-opentelemetry-operator-mutation   3          14m
 
-The namespace must have a running instance of the OpenTelemetry Collector. The name of this Collector instance matches the name that you set in :ref:`k8s-auto-discovery-helmchart-name`.
+The instrumentation in the collector namespace must include the following:
 
 .. code-block:: yaml
 
-   kubectl get otelinst -n <target_application_namespace>
+   kubectl get otelinst
    # NAME                          AGE   ENDPOINT
    # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
 
