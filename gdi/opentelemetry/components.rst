@@ -24,6 +24,7 @@ The OpenTelemetry Collector includes the following component types:
 * :ref:`Processors <collector-components-processors>`: Perform operations on data before it's exported. For example, filtering.
 * :ref:`Exporters <collector-components-exporters>`: Send data to one or more backends or destinations. 
 * :ref:`Extensions <collector-components-extensions>`: Extend the capabilities of the Collector.
+* :ref:`Connectors <collector-components-connectors>`: Sending telemetry data between different collector pipelines.
 
 You can activate components by configuring :ref:`service pipelines <otel-data-processing>` in the Collector configuration. See :ref:`otel-configuration` to learn how to define multiple instances of components as well as their pipelines.
 
@@ -333,6 +334,30 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
      - Provides a mechanism to set configuration options that are applicable to all instances of the Smart Agent receiver. Allows to migrate your existing Smart Agent configuration to the Splunk Distribution of OpenTelemetry Collector. 
    * - :ref:`zpages-extension` (``zpages``) 
      - Activates an extension that serves zPages, an HTTP endpoint that provides live data for debugging different components.
+
+.. _collector-components-connectors:
+
+.. raw:: html
+
+  <embed>
+    <h2>Connectors<a name="collector-components-connectors" class="headerlink" href="#collector-components-connectors" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
+A connector connects different pipelines and helps you send telemetry data between them. A connector acts as an exporter to one pipeline and a receiver to another. 
+
+Each pipeline in the OpenTelemetry Collector acts on one type of telemetry data. If you need to process one form of telemetry data into another one, route the data accordingly to its proper collector pipeline.
+
+.. list-table::
+   :widths: 25 55 20
+   :header-rows: 1
+   :width: 100%
+
+   * - Name
+     - Description
+     - Pipeline types
+   * - :ref:`span-metrics-connector` (``spanmetrics``)
+     - Aggregates Request, Error and Duration (R.E.D) OpenTelemetry metrics from span data.
+     - Spans, metrics
 
 .. raw:: html
 
