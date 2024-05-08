@@ -373,6 +373,11 @@ Using the installer script, you can install and activate automatic discovery for
 
                 See :ref:`chef-zero-config`.
 
+            .. tab:: Puppet
+
+                See :ref:`puppet-zero-config`.
+
+
 .. _auto-discovery-linux-verify:
 
 Ensure the collector service is running
