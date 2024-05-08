@@ -63,7 +63,7 @@ Before you start scaling up the use of the OTel agents, consider the OTel sizing
 .. _adv-conf-otel:
 
 Complete advanced configurations for the OTel Collector 
-====================================================
+=======================================================
 
 As you  get ready to roll out your first teams, further securing the OpenTelemetry collector. For details, see :ref:`otel-security`. You can store your token as a secret or use different methods to securely store tokens, user and password information outside the configuration.yaml for the OTel agent.
 
