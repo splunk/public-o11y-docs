@@ -80,9 +80,15 @@ To create custom metrics, follow these steps:
    .. code-block:: java
 
       sampleMeter
-         .gaugeBuilder("jvm.memory.total")
-         .setDescription("Reports JVM memory usage.")
-         .setUnit("byte")
+         .gaugeBuilder("player.hitpoints")
+         .setDescription("A player's currently remaining hit points.")
+         .setUnit("HP")
+         .ofLongs()
+         .buildWithCallback(res -> {
+             long hitpoints = currentPlayer.hitpoints();
+             String playerName = currentPlayer.name();
+             res.record(hitpoints, Attributes.of(stringKey("name"), playerName)));
+         });
          .buildWithCallback(
             result -> result.record(Runtime.getRuntime().totalMemory(), Attributes.empty()));
 
