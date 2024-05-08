@@ -33,14 +33,14 @@ There are a few cases where incorrect naming affects in-product usage data:
 Identify pilot teams and projects
 =====================================
 
-After you integrate initial applications, start planning the initial roll-out to your organization's pilot teams. Identify your pilot teams and projects with approximate timelines and capacity requirements.
+After you integrate initial applications, start planning the initial rollout to your organization's pilot teams. Identify your pilot teams and projects with approximate timelines and capacity requirements.
 
 There are 2 types of pilot teams to consider:
 
 * A set of teams that are ready or have started a new project and are using common technologies used by most teams.
 * A set of teams that have been using a non-standard technology.
 
-To avoid duplicating efforts, create a single service even if they are utilized by multiple teams.
+To avoid duplicating efforts, create a single service even if they are used by multiple teams.
 
 .. _framework:
 
@@ -63,9 +63,9 @@ Identify application tools that are used as part of services that the pilot team
 Define a list of libraries required to support applications and those that are supported by OpenTelemetry to determine which applications require auto or manual instrumentation. For a list of languages supported by OpenTelemetry, see :new-page:`https://github.com/open-telemetry/opentelemetry-java-instrumentation/blob/main/docs/supported-libraries.md`.
 
 Next, build your development pipeline: 
-f
+
 * Use the OpenTelemetry Zero Configuration Auto Instrumentation on the hosts or Kubernetes. For details, see :ref:`zero-config`.
-* Use the OpenTelemetry automatic instrumentation for containers or virtual machines. For details, see :ref:`apm-gdi`.
+* Use the automatic instrumentation for containers or virtual machines. For details, see :ref:`apm-gdi`.
 * Identify the environment variables according to specific use cases. Each development language has its own settings, for example:
     
     * For Java information, see :ref:`advanced-java-otel-configuration`.
@@ -80,7 +80,7 @@ Identify a naming convention for the deployment environments
 
 To avoid overlapping configurations across other deployments of the same application, use defined deployment environments. For details about defining deployment environments, see :ref:`apm-environments`.
 
-You can also further filter Splunk Application Performance Monitoring (APM) data by defining teams, functions, and other tags to further utilize APM data filtering, for example, database name or frontend application names.
+You can also further filter Splunk Application Performance Monitoring (APM) data by defining teams, functions, and other tags, such as database names or frontend application names, to further utilize APM data filtering.
 
 To define these tags, you can use the standard method to add attributes to a trace of span using the OpenTelemetry environment variables. For more information on how to add context to spans tags, see :ref:`apm-add-context-trace-span`.
 
