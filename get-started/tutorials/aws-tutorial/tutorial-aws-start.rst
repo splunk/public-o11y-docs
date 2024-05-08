@@ -33,7 +33,7 @@ Poll AWS data using the UI
 To access the guided setup for the AWS integration: 
 
 #. Log in to Splunk Observability Cloud.
-#. On the navigation menu, select :menuselection:`Data Management > Available itegrations > Amazon Web Services`. 
+#. On the navigation menu, select :menuselection:`Data Management > Add Integration > Amazon Web Services`. 
 
 .. image:: /_images/get-started/tutorial-aws-wizard.png
    :width: 80%
