@@ -126,11 +126,7 @@ Make sure that you're using a valid Splunk access token when sending data direct
 Metrics exporter issues
 ===============================================================
 
-If you see the following warning in your logs, it means that the Java agent can't send metrics to your OTel Collector, Smart Agent (now deprecated), or to the Splunk platform endpoints:
-
-.. code-block:: bash
-
-   [signalfx-metrics-publisher] WARN com.splunk.javaagent.shaded.io.micrometer.signalfx.SignalFxMeterRegistry - failed to send metrics: Unable to send data points
+If you see warnings about metrics in your logs, it might mean that the Java agent can't send metrics to your OTel Collector, Smart Agent (now deprecated), or to the Splunk platform endpoints:
 
 To troubleshoot connectivity issues affecting application metrics, try the following steps:
 
@@ -139,7 +135,6 @@ To troubleshoot connectivity issues affecting application metrics, try the follo
 3. Check that the OpenTelemetry Collector or Smart Agent are using the correct ports for the SignalFx receiver. The Collector uses ``http://<host>:9943``, and the Smart Agent uses ``http://<host>:9080/v2/datapoint``.
 4. Make sure that you're using a valid Splunk access token when sending data directly to your Splunk platform instance. See :ref:`admin-api-access-tokens`.
 
-.. note:: Metric collection for Java using OpenTelemetry instrumentation is still experimental.
 
 .. _java-profiler-issues:
 

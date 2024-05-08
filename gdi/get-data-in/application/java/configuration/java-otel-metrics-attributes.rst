@@ -5,7 +5,7 @@ Metrics and attributes collected by the Splunk OTel Java agent
 ***************************************************************
 
 .. meta::
-  :description: The Splunk Distribution of OpenTelemetry Java collects the following application metrics data and WebEngine attributes. You can also collect custom metrics through Micrometer.
+  :description: The Splunk Distribution of OpenTelemetry Java collects the following application metrics data and WebEngine attributes. You can also collect custom metrics through OpenTelemetry.
 
 The agent of the Splunk Distribution of OpenTelemetry Java collects the following application metrics data and attributes in addition to all that the upstream OpenTelemetry agent collects. To learn about the different metric types, see :ref:`metric-types`.
 
