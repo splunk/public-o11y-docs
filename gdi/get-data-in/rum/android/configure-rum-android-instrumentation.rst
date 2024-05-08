@@ -64,7 +64,7 @@ Use the following settings to configure the Android RUM agent:
    * - :code:`enableSessionBasedSampling(double)`
      - Activates session ID based sampling and sets a sampling ratio. The sampling ratio is the probability of a session being included between. Values range between ``0.0`` (all dropped) and ``1.0`` (all included).
    * - :code:`enableDebug()`
-     - Activates debug mode. This feature is deactivated by default. Activating debug mode activates the OpenTelemetry logging span exporter, which might be useful when debugging instrumentation issues.
+     - Activates debug mode. This feature is inactive by default. Activating debug mode activates the OpenTelemetry logging span exporter, which might be useful when debugging instrumentation issues.
    * - :code:`enableExperimentalOtlpExporter()`
      - Activates the experimental OTLP exporter. The exporter is not compatible with disk buffering.
 
