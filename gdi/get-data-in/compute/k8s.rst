@@ -25,7 +25,7 @@ To start the Kubernetes integration, follow these steps:
 
 #. Open the :new-page:`Kubernetes guided setup <https://login.signalfx.com/#/gdi/scripted/kubernetes/step-1?gdiState=%7B"integrationId":"kubernetes"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+   #. In the navigation menu, select :menuselection:`Data Management` to open the :strong:`Integrate Your Data` page.
 
    #. Select :guilabel:`Kubernetes`.
 

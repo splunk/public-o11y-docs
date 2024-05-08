@@ -5,7 +5,7 @@ Welcome
 **********
 
 .. meta::
-    :description: Welcome to Splunk Observability Cloud documentation. Learn about the basic elements of Splunk Observability Cloud and all it can do for you.
+    :description: Welcome to Splunk Observability Cloud documentation. Learn about the basic elements of Splunk Observability Cloud.
 
 .. imagetarget:: _images/get-started/o11y-user-doc-hero-banner-v2.svg
    :alt: Welcome
@@ -26,7 +26,17 @@ Splunk Observability Cloud overview :ref:`welcome`
 .. rst-class:: newcard
 
 :strong:`Scenarios`
-Collection of scenarios for Splunk Observability Cloud :ref:`scenario-landing`
+A collection of scenarios for using Splunk Observability Cloud to address your goals :ref:`scenario-landing`
+
+.. rst-class:: newcard
+
+:strong:`Tutorials`
+A collection of task-based tutorials to achieve a goal in Splunk Observability Cloud :ref:`tutorial-landing`
+
+.. rst-class:: newcard
+
+:strong:`Service description`
+Benefits and service terms of Splunk Observability Cloud :ref:`o11y-service-description`
 
 .. rst-class:: newcard
 
@@ -280,16 +290,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Scenarios <get-started/scenario-landing>
-
-.. toctree::
-   :maxdepth:   3
-
-   Tutorials <get-started/tutorials>
-
-.. toctree::
-   :maxdepth:   3
-
    About Mobile TOGGLE <get-started/intro-to-mobile>
 
 .. toctree::
@@ -318,6 +318,17 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Support <get-started/support>
 
 .. toctree::
+   :caption: Scenarios and tutorials
+   :maxdepth:   4
+
+   Scenarios <scenarios-tutorials/scenario-landing>
+
+.. toctree::
+   :maxdepth:   3
+
+   Tutorials <scenarios-tutorials/tutorial-landing>   
+
+.. toctree::
    :caption: Splunk platform users
    :maxdepth:   3
 
@@ -331,7 +342,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Use case scenarios <splunkplatform/scenarios/integration-scenario-landing>
+   Scenarios <splunkplatform/scenarios/integration-scenario-landing>
 
 .. toctree::
    :maxdepth:   3
@@ -411,7 +422,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Splunk Distribution of the OpenTelemetry Collector TOGGLE <gdi/opentelemetry/opentelemetry>
 
 .. toctree::
-   :maxdepth:   3
+   :maxdepth:   4
 
    Collect infrastructure metrics and logs TOGGLE <gdi/get-data-in/compute/compute>
 
@@ -445,6 +456,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    metrics-and-metadata/data-model
+
+.. toctree::
+   :maxdepth:   3
+
+   Use internal search <metrics-and-metadata/search>
 
 .. toctree::
    :maxdepth:   3

@@ -11,10 +11,12 @@ Collector components
     :titlesonly:
     :hidden:
 
+
     Receivers <components/a-components-receivers.rst>
     Processors <components/a-components-processors.rst>
     Exporters <components/a-components-exporters.rst>
     Extensions <components/a-components-extensions.rst>        
+
 
 The OpenTelemetry Collector includes the following component types:
 
@@ -56,9 +58,6 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
      - Metrics
    * - :ref:`collectd-receiver` (``collectd``)
      - Receives data exported through the CollectD ``write_http`` plugin. Only supports the JSON format.
-     - Metrics
-   * - :ref:`databricks_receiver` (``databricks``)
-     - Uses the Databricks API to generate metrics about the operation of a Databricks instance.
      - Metrics
    * - :ref:`discovery-receiver` (``discovery``)
      - Wraps the receiver creator to facilitate the discovery of metric collection targets. See :ref:`discovery_mode`.
@@ -105,6 +104,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`mongodb-atlas-receiver` (``mongodbatlas``)
      - Retrieves metrics from MongoDB Atlas using their monitoring APIs.
      - Metrics
+   * - :ref:`mssql-server-receiver` (``sqlserver``)
+     - Grabs metrics from a Microsoft SQL Server instance. 
+     - Metrics    
    * - :ref:`mysql-receiver` (``mysql``)
      - Queries and retrieves metrics about MySQL's global status and InnoDB tables.
      - Metrics      
@@ -219,6 +221,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`probabilistic-sampler-processor` (``probabilisticsampler``) 
      - Provides samples based on hash values determined by trace IDs.
      - Traces
+   * - :ref:`redaction-processor` (``redaction``)
+     - Deletes span attributes that don't match a list of allowed attributes. It also masks span attribute values that match a blocked value list.
+     - Traces
    * - :ref:`resource-processor` (``resource``)
      - Applies changes to resource attributes. Attributes represent actions that can be applied on resources.
      - Metrics, logs, traces
@@ -266,7 +271,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
      - Exports metrics, logs, and traces to Kafka using a synchronous producer. 
      - Metrics, logs, traces
    * - :ref:`loadbalancing-exporter` (``loadbalancing``)
-     - Exports spans, metrics and logs depending on the ``routing_key`` configured.
+     - Exports metrics, logs, and traces to different back-ends.
      - Metrics, logs, traces
    * - :ref:`logging-exporter` (``logging``)
      - Exports data to the console. By default, ``logging`` doesn't send its output to Windows Event Viewer. Run the Splunk Distribution of OpenTelemetry Collector directly from the PowerShell terminal to send output to the Windows Event Viewer.

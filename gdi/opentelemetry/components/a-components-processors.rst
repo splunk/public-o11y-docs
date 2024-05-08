@@ -20,6 +20,7 @@ Collector components: Processors
     memory-limiter-processor
     metrics-transform-processor
     probabilistic-sampler-processor
+    redaction-processor
     resource-processor
     resourcedetection-processor
     routing-processor
@@ -38,6 +39,10 @@ The following processors are available:
 * :ref:`memory-limiter-processor`
 * :ref:`metrics-transform-processor`
 * :ref:`probabilistic-sampler-processor`
+<<<<<<< HEAD
+=======
+* :ref:`redaction-processor`
+>>>>>>> main
 * :ref:`resource-processor`
 * :ref:`resourcedetection-processor`
 * :ref:`routing-processor`

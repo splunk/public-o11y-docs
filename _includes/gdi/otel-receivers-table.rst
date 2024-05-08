@@ -2,7 +2,6 @@
 * :ref:`carbon-receiver`
 * :ref:`cloudfoundry-receiver`
 * :ref:`collectd-receiver`
-* :ref:`databricks-receiver`
 * :ref:`discovery-receiver`
 * :ref:`filelog-receiver`   
 * :ref:`fluentd-receiver`
@@ -18,6 +17,7 @@
 * :ref:`kubernetes-objects-receiver`
 * :ref:`mongodb-receiver`
 * :ref:`mongodb-atlas-receiver`
+* :ref:`mssql-server-receiver` 
 * :ref:`mysql-receiver`
 * :ref:`oracledb-receiver`
 * :ref:`otlp-receiver`                

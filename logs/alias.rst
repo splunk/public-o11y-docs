@@ -51,6 +51,8 @@ For example, say Observability Cloud receives the following telemetry data:
 
 Although these refer to the same trace ID value, the log and the trace cannot be correlated in Observability Cloud because the field names, ``trace_id`` and ``trace.id`` do not match. In this case, alias your log metadata field ``trace.id`` to ``trace_id`` using Field Aliasing. When the field names in APM and Log Observer match, the trace and the log with the same trace ID value can be correlated in Observability Cloud. Then when you are viewing the trace in APM, you can click directly into the log with the same trace ID value and view the correlated log in Log Observer.
 
+To ensure full functionality of both Log Observer and Related Content, verify that your log fields are correctly mapped to the required key names as listed at :ref:`relatedcontent-log-observer`. 
+
 Normalizing field names
 --------------------------------------------------------------------------------
 One data source might have a field called ``http_referrer``. This field might be misspelled in your source data as ``http_referer``. Use field aliases to capture the misspelled field in your original source data and map it to the expected field name without modifying your logging code.

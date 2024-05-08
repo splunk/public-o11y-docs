@@ -9,6 +9,7 @@ Connect AWS to Splunk Observability Cloud
 
 .. toctree::
   :hidden:
+  :maxdepth: 5
 
   AWS authentication and supported regions <aws-prereqs>
   Compare connection options <aws-compare-connect>
@@ -23,6 +24,7 @@ Connect AWS to Splunk Observability Cloud
   Troubleshoot your AWS connection <aws-troubleshooting>
   Troubleshoot Metric Streams <aws-ts-metric-streams>
   GetMetricStatistics API deprecation notice <aws-api-notice>
+  aws-tutorial/about-aws-tutorial.rst
 
 You have several data ingestion and connection methods when it comes to monitoring your Amazon Web Services (AWS) data in Splunk Observability Cloud. 
 

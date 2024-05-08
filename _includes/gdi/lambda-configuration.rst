@@ -26,7 +26,11 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
         - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. See :ref:`Authentication token <admin-tokens>`. To send data to a Splunk OTel Collector in EC2, see :ref:`ec2-otel-collector-serverless`.
 
       * - ``AWS_LAMBDA_EXEC_WRAPPER``
+<<<<<<< HEAD
         - Set the value for the ``AWS_LAMBDA_EXEC_WRAPPER`` environment variable:
+=======
+        - Set the value for the environment variable given your programming language:
+>>>>>>> main
 
             .. tabs::
 
