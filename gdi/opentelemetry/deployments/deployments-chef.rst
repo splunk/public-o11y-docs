@@ -132,10 +132,10 @@ For Linux, the cookbook accepts the attributes described in the following table:
 
 .. _chef-zero-config:
 
-Configure automatic discovery for Java and Node.js (Linux only)
-------------------------------------------------------------------
+Configure automatic discovery for back-end applications (Linux only)
+--------------------------------------------------------------------
 
-You can automatically instrument your Java and Node.js applications along with the Collector installation using automatic discovery. Automatic discovery removes the need to install and configure OpenTelemetry agents separately. See :ref:`discovery_mode` for more information.  The applications to be instrumented on the node need to be started or restarted separately after installation or any configuration changes for automatic discovery to take effect.
+You can automatically instrument your back-end applications applications along with the Collector installation using automatic discovery. Automatic discovery removes the need to install and configure OpenTelemetry agents separately. See :ref:`discovery_mode` for more information.  The applications to be instrumented on the node need to be started or restarted separately after installation or any configuration changes for automatic discovery to take effect.
 
 The following table shows the variables that can be configured with this Chef cookbook:
 
@@ -147,10 +147,13 @@ The following table shows the variables that can be configured with this Chef co
      - Description
      - Default value
    * - ``with_auto_instrumentation``
-     - Whether to install or manage automatic discovery for Java and Node.js. When set to ``true``, the ``splunk-otel-auto-instrumentation`` deb/rpm package is downloaded and installed from the Collector repository. To learn more, see :ref:`linux-backend-auto-discovery`.
+     - Whether to install or manage automatic discovery for back-end applications. When set to ``true``, the ``splunk-otel-auto-instrumentation`` deb/rpm package is downloaded and installed from the Collector repository. To learn more, see :ref:`linux-backend-auto-discovery`.
      - ``false``
+   * - ``with_auto_instrumentation_sdks``
+     - The automatic discovery SDKs to install and activate. Note: ``dotnet`` is currently only supported for x86_64/amd64.
+     - ``%w(java nodejs dotnet)``
    * - ``auto_instrumentation_version``
-     - Version of the ``splunk-otel-auto-instrumentation`` package to install, for example, ``0.50.0``. The minimum supported version is ``0.48`` for Java and ``0.87.0`` for Node.js.
+     - Version of the ``splunk-otel-auto-instrumentation`` package to install, for example, ``0.50.0``. The minimum supported version is ``0.48`` for Java, ``0.87.0`` for Node.js, and ``0.99.0`` for .NET.
      - ``latest``
    * - ``auto_instrumentation_systemd``
      - Whether to activate and configure the automatic discovery for ``systemd`` services only. If set to ``true``, the automatic discovery environment variables are added to ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
@@ -176,9 +179,6 @@ The following table shows the variables that can be configured with this Chef co
    * - ``auto_instrumentation_otlp_endpoint``
      - Sets the OTLP gRPC endpoint that receives traces. Only applicable for OpenTelemetry Collector versions ``0.87.0`` and higher.
      - ``http://127.0.0.1:4317``
-   * - ``with_auto_instrumentation_sdks``
-     - The automatic discovery language SDKs to install and activate.
-     - ``%w(java nodejs)``
    * - ``auto_instrumentation_java_agent_path``
      - Path to the Splunk OpenTelemetry Java agent. The default path is provided by the ``splunk-otel-auto-instrumentation`` package. If the path is changed from the default value, the path should be an existing file on the node.
      - ``/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar``
