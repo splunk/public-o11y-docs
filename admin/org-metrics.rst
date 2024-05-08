@@ -76,13 +76,13 @@ Data is limited or throttled if you exceed your entitlements or system
 limits, as explained in
 :ref:`Metrics that track system limits <org-metrics-track-limits>`
 and
-:ref:`Metrics that track system limits <org-metrics-throttling>`
+:ref:`Metrics that track system limits <org-metrics-throttling>`.
 
 Data is also filtered out of the platform, and can be tracked with
 :ref:`certain org metric values <org-metrics-gross-num>`:
 
 -  Data can be automatically filtered out by certain components, such as
-   the :ref:`SignalFx exporter <signalfx-exporter>`
+   the :ref:`SignalFx exporter <signalfx-exporter>`.
 
 -  Invalid data is also filtered once it reaches the platform. For
    example, data points without a metric name or value are invalid and
