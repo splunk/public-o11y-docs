@@ -73,7 +73,7 @@ To create custom metrics, follow these steps:
    .. code-block:: java
 
       OpenTelemetry openTelemetry = GlobalOpenTelemetry.get();
-      Meter sampleMeter = openTelemetry.getMeter("io.opentelemetry.example.metrics");
+      Meter sampleMeter = openTelemetry.getMeter("foo.example.metrics");
 
 3. Build a specific metric type. The following example shows how to create a gauge metric:
 
