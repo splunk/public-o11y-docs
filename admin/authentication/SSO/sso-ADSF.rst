@@ -162,10 +162,10 @@ Add Splunk Observability Cloud as a relying party in ADFS:
 
 .. _obtain-adfs-cert:
 
-Obtain ADFS certificate to install to Observability Cloud
+Obtain ADFS certificate to install to Splunk Observability Cloud
 -------------------------------------------------------------------------
 
-Obtain an ADFS certificate to install to Observability Cloud:
+Obtain an ADFS certificate to install to Splunk Observability Cloud:
 
 #. In the ADFS management console, select :guilabel:`Service`, then select :guilabel:`Certificates`.
 #. From the :guilabel:`Token-signing` list, right-click the certificate, then select :menuselection:`View Certificate`.
@@ -180,7 +180,7 @@ Obtain an ADFS certificate to install to Observability Cloud:
 
 .. _obtain-adfs-metadata:
 
-Obtain federation metadata file to install to Observability Cloud
+Obtain federation metadata file to install to Splunk Observability Cloud
 ---------------------------------------------------------------------------------
 
 Obtain a federation metadata file to install to Observability Cloud:
