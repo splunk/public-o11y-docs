@@ -39,7 +39,9 @@ To create custom spans and traces, follow these steps:
       @GetMapping("/rolldice")
       public List<Integer> index(@RequestParam("player") Optional<String> player,
             @RequestParam("rolls") Optional<Integer> rolls) {
-         Span span = tracer.spanBuilder("rollTheDice").startSpan();
+         Span span = tracer.spanBuilder("rollTheDice")
+            .setAttribute("player.name", player.orElse("unknown"))
+            .startSpan();
 
          // Make the span the current span
          try (Scope scope = span.makeCurrent()) {
