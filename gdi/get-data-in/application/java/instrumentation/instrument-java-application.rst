@@ -150,7 +150,7 @@ To make sure metric collection is turned on, activate the metrics feature using 
    -Dsplunk.metrics.enabled=true \
    -jar <myapp>.jar
 
-If your metrics endpoint is different than the default value, set the ``SPLUNK_METRICS_ENDPOINT`` environment variable. See :ref:`metrics-configuration-java` for more information.
+If your metrics endpoint is different than the default value, set the ``SPLUNK_METRICS_ENDPOINT`` environment variable. See :ref:`advanced-java-otel-configuration` for more information.
 
 .. note:: If you activate memory profiling, metrics collection is activated automatically and cannot be deactivated.
 
@@ -184,7 +184,7 @@ In the following example, the sampler drops all ``SERVER`` spans whose endpoints
       $env:OTEL_TRACES_SAMPLER=rules
       $env:OTEL_TRACES_SAMPLER_ARG=drop=/healthcheck;fallback=parentbased_always_on
 
-See :ref:`trace-sampling-settings-java` for more information.
+See :ref:`advanced-java-otel-configuration` for more information.
 
 .. _configure-java-instrumentation:
 
