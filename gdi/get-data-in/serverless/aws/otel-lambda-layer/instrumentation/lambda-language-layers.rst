@@ -7,15 +7,9 @@ Instrument your AWS Lambda function using separate layers
 .. meta::
    :description: The Splunk OpenTelemetry Lambda layer automatically instruments your AWS Lambda functions for many programming languages. Follow these steps to get started.
 
-<<<<<<< HEAD
-You can automatically instrument your Lambda function for Splunk Observability Cloud using layers only for your runtime or language. This can significantly reduce overhead.
-
-Follow these instructions to install the Splunk OpenTelemetry Lambda layer for Java, Python, or Node.js functions. See :ref:`instrument-aws-lambda-functions` for the default deployment instructions.
-=======
 You can automatically instrument your AWS Lambda function for Splunk Observability Cloud using layers only for your runtime or language. Instrumenting your function using separate layers can significantly reduce overhead.
 
 Follow these instructions to install the Splunk OpenTelemetry Lambda layer for Java, Python, or Node.js functions. See :ref:`instrument-aws-lambda-functions` for the all-in-one default deployment instructions.
->>>>>>> main
 
 
 Check compatibility and requirements
@@ -27,11 +21,7 @@ Check compatibility and requirements
 Considerations on sizing and scaling
 ==============================================
 
-<<<<<<< HEAD
-If you need to reduce performance overhead further, consider using the Collector in a separate EC2 instance instead than a layer. See :ref:`instrument-aws-lambda-functions-ec2`.
-=======
 If you need to reduce performance overhead further, consider using the Collector in a separate EC2 instance instead rather than a layer. See :ref:`instrument-aws-lambda-functions-ec2`.
->>>>>>> main
 
 
 Install the AWS Lambda layer for your language
@@ -43,11 +33,7 @@ Follow these steps to instrument your function using the Splunk OpenTelemetry La
 
 #. In the :guilabel:`Layers` section, select :guilabel:`Add a layer`, then select :guilabel:`Specify an ARN`.
 
-<<<<<<< HEAD
-#. Copy the Amazon Resource Name (ARN) for the region of your Lambda function from the list matching your architecture:
-=======
 #. Copy the Amazon Resource Name (ARN) for the region of your AWS Lambda function from the list that matches your architecture:
->>>>>>> main
 
    .. tabs::
 
@@ -103,11 +89,7 @@ Follow these steps to instrument your function using the Splunk OpenTelemetry La
          .. github:: yaml
             :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm-collector-arm.md
 
-<<<<<<< HEAD
-#. (Optional) Repeat the previous steps to install Lambda metrics extension layer for Splunk Infrastructure Monitoring.
-=======
 #. (Optional) Repeat the previous steps to install AWS Lambda metrics extension layer for Splunk Infrastructure Monitoring.
->>>>>>> main
 
    .. tabs::
 
@@ -122,11 +104,7 @@ Follow these steps to instrument your function using the Splunk OpenTelemetry La
             :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-lambda-metrics-arm.md
 
 
-<<<<<<< HEAD
-.. note:: You can automate the update of the Lambda layers using the AWS CLI or other automation tools.
-=======
 .. note:: You can automate the update of the AWS Lambda layers using the AWS CLI or other automation tools.
->>>>>>> main
 
 
 .. include:: /_includes/gdi/lambda-configuration.rst

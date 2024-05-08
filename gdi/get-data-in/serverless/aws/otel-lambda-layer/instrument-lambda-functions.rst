@@ -18,13 +18,6 @@ Instrument your AWS Lambda function for Splunk Observability Cloud
 Use the Splunk OpenTelemetry Lambda layer to automatically instrument your AWS Lambda functions for many programming languages. To get started, use the guided setup or follow the instructions manually.
 
 .. raw:: html
-<<<<<<< HEAD
-
-  <embed>
-    <h2>Generate customized instructions using the guided setup <a name="lambda-instructions" class="headerlink" href="#lambda-instructions" title="Permalink to this headline">¶</a></h2>
-  </embed>
-=======
->>>>>>> main
 
   <embed>
     <h2>Generate customized instructions using the guided setup <a name="lambda-instructions" class="headerlink" href="#lambda-instructions" title="Permalink to this headline">¶</a></h2>
@@ -66,11 +59,7 @@ If you don't use the guided setup, follow these instructions to manually install
     <h3>Considerations on sizing and scaling <a name="otel-lambda-layer-sizing" class="headerlink" href="#otel-lambda-layer-sizing" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-<<<<<<< HEAD
-The default version of the layer supports multiple runtimes and includes the Collector, as well as the metrics extension layer. If you need to reduce performance overhead, consider the following deployment methods:
-=======
 The default version of the layer supports multiple runtimes and includes the Collector, as well as the metrics extension layer. If you need to reduce performance overhead, consider choosing from the following deployment methods:
->>>>>>> main
 
 - :ref:`instrument-aws-lambda-functions-modular`
 - :ref:`instrument-aws-lambda-functions-ec2`
@@ -109,13 +98,6 @@ If you don't want to use a local Collector, you must specify the address of a Co
 
 .. note:: You can automate the update of the AWS Lambda layers using the AWS CLI or other automation tools.
 
-<<<<<<< HEAD
-If you don't want to use a local Collector, you must specify the address of a Collector in data forwarding mode. See :ref:`ec2-otel-collector-serverless`.
-
-.. note:: You can automate the update of the Lambda layers using the AWS CLI or other automation tools.
-
-=======
->>>>>>> main
 
 .. _set-env-vars-otel-lambda:
 

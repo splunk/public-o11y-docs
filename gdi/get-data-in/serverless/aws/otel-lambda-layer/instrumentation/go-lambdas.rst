@@ -46,11 +46,7 @@ To instrument a Go function in AWS Lambda for Splunk APM, follow these steps:
          return fmt.Sprintf("Hello %s!", name.Name), nil
       }
 
-<<<<<<< HEAD
-   .. note:: For a full example, see :new-page:`https://github.com/signalfx/tracing-examples/blob/main/opentelemetry-tracing/opentelemetry-lambda/go/example.go <https://github.com/signalfx/tracing-examples/blob/main/opentelemetry-tracing/opentelemetry-lambda/go/example.go>` on GitHub.
-=======
    .. note:: For a full example, see :new-page:`OpenTelemetry Lambda tracing examples <https://github.com/signalfx/tracing-examples/blob/main/opentelemetry-tracing/opentelemetry-lambda/go/example.go>` on GitHub.
->>>>>>> main
 
 #. Configure the required environment variables. See :ref:`set-env-vars-otel-lambda`.
 
