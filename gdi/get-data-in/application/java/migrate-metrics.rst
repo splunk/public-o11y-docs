@@ -59,11 +59,11 @@ To migrate your instrumentation to the version 2.0 or higher of the Java agent, 
 
    - Go to :guilabel:`Settings`, :guilabel:`Data Configuration`.
    - Select :guilabel:`Data Migration`.
-   - In :guilabel:`Migrating data`, select :guilabel:`Start`.
+   - Inside the :guilabel:`Start migration` card, select :guilabel:`Start`.
 
 2. Turn on OTLP histograms in the Splunk Distribution of OpenTelemetry Collector. See :ref:`enable-histograms-export`.
 
-3. Install version 2.0 or higher of the Splunk Distribution of the Java agent. For upgrade best practices, see :ref:`upgrade-java-instrumentation`.
+3. Make sure version 2.0 or higher of the Splunk Distribution of the Java agent is installed. See :ref:`upgrade-java-instrumentation`.
 
 4. Migrate your custom reporting elements:
 
@@ -75,7 +75,7 @@ To migrate your instrumentation to the version 2.0 or higher of the Java agent, 
 
    - Go to :guilabel:`Settings`, :guilabel:`Data Configuration`.
    - Select :guilabel:`Data Migration`.
-   - In :guilabel:`Migration completed`, select :guilabel:`Complete`.
+   - In the :guilabel:`Stop migration` card, select :guilabel:`Stop`.
 
 .. caution:: If you don't turn off the Data Migration stream for Java metrics after the grace period, the duplicated metrics are billed as custom metrics. See :ref:`java-metrics-grace-period`.
 

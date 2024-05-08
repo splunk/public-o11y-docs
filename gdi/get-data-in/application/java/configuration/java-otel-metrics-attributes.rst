@@ -120,10 +120,10 @@ The agent collects the following ClassLoader metrics:
   * - Metric
     - Type
     - Description
-  * - ``runtime.jvm.classes.loaded``
+  * - ``jvm.class.count``
     - Gauge
     - Number of loaded classes.
-  * - ``runtime.jvm.classes.unloaded``
+  * - ``jvm.class.unloaded``
     - Counter
     - Total number of unloaded classes since the process started.
 
@@ -142,40 +142,15 @@ The agent collects the following garbage collection (GC) metrics:
   * - Metric
     - Type
     - Description
-  * - ``runtime.jvm.gc.concurrent.phase.time``
-    - Timer
+  * - ``jvm.gc.duration{jvm.gc.name=<concurrent gcs>}``
+    - Histogram
     - Time spent in concurrent phase, in milliseconds.
-  * - ``runtime.jvm.gc.memory.allocated``
+  * - ``jvm.memory.allocated``
     - Counter
     - Increase in the size of the young heap memory pool after one garbage collection and before the next.
-  * - ``runtime.jvm.gc.memory.promoted``
-    - Counter
-    - Count of positive increases in the size of the old generation memory pool from before to after garbage collection.
-  * - ``runtime.jvm.gc.pause``
+  * - ``jvm.gc.duration{jvm.gc.name!=<concurrent gcs>}``
     - Timer
-    - Time spent in garbage collection pause, in seconds. It produces multiple aggregations, such as ``runtime.jvm.gc.pause.avg`` or ``runtime.jvm.gc.pause.max``.
-
-.. _jvm-heap-pressure-metrics:
-
-Heap pressure metrics
-----------------------------------------------------------------------
-
-The agent collects the following heap pressure metrics:
-
-.. list-table::
-  :header-rows: 1
-  :widths: 40 10 50
-  :width: 100%
-
-  * - Metric
-    - Type
-    - Description
-  * - ``runtime.jvm.gc.overhead``
-    - Gauge
-    - An approximation of the percentage of CPU time used by GC activities over the last lookback period or since monitoring began, whichever is shorter, in the range [0..1].
-  * - ``runtime.jvm.memory.usage.after.gc``
-    - Gauge
-    - The percentage of long-lived heap pool used after the last GC event, in the range [0..1].
+    - Time spent in garbage collection pause, in seconds.
 
 .. _jvm-memory-metrics:
 
@@ -199,26 +174,26 @@ The agent collects the following memory metrics:
         - Requires to activate memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag.
   * - ``process.runtime.jvm.memory.reclaimed``
     - Counter
-    - Total number of bytes reclaimed by the GC since the previous data point was emitted. Notes: 
+    - Total number of bytes reclaimed by the GC since the previous data point was emitted. Notes:
         - This metric might be inaccurate for concurrent garbage collectors such as Shenandoah or ZGC.
         - Use the rate per second rollup.
         - Requires to activate memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag.
-  * - ``runtime.jvm.buffer.count``
+  * - ``jvm.buffer.count``
     - Gauge
     - An estimate of the number of buffers in the pool.
-  * - ``runtime.jvm.buffer.memory.used``
+  * - ``jvm.buffer.memory.usage``
     - Gauge
     - An estimate of the memory that the JVM is using for this buffer pool, in bytes.
-  * - ``runtime.jvm.buffer.total.capacity``
+  * - ``jvm.buffer.memory.limit``
     - Gauge
     - An estimate of the total capacity of the buffers in this pool, in bytes.
-  * - ``runtime.jvm.memory.committed``
+  * - ``jvm.memory.committed``
     - Gauge
     - Amount of memory available to the JVM, in bytes.
-  * - ``runtime.jvm.memory.max``
+  * - ``jvm.memory.limit``
     - Gauge
     - Maximum amount of memory available for memory management, in bytes.
-  * - ``runtime.jvm.memory.used``
+  * - ``jvm.memory.used``
     - Gauge
     - Amount of used memory, in bytes.
 
@@ -251,15 +226,9 @@ The agent collects the following thread metrics:
   * - Metric
     - Type
     - Description
-  * - ``runtime.jvm.threads.daemon``
+  * - ``jvm.threads.count``
     - Gauge
-    - Number of live daemon threads.
-  * - ``runtime.jvm.threads.live``
-    - Gauge
-    - Number of live threads, including both daemon and nondaemon threads.
-  * - ``runtime.jvm.threads.peak``
-    - Gauge
-    - Peak live thread count since the JVM started or peak was reset.
+    - Number of live threads, including daemon and nondaemon threads.
 
 
 .. _connection-pool-metrics:
@@ -288,13 +257,10 @@ Each of the connection pools reports a subset of the following metrics:
   * - Metric
     - Type
     - Description
-  * - ``db.pool.connections``
-    - Gauge
-    - Number of open connections.
-  * - ``db.pool.connections.active``
+  * - ``db.client.connections.usage[state=used]``
     - Gauge
     - Number of open connections that are in use.
-  * - ``db.pool.connections.idle``
+  * - ``db.client.connections.usage[state=idle]``
     - Gauge
     - Number of open connections that are idle.
   * - ``db.pool.connections.idle.max``
@@ -313,14 +279,14 @@ Each of the connection pools reports a subset of the following metrics:
     - Counter
     - Number of connection timeouts that have happened since the application started.
   * - ``db.pool.connections.create_time``
-    - Timer
-    - Time it took to create a new connection.
+    - Histogram
+    - Time it took to create a new connection, in milliseconds.
   * - ``db.pool.connections.wait_time``
-    - Timer
-    - Time it took to get an open connection from the pool.
+    - Histogram
+    - Time it took to get an open connection from the pool, in milliseconds.
   * - ``db.pool.connections.use_time``
-    - Timer
-    - Time between borrowing a connection and returning it to the pool.
+    - Histogram
+    - Time between borrowing a connection and returning it to the pool, in milliseconds.
 
 All connection pool metrics share the following tags:
 
@@ -336,62 +302,6 @@ All connection pool metrics share the following tags:
   * - ``pool.type``
     - Type or implementation of the connection pool. For example, ``c3p0``, ``dbcp2``, or ``hikari``.
 
-.. _thread-pool-metrics:
-
-Thread pool metrics
-----------------------------------------------------------------------
-
-The Splunk Distribution of OpenTelemetry Java instruments the following thread pool implementations:
-
-- Tomcat connector thread pools
-- WebSphere Liberty web request thread pool
-- Weblogic thread pools
-
-Each of the supported connection pools reports a subset of the following metrics:
-
-.. list-table::
-  :header-rows: 1
-  :widths: 40 10 50
-  :width: 100%
-
-  * - Metric
-    - Type
-    - Description
-  * - ``executor.threads``
-    - Timer
-    - Number of threads in the pool.
-  * - ``executor.threads.active``
-    - Timer
-    - Number of threads that are executing code.
-  * - ``executor.threads.idle``
-    - Timer
-    - Number of threads that aren't executing code.
-  * - ``executor.threads.core``
-    - Timer
-    - Core thread pool size, expressed as the number of threads that are always kept in the pool.
-  * - ``executor.threads.max``
-    - Timer
-    - Maximum number of threads in the pool.
-  * - ``executor.tasks.submitted``
-    - Counter
-    - Total number of tasks submitted to the executor.
-  * - ``executor.tasks.completed``
-    - Counter
-    - Total number of tasks completed by the executor.
-
-All thread pool metrics have the following tags:
-
-.. list-table::
-  :header-rows: 1
-  :widths: 40 60
-  :width: 100%
-
-  * - Tag
-    - Value
-  * - ``executor.name``
-    - Name of the thread pool.
-  * - ``executor.type``
-    - Type/implementation of the connection pool. For example, ``tomcat``, ``liberty``, or ``weblogic``.
 
 .. _webengine-attributes-java-otel:
 
@@ -417,7 +327,3 @@ New metric names
 ======================================
 
 .. include:: /_includes/gdi/java-20-metrics-equivalences.rst
-
-For more information, see:
-
-* :new-page:`OpenTelemetry semantic convention <https://opentelemetry.io/docs/specs/semconv/>`
