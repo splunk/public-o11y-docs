@@ -21,9 +21,9 @@ endpoints:
 
 This collectd plugin is not compatible with Kubernetes cluster mode. You need
 to select distinct monitor configurations and discovery rules
-for master and worker processes. For the master configuration, set
+for primary and worker processes. For the primary configuration, set
 ``isMaster`` to ``true``. When you run Apache Spark on Hadoop YARN, this
-integration can only report application metrics from the master node.
+integration can only report application metrics from the primary node.
 
 This integration is only available on Linux.
 
@@ -83,7 +83,7 @@ section of your configuration file:
 ``collectd_spark_worker`` are for identification purposes only and don't
 affect functionality. You can use either name in your configuration, but
 you need to select distinct monitor configurations and discovery rules
-for master and worker processes. For the master configuration, see the
+for primary and worker processes. For the primary configuration, see the
 ``isMaster`` field in the configuration settings section.
 
 Configuration settings
@@ -128,7 +128,7 @@ integration:
       - ``isMaster``
       - no
       - ``bool``
-      - Set this option to ``true`` when you want to monitor a master
+      - Set this option to ``true`` when you want to monitor a primary
          Spark node. The default is ``false``.
    - 
 

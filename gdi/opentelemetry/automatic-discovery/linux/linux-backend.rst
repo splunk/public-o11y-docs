@@ -15,6 +15,7 @@ Automatic discovery for Linux can detect and configure the following application
 
 * Java
 * Node.js
+* .NET
 
 How automatic discovery for Linux works
 ===================================================
@@ -44,6 +45,12 @@ Make sure you've also installed the components specific to your language runtime
 
         Node.js version 14 or higher and supported libraries. See :ref:`nodejs-otel-requirements` for more information.
 
+    .. tab:: .NET
+
+        .NET version 6.0 or higher and supported libraries. See :ref:`dotnet-otel-requirements` for more information.
+
+        Automatic discovery for .NET is only supported for x86_64/AMD64 architectures.
+
 Get started
 ===============================
 
@@ -71,7 +78,7 @@ Using the installer script, you can install and activate automatic discovery for
 
                 Using the installer script, you can install the automatic discovery package for Java and activate automatic discovery for Java for either all supported Java applications on the host via the system-wide method or for only Java applications running as ``systemd`` services.
 
-                .. note:: By default, automatic discovery is activated for both Java and Node.js when using the installer script. To deactivate automatic discovery for Node.js, add the ``--without-instrumentation-sdk node`` or ``--with-instrumentation-sdk java`` option in the installer script command.
+                .. note:: By default, automatic discovery is activated for all languages (Java, Node.js, and .NET) when using the installer script. To deactivate automatic discovery for other languages, add the ``--without-instrumentation-sdk [language]`` option in the installer script command.
                 
                 .. tabs:: 
 
@@ -143,7 +150,7 @@ Using the installer script, you can install and activate automatic discovery for
                             
                         Next, ensure the service is running and restart your application. See :ref:`auto-discovery-linux-verify` and :ref:`auto-discovery-linux-restart-apps`. 
 
-            .. tab::  Linux packages
+            .. tab::  Deb/RPM
 
                 .. note:: You must first install the Splunk OpenTelemetry Collector using the :ref:`linux-packages`.
 
@@ -210,7 +217,7 @@ Using the installer script, you can install and activate automatic discovery for
 
                 Using the installer script, you can install and activate automatic discovery for Node.js for either all supported Node.js applications on the host via the system-wide method or for only Node.js applications running as ``systemd`` services.
 
-                .. note:: By default, automatic discovery is activated for both Java and Node.js when using the installer script. To deactivate automatic discovery for Java, add the ``--without-instrumentation-sdk java`` or ``--with-instrumentation-sdk node`` option in the installer script command.
+                .. note:: By default, automatic discovery is activated for all languages (Java, Node.js, and .NET) when using the installer script. To deactivate automatic discovery for other languages, add the ``--without-instrumentation-sdk [language]`` option in the installer script command.
 
                 .. tabs::
 
@@ -274,6 +281,90 @@ Using the installer script, you can install and activate automatic discovery for
             .. tab:: Puppet
 
                 See :ref:`puppet-zero-config`.
+
+    .. tab:: .NET
+
+        Using the installer script, you can install and activate automatic discovery for .NET for either all supported .NET applications on the host via the system-wide method or for only .NET applications running as ``systemd`` services.
+
+        .. note:: By default, automatic discovery is activated for all languages (Java, Node.js, and .NET) when using the installer script. To deactivate automatic discovery for other languages, add the ``--without-instrumentation-sdk [language]`` option in the installer script command.
+
+        .. tabs::
+
+            .. tab:: Installer script 
+
+                .. tabs:: 
+
+                    .. tab:: System-wide
+                                
+                        Run the installer script with the ``--with-instrumentation`` option, as shown in the following example. Replace  ``<SPLUNK_REALM>`` and ``<SPLUNK_ACCESS_TOKEN>`` with your Splunk Observability Cloud realm and token, respectively.
+
+                        .. code-block:: bash
+
+                            curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+                            sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
+
+                        .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option.
+
+                        The system-wide automatic discovery method automatically adds environment variables to ``/etc/splunk/zeroconfig/dotnet.conf``.
+
+                        To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <env>`` option. Replace ``<env>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
+
+                        .. code-block:: bash
+                            :emphasize-lines: 2
+
+                            curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+                            sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --deployment-environment prod \
+                            --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
+
+                        You can activate AlwaysOn Profiling for CPU and memory, as well as metrics, using additional options, as in the following example:
+
+                        .. code-block:: bash
+                            :emphasize-lines: 4
+
+                            curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+                            sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --deployment-environment prod \
+                            --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN> \
+                            --enable-profiler --enable-profiler-memory --enable-metrics
+                                    
+                        Next, ensure the service is running and restart your application. See :ref:`auto-discovery-linux-verify` and :ref:`auto-discovery-linux-restart-apps`. 
+                        
+                    .. tab:: systemd
+
+                        Run the installer script with the ``--with-systemd-instrumentation`` option, as shown in the following example. Replace  ``<SPLUNK_REALM>`` and ``<SPLUNK_ACCESS_TOKEN>`` with your Splunk Observability Cloud realm and token, respectively.
+                                
+                        .. code-block:: bash
+
+                            curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+                            sudo sh /tmp/splunk-otel-collector.sh --with-systemd-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
+                                
+                        The ``systemd`` instrumentation automatically adds environment variables to ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
+
+                        .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option. 
+
+                        To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <env>`` option. Replace ``<env>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
+
+                        .. code-block:: bash
+                            :emphasize-lines: 2
+
+                            curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+                            sudo sh /tmp/splunk-otel-collector.sh --with-systemd-instrumentation --deployment-environment prod \
+                            --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
+
+                        You can activate AlwaysOn Profiling for CPU and memory, as well as metrics, using additional options, as in the following example:
+
+                        .. code-block:: bash
+                            :emphasize-lines: 4
+
+                            curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+                            sudo sh /tmp/splunk-otel-collector.sh --with-systemd-instrumentation --deployment-environment prod \
+                            --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN> \
+                            --enable-profiler --enable-profiler-memory --enable-metrics
+                                    
+                        Next, ensure the service is running and restart your application. See :ref:`auto-discovery-linux-verify` and :ref:`auto-discovery-linux-restart-apps`. 
+
+            .. tab:: Ansible
+
+                See :ref:`ansible-zero-config`.
 
 .. _auto-discovery-linux-verify:
 

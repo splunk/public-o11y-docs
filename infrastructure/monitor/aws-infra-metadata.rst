@@ -324,7 +324,7 @@ For more information on these properties, including acceptable values and constr
 
    *  - kms_key_id
       - aws_kms_key_id
-      - The full ARN of the AWS customer master key used to protect the volume encryption key for the volume
+      - The full ARN of the AWS customer primary key used to protect the volume encryption key for the volume
 
    *  - size
       - aws_size
@@ -650,7 +650,7 @@ For more information on these properties, including acceptable values and constr
 
    *  - MasterPublicDnsName
       - aws_master_public_dns_name
-      - The DNS name of the master node
+      - The DNS name of the primary node
 
    *  - ReleaseLabel
       - aws_release_label
@@ -957,7 +957,7 @@ For more information, including acceptable values and constraints, see the AWS d
 
    *  - MasterUsername
       - aws_cluster_master_username
-      - Master username for the cluster. This is the name used to connect to the database specified in the DBName parameter.
+      - Primary username for the cluster. This is the name used to connect to the database specified in the DBName parameter.
 
    *  - PubliclyAccessible
       - aws_cluster_publicly_accessible

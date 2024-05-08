@@ -21,7 +21,7 @@ To configure the Browser RUM agent, edit the object passed to the ``SplunkRum.in
    <script>
          SplunkRum.init(
          {
-            beaconEndpoint: 'https://rum-ingest.us0.signalfx.com/v1/rum',
+            realm: 'us0',
             rumAccessToken: 'ABC123...789',
             applicationName: 'my-awesome-app',
             version: '1.0.1'
@@ -36,7 +36,7 @@ General settings
 
 Use the following settings to configure the Browser RUM agent:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 10 20 70
 
@@ -359,16 +359,25 @@ When calling the OpenTelemetry API directly, make sure the API version you're us
 Exporter settings
 =====================================
 
-The Browser RUM agent uses the Zipkin exporter to send data to Splunk Observability Cloud. The following example shows how to register a different trace exporter:
+By default, the Browser RUM agent uses the Zipkin exporter to send data to Splunk Observability Cloud. 
+
+Starting from version 0.17.0 and higher, you can configure the RUM agent to use the OTLP exporter. The following example shows how to configure the RUM instrumentation to use the OTLP exporter:
 
 .. code-block:: javascript
+   :emphasize-lines: 7,8,9
 
-   import SplunkRum from '@splunk/otel-web';
-   import {BatchSpanProcessor} from '@opentelemetry/sdk-trace-base';
-   import {CollectorTraceExporter} from '@opentelemetry/exporter-collector';
+      SplunkRum.init({
+         realm: '<realm>',
+         rumAccessToken: '<your_rum_token>',
+         applicationName: '<application-name>',
+         deploymentEnvironment: '<deployment-env>'
+         exporter: {
+            otlp: true
+         },
+      });
 
-   const exporter = new CollectorTraceExporter({ url: 'https://collector.example.com' });
-   SplunkRum.provider.addSpanProcessor(new BatchSpanProcessor(exporter));
+When setting the ``beaconEndpoint`` manually, use ``https://rum-ingest.<realm>.signalfx.com/v1/rumotlp`` as the OTLP endpoint. The endpoint is set automatically when ``exporter.otlp`` is ``true`` and a ``realm`` is configured.
+
 
 .. _browser-rum-cookies:
 
@@ -377,7 +386,7 @@ Cookies used by the Browser RUM agent
 
 The Browser RUM agent uses the following cookies to link traces to sessions:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 10 25 65
 

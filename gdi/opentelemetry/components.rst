@@ -104,6 +104,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`mongodb-atlas-receiver` (``mongodbatlas``)
      - Retrieves metrics from MongoDB Atlas using their monitoring APIs.
      - Metrics
+   * - :ref:`mssql-server-receiver` (``sqlserver``)
+     - Grabs metrics from a Microsoft SQL Server instance. 
+     - Metrics    
    * - :ref:`mysql-receiver` (``mysql``)
      - Queries and retrieves metrics about MySQL's global status and InnoDB tables.
      - Metrics      
@@ -217,6 +220,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
      - Metrics
    * - :ref:`probabilistic-sampler-processor` (``probabilisticsampler``) 
      - Provides samples based on hash values determined by trace IDs.
+     - Traces
+   * - :ref:`redaction-processor` (``redaction``)
+     - Deletes span attributes that don't match a list of allowed attributes. It also masks span attribute values that match a blocked value list.
      - Traces
    * - :ref:`resource-processor` (``resource``)
      - Applies changes to resource attributes. Attributes represent actions that can be applied on resources.

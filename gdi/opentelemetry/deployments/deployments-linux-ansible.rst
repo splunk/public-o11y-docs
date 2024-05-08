@@ -57,7 +57,7 @@ The following table describes the variables that can be configured for this role
    * - Variable
      - Description
    * - ``gomemlimit``
-     - Replaces ``splunk_ballast_size_mib`` starting in Collector version 0.97.0. It allows limiting memory usage in the GO runtime, helping enhance garbage collection and prevent out of memory situations. Learn more at :ref:`how to update memory ballast in your configuration <collector-upgrade-memory-ballast>`. Default value is 90% of ``splunk_total_mem_mib``.   
+     - Replaces ``splunk_ballast_size_mib`` starting in Collector version 0.97.0. It allows limiting memory usage in the GO runtime, helping enhance garbage collection and prevent out of memory situations. Learn more at :ref:`how to update memory ballast in your configuration <collector-upgrade-memory-ballast>`. Default value is 90% of ``splunk_total_mem_mib``.
    * - ``splunk_access_token``
      - The Splunk access token to authenticate requests. This attribute is required.
    * - ``splunk_realm``
@@ -103,10 +103,10 @@ The following table describes the variables that can be configured for this role
 
 .. _ansible-zero-config:
 
-Configure automatic discovery for Java (Linux only)
-======================================================
+Configure automatic discovery for back-end applications (Linux only)
+====================================================================
 
-You can automatically discover and instrument your Java applications along with the Collector installation. Automatic discovery (formerly zero configuration auto instrumentation) removes the need to install and configure the Java agent separately. See :ref:`configure-auto-instrumentation` for more information. 
+You can automatically discover and instrument your back-end applications along with the Collector installation. Automatic discovery (formerly zero configuration auto instrumentation) removes the need to install and configure the SDKs separately. See :ref:`configure-auto-instrumentation` for more information.
 
 The following table shows the variables that you can configure for this Ansible role:
 
@@ -118,22 +118,31 @@ The following table shows the variables that you can configure for this Ansible 
      - Description
      - Default value
    * - ``install_splunk_otel_auto_instrumentation``
-     - Available on Linux only. Installs or manages automatic discovery for Java. When set to ``true``, the ``splunk-otel-auto-instrumentation`` Debian or RPM package is downloaded and installed from the Collector repository. The Java application on the node needs to be started or restarted separately after installation for automatic discovery to take effect. The default value is ``false``.
+     - Installs or manages automatic discovery for Java, Node.js, and/or .NET back-end applications. When set to ``true``, the ``splunk-otel-auto-instrumentation`` Debian or RPM package is downloaded and installed from the Collector repository. The application(s) on the node needs to be started or restarted separately after installation for automatic discovery or any configuration changes to take effect.
      - ``false``
+   * - ``splunk_otel_auto_instrumentation_sdks``
+     - The automatic discovery SDKs to install and activate. Note: ``dotnet`` is currently only supported for x86_64/amd64.
+     - ``['java', 'nodejs', 'dotnet']``
    * - ``splunk_otel_auto_instrumentation_version``
-     - Determines the version of the ``splunk-otel-auto-instrumentation`` package to install, for example, ``0.50.0``. The minimum supported version is ``0.48.0`` for Java and ``0.87.0`` for Node.js. The applications on the node need to be restarted for any change to take effect.
+     - Determines the version of the ``splunk-otel-auto-instrumentation`` package to install, for example, ``0.50.0``. The minimum supported version is ``0.48.0`` for Java, ``0.87.0`` for Node.js, and ``0.99.0`` for .NET.
      - ``latest``
+   * - ``splunk_otel_auto_instrumentation_systemd``
+     - By default, the ``/etc/ld.so.preload`` file on the node will be configured for the ``/usr/lib/splunk-instrumentation/libsplunk.so`` shared object library provided by the `splunk-otel-auto-instrumentation` package to activate and configure automatic discovery system-wide for all supported applications.  Alternatively, set this option to ``true`` to activate and configure automatic discovery only for supported applications running as ``systemd`` services. If this option is set to ``true``, ``/usr/lib/splunk-instrumentation/libsplunk.so`` will not be added to `/etc/ld.so.preload`. Instead, the ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf`` ``systemd`` drop-in file will be created and configured for environment variables based on the default and specified options.
+     - ``false``
    * - ``splunk_otel_auto_instrumentation_ld_so_preload``
-     - Available on Linux only. By default, the ``/etc/ld.so.preload`` file on the node is configured for the ``/usr/lib/splunk-instrumentation/libsplunk.so`` shared object library, which is provided by the ``splunk-otel-auto-instrumentation`` package and is required for automatic discovery. You can configure this variable to include additional library paths, for example, ``/path/to/my.library.so``. Use this option if you need to include custom or other shared object library files to be preloaded for your applications, in addition to the ``/usr/lib/splunk-instrumentation/libsplunk.so`` file. The Java application on the node needs to be restarted separately for any change to take effect.
+     - By default, the ``/etc/ld.so.preload`` file on the node is configured for the ``/usr/lib/splunk-instrumentation/libsplunk.so`` shared object library, which is provided by the ``splunk-otel-auto-instrumentation`` package and is required for automatic discovery. You can configure this variable to include additional library paths, for example, ``/path/to/my.library.so``. Use this option if you need to include custom or other shared object library files to be preloaded for your applications, in addition to the ``/usr/lib/splunk-instrumentation/libsplunk.so`` file.
      - None
    * - ``splunk_otel_auto_instrumentation_java_agent_jar``
-     - Determines the path to the Splunk OpenTelemetry Java agent. The default path is provided by the ``splunk-otel-auto-instrumentation`` package. If the path is changed from the default value, the path should be an existing file on the node. The specified path is added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The Java application on the node needs to be restarted separately for any change to take effect. The default value is ``/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar``.
+     - Determines the path to the Splunk OpenTelemetry Java agent. The default path is provided by the ``splunk-otel-auto-instrumentation`` package. If the path is changed from the default value, the path should be an existing file on the node.
      - ``/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar``
+   * - ``splunk_otel_auto_instrumentation_npm_path``
+     - The path to the pre-installed ``npm`` command required to install the Node.js SDK. For example, ``/my/custom/path/to/npm``.
+     - ``npm``
    * - ``splunk_otel_auto_instrumentation_resource_attributes``
-     - Configures the OpenTelemetry instrumentation resource attributes, for example, ``deployment.environment=prod``. The resource attributes are user-defined key-value pairs. The specified resource attributes are added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The applications on the node need to be restarted separately for any change to take effect. See :ref:`trace-configuration-java` for more information.
+     - Configures the OpenTelemetry instrumentation resource attributes, for example, ``deployment.environment=prod``. The resource attributes are user-defined comma-separated ``key=value`` pairs. See :ref:`Java <trace-configuration-java>`, :ref:`Node.js <trace-configuration-nodejs>`, and :ref:`.NET <dotnet-otel-instrumentation-settings>` for more information.
      - None
    * -  ``splunk_otel_auto_instrumentation_service_name`` 
-     - Explicitly sets the service name for the instrumented applications, for example, ``my.service``. By default, the service name is automatically derived from the arguments of the executable on the node. The specified service name is added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node, overriding any generated service name. See :ref:`trace-configuration-java` for more information. The applications on the node need to be restarted for any change to take effect.
+     - Explicitly sets the service name for the instrumented applications, for example, ``my.service``. By default, the service name is automatically derived from the arguments of the executable on the node. See :ref:`Java <trace-configuration-java>`, :ref:`Node.js <trace-configuration-nodejs>`, and :ref:`.NET <dotnet-otel-instrumentation-settings>` for more information.
      - None
    * - ``splunk_otel_auto_instrumentation_enable_profiler``
      - Activates or deactivates AlwaysOn CPU Profiling.
@@ -141,13 +150,8 @@ The following table shows the variables that you can configure for this Ansible 
    * - ``splunk_otel_auto_instrumentation_enable_profiler_memory``
      - Activates or deactivates AlwaysOn Memory Profiling.
      - ``false``
-   * - ``splunk_otel_auto_instrumentation_with_auto_instrumentation_sdks``
-     - The auto instrumentation SDKs to install and activate.
-     - ``%w(java nodejs)``
    * - ``splunk_otel_auto_instrumentation_enable_metrics``
      - Activates or deactivates JVM metrics. 
      - ``false``
-   * - ``splunk_otel_auto_instrumentation_npm_path``
-     - The path to the pre-installed ``npm`` command. For example, ``/my/custom/path/to/npm``.
-     - ``npm``
+
 
