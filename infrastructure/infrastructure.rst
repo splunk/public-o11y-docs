@@ -11,7 +11,7 @@ This page provides an overview for sending metrics from common data sources to S
 
 An integration is a configurable component of Observability Cloud that connects Observability Cloud to a third-party service. Most integrations connect third-party data services, but Observability Cloud also offers SSO and notification integrations. You can configure integrations in Observability Cloud to collect metrics from your infrastructure. If you also want to collect logs and traces from your infrastructure and services, see the :ref:`get-started-get-data-in` guide.
 
-Each integration walks you through a step-by-step process to collect supported data types. To configure an integration for any data source, select :strong:`Navigation menu > Data Management`.
+Each integration walks you through a step-by-step process to collect supported data types. To configure an integration for any data source, select :strong:`Navigation menu > Data Management > Available integrations`.
 
 The following steps describe how to configure integrations that collect metrics from your infrastructure.
 
@@ -30,7 +30,7 @@ If you don't use cloud services or don't want Observability Cloud to collect dat
 
 Observability Cloud collects both logs and metrics data from AWS accounts. If you plan to collect only metrics from an AWS account, select to only collect data from CloudWatch Metrics.
 
-To connect to a cloud service, select :strong:`Navigation menu > Data Management` and search for the cloud service you want to connect to.
+To connect to a cloud service, select :strong:`Navigation menu > Data Management > Available integrations` and search for the cloud service you want to connect to.
 
 For detailed steps on connecting cloud services to Observability Cloud, see these pages:
 
@@ -38,16 +38,16 @@ For detailed steps on connecting cloud services to Observability Cloud, see thes
 - :ref:`get-started-gcp`
 - :ref:`get-started-azure`
 
-Step 2. Collect infrastructure data with the Splunk Distribution of OpenTelemetry Collector
+Step 2. Collect infrastructure data with the Splunk Distribution of the OpenTelemetry Collector
 ===================================================================================================================
 
 Observability Cloud supports integrations for Kubernetes, Linux, and Windows. Integrations for these data sources help you deploy a :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` to export metrics from hosts and containers to Observability Cloud.
 
 Using the Splunk Distribution of OpenTelemetry Collector is optional; however, you get higher-resolution data using the Splunk Distribution of OpenTelemetry Collector than from cloud integrations. 
 
-To collect metrics from an infrastructure resource, select :strong:`Navigation menu > Data Management` and search for the host type or containerized environment you want to collect metrics from. 
+To collect metrics from an infrastructure resource, select :strong:`Navigation menu > Data Management > Available integrations` and search for the host type or containerized environment you want to collect metrics from. 
 
-See these pages for more information about sending host or container metrics to Observability Cloud:
+See these pages for more information about sending host or container metrics to Splunk Observability Cloud:
 
 - :ref:`get-started-k8s`
 - :ref:`get-started-linux`
