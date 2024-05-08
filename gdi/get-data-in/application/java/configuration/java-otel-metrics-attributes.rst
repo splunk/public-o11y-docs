@@ -75,7 +75,7 @@ The agent collects the following metrics through the following libraries:
     - Version 2.0 and higher
   * - :ref:`c3p0 connection pool metrics <connection-pool-metrics>`
     - ``c3p0-splunk``
-    - Version 0.9.5 and higher 
+    - Version 0.9.5 and higher
   * - :ref:`HikariCP connection pool metrics <connection-pool-metrics>`
     - ``hikaricp-splunk``
     - Version 3.0 and higher
@@ -88,13 +88,13 @@ The agent collects the following metrics through the following libraries:
   * - :ref:`Vibur DBCP connection pool metrics <connection-pool-metrics>`
     - ``vibur-dbcp-splunk``
     - Version 20.0 and higher
-  * - :ref:`Tomcat thread pool metrics <thread-pool-metrics>`
+  * - Tomcat thread pool metrics
     - ``tomcat``
     - Version 8.5 and higher
-  * - :ref:`WebSphere Liberty thread pool metrics <thread-pool-metrics>`
+  * - WebSphere Liberty thread pool metrics
     - ``liberty``
     - Version 20.0.0.12
-  * - :ref:`WebLogic thread pool metrics <thread-pool-metrics>`
+  * - WebLogic thread pool metrics
     - ``weblogic``
     - Versions 12.x and 14.x
 
