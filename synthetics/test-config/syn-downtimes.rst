@@ -22,6 +22,13 @@ When you are working on your site, consider using a downtime configuration to ac
 Schedule a downtime configuration 
 ====================================
 
+It's a best practice to schedule maintenance windows with a 15 to 30 minute time buffer before and after you start and stop your maintenance work. This gives the system an opportunity to catch up with the maintenance state and reduces the chances of Splunk Synthetic Monitoring generating false positives during maintenance operations.
+
+Schedule requirements: 
+
+* at least fifteen minutes long
+* up to one year in advance and one year in duration 
+
 How to schedule a downtime configuration: 
 
 1. In Splunk Synthetic Monitoring, go to settings, then :strong:`Downtime configurations`.
@@ -30,10 +37,7 @@ How to schedule a downtime configuration:
 4. Set up the schedule and select :strong:`Create`. 
 
 
-Schedule requirements: 
 
-* at least fifteen minutes long
-* up to one year in advance and one year in duration 
 
 
 Edit a downtime configuration 

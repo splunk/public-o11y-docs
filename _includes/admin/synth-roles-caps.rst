@@ -45,8 +45,13 @@
     - No
     - No
 
-  * - :strong:`Create, read, update, or delete downtime configuration`
+  * - :strong:`Create, update, or delete downtime configuration`
     - Yes
     - No
     - No
     - No
+  * - :strong:`Read downtime configuration`
+    - Yes
+    - Yes
+    - Yes
+    - Yes
