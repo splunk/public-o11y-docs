@@ -156,4 +156,4 @@ As you onboard more teams with Splunk Observability Cloud, maintain review sessi
 Next step
 ===============
 
-Next, begin your initial pilot rollout for Splunk Application Performance Monitoring.  :ref:`phase2-apm`
+Next, begin your initial pilot rollout for Splunk Application Performance Monitoring. :ref:`phase2-apm`
