@@ -1,16 +1,16 @@
 .. _phase2-im:
 
 
-Pilot phase part 2: Initial pilot rollout for Splunk Infrastructure Monitoring
-********************************************************************************
+Pilot rollout phase part 2: Initial pilot rollout for Splunk Infrastructure Monitoring
+***************************************************************************************
 
-During this part of the pilot, focus on onboarding your pilot teams to Splunk Infrastructure Monitoring. 
+After completing :ref:`phase2-rollout-plan`, you are ready for pilot rollout phase part 2. During this part of the pilot, focus on onboarding your pilot teams to Splunk Infrastructure Monitoring. 
 
 This part of the implementation prepares you to monitor critical solutions and brings business value based on custom metrics. To onboard Infrastructure Monitoring, complete the following tasks:
 
 #. :ref:`onboard-imm-apps`
 #. :ref:`expand-team`
-#. :ref:`otel-reqts`
+#. :ref:`otel-reqs`
 #. :ref:`Advance configuration using OTel collector (for example, token as a secret, Kubernetes distribution) <adv-conf-otel>`
 #. :ref:`custom-dash-charts-metrics`
 #. :ref:`detect-alert-config`
@@ -33,41 +33,40 @@ Launch Infrastructure Monitoring applications
 #. Install the OpenTelemetry (OTel) agent. 
 #. Configure the receivers and pipeline for these services. This creates the default dashboards and detectors for the services such as databases, message bus, and OS platform.
 
-After you set up these dashboards and detectors, the pilot teams can use the built-in dashboards  to observe their application data or create their own custom dashboards.
+After you set up these dashboards and detectors, the pilot teams can observe their application data in the built-in dashboards and create their own custom dashboards.
 
 * See :ref:`built-in-dashboards`.
 * See :ref:`dashboard-create-customize`.
 
 .. _expand-team:
 
-Expand the team and prepare for roll-out
+Prepare for rollout
 ======================================================================================
 
 As you prepare to expand usage across your teams, make sure that you have a strategy for user role assignment. For details on managing users, see :ref:`admin-manage-users`.
 
-If you are using teams, enable enhanced security so you can assign team managers. For details on enhanced security, see :ref:`enhanced-team-security` and :ref:`admin-manage-team-membership`. If you are utilizing child organization functionality, assign local admins by delegating the admin functionality of the child organization fully to the teams assigned to that child organization. Contact your Splunk account rep for information about child organizations.
+Ensure users are aware of the first-time login procedure. When a user logs in to Splunk Observability Cloud using SSO for the first time they must follow these steps:
 
-Ensure users are aware of the first-time login procedure:
+#. The user receives an email with a link. 
+#. The user must select the link for authentication purposes. This email validation is necessary only for the user's first login.  
 
-When a user logs in to Splunk Observability Cloud using SSO for the first time, the user will receive an email with a link. The user must select the link for authentication purposes. This email validationon only takes place for first-time users.
+Splunk Observability Cloud supports just-in-time user creation, which means that if a user does not exist in Splunk Observability Cloud, then the user's account will be created upon first login attempt.
 
-Splunk Observability Cloud supports Just-In-Time user creation, which means that if a user does not exist in Splunk Observability Cloud, then the user's account will be created upon first login attempt.
+.. _otel-reqs:
 
-.. _otel-reqts:
-
-Consider OTel sizing requirements
+Understand OTel sizing requirements
 ==========================================
 
-Before you start scaling up the use of the OTel agents, consider the OTel sizing guidelines. For details about the sizing guidelines, see :ref:`otel-sizing`. This is especially important on platforms such as Kubernetes where there can be a sudden growth from various autoscaling services.  Ensure that the OTel agents can allocate sufficient memory and CPU needed to aid with a smooth rollout.
+Before you start scaling up the use of the OTel agents, consider the OTel sizing guidelines. For details about the sizing guidelines, see :ref:`otel-sizing`. This is especially important on platforms such as Kubernetes where there can be a sudden growth from various autoscaling services. Ensure that the OTel agents can allocate sufficient memory and CPU needed to aid with a smooth rollout.
 
 .. _adv-conf-otel:
 
-Complete advanced configurations for the OTel Collector 
+Complete advanced configurations for the collector 
 =======================================================
 
-As you  get ready to roll out your first teams, further securing the OpenTelemetry collector. For details, see :ref:`otel-security`. You can store your token as a secret or use different methods to securely store tokens, user and password information outside the configuration.yaml for the OTel agent.
+As you get ready to roll out your first pilot teams, further secure the Splunk OpenTelemetry Collector. For details, see :ref:`otel-security`. You can store your token as a secret or use different methods to securely store tokens and credentials outside the configuration.yaml file for the OTel agent.
 
-* For details on storing the token as a secrets, see :new-page:`https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/advanced-configuration.md#provide-tokens-as-a-secret`.
+* For details on storing the token as a secrets, see :new-page:`Splunk OpenTelemetry Collector for Kubernetes<https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/advanced-configuration.md#provide-tokens-as-a-secret>` on GitHub
 * For details on other methods, see :ref:`otel-other-configuration-sources`.
 
 
@@ -76,104 +75,98 @@ As you  get ready to roll out your first teams, further securing the OpenTelemet
 Create custom dashboards using charts based on ingested metrics
 ====================================================================================
 
-As the metrics data is being sent to Splunk Observability Cloud, start creating Custom dashboards by combining metrics from different tools and services. See the following resources: 
+As the metrics data is sent to Splunk Observability Cloud, start creating custom dashboards by combining metrics from different tools and services. See the following resources: 
 
 * See :ref:`dashboards-best-practices`.
-* For details on free training, see :new-page:`Free training <https://www.splunk.com/en_us/training/free-courses/overview.html#observability>`. 
-* Coordinate with your Splunk Sales Engineer to register for the Splunk Observability Cloud workshop. 
-
+* For Splunk Observability Cloud training, see :new-page:`Free training <https://www.splunk.com/en_us/training/free-courses/overview.html#observability>`. 
+* Coordinate with your Splunk Sales Engineer to register for the Splunk Observability Cloud workshop. See :new-page:`Splunk Observability Cloud Workshops<https://splunk.github.io/observability-workshop/latest/en/index.html>`
 
 
 .. _detect-alert-config:
 
-Detector and alert configuration for specific metric conditions
+Configure detectors and alerts for specific metric conditions
 ======================================================================
 
-As with the custom dashboards, onboarded the pilot team with the prepackaged :ref:`autodetect <autodetect-intro>` detectors. Ensure that your teams understand how to develop their own sets of detectors according to each of their use cases, such as by adapting existing detectors or creating their own detectors. See the following resources: 
+As with the custom dashboards, onboard the pilot team with the prepackaged autodetect detectors. Ensure that your teams understand how to develop their own sets of detectors according to each of their use cases, such as by adapting existing detectors or creating their own. See the following resources: 
 
-* For details on free training, see :new-page:`Free training <https://www.splunk.com/en_us/training/free-courses/overview.html#observability>`.
-* For details about the dashboard best practice guide, see :ref:`dashboards-best-practices`. 
-
+* See :ref:`autodetect-intro`.
+* For Splunk Observability Cloud training, see :new-page:`Free training <https://www.splunk.com/en_us/training/free-courses/overview.html#observability>`. 
+* Coordinate with your Splunk Sales Engineer to register for the Splunk Observability Cloud workshop. See :new-page:`Splunk Observability Cloud Workshops<https://splunk.github.io/observability-workshop/latest/en/index.html>`
 
 
 .. _plan-dimensions:
 
-Planning considerations for dimensions and properties
+Review metric names and their ingested data
 =========================================================
 
-After your initial onboarding of metrics data, review the name and the amount of metrics each team is ingesting. Make sure the ingest data matches the agreed naming convention for dimensions and properties.
-If needed, address the name and type of dimensions required to ingest into Splunk Infrastructure Monitoring.
+After your initial onboarding of metrics data, review the name and the amount of metrics each team is ingesting. Make sure the ingest data matches the agreed naming convention for dimensions and properties. If needed, address the name and type of dimensions required to ingest into Splunk Infrastructure Monitoring.
 
-It is important to ensure the teams follow the naming convention setup for metrics, so that you can speed up the development of charts and alerts and create alerts that can detect across a whole range of hosts and nodes.
+Ensure the teams follow the naming convention setup for metrics, so that you can speed up the development of charts and alerts and create alerts that can detect across a whole range of hosts and nodes.
 
 * For details about dimensions, see :ref:`metadata-dimension`.
 * For details about properties, see :ref:`custom-properties`.
 * For details about naming conventions for metrics, see :ref:`metric-dimension-names`.
-
-
 
 .. _ci-cd:
 
 Add Splunk Observability Cloud to your CI/CD pipeline 
 =========================================================
 
-You should have already deployed exporters and pipelines for OTel agents. For teams that are familiar with tools such as Ansible, Chef, Puppet or equivalent, use the exporter and pipeline templates using OpenTelemetry agents.
+You should have already deployed exporters and pipelines for OpenTelemetry agents. At this point you are ready to add services into your pipeline. For teams that are familiar with tools such as Ansible, Chef, or Puppet, use the exporter and pipeline templates using OpenTelemetry agents.
 
-At this point you are ready to add services into your pipeline. For example, you might add a database into the pipeline. You can also use the upstream OTel Collector project or send data using the Splunk Observability Cloud REST API. You can also send metrics using client libraries. 
+You can also use the upstream OpenTelemetry Collector Contrib project, send data using the REST APIs, and send metrics using client libraries.
 
 * For details about adding receivers for a database, see :ref:`databases`.
-* For information about using the upstream OTEL Collector, see :ref:`using-upstream-otel`.
-* For details on the Splunk Observability Cloud REST API, see :ref:`rest-api-ingest`.
-* For details on sending metrics using client libraries, see :new-page:`SignalFlow client messages <https://dev.splunk.com/observability/docs/signalflow/messages/information_messages_specification/?_gl=1*1n3gjs1*_ga*NDUwMTM2Mzg1LjE2ODU0NjEwMDE.*_ga_GS7YF8S63Y*MTY5MDI0NzIzNy4yOS4xLjE2OTAyNTEzNTQuMC4wLjA.*_ga_5EPM2P39FV*MTY5MDI0NDQzMy4zMi4xLjE2OTAyNTEzNTQuMC4wLjA.&_ga=2.157251965.771853185.1690144202-450136385.1685461001#SignalFlow-client-libraries>`.
+* For information about using the upstream Collector, see :ref:`using-upstream-otel`.
+* For details on the Splunk Observability Cloud REST APIs, see :ref:`rest-api-ingest`.
+* For details on sending metrics using client libraries, see :new-page:`SignalFlow client libraries <https://dev.splunk.com/observability/docs/signalflow/messages/information_messages_specification/#SignalFlow-client-libraries>`.
 
 
 .. _templates-detect:
 
-Custom template for detectors or alerts implementation
-=========================================================
+Create custom templates for detectors or alerts 
+==============================================================
 
-Create a custom template for detectors and alerts for teams to unify various detectors created by users within your teams. This prevents duplication for detectors with similar alerting requirements. You can also use Terraform. For more information about the signalfx_detector with Terraform, see https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs/resources/detector.
+Create custom templates for detectors and alerts for teams to unify various detectors created by users in your teams. Templates prevent duplicating for detectors with similar alerting requirements. You can also deploy templates using Terraform. For more information about the signalfx_detector with Terraform, see :new-page:`https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs/resources/detector` on the Terraform Registry.
 
 
 
 .. _automation-api:
 
-Set up guidance for automation using the REST API implementation
+Prepare for automation using the REST API 
 ==================================================================================================================
 
+Familiarize yourself with the REST API functions available for Splunk Observability Cloud. For example, you can use the REST API to extract charts, dashboards, or detectors from Splunk Observability Cloud. Most commonly, you can use the REST API to send historical metric time series (MTS) data to Splunk Observability Cloud using the API to correct previously-ingested MTS data.
 
-You can use the Splunk Observability Cloud REST API to extract charts, dashboards, or detectors from the Splunk Observability Cloud backend. Most commonly, you can use the REST API to send historical metric time series (MTS) data to Splunk Observability Cloud using the  API to correct previously-ingested MTS data.
+As a best practices, build templates necessary to onboard the reaming teams. 
 
-You might want to build templates for REST API use for your teams to use.
-
-* For details about Splunk Observability Cloud REST API, see :new-page:`https://dev.splunk.com/observability/reference`..
-* For details about using the Splunk Observability Cloud API to extract charts, see :new-page:`https://dev.splunk.com/observability/reference/api/charts/latest#endpoint-get-charts-using-query`.
-* For details about using the Splunk Observability Cloud API to extract dashboards, see :new-page:`https://dev.splunk.com/observability/reference/api/dashboards/latest#endpoint-retrieve-dashboards-using-query`.
-* For details about using the Splunk Observability Cloud API to extract detectors, see :new-page:`https://dev.splunk.com/observability/reference/api/detectors/latest#endpoint-retrieve-detectors-query`.
+* For details about Splunk Observability Cloud REST API, see :new-page:`Observability API Reference<https://dev.splunk.com/observability/reference>`.
+* For details about using the Splunk Observability Cloud API to extract charts, see :new-page:`Charts API<https://dev.splunk.com/observability/reference/api/charts/latest#endpoint-get-charts-using-query>`.
+* For details about using the Splunk Observability Cloud API to extract dashboards, see :new-page:`Dashboards API<https://dev.splunk.com/observability/reference/api/dashboards/latest#endpoint-retrieve-dashboards-using-query>`.
+* For details about using the Splunk Observability Cloud API to extract detectors, see :new-page:`Detectors API<https://dev.splunk.com/observability/reference/api/detectors/latest#endpoint-retrieve-detectors-query>`.
 
 
 .. _automation-terraform:
 
-Automate using the Terraform implementation
+Automate using Terraform 
 =========================================================
 
-Splunk Observability Cloud has a Terraform provider that allows you to automate a large number of deployments. The Terraform provider utilizes the Splunk Observability Cloud REST API for several use cases.
+You can automate a large number of deployments using Terraform. The Terraform provider uses the Splunk Observability Cloud REST API.
 
-Use Terraform to set up integrations to Cloud providers, dashboards, and alerts. Terraform also provides an easier way to add customized charts and alerts to newly onboarded teams. 
+Use Terraform to help set up integrations to cloud providers, dashboards, and alerts. You can also use Terraform to add customized charts and alerts to newly onboarded teams. 
 
-.. To migrate from existing dashboard groups, dashboards and detectors to Terraform, there is a python script that can help with this migration effort.
+To migrate from existing dashboard groups, dashboards and detectors to Terraform, you can use Python script. See :new-page:`Export dashboards script<https://github.com/splunk/observability-content-contrib/blob/main/integration-examples/terraform-jumpstart/export_script/README.md>` on GitHub.
 
-* For details about the Terraform provider, see :new-page:`https://registry.terraform.io/providers/splunk-terraform/signalfx/latest`.
+* For details about the Terraform provider, see :new-page:`https://registry.terraform.io/providers/splunk-terraform/signalfx/latest` on the Terraform Registry.
 * For information on using Terraform, see :ref:`terraform-config`.
-
 
 
 .. _customer-framework:
 
-Finalize framework and adoption protocol for faster rollout
+Finalize framework and adoption protocol
 ===============================================================================
 
-As you onboard more teams with Splunk Observability Cloud, maintain review sessions to incorporate lessons learned from previous onboardings. Review the feedback from the initial onboarded teams. Start utilizing resources available to your organization including engaging with your Splunk Observability Cloud Sales Engineer or Professional Services resources. Use these resources to help you with best practices and help with faster rollout.
+As you onboard more teams with Splunk Observability Cloud, maintain review sessions to incorporate what you learned from previous onboardings. Review the feedback from the initial onboarded teams and engage with Splunk Observability Cloud Sales Engineers or Professional Services. Start utilizing resources available to your organization including engaging with your Splunk Observability Cloud Sales Engineer or Professional Services resources. These resources can help you with best practices and faster rollout.
 
 Next step
 ===============

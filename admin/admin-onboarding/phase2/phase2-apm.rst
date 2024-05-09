@@ -3,7 +3,7 @@
 Pilot phase part 3: Initial pilot rollout for Splunk Application Performance Monitoring
 *****************************************************************************************
 
-As with the Splunk Infrastructure Monitoring pilot rollout, your initial pilot rollout for Application Performance Monitoring (APM) focuses on bringing initial pilot teams with many microservices or connections to services, into APM.
+After completing :ref:`phase2-im`, you are ready for pilot rollout phase part 3. As with the Splunk Infrastructure Monitoring pilot rollout, your initial pilot rollout for Application Performance Monitoring (APM) focuses on bringing initial pilot teams with many microservices or connections to services, into APM.
 
 The rollout includes:
 

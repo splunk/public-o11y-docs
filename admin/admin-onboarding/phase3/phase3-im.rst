@@ -207,7 +207,7 @@ Use Splunk Observability Cloud REST APIs to automatically assign default dashboa
 
 To learn more, see the following topics:
 
-- :ref:`discovery-mode`
+- :ref:`discovery_mode`
 
 - :ref:`dashboards-best-practices`
 

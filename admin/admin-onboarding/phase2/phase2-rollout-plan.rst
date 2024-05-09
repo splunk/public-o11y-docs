@@ -1,16 +1,16 @@
 .. _phase2-rollout-plan:
 
-Pilot phase part 1: Plan your pilot rollout
+Pilot rollout phase part 1: Plan your pilot rollout
 ****************************************************************
 
-Use the following information to guide your implementation of IM or APM. 
+After completing :ref:`phase1`, you are ready for phase 2, pilot rollout. Use the following information to guide your implementation of Splunk Infrastructure Monitoring and Splunk Application Performance Monitoring. 
 
 - :ref:`naming_conventions`
 - :ref:`pilots`
 - :ref:`framework`
 - :ref:`enable_integrations`
 - :ref:`convention-deploy`
-- :ref:`best-libraries`
+- :ref:`best-practices`
 - :ref:`get-trained`
 
 .. note::
@@ -51,7 +51,7 @@ Once you know which teams are participating in the pilot and have collected thei
 
 #. :ref:`Identify initial metric, trace, and log integrations <enable_integrations>` and enable them in the Splunk Observability Cloud.
 #. :ref:`Identify a naming convention <convention-deploy>` for the deployment environments for Splunk Application Performance Monitoring (APM).
-#. :ref:`Establish a consistent set of best practices <best-libraries>` for using Splunk auto instrumentation libraries.
+#. :ref:`Establish best practices for Splunk Observability Cloud <best-practices>`.
 
 .. _enable_integrations:
 
@@ -64,14 +64,13 @@ Define a list of libraries required to support applications and those that are s
 
 Next, build your development pipeline: 
 
-* Use the automatic discovery on your hosts or Kubernetes cluster. For details, see :ref:`discovery-mode`.
+* Use the automatic discovery on your hosts or Kubernetes cluster. For details, see :ref:`discovery_mode`.
 * Use the automatic instrumentation for containers or virtual machines. For details, see :ref:`apm-gdi`.
 * Identify the environment variables according to specific use cases. Each development language has its own settings, for example:
     
     * For Java information, see :ref:`advanced-java-otel-configuration`.
     * For Node.js information, see :ref:`instrument-nodejs-applications`.
     * For .NET information, see :ref:`instrument-otel-dotnet-applications`.
-
 
 .. _convention-deploy:
 
@@ -84,18 +83,18 @@ You can also further filter Splunk Application Performance Monitoring (APM) data
 
 To define these tags, you can use the standard method to add attributes to a trace of span using the OpenTelemetry environment variables. For more information on how to add context to spans tags, see :ref:`apm-add-context-trace-span`.
 
-.. _best-libraries:
+.. _best-practices:
 
-Establish best practices for Splunk instrumentation libraries
+Establish best practices for Splunk Observability Cloud
 -------------------------------------------------------------------------------
 
-At this point you have some experience with configuration of the OpenTelemetry agent and automatic instrumentation libraries. You can now create guides for the teams that you want to onboard.
+At this point you have some experience with configuration of the OpenTelemetry agents and automatic discovery. You can now create guides for the teams that you want to onboard.
 
 Include the following items in our guide: 
 
-* Which environment variables and command line parameters to set for the auto instrumentation agents. For more information, see :ref:`advanced-java-otel-configuration` and :ref:`otel-install-linux-manual`.
+* Which environment variables and command line parameters to set. For more information, see :ref:`advanced-java-otel-configuration` and :ref:`otel-install-linux-manual`.
 * How to enable :ref:`AlwaysOn Profiling <phase1-profiling>`.
-* How to configure logs to add tracing information, depending on language. For a  Java example, see :ref:`correlate-traces-with-logs-java`.
+* How to configure logs to add tracing information, depending on language. For a Java example, see :ref:`correlate-traces-with-logs-java`.
 * Naming conventions for metrics and environments. For details on metric naming conventions, see :ref:`metric-dimension-names`. For naming environments, you can set the deployment environment as a span tag, which allows you to filter your APM by environments of interest. See :ref:`apm-environments` to learn more.
 
 .. _get-trained:
