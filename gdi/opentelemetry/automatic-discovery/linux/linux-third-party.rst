@@ -133,11 +133,14 @@ The following example shows how to install the Collector on Linux using discover
 
       Successfully discovered "mysql" using "docker_observer" endpoint "abcdef1234:3306".
 
-Special Instructions for Mongodb
+.. _linux-third-party-mongodb:
+
+Automatic discovery for MongoDB
 ====================================
 
-By default, Mongdb auto discovery rules assume the server is SSL/TLS enabled. If not, the following
-command line flag is mandatory.
+By default, MongoDB automatic discovery rules assume the server is SSL/TLS enabled. 
+
+If it isn't, use the following command line flag to indicate so:
 
 .. code-block:: bash
 
