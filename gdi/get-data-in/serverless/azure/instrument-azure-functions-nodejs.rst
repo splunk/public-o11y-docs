@@ -50,12 +50,7 @@ Set the required environment variables in your function's settings:
 Add the required libraries using NPM
 =================================================
 
-Add the following libraries using NPM:
-
-Isolated worker process function
-----------------------------------------------------
-
-#. Install the latest version of ``@splunk/otel`` and match the ``@opentelemetry/api`` version used in the ``@splunk/otel``.
+Install the latest version of ``@splunk/otel`` and match the ``@opentelemetry/api`` version used in the ``@splunk/otel`` (see ``package.json``).
 
    - :new-page:`@splunk/otel <https://www.npmjs.com/package/@splunk/otel>`
    - :new-page:`@opentelemetry/api <https://www.npmjs.com/package/@opentelemetry/api>`
