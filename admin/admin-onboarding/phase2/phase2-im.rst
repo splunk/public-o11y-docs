@@ -9,7 +9,6 @@ After completing :ref:`phase2-rollout-plan`, you are ready for pilot rollout pha
 This part of the implementation prepares you to monitor critical solutions and brings business value based on custom metrics. To onboard Infrastructure Monitoring, complete the following tasks:
 
 #. :ref:`onboard-imm-apps`
-#. :ref:`expand-team`
 #. :ref:`otel-reqs`
 #. :ref:`Advance configuration using OTel collector (for example, token as a secret, Kubernetes distribution) <adv-conf-otel>`
 #. :ref:`custom-dash-charts-metrics`
@@ -37,20 +36,6 @@ After you set up these dashboards and detectors, the pilot teams can observe the
 
 * See :ref:`built-in-dashboards`.
 * See :ref:`dashboard-create-customize`.
-
-.. _expand-team:
-
-Prepare for rollout
-======================================================================================
-
-As you prepare to expand usage across your teams, make sure that you have a strategy for user role assignment. For details on managing users, see :ref:`admin-manage-users`.
-
-Ensure users are aware of the first-time login procedure. When a user logs in to Splunk Observability Cloud using SSO for the first time they must follow these steps:
-
-#. The user receives an email with a link. 
-#. The user must select the link for authentication purposes. This email validation is necessary only for the user's first login.  
-
-Splunk Observability Cloud supports just-in-time user creation, which means that if a user does not exist in Splunk Observability Cloud, then the user's account will be created upon first login attempt.
 
 .. _otel-reqs:
 
@@ -96,7 +81,7 @@ As with the custom dashboards, onboard the pilot team with the prepackaged autod
 
 .. _plan-dimensions:
 
-Review metric names and their ingested data
+Review metric names and ingested data
 =========================================================
 
 After your initial onboarding of metrics data, review the name and the amount of metrics each team is ingesting. Make sure the ingest data matches the agreed naming convention for dimensions and properties. If needed, address the name and type of dimensions required to ingest into Splunk Infrastructure Monitoring.
