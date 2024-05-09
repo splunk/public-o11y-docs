@@ -15,7 +15,6 @@ To instrument your NodeJS Azure function with OpenTelemetry to send telemetry to
 - :ref:`azure-functions-js-step-2`
 - :ref:`azure-functions-js-step-3`
 - :ref:`azure-functions-js-step-4`
-- :ref:`azure-functions-js-step-5`
 
 .. _azure-functions-js-step-1:
 
@@ -42,7 +41,7 @@ Set the required environment variables in your function's settings:
       * - ``SPLUNK_REALM``
         - Your Splunk Observability Cloud realm, for example ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
       * - ``NODE_OPTIONS``
-        - Specify NodeJS options to preload instrumentation module: ``--require ./dist/src/instrumentation.js``
+        - Specify NodeJS options to preload instrumentation module: ``-r @splunk/otel/instrument``
 
 #. Add any other settings you might need.
 
@@ -56,78 +55,12 @@ Add the following libraries using NPM:
 Isolated worker process function
 ----------------------------------------------------
 
-#. Activate the :strong:`Include prerelease` setting.
-#. Install the latest version of the following libraries:
+#. Install the latest version of ``@splunk/otel`` and match the ``@opentelemetry/api`` version used in the ``@splunk/otel``.
 
-   - :new-page:`@opentelemetry/sdk-node <https://www.npmjs.com/package/@opentelemetry/sdk-node>`
+   - :new-page:`@splunk/otel <https://www.npmjs.com/package/@splunk/otel>`
    - :new-page:`@opentelemetry/api <https://www.npmjs.com/package/@opentelemetry/api>`
-   - :new-page:`@opentelemetry/resources <https://www.npmjs.com/package/@opentelemetry/resources>`
-   - :new-page:`@opentelemetry/sdk-metrics <https://www.npmjs.com/package/@opentelemetry/sdk-metrics>`
-   - :new-page:`@opentelemetry/auto-instrumentations-node <https://www.npmjs.com/package/@opentelemetry/auto-instrumentations-node>`
-   - :new-page:`@opentelemetry/semantic-conventions <https://www.npmjs.com/package/@opentelemetry/semantic-conventions>`
-   - :new-page:`@opentelemetry/exporter-trace-otlp-proto <https://www.npmjs.com/package/@opentelemetry/exporter-trace-otlp-proto>`
-   - :new-page:`@opentelemetry/exporter-metrics-otlp-proto <https://www.npmjs.com/package/@opentelemetry/exporter-metrics-otlp-proto>`
-   - :new-page:`@azure/opentelemetry-instrumentation-azure-sdk <https://www.npmjs.com/package/@azure/opentelemetry-instrumentation-azure-sdk>`
-
+        
 .. _azure-functions-js-step-3:
-
-Initialize OpenTelemetry in the code
-=================================================
-
-After adding the dependencies, initialize OpenTelemetry in your function.
-
-Define a preloadable module `instrumentation.ts`. The module bootstraps all instrumentations.
-
-.. code-block:: ts
-
-   import { NodeSDK } from "@opentelemetry/sdk-node";
-   import { Resource } from "@opentelemetry/resources";
-   import {
-      SEMRESATTRS_SERVICE_NAME,
-      SEMRESATTRS_SERVICE_VERSION
-   } from "@opentelemetry/semantic-conventions";
-   import { PeriodicExportingMetricReader } from "@opentelemetry/sdk-metrics";
-   import { OTLPTraceExporter } from "@opentelemetry/exporter-trace-otlp-proto"
-   import { OTLPMetricExporter  } from "@opentelemetry/exporter-metrics-otlp-proto"
-   import { getNodeAutoInstrumentations } from "@opentelemetry/auto-instrumentations-node";
-   import { createAzureSdkInstrumentation } from "@azure/opentelemetry-instrumentation-azure-sdk"
-
-   const accessToken = process.env['SPLUNK_ACCESS_TOKEN'];
-   const realm = process.env['SPLUNK_REALM'];
-   const tracesEndpoint = `https://ingest.${realm}.signalfx.com/v2/trace/otlp`;
-   const metricsEndpoint = `https://ingest.${realm}.signalfx.com/v2/datapoint/otlp`;
-
-   const otlpTracesOptions = {
-      url: tracesEndpoint,
-      headers: {
-         ['X-SF-TOKEN']: accessToken
-      },
-      concurrencyLimit: 10
-   }
-
-   const otlpMetricsOptions = {
-      url: metricsEndpoint,
-      headers: {
-         ['X-SF-TOKEN']: accessToken
-      },
-      concurrencyLimit: 10
-   }
-
-   const sdk = new NodeSDK({
-      resource: new Resource({
-         [SEMRESATTRS_SERVICE_NAME]: process.env['WEBSITE_SITE_NAME'],
-         [SEMRESATTRS_SERVICE_VERSION]: "1.0.0"
-      }),
-      traceExporter: new OTLPTraceExporter(otlpTracesOptions),
-      metricReader: new PeriodicExportingMetricReader({
-         exporter: new OTLPMetricExporter(otlpMetricsOptions),
-      }),
-      instrumentations: [getNodeAutoInstrumentations(), createAzureSdkInstrumentation()]
-   })
-
-   sdk.start()
-         
-.. _azure-functions-js-step-4:
 
 Instrument the code to send spans
 =================================================
@@ -174,7 +107,7 @@ The following example shows how to instrument a function using instrumentationWr
       handler: instrumentationWrapper(myhttptrigger)
    });
 
-.. _azure-functions-js-step-5:
+.. _azure-functions-js-step-4:
 
 Check that data is coming in
 =========================================
