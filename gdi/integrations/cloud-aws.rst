@@ -88,6 +88,13 @@ You can collect data from the following AWS services:
     - 
     - 
 
+  * - AWS/Cassandra
+    - Amazon Keyspaces
+    - :strong:`X`
+    - 
+    - 
+    - :strong:`X`
+
   * - AWS/CertificateManager
     - AWS Certificate Manager
     - :strong:`X`
@@ -290,6 +297,20 @@ You can collect data from the following AWS services:
     - 
     - 
     - 
+
+  * - AWS/GatewayELB
+    - Elastic Load Balancing (Gateway Load Balancers)
+    - :strong:`X`
+    - 
+    - 
+    - :strong:`X`
+
+  * - AWS/GlobalAccelerator 
+    - AWS Global Accelerator
+    - :strong:`X`
+    - 
+    - 
+    - :strong:`X`
 
   * - AWS/Inspector
     - Amazon Inspector
