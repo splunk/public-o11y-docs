@@ -16,8 +16,7 @@ To onboard APM, complete these tasks:
 #. :ref:`use-metricsets`
 #. :ref:`tag-spotlight-values`
 #. :ref:`apm-detectors`
-#. :ref:`always-on-trouble`
-#. :ref:`launch-apm`
+#. :ref:`_alwayson-profiling`
 
 .. note::
     Work closely with your Splunk Sales Engineer or Splunk Customer Success Manager throughout your onboarding process. They can help you fine tune your Splunk Observability Cloud journey and provide best practices, training, and workshop advice.
@@ -104,7 +103,7 @@ Splunk APM automatically captures request, error, and duration (RED) metrics for
 
 See :ref:`apm-alerts`.
 
-.. _always-on-trouble:
+.. _alwayson-profiling:
 
 Learn how to troubleshoot using AlwaysOn Profiling
 ==============================================================

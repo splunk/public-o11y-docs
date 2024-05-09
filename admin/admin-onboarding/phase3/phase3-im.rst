@@ -6,32 +6,32 @@ Expansion and optimization part 1: Splunk Infrastructure Monitoring
 
 To expand and optimize Splunk Infrastructure Monitoring, complete the following tasks:
    
-1. :ref:`expand-im1`
+1. :ref:`dashboards-charts`
 
-2. :ref:`expand-im2`
+2. :ref:`advanced-detectors`
 
-3. :ref:`expand-im3`
+3. :ref:`token-rotation`
 
-4. :ref:`expand-im4`
+4. :ref:`mttr`
 
-5. :ref:`expand-im5`
+5. :ref:`mpm`
 
-6. :ref:`expand-im6`
+6. :ref:`network-exp`
 
-7. :ref:`expand-im7`
+7. :ref:`usage-limits`
 
-8. :ref:`expand-im8`
+8. :ref:`automate-workflows`
 
-9. :ref:`expand-im9`
+9. :ref:`custom-use-cases`
 
-10. :ref:`expand-im11`
+10. :ref:`prod-apps`
 
-11. :ref:`expand-im12`
+11. :ref:`onboard-all`
 
 .. note::
     Work closely with your Splunk Sales Engineer or Splunk Customer Success Manager throughout your onboarding process. They can help you fine tune your Splunk Observability Cloud journey and provide best practices, training, and workshop advice.
 
-.. _expand-im1:
+.. _dashboards-charts:
 
 Build advanced dashboards and charts
 ================================================================================================================
@@ -51,7 +51,7 @@ For comprehensive documentation on these tasks, see the following topics:
 
 - :ref:`link-metadata-to-content`
 
-.. _expand-im2:
+.. _advanced-detectors:
 
 Build advanced detectors
 ================================================================================================================
@@ -72,7 +72,7 @@ To learn more, see the following topics:
 - :ref:`auto-clearing-alerts`
 
 
-.. _expand-im3:
+.. _token-rotation:
 
 Automate the token rotation process
 ================================================================================================================
@@ -91,7 +91,7 @@ To learn more, see the following topics:
 - :ref:`admin-org-tokens`
 
 
-.. _expand-im4:
+.. _mttr:
 
 Identify and review mean time to resolution (MTTR)
 ================================================================================================================
@@ -138,7 +138,7 @@ With Splunk Infrastructure Monitoring, the following scenario typically results 
 
 After this process completes, requests are back to normal. See :ref:`practice-reliability-incident-response`.
 
-.. _expand-im5:
+.. _mpm:
 
 Use metrics pipeline management tools to reduce cardinality of metric time series (MTS)
 ================================================================================================================
@@ -161,7 +161,7 @@ You can configure dimensions through the user interface, the API, and Terraform.
 For comprehensive documentation on MPM, see :ref:`metrics-pipeline-intro`.
 
 
-.. _expand-im6:
+.. _network-exp:
 
 Set up Network Explorer to monitor network environment
 ================================================================================================================
@@ -178,7 +178,7 @@ For Splunk OTel Collector to work with Network Explorer, you must install it in 
 For comprehensive documentation on Network Explorer, see :ref:`network-explorer`.
 
 
-.. _expand-im7:
+.. _usage-limits:
 
 Analyze and troubleshoot usage, limits, and throttles
 ================================================================================================================
@@ -196,7 +196,7 @@ To learn more, see the following topics:
 - :ref:`data-o11y`
 
 
-.. _expand-im8:
+.. _automate-workflows:
 
 Automate key workflows to accelerate onboarding and standardize consistent practices 
 ================================================================================================================
@@ -212,7 +212,7 @@ To learn more, see the following topics:
 - :ref:`dashboards-best-practices`
 
 
-.. _expand-im9:
+.. _custom-use-cases:
 
 Identify complex and customized use cases to enhance value and return on investment
 ================================================================================================================
@@ -230,14 +230,14 @@ During the expansion and optimization phase, start identifying your teams' prima
 
 - Ensuring and improving customer experience 
 
-.. _expand-im11:
+.. _prod-apps:
 
 Onboard all production applications
 ================================================================================================================
 During this phase, you can automate most processes and add new services into Splunk Observability Cloud. You can continue expanding the OTel agent configuration library for all production applications. Populate all the necessary metrics to build the desired charts, dashboards, and detectors. Continue to onboard all production applications.
 
 
-.. _expand-im12:
+.. _onboard-all:
 
 Onboard all users and teams
 ================================================================================================================
