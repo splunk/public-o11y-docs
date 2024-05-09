@@ -158,7 +158,7 @@ You can reduce overall monitoring cost and optimize your return on investment by
 
 You can configure dimensions through the user interface, the API, and Terraform.
 
-For comprehensive documentation on MPM, see :ref:`metrics-pipeline-arm`.
+For comprehensive documentation on MPM, see :ref:`metrics-pipeline-intro`.
 
 
 .. _expand-im6:
@@ -201,13 +201,13 @@ To learn more, see the following topics:
 Automate key workflows to accelerate onboarding and standardize consistent practices 
 ================================================================================================================
 
-In this expansion and optimization phase, you can start to automate the onboarding process workflow. For example, consider automating team creation, token ingestion, HEC tokens for Log Observer Connect, and token rotation. Also consider prescriptive onboarding guides for instrumentation, such as Splunk OpenTelemetry Zero Configuration Auto Instrumentation, or using separate instrumentation agents, including predefining required environment variables. 
+In this expansion and optimization phase, you can start to automate the onboarding process workflow. For example, consider automating team creation, token ingestion, HEC tokens for Log Observer Connect, and token rotation. Also consider prescriptive onboarding guides for instrumentation, such as automatic discovery and configuration with the Splunk Distribution of OpenTelemetry Collector, or using separate instrumentation agents, including predefining required environment variables. 
 
 Use Splunk Observability Cloud REST APIs to automatically assign default dashboards and detectors to new teams through automation.
 
 To learn more, see the following topics:
 
-- :ref:`zero-config`
+- :ref:`discovery-mode`
 
 - :ref:`dashboards-best-practices`
 

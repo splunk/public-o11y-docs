@@ -64,7 +64,7 @@ Define a list of libraries required to support applications and those that are s
 
 Next, build your development pipeline: 
 
-* Use the OpenTelemetry Zero Configuration Auto Instrumentation on the hosts or Kubernetes. For details, see :ref:`zero-config`.
+* Use the automatic discovery on your hosts or Kubernetes cluster. For details, see :ref:`discovery-mode`.
 * Use the automatic instrumentation for containers or virtual machines. For details, see :ref:`apm-gdi`.
 * Identify the environment variables according to specific use cases. Each development language has its own settings, for example:
     
