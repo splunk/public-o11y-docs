@@ -88,13 +88,13 @@ The agent collects the following metrics through the following libraries:
   * - :ref:`Vibur DBCP connection pool metrics <connection-pool-metrics>`
     - ``vibur-dbcp-splunk``
     - Version 20.0 and higher
-  * - Tomcat thread pool metrics
+  * - :ref:`Tomcat thread pool metrics <thread-pool-metrics>`
     - ``tomcat``
     - Version 8.5 and higher
-  * - WebSphere Liberty thread pool metrics
+  * - :ref:`WebSphere Liberty thread pool metrics <thread-pool-metrics>`
     - ``liberty``
     - Version 20.0.0.12
-  * - WebLogic thread pool metrics
+  * - :ref:`WebLogic thread pool metrics <thread-pool-metrics>`
     - ``weblogic``
     - Versions 12.x and 14.x
 
@@ -103,7 +103,7 @@ The agent collects the following metrics through the following libraries:
 JVM metrics
 =============================================================
 
-The Splunk OTel Java agent collects the following Java Virtual Machine (JVM) metrics when metric collection is activated:
+The Splunk OTel Java agent collects the following Java Virtual Machine (JVM) metrics when metric collection is activated.
 
 .. _classloader-metrics:
 
@@ -147,7 +147,7 @@ The agent collects the following garbage collection (GC) metrics:
     - Time spent in concurrent phase, in milliseconds.
   * - ``jvm.memory.allocated``
     - Counter
-    - Increase in the size of the young heap memory pool after one garbage collection and before the next.
+    - Increase in the size of the young heap memory pool after 1 garbage collection and before the next.
   * - ``jvm.gc.duration{jvm.gc.name!=<concurrent gcs>}``
     - Timer
     - Time spent in garbage collection pause, in seconds.
@@ -169,7 +169,7 @@ The agent collects the following memory metrics:
     - Description
   * - ``jvm.memory.allocated``
     - Counter
-    - Total number of bytes allocated by JVM threads since the previous data point was emitted. 
+    - Total number of bytes allocated by JVM threads since the previous data point was emitted.
         - Use the rate per second rollup.
         - Requires to activate memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag.
   * - ``process.runtime.jvm.memory.reclaimed``
@@ -302,6 +302,62 @@ All connection pool metrics share the following tags:
   * - ``pool.type``
     - Type or implementation of the connection pool. For example, ``c3p0``, ``dbcp2``, or ``hikari``.
 
+.. _thread-pool-metrics:
+
+Thread pool metrics
+----------------------------------------------------------------------
+
+The Splunk Distribution of OpenTelemetry Java instruments the following thread pool implementations:
+
+- Tomcat connector thread pools
+- WebSphere Liberty web request thread pool
+- Weblogic thread pools
+
+Each of the supported connection pools reports a subset of the following metrics:
+
+.. list-table::
+  :header-rows: 1
+  :widths: 40 10 50
+  :width: 100%
+
+  * - Metric
+    - Type
+    - Description
+  * - ``executor.threads``
+    - Timer
+    - Number of threads in the pool.
+  * - ``executor.threads.active``
+    - Timer
+    - Number of threads that are executing code.
+  * - ``executor.threads.idle``
+    - Timer
+    - Number of threads that aren't executing code.
+  * - ``executor.threads.core``
+    - Timer
+    - Core thread pool size, expressed as the number of threads that are always kept in the pool.
+  * - ``executor.threads.max``
+    - Timer
+    - Maximum number of threads in the pool.
+  * - ``executor.tasks.submitted``
+    - Counter
+    - Total number of tasks submitted to the executor.
+  * - ``executor.tasks.completed``
+    - Counter
+    - Total number of tasks completed by the executor.
+
+All thread pool metrics have the following tags:
+
+.. list-table::
+  :header-rows: 1
+  :widths: 40 60
+  :width: 100%
+
+  * - Tag
+    - Value
+  * - ``executor.name``
+    - Name of the thread pool.
+  * - ``executor.type``
+    - Type/implementation of the connection pool. For example, ``tomcat``, ``liberty``, or ``weblogic``.
 
 .. _webengine-attributes-java-otel:
 
@@ -321,7 +377,7 @@ The Splunk Distribution of OpenTelemetry Java captures data about the applicatio
   * - ``webengine.version``
     - Version of the application server.
 
-For a list of supported application servers, see the OpenTelemetry documentation at https://github.com/open-telemetry/opentelemetry-java-instrumentation/blob/main/docs/supported-libraries.md#application-servers.
+For a list of supported application servers, see the :new-page:`OpenTelemetry documentation <https://github.com/open-telemetry/opentelemetry-java-instrumentation/blob/main/docs/supported-libraries.md#application-servers>`.
 
 New metric names
 ======================================
