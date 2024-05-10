@@ -11,6 +11,8 @@ Splunk Observability Cloud provides prepackaged solutions for monitoring your se
 
 For a better understanding of how you can use Splunk Observability Cloud with other Splunk platform products, see :ref:`scenarios-integration-scenario-landing` for sample use cases.
 
+.. _sli-slo-sla:
+
 SLIs and SLOs
 ========================================================================================================================
 SLIs are important because they help you meet your SLAs with customers. SLIs are the metrics used to measure your system's availability. Service level objectives (SLOs) are what you determine is the appropriate level of availability, as measured by your SLIs. Service level agreements (SLAs) are the promise you make to your customers about how much of the time you will meet your SLOs and what you will do if you do not meet them.

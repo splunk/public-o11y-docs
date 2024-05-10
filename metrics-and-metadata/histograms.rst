@@ -20,7 +20,7 @@ A histogram represents the distribution of observations. Histograms require nume
 
 Histograms store data in buckets, which are adjacent intervals with numeric boundaries. The buckets or bars in the previous histogram span 100 milliseconds. The size of each bar is determined by the number of observations inside each interval. The higher the bar, the more data points fall within the interval.
 
-You can calculate the total number of observations, the minimum and maximum value, the sum of all values, the average value, and discrete percentile values in every histogram. Splunk Observability Cloud provides a SignalFuse function for histograms, which you can use to customize histograms or perform calculations on the data.
+You can calculate the total number of observations, the minimum and maximum value, the sum of all values, the average value, and discrete percentile values in every histogram. Splunk Observability Cloud provides a SignalFlow function for histograms, which you can use to customize histograms or perform calculations on the data.
 
 Histograms are useful to compare different datasets at a glance, and to identify trends in your data that might be otherwise hard to detect. For example, histograms can answer questions like “What was the 90th percentile of response time for the database yesterday?”
 

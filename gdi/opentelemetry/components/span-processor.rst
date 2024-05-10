@@ -1,7 +1,7 @@
 .. _span-processor:
 
 ****************************
-Span processor
+Span processor 
 ****************************
 
 .. meta::
