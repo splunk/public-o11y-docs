@@ -10,7 +10,7 @@ Welcome
 .. imagetarget:: _images/get-started/o11y-user-doc-hero-banner-v2.svg
    :alt: Welcome
    :width: 97.3%
-   :target: https://docs.splunk.com/Observability/get-started/o11y.html#nav-Get-started
+   :target: https://docs.splunk.com/Observability/get-started/get-started-306090.html
 
 .. role:: icon-info
 .. rst-class:: newparawithicon
@@ -32,6 +32,16 @@ A collection of scenarios for using Splunk Observability Cloud to address your g
 
 :strong:`Tutorials`
 A collection of task-based tutorials to achieve a goal in Splunk Observability Cloud :ref:`tutorial-landing`
+
+.. rst-class:: newcard
+
+:strong:`Service description`
+Benefits and service terms of Splunk Observability Cloud :ref:`o11y-service-description`
+
+.. rst-class:: newcard
+
+:strong:`Admin onboarding guide`
+Admin guide for onboarding Splunk Observability Cloud :ref:`admin-onboarding-guide`
 
 .. rst-class:: newcard
 
@@ -342,6 +352,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    admin/admin
+
+.. toctree::
+   :maxdepth:   3
+
+   Admin onboarding guide TOGGLE <admin/admin-onboarding/admin-onboarding-guide>
 
 .. toctree::
    :maxdepth:   3
