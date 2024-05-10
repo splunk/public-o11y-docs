@@ -14,7 +14,7 @@ Admin guide for onboarding Splunk Observability Cloud
    Phase 2: Pilot rollout <phase2/phase2>
    Phase 3: Expansion and optimization <phase3/phase3>
 
-Follow these steps to onboard Splunk Observability Cloud in your organization. To complete the onboarding process, ensure you have the admin role in your Splunk Observability Cloud organization. There are 3 distinct phases to the onboarding journey for Splunk Observability Cloud: 
+Follow these steps to onboard Splunk Observability Cloud in your organization. To complete the onboarding process, ensure you have the admin role in your Splunk Observability Cloud organization. There are 3 phases to the onboarding journey for Splunk Observability Cloud: 
 
 .. list-table:: 
    :header-rows: 1

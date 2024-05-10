@@ -4,9 +4,9 @@
 Pilot rollout phase part 2: Initial pilot rollout for Splunk Infrastructure Monitoring
 ***************************************************************************************
 
-After completing :ref:`phase2-rollout-plan`, you are ready for pilot rollout phase part 2. During this part of the pilot, focus on onboarding your pilot teams to Splunk Infrastructure Monitoring. 
+After completing :ref:`phase2-rollout-plan`, you are ready for pilot rollout phase part 2. During this part of the pilot, focus on onboarding your pilot teams to Splunk Infrastructure Monitoring. This part of the implementation prepares you to monitor critical solutions and brings business value based on custom metrics. 
 
-This part of the implementation prepares you to monitor critical solutions and brings business value based on custom metrics. To onboard Infrastructure Monitoring, complete the following tasks:
+To onboard Infrastructure Monitoring, complete the following tasks:
 
 #. :ref:`onboard-imm-apps`
 #. :ref:`otel-reqs`

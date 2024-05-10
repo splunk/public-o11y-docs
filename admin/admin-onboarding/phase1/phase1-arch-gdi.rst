@@ -37,22 +37,27 @@ Create an architecture prototype
 
 Create a prototype architecture solution for Splunk Observability Cloud in your organization. Complete the following tasks to create a prototype:
 
-1. Get familiar with setting up and connecting applications to Splunk Observability Cloud. Set up an initial OpenTelemetry Collector on a commonly used platform, such as a virtual machine instance or a Kubernetes cluster. 
+#. Get familiar with setting up and connecting applications to Splunk Observability Cloud. Set up an initial OpenTelemetry Collector on a commonly used platform, such as a virtual machine instance or a Kubernetes cluster. 
 
    See :ref:`infrastructure-infrastructure` and :ref:`otel-intro` for more information.
-2. In most cases, you also need to connect Splunk Observability Cloud to your cloud provider. To ingest data from cloud providers, such as Amazon Web Services  (AWS), Microsoft Azure, or Google Cloud Platform (GCP), you need to set up cloud integrations. 
+#. In most cases, you also need to connect Splunk Observability Cloud to your cloud provider. To ingest data from cloud providers, such as Amazon Web Services  (AWS), Microsoft Azure, or Google Cloud Platform (GCP), you need to set up cloud integrations. 
 
    See :ref:`supported-data-sources` for supported integrations. 
-3. Determine the OTel deployment mode you want to use: host (agent) and data forwarding (gateway). Host (agent) mode is the default mode. 
+#. Determine the OTel deployment mode you want to use: host (agent) and data forwarding (gateway). Host (agent) mode is the default mode. 
 
    See :ref:`otel-deployment-mode` for more information.
-4. To support creating charts and detectors in Splunk Observability Cloud, define and document a naming convention for your metric names. 
+#. When deploying OpenTelemetry in a large organization, it's critical to define a standardized naming convention for tagging and a governance process to ensure the convention is adhered to. Standardized naming also makes it easier to find metrics and identify usage. See :ref:`metric-dimension-names` and :new-page:`Naming conventions for tagging with OpenTelemetry and Splunk<https://splunk.github.io/observability-workshop/latest/en/resources/otel_tagging/index.html>`.
+
+   There are a few cases where incorrect naming affects in-product usage data:  
+
+   * If your organization uses host-based Splunk Observability Cloud licensing, your OpenTelemetry naming convention must use the OpenTelemetry host semantic convention to track usage and telemetry correctly. See :new-page:`the OpenTelemetry semantic conventions for hosts<https://github.com/open-telemetry/semantic-conventions/blob/main/docs/resource/host.md>`.
+   * You must use the Kubernetes attributes processor for Kubernetes pods to ensure standard naming and accurate usage counting for host-based organizations. See :ref:`kubernetes-attributes-processor`. 
 
    See :ref:`metric-dimension-names`.
-5. Select at least 1 application or service to collect metrics from as part of your prototype. This helps you see the corresponding dashboards and detectors created when your metrics are received by Splunk Observability Cloud. For example, you can use OpenTelemetry receivers to include services like an Nginx server, an Apache web server, or a database such as MySQL. 
+#. Select at least 1 application or service to collect metrics from as part of your prototype. This helps you see the corresponding dashboards and detectors created when your metrics are received by Splunk Observability Cloud. For example, you can use OpenTelemetry receivers to include services like an Nginx server, an Apache web server, or a database such as MySQL. 
 
    See :ref:`nginx`, :ref:`apache-httpserver`, or :ref:`mysql`.
-6. Get familiar with the Splunk Observability Cloud receivers for various applications and services. Each receiver has corresponding dashboards and detectors that are automatically created for each integration after the receiver reaches over 50,000 data points. 
+#. Get familiar with the Splunk Observability Cloud receivers for various applications and services. Each receiver has corresponding dashboards and detectors that are automatically created for each integration after the receiver reaches over 50,000 data points. 
 
    See :ref:`monitor-data-sources`, :ref:`built-in-dashboards`, and :ref:`autodetect`.
 
@@ -63,9 +68,8 @@ Analyze your required network communication
 
 Analyze your required network communication by determining which ports need to be open, which protocols to use, and proxy considerations. 
 
-See :ref:`otel-exposed-endpoints` to determine which ports you need to open in the firewall and what protocols you need to turn on or off in the Collector. 
-
-If your organization requires a proxy, see :ref:`allow-services`.
+* See :ref:`otel-exposed-endpoints` to determine which ports you need to open in the firewall and what protocols you need to turn on or off in the Collector. 
+* If your organization requires a proxy, see :ref:`allow-services`.
 
 .. _phase1-metrics:
 
@@ -90,9 +94,7 @@ The OpenTelemetry Collector automatically reads and detects different types of h
 
 The OpenTelemetry Collector adds dimensions, metric tags, and span attributes which are known as tags. The most common metadata entry is the name of the host, which can come from different sources with different names. See :ref:`metrics-dimensions-mts` for details on the metadata the collector adds. 
 
-To retrieve and modify your metadata, use the resource detection processor in the pipeline section of the OpenTelemetry Agent Configuration. 
-
-Before installing the OpenTelemetry Collector on a host, verify that the resource detection module in the configuration file of the OpenTelemetry Collector matches the preferred metadata source. The order determines which sources are used. See :ref:`resourcedetection-processor`.
+To retrieve and modify your metadata, use the resource detection processor in the pipeline section of the OpenTelemetry Agent Configuration. Before installing the OpenTelemetry Collector on a host, verify that the resource detection module in the configuration file of the OpenTelemetry Collector matches the preferred metadata source. The order determines which sources are used. See :ref:`resourcedetection-processor`.
 
 .. _phase1-3rd-party:
 

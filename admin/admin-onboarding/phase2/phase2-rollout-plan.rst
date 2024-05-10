@@ -3,7 +3,9 @@
 Pilot rollout phase part 1: Plan your pilot rollout
 ****************************************************************
 
-After completing :ref:`phase1`, you are ready for phase 2, pilot rollout. Use the following information to guide your implementation of Splunk Infrastructure Monitoring and Splunk Application Performance Monitoring. 
+After completing :ref:`phase1`, you are ready for phase 2, pilot rollout. 
+
+Use the following information to guide your implementation of Splunk Infrastructure Monitoring and Splunk Application Performance Monitoring. 
 
 - :ref:`naming_conventions`
 - :ref:`pilots`
@@ -15,18 +17,6 @@ After completing :ref:`phase1`, you are ready for phase 2, pilot rollout. Use th
 
 .. note::
     Work closely with your Splunk Sales Engineer or Splunk Customer Success Manager throughout your onboarding process. They can help you fine tune your Splunk Observability Cloud journey and provide best practices, training, and workshop advice.
-
-.. _naming_conventions:
-
-Define your OpenTelemetry naming conventions
-=========================================================
-
-When deploying OpenTelemetry in a large organization, it's critical to define a standardized naming convention for tagging and a governance process to ensure the convention is adhered to. Standardized naming also makes it easier to find metrics and identify usage. See :ref:`metric-dimension-names` and :new-page:`Naming conventions for tagging with OpenTelemetry and Splunk<https://splunk.github.io/observability-workshop/latest/en/resources/otel_tagging/index.html>`.
-
-There are a few cases where incorrect naming affects in-product usage data:  
-
-* If your organization uses host-based Splunk Observability Cloud licensing, your OpenTelemetry naming convention must use the OpenTelemetry host semantic convention to track usage and telemetry correctly. See :new-page:`the OpenTelemetry semantic conventions for hosts<https://github.com/open-telemetry/semantic-conventions/blob/main/docs/resource/host.md>`.
-* You must use the Kubernetes attributes processor for Kubernetes pods to ensure standard naming and accurate usage counting for host-based organizations. See :ref:`kubernetes-attributes-processor`. 
 
 .. _pilots:
 

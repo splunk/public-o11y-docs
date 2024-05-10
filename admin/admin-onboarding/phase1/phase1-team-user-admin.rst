@@ -24,6 +24,13 @@ Create a trial for your organization
 
 If you have a Splunk technical contact, they can create a Splunk Observability Cloud trial for your organization and provide you with the link to log in to your trial organization. Alternatively, you can sign up for a trial. See :ref:`o11y-trial`.
 
+.. _phase1-custom-URL:
+
+(Optional) Request a custom URL for your organization
+=========================================================
+
+Create a Splunk support request to request a custom URL for your organization, for example, acme.signalfx.com. See :ref:`support` for support contact options.
+
 .. _phase1-user-access:
 
 Decide how to manage user access
@@ -34,13 +41,6 @@ Choose from these 3 options for managing user access:
 #. Use an external Lightweight Directory Access Protocol (LDAP) and control access through Single Sign-On (SSO). See :ref:`sso-label` for more information.
 #. Use Splunk Observability Cloud user management to allow access using a username and password. See :ref:`user-managment-intro`.
 #. Use Splunk Cloud Platform as the unified identity provider. See :ref:`unified-id-unified-identity` for more information.
-
-.. _phase1-custom-URL:
-
-(Optional) Request a custom URL for your organization
-=========================================================
-
-Create a Splunk support request to request a custom URL for your organization, for example, acme.signalfx.com. See :ref:`support` for support contact options.
 
 .. _phase1-teams-tokens:
 
