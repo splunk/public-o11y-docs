@@ -127,7 +127,7 @@ Trace Analyzer can search a maximum of 6 hours of data.
 
 Within the Trace Analyzer interface, there are 3 different display limits, numbered as callouts in the following image. 
 
-#. The Trace Analyzer chart displays up to 6 hours of traces.
+#. The Trace Analyzer chart displays at least 1000 trace and at least 6 hours of traces. After there are 1000 traces and 6 hours of trace data, the search stops.
 #. The Group Metrics tab displays up to 6 hours of traces. 
 #. The list of traces displayed on the :guilabel:`Traces` tab has a limit of 1,000 traces. Trace Analyzer searches for traces at the end of the time window you select. When 1,000 traces are matched or the 6-hour search window is reached, the list stops populating.
 
