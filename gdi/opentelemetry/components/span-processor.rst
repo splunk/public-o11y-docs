@@ -1,7 +1,7 @@
 .. _span-processor:
 
 ****************************
-Span processor (deprecated)
+Span processor 
 ****************************
 
 .. meta::
