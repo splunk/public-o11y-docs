@@ -37,54 +37,54 @@ Read more in the official Helm upgrade options documentation at :new-page:`https
 Update the access token for the Collector for Kubernetes
 =============================================================
 
+.. note:: Make sure you don't update your Helm chart or Collector version in the process of updating your access token. See Step 3 for details.
+
 To update the access token for your Collector for Kubernetes instance follow these steps:
 
-#. Confirm the Helm release name and the chart version: 
+1. Confirm the Helm release name and chart version. To do so, run: 
 
   .. code-block:: bash
 
     helm list -f splunk-otel-collector 
 
-#. Optionally, you can check your current access token: 
+2. Optionally, you can check your current access token: 
 
   .. code-block:: bash
 
     helm get values <Release_Name> 
 
-#. Deploy the new access token with Helm upgrade. If you want to use the latest version, remove ``'--version <Current_Chart_Version>'``: 
+3. Deploy your new access token with Helm upgrade. This command will only update your access token, but will mantain your current Helm chart and Collector versions. 
 
   .. code-block:: bash
 
-    helm upgrade --reuse-values --version <Current_Chart_Version> --set splunkObservability.accessToken=<New Access Token> <Release Name> splunk-otel-collector-chart/splunk-otel-collector 
+    helm upgrade --reuse-values --version <Current_Chart_Version> --set splunkObservability.accessToken=<New_Access_Token> <Release_Name> splunk-otel-collector-chart/splunk-otel-collector 
 
-#. Verify the value of the updated access token: 
+  If you want to use the latest Helm version instead of your current one, remove ``'--version <Current_Chart_Version>'`` from the command.  
+
+4. Verify the value of the updated access token: 
 
   .. code-block:: bash
 
     helm get values <Release_Name> 
 
-#. Restart the Collector's daemonset and deployments: 
+5. Restart the Collector's daemonset and deployments: 
 
   .. code-block:: bash
 
     kubectl rollout restart daemonset <Release_Name>-agent kubectl rollout restart deployment <Release_Name>-k8s-cluster-receiver 
     
-#. Optionally, if the gateway is enabled, use: 
+6. If you have deployed any cluster receiver or gateway component, you need to restart them as well so they can update their access token. For more information see :ref:`helm-chart-components`.
+
+  For instance, to restart the gateway, use:
 
   .. code-block:: bash
 
     kubectl rollout restart deployment <Release_Name> 
 
-#. Check the status of your clusters' pods: 
+7. Verify the status of your clusters' pods: 
 
   .. code-block:: bash
 
     kubectl get pod -n <Namespace> | grep <Release_Name>
 
 
-Update the access token for your cluster receiver and Gateway deployments
------------------------------------------------------------------------------------
-
-If you have any cluster receiver or gateway component deployed, you need to restart them as well so they can update their access token.    
-
-For more information see :ref:`helm-chart-components`.
