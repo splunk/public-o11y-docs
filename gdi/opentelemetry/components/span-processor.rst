@@ -7,9 +7,6 @@ Span processor
 .. meta::
       :description: Use the span processor to modify the span name based on its attributes or extract span attributes from the span name.
 
-
-.. caution:: This processor is depecrated. Use :ref:`span-metrics-connector` instead.
-
 The span processor allows you to:
 
 * Modify the span name based on its attributes. 
