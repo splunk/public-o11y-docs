@@ -7,7 +7,6 @@ After completing :ref:`phase1`, you are ready for phase 2, pilot rollout.
 
 Use the following information to guide your implementation of Splunk Infrastructure Monitoring and Splunk Application Performance Monitoring. 
 
-- :ref:`naming_conventions`
 - :ref:`pilots`
 - :ref:`framework`
 - :ref:`enable_integrations`
@@ -23,11 +22,11 @@ Use the following information to guide your implementation of Splunk Infrastruct
 Identify pilot teams and projects
 =====================================
 
-After you integrate initial applications, start planning the initial rollout to your organization's pilot teams. Identify your pilot teams and projects with approximate timelines and capacity requirements.
+Start planning the initial rollout to your organization's pilot teams. Identify your pilot teams and projects with approximate timelines and capacity requirements.
 
 There are 2 types of pilot teams to consider:
 
-* A set of teams that are ready or have started a new project and are using common technologies used by most teams.
+* A set of teams that are ready or have started a new project and are using common technologies.
 * A set of teams that have been using a non-standard technology.
 
 To avoid duplicating efforts, create a single service even if they are used by multiple teams.
@@ -54,7 +53,7 @@ Define a list of libraries required to support applications and those that are s
 
 Next, build your development pipeline: 
 
-* Use the automatic discovery on your hosts or Kubernetes cluster. For details, see :ref:`discovery_mode`.
+* Use automatic discovery on your hosts or Kubernetes cluster. For details, see :ref:`discovery_mode`.
 * Use the automatic instrumentation for containers or virtual machines. For details, see :ref:`apm-gdi`.
 * Identify the environment variables according to specific use cases. Each development language has its own settings, for example:
     
@@ -78,7 +77,7 @@ To define these tags, you can use the standard method to add attributes to a tra
 Establish best practices for Splunk Observability Cloud
 -------------------------------------------------------------------------------
 
-At this point you have some experience with configuration of the OpenTelemetry agents and automatic discovery. You can now create guides for the teams that you want to onboard.
+At this point you have some experience with configuration of the OpenTelemetry agents and auto instrumentation. You can now create guides for the teams that you want to onboard.
 
 Include the following items in our guide: 
 

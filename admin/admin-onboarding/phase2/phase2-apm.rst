@@ -16,7 +16,7 @@ To onboard APM, complete these tasks:
 #. :ref:`use-metricsets`
 #. :ref:`tag-spotlight-values`
 #. :ref:`apm-detectors`
-#. :ref:`_alwayson-profiling`
+#. :ref:`alwayson-profiling`
 
 .. note::
     Work closely with your Splunk Sales Engineer or Splunk Customer Success Manager throughout your onboarding process. They can help you fine tune your Splunk Observability Cloud journey and provide best practices, training, and workshop advice.
