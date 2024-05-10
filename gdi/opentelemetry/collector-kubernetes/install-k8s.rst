@@ -210,6 +210,7 @@ You can configure the following:
 
 * :ref:`otel-kubernetes-config-distro`
 * :ref:`otel-kubernetes-config-environment`
+* :ref:`otel-upgrade-k8s-access-token`
 
 For example:
 
@@ -234,7 +235,6 @@ You can also set Helm values as arguments using a YAML file. For example, after 
 See :new-page:`an example of a YAML file in GitHub <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>`. Options include:
 
 * Set ``isWindows`` to ``true`` to apply the Kubernetes cluster with Windows worker nodes.
-
 
 Set Prometheus metrics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
