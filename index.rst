@@ -10,7 +10,7 @@ Welcome
 .. imagetarget:: _images/get-started/o11y-user-doc-hero-banner-v2.svg
    :alt: Welcome
    :width: 97.3%
-   :target: https://docs.splunk.com/Observability/get-started/get-started-306090.html
+   :target: https://docs.splunk.com/Observability/get-started/o11y.html#nav-Get-started
 
 .. role:: icon-info
 .. rst-class:: newparawithicon
