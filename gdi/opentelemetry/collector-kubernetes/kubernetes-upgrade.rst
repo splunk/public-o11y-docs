@@ -45,7 +45,7 @@ To update the access token for your Collector for Kubernetes instance follow the
 
   .. code-block:: bash
 
-    helm list -f splunk-otel-collector 
+    helm list -f <Release_Name> 
 
 2. Optionally, you can check your current access token: 
 
