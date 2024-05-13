@@ -25,7 +25,6 @@ To configure the Android RUM agent, pass the settings by preparing a ``Config`` 
             .setApplicationName("<name_of_app>")
             .setRealm("<realm>"")
             .setRumAccessToken("<rumAccessToken>")
-            .disableBackgroundTaskReporting(BuildConfig.<id_of_application>)
             .build(this);
       }
    }
@@ -81,8 +80,10 @@ Use the following settings to activate or deactivate the collection of specific 
 
    * - Option
      - Description
-   * - :code:`disableBackgroundTaskReporting()`
-     - Deactivates instrumentation for background tasks. Accepts an application ID value.
+   * - :code:`disableSubprocessInstrumentation()`
+     - Deactivates instrumentation for application subprocesses. Accepts an application ID value.
+   * - :code:`enableBackgroundInstrumentationDeferredUntilForeground()`
+     - Enables the deferrment of background telemetry until the app is foregrounded. Used to connect background session data to a real user session.
    * - :code:`disableCrashReporting()`
      - Deactivates crash reporting. This feature is activated by default.
    * - :code:`disableAnrDetection()`

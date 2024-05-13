@@ -287,15 +287,15 @@ Using the installer script, you can install and activate automatic discovery for
 
     .. tab:: .NET
 
-        Using the installer script, you can install and activate automatic discovery for .NET for either all supported .NET applications on the host via the system-wide method or for only .NET applications running as ``systemd`` services.
-
-        .. note:: By default, automatic discovery is activated for all languages (Java, Node.js, and .NET) when using the installer script. To deactivate automatic discovery for other languages, add the ``--without-instrumentation-sdk [language]`` option in the installer script command.
-
         .. tabs::
 
             .. tab:: Installer script 
 
-                .. tabs:: 
+                Using the installer script, you can install and activate automatic discovery for .NET for either all supported .NET applications on the host via the system-wide method or for only .NET applications running as ``systemd`` services.
+
+                .. note:: By default, automatic discovery is activated for all languages (Java, Node.js, and .NET) when using the installer script. To deactivate automatic discovery for other languages, add the ``--without-instrumentation-sdk [language]`` option in the installer script command.
+
+                .. tabs::
 
                     .. tab:: System-wide
                                 
@@ -372,6 +372,11 @@ Using the installer script, you can install and activate automatic discovery for
             .. tab:: Chef
 
                 See :ref:`chef-zero-config`.
+
+            .. tab:: Puppet
+
+                See :ref:`puppet-zero-config`.
+
 
 .. _auto-discovery-linux-verify:
 
