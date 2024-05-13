@@ -338,7 +338,7 @@ See the following manifest to set security constraints:
 Use the Kubernetes Operator in OpenTelemetry
 ============================================================================================
 
-You can install the Collector with an upstream Kubernetes Operator for Auto Instrumentation. For more information, see :ref:`discovery-kubernetes`.
+Using the Splunk Helm chart , you can install the Splunk Collector along with an upstream OpenTelemetry Kubernetes Operator for Auto Instrumentation. For more information, see :ref:`discovery-kubernetes`.
 
 This instance of the Kubernetes Operator is part of the upstream OpenTelemetry Operator project. See the :new-page:`OpenTelemetry GitHub repo <OpenTelemetry GitHub repo <https://github.com/open-telemetry/opentelemetry-operator>` for more information.
 
