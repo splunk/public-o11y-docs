@@ -69,19 +69,25 @@ To update the access token for your Collector for Kubernetes instance follow the
 
 5. Restart the Collector's daemonset and deployments: 
 
+  * If ``agent.enabled=true``, restart the Collector's agent daemonset:
+
   .. code-block:: bash
 
-    kubectl rollout restart daemonset <Release_Name>-agent kubectl rollout restart deployment <Release_Name>-k8s-cluster-receiver 
+    kubectl rollout restart daemonset <Release_Name>-agent
     
-6. If you have deployed any cluster receiver or gateway component, you need to restart them as well so they can update their access token. For more information see :ref:`helm-chart-components`.
-
-  For instance, to restart the gateway, use:
+  * If ``clusterReceiver.enabled=true``, restart the Collector's cluster receiver deployment:
 
   .. code-block:: bash
+    
+    kubectl rollout restart deployment <Release_Name>-k8s-cluster-receiver 
 
-    kubectl rollout restart deployment <Release_Name> 
+  * If ``gateway.enabled=true``, restart the Collector's gateway deployment:
 
-7. Verify the status of your clusters' pods: 
+  .. code-block:: bash
+    
+    kubectl rollout restart deployment <Release_Name>
+
+6. Verify the status of your clusters' pods: 
 
   .. code-block:: bash
 
