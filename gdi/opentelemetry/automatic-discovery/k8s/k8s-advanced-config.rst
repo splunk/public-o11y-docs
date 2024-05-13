@@ -74,7 +74,7 @@ You can configure AlwaysOn Profiling in Kubernetes by editing the values.yaml fi
 Follow these steps to activate Profiling for a language:
 
 #. Open the values.yaml file.
-#. In the ``operator.instrumentation.spec.<language>.env`` section, add the ``SPLUNK_PROFILER_ENABLED="true"`` environment variable and the ``SPLUNK_PROFILER_CALL_STACK_INTERVAL`` environment variable. For example, the following values.yaml file configures AlwaysOn Profiling to sample call stacks from a 5000 millisecond interval:
+#. In the ``operator.instrumentation.spec.<language>.env`` section, add the ``SPLUNK_PROFILER_ENABLED="true"``, ``SPLUNK_PROFILER_MEMORY_ENABLED="true"``, and ``SPLUNK_PROFILER_CALL_STACK_INTERVAL`` environment variables. For example, the following values.yaml file configures AlwaysOn Profiling to sample call stacks from a 5000 millisecond interval:
 
     .. code-block:: yaml
 
@@ -86,6 +86,8 @@ Follow these steps to activate Profiling for a language:
                 env:
                 # Activates AlwaysOn Profiling for Node.js
                 - name: SPLUNK_PROFILER_ENABLED
+                  value: "true"
+                - name: SPLUNK_PROFILER_MEMORY_ENABLED
                   value: "true"
                 # Samples call stacks from a 5000 millisecond interval. 
                 # If excluded, samples from a 10000 millisecond interval by default.
