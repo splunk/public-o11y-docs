@@ -137,7 +137,7 @@ Follow these steps to activate runtime metrics collection:
                   apiVersion: v1
                   fieldPath: status.hostIP
             - name: SPLUNK_METRICS_ENDPOINT
-              value: http://(SPLUNK_NODE_IP):9943/v2/datapoint
+              value: http://(SPLUNK_OTEL_AGENT):9943/v2/datapoint
 
 #. Reinstall the Splunk OTel Collector Chart with the following command. Replace <CURRENT_VERSION> with the current version of your splunk-otel-collector-chart.
 
