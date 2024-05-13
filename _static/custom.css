@@ -330,3 +330,15 @@ a.external:not(.image-reference):after {
 }
 
 .uppercased:first-letter {text-transform: uppercase}
+
+ul li p {
+   margin-bottom: 0px !important;
+}
+
+ol li p {
+   margin-bottom: 0px !important;
+}
+
+dt {
+   font-weight: 500 !important;
+}
