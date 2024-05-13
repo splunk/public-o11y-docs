@@ -46,7 +46,7 @@ See the following resources to learn how to find, edit, and link your metadata:
 * To link metadata to other resources, see how in :ref:`link-metadata-to-content`.
 * To add metadata to your metrics, see :ref:`metrics-finder-and-metadata-catalog`. You can also use the API to add metadata. See how in :new-page:`the Splunk developer documentation <https://dev.splunk.com/observability/reference/api/metrics_metadata/latest#endpoint-update-dimension-metadata>`.
 
-For more tools to leverage your data, see:
+For more tools to leverage your data, see the following:
 
 * :ref:`data-visualization-charts` 
 * :ref:`view-alerts`
