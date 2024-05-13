@@ -131,7 +131,7 @@ Follow these steps to activate runtime metrics collection:
         instrumentation:
           spec:
             env:
-            - name: SPLUNK_NODE_IP
+            - name: SPLUNK_OTEL_AGENT
               valueFrom:
                 fieldRef:
                   apiVersion: v1
