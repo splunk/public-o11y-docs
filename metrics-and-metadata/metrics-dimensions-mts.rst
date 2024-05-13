@@ -235,7 +235,7 @@ Use custom properties in the following situations:
 Example: Adding context without creating more MTS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You collect a metric called ``service.errors`` to know when your customers are running into issues with your services. The MTS for this metric are already uniquely identifiable by the customer and service dimensions. You want to attach the escalation contacts for each service for every customer to your metrics. In this case, you assign the escalation contacts as custom properties to the specific service dimension or customer dimensions. As your team grows and goes through reorganization, you want to be able to change this metadata. You also don't need the escalation contacts as dimensions as the customer and service dimensions already yield separate MTS.
+Suppose you collect a metric called ``service.errors`` to know when your customers are running into issues with your services. The MTS for this metric are already uniquely identifiable by the customer and service dimensions. You want to attach the escalation contacts for each service for every customer to your metrics. In this case, you assign the escalation contacts as custom properties to the specific service dimension or customer dimensions. As your team grows and goes through reorganization, you want to be able to change this metadata. You also don't need the escalation contacts as dimensions as the customer and service dimensions already yield separate MTS.
 
 Use Infrastructure Monitoring tags
 ----------------------------------------
@@ -245,10 +245,10 @@ In Infrastructure Monitoring, use tags when there is a one-to-many relationship 
 Example: Canary testing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Suppose you do canary testing in your environment. When you do a canary deployment, you use the ``canary`` tag to mark the hosts that received the new code, so you can identify their metrics and compare their performance to those hosts that didn't receive the new code. You don't need a key-value pair as there's only a single value, ``canary``.
+Suppose you do canary testing in your environment. When you create a canary deployment, you can use the ``canary`` tag to mark the hosts that received the new code, so you can identify their metrics and compare their performance to those hosts that didn't receive the new code. You don't need a key-value pair as there's only a single value, ``canary``.
 
 Example: Host running multiple applications
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Suppose you have hosts that run multiple applications in your environment. To identify the apps that a particular host is running, you create a tag for each app, then apply one or more of these tags to the ``host:<name>`` dimension to specify the apps that are running on each host.
+Suppose you have hosts that run multiple applications in your environment. To identify the apps that a particular host is running, create a tag for each app, then apply one or more of these tags to the ``host:<name>`` dimension to specify the apps that are running on each host.
 
