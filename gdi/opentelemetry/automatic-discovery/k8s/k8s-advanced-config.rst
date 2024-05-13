@@ -64,7 +64,7 @@ See the following pages for information about previous versions for each languag
 Override default instrumentation settings
 ======================================================
 
-You can override default automatic discovery settings to use features for profiling.
+You can override default automatic discovery settings to use features such as AlwaysOn profiling and runtime metrics.
 
 Configure AlwaysOn Profiling
 ----------------------------------------
@@ -82,18 +82,65 @@ Follow these steps to activate Profiling for a language:
 
         operator:
           enabled: true
+          instrumentation:  
+            spec:
+              nodejs:
+                env:
+                # Activates AlwaysOn Profiling for Node.js
+                - name: SPLUNK_PROFILER_ENABLED
+                  value: true
+                # Samples call stacks from a 5000 millisecond interval. 
+                # If excluded, samples from a 10000 millisecond interval by default.
+                - name: SPLUNK_PROFILER_CALL_STACK_INTERVAL
+                  value: 5000
+      
+#. Reinstall the Splunk OTel Collector Chart with the following command. Replace <CURRENT_VERSION> with the current version of your splunk-otel-collector-chart.
+
+    .. code-block:: bash
+
+        helm upgrade splunk-otel-collector splunk-otel-collector-chart/splunk-otel-collector --version <CURRENT_VERSION> -f values.yaml
+
+Activate runtime metrics collection (Java and Node.js only)
+-------------------------------------------------------------
+
+You can activate runtime metrics collection for Java and Node.js applications running in your Kubernetes environment. To learn more about runtime metrics collection, see :
+
+Follow these steps to activate runtime metrics collection:
+
+#. Open the values.yaml file.
+#. In the ``operator.instrumentation.spec.<language>.env`` section, add the ``SPLUNK_METRICS_ENABLED=true`` environment variable.
+
+    For example, the following values.yaml file activates runtime metrics collection for Java applications:
+
+    .. code-block:: yaml
+
+      operator:
+        enabled: true
         instrumentation:  
           spec:
-            nodejs:
+            java:
               env:
-              # Activates AlwaysOn Profiling for Node.js
-              - name: SPLUNK_PROFILER_ENABLED
+              # Activates runtime metrics collection for Java
+              - name: SPLUNK_METRICS_ENABLED
                 value: true
-              # Samples call stacks from a 5000 millisecond interval. 
-              # If excluded, samples from a 10000 millisecond interval by default.
-              - name: SPLUNK_PROFILER_CALL_STACK_INTERVAL
-                value: 5000
-      
+
+#. In the ``operator.instrumentation.spec.env`` section, add the following environment variables and values to configure the endpoint to which the Collector sends runtime metrics:
+
+    .. code-block:: yaml
+
+      operator:
+        enabled: true
+        instrumentation:
+          spec:
+            env:
+            - name: SPLUNK_NODE_IP
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: status.hostIP
+            - name: SPLUNK_METRICS_ENDPOINT
+              value: http://(SPLUNK_NODE_IP):9943/v2/datapoint
+
 #. Reinstall the Splunk OTel Collector Chart with the following command. Replace <CURRENT_VERSION> with the current version of your splunk-otel-collector-chart.
 
     .. code-block:: bash
