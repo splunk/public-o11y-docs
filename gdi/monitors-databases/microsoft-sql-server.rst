@@ -182,7 +182,7 @@ SQL Server monitor:
 Metrics
 =================
 
-The following metrics are available for this integration:
+This integration provides a set of metrics. Note that some metrics might depend your type of your database instance: 
 
 .. raw:: html
  
