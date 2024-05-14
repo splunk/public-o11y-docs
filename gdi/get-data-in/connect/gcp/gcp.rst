@@ -30,6 +30,8 @@ The following pre-requisites apply:
 * You must be an administrator of your Splunk Observability Cloud organization to create a GCP connection.
 * Splunk Observability Cloud supports all GCP regions. 
 
+.. note:: Check the restrictions on your organization's account keys before connecting to Splunk Observability Cloud.
+
 .. raw:: html
 
    <embed>
