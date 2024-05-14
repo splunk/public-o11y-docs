@@ -146,7 +146,9 @@ By default, all supported services are monitored, and any new services added lat
 #. Log in to Splunk Observability Cloud. 
 #. Open the :new-page:`Google Cloud Platform guided setup <https://login.signalfx.com/#/integrations/gcp>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the navigation menu, select :menuselection:`Data Management`, then select :guilabel:`+ Add Integration` to open the :strong:`Integrate Your Data` page.
+   #. In the navigation menu, select :menuselection:`Data Management`.
+   
+   #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 
    #. In the integration filter menu, select :guilabel:`By Use Case`, and select the :guilabel:`Monitor Infrastructure` use case.
 
@@ -218,7 +220,7 @@ To take advantage of the full benefits of the Splunk Observability Cloud platfor
 
 To track the degree of OpenTelemetry enablement in your GCP integrations: 
 
-1. From Splunk Observability Cloud, go to :guilabel:`Data Management > Google Cloud Platform`.
+1. From Splunk Observability Cloud, go to :guilabel:`Data Management > Deployed integrations > Google Cloud Platform`.
 
 2. Select :guilabel:`OpenTelemetry Enabled` to see whether the OTel Collector is installed on each GCE instance or GKE cluster. This helps you identify the instances that still need to be instrumented. 
 

@@ -27,7 +27,7 @@ Do the following steps to migrate from the Smart Agent to the Collector:
 
 Deploy the Collector in a non-production environment, for example, a development host or VM or a Kubernetes cluster in staging. The environment needs to be a copy or identical to your production environment.
 
-Navigate to your instance of Splunk Observability Cloud and select :menuselection:`Data Management` in the navigation bar. Choose the platform you want to deploy the Collector to.
+Navigate to your instance of Splunk Observability Cloud and select :menuselection:`Data Management > Available integrations` in the navigation bar. Choose the platform you want to deploy the Collector to.
 
 .. image:: /_images/gdi/3886-choose-your-platform.png
    :width: 99%

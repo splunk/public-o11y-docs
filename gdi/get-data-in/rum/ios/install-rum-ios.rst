@@ -37,13 +37,15 @@ Before you instrument and configure Splunk RUM for your iOS application, underst
 
 1. Log in to Splunk Observability Cloud.
 
-2. In the navigation menu, select :menuselection:`Data Management` to open the :strong:`Integrate Your Data` page.
+2. In the navigation menu, select :menuselection:`Data Management`. 
 
-3. In the integration filter menu, select :guilabel:`By Use Case`.
+3. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 
-4. Select the :guilabel:`Monitor user experience` use case.
+4. In the integration filter menu, select :guilabel:`By Use Case`.
 
-5. Select the :guilabel:`iOS Instrumentation` tile to open the iOS Instrumentation guided setup.
+5. Select the :guilabel:`Monitor user experience` use case.
+
+6. Select the :guilabel:`iOS Instrumentation` tile to open the iOS Instrumentation guided setup.
 
 
 .. _rum-ios-install-manually:

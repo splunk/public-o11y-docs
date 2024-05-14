@@ -34,10 +34,10 @@ Copy the :strong:`Integration Key` value for use in :ref:`pagerduty2`.
 
 .. _pagerduty2:
 
-Step 2: Create a PagerDuty integration in Observability Cloud
+Step 2: Create a PagerDuty integration in Splunk Observability Cloud
 =================================================================================
 
-You must be an Observability Cloud administrator to perform this task.
+You must be a Splunk Observability Cloud administrator to perform this task.
 
 To create a PagerDuty integration in Observability Cloud:
 
@@ -46,7 +46,7 @@ To create a PagerDuty integration in Observability Cloud:
 
    #. In the left navigation menu, select :menuselection:`Data Management`.
 
-   #. Select :guilabel:`Add Integration`.
+   #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 
    #. In the integration filter menu, select :guilabel:`All`.
 

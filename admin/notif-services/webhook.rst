@@ -58,7 +58,7 @@ You must be a Splunk Observability Cloud administrator to complete this task.
 #. Open the :new-page:`Webhook guided setup <https://login.signalfx.com/#/integrations/webhook>`. Alternatively, you can navigate to the guided setup on your own:
 
    #. In the navigation menu, select :menuselection:`Data Management`.
-   #. Select :guilabel:`Add Integration`.
+   #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
    #. In the integration filter menu, select :guilabel:`All`.
    #. In the :guilabel:`Search` field, search for :guilabel:`Webhook`, and select it.
    #. Select :strong:`New Integration` to display the configuration options.

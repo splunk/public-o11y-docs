@@ -37,7 +37,7 @@ If you are just setting up Splunk APM and want to use the Splunk Distribution of
 
 .. _deploy-connector:
 
-Deploy the Splunk Distribution of OpenTelemetry Collector on your hosts
+Deploy the Splunk Distribution of the OpenTelemetry Collector on your hosts
 --------------------------------------------------------------------------------------------------
 
 To send traces to Splunk APM, first deploy the Splunk Distribution of OpenTelemetry Collector on the hosts in which your applications are running. Splunk Observability Cloud offers OpenTelemetry Collector distributions for Kubernetes, Linux, and Windows. These distributions integrate the collection of data from hosts and data forwarding to Observability Cloud.
@@ -51,9 +51,14 @@ To send traces to Splunk APM, first deploy the Splunk Distribution of OpenTeleme
   - You establish a single configuration point in which you add custom tags and custom processing to your spans.
   - You can batch spans together from many sources. By batching spans, you reduce load on the back end.
 
-To deploy the Splunk Distribution of OpenTelemetry Collector on a host, select :guilabel:`Navigation menu > Data Management` and search for the host type you're using. Then follow the steps in the setup wizard.
+To deploy the Splunk Distribution of OpenTelemetry Collector on a host, follow these steps:
 
-See the following table for more information about deploying the Splunk Distribution of OpenTelemetry Collector on Kubernetes, Linux, and Windows hosts:
+#. Log in to Splunk Observability Cloud.
+#. In the left navigation menu, select :menuselection:`Data Management`.
+#. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
+#. Select the setup wizard for the Collector, and follow the instructions according to your host.
+
+See the following table for more information about deploying the Splunk Distribution of the OpenTelemetry Collector on Kubernetes, Linux, and Windows hosts:
 
 .. list-table::
    :header-rows: 1
