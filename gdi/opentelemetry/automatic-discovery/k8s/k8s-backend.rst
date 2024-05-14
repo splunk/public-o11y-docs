@@ -471,6 +471,82 @@ For example, if the current namespace is ``<my-namespace>`` and you installed th
 
 Replace ``<application_language>`` with the language of the application you want to discover.
 
+Instrument applications in multi-container pods
+-------------------------------------------------
+
+By default, automatic discovery instruments the first container in the Kubernetes pod spec. You can specify multiple containers to instrument by adding an annotation.
+
+The following example instruments Java applications running in the ``myapp`` and ``myapp2`` containers:
+
+.. code-block:: yaml
+
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: my-deployment-with-multiple-containers
+  spec:
+    selector:
+      matchLabels:
+        app: my-pod-with-multiple-containers
+    replicas: 1
+    template:
+      metadata:
+        labels:
+          app: my-pod-with-multiple-containers
+        annotations:
+          instrumentation.opentelemetry.io/inject-java: "true"
+          instrumentation.opentelemetry.io/container-names: "myapp,myapp2"
+
+You can also instrument multiple containers with specific languages. To do so, follow these steps:
+
+#. In your values.yaml file, set the ``operator.autoinstrumentation.multi-instrumentation`` field to ``enabled``. For example:
+
+   .. code-block:: yaml
+
+    clusterName: my-cluster
+
+    splunkObservability:
+      realm: <splunk_realm>
+      accessToken: <splunk_access_token>
+    
+    certmanager:
+      enabled: true
+    operator:
+      enabled: true
+      autoinstrumentation:
+        multi-instrumentation: enabled
+
+#. Upgrade the Helm deployment with the following command:
+
+   .. code-block:: bash
+
+      helm upgrade otel-collector -f ./values.yaml splunk-otel-collector-chart/splunk-otel-collector --namespace o11y
+
+#. Specify which languages and containers to instrument by using the ``instrumentation.opentelemetry.io/<language>-container-names`` annotation. The following example instruments Java applications in ``myapp`` and ``myapp2``, and Node.js applications in ``myapp3``.
+
+   .. code-block:: yaml
+
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: my-deployment-with-multi-containers-multi-instrumentations
+    spec:
+      selector:
+        matchLabels:
+          app: my-pod-with-multi-containers-multi-instrumentations
+      replicas: 1
+      template:
+        metadata:
+          labels:
+            app: my-pod-with-multi-containers-multi-instrumentations
+          annotations:
+            instrumentation.opentelemetry.io/inject-java: "true"
+            instrumentation.opentelemetry.io/java-container-names: "myapp,myapp2"
+            instrumentation.opentelemetry.io/inject-nodejs: "true"
+            instrumentation.opentelemetry.io/python-container-names: "myapp3"
+
+#. Restart any Kubernetes pods that use the new annotations.
+
 Deactivate automatic discovery
 -----------------------------------------------
 
