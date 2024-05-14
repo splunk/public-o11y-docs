@@ -129,7 +129,7 @@ The following example shows how to activate the profiler using the system proper
    -Dsplunk.profiler.enabled=true \
    -Dsplunk.profiler.memory.enabled=true \
    -Dotel.exporter.otlp.endpoint=http(s)://collector:4317 \
-   -Dsplunk.metrics.endpoint=http(s)://collector:9943
+   -Dsplunk.metrics.endpoint=http(s)://collector:4318
    -jar <your_application>.jar
 
 See :ref:`get-data-in-profiling` for more information. For more settings, see :ref:`profiling-configuration-java`.
