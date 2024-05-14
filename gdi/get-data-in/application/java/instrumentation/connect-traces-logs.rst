@@ -5,7 +5,7 @@ Connect Java trace data with logs for Splunk Observability Cloud
 ****************************************************************
 
 .. meta::
-   :description: You can configure Java logging libraries to include tracing attributes provided automatically by the Splunk OTel Java agent. Use the trace metadata to correlate traces with log events and explore logs in Splunk Observability Cloud.
+   :description: You can configure Java logging libraries to include tracing attributes provided automatically by the Splunk OTel Java agent. Use the trace metadata to correlate traces with log events.
 
 The agent from the Splunk Distribution of OpenTelemetry Java annotates application logs with trace ID, span ID, and flags by default. The agent then sends the logs to Splunk Observability Cloud through the OpenTelemetry Collector.
 
