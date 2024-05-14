@@ -14,6 +14,7 @@ Notification types
 
     snooze
     delayed-notifications
+    call-notification-numbers
 
 
 
@@ -21,6 +22,9 @@ Notification types
 Splunk On-Call offers many notification options including email, SMS, phone, and push notifications. This topic highlights each of the different options.
 
 .. note:: A maximum amount of four separate phone numbers for SMS and Phone notifications can be implemented into any given Splunk On-Call user profile.
+
+You can also configure delayed notifications for alerts that may auto-resolve within a set time frame. For details, see 
+
 
 .. raw:: html
 

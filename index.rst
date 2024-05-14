@@ -836,7 +836,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    Configure Splunk On-Call TOGGLE </sp-oncall/admin/get-started/admin-getting-started>
 
-
 .. toctree::
    :maxdepth:   3
 
@@ -845,7 +844,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Create and manage on-call schedules TOGGLE <sp-oncall/on-call-schedules/on-call-schedules-main>
+   Create and manage on-call schedules TOGGLE <sp-oncall/on-call-schedules/create-manage-on-call-schedules>
 
 .. toctree::
    :maxdepth:   3

@@ -10,8 +10,7 @@ Create Routing Keys in Splunk On-Call
    :description: Alert routing gives you the precision required to assign specific types of alerts to specific groups.
 
 
-Alert routing gives you the precision required to assign specific types of alerts to specific groups. When the objective is to quickly and accurately target specific team members to deal with a particular
-incident without unnecessarily notifyingyour entire team, Routing Keys are the tool to use.
+Alert routing gives you the precision required to assign specific types of alerts to specific groups. When the objective is to quickly and accurately target specific team members to deal with a particular incident without unnecessarily notifyingyour entire team, Routing Keys are the tool to use.
 
 .. note:: Routing keys are case insensitive and should only be composed of letters, numbers, hyphens, and underscores.
 

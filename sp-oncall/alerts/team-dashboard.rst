@@ -75,10 +75,6 @@ popover associated with your profile.
 
 _images/spoc/People-Table.jpg
 
- 
-
- 
-
 _images/spoc/Take-On-Call.jpg
 
  
