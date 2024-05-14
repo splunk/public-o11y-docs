@@ -88,15 +88,7 @@ The agent collects the following metrics through the following libraries:
   * - :ref:`Vibur DBCP connection pool metrics <connection-pool-metrics>`
     - ``vibur-dbcp-splunk``
     - Version 20.0 and higher
-  * - :ref:`Tomcat thread pool metrics <thread-pool-metrics>`
-    - ``tomcat``
-    - Version 8.5 and higher
-  * - :ref:`WebSphere Liberty thread pool metrics <thread-pool-metrics>`
-    - ``liberty``
-    - Version 20.0.0.12
-  * - :ref:`WebLogic thread pool metrics <thread-pool-metrics>`
-    - ``weblogic``
-    - Versions 12.x and 14.x
+
 
 .. _jvm-metrics:
 
@@ -302,82 +294,6 @@ All connection pool metrics share the following tags:
   * - ``pool.type``
     - Type or implementation of the connection pool. For example, ``c3p0``, ``dbcp2``, or ``hikari``.
 
-.. _thread-pool-metrics:
-
-Thread pool metrics
-----------------------------------------------------------------------
-
-The Splunk Distribution of OpenTelemetry Java instruments the following thread pool implementations:
-
-- Tomcat connector thread pools
-- WebSphere Liberty web request thread pool
-- Weblogic thread pools
-
-Each of the supported connection pools reports a subset of the following metrics:
-
-.. list-table::
-  :header-rows: 1
-  :widths: 40 10 50
-  :width: 100%
-
-  * - Metric
-    - Type
-    - Description
-  * - ``executor.threads``
-    - Timer
-    - Number of threads in the pool.
-  * - ``executor.threads.active``
-    - Timer
-    - Number of threads that are executing code.
-  * - ``executor.threads.idle``
-    - Timer
-    - Number of threads that aren't executing code.
-  * - ``executor.threads.core``
-    - Timer
-    - Core thread pool size, expressed as the number of threads that are always kept in the pool.
-  * - ``executor.threads.max``
-    - Timer
-    - Maximum number of threads in the pool.
-  * - ``executor.tasks.submitted``
-    - Counter
-    - Total number of tasks submitted to the executor.
-  * - ``executor.tasks.completed``
-    - Counter
-    - Total number of tasks completed by the executor.
-
-All thread pool metrics have the following tags:
-
-.. list-table::
-  :header-rows: 1
-  :widths: 40 60
-  :width: 100%
-
-  * - Tag
-    - Value
-  * - ``executor.name``
-    - Name of the thread pool.
-  * - ``executor.type``
-    - Type/implementation of the connection pool. For example, ``tomcat``, ``liberty``, or ``weblogic``.
-
-.. _webengine-attributes-java-otel:
-
-WebEngine attributes
-=========================================================
-
-The Splunk Distribution of OpenTelemetry Java captures data about the application server and adds the following attributes to `SERVER` spans:
-
-.. list-table::
-  :header-rows: 1
-  :width: 100%
-
-  * - Span attribute
-    - Description
-  * - ``webengine.name``
-    - Name of the applications server. For example, ``tomcat``.
-  * - ``webengine.version``
-    - Version of the application server.
-
-For a list of supported application servers, see the :new-page:`OpenTelemetry documentation <https://github.com/open-telemetry/opentelemetry-java-instrumentation/blob/main/docs/supported-libraries.md#application-servers>`.
 
 New metric names
 ======================================

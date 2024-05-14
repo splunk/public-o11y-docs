@@ -7,9 +7,11 @@ OpenTelemetry Java Instrumentation 2.x release
 .. meta::
   :description: OpenTelemetry Java Instrumentation 2.x contains a set of breaking changes, introduced as part of recent OpenTelemetry HTTP semantic convention updates.
 
-OpenTelemetry Java Instrumentation 2.x contains a set of breaking changes, introduced as part of recent OpenTelemetry HTTP semantic convention updates. Changes to upstream OpenTelemetry Java instrumentation will impact Splunk OpenTelemetry Java distribution.
+OpenTelemetry Java Instrumentation 2.x contains a set of breaking changes, introduced as part of OpenTelemetry HTTP semantic convention updates. Changes to upstream Java instrumentation impact Splunk OpenTelemetry Java distribution.
 
-To solve this, the 2.0 GA release of the Splunk Distribution of OpenTelemetry Java is fully compatible with the enhancements introduced by OpenTelemetry native version. A migration guide is available to all users. See :ref:`java-metrics-migration-guide`.
+To solve this, the 2.0 GA release of the Splunk Distribution of OpenTelemetry Java is fully compatible with the enhancements introduced by OpenTelemetry native version. 
+
+A migration guide is available to all users. See :ref:`java-metrics-migration-guide`.
 
 Until the stable release of the Splunk Distribution of OpenTelemetry Java 2.0, existing and new customers must continue using version 1.x of the Splunk distribution, which is fully supported and is compatible with existing features of Splunk Observability Cloud.
 
