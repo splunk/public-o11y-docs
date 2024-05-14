@@ -1,11 +1,11 @@
 .. _manage-users:
 
 ************************************************************************
-Managing Splunk On-Call users
+Manage Splunk On-Call users
 ************************************************************************
 
 .. meta::
-   :description: About the user role in Splunk On-Call.
+   :description: Manage users in Splunk On-Call.
 
 
 
@@ -74,7 +74,7 @@ On the team's page under the *Users* tab, a trash icon next to the user's name w
 
 As a fail-safe, when a user is being removed from a team, a replacement user is required to fill any holes the user being removed will open up. If the user being removed was deleted from all shifts they were apart of, the “replacement” user will act as a wash.
 
-Removing a User from VictorOps
+Removing a User from Splunk On-Call
 ================================================
 
 When removing a user from the platform, first delete them from any shifts and teams the users is apart of. Once the user is removed from

@@ -13,19 +13,13 @@ About the Splunk On-Call Post Incident Review
 Team Dashboard
 ==============
 
-The Splunk On-Call Team Dashboard provides a comprehensive overview of
-incidents. This view automatically defaults to the teams that you are a
-member of and allows teams to dive into the details, understand the
-status
+The Splunk On-Call Team Dashboard provides a comprehensive overview of incidents. This view automatically defaults to the teams that you are a member of and allows teams to dive into the details, understand the status.
 
-All incidents derived from integrated monitoring tools in the incident
-table include  their respective logos to help you rapidly identify the
-source of an alert. Manually created incidents, along with incidents
-originating from the Email Endpoint or the REST API integrations, will
+All incidents derived from integrated monitoring tools in the incident table include their respective logos to help you rapidly identify the
+source of an alert. Manually created incidents, along with incidents originating from the Email Endpoint or the REST API integrations, will
 remain logo free.
 
-Information Alerts can still be found on the `Timeline
-Page. <https://help.victorops.com/knowledge-base/timeline/>`__
+Information Alerts can still be found on the `Timeline Page. <https://help.victorops.com/knowledge-base/timeline/>`__
 
 |image|
 
@@ -33,22 +27,14 @@ Page. <https://help.victorops.com/knowledge-base/timeline/>`__
 Filters
 -------
 
-The filters provide an easy way for you to see exactly what you are
-looking for and nothing else. Whether you want to filter by team or by
-incident state, these filters allow for you to see only what is relevant
-to you. You can filter the incident table first by team status (with
-default team associations), as well as incident state.
+The filters provide an easy way for you to see exactly what you are looking for and nothing else. Whether you want to filter by team or by incident state, these filters allow for you to see only what is relevant to you. You can filter the incident table first by team status (with default team associations), as well as incident state.
 
 image _images/spoc/Filters-scaled.jpg
 
 Incident Table
 --------------
 
-Quickly identify responsible parties during a firefight by easily seeing
-which policies are being paged, take action on an incident (acknowledge,
-add responder, reroute, snooze, resolve), and see the status of
-incidents. You can also find annotation counts, chats, and associated
-alerts.
+Quickly identify responsible parties during a firefight by easily seeing which policies are being paged, take action on an incident (acknowledge, add responder, reroute, snooze, resolve), and see the status of incidents. You can also find annotation counts, chats, and associated alerts.
 
 image: _images/spoc/Incidents-scaled.jpg
 

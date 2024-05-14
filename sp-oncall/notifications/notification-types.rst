@@ -1,4 +1,3 @@
-:orphan:
 
 .. _notif-types:
 

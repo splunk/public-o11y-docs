@@ -1,8 +1,13 @@
 .. _spoc-system-requirements:
 
-************************
+*************************
+Application requirements
+*************************
+
+
+
 Web Application
-************************
+=======================
 
 The Splunk On-Call web app supports the following browsers:
 

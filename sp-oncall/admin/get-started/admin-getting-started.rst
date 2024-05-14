@@ -16,11 +16,10 @@ Getting Started Guide for Splunk On-Call Admins
    Rotations and shifts <../../on-call-schedules/rotation-setup>
    Team escalation policy <../../configuration/team-escalation-policy>
    egress-filtering-cloudflare
-   spoc-support
-   spoc-system-requirements
    team-dashboard
    Timeline <../../user-roles/timeline>
-   system-reqts
+   spoc-support
+   spoc-system-requirements
    tls-security-protocol
 
 The Team page is your central location for configuring teams, schedules, rotations, and escalation policies.
