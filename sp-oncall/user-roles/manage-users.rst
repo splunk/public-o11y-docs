@@ -8,6 +8,11 @@ Managing Splunk On-Call users
    :description: About the user role in Splunk On-Call.
 
 
+
+
+
+
+
 In order to add or delete users in the Splunk On-Call platform, you must either have the Global Admin role for global add or remove permissions or the Team Admin role for team-specific add or remove permissions.
 
 

@@ -21,7 +21,7 @@ On-Call configuration and administration
    team-dashboard
    Timeline <../../user-roles/timeline>
    system-reqts
-   single-sign-sso
+   Single sign-on TOGGLE <../sso/single-sign-sso>
    tls-security-protocol
 
-Global admins responsible for configuring and maintaining Splunk On-Call
+Splunk on call.

@@ -1,11 +1,11 @@
 .. _usernames:
 
 *************************************
-Usernames and best practices
+Username guidelines
 *************************************
 
 .. meta::
-   :description: Best practices for creating user names.
+   :description: Recommended practices for creating Splunk On-Call user names.
 
 When inviting new users to the Splunk On-Call platform, it is important to consider the following:
 

@@ -12,14 +12,13 @@ Splunk On-Call user roles and permissions
 
    admin-quick-start
    getting-started-user
-   add-user
    manage-users
+   add-user
    usernames
    configure-teams
    admin-permissions
-   alert-admin
-   alert-admin-training
    global-admin
+   alert-admin
    team-admin
    team-admin-setup
    user-role
