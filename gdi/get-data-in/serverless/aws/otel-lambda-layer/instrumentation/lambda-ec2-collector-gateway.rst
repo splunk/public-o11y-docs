@@ -94,17 +94,18 @@ Follow these steps to instrument your function using the Splunk OpenTelemetry La
 Set up a Collector gateway in EC2
 =====================================================================
 
-To send spans from the instrumented AWS Lambda function to the Collector gateway running in EC2, do the following:
+To send spans and metrics from the instrumented AWS Lambda function to the Collector gateway running in EC2, do the following:
 
 #. Deploy the Collector in gateway mode in a service your function can reach, for example EC2. See :ref:`collector-gateway-mode`.
 #. Make sure that the AWS Lambda functions you want to instrument can reach the Collector gateway in EC2 and are in the same VPC.
 #. Navigate to :guilabel:`Configuration`, then :guilabel:`Environment variables`, then select :guilabel:`Edit`.
 #. Add the following environment variables to your instrumented functions:
 
-   - ``OTEL_EXPORTER_OTLP_TRACES_ENDPOINT`` with the address of the EC2 instance that runs the gateway, for example ``10.0.0.123:4317``
+   - ``OTEL_EXPORTER_OTLP_TRACES_ENDPOINT`` with the address of the EC2 instance that runs the gateway, for example ``http://10.0.0.123:4318/v1/traces``
    - ``OTEL_TRACES_EXPORTER`` with the value ``otlp``
    - ``OTLP_EXPORTER_OTLP_TRACES_PROTOCOL`` with the value ``http/protobuf``
    - ``SPLUNK_LAMBDA_LOCAL_COLLECTOR_ENABLED`` with the value ``false``
+   - ``SPLUNK_METRICS_ENDPOINT`` with the address of the EC2 instance that runs the gateway, for example ``http://10.0.0.123:9943``
 
 #. If you've already set the access token and realm in the Collector configuration, delete the ``SPLUNK_ACCESS_TOKEN`` and ``SPLUNK_REALM`` environment variables.
 

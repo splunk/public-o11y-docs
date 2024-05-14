@@ -66,7 +66,53 @@ You can scale your metric data by sending and storing low-value, infrequently ac
 
 If you need to use a metric that you've sent to archived metrics you can route it back to real-time metrics and access it in charts or detectors. You can also backfill historical data from up to 8 days and restore it to the real-time tier if you need to. 
 
-To override the archiving setting for specific sets of MTS and send them to the real-time tier, you can create a routing exception rule. When you create a routing exception rule, you can choose to ignore or restore historical data. MPM then routes the MTS selected in the rule to real time monitoring.  See :ref:`mpm-rule-routing-exception` for more information.
+.. caution:: You can only create aggregation rules using your metrics' dimensions. Aggregation using custom properties or tags is not supported. For more information on each type of metadata, refer to :ref:`metrics-dimensions-mts`.
+
+When you select specific dimensions, metrics pipeline management generates a new metric. The system creates new MTS
+based on the dimensions you select and rolls up data points for each MTS. By default, aggregation rules roll up the
+data points into the new MTS using ``sum``, ``min``, ``max``, ``count``, ``delta``, ``avg``, and ``latest`` functions.
+You can use the new aggregated MTS in the same way as any other MTS in Observability Cloud.
+
+How is this different from post-ingestion aggregation at query time?
+--------------------------------------------------------------------------------
+
+When you configure charts or detectors, you can aggregate your data using analytic functions, such as ``sum``, and then
+group your data by specific dimensions, such as ``sum by region``. This aggregation occurs after Observability Cloud
+has stored your raw MTS, so you still pay for storing the data.
+
+With metrics pipeline management, you can aggregate your MTS as you store it and retain only aggregated metrics. Since
+you're storing fewer dimensions for each data point, and metrics pipeline management roles up the metric values, you
+save storage costs.
+
+Example
+--------------------------------------------------------------------------------
+
+You send a metric called ``http.server.duration`` for a containerized workload using Splunk Infrastructure Monitoring.
+
+Your workload has 10 endpoints, 20 regions, 5 services, and 10,000 containers. Each of the 5 services has 10,000
+containers and 10 endpoints.
+
+Your data is coming in at the container ID level, generating 10 (endpoints) * 5 (services) * 20 (regions) * 10,000 (containers) = 1,000,000 MTS.
+
+You can reduce your metric cardinality by aggregating one or multiple dimensions.
+
+Aggregate using one dimension
+--------------------------------------------------------------------------------
+
+You are only interested in the source region of your data, so you create an aggregation rule that groups your data by
+the ``region`` dimension.
+
+The aggregated metric removes all other dimensions and retains only the ``region`` dimension based on your rule. There
+are only 20 different values for ``region``, so only Observability Cloud only ingests 20 MTS.
+
+Aggregate using multiple dimensions
+--------------------------------------------------------------------------------
+
+You want to continue monitoring endpoints, regions, and services for your data, but don't need to monitor container IDs.
+You create an aggregation rule that groups your data by the dimensions you want to keep.
+
+The aggregated metric removes the ``container_id`` dimension and retains ``endpoint``, ``region``, and ``service``
+based on your rule. Your new metric volume is: 10 (endpoints) * 20 (regions) * 5 (services) = 1,000 MTS.
 
 .. _mpm-intro-rule-dropping:
 .. _data-dropping:
@@ -121,6 +167,11 @@ Histogram metrics limitations
 You cannot archive or aggregate histogram metrics. By default, they are routed to the real-time tier, and you can drop them with rules as well.
 
 .. _metrics-pipeline-intro-more:
+
+Aggregation rules limitations
+--------------------------------------------------------------------------------
+
+You can only create aggregation rules using your metrics' dimensions. Aggregation using custom properties or tags is not supported. For more information on each type of metadata, refer to :ref:`metrics-dimensions-mts`.
 
 Learn more
 ===============================================================================

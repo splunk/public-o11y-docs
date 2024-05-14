@@ -133,6 +133,19 @@ The following example shows how to install the Collector on Linux using discover
 
       Successfully discovered "mysql" using "docker_observer" endpoint "abcdef1234:3306".
 
+.. _linux-third-party-mongodb:
+
+Automatic discovery for MongoDB
+====================================
+
+By default, MongoDB automatic discovery rules assume the server is SSL/TLS enabled. 
+
+If it isn't, use the following command line flag to indicate so:
+
+.. code-block:: bash
+
+      --set splunk.discovery.receivers.mongodb.config.tls::insecure=true
+
 
 Troubleshooting
 ======================

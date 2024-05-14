@@ -205,17 +205,17 @@ Using the installer script, you can install and activate automatic discovery for
 
     .. tab:: Node.js 
 
-        The installer script installs the Node.js package using the ``npm install`` command. To specify a custom path to ``npm`` for installation, use the ``--npm-path <path>`` option as in the following example:
-
-        .. code-block:: bash
-
-            --npm-path /custom/path/to/npm
-
         .. tabs::
 
             .. tab:: Installer script
 
                 Using the installer script, you can install and activate automatic discovery for Node.js for either all supported Node.js applications on the host via the system-wide method or for only Node.js applications running as ``systemd`` services.
+
+                The installer script installs the Node.js package using the ``npm install`` command. To specify a custom path to ``npm`` for installation, use the ``--npm-path <path>`` option as in the following example:
+
+                .. code-block:: bash
+
+                    --npm-path /custom/path/to/npm
 
                 .. note:: By default, automatic discovery is activated for all languages (Java, Node.js, and .NET) when using the installer script. To deactivate automatic discovery for other languages, add the ``--without-instrumentation-sdk [language]`` option in the installer script command.
 
@@ -273,7 +273,10 @@ Using the installer script, you can install and activate automatic discovery for
 
                         Next, ensure the collector service is running and restart your Node.js application(s). See :ref:`auto-discovery-linux-verify` and :ref:`auto-discovery-linux-restart-apps`.  
 
-            
+            .. tab:: Ansible
+
+                See :ref:`ansible-zero-config`.
+
             .. tab:: Chef
 
                 See :ref:`chef-zero-config`.
@@ -284,15 +287,15 @@ Using the installer script, you can install and activate automatic discovery for
 
     .. tab:: .NET
 
-        Using the installer script, you can install and activate automatic discovery for .NET for either all supported .NET applications on the host via the system-wide method or for only .NET applications running as ``systemd`` services.
-
-        .. note:: By default, automatic discovery is activated for all languages (Java, Node.js, and .NET) when using the installer script. To deactivate automatic discovery for other languages, add the ``--without-instrumentation-sdk [language]`` option in the installer script command.
-
         .. tabs::
 
             .. tab:: Installer script 
 
-                .. tabs:: 
+                Using the installer script, you can install and activate automatic discovery for .NET for either all supported .NET applications on the host via the system-wide method or for only .NET applications running as ``systemd`` services.
+
+                .. note:: By default, automatic discovery is activated for all languages (Java, Node.js, and .NET) when using the installer script. To deactivate automatic discovery for other languages, add the ``--without-instrumentation-sdk [language]`` option in the installer script command.
+
+                .. tabs::
 
                     .. tab:: System-wide
                                 
@@ -365,6 +368,15 @@ Using the installer script, you can install and activate automatic discovery for
             .. tab:: Ansible
 
                 See :ref:`ansible-zero-config`.
+
+            .. tab:: Chef
+
+                See :ref:`chef-zero-config`.
+
+            .. tab:: Puppet
+
+                See :ref:`puppet-zero-config`.
+
 
 .. _auto-discovery-linux-verify:
 
