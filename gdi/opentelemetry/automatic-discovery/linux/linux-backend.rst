@@ -200,7 +200,7 @@ Using the installer script, you can install and activate automatic discovery for
                 
             .. tab:: Salt
 
-                See :ref:`salt-zero-config-java`.
+                See :ref:`salt-zero-config`.
 
 
     .. tab:: Node.js 
@@ -284,6 +284,11 @@ Using the installer script, you can install and activate automatic discovery for
             .. tab:: Puppet
 
                 See :ref:`puppet-zero-config`.
+
+            .. tab:: Salt
+
+                See :ref:`salt-zero-config`.
+
 
     .. tab:: .NET
 
@@ -376,6 +381,10 @@ Using the installer script, you can install and activate automatic discovery for
             .. tab:: Puppet
 
                 See :ref:`puppet-zero-config`.
+
+            .. tab:: Salt
+
+                See :ref:`salt-zero-config`.
 
 
 .. _auto-discovery-linux-verify:
