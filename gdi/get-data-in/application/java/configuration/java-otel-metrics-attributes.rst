@@ -295,6 +295,27 @@ All connection pool metrics share the following tags:
     - Type or implementation of the connection pool. For example, ``c3p0``, ``dbcp2``, or ``hikari``.
 
 
+.. _webengine-attributes-java-otel:
+
+WebEngine attributes
+=========================================================
+
+The Splunk Distribution of OpenTelemetry Java captures data about the application server and adds the following attributes to `SERVER` spans:
+
+.. list-table::
+  :header-rows: 1
+  :width: 100%
+
+  * - Span attribute
+    - Description
+  * - ``webengine.name``
+    - Name of the applications server. For example, ``tomcat``.
+  * - ``webengine.version``
+    - Version of the application server.
+
+For a list of supported application servers, see the :ref:`supported-java-libraries`.
+
+
 New metric names
 ======================================
 
