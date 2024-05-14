@@ -460,7 +460,7 @@ Update automatic discovery and configuration
                             sudo apt-get update
                             sudo apt-get --only-upgrade splunk-otel-auto-instrumentation
 
-                        You might see a prompt to keep or overwrite the configuration file at ``/usr/lib/splunk-instrumentation/instrumentation.conf``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
+                        You might see a prompt to keep or overwrite the configuration file(s) in ``/etc/splunk/zeroconfig/``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
 
                     .. tab:: RPM
 
@@ -505,7 +505,7 @@ Update automatic discovery and configuration
                     
                         sudo rpm -Uvh <path to splunk-otel-auto-instrumentation rpm>
 
-                After upgrading the Debian package, you might see a prompt to keep or overwrite the configuration file at ``/usr/lib/splunk-instrumentation/instrumentation.conf``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
+                After upgrading the Debian package, you might see a prompt to keep or overwrite the configuration file(s) in ``/etc/splunk/zeroconfig/``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
 
                 You can also upgrade using the same package repositories as the Collector. See :new-page:`Debian or RPM packages <https://docs.splunk.com/Observability/gdi/opentelemetry/install-linux.html#debian-or-rpm-packages>` for more information.
 
@@ -532,7 +532,7 @@ Update automatic discovery and configuration
                             sudo apt-get update
                             sudo apt-get --only-upgrade splunk-otel-auto-instrumentation
 
-                        You might see a prompt to keep or overwrite the configuration file at ``/usr/lib/splunk-instrumentation/instrumentation.conf``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
+                        You might see a prompt to keep or overwrite the configuration file(s) in ``/etc/splunk/zeroconfig/``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
 
                     .. tab:: RPM
 
@@ -557,7 +557,7 @@ Update automatic discovery and configuration
                             sudo zypper refresh
                             sudo zypper update splunk-otel-auto-instrumentation
 
-                        After you've upgraded the packages, manually start or restart the Java applications on the host for the changes to take effect.
+                        After you've upgraded the packages, manually start or restart the Node.js applications on the host for the changes to take effect.
 
             .. tab:: Debian/RPM packages
 
@@ -577,7 +577,7 @@ Update automatic discovery and configuration
                     
                         sudo rpm -Uvh <path to splunk-otel-auto-instrumentation rpm>
 
-                After upgrading the Debian package, you might see a prompt to keep or overwrite the configuration file at ``/usr/lib/splunk-instrumentation/instrumentation.conf``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
+                After upgrading the Debian package, you might see a prompt to keep or overwrite the configuration file(s) in ``/etc/splunk/zeroconfig/``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
 
                 You can also upgrade using the same package repositories as the Collector. See :new-page:`Debian or RPM packages <https://docs.splunk.com/Observability/gdi/opentelemetry/install-linux.html#debian-or-rpm-packages>` for more information.
 
@@ -596,6 +596,76 @@ Update automatic discovery and configuration
         .. code-block:: yaml
 
             NODE_OPTIONS=-r /custom/nodejs/install/path/@splunk/otel/instrument
+
+    .. tab:: .NET
+
+        You can upgrade the package by using the package repository or by using Debian or RPM packages.
+
+        .. tabs::
+
+            .. tab:: Package repository
+
+                If you installed the package using the installer script, or if you configured the Debian or RPM package repositories manually, run the following commands according to your platform. Upgrading the package requires ``root`` privileges.
+
+                .. tabs::
+
+                    .. tab:: Debian
+
+                        Run the following commands:
+
+                        .. code-block:: bash
+
+                            sudo apt-get update
+                            sudo apt-get --only-upgrade splunk-otel-auto-instrumentation
+
+                        You might see a prompt to keep or overwrite the configuration file(s) in ``/etc/splunk/zeroconfig/``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
+
+                    .. tab:: RPM
+
+                        For the RPM package management system, run the following commands:
+
+                        yum:
+
+                        .. code-block:: bash
+
+                            sudo yum upgrade splunk-otel-auto-instrumentation
+
+                        dnf:
+
+                        .. code-block:: bash
+
+                            sudo dnf upgrade splunk-otel-auto-instrumentation
+
+                        zypper:
+
+                        .. code-block:: bash
+
+                            sudo zypper refresh
+                            sudo zypper update splunk-otel-auto-instrumentation
+
+                        After you've upgraded the packages, manually start or restart the .NET applications on the host for the changes to take effect.
+
+            .. tab:: Debian/RPM packages
+
+                To manually upgrade the package:
+
+                1. Download the ``splunk-auto-auto-instrumentation`` Debian or RPM package for the target system from the :new-page:`GitHub Releases page <https://github.com/signalfx/splunk-otel-collector/releases>`.
+
+                2. Run the following commands to install the package. Replace ``<path to splunk-otel-auto-instrumentation deb/rpm>`` with the local path to the downloaded package:
+
+                .. tabs::
+
+                    .. code-tab:: bash Debian
+
+                        sudo dpkg -i <path to splunk-otel-auto-instrumentation deb>
+
+                    .. code-tab:: bash RPM
+
+                        sudo rpm -Uvh <path to splunk-otel-auto-instrumentation rpm>
+
+                After upgrading the Debian package, you might see a prompt to keep or overwrite the configuration file(s) in ``/etc/splunk/zeroconfig/``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
+
+                You can also upgrade using the same package repositories as the Collector. See :new-page:`Debian or RPM packages <https://docs.splunk.com/Observability/gdi/opentelemetry/install-linux.html#debian-or-rpm-packages>` for more information.
 
 .. _auto-discovery-view-results-linux:
 
