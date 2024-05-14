@@ -57,10 +57,10 @@ To get the webhook URL for the Microsoft Team channel:
 
 .. _microsoftteams2:
 
-Step 2: Create a Microsoft Teams integration in Observability Cloud
+Step 2: Create a Microsoft Teams integration in Splunk Observability Cloud
 =================================================================================
 
-You must be an Observability Cloud administrator to complete this task.
+You must be a Splunk Observability Cloud administrator to complete this task.
 
 To create a Microsoft Teams integration in Observability Cloud:
 
@@ -69,7 +69,7 @@ To create a Microsoft Teams integration in Observability Cloud:
 
    #. In the left navigation menu, select :menuselection:`Data Management`.
 
-   #. Select :guilabel:`Add Integration`.
+   #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 
    #. In the integration filter menu, select :guilabel:`All`.
 
@@ -115,7 +115,7 @@ If the Microsoft Teams channel stops receiving notifications, consider the follo
 
 * Verify that the Microsoft Teams notification service integration in Observability Cloud still exists. To troubleshoot, complete the following steps. You must be an Observability Cloud administrator to complete these steps.
 
-  #. In the Observability Cloud navigation menu, select :strong:`Data Management`.
+  #. In the Splunk Observability Cloud navigation menu, select :strong:`Data Management > Deployed integrations`.
 
   #. In the :strong:`CATEGORIES` menu, select :strong:`Notification Services`.
 

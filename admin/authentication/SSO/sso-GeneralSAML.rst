@@ -13,7 +13,7 @@ If you use an SSO login service other than the ones listed in :ref:`sso-label`, 
 
 Before you begin configuring the generic SAML SSO integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration <naming-note-sso>` to learn about naming your integrations.
 
-If you already have a SAML SSO integration for your organization, follow the steps in :ref:`saml-install` to install it in Observability Cloud.
+If you already have a SAML SSO integration for your organization, follow the steps in :ref:`saml-install` to install it in Splunk Observability Cloud.
 
 .. note:: To allow the generic SAML SSO integration, contact :ref:`support`.
 
@@ -22,7 +22,7 @@ If you already have a SAML SSO integration for your organization, follow the ste
 Generic SAML SSO integrations
 -------------------------------------------------------
 
-Observability Cloud provides integrations for specific SAML SSO providers. If your provider isn't in the list of supported integrations, your organization administrator can request a generic integration from Observability Cloud. You can use this integration to test and develop a SAML SSO provider. Using this integration, administrators can direct Observability Cloud
+Splunk Observability Cloud provides integrations for specific SAML SSO providers. If your provider isn't in the list of supported integrations, your organization administrator can request a generic integration from Observability Cloud. You can use this integration to test and develop a SAML SSO provider. Using this integration, administrators can direct Observability Cloud
 to use any publicly-available SSO endpoint to authenticate users.
 
 Be prepared to provide the domain for the ID/email address that your users provide when they log in. The domain is the part of the user ID/email address string that follows the ``@`` sign.
@@ -105,7 +105,7 @@ To install a generic SAML SSO integration, follow these steps:
    
       #. In the left navigation menu, select :menuselection:`Data Management`.
    
-      #. Select :guilabel:`Add Integration`.
+      #.Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
    
       #. In the integration filter menu, select :guilabel:`All`.
    
