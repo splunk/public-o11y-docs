@@ -19,7 +19,6 @@ On-Call configuration and administration
    spoc-support
    spoc-system-requirements
    team-dashboard
-   Timeline <../../user-roles/timeline>
    system-reqts
    Single sign-on TOGGLE <../sso/single-sign-sso>
    tls-security-protocol

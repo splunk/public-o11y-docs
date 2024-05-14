@@ -7,11 +7,10 @@ Get started as a user
 ************************************************************************
 
 .. meta::
-   :description: ensure that new users have set up their username and password and paging policy correctly, as well as downloaded the appropriate mobile app.
+   :description: Ensure that new users have set up their username and password and paging policy correctly, as well as downloaded the appropriate mobile app.
 
 
-Follow these easy, quick steps to set up new users that have been added to your Splunk On-Call account. This guide will ensure that new users have set up their username and password and paging policy correctly, as well as
-downloaded the appropriate mobile app.
+Follow these easy, quick steps to set up new users that have been added to your Splunk On-Call account. This guide will ensure that new users have set up their username and password and paging policy correctly, as well as downloaded the appropriate mobile app.
 
 Invitation from Splunk On-Call
 =========================================

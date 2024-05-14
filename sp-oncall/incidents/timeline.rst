@@ -5,7 +5,7 @@ Timeline
 ****************
 
 .. meta::
-   :description: Reference topic describing the Timepage page.
+   :description: Reference topic describing the Timeline page.
 
 The Timeline acts as the homepage of your Splunk On-Call instance. The layout of the Timeline is designed to help you surface pertinent incident information quickly, improve usability and decrease overall time to resolution.
 

@@ -7,21 +7,37 @@ Incident Pane
 .. meta::
    :description: About the Incident pane in Splunk On-Call which displays incoming alerts.
 
+.. toctree::
+    :hidden:
+
+    timeline
+    manual-incident-creation
+    manual-take-call
+    multi-responder-incident-response
+    reroute-an-incident
+    similar-incidents
 
 
+.. raw:: html
+
+  <embed>
+    <h2>Requirements</h2>
+  </embed>
 
 
-Requirements
-=======================
 
 Versions Supported: N/A (SaaS)
 VictorOps Version Required: Standard andEnterprise
 
-The Incident Pane serves as a repository for recent activities in your Timeline. The Incident Pane, located to the right of the Timeline, houses alerts that come into VictorOps. We currently store seven days or 1,000 events worth of timeline alert history, whichever comes first. Historical data that fall outside of the aforementioned storage parameters of the Incident Pane may be obtained through the use of the :new-page:`VictorOps API <https://help.victorops.com/knowledge-base/api/>`.
+The Incident Pane serves as a repository for recent activities in your Timeline. The Incident Pane, located to the right of the Timeline, houses alerts that come into Splunk On-Call. We currently store seven days or 1,000 events worth of timeline alert history, whichever comes first. Historical data that fall outside of the aforementioned storage parameters of the Incident Pane may be obtained through the use of the :new-page:`VictorOps API <https://help.victorops.com/knowledge-base/api/>`.
+
+.. raw:: html
+
+  <embed>
+    <h2>Incident Owner tabs</h2>
+  </embed>
 
 
-Incident Owner tabs
-===========================
 
 The tabs along the top level in the Incident Pane are the Incident Owner tabs which define the association of incidents by all activity, individual user interaction and team interaction. These tabs allow you to quickly limit the scope of work from all incidents to incidents that pertain only to you and your team.
 
@@ -32,9 +48,13 @@ In order to display all or only certain panes (People, Timeline & Incident) sele
     :alt: Select the views to display using the Customize View drop-down.
 
 
+.. raw:: html
 
-Incident Status tabs
-==========================
+  <embed>
+    <h2>Incident Status tabs</h2>
+  </embed>
+
+
 
 The Incident pane, located to the right of the Timeline, houses alerts that come into Splunk On-Call. At the top of the Incident pane, you will see three categories: :guilabel:`Triggered`, :guilabel:`Acknowledged`, and :guilabel:`Resolved`.
 
@@ -68,9 +88,13 @@ Once a Triggered incident has been ack'd and resolved, you may view it in the :g
 
 Also, note the Control Call (Conference Calling) and Maintenance Mode icons in the upper right-hand corner of the Incident Pane. Control Call is an Enterprise-level feature that enables quick and effective communication via conference call with your team when you're in the midst of a firefight. Maintenance Mode, on the other hand, allows you to temporarily silence alerts in order to complete work without unnecessarily paging on-call teammates. 
 
+.. raw:: html
 
-New triggered incident
-===============================
+  <embed>
+    <h2>New triggered incident</h2>
+  </embed>
+
+
 
 When a new incident reaches the Splunk On-Call timeline, the incident will appear in the triggered incidents tab.
 
@@ -92,9 +116,13 @@ You also have the option to acknowledge multiple incidents at one time. In order
     :width: 100%
     :alt: Acknowledge multiple incidents.
 
+.. raw:: html
 
-Incident details
-=======================
+  <embed>
+    <h2>Incident details</h2>
+  </embed>
+
+
 
 The Incident Details view provides a holistic overview of all information related to a particular incident including annotation. The incident details view can be accessed in a few ways:
 

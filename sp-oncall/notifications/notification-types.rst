@@ -2,20 +2,32 @@
 .. _notif-types:
 
 ************************************************************************
-Notification Aggregation
+Notification types
 ************************************************************************
 
 .. meta::
    :description: Splunk On-Call offers many notification options including email, SMS, phone, and push notifications. This topic highlights each of the different options.
 
-Splunk On-Call offers many notification options including email, SMS, phone, and push notifications. This topic highlights each of the
-different options.
 
-Please note that a maximum amount of 4 separate phone numbers for SMS/Phone notifications can be implemented into any given Splunk
-On-Call user profile.
+.. toctree::
+    :hidden:
 
-Push
-==========
+    snooze
+    delayed-notifications
+
+
+
+
+Splunk On-Call offers many notification options including email, SMS, phone, and push notifications. This topic highlights each of the different options.
+
+.. note:: A maximum amount of four separate phone numbers for SMS and Phone notifications can be implemented into any given Splunk On-Call user profile.
+
+.. raw:: html
+
+  <embed>
+    <h2>Push notification</h2>
+  </embed>
+
 
 Push notifications are sent through the application. We use push for:
 
@@ -31,8 +43,11 @@ When a push notification is used to deliver a page, you will have the option to 
     :alt: Splunk On-Call push notification.
 
 
-SMS
-===========
+.. raw:: html
+
+  <embed>
+    <h2>SMS</h2>
+  </embed>
 
 SMS notifications can be used in your personal paging policy. The message you receive is, at most, 160 characters, and it displays the
 incident number, entity_display_name, and response code if two-way SMS is supported. When you receive an SMS notification, two codes are included in the message so you can acknowledge aor resolve the alert by responding with the correct five-digit code. These response codes expire after 1 hour.
@@ -42,13 +57,20 @@ incident number, entity_display_name, and response code if two-way SMS is suppor
     :alt: Splunk On-Call SMS notification.
 
 
-SMS Subscription Management
-====================================
+.. raw:: html
+
+  <embed>
+    <h2>SMS Subscription Management</h2>
+  </embed>
 
 You may stop and start our SMS notification subscription by replying to the message with STOP or START. Although, it is best to manage your notifications from the personal profile page in Splunk On-Call.
 
-Email
-==============
+
+.. raw:: html
+
+  <embed>
+    <h2>Email</h2>
+  </embed>
 
 Emails can be used for pages. Emails can also be used as reminders that your Splunk On-Call instance is in :ref:`maintenance-mode`, or that you have a gap in your schedule due to a :ref:`scheduled-overrides` that is not covered.
 
@@ -68,8 +90,11 @@ Maintenance Mode:
     :width: 100%
     :alt: Splunk On-Call scheduled maintenance override.
 
-Phone
-============
+.. raw:: html
+
+  <embed>
+    <h2>Phone</h2>
+  </embed>
 
 Phone calls are used for paging. The “entity_display_name” field is read
 aloud and then an option to acknowledge or resolve the alert is offered.

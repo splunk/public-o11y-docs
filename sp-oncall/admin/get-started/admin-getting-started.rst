@@ -17,7 +17,6 @@ Getting Started Guide for Splunk On-Call Admins
    Team escalation policy <../../configuration/team-escalation-policy>
    egress-filtering-cloudflare
    team-dashboard
-   Timeline <../../user-roles/timeline>
    spoc-support
    spoc-system-requirements
    tls-security-protocol
