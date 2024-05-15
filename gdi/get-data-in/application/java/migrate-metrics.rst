@@ -65,6 +65,13 @@ To migrate your instrumentation to the version 2.0 or higher of the Java agent, 
 
 3. Make sure version 2.0 or higher of the Splunk Distribution of the Java agent is installed. See :ref:`upgrade-java-instrumentation`.
 
+3. If you defined a custom Collector endpoint for metrics, make sure to update the port to 4318. For example:
+
+.. code-block:: shell
+
+   # Legacy value, deprecated -Dsplunk.metrics.endpoint=http(s)://collector:9943
+   -Dsplunk.metrics.endpoint=http(s)://collector:4318
+
 4. Migrate your custom reporting elements:
 
       - For Splunk APM, see :ref:`migrate-apm-custom-reporting`.
