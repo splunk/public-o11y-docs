@@ -1,4 +1,3 @@
-:orphan:
 
 .. _desktop-notif:
 
@@ -10,7 +9,7 @@ Configure desktop notifications
    :description: Configure desktop notifications that may help draw your attention to new incidents.
 
 
-When using the VictorOps web portal, you can elect to receive desktop notifications that may help draw your attention to new incidents while you are busy working on other things. This topic describes how to turn these notification on (or off) in common internet browsers.
+When using the Splunk On-Call web portal, you can elect to receive desktop notifications that may help draw your attention to new incidents while you are busy working on other things. This topic describes how to turn these notification on (or off) in common internet browsers.
 
 
 

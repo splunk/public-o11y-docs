@@ -14,7 +14,10 @@ Notification types
 
     snooze
     delayed-notifications
+    desktop-notifications
     call-notification-numbers
+    paging-policy-setup
+
 
 
 

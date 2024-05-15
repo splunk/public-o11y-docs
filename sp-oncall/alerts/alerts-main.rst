@@ -9,19 +9,20 @@ Manage alerts
 
 .. toctree::
     :hidden:
-
-    </rules-engine/routing-keys>
-    </rules-engine/alert-rules-engine>
+    
+    Routing keys <../alerts/rules-engine/routing-keys>
+    Rules engine TOGGLE <../alerts/rules-engine/alert-rules-engine>
     ack-back
     auto-pause-high-alert-lag
     auto-resolve-pop-ack
+    waiting-room
     conference-bridges
     custom-paging-policies-time-based
     escalation-webhooks
     filtering-options
     incident-fields-glossary
     maintenance-mode
-    notificiation-alert-aggregation
+    notification-alert-aggregation
     team-dashboard
     team-escalation-policy
     tips-tricks-multiple-escalation-policies
