@@ -497,32 +497,7 @@ The following example instruments Java applications running in the ``myapp`` and
           instrumentation.opentelemetry.io/inject-java: "true"
           instrumentation.opentelemetry.io/container-names: "myapp,myapp2"
 
-You can also instrument multiple containers with specific languages. To do so, follow these steps:
-
-#. In your values.yaml file, set the ``operator.autoinstrumentation.multi-instrumentation`` field to ``enabled``. For example:
-
-   .. code-block:: yaml
-
-    clusterName: my-cluster
-
-    splunkObservability:
-      realm: <splunk_realm>
-      accessToken: <splunk_access_token>
-    
-    certmanager:
-      enabled: true
-    operator:
-      enabled: true
-      autoinstrumentation:
-        multi-instrumentation: enabled
-
-#. Upgrade the Helm deployment with the following command:
-
-   .. code-block:: bash
-
-      helm upgrade otel-collector -f ./values.yaml splunk-otel-collector-chart/splunk-otel-collector --namespace o11y
-
-#. Specify which languages and containers to instrument by using the ``instrumentation.opentelemetry.io/<language>-container-names`` annotation. The following example instruments Java applications in ``myapp`` and ``myapp2``, and Node.js applications in ``myapp3``.
+You can also instrument multiple containers with specific languages. To do so, specify which languages and containers to instrument by using the ``instrumentation.opentelemetry.io/<language>-container-names`` annotation. The following example instruments Java applications in ``myapp`` and ``myapp2``, and Node.js applications in ``myapp3``:
 
    .. code-block:: yaml
 
@@ -544,8 +519,6 @@ You can also instrument multiple containers with specific languages. To do so, f
             instrumentation.opentelemetry.io/java-container-names: "myapp,myapp2"
             instrumentation.opentelemetry.io/inject-nodejs: "true"
             instrumentation.opentelemetry.io/python-container-names: "myapp3"
-
-#. Restart any Kubernetes pods that use the new annotations.
 
 Deactivate automatic discovery
 -----------------------------------------------
