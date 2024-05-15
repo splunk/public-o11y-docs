@@ -1,7 +1,7 @@
 .. _about-spoc:
 
 ************************************************************************
-On-Call configuration and administration
+Key concepts and application information
 ************************************************************************
 
 .. meta::
@@ -19,6 +19,8 @@ On-Call configuration and administration
    spoc-support
    spoc-system-requirements
    team-dashboard
+   api
+   custom-outbound-webhooks
    system-reqts
    Single sign-on TOGGLE <../sso/single-sign-sso>
    tls-security-protocol

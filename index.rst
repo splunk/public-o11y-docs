@@ -834,11 +834,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Configure Splunk On-Call TOGGLE </>
-
-.. toctree::
-   :maxdepth:   3
-
    User management TOGGLE <sp-oncall/user-roles/user-roles-permissions>
 
 .. toctree::

@@ -25,7 +25,7 @@ Manage alerts
     notification-alert-aggregation
     team-dashboard
     team-escalation-policy
-    tips-tricks-multiple-escalation-policies
+    multiple-escalation-policies
     war-room
 
 

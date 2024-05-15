@@ -14,6 +14,7 @@ Incident Pane
     manual-incident-creation
     manual-take-call
     multi-responder-incident-response
+    chat-spoc
     reroute-an-incident
     similar-incidents
 

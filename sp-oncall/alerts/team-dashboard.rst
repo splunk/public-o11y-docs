@@ -3,7 +3,7 @@
 .. _incident-review-spoc:
 
 ************************************************************************
-About the Splunk On-Call Post Incident Review
+About the Splunk On-Call post-incident review
 ************************************************************************
 
 .. meta::
