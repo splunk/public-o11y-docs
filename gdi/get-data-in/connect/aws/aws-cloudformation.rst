@@ -1,7 +1,7 @@
 .. _aws-cloudformation:
 
 *********************************************************************
-Available CloudFormation templates
+Available CloudFormation and Terraform templates
 *********************************************************************
 
 .. meta::
@@ -77,3 +77,10 @@ If none of the prepopulated CloudFormation templates meets your needs, you might
 4. Use an API call to activate CloudWatch Metric Streams. To learn more, see :ref:`activate-cw-metricstreams`.
 
 You can optionally use AWS CloudFormation StackSets to work simultaneously across multiple AWS regions after configuring the StackSet prerequisites for self-managed permissions. For more details, see Amazon Web Services documentation to configure StackSet prerequisites.
+
+Terraform template
+============================================
+
+Alternatively, you can also deploy Kinesis Firehose with Terraform. See :new-page:`Terraform Setup for Creating Kinesis Firehose to Send CloudWatch Metric Stream <https://github.com/signalfx/aws-terraform-templates/tree/main>`.
+
+Terraform works for Metric Streams only, and does not offer log support.
