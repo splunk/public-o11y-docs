@@ -667,6 +667,17 @@ Update automatic discovery and configuration
 
                 You can also upgrade using the same package repositories as the Collector. See :new-page:`Debian or RPM packages <https://docs.splunk.com/Observability/gdi/opentelemetry/install-linux.html#debian-or-rpm-packages>` for more information.
 
+.. _troubleshooting-auto-discovery-linux:
+
+Troubleshooting
+===============================
+
+To troubleshoot common errors that occur when instrumenting applications, see the following troubleshooting guides:
+
+* Java: :ref:`common-java-troubleshooting`
+* Node.js: :ref:`common-nodejs-troubleshooting`
+* .NET: :ref:`common-dotnet-troubleshooting`
+
 .. _auto-discovery-view-results-linux:
 
 View results in Splunk APM
