@@ -31,8 +31,6 @@ The SignalFx Instrumentation for .NET supports the following .NET versions:
 
    - .NET 6.0
 
-.. note:: .NET 7 reached End of Life on May 14, 2024. Best effort support is provided for the last version only, 7.0.19.
-
 Support for legacy .NET versions
 ---------------------------------------------------------------
 
@@ -40,14 +38,15 @@ Limited support is available for the following legacy versions of .NET:
 
 - Instrumentation for traces and metrics:
 
-   - .NET Core 3.1
+   - .NET 7.x
    - .NET 5.x
+   - .NET Core 3.1
    - .NET Framework 4.6.1
 
 - AlwaysOn Profiling:
 
-   - CPU Profiling: .NET Core 3.1 and .NET 5.x
-   - Memory Profiling: .NET Core 5.x
+   - CPU Profiling: .NET Core 3.1, .NET 5.x, and .NET 7.x
+   - Memory Profiling: .NET Core 5.x and .NET 7.x
 
 .. _supported-dotnet-libraries:
 
