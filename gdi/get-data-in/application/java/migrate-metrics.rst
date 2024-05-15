@@ -35,15 +35,22 @@ Use the Data Migration tool
 
 Due to the changes in metric names, upgrading to Java OTel 2.x might break existing dashboards, detectors, and other features. To prevent sudden loss of access to custom reporting elements, use the Data Migration tool, which transforms and duplicates metric data in 1.x to the 2.x formats for a limited period of time at no additional cost.
 
-Use Data Migration to manage the migration process for metric streams. For each supported process, you can turn on and off the data migration, see the number of Metric Time Series (MTS) migrated, and view the grace period duration. The duplication and double-publishing of metrics follows a set of predefined rules that are activated when you decide to migrate. The metric rules are treated as system rules and can't be edited.
+To access the Data Migration tool:
 
+1. Go to :guilabel:`Settings`, :guilabel:`Data Configuration`.
+2. Select :guilabel:`Data Migration`.
+3. Inside the :guilabel:`Start migration` card, select :guilabel:`Start`.
+
+For each supported process, you can turn on and off the data migration, see the number of Metric Time Series (MTS) migrated, and view the grace period duration. The duplication and double-publishing of metrics follows a set of predefined rules that are activated when you decide to migrate.
+
+.. note:: Metric rules are treated as system rules and can't be edited.
 
 .. _data-migration-ui:
 
 Grace period
 ------------------
 
-The grace period for receiving and processing duplicated metrics at no additional cost lasts 6six months, starting with the release of the Java agent version 2.0. Migration support is available for 12 months after the release of version 2.0 and will be deprecated after 18 months.
+The grace period for receiving and processing duplicated metrics at no additional cost lasts 6 months, starting with the release of the Java agent version 2.0. Migration support is available for 12 months after the release of version 2.0 and will be deprecated after 18 months.
 
 .. note:: After the grace period, duplicated metric data is billed as custom metric data. Make sure to turn off the Data Migration action after you've completed the migration to avoid surcharges.
 
@@ -65,20 +72,23 @@ To migrate your instrumentation to the version 2.0 or higher of the Java agent, 
 
 3. Make sure version 2.0 or higher of the Splunk Distribution of the Java agent is installed. See :ref:`upgrade-java-instrumentation`.
 
-3. If you defined a custom Collector endpoint for metrics, make sure to update the port to 4318. For example:
+4. If you defined a custom Collector endpoint for metrics, make sure to update the port to 4318 and use the correct property. For example:
 
-.. code-block:: shell
+   .. code-block:: shell
 
-   # Legacy value, deprecated -Dsplunk.metrics.endpoint=http(s)://collector:9943
-   -Dsplunk.metrics.endpoint=http(s)://collector:4318
+      # Legacy property and value: -Dsplunk.metrics.endpoint=http(s)://collector:9943
+      # You can also use the OTEL_EXPORTER_OTLP_METRICS_ENDPOINT environment variable
+      -Dotel.exporter.otlp.metrics.endpoint=http://localhost:4318/v1/metrics
 
-4. Migrate your custom reporting elements:
+   Review all others settings to check that they're still applicable to version 2.0. See :ref:`advanced-java-otel-configuration`.
+
+5. Migrate your custom reporting elements:
 
       - For Splunk APM, see :ref:`migrate-apm-custom-reporting`.
 
-5. (Optional) Start using the new Java metrics 2.0 built-in dashboards. Built-in dashboard versions are available for Java service metrics representing metrics from versions 1.x and 2.x.
+6. (Optional) Start using the new Java metrics 2.0 built-in dashboards. Built-in dashboard versions are available for Java service metrics representing metrics from versions 1.x and 2.x.
 
-6. When ready, you can turn off the migration:
+7. When ready, you can turn off the migration:
 
    - Go to :guilabel:`Settings`, :guilabel:`Data Configuration`.
    - Select :guilabel:`Data Migration`.
