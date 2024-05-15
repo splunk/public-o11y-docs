@@ -33,6 +33,16 @@ The following pre-requisites apply:
 .. raw:: html
 
    <embed>
+      <h3>Account permissions<a name="gcp-permissions" class="headerlink" href="#gcp-permissions" title="Permalink to this headline">¶</a></h3>
+   </embed>
+
+Starting in March 2024, GCP disables service account key creation by setting ``iam.disableServiceAccountKeyCreation`` to ``false`` by default. When this constraint is set, you cannot create user-managed credentials for service accounts in projects affected by the constraint. Check the restrictions on your organization's account keys before connecting to Splunk Observability Cloud.
+
+For more information, refer to Google's official announcement :new-page:`Introducing stronger default Org Policies for our customers <https://cloud.google.com/blog/products/identity-security/introducing-stronger-default-org-policies-for-our-customers/>`.
+
+.. raw:: html
+
+   <embed>
       <h2>Connect to GCP using the guided setup<a name="gcp-guided" class="headerlink" href="#gcp-guided" title="Permalink to this headline">¶</a></h2>
    </embed>
 
