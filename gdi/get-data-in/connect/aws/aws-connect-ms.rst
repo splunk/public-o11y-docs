@@ -62,10 +62,10 @@ When you activate Metric Streams, make sure you :ref:`add these additional permi
 Kinesis Firehose connection options
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Optionally, you can use the following methods to connect to Splunk Observability Cloud:
+To create Kinesis Firehose and other resources required to connect to AWS using Splunk-managed Metric Streams you can use one of these two options: 
 
-* Update your settings and deploy a CloudFormation template in order to create Kinesis Firehose. See :ref:`aws-cloudformation`.
-* You can also deploy Kinesis Firehose with Terraform. See :new-page:`Terraform Setup for Creating Kinesis Firehose to Send CloudWatch Metric Stream <https://github.com/signalfx/aws-terraform-templates/tree/main>`. Terraform works for Metric Streams only, and does not offer log support.
+* CloudFormation template. Learn more at :ref:`aws-cloudformation-use`.
+* Terraform template. Learn more at :ref:`aws-terraform-use`. The provided Terraform template supports Metric Streams only, and does not offer log support.
 
 .. _aws-wizard-prepare-ms:
 
