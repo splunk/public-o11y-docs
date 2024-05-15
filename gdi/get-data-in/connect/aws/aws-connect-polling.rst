@@ -32,8 +32,8 @@ To access the guided setup for the AWS integration, perform the following steps:
 #. Open the :new-page:`Amazon Web Services guided setup <https://login.signalfx.com/#/gdi/aws?category=all&gdiState=%7B%22integrationId%22:%22FfhrrZoAYAA%22%7D>`. Optionally, you can navigate to the guided setup on your own:
 
   - On the navigation menu, select :menuselection:`Data Management`. 
-  - Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
-  - On the :strong:`Integrate Your Data` page, select the tile for :strong:`Amazon Web Services`.
+  - Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
+  - Select the tile for :strong:`Amazon Web Services`.
 
 Next, follow the steps provided in the guided setup:
 

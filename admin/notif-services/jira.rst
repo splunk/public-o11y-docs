@@ -48,10 +48,9 @@ To create a Jira integration in Observability Cloud, follow these steps:
 
     #. In the left navigation menu, select :menuselection:`Data Management`.
 
-    #. Select :guilabel:`Add Integration`.
+    #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 
     #. In the integration filter menu, select :menuselection:`All`.
-
    
     #. In the :guilabel:`Search` field, search for :guilabel:`Jira`, and select it.
     
