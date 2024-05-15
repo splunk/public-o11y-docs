@@ -83,4 +83,4 @@ Terraform template
 
 Alternatively, you can also deploy Kinesis Firehose with Terraform. See :new-page:`Terraform Setup for Creating Kinesis Firehose to Send CloudWatch Metric Stream <https://github.com/signalfx/aws-terraform-templates/tree/main>`.
 
-Terraform works for Metric Streams only, and does not offer log support.
+The provided Terraform template supports Metric Streams only, and does not offer log support.
