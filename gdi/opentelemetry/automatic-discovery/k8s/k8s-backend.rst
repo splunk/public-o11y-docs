@@ -615,6 +615,12 @@ See :ref:`k8s-advanced-auto-discovery-config` for more information.
 
 .. include:: /_includes/gdi/troubleshoot-zeroconfig-k8s.rst
 
+To troubleshoot common errors that occur when instrumenting applications, see the following troubleshooting guides:
+
+* Java: :ref:`common-java-troubleshooting`
+* Node.js: :ref:`common-nodejs-troubleshooting`
+* .NET: :ref:`common-dotnet-troubleshooting`
+
 Learn more
 ===========================================================================
 
