@@ -40,6 +40,16 @@ Benefits and service terms of Splunk Observability Cloud :ref:`o11y-service-desc
 
 .. rst-class:: newcard
 
+:strong:`Admin onboarding guide`
+Admin guide for onboarding Splunk Observability Cloud :ref:`admin-onboarding-guide`
+
+.. rst-class:: newcard
+
+:strong:`Service description`
+Benefits and service terms of Splunk Observability Cloud :ref:`o11y-service-description`
+
+.. rst-class:: newcard
+
 :strong:`Architecture`
 Architecture of Splunk Observability Cloud :ref:`architecture`
 
@@ -342,6 +352,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    admin/admin
+
+.. toctree::
+   :maxdepth:   3
+
+   Admin onboarding guide TOGGLE <admin/admin-onboarding/admin-onboarding-guide>
 
 .. toctree::
    :maxdepth:   3

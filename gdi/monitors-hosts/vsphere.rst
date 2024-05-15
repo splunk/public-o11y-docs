@@ -18,9 +18,11 @@ or Windows.
 
 This integration uses VMware ``govmomi`` SDK, which officially supports
 vCenter 6.5, 6.7, and 7.0. While this monitor might work with vCenter
-5.1, 5.5, and 6.0, these versions are not officially supported.
+5.1, 5.5, and 6.0, these versions are not officially supported. Photon Operating System is not supported.    
 
 .. note:: When you add a custom role, don't assign any privileges to it. The role is created as a read-only role with three system-defined privileges: ``System.Anonymous``, ``System.View``, and ``System.Read``. For more information, see the vSphere official documentation on user roles.
+
+.. caution::  VMware does not allow any modifications to their Virtual Appliances, including vCenter. 
 
 Benefits
 --------

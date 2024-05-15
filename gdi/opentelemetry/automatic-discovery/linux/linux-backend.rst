@@ -15,6 +15,7 @@ Automatic discovery for Linux can detect and configure the following application
 
 * Java
 * Node.js
+* .NET
 
 How automatic discovery for Linux works
 ===================================================
@@ -44,6 +45,12 @@ Make sure you've also installed the components specific to your language runtime
 
         Node.js version 14 or higher and supported libraries. See :ref:`nodejs-otel-requirements` for more information.
 
+    .. tab:: .NET
+
+        .NET version 6.0 or higher and supported libraries. See :ref:`dotnet-otel-requirements` for more information.
+
+        Automatic discovery for .NET is only supported for x86_64/AMD64 architectures.
+
 Get started
 ===============================
 
@@ -71,7 +78,7 @@ Using the installer script, you can install and activate automatic discovery for
 
                 Using the installer script, you can install the automatic discovery package for Java and activate automatic discovery for Java for either all supported Java applications on the host via the system-wide method or for only Java applications running as ``systemd`` services.
 
-                .. note:: By default, automatic discovery is activated for both Java and Node.js when using the installer script. To deactivate automatic discovery for Node.js, add the ``--without-instrumentation-sdk node`` or ``--with-instrumentation-sdk java`` option in the installer script command.
+                .. note:: By default, automatic discovery is activated for all languages (Java, Node.js, and .NET) when using the installer script. To deactivate automatic discovery for other languages, add the ``--without-instrumentation-sdk [language]`` option in the installer script command.
                 
                 .. tabs:: 
 
@@ -143,7 +150,7 @@ Using the installer script, you can install and activate automatic discovery for
                             
                         Next, ensure the service is running and restart your application. See :ref:`auto-discovery-linux-verify` and :ref:`auto-discovery-linux-restart-apps`. 
 
-            .. tab::  Linux packages
+            .. tab::  Deb/RPM
 
                 .. note:: You must first install the Splunk OpenTelemetry Collector using the :ref:`linux-packages`.
 
@@ -193,16 +200,10 @@ Using the installer script, you can install and activate automatic discovery for
                 
             .. tab:: Salt
 
-                See :ref:`salt-zero-config-java`.
+                See :ref:`salt-zero-config`.
 
 
     .. tab:: Node.js 
-
-        The installer script installs the Node.js package using the ``npm install`` command. To specify a custom path to ``npm`` for installation, use the ``--npm-path <path>`` option as in the following example:
-
-        .. code-block:: bash
-
-            --npm-path /custom/path/to/npm
 
         .. tabs::
 
@@ -210,7 +211,13 @@ Using the installer script, you can install and activate automatic discovery for
 
                 Using the installer script, you can install and activate automatic discovery for Node.js for either all supported Node.js applications on the host via the system-wide method or for only Node.js applications running as ``systemd`` services.
 
-                .. note:: By default, automatic discovery is activated for both Java and Node.js when using the installer script. To deactivate automatic discovery for Java, add the ``--without-instrumentation-sdk java`` or ``--with-instrumentation-sdk node`` option in the installer script command.
+                The installer script installs the Node.js package using the ``npm install`` command. To specify a custom path to ``npm`` for installation, use the ``--npm-path <path>`` option as in the following example:
+
+                .. code-block:: bash
+
+                    --npm-path /custom/path/to/npm
+
+                .. note:: By default, automatic discovery is activated for all languages (Java, Node.js, and .NET) when using the installer script. To deactivate automatic discovery for other languages, add the ``--without-instrumentation-sdk [language]`` option in the installer script command.
 
                 .. tabs::
 
@@ -266,7 +273,10 @@ Using the installer script, you can install and activate automatic discovery for
 
                         Next, ensure the collector service is running and restart your Node.js application(s). See :ref:`auto-discovery-linux-verify` and :ref:`auto-discovery-linux-restart-apps`.  
 
-            
+            .. tab:: Ansible
+
+                See :ref:`ansible-zero-config`.
+
             .. tab:: Chef
 
                 See :ref:`chef-zero-config`.
@@ -274,6 +284,108 @@ Using the installer script, you can install and activate automatic discovery for
             .. tab:: Puppet
 
                 See :ref:`puppet-zero-config`.
+
+            .. tab:: Salt
+
+                See :ref:`salt-zero-config`.
+
+
+    .. tab:: .NET
+
+        .. tabs::
+
+            .. tab:: Installer script 
+
+                Using the installer script, you can install and activate automatic discovery for .NET for either all supported .NET applications on the host via the system-wide method or for only .NET applications running as ``systemd`` services.
+
+                .. note:: By default, automatic discovery is activated for all languages (Java, Node.js, and .NET) when using the installer script. To deactivate automatic discovery for other languages, add the ``--without-instrumentation-sdk [language]`` option in the installer script command.
+
+                .. tabs::
+
+                    .. tab:: System-wide
+                                
+                        Run the installer script with the ``--with-instrumentation`` option, as shown in the following example. Replace  ``<SPLUNK_REALM>`` and ``<SPLUNK_ACCESS_TOKEN>`` with your Splunk Observability Cloud realm and token, respectively.
+
+                        .. code-block:: bash
+
+                            curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+                            sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
+
+                        .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option.
+
+                        The system-wide automatic discovery method automatically adds environment variables to ``/etc/splunk/zeroconfig/dotnet.conf``.
+
+                        To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <env>`` option. Replace ``<env>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
+
+                        .. code-block:: bash
+                            :emphasize-lines: 2
+
+                            curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+                            sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --deployment-environment prod \
+                            --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
+
+                        You can activate AlwaysOn Profiling for CPU and memory, as well as metrics, using additional options, as in the following example:
+
+                        .. code-block:: bash
+                            :emphasize-lines: 4
+
+                            curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+                            sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --deployment-environment prod \
+                            --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN> \
+                            --enable-profiler --enable-profiler-memory --enable-metrics
+                                    
+                        Next, ensure the service is running and restart your application. See :ref:`auto-discovery-linux-verify` and :ref:`auto-discovery-linux-restart-apps`. 
+                        
+                    .. tab:: systemd
+
+                        Run the installer script with the ``--with-systemd-instrumentation`` option, as shown in the following example. Replace  ``<SPLUNK_REALM>`` and ``<SPLUNK_ACCESS_TOKEN>`` with your Splunk Observability Cloud realm and token, respectively.
+                                
+                        .. code-block:: bash
+
+                            curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+                            sudo sh /tmp/splunk-otel-collector.sh --with-systemd-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
+                                
+                        The ``systemd`` instrumentation automatically adds environment variables to ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
+
+                        .. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance by specifying the ``--with-fluentd`` option. 
+
+                        To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <env>`` option. Replace ``<env>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
+
+                        .. code-block:: bash
+                            :emphasize-lines: 2
+
+                            curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+                            sudo sh /tmp/splunk-otel-collector.sh --with-systemd-instrumentation --deployment-environment prod \
+                            --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
+
+                        You can activate AlwaysOn Profiling for CPU and memory, as well as metrics, using additional options, as in the following example:
+
+                        .. code-block:: bash
+                            :emphasize-lines: 4
+
+                            curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+                            sudo sh /tmp/splunk-otel-collector.sh --with-systemd-instrumentation --deployment-environment prod \
+                            --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN> \
+                            --enable-profiler --enable-profiler-memory --enable-metrics
+                                    
+                        Next, ensure the service is running and restart your application. See :ref:`auto-discovery-linux-verify` and :ref:`auto-discovery-linux-restart-apps`. 
+
+            .. tab:: Ansible
+
+                See :ref:`ansible-zero-config`.
+
+            .. tab:: Chef
+
+                See :ref:`chef-zero-config`.
+
+            .. tab:: Puppet
+
+                See :ref:`puppet-zero-config`.
+
+            .. tab:: Salt
+
+                See :ref:`salt-zero-config`.
+
 
 .. _auto-discovery-linux-verify:
 
@@ -348,7 +460,7 @@ Update automatic discovery and configuration
                             sudo apt-get update
                             sudo apt-get --only-upgrade splunk-otel-auto-instrumentation
 
-                        You might see a prompt to keep or overwrite the configuration file at ``/usr/lib/splunk-instrumentation/instrumentation.conf``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
+                        You might see a prompt to keep or overwrite the configuration file(s) in ``/etc/splunk/zeroconfig/``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
 
                     .. tab:: RPM
 
@@ -393,7 +505,7 @@ Update automatic discovery and configuration
                     
                         sudo rpm -Uvh <path to splunk-otel-auto-instrumentation rpm>
 
-                After upgrading the Debian package, you might see a prompt to keep or overwrite the configuration file at ``/usr/lib/splunk-instrumentation/instrumentation.conf``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
+                After upgrading the Debian package, you might see a prompt to keep or overwrite the configuration file(s) in ``/etc/splunk/zeroconfig/``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
 
                 You can also upgrade using the same package repositories as the Collector. See :new-page:`Debian or RPM packages <https://docs.splunk.com/Observability/gdi/opentelemetry/install-linux.html#debian-or-rpm-packages>` for more information.
 
@@ -420,7 +532,7 @@ Update automatic discovery and configuration
                             sudo apt-get update
                             sudo apt-get --only-upgrade splunk-otel-auto-instrumentation
 
-                        You might see a prompt to keep or overwrite the configuration file at ``/usr/lib/splunk-instrumentation/instrumentation.conf``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
+                        You might see a prompt to keep or overwrite the configuration file(s) in ``/etc/splunk/zeroconfig/``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
 
                     .. tab:: RPM
 
@@ -445,7 +557,7 @@ Update automatic discovery and configuration
                             sudo zypper refresh
                             sudo zypper update splunk-otel-auto-instrumentation
 
-                        After you've upgraded the packages, manually start or restart the Java applications on the host for the changes to take effect.
+                        After you've upgraded the packages, manually start or restart the Node.js applications on the host for the changes to take effect.
 
             .. tab:: Debian/RPM packages
 
@@ -465,7 +577,7 @@ Update automatic discovery and configuration
                     
                         sudo rpm -Uvh <path to splunk-otel-auto-instrumentation rpm>
 
-                After upgrading the Debian package, you might see a prompt to keep or overwrite the configuration file at ``/usr/lib/splunk-instrumentation/instrumentation.conf``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
+                After upgrading the Debian package, you might see a prompt to keep or overwrite the configuration file(s) in ``/etc/splunk/zeroconfig/``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
 
                 You can also upgrade using the same package repositories as the Collector. See :new-page:`Debian or RPM packages <https://docs.splunk.com/Observability/gdi/opentelemetry/install-linux.html#debian-or-rpm-packages>` for more information.
 
@@ -484,6 +596,87 @@ Update automatic discovery and configuration
         .. code-block:: yaml
 
             NODE_OPTIONS=-r /custom/nodejs/install/path/@splunk/otel/instrument
+
+    .. tab:: .NET
+
+        You can upgrade the package by using the package repository or by using Debian or RPM packages.
+
+        .. tabs::
+
+            .. tab:: Package repository
+
+                If you installed the package using the installer script, or if you configured the Debian or RPM package repositories manually, run the following commands according to your platform. Upgrading the package requires ``root`` privileges.
+
+                .. tabs::
+
+                    .. tab:: Debian
+
+                        Run the following commands:
+
+                        .. code-block:: bash
+
+                            sudo apt-get update
+                            sudo apt-get --only-upgrade splunk-otel-auto-instrumentation
+
+                        You might see a prompt to keep or overwrite the configuration file(s) in ``/etc/splunk/zeroconfig/``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
+
+                    .. tab:: RPM
+
+                        For the RPM package management system, run the following commands:
+
+                        yum:
+
+                        .. code-block:: bash
+
+                            sudo yum upgrade splunk-otel-auto-instrumentation
+
+                        dnf:
+
+                        .. code-block:: bash
+
+                            sudo dnf upgrade splunk-otel-auto-instrumentation
+
+                        zypper:
+
+                        .. code-block:: bash
+
+                            sudo zypper refresh
+                            sudo zypper update splunk-otel-auto-instrumentation
+
+                        After you've upgraded the packages, manually start or restart the .NET applications on the host for the changes to take effect.
+
+            .. tab:: Debian/RPM packages
+
+                To manually upgrade the package:
+
+                1. Download the ``splunk-auto-auto-instrumentation`` Debian or RPM package for the target system from the :new-page:`GitHub Releases page <https://github.com/signalfx/splunk-otel-collector/releases>`.
+
+                2. Run the following commands to install the package. Replace ``<path to splunk-otel-auto-instrumentation deb/rpm>`` with the local path to the downloaded package:
+
+                .. tabs::
+
+                    .. code-tab:: bash Debian
+
+                        sudo dpkg -i <path to splunk-otel-auto-instrumentation deb>
+
+                    .. code-tab:: bash RPM
+
+                        sudo rpm -Uvh <path to splunk-otel-auto-instrumentation rpm>
+
+                After upgrading the Debian package, you might see a prompt to keep or overwrite the configuration file(s) in ``/etc/splunk/zeroconfig/``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
+
+                You can also upgrade using the same package repositories as the Collector. See :new-page:`Debian or RPM packages <https://docs.splunk.com/Observability/gdi/opentelemetry/install-linux.html#debian-or-rpm-packages>` for more information.
+
+.. _troubleshooting-auto-discovery-linux:
+
+Troubleshooting
+===============================
+
+To troubleshoot common errors that occur when instrumenting applications, see the following troubleshooting guides:
+
+* Java: :ref:`common-java-troubleshooting`
+* Node.js: :ref:`common-nodejs-troubleshooting`
+* .NET: :ref:`common-dotnet-troubleshooting`
 
 .. _auto-discovery-view-results-linux:
 

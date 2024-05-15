@@ -81,7 +81,6 @@ div.body {
         right: 270px;
 }
 
-
 }
 
 @media screen and (max-width: 767px) {
@@ -328,4 +327,18 @@ a.external:not(.image-reference):after {
     left: 15px !important;
     top: 3px !important;
     width: 114px !important;
+}
+
+.uppercased:first-letter {text-transform: uppercase}
+
+ul li p {
+   margin-bottom: 0px !important;
+}
+
+ol li p {
+   margin-bottom: 0px !important;
+}
+
+dt {
+   font-weight: 500 !important;
 }

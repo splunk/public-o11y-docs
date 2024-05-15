@@ -234,13 +234,13 @@ For example, to change the name of the Collector instance to ``otel-collector`` 
 Verify all the OpenTelemetry resources are deployed successfully
 ==========================================================================
 
-Resources include the Collector, the Operator, webhook, and instrumentation.
+Resources include the Collector, the Operator, webhook, and instrumentation. Run the following commands to verify the resources are deployed correctly.
 
-Run the following commands to verify the resources are deployed correctly:
+The pods running in the collector namespace must include the following:
 
 .. code-block:: yaml
    
-   kubectl  get pods -n monitoring
+   kubectl get pods
    # NAME                                                          READY
    # NAMESPACE     NAME                                                            READY   STATUS
    # monitoring    splunk-otel-collector-agent-lfthw                               2/2     Running
@@ -250,21 +250,20 @@ Run the following commands to verify the resources are deployed correctly:
    # monitoring    splunk-otel-collector-k8s-cluster-receiver-856f5fbcf9-pqkwg     1/1     Running
    # monitoring    splunk-otel-collector-opentelemetry-operator-56c4ddb4db-zcjgh   2/2     Running
 
-
-The pods running in your namespace must include the following:
+The webhooks in the collector namespace must include the following:
 
 .. code-block:: yaml
 
-   kubectl get mutatingwebhookconfiguration.admissionregistration.k8s.io -n monitoring
+   kubectl get mutatingwebhookconfiguration.admissionregistration.k8s.io
    # NAME                                      WEBHOOKS   AGE
    # splunk-otel-collector-cert-manager-webhook              1          14m
    # splunk-otel-collector-opentelemetry-operator-mutation   3          14m
 
-The namespace must have a running instance of the OpenTelemetry Collector. The name of this Collector instance matches the name that you set in :ref:`k8s-auto-discovery-helmchart-name`.
+The instrumentation in the collector namespace must include the following:
 
 .. code-block:: yaml
 
-   kubectl get otelinst -n <target_application_namespace>
+   kubectl get otelinst
    # NAME                          AGE   ENDPOINT
    # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
 
@@ -472,6 +471,55 @@ For example, if the current namespace is ``<my-namespace>`` and you installed th
 
 Replace ``<application_language>`` with the language of the application you want to discover.
 
+Instrument applications in multi-container pods
+-------------------------------------------------
+
+By default, automatic discovery instruments the first container in the Kubernetes pod spec. You can specify multiple containers to instrument by adding an annotation.
+
+The following example instruments Java applications running in the ``myapp`` and ``myapp2`` containers:
+
+.. code-block:: yaml
+
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: my-deployment-with-multiple-containers
+  spec:
+    selector:
+      matchLabels:
+        app: my-pod-with-multiple-containers
+    replicas: 1
+    template:
+      metadata:
+        labels:
+          app: my-pod-with-multiple-containers
+        annotations:
+          instrumentation.opentelemetry.io/inject-java: "true"
+          instrumentation.opentelemetry.io/container-names: "myapp,myapp2"
+
+You can also instrument multiple containers with specific languages. To do so, specify which languages and containers to instrument by using the ``instrumentation.opentelemetry.io/<language>-container-names`` annotation. The following example instruments Java applications in ``myapp`` and ``myapp2``, and Node.js applications in ``myapp3``:
+
+   .. code-block:: yaml
+
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: my-deployment-with-multi-containers-multi-instrumentations
+    spec:
+      selector:
+        matchLabels:
+          app: my-pod-with-multi-containers-multi-instrumentations
+      replicas: 1
+      template:
+        metadata:
+          labels:
+            app: my-pod-with-multi-containers-multi-instrumentations
+          annotations:
+            instrumentation.opentelemetry.io/inject-java: "true"
+            instrumentation.opentelemetry.io/java-container-names: "myapp,myapp2"
+            instrumentation.opentelemetry.io/inject-nodejs: "true"
+            instrumentation.opentelemetry.io/python-container-names: "myapp3"
+
 Deactivate automatic discovery
 -----------------------------------------------
 
@@ -566,6 +614,12 @@ See :ref:`k8s-advanced-auto-discovery-config` for more information.
 .. _troubleshooting-k8s-auto-discovery:
 
 .. include:: /_includes/gdi/troubleshoot-zeroconfig-k8s.rst
+
+To troubleshoot common errors that occur when instrumenting applications, see the following troubleshooting guides:
+
+* Java: :ref:`common-java-troubleshooting`
+* Node.js: :ref:`common-nodejs-troubleshooting`
+* .NET: :ref:`common-dotnet-troubleshooting`
 
 Learn more
 ===========================================================================

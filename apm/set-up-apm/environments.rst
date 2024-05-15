@@ -15,6 +15,8 @@ A common application deployment pattern is to have multiple, distinct applicatio
 
 You can use the ``deployment.environment`` span tag in APM to identify the deployment environment with which each span is associated. 
 
+.. _deployment-env-spantag:
+
 Setting the ``deployment.environment`` span tag
 ===============================================
 

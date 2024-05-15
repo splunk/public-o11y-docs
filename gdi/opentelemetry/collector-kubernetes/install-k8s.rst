@@ -210,6 +210,7 @@ You can configure the following:
 
 * :ref:`otel-kubernetes-config-distro`
 * :ref:`otel-kubernetes-config-environment`
+* :ref:`otel-upgrade-k8s-access-token`
 
 For example:
 
@@ -234,7 +235,6 @@ You can also set Helm values as arguments using a YAML file. For example, after 
 See :new-page:`an example of a YAML file in GitHub <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>`. Options include:
 
 * Set ``isWindows`` to ``true`` to apply the Kubernetes cluster with Windows worker nodes.
-
 
 Set Prometheus metrics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -338,7 +338,9 @@ See the following manifest to set security constraints:
 Use the Kubernetes Operator in OpenTelemetry
 ============================================================================================
 
-You can install the Collector with an upstream Kubernetes Operator for Auto Instrumentation. This instance of the Kubernetes Operator is part of the upstream OpenTelemetry Operator project. See the :new-page:`OpenTelemetry GitHub repo <OpenTelemetry GitHub repo <https://github.com/open-telemetry/opentelemetry-operator>` for more information.
+Using the Splunk Helm chart, you can install the Splunk Collector along with an upstream OpenTelemetry Kubernetes Operator for Auto Instrumentation. For more information, see :ref:`discovery-kubernetes`.
+
+This instance of the Kubernetes Operator is part of the upstream OpenTelemetry Operator project. See the :new-page:`OpenTelemetry GitHub repo <OpenTelemetry GitHub repo <https://github.com/open-telemetry/opentelemetry-operator>` for more information.
 
 .. note:: The upstream Kubernetes Operator is not related to the Splunk Operator for Kubernetes, which is used to deploy and operate Splunk Enterprise deployments in a Kubernetes infrastructure.
 
@@ -349,7 +351,7 @@ Splunk Distribution for the Kubernetes Operator (Alpha)
 
    This project is Alpha. Do not use in production.
 
-The Splunk Distribution of OpenTelemetry Collector for Kubernetes Operator is the Splunk Observability Cloud implementation of a Kubernetes Operator, and it helps deploy and manage the Splunk Distribution of OpenTelemetry Collector for Kubernetes. See the :new-page:`README file <https://github.com/signalfx/splunk-otel-collector-operator>` in GitHub for installation instructions.
+The Splunk Distribution of OpenTelemetry Collector for Kubernetes Operator is the Splunk Observability Cloud implementation of a Kubernetes Operator, and it helps deploy and manage the Splunk Distribution of the OpenTelemetry Collector for Kubernetes. See the :new-page:`README file <https://github.com/signalfx/splunk-otel-collector-operator>` in GitHub for installation instructions.
 
 Next steps
 ==================================

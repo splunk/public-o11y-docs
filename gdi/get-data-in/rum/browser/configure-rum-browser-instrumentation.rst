@@ -370,7 +370,7 @@ Starting from version 0.17.0 and higher, you can configure the RUM agent to use 
          realm: '<realm>',
          rumAccessToken: '<your_rum_token>',
          applicationName: '<application-name>',
-         deploymentEnvironment: '<deployment-env>'
+         deploymentEnvironment: '<deployment-env>',
          exporter: {
             otlp: true
          },
