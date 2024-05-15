@@ -133,6 +133,7 @@ Splunk On-Call integrations
    vividcortex-integration
    victorops-wormly-integration
    victorops-zabbix-integration
+   go-alert-library
 
 .. Add list of integrations here.
 
