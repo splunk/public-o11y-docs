@@ -1,5 +1,7 @@
 .. _java-metrics-migration-guide:
 
+.. _note-otel-migration-java:
+
 ***************************************************
 Migration guide for OpenTelemetry Java 2.0 metrics
 ***************************************************
@@ -20,7 +22,7 @@ The following instructions assume that you're sending Java application metrics u
 
 To migrate from OpenTelemetry Java 1.x to OpenTelemetry Java 2.x, meet the following requirements:
 
-- Splunk Distribution of OpenTelemetry Collector version 0.95 or higher deployed
+- Splunk Distribution of OpenTelemetry Collector version 0.98 or higher deployed
 - Administrator permissions in Splunk Observability Cloud. See :ref:`roles-table-phase`
 
 If you're already instrumenting your Java services using the Splunk Distribution of OpenTelemetry Java 1.x or the equivalent upstream instrumentation, you can already migrate to the version 2.0 and higher of the Java agent.
@@ -50,10 +52,11 @@ For each supported process, you can turn on and off the data migration, see the 
 Grace period
 ------------------
 
-The grace period for receiving and processing duplicated metrics at no additional cost lasts 6 months, starting with the release of the Java agent version 2.0. Migration support is available for 12 months after the release of version 2.0 and will be deprecated after 18 months.
+The grace period for receiving and processing duplicated metrics at no additional cost lasts 6 months, starting with the release of the Java agent version 2.0 on May 28, 2024.
+
+Migration support is available for 12 months after the release of version 2.0 and will be deprecated after 18 months.
 
 .. note:: After the grace period, duplicated metric data is billed as custom metric data. Make sure to turn off the Data Migration action after you've completed the migration to avoid surcharges.
-
 
 .. _migrate-java-steps:
 
