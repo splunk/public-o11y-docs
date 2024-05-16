@@ -107,5 +107,8 @@ Automatic discovery supports the following host services and applications:
    * - Redis
      - Redis receiver. See :ref:`redis-receiver`.
 
+   * - MongoDB
+     - MongoDB receiver. See :ref:`mongodb-receiver`
+
 
 
