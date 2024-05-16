@@ -62,7 +62,7 @@ Instrument the code to send spans
 
 Next, instrument your code using OpenTelemetry. Use the following examples as a starting point to instrument your code. See :new-page:`https://learn.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings <https://learn.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings>` in Microsoft Azure documentation for steps to add environment variables to an Azure function.
 
-The following example shows how to instrument a function using instrumentationWrapper helper:
+The following example shows how to instrument a function using the ``instrumentationWrapper`` helper:
 
 .. code-block:: ts
 
