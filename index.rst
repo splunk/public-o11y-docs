@@ -35,11 +35,6 @@ A collection of task-based tutorials to achieve a goal in Splunk Observability C
 
 .. rst-class:: newcard
 
-:strong:`Service description`
-Benefits and service terms of Splunk Observability Cloud :ref:`o11y-service-description`
-
-.. rst-class:: newcard
-
 :strong:`Admin onboarding guide`
 Admin guide for onboarding Splunk Observability Cloud :ref:`admin-onboarding-guide`
 
