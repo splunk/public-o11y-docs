@@ -43,13 +43,33 @@ Use the 3-dot menu next to each span to expand and collapse spans as needed. You
   :width: 95%
   :alt: 3-dot menu with options to collapse spans at a specific depth or the service and operation level
 
-Trace waterfall reference
+Identify repeated spans
 ==========================
 
-When viewing spans in the trace waterfall, note the following:
+When a trace contains multiple repeated spans, the spans are collapsed into 1 row and a multiplier is displayed next to the row to reflect the number of repeated spans. Select the multiplier (x3, x7, and so on) to expand the row to view the individual spans and durations. The span summary displays the total span count and the repeated tags associated with the repeated spans.
 
-* When a trace contains multiple repeated spans, the spans are typically collapsed into 1 row. Open the row to see the repeated span's tags and select the number (x3, x7, and so on) to expand the row and view the individual spans and durations.
-* The colors of spans in the waterfall help differentiate the services contributing spans to a trace. If every span in the trace is from the same service, all spans appear in the same color. If there are 4 different services involved, the spans are in 4 different colors, indicating the service they're from.
+.. image:: /_images/apm/spans-traces/span-search-repeated-spans.png
+  :width: 95%
+  :alt: Repeated spans in trace waterfall view
+
+Identify the services that contribute spans to a trace
+=======================================================
+
+The colors of spans in the waterfall help differentiate the services contributing spans to a trace. If every span in the trace is from the same service, all spans appear in the same color. If there are 4 different services involved, the spans are in 4 different colors, to differentiate the service they're from.
+
+View connected spans and traces using span links
+=======================================================
+
+Span links connect spans that don't have a direct parent-child relationship but are otherwise causally related. Span links help you to manage operations in distributed systems, where operations don't follow linear execution patterns. Use span links to preserve span context when producer spans create jobs that are asynchronously processed later. These might be remote jobs that are added to a job queue or local jobs handled by an event listener. In this case, span links connect the producer spans to the consumer spans that represent the processing of the jobs created by the producer. These consumer spans might start long after the producer span has ended.
+
+* See :new-page:`https://opentelemetry.io/docs/concepts/signals/traces/#span-links` to learn about the OpenTelemetry concept.
+* See :new-page:`https://opentelemetry.io/docs/languages/java/instrumentation/#create-spans-with-links` for instrumentation details, including instructions for how to create span links.
+
+You can view span links on spans in the trace waterfall view. Select the link to see the correlated spans and traces then select the span or the trace to navigate to the span.
+
+.. image:: /_images/apm/spans-traces/span-search-span-links.gif
+  :width: 95%
+  :alt: User selects a span link and selects a connected span to navigate to.
 
 View RUM session details
 ===========================
@@ -76,4 +96,3 @@ Continue troubleshooting in Tag Spotlight
 =============================================
 
 Expand a span of interest in the waterfall chart and select the spotlight icon that appears beside an indexed tag to navigate to Tag Spotlight. Tag Spotlight can help you isolate specific indexed span tags associated with trends in request rate, error rate, or latency and get to the bottom of what's causing problems. See :ref:`apm-tag-spotlight` to learn more about using Tag Spotlight. 
-

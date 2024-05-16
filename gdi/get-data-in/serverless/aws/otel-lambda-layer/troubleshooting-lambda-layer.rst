@@ -1,7 +1,7 @@
 .. _troubleshooting-lambda-layer:
 
 ******************************************************
-Troubleshoot the Splunk OpenTelemetry Lambda Layer
+Troubleshoot the Splunk OpenTelemetry Lambda layer
 ******************************************************
 
 .. meta::
@@ -62,7 +62,7 @@ For instructions on how to define a custom exporter endpoint, see :ref:`trace-ex
 Deactivate instrumentations that load automatically
 =====================================================
 
-Some of the wrappers included in the Splunk OpenTelemetry Lambda Layer load instrumentations for popular libraries or frameworks automatically. To deactivate instrumentations that load automatically, follow these steps:
+Some of the wrappers included in the Splunk OpenTelemetry Lambda layer load instrumentations for popular libraries or frameworks automatically. To deactivate instrumentations that load automatically, follow these steps:
 
 .. tabs::
 
@@ -86,3 +86,21 @@ For metric data, follow these steps:
 #. Set the ``VERBOSE`` environment variable to ``true``.
 #. Set the ``HTTP_TRACING`` environment variable to ``true``.
 #. Search for relevant log messages in AWS CloudWatch.
+
+
+.. _serverless-framework-support-aws:
+
+Serverless Framework support
+==================================================
+
+Some features of the Serverless Framework might impact OpenTelemetry tracing of Python Lambda functions.
+
+Python libraries compression
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The ``zip`` feature of ``pythonRequirements`` allows packing and deploying Lambda dependencies as compressed files. To instrument packages compressed using the Serverless Framework, set the ``SPLUNK_LAMBDA_SLS_ZIP`` environment variable to ``true``. For more information, see https://github.com/serverless/serverless-python-requirements#dealing-with-lambdas-size-limitations on GitHub.
+
+Slim feature
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The Slim feature reduces the size of Lambda packages by removing some files, including ``dist-info`` folders. Some of the files removed by the Slim feature are required by the OpenTelemetry Python autoinstrumentation. Deactivate the ``slim`` option in your serverless.yml file or define custom ``slimPatterns``. For more information, see https://github.com/serverless/serverless-python-requirements#slim-package on GitHub.

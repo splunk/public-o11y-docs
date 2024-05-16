@@ -15,8 +15,9 @@ Instrument back-end applications to send spans to Splunk APM
    Instrument a .NET application TOGGLE <otel-dotnet/get-started>
    Instrument a Go application TOGGLE <go/get-started>
    Instrument a Python application TOGGLE <python/get-started>
-   Instrument a Ruby application TOGGLE <ruby/get-started>
+   Instrument a Ruby application TOGGLE <ruby/get-started-ruby>
    Instrument a PHP application TOGGLE <php/get-started>
+   Instrument a C++ application TOGGLE <cpp/get-started-cpp>
    Send spans from the Istio service mesh <istio/istio>
 
 You can instrument your back-end services and applications to send metrics and traces to Splunk Observability Cloud.
@@ -33,7 +34,7 @@ You have the following options to send app and service data to Splunk Observabil
 
    * Available languages include Java, Node.js, .NET, Go, Python, Ruby, and PHP.
 
-   * Learn more about the Collector at :ref:`otel-intro`, including the :ref:`zero-config`.
+   * Learn more about the Collector at :ref:`otel-intro`, including :ref:`discovery_mode`.
 
 * Send metrics and traces directly to Splunk Observability Cloud using the API. See more in our :new-page:`dev portal documentation <https://dev.splunk.com/observability/docs/apm/send_traces>`.
 
@@ -88,6 +89,7 @@ You can instrument applications in each of these languages using official Splunk
 - :ref:`Python <get-started-python>`
 - :ref:`Ruby <get-started-ruby>`
 - :ref:`PHP <get-started-php>`
+- :ref:`C++ <get-started-cpp>`
 
 To send spans from the Istio service mesh, see :ref:`get-started-istio`.
 

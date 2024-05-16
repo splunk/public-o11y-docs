@@ -1,7 +1,7 @@
 .. _welcome:
 
 *************************************
-Welcome to Splunk Observability Cloud
+Splunk Observability Cloud overview
 *************************************
 
 .. meta::
@@ -19,7 +19,7 @@ Choose from :ref:`over 100 supported open standards-based integrations <supporte
 
 When you send data from each layer of your full-stack environment to Observability Cloud, it transforms raw metrics, traces, and logs into actionable insights in the form of dashboards, visualizations, alerts, and more. To learn more about Observability Cloud's data model, refer to :ref:`data-model`.
 
-Splunk Observability Cloud's suite of products and features allow you to quickly and intelligently respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward.
+Splunk Observability Cloud's suite of products and features allow you to quickly and intelligently respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward. Use Splunk Observability Cloud search to quickly locate the service, traceID, dashboard, chart, or metrics-based content you are interested in. For details, see :ref:`gsearch`.
 
 The following diagram provides a high-level view of how each Observability Cloud product plays its part to provide you with full-stack observability:
 
@@ -46,6 +46,10 @@ Start learning about how the following Observability Cloud products work to prov
 - :ref:`welcome-oncall`
 
 - :ref:`welcome-mobile`
+
+- :ref:`welcome-it`
+
+- :ref:`welcome-content-packs`
 
 .. note:: For a list of benefits and service terms of Splunk Observability Cloud, see :ref:`o11y-service-description`.
 
@@ -130,6 +134,8 @@ Splunk Observability Cloud for Mobile is an iOS and Android companion mobile app
 
 For more information, see :ref:`intro-to-mobile`.
 
+.. _welcome-it:
+
 Splunk IT Essentials Work and Splunk IT Service Intelligence 
 ===================================================================
 
@@ -138,6 +144,8 @@ Splunk IT Essentials Work (ITE Work) is a free application that helps you get st
 Splunk IT Service Intelligence (ITSI) is a premium IT operations solution that provides actionable insight into the performance and behavior of your IT services. You can also ingest events from across your IT landscape and from other monitoring silos to provide a unified operational console of all your events and service-impacting issues. 
 
 For more information about these applications, see the :new-page:`IT operations product overview <https://docs.splunk.com/Documentation/ITOps/current/Overview/Overview>`. 
+
+.. _welcome-content-packs:
 
 Splunk App for Content Packs
 ======================================

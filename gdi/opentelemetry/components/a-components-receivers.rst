@@ -16,7 +16,6 @@ Collector components: Receivers
     carbon-receiver
     cloudfoundry-receiver
     collectd-receiver
-    databricks-receiver
     discovery-receiver
     filelog-receiver   
     fluentd-receiver
@@ -32,6 +31,7 @@ Collector components: Receivers
     kubernetes-objects-receiver  
     mongodb-receiver
     mongodb-atlas-receiver
+    mssql-server-receiver
     mysql-receiver
     oracledb-receiver
     otlp-receiver                
@@ -58,48 +58,6 @@ Collector components: Receivers
 
 The following receivers are available:
 
-* :ref:`azureeventhub-receiver`
-* :ref:`carbon-receiver`
-* :ref:`cloudfoundry-receiver`
-* :ref:`collectd-receiver`
-* :ref:`databricks-receiver`
-* :ref:`discovery-receiver`
-* :ref:`filelog-receiver`   
-* :ref:`fluentd-receiver`
-* :ref:`host-metrics-receiver`
-* :ref:`jaeger-receiver`    
-* :ref:`jmx-receiver`
-* :ref:`journald-receiver`
-* :ref:`kafka-receiver`    
-* :ref:`kafkametrics-receiver`    
-* :ref:`kubelet-stats-receiver`
-* :ref:`kubernetes-cluster-receiver`     
-* :ref:`kubernetes-events-receiver`
-* :ref:`kubernetes-objects-receiver`
-* :ref:`mongodb-receiver`
-* :ref:`mongodb-atlas-receiver`
-* :ref:`mysql-receiver`
-* :ref:`oracledb-receiver`
-* :ref:`otlp-receiver`                
-* :ref:`postgresql-receiver`
-* :ref:`prometheus-receiver`
-* :ref:`receiver-creator-receiver`
-* :ref:`redis-receiver`
-* :ref:`sapm-receiver`
-* :ref:`simple-prometheus-receiver`
-* :ref:`signalfx-receiver`
-* :ref:`smartagent-receiver`
-* :ref:`splunk-hec-receiver`
-* :ref:`sqlquery-receiver` 
-* :ref:`sshcheck-receiver`
-* :ref:`statsd-receiver`    
-* :ref:`syslog-receiver` 
-* :ref:`tcp-logs-receiver`     
-* :ref:`udp-logs-receiver`
-* :ref:`vcenter-receiver` 
-* :ref:`wavefront-receiver`
-* :ref:`windowseventlog-receiver`
-* :ref:`windowsperfcounters-receiver`
-* :ref:`zipkin-receiver` 
+.. include:: /_includes/gdi/otel-receivers-table.rst
 
 To see other components, refer to :ref:`otel-components`.

@@ -1,3 +1,5 @@
+.. note:: This library instruments React Native applications for Android and iOS devices. For React web instrumentation, see :ref:`browser-rum-gdi`.
+
 .. _react-rum-install:
 
 **************************************************************
@@ -20,7 +22,6 @@ Check compatibility and requirements
 
 .. include:: /_includes/requirements/react.rst
 
-
 .. _rum-react-install:
 
 Instrument your React Native application for Splunk RUM
@@ -32,13 +33,15 @@ Before you instrument and configure Splunk RUM for your React Native application
 
 1. Log in to Splunk Observability Cloud.
 
-2. In the navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+2. In the navigation menu, select :menuselection:`Data Management`. 
 
-3. In the integration filter menu, select :guilabel:`By Use Case`.
+3. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 
-4. Select the :guilabel:`Monitor user experience` use case.
+4. In the integration filter menu, select :guilabel:`By Use Case`.
 
-5. Select the :guilabel:`React Native Instrumentation` tile to open the React Native Instrumentation guided setup.
+5. Select the :guilabel:`Monitor user experience` use case.
+
+6. Select the :guilabel:`React Native Instrumentation` tile to open the React Native Instrumentation guided setup.
 
 .. _rum-react-initialize:
 

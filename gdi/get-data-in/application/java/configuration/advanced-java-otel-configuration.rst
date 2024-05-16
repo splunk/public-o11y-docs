@@ -252,7 +252,7 @@ The following settings control metrics collection for the Java agent:
 
        System property: ``splunk.metrics.enabled``
    * - ``SPLUNK_METRICS_ENDPOINT``
-     - The OTel collector metrics endpoint. Default is ``http://localhost:9943``. |br| |br| System property: ``splunk.metrics.endpoint``
+     - The OTel collector metrics endpoint. Default is ``http://localhost:9943/v2/datapoint``. |br| |br| System property: ``splunk.metrics.endpoint``
    * - ``SPLUNK_METRICS_EXPORT_INTERVAL``
      - Deprecated. Use ``OTEL_METRIC_EXPORT_INTERVAL`` instead. See :new-page:`Periodic exporting MetricReader <https://opentelemetry.io/docs/specs/otel/configuration/sdk-environment-variables/#periodic-exporting-metricreader>` in the official OpenTelemetry documentation.
 
@@ -292,4 +292,4 @@ Other settings
    * - Environment variable
      - Description
    * - ``OTEL_JAVAAGENT_ENABLED``
-     - Globally activates the Java agent automatic instrumentation. The default value is ``true``. Useful for deactivating auto instrumentation in testing scenarios or pipelines. |br| |br| System property: ``otel.javaagent.enabled`` 
+     - Globally activates the Java agent automatic instrumentation. The default value is ``true``. Useful for deactivating automatic discovery in testing scenarios or pipelines. |br| |br| System property: ``otel.javaagent.enabled`` 

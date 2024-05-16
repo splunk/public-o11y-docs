@@ -7,7 +7,9 @@ Troubleshoot the Splunk OpenTelemetry Collector
 .. meta::
       :description: Describes known issues when using the Splunk Distribution of OpenTelemetry Collector.
 
-See the following issues and workarounds for the Splunk Distribution of OpenTelemetry Collector.
+See the following issues and workarounds for the Splunk Distribution of the OpenTelemetry Collector.
+
+.. note:: See also the :new-page:`OpenTelemetry Project troublehooting docs in GitHub <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md>`.
 
 Collector isn't behaving as expected
 =========================================

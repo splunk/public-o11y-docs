@@ -13,12 +13,14 @@ Collector components: Processors
 
     attributes-processor
     batch-processor
+    cumulative-to-delta-processor
     filter-processor
-    groupbyattrs-processor    
+    groupbyattrs-processor
     kubernetes-attributes-processor
-    memory-limiter-processor          
-    metrics-transform-processor 
+    memory-limiter-processor
+    metrics-transform-processor
     probabilistic-sampler-processor
+    redaction-processor
     resource-processor
     resourcedetection-processor
     routing-processor
@@ -30,12 +32,14 @@ The following processors are available:
 
 * :ref:`attributes-processor`
 * :ref:`batch-processor`
+* :ref:`cumulative-to-delta-processor`
 * :ref:`filter-processor`
-* :ref:`groupbyattrs-processor`    
+* :ref:`groupbyattrs-processor`
 * :ref:`kubernetes-attributes-processor`
-* :ref:`memory-limiter-processor`    
-* :ref:`metrics-transform-processor`  
-* :ref:`probabilistic-sampler-processor`    
+* :ref:`memory-limiter-processor`
+* :ref:`metrics-transform-processor`
+* :ref:`probabilistic-sampler-processor`
+* :ref:`redaction-processor`
 * :ref:`resource-processor`
 * :ref:`resourcedetection-processor`
 * :ref:`routing-processor`

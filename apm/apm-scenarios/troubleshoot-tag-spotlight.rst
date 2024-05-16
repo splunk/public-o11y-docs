@@ -18,14 +18,14 @@ To troubleshoot the issue, Deepu takes the following steps:
 
 .. _open-tag-spotlight:
 
-Deepu selects the affected service on the service map and opens Tag Spotlight 
-===============================================================================
+Deepu opens Tag Spotlight and selects the affected service
+===================================================================================
 
-Deepu selects the :strong:`paymentservice` node on the service map and selects the :strong:`Tag Spotlight` view on the sidebar. 
+Deepu uses search to search for Tag Spotlight and selects the navigation result to go to Tag Spotlight. They select the paymentservice. 
 
-..  image:: /_images/apm/apm-use-cases/TagSpotlightUseCase_OpenTagSpotlight.png
+..  image:: /_images/apm/apm-use-cases/TagSpotlightScenario_OpenTagSpotilght.gif
     :width: 99%
-    :alt: This screenshot shows the payment service in the service map and Tag Spotlight side panel. 
+    :alt: This animation shows the user searching for Tag Spotlight and selecting the payment service in the Tag Spotlight filter. 
 
 .. _correlated-errors:
 

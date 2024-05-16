@@ -22,7 +22,7 @@ Get started
 
 .. note:: 
   
-  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector when deploying in host monitoring (agent) mode in the ``logs`` pipeline. See :ref:`otel-deployment-mode` for more information. 
+  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector when deploying in host monitoring (agent) mode in the ``logs`` pipeline. See :ref:`otel-deployment-mode` for more information.
   
   For details about the default configuration, see :ref:`otel-kubernetes-config`, :ref:`linux-config-ootb`, or :ref:`windows-config-ootb`. You can customize your configuration any time as explained in this document.
 
@@ -37,7 +37,7 @@ Follow these steps to configure and activate the component:
   - :ref:`otel-install-k8s`
 
 2. Configure the exporter as described in this doc.
-3. Restart the Collector.  
+3. Restart the Collector.
 
 Sample configuration
 ----------------------
@@ -72,6 +72,11 @@ Next, add the exporter to the ``services`` section of your configuration file:
          - batch
          - resourcedetection
          exporters: [splunk_hec]
+
+.. _hec-endpoints:
+
+Splunk HEC token and endpoint
+---------------------------------
 
 The Splunk HEC exporter requires a Splunk HEC token and endpoint. Obtaining a HEC token and choosing a HEC endpoint depends on the target. The following table shows endpoints and instructions for each back end. Use the ``source`` and ``sourcetype`` fields options when sending logs to Splunk Cloud Platform or Splunk Enterprise.
 

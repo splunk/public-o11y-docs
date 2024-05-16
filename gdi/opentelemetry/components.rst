@@ -11,10 +11,13 @@ Collector components
     :titlesonly:
     :hidden:
 
+
     Receivers <components/a-components-receivers.rst>
     Processors <components/a-components-processors.rst>
     Exporters <components/a-components-exporters.rst>
-    Extensions <components/a-components-extensions.rst>        
+    Extensions <components/a-components-extensions.rst>  
+    Connectors <components/a-components-connectors.rst>            
+
 
 The OpenTelemetry Collector includes the following component types:
 
@@ -22,10 +25,11 @@ The OpenTelemetry Collector includes the following component types:
 * :ref:`Processors <collector-components-processors>`: Perform operations on data before it's exported. For example, filtering.
 * :ref:`Exporters <collector-components-exporters>`: Send data to one or more backends or destinations. 
 * :ref:`Extensions <collector-components-extensions>`: Extend the capabilities of the Collector.
+* :ref:`Connectors <collector-components-connectors>`: Send telemetry data between different collector pipelines.
 
 You can activate components by configuring :ref:`service pipelines <otel-data-processing>` in the Collector configuration. See :ref:`otel-configuration` to learn how to define multiple instances of components as well as their pipelines.
 
-The Splunk Distribution of OpenTelemetry Collector includes and supports the components listed on this doc.
+The Splunk Distribution of the OpenTelemetry Collector includes and supports the components listed on this doc.
 
 .. note:: The following lists might not contain all the latest additions. For a complete list of Collector components, including components that aren't included in the Splunk Distribution of OpenTelemetry Collector, see the ``opentelemetry-contrib`` repository in GitHub.
 
@@ -56,9 +60,6 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
      - Metrics
    * - :ref:`collectd-receiver` (``collectd``)
      - Receives data exported through the CollectD ``write_http`` plugin. Only supports the JSON format.
-     - Metrics
-   * - :ref:`databricks_receiver` (``databricks``)
-     - Uses the Databricks API to generate metrics about the operation of a Databricks instance.
      - Metrics
    * - :ref:`discovery-receiver` (``discovery``)
      - Wraps the receiver creator to facilitate the discovery of metric collection targets. See :ref:`discovery_mode`.
@@ -105,6 +106,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`mongodb-atlas-receiver` (``mongodbatlas``)
      - Retrieves metrics from MongoDB Atlas using their monitoring APIs.
      - Metrics
+   * - :ref:`mssql-server-receiver` (``sqlserver``)
+     - Grabs metrics from a Microsoft SQL Server instance. 
+     - Metrics    
    * - :ref:`mysql-receiver` (``mysql``)
      - Queries and retrieves metrics about MySQL's global status and InnoDB tables.
      - Metrics      
@@ -198,6 +202,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`batch-processor` (``batch``)
      - Accepts spans, metrics, or logs and places them into batches. Batching helps better compress the data and reduce the number of outgoing connections required to transmit the data. This processor supports both size-based and time-based batching.
      - Metrics, logs, traces
+   * - :ref:`cumulative-to-delta-processor` (``cumulativetodelta``)
+     - Convert cumulative monotonic metrics to delta aggretation temporality. This enhances the usage of cumulative metrics in Splunk Observability Cloud.
+     - Metrics
    * - :ref:`filter-processor` (``filter``)
      - Can be configured to include or exclude metrics based on metric name in the case of the ``strict`` or ``regexp`` match types, or based on other metric attributes in the case of the ``expr`` match type.
      - Metrics
@@ -215,6 +222,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
      - Metrics
    * - :ref:`probabilistic-sampler-processor` (``probabilisticsampler``) 
      - Provides samples based on hash values determined by trace IDs.
+     - Traces
+   * - :ref:`redaction-processor` (``redaction``)
+     - Deletes span attributes that don't match a list of allowed attributes. It also masks span attribute values that match a blocked value list.
      - Traces
    * - :ref:`resource-processor` (``resource``)
      - Applies changes to resource attributes. Attributes represent actions that can be applied on resources.
@@ -263,7 +273,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
      - Exports metrics, logs, and traces to Kafka using a synchronous producer. 
      - Metrics, logs, traces
    * - :ref:`loadbalancing-exporter` (``loadbalancing``)
-     - Exports spans, metrics and logs depending on the ``routing_key`` configured.
+     - Exports metrics, logs, and traces to different back-ends.
      - Metrics, logs, traces
    * - :ref:`logging-exporter` (``logging``)
      - Exports data to the console. By default, ``logging`` doesn't send its output to Windows Event Viewer. Run the Splunk Distribution of OpenTelemetry Collector directly from the PowerShell terminal to send output to the Windows Event Viewer.
@@ -321,13 +331,37 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the com
    * - :ref:`kubernetes-observer-extension` (``k8s_observer``)
      - Uses the Kubernetes API to discover pods running on the local node. See :ref:`receiver-creator-receiver` for more information.
    * - :ref:`memory-ballast-extension` (``memory_ballast``)
-     - Configures the memory ballast for the Collector process, either as a size in megabytes or as a size expressed as a percentage of the total memory. Sufficient ballast enhances the stability of Collector deployments.
+     - ``memory_ballast`` is deprecated. If you're using this extension, see :ref:`how to update your configuration <collector-upgrade-memory-ballast>`
    * - :ref:`pprof-extension` (``pprof``)
      - Activates the golang ``net/http/pprof`` endpoint, which is used to collect performance profiles and investigate issues with a service.
    * - :ref:`smartagent-extension` (``smartagent``) 
      - Provides a mechanism to set configuration options that are applicable to all instances of the Smart Agent receiver. Allows to migrate your existing Smart Agent configuration to the Splunk Distribution of OpenTelemetry Collector. 
    * - :ref:`zpages-extension` (``zpages``) 
      - Activates an extension that serves zPages, an HTTP endpoint that provides live data for debugging different components.
+
+.. _collector-components-connectors:
+
+.. raw:: html
+
+  <embed>
+    <h2>Connectors<a name="collector-components-connectors" class="headerlink" href="#collector-components-connectors" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
+A connector connects different pipelines and helps you send telemetry data between them. A connector acts as an exporter to one pipeline and a receiver to another. 
+
+Each pipeline in the OpenTelemetry Collector acts on one type of telemetry data. If you need to process one form of telemetry data into another one, route the data accordingly to its proper collector pipeline.
+
+.. list-table::
+   :widths: 25 55 20
+   :header-rows: 1
+   :width: 100%
+
+   * - Name
+     - Description
+     - Pipeline types
+   * - :ref:`span-metrics-connector` (``spanmetrics``)
+     - Aggregates Request, Error and Duration (R.E.D) OpenTelemetry metrics from span data.
+     - Traces, metrics
 
 .. raw:: html
 

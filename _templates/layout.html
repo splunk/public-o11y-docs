@@ -148,6 +148,10 @@
         <!-- feedback form content -->
       <div class="signalfxmodal-content">
       <h2 style="font-size:21px;font-family: 'Open Sans'; font-weight: bold;">Was this topic useful?</h2>
+         <div class="admonition note">
+         <p class="admonition-title"></p>
+         Did you know that you can edit this page? <a href="https://docs.splunk.com/Observability/get-started/contribute.html">Learn how!</a>
+         </div>
           <p>
                                   Was this documentation topic helpful?
                                   <select id="signalfx_splunk_feedback_yesno" onchange="help_decission(this.value);">
@@ -161,7 +165,7 @@
                                   Please specify the reason
                                   <select id="signalfx_splunk_feedback_no_reasonlist">
                                     <option value="">Please select</option>
-                                    <option	value="didnt_answer">The topic did not answer my question(s)</option>
+                                    <option	value="didnt_answer">The topic did not answer my questions</option>
                                     <option value="found_error">I found an error</option>
                                     <option value="didnt_like">I did not like the topic organization</option>
                                     <option value="other">Other</option>
@@ -176,25 +180,29 @@
                                 </p>
 
                                 <textarea name="signalfx_splunk_feedback_comment" placeholder='' class="form-control signalfx-feedback-comment" id="signalfx_splunk_feedback_comment" rows="5" maxlength="1000" required></textarea>
-                                <div id="commenttxt" style="font-size: 9px;color: grey;">Comment should have minimum 5 characters and maximum of 1000 characters.</div>
+                                <div id="commenttxt" style="font-size: 9px;color: grey;">Comment should have a minimum of 5 characters and a maximum of 1,000 characters.</div>
                                 <br>
                                 <div id="captcha_element"></div>
                                 <p></p><p class="button-set-submit">
                                 <a style="float:right;" class="fbbtn" type="button" id="signalfx_splunk_feedback_submit" name="signalfx_submit" onclick="submit_feedback()">Submit</a>
                                 </p>
         </div>
-        <p id="splunk_oly_helpful_completed" class="well">    
+        <div id="splunk_oly_helpful_completed" class="well">    
           <em>Feedback submitted, thanks!</em>
-        </p>
+          <div class="admonition note">
+            <p class="admonition-title"></p>
+            Did you know that you can edit this page? <a href="https://docs.splunk.com/Observability/get-started/contribute.html">Learn how!</a>
+            </div>
+         </div>
         </div>
       </div>
       <div id="sticky-right-nav">
-        <div class="right-nav" style="margin-top: 0px; position: fixed; display: inline-block; padding-left: 10px; padding-right: 10px; overflow: scroll;word-break: break-word; height: calc(100% - 100px); margin-bottom: 200px">
+          <div class="right-nav" style="max-width:23%;width:23%;right:0;margin-top:0px; position: fixed; display: inline-block; padding-left: 10px; padding-right: 10px; overflow: scroll;word-break: break-word; height: calc(100% - 100px); margin-bottom: 200px">
 
-          <ul id="rightSideTOC" class="list-unstyled" style="margin-bottom: 150px;">
+              <ul id="rightSideTOC" class="list-unstyled" style="margin-bottom: 150px;">
 
-          </ul>
-        </div>
+              </ul>
+          </div>
       </div>
 {%- endblock %}
  <div id="mainTOC">

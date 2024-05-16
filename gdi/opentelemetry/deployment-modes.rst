@@ -9,22 +9,14 @@ Collector deployment modes
 
 The Collector has two deployment modes: :ref:`host monitoring (agent) mode <collector-agent-mode>`, and :ref:`data forwarding (gateway) mode <collector-gateway-mode>`.
 
+.. note:: See also the official OpenTelemetry project docs at :new-page:`Deployment: Patterns you can apply to deploy the OpenTelemetry Collector <https://opentelemetry.io/docs/collector/deployment/>`.
+
 .. _collector-agent-mode:
 
 Host monitoring (agent) mode  
 ======================================================================
 
-In host monitoring (agent) mode, the Collector runs with the application or on the same host as the application, and sends data directly to Splunk Observability Cloud. 
-
-Use the host monitoring (agent) mode when you want to do these things:
-
-* Configure instrumentation. Host monitoring (agent) mode offloads responsibilities from the application including batching, queuing, and retrying.
-* Collect host and application metrics, as well as host and application metadata enrichment for metrics, spans, and logs.
-
-Standalone host monitoring (agent) mode 
---------------------------------------------------------------------
-
-If deployed as a standalone agent, the Splunk Distribution of OpenTelemetry Collector is the only component deployed and configured. 
+In host monitoring (agent) mode, the Collector runs with the application or on the same host as the application, and sends data directly to Splunk Observability Cloud. If deployed as a standalone agent, the Splunk Distribution of the OpenTelemetry Collector is the only component deployed and configured. 
 
 The following image shows the architecture for the standalone mode:
 
@@ -39,14 +31,34 @@ The default configurations for the :ref:`Linux installer script <otel-install-li
 The architecure looks as follows:
 
 .. image:: /_images/gdi/splunk-otel-collector-recommended-arch.png
-   :alt: This image shows the architecture for Helm chart and installer script deployments. 
+   :alt: This image shows the architecture for Helm chart and installer script deployments.    
+
+When to use host monitoring (agent) mode
+-------------------------------------------------------------------------------
+
+Use the host monitoring (agent) mode when you want to do these things:
+
+* Configure instrumentation. Host monitoring (agent) mode offloads responsibilities from the application including batching, queuing, and retrying.
+* Collect host and application metrics, as well as host and application metadata enrichment for metrics, spans, and logs.
 
 .. _collector-gateway-mode:
 
 Data forwarding (gateway) mode
 ======================================================================
 
-Use this mode when one or more Collectors are running as a standalone service, for example in containers. Data forwarding (gateway) mode is typically deployed per cluster, data center, or region. 
+Data forwarding (gateway) mode is typically deployed per cluster, data center, or region. The Collector in gateway mode collects data from one or more Collectors running in standalone agent mode and sends it to Splunk Observability Cloud. 
+
+For the default gateway config file see :new-page:`data forwarding (gateway) mode configuration in GitHub <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/gateway_config.yaml>`.
+
+The following image shows the architecture for the data forwarding (gateway) mode:
+
+.. image:: /_images/gdi/splunk-otel-collector-recommended-gateway-arch.png
+   :alt: This image shows the architecture for the advanced mode.    
+
+.. note:: To forward metrics and metadata in data forwarding (gateway) mode, see :ref:`collector-gateway-metrics-issue`.
+
+When to use data forwarding (gateway) mode
+-------------------------------------------------------------------------------
 
 Use data forwarding (gateway) mode when you want to do one of the following:
 
@@ -54,15 +66,6 @@ Use data forwarding (gateway) mode when you want to do one of the following:
 * Configure an increased wait interval for retry attempts.
 * Limit the number of egress points required to send data.
 * Consolidate API token management. See more in :ref:`collector-gateway-mode-tokens`.
-
-See :new-page:`data forwarding (gateway) mode configuration <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/gateway_config.yaml>` for the default configuration file.
-
-.. note:: To forward metrics and metadata in data forwarding (gateway) mode, see :ref:`collector-gateway-metrics-issue`.
-
-The following image shows the architecture for the data forwarding (gateway) mode:
-
-.. image:: /_images/gdi/splunk-otel-collector-recommended-gateway-arch.png
-   :alt: This image shows the architecture for the advanced mode.    
 
 .. _collector-gateway-mode-tokens:
 
@@ -133,16 +136,17 @@ You can find the different Helm charts in Github:
 Send data from an agent Collector to a gateway Collector
 ======================================================================
 
-When running as an agent, you can also manually configure the Collector to send data to a Splunk Distribution of OpenTelemetry Collector gateway instance or cluster. This requires changing the :ref:`pipeline exporters <otel-data-processing>` in the agent to point to the gateway.
+You can manually configure a host monitoring (agent) Collector to send data to a Splunk Distribution of OpenTelemetry Collector gateway instance or cluster. This requires changing the :ref:`pipeline exporters <otel-data-processing>` in the agent to point to the gateway.
 
 To configure the Collector to send data to the another Collector in data forwarding (gateway) mode, see these configurations:
 
 Agent configuration
 ----------------------------------
 
-Change the following sections of the :new-page:`host monitoring (agent) mode configuration file <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml>`:
+In the :new-page:`host monitoring (agent) mode configuration file <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml>`, update the ``SPLUNK_GATEWAY_URL`` environment variable to the URL of the gateway.
 
-* Update the ``SPLUNK_GATEWAY_URL`` environment variable to the URL of the gateway.
+You might also need to check the following:
+
 * Update the ``SPLUNK_API_URL`` environment variable to the URL of the gateway, specifying the ingress port, which is ``6060`` by default.
 * Update the ``SPLUNK_INGEST_URL`` environment variable to the URL of the gateway, specifying the ingress port, which is ``9943`` by default.
 * Make sure that metrics, traces, and logs pipelines send data to the appropriate receivers on the gateway.
@@ -151,10 +155,9 @@ To activate trace correlation, use the ``signalfx`` exporter in the traces pipel
 
 .. note:: If you are using the ``otlp`` exporter for metrics, the ``hostmetrics`` aggregation takes place in the gateway.
 
-The following example shows how to configure the Collector in host monitoring (agent) mode when sending data to a gateway:
+The following example shows how to configure the Collector in host monitoring (agent) mode to send data to a gateway Collector:
 
 .. code-block:: yaml
-
 
    receivers:
       hostmetrics:
@@ -182,7 +185,8 @@ The following example shows how to configure the Collector in host monitoring (a
       # Traces
       otlp:
          endpoint: "${SPLUNK_GATEWAY_URL}:4317"
-         insecure: true
+         tls:
+            insecure: true
       # Metrics, events, and APM correlation calls
       signalfx:
          access_token: "${SPLUNK_ACCESS_TOKEN}"
@@ -190,6 +194,9 @@ The following example shows how to configure the Collector in host monitoring (a
          ingest_url: "http://${SPLUNK_GATEWAY_URL}:9943"
          sync_host_metadata: true
          correlation:
+      # Logs
+      otlp:
+         endpoint: "${SPLUNK_GATEWAY_URL}:4317"         
    # More exporters
 
    service:
@@ -207,8 +214,11 @@ The following example shows how to configure the Collector in host monitoring (a
             receivers: [prometheus/internal]
             processors: [memory_limiter, batch, resourcedetection]
             exporters: [signalfx]
+         logs:   
+            receivers: [otlp]
+            processors: [memory_limiter, batch, resourcedetection]
+            exporters: [otlp]
       # More pipelines
-
 
 Gateway configuration
 ----------------------------------
@@ -222,7 +232,6 @@ Change the following sections of the :new-page:`data forwarding (gateway) mode c
 To set the Collector in data forwarding (gateway) mode to receiving data from an agent, use the following configuration:
 
 .. code-block:: yaml
-
 
    extensions:
       http_forwarder:
@@ -239,7 +248,7 @@ To set the Collector in data forwarding (gateway) mode to receiving data from an
    # More receivers
 
    exporters:
-      # Traces
+      # Traces (Agent)
       sapm:
          access_token: "${SPLUNK_ACCESS_TOKEN}"
          endpoint: "https://ingest.${SPLUNK_REALM}.signalfx.com/v2/trace"

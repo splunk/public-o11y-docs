@@ -2,7 +2,7 @@
 .. _aws-wizard-metricstreams:
 
 *********************************************************************
-Connect to AWS with Metric Streams from the Splunk console
+Connect to AWS with Splunk-managed Metric Streams 
 *********************************************************************
 
 .. meta::
@@ -30,8 +30,8 @@ To access the guided setup for the AWS integration, perform the following steps:
 #. Open the :new-page:`Amazon Web Services guided setup <https://login.signalfx.com/#/gdi/aws?category=all>`. Optionally, you can navigate to the guided setup on your own:
 
   - On the navigation menu, select :menuselection:`Data Management`. 
-  - Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
-  - On the Integrate Your Data page, select the tile for :strong:`Amazon Web Services`.
+  - Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
+  - Select the tile for :strong:`Amazon Web Services`.
 
 Next, follow the steps provided in the guided setup:
 
@@ -57,11 +57,15 @@ In this step you need to choose the following connection options:
 
 In the CloudWatch metrics option, select :guilabel:`Streaming (Splunk-managed)` as the ingestion method. 
 
-When you activate Metric Streams:
+When you activate Metric Streams, make sure you :ref:`add these additional permissions <metricstreams_iampolicy>` to your IAM policy. 
 
-* Make sure you :ref:`add these additional permissions <metricstreams_iampolicy>` to your IAM policy. 
-* Update your settings and deploy a CloudFormation template in order to create Kinesis Firehose. See :ref:`aws-cloudformation`.
-* You can also deploy Kinesis Firehose with Terraform. See :new-page:`Terraform Setup for Creating Kinesis Firehose to Send CloudWatch Metric Stream <https://github.com/signalfx/aws-terraform-templates/tree/main>`.
+Kinesis Firehose connection options
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To create Kinesis Firehose and other resources required to connect to AWS using Splunk-managed Metric Streams you can use one of these two options: 
+
+* CloudFormation template. Learn more at :ref:`aws-cloudformation-use`.
+* Terraform template. Learn more at :ref:`aws-terraform-use`. The provided Terraform template supports Metric Streams only, and does not offer log support.
 
 .. _aws-wizard-prepare-ms:
 

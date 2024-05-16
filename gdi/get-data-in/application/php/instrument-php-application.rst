@@ -20,7 +20,7 @@ To generate all the basic installation commands for your environment and applica
 #. Open the :new-page:`PHP OpenTelemetry guided setup <https://login.signalfx.com/#/gdi/scripted/php-dotnet-tracing/>`. Optionally, you can navigate to the guided setup on your own:
 
    #. In the navigation menu, select :menuselection:`Data Management`.
-   #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+   #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
    #. In the integration filter menu, select :guilabel:`By Product`.
    #. Select the :guilabel:`APM` product.
    #. Select the :guilabel:`PHP (OpenTelemetry)` tile to open the PHP OpenTelemetry guided setup.
@@ -36,17 +36,32 @@ If you don't use the guided setup, follow these steps to manually install and au
 
 2. Install the OpenTelemetry PHP extension using PECL in the command line:
 
-   .. code-block:: bash
+   .. tabs::
 
-      sudo apt-get install gcc make autoconf
-      pecl install opentelemetry
+      .. code-tab:: shell Linux
+
+         sudo apt-get install gcc make autoconf
+         pecl install opentelemetry
+
+      .. tab:: Windows
+
+         Download the precompiled DLL file from the :new-page:`releases page <https://github.com/open-telemetry/opentelemetry-php-instrumentation/releases/latest>` on GitHub.
+
+         Make sure to place the DLL in your extensions's directory, as defined by the value of ``extension_dir`` in your php.ini file.
 
 3. Add the extension to your php.ini file:
 
-   .. code-block:: ini
+   .. tabs::
 
-      [opentelemetry]
-      extension=opentelemetry.so
+      .. code-tab:: ini Linux
+
+         [opentelemetry]
+         extension=opentelemetry.so
+
+      .. code-tab:: ini Windows
+
+         [opentelemetry]
+         extension=php_opentelemetry.dll
 
 4. Install the required instrumentations you need using Composer:
 
@@ -69,6 +84,19 @@ If you don't use the guided setup, follow these steps to manually install and au
 
    See the :new-page:`OpenTelemetry PHP examples <https://github.com/signalfx/tracing-examples/tree/main/opentelemetry-tracing/opentelemetry-php>` in GitHub for sample instrumentation scenarios.
 
+To configure the instrumentation, see :ref:`php-settings-otel`.
+
+.. _activate_rum_apm_php:
+
+Connect RUM to APM through server trace data
+===================================================================
+
+To connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data, add the OpenTelemetry server timing propagator as a dependency:
+
+.. code-block:: shell
+
+   php composer.phar install open-telemetry/opentelemetry-propagation-server-timing:^0.0.2
+
 
 .. _export-directly-to-olly-cloud-php-otel:
 
@@ -88,3 +116,30 @@ To obtain an access token, see :ref:`admin-api-access-tokens`.
 
 To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
+.. _php-settings-otel:
+
+Instrumentation settings
+=========================================================================
+
+You can configure the OpenTelemetry PHP extension using the following settings.
+
+General settings
+------------------------
+
+.. raw:: html
+
+    <div class="instrumentation" section="settings" group="category" filter="general" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/opentelemetry-php-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
+
+Exporter settings
+------------------------
+
+.. raw:: html
+
+    <div class="instrumentation" section="settings" group="category" filter="exporter" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/opentelemetry-php-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>
+
+Instrumentation settings
+------------------------
+
+.. raw:: html
+
+    <div class="instrumentation" section="settings" group="category" filter="instrumentation" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/opentelemetry-php-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type"}'></div>

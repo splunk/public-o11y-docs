@@ -9,6 +9,13 @@ OpenTelemetry PHP instrumentation compatibility and requirements
 
 .. include:: /_includes/requirements/php.rst
 
+Dependencies
+---------------
+
+.. raw:: html
+
+    <div class="instrumentation" section="dependencies" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/opentelemetry-php-metadata.yaml" data-renaming='{"name": "Dependency", "source_href": "Link to source", "version": "Version", "stability": "Stability"}'></div>
+
 .. _php-otel-connector-requirement:
 
 Install and configure the Splunk Distribution of OpenTelemetry Collector
@@ -27,45 +34,6 @@ Supported libraries and frameworks
 
 The OpenTelemetry instrumentation supports the following libraries:
 
-.. list-table::
-   :widths: 60 40
-   :width: 100%
-   :header-rows: 1
+.. raw:: html
 
-   * - Library
-     - Version
-   * - CodeIgniter
-     - 4.0 and higher
-   * - ExtAmqp
-     - All supported PHP versions
-   * - Guzzle
-     - 7.0 and higher
-   * - HttpAsyncClient
-     - 2.x
-   * - IO
-     - All supported PHP versions
-   * - Laravel
-     - 6.0 and higher
-   * - MongoDB
-     - 1.15.x
-   * - OpenAIPHP
-     - All supported PHP versions
-   * - PDO
-     - All supported PHP versions
-   * - PSR-3 (Logging Interface)
-     - 1.0 and higher
-   * - PSR-14 (Event Dispatcher)
-     - 1.0 and higher
-   * - PSR-15 (HTTP Server Request Handlers)
-     - 1.0 and higher
-   * - PSR-18 (HTTP Client)
-     - 1.0 and higher
-   * - Slim
-     - 4.x
-   * - Symfony
-     - 5.4 and higher
-   * - Wordpress
-     - All supported PHP versions
-   * - Yii
-     - 2.0.13
-
+    <div class="instrumentation" section="instrumentations" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/opentelemetry-php-metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "stability": "Stability", "support": "Support", "instrumented_components": "Components", "signals": "Signals", "source_href": "Source", "settings": "Settings", "dependencies": "Dependencies", "supported_versions": "Supported versions", "name": "Name", "package_href": "Package URL", "version": "Version", "instrument": "Type", "metric_name": "Metric name", "metrics": "Metrics"}'></div>

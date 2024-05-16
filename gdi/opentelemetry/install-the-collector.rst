@@ -115,7 +115,7 @@ Use these configurations to change the default settings in each Collector packag
 * :ref:`otel-linux-config`
 * :ref:`otel-windows-config`
 
-.. note:: Splunk Observability Cloud offers several options for no-hassle, zero-config Auto Instrumentation. Learn more at :ref:`Splunk OpenTelemetry Zero Configuration Auto Instrumentation <zero-config>`.
+.. note:: Splunk Observability Cloud offers several options for no-hassle automatic discovery and configuraiton. Learn more at :ref:`discovery_mode`.
 
 .. _otel-config-multiple-files:
 

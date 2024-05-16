@@ -81,7 +81,6 @@ div.body {
         right: 270px;
 }
 
-
 }
 
 @media screen and (max-width: 767px) {
@@ -312,4 +311,34 @@ a.external:not(.image-reference):after {
 
 .relations{
     display: none !important;
+}
+
+.logo-span{
+    display: block;
+    width: 152px;
+    height: 79px;
+    margin-bottom: -57px;
+    margin-left: -12px;
+    margin-top: -41px;
+}
+
+.logoimage{
+    position: absolute;
+    left: 15px !important;
+    top: 3px !important;
+    width: 114px !important;
+}
+
+.uppercased:first-letter {text-transform: uppercase}
+
+ul li p {
+   margin-bottom: 0px !important;
+}
+
+ol li p {
+   margin-bottom: 0px !important;
+}
+
+dt {
+   font-weight: 500 !important;
 }

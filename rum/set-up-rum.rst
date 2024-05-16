@@ -42,6 +42,8 @@ Follow these steps to instrument your application:
 .. note::
     RUM access tokens are publicly visible in the client-side code. 
 
+.. _rum-check-mobile-data:
+
 Check that your data is coming in 
 =================================
 

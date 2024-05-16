@@ -35,10 +35,18 @@ Splunk Observability Cloud data comes enriched with additional metadata:
     - APM metric, Collector metric, span
     - Key-value pair
 
+.. _metadata-resources:
+
+Find, edit, and link your metadata
+=================================================================================
+
+See the following resources to learn how to find, edit, and link your metadata:
+
 * To find and edit your metadata, use the Metadata Catalogue. Learn more at :ref:`metrics-finder-and-metadata-catalog`. 
 * To link metadata to other resources, see how in :ref:`link-metadata-to-content`.
+* To add metadata to your metrics, see :ref:`metrics-finder-and-metadata-catalog`. You can also use the API to add metadata. See how in :new-page:`the Splunk developer documentation <https://dev.splunk.com/observability/reference/api/metrics_metadata/latest#endpoint-update-dimension-metadata>`.
 
-For more tools to leverage your data, see:
+For more tools to leverage your data, see the following:
 
 * :ref:`data-visualization-charts` 
 * :ref:`view-alerts`
@@ -202,29 +210,45 @@ Dimensions and custom properties are similar in that they are both key-value pai
 
 Due to these differences, use dimensions in the following situations:
 
-  * When you need the metadata to define a unique MTS.
+  * When you need the metadata to define a unique MTS. See :ref:`metadata-example-1`.
+  * When you want to keep track of historical values for your metadata. See :ref:`metadata-example-2`.
 
-     **Example:** You send in a metric called ``cpu.utilization`` from two data centers. Within each data center, you have 10 servers with unique names represented by these key-value pairs: ``host:server1``, ``host:server2``,..., ``host:server10``. However, your server names are only unique within a data center and not within your whole environment. You want to add more metadata for your data centers, ``dc:west`` and ``dc:east``, to help with the distinction. In this case, you need send metadata about the hosts and the data centers as dimensions because you know before ingesting that you want a separate MTS for every host in your environment.
+.. _metadata-example-1:
 
-  * When you want to keep track of historical values for your metadata.
+Example: Sending the same metric from multiple data centers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-      **Example:** You collect a metric called ``latency`` to measure the latency of requests made to your application. You already have a dimension for customers, but you also want to track the improvement between versions 1.0 and 2.0 of your application. In this case, you need to make ``version:1.0`` and ``version:2.0`` dimensions. If you make ``version:1.0`` a custom property, then change it to ``version:2.0`` when you release a new version of your application, you lose all the historical values for the ``latency`` MTS defined by ``version:1.0``.
+Suppose you send in a metric called ``cpu.utilization`` from two data centers. Within each data center, you have 10 servers with unique names represented by these key-value pairs: ``host:server1``, ``host:server2``,..., ``host:server10``. However, your server names are only unique within a data center and not within your whole environment. You want to add more metadata for your data centers, ``dc:west`` and ``dc:east``, to help with the distinction. In this case, you need send metadata about the hosts and the data centers as dimensions because you know before ingesting that you want a separate MTS for every host in your environment.
+
+.. _metadata-example-2:
+
+Example: Tracking and comparing historical values
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Suppose you collect a metric called ``latency`` to measure the latency of requests made to your application. You already have a dimension for customers, but you also want to track the improvement between versions 1.0 and 2.0 of your application. In this case, you need to make ``version:1.0`` and ``version:2.0`` dimensions. If you make ``version:1.0`` a custom property, then change it to ``version:2.0`` when you release a new version of your application, you lose all the historical values for the ``latency`` MTS defined by ``version:1.0``.
 
 Use custom properties in the following situations:
 
   * When you have metadata that provides additional context for your metrics, but you don't want that metadata to create another uniquely identifiable MTS. 
   * When you have metadata you know you want to make changes to in the future.
 
-      **Example:** You collect a metric called ``service.errors`` to know when your customers are running into issues with your services. The MTS for this metric are already uniquely identifiable by the customer and service dimensions. You want to attach the escalation contacts for each service for every customer to your metrics. In this case, you assign the escalation contacts as custom properties to the specific service dimension or customer dimensions. As your team grows and goes through reorganization, you want to be able to change this metadata. You also don't need the escalation contacts as dimensions as the customer and service dimensions already yield separate MTS.
+Example: Adding context without creating more MTS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Suppose you collect a metric called ``service.errors`` to know when your customers are running into issues with your services. The MTS for this metric are already uniquely identifiable by the customer and service dimensions. You want to attach the escalation contacts for each service for every customer to your metrics. In this case, you assign the escalation contacts as custom properties to the specific service dimension or customer dimensions. As your team grows and goes through reorganization, you want to be able to change this metadata. You also don't need the escalation contacts as dimensions as the customer and service dimensions already yield separate MTS.
 
 Use Infrastructure Monitoring tags
 ----------------------------------------
 
 In Infrastructure Monitoring, use tags when there is a one-to-many relationship between the tag and the objects you are assigning it to. 
 
-For example:
+Example: Canary testing
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* You do canary testing in your environment. When you do a canary deployment, you use the ``canary`` tag to mark the hosts that received the new code, so you can identify their metrics and compare their performance to those hosts that didn't receive the new code. You don't need a key-value pair as there's only a single value, ``canary``.
+Suppose you do canary testing in your environment. When you create a canary deployment, you can use the ``canary`` tag to mark the hosts that received the new code, so you can identify their metrics and compare their performance to those hosts that didn't receive the new code. You don't need a key-value pair as there's only a single value, ``canary``.
 
-* You have hosts that run multiple apps in your environment. To identify the apps that a particular host is running, you create a tag for each app, then apply one or more of these tags to the ``host:<name>`` dimension to specify the apps that are running on each host.
+Example: Host running multiple applications
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Suppose you have hosts that run multiple applications in your environment. To identify the apps that a particular host is running, create a tag for each app, then apply one or more of these tags to the ``host:<name>`` dimension to specify the apps that are running on each host.
 

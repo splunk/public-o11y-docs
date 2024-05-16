@@ -23,7 +23,8 @@ To learn more, see :new-page-ref:`admin-manage-users`.
    yet been added as an organization user.
 
 #. Log in to Splunk Observability Cloud.
-#. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+#. In the left navigation menu, select :menuselection:`Data Management`. 
+#. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 #. In the integration filter menu, select :guilabel:`All`.
 #. In the :guilabel:`Search` field, search for :guilabel:`Google Sign-In`.
 #. Select the :guilabel:`Google Sign-In` tile to open the Google Sign-In page.
@@ -43,7 +44,7 @@ To remove a Google domain's login access:
 
 #. Log in to Splunk Observability Cloud.
 #. In the left navigation menu, select :menuselection:`Data Management`. 
-#. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+#. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 #. In the integration filter menu, select :guilabel:`All`.
 #. In the :guilabel:`Search` field, search for :guilabel:`Google Sign-In`.
 #. Select the :guilabel:`Google Sign-In` tile to open the Google Sign-In page.

@@ -100,7 +100,6 @@ Data point dropping metrics
    * - ``sf.org.numDatapointsDroppedBatchSizeByToken``
      - One value per token, number of data points dropped because a single request contained more than 100,000 data points. In this scenario, Observability Cloud drops data points because it perceives sending more than 100,000 data points in a single request as excessive.
   
-  
 
 Data point retention metrics
 ----------------------------------------

@@ -206,6 +206,12 @@ Use one the following methods to load and initialize the Browser RUM agent, in o
 
 If you defer the loading of the Browser RUM agent, make sure other scripts are also deferred to preserve the initialization order. Note that asynchronously loaded scripts are not supported.
 
+Set up Session Replay
+================================================
+
+With Session Replay you can replay a session to take a look at exactly what the user experienced and make informed decisions about what to do next.
+
+See :ref:`rum-session-replay` for instructions on how to set up and configure Session Replay.
 
 .. _modify-spans:
 
@@ -276,7 +282,7 @@ If your application uses Content Security Policy (CSP) to mitigate potential imp
 
 - When using the CDN version of the agent, allow the ``script-src cdn.signalfx.com`` URL.
 - When self-hosting or using the npm package, configure your site accordingly.
-- Add the host from the ``beaconEndpoint`` property to the ``connect-src`` property. For example: ``connect-src app.us1.signalfx.com``.
+- Add the host from the ``beaconEndpoint`` property to the ``connect-src`` property. For example: ``connect-src rum-ingest.us1.signalfx.com``.
 
 
 How to contribute

@@ -5,10 +5,10 @@
   :widths: 20,20,20,20,20
 
   * - :strong:`Permission`
-    - :strong:`Admin`
-    - :strong:`Power user`
-    - :strong:`Usage`
-    - :strong:`Read_only`
+    - :strong:`admin`
+    - :strong:`power`
+    - :strong:`usage`
+    - :strong:`read_only`
 
 
   * - :strong:`View alerts`
@@ -83,3 +83,15 @@
     - Yes
     - No
     - No
+
+  * - :strong:`Create, delete, and modify service level objectives (SLOs)`
+    - Yes
+    - Yes
+    - No
+    - No
+
+  * - :strong:`View service level objectives (SLOs)`
+    - Yes
+    - Yes
+    - Yes
+    - Yes

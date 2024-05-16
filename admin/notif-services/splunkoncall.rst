@@ -41,7 +41,7 @@ To get the service API endpoint URL in Splunk On-Call:
 
 #. Select the :strong:`3rd Party Integrations` tab.
 
-#. Select the :strong:`Splunk Observability Cloud Signal Monitoring` tile. The :strong:`Service API Endpoint` value displays.
+#. Select the :strong:`Splunk Observability Cloud System Monitoring` tile. The :strong:`Service API Endpoint` value displays.
 
    If you don't see an endpoint URL value, select :strong:`Enable Integration` to generate one.
 
@@ -74,7 +74,7 @@ To create a Splunk On-Call integration in Observability Cloud:
 
    #. In the left navigation menu, select :menuselection:`Data Management`.
 
-   #. Select :guilabel:`Add Integration`.
+   #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 
    #. In the integration filter menu, select :guilabel:`All`.
 

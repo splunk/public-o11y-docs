@@ -19,7 +19,7 @@ To generate all the basic installation commands for your environment and applica
 
    #. In the navigation menu, select :menuselection:`Data Management`. 
 
-   #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+   #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 
    #. In the integration filter menu, select :guilabel:`By Product`.
 
@@ -83,10 +83,9 @@ Follow these steps to instrument your application using the Go instrumentation:
 
          $env:OTEL_RESOURCE_ATTRIBUTES="service.version=<version>,deployment.environment=<environment>"
 
-#. Add the instrumentation using the ``distro`` package:
+#. Add the instrumentation using the ``distro`` package. The following example shows how to instrument a basic function.
 
    .. code-block:: go
-      :emphasize-lines: 5,9,15
 
       package main
 
@@ -119,10 +118,10 @@ If no data appears in APM, see :ref:`common-go-troubleshooting`.
 
 .. _kubernetes_go:
 
-Deploy the Go instrumentation in Kubernetes
+Deploy the Go instrumentation in Kubernetes or Azure
 --------------------------------------------------------------------
 
-To deploy the Go instrumentation in Kubernetes, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
+To deploy the Go instrumentation in Kubernetes or Azure, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
 
 The following example shows how to update a deployment to expose environment variables by adding the OTel configuration under the ``.spec.template.spec.containers.env`` section:
 
