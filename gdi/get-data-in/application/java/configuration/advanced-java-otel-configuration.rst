@@ -100,7 +100,7 @@ The following settings control trace exporters and their endpoints:
 
     <div class="instrumentation" section="settings" group="category" filter="exporter" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-java/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type", "property": "System property"}'></div>
 
-The Splunk Distribution of OpenTelemetry Java uses the OTLP gRPC span exporter by default. To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-java`.
+The Splunk Distribution of OpenTelemetry Java uses the OTLP http/protobuf span exporter by default. To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-java`.
 
 .. _profiling-configuration-java:
 

@@ -54,7 +54,7 @@ Defaults of the Splunk Distribution of OpenTelemetry Java
 The Splunk Distribution of OpenTelemetry Java has the following default settings for context propagation, exporters, and trace settings:
 
 - W3C tracecontext and W3C baggage context propagation is activated by default. See :ref:`advanced-java-otel-configuration`.
-- The OTLP gRPC exporter is configured by default to send spans to the local :ref:`Splunk OpenTelemetry
+- The OTLP exporter is configured by default to send spans to the local :ref:`Splunk OpenTelemetry
   Collector <otel-intro>`.
 - Unlimited defaults for trace configuration to support full-fidelity tracing. See :ref:`advanced-java-otel-configuration`.
 
