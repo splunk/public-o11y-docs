@@ -66,6 +66,11 @@ The following example shows how to instrument a function using instrumentationWr
 
 .. code-block:: ts
 
+   import { app, HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
+   import { trace, Span } from "@opentelemetry/api";
+
+   const tracer = trace.getTracer('splunk-example-azure', '0.1.0');
+
    export async function myhttptrigger(request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> {
       context.log(`Http function processed request for url "${request.url}"`);
 
