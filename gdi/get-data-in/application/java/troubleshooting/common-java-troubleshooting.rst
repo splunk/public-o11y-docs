@@ -131,8 +131,11 @@ If you see warnings about metrics in your logs, it might mean that the Java agen
 To troubleshoot connectivity issues affecting application metrics, try the following steps:
 
 1. Make sure that ``splunk.metrics.endpoint`` points to the correct host.
+
 2. Check that the OpenTelemetry Collector or Smart Agent instance is configured and running.
-3. Check that the OpenTelemetry Collector or Smart Agent are using the correct ports for the SignalFx receiver. The Collector uses ``http://<host>:4318``, and the Smart Agent uses ``http://<host>:9080/v2/datapoint``.
+
+3. Check that the OpenTelemetry Collector or Smart Agent are using the correct ports for the SignalFx receiver. The Collector uses ``http://<host>:4318/v2/datapoint``, and the Smart Agent uses ``http://<host>:9080/v2/datapoint``.
+
 4. Make sure that you're using a valid Splunk access token when sending data directly to your Splunk platform instance. See :ref:`admin-api-access-tokens`.
 
 

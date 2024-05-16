@@ -34,7 +34,7 @@ Back in Observability Cloud:
     
       #. In the left navigation menu, select :menuselection:`Data Management`.
    
-      #. Select :guilabel:`Add Integration`.
+      #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
    
       #. In the integration filter menu, select :guilabel:`All`.
     

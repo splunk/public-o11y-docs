@@ -50,9 +50,9 @@ To create a new ADFS integration in Observability Cloud:
 #. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`ADFS guided setup <https://login.signalfx.com/#/integrations/adfs/description>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the left navigation menu, select :menuselection:`Data Management`.
-
-   #. Select :guilabel:`Add Integration`.
+   #. In the left navigation menu, select :menuselection:`Data Management`. 
+   
+   #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 
    #. In the integration filter menu, select :guilabel:`All`.
 
@@ -69,10 +69,10 @@ To create a new ADFS integration in Observability Cloud:
 
 .. _add-adfs-relying-party:
 
-Add Observability Cloud to ADFS
+Add Splunk Observability Cloud to ADFS
 ------------------------------------------------------------------
 
-Add Observability Cloud as a relying party in ADFS:
+Add Splunk Observability Cloud as a relying party in ADFS:
 
 #. In separate browser tab or window, log in to the ADFS server and open the ADFS management console.
 #. In the console, right-click on :guilabel:`Relying Party Trusts`, select
@@ -162,10 +162,10 @@ Add Observability Cloud as a relying party in ADFS:
 
 .. _obtain-adfs-cert:
 
-Obtain ADFS certificate to install to Observability Cloud
+Obtain ADFS certificate to install to Splunk Observability Cloud
 -------------------------------------------------------------------------
 
-Obtain an ADFS certificate to install to Observability Cloud:
+Obtain an ADFS certificate to install to Splunk Observability Cloud:
 
 #. In the ADFS management console, select :guilabel:`Service`, then select :guilabel:`Certificates`.
 #. From the :guilabel:`Token-signing` list, right-click the certificate, then select :menuselection:`View Certificate`.
@@ -180,7 +180,7 @@ Obtain an ADFS certificate to install to Observability Cloud:
 
 .. _obtain-adfs-metadata:
 
-Obtain federation metadata file to install to Observability Cloud
+Obtain federation metadata file to install to Splunk Observability Cloud
 ---------------------------------------------------------------------------------
 
 Obtain a federation metadata file to install to Observability Cloud:

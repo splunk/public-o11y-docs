@@ -9,7 +9,7 @@ Get histogram data into Splunk Observability Cloud
 
 You can collect histogram data using a variety of receivers, including the Prometheus receiver, and send them to Splunk Observability Cloud using the OpenTelemetry Collector. See :ref:`Prometheus receiver <prometheus-receiver>`.
 
-The Splunk Distribution of OpenTelemetry Collector supports explicit-bucket histogram metrics. You can send histogram metric using the OTLP exporter or, starting from version 0.98, through the SignalFx exporter.
+The Splunk Distribution of OpenTelemetry Collector supports explicit-bucket histogram metrics. You can send histogram metric using the OTLP exporter or, starting from version 0.98, through the :ref:`signalfx-exporter`.
 
 .. include:: /_includes/gdi/histograms.rst
 

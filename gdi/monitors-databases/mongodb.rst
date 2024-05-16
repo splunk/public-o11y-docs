@@ -24,9 +24,14 @@ The plugin also captures the following DB-specific metrics:
 -  DB size
 -  DB counters
 
-This integration is only available on Kubernetes and Linux.
+Prerequisites
+----------------
 
-This integration requires MongoDB 2.6 or higher.
+The following applies:
+
+* This integration is only available on Kubernetes and Linux.
+* This integration requires MongoDB 2.6 or higher.
+* This integration is not supported for Splunk OTel Collector versions 0.99.0 or higher. Use the :ref:`mongodb-receiver` instead.
 
 Benefits
 --------
