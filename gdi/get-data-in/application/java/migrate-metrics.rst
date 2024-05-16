@@ -3,29 +3,32 @@
 .. _note-otel-migration-java:
 
 ***************************************************
-Migration guide for OpenTelemetry Java 2.0 metrics
+Migration guide for OpenTelemetry Java 2.x metrics
 ***************************************************
 
 .. meta::
-  :description: OpenTelemetry Java Instrumentation 2.x contains a set of breaking changes, introduced as part of recent OpenTelemetry HTTP semantic convention updates.
+  :description: Follow the steps in this guide to migrate to 2.x metrics and HTTP semantic conventions, and to convert your custom reporting elements to the new metrics format.
 
 OpenTelemetry Java Instrumentation 2.x contains a set of breaking changes, introduced as part of recent OpenTelemetry HTTP semantic convention updates. Versions 2.0 and higher of the Splunk Distribution of OpenTelemetry Java are fully compatible with the updated semantic conventions.
 
-Follow the steps in this guide to migrate to 2.0 metrics and HTTP semantic conventions, and convert your IMM, APM, and RUM custom reporting to the new metrics format.
+The following migration instructions assume the following:
+
+- You're sending Java application metrics using version 1.x of the Splunk Distribution of OpenTelemetry Java.
+- You've created custom dashboards, detectors, or alerts based on Java application metrics.
+
+Follow the steps in this guide to migrate to 2.x metrics and HTTP semantic conventions, and to convert your custom reporting elements to the new metrics format.
 
 .. note:: AlwaysOn Profiling metrics are not impacted by this change.
 
 Prerequisites
 =============================================
 
-The following instructions assume that you're sending Java application metrics using version 1.x of the Splunk Distribution of OpenTelemetry Java.
-
-To migrate from OpenTelemetry Java 1.x to OpenTelemetry Java 2.x, meet the following requirements:
+To migrate from OpenTelemetry Java 1.x to OpenTelemetry Java 2.x, you need the following:
 
 - Splunk Distribution of OpenTelemetry Collector version 0.98 or higher deployed
 - Administrator permissions in Splunk Observability Cloud. See :ref:`roles-table-phase`
 
-If you're already instrumenting your Java services using the Splunk Distribution of OpenTelemetry Java 1.x or the equivalent upstream instrumentation, you can already migrate to the version 2.0 and higher of the Java agent.
+If you're instrumenting your Java services using the Splunk Distribution of OpenTelemetry Java 1.x or the equivalent upstream instrumentation, you can already migrate to the version 2.0 and higher of the Java agent.
 
 .. include:: /_includes/requirements/java.rst
 
@@ -36,6 +39,10 @@ Use the Data Migration tool
 =======================================================
 
 Due to the changes in metric names, upgrading to Java OTel 2.x might break existing dashboards, detectors, and other features. To prevent sudden loss of access to custom reporting elements, use the Data Migration tool, which transforms and duplicates metric data in 1.x to the 2.x formats for a limited period of time at no additional cost.
+
+.. image:: /_images/gdi/datamigrationtool.png
+      :width: 90%
+      :alt: Data Migration tool running migration metrics rules for Java 2.x metrics
 
 To access the Data Migration tool:
 
@@ -60,7 +67,7 @@ Migration support is available for 12 months after the release of version 2.0 an
 
 .. _migrate-java-steps:
 
-Migrate to OTel Java 2.0
+Migrate to OTel Java 2.x
 ========================================
 
 To migrate your instrumentation to the version 2.0 or higher of the Java agent, follow these steps:
@@ -71,11 +78,13 @@ To migrate your instrumentation to the version 2.0 or higher of the Java agent, 
    - Select :guilabel:`Data Migration`.
    - Inside the :guilabel:`Start migration` card, select :guilabel:`Start`.
 
-2. Turn on OTLP histograms in the Splunk Distribution of OpenTelemetry Collector. See :ref:`enable-histograms-export`.
+2. Turn on OTLP histograms in the Splunk Distribution of OpenTelemetry Collector.
+
+   .. include:: /_includes/gdi/histograms.rst
 
 3. Make sure version 2.0 or higher of the Splunk Distribution of the Java agent is installed. See :ref:`upgrade-java-instrumentation`.
 
-4. If you defined a custom Collector endpoint for metrics, make sure to update the port to 4318 and use the correct property. For example:
+4. If you defined a custom Collector endpoint for metrics, make sure to update the port and use the correct property:
 
    .. code-block:: shell
 
@@ -89,15 +98,24 @@ To migrate your instrumentation to the version 2.0 or higher of the Java agent, 
 
       - For Splunk APM, see :ref:`migrate-apm-custom-reporting`.
 
-6. (Optional) Start using the new Java metrics 2.0 built-in dashboards. Built-in dashboard versions are available for Java service metrics representing metrics from versions 1.x and 2.x.
+6. (Optional) Start using the new Java metrics 2.x built-in dashboards. Built-in dashboard versions are available for Java service metrics representing metrics from versions 1.x and 2.x.
 
-7. When ready, you can turn off the migration:
+7. When ready, turn off the migration:
 
    - Go to :guilabel:`Settings`, :guilabel:`Data Configuration`.
    - Select :guilabel:`Data Migration`.
    - In the :guilabel:`Stop migration` card, select :guilabel:`Stop`.
 
 .. caution:: If you don't turn off the Data Migration stream for Java metrics after the grace period, the duplicated metrics are billed as custom metrics. See :ref:`java-metrics-grace-period`.
+
+Migration best practices
+--------------------------------------
+
+The following best practices can help you when initiating the migration process:
+
+- Familiarize yourself with the documentation and release notes.
+- Use a development or test environment.
+- Migrate production services gradually.
 
 .. _java-20-metric-names:
 
@@ -106,7 +124,7 @@ New metric names for version 2.0
 
 .. include:: /_includes/gdi/java-20-metrics-equivalences.rst
 
-For more information on OpenTelemetry semantic conventions, see OpenTelemetry semantic conventions.
+For more information on OpenTelemetry semantic conventions, see the OpenTelemetry semantic conventions.
 
 Troubleshooting
 ======================

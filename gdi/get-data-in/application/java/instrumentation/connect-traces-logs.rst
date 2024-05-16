@@ -5,9 +5,9 @@ Connect Java trace data with logs for Splunk Observability Cloud
 ****************************************************************
 
 .. meta::
-   :description: You can configure Java logging libraries to include tracing attributes provided automatically by the Splunk OTel Java agent. Use the trace metadata to correlate traces with log events.
+   :description: The agent from the Splunk Distribution of OpenTelemetry Java automtically annotates application logs with trace ID, span ID, and flags. The agent then sends the logs to Splunk Observability Cloud through the OpenTelemetry Collector.
 
-The agent from the Splunk Distribution of OpenTelemetry Java annotates application logs with trace ID, span ID, and flags by default. The agent then sends the logs to Splunk Observability Cloud through the OpenTelemetry Collector.
+The agent from the Splunk Distribution of OpenTelemetry Java automtically annotates application logs with trace ID, span ID, and flags. The agent then sends the logs to Splunk Observability Cloud through the OpenTelemetry Collector.
 
 You can configure your Java logging library to include additional attributes provided automatically by the Splunk OTel Java agent, like the version of your service or the deployment environment.
 
@@ -31,7 +31,7 @@ The ``java.util.logging`` library is fully supported in all JDK versions that ar
 
 .. _java-include-trace-data:
 
-Include trace metadata in log statements
+Trace metadata in log statements
 ===================================================
 
 The Splunk OTel Java agent provides the following attributes for logging libraries by default:
@@ -39,7 +39,12 @@ The Splunk OTel Java agent provides the following attributes for logging librari
 - Trace information: ``trace_id`` and ``span_id``
 - Trace flags
 
-In addition, you can inject resource attributes in your log statements, such as ``service.name`` and ``deployment.environment``. This requires defining the attributes you want to inject and configuring your logger.
+.. _inject-resource-attribs:
+
+Inject resource attributes
+==================================================
+
+You can inject resource attributes in your log statements, such as ``service.name`` and ``deployment.environment``. This requires defining the attributes you want to inject and configuring your logger manually.
 
 Define the resource attributes
 ---------------------------------------------------

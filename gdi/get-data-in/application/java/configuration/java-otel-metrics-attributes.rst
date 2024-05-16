@@ -11,13 +11,6 @@ The agent of the Splunk Distribution of OpenTelemetry Java collects the followin
 
 .. caution:: OpenTelemetry Java Instrumentation 2.x contains a set of breaking changes, introduced as part of recent OpenTelemetry HTTP semantic convention updates. To migrate, see :ref:`java-metrics-migration-guide`.
 
-.. _enable-otel-metrics:
-
-Activate metrics collection
-====================================================
-
-To collect Java application and Java Virtual Machine metrics, see :ref:`enable_automatic_metric_collection`.
-
 .. _java-otel-metrics:
 
 Application metrics
@@ -320,3 +313,9 @@ New metric names
 ======================================
 
 .. include:: /_includes/gdi/java-20-metrics-equivalences.rst
+
+
+Deactivate metrics export
+==================================
+
+To turn off logs export to Splunk Observability Cloud, set the ``OTEL_METRICS_EXPORTER`` environment variable or the ``otel.metrics.exporter`` system property to ``none``.
