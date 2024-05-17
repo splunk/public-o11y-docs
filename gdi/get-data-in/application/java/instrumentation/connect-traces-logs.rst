@@ -53,7 +53,7 @@ To turn off logs export to Splunk Observability Cloud, set the ``OTEL_LOGS_EXPOR
 Inject resource attributes
 ==================================================
 
-While the Java agent automatically generates and send logs through the Collector, you can still produce annotated logs using a compatible log library, so that logs can be collected manually or go through the Universal Forwarder. See :ref:`logs-intro-logconnect`.
+While the Java agent automatically generates and sends logs to Splunk through the Collector, you can still produce annotated logs using a compatible log library, so that logs can be collected manually or go through the Universal Forwarder. See :ref:`logs-intro-logconnect`.
 
 For example, you can inject resource attributes in your log statements, such as ``service.name`` and ``deployment.environment``. This requires defining the attributes you want to inject and configuring your logger manually.
 
