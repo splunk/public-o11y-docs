@@ -5,11 +5,11 @@ Connect Java trace data with logs for Splunk Observability Cloud
 ****************************************************************
 
 .. meta::
-   :description: The agent from the Splunk Distribution of OpenTelemetry Java automtically annotates application logs with trace ID, span ID, and flags. The agent then sends the logs to Splunk Observability Cloud through the OpenTelemetry Collector.
+   :description: The agent from the Splunk Distribution of OpenTelemetry Java automatically annotates application logs with trace ID, span ID, and flags. The agent then sends the logs to Splunk Observability Cloud through the Collector.
 
 The agent from the Splunk Distribution of OpenTelemetry Java automtically annotates application logs with trace ID, span ID, and flags. The agent then sends the logs to Splunk Observability Cloud through the OpenTelemetry Collector.
 
-You can configure your Java logging library to include additional attributes provided automatically by the Splunk OTel Java agent, like the version of your service or the deployment environment.
+If needed, you can configure your Java logging library to produce logs that include additional attributes provided automatically by the Splunk OTel Java agent, like the version of your service or the deployment environment.
 
 .. note::
 
@@ -34,17 +34,28 @@ The ``java.util.logging`` library is fully supported in all JDK versions that ar
 Trace metadata in log statements
 ===================================================
 
-The Splunk OTel Java agent provides the following attributes for logging libraries by default:
+The Splunk OTel Java agent automatically add the following attributes for logging libraries by default:
 
 - Trace information: ``trace_id`` and ``span_id``
 - Trace flags
+
+The Collector sends the annotated logs through the OTLP exporter.
+
+
+Deactivate logs export
+==================================
+
+To turn off logs export to Splunk Observability Cloud, set the ``OTEL_LOGS_EXPORTER`` environment variable or the ``otel.logs.exporter`` system property to ``none``.
+
 
 .. _inject-resource-attribs:
 
 Inject resource attributes
 ==================================================
 
-You can inject resource attributes in your log statements, such as ``service.name`` and ``deployment.environment``. This requires defining the attributes you want to inject and configuring your logger manually.
+While the Java agent automatically generates and send logs through the Collector, you can still produce annotated logs using a compatible log library, so that logs can be collected manually or go through the Universal Forwarder. See :ref:`logs-intro-logconnect`.
+
+For example, you can inject resource attributes in your log statements, such as ``service.name`` and ``deployment.environment``. This requires defining the attributes you want to inject and configuring your logger manually.
 
 Define the resource attributes
 ---------------------------------------------------
@@ -151,7 +162,3 @@ If you're instrumenting a serverless service or application, use environment var
 
       formatter.PATTERN.pattern=service=${OTEL_SERVICE_NAME}, env=${OTEL_ENV_NAME}
 
-Deactivate logs export
-==================================
-
-To turn off logs export to Splunk Observability Cloud, set the ``OTEL_LOGS_EXPORTER`` environment variable or the ``otel.logs.exporter`` system property to ``none``.
