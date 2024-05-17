@@ -1,4 +1,4 @@
-.. _splunk-otel-azure:
+.. _splunk-otel-dotnet-azure:
 
 ***********************************************************************
 Instrument .NET Azure functions for Splunk Observability Cloud
@@ -11,15 +11,15 @@ By instrumenting .NET Azure functions you can send spans to Splunk Observability
 
 To instrument your .NET Azure function with OpenTelemetry to send telemetry to Splunk Observability Cloud, follow these high-level steps:
 
-- :ref:`azure-functions-step-1`
-- :ref:`azure-functions-step-2`
-- :ref:`azure-functions-step-3`
-- :ref:`azure-functions-step-4`
-- :ref:`azure-functions-step-5`
+- :ref:`azure-functions-dotnet-step-1`
+- :ref:`azure-functions-dotnet-step-2`
+- :ref:`azure-functions-dotnet-step-3`
+- :ref:`azure-functions-dotnet-step-4`
+- :ref:`azure-functions-dotnet-step-5`
 
 .. note:: The SignalFx C# Azure Function wrapper is deprecated. Use the following method instrument your Azure functions.
 
-.. _azure-functions-step-1:
+.. _azure-functions-dotnet-step-1:
 
 Define the environment variables
 =================================================
@@ -46,7 +46,7 @@ Set the required environment variables in your function's settings:
 
 #. Add any other settings you might need.
 
-.. _azure-functions-step-2:
+.. _azure-functions-dotnet-step-2:
 
 Add the required libraries using NuGet
 =================================================
@@ -78,7 +78,7 @@ In-process function
 
 .. note:: Due to runtime dependencies, only the indicated versions are guaranteed to work when instrumenting in-process functions.
 
-.. _azure-functions-step-3:
+.. _azure-functions-dotnet-step-3:
 
 Initialize OpenTelemetry in the code
 =================================================
@@ -209,7 +209,7 @@ Define a startup function and decorate the assembly with it. The startup functio
          }
       }
          
-.. _azure-functions-step-4:
+.. _azure-functions-dotnet-step-4:
 
 Instrument the code to send spans
 =================================================
@@ -297,7 +297,7 @@ The following example shows how to retrieve ``faas`` attributes:
          }
       }
 
-.. _azure-functions-step-5:
+.. _azure-functions-dotnet-step-5:
 
 Check that data is coming in
 =========================================
