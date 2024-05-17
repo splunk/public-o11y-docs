@@ -7,7 +7,7 @@ Splunk Observability Cloud architecture
 .. meta::
    :description: Overview of the architecture of Splunk Observability Cloud
 
-Splunk Observability Cloud is built on top of OpenTelemetry and uses it as the default way of getting data in, which gives you a open standards-based set of instrumentation across all your data types. With the use Log Observer Connect, you can also query your Splunk Enterprise or Splunk Cloud Platform logs using the capabilities in Splunk Observability Cloud, giving you an overview of all your data in one place.
+Splunk Observability Cloud is built on top of OpenTelemetry and uses it as the default way of getting data in, which gives you a open standards-based set of instrumentation across all your data types. With Log Observer Connect, you can also query your Splunk Enterprise or Splunk Cloud Platform logs using the capabilities in Splunk Observability Cloud, giving you an overview of all your data in one place.
 
 .. mermaid::
 
