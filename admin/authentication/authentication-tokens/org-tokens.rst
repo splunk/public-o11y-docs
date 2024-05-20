@@ -121,7 +121,7 @@ To create an access token:
         - :code:`https://api.<REALM>.signalfx.com`
         - :code:`wss://stream.<REALM>.signalfx.com`
 
-      When you create an access token with API authentication scope, select at least one Splunk Observability Cloud role to associate with the token. You can select from ``power``, ``usage``, or ``read_only``. To learn more about Splunk Observability Cloud roles, see :ref:`_roles-and-capabilities`.
+      When you create an access token with API authentication scope, select at least one Splunk Observability Cloud role to associate with the token. You can select from ``power``, ``usage``, or ``read_only``. To learn more about Splunk Observability Cloud roles, see :ref:`roles-and-capabilities`.
 
       For information about these endpoints, see :new-page:`Summary of Splunk Observability Cloud API Endpoints <https://dev.splunk.com/observability/docs/apibasics/api_list/>`.
 
