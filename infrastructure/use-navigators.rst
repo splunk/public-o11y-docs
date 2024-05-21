@@ -290,7 +290,7 @@ Selecting this text opens a detailed view of the navigator with a list of active
 View navigators using alerts
 ---------------------------------------------
 
-When you are investigating an alert, you can refer at a glance to :guilabel:`Infrastructure` in the Next Steps section of the modal window displaying that alert for a link to the relevant Infrastructure Monitoring navigator. Click on that link to open the navigator without losing contextual metadata from the alert. Applicable metadata passes automatically from the alert to the navigator. 
+When you're investigating an alert, you can refer at a glance to :guilabel:`Infrastructure` in the :guilabel:`Next Steps` section of the modal window displaying that alert. The section displays a link to the relevant Infrastructure Monitoring navigator. Select that link to open the navigator without losing contextual metadata from the alert. Applicable metadata passes automatically from the alert to the navigator. 
 
 .. image:: /_images/infrastructure/alert-to-nav.png
         :width: 50%
