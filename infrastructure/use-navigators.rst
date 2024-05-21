@@ -294,7 +294,7 @@ When you are investigating an alert, you can refer at a glance to :guilabel:`Inf
 
 .. image:: /_images/infrastructure/alert-to-nav.png
         :width: 50%
-        :alt: This image shows an alert with a clickable link to an EC2 navigator
+        :alt: An alert with a clickable link to an EC2 navigator
 
 Variable data passed from alerts to navigators includes the time that the alert occurred, and relevant metrics and properties from the alert.
 
