@@ -646,6 +646,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Filter data <infrastructure/filter-landing-page>
+
+.. toctree::
+   :maxdepth:   3
+
    Metrics pipeline management TOGGLE <infrastructure/metrics-pipeline/metrics-pipeline>
 
 .. toctree::
