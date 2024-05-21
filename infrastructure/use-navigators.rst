@@ -296,7 +296,7 @@ When you're investigating an alert, you can refer at a glance to :guilabel:`Infr
         :width: 50%
         :alt: An alert with a clickable link to an EC2 navigator
 
-Variable data passed from alerts to navigators includes the time that the alert occurred, and relevant metrics and properties from the alert.
+Variable data passed from alerts to navigators includes the time that the alert occurred as well as relevant metrics and properties from the alert.
 
 By linking alerts in real time with the navigators that triggered them, the  "alert to navigator" experience makes troubleshooting faster.
 
