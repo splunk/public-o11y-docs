@@ -12,6 +12,7 @@ Troubleshoot .NET instrumentation for Splunk Observability Cloud
 
 .. meta::
    :description: If your instrumented .NET application is not sending data to Splunk Observability Cloud, or data is missing, follow these steps to identify and resolve the issue.
+   :robots: noindex
 
 When you instrument a .NET application using the SignalFx Instrumentation for .NET and you don't see your data in Splunk Observability Cloud, follow these troubleshooting steps.
 
