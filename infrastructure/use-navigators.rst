@@ -309,9 +309,9 @@ Remove an inactive navigator
 
 .. note:: You need to be an admin to remove a navigator.
 
-When data for an integration hasn't been received for 72 hours, the navigator for that integration becomes inactive and you have the option remove it from view. The navigator automatically reappears if data for the integration comes in again.
+When data for an integration hasn't been received for 72 hours, the navigator for that integration becomes inactive, and you have the option remove it from view. The navigator automatically reappears if data for the integration is received again.
 
-Follow these steps to remove an inactive navigator.
+Follow these steps to remove an inactive navigator:
 
 #. Select :guilabel:`Infrastructure` from the Splunk Observability Cloud home page. You can only remove a navigator when you're in the Infrastructure Monitoring landing page view.
 #. On an inactive navigator, select :guilabel:`Remove Navigator`.
