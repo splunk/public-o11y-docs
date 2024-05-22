@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-23 17:21+0000\n"
-"PO-Revision-Date: 2024-04-18 10:44+0100\n"
+"POT-Creation-Date: 2024-04-18 13:27+0000\n"
+"PO-Revision-Date: 2024-05-21 15:32+0100\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: ../../analytics/infrastructure-monitoring-analytics.rst:-1
 msgid "Splunk infrastructure monitoring analytics overview, rollup policies, signalflow instructions, and analytics aggregations and transformations"
@@ -72,7 +72,7 @@ msgstr ""
 "これらの平均値をプロットします。一般的に、これはデータをより正確に表現しますが、実際のメトリクスによっては望ましくないかもしれませんが、山と谷を平均化するという副作用もあります。"
 
 #: ../../analytics/infrastructure-monitoring-analytics.rst:29
-msgid "If you prefer to see sampled values, you can select the :strong:`Latest`rollup, or if you prefer to see the peaks and valleys, you can select the :strong:`Max` or :strong:`Min` rollups, respectively."
+msgid "If you prefer to see sampled values, you can select the :strong:`Latest` rollup, or if you prefer to see the peaks and valleys, you can select the :strong:`Max` or :strong:`Min` rollups, respectively."
 msgstr "サンプリングされた値を見たい場合は、:strong:`最新` のロールアップを選択し、ピークと谷を見たい場合は、それぞれ :strong:`最大` または :strong:`最小` のロールアップを選択することができます。"
 
 #: ../../analytics/infrastructure-monitoring-analytics.rst:31
@@ -107,7 +107,7 @@ msgid "For a cumulative counter, each data point is the sum of delta rollups ove
 msgstr "累積カウンターの場合、各データポイントは、インターバル中のデルタ・ロールアップ（デルタ・ロールアップは連続するデータポイント間の差）の合計を240（インターバルの秒数）で割ったものです。"
 
 #: ../../analytics/infrastructure-monitoring-analytics.rst:43
-msgid "In all likelihood, this has an impact similar to the :strong:`Average`rollup for a gauge: it provides an accurate representation of the data, and one whose visualization is aligned with how you typically use line or area charts."
+msgid "In all likelihood, this has an impact similar to the :strong:`Average` rollup for a gauge: it provides an accurate representation of the data, and one whose visualization is aligned with how you typically use line or area charts."
 msgstr "おそらくこれは、:strong:`平均` ゲージのロールアップと同じような影響を与えます。データの正確な表現を提供し、折れ線グラフやエリア・チャートを通常使用する方法と同じように視覚化されます。"
 
 #: ../../analytics/infrastructure-monitoring-analytics.rst:45
@@ -225,7 +225,7 @@ msgid "If you want to create custom charts and detector analytics, see :new-page
 msgstr "カスタムチャートやディテクター分析を作成したい場合は、『Splunk Observability Cloud 開発者ガイド』の :new-page:`SignalFlowを使用してデータを分析する<https://dev.splunk.com/observability/docs/signalflow/>` を参照してください。"
 
 #: ../../analytics/signalflow.rst:37
-msgid "You can also run SignalFlow programs directly. For more information, see the :new-page:`SignalFlow API <https://dev.splunk.com/observability/docs/signalflow#SignalFlow-API/>`topic in the Splunk Observability Cloud Developer Guide."
+msgid "You can also run SignalFlow programs directly. For more information, see the :new-page:`SignalFlow API <https://dev.splunk.com/observability/docs/signalflow#SignalFlow-API/>` topic in the Splunk Observability Cloud Developer Guide."
 msgstr "SignalFlow プログラムを直接実行することもできます。詳細については、Splunk Observability Cloud Developer Guide の :new-page:`SignalFlow API<https://dev.splunk.com/observability/docs/signalflow#SignalFlow-API/>` トピックを参照してください。"
 
 #: ../../analytics/signalflow.rst:42
@@ -241,7 +241,7 @@ msgid ""
 "Aggregations operate across all of the data points at a single instance in time, for example the mean CPU utilization across a group of five servers at time t, t+1, t+2, and so on. The output of an aggregation is a single :term:`metric time series <Metric time series>` (MTS), where each "
 "data point represents the aggregation of all the data points over a specific period of time. For more information, see :new-page:`Aggregations <https://dev.splunk.com/observability/docs/signalflow/#Aggregations>`."
 msgstr ""
-"例えば、時刻 t、t+1、t+2 における5台のサーバーグループの平均 CPU 使用率などです。集約の出力は、単一の :term:`メトリック時系列<Metric time series>` (MTS)であり、各データポイントは、特定の期間におけるすべてのデータポイントの集約を表します。詳細については、:new-page:`集計<https://dev.splunk."
+"例えば、時刻 t、t+1、t+2 における5台のサーバーグループの平均 CPU 使用率などです。集約の出力は、単一の :term:`メトリック時系列 <Metric time series>` (MTS)であり、各データポイントは、特定の期間におけるすべてのデータポイントの集約を表します。詳細については、:new-page:`集計 <https://dev.splunk."
 "com/observability/docs/signalflow/#Aggregations>` を参照。"
 
 #: ../../analytics/signalflow.rst:48
@@ -257,11 +257,10 @@ msgid ""
 "Transformations operate in parallel on each MTS over a window of time and yield one output time series for each input time series. For example, the average CPU utilization for five servers over a rolling window of one day will display five MTS; each output value will be the moving average "
 "for that MTS over the previous 24 hours. For more information, see :new-page:`Transformations <https://dev.splunk.com/observability/docs/signalflow/#Transformations>`."
 msgstr ""
-"変換は各 MTS に対し時間ウィンドウ上で並列に実行され、各入力時系列に対し1つの出力時系列が得られます。たとえば、5台のサーバーの1日の平均 CPU 使用率は、5つの MTS を表示し、各出力値はその MTS の過去24時間の移動平均となります。詳細については、:new-page:`変換<https://dev.splunk.com/observability/"
+"変換は各 MTS に対し時間ウィンドウ上で並列に実行され、各入力時系列に対し1つの出力時系列が得られます。たとえば、5台のサーバーの1日の平均 CPU 使用率は、5つの MTS を表示し、各出力値はその MTS の過去24時間の移動平均となります。詳細については、:new-page:`変換 <https://dev.splunk.com/observability/"
 "docs/signalflow/#Transformations>` を参照してください。"
 
 #: ../../analytics/signalflow.rst:52
-#, fuzzy
 msgid "See the following sections to learn more about the 3 types of transformations available, moving window, calendar window, and dashboard window. For examples of how to use transformation analytics in charts, see :ref:`gain-insights-through-chart-analytics`."
 msgstr "利用可能な3種類の変換、移動ウィンドウ、カレンダー・ウィンドウ、ダッシュボード・ウィンドウについては、以下のセクションを参照のこと。チャートでの変換分析の使用例については、:ref:`gain-insights-through-chart-analytics` を参照してください。"
 
@@ -379,7 +378,7 @@ msgid ""
 "The :guilabel:`Hide partial values` setting lets you optimize the output of a calendar window function, based on whether you are interested only in the final values calculated at the ends of cycles, as well as partial values calculated during a cycle. For example, if you have a cycle length "
 "of one day, hiding partial values means that you will only see one value for each day; you won't see how values change during the course of the day."
 msgstr ""
-":guilabel:`Hide partial values` 設定により、カレンダー・ウィンドウ関数の出力を最適化することができます。これは、サイクルの終了時に計算された最終的な値と、サイクル中に計算された部分的な値のどちらに関心があるかに基づきます。たとえば、サイクルの長さが1日の場合、部分的な値を非表示にすると、各日"
+" :guilabel:`Hide partial values` 設定により、カレンダー・ウィンドウ関数の出力を最適化することができます。これは、サイクルの終了時に計算された最終的な値と、サイクル中に計算された部分的な値のどちらに関心があるかに基づきます。たとえば、サイクルの長さが1日の場合、部分的な値を非表示にすると、各日"
 "の値が1つだけ表示されます。"
 
 #: ../../analytics/signalflow.rst:117
@@ -431,7 +430,6 @@ msgstr ""
 "ださい。"
 
 #: ../../analytics/signalflow.rst:143
-#, fuzzy
 msgid "Dashboard window transformations"
 msgstr "ダッシュボード・ウィンドウの変換"
 
@@ -440,7 +438,6 @@ msgid "In the following example, both charts in the same dashboard show the tota
 msgstr "次の例では、同じダッシュボードの両方のチャートが、異なるリージョンにあるロードバランサのホストの総数を示しています。過去1時間のデータに基づくと、東京リージョンには2124のホストがあり、パリリージョンには1772のホストがあります。"
 
 #: ../../analytics/signalflow.rst:143
-#, fuzzy
 msgid "This image shows a dashboard window transformation in chart."
 msgstr "この画像はダッシュボードのウィンドウをチャートで変換したものです。"
 
@@ -454,7 +451,6 @@ msgid ""
 msgstr "ダッシュボードの :guilabel:`Time` ピッカーを調整すると、:strong:`listChartDashboardWindow` のチャートだけが、選択した時間範囲に従って値を更新します。例えば、``-12h`` の時間範囲を選択すると、チャートは過去12時間のデータを表示します。"
 
 #: ../../analytics/signalflow.rst:155
-#, fuzzy
 msgid "For more information about dashboard window transformations, see :new-page:`Dashboard window transformations <https://dev.splunk.com/observability/docs/signalflow/#Dashboard-window-transformations>`."
 msgstr "ダッシュボード・ウィンドウの変換の詳細については、:new-page:`ダッシュボード・ウィンドウの変換<https://dev.splunk.com/observability/docs/signalflow/#Dashboard-window-transformations>` を参照してください。"
 
