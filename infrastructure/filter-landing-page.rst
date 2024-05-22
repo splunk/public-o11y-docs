@@ -7,8 +7,8 @@ Filter data on your landing page
 .. meta::
     :description: Filter the data displayed by navigators on your Splunk Infrastructure Monitoring landing page
 
-Any user can narrow the scope of data to be analyzed by applying one or more filters to the data sources on the Splunk Infrastructure Monitoring landing page.
-On the Infrastructure Monitoring landing page, each card represents a navigator, corresponding to the services you monitor in Splunk Observability Cloud. A navigator card shows a count of instances in the population and highlights critical alerts linked to that population.
+To narrow the scope of the data you want to analyze, try filtering on data sources on the Splunk Infrastructure Monitoring landing page.
+On the Infrastructure Monitoring landing page, each card represents a navigator corresponding to the services you monitor in Splunk Observability Cloud. A navigator card shows a count of instances in the population and highlights critical alerts linked to that population.
 
 .. _build-filter:
 
