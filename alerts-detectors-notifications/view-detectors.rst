@@ -27,7 +27,7 @@ When you are looking at the Detector menu for a chart, or in the Infrastructure 
 ..
 	|openmenu| is defined in conf.py
 
-|openmenu| The following illustration shows two related detectors for this chart. If you hover over a related detector, you see options that let you :ref:`subscribe to the detector<subscribe>` by adding a new notification, open the detector for viewing or editing, or view the alerts triggered by the detector. To learn more, see :ref:`view-alerts`.
+|openmenu| The following illustration shows two related detectors for this chart. If you hover over a related detector, you see options that let you :ref:`subscribe to the detector<subscribe>` by adding a new notification, open the detector for viewing or editing, or view the alerts triggered by the detector. To learn more, go to :ref:`view-alerts`.
 
 .. image:: /_images/images-detectors-alerts/detectors-related.png
    :width: 50%
@@ -35,7 +35,9 @@ When you are looking at the Detector menu for a chart, or in the Infrastructure 
 View an individual detector
 -------------------------------------------------------------------
 
-When you open a detector, the Alert Rules tab is opened, and you see a chart that represents values for the visible signals. The list of detector rules, and the number of currently active alerts for each rule, is shown. To learn more, see :ref:`view-alerts-within-detector`. For information on creating rules, see :ref:`build-rules` or :ref:`apm-alerts`, depending on which type of detector you are creating.
+There are two charts in the detector view. On the right is a detailed view. It shows each datapoint at the native resolution of the detector and represents exactly the datapoints that the detector sees. On the left is a summary view. It shows a summary of the data over a longer period of time. Because it is a summary, short spikes are not visible. The yellow box controls which part of the summary chart displays in the detail chart. You can see a short-term spike in the detail view by dragging the yellow box to the area where the alert fired.
+
+The Alert Rules tab is open when you open a detector, showing a chart that represents values for the visible signals. The list of detector rules and the number of currently active alerts for each rule are visible. To learn more, see :ref:`view-alerts-within-detector`. For information on creating rules, see :ref:`build-rules` or :ref:`apm-alerts`, depending on which type of detector you are creating.
 
 As with charts, the resolution of data displayed is determined by the chart's time range. The detail view at right displays data at the detector's resolution, that is, the frequency at which the detector evaluates the signal. Any events that have occurred during the detector's time range are shown under the X axis.
 
