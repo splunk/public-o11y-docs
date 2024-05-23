@@ -41,7 +41,7 @@ The following best practices can help you when initiating the migration process:
 #. Migrate production services gradually and grouped by type.
 #. Identify changes in your instrumentation settings.
 #. Validate the data in Splunk Observability Cloud.
-#. Verify the impact of HTTP semantic convention changes.
+#. Verify the impact of HTTP semantic convention changes. See :ref:`migrate-apm-custom-reporting`.
 
 
 .. _java-metrics-grace-period:
