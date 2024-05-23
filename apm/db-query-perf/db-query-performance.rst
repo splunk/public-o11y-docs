@@ -98,7 +98,7 @@ Database Query Performance is available by default, so all you need to do is tur
 Monitor system health with Database Infrastructure Performance 
 ------------------------------------------------------------------------
 
-If, as a site reliability engineer, apparent slowness in microservices has you wondering whether to investigate your infrastructure further, you can use :ref:`Database Infrastructure Performance` for help with triage of the following conditions:
+If, as a site reliability engineer, apparent slowness in microservices has you wondering whether to investigate your infrastructure further, you can use :strong:`Database Infrastructure Performance` for help with triage of the following conditions:
 
 - Lock contention
 
@@ -106,7 +106,7 @@ If, as a site reliability engineer, apparent slowness in microservices has you w
 
 - Transient effects (spikes or constant loads)
 
-The Database Infrastructure Performance panel displays at the bottom of the navigator sidebar when from :ref:`APM` in Splunk Observability, you use :ref:`Database Query Performance` to select a MySQL, SQL Server, or Oracle database service. You can also access the Database Infrastructure Performance panel through the :ref:`Service Map` module in the APM menu.
+The Database Infrastructure Performance panel displays at the bottom of the navigator sidebar when from :strong:`APM` in Splunk Observability, you use :strong:`Database Query Performance` to select a MySQL, SQL Server, or Oracle database service. You can also access the Database Infrastructure Performance panel through the :strong:`Service Map` module in the APM menu.
 
     .. image:: /_images/apm/db-query-perf/DIP-example.png  
         :width: 50%
