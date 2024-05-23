@@ -38,16 +38,13 @@ How to schedule a downtime configuration:
 
 To mute any alerts associated with a test included in a downtime configuration window, see :ref:`mute-notifications`.
 
-
-
-Edit a downtime configuration 
-===================================
 When a downtime configuration is active, you can't edit, or delete it. You can extend the duration, or cancel while it is active. 
 
 Records 
 ======================
 
-A record of completed tests from a downtime configuration window includes: 
+The downtime configuration record shows when the window started and finished. The records are kept for thirteen months. 
 
-These records are kept for thirteen months. 
+During a downtime configuration window, there are gaps in synthetics metrics if you chose to the rule to pause tests. Any metrics with active tests for the rule to augment data gave the dimension ``under_maintenance: true dimension``.
+
 
