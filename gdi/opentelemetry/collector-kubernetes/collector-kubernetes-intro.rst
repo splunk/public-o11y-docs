@@ -11,7 +11,8 @@ Get started with the Collector for Kubernetes
    :maxdepth: 5
    :hidden:
 
-   Install the Collector for Kubernetes <install-k8s.rst>
+   Install with Helm <install-k8s.rst>
+   Install with YAML manifests <install-k8s-manifests.rst>
    Kubernetes (EKS Add-on) <install-k8s-addon-eks.rst>
    Configure with Helm <kubernetes-config.rst>
    Advanced config <kubernetes-config-advanced.rst>
@@ -28,6 +29,7 @@ Get started with the Collector for Kubernetes
 To install and configure the Splunk Distribution of the OpenTelemetry Collector for Kubernetes, follow these docs:
 
 * :ref:`otel-install-k8s`
+* :ref:`otel-install-k8s-manifests`
 * :ref:`install-k8s-addon-eks`
 * :ref:`otel-kubernetes-config`
 * By default, you'll obtain these :ref:`Kubernetes metrics <ootb-metrics-k8s>` 
