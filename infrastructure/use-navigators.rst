@@ -266,31 +266,6 @@ In this Amazon EC2 navigator, Cassandra and Kafka services are running on the Am
 
 #. Select a Cassandra service to navigate to the navigator or dashboard for that service. When both navigator and dashboard are available for a service, clicking that service opens the navigator.
 
-.. _db-infra-perf-sidebar:
-
-Monitor system health with Database Infrastructure Performance 
-------------------------------------------------------------------------
-
-If, as a site reliability engineer, apparent slowness in microservices has you wondering whether to investigate your infrastructure further, you can use :ref:`Database Infrastructure Performance` for help with triage of the following conditions:
-
-- Lock contention
-
-- Limited I/O (throughput)
-
-- Transient effects (spikes or constant loads)
-
-The Database Infrastucture Performance panel displays at the bottom of the navigator sidebar when from :ref:`APM` in Splunk Observability, you use :ref:`Database Query Performance` to select a MySQL, SQL Server, or Oracle database service. You can also access the Database Infrastructure Performance panel through the :ref:`Service Map` module in the APM menu.
-
-    .. image:: /_images/infrastructure/DIP-example.png
-        :width: 80%
-        :alt: Database Infrastructure Performance panel.
-
-
-The performance metrics display is enabled by related content correlation of databases that happens when the OpenTelemetry (OTel) Collector is connected to a database. For more information, see :ref:`get-started-relatedcontent`. The Database Infrastructue Performance panel includes a link to the relevant Infrastructure Navigator view. 
-You can use this panel to review key metrics without leaving Splunk APM.
-
-
-
 .. _view-alerts-in-navigators:
 
 View alerts using navigators
