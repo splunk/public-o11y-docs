@@ -30,6 +30,7 @@ To migrate from OpenTelemetry Java 1.x to OpenTelemetry Java 2.x, you need the f
 
 If you're instrumenting your Java services using the Splunk Distribution of OpenTelemetry Java 1.x or the equivalent upstream instrumentation, you can already migrate to the version 2.0 and higher of the Java agent.
 
+
 .. _java-20-migration-best-practices:
 
 Migration best practices
