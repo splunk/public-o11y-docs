@@ -108,7 +108,7 @@ If, as a site reliability engineer, apparent slowness in microservices has you w
 
 The Database Infrastructure Performance panel displays at the bottom of the navigator sidebar when from :ref:`APM` in Splunk Observability, you use :ref:`Database Query Performance` to select a MySQL, SQL Server, or Oracle database service. You can also access the Database Infrastructure Performance panel through the :ref:`Service Map` module in the APM menu.
 
-    .. image:: /_images/infrastructure/DIP-example.png
+    .. image:: /_images/apm/db-query-perf/DIP-example.png  
         :width: 50%
         :alt: Database Infrastructure Performance panel
 
