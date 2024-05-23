@@ -79,6 +79,8 @@ When you're creating the new permission for your user and are prompted for an ac
 Required permissions
 =====================================================
 
+.. caution:: The list of permissions described in this section is updated frequently. If you connected your AWS services to Splunk Observability Cloud a while ago you might need to update them.
+
 These are the required permissions to collect AWS data:
 
 * :ref:`Required permissions <aws-iam-policy-required>`
