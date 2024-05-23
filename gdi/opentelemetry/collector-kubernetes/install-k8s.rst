@@ -213,6 +213,7 @@ For example:
 
 * Read more about :ref:`otel-kubernetes-config` and also :ref:`the advanced Kubernetes config <otel-kubernetes-config-advanced>`.
 * See :new-page:`examples of Helm chart configuration <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/README.md>` for additional chart installation examples or upgrade commands to change the default behavior.
+* Set ``isWindows`` to ``true`` to apply the Kubernetes cluster with Windows worker nodes.
 * For logs, see :ref:`otel-kubernetes-config-logs`.
 
 Set Helm using a YAML file
@@ -224,9 +225,7 @@ You can also set Helm values as arguments using a YAML file. For example, after 
 
    helm install my-splunk-otel-collector --values my_values.yaml splunk-otel-collector-chart/splunk-otel-collector
 
-See :new-page:`an example of a YAML file in GitHub <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>`. Options include:
-
-* Set ``isWindows`` to ``true`` to apply the Kubernetes cluster with Windows worker nodes.
+See :new-page:`an example of a YAML file in GitHub <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>`. 
 
 Set Prometheus metrics
 ==============================================
