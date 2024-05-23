@@ -113,7 +113,7 @@ The Database Infrastructure Performance panel displays at the bottom of the navi
         :alt: Database Infrastructure Performance panel
 
 
-The performance metrics display is enabled by related content correlation of databases that happens when the OpenTelemetry (OTel) Collector is connected to a database. For more information, see :ref:`get-started-relatedcontent`. The Database Infrastructue Performance panel includes a link to the relevant Infrastructure Navigator view. 
+The performance metrics display is enabled by related content correlation of databases that happens when the OpenTelemetry (OTel) Collector is connected to a database. For more information, see :ref:`get-started-relatedcontent`. Expand the Database Infrastructue Performance panel to see the relevant Infrastructure Navigator view. 
 You can use this panel to review key metrics without leaving Splunk APM.
 
 .. raw:: html
