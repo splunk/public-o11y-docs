@@ -45,7 +45,7 @@ Organizations that complete the integration of Splunk Cloud Platform and Splunk 
 How to set up Unified Identity
 ==========================================================================================
 
-You can pair only one Splunk Cloud Platform instance with one Splunk Observability Cloud instance at a time. Customers with multiple Splunk Observability Cloud organizations must choose one to pair with the chosen Splunk Cloud Platform instance.
+You can pair only one Splunk Cloud Platform instance with one Splunk Observability Cloud instance at a time. Only one Splunk Observability Cloud organization can pair with a single Splunk Cloud Platform search head. Customers with multiple Splunk Observability Cloud organizations must choose one to pair with the chosen Splunk Cloud Platform instance.
 
 
 Prerequisites
