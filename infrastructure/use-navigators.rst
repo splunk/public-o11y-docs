@@ -266,6 +266,23 @@ In this Amazon EC2 navigator, Cassandra and Kafka services are running on the Am
 
 #. Select a Cassandra service to navigate to the navigator or dashboard for that service. When both navigator and dashboard are available for a service, clicking that service opens the navigator.
 
+.. _db-infra-perf-sidebar:
+
+Monitor system health in the Database Infrastructure Performance sidebar
+----------------------------------------------------------------------------
+
+If, as a site reliability engineer responsible for the health of an APM database, you're wondering whether to investigate infrastructure further, you can use the Database Infrastructure Performance sidebar for help with triage of the following conditions:
+
+- Lock contention
+
+- Limited I/O (throughput)
+
+- Transient effects (spikes or constant loads)
+
+Database Infrastucture Performance is a panel that displays at the bottom of the navigator sidebar when you select a single database service. 
+
+
+
 .. _view-alerts-in-navigators:
 
 View alerts using navigators
