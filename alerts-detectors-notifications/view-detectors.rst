@@ -35,7 +35,7 @@ When you are looking at the Detector menu for a chart, or in the Infrastructure 
 View an individual detector
 -------------------------------------------------------------------
 
-There are two charts in the detector view. On the right is a detailed view. It shows each datapoint at the native resolution of the detector and represents exactly the datapoints that the detector sees. On the left is a summary view. It shows a summary of the data over a longer period of time. Because it is a summary, short spikes are not visible. The yellow box controls which part of the summary chart displays in the detail chart. You can see a short-term spike in the detail view by dragging the yellow box to the area where the alert fired.
+There are two charts in the detector view. On the right side, you can see a detailed view. It shows each datapoint at the native resolution of the detector and represents exactly the datapoints that the detector sees. On the left side, you can see a summary view. It shows a summary of the data over a longer period of time. Because it is a summary, short spikes are not visible. The yellow box controls which part of the summary chart displays in the detail chart. You can see a short-term spike in the detail view by dragging the yellow box to the area where the alert fired.
 
 The Alert Rules tab is open when you open a detector, showing a chart that represents values for the visible signals. The list of detector rules and the number of currently active alerts for each rule are visible. To learn more, see :ref:`view-alerts-within-detector`. For information on creating rules, see :ref:`build-rules` or :ref:`apm-alerts`, depending on which type of detector you are creating.
 
