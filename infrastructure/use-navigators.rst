@@ -277,13 +277,30 @@ If a service has any active alerts, you can view a list of the service's alerts 
 #. Search for the navigator that you want to view. 
 #. Under the navigator title, select the text displaying the number of alerts. Alert numbers and types vary depending on the navigator. 
 
-For the following example navigator, the user selects :guilabel:`90 Critical alerts`. 
+For the following example navigator, the user selected :guilabel:`90 Critical alerts`. 
 
 .. image:: /_images/infrastructure/navigator-alerts.png
         :width: 50%
         :alt: This image shows a navigator with 90 critical alerts active
 
 Selecting this text opens a detailed view of the navigator with a list of active alerts shown on the sidebar.
+
+.. _view-navigators-from-alerts:
+
+View navigators using alerts
+---------------------------------------------
+
+When you're investigating an alert, you can refer at a glance to :guilabel:`Infrastructure` in the :guilabel:`Next Steps` section of the modal window displaying that alert. The section displays a link to the relevant Infrastructure Monitoring navigator. Select that link to open the navigator without losing contextual metadata from the alert. Applicable metadata passes automatically from the alert to the navigator. 
+
+.. image:: /_images/infrastructure/alert-to-nav.png
+        :width: 50%
+        :alt: An alert with a clickable link to an EC2 navigator
+
+Variable data passed from alerts to navigators includes the time that the alert occurred as well as relevant metrics and properties from the alert.
+
+By linking alerts in real time with the navigators that triggered them, the  "alert to navigator" experience makes troubleshooting faster.
+
+
 
 .. _remove-navigator:
 
@@ -292,9 +309,9 @@ Remove an inactive navigator
 
 .. note:: You need to be an admin to remove a navigator.
 
-When data for an integration hasn't been received for 72 hours, the navigator for that integration becomes inactive and you have the option remove it from view. The navigator automatically reappears if data for the integration comes in again.
+When data for an integration hasn't been received for 72 hours, the navigator for that integration becomes inactive, and you have the option remove it from view. The navigator automatically reappears if data for the integration is received again.
 
-Follow these steps to remove an inactive navigator.
+Follow these steps to remove an inactive navigator:
 
 #. Select :guilabel:`Infrastructure` from the Splunk Observability Cloud home page. You can only remove a navigator when you're in the Infrastructure Monitoring landing page view.
 #. On an inactive navigator, select :guilabel:`Remove Navigator`.
