@@ -30,6 +30,19 @@ To migrate from OpenTelemetry Java 1.x to OpenTelemetry Java 2.x, you need the f
 
 If you're instrumenting your Java services using the Splunk Distribution of OpenTelemetry Java 1.x or the equivalent upstream instrumentation, you can already migrate to the version 2.0 and higher of the Java agent.
 
+Migration best practices
+=============================================
+
+The following best practices can help you when initiating the migration process:
+
+#. Familiarize yourself with this documentation.
+#. Read the release notes. See :new-page:`Releases <https://github.com/signalfx/splunk-otel-java/releases>` on GitHub.
+#. Use a development or test environment.
+#. Migrate production services gradually and grouped by type.
+#. Identify changes in your instrumentation settings.
+#. Validate the data in Splunk Observability Cloud.
+#. Verify the impact of HTTP semantic convention changes.
+
 
 .. _java-metrics-grace-period:
 
@@ -105,15 +118,6 @@ To migrate your instrumentation to the version 2.0 or higher of the Java agent, 
    - In the :guilabel:`Stop migration` card, select :guilabel:`Stop`.
 
 .. caution:: If you don't turn off the Data Migration stream for Java metrics after the grace period, the duplicated metrics are billed as custom metrics. See :ref:`java-metrics-grace-period`.
-
-Migration best practices
---------------------------------------
-
-The following best practices can help you when initiating the migration process:
-
-- Familiarize yourself with the documentation and release notes.
-- Use a development or test environment.
-- Migrate production services gradually.
 
 .. _java-20-metric-names:
 
