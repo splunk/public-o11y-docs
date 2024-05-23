@@ -15,14 +15,12 @@ You can also install the Splunk Distribution of the OpenTelemetry Collector for 
 Prerequisites
 ==================================
 
-.. note::
+To specify the configuration, you need to know your Splunk realm and base64-encoded access token.
 
-   To specify the configuration, you at least need to know your Splunk realm and base64-encoded access token.
-
-A configuration file can contain multiple resource manifests. Each manifest applies a specific state to a Kubernetes object. The manifests must be configured for Splunk Observability Cloud only and come with all telemetry types activated for the agent, which is the default when installing the Helm chart.
+A configuration file can contain multiple resource manifests. Each manifest applies a specific state to a Kubernetes object. You must configure your manifests for Splunk Observability Cloud only and come with all telemetry types activated for the agent, which is the default if you install using the Helm chart.
 
 Determine which manifest you want to use
-==================================
+===============================================
 
 Download the necessary manifest files from :new-page:`the examples repository <https://github.com/signalfx/splunk-otel-collector-chart/tree/main/examples>`. Refer to the ``README`` files for more details on each example.
 
@@ -78,7 +76,6 @@ See the following manifest to set security constraints:
 
 .. github:: yaml
    :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector-chart/main/examples/distribution-openshift/rendered_manifests/securityContextConstraints.yaml
-
 
 Next steps
 ==================================
