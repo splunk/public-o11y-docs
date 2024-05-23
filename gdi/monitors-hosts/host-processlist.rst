@@ -42,7 +42,7 @@ configuration:
        type: processlist
        ...  # Additional config
 
-Next, add the monitor to the ``service.pipelines.metrics.receivers``
+Next, add the monitor to the ``service.pipelines.logs.receivers``
 section of your configuration file. The following example shows how to
 configure the ``logs`` pipeline using the required ``signalfx``
 exporter:

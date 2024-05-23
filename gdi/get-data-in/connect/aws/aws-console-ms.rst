@@ -93,7 +93,6 @@ Connect to Splunk Observability Cloud from the AWS console
 Before you proceed to create your Metric Streams connection between your AWS and your Splunk Observability Cloud accounts in the AWS console, follow the steps in :ref:`aws-console-ms-start` to ensure you have an active AWS integration in your associated Splunk Observability Cloud account: 
 
 * Make sure you selected :guilabel:`Streaming (AWS-managed)` as the ingestion method in the integration.
-* Make sure the AWS account you used to create the integration contains the required policies for Metric Streams, as described in :ref:`metricstreams_iampolicy`. 
 
 To connect Splunk Observability Cloud from the AWS console, follow these steps:
 
