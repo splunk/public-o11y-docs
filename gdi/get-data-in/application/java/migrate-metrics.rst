@@ -129,7 +129,6 @@ New metric names for version 2.0
 
 .. include:: /_includes/gdi/java-20-metrics-equivalences.rst
 
-For more information on OpenTelemetry semantic conventions, see the OpenTelemetry semantic conventions.
 
 Troubleshooting
 ======================
