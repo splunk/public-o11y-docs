@@ -19,7 +19,10 @@ Learn more about the Collector's configuration and data processing at:
 * :ref:`otel-data-processing`
 * :ref:`signalfx-exporter`
 
-.. note:: To see the Collector's internal metrics, refer to :ref:`metrics-internal-collector`.
+See more metrics at:
+
+* :ref:`kubernetes-cluster-receiver` for specific metrics from the Kubernetes Cluster receiver component 
+* :ref:`metrics-internal-collector`
 
 Container level metrics and dimensions
 ============================================================================
@@ -119,6 +122,18 @@ Container level metrics and dimensions
     - No
     - Yes
 
+  * - ``k8s.container.ephemeralstorage_limit``
+    - Container ??
+    - :ref:`ootb-metrics-k8s-attributes`
+    - ??
+    - No
+
+  * - ``k8s.container.ephemeralstorage_request``
+    - Container ??
+    - :ref:`ootb-metrics-k8s-attributes`
+    - ??
+    - No
+
   * - ``k8s.container.memory_limit``
     - Container ``memory_limit``
     - :ref:`ootb-metrics-k8s-attributes`
@@ -130,6 +145,24 @@ Container level metrics and dimensions
     - :ref:`ootb-metrics-k8s-attributes`
     - No
     - Yes
+
+  * - ``k8s.container.restarts``
+    - ???
+    - :ref:`ootb-metrics-k8s-attributes`
+    - ??
+    - Yes
+
+  * - ``k8s.container.storage_limit``
+    - ???
+    - :ref:`ootb-metrics-k8s-attributes`
+    - ??
+    - No
+
+  * - ``k8s.container.storage_request``
+    - ???
+    - :ref:`ootb-metrics-k8s-attributes`
+    - ??
+    - No
 
 Pod level metrics and dimensions
 ============================================================================
@@ -217,6 +250,11 @@ Pod level metrics and dimensions
       * :ref:`ootb-metrics-k8s-attributes`
     - Yes
 
+  * - ``k8s.pod.status_reason``
+    - ???
+    - 
+    - Yes
+
 Node level metrics and dimensions
 ============================================================================
 
@@ -235,6 +273,11 @@ Node level metrics and dimensions
     - Metric description
     - Attributes
     - Exported?
+
+  * - ``k8s.node.condition``
+    - Node condition
+    - 
+    - No
 
   * - ``k8s.node.cpu.time``
     - Node CPU time
@@ -521,6 +564,115 @@ The following distributions support control plane metrics configuration:
 * OpenShift version 4.9
 
 For information about control plane metrics, see :ref:`otel-kubernetes-config-advanced-control-plane`.
+
+.. _ootb-metrics-k8s-other:
+
+Other metrics
+============================================================================
+
+.. caution:: 
+  
+  The :strong:`Exported?` column indicates if the metric is finally sent to Splunk Observability Cloud after going through the Collector pipelines. 
+
+Other available metrics include:
+
+.. list-table::
+  :widths: 75 25
+  :width: 100%
+  :header-rows: 1
+
+  * - Metric name
+    - Exported?
+
+  * - ``k8s.deployment.desired``
+    - Yes
+
+  * - ``k8s.deployment.available``
+    - Yes
+
+  * - ``k8s.daemonset.current_scheduled_nodes``
+    - Yes
+
+  * - ``k8s.daemonset.current_scheduled_nodes`` 
+    - Yes
+
+  * - ``k8s.daemonset.misscheduled_nodes`` 
+    - Yes
+
+  * - ``k8s.daemonset.ready_nodes``
+    - Yes
+
+  * - ``k8s.hpa.max_replicas``
+    - No
+
+  * - ``k8s.hpa.min_replicas``
+    - No
+
+  * - ``k8s.hpa.current_replicas``
+    - No
+
+  * - ``k8s.hpa.desired_replicas``
+    - No
+
+  * - ``k8s.job.active_pods``
+    - No
+
+  * - ``k8s.job.desired_successful_pods``
+    - No
+
+  * - ``k8s.job.failed_pods``
+    - No
+
+  * - ``k8s.job.max_parallel_pods``
+    - No
+
+  * - ``k8s.job.successful_pods``
+    - No
+
+  * - ``k8s.namespace.phase``
+    - Yes
+
+  * - ``k8s.replicaset.desired``
+    - Yes
+
+  * - ``k8s.replicaset.available``
+    - Yes
+
+  * - ``k8s.replication_controller.desired``
+    - Yes
+
+  * - ``k8s.replication_controller.available``
+    - Yes
+
+  * - ``k8s.resource_quota.hard_limit``
+    - Yes
+
+  * - ``k8s.resource_quota.used``
+    - Yes
+
+  * - ``k8s.statefulset.desired_pods``
+    - No
+
+  * - ``k8s.statefulset.ready_pods``
+    - No
+
+  * - ``k8s.statefulset.current_pods``
+    - No
+
+  * - ``k8s.statefulset.updated_pods``
+    - No
+
+  * - ``openshift.clusterquota.limit``
+    - Yes
+
+  * - ``openshift.clusterquota.used``
+    - Yes
+
+  * - ``openshift.appliedclusterquota.limit``
+    - Yes
+
+  * - ``openshift.appliedclusterquota.used``
+    - Yes
 
 .. _ootb-metrics-k8s-attributes:
 
