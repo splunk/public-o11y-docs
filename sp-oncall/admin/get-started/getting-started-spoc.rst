@@ -1,7 +1,7 @@
 .. _about-spoc:
 
 ************************************************************************
-Key concepts and application information
+How to get started with Splunk On-Call
 ************************************************************************
 
 .. meta::
@@ -35,8 +35,6 @@ If you will be administering your organization's Splunk On-Call instance, the :r
 If you are an individual user who will be on-call and responding to incidents, the :ref:`spoc-user-guide` will help you become oriented to the Splunk On-Call user interface.
 
 
-
-We offer two getting started guides: one for admins and one for users.
 
 Access the following topics to learn about Splunk On-Call:
 
