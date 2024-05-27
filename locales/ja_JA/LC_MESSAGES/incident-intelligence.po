@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-18 11:06+0000\n"
-"PO-Revision-Date: 2024-04-17 16:22+0100\n"
+"PO-Revision-Date: 2024-05-21 15:33+0100\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:-1
 msgid "Steps to create and configure incident policies to organize incidents for Incident Intelligence in Splunk Observability Cloud."
@@ -163,7 +163,7 @@ msgid ""
 "Under :guilabel:`Alert metadata grouping (optional)`, select metadata fields you want to group by. The fields you are using in your alert routing conditions are available to select. However any custom field that is common in the alert routing metadata can be entered as a custom value. If you want add a field that is not displayed, enter the field name and select it from the dropdown to add it as a selected metadata field. Any "
 "custom field that is common in the alert routing metadata can be entered as a ``group by`` field."
 msgstr ""
-":guilabel:`Alert metadata grouping (optional)` で、グループ化したいメタデータ・フィールドを選択します。アラート・ルーティング条件で使用しているフィールドを選択できます。ただし、アラート・ルーティング・メタデータに共通するカスタム・フィールドは、カスタム値として入力できます。表示されていないフィールドを追加したい場合は、フィールド名を入力してドロップダウンから選択すると、選択されたメタデータ・フィールドとして追加されます。アラー"
+" :guilabel:`Alert metadata grouping (optional)` で、グループ化したいメタデータ・フィールドを選択します。アラート・ルーティング条件で使用しているフィールドを選択できます。ただし、アラート・ルーティング・メタデータに共通するカスタム・フィールドは、カスタム値として入力できます。表示されていないフィールドを追加したい場合は、フィールド名を入力してドロップダウンから選択すると、選択されたメタデータ・フィールドとして追加されます。アラー"
 "ト・ルーティング・メタデータに共通するカスタム・フィールドは、``group by`` フィールドとして入力できます。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:72
@@ -220,11 +220,11 @@ msgstr ":guilabel:`Configure invite` ウィンドウで、名前またはスケ�
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:103
 msgid ":strong:`Add responder option`"
-msgstr ":strong:`対応者オプションの追加` "
+msgstr ":strong:`対応者オプションの追加`"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:104
 msgid ":strong:`Steps`"
-msgstr ":strong:`ステップ` "
+msgstr ":strong:`ステップ`"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:106
 msgid "Add responders by name"
@@ -332,23 +332,23 @@ msgstr "以下のトピックを使用して、スケジュールの作成と管
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules.rst:21
 msgid ":ref:`ii-create-on-call-schedule`"
-msgstr ":ref:`ii-create-on-call-schedule` "
+msgstr ":ref:`ii-create-on-call-schedule`"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules.rst:22 ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:94 ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:50
 msgid ":ref:`ii-scenarios-schedules`"
-msgstr ":ref:`ii-scenarios-schedules` "
+msgstr ":ref:`ii-scenarios-schedules`"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules.rst:23 ../../incident-intelligence/create-manage-on-call-schedules/whos-on-call.rst:23
 msgid ":ref:`ii-sync-on-call-schedule`"
-msgstr ":ref:`ii-sync-on-call-schedule` "
+msgstr ":ref:`ii-sync-on-call-schedule`"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules.rst:24 ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:95 ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:51
 msgid ":ref:`ii-whos-on-call`"
-msgstr ":ref:`ii-whos-on-call` "
+msgstr ":ref:`ii-whos-on-call`"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules.rst:25
 msgid ":ref:`reassign-shift`"
-msgstr ":ref:`reassign-shift` "
+msgstr ":ref:`reassign-shift`"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/create-on-call-schedule.rst:-1
 msgid "Steps to create on-call schedules for Incident Intelligence in Splunk Observability Cloud."
@@ -550,7 +550,7 @@ msgstr "次も参照してください"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:93 ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:49
 msgid ":ref:`ii-create-manage-on-call-schedules`"
-msgstr ":ref:`ii-create-manage-on-call-schedules` "
+msgstr ":ref:`ii-create-manage-on-call-schedules`"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:-1
 msgid "Schedule scenario for creating business-hours and nights-and-weekends rotations in Incident Intelligence."
@@ -649,7 +649,6 @@ msgid "Weekends shift Schedule Preview."
 msgstr "週末のシフトのスケジュールプレビュー。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:109
-#, fuzzy
 msgid ""
 "Skyler creates a new schedule for secondary coverage for the web application service and names it accordingly: **Web application service - secondary**. Skyler adds the **WebApp** teams tag again to make the schedule easier to find. The teams tag also sorts the list of responders so they're easier to find and select when Skyler adds them to a shift later. The following image shows the new schedule Skyler creates with the teams "
 "tag."
@@ -883,15 +882,15 @@ msgstr "以下のシナリオでは、架空の電子商取引企業である Bu
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenarios-schedules.rst:18
 msgid ":ref:`ii-scenario-business-hours`"
-msgstr ":ref:`ii-scenario-business-hours` "
+msgstr ":ref:`ii-scenario-business-hours`"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenarios-schedules.rst:19
 msgid ":ref:`ii-scenario-day-by-day`"
-msgstr ":ref:`ii-scenario-day-by-day` "
+msgstr ":ref:`ii-scenario-day-by-day`"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenarios-schedules.rst:20
 msgid ":ref:`ii-scenario-week-by-week`"
-msgstr ":ref:`ii-scenario-week-by-week` "
+msgstr ":ref:`ii-scenario-week-by-week`"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:-1
 msgid "Steps to access your personal on-call calendar and sync it to third-party calendar apps."
@@ -982,7 +981,6 @@ msgid "Select :guilabel:`On-call schedules`."
 msgstr ":guilabel:`On-call schedules` を選択します。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/whos-on-call.rst:18
-#, fuzzy
 msgid "Select the schedule for which you want to view who's on call."
 msgstr "オンコール担当者を表示したいスケジュールを選択します。"
 
@@ -1096,11 +1094,11 @@ msgstr "アラートが取り込まれた後、Incident Intelligenceの :guilabe
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:43 ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:72
 msgid ":strong:`Alert source`"
-msgstr ":strong:`アラートソース` "
+msgstr ":strong:`アラートソース`"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:44 ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:73 ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:93
 msgid ":strong:`Documentation`"
-msgstr ":strong:`ドキュメンテーション` "
+msgstr ":strong:`ドキュメンテーション`"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:46
 msgid "Splunk APM"
@@ -1152,7 +1150,7 @@ msgstr "Splunk Cloud Platform"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:92
 msgid ":strong:`Ingest endpoint`"
-msgstr ":strong:`インジェスト・エンドポイント` "
+msgstr ":strong:`インジェスト・エンドポイント`"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:95
 msgid "Amazon CloudWatch"
@@ -1553,7 +1551,7 @@ msgstr "Splunk On-Callアラートの severity または message_type"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:57
 msgid "The criticality of the alert. Supported values are ``info``, ``normal``, ``warning``, ``minor``, ``major``, and ``critical``"
-msgstr "アラートの重要度。サポートされる値は、``info``、``normal``、``warning``、``minor``、``major``、および ``critical`` "
+msgstr "アラートの重要度。サポートされる値は、``info``、``normal``、``warning``、``minor``、``major``、および ``critical``"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:58
 msgid "title or entity_display_name for Splunk On-call alerts"
@@ -1761,15 +1759,15 @@ msgstr "表のリンクに従って、自分に関連するタスクを完了さ
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:40
 msgid ":strong:`Do this`"
-msgstr ":strong:`実行する` "
+msgstr ":strong:`実行する`"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:41
 msgid ":strong:`With this tool`"
-msgstr ":strong:`使用するツール` "
+msgstr ":strong:`使用するツール`"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:42
 msgid ":strong:`Link to documentation`"
-msgstr ":strong:`ドキュメントへのリンク` "
+msgstr ":strong:`ドキュメントへのリンク`"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:44
 msgid "Ingest alerts from Observability Cloud, Splunk Enterprise, Splunk Cloud Platform, IT Service Intelligence (ITSI) or third parties."
@@ -1885,11 +1883,11 @@ msgstr "Splunk Incident Intelligence をうまく使うために知っておく�
 
 #: ../../incident-intelligence/key-concepts.rst:15
 msgid ":strong:`Concept`"
-msgstr ":strong:`概念` "
+msgstr ":strong:`概念`"
 
 #: ../../incident-intelligence/key-concepts.rst:16 ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:16 ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:16
 msgid ":strong:`Description`"
-msgstr ":strong:`説明` "
+msgstr ":strong:`説明`"
 
 #: ../../incident-intelligence/key-concepts.rst:18 ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:21
 msgid "Acknowledged"
@@ -2049,7 +2047,6 @@ msgid "Incident policy-based routing"
 msgstr "ポリシーベースのルーティング"
 
 #: ../../incident-intelligence/key-concepts.rst:79
-#, fuzzy
 msgid "Incident Intelligence relies on an incident policy-based routing scheme. Incident policy-based routing automatically organizes and routes incidents depending on the service that it's impacting. Rather than routing to a combination of teams and policies, the incident policy an incident is associated with determines who is notified of the incident."
 msgstr "Incident Intelligenceは、インシデント・ポリシーベースのルーティングスキームに依存しています。インシデント・ポリシー・ベースのルーティングでは、インシデントが影響を与えるサービスに応じて、インシデントが自動的に整理され、ルーティングされます。チームとポリシーの組み合わせにルーティングするのではなく、インシデントが関連付けられているインシデント・ポリシーによって、インシデントの通知先を決定します。"
 
@@ -2122,7 +2119,6 @@ msgid ":strong:`INC-[NUMBER] Incident title` [SEVERITY] for policy [incident pol
 msgstr ":strong:`INC-[番号］ポリシー[インシデント・ポリシー名]のインシデントタイトル` [重大度]：ディテクター「[ディテクター名]」のルール「[ルール名]」は、[トリガーされた日時］にトリガーされました。"
 
 #: ../../incident-intelligence/manage-notifications/example-notifications.rst:39
-#, fuzzy
 msgid "You can select the notification to go to the incident details where you can review details and acknowledge, dismiss, or resolve the incident. The text in the notification is static and can't be modified."
 msgstr "通知を選択すると、インシデントの詳細に移動し、詳細を確認して、インシデントを承認、解除、または解決できます。通知のテキストは静的で、変更することはできません。"
 
@@ -2148,19 +2144,19 @@ msgstr "Incident Intelligenceでの通知の管理については、以下のト
 
 #: ../../incident-intelligence/manage-notifications/manage-notifications.rst:20 ../../incident-intelligence/manage-notifications/prevent-spam.rst:14 ../../incident-intelligence/manage-notifications/sending-phone-numbers.rst:20
 msgid ":ref:`ii-notification-preferences`"
-msgstr ":ref:`ii-notification-preferences` "
+msgstr ":ref:`ii-notification-preferences`"
 
 #: ../../incident-intelligence/manage-notifications/manage-notifications.rst:21 ../../incident-intelligence/manage-notifications/notification-preferences.rst:94 ../../incident-intelligence/manage-notifications/sending-phone-numbers.rst:21
 msgid ":ref:`ii-prevent-spam`"
-msgstr ":ref:`ii-prevent-spam` "
+msgstr ":ref:`ii-prevent-spam`"
 
 #: ../../incident-intelligence/manage-notifications/manage-notifications.rst:22 ../../incident-intelligence/manage-notifications/notification-preferences.rst:95 ../../incident-intelligence/manage-notifications/prevent-spam.rst:15
 msgid ":ref:`ii-sending-phone-numbers`"
-msgstr ":ref:`ii-sending-phone-numbers` "
+msgstr ":ref:`ii-sending-phone-numbers`"
 
 #: ../../incident-intelligence/manage-notifications/manage-notifications.rst:23 ../../incident-intelligence/manage-notifications/notification-preferences.rst:96 ../../incident-intelligence/manage-notifications/prevent-spam.rst:16 ../../incident-intelligence/manage-notifications/sending-phone-numbers.rst:22
 msgid ":ref:`ii-example-notifications`"
-msgstr ":ref:`ii-example-notifications` "
+msgstr ":ref:`ii-example-notifications`"
 
 #: ../../incident-intelligence/manage-notifications/notification-preferences.rst:-1
 msgid "Steps to set your notification preferences for Incident Intelligence in Splunk Observability Cloud."
@@ -2484,32 +2480,32 @@ msgstr "（オプション）コラボレーションツールに関するメモ
 #: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:44 ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:34 ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:20 ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:39 ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:42
 #: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:31
 msgid ":ref:`ii-respond-to-incident`"
-msgstr ":ref:`ii-respond-to-incident` "
+msgstr ":ref:`ii-respond-to-incident`"
 
 #: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:45 ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:35 ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:21 ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:40 ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:43
 #: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:38
 msgid ":ref:`ii-snooze-incident`"
-msgstr ":ref:`ii-snooze-incident` "
+msgstr ":ref:`ii-snooze-incident`"
 
 #: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:46 ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:22 ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:41 ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:44 ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:39
 #: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:32
 msgid ":ref:`ii-add-responders-roles`"
-msgstr ":ref:`ii-add-responders-roles` "
+msgstr ":ref:`ii-add-responders-roles`"
 
 #: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:47 ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:37 ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:43 ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:47 ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:41
 #: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:34
 msgid ":ref:`ii-edit-incident`"
-msgstr ":ref:`ii-edit-incident` "
+msgstr ":ref:`ii-edit-incident`"
 
 #: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:48 ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:38 ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:24 ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:44 ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:48
 #: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:42 ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:35
 msgid ":ref:`ii-muted-incidents`"
-msgstr ":ref:`ii-muted-incidents` "
+msgstr ":ref:`ii-muted-incidents`"
 
 #: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:49 ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:39 ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:25 ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:49 ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:43
 #: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:36
 msgid ":ref:`ii-mtta-mttr`"
-msgstr ":ref:`ii-mtta-mttr` "
+msgstr ":ref:`ii-mtta-mttr`"
 
 #: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:-1
 msgid "Steps to add responders and assign roles within an incident in Incident Intelligence in Splunk Observability Cloud."
@@ -2562,7 +2558,7 @@ msgstr "対応者に割り当てるロールを選択します。ロールのリ
 #: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:36 ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:23 ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:42 ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:45 ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:40
 #: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:33
 msgid ":ref:`ii-add-incident-tools-resources`"
-msgstr ":ref:`ii-add-incident-tools-resources` "
+msgstr ":ref:`ii-add-incident-tools-resources`"
 
 #: ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:-1
 msgid "Steps to edit an incident in Incident Intelligence in Splunk Observability Cloud."
@@ -2598,7 +2594,7 @@ msgstr "Incident Intelligenceの［ :guilabel:`Incidents` ］および［ :guila
 
 #: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:15
 msgid ":strong:`Statistic`"
-msgstr ":strong:`統計` "
+msgstr ":strong:`統計`"
 
 #: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:18
 msgid "Triggered incidents"
@@ -2682,7 +2678,7 @@ msgstr "インシデント管理と対応については、以下のトピック
 
 #: ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:46
 msgid ":ref:`snow-integration`"
-msgstr ":ref:`snow-integration` "
+msgstr ":ref:`snow-integration`"
 
 #: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:-1
 msgid "Incident status overview and steps to respond to an incident in Incident Intelligence in Splunk Observability Cloud."
@@ -2698,7 +2694,7 @@ msgstr "インシデントはトリガーされたステータスで開始しま
 
 #: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:15
 msgid ":strong:`Incident status`"
-msgstr ":strong:`インシデントステータス` "
+msgstr ":strong:`インシデントステータス`"
 
 #: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:19
 msgid "Triggered incidents are considered active and open. Triggered incidents notify responders as defined by the steps in the associated incident policy's incident workflow."

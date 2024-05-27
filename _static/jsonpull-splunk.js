@@ -8,6 +8,7 @@ $(document).ready(function () {
        });
 
    $('.instrumentation').each(function () {
+      $(this).addClass('dynamic-yaml');
       let url = $(this).attr('url');
       let renamingDict = JSON.parse($(this).attr('data-renaming') || '{}');
       let section = $(this).attr('section') || 'instrumentation';
@@ -237,6 +238,7 @@ $(document).ready(function () {
    });
 
    $('.metrics-config').each(function () {
+      $(this).addClass('dynamic-yaml');
       if ($(this).data('processed')) {
          return;
       }
@@ -612,7 +614,7 @@ $(document).ready(function () {
          }
 
          $('.metrics-component').each(function () {
-
+            $(this).addClass('dynamic-yaml');
             let url = $(this).attr('url');
             console.log(url);
             let metricsYamlObject = $(this);
@@ -647,7 +649,7 @@ $(document).ready(function () {
          });
 
          $('.metrics-standard').each(function () {
-
+            $(this).addClass('dynamic-yaml');
             let url = $(this).attr('url');
             let metricsYamlObject = $(this);
 
@@ -683,7 +685,7 @@ $(document).ready(function () {
          });
 
          $('.metrics-yaml').each(function () {
-
+            $(this).addClass('dynamic-yaml');
             let url = $(this).attr('url');
             let metricsYamlObject = $(this);
             let category = $(this).attr('category');

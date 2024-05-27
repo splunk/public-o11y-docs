@@ -49,7 +49,7 @@ To activate the OTLP receiver add ``otlp`` to the ``receivers`` section of your 
 
 You can specify the ``endpoint``, or the ``host:port`` to which the receiver is going to receive data. 
 
-* ``endpoint`` defaults to ``0.0.0.0:4317`` for gRCP 
+* ``endpoint`` defaults to ``0.0.0.0:4317`` for gRPC 
 * ``endpoint`` defaults to ``0.0.0.0:4318`` for HTTP 
 
 Read about valid syntax at :new-page:`gRPC Name Resolution <https://github.com/grpc/grpc/blob/master/doc/naming.md>`.
@@ -87,7 +87,7 @@ Learn more at :new-page:`Protocol Buffers documentation <https://protobuf.dev/ov
 Work with OTLP/gRPC 
 -------------------------------------------------
 
-If you use gRPC, after establishing the underlying gRPC transport, the OTLP receiver will start to continoulsy receive requests with telemetry data, and needs to respond to each request. For more information, refer to the official OpenTelemetry documentation at :new-page:`OTLP/gRCP Specification <https://opentelemetry.io/docs/specs/otlp/#otlpgrcp>`. This includes details on requests, responses, and OTLP/gRPC throttling.
+If you use gRPC, after establishing the underlying gRPC transport, the OTLP receiver will start to continoulsy receive requests with telemetry data, and needs to respond to each request. For more information, refer to the official OpenTelemetry documentation at :new-page:`OTLP/gRPC Specification <https://opentelemetry.io/docs/specs/otlp/#otlpgrcp>`. This includes details on requests, responses, and OTLP/gRPC throttling.
 
 Work with OTLP/HTTP 
 -------------------------------------------------

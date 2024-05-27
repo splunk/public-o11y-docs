@@ -21,8 +21,7 @@ See the following topics to learn about the Smart Agent and how to migrate to th
 
 - :ref:`Install and configure the Smart Agent <smart-agent>`
 - :ref:`Smart Agent commands reference <smart-agent-commands>`
-- :ref:`Migrate to the Splunk Distribution of OpenTelemetry Collector <migrate-from-sa-to-otel>`
-- :ref:`Smart Agent to Collector configuration translation tool <otel-translation-tool>`
+- :ref:`Migrate to the Splunk Distribution of the OpenTelemetry Collector <migrate-from-sa-to-otel>`
 - :ref:`Metric mapping service <legacy-otel-mappings>`
 
 
