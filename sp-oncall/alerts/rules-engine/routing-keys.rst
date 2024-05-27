@@ -1,4 +1,3 @@
-:orphan:
 
 .. _spoc-routing-keys:
 

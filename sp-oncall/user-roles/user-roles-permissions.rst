@@ -16,7 +16,6 @@ Splunk On-Call user roles and permissions
    add-user
    usernames
    configure-teams
-   admin-permissions
    global-admin
    alert-admin
    team-admin

@@ -9,7 +9,6 @@ LogicMonitor integration for Splunk On-Call
 
 LogicMonitor replaces multiple monitoring solutions. It monitors everything in your datacenter: servers (physical, virtual, or cloud based), applications (web, mail, database, virtualization), networking gear, storage arrays, load balancers, UPS, etc, using a single web portal. The Splunk On-Call integration with LogicMonitor uses the REST API and requires that you have implemented LogicMonitor in your infrastructure.
 
-.. note:: For information on the legacy LogicMonitor integration, see :ref:`logicmonitor-legacy`.
 
 Requirements
 ==================

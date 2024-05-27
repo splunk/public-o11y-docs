@@ -21,6 +21,7 @@ Splunk On-Call integrations
    bmc-truesight-pulse-integration
    cloudwisdom-integration
    check_mk-integration
+   circonus-integration
    coralogix-integration-guide
    crittercism-integration
    datadog-integration
@@ -55,6 +56,7 @@ Splunk On-Call integrations
    logicmonitor-integration
    loggly-integration
    logz-io-integration
+   mailhop-integration
    manage-splunk-oncall-using-terraform
    microsoft-azure-oms-integration-guide-victorops
    microsoft-scom-integration
@@ -77,6 +79,8 @@ Splunk On-Call integrations
    rackspace-integration
    rapid7-integration-guide
    rest-endpoint-integration-guide
+   rollbar-integration
+   runscope-integration
    scalyr-integration
    scout-integration
    signal-sciences-integration
@@ -107,7 +111,6 @@ Splunk On-Call integrations
 
    victorops-bugsnag-integration
    victorops-catchpoint-integration
-   victorops-circonus-integration
    victorops-connectwise-automate-integration
    victorops-dynatrace-integration
    victorops-googlevoice-integration
@@ -116,15 +119,11 @@ Splunk On-Call integrations
    victorops-humio-integration
    victorops-jenkins-integration
    victorops-librenms-integration
-   victorops-logicmonitor-integration
-   victorops-mailhop-integration
    victorops-phantom-integration-guide
    victorops-pingdom-integration
    victorops-pingometer-integration
    victorops-raygun-integration
    victorops-riemann-integration
-   victorops-rollbar-integration
-   victorops-runscope-integration
    victorops-salesforce-integration
    victorops-signalfx-integration
    victorops-solarwinds-integration

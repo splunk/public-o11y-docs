@@ -21,10 +21,11 @@ How to get started with Splunk On-Call
    tls-security-protocol
    spoc-support
    spoc-system-requirements
+   system-reqts
    team-dashboard
    api
    custom-outbound-webhooks
-   system-reqts
+  
 
 
 Splunk On-Call is incident management software that allows teams to maintain a culture of high availability without slowing down the innovation process. The moment something goes wrong, Splunk On-Call will spring people to action, automatically. Teams receive context-rich notifications and collaborate cross-functionally to empower fast, efficient incident resolution with reduced downtime. Stakeholders can gain visibility to critical incidents and steps taken to resolve incidents.

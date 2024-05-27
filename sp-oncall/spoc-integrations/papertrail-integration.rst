@@ -1,7 +1,7 @@
 .. _Papertrail-spoc:
 
 Papertrail integration for Splunk On-Call
-º******************************************************
+******************************************************
 
 .. meta::
     :description: Configure the Papertrail integration for Splunk On-Call.

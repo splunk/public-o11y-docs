@@ -28,10 +28,7 @@ Paste the copied REST Endpoint into the Integration URL. Replace ``$routing_key`
 
 .. image:: /_images/spoc/kb-dms-integration-url.png
 
-You'll be redirected back to the integrations page where your routing
-key appears as a Configured Integration. Snitches will now automatically
-trigger incidents within On-Call. Test the integration with fake
-incidents to make sure it works.
+You'll be redirected back to the integrations page where your routing key appears as a configured integration. Snitches will now automatically trigger incidents within On-Call. Test the integration with fake incidents to make sure it works.
 
 .. image:: /_images/spoc/kb-dms-integration-confirm.png
 
