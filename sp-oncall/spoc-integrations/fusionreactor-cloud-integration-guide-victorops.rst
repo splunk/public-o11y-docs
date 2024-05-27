@@ -19,7 +19,7 @@ In Splunk On-Call
 
 .. image:: /_images/spoc/Integration-ALL-FINAL.png
 
-#. Select the :guilabel:`FusionReactor Cloud`integration.
+#. Select the :guilabel:`FusionReactor Cloud` integration.
 
 .. image:: /_images/spoc/Integration-FusionReactor-final.png
 
@@ -94,16 +94,16 @@ $. Set the toggle to :menuselection:`On` for the subscription you created earlie
 
 .. image:: /_images/spoc/Screen_Shot_2017-03-21_at_1_53_58_PM.png
 
-Click on the **Subscriptions** tab.
+#. Select  the :guilabel:`Subscriptions`` tab.
 
 .. image:: /_images/spoc/FusionReactor_Cloud.png
 
-Click on **Test** of the subscription you created.
+#. Select the :guilabel:`Test` of the subscription you created.
 
 .. image:: /_images/spoc/FusionReactor_Cloud-1.png
 
-Check for the notification in VictorOps.
+#. Check for the notification in Splunk On-Call.
 
 .. image:: /_images/spoc/Screen_Shot_2017-03-21_at_1_58_33_PM.png
 
-You have completed setting up this integration. \
+You have completed setting up this integration. 

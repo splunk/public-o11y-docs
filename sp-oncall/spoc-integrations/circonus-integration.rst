@@ -103,6 +103,4 @@ To send acknowledgements back to Circonus, use Splunk On-Call's :ref:`Custom Out
      ``?acknowledge_minutes=X``
 
 .. note:: The Splunk On-Call team member who acks the alert must have a Circonus account that has write (Normal or Admin) access to the
-account whose metric is alerting. To link the Splunk On-Call user to the Circonus user, go to the User Profile page at Circonus and enter the Splunk On-Call username.
-
-    .. image:: /_images/spoc/circonus4-1.png
+   account whose metric is alerting. To link the Splunk On-Call user to the Circonus user, go to the User Profile page at Circonus and enter the Splunk On-Call username.
