@@ -93,6 +93,29 @@ You can also use Database Query Performance to identify possible opportunities t
 
 Database Query Performance is available by default, so all you need to do is turn on the feature so that APM automatically begins indexing database-related span tags. See :ref:`turn-on-db-perf` to get started monitoring database performance in APM. 
 
+.. _db-infra-perf-sidebar:
+
+Monitor system health with Database Infrastructure Performance 
+------------------------------------------------------------------------
+
+If, as a site reliability engineer, apparent slowness in microservices has you wondering whether to investigate your infrastructure further, you can use :strong:`Database Infrastructure Performance` for help with triage of the following conditions:
+
+- Lock contention
+
+- Limited I/O (throughput)
+
+- Transient effects (spikes or constant loads)
+
+The Database Infrastructure Performance panel displays at the bottom of the navigator sidebar when from :strong:`APM` in Splunk Observability, you use :strong:`Database Query Performance` to select a MySQL, SQL Server, or Oracle database service. You can also access the Database Infrastructure Performance panel through the :strong:`Service Map` module in the APM menu.
+
+    .. image:: /_images/apm/db-query-perf/DIP-example.png  
+        :width: 50%
+        :alt: Database Infrastructure Performance panel
+
+
+The performance metrics display is enabled by related content correlation of databases that happens when the OpenTelemetry (OTel) Collector is connected to a database. For more information, see :ref:`get-started-relatedcontent`. Expand the Database Infrastructue Performance panel to see the relevant Infrastructure Navigator view. 
+You can use this panel to review key metrics without leaving Splunk APM.
+
 .. raw:: html
 
   <embed>
