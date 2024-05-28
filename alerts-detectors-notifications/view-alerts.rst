@@ -11,7 +11,9 @@ View alerts in Splunk Observability Cloud
 
 Alerts are highly relevant to the health of your services and applications. Observability Cloud shows alerts in all places where they matter, so that you don't miss on important information.
 
-You can view active alerts on the :ref:`Alerts page <alerts-page>`, from :ref:`charts <view-alerts-for-related>` and :ref:`detectors <view-alerts-within-detector>`, or access them :ref:`from APM <view-apm-alerts>`.
+You can view active alerts on the :ref:`Alerts page <alerts-page>`, from :ref:`charts <view-alerts-for-related>` and :ref:`detectors <view-alerts-within-detector>`, or access them :ref:`from APM <view-apm-alerts>`. 
+
+You can also view :ref:`alerts from navigators <view-alerts-in-navigators>`, or use :ref:`alerts to view navigators <view-navigators-from-alerts>`.
 
 
 .. _alerts-page:
