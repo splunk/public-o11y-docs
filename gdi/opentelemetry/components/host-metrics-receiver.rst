@@ -18,7 +18,6 @@ By default, the host metrics receiver is activated in the Splunk Distribution of
 - Memory usage metrics
 - Network interface and TCP connection metrics
 - Process count metrics (Linux only)
-- Per process CPU, memory, and disk I/O metrics
 
 Host receiver metrics appear in Infrastructure Monitoring. You can use them to create dashboards and alerts. See :ref:`create-detectors` for more information.
 
