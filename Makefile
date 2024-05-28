@@ -62,6 +62,19 @@ json:
 	@echo
 	@echo "Build finished. The JSON files are in $(BUILDDIR)/json."
 
+.PHONY: xml
+xml:
+	@echo "Building the MINIFY Files..."
+	@echo
+	@echo "*****************************************************"
+	@echo "     Building Splunk Observability Docs (XML)        "
+	@echo "*****************************************************"
+	@echo
+	@echo "Building the XML files from source..."
+	@echo
+	$(SPHINXBUILD) -b xml $(ALLSPHINXOPTS) $(BUILDDIR)/xml
+	@echo
+	@echo "Build finished. The XML files are in $(BUILDDIR)/xml."
 
 .PHONY: html-ja
 html-ja:
