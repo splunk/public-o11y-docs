@@ -24,6 +24,10 @@ To send Splunk Observability Cloud alert notifications to Splunk platform, compl
 
 .. _splunkplatform1:
 
+Step 1: 
+
+.. _splunkplatform2:
+
 Step 2: Create a Splunk platform integration in Splunk Observability Cloud
 =================================================================================
 

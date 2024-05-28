@@ -1,7 +1,7 @@
 .. _admin-notifs-index:
 
 ************************************************************************************
-Send alert notifications to third-party services using Splunk Observability Cloud
+Send alert notifications to services using Splunk Observability Cloud
 ************************************************************************************
 
 .. meta::
@@ -23,14 +23,15 @@ Send alert notifications to third-party services using Splunk Observability Clou
    Send alerts to xMatters<xmatters>
    
 
-In addition to sending alert notifications by email (see :ref:`manage-notifications`), you can configure Splunk Observability Cloud to send alert notifications to the following third-party services:
+In addition to sending alert notifications by email (see :ref:`manage-notifications`), you can configure Splunk Observability Cloud to send alert notifications to the following services:
 
+The following table shows third-party service integrations
 
 .. list-table::
    :header-rows: 1
    :widths: 30, 40
 
-   * - :strong:`Third-party`
+   * - :strong:`Third-party service`
      - :strong:`Link to documentation`
 
    * - Amazon EventBridge
@@ -57,14 +58,26 @@ In addition to sending alert notifications by email (see :ref:`manage-notificati
    * - Slack
      - See :ref:`slack`.
 
-   * - Splunk On-Call (VictorOps)
-     - See :ref:`splunkoncall`.
-
    * - Webhook
      - See :ref:`webhook`.
 
    * - xMatters
      - See :ref:`xmatters`.
+
+The following table shows Splunk service integrations
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 40
+
+   * - :strong:`Splunk service`
+     - :strong:`Link to documentation`
+
+   * - Splunk On-Call (VictorOps)
+     - See :ref:`splunkoncall`.
+
+   * - Splunk platform
+     - See :ref:`splunkplatform`.
 
 You can also configure Observability Cloud to send alert notifications to a webhook. See :ref:`webhook`.
 
