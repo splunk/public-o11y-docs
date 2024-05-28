@@ -123,13 +123,13 @@ Container level metrics and dimensions
     - Yes
 
   * - ``k8s.container.ephemeralstorage_limit``
-    - Container ??
+    - Container ``ephemeralstorage_limit``
     - :ref:`ootb-metrics-k8s-attributes`
     - ??
     - No
 
   * - ``k8s.container.ephemeralstorage_request``
-    - Container ??
+    - Container ``ephemeralstorage_request``
     - :ref:`ootb-metrics-k8s-attributes`
     - ??
     - No
@@ -147,19 +147,19 @@ Container level metrics and dimensions
     - Yes
 
   * - ``k8s.container.restarts``
-    - ???
+    - Container ``restarts``
     - :ref:`ootb-metrics-k8s-attributes`
     - ??
     - Yes
 
   * - ``k8s.container.storage_limit``
-    - ???
+    - Container ``storage_limit``
     - :ref:`ootb-metrics-k8s-attributes`
     - ??
     - No
 
   * - ``k8s.container.storage_request``
-    - ???
+    - Container ``storage_requests``
     - :ref:`ootb-metrics-k8s-attributes`
     - ??
     - No
