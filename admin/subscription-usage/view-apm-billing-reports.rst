@@ -10,8 +10,7 @@ View Splunk APM usage reports for your subscription plan
 
 .. note:: The following information describes aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team.
 
-
-Get detailed APM usage reports for recent usage periods to analyze subscription usage values and per-minute usage. 
+Get detailed APM usage reports for recent usage periods to analyze subscription usage values. 
 
 Prerequisite
 ================
@@ -20,7 +19,7 @@ To view the APM subscription usage page, you must have the admin or usage role.
 Download an APM usage report
 ==============================
 
-APM usage reports are available as tab-delimited text files. They include metrics and subscription usage for the entire usage period and break down usage for each minute in the usage period. Follow these steps to view and download a usage report:
+APM usage reports are available as tab-delimited text files. They include metrics and subscription usage for the entire usage period and break down usage. Follow these steps to view and download a usage report:
 
 1. Go to :guilabel:`Settings` then :guilabel:`Subscription Usage` and select the :strong:`APM` tab.
    Depending on your org subscription model, this might be :guilabel:`Settings` then :guilabel:`Billing and Usage`.
@@ -34,39 +33,29 @@ APM usage reports are available as tab-delimited text files. They include metric
 Metrics for host subscription plans
 -----------------------------------
 
-In addition to per-minute usage metrics, usage reports for host subscription plans include the following information about your organization's usage:
+Usage reports for host subscription plans include the following information about your organization's usage:
 
-- The number of billed hosts
-
-- The number of billed containers
-
-- The number of billed Troubleshooting MetricSets
-
-- The billed trace volume
-
-- The average number of hosts
-
-- The average number of containers
-
-- The average number of Troubleshooting MetricSets
-
-- The average trace volume in bytes
+* The number of billed hosts. Host data is available per minute.
+* The number of billed containers. Container data is available per minute.
+* The billed trace volume. Trace volume data is available per minute.
+* The number of billed Troubleshooting MetricSets (TMS). TMS data is available per minute. 
+* The number of billed Monitoring MetricSets (MMS). MMS data is available at 10-minute intervals.
+* The average number of hosts
+* The average number of containers
+* The average number of Troubleshooting MetricSets
+* The average trace volume in bytes
 
 .. note:: To generate and download per-minute subscription usage reports for your hosts and containers, see :ref:`host-diagnostics-report-apm`.
 
-Metrics for trace-analyzed-per-second (TAPM) subscription plans
+Metrics for trace-analyzed-per-minute (TAPM) subscription plans
 ----------------------------------------------------------------
 
-In addition to per-minute usage metrics, usage reports for TAPM subscription plans include the following information about your organization's usage:
+Usage reports for TAPM subscription plans include the following information about your organization's usage:
 
-- The number of billed TAPM
-
-- The number of billed Troubleshooting MetricSets
-
-- The billed trace volume
-
-- The average number of TAPM
-
-- The average number of Troubleshooting MetricSets
-
-- The average trace volume in bytes
+* The number of billed TAPM. TAPM data is available per minute.
+* The billed trace volume. Trace volume data is available per minute.
+* The number of billed Troubleshooting MetricSets (TMS). TMS data is available per minute. 
+* The number of billed Monitoring MetricSets (MMS). MMS data is available at 10-minute intervals.
+* The average number of TAPM
+* The average number of Troubleshooting MetricSets
+* The average trace volume in bytes
