@@ -11,7 +11,7 @@ Follow these steps to instrument your mobile and browser applications and get da
 
 .. _rum-access-token:
 
-Generate your RUM access token in Observability Cloud
+Generate your RUM access token in Splunk Observability Cloud
 ===========================================================
 
 A RUM token is a public key used only during RUM ingestion. To create the RUM Token you need to be an administrator in Splunk Observability Cloud. For more information, see :ref:`admin-org-tokens`.

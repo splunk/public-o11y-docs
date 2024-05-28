@@ -13,7 +13,7 @@ View and manage permissions for detectors
 :strong:`Available in Enterprise Edition`
 |hr|
 
-To help you manage write permissions, Observability Cloud lets you view
+To help you manage write permissions, Splunk Observability Cloud lets you view
 grant and revoke permissions for detectors.
 
 To learn more about write permissions, see :ref:`about-write-permissions`.

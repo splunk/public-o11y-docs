@@ -20,7 +20,7 @@ If you have instrumented an application but are not seeing profiling data in Spl
 No profiling data in Splunk Observability Cloud
 ==================================================
 
-If profiling data does not appear in Observability Cloud, do the following:
+If profiling data does not appear in Splunk Observability Cloud, do the following:
 
 Check that you've instrumented your application
 ----------------------------------------------------
@@ -72,7 +72,7 @@ The exporter is configured automatically for the Splunk OTel Collector version 0
 Check that you've activated AlwaysOn Profiling
 -------------------------------------------------
 
-Depending on the programming language, you can activate AlwaysOn Profiling by setting a system property, a function argument, or an environment variable. System properties and function arguments always take precedence. If the profiler is not activated, Observability Cloud can't receive profiling data.
+Depending on the programming language, you can activate AlwaysOn Profiling by setting a system property, a function argument, or an environment variable. System properties and function arguments always take precedence. If the profiler is not activated, Splunk Observability Cloud can't receive profiling data.
 
 To solve this issue, check that you've activated the profiler. See :ref:`profiling-setup-enable-profiler`.
 
@@ -108,10 +108,10 @@ Another cause for call stacks not appearing is when HTTP requests follow an asyn
 
 .. _profiling-ui-not-visible:
 
-AlwaysOn Profiling is not accessible in Observability Cloud
+AlwaysOn Profiling is not accessible in Splunk Observability Cloud
 ============================================================
 
-If you're sending profiling data to Observability Cloud but can't see AlwaysOn Profiling in Splunk APM, your organization might be lacking the profiler entitlement.
+If you're sending profiling data to Splunk Observability Cloud but can't see AlwaysOn Profiling in Splunk APM, your organization might be lacking the profiler entitlement.
 
 AlwaysOn Profiling is activated for all host-based subscriptions. For TAPM-based subscriptions, AlwaysOn Profiling might be deactivated depending on the contract.
 

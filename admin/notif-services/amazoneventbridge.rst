@@ -5,15 +5,15 @@ Send alert notifications to Amazon EventBridge using Splunk Observability Cloud
 *******************************************************************************************
 
 .. meta::
-      :description: Configure Observability Cloud to send alerts to Amazon EventBridge when a detector alert condition is met and when the condition clears.
+      :description: Configure Splunk Observability Cloud to send alerts to Amazon EventBridge when a detector alert condition is met and when the condition clears.
 
 You can configure Splunk Observability Cloud to automatically send alert notifications to Amazon EventBridge when a detector alert condition is met and when the condition clears.
 
-To send Observability Cloud alert notifications to Amazon EventBridge, complete the following configuration tasks:
+To send Splunk Observability Cloud alert notifications to Amazon EventBridge, complete the following configuration tasks:
 
 * :ref:`amazoneventbridge1`
 
-  You must be an Observability Cloud administrator to complete this task.
+  You must be an Splunk Observability Cloud administrator to complete this task.
 
 * :ref:`amazoneventbridge2`
 
@@ -24,7 +24,7 @@ To send Observability Cloud alert notifications to Amazon EventBridge, complete 
 
 .. _amazoneventbridge1:
 
-Step 1: Create an Amazon EventBridge integration in Observability Cloud
+Step 1: Create an Amazon EventBridge integration in Splunk Observability Cloud
 =================================================================================
 
 Prerequisite
@@ -48,7 +48,7 @@ To create an Amazon EventBridge integration in Splunk Observability Cloud:
    #. Select :strong:`New Integration` to display the configuration options.
 
 #. By default, the name of the integration is :strong:`Amazon EventBridge`. Give your integration a unique and descriptive name. For information about the downstream use of this name, see :new-page-ref:`About naming your integrations <naming-note>`.
-#. In the :strong:`AWS Account Id` field, enter the ID of the AWS account that you want to send Observability Cloud alert notifications to.
+#. In the :strong:`AWS Account Id` field, enter the ID of the AWS account that you want to send Splunk Observability Cloud alert notifications to.
 #. The :strong:`Event Source` field displays the name of the partner event source. This value has a one-to-one mapping with the name of the partner event bus you see in :ref:`amazoneventbridge2`.
 #. In the :strong:`AWS Region` list, select the region where you want to create the partner event source.
 #. :strong:`Save and Enable`.
@@ -56,7 +56,7 @@ To create an Amazon EventBridge integration in Splunk Observability Cloud:
 
 .. _amazoneventbridge2:
 
-Step 2: Accept Observability Cloud as an event source in Amazon EventBridge
+Step 2: Accept Splunk Observability Cloud as an event source in Amazon EventBridge
 =====================================================================================
 
 Prerequisite
@@ -69,13 +69,13 @@ For information about how to accept Splunk Observability Cloud as a partner even
 
 .. _amazoneventbridge3:
 
-Step 3: Add an Amazon EventBridge integration as a detector alert recipient in Observability Cloud
+Step 3: Add an Amazon EventBridge integration as a detector alert recipient in Splunk Observability Cloud
 ==============================================================================================================
 
 ..
   once detector docs are migrated, this step may be covered in those docs and can be removed from all of these docs. link to :ref:`detectors` and :ref:`receiving-notifications` instead once docs are migrated
 
-To add an Amazon EventBridge integration as a detector alert recipient in Observability Cloud:
+To add an Amazon EventBridge integration as a detector alert recipient in Splunk Observability Cloud:
 
 #. Create or edit a detector that you want to configure to send alert notifications using your Amazon EventBridge integration.
 

@@ -13,9 +13,9 @@ Set up Log Observer
 
 .. include:: /_includes/log-observer-transition.rst
    
-Complete the instructions on this page if you have a Log Observer entitlement in Observability Cloud. If you don't have a Log Observer entitlement in Observability Cloud, see :ref:`logs-intro-logconnect` to set up the integration and begin using Log Observer to query your Splunk platform logs.
+Complete the instructions on this page if you have a Log Observer entitlement in Splunk Observability Cloud. If you don't have a Log Observer entitlement in Splunk Observability Cloud, see :ref:`logs-intro-logconnect` to set up the integration and begin using Log Observer to query your Splunk platform logs.
 
-By default, Log Observer indexes and stores all logs data that you send to Observability Cloud unless you choose to archive some of your logs data in Amazon S3 buckets. See :ref:`logs-infinite` to learn how to archive logs until you want to index and analyze them in Log Observer. If you use Log Observer Connect, your logs data remains in your Splunk platform instance and is never stored in Log Observer or Observability Cloud.
+By default, Log Observer indexes and stores all logs data that you send to Splunk Observability Cloud unless you choose to archive some of your logs data in Amazon S3 buckets. See :ref:`logs-infinite` to learn how to archive logs until you want to index and analyze them in Log Observer. If you use Log Observer Connect, your logs data remains in your Splunk platform instance and is never stored in Log Observer or Splunk Observability Cloud.
 
 What type of data is supported?
 ==================================================
@@ -26,13 +26,13 @@ Prerequisites
 ==================================================
 Before setting up Log Observer, you must meet the following criteria:
 
-- Your Observability Cloud organization must be provisioned with an entitlement for Log Observer.
-- You must be an administrator in an Observability Cloud organization to set up integrations.
+- Your Splunk Observability Cloud organization must be provisioned with an entitlement for Log Observer.
+- You must be an administrator in an Splunk Observability Cloud organization to set up integrations.
 
 
 Start using Log Observer
 ==================================================
-You can use Observability Cloud guided setups to send logs to Log Observer from your hosts, containers, and cloud providers. Use the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` to capture logs from your resources and applications. Decide whether you want to see logs from each data source, only one, or any combination of data sources. The more complete your log collection in Log Observer, the more effective your use of Log Observer can be for troubleshooting your entire environment using logs. You can complete step 1, step 2, or both in the following list, depending on which logs you want to see.
+You can use Splunk Observability Cloud guided setups to send logs to Log Observer from your hosts, containers, and cloud providers. Use the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` to capture logs from your resources and applications. Decide whether you want to see logs from each data source, only one, or any combination of data sources. The more complete your log collection in Log Observer, the more effective your use of Log Observer can be for troubleshooting your entire environment using logs. You can complete step 1, step 2, or both in the following list, depending on which logs you want to see.
 
 To start using Log Observer, complete the following tasks:
 

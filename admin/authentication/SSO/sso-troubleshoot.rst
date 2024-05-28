@@ -58,7 +58,7 @@ Solutions
 Make sure that all of your SSO integrations have the :guilabel:`Entity ID` checked. Ensure that in the IdP, the Splunk Observability Cloud connection is configured to accept the new format of the Entity ID, which is displayed next to the checkbox and contains the Integration ID in it.
 
 
-You receive a 404 error from Observability Cloud after you log in to the IdP.
+You receive a 404 error from Splunk Observability Cloud after you log in to the IdP.
 -------------------------------------------------------------------------------
   
 
@@ -93,7 +93,7 @@ For example, you see an error message stating that authentication is required.
 Cause
 ******
 
-The :code:`Subject` attribute in the assertion has a format other than :code:`Persistent`. The :code:`Subject` attribute identifies the subject of a SAML assertion, which is typically the user who is being authenticated. A :code:`Persistent` subject means that IdP guarantees that this attribute always stays the same for a given user. Observability Cloud requires the subject to be in Persistent format.
+The :code:`Subject` attribute in the assertion has a format other than :code:`Persistent`. The :code:`Subject` attribute identifies the subject of a SAML assertion, which is typically the user who is being authenticated. A :code:`Persistent` subject means that IdP guarantees that this attribute always stays the same for a given user. Splunk Observability Cloud requires the subject to be in Persistent format.
 
 Solution
 **********
@@ -113,7 +113,7 @@ Symptom
 Cause
 ******
 
-For IdP specific integrations such as, PingOne, Okta, or OneLogin, Observability Cloud expects that the requests come from particular domains or URLs.
+For IdP specific integrations such as, PingOne, Okta, or OneLogin, Splunk Observability Cloud expects that the requests come from particular domains or URLs.
 
 Solution
 **********

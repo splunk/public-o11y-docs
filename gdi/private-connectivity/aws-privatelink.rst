@@ -258,7 +258,7 @@ Learn more in the AWS documentation at :new-page:`https://docs.aws.amazon.com/vp
 .. Next steps
 .. ================
 
-.. After you connect Splunk Observability Cloud with AWS, you can use Observability Cloud to track a series of metrics and analyze your AWS data in real time. 
+.. After you connect Splunk Observability Cloud with AWS, you can use Splunk Observability Cloud to track a series of metrics and analyze your AWS data in real time. 
 
 .. - See the AWS official documentation for a list of the available AWS resources.
 ..  - See :ref:`how to leverage data from integration with AWS <aws-post-install>` for more information.

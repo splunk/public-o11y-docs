@@ -5,18 +5,18 @@ Configure a PingOne SSO integration
 *********************************************************************
 
 .. meta::
-   :description: Splunk Observability Cloud provides the capability for your users to log in using various SSO providers. The PingOne SSO integration allows you to log into Observability Cloud using PingOne.
+   :description: Splunk Observability Cloud provides the capability for your users to log in using various SSO providers. The PingOne SSO integration allows you to log into Splunk Observability Cloud using PingOne.
 
-When you integrate PingOne with Splunk Observability Cloud, your users can log into Observability Cloud using PingOne.
+When you integrate PingOne with Splunk Observability Cloud, your users can log into Splunk Observability Cloud using PingOne.
 
 Before you configure the OneLogin SSO integration, complete the steps in :new-page-ref:`sso-label`. The section :ref:`Name an SSO integration<naming-note-sso>` describes how to name your integrations.
 
-.. note:: To integrate PingOne with Observability Cloud, you must be an administrator of your PingOne organization and your Observability Cloud organization.
+.. note:: To integrate PingOne with Splunk Observability Cloud, you must be an administrator of your PingOne organization and your Splunk Observability Cloud organization.
 
-Create a PingOne integration in Observability Cloud
+Create a PingOne integration in Splunk Observability Cloud
 ===============================================================================
 
-Start by creating the PingOne integration in Observability Cloud. Follow these steps:
+Start by creating the PingOne integration in Splunk Observability Cloud. Follow these steps:
 
 #. Find the realm for your organization. To learn more, see :new-page-ref:`organizations`.
 #. In the following URL, substitute the name of your realm for ``<REALM>``, then navigate to ``https://<REALM>.signalfx.com/#/integrations/pingone``
@@ -26,10 +26,10 @@ Start by creating the PingOne integration in Observability Cloud. Follow these s
    #. If you want to display a name on the SSO login page, enter a value for :guilabel:`Name`. This name appears on the SSO login page for custom domains.
    #. If you want to display a name on the SSO login page, select :guilabel:`Show on login page`.
 
-Create a SAML application for the PingOne integration in Observability Cloud
+Create a SAML application for the PingOne integration in Splunk Observability Cloud
 ===============================================================================
 
-Next, in PingOne connect a SAML application to the PingOne integration instance in Observability Cloud. Follow these
+Next, in PingOne connect a SAML application to the PingOne integration instance in Splunk Observability Cloud. Follow these
 steps:
 
 #. Navigate to your PingOne console page. For example, navigate to ``https://console.pingone.com/?env=envId``
@@ -58,12 +58,12 @@ steps:
 #. Select :guilabel:`Download Metadata`.
 #. Select :guilabel:`Download Signing Certificate`, then select the Privacy Enhanced Mail (PEM) file with the name ``X509 PEM.crt``.
 
-Enter the PingOne connection information in Observability Cloud
+Enter the PingOne connection information in Splunk Observability Cloud
 ===============================================================================
 
-In Observability Cloud, update the integration instance with the information from PingOne. Follow these steps:
+In Splunk Observability Cloud, update the integration instance with the information from PingOne. Follow these steps:
 
-#. In Observability Cloud, open the new PingOne integration instance you created in the previous section.
+#. In Splunk Observability Cloud, open the new PingOne integration instance you created in the previous section.
 #. In :guilabel:`Certificate`, select :guilabel:`Upload File`, then select the PEM file with the name ``X509 PEM.crt``.
 #. In :guilabel:`Metadata`, select the metadata file you downloaded in a previous step.
 #. Select :guilabel:`Save`.
@@ -71,8 +71,8 @@ In Observability Cloud, update the integration instance with the information fro
 Create data mappings in PingOne
 ===============================================================================
 
-To provide SAML SSO login for PingOne, Observability Cloud needs additional information from PingOne data fields. To
-set up the data mapping from PingOne to Observability Cloud, follow these steps:
+To provide SAML SSO login for PingOne, Splunk Observability Cloud needs additional information from PingOne data fields. To
+set up the data mapping from PingOne to Splunk Observability Cloud, follow these steps:
 
 #. Switch to the PingOne admin console.
 #. Select :guilabel:`Attribute Mappings`.
@@ -86,6 +86,6 @@ set up the data mapping from PingOne to Observability Cloud, follow these steps:
 #. Select :guilabel:`Save`
 #. To enable the new PingOne SAML application, toggle the switch at the top of the page.
 
-To learn more about mapping Observability Cloud data fields to PingOne data fields, see the :ref:`saml-user-information` section in the :ref:`sso-generic` topic.
+To learn more about mapping Splunk Observability Cloud data fields to PingOne data fields, see the :ref:`saml-user-information` section in the :ref:`sso-generic` topic.
 
 .. include:: /_includes/troubleshooting-components.rst

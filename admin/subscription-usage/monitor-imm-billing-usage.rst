@@ -250,6 +250,6 @@ To get a detailed breakdown of the metric time series (MTS) you've created and u
 System limits and data throttling
 ====================================================================
 
-Observability Cloud products, including Infrastructure Monitoring, have system limits to protect the service's performance. If you exceed those limits, the platform starts to throttle the data you send in. 
+Splunk Observability Cloud products, including Infrastructure Monitoring, have system limits to protect the service's performance. If you exceed those limits, the platform starts to throttle the data you send in. 
 
 To learn more, see :ref:`per-product-limits`. 

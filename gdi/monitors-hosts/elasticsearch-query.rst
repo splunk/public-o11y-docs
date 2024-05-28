@@ -25,7 +25,7 @@ Data model transformation
 -------------------------
 
 This integration transforms Elasticsearch responses into Splunk
-Observability Cloud data points.
+Splunk Observability Cloudbservability Cloud data points.
 
 At high level, it metricizes responses of the following types:
 
@@ -48,7 +48,7 @@ At high level, it metricizes responses of the following types:
    bucket.
 
 **Note**: Since Bucket aggregations determine dimensions in Splunk
-Observability Cloud, in most cases Bucket aggregations should be
+Splunk Observability Cloudbservability Cloud, in most cases Bucket aggregations should be
 performed on ``string`` fields that represent a slice of the data from
 Elasticsearch.
 

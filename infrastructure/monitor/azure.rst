@@ -9,7 +9,7 @@ Monitor Azure
 
 Splunk Observability Cloud can automatically import metrics and metadata from your Microsoft Azure services powered by Azure Monitor. 
 
-* For a list of supported Azure services in Observability Cloud, refer to :ref:`supported-azure-services`. 
+* For a list of supported Azure services in Splunk Observability Cloud, refer to :ref:`supported-azure-services`. 
 * Before you can start monitoring any Microsoft Azure resources, :ref:`get-started-azure`.
 * To create filters using the API, see :new-page:`Create filters using the API <https://dev.splunk.com/observability/docs/integrations/msazure_integration_overview/#Create-filters-using-the-API>` in the developer portal documentation. 
 * See :new-page:`https://docs.microsoft.com/en-us/azure/azure-monitor/overview <https://docs.microsoft.com/en-us/azure/azure-monitor/overview>` on the Microsoft site for more information.
@@ -75,7 +75,7 @@ Follow these steps to analyze problem Azure services from the Infrastructure pag
        * - ``Deviation from Median``
          - Instances appear as red that exceed the median absolute deviation value by at least three absolute deviations. This setting does not weigh extreme outliers as heavily as the standard deviation.
 
-6. Select a specific instance you want to investigate further to view all the metadata and key metrics for the instance. For every instance, Observability Cloud provides a default dashboard.
+6. Select a specific instance you want to investigate further to view all the metadata and key metrics for the instance. For every instance, Splunk Observability Cloud provides a default dashboard.
 
    Analyze all the available metadata about the cloud service the instance is running in, the instance itself, and any custom tags associated with the instance. The default dashboard provides metric time series (MTS) for key metrics.
 
@@ -84,7 +84,7 @@ Follow these steps to analyze problem Azure services from the Infrastructure pag
 Use default dashboards and built-in content to monitor Azure services
 =========================================================================================
 
-Observability Cloud provides default dashboards and built-in content for selected Azure services. 
+Splunk Observability Cloud provides default dashboards and built-in content for selected Azure services. 
 
 Default dashboards
 -------------------------------------------------------------------
@@ -138,7 +138,7 @@ Azure Virtual Machines instances are powered by their respective public cloud se
 Identify Azure resources using metadata
 ================================================================================
 
-You can use all the Azure metadata imported into Observability Cloud, regardless of the mechanism by which you collect and send metrics. This feature is available for the relevant Azure Services as well as metrics collected by the collectd agent.
+You can use all the Azure metadata imported into Splunk Observability Cloud, regardless of the mechanism by which you collect and send metrics. This feature is available for the relevant Azure Services as well as metrics collected by the collectd agent.
 
 Azure metadata helps you analyze metrics by custom tags, region, host names, and other dimensions.
 
@@ -156,7 +156,7 @@ The Azure integration adds the ``azure_resource_id`` dimension to metrics receiv
 
 ``<subscription_id>/<resource_group_name>/<resource_provider_namespace>/<resource_name>``
 
-The Azure integration truncates the dimension value to 256 bytes, which is the maximum length of an Observability Cloud dimension value.
+The Azure integration truncates the dimension value to 256 bytes, which is the maximum length of an Splunk Observability Cloud dimension value.
 
 If you install collectd on an Azure Compute Virtual Machine instance using the
 :new-page:`standard install script <https://github.com/signalfx/signalfx-collectd-installer>`,
@@ -201,7 +201,7 @@ following syntax:
 
 ``<subscription_id>/<resource_group_name>``
 
-Some Azure services include dimensions that Observability Cloud adds to MTS.
+Some Azure services include dimensions that Splunk Observability Cloud adds to MTS.
 For example, the metrics from :strong:`Azure Storage` provider include the
 dimensions ``apiname`` and ``geotype``.
 
@@ -280,7 +280,7 @@ Azure tags for resource groups
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Azure tags for resource groups are a list of key:value pairs, and from them the Azure integration creates
-Observability Cloud tags that have the syntax ``azure_resource_group_tag<name-of-tag>``.
+Splunk Observability Cloud tags that have the syntax ``azure_resource_group_tag<name-of-tag>``.
 For example, if Azure has ``[key1:label01, key2:label02]`` as the tags property for a resource group, the Azure integration
 creates two tags: ``azure_resource_group_tag_key1`` and ``azure_resource_group_tag_key2``.
 
@@ -295,7 +295,7 @@ The following tables shows the metadata that the Azure integration syncs for ind
 
 **Autoscale settings**
 
-For autoscale settings, Observability Cloud syncs the following properties:
+For autoscale settings, Splunk Observability Cloud syncs the following properties:
 
 .. list-table::
    :header-rows: 1
@@ -325,7 +325,7 @@ For autoscale settings, Observability Cloud syncs the following properties:
 
 **Batch accounts**
 
-For batch accounts, Observability Cloud syncs the following properties:
+For batch accounts, Splunk Observability Cloud syncs the following properties:
 
 .. list-table::
    :header-rows: 1
@@ -360,7 +360,7 @@ For batch accounts, Observability Cloud syncs the following properties:
 
 **Function apps and web apps**
 
-For function apps and web apps, Observability Cloud syncs the following properties:
+For function apps and web apps, Splunk Observability Cloud syncs the following properties:
 
 .. list-table::
    :header-rows: 1
@@ -390,7 +390,7 @@ For function apps and web apps, Observability Cloud syncs the following properti
 
 **Redis caches**
 
-For Redis caches, Observability Cloud syncs the following properties:
+For Redis caches, Splunk Observability Cloud syncs the following properties:
 
 .. list-table::
    :header-rows: 1
@@ -445,7 +445,7 @@ For Redis caches, Observability Cloud syncs the following properties:
 
 **Storage accounts**
 
-For storage accounts, Observability Cloud syncs the following properties:
+For storage accounts, Splunk Observability Cloud syncs the following properties:
 
 .. list-table::
    :header-rows: 1
@@ -477,7 +477,7 @@ For storage accounts, Observability Cloud syncs the following properties:
 
 **Virtual machines**
 
-For virtual machines, Observability Cloud retrieves a subset of metadata about the instance,
+For virtual machines, Splunk Observability Cloud retrieves a subset of metadata about the instance,
 as well as custom metadata you specify for the instance.
 
 .. list-table::
@@ -545,7 +545,7 @@ as well as custom metadata you specify for the instance.
 
 **Virtual machine scale sets**
 
-For virtual machine scale sets, Observability Cloud syncs the following properties:
+For virtual machine scale sets, Splunk Observability Cloud syncs the following properties:
 
 .. list-table::
    :header-rows: 1
@@ -604,7 +604,7 @@ For virtual machine scale sets, Observability Cloud syncs the following properti
 
 **Virtual machines in scale sets**
 
-For virtual machines in scale sets, Observability Cloud syncs the following properties:
+For virtual machines in scale sets, Splunk Observability Cloud syncs the following properties:
 
 .. list-table::
    :header-rows: 1

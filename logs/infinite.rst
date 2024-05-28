@@ -89,7 +89,7 @@ To create an infinite logging rule, follow these steps:
 
 3. Decide where to archive your data. To send your logs to an existing S3 bucket, select the infinite logging connection you want, then skip to step 9.
 
-4. If you want to send your data to a new S3 bucket and you are an Observability Cloud admin, select :guilabel:`Create new connection`. The :guilabel:`Establish a New S3 Connection` guided setup appears.
+4. If you want to send your data to a new S3 bucket and you are an Splunk Observability Cloud admin, select :guilabel:`Create new connection`. The :guilabel:`Establish a New S3 Connection` guided setup appears.
 
 5. On the :guilabel:`Choose an AWS Region and Authentication Type` tab, do the following:
 
@@ -124,7 +124,7 @@ To create an infinite logging rule, follow these steps:
 
 14. Review your configuration choices, then select :guilabel:`Save`.
 
-Your infinite logging setup is now complete. Depending on your selections, your logs are archived, indexed in Observability Cloud for analysis, or both.
+Your infinite logging setup is now complete. Depending on your selections, your logs are archived, indexed in Splunk Observability Cloud for analysis, or both.
 
 Infinite logging rules limits
 ================================================================================

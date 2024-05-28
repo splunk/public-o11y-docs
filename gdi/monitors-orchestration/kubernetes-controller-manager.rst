@@ -10,7 +10,7 @@ Kubernetes Controller Manager (deprecated)
 
 The monitor queries path ``/metrics`` by default when no path is
 configured. It converts the Prometheus metric types to Splunk
-Observability Cloud metric types as described in the documentation for
+Splunk Observability Cloudbservability Cloud metric types as described in the documentation for
 :ref:`prometheus-exporter` All Prometheus labels are converted
 directly to Infrastructure Monitoring dimensions.
 

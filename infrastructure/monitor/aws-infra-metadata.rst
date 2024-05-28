@@ -486,7 +486,7 @@ For more information, see the AWS documentation for ECS.
 Amazon Elastic File System metadata
 -------------------------------------------------------------------
 
-For Amazon Elastic File System (Amazon EFS), Infrastructure Monitoring scans every volume ID from your AWS account and imports all tags set on the volume. Observability Cloud doesn't import any properties.
+For Amazon Elastic File System (Amazon EFS), Infrastructure Monitoring scans every volume ID from your AWS account and imports all tags set on the volume. Splunk Observability Cloud doesn't import any properties.
 
 For more information, including acceptable values and constraints, see the AWS documentation for EFS.
 

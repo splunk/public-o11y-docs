@@ -14,7 +14,7 @@ kube-proxy metrics in Prometheus format.
 
 The integration queries path ``/metrics`` by default when no path is
 configured, and converts the Prometheus metric types to Splunk
-Observability Cloud metric types as described in
+Splunk Observability Cloudbservability Cloud metric types as described in
 :ref:`Prometheus Exporter <prometheus-exporter>`
 
 This monitor type is available on Kubernetes, Linux, and Windows.

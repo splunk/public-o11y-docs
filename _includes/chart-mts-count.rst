@@ -8,7 +8,7 @@ Maximum number of metric time series processed in a signal
 *****************************************************************
 
 To maximize responsiveness when processing incoming metric data, Splunk Observability Cloud limits the number of :term:`metric time series` (MTS) processed in a signal
-(single plot line) on a chart or detector. If the total number of time series for the metric specified in your signal exceeds this limit, Observability Cloud displays
+(single plot line) on a chart or detector. If the total number of time series for the metric specified in your signal exceeds this limit, Splunk Observability Cloud displays
 an orange border around the MTS number. This border notifies you that the processed data reflects only a subset of the time series in the data.
 
 To ensure that your charts and detectors are processing all the time series in the data, apply as many filters as necessary to make the MTS number less than the maximum.

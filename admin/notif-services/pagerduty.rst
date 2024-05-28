@@ -5,11 +5,11 @@ Send alert notifications to PagerDuty using Splunk Observability Cloud
 *************************************************************************
 
 .. meta::
-      :description: Configure Observability Cloud to send alerts to PagerDuty when a detector alert condition is met and when the condition clears.
+      :description: Configure Splunk Observability Cloud to send alerts to PagerDuty when a detector alert condition is met and when the condition clears.
 
 You can configure Splunk Observability Cloud to automatically send alert notifications to PagerDuty when a detector alert condition is met and when the alert clears.
 
-To send Observability Cloud alert notifications to PagerDuty, complete the following configuration tasks:
+To send Splunk Observability Cloud alert notifications to PagerDuty, complete the following configuration tasks:
 
 * :ref:`pagerduty1`
 
@@ -17,14 +17,14 @@ To send Observability Cloud alert notifications to PagerDuty, complete the follo
 
 * :ref:`pagerduty2`
 
-  You must be an Observability Cloud administrator to complete this task.
+  You must be an Splunk Observability Cloud administrator to complete this task.
 
 * :ref:`pagerduty3`
 
 
 .. _pagerduty1:
 
-Step 1: Create an Observability Cloud integration in PagerDuty
+Step 1: Create an Splunk Observability Cloud integration in PagerDuty
 =================================================================================
 
 For information about how to create an integration in PagerDuty, see :new-page:`PagerDuty Integration Guide <https://www.pagerduty.com/docs/guides/signalfx-integration-guide/>`.
@@ -39,7 +39,7 @@ Step 2: Create a PagerDuty integration in Splunk Observability Cloud
 
 You must be a Splunk Observability Cloud administrator to perform this task.
 
-To create a PagerDuty integration in Observability Cloud:
+To create a PagerDuty integration in Splunk Observability Cloud:
 
 #. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`PagerDuty guided setup <https://login.signalfx.com/#/integrations/integrations/pagerduty>`. Optionally, you can navigate to the guided setup on your own: 
@@ -62,13 +62,13 @@ To create a PagerDuty integration in Observability Cloud:
 
 .. _pagerduty3:
 
-Step 3: Add a PagerDuty integration as a detector alert recipient in Observability Cloud
+Step 3: Add a PagerDuty integration as a detector alert recipient in Splunk Observability Cloud
 =================================================================================================
 
 ..
   once the detector docs are migrated - this step may be covered in those docs and can be removed from these docs. below link to :ref:`detectors` and :ref:`receiving-notifications` instead once docs are migrated
 
-To add a PagerDuty integration as a detector alert recipient in Observability Cloud:
+To add a PagerDuty integration as a detector alert recipient in Splunk Observability Cloud:
 
 #. Create or edit a detector that you want to configure to send alert notifications using your PagerDuty integration.
 

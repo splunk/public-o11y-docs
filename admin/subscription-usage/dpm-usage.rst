@@ -153,7 +153,7 @@ If your environment grows significantly after your initial sizing, then your DPM
 What is the user-visible impact when an account is limited?
 -------------------------------------------------------------------
 
-Splunk Observability Cloud organizes the received datapoints into metric time series (MTS). An individual MTS is defined by the unique combination of a metric name and a set of dimensions, and is created and tracked in the Observability Cloud system as part of a datapoint.
+Splunk Observability Cloud organizes the received datapoints into metric time series (MTS). An individual MTS is defined by the unique combination of a metric name and a set of dimensions, and is created and tracked in the Splunk Observability Cloud system as part of a datapoint.
 
 If your account is being limited, datapoints (metric values) for an existing MTS will continue to be processed and stored, and can be used in charts and detectors. However, datapoints for new MTS will not be processed and stored, and charts and detectors that would be expected to include those datapoints will not do so.
 
