@@ -129,6 +129,7 @@ New metric names for version 2.0
 
 .. include:: /_includes/gdi/java-20-metrics-equivalences.rst
 
+.. _metrics-not-reported-java:
 
 Metrics no longer reported
 ---------------------------------------
