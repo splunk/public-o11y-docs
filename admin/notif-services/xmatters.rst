@@ -17,17 +17,17 @@ To send Splunk Observability Cloud alert notifications to xMatters, complete the
 
 * :ref:`xmatters2`
 
-  You must be an Splunk Observability Cloud administrator to complete this task.
+  You must be a Splunk Observability Cloud administrator to complete this task.
 
 * :ref:`xmatters3`
 
 
 .. _xmatters1:
 
-Step 1: Create an Splunk Observability Cloud integration in xMatters
+Step 1: Create a Splunk Observability Cloud integration in xMatters
 =================================================================================
 
-For information about how to create an Splunk Observability Cloud integration in xMatters, you can search "Splunk Infrastructure Monitoring" on xMatters website.
+For information about how to create a Splunk Observability Cloud integration in xMatters, you can search "Splunk Infrastructure Monitoring" on xMatters website.
 
 
 .. _xmatters2:
@@ -35,7 +35,7 @@ For information about how to create an Splunk Observability Cloud integration in
 Step 2: Create an xMatters integration in Splunk Observability Cloud
 =================================================================================
 
-You must be an Splunk Observability Cloud administrator to perform this task.
+You must be a Splunk Observability Cloud administrator to perform this task.
 
 To create an xMatters integration in Splunk Observability Cloud:
 

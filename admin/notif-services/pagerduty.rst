@@ -17,14 +17,14 @@ To send Splunk Observability Cloud alert notifications to PagerDuty, complete th
 
 * :ref:`pagerduty2`
 
-  You must be an Splunk Observability Cloud administrator to complete this task.
+  You must be a Splunk Observability Cloud administrator to complete this task.
 
 * :ref:`pagerduty3`
 
 
 .. _pagerduty1:
 
-Step 1: Create an Splunk Observability Cloud integration in PagerDuty
+Step 1: Create a Splunk Observability Cloud integration in PagerDuty
 =================================================================================
 
 For information about how to create an integration in PagerDuty, see :new-page:`PagerDuty Integration Guide <https://www.pagerduty.com/docs/guides/signalfx-integration-guide/>`.

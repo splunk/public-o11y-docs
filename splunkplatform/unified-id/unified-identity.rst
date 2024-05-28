@@ -39,7 +39,7 @@ Organizations that complete the integration of Splunk Cloud Platform and Splunk 
 
 * Users can navigate data and dashboards between Splunk Cloud Platform and Splunk Observability Cloud seamlessly after logging in with Splunk Cloud Platform SSO once.
 
-.. note:: You can use a third party identity provider other than Splunk Cloud Platform, but you will lose the benefits of the integrated experience.
+.. note:: You can use a third party identity provider other tha Splunk Cloud Platform, but you will lose the benefits of the integrated experience.
 
 
 How to set up Unified Identity
@@ -184,7 +184,7 @@ Follow these steps at first login to Splunk Observability Cloud:
 
 2. Provide your Splunk Cloud Platform credentials. If you get the :strong:`No access` error message, contact your administrator. See :ref:`no-access-error` for more information.
 
-3. Enter and confirm your email. If you already have an Splunk Observability Cloud user, enter the email associated with it to link it to your Splunk Cloud Platform user. If you enter an email address that does not exist in Splunk Observability Cloud, the system creates a new Splunk Observability Cloud user and assigns it a role based on the role mapping table in the :ref:`existing-scp-users` section.
+3. Enter and confirm your email. If you already have a Splunk Observability Cloud user, enter the email associated with it to link it to your Splunk Cloud Platform user. If you enter an email address that does not exist in Splunk Observability Cloud, the system creates a new Splunk Observability Cloud user and assigns it a role based on the role mapping table in the :ref:`existing-scp-users` section.
 
 4. You then receive an e-mail to verify your identity. Verify your identity in the e-mail to be authenticated in Splunk Observability Cloud. After authentication, the Splunk Observability Cloud user can only see logs data in Log Observer that their Splunk Cloud Platform user has permissions to see. 
 

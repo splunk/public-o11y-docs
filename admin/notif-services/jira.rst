@@ -12,7 +12,7 @@ create a new issue when a detector alert condition is met and add a comment to t
 
 To send Splunk Observability Cloud alert notifications to Jira, follow these configuration steps:
 
-.. note:: You must be an Splunk Observability Cloud administrator to complete these steps.
+.. note:: You must be a Splunk Observability Cloud administrator to complete these steps.
 
 * :ref:`jira1`
 * :ref:`jira2`
@@ -39,7 +39,7 @@ The alert notification that this integration sends to Jira can automatically set
 If the Jira project you want to create issues in requires additional field values, you receive an error when you save 
 the integration.
 
-.. note:: You must be an Splunk Observability Cloud administrator to complete these tasks.
+.. note:: You must be a Splunk Observability Cloud administrator to complete these tasks.
 
 To create a Jira integration in Splunk Observability Cloud, follow these steps:
 

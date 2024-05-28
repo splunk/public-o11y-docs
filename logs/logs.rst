@@ -27,7 +27,7 @@ Prerequisites
 Before setting up Log Observer, you must meet the following criteria:
 
 - Your Splunk Observability Cloud organization must be provisioned with an entitlement for Log Observer.
-- You must be an administrator in an Splunk Observability Cloud organization to set up integrations.
+- You must be an administrator in a Splunk Observability Cloud organization to set up integrations.
 
 
 Start using Log Observer

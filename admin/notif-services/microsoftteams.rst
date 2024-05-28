@@ -17,7 +17,7 @@ To send Splunk Observability Cloud alert notifications to Microsoft Teams, compl
 
 * :ref:`microsoftteams2`
 
-   You must be an Splunk Observability Cloud administrator to complete this task.
+   You must be a Splunk Observability Cloud administrator to complete this task.
 
 * :ref:`microsoftteams3`
 
@@ -113,7 +113,7 @@ Troubleshoot your Microsoft Teams notification service integration
 
 If the Microsoft Teams channel stops receiving notifications, consider the following troubleshooting tips:
 
-* Verify that the Microsoft Teams notification service integration in Splunk Observability Cloud still exists. To troubleshoot, complete the following steps. You must be an Splunk Observability Cloud administrator to complete these steps.
+* Verify that the Microsoft Teams notification service integration in Splunk Observability Cloud still exists. To troubleshoot, complete the following steps. You must be a Splunk Observability Cloud administrator to complete these steps.
 
   #. In the Splunk Observability Cloud navigation menu, select :strong:`Data Management > Deployed integrations`.
 

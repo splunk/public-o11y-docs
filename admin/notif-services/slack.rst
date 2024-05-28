@@ -13,7 +13,7 @@ To send Splunk Observability Cloud alert notifications to Slack, complete the fo
 
 * :ref:`slack1`
 
-   You must be an Splunk Observability Cloud administrator, Slack administrator, and authorized to add apps to Slack to complete this task.
+   You must be a Splunk Observability Cloud administrator, Slack administrator, and authorized to add apps to Slack to complete this task.
 
 * :ref:`slack2`
 
@@ -24,7 +24,7 @@ To send Splunk Observability Cloud alert notifications to Slack, complete the fo
 Step 1: Create a Slack integration in Splunk Observability Cloud
 =================================================================================
 
-You must be an Splunk Observability Cloud administrator, Slack administrator, and be authorized to add apps to Slack to complete this task.
+You must be a Splunk Observability Cloud administrator, Slack administrator, and be authorized to add apps to Slack to complete this task.
 
 This method of integrating with Slack replaces a prior design. Slack integrations created using the prior design display an option to upgrade in the Splunk Observability Cloud UI. While the prior design continues to work, upgrade your integrations to use the newer integration design. You must upgrade your integration if you want image previews to display when pasting a chart URL into Slack. To learn more, see :ref:`pasting-chart-url-into-slack`.
 

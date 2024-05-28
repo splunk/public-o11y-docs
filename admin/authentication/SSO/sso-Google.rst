@@ -61,7 +61,7 @@ using their Google Cloud credentials.
 
 Before you proceed, review the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integration.
 
-To configure GCI as an IdP using an Splunk Observability Cloud SSO integration,
+To configure GCI as an IdP using a Splunk Observability Cloud SSO integration,
 you must be an administrator for your organization and a super-administrator of your Google domain.
 To learn more, see :new-page-ref:`admin-manage-users`.
 

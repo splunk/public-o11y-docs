@@ -156,7 +156,7 @@ The Azure integration adds the ``azure_resource_id`` dimension to metrics receiv
 
 ``<subscription_id>/<resource_group_name>/<resource_provider_namespace>/<resource_name>``
 
-The Azure integration truncates the dimension value to 256 bytes, which is the maximum length of an Splunk Observability Cloud dimension value.
+The Azure integration truncates the dimension value to 256 bytes, which is the maximum length of a Splunk Observability Cloud dimension value.
 
 If you install collectd on an Azure Compute Virtual Machine instance using the
 :new-page:`standard install script <https://github.com/signalfx/signalfx-collectd-installer>`,

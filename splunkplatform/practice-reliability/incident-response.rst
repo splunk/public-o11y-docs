@@ -67,7 +67,7 @@ Infrastructure Monitoring is an industry-leading custom metrics platform for rea
 
 The Infrastructure Monitoring heat map shows the CPU, memory, disk, and network metrics of each host, container, and public cloud service in a real-time streaming fashion. You can sort by CPU utilization or select :strong:`Find Outliers` on the heat map to see which of your resources might be spiking in CPU usage, causing your users to experience slow load or save times.
 
-The following GIF shows an incident responder selecting a critical alert in Infrastructure Monitoring. The responder discovers that host CPU utilization is outside of expected norms set by an Splunk Observability Cloud admin. Teams responding to an incident can use this information to remediate the problem with the host or rebalance resources and prevent users from experiencing higher than expected latency.
+The following GIF shows an incident responder selecting a critical alert in Infrastructure Monitoring. The responder discovers that host CPU utilization is outside of expected norms set by a Splunk Observability Cloud admin. Teams responding to an incident can use this information to remediate the problem with the host or rebalance resources and prevent users from experiencing higher than expected latency.
 
  .. image:: /_images/get-started/IncidentResponse-InfraMon.gif
    :width: 100%

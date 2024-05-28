@@ -21,7 +21,7 @@ To send Splunk Observability Cloud alert notifications to Splunk On-Call, comple
 
 * :ref:`oncall3`
 
-   You must be an Splunk Observability Cloud administrator to complete this task.
+   You must be a Splunk Observability Cloud administrator to complete this task.
 
 * :ref:`oncall4`
 
@@ -65,7 +65,7 @@ You'll need your alert routing key in :ref:`oncall3`.
 Step 3: Create a Splunk On-Call integration in Splunk Observability Cloud
 =================================================================================
 
-You must be an Splunk Observability Cloud administrator to complete this task.
+You must be a Splunk Observability Cloud administrator to complete this task.
 
 To create a Splunk On-Call integration in Splunk Observability Cloud:
 

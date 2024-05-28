@@ -13,7 +13,7 @@ To send Splunk Observability Cloud alert notifications to Amazon EventBridge, co
 
 * :ref:`amazoneventbridge1`
 
-  You must be an Splunk Observability Cloud administrator to complete this task.
+  You must be a Splunk Observability Cloud administrator to complete this task.
 
 * :ref:`amazoneventbridge2`
 
