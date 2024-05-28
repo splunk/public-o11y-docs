@@ -94,7 +94,7 @@ integration:
       - no
       - ``string``
       - This value appears as the service type in the Splunk
-         Observability Cloud UI, which lets you retrieve built-in
+         Splunk Observability Cloud UI, which lets you retrieve built-in
          content for the service. For custom JMX integrations, you can
          set it to any value.
    - 

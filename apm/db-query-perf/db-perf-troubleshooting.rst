@@ -69,7 +69,7 @@ If you want to turn off database query normalization, follow these steps:
 - Java: Set the ``otel.instrumentation.common.db-statement-sanitizer.enabled`` property to ``false``. 
 - .NET: Query normalization is not activated by default.
 
-.. caution:: Disabling normalization might result in personal identifiable information (PII) and secrets appearing in Observability Cloud.
+.. caution:: Disabling normalization might result in personal identifiable information (PII) and secrets appearing in Splunk Observability Cloud.
 
 Learn more
 --------------

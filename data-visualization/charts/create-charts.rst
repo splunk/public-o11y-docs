@@ -7,7 +7,7 @@ Create charts in Splunk Observability Cloud
 .. meta::
     :description: Plan and create charts in Splunk Observability Cloud
 
-Splunk Observability Cloud provides a number of built-in dashboards for services you integrate with Observability Cloud. These dashboards have charts that track key metrics for integrated services. In many cases, you don't have to create any additional charts or dashboards. However, if you do need a chart that isn't included in a built-in dashboard, the following sections show you how to create a chart.
+Splunk Observability Cloud provides a number of built-in dashboards for services you integrate with Splunk Observability Cloud. These dashboards have charts that track key metrics for integrated services. In many cases, you don't have to create any additional charts or dashboards. However, if you do need a chart that isn't included in a built-in dashboard, the following sections show you how to create a chart.
 
 Before you create a chart, you need to have an idea of which metrics you want to track. Metrics appear on the chart as signals, which the documentation also refers to as plot lines or plots. If you are unfamiliar with the metrics available, see :ref:`view-dashboards` to see the metrics that your organization receives for your dashboards.
 

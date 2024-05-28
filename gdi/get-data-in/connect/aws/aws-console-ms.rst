@@ -20,7 +20,7 @@ For alternative connection methods, see:
 * :ref:`aws-console-ms`
 * :ref:`get-configapi`
 
-.. note:: You can only have one integration using Metric Streams externally managed from AWS at a time for each AWS account. All Metric Streams you created in different AWS regions will be sent to this integration. Editing included regions will affect metadata, and might impact how corresponding metric streams are located and displayed in Observability Cloud features such as dashboards.
+.. note:: You can only have one integration using Metric Streams externally managed from AWS at a time for each AWS account. All Metric Streams you created in different AWS regions will be sent to this integration. Editing included regions will affect metadata, and might impact how corresponding metric streams are located and displayed in Splunk Observability Cloud features such as dashboards.
 
 .. _aws-console-ms-start:
 

@@ -74,7 +74,7 @@ The interaction between detectors, events, alerts, and notifications is as follo
 -  When a detector is triggered, it does the following:
 
    -  Generates an :term:`event`, which can be viewed on charts and in the Events sidebar.
-   -  Triggers an alert, which can be viewed in a number of places throughout Observability Cloud.
+   -  Triggers an alert, which can be viewed in a number of places throughout Splunk Observability Cloud.
    -  Sends one or more notifications, so people are informed about the alert even if they are not currently monitoring dashboards.
 
 -  When the condition clears, the detector generates a second event and sends a second set of notifications.

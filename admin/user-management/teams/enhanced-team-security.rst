@@ -45,7 +45,7 @@ To turn on the enhanced team security setting, follow these steps:
 Team roles and permissions
 ============================================================================
 
-This table presents the available team roles and their permissions. Some team roles and permissions change based on whether enhanced team security is turned on. For example, when you turn on enhanced team security, the Team Manager role is available, and Observability Cloud administrators or Team Managers must add users.
+This table presents the available team roles and their permissions. Some team roles and permissions change based on whether enhanced team security is turned on. For example, when you turn on enhanced team security, the Team Manager role is available, and Splunk Observability Cloud administrators or Team Managers must add users.
 
 .. note:: You can't promote a team member with the ``read_only`` RBAC role to team manager. For more information about RBAC roles, see :ref:`about-team-roles`.
 

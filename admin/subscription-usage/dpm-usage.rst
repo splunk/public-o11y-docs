@@ -81,7 +81,7 @@ The report shows you the detail of how many data points Splunk Infrastructure Mo
 Aggregate data points per minute detail report
 =============================================================================
 
-If you are working in an Splunk Observability Cloud organization that has a parent-child relationship with other organizations, you see an option for the Datapoints per minute report that includes information on child organizations.
+If you are working in a Splunk Observability Cloud organization that has a parent-child relationship with other organizations, you see an option for the Datapoints per minute report that includes information on child organizations.
 
 Like the :ref:`datapoints-per-minute-detail-report`, this report shows the number of data points sent to Splunk Infrastructure Monitoring for each minute within the month; including data from all child organizations.
 
@@ -153,7 +153,7 @@ If your environment grows significantly after your initial sizing, then your DPM
 What is the user-visible impact when an account is limited?
 -------------------------------------------------------------------
 
-Splunk Observability Cloud organizes the received datapoints into metric time series (MTS). An individual MTS is defined by the unique combination of a metric name and a set of dimensions, and is created and tracked in the Observability Cloud system as part of a datapoint.
+Splunk Observability Cloud organizes the received datapoints into metric time series (MTS). An individual MTS is defined by the unique combination of a metric name and a set of dimensions, and is created and tracked in the Splunk Observability Cloud system as part of a datapoint.
 
 If your account is being limited, datapoints (metric values) for an existing MTS will continue to be processed and stored, and can be used in charts and detectors. However, datapoints for new MTS will not be processed and stored, and charts and detectors that would be expected to include those datapoints will not do so.
 

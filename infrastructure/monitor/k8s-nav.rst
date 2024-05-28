@@ -159,7 +159,7 @@ The Analyzer displays overrepresented metrics properties for known conditions, s
 Next steps
 =====================
 
-If you're also exporting logs from Kubernetes and want to learn about how to view logs in Observability Cloud, see :ref:`get-started-logs`.
+If you're also exporting logs from Kubernetes and want to learn about how to view logs in Splunk Observability Cloud, see :ref:`get-started-logs`.
 
 You can also export and monitor data related to your Kubernetes clusters, as described in the following table.
 

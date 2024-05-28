@@ -141,7 +141,7 @@ The nested ``converters`` configuration object has the following fields:
       - No
       - ``string``
       - A format to compose a metric name to report to Splunk
-         Observability Cloud.
+         Splunk Observability Cloud.
 
 The Smart Agent and Collector don't do any built-in filtering of metrics
 that come out of this monitor.

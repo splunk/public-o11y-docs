@@ -41,7 +41,7 @@ TMS appear on the :ref:`service map <apm-service-map>` and in Tag Spotlight. You
 What is the TMS retention period?
 -----------------------------------
 
-Observability Cloud retains TMS for the same amount of time as raw traces. By default, the retention period is 8 days.
+Splunk Observability Cloud retains TMS for the same amount of time as raw traces. By default, the retention period is 8 days.
 
 For more details about Troubleshooting MetricSets, see :ref:`apm-index-tag-tips`. 
 
@@ -76,7 +76,7 @@ Spans might lack a ``kind`` value, or have a different ``kind`` value, in the fo
 What is the MMS retention period?
 -----------------------------------
 
-Observability Cloud stores MMS for 13 months by default.
+Splunk Observability Cloud stores MMS for 13 months by default.
 
 Comparing Monitoring MetricSets and Troubleshooting MetricSets
 =================================================================

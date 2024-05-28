@@ -7,7 +7,7 @@ Search in Splunk Observability Cloud
 .. meta::
   :description: Learn about how to use the Splunk Observability Cloud search feature to quickly navigate to the objects you want to see.
 
-Use the search from the Splunk Observability Cloud top navigation bar to search for Splunk Application Performance Monitoring (APM) services, traceIDs, dashboards, charts, and more. Regardless of where you are in the Observability Cloud, you can use the search capability to find metrics-based targets.
+Use the search from the Splunk Observability Cloud top navigation bar to search for Splunk Application Performance Monitoring (APM) services, traceIDs, dashboards, charts, and more. Regardless of where you are in the Splunk Observability Cloud, you can use the search capability to find metrics-based targets.
 
 Prerequisites
 =====================

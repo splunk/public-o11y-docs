@@ -7,9 +7,9 @@ Manage notification subscribers
 
 
 .. meta::
-  :description: Learn how to set recipients for your Observability Cloud notifications, so that new alerts and their resolution get to the right people in your organization.
+  :description: Learn how to set recipients for your Splunk Observability Cloud notifications, so that new alerts and their resolution get to the right people in your organization.
 
-When a :ref:`detector <create-detectors>` triggers an alert in Observability Cloud, a notification is sent to the recipients you defined. Each recipient is a subscriber to the detector that triggers the alert.
+When a :ref:`detector <create-detectors>` triggers an alert in Splunk Observability Cloud, a notification is sent to the recipients you defined. Each recipient is a subscriber to the detector that triggers the alert.
 
 You can manage the subscribers for all notifications sent by your detectors at any time, so that new alerts and their status are sent to the right people, channels, and systems in your organization.
 
