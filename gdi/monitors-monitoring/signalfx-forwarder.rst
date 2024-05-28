@@ -13,7 +13,7 @@ The
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 ``signalfx-forwarder`` monitor type to run an HTTP server that listens
 for data points and trace spans, and forward them to Splunk
-Splunk Observability Cloudbservability Cloud. This integration supports the latest formats for
+Observability Cloud. This integration supports the latest formats for
 data points and spans that the Splunk ingest API endpoint supports.
 
 This integration is available on Linux and Windows.

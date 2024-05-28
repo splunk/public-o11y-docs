@@ -114,7 +114,7 @@ Splunk Observability Cloud sends an alert notification to your Splunk On-Call ti
 
 
 Splunk Observability Cloud alert notification fields sent to Splunk On-Call
-=======================================================================
+=============================================================================
 
 Here are the Splunk Observability Cloud alert notification fields that are sent to Splunk On-Call.
 

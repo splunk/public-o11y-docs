@@ -109,7 +109,7 @@ Another cause for call stacks not appearing is when HTTP requests follow an asyn
 .. _profiling-ui-not-visible:
 
 AlwaysOn Profiling is not accessible in Splunk Observability Cloud
-============================================================
+====================================================================
 
 If you're sending profiling data to Splunk Observability Cloud but can't see AlwaysOn Profiling in Splunk APM, your organization might be lacking the profiler entitlement.
 

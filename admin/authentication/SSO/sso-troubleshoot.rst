@@ -21,7 +21,7 @@ If you are still encountering configuration errors, review the following trouble
 
 After the first redirect to the IdP, the IdP does not recognize the application
 ---------------------------------------------------------------------------------
-  
+
 Symptom
 *********
 
@@ -58,8 +58,8 @@ Solutions
 Make sure that all of your SSO integrations have the :guilabel:`Entity ID` checked. Ensure that in the IdP, the Splunk Observability Cloud connection is configured to accept the new format of the Entity ID, which is displayed next to the checkbox and contains the Integration ID in it.
 
 
-You receive a 404 error from Splunk Observability Cloud after you log in to the IdP.
--------------------------------------------------------------------------------
+You receive a 404 error from Splunk Observability Cloud after you log in to the IdP
+----------------------------------------------------------------------------------------
   
 
 Symptom

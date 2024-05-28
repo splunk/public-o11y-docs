@@ -27,7 +27,7 @@ Start by creating the PingOne integration in Splunk Observability Cloud. Follow 
    #. If you want to display a name on the SSO login page, select :guilabel:`Show on login page`.
 
 Create a SAML application for the PingOne integration in Splunk Observability Cloud
-===============================================================================
+====================================================================================
 
 Next, in PingOne connect a SAML application to the PingOne integration instance in Splunk Observability Cloud. Follow these
 steps:
@@ -59,7 +59,7 @@ steps:
 #. Select :guilabel:`Download Signing Certificate`, then select the Privacy Enhanced Mail (PEM) file with the name ``X509 PEM.crt``.
 
 Enter the PingOne connection information in Splunk Observability Cloud
-===============================================================================
+=============================================================================
 
 In Splunk Observability Cloud, update the integration instance with the information from PingOne. Follow these steps:
 
