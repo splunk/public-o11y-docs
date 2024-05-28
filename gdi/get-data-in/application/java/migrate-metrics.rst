@@ -130,6 +130,26 @@ New metric names for version 2.0
 .. include:: /_includes/gdi/java-20-metrics-equivalences.rst
 
 
+Metrics no longer reported
+---------------------------------------
+
+Due to changes in the metrics emitted by the Java instrumentation version 2.0 and higher, detectors or dashboards that use the following metrics might not work as before the migration:
+
+* ``db.pool.connections``
+* ``executor.tasks.completed``
+* ``executor.tasks.submitted``
+* ``executor.threads``
+* ``executor.threads.active``
+* ``executor.threads.core``
+* ``executor.threads.idle``
+* ``executor.threads.max``
+* ``runtime.jvm.memory.usage.after.gc``
+* ``runtime.jvm.gc.memory.promoted``
+* ``runtime.jvm.gc.overhead``
+* ``runtime.jvm.threads.peak``
+* ``runtime.jvm.threads.states``
+
+
 Troubleshooting
 ======================
 
