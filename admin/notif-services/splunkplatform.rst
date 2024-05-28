@@ -1,4 +1,4 @@
-.. _splunkflatform:
+.. _splunkplatform:
 
 ********************************************************************************
 Send alert notifications to Splunk platform using Splunk Observability Cloud
