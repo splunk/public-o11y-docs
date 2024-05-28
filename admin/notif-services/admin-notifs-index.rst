@@ -19,6 +19,7 @@ Send alert notifications to services using Splunk Observability Cloud
    Send alerts to ServiceNow<servicenow>
    Send alerts to Slack<slack>
    Send alerts to Splunk On-Call<splunkoncall>
+   Send alerts to Splunk platform<splunkplatform>
    Send alerts to Webhook<webhook>
    Send alerts to xMatters<xmatters>
    
