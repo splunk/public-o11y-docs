@@ -51,7 +51,7 @@ One example of a prepackaged processing rule is the ``Level`` to ``severity`` at
 
 Splunk Observability Cloud includes prepackaged processing rule for Kubernetes and Cassandra.
 
-Observability Cloud provides three types of log processing rules:
+Splunk Observability Cloud provides three types of log processing rules:
 
 * :ref:`Field extraction processors <field-extraction-processors>` create a subset of log data by extracting fields and values.
 * :ref:`Field copy processors <field-copy-processors>` create a set of log data by moving field values from one field

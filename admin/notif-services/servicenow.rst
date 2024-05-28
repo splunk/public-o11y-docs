@@ -141,7 +141,7 @@ The following table shows the Splunk Observability Cloud severity for :strong:`I
 .. list-table::
    :header-rows: 1
 
-   * - :strong:`Observability Cloud severity`
+   * - :strong:`Splunk Observability Cloud severity`
      - :strong:`ServiceNow Impact and Urgency fields`
 
    * - Critical
@@ -161,7 +161,7 @@ The following table shows the Splunk Observability Cloud severity for :strong:`E
 .. list-table::
    :header-rows: 1
 
-   * - :strong:`Observability Cloud severity`
+   * - :strong:`Splunk Observability Cloud severity`
      - :strong:`ServiceNow Severity field`
 
    * - Clear

@@ -14,7 +14,7 @@ Per product system limits in Splunk Observability Cloud
    APM system limits <system-limits/sys-limits-apm>
    RUM system limits <system-limits/sys-limits-rum>
 
-Each Observability Cloud product has a maximum number of MTS you can create per minute. For example, if you create 5,500 MTS in the first minute in Infrastructure Monitoring, you'll have to wait until the next minute to create more MTS. However, in the first minute you can also create another 6,000 more MTS for any other product you use.
+Each Splunk Observability Cloud product has a maximum number of MTS you can create per minute. For example, if you create 5,500 MTS in the first minute in Infrastructure Monitoring, you'll have to wait until the next minute to create more MTS. However, in the first minute you can also create another 6,000 more MTS for any other product you use.
 
 .. caution:: New MTS exceeding the limit are dropped without returning an error. Data points for existing MTS are still accepted.
 
@@ -23,7 +23,7 @@ Each Observability Cloud product has a maximum number of MTS you can create per 
 MTS limits per product
 ==============================================================
 
-The following table shows MTS creation limits for each Observability Cloud product:
+The following table shows MTS creation limits for each Splunk Observability Cloud product:
 
 .. list-table::
   :header-rows: 1
@@ -100,8 +100,8 @@ See more in :ref:`org-metrics`.
 System limits and data throttling
 ==============================================================
 
-Observability Cloud products have system limits to protect the service's performance, stability, and reliability. If you exceed those limits, the platform might start to throttle the data you send in, and slow down ingest. 
+Splunk Observability Cloud products have system limits to protect the service's performance, stability, and reliability. If you exceed those limits, the platform might start to throttle the data you send in, and slow down ingest. 
 
 .. note:: Throttling starts after you've exceeded your system limits. All data sent within your limits is ingested.
 
-You can track if your usage is reaching your subscription limits or if your data is being throttled with certain Observability Cloud's org metrics. See how in :ref:`org-metrics-throttling`.
+You can track if your usage is reaching your subscription limits or if your data is being throttled with certain Splunk Observability Cloud's org metrics. See how in :ref:`org-metrics-throttling`.

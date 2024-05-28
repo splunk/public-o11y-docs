@@ -119,7 +119,7 @@ The following table shows the configuration options for this monitor:
       - no
       - ``string``
       - This is how the service type is identified in the Splunk
-         Observability Cloud UI so that you can get built-in content.
+         Splunk Observability Cloud UI so that you can get built-in content.
    - 
 
       - ``serviceURL``

@@ -412,7 +412,7 @@ Maximum number of active alerts per detector
    * :strong:`Notes`: Maximum number of active alerts you can have for a detector.
    * :strong:`Customer impact`: Once you reach this limit, Splunk Infrastructure Monitoring aborts the detector and deletes all active alerts. To avoid hitting this limit, configure autoclear on your detectors to clear active alerts based on defined thresholds. To learn more, see :ref:`auto-clearing-alerts`.
 
-.. note:: When you update or delete a detector, Observability Cloud stops the SignalFlow program associated with the detector and sends a stop notification to all the recipients currently configured for the detector. If the detector has a large number of recipients or a large number of alerts, sending the notification causes a flood of notifications. Your first reaction might be to delete the detector, but that might cause additional problems.
+.. note:: When you update or delete a detector, Splunk Observability Cloud stops the SignalFlow program associated with the detector and sends a stop notification to all the recipients currently configured for the detector. If the detector has a large number of recipients or a large number of alerts, sending the notification causes a flood of notifications. Your first reaction might be to delete the detector, but that might cause additional problems.
  
   If your detector has a large number of recipients or a large number of alerts, do the following:
 
@@ -544,7 +544,7 @@ Maximum SignalFlow programs per minute
      * Opening an alert from the list displayed the **Alerts** UI page. This action displays an alert dialog box and
        runs a SignalFlow program that provides charts and information to the page.
 
-     You don't get a notification when Observability Cloud starts a SignalFlow program for an alert dialog box, but the program
+     You don't get a notification when Splunk Observability Cloud starts a SignalFlow program for an alert dialog box, but the program
      counts against your SignalFlow programs per minute limit.
    * :strong:`Related metrics`:
 

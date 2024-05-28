@@ -180,7 +180,7 @@ If you're unable to allow all URLs as described in :ref:`allow-urls`, ensure tha
 
 .. code:: shell
 
-   # Observability Cloud API base URL (https://dev.splunk.com/observability/docs/apibasics/api_list)
+   # Splunk Observability Cloud API base URL (https://dev.splunk.com/observability/docs/apibasics/api_list)
    api.<YOUR_REALM>.signalfx.com
 
    # Splunk Observability Cloud user interface
@@ -210,4 +210,4 @@ If you're unable to allow all URLs as described in :ref:`allow-urls`, ensure tha
    splunk.jfrog.io 
    jfrog-prod-use1-shared-virginia-main.s3.amazonaws.com
    
-.. note:: For more information, see the :new-page:`Endpoint Summary <https://dev.splunk.com/observability/docs/apibasics/api_list>` topic in the Observability Cloud Developer Guide.
+.. note:: For more information, see the :new-page:`Endpoint Summary <https://dev.splunk.com/observability/docs/apibasics/api_list>` topic in the Splunk Observability Cloud Developer Guide.

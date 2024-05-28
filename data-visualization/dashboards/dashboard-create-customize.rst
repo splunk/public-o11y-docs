@@ -32,10 +32,10 @@ Using Splunk Infrastructure Monitoring, you can quickly add simple charts to a n
 
 To create a dashboard, follow these steps:
 
-#. Select :guilabel:`Dashboards` from the Observability Cloud home page:
+#. Select :guilabel:`Dashboards` from the Splunk Observability Cloud home page:
 
    .. image:: /_images/images-dashboard/dashboard-menu-item.png
-      :alt: Dashboards menu item in Observability Cloud main menu
+      :alt: Dashboards menu item in Splunk Observability Cloud main menu
       :width: 50%
 
 #. Select the Create menu (plus sign) on the navigation bar:

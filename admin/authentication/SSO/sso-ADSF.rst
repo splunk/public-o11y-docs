@@ -7,9 +7,9 @@ Configure an ADFS SSO integration
 *********************************************************************
 
 .. meta::
-   :description: Configure the Active Directory Federation Services (ADFS) SSO integration to let your users log in to Observability Cloud using your Microsoft ADFS portal.
+   :description: Configure the Active Directory Federation Services (ADFS) SSO integration to let your users log in to Splunk Observability Cloud using your Microsoft ADFS portal.
 
-The Microsoft Active Directory Federation Services (ADFS) SSO integration lets your users log in to Observability Cloud using your Microsoft ADFS portal.
+The Microsoft Active Directory Federation Services (ADFS) SSO integration lets your users log in to Splunk Observability Cloud using your Microsoft ADFS portal.
 
 Before you begin configuring the ADFS integration, ensure you have completed the steps in :ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
 
@@ -42,10 +42,10 @@ After support activates the integration, users can authenticate using ADFS SSO.
 
 .. _create-adfs-imm-integration:
 
-Create a new ADFS SSO integration in Observability Cloud
+Create a new ADFS SSO integration in Splunk Observability Cloud
 ------------------------------------------------------------------------
 
-To create a new ADFS integration in Observability Cloud:
+To create a new ADFS integration in Splunk Observability Cloud:
 
 #. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`ADFS guided setup <https://login.signalfx.com/#/integrations/adfs/description>`. Optionally, you can navigate to the guided setup on your own:
@@ -100,7 +100,7 @@ Add Splunk Observability Cloud as a relying party in ADFS:
 
 #. Select :guilabel:`Add`, then select :guilabel:`Next`.
 #. The next step in the guided setup lets you configure multifactor authentication.
-   Because Observability Cloud doesn't require this option, select :guilabel:`Next`.
+   Because Splunk Observability Cloud doesn't require this option, select :guilabel:`Next`.
 #. On the :guilabel:`Choose access control policy` page, do the following:
 
    #. Select :menuselection:`Permit everyone`.
@@ -120,7 +120,7 @@ Add Splunk Observability Cloud as a relying party in ADFS:
     * From the :guilabel:`Endpoint type` list, select :guilabel:`SAML Assertion Consumer`.
     * From the :guilabel:`Binding` list, select :guilabel:`POST`.
     * Select :guilabel:`Set the trusted URL as default`.
-    * For :guilabel:`Trusted URL`, enter the URL, replacing ``<INTEGRATION_ID>`` with the integration ID you copied in step 3 of the section :ref:`Create a new ADFS SSO integration in Observability Cloud<create-adfs-imm-integration>`:
+    * For :guilabel:`Trusted URL`, enter the URL, replacing ``<INTEGRATION_ID>`` with the integration ID you copied in step 3 of the section :ref:`Create a new ADFS SSO integration in Splunk Observability Cloud<create-adfs-imm-integration>`:
 
         * If your organization is in realm ``us0``, enter the following:
 
@@ -176,30 +176,30 @@ Obtain an ADFS certificate to install to Splunk Observability Cloud:
 
    ``openssl x509 -inform der -in certificate.cer -out certificate.pem``
 
-   In a following step, you upload this file to Observability Cloud.
+   In a following step, you upload this file to Splunk Observability Cloud.
 
 .. _obtain-adfs-metadata:
 
 Obtain federation metadata file to install to Splunk Observability Cloud
 ---------------------------------------------------------------------------------
 
-Obtain a federation metadata file to install to Observability Cloud:
+Obtain a federation metadata file to install to Splunk Observability Cloud:
 
 #. In the ADFS management console, navigate to :guilabel:`Endpoints`.
 #. Locate the :guilabel:`Federation Metadata` endpoint and copy the URL that appears. It's similar to the following:
 
    ``https://<YOUR_SERVER_IP>/FederationMetadata/2007-06/FederationMetadata.xml``.
 #. Open a new browser window or tab, then navigate to the URL you copied. This opens a file download dialog box.
-#. Save the file FederationMetadata.xml. In a following step, you upload this file to Observability Cloud.
+#. Save the file FederationMetadata.xml. In a following step, you upload this file to Splunk Observability Cloud.
 
 .. note:: URLs must belong to ADFS in order to validate. Accepted domains include ``windows.net`` and ``windows-ppe.net``.
 
 .. _upload-adfs-cert-metadata-im:
 
-Upload the ADFS certificate and federation metadata to Observability Cloud
+Upload the ADFS certificate and federation metadata to Splunk Observability Cloud
 ------------------------------------------------------------------------------------------
 
-In Observability Cloud, do the following:
+In Splunk Observability Cloud, do the following:
 
 #. Find the ADFS page you opened in a previous step.
 #. Select the :strong:`Upload File` link in the :guilabel:`Certificate` field and upload the ``certificate.pem`` file.
@@ -207,13 +207,13 @@ In Observability Cloud, do the following:
 #. Select :guilabel:`Save`.
 
 The ADFS SSO integration is now available to users in your ADFS organization.
-When users log in to Observability Cloud from ADFS for the first time,
+When users log in to Splunk Observability Cloud from ADFS for the first time,
 they receive an email containing a link that they must open in order to authenticate.
 This only occurs the first time the user signs in. Subsequent login attempts don't
 require validation.
 
 If you want to turn off the email authentication feature, contact :ref:`support`.
 
-.. note:: The ADFS portal is the only way that your users can log in to Observability Cloud.
+.. note:: The ADFS portal is the only way that your users can log in to Splunk Observability Cloud.
 
 .. include:: /_includes/troubleshooting-components.rst

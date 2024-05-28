@@ -85,7 +85,7 @@ You can now see your Apache Flink metrics in Splunk Observability Cloud.
 
 .. image:: /_images/gdi/gdi-prometheus-flink.png 
    :width: 80%
-   :alt: This image shows Apache Flink data in Observability Cloud.  
+   :alt: This image shows Apache Flink data in Splunk Observability Cloud.  
 
 * Use the metric finder to find, view, and edit Flink metrics. See how at :ref:`metrics-finder-and-metadata-catalog`.
 * Create custom dashboards to visualize metrics. Learn how at :ref:`dashboard-create-customize`.

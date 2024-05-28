@@ -141,8 +141,8 @@ For additional information, see:
 
 - :new-page:`Splunk Observability <https://www.splunk.com/en_us/products/observability.html>` on Splunk.com
 - :new-page:`Splunk Observability Cloud Pricing <https://www.splunk.com/en_us/products/pricing/observability.html>` on Splunk.com
-- :new-page:`Observability Cloud Pricing FAQ <https://www.splunk.com/en_us/products/pricing/faqs/observability.html>` on Splunk.com
-- :new-page:`Observability Cloud Usage, Subscription Limits Enforcement, and Entitlements <https://www.splunk.com/en_us/legal/usage-subscription-limits-enforcement-and-entitlements.html>` on Splunk.com
+- :new-page:`Splunk Observability Cloud Pricing FAQ <https://www.splunk.com/en_us/products/pricing/faqs/observability.html>` on Splunk.com
+- :new-page:`Splunk Observability Cloud Usage, Subscription Limits Enforcement, and Entitlements <https://www.splunk.com/en_us/legal/usage-subscription-limits-enforcement-and-entitlements.html>` on Splunk.com
 - :new-page:`Splunk Offerings Purchase Capacity and Limitations <https://www.splunk.com/en_us/legal/licensed-capacity.html>` on Splunk.com
 - :new-page:`Splunk Success Plans <https://www.splunk.com/en_us/customer-success/success-plans.html>` on Splunk.com
 

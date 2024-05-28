@@ -147,11 +147,11 @@ Search for a dimension or custom property
 
 To search for a dimension or a custom property, do one of the following:
 
-    * Enter a dimension or custom property key. For example, enter ``host.name``. Observability Cloud displays a list of associated metrics and a list of possible values for the key.
+    * Enter a dimension or custom property key. For example, enter ``host.name``. Splunk Observability Cloud displays a list of associated metrics and a list of possible values for the key.
 
-    * Enter the complete dimension or custom property key-value pair. For example, enter ``host.name:appsvr01``. Observability Cloud displays all the metrics, metadata, and data links associated with the key-value pair.
+    * Enter the complete dimension or custom property key-value pair. For example, enter ``host.name:appsvr01``. Splunk Observability Cloud displays all the metrics, metadata, and data links associated with the key-value pair.
 
-    * To search for a tag, enter the tag you want to search for. For example, enter ``kubernetes_service_redis-cart``. Observability Cloud displays a list of metrics and properties (dimensions and custom properties) assigned with the tag.
+    * To search for a tag, enter the tag you want to search for. For example, enter ``kubernetes_service_redis-cart``. Splunk Observability Cloud displays a list of metrics and properties (dimensions and custom properties) assigned with the tag.
         
 Add or edit metadata
 ------------------------------------------------------------------------------------
