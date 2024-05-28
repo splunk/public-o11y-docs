@@ -251,7 +251,7 @@ Pod level metrics and dimensions
     - Yes
 
   * - ``k8s.pod.status_reason``
-    - ???
+    - Information on the pod status
     - 
     - Yes
 
