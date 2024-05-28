@@ -7,46 +7,47 @@ Monitor Splunk APM subscription usage
 .. meta::
    :description: View APM subscription usage information and download usage reports to monitor your organization.
 
-.. note:: General aspects of subscription usage and consumption for Splunk APM. For more detailed billing-related queries, contact your Splunk Account Team.
+.. note:: Us this topic to understand general aspects of subscription usage and consumption for Splunk APM. For more detailed billing-related queries, contact your Splunk Account Team.
 
-View Splunk APM subscription usage data to monitor your organization's usage against its subscription plan and entitlements. 
+View Splunk APM subscription usage data to monitor your organization's usage against its subscription plan and limits. 
 
 Prerequisite
 ==============
 
 To view the APM subscription usage page, you must have the admin or usage role.
 
-You have to be an administrator to view the APM Subscription Usage page for your organization. Go to :strong:`Settings > Subscription Usage` and select the :strong:`APM` tab. Depending on your org subscription model, this might be :guilabel:`Settings > Billing and Usage`.
+You have to be an administrator to view the APM Subscription Usage page for your organization. Go to :guilabel:`Settings` then :guilabel:`Subscription Usage` and select the :strong:`APM` tab. Depending on your org subscription model, this might be :guilabel:`Settings` then :guilabel:`Billing and Usage`.
 
 For any questions about subscription usage, contact your tech support member or sales representative.
 
-The Subscription Usage page explains the following information about your organization:
+Understand APM subscription usage
+==================================
+
+The subscription usage page explains the following information about your organization:
 
 - The type of plan
 
-- The entitlement limits for your subscription plan
+- The subscription limits for your subscription plan
 
-- The monthly billed value of each entitlement
+- The monthly billed value of each subscription limit
 
-- The per-minute usage of each entitlement
+- The per-minute usage of each subscription 
 
 .. note::
 
-   The APM Subscription Usage page displays a tile for Monitoring MetricSets, but the metric that powers the chart is not currently available.
+   The APM subscription usage page displays a tile for Monitoring MetricSets, but the metric that powers the chart is not currently available on the subscription usage page. Select :guilabel:`View Detailed Usage Reports` to your current histogram-based MMS data.
 
 How APM calculates usage
 =========================================
 
 APM calculates per-minute usage for your subscription plan. There are 2 types of subscription plans: :strong:`host` and :strong:`traces analyzed per minute (TAPM)`. To learn more about how APM monitors billing and usage for each subscription plan type, see :ref:`analyze-apm-billing-usage`.
 
-For each subscription plan type, download detailed usage reports for recent usage periods. Reports break down usage for each minute in a usage period and provide the following type of information:
+Download detailed usage reports for recent usage periods. Reports break down usage for each minute in a usage period and provide the following type of information:
 
-- The number of billed hosts and containers, if applicable
-
-- The number of billed TAPM, if applicable
-
-- The number of billed Troubleshooting MetricSets
-
-- The billed trace volume
+* The number of billed hosts and containers, if applicable. Host and container data is updated per minute.
+* The number of billed TAPM, if applicable. TAPM data is updated per minute. 
+* The number of billed Troubleshooting MetricSets. TMS data is update per minute.
+* The billed trace volume. Trace volume data is update per minute.
+* Monitoring MetricSets data is available for histogram-based metrics in the usage report. Select :guilabel:`View Detailed Usage Reports` to your current histogram-based MMS data.
 
 For more information about detailed usage reports, see :ref:`view-apm-billing-reports`.
