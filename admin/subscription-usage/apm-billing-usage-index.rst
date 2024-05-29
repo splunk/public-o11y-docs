@@ -16,8 +16,6 @@ Prerequisite
 
 To view the APM subscription usage page, you must have the admin or usage role.
 
-You have to be an administrator to view the APM Subscription Usage page for your organization. 
-
 View APM subscription usage
 ==================================
 
