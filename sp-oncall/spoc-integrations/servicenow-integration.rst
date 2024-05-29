@@ -42,17 +42,17 @@ Activate Splunk On-Call In ServiceNow
 
 .. image:: /_images/spoc/VOSN_connect2.png
 
-Activate ServiceNow in VictorOps
-===================================
+Activate ServiceNow in Splunk On-Call
+=======================================
 
 #. Go to :guilabel:`Integrations` then :guilabel:`ServiceNow`.
 #. Select :guilabel:`Enable Integration`.
 
-.. image:: /_images/spoc/Screen-Shot-2022-04-07-at-2.47.39-PM.png
+   .. image:: /_images/spoc/Screen-Shot-2022-04-07-at-2.47.39-PM.png
 
 #. Enter the credentials from your ServiceNow instance.
 
-.. image:: /_images/spoc/Screen-Shot-2021-02-18-at-10.39.31-AM.png
+   .. image:: /_images/spoc/Screen-Shot-2021-02-18-at-10.39.31-AM.png
 
 #. Select :guilabel:`Connect to ServiceNow`. After the connection has been made, return to ServiceNow and select :guilabel:`Finish` to finalize authentication.
 
@@ -149,14 +149,13 @@ Only some fields are preconfigured with the VictorOps app, so mapping additional
 #. Create a new import table field for the field name to use in the rules engine. For example, "VictorOps caller id" requires the following syntax: ``ServiceNowField_u_victorops_caller_id`` for the rule.
    #. Under :guilabel:`Create New Field`, add the name of the field you want to map. Keep the same format that you see in the :guilabel:`Selected`` column: VictorOps <name of field>.
    #. Change the Field Length to :guilabel:`Medium`.
-   #. Select guiabel:`Add`. The field is added to the Selected column. 
+   #. Select guilabel:`Add`. The field is added to the Selected column. 
    #. Select :guilabel:`Save`. 
 #. Go back to the filter navigator to search for "Transform Maps", under :guilabel:`System Import Sets`. 
 #. Then look for "VictorOps Incident", you can use the search box inside the Table Transform Maps page.
 #. Open the :guilabel:`VictorOps Incident`` table transform map, then scroll to :guilabel:`Field Maps`.
 #. Select :guilabel:`Mapping assist` on the :guilabel:`Field Maps`` tab.
-#. On the Mapping Assist page, you are 3 boxes. The first box is your :guilabel:`Source Fields`. The next box is the mapping for
-   the fields. The final box is the :guilabel:`Target Fields`. 
+#. On the Mapping Assist page, you are 3 boxes. The first box is your :guilabel:`Source Fields`. The next box is the mapping for the fields. The final box is the :guilabel:`Target Fields`. 
    #. First, search the :guilabel:`Source Field`` for the name of the field you created. Select it and then select the Add arrow.
    #. Next, do the same thing for the :guilabel:`Target Field`. Find and assign the Target Field you want to match with and add it to the Field Map box.
    #. Last, make sure the 2 fields are mapped,in the :guilabel:`Field Map` field. 
