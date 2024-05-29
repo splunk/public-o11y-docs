@@ -94,7 +94,7 @@ The gateway component consists of the following config files:
   * Defines a Pod Disruption Budget (PDB) for the gateway.
   * Ensures that a certain number or percentage of replicas of the gateway remain available during voluntary disruptions.
 
-.. _helm-chart-images:
+.. _helm-chart-releases:
 
 Helm chart releases
 ==============================================
