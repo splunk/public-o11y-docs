@@ -32,4 +32,4 @@ Follow this guide to create a notification webhook for the alert you want to sen
 
 When you get to the point where you need to put in an endpoint that Big Panda will use to send the payload to, enter the endpoint from the On-Call Big Panda integration page with your desired ``routing_key`` filled in.
 
-After you saved, On-Call starts receiving incidents from the webhook notification that configured in Big Panda.
+After you saved, Splunk On-Call starts receiving incidents from the webhook notification that configured in Big Panda.
