@@ -9,14 +9,8 @@ RUM subscription and usage metrics
 View subscription usage 
 ==========================================
 
-You have to be an administrator to view the RUM Subscription Usage page for your organization. Go to :strong:`Settings > Subscription Usage` and select the RUM tab. Depending on your org subscription model, this might be :strong:`Settings > Billing and Usage`.
-
-
 There are two types of subscriptions: enterprise and standard. For more information on each type of subscription, see :new-page:`Splunk RUM Pricing <https://www.splunk.com/en_us/products/pricing/faqs/observability.html#splunk-rum>`.
 
-
-Metrics
-=========
 
 Splunk RUM offers three metrics you can use to track your subscription usage. You can use these metrics to create charts, dashboards, and set alerts. Usage data is based on a monthly cadence. To see how your usage compares to limits, see :ref:`rum-limits`.
 
@@ -37,6 +31,12 @@ Each metric has two dimensions:
      - Number of spans processed by RUM.
    * - ``sf.org.rum.numBytes``
      - Number of bytes processed by RUM.
+
+
+Dashboard
+=============
+
+In Dashboards> Organization metrics> RUM entitlements. 
 
 
 
