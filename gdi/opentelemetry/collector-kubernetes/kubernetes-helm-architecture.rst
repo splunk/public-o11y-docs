@@ -96,7 +96,7 @@ The gateway component consists of the following config files:
 
 .. _helm-chart-images:
 
-Helm chart images
+Helm chart releases
 ==============================================
 
 Here's a list of the main chart binaries, images and dependencies available in Splunk Observability Cloud's GitHub. You can use them, for instance, in air gapped environments, push them manually to your own registry, and test them out.
