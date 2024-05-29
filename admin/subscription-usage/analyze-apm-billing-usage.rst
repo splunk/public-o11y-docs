@@ -89,6 +89,11 @@ The following metrics power the charts in your APM Subscription Usage page with 
      - Troubleshooting MetricSets
      - The cardinality of Troubleshooting MetricSets for each 1-minute window.
 
+
+   * - ``sf.org.apm.numMonitoringMetricSets``
+     - Monitoring MetricSets
+     - The cardinality of Monitoring MetricSets for each 10-minute window.
+
 .. note:: See :ref:`host-diagnostics-report-apm` for more information on how to measure subscription usage by host.
 
 How APM calculates usage 
