@@ -20,7 +20,7 @@ This integration is compatible with the following versions of Splunk On-Call:
 Splunk On-Call
 ==================
 
-Activate the Microsoft Azure integration by going to :guilabel:`Integrations`, :guilabel:`All integrations`. Select the :guilabel:`Azure Monitoring` integration option, then select :guilabel:`Enable Integration`.
+Activate the Microsoft Azure integration by navigating to :guilabel:`Integrations`, :guilabel:`All integrations`. Select the :guilabel:`Azure Monitoring` integration option, then select :guilabel:`Enable Integration`.
 
 Copy the service API endpoint to your clipboard. Make sure to update the routing keys. See :ref:`spoc-routing-keys`.
 
@@ -28,7 +28,7 @@ Copy the service API endpoint to your clipboard. Make sure to update the routing
 Azure Monitoring configuration
 ==================================================
 
-To send requests to trigger an incident in Splunk On-Call, you can leverage Alerting, which is native to Azure's Monitoring functionality.
+To send requests to trigger an incident in Splunk On-Call, you can use alerting, which is native to Azure's Monitoring functionality.
 
 Follow these steps:
 

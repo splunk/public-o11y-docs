@@ -1,79 +1,81 @@
+.. _catchpoint-integration-spoc:
+
 Catchpoint integration for Splunk On-Call
 **********************************************************
 
-[ht_toggle title=“Requirements” id=“” class=“” style=“” ]
+.. meta:: 
+   :description: Configure the Catchpoint integration for Splunk On-Call.
 
-**Versions Supported: N/A (SaaS)**
+Requirements
+========================
 
-**VictorOps Version Required: Starter, Growth,** or **Enterprise**
+This integration is compatible with the following versions of Splunk On-Call:
 
-**What you need to know: If you would like to customize the alert
-payload, refer to** `this
-article <https://help.victorops.com/knowledge-base/victorops-restendpoint-integration/>`__
-**for more information on formatting.**
-
-[/ht_toggle]
+- Starter
+- Growth
+- Enterprise
 
 Catchpoint delivers world-class Web Performance Monitoring for all
-Internet services: Website, Mobile, App, Ads, API, DNS, CDN, Streaming,
+internet services: Website, Mobile, App, Ads, API, DNS, CDN, Streaming,
 Cloud, & more.
 
-The following will walk you through the steps needed to integrate
+The following walks you through the steps needed to integrate
 Catchpoint with Splunk On-Call.
 
-**In Splunk On-Call**
+In Splunk On-Call
 =====================
 
-In VictorOps, select **Integrations** *>>* **Catchpoint**
+In Splunk On-Call, select :guilabel:`Integrations`, then :guilabel:`Catchpoint`.
 
-If the integration has not yet been enabled, click the “Enable
-Integration” button to generate your endpoint URL as seen below.  Be
-sure to replace the “$routing_key” section with the actual routing key
-you intend to use. (To view or configure route keys in Splunk On-Call,
-click *Settings>> Routing Keys*)
+If the integration isn't active, select the :guilabel:`Enable Integration` button to generate your endpoint URL. Replace the ``$routing_key`` section with the actual routing key
+you intend to use. To view or configure routing keys in Splunk On-Call, select :guilabel:`Settings`, then :guilabel:`Routing Keys`.
 
 .. image:: /_images/spoc/Catchpoint-skitch.png
+   :alt: The Catchpoint integration in Splunk On-Call. The integration displays a routing key under "Service API Endpoint".
 
---------------
-
-**In Catchpoint**
+In Catchpoint
 =================
 
-1) Navigate to *Settings* >> *API.* |catchpoint2|
+#. Navigate to :guilabel:`Settings`, then :guilabel:`API`.
 
-2) Under Alert Webhook set the status to Active, Paste in your “API URL”
+.. image:: /_images/spoc/catchpoint2.png
+   :alt: The "Settings" tab containing the "API" menu.
+
+#. Under Alert Webhook set the status to Active, Paste in your "API URL"
    that you got in Splunk On-Call.
 
-3) Select *Template* and then *Add new*
+#. Select :guilabel:`Template`, then :guilabel:`Add new`.
 
 .. image:: /_images/spoc/Screenshot-2017-05-18-15.33.00.png
+   :alt: The "Status" menu with an "Add new" option highlighted.
 
-4) Give it a name (“VictorOps Integration” for example) and then set the
-   Format to *JSON*
+#. Give it a name ("VictorOps Integration", for example) and set the
+   Format to ``JSON``.
 
 .. image:: /_images/spoc/API___Catchpoint_®.png
+   :alt: The "Add template" menu with a filled-in bubble labelled "JSON".
 
-5) Paste the following code in the *Template* section:
+#. Paste the following code in the *Template* section:
 
-{
-“message_type”:“:math:`{switch('`\ {notificationLevelId}‘,'0',‘warning',‘1',‘critical',‘2',‘recovery',‘3',‘recovery')}”,
-“monitoring_tool”: “Catchpoint”, “entity_display_name”: “Catchpoint
-Alert for ${testName} on node :math:`{nodeDetails(`\ {nodeName})}”,
-“entity_id”: “:math:`{testId}\_`\ {AlertInitialTriggerDateUtcEpoch}”,
-“state_message”: “Alert Type
-ID-:math:`{alertTypeId}, Test Type ID-`\ {testTypeId},
-Node-:math:`{nodeDetails('`\ {nodeName}')}, Product-
-:math:`{productId}, Test\_url-`\ {testUrl}” }
+.. code-block::
 
-6) Select your newly created template, hit *Save,* and you're done!
+   {
+   “message_type”:“:math:`{switch('`\ {notificationLevelId}','0','warning','1','critical','2','recovery','3','recovery')}”,
+   “monitoring_tool”: “Catchpoint”, “entity_display_name”: “Catchpoint
+   Alert for ${testName} on node :math:`{nodeDetails(`\ {nodeName})}”,
+   “entity_id”: “:math:`{testId}\_`\ {AlertInitialTriggerDateUtcEpoch}”,
+   “state_message”: “Alert Type
+   ID-:math:`{alertTypeId}, Test Type ID-`\ {testTypeId},
+   Node-:math:`{nodeDetails('`\ {nodeName}')}, Product-
+   :math:`{productId}, Test\_url-`\ {testUrl}” }
+
+#. Select your newly created template, and select :guilabel:`Save`.
 
 .. image:: /_images/spoc/Screenshot-2017-05-18-15.43.31.png
+   :alt: An arrow points to a green buttoned stating "Save".
 
-Also, if you're looking for additional variables to add to your payload,
-please seek out the Alert Webhook Macros in `the support section of the
-Catchpoint platform <https://support.catchpoint.com/>`__. Please note,
-you may add as many variables as you want, but customizing the
-parameters of the existing Template may result in degraded
+If you're looking for additional variables to add to your payload,
+seek out the Alert Webhook Macros in :new-page:`the support section of the Catchpoint platform <https://support.catchpoint.com/>`.
+You can add as many variables as you want, but customizing the
+parameters of the existing Template might result in degraded
 functionality.
-
-.. |catchpoint2| image:: /_images/spoc/catchpoint2.png
