@@ -101,7 +101,7 @@ Helm chart releases
 
 Here's a list of the main chart binaries, images and dependencies available in Splunk Observability Cloud's GitHub. You can use them, for instance, in air gapped environments, push them manually to your own registry, and test them out.
 
-Primary chart image
+Primary chart release
 ------------------------------------------------
 
 * :new-page:`https://github.com/signalfx/splunk-otel-collector-chart/releases/download/splunk-otel-collector-X.X.X/splunk-otel-collector-X.X.X.tgz`
