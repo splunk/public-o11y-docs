@@ -17,6 +17,11 @@ Use the Helm chart to do the following:
 * Create a Kubernetes DaemonSet along with other Kubernetes objects in a Kubernetes cluster.
 * Receive, process, and export metric, trace, and log data for Splunk Enterprise, Splunk Cloud Platform, and Splunk Observability Cloud.
 
+To learn more about the Collector for Kubernetes Helm chart, see:
+
+* :ref:`kubernetes-helm-architecture`
+* :ref:`kubernetes-helm-releases`
+
 .. _helm-chart-supported-distros:
 
 Supported Kubernetes distributions
@@ -42,8 +47,6 @@ You need the following resources to use the chart:
 
 * :new-page:`Helm 3 <https://helm.sh/docs/intro/install/>`. Helm 2 is not supported.
 * Administrator access to your Kubernetes cluster.
-
-Learn more about the helm components and images at :ref:`kubernetes-helm-architecture`.
 
 .. _collector-k8s-destination:
 
