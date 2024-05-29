@@ -29,13 +29,15 @@ The installer script deploys and configures these elements:
 
 To install the package using the installer script, follow these steps:
 
-#. Ensure you have systemd, ``curl`` and ``sudo`` installed.
+#. Ensure you have ``systemd``, ``curl`` and ``sudo`` installed.
 #. Download and run the installer script.
 #. Replace the following variables for your environment:
 
 * ``SPLUNK_REALM``: This is the Realm to send data to. The default is ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 * ``SPLUNK_MEMORY_TOTAL_MIB``: This is the total allocated memory in mebibytes (MiB). For example, ``512`` allocates 512 MiB (500 x 2^20 bytes) of memory.
 * ``SPLUNK_ACCESS_TOKEN``: This is the base64-encoded access token for authenticating data ingest requests. See :ref:`admin-org-tokens`.
+
+The command to download and invoke the installer script is as follows:
 
 .. code-block:: bash
 
@@ -356,7 +358,7 @@ Splunk provides a Salt formula to install and configure the Collector. See :ref:
 Next steps
 ==================================
 
-After you`` ve installed the package, you can perform these actions:
+After you've installed the package, you can perform these actions:
 
 * :ref:`Configure the Collector <otel-configuration>`.
 * Use :ref:`Infrastructure Monitoring <get-started-infrastructure>` to track the health of your infrastructure.
