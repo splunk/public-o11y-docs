@@ -49,7 +49,7 @@ Link Splunk On-Call with New Relic
 
    Sample Payload:
 
-   .. code-block:: json
+   .. code-block::
 
       {
       "impactedEntities": {{json entitiesData.names}},
@@ -73,7 +73,7 @@ Link Splunk On-Call with New Relic
 
 #. Select :guilabel:`Send test notification` when you are done with adjustments to ensure the notification arrives in your Splunk On-Call account.
 
-.. image:: /_images/spoc/Cursor_and_Applied_Intelligence___Edit_channel___Alerts___AI___Workflow_Builder___Alerts___AI___Workflows___New_Relic_One.jpg
+   .. image:: /_images/spoc/Cursor_and_Applied_Intelligence___Edit_channel___Alerts___AI___Workflow_Builder___Alerts___AI___Workflows___New_Relic_One.jpg
 
 #. Select :guilabel:`Update Message` then :guilabel:`Activate Workflow` to save your changes.
 
@@ -84,15 +84,14 @@ Legacy version of New Relic
 
 .. raw:: html
 
-   <iframe src="//www.youtube.com/embed/NE2oeVSxEZI?wmode=opaque" width="666" height="500" frameborder="0" scrolling="auto" allowfullscreen="allowfullscreen">
+   <iframe src="//www.youtube.com/embed/NE2oeVSxEZI" width="666" height="500" frameborder="0" scrolling="auto" allowfullscreen="allowfullscreen">
    </iframe>
 
 #. Add VictorOps as a WebHook in New Relic. Select :guilabel:`Tools` then :guilabel:`Alert policies`  |newrelic9|
 #. Select :guilabel:`Channels and Groups` |newrelic10|
 #. Select :guilabel:`Create Channel` then :guilabel:`Webhook` |newrelic11| |newrelic12|
    #. Enter any name.
-   #. Enter the following for the WebHook URL, make sure to include the
-      correct key and route_key: ``https://alert.victorops.com/integrations/newrelic/20140115/alert/--key--/--routing--``
+   #. Enter the following for the WebHook URL, make sure to include the correct key and route_key: ``https://alert.victorops.com/integrations/newrelic/20140115/alert/--key--/--routing--``
    #. Select :guilabel:`Integrate with WebHooks` |newrelic13|
 
 .. |newrelic9| image:: /_images/spoc/newrelic9.png
