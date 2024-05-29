@@ -23,6 +23,10 @@ For each page checked in a Browser test, Splunk Synthetic Monitoring captures an
 Set up a Browser test
 =========================
 
+
+By default, the synthetics browser tests use Google Chrome version .... to simulate user activity. 
+
+
 Follow these steps to set up a Browser test:
 
 #. From the landing page of Splunk Observability Cloud, navigate to Splunk Synthetic Monitoring. 
