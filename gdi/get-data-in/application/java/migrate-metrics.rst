@@ -9,7 +9,7 @@ Migration guide for OpenTelemetry Java 2.x metrics
 .. meta::
   :description: Follow the steps in this guide to migrate to 2.x metrics and HTTP semantic conventions, and to convert your custom reporting elements to the new metrics format.
 
-OpenTelemetry Java Instrumentation 2.x contains a set of breaking changes, introduced as part of recent OpenTelemetry HTTP semantic convention updates. Versions 2.0 and higher of the Splunk Distribution of OpenTelemetry Java are fully compatible with the updated semantic conventions.
+OpenTelemetry Java Instrumentation 2.x contains a set of breaking changes, introduced as part of recent OpenTelemetry HTTP semantic convention updates. Versions 2.4.0 and higher of the Splunk Distribution of OpenTelemetry Java are fully compatible with the updated semantic conventions.
 
 The following migration instructions assume the following:
 
@@ -28,7 +28,7 @@ To migrate from OpenTelemetry Java 1.x to OpenTelemetry Java 2.x, you need the f
 - Splunk Distribution of OpenTelemetry Collector version 0.98 or higher deployed
 - Administrator permissions in Splunk Observability Cloud. See :ref:`roles-table-phase`
 
-If you're instrumenting your Java services using the Splunk Distribution of OpenTelemetry Java 1.x or the equivalent upstream instrumentation, you can already migrate to the version 2.0 and higher of the Java agent.
+If you're instrumenting your Java services using the Splunk Distribution of OpenTelemetry Java 1.x or the equivalent upstream instrumentation, you can already migrate to the version 2.4.0 and higher of the Java agent.
 
 
 .. _java-20-migration-best-practices:
@@ -73,9 +73,9 @@ For each supported process, you can turn on and off the data migration, see the 
 Grace period
 ------------------
 
-The grace period for receiving and processing duplicated metrics at no additional cost lasts 6 months, starting with the release of the Java agent version 2.0 on May 28, 2024.
+The grace period for receiving and processing duplicated metrics at no additional cost lasts 6 months, starting with the release of the Java agent version 2.4.0 on May 29, 2024.
 
-Migration support is available for 12 months after the release of version 2.0 and will be deprecated after 18 months.
+Migration support is available for 12 months after the release of version 2.4.0 and will be deprecated after 18 months.
 
 .. note:: After the grace period, duplicated metric data is billed as custom metric data. Make sure to turn off the Data Migration action after you've completed the migration to avoid surcharges.
 
@@ -84,7 +84,7 @@ Migration support is available for 12 months after the release of version 2.0 an
 Migrate to OTel Java 2.x
 ========================================
 
-To migrate your instrumentation to the version 2.0 or higher of the Java agent, follow these steps:
+To migrate your instrumentation to the version 2.4.0 or higher of the Java agent, follow these steps:
 
 1. Turn on the migration of Java metrics in the :guilabel:`Data Migration` page:
 
@@ -96,7 +96,7 @@ To migrate your instrumentation to the version 2.0 or higher of the Java agent, 
 
    .. include:: /_includes/gdi/histograms.rst
 
-3. Make sure version 2.0 or higher of the Splunk Distribution of the Java agent is installed. See :ref:`upgrade-java-instrumentation`.
+3. Make sure version 2.4.0 or higher of the Splunk Distribution of the Java agent is installed. See :ref:`upgrade-java-instrumentation`.
 
 4. If you defined a custom Collector endpoint for metrics, make sure to update the port and use the correct property:
 
@@ -106,7 +106,7 @@ To migrate your instrumentation to the version 2.0 or higher of the Java agent, 
       # You can also use the OTEL_EXPORTER_OTLP_METRICS_ENDPOINT environment variable
       -Dotel.exporter.otlp.metrics.endpoint=http://localhost:4318/v1/metrics
 
-   Review all others settings to check that they're still applicable to version 2.0. See :ref:`advanced-java-otel-configuration`.
+   Review all others settings to check that they're still applicable to version 2.4.0. See :ref:`advanced-java-otel-configuration`.
 
 5. Migrate your custom reporting elements:
 
@@ -124,7 +124,7 @@ To migrate your instrumentation to the version 2.0 or higher of the Java agent, 
 
 .. _java-20-metric-names:
 
-New metric names for version 2.0
+New metric names for version 2.x
 ======================================
 
 .. include:: /_includes/gdi/java-20-metrics-equivalences.rst
@@ -134,7 +134,7 @@ New metric names for version 2.0
 Metrics no longer reported
 ---------------------------------------
 
-Due to changes in the metrics emitted by the Java instrumentation version 2.0 and higher, detectors or dashboards that use the following metrics might not work as before the migration:
+Due to changes in the metrics emitted by the Java instrumentation version 2.4.0 and higher, detectors or dashboards that use the following metrics might not work as before the migration:
 
 * ``db.pool.connections``
 * ``executor.tasks.completed``

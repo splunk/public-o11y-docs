@@ -139,7 +139,7 @@ See :ref:`get-data-in-profiling` for more information. For more settings, see :r
 Metrics collection
 ---------------------------------------
 
-Starting from version 2.0, the Java agent collects metrics by default when instrumenting an application or service automatically. To migrate metric collection from version 1.x to 2.x, see :ref:`java-metrics-migration-guide`.
+Starting from version 2.4.0, the Java agent collects metrics by default when instrumenting an application or service automatically. To migrate metric collection from version 1.x to 2.x, see :ref:`java-metrics-migration-guide`.
 
 If your metrics endpoint is different than the default value, set the ``OTEL_EXPORTER_OTLP_METRICS_ENDPOINT`` environment variable. See :ref:`advanced-java-otel-configuration` for more information.
 

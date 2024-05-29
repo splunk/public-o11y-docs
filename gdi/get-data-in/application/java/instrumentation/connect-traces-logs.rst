@@ -13,7 +13,7 @@ If needed, you can configure your Java logging library to produce logs that incl
 
 .. note::
 
-   Logs export to Splunk Observability Cloud requires the Splunk Distribution of OpenTelemetry Collector 2.0 or higher.
+   Logs export to Splunk Observability Cloud requires the Splunk Distribution of OpenTelemetry Collector.
 
 .. _java-traces-logs-requirements:
 

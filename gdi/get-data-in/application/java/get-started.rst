@@ -19,7 +19,7 @@ Instrument Java applications for Splunk Observability Cloud
    Manual instrumentation <instrumentation/java-manual-instrumentation>
    Performance overhead <performance>
    Troubleshoot the Java agent <troubleshooting/common-java-troubleshooting>
-   Migrate to metrics 2.0 <migrate-metrics>
+   Migrate to metrics 2.x <migrate-metrics>
    Migrate from SignalFx Java agent <troubleshooting/migrate-signalfx-java-agent-to-otel>
    Version 1.x (Deprecated) <version1x/get-started-1x>
    About Splunk OTel Java <splunk-java-otel-distribution>
