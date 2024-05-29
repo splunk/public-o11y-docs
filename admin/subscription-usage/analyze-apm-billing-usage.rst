@@ -7,11 +7,11 @@ Analyze Splunk APM subscription usage data for your subscription plan
 .. meta::
    :description: How APM calculates subscription usage information and download usage reports to monitor your organization.
 
-.. note:: The following information describes aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team.
+.. note:: Use this topic to understand general aspects of subscription usage and consumption for Splunk APM. For more detailed billing-related queries, contact your Splunk Account Team.
 
-Use the APM subscription usage page to view charts that track your organization's APM usage against its entitlements. You have to be the to view the Subscription Usage page for your organization.
+Use the APM subscription usage page to view charts that track your organization's APM usage against its limits.
 
-You can also use the Subscription Usage page to get detailed reports for each usage period. For more information, see :ref:`view-apm-billing-reports`. 
+You can also go to the subscription usage page to get detailed reports for each usage period. For more information, see :ref:`view-apm-billing-reports`. 
 
 Prerequisite
 ==============
@@ -23,7 +23,7 @@ To view your organization's APM subscription usage, go to :guilabel:`Settings` t
 How APM calculates usage
 ========================
 
-APM uses Splunk Observability Cloud metrics to calculate usage for traces-analyzed-per-minute (TAPM) and host subscription plans. Entitlements for host subscription plans are based on the number of hosts and containers sending data to APM. Entitlements for TAPM subscription plans are based on the number of traces you send to APM per minute.
+APM uses Splunk Observability Cloud metrics to calculate usage for traces-analyzed-per-minute (TAPM) and host subscription plans. Limits for host subscription plans are based on the number of hosts and containers sending data to APM. Limits for TAPM subscription plans are based on the number of traces you send to APM per minute.
 
 As a result, the metrics for calculating usage depend on the subscription plan type. See the following sections for more information about how APM calculates usage for each subscription plan type. To confirm the plan for your organization, view the :guilabel:`Subscription` panel on the Subscription Usage page.
 
@@ -111,12 +111,12 @@ For host subscription plans, you can request and download reports that show whic
 
 To download a subscription usage report, do the following:
 
-- Go to :menuselection:`Settings` then :menuselection:`Subscription Usage` and select the :guilabel:`APM` tab.
-- Expand the :guilabel:`Hosts` chart or the :guilabel:`Containers` chart.
-- Select an hour of time in the chart.
-- Select a specific minute within the hour.
-- Select :guilabel:`Download Data` to download the CSV file.
+#. Go to :menuselection:`Settings` then :menuselection:`Subscription Usage` and select the :guilabel:`APM` tab.
+#. Expand the :guilabel:`Hosts` chart or the :guilabel:`Containers` chart.
+#. Select an hour of time in the chart.
+#. Select a specific minute within the hour.
+#. Select :guilabel:`Download Data` to download the CSV file.
 
 For each selected minute, the report shows the attributes or tags associated with the hosts and containers that sent data to Splunk APM. You might see different tags, like ``AWSUniqueId``, ``container_id``,  ``gcp_id``, and so on depending on the source of the host or container observed and the version of your instrumentation agent.
 
-.. caution:: For Kubernetes deployments, the Kubernetes attributes processor extracts default attributes extracted by the processor, such as ``k8s.pod.name``, are required for accurate subscription usage. Don’t remove the Kubernetes attributes processor from your configuration. See :ref:`kubernetes-attributes-processor` for more information.
+.. caution:: For Kubernetes deployments, the Kubernetes attributes processor extracts default attributes, such as ``k8s.pod.name``. These attributes are required for accurate subscription usage. Don't remove the Kubernetes attributes processor from your configuration. See :ref:`kubernetes-attributes-processor` for more information.
