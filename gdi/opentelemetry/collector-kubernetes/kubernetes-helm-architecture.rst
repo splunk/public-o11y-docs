@@ -106,7 +106,7 @@ Primary chart release
 
 * :new-page:`https://github.com/signalfx/splunk-otel-collector-chart/releases/download/splunk-otel-collector-X.X.X/splunk-otel-collector-X.X.X.tgz`
 
-Optional subcharts
+Optional releases for subcharts
 ------------------------------------------------
 
 * :new-page:`https://github.com/open-telemetry/opentelemetry-helm-charts/releases/download/opentelemetry-operator-X.X.X/opentelemetry-operator-X.X.X.tgz`
