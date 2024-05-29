@@ -158,8 +158,7 @@ Only some fields are preconfigured with the VictorOps app, so mapping additional
 #. On the Mapping Assist page, you are 3 boxes. The first box is your :guilabel:`Source Fields`. The next box is the mapping for
    the fields. The final box is the :guilabel:`Target Fields`. 
    #. First, search the :guilabel:`Source Field`` for the name of the field you created. Select it and then select the Add arrow.
-   #. Next, do the same thing for the :guilabel:`Target Field`. Find and assign the Target Field you want to match with and
-      add it to the Field Map box.
+   #. Next, do the same thing for the :guilabel:`Target Field`. Find and assign the Target Field you want to match with and add it to the Field Map box.
    #. Last, make sure the 2 fields are mapped,in the :guilabel:`Field Map` field. 
    #. Select :guilabel:`Save`.
 
@@ -211,13 +210,13 @@ The VictorOps app can interact with the ServiceNow CMDB by setting any cmdb item
 Troubleshooting
 =========================
 
-I am getting a message that my "ServiceNow is connected, but you do not have the proper permissions for the integration to work."
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Permissions error message
+------------------------------
 
-The app configures the service user with the roles we expect are needed for out of box configurations of ServiceNow. It is very common for additional roles to be required that are unique to your instance of ServiceNow. You need to identify the subset of roles that are required by your instance and add them to the service user account. One easy way to identify if this is the case, is to temporarily add the admin role since it inherits all other roles. Then test the
+If you receive a message that reads: "ServiceNow is connected, but you do not have the proper permissions for the integration to work." The app configures the service user with the roles we expect are needed for out of box configurations of ServiceNow. It is very common for additional roles to be required that are unique to your instance of ServiceNow. You need to identify the subset of roles that are required by your instance and add them to the service user account. One easy way to identify if this is the case, is to temporarily add the admin role since it inherits all other roles. Then test the
 integration. If everything works as expected, there is some role or subset of roles that need to be identified and added.
 
-I am getting messages in my VictorOps Incidents and Timeline that "ServiceNow API call timed out."
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+API time out message
+-----------------------
 
-Splunk On-Call waits 10 seconds for a response from ServiceNow before dropping the attempted request. Many times, ServiceNow queues the API call, but the link between VictorOps incident and ServiceNow incident is not established because Splunk On-Call did not receive the response in time. To speed up the requests, apply an index in ServiceNow on the field ``x_splu2_victorops_victorops_incident`` on the incidents table.
+If you get a message in my Splunk On-Call incidents and timeline that "ServiceNow API call timed out." Splunk On-Call waits 10 seconds for a response from ServiceNow before dropping the attempted request. Many times, ServiceNow queues the API call, but the link between VictorOps incident and ServiceNow incident is not established because Splunk On-Call did not receive the response in time. To speed up the requests, apply an index in ServiceNow on the field ``x_splu2_victorops_victorops_incident`` on the incidents table.

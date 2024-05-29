@@ -86,7 +86,7 @@ Splunk On-Call integrations
    signal-sciences-integration
    sensu-integration
    sentry-integration-guide-victorops
-   servicenow-bi-directional-integration-guide
+   servicenow-integration
    setup-single-sign-on-sso-and-user-provisioning-with-okta-beta
    site24x7-integration
    slack-integration-guide
