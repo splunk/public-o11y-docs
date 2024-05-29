@@ -113,6 +113,11 @@ Optional subcharts
 
 * :new-page:`https://github.com/cert-manager/cert-manager/archive/refs/tags/vX.X.X.tar.gz` 
 
+.. _helm-chart-images:
+
+Helm chart images
+==============================================
+
 Images used by default
 ------------------------------------------------
 
