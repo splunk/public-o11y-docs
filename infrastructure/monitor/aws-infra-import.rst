@@ -249,7 +249,7 @@ When you remove a namespace, Infrastructure Monitoring no longer includes metric
 Example: Filter AWS data using tags
 --------------------------------------------------------------------------------
 
-You can filter AWS data using AWS tags, only if Observability Cloud syncs tags for those AWS namespaces. For example, if you use Detailed Monitoring for EC2 instances in AWS, Infrastructure Monitoring imports the following dimensions:
+You can filter AWS data using AWS tags, only if Splunk Observability Cloud syncs tags for those AWS namespaces. For example, if you use Detailed Monitoring for EC2 instances in AWS, Infrastructure Monitoring imports the following dimensions:
 
 * ``AutoScalingGroupName``
 * ``ImageId``

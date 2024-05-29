@@ -170,7 +170,7 @@ specify one of the keyword values shown in the following table:
 
    * - ``value``
      - Value
-     - Value of the data point when Observability Cloud receives it.
+     - Value of the data point when Splunk Observability Cloud receives it.
 
 In addition, you can sort by any dimension of an MTS displayed in the chart.
 
@@ -222,7 +222,7 @@ To sort by the dimension ``demo_datacenter``, specify the following:
 
 
 .. note::
-    Observability Cloud doesn't guarantee the sort order of identical values in the input stream.
+    Splunk Observability Cloud doesn't guarantee the sort order of identical values in the input stream.
 
 List chart prefix and suffix
 ----------------------------
@@ -280,9 +280,9 @@ Text charts
 ===========
 
 Text charts let you add textual information to a dashboard. The text
-appears in the same type of panel that Observability Cloud uses to display data.
+appears in the same type of panel that Splunk Observability Cloud uses to display data.
 
-Observability Cloud lets you use GitHub-style Markdown in your text.
+Splunk Observability Cloud lets you use GitHub-style Markdown in your text.
 
 .. note:: Inserting images using Markdown is not supported in text charts.
 

@@ -58,7 +58,7 @@ For metrics from specific data sources, see:
       <h2>Data management and visualization tools</h2>
    </embed>
 
-Observability Cloud offers you the following metric access, visualization, and management tools at:
+Splunk Observability Cloud offers you the following metric access, visualization, and management tools at:
 
 * :ref:`metrics-finder-and-metadata-catalog`
 * :ref:`metrics-pipeline`

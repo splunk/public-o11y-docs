@@ -56,7 +56,7 @@ For more information, refer to Google's official announcement :new-page:`Introdu
 
 If you use GCP's :strong:`Project Viewer` role, you won't require any changes to your GCP setup to use Splunk Observability Cloud, and any update will be applied automatically. 
 
-If you want to use a more restrictive role than Project Viewer, make sure your selected role has sufficient permissions to connect to Observability Cloud, otherwise you'll get an error message when trying to connect. Review and activate any missing permissions, or change the role to Project Viewer.
+If you want to use a more restrictive role than Project Viewer, make sure your selected role has sufficient permissions to connect to Splunk Observability Cloud, otherwise you'll get an error message when trying to connect. Review and activate any missing permissions, or change the role to Project Viewer.
 
 The following table specifies the permissions required for GCP integrations:
 

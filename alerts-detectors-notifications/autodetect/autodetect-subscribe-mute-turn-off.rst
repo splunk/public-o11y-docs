@@ -8,7 +8,7 @@ By default, you aren't subscribed to receive notifications from AutoDetect. Ther
 Subscribe to AutoDetect notifications
 ========================================
 
-Subscribe to detectors to receive notifications When a detector triggers an alert in Observability Cloud. The steps for subscribing to AutoDetect alerts and detectors are the same as those for other alerts and detectors.
+Subscribe to detectors to receive notifications When a detector triggers an alert in Splunk Observability Cloud. The steps for subscribing to AutoDetect alerts and detectors are the same as those for other alerts and detectors.
 
 To learn how to subscribe to a detector or alert for notifications, see :ref:`manage-notifications`.
 

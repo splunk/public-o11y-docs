@@ -216,8 +216,8 @@ You can collect data from the following AWS services:
 
   * - AWS/EKS
     - Amazon Elastic Kubernetes Service (EKS)
-    - :strong:`X`
-    - :strong:`X`
+    - :strong:`X` (5)
+    - :strong:`X` (5)
     - :strong:`X`
     - :strong:`X`
 
@@ -689,3 +689,4 @@ The following applies to the collected logs and metadata listed in the table:
 #. EC2 tags & properties only
 #. Logs collected by the CloudWatch agent stored in CloudWatch Logs
 #. Metadata in this context refers to AWS tags and properties
+#. Collected by the :ref:`Splunk Distribution of the Collector for Kubernetes <collector-kubernetes-intro>`

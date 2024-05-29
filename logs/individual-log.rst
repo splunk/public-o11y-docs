@@ -32,5 +32,5 @@ To view the contents of an individual log record and create a field extraction r
    * To create a new log processing rule based on the selected field, select :menuselection:`Extract Field`. To learn more about extracting fields to create log processors, see :new-page-ref:`logs-processors`.
    * To add the field as a new column in the  Logs table, select :menuselection:`Add field as column`.
    * Select :menuselection:`View <field_name>` to go to the appropriate view in the Splunk Observability Cloud. For
-     example, if you select a field related to Kubernetes, Observability Cloud displays related data in the Kubernetes Navigator.
-     If you select fields related to APM, such as :menuselection:`View trace_id` or :menuselection:`View span_id`, Observability Cloud displays the trace or span in the APM Navigator.
+     example, if you select a field related to Kubernetes, Splunk Observability Cloud displays related data in the Kubernetes Navigator.
+     If you select fields related to APM, such as :menuselection:`View trace_id` or :menuselection:`View span_id`, Splunk Observability Cloud displays the trace or span in the APM Navigator.

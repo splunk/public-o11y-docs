@@ -18,7 +18,7 @@
 
    * - 3
      - | Custom 
-       | Metrics reported to Observability Cloud outside of those reported by default, such as host, container, or bundled metrics. Custom metrics might result in increased data ingest costs.
+       | Metrics reported to Splunk Observability Cloud outside of those reported by default, such as host, container, or bundled metrics. Custom metrics might result in increased data ingest costs.
 
    * - 4
      - Hi-resolution

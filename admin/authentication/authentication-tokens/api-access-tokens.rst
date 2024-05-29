@@ -20,7 +20,7 @@ Keep in mind you might also need the following access tokens:
 Retrieve your user API access token (session token)
 =========================================================
 
-Observability Cloud automatically generates a user API access token every time you log in.
+Splunk Observability Cloud automatically generates a user API access token every time you log in.
 
 To retrieve it:
 

@@ -10,7 +10,7 @@ View your realm, API endpoints, and organization
 
 To view your realm, organization, or admin status in an organization, follow these steps:
 
-1. In the Observability Cloud main menu, select :strong:`Settings`.
+1. In the Splunk Observability Cloud main menu, select :strong:`Settings`.
 
 2. Select your user name at the top of the :strong:`Settings` menu.
 

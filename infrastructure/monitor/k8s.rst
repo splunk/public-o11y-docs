@@ -12,7 +12,7 @@ Monitor Kubernetes (classic version)
 
 Before you can start monitoring any Kubernetes resources, :ref:`get-started-k8s`, and log in with your administrator credentials.
 
-You can monitor Kubernetes metrics with Splunk Observability Cloud. Splunk Observability Cloud uses the Splunk Distribution of OpenTelemetry Collector for Kubernetes to provide robust infrastructure monitoring capabilities. If you're also exporting logs from Kubernetes and want to learn about how to view logs in Observability Cloud, see :ref:`get-started-logs`.
+You can monitor Kubernetes metrics with Splunk Observability Cloud. Splunk Observability Cloud uses the Splunk Distribution of OpenTelemetry Collector for Kubernetes to provide robust infrastructure monitoring capabilities. If you're also exporting logs from Kubernetes and want to learn about how to view logs in Splunk Observability Cloud, see :ref:`get-started-logs`.
 
 You can also export and monitor data related to your Kubernetes clusters, as described in the following table.
 
@@ -239,7 +239,7 @@ Use default dashboards to monitor Kubernetes
 
 To find default dashboards for Kubernetes, select :strong:`Navigation menu > Dashboards` and search for Kubernetes to find a dashboard.
 
-Observability Cloud provides these default dashboards for Kubernetes:
+Splunk Observability Cloud provides these default dashboards for Kubernetes:
 
 .. list-table::
    :header-rows: 1
@@ -249,25 +249,25 @@ Observability Cloud provides these default dashboards for Kubernetes:
      - :strong:`Description`
 
    * - Kubernetes Clusters
-     - View a summary of every cluster you are monitoring in Observability Cloud.
+     - View a summary of every cluster you are monitoring in Splunk Observability Cloud.
 
    * - Kubernetes Overview
-     - View a summary of every pod and node you are monitoring in Observability Cloud.
+     - View a summary of every pod and node you are monitoring in Splunk Observability Cloud.
 
    * - Kubernetes Nodes
-     - View a summary of every node you are monitoring in Observability Cloud.
+     - View a summary of every node you are monitoring in Splunk Observability Cloud.
 
    * - Kubernetes Node
      - View the health of a specific node you specify. The dashboard is empty until you specify a node name.
 
    * - Kubernetes Pods
-     - View a summary of every pod you are monitoring in Observability Cloud.
+     - View a summary of every pod you are monitoring in Splunk Observability Cloud.
 
    * - Kubernetes Pod
      - View the health of a specific pod you specify. The dashboard is empty until you specify a pod name.
 
    * - Kubernetes Containers
-     - View a summary of every container you are monitoring in Observability Cloud.
+     - View a summary of every container you are monitoring in Splunk Observability Cloud.
 
    * - Kubernetes Container
      - View the health of a specific container ID you specify. The dashboard is empty until you specify a container ID.

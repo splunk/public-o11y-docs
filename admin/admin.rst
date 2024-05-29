@@ -5,16 +5,16 @@ Set up and administer Splunk Observability Cloud
 ********************************************************************************
 
 .. meta::
-   :description: Overview of the Observability Cloud admin tasks and links to the documentation.
+   :description: Overview of the Splunk Observability Cloud admin tasks and links to the documentation.
 
-One of the first steps in getting started with Observability Cloud is setting up your organization. In Observability Cloud, an organization, or account, is the highest-level security grouping. For example, other organizations and their users can't access the data in your organization.
+One of the first steps in getting started with Splunk Observability Cloud is setting up your organization. In Splunk Observability Cloud, an organization, or account, is the highest-level security grouping. For example, other organizations and their users can't access the data in your organization.
 
 To set up your organization, create and carry out a plan for addressing the tasks described in this topic. Many of these tasks require administrator access, and you might need to perform some administrative tasks on a regular basis after your initial setup.
 
 
 Set up and administer your organization
 ==============================================================
-The following table shows you aspects of your Observability Cloud organization that you can plan for and set up:
+The following table shows you aspects of your Splunk Observability Cloud organization that you can plan for and set up:
 
 .. list-table::
    :header-rows: 1
@@ -66,6 +66,6 @@ The following table shows you aspects of your Observability Cloud organization t
 
         For information about Infrastructure Monitoring subscription usage, see :ref:`monitor-imm-billing-usage`.
 
-        For information about usage metrics for Observability Cloud, see :ref:`org-metrics`.
+        For information about usage metrics for Splunk Observability Cloud, see :ref:`org-metrics`.
      - admin, usage
     

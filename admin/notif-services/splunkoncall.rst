@@ -5,11 +5,11 @@ Send alert notifications to Splunk On-Call using Splunk Observability Cloud
 ******************************************************************************
 
 .. meta::
-      :description: Configure Observability Cloud to send alerts to Splunk On-Call when a detector alert condition is met and when the condition clears.
+      :description: Configure Splunk Observability Cloud to send alerts to Splunk On-Call when a detector alert condition is met and when the condition clears.
 
 You can configure Splunk Observability Cloud to automatically send alert notifications to Splunk On-Call (formerly VictorOps) when a detector alert condition is met and when the alert clears.
 
-To send Observability Cloud alert notifications to Splunk On-Call, complete the following configuration tasks:
+To send Splunk Observability Cloud alert notifications to Splunk On-Call, complete the following configuration tasks:
 
 * :ref:`oncall1`
 
@@ -21,7 +21,7 @@ To send Observability Cloud alert notifications to Splunk On-Call, complete the 
 
 * :ref:`oncall3`
 
-   You must be an Observability Cloud administrator to complete this task.
+   You must be a Splunk Observability Cloud administrator to complete this task.
 
 * :ref:`oncall4`
 
@@ -62,12 +62,12 @@ You'll need your alert routing key in :ref:`oncall3`.
 
 .. _oncall3:
 
-Step 3: Create a Splunk On-Call integration in Observability Cloud
+Step 3: Create a Splunk On-Call integration in Splunk Observability Cloud
 =================================================================================
 
-You must be an Observability Cloud administrator to complete this task.
+You must be a Splunk Observability Cloud administrator to complete this task.
 
-To create a Splunk On-Call integration in Observability Cloud:
+To create a Splunk On-Call integration in Splunk Observability Cloud:
 
 #. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`Splunk On-Call guided setup <https://login.signalfx.com/#/integrations/integrations/victorops>`. Optionally, you can navigate to the guided setup on your own:
@@ -90,13 +90,13 @@ To create a Splunk On-Call integration in Observability Cloud:
 
 .. _oncall4:
 
-Step 4: Add a Splunk On-Call integration as a detector alert recipient in Observability Cloud
+Step 4: Add a Splunk On-Call integration as a detector alert recipient in Splunk Observability Cloud
 =======================================================================================================
 
 ..
   once the detector docs are migrated - this step may be covered in those docs and can be removed from these docs. below link to :ref:`detectors` and :ref:`receiving-notifications` instead once docs are migrated
 
-To add a Splunk On-Call integration as a detector alert recipient in Observability Cloud:
+To add a Splunk On-Call integration as a detector alert recipient in Splunk Observability Cloud:
 
 #. Create or edit a detector that you want to configure to send alert notifications using your Splunk On-Call integration.
 
@@ -113,10 +113,10 @@ To add a Splunk On-Call integration as a detector alert recipient in Observabili
 Splunk Observability Cloud sends an alert notification to your Splunk On-Call timeline when an alert is triggered by the detector and when the alert clears.
 
 
-Observability Cloud alert notification fields sent to Splunk On-Call
-=======================================================================
+Splunk Observability Cloud alert notification fields sent to Splunk On-Call
+=============================================================================
 
-Here are the Observability Cloud alert notification fields that are sent to Splunk On-Call.
+Here are the Splunk Observability Cloud alert notification fields that are sent to Splunk On-Call.
 
 .. list-table::
    :header-rows: 1
@@ -126,22 +126,22 @@ Here are the Observability Cloud alert notification fields that are sent to Splu
      - :strong:`Description`
 
    * - Detector Definition
-     - Displays a link to view the Observability Cloud detector and corresponding alert rules.
+     - Displays a link to view the Splunk Observability Cloud detector and corresponding alert rules.
 
    * - Graph
      - Displays a snapshot view of the signal that triggered the alert.
 
    * - detector
-     - Displays the name of the Observability Cloud detector.
+     - Displays the name of the Splunk Observability Cloud detector.
 
    * - inputs
-     - Displays detailed information about the Observability Cloud alert, including the rule and detector names, alert triggering conditions, and signal details.
+     - Displays detailed information about the Splunk Observability Cloud alert, including the rule and detector names, alert triggering conditions, and signal details.
 
    * - rule
-     - Displays the name of the Observability Cloud alert rule where the conditions to trigger and clear alert events are defined.
+     - Displays the name of the Splunk Observability Cloud alert rule where the conditions to trigger and clear alert events are defined.
 
    * - entity_display_name
-     - Displays the Observability Cloud rule and detector name. This information also appears in the rule and detector notification fields.
+     - Displays the Splunk Observability Cloud rule and detector name. This information also appears in the rule and detector notification fields.
 
    * - state_message
      - When the alert is triggered, displays the alert's severity. Valid values include: ``critical``, ``major``, ``minor``, ``warning``, or ``info``. When the alert is resolved, displays the alert's resolution. Valid values include: ``back to normal``, ``stopped``, or ``manually resolved``.
