@@ -28,15 +28,9 @@ How APM calculates usage
 
 APM uses Splunk Observability Cloud metrics to calculate usage for traces-analyzed-per-minute (TAPM) and host subscription plans. Limits for host subscription plans are based on the number of hosts and containers sending data to APM. Limits for TAPM subscription plans are based on the number of traces you send to APM per minute.
 
-APM provides a value for each usage metric the system collects for each subscription usage period. The billed value is the average per-minute usage throughout the usage period.
+APM provides a value for each usage metric the system collects for each subscription usage period. The billed value is the average per-minute usage throughout the usage period. Use the charts on the APM Subscription Usage page that plot these metrics so you can monitor the billed value for each metric.
 
-Every chart on the APM Billing and Usage page plots these metrics so you can monitor the billed value for each metric.
-
-The detailed usage report for each usage period provides the billed value for each usage metric.
-
-For more information about APM usage reports, see :ref:`view-apm-billing-reports`.
-
-As a result, the metrics for calculating usage depend on the subscription plan type. See the following sections for more information about how APM calculates usage for each subscription plan type. To confirm the plan for your organization, view the :guilabel:`Subscription` panel on the Subscription Usage page.
+See the following sections for more information about how APM calculates usage for each subscription plan type. To confirm the plan for your organization, view the :guilabel:`Subscription` panel on the Subscription Usage page.
 
 The following sections detail the metrics for TAPM and host subscription plans respectively.
 
@@ -103,9 +97,9 @@ The following metrics power the charts in your APM Subscription Usage page with 
      - Monitoring MetricSets
      - The cardinality of Monitoring MetricSets for each 10-minute window.
 
-.. note:: See :ref:`host-diagnostics-report-apm` for more information on how to measure subscription usage by host.
-
 To see all of the organization metrics for APM, see :ref:`Usage metrics for Splunk Observability Cloud <org-metrics>`.
+
+The detailed usage report for each usage period provides the billed value for each usage metric. For more information about APM usage reports, see :ref:`view-apm-billing-reports`.
 
 .. _host-diagnostics-report-apm:
 
