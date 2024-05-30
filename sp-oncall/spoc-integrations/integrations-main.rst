@@ -37,7 +37,7 @@ Splunk On-Call integrations
    GCP-monitoring-integration.rst
    generic-email-endpoint
    github-integration-guide
-   grafana-integration-guide
+   grafana-integration
    graylog-integration-guide
    healthchecks-io-integration-guide
    honeybadger-integration
