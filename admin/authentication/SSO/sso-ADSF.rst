@@ -56,7 +56,7 @@ To create a new ADFS integration in Splunk Observability Cloud:
 
    #. In the integration filter menu, select :guilabel:`All`.
 
-   #. In the :guilabel:`Search` field, search for :guilabel:`Azure Directory FS`, and select it.
+   #. In the :guilabel:`Search` field, search for :guilabel:`Active Directory FS`, and select it.
 
    
 #. In the :guilabel:`Name` field, enter a name for your ADFS SSO integration.
