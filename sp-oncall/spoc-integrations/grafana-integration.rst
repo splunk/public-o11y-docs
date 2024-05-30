@@ -3,6 +3,9 @@
 Grafana integration for Splunk On-Call
 ******************************************************
 
+.. meta::
+    :description: Configure the Grafana integration for Splunk On-Call.
+
 Use the Splunk On-Call Grafana integration to forward Grafana alerts and dashboards into Splunk On-Call to notify the correct on-call users. Create on-call schedules, rotations, and escalation policies in Splunk On-Call, then route Grafana alerts and charts based on those parameters. Monitor and visualize logs,
 metrics and traces in Grafana and set thresholds to optimize alerts, create charts and surface actionable system insights.
 

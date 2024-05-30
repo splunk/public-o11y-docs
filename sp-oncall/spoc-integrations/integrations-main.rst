@@ -32,7 +32,7 @@ Splunk On-Call integrations
    dead-mans-snitch-integration
    delivery-insights-integration
    desk-com-integration
-   elasticsearch-watcher-integration-guide
+   elasticsearch-watcher-integration
    fusionreactor-cloud-integration-guide-victorops
    GCP-monitoring-integration.rst
    generic-email-endpoint

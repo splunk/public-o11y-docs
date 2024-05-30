@@ -4,7 +4,7 @@ ServiceNow bidirectional integration for Splunk On-Call
 ************************************************************************
 
 .. meta::
-   :description: About the ServiceNow bidirectional integration for Splunk On-Call
+   :description: Configure the ServiceNow bidirectional integration for Splunk On-Call
 
 .. note::
    
