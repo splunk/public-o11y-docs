@@ -1,26 +1,29 @@
-SolarWindws integration for Splunk On-Call
+.. _solarwinds-spoc:
+
+SolarWinds integration for Splunk On-Call
 **********************************************************
 
-This guide will walk you through integrating SolarWinds Orion alerts to
-VictorOps using the SolarWinds API URL endpoint in VictorOps. SolarWinds
-Orion NPM is needed for the integration, and SAM for the ack-back
-component.
+.. meta::
+    :description: Configure the SolarWinds integration for Splunk On-Call.
 
-In VictorOps
-------------
+Integrate SolarWinds Orion alerts to Splunk On-Call using the SolarWinds API URL endpoint. 
 
-1. In your account, navigate to **Integrations >> SolarWinds**
-2. **Enable** the integration
-3. Copy the **Service API Endpoint** (this will be used later)
-4. Be sure to replace **$routing_key** with a valid `routing
-   key <https://help.victorops.com/knowledge-base/routing-keys/>`__ in
-   your account
+Requirements
+================
 
-In SolarWinds
--------------
+* SolarWinds Orion NPM is required for the integration
+* SAM is required for the acknowledge-back component
 
-**Configure Alerts**
-~~~~~~~~~~~~~~~~~~~~
+Configure in Splunk On-Call
+===============================
+
+#. In your account, navigate to **Integrations >> SolarWinds**
+#. **Enable** the integration
+#. Copy the **Service API Endpoint** (this will be used later)
+#. Be sure to replace **$routing_key** with a valid `routing key <https://help.victorops.com/knowledge-base/routing-keys/>`__ in your account
+
+Configure in SolarWinds
+============================
 
 1.  Navigate to **Alerts & Activity > Alerts** and click **Manage
     Alerts** (to the right) to reach the **Alert Manager**

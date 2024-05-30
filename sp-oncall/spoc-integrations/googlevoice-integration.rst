@@ -3,6 +3,9 @@
 Google Voice integration for Splunk On-Call
 **********************************************************
 
+.. meta::
+    :description: Configure the Google Voice integration for Splunk On-Call.
+
 Create a phone number customers can call to page on-call support using Google Voice. 
 
 Requirements
