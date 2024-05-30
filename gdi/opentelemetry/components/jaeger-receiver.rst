@@ -98,19 +98,6 @@ Since version 0.61.0, remote sampling is no longer supported. Instead, since ver
 
 .. _jaeger-receiver-settings:
 
-Metrics
-======================
-
-The following metrics, resource attributes, and attributes are available.
-
-.. note:: The SignalFx exporter excludes some available metrics by default. Learn more about default metric filters in :ref:`list-excluded-metrics`.
-
-.. raw:: html
-
-  <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/jaegerreceiver.yaml"></div>
-
-.. include:: /_includes/activate-deactivate-native-metrics.rst
-
 Settings
 ======================
 
