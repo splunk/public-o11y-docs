@@ -20,7 +20,7 @@ Get started
 
 Follow these steps to configure and activate the component:
 
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+1. Deploy the Splunk Distribution of the OpenTelemetry Collector to your host or container platform:
 
   - :ref:`otel-install-linux`
   - :ref:`otel-install-windows`
@@ -97,6 +97,19 @@ Remote sampling
 Since version 0.61.0, remote sampling is no longer supported. Instead, since version 0.59.0, use the ``jaegerremotesapmpling`` extension for remote sampling.
 
 .. _jaeger-receiver-settings:
+
+Metrics
+======================
+
+The following metrics, resource attributes, and attributes are available.
+
+.. note:: The SignalFx exporter excludes some available metrics by default. Learn more about default metric filters in :ref:`list-excluded-metrics`.
+
+.. raw:: html
+
+  <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/jaegerreceiver.yaml"></div>
+
+.. include:: /_includes/activate-deactivate-native-metrics.rst
 
 Settings
 ======================
