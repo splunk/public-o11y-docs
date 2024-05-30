@@ -45,6 +45,6 @@ Records
 
 The downtime configuration record shows when the window started and finished. The records are kept for thirteen months. 
 
-During a downtime configuration window, there are gaps in synthetics metrics if you chose to the rule to pause tests. Any metrics with active tests for the rule to augment data gave the dimension ``under_maintenance: true dimension``.
+During a downtime configuration window, there are gaps in synthetics metrics if you chose to the rule to pause tests. Any metrics with active tests for the rule to augment data have the dimension ``under_maintenance: true``.
 
 
