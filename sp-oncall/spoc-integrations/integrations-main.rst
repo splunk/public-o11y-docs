@@ -37,6 +37,7 @@ Splunk On-Call integrations
    GCP-monitoring-integration.rst
    generic-email-endpoint
    github-integration-guide
+   googlevoice-integration
    grafana-integration
    graylog-integration-guide
    healthchecks-io-integration-guide
@@ -113,7 +114,6 @@ Splunk On-Call integrations
    victorops-catchpoint-integration
    victorops-connectwise-automate-integration
    victorops-dynatrace-integration
-   victorops-googlevoice-integration
    victorops-hipchat-integration
    victorops-hubot-integration
    victorops-humio-integration
