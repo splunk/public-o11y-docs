@@ -3,8 +3,7 @@
 Google Voice integration for Splunk On-Call
 **********************************************************
 
-One number customers can call in order to page on-call support using Google Voice. 
-
+Create a phone number customers can call to page on-call support using Google Voice. 
 
 Requirements
 ===============
@@ -30,7 +29,7 @@ Configure in Google
    .. image:: /_images/spoc/3-Google2.png
       :alt: google2
 
-# Go to :guilabel:`Voicemail & Text` and select :guilabel:`Add a new email address`.
+#. Go to :guilabel:`Voicemail & Text` and select :guilabel:`Add a new email address`.
 
    .. image:: /_images/spoc/4google2.png
       :alt: google3
