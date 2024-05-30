@@ -12,7 +12,7 @@ ServiceNow bidirectional integration for Splunk On-Call
 
 Use the latest Splunk On-Call to ServiceNow bidirectional integration to respond to an ncident, collaborate in real time, and find faster resolutions.
 
-The Splunk On-Call ServiceNow bidirectional integration maintains incident and ticket history but doesn't distract you during a firefight. Use the detailed incident history to conduct thorough post-incident reviews and ensure on-call incident management gets better over time. Eliminate context-switching by working in a single application, focusing on the issue at hand and spending less time organizing tickets.
+The Splunk On-Call ServiceNow bidirectional integration maintains incident and ticket history but doesn't distract you during a firefight. Use the detailed incident history to conduct thorough post-incident reviews and ensure on-call incident management gets better over time. Eliminate context-switching by working in a single application, focusing on the iƒssue at hand and spending less time organizing tickets.
 
 You can do the following with the integration:
 

@@ -17,203 +17,226 @@ Requirements
 Configure in Splunk On-Call
 ===============================
 
-#. In your account, navigate to **Integrations >> SolarWinds**
-#. **Enable** the integration
-#. Copy the **Service API Endpoint** (this will be used later)
-#. Be sure to replace **$routing_key** with a valid `routing key <https://help.victorops.com/knowledge-base/routing-keys/>`__ in your account
+#. In your account, go to :guilabel:`Integrations` then :guilabel:`SolarWinds`.
+#. Activate the integration.
+#. Copy the :guilabel:`Service API Endpoint` to use in later steps. 
 
 Configure in SolarWinds
 ============================
 
-1.  Navigate to **Alerts & Activity > Alerts** and click **Manage
-    Alerts** (to the right) to reach the **Alert Manager**
-2.  Select **Add New Alert**. Name the alert *“Send Alert to
-    VictorOps\_”*,\_ then configure your desired trigger, reset, and
-    time of day conditions
-3.  Within the **Trigger Actions** tab select **Add Action**
-4.  Select the **Send a Get or Post a URL to a Web Server** action and
-    select **Configure Action**
-5.  Name your action “*Critical to VictorOps*”, select **Use HTTP/S
-    POST**, and enter your VictorOps SolarWinds **Service API
-    Endpoint** (found in VictorOps in previous steps). *Note: this is a
-    great spot to check for the correct routing_key at the end of the
-    Service API Endpoint*
-6.  In the **Body to POST**, copy/paste an applicable **Trigger Action**
-    payload from below
-7.  For **Content Type** you'll want to set it to \_“application/json\_”
-    and for **Authentication** you can leave it at “*None*”.
-8.  You can configure the rest of the settings however you'd like and
-    when you're done be sure to save your changes.
-9.  Select **Next** to open the **Reset Action** tab, and again click
-    to **Add Action**
-10. In the **Body to POST**, copy/paste the corresponding **Reset
-    Action** payload from below and click **Add Action**
-11. Click **Next** through the Summary tab, review, then **Submit**
+#. Go to :guilabel:`Alerts & Activity` then :guilabel:`Alerts` then select :guilabel:`Manage Alerts` to go to the Alert Manager.
+#. Select :guilabel:`Add New Alert` 
+#. Name the alert "Send Alert to Splunk On-call".
+#. Configure your trigger, reset, and time-of-day conditions.
+#. On the :guilabel:`Trigger Actions` tab, select :guilabel:`Add Action`.
+#. Select :guilabel:`Send a Get or Post a URL to a Web Server` and select :guilabel:`Configure Action`.
+#. Name your action "Critical to Splunk On-Call".
+#. Select :guilabel:`Use HTTP/S POST` and enter your Splunk On-Call SolarWinds :guilabel:`Service API Endpoint`. Replace the trailing ``$routing_key`` with the actual routing key you intend to use for the alert. For more information on routing keys, see :ref:`spoc-routing-keys`.
+#. In  :guilabel:`Body to POST`, copy and paste an applicable :guilabel:`Trigger Action` payload from the example payloads. See :ref:`example-payloads`. 
+#. Set :guilabel:`Content Type` to ``application/json``.
+#. Set  :guilabel:`Authentication` to ``None``.
+#. Configure the rest of the settings as needed and save your changes.
+#. Select :guilabel:`Next` to open the :guilabel:`Reset Action` tab.
+#. Select  :guilabel:`Add Action`.
+#. In :guilabel:`Body to POST` copy and paste the corresponding :guilabel:`Reset Action` payload from the example payloads. See :ref:`example-payloads`.
+#. Select :guilabel:`Add Action`.
+#. Select:guilabel:`Next` through the Summary tab, review, then :guilabel:`Submit`.
 
-**Alert VictorOps for Multiple Actions**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Alert Splunk On-Call for multiple actions
+--------------------------------------------
 
-1. Navigate to **Alerts & Activity > Alerts** and click **Manage
-   Alerts** (to the right) to reach the **Alert Manager**
-2. Check box next to the newly-created “\ *Send Alert to VictorOps”* and
-   select **Assign Action**
-3. Assign your Trigger and Reset actions as desired, then
-   click **Assign**
+#. Go to :guilabel:`Alerts & Activity` then :guilabel:`Alerts` then select :guilabel:`Manage Alerts` to go to the Alert Manager.
+#. Select the box next to the newly-created "Send Alert to Splunk On-Call" alert and select :guilabel:`Assign Action`.
+#. Assign your trigger and reset actions, then select  :guilabel:`Assign`.
 
-**Enable the VictorOps Ack-Back**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Activate the Splunk On-Call acknowledge back
+---------------------------------------------------
 
-This ack-back is a command poll against the VictorOps public API,
-configured in SolarWinds as an Application Manager. As such you will
-have to create a new user and node in SolarWinds
+This acknowledge back is a command poll against the Splunk On-Call public API, configured in SolarWinds as an Application Manager. You have to create a new user and node in SolarWinds.
 
-1. Navigate to **Main Settings & Administration** section in SolarWinds,
-   go to **Product Specific Settings > SAM Settings**. Navigate to
-   **Application Monitors** > **Manage Application Monitors** >
-   **Application Monitor Templates.** 
-2. Import the VictorOps Ack-Back.apm-template from
-   `here <https://thwack.solarwinds.com/content-exchange/server-application-monitor/m/application-monitor-templates/2853/download>`__
-   and replace the script with the v2 version found
-   `here <https://help.victorops.com/wp-content/uploads/2019/09/SolarWinds-ack-back-v2.1.txt>`__.
-3. From the **Main Settings & Administration** section in SolarWinds, go
-   to **Product Specific Settings > SAM Settings**. Navigate to
-   **Application Monitors** > **Manage Application Monitors**
-4. Click to check the box for “*VictorOps Ack-Back*” and click **Edit
-   Properties.** *Note the *\ **Polling Frequency**\ * is set to 60
-   seconds, which means SolarWinds will command-poll VictorOps every 60
-   seconds for new ACKs*
-5. Expand the component **Ack-Back Get Requests**
-6. Change the **Credential for Monitoring** to the **SolarWinds API
-   User**
-7. Double-check the **Script Body** includes the v2 version (from step
-   2) of the ack-back script (there is a note saying so near the top of
-   the script)
-8. Update the PowerShell script with your VictorOps API values and
-   SolarWinds primary server name. You can find the VictorOps API values
-   from your VictorOps portal under `Settings >>
-   API <https://help.victorops.com/knowledge-base/api/>`__\ *.* Near the
-   top of the PowerShell script you will find the following variables.
-   Replace everything between the quotes with the correct information:
-   #Victor Ops Company ID $API_ID = “” #Victor Ops API Key $ApiKey = “”
-   #Set to your SolarWinds Primary Application Server
-   $SolarWindsServer = “”
-9. Click **Submit** to finish
+#. Go to :guilabel:`Main Settings & Administration` in SolarWinds.
+#. Go to :guilabel:`Product Specific Settings` then :guilabel:`SAM Settings`.
+#. Go to :guilabel:`Application Monitors` then :guilabel:`Manage Application Monitors` then  :guilabel:`Application Monitor Templates`.
+#. Import the VictorOps Ack-Back.apm-template and replace the script with the SolarWinds-ack-back-v2.1.txt.
+    * :new-page:`VictorOps Ack-Back.apm-template <https://thwack.solarwinds.com/content-exchange/server-application-monitor/m/application-monitor-templates/2853/download>`
+    * :new-page:`SolarWinds-ack-back-v2.1.txt <https://help.victorops.com/wp-content/uploads/2019/09/SolarWinds-ack-back-v2.1.txt>`
+#. From the :guilabel:`Main Settings & Administration` section in SolarWinds, go to :guilabel:`Product Specific Settings` then :guilabel:`SAM Settings`
+#. Go to :guilabel:`Application Monitors` then :guilabel:`Manage Application Monitors`.
+#. Select :guilabel:`VictorOps Ack-Back` and select :guilabel:`Edit Properties`. The :guilabel:`Polling Frequency` is set to 60seconds, which means SolarWinds command-polls Splunk On-Call every 60 seconds for new acknowledgement.
+#. Expand the component :guilabel:`Ack-Back Get Requests`.
+#. Change the :guilabel:`Credential for Monitoring` to the :guilabel:`SolarWinds API User`.
+#. Review the :guilabel:`Script Body` to confirm it includes the v2 version of the ack-back script.
+#. Update the PowerShell script with your Splunk On-Call API values and SolarWinds primary server name. You can find the Splunk On-Call API values from your Splunk On-Call under :guilabel:`Settings` then :guilabel:`API`. Near the top of the PowerShell script replace everything between the quotes with the correct information for the following variables:
+    * ``#Victor Ops Company ID`` 
+    * ``$API_ID="<Your API ID>"``
+    * ``#Victor Ops API Key``
+    * ``$ApiKey="<Your API Key>"``
+    * ``#Set to your SolarWinds Primary Application Server``
+    * ``$SolarWindsServer="<Your Primary SolarWinds Server Name>"``
+#. Select :guilabel:`Submit`.
 
-Create a Limited Rights User for SolarWinds Alert Management
+Create a limited-rights user for SolarWinds alert management
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Navigate to **Settings > All Settings** to reach the **Main Settings
-   & Administration** section in SolarWinds. Go to **User Accounts >
-   Manage Accounts**
-2. Select **Add New Account**
-3. Select **Orion individual account**, click **Next**
-4. In the **User Name** field enter **solarwindsapi**
-5. Enter a password, click **Next**
-6. In the **Define Settings** section, scroll down to **Alerts**. Change
-   the dropdown box **Allow Alert Management Rights** to **Yes**.
-7. Scroll to the bottom and click **Submit**.
+#. Go to :guilabel:`Settings` then :guilabel:`All Settings` to reach the :guilabel:`Main Settings & Administration` section in SolarWinds. 
+#. Go to :guilabel:`User Accounts` then :guilabel:`Manage Accounts`. 
+#. Select :guilabel:`Add New Account`.
+#. Select :guilabel:`Orion individual account`.
+#. Select :guilabel:`Next`.
+#. In the :guilabel:`User Name` field enter "solarwindsapi".
+#. Enter a password.
+#. Select :guilabel:`Next`.
+#. In the :guilabel:`Define Settings` section, scroll to :guilabel:`Alerts`. 
+#. In :guilabel:`Allow Alert Management Rights` select :guilabel:`Yes`.
+#. Select :guilabel:`Submit`.
 
-Add the Limited Rights User to the SAM Credential Library
+Add the limited-rights user to the SAM credential library
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. From the **Main Settings & Administration** section in SolarWinds, go
-   to **Product Specific Settings > SAM Settings**. Navigate to **Global
-   SAM Settings** > **Credentials Library**
-2. Add the limited user account created above. For the credential name
-   use **SolarWinds API User**
+#. From the :guilabel:`Main Settings & Administration` section in SolarWinds, go to :guilabel:`Product Specific Settings` then :guilabel:`SAM Settings`.
+#. Go to :guilabel:`Global SAM Settings` then :guilabel:`Credentials Library`. 
+#. Add the limited user account. For the credential name use :guilabel:`SolarWinds API User`.
 
 Create an external node for VictorOps.com
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Navigate to **Settings > Manage Nodes** and add a node
-2. For the Node name enter **victorops.com**
+#. Go to :guilabel:`Settings` then :guilabel:`Manage Nodes`.
+#. Add a node.
+#. For the node name enter "victorops.com".
 
-Assign the VictorOps Ack-Back Application Template
+Assign the Splunk On-Call acknowledge back application templates
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. From the **Main Settings & Administration** section in SolarWinds, go
-   to **Product Specific Settings > SAM Settings**. Navigate to
-   **Application Monitors** > **Manage Application Monitors** and click
-   the tab for **Application Monitor Templates**
-2. Find and click to check the box next to “*VictorOps Ack-Back*” then
-   select **Assign to Node**
-3. Choose the node **victorops.com** and click the green arrow to add it
-   to **Selected Nodes**, then click **Next**
-4. Assign the *SolarWinds API User* credentials, and click **Assign
-   Application Monitors** to finish
+#. From the :guilabel:`Main Settings & Administration` section in SolarWinds, go to :guilabel:`Product Specific Settings` then :guilabel:`SAM Settings`.
+#. Go to :guilabel:`Application Monitors` then :guilabel:`Manage Application Monitors`. 
+#. Select :guilabel:`Application Monitor Templates`.
+#. Select :guilabel:`VictorOps Ack-Back` then select :guilabel:`Assign to Node`.
+#. Select the "victorops.com" node and select the green arrow to add it to :guilabel:`Selected Nodes`.
+#. Select :guilabel:`Next`.
+#. Assign the SolarWinds API User credentials.
+#. Select :guilabel:`Assign Application Monitors`.
 
-Example Body Payloads
----------------------
 
-The below template payloads contain the required fields, though you may
-add additional fields as you wish. *Note that a ‘\\' character cannot be
-user in the HTTP post. Instead use an SQL replace function in the
-SolarWinds Alert:*
+.. _example-payloads:
 
-SQL: SELECT REPLACE (''‘${Caption}''‘,'\\‘,' ')}
+Example body payloads
+==========================
 
-**Node is Down**
+The following template payloads contain the required fields, you can add fields as needed. 
 
-Trigger Action
+The backslash ``\`` character can't be used in the HTTP post. Instead use an SQL replace function in the SolarWinds Alert:
 
-{ “message_type”:“CRITICAL”, “monitor_name”:“SolarWinds”,
-“monitoring_tool”:“SolarWinds”,
-“alert_rule”:“:math:`{N=Alerting;M=AlertName}",  "state\_message":"`\ {NodeName}
-is :math:`{Status}",  "entity\_display\_name":"`\ {NodeName} is
-:math:`{Status}",  "entity\_id":"`\ {N=Alerting;M=AlertObjectID}”,
-“host_name”:“:math:`{NodeName}",  "ip\_address":"`\ {Node.IP_Address}” }
+.. code:: 
 
-Reset Action
+   SQL: SELECT REPLACE (''‘${Caption}''‘,'\‘,' ')}
 
-{ “message_type”:“RECOVERY”, “monitor_name”:“SolarWinds”,
-“monitoring_tool”:“SolarWinds”,
-“alert_rule”:“:math:`{N=Alerting;M=AlertName}",  "state\_message":"`\ {NodeName}
-is :math:`{Status}",  "entity\_display\_name":"`\ {NodeName} is
-:math:`{Status}",  "entity\_id":"`\ {N=Alerting;M=AlertObjectID}”,
-“host_name”:“:math:`{NodeName}",  "ip\_address":"`\ {Node.IP_Address}” }
+Node is down
+--------------
 
-**Volume Space Alert**
+Trigger action
+^^^^^^^^^^^^^^^^^^
 
-Trigger Action
+.. code-block:: 
 
-{
-“alert_rule”:“:math:`{N=Alerting;M=AlertName}",  "entity\_display\_name":"`\ {NodeName}
-:math:`{SQL: SELECT REPLACE ('''`\ {Caption}''‘,'\\‘,' ')} has
-:math:`{VolumeSpaceAvailable} free",  "entity\_id":"`\ {N=Alerting;M=AlertObjectID}”,
-“host_name”:“:math:`{NodeName}",  "ip\_address":"`\ {Node.IP_Address}”,
-“message_type”:“CRITICAL”, “monitor_name”:“SolarWinds”,
-“monitoring_tool”:“SolarWinds”, “state_message”:“${NodeName}
-:math:`{SQL: SELECT REPLACE ('''`\ {Caption}''‘,'\\‘,' ')} has
-${VolumeSpaceAvailable} free” }
+   {
+     "message_type":"CRITICAL",
+     "monitor_name":"SolarWinds",
+     "monitoring_tool":"SolarWinds",
+     "alert_rule":"${N=Alerting;M=AlertName}",
+     "state_message":"${NodeName} is ${Status}",
+     "entity_display_name":"${NodeName} is ${Status}",
+     "entity_id":"${N=Alerting;M=AlertObjectID}",
+     "host_name":"${NodeName}",
+     "ip_address":"${Node.IP_Address}"
+   }
 
-Reset Action
+Reset action
+^^^^^^^^^^^^^^
 
-{
-“alert_rule”:“:math:`{N=Alerting;M=AlertName}",  "entity\_display\_name":"`\ {NodeName}
-:math:`{SQL: SELECT REPLACE ('''`\ {Caption}''‘,'\\‘,' ')} has
-:math:`{VolumeSpaceAvailable} free",  "entity\_id":"`\ {N=Alerting;M=AlertObjectID}”,
-“host_name”:“:math:`{NodeName}",  "ip\_address":"`\ {Node.IP_Address}”,
-“message_type”:“RECOVERY”, “monitor_name”:“SolarWinds”,
-“monitoring_tool”:“SolarWinds”, “state_message”:“${NodeName}
-:math:`{SQL: SELECT REPLACE ('''`\ {Caption}''‘,'\\‘,' ')} has
-${VolumeSpaceAvailable} free” }
+.. code-block:: 
 
-**Component Based Alert**
+   {
+     "message_type":"RECOVERY",
+     "monitor_name":"SolarWinds",
+     "monitoring_tool":"SolarWinds",
+     "alert_rule":"${N=Alerting;M=AlertName}",
+     "state_message":"${NodeName} is ${Status}",
+     "entity_display_name":"${NodeName} is ${Status}",
+     "entity_id":"${N=Alerting;M=AlertObjectID}",
+     "host_name":"${NodeName}",
+     "ip_address":"${Node.IP_Address}"
+   }
 
-Trigger Action
+Volume space alert
+--------------------
 
-{ “message_type”:“CRITICAL”, “monitor_name”:“SolarWinds”,
-“monitoring_tool”:“SolarWinds”,
-“alert_rule”:“:math:`{N=Alerting;M=AlertName}",  "state\_message":"`\ {NodeName}
-${N=SwisEntity;M=ComponentAlert.ComponentName} is
-:math:`{N=SwisEntity;M=Status;F=Status}",  "entity\_display\_name":"`\ {NodeName}
-${N=SwisEntity;M=ComponentAlert.ComponentName} is
-:math:`{N=SwisEntity;M=Status;F=Status}",  "entity\_id":"`\ {N=Alerting;M=AlertObjectID}”,
-“host_name”:“:math:`{NodeName}",  "ip\_address":"`\ {Node.IP_Address}” }
+Trigger action
+^^^^^^^^^^^^^^^^^^
 
-Reset Action
+.. code-block:: 
 
-{ “message_type”:“RECOVERY”, “monitor_name”:“SolarWinds”,
-“monitoring_tool”:“SolarWinds”,
-“alert_rule”:“:math:`{N=Alerting;M=AlertName}",  "state\_message":"`\ {NodeName}
-${N=SwisEntity;M=ComponentAlert.ComponentName} is
-:math:`{N=SwisEntity;M=Status;F=Status}",  "entity\_display\_name":"`\ {NodeName}
-${N=SwisEntity;M=ComponentAlert.ComponentName} is
-:math:`{N=SwisEntity;M=Status;F=Status}",  "entity\_id":"`\ {N=Alerting;M=AlertObjectID}”,
-“host_name”:“:math:`{NodeName}",  "ip\_address":"`\ {Node.IP_Address}” }
+   {
+     "alert_rule":"${N=Alerting;M=AlertName}",
+     "entity_display_name":"${NodeName} ${SQL: SELECT REPLACE ('''${Caption}''','\',' ')} has ${VolumeSpaceAvailable} free",
+     "entity_id":"${N=Alerting;M=AlertObjectID}",
+     "host_name":"${NodeName}",
+     "ip_address":"${Node.IP_Address}",
+     "message_type":"CRITICAL",
+     "monitor_name":"SolarWinds",
+     "monitoring_tool":"SolarWinds",
+     "state_message":"${NodeName} ${SQL: SELECT REPLACE ('''${Caption}''','\',' ')} has ${VolumeSpaceAvailable} free"
+   }
+
+Reset action
+^^^^^^^^^^^^^^
+
+.. code-block:: 
+
+   {
+     "alert_rule":"${N=Alerting;M=AlertName}",
+     "entity_display_name":"${NodeName} ${SQL: SELECT REPLACE ('''${Caption}''','\',' ')} has ${VolumeSpaceAvailable} free",
+     "entity_id":"${N=Alerting;M=AlertObjectID}",
+     "host_name":"${NodeName}",
+     "ip_address":"${Node.IP_Address}",
+     "message_type":"RECOVERY",
+     "monitor_name":"SolarWinds",
+     "monitoring_tool":"SolarWinds",
+     "state_message":"${NodeName} ${SQL: SELECT REPLACE ('''${Caption}''','\',' ')} has ${VolumeSpaceAvailable} free"
+   }
+
+Component-based alert
+------------------------
+
+Trigger action
+^^^^^^^^^^^^^^^^^^
+
+.. code-block:: 
+
+   {
+     "message_type":"CRITICAL",
+     "monitor_name":"SolarWinds",
+     "monitoring_tool":"SolarWinds",
+     "alert_rule":"${N=Alerting;M=AlertName}",
+     "state_message":"${NodeName} ${N=SwisEntity;M=ComponentAlert.ComponentName} is ${N=SwisEntity;M=Status;F=Status}",
+     "entity_display_name":"${NodeName} ${N=SwisEntity;M=ComponentAlert.ComponentName} is ${N=SwisEntity;M=Status;F=Status}",
+     "entity_id":"${N=Alerting;M=AlertObjectID}",
+     "host_name":"${NodeName}",
+     "ip_address":"${Node.IP_Address}"
+   }
+
+Reset action
+^^^^^^^^^^^^^^
+
+.. code-block:: 
+
+   {
+     "message_type":"RECOVERY",
+     "monitor_name":"SolarWinds",
+     "monitoring_tool":"SolarWinds",
+     "alert_rule":"${N=Alerting;M=AlertName}",
+     "state_message":"${NodeName} ${N=SwisEntity;M=ComponentAlert.ComponentName} is ${N=SwisEntity;M=Status;F=Status}",
+     "entity_display_name":"${NodeName} ${N=SwisEntity;M=ComponentAlert.ComponentName} is ${N=SwisEntity;M=Status;F=Status}",
+     "entity_id":"${N=Alerting;M=AlertObjectID}",
+     "host_name":"${NodeName}",
+     "ip_address":"${Node.IP_Address}"
+   }
