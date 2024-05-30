@@ -1,119 +1,74 @@
+.. _google-voice-spoc:
+
 Google Voice integration for Splunk On-Call
 **********************************************************
 
-[ht_toggle title=“Requirements” id=“” class=“” style=“” ]
+One number customers can call in order to page on-call support using Google Voice. 
 
-**VictorOps Version Required: Getting Started, Essentials,** or
-**Full-Stack**
 
-**What you need to know: This integration requires you have a Google
-Voice number along with your VictorOps account** 
+Requirements
+===============
 
-[/ht_toggle]
+* Splunk On-Call version required: Getting Started, Essentials, or Full-Stack
+* This integration requires a Google Voice number
 
-One number customers can call in order to page on-call support using
-Google Voice. The following walks through the steps needed to integrate
-a google voice number with VictorOps.
+Configure in Google
+=======================
 
---------------
+#. Go to your Google Voice account and select the main menu then :guilabel:`Legacy Google Voice`.
 
-**In Google**:
---------------
+   .. image:: /_images/spoc/1-Google2.png
+      :alt: google3
 
-Enter your Google Voice account and click on the top left hand main menu
-button to see the drop-down menu and select *Legacy Google Voice*. By
-clicking on the *Legacy Google Voice* button, it will take you to a new
-tab specifically for your Voice account.
+#. If you don't have a number, select :guilabel:`Get a Voice number`.
 
-.. image:: /_images/spoc/1-Google2.png
-   :alt: google3
+   .. image:: /_images/spoc/2-Google2.png
+      :alt: google1
 
-   google3
+#. Go to settings.
 
-If you don't have a number already, get one by selecting the *Get a
-Voice number* link.
+   .. image:: /_images/spoc/3-Google2.png
+      :alt: google2
 
-.. image:: /_images/spoc/2-Google2.png
-   :alt: google1
+# Go to :guilabel:`Voicemail & Text` and select :guilabel:`Add a new email address`.
 
-   google1
+   .. image:: /_images/spoc/4google2.png
+      :alt: google3
 
-Once you have a number go into settings.
+#. In Splunk On-Call go to :guilabel:`Integrations` then :guilabel:`Email Endpoint`. Copy the :guilabel:`Generic Email Endpoint`.
 
-.. image:: /_images/spoc/3-Google2.png
-   :alt: google2
+   .. image:: /_images/spoc/Email-Integration.png
 
-   google2
+#. Add the email to your Google Voice account. Replace the trailing ``$routing_key`` with the routing key you intend to use for the alert. For more information on routing keys, see :ref:`spoc-routing-keys`.
 
-Go into the “Voicemail & Text” section and select the “Add a new email
-address” link.
+   .. image:: /_images/spoc/5Google2.png
+      :alt: google5
 
-.. image:: /_images/spoc/4google2.png
-   :alt: google3
+#. A confirmation email is sent into the Splunk On-Call timeline. Copy the confirmation link and paste it into a browser to verify the new email address.
 
-   google3
+   .. image:: /_images/spoc/6google2-1.png
+      :alt: google6
 
-Grab your VictorOps `Generic Email
-Endpoint <https://help.victorops.com/knowledge-base/victorops-generic-email-endpoint/>`__
-from the VictorOps portal by navigating to *Integrations >> Email
-Endpoint*)
+   .. image:: /_images/spoc/google7.png
+      :alt: google7
 
-.. image:: /_images/spoc/Email-Integration.png
+#. Go back into the Google Voice Voicemail & Text settings and select the :guilabel:`Email the message to` checkbox and select the VictorOps email endpoint.
 
-Add the email to your Google Voice account and hit save. Make sure to
-include the correct routing key.
+   .. image:: /_images/spoc/7google2.png
+      :alt: google8
 
-.. image:: /_images/spoc/5Google2.png
-   :alt: google5
+Configure in Splunk On-Call
+==============================
 
-   google5
+You need a Rules Engine rule in order to turn all Voicemails into incidents. You can create the rule based on the transcription of the message or on every voicemail like the following example.
 
-A confirmation email will be sent into the VictorOps timeline. Copy out
-the confirmation link and enter it to a browser to verify the new email
-address.
+#. Go to :guilabel:`Settings` then :guilabel:`Alert Rules Engine`. 
+#. Create a new rule.
+#. The subject line of the voicemail always starts with "New voicemail from" so create a wildcard match using that phrase. Then add a transformation that changes the ``*message_type`` to ``CRITICAL``.
 
-.. image:: /_images/spoc/6google2-1.png
-   :alt: google6
+   .. image:: /_images/spoc/2-Rules-Engine-Rule.png
 
-   google6
+#. Test the integration by calling your google voice number and leaving a message. The transcription appears in the ``state_message`` field.
 
-.. image:: /_images/spoc/google7.png
-   :alt: google7
-
-   google7
-
-Go back into the Voicemail & Text settings and select the “Email the
-message to” checkbox and select the VictorOps email endpoint.
-
-.. image:: /_images/spoc/7google2.png
-   :alt: google8
-
-   google8
-
---------------
-
-**In VictorOps:**
------------------
-
-You will need a Rules Engine rule in order to turn all Voicemails into
-incidents. You can create the rule based on the transcription of the
-message or on every voicemail like the example below.
-
-Navigate to the Rules Engine by visiting *Settings >> Alert Rules
-Engine* and create a new rule.
-
-The subject line of the voicemail will always start with “New voicemail
-from” so create a wildcard match using that phrase. Then add a
-transformation that changes the **message_type** to **CRITICAL**:
-
-.. image:: /_images/spoc/2-Rules-Engine-Rule.png
-
-Test the integration by calling your google voice number and leaving a
-message. The transcription will appear in the **state_message** field.
-
-.. image:: /_images/spoc/lastgoogle2-1.png
-   :alt: google11
-
-   google11
-
-That's it, you're done!
+   .. image:: /_images/spoc/lastgoogle2-1.png
+      :alt: google11
