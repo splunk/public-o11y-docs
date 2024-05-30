@@ -91,6 +91,7 @@ Splunk On-Call integrations
    setup-single-sign-on-sso-and-user-provisioning-with-okta-beta
    site24x7-integration
    slack-integration-guide
+   solarwinds-integration
    splunk-integration-guide
    splunk-synthetic-monitoring-integration-guide
    splunking-victorops-data
@@ -126,7 +127,6 @@ Splunk On-Call integrations
    victorops-riemann-integration
    victorops-salesforce-integration
    victorops-signalfx-integration
-   victorops-solarwinds-integration
    victorops-statuscake-integration
    victorops-sumologic-integration
    vividcortex-integration
