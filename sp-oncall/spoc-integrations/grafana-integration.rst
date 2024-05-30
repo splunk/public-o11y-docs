@@ -1,147 +1,86 @@
+.. _grafana-spoc:
+
 Grafana integration for Splunk On-Call
 ******************************************************
 
-The Splunk On-Call and Grafana integration allows you to forward
-`Grafana <https://grafana.com/>`__ alerts and dashboards into Splunk
-On-Call to notify the correct on-call users. Create on-call schedules,
-rotations, and escalation policies in Splunk On-Call, then route Grafana
-alerts and charts based on those parameters. Monitor and visualize logs,
-metrics and traces in Grafana and set thresholds to optimize alerts,
-create charts and surface actionable system insights.
+Use the Splunk On-Call Grafana integration to forward Grafana alerts and dashboards into Splunk On-Call to notify the correct on-call users. Create on-call schedules, rotations, and escalation policies in Splunk On-Call, then route Grafana alerts and charts based on those parameters. Monitor and visualize logs,
+metrics and traces in Grafana and set thresholds to optimize alerts, create charts and surface actionable system insights.
 
-When events meet predetermined monitoring criteria, Grafana sends an
-alert notification. Then, in the Splunk On-Call timeline, users can
-route and escalate critical alert data to the correct people. With the
-Splunk On-Call and Grafana integration, on-call responders can
-collaborate in real-time around system data to reduce MTTA/MTTR and
-resolve incidents faster.
+When events meet predetermined monitoring criteria, Grafana sends an alert notification. Then, in the Splunk On-Call timeline, users can route and escalate critical alert data to the correct people. With the Splunk On-Call and Grafana integration, on-call responders can collaborate in real time around system data to reduce mean time to acknowledge (MTTA) and mean time to repair (MTTR) and resolve incidents faster.
 
-**Optimize Alerts and Incident Visibility throughout the Entire
-Organization**
+With the Splunk On-Call Grafama integration, teams are able to:
 
--  Track system performance over time, visualize service health and
-   alert on-call teams when applicable monitoring thresholds are met
--  Surface alert context in the form of metrics, logs, graphs and links
-   to runbooks
--  Automatically route and escalate Grafana alert data through Splunk
-   On-Call software and collaborate in a single-pane-of-glass to drive
-   incident workflows forward
--  Chat in-line with incident context to improve collaboration and
-   quickly share critical infrastructure information and dashboards,
-   reducing MTTA/MTTR
+-  Track system performance over time, visualize service health and alert on-call teams when applicable monitoring thresholds are met
+-  Surface alert context in the form of metrics, logs, graphs and links to runbooks
+-  Automatically route and escalate Grafana alert data through Splunk On-Call software and collaborate in a single-pane-of-glass to drive incident workflows forward
+-  Chat in-line with incident context to improve collaboration and quickly share critical infrastructure information and dashboards, reducing MTTA and MTTR
 
-Grafana is a general purpose dashboard and graph composer. It's focused
-on providing rich ways to visualize time series metrics from Graphite,
-but also works with several other popular metric databases like
-InfluxDB, OpenTSDB, and Prometheus. The Grafana and Splunk On-Call
-integration allows you to understand your alerts and metrics so you get
-the most out of your data. The following guide will walk you through
-this easy to implement integration.
+Activate Grafana in Splunk On-Call
+=========================================
 
-**Enable Grafana in Splunk On-Call**
-------------------------------------
-
-From the main timeline navigate to *Integrations >> Grafana*
-
-Select the **Grafana** integration and copy the **Service API
-Endpoint** to your clipboard.
+#. From the main timeline go to :guilabel:`Integrations` then :guilabel:`Grafana`. 
+#. Select the Grafana integration and copy the :guilabel:`Service API Endpoint` for later use.
 
 .. image:: /_images/spoc/Integrations-victorops-2.png
    :alt: Copy service api endpoint for Grafana - VictorOps
 
-   Copy service api endpoint for Grafana - VictorOps
+Connect Splunk On-Call in Grafana
+========================================
 
-**Connect Splunk On-Call in Grafana**
--------------------------------------
+#. From the main dashboard, select the options menu then :guilabel:`Alerting` then :guilabel:`Notification Channels`.
 
-From the main dashboard, select the options menu then **Alerting** then
-**Notification Channels**.
+   .. image:: /_images/spoc/grafana4.png
+      :alt: Connect VictorOps in Grafana dash
 
-.. image:: /_images/spoc/grafana4.png
-   :alt: Connect VictorOps in Grafana dash
+#. Add a new channel.
 
-   Connect VictorOps in Grafana dash
+   .. image:: /_images/spoc/kb-new-channel.png
+      :alt: Add a new channel in Grafana dash
 
-Add a New Channel.
+#. Give the notification a name select the :guilabel:`VictorOps` type. 
+#. In the VictorOps settings paste in your :guilabel:`Service API Endpoint`. Replace the ``$routing_key`` with the routing key you intend to use. For more information on routing keys, see :ref:`spoc-routing-keys`.
+#. Save the integration.
 
-.. image:: /_images/spoc/kb-new-channel.png
-   :alt: Ad a new channel in Grafana dash
+   .. image:: /_images/spoc/kb-send-test.png
+      :alt: test and save integration in grafana dash
 
-   Ad a new channel in Grafana dash
-
-Give the notification a name select the **VictorOps** type. In the
-VictorOps settings paste in your **Service API Endpoint** from your
-clipboard. Be sure to replace the “$routing_key” section with the actual
-routing key you intend to use. (For more information on setting up
-routing keys, see our `Knowledge Base article on
-Routing Keys <https://help.victorops.com/knowledge-base/routing-keys/>`__)
-
-You can now test and save the integration.
-
-.. image:: /_images/spoc/kb-send-test.png
-   :alt: test and save integration in grafana dash
-
-   test and save integration in grafana dash
-
-The resulting test alert in Splunk On-Call should look similar to this:
+The resulting test alert in Splunk On-Call looks similar to this:
 
 .. image:: /_images/spoc/kb-grafana-in-timeline.png
    :alt: test alert in VictorOps - from Grafana
 
-   test alert in VictorOps - from Grafana
-
-**Connect the Notification Channel to your Alert**
+Connect the notification channel to your alert
 --------------------------------------------------
 
-Locate the Grafana Dashboard panel you want to send alerts to Splunk
-On-Call and click on the Edit button.  This should appear by clicking on
-the dropdown arrow next to the panel's name.  Next, navigate to the
-Alert section on the lefthand side.  Define your alert conditions and
-then under Notifications, click the plus button to select the
-notification channel you just configured.
+#. Locate the Grafana Dashboard panel you want to send alerts to Splunk On-Call and select :guilabel:`Edit` under dropdown arrow next to the panel name.
+#. Go to the :guilabel:`Alert`` section.
+#. Define your alert conditions.
+#. Under :guilabel:`Notifications`, select the plus button to select the notification channel you configured.
+#. Save your changes.
 
-/_images/spoc/Cmillane-testing_alert_lag-Grafana.jpg
+.. image:: /_images/spoc/Cmillane-testing_alert_lag-Grafana.jpg
 
-Be sure to save your changes.  The standard configuration is now
-complete.
+You have completed the standard configuration. Repeat these steps as necessary, creating separate notification channels for each routing key.
 
-Repeat these steps as necessary, creating separate Notification Channels
-for each Routing Key you'd like utilized and assigning the Notification
-Channel on each Dashboard Panel you'd like to alert you.
-
-**Include an Image on the Alert**
+Include an image on the alert
 ---------------------------------
 
-For those with Enterprise Splunk On-Call features, you can include the
-Grafana image of the alert in the notification. When configuring the
-notification channel in Grafana, select the box to **Include image**.
+For those with Enterprise Splunk On-Call features, you can include the Grafana image of the alert in the notification. 
 
-.. image:: /_images/spoc/kb-include-image.png
-   :alt: include grafana image of alert in victorops
+#. When configuring the notification channel in Grafana, select :guilabel:`Include image`.
 
-   include grafana image of alert in victorops
+   .. image:: /_images/spoc/kb-include-image.png
+      :alt: include grafana image of alert in victorops
 
-In Splunk On-Call, add the following Rules Engine rule that will surface
-the image_url as an annotation to the incident. (Found by navigating to
-*Settings >> Alert Rules Engine)*
+#. In Splunk On-Call, go to :guilabel:`Settings` then :guilabel:`Alert Rules Engine` and add the following Rules Engine rule to surface the image_url as an annotation to the incident. Ensure that the image is hosted in a publicly accessible location so that Splunk On-Call can display it. For further
+information, see :new-page:`Enable images in notification <https://grafana.com/docs/grafana/latest/alerting/old-alerting/notifications/#external-image-store>`.
 
-/_images/spoc/Screen-Shot-2020-06-24-at-4.37.01-PM.png
+   .. image:: /_images/spoc/Screen-Shot-2020-06-24-at-4.37.01-PM.png
 
-Lastly, ensure that the image is hosted in a publicly accessible
-location so that Splunk On-Call can display it.  For further
-information, please reference the **Enable images in notification**
-section of `this Grafana
-article <https://grafana.com/docs/grafana/latest/alerting/old-alerting/notifications/#external-image-store>`__.
-
-Your resulting Splunk On-Call incident should now include the image as
-an annotation:
+Your resulting Splunk On-Call incident now includes the image as an annotation:
 
 .. image:: /_images/spoc/Screen-Shot-2019-01-25-at-12.39.42-PM.png
    :alt: grafana example image annotation
 
-   grafana example image annotation
-
 .. image:: /_images/spoc/kb-test-notification-with-image.png
    :alt: successful test - save notification in grafana
-
-   successful test - save notification in grafana

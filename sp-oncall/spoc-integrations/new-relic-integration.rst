@@ -5,7 +5,7 @@ New Relic integration for Splunk On-Call
 
 Use the New Relic integration for Splunk On-Call to define alert queries inside New Relic then deliver them through Splunk On-Call to the proper escalation team. With varied URLs that hold different routing keys, you can manage multiple on-call teams and New Relic channels.
 
-With the Splunk On-Call and New Relic Integration, teams are able to:
+With the Splunk On-Call New Relic integration, teams are able to:
 
 -  Integrate New Relic with Splunk On-Call for complete awareness of application performance and alerts
 -  Collaborate in the Splunk On-Call timeline around New Relic monitoring data to solve problems in real time
@@ -19,7 +19,7 @@ Activate the New Relic integration in Splunk On-Call
    .. image:: /_images/spoc/New-Relic-1-1-scaled.jpg
 
 #. Select :guilabel:`Enable Integration` to generate your API Keys. 
-#. Copy the full URL to your clipboard for use later in New Relic.
+#. Copy the full URL for use later in New Relic.
 
    .. image:: /_images/spoc/New-Relic-2-1-scaled.jpg
 
