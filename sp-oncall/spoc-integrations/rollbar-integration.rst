@@ -6,19 +6,17 @@ Rollbar integration for Splunk On-Call
 .. meta::
     :description: Configure the Rollbar integration for Splunk On-Call.
 
-
-The Rollbar integration for Splunk On-Call allows you to send your Rollbar notification directly to the Splunk On-Call timeline. Follow these steps to get the integration implemented.
+Use the Rollbar integration for Splunk On-Call to send your Rollbar notification directly to the Splunk On-Call timeline. Follow these steps to get the integration implemented.
 
 Implementation steps
 =========================
-
 
 1. From :new-page:`Rollbar, <https://rollbar.com/blog/victorops-incident-management/>` select :guilabel:`Settings` from the top of your screen, and then :guilabel:`Notifications` from the left side bar. 
 2. Under :guilabel:`Available Channels` select VictorOps. 
 
    .. image:: /_images/spoc/Rollbar1.png
 
-3. You will then be presented with two input boxes. One for API Key and one for Routing Key, both of which can be found in the Splunk On-Call interface.
+3. You will then be presented with 2 input boxes. One for API Key and 1 for Routing Key, both of which can be found in the Splunk On-Call interface.
   
    .. image:: /_images/spoc/Rollbar2.png
 
