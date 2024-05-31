@@ -22,6 +22,7 @@ Collector components: Extensions
     http-forwarder-extension
     kubernetes-observer-extension
     memory-ballast-extension
+    oauth2client-extension
     pprof-extension
     smartagent-extension
     zpages-extension    
@@ -42,6 +43,7 @@ The following extensions are available:
 * :ref:`http-forwarder-extension`
 * :ref:`kubernetes-observer-extension` 
 * :ref:`memory-ballast-extension`
+* :ref:`oauth2client-extension`
 * :ref:`pprof-extension`
 * :ref:`smartagent-extension`
 * :ref:`zpages-extension`    
