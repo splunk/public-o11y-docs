@@ -24,7 +24,7 @@ Set up a Browser test
 =========================
 
 
-For optimal experience, to simulate user activity synthetics browser tests use a stable version of Google Chrome: ``116.0.5845.96-1``.
+For optimal experience, synthetics browser tests use a stable version of Google Chrome: ``116.0.5845.96-1`` to simulate user activity.
 
 Follow these steps to set up a Browser test:
 
