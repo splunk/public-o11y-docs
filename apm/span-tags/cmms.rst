@@ -12,7 +12,7 @@ Generate Monitoring MetricSets (MMS) with custom dimensions to glean meaningful 
 Prerequisites 
 ==============
 
-* To add generate a Monitoring MetricSet, you must have an admin role. 
+* To generate a Monitoring MetricSet, you must have an admin role. 
 
 * To create a new Monitoring MetricSet based on a span tag or process, you need to first index the span tag or process. See :ref:`apm-index-span-tags`. 
 
