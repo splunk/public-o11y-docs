@@ -73,7 +73,7 @@ For each supported process, you can turn on and off the data migration, see the 
 Grace period
 ------------------
 
-The grace period for receiving and processing duplicated metrics at no additional cost lasts 6 months, starting with the release of the Java agent version 2.4.0 on June 6, 2024.
+The grace period for receiving and processing duplicated metrics at no additional cost lasts 6 months, starting with the release of the Java agent version 2.4.0 on June 6, 2024 and ending on December 31, 2024.
 
 Migration support is available for 12 months after the release of version 2.4.0 and will be deprecated after 18 months.
 
