@@ -71,7 +71,7 @@ The following settings are required to configure the extension:
 
 * ``endpoint_params``. Additional parameters sent to the token endpoint.
 
-* ``scopes``. Optional. Optional requested permissions associated to the client.
+* ``scopes``. Optional. Requested permissions associated to the client.
 
 * ``timeout``. Optional. Specifies the timeout on the underlying client for the authorization server to fetch the tokens, both initially and while refreshing. 
 
