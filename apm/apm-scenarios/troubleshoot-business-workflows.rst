@@ -43,7 +43,7 @@ Deepu reviews the errors by workflow and notices that the requests for the :stro
 Deepu filters Tag Spotlight to find the subset of traces where most errors occur
 =======================================================================================
 
-Because APM supports infinite cardinality, Deepu adds the :strong:`frontend:/cart/checkout` workflow the filter and applies additional filters for :strong:`version` to ``v350.10`` and :strong:`Kind` to ``SERVER`` to examine the subset of traces where the most errors occur:
+Because APM supports infinite cardinality, Deepu adds the :strong:`frontend:/cart/checkout` workflow to the filter and applies additional filters for :strong:`version` to ``v350.10`` and :strong:`Kind` to ``SERVER`` to examine the subset of traces where the most errors occur:
 
 ..  image:: /_images/apm/apm-use-cases/troubleshoot-business-workflows-02-add-filters.gif 
     :width: 99%
