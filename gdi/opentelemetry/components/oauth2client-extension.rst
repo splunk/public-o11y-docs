@@ -5,7 +5,7 @@ OAuth2 Client Auth extension
 *************************************
 
 .. meta::
-      :description: This extension provides OAuth2 Client Credentials flow authenticator for HTTP and gRPC based exporters. 
+      :description: This extension provides an OAuth2 Client Credentials flow authenticator for HTTP and gRPC based exporters. 
 
 The ``oauth2client`` extension provides OAuth2 client credentials flow authentication for HTTP and gRPC based exporters. The extension automatically fetches and refreshes the token after it expires. 
 
