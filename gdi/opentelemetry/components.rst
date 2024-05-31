@@ -73,6 +73,9 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
    * - :ref:`host-metrics-receiver` (``hostmetrics``)
      - Generates system metrics from various sources. Use this receiver when deploying the Collector as an agent. 
      - Metrics
+   * - :ref:`http-check-receiver` (``httpcheck``)
+     - Performs synthethic checks against HTTP endpoints.  
+     - Metrics
    * - :ref:`jaeger-receiver` (``jaeger``)
      - Receives trace data in Jaeger format.
      - Traces

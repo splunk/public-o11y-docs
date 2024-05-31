@@ -20,6 +20,7 @@ Collector components: Receivers
     filelog-receiver   
     fluentd-receiver
     host-metrics-receiver
+    http-check-receiver
     jaeger-receiver    
     jmx-receiver
     journald-receiver
