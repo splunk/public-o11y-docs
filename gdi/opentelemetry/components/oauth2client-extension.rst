@@ -9,7 +9,7 @@ OAuth2 Client Auth extension
 
 The ``oauth2client`` extension provides OAuth2 client credentials flow authentication for HTTP and gRPC based exporters. The extension automatically fetches and refreshes the token after it expires. 
 
-For further details about the OAuth2 Client Credentials flow (2-legged workflow), refer to :new-page:`Client Credentials Grant <https://datatracker.ietf.org/doc/html/rfc6749#section-4.4>` in the Datatracker documentation.
+For further details about the OAuth2 Client Credentials flow (2-legged workflow), refer to :new-page:`Client Credentials Grant <https://datatracker.ietf.org/doc/html/rfc6749#section-4.4>` in the OAuth 2.0 authorization framework specification.
 
 For information about the available exporters, see :ref:`otel-components-exporters`.
 
