@@ -44,7 +44,7 @@ To complete the configuration, include the extension in the ``service`` section 
   service:
     extensions: [oauth2client]
 
-The authenticator type has to be set to ``oauth2client``.
+.. Note:: Set the authenticator type to ``oauth2client`` in the exporter using the OAuth2 Client Auth extension. See :ref:`oauth2client-extension-example`.
 
 Configuration settings
 --------------------------------
@@ -78,6 +78,8 @@ The following settings are required to configure the extension:
   * If void, there is no timeout on the client.
 
 For more information on the client side TLS settings, see :new-page:`TLS configuration settings <https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/configtls>` in GitHub. 
+
+.. _oauth2client-extension-example:
 
 Configuration example
 --------------------------------
