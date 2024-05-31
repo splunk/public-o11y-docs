@@ -385,7 +385,7 @@ fields:
 Metrics
 -------
 
-By default metrics are filtered out and are emitted as gauges. 
+By default metrics are emitted as gauges. 
 
 If you have cumulative counter metrics that you want properly typed in Splunk Observability
 Cloud, use one of the following options:

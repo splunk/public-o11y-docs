@@ -384,7 +384,7 @@ The nested ``field`` configuration object has the following fields:
 Metrics
 -------
 
-By default metrics are filtered out. Look for tags as especified in the settings.
+This integration doesn't produce any metrics. Look for tags as especified in the settings.
 
 Troubleshooting
 ---------------

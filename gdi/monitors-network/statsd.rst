@@ -146,7 +146,7 @@ The nested ``converters`` configuration object has the following fields:
 Metrics
 -------
 
-By default metrics are filtered out. This integration doesn't produce any metrics unless configured.
+This integration doesn't produce any metrics unless configured.
 
 See the section below to learn how metrics can be collected with this
 monitor.
