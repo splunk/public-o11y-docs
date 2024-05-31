@@ -23,7 +23,7 @@ To instrument their infrastructure using the Collector, Kai takes the following 
 Enable EKS monitoring using custom Helm charts
 ============================================================
 
-Since their migration to the cloud, the PonyBank application has been running in EKS. Kai starts by setting up the cloud integration from Splunk Observability Cloud using the guided setup, which they access from the home page. Guided setups allow to select the relevant ingest token, and generate installation commands and configuration snippets from the selected options, which Kai can use to quickly deploy instrumentation.
+Since their migration to the cloud, the PonyBank application has been running in EKS. Kai starts by setting up the cloud integration from Splunk Observability Cloud using the guided setup, which they access from the home page. Guided setups allow Kai to select the relevant ingest token, and generate installation commands and configuration snippets from the selected options, which Kai can use to quickly deploy instrumentation.
 
 .. image:: /_images/collector/aws-eks-setup.gif
    :alt: Guided setup for Kubernetes in Data Management
