@@ -57,7 +57,7 @@ The following settings are required to configure the extension:
 
 * ``client_id_file``. The file path to retrieve the client identifier issued to the client. The extension reads this file and updates the client ID when you need to issue a new token. 
 
-  * This paramater allows you to dynamically change the client credentials by modifying the file contents when, for example, you need to rotate the token.
+  * This parameter allows you to dynamically change the client credentials by modifying the file contents when, for example, you need to rotate the token.
   
   * This setting takes precedence over ``client_id``.
 
