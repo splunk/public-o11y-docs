@@ -5,9 +5,11 @@ Rules engine annotations
 ************************************************************************
 
 .. meta::
-   :description: About the user role in Splunk On-Call.
+   :description: About the rules engine annotations in Splunk On-Call. An annotation is a bit of information or link to a resource you can add to the payload of any incident.
 
 
+An annotation is a bit of information or link to a resource you can add to the payload of any incident that meets the matching condition for a rule. It can be a URL, an _image/spoc URL, or a plain text Note. You can add multiple annotations to a single rule
+by selecting :guilabel:`+ Add an Annotation`.
 
 Requirements
 ==================
@@ -20,8 +22,7 @@ All users have the ability to reach out to Splunk On-Call support at any time wi
 
 Live Chat: If you are logged into your Splunk On-Call instance, you will have the ability to Live Chat with the Splunk On-Call Support team.
 
-An annotation is a bit of information or link to a resource you can add to the payload of any incident that meets the matching condition for a rule. It can be a URL, an _image/spoc URL, or a plain text Note. You can add multiple annotations to a single rule
-by selecting :guilabel:`+ Add an Annotation`.
+
 
 URLs
 ==================

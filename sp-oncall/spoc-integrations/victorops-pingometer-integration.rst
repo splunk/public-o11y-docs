@@ -1,26 +1,31 @@
+.. _pingometer:
+
+************************************************************************
 Pingometer integration for Splunk On-Call
-**********************************************************
+************************************************************************
+
+.. meta::
+   :description: About the user resolved in Splunk On-Call.
 
 
-Pingometer is a service that monitors the uptime, downtime, and
-performance of websites. The following guide will walk you through the
+
+Pingometer is a service that monitors the uptime, downtime, and performance of websites. The following sections will walk you through the
 necessary steps to integrate your Pingometer alerts with VictorOps.
 
-**In VictorOps:**
+
+In Splunk On-Call
 -----------------
 
-In VictorOps, select **Settings** *>>* **Alert Behavior** *>>*
-**Integrations** *>>* **Pingometer** |image1|
+#. In Splunk On-Call, select :guilabel:`Settings`, then :guilabel:`Alert Behaviors`. Then select :guilabel:`Integerations`, then :guilabel:`Pingometer`.
 
-If the integration has not yet been enabled, click the “Enable
-Integration” button to generate your endpoint URL as seen below.  Be
-sure to replace the “$routing_key” section with the actual routing key
-you intend to use. (To view or configure route keys in VictorOps,
-click *Alert Behavior >> Route Keys*)
+
+|image1|
+
+# If the integration has not yet been enabled, select the “Enable Integration” button to generate your endpoint URL as seen below.  Be sure to replace the `$routing_key` section with the actual routing key you intend to use. To view or configure route keys in VictorOps, click *Alert Behavior >> Route Keys*.
 
 .. image:: /_images/spoc/Pingometer-final.png
 
-**In Pingometer:**
+In Pingometer
 ------------------
 
 From the main Dashboard select **Account.**
