@@ -142,4 +142,4 @@ If your data is not appearing in APM as you expect, see :ref:`instr-troubleshoot
 Next step
 ===========
 
-Once have data flowing into APM, it's time to do some exploring. See :ref:`apm-orientation`.
+Once data is flowing into APM, it's time to do some exploring. See :ref:`apm-orientation`.
