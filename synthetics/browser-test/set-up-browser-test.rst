@@ -23,6 +23,9 @@ For each page checked in a Browser test, Splunk Synthetic Monitoring captures an
 Set up a Browser test
 =========================
 
+
+For optimal experience, synthetics browser tests use a stable version of Google Chrome: ``116.0.5845.96-1`` to simulate user activity.
+
 Follow these steps to set up a Browser test:
 
 #. From the landing page of Splunk Observability Cloud, navigate to Splunk Synthetic Monitoring. 
