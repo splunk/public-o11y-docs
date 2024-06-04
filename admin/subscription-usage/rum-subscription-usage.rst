@@ -36,9 +36,7 @@ Each metric has two dimensions:
 Dashboard
 =============
 
-In Dashboards> Organization metrics> RUM entitlements. 
-
-
+To see your subscription usage for troubleshooting purposes, go to :strong:`Dashboards`, :strong:`Organization metrics`, then :strong:`RUM entitlements`. 
 
 See also
 ==========
