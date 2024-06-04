@@ -12,8 +12,8 @@ Get started with the Collector for Kubernetes
    :hidden:
 
    Install with Helm <install-k8s.rst>
-   Helm components <kubernetes-helm-architecture>
-   Helm releases and images <kubernetes-helm-releases>      
+   Helm components <kubernetes-helm-architecture.rst>
+   Helm releases and images <kubernetes-helm-releases.rst>
    Install with YAML manifests <install-k8s-manifests.rst>
    Kubernetes (EKS Add-on) <install-k8s-addon-eks.rst>
    Configure with Helm <kubernetes-config.rst>
