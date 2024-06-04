@@ -57,7 +57,7 @@ To configure a new rule from Splunk APM, follow these steps. There is a differen
 
 8. Select :strong:`Save Changes` to apply the new rule and priority list.
 
-When use the default rule
+When to use the default rule
 ========================================
 
 If the initiating operation of a trace is granular enough to capture meaningful workflows, for example with API calls, then the default rule is useful because it groups related traces by their initiating operation, which is different from other initiating operations.
@@ -67,7 +67,7 @@ In systems where many traces have the same initiating operations, for example be
 Rule behavior and limits
 ========================
 
-To reduce the likelihood of partial rule changes generating unexpected results, changes to rules accumulate throughout a single computing session and applied all together when you select :strong:`Apply Changes`. Change encompasses all of the following:
+To reduce the likelihood of partial rule changes generating unexpected results, changes to rules accumulate throughout a single computing session and are applied all together when you select :strong:`Apply Changes`. Change encompasses all of the following:
 
 - Creating rules
 

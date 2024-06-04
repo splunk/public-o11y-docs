@@ -8,7 +8,7 @@ Scenario: Skyler analyzes historical data to optimize system performance using t
 
 Skyler, a performance engineer at Buttercup Games, wants to understand and analyze the end-to-end performance of microservices to optimize the system. 
 
-These are the steps Wei takes to analyze microservice performance:
+These are the steps Skyler takes to analyze microservice performance:
 
 #. :ref:`historical-data-service-dashboard`
 #. :ref:`historical-data-checkout-service`

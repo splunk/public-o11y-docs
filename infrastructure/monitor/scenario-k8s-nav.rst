@@ -31,9 +31,9 @@ Kai switches from the Apache navigator to the Kubernetes nodes navigator and imm
 Isolate the problem area
 ================================================
 
-Using the hierarchical map, Kai drills down into the appropriate cluster and identifies the node with a failing pod. Kai can see that the pod has been stuck in ``Pending`` state for longer than normal.
+Using the hierarchical map, Kai drills down into the appropriate cluster and identifies the node with a failing pod. Kai can see that the pod is in a ``failed`` state.
 
-    .. image:: /_images/images-navigators/failing-pod.png
+    .. image:: /_images/infrastructure/k8s-failed-pods.png
        :width: 99%
        :alt: Kubernetes navigator showing issues with Kubernetes pods
 

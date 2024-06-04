@@ -32,7 +32,7 @@ Follow these steps to create a RUM access token for your organization.
 
 Get data in 
 =================================
-wwwwwww T
+
 Follow these steps to instrument your application:
 
 * :ref:`browser-rum-gdi`
