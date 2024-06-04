@@ -54,7 +54,7 @@ Use the Data Migration tool
 
 Due to the changes in metric names, upgrading to Java OTel 2.x might break existing dashboards, detectors, and other features. To prevent sudden loss of access to custom reporting elements, use the Data Migration tool, which transforms and duplicates metric data in 1.x to the 2.x formats for a limited period of time at no additional cost.
 
-.. image:: /_images/gdi/datamigrationtool.png
+.. image:: /_images/gdi/datamigrationtool2.png
       :width: 90%
       :alt: Data Migration tool running migration metrics rules for Java 2.x metrics
 
@@ -73,7 +73,7 @@ For each supported process, you can turn on and off the data migration, see the 
 Grace period
 ------------------
 
-The grace period for receiving and processing duplicated metrics at no additional cost lasts 6 months, starting with the release of the Java agent version 2.4.0 on June 6, 2024 and ending on December 31, 2024.
+The grace period for receiving and processing duplicated metrics at no additional cost lasts 6 months, starting with the release of the Java agent version 2.4.0 on June 6, 2024 and ending on January 6, 2025.
 
 Migration support is available for 12 months after the release of version 2.4.0 and will be deprecated after 18 months.
 
