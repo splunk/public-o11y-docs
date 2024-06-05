@@ -75,7 +75,7 @@ To add a Slack integration as a detector alert recipient in Splunk Observability
 
          .. note:: For US0 realm, the invitation command is ``/invite @SignalFx``.
     
-     #. In the Slack integration guided setup for Splunk Observability Cloud, enter a placeholder string as the channel name. Splunk Observability Cloud can't find private Slack channel names.
+     #. In the Slack guided setup, enter a placeholder string as the channel name. Splunk Observability Cloud can't find private Slack channel names.
 
 #. Activate and save the detector.
 
