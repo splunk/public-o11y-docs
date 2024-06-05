@@ -72,5 +72,3 @@ To add a Slack integration as a detector alert recipient in Splunk Observability
 
 Splunk Observability Cloud sends an alert notification to the Slack channel when an alert is triggered by the detector and when the alert clears.
 
-.. note::
-   You can't add a private Slack channel as a detector alert recipient. 

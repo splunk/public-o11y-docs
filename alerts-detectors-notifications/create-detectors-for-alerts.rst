@@ -237,7 +237,7 @@ The following table explains different types of email notifications:
   :widths: 30 70
 
   * - Email notification
-    - Descriptions
+    - Description
   * - Stopped
     - The detector is muted or disabled when the alert is triggered
   * - Back to normal
@@ -245,7 +245,7 @@ The following table explains different types of email notifications:
   * - Manually resolved
     - The alert is manually set as ``resolved`` during an alert state
   * - Auto-cleared
-    - The Auto-clear setting is applied to the detector and the specified duration has elapsed. To learn more, see :ref:`auto-clearing-alerts`.
+    - The Auto-clear setting is applied to the detector and the specified duration has elapsed. To learn more, see :ref:`auto-clearing-alerts`
 
 
 .. note:: Tips
