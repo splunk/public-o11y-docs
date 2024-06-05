@@ -236,7 +236,7 @@ The following table explains different types of email notifications:
   :width: 100%
   :widths: 30 70
 
-  * - Email notification type
+  * - Email notification
     - Descriptions
   * - Stopped
     - The detector is muted or disabled when the alert is triggered
