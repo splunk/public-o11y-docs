@@ -39,10 +39,10 @@ Usage reports for host subscription plans include the following information abou
 * The billed trace volume. Trace volume data is available per minute.
 * The number of billed Troubleshooting MetricSets (TMS). TMS data is available per minute. 
 * The number of billed Monitoring MetricSets (MMS). MMS data is available at 10-minute intervals.
-* The average number of hosts
-* The average number of containers
-* The average number of Troubleshooting MetricSets
-* The average trace volume in bytes
+* The average number of hosts.
+* The average number of containers.
+* The average number of Troubleshooting MetricSets.
+* The average trace volume in bytes.
 
 .. note:: To generate and download per-minute subscription usage reports for your hosts and containers, see :ref:`host-diagnostics-report-apm`.
 
@@ -55,6 +55,6 @@ Usage reports for TAPM subscription plans include the following information abou
 * The billed trace volume. Trace volume data is available per minute.
 * The number of billed Troubleshooting MetricSets (TMS). TMS data is available per minute. 
 * The number of billed Monitoring MetricSets (MMS). MMS data is available at 10-minute intervals.
-* The average number of TAPM
-* The average number of Troubleshooting MetricSets
-* The average trace volume in bytes
+* The average number of TAPM.
+* The average number of Troubleshooting MetricSets.
+* The average trace volume in bytes.
