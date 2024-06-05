@@ -224,11 +224,28 @@ By converting a custom property to a dimension, you can display it in an alert m
 Alert recipients
 -------------------------------------------------------------------
 
-On the :strong:`Alert recipients` tab, specify where notification messages are sent when alerts are triggered or cleared. Recipients are considered subscribers to a rule.
+
+On the :strong:`Alert recipients` tab, specify who receive notification messages when alerts are triggered or cleared. Recipients are subscribers to a rule. Adding recipients is optional, but often useful.
 
 If you have previously :ref:`integrated your alerts with another system <admin-notifs-index>`, those options appear in the :guilabel:`Add Recipient` dropdown menu. You can also send to email addresses, :ref:`webhook URLs<webhook>`, and :ref:`Create and manage teams<admin-manage-teams>`. Notifications are also sent when a condition clears.
 
-Adding recipients is optional, but often useful.
+The following table explains different types of email notifications:
+
+.. list-table::
+  :header-rows: 1
+  :width: 100%
+  :widths: 30 70
+
+  * - Email notification
+    - Description
+  * - Stopped
+    - The detector is muted or disabled when the alert is triggered
+  * - Back to normal
+    - The alert is cleared
+  * - Manually resolved
+    - The alert is manually set as ``resolved`` during an alert state
+  * - Auto-cleared
+    - The Auto-clear setting is applied to the detector and the specified duration has elapsed. To learn more, see :ref:`auto-clearing-alerts`
 
 
 .. note:: Tips
