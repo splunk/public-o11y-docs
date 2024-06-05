@@ -7,7 +7,7 @@ Learn about MetricSets in APM
 .. meta::
    :description: Learn about MetricSets in Splunk Observability Cloud. MetricSets are metrics for traces and spans in Splunk APM.
 
-MetricSets are key indicators, such as request rate, error rate, and durations, calculated based on your traces and spans in Splunk APM. There are 2 categories of MetricSets: Troubleshooting MetricSets (TMS), used for high-cardinality troubleshooting, and Monitoring MetricSets (MMS), used for real-time monitoring.
+MetricSets are key performance indicators calculated from traces and spans in Splunk APM, like request rate, error rate, and request duration. There are 2 categories of MetricSets: Troubleshooting MetricSets (TMS), used for high-cardinality troubleshooting, and Monitoring MetricSets (MMS), used for real-time monitoring.
 
 Monitoring MetricSets are similar to the metric time series (MTS) used in Splunk Infrastructure Monitoring to populate charts and generate alerts. See :ref:`metric-time-series` to learn more. MetricSets are MTS that are specific to Splunk APM.
 
