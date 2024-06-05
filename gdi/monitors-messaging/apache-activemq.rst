@@ -102,7 +102,7 @@ integration:
       - no
       - ``string``
       - This is how the service type is identified in the Splunk
-         Observability Cloud UI so that you can get built-in content for
+         Splunk Observability Cloud UI so that you can get built-in content for
          it. For custom JMX integrations, it can be set to whatever you
          like.
    - 

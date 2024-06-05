@@ -19,7 +19,7 @@ To generate all the basic installation commands for your environment and applica
 
    #. In the navigation menu, select :menuselection:`Data Management`.
 
-   #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+   #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 
    #. In the integration filter menu, select :guilabel:`By Product`.
 
@@ -228,7 +228,7 @@ To deploy the Java agent in Kubernetes, follow these steps:
                   - name: OTEL_RESOURCE_ATTRIBUTES
                   value: "deployment.environment=<environmentName>"
 
-.. note:: You can also deploy instrumentation using the Kubernetes Operator. See :ref:`auto-instrumentation-java-k8s`.
+.. note:: You can also deploy instrumentation using the Kubernetes Operator. See :ref:`k8s-backend-auto-discovery` for more information.
 
 .. _java-agent-cloudfoundry:
 

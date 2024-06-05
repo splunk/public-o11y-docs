@@ -95,8 +95,8 @@ I
 .. glossary::
 
    integration
-      An integration is a configurable component of Observability Cloud that connects Observability Cloud to a third-party service.
-      Most integrations connect third-party data services, but Observability Cloud also offers SSO and notification integrations.
+      An integration is a configurable component of Splunk Observability Cloud that connects Splunk Observability Cloud to a third-party service.
+      Most integrations connect third-party data services, but Splunk Observability Cloud also offers SSO and notification integrations.
 
 M
 ==
@@ -141,6 +141,9 @@ R
 
 .. glossary::
 
+   realm
+      The self-contained deployment of Splunk Observability Cloud where your organization is hosted. Different realms have different Splunk Observability Cloud API endpoints. For example, the endpoint for sending data in the us1 realm is https://ingest.us1.signalfx.com, while the endpoint for sending data in the eu0 realm is https://ingest.eu0.signalfx.com.
+      
    rollup
       An accumulation of data points, with some mathematical or statistical expression applied to it. For example, a 95th percentile calculation over a 1-week window. In an Infrastructure Monitoring plot, rollups determine how Infrastructure Monitoring prepares data points for use in charts or analytic computations. 
 

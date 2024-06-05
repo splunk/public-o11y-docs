@@ -83,3 +83,15 @@
     - Yes
     - No
     - No
+
+  * - :strong:`Create, delete, and modify service level objectives (SLOs)`
+    - Yes
+    - Yes
+    - No
+    - No
+
+  * - :strong:`View service level objectives (SLOs)`
+    - Yes
+    - Yes
+    - Yes
+    - Yes

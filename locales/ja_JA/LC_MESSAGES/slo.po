@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-07 09:20+0000\n"
-"PO-Revision-Date: 2024-02-26 16:12+0000\n"
+"PO-Revision-Date: 2024-05-21 13:47+0100\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: ../../slo/burn-rate-alerts.rst:-1
 msgid "How burn rate alerting works in Splunk Observability Cloud SLO."
@@ -28,7 +28,7 @@ msgstr "シフトを引き受ける"
 
 #: ../../_includes/slo/slo-preview-header.rst:1 ../../slo/slo-preview-sitemap.rst:3
 msgid "Preview: Service level objective (SLO) management"
-msgstr "プレビューサービスレベル目標（SLO）管理"
+msgstr "プレビュー：サービスレベル目標（SLO）管理"
 
 #: ../../_includes/slo/slo-preview-header.rst:3 ../../slo/slo-preview-sitemap.rst:5
 msgid ""
@@ -110,7 +110,7 @@ msgid ""
 "google/workbook/alerting-on-slos/>` on Google's Site Reliability Workbook."
 msgstr ""
 "以下の表は、異なるロングウィンドウとショートウィンドウに対する燃焼率のしきい値の推定値を示しています。ショートウィンドウは、Googleが提案するように、ロングウィンドウの1/12です。詳しくは、Google の Site Reliability Workbook の :"
-"new-page:`Alerting on SLOs<https://sre.google/workbook/alerting-on-slos/>` をご覧ください。"
+"new-page:`Alerting on SLOs <https://sre.google/workbook/alerting-on-slos/>` をご覧ください。"
 
 #: ../../slo/burn-rate-alerts.rst:44
 msgid "Burn rate for a 99.9% SLO with a 30-day compliance window"
@@ -398,7 +398,7 @@ msgstr ""
 
 #: ../../slo/slo-intro.rst:42
 msgid "Availability SLI over a calendar period: Our service must respond successfully to 95% of requests in a month"
-msgstr "カレンダー期間における可用性SLI：当社のサービスは、1 か月間に95％のリクエストに正常に応答する必要があります。"
+msgstr "カレンダー期間における可用性SLI：当社のサービスは、1か月間に95％のリクエストに正常に応答する必要があります。"
 
 #: ../../slo/slo-intro.rst:43
 msgid "Performance SLI over a rolling period: Our service must respond to 99% of requests in < 100 ms over a 7-day period"

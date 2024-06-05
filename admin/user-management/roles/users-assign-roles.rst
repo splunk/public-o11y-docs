@@ -7,7 +7,7 @@ Assign roles to users in Splunk Observability Cloud
 ********************************************************
 
 .. meta::
-   :description:  Manage users: Add one or more roles to a user in Observability Cloud.
+   :description:  Manage users: Add one or more roles to a user in Splunk Observability Cloud.
 
 
    

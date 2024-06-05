@@ -9,6 +9,7 @@ Connect AWS to Splunk Observability Cloud
 
 .. toctree::
   :hidden:
+  :maxdepth: 5
 
   AWS authentication and supported regions <aws-prereqs>
   Compare connection options <aws-compare-connect>
@@ -23,6 +24,7 @@ Connect AWS to Splunk Observability Cloud
   Troubleshoot your AWS connection <aws-troubleshooting>
   Troubleshoot Metric Streams <aws-ts-metric-streams>
   GetMetricStatistics API deprecation notice <aws-api-notice>
+  aws-tutorial/about-aws-tutorial.rst
 
 You have several data ingestion and connection methods when it comes to monitoring your Amazon Web Services (AWS) data in Splunk Observability Cloud. 
 
@@ -164,9 +166,9 @@ To take advantage of the full benefits of the Splunk Observability Cloud platfor
 
 To track the degree of OpenTelemetry enablement in your AWS integrations: 
 
-1. From Splunk Observability Cloud, go to :guilabel:`Data Management > AWS`.
+1. From Splunk Observability Cloud, go to :guilabel:`Data Management > Deployed integrations > AWS`.
 
-2. Select :guilabel:`OpenTelemetry Enabled` to see whether the OTel Collector is installed on each AWS EC2 instance or AWS EKS cluster. This helps you identify the instances that still need to be instrumented. 
+2. Select either the :guilabel:`AWS EC2` or :guilabel:`AWS EKS` tabs to see whether the OTel Collector is installed on each AWS EC2 instance or AWS EKS cluster. This helps you identify the instances that still need to be instrumented. 
 
 ..  image:: /_images/gdi/aws-collector-insights.jpg
   :width: 80%

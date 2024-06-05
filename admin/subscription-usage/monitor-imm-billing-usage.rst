@@ -9,9 +9,9 @@ Infrastructure Monitoring subscription usage (Host and metric plans)
 
 .. note:: Read this document if your organization's subscription plan is based on the number of hosts or metrics you're monitoring with Infrastructure Monitoring. If your usage plan is based on the rate at which you send data points to Infrastructure Monitoring (DPM), see :ref:`dpm-usage`. 
   
-  This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team. 
+Splunk Observability Cloud provides a summary and detailed subscription usage reports to help you understand and manage the data you monitor with Infrastructure Monitoring. This information is available to Admin users only.
 
-Observability Cloud provides a summary and detailed subscription usage reports to help you understand and manage the data you monitor with Infrastructure Monitoring. This information is available to Admin users only.
+This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team.
 
 .. _about-custom:
 
@@ -35,18 +35,19 @@ Infrastructure Monitoring collects metric time series (MTS) which are classified
     - * Default metrics sent by the Splunk Distribution of OpenTelemetry Collector or through Infrastructure Monitoring public cloud integrations for hosts, containers, and the services running on them.
 
   * - Bundled metrics
-    - * Additional metrics sent through Infrastructure Monitoring public cloud integrations that are not attributed to specific hosts or containers. 
+    - * Additional metrics sent through Infrastructure Monitoring public cloud integrations that are not attributed to specific hosts or containers.
       * They are included as part of a host-based subscription, so you're not charged for them.
 
   * - Custom metrics 
-    - * Metrics reported to Infrastructure Monitoring outside of the host, container, or bundled metrics. 
-      * Custom metrics are often used for application monitoring, such as counting the number of Splunk Infrastructure Monitoring API calls or measuring the duration of the API requests. 
+    - * Metrics reported to Infrastructure Monitoring outside of the host, container, or bundled metrics.
+      * Custom metrics are often used for application monitoring, such as counting the number of Splunk Infrastructure Monitoring API calls or measuring the duration of the API requests.
       * You can also configure the Splunk Distribution of OpenTelemetry Collector to send custom metrics (such as system or service metrics) outside of its default set of metrics.
       * Your Infrastructure Monitoring subscription lets you send a certain number of custom metrics. If you exceed this number your organization might be overcharged.
 
 In host-based subscriptions, MTS from host and container metrics and bundled metrics are covered as part of the subscription and not charged separately. MTS from custom metrics are subject to the entitlements (200 MTS per host for Enterprise plan and 100 MTS per host for Standard plan). Additional MTS from custom metrics will be charged separately per MTS. 
 
-Learn more about metric categories in :ref:`metrics-category`.
+.. note:: Each histogram data point is billed as 8 MTS. Learn more about metric categories in :ref:`metrics-category`.
+
 
 .. _about-metric-res:
 
@@ -54,6 +55,13 @@ Metric resolution
 -------------------------------------------------------------------------------------
 
 Metric resolution does not affect billing in host-based plans. To learn more, see :ref:`metric-resolution`.
+
+.. _about-archived-metrics:
+
+Archived metrics
+-------------------------------------------------------------------------------------
+
+If you archive any of your metrics using Metrics Pipeline Management, those will be charged at 1/10th the cost of regular, real-time metrics. For more information, see :ref:`metrics-pipeline-intro`.
 
 .. _using-page:
 
@@ -82,7 +90,7 @@ This report is available on the :guilabel:`Usage` tab. For each hour within the 
 
 You can use the monthly usage report to determine whether your usage is in line with your subscription plan. You can use the data to calculate your average usage, how many hours in the month you are over or under your plan, and by how much.
 
-The report has six columns:
+The report has the following columns:
 
 .. list-table::
    :header-rows: 1
@@ -242,6 +250,6 @@ To get a detailed breakdown of the metric time series (MTS) you've created and u
 System limits and data throttling
 ====================================================================
 
-Observability Cloud products, including Infrastructure Monitoring, have system limits to protect the service's performance. If you exceed those limits, the platform starts to throttle the data you send in. 
+Splunk Observability Cloud products, including Infrastructure Monitoring, have system limits to protect the service's performance. If you exceed those limits, the platform starts to throttle the data you send in. 
 
 To learn more, see :ref:`per-product-limits`. 

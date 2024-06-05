@@ -5,11 +5,13 @@ Measure and alert on SLIs
 ************************************************************************************************************************
 
 .. meta::
-   :description: SLIs, SLOs, and SLAs in Observability Cloud
+   :description: SLIs, SLOs, and SLAs in Splunk Observability Cloud
 
 Splunk Observability Cloud provides prepackaged solutions for monitoring your service level indicators (SLIs) and service level objectives (SLOs). You can also define your own signals with custom detectors and alert on the data most important to your teams.
 
 For a better understanding of how you can use Splunk Observability Cloud with other Splunk platform products, see :ref:`scenarios-integration-scenario-landing` for sample use cases.
+
+.. _sli-slo-sla:
 
 SLIs and SLOs
 ========================================================================================================================
@@ -23,7 +25,7 @@ SLO: Your system aims to be available 99.99% of the time.
 
 SLA: If your system is not available 99.99% of the time during a month, you give the customer a rebate.
 
-To meet your business goals, you must set and manage SLOs based on accurate data, as measured by your SLIs. Observability Cloud immediately monitors and analyzes your SLIs, takes the guesswork out of determining error budgets, and helps you set reasonable SLOs so that you meet your business goals. The following section introduces SLO management, a tool you can use to measure and alert on your SLIs and SLOs. The final section details multiple other ways you can use Splunk Observability Cloud to monitor important signals for your service.
+To meet your business goals, you must set and manage SLOs based on accurate data, as measured by your SLIs. Splunk Observability Cloud immediately monitors and analyzes your SLIs, takes the guesswork out of determining error budgets, and helps you set reasonable SLOs so that you meet your business goals. The following section introduces SLO management, a tool you can use to measure and alert on your SLIs and SLOs. The final section details multiple other ways you can use Splunk Observability Cloud to monitor important signals for your service.
 
 
 Service level objective (SLO) management
@@ -56,9 +58,9 @@ To see a dashboard for a service, select the service on the service map, then se
 
 See :ref:`dashboards` for a list of dashboards and how you can create, customize, import, export, clone, and share them. See :ref:`apm-dashboards` to learn how to track performance, troubleshoot from the dashboard, and create a detector so that you can alert on a dashboard or chart in the future. For a scenario on managing SLOs using APM, see :ref:`custom-metricset`.
 
-Observability Cloud Alerts and detectors
+Splunk Observability Cloud Alerts and detectors
 ------------------------------------------------------------------------------------------------------------------------
-AutoDetect is a set of read-only alerts and detectors that Observability Cloud automatically creates when you configure supported integrations. As described in the previous section, you can also set up custom detectors to define your own signals and alert on any data that matters to you. See :ref:`autodetect` for more information.
+AutoDetect is a set of read-only alerts and detectors that Splunk Observability Cloud automatically creates when you configure supported integrations. As described in the previous section, you can also set up custom detectors to define your own signals and alert on any data that matters to you. See :ref:`autodetect` for more information.
 
 
 Splunk Infrastructure Monitoring

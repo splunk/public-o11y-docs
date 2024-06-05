@@ -98,7 +98,7 @@ Follow these steps to analyze problem hosts from the Infrastructure page:
 
       * - ``Deviation from Median``
         - Hosts appear as red that exceed the median absolute deviation value by at least three absolute deviations. This setting does not weigh extreme outliers as heavily as the standard deviation.
-5. Select a specific host you want to investigate further to view all the metadata and key metrics for the host. For every host instance, Observability Cloud provides built-in content for you to drill down into your host instance.
+5. Select a specific host you want to investigate further to view all the metadata and key metrics for the host. For every host instance, Splunk Observability Cloud provides built-in content for you to drill down into your host instance.
 
 For interactive walkthroughs of how to drill down into and investigate or troubleshoot a host instance, see :new-page:`Splunk Infrastructure Monitoring web server troubleshooting scenario <https://splunko11y.com/imt/webserver-troubleshooting.html>` and :new-page:`Splunk Infrastructure Monitoring application monitoring scenario <https://splunko11y.com/imt/application-monitoring.html>`.
 

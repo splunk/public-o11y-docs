@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-18 11:06+0000\n"
-"PO-Revision-Date: 2023-12-21 17:45+0000\n"
+"PO-Revision-Date: 2024-05-21 15:33+0100\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:-1
 msgid "Steps to create and configure incident policies to organize incidents for Incident Intelligence in Splunk Observability Cloud."
@@ -35,8 +35,8 @@ msgid ""
 "Use incident policies to organize incidents depending on the impacted environmental component, for example, your web application service or checkout service. Begin by creating an incident policy. Then, route alerts to the incident policy. Next, identify which alerts create an incident and how alerts are grouped into incidents. Finally, create incident workflows with escalating steps to determine who is notified to respond when "
 "a new incident triggers."
 msgstr ""
-"インシデント・ポリシーを使用して、影響を受ける環境コンポーネント（たとえば、Webアプリケーションサービスやチェックアウトサービス）に応じてインシデントを整理します。まず、インシデント・ポリシーを作成します。次に、インシデント・ポリシーにアラートをルーティングします。次に、どのアラートがインシデントを作成し、どのようにアラートがインシデントにグループ化されるかを特定します。最後に、新しいインシデントがトリガされたときに対応するため"
-"に誰に通知するかを決定するために、エスカレーションステップを持つインシデント・ワークフローを作成します。"
+"インシデント・ポリシーを使用して、影響を受ける環境コンポーネント（たとえば、Webアプリケーションサービスやチェックアウトサービス）に応じてインシデントを整理します。まず、インシデント・ポリシーを作成します。次に、インシデント・ポリシーにアラートをルーティングします。次に、どのアラートがインシデントを作成し、どのようにアラートがインシデントにグループ化されるかを特定します。最後に、新しいインシデントがトリガーされたときに対応するた"
+"めに誰に通知するかを決定するために、エスカレーションステップを持つインシデント・ワークフローを作成します。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:15
 msgid "Create an incident policy"
@@ -48,7 +48,7 @@ msgstr "Incident Intelligenceで、:guilabel:`Incident Management` を選択し�
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:18
 msgid "Select :guilabel:`Incident policies` > :guilabel:`Create incident policy`."
-msgstr " :guilabel:`Incident policies` > :guilabel:`Create incident policy` を選択します。"
+msgstr ":guilabel:`Incident policies` > :guilabel:`Create incident policy` を選択します。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:19
 msgid "Give your incident policy a unique name and a description."
@@ -56,7 +56,7 @@ msgstr "インシデント・ポリシーに固有の名前と説明を付けま
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:20
 msgid "Select :guilabel:`Create incident policy`."
-msgstr " :guilabel:`Create incident policy` を選択します。"
+msgstr ":guilabel:`Create incident policy` を選択します。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:22
 msgid "After you create your incident policy, you can configure which alerts are routed to your incident policy."
@@ -76,11 +76,11 @@ msgstr "[インシデント・ポリシー] リストで、削除するポリシ
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:32
 msgid "Select the :guilabel:`Action` menu (|more|)."
-msgstr " :guilabel:`Action` メニュー (|more|) を選択します。"
+msgstr ":guilabel:`Action` メニュー (|more|) を選択します。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:33
 msgid "Select :guilabel:`Delete`."
-msgstr " :guilabel:`Delete` を選択します。"
+msgstr ":guilabel:`Delete` を選択します。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:39
 msgid "Configure the alerts routed to your incident policy"
@@ -88,7 +88,7 @@ msgstr "インシデント・ポリシーにルーティングされるアラー
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:41
 msgid "Use alert routing to associate alerts with an incident policy. If an alert matches your alert filter conditions, it is routed to the incident policy. To set up your alert routing for the incident policy, follow these steps:"
-msgstr "アラート・ルーティングを使用して、アラートをインシデント・ポリシーに関連付けます。アラートがアラート フィルタ条件に一致する場合、そのアラートはインシデント・ポリシーにルーティングされます。インシデント・ポリシーのアラート・ルーティングを設定するには、次の手順に従います。"
+msgstr "アラート・ルーティングを使用して、アラートをインシデント・ポリシーに関連付けます。アラートがアラート フィルター条件に一致する場合、そのアラートはインシデント・ポリシーにルーティングされます。インシデント・ポリシーのアラート・ルーティングを設定するには、次の手順に従います。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:43
 msgid "The rank order of your incident policy also determines where alerts are routed. Alerts are only routed to one incident policy even if they match multiple policies. The incident policy that alerts are routed to is based on your policy's alert routing conditions and incident policy rank order. See :ref:`ii-rank-incident-policies`"
@@ -96,7 +96,7 @@ msgstr "インシデント・ポリシーの順位は、アラートのルーテ
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:46
 msgid "Select :guilabel:`Incident policies` and then the incident policy you want to add alert routing conditions to."
-msgstr " :guilabel:`Incident policies` を選択し、次にアラート・ルーティング条件を追加するインシデント・ポリシーを選択します。"
+msgstr ":guilabel:`Incident policies` を選択し、次にアラート・ルーティング条件を追加するインシデント・ポリシーを選択します。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:47
 msgid "Select the :guilabel:`Alert Routing` tab to see the list of alerts that are currently routed to the incident policy."
@@ -104,19 +104,19 @@ msgstr "インシデント・ポリシーに現在ルーティングされてい
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:51
 msgid "To filter the alerts routed to the incident policy based on the data in the alerts, select :guilabel:`Add Filters`."
-msgstr "インシデント・ポリシーにルーティングされたアラートをアラートのデータに基づいてフィルタするには、:guilabel:`Add Filters` を選択します。"
+msgstr "インシデント・ポリシーにルーティングされたアラートをアラートのデータに基づいてフィルターするには、:guilabel:`Add Filters` を選択します。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:49
 msgid "Select a filter field. For example, use :guilabel:`source` to route alerts based on a detector name. Key names are case sensitive and require an exact match."
-msgstr "フィルタフィールドを選択します。例えば、ディテクター名に基づいてアラートをルーティングするには、:guilabel:`source` を使用します。キー名は大文字と小文字を区別し、完全に一致する必要があります。"
+msgstr "フィルターフィールドを選択します。例えば、ディテクター名に基づいてアラートをルーティングするには、:guilabel:`source` を使用します。キー名は大文字と小文字を区別し、完全に一致する必要があります。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:50
 msgid "Select the :guilabel:`=` (equal to) or :guilabel:`!=` (not equal to) operator."
-msgstr " :guilabel:`=` （等しい）または :guilabel:`!=` （等しくない）演算子を選択します。"
+msgstr ":guilabel:`=` （等しい）または :guilabel:`!=` （等しくない）演算子を選択します。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:51
 msgid "Select a filter value. Key values are case sensitive and require an exact match."
-msgstr "フィルタ値を選択します。キー値は大文字と小文字を区別し、完全に一致する必要があります。"
+msgstr "フィルター値を選択します。キー値は大文字と小文字を区別し、完全に一致する必要があります。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:52
 msgid "Select :guilabel:`Enter` to save your condition."
@@ -128,7 +128,7 @@ msgstr "設定したい追加のアラート・ルーティング条件につい
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:54
 msgid "Review the list of alerts that are currently routed to the incident policy to confirm your filter conditions are correct."
-msgstr "インシデント・ポリシーに現在ルーティングされているアラートのリストを確認し、フィルタ条件が正しいことを確認します。"
+msgstr "インシデント・ポリシーに現在ルーティングされているアラートのリストを確認し、フィルター条件が正しいことを確認します。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:55
 msgid "Select :guilabel:`Save alert routing` when you finish setting up your alert routing conditions."
@@ -144,7 +144,7 @@ msgstr "アラートのグループ化の設定"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:64
 msgid "Use alert grouping to manage how alerts are grouped into incidents and which alerts trigger a new incident. Alert grouping is specific to each incident policy and you can customize it to create the workflow that works for you."
-msgstr "アラートのグループ化を使用して、アラートがどのようにインシデントにグループ化されるか、およびどのアラートが新しいインシデントをトリガするかを管理します。アラートのグループ化は各インシデント・ポリシーに固有であり、カスタマイズして自分に合ったワークフローを作成できます。"
+msgstr "アラートのグループ化を使用して、アラートがどのようにインシデントにグループ化されるか、およびどのアラートが新しいインシデントをトリガーするかを管理します。アラートのグループ化は各インシデント・ポリシーに固有であり、カスタマイズして自分に合ったワークフローを作成できます。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:66
 msgid "To configure alert grouping, follow these steps:"
@@ -152,11 +152,11 @@ msgstr "アラート・グルーピングを設定するには、以下の手順
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:69
 msgid "Select :guilabel:`Incident policies` and then the incident policy you want to add alert grouping conditions to. Each incident policy can have one alert grouping configuration."
-msgstr " :guilabel:`Incident policies`、次にアラート グループ化条件を追加するインシデント・ポリシーを選択します。各インシデント・ポリシーには、1つのアラート グループ化設定を持つことができます。"
+msgstr ":guilabel:`Incident policies`、次にアラート グループ化条件を追加するインシデント・ポリシーを選択します。各インシデント・ポリシーには、1つのアラート グループ化設定を持つことができます。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:70
 msgid "Select the :guilabel:`Alert grouping` tab."
-msgstr " :guilabel:`Alert grouping` タブを選択します。"
+msgstr ":guilabel:`Alert grouping` タブを選択します。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:71
 msgid ""
@@ -168,11 +168,11 @@ msgstr ""
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:72
 msgid "In the :guilabel:`Incident breaking conditions` section, define the conditions that cause an incident to stop accumulating new alerts. When any one of the conditions you set in this section are met any subsequent alerts will trigger a new incident instead of being added to the existing incident."
-msgstr "[ :guilabel:`Incident breaking conditions` ] セクションで、インシデントが新しいアラートの蓄積を停止する条件を定義します。このセクションで設定した条件のいずれかが満たされると、それ以降のアラートは既存のインシデントに追加されるのではなく、新しいインシデントがトリガされます。"
+msgstr "[ :guilabel:`Incident breaking conditions` ] セクションで、インシデントが新しいアラートの蓄積を停止する条件を定義します。このセクションで設定した条件のいずれかが満たされると、それ以降のアラートは既存のインシデントに追加されるのではなく、新しいインシデントがトリガーされます。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:74
 msgid "To break the existing incident if there has been a pause in alerts that lasts for the time duration you specify, select the pause duration from the :guilabel:`Select time value` drop down. Note: If you choose a time duration that is too short, you might encounter the situation where every alert triggers a new incident.  This is not generally desirable if the alerts are coming in within a short time span."
-msgstr "指定した期間、アラートが一時停止している場合に既存のインシデントを解除するには、:guilabel:`Select time value` ドロップダウンから一時停止期間を選択します。注：あまりに短い期間を選択すると、すべてのアラートが新しいインシデントをトリガする状況が発生する可能性があります。これは、アラートが短い時間スパン内に受信される場合、一般的に望ましくありません。"
+msgstr "指定した期間、アラートが一時停止している場合に既存のインシデントを解除するには、:guilabel:`Select time value` ドロップダウンから一時停止期間を選択します。注：あまりに短い期間を選択すると、すべてのアラートが新しいインシデントをトリガーする状況が発生する可能性があります。これは、アラートが短い時間スパン内に受信される場合、一般的に望ましくありません。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:76
 msgid "To break the existing incident when an alert with specific values are included, select :guilabel:`Add Filters` and choose the key-value pair which will prevent new alerts coming to the existing incident."
@@ -188,7 +188,7 @@ msgstr "インシデントで特定の数のアラートを受信した後に既
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:82 ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:41 ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:18 ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:29 ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:15
 msgid "Select :guilabel:`Save`."
-msgstr " :guilabel:`Save` を選択します。"
+msgstr ":guilabel:`Save` を選択します。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:84
 msgid "After you manage which alerts create an incident and how alerts are grouped into incidents, configure incident workflows for your incident policy."
@@ -200,15 +200,15 @@ msgstr "インシデント・ポリシーにインシデント・ワークフロ
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:91
 msgid "Use incident workflows to determine who is notified when a new incident is triggered. To create an automatic incident workflow, add escalating steps to notify responders of the incident. To add an incident workflow, follow these steps:"
-msgstr "インシデント・ワークフローを使用して、新しいインシデントがトリガされたときに誰に通知するかを決定します。自動インシデント・ワークフローを作成するには、インシデントの対応者に通知するエスカレーションステップを追加します。インシデント・ワークフローを追加するには、次の手順に従います。"
+msgstr "インシデント・ワークフローを使用して、新しいインシデントがトリガーされたときに誰に通知するかを決定します。自動インシデント・ワークフローを作成するには、インシデントの対応者に通知するエスカレーションステップを追加します。インシデント・ワークフローを追加するには、次の手順に従います。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:94
 msgid "Select :guilabel:`Incident policies` and then the incident policy where you want to create an incident workflow."
-msgstr " :guilabel:`Incident policies` を選択し、インシデント・ワークフローを作成するインシデント・ポリシーを選択します。"
+msgstr ":guilabel:`Incident policies` を選択し、インシデント・ワークフローを作成するインシデント・ポリシーを選択します。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:95
 msgid "Select the :guilabel:`Incident workflows` tab."
-msgstr " :guilabel:`Incident workflows` タブを選択します。"
+msgstr ":guilabel:`Incident workflows` タブを選択します。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:96
 msgid "To add responders, select :guilabel:`+ Add responders` under :guilabel:`Immediately`."
@@ -216,15 +216,15 @@ msgstr "対応者を追加するには、:guilabel:`Immediately` の下にある
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:97
 msgid "In the :guilabel:`Configure invite` window, add responders by name or by schedule. If you don't have an on-call schedule, see :ref:`ii-create-manage-on-call-schedules`."
-msgstr " :guilabel:`Configure invite` ウィンドウで、名前またはスケジュールで対応者を追加します。オンコールスケジュールがない場合は、:ref:`ii-create-manage-on-call-schedules` を参照します。"
+msgstr ":guilabel:`Configure invite` ウィンドウで、名前またはスケジュールで対応者を追加します。オンコール・スケジュールがない場合は、:ref:`ii-create-manage-on-call-schedules` を参照します。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:103
 msgid ":strong:`Add responder option`"
-msgstr " :strong:`対応者オプションの追加` "
+msgstr ":strong:`対応者オプションの追加`"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:104
 msgid ":strong:`Steps`"
-msgstr " :strong:`ステップ` "
+msgstr ":strong:`ステップ`"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:106
 msgid "Add responders by name"
@@ -232,7 +232,7 @@ msgstr "名前で対応者を追加する"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:107
 msgid "Enter user names in the :guilabel:`Search people` field and select the user when they appear."
-msgstr " :guilabel:`Search people` フィールドにユーザー名を入力し、表示されたらユーザーを選択します。"
+msgstr ":guilabel:`Search people` フィールドにユーザー名を入力し、表示されたらユーザーを選択します。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:109
 msgid "Add responders by schedule"
@@ -240,7 +240,7 @@ msgstr "スケジュールで対応者を追加する"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:110
 msgid "Enter a schedule name in the :guilabel:`Search schedules` field and select the schedule when it appears. Adding a schedule to a workflow step notifies the user that is on call when that workflow step is triggered."
-msgstr " :guilabel:`Search schedules` フィールドにスケジュール名を入力し、スケジュールが表示されたら選択します。ワークフローステップにスケジュールを追加すると、そのワークフローステップがトリガされた時にオンコールのユーザーに通知されます。"
+msgstr ":guilabel:`Search schedules` フィールドにスケジュール名を入力し、スケジュールが表示されたら選択します。ワークフローステップにスケジュールを追加すると、そのワークフローステップがトリガーされた時にオンコールのユーザーに通知されます。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:112
 msgid "Repeat these steps until you have all the responders you want to invite to incidents for this step in the workflow."
@@ -248,15 +248,15 @@ msgstr "ワークフローのこのステップでインシデントに招待す
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:113
 msgid "Select :guilabel:`Add responders`."
-msgstr " :guilabel:`Add responders` を選択します。"
+msgstr ":guilabel:`Add responders` を選択します。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:114
 msgid "Select :guilabel:`Add New Step` to add additional escalating steps with additional responders to your incident workflow."
-msgstr " :guilabel:`Add New Step` を選択すると、インシデント・ワークフローに対応者を追加したエスカレーションステップを追加できます。"
+msgstr ":guilabel:`Add New Step` を選択すると、インシデント・ワークフローに対応者を追加したエスカレーションステップを追加できます。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:115
 msgid "Select an elapsed time period in the list next to :guilabel:`If unacknowledged after`."
-msgstr " :guilabel:`If unacknowledged after` の横のリストから経過時間を選択します。"
+msgstr ":guilabel:`If unacknowledged after` の横のリストから経過時間を選択します。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:116
 msgid "Select :guilabel:`+ Add responders` to add responders."
@@ -275,7 +275,7 @@ msgid ""
 "If you have more than one incident policy, organize them in the order of their importance (top to bottom) to your infrastructure. Alerts are only routed to one incident policy even if they match multiple policies. The incident policy that alerts are routed to is based on your policy's alert routing conditions and incident policy rank order. To rank your incident policies, go to :guilabel:`Incident Management` > :guilabel:"
 "`Incident policies` > :guilabel:`Incident policy ranking`."
 msgstr ""
-"複数のインシデント・ポリシーがある場合は、インフラストラクチャにとって重要な順（上から下）に整理します。アラートは、複数のポリシーに一致する場合でも、1つのインシデント・ポリシーにのみルーティングされます。アラートがルーティングされるインシデント・ポリシーは、ポリシーのアラート・ルーティング条件とインシデント・ポリシーのランク順位に基づいています。インシデント・ポリシーをランク付けするには、:guilabel:`Incident Management` > :"
+"複数のインシデント・ポリシーがある場合は、インフラストラクチャにとって重要な順（上から下）に整理します。アラートは、複数のポリシーに一致する場合でも、1つのインシデント・ポリシーにのみルーティングされます。アラートがルーティングされるインシデント・ポリシーは、ポリシーのアラート・ルーティング条件とインシデント・ポリシーのランク順位に基づいています。インシデント・ポリシーをランク付けするには、 :guilabel:`Incident Management` > :"
 "guilabel:`Incident policies` > :guilabel:`Incident policy ranking` にアクセスしてください。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:129
@@ -295,8 +295,8 @@ msgid ""
 "All incidents associated with the incident policy that are triggered while the incident policy is in maintenance are created in a muted state. A muted incident does not notify responders. Muted incidents don't show in your incident list by default. To see your muted incidents, select the :guilabel:`Incidents` tab in Incident Intelligence and add a ``Status = Muted`` filter. Muted incidents are read-only and you can't "
 "acknowledge, resolve, or dismiss them."
 msgstr ""
-"インシデント・ポリシーがメンテナンス中にトリガされた、インシデント・ポリシーに関連付けられたすべてのインシデントは、ミュート状態で作成されます。ミュートされたインシデントは対応者に通知されません。ミュートされたインシデントは、デフォルトではインシデントリストに表示されません。ミュートされたインシデントを表示するには、Incident Intelligenceで［ :guilabel:`Incidents` ］タブを選択し、``Status = Muted`` フィルタを追加します。ミュート"
-"されたインシデントは読み取り専用で、承認、解決、または解除することはできません。"
+"インシデント・ポリシーがメンテナンス中にトリガーされた、インシデント・ポリシーに関連付けられたすべてのインシデントは、ミュート状態で作成されます。ミュートされたインシデントは対応者に通知されません。ミュートされたインシデントは、デフォルトではインシデントリストに表示されません。ミュートされたインシデントを表示するには、Incident Intelligenceで［ :guilabel:`Incidents` ］タブを選択し、``Status = Muted`` フィルターを追加します。"
+"ミュートされたインシデントは読み取り専用で、承認、解決、または解除することはできません。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:138
 msgid "Take an incident policy out of maintenance"
@@ -304,7 +304,7 @@ msgstr "インシデント・ポリシーをメンテナンスから外す"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:140
 msgid "To take an incident policy out of maintenance and resume triggering incidents, select the :guilabel:`Actions` menu on the incident policy you want to take out of maintenance and select :guilabel:`Enable`. The incident policy status shows as :guilabel:`Enabled`. This resumes triggering incidents associated with the incident policy."
-msgstr "インシデント・ポリシーをメンテナンスから外し、インシデントのトリガを再開するには、メンテナンスから外したいインシデント・ポリシーで :guilabel:`Actions` メニューを選択し、:guilabel:`Enable` を選択します。インシデント・ポリシーのステータスが :guilabel:`Enabled` と表示されます。これにより、インシデント・ポリシーに関連付けられたインシデントのトリガが再開されます。"
+msgstr "インシデント・ポリシーをメンテナンスから外し、インシデントのトリガーを再開するには、メンテナンスから外したいインシデント・ポリシーで :guilabel:`Actions` メニューを選択し、:guilabel:`Enable` を選択します。インシデント・ポリシーのステータスが :guilabel:`Enabled` と表示されます。これにより、インシデント・ポリシーに関連付けられたインシデントのトリガーが再開されます。"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:143
 msgid "Next step"
@@ -312,7 +312,7 @@ msgstr "次のステップ"
 
 #: ../../incident-intelligence/create-configure-incident-policies.rst:145
 msgid "If you are setting up Incident Intelligence for the first time, next you need to create an on-call schedule. See :ref:`ii-create-manage-on-call-schedules`."
-msgstr "Incident Intelligenceを初めて設定する場合、次にオンコールスケジュールを作成する必要があります。:ref:`ii-create-manage-on-call-schedules` を参照してください。"
+msgstr "Incident Intelligenceを初めて設定する場合、次にオンコール・スケジュールを作成する必要があります。:ref:`ii-create-manage-on-call-schedules` を参照してください。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules.rst:10
 msgid "Scenarios: Schedules in Incident Intelligence TOGGLE"
@@ -324,7 +324,7 @@ msgstr "Splunk Observability Cloud の Incident Intelligence でスケジュー�
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules.rst:4
 msgid "Create and manage on-call schedules"
-msgstr "オンコールスケジュールの作成と管理"
+msgstr "オンコール・スケジュールの作成と管理"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules.rst:19
 msgid "Use the following topics to learn how to create and manage schedules, see who's on call, and reassign shifts:"
@@ -332,35 +332,35 @@ msgstr "以下のトピックを使用して、スケジュールの作成と管
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules.rst:21
 msgid ":ref:`ii-create-on-call-schedule`"
-msgstr " :ref:`ii-create-on-call-schedule` "
+msgstr ":ref:`ii-create-on-call-schedule`"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules.rst:22 ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:94 ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:50
 msgid ":ref:`ii-scenarios-schedules`"
-msgstr " :ref:`ii-scenarios-schedules` "
+msgstr ":ref:`ii-scenarios-schedules`"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules.rst:23 ../../incident-intelligence/create-manage-on-call-schedules/whos-on-call.rst:23
 msgid ":ref:`ii-sync-on-call-schedule`"
-msgstr " :ref:`ii-sync-on-call-schedule` "
+msgstr ":ref:`ii-sync-on-call-schedule`"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules.rst:24 ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:95 ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:51
 msgid ":ref:`ii-whos-on-call`"
-msgstr " :ref:`ii-whos-on-call` "
+msgstr ":ref:`ii-whos-on-call`"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules.rst:25
 msgid ":ref:`reassign-shift`"
-msgstr " :ref:`reassign-shift` "
+msgstr ":ref:`reassign-shift`"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/create-on-call-schedule.rst:-1
 msgid "Steps to create on-call schedules for Incident Intelligence in Splunk Observability Cloud."
-msgstr "Splunk Observability Cloud で Incident Intelligence のオンコールスケジュールを作成する手順。"
+msgstr "Splunk Observability Cloud で Incident Intelligence のオンコール・スケジュールを作成する手順。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/create-on-call-schedule.rst:4
 msgid "Create an on-call schedule"
-msgstr "オンコールスケジュールの作成"
+msgstr "オンコール・スケジュールの作成"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/create-on-call-schedule.rst:9
 msgid "When an incident occurs, it is important to contact a responder who understands that part of the system architecture to fix the problem. You can accomplish this through scheduling. An on-call schedule consists of a rotating group of responders that are assigned shifts for incident response. Use an on-call schedule as a step in your incident workflows."
-msgstr "インシデントが発生したら、システムアーキテクチャのその部分を理解している対応者に連絡して、問題を解決することが重要です。これはスケジューリングによって実現できます。オンコールスケジュールは、インシデント対応のシフトを割り当てられた対応者の交代制グループで構成されます。オンコールスケジュールは、インシデント・ワークフローのステップとして使用します。"
+msgstr "インシデントが発生したら、システムアーキテクチャのその部分を理解している対応者に連絡して、問題を解決することが重要です。これはスケジューリングによって実現できます。オンコール・スケジュールは、インシデント対応のシフトを割り当てられた対応者の交代制グループで構成されます。オンコール・スケジュールは、インシデント・ワークフローのステップとして使用します。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/create-on-call-schedule.rst:11
 msgid "Follow these steps to create a schedule. See :ref:`ii-scenarios-schedules` for specific schedule scenarios."
@@ -368,11 +368,11 @@ msgstr "以下の手順に従ってスケジュールを作成してください
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/create-on-call-schedule.rst:16
 msgid "After you save your shifts, review the schedule details in the :guilabel:`Schedule Preview` to confirm that you've configured your schedule shifts as intended. The schedule preview includes schedule info for up to one year. Select :guilabel:`Next Month` and :guilabel:`Previous Month` to navigate the schedule preview. Select :guilabel:`Back to all schedules` when you are finished adding shifts to your on-call schedule."
-msgstr "シフトを保存した後、:guilabel:`Schedule Preview` でスケジュールの詳細を確認し、意図した通りにシフトが設定されているか確認してください。スケジュールプレビューには最大1年分のスケジュール情報が含まれています。:guilabel:`Next Month` と :guilabel:`Previous Month` を選択し、スケジュールプレビューに移動します。オンコールスケジュールへのシフト追加が完了したら、:guilabel:`Back to all schedules` を選択します。"
+msgstr "シフトを保存した後、:guilabel:`Schedule Preview` でスケジュールの詳細を確認し、意図した通りにシフトが設定されているか確認してください。スケジュールプレビューには最大1年分のスケジュール情報が含まれています。:guilabel:`Next Month` と :guilabel:`Previous Month` を選択し、スケジュールプレビューに移動します。オンコール・スケジュールへのシフト追加が完了したら、:guilabel:`Back to all schedules` を選択します。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/create-on-call-schedule.rst:18
 msgid "Now that you've created an on-call schedule, add it to the incident workflow for your web application incident policy. See :ref:`ii-configure-incident-workflows`."
-msgstr "オンコールスケジュールを作成したら、Web アプリケーション インシデント・ポリシーのインシデント・ワークフローに追加します。:ref:`ii-configure-incident-workflows` を参照してください。"
+msgstr "オンコール・スケジュールを作成したら、Web アプリケーション インシデント・ポリシーのインシデント・ワークフローに追加します。:ref:`ii-configure-incident-workflows` を参照してください。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/create-on-call-schedule.rst:20
 msgid "You can edit the schedule if you need to make broader changes than a single shift reassignment. After saving changes to the shift schedule, a dialog displays to inform you of any shifts that might be impacted by your changes. The list displays the potentially impacted users and shifts over the next 90 days so you can adjust shift assignments as needed."
@@ -420,7 +420,7 @@ msgstr "また、シフトを再割り当てすることはできません。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:24
 msgid "In the :guilabel:`Reassign Shift` dialog, the initial timeframe you select is the time range that the individual is unavailable. The shifts that display are those assigned during that time range."
-msgstr " :guilabel:`Reassign Shift` ダイアログで、最初に選択する時間枠は、その個人が利用できない時間帯です。表示されるシフトは、その時間帯に割り当てられたシフトです。"
+msgstr ":guilabel:`Reassign Shift` ダイアログで、最初に選択する時間枠は、その個人が利用できない時間帯です。表示されるシフトは、その時間帯に割り当てられたシフトです。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:31
 msgid "Reassign a full or partial shift"
@@ -448,7 +448,7 @@ msgstr "インシデント管理ページで、:guilabel:`On-call schedules > Re
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:44
 msgid "On the :guilabel:`Reassign Shifts` window, select the time range you are unavailable, including the dates and times. This does not need to match shift start and end times. This is the time that the person is unavailable."
-msgstr " :guilabel:`Reassign Shifts` ウィンドウで、日時を含め、利用できない時間帯を選択します。これはシフトの開始時刻と終了時刻と一致する必要はありません。これは、その人が利用できない時間です。"
+msgstr ":guilabel:`Reassign Shifts` ウィンドウで、日時を含め、利用できない時間帯を選択します。これはシフトの開始時刻と終了時刻と一致する必要はありません。これは、その人が利用できない時間です。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:45
 msgid "(Conditional) If required, enter the name of the shift owner. The default is set to the current user. If you are reassigning shifts on behalf of another team member, enter their name in the :guilabel:`Reassign from` field."
@@ -456,11 +456,11 @@ msgstr "（条件）必要な場合、シフトオーナーの名前を入力し
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:46
 msgid "Select :guilabel:`Search for schedules` to find the shift to reassign. Any shifts impacted by the time frame you selected are displayed. This includes shifts from another schedule, if the same user is assigned to more than one schedule."
-msgstr " :guilabel:`Search for schedules` を選択し、再割り当てするシフトを検索します。選択した時間枠の影響を受けるシフトが表示されます。同じユーザーが複数のスケジュールに割り当てられている場合は、別のスケジュールのシフトも含まれます。"
+msgstr ":guilabel:`Search for schedules` を選択し、再割り当てするシフトを検索します。選択した時間枠の影響を受けるシフトが表示されます。同じユーザーが複数のスケジュールに割り当てられている場合は、別のスケジュールのシフトも含まれます。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:47
 msgid "In :guilabel:`Reassign to`, enter the name of the team member who will take the shift or partial shift."
-msgstr " :guilabel:`Reassign to` に、シフトまたは部分シフトを担当するチームメンバーの名前を入力します。"
+msgstr ":guilabel:`Reassign to` に、シフトまたは部分シフトを担当するチームメンバーの名前を入力します。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:48
 msgid "(Conditional) If you need to reassign multiple team members to one or more shifts, select :guilabel:`Add Responder` and select another :guilabel:`Time range` and team member who will take over that shift."
@@ -492,11 +492,11 @@ msgstr "Incident Intelligenceのメインページで、:guilabel:`On-call Sched
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:63
 msgid "Select the name of the on-call team whose schedule you want to modify. The current on-call schedule displays."
-msgstr "スケジュールを変更したいオンコールチームの名前を選択します。現在のオンコールスケジュールが表示されます。"
+msgstr "スケジュールを変更したいオンコールチームの名前を選択します。現在のオンコール・スケジュールが表示されます。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:64
 msgid "Select the :guilabel:`Take shift` icon (|takeshift|). The Take on-call shift dialog displays."
-msgstr " :guilabel:`Take shift` アイコン (|takeshift|) を選択します。オンコールシフトを取るダイアログが表示されます。"
+msgstr ":guilabel:`Take shift` アイコン (|takeshift|) を選択します。オンコールシフトを取るダイアログが表示されます。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:65
 msgid "You have two options:"
@@ -512,11 +512,11 @@ msgstr "数時間のシフトをすぐに開始するには、ラジオボタン
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:71
 msgid "Select :guilabel:`Take shift`."
-msgstr " :guilabel:`Take shift` を選択します。"
+msgstr ":guilabel:`Take shift` を選択します。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:73
 msgid "The on-call schedule updates to reflect the shift reassignment selected."
-msgstr "オンコールスケジュールが更新され、選択したシフトが反映されます。"
+msgstr "オンコール・スケジュールが更新され、選択したシフトが反映されます。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:77
 msgid "View a list of reassigned shifts"
@@ -532,7 +532,7 @@ msgstr "Splunk Observability Cloudにログインし、:menuselection:`Settings 
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:82
 msgid "Select the :guilabel:`On-call schedules` tab."
-msgstr " :guilabel:`On-call schedules` タブを選択します。"
+msgstr ":guilabel:`On-call schedules` タブを選択します。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:83
 msgid "In the On-call schedules section, select :guilabel:`Reassignments`."
@@ -550,7 +550,7 @@ msgstr "次も参照してください"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:93 ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:49
 msgid ":ref:`ii-create-manage-on-call-schedules`"
-msgstr " :ref:`ii-create-manage-on-call-schedules` "
+msgstr ":ref:`ii-create-manage-on-call-schedules`"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:-1
 msgid "Schedule scenario for creating business-hours and nights-and-weekends rotations in Incident Intelligence."
@@ -562,7 +562,7 @@ msgstr "シナリオ: SkylerがWebアプリケーションサービスの営業�
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:9
 msgid "Skyler, the site reliability engineering (SRE) manager for Buttercup Games, needs to create an on-call schedule for the web application SREs with the following coverage needs:"
-msgstr "Buttercup Games社のサイト信頼性エンジニアリング（SRE）マネージャーであるSkylerは、ウェブアプリケーションSREのオンコールスケジュールを作成する必要があります。"
+msgstr "Buttercup Games社のサイト信頼性エンジニアリング（SRE）マネージャーであるSkylerは、ウェブアプリケーションSREのオンコール・スケジュールを作成する必要があります。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:11
 msgid "Skyler needs coverage for the web application service for business hours Monday through Friday of each week, with one responder on the team being on call for a whole week."
@@ -574,7 +574,7 @@ msgstr "Skylerはまた、夜間と週末のウェブ・アプリケーション
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:13
 msgid "Finally, Skyler needs one responder on call 24x7 as secondary coverage for one week Monday through Sunday."
-msgstr "最後に、Skylerは月曜から日曜までの1週間、24時間365日体制でオンコールになるセカンダリー・カバレッジとして、1人の対応者を必要としています。"
+msgstr "最後に、Skylerは月曜から日曜までの1週間、24時間365日体制でオンコールになるセカンダリ・カバレッジとして、1人の対応者を必要としています。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:15 ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:14 ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:11
 msgid "Skyler takes the following steps to configure a schedule that meets these coverage needs:"
@@ -602,7 +602,7 @@ msgstr "ウェブサービスのプライマリスケジュールの営業時間
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:55
 msgid "Using the :guilabel:`Schedule Preview`, Skyler verifies that the business-hours shift is configured correctly. As shown in the following image, Alex is on call Monday through Friday from 8 AM to 5 PM for one week, and then Deepu, the next responder, takes over."
-msgstr " :guilabel:`Schedule Preview` を使って、Skylerは業務時間シフトが正しく設定されていることを確認します。次の画像に示すように、Alexは月曜日から金曜日の午前8時から午後5時まで1週間オンコールを担当し、その後、次の対応者であるDeepuが引き継ぎます。"
+msgstr ":guilabel:`Schedule Preview` を使って、Skylerは業務時間シフトが正しく設定されていることを確認します。次の画像に示すように、Alexは月曜日から金曜日の午前8時から午後5時まで1週間オンコールを担当し、その後、次の対応者であるDeepuが引き継ぎます。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:4
 msgid "Schedule Preview for business-hours."
@@ -610,7 +610,7 @@ msgstr "営業時間のスケジュールプレビュー。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:67
 msgid "Next, Skyler creates a weeknights shift in the primary schedule for the web application. Using the :guilabel:`Day-by-day` shift type, Skyler creates the daily gap in coverage they need for the business-hours shift. There are only four weeknights to cover because Fridays are covered by the weekends shift, so Skyler selects a shift handoff of 4. Finally, Skyler adds the SREs as responders, as shown in the following image."
-msgstr "次に、SkylerはWebアプリケーションのプライマリスケジュールに平日夜間のシフトを作成します。:guilabel:`Day-by-day` シフトタイプを使用して、Skylerは業務時間シフトに必要な1日のカバレッジのギャップを作成します。金曜日は週末のシフトがカバーするため、カバーする平日の夜は 4 日しかありません。最後に、Skylerは次の図に示すように、SREを対応者として追加します。"
+msgstr "次に、SkylerはWebアプリケーションのプライマリスケジュールに平日夜間のシフトを作成します。:guilabel:`Day-by-day` シフトタイプを使用して、Skylerは業務時間シフトに必要な1日のカバレッジのギャップを作成します。金曜日は週末のシフトがカバーするため、カバーする平日の夜は4日しかありません。最後に、Skylerは次の図に示すように、SREを対応者として追加します。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:4
 msgid "Weeknights shift in web service primary schedule."
@@ -626,7 +626,7 @@ msgstr "連続した対応者のシフトのスケジュールプレビュー。
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:79
 msgid "Skyler reorders the responders so that the responders have a week off between their business-hours shift and their weeknights shift. Skyler then uses the :guilabel:`Schedule Preview`, shown in the following image, to confirm that the responders are ordered appropriately."
-msgstr "Skylerは、対応者が業務時間シフトと平日夜間シフトの間に 1 週間の休みがあるように、対応者の順序を変更します。次に、Skylerは、次の画像に示す :guilabel:`Schedule Preview` を使用して、対応者の順序が適切であることを確認します。"
+msgstr "Skylerは、対応者が業務時間シフトと平日夜間シフトの間に1週間の休みがあるように、対応者の順序を変更します。次に、Skylerは、次の画像に示す :guilabel:`Schedule Preview` を使用して、対応者の順序が適切であることを確認します。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:4
 msgid "Schedule Preview with reordered responders."
@@ -649,13 +649,12 @@ msgid "Weekends shift Schedule Preview."
 msgstr "週末のシフトのスケジュールプレビュー。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:109
-#, fuzzy
 msgid ""
 "Skyler creates a new schedule for secondary coverage for the web application service and names it accordingly: **Web application service - secondary**. Skyler adds the **WebApp** teams tag again to make the schedule easier to find. The teams tag also sorts the list of responders so they're easier to find and select when Skyler adds them to a shift later. The following image shows the new schedule Skyler creates with the teams "
 "tag."
 msgstr ""
-"SkylerはWebアプリケーションサービスのセカンダリ・カバレッジのために新しいスケジュールを作成し、それに応じた名前を付けます。**Webアプリケーションサービス - セカンダリー**。Skylerはスケジュールを見つけやすくするため、**WebApp** teamタグを再度追加します。また、チームタグは対応者のリストをソートするので、Skylerが後でシフトに追加するときに見つけやすく、選択しやすくなります。次の画像はSkylerがteamsタグを使って作成した新しいスケジュー"
-"ルです。"
+"SkylerはWebアプリケーションサービスのセカンダリ・カバレッジのために新しいスケジュールを作成し、それに応じた名前を付けます。**Webアプリケーションサービス - セカンダリ**。Skylerはスケジュールを見つけやすくするため、**WebApp** teamタグを再度追加します。また、チームタグは対応者のリストをソートするので、Skylerが後でシフトに追加するときに見つけやすく、選択しやすくなります。次の画像はSkylerがteamsタグを使って作成した新しいスケジュール"
+"です。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:4
 msgid "Create a secondary schedule for the web application."
@@ -679,7 +678,7 @@ msgstr "スケジュールを、Webアプリケーションサービスのイン
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:145
 msgid "With the schedules configured and added to the incident policy, Skyler enables the incident policy so that alerts begin flowing and triggering incidents that notify the responders in the newly-configured schedules."
-msgstr "スケジュールが構成され、インシデント・ポリシーに追加されると、Skylerはインシデント・ポリシーを有効にし、アラートが流れ始め、新しく構成されたスケジュールの対応者に通知するインシデントがトリガされるようにします。"
+msgstr "スケジュールが構成され、インシデント・ポリシーに追加されると、Skylerはインシデント・ポリシーを有効にし、アラートが流れ始め、新しく構成されたスケジュールの対応者に通知するインシデントがトリガーされるようにします。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:153
 msgid "Skyler created the coverage they need by creating the following schedules and shifts:"
@@ -707,7 +706,7 @@ msgstr "週末をカバーする1週間単位のシフト"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:161
 msgid "Skyler added the schedules as the first and second steps in the incident workflow in the incident policy for the web application service. Skyler then enabled the policy so that alerts begin flowing and triggering incidents that notify the responders in the newly-configured schedule."
-msgstr "Skylerは、Webアプリケーションサービスのインシデント・ポリシーに、インシデント・ワークフローの第 1ステップと第 2ステップとしてスケジュールを追加しました。その後、Skylerはポリシーを有効にし、アラートが流れ始め、新しく構成されたスケジュールで対応者に通知するインシデントがトリガされるようにしました。"
+msgstr "Skylerは、Webアプリケーションサービスのインシデント・ポリシーに、インシデント・ワークフローの第1ステップと第2ステップとしてスケジュールを追加しました。その後、Skylerはポリシーを有効にし、アラートが流れ始め、新しく構成されたスケジュールで対応者に通知するインシデントがトリガーされるようにしました。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:169 ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:115 ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:91
 msgid "For steps to set up an on-call schedule, see :ref:`ii-create-manage-on-call-schedules`."
@@ -727,7 +726,7 @@ msgstr "シナリオ: Skylerが1日単位のシフトタイプを使って隔日
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:9
 msgid "Skyler, the site reliability engineering (SRE) manager for Buttercup Games, needs to create an on-call schedule for the checkout service SREs. To cover the checkout service Monday through Sunday and have the SREs on call every other day, Skyler wants to create two rotations:"
-msgstr "Buttercup Games 社のサイト信頼性エンジニアリング（SRE）マネージャーであるSkylerは、チェックアウト・サービスの SRE のオンコール・スケジュールを作成する必要があります。月曜日から日曜日までのチェックアウトサービスをカバーし、SRE を 1 日おきにオンコールさせるため、Skylerは 2 つのローテーションを作りたいと考えています。"
+msgstr "Buttercup Games 社のサイト信頼性エンジニアリング（SRE）マネージャーであるSkylerは、チェックアウトサービスの SRE のオンコール・スケジュールを作成する必要があります。月曜日から日曜日までのチェックアウトサービスをカバーし、SRE を1日おきにオンコールさせるため、Skylerは 2 つのローテーションを作りたいと考えています。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:11
 msgid "Rotation 1: Monday, Wednesday, and Friday 24x7"
@@ -743,19 +742,19 @@ msgstr "Skylerはチェックアウトサービス用の新しいスケジュー
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:4
 msgid "Create a schedule for the checkout service."
-msgstr "チェックアウト・サービスのスケジュールを作成します。"
+msgstr "チェックアウトサービスのスケジュールを作成します。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:46
 msgid "Skyler creates a shift named **M,W,F** in the schedule for the checkout service."
-msgstr "Skylerはチェックアウト・サービスのスケジュールに**M,W,F**というシフトを作成します。"
+msgstr "Skylerはチェックアウトサービスのスケジュールに**M,W,F**というシフトを作成します。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:47
 msgid "Using the :guilabel:`Day-by-day` shift type, Skyler creates the every-other-day coverage they need. Day-by-day shifts are designed to span 24 hours or fewer on select days of the week and are ideal for short-term shifts that are staggered on specific days of the week, with responders rotating on a more frequent basis."
-msgstr " :guilabel:`Day-by-day` シフトタイプを利用することで、Skylerは必要な1日単位のカバレッジを実現します。1日単位のシフトは、特定の曜日に24時間以内をカバーするように設計されており、特定の曜日をずらした短期シフトに最適で、対応者が頻繁に回転します。"
+msgstr ":guilabel:`Day-by-day` シフトタイプを利用することで、Skylerは必要な1日単位のカバレッジを実現します。1日単位のシフトは、特定の曜日に24時間以内をカバーするように設計されており、特定の曜日をずらした短期シフトに最適で、対応者が頻繁に回転します。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:48
 msgid "Skyler selects a shift handoff of **3**, which configures the shift to assign the same responder as on call for Monday, Wednesday, and Friday. Skyler then adds the SREs as responders. The following image shows the T,R,S,U shift within the schedule for the checkout service."
-msgstr "Skylerは **3** のシフトハンドオフを選択し、月曜日、水曜日、金曜日のオンコールに同じ対応者を割り当てるようにシフトを設定します。Skylerは次に SRE を対応者として追加します。次の画像は、チェックアウトサービスのスケジュール内のT,R,S,Uシフトを示しています。"
+msgstr "Skylerは **3** のシフトハンドオフを選択し、月曜日、水曜日、金曜日のオンコールに同じ対応者を割り当てるようにシフトを設定します。Skylerは次に SRE を対応者として追加します。次の画像は、チェックアウトサービスのスケジュール内のT、R、S、Uシフトを示しています。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:4
 msgid "M,W,F shift in checkout schedule."
@@ -763,7 +762,7 @@ msgstr "チェックアウトスケジュールの月、水、金シフト。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:54
 msgid "Using the :guilabel:`Schedule Preview`, Skyler verifies that they configured the **M,W,F** shift correctly. As shown in the following image, Alex is on call Monday, Wednesday, and Friday for 24 hours, and then the next responder takes over."
-msgstr " :guilabel:`Schedule Preview` を使って、Skylerは**M,W,F**シフトが正しく設定されていることを確認します。次の画像に示すように、Alexは月、水、金の24時間オンコールを担当し、その後、次の対応者が引き継ぎます。"
+msgstr ":guilabel:`Schedule Preview` を使って、Skylerは**M,W,F**シフトが正しく設定されていることを確認します。次の画像に示すように、Alexは月、水、金の24時間オンコールを担当し、その後、次の対応者が引き継ぎます。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:4
 msgid "Schedule Preview for M,W,F shift."
@@ -771,11 +770,11 @@ msgstr "月、水、金シフトのスケジュールプレビュー。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:66
 msgid "Skyler creates a shift named, T,R,S,U in the schedule for the checkout service."
-msgstr "Skylerはチェックアウト・サービスのスケジュールにT,R,S,Uというシフトを作成します。"
+msgstr "SkylerはチェックアウトサービスのスケジュールにT、R、S、Uというシフトを作成します。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:67
 msgid "Using the :guilabel:`Day-by-day` shift type, Skyler creates the every-other-day coverage they need. Day-by-day shifts are designed to span 24 hours or fewer on select days of the week and are ideal for creating short-term shifts that are staggered on specific days of the week, with responders rotating on a more frequent basis."
-msgstr " :guilabel:`Day-by-day` シフトタイプを利用することで、Skylerは必要な1日単位のカバレッジを実現します。1日単位のシフトは、特定の曜日に24時間以内をカバーするように設計されており、特定の曜日をずらした短期シフトに最適で、対応者が頻繁に回転します。"
+msgstr ":guilabel:`Day-by-day` シフトタイプを利用することで、Skylerは必要な1日単位のカバレッジを実現します。1日単位のシフトは、特定の曜日に24時間以内をカバーするように設計されており、特定の曜日をずらした短期シフトに最適で、対応者が頻繁に回転します。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:68
 msgid "Skyler selects a shift handoff of **4**, which configures the shift to assign the same responder as on call for Tuesday, Thursday, Saturday, and Sunday. Skyler then adds the SREs as responders."
@@ -787,7 +786,7 @@ msgstr "チェックアウトスケジュールの火、木、土、日シフト
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:74
 msgid "Using the :guilabel:`Schedule Preview`, Skyler verifies that they configured the **T,R,S,U** shift correctly. As shown in the following image, Alex is on call Tuesday, Thursday, Saturday, and Sunday for 24 hours, and then the next responder takes over."
-msgstr " :guilabel:`Schedule Preview` を使って、Skylerは**T,R,S,U**シフトが正しく設定されていることを確認します。次の画像に示すように、Alexは火曜、木曜、土曜、日曜に24時間オンコールを担当し、その後、次の対応者が交代します。"
+msgstr ":guilabel:`Schedule Preview` を使って、Skylerは**T,R,S,U**シフトが正しく設定されていることを確認します。次の画像に示すように、Alexは火曜、木曜、土曜、日曜に24時間オンコールを担当し、その後、次の対応者が交代します。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:4
 msgid "Schedule Preview for T,R,S,U shift."
@@ -803,15 +802,15 @@ msgstr "チェックアウトサービスインシデント・ポリシー内の
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:98 ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:74
 msgid "With the schedule configured and added to the incident policy, Skyler enables the incident policy so that alerts begin flowing and triggering incidents that notify the responders in the newly-configured schedule."
-msgstr "スケジュールが構成され、インシデント・ポリシーに追加されると、Skylerはインシデント・ポリシーを有効にし、アラートが流れ始め、新しく構成されたスケジュールの対応者に通知するインシデントがトリガされるようにします。"
+msgstr "スケジュールが構成され、インシデント・ポリシーに追加されると、Skylerはインシデント・ポリシーを有効にし、アラートが流れ始め、新しく構成されたスケジュールの対応者に通知するインシデントがトリガーされるようにします。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:107
 msgid ""
 "Skyler created the every-other-day coverage they need by creating a single schedule for the checkout service with two day-by-day shifts: one shift for Monday, Wednesday, and Friday coverage and a second shift for Tuesday, Thursday, Saturday, and Sunday coverage. Skyler added the schedule to the incident workflow in the incident policy for the checkout service. Skyler then enabled the policy so that alerts begin flowing and "
 "triggering incidents that notify the responders in the newly-configured schedule."
 msgstr ""
-"Skylerは、チェックアウト・サービスに2つの曜日別シフト（月曜日、水曜日、金曜日をカバーする1つのシフトと、火曜日、木曜日、土曜日、日曜日をカバーする2つ目のシフト）を組み込んだ1つのスケジュールを作成することで、必要な1日おきのカバレッジを実現しました。このスケジュールをチェックアウト・サービスのインシデント・ポリシーのインシデント・ワークフローに追加しました。その後、Skylerはポリシーを有効にし、アラートが流れ始め、新しく設定された"
-"スケジュールの対応者に通知するインシデントがトリガされるようにしました。"
+"Skylerは、チェックアウトサービスに2つの曜日別シフト（月曜日、水曜日、金曜日をカバーする1つのシフトと、火曜日、木曜日、土曜日、日曜日をカバーする2つ目のシフト）を組み込んだ1つのスケジュールを作成することで、必要な1日おきのカバレッジを実現しました。このスケジュールをチェックアウトサービスのインシデント・ポリシーのインシデント・ワークフローに追加しました。その後、Skylerはポリシーを有効にし、アラートが流れ始め、新しく設定されたスケ"
+"ジュールの対応者に通知するインシデントがトリガーされるようにしました。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:117 ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:93
 msgid "For a scenario with a multi-shift schedule and primary and secondary coverage, see :ref:`ii-scenario-business-hours`."
@@ -843,7 +842,7 @@ msgstr "Skylerは支払いサービスのためにスケジュールに週単位
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:44
 msgid "Skyler selects a shift handoff of **1**, which configures the shift to assign the same responder as on call for the entire week, Monday through Sunday. Skyler then adds the SREs as responders. The weekly shift that Skyler creates is shown in the following image."
-msgstr "Skylerは **1** のシフトハンドオフを選択し、月曜日から日曜日までの 1 週間を通して同じ 対応者をオンコールとして割り当てるようにシフトを設定します。Skylerは次に SRE を対応者として追加します。Skylerが作成した 1 週間のシフトは次の画像のとおりです。"
+msgstr "Skylerは **1** のシフトハンドオフを選択し、月曜日から日曜日までの1週間を通して同じ 対応者をオンコールとして割り当てるようにシフトを設定します。Skylerは次に SRE を対応者として追加します。Skylerが作成した1週間のシフトは次の画像のとおりです。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:4
 msgid "Weekly shift in payment schedule."
@@ -851,7 +850,7 @@ msgstr "支払いスケジュールの週間シフト。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:50
 msgid "Using the :guilabel:`Schedule Preview`, Skyler verifies that they configured the weekly shift correctly. As shown in the following image, Alex is on call Monday, through Sunday for 24 hours, and then the next responder takes over."
-msgstr " :guilabel:`Schedule Preview` を使って、Skylerは週ごとのシフトが正しく設定されていることを確認します。次の画像に示すように、アレックスは月曜から日曜まで24時間オンコールを担当し、その後次の対応者が交代します。"
+msgstr ":guilabel:`Schedule Preview` を使って、Skylerは週ごとのシフトが正しく設定されていることを確認します。次の画像に示すように、アレックスは月曜から日曜まで24時間オンコールを担当し、その後次の対応者が交代します。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:4
 msgid "Schedule Preview for weekly shift."
@@ -867,7 +866,7 @@ msgstr "支払いサービスインシデント・ポリシー内のインシデ
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:83
 msgid "Skyler created the weekly Monday through Sunday coverage they need by creating a single schedule for the payment service with a week-by-week shift. Skyler added the schedule to the incident workflow in the incident policy for the payment service. Skyler then enabled the policy so that alerts begin flowing and triggering incidents that notify the responders in the newly-configured schedule."
-msgstr "Skylerは、支払いサービスのために週ごとのシフトを持つ単一のスケジュールを作成することによって、彼らが必要とする毎週月曜日から日曜日までのカバレッジを作成しました。Skylerはこのスケジュールを、支払いサービスのインシデント・ポリシーのインシデント・ワークフローに追加しました。そして、アラートが流れ始め、新しく設定されたスケジュールの対応者に通知されるインシデントがトリガされるように、ポリシーを有効にしました。"
+msgstr "Skylerは、支払いサービスのために週ごとのシフトを持つ単一のスケジュールを作成することによって、彼らが必要とする毎週月曜日から日曜日までのカバレッジを作成しました。Skylerはこのスケジュールを、支払いサービスのインシデント・ポリシーのインシデント・ワークフローに追加しました。そして、アラートが流れ始め、新しく設定されたスケジュールの対応者に通知されるインシデントがトリガーされるように、ポリシーを有効にしました。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenarios-schedules.rst:-1
 msgid "Schedule scenarios for Incident Intelligence."
@@ -879,19 +878,19 @@ msgstr "Incident Intelligenceでスケジュールを使用して正しい対応
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenarios-schedules.rst:9
 msgid "The following scenarios feature examples from Buttercup Games, a fictitious e-commerce company. Each scenario shares a story of how Buttercup Games uses on-call schedules in Splunk Incident Intelligence to notify the correct responder to take action on their applications and services when incidents are triggered."
-msgstr "以下のシナリオでは、架空の電子商取引企業である Buttercup Games 社の例を取り上げます。各シナリオでは、Buttercup Games 社が Splunk Incident Intelligence のオンコールスケジュールを使用して、インシデントがトリガされたときに適切な対応担当者に通知し、自社のアプリケーションやサービスにアクションを起こす方法を紹介しています。"
+msgstr "以下のシナリオでは、架空の電子商取引企業である Buttercup Games 社の例を取り上げます。各シナリオでは、Buttercup Games 社が Splunk Incident Intelligence のオンコール・スケジュールを使用して、インシデントがトリガーされたときに適切な対応担当者に通知し、自社のアプリケーションやサービスにアクションを起こす方法を紹介しています。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenarios-schedules.rst:18
 msgid ":ref:`ii-scenario-business-hours`"
-msgstr " :ref:`ii-scenario-business-hours` "
+msgstr ":ref:`ii-scenario-business-hours`"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenarios-schedules.rst:19
 msgid ":ref:`ii-scenario-day-by-day`"
-msgstr " :ref:`ii-scenario-day-by-day` "
+msgstr ":ref:`ii-scenario-day-by-day`"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenarios-schedules.rst:20
 msgid ":ref:`ii-scenario-week-by-week`"
-msgstr " :ref:`ii-scenario-week-by-week` "
+msgstr ":ref:`ii-scenario-week-by-week`"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:-1
 msgid "Steps to access your personal on-call calendar and sync it to third-party calendar apps."
@@ -899,11 +898,11 @@ msgstr "個人のオンコールカレンダーにアクセスし、サードパ
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:4
 msgid "Check your on-call schedule and sync it to your personal calendar"
-msgstr "オンコールスケジュールを確認し、個人のカレンダーと同期する"
+msgstr "オンコール・スケジュールを確認し、個人のカレンダーと同期する"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:9
 msgid "You can check your on-call schedule in Incident Intelligence and sync it to your preferred calendar app."
-msgstr "Incident Intelligenceでオンコールスケジュールを確認し、お好みのカレンダーアプリに同期することができます。"
+msgstr "Incident Intelligenceでオンコール・スケジュールを確認し、お好みのカレンダーアプリに同期することができます。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:14
 msgid "Access your on-call schedule"
@@ -911,7 +910,7 @@ msgstr "オンコール・スケジュールへのアクセス"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:16
 msgid "To access your on-call schedule follow these steps:"
-msgstr "オンコールスケジュールにアクセスするには、以下の手順に従ってください。"
+msgstr "オンコール・スケジュールにアクセスするには、以下の手順に従ってください。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:18
 msgid "On the :guilabel:`Incidents` or :guilabel:`Alerts` tab in Incident Intelligence, select :guilabel:`You are currently on call` if you are on call or :guilabel:`On-call schedules` if you are not on call."
@@ -919,7 +918,7 @@ msgstr "Incident Intelligenceの :guilabel:`Incidents` または :guilabel:`Aler
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:19
 msgid "Select :guilabel:`Sync to calendar`."
-msgstr " :guilabel:`Sync to calendar` を選択します。"
+msgstr ":guilabel:`Sync to calendar` を選択します。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:20
 msgid "Copy the link."
@@ -927,35 +926,35 @@ msgstr "リンクをコピーしてください。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:22
 msgid "You can paste this link into a browser to download the calendar. If you want to sync your on-call schedule to your personal calendar, follow the steps for your calendar app."
-msgstr "このリンクをブラウザに貼り付けてカレンダーをダウンロードできます。オンコールスケジュールを個人のカレンダーと同期したい場合は、カレンダーアプリの手順に従ってください。"
+msgstr "このリンクをブラウザに貼り付けてカレンダーをダウンロードできます。オンコール・スケジュールを個人のカレンダーと同期したい場合は、カレンダーアプリの手順に従ってください。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:27
 msgid "Sync your on-call schedule to your Google Calendar"
-msgstr "オンコールスケジュールをGoogleカレンダーに同期"
+msgstr "オンコール・スケジュールをGoogleカレンダーに同期"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:29
 msgid "For steps to sync your on-call schedule to your Google Calendar, search the web for \"Google Calendar Use a link to add a public calendar\" and follow the steps provided."
-msgstr "オンコールスケジュールをGoogleカレンダーに同期する手順については、「Googleカレンダー 公開カレンダーを追加するためのリンクを使用する」をウェブで検索し、提供されている手順に従ってください。"
+msgstr "オンコール・スケジュールをGoogleカレンダーに同期する手順については、「Googleカレンダー 公開カレンダーを追加するためのリンクを使用する」をウェブで検索し、提供されている手順に従ってください。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:34
 msgid "Sync your on-call schedule to your Microsoft Outlook Calendar"
-msgstr "オンコールスケジュールをMicrosoft Outlookカレンダーに同期"
+msgstr "オンコール・スケジュールをMicrosoft Outlookカレンダーに同期"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:36
 msgid "For steps to sync your on-call schedule to your Microsoft Outlook Calendar, search the web for \"Microsoft Outlook Subscribe to a calendar\" and follow the steps provided."
-msgstr "オンコールスケジュールをMicrosoft Outlookカレンダーに同期する手順については、「Microsoft Outlook カレンダーに登録」をウェブで検索し、提供されている手順に従ってください。"
+msgstr "オンコール・スケジュールをMicrosoft Outlookカレンダーに同期する手順については、「Microsoft Outlook カレンダーに登録」をウェブで検索し、提供されている手順に従ってください。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:41
 msgid "Sync your on-call schedule to Calendar for iOS"
-msgstr "iOS用カレンダーにオンコールスケジュールを同期"
+msgstr "iOS用カレンダーにオンコール・スケジュールを同期"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:43
 msgid "For steps to sync an on-call schedule to your Calendar for iOS, search the web for \"Calendar for iOS Set up multiple calendars\" and follow the steps provided."
-msgstr "iOS用カレンダーにオンコールスケジュールを同期する手順については、「iOS用カレンダー 複数のカレンダーの設定」をウェブで検索し、提供されている手順に従ってください。"
+msgstr "iOS用カレンダーにオンコール・スケジュールを同期する手順については、「iOS用カレンダー 複数のカレンダーの設定」をウェブで検索し、提供されている手順に従ってください。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/whos-on-call.rst:-1
 msgid "Steps to check who's on-call schedule for Incident Intelligence in Splunk Observability Cloud."
-msgstr "Splunk Observability Cloud の Incident Intelligence のオンコールスケジュールを確認する手順。"
+msgstr "Splunk Observability Cloud の Incident Intelligence のオンコール・スケジュールを確認する手順。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/whos-on-call.rst:4
 msgid "Check who's currently on call"
@@ -979,10 +978,9 @@ msgstr "また、:guilabel:`Incident Management` でオンコール担当者を�
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/whos-on-call.rst:17
 msgid "Select :guilabel:`On-call schedules`."
-msgstr " :guilabel:`On-call schedules` を選択します。"
+msgstr ":guilabel:`On-call schedules` を選択します。"
 
 #: ../../incident-intelligence/create-manage-on-call-schedules/whos-on-call.rst:18
-#, fuzzy
 msgid "Select the schedule for which you want to view who's on call."
 msgstr "オンコール担当者を表示したいスケジュールを選択します。"
 
@@ -1020,15 +1018,15 @@ msgstr "アラート生成はアラートノイズを発生させます。"
 
 #: ../../incident-intelligence/incident-intelligence-overview.rst:27
 msgid "Incident policies route and group alerts into incidents that trigger workflows"
-msgstr "インシデント・ポリシーは、ワークフローをトリガするインシデントにアラートをルーティングおよびグループ化します。"
+msgstr "インシデント・ポリシーは、ワークフローをトリガーするインシデントにアラートをルーティングおよびグループ化します。"
 
 #: ../../incident-intelligence/incident-intelligence-overview.rst:29
 msgid ""
 "You can determine which alert signals are the most important to the performance of your infrastructure and use alerts to intelligently trigger incidents that you want responders to investigate. First, create alert routing and grouping conditions using alert metadata to filter alerts into incidents. This process reduces alert noise and allows responders to map an issue back to the system or service where it occurred. Second, "
 "create an incident workflow that automatically runs time-based hierarchical steps when an incident is triggered. All incident workflows must include a notification to a person, such as a responder in an on-call schedule. If a responder doesn't acknowledge an incident when they are on call, the incident is escalated to the next step in the workflow. This entire process is called an incident policy."
 msgstr ""
-"インフラストラクチャのパフォーマンスにとって最も重要なアラートシグナルを決定し、対応者に調査させたいインシデントをインテリジェントにトリガするためにアラートを使用できます。まず、アラートのメタデータを使用してアラートのルーティングおよびグループ化条件を作成し、アラートをインシデントにフィルタリングします。このプロセスにより、アラートのノイズを減らし、対応者が問題を発生したシステムまたはサービスにマッピングできるようにします。次"
-"に、インシデントがトリガされたときに、時間ベースの階層ステップを自動的に実行するインシデント・ワークフローを作成します。すべてのインシデント・ワークフローには、オンコール・スケジュールの対応者などの個人への通知が含まれていなければなりません。対応者がオンコール時にインシデントを認識しない場合、インシデントはワークフローの次のステップにエスカレーションされます。このプロセス全体をインシデント・ポリシーと呼びます。"
+"インフラストラクチャのパフォーマンスにとって最も重要なアラートシグナルを決定し、対応者に調査させたいインシデントをインテリジェントにトリガーするためにアラートを使用できます。まず、アラートのメタデータを使用してアラートのルーティングおよびグループ化条件を作成し、アラートをインシデントにフィルタリングします。このプロセスにより、アラートのノイズを減らし、対応者が問題を発生したシステムまたはサービスにマッピングできるようにします。次"
+"に、インシデントがトリガーされたときに、時間ベースの階層ステップを自動的に実行するインシデント・ワークフローを作成します。すべてのインシデント・ワークフローには、オンコール・スケジュールの対応者などの個人への通知が含まれていなければなりません。対応者がオンコール時にインシデントを認識しない場合、インシデントはワークフローの次のステップにエスカレーションされます。このプロセス全体をインシデント・ポリシーと呼びます。"
 
 #: ../../incident-intelligence/incident-intelligence-overview.rst:31
 msgid "The following workflow shows the end-to-end incident policy process, starting with an alert, moving into routing and grouping, and ending with a notification to the on-call responder:"
@@ -1036,19 +1034,19 @@ msgstr "次のワークフローは、エンドツーエンドのインシデン
 
 #: ../../incident-intelligence/incident-intelligence-overview.rst:27
 msgid "Incident policies route and group alerts into incidents that trigger workflows."
-msgstr "インシデント・ポリシーは、ワークフローをトリガするインシデントにアラートをルーティングおよびグループ化します。"
+msgstr "インシデント・ポリシーは、ワークフローをトリガーするインシデントにアラートをルーティングおよびグループ化します。"
 
 #: ../../incident-intelligence/incident-intelligence-overview.rst:39
 msgid "Responders are notified when a triggered incident workflow routes to an on-call schedule"
-msgstr "インシデント・ワークフローがオンコールスケジュールにルーティングされると、対応者に通知されます。"
+msgstr "インシデント・ワークフローがオンコール・スケジュールにルーティングされると、対応者に通知されます。"
 
 #: ../../incident-intelligence/incident-intelligence-overview.rst:41
 msgid ""
 "On-call scheduling ensures the correct person is notified at the right time to resolve system issues as soon as they occur. An on-call schedule contains a group of responders who understand a specific part of the system architecture. Responders rotate through their schedule every day, week, or month based on how their schedule is set up by a team manager or admin. On-call schedules are included as a step in an incident "
 "workflow. When an incident is triggered, the first step in the workflow routes to a schedule, and the responder who is on call for that schedule is paged."
 msgstr ""
-"オンコール・スケジューリングは、システムの問題が発生するとすぐに解決するために、適切な担当者が適切なタイミングで通知されるようにします。オンコール・スケジュールには、システム・アーキテクチャの特定の部分を理解している対応者のグループが含まれています。対応者は、チームマネージャーまたは管理者によるスケジュールの設定方法に基づいて、毎日、毎週、または毎月、スケジュールをローテーションします。オンコール・スケジュールは、インシデント・"
-"ワークフローのステップとして含まれます。インシデントがトリガされると、ワークフローの最初のステップはスケジュールにルーティングし、そのスケジュールでオンコールしている対応者にページが送られます。"
+"オンコール・スケジューリングは、システムの問題が発生するとすぐに解決するために、適切な担当者が適切なタイミングで通知されるようにします。オンコール・スケジュールには、システムアーキテクチャの特定の部分を理解している対応者のグループが含まれています。対応者は、チームマネージャーまたは管理者によるスケジュールの設定方法に基づいて、毎日、毎週、または毎月、スケジュールをローテーションします。オンコール・スケジュールは、インシデント・"
+"ワークフローのステップとして含まれます。インシデントがトリガーされると、ワークフローの最初のステップはスケジュールにルーティングし、そのスケジュールでオンコールしている対応者にページが送られます。"
 
 #: ../../incident-intelligence/incident-intelligence-overview.rst:43
 msgid "The following diagram shows how on-call schedules and incident workflows work together to ensure the correct responder is notified of an incident:"
@@ -1056,19 +1054,19 @@ msgstr "次の図は、オンコール・スケジュールとインシデント
 
 #: ../../incident-intelligence/incident-intelligence-overview.rst:39
 msgid "On-call schedules, triggered in incident workflows, notify the appropriate responder."
-msgstr "インシデント・ワークフローでトリガされたオンコール・スケジュールは、適切な対応者に通知されます。"
+msgstr "インシデント・ワークフローでトリガーされたオンコール・スケジュールは、適切な対応者に通知されます。"
 
 #: ../../incident-intelligence/incident-intelligence-overview.rst:51
 msgid "End-to-end incident response process"
-msgstr "エンド・ツー・エンドのインシデント対応プロセス"
+msgstr "エンドツーエンドのインシデント対応プロセス"
 
 #: ../../incident-intelligence/incident-intelligence-overview.rst:53
 msgid ""
 "This simplified end-to-end incident response flow demonstrates the value of Incident Intelligence. An issue appears in the system that is noticed by detectors monitoring that system or service. The detectors fire, causing a spike in generated alerts. Those alerts are mapped to an incident policy and the influx of activity triggers an incident. The workflow for that incident policy connects to an on-call schedule and a responder "
 "is paged. The responder acknowledges the incident and begins investigating the root cause by looking at the alerts grouped under that incident. They resolve the incident and verify their solution. Alerts decrease and the system returns to normal."
 msgstr ""
-"この簡略化されたエンド・ツー・エンドのインシデント対応フローは、Incident Intelligenceの価値を示しています。システムに問題が発生し、そのシステムまたはサービスを監視しているディテクターがそれに気づきます。ディテクターが起動し、生成されたアラートが急増します。これらのアラートはインシデント・ポリシーにマッピングされ、アクティビティの流入がインシデントのトリガとなります。そのインシデント・ポリシーのワークフローはオンコール・スケ"
-"ジュールに接続され、対応者がページされます。対応者はインシデントを認識し、そのインシデントの下にグループ化されたアラートを調べて根本原因の調査を開始します。インシデントを解決し、その解決策を検証します。アラートは減少し、システムは正常に戻ります。"
+"この簡略化されたエンドツーエンドのインシデント対応フローは、Incident Intelligenceの価値を示しています。システムに問題が発生し、そのシステムまたはサービスを監視しているディテクターがそれに気づきます。ディテクターが起動し、生成されたアラートが急増します。これらのアラートはインシデント・ポリシーにマッピングされ、アクティビティの流入がインシデントのトリガーとなります。そのインシデント・ポリシーのワークフローはオンコール・スケジュー"
+"ルに接続され、対応者がページされます。対応者はインシデントを認識し、そのインシデントの下にグループ化されたアラートを調べて根本原因の調査を開始します。インシデントを解決し、その解決策を検証します。アラートは減少し、システムは正常に戻ります。"
 
 #: ../../incident-intelligence/incident-intelligence-overview.rst:55
 msgid "The following diagram shows this entire incident response process:"
@@ -1076,7 +1074,7 @@ msgstr "次の図は、このインシデント対応プロセス全体を示し
 
 #: ../../incident-intelligence/incident-intelligence-overview.rst:51
 msgid "End-to-end incident response process."
-msgstr "エンド・ツー・エンドのインシデント対応プロセス。"
+msgstr "エンドツーエンドのインシデント対応プロセス。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:-1
 msgid "Overview of alert ingestion methods for Incident Intelligence in Splunk Observability Cloud."
@@ -1096,11 +1094,11 @@ msgstr "アラートが取り込まれた後、Incident Intelligenceの :guilabe
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:43 ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:72
 msgid ":strong:`Alert source`"
-msgstr " :strong:`アラートソース` "
+msgstr ":strong:`アラートソース`"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:44 ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:73 ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:93
 msgid ":strong:`Documentation`"
-msgstr " :strong:`ドキュメンテーション` "
+msgstr ":strong:`ドキュメンテーション`"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:46
 msgid "Splunk APM"
@@ -1108,7 +1106,7 @@ msgstr "Splunk APM"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:47 ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:50
 msgid "See :ref:`create-detectors`."
-msgstr " :ref:`create-detectors` を参照してください。"
+msgstr ":ref:`create-detectors` を参照してください。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:49
 msgid "Splunk Infrastructure Monitoring"
@@ -1120,7 +1118,7 @@ msgstr "Splunk RUM"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:53
 msgid "See :ref:`rum-detectors`."
-msgstr " :ref:`rum-detectors` を参照してください。"
+msgstr ":ref:`rum-detectors` を参照してください。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:55
 msgid "Splunk Synthetic Monitoring"
@@ -1144,7 +1142,7 @@ msgstr "Splunk Enterprise"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:76 ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:79
 msgid "See :ref:`ii-ingest-splunk-itsi-alerts`."
-msgstr " :ref:`ii-ingest-splunk-itsi-alerts` を参照してください。"
+msgstr ":ref:`ii-ingest-splunk-itsi-alerts` を参照してください。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:78
 msgid "Splunk Cloud Platform"
@@ -1152,7 +1150,7 @@ msgstr "Splunk Cloud Platform"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:92
 msgid ":strong:`Ingest endpoint`"
-msgstr " :strong:`インジェスト・エンドポイント` "
+msgstr ":strong:`インジェスト・エンドポイント`"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:95
 msgid "Amazon CloudWatch"
@@ -1160,7 +1158,7 @@ msgstr "Amazon CloudWatch"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:96
 msgid "See :ref:`ii-ingest-cloudwatch-alerts`."
-msgstr " :ref:`ii-ingest-cloudwatch-alerts` を参照してください。"
+msgstr ":ref:`ii-ingest-cloudwatch-alerts` を参照してください。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:98
 msgid "Azure Monitor"
@@ -1168,7 +1166,7 @@ msgstr "Azure Monitor"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:99
 msgid "See :ref:`ii-ingest-azure-alerts`."
-msgstr " :ref:`ii-ingest-azure-alerts` を参照してください。"
+msgstr ":ref:`ii-ingest-azure-alerts` を参照してください。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:101
 msgid "Prometheus"
@@ -1176,7 +1174,7 @@ msgstr "Prometheus"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:102
 msgid "See :ref:`ii-ingest-prometheus-alerts`."
-msgstr " :ref:`ii-ingest-prometheus-alerts` を参照してください。"
+msgstr ":ref:`ii-ingest-prometheus-alerts` を参照してください。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:104
 msgid "Generic REST alerts"
@@ -1184,7 +1182,7 @@ msgstr "汎用RESTアラート"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:105
 msgid "See :ref:`ii-ingest-rest`."
-msgstr " :ref:`ii-ingest-rest` を参照してください。"
+msgstr ":ref:`ii-ingest-rest` を参照してください。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:117
 msgid "If you are setting up Incident Intelligence for the first time, next you need to create and configure an incident policy. See :ref:`ii-create-configure-incident-policies`."
@@ -1335,8 +1333,8 @@ msgid ""
 "You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. In Incident Intelligence you can then create on-call schedules and incident workflows to route third-party incidents to responders. Use the AWS CloudWatch endpoint to forward AWS CloudWatch alarms to Incident Intelligence, which ingests them as alerts. You can send AWS CloudWatch alarms directly to the ingest endpoint or use "
 "AWS CloudWatch Simple Notification Service (SNS)."
 msgstr ""
-"Incident Intelligenceのインジェストエンドポイントを使用して、さまざまなサードパーティのソースからアラートを取り込むことができます。Incident Intelligenceでは、オンコールスケジュールとインシデント・ワークフローを作成して、サードパーティのインシデントを対応者にルーティングできます。AWS CloudWatchエンドポイントを使用して、AWS CloudWatchアラームをIncident Intelligenceに転送し、アラートとして取り込みます。AWS CloudWatchアラームは、イ"
-"ンジェストエンドポイントに直接送信することも、AWS CloudWatch Simple Notification Service (SNS)を使用することもできます。"
+"Incident Intelligenceのインジェストエンドポイントを使用して、さまざまなサードパーティのソースからアラートを取り込むことができます。Incident Intelligenceでは、オンコール・スケジュールとインシデント・ワークフローを作成して、サードパーティのインシデントを対応者にルーティングできます。AWS CloudWatchエンドポイントを使用して、AWS CloudWatchアラームをIncident Intelligenceに転送し、アラートとして取り込みます。AWS CloudWatchアラームは、"
+"インジェストエンドポイントに直接送信することも、AWS CloudWatch Simple Notification Service (SNS)を使用することもできます。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:12 ../../incident-intelligence/set-up-incident-intelligence.rst:12
 msgid "Prerequisite"
@@ -1455,8 +1453,8 @@ msgid ""
 "You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. In Incident Intelligence you can then create on-call schedules and incident workflows to route third-party incidents to responders. You can send Prometheus alerts directly to the ingest endpoint using the Prometheus alertmanager webhook config. For more information, see :new-page:`https://prometheus.io/docs/alerting/latest/"
 "configuration/#webhook_config` in the Prometheus documentation."
 msgstr ""
-"Incident Intelligenceのインジェストエンドポイントを使用して、さまざまなサードパーティのソースからアラートを取り込むことができます。Incident Intelligenceでは、オンコールスケジュールとインシデント・ワークフローを作成して、サードパーティのインシデントを対応者にルーティングすることができます。Prometheus alertmanager webhook configを使用して、インジェストエンドポイントに直接Prometheusアラートを送信できます。詳細については、Prometheus"
-"ドキュメントの :new-page:`https://prometheus.io/docs/alerting/latest/configuration/#webhook_config` を参照してください。"
+"Incident Intelligenceのインジェストエンドポイントを使用して、さまざまなサードパーティのソースからアラートを取り込むことができます。Incident Intelligenceでは、オンコール・スケジュールとインシデント・ワークフローを作成して、サードパーティのインシデントを対応者にルーティングすることができます。Prometheus alertmanager webhook configを使用して、インジェストエンドポイントに直接Prometheusアラートを送信できます。詳細については、"
+"Prometheusドキュメントの :new-page:`https://prometheus.io/docs/alerting/latest/configuration/#webhook_config` を参照してください。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:12
 msgid "Prometheus ingest endpoint"
@@ -1553,7 +1551,7 @@ msgstr "Splunk On-Callアラートの severity または message_type"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:57
 msgid "The criticality of the alert. Supported values are ``info``, ``normal``, ``warning``, ``minor``, ``major``, and ``critical``"
-msgstr "アラートの重要度。サポートされる値は、``info``、``normal``、``warning``、``minor``、``major``、および ``critical`` "
+msgstr "アラートの重要度。サポートされる値は、``info``、``normal``、``warning``、``minor``、``major``、および ``critical``"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:58
 msgid "title or entity_display_name for Splunk On-call alerts"
@@ -1629,7 +1627,7 @@ msgstr "Splunk Incident Intelligence アプリをダウンロードして設定�
 
 #: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:15
 msgid "Download and install the Splunk Incident Intelligence app from :new-page:`Splunkbase <https://splunkbase.splunk.com/app/6721>`."
-msgstr " :new-page:`Splunkbase<https://splunkbase.splunk.com/app/6721>` から Splunk Incident Intelligence アプリをダウンロードしてインストールします。"
+msgstr ":new-page:`Splunkbase<https://splunkbase.splunk.com/app/6721>` から Splunk Incident Intelligence アプリをダウンロードしてインストールします。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:19
 msgid "Open the app and select :guilabel:`Setup Org and Token`."
@@ -1637,11 +1635,11 @@ msgstr "アプリを開き、:guilabel:`Setup Org and Token` を選択します�
 
 #: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:17
 msgid "Enter the :guilabel:`Realm`, :guilabel:`Org Id`, and :guilabel:`SFX Token`. For steps to obtain this information, see :ref:`organizations`. When obtaining your access token, select the default token or a token with INGEST and API scopes, in the list of tokens."
-msgstr " :guilabel:`Realm`、:guilabel:`Org Id`、:guilabel:`SFX Token` を入力します。この情報を取得する手順については、:ref:`organizations` を参照してください。アクセストークンを取得する際は、トークンのリストでデフォルトトークン、またはINGESTとAPIスコープを持つトークンを選択してください。"
+msgstr ":guilabel:`Realm`、:guilabel:`Org Id`、:guilabel:`SFX Token` を入力します。この情報を取得する手順については、:ref:`organizations` を参照してください。アクセストークンを取得する際は、トークンのリストでデフォルトトークン、またはINGESTとAPIスコープを持つトークンを選択してください。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:18
 msgid "Select :guilabel:`Send Test Alert`. This is only a status code verification that ensures there is a valid response to the ingest endpoint. There is no test alert in Incident Intelligence."
-msgstr " :guilabel:`Send Test Alert` を選択します。これは、インジェスト エンドポイントに有効な応答があることを確認するためのステータスコード検証のみです。Incident Intelligenceにはテストアラートはありません。"
+msgstr ":guilabel:`Send Test Alert` を選択します。これは、インジェスト エンドポイントに有効な応答があることを確認するためのステータスコード検証のみです。Incident Intelligenceにはテストアラートはありません。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:19
 msgid "You can repeat these steps to create multiple entries for additional realms or organizations."
@@ -1665,7 +1663,7 @@ msgstr "Splunk Enterprise で検索を作成し、実行します。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:30
 msgid "Select :guilabel:`Save As > Alert`."
-msgstr " :guilabel:`Save As > Alert` を選択します。"
+msgstr ":guilabel:`Save As > Alert` を選択します。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:31
 msgid "Enter a title and description."
@@ -1673,19 +1671,19 @@ msgstr "タイトルと説明を入力してください。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:32
 msgid "Under :guilabel:`Alert type`, select :guilabel:`Scheduled` and indicate how often you want the alert to run."
-msgstr " :guilabel:`Alert type` で、:guilabel:`Scheduled` を選択し、アラートを実行する頻度を指定します。"
+msgstr ":guilabel:`Alert type` で、:guilabel:`Scheduled` を選択し、アラートを実行する頻度を指定します。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:33
 msgid "Under :guilabel:`Trigger Conditions`, create the conditions for when you want to send the alert."
-msgstr " :guilabel:`Trigger Conditions` で、いつアラートを送信するかの条件を作成します。"
+msgstr ":guilabel:`Trigger Conditions` で、いつアラートを送信するかの条件を作成します。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:34
 msgid "Under :guilabel:`Trigger Actions`, select :guilabel:`Add Actions > Incident Intelligence`."
-msgstr " :guilabel:`Trigger Actions` で、:guilabel:`Add Actions > Incident Intelligence` を選択します。"
+msgstr ":guilabel:`Trigger Actions` で、:guilabel:`Add Actions > Incident Intelligence` を選択します。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:39
 msgid "Under :guilabel:`Incident Intelligence`, select the following settings:"
-msgstr " :guilabel:`Incident Intelligence` で、以下の設定を選択します。"
+msgstr ":guilabel:`Incident Intelligence` で、以下の設定を選択します。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:36
 msgid "Select the :guilabel:`Severity` for the alert."
@@ -1693,15 +1691,15 @@ msgstr "アラートの :guilabel:`Severity` を選択します。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:37
 msgid "Enter an :guilabel:`Alert Title`."
-msgstr " :guilabel:`Alert Title` を入力します。"
+msgstr ":guilabel:`Alert Title` を入力します。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:38
 msgid "Enter an :guilabel:`Alert description`. The description can include tokens that insert text based on the results of the search. For more information, see :new-page:`Pass search result values to alert action tokens <https://docs.splunk.com/Documentation/Splunk/7.1.3/AdvancedDev/ModAlertsLog#Pass_search_result_values_to_alert_action_tokens>` in the Splunk Enterprise `Developing Views and Apps for Splunk Web` manual."
-msgstr " :guilabel:`Alert description` を入力します。説明には、検索結果に基づいてテキストを挿入するトークンを含めることができます。詳細については、Splunk Enterprise`Developing Views and Apps for Splunk Web` マニュアルの :new-page:`検索結果の値をアラートアクショントークンに渡す<https://docs.splunk.com/Documentation/Splunk/7.1.3/AdvancedDev/ModAlertsLog#Pass_search_result_values_to_alert_action_tokens>` を参照してください。"
+msgstr ":guilabel:`Alert description` を入力します。説明には、検索結果に基づいてテキストを挿入するトークンを含めることができます。詳細については、Splunk Enterprise`Developing Views and Apps for Splunk Web` マニュアルの :new-page:`検索結果の値をアラートアクショントークンに渡す<https://docs.splunk.com/Documentation/Splunk/7.1.3/AdvancedDev/ModAlertsLog#Pass_search_result_values_to_alert_action_tokens>` を参照してください。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:39
 msgid "(Optional) Select a :guilabel:`Realm`, :guilabel:`Org Id`, and :guilabel:`SFX Token` if you want to use something other than the default configured realm, org ID, and SFX token. These lists populate with the entries added in the configuration step. See :ref:`ii-configure-app`."
-msgstr "（オプション）デフォルトで設定されているレルム、組織ID、SFXトークン以外のものを使用する場合は、:guilabel:`Realm`、:guilabel:`Org Id`、:guilabel:`SFX Token` を選択します。これらのリストには、設定ステップで追加したエントリが入力されます。:ref:`ii-configure-app` を参照してください。"
+msgstr "（オプション）デフォルトで設定されているレルム、組織ID、SFXトークン以外のものを使用する場合は、:guilabel:`Realm`、:guilabel:`Org Id`、:guilabel:`SFX Token` を選択します。これらのリストには、設定ステップで追加したエントリーが入力されます。:ref:`ii-configure-app` を参照してください。"
 
 #: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:40
 msgid "(Optional) Select an incident policy in the :guilabel:`Service Name` field."
@@ -1728,8 +1726,8 @@ msgid ""
 "Incident Intelligence ingests, routes, and groups alerts to create incidents. Alerts are routed and grouped based on rules that you configure. If an alert or set of alerts meets the criteria for a critical incident, an incident is automatically triggered and escalated to the corresponding responder based on the incident workflow and on-call schedules you configure. See :ref:`ii-incident-intelligence-overview` high-level "
 "overview of the end-to-end journey of an incident in Incident Intelligence."
 msgstr ""
-"Incident Intelligenceは、インシデントを作成するためにアラートを取り込み、ルーティングし、グループ化します。アラートは、構成したルールに基づいてルーティングおよびグループ化されます。アラートまたはアラートのセットがクリティカルインシデントの基準を満たす場合、インシデントが自動的にトリガされ、構成したインシデント・ワークフローとオンコールスケジュールに基づいて、対応する対応者にエスカレーションされます。Incident Intelligenceのインシ"
-"デントのエンドツーエンドのジャーニーの :ref:`ii-incident-intelligence-overview` ハイレベルな概要を参照してください。"
+"Incident Intelligenceは、インシデントを作成するためにアラートを取り込み、ルーティングし、グループ化します。アラートは、構成したルールに基づいてルーティングおよびグループ化されます。アラートまたはアラートのセットがクリティカルインシデントの基準を満たす場合、インシデントが自動的にトリガーされ、構成したインシデント・ワークフローとオンコール・スケジュールに基づいて、対応する対応者にエスカレーションされます。Incident Intelligenceのイ"
+"ンシデントのエンドツーエンドのジャーニーの :ref:`ii-incident-intelligence-overview` ハイレベルな概要を参照してください。"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:18
 msgid "How Incident Intelligence fits into Splunk Observability Cloud"
@@ -1737,7 +1735,7 @@ msgstr "Incident Intelligenceが Splunk Observability Cloud にどのように�
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:20
 msgid "Splunk Observability Cloud provides a unified experience for collecting and monitoring metrics, logs, and traces from common data sources. Incident Intelligence is integrated into Observability Cloud to provide alert analytics and on-call management in one place. With Incident Intelligence, you can reduce alert noise, automate actions, and accelerate incident response."
-msgstr "Splunk Observability Cloud は、一般的なデータソースからメトリクス、ログ、トレースを収集・監視するための統一されたエクスペリエンスを提供します。Incident Intelligence は Observability Cloud にインテグレーションされ、アラート分析とオンコール管理を 1 か所で提供します。Incident Intelligenceを使用すると、アラートのノイズを減らし、アクションを自動化し、インシデント対応を迅速化できます。"
+msgstr "Splunk Observability Cloud は、一般的なデータソースからメトリクス、ログ、トレースを収集・監視するための統一されたエクスペリエンスを提供します。Incident Intelligence は Observability Cloud にインテグレーションされ、アラート分析とオンコール管理を1か所で提供します。Incident Intelligenceを使用すると、アラートのノイズを減らし、アクションを自動化し、インシデント対応を迅速化できます。"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:22
 msgid "For more information about Observability Cloud, see :ref:`welcome`."
@@ -1761,15 +1759,15 @@ msgstr "表のリンクに従って、自分に関連するタスクを完了さ
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:40
 msgid ":strong:`Do this`"
-msgstr " :strong:`実行する` "
+msgstr ":strong:`実行する`"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:41
 msgid ":strong:`With this tool`"
-msgstr " :strong:`このツールを使用` "
+msgstr ":strong:`使用するツール`"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:42
 msgid ":strong:`Link to documentation`"
-msgstr " :strong:`ドキュメントへのリンク` "
+msgstr ":strong:`ドキュメントへのリンク`"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:44
 msgid "Ingest alerts from Observability Cloud, Splunk Enterprise, Splunk Cloud Platform, IT Service Intelligence (ITSI) or third parties."
@@ -1781,7 +1779,7 @@ msgstr "アラートの取り込み"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:46
 msgid "See :ref:`ii-ingest-alerts`."
-msgstr " :ref:`ii-ingest-alerts` を参照してください。"
+msgstr ":ref:`ii-ingest-alerts` を参照してください。"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:48
 msgid "Create incident policies to automatically organize incidents depending on the impacted service."
@@ -1793,7 +1791,7 @@ msgstr "インシデント・ポリシー"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:50
 msgid "See :ref:`ii-create-configure-incident-policies`."
-msgstr " :ref:`ii-create-configure-incident-policies` を参照してください。"
+msgstr ":ref:`ii-create-configure-incident-policies` を参照してください。"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:52
 msgid "Route alerts to associate them with an incident policy."
@@ -1805,7 +1803,7 @@ msgstr "アラート・ルーティング"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:54
 msgid "See :ref:`ii-configure-alert-routing`."
-msgstr " :ref:`ii-configure-alert-routing` を参照してください。"
+msgstr ":ref:`ii-configure-alert-routing` を参照してください。"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:56
 msgid "Manage which alerts create an incident and how alerts are grouped into incidents. Use alert severity to determine if an incident is created and group alerts by time period."
@@ -1817,11 +1815,11 @@ msgstr "アラートのグループ化"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:58
 msgid "See :ref:`ii-configure-alert-grouping`."
-msgstr " :ref:`ii-configure-alert-grouping` を参照してください。"
+msgstr ":ref:`ii-configure-alert-grouping` を参照してください。"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:60
 msgid "Create incident workflows with a series of escalating steps to determine who is notified to respond when a new incident is triggered."
-msgstr "新しいインシデントがトリガされたときに、誰が対応するように通知されるかを決定する一連のエスカレーションステップを持つインシデント・ワークフローを作成します。"
+msgstr "新しいインシデントがトリガーされたときに、誰が対応するように通知されるかを決定する一連のエスカレーションステップを持つインシデント・ワークフローを作成します。"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:61
 msgid "Incident workflows"
@@ -1829,11 +1827,11 @@ msgstr "インシデント・ワークフロー"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:62
 msgid "See :ref:`ii-configure-incident-workflows`."
-msgstr " :ref:`ii-configure-incident-workflows` を参照してください。"
+msgstr ":ref:`ii-configure-incident-workflows` を参照してください。"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:64
 msgid "Create on-call schedules and shifts to use as a step in your incident workflows."
-msgstr "オンコールスケジュールとシフトを作成し、インシデント・ワークフローのステップとして使用できます。"
+msgstr "オンコール・スケジュールとシフトを作成し、インシデント・ワークフローのステップとして使用できます。"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:65
 msgid "On-call schedules and shifts"
@@ -1841,7 +1839,7 @@ msgstr "オンコールのスケジュールとシフト"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:66
 msgid "See :ref:`ii-create-manage-on-call-schedules`."
-msgstr " :ref:`ii-create-manage-on-call-schedules` を参照してください。"
+msgstr ":ref:`ii-create-manage-on-call-schedules` を参照してください。"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:68
 msgid "Use incident management tools to respond to incidents as they are triggered."
@@ -1853,7 +1851,7 @@ msgstr "インシデント対応"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:70
 msgid "See :ref:`ii-respond-manage-incidents`."
-msgstr " :ref:`ii-respond-manage-incidents` を参照してください。"
+msgstr ":ref:`ii-respond-manage-incidents` を参照してください。"
 
 #: ../../incident-intelligence/intro-to-incident-intelligence.rst:75
 msgid "How to provide feedback or get help"
@@ -1885,11 +1883,11 @@ msgstr "Splunk Incident Intelligence をうまく使うために知っておく�
 
 #: ../../incident-intelligence/key-concepts.rst:15
 msgid ":strong:`Concept`"
-msgstr " :strong:`概念` "
+msgstr ":strong:`概念`"
 
 #: ../../incident-intelligence/key-concepts.rst:16 ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:16 ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:16
 msgid ":strong:`Description`"
-msgstr " :strong:`説明` "
+msgstr ":strong:`説明`"
 
 #: ../../incident-intelligence/key-concepts.rst:18 ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:21
 msgid "Acknowledged"
@@ -1897,7 +1895,7 @@ msgstr "確認"
 
 #: ../../incident-intelligence/key-concepts.rst:19
 msgid "Incident responders select this status to indicate that they are aware of the incident. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Acknowledging an incident prevents the escalation to the next step in an incident workflow."
-msgstr "インシデント対応者は、このステータスを選択して、インシデントを認識していることを示します。インシデントのステータスのライフサイクルは、トリガされ、次に確認され、そして解決されます。インシデントを確認すると、インシデント・ワークフローの次のステップへのエスカレーションが防止されます。"
+msgstr "インシデント対応者は、このステータスを選択して、インシデントを認識していることを示します。インシデントのステータスのライフサイクルは、トリガーされ、次に確認され、そして解決されます。インシデントを確認すると、インシデント・ワークフローの次のステップへのエスカレーションが防止されます。"
 
 #: ../../incident-intelligence/key-concepts.rst:21
 msgid "Alert"
@@ -1909,7 +1907,7 @@ msgstr "アラートは、定義されたしきい値または基準を満たす
 
 #: ../../incident-intelligence/key-concepts.rst:25
 msgid "Use alert grouping to automate incident trigger conditions and group alerts. Alert grouping conditions are set up at the incident-policy level to let you customize the grouping rules for each incident policy."
-msgstr "アラートのグループ化を使用して、インシデントのトリガ条件を自動化し、アラートをグループ化します。アラートのグループ化条件はインシデント・ポリシー レベルで設定されるため、各インシデント・ポリシーのグループ化ルールをカスタマイズできます。"
+msgstr "アラートのグループ化を使用して、インシデントのトリガー条件を自動化し、アラートをグループ化します。アラートのグループ化条件はインシデント・ポリシー レベルで設定されるため、各インシデント・ポリシーのグループ化ルールをカスタマイズできます。"
 
 #: ../../incident-intelligence/key-concepts.rst:28
 msgid "Alert routing associates alerts with an incident policy. If an alert matches your configured alert routing conditions, it is routed to the incident policy."
@@ -1930,7 +1928,7 @@ msgstr "解除"
 #: ../../incident-intelligence/key-concepts.rst:34
 msgid "An incident status that incident responders can set to indicate that the incident is dismissed. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Setting an incident status to dismissed prevents the escalation to the next step in an incident workflow. When you dismiss an incident, it is considered invalid and closed; you will no longer be able to make updates to the incident."
 msgstr ""
-"インシデント対応者が、インシデントが却下されたことを示すために設定できるインシデントステータス。インシデントのステータスのライフサイクルは、トリガされた後、確認され、解決されます。インシデントのステータスを却下に設定すると、インシデント・ワークフローの次のステップにエスカレーションされなくなります。インシデントを解除すると、そのインシデントは無効でクローズされたとみなされ、インシデントに更新を加えることができなくなります。"
+"インシデント対応者が、インシデントが却下されたことを示すために設定できるインシデントステータス。インシデントのステータスのライフサイクルは、トリガーされた後、確認され、解決されます。インシデントのステータスを却下に設定すると、インシデント・ワークフローの次のステップにエスカレーションされなくなります。インシデントを解除すると、そのインシデントは無効でクローズされたとみなされ、インシデントに更新を加えることができなくなります。"
 
 #: ../../incident-intelligence/key-concepts.rst:36
 msgid "Incident Management"
@@ -1978,7 +1976,7 @@ msgstr "インシデントステータス"
 
 #: ../../incident-intelligence/key-concepts.rst:52
 msgid "Where an incident is in its lifecycle. The status of an incident changes based on alert grouping conditions, as well as actions from a user. Throughout the lifecycle of an incident, the incident status can go from triggered, to acknowledged, to resolved or dismissed."
-msgstr "インシデントがライフサイクルのどの段階にあるか。インシデントのステータスは、アラートのグループ化条件、およびユーザーからのアクションに基づいて変化します。インシデントのライフサイクル全体を通して、インシデントのステータスは、トリガされた状態から、確認された状態、解決された状態、または解除された状態になります。"
+msgstr "インシデントがライフサイクルのどの段階にあるか。インシデントのステータスは、アラートのグループ化条件、およびユーザーからのアクションに基づいて変化します。インシデントのライフサイクル全体を通して、インシデントのステータスは、トリガーされた状態から、確認された状態、解決された状態、または解除された状態になります。"
 
 #: ../../incident-intelligence/key-concepts.rst:54
 msgid "Incident workflow"
@@ -1986,7 +1984,7 @@ msgstr "インシデント・ワークフロー"
 
 #: ../../incident-intelligence/key-concepts.rst:55
 msgid "A configurable series of escalation steps that run in response to a triggered incident. Incident workflows determine who is notified of an incident and the time interval for notifications. You can also use incident workflows to manage how incidents are routed, add automation steps, and route to an on-call schedule."
-msgstr "トリガされたインシデントに対応して実行される、構成可能な一連のエスカレーションステップ。インシデント・ワークフローは、インシデントの通知先と通知の時間間隔を決定します。また、インシデント・ワークフローを使用して、インシデントのルーティング方法を管理し、自動化ステップを追加し、オンコールスケジュールにルーティングすることもできます。"
+msgstr "トリガーされたインシデントに対応して実行される、構成可能な一連のエスカレーションステップ。インシデント・ワークフローは、インシデントの通知先と通知の時間間隔を決定します。また、インシデント・ワークフローを使用して、インシデントのルーティング方法を管理し、自動化ステップを追加し、オンコール・スケジュールにルーティングすることもできます。"
 
 #: ../../incident-intelligence/key-concepts.rst:57
 msgid "Maintenance"
@@ -2034,7 +2032,7 @@ msgstr "オンコール・スケジュール"
 
 #: ../../incident-intelligence/key-concepts.rst:73
 msgid "An on-call schedule consists of one or more shifts, with members who rotate through a shift. Use an on-call schedule as a step in your incident policies' incident workflows."
-msgstr "オンコールスケジュールは、1つまたは複数のシフトから構成され、シフトをローテーションするメンバーで構成されます。オンコール・スケジュールは、インシデント・ポリシーのインシデント・ワークフローのステップとして使用します。"
+msgstr "オンコール・スケジュールは、1つまたは複数のシフトから構成され、シフトをローテーションするメンバーで構成されます。オンコール・スケジュールは、インシデント・ポリシーのインシデント・ワークフローのステップとして使用します。"
 
 #: ../../incident-intelligence/key-concepts.rst:75 ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:27
 msgid "Resolved"
@@ -2042,14 +2040,13 @@ msgstr "解決済み"
 
 #: ../../incident-intelligence/key-concepts.rst:76
 msgid "An incident status that incident responders set to indicate that the incident is resolved. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Resolving an incident status prevents the escalation to the next step in an incident workflow."
-msgstr "インシデントが解決されたことを示すために、インシデント対応者が設定するインシデントステータス。インシデントのステータスのライフサイクルは、トリガされ、次に確認され、そして解決されます。インシデントステータスを解決すると、インシデント・ワークフローの次のステップへのエスカレーションが防止されます。"
+msgstr "インシデントが解決されたことを示すために、インシデント対応者が設定するインシデントステータス。インシデントのステータスのライフサイクルは、トリガーされ、次に確認され、そして解決されます。インシデントステータスを解決すると、インシデント・ワークフローの次のステップへのエスカレーションが防止されます。"
 
 #: ../../incident-intelligence/key-concepts.rst:78
 msgid "Incident policy-based routing"
 msgstr "ポリシーベースのルーティング"
 
 #: ../../incident-intelligence/key-concepts.rst:79
-#, fuzzy
 msgid "Incident Intelligence relies on an incident policy-based routing scheme. Incident policy-based routing automatically organizes and routes incidents depending on the service that it's impacting. Rather than routing to a combination of teams and policies, the incident policy an incident is associated with determines who is notified of the incident."
 msgstr "Incident Intelligenceは、インシデント・ポリシーベースのルーティングスキームに依存しています。インシデント・ポリシー・ベースのルーティングでは、インシデントが影響を与えるサービスに応じて、インシデントが自動的に整理され、ルーティングされます。チームとポリシーの組み合わせにルーティングするのではなく、インシデントが関連付けられているインシデント・ポリシーによって、インシデントの通知先を決定します。"
 
@@ -2063,11 +2060,11 @@ msgstr "対応者がインシデントをスヌーズしたときに設定され
 
 #: ../../incident-intelligence/key-concepts.rst:84 ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:18
 msgid "Triggered"
-msgstr "トリガ"
+msgstr "トリガー"
 
 #: ../../incident-intelligence/key-concepts.rst:85
 msgid "The initial stage of an incident is triggered. Incidents are triggered based on the alert grouping conditions you configured for the incident policy."
-msgstr "インシデントの初期段階がトリガされます。インシデントは、インシデント・ポリシーに設定したアラートグループ化条件に基づいてトリガされます。"
+msgstr "インシデントの初期段階がトリガーされます。インシデントは、インシデント・ポリシーに設定したアラートグループ化条件に基づいてトリガーされます。"
 
 #: ../../incident-intelligence/manage-notifications/example-notifications.rst:-1
 msgid "Review example notifications: email, voice, SMS, and mobile push."
@@ -2079,7 +2076,7 @@ msgstr "通知例：電子メール、モバイルプッシュ、SMS、音声"
 
 #: ../../incident-intelligence/manage-notifications/example-notifications.rst:9
 msgid "Each notification method provides a different level of detail about the triggered incident. See the following example info each notification method."
-msgstr "各通知メソッドは、トリガされたインシデントについて異なるレベルの詳細を提供します。各通知方法については、次の例を参照してください。"
+msgstr "各通知メソッドは、トリガーされたインシデントについて異なるレベルの詳細を提供します。各通知方法については、次の例を参照してください。"
 
 #: ../../incident-intelligence/manage-notifications/example-notifications.rst:12
 msgid "Email notification"
@@ -2111,7 +2108,7 @@ msgstr "INC-[番号］[重大度］インシデントのタイトル：[Splunk O
 
 #: ../../incident-intelligence/manage-notifications/example-notifications.rst:32
 msgid "Mobile push notification"
-msgstr "モバイル・プッシュ通知"
+msgstr "モバイルプッシュ通知"
 
 #: ../../incident-intelligence/manage-notifications/example-notifications.rst:34
 msgid "When you select mobile push notification, you will receive an push notification with this content:"
@@ -2119,10 +2116,9 @@ msgstr "モバイルプッシュ通知を選択すると、この内容のプッ
 
 #: ../../incident-intelligence/manage-notifications/example-notifications.rst:36
 msgid ":strong:`INC-[NUMBER] Incident title` [SEVERITY] for policy [incident policy name]: Rule \"[rule name]\" in detector \"[detector name]\" triggered at [date-time triggered]"
-msgstr " :strong:`INC-[番号］ポリシー[インシデント・ポリシー名]のインシデントタイトル` [重大度]：ディテクター「[ディテクター名]」のルール「[ルール名]」は、[トリガされた日時］にトリガされました。"
+msgstr ":strong:`INC-[番号］ポリシー[インシデント・ポリシー名]のインシデントタイトル` [重大度]：ディテクター「[ディテクター名]」のルール「[ルール名]」は、[トリガーされた日時］にトリガーされました。"
 
 #: ../../incident-intelligence/manage-notifications/example-notifications.rst:39
-#, fuzzy
 msgid "You can select the notification to go to the incident details where you can review details and acknowledge, dismiss, or resolve the incident. The text in the notification is static and can't be modified."
 msgstr "通知を選択すると、インシデントの詳細に移動し、詳細を確認して、インシデントを承認、解除、または解決できます。通知のテキストは静的で、変更することはできません。"
 
@@ -2132,7 +2128,7 @@ msgstr "音声通知"
 
 #: ../../incident-intelligence/manage-notifications/example-notifications.rst:44
 msgid "When you select voice notification, you will receive a phone call that with this recorded phone message: \"You are being paged by Splunk Incident Intelligence. You are an assigned responder for a triggered incident. Log in to Splunk Incident Intelligence to view the incident details and acknowledge.\""
-msgstr "音声通知を選択すると、次のようなメッセージが録音された電話がかかってきます。「あなたはトリガされたインシデントの対応担当者です。Splunk Incident Intelligence にログインしてインシデントの詳細を表示し、確認してください。」"
+msgstr "音声通知を選択すると、次のようなメッセージが録音された電話がかかってきます。「あなたはトリガーされたインシデントの対応担当者です。Splunk Incident Intelligence にログインしてインシデントの詳細を表示し、確認してください。」"
 
 #: ../../incident-intelligence/manage-notifications/manage-notifications.rst:-1
 msgid "Overview of notification management in Incident Intelligence in Splunk Observability Cloud."
@@ -2148,19 +2144,19 @@ msgstr "Incident Intelligenceでの通知の管理については、以下のト
 
 #: ../../incident-intelligence/manage-notifications/manage-notifications.rst:20 ../../incident-intelligence/manage-notifications/prevent-spam.rst:14 ../../incident-intelligence/manage-notifications/sending-phone-numbers.rst:20
 msgid ":ref:`ii-notification-preferences`"
-msgstr " :ref:`ii-notification-preferences` "
+msgstr ":ref:`ii-notification-preferences`"
 
 #: ../../incident-intelligence/manage-notifications/manage-notifications.rst:21 ../../incident-intelligence/manage-notifications/notification-preferences.rst:94 ../../incident-intelligence/manage-notifications/sending-phone-numbers.rst:21
 msgid ":ref:`ii-prevent-spam`"
-msgstr " :ref:`ii-prevent-spam` "
+msgstr ":ref:`ii-prevent-spam`"
 
 #: ../../incident-intelligence/manage-notifications/manage-notifications.rst:22 ../../incident-intelligence/manage-notifications/notification-preferences.rst:95 ../../incident-intelligence/manage-notifications/prevent-spam.rst:15
 msgid ":ref:`ii-sending-phone-numbers`"
-msgstr " :ref:`ii-sending-phone-numbers` "
+msgstr ":ref:`ii-sending-phone-numbers`"
 
 #: ../../incident-intelligence/manage-notifications/manage-notifications.rst:23 ../../incident-intelligence/manage-notifications/notification-preferences.rst:96 ../../incident-intelligence/manage-notifications/prevent-spam.rst:16 ../../incident-intelligence/manage-notifications/sending-phone-numbers.rst:22
 msgid ":ref:`ii-example-notifications`"
-msgstr " :ref:`ii-example-notifications` "
+msgstr ":ref:`ii-example-notifications`"
 
 #: ../../incident-intelligence/manage-notifications/notification-preferences.rst:-1
 msgid "Steps to set your notification preferences for Incident Intelligence in Splunk Observability Cloud."
@@ -2172,7 +2168,7 @@ msgstr "オンコール通知の設定"
 
 #: ../../incident-intelligence/manage-notifications/notification-preferences.rst:9
 msgid "When you are on call, triggered incidents notify you by email by default. You can also choose to receive notifications through SMS, mobile push, or voice. To set your on-call notification preferences, follow these steps:"
-msgstr "ンコール時に、トリガされたインシデントがデフォルトでEメールで通知されます。また、SMS、モバイルプッシュ、または音声で通知を受け取ることもできます。オンコール通知の設定を行うには、以下の手順に従ってください。"
+msgstr "オンコール時に、トリガーされたインシデントがデフォルトでEメールで通知されます。また、SMS、モバイルプッシュ、または音声で通知を受け取ることもできます。オンコール通知の設定を行うには、以下の手順に従ってください。"
 
 #: ../../incident-intelligence/manage-notifications/notification-preferences.rst:11
 msgid "In Splunk Observability Cloud, select :guilabel:`Settings` > :guilabel:`Users` in the main menu."
@@ -2184,11 +2180,11 @@ msgstr "自分のユーザー名を検索し、表示されたら選択します
 
 #: ../../incident-intelligence/manage-notifications/notification-preferences.rst:13
 msgid "Go to :guilabel:`Notification Preferences`."
-msgstr " :guilabel:`Notification Preferences` にアクセスします。"
+msgstr ":guilabel:`Notification Preferences` にアクセスします。"
 
 #: ../../incident-intelligence/manage-notifications/notification-preferences.rst:14
 msgid "Under :guilabel:`Intelligence notifications` > :guilabel:`Receive notifications by`, select the notification methods you want to be notified by. :guilabel:`Email` is selected by default. If you want to uncheck :guilabel:`Email`, select another notification method first, then uncheck :guilabel:`Email`."
-msgstr " :guilabel:`Intelligence notifications` > :guilabel:`Receive notifications by` で、通知されたい通知方法を選択します。デフォルトでは  :guilabel:`Email`   が選択されています。  :guilabel:`Email`   のチェックを外したい場合は、まず別の通知方法を選択し、次に  :guilabel:`Email`   のチェックを外します。"
+msgstr ":guilabel:`Intelligence notifications` > :guilabel:`Receive notifications by` で、通知されたい通知方法を選択します。デフォルトでは  :guilabel:`Email`   が選択されています。  :guilabel:`Email`   のチェックを外したい場合は、まず別の通知方法を選択し、次に  :guilabel:`Email`   のチェックを外します。"
 
 #: ../../incident-intelligence/manage-notifications/notification-preferences.rst:18
 msgid "Next, review your :guilabel:`Contact method details` to confirm they are correct. Go to the :guilabel:`Personal Information` tab to update your contact details."
@@ -2210,7 +2206,7 @@ msgstr "(オプション) 各連絡方法に対して :guilabel:`Test` オプシ
 
 #: ../../incident-intelligence/manage-notifications/notification-preferences.rst:20
 msgid "You are now ready to be notified of triggered incidents."
-msgstr "これで、トリガされたインシデントの通知を受ける準備が整いました。"
+msgstr "これで、トリガーされたインシデントの通知を受ける準備が整いました。"
 
 #: ../../incident-intelligence/manage-notifications/notification-preferences.rst:23
 msgid "Receive notifications on your mobile phone"
@@ -2250,7 +2246,7 @@ msgstr "お使いの携帯電話で Splunk Observability Cloud for Mobile アプ
 
 #: ../../incident-intelligence/manage-notifications/notification-preferences.rst:39
 msgid "Select :guilabel:`Settings`"
-msgstr " :guilabel:`Settings` を選択します。"
+msgstr ":guilabel:`Settings` を選択します。"
 
 #: ../../incident-intelligence/manage-notifications/notification-preferences.rst:40
 msgid "Enable :guilabel:`Incident Notifications are Critical Alerts` to ensure incident notifications are not muted by the system."
@@ -2266,7 +2262,7 @@ msgstr "通知、サウンド、バッジ、バナーのオプションがオン
 
 #: ../../incident-intelligence/manage-notifications/notification-preferences.rst ../../incident-intelligence/manage-notifications/notification-preferences.rst:87
 msgid "In the Triggered Incidents section, manage your notification settings to ensure you receive incident notifications while not receiving dual notifications from the app and your mobile device settings."
-msgstr "「トリガされたインシデント」セクションで、通知設定を管理し、アプリとモバイルデバイスの設定から二重の通知を受け取らないようにしながら、インシデント通知を受け取れるようにします。"
+msgstr "「トリガーされたインシデント」セクションで、通知設定を管理し、アプリとモバイルデバイスの設定から二重の通知を受け取らないようにしながら、インシデント通知を受け取れるようにします。"
 
 #: ../../incident-intelligence/manage-notifications/notification-preferences.rst:49
 msgid "Notification delivery on Android"
@@ -2306,15 +2302,15 @@ msgstr "音量オーバーライドを設定するには、以下の手順に従
 
 #: ../../incident-intelligence/manage-notifications/notification-preferences.rst:69
 msgid "Select :guilabel:`Settings`, then go to the :guilabel:`Notifications` tab."
-msgstr " :guilabel:`Settings` を選択し、:guilabel:`Notifications` タブを開きます。"
+msgstr ":guilabel:`Settings` を選択し、:guilabel:`Notifications` タブを開きます。"
 
 #: ../../incident-intelligence/manage-notifications/notification-preferences.rst:70
 msgid "Select :guilabel:`Incident Notifications`."
-msgstr " :guilabel:`Incident Notifications` を選択します。"
+msgstr ":guilabel:`Incident Notifications` を選択します。"
 
 #: ../../incident-intelligence/manage-notifications/notification-preferences.rst:78
 msgid "In the :guilabel:`Triggered Incidents` section:"
-msgstr " :guilabel:`Triggered Incidents` セクションで："
+msgstr ":guilabel:`Triggered Incidents` セクションで："
 
 #: ../../incident-intelligence/manage-notifications/notification-preferences.rst:72
 msgid "Change the Notification Sound to your preference."
@@ -2326,11 +2322,11 @@ msgstr "システムの通知音量を上書きするオプションをオンに
 
 #: ../../incident-intelligence/manage-notifications/notification-preferences.rst:74
 msgid "Select :guilabel:`Manage Channel Settings` and do the following:"
-msgstr " :guilabel:`Manage Channel Settings` を選択し、以下を実行します。"
+msgstr ":guilabel:`Manage Channel Settings` を選択し、以下を実行します。"
 
 #: ../../incident-intelligence/manage-notifications/notification-preferences.rst:75
 msgid "Ensure :guilabel:`Show notifications` is turned on."
-msgstr " :guilabel:`Show notifications` がオンになっていることを確認します。"
+msgstr ":guilabel:`Show notifications` がオンになっていることを確認します。"
 
 #: ../../incident-intelligence/manage-notifications/notification-preferences.rst:76
 msgid "(Optional) To avoid double sounds or ringtones being issued by the Splunk Observability Cloud for Mobile app and your Android system settings, expand the :guilabel:`Advanced settings` and change the Sound setting to None."
@@ -2390,7 +2386,7 @@ msgstr "SMS通知の場合、ターゲット電話番号が外国番号からの
 
 #: ../../incident-intelligence/placeholder.rst:6
 msgid "Incident Intelligence topic placeholder"
-msgstr "Incident Intelligence・トピックのプレースホルダー"
+msgstr "Incident Intelligenceトピックのプレースホルダー"
 
 #: ../../incident-intelligence/placeholder.rst:8
 msgid "Greetings! This is a placeholder topic. You have landed here because documentation doesn't yet exist for the new feature/functionality in the app where you selected to learn more."
@@ -2434,7 +2430,7 @@ msgstr "インシデントリストからインシデントを選択します。
 
 #: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:20
 msgid "Select :guilabel:`Add Resource`."
-msgstr " :guilabel:`Add Resource` を選択します。"
+msgstr ":guilabel:`Add Resource` を選択します。"
 
 #: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:21
 msgid "Enter a :guilabel:`Title` for the resource."
@@ -2450,7 +2446,7 @@ msgstr "（オプション）リソースに関するメモを入力します。
 
 #: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:24 ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:39
 msgid "Select :guilabel:`Add`."
-msgstr " :guilabel:`Add` を選択します。"
+msgstr ":guilabel:`Add` を選択します。"
 
 #: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:29
 msgid "Add collaboration tools to an incident"
@@ -2467,7 +2463,7 @@ msgstr "Incident Intelligenceで、:guilabel:`Incidents` タブを開きます�
 
 #: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:35
 msgid "Select :guilabel:`Add Collaboration Tool`."
-msgstr " :guilabel:`Add Collaboration Tool` を選択します。"
+msgstr ":guilabel:`Add Collaboration Tool` を選択します。"
 
 #: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:36
 msgid "Enter a :guilabel:`Title` for the collaboration tool."
@@ -2484,32 +2480,32 @@ msgstr "（オプション）コラボレーションツールに関するメモ
 #: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:44 ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:34 ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:20 ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:39 ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:42
 #: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:31
 msgid ":ref:`ii-respond-to-incident`"
-msgstr " :ref:`ii-respond-to-incident` "
+msgstr ":ref:`ii-respond-to-incident`"
 
 #: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:45 ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:35 ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:21 ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:40 ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:43
 #: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:38
 msgid ":ref:`ii-snooze-incident`"
-msgstr " :ref:`ii-snooze-incident` "
+msgstr ":ref:`ii-snooze-incident`"
 
 #: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:46 ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:22 ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:41 ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:44 ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:39
 #: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:32
 msgid ":ref:`ii-add-responders-roles`"
-msgstr " :ref:`ii-add-responders-roles` "
+msgstr ":ref:`ii-add-responders-roles`"
 
 #: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:47 ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:37 ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:43 ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:47 ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:41
 #: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:34
 msgid ":ref:`ii-edit-incident`"
-msgstr " :ref:`ii-edit-incident` "
+msgstr ":ref:`ii-edit-incident`"
 
 #: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:48 ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:38 ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:24 ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:44 ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:48
 #: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:42 ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:35
 msgid ":ref:`ii-muted-incidents`"
-msgstr " :ref:`ii-muted-incidents` "
+msgstr ":ref:`ii-muted-incidents`"
 
 #: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:49 ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:39 ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:25 ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:49 ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:43
 #: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:36
 msgid ":ref:`ii-mtta-mttr`"
-msgstr " :ref:`ii-mtta-mttr` "
+msgstr ":ref:`ii-mtta-mttr`"
 
 #: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:-1
 msgid "Steps to add responders and assign roles within an incident in Incident Intelligence in Splunk Observability Cloud."
@@ -2525,7 +2521,7 @@ msgstr "インシデント・ポリシーにインシデント・ワークフロ
 
 #: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:13
 msgid "Select :guilabel:`Add Responders`."
-msgstr " :guilabel:`Add Responders` を選択します。"
+msgstr ":guilabel:`Add Responders` を選択します。"
 
 #: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:15
 msgid "You can add responders by selecting a schedule and you can add a specific responder by name."
@@ -2562,7 +2558,7 @@ msgstr "対応者に割り当てるロールを選択します。ロールのリ
 #: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:36 ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:23 ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:42 ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:45 ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:40
 #: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:33
 msgid ":ref:`ii-add-incident-tools-resources`"
-msgstr " :ref:`ii-add-incident-tools-resources` "
+msgstr ":ref:`ii-add-incident-tools-resources`"
 
 #: ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:-1
 msgid "Steps to edit an incident in Incident Intelligence in Splunk Observability Cloud."
@@ -2574,7 +2570,7 @@ msgstr "インシデントを編集する"
 
 #: ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:9
 msgid "Incidents automatically inherit the title and description of the first alert that triggers the incident. To edit the incident title, description, or severity, follow these steps:"
-msgstr "インシデントは、インシデントをトリガした最初のアラートのタイトルと説明を自動的に継承します。インシデントのタイトル、説明、または重大度を編集するには、以下の手順に従います。"
+msgstr "インシデントは、インシデントをトリガーした最初のアラートのタイトルと説明を自動的に継承します。インシデントのタイトル、説明、または重大度を編集するには、以下の手順に従います。"
 
 #: ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:13
 msgid "Select the pencil icon."
@@ -2598,15 +2594,15 @@ msgstr "Incident Intelligenceの［ :guilabel:`Incidents` ］および［ :guila
 
 #: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:15
 msgid ":strong:`Statistic`"
-msgstr " :strong:`統計` "
+msgstr ":strong:`統計`"
 
 #: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:18
 msgid "Triggered incidents"
-msgstr "トリガされたインシデント"
+msgstr "トリガーされたインシデント"
 
 #: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:19
 msgid "The current number of incidents with the triggered status for your organization."
-msgstr "組織のトリガされたステータスのインシデントの現在の数。"
+msgstr "組織のトリガーされたステータスのインシデントの現在の数。"
 
 #: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:21
 msgid "Acknowledged incidents"
@@ -2650,11 +2646,11 @@ msgstr "ミュートされたインシデントとは何か？"
 
 #: ../../incident-intelligence/respond-manage-incidents/muted-incidents.rst:9
 msgid "Incidents are triggered in a muted state when an incident policy is in maintenance. See :ref:`ii-incident-policy-maintenance`."
-msgstr "インシデント・ポリシーがメンテナンス中の場合、インシデントはミュート状態でトリガされます。:ref:`ii-incident-policy-maintenance` を参照してください。"
+msgstr "インシデント・ポリシーがメンテナンス中の場合、インシデントはミュート状態でトリガーされます。:ref:`ii-incident-policy-maintenance` を参照してください。"
 
 #: ../../incident-intelligence/respond-manage-incidents/muted-incidents.rst:11
 msgid "Muted incidents don't show in your incident list by default. To see your muted incidents, select the :guilabel:`Incidents` tab in Incident Intelligence and add a ``Status = Muted`` filter. No responders are notified when a muted incident is triggered. Muted incidents are read-only and can't be acknowledged, resolved, or dismissed."
-msgstr "ミュートされたインシデントは、デフォルトではインシデントリストに表示されません。ミュートされたインシデントを表示するには、Incident Intelligence で :guilabel:`Incidents` タブを選択し、``Status = Muted`` フィルタを追加します。ミュートされたインシデントがトリガされると、対応者には通知されません。ミュートされたインシデントは読み取り専用で、確認、解決、または解除することはできません。"
+msgstr "ミュートされたインシデントは、デフォルトではインシデントリストに表示されません。ミュートされたインシデントを表示するには、Incident Intelligence で :guilabel:`Incidents` タブを選択し、``Status = Muted`` フィルターを追加します。ミュートされたインシデントがトリガーされると、対応者には通知されません。ミュートされたインシデントは読み取り専用で、確認、解決、または解除することはできません。"
 
 #: ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:-1
 msgid "Overview of steps to respond and manage incidents in Incident Intelligence in Splunk Observability Cloud."
@@ -2666,7 +2662,7 @@ msgstr "インシデントへの対応と管理"
 
 #: ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:9
 msgid "Incidents are automatically triggered after you configure your incident policies to route and group alerts and add an incident workflow to your incident policy. Go to the :guilabel:`Incidents` tab in Incident Intelligence to view incidents as they are triggered."
-msgstr "インシデント・ポリシーを構成してアラートをルーティングおよびグループ化し、インシデント・ポリシーにインシデント・ワークフローを追加すると、インシデントが自動的にトリガされます。インシデント インテリジェンスの［ :guilabel:`Incidents` ］タブに移動すると、インシデントがトリガされたときに表示されます。"
+msgstr "インシデント・ポリシーを構成してアラートをルーティングおよびグループ化し、インシデント・ポリシーにインシデント・ワークフローを追加すると、インシデントが自動的にトリガーされます。インシデント インテリジェンスの［ :guilabel:`Incidents` ］タブに移動すると、インシデントがトリガーされたときに表示されます。"
 
 #: ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:17
 msgid "You can search for incidents by ID or title. Searching by ID supports partial matching. Searching by title requires whole-word matching."
@@ -2674,7 +2670,7 @@ msgstr "IDまたはタイトルでインシデントを検索できます。ID�
 
 #: ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:25
 msgid "You can manually create an incident using the :guilabel:`Create incident` button on the :guilabel:`Incidents` tab. Manually created incidents trigger the incident workflow for the incident policy you select."
-msgstr "［ :guilabel:`Incidents` ］タブの［ :guilabel:`Create incident` ］ボタンを使用して、インシデントを手動で作成できます。手動で作成したインシデントは、選択したインシデント・ポリシーのインシデント・ワークフローをトリガします。"
+msgstr "［ :guilabel:`Incidents` ］タブの［ :guilabel:`Create incident` ］ボタンを使用して、インシデントを手動で作成できます。手動で作成したインシデントは、選択したインシデント・ポリシーのインシデント・ワークフローをトリガーします。"
 
 #: ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:27
 msgid "Use the following topics to learn about incident management and response:"
@@ -2682,7 +2678,7 @@ msgstr "インシデント管理と対応については、以下のトピック
 
 #: ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:46
 msgid ":ref:`snow-integration`"
-msgstr " :ref:`snow-integration` "
+msgstr ":ref:`snow-integration`"
 
 #: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:-1
 msgid "Incident status overview and steps to respond to an incident in Incident Intelligence in Splunk Observability Cloud."
@@ -2694,15 +2690,15 @@ msgstr "インシデントに対応します。インシデントを確認、解
 
 #: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:9
 msgid "Incidents begin in the triggered status. The default status lifecycle for incidents is triggered, and then acknowledged, and then resolved."
-msgstr "インシデントはトリガされたステータスで開始します。インシデントのデフォルトのステータスのライフサイクルは、トリガされ、確認され、解決されます。"
+msgstr "インシデントはトリガーされたステータスで開始します。インシデントのデフォルトのステータスのライフサイクルは、トリガーされ、確認され、解決されます。"
 
 #: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:15
 msgid ":strong:`Incident status`"
-msgstr " :strong:`インシデントステータス` "
+msgstr ":strong:`インシデントステータス`"
 
 #: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:19
 msgid "Triggered incidents are considered active and open. Triggered incidents notify responders as defined by the steps in the associated incident policy's incident workflow."
-msgstr "トリガされたインシデントは、アクティブでオープンであるとみなされます。トリガされたインシデントは、関連するインシデント・ポリシーのインシデント・ワークフローのステップで定義されたとおりに対応者に通知されます。"
+msgstr "トリガーされたインシデントは、アクティブでオープンであるとみなされます。トリガーされたインシデントは、関連するインシデント・ポリシーのインシデント・ワークフローのステップで定義されたとおりに対応者に通知されます。"
 
 #: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:22
 msgid "Acknowledged incidents are considered valid and under investigation. Setting an incident status to acknowledged prevents further notifications."
@@ -2738,7 +2734,7 @@ msgstr "インシデントをスヌーズする"
 
 #: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:9
 msgid "You can snooze an incident to silence paging on unactionable or less-urgent incidents for a specified period of time. At the end of the specified time, the incident workflow with which the incident is associated is triggered again, starting with the first step. To snooze an incident, follow these steps:"
-msgstr "インシデントをスヌーズすることで、指定された期間、処理不可能なインシデントや緊急性の低いインシデントのページングを停止することができます。指定した時間が経過すると、インシデントが関連付けられているインシデント・ワークフローが再度トリガされ、最初のステップから開始されます。インシデントをスヌーズするには、以下の手順に従います。"
+msgstr "インシデントをスヌーズすることで、指定された期間、処理不可能なインシデントや緊急性の低いインシデントのページングを停止することができます。指定した時間が経過すると、インシデントが関連付けられているインシデント・ワークフローが再度トリガーされ、最初のステップから開始されます。インシデントをスヌーズするには、以下の手順に従います。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:12
 msgid "Locate the incident and select the :guilabel:`Actions` menu."
@@ -2746,11 +2742,11 @@ msgstr "インシデントを検索し、:guilabel:`Actions` メニューを選�
 
 #: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:13 ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:15
 msgid "Select :guilabel:`Snooze`."
-msgstr " :guilabel:`Snooze` を選択します。"
+msgstr ":guilabel:`Snooze` を選択します。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:14
 msgid "Next to :guilabel:`Snooze until`, select the date and time when you want to re-trigger the incident workflow."
-msgstr " :guilabel:`Snooze until` の横で、インシデント・ワークフローを再トリガする日時を選択します。"
+msgstr ":guilabel:`Snooze until` の横で、インシデント・ワークフローを再トリガーする日時を選択します。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:18
 msgid "Unsnooze an incident"
@@ -2766,11 +2762,11 @@ msgstr "インシデントの場所を特定します。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:24
 msgid "Select :guilabel:`Resume`."
-msgstr " :guilabel:`Resume` を選択します。"
+msgstr ":guilabel:`Resume` を選択します。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:26
 msgid "When a snoozed incident resumes, the incident workflow is triggered again, starting with the first step."
-msgstr "スヌーズされたインシデントが再開されると、インシデント・ワークフローは再びトリガされ、最初のステップから開始されます。"
+msgstr "スヌーズされたインシデントが再開されると、インシデント・ワークフローは再びトリガーされ、最初のステップから開始されます。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:4
 msgid "Create ServiceNow tickets within Splunk Incident Intelligence incidents"
@@ -2802,15 +2798,15 @@ msgstr "Splunk Observability Cloud にログインします。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:20
 msgid "Open the :new-page:`ServiceNOW for Incident Intelligence setup page <https://login.signalfx.com/#/integrations/incidentIntelligenceServiceNow>`. Optionally, you can navigate to the setup on your own:"
-msgstr " :new-page:`ServiceNOW for Incident Intelligenceのセットアップページ<https://login.signalfx.com/#/integrations/incidentIntelligenceServiceNow>` を開きます。オプションで、自分でセットアップに移動することもできます。"
+msgstr ":new-page:`ServiceNOW for Incident Intelligenceのセットアップページ<https://login.signalfx.com/#/integrations/incidentIntelligenceServiceNow>` を開きます。オプションで、自分でセットアップに移動することもできます。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:22
 msgid "Select :guilabel:`Data Management`."
-msgstr " :guilabel:`Data Management` を選択します。"
+msgstr ":guilabel:`Data Management` を選択します。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:24
 msgid "Select :guilabel:`Add Integration`."
-msgstr " :guilabel:`Add Integration` を選択します。"
+msgstr ":guilabel:`Add Integration` を選択します。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:26
 msgid "In the drop-down, select :guilabel:`Product` and search for Incident Intelligence."
@@ -2818,7 +2814,7 @@ msgstr "ドロップダウンで、:guilabel:`Product` を選択し、Incident I
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:28
 msgid "Select :guilabel:`ServiceNow Incident Intelligence`."
-msgstr " :guilabel:`ServiceNow Incident Intelligence` を選択します。"
+msgstr ":guilabel:`ServiceNow Incident Intelligence` を選択します。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:30
 msgid "By default, the name of the integration is :guilabel:`ServiceNow`. Give your integration a unique and descriptive name. For information about the downstream use of this name, see :ref:`About naming your integrations <naming-note>`."
@@ -2830,23 +2826,23 @@ msgstr "インスタンスの :guilabel:`ServiceNow URL` を入力します。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:32
 msgid "In the :strong:`Username or Client` field, enter the user ID from ServiceNow or the Oauth client ID."
-msgstr " :strong:`Username または Client` フィールドに、ServiceNow のユーザー ID または Oauth クライアント ID を入力します。"
+msgstr ":strong:`Username または Client` フィールドに、ServiceNow のユーザー ID または Oauth クライアント ID を入力します。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:33
 msgid "In the :strong:`Password or Client` field, enter the password from ServiceNow or the Oauth client secret."
-msgstr " :strong:`パスワードまたはクライアント` フィールドに、ServiceNow のパスワードまたは Oauth クライアントシークレットを入力します。"
+msgstr ":strong:`パスワードまたはクライアント` フィールドに、ServiceNow のパスワードまたは Oauth クライアントシークレットを入力します。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:34
 msgid "In the :strong:`Provide the timezone` field, enter the time zone name for the ServiceNOW integration."
-msgstr " :strong:`タイムゾーンを提供する` フィールドに、ServiceNOWインテグレーションのタイムゾーン名を入力します。"
+msgstr ":strong:`タイムゾーンを提供する` フィールドに、ServiceNOWインテグレーションのタイムゾーン名を入力します。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:35
 msgid "In the :strong:`Observability Integration Token` field, enter the API Access token for your Incident Intelligence org. This must be an org level API access token."
-msgstr " :strong:`Observability Integrationトークン` フィールドに、Incident Intelligence組織のAPI アクセストークンを入力します。これは、組織レベルの API アクセストークンである必要があります。"
+msgstr ":strong:`Observability Integrationトークン` フィールドに、Incident Intelligence組織のAPI アクセストークンを入力します。これは、組織レベルの API アクセストークンである必要があります。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:36
 msgid "Select :guilabel:`Save`"
-msgstr " :guilabel:`Save` を選択します。"
+msgstr ":guilabel:`Save` を選択します。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:38
 msgid "You are now ready to configure ServiceNow as part of the incident policy workflows in Incident Intelligence."
@@ -2866,19 +2862,19 @@ msgstr "Splunk Incident Intelligenceで、:guilabel:`Incident Management` を選
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:49
 msgid "On the :guilabel:`Incident Policies` tab, select an incident."
-msgstr " :guilabel:`Incident Policies` タブで、インシデントを選択します。"
+msgstr ":guilabel:`Incident Policies` タブで、インシデントを選択します。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:50
 msgid "Select the :guilabel:`Incident Workflows` tab to configure an action for the policy."
-msgstr " :guilabel:`Incident Workflows` タブを選択して、ポリシーのアクションを設定します。"
+msgstr ":guilabel:`Incident Workflows` タブを選択して、ポリシーのアクションを設定します。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:51
 msgid "Select :guilabel:`Add action`."
-msgstr " :guilabel:`Add action` を選択します。"
+msgstr ":guilabel:`Add action` を選択します。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:52
 msgid "On the :guilabel:`Add new action` dialog, in the :guilabel:`Integration` field, select Create ServiceNOW ticket."
-msgstr " :guilabel:`Add new action` ダイアログの :guilabel:`Integration` フィールドで、Create ServiceNOW ticket を選択します。"
+msgstr ":guilabel:`Add new action` ダイアログの :guilabel:`Integration` フィールドで、Create ServiceNOW ticket を選択します。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:53 ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:83
 msgid "Complete the following fields:"
@@ -2886,15 +2882,15 @@ msgstr "以下のフィールドに記入してください。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:55 ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:85
 msgid ":guilabel:`Integration Instance`: Select the ServiceNow instance to work with. For example, you might have a production and a test instance."
-msgstr " :guilabel:`Integration Instance`：作業するServiceNowインスタンスを選択します。例えば、本番用インスタンスとテスト用インスタンスがあります。"
+msgstr ":guilabel:`Integration Instance`：作業するServiceNowインスタンスを選択します。例えば、本番用インスタンスとテスト用インスタンスがあります。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:57 ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:87
 msgid ":guilabel:`ServiceNow table`: the default is incident."
-msgstr " :guilabel:`ServiceNow table`：デフォルトはインシデント。"
+msgstr ":guilabel:`ServiceNow table`：デフォルトはインシデント。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:59
 msgid ":guilabel:`ServiceNow Fields`: Enter the JSON that contains the ServiceNow field values to use. For example, if you have an incident policy for WebUI incidents, you can create a field that says WebUI incident, so the responder doesn't have to fill that in."
-msgstr " :guilabel:`ServiceNow Fields`：使用する ServiceNow フィールド値を含む JSON を入力します。たとえば、WebUIインシデントのインシデント・ポリシーがある場合、WebUIインシデントというフィールドを作成できます。"
+msgstr ":guilabel:`ServiceNow Fields`：使用する ServiceNow フィールド値を含む JSON を入力します。たとえば、WebUIインシデントのインシデント・ポリシーがある場合、WebUIインシデントというフィールドを作成できます。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:61 ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:91
 msgid "(Optional) :guilabel:`Close Incident Mapping JSON`: Enter the JSON to map the fields users are prompted to provide when closing an incident."
@@ -2930,15 +2926,15 @@ msgstr "Splunk Incident Intelligence の :guilabel:`Incidents` タブで、イ�
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:81
 msgid "In the :guilabel:`Resources` section, select :guilabel:`Add Resource`."
-msgstr " :guilabel:`Resources` セクションで、:guilabel:`Add Resource` を選択します。"
+msgstr ":guilabel:`Resources` セクションで、:guilabel:`Add Resource` を選択します。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:82
 msgid "On the :guilabel:`Add resource` dialog, in the :guilabel:`Integration` field, select Create ServiceNOW ticket."
-msgstr " :guilabel:`Add resource` ダイアログの :guilabel:`Integration` フィールドで、Create ServiceNOW ticket を選択します。"
+msgstr ":guilabel:`Add resource` ダイアログの :guilabel:`Integration` フィールドで、Create ServiceNOW ticket を選択します。"
 
 #: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:89
 msgid ":guilabel:`ServiceNow Fields`: Enter the JSON that contains the ServiceNow field values to use."
-msgstr " :guilabel:`ServiceNow Fields`：使用するServiceNowフィールド値を含むJSONを入力します。"
+msgstr ":guilabel:`ServiceNow Fields`：使用するServiceNowフィールド値を含むJSONを入力します。"
 
 #: ../../incident-intelligence/set-up-incident-intelligence.rst:-1
 msgid "Steps to configure your incident management in Incident Intelligence in Splunk Observability Cloud."
@@ -2982,11 +2978,11 @@ msgstr "インシデント・ポリシー内でアラートのグループ化を
 
 #: ../../incident-intelligence/set-up-incident-intelligence.rst:25
 msgid "Configure the incident workflow within the incident policy to determine who is notified when a new incident is triggered. See :ref:`ii-configure-incident-workflows`."
-msgstr "インシデント・ポリシー内でインシデント・ワークフローを構成し、新しいインシデントがトリガされたときに誰に通知するかを決定します。:ref:`ii-configure-incident-workflows` を参照してください。"
+msgstr "インシデント・ポリシー内でインシデント・ワークフローを構成し、新しいインシデントがトリガーされたときに誰に通知するかを決定します。:ref:`ii-configure-incident-workflows` を参照してください。"
 
 #: ../../incident-intelligence/set-up-incident-intelligence.rst:26
 msgid "Create an on-call schedule and add them as a step in your incident workflows. See :ref:`ii-create-manage-on-call-schedules`."
-msgstr "オンコールスケジュールを作成し、インシデント・ワークフローのステップとして追加します。:ref:`ii-create-manage-on-call-schedules` を参照してください。"
+msgstr "オンコール・スケジュールを作成し、インシデント・ワークフローのステップとして追加します。:ref:`ii-create-manage-on-call-schedules` を参照してください。"
 
 #: ../../incident-intelligence/set-up-incident-intelligence.rst:28
 msgid "This completes the setup for Incident Intelligence. You are ready to begin responding to incidents. See :ref:`ii-respond-manage-incidents`."

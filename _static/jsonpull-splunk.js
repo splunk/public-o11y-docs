@@ -1,7 +1,244 @@
 $(document).ready(function () {
 
+   let converter = new showdown.Converter(
+       {
+          simplifiedAutoLink: true,
+          excludeTrailingPunctuationFromURLs: true,
+          literalMidWordUnderscores: true
+       });
+
+   $('.instrumentation').each(function () {
+      $(this).addClass('dynamic-yaml');
+      let url = $(this).attr('url');
+      let renamingDict = JSON.parse($(this).attr('data-renaming') || '{}');
+      let section = $(this).attr('section') || 'instrumentation';
+      let group = $(this).attr('group') || '';
+      let filter = $(this).attr('filter') || '';
+      let selfSelector = $(this);
+
+      function rename(key) {
+         return renamingDict[key] || key;
+      }
+
+      function generateIndexTable(data, group, filter) {
+         let columns = new Set();
+         data.forEach(item => Object.keys(item).forEach(key => columns.add(key)));
+
+         if (group && columns.has(group)) {
+            columns.delete(group);
+         }
+         let columnsArray = Array.from(columns);
+
+         let table = $('<table class="generated-table docutils align-default" style="width: 100%" id="indexTable"><thead><tr></tr></thead></table>');
+         columnsArray.forEach(col => table.find('tr').append(`<th>${rename(col)}</th>`));
+
+         data.forEach((item, index) => {
+            try{
+               if (!filter || item[group] === filter) {
+                  let row = $('<tr></tr>');
+                  columnsArray.forEach(col => {
+                     if (item[col] !== undefined) {
+                        if (Array.isArray(item[col]) && isComplex(item[col])) {
+                           let anchorId = `detail-${index}-${col}-header`;
+                           row.append(`<td><a href="#${anchorId}">Details</a></td>`);
+                        } else if (Array.isArray(item[col]) && item[col].length === 1 && !isComplex(item[col][0])) {
+                           row.append(`<td>${item[col][0]}</td>`);
+                        } else if (isComplex(item[col]) && !Array.isArray(item[col])) {
+                           let subTableHtml = generateSubtableHtmlForSingleObject(item[col]);
+                           row.append(`<td>${subTableHtml}</td>`);
+                        } else if (Array.isArray(item[col])) {
+                           row.append(`<td>${item[col].map(subItem => subItem instanceof Object ? JSON.stringify(subItem) : subItem).join(', ')}</td>`);
+                        } else {
+                           row.append('<td>' + converter.makeHtml(item[col]) + '</td>');
+                        }
+                     } else {
+                        row.append('<td></td>');
+                     }
+                  });
+                  table.append(row);
+               }
+            }catch(err){
+               console.log(err);
+            }
+         });
+
+         return table;
+      }
+
+
+      function generateSubtables(data) {
+         let subtables = [];
+         data.forEach((item, index) => {
+            Object.keys(item).forEach((key) => {
+
+
+               if (Array.isArray(item[key]) && isComplex(item[key])) {
+                  let headingId = `detail-${index}-${key}-header`;
+                  let context = item?.keys?.[0] ?? '';
+                  let heading = $(`<h3 id="${headingId}">${context} ` + ' ' + ` ${rename(key)}</h3>`);
+
+                  let subTable = $(`<table style="width:100%" class="generated-table docutils align-default" id="detail-${index}-${key}"></table>`);
+                  const allKeys = [...new Set(item[key].flatMap(Object.keys))];
+
+                  let headers = $('<thead><tr></tr></thead>');
+                  allKeys.forEach(subKey => {
+                     if (subKey === 'traces') {
+                        return;
+                     }
+                     headers.find('tr').append(`<th class="head">${rename(subKey)}</th>`);
+                  });
+                  subTable.append(headers);
+
+                  item[key].forEach(subItem => {
+                     let subRow = $('<tr></tr>');
+                     allKeys.forEach(subKey => {
+                        if (subKey === 'traces') {
+                           return;
+                        }
+                        let cellValue = handleNestedData(subItem[subKey]);
+                        if (cellValue !== '') {
+                           const urlPattern = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([\/\w .-]*)*\/?$/;
+                           if (urlPattern.test(cellValue) && cellValue.length > 25) {
+                              subRow.append(`<td><a class="new-page reference external" href="${cellValue}" target="_blank">External Link</a></td>`);
+                           } else {
+                              subRow.append('<td>' + converter.makeHtml(cellValue) + '</td>');
+                           }
+                        }
+                     });
+                     subTable.append(subRow);
+                  });
+
+                  let container = $('<div></div>');
+                  container.append(heading);
+                  container.append(subTable);
+
+                  $(selfSelector).append(container);
+                  subtables.push(container);
+               }
+            });
+         });
+         return subtables;
+      }
+
+      function handleNestedData(value) {
+         if (value instanceof Object) {
+            if (Array.isArray(value)) {
+               let nestedTable = '<table class="generated-table docutils align-default" style="width: 100%">';
+
+               if (value.length > 0) {
+                  let headers = value[0];
+                  let headerRow = '<tr><thead>';
+                  Object.keys(headers).forEach(key => {
+                     headerRow += `<th class="head">${rename(key)}</th>`;
+                  });
+                  nestedTable += headerRow + '</thead></tr>';
+               }
+
+               value.forEach(item => {
+                  let row = '<tr>';
+                  Object.entries(item).forEach(([key, val]) => {
+                     row += `<td>${handleNestedData(val)}</td>`;
+                  });
+                  nestedTable += row + '</tr>';
+               });
+
+               nestedTable += '</table>';
+               return nestedTable;
+            } else {
+               let nestedTable = '<table border="1">';
+               Object.entries(value).forEach(([key, val]) => {
+                  nestedTable += `<tr><th>${key}</th><td>${handleNestedData(val)}</td></tr>`;
+               });
+               nestedTable += '</table>';
+               return nestedTable;
+            }
+         }
+         return value || '';
+      }
+
+
+      function isComplex(item) {
+         return Array.isArray(item) ? item.some(isComplex) : (typeof item === 'object' && !(item instanceof Date) && !(item instanceof String));
+      }
+
+
+      function generateSubtableHtmlForSingleObject(data) {
+         let html = '<table style="width: 100%">';
+         Object.keys(data).forEach(key => {
+            html += `<tr><td>${key}</td><td>${data[key]}</td></tr>`;
+         });
+         html += '</table>';
+         return html;
+      }
+
+      function removeEmptyTables() {
+         $(selfSelector).find('div').each(function () {
+            let container = $(this);
+            let h3 = container.find('h3');
+            let mainTable = container.find('table').first();
+
+            function isTableEffectivelyEmpty(table) {
+
+               let textNodes = table.find('td').contents().filter(function () {
+                  return this.nodeType === 3 && $.trim(this.nodeValue).length > 0;
+               });
+
+               if (textNodes.length > 0) {
+                  return false;
+               }
+
+               let allCells = table.find('td');
+               for (let i = 0; i < allCells.length; i++) {
+                  let cell = $(allCells[i]);
+                  let nestedTables = cell.find('table');
+                  if (nestedTables.length > 0) {
+                     for (let j = 0; j < nestedTables.length; j++) {
+                        let nestedTable = $(nestedTables[j]);
+                        if (!isTableEffectivelyEmpty(nestedTable)) {
+                           return false;
+                        }
+                     }
+                  } else if ($.trim(cell.text()).length > 0) {
+                     return false;
+                  }
+               }
+
+               return true;
+            }
+
+            if (isTableEffectivelyEmpty(mainTable)) {
+               let h3Id = h3.attr('id');
+               $('#indexTable a[href="#' + h3Id + '"]').closest('td').html('');
+               container.remove();
+            }
+         });
+      }
+
+      $.ajax({
+         url: url,
+         dataType: 'text',
+         success: function (response) {
+            const yamlData = jsyaml.load(response);
+            if (yamlData && yamlData[section]) {
+               const indexTable = generateIndexTable(yamlData[section], group, filter);
+               $(selfSelector).append(indexTable);
+               const subtables = generateSubtables(yamlData[section]);
+               subtables.forEach(subtable => {
+                  $(selfSelector).append(subtable);
+               });
+            } else {
+               $(selfSelector).append(`<div class="admonition caution">No data for section '${section}'.</div>`);
+            }
+            removeEmptyTables();
+         },
+         error: function () {
+            $(selfSelector).append('<div class="admonition caution">Error loading or parsing YAML file.</div>');
+         }
+      });
+   });
 
    $('.metrics-config').each(function () {
+      $(this).addClass('dynamic-yaml');
       if ($(this).data('processed')) {
          return;
       }
@@ -69,13 +306,6 @@ $(document).ready(function () {
    $.ajaxSetup({
       cache: true
    });
-
-   let converter = new showdown.Converter(
-      {
-         simplifiedAutoLink: true,
-         excludeTrailingPunctuationFromURLs: true,
-         literalMidWordUnderscores: true
-      });
 
    $.getScript('https://public-sites--signalfx-com.s3.us-east-1.amazonaws.com/cdn/integrations-docs/integrations-docs.js', function () {
       $('.metrics-table').each(function () {
@@ -384,7 +614,7 @@ $(document).ready(function () {
          }
 
          $('.metrics-component').each(function () {
-
+            $(this).addClass('dynamic-yaml');
             let url = $(this).attr('url');
             console.log(url);
             let metricsYamlObject = $(this);
@@ -419,7 +649,7 @@ $(document).ready(function () {
          });
 
          $('.metrics-standard').each(function () {
-
+            $(this).addClass('dynamic-yaml');
             let url = $(this).attr('url');
             let metricsYamlObject = $(this);
 
@@ -455,7 +685,7 @@ $(document).ready(function () {
          });
 
          $('.metrics-yaml').each(function () {
-
+            $(this).addClass('dynamic-yaml');
             let url = $(this).attr('url');
             let metricsYamlObject = $(this);
             let category = $(this).attr('category');

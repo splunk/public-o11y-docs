@@ -20,6 +20,7 @@ Collector components: Receivers
     filelog-receiver   
     fluentd-receiver
     host-metrics-receiver
+    http-check-receiver
     jaeger-receiver    
     jmx-receiver
     journald-receiver
@@ -31,6 +32,7 @@ Collector components: Receivers
     kubernetes-objects-receiver  
     mongodb-receiver
     mongodb-atlas-receiver
+    mssql-server-receiver
     mysql-receiver
     oracledb-receiver
     otlp-receiver                

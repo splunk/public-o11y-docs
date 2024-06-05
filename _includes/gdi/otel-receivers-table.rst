@@ -6,6 +6,7 @@
 * :ref:`filelog-receiver`   
 * :ref:`fluentd-receiver`
 * :ref:`host-metrics-receiver`
+* :ref:`http-check-receiver`
 * :ref:`jaeger-receiver`    
 * :ref:`jmx-receiver`
 * :ref:`journald-receiver`
@@ -17,6 +18,7 @@
 * :ref:`kubernetes-objects-receiver`
 * :ref:`mongodb-receiver`
 * :ref:`mongodb-atlas-receiver`
+* :ref:`mssql-server-receiver` 
 * :ref:`mysql-receiver`
 * :ref:`oracledb-receiver`
 * :ref:`otlp-receiver`                

@@ -11,6 +11,8 @@ The :ref:`Splunk Observability Cloud platform <get-started-o11y>` provides you w
 
 With Splunk Observability Cloud's features, you'll be able to build charts and dashboards, and set up alerts and other system notification methods. This will help you better understand the performance of your systems and services, detect anomalies, or plan deployments and enhancements.
 
+Use Splunk Observability Cloud search to quickly locate the service, traceID, dashboard, chart, or metrics-based content you are interested in. For details, see :ref:`gsearch`.
+
 Quick overview of Splunk Observability Cloud data types
 ========================================================
 
@@ -32,7 +34,7 @@ Splunk Observability Cloud works with the following data types:
 Next steps: Tools and analytics
 ========================================================
 
-Observability Cloud provides a wide array of features and tools to help you manage, understand, and leverage your data. For more details, refer to :ref:`data-tools-landing`.
+Splunk Observability Cloud provides a wide array of features and tools to help you manage, understand, and leverage your data. For more details, see :ref:`data-tools-landing`.
 
 For advanced analytics, use SignalFlow to analyze incoming data and write custom chart and detector analytics. See more at :ref:`signalflow-analytics-intro`.
 

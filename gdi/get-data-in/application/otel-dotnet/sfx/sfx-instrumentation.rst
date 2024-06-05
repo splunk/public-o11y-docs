@@ -54,4 +54,4 @@ To instrument your .NET application, follow these steps:
 #. Instrument your .NET application. See :ref:`instrument-dotnet-applications`.
 #. Configure your instrumentation. See :ref:`advanced-dotnet-configuration`.
 
-You can also automatically instrument your .NET applications along with the Splunk Distribution of OpenTelemetry Collector installation. Automatic instrumentation removes the need to install and configure the .NET library separately. See :ref:`auto-instrumentation-dotnet` for the installation instructions.
+You can also automatically instrument your .NET applications along with the Splunk Distribution of OpenTelemetry Collector installation. Automatic instrumentation removes the need to install and configure the .NET library separately. See :ref:`windows-backend-auto-discovery` for the installation instructions.

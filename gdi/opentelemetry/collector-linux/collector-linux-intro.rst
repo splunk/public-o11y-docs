@@ -18,6 +18,7 @@ Get started with the Collector for Linux
    linux-config.rst
    linux-upgrade.rst   
    linux-uninstall.rst
+   collector-configuration-tutorial/about-collector-config-tutorial.rst
 
 To install and configure the Splunk Distribution of the OpenTelemetry Collector for Linux, follow these docs:
 
@@ -37,3 +38,6 @@ To upgrade or uninstall, see:
 
 .. note:: If you have any installation or configuration issues, refer to :ref:`otel-troubleshooting`.
 
+For a walkthrough of common tasks related to the OpenTelemetry Collector for Kubernetes, see:
+
+* :ref:`about-collector-configuration-tutorial`

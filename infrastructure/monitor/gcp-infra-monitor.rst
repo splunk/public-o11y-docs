@@ -75,7 +75,7 @@ Follow these steps to analyze problems with GCP services from the Infrastructure
       - ``Deviation from Mean``: Instances appear as red that exceed the mean value of the metric by at least three standard deviations. Use this setting to find the most extreme outliers.
       - ``Deviation from Median``: Instances appear as red that exceed the median absolute deviation value by at least three absolute deviations. This setting does not weigh extreme outliers as heavily as the standard deviation.
 
-  7. Select a specific instance you want to investigate further to view all the metadata and key metrics for the instance. For every instance, Observability Cloud provides a default dashboard. Analyze all the available metadata about the cloud service the instance is running in, the instance itself, and any custom tags associated with the instance. The default dashboard provides metric time series (MTS) for key metrics.
+  7. Select a specific instance you want to investigate further to view all the metadata and key metrics for the instance. For every instance, Splunk Observability Cloud provides a default dashboard. Analyze all the available metadata about the cloud service the instance is running in, the instance itself, and any custom tags associated with the instance. The default dashboard provides metric time series (MTS) for key metrics.
 
 .. _monitor-gcp-sources:
 
@@ -117,7 +117,7 @@ To find default dashboards for GCP services, select :strong:`Navigation menu > D
 Explore built-in content
 ------------------------------
 
-Observability Cloud collects data from many cloud services: 
+Splunk Observability Cloud collects data from many cloud services: 
 
 * To see all of the navigators provided for data collected in your organization, go to the Infrastructure page. 
 * To see all the pre-built dashboards for data collected in your organization, select :strong:`Dashboards > Built-in`.

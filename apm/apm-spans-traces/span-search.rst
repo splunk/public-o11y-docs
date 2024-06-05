@@ -43,6 +43,20 @@ Use the 3-dot menu next to each span to expand and collapse spans as needed. You
   :width: 95%
   :alt: 3-dot menu with options to collapse spans at a specific depth or the service and operation level
 
+Identify repeated spans
+==========================
+
+When a trace contains multiple repeated spans, the spans are collapsed into 1 row and a multiplier is displayed next to the row to reflect the number of repeated spans. Select the multiplier (x3, x7, and so on) to expand the row to view the individual spans and durations. The span summary displays the total span count and the repeated tags associated with the repeated spans.
+
+.. image:: /_images/apm/spans-traces/span-search-repeated-spans.png
+  :width: 95%
+  :alt: Repeated spans in trace waterfall view
+
+Identify the services that contribute spans to a trace
+=======================================================
+
+The colors of spans in the waterfall help differentiate the services contributing spans to a trace. If every span in the trace is from the same service, all spans appear in the same color. If there are 4 different services involved, the spans are in 4 different colors, to differentiate the service they're from.
+
 View connected spans and traces using span links
 =======================================================
 
@@ -82,12 +96,3 @@ Continue troubleshooting in Tag Spotlight
 =============================================
 
 Expand a span of interest in the waterfall chart and select the spotlight icon that appears beside an indexed tag to navigate to Tag Spotlight. Tag Spotlight can help you isolate specific indexed span tags associated with trends in request rate, error rate, or latency and get to the bottom of what's causing problems. See :ref:`apm-tag-spotlight` to learn more about using Tag Spotlight. 
-
-Trace waterfall reference
-==========================
-
-When viewing spans in the trace waterfall, note the following:
-
-* When a trace contains multiple repeated spans, the spans are typically collapsed into 1 row. Open the row to see the repeated span's tags and select the number (x3, x7, and so on) to expand the row and view the individual spans and durations.
-* The colors of spans in the waterfall help differentiate the services contributing spans to a trace. If every span in the trace is from the same service, all spans appear in the same color. If there are 4 different services involved, the spans are in 4 different colors, indicating the service they're from.
-

@@ -5,14 +5,14 @@ Configure SSO integrations for Splunk Observability Cloud
 *********************************************************************
 
 .. meta::
-   :description: Configure the capability for your users to log in using various SSO providers. Login service integration supports both Identity Provider-initiated SSO and Observability Cloud-initiated SSO. The latter lets your users log in to Observability Cloud using your organization's custom URL.
+   :description: Configure the capability for your users to log in using various SSO providers. Login service integration supports both Identity Provider-initiated SSO and Splunk Observability Cloud-initiated SSO. The latter lets your users log in to Splunk Observability Cloud using your organization's custom URL.
 
 
 
 Splunk Observability Cloud provides SSO login service integrations that let your users log in using a third-party
-identity provider (IdP) that uses SAML SSO. Observability Cloud supports SSO initiated by the IdP.
+identity provider (IdP) that uses SAML SSO. Splunk Observability Cloud supports SSO initiated by the IdP.
 
-Splunk Observability Cloud also supports SSO initiated by Observability Cloud, and this option lets your users log in to Infrastructure Monitoring using a custom URL you specify.
+Splunk Observability Cloud also supports SSO initiated by Splunk Observability Cloud, and this option lets your users log in to Infrastructure Monitoring using a custom URL you specify.
 
 Splunk Observability Cloud supports the following SSO integrations:
 
@@ -35,15 +35,15 @@ Splunk Observability Cloud supports the following SSO integrations:
 .. raw:: html
 
   <embed>
-    <h2>Provide a custom URL for accessing Observability Cloud</h2>
+    <h2>Provide a custom URL for accessing Splunk Observability Cloud</h2>
   </embed>
 
 
-A custom URL is required to allow users to log in to Observability Cloud from your organization's login page. If no custom URL is provided, users can still log in through the identity provider to access Observability Cloud.
+A custom URL is required to allow users to log in to Splunk Observability Cloud from your organization's login page. If no custom URL is provided, users can still log in through the identity provider to access Splunk Observability Cloud.
 
 When you configure a login service integration and select :guilabel:`Show on login page`, the login details for the service appear on your organization's login page. You can have multiple SSO logins.
 
-You can let users log in to Observability Cloud using a custom URL that you've selected, such as `your_org.signalfx.com`. The URL must be a subdomain of signalfx.com. To utilize a custom URL, contact :ref:`support` and provide the following:
+You can let users log in to Splunk Observability Cloud using a custom URL that you've selected, such as `your_org.signalfx.com`. The URL must be a subdomain of signalfx.com. To utilize a custom URL, contact :ref:`support` and provide the following:
 
 - The subdomain you want to use.
 - The organization for which you want to use the custom URL.
@@ -70,14 +70,14 @@ for an Okta login service integration.
     <h2>Integrate an identity provider with multiple organizations</h2>
   </embed>
 
-When you integrate a login service with Observability Cloud, you need to
+When you integrate a login service with Splunk Observability Cloud, you need to
 provide information about the integration to the login service. Infrastructure
 Monitoring gives you an entity identifier (entity ID) that you provide when you
 configure the login service itself. The service uses the entity
-ID and other information to connect with Observability Cloud.
+ID and other information to connect with Splunk Observability Cloud.
 
 For multiple organizations, the login service needs an entity ID and other information
-for each organization. Observability Cloud can provide you with
+for each organization. Splunk Observability Cloud can provide you with
 an integration-specific entity ID for the integration in each organization.
 
 When you configure the login service, you provide the entity ID along with other information
@@ -102,8 +102,8 @@ To get an integration-specific entity ID for an integration, do the following wh
 
 #. Log in to Splunk Observability Cloud.
 #. In the left navigation menu, select :menuselection:`Data Management`.
-#. Select :guilabel:`Add Integration`.
+#. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 #. In the integration filter menu, select :guilabel:`All`.
 #. In the :guilabel:`Search` field, search for the login service, and select it.
-#. Select the :guilabel:`Integration-specific Entity ID` option. Next to this option, the entity ID displays in the form of a URI. Copy this URI and provide it when you configure the login service to communicate with Observability Cloud.
+#. Select the :guilabel:`Integration-specific Entity ID` option. Next to this option, the entity ID displays in the form of a URI. Copy this URI and provide it when you configure the login service to communicate with Splunk Observability Cloud.
 

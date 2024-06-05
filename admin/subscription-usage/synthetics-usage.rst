@@ -7,6 +7,7 @@ Synthetic Monitoring subscription usage
 .. meta::
    :description: Synthetic Monitoring subscription usage.
 
+.. note:: The following information describes aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team.
 
 Splunk Synthetic Monitoring offers metrics you can use to track your subscription usage. You can use these metrics to create charts, dashboards, and set alerts. 
 

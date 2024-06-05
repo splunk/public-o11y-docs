@@ -38,4 +38,3 @@ To upgrade or uninstall, see:
 
 .. note:: If you have any installation or configuration issues, refer to :ref:`otel-troubleshooting`.
 
-

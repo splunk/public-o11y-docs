@@ -10,7 +10,7 @@ Metrics, data points, and metric time series in Splunk Observability Cloud
   
 In Splunk Observability Cloud, metric data consists of a numerical measurement called a metric, the metric type, and one or more dimensions. Each piece of data in this form is a :ref:`data point <data-points>`. For example, a data point can be the CPU utilization of host ``server1`` with metric type ``gauge``, metric value ``0.7``, dimensions ``"hostname":"server1"`` and ``"host_location":"Tokyo"``, and the timestamp ``1557225030000``.
 
-A :ref:`metric time series (MTS) <metric-time-series>` contains all the data points that have the same metric name, metric type, and set of dimensions. Observability Cloud automatically creates MTS from incoming data points. For example, the following data points for the ``cpu.utilization`` metric with the same ``"hostname":"server1"`` and ``"location":"Tokyo"`` dimensions, but with different values and timestamps, make up a single MTS.
+A :ref:`metric time series (MTS) <metric-time-series>` contains all the data points that have the same metric name, metric type, and set of dimensions. Splunk Observability Cloud automatically creates MTS from incoming data points. For example, the following data points for the ``cpu.utilization`` metric with the same ``"hostname":"server1"`` and ``"location":"Tokyo"`` dimensions, but with different values and timestamps, make up a single MTS.
 
 .. mermaid:: 
 
@@ -133,6 +133,9 @@ There are three types of metrics: gauge, cumulative counter, and counter. See mo
   * - Counter
     - Number of new occurrences or items since the last measurement
     - The number of packets that fail to reach their destinations over each 24-hour period
+  * - Histograms
+    - Distribution of measurements across time. Splunk Observability Cloud supports explicit bucket histograms.
+    - Response time (performance) or successful screen loads (availability)
 
 Metric category
 ----------------------
@@ -186,7 +189,7 @@ A data point consists of the following components:
     - One of three metric types: ``counter``, ``cumulative counter``, or ``gauge``. 
 
   * - Metric name
-    - | A metric name identifies the values that you send into Infrastructure Monitoring. For example, the AWS metric ``4xxErrorRate`` represents the percentage of all HTTP requests for which the HTTP status code is 4xx. The data source often determines the metric name, but application receivers and other integrations might map the data source metric name to another name used by Observability Cloud.
+    - | A metric name identifies the values that you send into Infrastructure Monitoring. For example, the AWS metric ``4xxErrorRate`` represents the percentage of all HTTP requests for which the HTTP status code is 4xx. The data source often determines the metric name, but application receivers and other integrations might map the data source metric name to another name used by Splunk Observability Cloud.
       |
       | To learn more about metrics naming constraints, see :ref:`metric-dimension-names`.
     - ``memory.free``, ``CPUUtilization``, ``page_visits``
@@ -204,7 +207,7 @@ A data point consists of the following components:
     - ``"hostname":"server1"``, ``"host_location":"Tokyo"``
     
   * - Timestamp (Optional)
-    - Either the time that data is sent by the software, or the time at which the data arrives in Observability Cloud. The timestamp is in \*nix time in milliseconds.
+    - Either the time that data is sent by the software, or the time at which the data arrives in Splunk Observability Cloud. The timestamp is in \*nix time in milliseconds.
     - 1557225030000
 
 .. _metric-time-series:

@@ -168,6 +168,11 @@ The Prometheus receiver converts Prometheus metrics to OpenTelemetry metrics fol
    * - Summary
      - Summary (percentiles)
 
+Histograms support
+-----------------------
+
+For more information on histogram support, see :ref:`enable-histograms-export`.
+
 Troubleshooting
 ======================
 

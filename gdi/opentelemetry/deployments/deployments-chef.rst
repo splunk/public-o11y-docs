@@ -132,10 +132,10 @@ For Linux, the cookbook accepts the attributes described in the following table:
 
 .. _chef-zero-config:
 
-Configure auto instrumentation for Java and Node.js (Linux only)
-------------------------------------------------------------------
+Configure automatic discovery for back-end applications (Linux only)
+--------------------------------------------------------------------
 
-You can automatically instrument your Java and Node.js applications along with the Collector installation. Auto instrumentation removes the need to install and configure OpenTelemetry agents separately. See :ref:`zero-config` for more information.  The applications to be instrumented on the node need to be started or restarted separately after installation or any configuration changes for auto instrumentation to take effect.
+You can automatically instrument your back-end applications applications along with the Collector installation using automatic discovery. Automatic discovery removes the need to install and configure OpenTelemetry agents separately. See :ref:`discovery_mode` for more information.  The applications to be instrumented on the node need to be started or restarted separately after installation or any configuration changes for automatic discovery to take effect.
 
 The following table shows the variables that can be configured with this Chef cookbook:
 
@@ -147,16 +147,19 @@ The following table shows the variables that can be configured with this Chef co
      - Description
      - Default value
    * - ``with_auto_instrumentation``
-     - Whether to install or manage :ref:`auto-instrumentation-nodejs` and :ref:`auto-instrumentation-java`. When set to ``true``, the ``splunk-otel-auto-instrumentation`` deb/rpm package is downloaded and installed from the Collector repository.
+     - Whether to install or manage automatic discovery for back-end applications. When set to ``true``, the ``splunk-otel-auto-instrumentation`` deb/rpm package is downloaded and installed from the Collector repository. To learn more, see :ref:`linux-backend-auto-discovery`.
      - ``false``
+   * - ``with_auto_instrumentation_sdks``
+     - The automatic discovery SDKs to install and activate. Note: ``dotnet`` is currently only supported for x86_64/amd64.
+     - ``%w(java nodejs dotnet)``
    * - ``auto_instrumentation_version``
-     - Version of the ``splunk-otel-auto-instrumentation`` package to install, for example, ``0.50.0``. The minimum supported version is ``0.48`` for Java and ``0.87.0`` for Node.js.
+     - Version of the ``splunk-otel-auto-instrumentation`` package to install, for example, ``0.50.0``. The minimum supported version is ``0.48`` for Java, ``0.87.0`` for Node.js, and ``0.99.0`` for .NET.
      - ``latest``
    * - ``auto_instrumentation_systemd``
-     - Whether to activate and configure the auto instrumentation for ``systemd`` services only. If set to ``true``, the auto instrumentation automatically environment variables are added to ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
+     - Whether to activate and configure the automatic discovery for ``systemd`` services only. If set to ``true``, the automatic discovery environment variables are added to ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf``.
      - ``false``
    * - ``auto_instrumentation_ld_so_preload``
-     - By default, the ``/etc/ld.so.preload`` file on the node is configured for the ``/usr/lib/splunk-instrumentation/libsplunk.so`` shared object library provided by the ``splunk-otel-auto-instrumentation`` package and is required for system-wide auto instrumentation. Configure this variable to include additional library paths, for example, ``/path/to/my.library.so``.
+     - By default, the ``/etc/ld.so.preload`` file on the node is configured for the ``/usr/lib/splunk-instrumentation/libsplunk.so`` shared object library provided by the ``splunk-otel-auto-instrumentation`` package and is required for system-wide automatic discovery. Configure this variable to include additional library paths, for example, ``/path/to/my.library.so``.
      - ``''``
    * - ``auto_instrumentation_resource_attributes``
      - Configure the OpenTelemetry instrumentation resource attributes, for example, ``deployment.environment=prd,my.key=my.value`` (comma-separated string of ``key=value`` pairs). The specified resource attributes are added to the ``/etc/splunk/zeroconfig/node.conf`` configuration file on the node, or ``/usr/lib/systemd/system.conf.d/00-splunk-otel-auto-instrumentation.conf`` if using the ``systemd`` installation method.
@@ -176,9 +179,6 @@ The following table shows the variables that can be configured with this Chef co
    * - ``auto_instrumentation_otlp_endpoint``
      - Sets the OTLP gRPC endpoint that receives traces. Only applicable for OpenTelemetry Collector versions ``0.87.0`` and higher.
      - ``http://127.0.0.1:4317``
-   * - ``with_auto_instrumentation_sdks``
-     - The auto instrumentation language SDKs to install and activate.
-     - ``%w(java nodejs)``
    * - ``auto_instrumentation_java_agent_path``
      - Path to the Splunk OpenTelemetry Java agent. The default path is provided by the ``splunk-otel-auto-instrumentation`` package. If the path is changed from the default value, the path should be an existing file on the node.
      - ``/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar``
@@ -186,10 +186,10 @@ The following table shows the variables that can be configured with this Chef co
      - The path to the pre-installed ``npm`` command, e.g. ``/my/custom/path/to/npm``.
      - ``npm``
 
-Configure auto instrumentation for SignalFx .NET (Windows only)
+Configure automatic discovery for SignalFx .NET (Windows only)
 =================================================================
 
-You can automatically instrument your .NET applications along with the Collector installation. Auto instrumentation removes the need to install and configure the SignalFx .NET agent separately. See :ref:`zero-config` for more information. 
+You can automatically instrument your .NET applications along with the Collector installation using automatic discovery. Automatic discovery removes the need to install and configure the SignalFx .NET agent separately. See :ref:`discovery_mode` for more information. 
 
 The cookbook accepts the attributes described in the following table:
 
@@ -201,7 +201,7 @@ The cookbook accepts the attributes described in the following table:
      - Description
      - Default value
    * - ``with_signalfx_dotnet_instrumentation``
-     - Whether to install or manage :ref:`auto-instrumentation-dotnet`. When set to ``true``, the ``signalfx-dotnet-tracing`` MSI package will be downloaded and installed, and the Windows registry will be updated based on other configuration options.
+     - Whether to install or manage automatic discovery for .NET. When set to ``true``, the ``signalfx-dotnet-tracing`` MSI package will be downloaded and installed, and the Windows registry will be updated based on other configuration options. To learn more, see :ref:`windows-backend-auto-discovery`
      - ``false``
    * - ``signalfx_dotnet_auto_instrumentation_version``
      - Version of the ``signalfx-dotnet-tracing`` MSI package to download and install.
@@ -213,7 +213,7 @@ The cookbook accepts the attributes described in the following table:
      - By default, the ``iisreset.exe`` command will be executed after installation/configuration in order for any changes to take effect for IIS applications. Set this option to ``false`` to skip this step if IIS is managed separately or is not applicable.
      -  ``false``
    * - ``signalfx_dotnet_auto_instrumentation_system_wide``
-     - Whether to configure auto instrumentation for all .NET applications on the node. When set to ``true``, all attributes and environment variables are added to the ``HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment`` registry key.
+     - Whether to configure automatic discovery for all .NET applications on the node. When set to ``true``, all attributes and environment variables are added to the ``HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment`` registry key.
      - ``false``
    * - ``signalfx_dotnet_auto_instrumentation_environment``
      - Sets the deployment environment variable that is reported to Splunk APM, for example ``production``. The value is assigned to the ``SIGNALFX_ENV`` environment variable in the Windows registry.

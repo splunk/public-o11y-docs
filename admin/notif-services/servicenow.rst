@@ -93,7 +93,7 @@ To create a ServiceNow integration in Splunk Observability Cloud:
 
    #. In the left navigation menu, select :menuselection:`Data Management`.
 
-   #. Select :guilabel:`Add Integration`.
+   #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 
    #. In the integration filter menu, select :guilabel:`All`.
 
@@ -141,7 +141,7 @@ The following table shows the Splunk Observability Cloud severity for :strong:`I
 .. list-table::
    :header-rows: 1
 
-   * - :strong:`Observability Cloud severity`
+   * - :strong:`Splunk Observability Cloud severity`
      - :strong:`ServiceNow Impact and Urgency fields`
 
    * - Critical
@@ -161,7 +161,7 @@ The following table shows the Splunk Observability Cloud severity for :strong:`E
 .. list-table::
    :header-rows: 1
 
-   * - :strong:`Observability Cloud severity`
+   * - :strong:`Splunk Observability Cloud severity`
      - :strong:`ServiceNow Severity field`
 
    * - Clear

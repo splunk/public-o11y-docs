@@ -8,7 +8,7 @@ Metric categories
 .. meta::
   :description: Learn about metric categories in Splunk Observability Cloud.
 
-These are the available categories for metrics in Observability Cloud:
+These are the available categories for metrics in Splunk Observability Cloud:
 
 .. include:: /_includes/metric-categories.rst
 
@@ -17,7 +17,7 @@ Identify and track the category of a metric
 
 In :ref:`host-based plans <monitor-imm-billing-usage>`, the category of a metric might impact billing. 
 
-To keep track of the type of metrics you're ingesting, Observability Cloud provides you with different tools and reports:
+To keep track of the type of metrics you're ingesting, Splunk Observability Cloud provides you with different tools and reports:
 
 * :ref:`custom-metric-report`. It shows the information on MTS associated with data points sent from hosts or containers, as well as information related to custom, high-resolution, and bundled MTS, for a specified date.
 * Metric Pipeline Management's :ref:`usage report <metrics-usage-report>`. It gives a detailed breakdown of your MTS creation and usage.

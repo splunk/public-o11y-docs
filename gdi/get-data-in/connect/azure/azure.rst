@@ -99,7 +99,9 @@ From Splunk Observability Cloud, connect to Azure using the :new-page:`Microsoft
 
 Optionally, you can navigate to the guided setup on your own:
 
-  #. In the navigation menu, select :menuselection:`Data Management > Add Integration` to open the :strong:`Integrate Your Data` page.
+  #. In the navigation menu, select :menuselection:`Data Management`. 
+  
+  #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 
   #. In the integration filter menu, go to :guilabel:`By Use Case`, and select the :guilabel:`Monitor Infrastructure` use case.
 
@@ -185,7 +187,7 @@ To take advantage of the full benefits of the Splunk Observability Cloud platfor
 
 To track the degree of OpenTelemetry enablement in your Azure integrations: 
 
-1. From Splunk Observability Cloud, go to :guilabel:`Data Management > Azure`.
+1. From Splunk Observability Cloud, go to :guilabel:`Data Management > Deployed integrations > Azure`.
 
 2. Select :guilabel:`OpenTelemetry Enabled` to see whether the OTel Collector is installed on each Azure VMs or AKS cluster. This helps you identify the instances that still need to be instrumented. 
 

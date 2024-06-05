@@ -19,7 +19,7 @@ To generate all the basic installation commands for your environment and applica
 
    #. In the navigation menu, select :menuselection:`Data Management`. 
 
-   #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+   #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 
    #. In the integration filter menu, select :guilabel:`By Product`.
 
@@ -83,10 +83,9 @@ Follow these steps to instrument your application using the Go instrumentation:
 
          $env:OTEL_RESOURCE_ATTRIBUTES="service.version=<version>,deployment.environment=<environment>"
 
-#. Add the instrumentation using the ``distro`` package:
+#. Add the instrumentation using the ``distro`` package. The following example shows how to instrument a basic function.
 
    .. code-block:: go
-      :emphasize-lines: 5,9,15
 
       package main
 

@@ -9,7 +9,7 @@ Instrument your .NET application for Splunk Observability Cloud (OpenTelemetry)
 
 The Splunk Distribution of OpenTelemetry .NET automatically instruments .NET applications, Windows services running .NET applications, and ASP.NET applications deployed on IIS.
 
-To get started, use the guided setup, follow the instructions manually, or auto-instrument your application. See :ref:`auto-instrumentation-dotnet` for more information.
+To get started, use the guided setup, follow the instructions manually, or automatically instrument your application. See :ref:`discovery_mode` for more information.
 
 Generate customized instructions using the guided setup
 ====================================================================
@@ -20,7 +20,7 @@ To generate all the basic installation commands for your environment and applica
 #. Open the :new-page:`.NET OpenTelemetry guided setup <https://login.signalfx.com/#/gdi/scripted/otel-dotnet-tracing/>`. Optionally, you can navigate to the guided setup on your own:
 
    #. In the navigation menu, select :menuselection:`Data Management`.
-   #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+   #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
    #. In the integration filter menu, select :guilabel:`By Product`.
    #. Select the :guilabel:`APM` product.
    #. Select the :guilabel:`.NET (OpenTelemetry)` tile to open the .NET OpenTelemetry guided setup.
