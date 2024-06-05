@@ -56,7 +56,7 @@ Monitoring MetricSets are metric time series (MTS) that power the real-time moni
 
 MMS are available for a specific endpoint or for the aggregate of all endpoints in a service.
 
-Endpoint-level MMS reflect the activity of a single endpoint in a service, while service-level MMS aggregate the activity of all of the endpoints in the service. MMS are limited to spans where the ``span.kind = SERVER`` or ``span.kind = CONSUMER``.
+Endpoint-level MMS reflect the activity of a single endpoint in a service, while service-level MMS aggregate the activity of all of the endpoints in the service. MMS are limited to spans where the ``span.kind`` has a value of ``SERVER`` or ``CONSUMER``.
 
 Spans might lack a ``kind`` value, or have a different ``kind`` value, in the following situations:
 
