@@ -27,7 +27,7 @@ How custom Monitoring MetricSets add value to your organization
 
 APM generates a collection of MMS by default; see :ref:`monitoring-metricsets`. You can create additional MMS with custom dimensions to filter and aggregate the default generated metrics by a specific indexed span tag or process such as ``version`` or ``cloud.provider``.
 
-You can create custom MMS at the service level and the endpoint (span) level. When you create a custom dimension for a service-level MMS, APM generates MMS that include the service-level metrics with your chosen indexed span tag or process as a custom dimension. If you add endpoint-level metrics as well, APM generates MMS that include span-level metrics, with your chosen indexed span tag or process as a custom dimension. 
+You can create custom MMS at the service level and the endpoint or span level. When you create a custom dimension for a service-level MMS, APM generates MMS that include the service-level metrics with your chosen indexed span tag or process as a custom dimension. If you add endpoint-level metrics as well, APM generates MMS that include span-level metrics, with your chosen indexed span tag or process as a custom dimension. 
 
 When you create an MMS with a custom dimension, you can use this custom dimension to create charts, dashboards, and alerts. See :ref:`charts-dashboards-alerts`. 
 
