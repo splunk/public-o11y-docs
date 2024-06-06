@@ -34,12 +34,25 @@ To connect Splunk Observability Cloud to AWS using AWS PrivateLink, you need the
 * An active AWS account
 * A basic understanding of VPC concepts and networking principles
 
+.. _aws-privatelink-endpoint-types:
+
+AWS PrivateLink types of endpoint
+==================================================
+
+You can use any of these endpoints with AWS PrivateLink:
+
+* Ingest endpoint. Use the Ingest endpoint to send data points directly from your applications to Splunk Observability Cloud. Data sent using the Ingest API is handled in the same manner as data gathered by Splunk Observability Cloud through other methods, such as integrations with :ref:`AWS cloud services <get-started-aws>`.
+
+* API endpoint. Use the API endpoint to allow applications to communicate with each other by sending and receiving data. These endpoints serve as the points of interaction with different components like charts, dashboards, dashboard groups... 
+
+* Stream endpoint. Use the Stream endpoint for continuous, real-time transmission of observability data such as logs, metrics, or traces. This endpoint is key for monitoring and analyzing system performance, identifying issues quickly, and maintaining overall system health.
+
 .. _aws-privatelink-regions-names:
 
 AWS PrivateLink availability and service name
 ==================================================
 
-The following tables show the AWS PrivateLink endpoint URLs and service names for each AWS region:
+See the following tables for the AWS PrivateLink endpoint URLs and service names for each AWS region.
 
 .. _aws-privatelink-endpoint-urls:
 
