@@ -346,12 +346,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: Administer Splunk Observability Cloud
    :maxdepth:   3
 
-   admin/admin
+   Admin onboarding guide TOGGLE <admin/admin-onboarding/admin-onboarding-guide>
 
 .. toctree::
    :maxdepth:   3
 
-   Admin onboarding guide TOGGLE <admin/admin-onboarding/admin-onboarding-guide>
+   admin/admin
 
 .. toctree::
    :maxdepth:   3

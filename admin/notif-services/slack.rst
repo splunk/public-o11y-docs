@@ -66,11 +66,19 @@ To add a Slack integration as a detector alert recipient in Splunk Observability
 
 #. Select :strong:`Slack` and then select the name of the Slack integration you want to use to send alert notifications. This is the integration name you created in :ref:`slack1`.
 
-#. Enter the name of the Slack channel you want to send the notifications to.
+#. * For public Slack channels, enter the name of the channel you want to send the notifications to.
+   
+   * For private Slack channels, you must invite the :strong:`SignalFx` app to your channel:
+
+     #. In Slack, navigate to the private channel you want to send notifications to.
+     #. In the message field, enter the ``/invite @SignalFx, <YOUR_ORG_REALM>`` command. For example, ``/invite @SignalFx, US1``.
+
+         .. note:: For US0 realm, the invitation command is ``/invite @SignalFx``.
+    
+     #. In the detector subscription configuration, enter the private channel name. Splunk Observability Cloud can't find and autocomplete private Slack channels, but you can still send notifications to them.
 
 #. Activate and save the detector.
 
 Splunk Observability Cloud sends an alert notification to the Slack channel when an alert is triggered by the detector and when the alert clears.
 
-.. note::
-   You can't add a private Slack channel as a detector alert recipient. 
+
