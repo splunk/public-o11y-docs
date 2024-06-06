@@ -129,6 +129,33 @@ Select :guilabel:`Configure service view` to modify the Log Observer Connect con
 
 The connection and indices you select are saved for all users in your organization for each unique service and environment combination.
 
+Metric reference
+===================
+
+The following metrics are used in the service view. 
+
+Runtime metrics
+-------------------
+
+Java
+
+* ``service``
+* ``deployment_environment``
+
+Node.js and .NET
+
+* ``service.name``
+* ``deployment.environment``
+
+Infrastructure metrics
+----------------------- 
+
+* ``sf_service``
+* ``sf_environment``
+
+
+
+
 
 
 
