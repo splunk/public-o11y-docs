@@ -73,7 +73,7 @@ The following infrastructure metrics are available:
 * Host disk usage
 * Host network usage
 * Pod CPU usage
-* Pod memory utilization
+* Pod memory usage
 * Pod disk usage
 * Pod network utilization
 
@@ -265,9 +265,6 @@ Infrastructure metrics
    * - :strong:`Chart`
      - :strong:`Metrics`
 
-   * - Host network usage chart
-     - ``network.total``
-
    * - Host CPU usage
      - ``cpu.utilization``
 
@@ -276,6 +273,9 @@ Infrastructure metrics
 
    * - Host disk usage
      - ``disk.summary_utilization``
+
+   * - Host network usage
+     - ``network.total``
 
    * - Pod CPU usage
      - * ``container_cpu_utilization``
@@ -288,14 +288,16 @@ Infrastructure metrics
        * ``container_memory_usage_bytes``
        * ``container_spec_memory_limit_bytes``
 
+   * - Pod disk usage
+     - * ``k8s.container.ready``
+       * ``container_fs_usage_bytes``
+
    * - Pod network utilization
      - * ``k8s.container.ready``
        * ``pod_network_receive_bytes_total``
        * ``pod_network_transmit_bytes_total``
 
-   * - Pod disk usage
-     - * ``k8s.container.ready``
-       * ``container_fs_usage_bytes``
+
 
 
 
