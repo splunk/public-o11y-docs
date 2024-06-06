@@ -11,6 +11,8 @@ The Probabilistic sampler processor supports several modes of sampling for spans
 
 For trace spans, the processor supports probabilistic sampling based on a configured sampling percentage applied to the TraceID. In addition, you can use the ``sampling.priority`` setting to force the sampler to apply either 0% or 100% sampling.
 
+.. note:: For whole trace sampling, see :ref:`tail-sampling-processor`.
+
 For log records, you can configure the processor to use the embedded TraceID and follow the same logic applied to spans. When TraceID is not defined, you can configure the sampler to apply hashing to a selected log record attribute. It also supports sampling priority.
 
 Get started
@@ -63,7 +65,7 @@ To complete the configuration, include the processor in the ``traces`` or ``logs
 
   service:
     pipelines:
-      traces:
+      logs:
         processors: [probabilistic_sampler]
 
 .. _probabilistic-sampler-config-options:
@@ -81,7 +83,7 @@ The processor has the following configuration options:
 
 Logs-specific configuration:
 
-* ``attribute_source``. Optional, ``"traceID"``by default. String. Defines where to look for the attribute in ``from_attribute``. The allowed values are ``traceID`` or ``record``.
+* ``attribute_source``. Optional, ``"traceID" ``by default. String. Defines where to look for the attribute in ``from_attribute``. The allowed values are ``traceID`` or ``record``.
 
 * ``from_attribute``. Optional, void by default. String. The name of a log record attribute used for sampling purposes, such as a unique log record ID. The value of the attribute is only used if the trace ID is absent or if ``attribute_source`` is set to record.
 
@@ -97,20 +99,22 @@ A consistent probability sampler is a sampler that supports independent sampling
 
 Consistent probability sampling requires that for any span in a given trace, if a sampler with lesser sampling probability selects the span for sampling, then the span will also be selected by a sampler configured with greater sampling probability.
 
-Completeness property
+Achieve complete sampling
 ----------------------------------
 
-A trace is complete when all of its members are sampled. A "sub-trace" is complete when all of its descendents are sampled.
+Consider these guidelines when deploying multiple collectors with different sampling probabilities in a system. For example, a collector serving frontend servers can be configured with smaller sampling probability than a collector serving backend servers, without breaking sub-trace completeness.
 
-Ordinarily, Trace and Logging SDKs configure parent-based samplers which decide to sample based on the Context, because it leads to completeness.
+A trace is complete when all of its members are sampled. A "sub-trace" is complete when all of its descendents are sampled. Ordinarily, trace and logging SDKs configure parent-based samplers, which sample based on the context.
 
-When non-root spans or logs make independent sampling decisions instead of using the parent-based approach (for example, using the ``TraceIDRatioBased`` sampler for a non-root span), incompleteness may result, and when spans and log records are independently sampled in a processor, as by this component, the same potential for completeness arises. The consistency guarantee helps minimimize this issue.
+Results might be incomplete if:
 
-Consistent probability samplers can be safely used with a mixture of probabilities and preserve sub-trace completeness, provided that child spans and log records are sampled with probability greater than or equal to the parent context.
+* Non-root spans or logs make independent sampling decisions instead of using the parent-based approach, for example by using the ``TraceIDRatioBased`` sampler for a non-root span.
 
-Using 1%, 10% and 50% probabilities for example, in a consistent probability scheme the 50% sampler must sample when the 10% sampler does, and the 10% sampler must sample when the 1% sampler does. A three-tier system could be configured with 1% sampling in the first tier, 10% sampling in the second tier, and 50% sampling in the bottom tier. In this configuration, 1% of traces will be complete, 10% of traces will be sub-trace complete at the second tier, and 50% of traces will be sub-trace complete at the third tier thanks to the consistency property.
+* A processor like this one samples spans and log records independently. 
 
-.. note:: Consider these guidelines when deploying multiple collectors with different sampling probabilities in a system. For example, a collector serving frontend servers can be configured with smaller sampling probability than a collector serving backend servers, without breaking sub-trace completeness.
+To minimize this issue, be consistent. To use 1%, 10% and 50% probabilities in a consistent probability scheme, the 50% sampler must sample when the 10% sampler does, and the 10% sampler must sample when the 1% sampler does. You can configure a three-tier system with 1% sampling in the first tier, 10% sampling in the second tier, and 50% sampling in the bottom tier. In this configuration, 1% of traces will be complete, 10% of traces will be sub-trace complete at the second tier, and 50% of traces will be sub-trace complete at the third tier thanks to the consistency property.
+
+.. caution:: To use consistent probability samplers safely with a mixture of probabilities and preserve sub-trace completeness, child spans and log records must be sampled with probability greater than or equal to the parent context.
 
 Set sampling randomness
 ----------------------------------
@@ -136,7 +140,7 @@ The sampling priority mechanism is an override that takes precedence over the pr
 
 In ``traces`` pipelines, when the priority attribute is ``0``, the configured probability is modified to 0% and the item will not pass the sampler. When the priority attribute is non-zero the configured probability is set to 100%. The sampling priority attribute is not configurable and is called ``sampling.priority``.
 
-In ``logs`` pipelines, when the priority attribute is ``0``, the configured probability is modified to 0%, and the item will not pass the sampler. Otherwise, the logs sampling priority attribute is interpreted as a percentage, with values >= 100 equal to 100% sampling. Use ``sampling_priority`` to configure the logs sampling priority attribute.
+In ``logs`` pipelines, when the priority attribute is ``0``, the configured probability is modified to 0%, and the item will not pass the sampler. Otherwise, the logs sampling priority attribute is interpreted as a percentage. If equal or greater than ``100``, it samples all log records. Use ``sampling_priority`` to configure the logs sampling priority attribute.
 
 Sampling algorithm
 ----------------------------------
@@ -144,7 +148,7 @@ Sampling algorithm
 Hash seed
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The hash seed method uses the FNV hash function applied to either a Trace ID (for spans and log records), or to the value of a specified attribute (only for logs). The hashed value, presumed to be random, is compared against a threshold value that corresponds with the sampling percentage.
+The hash seed method uses the FNV hash function applied to either a Trace ID for spans and log records, or to the value of a specified attribute, only for logs. The hashed value, presumed to be random, is compared against a threshold value that corresponds with the sampling percentage.
 
 To enable this mode, either: 
 
