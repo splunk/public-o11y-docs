@@ -13,7 +13,7 @@ For trace spans, the processor supports probabilistic sampling based on a config
 
 .. note:: For whole trace sampling, see :ref:`tail-sampling-processor`.
 
-For log records, you can configure the processor to use the embedded TraceID and follow the same logic applied to spans. When TraceID is not defined, you can configure the sampler to apply hashing to a selected log record attribute. It also supports sampling priority.
+For log records, you can configure the processor to use the embedded TraceID and follow the same logic applied to spans, or you can configure the sampler to apply hashing to a selected log record attribute. It also supports sampling priority.
 
 Get started
 ======================
