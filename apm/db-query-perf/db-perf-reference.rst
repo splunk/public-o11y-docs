@@ -14,9 +14,9 @@ Supported databases
 
 Database Query Performance provides insights for the following database software:
 
-- Aurora
-- AWS RDS
-- AWS Redshift
+- Amazon Aurora
+- Amazon Relational Database Service (RDS)
+- Amazon Redshift
 - Db2
 - MariaDB
 - Microsoft SQL Server
