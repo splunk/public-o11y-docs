@@ -39,13 +39,13 @@ To connect Splunk Observability Cloud to AWS using AWS PrivateLink, you need the
 AWS PrivateLink types of endpoint
 ==================================================
 
-You can use one of these endpoints with AWS PrivateLink:
+You can use any of these endpoints with AWS PrivateLink:
 
-* Ingest endpoint. Use this endpoint to send data points directly from your applications to Splunk Observability Cloud. Data sent using the Ingest API is handled in the same manner as data gathered by Splunk Observability Cloud through other methods, such as integrations with :ref:`AWS cloud services <get-started-aws>`.
+* Ingest endpoint. Use the Ingest endpoint to send data points directly from your applications to Splunk Observability Cloud. Data sent using the Ingest API is handled in the same manner as data gathered by Splunk Observability Cloud through other methods, such as integrations with :ref:`AWS cloud services <get-started-aws>`.
 
-* API endpoint. API endpoints allow applications to communicate with each other by sending and receiving data. These endpoints serve as the points of interaction with different components like charts, dashboards, dashboard groups... 
+* API endpoint. Use the API endpoint to allow applications to communicate with each other by sending and receiving data. These endpoints serve as the points of interaction with different components like charts, dashboards, dashboard groups... 
 
-* Stream endpoint. The Stream endpoint is an API endpoint that allows for the continuous, real-time transmission of observability data such as logs, metrics, or traces. This endpoint is key for monitoring and analyzing system performance, identifying issues quickly, and maintaining overall system health.
+* Stream endpoint. Use the Stream endpoint for continuous, real-time transmission of observability data such as logs, metrics, or traces. This endpoint is key for monitoring and analyzing system performance, identifying issues quickly, and maintaining overall system health.
 
 .. _aws-privatelink-regions-names:
 
