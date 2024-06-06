@@ -162,7 +162,7 @@ This mode uses 14 bits of sampling precision.
 Error handling
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This processor considers it an error when the arriving data has no randomess. This includes conditions where the TraceID field is invalid, such as 16 zero bytes, and where the log record attribute source has zero bytes of information.
+This processor considers it an error when the arriving data has no randomness. This includes conditions where the TraceID field is invalid, such as 16 zero bytes, and where the log record ``attribute_source`` has zero bytes of information.
 
 By default, if errors are detected the data is refused. To change this behavior and allow erroneous data to pass through the processor, set the ``fail_closed`` property to ``false``.
 
