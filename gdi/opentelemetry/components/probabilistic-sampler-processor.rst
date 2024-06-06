@@ -152,7 +152,7 @@ The hash seed method uses the FNV hash function applied to either a Trace ID for
 
 To enable this mode, either: 
 
-* Set ``hash_seed`` to a value different to zero. 
+* Set ``hash_seed`` to a value different than zero.
 * Sample log records with ``attribute_source`` set to ``record``.
 
 In order for hashing to be consistent, all collectors for a given tier (for example, behind the same load balancer) must have the same ``hash_seed``. You can also leverage a different ``hash_seed`` at different collector tiers to support additional sampling requirements.
