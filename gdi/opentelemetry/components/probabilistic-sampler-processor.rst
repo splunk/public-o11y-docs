@@ -9,9 +9,9 @@ Probabilistic sampler processor
 
 The Probabilistic sampler processor supports several modes of sampling for spans and log records. Sampling is performed on a per-request basis, considering individual items statelessly. The supported pipeline types are ``traces`` and ``logs``. See :ref:`otel-data-processing` for more information.
 
-For trace spans, the processor supports probabilistic sampling based on a configured sampling percentage applied to the TraceID. In addition, the sampler recognizes a ``sampling.priority`` annotation, which can force the sampler to apply either 0% or 100% sampling.
+For trace spans, the processor supports probabilistic sampling based on a configured sampling percentage applied to the TraceID. In addition, you can use the ``sampling.priority`` setting to force the sampler to apply either 0% or 100% sampling.
 
-For log records, the processor can be configured to use the embedded TraceID and follow the same logic applied to spans. When the TraceID is not defined, the sampler can be configured to apply hashing to a selected log record attribute. It also supports sampling priority.
+For log records, you can configure the processor to use the embedded TraceID and follow the same logic applied to spans. When TraceID is not defined, you can configure the sampler to apply hashing to a selected log record attribute. It also supports sampling priority.
 
 Get started
 ======================
@@ -40,17 +40,22 @@ Sample 15% of log records according to trace ID using the OpenTelemetry specific
 
 Sample logs according to their logID attribute:
 
-processors:
-  probabilistic_sampler:
-    sampling_percentage: 15
-    attribute_source: record # possible values: one of record or traceID
-    from_attribute: logID # value is required if the source is not traceID
+.. code-block:: yaml
+
+  processors:
+    probabilistic_sampler:
+      sampling_percentage: 15
+      attribute_source: record # possible values: one of record or traceID
+      from_attribute: logID # value is required if the source is not traceID
+
 Give sampling priority to log records according to the attribute named priority:
 
-processors:
-  probabilistic_sampler:
-    sampling_percentage: 15
-    sampling_priority: priority      
+.. code-block:: yaml
+
+  processors:
+    probabilistic_sampler:
+      sampling_percentage: 15
+      sampling_priority: priority      
 
 To complete the configuration, include the processor in the ``traces`` or ``logs`` pipeline of the ``service`` section of your configuration file. For example:
 
@@ -61,12 +66,36 @@ To complete the configuration, include the processor in the ``traces`` or ``logs
       traces:
         processors: [probabilistic_sampler]
 
+.. _probabilistic-sampler-config-options:
+
+Configuration options
+----------------------------------
+
+The processor has the following configuration options:
+
+* ``sampling_percentage``. Required. 32-bit floating point. Percentage at which items are sampled. If equal or greater than ``100``, it samples all items, ``0`` rejects all items.
+
+* ``hash_seed``. Optional, ``0`` by default. 32-bit unsigned integer. An integer used to compute the hash algorithm. Note that all collectors for a given tier (for example, behind the same load balancer) must have the same ``hash_seed``.
+
+* ``fail_closed``. Optional, ``true`` by default. Boolean. Whether to reject items with sampling-related errors.
+
+Logs-specific configuration:
+
+* ``attribute_source``. Optional, ``"traceID"``by default. String. Defines where to look for the attribute in ``from_attribute``. The allowed values are ``traceID`` or ``record``.
+
+* ``from_attribute``. Optional, void by default. String. The name of a log record attribute used for sampling purposes, such as a unique log record ID. The value of the attribute is only used if the trace ID is absent or if ``attribute_source`` is set to record.
+
+* ``sampling_priority``. Optional, void by default. String. The name of a log record attribute used to set a different sampling priority from the ``sampling_percentage`` setting. If equal or greater than ``100``, it samples all log records, ``0`` rejects all log records.
+
+Understand the processor
+===============================
+
 Consistency guarantee
 ----------------------------------
 
 A consistent probability sampler is a sampler that supports independent sampling decisions for each span or log record in a group, for example by TraceID, while maximizing the potential for completeness as follows.
 
-Consistent probability sampling requires that for any span in a given trace, if a sampler with lesser sampling probability selects the span for sampling, then the span would also be selected by a sampler configured with greater sampling probability.
+Consistent probability sampling requires that for any span in a given trace, if a sampler with lesser sampling probability selects the span for sampling, then the span will also be selected by a sampler configured with greater sampling probability.
 
 Completeness property
 ----------------------------------
@@ -75,82 +104,63 @@ A trace is complete when all of its members are sampled. A "sub-trace" is comple
 
 Ordinarily, Trace and Logging SDKs configure parent-based samplers which decide to sample based on the Context, because it leads to completeness.
 
-When non-root spans or logs make independent sampling decisions instead of using the parent-based approach (e.g., using the TraceIDRatioBased sampler for a non-root span), incompleteness may result, and when spans and log records are independently sampled in a processor, as by this component, the same potential for completeness arises. The consistency guarantee helps minimimize this issue.
+When non-root spans or logs make independent sampling decisions instead of using the parent-based approach (for example, using the ``TraceIDRatioBased`` sampler for a non-root span), incompleteness may result, and when spans and log records are independently sampled in a processor, as by this component, the same potential for completeness arises. The consistency guarantee helps minimimize this issue.
 
 Consistent probability samplers can be safely used with a mixture of probabilities and preserve sub-trace completeness, provided that child spans and log records are sampled with probability greater than or equal to the parent context.
 
 Using 1%, 10% and 50% probabilities for example, in a consistent probability scheme the 50% sampler must sample when the 10% sampler does, and the 10% sampler must sample when the 1% sampler does. A three-tier system could be configured with 1% sampling in the first tier, 10% sampling in the second tier, and 50% sampling in the bottom tier. In this configuration, 1% of traces will be complete, 10% of traces will be sub-trace complete at the second tier, and 50% of traces will be sub-trace complete at the third tier thanks to the consistency property.
 
-These guidelines should be considered when deploying multiple collectors with different sampling probabilities in a system. For example, a collector serving frontend servers can be configured with smaller sampling probability than a collector serving backend servers, without breaking sub-trace completeness.
+.. note:: Consider these guidelines when deploying multiple collectors with different sampling probabilities in a system. For example, a collector serving frontend servers can be configured with smaller sampling probability than a collector serving backend servers, without breaking sub-trace completeness.
 
+Set sampling randomness
+----------------------------------
 
+To achieve consistency, sampling randomness is taken from a deterministic aspect of the input data: 
 
+* For ``traces`` pipelines, the source of randomness is always the TraceID. 
 
+* For ``logs`` pipelines, the source of randomness can be the TraceID or another log record attribute, if configured. 
 
+  * If you set ``attribute_source`` to ``traceID``, TraceID is used. 
 
-Sampling randomness
-To achieve consistency, sampling randomness is taken from a deterministic aspect of the input data. For traces pipelines, the source of randomness is always the TraceID. For logs pipelines, the source of randomness can be the TraceID or another log record attribute, if configured.
+  * If you set ``attribute_source`` to ``record``, or if the TraceID field is absent, ``from_attribute`` is taken as the source of randomness, if configured.
 
-For log records, the attribute_source and from_attribute fields determine the source of randomness used for log records. When attribute_source is set to traceID, the TraceID will be used. When attribute_source is set to record or the TraceID field is absent, the value of from_attribute is taken as the source of randomness (if configured).
+.. _probabilistic-sampler-processor-priority:
 
-Sampling priority
-The sampling priority mechanism is an override, which takes precedence over the probabilistic decision in all modes.
+Set sampling priority
+----------------------------------
 
-🛑 Compatibility note: Logs and Traces have different behavior.
+The sampling priority mechanism is an override that takes precedence over the probabilistic decision in all modes.
 
-In traces pipelines, when the priority attribute has value 0, the configured probability will by modified to 0% and the item will not pass the sampler. When the priority attribute is non-zero the configured probability will be set to 100%. The sampling priority attribute is not configurable, and is called sampling.priority.
+.. caution:: Sampling priority has different behaviors for logs and traces.
 
-In logs pipelines, when the priority attribute has value 0, the configured probability will by modified to 0%, and the item will not pass the sampler. Otherwise, the logs sampling priority attribute is interpreted as a percentage, with values >= 100 equal to 100% sampling. The logs sampling priority attribute is configured via sampling_priority.
+In ``traces`` pipelines, when the priority attribute is ``0``, the configured probability is modified to 0% and the item will not pass the sampler. When the priority attribute is non-zero the configured probability is set to 100%. The sampling priority attribute is not configurable and is called ``sampling.priority``.
+
+In ``logs`` pipelines, when the priority attribute is ``0``, the configured probability is modified to 0%, and the item will not pass the sampler. Otherwise, the logs sampling priority attribute is interpreted as a percentage, with values >= 100 equal to 100% sampling. Use ``sampling_priority`` to configure the logs sampling priority attribute.
 
 Sampling algorithm
+----------------------------------
 
 Hash seed
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The hash seed method uses the FNV hash function applied to either a Trace ID (spans, log records), or to the value of a specified attribute (only logs). The hashed value, presumed to be random, is compared against a threshold value that corresponds with the sampling percentage.
+The hash seed method uses the FNV hash function applied to either a Trace ID (for spans and log records), or to the value of a specified attribute (only for logs). The hashed value, presumed to be random, is compared against a threshold value that corresponds with the sampling percentage.
 
-This mode requires configuring the hash_seed field. This mode is enabled when the hash_seed field is not zero, or when log records are sampled with attribute_source is set to record.
+To enable this mode, either: 
 
-In order for hashing to be consistent, all collectors for a given tier (e.g. behind the same load balancer) must have the same hash_seed. It is also possible to leverage a different hash_seed at different collector tiers to support additional sampling requirements.
+* Set ``hash_seed`` to a value different to zero. 
+* Sample log records with ``attribute_source`` set to ``record``.
+
+In order for hashing to be consistent, all collectors for a given tier (for example, behind the same load balancer) must have the same ``hash_seed``. You can also leverage a different ``hash_seed`` at different collector tiers to support additional sampling requirements.
 
 This mode uses 14 bits of sampling precision.
 
 Error handling
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This processor considers it an error when the arriving data has no randomess. This includes conditions where the TraceID field is invalid (16 zero bytes) and where the log record attribute source has zero bytes of information.
+This processor considers it an error when the arriving data has no randomess. This includes conditions where the TraceID field is invalid, such as 16 zero bytes, and where the log record attribute source has zero bytes of information.
 
-By default, when there are errors determining sampling-related information from an item of telemetry, the data will be refused. This behavior can be changed by setting the fail_closed property to false, in which case erroneous data will pass through the processor.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.. _probabilistic-sampler-config-options:
-
-Configuration options
-----------------------------------
-
-The processor has the following configuration options:
-
-The following configuration options can be modified:
-
-sampling_percentage (32-bit floating point, required): Percentage at which items are sampled; >= 100 samples all items, 0 rejects all items.
-hash_seed (32-bit unsigned integer, optional, default = 0): An integer used to compute the hash algorithm. Note that all collectors for a given tier (e.g. behind the same load balancer) should have the same hash_seed.
-fail_closed (boolean, optional, default = true): Whether to reject items with sampling-related errors.
-Logs-specific configuration
-attribute_source (string, optional, default = "traceID"): defines where to look for the attribute in from_attribute. The allowed values are traceID or record.
-from_attribute (string, optional, default = ""): The name of a log record attribute used for sampling purposes, such as a unique log record ID. The value of the attribute is only used if the trace ID is absent or if attribute_source is set to record.
-sampling_priority (string, optional, default = ""): The name of a log record attribute used to set a different sampling priority from the sampling_percentage setting. 0 means to never sample the log record, and >= 100 means to always sample the log record.
+By default, if errors are detected the data is refused. To change this behavior and allow erroneous data to pass through the processor, set the ``fail_closed`` property to ``false``.
 
 .. _probabilistic-sampler-processor-settings:
 
