@@ -57,17 +57,9 @@ Use the following metrics in the :guilabel:`Service metrics` section to monitor 
 Runtime metrics
 -----------------
 
-Instrument your back-end applications to send spans to Splunk APM to view runtime metrics. The following runtime metrics are available for Java, Node.js, and .NET in the service view. See :ref:`get-started-application`.
+Instrument your back-end applications to send spans to Splunk APM to view runtime metrics. See :ref:`get-started-application`.
 
-* Memory usage
-* Allocation rate
-* Class loading
-* GC activity
-* GC overhead
-* Thread count
-* GC overhead
-* Thread count
-* Thread pools
+The available runtime metrics vary based on language. See :ref:`metric-reference` for more information.
 
 Infrastructure metrics
 -----------------------
@@ -129,31 +121,181 @@ Select :guilabel:`Configure service view` to modify the Log Observer Connect con
 
 The connection and indices you select are saved for all users in your organization for each unique service and environment combination.
 
+.. _metric-reference:
+
 Metric reference
 ===================
 
 The following metrics are used in the service view. 
 
-Runtime metrics
--------------------
+Service metrics
+----------------
 
-Java
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 50, 50
 
-* ``service``
-* ``deployment_environment``
+   * - :strong:`Chart`
+     - :strong:`Metrics`
 
-Node.js and .NET
+   * - Service requests
+     - ``service.request.count``
 
-* ``service.name``
-* ``deployment.environment``
+   * - Service latency
+     - * ``service.request.duration.ns.median``
+       * ``service.request.duration.ns.p90``
+       * ``service.request.duration.ns.p99``
+
+   * - Service errors
+     - ``service.requests.count`` with a ``sf_error:True`` filter
+
+   * - SLI/SLO 
+     - ``service.request.count``
+
+.NET runtime metrics 
+-----------------------
+
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 50, 50
+
+   * - :strong:`Chart`
+     - :strong:`Metrics`
+
+   * - Heap usage
+     - ``process.runtime.dotnet.gc.committed_memory.size``
+
+   * - GC collections
+     - ``process.runtime.dotnet.gc.collections.count``
+
+   * - Application activity
+     - ``process.runtime.dotnet.gc.allocations.size``
+
+   * - GC heap size
+     - ``process.runtime.dotnet.gc.heap.size``
+
+   * - GC pause time
+     - ``process.runtime.dotnet.gc.pause.time``
+
+   * - Monitor lock contention
+     - ``process.runtime.dotnet.monitor.lock_contention.count``
+
+   * - Threadpool thread
+     - ``process.runtime.dotnet.monitor.lock_contention.count``
+
+   * - Exceptions
+     - ``process.runtime.dotnet.exceptions.count``
+
+Java runtime metrics
+---------------------
+
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 50, 50
+
+   * - :strong:`Charts`
+     - :strong:`Metrics`
+
+   * - Memory usage
+     - * ``runtime.jvm.gc.live.data.size``
+       * ``runtime.jvm.memory.max``
+       * ``runtime.jvm.memory.used``
+
+   * - Allocation rate
+     - ``process.runtime.jvm.memory.allocated``
+
+   * - Class loading
+     - * ``runtime.jvm.classes.loaded``
+       * ``runtime.jvm.classes.unloaded``
+
+   * - GC activity
+     - * ``runtime.jvm.gc.pause.totalTime``
+       * ``runtime.jvm.gc.pause.count``
+
+   * - GC overhead
+     - ``runtime.jvm.gc.overhead``
+
+   * - Thread count
+     - * ``runtime.jvm.threads.live``
+       * ``runtime.jvm.threads.peak``
+
+   * - Thread pools
+     - * ``executor.threads.active``
+       * ``executor.threads.idle``
+       * ``executor.threads.max``
+
+Node.js runtime metrics 
+-------------------------
+
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 50, 50
+
+   * - :strong:`Charts`
+     - :strong:`Metrics`
+
+   * - Heap usage
+     - * ``Process.runtime.nodejs.memory.heap.total``
+       * ``process.runtime.nodejs.memory.heap.used``
+
+   * - Resident set size
+     - ``process.runtime.nodejs.memory.rss``
+
+   * - GC activity
+     - * ``process.runtime.nodejs.memory.gc.size``
+       * ``process.runtime.nodejs.memory.gc.pause``
+       * ``process.runtime.nodejs.memory.gc.count``
+
+   * - Event loop lag
+     - * ``Process.runtime.nodejs.event_loop.lag.max``
+       * ``process.runtime.nodejs.event_loop.lag.min``
 
 Infrastructure metrics
------------------------ 
+-------------------------
 
-* ``sf_service``
-* ``sf_environment``
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 50, 50
 
+   * - :strong:`Chart`
+     - :strong:`Metrics`
 
+   * - Host network usage chart
+     - ``network.total``
+
+   * - Host CPU usage
+     - ``cpu.utilization``
+
+   * - Host memory usage
+     - ``memory.utilization``
+
+   * - Host disk usage
+     - ``disk.summary_utilization``
+
+   * - Pod CPU usage
+     - * ``container_cpu_utilization``
+       * ``cpu.num_processors``
+       * ``machine_cpu_cores``
+       * ``k8s.container.ready``
+
+   * - Pod memory usage
+     - * ``k8s.container.ready``
+       * ``container_memory_usage_bytes``
+       * ``container_spec_memory_limit_bytes``
+
+   * - Pod network utilization
+     - * ``k8s.container.ready``
+       * ``pod_network_receive_bytes_total``
+       * ``pod_network_transmit_bytes_total``
+
+   * - Pod disk usage
+     - * ``k8s.container.ready``
+       * ``container_fs_usage_bytes``
 
 
 
