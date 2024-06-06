@@ -83,7 +83,7 @@ The processor has the following configuration options:
 
 Logs-specific configuration:
 
-* ``attribute_source``. Optional, ``"traceID" ``by default. String. Defines where to look for the attribute in ``from_attribute``. The allowed values are ``traceID`` or ``record``.
+* ``attribute_source``. Optional, ``"traceID"`` by default. String. Defines where to look for the attribute in ``from_attribute``. The allowed values are ``traceID`` or ``record``.
 
 * ``from_attribute``. Optional, void by default. String. The name of a log record attribute used for sampling purposes, such as a unique log record ID. The value of the attribute is only used if the trace ID is absent or if ``attribute_source`` is set to record.
 
