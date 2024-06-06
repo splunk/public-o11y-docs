@@ -129,10 +129,9 @@ Dimension key and value requirements
 Dimension key names are UTF-8 strings with a maximum length of 128 characters (512 bytes).
 
 * For example, if a dimension's key:value pair is ("mydim", "myvalue"), ''mydim'' is limited to 256 characters. 
-* Must start with an uppercase or lowercase letter. The rest of the name can contain letters, numbers, underscores (_) and hyphens (-), and periods (.).
+* Must start with an uppercase or lowercase letter. The rest of the name can contain letters, numbers, underscores (_) and hyphens (-), and periods (.), but cannot contain blank spaces.
 * Must not start with the underscore character (_).
-* Must not start with the prefix :code:`sf_`, except for dimensions defined by Splunk Observability Cloud such as :code:`sf_hires`.
-* Must not start with the prefix :code:`aws_`, :code:`gcp_`, or :code:`azure_`.
+* Must not start with the prefix :code:`sf_`, except for dimensions defined by Splunk Observability Cloud such as :code:`sf_hires`. 
 
 Dimension values are UTF-8 strings with a maximum length of 256 UTF-8 characters (1024 bytes). 
 

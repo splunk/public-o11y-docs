@@ -81,9 +81,8 @@ Dimension name criteria:
 - UTF-8 string, maximum length of 128 characters (512 bytes).
 - Must start with an uppercase or lowercase letter.
 - Must not start with an underscore (_).
-- After the first character, the name can contain letters, numbers, underscores (_), hyphens (-), and period (.).
+- After the first character, the name can contain letters, numbers, underscores (_), hyphens (-), and periods (.), but cannot contain blank spaces.
 - Must not start with the prefix ``sf_``, except for dimensions defined by Splunk Observability Cloud such as ``sf_hires``.
-- Must not start with the prefix ``aws_``, ``gcp_``, or ``azure_``.
 
 .. _custom-properties:
 
