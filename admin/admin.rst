@@ -7,11 +7,11 @@ Set up your Splunk Observability Cloud organization
 .. meta::
    :description: Overview of the Splunk Observability Cloud organization admin tasks and links to the documentation.
 
-The first steps in getting started with Splunk Observability Cloud is setting up your organization. In Splunk Observability Cloud, an organization, or account, is the highest-level security grouping. For example, other organizations and their users can't access the data in your organization.
+The first step in getting started with Splunk Observability Cloud is setting up your organization. In Splunk Observability Cloud, an organization, or account, is the highest-level security grouping. Other organizations and their users can't access the data in your organization.
 
 To set up your organization, create and carry out a plan for addressing the tasks described in this topic. See the :ref:`admin-onboarding-guide` for prescriptive guidance for setting up your organization and other onboarding tasks.
 
-Many of these tasks require administrator access, and you might need to perform some administrative tasks on a regular basis after your initial setup.
+Many of these tasks require the admin role in Splunk Observability Cloud. If you choose to use Splunk Cloud Platform as your identity provider, you also need the sc_admin role in Splunk Cloud Platform.
 
 The following table shows you aspects of your Splunk Observability Cloud organization that you can plan for and set up:
 
@@ -25,9 +25,9 @@ The following table shows you aspects of your Splunk Observability Cloud organiz
 
    * - Choose from these 3 options for managing user access:
 
+       #. Use Splunk Cloud Platform as the unified identity provider. 
        #. Use an external Lightweight Directory Access Protocol (LDAP) and control access through Single Sign-On (SSO). 
        #. Use Splunk Observability Cloud user management to allow access using a username and password. 
-       #. Use Splunk Cloud Platform as the unified identity provider. 
      - See :ref:`unified-id-unified-identity` to use Splunk Cloud Platform as the unified identity provider.
        
        See :ref:`sso-label` to control access through Single Sign-On (SSO). 
