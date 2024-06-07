@@ -345,17 +345,7 @@
            // This function creates visitors and accounts in Pendo
            // You will need to replace <visitor-id-goes-here> and <account-id-goes-here> with values you use in your app
            // Please use Strings, Numbers, or Bools for value types.
-           pendo.initialize({
-               visitor: {
-                   //id:              <visitor-id-goes-here> // Required if user is logged in
-                   // email:        // Recommended if using Pendo Feedback, or NPS Email
-                   // full_name:    // Recommended if using Pendo Feedback
-                   // role:         // Optional
-   
-                   // You can add any additional visitor level key-values here,
-                   // as long as it's not one of the above reserved names.
-               }
-           });
+           pendo.initialize();
    })('780a75be-e49a-41b4-64ec-2ebf30a068c0');
    </script>
 {% endblock footer %}
