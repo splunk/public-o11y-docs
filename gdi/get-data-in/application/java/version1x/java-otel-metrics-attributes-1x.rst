@@ -1,8 +1,8 @@
 .. caution::
 
-   The Splunk Distribution of OpenTelemetry Java version 1.x is deprecated as of June 6, 2024 and will reach End of Support on June 6, 2025. Until then, only critical security fixes and bug fixes will be provided.
+   The Splunk Distribution of OpenTelemetry Java version 1.x is deprecated as of June 17, 2024 and will reach End of Support on June 17, 2025. Until then, only critical security fixes and bug fixes will be provided.
 
-   New customers should use the latest version of the :ref:`Splunk Distribution of OpenTelemetry Java <get-started-java>`. Existing customers should consider migrating to version 2.4.0 or higher. To learn how to migrate, see :ref:`java-metrics-migration-guide`.
+   New customers should use the latest version of the :ref:`Splunk Distribution of OpenTelemetry Java <get-started-java>`. Existing customers should consider migrating to version 2.5.0 or higher. To learn how to migrate, see :ref:`java-metrics-migration-guide`.
 
 .. _java-otel-metrics-attributes-1x:
 
