@@ -33,7 +33,7 @@ You must be a Splunk Observability Cloud administrator to view the Subscription 
 
 Splunk Observability Cloud admins can monitor billing usage for the following:
 
--  :ref:`Monitor Splunk APM subscription usage <apm-billing-usage-index>`
+-  :ref:`Monitor Splunk APM billing and subscription usage <apm-billing-usage-index>`
 -  :ref:`Monitor Splunk Infrastructure Monitoring subscription usage (Host plans) <monitor-imm-billing-usage>`
 -  :ref:`Manage Infrastructure costs and billing (Host plans) <imm-billing>`
 -  :ref:`Monitor Splunk Infrastructure Monitoring subscription usage (DPM plans only) <dpm-usage>`

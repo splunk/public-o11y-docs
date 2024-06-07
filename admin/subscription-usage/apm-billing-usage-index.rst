@@ -6,7 +6,7 @@ Monitor Splunk APM billing and subscription usage
 .. meta::
    :description: View APM billing subscription usage information and download usage reports to monitor your organization.
 
-.. note:: Use this topic to understand general aspects of subscription usage and consumption for Splunk APM. For more detailed billing-related queries, contact your Splunk Account Team.
+.. note:: Use this topic to understand general aspects of subscription usage for Splunk APM. For more detailed billing-related queries, contact your Splunk Account Team.
 
 View Splunk APM billing subscription usage data to monitor your organization's usage against its subscription plan and limits. 
 
@@ -58,10 +58,10 @@ Usage reports for host subscription plans include the following information abou
 * The billed trace volume. Trace volume data is available per minute.
 * The number of billed Troubleshooting MetricSets (TMS). TMS data is available per minute. 
 * The number of billed Monitoring MetricSets (MMS). MMS data is available at 10-minute intervals.
-* The average number of hosts.
-* The average number of containers.
-* The average number of Troubleshooting MetricSets.
-* The average trace volume in bytes.
+* The average number of hosts. Averages are available in usage reports for complete months only.
+* The average number of containers. Averages are available in usage reports for complete months only.
+* The average number of Troubleshooting MetricSets. Averages are available in usage reports for complete months only.
+* The average trace volume in bytes. Averages are available in usage reports for complete months only.
 
 .. note:: To generate and download subscription usage reports for your hosts and containers, see :ref:`host-diagnostics-report-apm`.
 
@@ -74,9 +74,9 @@ Usage reports for TAPM subscription plans include the following information abou
 * The billed trace volume. Trace volume data is available per minute.
 * The number of billed Troubleshooting MetricSets (TMS). TMS data is available per minute. 
 * The number of billed Monitoring MetricSets (MMS). MMS data is available at 10-minute intervals.
-* The average number of TAPM.
-* The average number of Troubleshooting MetricSets.
-* The average trace volume in bytes.
+* The average number of TAPM. Averages are available in usage reports for complete months only.
+* The average number of Troubleshooting MetricSets. Averages are available in usage reports for complete months only.
+* The average trace volume in bytes. Averages are available in usage reports for complete months only.
 
 .. _host-diagnostics-report-apm:
 
@@ -89,13 +89,18 @@ To download a subscription usage report, do the following:
 
 #. Go to :menuselection:`Settings` then :menuselection:`Subscription Usage` and select the :guilabel:`APM` tab.
 #. Expand the :guilabel:`Hosts` chart or the :guilabel:`Containers` chart.
-#. Select an hour of time in the chart.
+#. Select an hour of time in the chart with in the retention period for traces.
 #. Select a specific minute within the hour.
-#. Select :guilabel:`Download Data` to download the CSV file.
+#. If you've selected a minute that falls within the trace retention period the :guilabel:`Download Data` becomes active and displays the minute you selected. Select the download button to download  the .csv file.
 
 For each selected minute, the report shows the attributes or tags associated with the hosts and containers that sent data to Splunk APM. You might see different tags, like ``AWSUniqueId``, ``container_id``,  ``gcp_id``, and so on depending on the source of the host or container observed and the version of your instrumentation agent.
 
 .. caution:: For Kubernetes deployments, the Kubernetes attributes processor extracts default attributes, such as ``k8s.pod.name``. These attributes are required for accurate subscription usage. Don't remove the Kubernetes attributes processor from your configuration. See :ref:`kubernetes-attributes-processor` for more information.
+
+Use the APM throttling and entitlement dashboards to better understand your usage
+===================================================================================
+
+Select :guilabel:`Dashboards` and search for "APM entitlements and "APM throttling" to access the `APM entitlements` and `APM throttling` dashboards to further examine your usage. The APM entitlements dashboard provides historical data for metrics used on the :guilabel:`Subscription Usage` page. The APM throttling dashboard includes metrics that track throttling and limits in your organization. Several metrics in the APM throttling dashboard have detectors set up to send alerts when throttling for your organization is taking place.
 
 How APM calculates usage
 ========================
@@ -172,5 +177,3 @@ The following metrics power the charts in your APM Subscription Usage page with 
      - The cardinality of Monitoring MetricSets for each 10-minute window.
 
 To see all of the organization metrics for APM, see :ref:`Usage metrics for Splunk Observability Cloud <org-metrics>`.
-
-The detailed usage report for each usage period provides the billed value for each usage metric. For more information about APM usage reports, see :ref:`download-apm-usage-reports`.
