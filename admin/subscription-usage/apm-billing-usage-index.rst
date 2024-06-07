@@ -60,12 +60,13 @@ Usage reports for host subscription plans include the following information abou
 
 * The number of billed hosts. Host data is available per minute.
 * The number of billed containers. Container data is available per minute.
-* The billed trace volume. Trace volume data is available per minute.
+* The number of billed traces. Trace volume data is available per minute.
 * The number of billed Troubleshooting MetricSets (TMS). TMS data is available per minute. 
 * The number of billed Monitoring MetricSets (MMS). MMS data is available at 10-minute intervals.
 * The average number of hosts. Averages are available in usage reports for complete months only.
 * The average number of containers. Averages are available in usage reports for complete months only.
 * The average number of Troubleshooting MetricSets. Averages are available in usage reports for complete months only.
+* The average number of Monitoring MetricSets. Averages are available in usage reports for complete months only.
 * The average trace volume in bytes. Averages are available in usage reports for complete months only.
 
 .. note:: To generate and download subscription usage reports for your hosts and containers, see :ref:`host-diagnostics-report-apm`.
@@ -76,11 +77,12 @@ Usage report metrics for trace-analyzed-per-minute (TAPM) subscription plans
 Usage reports for TAPM subscription plans include the following information about your organization's usage:
 
 * The number of billed TAPM. TAPM data is available per minute.
-* The billed trace volume. Trace volume data is available per minute.
+* The number of billed traces. Trace volume data is available per minute.
 * The number of billed Troubleshooting MetricSets (TMS). TMS data is available per minute. 
 * The number of billed Monitoring MetricSets (MMS). MMS data is available at 10-minute intervals.
 * The average number of TAPM. Averages are available in usage reports for complete months only.
 * The average number of Troubleshooting MetricSets. Averages are available in usage reports for complete months only.
+* The average number of Monitoring MetricSets. Averages are available in usage reports for complete months only.
 * The average trace volume in bytes. Averages are available in usage reports for complete months only.
 
 .. _host-diagnostics-report-apm:
@@ -112,7 +114,7 @@ How APM calculates usage
 
 APM uses Splunk Observability Cloud metrics to calculate usage for traces-analyzed-per-minute (TAPM) and host subscription plans. Limits for host subscription plans are based on the number of hosts and containers sending data to APM. Limits for TAPM subscription plans are based on the number of traces you send to APM per minute.
 
-APM provides a value for each usage metric the system collects for each subscription usage period. The billed value is the average per-minute usage throughout the usage period. Use the charts on the APM Subscription Usage page that plot these metrics so you can monitor the billed value for each metric.
+APM provides a value for each usage metric the system collects for each subscription usage period. Use the charts on the APM Subscription Usage page that plot these metrics so you can monitor the billed value for each metric.
 
 See the following sections for more information about how APM calculates usage for each subscription plan type. To confirm the plan for your organization, view the :guilabel:`Subscription` panel on the Subscription Usage page.
 
@@ -145,6 +147,10 @@ The following metrics power the charts in your APM Subscription Usage page with 
      - Troubleshooting MetricSets
      - The cardinality of Troubleshooting MetricSets for each 1-minute window.
 
+   * - ``sf.org.apm.numMonitoringMetricSets``
+     - Monitoring MetricSets
+     - The cardinality of Monitoring MetricSets for each 10-minute window.
+
 .. _host_subscription_plans:
 
 Metrics for host subscription plans
@@ -175,7 +181,6 @@ The following metrics power the charts in your APM Subscription Usage page with 
    * - ``sf.org.apm.numTroubleshootingMetricSets``
      - Troubleshooting MetricSets
      - The cardinality of Troubleshooting MetricSets for each 1-minute window.
-
 
    * - ``sf.org.apm.numMonitoringMetricSets``
      - Monitoring MetricSets
