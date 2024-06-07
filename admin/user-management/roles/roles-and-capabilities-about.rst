@@ -24,11 +24,9 @@ About roles in Splunk Observability Cloud
 
 Splunk Observability Clouds lets you restrict access to certain features to specific groups of users using role-based access control (RBAC). You assign roles to users. A role contains a set of capabilities. These capabilities define what actions are available to roles. For example, capabilities determine whether someone with a particular role has the capabilities to create detectors or dashboards. For details about each role and the associated capabilities, see :ref:`roles-table-phase`. 
 
-The new roles provide more restricted access. This supports scenarios where additional teams such as external vendors or teams that might belong to other business units, only need read-only access. Role-based access control lets you restrict users to the least-required capabilities, helping you meet compliance, business, or architectural requirements. By assigning the least required capabilities, you can help prevent users from making unwanted changes. 
+Roles provide restricted access. This supports scenarios where additional teams such as external vendors or teams that might belong to other business units, only need read-only access. Use role-based access control to restrict users to the least-required capabilities, to meet compliance, business, or architectural requirements. By assigning the least required capabilities, you can help prevent users from making unwanted changes. 
 
-Additionally, Splunk Observability Cloud role-based access control aligns with roles available in Splunk Cloud Platform, providing a consistent user and capability-based experience across Splunk Cloud Platform and Splunk Observability CLoud.
-
-
+Splunk Observability Cloud role-based access control aligns with roles available in Splunk Cloud Platform, providing a consistent user and capability-based experience across Splunk Cloud Platform and Splunk Observability CLoud.
 
 .. raw:: html
 
@@ -36,7 +34,7 @@ Additionally, Splunk Observability Cloud role-based access control aligns with r
     <h2>Pre-defined roles</h2>
   </embed>
 
-Splunk Observability Cloud comes with the following roles predefined:
+Splunk Observability Cloud comes with the following roles predefined. For details about each role and the associated capabilities, see :ref:`roles-table-phase`. 
 
 .. list-table::
   :header-rows: 1
@@ -85,7 +83,8 @@ APIs honor capabilities based on the role defined to their token. This is import
     <h2>Multiple roles for a user or team</h2>
   </embed>
 
-You can assign multiple roles to individual users. The user receives a combination of capabilities inherited from all of their roles. Additionally, if you revoke a role from a user the change takes effect immediately. 
+You can assign multiple roles to individual users. The user receives a combination of capabilities inherited from all of their roles. Additionally, if you revoke a role from a user the change takes effect immediately. For details about each role and the associated capabilities, see :ref:`roles-table-phase`. 
+
 
 
 .. list-table::
