@@ -23,8 +23,13 @@ Go to :guilabel:`Settings` then :guilabel:`Subscription Usage` and select the :s
 The subscription usage page displays the following information about your organization's usage:
 
 * The type of plan
-* The subscription limits for your subscription plan. This information is available when you select a tile on the subscription usage page.
-* The monthly billed value of each subscription limit. This information is available when you select a tile on the subscription usage page.
+* The average usage and the percent of limit for the following aspects of Splunk APM. The average is also monthly billed value. Select the panel to see per-minute data. 
+    * Hosts
+    * Containers
+    * Troubleshooting MetricSets
+    * Trace volume
+    * Monitoring MetricSets 
+* The subscription limits for your subscription plan. Select a tile to access subscription limit information.
 
 .. note::
 
