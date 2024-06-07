@@ -28,14 +28,11 @@ The subscription usage page displays the following information about your organi
 
 .. note::
 
-   The APM subscription usage page displays a tile for Monitoring MetricSets (MMS), but the metric that powers the chart is not currently available on the subscription usage page. Select :guilabel:`View Detailed Usage Reports` to view your current histogram MMS data. For more information about detailed usage reports, see :ref:`view-apm-billing-reports`.
+   The APM subscription usage page displays a tile for Monitoring MetricSets (MMS), but the metric that powers the chart is not currently available on the subscription usage page. Select :guilabel:`View Detailed Usage Reports` to view your current histogram MMS data. For more information about detailed usage reports, see :ref:`download-apm-usage-reports`.
 
 For any questions about subscription usage, contact tech support or your sales representative.
 
-How APM calculates usage
-=========================================
-
-APM calculates usage for your subscription plan. There are 2 types of subscription plans: host or traces analyzed per minute (TAPM). To learn more about how APM monitors billing and usage for each subscription plan type, see :ref:`analyze-apm-billing-usage`.
+.. _download-apm-usage-reports:
 
 Download detailed usage reports
 ===================================
@@ -51,8 +48,8 @@ Download detailed usage reports for recent usage periods to better understand yo
 
 4. To download the report, select the usage report and save it as a .txt file.
 
-Metrics for host subscription plans
------------------------------------
+Usage report metrics for host subscription plans
+---------------------------------------------------
 
 Usage reports for host subscription plans include the following information about your organization's usage:
 
@@ -66,10 +63,10 @@ Usage reports for host subscription plans include the following information abou
 * The average number of Troubleshooting MetricSets.
 * The average trace volume in bytes.
 
-.. note:: To generate and download per-minute subscription usage reports for your hosts and containers, see :ref:`host-diagnostics-report-apm`.
+.. note:: To generate and download subscription usage reports for your hosts and containers, see :ref:`host-diagnostics-report-apm`.
 
-Metrics for trace-analyzed-per-minute (TAPM) subscription plans
-----------------------------------------------------------------
+Usage report metrics for trace-analyzed-per-minute (TAPM) subscription plans
+------------------------------------------------------------------------------
 
 Usage reports for TAPM subscription plans include the following information about your organization's usage:
 
@@ -81,8 +78,10 @@ Usage reports for TAPM subscription plans include the following information abou
 * The average number of Troubleshooting MetricSets.
 * The average trace volume in bytes.
 
-Download subscription usage report for hosts and containers
-============================================================
+.. _host-diagnostics-report-apm:
+
+Download a subscription usage report for hosts or containers
+==============================================================
 
 For host subscription plans, you can request and download reports that show which hosts and containers are sending APM data over a specific minute. Use this report to identify which hosts and containers are contributing to your subscription usage. You can generate and download reports within the retention period for traces. See :ref:`apm-data-retention` for more information.
 
@@ -174,4 +173,4 @@ The following metrics power the charts in your APM Subscription Usage page with 
 
 To see all of the organization metrics for APM, see :ref:`Usage metrics for Splunk Observability Cloud <org-metrics>`.
 
-The detailed usage report for each usage period provides the billed value for each usage metric. For more information about APM usage reports, see :ref:`view-apm-billing-reports`.
+The detailed usage report for each usage period provides the billed value for each usage metric. For more information about APM usage reports, see :ref:`download-apm-usage-reports`.

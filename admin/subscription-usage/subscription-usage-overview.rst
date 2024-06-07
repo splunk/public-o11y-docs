@@ -10,16 +10,14 @@ Monitor and manage subscription usage and billing
 .. toctree::
    :hidden:
 
-   APM subscription usage <apm-billing-usage-index>
-   APM billing reports <view-apm-billing-reports>
-   Analyze APM usage <analyze-apm-billing-usage>
+   APM billing and subscription usage <apm-billing-usage-index>
    Infrastructure subscription usage (Host and metrics plans) <monitor-imm-billing-usage>
    Manage Infrastructure billing (Host and metrics plans) <imm-billing>
    Infrastructure subscription usage (DPM plans) <dpm-usage>
    Logs subscription usage <lo-billing-usage>
    RUM subscription usage <rum-subscription-usage>
-   View parent-child subscription usage <parent-child-orgs>
    Synthetic Monitoring subscription usage <synthetics-usage>
+   View parent-child subscription usage <parent-child-orgs>
 
 View Splunk Observability Cloud subscription usage data to monitor your organization's usage against its subscription plan and entitlements. 
 
