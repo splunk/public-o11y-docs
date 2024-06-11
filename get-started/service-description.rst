@@ -166,13 +166,13 @@ Splunk Observability Cloud is available in the following global regions. Each Cl
    * - Splunk Observability Cloud
      - 
         * US: Oregon (us-west-2), Virginia (us-east-1)
-        * Europe: Dublin (eu-west-1)
+        * Europe: Dublin (eu-west-1), Frankfurt (eu-central-1), London (eu-west-2)
         * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
      - 
        * US: Oregon (us-west-1)
      - 
         * us0, us1, us2
-        * eu0
+        * eu0, eu1, eu2
         * au0, jp0
 
 
@@ -194,57 +194,57 @@ The following components are available for each global region. Each Cloud provid
    * - Application Performance Monitoring (APM)
      - 
         * US: Oregon (us-west-2), Virginia (us-east-1)
-        * Europe: Dublin (eu-west-1)
+        * Europe: Dublin (eu-west-1), Frankfurt (eu-central-1), London (eu-west-2)
         * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
      - 
        * US: Oregon (us-west-1)
      - 
        * us0, us1, us2
-       * eu0
+       * eu0, eu1, eu2
        * au0, jp0
    * - Infrastructure Monitoring (IM)
      - 
        * US: Oregon (us-west-2), Virginia (us-east-1)
-       * Europe: Dublin (eu-west-1)
+       * Europe: Dublin (eu-west-1), Frankfurt (eu-central-1), London (eu-west-2)
        * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
      - 
        * US: Oregon (us-west-1)
      - 
        * us0, us1, us2
-       * eu0
+       * eu0, eu1, eu2
        * au0, jp0
    * - Log Observer Connect
      - 
        * US: Oregon (us-west-2), Virginia (us-east-1)
-       * Europe: Dublin (eu-west-1)
+       * Europe: Dublin (eu-west-1), Frankfurt (eu-central-1), London (eu-west-2)
        * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
      - 
        * US: Oregon (us-west-1)
      - 
        * us0, us1, us2
-       * eu0
+       * eu0, eu1, eu2
        * au0, jp0
    * - Real User Monitoring (RUM)
      - 
        * US: Oregon (us-west-2), Virginia (us-east-1)
-       * Europe: Dublin (eu-west-1)
+       * Europe: Dublin (eu-west-1), Frankfurt (eu-central-1), London (eu-west-2)
        * Asia Pacific: Sydney (ap-southeast-2)
      - 
        * US: Oregon (us-west-1)
      -
        * us0, us1, us2
-       * eu0
+       * eu0, eu1, eu2
        * au0
    * - Synthetic Monitoring
      - 
        * US: Oregon (us-west-2), Virginia (us-east-1)
-       * Europe: Dublin (eu-west-1)
+       * Europe: Dublin (eu-west-1), Frankfurt (eu-central-1), London (eu-west-2)
        * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
      - 
        * US: Oregon (us-west-1)
      -
        * us0, us1, us2
-       * eu0
+       * eu0, eu1, eu2
        * au0, jp0
 
 
@@ -271,6 +271,12 @@ The following table shows which cloud regions correspond to each realm in Splunk
      - GCP US Oregon (us-west-1)
    * - eu0
      - AWS EU Dublin (eu-west-1)
+     -
+   * - eu1
+     - AWS EU Frankfurt (eu-central-1)
+     -
+   * - eu2
+     - AWS EU London (eu-west-2)
      -
    * - au0
      - AWS AP Sydney (ap-southeast-2)
