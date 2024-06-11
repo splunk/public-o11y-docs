@@ -4,8 +4,6 @@
 Troubleshoot cardinality in Monitoring MetricSets 
 **********************************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn how to troubleshoot cardinality using Monitoring MetricSets.
 
@@ -15,28 +13,26 @@ Follow these steps to troubleshoot high cardinality issues and Monitoring Metric
 You've reached your subscription limit or you're unable to create new Monitoring MetricSets
 =========================================================================================================
 
-Cause: Your cardinality is too high
-------------------------------------
-If the cardinality of your Monitoring MetricSets is high, you might reach your subscription limits and be unable to create new Monitoring MetricSets.
+Cause: Your cardinality exceeds your subscription limit
+--------------------------------------------------------------
+If the cardinality of your Monitoring MetricSets is high, you might reach your subscription limit. If a new MMS you are creating exceeds your subscription limit you are unable to create the new Monitoring MetricSet. To see your MMS subscription limit, go to :guilabel:`Settings` then :guilabel:`Subscription Usage`. Depending on your org subscription model, this might be :guilabel:`Settings` then :guilabel:`Billing and Usage`. Select the :guilabel:`APM` tab and then select the :guilabel:`Monitoring MetricSets` panel to view your subscription limit for TMS.You must have an admin or usage role to view subscription limits. To learn more about APM usage and billing, see :ref:`apm-billing-usage-index`.
+
 
 .. _reduce-cardinality: 
 
 Solution: Configure your MMS to be more efficient 
 ------------------------------------------------------------------------
 
-
-If you have high cardinality metrics that exceed the system limit or subscription quota for your contract, try these methods to reduce cardinality for your metric set: 
+If you have high-cardinality metrics that exceed the system limit or the subscription limit for your contract, try these methods to reduce cardinality for your metric set: 
 
 * Turn off an endpoint MetricSet by choosing Service MMS only.
 * Add a :strong:`filter by tag` value to reduce the number of results.
-* Remove or filter down existing Monitoring MetricSets. The cardinality check in APM estimates your total cardinality of existing MMS in addition to your proposed changes.  
-* MetricSets with zero cardinality are not considered valid. If you have zero cardinality, verify that your configuration details are correct, or try again after you are ingesting the relevant tracing data. 
-* try adding filters and running it again if the Monitoring MetricSet timed out.
-* Provide a list of tag values, or a regular expression in the MMS. 
+* Remove or filter existing Monitoring MetricSets. The cardinality check in APM estimates your total cardinality of existing MMS in addition to your proposed changes.  
+* MetricSets with zero cardinality are not valid. If you have zero cardinality, verify that your configuration details are correct or try again after you are ingesting the relevant tracing data. 
+* Try run the cardinality check again if the Monitoring MetricSet timed out.
+* Provide a list of tag values or a regular expression in the MMS. 
 
 For more information on troubleshooting high and low cardinality, see :ref:`Guidelines for working with low and high cardinality data<guideline-cardinality>`. 
-
-
 
 Solution: Check that your Monitoring MetricSet is set up correctly 
 ------------------------------------------------------------------------
