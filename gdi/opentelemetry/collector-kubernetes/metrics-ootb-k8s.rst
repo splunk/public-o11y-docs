@@ -19,7 +19,7 @@ Learn more about the Collector's configuration and data processing at:
 * :ref:`otel-data-processing`
 * :ref:`signalfx-exporter`
 
-.. note:: In addition to the metrics shown on this page, most installations will also send metrics from the :ref:`../components/kubernetes-cluster-receiver`. Cluster Receiver metrics are an important part of monitoring any kubernets installation.  Refer to that page as well as the metrics listed here.
+.. note:: In addition to the metrics shown on this page, most instances also send metrics from the :ref:`kubernetes-cluster-receiver`. Cluster Receiver metrics are an important part of monitoring any kubernets installation. Refer to that page as well as the metrics listed here.
           
 To see the Collector's internal metrics, refer to :ref:`metrics-internal-collector`.
 
