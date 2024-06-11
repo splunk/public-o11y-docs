@@ -43,7 +43,7 @@ Otherwise, see the following table for which parts you can skip:
       - If you don't use cloud services, you can skip this part.
     * - :ref:`send-server-cluster-data`
       - Recommended 
-      - -
+      - None
     * - :ref:`configure-third-party-apps`
       - Optional
       - You must complete part 2 before starting this part.
