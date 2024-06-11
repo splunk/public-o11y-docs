@@ -129,7 +129,6 @@ Splunk Observability Cloud uses navigators to display visualizations of your dat
 To access the navigator for your cloud service provider, follow these steps:
 
 #. In Splunk Observability Cloud, select :guilabel:`Infrastructure`.
-#. 
 
 
 For more information, see the following:
@@ -160,4 +159,4 @@ You can use the metric finder to search for your cloud service metrics. Follow t
 Next steps
 ====================
 
-To continue setting up your infrastructure for Splunk Observability Cloud, see <NEXT PART>.
+To continue setting up your infrastructure for Splunk Observability Cloud, see :ref:`send-server-cluster-data.
