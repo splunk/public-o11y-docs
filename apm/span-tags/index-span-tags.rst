@@ -22,7 +22,7 @@ Prerequisites
 ====================================================================================
 
 * To index span tags to create Troubleshooting MetricSets in Splunk APM, you must have the admin role.
-* Before you start indexing span tags and processes, see :ref:`apm-index-tag-tips` for guidance on choosing span tags or processes to index. 
+* Before indexing span tags and processes, see :ref:`apm-index-tag-tips` for guidance on choosing span tags or processes to index. 
 
 .. _apm-tms-details:
 
@@ -45,7 +45,7 @@ See :ref:`apm-service-map` and :ref:`apm-tag-spotlight`.
 Default indexed span tags
 --------------------------------
 
-Splunk APM indexes and generates Troubleshooting MetricSets for several tags by default. For more details about each of these tags, see :ref:`apm-default-span-tags`. You can't modify or stop APM from indexing these span tags, but you can index additional span tags. See :ref:`index-span-tags-instructions` to learn how. 
+Splunk APM indexes and generates Troubleshooting MetricSets for several tags by default. For more details about these tags, see :ref:`apm-default-span-tags`. You can't modify or stop APM from indexing these span tags, but you can index additional span tags. See :ref:`index-span-tags-instructions` to learn how. 
 
 .. _index-span-tags-instructions:
 
@@ -137,7 +137,7 @@ After you've configured custom Troubleshooting MetricSets you can see their stat
      - :strong:`Description`
 
    * - Active
-     - The application is indexing the span tag or process to generate Troubleshooting MetricSets for it.
+     - The application is indexing the span tag or process to generate Troubleshooting MetricSets.
 
    * - Paused
      - You or another administrator paused indexing for the span tag or process. The application isn't generating Troubleshooting MetricSets for the span tag or process, and you can't view any data you previously indexed for it.
@@ -150,7 +150,7 @@ After you've configured custom Troubleshooting MetricSets you can see their stat
 Status of Database MetricSets
 --------------------------------------------------
 
-You can pause and resume indexing Database Query Performance data at any time from the :guilabel:`Standard MetricSets` section of :guilabel:`APM MetricSets`. You can also control the indexing of SQL and NoSQL tags separately.
+You can pause and resume indexing Database Query Performance data from the :guilabel:`Standard MetricSets` section of :guilabel:`APM MetricSets`. You can also control the indexing of SQL and NoSQL tags separately.
 
 To pause the indexing of Database Query Performance data, select :guilabel:`Pause indexing` next to the database type. To resume, select :guilabel:`Resume indexing`.
 

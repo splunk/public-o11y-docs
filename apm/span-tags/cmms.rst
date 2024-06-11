@@ -7,7 +7,7 @@ Generate a Monitoring MetricSet with a custom dimension
 .. meta::
    :description: Learn how to generate a Monitoring MetricSet with a custom dimension. 
 
-Generate Monitoring MetricSets (MMS) with custom dimensions to monitor your services in real time. Splunk APM provides a default set of MMS, but you can configure additional MMS using indexed span tags to create custom dimensions. You can use your MMS to create custom charts, dashboards, and detectors to keep track of what matters most to your team. See :ref:`charts-dashboards-alerts`. 
+Generate Monitoring MetricSets (MMS) with custom dimensions to monitor your services in real time. Splunk APM provides a default set of MMS, but you can configure additional MMS using indexed span tags to create custom dimensions. You can use your MMS to create custom charts, dashboards, and detectors to track what matters most to your team. See :ref:`charts-dashboards-alerts`. 
 
 What are MetricSets?
 =========================
@@ -23,7 +23,7 @@ Prerequisites
 
 * To create a custom MMS, you must have an admin role. 
 
-* To create a custom MMS, you need to first index the span tag or process that you want to base your MMS on. See :ref:`apm-index-span-tags`. 
+* To create a custom MMS, you need to index the span tag or process that you want to base your MMS on. See :ref:`apm-index-span-tags`. 
 
 * If you are unfamiliar with MetricSets, see: :ref:`apm-metricsets`. 
 
@@ -34,7 +34,7 @@ Use custom Monitoring MetricSets to monitor important metrics
 
 APM generates a collection of MMS by default; see :ref:`monitoring-metricsets`. You can create additional MMS with custom dimensions to filter and aggregate the default generated metrics by a specific indexed span tag or process such as ``version`` or ``cloud.provider``.
 
-You can create custom MMS at the service level and the endpoint or span level. When you create a custom dimension for a service-level MMS, APM generates MMS that include the service-level metrics with your chosen indexed span tag or process as a custom dimension. If you add endpoint-level metrics as well, APM generates MMS that include span-level metrics, with your chosen indexed span tag or process as a custom dimension. 
+You can create custom MMS at the service level and the endpoint or span level. When you create a custom dimension for a service-level MMS, APM generates an MMS that includes the service-level metrics with your chosen indexed span tag or process as a custom dimension. If you add endpoint-level metrics, APM generates MMS that include span-level metrics, with your chosen indexed span tag or process as a custom dimension. 
 
 When you create an MMS with a custom dimension, you can use this custom dimension to create charts, dashboards, and alerts. See :ref:`charts-dashboards-alerts`. 
 
@@ -73,7 +73,7 @@ You can also filter by specific tag values to further reduce the cardinality of 
    * - service-level MMS and endpoint-level MMS for all endpoints within a service
      -  This option creates a custom dimensionalized MMS for each selected service, as well as an MMS for each endpoint in each selected service. This is the highest cardinality option. 
    * - service-level MMS and endpoint-level MMS for specific endpoints
-     - This option creates a custom dimensionalized MMS for each selected service and an MMS for specific endpoints you select. In the box labeled :guilabel:`Endpoint Filters, provide a list of endpoints or a regular expression pattern to generate MMS for specific endpoints you're interested in. This helps you to minimize unnecessary cardinality.`.
+     - This option creates a custom dimensionalized MMS for each selected service and an MMS for specific endpoints you select. In the box labeled :guilabel:`Endpoint Filters, provide a list of endpoints or a regular expression pattern to generate MMS for specific endpoints you're interested in. This helps you to minimize unnecessary cardinality`.
    * - Service-level MMS only
      - This option creates an MMS for each selected service and no endpoint-level MMS. This is the lowest cardinality option. 
 
@@ -109,7 +109,7 @@ Follow these steps to create a Monitoring MetricSet.
 
 5. Select how you want to add tag or process data to your Monitoring MetricSet from the dropdown. See :ref:`mms-conf` for more details. 
     a. :guilabel:`Service and all endpoint MMS:` Create an MMS for each selected service, as well as an MMS for each endpoint in each selected service. 
-    b. :guilabel:`Service and specific endpoint MMS:` Create an MMS for each selected service and an MMS for specific endpoints you select. To add :guilabel:`Endpoint Filters`, provide a list of endpoints or a regular expression pattern to generate MMS for specific the endpoints you're interested in. 
+    b. :guilabel:`Service and specific endpoint MMS:` Create an MMS for each selected service and an MMS for specific endpoints you select. To add :guilabel:`Endpoint Filters`, provide a list of endpoints or a regular expression pattern to generate MMS for specific endpoints you're interested in. 
     c. :guilabel:`Service MMS only:` Create an MMS for each selected service and no endpoint-level MMS. 
 
 6. (Optional) In the field labeled :guilabel:`Filter by tag values`, add tag filters to narrow the scope of your MMS to include only data associated with the tag values you enter. This can help further reduce cardinality in your MetricSets.
@@ -123,7 +123,7 @@ Follow these steps to create a Monitoring MetricSet.
 9.  After the cardinality check has run, review the cardinality and enable your new MetricSet.
 
     * If the cardinality impact of indexing this new MetricSet is acceptable, select the check mark under :guilabel:`Actions` to enable your Troubleshooting MetricSet. 
-    * If the check times out before you enable the MetricSet, run the analysis again .
+    * If the check times out before you enable the MetricSet, run the analysis again.
     * If the check shows as failed, your cardinality is over your subscription limit for MMS or is otherwise invalid. For steps to configure your MetricSet to be more efficient or other troubleshooting solutions, see :ref:`troubleshoot-mms`.
 
    The following example shows a cardinality check. 
