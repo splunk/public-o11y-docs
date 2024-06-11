@@ -17,14 +17,14 @@ Use CloudFormation to connect to Splunk Observability Cloud
 
 You need to install the AWS integration first before you use any Cloudformation template. Learn more at :ref:`get-started-aws`.
 
-Decide which CloudFormation template to use depending on your deployment method (for example, per AWS region or per AWS account) and integration type (for example, logs only, metric streams only, or both). Even if you don't intend to use both logs and metrics, you can safely deploy a CloudFormation template, since unused infrastructure doesn't generate costs.
+Decide which CloudFormation template to use depending on your deployment method (for example, per AWS region or per AWS account) and integration type (for example, metric streams only). Even if you don't intend to use all options, you can safely deploy a CloudFormation template, since unused infrastructure doesn't generate costs.
 
-.. caution:: If you want to collect logs, Splunk Log Observer is no longer available for new users. You can continue to use Log Observer if you already have an entitlement.
+.. caution:: Splunk Log Observer is no longer available for new users. You can continue to use Log Observer if you already have an entitlement. To collect logs, see :ref:`aws-logs`.
 
 Prepopulated CloudFormation templates
 -------------------------------------------
 
-Select the QuickLink for a template which supports Metric Streams or logs, it will open the AWS Management Console in the last region that you used.
+Select the QuickLink for a template which supports Metric Streams, it will open the AWS Management Console in the last region that you used.
 
 .. list-table::
   :header-rows: 1
@@ -72,7 +72,7 @@ Select the QuickLink for a template which supports Metric Streams or logs, it wi
     - Deploy :new-page:`this QuickLink <https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_metric_streams_regional.yaml>` in every region
     - :new-page:`Hosted template <https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_metric_streams_regional.yaml>`
 
-From the :strong:`CloudFormation templates` table, select the QuickLink for a template with support for metric streams or logs. The QuickLink automatically opens the AWS Management Console in the last region you used, but you can select any other region in the AWS Management Console.
+From the :strong:`CloudFormation templates` table, select the QuickLink for a template with support for metric streams. The QuickLink automatically opens the AWS Management Console in the last region you used, but you can select any other region in the AWS Management Console.
 
 Custom CloudFormation templates
 -------------------------------------------

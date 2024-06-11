@@ -8,7 +8,7 @@ Connect to AWS with Splunk-managed Metric Streams
 .. meta::
   :description: Use guided setup to connect Splunk Observability Cloud to AWS through CloudWatch using Metric Streams.
 
-If you have Administrator privileges for Splunk Observability Cloud and your Amazon Web Services (AWS) account, you can use the UI guided setup to create an integration to connect to AWS, and configure metrics and logs collection.
+If you have Administrator privileges for Splunk Observability Cloud and your Amazon Web Services (AWS) account, you can use the UI guided setup to create an integration to connect to AWS, and configure metric collection.
 
 Before you start
 ============================================
@@ -53,11 +53,12 @@ In this step you need to choose the following connection options:
   * Metadata.
   * Cost and usage metrics.
   * CloudWatch metrics. 
-  * Logs.
 
 In the CloudWatch metrics option, select :guilabel:`Streaming (Splunk-managed)` as the ingestion method. 
 
 When you activate Metric Streams, make sure you :ref:`add these additional permissions <metricstreams_iampolicy>` to your IAM policy. 
+
+.. note:: To collect logs, see :ref:`aws-logs`.
 
 Kinesis Firehose connection options
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

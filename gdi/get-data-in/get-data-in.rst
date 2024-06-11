@@ -44,7 +44,7 @@ If you're not yet implementing full-stack observability as described in the diag
       -  :strong:`Recommended`
       -  n/a
       -  n/a
-      -  Yes
+      -  No
 
    *  -  :ref:`2. Install the OpenTelemetry Collector for servers and clusters <gdi-2>`
       -  :strong:`Recommended`
@@ -90,10 +90,10 @@ If you're not yet implementing full-stack observability as described in the diag
 
 .. _gdi-1:
 
-1. Integrate with cloud services to send metrics and logs
+1. Integrate with cloud services to send metrics 
 ===================================================================================
 
-If you're using cloud services for your infrastructure, the first step is to integrate these services with Splunk Observability Cloud. Cloud integrations can send metrics and metadata (such as tags, labels and other properties) to Infrastructure Monitoring.
+If you're using cloud services for your infrastructure, the first step is to integrate these services with Splunk Observability Cloud. Cloud integrations can send metrics and metadata (such as tags, labels and other properties) to Splunk Observability Cloud.
 
 After you've integrated with your cloud services, you can access your data in the following locations:
 
