@@ -47,7 +47,6 @@ Images used by default
 Optional add-on feature images
 ------------------------------------------------
 
-* :new-page:`docker.io/splunk/fluentd-hec`
 * :new-page:`quay.io/signalfx/splunk-otel-collector-windows`
 * :new-page:`registry.access.redhat.com/ubi9/ubi`
 * :new-page:`ghcr.io/open-telemetry/opentelemetry-operator/opentelemetry-operator`
@@ -57,8 +56,8 @@ Optional add-on feature images
 * :new-page:`quay.io/jetstack/cert-manager-cainjector`
 * :new-page:`quay.io/jetstack/cert-manager-ctl`
 * :new-page:`ghcr.io/signalfx/splunk-otel-java/splunk-otel-java`
-* :new-page:`ghcr.io/signalfx/splunk-otel-java/splunk-otel-js`
-* :new-page:`ghcr.io/signalfx/splunk-otel-java/splunk-otel-dotnet`
+* :new-page:`ghcr.io/signalfx/splunk-otel-js/splunk-otel-js`
+* :new-page:`ghcr.io/signalfx/splunk-otel-dotnet/splunk-otel-dotnet`
 * :new-page:`ghcr.io/open-telemetry/opentelemetry-operator/autoinstrumentation-go`
 * :new-page:`ghcr.io/open-telemetry/opentelemetry-operator/autoinstrumentation-apache-httpd`
 * :new-page:`ghcr.io/open-telemetry/opentelemetry-operator/autoinstrumentation-python`
