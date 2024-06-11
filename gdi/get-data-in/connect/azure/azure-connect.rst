@@ -30,7 +30,7 @@ After you connect your Azure account to Splunk Observability Cloud, you can do t
 - Filter Azure monitoring results using tags or dimensions such as ``region`` and ``host name``. When tagging, Splunk Observability Cloud only allows alphanumeric characters, and the underscore and minus symbols. Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character. 
 - To retrieve logs, see :ref:`ingest-azure-log-data`.
 
-
+.. _azure-integration-prereqs:
 
 .. raw:: html
 
