@@ -118,9 +118,9 @@ Follow these steps to create a Monitoring MetricSet.
 
 8. Your new metric set shows under :strong:`Pending MetricSets` section of the table with an :guilabel:`Analyzing` status while the cardinality check runs. You might have to wait a few moments for the check to run. 
 
-   .. caution:: Your pending MetricSet expires after 1 hour. If your MetricSet times out before you enable it, run the analysis again. 
+   .. caution:: Your pending MetricSet expires after 1 hour. If your MetricSet times out before you activate it, run the analysis again. 
 
-9.  After the cardinality check has run, review the cardinality and enable your new MetricSet.
+9.  After the cardinality check has run, review the cardinality and activate your new MetricSet.
 
     * If the cardinality impact of indexing this new MetricSet is within your subscription limit you see a green check mark and "Within Entitlement." Select the check mark under :guilabel:`Actions` to activate your Monitoring MetricSet. 
     * If the check times out before you activate the MetricSet, run the analysis again.
