@@ -19,7 +19,7 @@ You might want to use the API if you want to integrate with:
 - A third-party tool that provides an API/webhook integration only.
 - An application written in a language we don't provide a library for.
 
-This API integration can send all types of data to Splunk Observability Cloud. While you can use the API to send logs to Log Observer, we recommend using other integration types to do so. For details about which integrations can send logs to Log Observer, see :ref:`gdi-per-product`.
+This API integration can send all types of data to Splunk Observability Cloud. While you can use the API to send logs to Log Observer, we recommend using other integration types to do so. For details about which integrations can send logs to Log Observer.
 
 After you've configured your integration to send custom data, you can access your data in the following locations:
 
