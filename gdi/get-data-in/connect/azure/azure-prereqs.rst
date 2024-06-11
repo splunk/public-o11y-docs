@@ -8,13 +8,56 @@ Azure authentication, permissions, and supported regions
 .. meta::
    :description: These are the metrics available for the Azure integration with Splunk Observability Cloud, grouped according to Azure resource.
 
-All available metrics are included by default in any Azure integration with Splunk Observability Cloud.
+Successful integration requires administrator privileges for the following:
 
-Metric names and descriptions are generated dynamically from the :strong:`Supported metrics with Azure Monitor` page maintained by Microsoft. See all details in :new-page:`https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-supported`.
+- Your organization in Splunk Observability Cloud.
+- Creating a new Microsoft Entra ID (formerly Azure Active Directory) application.
 
-Every metric can either be a counter or a gauge, depending on what dimension is being looked at. If the MTS contains the dimension ``aggregation_type: total`` or ``aggregation_type: count``, then it is sent as a counter. Otherwise, it is sent as a gauge. To learn more, see :ref:`metric-time-series`. 
+To learn more about these privileges, see the Azure documentation for registering a new app.
 
-Organization metrics
-=================================
+.. note:: Splunk Observability Cloud supports all Azure regular regions, and Azure Government.
 
-Splunk Observability Cloud organization metrics monitor data related to your Azure integration, such as the number of metric time series (MTS) your integration has created. The names of organization metrics all start with the string ``sf.org.num.azure``. To learn more about these metrics, see :new-page-ref:`org-metrics`.
+.. _prep-azure-integration:
+
+Prepare Azure for the integration
+============================================
+
+To prepare Microsoft Azure to connect with Splunk Observability Cloud: 
+
+#. Create a Microsoft Entra ID (formerly Azure Active Directory) application.
+#. Specify subscriptions and set subscription permissions.
+
+.. note:: You need to prepare your Microsoft Account in the Azure console. The following sections summarize the steps you need to follow. For more details, refer to the official Azure documentation.
+
+.. _prep-ms-app:
+
+Create a Microsoft Entra ID (formerly Azure Active Directory) application
+--------------------------------------------------------------------------------------
+
+Follow these steps to create a new Microsoft Entra ID application:
+
+  #. In your Azure portal, navigate to :menuselection:`Microsoft Entra ID`, and register your new app. Splunk Observability Cloud does not use this information, but you need to provide it in order to create an app on Azure.
+  #. The Azure portal displays a summary about the application. Save the following information to use when you create your Azure integration in Splunk Observability Cloud:
+      * :guilabel:`Directory (tenant) ID`
+      * :guilabel:`Application (client) ID`
+  #. Select :guilabel:`Certificates & secrets`. The Certificate is your public key, and the client secret is your password.
+  #. Create a client secret by providing a description and setting the duration to the longest possible interval, and :guilabel:`Save`. Remember the client secret, you'll need it to create your Azure integration in Splunk Observability Cloud.
+
+.. _prep-ms-subs:
+
+Specify subscriptions and set subscription permissions
+--------------------------------------------------------------------------------------
+
+Set your subscription permissions:
+
+  #. In the Azure portal, look for your :guilabel:`Subscriptions`.
+  #. Find a subscription you want to monitor, and navigate to :menuselection:`Access control (IAM)`.
+  #. Select :menuselection:`Add`, then select :menuselection:`Add role assignment`.
+  #. On the :guilabel:`Add role assignment page`, perform the following steps:
+      * From the :guilabel:`Role` drop-down list, select the :menuselection:`Monitoring Reader` role.
+      * Leave the :guilabel:`Assign access to` drop-down list unchanged.
+      * Go to :guilabel:`Select member`. In the :guilabel:`Select` text box, start entering the name of the Azure application you just created. The Azure portal automatically suggests names as you type. Enter the application name, and :guilabel:`Save`.
+
+.. note:: Repeat these steps for each subscription you want to monitor.
+
+Next, see :ref:`azure-connect`.
