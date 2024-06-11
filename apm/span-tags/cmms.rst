@@ -9,7 +9,14 @@ Generate a Monitoring MetricSet with a custom dimension
 
 Generate Monitoring MetricSets (MMS) with custom dimensions to monitor your services in real time. Splunk APM provides a default set of MMS, but you can configure additional MMS using indexed span tags to create custom dimensions. You can use your MMS to create custom charts, dashboards, and detectors to keep track of what matters most to your team. See :ref:`charts-dashboards-alerts`. 
 
-To learn about the default MMS in Splunk APM, see :ref:`monitoring-metricsets`. 
+What are MetricSets?
+=========================
+
+MetricSets are metric time series you can use to track the performance of specific metrics over time. To help you analyze your service performance, APM provides 2 kinds of MetricSets: Troubleshooting MetricSets and Monitoring MetricSets. Troubleshooting MetricSets are for high-cardinality troubleshooting while Monitoring MetricSets use the Infrastructure Monitoring platform for real-time monitoring and alerting. 
+
+APM provides a collection of MetricSets by default. You can also index additional span tags or processes to generate additional Troubleshooting MetricSets and optionally add custom dimensionalized Monitoring MetricSets. See :ref:`apm-MetricSets` for an overview of the types of MetricSets in APM and a list of the MetricSets available by default. 
+
+Use this topic to learn how to index a span tag or process to generate Monitoring MetricSets.
 
 Prerequisites 
 ==============
@@ -22,7 +29,7 @@ Prerequisites
 
 * (Optional) Review :ref:`metrics-dimensions-mts` for an overview of the concepts underpinning MetricSets. 
 
-How custom Monitoring MetricSets add value to your organization
+Use custom Monitoring MetricSets to monitor important metrics 
 ======================================================================
 
 APM generates a collection of MMS by default; see :ref:`monitoring-metricsets`. You can create additional MMS with custom dimensions to filter and aggregate the default generated metrics by a specific indexed span tag or process such as ``version`` or ``cloud.provider``.
@@ -46,7 +53,7 @@ Before you generate an MMS, first consider:
 Select how you want to configure your Monitoring MetricSet
 ------------------------------------------------------------------
 
-You can generate a Monitoring MetricSet in three ways:
+You can generate a Monitoring MetricSet in 3 ways:
 
 * service-level MMS only
 * endpoint-level MMS for specific endpoints within a given service
@@ -86,7 +93,7 @@ Follow these steps to create a Monitoring MetricSet.
    a. In Splunk APM, select :guilabel:`APM Configuration` and select :guilabel:`APM MetricSets` from the menu. The APM MetricSets page opens.
    b. From anywhere in Splunk Observability Cloud, select :guilabel:`Settings` in the navigation bar and select :guilabel:`APM MetricSets` under :guilabel:`Data Configuration`.   
 
-2. On the :guilabel:`APM MetricSets` page, you have two options:
+2. On the :guilabel:`APM MetricSets` page, you have 2 options:
     
    * If you have already indexed the span tag or process, it appears in the list of MetricSets and is already generating Troubleshooting MetricSets. Select the edit icon for that span tag to open the :guilabel:`Edit MetricSet` dialog box and add a Monitoring MetricSet to your configuration using the following steps. 
    * If you haven't already indexed the tag or process, select :strong:`New MetricSet`. Enter the :strong:`Name` of a span tag or process you want to index. Then continue with the following steps.
@@ -111,15 +118,13 @@ Follow these steps to create a Monitoring MetricSet.
 
 8. Your new metric set shows under :strong:`Pending MetricSets` section of the table with an :guilabel:`Analyzing` status while the cardinality check runs. You might have to wait a few moments for the check to run. 
 
-   .. caution:: Your pending MetricSet expires after one hour. If your MetricSet times out before you enable it, run the analysis again. 
+   .. caution:: Your pending MetricSet expires after 1 hour. If your MetricSet times out before you enable it, run the analysis again. 
 
 9.  After the cardinality check has run, review the cardinality and enable your new MetricSet.
 
     * If the cardinality impact of indexing this new MetricSet is acceptable, select the check mark under :guilabel:`Actions` to enable your Troubleshooting MetricSet. 
     * If the check times out before you enable the MetricSet, run the analysis again .
-    * If the check shows as failed, your cardinality is over your subscription limit for MMS or is otherwise invalid.
-       * For steps to configure your MetricSet to be more efficient or other troubleshooting solutions, see :ref:`troubleshoot-mms`.
-       * To see your MMS subscription limit, go to :guilabel:`Settings` then :guilabel:`Subscription Usage`. Depending on your org subscription model, this might be :guilabel:`Settings` then :guilabel:`Billing and Usage`. Select the :guilabel:`APM` tab and then select the :guilabel:`Monitoring MetricSets` panel to view your subscription limit for TMS.You must have an admin or usage role to view subscription limits. To learn more about APM usage and billing, see :ref:`apm-billing-usage-index`.
+    * If the check shows as failed, your cardinality is over your subscription limit for MMS or is otherwise invalid. For steps to configure your MetricSet to be more efficient or other troubleshooting solutions, see :ref:`troubleshoot-mms`.
 
    The following example shows a cardinality check. 
 
@@ -128,6 +133,15 @@ Follow these steps to create a Monitoring MetricSet.
       :alt: This image shows the cardinality check for a Monitoring MetricSet. 
 
 .. note:: Splunk APM replaces dots with underscores in dimension names for MMS time series.
+
+Cardinality contribution of indexed span tags and processes
+================================================================
+
+When you index a new span tag or process to generate Monitoring MetricSets, Splunk APM runs a cardinality contribution analysis to calculate the potential total cardinality contribution after indexing the span tag or process. This gives you control of what you index and helps you to account for any organization subscription limits you have to stay within.
+
+If you try to index a span tag or process that might increase the total cardinality contribution beyond your limit, you can change the existing cardinality contribution of indexed tags or processes by modifying or removing indexed span tags or processes.
+
+To see your MMS subscription limit, go to :guilabel:`Settings` then :guilabel:`Subscription Usage`. Depending on your organization subscription, this might be :guilabel:`Settings` then :guilabel:`Billing and Usage`. Select the :guilabel:`APM` tab and then select the :guilabel:`Monitoring MetricSets` panel to view your subscription limit for MMS. You must have an admin or usage role to view subscription limits. To learn more about APM usage and billing, see :ref:`apm-billing-usage-index`.
 
 .. _charts-dashboards-alerts:
 
