@@ -88,7 +88,9 @@ Follow these steps to index a span tag or process to create a Troubleshooting Me
 
    * If the cardinality impact of indexing this new MetricSet is acceptable, select the check mark under :guilabel:`Actions` to turn on your Troubleshooting MetricSet. 
    * If the check times out before you turn on the MetricSet, run the analysis again.
-   * If the check shows as failed, your cardinality is over your subscription limit for TMS. You can edit the MetricSet to adjust the configuration to reduce cardinality or you can select the x to delete the pending MetricSet. To see your TMS subscription limit, go to :guilabel:`Settings` then :guilabel:`Subscription Usage`. Depending on your org subscription model, this might be :guilabel:`Settings` then :guilabel:`Billing and Usage`. Select the :guilabel:`APM` tab and then select the :guilabel:`Troubleshooting MetricSets` panel to view your subscription limit for TMS. You must have an admin or usage role to view subscription limits. To learn more about APM usage and billing, see :ref:`apm-billing-usage-index`.
+   * If the check shows as failed, your cardinality is over your subscription limit for TMS. 
+       * You can edit the MetricSet to adjust the configuration to reduce cardinality or you can select the x to delete the pending MetricSet. 
+       * To see your TMS subscription limit, go to :guilabel:`Settings` then :guilabel:`Subscription Usage`. Depending on your org subscription model, this might be :guilabel:`Settings` then :guilabel:`Billing and Usage`. Select the :guilabel:`APM` tab and then select the :guilabel:`Troubleshooting MetricSets` panel to view your subscription limit for TMS. You must have an admin or usage role to view subscription limits. To learn more about APM usage and billing, see :ref:`apm-billing-usage-index`.
 
    The following example shows a cardinality check. 
 
