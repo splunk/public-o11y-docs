@@ -81,9 +81,9 @@ Follow these steps to index a span tag or process to create a Troubleshooting Me
    
 7. After the cardinality check has run, review the cardinality and turn on your new MetricSet.
 
-   * If the cardinality impact of indexing this new MetricSet is acceptable, select the check mark under :guilabel:`Actions` to turn on your Troubleshooting MetricSet. 
-   * If the check times out before you turn on the MetricSet, run the analysis again.
-   * If the check shows as failed, your cardinality is over your subscription limit for TMS. See :ref:`cardinality-check`.
+   * If the cardinality impact of indexing this new MetricSet is within your subscription limit you see a green check mark and "Within Entitlement." Select the check mark under :guilabel:`Actions` to activate your Troubleshooting MetricSet. 
+   * If the check times out before you activate the MetricSet, run the analysis again.
+   * If the check shows as failed, your cardinality is over your subscription limit for TMS. See :ref:`cardinality-check-tms`.
 
    The following example shows a cardinality check. 
 
@@ -91,7 +91,7 @@ Follow these steps to index a span tag or process to create a Troubleshooting Me
       :width: 60%
       :alt: This image shows the cardinality check for a Monitoring MetricSet. 
 
-.. _cardinality-check:
+.. _cardinality-check-tms:
 
 Cardinality contribution of indexed span tags and processes
 ================================================================

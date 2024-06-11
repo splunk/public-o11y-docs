@@ -122,9 +122,9 @@ Follow these steps to create a Monitoring MetricSet.
 
 9.  After the cardinality check has run, review the cardinality and enable your new MetricSet.
 
-    * If the cardinality impact of indexing this new MetricSet is acceptable, select the check mark under :guilabel:`Actions` to enable your Troubleshooting MetricSet. 
-    * If the check times out before you enable the MetricSet, run the analysis again.
-    * If the check shows as failed, your cardinality is over your subscription limit for MMS or is otherwise invalid. For steps to configure your MetricSet to be more efficient or other troubleshooting solutions, see :ref:`troubleshoot-mms`.
+    * If the cardinality impact of indexing this new MetricSet is within your subscription limit you see a green check mark and "Within Entitlement." Select the check mark under :guilabel:`Actions` to activate your Monitoring MetricSet. 
+    * If the check times out before you activate the MetricSet, run the analysis again.
+    * If the check shows as failed, your cardinality is over your subscription limit for MMS or is otherwise invalid. See :ref:`cardinality-check-tms`. For steps to configure your MetricSet to be more efficient or other troubleshooting solutions, see :ref:`troubleshoot-mms`.
 
    The following example shows a cardinality check. 
 
@@ -133,6 +133,8 @@ Follow these steps to create a Monitoring MetricSet.
       :alt: This image shows the cardinality check for a Monitoring MetricSet. 
 
 .. note:: Splunk APM replaces dots with underscores in dimension names for MMS time series.
+
+.. _cardinality-check-mms:
 
 Cardinality contribution of indexed span tags and processes
 ================================================================
