@@ -16,7 +16,7 @@ For more information on dashboards, see :ref:`dashboard-create-customize`.
 
 The list of available memory metrics depends on the programming language. See :ref:`get-data-in-profiling` for supported languages.
 
-Java Runtime Metrics dashboard
+Java runtime metrics dashboard
 ================================
 
 Use the configured dashboard for :ref:`JVM metrics <jvm-metrics>` to check memory usage. To access the the Java runtime metrics dashboard, follow these steps: 
