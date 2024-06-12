@@ -7,7 +7,7 @@ Private Connectivity using AWS PrivateLink
 .. meta::
   :description: Connect to AWS using PrivateLink.
 
-You can use Amazon Web Services (AWS) PrivateLink to secure your metric and traces traffic from your AWS environment to your Splunk Observability Cloud environment without exposing it to the Internet. 
+You can use Amazon Web Services (AWS) PrivateLink to secure your metric and traces traffic from your AWS environment to your Splunk Observability Cloud environment without exposing it to the internet. 
 
 AWS PrivateLink connects your Virtual Private Cloud (VPC) to your AWS services, treating them as if they were in your VPC. You can create and use VPC endpoints to securely access AWS services and control the specific API endpoints and sites. To learn more, see the AWS PrivateLink documentation at :new-page:`What is AWS PrivateLink? <https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html>`.
 
@@ -236,7 +236,7 @@ To create a VPC endpoint, follow these steps:
 
 5. Select the VPC in which you want to create the endpoint. 
 
-6. Choose the subnet or subnets within the VPC where the endpoint will reside. Make sure to select the subnets from the appropriate availability zones.
+6. Select the subnet or subnets within the VPC where the endpoint will reside. Make sure to select the subnets from the appropriate availability zones.
 
 7. Set the IP address type to ``IPv4``.
 
@@ -250,21 +250,21 @@ To create a VPC endpoint, follow these steps:
 
 9. Review the configuration details and select :guilabel:`Create Endpoint`.
 
-10. Before proceeding to :ref:`aws-privatelink-step4`, confirm with Splunk Customer Support that you created the endpoint, that the service name has been verified, and that Support has enabled the endpoint urls.
+10. Before proceeding to :ref:`aws-privatelink-step4`, confirm with Splunk Customer Support that you created the endpoint, that the service name has been verified, and that Support has activated the endpoint urls.
 
 .. _aws-privatelink-step4:
 
-Step 4: Modify the endpoint to enable a Private DNS Name
+Step 4: Modify the endpoint to activate a Private DNS Name
 ----------------------------------------------------------------
 
-To modify the endpoint to enable a Private DNS Name, follow these steps:
+To modify the endpoint to activate a Private DNS Name, follow these steps:
 
 #. Log in to the AWS Management Console.
 #. Navigate to the :guilabel:`Amazon VPC service` in the region where you have created the VPC endpoint.
 #. On the left navigation pane, select :guilabel:`Endpoints`.
 #. Select the VPC endpoint you want to modify.
 #. Select :guilabel:`Actions`, and then :guilabel:`Modify Endpoint`.
-#. Enable the private DNS names under the :guilabel:`Modify private DNS name` settings.
+#. Turn on the private DNS names under the :guilabel:`Modify private DNS name` settings.
 #. After the process is completed, select :guilabel:`Save Changes`.
 
 You can now start using the AWS PrivateLink URL mentioned in the :ref:`AWS PrivateLink endpoint URLs table <aws-privatelink-endpoint-urls>`.
