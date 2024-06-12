@@ -8,7 +8,7 @@ Connect to AWS via polling from the Splunk console
 .. meta::
   :description: Send AWS data to Splunk Observability Cloud via polling.
 
-If you have Administrator privileges for Splunk Observability Cloud and your Amazon Web Services (AWS) account, you can use the UI guided setup to create an integration to connect to AWS and configure data collection.
+If you have Administrator privileges for Splunk Observability Cloud and your Amazon Web Services (AWS) account, you can use the UI guided setup to create an integration to connect to AWS, and configure metrics and logs collection.
 
 Before you start
 ============================================
@@ -55,10 +55,9 @@ In this step you need to choose the following connection options:
   * Metadata.
   * Cost and usage metrics.
   * CloudWatch metrics. 
+  * Logs.
 
 In the CloudWatch Metrics option, select :guilabel:`Polling` as the ingestion method, and set up the polling rate at which you want Splunk Observability Cloud to poll CloudWatch for metric data.
-
-.. note:: To collect logs, see :ref:`aws-logs`.
 
 Set up the polling rate 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -107,6 +106,7 @@ Use the check box options in the guided setup to limit the scope of your data co
   
 * Collect Amazon Cost and Usage Metrics.
 * Ingest CloudWatch Metrics. You can deactivate it altogether, or deactivate the polling but activate AWS Metric Streams instead.
+* Collect CloudWatch Logs.
 * Select which :ref:`AWS regions <aws-regions>` to fetch data from.
 * Select which AWS services to fetch data from.
 
@@ -123,7 +123,7 @@ To limit data collection, you can also:
 Select a CloudFormation template
 --------------------------------------------------
 
-Select a :ref:`CloudFormation template <aws-cloudformation>` to collect Metric Streams for each AWS region that you want to operate in.
+Select a :ref:`CloudFormation template <aws-cloudformation>` to collect logs or Metric Streams for each AWS region that you want to operate in.
 
 Next steps
 ================

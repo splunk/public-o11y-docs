@@ -56,10 +56,9 @@ In this step you need to choose the following connection options:
   * Metadata.
   * Cost and usage metrics.
   * CloudWatch metrics. 
+  * Logs.
 
 In the CloudWatch Metrics option, select :guilabel:`Streaming (AWS-managed)` as the ingestion method, and proceed to the AWS console to complete the connection. 
-
-.. note:: To collect logs, see :ref:`aws-logs`.
 
 Prepare your AWS account
 -------------------------------------------

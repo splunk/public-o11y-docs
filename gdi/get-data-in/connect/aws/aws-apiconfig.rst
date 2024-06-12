@@ -229,7 +229,15 @@ To collect CloudWatch Metric Streams or logs from all supported AWS services acr
 6. Collect logs
 ===================================================
 
-To collect logs, see :ref:`aws-logs`.
+To collect log data from any CloudWatch log group, perform the following steps:
+
+#. Deploy one of the :ref:`CloudFormation templates <aws-cloudformation>` provided by Splunk that supports log collection.
+#. Update your AWS integration using the ``curl -X PUT`` request to set the ``logsSyncState`` field value to ``ENABLED``.
+#. Review the :ref:`required permissions for logs <aws-iam-policy-logs>`.
+
+Splunk Observability Cloud synchronizes AWS integration settings with the logging configuration information on your AWS customer account every 5 minutes, adding triggers for newly-added services, and deleting triggers from regions or services removed from the integration.
+
+See Splunk developer documentation about :new-page:`POST /integration <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-create-integration>` for more examples of the request format.
 
 .. _aws-api-next-steps:
 
