@@ -27,7 +27,7 @@ See the requirements for each cloud services provider:
 * :ref:`Azure prerequisites <azure-integration-prereqs>`
 * :ref:`GCP prerequisites <gcp-prerequisites>`
 
-.. note:: To use CloudWatch Metric Streams or retrieve logs from AWS services, you need to deploy additional resources on your AWS account using one of the :ref:`CloudFormation templates <aws-cloudformation>` provided by Splunk. Also, review your :ref:`IAM policy <review-aws-iam-policy>` to ensure all the required actions are available to Splunk Observability Cloud.
+.. note:: To use CloudWatch Metric Streams you need to deploy additional resources on your AWS account using one of the :ref:`CloudFormation templates <aws-cloudformation>` provided by Splunk. Also, review your :ref:`IAM policy <review-aws-iam-policy>` to ensure all the required actions are available to Splunk Observability Cloud.
 
 .. _terraform-aws-tokens:
 .. _terraform-tokens:
