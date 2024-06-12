@@ -64,7 +64,7 @@ Expand your data collection
 
 Splunk Observability Cloud uses OpenTelemetry to support efficient instrumentation so that you can see your metrics, traces, and logs.
 
-If you haven't already done so, you can install the Splunk Distribution of OpenTelemetry Collector to collect, process, and send data. See :ref:`Install the Splunk Distribution of OpenTelemetry Collector <otel-install-platform>` for details.
+If you haven't already done so, you can install the Splunk Distribution of the OpenTelemetry Collector to collect, process, and send data. See :ref:`Install the Splunk Distribution of OpenTelemetry Collector <otel-install-platform>` for details.
 
 You can also set up Splunk APM :ref:`Splunk APM <get-started-apm>` to monitor traces from your applications, provided you've already installed the Splunk Distribution of OpenTelemetry Collector. See :ref:`Introduction to Splunk APM <get-started-apm>` for details.
 

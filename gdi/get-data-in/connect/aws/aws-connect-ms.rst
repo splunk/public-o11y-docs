@@ -108,7 +108,6 @@ Use the check box options in the guided setup to limit the scope of your data co
   
 * Collect Amazon Cost and Usage Metrics.
 * Ingest CloudWatch Metrics. You can deactivate it altogether, or deactivate the polling but activate AWS Metric Streams instead.
-* Collect CloudWatch Logs.
 * Select which :ref:`AWS regions <aws-regions>` to fetch data from.
 * Select which AWS services to fetch data from.
 
@@ -125,7 +124,7 @@ To limit data collection, you can also:
 Select a CloudFormation template
 --------------------------------------------------
 
-Select a :ref:`CloudFormation template <aws-cloudformation>` to collect logs or Metric Streams for each AWS region that you want to operate in.
+Select a :ref:`CloudFormation template <aws-cloudformation>` to collect Metric Streams for each AWS region that you want to operate in.
 
 Next steps
 ================
