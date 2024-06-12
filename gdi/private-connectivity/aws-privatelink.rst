@@ -82,11 +82,23 @@ AWS PrivateLink endpoint URLs
     - Coming soon
     - :new-page:`private-stream.au0.signalfx.com <http://private-stream.au0.signalfx.com/>`
 
-  * - eu-west-1
+  * - eu-central-1
+    - :new-page:`private-ingest.eu1.signalfx.com <http://private-ingest.eu1.signalfx.com/>`
+    - :new-page:`private-api.eu1.signalfx.com <http://private-api.eu1.signalfx.com/>`
+    - Coming soon
+    - :new-page:`private-stream.eu1.signalfx.com <http://private-stream.eu1.signalfx.com/>`
+
+    * - eu-west-1
     - :new-page:`private-ingest.eu0.signalfx.com <http://private-ingest.eu0.signalfx.com/>`
     - :new-page:`private-api.eu0.signalfx.com <http://private-api.eu0.signalfx.com/>`
     - Coming soon
     - :new-page:`private-stream.eu0.signalfx.com <http://private-stream.eu0.signalfx.com/>`
+
+    * - eu-west-2
+    - :new-page:`private-ingest.eu2.signalfx.com <http://private-ingest.eu2.signalfx.com/>`
+    - :new-page:`private-api.eu2.signalfx.com <http://private-api.eu2.signalfx.com/>`
+    - Coming soon
+    - :new-page:`private-stream.eu2.signalfx.com <http://private-stream.eu2.signalfx.com/>`
 
   * - us-east-1
     - :new-page:`private-ingest.us0.signalfx.com <http://private-ingest.us0.signalfx.com/>`
@@ -128,11 +140,23 @@ AWS PrivateLink service names
     - Coming soon
     - com.amazonaws.vpce.ap-southeast-2.vpce-svc-006a9808c3bf97fc1
 
+  * - eu-central-1
+    - com.amazonaws.vpce.eu-central-1.vpce-svc-0163ebbf011db95fa
+    - com.amazonaws.vpce.eu-central-1.vpce-svc-063722bf4a2e858a3
+    - Coming soon
+    - com.amazonaws.vpce.eu-central-1.vpce-svc-022080c55adaeac78
+
   * - eu-west-1
     - com.amazonaws.vpce.eu-west-1.vpce-svc-01c194b2265ecb86e
     - com.amazonaws.vpce.eu-west-1.vpce-svc-07b08296ff84e17a0
     - Coming soon
     - com.amazonaws.vpce.eu-west-1.vpce-svc-0d036df6dbc6ddadb
+
+  * - eu-west-2
+    - com.amazonaws.vpce.eu-west-2.vpce-svc-0f7427a7b9ef925b0
+    - com.amazonaws.vpce.eu-west-2.vpce-svc-0719f35de75c08514
+    - Coming soon
+    - com.amazonaws.vpce.eu-west-2.vpce-svc-0bc5b13127f2916ce
 
   * - us-east-1
     - com.amazonaws.vpce.us-east-1.vpce-svc-0336437d577075951
