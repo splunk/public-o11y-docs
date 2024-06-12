@@ -107,13 +107,13 @@ Splunk supports the following integration methods for Azure:
 Access your cloud service data in Splunk Observability Cloud
 ====================================================================
 
-After you've integrated your cloud services with Splunk Observability Cloud, you can access your data in the following locations:
+After you've integrated your cloud services with Splunk Observability Cloud, you can use the following methods to access your data:
 
-* :ref:`Infrastructure monitoring navigators <inframon-navigators-cloud>`
-* :ref:`Built-in dashboards <builtin-dashboards-cloud>`
-* :ref:`Metric finder <metric-finder-cloud>`
+* :ref:`inframon-navigators-cloud`
+* :ref:`builtin-dashboards-cloud`
+* :ref:`metric-finder-cloud`
 
-Use one of these methods to access your data. If you can see your data in the navigators, dashboards, or metric finder, then your integration is working.
+If you can see your data in navigators, dashboards, or in the metric finder, then your integration is working.
 
 .. _inframon-navigators-cloud:
 
@@ -122,13 +122,7 @@ View metrics in Infrastructure Monitoring navigators
 
 Splunk Observability Cloud uses navigators to display visualizations of your data. 
 
-To access the navigator for your cloud service provider, follow these steps:
-
-#. In Splunk Observability Cloud, select :guilabel:`Infrastructure`.
-#. In the :guilabel:`Public Cloud` section, select your cloud service provider.
-#. Select the appropriate navigator and find your instance.
-
-For example, the following AWS ELB navigator shows heat maps of load balancers. 
+For example, the following AWS ELB navigator shows heat maps and charts with load balancer data. 
 
    .. image:: /_images/gdi/elb-navigator-heatmap.png
       :width: 100%
@@ -147,28 +141,22 @@ View metrics in built-in dashboards for cloud services
 
 Splunk Observability Cloud provides built-in dashboards that display important data visualizations related to your cloud services.
 
-To access built-in dashboards, follow these steps:
-
-#. In Splunk Observability Cloud, select :guilabel:`Dashboards`.
-#. Select a dashboard group in the :guilabel:`Built-in dashboard groups` menu or use the search bar to find a dashboard group. 
-
 For example, the "AWS EC2" built-in dashboard group contains dashboards with visualizations of EC2 data:
 
 .. image:: /_images/gdi/dashboard-group-ec2.png
     :width: 100%
     :alt: The AWS EC2 dashboard group in Splunk Observability Cloud displaying several charts and visualizations with EC2 data. 
 
-For more information about using built-in dashboards to monitor your cloud services, see :ref:`builtin-dashboards-cloud`.
+To learn how to use built-in dashboards to monitor your cloud services, see :ref:`builtin-dashboards-cloud`.
 
 .. _metric-finder-cloud:
 
 Search for metrics using the metric finder
 -------------------------------------------------------
 
-You can use the metric finder to search for your cloud service metrics. Follow these steps:
+You can use the metric finder to search for your cloud service metrics. To learn more, see :ref:`metric-finder`.
 
-#. In Splunk Observability Cloud, select :guilabel:`Metric Finder`.
-#. Use the search bar to search for metrics provided by a cloud service. For a list of metrics provided by each cloud service, see the following:
+For lists of metrics provided by each cloud service, see the following:
 
    - :new-page:`AWS official documentation <https://docs.aws.amazon.com/index.html#general_resourcess>`
    - :ref:`GCP metrics <gcp-metrics>`

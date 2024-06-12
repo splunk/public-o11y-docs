@@ -13,41 +13,83 @@ Install the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` o
 - Send logs to Log Observer
 - Set up your environment to receive logs and traces from applications instrumented in step :ref:`gdi-4`
 
-After you've installed the Collector and configured your servers and clusters, you can access your data in the following locations:
+Install the OpenTelemetry Collector for your servers or clusters
+=======================================================================
 
-- View metrics in Infrastructure Monitoring navigators
+To receive infrastructure data from your servers and clusters, install and configure the Splunk Distribution of OpenTelemetry Collector for your server or cluster.
 
-   .. image:: /_images/infrastructure/hosts-navigator.png
-      :width: 100%
-      :alt: This screenshot shows the Hosts navigator in Splunk Infrastructure Monitoring displaying charts and visualizations of data collected from hosts.
+The OpenTelemetry Collector runs as an application or pod and listens for telemetry data from your servers or clusters. After finding data, the Collector sends it to Splunk Infrastructure Monitoring. To learn more about the Collector, see :ref:`otel-understand-use`.
 
-   For more information, see:
+Guided setup
+-----------------------
 
-      - :ref:`monitor-hosts`
-      - :Ref:`use-the-k8s-navigator`
+For a quick setup, you can follow a guided installation process through the Splunk Observability Cloud UI. To do so, see the documentation corresponding to your platform:
 
-- View metrics in :ref:`built-in dashboards <built-in-dashboards>` for hosts and Kubernetes
+* Linux: :ref:`get-started-linux`
+* Kubernetes :ref:`get-started-k8s`
+* Windows: :ref:`get-started-windows`
 
-- Search for metrics :ref:`using Metric Finder <metric-finder>`
+Manual setup
+------------------------
 
-- Query logs in :ref:`Log Observer <logs-timeline>`, if you chose to ingest logs
+If you're planning to use a more advanced setup for the OpenTelemetry Collector, you can manually install and configure the Collector. To do so, follow the setup guide corresponding to your platform:
 
-Steps
--------------------------------------------------------------------
+* Linux: :ref:`otel-install-linux-manual`
+* Kubernetes: :ref:`otel-install-k8s`
+* Windows: :ref:`otel-install-windows-manual`
 
-- To configure Windows servers, install the Splunk Distribution of OpenTelemetry Collector using the method that best suits your environment:
+View your infrastructure data in Splunk Infrastructure Monitoring
+=======================================================================
 
-   - :ref:`Use a wizard to install on Windows <get-started-windows>`
-   - :ref:`Manually install on Windows <otel-install-windows-manual>`
+After you've installed the Collector and configured your servers and clusters, you can use the following methods to access your data:
 
-- To configure Linux servers, install the Splunk Distribution of OpenTelemetry Collector using the method that best suits your environment:
+* :ref:`inframon-navigators`
+* :ref:`view-metrics-inframon`
+* :ref:`metric-finder-inframon`
+* :ref:`query-logs-inframon`
 
-   - :ref:`Use a wizard to install on Linux <get-started-linux>`
-   - :ref:`Manually install on Linux <otel-install-linux-manual>`
+If you can see your data in navigators, dashboards, or in the metric finder, then your integration is working.
 
-- To configure Kubernetes clusters, install the Splunk Distribution of OpenTelemetry Collector using the method that best suits your environment:
+.. _inframon-navigators:
 
-   - :ref:`Use a wizard to install in a Kubernetes cluster <get-started-k8s>`
-   - :ref:`Manually install in a Kubernetes cluster <otel-install-k8s>`
+View metrics in Infrastructure Monitoring navigators
+--------------------------------------------------------------
 
-One of the benefits of using the Splunk Distribution of OpenTelemetry Collector to send your data to Splunk Observability Cloud is that Related Content, a feature that activates users to seamlessly move between key views in Splunk Observability Cloud, is easier to implement. For more information, see :ref:`get-started-relatedcontent`.
+Splunk Observability Cloud uses navigators to display information about hosts and clusters.
+
+For example, the host navigator shows charts and other visualizations of host data:
+
+.. image:: /_images/infrastructure/hosts-navigator.png
+   :width: 100%
+   :alt: This screenshot shows the Hosts navigator in Splunk Infrastructure Monitoring displaying charts and visualizations of data collected from hosts.
+
+To learn how to use Infrastructure Monitoring navigators, see the following:
+
+* :ref:`monitor-hosts`
+* :ref:`use-the-k8s-navigator`
+
+.. _view-metrics-inframon:
+
+View metrics in built-in dashboards for hosts and Kubernetes
+----------------------------------------------------------------------------------------------
+
+Splunk Observability Cloud offers built-in dashboards that display charts for your infrastructure metrics. To find your metrics in these dashboards, see :ref:`built-in-dashboards`.
+
+.. _metric-finder-inframon:
+
+Search for metrics using the metric finder
+----------------------------------------------------------------------------------------------
+
+You can find your infrastructure metrics by using the Splunk metric finder. For more details, see :ref:`metric-finder`.
+
+.. _query-logs-inframon:
+
+Query logs in Log Observer, if you chose to ingest logs
+----------------------------------------------------------------------------------------------
+
+If you chose to ingest logs, you can query them in the Splunk Log Observer. For more information, see :ref:`logs-timeline`.
+
+Next steps
+=========================================
+
+To finalize setting up your infrastructure, see :ref:`configure-third-party-apps`.
