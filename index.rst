@@ -68,7 +68,7 @@ Install the Splunk Distribution of the OpenTelemetry Collector :ref:`otel-intro`
 .. rst-class:: newcard
 
 :strong:`Cloud providers`
-Integrate to collect service metrics and logs :ref:`get-started-connect`
+Integrate to collect service metrics :ref:`get-started-connect`
 
 .. rst-class:: newcard
 

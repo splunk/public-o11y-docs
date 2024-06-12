@@ -35,13 +35,7 @@ Locate your metrics
 See your logs 
 ------------------------------------------------------
 
-If you have access to Splunk Log Observer and selected the CloudWatch Logs option during configuration, you can review detailed log information. 
-
-.. caution:: Splunk Log Observer is no longer available for new users. You can continue to use Log Observer if you already have an entitlement.
-
-In the :guilabel:`Data Management` section, select :strong:`AWS` from the :guilabel:`Deployed Integrations` tab, then select your AWS integration to access the :guilabel:`Data Summary`. Select the :menuselection:`Log Events` tab and click :guilabel:`Explore Log Events` to view more details using Splunk Log Observer.
-
-For more information, see :ref:`Introduction to Splunk Log Observer <get-started-logs>`.
+To collect logs, see :ref:`aws-logs`.
 
 Use Dashboards and Related Content
 ------------------------------------------------------
@@ -70,7 +64,7 @@ Expand your data collection
 
 Splunk Observability Cloud uses OpenTelemetry to support efficient instrumentation so that you can see your metrics, traces, and logs.
 
-If you haven't already done so, you can install the Splunk Distribution of OpenTelemetry Collector to collect, process, and send data. See :ref:`Install the Splunk Distribution of OpenTelemetry Collector <otel-install-platform>` for details.
+If you haven't already done so, you can install the Splunk Distribution of the OpenTelemetry Collector to collect, process, and send data. See :ref:`Install the Splunk Distribution of OpenTelemetry Collector <otel-install-platform>` for details.
 
 You can also set up Splunk APM :ref:`Splunk APM <get-started-apm>` to monitor traces from your applications, provided you've already installed the Splunk Distribution of OpenTelemetry Collector. See :ref:`Introduction to Splunk APM <get-started-apm>` for details.
 
