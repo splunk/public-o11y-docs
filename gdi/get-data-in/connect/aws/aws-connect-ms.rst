@@ -95,7 +95,7 @@ Finally, proceed with the last steps:
 Review the default settings
 ==================================================
 
-After creating an AWS IAM policy and assigning it to a particular role through the guided setup, you can modify your configuration.
+After creating an AWS IAM policy and assigning it to a particular role through the guided setup you can modify your configuration.
 
 Modify the scope of data collection
 --------------------------------------------------
