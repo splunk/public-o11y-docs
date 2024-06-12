@@ -28,7 +28,8 @@ Select the QuickLink for a template which supports Metric Streams to open the AW
 
 .. list-table::
   :header-rows: 1
-  :widths: 15, 15, 20, 25, 25
+  :widths: 20, 20, 35, 35
+  :width: 100
 
   * - Supports Metric Streams
     - Deployment type
