@@ -7,23 +7,57 @@ Part 3: Configure third-party server applications to send metrics, logs, and tra
 .. meta:: 
     :description: Configure your third-party applications to send data to Splunk Observability Cloud.
 
-After you've completed step  and installed the Splunk Distribution of OpenTelemetry Collector on your servers (hosts) or in your clusters, configure the Collector's :ref:`native receivers <collector-components-receivers>` or :ref:`any of these third-party applications <monitor-data-sources>`, such as Apache, Cassandra, Hadoop, Kafka, and NGINX, to monitor your systems.
+After you've completed :ref:`send-server-cluster-data` and installed the Splunk Distribution of OpenTelemetry Collector on your servers (hosts) or in your clusters, configure the Collector's native receivers or third-party applications, such as Apache, Cassandra, Hadoop, Kafka, and NGINX, to monitor your systems.
 
-After you've configured the Collector's pipelines for your desired server applications, access your data in the following locations:
+Configuring these systems doesn't require any additional installation steps. Instead, you can use the Collector's configuration files to add servers and applications. 
 
-- View metrics using any built-in dashboards available for your server applications. For example, here is the built-in Kafka dashboard:
+Configure native receivers and third-party applications
+==============================================================
+
+Using the Collector's native receivers, you can gather metrics, traces, and logs from sources such as MySQL, MongoDB, and Kafka. To configure these receivers, see :ref:`otel-components`.
+
+You can also configure third-party applications to send data to Splunk Observability Cloud. For a list of these integrations, see :ref:`integrations-list`.
+
+View your data in Splunk Observability Cloud
+==============================================================
+
+After you've configured the Collector's pipelines for your desired server applications, use one of the following methods to access your data:
+
+* :ref:`third-party-built-in-dashboards`
+* :ref:`third-party-metric-finder`
+* :ref:`third-party-query-logs`
+
+If you can see your data in dashboards or in the metric finder, then your integration is working.
+
+.. _third-party-built-in-dashboards:
+
+View metrics using built-in dashboards available for your server applications
+------------------------------------------------------------------------------------------
+
+Splunk Observability Cloud uses navigators to display information about server applications.
+
+For example, the built-in Kafka dashboard shows visualizations for Kafka data:
 
    .. image:: /_images/gdi/kafka-dashboard.png
       :width: 100%
       :alt: This screenshot shows the Kafka built-in dashboard.
 
-   For more information about dashboards, see :ref:`view-dashboards`.
+For more information about dashboards, see :ref:`view-dashboards`.
 
-- Search for metrics :ref:`using Metric Finder <metric-finder>`. For the list of metrics provided by an application receiver, see the :ref:`documentation for the application receiver <monitor-data-sources>`.
+.. _third-party-metric-finder:
 
-- Query logs in :ref:`Log Observer <logs-timeline>`, if you chose to ingest logs
+Search for metrics using the metric finder
+---------------------------------------------------------------------
 
-- For SignalFx Forwarder only, you can:
+You can search for your server application metrics using the Splunk metric finder.
 
-      - View traces on the APM landing page to :ref:`assess the health of your applications <apm-landing-page>`
-      - View traces in the APM Explorer view to :ref:`assess dependencies among your applications <apm-service-map>`
+For the list of metrics provided by an application receiver, see the :ref:`documentation for the application receiver <monitor-data-sources>`.
+
+For information about how to use the metric finder, see :ref:`metric-finder`.
+
+.. _third-party-query-logs:
+
+Query logs in Log Observer, if you chose to ingest logs
+---------------------------------------------------------------------------------------
+
+If you chose to ingest logs, you can query them in the Splunk Log Observer. For more information, see :ref:`logs-timeline`.
