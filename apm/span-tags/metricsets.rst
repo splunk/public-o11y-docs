@@ -63,6 +63,8 @@ Spans might lack a ``kind`` value, or have a different ``kind`` value, in the fo
 
 In addition to the following default MMS, you can create custom MMS. See :ref:`cmms`.
 
+.. _default-mms:
+
 Available default MMS metrics and dimensions
 -----------------------------------------------
 
