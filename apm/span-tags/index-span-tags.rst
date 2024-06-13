@@ -12,7 +12,7 @@ Use span tags or processes to break down services and inter-service calls along 
 What are MetricSets?
 =========================
 
-MetricSets are metric time series (MTS) you can use to track the performance of specific metrics over time. To help you analyze your service performance, APM provides 2 categories of MetricSets: Troubleshooting MetricSets (TMS) and Monitoring MetricSets (MMS). Use Troubleshooting MetricSets for high-cardinality troubleshooting. Use Monitoring MetricSets used for real-time monitoring and alerting. 
+MetricSets are metric time series (MTS) you can use to track the performance of specific metrics over time. To help you analyze your service performance, APM provides 2 categories of MetricSets: Troubleshooting MetricSets (TMS) and Monitoring MetricSets (MMS). Use Troubleshooting MetricSets for high-cardinality troubleshooting. Use Monitoring MetricSets for real-time monitoring and alerting. 
 
 APM provides a collection of MetricSets by default. You can also index additional span tags or processes to generate additional TMS and, as part of the indexing process, you can opt to create custom dimensionalized Monitoring MetricSets (MMS). See :ref:`apm-MetricSets` for an overview of the types of MetricSets in APM and a list of the MetricSets available by default. 
 
