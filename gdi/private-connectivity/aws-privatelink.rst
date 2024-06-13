@@ -88,13 +88,13 @@ AWS PrivateLink endpoint URLs
     - Coming soon
     - :new-page:`private-stream.eu1.signalfx.com <http://private-stream.eu1.signalfx.com/>`
 
-    * - eu-west-1
+  * - eu-west-1
     - :new-page:`private-ingest.eu0.signalfx.com <http://private-ingest.eu0.signalfx.com/>`
     - :new-page:`private-api.eu0.signalfx.com <http://private-api.eu0.signalfx.com/>`
     - Coming soon
     - :new-page:`private-stream.eu0.signalfx.com <http://private-stream.eu0.signalfx.com/>`
 
-    * - eu-west-2
+  * - eu-west-2
     - :new-page:`private-ingest.eu2.signalfx.com <http://private-ingest.eu2.signalfx.com/>`
     - :new-page:`private-api.eu2.signalfx.com <http://private-api.eu2.signalfx.com/>`
     - Coming soon
