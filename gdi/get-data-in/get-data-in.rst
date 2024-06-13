@@ -33,3 +33,21 @@ For standard environments and workflows, perform all the steps described below t
 
 How to use this guide
 =============================
+
+Next: Leverage the full benefits of Splunk Observability Cloud
+=============================================================================
+
+Now that you have your desired full stack of data coming into Splunk Observability Cloud, consider exploring the following features that can help you monitor, visualize, and coordinate team work around your data:
+
+- :ref:`Create detectors <create-detectors>` to receive alerts about conditions in your data that are important you.
+- :ref:`Create charts <create-charts>` to visualize your data.
+- :ref:`Use Related Content <get-started-relatedcontent>` to jump between components of Splunk Observability Cloud by clicking related data.
+- :ref:`Create and customize dashboards <dashboard-create-customize>` to organize and share your charts.
+- :ref:`admin-manage-teams` to coordinate team work around your data.
+- Check system critical metrics, access real-time alerts, and view mobile-friendly dashboards on the go using the :ref:`Splunk Observability Cloud mobile app <intro-to-mobile>`.
+- Learn more about :ref:`the Splunk Observability Cloud data model <data-model>`.
+- Learn more about each product in the Splunk Observability Cloud suite:
+   - :ref:`get-started-apm`
+   - :ref:`get-started-infrastructure`
+   - :ref:`get-started-logs`
+   - :ref:`get-started-rum`
