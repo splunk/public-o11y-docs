@@ -21,8 +21,9 @@ Learn more about the Collector's configuration and data processing at:
 
 .. note:: 
 
-  In addition to the metrics shown on this page, most instances also send metrics from the :ref:`kubernetes-cluster-receiver`. Cluster Receiver metrics are an important part of monitoring any kubernets installation. Refer to that page as well as the metrics listed here. 
-  To see the Collector's internal metrics, refer to :ref:`metrics-internal-collector`.
+  In addition to the metrics shown on this page, most Collector instances also send metrics from the :ref:`kubernetes-cluster-receiver`, which are an important part of monitoring any Kubernetes installation. Refer to that page as well as the metrics listed here. 
+  
+  For the Collector's internal metrics, see :ref:`metrics-internal-collector`.
 
 Container level metrics and dimensions
 ============================================================================
