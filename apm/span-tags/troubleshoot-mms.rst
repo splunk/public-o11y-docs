@@ -58,7 +58,7 @@ The following table outlines the difference between endpoint and service level M
     
       * - * If you already know which endpoints you're interested in, start with an endpoint level MetricSet to help reduce the cardinality of your MetricSet
           * To select a subset of endpoints, you can add a list or write a regular expression pattern to match the endpoints you want to track 
-        - * If you are interested in metrics about the overall health of you service, start with a service level MetricSet 
+        - * If you are interested in metrics about the overall health of your service, start with a service-level MetricSet 
           * The Monitoring MetricSets at the service level are an aggregation of the metric sets at the endpoint-level
           * If you don't specify any filters, then the tag is added to all of the endpoints for the Monitoring MetricSet for the service
 
