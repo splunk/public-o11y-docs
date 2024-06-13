@@ -17,7 +17,7 @@ You can access the service view for a specific service in several places.
 
 You can search for the service using the search in the top toolbar.
 
-..  image:: /_images/apm/spans-traces/service-view-global-search.gif
+..  image:: /_images/apm/spans-traces/service-view-global-search+traces.gif
     :width: 95%
     :alt: Animation showing a user searching for the checkoutservice and selecting the service result. 
 
@@ -39,7 +39,7 @@ Service metrics
 
 Use the following metrics in the :guilabel:`Service metrics` section to monitor the health of your service. Collapse sub-sections that are not relevant to you to customize your service view.
 
-..  image:: /_images/apm/spans-traces/service-view-service-metrics.gif
+..  image:: /_images/apm/spans-traces/service-view-service-metrics+traces.gif
     :width: 95%
     :alt: This animation shows the service metrics for a service in the service view. The user select a chart to view example traces.
 
@@ -103,9 +103,9 @@ The connection and indices you select are saved for all users in your organizati
 View traces for your service
 ===============================
 
-Select :guilabel:`Traces` to view traces for the environment and service you are viewing. The :guilabel:`Traces` tab includes charts for :guilabel:`Service requests` and errors and :guilabel:`Service latency`. Select within the charts to see example traces. 
+Select :guilabel:`Traces` to view traces for the environment and service you are viewing. The :guilabel:`Traces` tab includes charts for :guilabel:`Service requests and errors` and :guilabel:`Service latency`. Select within the charts to see example traces. 
 
-Under the charts are lists of :guilabel:`Traces with errors` and ::guilabel:`Long traces`. Select the trace ID link to open the trace in trace waterfall view. Select :guilabel:`View more in Trace Analyzer` to search additional traces. See :ref:`trace-analyzer` for more information about using Trace Analyzer to search traces.
+Under the charts are lists of :guilabel:`Traces with errors` and :guilabel:`Long traces`. Select the trace ID link to open the trace in trace waterfall view. Select :guilabel:`View more in Trace Analyzer` to search additional traces. See :ref:`trace-analyzer` for more information about using Trace Analyzer to search traces.
 
 Go to the code profiling view for your service
 =====================================================
