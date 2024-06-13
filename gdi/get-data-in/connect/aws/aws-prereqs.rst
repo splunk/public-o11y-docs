@@ -44,7 +44,7 @@ To create a new AWS IAM policy, follow these steps:
 #. Create a new policy. In the :strong:`JSON` tab, replace the placeholder JSON with the pertinent AWS IAM policy JSON. Guided setup provides this policy in the :guilabel:`Prepare AWS Account` step. See also some :ref:`policy examples <review-aws-iam-policy>`.
 #. Follow the instructions to complete the process and create the policy.
 
-.. :note:: The default AWS IAM policy supports metrics and log collection. To learn how to add support for CloudWatch Metric Streams, see :ref:`aws-wizard-metricstreams`.
+.. :note:: The default AWS IAM policy supports metric collection. To learn how to add support for CloudWatch Metric Streams, see :ref:`aws-wizard-metricstreams`.
 
 If you have any doubts, check AWS documentation.  
 
@@ -78,6 +78,8 @@ When you're creating the new permission for your user and are prompted for an ac
 
 Required permissions
 =====================================================
+
+.. caution:: The list of permissions described in this section is updated frequently. If you connected your AWS services to Splunk Observability Cloud a while ago you might need to update them.
 
 These are the required permissions to collect AWS data:
 

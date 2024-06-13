@@ -40,7 +40,7 @@ To learn more about creating and managing teams, see :ref:`admin-manage-team-mem
 .. raw:: html
 
   <embed>
-    <h3>Link teams to relevant Observability Cloud features and content</h3>
+    <h3>Link teams to relevant Splunk Observability Cloud features and content</h3>
   </embed>
 
 You can link teams to relevant dashboard groups and detectors, giving them focused access to the information they use the most.

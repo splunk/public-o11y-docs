@@ -23,7 +23,7 @@ Monitor and manage subscription usage and billing
 
 View Splunk Observability Cloud subscription usage data to monitor your organization's usage against its subscription plan and entitlements. 
 
-You must be an Splunk Observability Cloud administrator to view the Subscription Usage page for your organization. Go to :guilabel:`Settings` then :guilabel:`Subscription Usage`.
+You must be a Splunk Observability Cloud administrator to view the Subscription Usage page for your organization. Go to :guilabel:`Settings` then :guilabel:`Subscription Usage`.
 
 .. _usage-source:
 

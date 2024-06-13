@@ -26,7 +26,7 @@ To view the contents of an individual log record, follow these steps:
    * To filter the Logs table so it doesn't display log records containing the selected value, select :menuselection:`Exclude from filter`.
    * To add the field as a new column in the  Logs table, select :menuselection:`Add field as column`.
    * Select :menuselection:`View <field_name>` to go to the appropriate view in the Splunk Observability Cloud. For
-     example, if you select a field related to Kubernetes, Observability Cloud displays related data in the Kubernetes Navigator.
-     If you select fields related to APM, such as :menuselection:`View trace_id` or :menuselection:`View span_id`, Observability Cloud displays the trace or span in the APM Navigator.
+     example, if you select a field related to Kubernetes, Splunk Observability Cloud displays related data in the Kubernetes Navigator.
+     If you select fields related to APM, such as :menuselection:`View trace_id` or :menuselection:`View span_id`, Splunk Observability Cloud displays the trace or span in the APM Navigator.
 
 

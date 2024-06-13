@@ -3508,7 +3508,7 @@ msgid "Step 1: Create an Amazon EventBridge integration in Observability Cloud"
 msgstr "ステップ1：Observability CloudでAmazon EventBridgeインテグレーションを作成する"
 
 #: ../../admin/notif-services/amazoneventbridge.rst:31 ../../admin/notif-services/amazoneventbridge.rst:63
-msgid "Prerequiste"
+msgid "Prerequisite"
 msgstr "前提条件"
 
 #: ../../admin/notif-services/amazoneventbridge.rst:33

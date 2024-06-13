@@ -30,7 +30,7 @@ In Log Observer Connect, you can perform codeless queries on your Splunk Enterpr
 =========================================
 What can I do with Log Observer?
 =========================================
-The following table lists features available to customers with a Log Observer entitlement. If you don't have a Log Observer entitlement in Observability Cloud, see :ref:`logs-intro-logconnect` to discover features available to customers of the Splunk platform integration.
+The following table lists features available to customers with a Log Observer entitlement. If you don't have a Log Observer entitlement in Splunk Observability Cloud, see :ref:`logs-intro-logconnect` to discover features available to customers of the Splunk platform integration.
 
 .. list-table::
    :header-rows: 1
@@ -68,7 +68,7 @@ The following table lists features available to customers with a Log Observer en
      - Search-time rules
      - :ref:`logs-search-time-rules`
 
-   * - Transform your data or a subset of your data as it arrives in Observability Cloud.
+   * - Transform your data or a subset of your data as it arrives in Splunk Observability Cloud.
      - Log processing rules
      - :ref:`logs-processors`
 
@@ -86,4 +86,4 @@ Get started with Log Observer
 =========================================
 If you have a Log Observer entitlement and want to set up Log Observer and start performing queries on your logs, see :ref:`logs-logs`.
 
-If you don't have a Log Observer entitlement in Observability Cloud, see :ref:`logs-set-up-logconnect` or :ref:`logs-scp` to learn how to set up Log Observer Connect and begin querying your Splunk platform logs.
+If you don't have a Log Observer entitlement in Splunk Observability Cloud, see :ref:`logs-set-up-logconnect` or :ref:`logs-scp` to learn how to set up Log Observer Connect and begin querying your Splunk platform logs.

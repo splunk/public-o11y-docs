@@ -12,7 +12,7 @@ Introduction to Splunk Log Observer Connect
 
 If you have a Log Observer entitlement rather than Log Observer Connect, see :ref:`get-started-logs`. 
 
-Splunk Log Observer Connect is an integration that allows you to query your Splunk Enterprise or Splunk Cloud Platform logs using the capabilities of Splunk Log Observer and :ref:`Related Content <get-started-relatedcontent>` in Splunk Observability Cloud. With Log Observer Connect, you can troubleshoot your application and infrastructure behavior using high-context logs. Perform codeless queries on your Splunk Enterprise or Splunk Cloud Platform logs to detect the source of problems in your systems, then jump to Related Content throughout Splunk Observability Cloud in one click. Seeing your logs data correlated with metrics and traces in Observability Cloud helps your team to locate and resolve problems exponentially faster.
+Splunk Log Observer Connect is an integration that allows you to query your Splunk Enterprise or Splunk Cloud Platform logs using the capabilities of Splunk Log Observer and :ref:`Related Content <get-started-relatedcontent>` in Splunk Observability Cloud. With Log Observer Connect, you can troubleshoot your application and infrastructure behavior using high-context logs. Perform codeless queries on your Splunk Enterprise or Splunk Cloud Platform logs to detect the source of problems in your systems, then jump to Related Content throughout Splunk Observability Cloud in one click. Seeing your logs data correlated with metrics and traces in Splunk Observability Cloud helps your team to locate and resolve problems exponentially faster.
 
 Region and version availability
 ==============================================================
@@ -22,7 +22,7 @@ Customers cannot access logs from a GovCloud environment through Log Observer Co
 
 What can I do with Log Observer Connect?
 ==============================================================
-The following table lists features available to customers who have integrated Splunk Enterprise or Splunk Cloud Platform with Log Observer, allowing them to use Log Observer Connect. If you have a Log Observer entitlement in Observability Cloud, see :ref:`get-started-logs` for a complete list of Log Observer features.
+The following table lists features available to customers who have integrated Splunk Enterprise or Splunk Cloud Platform with Log Observer, allowing them to use Log Observer Connect. If you have a Log Observer entitlement in Splunk Observability Cloud, see :ref:`get-started-logs` for a complete list of Log Observer features.
 
 .. list-table::
    :header-rows: 1

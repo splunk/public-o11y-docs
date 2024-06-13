@@ -5,7 +5,7 @@ Authentication and Security
 ********************************************************************************
 
 .. meta::
-   :description: Overview of the Observability Cloud admin tasks and links to the documentation.
+   :description: Overview of the Splunk Observability Cloud admin tasks and links to the documentation.
 
 .. toctree::
    :hidden:

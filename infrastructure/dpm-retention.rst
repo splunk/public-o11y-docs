@@ -22,10 +22,10 @@ The primary factor in selecting a native resolution is the incoming rate of the 
 Chart data resolution
 ============================================================================
 
-When it renders charts, Observability Cloud defaults to a display resolution based on the time range of the chart.
+When it renders charts, Splunk Observability Cloud defaults to a display resolution based on the time range of the chart.
 In general, shorter time ranges have a fine resolution, and the chart resolution is more likely to be the same as the native resolution.
 Conversely, longer time ranges have a coarse resolution, and the chart resolution is more likely to differ from the native resolution.
-For longer time range charts, Observability Cloud ensures that the displayed points accurately reflect the actual data points
+For longer time range charts, Splunk Observability Cloud ensures that the displayed points accurately reflect the actual data points
 by using :ref:`rollups<rollups>`.
 
 The chart resolution of a chart appears next to the title of the chart in the Chart Builder or on the dashboard that contains
@@ -36,7 +36,7 @@ Plots with different resolutions
 -------------------------------------------------------------------
 
 A chart can contain multiple plots, each of which represents a different metric time series (MTS).
-Each MTS can have its own resolution. Observability Cloud chooses one resolution per chart,
+Each MTS can have its own resolution. Splunk Observability Cloud chooses one resolution per chart,
 and for multiple plots the chart uses the coarsest resolution. Using this resolution lines up data points to facilitate plots and computations.
 
 For example, metrics from AWS CloudWatch typically have a
@@ -57,7 +57,7 @@ list shows you the options and, in parentheses, the appearance of the option in 
 * One minute (1m)
 * One hour (1h).
 
-The value you select specifies the minimum interval that Observability Cloud uses to roll up data point values
+The value you select specifies the minimum interval that Splunk Observability Cloud uses to roll up data point values
 that appear in the chart.
 
 * To learn more about chart rollups, see :ref:`rollups`.

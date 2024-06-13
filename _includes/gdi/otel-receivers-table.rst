@@ -6,6 +6,7 @@
 * :ref:`filelog-receiver`   
 * :ref:`fluentd-receiver`
 * :ref:`host-metrics-receiver`
+* :ref:`http-check-receiver`
 * :ref:`jaeger-receiver`    
 * :ref:`jmx-receiver`
 * :ref:`journald-receiver`

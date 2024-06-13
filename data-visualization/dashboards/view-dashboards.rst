@@ -32,13 +32,13 @@ At the top of the page you can see a list of your :ref:`favorite dashboards<db-f
 View dashboards in fullscreen mode
 =====================================
 
-Observability Cloud offers a fullscreen mode for dashboards. Fullscreen mode is a space-optimized display for displaying your metric data on a TV or other device.
+Splunk Observability Cloud offers a fullscreen mode for dashboards. Fullscreen mode is a space-optimized display for displaying your metric data on a TV or other device.
 
 To display a dashboard in fullscreen mode, open the :strong:`Dashboard actions` menu and select :strong:`View Fullscreen`.
 
 To exit fullscreen mode, press the Esc key.
 
-While in fullscreen mode, Observability Cloud resizes available dashboard charts in an attempt to fill the screen based on the maximum number of rows in the dashboard. It also removes any extraneous whitespace and controls typically not needed when the dashboard is passively viewed.
+While in fullscreen mode, Splunk Observability Cloud resizes available dashboard charts in an attempt to fill the screen based on the maximum number of rows in the dashboard. It also removes any extraneous whitespace and controls typically not needed when the dashboard is passively viewed.
 
 The minimum size allowed for a chart is 160 pixels vertically. For common resolutions, this means the following when in fullscreen mode:
 

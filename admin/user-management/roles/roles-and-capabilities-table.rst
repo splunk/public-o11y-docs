@@ -1,8 +1,8 @@
 .. _roles-table-phase:
 
-***************************************************
-Splunk Observability Cloud roles
-***************************************************
+
+Splunk Observability Cloud matrix of roles and capabilities
+******************************************************************
 
 .. meta::
    :description: Matrix of Splunk Observability Cloud user roles and capabilities.
