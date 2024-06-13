@@ -73,7 +73,7 @@ You can also filter by specific tag values to further reduce the cardinality of 
    * - service-level MMS and endpoint-level MMS for all endpoints within a service
      -  This option creates a custom dimensionalized MMS for each selected service, as well as an MMS for each endpoint in each selected service. This is the highest cardinality option. 
    * - service-level MMS and endpoint-level MMS for specific endpoints
-     - This option creates a custom dimensionalized MMS for each selected service and an MMS for specific endpoints you select. In the box labeled :guilabel:`Endpoint Filters, provide a list of endpoints or a regular expression pattern to generate MMS for specific endpoints you're interested in. This helps you to minimize unnecessary cardinality`.
+     - This option creates a custom dimensionalized MMS for each selected service and an MMS for specific endpoints you select. In the box labeled :guilabel:`Endpoint Filters`, provide a list of endpoints or a regular expression pattern to generate MMS for specific endpoints you're interested in. This helps you to minimize unnecessary cardinality`.
    * - Service-level MMS only
      - This option creates an MMS for each selected service and no endpoint-level MMS. This is the lowest cardinality option. 
 
