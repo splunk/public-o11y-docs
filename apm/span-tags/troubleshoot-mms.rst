@@ -29,7 +29,7 @@ If you have high-cardinality metrics that exceed the system limit or the subscri
 * Add a :strong:`filter by tag` value to reduce the number of results.
 * Remove or filter existing Monitoring MetricSets. The cardinality check in APM estimates your total cardinality of existing MMS in addition to your proposed changes.  
 * MetricSets with zero cardinality are not valid. If you have zero cardinality, verify that your configuration details are correct or try again after you are ingesting the relevant tracing data. 
-* Try run the cardinality check again if the Monitoring MetricSet timed out.
+* Try to run the cardinality check again if the Monitoring MetricSet timed out.
 * Provide a list of tag values or a regular expression in the MMS. 
 
 For more information on troubleshooting high and low cardinality, see :ref:`Guidelines for working with low and high cardinality data<guideline-cardinality>`. 
