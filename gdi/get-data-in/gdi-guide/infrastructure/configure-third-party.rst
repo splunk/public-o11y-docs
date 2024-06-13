@@ -57,7 +57,7 @@ For information about how to use the metric finder, see :ref:`metric-finder`.
 
 .. _third-party-query-logs:
 
-Query logs in Log Observer, if you chose to ingest logs
+Query logs in Log Observer
 ---------------------------------------------------------------------------------------
 
 If you chose to ingest logs, you can query them in the Splunk Log Observer. For more information, see :ref:`logs-timeline`.

@@ -1,7 +1,7 @@
 .. _get-started-get-data-in:
 
 ****************************************************************
-Get data into Splunk Observability Cloud (DRAFT)
+Get data into Splunk Observability Cloud 
 ****************************************************************
 
 .. meta:: 
@@ -30,3 +30,6 @@ Here's a high-level overview of your options for getting data from each layer of
 .. source in Figma: https://www.figma.com/file/0tm4yT04K6MlwM7dMA62ad/Docs-Graphic
 
 For standard environments and workflows, perform all the steps described below to get the most out of Splunk Observability Cloud. However, depending on your observability goals and environment, you can choose to perform only a subset of the steps. For example, if you don't use every Splunk Observability Cloud product, or if you don't want to collect data from every eligible data source.
+
+How to use this guide
+=============================
