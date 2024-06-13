@@ -100,6 +100,13 @@ To select a different connection or refine which indices logs are pulled from, s
 
 The connection and indices you select are saved for all users in your organization for each unique service and environment combination.
 
+View traces for your service
+===============================
+
+Select :guilabel:`Traces` to view traces for the environment and service you are viewing. The :guilabel:`Traces` tab includes charts for :guilabel:`Service requests` and errors and :guilabel:`Service latency`. Select within the charts to see example traces. 
+
+Under the charts are lists of :guilabel:`Traces with errors` and ::guilabel:`Long traces`. Select the trace ID link to open the trace in trace waterfall view. Select :guilabel:`View more in Trace Analyzer` to search additional traces. See :ref:`trace-analyzer` for more information about using Trace Analyzer to search traces.
+
 Go to the code profiling view for your service
 =====================================================
 
