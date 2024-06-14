@@ -1,7 +1,7 @@
 .. _azure-connect:
 
 **************************************************************
-Connect to Azure: Guided install and other options 
+Connect to Azure: Guided setup and other options 
 **************************************************************
 
 .. meta::
@@ -83,7 +83,7 @@ Choose the data you want to send to Splunk Observability Cloud:
 
     * The resource stores its metrics in Azure Monitor. To learn more about Azure Monitor, refer to the Microsoft Azure documentation.
 
-* Optional: Use the :guilabel:`Add Tag` button to create a tag if you want to monitor only tagged data sources, filling out the ``tag name`` and ``tag value`` fields separately to create a tag pair.
+* Optional: Use the :guilabel:`Add Tag` button to create a tag if you want to monitor only tagged data sources, filling out the ``tag name`` and ``tag value`` fields separately to create a tag pair. When tagging, Splunk Observability Cloud only allows alphanumeric characters, and the underscore and minus symbols. Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character. 
 
 .. _connect-azure-other:
 
@@ -114,5 +114,5 @@ After you connect your Azure account to Splunk Observability Cloud, you can do t
 * Import Azure metrics, traces, and metadata. For details about the metrics provided by an Azure integration, see :ref:`azure-metrics`.
 * Learn about Splunk Observability Cloud's :ref:`Azure Infrastructure Monitoring options <infrastructure-azure>`. 
 * Use Splunk Observability Cloud tools to monitor your Azure services, such as :ref:`navigators <use-navigators-imm>` and :ref:`dashboards <azure-dashboards>`.
-* Filter Azure monitoring results using tags or dimensions such as ``region`` and ``host name``. When tagging, Splunk Observability Cloud only allows alphanumeric characters, and the underscore and minus symbols. Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character. 
+* Filter Azure monitoring results using tags or dimensions such as ``region`` and ``host name``. 
 * To send logs from Azure to Splunk, see :ref:`ingest-azure-log-data`.
