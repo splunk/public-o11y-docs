@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-07 09:20+0000\n"
-"PO-Revision-Date: 2024-05-21 13:47+0100\n"
+"PO-Revision-Date: 2024-06-14 10:42+0100\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -110,7 +110,7 @@ msgid ""
 "google/workbook/alerting-on-slos/>` on Google's Site Reliability Workbook."
 msgstr ""
 "以下の表は、異なるロングウィンドウとショートウィンドウに対する燃焼率のしきい値の推定値を示しています。ショートウィンドウは、Googleが提案するように、ロングウィンドウの1/12です。詳しくは、Google の Site Reliability Workbook の :"
-"new-page:`Alerting on SLOs <https://sre.google/workbook/alerting-on-slos/>` をご覧ください。"
+"new-page:`Alerting on SLOs<https://sre.google/workbook/alerting-on-slos/>` をご覧ください。"
 
 #: ../../slo/burn-rate-alerts.rst:44
 msgid "Burn rate for a 99.9% SLO with a 30-day compliance window"
@@ -483,7 +483,7 @@ msgstr "SLO を編集する"
 
 #: ../../slo/view-slo.rst:26 ../../slo/view-slo.rst:34
 msgid "On the :strong:`Service Level Objectives (SLOs)` page, select the more icon (|more|) next to the SLO you want to edit."
-msgstr ":strong:`サービスレベル目標（SLO）` ページで、編集する SLO の横にある詳細アイコン（|more|）を選択します。"
+msgstr ":strong:`サービスレベル目標（SLO）` ページで、編集する SLO の横にある詳細アイコン（|more| ）を選択します。"
 
 #: ../../slo/view-slo.rst:27
 msgid "In the actions menu, select :menuselection:`Edit`."

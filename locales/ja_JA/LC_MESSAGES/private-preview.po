@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-18 13:27+0000\n"
-"PO-Revision-Date: 2024-05-21 15:33+0100\n"
+"POT-Creation-Date: 2024-05-21 15:02+0000\n"
+"PO-Revision-Date: 2024-06-14 10:42+0100\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -81,21 +81,25 @@ msgstr ":strong:`アクセス許可`"
 
 #: ../../_includes/admin/roles_alerts_detectors.rst:8 ../../_includes/admin/roles_apm.rst:6 ../../_includes/admin/roles_data_configuration.rst:6 ../../_includes/admin/roles_help_support.rst:7 ../../_includes/admin/roles_log_observer.rst:8
 #: ../../_includes/admin/roles_mpm.rst:8 ../../_includes/admin/roles_navigation.rst:8 ../../_includes/admin/roles_navs_dashbds.rst:7 ../../_includes/admin/rum-roles-caps.rst:6 ../../_includes/admin/synth-roles-caps.rst:6
+#, fuzzy
 msgid ":strong:`admin`"
 msgstr ":strong:`admin`"
 
 #: ../../_includes/admin/roles_alerts_detectors.rst:9 ../../_includes/admin/roles_apm.rst:7 ../../_includes/admin/roles_data_configuration.rst:7 ../../_includes/admin/roles_help_support.rst:8 ../../_includes/admin/roles_log_observer.rst:9
 #: ../../_includes/admin/roles_mpm.rst:9 ../../_includes/admin/roles_navigation.rst:9 ../../_includes/admin/roles_navs_dashbds.rst:8 ../../_includes/admin/rum-roles-caps.rst:7 ../../_includes/admin/synth-roles-caps.rst:7
+#, fuzzy
 msgid ":strong:`power`"
 msgstr ":strong:`power`"
 
 #: ../../_includes/admin/roles_alerts_detectors.rst:10 ../../_includes/admin/roles_apm.rst:8 ../../_includes/admin/roles_data_configuration.rst:8 ../../_includes/admin/roles_help_support.rst:9 ../../_includes/admin/roles_log_observer.rst:10
 #: ../../_includes/admin/roles_mpm.rst:10 ../../_includes/admin/roles_navigation.rst:10 ../../_includes/admin/roles_navs_dashbds.rst:9 ../../_includes/admin/rum-roles-caps.rst:8 ../../_includes/admin/synth-roles-caps.rst:8
+#, fuzzy
 msgid ":strong:`usage`"
 msgstr ":strong:`usage`"
 
 #: ../../_includes/admin/roles_alerts_detectors.rst:11 ../../_includes/admin/roles_apm.rst:9 ../../_includes/admin/roles_data_configuration.rst:9 ../../_includes/admin/roles_help_support.rst:10 ../../_includes/admin/roles_log_observer.rst:11
 #: ../../_includes/admin/roles_mpm.rst:11 ../../_includes/admin/roles_navigation.rst:11 ../../_includes/admin/roles_navs_dashbds.rst:10 ../../_includes/admin/rum-roles-caps.rst:9 ../../_includes/admin/synth-roles-caps.rst:9
+#, fuzzy
 msgid ":strong:`read_only`"
 msgstr ":strong:`read_only`"
 
@@ -110,40 +114,41 @@ msgstr ":strong:`メトリクスパイプライン管理メトリクスサマリ
 #: ../../_includes/admin/roles_alerts_detectors.rst:52 ../../_includes/admin/roles_alerts_detectors.rst:53 ../../_includes/admin/roles_alerts_detectors.rst:58 ../../_includes/admin/roles_alerts_detectors.rst:59
 #: ../../_includes/admin/roles_alerts_detectors.rst:64 ../../_includes/admin/roles_alerts_detectors.rst:65 ../../_includes/admin/roles_alerts_detectors.rst:70 ../../_includes/admin/roles_alerts_detectors.rst:71
 #: ../../_includes/admin/roles_alerts_detectors.rst:76 ../../_includes/admin/roles_alerts_detectors.rst:77 ../../_includes/admin/roles_alerts_detectors.rst:78 ../../_includes/admin/roles_alerts_detectors.rst:79
-#: ../../_includes/admin/roles_alerts_detectors.rst:82 ../../_includes/admin/roles_alerts_detectors.rst:83 ../../_includes/admin/roles_apm.rst:12 ../../_includes/admin/roles_apm.rst:13 ../../_includes/admin/roles_apm.rst:14
-#: ../../_includes/admin/roles_apm.rst:15 ../../_includes/admin/roles_apm.rst:18 ../../_includes/admin/roles_apm.rst:24 ../../_includes/admin/roles_apm.rst:25 ../../_includes/admin/roles_apm.rst:26 ../../_includes/admin/roles_apm.rst:27
-#: ../../_includes/admin/roles_apm.rst:30 ../../_includes/admin/roles_apm.rst:36 ../../_includes/admin/roles_apm.rst:37 ../../_includes/admin/roles_apm.rst:38 ../../_includes/admin/roles_apm.rst:39 ../../_includes/admin/roles_apm.rst:42
-#: ../../_includes/admin/roles_data_configuration.rst:12 ../../_includes/admin/roles_data_configuration.rst:13 ../../_includes/admin/roles_data_configuration.rst:14 ../../_includes/admin/roles_data_configuration.rst:15
-#: ../../_includes/admin/roles_data_configuration.rst:18 ../../_includes/admin/roles_data_configuration.rst:25 ../../_includes/admin/roles_data_configuration.rst:26 ../../_includes/admin/roles_data_configuration.rst:27
-#: ../../_includes/admin/roles_data_configuration.rst:28 ../../_includes/admin/roles_help_support.rst:13 ../../_includes/admin/roles_help_support.rst:14 ../../_includes/admin/roles_help_support.rst:15 ../../_includes/admin/roles_help_support.rst:16
-#: ../../_includes/admin/roles_help_support.rst:19 ../../_includes/admin/roles_help_support.rst:20 ../../_includes/admin/roles_help_support.rst:21 ../../_includes/admin/roles_help_support.rst:22 ../../_includes/admin/roles_log_observer.rst:15
-#: ../../_includes/admin/roles_log_observer.rst:16 ../../_includes/admin/roles_log_observer.rst:17 ../../_includes/admin/roles_log_observer.rst:18 ../../_includes/admin/roles_log_observer.rst:22 ../../_includes/admin/roles_log_observer.rst:23
-#: ../../_includes/admin/roles_log_observer.rst:24 ../../_includes/admin/roles_log_observer.rst:25 ../../_includes/admin/roles_log_observer.rst:28 ../../_includes/admin/roles_log_observer.rst:29 ../../_includes/admin/roles_log_observer.rst:30
-#: ../../_includes/admin/roles_log_observer.rst:31 ../../_includes/admin/roles_log_observer.rst:34 ../../_includes/admin/roles_log_observer.rst:35 ../../_includes/admin/roles_log_observer.rst:36 ../../_includes/admin/roles_log_observer.rst:37
-#: ../../_includes/admin/roles_log_observer.rst:40 ../../_includes/admin/roles_log_observer.rst:41 ../../_includes/admin/roles_log_observer.rst:46 ../../_includes/admin/roles_log_observer.rst:47 ../../_includes/admin/roles_log_observer.rst:48
-#: ../../_includes/admin/roles_log_observer.rst:49 ../../_includes/admin/roles_log_observer.rst:52 ../../_includes/admin/roles_log_observer.rst:53 ../../_includes/admin/roles_log_observer.rst:58 ../../_includes/admin/roles_log_observer.rst:59
-#: ../../_includes/admin/roles_log_observer.rst:64 ../../_includes/admin/roles_log_observer.rst:65 ../../_includes/admin/roles_log_observer.rst:70 ../../_includes/admin/roles_log_observer.rst:71 ../../_includes/admin/roles_log_observer.rst:72
-#: ../../_includes/admin/roles_log_observer.rst:76 ../../_includes/admin/roles_log_observer.rst:77 ../../_includes/admin/roles_log_observer.rst:82 ../../_includes/admin/roles_log_observer.rst:83 ../../_includes/admin/roles_log_observer.rst:88
-#: ../../_includes/admin/roles_log_observer.rst:94 ../../_includes/admin/roles_log_observer.rst:100 ../../_includes/admin/roles_log_observer.rst:102 ../../_includes/admin/roles_log_observer.rst:106 ../../_includes/admin/roles_mpm.rst:15
-#: ../../_includes/admin/roles_mpm.rst:16 ../../_includes/admin/roles_mpm.rst:17 ../../_includes/admin/roles_mpm.rst:18 ../../_includes/admin/roles_mpm.rst:22 ../../_includes/admin/roles_mpm.rst:23 ../../_includes/admin/roles_mpm.rst:24
-#: ../../_includes/admin/roles_mpm.rst:25 ../../_includes/admin/roles_mpm.rst:28 ../../_includes/admin/roles_mpm.rst:34 ../../_includes/admin/roles_mpm.rst:35 ../../_includes/admin/roles_mpm.rst:40 ../../_includes/admin/roles_mpm.rst:41
-#: ../../_includes/admin/roles_mpm.rst:46 ../../_includes/admin/roles_mpm.rst:47 ../../_includes/admin/roles_mpm.rst:52 ../../_includes/admin/roles_mpm.rst:53 ../../_includes/admin/roles_mpm.rst:58 ../../_includes/admin/roles_mpm.rst:59
-#: ../../_includes/admin/roles_mpm.rst:64 ../../_includes/admin/roles_mpm.rst:65 ../../_includes/admin/roles_mpm.rst:70 ../../_includes/admin/roles_navigation.rst:14 ../../_includes/admin/roles_navigation.rst:20
-#: ../../_includes/admin/roles_navigation.rst:26 ../../_includes/admin/roles_navigation.rst:27 ../../_includes/admin/roles_navigation.rst:28 ../../_includes/admin/roles_navigation.rst:29 ../../_includes/admin/roles_navigation.rst:32
-#: ../../_includes/admin/roles_navigation.rst:38 ../../_includes/admin/roles_navigation.rst:40 ../../_includes/admin/roles_navigation.rst:44 ../../_includes/admin/roles_navigation.rst:45 ../../_includes/admin/roles_navigation.rst:46
-#: ../../_includes/admin/roles_navigation.rst:47 ../../_includes/admin/roles_navigation.rst:50 ../../_includes/admin/roles_navigation.rst:56 ../../_includes/admin/roles_navigation.rst:57 ../../_includes/admin/roles_navigation.rst:58
-#: ../../_includes/admin/roles_navigation.rst:59 ../../_includes/admin/roles_navigation.rst:62 ../../_includes/admin/roles_navigation.rst:68 ../../_includes/admin/roles_navigation.rst:69 ../../_includes/admin/roles_navigation.rst:74
-#: ../../_includes/admin/roles_navigation.rst:81 ../../_includes/admin/roles_navigation.rst:87 ../../_includes/admin/roles_navs_dashbds.rst:13 ../../_includes/admin/roles_navs_dashbds.rst:14 ../../_includes/admin/roles_navs_dashbds.rst:15
-#: ../../_includes/admin/roles_navs_dashbds.rst:16 ../../_includes/admin/roles_navs_dashbds.rst:19 ../../_includes/admin/roles_navs_dashbds.rst:20 ../../_includes/admin/roles_navs_dashbds.rst:25 ../../_includes/admin/rum-roles-caps.rst:12
-#: ../../_includes/admin/rum-roles-caps.rst:13 ../../_includes/admin/rum-roles-caps.rst:14 ../../_includes/admin/rum-roles-caps.rst:15 ../../_includes/admin/rum-roles-caps.rst:18 ../../_includes/admin/rum-roles-caps.rst:19
-#: ../../_includes/admin/rum-roles-caps.rst:24 ../../_includes/admin/rum-roles-caps.rst:25 ../../_includes/admin/rum-roles-caps.rst:26 ../../_includes/admin/rum-roles-caps.rst:27 ../../_includes/admin/rum-roles-caps.rst:30
-#: ../../_includes/admin/rum-roles-caps.rst:31 ../../_includes/admin/rum-roles-caps.rst:32 ../../_includes/admin/rum-roles-caps.rst:33 ../../_includes/admin/rum-roles-caps.rst:36 ../../_includes/admin/rum-roles-caps.rst:37
-#: ../../_includes/admin/rum-roles-caps.rst:38 ../../_includes/admin/rum-roles-caps.rst:39 ../../_includes/admin/rum-roles-caps.rst:42 ../../_includes/admin/rum-roles-caps.rst:43 ../../_includes/admin/rum-roles-caps.rst:44
-#: ../../_includes/admin/rum-roles-caps.rst:45 ../../_includes/admin/rum-roles-caps.rst:48 ../../_includes/admin/rum-roles-caps.rst:49 ../../_includes/admin/rum-roles-caps.rst:50 ../../_includes/admin/rum-roles-caps.rst:51
-#: ../../_includes/admin/rum-roles-caps.rst:54 ../../_includes/admin/rum-roles-caps.rst:55 ../../_includes/admin/rum-roles-caps.rst:60 ../../_includes/admin/rum-roles-caps.rst:61 ../../_includes/admin/synth-roles-caps.rst:12
-#: ../../_includes/admin/synth-roles-caps.rst:13 ../../_includes/admin/synth-roles-caps.rst:18 ../../_includes/admin/synth-roles-caps.rst:19 ../../_includes/admin/synth-roles-caps.rst:20 ../../_includes/admin/synth-roles-caps.rst:21
-#: ../../_includes/admin/synth-roles-caps.rst:25 ../../_includes/admin/synth-roles-caps.rst:31 ../../_includes/admin/synth-roles-caps.rst:32 ../../_includes/admin/synth-roles-caps.rst:33 ../../_includes/admin/synth-roles-caps.rst:34
-#: ../../_includes/admin/synth-roles-caps.rst:37 ../../_includes/admin/synth-roles-caps.rst:43
+#: ../../_includes/admin/roles_alerts_detectors.rst:82 ../../_includes/admin/roles_alerts_detectors.rst:83 ../../_includes/admin/roles_alerts_detectors.rst:88 ../../_includes/admin/roles_alerts_detectors.rst:89
+#: ../../_includes/admin/roles_alerts_detectors.rst:94 ../../_includes/admin/roles_alerts_detectors.rst:95 ../../_includes/admin/roles_alerts_detectors.rst:96 ../../_includes/admin/roles_alerts_detectors.rst:97 ../../_includes/admin/roles_apm.rst:12
+#: ../../_includes/admin/roles_apm.rst:13 ../../_includes/admin/roles_apm.rst:14 ../../_includes/admin/roles_apm.rst:15 ../../_includes/admin/roles_apm.rst:18 ../../_includes/admin/roles_apm.rst:24 ../../_includes/admin/roles_apm.rst:25
+#: ../../_includes/admin/roles_apm.rst:26 ../../_includes/admin/roles_apm.rst:27 ../../_includes/admin/roles_apm.rst:30 ../../_includes/admin/roles_apm.rst:36 ../../_includes/admin/roles_apm.rst:37 ../../_includes/admin/roles_apm.rst:38
+#: ../../_includes/admin/roles_apm.rst:39 ../../_includes/admin/roles_apm.rst:42 ../../_includes/admin/roles_data_configuration.rst:12 ../../_includes/admin/roles_data_configuration.rst:13 ../../_includes/admin/roles_data_configuration.rst:14
+#: ../../_includes/admin/roles_data_configuration.rst:15 ../../_includes/admin/roles_data_configuration.rst:18 ../../_includes/admin/roles_data_configuration.rst:25 ../../_includes/admin/roles_data_configuration.rst:26
+#: ../../_includes/admin/roles_data_configuration.rst:27 ../../_includes/admin/roles_data_configuration.rst:28 ../../_includes/admin/roles_help_support.rst:13 ../../_includes/admin/roles_help_support.rst:14
+#: ../../_includes/admin/roles_help_support.rst:15 ../../_includes/admin/roles_help_support.rst:16 ../../_includes/admin/roles_help_support.rst:19 ../../_includes/admin/roles_help_support.rst:20 ../../_includes/admin/roles_help_support.rst:21
+#: ../../_includes/admin/roles_help_support.rst:22 ../../_includes/admin/roles_log_observer.rst:15 ../../_includes/admin/roles_log_observer.rst:16 ../../_includes/admin/roles_log_observer.rst:17 ../../_includes/admin/roles_log_observer.rst:18
+#: ../../_includes/admin/roles_log_observer.rst:22 ../../_includes/admin/roles_log_observer.rst:23 ../../_includes/admin/roles_log_observer.rst:24 ../../_includes/admin/roles_log_observer.rst:25 ../../_includes/admin/roles_log_observer.rst:28
+#: ../../_includes/admin/roles_log_observer.rst:29 ../../_includes/admin/roles_log_observer.rst:30 ../../_includes/admin/roles_log_observer.rst:31 ../../_includes/admin/roles_log_observer.rst:34 ../../_includes/admin/roles_log_observer.rst:35
+#: ../../_includes/admin/roles_log_observer.rst:36 ../../_includes/admin/roles_log_observer.rst:37 ../../_includes/admin/roles_log_observer.rst:40 ../../_includes/admin/roles_log_observer.rst:41 ../../_includes/admin/roles_log_observer.rst:46
+#: ../../_includes/admin/roles_log_observer.rst:47 ../../_includes/admin/roles_log_observer.rst:48 ../../_includes/admin/roles_log_observer.rst:49 ../../_includes/admin/roles_log_observer.rst:52 ../../_includes/admin/roles_log_observer.rst:53
+#: ../../_includes/admin/roles_log_observer.rst:58 ../../_includes/admin/roles_log_observer.rst:59 ../../_includes/admin/roles_log_observer.rst:64 ../../_includes/admin/roles_log_observer.rst:65 ../../_includes/admin/roles_log_observer.rst:70
+#: ../../_includes/admin/roles_log_observer.rst:71 ../../_includes/admin/roles_log_observer.rst:72 ../../_includes/admin/roles_log_observer.rst:76 ../../_includes/admin/roles_log_observer.rst:77 ../../_includes/admin/roles_log_observer.rst:82
+#: ../../_includes/admin/roles_log_observer.rst:83 ../../_includes/admin/roles_log_observer.rst:88 ../../_includes/admin/roles_log_observer.rst:94 ../../_includes/admin/roles_log_observer.rst:100 ../../_includes/admin/roles_log_observer.rst:102
+#: ../../_includes/admin/roles_log_observer.rst:106 ../../_includes/admin/roles_mpm.rst:15 ../../_includes/admin/roles_mpm.rst:16 ../../_includes/admin/roles_mpm.rst:17 ../../_includes/admin/roles_mpm.rst:18 ../../_includes/admin/roles_mpm.rst:22
+#: ../../_includes/admin/roles_mpm.rst:23 ../../_includes/admin/roles_mpm.rst:24 ../../_includes/admin/roles_mpm.rst:25 ../../_includes/admin/roles_mpm.rst:28 ../../_includes/admin/roles_mpm.rst:34 ../../_includes/admin/roles_mpm.rst:35
+#: ../../_includes/admin/roles_mpm.rst:40 ../../_includes/admin/roles_mpm.rst:41 ../../_includes/admin/roles_mpm.rst:46 ../../_includes/admin/roles_mpm.rst:47 ../../_includes/admin/roles_mpm.rst:52 ../../_includes/admin/roles_mpm.rst:53
+#: ../../_includes/admin/roles_mpm.rst:58 ../../_includes/admin/roles_mpm.rst:59 ../../_includes/admin/roles_mpm.rst:64 ../../_includes/admin/roles_mpm.rst:65 ../../_includes/admin/roles_mpm.rst:70 ../../_includes/admin/roles_navigation.rst:14
+#: ../../_includes/admin/roles_navigation.rst:20 ../../_includes/admin/roles_navigation.rst:26 ../../_includes/admin/roles_navigation.rst:27 ../../_includes/admin/roles_navigation.rst:28 ../../_includes/admin/roles_navigation.rst:29
+#: ../../_includes/admin/roles_navigation.rst:32 ../../_includes/admin/roles_navigation.rst:38 ../../_includes/admin/roles_navigation.rst:40 ../../_includes/admin/roles_navigation.rst:44 ../../_includes/admin/roles_navigation.rst:45
+#: ../../_includes/admin/roles_navigation.rst:46 ../../_includes/admin/roles_navigation.rst:47 ../../_includes/admin/roles_navigation.rst:50 ../../_includes/admin/roles_navigation.rst:56 ../../_includes/admin/roles_navigation.rst:57
+#: ../../_includes/admin/roles_navigation.rst:58 ../../_includes/admin/roles_navigation.rst:59 ../../_includes/admin/roles_navigation.rst:62 ../../_includes/admin/roles_navigation.rst:68 ../../_includes/admin/roles_navigation.rst:69
+#: ../../_includes/admin/roles_navigation.rst:74 ../../_includes/admin/roles_navigation.rst:81 ../../_includes/admin/roles_navigation.rst:87 ../../_includes/admin/roles_navs_dashbds.rst:13 ../../_includes/admin/roles_navs_dashbds.rst:14
+#: ../../_includes/admin/roles_navs_dashbds.rst:15 ../../_includes/admin/roles_navs_dashbds.rst:16 ../../_includes/admin/roles_navs_dashbds.rst:19 ../../_includes/admin/roles_navs_dashbds.rst:20 ../../_includes/admin/roles_navs_dashbds.rst:25
+#: ../../_includes/admin/rum-roles-caps.rst:12 ../../_includes/admin/rum-roles-caps.rst:13 ../../_includes/admin/rum-roles-caps.rst:14 ../../_includes/admin/rum-roles-caps.rst:15 ../../_includes/admin/rum-roles-caps.rst:18
+#: ../../_includes/admin/rum-roles-caps.rst:19 ../../_includes/admin/rum-roles-caps.rst:24 ../../_includes/admin/rum-roles-caps.rst:25 ../../_includes/admin/rum-roles-caps.rst:26 ../../_includes/admin/rum-roles-caps.rst:27
+#: ../../_includes/admin/rum-roles-caps.rst:30 ../../_includes/admin/rum-roles-caps.rst:31 ../../_includes/admin/rum-roles-caps.rst:32 ../../_includes/admin/rum-roles-caps.rst:33 ../../_includes/admin/rum-roles-caps.rst:36
+#: ../../_includes/admin/rum-roles-caps.rst:37 ../../_includes/admin/rum-roles-caps.rst:38 ../../_includes/admin/rum-roles-caps.rst:39 ../../_includes/admin/rum-roles-caps.rst:42 ../../_includes/admin/rum-roles-caps.rst:43
+#: ../../_includes/admin/rum-roles-caps.rst:44 ../../_includes/admin/rum-roles-caps.rst:45 ../../_includes/admin/rum-roles-caps.rst:48 ../../_includes/admin/rum-roles-caps.rst:49 ../../_includes/admin/rum-roles-caps.rst:50
+#: ../../_includes/admin/rum-roles-caps.rst:51 ../../_includes/admin/rum-roles-caps.rst:54 ../../_includes/admin/rum-roles-caps.rst:55 ../../_includes/admin/rum-roles-caps.rst:60 ../../_includes/admin/rum-roles-caps.rst:61
+#: ../../_includes/admin/synth-roles-caps.rst:12 ../../_includes/admin/synth-roles-caps.rst:13 ../../_includes/admin/synth-roles-caps.rst:18 ../../_includes/admin/synth-roles-caps.rst:19 ../../_includes/admin/synth-roles-caps.rst:20
+#: ../../_includes/admin/synth-roles-caps.rst:21 ../../_includes/admin/synth-roles-caps.rst:25 ../../_includes/admin/synth-roles-caps.rst:31 ../../_includes/admin/synth-roles-caps.rst:32 ../../_includes/admin/synth-roles-caps.rst:33
+#: ../../_includes/admin/synth-roles-caps.rst:34 ../../_includes/admin/synth-roles-caps.rst:37 ../../_includes/admin/synth-roles-caps.rst:43
 msgid "Yes"
 msgstr "あり"
 
@@ -159,26 +164,27 @@ msgstr ":strong:`デフォルトデータルーティングを編集する`"
 #: ../../_includes/admin/roles_alerts_detectors.rst:36 ../../_includes/admin/roles_alerts_detectors.rst:37 ../../_includes/admin/roles_alerts_detectors.rst:48 ../../_includes/admin/roles_alerts_detectors.rst:49
 #: ../../_includes/admin/roles_alerts_detectors.rst:54 ../../_includes/admin/roles_alerts_detectors.rst:55 ../../_includes/admin/roles_alerts_detectors.rst:60 ../../_includes/admin/roles_alerts_detectors.rst:61
 #: ../../_includes/admin/roles_alerts_detectors.rst:66 ../../_includes/admin/roles_alerts_detectors.rst:67 ../../_includes/admin/roles_alerts_detectors.rst:72 ../../_includes/admin/roles_alerts_detectors.rst:73
-#: ../../_includes/admin/roles_alerts_detectors.rst:84 ../../_includes/admin/roles_alerts_detectors.rst:85 ../../_includes/admin/roles_apm.rst:19 ../../_includes/admin/roles_apm.rst:20 ../../_includes/admin/roles_apm.rst:21
-#: ../../_includes/admin/roles_apm.rst:31 ../../_includes/admin/roles_apm.rst:32 ../../_includes/admin/roles_apm.rst:33 ../../_includes/admin/roles_apm.rst:43 ../../_includes/admin/roles_apm.rst:44 ../../_includes/admin/roles_apm.rst:45
-#: ../../_includes/admin/roles_data_configuration.rst:19 ../../_includes/admin/roles_data_configuration.rst:20 ../../_includes/admin/roles_data_configuration.rst:21 ../../_includes/admin/roles_log_observer.rst:42
-#: ../../_includes/admin/roles_log_observer.rst:43 ../../_includes/admin/roles_log_observer.rst:54 ../../_includes/admin/roles_log_observer.rst:55 ../../_includes/admin/roles_log_observer.rst:60 ../../_includes/admin/roles_log_observer.rst:61
-#: ../../_includes/admin/roles_log_observer.rst:66 ../../_includes/admin/roles_log_observer.rst:67 ../../_includes/admin/roles_log_observer.rst:73 ../../_includes/admin/roles_log_observer.rst:78 ../../_includes/admin/roles_log_observer.rst:79
-#: ../../_includes/admin/roles_log_observer.rst:84 ../../_includes/admin/roles_log_observer.rst:85 ../../_includes/admin/roles_log_observer.rst:89 ../../_includes/admin/roles_log_observer.rst:90 ../../_includes/admin/roles_log_observer.rst:91
-#: ../../_includes/admin/roles_log_observer.rst:96 ../../_includes/admin/roles_log_observer.rst:97 ../../_includes/admin/roles_log_observer.rst:101 ../../_includes/admin/roles_log_observer.rst:103 ../../_includes/admin/roles_log_observer.rst:107
-#: ../../_includes/admin/roles_log_observer.rst:108 ../../_includes/admin/roles_log_observer.rst:109 ../../_includes/admin/roles_mpm.rst:29 ../../_includes/admin/roles_mpm.rst:30 ../../_includes/admin/roles_mpm.rst:31
-#: ../../_includes/admin/roles_mpm.rst:36 ../../_includes/admin/roles_mpm.rst:37 ../../_includes/admin/roles_mpm.rst:42 ../../_includes/admin/roles_mpm.rst:43 ../../_includes/admin/roles_mpm.rst:48 ../../_includes/admin/roles_mpm.rst:49
-#: ../../_includes/admin/roles_mpm.rst:54 ../../_includes/admin/roles_mpm.rst:55 ../../_includes/admin/roles_mpm.rst:60 ../../_includes/admin/roles_mpm.rst:61 ../../_includes/admin/roles_mpm.rst:66 ../../_includes/admin/roles_mpm.rst:67
-#: ../../_includes/admin/roles_mpm.rst:74 ../../_includes/admin/roles_mpm.rst:75 ../../_includes/admin/roles_navigation.rst:15 ../../_includes/admin/roles_navigation.rst:16 ../../_includes/admin/roles_navigation.rst:17
-#: ../../_includes/admin/roles_navigation.rst:21 ../../_includes/admin/roles_navigation.rst:22 ../../_includes/admin/roles_navigation.rst:23 ../../_includes/admin/roles_navigation.rst:33 ../../_includes/admin/roles_navigation.rst:34
-#: ../../_includes/admin/roles_navigation.rst:35 ../../_includes/admin/roles_navigation.rst:39 ../../_includes/admin/roles_navigation.rst:41 ../../_includes/admin/roles_navigation.rst:51 ../../_includes/admin/roles_navigation.rst:52
-#: ../../_includes/admin/roles_navigation.rst:53 ../../_includes/admin/roles_navigation.rst:63 ../../_includes/admin/roles_navigation.rst:64 ../../_includes/admin/roles_navigation.rst:65 ../../_includes/admin/roles_navigation.rst:70
-#: ../../_includes/admin/roles_navigation.rst:71 ../../_includes/admin/roles_navigation.rst:77 ../../_includes/admin/roles_navigation.rst:78 ../../_includes/admin/roles_navigation.rst:83 ../../_includes/admin/roles_navigation.rst:84
-#: ../../_includes/admin/roles_navigation.rst:88 ../../_includes/admin/roles_navigation.rst:89 ../../_includes/admin/roles_navigation.rst:90 ../../_includes/admin/roles_navs_dashbds.rst:21 ../../_includes/admin/roles_navs_dashbds.rst:22
-#: ../../_includes/admin/roles_navs_dashbds.rst:26 ../../_includes/admin/roles_navs_dashbds.rst:27 ../../_includes/admin/roles_navs_dashbds.rst:28 ../../_includes/admin/rum-roles-caps.rst:20 ../../_includes/admin/rum-roles-caps.rst:21
-#: ../../_includes/admin/rum-roles-caps.rst:56 ../../_includes/admin/rum-roles-caps.rst:57 ../../_includes/admin/rum-roles-caps.rst:62 ../../_includes/admin/rum-roles-caps.rst:63 ../../_includes/admin/synth-roles-caps.rst:14
-#: ../../_includes/admin/synth-roles-caps.rst:15 ../../_includes/admin/synth-roles-caps.rst:26 ../../_includes/admin/synth-roles-caps.rst:27 ../../_includes/admin/synth-roles-caps.rst:28 ../../_includes/admin/synth-roles-caps.rst:38
-#: ../../_includes/admin/synth-roles-caps.rst:39 ../../_includes/admin/synth-roles-caps.rst:40 ../../_includes/admin/synth-roles-caps.rst:44 ../../_includes/admin/synth-roles-caps.rst:45 ../../_includes/admin/synth-roles-caps.rst:46
+#: ../../_includes/admin/roles_alerts_detectors.rst:84 ../../_includes/admin/roles_alerts_detectors.rst:85 ../../_includes/admin/roles_alerts_detectors.rst:90 ../../_includes/admin/roles_alerts_detectors.rst:91 ../../_includes/admin/roles_apm.rst:19
+#: ../../_includes/admin/roles_apm.rst:20 ../../_includes/admin/roles_apm.rst:21 ../../_includes/admin/roles_apm.rst:31 ../../_includes/admin/roles_apm.rst:32 ../../_includes/admin/roles_apm.rst:33 ../../_includes/admin/roles_apm.rst:43
+#: ../../_includes/admin/roles_apm.rst:44 ../../_includes/admin/roles_apm.rst:45 ../../_includes/admin/roles_data_configuration.rst:19 ../../_includes/admin/roles_data_configuration.rst:20 ../../_includes/admin/roles_data_configuration.rst:21
+#: ../../_includes/admin/roles_log_observer.rst:42 ../../_includes/admin/roles_log_observer.rst:43 ../../_includes/admin/roles_log_observer.rst:54 ../../_includes/admin/roles_log_observer.rst:55 ../../_includes/admin/roles_log_observer.rst:60
+#: ../../_includes/admin/roles_log_observer.rst:61 ../../_includes/admin/roles_log_observer.rst:66 ../../_includes/admin/roles_log_observer.rst:67 ../../_includes/admin/roles_log_observer.rst:73 ../../_includes/admin/roles_log_observer.rst:78
+#: ../../_includes/admin/roles_log_observer.rst:79 ../../_includes/admin/roles_log_observer.rst:84 ../../_includes/admin/roles_log_observer.rst:85 ../../_includes/admin/roles_log_observer.rst:89 ../../_includes/admin/roles_log_observer.rst:90
+#: ../../_includes/admin/roles_log_observer.rst:91 ../../_includes/admin/roles_log_observer.rst:96 ../../_includes/admin/roles_log_observer.rst:97 ../../_includes/admin/roles_log_observer.rst:101 ../../_includes/admin/roles_log_observer.rst:103
+#: ../../_includes/admin/roles_log_observer.rst:107 ../../_includes/admin/roles_log_observer.rst:108 ../../_includes/admin/roles_log_observer.rst:109 ../../_includes/admin/roles_mpm.rst:29 ../../_includes/admin/roles_mpm.rst:30
+#: ../../_includes/admin/roles_mpm.rst:31 ../../_includes/admin/roles_mpm.rst:36 ../../_includes/admin/roles_mpm.rst:37 ../../_includes/admin/roles_mpm.rst:42 ../../_includes/admin/roles_mpm.rst:43 ../../_includes/admin/roles_mpm.rst:48
+#: ../../_includes/admin/roles_mpm.rst:49 ../../_includes/admin/roles_mpm.rst:54 ../../_includes/admin/roles_mpm.rst:55 ../../_includes/admin/roles_mpm.rst:60 ../../_includes/admin/roles_mpm.rst:61 ../../_includes/admin/roles_mpm.rst:66
+#: ../../_includes/admin/roles_mpm.rst:67 ../../_includes/admin/roles_mpm.rst:74 ../../_includes/admin/roles_mpm.rst:75 ../../_includes/admin/roles_navigation.rst:15 ../../_includes/admin/roles_navigation.rst:16
+#: ../../_includes/admin/roles_navigation.rst:17 ../../_includes/admin/roles_navigation.rst:21 ../../_includes/admin/roles_navigation.rst:22 ../../_includes/admin/roles_navigation.rst:23 ../../_includes/admin/roles_navigation.rst:33
+#: ../../_includes/admin/roles_navigation.rst:34 ../../_includes/admin/roles_navigation.rst:35 ../../_includes/admin/roles_navigation.rst:39 ../../_includes/admin/roles_navigation.rst:41 ../../_includes/admin/roles_navigation.rst:51
+#: ../../_includes/admin/roles_navigation.rst:52 ../../_includes/admin/roles_navigation.rst:53 ../../_includes/admin/roles_navigation.rst:63 ../../_includes/admin/roles_navigation.rst:64 ../../_includes/admin/roles_navigation.rst:65
+#: ../../_includes/admin/roles_navigation.rst:70 ../../_includes/admin/roles_navigation.rst:71 ../../_includes/admin/roles_navigation.rst:77 ../../_includes/admin/roles_navigation.rst:78 ../../_includes/admin/roles_navigation.rst:83
+#: ../../_includes/admin/roles_navigation.rst:84 ../../_includes/admin/roles_navigation.rst:88 ../../_includes/admin/roles_navigation.rst:89 ../../_includes/admin/roles_navigation.rst:90 ../../_includes/admin/roles_navs_dashbds.rst:21
+#: ../../_includes/admin/roles_navs_dashbds.rst:22 ../../_includes/admin/roles_navs_dashbds.rst:26 ../../_includes/admin/roles_navs_dashbds.rst:27 ../../_includes/admin/roles_navs_dashbds.rst:28 ../../_includes/admin/rum-roles-caps.rst:20
+#: ../../_includes/admin/rum-roles-caps.rst:21 ../../_includes/admin/rum-roles-caps.rst:56 ../../_includes/admin/rum-roles-caps.rst:57 ../../_includes/admin/rum-roles-caps.rst:62 ../../_includes/admin/rum-roles-caps.rst:63
+#: ../../_includes/admin/synth-roles-caps.rst:14 ../../_includes/admin/synth-roles-caps.rst:15 ../../_includes/admin/synth-roles-caps.rst:26 ../../_includes/admin/synth-roles-caps.rst:27 ../../_includes/admin/synth-roles-caps.rst:28
+#: ../../_includes/admin/synth-roles-caps.rst:38 ../../_includes/admin/synth-roles-caps.rst:39 ../../_includes/admin/synth-roles-caps.rst:40 ../../_includes/admin/synth-roles-caps.rst:44 ../../_includes/admin/synth-roles-caps.rst:45
+#: ../../_includes/admin/synth-roles-caps.rst:46
 msgid "No"
 msgstr "なし"
 
@@ -342,13 +348,23 @@ msgstr ":strong:`ディテクターのミュートルールを表示する`"
 msgid ":strong:`Create or delete muting rules for a detector`"
 msgstr ":strong:`ディテクターのミュートルールを作成および削除する`"
 
+#: ../../_includes/admin/roles_alerts_detectors.rst:87
+#, fuzzy
+msgid ":strong:`Create, delete, and modify service level objectives (SLOs)`"
+msgstr ":strong:`サービスレベル目標（SLO）を作成、削除、変更する`"
+
+#: ../../_includes/admin/roles_alerts_detectors.rst:93
+#, fuzzy
+msgid ":strong:`View service level objectives (SLOs)`"
+msgstr ":strong:`サービスレベル目標（SLO）を表示する`"
+
 #: ../../private-preview/rbac/roles-and-capabilities-table.rst:44
 msgid "Infrastructure Monitoring navigators"
-msgstr "Infrastructure Monitoringナビゲーター"
+msgstr "Infrastructure Monitoring ナビゲーター"
 
 #: ../../_includes/admin/roles_navs_dashbds.rst:12
 msgid ":strong:`View navigator`"
-msgstr ":strong:`ナビゲーターの表示`"
+msgstr ":strong:`ナビゲーターを表示する`"
 
 #: ../../_includes/admin/roles_navs_dashbds.rst:18
 msgid ":strong:`Edit navigator`"
