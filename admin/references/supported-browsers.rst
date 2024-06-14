@@ -16,4 +16,4 @@ Splunk Observability Cloud works as expected when using the latest and next-to-l
 
 An official release is a stable release and doesn't include alpha, beta, or release candidate releases.
 
-For example, if the latest official major release of a supported browser is ``10`` and the next-to-latest release is ``9``, Observability Cloud works as expected when used with releases ``10`` and ``9``, including their official minor point releases.
+For example, if the latest official major release of a supported browser is ``10`` and the next-to-latest release is ``9``, Splunk Observability Cloud works as expected when used with releases ``10`` and ``9``, including their official minor point releases.

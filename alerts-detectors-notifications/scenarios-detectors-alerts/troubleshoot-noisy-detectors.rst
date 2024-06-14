@@ -17,7 +17,7 @@ Reduce excessive alerts
 Kai creates a detector to report on latency by following these steps:
 
 #. In the :guilabel:`Alerts & Detectors` page, Kai selects :guilabel:`New Detector`.
-#. Kai selects :guilabel:`Infrstructure or Custom Metrics Alert Rule`.
+#. Kai selects :guilabel:`Infrastructure or Custom Metrics Alert Rule`.
 #. Kai enters the signal they want to alert on: :code:`latency`. 
 #. Kai selects the :guilabel:`Static Threshold` alert condition.
 #. In the :guilabel:`Alert settings` tab, Kai enters a threshold of 260 milliseconds. 
@@ -115,8 +115,7 @@ Kai sees a preview detector with the new alert setting applied:
     :alt: This screenshot shows a preview detector with 22 expected alerts in 1 day.
 
 .. note::
-    If Kai has a large number of missing data points, the detector still might not trigger an alert when Kai expects it to. In this case, Kai should find out why the data points are missing and 
-    or use other methods to account for missing data points, such as extrapolation.
+    If Kai has a large number of missing data points, the detector still might not trigger an alert when Kai expects it to. In this case, Kai should find out why the data points are missing or use other methods to account for missing data points, such as extrapolation.
     
     To learn more about troubleshooting missing data points, see :ref:`timestamp-issues`.
 

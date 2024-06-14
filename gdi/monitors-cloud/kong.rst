@@ -47,7 +47,7 @@ Installation
 Kong installation
 ~~~~~~~~~~~~~~~~~
 
-Follow the official Kong instructions to expose the Prometheus metrics endpoint. To learn how, see the official :new-page:`Kong documentation on Prometheus <https://docs.konghq.com/hub/kong-inc/prometheus>`. 
+Follow the official Kong instructions to expose the Prometheus metrics endpoint. To learn how, see the official :new-page:`Kong documentation on Prometheus <https://docs.konghq.com/hub/kong-inc/prometheus>`. Use Kong version 3.4 or higher.
 
 Configuration
 -------------

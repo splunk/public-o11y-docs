@@ -16,9 +16,12 @@ Create a filter
 ----------------------
 
 To create a filter, you search in the filter database using any of the following parameters:
-* Filter name
-* Property name
-* Special characters
+
+- Filter name
+
+- Property name
+
+- Special characters
 
 .. _apply-filter:
 
@@ -27,14 +30,17 @@ Apply a filter
 
 To filter data on the landing page, perform the following steps: 
 
-#. Select :guilabel:`Add filters`
+#. Select the :guilabel:`Add filters` button on the top left of the control bar for the landing page.
 #. Find the filter you want in either of the following ways:
+
    - Scroll through the dropdown list of filters displayed in alphabetical order.
+
    - Use the text field displayed above :guilabel:`Add filters` to enter search parameters.
+
 #. Select the name of the filter you want.
 #. Hover over the filter name to see and select one or more of the recommended values for that filter.
 #. Select :guilabel:`Apply filter`
-#. (Optional) Repeat steps 2 through 5 for any other filters you want to apply.
+#. (Optional) Repeat steps 2 through 5 for any other filters you want to apply. Multiple filters are applied with AND logic, but multiple selections within a filter use OR logic.
 
 Filters that you apply on the Infrastructure Monitoring landing page persist in the navigators accessed through data source cards on that page, so that you see only relevant instances.
 

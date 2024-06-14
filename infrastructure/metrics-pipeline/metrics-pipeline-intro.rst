@@ -71,13 +71,13 @@ If you need to use a metric that you've sent to archived metrics you can route i
 When you select specific dimensions, metrics pipeline management generates a new metric. The system creates new MTS
 based on the dimensions you select and rolls up data points for each MTS. By default, aggregation rules roll up the
 data points into the new MTS using ``sum``, ``min``, ``max``, ``count``, ``delta``, ``avg``, and ``latest`` functions.
-You can use the new aggregated MTS in the same way as any other MTS in Observability Cloud.
+You can use the new aggregated MTS in the same way as any other MTS in Splunk Observability Cloud.
 
 How is this different from post-ingestion aggregation at query time?
 --------------------------------------------------------------------------------
 
 When you configure charts or detectors, you can aggregate your data using analytic functions, such as ``sum``, and then
-group your data by specific dimensions, such as ``sum by region``. This aggregation occurs after Observability Cloud
+group your data by specific dimensions, such as ``sum by region``. This aggregation occurs after Splunk Observability Cloud
 has stored your raw MTS, so you still pay for storing the data.
 
 With metrics pipeline management, you can aggregate your MTS as you store it and retain only aggregated metrics. Since
@@ -103,7 +103,7 @@ You are only interested in the source region of your data, so you create an aggr
 the ``region`` dimension.
 
 The aggregated metric removes all other dimensions and retains only the ``region`` dimension based on your rule. There
-are only 20 different values for ``region``, so only Observability Cloud only ingests 20 MTS.
+are only 20 different values for ``region``, so only Splunk Observability Cloud only ingests 20 MTS.
 
 Aggregate using multiple dimensions
 --------------------------------------------------------------------------------

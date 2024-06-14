@@ -107,7 +107,7 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
    
          * 35.247.86.219/32
 
-9.  Go back to the Log Observer Connect guided setup and select :guilabel:`Next`. Enter your service account username, password, and Splunk platform URL https://<stackname>.splunkcloud.com:8089 to complete the guided setup.
+9.  Go back to the Log Observer Connect guided setup and select :guilabel:`Next`. Enter your service account username, password, and Splunk platform URL ``https://<stackname>.splunkcloud.com:8089`` to complete the guided setup.
 
 10.  Remove your IPv4 address from the IP allowlist that you added in step 8. If you are in a GCP environment, do not remove the additional GCP IP addresses that you added in step 8.
 

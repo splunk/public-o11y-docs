@@ -80,28 +80,28 @@ Deploy the Spring Petclinic Java application in your Kubernetes cluster:
 
       .. code-block:: yaml
 
-          apiVersion: v1
+          apiVersion: apps/v1
           kind: Deployment
           metadata:
-          name: spring-petclinic
-          namespace: petclinic
+            name: spring-petclinic
+            namespace: petclinic
           spec:
-          selector:
-            matchLabels:
-            app: spring-petclinic
-          template:
-            metadata:
-              labels:
+            selector:
+              matchLabels:
                 app: spring-petclinic
-              annotations:
-                # Activates automatic instrumentation for the Java application
-                instrumentation.opentelemetry.io/inject-java: "true"
-            spec:
-              containers:
-              - name: petclinic-app
-                # Java application to instrument
-                image: ghcr.io/pavolloffay/spring-petclinic:latest
-                imagePullPolicy: Always
+            template:
+              metadata:
+                labels:
+                  app: spring-petclinic
+                annotations:
+                  # Activates automatic instrumentation for the Java application
+                  instrumentation.opentelemetry.io/inject-java: "true"
+              spec:
+                containers:
+                - name: petclinic-app
+                  # Java application to instrument
+                  image: ghcr.io/pavolloffay/spring-petclinic:latest
+                  imagePullPolicy: Always
 
 #. Run the following command to start the application deployment:
 
@@ -165,6 +165,25 @@ The output also shows several ``OTEL`` environment variables:
 .. note::
 
     If you can't see the ``initContainer`` or ``OTEL`` environment, restart your application pod using ``kubectl rollout restart -n petclinic <pod-name>``. The OpenTelemetry Collector pods must be active and running before you deploy your Java application.
+
+Access the Spring PetClinic UI
+==============================
+
+Follow these steps to access the Spring PetClinic UI:
+
+#. Create a NodePort service for the ``spring-petclinic`` application:
+
+   .. code-block:: bash
+
+      kubectl expose deployment/spring-petclinic --type="NodePort" --port 8080
+
+#. Get the NodePort:
+
+   .. code-block:: bash
+
+      kubectl describe svc spring-petclinic | grep "NodePort"
+
+#. In your browser, navigate to :samp:`http://<host>:<nodeport>`.
 
 Next step
 ==========================

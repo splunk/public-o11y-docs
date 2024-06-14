@@ -36,7 +36,7 @@ metrics in custom charts.
 
 To access the Organization Overview page, follow these steps:
 
-1. Log into **Observability Cloud**.
+1. Log into **Splunk Observability Cloud**.
 
 2. On the left nav, select **Settings**, then select **Organization
    Overview**.
@@ -177,7 +177,7 @@ Metrics that track data throttling
 As explained in the previous section, certain system limits act as a
 “ceiling”, or a maximum number of elements allowed in Observability
 Cloud. But the platform also limits ingestion pace. If you exceed your
-rate limits, Observability Cloud might throttle, or slow down, the data
+rate limits, Splunk Observability Cloud might throttle, or slow down, the data
 you send in.
 
 While org metrics whose name contains ``limit`` or ``limited`` indicate
@@ -250,10 +250,10 @@ Cloud authentication error metrics
 
 Editing a role and removing a user's permissions to cloud services might
 generate authentication errors from your cloud service provider. When
-this happens, Observability Cloud integrations won't work properly, and
+this happens, Splunk Observability Cloud integrations won't work properly, and
 won't be able to collect data and metadata from your services.
 
-Observability Cloud has the following metrics to track auth errors:
+Splunk Observability Cloud has the following metrics to track auth errors:
 
 -  ``sf.org.num.awsServiceAuthErrorCount``
 
@@ -262,7 +262,7 @@ Observability Cloud has the following metrics to track auth errors:
 -  ``sf.org.num.azureServiceAuthErrorCount``
 
 If you're getting any of these errors, you need to fix your roles or
-tokens so Observability Cloud can retrieve your data.
+tokens so Splunk Observability Cloud can retrieve your data.
 
 You can use these errors in :ref:`dashboards <dashboards>` to detect
 whether you're experiencing this issues.
@@ -273,12 +273,12 @@ Child org metrics
 ~~~~~~~~~~~~~~~~~
 
 If a parent org has associated child organizations, child org metrics
-are also added to Observability Cloud. They represent the same values as
+are also added to Splunk Observability Cloud. They represent the same values as
 the equivalent parent org metric, and you can identify them with the
 ``child`` prefix.
 
 For example, ``sf.org.child.numCustomMetrics`` represents the number of
-custom metrics Observability Cloud monitors for the child org, the same
+custom metrics Splunk Observability Cloud monitors for the child org, the same
 way ``sf.org.numCustomMetrics`` is the number of custom metrics
 monitored for the parent org.
 
@@ -288,7 +288,7 @@ List of organization metrics
 Use the :ref:`Metric Finder <metrics-finder-and-metadata-catalog>`
 to find your org metrics.
 
-Observability Cloud provides the following organization metrics:
+Splunk Observability Cloud provides the following organization metrics:
 
 .. raw:: html
 

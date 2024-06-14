@@ -37,7 +37,7 @@ If you're experiencing issues streaming metrics, check the following:
 How can I track invalid Metric Streams?
 ====================================================================================================
 
-Observability Cloud provides out-of-the-box navigators and dashboards to help you track invalid or faulty Metric Streams, including:
+Splunk Observability Cloud provides out-of-the-box navigators and dashboards to help you track invalid or faulty Metric Streams, including:
 
 * Streams without a matching AWS integration on the Observability side.
 * Streams from a disabled integration or Metric Stream feature.

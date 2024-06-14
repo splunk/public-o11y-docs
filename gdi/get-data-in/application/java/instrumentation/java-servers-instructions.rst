@@ -125,7 +125,7 @@ Add the path to the JVM agent to your Tomcat or TomEE startup script:
 
    .. group-tab:: Linux
 
-      On Linux, add the following line to the <tomcat_home>/bin/setenv.sh file:
+      On Linux, add the following line to the ``<tomcat_home>/bin/setenv.sh`` file:
    
          .. code-block:: shell
 
@@ -133,7 +133,7 @@ Add the path to the JVM agent to your Tomcat or TomEE startup script:
 
    .. group-tab:: Windows
 
-      On Windows, add the following line to the <tomcat_home>\bin\setenv.bat file:
+      On Windows, add the following line to the ``<tomcat_home>\bin\setenv.bat`` file:
    
          .. code-block:: shell
 

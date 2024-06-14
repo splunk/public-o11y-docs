@@ -5,11 +5,11 @@ Send alert notifications to Opsgenie using Splunk Observability Cloud
 ************************************************************************
 
 .. meta::
-      :description: Configure Observability Cloud to send alerts to Opsgenie when a detector alert condition is met and when the condition clears.
+      :description: Configure Splunk Observability Cloud to send alerts to Opsgenie when a detector alert condition is met and when the condition clears.
 
 You can configure Splunk Observability Cloud to automatically send alert notifications to one or more Opsgenie teams when a detector alert condition is met and when the alert clears.
 
-To send Observability Cloud alert notifications to Opsgenie, complete the following configuration tasks:
+To send Splunk Observability Cloud alert notifications to Opsgenie, complete the following configuration tasks:
 
 * :ref:`opsgenie1`
 
@@ -17,25 +17,25 @@ To send Observability Cloud alert notifications to Opsgenie, complete the follow
 
 * :ref:`opsgenie2`
 
-   You must be an Observability Cloud administrator to complete this task.
+   You must be a Splunk Observability Cloud administrator to complete this task.
 
 * :ref:`opsgenie3`
 
 
 .. _opsgenie1:
 
-Step 1: Create an Observability Cloud integration in OpsGenie
+Step 1: Create a Splunk Observability Cloud integration in OpsGenie
 =================================================================================
 
 You must be an Opsgenie account owner or administrator to complete these tasks.
 
-To create an Observability Cloud integration in OpsGenie:
+To create a Splunk Observability Cloud integration in OpsGenie:
 
 #. Log in to Opsgenie.
 
 #. Determine whether you want to create an integration to one team or multiple teams. The option to create an integration to multiple teams is not available for all Opsgenie accounts.
 
-   * If you want to create an integration to one Opsgenie team, access the :new-page:`Team Dashboard <https://app.opsgenie.com/teams>`. Select the team that you want to receive alert notifications from Observability Cloud. Select the :strong:`Integrations` tab and then select :strong:`Add Integration`.
+   * If you want to create an integration to one Opsgenie team, access the :new-page:`Team Dashboard <https://app.opsgenie.com/teams>`. Select the team that you want to receive alert notifications from Splunk Observability Cloud. Select the :strong:`Integrations` tab and then select :strong:`Add Integration`.
 
    * If you want to create an integration to multiple Opsgenie teams, access the :new-page:`Integration list <https://app.opsgenie.com/integration#/integration-list>` page.
 
@@ -50,12 +50,12 @@ To create an Observability Cloud integration in OpsGenie:
 
 .. _opsgenie2:
 
-Step 2: Create an Opsgenie integration in Observability Cloud
+Step 2: Create an Opsgenie integration in Splunk Observability Cloud
 =================================================================================
 
-You must be an Observability Cloud administrator to complete this task.
+You must be a Splunk Observability Cloud administrator to complete this task.
 
-To create an Opsgenie integration in Observability Cloud:
+To create an Opsgenie integration in Splunk Observability Cloud:
 
 #. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`OpsGenie guided setup <https://login.signalfx.com/#/integrations/opsgenie?search_pattern=opsge&category=all>`. Optionally, you can navigate to the guided setup on your own:
@@ -79,13 +79,13 @@ To create an Opsgenie integration in Observability Cloud:
 
 .. _opsgenie3:
 
-Step 3: Add an Opsgenie integration as a detector alert recipient in Observability Cloud
+Step 3: Add an Opsgenie integration as a detector alert recipient in Splunk Observability Cloud
 =================================================================================================
 
 ..
   once the detector docs are migrated - this step may be covered in those docs and can be removed from these docs. below link to :ref:`detectors` and :ref:`receiving-notifications` instead once docs are migrated
 
-To add an Opsgenie integration as a detector alert recipient in Observability Cloud:
+To add an Opsgenie integration as a detector alert recipient in Splunk Observability Cloud:
 
 #. Create or edit a detector that you want to configure to send alert notifications using your Opsgenie integration.
 

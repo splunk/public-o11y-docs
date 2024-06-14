@@ -30,7 +30,7 @@ Bundled metrics include all metrics from :ref:`supported namespaces <aws-integra
   * System/Linux 
   * WAF 
 
-For a complete list of Observability Cloud metrics, see :ref:`metric-categories`.
+For a complete list of Splunk Observability Cloud metrics, see :ref:`metric-categories`.
 
 .. _aws-costs-amazon:
 

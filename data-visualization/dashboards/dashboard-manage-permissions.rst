@@ -11,7 +11,7 @@ Specify who can see and edit your dashboard groups and dashboards
 :strong:`Available in Enterprise Edition`
 |hr|
 
-To help you manage read and write permissions, Observability Cloud lets you view, grant, and revoke permissions. 
+To help you manage read and write permissions, Splunk Observability Cloud lets you view, grant, and revoke permissions. 
 
 To learn more about permissions, see :ref:`about-permissions`.
 

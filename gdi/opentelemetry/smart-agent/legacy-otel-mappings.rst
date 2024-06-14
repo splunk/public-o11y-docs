@@ -207,7 +207,7 @@ The same rule applies to querying in charts and detectors, where you are
 expected to only query by the OpenTelemetry semantics or by legacy
 semantics within the same ``data()`` invocation, regardless of the
 metrics you're querying are aligned with legacy or OpenTelemetry
-semantics. In this situation Observability Cloud might produce
+semantics. In this situation Splunk Observability Cloud might produce
 duplicated MTSs from non-duplicated ingested data. For example, this
 might happen if you write a query such as
 ``data("container.image.name", filter=(filter("host", "<host-id>") OR filter("host.name", "<host-id>")))``.
