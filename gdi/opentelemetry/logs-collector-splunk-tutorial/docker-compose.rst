@@ -23,6 +23,7 @@ Add the logging services
 Inside the ``docker-compose.yml`` file, create the logging services and define the logs that they produce.
 
 .. code-block:: yaml
+
    version: "3"
    services:
      logging1:
@@ -51,6 +52,7 @@ Add the Collector service
 Create the Collector service that listens for incoming log data from the logging services and runs the Collector components defined in :ref:`the next part of the tutorial <collector-splunk>`:
 
 .. code-block:: yaml
+
    services:
      # ...
      otelcollector:
@@ -79,6 +81,7 @@ Add the Splunk service
 Create the Splunk Enterprise service that listens for incoming log data from the Collector service.
 
 .. code-block:: yaml
+
    services:
      # ...
      splunk:

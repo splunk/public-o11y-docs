@@ -18,10 +18,13 @@ Deploy the log collection services
       The splunk service can take from 1 to 2 minutes to start.
 
    .. code-block:: bash
+
       docker-compose up -d
+
    Expected output:
 
    .. code-block:: bash
+
       [+] Running 5/5
       ✔ Network docker-tutorial_default  Created                                                                                                               0.0s
       ✔ Container splunk                 Healthy                                                                                                              77.1s
@@ -60,10 +63,13 @@ Verify the log collection pipeline
 #. To terminate the log collection environment, stop the running services with Docker Compose:
 
    .. code-block:: bash
+
       docker-compose down
+
    Expected output:
 
    .. code-block:: bash
+
       [+] Running 5/5
       ✔ Container logging2               Removed                                                                                                              10.3s
       ✔ Container logging1               Removed                                                                                                              10.3s

@@ -14,6 +14,7 @@ Configure the Collector
 #. In the ``otel-collector-config.yml`` file, define the receivers used to collect the logs from the 2 logging services:
 
    .. code-block:: yaml
+
       receivers:
         # Each filelog receiver requires a unique name that follows the slash.
         filelog/output1:
@@ -25,6 +26,7 @@ Configure the Collector
 #. After the receivers in the ``otel-collector-config.yml`` file, define the processors used to transform the collected log data for use with Splunk Enterprise:
 
    .. code-block:: yaml
+
       # ...
       processors:
         # The batch processor helps regulate the data flow from the receivers.
@@ -46,6 +48,7 @@ Configure the Collector
 #. After the processors in the ``otel-collector-config.yml`` file, define the exporter used to send the logs to the Splunk server's HTTP Event Collector (HEC):
 
    .. code-block:: yaml
+
       # ...
       exporters:
         splunk_hec/logs:
@@ -60,6 +63,7 @@ Configure the Collector
 #. After the exporter in the ``otel-collector-config.yml`` file, define the service, which consists of a ``logs`` pipeline that organizes the flow of logging data through the 3 component types:
 
    .. code-block:: yaml
+
       # ...
       service:
         pipelines:
@@ -76,6 +80,7 @@ Configure the Splunk indexes
 #. In the ``splunk.yml`` file, define the ``index1`` and ``index2`` indexes:
 
    .. code-block:: yaml
+
       splunk:
         conf:
           indexes:
