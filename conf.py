@@ -82,7 +82,7 @@ olly_on_github_repo = 'splunk/public-o11y-docs'
 olly_on_github_branch = 'main'
 
 # Git timestamp settings
-gitstamp_fmt = "%Y-%m-%d %H:%M:%S %z"
+gitstamp_fmt = "%Y-%m-%d %H:%M:%S"
 
 # Tabs settings
 sphinx_tabs_disable_tab_closing = True
