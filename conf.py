@@ -23,7 +23,8 @@ extensions = [
     'olly_on_git_hub',
     'sphinxcontrib.images',
     'imagetarget',
-    'sphinxcontrib.mermaid'
+    'sphinxcontrib.mermaid',
+    'sphinx_gitstamp'
 ]
 
 html_context = {
@@ -79,6 +80,9 @@ htmlhelp_basename = 'Splunkdoc'
 # GitHub edit links settings
 olly_on_github_repo = 'splunk/public-o11y-docs'
 olly_on_github_branch = 'main'
+
+# Git timestamp settings
+gitstamp_fmt = "%Y-%m-%d %H:%M:%S %z"
 
 # Tabs settings
 sphinx_tabs_disable_tab_closing = True
