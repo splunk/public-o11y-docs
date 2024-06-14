@@ -68,4 +68,10 @@ Set your subscription permissions:
 
 .. note:: Repeat these steps for each subscription you want to monitor.
 
-Next, see :ref:`azure-connect`.
+Connect and send your Azure data
+============================================
+
+After setting up your account see:
+
+* :ref:`azure-connect` 
+* :ref:`azure-logs`

@@ -24,7 +24,7 @@ Splunk Observability Cloud provides an integration with Microsoft Azure, lets yo
 .. raw:: html
 
   <embed>
-    <h2>Install the Splunk Distribution of OpenTelemetry Collector<a name="install-splunk-otel-collector" class="headerlink" href="#install-splunk-otel-collector" title="Permalink to this headline">¶</a></h2>
+    <h2>Install the Splunk Distribution of the OpenTelemetry Collector<a name="install-splunk-otel-collector" class="headerlink" href="#install-splunk-otel-collector" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 To take advantage of the full benefits of the Splunk Observability Cloud platform, install the Splunk Distribution of the OpenTelemetry Collector. See more at :ref:`otel-intro`. 
@@ -39,7 +39,7 @@ To track the degree of OpenTelemetry enablement in your Azure integrations:
 
 1. From Splunk Observability Cloud, go to :guilabel:`Data Management > Deployed integrations > Azure`.
 
-2. Select :guilabel:`OpenTelemetry Enabled` to see whether the OTel Collector is installed on each Azure VMs or AKS cluster. This helps you identify the instances that still need to be instrumented. 
+2. Select :guilabel:`OpenTelemetry Enabled` to see whether the OpenTelemetry Collector is installed on each Azure VMs or AKS cluster. This helps you identify the instances that still need to be instrumented. 
 
 ..  image:: /_images/gdi/azure-collector-insights.png
   :width: 80%
