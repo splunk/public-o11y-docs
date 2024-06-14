@@ -127,7 +127,7 @@
           <div class="body" role="main">
             {% include "breadcrumbs.html" %}
             {% block body %} {% endblock %}
-            <p class="timestamp">{%- if gitstamp %} This page was last updated on {{ gitstamp }}. {%- endif %}</p>
+            <p class="timestamp" style="margin-top: 60px; font-size: 12px;">{%- if gitstamp %} This page was last updated on {{ gitstamp }}. {%- endif %}</p>
             {% include "page-nav.html" %}
           </div>
       {%- if render_sidebar %}
