@@ -87,7 +87,6 @@ These are the required permissions to collect AWS data:
 * :ref:`Permissions for the CloudWatch API <aws-iam-policy-cw>` 
 * :ref:`Permissions for Metric Streams <aws-iam-policy-ms>`
 * :ref:`Permissions for tag and properties collection <aws-iam-policy-services>`
-* :ref:`Permissions for logs <aws-iam-policy-logs>`
 * :ref:`Permissions for usage collection and reports <aws-iam-policy-reports>`
 
 .. _aws-iam-policy-required:
@@ -370,33 +369,6 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
       }
     ]
   }
-
-.. _aws-iam-policy-logs:
-
-Permissions for log collection
-----------------------------------------
-
-These are the permissions to allow Splunk Observability Cloud to collect AWS logs. Include those related to your service in your IAM policy.
-
-- ``"cloudfront:GetDistributionConfig"``
-- ``"cloudfront:ListDistributions"``
-- ``"cloudfront:ListTagsForResource"``
-- ``"ec2:DescribeRegions"``
-- ``"elasticloadbalancing:DescribeLoadBalancerAttributes"``
-- ``"elasticloadbalancing:DescribeLoadBalancers"``
-- ``"elasticloadbalancing:DescribeTags"``
-- ``"elasticloadbalancing:DescribeTargetGroups"``
-- ``"logs:DeleteSubscriptionFilter"``
-- ``"logs:DescribeLogGroups"``
-- ``"logs:DescribeSubscriptionFilters"``
-- ``"redshift:DescribeClusters"``
-- ``"redshift:DescribeLoggingStatus"``
-- ``"s3:GetBucketLogging"``
-- ``"s3:GetBucketNotification"``
-- ``"s3:ListAllMyBuckets"``
-- ``"s3:ListBucket"``
-- ``"s3:PutBucketNotification"``
-- ``"tag:GetResources"``
 
 .. _aws-iam-policy-reports:
 
