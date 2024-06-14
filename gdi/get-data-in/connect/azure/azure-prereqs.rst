@@ -71,7 +71,7 @@ Set your subscription permissions:
 Connect and send your Azure data
 ============================================
 
-After setting up your account see:
+After setting up your account proceed to:
 
 * :ref:`azure-connect` 
 * :ref:`azure-logs`
