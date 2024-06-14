@@ -24,7 +24,7 @@ extensions = [
     'sphinxcontrib.images',
     'imagetarget',
     'sphinxcontrib.mermaid',
-    'sphinx_gitstamp'
+    'sphinx_last_updated_by_git'
 ]
 
 html_context = {
@@ -82,7 +82,7 @@ olly_on_github_repo = 'splunk/public-o11y-docs'
 olly_on_github_branch = 'main'
 
 # Git timestamp settings
-gitstamp_fmt = "%Y-%m-%d %H:%M:%S"
+html_last_updated_fmt: "%Y-%m-%d %H:%M:%S"
 
 # Tabs settings
 sphinx_tabs_disable_tab_closing = True
