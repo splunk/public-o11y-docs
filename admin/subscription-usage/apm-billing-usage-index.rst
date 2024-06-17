@@ -73,7 +73,7 @@ Usage reports for host subscription plans include the following information abou
 Usage report metrics for trace-analyzed-per-minute (TAPM) subscription plans
 ------------------------------------------------------------------------------
 
-Usage reports for TAPM subscription plans include the following information about your organization's usage:
+Usage reports for TAPM subscription plans include the following information about your organization usage:
 
 * The number of billed TAPM. TAPM data is available per minute.
 * The number of billed traces. Trace volume data is available per minute.
@@ -89,7 +89,7 @@ Usage reports for TAPM subscription plans include the following information abou
 Download a subscription usage report for hosts or containers
 ==============================================================
 
-For host subscription plans, you can request and download reports that show which hosts and containers are sending APM data over a specific minute. Use this report to identify which hosts and containers are contributing to your subscription usage. You can generate and download reports within the retention period for traces. See :ref:`apm-data-retention` for more information.
+For host subscription plans, you can download reports that show which hosts and containers are sending APM data over a specific minute. Use this report to identify which hosts and containers are contributing to your subscription usage. You can generate and download reports within the retention period for traces. See :ref:`apm-data-retention` for more information.
 
 To download a subscription usage report, do the following:
 
@@ -99,14 +99,14 @@ To download a subscription usage report, do the following:
 #. Select a specific minute within the hour.
 #. If you've selected a minute that falls within the trace retention period the :guilabel:`Download Data` becomes active and displays the minute you selected. Select the download button to download  the .csv file.
 
-For each selected minute, the report shows the attributes or tags associated with the hosts and containers that sent data to Splunk APM. You might see different tags, like ``AWSUniqueId``, ``container_id``,  ``gcp_id``, and so on depending on the source of the host or container observed and the version of your instrumentation agent.
+For each selected minute, the report shows the attributes or tags associated with the hosts and containers that sent data to Splunk APM. You might see different tags, like ``AWSUniqueId``, ``container_id``,  ``gcp_id``, and so on, depending on the source of the host or container observed and the version of your instrumentation agent.
 
 .. caution:: For Kubernetes deployments, the Kubernetes attributes processor extracts default attributes, such as ``k8s.pod.name``. These attributes are required for accurate subscription usage. Don't remove the Kubernetes attributes processor from your configuration. See :ref:`kubernetes-attributes-processor` for more information.
 
 Use the APM throttling and entitlement dashboards to better understand your usage
 ===================================================================================
 
-Select :guilabel:`Dashboards` and search for "APM entitlements and "APM throttling" to access the `APM entitlements` and `APM throttling` dashboards to further examine your usage. The APM entitlements dashboard provides historical data for metrics used on the :guilabel:`Subscription Usage` page. The APM throttling dashboard includes metrics that track throttling and limits in your organization. Several metrics in the APM throttling dashboard have detectors set up to send alerts when throttling for your organization is taking place.
+Select :guilabel:`Dashboards` and search for "APM entitlements and "APM throttling" to access the :guilabel:`APM entitlements` and :guilabel:`APM throttling` dashboards to further examine your usage. The APM entitlements dashboard provides historical data for metrics used on the :guilabel:`Subscription Usage` page. The APM throttling dashboard includes metrics that track throttling and limits in your organization. Several metrics in the APM throttling dashboard have detectors set up to send alerts when metrics for your organization are being throttled.
 
 How APM calculates usage
 ========================
