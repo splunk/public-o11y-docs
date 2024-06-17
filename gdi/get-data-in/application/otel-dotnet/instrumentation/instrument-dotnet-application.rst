@@ -110,6 +110,9 @@ Windows
          .. note:: 
             If ``OTEL_SERVICE_NAME`` is not set for a web application hosted in IIS, the inferred name based on the site name and virtual directory path is used.
 
+         .. note:: 
+            If multiple applications are running in the same IIS Application Pool do not use the ``appSettings``. Let the instrumentation infer the name and use the Application Pool environment variables configuration, see below, to set the resource attributes.
+
          After modifying the web.config file, restart IIS:
 
          .. code-block:: powershell
