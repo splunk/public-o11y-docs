@@ -18,7 +18,7 @@ To view the APM subscription usage page, you must have the admin or usage role.
 View APM subscription usage
 ==================================
 
-Go to :guilabel:`Settings` then :guilabel:`Subscription Usage` and select the :strong:`APM` tab. Depending on your org subscription model, this might be :guilabel:`Settings` then :guilabel:`Billing and Usage`.
+Go to :guilabel:`Settings` then :guilabel:`Subscription Usage` and select the :strong:`APM` tab. Depending on your organization subscription, you might need to go to :guilabel:`Settings` then :guilabel:`Billing and Usage`. Select the :guilabel:`APM` tab.
 
 The subscription usage page displays the following information about your organization's usage:
 
