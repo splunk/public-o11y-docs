@@ -18,7 +18,6 @@ pytz==2023.3
 PyYAML==6.0.1
 requests==2.32.2
 setuptools==68.1.2
-six==1.16.0
 snowballstemmer==2.2.0
 Sphinx==5.1.1
 sphinx-copybutton==0.5.2
