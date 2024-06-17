@@ -38,7 +38,7 @@ Follow these steps to create an SLO.
             - * Search for the service you want to create an SLO for
               * (Optional) Add an endpoint for the selected service
           * - Filters
-            - Enter any additional dimension names and values you want to apply this SLO to. Alternatively, you can use the ``NOT`` filter, represented by an exclamation point ( ! ), to exclude any dimension names or values from this SLO configuration.
+            - Enter any additional dimension names and values you want to apply this SLO to. Alternatively, use the ``NOT`` filter, represented by an exclamation point ( ! ), to exclude any dimension values from this SLO configuration.
 
     To use a custom metric as the health indicator for your SLO, follow these steps:
 
