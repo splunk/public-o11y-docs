@@ -56,6 +56,8 @@ Follow these steps to create an SLO.
           * - Denominator metric
             - Search for the metric you want to use for the total request count
 
+        .. note:: Custom metric SLO works by calculating the percentage of successful requests over a given compliance period. This calculation works better for counter and histogram metrics than for gauge metrics.
+
 #. Define your SLO and how to measure it.
 
     .. list-table::
