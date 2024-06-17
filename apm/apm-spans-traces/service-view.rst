@@ -147,18 +147,18 @@ Service metrics
      - :strong:`Metrics`
 
    * - Service requests
-     - ``service.request.count``
+     - ``service.request`` with a ``count`` function
 
    * - Service latency
-     - * ``service.request.duration.ns.median``
-       * ``service.request.duration.ns.p90``
-       * ``service.request.duration.ns.p99``
+     - * ``service.request`` with a ``median`` function
+       * ``service.request`` with a ``percentile`` function and a percentile value ``90``
+       * ``service.request`` with a ``percentile`` function and a percentile value ``99``
 
    * - Service errors
-     - ``service.requests.count`` with a ``sf_error:True`` filter
+     - ``service.requests`` with a ``count`` function and a ``sf_error:True`` filter
 
    * - SLI/SLO 
-     - ``service.request.count``
+     - ``service.request`` with a ``count`` function
 
 .NET runtime metrics 
 -----------------------
@@ -246,7 +246,7 @@ Node.js runtime metrics
      - :strong:`Metrics`
 
    * - Heap usage
-     - * ``Process.runtime.nodejs.memory.heap.total``
+     - * ``process.runtime.nodejs.memory.heap.total``
        * ``process.runtime.nodejs.memory.heap.used``
 
    * - Resident set size
