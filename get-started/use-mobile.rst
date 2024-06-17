@@ -15,10 +15,10 @@ View dashboards using Splunk Observability Cloud for Mobile
 
 You can use the dashboards tab to do the following things: 
 
-- View and interact with dashboards from your Observability Cloud organization.
+- View and interact with dashboards from your Splunk Observability Cloud organization.
 - View and interact with a wide variety of charts and visualization.
 - Search and save Dashboards.
-- Share dashboards with other Observability Cloud users.
+- Share dashboards with other Splunk Observability Cloud users.
 
 
 View and search dashboards
@@ -66,7 +66,7 @@ You can use the alerts tab to do the following things:
 
 - View past and active alerts.
 - View detailed visualizations that contain alert data about what happened at the time of the alert.
-- Share alerts with other Observability Cloud users.
+- Share alerts with other Splunk Observability Cloud users.
 
 
 View alerts

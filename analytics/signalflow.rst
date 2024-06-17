@@ -11,7 +11,7 @@ Using SignalFlow in the Splunk Observability Cloud UI, you can improve your char
 Run SignalFlow programs from the UI
 =======================================
 
-You can add SignalFlow programs from the Observability Cloud user interface to stream processed data to detectors and charts. 
+You can add SignalFlow programs from the Splunk Observability Cloud user interface to stream processed data to detectors and charts. 
 
 - To edit SignalFlow programs when editing detectors, see :ref:`create-detectors`.
 - To use SignalFlow functions when editing charts, see :ref:`analytics-ref`.
@@ -103,7 +103,7 @@ Calendar time zone
 
 For calendar windows, you must specify a calendar time zone. The calendar time zone is a per-chart (or per-detector) setting that is independent of the visualization timezone that is set in your user profile. The time zone you set for a calendar window determines the exact beginning and end of your chosen calendar window cycles.
 
-For example, January in America/Los Angeles starts at a different time relative to January in Asia/Tokyo. If Observability Cloud receives a data point with a timestamp near midnight UTC time on December 31, the calendar time zone determines whether that data point counts towards the calculation for December or the calculation for January.
+For example, January in America/Los Angeles starts at a different time relative to January in Asia/Tokyo. If Splunk Observability Cloud receives a data point with a timestamp near midnight UTC time on December 31, the calendar time zone determines whether that data point counts towards the calculation for December or the calculation for January.
 
 All calendar window functions in a chart share the same calendar time zone. The first time you add a calendar window function on any plot in a chart, the visualization timezone from your profile is suggested as the value to use for the calendar timezone.
 

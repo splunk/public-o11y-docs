@@ -213,7 +213,7 @@ The following table describes the four methods for remapping log fields:
 When to use Log Field Aliasing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Use Log Field Aliasing to remap fields in Observability Cloud when you cannot or do not want to create a copy processor because any of the following are true:
+Use Log Field Aliasing to remap fields in Splunk Observability Cloud when you cannot or do not want to create a copy processor because any of the following are true:
 
 - You use Log Observer Connect to get logs data and do not have access to Log Observer Pipeline Management.
 - You do not want to use indexing capacity by creating additional log processing rules.
@@ -240,7 +240,7 @@ How to change your metadata key names
 Change metric and traces names
 -----------------------------------------------------------------
 
-Use the Splunk Distribution of the OpenTelemetry Collector to ensure that your metrics and traces have the metadata key names required to use Observability Cloud's Related Content feature. If you did not use the Collector and your metrics or traces do not include the required metadata key names, you can instrument your applications and serverless functions to include them. See the following pages to learn how:
+Use the Splunk Distribution of the OpenTelemetry Collector to ensure that your metrics and traces have the metadata key names required to use Splunk Observability Cloud's Related Content feature. If you did not use the Collector and your metrics or traces do not include the required metadata key names, you can instrument your applications and serverless functions to include them. See the following pages to learn how:
 
 - :ref:`get-started-application`
 - :ref:`instrument-serverless-functions`

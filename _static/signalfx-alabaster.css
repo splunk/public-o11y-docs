@@ -386,6 +386,10 @@ span.linenos {
    padding-left: 0px;
 }
 
+.sphinx-tabs {
+   margin-top: 1.5rem;
+}
+
 .sphinx-tabs-tab {
    font-family: 'Open Sans' !important; 
    font-size: 14px !important;

@@ -39,7 +39,7 @@ Let's also suppose that you are over your limits as follows:
 - Hosts: 35, or 10 hosts more than the subscription limit of 25.
 - Containers: 300, or 50 containers more than the subscription limit of 250.
 
-In this case, Observability Cloud charges overage fees for 10 hosts and for 50 containers.
+In this case, Splunk Observability Cloud charges overage fees for 10 hosts and for 50 containers.
 
 However, paying the overage fee for 10 hosts doesn't automatically add 100 containers to your subscription limit and accommodate for the 50 additional containers. You must add 10 hosts to your subscription plan, as discussed in :ref:`avoid-fees`, to add support for an additional 100 containers.
 

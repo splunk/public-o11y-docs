@@ -45,7 +45,7 @@ configuration file, as shown in the following example:
        endpoint: localhost:5432
        transport: tcp
        username: otel
-       password: ${POSTGRESQL_PASSWORD}
+       password: ${env:PGSQL_PASSWORD}
        databases:
          - <database_name>
        collection_interval: 10s

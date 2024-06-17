@@ -9,7 +9,7 @@ Save and share Log Observer queries
 
 .. include:: /_includes/log-observer-transition.rst
 
-After you create useful queries in Log Observer, you can save them and share them with team members. You can only save or share queries on the :guilabel:`Observability Cloud data` index. A saved query is made up of a filter and any aggregations or search-time rules you applied during the search. You can only save a query if you have created a filter. Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can save and share Log Observer queries.
+After you create useful queries in Log Observer, you can save them and share them with team members. You can only save or share queries on the :guilabel:`Splunk Observability Cloud data` index. A saved query is made up of a filter and any aggregations or search-time rules you applied during the search. You can only save a query if you have created a filter. Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can save and share Log Observer queries.
 
 To learn how to create filters, see :ref:`logs-keyword`.
 Log Observer Connect has no default aggregation. Log Observer defaults to :guilabel:`All (*)`` logs grouped by :guilabel:`Severity`. To learn how to create a unique aggregation, see :ref:`logs-aggregations`. To learn how to create search-time rules, see :ref:`logs-search-time-rules`.
@@ -29,7 +29,7 @@ Save a Log Observer query
 
 To create a query, follow these steps:
 
-#. In the control bar, select the desired time increment from the time picker, then in the :guilabel:`Index` field, select :guilabel:`Observability Cloud data`. Select :guilabel:`Add Filter`, then enter a keyword or field.
+#. In the control bar, select the desired time increment from the time picker, then in the :guilabel:`Index` field, select :guilabel:`Splunk Observability Cloud data`. Select :guilabel:`Add Filter`, then enter a keyword or field.
 
 #. To override the default aggregation, follow these steps:
 

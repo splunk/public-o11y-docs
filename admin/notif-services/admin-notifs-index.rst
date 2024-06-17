@@ -80,11 +80,9 @@ The following table shows Splunk service integrations
    * - Splunk platform
      - See :ref:`splunkplatform`.
 
-You can also configure Observability Cloud to send alert notifications to a webhook. See :ref:`webhook`.
+These notification service integrations allow you to configure Splunk Observability Cloud to automatically send alert notifications to these third-party services and webhooks when a condition for a detector alert is met and when the condition clears.
 
-These notification service integrations allow you to configure Observability Cloud to automatically send alert notifications to these third-party services and webhooks when a condition for a detector alert is met and when the condition clears.
-
-Depending on the third-party service, the alert notification can create notifications, incidents, or issues, for example, based on information sent in the Observability Cloud alert notification.
+Depending on the third-party service, the alert notification can create notifications, incidents, or issues, for example, based on information sent in the Splunk Observability Cloud alert notification.
 
 For information about how to use detectors, events, alerts, and notifications, see :ref:`get-started-detectoralert`.
 

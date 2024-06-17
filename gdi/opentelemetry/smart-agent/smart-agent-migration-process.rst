@@ -15,7 +15,6 @@ Do the following steps to migrate from the Smart Agent to the Collector:
 #. :ref:`Deploy the Collector in a non-production environment <deploy-the-collector-non-prod-env>`
 #. :ref:`Validate the deployment of the Collector <validate-deployment-of-collector>`
 #. :ref:`Locate your existing Smart Agent configuration file <locate-sa-config-file>`
-#. :ref:`Translate the Smart Agent configuration file using translatesfx <use-translatefx>`
 #. :ref:`Estimate resource utilization (sizing) for the production environment <estimate-sizing>`
 #. :ref:`Deploy the Collector to the non-production environment using the updated configuration file <deploy-non-prod-updated-config>`
 #. :ref:`Deploy the Collector to a production host using the updated configuration file <deploy-to-prod-updated-config>`
@@ -243,17 +242,9 @@ The following is an example YAML configuration file with default values where ap
             my_other_dimension: my_other_dimension_value
       - type: processlist
 
-
-.. _use-translatefx:
-
-4. Translate the Smart Agent configuration file using translatesfx
-=====================================================================================
-
-``translatesfx`` is a command-line tool provided by Splunk Observability Cloud that helps you translate your existing Smart Agent YAML configuration file into a configuration that can be used by the Collector. To learn how to use it, see :ref:`Configuration translation tool <otel-translation-tool>`.
-
 .. _estimate-sizing:
 
-5. Estimate resource utilization (sizing) for the production environment
+4. Estimate resource utilization (sizing) for the production environment
 ==================================================================================
 
 The sizing of the Collector and the corresponding VM or host it is to be deployed to should be based on the telemetry being collected. The Collector requires 1 CPU core per:
@@ -299,7 +290,7 @@ Configure the ``memory_limiter`` processor on every Collector instance, as shown
 
 .. _deploy-non-prod-updated-config:
 
-6. Deploy the Collector to the non-production environment using the updated configuration file
+5. Deploy the Collector to the non-production environment using the updated configuration file
 ===================================================================================================
 
 Complete the necessary updates and translation of the configuration file, and restart the Collector on the non-production environment using the updated file.
@@ -333,7 +324,7 @@ After the Collector is restarted successfully, :ref:`validate the deployment <va
 
 .. _deploy-to-prod-updated-config:
 
-7. Deploy the Collector to a production host using the updated configuration file
+6. Deploy the Collector to a production host using the updated configuration file
 =============================================================================================
 
 After successfully deploying the Collector to a non-production environment and verifying that data is getting into Splunk Observability Cloud as expected, as a first step, stop and uninstall the Smart Agent from a single production host or VM to begin the migration. Follow the commands below for each respective environment:

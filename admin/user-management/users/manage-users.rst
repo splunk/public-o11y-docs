@@ -50,7 +50,7 @@ You must be an administrator to remove users from the org.  To remove users from
    A table of current members appears in the main panel.
 #. Use the Search field to find the name of the user you want to remove, either by name or email address.
 #. Select the :guilabel:`Actions` (|more|) menu icon next the username, then select :menuselection:`Remove User`.
-#. Observability Cloud displays a dialog box that asks you to confirm the deletion. Select :menuselection:`Delete`.
+#. Splunk Observability Cloud displays a dialog box that asks you to confirm the deletion. Select :menuselection:`Delete`.
 
 The user no longer appears in the list of members.
 
@@ -106,7 +106,7 @@ From the list, you can email or message any administrators to request admin stat
   </embed>
 
 
-You can look up when a user logged in to Observability Cloud by looking at user session creation events. To do this:
+You can look up when a user logged in to Splunk Observability Cloud by looking at user session creation events. To do this:
 
 #. In the left navigation menu, select :menuselection:`Dashboards`.
 
@@ -122,7 +122,7 @@ You can look up when a user logged in to Observability Cloud by looking at user 
 
 #. Select :guilabel:`SessionLog`.
 
-#. The :guilabel:`Event Feed` menu displays user and token session events. A :guilabel:`User Session Created` event indicates when a user logged in to Observability Cloud.
+#. The :guilabel:`Event Feed` menu displays user and token session events. A :guilabel:`User Session Created` event indicates when a user logged in to Splunk Observability Cloud.
 
 
 

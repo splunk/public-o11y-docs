@@ -12,7 +12,7 @@ Verify changes to monitored systems with Live Tail
 Live Tail displays a streaming view of log messages. Use Live Tail to do the following:
 
 - Verify that an integration is sending data to Splunk Observability Cloud.
-- View spans and traces that your APM services are sending to Observability Cloud.
+- View spans and traces that your APM services are sending to Splunk Observability Cloud.
 - See the impact of configuration changes on your incoming data streams.
 
 Only customers will a Splunk Log Observer Connect entitlement can monitor systems with Live Tail. Those customers must transition to Log Observer Connect.

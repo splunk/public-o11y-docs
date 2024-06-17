@@ -23,6 +23,9 @@ For each page checked in a Browser test, Splunk Synthetic Monitoring captures an
 Set up a Browser test
 =========================
 
+
+For optimal experience, synthetics browser tests use a stable version of Google Chrome: ``116.0.5845.96-1`` to simulate user activity.
+
 Follow these steps to set up a Browser test:
 
 #. From the landing page of Splunk Observability Cloud, navigate to Splunk Synthetic Monitoring. 
@@ -599,7 +602,7 @@ There are many reasons why you might want to configure advanced settings for you
 Auto-retry 
 ----------------
 
-Run a test again automatically if it fails without any user intervention. It's a best practice to turn on auto-retry to reduce unnecessary failures from temporary interruptions like a network issue, timeouts, or other issues. Auto-retry runs do not impact subscription usage, only the completed run result counts towards your subscription usage.
+Run a test again automatically if it fails without any user intervention. It's a best practice to turn on auto-retry to reduce unnecessary failures from temporary interruptions like a network issue, timeouts, or other issues. Auto-retry runs do not impact subscription usage, only the completed run result counts towards your subscription usage.  Auto-retry requires at least runner version 0.9.29.
 
 
 .. _browser-cookies:

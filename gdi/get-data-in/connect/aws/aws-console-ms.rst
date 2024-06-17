@@ -20,7 +20,7 @@ For alternative connection methods, see:
 * :ref:`aws-console-ms`
 * :ref:`get-configapi`
 
-.. note:: You can only have one integration using Metric Streams externally managed from AWS at a time for each AWS account. All Metric Streams you created in different AWS regions will be sent to this integration. Editing included regions will affect metadata, and might impact how corresponding metric streams are located and displayed in Observability Cloud features such as dashboards.
+.. note:: You can only have one integration using Metric Streams externally managed from AWS at a time for each AWS account. All Metric Streams you created in different AWS regions will be sent to this integration. Editing included regions will affect metadata, and might impact how corresponding metric streams are located and displayed in Splunk Observability Cloud features such as dashboards.
 
 .. _aws-console-ms-start:
 
@@ -56,9 +56,10 @@ In this step you need to choose the following connection options:
   * Metadata.
   * Cost and usage metrics.
   * CloudWatch metrics. 
-  * Logs.
 
 In the CloudWatch Metrics option, select :guilabel:`Streaming (AWS-managed)` as the ingestion method, and proceed to the AWS console to complete the connection. 
+
+.. note:: To collect logs, see :ref:`aws-logs`.
 
 Prepare your AWS account
 -------------------------------------------
@@ -93,7 +94,6 @@ Connect to Splunk Observability Cloud from the AWS console
 Before you proceed to create your Metric Streams connection between your AWS and your Splunk Observability Cloud accounts in the AWS console, follow the steps in :ref:`aws-console-ms-start` to ensure you have an active AWS integration in your associated Splunk Observability Cloud account: 
 
 * Make sure you selected :guilabel:`Streaming (AWS-managed)` as the ingestion method in the integration.
-* Make sure the AWS account you used to create the integration contains the required policies for Metric Streams, as described in :ref:`metricstreams_iampolicy`. 
 
 To connect Splunk Observability Cloud from the AWS console, follow these steps:
 
