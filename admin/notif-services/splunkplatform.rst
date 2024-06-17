@@ -20,20 +20,13 @@ To send Splunk Observability Cloud alert notifications to Splunk platform, compl
 
 * :ref:`splunkplatform2`
 
-* :ref:`splunkplatform3`
-
 .. _splunkplatform1:
 
-Step 1:
-=========
-
-.. _splunkplatform2:
-
-Step 2: Create a Splunk platform integration in Splunk Observability Cloud
+Step 1: Create a Splunk platform integration in Splunk Observability Cloud
 =================================================================================
 
 #. Log in to Splunk Observability Cloud.
-#. Open the :new-page:`Splunk platform guided setup <https://login.signalfx.com/#/integrations/splunkplatform>`. Alternatively, you can navigate to the guided setup on your own:
+#. Open the :new-page:`Splunk platform guided setup <https://login.signalfx.com/#/integrations/splunk-platform>`. Alternatively, you can navigate to the guided setup on your own:
 
    #. In the navigation menu, select :menuselection:`Data Management`.
    #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
@@ -42,10 +35,44 @@ Step 2: Create a Splunk platform integration in Splunk Observability Cloud
    #. Select :strong:`New Integration` to display the configuration options.
 
 #. On the :strong:`Summary` page, select :guilabel:`Next`.
+#. On the :strong:`Configure connection` page, enter information into the following fields:
 
-.. _splunkplatform3:
+   .. list-table::
+      :header-rows: 1
+      :widths: 25 75
 
-Step 3:
-=========
+      * - :strong:`Field`
+        - :strong:`Description`
+
+      * - Name
+        - Give your integration a unique and descriptive name. For information about the downstream use of this name, see :new-page-ref:`About naming your integrations <naming-note>`.
+
+      * - URL
+        - Enter...
+
+      * - HEC token
+        - ...
+
+#. Select :guilabel:`Next`.
+#. On the :strong:`Customize message` page, you see the default template for a Splunk platform integration. You can customize your payload to make sure responders have the context needed to resolve the issues.
+#. Select :guilabel:`Next`.
+#. Review your integration and select :guilabel:`Save`.
+
+.. _splunkplatform2:
+
+Step 2: Add a Splunk platform integration as a detector alert recipient in Observability Cloud
+=====================================================================================================================
+
+To add a Splunk platform integration as a detector alert recipient in Splunk Observability Cloud:
+
+#. Create or edit a detector that you want to configure to send alert notifications using your Splunk platform integration.
+
+   For more information about working with detectors, see :ref:`create-detectors` and :ref:`subscribe`.
+
+#. In the :strong:`Alert recipients` step, select :strong:`Add Recipient`.
+#. Select :strong:`Splunk platform` and then select the name of the Splunk platform integration you want to use to send alert notifications. This is the integration name you created in :ref:`splunkplatform1`.
+#. Activate and save the detector.
+
+Splunk Observability Cloud sends an alert notification to Splunk platform when the detector triggers or clears an alert.
 
 
