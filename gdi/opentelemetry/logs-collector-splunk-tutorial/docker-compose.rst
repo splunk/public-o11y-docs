@@ -24,7 +24,6 @@ Inside the ``docker-compose.yml`` file, create the logging services and define t
 
 .. code-block:: yaml
 
-   version: "3"
    services:
      logging1:
        image: bash:latest

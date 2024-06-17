@@ -15,7 +15,9 @@ Tutorial: Use the Collector to send container logs to a Splunk instance
    collector-splunk.rst
    deploy-verify-environment.rst
 
-This tutorial demonstrates how to use the OpenTelemetry Collector to send Docker container logs to a Splunk Enterprise instance, using Docker Compose to manage the multicontainer environment. Using the Collector to process the logs before sending them to Splunk indexes offers the following benefits over sending the logs directly to Splunk:
+This tutorial demonstrates how to use the OpenTelemetry Collector to send Docker container logs to a Splunk Enterprise instance, using Docker Compose to manage the multicontainer environment.
+
+Using the Collector to process the logs before sending them to Splunk indexes offers the following benefits over sending the logs directly to Splunk:
 
 * Log format standardization, transformation, and processing
 * Centralized configuration
@@ -51,7 +53,7 @@ Each part of this tutorial builds on the previous part. Follow the tutorial part
    <h2>Prerequisites</h2>
 
 * Docker, Docker Compose, and Git installed on your system.
-* Sufficient resources available to run a multicontainer environment, including at least 4 GB of RAM. The Splunk container, in particular, can be resource intensive.
+* Sufficient resources available to run a multicontainer environment, including at least 4 GB of RAM.
 * The following ports available and not blocked by a firewall:
 
     * ``18000:8000`` - Splunk Web interface
