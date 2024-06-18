@@ -40,8 +40,8 @@ When you create an MMS with a custom dimension, you can use the custom dimension
 
 To learn more about a specific scenario for custom MMS: :ref:`custom-metricset`.
 
-Generate a Monitoring MetricSet with a custom dimension 
-====================================================================
+Generate a Monitoring MetricSet with a custom dimension for an instrumented service
+=======================================================================================
 
 Before you generate an MMS, first consider:
 
@@ -86,7 +86,7 @@ You can create custom MMS for endpoints (metrics starting with ``span*``) and se
 Add a Monitoring MetricSet
 ------------------------------
 
-Follow these steps to create a Monitoring MetricSet. 
+Follow these steps to create a Monitoring MetricSet for an instrumented service:
 
 1. To get to the :guilabel:`APM MetricSets` page, do one of the following: 
   
@@ -133,6 +133,32 @@ Follow these steps to create a Monitoring MetricSet.
       :alt: This image shows the cardinality check for a Monitoring MetricSet. 
 
 .. note:: Splunk APM replaces dots with underscores in dimension names for MMS time series.
+
+
+.. _inferred-service-mms:
+
+Generate a Monitoring MetricSet with a custom dimension for an inferred service
+=======================================================================================
+
+Follow these steps to create a Monitoring MetricSet for an inferred service:
+
+1. To get to the :guilabel:`APM MetricSets` page, do one of the following: 
+  
+   a. In Splunk APM, select :guilabel:`APM Configuration` and select :guilabel:`APM MetricSets` from the menu. The APM MetricSets page opens.
+   b. From anywhere in Splunk Observability Cloud, select :guilabel:`Settings` in the navigation bar and select :guilabel:`APM MetricSets` under :guilabel:`Data Configuration`.   
+
+2. On the :guilabel:`APM MetricSets` page, scroll to the :guilabel:`Inferred Service Monitoring MetricSets` section and select :guilabel:`Add Inferred Service MMS`.
+3. Select the inferred service for which you want to create a Monitoring MetricSet. 
+4. Select :guilabe:`Save`.
+5. Your new metric set shows under :strong:`Pending MetricSets` section of the table with an :guilabel:`Analyzing` status while the cardinality check runs. You might have to wait a few moments for the check to run. 
+
+   .. caution:: Your pending MetricSet expires after 1 hour. If your MetricSet times out before you activate it, run the analysis again. 
+
+9.  After the cardinality check has run, review the cardinality and activate your new MetricSet.
+
+    * If the cardinality impact of indexing this new MetricSet is within your subscription limit you see a green check mark and "Within Entitlement." Select the check mark under :guilabel:`Actions` to activate your Monitoring MetricSet. 
+    * If the check times out before you activate the MetricSet, run the analysis again.
+    * If the check shows as failed, your cardinality is over your subscription limit for MMS or is otherwise invalid. See :ref:`cardinality-check-tms`. For steps to configure your MetricSet to be more efficient or other troubleshooting solutions, see :ref:`troubleshoot-mms`.
 
 .. _cardinality-check-mms:
 
