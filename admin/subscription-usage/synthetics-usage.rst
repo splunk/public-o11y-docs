@@ -25,7 +25,7 @@ Splunk Synthetic Monitoring offers metrics you can use to track your subscriptio
      - Total number of synthetic runs by organization. To filter by test type:
         - ``test_type=browser``
         - ``test_type=API``
-        - ``test_type= uptime`` 
+        - ``test_type=uptime`` 
 
 
 See also
