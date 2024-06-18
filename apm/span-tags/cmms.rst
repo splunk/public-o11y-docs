@@ -1,22 +1,22 @@
 .. _cmms:
 
 *******************************************************
-Generate a Monitoring MetricSet with a custom dimension
+Create a Monitoring MetricSet with a custom dimension
 *******************************************************
 
 .. meta::
-   :description: Learn how to generate a Monitoring MetricSet with a custom dimension. 
+   :description: Learn how to create a Monitoring MetricSet with a custom dimension. 
 
-Generate Monitoring MetricSets (MMS) with custom dimensions to monitor your services in real time. Splunk APM provides a default set of MMS, but you can configure additional MMS using indexed span tags to create custom dimensions. Use your custom MMS to create custom charts, dashboards, and detectors to track what matters most to your team. See :ref:`charts-dashboards-alerts`. 
+Create Monitoring MetricSets (MMS) with custom dimensions to monitor your services in real time. Splunk APM provides a default set of MMS, but you can configure additional MMS using indexed span tags to create custom dimensions. Use your custom MMS to create custom charts, dashboards, and detectors to track what matters most to your team. See :ref:`charts-dashboards-alerts`. 
 
 What are MetricSets?
 =========================
 
 MetricSets are metric time series (MTS) you can use to track the performance of specific metrics over time. To help you analyze your service performance, APM provides 2 categories of MetricSets: Troubleshooting MetricSets (TMS) and Monitoring MetricSets (MMS). Use Troubleshooting MetricSets for high-cardinality troubleshooting. Use Monitoring MetricSets for real-time monitoring and alerting. 
 
-APM provides a collection of MetricSets by default. You can also index additional span tags or processes to generate additional TMS and, as part of the indexing process, you can opt to create custom dimensionalized Monitoring MetricSets (MMS). See :ref:`apm-MetricSets` for an overview of the types of MetricSets in APM and a list of the MetricSets available by default. 
+APM provides a collection of MetricSets by default. You can also index additional span tags or processes to create additional TMS and, as part of the indexing process, you can opt to create custom dimensionalized Monitoring MetricSets (MMS). See :ref:`apm-MetricSets` for an overview of the types of MetricSets in APM and a list of the MetricSets available by default. 
 
-Use this topic to learn how to index a span tag or process to generate Monitoring MetricSets. See :ref:`apm-index-span-tags` to learn how to generate Troubleshooting MetricSets. 
+Use this topic to learn how to index a span tag or process to create Monitoring MetricSets. See :ref:`apm-index-span-tags` to learn how to create Troubleshooting MetricSets. 
 
 Prerequisites 
 ==============
@@ -32,18 +32,18 @@ Prerequisites
 Use custom Monitoring MetricSets to monitor important metrics 
 ======================================================================
 
-In addition to the MMS APM generates by default, you can create additional MMS with custom dimensions to filter and aggregate the default generated metrics by a specific indexed span tag or process such as ``version`` or ``cloud.provider``.
+In addition to the MMS APM creates by default, you can create additional MMS with custom dimensions to filter and aggregate the default created metrics by a specific indexed span tag or process such as ``version`` or ``cloud.provider``.
 
-You can create custom MMS at the service level and the endpoint or span level. When you create a custom dimension for a service-level MMS, APM generates an MMS that includes the service-level metrics with your chosen indexed span tag or process as a custom dimension. If you add endpoint-level metrics, APM generates MMS that include span-level metrics, with your chosen indexed span tag or process as a custom dimension. 
+You can create custom MMS at the service level and the endpoint or span level. When you create a custom dimension for a service-level MMS, APM creates an MMS that includes the service-level metrics with your chosen indexed span tag or process as a custom dimension. If you add endpoint-level metrics, APM creates MMS that include span-level metrics, with your chosen indexed span tag or process as a custom dimension. 
 
 When you create an MMS with a custom dimension, you can use the custom dimension to create charts, dashboards, and alerts. See :ref:`charts-dashboards-alerts`. 
 
 To learn more about a specific scenario for custom MMS: :ref:`custom-metricset`.
 
-Generate a Monitoring MetricSet with a custom dimension for an instrumented service
+Create a Monitoring MetricSet with a custom dimension for an instrumented service
 =======================================================================================
 
-Before you generate an MMS, first consider:
+Before you create an MMS, first consider:
 
 * How you want to allocate the cardinality of your data to make your MMS most efficient. 
 * Your organization's cardinality limits. See :ref:`troubleshoot-mms` for guidance on editing your MetricSet configuration to optimize your overall cardinality.
@@ -53,7 +53,7 @@ Before you generate an MMS, first consider:
 Select how you want to configure your Monitoring MetricSet
 ------------------------------------------------------------------
 
-You can generate a Monitoring MetricSet in 3 ways:
+You can create a Monitoring MetricSet in 3 ways:
 
 * service-level MMS only
 * endpoint-level MMS for specific endpoints within a given service
@@ -73,7 +73,7 @@ You can also filter by specific tag values to further reduce the cardinality of 
    * - service-level MMS and endpoint-level MMS for all endpoints within a service
      -  This option creates a custom dimensionalized MMS for each selected service, as well as an MMS for each endpoint in each selected service. This is the highest cardinality option. 
    * - service-level MMS and endpoint-level MMS for specific endpoints
-     - This option creates a custom dimensionalized MMS for each selected service and an MMS for specific endpoints you select. In the box labeled :guilabel:`Endpoint Filters`, provide a list of endpoints or a regular expression pattern to generate MMS for specific endpoints you're interested in. This helps you to minimize unnecessary cardinality.
+     - This option creates a custom dimensionalized MMS for each selected service and an MMS for specific endpoints you select. In the box labeled :guilabel:`Endpoint Filters`, provide a list of endpoints or a regular expression pattern to create MMS for specific endpoints you're interested in. This helps you to minimize unnecessary cardinality.
    * - Service-level MMS only
      - This option creates an MMS for each selected service and no endpoint-level MMS. This is the lowest cardinality option. 
 
@@ -109,7 +109,7 @@ Follow these steps to create a Monitoring MetricSet for an instrumented service:
 
 5. Select how you want to add tag or process data to your Monitoring MetricSet from the dropdown. See :ref:`mms-conf` for more details. 
     a. :guilabel:`Service and all endpoint MMS:` Create an MMS for each selected service, as well as an MMS for each endpoint in each selected service. 
-    b. :guilabel:`Service and specific endpoint MMS:` Create an MMS for each selected service and an MMS for specific endpoints you select. To add :guilabel:`Endpoint Filters`, provide a list of endpoints or a regular expression pattern to generate MMS for specific endpoints you're interested in. 
+    b. :guilabel:`Service and specific endpoint MMS:` Create an MMS for each selected service and an MMS for specific endpoints you select. To add :guilabel:`Endpoint Filters`, provide a list of endpoints or a regular expression pattern to create MMS for specific endpoints you're interested in. 
     c. :guilabel:`Service MMS only:` Create an MMS for each selected service and no endpoint-level MMS. 
 
 6. (Optional) In the field labeled :guilabel:`Filter by tag values`, add tag filters to narrow the scope of your MMS to include only data associated with the tag values you enter. This can help further reduce cardinality in your MetricSets.
@@ -135,7 +135,7 @@ Follow these steps to create a Monitoring MetricSet for an instrumented service:
 .. note:: For standard MMS Splunk APM replaces dots with underscores in dimension names for MMS time series. For histogram MMS underscores are preserved.
 .. _inferred-service-mms:
 
-Generate a Monitoring MetricSet with a custom dimension for an inferred service
+Create a Monitoring MetricSet with a custom dimension for an inferred service
 =======================================================================================
 
 Follow these steps to create a Monitoring MetricSet for an inferred service:
@@ -163,7 +163,7 @@ Follow these steps to create a Monitoring MetricSet for an inferred service:
 Cardinality contribution of indexed span tags and processes
 ================================================================
 
-When you index a new span tag or process to generate Monitoring MetricSets, Splunk APM runs a cardinality contribution analysis to calculate the potential total cardinality contribution after indexing the span tag or process. This gives you control of what you index and helps you to account for organization subscription limits.
+When you index a new span tag or process to create Monitoring MetricSets, Splunk APM runs a cardinality contribution analysis to calculate the potential total cardinality contribution after indexing the span tag or process. This gives you control of what you index and helps you to account for organization subscription limits.
 
 If you try to index a span tag or process that might increase the total cardinality contribution beyond your limit, you can change the existing cardinality contribution of indexed tags or processes by modifying or removing indexed span tags or processes.
 
@@ -175,7 +175,7 @@ Set up charts, dashboards, and alerts for custom dimensions
 ==================================================================
 You can create charts, dashboards, and alerts based on your custom Monitoring MetricSet. 
 
-To use the custom dimensionalized Monitoring MetricSets you have created, apply the filter ``sf_dimensionalized:true``. This filters out the metrics generated by the default Monitoring Metricset. To filter your metrics even more, use the new dimension you have created which is the tag name you indexed.
+To use the custom dimensionalized Monitoring MetricSets you have created, apply the filter ``sf_dimensionalized:true``. This filters out the metrics created by the default Monitoring Metricset. To filter your metrics even more, use the new dimension you have created which is the tag name you indexed.
 
 .. list-table::
    :header-rows: 1

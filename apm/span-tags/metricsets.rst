@@ -16,13 +16,13 @@ Troubleshooting MetricSets
 
 Troubleshooting MetricSets (TMS) are metric time series (MTS) you can use for troubleshooting high-cardinality identities in APM. You can also use TMS to make historical comparisons across spans and workflows. 
 
-Splunk APM indexes and generates Troubleshooting MetricSets for several span tags by default. For more details about each of these tags, see :ref:`apm-default-span-tags`. You can't modify or stop APM from indexing these span tags. 
+Splunk APM indexes and creates Troubleshooting MetricSets for several span tags by default. For more details about each of these tags, see :ref:`apm-default-span-tags`. You can't modify or stop APM from indexing these span tags. 
 
-You can also create custom TMS by indexing additional span tags and processes. To learn how to index span tags and processes to generate new Troubleshooting MetricSets, see :ref:`apm-index-span-tags`.
+You can also create custom TMS by indexing additional span tags and processes. To learn how to index span tags and processes to create new Troubleshooting MetricSets, see :ref:`apm-index-span-tags`.
 
 Available TMS metrics
 -----------------------
-Every TMS generates the following metrics, known as request, error, and duration (RED) metrics. RED metrics appear when you select a service in the service map. See :ref:`service-map` to learn more about using RED metrics in the service map.
+Every TMS creates the following metrics, known as request, error, and duration (RED) metrics. RED metrics appear when you select a service in the service map. See :ref:`service-map` to learn more about using RED metrics in the service map.
 
 - Request rate
 - Error rate
@@ -135,6 +135,9 @@ Span dimensions
 
 Trace dimensions
 ---------------------------------
+
+.. note:: Trace dimensions are not supported for custom MMS.
+
 * ``sf_environment``
 * ``deployment.environment`` - This dimension is only available for histogram MMS.
 * ``sf_service``
@@ -143,20 +146,17 @@ Trace dimensions
 * ``sf_httpMethod``
 *  ``sf_error``
 
-.. note:: Trace dimensions are not supported for custom MMS.
-
-
 Workflow dimensions
 ---------------------------------
 
 Workflow metrics and dimensions are created by default when you create a Business Workflow. 
 
+.. note:: Workflow dimensions are not supported for custom MMS.
+
 * ``sf_environment``
 * ``deployment.environment`` - This dimension is only available for histogram MMS.
 * ``sf_workflow``
 * ``sf_error``
-
-.. note:: Workflow dimensions are not supported for custom MMS.
 
 Use MMS within Splunk APM
 ----------------------------------------
