@@ -84,7 +84,7 @@ Create the Splunk Enterprise service that listens for incoming log data from the
    services:
      # ...
      splunk:
-       image: splunk/splunk:latest
+       image: splunk/splunk:9.1.2
        container_name: splunk
        # Sets environment variables to automatically accept the license agreement,
        # define the token for the Splunk HTTP Event Collector (HEC), and define the administrator password.
@@ -108,6 +108,10 @@ Create the Splunk Enterprise service that listens for incoming log data from the
          - ./splunk.yml:/tmp/defaults/default.yml
          - /opt/splunk/var
          - /opt/splunk/etc
+
+.. note::
+
+   Be sure to use the ``9.1.2`` tag for the ``splunk/splunk`` image. There is a known issue related to the creation of HEC tokens that you are likely to encounter if you use the ``latest`` tag.
 
 Next step
 =========
