@@ -132,9 +132,7 @@ Follow these steps to create a Monitoring MetricSet for an instrumented service:
       :width: 60%
       :alt: This image shows the cardinality check for a Monitoring MetricSet. 
 
-.. note:: Splunk APM replaces dots with underscores in dimension names for MMS time series.
-
-
+.. note:: For standard MMS Splunk APM replaces dots with underscores in dimension names for MMS time series. For histogram MMS underscores are preserved.
 .. _inferred-service-mms:
 
 Generate a Monitoring MetricSet with a custom dimension for an inferred service
