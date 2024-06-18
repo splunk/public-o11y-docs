@@ -8,8 +8,11 @@ Filter data in Splunk APM
 
 Use the filtering options on the various APM pages to refine the scope of the data you are viewing. 
 
-Available filter fields
-=============================
+.. raw:: html
+
+  <embed>
+    <h2>Available filter fields<a name="available-filter-fields" class="headerlink" href="#available-filter-fields" title="Available filter fields">¶</a></h2>
+  </embed>
 
 You can filter by the following fields in Splunk APM. 
 
@@ -20,72 +23,33 @@ You can filter by the following fields in Splunk APM.
 * Operation
 * Tags
 
-Available operators
-=====================
+.. raw:: html
 
-* All filters support an equals operator. 
-* The operation and tag filters support both equals (``=``) or not equal to (``!=``).
+  <embed>
+    <h2>Available operators<a name="available-operators" class="headerlink" href="#available-operators" title="Available operators">¶</a></h2>
+  </embed>
 
-Available values
-===================
+* All filters support the equals  (``=``) operator. 
+* The operation and tag filters support equals (``=``) or not equal to (``!=``).
+
+.. raw:: html
+
+  <embed>
+    <h2>Available values<a name="available-values" class="headerlink" href="#available-values" title="Available values">¶</a></h2>
+  </embed>
 
 * The environment and workflow filters have an ``All`` selection.
-* The service and operation filters support multiple service and operation values by adding rows. 
-* The tag filter supports selection of multiple values.
+* The service and operation filters support multiple values. Add multiple values select :guilabel:`Add Row`. 
+* The tag filter supports selection of multiple values for a given tag. 
 * The operation and tag filters support wildcards (``*``).
 
-Supported APM pages
-======================
+.. raw:: html
 
-The above filters are available on all APM pages with the exception of service view and AlwaysOn Profiling. 
+  <embed>
+    <h2>Supported APM pages<a name="supported-APM-pages" class="headerlink" href="#supported-APM-pages" title="Supported APM pages">¶</a></h2>
+  </embed>
 
-* The service view supports a time range filter, and a single environment and service filter. 
+The above filters are available on all APM pages with the exception of the service view and AlwaysOn Profiling. 
+
+* The service view supports a time range filter and a single environment and service filter. See :ref:`apm-service-view`.
 * AlwaysOn Profiling has a unique set of available filters. See :ref:`search-filter-flamegraph`.
-
-.. list-table::
-  :header-rows: 1
-  :widths: 20, 20, 20, 20, 20
-
-  * - :strong:`APM page`
-    - :strong:`Workflow filter`
-    - :strong:`Service filter`
-    - :strong:`Operation filter`
-    - :strong:`Tag filter`
-
-  * - Service map
-    - Wildcard (``*``) is supported
-    - Wildcard (``*``) is supported
-    - Wildcard (``*``) and not (``!=``) are supported
-    - Wildcard (``*``) and not (``!=``) are supported
-
-  * - Tag Spotlight
-    - Wildcard (``*``) is supported
-    - Wildcard (``*``) is supported
-    - Wildcard (``*``) and not (``!=``) are supported
-    - Wildcard (``*``) and not (``!=``) are supported
- 
-  * - Trace Analyzer
-    - Wildcard (``*``) is supported
-    - Wildcard (``*``) is supported
-    - Wildcard (``*``) and not (``!=``) are supported
-    - Wildcard (``*``) and not (``!=``) are supported
-
-  * - Classic Traces page
-    - Wildcard (``*``) is supported
-    - Wildcard (``*``) is supported
-    - Wildcard (``*``) and not (``!=``) are supported
-    - Wildcard (``*``) and not (``!=``) are supported
-
-  * - Endpoint performance
-  * - Database performance
-  * - AlwaysOn Profiling
-    - n/a
-    - n/a
-    - n/a
-    - n/a
-
-  * - Service view
-    - n/a
-    - n/a
-    - n/a
-    - n/a

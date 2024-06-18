@@ -644,6 +644,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Use Data Links to connect APM properties to relevant resources TOGGLE <apm/apm-data-links/data-links-landing>
 
 .. toctree::
+   :maxdepth:   3
+
+   apm/filter-apm-data
+
+.. toctree::
    :caption: Infrastructure
    :maxdepth:   3
 
