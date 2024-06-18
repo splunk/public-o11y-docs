@@ -156,7 +156,7 @@ Follow these steps to create a Monitoring MetricSet for an inferred service:
 
     * If the cardinality impact of indexing this new MetricSet is within your subscription limit you see a green check mark and "Within Entitlement." Select the check mark under :guilabel:`Actions` to activate your Monitoring MetricSet. 
     * If the check times out before you activate the MetricSet, run the analysis again.
-    * If the check shows as failed, your cardinality is over your subscription limit for MMS or is otherwise invalid. See :ref:`cardinality-check-tms`. For steps to configure your MetricSet to be more efficient or other troubleshooting solutions, see :ref:`troubleshoot-mms`.
+    * If the check shows as failed, your cardinality is over your subscription limit for MMS or is otherwise invalid. See :ref:`cardinality-check-mms`. For steps to configure your MetricSet to be more efficient or other troubleshooting solutions, see :ref:`troubleshoot-mms`.
 
 .. _cardinality-check-mms:
 
