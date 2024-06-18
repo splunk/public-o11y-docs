@@ -147,7 +147,7 @@ Follow these steps to create a Monitoring MetricSet for an inferred service:
 
 2. On the :guilabel:`APM MetricSets` page, scroll to the :guilabel:`Inferred Service Monitoring MetricSets` section and select :guilabel:`Add Inferred Service MMS`.
 3. Select the inferred service for which you want to create a Monitoring MetricSet. 
-4. Select :guilabe:`Save`.
+4. Select :guilabel:`Save`.
 5. Your new metric set shows under :strong:`Pending MetricSets` section of the table with an :guilabel:`Analyzing` status while the cardinality check runs. You might have to wait a few moments for the check to run. 
 
    .. caution:: Your pending MetricSet expires after 1 hour. If your MetricSet times out before you activate it, run the analysis again. 

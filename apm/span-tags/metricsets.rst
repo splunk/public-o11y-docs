@@ -143,7 +143,7 @@ Trace dimensions
 * ``sf_httpMethod``
 *  ``sf_error``
 
-.. _note:: Trace dimensions are not supported for custom MMS.
+.. note:: Trace dimensions are not supported for custom MMS.
 
 
 Workflow dimensions
@@ -156,7 +156,7 @@ Workflow metrics and dimensions are created by default when you create a Busines
 * ``sf_workflow``
 * ``sf_error``
 
-.. _note:: Trace dimensions are not supported for custom MMS.
+.. note:: Workflow dimensions are not supported for custom MMS.
 
 Use MMS within Splunk APM
 ----------------------------------------
