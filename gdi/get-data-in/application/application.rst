@@ -99,4 +99,4 @@ To learn more about the data collected by Splunk Observability Cloud, see:
 - :ref:`get-started-metrics`
 - :ref:`span-attributes`
 
-To learn about the performance impact associated with instrumenting your back-end applications, see `How to Think About Instrumentation Overhead <https://community.splunk.com/t5/Product-News-Announcements/Observability-How-to-Think-About-Instrumentation-Overhead-White/ba-p/670727>` in the Splunk Community blog.
+To learn about the performance impact associated with instrumenting your back-end applications, see `How to Think About Instrumentation Overhead <https://community.splunk.com/t5/Product-News-Announcements/Observability-How-to-Think-About-Instrumentation-Overhead-White/ba-p/670727>`__ in the Splunk Community blog.
