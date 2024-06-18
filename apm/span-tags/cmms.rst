@@ -116,7 +116,7 @@ Follow these steps to create a Monitoring MetricSet for an instrumented service:
 
 7. Select :strong:`Start Analysis` to submit the configuration. Splunk APM runs an analysis of the span tag or process to calculate the potential cardinality contribution of the MetricSet to determine whether it is within your entitlement limit. 
 
-8. Your new metric set shows under :strong:`Pending MetricSets` section of the table with an :guilabel:`Analyzing` status while the cardinality check runs. You might have to wait a few moments for the check to run. 
+8. Your new MetricSet shows under :strong:`Pending MetricSets` section of the table with an :guilabel:`Analyzing` status while the cardinality check runs. You might have to wait a few moments for the check to run. 
 
    .. caution:: Your pending MetricSet expires after 1 hour. If your MetricSet times out before you activate it, run the analysis again. 
 
@@ -148,15 +148,15 @@ Follow these steps to create a Monitoring MetricSet for an inferred service:
 2. On the :guilabel:`APM MetricSets` page, scroll to the :guilabel:`Inferred Service Monitoring MetricSets` section and select :guilabel:`Add Inferred Service MMS`.
 3. Select the inferred service for which you want to create a Monitoring MetricSet. 
 4. Select :guilabel:`Save`.
-5. Your new metric set shows under :strong:`Pending MetricSets` section of the table with an :guilabel:`Analyzing` status while the cardinality check runs. You might have to wait a few moments for the check to run. 
+5. Your new MetricSet shows under :strong:`Pending MetricSets` section of the table with an :guilabel:`Analyzing` status while the cardinality check runs. You might have to wait a few moments for the check to run. 
 
    .. caution:: Your pending MetricSet expires after 1 hour. If your MetricSet times out before you activate it, run the analysis again. 
 
-9.  After the cardinality check has run, review the cardinality and activate your new MetricSet.
+6.  After the cardinality check has run, review the cardinality and activate your new MetricSet.
 
     * If the cardinality impact of indexing this new MetricSet is within your subscription limit you see a green check mark and "Within Entitlement." Select the check mark under :guilabel:`Actions` to activate your Monitoring MetricSet. 
     * If the check times out before you activate the MetricSet, run the analysis again.
-    * If the check shows as failed, your cardinality is over your subscription limit for MMS or is otherwise invalid. See :ref:`cardinality-check-mms`. For steps to configure your MetricSet to be more efficient or other troubleshooting solutions, see :ref:`troubleshoot-mms`.
+    * If the check shows as failed, your cardinality is over your subscription limit for MMS or is otherwise invalid. See :ref:`cardinality-check-mms`. 
 
 .. _cardinality-check-mms:
 
@@ -165,9 +165,9 @@ Cardinality contribution of indexed span tags and processes
 
 When you index a new span tag or process to create Monitoring MetricSets, Splunk APM runs a cardinality contribution analysis to calculate the potential total cardinality contribution after indexing the span tag or process. This gives you control of what you index and helps you to account for organization subscription limits.
 
-If you try to index a span tag or process that might increase the total cardinality contribution beyond your limit, you can change the existing cardinality contribution of indexed tags or processes by modifying or removing indexed span tags or processes.
+If you try to index a span tag or process that might increase the total cardinality contribution beyond your limit, you can change the existing cardinality contribution of indexed tags or processes fo instrumented services by modifying or removing indexed span tags or processes.
 
-To see your TMS subscription limit, go to :guilabel:`Settings` then :guilabel:`Subscription Usage`. Depending on your organization subscription, you might need to go to :guilabel:`Settings` then :guilabel:`Billing and Usage`. Select the :guilabel:`APM` tab and then select the :guilabel:`Troubleshooting MetricSets` panel to view your subscription limit for MMS. You must have an admin or usage role to view subscription limits. To learn more about APM usage and billing, see :ref:`apm-billing-usage-index`.
+To see your TMS subscription limit, go to :guilabel:`Settings` then :guilabel:`Subscription Usage`. Depending on your organization subscription, you might need to go to :guilabel:`Settings` then :guilabel:`Billing and Usage`. Select the :guilabel:`APM` tab and then select the :guilabel:`Monitoring MetricSets` panel to view your subscription limit for MMS. You must have an admin or usage role to view subscription limits. To learn more about APM usage and billing, see :ref:`apm-billing-usage-index`.
 
 .. _charts-dashboards-alerts:
 
@@ -175,7 +175,7 @@ Set up charts, dashboards, and alerts for custom dimensions
 ==================================================================
 You can create charts, dashboards, and alerts based on your custom Monitoring MetricSet. 
 
-To use the custom dimensionalized Monitoring MetricSets you have created, apply the filter ``sf_dimensionalized:true``. This filters out the metrics created by the default Monitoring Metricset. To filter your metrics even more, use the new dimension you have created which is the tag name you indexed.
+To use the custom dimensionalized Monitoring MetricSets you have created, apply the filter ``sf_dimensionalized:true``. This filters out the metrics created by the default Monitoring MetricSet. To filter your metrics even more, use the new dimension you have created which is the tag name you indexed.
 
 .. list-table::
    :header-rows: 1
