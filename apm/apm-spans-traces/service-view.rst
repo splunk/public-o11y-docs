@@ -17,7 +17,7 @@ You can access the service view for a specific service in several places.
 
 You can search for the service using the search in the top toolbar.
 
-..  image:: /_images/apm/spans-traces/service-view-global-search+traces.gif
+..  image:: /_images/apm/spans-traces/service-view-global-search-traces.gif
     :width: 95%
     :alt: Animation showing a user searching for the checkoutservice and selecting the service result. 
 
@@ -39,7 +39,7 @@ Service metrics
 
 Use the following metrics in the :guilabel:`Service metrics` section to monitor the health of your service. Collapse sub-sections that are not relevant to you to customize your service view.
 
-..  image:: /_images/apm/spans-traces/service-view-service-metrics+traces.gif
+..  image:: /_images/apm/spans-traces/service-view-service-metrics-traces.gif
     :width: 95%
     :alt: This animation shows the service metrics for a service in the service view. The user select a chart to view example traces.
 
