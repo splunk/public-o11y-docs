@@ -51,7 +51,7 @@ Use the filtering options on the various APM pages to refine the scope of the da
 
   * - Workflow
     - Equals (``=``)
-    - Single workflow or ``All``
+    - 1 workflow or ``All``
     - * Database performance 
       * Endpoint performance
       * Service map
