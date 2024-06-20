@@ -491,7 +491,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Override default time range <data-visualization/use-time-range-selector>   
+   Select the time range <data-visualization/use-time-range-selector>   
 
 .. toctree::
    :maxdepth:   3
