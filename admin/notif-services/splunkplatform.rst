@@ -48,10 +48,10 @@ Step 1: Create a Splunk platform integration in Splunk Observability Cloud
         - Give your integration a unique and descriptive name. For information about the downstream use of this name, see :new-page-ref:`About naming your integrations <naming-note>`.
 
       * - URL
-        - Enter...
+        - Enter the URL for your Splunk platform instance
 
       * - HEC token
-        - ...
+        - Enter the HTTP Event Collector token that allows access to your Splunk platform instance. To learn more, see :new-page:`Set up and use HTTP Event Collector in Splunk Web <https://docs.splunk.com/Documentation/SplunkCloud/9.2.2403/Data/UsetheHTTPEventCollector>`
 
 #. Select :guilabel:`Next`.
 #. On the :strong:`Customize message` page, you see the default template for a Splunk platform integration. You can customize your payload to make sure responders have the context needed to resolve the issues.
