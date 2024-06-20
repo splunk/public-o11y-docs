@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Splunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-18 13:27+0000\n"
-"PO-Revision-Date: 2024-05-21 15:32+0100\n"
+"POT-Creation-Date: 2024-05-21 15:02+0000\n"
+"PO-Revision-Date: 2024-06-14 10:42+0100\n"
 "Last-Translator: \n"
 "Language-Team: ja_JA <LL@li.org>\n"
 "Language: ja_JA\n"
@@ -51,7 +51,7 @@ msgid "Observability Cloud teams and alerting"
 msgstr "Observability Cloudのチームとアラート"
 
 #: ../../splunkplatform/practice-reliability/collaboration.rst:23
-msgid "A primary means of organizing collaboration on observability and reliability across teams is by setting up Observability Cloud teams. Teams serve as a secure way to organize users by functional area. Teams also let you control access and permissions to all objects, dashboards, and queries in Observability Cloud. Observability Cloud offers enterprise-grade management with token and access control. See :ref:`admin-tokens`."
+msgid "A primary means of organizing collaboration on observability and reliability across teams is by setting up Observability Cloud teams. Teams serve as a secure way to organize users by functional area. Teams also let you control access and permissions to all objects, dashboards, and queries in Observability Cloud. Observability Cloud offers enterprise-grade management with token and access control. See:ref:`admin-tokens`."
 msgstr "チーム間でオブザーバビリティと信頼性に関する協力を構成するための最も重要な手段は、Observability Cloudのチームを設定することです。チームは、機能領域ごとにユーザーを編成するための安全な方法として機能します。また、チームを設定すると、Observability Cloudのすべてのオブジェクト、ダッシュボード、およびクエリへのアクセスと権限を制御できます。Observability Cloudは、トークンとアクセス制御による企業グレードの管理を提供します。:ref:`admin-tokens` を参照してください。"
 
 #: ../../splunkplatform/practice-reliability/collaboration.rst:25
@@ -59,7 +59,7 @@ msgid "After you organize users into teams by functional area, you can connect u
 msgstr ""
 "ユーザーを機能領域別にチームに編成したら、特定の領域のユーザーを、そのユーザーの最も高い関心対象となるディテクターおよびダッシュボードのグループに接続できます。Observability Cloudのチームを使用して、機能チーム内および機能チーム間のコラボレーションを促進する方法については、:ref:`admin-manage-teams` を参照してください。Observability Cloudのチームの構造を整理して、最も関連性の高いチームのみに通知するようにディテクターを構成することで、労力を削減します。労力を減らしながらセキュリティを高める方法の事例は、:ref:`scenario-security` を参照してください。"
 
-#: ../../splunkplatform/practice-reliability/collaboration.rst:28 ../../splunkplatform/practice-reliability/incident-response.rst:51 ../../splunkplatform/practice-reliability/slis.rst:39
+#: ../../splunkplatform/practice-reliability/collaboration.rst:28 ../../splunkplatform/practice-reliability/incident-response.rst:51 ../../splunkplatform/practice-reliability/slis.rst:41
 msgid "Splunk APM"
 msgstr "Splunk APM"
 
@@ -183,7 +183,7 @@ msgstr "データベースのクエリが遅いことも、サービスの可用
 msgid "You can check the performance of your database queries in Splunk APM. Log in to Observability Cloud, select :strong:`APM` in the left navigation menu, then select :strong:`DB Query Performance` on the right panel."
 msgstr "Splunk APMでデータベースクエリのパフォーマンスを確認できます。Observability Cloudにログインし、左のナビゲーションメニューで :strong:`APM` を選択して、右のパネルで :strong:`DB クエリパフォーマンス` を選択してください。"
 
-#: ../../splunkplatform/practice-reliability/incident-response.rst:65 ../../splunkplatform/practice-reliability/slis.rst:65
+#: ../../splunkplatform/practice-reliability/incident-response.rst:65 ../../splunkplatform/practice-reliability/slis.rst:67
 msgid "Splunk Infrastructure Monitoring"
 msgstr "Splunk Infrastructure Monitoring"
 
@@ -251,7 +251,7 @@ msgstr "このアニメーションGIFは、ユーザーがエラーログを選
 msgid "See :ref:`logs-queries` to learn all of the ways Log Observer Connect queries can drill down to root causes of incidents."
 msgstr ":ref:`logs-queries` を参照して、Log Observer Connectのクエリでインシデントの根本原因を掘り下げるすべての方法を学習してください。"
 
-#: ../../splunkplatform/practice-reliability/incident-response.rst:103 ../../splunkplatform/practice-reliability/slis.rst:79
+#: ../../splunkplatform/practice-reliability/incident-response.rst:103 ../../splunkplatform/practice-reliability/slis.rst:81
 msgid "Real User Monitoring (RUM)"
 msgstr "Real User Monitoring（RUM）"
 
@@ -276,58 +276,64 @@ msgid "SLIs, SLOs, and SLAs in Observability Cloud"
 msgstr "Observability CloudにおけるSLI、SLO、SLA"
 
 #: ../../splunkplatform/practice-reliability/slis.rst:5 ../../splunkplatform/practice-reliability/splunkplatform-landing.rst:11
+#, fuzzy
 msgid "Measure and alert on SLIs"
 msgstr "SLIの測定とアラート"
 
 #: ../../splunkplatform/practice-reliability/slis.rst:10
+#, fuzzy
 msgid "Splunk Observability Cloud provides prepackaged solutions for monitoring your service level indicators (SLIs) and service level objectives (SLOs). You can also define your own signals with custom detectors and alert on the data most important to your teams."
 msgstr "Splunk Observability Cloudは、サービスレベル指標（SLI）とサービスレベル目標（SLO）を監視するためのパッケージ済みのソリューションを提供します。また、カスタムディテクターを使用して独自のシグナルを定義し、チームにとって最も重要なデータに対してアラートを出すこともできます。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:15
+#: ../../splunkplatform/practice-reliability/slis.rst:17
+#, fuzzy
 msgid "SLIs and SLOs"
 msgstr "SLIとSLO"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:16
+#: ../../splunkplatform/practice-reliability/slis.rst:18
+#, fuzzy
 msgid "SLIs are important because they help you meet your SLAs with customers. SLIs are the metrics used to measure your system's availability. Service level objectives (SLOs) are what you determine is the appropriate level of availability, as measured by your SLIs. Service level agreements (SLAs) are the promise you make to your customers about how much of the time you will meet your SLOs and what you will do if you do not meet them."
 msgstr "SLIとは、顧客とのSLAを満たすために役立つため、重要です。SLIは、システムの可用性を測定するために使用されるメトリクスです。サービスレベル目標（SLO）とは、SLIによって測定される可用性の適切なレベルを決定するものです。サービスレベルアグリーメント（SLA）とは、SLOをどの程度の時間で達成するのか、また達成しなかった場合はどうするのかに関する顧客との約束です。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:18
+#: ../../splunkplatform/practice-reliability/slis.rst:20
 msgid "The following example shows an SLI of system availability with an appropriate SLO and SLA for your customers:"
 msgstr "次の例は、システム可用性のSLIと、適切なSLOおよび顧客向けのSLAを示しています："
 
-#: ../../splunkplatform/practice-reliability/slis.rst:20
+#: ../../splunkplatform/practice-reliability/slis.rst:22
 msgid "SLI: The percentage of the time your system is available, where you define availability as a transaction taking less than a half second to complete."
 msgstr "SLI：システムが利用可能である時間の割合。ここであなたは、トランザクションの完了にかかる時間が0.5秒未満であることを「利用可能」な状態と定義します。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:22
+#: ../../splunkplatform/practice-reliability/slis.rst:24
 msgid "SLO: Your system aims to be available 99.99% of the time."
 msgstr "SLO：あなたのシステムは、99.99%の時間において利用可能であることを目標とします。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:24
+#: ../../splunkplatform/practice-reliability/slis.rst:26
 msgid "SLA: If your system is not available 99.99% of the time during a month, you give the customer a rebate."
 msgstr "SLA：1ヶ月間においてシステムが利用可能な状態にある時間が99.99%ではなかった場合、あなたは顧客にリベートを支払います。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:26
+#: ../../splunkplatform/practice-reliability/slis.rst:28
+#, fuzzy
 msgid "To meet your business goals, you must set and manage SLOs based on accurate data, as measured by your SLIs. Observability Cloud immediately monitors and analyzes your SLIs, takes the guesswork out of determining error budgets, and helps you set reasonable SLOs so that you meet your business goals. The following section introduces SLO management, a tool you can use to measure and alert on your SLIs and SLOs. The final section details multiple other ways you can use Splunk Observability Cloud to monitor important signals for your service."
 msgstr "ビジネス目標を達成するためには、SLIによって測定された正確なデータに基づいてSLOを設定し、管理する必要があります。Observability Cloudは、SLIを即座に監視および分析し、エラーバジェットの決定から推測を排除し、ビジネス目標を達成するための合理的なSLOの設定を支援します。次のセクションでは、SLIおよびSLOの測定とアラートに使用できるツール、SLO管理を紹介します。最後のセクションでは、Splunk Observability Cloudを使用してサービスに関する重要なシグナルを監視するためのその他の方法を詳しく説明します。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:30
+#: ../../splunkplatform/practice-reliability/slis.rst:32
 msgid "Service level objective (SLO) management"
 msgstr "サービスレベル目標（SLO）管理"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:31
+#: ../../splunkplatform/practice-reliability/slis.rst:33
 msgid "Splunk Observability Cloud provides a service level monitoring experience that helps you align your business needs with your engineering reliability goals. Service level monitoring is the process of measuring, tracking, and analyzing a variety of service level indicators (SLIs) associated with a given service. You can then compare the health of a deployed software or service against your business goals. To learn more about SLO management and how to create your own SLO, see :ref:`slo-intro`."
 msgstr "Splunk Observability Cloudは、ビジネスニーズとエンジニアリングの信頼性目標を一致させるのに役立つサービスレベル監視エクスペリエンスを提供します。サービスレベル監視とは、特定のサービスに関連するさまざまなサービスレベル指標（SLI）を測定、追跡、分析するプロセスです。これにより、デプロイしたソフトウェアやサービスの健全性をビジネス目標と比較することができます。SLO管理と独自のSLOの作成方法の詳細は、:ref:`slo-intro` を参照してください。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:35
+#: ../../splunkplatform/practice-reliability/slis.rst:37
 msgid "Additional methods of monitoring your service"
 msgstr "サービス監視のその他の方法"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:36
+#: ../../splunkplatform/practice-reliability/slis.rst:38
 msgid "In addition to SLO management, there are many other ways to monitor important signals for your service so that you can remain aligned with your business goals. The following sections detail those methods."
 msgstr "SLO管理のほかにも、ビジネス目標との整合性を保つためにサービスに関する重要なシグナルを監視する方法は数多くあります。以下のセクションでは、それらの方法について詳しく説明します。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:40
+#: ../../splunkplatform/practice-reliability/slis.rst:42
+#, fuzzy
 msgid ""
 "You can monitor important service signals in Splunk APM. Splunk APM automatically generates a service map displaying all of your instrumented and inferred services, the dependencies among them, and SLIs for each when you select a service. See :ref:`apm-service-map`. The service map shows signals for your services, including error rate, root error rate, and latency of your services. The panel to the right of the service map also shows services by error rate, top error sources, and services by latency. For example, you can track whether the signal "
 "for your 90th percentile service latency for each service is less than 5 seconds. On the following service map, you can see in the :strong:`Services By Latency (P90)` chart on the right that all services have a P90 of less than 1 minute. You can also track error rates on the service map in the :strong:`Services by Error Rate` chart."
@@ -335,83 +341,89 @@ msgstr ""
 "Splunk APMで重要なサービスシグナルを監視できます。Splunk APMは、サービスを選択すると、インストルメンテーションしたすべてのサービスとすべての推定サービス、それらの依存関係、およびそれぞれのSLIを表示するサービスマップを自動的に生成します。:ref:`apm-service-map` を参照してください。サービスマップには、エラー率、ルートエラー率、レイテンシといったサービスのシグナルが表示されます。サービスマップの右側にあるパネルでは、サービスのエラー率、上位エラーソース、サービスのレイテンシも表示されます。たとえば、各サービスの90パーセンタイルのサービス遅延のシグナル"
 "が5秒未満かどうかを追跡できます。以下のサービスマップでは、右側の :strong:`サービス・レイテンシ（P90）` のチャートで、すべてのサービスのP90が1分未満であることがわかります。また、サービスマップ上の :strong:`サービス・エラー率` のチャートでは、エラー率を追跡することもできます。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:39
+#: ../../splunkplatform/practice-reliability/slis.rst:41
 msgid "This screenshot shows an APM service map."
 msgstr "このスクリーンショットは、APMサービスマップを示しています。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:46
+#: ../../splunkplatform/practice-reliability/slis.rst:48
 msgid "You can alert on a service by creating a detector. See :ref:`create-detectors` to learn how. You can also rely on built-in alert conditions and link detectors to charts. See :ref:`built-in alert conditions <condition-reference>` and :ref:`link detectors to charts <linking-detectors>`."
 msgstr "ディテクターを作成することで、サービスに対するアラートを発することができます。方法については、:ref:`create-detectors` を参照してください。また、内蔵のアラート条件を使用して、ディテクターをチャートにリンクすることもできます。:ref:`内蔵のアラート条件<condition-reference>` および :ref:`ディテクターをチャートにリンク<linking-detectors>` を参照してください。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:49
+#: ../../splunkplatform/practice-reliability/slis.rst:51
+#, fuzzy
 msgid "Built-in dashboards in Splunk APM are automatically populated with signals for all integrated services. See :ref:`built-in-dashboards` for more information. The following sample APM dashboard shows multiple signals: request rate, request latency, request latency distribution, and error rate"
 msgstr "Splunk APMの内蔵ダッシュボードには、インテグレーションしたすべてのサービスのシグナルが自動的に入力されます。詳細は :ref:`built-in-dashboards` を参照してください。以下のAPMダッシュボード例では、複数のシグナル（リクエスト率、リクエストのレイテンシ、リクエストレイテンシの分布、エラー率）が表示されています。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:51 ../../splunkplatform/practice-reliability/slis.rst:70
+#: ../../splunkplatform/practice-reliability/slis.rst:53 ../../splunkplatform/practice-reliability/slis.rst:72
 msgid "This animated GIF shows hover and click actions on a chart to display metric time series, a data table, and full chart data."
 msgstr "このアニメーションGIFは、チャート上でカーソルを置いたりクリックしたりして、メトリック時系列、データテーブル、完全なチャートデータを表示するアクションを示しています。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:55
+#: ../../splunkplatform/practice-reliability/slis.rst:57
 msgid "To see a dashboard for a service, select the service on the service map, then select :strong:`View Dashboard`."
 msgstr "サービスのダッシュボードを表示するには、サービスマップ上でサービスを選択して、:strong:`ダッシュボードの表示` を選択します。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:57
+#: ../../splunkplatform/practice-reliability/slis.rst:59
 msgid "See :ref:`dashboards` for a list of dashboards and how you can create, customize, import, export, clone, and share them. See :ref:`apm-dashboards` to learn how to track performance, troubleshoot from the dashboard, and create a detector so that you can alert on a dashboard or chart in the future. For a scenario on managing SLOs using APM, see :ref:`custom-metricset`."
 msgstr "ダッシュボードのリストと、ダッシュボードの作成、カスタマイズ、インポート、エクスポート、複製、および共有の方法については、:ref:`dashboards` を参照してください。パフォーマンスの追跡、ダッシュボードからのトラブルシューティング、将来的にダッシュボードやチャートでアラートを発するためのディテクターの作成の方法は、:ref:`apm-dashboards` を参照してください。APMを使用したSLO管理のシナリオについては、:ref:`custom-metricset` を参照してください。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:60
+#: ../../splunkplatform/practice-reliability/slis.rst:62
 msgid "Observability Cloud Alerts and detectors"
 msgstr "Observability Cloudのアラートとディテクター"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:61
+#: ../../splunkplatform/practice-reliability/slis.rst:63
+#, fuzzy
 msgid "AutoDetect is a set of read-only alerts and detectors that Observability Cloud automatically creates when you configure supported integrations. As described in the previous section, you can also set up custom detectors to define your own signals and alert on any data that matters to you. See :ref:`autodetect` for more information."
 msgstr "AutoDetectは、サポート対象のインテグレーションを構成する際にObservability Cloudが自動的に作成する読み取り専用のアラートとディテクターのセットです。前のセクションで説明したように、カスタムディテクターを設定して独自のシグナルを定義し、自分にとって重要なデータについてアラートを出すこともできます。詳細については、:ref:`autodetect` を参照してください。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:66
+#: ../../splunkplatform/practice-reliability/slis.rst:68
 msgid "Infrastructure Monitoring is a custom metrics platform for real-time monitoring across infrastructure, applications, and business metrics. It collects health and performance data from servers, virtual machines, containers, databases, public cloud services, container orchestration, and serverless and other back-end components in your deployment. With over 200 integrations and dashboards, you can monitor your entire infrastructure on a single screen and significantly speed your cloud migration journey."
 msgstr "Infrastructure Monitoringは、インフラストラクチャ、アプリケーション、およびビジネスメトリクスの全体をリアルタイムで監視するためのカスタムメトリクスプラットフォームです。ご利用のデプロイ内のサーバー、仮想マシン、コンテナ、データベース、パブリッククラウドサービス、コンテナオーケストレーション、サーバーレスその他のバックエンドコンポーネントから、健全性データとパフォーマンスデータを収集します。200を超えるインテグレーションとダッシュボードを使用して、インフラストラクチャ全体を1つの画面で監視し、クラウド移行の作業を大幅にスピードアップできます。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:68
+#: ../../splunkplatform/practice-reliability/slis.rst:70
+#, fuzzy
 msgid "Monitor signals in prepackaged navigators, such as the following navigator chart that shows latency over the last minute for AWS ELB instances:"
 msgstr "例えば、AWS ELBインスタンスの直近1分間のレイテンシを表示する以下のナビゲーターチャートのように、パッケージ済みのナビゲーターでシグナルを監視します："
 
-#: ../../splunkplatform/practice-reliability/slis.rst:74
+#: ../../splunkplatform/practice-reliability/slis.rst:76
 msgid "In addition to prepackaged navigators, you can set up alerts and detectors on any custom Infrastructure Monitoring data that matters to you. See :ref:`get-started-detectoralert`."
 msgstr "パッケージ済みのナビゲーターに加えて、自分にとって重要なカスタムのInfrastructure Monitoringデータに対して、アラートとディテクターを設定することもできます。:ref:`get-started-detectoralert` を参照してください。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:76
+#: ../../splunkplatform/practice-reliability/slis.rst:78
+#, fuzzy
 msgid "Virtual metrics in Splunk Infrastructure Monitoring help you measure signals by automatically gathering, aggregating, and defining metrics. Virtual metrics remove the complexity of choosing the most appropriate metric source among various available options. See :ref:`infrastructure-virtual-metrics`."
 msgstr "Splunk Infrastructure Monitoringの仮想メトリクスは、メトリクスを自動的に収集、集計、定義することで、シグナルの測定を支援します。仮想メトリクスは、利用可能なさまざまなオプションの中から最も適切なメトリクスソースを選択するための複雑性を取り除きます。:ref:`infrastructure-virtual-metrics` を参照してください。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:80
+#: ../../splunkplatform/practice-reliability/slis.rst:82
+#, fuzzy
 msgid "Splunk RUM shows signals from the perspective of what your users experience in the UI. In the following example, a RUM dashboard in the Tag Spotlight view starts with a chart displaying the total count of network requests and errors over a 15-minute period. The following charts display the count of requests and errors by URL name, HTTP method, and HTTP status code."
 msgstr "Splunk RUMは、UIにおけるユーザーのエクスペリエンスという観点からシグナルを表示します。以下の例では、Tag SpotlightビューのRUMダッシュボードは、15分間におけるネットワークリクエストとエラーの総数を表示するチャートから始まっています。次のチャートには、URL名、HTTPメソッド、および HTTPステータスコードごとにリクエストとエラーの数が表示されています。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:82
+#: ../../splunkplatform/practice-reliability/slis.rst:84
 msgid "This image shows a RUM dashboard displaying a count of requests and errors by URL name, by HTTP method, and by HTTP status code."
 msgstr "この画像は、URL名、HTTPメソッド、およびHTTPステータスコード別にリクエストとエラーの数を表示したRUMダッシュボードを示しています。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:86
+#: ../../splunkplatform/practice-reliability/slis.rst:88
 msgid "To learn more about what you can do with RUM, see :ref:`get-started-rum`. :ref:`scenario-landingpage` has multiple examples of how you can use RUM."
 msgstr "RUMを使用してできることの詳細については、:ref:`get-started-rum` を参照してください。また :ref:`scenario-landingpage` には、RUMの使用方法の例を複数記載しています。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:90
+#: ../../splunkplatform/practice-reliability/slis.rst:92
 msgid "Splunk Synthetic Monitoring"
 msgstr "Splunk Synthetic Monitoring"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:91
+#: ../../splunkplatform/practice-reliability/slis.rst:93
 msgid "Test your SLOs before users do with Splunk Synthetic Monitoring. When you proactively monitor the performance of your web application, you can remediate problems before they impact your users. Technical and business teams use Synthetic Monitoring to create detailed tests that monitor the speed and reliability of websites, web apps, and resources over time, at any stage in the development cycle. See :ref:`intro-synthetics` to learn what you can do with Synthetics Monitoring."
 msgstr "Splunk Synthetic Monitoringで、ユーザーより先にSLOをテストしましょう。ウェブアプリケーションのパフォーマンスを積極的に監視すれば、ユーザーに影響が及ぶ前に問題を修正できます。技術チームとビジネスチームは、Synthetic Monitoringを使用して詳細なテストを作成し、ウェブサイト、ウェブアプリ、およびリソースのスピードと信頼性を、開発サイクルのあらゆる段階で長期にわたって監視できます。Synthetics Monitoringできることについては、:ref:`intro-synthetics` を参照してください。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:93
+#: ../../splunkplatform/practice-reliability/slis.rst:95
 msgid "To learn more about when to use Synthetic Monitoring in a scenario, see :ref:`uptime-test-scenario`."
 msgstr "Synthetic Monitoringを使用すべきタイミングをシナリオで学ぶには、:ref:`uptime-test-scenario` を参照してください。"
 
-#: ../../splunkplatform/practice-reliability/slis.rst:95
+#: ../../splunkplatform/practice-reliability/slis.rst:97
 msgid "Alerting on synthetic testing makes Synthetic Monitoring actionable for your development and dev ops teams. Set up browser tests and uptime tests to monitor your site or application at the frequency you prefer. Each test captures a set of metrics each time it runs. To set up alerts that notify you when tests fail, see :ref:`synth-alerts`."
 msgstr "合成テストに対してアラートを発することで、Synthetic Monitoringは開発チームや開発運用チームにとって実用的なものになります。ブラウザーテストとアップタイムテストを設定して、好みの頻度でサイトやアプリケーションを監視できます。各テストは、実行するたびに一連のメトリクスを取得します。テストが失敗したときに通知するアラートを設定する方法は、:ref:`synth-alerts` を参照してください。"
 
 #: ../../splunkplatform/practice-reliability/splunkplatform-landing.rst:11
+#, fuzzy
 msgid "Collaborate on observability"
 msgstr "オブザーバビリティに関する協力"
 
@@ -420,6 +432,7 @@ msgid "This page provides an overview of how reliability engineers can maintain 
 msgstr "このページでは、信頼性エンジニアがObservability Cloudのコンポーネントを使用して信頼性を維持する方法を概説します。"
 
 #: ../../splunkplatform/practice-reliability/splunkplatform-landing.rst:5
+#, fuzzy
 msgid "Practice reliability with Splunk Observability Cloud and the Splunk platform"
 msgstr "Splunk Observability CloudとSplunkプラットフォームを使用した信頼性の実践"
 
@@ -469,6 +482,7 @@ msgid "Select each of the following categories to learn how you can maintain rel
 msgstr "以下の各カテゴリーを選択して、Observability Cloudで信頼性を維持する方法を学習してください："
 
 #: ../../splunkplatform/practice-reliability/splunkplatform-landing.rst:41
+#, fuzzy
 msgid ":ref:`Measure and alert on SLIs <practice-reliability-slis>`"
 msgstr ":ref:`SLIの測定とアラート<practice-reliability-slis>`"
 
@@ -485,18 +499,22 @@ msgid "Then see :ref:`get-started-get-data-in` to set up each component of Splun
 msgstr "次に、:ref:`get-started-get-data-in` を参照して、Splunk Observability Cloudの各コンポーネントをセットアップします。"
 
 #: ../../splunkplatform/scenarios/integration-scenario-landing.rst:11
+#, fuzzy
 msgid "Splunk ITSI and Splunk Observability Cloud scenario"
 msgstr "Splunk ITSIとSplunk Observability Cloudのシナリオ"
 
 #: ../../splunkplatform/scenarios/integration-scenario-landing.rst:-1
+#, fuzzy
 msgid "Use case scenarios for Splunk Observability Cloud and the Splunk platform."
 msgstr "Splunk Observability CloudとSplunkプラットフォームのユースケースシナリオ"
 
 #: ../../splunkplatform/scenarios/integration-scenario-landing.rst:5
+#, fuzzy
 msgid "Splunk Observability Cloud and the Splunk platform scenarios"
 msgstr "Splunk Observability CloudとSplunkプラットフォームのシナリオ"
 
 #: ../../splunkplatform/scenarios/integration-scenario-landing.rst:18
+#, fuzzy
 msgid "The following use case scenarios demonstrate how you can use Splunk Observability Cloud with the Splunk platform:"
 msgstr "以下のユースケースシナリオは、Splunk Observability CloudをSplunkプラットフォームで使用する方法を示しています："
 
@@ -505,6 +523,7 @@ msgid ":ref:`integration-scenario1`"
 msgstr ":ref:`integration-scenario1`"
 
 #: ../../splunkplatform/scenarios/integration-scenario-landing.rst:21
+#, fuzzy
 msgid ":ref:`logs-LOconnect-scenario`"
 msgstr ":ref:`logs-LOconnect-scenario`"
 
@@ -513,6 +532,7 @@ msgid "This scenario describes how users can use Splunk ITSI and Splunk Observab
 msgstr "このシナリオでは、Splunk ITSIとSplunk Observability Cloudを併用することで、問題をより迅速に掘り下げ、解決までの平均時間を短縮する方法について説明します。"
 
 #: ../../splunkplatform/scenarios/integration-scenario1.rst:6
+#, fuzzy
 msgid "Scenario: Kai troubleshoots faster with IT Service Intelligence and Splunk Observability Cloud"
 msgstr "シナリオ：KaiがIT Service IntelligenceとSplunk Observability Cloudを使用して迅速なトラブルシューティングを実行する"
 
@@ -525,6 +545,7 @@ msgid "To troubleshoot the problem, Kai decides to take the following actions:"
 msgstr "問題のトラブルシューティングのため、Kaiは次のようなアクションを取ることにしました："
 
 #: ../../splunkplatform/scenarios/integration-scenario1.rst:15
+#, fuzzy
 msgid ":ref:`glass-table`"
 msgstr ":ref:`glass-table`"
 
@@ -553,6 +574,7 @@ msgid "This screenshot shows a close up of the services health scores section of
 msgstr "このスクリーンショットは、Splunk IT Service Intelligenceの画面の「サービス健全性スコア」セクションをクローズアップしたものです。"
 
 #: ../../splunkplatform/scenarios/integration-scenario1.rst:42
+#, fuzzy
 msgid "Troubleshoot using Splunk Observability Cloud"
 msgstr "Splunk Observability Cloudを使用したトラブルシューティング"
 
@@ -561,6 +583,7 @@ msgid "In Splunk Observability Cloud, Kai troubleshoots the problem they first i
 msgstr "Splunk Observability Cloudで、Kaiは、Synthetic MonitoringとApplication Performance Monitoring（APM）ビューを使用してITSIで最初に特定した問題をトラブルシューティングします。"
 
 #: ../../splunkplatform/scenarios/integration-scenario1.rst:48
+#, fuzzy
 msgid "Examine synthetics tests in Splunk Synthetic Monitoring"
 msgstr "Splunk Synthetic Monitoringでの合成テストの調査"
 
@@ -613,6 +636,7 @@ msgid "After finding the source of the degraded revenue problem, Kai returns to 
 msgstr "収益低下問題の原因を突き止めた後、KaiはSplunk IT Service Intelligenceの画面に戻り、当該のアプリケーションとビジネスサービスを、同時期に発生したセキュリティ重要ベントと関連付けることができました。脅威アクティビティと、その直前に発生したアクセスとネットワークのアクティビティを確認しました。すぐにセキュリティチームにこの調査結果を報告します。"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:-1
+#, fuzzy
 msgid "This page describes Unified Identity between Splunk Cloud Platform and Splunk Observability Cloud, including how to set it up."
 msgstr "このページでは、Splunk Cloud PlatformおよびSplunk Observability Cloud間の統合IDについて、設定方法を含めて説明します。"
 
@@ -629,10 +653,12 @@ msgid "What is Unified Identity?"
 msgstr "統合IDとは"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:16
+#, fuzzy
 msgid "Unified Identity is the integration of Splunk Cloud Platform and Splunk Observability Cloud. Users can access both platforms using a single identity by logging into Splunk Observability Cloud with SSO using their Splunk Cloud Platform credentials. Splunk Cloud Platform serves as the Identity Provider (IdP). You can use a third party identity provider, such as Okta, but you will lose the benefits of the integrated experience. See :ref:`unified-identity-benefits`"
 msgstr "統合IDとは、Splunk Cloud PlatformおよびSplunk Observability Cloudのインテグレーションです。ユーザーは、Splunk Cloud Platformの認証情報を使用してSSOでSplunk Observability Cloudにログインすることで、単一のIDの使用によって両方のプラットフォームにアクセスできます。Splunk Cloud Platformは、IDプロバイダー（IdP）として機能します。OktaなどのサードパーティのIDプロバイダーを使用することもできますが、その場合、統合されたエクスペリエンスの利点は失われます。:ref:`unified-identity-benefits` を参照してください。"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:18
+#, fuzzy
 msgid ""
 "When you integrate your Splunk Cloud Platform and Splunk Observability Cloud instances and activate Unified Identity, administrators can set up all users in a central location, Splunk Cloud Platform. Splunk Cloud Platform admins control user and data access permissions for both platforms separately in respective products. For more information, see :ref:`admin-manage-users`. To learn about user roles and permissions in Splunk Cloud Platform, see :new-page:`About configuring role-based user access <https://docs.splunk.com/Documentation/SplunkCloud/"
 "latest/Security/Aboutusersandroles>`. The integration extends permissions to access data indexed in Splunk Cloud Platform to Splunk Observability Cloud applications with no administrative overhead. See :ref:`unified-id-user-provisioning` for more information."
@@ -645,8 +671,9 @@ msgid "Who can access Single Sign On (SSO) and the benefits of Unified Identity?
 msgstr "シングルサインオン（SSO）と統合IDのメリットを利用できるユーザー"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:24
-msgid "All customers who have both Splunk Cloud Platform and Splunk Observability Cloud can access Unified Identity. Users must be on Splunk Cloud Platform version 9.x and higher. The AWS region for your Splunk Cloud Platform instance must be the same as your Splunk Observability Cloud instance realm."
-msgstr "Splunk Cloud PlatformとSplunk Observability Cloudの両方をお持ちのすべてのお客様は、統合IDにアクセスできます。ユーザーは、Splunk Cloud Platformバージョン9.x以降を使用している必要があります。ご利用のSplunk Cloud PlatformインスタンスのAWSリージョンは、Splunk Observability Cloudインスタンスのレルムと同じである必要があります。"
+#, fuzzy
+msgid "All customers who have both Splunk Cloud Platform and Splunk Observability Cloud can access Unified Identity. Users must be on Splunk Cloud Platform version 9.x and higher. The AWS region for your Splunk Cloud Platform instance must be the same as your Splunk Observability Cloud instance realm. Unified Identity is not supported in GovCloud regions."
+msgstr "Splunk Cloud PlatformとSplunk Observability Cloudの両方をお持ちのすべてのお客様は、統合IDにアクセスできます。ユーザーは、Splunk Cloud Platformバージョン9.x以降を使用している必要があります。ご利用のSplunk Cloud PlatformインスタンスのAWSリージョンは、Splunk Observability Cloudインスタンスのレルムと同じである必要があります。GovCloudリージョンでは統合IDはサポートされていません。"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:30
 msgid "What are the benefits of Unified Identity?"
@@ -665,6 +692,7 @@ msgid "Splunk Cloud Platform administrators can extend SAML settings for SSO con
 msgstr "Splunk Cloud Platformの管理者は、Splunk Cloud Platformで設定したSSOのSAML設定をSplunk Observability Cloudアプリケーションに拡張できます。"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:38
+#, fuzzy
 msgid "When using any Splunk Observability Cloud application, a user can access all data in Splunk Cloud Platform indexes that the user's role in Splunk Cloud Platform has permissions to access."
 msgstr "ユーザーは、Splunk Observability Cloudアプリケーションを使用する際に、Splunk Cloud Platformでの自分のロールの権限でアクセス可能なSplunk Cloud Platformのインデックス内のすべてのデータにアクセスできます。"
 
@@ -673,14 +701,17 @@ msgid "Users can navigate data and dashboards between Splunk Cloud Platform and 
 msgstr "ユーザーは、Splunk Cloud PlatformのSSOで一度ログインすれば、Splunk Cloud PlatformとSplunk Observability Cloud間でデータやダッシュボードをシームレスに操作できます。"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:42
+#, fuzzy
 msgid "You can use a third party identity provider other than Splunk Cloud Platform, but you will lose the benefits of the integrated experience."
 msgstr "Splunk Cloud Platform以外のサードパーティのIDプロバイダーを使用することもできますが、統合エクスペリエンスの利点は失われます。"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:46
+#, fuzzy
 msgid "How to set up Unified Identity"
 msgstr "統合IDの設定方法"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:48
+#, fuzzy
 msgid "You can pair only one Splunk Cloud Platform instance with one Splunk Observability Cloud instance at a time. Customers with multiple Splunk Observability Cloud organizations must choose one to pair with the chosen Splunk Cloud Platform instance."
 msgstr "1つのSplunk Observability CloudインスタンスとペアリングできるSplunk Cloud Platformインスタンスは、一度に1つのみです。Splunk Observability Cloud組織を複数お持ちのお客様は、選択したSplunk Cloud Platformインスタンスとペアリングする組織を1つ選択する必要があります。"
 
@@ -689,10 +720,12 @@ msgid "Prerequisites"
 msgstr "前提条件"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:54
+#, fuzzy
 msgid "You must be an admin of the Splunk Cloud Platform and Splunk Observability Cloud instances that you want to pair."
 msgstr "ペアリングするSplunk Cloud PlatformおよびSplunk Observability Cloudのインスタンスの管理者である必要があります。"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:58
+#, fuzzy
 msgid "New Splunk Observability Cloud customers"
 msgstr "Splunk Observability Cloudを新しくご利用のお客様"
 
@@ -705,14 +738,17 @@ msgid "Inform your Splunk sales representative that you want to purchase Splunk 
 msgstr "Splunkの営業担当者にSplunk Observability Cloudの購入またはトライアルの開始を希望する旨を伝えてください。営業担当者が、Splunk Cloud Platformインスタンスに統合済みのSplunk Observability Cloudのトライアルを開始させます。"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:64 ../../splunkplatform/unified-id/unified-identity.rst:72
+#, fuzzy
 msgid "Turn on token authentication to allow Splunk Observability Cloud to view your Splunk Cloud Platform logs. See :new-page:`Enable or disable token authentication <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how."
 msgstr "トークン認証をオンにして、Splunk Observability CloudがSplunk Cloud Platformのログを表示できるようにします。方法については :new-page:`トークン認証の有効化/無効化<https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` を参照してください。"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:68
+#, fuzzy
 msgid "Existing Splunk Observability Cloud customers"
 msgstr "Splunk Observability Cloudを既にご利用いただいているお客様"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:70
+#, fuzzy
 msgid "If you already have a Splunk Cloud Platform account and a Splunk Observability Cloud account, take the following actions to set up Unified Identity:"
 msgstr "既にSplunk Cloud PlatformアカウントとSplunk Observability Cloudアカウントをお持ちの場合は、以下の手順で統合IDを設定します："
 
@@ -753,16 +789,17 @@ msgid "Replace the pairing id and the access token with your own values. The sys
 msgstr "ペアリングIDとアクセストークンを自分の値に置き換えてください。システムによって、ペアリングが成功したかどうかを示すステータスメッセージが返されます。"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:102
+#, fuzzy
 msgid "This screenshot shows a success status for the new pairing."
 msgstr "このスクリーンショットは、新しいペアリングの成功ステータスを示しています。"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:107
 msgid ""
-"Users will receive an email telling them to authenticate to Splunk Observability Cloud using the new authentication method through Splunk Cloud Platform SSO. Note that users can continue to use their previous login method. If you want to force all users to authenticate through Splunk Cloud Platform SSO, reach out to Splunk Customer Support to deactivate local login. To deactivate login through a third party identity provider, go to :strong:`Data Management` in Observability Cloud, select the appropriate integration (for example, Okta), and "
-"select :strong:`Deactivate`."
+"Users will receive an email telling them to authenticate to Splunk Observability Cloud using the new authentication method through Splunk Cloud Platform SSO. Note that users can continue to use their previous login method. If you want to force all users to authenticate through Splunk Cloud Platform SSO, reach out to Splunk Customer Support to deactivate local login. To deactivate login through a third party identity provider, go to :strong:`Data Managemen > Available integrations` in Splunk Observability Cloud, select the appropriate integration "
+"(for example, Okta), and select :strong:`Deactivate`."
 msgstr ""
-"ユーザーには、Splunk Cloud PlatformのSSOを介した新しい認証方法を使用したSplunk Observability Cloudへのログインを認証するように伝えるメールが届きます。ユーザーは以前のログイン方法を引き続き使用できることに注意してください。すべてのユーザーにSplunk Cloud PlatformのSSOによる認証を強制したい場合は、Splunkカスタマーサポートに連絡してローカルログインを無効にするように依頼してください。サードパーティのIDプロバイダー経由のログインを無効にするには、Splunk Observability Cloudの :strong:`データ管理` に移動し、適切なインテグレーション（例：Okta）を選択し、:"
-"strong:`無効にする` を選択します。"
+"ユーザーには、Splunk Cloud PlatformのSSOを介した新しい認証方法を使用したSplunk Observability Cloudへのログインを認証するように伝えるメールが届きます。ユーザーは以前のログイン方法を引き続き使用できることに注意してください。すべてのユーザーにSplunk Cloud PlatformのSSOによる認証を強制したい場合は、Splunkカスタマーサポートに連絡してローカルログインを無効にするように依頼してください。サードパーティのIDプロバイダー経由のログインを無効にするには、Splunk Observability Cloudの :strong:`データ管理 > 利用可能なインテグレーション` に移動し、適切なインテグ"
+"レーション（例：Okta）を選択し、:strong:`無効にする` を選択します。"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:113
 msgid "User provisioning"
@@ -773,10 +810,12 @@ msgid "To benefit from Unified Identity, all users must have a Splunk Cloud Plat
 msgstr "統合IDのメリットを利用するには、すべてのユーザーは、``o11y_access`` ロールの付与されたSplunk Cloud Platformユーザーアカウントを持っている必要があります。"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:121
+#, fuzzy
 msgid "Existing Splunk Cloud Platform users"
 msgstr "既存のSplunk Cloud Platformユーザー"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:123
+#, fuzzy
 msgid "In Splunk Cloud Platform, create the custom role ``o11y_access`` and assign it to all users who you want to grant access to Splunk Observability Cloud. See :new-page:`Create and manage roles with Splunk Web <https://docs.splunk.com/Documentation/Splunk/latest/Security/Addandeditroles#Add_or_edit_a_role>` for more information on Splunk Cloud Platform roles. Follow only the instructions in the :guilabel:`Add or edit a role` section. Note that you do not need to assign the role any capabilities or indexes."
 msgstr "Splunk Cloud Platformで、カスタムロール ``o11y_access`` を作成し、Splunk Observability Cloudへのアクセスを許可するすべてのユーザーに割り当てます。Splunk Cloud Platformのロールの詳細については、:new-page:`Splunk Webでロールを作成および管理する<https://docs.splunk.com/Documentation/Splunk/latest/Security/Addandeditroles#Add_or_edit_a_role>` を参照してください。:guilabel:`Add or edit a role` セクションの指示にのみ従ってください。ロールに機能やインデックスを割り当てる必要はないことに注意してください。"
 
@@ -785,6 +824,7 @@ msgid "If you do not create and assign the custom role ``o11y_access``, users re
 msgstr "カスタムロール ``o11y_access`` の作成と割り当てを実行しないと、Splunk Observability Cloudにログインしようとした際に次のエラーメッセージが表示されます：「Splunk Observability Cloudへのアクセス権がありません。Splunk Cloud Platformの管理者にお問い合わせください。」"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:127
+#, fuzzy
 msgid "If the user does not exist in Observability Cloud, the integration automatically creates a user in Observability Cloud and maps Splunk Cloud Platform roles to the following Observability Cloud roles:"
 msgstr "そのユーザーがSplunk Observability Cloudに存在しない場合、インテグレーションが自動的にSplunk Observability Cloudにユーザーを作成し、Splunk Cloud Platformのロールを以下のSplunk Observability Cloudのロールにマッピングします："
 
@@ -797,6 +837,7 @@ msgid ":strong:`Role in Splunk Observability Cloud`"
 msgstr ":strong:`Splunk Observability Cloudでのロール`"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:136
+#, fuzzy
 msgid "sc_admin"
 msgstr "sc_admin"
 
@@ -821,6 +862,7 @@ msgid "The system defines the mapping process, and a user cannot change it at pr
 msgstr "マッピングプロセスはシステムによって定義され、ユーザーがプロビジョニング時やそれ以降に変更することはできません。マッピングは厳密にSplunk Cloud PlatformからSplunk Observability Cloudに対して実行されるものであり、その逆はありません。Splunk Cloud PlatformのロールがSplunk Observability Cloud の\"usage\"や\"read_only\"のロールにマッピングされることはありません。"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:150
+#, fuzzy
 msgid "Existing Splunk Observability Cloud users"
 msgstr "既存のSplunk Observability Cloudユーザー"
 
@@ -837,10 +879,12 @@ msgid "If an existing Observability Cloud user already has a Splunk Cloud Platfo
 msgstr "既存のSplunk Observability CloudユーザーがすでにSplunk Cloud Platform ユーザーアカウントを持っている場合は、Splunk Cloud Platformインスタンスでそのユーザーに ``o11y_access`` ロールを割り当てます。"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:158
+#, fuzzy
 msgid "New users"
 msgstr "新規のユーザー"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:160
+#, fuzzy
 msgid "To add a new user to Splunk Observability Cloud after the integration is complete, a Splunk Cloud Platform administrator must do the following:"
 msgstr "インテグレーションの完了後にSplunk Observability Cloudに新しいユーザーを追加するには、Splunk Cloud Platform管理者が以下を実行する必要があります："
 
@@ -853,14 +897,17 @@ msgid "Give the new user the custom ``o11y_access`` role. You do not need to ass
 msgstr "新しいユーザーにカスタムの ``o11y_access`` ロールを付与します。このロールに機能やインデックスを割り当てる必要はありません。"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:167
+#, fuzzy
 msgid "The user can now log in to Splunk Observability Cloud with their Splunk Cloud Platform permissions."
 msgstr "これでユーザーは、Splunk Cloud Platformの権限でSplunk Observability Cloudにログインできるようになります。"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:171
+#, fuzzy
 msgid "After initial user provisioning"
 msgstr "初期的なユーザープロビジョニングが完了したら"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:173
+#, fuzzy
 msgid "Once users are set up, Splunk Cloud Platform admins and Splunk Observability Cloud admins must manage roles independently. After initial setup, role updates in either product platform do not impact a user's role in the other platform. However, a user's permissions to specific indexes in Splunk Cloud Platform are always controlled by a user's role and permissions in Splunk Cloud Platform."
 msgstr "ユーザーの設定後、Splunk Cloud Platformの管理者とSplunk Observability Cloudの管理者は、ロールを個別に管理する必要があります。初期設定後、どちらの製品プラットフォームでロールを更新しても、もう一方のプラットフォームでのユーザーのロールに影響はありません。ただし、Splunk Cloud Platformの特定のインデックスに対するユーザーの権限は、常にSplunk Cloud Platformでのユーザーのロールと権限によって制御されます。"
 
@@ -889,6 +936,7 @@ msgid "Enter and confirm your email. If you already have an Observability Cloud 
 msgstr "メールアドレスを入力して確認を実行します。すでにSplunk Observability Cloudユーザーアカウントを持っている場合は、それに関連付けられたメールアドレスを入力して、Splunk Cloud Platformユーザーとリンクさせます。Splunk Observability Cloudに存在しないメールアドレスを入力した場合、システムが新しいSplunk Observability Cloudユーザーを作成し、:ref:`existing-scp-users` セクションのロールマッピングテーブルに基づいてロールを割り当てます。"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:189
+#, fuzzy
 msgid "You then receive an e-mail to verify your identity. Verify your identity in the e-mail to be authenticated in Splunk Observability Cloud. After authentication, the Observability Cloud user can only see logs data in Log Observer that their Splunk Cloud Platform user has permissions to see."
 msgstr "その後、本人確認のためのメールが届きます。メールに記載されているIDを確認すると、Splunk Observability Cloudで認証されます。認証が完了すると、Splunk Observability Cloudユーザーは、当該アカウントのSplunk Cloud Platformユーザーが閲覧権限を持つログデータのみを、Log Observerで表示することができます。"
 
@@ -905,6 +953,7 @@ msgid "Contact your Splunk Cloud Platform administrator if you receive the follo
 msgstr "以下の :strong:`「アクセス権がありません」` というエラーメッセージが表示された場合は、Splunk Cloud Platform管理者にお問い合わせください："
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:197
+#, fuzzy
 msgid "This screenshot shows the no access error."
 msgstr "このスクリーンショットは、「アクセス権なし」のエラーを示しています。"
 
@@ -925,6 +974,7 @@ msgid "Point-and-click log analysis"
 msgstr "ポイント・アンド・クリックのログ分析"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:217
+#, fuzzy
 msgid "One important advantage of the integration is that users can now query their Splunk Cloud Platform logs in Log Observer's no-code UI. Users can create advanced queries without knowing SPL with Log Observer's filters and aggregations. See :ref:`logs-queries` for more information."
 msgstr "このインテグレーションの重要なメリットの1つは、ユーザーがLog ObserverのノーコードのUIでSplunk Cloud Platformログをクエリできるようになることです。ユーザーは、Log Observerのフィルターと集計を使用して、SPLを知らなくても高度なクエリを作成できます。詳細は :ref:`logs-queries` を参照してください。"
 
@@ -945,6 +995,7 @@ msgid "Unified user session"
 msgstr "統合ユーザーセッション"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:229
+#, fuzzy
 msgid "You can navigate seamlessly back and forth between Splunk Cloud Platform and any Splunk Observability Cloud application (Infrastructure Monitoring, APM, Log Observer, RUM, and Synthetics) to see all data that your Splunk Cloud Platform role has permissions to see. Users need to log in only once to gain access to Splunk Cloud Platform and Splunk Observability Cloud. You don't need additional login to move from one platform to the other when exploring data."
 msgstr "Splunk Cloud PlatformとSplunk Observability Cloudアプリケーション（Infrastructure Monitoring、APM、Log Observer、RUM、Synthetics）の間をシームレスに行き来し、Splunk Cloud Platformでのロールに表示権限があるすべてのデータを確認できます。ユーザーは、Splunk Cloud PlatformとSplunk Observability Cloudへのアクセスを取得するために1回だけログインする必要があります。データを探索する際に、一方のプラットフォームから他方のプラットフォームへ移動するための追加ログインは必要ありません。"
 
@@ -957,10 +1008,12 @@ msgid "During a Splunk Cloud Platform maintenance window, users cannot log in to
 msgstr "Splunk Cloud Platformのメンテナンスウィンドウ期間中は、ユーザーは、SSOにSplunk Cloud Platformを使用してSplunk Observability Cloudにログインすることはできません。Splunk Cloud Platformのメンテナンスウィンドウ中は、2～5分間にわたってログインに影響が出る可能性があります。メンテナンスウィンドウが完了し次第、ユーザーはSplunk Observability Cloudに再びログインできます。"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:237
+#, fuzzy
 msgid "During a maintenance window, Splunk Cloud Platform displays a banner indicating the start and end time of the window. If a user is already logged in to Splunk Observability Cloud at the start of a maintenance window, the user is not impacted directly. However, access to Splunk Cloud Platform logs in Log Observer Connect are unavailable during the maintenance window. You can continue working in Splunk Observability Cloud."
 msgstr "メンテナンスウィンドウの間、Splunk Cloud Platformには、ウィンドウの開始時刻と終了時刻を示すバナーが表示されます。メンテナンスウィンドウの開始時にユーザーがすでに Splunk Observability Cloudにログインしている場合、そのユーザーには直接影響はありません。ただし、Log Observer ConnectでのSplunk Cloud Platformログへのアクセスは、メンテナンスウィンドウ中は利用できません。Splunk Observability Cloudでの作業は継続できます。"
 
 #: ../../splunkplatform/unified-id/unified-identity.rst:239
+#, fuzzy
 msgid "Typically, there are two planned maintenance windows per month for a Splunk Cloud Platform instance. Customers can determine the scheduling of maintenance windows and usually set them up to occur during the customer's downtime. Talk to your Splunk Cloud Platform administrator about the planned maintenance windows."
 msgstr "通常、1つのSplunk Cloud Platformインスタンスには月に2回の計画メンテナンスウィンドウがあります。メンテナンスウィンドウのスケジュールはお客様が決めることができ、通常はお客様のダウンタイム中にウィンドウが発生するように設定します。計画メンテナンスウィンドウについては、Splunk Cloud Platform管理者とご相談ください。"
 
