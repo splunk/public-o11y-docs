@@ -121,7 +121,7 @@ Service dimensions
 * ``service.name`` - This dimension is only available for histogram MMS.
 * ``sf_error``
 
-.. _inferred-service-mms:
+.. _inferred-service-mms-dimensions:
 
 Inferred service dimensions
 ------------------------------
