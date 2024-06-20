@@ -10,7 +10,7 @@ Use the filtering options on the various APM pages to refine the scope of the da
 
 .. list-table::
   :header-rows: 1
-  :widths: 10, 20, 30, 30
+  :widths: 10, 15, 35, 30
 
   * - :strong:`Filter field`
     - :strong:`Available operators`
@@ -60,9 +60,7 @@ Use the filtering options on the various APM pages to refine the scope of the da
   
   * - Service
     - Equals (``=``)
-    - 1 or more services, wildcards (``*``) are supported 
-      
-      Select :guilabel:`Add Row` to add multiple services
+    - 1 or more services, wildcards (``*``) are supported. Select :guilabel:`Add Row` to add multiple services
     - * AlwaysOn Profiling - Only supports selection of 1 service
       * Database query performance 
       * Endpoint performance
@@ -75,9 +73,9 @@ Use the filtering options on the various APM pages to refine the scope of the da
   * - Operation
     - * Equals (``=``)
       * Not equal to (``!=``)
-    - 1 or more service-operation combinations, wildcards (``*``) are supported 
-    
-      Select :guilabel:`Add Row` to add multiple service-operation combinations
+    - 1 or more service-operation combinations. Select :guilabel:`Add Row` to add multiple service-operation combinations.
+
+      Wildcards (``*``) are supported. 
     - * Database query performance 
       * Endpoint performance
       * Service map
@@ -88,9 +86,9 @@ Use the filtering options on the various APM pages to refine the scope of the da
   * - Tags
     - * Equals (``=``)
       * Not equal to (``!=``)
-    - 1 or more indexed or unindexed tags, wildcards (``*``) are supported 
+    - 1 or more indexed or unindexed tags. You can select multiple values for the same tag. To add filters for multiple tags, select :guilabel:`Add filters` to add another tag filter.
       
-      You can select multiple values for the same tag. To add filters for multiple tags, select :guilabel:`Add filters` to add another tag filter.
+      Wildcards (``*``) are supported 
     - * Database performance 
       * Endpoint performance
       * Service map
