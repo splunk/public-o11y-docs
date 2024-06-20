@@ -65,15 +65,17 @@ Use variables to fill in fields, provide URLs, and enter other information durin
 
    * - :strong:`Variable type`
      - :strong:`Description`
-
-   * - Custom variables
-     - Custom variables are local to a test, and their values can change over the course of a test. Use them to store a value of interest created in a step, to be consumed in another step downstream in a single test. 
-  
    * - Built-in variables 
      - Built-in variables such as random values, dates and times, or location names, for use in your Browser and API Tests. See :ref:`built-in-variables` to learn more.  
-
    * - Global variables 
-     - Pre-saved, reusable variables you can define once and use across all your Browser and API tests. See :ref:`global-variables` to learn more.   
+     - Pre-saved, reusable variables you can define once and use across all your Browser and API tests. See :ref:`global-variables` to learn more. 
+
+
+
+..
+        * - Custom variables
+          - Custom variables are local to a test, and their values can change over the course of a test. Use them to store a value of interest created in a step, to be consumed in another step downstream in a single test.
+         
 
 .. raw:: html
 
