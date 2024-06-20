@@ -137,6 +137,8 @@ Follow these steps to create a Monitoring MetricSet for an instrumented service:
 Create a Monitoring MetricSet with a custom dimension for an inferred service
 =======================================================================================
 
+.. note:: Only 3rd-party or uninstrumented HTTP services are supported for MMS.
+
 Follow these steps to create a Monitoring MetricSet for an inferred service:
 
 1. To get to the :guilabel:`APM MetricSets` page, do one of the following: 
