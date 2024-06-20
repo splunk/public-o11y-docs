@@ -837,7 +837,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Configure your tests TOGGLE <synthetics/test-config/test-config>
+   Advanced test configurations TOGGLE <synthetics/test-config/test-config>
 
 
 .. toctree::

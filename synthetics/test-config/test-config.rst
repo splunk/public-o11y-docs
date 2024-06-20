@@ -1,7 +1,7 @@
 .. _test-config:
 
 ***************************************************
-Manage synthetic tests
+Advanced test configurations
 ***************************************************
 
 .. meta::
@@ -9,7 +9,6 @@ Manage synthetic tests
 
 .. toctree::
 
-   synth-configure-app
    synth-alerts
    built-in-variables
    global-variables
