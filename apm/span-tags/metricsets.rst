@@ -72,6 +72,7 @@ MMS are available for the following APM components:
 
 - service.request
 - spans 
+- inferred.spans
 - traces
 - workflows (Workflow metrics are created by default when you create a Business Workflow. Custom MMS are not available for Business Workflows.)
 
@@ -113,11 +114,24 @@ Each MMS has a set of dimensions you can use to monitor and alert on service per
 
 Service dimensions
 ---------------------------------
+
 * ``sf_environment``
 * ``deployment.environment`` - This dimension is only available for histogram MMS.
 * ``sf_service``
 * ``service.name`` - This dimension is only available for histogram MMS.
 * ``sf_error``
+
+.. _inferred-service-mms:
+
+Inferred service dimensions
+------------------------------
+
+* ``sf_service``
+* ``service.name`` - This dimension is only available for histogram MMS.
+* ``sf_environment``
+* ``deployment.environment`` - This dimension is only available for histogram MMS.
+* ``sf_error``
+* ``sf.kind``
 
 .. _endpoint-mms:
 

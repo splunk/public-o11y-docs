@@ -106,7 +106,6 @@ Follow these steps to create a Monitoring MetricSet for an instrumented service:
         :width: 70%
         :alt: This image shows the MetricSet creation dialog box. 
 
-
 5. Select how you want to add tag or process data to your Monitoring MetricSet from the dropdown. See :ref:`mms-conf` for more details. 
     a. :guilabel:`Service and all endpoint MMS:` Create an MMS for each selected service, as well as an MMS for each endpoint in each selected service. 
     b. :guilabel:`Service and specific endpoint MMS:` Create an MMS for each selected service and an MMS for specific endpoints you select. To add :guilabel:`Endpoint Filters`, provide a list of endpoints or a regular expression pattern to create MMS for specific endpoints you're interested in. 
