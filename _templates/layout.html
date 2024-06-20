@@ -128,7 +128,7 @@
             {% include "breadcrumbs.html" %}
             {% block body %} {% endblock %}
             {%- if last_updated %}
-            <p class="timestamp" style="margin-top: 60px; font-size: 12px;">{% trans last_updated=last_updated|e %}This page was last updated on {{ last_updated }}.{% endtrans %}</p>
+            <p class="timestamp" style="margin-top: 60px; font-size: 12px;"><em>{% trans last_updated=last_updated|e %}This page was last updated on {{ last_updated }}.{% endtrans %}</em></p>
             {%- endif %}
             {% include "page-nav.html" %}
           </div>
