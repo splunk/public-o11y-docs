@@ -839,6 +839,17 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    Advanced test configurations TOGGLE <synthetics/test-config/test-config>
 
+.. toctree::
+   :maxdepth:   3
+
+   Troubleshoot tests TOGGLE <synthetics/syn-troubleshoot/syn-troubleshoot>
+
+
+.. toctree::
+   :maxdepth:   3
+
+   Troubleshoot tests  <synthetics/syn-troubleshoot/syn-missing-alerts>
+
 
 .. toctree::
    :caption: Reference and Legal

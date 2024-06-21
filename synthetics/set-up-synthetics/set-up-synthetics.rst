@@ -11,6 +11,8 @@ Set up Splunk Synthetic Monitoring
 
 Monitor the performance of your web pages and applications by running synthetic Browser, Uptime, and API tests. These tests let you proactively alert the relevant teams when a site or user flow they manage becomes unavailable, as well as report on the performance of a site or user flow over time. Splunk Synthetic Monitoring does not require extensive installation and setup: you can get started by creating your first test directly in the Splunk Synthetic Monitoring user interface. 
 
+.. _synth-configure-app:
+
 Get your site ready to run synthetic tests
 ============================================
 
@@ -19,18 +21,19 @@ Get your site ready to run synthetic tests
 
 There are a couple of settings you might need to add to your application or webpage to receive traffic from Splunk Synthetic Monitoring.
 
+
 Allow Splunk Synthetic Monitoring IP addresses
-================================================
+-------------------------------------------------
 
 Splunk Synthetic Monitoring runs synthetic tests from a set of dedicated IP addresses. To ensure your internal network or web application firewall (WAF) does not block this traffic, place these IP addresses on your browser or site's allow list. 
 
 See :ref:`public-locations` for the list of Splunk Synthetic Monitoring IP addresses, and then refer to your internal network's documentation for instructions on how to add them to your allow list. 
 
 Exclude Splunk Synthetic Monitoring from analytics
-===================================================
+----------------------------------------------------
 If you use a web analytics tool to monitor traffic on your website or application, you might want to exclude Splunk Synthetic Monitoring IP addresses from being counted as traffic. 
 
-To do so, filter Splunk Synthetic Monitoring IP addresses in the settings of your web analytics tool. See :ref:`public-locations` for the list of IP addresses, and then refer to your analytics tool's documentation for instructions on how to filter them. 
+To do so, filter Splunk Synthetic Monitoring IP addresses in the settings of your web analytics tool. See :ref:`public-locations` for the list of IP addresses, and then refers to your analytics tool's documentation for instructions on how to filter them. 
 
 
 Choose a test
@@ -136,16 +139,6 @@ For more examples on Java instrumentation, see :ref:`server-trace-information-ja
 ------------------------------------
 
 Integrate with Splunk RUM so that you can automatically measure Web Vital metrics against your run results. Web vitals capture key metrics that affect user experience and assess the overall performance of your site. For more, see :ref:`rum-synth`.
-
-(Optional) Configure your application
-------------------------------------------------------------------------
-
-
-If you use Splunk Synthetic Monitoring to monitor an application or website with allow/block lists or a web analytics tool, you might want to adjust the settings to accommodate traffic from Splunk Synthetic Monitoring. See :ref:`synth-configure-app` for detailed instructions. 
-
-
-
-
 
 
 Continue learning
