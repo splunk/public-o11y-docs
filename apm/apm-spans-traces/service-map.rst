@@ -79,7 +79,7 @@ Share your view of the service map
 ======================================
 To share your view of the service map with a colleague, copy and share the URL. Your current filter selections are preserved in the URL.
 
-Service map thresholds
+Service map thresholds and limits
 ===========================================
 
 The following table presents applicable thresholds and limits in the service map:
@@ -99,6 +99,9 @@ The following table presents applicable thresholds and limits in the service map
 
    * - P90 latency in "critical" zone, displayed in red
      - 1 second
+
+   * - Default maximum number of nodes visible in the service map. Use the filter menu on the map to change the maximum number of services to show.
+     - 50 service nodes
 
    * - Maximum number of nodes visible in the service map at once
      - 200 service nodes
