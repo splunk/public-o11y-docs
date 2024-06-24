@@ -97,8 +97,15 @@ Required permissions in Splunk Observability Cloud
 Regardless of the services you want to use, you need the following permissions:
 
 * ``organizations:DescribeOrganization``. Only needed when Amazon cost and usage metrics are activated.
-* ``ec2:DescribeRegions``
+* ``ec2:DescribeRegions``. Used to check if regions configured in the integration are enabled on the AWS account.
+
+Tag and property sync specific permissions:
+
 * ``tag:GetResources``
+* ``cloudformation:ListResources``
+* ``cloudformation:GetResource``
+Tag and property sync is always enabled for the services configured in the integration. For some services, Splunk Observability uses either service-specific API calls, ResourceGroupTagging API or CloudControl API. Services that are covered using generic APIs need special permissions on top of service permissions - ``tag:GetResources`` for ResourceGroupTagging API and ``cloudformation:ListResources`` along with ``cloudformation:GetResource`` for CloudControl API.
+
 
 .. _aws-iam-policy-cw:
 
@@ -124,7 +131,9 @@ For example:
           "cloudwatch:ListMetrics",
           "ec2:DescribeRegions",
           "organizations:DescribeOrganization",
-          "tag:GetResources"
+          "tag:GetResources",
+          "cloudformation:ListResources",
+          "cloudformation:GetResource"
         ],
         "Resource": "*"
       }
