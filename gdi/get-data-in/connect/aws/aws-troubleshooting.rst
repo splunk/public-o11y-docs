@@ -73,7 +73,7 @@ Solution
 
 Review your :ref:`IAM policy <review-aws-iam-policy>` to ensure it includes the permissions needed for the metrics or other data that you intend to collect.
 
-Once integrated with your Amazon Web Services account, Splunk Observability Cloud can gather CloudWatch metrics, CloudWatch logs, CloudWatch Metric Streams, service logs stored in Amazon S3 buckets, and service tag and property information. But leveraging the full power of the integration requires all included permissions.
+Once integrated with your Amazon Web Services account, Splunk Observability Cloud can gather CloudWatch metrics, CloudWatch Metric Streams, or service logs stored in Amazon S3 buckets, and service tag and property information. But leveraging the full power of the integration requires all included permissions.
 
 .. _aws-ts-namespace-metrics:
 

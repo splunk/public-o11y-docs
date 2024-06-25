@@ -68,7 +68,7 @@ Install the Splunk Distribution of the OpenTelemetry Collector :ref:`otel-intro`
 .. rst-class:: newcard
 
 :strong:`Cloud providers`
-Integrate to collect service metrics and logs :ref:`get-started-connect`
+Integrate to collect service metrics and metadata :ref:`get-started-connect`
 
 .. rst-class:: newcard
 
@@ -346,12 +346,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: Administer Splunk Observability Cloud
    :maxdepth:   3
 
-   admin/admin
+   Admin onboarding guide TOGGLE <admin/admin-onboarding/admin-onboarding-guide>
 
 .. toctree::
    :maxdepth:   3
 
-   Admin onboarding guide TOGGLE <admin/admin-onboarding/admin-onboarding-guide>
+   admin/admin
 
 .. toctree::
    :maxdepth:   3

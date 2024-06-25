@@ -25,7 +25,7 @@ Read through this document before submitting any pull request.
    - Everyone else needs to create their own GitHub account.
 2. If you plan to use SSH to synchronize your local computer with your GitHub account, you need to create an SSH key on your local
    computer, add the key to your OpenSSH authentication agent, and add the public key file to your GitHub account. The GitHub docs
-   describe how to perform these tasks.
+   describe how to run these tasks.
 
 ## Decide the type of edit
 

@@ -285,7 +285,7 @@ The following example shows how to scrape performance counters using different c
 Instances configuration
 ---------------------------------
 
-An instance is any entity that produces performance data. Instances can have one or more counter values.
+An instance is any entity that produces performance data. Instances can have 1 or more counter values.
 
 The receiver supports the following values through the ``instances`` field:
 
@@ -299,13 +299,43 @@ The receiver supports the following values through the ``instances`` field:
    * - ``"*"``
      - All instances
    * - ``"_Total"``
-     - The total instance
+     - The aggregate of all other instance values, which is itself an instance. For more information, see :ref:`total-instance-behavior`.
    * - ``"instance1"``
      - Single instance
    * - ``["instance1", "instance2", ...]``
      - Set of instances
    * - ``["_Total", "instance1", "instance2", ...]``
      - Set of instances including the total instance
+
+.. _total-instance-behavior:
+
+_Total instance behavior and the aggregation counter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To avoid dropping the ``_Total`` instance, you must configure the receiver to collect it individually on its own metric.
+
+For example:
+
+.. code-block:: yaml
+
+   windowsperfcounters:
+     metrics:
+       processor.time.total:
+         description: Total CPU active and idle time
+         unit: "%"
+         gauge:
+     collection_interval: 30s
+     perfcounters:
+       - object: "Processor"
+         instances:
+           - "_Total"
+         counters:
+           - name: "% Processor Time"
+             metric: processor.time.total
+
+.. warning::
+
+   When using an ``instance`` value of ``"*"``, if the counter uses a value other than ``_Total``, make sure to avoid double counting when aggregating metrics after the receiver scrapes them.
 
 Known limitations
 ---------------------------------

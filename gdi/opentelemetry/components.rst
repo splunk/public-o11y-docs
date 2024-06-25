@@ -224,8 +224,8 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
      - Renames metrics, and adds, renames, or deletes label keys and values.
      - Metrics
    * - :ref:`probabilistic-sampler-processor` (``probabilisticsampler``) 
-     - Provides samples based on hash values determined by trace IDs.
-     - Traces
+     - Supports several modes of sampling for spans and log records.
+     - Traces, logs
    * - :ref:`redaction-processor` (``redaction``)
      - Deletes span attributes that don't match a list of allowed attributes. It also masks span attribute values that match a blocked value list.
      - Traces

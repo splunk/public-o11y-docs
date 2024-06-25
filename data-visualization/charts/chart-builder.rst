@@ -112,7 +112,7 @@ In this case, if you want to plot a metric as histogram, do the following steps 
    #. Remove the ``publish()`` method as it's not supported for the ``histogram()`` function.
    #. Add a supported method to the SignalFlow program. For example, ``histogram('service_latency').sum()``.
 
-For more information on histogram function and supported methods, see :new-page:`histogram() <https://dev.splunk.com/observability/docs/signalflow/functions/histogram>` in the SignalFlow reference documentation.
+For more information on histogram function and supported methods, see :new-page:`histogram() <https://dev.splunk.com/observability/docs/signalflow/functions/histogram_function>` in the SignalFlow reference documentation.
 
 .. _filter-signal:
 
@@ -152,7 +152,7 @@ Add histogram function for histogram metrics
 
 Because histogram data must be summarized by combining the buckets in the histogram together, when you use a histogram metric as the signal for your plot, you must add a histogram function to define how histogram data is interpreted and represented on your chart.
 
-To add a histogram function, select :guilabel:`Select function` and choose a function from the :strong:`Histogram function` dropdown menu. For more information on histogram function and supported methods, see :new-page:`histogram() <https://dev.splunk.com/observability/docs/signalflow/functions/histogram>` in the SignalFlow reference documentation.
+To add a histogram function, select :guilabel:`Select function` and choose a function from the :strong:`Histogram function` dropdown menu. For more information on histogram function and supported methods, see :new-page:`histogram() <https://dev.splunk.com/observability/docs/signalflow/functions/histogram_function>` in the SignalFlow reference documentation.
 
 .. image:: /_images/data-visualization/charts/change-histogram-function.png
    :width: 50%

@@ -139,10 +139,10 @@ The following table shows the variables that you can configure for this Ansible 
      - The path to the pre-installed ``npm`` command required to install the Node.js SDK. For example, ``/my/custom/path/to/npm``.
      - ``npm``
    * - ``splunk_otel_auto_instrumentation_resource_attributes``
-     - Configures the OpenTelemetry instrumentation resource attributes, for example, ``deployment.environment=prod``. The resource attributes are user-defined comma-separated ``key=value`` pairs. See :ref:`Java <trace-configuration-java>`, :ref:`Node.js <trace-configuration-nodejs>`, and :ref:`.NET <dotnet-otel-instrumentation-settings>` for more information.
+     - Configures the OpenTelemetry instrumentation resource attributes, for example, ``deployment.environment=prod``. The resource attributes are user-defined comma-separated ``key=value`` pairs. See :ref:`Java <advanced-java-otel-configuration>`, :ref:`Node.js <trace-configuration-nodejs>`, and :ref:`.NET <dotnet-otel-instrumentation-settings>` for more information.
      - None
    * -  ``splunk_otel_auto_instrumentation_service_name`` 
-     - Explicitly sets the service name for the instrumented applications, for example, ``my.service``. By default, the service name is automatically derived from the arguments of the executable on the node. See :ref:`Java <trace-configuration-java>`, :ref:`Node.js <trace-configuration-nodejs>`, and :ref:`.NET <dotnet-otel-instrumentation-settings>` for more information.
+     - Explicitly sets the service name for the instrumented applications, for example, ``my.service``. By default, the service name is automatically derived from the arguments of the executable on the node. See :ref:`Java <advanced-java-otel-configuration>`, :ref:`Node.js <trace-configuration-nodejs>`, and :ref:`.NET <dotnet-otel-instrumentation-settings>` for more information.
      - None
    * - ``splunk_otel_auto_instrumentation_enable_profiler``
      - Activates or deactivates AlwaysOn CPU Profiling.

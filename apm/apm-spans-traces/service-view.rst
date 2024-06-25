@@ -17,7 +17,7 @@ You can access the service view for a specific service in several places.
 
 You can search for the service using the search in the top toolbar.
 
-..  image:: /_images/apm/spans-traces/service-view-global-search.gif
+..  image:: /_images/apm/spans-traces/service-view-global-search-traces.gif
     :width: 95%
     :alt: Animation showing a user searching for the checkoutservice and selecting the service result. 
 
@@ -39,7 +39,7 @@ Service metrics
 
 Use the following metrics in the :guilabel:`Service metrics` section to monitor the health of your service. Collapse sub-sections that are not relevant to you to customize your service view.
 
-..  image:: /_images/apm/spans-traces/service-view-service-metrics.gif
+..  image:: /_images/apm/spans-traces/service-view-service-metrics-traces.gif
     :width: 95%
     :alt: This animation shows the service metrics for a service in the service view. The user select a chart to view example traces.
 
@@ -57,17 +57,9 @@ Use the following metrics in the :guilabel:`Service metrics` section to monitor 
 Runtime metrics
 -----------------
 
-Instrument your back-end applications to send spans to Splunk APM to view runtime metrics. The following runtime metrics are available for Java, Node.js, and .NET in the service view. See :ref:`get-started-application`.
+Instrument your back-end applications to send spans to Splunk APM to view runtime metrics. See :ref:`get-started-application`.
 
-* Memory usage
-* Allocation rate
-* Class loading
-* GC activity
-* GC overhead
-* Thread count
-* GC overhead
-* Thread count
-* Thread pools
+The available runtime metrics vary based on language. See :ref:`metric-reference` for more information.
 
 Infrastructure metrics
 -----------------------
@@ -81,7 +73,7 @@ The following infrastructure metrics are available:
 * Host disk usage
 * Host network usage
 * Pod CPU usage
-* Pod memory utilization
+* Pod memory usage
 * Pod disk usage
 * Pod network utilization
 
@@ -108,6 +100,13 @@ To select a different connection or refine which indices logs are pulled from, s
 
 The connection and indices you select are saved for all users in your organization for each unique service and environment combination.
 
+View traces for your service
+===============================
+
+Select :guilabel:`Traces` to view traces for the environment and service you are viewing. The :guilabel:`Traces` tab includes charts for :guilabel:`Service requests and errors` and :guilabel:`Service latency`. Select within the charts to see example traces. 
+
+Under the charts are lists of :guilabel:`Traces with errors` and :guilabel:`Long traces`. Select the trace ID link to open the trace in trace waterfall view. Select :guilabel:`View more in Trace Analyzer` to search additional traces. See :ref:`trace-analyzer` for more information about using Trace Analyzer to search traces.
+
 Go to the code profiling view for your service
 =====================================================
 
@@ -128,6 +127,185 @@ Select :guilabel:`Configure service view` to modify the Log Observer Connect con
 3. Select :guilabel:`Save changes`.
 
 The connection and indices you select are saved for all users in your organization for each unique service and environment combination.
+
+.. _metric-reference:
+
+Metric reference
+===================
+
+The following metrics are used in the service view. 
+
+Service metrics
+----------------
+
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 50, 50
+
+   * - :strong:`Chart`
+     - :strong:`Metrics`
+
+   * - Service requests
+     - ``service.request`` with a ``count`` function
+
+   * - Service latency
+     - * ``service.request`` with a ``median`` function
+       * ``service.request`` with a ``percentile`` function and a percentile value ``90``
+       * ``service.request`` with a ``percentile`` function and a percentile value ``99``
+
+   * - Service errors
+     - ``service.requests`` with a ``count`` function and a ``sf_error:True`` filter
+
+   * - SLI/SLO 
+     - ``service.request`` with a ``count`` function
+
+.NET runtime metrics 
+-----------------------
+
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 50, 50
+
+   * - :strong:`Chart`
+     - :strong:`Metrics`
+
+   * - Heap usage
+     - ``process.runtime.dotnet.gc.committed_memory.size``
+
+   * - GC collections
+     - ``process.runtime.dotnet.gc.collections.count``
+
+   * - Application activity
+     - ``process.runtime.dotnet.gc.allocations.size``
+
+   * - GC heap size
+     - ``process.runtime.dotnet.gc.heap.size``
+
+   * - GC pause time
+     - ``process.runtime.dotnet.gc.pause.time``
+
+   * - Monitor lock contention
+     - ``process.runtime.dotnet.monitor.lock_contention.count``
+
+   * - Threadpool thread
+     - ``process.runtime.dotnet.monitor.lock_contention.count``
+
+   * - Exceptions
+     - ``process.runtime.dotnet.exceptions.count``
+
+Java runtime metrics
+---------------------
+
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 50, 50
+
+   * - :strong:`Charts`
+     - :strong:`Metrics`
+
+   * - Memory usage
+     - * ``runtime.jvm.gc.live.data.size``
+       * ``runtime.jvm.memory.max``
+       * ``runtime.jvm.memory.used``
+
+   * - Allocation rate
+     - ``process.runtime.jvm.memory.allocated``
+
+   * - Class loading
+     - * ``runtime.jvm.classes.loaded``
+       * ``runtime.jvm.classes.unloaded``
+
+   * - GC activity
+     - * ``runtime.jvm.gc.pause.totalTime``
+       * ``runtime.jvm.gc.pause.count``
+
+   * - GC overhead
+     - ``runtime.jvm.gc.overhead``
+
+   * - Thread count
+     - * ``runtime.jvm.threads.live``
+       * ``runtime.jvm.threads.peak``
+
+   * - Thread pools
+     - * ``executor.threads.active``
+       * ``executor.threads.idle``
+       * ``executor.threads.max``
+
+Node.js runtime metrics 
+-------------------------
+
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 50, 50
+
+   * - :strong:`Charts`
+     - :strong:`Metrics`
+
+   * - Heap usage
+     - * ``process.runtime.nodejs.memory.heap.total``
+       * ``process.runtime.nodejs.memory.heap.used``
+
+   * - Resident set size
+     - ``process.runtime.nodejs.memory.rss``
+
+   * - GC activity
+     - * ``process.runtime.nodejs.memory.gc.size``
+       * ``process.runtime.nodejs.memory.gc.pause``
+       * ``process.runtime.nodejs.memory.gc.count``
+
+   * - Event loop lag
+     - * ``Process.runtime.nodejs.event_loop.lag.max``
+       * ``process.runtime.nodejs.event_loop.lag.min``
+
+Infrastructure metrics
+-------------------------
+
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 50, 50
+
+   * - :strong:`Chart`
+     - :strong:`Metrics`
+
+   * - Host CPU usage
+     - ``cpu.utilization``
+
+   * - Host memory usage
+     - ``memory.utilization``
+
+   * - Host disk usage
+     - ``disk.summary_utilization``
+
+   * - Host network usage
+     - ``network.total``
+
+   * - Pod CPU usage
+     - * ``container_cpu_utilization``
+       * ``cpu.num_processors``
+       * ``machine_cpu_cores``
+       * ``k8s.container.ready``
+
+   * - Pod memory usage
+     - * ``k8s.container.ready``
+       * ``container_memory_usage_bytes``
+       * ``container_spec_memory_limit_bytes``
+
+   * - Pod disk usage
+     - * ``k8s.container.ready``
+       * ``container_fs_usage_bytes``
+
+   * - Pod network utilization
+     - * ``k8s.container.ready``
+       * ``pod_network_receive_bytes_total``
+       * ``pod_network_transmit_bytes_total``
+
+
+
 
 
 

@@ -257,7 +257,7 @@ The Linux installer script supports the following options:
      - Activate or deactivate AlwaysOn Memory Profiling. Only applicable if the ``--with-instrumentation``  option is also specified.
      - ``--disable-profiler-memory``
    * - ``--[enable|disable]-metrics``
-     - Activate or deactivate exporting Micrometer metrics. Only applicable if the ``--with-instrumentation``  option is also specified.
+     - Activate or deactivate exporting metrics. Only applicable if the ``--with-instrumentation``  option is also specified.
      - ``--disable-metrics``
    * - ``--instrumentation-version``
      - The package version to install. Only applicable if the ``--with-instrumentation``  option is also specified.
