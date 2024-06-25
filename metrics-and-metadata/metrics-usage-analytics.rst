@@ -116,7 +116,7 @@ Using the metrics table, you can find metrics that aren't used. If you have any 
 
 Archived metrics go to an archival route in Splunk Observability Cloud, where they remain unused and have a lower billing cost. You can bring them out of the archival route whenever you need to use them again.
 
-To learn more about archiving metrics, see :ref:`archived-metrics`.
+To learn more about archiving metrics, see :ref:`archived-metrics-intro`.
 
 Find metrics with low utility scores and aggregate them
 -------------------------------------------------------------
