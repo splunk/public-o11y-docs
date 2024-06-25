@@ -24,8 +24,8 @@ The subscription usage page displays the following information about your organi
 
 * The type of plan
 * The average usage and the percent of limit for the following aspects of Splunk APM. The average is also the monthly billed value. Select the panel to see per-minute data. 
-    * Hosts
-    * Containers
+    * Hosts (for host subscription plans) 
+    * Containers (for host subscription plans) 
     * Troubleshooting MetricSets
     * Trace volume
     * Monitoring MetricSets 
@@ -59,7 +59,7 @@ Usage reports for host subscription plans include the following information abou
 
 * The number of billed hosts. Host data is available per minute.
 * The number of billed containers. Container data is available per minute.
-* The number of billed traces. Trace volume data is available per minute.
+* The billed trace volume. Trace volume data is available per minute.
 * The number of billed Troubleshooting MetricSets (TMS). TMS data is available per minute. 
 * The number of billed Monitoring MetricSets (MMS). MMS data is only available for histogram MMS and is only available in the usage report. MMS data is available at 10-minute intervals.
 * The average number of hosts. Averages are available in usage reports for complete months only.
@@ -76,7 +76,7 @@ Usage report metrics for trace-analyzed-per-minute (TAPM) subscription plans
 Usage reports for TAPM subscription plans include the following information about your organization usage:
 
 * The number of billed TAPM. TAPM data is available per minute.
-* The number of billed traces. Trace volume data is available per minute.
+* The billed trace volume. Trace volume data is available per minute.
 * The number of billed Troubleshooting MetricSets (TMS). TMS data is available per minute. 
 * The number of billed Monitoring MetricSets (MMS). MMS data is only available for histogram MMS and is only available in the usage report. MMS data is available at 10-minute intervals.
 * The average number of TAPM. Averages are available in usage reports for complete months only.
@@ -86,7 +86,7 @@ Usage reports for TAPM subscription plans include the following information abou
 
 .. _host-diagnostics-report-apm:
 
-Download a subscription usage report for hosts or containers
+Download a host and container diagnostic report
 ==============================================================
 
 For host subscription plans, you can download reports that show which hosts and containers are sending APM data over a specific minute. Use this report to identify which hosts and containers are contributing to your subscription usage. You can generate and download reports within the retention period for traces. See :ref:`apm-data-retention` for more information.
