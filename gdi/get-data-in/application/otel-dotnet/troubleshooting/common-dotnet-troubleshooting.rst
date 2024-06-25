@@ -52,6 +52,31 @@ You can activate debug logging to obtain more information about the issue:
 
 .. note:: Activate debug logging only when needed. Debug mode requires more resources.
 
+.. _dotnet-find-rid:
+
+Find the runtime identifier for your .NET applications
+==================================================================
+
+If you're using Splunk automatic discovery to instrument your .NET applications, you might need a runtime identifier to configure the appropriate instrumentation.
+
+To find your runtime identifier, follow these steps:
+
+#. In your ``Program.cs`` file, make sure that your code includes the following dependency:
+
+   .. code-block:: c
+      
+      using System.Runtime.InteropServices
+
+#. In your main application, add the following code to print your runtime identifier information:
+
+   .. code-block:: c
+
+      Console.WriteLine(RuntimeInformation.RuntimeIdentifier);
+
+#. Run the application and check your application logs.
+#. Verify that the runtime identifier is supported for your instrumentation.
+
+
 Traces don't appear in Splunk Observability Cloud
 ==================================================================
 
