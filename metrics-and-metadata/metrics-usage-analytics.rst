@@ -7,7 +7,7 @@ Analyze your metric usage in Splunk Observability Cloud
 .. meta:: 
     :description: Use metric usage analytics (MUA) to determine usage of your metrics in Splunk Observability Cloud.
 
-Metric usage analytics (MUA) gives you in-depth visualizations of your metric usage in Splunk Observability Cloud. MUA can help you make informed decisions about your metrics, for example, if you're deciding whether to aggregate or drop certain metrics.
+Metric usage analytics (MUA) gives you in-depth visualizations of your metric usage in Splunk Observability Cloud. MUA can help you make informed decisions about your metrics, for example, if you're deciding whether to aggregate, archive, or drop certain metrics.
 
 To learn how to use MUA, see :ref:`mua-understand-metrics`.
 
@@ -107,7 +107,39 @@ Metric profiles provide the following tables with additional information about t
 Manage and reduce your metric usage with MUA
 ================================================
 
-This section contains tips for identifying metrics that you can aggregate or drop for the purpose of reducing your metric usage. 
+This section contains tips for identifying metrics that you can aggregate, archive, or drop for the purpose of reducing your metric usage. 
+
+Archive unused metrics
+-----------------------------------------------
+
+Using the metrics table, you can find metrics that aren't used. If you have any unused metrics, you can archive them so they take up less of your usage plan. 
+
+Archived metrics go to an archival route in Splunk Observability Cloud, where they remain unused and have a lower billing cost. You can bring them out of the archival route whenever you need to use them again.
+
+To learn more about archiving metrics, see :ref:`archived-metrics`.
+
+Find metrics with low utility scores and aggregate them
+-------------------------------------------------------------
+
+If you have metrics with low utility scores, consider aggregating them to reduce the total number of metrics.
+
+To help decide whether to aggregate these metrics, follow these steps:
+
+#. Select the metric you're considering aggregating to open the metric profile. 
+#. Select the :guilabel:`Detectors` tab to check whether the metric appears in any detectors.
+#. If the metric doesn't appear in detectors, check the :guilabel:`Charts` tab to see which charts use it.
+#. Consider whether the metric is important to keep in the respective charts. If not, then aggregate the metric with other dimensions to reduce usage.
+
+To learn more about how to aggregate metrics, see :ref:`mpm-rule-agreggation`.
+
+Reduce the cardinality of your metrics
+--------------------------------------------------------------
+
+If you have metrics with high cardinality, consider modifying their dimensions to reduce their cardinalities.
+
+
+
+
 
 
 
