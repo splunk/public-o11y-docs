@@ -4,19 +4,12 @@
 Metrics and attributes collected by the Splunk OTel Java agent
 ***************************************************************
 
-.. meta:: 
-  :description: The Splunk Distribution of OpenTelemetry Java collects the following application metrics data and WebEngine attributes. You can also collect custom metrics through Micrometer.
+.. meta::
+  :description: The Splunk Distribution of OpenTelemetry Java collects the following application metrics data and WebEngine attributes. You can also collect custom metrics through OpenTelemetry.
 
 The agent of the Splunk Distribution of OpenTelemetry Java collects the following application metrics data and attributes in addition to all that the upstream OpenTelemetry agent collects. To learn about the different metric types, see :ref:`metric-types`.
 
-.. caution:: This feature is experimental, and exported metric data and configuration properties might change. See more in :new-page:`GitHub <https://github.com/signalfx/splunk-otel-java/blob/main/docs/metrics.md#metrics-and-attributes/>`.
-
-.. _enable-otel-metrics:
-
-Activate metrics collection
-====================================================
-
-To collect Java application and Java Virtual Machine metrics, see :ref:`enable_automatic_metric_collection`.
+.. caution:: OpenTelemetry Java Instrumentation 2.x contains a set of breaking changes, introduced as part of recent OpenTelemetry HTTP semantic convention updates. To migrate, see :ref:`java-metrics-migration-guide`.
 
 .. _java-otel-metrics:
 
@@ -32,7 +25,7 @@ Default metric dimensions
 
 The following dimensions are automatically added to all metrics exported by the agent:
 
-.. list-table:: 
+.. list-table::
   :header-rows: 1
   :widths: 40 60
   :width: 100%
@@ -59,7 +52,7 @@ Supported libraries
 
 The agent collects the following metrics through the following libraries:
 
-.. list-table:: 
+.. list-table::
   :header-rows: 1
   :widths: 45 20 50
   :width: 100%
@@ -75,7 +68,7 @@ The agent collects the following metrics through the following libraries:
     - Version 2.0 and higher
   * - :ref:`c3p0 connection pool metrics <connection-pool-metrics>`
     - ``c3p0-splunk``
-    - Version 0.9.5 and higher 
+    - Version 0.9.5 and higher
   * - :ref:`HikariCP connection pool metrics <connection-pool-metrics>`
     - ``hikaricp-splunk``
     - Version 3.0 and higher
@@ -88,22 +81,14 @@ The agent collects the following metrics through the following libraries:
   * - :ref:`Vibur DBCP connection pool metrics <connection-pool-metrics>`
     - ``vibur-dbcp-splunk``
     - Version 20.0 and higher
-  * - :ref:`Tomcat thread pool metrics <thread-pool-metrics>`
-    - ``tomcat``
-    - Version 8.5 and higher
-  * - :ref:`WebSphere Liberty thread pool metrics <thread-pool-metrics>`
-    - ``liberty``
-    - Version 20.0.0.12
-  * - :ref:`WebLogic thread pool metrics <thread-pool-metrics>`
-    - ``weblogic``
-    - Versions 12.x and 14.x
+
 
 .. _jvm-metrics:
 
 JVM metrics
 =============================================================
 
-The Splunk OTel Java agent collects the following Java Virtual Machine (JVM) metrics when metric collection is activated:
+The Splunk OTel Java agent collects the following Java Virtual Machine (JVM) metrics when metric collection is activated.
 
 .. _classloader-metrics:
 
@@ -112,7 +97,7 @@ ClassLoader metrics
 
 The agent collects the following ClassLoader metrics:
 
-.. list-table:: 
+.. list-table::
   :header-rows: 1
   :width: 100%
   :widths: 40 10 50
@@ -120,10 +105,10 @@ The agent collects the following ClassLoader metrics:
   * - Metric
     - Type
     - Description
-  * - ``runtime.jvm.classes.loaded``
+  * - ``jvm.class.count``
     - Gauge
     - Number of loaded classes.
-  * - ``runtime.jvm.classes.unloaded``
+  * - ``jvm.class.unloaded``
     - Counter
     - Total number of unloaded classes since the process started.
 
@@ -134,7 +119,7 @@ Garbage collection metrics
 
 The agent collects the following garbage collection (GC) metrics:
 
-.. list-table:: 
+.. list-table::
   :header-rows: 1
   :width: 100%
   :widths: 40 10 50
@@ -142,46 +127,15 @@ The agent collects the following garbage collection (GC) metrics:
   * - Metric
     - Type
     - Description
-  * - ``runtime.jvm.gc.concurrent.phase.time``
-    - Timer
+  * - ``jvm.gc.duration{jvm.gc.name=<concurrent gcs>}``
+    - Histogram
     - Time spent in concurrent phase, in milliseconds.
-  * - ``runtime.jvm.gc.live.data.size``
-    - Gauge
-    - Size of long-lived heap memory pool after reclamation, in bytes.
-  * - ``runtime.jvm.gc.max.data.size``
-    - Gauge
-    - Maximum size of long-lived heap memory pool, in bytes.
-  * - ``runtime.jvm.gc.memory.allocated``
+  * - ``jvm.memory.allocated``
     - Counter
-    - Increase in the size of the young heap memory pool after one garbage collection and before the next.
-  * - ``runtime.jvm.gc.memory.promoted``
-    - Counter
-    - Count of positive increases in the size of the old generation memory pool from before to after garbage collection.
-  * - ``runtime.jvm.gc.pause``
+    - Increase in the size of the young heap memory pool after 1 garbage collection and before the next.
+  * - ``jvm.gc.duration{jvm.gc.name!=<concurrent gcs>}``
     - Timer
-    - Time spent in garbage collection pause, in seconds. It produces multiple aggregations, such as ``runtime.jvm.gc.pause.avg``, ``runtime.jvm.gc.pause.count``, ``runtime.jvm.gc.pause.max``, or ``runtime.jvm.gc.pause.totalTime``.
-
-.. _jvm-heap-pressure-metrics:
-
-Heap pressure metrics
-----------------------------------------------------------------------
-
-The agent collects the following heap pressure metrics:
-
-.. list-table:: 
-  :header-rows: 1
-  :widths: 40 10 50
-  :width: 100%
-
-  * - Metric
-    - Type
-    - Description
-  * - ``runtime.jvm.gc.overhead``
-    - Gauge
-    - An approximation of the percentage of CPU time used by GC activities over the last lookback period or since monitoring began, whichever is shorter, in the range [0..1].
-  * - ``runtime.jvm.memory.usage.after.gc``
-    - Gauge
-    - The percentage of long-lived heap pool used after the last GC event, in the range [0..1].
+    - Time spent in garbage collection pause, in seconds.
 
 .. _jvm-memory-metrics:
 
@@ -190,7 +144,7 @@ Memory metrics
 
 The agent collects the following memory metrics:
 
-.. list-table:: 
+.. list-table::
   :header-rows: 1
   :widths: 40 10 50
   :width: 100%
@@ -198,39 +152,39 @@ The agent collects the following memory metrics:
   * - Metric
     - Type
     - Description
-  * - ``process.runtime.jvm.memory.allocated``
+  * - ``jvm.memory.allocated``
     - Counter
-    - Total number of bytes allocated by JVM threads since the previous data point was emitted. 
-        - Use the rate per second rollup. 
+    - Total number of bytes allocated by JVM threads since the previous data point was emitted.
+        - Use the rate per second rollup.
         - Requires to activate memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag.
   * - ``process.runtime.jvm.memory.reclaimed``
     - Counter
-    - Total number of bytes reclaimed by the GC since the previous data point was emitted. Notes: 
-        - This metric might be inaccurate for concurrent garbage collectors such as Shenandoah or ZGC. 
+    - Total number of bytes reclaimed by the GC since the previous data point was emitted. Notes:
+        - This metric might be inaccurate for concurrent garbage collectors such as Shenandoah or ZGC.
         - Use the rate per second rollup.
-        - Requires to activate memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag. 
-  * - ``runtime.jvm.buffer.count``
+        - Requires to activate memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag.
+  * - ``jvm.buffer.count``
     - Gauge
     - An estimate of the number of buffers in the pool.
-  * - ``runtime.jvm.buffer.memory.used``
+  * - ``jvm.buffer.memory.usage``
     - Gauge
     - An estimate of the memory that the JVM is using for this buffer pool, in bytes.
-  * - ``runtime.jvm.buffer.total.capacity``
+  * - ``jvm.buffer.memory.limit``
     - Gauge
     - An estimate of the total capacity of the buffers in this pool, in bytes.
-  * - ``runtime.jvm.memory.committed``
+  * - ``jvm.memory.committed``
     - Gauge
     - Amount of memory available to the JVM, in bytes.
-  * - ``runtime.jvm.memory.max``
+  * - ``jvm.memory.limit``
     - Gauge
     - Maximum amount of memory available for memory management, in bytes.
-  * - ``runtime.jvm.memory.used``
+  * - ``jvm.memory.used``
     - Gauge
     - Amount of used memory, in bytes.
 
 All memory pool metrics share the following tags:
 
-.. list-table:: 
+.. list-table::
   :header-rows: 1
   :width: 100%
   :widths: 30 70
@@ -249,7 +203,7 @@ Thread metrics
 
 The agent collects the following thread metrics:
 
-.. list-table:: 
+.. list-table::
   :header-rows: 1
   :widths: 40 10 50
   :width: 100%
@@ -257,18 +211,10 @@ The agent collects the following thread metrics:
   * - Metric
     - Type
     - Description
-  * - ``runtime.jvm.threads.daemon``
+  * - ``jvm.threads.count``
     - Gauge
-    - Number of live daemon threads.
-  * - ``runtime.jvm.threads.live``
-    - Gauge
-    - Number of live threads, including both daemon and nondaemon threads.
-  * - ``runtime.jvm.threads.peak``
-    - Gauge
-    - Peak live thread count since the JVM started or peak was reset.
-  * - ``runtime.jvm.threads.states``
-    - Gauge
-    - Number of threads per ``state`` as a metric tag.
+    - Number of live threads, including daemon and nondaemon threads.
+
 
 .. _connection-pool-metrics:
 
@@ -288,7 +234,7 @@ The Splunk Distribution of OpenTelemetry Java instruments several Java Database 
 
 Each of the connection pools reports a subset of the following metrics:
 
-.. list-table:: 
+.. list-table::
   :header-rows: 1
   :widths: 40 10 50
   :width: 100%
@@ -296,13 +242,10 @@ Each of the connection pools reports a subset of the following metrics:
   * - Metric
     - Type
     - Description
-  * - ``db.pool.connections``
-    - Gauge
-    - Number of open connections.
-  * - ``db.pool.connections.active``
+  * - ``db.client.connections.usage[state=used]``
     - Gauge
     - Number of open connections that are in use.
-  * - ``db.pool.connections.idle``
+  * - ``db.client.connections.usage[state=idle]``
     - Gauge
     - Number of open connections that are idle.
   * - ``db.pool.connections.idle.max``
@@ -321,18 +264,18 @@ Each of the connection pools reports a subset of the following metrics:
     - Counter
     - Number of connection timeouts that have happened since the application started.
   * - ``db.pool.connections.create_time``
-    - Timer
-    - Time it took to create a new connection.
+    - Histogram
+    - Time it took to create a new connection, in milliseconds.
   * - ``db.pool.connections.wait_time``
-    - Timer
-    - Time it took to get an open connection from the pool.
+    - Histogram
+    - Time it took to get an open connection from the pool, in milliseconds.
   * - ``db.pool.connections.use_time``
-    - Timer
-    - Time between borrowing a connection and returning it to the pool.
+    - Histogram
+    - Time between borrowing a connection and returning it to the pool, in milliseconds.
 
 All connection pool metrics share the following tags:
 
-.. list-table:: 
+.. list-table::
   :header-rows: 1
   :widths: 40 60
   :width: 100%
@@ -344,62 +287,6 @@ All connection pool metrics share the following tags:
   * - ``pool.type``
     - Type or implementation of the connection pool. For example, ``c3p0``, ``dbcp2``, or ``hikari``.
 
-.. _thread-pool-metrics:
-
-Thread pool metrics
-----------------------------------------------------------------------
-
-The Splunk Distribution of OpenTelemetry Java instruments the following thread pool implementations:
-
-- Tomcat connector thread pools
-- WebSphere Liberty web request thread pool
-- Weblogic thread pools
-
-Each of the supported connection pools reports a subset of the following metrics:
-
-.. list-table:: 
-  :header-rows: 1
-  :widths: 40 10 50
-  :width: 100%
-
-  * - Metric
-    - Type
-    - Description
-  * - ``executor.threads``
-    - Timer
-    - Number of threads in the pool.
-  * - ``executor.threads.active``
-    - Timer
-    - Number of threads that are executing code.
-  * - ``executor.threads.idle``
-    - Timer
-    - Number of threads that aren't executing code.
-  * - ``executor.threads.core``
-    - Timer
-    - Core thread pool size, expressed as the number of threads that are always kept in the pool.
-  * - ``executor.threads.max``
-    - Timer
-    - Maximum number of threads in the pool.
-  * - ``executor.tasks.submitted``
-    - Counter
-    - Total number of tasks submitted to the executor.
-  * - ``executor.tasks.completed``
-    - Counter
-    - Total number of tasks completed by the executor.
-
-All thread pool metrics have the following tags:
-
-.. list-table:: 
-  :header-rows: 1
-  :widths: 40 60
-  :width: 100%
-
-  * - Tag
-    - Value
-  * - ``executor.name``
-    - Name of the thread pool.
-  * - ``executor.type``
-    - Type/implementation of the connection pool. For example, ``tomcat``, ``liberty``, or ``weblogic``.
 
 .. _webengine-attributes-java-otel:
 
@@ -408,7 +295,7 @@ WebEngine attributes
 
 The Splunk Distribution of OpenTelemetry Java captures data about the application server and adds the following attributes to `SERVER` spans:
 
-.. list-table:: 
+.. list-table::
   :header-rows: 1
   :width: 100%
 
@@ -419,4 +306,16 @@ The Splunk Distribution of OpenTelemetry Java captures data about the applicatio
   * - ``webengine.version``
     - Version of the application server.
 
-For a list of supported application servers, see the OpenTelemetry documentation at https://github.com/open-telemetry/opentelemetry-java-instrumentation/blob/main/docs/supported-libraries.md#application-servers.
+For a list of supported application servers, see the :ref:`supported-java-libraries`.
+
+
+New metric names
+======================================
+
+.. include:: /_includes/gdi/java-20-metrics-equivalences.rst
+
+
+Deactivate metrics export
+==================================
+
+To turn off logs export to Splunk Observability Cloud, set the ``OTEL_METRICS_EXPORTER`` environment variable or the ``otel.metrics.exporter`` system property to ``none``.
