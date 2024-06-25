@@ -18,7 +18,7 @@ The following migration instructions assume the following:
 
 Follow the steps in this guide to migrate to 2.x metrics and HTTP semantic conventions, and to convert your custom reporting elements to the new metrics format.
 
-.. note:: AlwaysOn Profiling metrics are not impacted by this change.
+.. note:: Version 2.x of the Java agent collects metrics and logs by default. This might result in increased data ingest costs.
 
 Prerequisites
 =============================================
@@ -29,6 +29,8 @@ To migrate from OpenTelemetry Java 1.x to OpenTelemetry Java 2.x, you need the f
 - Administrator permissions in Splunk Observability Cloud. See :ref:`roles-table-phase`
 
 If you're instrumenting your Java services using the Splunk Distribution of OpenTelemetry Java 1.x or the equivalent upstream instrumentation, you can already migrate to the version 2.5.0 and higher of the Java agent.
+
+.. note:: AlwaysOn Profiling metrics are not impacted by this change.
 
 
 .. _java-20-migration-best-practices:

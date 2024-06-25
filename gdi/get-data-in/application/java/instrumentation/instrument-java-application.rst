@@ -143,20 +143,19 @@ Starting from version 2.5.0, the Java agent collects metrics by default when ins
 
 If your metrics endpoint is different than the default value, set the ``OTEL_EXPORTER_OTLP_METRICS_ENDPOINT`` environment variable. See :ref:`advanced-java-otel-configuration` for more information.
 
-To deactivate metrics collection, set the ``OTEL_METRICS_EXPORTER`` environment variable or the ``-Dotel.metrics.exporter`` property to ``none``.
+If you activate memory profiling, metrics collection is activated automatically and cannot be deactivated.
 
-.. note:: If you activate memory profiling, metrics collection is activated automatically and cannot be deactivated.
+.. note:: Metrics ingest might result in increased data ingest costs. To deactivate metrics collection, set the ``OTEL_METRICS_EXPORTER`` environment variable or the ``-Dotel.metrics.exporter`` property to ``none``.
 
 .. _enable_automatic_logs_collection:
 
 Logs collection
 ---------------------------------------
 
-By default, the Java agent injects trace and span metadata automatically into logs. The agent then sends the annotated logs to the OpenTelemetry Collector, which exports them to Splunk Observability Cloud.
+By default, the Java agent injects trace and span metadata automatically into logs. The agent then sends the annotated logs to the OpenTelemetry Collector, which exports them to Splunk Observability Cloud. For more information on trace-log correlation, see :ref:`correlate-traces-with-logs-java`.
 
-To deactivate logs collection, set the ``OTEL_LOGS_EXPORTER`` environment variable or the ``-Dotel.logs.exporter`` property to ``none``.
+.. note:: Logs ingest might result in increased data ingest costs. To deactivate logs collection, set the ``OTEL_LOGS_EXPORTER`` environment variable or the ``-Dotel.logs.exporter`` property to ``none``.
 
-For more information on trace-log correlation, see :ref:`correlate-traces-with-logs-java`.
 
 .. _ignore_endpoints_java:
 
