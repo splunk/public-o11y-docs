@@ -159,8 +159,8 @@ Use the tag filter throughout Splunk APM to filter to show data from the tags yo
   * - Tag Spotlight
     - Yes
     - Yes
-    - No
     - Yes
+    - Yes (Supports selection of only 1 service)
     - Yes
     - Yes
 
