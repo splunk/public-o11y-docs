@@ -190,6 +190,37 @@ The thread sampler resumes its activity when any of the buffers is empty.
 
 To avoid the loss of profiling data due to full buffers, check the configuration and the communication layer between your process and the Splunk Distribution of OpenTelemetry Collector.
 
+Assembly version conflicts
+==========================
+
+When installing the .NET instrumentation, you might encounter dependency version conflicts that result in error messages such as:
+
+.. code-block:: bash
+
+   Unhandled exception. System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.Extensions.DependencyInjection.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. The system cannot find the file specified.
+
+   File name: 'Microsoft.Extensions.DependencyInjection.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+      at Microsoft.AspNetCore.Builder.WebApplicationBuilder..ctor(WebApplicationOptions options, Action`1 configureDefaults)
+      at Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(String[] args)
+      at Program.<Main>$(String[] args) in /Blog.Core/Blog.Core.Api/Program.cs:line 26
+
+To resolve this issue, :ref:`install the .NET instrumentation using the NuGet packages <otel-dotnet-nuget-pkg>`, as NuGet automatically installs the correct dependencies that the package requires. 
+
+Alternatively, you can manually install the conflicting packages to your project.
+
+For a complete list of dependencies, see:
+
+* `OpenTelemetry.AutoInstrumentation <https://github.com/open-telemetry/opentelemetry-dotnet-instrumentation/blob/main/src/OpenTelemetry.AutoInstrumentation/OpenTelemetry.AutoInstrumentation.csproj>`__ 
+* `OpenTelemetry.AutoInstrumentation.AdditionalDeps <https://github.com/open-telemetry/opentelemetry-dotnet-instrumentation/blob/main/src/OpenTelemetry.AutoInstrumentation.AdditionalDeps/Directory.Build.props>`__. 
+
+You can find the correct versions in the following:
+
+* `Directory.Packages.props <https://github.com/open-telemetry/opentelemetry-dotnet-instrumentation/blob/main/Directory.Packages.props>`__
+* `src/Directory.Packages.props <https://github.com/open-telemetry/opentelemetry-dotnet-instrumentation/blob/main/src/Directory.Packages.props>`__
+* `src/OpenTelemetry.AutoInstrumentation.AdditionalDeps/Directory.Packages.props <https://github.com/open-telemetry/opentelemetry-dotnet-instrumentation/blob/main/src/OpenTelemetry.AutoInstrumentation.AdditionalDeps/Directory.Packages.props>`__
+
+For more information about troubleshooting assembly version conflicts, see the `OpenTelemetry .NET instrumentation troubleshooting <https://github.com/open-telemetry/opentelemetry-dotnet-instrumentation/blob/main/docs/troubleshooting.md#assembly-version-conflicts>`__ guidance.
+
 Uninstall the instrumentation
 ======================================
 
