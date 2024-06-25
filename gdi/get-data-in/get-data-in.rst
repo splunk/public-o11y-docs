@@ -14,6 +14,7 @@ Get data into Splunk Observability Cloud
     gdi-guide/apm-onboarding.rst
     gdi-guide/rum-onboarding.rst
     gdi-guide/api-onboarding.rst
+    gdi-guide/additional-resources.rst
 
 Use Splunk Observability Cloud to achieve full-stack observability of all your data sources, including your infrastructure, applications, and user interfaces. Splunk Observability Cloud includes the following products:
 
@@ -22,32 +23,38 @@ Use Splunk Observability Cloud to achieve full-stack observability of all your d
 - :ref:`Splunk Real User Monitoring (RUM) <rum-gdi>`
 - :ref:`Splunk Log Observer <get-started-logs>` and :ref:`Log Observer Connect <logs-intro-logconnect>`
 
-Here's a high-level overview of your options for getting data from each layer of your stack into the Splunk Observability Cloud product best suited to provide insights about your system. 
+This guide provides four chapters that guide you through the process of setting up each component of Splunk Observability Cloud.
 
-.. image:: /_images/gdi/GDI_sequence.png
-   :width: 80%   
+.. raw:: html 
+    
+    <h2>How to use this guide</h2>
 
-.. source in Figma: https://www.figma.com/file/0tm4yT04K6MlwM7dMA62ad/Docs-Graphic
+You can set up each of Splunk's products, or you can choose individual components to set up.
 
-For standard environments and workflows, perform all the steps described below to get the most out of Splunk Observability Cloud. However, depending on your observability goals and environment, you can choose to perform only a subset of the steps. For example, if you don't use every Splunk Observability Cloud product, or if you don't want to collect data from every eligible data source.
+If you're setting up all components, follow each part of each chapter in order. Otherwise, select the chapter or part you'd like to follow.
 
-How to use this guide
-=============================
+.. list-table:: 
+    :header-rows: 1
 
-Next: Leverage the full benefits of Splunk Observability Cloud
-=============================================================================
-
-Now that you have your desired full stack of data coming into Splunk Observability Cloud, consider exploring the following features that can help you monitor, visualize, and coordinate team work around your data:
-
-- :ref:`Create detectors <create-detectors>` to receive alerts about conditions in your data that are important you.
-- :ref:`Create charts <create-charts>` to visualize your data.
-- :ref:`Use Related Content <get-started-relatedcontent>` to jump between components of Splunk Observability Cloud by clicking related data.
-- :ref:`Create and customize dashboards <dashboard-create-customize>` to organize and share your charts.
-- :ref:`admin-manage-teams` to coordinate team work around your data.
-- Check system critical metrics, access real-time alerts, and view mobile-friendly dashboards on the go using the :ref:`Splunk Observability Cloud mobile app <intro-to-mobile>`.
-- Learn more about :ref:`the Splunk Observability Cloud data model <data-model>`.
-- Learn more about each product in the Splunk Observability Cloud suite:
-   - :ref:`get-started-apm`
-   - :ref:`get-started-infrastructure`
-   - :ref:`get-started-logs`
-   - :ref:`get-started-rum`
+    * - Chapter
+      - Parts
+      - Prerequisites
+    * - :ref:`infrastructure-onboarding`
+      - * :ref:`integrate-cloud-services`
+        * :ref:`send-server-cluster-data`
+        * :ref:`configure-third-party-apps`
+      - None.
+    * - :ref:`apm-onboarding`
+      - * :ref:`instrument-back-end-services-apm`
+        * :ref:`instrument-serverless-functions-apm`
+        * :ref:`send-custom-data-apm`
+      - None, but completing chapter 1 first is recommended.
+    * - :ref:`rum-onboarding`
+      - This chapter is standalone.
+      - None.
+    * - :ref:`api-onboarding`
+      - This chapter is standalone.
+      - Complete chapter 1, 2, or 3 before starting.
+    * - :ref:`additional-resources`
+      - This chapter is standalone.
+      - Complete chapter 1, 2, or 3 before starting.

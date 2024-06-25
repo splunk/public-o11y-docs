@@ -1,7 +1,7 @@
 .. _rum-onboarding:
 
 ******************************************************
-Instrument user interfaces
+Chapter 3: Instrument user interfaces
 ******************************************************
 
 .. meta:: 

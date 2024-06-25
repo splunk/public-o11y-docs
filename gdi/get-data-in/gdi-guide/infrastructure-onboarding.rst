@@ -1,7 +1,7 @@
-.. _infrastructure-onboarding.rst:
+.. _infrastructure-onboarding:
 
 **********************************************************
-Configure infrastructure and cloud services
+Chapter 1: Configure infrastructure and cloud services
 **********************************************************
 
 .. meta:: 
