@@ -9,64 +9,91 @@ Manually instrument Java applications for Splunk Observability Cloud
 
 Instrumenting applications automatically using the agent of the Splunk Distribution of OpenTelemetry Java covers most needs. Manually instrumenting your application is only necessary when, for example, you need to add custom attributes to spans or need to manually generate spans and metrics.
 
-For instructions on how to manually instrument Java applications, see the Manual instrumentation docs in the OpenTelemetry Java Instrumentation repository at https://opentelemetry.io/docs/java/manual_instrumentation.
-
 .. note:: Manual OTel instrumentation is fully compatible with Splunk automatic JVM instrumentation and is fully supported by Splunk.
+
+.. _java-otel-custom-traces:
+
+Send custom Java application traces
+========================================================
+
+To create custom spans and traces, follow these steps:
+
+1. Install the Splunk Distribution of OpenTelemetry Java. See :ref:`instrument-java-applications`.
+
+2. Acquire a tracer using the ``getTracer`` method:
+
+   .. code-block:: java
+
+      import io.opentelemetry.api.trace.Tracer;
+
+      Tracer tracer = openTelemetry.getTracer("instrumentation-scope-name", "instrumentation-scope-version");
+
+3. Create a span. The following example shows how to create and end a span in a sample application:
+
+   .. code-block:: java
+
+      import io.opentelemetry.api.trace.Span;
+      import io.opentelemetry.context.Scope;
+
+      // ...
+      @GetMapping("/rolldice")
+      public List<Integer> index(@RequestParam("player") Optional<String> player,
+            @RequestParam("rolls") Optional<Integer> rolls) {
+         Span span = tracer.spanBuilder("rollTheDice")
+            .setAttribute("player.name", player.orElse("unknown"))
+            .startSpan();
+
+         // Make the span the current span
+         try (Scope scope = span.makeCurrent()) {
+
+            //.. Application logic
+
+         } catch(Throwable t) {
+            span.recordException(t);
+            throw t;
+         } finally {
+            span.end();
+         }
+      }
+
+For more examples, see the manual instrumentation docs in the OpenTelemetry Java Instrumentation repository at :new-page:`https://opentelemetry.io/docs/java/manual_instrumentation <https://opentelemetry.io/docs/java/manual_instrumentation>`.
+
 
 .. _java-otel-custom-metrics:
 
 Send custom Java application metrics
 ========================================================
 
-The Splunk Distribution of OpenTelemetry Java agent detects if the instrumented application is using Micrometer and injects a special ``MeterRegistry`` implementation that lets the agent collect user-defined meters.
+To create custom metrics, follow these steps:
 
-Follow these steps to activate custom application metrics:
+1. Install the Splunk Distribution of OpenTelemetry Java. See :ref:`instrument-java-applications`.
 
-- :ref:`add-micrometer-dep`
-- :ref:`add-meter-registry`
+2. Create a meter:
 
-.. _add-micrometer-dep:
+   .. code-block:: java
 
-Add the micrometer-core dependency
-------------------------------------------------------
+      OpenTelemetry openTelemetry = GlobalOpenTelemetry.get();
+      Meter sampleMeter = openTelemetry.getMeter("foo.example.metrics");
 
-To export custom metrics through the Java agent, add a dependency on the ``micrometer-core`` library with version 1.5 and higher:
+3. Build a specific metric type. The following example shows how to create a gauge metric:
 
-.. tabs::
+   .. code-block:: java
 
-  .. code-tab:: xml Maven
+      sampleMeter
+         .gaugeBuilder("player.hitpoints")
+         .setDescription("A player's currently remaining hit points.")
+         .setUnit("HP")
+         .ofLongs()
+         .buildWithCallback(res -> {
+             long hitpoints = currentPlayer.hitpoints();
+             String playerName = currentPlayer.name();
+             res.record(hitpoints, Attributes.of(stringKey("name"), playerName)));
+         });
+         .buildWithCallback(
+            result -> result.record(Runtime.getRuntime().totalMemory(), Attributes.empty()));
 
-      <dependency>
-        <groupId>io.micrometer</groupId>
-        <artifactId>micrometer-core</artifactId>
-        <version>1.7.5</version>
-      </dependency>
+For more examples, see the manual instrumentation docs in the OpenTelemetry Java Instrumentation repository at :new-page:`https://opentelemetry.io/docs/java/manual_instrumentation <https://opentelemetry.io/docs/java/manual_instrumentation>`.
 
-  .. code-tab:: java Gradle
 
-      implementation("io.micrometer:micrometer-core:1.7.5")
 
-.. _add-meter-registry:
 
-Register each custom meter
----------------------------------------------------
-
-You must register each custom meter in the global ``Metrics.globalRegistry`` instance provided by the Micrometer library. You can use one of meter factory methods provided by the ``Metrics`` class, or use meter builders and reference the ``Metrics.globalRegistry`` directly, as in the following example:
-
-.. code:: java
-
-  class MyClass {
-  Counter myCounter = Metrics.counter("my_custom_counter");
-    Timer myTimer = Timer.builder("my_custom_timer").register(Metrics.globalRegistry);
-
-    int foo() {
-      myCounter.increment();
-      return myTimer.record(this::fooImpl);
-    }
-
-    private int fooImpl() {
-       // ...
-    }
-  }
-
-For more information on the Micrometer API, see the Micrometer official documentation.
