@@ -37,13 +37,13 @@ The following table lists the Splunk APM billing and subscription usage informat
    * - Usage metrics for trace-analyzed-per-minute (TAPM) subscription plans. See :ref:`tapm-usage-metrics` for a complete list.
      - See :ref:`Detailed usage reports<download-apm-usage-reports>`.
 
-   * - Host and container diagnostics
+   * - Host and container diagnostics.
      - See :ref:`Host and container dignostic report<host-diagnostics-report-apm>`
 
-   * - Throttling and limits metrics
+   * - Throttling and limits metrics.
      - See :ref:`APM throttling dashboard<apm-throttling-entitlement>`
   
-   * - Historical subscription usage metrics data
+   * - Historical subscription usage metrics data.
      - See :ref:`APM entitlements dashboard<apm-throttling-entitlement>`
 
 
