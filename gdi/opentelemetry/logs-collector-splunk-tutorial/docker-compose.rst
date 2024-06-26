@@ -13,6 +13,8 @@ Learn to configure all the necessary services for the tutorial environment, incl
 Create the log collection environment
 =====================================
 
+All the configuration files used in this tutorial reside in a single directory. Follow these steps to create the directory and your first file:
+
 #. Create a directory called ``log-collection``.
 
 #. Create a file in the ``log-collection`` directory called ``docker-compose.yml``
@@ -20,7 +22,7 @@ Create the log collection environment
 Add the logging services
 ========================
 
-Inside the ``docker-compose.yml`` file, create the logging services and define the logs that they produce.
+Docker Compose deploys and manages the services used in ths tutorial. Inside the ``docker-compose.yml`` file, create the logging services and define the logs that they produce.
 
 .. code-block:: yaml
 
@@ -48,66 +50,62 @@ Inside the ``docker-compose.yml`` file, create the logging services and define t
 Add the Collector service
 =========================
 
-Create the Collector service that listens for incoming log data from the logging services and runs the Collector components defined in :ref:`the next part of the tutorial <collector-splunk>`:
+Create the Collector service that listens for incoming log data from the logging services and runs the Collector components defined in :ref:`the next part of the tutorial <collector-splunk>`. In the ``services`` section, add the following code:
 
 .. code-block:: yaml
 
-   services:
-     # ...
-     otelcollector:
-       image:  quay.io/signalfx/splunk-otel-collector:latest
-       container_name: otelcollector
-       # Command that runs when the container starts.
-       command: ["--config=/etc/otel-collector-config.yml"]
-       # Routes files and directories from the host machine to the container volumes
-       volumes:
-         - ./otel-collector-config.yml:/etc/otel-collector-config.yml
-         - ./output1:/output1
-         - ./output2:/output2
-       # Sets the otelcollector service not to start until splunk service starts
-       # and is in the Healthy state.
-       depends_on:
-         splunk:
-           condition: service_healthy
-       # Host machine port 18088 forwards to the container port 8088,
-       # on which the otelcollector service listens for incoming log data.
-       ports:
-         - 18088:8088
+   otelcollector:
+     image:  quay.io/signalfx/splunk-otel-collector:latest
+     container_name: otelcollector
+     # Command that runs when the container starts.
+     command: ["--config=/etc/otel-collector-config.yml"]
+     # Routes files and directories from the host machine to the container volumes
+     volumes:
+       - ./otel-collector-config.yml:/etc/otel-collector-config.yml
+       - ./output1:/output1
+       - ./output2:/output2
+     # Sets the otelcollector service not to start until splunk service starts
+     # and is in the Healthy state.
+     depends_on:
+       splunk:
+         condition: service_healthy
+     # Host machine port 18088 forwards to the container port 8088,
+     # on which the otelcollector service listens for incoming log data.
+     ports:
+       - 18088:8088
 
 Add the Splunk service
 ======================
 
-Create the Splunk Enterprise service that listens for incoming log data from the Collector service.
+Create the Splunk Enterprise service that listens for incoming log data from the Collector service. In the ``services`` section, add the following code:
 
 .. code-block:: yaml
 
-   services:
-     # ...
-     splunk:
-       image: splunk/splunk:9.1.2
-       container_name: splunk
-       # Sets environment variables to automatically accept the license agreement,
-       # define the token for the Splunk HTTP Event Collector (HEC), and define the administrator password.
-       environment:
-         - SPLUNK_START_ARGS=--accept-license
-         - SPLUNK_HEC_TOKEN=00000000-0000-0000-0000-0000000000000
-         - SPLUNK_PASSWORD=changeme
-       # Host machine port 18000 forwards to the container port 8000,
-       # on which the splunk service listens for incoming log data.
-       ports:
-         - 18000:8000
-       # Command that runs at regular intervals to check the health of the splunk service.
-       healthcheck:
-         test: ['CMD', 'curl', '-f', 'http://localhost:8000']
-         interval: 5s
-         timeout: 5s
-         retries: 20
-       # Routes the `./splunk.yml` file from the host machine to the `/tmp/defaults/default.yml` file
-       # inside the container, and creates persistent storage locations for data and configuration files.
-       volumes:
-         - ./splunk.yml:/tmp/defaults/default.yml
-         - /opt/splunk/var
-         - /opt/splunk/etc
+   splunk:
+     image: splunk/splunk:9.1.2
+     container_name: splunk
+     # Sets environment variables to automatically accept the license agreement,
+     # define the token for the Splunk HTTP Event Collector (HEC), and define the administrator password.
+     environment:
+       - SPLUNK_START_ARGS=--accept-license
+       - SPLUNK_HEC_TOKEN=00000000-0000-0000-0000-0000000000000
+       - SPLUNK_PASSWORD=changeme
+     # Host machine port 18000 forwards to the container port 8000,
+     # on which the splunk service listens for incoming log data.
+     ports:
+       - 18000:8000
+     # Command that runs at regular intervals to check the health of the splunk service.
+     healthcheck:
+       test: ['CMD', 'curl', '-f', 'http://localhost:8000']
+       interval: 5s
+       timeout: 5s
+       retries: 20
+     # Routes the `./splunk.yml` file from the host machine to the `/tmp/defaults/default.yml` file
+     # inside the container, and creates persistent storage locations for data and configuration files.
+     volumes:
+       - ./splunk.yml:/tmp/defaults/default.yml
+       - /opt/splunk/var
+       - /opt/splunk/etc
 
 .. note::
 
@@ -122,5 +120,7 @@ Learn more
 ==========
 
 * For more information about Docker Compose, see `Docker Compose overview <https://docs.docker.com/compose/>`__ in the official Docker documentation.
+* For more information about using the Collector to monitor Docker container, see :ref:`docker`.
+* For more information about the Splunk container, see the `docker-splunk <https://splunk.github.io/docker-splunk/>`__ documentation and the `Docker-Splunk <https://github.com/splunk/docker-splunk>`__ GitHub repository.
 * For more information about using the Collector to monitor Docker container, see :ref:`docker`.
 * For more information about the Splunk container, see the `docker-splunk <https://splunk.github.io/docker-splunk/>`__ documentation and the `Docker-Splunk <https://github.com/splunk/docker-splunk>`__ GitHub repository.

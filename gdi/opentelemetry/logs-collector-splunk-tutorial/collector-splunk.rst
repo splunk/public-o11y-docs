@@ -9,6 +9,8 @@ Now that you've configured your services using Docker Compose, learn how to crea
 Configure the Collector
 =======================
 
+The Collector gathers the container logs and sends them to the Splunk service. Follow these steps to configure the Collector:
+
 #. Create a file in the ``log-collection`` directory called ``otel-collector-config.yml``.
 
 #. In the ``otel-collector-config.yml`` file, define the receivers used to collect the logs from the 2 logging services:
@@ -74,6 +76,8 @@ Configure the Collector
 
 Configure the Splunk indexes
 ============================
+
+Splunk indexes store the data that the Collector sends to the Splunk service. Follow these steps to configure the Splunk indexes:
 
 #. Create a file in the ``log-collection`` directory called ``splunk.yml``.
 

@@ -9,7 +9,13 @@ Now that you've configured the necessary services, the Collector components, and
 Deploy the log collection services
 ==================================
 
-#. Navigate to the ``log-collection`` directory.
+The next step is to run the ``docker-compose.yml`` file that you created in Part 1.
+
+.. note::
+
+   Prior to deploying the services in the ``docker-compose.yml`` file, MacOS users with Silicon chips must run ``export DOCKER_DEFAULT_PLATFORM=linux/amd64``, as there is no ``arm64`` version of the ``splunk/spunk`` image.
+
+#. From inside a terminal, navigate to the ``log-collection`` directory.
 
 #. Start the log collection services defined in the ``docker-compose.yml`` file:
 
@@ -34,6 +40,8 @@ Deploy the log collection services
 
 Verify the log collection pipeline
 ==================================
+
+It is important to verify that everything works as expected. Follow these steps to verify that the Collector gathered the logs and sent them to the Splunk service.
 
 #. Open a web browser and navigate to :samp:`http://localhost:18000`.
 
