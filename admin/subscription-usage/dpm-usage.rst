@@ -71,7 +71,7 @@ The report has six columns:
       * - Time
         - Time of the report
         - Follows the 24 hour hh:mm UTC format.
-      * - Streaming Data Points
+      * - Streaming data points
         - The number of data points, including archived and histogram data points, received by Splunk Infrastructure Monitoring through the ingest APIs for the specified date and time. 
         - For billing purposes, 10 archived data points count as 1 real-time data point. 1 histogram data point counts as 8 real-time data points.
       * - Backfill data points
