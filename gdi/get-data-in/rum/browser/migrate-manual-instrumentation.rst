@@ -15,8 +15,8 @@ The following examples shows how you can instrument different data sources for S
 Migrate actions or events instrumentation
 =========================================
 
-You might have instrumentation that collects custom timestamps or time ranges for activity within your app. For example, you might have manually instrumented a CPU-intensive ``calculateEstateTax`` function to know how its performance is affecting users. 
-      
+You might have instrumentation that collects custom timestamps or time ranges for activity within your app. For example, you might have manually instrumented a CPU-intensive ``calculateEstateTax`` function to know how its performance is affecting users.
+
 When instrumenting the same function using OpenTelemetry, in addition to capturing start and end time in a span, you can include additional details using attributes:
 
 .. code-block:: javascript

@@ -7,39 +7,46 @@ Monitor Splunk APM subscription usage
 .. meta::
    :description: View APM subscription usage information and download usage reports to monitor your organization.
 
-.. note:: General aspects of subscription usage and consumption for Splunk APM. For more detailed billing-related queries, contact your Splunk Account Team.
+.. note:: Use this topic to understand general aspects of subscription usage and consumption for Splunk APM. For more detailed billing-related queries, contact your Splunk Account Team.
 
-View Splunk APM subscription usage data to monitor your organization's usage against its subscription plan and entitlements. You have to be an administrator to view the APM Subscription Usage page for your organization. Go to :strong:`Settings > Subscription Usage` and select the :strong:`APM` tab. Depending on your org subscription model, this might be :guilabel:`Settings > Billing and Usage`.
+View Splunk APM subscription usage data to monitor your organization's usage against its subscription plan and limits. 
 
-For any questions about subscription usage, contact your tech support member or sales representative.
+Prerequisite
+==============
 
-The Subscription Usage page explains the following information about your organization:
+To view the APM subscription usage page, you must have the admin or usage role.
 
-- The type of plan
+View APM subscription usage
+==================================
 
-- The entitlement limits for your subscription plan
+Go to :guilabel:`Settings` then :guilabel:`Subscription Usage` and select the :strong:`APM` tab. Depending on your org subscription model, this might be :guilabel:`Settings` then :guilabel:`Billing and Usage`.
 
-- The monthly billed value of each entitlement
+The subscription usage page displays the following information about your organization's usage:
 
-- The per-minute usage of each entitlement
+* The type of plan
+* The subscription limits for your subscription plan. This information is available when you select a tile on the subscription usage page.
+* The monthly billed value of each subscription limit. This information is available when you select a tile on the subscription usage page.
 
 .. note::
 
-   The APM Subscription Usage page displays a tile for Monitoring MetricSets, but the metric that powers the chart is not currently available.
+   The APM subscription usage page displays a tile for Monitoring MetricSets (MMS), but the metric that powers the chart is not currently available on the subscription usage page. Select :guilabel:`View Detailed Usage Reports` to view your current histogram MMS data. For more information about detailed usage reports, see :ref:`view-apm-billing-reports`.
+
+For any questions about subscription usage, contact tech support or your sales representative.
 
 How APM calculates usage
 =========================================
 
-APM calculates per-minute usage for your subscription plan. There are two types of subscription plans: :strong:`host` and :strong:`traces analyzed per minute (TAPM)`. To learn more about how APM monitors billing and usage for each subscription plan type, see :ref:`analyze-apm-billing-usage`.
+APM calculates usage for your subscription plan. There are 2 types of subscription plans: host or traces analyzed per minute (TAPM). To learn more about how APM monitors billing and usage for each subscription plan type, see :ref:`analyze-apm-billing-usage`.
 
-For each subscription plan type, download detailed usage reports for recent usage periods. Reports break down usage for each minute in a usage period and provide the following type of information:
+Download detailed usage reports
+===================================
 
-- The number of billed hosts and containers, if applicable
+Download detailed usage reports for recent usage periods to better understand your usage. Reports break down usage in a usage period and provide the following information:
 
-- The number of billed TAPM, if applicable
-
-- The number of billed Troubleshooting MetricSets
-
-- The billed trace volume
+* The number of billed hosts and containers, if applicable. Host and container data is available per minute.
+* The number of billed TAPM, if applicable. TAPM data is available per minute. 
+* The billed trace volume. Trace volume data is available per minute.
+* The number of billed Troubleshooting MetricSets (TMS). TMS data is available per minute.
+* The number of billed Monitoring MetricSets (MMS). MMS data is only available for histogram MMS and is only available in the usage report. MMS data is available at 10-minute intervals.
 
 For more information about detailed usage reports, see :ref:`view-apm-billing-reports`.

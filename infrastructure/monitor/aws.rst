@@ -10,17 +10,21 @@ Monitor Amazon Web Services
 .. toctree::
    :hidden:
 
+   Manage AWS data import <aws-infra-import.rst>
    Monitor AWS <aws-infra-monitor>
+   aws-infra-costs.rst
    Supported Amazon services <https://docs.splunk.com/Observability/gdi/get-data-in/integrations.html#amazon-web-services>
    Available AWS metadata <aws-infra-metadata>
    
-Infrastructure Monitoring imports data, logs, and metadata, including tags and other properties, for the following :ref:`AWS services <aws-integrations>`.
+Splunk Observability Cloud's Infrastructure Monitoring imports data, logs, and metadata, including tags and other properties, for the following :ref:`AWS services <aws-integrations>`.
 
 To monitor AWS resources:
 
 1. Set up the Infrastructure Monitoring AWS integration. To learn more see :ref:`get-started-aws`.
-2. Next, check how to :ref:`monitor AWS with Infrastructure Monitoring <aws-infra-monitor>`.
-3. Refer to the AWS official documentation for a list of the available AWS metrics and other data, or check :ref:`the metadata Observablity Cloud provides <aws-infra-metadata>`.
+2. :ref:`aws-infra-import`.
+3. Next, learn how to :ref:`monitor AWS with Splunk Observability Cloud <aws-infra-monitor>`.
+4. Finally, check :ref:`aws-infra-costs`.
+5. Refer to the AWS official documentation for a list of the available AWS metrics and other data, or see :ref:`the metadata Observablity Cloud provides <aws-infra-metadata>`.
 
 .. _aws-data:
 
@@ -30,21 +34,9 @@ To monitor AWS resources:
       <h2>About AWS data<a name="aws-data" class="headerlink" href="#aws-data" title="Permalink to this headline">¶</a></h2>
    </embed>
 
-See the AWS official documentation for a list of the available AWS metrics and other data, or see :ref:`the metadatada Observability Cloud provides <aws-infra-metadata>` for AWS.
+See the AWS official documentation for a list of the available AWS metrics and other data, or see :ref:`the metadatada Splunk Observability Cloud provides <aws-infra-metadata>` for AWS.
 
-By default, Observability Cloud brings in data from all :ref:`supported AWS services <aws-integrations>` associated with your account, with :ref:`certain limitations <aws-data-limits>`. To manage the amount of data to import, see :ref:`specify-data-metadata`.
-
-.. _aws-namespaces:
-
-.. raw:: html
-
-   <embed>
-      <h3>AWS namespaces</h3>
-   </embed>
-
-Observability Cloud imports AWS namespace metadata using the dimension ``namespace``. For most AWS services, the namespace name has the form ``"AWS/<NAME_OF_SERVICE>"``, such as "AWS/EC2" or "AWS/ELB". To select a metric time series (MTS) for an AWS metric when the metric has the same name for more than one service, such as ``CPUUtilization``, use the ``namespace`` dimension as a filter.
-
-To control the amount of data you import, specify the namespaces you want to import as well as the data you want to import or exclude from each namespace. For more information, see :ref:`specify-data-metadata`.
+By default, Splunk Observability Cloud brings in data from all :ref:`supported AWS services <aws-integrations>` associated with your account, with :ref:`certain limitations <aws-data-limits>`. To manage the amount of data to import, see :ref:`specify-data-metadata`.
 
 .. _aws-unique-id:
 
@@ -117,10 +109,18 @@ To learn more, see :ref:`otel-intro`.
       <h3>Track OpenTelemetry enablement</h3>
    </embed>
 
-You can track the degree of OpenTelemetry enablement in your AWS integrations by going to :guilabel:`Data Management > AWS`.
+To track the degree of OpenTelemetry enablement in your AWS integrations: 
+
+1. From Splunk Observability Cloud, go to :guilabel:`Data Management > Deployed integrations > AWS`.
+
+2. Select either the :guilabel:`AWS EC2` or :guilabel:`AWS EKS` tabs to see whether the OTel Collector is installed on each AWS EC2 instance or AWS EKS cluster. This helps you identify the instances that still need to be instrumented. 
 
 ..  image:: /_images/gdi/aws-collector-insights.jpg
-   :width: 100%
-   :alt: Amount of AWS entities with the Collector installed.
+  :width: 80%
+  :alt: Amount of AWS entities with the Collector installed.
 
-Select the :guilabel:`OpenTelemetry Enabled` button to see whether the Collector is installed on each AWS EC2 instance. This will help you identify the instances that still need to be instrumented. For instances that are successfully instrumented, you can see which version of the Collector is deployed.
+3. For OTel Collector instances that are successfully instrumented, you can see which version of the Collector is deployed.  
+
+..  image:: /_images/gdi/aws-collector-insights-version.png
+  :width: 80%
+  :alt: Collector enablement in AWS EKS, with information on version installed

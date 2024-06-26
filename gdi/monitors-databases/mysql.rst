@@ -1,15 +1,18 @@
 .. _mysql:
 
-MySQL
-=======
+MySQL (deprecated)
+=====================
 
 .. meta::
-   :description: Use this Splunk Observability Cloud integration for the MySQL monitor. See benefits, install, configuration, and metrics
+   :description: Use this Splunk Observability Cloud integration for the MySQL monitor. See benefits, install, configuration, and metrics.
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
-MySQL monitor type to retrieve metrics and logs from MySQL.
+.. caution:: 
+   
+   The MySQL monitor is now deprecated and will reach of End of Support on October 31st, 2024. During this period only critical security and bug fixes are provided. When End of Support is reached, the monitor will be removed and no longer be supported, and you won't be able to use it to send data to Splunk Observability Cloud. 
+
+   To monitor your MySQL databases you can use the native OpenTelemetry MySQL receiver instead. See more at :ref:`MySQL receiver <mysql-receiver>`. 
+
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the MySQL monitor type to retrieve metrics and logs from MySQL.
 
 This monitor connects to a MySQL instance and reports on the values
 returned by a ``SHOW STATUS`` command, which include the following:
@@ -46,8 +49,15 @@ To create a MySQL user for this monitor, run the following commands:
     -- Permissions for the stats options
     GRANT REPLICATION CLIENT ON *.* TO '<username>'@'localhost';
 
-The new user only has enough privileges to connect to the database.
-Additional privileges are not required.
+The new user only has enough privileges to connect to the database. Additional privileges are not required.
+
+.. note:: If you want to define seperate DB names to connect to, then you have to grant at least SELECT permission to the user.
+
+
+.. code:: sql
+
+    GRANT SELECT ON <db_name>.* TO '<user_name>'@'localhost';
+
 
 Considerations on localhost
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -108,8 +118,6 @@ section of your configuration file:
    service:
      pipelines:
        metrics:
-         receivers: [smartagent/mysql]
-       logs:
          receivers: [smartagent/mysql]
 
 Configuration settings

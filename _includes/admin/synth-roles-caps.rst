@@ -1,11 +1,12 @@
 .. list-table::
+  :header-rows: 1
   :widths: 20,20,20,20,20
 
   * - :strong:`Permission`
-    - :strong:`Admin`
-    - :strong:`Power user`
-    - :strong:`Usage`
-    - :strong:`Read_only`
+    - :strong:`admin`
+    - :strong:`power`
+    - :strong:`usage`
+    - :strong:`read_only`
 
   * - :strong:`Create, delete, or update test`
     - Yes
@@ -37,3 +38,20 @@
     - No
     - No
     - No
+
+  * - :strong:`Create, read, or delete runners`
+    - Yes
+    - No
+    - No
+    - No
+
+  * - :strong:`Create, update, or delete downtime configuration`
+    - Yes
+    - No
+    - No
+    - No
+  * - :strong:`Read downtime configuration`
+    - Yes
+    - Yes
+    - Yes
+    - Yes

@@ -9,21 +9,22 @@ Connect AWS to Splunk Observability Cloud
 
 .. toctree::
   :hidden:
+  :maxdepth: 5
 
   AWS authentication and supported regions <aws-prereqs>
   Compare connection options <aws-compare-connect>
-  Connect to AWS via polling from the Splunk console <aws-connect-polling>
-  Connect to AWS with Metrics Streams from the Splunk console <aws-connect-ms>
-  Connect Metric Streams from the AWS console <aws-console-ms>  
+  Connect via polling <aws-connect-polling>
+  Connect with Splunk-managed Metrics Streams <aws-connect-ms>
+  Connect with AWS-managed Metric Streams <aws-console-ms>  
   Connect to AWS using the Splunk API <aws-apiconfig>  
   Connect to AWS with Terraform <aws-terraformconfig>
-  Collect logs from AWS <aws-logs>
+  Send AWS logs to Splunk Platform <aws-logs>
   CloudFormation templates <aws-cloudformation>
   Next steps <aws-post-install>
   Troubleshoot your AWS connection <aws-troubleshooting>
   Troubleshoot Metric Streams <aws-ts-metric-streams>
-  Troubleshoot logs <aws-ts-logs>
   GetMetricStatistics API deprecation notice <aws-api-notice>
+  aws-tutorial/about-aws-tutorial.rst
 
 You have several data ingestion and connection methods when it comes to monitoring your Amazon Web Services (AWS) data in Splunk Observability Cloud. 
 
@@ -96,18 +97,9 @@ You can deactivate this check by setting the ``enableCheckLargeVolume`` field in
     <h4>Tag filtering<a name="tag-filtering-aws" class="headerlink" href="#tag-filtering-aws" title="Permalink to this headline">¶</a></h4>
   </embed>
 
-If you filter data based on tags, your costs for Amazon CloudWatch and Splunk Infrastructure Monitoring might decrease.
+If you filter data based on tags, your costs for Amazon CloudWatch and Splunk Infrastructure Monitoring might decrease. Read more at :ref:`specify-data-metadata`.
 
-Be careful when choosing tag names. Splunk Observability Cloud allows only alphanumeric characters, and the underscore ( ``_`` ) and minus ( ``-`` ) symbols. Spaces are replaced by the underscore character. 
-
-These characters are unsupported:
-
-* periods ( ``.`` )
-* colons ( ``:`` )
-* forward slashes ( ``/`` )
-* equal signs ( ``=`` )
-* plus signs ( ``+`` )
-* at symbols ( ``@`` ) 
+.. include:: /_includes/gdi/aws-unsupported-chars.rst
 
 .. raw:: html
 
@@ -117,6 +109,16 @@ These characters are unsupported:
 
 CloudWatch Metric Streams supports filtering by namespace and metric name but doesn't support filtering based on resource tags.
 
+.. raw:: html
+
+  <embed>
+    <h2>Imported data<a name="aws-imported-data" class="headerlink" href="#aws-imported-data" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
+By default, Splunk Observability Cloud brings in data from all supported AWS services associated with your account. See :ref:`Supported integrations in Splunk Observability Cloud <aws-integrations>`.
+
+To manage the amount of data to import, see :ref:`aws-infra-import`.  
+
 .. _aws-data-availability:
 
 .. raw:: html
@@ -125,11 +127,14 @@ CloudWatch Metric Streams supports filtering by namespace and metric name but do
     <h2>Data availability<a name="aws-data-availability" class="headerlink" href="#aws-data-availability" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-.. caution:: Splunk is not responsible for data availability, and it can take up to several minutes or longer, depending on your configuration, from the time you connect until you start seeing valid data from your account.
+.. caution:: Splunk Observability Cloud is not responsible for data availability. 
+  
+Depending on your configuration, it might take up to several minutes from the time you connect until you start seeing valid data from your account.
 
-By default, Splunk Observability Cloud brings in data from all supported AWS services associated with your account. See :ref:`Supported integrations in Splunk Observability Cloud <aws-integrations>`.
+If you're streaming data with Metric Streams, the configured buffering settings on the Kinesis Data Firehose delivery stream determine how long it takes for data to appear.
 
-To limit the amount of data to import, see :ref:`specify-data-metadata`.  
+* Buffering is expressed in maximum payload size or maximum wait time, whichever is reached first. 
+* If set to the minimum values (60 seconds or 1MB) the expected latency is within 3 minutes if the selected CloudWatch namespaces have active streams.
 
 .. raw:: html
 
@@ -153,15 +158,27 @@ Learn more at :ref:`Costs for AWS monitoring <aws-costs>`.
 
 To take advantage of the full benefits of the Splunk Observability Cloud platform, install the :ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>`.
 
+.. raw:: html
+
+  <embed>
+    <h3>Track your OpenTelemetry enablement<a name="install-splunk-otel-collector-enablement" class="headerlink" href="#install-splunk-otel-collector-enablement" title="Permalink to this headline">¶</a></h3>
+  </embed>
+
 To track the degree of OpenTelemetry enablement in your AWS integrations: 
 
-1. From Splunk Observability Cloud, go to :guilabel:`Data Management > AWS`.
+1. From Splunk Observability Cloud, go to :guilabel:`Data Management > Deployed integrations > AWS`.
 
-2. Select :guilabel:`OpenTelemetry Enabled` to see whether the OTel Collector is installed on each AWS EC2 instance. This helps you identify the instances that still need to be instrumented. For instances that are successfully instrumented, you can see which version of the OTel Collector is deployed.
+2. Select either the :guilabel:`AWS EC2` or :guilabel:`AWS EKS` tabs to see whether the OTel Collector is installed on each AWS EC2 instance or AWS EKS cluster. This helps you identify the instances that still need to be instrumented. 
 
 ..  image:: /_images/gdi/aws-collector-insights.jpg
   :width: 80%
   :alt: Amount of AWS entities with the Collector installed.
+
+3. For OTel Collector instances that are successfully instrumented, you can see which version of the Collector is deployed.  
+
+..  image:: /_images/gdi/aws-collector-insights-version.png
+  :width: 80%
+  :alt: Collector enablement in AWS EKS, with information on version installed
 
 .. _aws-connection-options-more:
 
@@ -182,7 +199,7 @@ Splunk Observability Cloud also offers secured connectivity with AWS. For more i
   </embed>
 
 * See :ref:`Leverage data from integration with AWS <aws-post-install>` ffor an overview of what you can do after you connect Splunk Observability Cloud to AWS.
-* Find instructions on how to import AWS metrics and metadata or AWS tag and log information using namespaces and filters at :ref:`Monitor AWS services <infrastructure-aws>`. 
+* Find instructions on how to import AWS metrics and metadata such as tags using namespaces and filters at :ref:`Monitor AWS services <infrastructure-aws>`. 
 * Refer to the AWS official documentation for a list of the available AWS metrics and other data, or read about the metadata Splunk Observability Cloud can provide at :ref:`AWS CloudWatch metadata <aws-infra-metadata>`.
 * To collect traces and metrics of your AWS Lambda functions for Splunk APM, see :ref:`splunk-otel-lambda-layer`.
 

@@ -1,1 +1,1 @@
-The agent of the Splunk Distribution of OpenTelemetry Ruby is compatible with Ruby 2.6 and higher.
+The OpenTelemetry instrumentation for Ruby is compatible with Ruby 3.0 and higher.

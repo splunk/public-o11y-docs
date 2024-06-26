@@ -197,6 +197,42 @@ The following table shows customizable arguments for this detector. To learn how
      - Dimensions you want to add to the detector.
      - None
 
+AWS EC2 - Disk utilization expected to reach the limit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Description: Alerts when AWS EC2 disk utilization is above its designated threshold. 
+- SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/71d8631907e83f8b110b984058f877d0739e2428/library/signalfx/detectors/autodetect/infra/aws/ec2.flow#L5>` repository on GitHub.
+
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33
+
+   * - Argument
+     - Description
+     - Default value
+   
+   * - Trigger threshold
+     - Specifies trigger threshold in % for CPU utilization
+     - ``80%``
+
+   * - Trigger sensitivity
+     - Sensitivity for alerting associated with the trigger threshold
+     - ``80% of 10m``
+
+   * - Clear threshold
+     - Specifies clear threshold in % for the CPU utilization
+     - ``80%``
+
+   * - Clear sensitivity
+     - Specifies clear sensitivity associated with clear threshold
+     - ``80% of 10m`` 
+
+   * - Filter
+     - Specifies dimensional scope of the detector
+     - ``None``     
+
 AWS Route 53: Health checkers' connection time took over 9 seconds
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

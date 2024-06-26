@@ -16,11 +16,13 @@ Pipelines operate on three data types: logs, traces, and metrics. To learn more 
 Define the pipeline
 =========================================
 
-The pipeline is constructed during Collector startup based on the pipeline definition. See :ref:`otel-components` to understand the behavior of each component, and check :ref:`otel-configuration-ootb`.
+The pipeline is constructed during Collector startup based on the pipeline definition. See :ref:`otel-components` to understand the behavior of each component. 
 
 To define the pipeline, first you need to specify a data type in your pipeline configuration. All the receivers, exporters, and processors you use in a pipeline must support the particular data type, otherwise you'll get the ``ErrDataTypeIsNotSupported`` error message when the configuration is loaded. 
 
 A pipeline can contain one or more receivers. Data from all receivers is pushed to the first processor, which performs processing on it and then pushes it to the next processor and so on until the last processor in the pipeline pushes the data to the exporters. Each exporter gets a copy of each data element. The last processor uses a data fan-out connector to fan out (distribute) the data to multiple exporters.
+
+You can also use connectors to connect two pipelines: it consumes data as an exporter at the end of one pipeline and emits data as a receiver at the start of another pipeline. It may consume and emit data of the same data type, or of different data types. A connector may generate and emit data to summarize the consumed data, or it may simply replicate or route data. Learn more at:ref:`otel-components-connectors`.
 
 Example of a pipeline configuration
 --------------------------------------------------------------------
@@ -95,7 +97,7 @@ Attribute values expressing a numerical value of zero, an empty string, or an em
 
 Attribute values of ``null`` are not valid and attempting to set a ``null`` value is undefined behavior.
 
-``null`` values are not allowed in arrays. However, if it is impossible to make sure that no ``null`` values are accepted (for example, in languages that do not have appropriate compile-time type checking), ``null`` values within arrays MUST be preserved as-is (that is, passed on to span processors/exporters as ``null``). If exporters do not support exporting ``null`` values, you can replace those values by 0, ``false``, or empty strings. Changing these values is required for map and dictionary structures represented as two arrays with indices that are kept in sync (for example, two attributes ``header_keys`` and ``header_values``, both containing an array of strings to represent a mapping ``header_keys[i] -> header_values[i]``).
+``null`` values are not allowed in arrays. However, if it is impossible to make sure that no ``null`` values are accepted (for example, in languages that do not have appropriate compile-time type checking), ``null`` values within arrays MUST be preserved as-is (that is, passed on to processors or exporters as ``null``). If exporters do not support exporting ``null`` values, you can replace those values by 0, ``false``, or empty strings. Changing these values is required for map and dictionary structures represented as two arrays with indices that are kept in sync (for example, two attributes ``header_keys`` and ``header_values``, both containing an array of strings to represent a mapping ``header_keys[i] -> header_values[i]``).
 
 Labels
 -----------------------------------------

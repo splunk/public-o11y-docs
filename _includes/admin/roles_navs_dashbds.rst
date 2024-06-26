@@ -1,13 +1,13 @@
 .. list-table::
-    :header-rows: 1
+  :header-rows: 1
   :width: 100%
   :widths: 20,20,20,20,20
 
   * - :strong:`Permission`
-    - :strong:`Admin`
-    - :strong:`Power user`
-    - :strong:`Usage`
-    - :strong:`Read_only`
+    - :strong:`admin`
+    - :strong:`power`
+    - :strong:`usage`
+    - :strong:`read_only`
 
   * - :strong:`View navigator`
     - Yes

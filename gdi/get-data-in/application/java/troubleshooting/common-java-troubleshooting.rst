@@ -107,7 +107,7 @@ To troubleshoot the lack of connectivity between the OTLP exporter and the OTel 
 
 #. Make sure that ``otel.exporter.otlp.endpoint`` points to the correct OpenTelemetry Collector instance host.
 #. Check that your OTel Collector instance is configured and running. See :ref:`otel-splunk-collector-tshoot`.
-#. Check that the OTLP gRPC receiver is activated in the OTel Collector and plugged into the traces pipeline.
+#. Check that the OTLP receiver is activated in the OTel Collector and plugged into the traces pipeline.
 #. Check that the OTel Collector points to the following address: ``http://<host>:4317``. Verify that your URL is correct.
 
 401 error when sending spans
@@ -126,20 +126,18 @@ Make sure that you're using a valid Splunk access token when sending data direct
 Metrics exporter issues
 ===============================================================
 
-If you see the following warning in your logs, it means that the Java agent can't send metrics to your OTel Collector, Smart Agent (now deprecated), or to the Splunk platform endpoints:
-
-.. code-block:: bash
-
-   [signalfx-metrics-publisher] WARN com.splunk.javaagent.shaded.io.micrometer.signalfx.SignalFxMeterRegistry - failed to send metrics: Unable to send data points
+If you see warnings about metrics in your logs, it might mean that the Java agent can't send metrics to your OTel Collector, Smart Agent (now deprecated), or to the Splunk platform endpoints:
 
 To troubleshoot connectivity issues affecting application metrics, try the following steps:
 
 1. Make sure that ``splunk.metrics.endpoint`` points to the correct host.
+
 2. Check that the OpenTelemetry Collector or Smart Agent instance is configured and running.
-3. Check that the OpenTelemetry Collector or Smart Agent are using the correct ports for the SignalFx receiver. The Collector uses ``http://<host>:9943``, and the Smart Agent uses ``http://<host>:9080/v2/datapoint``.
+
+3. Check that the OpenTelemetry Collector or Smart Agent are using the correct ports for the SignalFx receiver. The Collector uses ``http://<host>:4318/v2/datapoint``, and the Smart Agent uses ``http://<host>:9080/v2/datapoint``.
+
 4. Make sure that you're using a valid Splunk access token when sending data directly to your Splunk platform instance. See :ref:`admin-api-access-tokens`.
 
-.. note:: Metric collection for Java using OpenTelemetry instrumentation is still experimental.
 
 .. _java-profiler-issues:
 
@@ -174,7 +172,6 @@ If AlwaysOn Profiling is not working as intended, check the configuration settin
    [otel.javaagent 2021-09-28 18:17:04:244 +0000] [main] INFO <snip> -              splunk.profiler.keep-files : false
    [otel.javaagent 2021-09-28 18:17:04:245 +0000] [main] INFO <snip> -           splunk.profiler.logs-endpoint : null
    [otel.javaagent 2021-09-28 18:17:04:245 +0000] [main] INFO <snip> -             otel.exporter.otlp.endpoint : http://collector:4317
-   [otel.javaagent 2021-09-28 18:17:04:245 +0000] [main] INFO <snip> -            splunk.profiler.tlab.enabled : false
    [otel.javaagent 2021-09-28 18:17:04:246 +0000] [main] INFO <snip> -   splunk.profiler.period.jdk.threaddump : null
    [otel.javaagent 2021-09-28 18:17:04:246 +0000] [main] INFO <snip> - -----------------------
 

@@ -8,7 +8,7 @@ Connect to AWS via polling from the Splunk console
 .. meta::
   :description: Send AWS data to Splunk Observability Cloud via polling.
 
-If you have Administrator privileges for Splunk Observability Cloud and your Amazon Web Services (AWS) account, you can use the UI guided setup to create an integration to connect to AWS, and configure metrics and logs collection.
+If you have Administrator privileges for Splunk Observability Cloud and your Amazon Web Services (AWS) account, you can use the UI guided setup to create an integration to connect to AWS, and configure metric collection.
 
 Before you start
 ============================================
@@ -32,8 +32,8 @@ To access the guided setup for the AWS integration, perform the following steps:
 #. Open the :new-page:`Amazon Web Services guided setup <https://login.signalfx.com/#/gdi/aws?category=all&gdiState=%7B%22integrationId%22:%22FfhrrZoAYAA%22%7D>`. Optionally, you can navigate to the guided setup on your own:
 
   - On the navigation menu, select :menuselection:`Data Management`. 
-  - Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
-  - On the Integrate Your Data page, select the tile for :strong:`Amazon Web Services`.
+  - Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
+  - Select the tile for :strong:`Amazon Web Services`.
 
 Next, follow the steps provided in the guided setup:
 
@@ -55,9 +55,10 @@ In this step you need to choose the following connection options:
   * Metadata.
   * Cost and usage metrics.
   * CloudWatch metrics. 
-  * Logs.
 
 In the CloudWatch Metrics option, select :guilabel:`Polling` as the ingestion method, and set up the polling rate at which you want Splunk Observability Cloud to poll CloudWatch for metric data.
+
+.. note:: To collect logs, see :ref:`aws-logs`.
 
 Set up the polling rate 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -95,7 +96,7 @@ Finally, proceed with the last steps:
 Review the default settings
 ==================================================
 
-After creating an AWS IAM policy and assigning it to a particular role through the guided setup, you can modify your configuration.
+After creating an AWS IAM policy and assigning it to a particular role through the guided setup you can modify your configuration.
 
 Modify the scope of data collection
 --------------------------------------------------
@@ -106,7 +107,6 @@ Use the check box options in the guided setup to limit the scope of your data co
   
 * Collect Amazon Cost and Usage Metrics.
 * Ingest CloudWatch Metrics. You can deactivate it altogether, or deactivate the polling but activate AWS Metric Streams instead.
-* Collect CloudWatch Logs.
 * Select which :ref:`AWS regions <aws-regions>` to fetch data from.
 * Select which AWS services to fetch data from.
 
@@ -123,7 +123,7 @@ To limit data collection, you can also:
 Select a CloudFormation template
 --------------------------------------------------
 
-Select a :ref:`CloudFormation template <aws-cloudformation>` to collect logs or Metric Streams for each AWS region that you want to operate in.
+Select a :ref:`CloudFormation template <aws-cloudformation>` to collect Metric Streams for each AWS region that you want to operate in.
 
 Next steps
 ================

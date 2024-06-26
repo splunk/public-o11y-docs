@@ -1,15 +1,18 @@
 .. _postgresql:
 
-PostgreSQL
-==========
+PostgreSQL (deprecated)
+==============================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the PostgreSQL monitor. See benefits, install, configuration, and metrics
 
-.. note:: You can replace this monitor with the OTel native component ``postgresql`` receiver. See :ref:`postgresql-receiver` for more information.
+.. caution:: 
+   
+   The PostgreSQL monitor is now deprecated and will reach of End of Support on October 31st, 2024. During this period only critical security and bug fixes are provided. When End of Support is reached, the monitor will be removed and no longer be supported, and you won't be able to use it to send data to Splunk Observability Cloud. 
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+   To monitor your PostgreSQL databases you can use the native OpenTelemetry PostgreSQL receiver instead. See more at :ref:`postgresql-receiver`.
+
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 ``postgresql`` monitor type to pull metrics from all PostgreSQL
 databases from a specific Postgres server instance using SQL queries.
@@ -47,7 +50,7 @@ The following table shows the configuration options for the
       - ``masterDBName``
       - no
       - ``string``
-      - The “master” database to which the agent first connects to query
+      - The primary database to which the agent first connects to query
          the list of databases available in the server. This database
          should be accessible to the user specified with
          ``connectionString`` and ``params`` below, and that user should
@@ -98,34 +101,6 @@ The following table shows the configuration options for the
       - ``integer``
       - The number of top queries to consider when publishing
          query-related metrics (**default:** ``10``)
-
-Metrics
--------
-
-The following metrics are available for this integration:
-
-.. raw:: html
- 
-      <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/postgresql/metadata.yaml"></div>
-
-
-Notes
-~~~~~
-
-.. include:: /_includes/metric-defs.rst
-
-Metrics about replication
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Replication metrics aren't available on some PostgreSQL servers. For
-now, this monitor automatically deactivates the ``replication`` metrics
-group if the monitor detects Aurora. This helps avoid following the
-error:
-``Function pg_last_xlog_receive_location() is currently not supported for Aurora``
-
-The metric ``postgres_replication_state`` will be reported only for
-``master`` and for ``postgres_replication_lag`` for the ``standby`` role
-(replica).
 
 Troubleshooting
 ---------------

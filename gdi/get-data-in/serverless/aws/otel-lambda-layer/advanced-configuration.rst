@@ -1,15 +1,15 @@
 .. _advanced-lambda-layer-configuration:
 
 *****************************************************
-Configure the Splunk OpenTelemetry Lambda Layer
+Configure the Splunk OpenTelemetry Lambda layer
 *****************************************************
 
 .. meta::
-   :description: Configure the agent of the Splunk OpenTelemetry Lambda Layer through environment variables to suit most of your instrumentation needs for AWS Lambda functions.
+   :description: Configure the agent of the Splunk OpenTelemetry Lambda layer through environment variables to suit most of your instrumentation needs for AWS Lambda functions.
 
-You can configure the Splunk OpenTelemetry Lambda Layer to suit most of your instrumentation needs. In most cases, modifying the basic configuration is enough to get started. See :ref:`set-env-vars-otel-lambda`.
+You can configure the Splunk OpenTelemetry Lambda layer to suit most of your instrumentation needs. In most cases, modifying the basic configuration is enough to get started. See :ref:`set-env-vars-otel-lambda`.
 
-You can modify the following settings to fully configure the Lambda layer, including options for activating new features that are unique to the Splunk OpenTelemetry Lambda Layer.
+You can modify the following settings to fully configure the Lambda layer, including options for activating new features that are unique to the Splunk OpenTelemetry Lambda layer.
 
 .. _main-lambda-agent-settings:
 
@@ -121,7 +121,7 @@ For more information, see :ref:`splunk-otel-lambda-metrics`.
 Server trace information
 ==============================================
 
-To connect Real User Monitoring (RUM) requests from mobile and web applications with serverless trace data, the Splunk OpenTelemetry Lambda Layer adds the following response headers to HTTP responses:
+To connect Real User Monitoring (RUM) requests from mobile and web applications with serverless trace data, the Splunk OpenTelemetry Lambda layer adds the following response headers to HTTP responses:
 
 .. code-block::
 
@@ -151,6 +151,6 @@ Other settings
    * - ``SPLUNK_LAMBDA_LOCAL_COLLECTOR_ENABLED``
      - Set to ``false`` to deactivate the OpenTelemetry Collector instance running inside each Lambda runtime. If you deactivate the bundled Collector, configure the instrumentation to either communicate directly to the REST API ingest endpoints, or configure up a forwarding instance of the Collector and configure the instrumentation to send data to it. The default value is ``true``. See :ref:`ec2-otel-collector-serverless` for more information.
    * - ``OTEL_PYTHON_DISABLED_INSTRUMENTATIONS``
-     - Comma-separated list of Python instrumentations you want to deactivate. For a list of automatically loaded instrumentations, see the requirements list in the OpenTelemetry repository on GitHub: https://github.com/open-telemetry/opentelemetry-lambda/blob/main/python/src/otel/otel_sdk/requirements-nodeps.txt
+     - Comma-separated list of Python instrumentations you want to deactivate. For a list of automatically loaded instrumentations, see the requirements list in the OpenTelemetry repository on GitHub: :new-page:`https://github.com/open-telemetry/opentelemetry-lambda/blob/main/python/src/otel/otel_sdk/nodeps-requirements.txt`
 
 .. caution:: Activating ``DEBUG`` logging might increase AWS CloudWatch costs.

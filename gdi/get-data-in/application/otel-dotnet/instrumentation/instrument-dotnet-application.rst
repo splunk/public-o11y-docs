@@ -9,7 +9,7 @@ Instrument your .NET application for Splunk Observability Cloud (OpenTelemetry)
 
 The Splunk Distribution of OpenTelemetry .NET automatically instruments .NET applications, Windows services running .NET applications, and ASP.NET applications deployed on IIS.
 
-To get started, use the guided setup, follow the instructions manually, or auto-instrument your application. See :ref:`auto-instrumentation-dotnet` for more information.
+To get started, use the guided setup, follow the instructions manually, or automatically instrument your application. See :ref:`discovery_mode` for more information.
 
 Generate customized instructions using the guided setup
 ====================================================================
@@ -20,7 +20,7 @@ To generate all the basic installation commands for your environment and applica
 #. Open the :new-page:`.NET OpenTelemetry guided setup <https://login.signalfx.com/#/gdi/scripted/otel-dotnet-tracing/>`. Optionally, you can navigate to the guided setup on your own:
 
    #. In the navigation menu, select :menuselection:`Data Management`.
-   #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+   #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
    #. In the integration filter menu, select :guilabel:`By Product`.
    #. Select the :guilabel:`APM` product.
    #. Select the :guilabel:`.NET (OpenTelemetry)` tile to open the .NET OpenTelemetry guided setup.
@@ -28,7 +28,7 @@ To generate all the basic installation commands for your environment and applica
 Install the Splunk Distribution of OpenTelemetry .NET manually
 ==================================================================
 
-Follow these instructions to install the Splunk Distribution of OpenTelemetry .NET:
+If you don't use the guided setup, follow these instructions to manually install the Splunk Distribution of OpenTelemetry .NET:
 
 - :ref:`install-dotnet-otel-instrumentation`
 - :ref:`configure-otel-dotnet`
@@ -72,7 +72,7 @@ Windows
          # Set up environment to start instrumentation from the current PowerShell session
          Register-OpenTelemetryForCurrentSession -OTelServiceName "<your-service-name>"
 
-      .. code-tab:: shell IIS application (.NET)
+      .. code-tab:: shell IIS application
 
          # Set up IIS instrumentation
          # IIS is restarted as a result
@@ -81,16 +81,89 @@ Windows
       .. code-tab:: shell Windows service
 
          # Set up your Windows Service instrumentation
-         Register-OpenTelemetryForWindowsService -WindowsServiceName "<your-windows-service-name>"
+         Register-OpenTelemetryForWindowsService -WindowsServiceName "<your-windows-service-name>" -OTelServiceName "<your-OTel-service-name>"
 
 #. Set the environment and service version resource attributes:
 
-   .. code-block:: powershell
+   .. tabs::
 
-      # You can also set this in web.config or app.config
-      $env:OTEL_RESOURCE_ATTRIBUTES='deployment.environment=<envtype>,service.version=<version>'
+      .. tab:: .NET application
 
-#. Run your application.
+         .. code-block:: powershell
+
+            # Configure environment and service version for current PowerShell session
+            $env:OTEL_RESOURCE_ATTRIBUTES='deployment.environment=<envtype>,service.version=<version>'
+
+         Run your application after setting the attribute.
+
+      .. tab:: IIS application (ASP.NET)
+
+         For ASP.NET applications, configure the service name and resource attributes in the ``appSettings`` block of the web.config file:
+
+         .. code-block:: xml
+
+            <appSettings>
+               <add key="OTEL_SERVICE_NAME" value="my-service-name" />
+               <add key="OTEL_RESOURCE_ATTRIBUTES" value="deployment.environment=test,service.version=1.0.0" />
+            </appSettings>
+
+         .. note:: 
+            If ``OTEL_SERVICE_NAME`` is not set for a web application hosted in IIS, the inferred name based on the site name and virtual directory path is used.
+
+         .. note:: 
+            If multiple applications are running in the same IIS Application Pool do not use the ``appSettings`` block of the web.config file to configure any environment variable. Let the instrumentation infer the name and use the Application Pool environment variables configuration, see below, to set the resource attributes (which will be shared by all applications in the Application Pool).
+
+         After modifying the web.config file, restart IIS:
+
+         .. code-block:: powershell
+
+            Start-Process "iisreset.exe" -NoNewWindow -Wait
+
+         You can also set the resource attributes for specific application pools in the ``environmentVariables`` block of the :new-page:`applicationHost.config file <https://learn.microsoft.com/en-us/iis/configuration/system.applicationhost/applicationpools/add/environmentvariables/#configuration-sample>`. For example:
+
+         .. code-block:: xml
+
+            <environmentVariables>
+               <add name="OTEL_RESOURCE_ATTRIBUTES" value="deployment.environment=test,service.version=1.0.0" />
+            </environmentVariables>
+
+         .. note::
+            If the ``OTEL_SERVICE_NAME`` or ``OTEL_RESOURCE_ATTRIBUTES`` environment variables are set for a process, settings with the same names from ``appSettings`` block of web.config are ignored.
+
+      .. tab:: IIS application (ASP.NET Core)
+
+         For ASP.NET Core applications hosted in IIS, the service name and resource attributes can be configured using the ``environmentVariables`` block of the :new-page:`web.config file <https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/web-config?view=aspnetcore-8.0#set-environment-variables>`. For example:
+
+         .. code-block:: xml
+
+            <environmentVariables>
+               <environmentVariable name="OTEL_SERVICE_NAME" value="my-service-name" />
+               <environmentVariable name="OTEL_RESOURCE_ATTRIBUTES" value="deployment.environment=test,service.version=1.0.0" />
+            </environmentVariables>
+
+         After modifying the ``web.config`` file, restart IIS:
+
+         .. code-block:: powershell
+
+            Start-Process "iisreset.exe" -NoNewWindow -Wait
+
+      .. tab:: Windows service
+
+         For .NET Framework applications, you can configure resource attributes in the ``appSettings`` block of the app.config file.
+
+         .. code-block:: xml
+
+            <appSettings>
+               <add key="OTEL_RESOURCE_ATTRIBUTES" value="deployment.environment=test,service.version=1.0.0" />
+            </appSettings>
+
+         You can also modify the ``Environment`` key in the Windows Registry for each Windows service.
+
+         After modifying the app.config file or the Windows Registry, restart the service:
+
+         .. code-block:: powershell
+
+            Restart-Service -Name "<your-windows-service-name>" -Force
 
 If no data appears in APM, see :ref:`common-dotnet-otel-troubleshooting`.
 
@@ -130,12 +203,31 @@ If no data appears in APM, see :ref:`common-dotnet-otel-troubleshooting`.
 
 .. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your .NET application or service manually. See :ref:`dotnet-otel-manual-instrumentation`.
 
+.. _activate-profiling-dotnet-otel:
+
+Activate AlwaysOn Profiling
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To activate AlwaysOn Profiling, set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
+
+To activate memory profiling, set the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after activating AlwaysOn Profiling.
+
+See :ref:`get-data-in-profiling` for more information. For more settings, see :ref:`profiling-configuration-otel-dotnet`.
+
 .. _configure-otel-dotnet:
 
 Configure the instrumentation
 ---------------------------------------------
 
 For advanced configuration of the .NET automatic instrumentation, like changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
+
+Database Query Performance settings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Starting from version 1.4.0, the .NET OTel instrumentation collects database queries for Database Query Performance. See :ref:`db-query-performance`.
+
+SQL statements might contain sensitive information. To configure this behavior, see ``OTEL_DOTNET_AUTO_SQLCLIENT_SET_DBSTATEMENT_FOR_TEXT`` and ``OTEL_DOTNET_AUTO_ENTITYFRAMEWORKCORE_SET_DBSTATEMENT_FOR_TEXT`` in :ref:`dotnet-otel-instrumentation-settings`.
+
 
 .. _otel-dotnet-nuget-pkg:
 
@@ -201,6 +293,12 @@ Instrument an application running within a Docker container
 
 An example of a Dockerfile that instruments a .NET application running inside a Docker container is available in the :new-page:`splunk/observability-content-contrib <https://github.com/splunk/observability-content-contrib/tree/main/integration-examples/splunk-otel-dotnet-docker>` repository on GitHub.
 
+Instrument Azure Web Apps
+---------------------------------------------------------------
+
+To instrument applications or services running on Azure Web Apps, see :ref:`instrument-dotnet-azure-webapp`.
+
+
 .. _windows-offline-install-otel-dotnet:
 
 Offline installation for Windows
@@ -234,7 +332,7 @@ To install the .NET automatic instrumentation on Windows hosts that are offline,
 .. _export-directly-to-olly-cloud-dotnet-otel:
 
 Send data directly to Splunk Observability Cloud
----------------------------------------------------
+====================================================================
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
@@ -254,13 +352,12 @@ To bypass the OTel Collector and send data directly to Splunk Observability Clou
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
+To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
-#. Open the navigation menu in Splunk Observability Cloud.
-#. Select :menuselection:`Settings`.
-#. Select your username.
+Specify the source host 
+----------------------------------------------
 
-The realm name appears in the :guilabel:`Organizations` section.
+.. include:: /_includes/gdi/apm-api-define-host.rst
 
 .. _uninstall-otel-dotnet:
 

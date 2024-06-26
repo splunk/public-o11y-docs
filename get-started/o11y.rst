@@ -46,7 +46,7 @@ Follow these steps to set up and make the most of Splunk Observability Cloud:
 1. Create a plan and set up your organization
 =================================================
 
-Before you start, create a plan for how you want to set up your Splunk Observability Cloud organization. For information about how to plan for and set up your Observability Cloud organization, see :ref:`admin-admin`.
+Before you start, create a plan for how you want to set up your Splunk Observability Cloud organization. For information about how to plan for and set up your Splunk Observability Cloud organization, see :ref:`admin-admin`.
 
 
 .. _get-started-gdi:
@@ -91,7 +91,7 @@ Now that you've explored and familiarized yourself with the data you have coming
 
 - In addition to exploring your data using Infrastructure Monitoring navigators and built-in :ref:`dashboards <dashboard-create-customize>`, you can also create new dashboards and customize existing ones.
 
-- In addition to the built-in data you already have coming into Splunk Observability Cloud, you can also bring in custom data. For more information, see :ref:`Configure and instrument applications to send custom data <gdi-7>` and :ref:`Use the Observability Cloud API to send custom data <gdi-8>`.
+- In addition to the built-in data you already have coming into Splunk Observability Cloud, you can also bring in custom data. For more information, see :ref:`Configure and instrument applications to send custom data <gdi-7>` and :ref:`Use the Splunk Observability Cloud API to send custom data <gdi-8>`.
 
 - Customize your APM experience by setting up business workflows and creating span tags that add metadata to traces sent to APM. For more information, see :ref:`apm-workflows` and :ref:`apm-add-context-trace-span`.
 

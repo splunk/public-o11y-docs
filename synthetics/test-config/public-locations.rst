@@ -56,3 +56,20 @@ US1
    :file: us1-public-locations.csv
    :widths: 10, 10, 10, 10, 20
    :header-rows: 1
+
+US2
+----
+.. csv-table::
+   :file: us2-public-locations.csv
+   :widths: 10, 10, 10, 10, 20
+   :header-rows: 1
+
+
+JSON file of public locations 
+====================================
+
+This zip file contains each realm in JSON format: :download:`Synthetics Public Locations<SynPublicLocations.zip>`. 
+
+
+
+

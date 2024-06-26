@@ -6,97 +6,78 @@ Introduction to metrics pipeline management
 ******************************************************
 
 .. meta::
-    :description: Introduction to metrics pipeline management in Splunk Infrastructure Monitoring
-
-|hr|
-
-:strong:`Available in Enterprise Edition and Service Bureau`
-
-|hr|
-
-.. meta::
     :description: Introduction to metrics pipeline management in Splunk Observability Cloud.
 
-Metrics pipeline management is an evolution of Splunk Observability Cloud metrics platform that offers you solutions to
-centrally manage metric cardinality.
+|hr|
 
-With metrics pipeline management, you have more control over how you ingest and store your metrics, so you can lower
-costs and improve monitoring performance without updating the configuration of your
-:ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>`. To remove data pre-ingest using the Collector,
-see :ref:`configure-remove`.
+:strong:`Available in Enterprise Edition`. For more information, see :ref:`sd-subscriptions`.
 
-What is metric cardinality?
-=============================
+|hr|
 
-Metric cardinality is the number of unique metric time series (MTS) produced by a combination of metric name and its
-associated dimensions. Therefore, a metric has high cardinality when it has a high number of dimension keys, and a high
+Metrics pipeline management (MPM) is an evolution of the Splunk Observability Cloud metrics platform that offers you solutions to centrally manage metric cardinality.
+
+With MPM, you have more control over how you ingest and store your metrics, so you can lower costs and improve monitoring performance without updating the configuration of your instance of the Splunk Distribution of the OpenTelemetry Collector. To remove data pre-ingest using the Collector, see :ref:`configure-remove`.
+
+What is metric cardinality, and how does it impact your observability?
+=======================================================================================
+
+Metric cardinality is the number of unique metric time series (MTS) produced by a combination of metric name and its associated dimensions. A metric has high cardinality when it has a high number of dimension keys, and a high
 number of possible unique values for those dimension keys.
 
-For example, you send in data for a metric ``http.server.duration``.
+For example, say you send in data for the metric ``http.server.duration``. If ``http.server.duration`` has only 1 dimension ``endpoint`` with 3 unique values: ``A``, ``B``, and ``C``, then ``http.server.duration`` generates 3 MTS.
 
-* If ``http.server.duration`` has only 1 dimension ``endpoint`` with 3 unique values: ``A``, ``B``, and ``C``, then
-  ``http.server.duration`` generates 3 metric time series (MTS).
-* If you add another dimension ``region`` with 3 unique values: ``us-east``, ``us-west``, and ``eu``, then
-  ``http.server.duration`` generates 3 (endpoints) * 3 (regions) = 9 MTS.
+If you add another dimension ``region`` with 3 unique values: ``us-east``, ``us-west``, and ``eu``, then ``http.server.duration`` generates 9 MTS: 3 endpoints * 3 regions.
 
-Even though ``http.server.duration`` only has 2 dimensions, metric cardinality is already 9 since each dimension has
-multiple possible values.
+Even though ``http.server.duration`` only has 2 dimensions, metric cardinality is already 9 since each dimension has multiple possible values.
 
-To learn more about MTS, see :ref:`metric-time-series`. To learn more about the Observability Cloud data model, see
-:ref:`data-model`.
+For more information, see :ref:`metrics-pipeline-intro-more`.
 
-How does metrics pipeline management work?
-========================================================
+High cardinality in your system 
+----------------------------------------------------------------
 
-The driving mechanisms behind metrics pipeline management are aggregation and data dropping. For each metric you send to
-Observability Cloud, you can control the metric volume with a set of aggregation and data dropping rules.
+High-cardinality metrics allow you to perform detailed analysis and troubleshooting, but they can lead to challenges in data management and system performance​​, as well as incur higher storage costs. With MPM, you can manage and reduce your metrics' data volume and mitigate any issues caused by high cardinality.
 
-.. note:: A new aggregated MTS has a resolution of 10 seconds. Metrics pipeline management rolls up the raw data
-   points received into one aggregated data point, for each MTS associated with the metric. If your systems emit data
-   points over a period that's much longer than 10 seconds, you might have difficulty reconciling your raw data with
-   the aggregated data. To learn more, see the section :ref:`mts-aggregation-rollup-period`.
+Use metric pipeline management to control your data volume
+=============================================================================================
 
-* Aggregation rules let you roll up your selected metric data into new metrics that take up less storage and increase
-  computational performance. To learn more, see :ref:`aggregation`.
-* Data dropping rules let you discard any metrics you don't want to retain for monitoring. To learn more, see
-  :ref:`data-dropping`.
+For each metric you send to Splunk Observability Cloud, MPM can help you configure how to ingest, keep, and manage the metric's data volume and cardinality.
 
-By aggregating combinations of dimensions that provide useful insights while dropping a large amount of the unaggregated
-raw data, you can significantly reduce your organization's data footprint.
+For example,  you can decide to route your low-value metrics to archived metrics, a low-cost data tier, or even entirely drop them. Meanwhile, your high-value metrics continue to be routed to the real-time tier for alerting and monitoring. To learn more, see :ref:`mpm-rule-routing`.
 
-.. _aggregation:
+You can also convert a high-cardinality metric into a low-cardinality metric by aggregating away the dimensions that are not needed. To learn more, see :ref:`mpm-rule-routing-exception`.
 
-Aggregation rules
---------------------------------------------------------------------------------
+Control data ingestion and storage: Keep, archive or drop your data
+------------------------------------------------------------------------------------------------
 
-Data you send from your services to Observability Cloud can have high cardinality. Instead of adjusting how you are
-sending in your data before you send it, aggregation lets you summarize your data in Observability Cloud based on
-dimensions you consider important.
+You can control your data ingestion and storage with MPM's routing capabilities:
 
-.. mermaid::
+* Ingest and keep metrics in real time. Metrics stored in the real-time tier are available in charts and detectors.
+* Send your data to archived metrics. Archived metrics are not available in charts and detectors. You can change routing to real-time or filter a subset of data to real -time to make those metrics available in charts and detectors again. You can also restore archived data from up to 8 days in case you need it.
+* Drop your metrics. If you select this option, metrics will be dropped and won't be available for monitoring. You can still keep aggregated MTS derived from those metrics.
 
-   flowchart LR
+To learn more, see :ref:`mpm-rule-routing`.
 
-   accTitle: Data aggregation diagram
-   accDescr: Metrics pipeline management (MPM) receives raw incoming metric time series (MTS). You choose an MTS to aggregate, and perform the aggregation, then you choose whether to keep or drop the raw MTS. MPM keeps the aggregated MTS and any raw MTS that you chose to keep.
-   
-   Raw[(Incoming raw MTS)] ---|MPM|ChooseDimensions{"`Choose MTS to aggregate`"} ---|Perform aggregation|CreateNew("`New aggregated MTS with rolled-up
-   metrics`") ---|Keep or drop raw MTS|OriginalMTS[(Kept MTS and new MTS)]
+Archived metrics
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-By selecting specific dimensions to keep, you can aggregate your data points into a new metric with fewer dimensions,
-creating a specific view of dimensions that are important. You can then obtain a more simplified and concentrated view
-of your data when you don't need to view metrics across all dimensions.
+You can scale your metric data by sending and storing low-value, infrequently accessed metrics in a cheaper archival tier. Metrics stored in archived metrics are kept, but you cannot use them in charts or detectors directly. 
+
+.. note:: Archived Metrics cost one-tenth of real-time metrics.
+
+If you need to use a metric that you've sent to archived metrics you can route it back to real-time metrics and access it in charts or detectors. You can also backfill historical data from up to 8 days and restore it to the real-time tier if you need to. 
+
+.. caution:: You can only create aggregation rules using your metrics' dimensions. Aggregation using custom properties or tags is not supported. For more information on each type of metadata, refer to :ref:`metrics-dimensions-mts`.
 
 When you select specific dimensions, metrics pipeline management generates a new metric. The system creates new MTS
 based on the dimensions you select and rolls up data points for each MTS. By default, aggregation rules roll up the
 data points into the new MTS using ``sum``, ``min``, ``max``, ``count``, ``delta``, ``avg``, and ``latest`` functions.
-You can use the new aggregated MTS in the same way as any other MTS in Observability Cloud.
+You can use the new aggregated MTS in the same way as any other MTS in Splunk Observability Cloud.
 
 How is this different from post-ingestion aggregation at query time?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------------------------------------
 
 When you configure charts or detectors, you can aggregate your data using analytic functions, such as ``sum``, and then
-group your data by specific dimensions, such as ``sum by region``. This aggregation occurs after Observability Cloud
+group your data by specific dimensions, such as ``sum by region``. This aggregation occurs after Splunk Observability Cloud
 has stored your raw MTS, so you still pay for storing the data.
 
 With metrics pipeline management, you can aggregate your MTS as you store it and retain only aggregated metrics. Since
@@ -104,7 +85,7 @@ you're storing fewer dimensions for each data point, and metrics pipeline manage
 save storage costs.
 
 Example
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------------------------------------
 
 You send a metric called ``http.server.duration`` for a containerized workload using Splunk Infrastructure Monitoring.
 
@@ -122,7 +103,7 @@ You are only interested in the source region of your data, so you create an aggr
 the ``region`` dimension.
 
 The aggregated metric removes all other dimensions and retains only the ``region`` dimension based on your rule. There
-are only 20 different values for ``region``, so only Observability Cloud only ingests 20 MTS.
+are only 20 different values for ``region``, so only Splunk Observability Cloud only ingests 20 MTS.
 
 Aggregate using multiple dimensions
 --------------------------------------------------------------------------------
@@ -133,79 +114,79 @@ You create an aggregation rule that groups your data by the dimensions you want 
 The aggregated metric removes the ``container_id`` dimension and retains ``endpoint``, ``region``, and ``service``
 based on your rule. Your new metric volume is: 10 (endpoints) * 20 (regions) * 5 (services) = 1,000 MTS.
 
-.. _mts-aggregation-rollup-period:
-
-MTS aggregation rollup period
-===============================================================================
-
-If your systems send periodic data points, but the period is longer than 10 seconds, then the result of MTS aggregation
-might not be what you expect.
-
-For example, suppose your systems generate data points every 5 seconds. Two successive data points have timestamps
-that differ by 5 seconds. If your systems immediately transmit the points to Observability Cloud, the system ingests
-two data points every 10 seconds. Metrics pipeline management can roll up the two data points into one aggregated
-data point with a resolution of 10 seconds, which is the result you expect.
-
-If you are sending data points, but they don't always arrive with the same frequency,
-Observability Cloud might receive two data points in the first 10 seconds, then twelve data points in the next 10
-seconds. In both cases, metrics pipeline management rolls up the raw points into a single aggregated data point.
-
-Also, if you want to send data points every second and you want to keep the resolution of the incoming data points, don't
-use MTS aggregation.
-
-Potential issues
---------------------------------------------------------------------------------
-
-The difference between the timestamp that your systems add to a raw data point when it's created and the time
-the system uses when it aggregates data points can cause one of the following issues:
-
-* The starting and ending time of aggregated MTS might shift. A data point generated by your server
-  might come in some time after its creation time as recorded in its timestamp. In this case, the entire aggregated
-  MTS shifts to a more recent time on the chart, indicating that the start time was more recent than the actual timestamp. This shift occurs
-  because metrics pipeline management ignores the data point timestamp and instead uses the time it ingested the
-  data point.
-
-  For example, if your data points have a 10:00 timestamp, but Observability Cloud doesn't start receiving them
-  until 10:10, the aggregated MTS seems to start at 10:10 instead of 10:00.
-* The aggregated MTS might appear to have an incorrect duration.
-
-Solutions
---------------------------------------------------------------------------------
-
-Avoid these aggregation issues by using the following options:
-
-* Do your own MTS aggregation before sending data to the system, by reconfiguring the OTel collector to drop unwanted dimensions.
-* Aggregate data using SignalFlow when you generate charts or create detectors.
-
-
+.. _mpm-intro-rule-dropping:
 .. _data-dropping:
 
 Data dropping rules
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Data dropping rules let you discard any data you don't want to monitor, so you can reduce metrics volume and save cost. For example, if you create a new aggregated metric, you might no longer need the original unaggregated data. 
+
+Note that:
+
+* You can override this setting by creating routing exception rules. See :ref:`mpm-rule-routing-exception`.
+* You can drop new incoming data, but you can't drop data that Splunk Observability Cloud has already ingested.
+* You can't recover dropped data.
+
+.. note:: Aggregation and routing exceptions are independent from routing. You can create aggregation rules in any routing scenario: real time, archived, or dropped. However, you can only create routing exception rules when routing is set to Archived Metrics.
+
+Before you drop any data, see :ref:`data-dropping-impact`.
+
+Control your data volume: Aggregate your metrics
+-----------------------------------------------------------------------
+
+The data you send from your services to Splunk Observability Cloud can have high cardinality. Instead of adjusting how you are sending in your data before you send it, aggregation rules allow you to summarize your data based on the dimensions you consider important by rolling up your selected metric data into new metrics that take up less storage and increase computational performance.
+
+With aggregation rules, you can use filters to select a subset of MTS in the metric, then keep or drop dimensions in those MTS with an aggregation rule. MPM keeps selected dimensions for the MTS only in the newly created aggregated metric.
+
+.. caution:: You can only create aggregation rules using your metrics' dimensions. Aggregation using custom properties or tags is not supported. For more information on each type of metadata, refer to :ref:`metrics-dimensions-mts`.
+
+By aggregating combinations of dimensions that provide useful insights while dropping a large amount of the unaggregated raw data, you can significantly reduce your organization's data footprint.
+
+To learn more, see :ref:`mpm-rule-agreggation`.
+
+.. note:: Aggregation and routing exceptions are independent from routing. You can create aggregation rules in any routing scenario: real-time, archived, or dropped. However, you can only create routing exception rules when routing is set to archived metrics.
+
+Metrics pipeline management limitations
 ===============================================================================
 
-When you have a new aggregated metric, you might no longer need the original unaggregated data. You
-can also drop a metric without adding an aggregation rule. Data dropping rules let you discard any data you don't want
-to monitor, so you can save storage space and reduce cardinality.
+MPM is not available for the following types of metrics: 
 
-.. note::
-    - You must be an admin to drop data.
-    - You can drop new incoming data, but you can't drop data that Observability Cloud has already ingested.
-    - You can't recover dropped data. Before you drop data, see :ref:`data-dropping-impact`.
+* Metrics ingested through the ``https://ingest.signalfx.com/v1/collectd`` endpoint
+* Splunk Observability Cloud's :ref:`org metrics <org-metrics>`
+* APM's :ref:`MetricSets <apm-metricsets>`
 
-Example
+Aggregation rules limitations
 --------------------------------------------------------------------------------
 
-Once you have new aggregated metrics created by aggregation rules, you can drop the raw unaggregated data for
-``http.server.duration``.
+You can only create aggregation rules using your metrics' dimensions. Aggregation using custom properties or tags is not supported. For more information on each type of metadata, refer to :ref:`metrics-dimensions-mts`.
 
-Scenario for metrics pipeline management
+Histogram metrics limitations
+--------------------------------------------------------------------------------
+
+You cannot archive or aggregate histogram metrics. By default, they are routed to the real-time tier, and you can drop them with rules as well.
+
+.. _metrics-pipeline-intro-more:
+
+Aggregation rules limitations
+--------------------------------------------------------------------------------
+
+You can only create aggregation rules using your metrics' dimensions. Aggregation using custom properties or tags is not supported. For more information on each type of metadata, refer to :ref:`metrics-dimensions-mts`.
+
+Learn more
 ===============================================================================
 
-See :ref:`aggregate-drop-use-case`.
+See the following docs to learn more about MPM:
 
-Create your first metric rules
-===============================================================================
+* :ref:`metrics-usage-report`
+* :ref:`aggregate-drop-use-case`
+* :ref:`org-metrics-metrics-pipeline`
 
-To start using metrics pipeline management, see :ref:`use-metrics-pipeline`.
+To learn more about metrics and cardinality, see:
 
-.. note:: Metrics pipeline management is not available for metrics ingested through the ``https://ingest.signalfx.com/v1/collectd`` endpoint.
+* About metric cardinality, see the blog post :new-page:`What is Cardinality? Cardinality Metrics for Monitoring and Observability <https://www.splunk.com/en_us/blog/learn/cardinality-metrics-monitoring-observability.html>`.
+* About metric time series, see :ref:`metric-time-series`. 
+* About the Splunk Observability Cloud data model, see :ref:`data-model`.
+
+
+

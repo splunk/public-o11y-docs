@@ -16,6 +16,13 @@ Ensure you are using supported .NET versions
 
 .. include:: /_includes/requirements/dotnet.rst
 
+Dependencies
+---------------
+
+.. raw:: html
+
+    <div class="instrumentation" section="dependencies" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet/metadata.yaml" data-renaming='{"name": "Dependency", "source_href": "Link to source", "version": "Version", "stability": "Stability"}'></div> 
+
 
 .. _supported-dotnet-otel-libraries:
 
@@ -24,175 +31,9 @@ Supported libraries
 
 The Splunk Distribution of OpenTelemetry .NET instruments the following libraries.
 
-Traces instrumentations
----------------------------------
+.. raw:: html
 
-.. list-table:: 
-   :width: 100%
-   :header-rows: 1
-
-   * - Library
-     - Supported versions
-     - Maturity level
-     - Support level
-     - Instrumentation ID
-   * - ASP.NET Framework (.NET Framework) |br| MVC / WebApi (Only integrated pipeline mode supported)
-     - See :ref:`dotnet-otel-versions`
-     - Experimental Beta
-     - Community support
-     - ``ASPNET``
-   * - ASP.NET Core
-     - See :ref:`dotnet-otel-versions`
-     - Experimental Beta
-     - Community support
-     - ``ASPNETCORE``
-   * - Azure SDK
-     - ``Azure.`` prefixed packages, released after October 1, 2021
-     - Experimental Beta
-     - Third-party support
-     - ``AZURE``
-   * - Elastic.Clients.Elasticsearch
-     - 8.0.0 to 8.9.3. |br| (Higher versions are supported by Elastic.Transport)
-     - Experimental Beta
-     - Third-party support
-     - ``ELASTICSEARCH``
-   * - Elastic.Transport
-     - 0.4.16 and higher
-     - Experimental Beta
-     - Third-party support
-     - ``ELASTICTRANSPORT``
-   * - Microsoft.EntityFrameworkCore |br| (Not supported on .NET Framework)
-     - 6.0.12 and higher
-     - Experimental Beta
-     - Community support
-     - ``ENTITYFRAMEWORKCORE``
-   * - GraphQL |br| (Not supported on .NET Framework)
-     - 7.5.0 and higher
-     - Experimental Beta
-     - Third-party support
-     - ``GRAPHQL``
-   * - Grpc.Net.Client
-     - 2.52.0 to 3.0.0
-     - Experimental Beta
-     - Community support
-     - ``GRPCNETCLIENT``
-   * - System.Net.Http.HttpClient and |br| System.Net.HttpWebRequest
-     - See :ref:`dotnet-otel-versions`
-     - Experimental Beta
-     - Community support
-     - ``HTTPCLIENT``
-   * - MassTransit |br| (Not supported on .NET Framework)
-     - 8.0.0 and higher
-     - Experimental Beta
-     - Third-party support
-     - ``MASSTRANSIT``
-   * - MongoDB.Driver.Core |br| (Not supported on .NET Framework)
-     - 2.13.3 to 3.0.0
-     - Experimental Beta
-     - Third-party support
-     - ``MONGODB``
-   * - MySqlConnector
-     - 2.0.0 and higher
-     - Experimental Beta
-     - Third-party support
-     - ``MYSQLCONNECTOR``  
-   * - MySql.Data |br| (Not supported on .NET Framework)
-     - 8.1.0 and higher
-     - Experimental Beta
-     - Third-party support
-     - ``MYSQLDATA``
-   * - Npgsql
-     - 6.0.0 and higher
-     - Experimental Beta
-     - Third-party support
-     - ``NPGSQL``
-   * - NServiceBus
-     - 8.0.0 and higher
-     - Experimental Beta
-     - Third-party support
-     - ``NSERVICEBUS``
-   * - Microsoft.Data.SqlClient, |br| System.Data.SqlClient, |br| System.Data 
-     - Version 3.* is not supported on .NET Framework |br| 4.8.5 and higher |br| versions shipped with .NET Framework
-     - Experimental Beta
-     - Community support
-     - ``SQLCLIENT``
-   * - Quartz |br| (Not supported on .NET Framework 4.7.1 and lower)
-     - 3.4.0 and higher
-     - Experimental Beta
-     - Community support
-     - ``QUARTZ``
-   * - StackExchange.Redis |br| (Not supported on .NET Framework)
-     - 2.0.405 to 3.0.0
-     - Experimental Beta
-     - Community support
-     - ``STACKEXCHANGEREDIS``
-   * - System.ServiceModel |br| (Service side not supported on .NET)
-     - 4.7.0 and higher |br| of ``System.ServiceModel.Primitives``
-     - Experimental Beta
-     - Community support
-     - ``WCFCLIENT`` for client side instrumentation and |br| ``WCFSERVICE`` for service side instrumentation
-
-
-Metrics instrumentations
----------------------------------
-
-.. list-table:: 
-   :width: 100%
-   :header-rows: 1
-
-   * - Library
-     - Supported versions
-     - Maturity level
-     - Support level
-     - Instrumentation ID
-   * - ASP.NET Framework
-     - See :ref:`dotnet-otel-versions`
-     - Experimental Beta
-     - Community support
-     - ``ASPNET`` |br| (Requires the trace instrumentation)
-   * - ASP.NET Core
-     - See :ref:`dotnet-otel-versions`
-     - Experimental Beta
-     - Community support
-     - ``ASPNETCORE`` |br| (Automatically activates ``Microsoft.AspNetCore.Hosting.HttpRequestIn`` spans.)
-   * - System.Net.Http.HttpClient and |br| System.Net.HttpWebRequest
-     - See :ref:`dotnet-otel-versions`
-     - Experimental Beta
-     - Community support
-     - ``HTTPCLIENT``
-   * - OpenTelemetry.Instrumentation.Runtime
-     - See :ref:`dotnet-otel-versions`
-     - Experimental Beta
-     - Community support
-     - ``NETRUNTIME``
-   * - NServiceBus
-     - 8.0.0 and higher
-     - Experimental Beta
-     - Third-party support
-     - ``NSERVICEBUS``
-   * - OpenTelemetry.Instrumentation.Process
-     - See :ref:`dotnet-otel-versions`
-     - Experimental Beta
-     - Community support
-     - ``PROCESS``
-
-Logs instrumentations
----------------------------------
-
-.. list-table:: 
-   :width: 100%
-   :header-rows: 1
-
-   * - Library
-     - Supported versions
-     - Status
-     - Support level
-     - Instrumentation ID
-   * - Microsoft.Extensions.Logging |br| (Not supported on .NET Framework)
-     - 6.0.0 and higher
-     - Experimental Beta
-     - Community support
-     - ``ILOGGER`` |br| (Requires the trace instrumentation)
+    <div class="instrumentation" section="instrumentations" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-dotnet/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "stability": "Stability", "support": "Support", "instrumented_components": "Components", "signals": "Signals", "source_href": "Source", "settings": "Settings", "dependencies": "Dependencies", "supported_versions": "Supported versions", "name": "Name", "package_href": "Package URL", "version": "Version", "instrument": "Type", "metric_name": "Metric name", "metrics": "Metrics", "env": "Environment variable", "default": "Default", "type": "Type", "category": "Category"}'></div>
 
 .. _dotnet-otel-collector-requirement:
 

@@ -95,8 +95,8 @@ I
 .. glossary::
 
    integration
-      An integration is a configurable component of Observability Cloud that connects Observability Cloud to a third-party service.
-      Most integrations connect third-party data services, but Observability Cloud also offers SSO and notification integrations.
+      An integration is a configurable component of Splunk Observability Cloud that connects Splunk Observability Cloud to a third-party service.
+      Most integrations connect third-party data services, but Splunk Observability Cloud also offers SSO and notification integrations.
 
 M
 ==
@@ -105,6 +105,9 @@ M
 
    metric
       Metrics are the primary form of data you send into Splunk Infrastructure Monitoring. A metric is a periodic measurement that is represented as a numerical value. The same metric can be reported from multiple sources or emitters. Typically, each unique combination of a source and a metric results in a :term:`metric time series<metric time series>`.
+
+   metric cardinality
+      Metric cardinality is the number of unique metric time series (MTS) produced by a combination of metric name and its associated dimensions. Therefore, a metric has high cardinality when it has a high number of dimension keys, and a high number of possible unique values for those dimension keys.
 
    metric time series
       A metric time series (MTS) is defined by the unique combination of a metric and a set of dimensions (which may be empty). The most common dimension is a source, like a host or instance for infrastructure metrics, or an application component or service tier for application metrics. The output of analytics pipelines are also metric time series.
@@ -138,6 +141,9 @@ R
 
 .. glossary::
 
+   realm
+      The self-contained deployment of Splunk Observability Cloud where your organization is hosted. Different realms have different Splunk Observability Cloud API endpoints. For example, the endpoint for sending data in the us1 realm is https://ingest.us1.signalfx.com, while the endpoint for sending data in the eu0 realm is https://ingest.eu0.signalfx.com.
+      
    rollup
       An accumulation of data points, with some mathematical or statistical expression applied to it. For example, a 95th percentile calculation over a 1-week window. In an Infrastructure Monitoring plot, rollups determine how Infrastructure Monitoring prepares data points for use in charts or analytic computations. 
 

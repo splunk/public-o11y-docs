@@ -71,10 +71,10 @@ See the following example:
          threading:
            objectName: java.lang:type=Threading
            values:
-             type: gauge
-             table: false
-             instancePrefix: jvm.threads.count
-             attribute: ThreadCount
+             - type: gauge
+               table: false
+               instancePrefix: jvm.threads.count
+               attribute: ThreadCount
 
 Configuration settings
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -119,7 +119,7 @@ The following table shows the configuration options for this monitor:
       - no
       - ``string``
       - This is how the service type is identified in the Splunk
-         Observability Cloud UI so that you can get built-in content.
+         Splunk Observability Cloud UI so that you can get built-in content.
    - 
 
       - ``serviceURL``
@@ -182,8 +182,7 @@ The following table shows the configuration options for this monitor:
       - Specifies how to map JMX MBean values to metrics. Specific
          service monitors such as Cassandra, Kafka, or ActiveMQ are
          pre-loaded with a set of mappings, and any that you add in this
-         option will be merged with those. See GenericJMX plugin for
-         more details.
+         option will be merged with those. To learn more, see the :new-page:`Collectd documentation <https://www.collectd.org/documentation/manpages/collectd-java.html>`.
 
 The **nested** ``mBeanDefinitions`` configuration object has the
 following fields:

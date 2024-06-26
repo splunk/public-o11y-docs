@@ -16,15 +16,38 @@ Benefits
 
 The Prometheus receiver can scrape metrics data from any application that exposes a Prometheus endpoint. The receiver converts Prometheus metrics to OpenTelemetry metrics while preserving metric names, values, timestamps, and labels. You can also reuse your existing Prometheus configurations.
 
+See a complete list of third-party applications compatible with Prometheus in Prometheus' official documentation at :new-page:`Prometheus exporters <https://prometheus.io/docs/instrumenting/exporters/>`.
+
+Learn more at :ref:`prometheus-generic`.
+
 Get started
 ========================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the Prometheus receiver in the ``metrics/internal`` pipeline when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information.
+.. note:: 
+  
+  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information. 
+  
+  For details about the default configuration, see :ref:`otel-kubernetes-config`, :ref:`linux-config-ootb`, or :ref:`windows-config-ootb`. You can customize your configuration any time as explained in this document.
+
+Follow these steps to configure and activate the component:
+
+1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+  
+  - :ref:`otel-install-linux`
+  - :ref:`otel-install-windows`
+  - :ref:`otel-install-k8s`
+
+2. Configure the receiver as described in the next section.
+3. Restart the Collector.
+
+Sample configuration
+--------------------------------
+
+By default, the Splunk Distribution of OpenTelemetry Collector includes the Prometheus receiver in the ``metrics/internal`` pipeline. 
 
 To activate additional Prometheus receivers, add a new ``prometheus`` entry in the ``receivers`` section of the Collector configuration file, as in the following example:
 
 .. code-block:: yaml
-
 
    receivers:
      prometheus:
@@ -35,8 +58,7 @@ To activate additional Prometheus receivers, add a new ``prometheus`` entry in t
              static_configs:
                - targets: ['0.0.0.0:8888']
 
-To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your
-configuration file. For example:
+To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your configuration file. For example:
 
 .. code:: yaml
 
@@ -51,7 +73,7 @@ configuration file. For example:
 Scraper configuration
 ----------------------------------
 
-The Prometheus Receiver supports the most of the scrape configuration of Prometheus, including service discovery, through the ``config.scrape_configs`` section. In the ``scrape_config`` section of your configuration file you can specify a set of targets and parameters that describe how to scrape them. 
+The Prometheus receiver supports the most of the scrape configuration of Prometheus, including service discovery, through the ``config.scrape_configs`` section. In the ``scrape_config`` section of your configuration file you can specify a set of targets and parameters that describe how to scrape them. 
 
 For basic configurations, a single scrape configuration specifies a single job. You can configure static targets using the ``static_configs`` parameter. Dynamically discovered targets use service discovery mechanisms of Prometheus. In addition, the ``relabel_configs`` parameter allows advanced modifications to any target and its labels before scraping.
 
@@ -106,7 +128,7 @@ Scaling considerations
 When running multiple replicas of the Collector with the same configuration, the Prometheus receiver scrapes targets multiple times. If you need to configure each replica with different scraping configurations, shard the scraping. The Prometheus receiver is stateful. For considerations on scaling, see :ref:`otel-sizing`.
 
 Known limitations
----------------------------------
+======================
 
 The following Prometheus features are not supported and return an error if used in the receiver configuration:
 
@@ -145,6 +167,11 @@ The Prometheus receiver converts Prometheus metrics to OpenTelemetry metrics fol
      - Histogram (cumulative distribution)
    * - Summary
      - Summary (percentiles)
+
+Histograms support
+-----------------------
+
+For more information on histogram support, see :ref:`enable-histograms-export`.
 
 Troubleshooting
 ======================

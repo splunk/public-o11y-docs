@@ -71,22 +71,22 @@ The following table shows available virtual metrics in Splunk Infrastructure Mon
      - Uses best available data from ``Percentage CPU`` from Azure Monitoring and ``cpu.utilization`` from the Splunk Distribution of OpenTelemetry Collector.
 
    * - ``^azure.vm.disk.io.read.total``
-     - Uses best available data from ``Disk Read Bytes`` from Azure Monitoring and ``cpu.utilization`` from the Splunk Distribution of OpenTelemetry Collector.
+     - Uses best available data from ``Disk Read Bytes`` from Azure Monitoring and ``system.disk.io.total`` from the Splunk Distribution of OpenTelemetry Collector.
 
    * - ``^azure.vm.disk.io.write.total``
-     - Uses best available data from ``Disk Write Bytes`` from Azure Monitoring and ``cpu.utilization`` from the Splunk Distribution of OpenTelemetry Collector.     
+     - Uses best available data from ``Disk Write Bytes`` from Azure Monitoring and ``system.disk.io.total`` from the Splunk Distribution of OpenTelemetry Collector.     
 
    * - ``^azure.vm.disk.ops.read.total``
-     - Uses best available data from ``Disk Read Operations/Sec`` from Azure Monitoring and ``cpu.utilization`` from the Splunk Distribution of OpenTelemetry Collector.
+     - Uses best available data from ``Disk Read Operations/Sec`` from Azure Monitoring and ``system.disk.io.total`` from the Splunk Distribution of OpenTelemetry Collector.
   
    * - ``^azure.vm.disk.ops.write.total``
-     - Uses best available data from ``Disk Write Operations/Sec`` from Azure Monitoring and ``cpu.utilization`` from the Splunk Distribution of OpenTelemetry Collector.
+     - Uses best available data from ``Disk Write Operations/Sec`` from Azure Monitoring and ``system.disk.io.total`` from the Splunk Distribution of OpenTelemetry Collector.
 
    * - ``^azure.vm.network.io.receive.total``
-     - Uses best available data from ``Network In`` from Azure Monitoring and ``cpu.utilization`` from the Splunk Distribution of OpenTelemetry Collector.
+     - Uses best available data from ``Network In`` from Azure Monitoring and ``system.network.io.total`` from the Splunk Distribution of OpenTelemetry Collector.
 
    * - ``^azure.vm.network.io.transmit.total``
-     - Uses best available data from ``Network Out`` from Azure Monitoring and ``cpu.utilization`` from the Splunk Distribution of OpenTelemetry Collector.
+     - Uses best available data from ``Network Out`` from Azure Monitoring and ``system.network.io.total`` from the Splunk Distribution of OpenTelemetry Collector.
 
    * - ``^gcp.gce.cpu.utilization``
      - Uses best available data from ``instance/cpu/utilization`` from Google Cloud Monitoring and ``cpu.utilization`` from the Splunk Distribution of OpenTelemetry Collector.

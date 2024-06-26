@@ -37,30 +37,27 @@ To activate additional Prometheus receivers, add a new ``prometheus_simple`` ent
 
 .. code-block:: yaml
 
-
-   receivers:
-     prometheus:
-      receivers:
-        prometheus_simple/endpointname:
-        collection_interval: 10s
-        use_service_account: true
-        endpoint: "172.17.0.5:9153"
-        tls:
-          ca_file: "/path/to/ca"
-          cert_file: "/path/to/cert"
-          key_file: "/path/to/key"
-          insecure_skip_verify: true
+  receivers:
+    prometheus_simple/endpointname:
+      collection_interval: 10s
+      use_service_account: true
+      endpoint: "172.17.0.5:9153"
+      tls:
+        ca_file: "/path/to/ca"
+        cert_file: "/path/to/cert"
+        key_file: "/path/to/key"
+        insecure_skip_verify: true
 
 To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your
 configuration file. For example:
 
 .. code:: yaml
 
-   service:
-     pipelines:
-       metrics:
-         receivers:
-           - prometheus_simple/endpointname
+  service:
+    pipelines:
+      metrics:
+        receivers:
+          - prometheus_simple/endpointname
 
 .. caution:: Don't remove the ``prometheus/internal`` receiver from the configuration. Internal metrics feed the Splunk Distribution of OpenTelemetry Collector default dashboard.
 

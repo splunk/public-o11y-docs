@@ -1,16 +1,49 @@
 .. _memory-ballast-extension:
+.. _collector-upgrade-memory-ballast:
 
-****************************
-Memory Ballast extension
-****************************
+********************************************************
+Memory Ballast extension (deprecated)
+********************************************************
 
 .. meta::
       :description: Use the Memory Ballast extension to allow your applications to configure memory ballast for processing.
 
-The Memory Ballast extension enables applications to configure memory ballast for processing.
+.. caution:: The ``memory_ballast`` extension is deprecated and has been removed starting in Collector version 0.97.0. If you're using this extension, read on to learn how to update your configuration. 
+
+.. include:: /_includes/collector-upgrade-memory-ballast.rst
 
 Get started
 ======================
+
+The Memory Ballast extension enables applications to configure memory ballast for processing.
+
+Follow these steps to configure and activate the component:
+
+1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+  
+  - :ref:`otel-install-linux`
+  - :ref:`otel-install-windows`
+  - :ref:`otel-install-k8s`
+
+2. Configure the extension as described in the next section.
+3. Restart the Collector.
+
+Sample configuration
+--------------------------------
+
+To activate the component, add ``memory_ballast`` to the ``extensions`` section of your configuration file:
+
+.. code-block:: yaml
+
+  extensions:
+    memory_ballast:
+
+To complete the configuration, include the extension in the ``service`` section of your configuration file:
+
+.. code:: yaml
+
+  service:
+    extensions: [memory_ballast]  
 
 You can configure the following settings for the extension:
 
@@ -23,7 +56,28 @@ You can configure the following settings for the extension:
 
   * ``0`` by default.
   * The value can range from 1 to 100. 
-  * Supported in both containerized (Docker, Kubernetes) and physical host environments. 
+  * Supported in both containerized (Docker, Kubernetes) and physical host environments.     
+
+Configuration examples
+--------------------------------
+
+This configuration uses 64 Mib of memory for the ballast:
+
+.. code-block:: yaml
+
+
+  extensions:
+    memory_ballast:
+      size_mib: 64
+
+This configuration uses 20% of the total memory for the ballast:
+
+.. code-block:: yaml
+
+
+  extensions:
+    memory_ballast:
+      size_in_percentage: 20
 
 Calculate the ballast's size as a percentage
 --------------------------------------------------------------------
@@ -41,28 +95,6 @@ On the target host or container, check the value in ``memory.limit_in_bytes`` to
   ``ballast_size`` =  ``size_in_percentage`` * ``totalMemory`` / 100 
 
   where ``totalMemory`` is calculated by :new-page:`github.com/shirou/gopsutil/v3/mem <https://github.com/shirou/gopsutil>` on ``mem.VirtualMemory().total``. 
-
-Sample configurations
---------------------------------
-
-This configuration uses 64 Mib of memory for the ballast:
-
-.. code-block:: yaml
-
-
-  extensions:
-    memory_ballast:
-      size_mib: 64
-
-
-This configuration uses 20% of the total memory for the ballast:
-
-.. code-block:: yaml
-
-
-  extensions:
-    memory_ballast:
-      size_in_percentage: 20
 
 Settings
 ======================

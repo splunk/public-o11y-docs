@@ -16,7 +16,7 @@ Kai is a site reliability engineer at Buttercup Industries e-commerce company. O
 
 Web vitals 
 ------------------------
-Many businesses rely on search engines for users to discover their sites. Google uses web vitals to determine page ranking. Splunk RUM automatically measures Web Vital metrics so Kai can tune into the overview page to check in on the metric scores.
+Google's Core Web Vitals quantify user experience in terms of page load, visual stability, and interactivity, making them valuable metrics to improve frontend performance. Web Vitals also affect page ranking in Google, which is important for many businesses that rely on search engines for users to discover their sites. Splunk RUM automatically measures Web Vital metrics so Kai can tune into the overview page to check in on the metric scores.
 
 Web Vitals are made up of three metrics that measure user experience:
 

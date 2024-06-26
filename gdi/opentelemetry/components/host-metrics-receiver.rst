@@ -18,7 +18,6 @@ By default, the host metrics receiver is activated in the Splunk Distribution of
 - Memory usage metrics
 - Network interface and TCP connection metrics
 - Process count metrics (Linux only)
-- Per process CPU, memory, and disk I/O metrics
 
 Host receiver metrics appear in Infrastructure Monitoring. You can use them to create dashboards and alerts. See :ref:`create-detectors` for more information.
 
@@ -26,6 +25,12 @@ Host receiver metrics appear in Infrastructure Monitoring. You can use them to c
 
 Get started
 ======================
+
+.. note:: 
+  
+  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information. 
+  
+  For details about the default configuration, see :ref:`otel-kubernetes-config`, :ref:`linux-config-ootb`, or :ref:`windows-config-ootb`. You can customize your configuration any time as explained in this document.
 
 Follow these steps to configure and activate the component:
 

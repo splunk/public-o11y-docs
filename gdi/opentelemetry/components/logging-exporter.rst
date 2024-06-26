@@ -40,14 +40,14 @@ To activate the logging exporter, add it to any pipeline you want to diagnose. F
    service:
      pipelines:
        traces:
-         receivers: [jaeger, otlp, smartagent/signalfx-forwarder, zipkin]
+         receivers: [jaeger, otlp, zipkin]
          processors:
          - memory_limiter
          - batch
          - resourcedetection
          exporters: [sapm, signalfx, logging]
        metrics:
-         receivers: [hostmetrics, otlp, signalfx, smartagent/signalfx-forwarder]
+         receivers: [hostmetrics, otlp, signalfx]
          processors: [memory_limiter, batch, resourcedetection]
          exporters: [signalfx, logging]
        logs:
@@ -75,6 +75,15 @@ Available verbosity levels are ``basic``, ``normal``, and ``detailed``. The corr
      - ``debug``
          
 .. note:: The ``detailed`` verbosity level might increase resource consumption on the host. Deactivate the logging exporter after you've obtained sufficient samples.
+
+Review collected logs
+--------------------------
+
+To review logs produced by the logging exporter, run the following command:
+
+.. code-block:: bash
+
+   journalctl -u splunk-otel-collector.service -f
 
 Sample configurations
 ----------------------

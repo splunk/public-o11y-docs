@@ -4,6 +4,9 @@
 Welcome
 **********
 
+.. meta::
+    :description: Welcome to Splunk Observability Cloud documentation. Learn about the basic elements of Splunk Observability Cloud.
+
 .. imagetarget:: _images/get-started/o11y-user-doc-hero-banner-v2.svg
    :alt: Welcome
    :width: 97.3%
@@ -13,17 +16,32 @@ Welcome
 .. rst-class:: newparawithicon
 
 :icon-info:`.` :strong:`Welcome to Splunk Observability Cloud`
-Learn the basic elements of Splunk Observability Cloud and all it can do for you.
+Learn about the basic elements of Splunk Observability Cloud and all it can do for you.
+
+.. rst-class:: newcard
+
+:strong:`Overview`
+Splunk Observability Cloud overview :ref:`welcome`
+
+.. rst-class:: newcard
+
+:strong:`Scenarios`
+A collection of scenarios for using Splunk Observability Cloud to address your goals :ref:`scenario-landing`
+
+.. rst-class:: newcard
+
+:strong:`Tutorials`
+A collection of task-based tutorials to achieve a goal in Splunk Observability Cloud :ref:`tutorial-landing`
+
+.. rst-class:: newcard
+
+:strong:`Admin onboarding guide`
+Admin guide for onboarding Splunk Observability Cloud :ref:`admin-onboarding-guide`
 
 .. rst-class:: newcard
 
 :strong:`Service description`
 Benefits and service terms of Splunk Observability Cloud :ref:`o11y-service-description`
-
-.. rst-class:: newcard
-
-:strong:`Scenarios`
-Collection of scenarios for Splunk Observability Cloud :ref:`scenario-landing`
 
 .. rst-class:: newcard
 
@@ -50,7 +68,7 @@ Install the Splunk Distribution of the OpenTelemetry Collector :ref:`otel-intro`
 .. rst-class:: newcard
 
 :strong:`Cloud providers`
-Integrate to collect service metrics and logs :ref:`get-started-connect`
+Integrate to collect service metrics and metadata :ref:`get-started-connect`
 
 .. rst-class:: newcard
 
@@ -81,7 +99,7 @@ Monitor server and cluster metrics :ref:`wcidw-imm`
 .. rst-class:: newcard
 
 :strong:`Application Performance Monitoring`
-Monitor back-end app and service traces :ref:`wcidw-apm`
+Monitor back-end app and service traces :ref:`get-started-apm`
 
 .. rst-class:: newcard
 
@@ -214,7 +232,7 @@ Collect user sessions :ref:`browser-rum-gdi`
 .. rst-class:: newcard
 
 :strong:`.NET`
-Collect traces :ref:`get-started-dotnet`
+Collect traces :ref:`get-started-dotnet-otel`
 
 .. rst-class:: newcard
 
@@ -235,6 +253,11 @@ Collect traces :ref:`get-started-nodejs`
 
 :strong:`PHP`
 Collect traces :ref:`get-started-php`
+
+.. rst-class:: newcard
+
+:strong:`C++`
+Collect traces :ref:`get-started-cpp`
 
 .. rst-class:: newcard
 
@@ -262,16 +285,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Scenarios <get-started/scenario-landing>
-
-.. toctree::
-   :maxdepth:   3
-
-   Tutorials <get-started/tutorials>
-
-.. toctree::
-   :maxdepth:   3
-
    About Mobile TOGGLE <get-started/intro-to-mobile>
 
 .. toctree::
@@ -284,8 +297,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    Contribute to our documentation <get-started/contribute>
 
-
-
 .. toctree::
    :maxdepth:   3
 
@@ -294,7 +305,23 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Free trial experience <get-started/o11y-trial>
+
+.. toctree::
+   :maxdepth:   3
+
    Support <get-started/support>
+
+.. toctree::
+   :caption: Scenarios and tutorials
+   :maxdepth:   4
+
+   Scenarios <scenarios-tutorials/scenario-landing>
+
+.. toctree::
+   :maxdepth:   3
+
+   Tutorials <scenarios-tutorials/tutorial-landing>   
 
 .. toctree::
    :caption: Splunk platform users
@@ -310,13 +337,18 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Use case scenarios <splunkplatform/scenarios/integration-scenario-landing>
+   Scenarios <splunkplatform/scenarios/integration-scenario-landing>
 
 .. toctree::
    :maxdepth:   3
 
 .. toctree::
    :caption: Administer Splunk Observability Cloud
+   :maxdepth:   3
+
+   Admin onboarding guide TOGGLE <admin/admin-onboarding/admin-onboarding-guide>
+
+.. toctree::
    :maxdepth:   3
 
    admin/admin
@@ -367,7 +399,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   gdi/get-data-in/integrations
+   Available integrations TOGGLE <gdi/integrations-list>
 
 .. toctree::
    :maxdepth:   3
@@ -385,7 +417,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Splunk Distribution of the OpenTelemetry Collector TOGGLE <gdi/opentelemetry/opentelemetry>
 
 .. toctree::
-   :maxdepth:   3
+   :maxdepth:   4
 
    Collect infrastructure metrics and logs TOGGLE <gdi/get-data-in/compute/compute>
 
@@ -395,22 +427,17 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Instrument back-end services TOGGLE <gdi/get-data-in/application/application>
 
 .. toctree::
-   :maxdepth:   3
+   :maxdepth:   4
 
    Instrument serverless functions TOGGLE <gdi/get-data-in/serverless/instrument-serverless-functions>
 
 .. toctree::
-   :maxdepth:  3
+   :maxdepth:  4
 
    Instrument front-end applications TOGGLE <gdi/get-data-in/rum/rum-instrumentation>
 
 .. toctree::
-   :maxdepth:   3
-
-   Available host and application monitors TOGGLE <gdi/index>
-
-.. toctree::
-   :maxdepth: 3
+   :maxdepth: 4
 
    gdi/other-ingestion-methods/other-data-ingestion-methods
 
@@ -424,6 +451,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    metrics-and-metadata/data-model
+
+.. toctree::
+   :maxdepth:   3
+
+   Use internal search <metrics-and-metadata/search>
 
 .. toctree::
    :maxdepth:   3
@@ -467,7 +499,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Read and write permissions <data-visualization/permissions>
 
 .. toctree::
-   :caption: Alerts and detectors
+   :caption: Alerts, detectors, and SLOs
    :maxdepth:   3
 
    Introduction to alerts and detectors <alerts-detectors-notifications/alerts-detectors-notifications>
@@ -550,6 +582,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Service level objectives TOGGLE <alerts-detectors-notifications/slo/slo-intro>
+
+.. toctree::
+   :maxdepth:   3
+
 .. toctree::
    :caption: Application Performance Monitoring
    :maxdepth:   3
@@ -620,11 +657,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Quick start tutorial <infrastructure/quickstart-imm>
-
-.. toctree::
-   :maxdepth:   3
-
    infrastructure/infrastructure
 
 .. toctree::
@@ -636,6 +668,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Use navigators <infrastructure/use-navigators>
+
+.. toctree::
+   :maxdepth:   3
+
+   Filter data <infrastructure/filter-landing-page>
 
 .. toctree::
    :maxdepth:   3
@@ -819,4 +856,3 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Glossary <references/glossary>
-

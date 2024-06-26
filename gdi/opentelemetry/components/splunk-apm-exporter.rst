@@ -11,12 +11,27 @@ The Splunk APM (SAPM) exporter allows the OpenTelemetry Collector to send traces
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the SAPM exporter in the ``traces`` pipeline when deploying in host monitoring (agent) or data forwarding (gateway) modes. See :ref:`otel-deployment-mode` for more information.
+.. note:: 
+  
+  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector when deploying in host monitoring (agent) mode in the ``traces`` pipeline. See :ref:`otel-deployment-mode` for more information. 
+  
+  For details about the default configuration, see :ref:`otel-kubernetes-config`, :ref:`linux-config-ootb`, or :ref:`windows-config-ootb`. You can customize your configuration any time as explained in this document.
 
-Sample configurations
+Follow these steps to configure and activate the component:
+
+1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+  
+  - :ref:`otel-install-linux`
+  - :ref:`otel-install-windows`
+  - :ref:`otel-install-k8s`
+
+2. Configure the exporter as described in this doc.
+3. Restart the Collector.  
+
+Sample configuration
 ----------------------
 
-The following example shows a SAPM exporter instance configure for a maximum of 100 connections and 8 workers:
+The following example shows a SAPM exporter instance configuration for a maximum of 100 connections and 8 workers:
 
 .. code:: yaml
 
@@ -28,6 +43,10 @@ The following example shows a SAPM exporter instance configure for a maximum of 
        max_connections: 100
        num_workers: 8
 
+Next, add the exporter to the ``services`` section of your configuration file:
+
+.. code:: yaml
+
    service:
      pipelines:
        # To complete the configuration, include the exporter in a traces metrics pipeline. 
@@ -35,6 +54,9 @@ The following example shows a SAPM exporter instance configure for a maximum of 
            receivers: [nop]
            processors: [nop]
            exporters: [sapm]
+
+Configuration example with all settings
+----------------------------------------------
 
 The following example shows all available settings:
 
@@ -74,13 +96,7 @@ The following example shows all available settings:
            processors: [nop]
            exporters: [sapm]
 
-In the endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
-
-#. Open the navigation menu in Splunk Observability Cloud.
-#. Select :menuselection:`Settings`.
-#. Select your username. 
-
-The realm name appears in the :guilabel:`Organizations` section.
+In the endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
 .. note:: To send SAPM data through a proxy, configure proxy settings as environment variables. See :ref:`configure-proxy-collector` for more information.
 

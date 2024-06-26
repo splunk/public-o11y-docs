@@ -57,7 +57,7 @@ The following properties are common to all web applications instrumented for Spl
 
 Metrics 
 =================================
-The following tables list all of the metrics available in Splunk RUM for Browser. All errors in Splunk RUM have the dimension ``sf_error=true``. Metrics with the prefix ``rum.node.`` are page level metrics, whereas metrics with the prefix ``rum.`` are aggregations of multiple pages. Page level metrics also have a dimension ``sf_node_name``, which you can use to filter on specific pages.
+The following tables list all of the metrics available in Splunk RUM for Browser. All errors in Splunk RUM have the dimension ``sf_error=true``. Metrics with the prefix ``rum.node.`` are page level metrics, whereas metrics with the prefix ``rum.`` are aggregations of multiple pages. Page level metrics also have a dimension ``sf_node_name``, which you can use to filter on specific pages. Also, page level metrics are captured only if custom URL grouping rules are configured.
 
 
 .. list-table:: 

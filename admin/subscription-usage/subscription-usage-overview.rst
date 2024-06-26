@@ -19,10 +19,11 @@ Monitor and manage subscription usage and billing
    Logs subscription usage <lo-billing-usage>
    RUM subscription usage <rum-subscription-usage>
    View parent-child subscription usage <parent-child-orgs>
+   Synthetic Monitoring subscription usage <synthetics-usage>
 
 View Splunk Observability Cloud subscription usage data to monitor your organization's usage against its subscription plan and entitlements. 
 
-You must be an Splunk Observability Cloud administrator to view the Subscription Usage page for your organization. Go to :guilabel:`Settings` then :guilabel:`Subscription Usage`.
+You must be a Splunk Observability Cloud administrator to view the Subscription Usage page for your organization. Go to :guilabel:`Settings` then :guilabel:`Subscription Usage`.
 
 .. _usage-source:
 
@@ -43,6 +44,7 @@ Splunk Observability Cloud admins can monitor billing usage for the following:
 -  :ref:`Monitor Log Observer subscription usage <lo-billing-usage>`
 -  :ref:`Monitor RUM subscription usage <rum-subscription-usage>` 
 -  :ref:`Monitor parent-child subscription usage <parent-child-orgs>`
+-  :ref:`Monitor Splunk Synthetic Monitoring subscription usage <synthetics-usage>`
 
 .. _system-limits:
 

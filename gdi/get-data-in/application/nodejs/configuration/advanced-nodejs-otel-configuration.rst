@@ -62,24 +62,9 @@ General settings
 
 The following settings are specific to the Splunk Distribution of OpenTelemetry JS:
 
-.. list-table::
-   :header-rows: 1
+.. raw:: html
 
-   * - Environment variable
-     - Argument to ``start()``
-     - Description
-   * - ``SPLUNK_REALM``
-     - ``realm``
-     - The name of your organization's realm, for example, ``us0``. When you set the realm, telemetry is sent directly to the ingest endpoint of Splunk Observability Cloud, bypassing the Splunk Distribution of OpenTelemetry Collector.
-   * - ``SPLUNK_ACCESS_TOKEN``
-     - ``accessToken``
-     - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Required if you need to send data to the Splunk Observability Cloud ingest endpoint. See :ref:`admin-tokens`.
-   * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
-     - ``tracing.serverTimingEnabled``
-     - Activates the addition of server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-nodejs`. The default value is ``true``.
-   * - ``OTEL_LOG_LEVEL``
-     - ``logLevel``
-     - Log level for the OpenTelemetry diagnostic console logger. To activate debug logging, set the ``debug`` value. Available values are ``error``, ``info``, ``debug``, and ``verbose``. The default value is ``none``.
+    <div class="instrumentation" section="settings" group="category" filter="general" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-js/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type", "property": "Argument to start()"}'></div>
 
 .. _instrumentation-configuration-nodejs:
 
@@ -88,18 +73,9 @@ Instrumentations configuration
 
 The following settings control which instrumentations are activated:
 
-.. list-table::
-   :header-rows: 1
+.. raw:: html
 
-   * - Environment variable
-     - Argument to ``start()``
-     - Description
-   * - ``OTEL_INSTRUMENTATION_COMMON_DEFAULT_ENABLED``
-     -
-     - Whether to activate all the embedded instrumentations. The default value is ``true``. When you set this setting to ``false``, use ``OTEL_INSTRUMENTATION_<NAME>_ENABLED=true`` to selectively turn on instrumentations.
-   * - ``OTEL_INSTRUMENTATION_<NAME>_ENABLED``
-     -
-     - When set to ``true``, this setting activates a specific instrumentation, as defined by replacing ``<NAME>`` with the name of the instrumentation. The name isn't case sensitive. For a complete list of available instrumentations, see :ref:`Requirements <nodes-requirements>`.
+    <div class="instrumentation" section="settings" group="category" filter="instrumentation" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-js/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type", "property": "Argument to start()"}'></div>
 
 For example, to turn off all default instrumentations and only turn on the ``bunyan`` instrumentation, set the following environment variables:
 
@@ -122,32 +98,30 @@ The following settings control tracing limits and attributes:
    :header-rows: 1
 
    * - Environment variable
-     - Argument to ``start()``
+     - Argument to start()
      - Description
-   * - ``OTEL_TRACE_ENABLED``
+   * - OTEL_TRACE_ENABLED
      -  Not applicable
      - Activates tracer creation and autoinstrumentation. Default value is ``true``.
-   * - ``OTEL_SERVICE_NAME``
+   * - OTEL_SERVICE_NAME
      - ``serviceName``
      - Name of the service or application you're instrumenting. Takes precedence over the service name defined in the ``OTEL_RESOURCE_ATTRIBUTES`` variable.
-   * - ``OTEL_RESOURCE_ATTRIBUTES``
+   * - OTEL_RESOURCE_ATTRIBUTES
      - Not applicable
      - Comma-separated list of resource attributes added to every reported span. For example, ``key1=val1,key2=val2``.
-   * - ``OTEL_SPAN_ATTRIBUTE_COUNT_LIMIT``
+   * - OTEL_SPAN_ATTRIBUTE_COUNT_LIMIT
      - Not applicable
      - Maximum number of attributes per span. Default value is unlimited.
-   * - ``OTEL_SPAN_EVENT_COUNT_LIMIT``
+   * - OTEL_SPAN_EVENT_COUNT_LIMIT
      - Not applicable
      - Maximum number of events per span. Default value is unlimited.
-   * - ``OTEL_SPAN_LINK_COUNT_LIMIT``
+   * - OTEL_SPAN_LINK_COUNT_LIMIT
      - Not applicable
      - Maximum number of links per span. Default value is ``1000``.
-   * - ``OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT``
+   * - OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT
      - Not applicable
      - Maximum length of strings for attribute values. Values larger than the limit are truncated. Default value is ``1200``. Empty values are treated as infinity.
-   * - ``SPLUNK_REDIS_INCLUDE_COMMAND_ARGS``
-     - Not applicable
-     - Whether to include the full Redis query in ``db.statement`` span attributes when using the Redis instrumentation. Default value is ``false``.
+
 
 .. _trace-sampling-settings-nodejs:
 
@@ -163,10 +137,10 @@ The following settings control trace sampling:
 
    * - Environment variable
      - Description
-   * - ``OTEL_TRACES_SAMPLER``
+   * - OTEL_TRACES_SAMPLER
      - Sampler to use. The default value is ``parentbased_always_on``. Possible values are: ``always_on``, ``always_off``, ``parentbased_always_on``, ``parentbased_always_off``, ``traceidratio``, ``parentbased_traceidratio``. See :new-page:`Built-in samplers <https://github.com/open-telemetry/opentelemetry-js/blob/main/packages/opentelemetry-sdk-trace-base/README.md#built-in-samplers>` in the official OpenTelemetry documentation for more information.
 
-   * - ``OTEL_TRACES_SAMPLER_ARG``
+   * - OTEL_TRACES_SAMPLER_ARG
      - Semicolon-separated list of rules for the ``rules`` sampler. For example, when setting the sampler to ``parentbased_traceidratio`` you can set the ratio using a number in the 0 to 1 range: |br| |br| ``OTEL_TRACES_SAMPLER_ARG=0.25``.
 
 
@@ -177,24 +151,9 @@ Exporters configuration
 
 The following settings control trace exporters and their endpoints:
 
-.. list-table::
-   :header-rows: 1
+.. raw:: html
 
-   * - Environment variable
-     - Argument to ``start()``
-     - Description
-   * - ``OTEL_TRACES_EXPORTER``
-     - ``tracing.spanExporterFactory``
-     - Comma-separated list of trace exporters to use. The default value is ``otlp``. To output to the console, set the variable to ``console``.
-   * - ``OTEL_METRICS_EXPORTER``
-     - ``metrics.metricReaderFactory``
-     - Comma-separated list of metrics exporter to use. The default value is ``otlp``. To output to the console, set the variable to ``console``. If set to ``none``, metric exports are turned off.
-   * - ``OTEL_EXPORTER_OTLP_METRICS_PROTOCOL``
-     - ``metrics.metricReaderFactory``
-     - Procotol for exporting metrics. Accepted values are ``grpc`` and ``http/protobuf``. The default value is ``grpc``.
-   * - ``OTEL_EXPORTER_OTLP_ENDPOINT``
-     - ``endpoint``
-     - The OTLP endpoint. The default value is ``http://localhost:4317``.
+    <div class="instrumentation" section="settings" group="category" filter="exporter" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-js/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type", "property": "Argument to start()"}'></div>
 
 .. _jaeger-exporter-nodejs:
 
@@ -228,15 +187,9 @@ Propagators configuration
 
 The following settings control trace propagation:
 
-.. list-table::
-   :header-rows: 1
+.. raw:: html
 
-   * - Environment variable
-     - Argument to ``start()``
-     - Description
-   * - ``OTEL_PROPAGATORS``
-     - ``tracing.propagators``
-     - Comma-separated list of propagators you want to use. The default value is ``tracecontext,baggage``. You can find the list of supported propagators in the OpenTelemetry documentation.
+    <div class="instrumentation" section="settings" group="category" filter="propagator" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-js/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type", "property": "Argument to start()"}'></div>
 
 For backward compatibility with the SignalFx Tracing Library for Node.js, use the b3multi trace propagator:
 
@@ -257,25 +210,9 @@ Node.js settings for AlwaysOn Profiling
 
 The following settings control the AlwaysOn Profiling feature for the Node.js agent:
 
-.. list-table::
-   :header-rows: 1
-   :width: 100%
+.. raw:: html
 
-   * - Environment variable
-     - Argument to ``start()``
-     - Description
-   * - ``SPLUNK_PROFILER_ENABLED``
-     - ``profilingEnabled``
-     - Activates AlwaysOn Profiling. The default value is ``false``.
-   * - ``SPLUNK_PROFILER_MEMORY_ENABLED``
-     - ``profiling.memoryProfilingEnabled``
-     - Activates memory profiling for AlwaysOn Profiling. The default value is ``false``.
-   * - ``SPLUNK_PROFILER_LOGS_ENDPOINT``
-     - ``profiling.endpoint``
-     - The collector endpoint for profiler logs. The default value is ``localhost:4317``.
-   * - ``SPLUNK_PROFILER_CALL_STACK_INTERVAL``
-     - ``profiling.callstackInterval``
-     - Frequency with which call stacks are sampled, in milliseconds. The default value is 1000 milliseconds.
+    <div class="instrumentation" section="settings" group="category" filter="profiler" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-js/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type", "property": "Argument to start()"}'></div>
 
 To configure AlwaysOn Profiling programmatically, pass the arguments to the ``start`` function, as in the following example:
 
@@ -298,37 +235,9 @@ Metrics configuration
 
 The following settings activate runtime metrics collection:
 
-.. list-table::
-   :header-rows: 1
-   :class: fix-width
+.. raw:: html
 
-   * - Environment variable
-     - Argument to ``start()``
-     - Description
-   * - ``SPLUNK_METRICS_ENABLED``
-     - Activated by calling ``start``.
-     - Activates metrics collection. The default value is ``false``. For more information on Node.js metrics, see :ref:`nodejs-otel-metrics`.
-   * - ``SPLUNK_METRICS_ENDPOINT``
-     - ``metrics.endpoint``
-     - The metrics endpoint. Takes precedence over ``OTEL_EXPORTER_OTLP_METRICS_ENDPOINT``. When ``SPLUNK_REALM`` is used, the default value is ``https://ingest.<realm>.signalfx.com/v2/datapoint/otlp``.
-   * - ``OTEL_EXPORTER_OTLP_METRICS_ENDPOINT``
-     - ``metrics.endpoint``
-     - The metrics endpoint. Takes precedence over the value set in ``OTEL_EXPORTER_OTLP_ENDPOINT``. The default value is ``http://localhost:4317``. When ``SPLUNK_REALM`` is used, the default value is ``https://ingest.<realm>.signalfx.com/v2/datapoint/otlp``.
-   * - ``OTEL_METRIC_EXPORT_INTERVAL``
-     - ``metrics.exportIntervalMillis``
-     - The interval, in milliseconds, of metrics collection and exporting. The default value is ``30000``.
-   * - ``SPLUNK_RUNTIME_METRICS_ENABLED``
-     - ``metrics.runtimeMetricsEnabled``
-     - Activates the collection and export of runtime metrics. The default value is ``true``. Runtime metrics are only sent if the ``SPLUNK_METRICS_ENABLED`` environment variable is set to ``true`` or if memory profiling is activated. For more information, see :ref:`nodejs-otel-runtime-metrics`.
-   * - ``SPLUNK_RUNTIME_METRICS_COLLECTION_INTERVAL``
-     - ``metrics.runtimeMetricsCollectionIntervalMillis``
-     - The interval, in milliseconds, during which garbage collection and event loop statistics are collected. After collection, the values become available to the metric exporter. The default value is ``5000``.
-   * - ``SPLUNK_DEBUG_METRICS_ENABLED``
-     - ``metrics.debugMetricsEnabled``
-     - Activates the collection and export of internal debug metrics for troubleshooting. The default value is ``false``. Debug metrics are only sent if the ``SPLUNK_METRICS_ENABLED`` environment variable is set to ``true``. For more information, see :ref:`nodejs-otel-debug-metrics`.
-   * - None
-     - ``metrics.resourceFactory``
-     - Callback that lets you filter the default resource or provide a custom one. The function takes one argument of type ``Resource``, which contains the service name, environment, host, and process attributes by default.
+    <div class="instrumentation" section="settings" group="category" filter="metrics" url="https://raw.githubusercontent.com/splunk/o11y-gdi-metadata/main/apm/splunk-otel-js/metadata.yaml" data-renaming='{"keys": "Identifier", "description": "Description", "instrumented_components": "Components", "signals": "Signals", "env": "Environment variable", "default": "Default", "type": "Type", "property": "Argument to start()"}'></div>
 
 .. note:: To pass settings as arguments, use the ``start()`` function.
 

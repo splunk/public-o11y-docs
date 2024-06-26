@@ -11,7 +11,7 @@ See the following topics when experiencing Metric Streams issues from AWS.
 
 .. note::
 
-  See also :ref:`aws-troubleshooting` and :ref:`aws-ts-logs`.
+  See also :ref:`aws-troubleshooting`.
 
 I've enabled Metric Streams in my AWS integration but I do not see any metrics streaming in
 ==================================================================================================
@@ -37,7 +37,7 @@ If you're experiencing issues streaming metrics, check the following:
 How can I track invalid Metric Streams?
 ====================================================================================================
 
-Observability Cloud provides out-of-the-box navigators and dashboards to help you track invalid or faulty Metric Streams, including:
+Splunk Observability Cloud provides out-of-the-box navigators and dashboards to help you track invalid or faulty Metric Streams, including:
 
 * Streams without a matching AWS integration on the Observability side.
 * Streams from a disabled integration or Metric Stream feature.

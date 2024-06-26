@@ -41,7 +41,7 @@ To link a detector to a team, follow these steps:
 
 #. From the drop-down list, select the team you want to link to the detector, then select :guilabel:`Done`.
 
-#. If the team is not already a notification recipient for the detector, Observability Cloud asks if you want to send notifications to the team. Select :guilabel:`Yes` to add the team as a recipient to each detector rule. Select :guilabel:`No` to leave all recipients as is.
+#. If the team is not already a notification recipient for the detector, Splunk Observability Cloud asks if you want to send notifications to the team. Select :guilabel:`Yes` to add the team as a recipient to each detector rule. Select :guilabel:`No` to leave all recipients as is.
 
 .. note:: Sending alert notifications to a team doesn't necessarily mean that every team member is notified. The team's notification policy determines which team members receive notifications. To learn more about configuring team notification policies, see :ref:`admin-team-notifications`.
 
@@ -49,7 +49,7 @@ To link a detector to a team, follow these steps:
 .. _remove-link-detector-team:
 
 Remove the link between a detector and a team
---------------------------------------------------------------------------------
+--------------------------------------------------------------------------
 
 To remove a link between a detector and a team, you need to have write permission for the detector. To learn more, see :ref:`detector-manage-permissions`.
 
@@ -59,7 +59,7 @@ To remove the link between a detector and a team, follow these steps:
 
 #. From the :guilabel:`Actions` menu for the detector, select :guilabel:`Links to teams`.
 #. Select the :guilabel:`x` to remove a team from the linked teams list, then select :guilabel:`Done`.
-#. If the team is a notification recipient for the detector, Observability Cloud asks if you want to stop sending notifications to the team. Select :guilabel:`Yes` to remove the team as a recipient from each detector rule. Select :guilabel:`No` to leave all recipients as is.
+#. If the team is a notification recipient for the detector, Splunk Observability Cloud asks if you want to stop sending notifications to the team. Select :guilabel:`Yes` to remove the team as a recipient from each detector rule. Select :guilabel:`No` to leave all recipients as is.
 
 
 .. _dashboard-groups-link-team-features:
@@ -111,7 +111,7 @@ To link a dashboard group to a team from the dashboard group:
 
 #. Select the :guilabel:`Dashboard group actions` menu (|more|) next to the dashboard group name and select :guilabel:`Links to Teams`.
 
-#. In the text box, start typing a team name. Observability Cloud autocompletes the team name. If Splunk Observability Cloud finds more than one match, it displays a list.
+#. In the text box, start typing a team name. Splunk Observability Cloud autocompletes the team name. If Splunk Observability Cloud finds more than one match, it displays a list.
 
 #. Select the team you want to link to from the list.
 

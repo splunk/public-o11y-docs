@@ -1,18 +1,19 @@
 The agent of the Splunk Distribution of OpenTelemetry Java is compatible with the following Java versions:
 
-- Java 8 starting from 8u40 (8u262 for AlwaysOn Profiling)
-- Java 11 and higher LTS versions
+- Java 8u40 and higher, or 8u262 and higher for AlwaysOn Profiling
+- Java LTS versions 11 and higher
 
-The following Java Virtual Machines (JVMs) are compatible:
+The following Java Virtual Machines (JVMs) are compatible as JDK or JRE:
 
 - AdoptOpenJDK
 - Amazon Corretto
 - Azul Zulu
 - BellSoft Liberica JDK
-- Eclipse Adoptium/Temurin
+- Eclipse Adoptium and Temurin
 - IBM J9
-- Microsoft OpenJDK
+- Microsoft build of OpenJDK
 - OpenJDK
+- Oracle JDK
 - SAP SapMachine
 
 .. note:: AlwaysOn Profiling is not supported on Oracle JDK 8 and IBM J9.

@@ -8,14 +8,14 @@ Troubleshoot your AWS connection
    :description: Resolve AWS policy and permissions conflicts in Splunk Observability Cloud.
 
 
-If you experience issues when connecting Splunk Observability Cloud to your Amazon Web Services (AWS) account, they might be caused by conflicts between policies and permissions. See :ref:`aws-ts-logs` for specific log troubleshooting and :ref:`aws-ts-metric-streams` for issues specific to Metric Streams.   
+If you experience issues when connecting Splunk Observability Cloud to your Amazon Web Services (AWS) account, they might be caused by conflicts between policies and permissions. See :ref:`aws-ts-metric-streams` for issues specific to Metric Streams.   
 
 .. caution:: Splunk is not responsible for data availability, and it can take up to several minutes (or longer, depending on your configuration) from the time you connect until you start seeing valid data from your account. 
 
 .. _aws-ts-valid-connection:
 
-Error validating AWS connection
-================================
+Error validating your AWS connection
+=========================================
 
 The automatic attempt to validate a connection that you just configured fails, so there is no connection between Splunk Observability Cloud and your AWS account.
 
@@ -73,7 +73,7 @@ Solution
 
 Review your :ref:`IAM policy <review-aws-iam-policy>` to ensure it includes the permissions needed for the metrics or other data that you intend to collect.
 
-Once integrated with your Amazon Web Services account, Splunk Observability Cloud can gather CloudWatch metrics, CloudWatch logs, CloudWatch Metric Streams, service logs stored in Amazon S3 buckets, and service tag and property information. But leveraging the full power of the integration requires all included permissions.
+Once integrated with your Amazon Web Services account, Splunk Observability Cloud can gather CloudWatch metrics, CloudWatch Metric Streams, or service logs stored in Amazon S3 buckets, and service tag and property information. But leveraging the full power of the integration requires all included permissions.
 
 .. _aws-ts-namespace-metrics:
 

@@ -7,13 +7,13 @@ Configure SSO using a generic SAML SSO integration
 .. meta::
    :description: Prerequisites and installation steps to configure SSO using a generic SAML SSO integration. 
 
-.. caution::  This integration can send credential information to unverified destinations. Although you can use generic SAML SSO integrations to authenticate users, Observability Cloud doesn't support these integrations as your primary authentication mechanism. The Observability Cloud support team can't help you diagnose or repair problems you encounter while trying to authenticate users using generic SSO integrations, aside from ensuring that the integration itself is working.
+.. caution::  This integration can send credential information to unverified destinations. Although you can use generic SAML SSO integrations to authenticate users, Splunk Observability Cloud doesn't support these integrations as your primary authentication mechanism. The Splunk Observability Cloud support team can't help you diagnose or repair problems you encounter while trying to authenticate users using generic SSO integrations, aside from ensuring that the integration itself is working.
 
 If you use an SSO login service other than the ones listed in :ref:`sso-label`, you can create a generic SAML SSO integration for your organization. 
 
 Before you begin configuring the generic SAML SSO integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration <naming-note-sso>` to learn about naming your integrations.
 
-If you already have a SAML SSO integration for your organization, follow the steps in :ref:`saml-install` to install it in Observability Cloud.
+If you already have a SAML SSO integration for your organization, follow the steps in :ref:`saml-install` to install it in Splunk Observability Cloud.
 
 .. note:: To allow the generic SAML SSO integration, contact :ref:`support`.
 
@@ -22,7 +22,7 @@ If you already have a SAML SSO integration for your organization, follow the ste
 Generic SAML SSO integrations
 -------------------------------------------------------
 
-Observability Cloud provides integrations for specific SAML SSO providers. If your provider isn't in the list of supported integrations, your organization administrator can request a generic integration from Observability Cloud. You can use this integration to test and develop a SAML SSO provider. Using this integration, administrators can direct Observability Cloud
+Splunk Observability Cloud provides integrations for specific SAML SSO providers. If your provider isn't in the list of supported integrations, your organization administrator can request a generic integration from Splunk Observability Cloud. You can use this integration to test and develop a SAML SSO provider. Using this integration, administrators can direct Splunk Observability Cloud
 to use any publicly-available SSO endpoint to authenticate users.
 
 Be prepared to provide the domain for the ID/email address that your users provide when they log in. The domain is the part of the user ID/email address string that follows the ``@`` sign.
@@ -61,7 +61,7 @@ The URL has one of the following formats:
 
 * If you have multiple organizations that you want to integrate with a single IdP, do the following:
    #. Select :guilabel:`Integration-specific Entity ID`. Next to the option, the integration-specific entity ID appears in the form of a URI.
-   #. Copy the entity ID and provide it when you configure the login service to communicate with Observability Cloud.
+   #. Copy the entity ID and provide it when you configure the login service to communicate with Splunk Observability Cloud.
 
 :strong:`Assertion Signature`
 
@@ -69,7 +69,7 @@ The SSO provider must put the assertion signature in the assertion message, not 
 
 :strong:`RelayState`
 
-Observability Cloud sends a dynamic RelayState, so the SSO provider must accept and pass back the dynamic RelayState. RelayState is part of SAML specifications. In the Splunk Observability Cloud system it is part of message context in the AuthN request that is sent to the identity provider. The message context also contains a token that can be verified on the service provider side later. The Relay State is set by the Splunk Observability Cloud system and sent with the request to the IDP. The IDP is expected to send the relay state back to the service provider with the same value that was received after a successful authentication on the IDP side. 
+Splunk Observability Cloud sends a dynamic RelayState, so the SSO provider must accept and pass back the dynamic RelayState. RelayState is part of SAML specifications. In the Splunk Observability Cloud system it is part of message context in the AuthN request that is sent to the identity provider. The message context also contains a token that can be verified on the service provider side later. The Relay State is set by the Splunk Observability Cloud system and sent with the request to the IDP. The IDP is expected to send the relay state back to the service provider with the same value that was received after a successful authentication on the IDP side. 
 
 .. _saml-install:
 
@@ -105,7 +105,7 @@ To install a generic SAML SSO integration, follow these steps:
    
       #. In the left navigation menu, select :menuselection:`Data Management`.
    
-      #. Select :guilabel:`Add Integration`.
+      #.Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
    
       #. In the integration filter menu, select :guilabel:`All`.
    
@@ -120,8 +120,8 @@ time the user signs in. Subsequent login attempts don't require validation.
 
 If you want to turn off email authentication, contact :ref:`support`.
 
-Once you have a custom URL configured, your users can continue to log in using their existing username/password pair, or they can use their generic SAML SSO credentials instead. Generic SAML SSO authentication and Observability Cloud username/password authentication are independent.
+Once you have a custom URL configured, your users can continue to log in using their existing username/password pair, or they can use their generic SAML SSO credentials instead. Generic SAML SSO authentication and Splunk Observability Cloud username/password authentication are independent.
 
-Observability Cloud generates a password for users you create in generic SAML SSO. If the generic SAML login portal is unavailable, Observability Cloud users can use the reset password link on the Observability Cloud login page to get native Observability Cloud credentials.
+Splunk Observability Cloud generates a password for users you create in generic SAML SSO. If the generic SAML login portal is unavailable, Splunk Observability Cloud users can use the reset password link on the Splunk Observability Cloud login page to get native Splunk Observability Cloud credentials.
 
 

@@ -5,8 +5,6 @@
 Learn what you can do with Splunk APM
 ***************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Get started monitoring applications with Splunk APM.
 
@@ -26,7 +24,7 @@ Before you begin to explore APM, make sure you are sending traces to APM from yo
 Assess the health of your applications with the APM landing page
 =================================================================
 
-When you log into Splunk Observability Cloud and select :strong:`Navigation menu > APM`, you arrive on the APM landing page. You can use this dashboard of consolidated and unsampled span metrics to get a real-time snapshot of your services and :ref:`Business Workflows<apm-workflows>` at a glance. 
+When you log into Splunk Observability Cloud and select :guilabel:`APM` from the navigation menu, you arrive on the APM landing page. You can use this dashboard of consolidated and unsampled span metrics to get a real-time snapshot of your services and :ref:`Business Workflows<apm-workflows>` at a glance. 
 
 ..  image:: /_images/apm/set-up-apm/set-up-apm-01.png
     :width: 95%
@@ -36,16 +34,16 @@ Use the alerts and top charts on this page as a guide to what needs your attenti
 
 .. _apm-explore-view: 
 
-View dependencies among your applications in the Explore view
+View dependencies among your applications in the Service Map
 =================================================================
 
-From the landing page, select a service in a chart legend or a row in the Services table to navigate to the Explore view. This view includes the service map, which presents the dependencies and connections among your instrumented and inferred services in APM. This map is dynamically generated based on your selections in the time range, environment, workflow, service, and tag filters. 
+From the landing page, select the :guilabel:`Service Map` card. The Service Map presents the dependencies and connections among your instrumented and inferred services. Use time range, environment, workflow, service, and tag filters to refine the Service Map.
 
 You can use these visual cues to understand dependencies, performance bottlenecks, and error propagation. 
 
 ..  image:: /_images/apm/set-up-apm/set-up-apm-02.png
     :width: 95%
-    :alt: This screenshot shows an example of Splunk APM Explore view
+    :alt: This screenshot shows an example of Splunk APM Service Map
 
 Select any service in the service map to see charts for that specific service. You can also use the :guilabel:`Breakdown` selector to break the service down by any indexed span tag. 
 

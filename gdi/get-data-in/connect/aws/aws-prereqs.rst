@@ -44,7 +44,7 @@ To create a new AWS IAM policy, follow these steps:
 #. Create a new policy. In the :strong:`JSON` tab, replace the placeholder JSON with the pertinent AWS IAM policy JSON. Guided setup provides this policy in the :guilabel:`Prepare AWS Account` step. See also some :ref:`policy examples <review-aws-iam-policy>`.
 #. Follow the instructions to complete the process and create the policy.
 
-.. :note:: The default AWS IAM policy supports metrics and log collection. To learn how to add support for CloudWatch Metric Streams, see :ref:`aws-wizard-metricstreams`.
+.. :note:: The default AWS IAM policy supports metric collection. To learn how to add support for CloudWatch Metric Streams, see :ref:`aws-wizard-metricstreams`.
 
 If you have any doubts, check AWS documentation.  
 
@@ -79,13 +79,14 @@ When you're creating the new permission for your user and are prompted for an ac
 Required permissions
 =====================================================
 
+.. caution:: The list of permissions described in this section is updated frequently. If you connected your AWS services to Splunk Observability Cloud a while ago you might need to update them.
+
 These are the required permissions to collect AWS data:
 
 * :ref:`Required permissions <aws-iam-policy-required>`
 * :ref:`Permissions for the CloudWatch API <aws-iam-policy-cw>` 
 * :ref:`Permissions for Metric Streams <aws-iam-policy-ms>`
 * :ref:`Permissions for tag and properties collection <aws-iam-policy-services>`
-* :ref:`Permissions for logs <aws-iam-policy-logs>`
 * :ref:`Permissions for usage collection and reports <aws-iam-policy-reports>`
 
 .. _aws-iam-policy-required:
@@ -133,10 +134,12 @@ For example:
 .. _metricstreams_iampolicy:
 .. _aws-iam-policy-ms:
 
-Permissions for Metric Streams
+Permissions for Splunk-managed Metric Streams
 -----------------------------------------------------------
 
-Besides the :ref:`required permissions <aws-iam-policy-required>`, include these permissions to allow Splunk Observability Cloud to collect AWS metrics using CloudWatch Metric Streams:
+.. note:: If you're using AWS-managed Metric Streams these permissions are not required. For more information, see :ref:`aws-console-ms`.
+
+If you're using Splunk-managed Metric Streams to collect AWS CloudWatch metrics, you need the :ref:`permissions required for Splunk Observability Cloud <aws-iam-policy-required>` as well as these permissions:
 
 - ``"cloudwatch:DeleteMetricStream"``
 - ``"cloudwatch:GetMetricStream"``
@@ -190,6 +193,8 @@ On top of the required permissions, you also need to include the specific permis
 
 These are these permissions to allow Splunk Observability Cloud to collect AWS tags and properties:
 
+- ``"airflow:ListEnvironments"``
+- ``"airflow:GetEnvironment"``
 - ``"apigateway:GET"``
 - ``"autoscaling:DescribeAutoScalingGroups"``
 - ``"cloudformation:ListResources"``
@@ -209,7 +214,7 @@ These are these permissions to allow Splunk Observability Cloud to collect AWS t
 - ``"ec2:DescribeReservedInstancesModifications"``
 - ``"ec2:DescribeTags"``
 - ``"ec2:DescribeVolumes"``
-- ``"ecS:DescribeClusters"``
+- ``"ecs:DescribeClusters"``
 - ``"ecs:DescribeServices"``
 - ``"ecs:DescribeTasks"``
 - ``"ecs:ListClusters"``
@@ -226,6 +231,8 @@ These are these permissions to allow Splunk Observability Cloud to collect AWS t
 - ``"elasticmapreduce:ListClusters"``
 - ``"es:DescribeElasticsearchDomain"``
 - ``"es:ListDomainNames"``
+- ``"kafka:DescribeClusterV2"``
+- ``"kafka:ListClustersV2"``
 - ``"kinesis:DescribeStream"``
 - ``"kinesis:ListShards"``
 - ``"kinesis:ListStreams"``
@@ -236,6 +243,7 @@ These are these permissions to allow Splunk Observability Cloud to collect AWS t
 - ``"lambda:GetAlias"``
 - ``"lambda:ListFunctions"``
 - ``"lambda:ListTags"``
+- ``"rds:DescribeDBClusters"``
 - ``"rds:DescribeDBInstances"``
 - ``"rds:ListTagsForResource"``
 - ``"redshift:DescribeClusters"``
@@ -264,6 +272,8 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
       {
         "Effect": "Allow",
         "Action": [
+          "airflow:ListEnvironments",
+          "airflow:GetEnvironment",
           "apigateway:GET",
           "autoscaling:DescribeAutoScalingGroups",
           "cloudformation:ListResources",
@@ -304,6 +314,8 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
           "elasticmapreduce:ListClusters",
           "es:DescribeElasticsearchDomain",
           "es:ListDomainNames",
+          "kafka:DescribeClusterV2",
+          "kafka:ListClustersV2",
           "kinesis:DescribeStream",
           "kinesis:ListShards",
           "kinesis:ListStreams",
@@ -358,33 +370,6 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
     ]
   }
 
-.. _aws-iam-policy-logs:
-
-Permissions for log collection
-----------------------------------------
-
-These are the permissions to allow Splunk Observability Cloud to collect AWS logs. Include those related to your service in your IAM policy.
-
-- ``"cloudfront:GetDistributionConfig"``
-- ``"cloudfront:ListDistributions"``
-- ``"cloudfront:ListTagsForResource"``
-- ``"ec2:DescribeRegions"``
-- ``"elasticloadbalancing:DescribeLoadBalancerAttributes"``
-- ``"elasticloadbalancing:DescribeLoadBalancers"``
-- ``"elasticloadbalancing:DescribeTags"``
-- ``"elasticloadbalancing:DescribeTargetGroups"``
-- ``"logs:DeleteSubscriptionFilter"``
-- ``"logs:DescribeLogGroups"``
-- ``"logs:DescribeSubscriptionFilters"``
-- ``"redshift:DescribeClusters"``
-- ``"redshift:DescribeLoggingStatus"``
-- ``"s3:GetBucketLogging"``
-- ``"s3:GetBucketNotification"``
-- ``"s3:ListAllMyBuckets"``
-- ``"s3:ListBucket"``
-- ``"s3:PutBucketNotification"``
-- ``"tag:GetResources"``
-
 .. _aws-iam-policy-reports:
 
 Permissions for usage collection and reports
@@ -394,6 +379,19 @@ Include these permissions to allow Splunk Observability Cloud to collect AWS usa
 
 - ``"ec2:DescribeRegions"``
 - ``"organizations:DescribeOrganization"``
+
+.. _aws-iam-policy-ts:
+
+Troubleshoot AWS permission issues
+-----------------------------------------------------------
+
+In case of any permission-related issue, review your AWS Organization Service Control Policy and the permission boundaries for your IAM entities. Both might impose some limits on the AWS policy Splunk Observability Cloud uses to connect to your AWS account. 
+
+Read more at the official AWS documentation:
+
+* :new-page:`AWS Organization Service Control Policies <https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html>`
+* :new-page:`Permissions boundaries for IAM entities <https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html>`
+* :new-page:`Troubleshooting IAM permission access denied or unauthorized errors <https://web.archive.org/web/20231129090004/https://repost.aws/knowledge-center/troubleshoot-iam-permission-errors>`
 
 .. _aws-regions:
 

@@ -34,10 +34,18 @@ Statements can transform telemetry of a higher context. For example, statements 
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the transform processor. To activate the transform processor for a pipeline, add ``transform`` to the ``processors`` section of the configuration. For example:
+Follow these steps to configure and activate the component:
+
+1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform. See :ref:`otel-install-platform`. 
+2. Configure the TCP log receiver as described in the next section. 
+3. Restart the Collector.
+
+Sample configuration
+-------------------------------------------------
+
+To activate the transform processor for a pipeline, add ``transform`` to the ``processors`` section of the configuration. For example:
 
 .. code-block:: yaml
-
 
    transform:
      error_mode: ignore
@@ -63,7 +71,7 @@ You can then add the transform processor to any compatible pipeline. For example
    service:
      pipelines:
        traces:
-         receivers: [jaeger, otlp, smartagent/signalfx-forwarder, zipkin]
+         receivers: [jaeger, otlp, zipkin]
          processors:
          - transform
          - memory_limiter
@@ -71,7 +79,7 @@ You can then add the transform processor to any compatible pipeline. For example
          - resourcedetection
          exporters: [sapm, signalfx]
        metrics:
-         receivers: [hostmetrics, otlp, signalfx, smartagent/signalfx-forwarder]
+         receivers: [hostmetrics, otlp, signalfx]
          processors:
          - transform
          - memory_limiter
@@ -98,8 +106,8 @@ For more information on OTTL functions and syntax, see:
 - OTTL Functions: :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/pkg/ottl/ottlfuncs`
 - OTTL Contexts: :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/pkg/ottl/contexts`
 
-Sample configurations
-----------------------
+Configuration examples
+--------------------------------
 
 The following sample configurations show how to perform different transformations on spans, metrics, and logs.
 

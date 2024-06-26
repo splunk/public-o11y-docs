@@ -143,8 +143,9 @@ Using the waterfall chart, you can do the following:
 - Expand the details in a row to show the request and response headers for that resource.
 - Hover over a row of the timeline to view a pop-up message with detailed request timings for that resource.
 - Search resources in a page by keywords in the URL.
+- Follow a direct link to related back-end spans if the same app is instrumented with APM. See :ref:`Link Synthetic spans to APM spans <synthetics-link-to-apm>`.
 - Use the tabs to filter the waterfall chart by resource type, including JS, CSS, Image, Media, JSON, and XML.
-- Download the raw HAR file.
+- Download the raw HAR file, using the :new-page:`API <https://dev.splunk.com/observability/reference/api/synthetics_artifacts/latest#endpoint-getartifactsbytestid>`.
 - Show or hide columns in the chart
 
 .. - Customize the statistics displayed for each request inline in the waterfall chart
@@ -156,7 +157,7 @@ Filmstrip
 -----------
 :strong:`Available in Enterprise Edition.`
 
-The filmstrip offers a screenshot of site performance at specific intervals on a timeline, so that you can see how the page responds in real time. By default, the filmstrip provides a screenshot and the time in milliseconds for every visual change as the page loads. You can also use the interval selector to view screenshots for every 100 milliseconds, 500 milliseconds, and one second. 
+The filmstrip offers a screenshot of site performance at specific intervals on a timeline, so that you can see how the page responds in real time. By default, the filmstrip provides a screenshot and the time in milliseconds for every visual change as the page loads. You can also use the interval selector to view screenshots for every 100 milliseconds, 500 milliseconds, and one second. The maximum number of steps for optimal performance is 35. The maximum data per filmstrip is 2GB. If your filmstrip is larger than 2GB, the remaining video isn't colleceted but all the other metrics are still stored.
 
 .. _video:
 

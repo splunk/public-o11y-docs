@@ -1,43 +1,71 @@
 .. _deployment-windows-ansible:
 
-**********************
-Ansible for Windows
-**********************
+********************************************************
+Deploy the Collector with Ansible for Windows
+********************************************************
 
 .. meta::
       :description: Describes how to install the Splunk Observability Cloud OpenTelemetry Collector Ansible role on Windows.
 
-Before installing the Ansible collection, do the following:
+Before installing the Ansible collection, check :ref:`otel-intro` to verify the required resources:
 
-* Find your :ref:`Splunk access token <otel-using>`
-* Find your :ref:`Splunk realm <otel-using>`
-* Check :ref:`exposed ports <otel-using>` to make sure your environment doesn't have conflicts. Ports can be changed in the package's configuration.
+* Find your Splunk access token 
+* Find your Splunk realm
+* Check your exposed ports to make sure your environment doesn't have conflicts. You can change ports in the package's configuration.
 
-Ansible requires PowerShell 3.0 or newer and at least .NET 4.0 to be installed on the Windows host. A WinRM listener should be created and activated. You can find information on setting up the Windows host on the :new-page:`Ansible Documentation site <https://docs.ansible.com/>`.
+Supported versions
+==========================================
+
+Currently, the following Windows versions are supported:
+
+* Windows Server 2016 64-bit
+* Windows Server 2019 64-bit
+* Windows Server 2022 64-bit
+
+Requirements
+==========================================
+
+Ansible requires PowerShell 3.0 or higher and .NET 4.0 or higher to be installed on the Windows host. 
+
+You must create and activate a WinRM listener. 
+
+You can find information on setting up the Windows host on the :new-page:`Ansible Documentation site <https://docs.ansible.com/>`.
+
+Install and use the Collector with Ansible 
+============================================================
+
+.. caution:: On Windows, the Collector is installed as a Windows service and its environment variables are set at the service scope, so they're only available to the Collector service and not to the entire machine.
 
 Run the following command to install the Ansible collection from Ansible Galaxy:
 
 .. code-block:: PowerShell
 
-   ansible-galaxy collection install signalfx.splunk_otel_collector
+  ansible-galaxy collection install signalfx.splunk_otel_collector
 
-To use this role, include the ``signalfx.splunk_otel_collector.collector role`` invocation in your playbook. Note that this role requires root access. The following example shows how to use the role in a playbook with minimal required configuration:
+To use the Splunk OpenTelemetry Collector role, include the ``signalfx.splunk_otel_collector.collector role`` invocation in your playbook. Note that this role requires root access. For more information, see :new-page:`Splunk OpenTelemetry Collector Ansible Role <https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/ansible/roles/collector>`.
+
+The following example shows how to use the role in a playbook with minimal required configuration:
 
 .. code-block:: PowerShell
 
-   - name: Install the Splunk Distribution of OpenTelemetry Collector
-     hosts: all
-     become: yes
-     # Setting the "become: yes" tag generates the following error message:
-     # "The Powershell family is incompatible with the sudo become plugin". 
-     # Remove the "become: yes" tag.
-     tasks:
-       - name: "Include splunk_otel_collector"
-         include_role:
-           name: "signalfx.splunk_otel_collector.collector"
-         vars:
-           splunk_access_token: YOUR_ACCESS_TOKEN
-           splunk_realm: SPLUNK_REALM
+  - name: Install the Splunk Distribution of OpenTelemetry Collector
+    hosts: all
+    become: yes
+    # For Windows "become: yes" will raise error.
+    # "The Powershell family is incompatible with the sudo become plugin". Remove "become: yes" tag to run on Windows
+    tasks:
+      - name: "Include splunk_otel_collector"
+        include_role:
+          name: "signalfx.splunk_otel_collector.collector"
+        vars:
+          splunk_access_token: YOUR_ACCESS_TOKEN
+          splunk_hec_token: YOUR_HEC_TOKEN
+          splunk_realm: SPLUNK_REALM
+
+Note that ``splunk_hec_yoken`` is optional.
+
+Configuration variables
+==========================================
 
 The following table describes the variables that can be configured for this role:
 
@@ -48,10 +76,12 @@ The following table describes the variables that can be configured for this role
    
    * - Variable
      - Description
+   * - ``gomemlimit``
+     - Replaces ``splunk_ballast_size_mib`` starting in Collector version 0.97.0. It allows limiting memory usage in the GO runtime, helping enhance garbage collection and prevent out of memory situations. Learn more at :ref:`how to update memory ballast in your configuration <collector-upgrade-memory-ballast>`. Default value is 90% of ``splunk_total_mem_mib``.     
    * - ``splunk_access_token``
      - The Splunk access token to authenticate requests. This attribute is required.
    * - ``splunk_realm``
-     - The realm to send the data to. This variable is set with this value for the service. The default value is ``us0``.
+     - The realm to send the data to. This variable is set with this value for the service. The default value is ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
    * - ``splunk_ingest_url``
      - The Splunk ingest URL, for example, ``https://ingest.us0.signalfx.com``. This variable is set with this value for the service. The default value is ``https://ingest.{{ splunk_realm }}.signalfx.com``. 
    * - ``splunk_api_url``
@@ -77,7 +107,7 @@ The following table describes the variables that can be configured for this role
    * - ``splunk_memory_total_mib``
      - The amount of allocated memory in MiB. The default value is ``512``, or 500 x 2^20 bytes, of memory .
    * - ``splunk_ballast_size_mib``
-     - The set memory ballast size in MiB. The default value is 1/3 of the value set in ``splunk_memory_total_mib``.
+     - ``splunk_ballast_size_mib`` is deprecated starting on Collector version 0.97.0. If you're using it, see :ref:`how to update your configuration <collector-upgrade-memory-ballast>`.
    * - ``install_fluentd``
      - The option to install or manage Fluentd and dependencies for log collection. The default value is ``false``.
    * - ``td_agent_version``

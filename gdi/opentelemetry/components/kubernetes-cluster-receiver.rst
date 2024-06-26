@@ -11,7 +11,7 @@ The Kubernetes cluster receiver collects cluster metrics using the Kubernetes AP
 
 Kubernetes version 1.21 and higher is compatible with the Kubernetes navigator. Using lower versions of Kubernetes is not supported for this receiver and might result in the navigator not displaying all clusters.
 
-.. note:: This receiver replaces the ``kubernetes-cluster`` Smart Agent monitor type.
+.. note:: This receiver replaces the ``kubernetes-cluster`` Smart Agent monitor.
 
 Get started
 ======================
@@ -93,7 +93,7 @@ The value is ``1`` if the ``ConditionStatus`` for the corresponding ``Condition`
 Settings
 ======================
 
-The following table shows the configuration options for the MongoDB Atlas:
+The following table shows the configuration options for the receiver:
 
 .. raw:: html
 
@@ -104,7 +104,7 @@ Metrics
 
 The following metrics, resource attributes, and attributes are available.
 
-.. note:: The SignalFx exporter excludes some available metrics by default. Learn more about default metric filters in :ref:list-excluded-metrics. See :ref:ootb-metrics-k8s to see how the Collector processes Kubernetes metrics.
+.. note:: The SignalFx exporter excludes some available metrics by default. Learn more about default metric filters in :ref:`list-excluded-metrics`. See :ref:`ootb-metrics-k8s` to see how the Collector processes Kubernetes metrics.
 
 .. raw:: html
 

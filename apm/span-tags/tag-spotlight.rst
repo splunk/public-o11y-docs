@@ -18,14 +18,16 @@ The following image shows the requests and errors of an example ``frontend`` ser
 
 To learn how to index span tags to generate Troubleshooting MetricSets, see :ref:`apm-index-span-tags`. For a general overview of MetricSets in APM, see :ref:`apm-metricsets`. 
 
-.. note:: 
-   For an example scenario of troubleshooting using Tag Spotlight, see :ref:`troubleshoot-tag-spotlight`. For an interactive walkthrough of Tag Spotlight, see :new-page:`APM Tag Spotlight Scenario <https://quickdraw.splunk.com/redirect/?product=Observability&location=apm-tag-spotlight-walkthrough&version=current>`. 
-
-
 View service performance by indexed span tags with Tag Spotlight
 ================================================================
 
-Access Tag Spotlight from the :strong:`Tag Spotlight` tab of the APM landing page to analyze the performance of every indexed span tag value for a service. You can break down performance for each tag by either requests and errors or latency. 
+Access Tag Spotlight from the :strong:`Tag Spotlight` panel of the APM landing page. You can also use the search in the top toolbar to search for Tag Spotlight and select the navigation result to navigate to Tag Spotlight.
+
+..  image:: /_images/apm/span-tags/tag-spotlight-02.gif
+    :width: 99%
+    :alt: This animation shows the user searching for Tag Spotlight. 
+
+You can break down performance for each tag by either requests and errors or latency. 
 
 Follow these steps to navigate to Tag Spotlight for a specific service:
 
