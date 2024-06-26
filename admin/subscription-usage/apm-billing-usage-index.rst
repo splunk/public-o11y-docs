@@ -8,7 +8,7 @@ Monitor Splunk APM billing and subscription usage
 
 .. note:: Use this topic to understand general aspects of subscription usage for Splunk APM. For more detailed billing-related queries, contact your Splunk Account Team.
 
-The following table includes the Splunk APM billing and subscription usage information that is available for you to use to monitor your organization usage against its subscription plan and limits. 
+The following table lists the Splunk APM billing and subscription usage information that is available for you to use to monitor your organization usage against its subscription plan and limits. 
 
 .. list-table::
    :header-rows: 1
