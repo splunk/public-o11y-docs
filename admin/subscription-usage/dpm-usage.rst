@@ -57,7 +57,7 @@ This report, available on the Usage tab, shows the total number of data points s
 Report contents
 -------------------------------------------------------------------
 
-The report has six columns:
+The report has the following columns:
 
 .. list-table:: 
       :header-rows: 1
