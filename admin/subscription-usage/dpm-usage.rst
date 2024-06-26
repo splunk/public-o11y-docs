@@ -67,7 +67,7 @@ The report has six columns:
         - Notes
       * - Date
         - Date of the report
-        - Follows the mm/dd/yy format.
+        - Follows the `mm/dd/yy` format.
       * - Time
         - Time of the report
         - Follows the 24 hour hh:mm UTC format.
