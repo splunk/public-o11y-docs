@@ -159,7 +159,7 @@ For each selected minute, the report shows the attributes or tags associated wit
 Use the APM throttling and entitlement dashboards to better understand your usage
 ===================================================================================
 
-Select :guilabel:`Dashboards` and search for "APM entitlements and "APM throttling" to access the :guilabel:`APM entitlements` and :guilabel:`APM throttling` dashboards to further examine your usage. The APM entitlements dashboard provides historical data for metrics used on the :guilabel:`Subscription Usage` page. The APM throttling dashboard includes metrics that track throttling and limits in your organization. Several metrics in the APM throttling dashboard have detectors set up to send alerts when metrics for your organization are being throttled.
+Select :guilabel:`Dashboards` and search for "APM entitlements" and "APM throttling" to access the :guilabel:`APM entitlements` and :guilabel:`APM throttling` dashboards to further examine your usage. The APM entitlements dashboard provides historical data for metrics used on the :guilabel:`Subscription Usage` page. The APM throttling dashboard includes metrics that track throttling and limits in your organization. Several metrics in the APM throttling dashboard have detectors set up to send alerts when metrics for your organization are being throttled.
 
   .. image:: /_images/admin/apm-entitlements-dashboard.png
     :width: 95%
