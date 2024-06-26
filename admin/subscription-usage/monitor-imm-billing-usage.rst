@@ -115,7 +115,7 @@ The report has the following columns:
    * - # Custom Metrics
      - The number of metric time series (MTS) that Splunk Infrastructure Monitoring monitored during the specified hour. This includes archived metrics and histogram metrics. For billing purposes, 10 archived custom metrics count as 1 real-time custom metric, and 1 histogram custom metric counts as 8 real-time custom metrics.
 
-   * - # Archived Custom Metrics
+   * - # Archived custom metrics
      - The number of archived metric time series (MTS) that Splunk Infrastructure Monitoring monitored during the specified hour. 
 
 .. _summary-including-children:
