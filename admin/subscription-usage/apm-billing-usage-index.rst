@@ -8,12 +8,51 @@ Monitor Splunk APM billing and subscription usage
 
 .. note:: Use this topic to understand general aspects of subscription usage for Splunk APM. For more detailed billing-related queries, contact your Splunk Account Team.
 
-View Splunk APM billing subscription usage data to monitor your organization usage against its subscription plan and limits. 
+The following table includes the Splunk APM billing and subscription usage information that is available for you to use to monitor your organization usage against its subscription plan and limits. 
+
+.. list-table::
+   :header-rows: 1
+   :widths: 65, 35
+
+   * - :strong:`Subscription usage information`
+     - :strong:`Location`
+
+   * - Type of plan
+     - See :ref:`APM subscription usage page<view-apm-subscription-usage>`.
+
+   * - The average usage and the percent of limit for the following aspects of Splunk APM. 
+        * Hosts (for host subscription plans) 
+        * Containers (for host subscription plans) 
+        * Troubleshooting MetricSets
+        * Trace volume
+        * Monitoring MetricSets 
+     - See :ref:`APM subscription usage page<view-apm-subscription-usage>`.
+
+   * - The subscription limits for your subscription plan. 
+     - See :ref:`APM subscription usage page<view-apm-subscription-usage>`.
+
+   * - Usage metrics for host subscription plans. See :ref:`host-usage-metrics` for a complete list.
+     - See :ref:`Detailed usage reports<download-apm-usage-reports>`.
+
+   * - Usage metrics for trace-analyzed-per-minute (TAPM) subscription plans. See :ref:`tapm-usage-metrics` for a complete list.
+     - See :ref:`Detailed usage reports<download-apm-usage-reports>`.
+
+   * - Host and container diagnostics
+     - See :ref:`Host and container dignostic report<host-diagnostics-report-apm>`
+
+   * - Throttling and limits metrics
+     - See :ref:`APM throttling dashboard<apm-throttling-entitlement>`
+  
+   * - Historical subscription usage metrics data
+     - See :ref:`APM entitlements dashboard<apm-throttling-entitlement>`
+
 
 Prerequisite
 ==============
 
 To view the APM subscription usage page, you must have the admin or usage role.
+
+.. _view-apm-subscription-usage:
 
 View APM subscription usage
 ==================================
@@ -52,6 +91,8 @@ Download detailed usage reports for recent usage periods to better understand yo
 
 4. To download the report, select the usage report and save it as a .txt file.
 
+.. _host-usage-metrics:
+
 Usage report metrics for host subscription plans
 ---------------------------------------------------
 
@@ -69,6 +110,8 @@ Usage reports for host subscription plans include the following information abou
 * The average trace volume in bytes. Averages are available in usage reports for complete months only.
 
 .. note:: To generate and download subscription usage reports for your hosts and containers, see :ref:`host-diagnostics-report-apm`.
+
+.. _tapm-usage-metrics:
 
 Usage report metrics for trace-analyzed-per-minute (TAPM) subscription plans
 ------------------------------------------------------------------------------
@@ -99,9 +142,15 @@ To download a subscription usage report, do the following:
 #. Select a specific minute within the hour.
 #. If you've selected a minute that falls within the trace retention period the :guilabel:`Download Data` becomes active and displays the minute you selected. Select the download button to download  the .csv file.
 
+  .. image:: /_images/admin/host-usage-diagnostics.gif
+    :width: 50%
+    :alt: Animated image that shows Selecting a minute within the hosts chart to download a diagnostic report.
+
 For each selected minute, the report shows the attributes or tags associated with the hosts and containers that sent data to Splunk APM. You might see different tags, like ``AWSUniqueId``, ``container_id``,  ``gcp_id``, and so on, depending on the source of the host or container observed and the version of your instrumentation agent.
 
 .. caution:: For Kubernetes deployments, the Kubernetes attributes processor extracts default attributes, such as ``k8s.pod.name``. These attributes are required for accurate subscription usage. Don't remove the Kubernetes attributes processor from your configuration. See :ref:`kubernetes-attributes-processor` for more information.
+
+.. _apm-throttling-entitlement:
 
 Use the APM throttling and entitlement dashboards to better understand your usage
 ===================================================================================
