@@ -143,7 +143,7 @@ To download a subscription usage report, do the following:
 #. If you've selected a minute that falls within the trace retention period the :guilabel:`Download Data` becomes active and displays the minute you selected. Select the download button to download  the .csv file.
 
   .. image:: /_images/admin/host-usage-diagnostics.gif
-    :width: 50%
+    :width: 95%
     :alt: Animated image that shows Selecting a minute within the hosts chart to download a diagnostic report.
 
 For each selected minute, the report shows the attributes or tags associated with the hosts and containers that sent data to Splunk APM. You might see different tags, like ``AWSUniqueId``, ``container_id``,  ``gcp_id``, and so on, depending on the source of the host or container observed and the version of your instrumentation agent.
