@@ -14,8 +14,6 @@ There are a number of reasons why your tests might fail. For example,
 * test 
 * test 
 
-
-
 Follow these guidelines to troubleshoot a broken test. 
 
 #. (Optional) Make a copy of the test so that you can check various solutions before fixing the original test. 
