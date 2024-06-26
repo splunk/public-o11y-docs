@@ -76,6 +76,10 @@ The subscription usage page displays the following information about your organi
 
 For any questions about subscription usage, contact tech support or your sales representative.
 
+  .. image:: /_images/admin/apm-subscription-usage-page.png
+    :width: 95%
+    :alt: APM subscription usage page.
+
 .. _download-apm-usage-reports:
 
 Download detailed usage reports
