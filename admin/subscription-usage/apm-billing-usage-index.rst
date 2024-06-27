@@ -40,6 +40,9 @@ The following table lists the Splunk APM billing and subscription usage informat
    * - Host and container diagnostics.
      - See :ref:`Host and container dignostic report<host-diagnostics-report-apm>`
 
+   * - Expensive services, most-used tag values, and largest ingested traces.
+     - See :ref:`Trace and span statitics<trace-span-statistics>`
+
    * - Throttling and limits metrics.
      - See :ref:`APM throttling dashboard<apm-throttling-entitlement>`
   
@@ -154,12 +157,14 @@ For each selected minute, the report shows the attributes or tags associated wit
 
 .. caution:: For Kubernetes deployments, the Kubernetes attributes processor extracts default attributes, such as ``k8s.pod.name``. These attributes are required for accurate subscription usage. Don't remove the Kubernetes attributes processor from your configuration. See :ref:`kubernetes-attributes-processor` for more information.
 
-Use the usage analyzer to understand increases in usage
-========================================================
+.. _trace-span-statistics:
+
+Use the trace and span statistics to understand increases in usage
+=====================================================================
 
 Use :guilabel:`Usage Analyzer` at the bottom of the page to understand increases in your usage data. Specifically, the usage analyzer can help you determine your most expensive services, your most-used tag values, and your largest ingested traces.
 
-The :guilabel:`Spans per minute` and :guilabel:`Bytes per minute` charts show span and bytes ingested at 2-hour intervals for for the last 8 days. Select a 2-hour bar within either chart to see data tables for :guilabel:`Services by span count`, :guilabel:`Tags by total size`, and :guilabel:`Traces with most spans`.
+The :guilabel:`Spans per minute` and :guilabel:`Bytes per minute` charts show span and bytes ingested at 2-hour intervals for for the last 8 days. Select a 2-hour bar within either chart to see data tables for :guilabel:`Services by span count`, :guilabel:`Tags by total size`, and :guilabel:`Traces with most spans` for the midpoint minute within the 2-hour interval.
 
 Use this data to troubleshoot and create a plan to mitigate sudden increases in your APM usage data.
 
