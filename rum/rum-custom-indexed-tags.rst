@@ -8,7 +8,9 @@ Custom indexed tags in Splunk RUM
    :description: words
 
 
-Custom tags provide the flexibility of adding whatever metadata you're interested in to spans that you send to Splunk RUM. For example, if you want to send metadata by department, or customer tier, you can create custom span tags for each. This table shows the differences among the types of span tags in Splunk RUM. 
+Define meaningful metadata with custom indexed tags so that you can group by and filter spans according to your interests. For example, if you want to sort spans by metadata according to department or customer tier, create custom span tags for each so that when your spans are ingested by Splunk RUM... 
+
+This table explains the types of span tags in Splunk RUM and the use cases for each. 
 
 .. list-table::
    :widths: 20 20 20
@@ -17,8 +19,12 @@ Custom tags provide the flexibility of adding whatever metadata you're intereste
    * - :strong:`Custom span tags`
      - :strong:`Indexed span tags`
      - :strong:`Custom indexed span tags`
-   * - Created using global attributes in Splunk RUM instrumentation. 
-     - RUM Troubleshooting MetricSets are generated for indexed tags, so that you can filter and aggregate Troubleshooting MetricSets by indexed tags on Tag Spotlight. Indexing a span tag generates Troubleshooting MetricSets for that tag. These tags are automatically indexed:
+   * - An optional step during instrumentation, you can use global attributes that are key-value pairs, to add custom span tags. See: 
+
+        *  :ref:`rum-global_attributes`
+        *  :ref:`browser-rum-identify-users` 
+
+     - Indexing a span tag means that RUM also generates a Troubleshooting MetricSets for each index tag. Then, you can use Tag Spotlight to filter and aggregate Troubleshooting MetricSets by indexed tags. See, :ref:`search-indexed-tags`. The following tags are automatically indexed during ingestion.
 
        * url name
        * operation
@@ -28,17 +34,17 @@ Custom tags provide the flexibility of adding whatever metadata you're intereste
        * OS name and version
        * city, region, country
         
-     - A custom span tag that you indicate is a tag for which you want to generate Troubleshooting MetricSets. This provides the added functionality of aggregating and filtering Troubleshooting MetricSets on this tag in Tag Spotlight view.
-   * - :ref:`browser-rum-identify-users` 
-     - :ref:`search-indexed-tags`
-     - link
+     - A custom span tag has the advantages of both global attributes and Troubleshooting MetricSets. This provides the added functionality of aggregating and filtering Troubleshooting MetricSets on this tag in Tag Spotlight view. 
 
 
 
-Examples and guidance on custom indexed span tags  
+Example 
 ========================================================
 
-Custom tags provide the flexibility of adding whatever metadata you're interested in to spans you send to Splunk RUM. For example, if you want to send metadata by department, or customer tier you can create custom span tags for each.
+
+
+Create a custom indexed span tags 
+========================================================
 
 To create Troubleshooting MetricSets for your custom span tags, you need to indicate that you want to index that custom tag. High cardinality tags like userID, or orgID aren't optimal use cases, as indexing these tags generate many Troubleshooting MetricSets. For high cardinality ID based tags full-fidelity session search is a better option. 
 
