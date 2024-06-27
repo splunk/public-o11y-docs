@@ -188,7 +188,7 @@ For example, the following API call rotates ``myToken`` and sets a grace period 
       -H "Content-type: application/json" \
       -H "X-SF-TOKEN: <123456abcd>"
 
-After you're finished rotating the token, update any of your OpenTelemetry Collector configurations with the new token secret before the grade period ends. 
+After you're finished rotating the token, update any of your OpenTelemetry Collector configurations with the new token secret before the grace period ends. 
 
 To learn more about this endpoint and to see more examples of requests and responses, see the :new-page:`Splunk developer documentation <https://dev.splunk.com/observability/reference/api/org_tokens/latest#endpoint-rotate-token-secret>`. 
 
