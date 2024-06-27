@@ -76,7 +76,6 @@ To find your runtime identifier, follow these steps:
 #. Run the application and check your application logs.
 #. Verify that the runtime identifier is supported for your instrumentation.
 
-
 Traces don't appear in Splunk Observability Cloud
 ==================================================================
 
