@@ -170,12 +170,12 @@ To rotate an access token, use the ``POST /token/{name}/rotate`` endpoint in the
 
    curl -X  POST "https://api.{realm}.signalfx.com/v2/token/{name}/rotate?graceful={gracePeriod}" \
       -H "Content-type: application/json" \
-      -H "X-SF-TOKEN: <api-token-value>"
+      -H "X-SF-TOKEN: <your-user-session-api-token-value>"
 
 Follow these steps:
 
 #. Enter your Splunk realm in the ``realm`` field.
-#. Enter your API access token in the ``api-token-value`` field. To find or create an API access token, see :ref:`admin-api-access-tokens`.
+#. Enter your API session token in the ``your-user-session-api-token-value`` field. To find or create an API session token, see :ref:`admin-api-access-tokens`.
 #. Provide the name of the token you want to rotate in the ``name`` field.
 #. Optionally, provide a grace period, in seconds, in the ``gracePeriod`` field.
 #. Call the API endpoint to rotate the token.
@@ -187,6 +187,8 @@ For example, the following API call rotates ``myToken`` and sets a grace period 
    curl -X POST "https://api.us0.signalfx.com/v2/token/myToken/rotate?graceful=6048000" \
       -H "Content-type: application/json" \
       -H "X-SF-TOKEN: <123456abcd>"
+
+After you're finished rotating the token, update any of your OpenTelemetry Collector configurations with the new token secret before the grade period ends. 
 
 To learn more about this endpoint and to see more examples of requests and responses, see the :new-page:`Splunk developer documentation <https://dev.splunk.com/observability/reference/api/org_tokens/latest#endpoint-rotate-token-secret>`. 
 
