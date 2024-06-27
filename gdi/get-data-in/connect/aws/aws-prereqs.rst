@@ -107,7 +107,7 @@ Tag and property sync permissions:
 
 Tag and property sync is always enabled for the services configured in the integration. For some services, Splunk Observability Cloud uses either service-specific APIs or generic APIs: Resource Groups Tagging API or Cloud Control API. 
 
-Note that the ``tag:GetResources`` permission is sufficient to use Resource Groups Tagging API. However, in the case of Cloud Control API, on top of the ``cloudformation:ListResources`` and ``cloudformation:GetResource`` permissions you need to also provide service specific permissions: for example ``kafka:DescribeClusterV2`` and ``kafka:ListClustersV2`` for AWS/Kafka.
+.. note:: The ``tag:GetResources`` permission is sufficient to use the Resource Groups Tagging API. If you're using the Cloud Control API, you need to provide permissions for ``cloudformation:ListResources`` and ``cloudformation:GetResource`` as well as service-specific permissions, for example,  ``kafka:DescribeClusterV2`` and ``kafka:ListClustersV2`` for AWS/Kafka.
 
 
 .. _aws-iam-policy-cw:
