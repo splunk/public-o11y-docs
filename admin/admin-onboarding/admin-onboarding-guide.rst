@@ -39,7 +39,7 @@ Follow these steps to onboard Splunk Observability Cloud in your organization. T
 
        Part 2: Initial pilot rollout for Splunk Infrastructure Monitoring
       
-       Part 3: Intial pilot rollout for Splunk Application Performance Monitoring
+       Part 3: Initial pilot rollout for Splunk Application Performance Monitoring
 
        See :ref:`phase2`.
 

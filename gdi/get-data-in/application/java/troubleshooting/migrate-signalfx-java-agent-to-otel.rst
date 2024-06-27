@@ -9,7 +9,7 @@ Migrate from the SignalFx Java Agent
 
 The SignalFx Java Agent is deprecated and has reached End of Support. Replace it with the agent from the Splunk Distribution of OpenTelemetry Java.
 
-The agent of the Splunk Distribution of OpenTelemetry Java is based on the OpenTelemetry Instrumentation for Java, an open-source project that uses the OpenTelemetry API and has a smaller memory footprint than the SignalFx Java Agent. 
+The agent of the Splunk Distribution of OpenTelemetry Java is based on the OpenTelemetry Instrumentation for Java, an open-source project that uses the OpenTelemetry API and has a smaller memory footprint than the SignalFx Java Agent.
 
 .. _requirements-splunk-java-otel-migration:
 

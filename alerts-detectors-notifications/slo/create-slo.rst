@@ -38,7 +38,7 @@ Follow these steps to create an SLO.
             - * Search for the service you want to create an SLO for
               * (Optional) Add an endpoint for the selected service
           * - Filters
-            - Enter any additional dimension names and values you want to apply this SLO to
+            - Enter any additional dimension names and values you want to apply this SLO to. Alternatively, use the ``NOT`` filter, represented by an exclamation point ( ! ), to exclude any dimension values from this SLO configuration.
 
     To use a custom metric as the health indicator for your SLO, follow these steps:
 
@@ -55,6 +55,8 @@ Follow these steps to create an SLO.
             - Search for the metric you want to use for the success request count
           * - Denominator metric
             - Search for the metric you want to use for the total request count
+
+        .. note:: Custom metric SLO works by calculating the percentage of successful requests over a given compliance period. This calculation works better for counter and histogram metrics than for gauge metrics. Gauge metrics are not suitable for custom metric SLO, so you might get confusing data when selecting gauge metrics in your configuration.
 
 #. Define your SLO and how to measure it.
 
