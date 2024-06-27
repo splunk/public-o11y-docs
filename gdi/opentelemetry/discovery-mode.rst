@@ -63,7 +63,7 @@ The following table shows the platforms that support each language runtime:
      - No
      - Yes. See :ref:`k8s-backend-auto-discovery`
    * - .NET
-     - No
+     - Yes. See :ref:`linux-backend-auto-discovery`
      - Yes. See :ref:`windows-backend-auto-discovery`
      - Yes. See :ref:`k8s-backend-auto-discovery`
    * - Node.js
