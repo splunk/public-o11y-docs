@@ -47,7 +47,7 @@ You can also use the service map as a starting point for monitoring or troublesh
 Filter the service map
 ===========================================
 
-The service map shows all service types by default. There is also a default maximum of 50 services. Select the filter menu to change the maximum or the types of services that display on the service map.
+Select the filter menu to change the maximum or the types of services that display on the service map. The service map shows all service types by default. There is also a default maximum of 50 services. 
 
 ..  image:: /_images/apm/spans-traces/filter-service-map.png
     :width: 95%
