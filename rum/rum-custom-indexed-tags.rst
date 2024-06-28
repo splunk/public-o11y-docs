@@ -24,15 +24,7 @@ This table explains the types of span tags in Splunk RUM and the use cases for e
         *  :ref:`rum-global_attributes`
         *  :ref:`browser-rum-identify-users` 
 
-     - Indexing a span tag means that RUM also generates a Troubleshooting MetricSets for each index tag. Then, you can use Tag Spotlight to filter and aggregate Troubleshooting MetricSets by indexed tags. See, :ref:`search-indexed-tags`. The following tags are automatically indexed during ingestion.
-
-       * url name
-       * operation
-       * HTTP Method and status code
-       * custom event name
-       * browser and version
-       * OS name and version
-       * city, region, country
+     - Indexing a span tag means that RUM also generates a Troubleshooting MetricSets for each index tag. Then, you can use Tag Spotlight to filter and aggregate Troubleshooting MetricSets by indexed tags. See, :ref:`search-indexed-tags`. 
         
      - A custom span tag has the advantages of both global attributes and Troubleshooting MetricSets. This provides the added functionality of aggregating and filtering Troubleshooting MetricSets on this tag in Tag Spotlight view. 
 
@@ -42,12 +34,27 @@ Example
 ========================================================
 
 
-
-Create a custom indexed span tags 
+Add custom indexed tags 
 ========================================================
 
-To create Troubleshooting MetricSets for your custom span tags, you need to indicate that you want to index that custom tag. High cardinality tags like userID, or orgID aren't optimal use cases, as indexing these tags generate many Troubleshooting MetricSets. For high cardinality ID based tags full-fidelity session search is a better option. 
 
-Manage custom indexed tags 
-========================================================
-First, create a custom tag by adding global attributes to your Splunk RUM instrumentation. See, Add user metadata using global attributes. For private preview, you need to file a ticket with support to add custom tags, or to stop indexing custom tags. 
+Create a custom tag by adding global attributes to your Splunk RUM instrumentation. See,... Add user metadata using global attributes...
+
+
+
+Prevent high cardinality 
+--------------------------------------
+Choose tags with a reasonable amount of cardinality. Tags like userID, or orgID are inefficient choices because there could be a huge number of users in your organization and creating a troubleshooting MetricSet for each userID is not optimal for performance. For high cardinality ID based tags full-fidelity session search is a better option. 
+
+The following tags are automatically indexed during ingestion by default:
+
+       * url name
+       * operation
+       * HTTP Method and status code
+       * custom event name
+       * browser and version
+       * OS name and version
+       * city, region, country
+
+
+
