@@ -74,7 +74,7 @@ Follow these steps to create an SLO.
       * - Target (%)
         - Enter the target you want to set for this SLO. 
       * - Latency (ms)
-        - Only available for request latency SLI type. Enter the target loading time for your service requests.
+        - Only available and required for request latency SLI type. Enter the target loading time for your service requests.
       * - Compliance window
         - Select a compliance window for this SLO from the dropdown menu.
 
