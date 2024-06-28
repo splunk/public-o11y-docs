@@ -50,7 +50,7 @@ Use the workflows filter throughout Splunk APM to filter to show data from the w
     <h2>Filter by service<a name="filter-by-service" class="headerlink" href="#filter-by-service" title="Filter by service">¶</a></h2>
   </embed>
 
-Use the service filter throughout Splunk APM to filter to show data from the services you want to view. You can select 1 or more services. Select :guilabel:`Add Row` to add multiple services. Wildcards (``*``) are supported in service values.
+Use the service filter throughout Splunk APM to filter to show data from the services you want to view. On some pages you can select more than 1 service by selecting :guilabel:`Add Row` to add multiple services. Wildcards (``*``) are supported in service values.
 
 ..  image:: /_images/apm/apm-filters/apm-filters-service.png
     :width: 65%
@@ -64,15 +64,6 @@ Use the service filter throughout Splunk APM to filter to show data from the ser
 
 Use the operation filter throughout Splunk APM to filter to show data from the operations you want to view. You can select 1 or more service-operation combinations. Select :guilabel:`Add Row` to add multiple service-operation combinations. Wildcards (``*``) are supported in operation values. 
 
-.. raw:: html
-
- <embed>
-    <h3>Available operators<a name="available-operation-operators" class="headerlink" href="#available-operation-operators" title="Available operators">¶</a></h3>
-  </embed>
-
-* Equals (``=``)
-* Not equal to (``!=``)
-
 ..  image:: /_images/apm/apm-filters/apm-filters-operations.png
     :width: 65%
     :alt: Operations filter dropdown available in various Splunk APM pages
@@ -85,15 +76,6 @@ Use the operation filter throughout Splunk APM to filter to show data from the o
 
 Use the tag filter throughout Splunk APM to filter to show data from the tags you want to view. You can select 1 or more indexed or unindexed tags. You can select multiple values for the same tag. To add filters for multiple tags, select :guilabel:`Add filters` to add another tag filter.  Wildcards (``*``) are supported in tag values. 
 
-.. raw:: html
-
- <embed>
-    <h3>Available operators<a name="available-tag-operators" class="headerlink" href="#available-tag-operators" title="Available operators">¶</a></h3>
-  </embed>
-
-* Equals (``=``)
-* Not equal to (``!=``)
-
 ..  image:: /_images/apm/apm-filters/apm-filters-tag.png
     :width: 65%
     :alt: Tags filter dropdown available in various Splunk APM pages
@@ -101,82 +83,84 @@ Use the tag filter throughout Splunk APM to filter to show data from the tags yo
 .. raw:: html
 
   <embed>
-    <h2>Supported APM pages<a name="supported-apm-pages" class="headerlink" href="#supported-apm-pages" title="Supported APM pages">¶</a></h2>
+    <h2>Wildcard, not equals, and APM page support<a name="filter-support" class="headerlink" href="#fiter-supported" title="Wildcard, not equals, and APM page support">¶</a></h2>
   </embed>
 
 .. list-table::
   :header-rows: 1
-  :widths: 14, 14, 14, 14, 14, 14, 14
+  :width: 100%
+  :widths: 20, 20, 20, 40
 
-  * - :strong:`APM page`
-    - :strong:`Time range filter`
-    - :strong:`Environment filter`
-    - :strong:`Workflow filter`
-    - :strong:`Service filter`
-    - :strong:`Operation filter`
-    - :strong:`Tag filter`
+  * - :strong:`Filter`
+    - :strong:`Not equals support`
+    - :strong:`Wildcard support`
+    - :strong:`APM pages`
 
-  * - AlwaysOn Profiling
-    - Yes
-    - Yes
-    - No
-    - Yes (Supports the selection of only 1 service)
+  * - Time range 
     - No
     - No
+    - * AlwaysOn Profiling
+      * Database query performance
+      * Endpoint performance
+      * Service map
+      * Service view
+      * Tag Spotlight
+      * Trace Analyzer
+      * Trace search (classic)
 
-  * - Database query performance
-    - Yes
-    - Yes
-    - Yes
-    - Yes
-    - Yes
-    - Yes
-
-  * - Endpoint performance
-    - Yes
-    - Yes
-    - Yes
-    - Yes
-    - Yes
-    - Yes
-
-  * - Service map
-    - Yes
-    - Yes
-    - Yes
-    - Yes
-    - Yes
-    - Yes
-
-  * - Service view
-    - Yes
-    - Yes
-    - No
-    - Yes (Supports selection of only 1 service)
+  * - Environment
     - No
     - No
+    - * AlwaysOn Profiling
+      * Database query performance
+      * Endpoint performance
+      * Service map
+      * Service view
+      * Tag Spotlight
+      * Trace Analyzer
+      * Trace search (classic)
 
-  * - Tag Spotlight
+  * - Workflow
+    - No
     - Yes
-    - Yes
-    - Yes
-    - Yes (Supports selection of only 1 service)
-    - Yes
-    - Yes
+    - * Database query performance
+      * Endpoint performance
+      * Service map
+      * Tag Spotlight
+      * Trace Analyzer
+      * Trace search (classic)
 
 
-  * - Trace Analyzer
+  * - Service
+    - No
     - Yes
-    - Yes
-    - Yes
-    - Yes
-    - Yes
-    - Yes
+    - * AlwaysOn Profiling (1 service only)
+      * Database query performance
+      * Endpoint performance
+      * Service map
+      * Service view (1 service only)
+      * Tag Spotlight 
+      * Trace Analyzer (1 service only)
+      * Trace search (classic) (1 service only)
 
-  * - Trace search (classic)
+
+  * - Operation
     - Yes
     - Yes
+    - * Database query performance
+      * Endpoint performance
+      * Service map
+      * Tag Spotlight
+      * Trace Analyzer
+      * Trace search (classic)
+
+
+  * - Tag
     - Yes
     - Yes
-    - Yes
-    - Yes
+    - * Database query performance
+      * Endpoint performance
+      * Service map
+      * Tag Spotlight
+      * Trace Analyzer
+      * Trace search (classic)
