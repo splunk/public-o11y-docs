@@ -164,7 +164,7 @@ Use the trace and span statistics to understand increases in usage
 
 Use :guilabel:`Usage Analyzer` at the bottom of the page to understand increases in your usage data. Specifically, the usage analyzer can help you determine your most expensive services, your most-used tag values, and your largest ingested traces.
 
-The :guilabel:`Spans per minute` and :guilabel:`Bytes per minute` charts show span and bytes ingested at 2-hour intervals for for the last 8 days. Select a 2-hour bar within either chart to see data tables for :guilabel:`Services by span count`, :guilabel:`Tags by total size`, and :guilabel:`Traces with most spans` for the midpoint minute within the 2-hour interval.
+The :guilabel:`Spans per minute` and :guilabel:`Trace volume` charts show span and trace volume ingested at 2-hour intervals for for the last 8 days. Select a 2-hour bar within either chart to see data tables for :guilabel:`Services by span count`, :guilabel:`Tags by total size`, and :guilabel:`Traces with most spans` for the midpoint minute within the 2-hour interval.
 
 Use this data to troubleshoot and create a plan to mitigate sudden increases in your APM usage data.
 
