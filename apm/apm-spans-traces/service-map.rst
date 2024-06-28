@@ -42,6 +42,17 @@ You can also use the service map as a starting point for monitoring or troublesh
 * To get real-time monitoring insights on the service, select :guilabel:`View Dashboard` in the side panel to view the built-in service dashboard. See :ref:`apm-dashboards` to learn more.
 * To do more extensive troubleshooting, select the :guilabel:`Tag Spotlight` tab in the side panel to open Tag Spotlight. See :ref:`apm-tag-spotlight` to learn more.
 
+.. _filter-service-map:
+
+Filter the service map
+===========================================
+
+The service map shows all service types by default. There is also a default maximum of 50 services. Select the filter menu to change the maximum or the types of services that display on the service map.
+
+..  image:: /_images/apm/spans-traces/filter-service-map.png
+    :width: 95%
+    :alt: The service map filter menu
+
 .. _service-map-breakdowns:
 
 Perform breakdowns in the service map
