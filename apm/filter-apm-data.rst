@@ -74,7 +74,7 @@ Use the operation filter throughout Splunk APM to filter to show data from the o
     <h2>Filter by tags<a name="filter-by-tags" class="headerlink" href="#filter-by-tags" title="Filter by tags">¶</a></h2>
   </embed>
 
-Use the tag filter throughout Splunk APM to filter to show data from the tags you want to view. You can select 1 or more indexed or unindexed tags. You can select multiple values for the same tag. To add filters for multiple tags, select :guilabel:`Add filters` to add another tag filter.  Wildcards (``*``) are supported in tag values. 
+Use the tag filter throughout Splunk APM to filter to show data from the tags you want to view. You can select 1 or more indexed or unindexed tags. You can select multiple values for the same tag. To add filters for multiple tags, select :guilabel:`Add filters` to add another tag filter. Wildcards (``*``) are supported in tag values. 
 
 ..  image:: /_images/apm/apm-filters/apm-filters-tag.png
     :width: 65%
