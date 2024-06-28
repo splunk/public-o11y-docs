@@ -29,7 +29,6 @@ This table explains the types of span tags in Splunk RUM and the use cases for e
      - A custom span tag has the advantages of both global attributes and Troubleshooting MetricSets. This provides the added functionality of aggregating and filtering Troubleshooting MetricSets on this tag in Tag Spotlight view. 
 
 
-
 Example 
 ========================================================
 
@@ -37,9 +36,7 @@ Example
 Add custom indexed tags 
 ========================================================
 
-
 Create a custom tag by adding global attributes to your Splunk RUM instrumentation. See,... Add user metadata using global attributes...
-
 
 
 Prevent high cardinality 
@@ -58,3 +55,5 @@ The following tags are automatically indexed during ingestion by default:
 
 
 
+Delete custom indexed tags 
+==============================
