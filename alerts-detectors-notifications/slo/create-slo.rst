@@ -38,7 +38,7 @@ Follow these steps to create an SLO.
             - * Search for the service you want to create an SLO for
               * (Optional) Add an endpoint for the selected service
           * - Indicator type
-            - | Select either success rate or latency to use as the measurement for your SLO target:
+            - Select either success rate or latency to use as the measurement for your SLO target:
               
               * Request success: Measure the proportion of requests that result in a successful response over the duration of the compliance window
               
