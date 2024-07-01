@@ -87,8 +87,6 @@ You can enter multiple classes. For example, ``my.package.MyClass,my.package2.*`
 
 .. caution:: Deactivating instrumentation for specific classes can have unintended side effects. Use this feature with caution.
 
-.. _java-trace-exporter-issues:
-
 Telemetry export issues
 =======================
 
@@ -106,6 +104,8 @@ In the Java 2.x instrumentation, the default protocol changed from gRPC to http/
    #. Verify that the custom endpoint configuration uses the correct port. For example: ``otel.exporter.otlp.endpoint``.
    #. Verify that the custom protocol configuration uses the correct port. For example: ``otel.exporter.otlp.protocol``.
 #. In the OTel Collector configuration, verify that the associated OTLP receiver protocols match those used by the Java agent.
+
+.. _java-trace-exporter-issues:
 
 Trace exporter issues
 =====================================================
