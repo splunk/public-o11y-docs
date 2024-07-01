@@ -101,8 +101,8 @@ In the Java 2.x instrumentation, the default protocol changed from gRPC to http/
 
       * gRPC: 4317
       * http/protobuf: 4318
-   #. Verify that the custom endpoint configuration uses the correct port. For example: ``otel.exporter.otlp.endpoint``.
-   #. Verify that the custom protocol configuration uses the correct port. For example: ``otel.exporter.otlp.protocol``.
+   #. Verify that the custom endpoint configuration uses the correct port. For example: ``otel.exporter.otlp.endpoint=http://<host>:4318``.
+   #. Verify that the custom protocol configuration uses the correct protocol. For example: ``otel.exporter.otlp.protocol=http/protobuf``.
 #. In the OTel Collector configuration, verify that the associated OTLP receiver protocols match those used by the Java agent.
 
 .. _java-trace-exporter-issues:
