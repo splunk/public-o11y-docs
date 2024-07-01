@@ -87,6 +87,8 @@ You can enter multiple classes. For example, ``my.package.MyClass,my.package2.*`
 
 .. caution:: Deactivating instrumentation for specific classes can have unintended side effects. Use this feature with caution.
 
+.. _java_telemetry_export_issues:
+
 Telemetry export issues
 =======================
 
