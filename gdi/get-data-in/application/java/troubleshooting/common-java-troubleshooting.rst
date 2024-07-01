@@ -89,6 +89,24 @@ You can enter multiple classes. For example, ``my.package.MyClass,my.package2.*`
 
 .. _java-trace-exporter-issues:
 
+Telemetry export issues
+=======================
+
+Telemetry not working after migration to Java 2.x instrumentation
+-----------------------------------------------------------------
+
+In the Java 2.x instrumentation, the default protocol changed from gRPC to http/protobuf. If a custom configuration overrides the default endpoint setting, you must make sure of the following:
+
+#. Verify that the Java agent configuration is correct:
+
+   #. Verify that you are using the following ports:
+
+      * gRPC: 4317
+      * http/protobuf: 4318
+   #. Verify that the custom endpoint configuration uses the correct port. For example: ``otel.exporter.otlp.endpoint``.
+   #. Verify that the custom protocol configuration uses the correct port. For example: ``otel.exporter.otlp.protocol``.
+#. In the OTel Collector configuration, verify that the associated OTLP receiver protocols match those used by the Java agent.
+
 Trace exporter issues
 =====================================================
 
@@ -105,10 +123,21 @@ The following error in the logs means that the agent can't send trace data to th
 
 To troubleshoot the lack of connectivity between the OTLP exporter and the OTel Collector, try the following steps:
 
-#. Make sure that ``otel.exporter.otlp.endpoint`` points to the correct OpenTelemetry Collector instance host.
+#. Make sure that ``otel.exporter.otlp.endpoint`` points to the correct OpenTelemetry Collector instance host: ``http://<host>:4318``.
 #. Check that your OTel Collector instance is configured and running. See :ref:`otel-splunk-collector-tshoot`.
 #. Check that the OTLP receiver is activated in the OTel Collector and plugged into the traces pipeline.
-#. Check that the OTel Collector points to the following address: ``http://<host>:4317``. Verify that your URL is correct.
+#. In the OTel Collector configuration, make sure that the OTLP receiver's HTTP endpoint is set to port 4318, as the Java agent exports spans to port 4318 using the ``http/protobuf`` protocol.
+
+   .. code-block:: yaml
+
+      otlp:
+        protocols:
+          grpc:
+            endpoint: "${SPLUNK_LISTEN_INTERFACE}:4317"
+          http:
+            endpoint: "${SPLUNK_LISTEN_INTERFACE}:4318"   
+
+Check that the OTel Collector points to the following address: ``http://<host>:4317``. Verify that your URL is correct.
 
 401 error when sending spans
 --------------------------------------------------------
