@@ -25,6 +25,8 @@ How to get started with Splunk On-Call
    team-dashboard
    api
    custom-outbound-webhooks
+   github-authentication-guide
+   deprecation-of-splunk-on-call-phone-notifications-to-china
   
 
 
