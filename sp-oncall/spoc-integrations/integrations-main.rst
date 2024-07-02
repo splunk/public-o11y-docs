@@ -9,7 +9,7 @@ Splunk On-Call integrations
 .. Rename all "victorops" instances and insert in the list in alphabetical order 
 
 .. toctree::
-
+   :hidden:
 
    alertsite-integration
    appdynamics-integration
