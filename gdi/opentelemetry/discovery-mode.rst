@@ -110,5 +110,8 @@ Automatic discovery supports the following host services and applications:
    * - MongoDB
      - MongoDB receiver. See :ref:`mongodb-receiver`
 
+   * - Kafka
+     - Kafka metrics receiver. See :ref:`kafkametrics-receiver`
+
 
 
