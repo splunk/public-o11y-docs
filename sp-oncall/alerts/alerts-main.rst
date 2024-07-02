@@ -31,21 +31,21 @@ Manage alerts
 
 The Rules engine allows you to set specific rules for triggering and routing alerts. Refer to the topics in this section for configuring the rules engine and your alerts.
 
-    Routing keys <../alerts/rules-engine/routing-keys>
-    Rules engine TOGGLE <../alerts/rules-engine/alert-rules-engine>
+    spoc-routing-keys
+    alert-rules-engine
     ack-back
-    auto-pause-high-alert-lag
-    auto-resolve-pop-ack
+    auto-pause
+    auto-resolve
     waiting-room
     conference-bridges
-    custom-paging-policies-time-based
+    custom-paging-policy
     escalation-webhooks
     filtering-options
     incident-fields-glossary
     maintenance-mode
-    notification-alert-aggregation
-    team-dashboard
+    spoc-alert-aggregation
+    incident-review-spoc
     team-escalation-policy
-    multiple-escalation-policies
+    mult-escalation-policies
     war-room
 
