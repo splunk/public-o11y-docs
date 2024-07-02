@@ -322,7 +322,9 @@ The annotation you set depends on the language runtime you're using. You can set
 
         Add the ``instrumentation.opentelemetry.io/inject-dotnet`` annotation to the application object YAML.
 
-        Depending on your environment, you'll need to add another annotation. See the following table for details:
+        Depending on your environment and your runtime identifier (RID), you'll need to add another annotation. To learn how to find your RID, see :ref:`dotnet-find-rid`.
+        
+        See the following table for details:
 
         .. list-table::
             :header-rows: 1

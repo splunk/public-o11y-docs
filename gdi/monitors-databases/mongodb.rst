@@ -1,10 +1,14 @@
 .. _mongodb:
 
-MongoDB
-==========
+MongoDB (deprecated)
+=================================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the MongoDB monitor. See benefits, install, configuration, and metrics
+
+.. note:: The MongoDB monitor is deprecated and will reach end of support on January 15, 2025. During this period, only critical security and bug fixes are provided. When the monitor reaches end of support, you won't be able to use it to send data to Splunk Observability Cloud.
+
+   To monitor your MongoDB databases, you can instead use the native OpenTelemetry MongoDB receiver. To learn more, see :ref:`mongodb-receiver`.
 
 The
 :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`

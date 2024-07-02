@@ -87,6 +87,8 @@ In the AlwaysOn Profiling table, :guilabel:`Count` shows how many times a line a
 
 When you select a frame, an information dialog appears with the amount of call stacks where the code is present. Select :guilabel:`Show Thread Info` to see which threads contributed call stacks. 
 
+.. _search-filter-flamegraph:
+
 Search and filter your flame graph
 -------------------------------------
 

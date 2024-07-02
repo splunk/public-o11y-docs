@@ -491,7 +491,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Override default time range <data-visualization/use-time-range-selector>   
+   Select the time range <data-visualization/use-time-range-selector>   
 
 .. toctree::
    :maxdepth:   3
@@ -642,6 +642,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Use Data Links to connect APM properties to relevant resources TOGGLE <apm/apm-data-links/data-links-landing>
+
+.. toctree::
+   :maxdepth:   3
+
+   apm/filter-apm-data
 
 .. toctree::
    :caption: Infrastructure

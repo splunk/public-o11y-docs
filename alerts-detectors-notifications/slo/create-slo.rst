@@ -19,9 +19,9 @@ Follow these steps to create an SLO.
 #. From the landing page of Splunk Observability Cloud, go to :strong:`Detectors & SLOs`.
 #. Select the :strong:`SLOs` tab.
 #. Select :guilabel:`Create SLO`.
-#. Select the service or metric you want to use as the system health indicator for your SLO.
+#. Configure the service level indicator (SLI) for your SLO.
 
-    To use a service as the health indicator for your SLO, follow these steps:
+    To use a service as the system health indicator for your SLI configuration, follow these steps:
 
         .. list-table::
           :header-rows: 1
@@ -37,10 +37,16 @@ Follow these steps to create an SLO.
           * - Service\:\endpoint
             - * Search for the service you want to create an SLO for
               * (Optional) Add an endpoint for the selected service
+          * - Indicator type
+            - Select either success rate or latency to use as the measurement for your SLO target:
+              
+              * Request success: Measure the proportion of requests that result in a successful response over the duration of the compliance window
+              
+              * Request latency: Measure the proportion of requests that load within the specified latency over the duration of the compliance window
           * - Filters
             - Enter any additional dimension names and values you want to apply this SLO to. Alternatively, use the ``NOT`` filter, represented by an exclamation point ( ! ), to exclude any dimension values from this SLO configuration.
 
-    To use a custom metric as the health indicator for your SLO, follow these steps:
+    To use a custom metric as the system health indicator for your SLI configuration, follow these steps:
 
         .. list-table::
           :header-rows: 1
@@ -69,6 +75,8 @@ Follow these steps to create an SLO.
         - :strong:`Actions`
       * - Target (%)
         - Enter the target you want to set for this SLO. 
+      * - Latency (ms)
+        - Only available and required for request latency SLI type. Enter the target loading time for your service requests.
       * - Compliance window
         - Select a compliance window for this SLO from the dropdown menu.
 
