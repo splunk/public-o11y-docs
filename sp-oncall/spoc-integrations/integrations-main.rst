@@ -99,7 +99,6 @@ Splunk On-Call integrations
    salesforce-integration
    scalyr-integration
    scout-integration
-   signalfx-integration
    signal-sciences-integration
    sensu-integration
    sentry-integration-guide-victorops
@@ -125,6 +124,7 @@ Splunk On-Call integrations
    wavefront-integration-guide-victorops
    webex-teams-integration-guide
    whatsup-gold-integration-guide
+   zabbix-spoc
    zendesk-bi-directional-integration
    zenoss-integration
 
@@ -223,7 +223,6 @@ Get step-by-step instructions on how to integrate your Splunk On-Call account:
    salesforce-integration
    scalyr-integration
    scout-integration
-   signalfx-integration
    signal-sciences-integration
    sensu-integration
    sentry-integration-guide-victorops
