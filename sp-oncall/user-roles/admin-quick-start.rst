@@ -27,8 +27,8 @@ Create Teams
 
 Teams are made up of:
 
-* user lists, 
-* on-call shifts nd 
+* user lists
+* on-call shifts 
 * escalation policies.
 
 To create a team, navigate to the Teams section from the top nav bar. From the Teams page, select :guilabel:`Add Team`, then choose a name.

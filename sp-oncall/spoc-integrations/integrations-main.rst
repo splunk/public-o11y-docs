@@ -124,7 +124,7 @@ Splunk On-Call integrations
    wavefront-integration-guide-victorops
    webex-teams-integration-guide
    whatsup-gold-integration-guide
-   zabbix-spoc
+   zabbix-integration
    zendesk-bi-directional-integration
    zenoss-integration
 
