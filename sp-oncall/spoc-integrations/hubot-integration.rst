@@ -1,7 +1,7 @@
 .. _hubot-integration-spoc:
 
 Hubot integration for Splunk On-Call
-:guilabel:``******************************************************
+******************************************************
 
 .. meta:: 
    :description: Configure the Hubot integration for Splunk On-Call.

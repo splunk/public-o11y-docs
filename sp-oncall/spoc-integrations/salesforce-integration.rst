@@ -81,7 +81,7 @@ Add triggers
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Add the :guilabel:`Triggers`. 
-#. Look for the :guilabel:`Object Manager` tab next to the :guilabel:`Home`tab. Select it to go to the page.
+#. Look for the :guilabel:`Object Manager` tab next to the :guilabel:`Home` tab. Select it to go to the page.
 #. Once in the Object Manager Page look for the :guilabel:`Case` object.
 
 .. image:: /_images/spoc/Screen-Shot-2022-04-22-at-1.45.38-PM.png
@@ -91,8 +91,8 @@ Add triggers
 #. Open the Triggers page and look for the :guilabel:`New` button. Add the code from the Github page. Make sure you delete any
    code that was there before when you first open it. Add the following code:
     
-    - :new-page:`VO Alert Apex Trigger <https://github.com/victorops/monitoring_tool_releases/blob/master/VictorOps-salesforce/VO%20Alert%20Apex%20Trigger>`__
-    - :new-page:`Resolve Case Apex Trigger <https://github.com/victorops/monitoring_tool_releases/blob/master/VictorOps-salesforce/Resolve%20Case%20Apex%20Trigger>`__.
+    - :new-page:`VO Alert Apex Trigger <https://github.com/victorops/monitoring_tool_releases/blob/master/VictorOps-salesforce/VO%20Alert%20Apex%20Trigger>`
+    - :new-page:`Resolve Case Apex Trigger <https://github.com/victorops/monitoring_tool_releases/blob/master/VictorOps-salesforce/Resolve%20Case%20Apex%20Trigger>`.
 
 .. image:: /_images/spoc/Screen-Shot-2022-04-22-at-1.51.53-PM.png
    :alt: The trigger menu with voAlert and resolveCaseVO triggers.
