@@ -23,10 +23,10 @@ Follow these steps to configure and activate the component:
 2. Configure the Kafka receiver as described in the next section.
 3. Restart the Collector.
 
-Sample configurations
+Sample configuration
 ----------------------
 
-To activate the receiver, add ``kafka`` to the ``receivers`` section of your configuration file, as shown in the following example:
+To activate the receiver, add ``kafka`` to the ``receivers`` section of your configuration file:
 
 .. code:: yaml
 
