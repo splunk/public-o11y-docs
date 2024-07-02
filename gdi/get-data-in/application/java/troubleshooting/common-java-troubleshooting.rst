@@ -99,13 +99,22 @@ In the Java 2.x instrumentation, the default protocol changed from gRPC to http/
 
 #. Verify that the Java agent configuration is correct:
 
-   #. Verify that you are using the following ports:
+   #. Verify that you are using the correct port for the selected protocol:
 
       * gRPC: 4317
       * http/protobuf: 4318
    #. Verify that the custom endpoint configuration uses the correct port. For example: ``otel.exporter.otlp.endpoint=http://<host>:4318``.
    #. Verify that the custom protocol configuration uses the correct protocol. For example: ``otel.exporter.otlp.protocol=http/protobuf``.
-#. In the OTel Collector configuration, verify that the associated OTLP receiver protocols match those used by the Java agent.
+#. In the OTel Collector configuration file, verify that the associated OTLP receiver protocols match those used by the Java agent. Here is an example OTLP receiver configuration in the OTel Collector file:
+
+   .. code-block:: yaml
+
+      otlp:
+        protocols:
+          grpc:
+            endpoint: "${SPLUNK_LISTEN_INTERFACE}:4317"
+          http:
+            endpoint: "${SPLUNK_LISTEN_INTERFACE}:4318"
 
 .. _java-trace-exporter-issues:
 
@@ -128,7 +137,7 @@ To troubleshoot the lack of connectivity between the OTLP exporter and the OTel 
 #. Make sure that ``otel.exporter.otlp.endpoint`` points to the correct OpenTelemetry Collector instance host: ``http://<host>:4318``.
 #. Check that your OTel Collector instance is configured and running. See :ref:`otel-splunk-collector-tshoot`.
 #. Check that the OTLP receiver is activated in the OTel Collector and plugged into the traces pipeline.
-#. In the OTel Collector configuration, make sure that the OTLP receiver's HTTP endpoint is set to port 4318, as the Java agent exports spans to port 4318 using the ``http/protobuf`` protocol.
+#. In the OTel Collector configuration file, verify that the associated OTLP receiver protocols match those used by the Java agent. Here is an example OTLP receiver configuration in the OTel Collector file:
 
    .. code-block:: yaml
 
@@ -137,9 +146,7 @@ To troubleshoot the lack of connectivity between the OTLP exporter and the OTel 
           grpc:
             endpoint: "${SPLUNK_LISTEN_INTERFACE}:4317"
           http:
-            endpoint: "${SPLUNK_LISTEN_INTERFACE}:4318"   
-
-Check that the OTel Collector points to the following address: ``http://<host>:4317``. Verify that your URL is correct.
+            endpoint: "${SPLUNK_LISTEN_INTERFACE}:4318"
 
 401 error when sending spans
 --------------------------------------------------------
