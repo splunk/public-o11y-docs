@@ -9,10 +9,15 @@ Troubleshoot broken tests
 
 
    
-There are a number of reasons why your tests might fail. For example, 
-* test 
-* test 
-* test 
+There are a number of reasons why your tests might fail like issues with test validation or application unresponsiveness. For example, 
+
+* API endpoint was unreachable
+* URL was unreachable
+* UI element wasn't found
+* Default wait time of 10 seconds is too short for step assertions to complete. A test might fail because it takes longer than 10 seconds for a website to load. 
+
+Troubleshoot test validation
+===============================
 
 Follow these guidelines to troubleshoot a broken test. 
 
