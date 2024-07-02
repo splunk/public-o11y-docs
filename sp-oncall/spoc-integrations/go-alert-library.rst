@@ -1,4 +1,4 @@
-:orphan:
+
 
 .. _go-alert:
 

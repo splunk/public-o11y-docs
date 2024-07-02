@@ -1,4 +1,4 @@
-:orphan:
+
 
 .. _github-auth-spoc:
 
