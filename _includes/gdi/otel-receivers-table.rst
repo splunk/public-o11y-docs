@@ -24,8 +24,8 @@
 * :ref:`otlp-receiver`                
 * :ref:`postgresql-receiver`
 * :ref:`prometheus-receiver`
-* :ref:`receiver-creator-receiver`
 * :ref:`rabbitmq-receiver`
+* :ref:`receiver-creator-receiver`
 * :ref:`redis-receiver`
 * :ref:`sapm-receiver`
 * :ref:`simple-prometheus-receiver`
