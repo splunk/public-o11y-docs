@@ -18,7 +18,7 @@ The following applies:
 
 * To enable the RabbitMQ Management Plugin, follow the official instructions as described in :new-page:`RabbitMQ Getting Started <https://www.rabbitmq.com/docs/management#getting-started>`.
 
-* You need at least monitoring level permissions to monitor. Read more at :ref:`RabbitMQ permissions <https://www.rabbitmq.com/docs/management#permissions>`.
+* You need at least monitoring level permissions to monitor. Read more at :new-page:`RabbitMQ permissions <https://www.rabbitmq.com/docs/management#permissions>`.
 
 Get started
 ======================
@@ -37,7 +37,7 @@ Follow these steps to configure and activate the component:
 Sample configuration
 ----------------------------------------------------------------------
 
-To activate the RabbitMQ receiver manually in the Collector configuration, add ``rabbitmq`` to the ``receivers`` section of your configuration file, as shown in the following example:
+To activate the RabbitMQ receiver, add ``rabbitmq`` to the ``receivers`` section of your configuration file, as shown in the following example:
 
 .. code:: yaml
 
@@ -48,7 +48,7 @@ To activate the RabbitMQ receiver manually in the Collector configuration, add `
       password: ${env:RABBITMQ_PASSWORD}
       collection_interval: 10s
 
-To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your configuration file. For example:
+To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your configuration file:
 
 .. code:: yaml
 
