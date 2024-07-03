@@ -20,6 +20,10 @@ Follow the steps in this guide to migrate to 2.x metrics and HTTP semantic conve
 
 .. note:: Version 2.x of the Java agent collects metrics and logs by default. This might result in increased data ingest costs.
 
+.. caution:: 
+   
+   The default protocol changed in the Java 2.0 instrumentation from gRPC to http/protobuf. For custom configurations, verify that you're sending data to http/protobuf endpoints. For troubleshooting guidance, see :ref:`java_telemetry_export_issues`.
+
 Prerequisites
 =============================================
 
