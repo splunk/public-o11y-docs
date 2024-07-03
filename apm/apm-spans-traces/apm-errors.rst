@@ -195,9 +195,9 @@ Count 4xx status codes as errors
 
 By default, Splunk APM does not count server-side spans with ``4xx`` status codes as errors, because a ``4xx`` status code is often associated with a problem with the request itself, rather than a problem with the service handling a request.
 
-For example, if a user makes a request to ``endpoint/that/does/not/exist``, the ``404`` status code the service returns does not mean there's a problem with the service. Instead, it means there was a problem with the request, which is trying to call an endpoint that doesn't exist. Similarly, if a user tries to access a resource they don’t have access to, the service might return a ``401`` status code, which is typically not the result of an error on the server side.
+For example, if a user makes a request to ``endpoint/that/does/not/exist``, the ``404`` status code the service returns does not mean there's a problem with the service. Instead, it means there was a problem with the request, which is trying to call an endpoint that doesn't exist. Similarly, if a user tries to access a resource they don't have access to, the service might return a ``401`` status code, which is typically not the result of an error on the server side.
 
-However, depending on your application’s logic, a ``4xx`` status code might represent a meaningful error, particularly for client-side requests. To monitor for ``4xx`` errors, try doing the following: 
+However, depending on your application's logic, a ``4xx`` status code might represent a meaningful error, particularly for client-side requests. To monitor for ``4xx`` errors, try doing the following: 
 
 * Break down performance by HTTP status code span tags, if available. 
 * Customize your instrumentation to set the ``span.status`` of spans with meaningful ``4xx`` status codes to ``Error``.
