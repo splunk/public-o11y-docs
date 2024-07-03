@@ -38,6 +38,7 @@ Collector components: Receivers
     otlp-receiver                
     postgresql-receiver
     prometheus-receiver
+    rabbitmq-receiver
     receiver-creator-receiver
     redis-receiver
     sapm-receiver
