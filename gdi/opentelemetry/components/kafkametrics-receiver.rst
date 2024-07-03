@@ -52,7 +52,7 @@ Configuration options
 
 These settings are required:
 
-* ``protocol_version``. No default. Kafka protocol version.
+* ``protocol_version``. No default. The Kafka protocol version, for example ``2.0.0``.
 
 * ``scrapers``. No default. Any combination of the following scrapers can be enabled:
 
@@ -64,57 +64,57 @@ These settings are required:
 
 The following settings are optional:
 
-* brokers (default = localhost:9092): the list of brokers to read from.
+* ``brokers``. ``localhost:9092`` by default. The list of brokers to read from.
 
-* resolve_canonical_bootstrap_servers_only (default = false): whether to resolve then reverse-lookup 
+* ``resolve_canonical_bootstrap_servers_only``. ``false`` by default. Determines whether to resolve then reverse-lookup broker IPs during startup.
 
-* broker IPs during startup.
+* ``topic_match``. ``^[^_].*$)`` by default. Regex pattern of topics to filter on metrics collection. The default filter excludes internal topics, which start with ``_``.
 
-* topic_match (default = ^[^_].*$): regex pattern of topics to filter on metrics collection. The default filter excludes internal topics (starting with _).
+* ``group_match``. ``.*)`` by default. Regex pattern of consumer groups to filter on for metrics.
 
-* group_match (default = .*): regex pattern of consumer groups to filter on for metrics.
+* ``client_id``. ``otel-metrics-receiver`` by default. Consumer client Id.
 
-* client_id (default = otel-metrics-receiver): consumer client id
+* ``collection_interval``. ``1m`` by default. Frequency of metric collection/scraping.
 
-* collection_interval (default = 1m): frequency of metric collection/scraping.
+* ``initial_delay``. ``1s`` by default. Determines how long this receiver waits before starting.
 
-* initial_delay (default = 1s): defines how long this receiver waits before starting.
+* ``auth``. No default. Use one of the following:
 
-* auth (default none)
+  * ``plain_text``. It has the following fields:
 
-  * plain_text
-username: The username to use.
-password: The password to use
+    * ``username``. The username to use.
 
-  * ``tls``. 
+    * ``password``. The password to use.
 
-    * ``ca_file: path to the CA cert. For a client this verifies the server certificate. Should only be used if insecure is set to true.
+  * ``tls``. It has the following fields:
 
-    * ``cert_file: path to the TLS cert to use for TLS required connections. Should only be used if insecure is set to true.
+    * ``ca_file``. Use only if ``insecure`` is set to ``false``. Path to the CA cert. For a client it verifies the server certificate. 
 
-    * ``key_file: path to the TLS key to use for TLS required connections. Should only be used if insecure is set to true.
+    * ``cert_file``. Use only if ``insecure`` is set to ``false``. Path to the TLS cert to use for TLS required connections. 
 
-    * ``insecure (default = false): Disable verifying the server's certificate chain and host name (InsecureSkipVerify in the tls config)
+    * ``key_file``. Use only if ``insecure`` is set to ``false``. Path to the TLS key to use for TLS required connections. 
 
-    * ``server_name_override: ServerName indicates the name of the server requested by the client in order to support virtual hosting.
+    * ``insecure``. ``false`` by default. Disables the verification of the server's certificate chain and host name, ``InsecureSkipVerify`` in the tls configuration.
 
-  * ``kerberos``
+    * ``server_name_override``. Indicates the name of the server requested by the client in order to support virtual hosting.
 
-    * ``service_name: Kerberos service name
+  * ``kerberos``. It has the following fields:
 
-    * ``realm: Kerberos realm
+    * ``service_name``. Kerberos service name.
 
-    * ``use_keytab: Use of keytab instead of password, if this is true, keytab file will be used instead of password
+    * ``realm``. Kerberos realm.
 
-    * ``username: The Kerberos username used for authenticate with KDC
+    * ``use_keytab``. If ``true``, the keytab is used instead of the password.
 
-    * ``password: The Kerberos password used for authenticate with KDC
+    * ``username``. The Kerberos username used to authenticate with KDC.
 
-    * ``config_file: Path to Kerberos configuration. i.e /etc/krb5.conf
+    * ``password``. The Kerberos password used to authenticate with KDC.
 
-    * ``keytab_file: Path to keytab file. i.e /etc/security/kafka.keytab
+    * ``config_file``. Path to Kerberos configuration, for example ``/etc/krb5.conf``.
 
-    * ``disable_fast_negotiation: Disable PA-FX-FAST negotiation (Pre-Authentication Framework - Fast). Some common Kerberos implementations do not support PA-FX-FAST negotiation. This is set to false by default.
+    * ``keytab_file``. Path to the keytab file, for example ``/etc/security/kafka.keytab``.
+
+    * ``disable_fast_negotiation``. ``false`` by default. Disables the PA-FX-FAST negotiation (Pre-Authentication Framework - Fast). Some common Kerberos implementations do not support PA-FX-FAST negotiation. 
 
 Configuration example: Set authentication and the collection interval to 5 seconds
 ----------------------------------------------------------------------------------------------
@@ -141,7 +141,7 @@ This example sets the collection interval for all scrapers to 5 seconds and conf
 Settings
 ======================
 
-The following table shows the configuration options for the MongoDB receiver:
+The following table shows the configuration options for the Kafka metrics receiver:
 
 .. raw:: html
 
