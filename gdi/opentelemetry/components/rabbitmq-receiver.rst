@@ -12,7 +12,13 @@ The RabbitMQ receiver fetches stats from a RabbitMQ node using the RabbitMQ Mana
 Prerequisites
 ======================
 
+The following applies:
 
+* This receiver supports RabbitMQ versions 3.8 and 3.9.
+
+* To enable the RabbitMQ Management Plugin, follow the official instructions as described in :new-page:`RabbitMQ Getting Started <https://www.rabbitmq.com/docs/management#getting-started>`.
+
+* You need at least monitoring level permissions to monitor. Read more at :ref:`RabbitMQ permissions <https://www.rabbitmq.com/docs/management#permissions>`.
 
 Get started
 ======================
@@ -31,12 +37,16 @@ Follow these steps to configure and activate the component:
 Sample configuration
 ----------------------------------------------------------------------
 
-To activate the RabbitMQ receiver manually in the Collector configuration, add ``rabitmq`` to the ``receivers`` section of your configuration file, as shown in the following example:
+To activate the RabbitMQ receiver manually in the Collector configuration, add ``rabbitmq`` to the ``receivers`` section of your configuration file, as shown in the following example:
 
 .. code:: yaml
 
   receivers:
     rabbitmq:
+      endpoint: http://localhost:15672
+      username: otelu
+      password: ${env:RABBITMQ_PASSWORD}
+      collection_interval: 10s
 
 To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your configuration file. For example:
 
@@ -47,6 +57,20 @@ To complete the configuration, include the receiver in the ``metrics`` pipeline 
       metrics:
         receivers: [rabbitmq]
 
+Configuration settings
+----------------------------------------------------------------------
+
+The following settings are required:
+
+* ``username``
+* ``password``
+
+The following settings are optional:
+
+* ``endpoint``. ``http://localhost:15672`` by default. The URL of the node to be monitored.
+* ``collection_interval``. ``10s`` by default.  This receiver collects metrics on an interval. Valid time units are ``ns``, ``us`` (or ``µs``), ``ms``, ``s``, ``m``, ``h``.
+* ``tls``. TLS control. By default insecure settings are rejected and certificate verification is on. Learn more about the default settings at :new-page:`TLS Configuration Settings <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/configtls/README.md>` in GitHub.
+
 Settings
 ======================
 
@@ -56,7 +80,7 @@ The following table shows the configuration options for the Redis receiver:
 
   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/rabbitmq.yaml"></div>
 
-.. _redis-receiver-metrics:
+.. _rabbitmq-receiver-metrics:
 
 Metrics
 =====================
