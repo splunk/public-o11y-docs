@@ -97,8 +97,18 @@ Required permissions in Splunk Observability Cloud
 Regardless of the services you want to use, you need the following permissions:
 
 * ``organizations:DescribeOrganization``. Only needed when Amazon cost and usage metrics are activated.
-* ``ec2:DescribeRegions``
+* ``ec2:DescribeRegions``. Used to check if regions configured in the integration are enabled on the AWS account.
+
+Tag and property sync permissions:
+
 * ``tag:GetResources``
+* ``cloudformation:ListResources``
+* ``cloudformation:GetResource``
+
+Tag and property sync is always activated for the services configured in the integration. For some services, Splunk Observability Cloud uses either service-specific APIs or generic APIs such as the Resource Groups Tagging API or Cloud Control API. 
+
+.. note:: The ``tag:GetResources`` permission is sufficient to use the Resource Groups Tagging API. If you're using the Cloud Control API, you need to provide permissions for ``cloudformation:ListResources`` and ``cloudformation:GetResource`` as well as service-specific permissions, for example,  ``kafka:DescribeCluster`` and ``kafka:ListClusters`` for AWS/Kafka.
+
 
 .. _aws-iam-policy-cw:
 
@@ -124,7 +134,9 @@ For example:
           "cloudwatch:ListMetrics",
           "ec2:DescribeRegions",
           "organizations:DescribeOrganization",
-          "tag:GetResources"
+          "tag:GetResources",
+          "cloudformation:ListResources",
+          "cloudformation:GetResource"
         ],
         "Resource": "*"
       }
@@ -231,8 +243,8 @@ These are these permissions to allow Splunk Observability Cloud to collect AWS t
 - ``"elasticmapreduce:ListClusters"``
 - ``"es:DescribeElasticsearchDomain"``
 - ``"es:ListDomainNames"``
-- ``"kafka:DescribeClusterV2"``
-- ``"kafka:ListClustersV2"``
+- ``"kafka:DescribeCluster"``
+- ``"kafka:ListClusters"``
 - ``"kinesis:DescribeStream"``
 - ``"kinesis:ListShards"``
 - ``"kinesis:ListStreams"``
@@ -314,8 +326,8 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
           "elasticmapreduce:ListClusters",
           "es:DescribeElasticsearchDomain",
           "es:ListDomainNames",
-          "kafka:DescribeClusterV2",
-          "kafka:ListClustersV2",
+          "kafka:DescribeCluster",
+          "kafka:ListClusters",
           "kinesis:DescribeStream",
           "kinesis:ListShards",
           "kinesis:ListStreams",
