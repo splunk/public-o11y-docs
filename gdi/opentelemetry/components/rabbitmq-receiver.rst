@@ -1,16 +1,18 @@
 .. _rabbitmq-receiver:
 
 ****************************************
-Redis receiver
+RabbitMQ receiver
 ****************************************
 
 .. meta::
       :description: The Redis receiver retrieves Redis ``INFO`` data from a specific Redis instance and builds metrics from it.
 
-The RabbitMQ receiver fetches stats from a RabbitMQ node using the RabbitMQ Management Plugin.
+The RabbitMQ receiver fetches stats from a RabbitMQ node using the RabbitMQ Management Plugin. For more information on the plugin refer to RabbitMQ's documentation at :new-page:`Management Plugin <https://www.rabbitmq.com/docs/management>`. The supported pipeline is ``metrics``. See :ref:`otel-data-processing` for more information.
 
 Prerequisites
 ======================
+
+
 
 Get started
 ======================
