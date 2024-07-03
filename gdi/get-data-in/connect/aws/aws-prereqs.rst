@@ -109,7 +109,6 @@ Tag and property sync is always activated for the services configured in the int
 
 .. note:: The ``tag:GetResources`` permission is sufficient to use the Resource Groups Tagging API. If you're using the Cloud Control API, you need to provide permissions for ``cloudformation:ListResources`` and ``cloudformation:GetResource`` as well as service-specific permissions, for example, ``kinesisanalytics:DescribeApplication``, ``kinesisanalytics:ListApplications`` and ``kinesisanalytics:ListTagsForResource``, for AWS/KinesisAnalytics.
 
-
 .. _aws-iam-policy-cw:
 
 Permissions for the CloudWatch API

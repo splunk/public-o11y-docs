@@ -130,6 +130,9 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
    * - :ref:`simple-prometheus-receiver` (``prometheus_simple``)
      - Wraps the ``prometheus`` receiver to provide simplified settings for single targets.
      - Metrics
+   * - :ref:`rabbitmq-receiver` (``rabbitmq``)
+     - Fetches stats from a RabbitMQ node using the RabbitMQ Management Plugin.
+     - Metrics
    * - :ref:`receiver-creator-receiver` (``receiver_creator``)
      - Instantiates other receivers at runtime based on whether observed endpoints match a configured rule. To use the receiver creator, configure one or more observer extensions to discover networked endpoints.
      - N/A
