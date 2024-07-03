@@ -7,7 +7,7 @@ Kafka metrics receiver
 .. meta::
       :description: Collects Kafka metrics such as brokers, topics, partitions, and consumer groups from Kafka server, and converts them to OTLP format.
 
-The Kafka metrics receiver collects Kafka metrics (such as brokers, topics, partitions, and consumer groups) from a Kafka server and converts them to OTLP format.
+The Kafka metrics receiver collects Kafka metrics (such as brokers, topics, partitions, and consumer groups) from a Kafka server and converts them to OTLP format. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
 Get started
 ======================
@@ -23,7 +23,7 @@ Follow these steps to configure and activate the component:
 2. Configure the receiver as described in the next section.
 3. Restart the Collector.
 
-Sample configurations
+Sample configuration
 ---------------------------
 
 To activate the Kafka metrics receiver, add ``kafkametrics`` to the ``receivers`` section of your configuration file, as shown in the following example:
