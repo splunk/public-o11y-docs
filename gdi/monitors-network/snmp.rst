@@ -384,7 +384,9 @@ The nested ``field`` configuration object has the following fields:
 Metrics
 -------
 
-This integration doesn't produce any metrics. Look for tags as especified in the settings.
+By default this monitor has no fixed metrics. Instead, it will create metrics based on your configuration. Look for tags as especified in the settings.
+
+All metrics are custom. 
 
 Troubleshooting
 ---------------

@@ -385,9 +385,9 @@ fields:
 Metrics
 -------
 
-By default metrics are emitted as gauges. 
+By default this monitor has no fixed metrics. Instead, it will create metrics based on your configuration. All metrics are custom. 
 
-If you have cumulative counter metrics that you want properly typed in Splunk Observability
+Metrics are emitted as gauges. If you have cumulative counter metrics that you want properly typed in Splunk Observability
 Cloud, use one of the following options:
 
 -  Set the configuration option ``signalFxCumulativeCounters`` to the
