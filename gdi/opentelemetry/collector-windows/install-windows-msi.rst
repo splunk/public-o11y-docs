@@ -69,7 +69,7 @@ Follow these steps:
 
     Start-Process -Wait msiexec "/i PATH_TO_MSI /qn"  
 
-1. Update all variables in the configuration file as appropriate. See :ref:`install-windows-msi-modify-default`.
+1. Update all variables in the configuration file as appropriate. See :ref:`windows-config-change-default` for more information.
 2. Start the ``splunk-otel-collector`` service by rebooting the system or by running the following command in a PowerShell terminal:
 
   .. code-block:: PowerShell
