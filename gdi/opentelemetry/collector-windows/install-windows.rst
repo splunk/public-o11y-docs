@@ -18,8 +18,9 @@ forwarding for all data types. Read on to see how to install it using the instal
 
 Alternatively, you can also install the Collector for Windows:
 
+* Using MSI. See :ref:`otel-install-windows-msi`. 
 * Using deployment tools. See :ref:`otel-install-windows-tools`. 
-* Manually. To learn how, see :ref:`otel-install-windows-manual`.
+* Manually. See :ref:`otel-install-windows-manual`.
 
 .. _windows-otel-requirements:
 
