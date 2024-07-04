@@ -15,7 +15,6 @@ Install the Collector for Windows using deployment tools
 The Splunk Distribution of the OpenTelemetry Collector for Windows is a package that provides integrated collection and
 forwarding for all data types. You can install it using the following deployment tools:
 
-* :ref:`windows-msi`
 * :ref:`windows-ansible`
 * :ref:`windows-chef`
 * :ref:`windows-nomad`
@@ -24,14 +23,13 @@ forwarding for all data types. You can install it using the following deployment
 Alternatively, you can also install the Collector for Windows:
 
 * Using the installer script. See :ref:`otel-install-windows`. 
-* Manually. To learn how, see :ref:`otel-install-windows-manual`.
+* Using MSI. See :ref:`otel-install-windows-msi`. 
+* Manually. See :ref:`otel-install-windows-manual`.
 
-.. _windows-msi:
+Prerequisites
+==========================
 
-MSI
-===============================
-
-TO DO
+.. include:: /_includes/requirements/collector-windows.rst
 
 .. _windows-ansible:
 
