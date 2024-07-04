@@ -26,6 +26,8 @@ Alternatively, you can also install the Collector for Windows:
 * Using MSI. See :ref:`otel-install-windows-msi`. 
 * Manually. See :ref:`otel-install-windows-manual`.
 
+.. _install-windows-tools-prereqs:
+
 Prerequisites
 ==========================
 

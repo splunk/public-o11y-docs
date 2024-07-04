@@ -23,6 +23,7 @@ Alternatively, you can also install the Collector for Windows:
 * Manually. See :ref:`otel-install-windows-manual`.
 
 .. _windows-otel-requirements:
+.. _install-windows-prereqs:
 
 Prerequisites
 ==========================
@@ -165,7 +166,7 @@ The Windows installer script supports the following options:
 .. _otel-install-windows-modify:
 
 Modify the default configuration
-===============================
+=========================================
 
 The Splunk Distribution of the OpenTelemetry Collector comes with a default configuration, as detailed in :ref:`windows-config-ootb`. This configuration can be modified as needed. See :ref:`otel-windows-config` for more information.
 
