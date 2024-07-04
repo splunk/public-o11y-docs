@@ -5,7 +5,7 @@ Install the Collector for Windows using MSI
 **************************************************
 
 .. meta::
-      :description: Describes how to install the Splunk Distribution of OpenTelemetry Collector for Windows using MSI.
+      :description: Describes how to install the Splunk Distribution of the OpenTelemetry Collector for Windows using MSI.
 
 .. toctree::
   :maxdepth: 4
@@ -36,7 +36,7 @@ Collector environment variables
 
 .. _windows-installer:
 
-Windows installer file (MSI) installation
+Install the Collector using the Windows installer file (MSI) 
 ===============================================================================
 
 To install the package using Windows Installer, download the Windows MSI package (64-bit only) from :new-page:`GitHub releases <https://github.com/signalfx/splunk-otel-collector/releases>`.
@@ -47,7 +47,7 @@ To install the package using Windows Installer, download the Windows MSI package
 
 .. note:: The ``ProgramData`` folder is hidden by default on Windows.
 
-Next, proceed with the GUI, or follow the instructions to install using a Powershell terminal.
+Next, proceed with the GUI, or follow the instructions to install the Collector using a Powershell terminal.
 
 .. _windows-manual-installer-gui:
 

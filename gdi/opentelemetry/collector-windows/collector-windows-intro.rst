@@ -5,7 +5,7 @@ Get started with the Collector for Windows
 ***********************************************************
 
 .. meta::
-   :description: Introduction to the Splunk Distribution of OpenTelemetry Collector for Linux.
+   :description: Introduction to the Splunk Distribution of the OpenTelemetry Collector for Windows.
 
 .. toctree::
    :maxdepth: 5
@@ -24,8 +24,9 @@ Get started with the Collector for Windows
 To install the Splunk Distribution of the OpenTelemetry Collector for Windows, follow these docs:
 
 * :ref:`otel-install-windows`
-* :ref:`otel-install-windows-manual`
+* :ref:`otel-install-windows-msi` 
 * :ref:`otel-install-windows-tools`
+* :ref:`otel-install-windows-manual`
 
 See the default settings and configuration options at:
 

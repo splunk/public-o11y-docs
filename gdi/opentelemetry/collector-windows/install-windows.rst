@@ -5,7 +5,7 @@ Install the Collector for Windows with the installer script
 ****************************************************************
 
 .. meta::
-      :description: Describes how to install the Splunk Distribution of OpenTelemetry Collector for Windows.
+      :description: Describes how to install the Splunk Distribution of the OpenTelemetry Collector for Windows.
 
 .. toctree::
   :maxdepth: 4

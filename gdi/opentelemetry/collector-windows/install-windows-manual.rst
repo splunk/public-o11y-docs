@@ -5,7 +5,7 @@ Install the Collector for Windows manually
 **************************************************
 
 .. meta::
-      :description: Describes how to install the Splunk Distribution of OpenTelemetry Collector for Windows using MSI.
+      :description: Describes how to install the Splunk Distribution of the OpenTelemetry Collector for Windows manually.
 
 .. toctree::
   :maxdepth: 4
