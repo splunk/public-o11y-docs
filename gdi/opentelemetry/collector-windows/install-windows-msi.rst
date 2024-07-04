@@ -14,6 +14,12 @@ Install the Collector for Windows using MSI
 
 You can use Windows MSI to install the Splunk Distribution of the Collector for Windows.
 
+.. note:: 
+  
+  The Splunk Distribution of the OpenTelemetry Collector comes with a default configuration, as detailed in :ref:`windows-config-ootb`. To modify this configuration, refer to :ref:`otel-windows-config`.
+
+  To learn how to obtain logs, see :ref:`windows-config-logs`.
+
 Alternatively, you can also install the Collector for Windows:
 
 * Using the installer script. See :ref:`otel-install-windows`. 
@@ -27,19 +33,12 @@ Prerequisites
 
 .. include:: /_includes/requirements/collector-windows.rst
 
-.. _install-windows-msi-env-variables:
-
-Collector environment variables
-=====================================
-
-.. include:: /_includes/collector-env-vars.rst
-
 .. _windows-installer:
 
 Install the Collector using the Windows installer file (MSI) 
 ===============================================================================
 
-To install the package using Windows Installer, download the Windows MSI package (64-bit only) from :new-page:`GitHub releases <https://github.com/signalfx/splunk-otel-collector/releases>`.
+To install the package using Windows Installer, download the Windows MSI package (64-bit only) from the Collector's :new-page:`GitHub release site <https://github.com/signalfx/splunk-otel-collector/releases>`.
 
   - The package is installed to ``\Program Files\Splunk\OpenTelemetry Collector``.
   - The ``splunk-otel-collector`` service is created, but not started.
@@ -70,27 +69,24 @@ Follow these steps:
 
     Start-Process -Wait msiexec "/i PATH_TO_MSI /qn"  
 
-1. Update all variables in the configuration file as appropriate. See :ref:`install-windows-msi-env-variables`.
+1. Update all variables in the configuration file as appropriate. See :ref:`install-windows-msi-modify-default`.
 2. Start the ``splunk-otel-collector`` service by rebooting the system or by running the following command in a PowerShell terminal:
 
   .. code-block:: PowerShell
 
     Start-Service splunk-otel-collector
 
-Learn more about advanced configuration options (including Service Logging) using PowerShell in the Splunk Distribution of OpenTelemetry Collector :new-page:`Windows manual <https://github.com/signalfx/splunk-otel-collector/blob/main/docs/getting-started/windows-manual.md>`.
+Learn more about advanced configuration options (including Service Logging) using PowerShell in the following docs: 
+
+* :ref:`otel-install-windows-manual`
+* :ref:`otel-windows-config`
 
 .. _windows-manual-fluentd:
 
 Install Fluentd MSI for log collection
 ==================================================
 
-Default log collection
------------------------------------------------
-
-Install, configure, and start the Collector with :ref:`Windows Installer <windows-installer>`. The Collector default configuration file ``\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml`` listens for log events on ``127.0.0.1:8006`` and sends them to Splunk Observability Cloud.
-
-Log collection with Fluentd
------------------------------------------------
+If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance. 
 
 .. note:: You need to be an Admin to configure log collection with Fluentd.
 
@@ -117,6 +113,18 @@ Perform the following steps to install Fluentd and forward ``collected`` log eve
 
 Learn more about general Fluentd configuration details in the :new-page:`official Fluentd documentation <https://docs.fluentd.org/configuration>`.
 
+Custom MSI URLs
+==================================================
+
+By default, the Collector MSI is downloaded from :new-page:`https://dl.signalfx.com <https://dl.signalfx.com>` and
+the Fluentd MSI is downloaded from :new-page:`https://packages.treasuredata.com <https://packages.treasuredata.com>`.  
+
+To specify custom URLs for these downloads, use the ``collector_msi_url`` and ``fluentd_msi_url`` options. Replace ``COLLECTOR_MSI_URL`` and ``FLUENTD_MSI_URL`` with the URLs to the desired MSI packages to install:
+
+.. code-block:: PowerShell
+
+  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "<SPLUNK_ACCESS_TOKEN>"; realm = "<SPLUNK_REALM>"; collector_msi_url = "<COLLECTOR_MSI_URL>"; fluentd_msi_url = "<FLUENTD_MSI_URL>"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
+
 .. _windows-chocolatey:
 
 Install using a Chocolatey package
@@ -127,24 +135,6 @@ A :new-page:`Chocolatey package <https://community.chocolatey.org/packages/splun
 .. code-block:: PowerShell
 
   choco install splunk-otel-collector --params="'/SPLUNK_ACCESS_TOKEN:MY_SPLUNK_ACCESS_TOKEN /SPLUNK_REALM:MY_SPLUNK_REALM'"
-
-Learn more about the :new-page:`package parameters <https://github.com/signalfx/splunk-otel-collector/blob/main/docs/getting-started/windows-manual.md#package-parameters>` in GitHub.
-
-.. _install-windows-msi-modify-default:
-
-Modify the default configuration
-==========================================
-
-All installation methods offer default configurations using environment variables. Before starting the ``splunk-otel-collector`` service, replace the variables in the default configuration file with the appropriate values for your environment. See :ref:`otel-windows-config` for more information.
-
-.. include:: /_includes/collector-env-vars.rst
-
-.. note:: When configuring additional settings, use service, process, or terminal scopes.  
-
-Configure proxy settings
-----------------------------------
-
-To configure proxy settings to install and run the OpenTelemetry Collector, see :ref:`configure-proxy-collector`.  
 
 Next steps
 ==================================

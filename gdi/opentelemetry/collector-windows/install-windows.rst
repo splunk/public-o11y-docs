@@ -14,7 +14,11 @@ Install the Collector for Windows with the installer script
 The Splunk Distribution of the OpenTelemetry Collector for Windows is a package that provides integrated collection and
 forwarding for all data types. Read on to see how to install it using the installer script.
 
-.. note:: The Collector comes with a default configuration. To learn more, see :ref:`windows-config-ootb`.
+.. note:: 
+  
+  The Splunk Distribution of the OpenTelemetry Collector comes with a default configuration, as detailed in :ref:`windows-config-ootb`. To modify this configuration, refer to :ref:`otel-windows-config`.
+
+  To learn how to obtain logs, see :ref:`windows-config-logs`.
 
 Alternatively, you can also install the Collector for Windows:
 
@@ -162,15 +166,6 @@ The Windows installer script supports the following options:
    * - ``msi_public_properties``
      - Specify public MSI properties to be used when installing the Splunk OpenTelemetry Collector MSI package.
      -
-
-.. _otel-install-windows-modify:
-
-Modify the default configuration
-=========================================
-
-The Splunk Distribution of the OpenTelemetry Collector comes with a default configuration, as detailed in :ref:`windows-config-ootb`. This configuration can be modified as needed. See :ref:`otel-windows-config` for more information.
-
-For more information about the Collector's environment variables, see :ref:`collector-env-var`.
 
 Next steps
 ==================================

@@ -20,6 +20,12 @@ forwarding for all data types. You can install it using the following deployment
 * :ref:`windows-nomad`
 * :ref:`windows-puppet`
 
+.. note:: 
+  
+  The Splunk Distribution of the OpenTelemetry Collector comes with a default configuration, as detailed in :ref:`windows-config-ootb`. To modify this configuration, refer to :ref:`otel-windows-config`.
+
+  To learn how to obtain logs, see :ref:`windows-config-logs`.
+
 Alternatively, you can also install the Collector for Windows:
 
 * Using the installer script. See :ref:`otel-install-windows`. 

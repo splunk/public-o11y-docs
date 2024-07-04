@@ -14,6 +14,12 @@ Install the Collector for Windows manually
 
 You can use Windows MSI to install the Splunk Distribution of the Collector for Windows.
 
+.. note:: 
+  
+  The Splunk Distribution of the OpenTelemetry Collector comes with a default configuration, as detailed in :ref:`windows-config-ootb`. To modify this configuration, refer to :ref:`otel-windows-config`.
+
+  To learn how to obtain logs, see :ref:`windows-config-logs`.
+
 Alternatively, you can also install the Collector for Windows:
 
 * Using the installer script. See :ref:`otel-install-windows`. 
@@ -77,22 +83,6 @@ To install the Collector using the binary file, follow these steps:
   PS> & '<download dir>\otelcol_windows_amd64.exe'
 
   # type Ctrl-c to stop the collector
-
-.. _install-windows-manual-modify-default:
-
-Modify the default configuration
-==========================================
-
-All installation methods offer default configurations using environment variables. Before starting the ``splunk-otel-collector`` service, replace the variables in the default configuration file with the appropriate values for your environment. See :ref:`otel-windows-config` for more information.
-
-.. include:: /_includes/collector-env-vars.rst
-
-.. note:: When configuring additional settings, use service, process, or terminal scopes.  
-
-Configure proxy settings
-----------------------------------
-
-To configure proxy settings to install and run the OpenTelemetry Collector, see :ref:`configure-proxy-collector`.  
 
 .. _windows-manual-custom:
 
