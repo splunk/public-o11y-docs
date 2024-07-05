@@ -11,7 +11,7 @@ Instrumenting applications automatically using the agent of the Splunk Distribut
 
 .. _start-tracing-via-code-python:
 
-Start tracing via code
+Start tracing using code
 ===============================
 
 If you're unable to use the ``splunk-py-trace`` command to launch the application, you can instead import and configure ``start_tracing`` by adding the following to your application code: 
