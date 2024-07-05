@@ -12,7 +12,7 @@ Install the Collector for Windows using the MSI installer
   :titlesonly:
   :hidden:
 
-You can use Windows MSI to install the Splunk Distribution of the Collector for Windows.
+You can use the Windows MSI installer to install the Splunk Distribution of the Collector for Windows.
 
 .. note:: 
   
