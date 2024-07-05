@@ -5,7 +5,8 @@ Deploy the Collector with Ansible for Linux
 ********************************************************
 
 .. meta::
-      :description: Describes how to install the Splunk Observability Cloud OpenTelemetry Collector Ansible role on Linux.
+
+  :description: Describes how to install the Splunk Observability Cloud OpenTelemetry Collector Ansible role on Linux.
 
 Install the Ansible collection
 =========================================

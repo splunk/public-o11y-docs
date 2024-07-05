@@ -10,15 +10,14 @@ Install the Collector for Windows using deployment tools
 
 .. toctree::
   :maxdepth: 4
-  :titlesonly:
+  :hidden:
+
+  Ansible for Windows <deployments-windows-ansible.rst>
+  Chef for Windows <deployments-windows-chef.rst>  
+  Puppet for Windows <deployments-windows-puppet.rst>
 
 The Splunk Distribution of the OpenTelemetry Collector for Windows is a package that provides integrated collection and
-forwarding for all data types. You can install it using the following deployment tools:
-
-* :ref:`windows-ansible`
-* :ref:`windows-chef`
-* :ref:`windows-nomad`
-* :ref:`windows-puppet`
+forwarding for all data types. Read on to see how to install it using several deployment tools.
 
 .. note:: 
   
@@ -34,41 +33,34 @@ Alternatively, you can also install the Collector for Windows:
 
 .. _install-windows-tools-prereqs:
 
-Prerequisites
-==========================
+.. raw:: html
+
+  <embed>
+    <h2>Prerequisites<a name="install-windows-tools-prereqs" class="headerlink" href="#install-windows-tools-prereqs" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
 .. include:: /_includes/requirements/collector-windows.rst
 
-.. _windows-ansible:
+.. raw:: html
 
-Ansible
-===============================
+  <embed>
+    <h2>Available deployment tools<a name="install-windows-tools-prereqs" class="headerlink" href="#install-windows-tools-prereqs" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
-Splunk provides an Ansible role that installs the package configured to collect data (metrics, traces, and logs) from Windows machines and send that data to Splunk Observability Cloud. See :ref:`deployment-windows-ansible` for the instructions to download and customize the role.
+The following deployment tools to install the Splunk Distribution of the OpenTelemetry Collector are available:
 
-.. _windows-chef:
+* Use Splunk's Ansible role to install the package configured to collect data (metrics, traces, and logs) from Windows machines and send it to Splunk Observability Cloud. See :ref:`deployment-windows-ansible` for the instructions to download and customize the role.
+* Use Splunk's cookbook to install the Collector with Chef. See :ref:`deployments-chef` for the installation instructions.
+* Use Nomad to deploy the Collector. To learn how to install Nomad, see :ref:`deployments-nomad`.
+* Use Splunk's Puppet module to install and configure the package. A module is a collection of resources, classes, files, definition, and templates. To learn how to download and customize the module, see :ref:`deployment-windows-puppet`.
 
-Chef 
-===============================
+.. note:: See also :ref:`otel_deployments`.
 
-Splunk provides a cookbook to install the Collector using Chef. See :ref:`deployments-chef` for the installation instructions.
+.. raw:: html
 
-.. _windows-nomad:
-
-Nomad 
-===============================
-
-Use Nomad to deploy the Collector. To learn how to install Nomad, see :ref:`deployments-nomad`.
-
-.. _windows-puppet:
-
-Puppet
-===============================
-
-Splunk provides a Puppet module to install and configure the package. A module is a collection of resources, classes, files, definition, and templates. To learn how to download and customize the module, see :ref:`deployment-windows-puppet`.
-
-Next steps
-==================================
+  <embed>
+    <h2>Next steps<a name="install-windows-next" class="headerlink" href="#install-windows-next" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
 .. include:: /_includes/gdi/collector-windows-next-steps.rst
 

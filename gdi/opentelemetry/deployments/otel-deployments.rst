@@ -1,7 +1,7 @@
 .. _otel_deployments:
 
 **************************************************
-Collector deployment tools and options
+Other Collector deployment tools and options
 **************************************************
 
 .. meta::
@@ -15,14 +15,9 @@ Collector deployment tools and options
     Amazon ECS EC2 <deployments-ecs-ec2.rst>
     Amazon Fargate <deployments-fargate.rst>
     Fargate scenario: Monitor Java app <deployments-fargate-java.rst>
-    Ansible for Linux <deployments-linux-ansible.rst>
-    Ansible for Windows <deployments-windows-ansible.rst>
     Chef <deployments-chef.rst>
     Nomad <deployments-nomad.rst>
     Pivotal Cloud Foundry <deployments-pivotal-cloudfoundry.rst>
-    Puppet for Linux <deployments-linux-puppet.rst>
-    Puppet for Windows <deployments-windows-puppet.rst>
-    Salt <deployments-salt.rst>
 
 Use the following deployment and configuration management tools to automate the installation of Collector:
 
@@ -32,18 +27,12 @@ Use the following deployment and configuration management tools to automate the 
 
   *  See also :ref:`deployments-fargate-java`
 
-* :ref:`deployment-linux-ansible`
-
-* :ref:`deployment-windows-ansible`
-
-* :ref:`deployments-chef`
-
 * :ref:`deployments-nomad`
 
 * :ref:`deployments-pivotal-cloudfoundry`
 
-* :ref:`deployment-linux-puppet`
+See also the install options for each platform:
 
-* :ref:`deployment-windows-puppet`
-
-* :ref:`deployments-salt`
+* :ref:`otel-install-k8s`
+* :ref:`otel-install-linux`
+* :ref:`otel-install-windows`

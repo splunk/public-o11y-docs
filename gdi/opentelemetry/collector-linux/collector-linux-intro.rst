@@ -13,6 +13,7 @@ Get started with the Collector for Linux
 
    Install the Collector for Linux (script) <install-linux.rst>
    Install the Collector for Linux (manual) <install-linux-manual.rst>    
+   Install the Collector for Linux (tools) <install-linux-tools>
    linux-config-ootb.rst
    Default Linux metrics <metrics-ootb-linux.rst>   
    linux-config.rst
