@@ -70,13 +70,7 @@ Splunk provides a Puppet module to install and configure the package. A module i
 Next steps
 ==================================
 
-After you have installed the package, see:
-
-* :ref:`windows-config-ootb`.
-* :ref:`otel-windows-config`.
-* :ref:`collector-how-to`.
-* :ref:`use-navigators-imm`.
-* View logs and errors in the Windows Event Viewer. Search for "view logs and errors" on :new-page:`Microsoft documentation site <https://docs.microsoft.com/en-us/>` for more information.
+.. include:: /_includes/gdi/collector-windows-next-steps.rst
 
 
 

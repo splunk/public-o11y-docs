@@ -48,8 +48,8 @@ The Windows installer script installs the following packages:
 
 .. _windows-script:
 
-Install the Collector using the script
-============================================
+Install the Collector for Windows using the installer script
+================================================================
 
 The installer script is available for Windows 64-bit environments, and deploys and configures: 
 
@@ -74,7 +74,7 @@ If you need to activate TLS in PowerShell, use the command:
 
   [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
 
-.. caution:: Starting from version 0.89, the installer for the Splunk Distribution of the OpenTelemetry Collector for Windows sets its configuration using environment variables at service level instead of global level. When configuring additional settings, use service, process, or terminal scopes.
+.. caution:: Starting from version 0.89, the installer for the Splunk Distribution of the OpenTelemetry Collector for Windows sets its configuration using environment variables at service level instead of global level. To configure additional settings use service, process, or terminal scopes.
 
 .. _otel-installer-options-windows:
 .. _windows-script-options:
@@ -170,13 +170,7 @@ The Windows installer script supports the following options:
 Next steps
 ==================================
 
-After you have installed the package, see:
-
-* :ref:`windows-config-ootb`.
-* :ref:`otel-windows-config`.
-* :ref:`collector-how-to`.
-* :ref:`use-navigators-imm`.
-* View logs and errors in the Windows Event Viewer. Search for "view logs and errors" on :new-page:`Microsoft documentation site <https://docs.microsoft.com/en-us/>` for more information.
+.. include:: /_includes/gdi/collector-windows-next-steps.rst
 
 
 

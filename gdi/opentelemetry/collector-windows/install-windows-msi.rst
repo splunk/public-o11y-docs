@@ -119,7 +119,7 @@ Custom MSI URLs
 By default, the Collector MSI is downloaded from :new-page:`https://dl.signalfx.com <https://dl.signalfx.com>` and
 the Fluentd MSI is downloaded from :new-page:`https://packages.treasuredata.com <https://packages.treasuredata.com>`.  
 
-To specify custom URLs for these downloads, use the ``collector_msi_url`` and ``fluentd_msi_url`` options. Replace ``COLLECTOR_MSI_URL`` and ``FLUENTD_MSI_URL`` with the URLs to the desired MSI packages to install:
+To specify custom URLs for these downloads, replace ``COLLECTOR_MSI_URL`` and ``FLUENTD_MSI_URL`` with the URLs to the desired MSI packages to install:
 
 .. code-block:: PowerShell
 
@@ -127,8 +127,8 @@ To specify custom URLs for these downloads, use the ``collector_msi_url`` and ``
 
 .. _windows-chocolatey:
 
-Install using a Chocolatey package
-===========================================
+Install the Collector using a Chocolatey package
+======================================================
 
 A :new-page:`Chocolatey package <https://community.chocolatey.org/packages/splunk-otel-collector>` is available to download, install, and configure the Collector and Fluentd with the following PowerShell command:  
 
@@ -139,10 +139,4 @@ A :new-page:`Chocolatey package <https://community.chocolatey.org/packages/splun
 Next steps
 ==================================
 
-After you have installed the package, see:
-
-* :ref:`windows-config-ootb`.
-* :ref:`otel-windows-config`.
-* :ref:`collector-how-to`.
-* :ref:`use-navigators-imm`.
-* View logs and errors in the Windows Event Viewer. Search for "view logs and errors" on :new-page:`Microsoft documentation site <https://docs.microsoft.com/en-us/>` for more information.
+.. include:: /_includes/gdi/collector-windows-next-steps.rst

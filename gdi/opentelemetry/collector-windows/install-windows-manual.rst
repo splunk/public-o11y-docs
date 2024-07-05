@@ -35,8 +35,8 @@ Prerequisites
 
 .. _windows-docker:
 
-Install using Docker
-===============================
+Install the Collector for Windows using Docker
+==============================================================
 
 Run the following command to deploy the latest Docker image:
 
@@ -49,8 +49,8 @@ Run the following command to deploy the latest Docker image:
 
 .. _windows-binary:
 
-Install using the binary file
-===============================
+Install the Collector for Windows using the binary file
+==============================================================
 
 To install the Collector using the binary file, follow these steps:
 
@@ -119,10 +119,4 @@ Example with ``--config``
 Next steps
 ==================================
 
-After you have installed the package, see:
-
-* :ref:`windows-config-ootb`.
-* :ref:`otel-windows-config`.
-* :ref:`collector-how-to`.
-* :ref:`use-navigators-imm`.
-* View logs and errors in the Windows Event Viewer. Search for "view logs and errors" on :new-page:`Microsoft documentation site <https://docs.microsoft.com/en-us/>` for more information.
+.. include:: /_includes/gdi/collector-windows-next-steps.rst
