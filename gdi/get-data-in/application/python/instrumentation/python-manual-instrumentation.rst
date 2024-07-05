@@ -14,7 +14,7 @@ Instrumenting applications automatically using the agent of the Splunk Distribut
 Start tracing using code
 ===============================
 
-If you're unable to use the ``splunk-py-trace`` command to launch the application, you can instead import and configure ``start_tracing`` by adding the following to your application code: 
+If you can't use the ``splunk-py-trace`` command to launch the application, you can instead import and configure ``start_tracing`` by adding the following snippet to your application code: 
    
    .. code:: python
 
@@ -35,7 +35,7 @@ If you're unable to use the ``splunk-py-trace`` command to launch the applicatio
       #    'deployment.environment': '<your_environment>',
       #  })
 
-.. note:: this code should not be added to the application when the ``splunk-py-trace`` command is being used to launch the application. 
+.. note:: Don't add this code to the application if you're using the ``splunk-py-trace`` command to launch the application. 
 
 .. _custom-traces-python:
 
