@@ -146,9 +146,9 @@ The nested ``converters`` configuration object has the following fields:
 Metrics
 -------
 
-This integration doesn't produce any metrics unless configured.
+By default this monitor has no fixed metrics. Instead, it will create metrics based on your configuration. 
 
-See the section below to learn how metrics can be collected with this
+All metrics are custom. See the section below to learn how metrics can be collected with this
 monitor.
 
 Add dimensions to statsd metrics

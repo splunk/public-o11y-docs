@@ -93,22 +93,25 @@ Automatic discovery supports the following host services and applications:
      - Receiver
 
    * - MySQL
-     - MySQL receiver. See :ref:`mysql-receiver`.
+     - MySQL receiver. See :ref:`mysql-receiver`
 
    * - PostgreSQL
-     - PostgreSQL receiver. See :ref:`postgresql-receiver`.
+     - PostgreSQL receiver. See :ref:`postgresql-receiver`
 
    * - OracleDB
-     - Oracle DB receiver. See :ref:`oracledb`.
+     - Oracle DB receiver. See :ref:`oracledb`
 
    * - NGINX
-     - Smart Agent with collectd/nginx monitor type. See :ref:`nginx`.
+     - Smart Agent with collectd/nginx monitor type. See :ref:`nginx`
 
    * - Redis
-     - Redis receiver. See :ref:`redis-receiver`.
+     - Redis receiver. See :ref:`redis-receiver`
 
    * - MongoDB
      - MongoDB receiver. See :ref:`mongodb-receiver`
+
+   * - Kafka
+     - Kafka metrics receiver. See :ref:`kafkametrics-receiver`
 
 
 

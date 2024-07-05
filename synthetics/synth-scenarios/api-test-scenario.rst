@@ -7,7 +7,7 @@ Scenario: Monitor API performance for a critical workflow
 .. meta::
     :description: Fictional use case describing how to monitor API performance using uptime test monitoring from Splunk Synthetic Monitoring. 
 
-Kai, a site reliability engineer at Buttercup Industries, a fictitious e-commerce company, uses Splunk Synthetic Monitoring to monitor the performance of the Buttercup Industries site. Kai keeps ahead of potential issues in their organization’s site using Uptime test monitoring. 
+Kai, a site reliability engineer at Buttercup Industries, a fictitious e-commerce company, uses Splunk Synthetic Monitoring to monitor the performance of the Buttercup Industries site. Kai keeps ahead of potential issues in their organization's site using Uptime test monitoring. 
 
 Monitor API performance for a checkout workflow
 ================================================= 

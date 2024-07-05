@@ -107,8 +107,7 @@ Tag and property sync permissions:
 
 Tag and property sync is always activated for the services configured in the integration. For some services, Splunk Observability Cloud uses either service-specific APIs or generic APIs such as the Resource Groups Tagging API or Cloud Control API. 
 
-.. note:: The ``tag:GetResources`` permission is sufficient to use the Resource Groups Tagging API. If you're using the Cloud Control API, you need to provide permissions for ``cloudformation:ListResources`` and ``cloudformation:GetResource`` as well as service-specific permissions, for example,  ``kafka:DescribeClusterV2`` and ``kafka:ListClustersV2`` for AWS/Kafka.
-
+.. note:: The ``tag:GetResources`` permission is sufficient to use the Resource Groups Tagging API. If you're using the Cloud Control API, you need to provide permissions for ``cloudformation:ListResources`` and ``cloudformation:GetResource`` as well as service-specific permissions, for example, ``kinesisanalytics:DescribeApplication``, ``kinesisanalytics:ListApplications`` and ``kinesisanalytics:ListTagsForResource``, for AWS/KinesisAnalytics.
 
 .. _aws-iam-policy-cw:
 
@@ -243,7 +242,9 @@ These are these permissions to allow Splunk Observability Cloud to collect AWS t
 - ``"elasticmapreduce:ListClusters"``
 - ``"es:DescribeElasticsearchDomain"``
 - ``"es:ListDomainNames"``
+- ``"kafka:DescribeCluster"``
 - ``"kafka:DescribeClusterV2"``
+- ``"kafka:ListClusters"``
 - ``"kafka:ListClustersV2"``
 - ``"kinesis:DescribeStream"``
 - ``"kinesis:ListShards"``
@@ -326,7 +327,9 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
           "elasticmapreduce:ListClusters",
           "es:DescribeElasticsearchDomain",
           "es:ListDomainNames",
+          "kafka:DescribeCluster",
           "kafka:DescribeClusterV2",
+          "kafka:ListClusters",
           "kafka:ListClustersV2",
           "kinesis:DescribeStream",
           "kinesis:ListShards",
