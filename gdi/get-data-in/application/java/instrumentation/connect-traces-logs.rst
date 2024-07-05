@@ -5,9 +5,9 @@ Connect Java trace data with logs for Splunk Observability Cloud
 ****************************************************************
 
 .. meta::
-   :description: The agent from the Splunk Distribution of OpenTelemetry Java automatically annotates application logs with trace ID, span ID, and flags. The agent then sends the logs to Splunk Observability Cloud through the Collector.
+   :description: The agent from the Splunk Distribution of OpenTelemetry Java automatically annotates application logs with trace ID, span ID, and flags. The agent then sends the logs to Splunk through the Collector.
 
-The agent from the Splunk Distribution of OpenTelemetry Java automtically annotates application logs with trace ID, span ID, and flags. The agent then sends the logs to Splunk Observability Cloud through the OpenTelemetry Collector.
+The agent from the Splunk Distribution of OpenTelemetry Java automtically annotates application logs with trace ID, span ID, and flags. The agent then sends the logs to Splunk through the OpenTelemetry Collector.
 
 If needed, you can configure your Java logging library to produce logs that include additional attributes provided automatically by the Splunk OTel Java agent, like the version of your service or the deployment environment.
 
@@ -45,7 +45,7 @@ The Collector sends the annotated logs through the OTLP exporter.
 Deactivate logs export
 ==================================
 
-To turn off logs export to Splunk Observability Cloud, set the ``OTEL_LOGS_EXPORTER`` environment variable or the ``otel.logs.exporter`` system property to ``none``.
+To turn off logs export, set the ``OTEL_LOGS_EXPORTER`` environment variable or the ``otel.logs.exporter`` system property to ``none``.
 
 
 .. _inject-resource-attribs:
