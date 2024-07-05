@@ -46,7 +46,7 @@ To install the package using Windows Installer, download the Windows MSI package
 
 .. note:: The ``ProgramData`` folder is hidden by default on Windows.
 
-Next, proceed with the GUI, or follow the instructions to install the Collector using a Powershell terminal.
+Next, follow the installer steps, or install the Collector using a PowerShell terminal.
 
 .. _windows-manual-installer-gui:
 
