@@ -208,14 +208,14 @@ To send data directly to Splunk Observability Cloud, set the following environme
    .. code-tab:: bash Linux
 
       export SPLUNK_ACCESS_TOKEN=<access_token>
-      export OTEL_TRACES_EXPORTER=jaeger-thrift-splunk
-      export OTEL_EXPORTER_JAEGER_ENDPOINT=https://ingest.<realm>.signalfx.com/v2/trace
+      export OTEL_EXPORTER_OTLP_TRACES_PROTOCOL=http/protobuf
+      export OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=https://ingest.<realm>.signalfx.com/v2/trace/otlp
 
    .. code-tab:: shell Windows PowerShell
 
       $env:SPLUNK_ACCESS_TOKEN=<access_token>
-      $env:OTEL_TRACES_EXPORTER=jaeger-thrift-splunk
-      $env:OTEL_EXPORTER_JAEGER_ENDPOINT=https://ingest.<realm>.signalfx.com/v2/trace
+      $env:OTEL_EXPORTER_OTLP_TRACES_PROTOCOL=http/protobuf
+      $env:OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=https://ingest.<realm>.signalfx.com/v2/trace/otlp
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
