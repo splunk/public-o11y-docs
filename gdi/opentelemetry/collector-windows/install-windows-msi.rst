@@ -50,8 +50,8 @@ Next, follow the installer steps, or install the Collector using a PowerShell te
 
 .. _windows-manual-installer-gui:
 
-Install using the GUI
----------------------------------
+Install using the graphical installer
+--------------------------------------
 
 Run the downloaded package and follow the instructions in the guided setup.
 
