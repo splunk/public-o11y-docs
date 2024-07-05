@@ -15,7 +15,6 @@ Other Collector deployment tools and options
     Amazon ECS EC2 <deployments-ecs-ec2.rst>
     Amazon Fargate <deployments-fargate.rst>
     Fargate scenario: Monitor Java app <deployments-fargate-java.rst>
-    Chef <deployments-chef.rst>
     Nomad <deployments-nomad.rst>
     Pivotal Cloud Foundry <deployments-pivotal-cloudfoundry.rst>
 
