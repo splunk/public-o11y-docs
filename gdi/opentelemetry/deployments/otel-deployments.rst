@@ -32,6 +32,6 @@ Use the following deployment and configuration management tools to automate the 
 
 See also the install options for each platform:
 
-* :ref:`otel-install-k8s`
-* :ref:`otel-install-linux`
-* :ref:`otel-install-windows`
+* :ref:`collector-kubernetes-intro` and :ref:`otel-install-k8s`
+* :ref:`collector-linux-intro` and :ref:`otel-install-linux`
+* :ref:`collector-windows-intro` and :ref:`otel-install-windows`
