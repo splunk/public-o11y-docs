@@ -1,8 +1,8 @@
 .. _otel-install-windows-msi:
 
-**************************************************
-Install the Collector for Windows using MSI
-**************************************************
+*******************************************************
+Install the Collector for Windows using the MSI installer
+*******************************************************
 
 .. meta::
       :description: Describes how to install the Splunk Distribution of the OpenTelemetry Collector for Windows using MSI.
