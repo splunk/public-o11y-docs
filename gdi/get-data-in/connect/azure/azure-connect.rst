@@ -83,7 +83,7 @@ Choose the data you want to send to Splunk Observability Cloud:
 
     * The resource stores its metrics in Azure Monitor. To learn more about Azure Monitor, refer to the Microsoft Azure documentation.
 
-* Optional: Use the :guilabel:`Add Tag` button to create a tag if you want to monitor only tagged data sources, filling out the ``tag name`` and ``tag value`` fields separately to create a tag pair. Only filters containing Azure tags are allowed. ``tag name`` is internally prefixed with ``azure_tag``, so using the UI you should supply only the Azure tag name (e.g. ``team`` instead of ``azure_tag_team``). When tagging, Splunk Observability Cloud only allows alphanumeric characters, and the underscore and minus symbols. Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character. 
+* Optional: Use the :guilabel:`Add Tag` button to create a tag if you want to monitor only tagged data sources, filling out the ``tag name`` and ``tag value`` fields separately to create a tag pair. Only filters containing Azure tags are allowed. Tag names are internally prefixed with ``azure_tag``, so if you're using the UI you need to supply only the Azure tag name, for example ``team`` instead of ``azure_tag_team``. When tagging, Splunk Observability Cloud only allows alphanumeric characters, and the underscore and minus symbols. Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character. 
 
 .. _connect-azure-other:
 
