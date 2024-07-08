@@ -152,11 +152,6 @@ The agent collects the following memory metrics:
   * - ``jvm.memory.allocated``
     - Counter
     - Total number of bytes allocated by JVM threads since the previous data point was emitted. Use the rate per second rollup.
-  * - ``process.runtime.jvm.memory.reclaimed``
-    - Counter
-    - Total number of bytes reclaimed by the GC since the previous data point was emitted. Notes:
-        - This metric might be inaccurate for concurrent garbage collectors such as Shenandoah or ZGC.
-        - Use the rate per second rollup.
   * - ``jvm.buffer.count``
     - UpDown counter
     - An estimate of the number of buffers in the pool.
