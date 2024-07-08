@@ -2,7 +2,7 @@
 .. _install-linux-tools:
 
 ****************************************************************
-Install the Collector for Windows using deployment tools
+Install the Collector for Linux using deployment tools
 ****************************************************************
 
 .. meta::
@@ -29,7 +29,7 @@ Alternatively, you can also install the Collector for Linux:
 * Using the installer script. See :ref:`otel-install-linux`. 
 * Manually. See :ref:`otel-install-linux-manual`.
 
-.. _install-windows-tools-prereqs:
+.. _install-linux-tools-prereqs:
 
 .. raw:: html
 
