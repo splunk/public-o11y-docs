@@ -9,15 +9,18 @@ Advanced configuration for Windows
 
 The Collector comes with a default configuration. To learn more, see :ref:`windows-config-ootb`.
 
-Configuration variables
-==========================================
+.. _windows-config-change-default:
+
+Change the default configuration file for the Collector for Windows
+==============================================================================
+
+All installation methods offer default configurations using environment variables. Before starting the ``splunk-otel-collector`` service, replace the variables in the default configuration file with the appropriate values for your environment.
 
 .. include:: /_includes/collector-env-vars.rst
 
-Change the default configuration file
-==========================================
+.. note:: When configuring additional settings, use service, process, or terminal scopes.    
 
-Before starting the ``splunk-otel-collector`` service, change the variables in the default configuration file to the appropriate values for your environment. Based on the specified installation parameters, the environment variables are saved to the ``HKLM:\SYSTEM\CurrentControlSet\Services\splunk-otel-collector`` registry key and set on the ``Environment`` entry.
+Based on the specified installation parameters, the environment variables are saved to the ``HKLM:\SYSTEM\CurrentControlSet\Services\splunk-otel-collector`` registry key and set on the ``Environment`` entry.
 
 To modify any of the configuration values, run ``regedit`` and browse to the path.
 
@@ -40,31 +43,25 @@ Configure proxy settings
 
 To configure proxy settings to install and run the OpenTelemetry Collector, see :ref:`configure-proxy-collector`.
 
-Custom MSI URLs
-----------------------------------
+.. _windows-config-logs:
 
-By default, the Collector MSI is downloaded from :new-page:`https://dl.signalfx.com <https://dl.signalfx.com>` and
-the Fluentd MSI is downloaded from :new-page:`https://packages.treasuredata.com <https://packages.treasuredata.com>`.  
+Configure log collection for the Collector for Windows
+====================================================================
 
-To specify custom URLs for these downloads, use the ``collector_msi_url`` and ``fluentd_msi_url`` options. Replace ``COLLECTOR_MSI_URL`` and ``FLUENTD_MSI_URL`` with the URLs to the desired MSI packages to install:
-
-.. code-block:: PowerShell
-
-  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "<SPLUNK_ACCESS_TOKEN>"; realm = "<SPLUNK_REALM>"; collector_msi_url = "<COLLECTOR_MSI_URL>"; fluentd_msi_url = "<FLUENTD_MSI_URL>"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
+For Windows environments (physical hosts and virtual machines), use the Universal Forwarder to send logs to the Splunk platform. See more at :ref:`collector-with-the-uf`.
 
 .. _fluentd-manual-config-windows:
 
 Configure Fluentd for log collection
-====================================================================
+--------------------------------------------------------------------
 
-If you have a Log Observer entitlement or wish to collect logs for the target host with Fluentd, use the ``with_fluentd = 1`` option to also install Fluentd when installing the Collector. For example:
+If you have a Log Observer entitlement or wish to collect logs for the target host with Fluentd, use the ``with_fluentd = 1`` option to install and enable Fluentd when installing the Collector. For example:
 
 .. code-block:: PowerShell
 
   & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "<SPLUNK_ACCESS_TOKEN>"; realm = "<SPLUNK_REALM>"; with_fluentd = 1}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
 
-When activated, the Fluentd service is configured by default to collect and forward log events with the ``@SPLUNK`` label to the Collector, which then
-send these events to the HEC ingest endpoint determined by the ``realm = "<SPLUNK_REALM>"`` option.
+When activated, the Fluentd service is configured by default to collect and forward log events with the ``@SPLUNK`` label to the Collector, which then send these events to the HEC ingest endpoint determined by the ``realm = "<SPLUNK_REALM>"`` option.
 For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
 
 To configure the package to send log events to a custom HTTP Event Collector (HEC) endpoint URL with a token different than ``<SPLUNK_ACCESS_TOKEN>``, you can specify the following parameters for the installer script:

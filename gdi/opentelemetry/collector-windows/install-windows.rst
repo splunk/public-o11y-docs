@@ -5,23 +5,29 @@ Install the Collector for Windows with the installer script
 ****************************************************************
 
 .. meta::
-      :description: Describes how to install the Splunk Distribution of OpenTelemetry Collector for Windows.
+      :description: Describes how to install the Splunk Distribution of the OpenTelemetry Collector for Windows.
 
 .. toctree::
   :maxdepth: 4
   :titlesonly:
 
 The Splunk Distribution of the OpenTelemetry Collector for Windows is a package that provides integrated collection and
-forwarding for all data types. Install the package using one of these methods:
+forwarding for all data types. Read on to see how to install it using the installer script.
 
-* :ref:`Installer script <windows-script>`
-* :ref:`Deployment tools <windows-deployments>`
+.. note:: 
+  
+  The Splunk Distribution of the OpenTelemetry Collector comes with a default configuration, as detailed in :ref:`windows-config-ootb`. To modify this configuration, refer to :ref:`otel-windows-config`.
 
-Alternatively, you can manually install the Collector. To learn how, see :ref:`otel-install-windows-manual`.
+  To learn how to obtain logs, see :ref:`windows-config-logs`.
 
-.. note:: The Collector comes with a default configuration. To learn more, see :ref:`windows-config-ootb`.
+Alternatively, you can also install the Collector for Windows:
+
+* Using MSI. See :ref:`otel-install-windows-msi`. 
+* Using deployment tools. See :ref:`otel-install-windows-tools`. 
+* Manually. See :ref:`otel-install-windows-manual`.
 
 .. _windows-otel-requirements:
+.. _install-windows-prereqs:
 
 Prerequisites
 ==========================
@@ -40,11 +46,10 @@ The Windows installer script installs the following packages:
 * JMX metric gatherer.
 * For Docker environments only, Java JDK and JRE.
 
-
 .. _windows-script:
 
-Install the Collector using the script
-============================================
+Install the Collector for Windows using the installer script
+================================================================
 
 The installer script is available for Windows 64-bit environments, and deploys and configures: 
 
@@ -69,7 +74,7 @@ If you need to activate TLS in PowerShell, use the command:
 
   [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
 
-.. caution:: Starting from version 0.89, the installer for the Splunk Distribution of the OpenTelemetry Collector for Windows sets its configuration using environment variables at service level instead of global level. When configuring additional settings, use service, process, or terminal scopes.
+.. caution:: Starting from version 0.89, the installer for the Splunk Distribution of the OpenTelemetry Collector for Windows sets its configuration using environment variables at service level instead of global level. To configure additional settings use service, process, or terminal scopes.
 
 .. _otel-installer-options-windows:
 .. _windows-script-options:
@@ -162,60 +167,10 @@ The Windows installer script supports the following options:
      - Specify public MSI properties to be used when installing the Splunk OpenTelemetry Collector MSI package.
      -
 
-.. _otel-install-windows-modify:
-
-Modify the default configuration
-----------------------------------
-
-The Splunk Distribution of the OpenTelemetry Collector comes with a default configuration, as detailed in :ref:`windows-config-ootb`. This configuration can be modified as needed. See :ref:`otel-windows-config` for more information.
-
-For more information about the Collector's environment variables, see :ref:`collector-env-var`.
-
-.. _windows-deployments:
-
-Deployment tools
-===============================
-
-Splunk Observability Cloud offers the configuration management options described in this section.
-
-.. _windows-ansible:
-
-Ansible
---------------------------
-
-Splunk provides an Ansible role that installs the package configured to collect data (metrics, traces, and logs) from Windows machines and send that data to Splunk Observability Cloud. See :ref:`deployment-windows-ansible` for the instructions to download and customize the role.
-
-.. _windows-chef:
-
-Chef 
-----------------
-
-Splunk provides a cookbook to install the Collector using Chef. See :ref:`deployments-chef` for the installation instructions.
-
-.. _windows-nomad:
-
-Nomad 
------------------
-
-Use Nomad to deploy the Collector. To learn how to install Nomad, see :ref:`deployments-nomad`.
-
-.. _windows-puppet:
-
-Puppet
--------------------------------
-
-Splunk provides a Puppet module to install and configure the package. A module is a collection of resources, classes, files, definition, and templates. To learn how to download and customize the module, see :ref:`deployment-windows-puppet`.
-
 Next steps
 ==================================
 
-After you have installed the package, see:
-
-* :ref:`windows-config-ootb`.
-* :ref:`otel-windows-config`.
-* :ref:`collector-how-to`.
-* :ref:`use-navigators-imm`.
-* View logs and errors in the Windows Event Viewer. Search for "view logs and errors" on :new-page:`Microsoft documentation site <https://docs.microsoft.com/en-us/>` for more information.
+.. include:: /_includes/gdi/collector-windows-next-steps.rst
 
 
 
