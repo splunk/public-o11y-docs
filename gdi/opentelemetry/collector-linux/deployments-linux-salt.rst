@@ -172,3 +172,8 @@ The following table shows the variables that can be configured for this Salt mod
    * - ``auto_instrumentation_enable_metrics``
      - Activates or deactivates instrumentation metrics.
      - ``false``
+
+Next steps
+==================================
+
+.. include:: /_includes/gdi/collector-linux-next-steps.rst

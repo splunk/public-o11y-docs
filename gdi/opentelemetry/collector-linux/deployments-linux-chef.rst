@@ -178,3 +178,7 @@ The following table shows the variables that can be configured with this Chef co
      - The path to the pre-installed ``npm`` command, e.g. ``/my/custom/path/to/npm``.
      - ``npm``
 
+Next steps
+==================================
+
+.. include:: /_includes/gdi/collector-linux-next-steps.rst

@@ -166,3 +166,8 @@ The following table shows the variables that you can configure for this Puppet m
    * - ``auto_instrumentation_npm_path``
      - The path to the pre-installed ``npm`` command required to install the Node.js SDK. For example, ``/my/custom/path/to/npm``.
      - ``npm``
+
+Next steps
+==================================
+
+.. include:: /_includes/gdi/collector-linux-next-steps.rst

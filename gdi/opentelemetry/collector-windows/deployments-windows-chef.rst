@@ -106,3 +106,8 @@ For example, if the Collector's configuration file includes references to ``${MY
 On Linux, the variables/values will be added to the ``/etc/otel/collector/splunk-otel-collector.conf`` systemd environment file. 
 
 On Windows, the variables/values will be added to the Environment value under the ``HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\splunk-otel-collector`` registry key.
+
+Next steps
+==================================
+
+.. include:: /_includes/gdi/collector-windows-next-steps.rst

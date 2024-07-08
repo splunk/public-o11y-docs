@@ -5,7 +5,7 @@ Other Collector deployment tools and options
 **************************************************
 
 .. meta::
-    :description: Options for deploying the Splunk Observability Cloud OpenTelemetry Collector: ECS/EC2, Fargate, Ansible, Chef, Nomad, Puppet, Salt.
+    :description: Options for deploying the Splunk Observability Cloud OpenTelemetry Collector: ECS/EC2, Fargate, Nomad, PFC.
 
 .. toctree::
     :maxdepth: 4
@@ -30,8 +30,8 @@ Use the following deployment and configuration management tools to automate the 
 
 * :ref:`deployments-pivotal-cloudfoundry`
 
-See also the install options for each platform:
+See also the install options available for each platform:
 
 * :ref:`collector-kubernetes-intro` and :ref:`otel-install-k8s`
-* :ref:`collector-linux-intro` and :ref:`otel-install-linux`
-* :ref:`collector-windows-intro` and :ref:`otel-install-windows`
+* :ref:`collector-linux-intro` and :ref:`otel-install-linux`, including instructions on how to deploy using Ansible, Chef, Puppet and Salt
+* :ref:`collector-windows-intro` and :ref:`otel-install-windows`, including instructions on how to deploy using Ansible, Chef and Puppet

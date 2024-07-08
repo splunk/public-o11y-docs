@@ -273,10 +273,6 @@ To display all the configuration options supported by the script, use the ``-h``
    curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh;
    sh /tmp/splunk-otel-collector.sh -h
 
-
-
-
-
 .. _linux-deployments:
 
 Install the Collector using deployment tools
@@ -354,13 +350,7 @@ Salt
 ---------------
 Splunk provides a Salt formula to install and configure the Collector. See :ref:`deployments-salt` for the instructions.
 
-
 Next steps
 ==================================
 
-After you've installed the package, you can perform these actions:
-
-* :ref:`Configure the Collector <otel-configuration>`.
-* Use :ref:`Infrastructure Monitoring <get-started-infrastructure>` to track the health of your infrastructure.
-* Use :ref:`APM <get-started-apm>` to monitor the performance of applications.
-* Use :ref:`Log Observer Connect <logs-intro-logconnect>` to analyze log events and troubleshoot issues with your services.
+.. include:: /_includes/gdi/collector-linux-next-steps.rst

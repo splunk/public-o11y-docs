@@ -155,4 +155,7 @@ The following table shows the variables that you can configure for this Ansible 
      - Activates or deactivates JVM metrics. 
      - ``false``
 
+Next steps
+==================================
 
+.. include:: /_includes/gdi/collector-linux-next-steps.rst

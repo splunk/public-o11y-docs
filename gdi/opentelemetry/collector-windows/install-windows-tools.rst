@@ -51,7 +51,6 @@ The following deployment tools to install the Splunk Distribution of the OpenTel
 
 * Use Splunk's Ansible role to install the package configured to collect data (metrics, traces, and logs) from Windows machines and send it to Splunk Observability Cloud. See :ref:`deployment-windows-ansible` for the instructions to download and customize the role.
 * Use Splunk's cookbook to install the Collector with Chef. See :ref:`deployments-chef` for the installation instructions.
-* Use Nomad to deploy the Collector. To learn how to install Nomad, see :ref:`deployments-nomad`.
 * Use Splunk's Puppet module to install and configure the package. A module is a collection of resources, classes, files, definition, and templates. To learn how to download and customize the module, see :ref:`deployment-windows-puppet`.
 
 .. note:: See also :ref:`otel_deployments`.
