@@ -71,13 +71,9 @@ You can also assign team-specific notifications for alerts triggered by the dete
 Manage your tokens
 --------------------
 
-Use tokens to secure data ingest and API calls to Splunk Observability Cloud. Tokens are valid for 1 year and can be extended for another 60 days. Your organization has a default token that is automatically generated when the organization is created. 
+Use tokens to secure data ingest and API calls to Splunk Observability Cloud. Tokens are valid for 1 year and can be extended for another 60 days. Your organization has a default token that is automatically generated when the organization is created.
 
-With the admin role, you can deactivate tokens that are no longer needed. Create a plan to regularly deactivate and rotate tokens.
-
-You can also set limits for data ingestion for your tokens. Use limits to control how many metrics are ingested per token. Limits protect against unexpected data ingestion overage by ensuring teams can't over consume.
-
-See :ref:`admin-tokens` for more information about tokens.
+See :ref:`automate-tokens` in phase 3 of this guide and :ref:`admin-tokens` for more information about tokens.
 
 .. _phase1-parent-child:
 
