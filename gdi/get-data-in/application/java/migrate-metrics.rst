@@ -172,7 +172,7 @@ Optionally, you can navigate to the dashboards on your own:
 
 .. note::
 
-   To view the built-in dashboards, the ``jvm.classes.loaded`` metric must be actively sending data to Splunk Observability Cloud.
+   To view the built-in dashboards, the ``jvm.classes.loaded`` metric must be received by Splunk Observability Cloud.
 
 Troubleshooting
 ======================
