@@ -15,6 +15,16 @@ Install the package using one of these methods:
 * :ref:`Use deployment and configuration management tools <linux-deployments>`
 * :ref:`Install the Collector for Linux manually <linux-manual>`
 
+.. _linux-otel-packages:
+
+Included packages
+==========================
+
+The Linux installer script installs the following packages:
+
+* Fluentd, if enabled. See :ref:`fluentd-manual-config-windows`.
+* JMX metric gatherer.
+  
 .. _linux-scripts:
 
 Installer script
@@ -45,7 +55,6 @@ The command to download and invoke the installer script is as follows:
    sudo sh /tmp/splunk-otel-collector.sh --realm $SPLUNK_REALM --memory $SPLUNK_MEMORY_TOTAL_MIB -- $SPLUNK_ACCESS_TOKEN
 
 .. note:: If you have a Log Observer entitlement or want to collect logs for the target host with Fluentd, use the ``--with-fluentd`` option to also install Fluentd when installing the Collector.
-
 
 Configure memory allocation
 ----------------------------------
