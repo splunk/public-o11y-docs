@@ -156,6 +156,23 @@ Due to changes in the metrics emitted by the Java instrumentation version 2.5.0 
 * ``runtime.jvm.threads.peak``
 * ``runtime.jvm.threads.states``
 
+Built-in dashboards
+===================
+
+Use the following links to access the built-in OTel Java 2.X APM services dashboards:
+
+* :new-page:`Service <https://login.signalfx.com/#/dashboard/GOF2_PwAcAA?groupId=GOF2yS6AgAA&configId=GNpEglCAIDM>`: Service-level indicators from APM tracing data.
+* :new-page:`Service Endpoint <https://login.signalfx.com/#/dashboard/GOF2_XOAgAA?groupId=GOF2yS6AgAA&configId=GNpERIDAECQ>`: Endpoint-level indicators from APM tracing data.
+* :new-page:`Java runtime metrics (Otel 2.X) <https://login.signalfx.com/#/dashboard/GOF3ABaAcAA?groupId=GOF2yS6AgAA&configId=GNpG3ASAAAs>` Metrics from instrumented services.
+
+Optionally, you can navigate to the dashboards on your own:
+
+#. In the left navigation menu, select :guilabel:`Dashboards`.
+#. In the :guilabel:`Built-in dashboard groups` section, scroll down to the :guilabel:`APM Java services (OTel 2.X)` dashboard group, where the three dashboards are grouped.
+
+.. note::
+
+   To view the built-in dashboards, the ``jvm.classes.loaded`` metric must be received by Splunk Observability Cloud.
 
 Troubleshooting
 ======================
