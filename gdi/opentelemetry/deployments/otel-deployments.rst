@@ -5,7 +5,7 @@ Other Collector deployment tools and options: ECS/EC2, Fargate, Nomad, PFC
 ****************************************************************************************************
 
 .. meta::
-    :description: Options for deploying the Splunk Distribution of the OpenTelemetry Collector: ECS/EC2, Fargate, Nomad, PFC.
+    :description: Options for deploying the Splunk Distribution of the OpenTelemetry Collector: ECS/EC2, Fargate, Nomad, PCF.
 
 .. toctree::
     :maxdepth: 4
