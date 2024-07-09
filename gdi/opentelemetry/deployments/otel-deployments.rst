@@ -18,7 +18,7 @@ Other Collector deployment tools and options: ECS/EC2, Fargate, Nomad, PFC
     Nomad <deployments-nomad.rst>
     Pivotal Cloud Foundry <deployments-pivotal-cloudfoundry.rst>
 
-Use the following deployment and configuration management tools to automate the installation of Collector:
+Use the following deployment options to install the Collector:
 
 * :ref:`deployments-ecs-ec2`
 
