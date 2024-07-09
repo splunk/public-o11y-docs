@@ -32,6 +32,8 @@ To discover any active and supported metric sources, run the following command o
 
     bin/otelcol --discovery --dry-run
 
+.. note:: discovery will require environment variables for `SPLUNK_REALM` and `SPLUNK_ACCESS_TOKEN` referencing your Splunk Observability realm (E.G. `us1`) and api token respectively. Or the use of the `--config <path_to_config_yaml>` option.
+
 The ``--dry-run`` option ensures that the resulting configuration isn't applied to the Collector at runtime. The sample configuration appears in the console as YAML instead. For example:
 
 .. code-block:: text
