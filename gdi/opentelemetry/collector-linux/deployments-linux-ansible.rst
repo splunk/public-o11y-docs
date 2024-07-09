@@ -5,7 +5,8 @@ Deploy the Collector with Ansible for Linux
 ********************************************************
 
 .. meta::
-      :description: Describes how to install the Splunk Observability Cloud OpenTelemetry Collector Ansible role on Linux.
+
+  :description: Describes how to install the Splunk Observability Cloud OpenTelemetry Collector Ansible role on Linux.
 
 Install the Ansible collection
 =========================================
@@ -154,4 +155,7 @@ The following table shows the variables that you can configure for this Ansible 
      - Activates or deactivates JVM metrics. 
      - ``false``
 
+Next steps
+==================================
 
+.. include:: /_includes/gdi/collector-linux-next-steps.rst

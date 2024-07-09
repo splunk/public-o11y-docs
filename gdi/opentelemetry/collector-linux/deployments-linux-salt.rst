@@ -1,11 +1,13 @@
 .. _deployments-salt:
+.. _deployments-linux-salt:
 
 ********************************************************
-Deploy the Collector with Salt 
+Deploy the Collector for Linux with Salt 
 ********************************************************
 
 .. meta::
-      :description: Deploy the Splunk Observability Cloud OpenTelemetry Collector using a Salt formula.
+
+  :description: Deploy the Splunk Observability Cloud OpenTelemetry Collector for Linux using a Salt formula.
 
 You can use a formula to install and configure the Collector to collect metrics, traces, and logs from Linux machines and send data to Splunk Observability Cloud. See the :new-page:`GitHub repository <https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/salt>` to download the Salt module.
 
@@ -20,9 +22,10 @@ You need the following resources to use Salt:
 * :new-page:`Splunk Realm <https://dev.splunk.com/observability/docs/realms_in_endpoints/>`
 * Check exposed ports to make sure your environment doesn't have conflicts. You can change ports in the Collector configuration. See :ref:`otel-exposed-endpoints` for more information.
 
-Linux
+Supported Linux versions
 ------------------------
-Currently, we support the following Linux distributions and versions:
+
+The following Linux distributions and versions are supported:
 
 * Amazon Linux: 2, 2023. Log collection with Fluentd isn't supported for Amazon Linux 2023.
 * CentOS, Red Hat, Oracle: 7, 8, 9
@@ -30,15 +33,14 @@ Currently, we support the following Linux distributions and versions:
 * SUSE: 12, 15 (Note: Only for Collector versions 0.34.0 or higher. Log collection with Fluentd not currently supported.)
 * Ubuntu: 18.04, 20.04, 22.04
 
-Getting started
+Get started
 ==========================
 
-Salt uses key-value stores known as "pillars" for user-defined data to be made available to a "minion". Salt defines a minion as a server running a Salt minion daemon which can listen to commands from a manager and run the requested tasks. Generally, minions are servers which are to be controlled using Salt.
+Salt uses key-value stores known as "pillars" for user-defined data to be made available to a "minion". Salt defines a minion as a server running a Salt minion daemon which can listen to commands from a manager and run the requested tasks. Generally, minions are servers controlled using Salt.
 
 You can configure all attributes in the ``splunk-otel-collector`` pillar. For example:
 
 .. code-block:: yaml
-
 
    splunk-otel-collector:
    splunk_access_token: "MY_ACCESS_TOKEN"
@@ -123,7 +125,7 @@ For Linux, the formula accepts the attributes described in the following table:
 
 .. _salt-zero-config:
 
-Configure automatic discovery for back-end application(s) (Linux only)
+Configure automatic discovery for back-end application(s) 
 ======================================================================
 
 You can automatically instrument your back-end applications along with the Collector installation. Automatic discovery removes the need to install and configure the OpenTelemetry SDKs separately. See :ref:`configure-auto-instrumentation` for more information.
@@ -170,3 +172,8 @@ The following table shows the variables that can be configured for this Salt mod
    * - ``auto_instrumentation_enable_metrics``
      - Activates or deactivates instrumentation metrics.
      - ``false``
+
+Next steps
+==================================
+
+.. include:: /_includes/gdi/collector-linux-next-steps.rst

@@ -91,3 +91,8 @@ The class accepts the parameters described in the following table:
    * - ``fluentd_config_source``
      - Source path to the Fluentd configuration file. This file is copied to the ``$fluentd_config_dest`` path on the node. See the :new-page:`source attribute <https://puppet.com/docs/puppet/latest/types/file.html#file-attribute-source>` of the file resource for the supported value types. The default source file is provided by the Collector package. Only applicable if ``$with_fluentd`` is set to ``true``.
      - ``%PROGRAMFILES\Splunk\OpenTelemetry Collector\fluentd\td-agent.conf``
+
+Next steps
+==================================
+
+.. include:: /_includes/gdi/collector-windows-next-steps.rst
