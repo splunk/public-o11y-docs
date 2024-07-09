@@ -48,6 +48,8 @@ The following table outlines which test might work for the scenario you want to 
         * Multiple step API transactions
 
 
+.. _setup-first-test:
+
 Set up your first test 
 ==============================
 After you choose which type of test you want to use, follow these steps to set up your test:

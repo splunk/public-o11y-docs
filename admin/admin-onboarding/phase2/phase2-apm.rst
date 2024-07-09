@@ -115,4 +115,4 @@ See :ref:`profiling-intro` to learn more about troubleshooting with AlwaysOn Pro
 Next step
 ===============
 
-Next, begin expanding and optimizing Splunk Observability Cloud in your organiziation. See :ref:`phase3`.
+Next, begin expanding and optimizing Splunk Observability Cloud in your organization. See :ref:`phase3`.
