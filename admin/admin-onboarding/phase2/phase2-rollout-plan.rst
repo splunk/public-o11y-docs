@@ -5,11 +5,11 @@ Pilot rollout phase part 1: Plan your pilot rollout
 
 After completing :ref:`phase1`, you are ready for phase 2, pilot rollout. 
 
-Use the following information to guide your implementation of Splunk Infrastructure Monitoring and Splunk Application Performance Monitoring. 
+Use the following information to guide your implementation of Splunk Observability Cloud.
 
 - :ref:`pilots`
 - :ref:`framework`
-- :ref:`enable_integrations`
+- :ref:`enable-integrations`
 - :ref:`convention-deploy`
 - :ref:`best-practices`
 - :ref:`get-trained`
@@ -17,12 +17,19 @@ Use the following information to guide your implementation of Splunk Infrastruct
 .. note::
     Work closely with your Splunk Sales Engineer or Splunk Customer Success Manager throughout your onboarding process. They can help you fine tune your Splunk Observability Cloud journey and provide best practices, training, and workshop advice.
 
+.. _initial-environment:
+
+Identify a pilot environment
+=====================================
+
+To get started with Splunk Observability Cloud, choose an initial pilot environment that allows you take advantage of automatic discovery and configuration and cloud provider integrations. See :ref:`discovery_mode` and :ref:`get-started-connect`.
+
 .. _pilots:
 
 Identify pilot teams and projects
 =====================================
 
-Start planning the initial rollout to your organization's pilot teams. Identify your pilot teams and projects with approximate timelines and capacity requirements.
+Start planning the initial pilot rollout to your organization's pilot teams. Identify your pilot teams and projects with approximate timelines and capacity requirements.
 
 There are 2 types of pilot teams to consider:
 
@@ -42,7 +49,7 @@ Once you know which teams are participating in the pilot and have collected thei
 #. :ref:`Identify a naming convention <convention-deploy>` for the deployment environments for Splunk Application Performance Monitoring (APM).
 #. :ref:`Establish best practices for Splunk Observability Cloud <best-practices>`.
 
-.. _enable_integrations:
+.. _enable-integrations:
 
 Identify and enable initial metric, trace, and log integrations
 ------------------------------------------------------------------------
