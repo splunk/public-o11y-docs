@@ -1,7 +1,7 @@
 .. _otel_deployments:
 
 ****************************************************************************************************
-Other Collector deployment tools and options: ECS/EC2, Fargate, Nomad, PFC
+Other Collector deployment tools and options: ECS/EC2, Fargate, Nomad, PCF
 ****************************************************************************************************
 
 .. meta::
