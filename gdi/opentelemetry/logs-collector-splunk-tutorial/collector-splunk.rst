@@ -1,19 +1,19 @@
 .. _collector-splunk:
 
-***************************************************
-Part 2: Configure the Collector and Splunk instance
-***************************************************
+**************************************************************
+Part 2: Configure the Collector and Splunk Enterprise instance
+**************************************************************
 
-Now that you've configured your services using Docker Compose, learn how to create the Collector configuration wherein you assemble all the Collector components, and then create the Splunk indexes configuration. For an overview of the tutorial, see :ref:`about-logs-collector-splunk-tutorial`.
+Now that you configured your services using Docker Compose, you can create the Splunk Distribution of the OpenTelemetry Collector configuration to assemble all the Collector components, and then create the Splunk Enterprise index configuration. For an overview of the tutorial, see :ref:`about-logs-collector-splunk-tutorial`.
 
 Configure the Collector
 =======================
 
-The Collector gathers the container logs and sends them to the Splunk service. Follow these steps to configure the Collector:
+The Collector gathers the container logs and sends them to the Splunk Enterprise service. Follow these steps to configure the Collector:
 
-#. Create a file in the ``log-collection`` directory called ``otel-collector-config.yml``.
+#. Create a file in the log-collection directory called otel-collector-config.yml.
 
-#. In the ``otel-collector-config.yml`` file, define the receivers used to collect the logs from the 2 logging services:
+#. In the otel-collector-config.yml file, define the receivers used to collect the logs from the 2 logging services:
 
    .. code-block:: yaml
 
@@ -25,7 +25,7 @@ The Collector gathers the container logs and sends them to the Splunk service. F
         filelog/output2:
           include: [ /output2/file.log ]
 
-#. After the receivers in the ``otel-collector-config.yml`` file, define the processors used to transform the collected log data for use with Splunk Enterprise:
+#. After the receivers in the otel-collector-config.yml file, define the processors used to transform the collected log data for use with Splunk Enterprise:
 
    .. code-block:: yaml
 
@@ -47,7 +47,7 @@ The Collector gathers the container logs and sends them to the Splunk service. F
           keys:
             - com.splunk.index
 
-#. After the processors in the ``otel-collector-config.yml`` file, define the exporter used to send the logs to the Splunk server's HTTP Event Collector (HEC):
+#. After the processors in the otel-collector-config.yml file, define the exporter used to send the logs to the Splunk server's HTTP Event Collector (HEC):
 
    .. code-block:: yaml
 
@@ -62,7 +62,7 @@ The Collector gathers the container logs and sends them to the Splunk service. F
             # Skips checking the certificate of the HEC endpoint when sending data over HTTPS.
             insecure_skip_verify: true
 
-#. After the exporter in the ``otel-collector-config.yml`` file, define the service, which consists of a ``logs`` pipeline that organizes the flow of logging data through the 3 component types:
+#. After the exporter in the otel-collector-config.yml file, define the service, which consists of a ``logs`` pipeline that organizes the flow of logging data through the 3 component types:
 
    .. code-block:: yaml
 
@@ -74,14 +74,14 @@ The Collector gathers the container logs and sends them to the Splunk service. F
             processors: [ transform, groupbyattrs, batch ]
             exporters: [ splunk_hec/logs ]
 
-Configure the Splunk indexes
-============================
+Configure the Splunk Enterprise indexes
+=======================================
 
-Splunk indexes store the data that the Collector sends to the Splunk service. Follow these steps to configure the Splunk indexes:
+Splunk Enterprise indexes store the data that the Collector sends to the Splunk Enterprise service. Follow these steps to configure the indexes:
 
-#. Create a file in the ``log-collection`` directory called ``splunk.yml``.
+#. Create a file in the log-collection directory called splunk.yml.
 
-#. In the ``splunk.yml`` file, define the ``index1`` and ``index2`` indexes:
+#. In the splunk.yml file, define the ``index1`` and ``index2`` indexes:
 
    .. code-block:: yaml
 
@@ -106,18 +106,18 @@ Splunk indexes store the data that the Collector sends to the Splunk service. Fo
 Next step
 =========
 
-You've now defined the necessary components for collecting, processing, and exporting the container logs using the Collector, and defined the Splunk indexes for storing the logs. Next, deploy the services using Docker Compose and verify that everything works as expected. To continue, see :ref:`deploy-verify-environment`.
+You've now defined the components for collecting, processing, and exporting the container logs using the Collector, and defined the Splunk Enterprise indexes for storing the logs. Next, deploy the services using Docker Compose and verify that everything works as expected. To continue, see :ref:`deploy-verify-environment`.
 
 Learn more
 ==========
 
 * For more information about the Collector, see :ref:`otel-intro`.
-* For more information about the components used in this Collector configuration see:
+* For more information about the components used in this Collector configuration see the following documentation:
 
   * :ref:`filelog-receiver`
   * :ref:`batch-processor`
   * :ref:`transform-processor`
   * :ref:`groupbyattrs-processor`
   * :ref:`splunk-hec-exporter`
-* For additional examples of how to use the HEC exporter, see the `OpenTelemetry Collector Contrib <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter/splunkhecexporter>`__ GitHub repository.
-* For more information about configuring Splunk indexes, see `indexes.conf <https://docs.splunk.com/Documentation/Splunk/9.2.1/Admin/Indexesconf>`__.
+* For more examples of how to use the HEC exporter, see `https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter/splunkhecexporter <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter/splunkhecexporter>`__ on GitHub.
+* For more information about configuring Splunk Enterprise indexes, see `indexes.conf <https://docs.splunk.com/Documentation/Splunk/9.2.1/Admin/Indexesconf>`__ in the Splunk Enterprise *Admin Manual*.
