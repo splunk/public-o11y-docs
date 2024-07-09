@@ -116,3 +116,8 @@ The following table describes the variables that can be configured for this role
      - The path to the Fluentd configuration file on the remote host. The default is ``%SYSTEMDRIVE%\opt\td-agent\etc\td-agent\td-agent.conf``.
    * - ``splunk_fluentd_config_source``
      - The source path to a Fluentd configuration file on your control host that is uploaded and set in place of the value set in ``splunk_fluentd_config`` on remote hosts. Use this variable to submit a custom Fluentd configuration, for example, ``./custom_fluentd_config.conf``. The default value is ``""``, which means that nothing is copied and the configuration file set with ``splunk_otel_collector_config`` is used.
+
+Next steps
+==================================
+
+.. include:: /_includes/gdi/collector-windows-next-steps.rst
