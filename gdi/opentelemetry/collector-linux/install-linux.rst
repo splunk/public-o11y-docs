@@ -22,7 +22,7 @@ Included packages
 
 The Linux installer script installs the following packages:
 
-* Fluentd, if enabled. See :ref:`fluentd-manual-config-windows`.
+* Fluentd, if enabled. See :ref:`fluentd-manual-config-linux`.
 * JMX metric gatherer.
   
 .. _linux-scripts:
