@@ -7,17 +7,6 @@ After completing :ref:`phase2-rollout-plan`, you are ready for pilot rollout pha
 
 To onboard Infrastructure Monitoring, complete the following tasks:
 
-#. :ref:`onboard-imm-apps`
-#. :ref:`otel-reqs`
-#. :ref:`Advance configuration using OTel collector (for example, token as a secret, Kubernetes distribution) <adv-conf-otel>`
-#. :ref:`custom-dash-charts-metrics`
-#. :ref:`detect-alert-config`
-#. :ref:`plan-dimensions`
-#. :ref:`ci-cd`
-#. :ref:`templates-detect`
-#. :ref:`automation-api`
-#. :ref:`automation-terraform`
-#. :ref:`customer-framework`
 
 .. note::
     Work closely with your Splunk Sales Engineer or Splunk Customer Success Manager throughout your onboarding process. They can help you fine tune your Splunk Observability Cloud journey and provide best practices, training, and workshop advice.

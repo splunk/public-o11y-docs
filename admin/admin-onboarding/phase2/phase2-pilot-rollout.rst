@@ -44,11 +44,17 @@ Set up Application Performance Monitoring
 
 Splunk Application Performance Monitoring (APM) is a monitoring and troubleshooting solution for microservice-based applications. APM monitors applications by collecting distributed traces. Traces are a collection of spans or actions that occur to complete a transaction. Instrumenting desired apps to collect and your application's spans and traces and break down and analyze application performance along any dimension in Splunk APM.  
 
+Collect spans and traces from an infrastructure resource
+-----------------------------------------------------------
+
 If you use automatic discovery and configuration to instrument your infrastructure, you're already capturing APM data for supported technologies. See :ref:`discovery_mode`. For other technologies, follow the following data management steps.
 
-Use the Splunk OpenTelemetry Collector to export spans and traces from Kubernetes, Linux, and Windows hosts and containers to Splunk Observability Cloud. To collect spans and traces from an infrastructure resource, select :guilabel:`Data Management` then :guilabel:`Available Integrations` and select the host type or containerized environment you want to collect from.
+To collect spans and traces from an infrastructure resource, select :guilabel:`Data Management` then :guilabel:`Available Integrations` and select the host type or containerized environment you want to collect from.
+
+Deploy the Splunk OpenTelemetry Collector
+--------------------------------------------
 	
-To begin instrumenting applications, you can export spans to an Splunk OpenTelemetry Collector running on the host or in a Kubernetes cluster that. How you specify the OTEL collector endpoint depends on the language you are instrumenting. To begin, select :guilabel:`Data Management` then :guilabel:`Avialable Integrations` then :guilabel:`Monitor Applications` and select the language you want to instrument. See :ref:`get-started-application` to learn more about how to instrument back-end services like Java, .NET, Node.js, Go, Python, Ruby, PHP, C++ and more.
+To begin instrumenting applications, you can export spans to an Splunk OpenTelemetry Collector running on the host or in a Kubernetes cluster that. The OpenTelemetry collector endpoint specification depends on the language you are instrumenting. To begin, select :guilabel:`Data Management` then :guilabel:`Available Integrations` then :guilabel:`Monitor Applications` and select the language you want to instrument. See :ref:`get-started-application` to learn more about how to instrument back-end services like Java, .NET, Node.js, Go, Python, Ruby, PHP, C++ and more.
 
 .. _set-up-rum:
 
@@ -57,7 +63,13 @@ Set up Real User Monitoring
 
 Splunk Real User Monitoring (RUM) offers visibility of the experience of their end users across device types, web browsers, and geographies, to identify and eliminate slowness (latency) across transactions and the entire architecture. Since RUM connects transactions from the web browser through back-end services, it helps on-call engineers spot slowness or errors, regardless of where a problem originates across a distributed system.
 
+Create a RUM access token
+--------------------------
+
 To activate RUM data capture, you first need to create an access token. You can use the access token can for either browser RUM or mobile RUM, which is available for both Android and iOS devices. See :ref:`rum-access-token`.
+
+Follow the guided setup for RUM
+--------------------------------
 
 Splunk Observability Cloud provides a guided setup process to create the code snippets used to instrument your webpages. The guided setup process is available for browser, iOS, and Android monitoring. 
 
@@ -68,7 +80,10 @@ Splunk Observability Cloud provides a guided setup process to create the code sn
 
 See :ref:`rum-gdi` for manual instructions.
 
-Use RUM and APM in conjunction to create a complete end-to-end view of every transaction from the end-user interaction, through micro services, and ultimately to database calls or other transaction termination points. You can link APM and RUM data as part of the instrumentation parameters. 
+Link RUM and APM data
+------------------------
+
+Use RUM and APM in conjunction to create a complete end-to-end view of every transaction from the end-user interaction, through micro services, and, ultimately, to database calls or other transaction termination points. You can link APM and RUM data as part of the instrumentation parameters. See :ref:`browser-server-trace-context`.
 
 .. _create-syn-test:
 
