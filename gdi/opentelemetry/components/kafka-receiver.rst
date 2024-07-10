@@ -9,6 +9,8 @@ Kafka receiver
 
 The Kafka receiver allows the Splunk Distribution of the OpenTelemetry Collector to collect metrics and logs (in OTLP format), and traces, from Kafka. Message payload encoding is configurable. The supported pipeline types are ``metrics``, ``logs``, and ``traces``. See :ref:`otel-data-processing` for more information.
 
+.. note:: Out-of-the-box dashboards and navigators aren't supported for the Kafka receiver yet, but are planned for a future release.
+
 Get started
 ======================
 
