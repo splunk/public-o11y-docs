@@ -168,7 +168,7 @@ If you already installed Fluentd on a host, install the Collector without Fluent
 Configure automatic discovery
 --------------------------------------------
 
-You can also automatically instrument your Java, Node.js, and/or .NET applications along with the Collector installation. Automatic discovery removes the need to install and configure the instrumentation SDKs separately. See :ref:`linux-backend-auto-discovery` for the installation instructions. For more information on Java instrumentation, see :ref:`get-started-java`. For more information on Node.js instrumentation, see :ref:`get-started-nodejs`. For more information on .NET, see :ref:`get-started-dotnet-otel`
+You can also automatically instrument your Java, Node.js, and .NET applications along with the Collector installation. Automatic discovery removes the need to install and configure the instrumentation SDKs separately. See :ref:`linux-backend-auto-discovery` for the installation instructions. For more information on instrumentation, see :ref:`get-started-java`, ref:`get-started-nodejs`, or :ref:`get-started-dotnet-otel`.
 
 
 .. _otel-installer-options-linux:
