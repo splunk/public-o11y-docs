@@ -36,7 +36,7 @@ To activate the receiver, add ``kafka`` to the ``receivers`` section of your con
     kafka:
       protocol_version: 2.0.0
 
-To complete the configuration, include the receiver in the one ore more pipelines of the ``service`` section of your configuration file. For example:
+To complete the configuration, include the receiver in one or more pipelines of the ``service`` section of your configuration file. For example:
 
 .. code:: yaml
 
