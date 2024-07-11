@@ -156,7 +156,7 @@ Container level metrics and dimensions
   * - ``k8s.container.storage_limit``
     - Container ``storage_limit``
     - :ref:`ootb-metrics-k8s-attributes`
-    - ??
+    - No
     - No
 
   * - ``k8s.container.storage_request``
