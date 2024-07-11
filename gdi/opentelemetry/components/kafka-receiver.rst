@@ -88,7 +88,7 @@ The following settings are optional:
 
 * ``initial_offset``. ``latest`` by default. The initial offset to use if no offset was previously committed. Possible values are ``latest`` or ``earliest``.
 
-* ``auth``. Use one of the following:
+* ``auth``. You can use the following options to authenticate:
 
   * ``plain_text``. It has the following fields:
 
