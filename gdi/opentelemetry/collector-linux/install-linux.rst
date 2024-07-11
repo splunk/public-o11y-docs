@@ -165,11 +165,10 @@ If you already installed Fluentd on a host, install the Collector without Fluent
 
 .. _configure-auto-instrumentation:
 
-Configure automatic discovery for Java
+Configure automatic discovery
 --------------------------------------------
 
-You can also automatically instrument your Java applications along with the Collector installation. Automatic discovery removes the need to install and configure the Java agent separately. See :ref:`linux-backend-auto-discovery` for the installation instructions. For more information on Java instrumentation, see :ref:`get-started-java`.
-
+You can also automatically instrument your Java, Node.js, and/or .NET applications along with the Collector installation. Automatic discovery removes the need to install and configure the instrumentation SDKs separately. See :ref:`linux-backend-auto-discovery` for the installation instructions. For more information on Java instrumentation, see :ref:`get-started-java`. For more information on Node.js instrumentation, see :ref:`get-started-nodejs`. For more information on .NET, see :ref:`get-started-dotnet-otel`
 
 
 .. _otel-installer-options-linux:
@@ -178,6 +177,8 @@ Options of the installer script for Linux
 ==================================================================
 
 The Linux installer script supports the following options:
+
+Collector:
 
 .. list-table::
    :header-rows: 1
@@ -190,23 +191,17 @@ The Linux installer script supports the following options:
    * - ``--api-url <url>``
      - Set the API endpoint URL explicitly instead of using the endpoint inferred from the specified realm.
      - ``https://api.REALM.signalfx.com``
-   * - ``--ballast <ballast size>``
-     - Set the ballast size explicitly instead of the value calculated using the ``--memory`` option. See :ref:`otel-sizing` for more information.
-     - ``512``
-   * - ``--beta``
-     - Use the beta package repository.
-     - Not applicable
    * - ``--collector-config <path>``
-     -  Set the path to an existing custom configuration file for the Collector service instead of using the default configuration file provided by the Collector package based on the ``--mode <agent|gateway>`` option. If the specified file requires custom environment variables, you can manually add both the variables and values to ``$collector_env_path`` after installation. Restart the Collectorservice with the ``sudo systemctl restart splunk-otel-collector`` command for the changes to take effect.
-     -
+     -  Set the path to an existing custom configuration file for the Collector service instead of using the default configuration file provided by the Collector package based on the ``--mode <agent|gateway>`` option. If the specified file requires custom environment variables, you can manually add both the variables and values to ``/etc/otel/collector/splunk-otel-collector.conf`` after installation. Restart the Collector service with the ``sudo systemctl restart splunk-otel-collector`` command for the changes to take effect.
+     - ``/etc/otel/collector/agent_config.yaml`` for ``agent`` mode; ``/etc/otel/collector/gateway_config.yaml`` for ``gateway`` mode
    * - ``--collector-version <version>``
      - The Collector package version to install.
      - ``latest``
    * - ``--discovery``
      - Activate discovery mode on Collector startup. See :ref:`discovery_mode` for more information.
-     - Deactivated
+     -
    * - ``--hec-token <token>``
-     - Set the HEC token if it`` s different than the specified ``access_token``.
+     - Set the HEC token if it is different than the specified ``access_token``.
      -
    * - ``--hec-url <url>``
      -  Set the HEC endpoint URL explicitly instead of using the endpoint inferred from the specified realm.
@@ -222,7 +217,7 @@ The Linux installer script supports the following options:
      - ``agent``
    * - ``--listen-interface <ip>``
      - Network interface the Collector receivers listen on.
-     - ``0.0.0.0``
+     - ``127.0.0.1`` for ``agent`` mode, otherwise ``0.0.0.0``
    * - ``--realm <us0|us1|eu0|...>``
      - The Splunk realm to use. The ingest, API, trace, and HEC endpoint URLs are automatically generated using this value.
      - ``us0``
@@ -233,47 +228,84 @@ The Linux installer script supports the following options:
      - Set the user for the splunk-otel-collector service. The option creates the user if it doesn't exist.
      - ``splunk-otel-collector``
    * - ``--skip-collector-repo``
-     - By default, the scripts create an apt, yum, or zypper repo definition file to download the Collector package from ``$repo_base``. Use this option to skip the previous step and use a configured repo on the target system that provides the splunk-otel-collector deb or rpm package.
+     - By default, a apt, yum, or zypper repo definition file is created to download the Collector package from ``https://splunk.jfrog.io``. Use this option to skip the previous step and use a pre-configured repo on the target system that provides the ``splunk-otel-collector`` deb or rpm package.
      -
-   * - ``--skip-fluentd-repo``
-     - By default, the scripts create an apt, yum, or zypper repo definition file to download the fluentd package from ``$td_agent_repo_base``. Use this option to skip the previous step and use a configured repo on the target system that provides the splunk-otel-collector deb or rpm package.
-     -
-   * - ``--test``
-     - Use the test package repo.
-     - Not applicable
    * - ``--trace-url <url>``
      - Set the trace endpoint URL explicitly instead of the endpoint inferred from the specified realm.
      - ``https://ingest.REALM.signalfx.com/v2/trace``
+   * - ``--``
+     - Use ``--``  if the access token starts with ``-``, for example ``-- -MY-ACCESS-TOKEN``.
+     -
    * - ``--uninstall``
      - Removes the Splunk OpenTelemetry Collector for Linux.
-     - Not applicable
+     -
+
+Automatic Discovery for back-end services:
+
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 30 40 30
+
+   * - Option
+     - Description
+     - Default value
+   * - ``--with[out]-instrumentation``
+     - Whether to install the ``splunk-otel-auto-instrumentation`` package and add the ``libsplunk.so`` shared object library to ``/etc/ld.so.preload`` to activate auto instrumentation for all supported processes on the host. Cannot be combined with the ``--with-systemd-instrumentation`` option. See :ref:`linux-backend-auto-discovery` for more information.
+     - ``--without-instrumentation``
+   * - ``--with[out]-systemd-instrumentation``
+     - Whether to install the ``splunk-otel-auto-instrumentation`` package and configure a systemd drop-in file to activate auto instrumentation for all supported applications running as systemd services. Cannot be combined with the ``--with-instrumentation`` option. See :ref:`linux-backend-auto-discovery` for more information.
+     - ``--without-systemd-instrumentation``
+   * - ``--with[out]-instrumentation-sdk <sdk>``
+     - Whether to enable auto instrumentation for a specific language. This option takes a comma separated set of values representing supported auto-instrumentation SDKs. Currently supported values: ``java``, ``node``, and ``dotnet``. Use ``--with-instrumentation-sdk`` to enable only the specified language(s), for example ``--with-instrumentation-sdk java``. Note: .NET (``dotnet``) auto instrumentation is only supported on x86_64/amd64.
+     - ``--with-instrumentation-sdk java,nodejs,dotnet``
+   * - ``--npm-path <path>``
+     - If Auto Instrumentation for Node.js is enabled, ``npm`` is required to install the included Splunk OpenTelemetry Auto Instrumentation for Node.js package. If ``npm`` is not found via the ``command -v npm`` shell command or if installation fails, Auto Instrumentation for Node.js will not be activated. Use this option to specify a custom path to ``npm``, for example ``--npm-path /my/path/to/npm``.
+     - ``npm``
+   * - ``--deployment-environment <value>``
+     - Set the ``deployment.environment`` resource attribute to the specified value. If not specified, the ``Environment`` in the Splunk APM UI will appear as ``unknown`` for all instrumented applications. The resource attribute will be appended to the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable.
+     -
+   * - ``--service-name <name>``
+     - Override the auto-generated service names for all instrumented applications with the specified value. The value will be set to the ``OTEL_SERVICE_NAME`` environment variable.
+     -
+   * - ``--otlp-endpoint <host:port>``
+     - Set the OTLP endpoint for captured traces, logs, and metrics for all activated SDKs. The value will be set to the ``OTEL_EXPORTER_OTLP_ENDPOINT`` environment variable. If not specified, the default behavior is to defer to the default ``OTEL_EXPORTER_OTLP_ENDPOINT`` value for each activated SDK.
+     -
+   * - ``--otlp-endpoint-protocol <protocol>``
+     - Set the protocol for the configured OTLP endpoint, for example ``grpc`` or ``http/protobuf``. The value will be set to the ``OTEL_EXPORTER_OTLP_PROTOCOL`` environment variable. If not specified, the default behavior is to defer to the default ``OTEL_EXPORTER_OTLP_PROTOCOL`` value for each activated SDK. This option is only applicable if the ``--otlp-endpoint <host:port>`` option is also specified.
+     -
+   * - ``--metrics-exporter <exporters>``
+     - Comma-separated list of exporters for collected metrics by all activated SDKs, for example ``otlp,prometheus``. Set the value to ``none`` to disable collection and export of metrics. The value will be set to the ``OTEL_METRICS_EXPORTER`` environment variable. The default behavior is to defer to the default ``OTEL_METRICS_EXPORTER`` value for each activated SDK.
+     -
+   * - ``--[enable|disable]-profiler``
+     - Activate or deactivate AlwaysOn CPU Profiling for all activated SDKs that support the ``SPLUNK_PROFILER_ENABLED`` environment variable.
+     - ``--disable-profiler``
+   * - ``--[enable|disable]-profiler-memory``
+     - Activate or deactivate AlwaysOn Memory Profiling for all activated SDKs that support the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable.
+     - ``--disable-profiler-memory``
+   * - ``--[enable|disable]-metrics``
+     - Activate or deactivate collection and exporting metrics for all activated SDKs that support the ``SPLUNK_METRICS_ENABLED`` environment variable.
+     - ``--disable-metrics``
+   * - ``--instrumentation-version``
+     - The ``splunk-otel-auto-instrumentation`` package version to install. Note: The minimum supported version for Java and Node.js auto instrumentation is 0.87.0, and the minimum supported version for .NET auto instrumentation is 0.99.0.
+     - ``latest``
+
+Fluentd:
+
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 30 40 30
+
+   * - Option
+     - Description
+     - Default value
    * - ``--with[out]-fluentd``
      - Whether to install and configure fluentd to forward log events to the Collector. See :ref:`fluentd-manual-config-linux` for more information.
      - ``--without-fluentd``
-   * - ``--with[out]-instrumentation``
-     - Whether to install and configure the splunk-otel-auto-instrumentation package. See :ref:`linux-backend-auto-discovery` for more information.
-     - ``--without-instrumentation``
-   * - ``--deployment-environment <value>``
-     - Set the ``deployment.environment`` resource attribute to the specified value. Only applicable if the ``--with-instrumentation`` option is also specified.
-     - Empty
-   * - ``--service-name <name>``
-     - Override the autogenerated service names for all instrumented Java applications on this host with ``<name>``. Only applicable if the ``--with-instrumentation`` option is also specified.
-     - Empty
-   * - ``--[enable|disable]-profiler``
-     - Activate or deactivate AlwaysOn CPU Profiling. Only applicable if the ``--with-instrumentation``  option is also specified.
-     - ``--disable-profiler``
-   * - ``--[enable|disable]-profiler-memory``
-     - Activate or deactivate AlwaysOn Memory Profiling. Only applicable if the ``--with-instrumentation``  option is also specified.
-     - ``--disable-profiler-memory``
-   * - ``--[enable|disable]-metrics``
-     - Activate or deactivate exporting metrics. Only applicable if the ``--with-instrumentation``  option is also specified.
-     - ``--disable-metrics``
-   * - ``--instrumentation-version``
-     - The package version to install. Only applicable if the ``--with-instrumentation``  option is also specified.
-     - ``latest``
-   * - ``--``
-     - Use ``--``  if the access token starts with ``-`` .
-     - Not applicable
+   * - ``--skip-fluentd-repo``
+     - By default, a apt/yum repo definition file will be created to download the fluentd deb/rpm package from ``https://packages.treasuredata.com``. Use this option to skip the previous step and use a pre-configured repo on the target system that provides the ``td-agent`` deb/rpm package.
+     -
 
 To display all the configuration options supported by the script, use the ``-h`` flag.
 
