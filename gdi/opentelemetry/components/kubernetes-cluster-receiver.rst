@@ -16,7 +16,7 @@ Kubernetes version 1.21 and higher is compatible with the Kubernetes navigator. 
 Get started
 ======================
 
-By default, the Kubernetes cluster receiver is already activated in the Helm chart of the Splunk OpenTelemetry Collectors. See :ref:`otel-kubernetes-config` for more information.
+By default, the Kubernetes cluster receiver is already activated in the Helm chart of the Splunk OpenTelemetry Collectors. See :ref:`otel-kubernetes-config` for more information, including the default :ref:`ootb-metrics-k8s`.
 
 To activate the Kubernetes cluster receiver manually in the Collector configuration, add ``k8s_cluster`` to the ``receivers`` section of your configuration file, as shown in the following example:
 
