@@ -1,12 +1,11 @@
 .. _aws-troubleshooting:
 
 ************************************
-Troubleshoot your AWS connection
+Troubleshoot your AWS integration
 ************************************
 
 .. meta::
-   :description: Resolve AWS policy and permissions conflicts in Splunk Observability Cloud.
-
+   :description: Resolve AWS policy, permission conflicts, and other issues in Splunk Observability Cloud.
 
 If you experience difficulties when connecting Splunk Observability Cloud to your Amazon Web Services (AWS) account or using the platform, read on to troubleshoot common issues. See :ref:`aws-ts-metric-streams` for issues specific to Metric Streams. 
 
@@ -104,20 +103,22 @@ Also, to ensure that you can see the metrics you expect to monitor, perform the 
 
 .. _aws-ts-metric-discrepancy:
 
-Discrepancy between AWS Cloudwatch and Splunk Observability Cloud metrics 
+Discrepancies between AWS Cloudwatch and Splunk Observability Cloud metrics 
 ==========================================================================================
 
-There are discrepancies between AWS Cloudwatch and Splunk Observability Cloud metrics. There can be two main causes for metric discrepancies:
+You observe discrepancies between AWS Cloudwatch and Splunk Observability Cloud metrics. 
+
+There can be two main causes for metric discrepancies:
 
 Cause 1: Metrics are not stable
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Some CloudWatch metrics are not stable, so the initial metric value published by CloudWatch might get updated after some time. Since Splunk Observability Cloud never fetches the same datapoint twice, this might result in value discrepancies. 
+Some CloudWatch metrics are not stable, which means that the initial metric value published by CloudWatch might get updated after some time. Since Splunk Observability Cloud never fetches the same datapoint twice, this might result in value discrepancies. 
 
 Solution 1
 ^^^^^^^^^^^^^^^^^^
 
-You can configure selected namespaces to ignore a number of the most recent datapoints, typically 1 or 2, to mitigate this issue.
+You can configure selected namespaces to ignore a number of the most recent datapoints, typically 1 or 2, to mitigate this issue. To implement these configuration changes contact :ref:`support`.  
 
 Cause 2: Charts are plotted using different time series
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
