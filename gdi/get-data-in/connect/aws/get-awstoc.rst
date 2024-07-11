@@ -21,7 +21,7 @@ Connect AWS to Splunk Observability Cloud
   Send AWS logs to Splunk Platform <aws-logs>
   CloudFormation templates <aws-cloudformation>
   Next steps <aws-post-install>
-  Troubleshoot your AWS connection <aws-troubleshooting>
+  Troubleshoot your AWS integration <aws-troubleshooting>
   Troubleshoot Metric Streams <aws-ts-metric-streams>
   GetMetricStatistics API deprecation notice <aws-api-notice>
   aws-tutorial/about-aws-tutorial.rst

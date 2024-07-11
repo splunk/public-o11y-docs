@@ -24,7 +24,7 @@ Splunk Observability Cloud provides a wide array of features and tools to help y
 * Data Migration management, for example :ref:`java-metrics-migration-guide`
 * :ref:`Metric metadata <metrics-finder-and-metadata-catalog>`
 * :ref:`Metrics pipeline management <metrics-pipeline-intro>`
-* :ref:`RUM URL grouping <rum-rules>`.
+* :ref:`RUM URL grouping <rum-rules>`
 
 Other data tools include:
 
