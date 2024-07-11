@@ -150,7 +150,7 @@ Container level metrics and dimensions
   * - ``k8s.container.restarts``
     - Container ``restarts``
     - :ref:`ootb-metrics-k8s-attributes`
-    - ??
+    - No
     - Yes
 
   * - ``k8s.container.storage_limit``
