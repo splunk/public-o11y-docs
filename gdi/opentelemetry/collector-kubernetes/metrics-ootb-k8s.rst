@@ -162,7 +162,7 @@ Container level metrics and dimensions
   * - ``k8s.container.storage_request``
     - Container ``storage_requests``
     - :ref:`ootb-metrics-k8s-attributes`
-    - ??
+    - No
     - No
 
 Pod level metrics and dimensions
