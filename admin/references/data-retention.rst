@@ -48,7 +48,7 @@ The following table shows the retention time period for each data type in RUM.
    * - Spans 
      - 
        * 8 days
-   * - Metrics 
+   * - :ref:`Troubleshooting MetricSets <troubleshooting-metricsets>` 
      - 
        * 8 days
    * - :ref:`Monitoring MetricSets <monitoring-metricsets>`
