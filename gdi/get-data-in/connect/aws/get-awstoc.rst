@@ -18,8 +18,8 @@ Connect AWS to Splunk Observability Cloud
   Connect with AWS-managed Metric Streams <aws-console-ms>  
   Connect to AWS using the Splunk API <aws-apiconfig>  
   Connect to AWS with Terraform <aws-terraformconfig>
+  CloudFormation and Terraform templates <aws-cloudformation>
   Send AWS logs to Splunk Platform <aws-logs>
-  CloudFormation templates <aws-cloudformation>
   Next steps <aws-post-install>
   Troubleshoot your AWS integration <aws-troubleshooting>
   Troubleshoot Metric Streams <aws-ts-metric-streams>
