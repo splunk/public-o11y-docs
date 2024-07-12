@@ -13,4 +13,3 @@ To send histogram data to Splunk Observability Cloud, set the ``send_otlp_histog
        correlation:
        send_otlp_histograms: true
 
-You can collect histogram data using a variety of receivers, including the :ref:`Prometheus receiver <prometheus-receiver>`.

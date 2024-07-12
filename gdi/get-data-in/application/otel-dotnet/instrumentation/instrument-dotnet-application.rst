@@ -40,8 +40,16 @@ To install the distribution using the official NuGet packages, see :ref:`otel-do
 Instrument your .NET application
 ---------------------------------------------
 
-Follow these steps to automatically instrument your application:
+Use the following steps to automatically instrument your application.
 
+.. warning::
+
+   In .NET version 8, setting the ``DOTNET_EnableDiagnostics`` runtime environment variable to ``0`` deactivates all diagnostics including the CLR Profiler, which is required for launching the .NET instrumentation if you are not using .NET startup hooks. Make sure that ``DOTNET_EnableDiagnostics`` is set to ``1``. To limit diagnostics to only the CLR Profiler, use the following environment variable settings:
+   
+   * ``DOTNET_EnableDiagnostics=1``
+   * ``DOTNET_EnableDiagnostics_Profiler=1``
+   * ``DOTNET_EnableDiagnostics_IPC=0``
+   * ``DOTNET_EnableDiagnostics_Debugger=0``
 
 Windows
 ^^^^^^^^^^^^
@@ -109,6 +117,9 @@ Windows
 
          .. note:: 
             If ``OTEL_SERVICE_NAME`` is not set for a web application hosted in IIS, the inferred name based on the site name and virtual directory path is used.
+
+         .. note:: 
+            If multiple applications are running in the same IIS Application Pool do not use the ``appSettings`` block of the web.config file to configure any environment variable. Let the instrumentation infer the name and use the Application Pool environment variables configuration, see below, to set the resource attributes (which will be shared by all applications in the Application Pool).
 
          After modifying the web.config file, restart IIS:
 

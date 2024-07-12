@@ -52,6 +52,30 @@ You can activate debug logging to obtain more information about the issue:
 
 .. note:: Activate debug logging only when needed. Debug mode requires more resources.
 
+.. _dotnet-find-rid:
+
+Find the runtime identifier for your .NET applications
+==================================================================
+
+If you're using Splunk automatic discovery to instrument your .NET applications, you might need a runtime identifier to configure the appropriate instrumentation.
+
+To find your runtime identifier, follow these steps:
+
+#. In your ``Program.cs`` file, make sure that your code includes the following dependency:
+
+   .. code-block:: c
+      
+      using System.Runtime.InteropServices
+
+#. In your main application, add the following code to print your runtime identifier information:
+
+   .. code-block:: c
+
+      Console.WriteLine(RuntimeInformation.RuntimeIdentifier);
+
+#. Run the application and check your application logs.
+#. Verify that the runtime identifier is supported for your instrumentation.
+
 Traces don't appear in Splunk Observability Cloud
 ==================================================================
 
@@ -189,6 +213,24 @@ You can also look for the ``** THIS WILL RESULT IN LOSS OF PROFILING DATA **.`` 
 The thread sampler resumes its activity when any of the buffers is empty.
 
 To avoid the loss of profiling data due to full buffers, check the configuration and the communication layer between your process and the Splunk Distribution of OpenTelemetry Collector.
+
+Assembly version conflicts
+==========================
+
+When installing the .NET instrumentation, you might encounter dependency version conflicts that result in error messages such as:
+
+.. code-block:: bash
+
+   Unhandled exception. System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.Extensions.DependencyInjection.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. The system cannot find the file specified.
+
+   File name: 'Microsoft.Extensions.DependencyInjection.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+      at Microsoft.AspNetCore.Builder.WebApplicationBuilder..ctor(WebApplicationOptions options, Action`1 configureDefaults)
+      at Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(String[] args)
+      at Program.<Main>$(String[] args) in /Blog.Core/Blog.Core.Api/Program.cs:line 26
+
+To resolve this issue, :ref:`install the .NET instrumentation using the NuGet packages <otel-dotnet-nuget-pkg>`, as NuGet automatically installs the correct dependencies that the package requires.
+
+Alternatively, you can update to the latest version of .NET, as this reduces the likelihood of dependency version conflicts.
 
 Uninstall the instrumentation
 ======================================

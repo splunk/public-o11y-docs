@@ -130,6 +130,19 @@ The following example shows how to use the OTel Swift API to report on a functio
       span.end() // You can also use defer for this
    }
 
+Alternatively, you can also use the following snippet:    
+
+.. code-block:: swift
+
+   func calculateTax() {
+      let tracer = OpenTelemetry.instance.tracerProvider.get(instrumentationName: "MyApp", instrumentationVersion: nil)
+      let span = tracer.spanBuilder(spanName: "calculateTax").startSpan()
+      span.setAttribute(key: "numClaims", value: claims.count)
+    //...
+    //...
+      span.end() // You can also use defer for this
+   }
+
 This other example shows how to record an event with no duration, that is, which happens in an instant:
 
 .. code-block:: swift

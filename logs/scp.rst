@@ -16,9 +16,9 @@ When you set up Log Observer Connect, your logs data remains in your Splunk Clou
 Region and version availability
 ==============================================================
 
-Splunk Log Observer Connect is available in the following Splunk Observability realms: us0, us1, us2, eu0, jp0, and au0. It's not available for Splunk Cloud Platform trials and is not supported in GovCloud regions.  
+.. include:: /_includes/logs/loc-availability.rst
 
-Splunk Log Observer Connect is compatible with Splunk Cloud Platform versions 9.0.2209 and higher. 
+.. _logs-scp-prereqs:
 
 Prerequisites
 ==============================================================
@@ -36,6 +36,7 @@ Ensure the following configuration in your Splunk Cloud instance:
   - eu0: ``108.128.26.145``, ``34.250.243.212``, ``54.171.237.247``
   - jp0: ``35.78.47.79``, ``35.77.252.198``, ``35.75.200.181``
   - au0: ``13.54.193.47``, ``13.55.9.109``, ``54.153.190.59``
+  - us2 (for GCP): ``35.247.113.38/32``, ``35.247.32.72/32``, ``35.247.86.219/32``
 
 Set up Log Observer Connect
 ==============================================================
@@ -97,17 +98,13 @@ In Splunk Cloud Platform, follow the instructions in the guided setup for the in
 
 .. _download-certificate:
 
-8. Secure a connection to your Splunk Cloud Platform instance in Splunk Observability Cloud. To get help from Splunk Support, :ref:`Submit a support ticket <support-ticket>`. To do it yourself, add your public IPv4 address to your Splunk Cloud Platform allow list by following instructions in :new-page:`Add subnets to IP allow lists <https://docs.splunk.com/Documentation/SplunkCloud/latest/Admin/ConfigureIPAllowList#Add_subnets_to_IP_allow_lists>`. 
+8. Secure a connection to your Splunk Cloud Platform instance in Splunk Observability Cloud. See :ref:`logs-scp-prereqs` for more information on the IPs to allow.
 
-   If you are in a GCP Splunk Observability Cloud realm, add the following additional IP addresses to your Splunk Cloud Platform allow list:
+  * To get help from Splunk Support, :ref:`Submit a support ticket <support-ticket>`. 
 
-         * 35.247.113.38/32
-   
-         * 35.247.32.72/32
-   
-         * 35.247.86.219/32
+  * To do it yourself, add your public IPv4 address to your Splunk Cloud Platform allow list by following instructions in :new-page:`Add subnets to IP allow lists <https://docs.splunk.com/Documentation/SplunkCloud/latest/Admin/ConfigureIPAllowList#Add_subnets_to_IP_allow_lists>`. 
 
-9.  Go back to the Log Observer Connect guided setup and select :guilabel:`Next`. Enter your service account username, password, and Splunk platform URL ``https://<stackname>.splunkcloud.com:8089`` to complete the guided setup.
+9. Go back to the Log Observer Connect guided setup and select :guilabel:`Next`. Enter your service account username, password, and Splunk platform URL ``https://<stackname>.splunkcloud.com:8089`` to complete the guided setup.
 
 10.  Remove your IPv4 address from the IP allowlist that you added in step 8. If you are in a GCP environment, do not remove the additional GCP IP addresses that you added in step 8.
 

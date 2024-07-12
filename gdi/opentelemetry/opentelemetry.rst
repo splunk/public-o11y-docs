@@ -17,7 +17,7 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     Collector for Kubernetes <collector-kubernetes/collector-kubernetes-intro.rst>
     Collector for Linux <collector-linux/collector-linux-intro.rst>
     Collector for Windows <collector-windows/collector-windows-intro.rst>     
-    deployments/otel-deployments.rst  
+    Other deployment tools: ECS EC2, Fargate, Nomad, PCF <deployments/otel-deployments.rst>  
     Automatic discovery and configuration <discovery-mode.rst>
     Use the Universal Forwarder <collector-with-the-uf.rst>
     Monitor the Collector with built-in dashboards <collector-builtin-dashboard.rst>
@@ -36,8 +36,6 @@ Learn more about the Splunk Observability Cloud data model at :ref:`data-model`.
   </embed>
 
 .. include:: /_includes/collector-works.rst
-
-Learn more at :ref:`otel-understand-use`.  
 
 .. raw:: html
 
@@ -199,16 +197,15 @@ The Collector also offers a :ref:`zPages extension <zpages-extension>`, which pr
     <h2>Available features for the Collector<a name="otel-using" class="headerlink" href="#otel-using" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-See the features available for the Collector:
+After installing the Collector, read :ref:`otel-understand-use`.  
 
 * See how to perform common actions and tasks with the Collector at :ref:`collector-how-to`. For example, learn how to :ref:`collector-remove-data` to strip data out of your telemetry, including PII.
-* Learn about automatic discovery and configuration (formerly zero configuration auto instrumentation) to detect telemetry data. See :ref:`discovery_mode`.
-* Activate automatic discovery so that the Collector can automatically grab traces from your application, and add metrics for certain types of calls. See :ref:`discovery_mode`.
+* Learn about automatic discovery and configuration (formerly zero configuration auto instrumentation) to detect telemetry data. Automatic discovery allows the Collector to automatically grab traces from your application, and add metrics for certain types of calls. See :ref:`discovery_mode`.
 
-For more information:
+For more information see also:
 
 - :ref:`otel-troubleshooting`. Try these troubleshooting techniques and learn how to open a support request.
-- Read :ref:`otel-collector-scenario`.
+- :ref:`otel-collector-scenario`.
 
 .. _otel-intro-enterprise:
 
