@@ -35,7 +35,7 @@ These are the available prepopulated CloudFormation templates to create AWS Metr
 
 .. list-table::
   :header-rows: 1
-  :widths: 20, 20, 35, 35
+  :widths: 20, 40, 40
   :width: 100
 
   * - Deployment type
