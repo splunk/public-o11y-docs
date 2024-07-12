@@ -1,11 +1,11 @@
 .. _gcp-metrics:
 
-******************************************
-Google Cloud Monitoring metrics
-******************************************
+************************************************
+Google Cloud Monitoring metrics and metadata
+************************************************
 
 .. meta::
-   :description: Google Cloud Platform / GCP metrics in Splunk Observability Cloud.
+   :description: Google Cloud Platform / GCP metrics and metadata in Splunk Observability Cloud.
 
 .. toctree::
    :hidden:
@@ -14,16 +14,29 @@ After :ref:`connecting to GCP <get-started-gcp>`, metrics from Google Cloud Moni
 
 Metrics from Google Cloud Monitoring (formerly Stackdriver) contain dimensions that correspond to the Labels described in the Google Cloud metrics reference and the :new-page:`Monitored Resource Types <https://cloud.google.com/monitoring/api/resources>` reference. Use the ``monitored_resource`` dimension to determine which metric corresponds to a particular resource.
 
-Although you can configure :new-page:`Cloud Monitoring <https://cloud.google.com/monitoring/api/metrics_aws>` to monitor AWS metrics, the GCP integration with Splunk Observability Cloud does not ingest them by default. You can enter additional GCP service domains while configuring your integration. Such a configuration does not connect your Splunk Observability Cloud instance to AWS.
+Although you can configure :new-page:`Cloud Monitoring <https://cloud.google.com/monitoring/api/metrics_aws>` to monitor AWS metrics, the GCP integration with Splunk Observability Cloud does not ingest them by default. You can enter additional GCP service domains while configuring your integration. 
 
-Available GCP metrics
-================================
+Available GCP metrics and metadata
+========================================
 
-All metrics of supported services are included by default. 
+.. include:: /_includes/gdi/available-gcp.rst
 
-* Check the list of supported GCP services in Splunk Observability Cloud at :ref:`gcp-integrations`.
 * For a detailed list of the available Google Cloud Monitoring metrics, including services not supported out-of-the-box, see the official Google documentation at :new-page:`Google Cloud metrics <https://cloud.google.com/monitoring/api/metrics_gcp>`. 
 * To track and understand your consumption, see :ref:`monitor-imm-billing-usage`.
+
+GCP project metadata
+------------------------
+
+Splunk Observability Cloud also fetches the following properties of your synchronized GCP projects:
+
+* ``gcp_project_creation_time``
+* ``gcp_project_name``
+* ``gcp_project_number``
+* ``gcp_project_status``
+
+These properties are attached to the ``project_id`` dimension and are propagated to all MTSes with this dimension. 
+
+.. note:: To fetch these properties from your GCP subprojects you need to explicitly mention them in the integration configuration. 
 
 Organization metrics
 =================================
