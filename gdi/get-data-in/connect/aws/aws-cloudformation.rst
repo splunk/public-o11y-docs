@@ -38,40 +38,19 @@ These are the available prepopulated CloudFormation templates to create AWS Metr
   :widths: 20, 20, 35, 35
   :width: 100
 
-  * - Supports Metric Streams
-    - Deployment type
+  * - Deployment type
     - QuickLink
     - Hosted template 
 
-  * - Yes
-    - Once per account (using StackSets)
-    - Deploy this :new-page:`QuickLink <https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_all_features.yaml>`
-    - :new-page:`Hosted template <https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_all_features.yaml>`
-
-  * - Yes
-    - In each region
-    - Deploy :new-page:`this QuickLink <https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_all_features_regional.yaml>` in every region 
-    - :new-page:`Hosted template <https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_all_features_regional.yaml>`
-
-  * - No
-    - Once per account (using StackSets)
-    - Deploy this :new-page:`QuickLink <https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_logs.yaml>`
-    - :new-page:`Hosted template <https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_logs.yaml>`
-
-  * - No
-    - In each region
-    - Deploy :new-page:`this QuickLink <https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_logs_regional.yaml>` in every region
-    - :new-page:`Hosted template <https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_logs_regional.yaml>`
-
-  * - Yes
-    - Once per account (using StackSets)
+  * - Once per account (using StackSets)
     - Deploy this :new-page:`QuickLink <https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_metric_streams.yaml>`
     - :new-page:`Hosted template <https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_metric_streams.yaml>`
 
-  * - Yes
-    - In each region
+  * - In each region
     - Deploy :new-page:`this QuickLink <https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_metric_streams_regional.yaml>` in every region
     - :new-page:`Hosted template <https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_metric_streams_regional.yaml>`
+
+To see other CloudFormation templates offered by Splunk Observability Cloud refer to the :new-page:`AWS CloudFormation templates <https://github.com/signalfx/aws-cloudformation-templates/tree/main>` repo in GitHub.
 
 Custom CloudFormation templates
 -------------------------------------------
