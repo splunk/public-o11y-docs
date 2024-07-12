@@ -32,7 +32,7 @@ aws-eu-south-2, AWS - Spain, Europe, "18.100.244.13, 18.100.31.232, 18.101.5.2",
 aws-eu-west-1, AWS - Dublin, Europe, "52.214.64.173, 54.72.230.176, 54.77.217.116", Amazon
 aws-eu-west-2, AWS - London, Europe, "18.135.151.109, 3.10.42.105, 3.11.202.62", Amazon
 aws-eu-west-3, AWS - Paris, Europe, "13.37.112.120, 13.39.144.54, 15.236.76.0", Amazon
-aws-il-central-1, AWS - Israel, Middle East, "51.16.118.22, 51.17.116.180, 51.17.255.28", Amazon
+aws-il-central-1, AWS - Tel Aviv, Middle East, "51.16.118.22, 51.17.116.180, 51.17.255.28", Amazon
 aws-me-central-1, AWS - UAE, Middle East, "3.28.108.235, 3.28.251.150, 3.29.41.238", Amazon
 aws-me-south-1, AWS - Bahrain, Middle East, "15.184.143.116, 15.185.237.105, 157.241.14.244", Amazon
 aws-me-south-1-mct-1, AWS LZ - Muscat, Middle East, "15.220.161.23", Amazon (Local Zone)
