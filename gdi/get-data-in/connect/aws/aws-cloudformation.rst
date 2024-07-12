@@ -16,13 +16,13 @@ Use CloudFormation to connect to Splunk Observability Cloud
 
 To use CloudFormation to connect to Splunk Observability Cloud follow these steps:
 
-#. Install the AWS integration. Learn more at :ref:`get-started-aws`.
+1. Install the AWS integration. Learn more at :ref:`get-started-aws`.
 
-#. Decide which :ref:`CloudFormation template <aws-cloudformation-templates>` to use depending on your deployment method (for example, per AWS region or per AWS account) and integration type. Note that templates are only available for Metric Sreams.
+2. Decide which :ref:`CloudFormation template <aws-cloudformation-templates>` to use depending on your deployment method (for example, per AWS region or per AWS account) and integration type. Note that templates are only available for Metric Sreams.
 
-  Even if you don't intend to use all options you can safely deploy any CloudFormation template since unused infrastructure doesn't generate costs.
+  * Even if you don't intend to use all options you can safely deploy any CloudFormation template since unused infrastructure doesn't generate costs.
 
-#. Select the QuickLink for your chosen template. The QuickLink automatically opens the AWS Management Console in the last region you used, but you can select any other region in the AWS Management Console.
+3. Select the QuickLink for your chosen template. The QuickLink automatically opens the AWS Management Console in the last region you used, but you can select any other region in the AWS Management Console.
 
 .. caution:: Splunk Log Observer is no longer available for new users. You can continue to use Log Observer if you already have an entitlement. To collect logs, see :ref:`aws-logs`.
 
