@@ -7,7 +7,6 @@ Available CloudFormation and Terraform templates
 .. meta::
   :description: CloudFormation templates for AWS in Splunk Observability Cloud.
 
-
 To create Splunk-managed Metric Streams resources you can either use :ref:`CloudFormation <aws-cloudformation-use>` or a :ref:`Terraform template <aws-terraform-use>`.
 
 .. _aws-cloudformation-use:
@@ -15,16 +14,24 @@ To create Splunk-managed Metric Streams resources you can either use :ref:`Cloud
 Use CloudFormation to connect to Splunk Observability Cloud
 ========================================================================================
 
-You need to install the AWS integration first before you use any Cloudformation template. Learn more at :ref:`get-started-aws`.
+To use CloudFormation to connect to Splunk Observability Cloud follow these steps:
 
-Decide which CloudFormation template to use depending on your deployment method (for example, per AWS region or per AWS account) and integration type. Even if you don't intend to use all options, you can safely deploy a CloudFormation template, since unused infrastructure doesn't generate costs.
+#. Install the AWS integration. Learn more at :ref:`get-started-aws`.
+
+#. Decide which :ref:`CloudFormation template <aws-cloudformation-templates>` to use depending on your deployment method (for example, per AWS region or per AWS account) and integration type. Note that templates are only available for Metric Sreams.
+
+  Even if you don't intend to use all options you can safely deploy any CloudFormation template since unused infrastructure doesn't generate costs.
+
+#. Select the QuickLink for your chosen template. The QuickLink automatically opens the AWS Management Console in the last region you used, but you can select any other region in the AWS Management Console.
 
 .. caution:: Splunk Log Observer is no longer available for new users. You can continue to use Log Observer if you already have an entitlement. To collect logs, see :ref:`aws-logs`.
+
+.. _aws-cloudformation-templates:
 
 Prepopulated CloudFormation templates
 -------------------------------------------
 
-Select the QuickLink for a template which supports Metric Streams to open the AWS Management Console in the last region that you used.
+These are the available prepopulated CloudFormation templates to create AWS Metric Streams resources:
 
 .. list-table::
   :header-rows: 1
@@ -66,8 +73,6 @@ Select the QuickLink for a template which supports Metric Streams to open the AW
     - Deploy :new-page:`this QuickLink <https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_metric_streams_regional.yaml>` in every region
     - :new-page:`Hosted template <https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_metric_streams_regional.yaml>`
 
-From the :strong:`CloudFormation templates` table, select the QuickLink for a template with support for metric streams. The QuickLink automatically opens the AWS Management Console in the last region you used, but you can select any other region in the AWS Management Console.
-
 Custom CloudFormation templates
 -------------------------------------------
 
@@ -85,6 +90,8 @@ You can optionally use AWS CloudFormation StackSets to work simultaneously acros
 Use the Terraform template to connect to Splunk Observability Cloud
 ========================================================================================
 
-Alternatively, you can also deploy Kinesis Firehose with Terraform. See :new-page:`Terraform Setup for Creating Kinesis Firehose to Send CloudWatch Metric Stream <https://github.com/signalfx/aws-terraform-templates/tree/main>`.
+Alternatively, you can also deploy Kinesis Firehose with Terraform. See the :new-page:`Terraform Setup for Creating Kinesis Firehose to Send CloudWatch Metric Stream <https://github.com/signalfx/aws-terraform-templates/tree/main>` GitHub repo.
 
 The provided Terraform template supports Metric Streams only, and does not offer log support.
+
+For more information on how to use Terraform to connect to AWS, see :ref:`terraform-config`.
