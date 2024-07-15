@@ -24,19 +24,24 @@ Available GCP metrics and metadata
 * For a detailed list of the available Google Cloud Monitoring metrics, including services not supported out-of-the-box, see the official Google documentation at :new-page:`Google Cloud metrics <https://cloud.google.com/monitoring/api/metrics_gcp>`. 
 * To track and understand your consumption, see :ref:`monitor-imm-billing-usage`.
 
-GCP project metadata
-------------------------
+GCP project metadata: Properties and lables
+------------------------------------------------------
 
-Splunk Observability Cloud also fetches the following properties of your synchronized GCP projects:
+Splunk Observability Cloud also fetches the following metadata from your synchronized GCP projects:
 
-* ``gcp_project_creation_time``
-* ``gcp_project_name``
-* ``gcp_project_number``
-* ``gcp_project_status``
+* Project properties, which are attached to the ``project_id`` dimension and are propagated to all MTSes with this dimension. 
 
-These properties are attached to the ``project_id`` dimension and are propagated to all MTSes with this dimension. 
+  * ``gcp_project_creation_time``
 
-.. note:: To fetch these properties from your GCP subprojects you need to explicitly mention them in the integration configuration. 
+  * ``gcp_project_name``
+
+  * ``gcp_project_number``
+
+  * ``gcp_project_status``
+
+* Project labels, which are prefixed with ``project_label_``.
+
+.. note:: To add your GCP subprojects in your project's fields you need to explicitly mention them in the integration configuration. 
 
 Organization metrics
 =================================
