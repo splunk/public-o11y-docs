@@ -38,6 +38,8 @@ socket, you might need to add the ``splunk-otel-collector`` user to the
 
    usermod -aG docker splunk-otel-collector
 
+For a walkthrough of how to send Docker container logs to a Splunk Enterprise instance, see :ref:`about-logs-collector-splunk-tutorial`.
+
 Example
 ~~~~~~~
 
