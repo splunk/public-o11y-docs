@@ -61,3 +61,5 @@ To instrument your AWS Lambda function using the Splunk OpenTelemetry Lambda lay
   </embed>
 
 Splunk Observability Cloud can also collect AWS Lambda metrics and logs from AWS CloudWatch. See :ref:`get-started-aws` for more information on how to connect Splunk Observability Cloud to your AWS services.
+
+For a walkthrough of tasks related to using AWS cloud services with your infrastructure, see :ref:`about-collector-configuration-tutorial`.

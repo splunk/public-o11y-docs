@@ -198,6 +198,7 @@ Splunk Observability Cloud also offers secured connectivity with AWS. For more i
     <h2>See also<a name="after-aws-integration" class="headerlink" href="#after-aws-integration" title="Permalink to this headline">¶</a></h2>
   </embed>
 
+* For a walkthrough of tasks related to using AWS cloud services with your infrastructure, see :ref:`about-collector-configuration-tutorial`.
 * See :ref:`Leverage data from integration with AWS <aws-post-install>` for an overview of what you can do after you connect Splunk Observability Cloud to AWS.
 * Find instructions on how to import AWS metrics and metadata such as tags using namespaces and filters at :ref:`Monitor AWS services <infrastructure-aws>`. 
 * Refer to the AWS official documentation for a list of the available AWS metrics and other data, or read about the metadata Splunk Observability Cloud can provide at :ref:`AWS CloudWatch metadata <aws-infra-metadata>`.
