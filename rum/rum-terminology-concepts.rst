@@ -219,7 +219,7 @@ Web Vitals are made up of three metrics that measure user experience:
 
 * LCP (largest contentful paint)
 * CLS (cumulative layout shift)
-* FID (first input delay).
+* INP (Interaction to next paint)
 
  Google uses web vitals to determine page ranking. Splunk RUM automatically measures Web Vital metrics. To learn more about web vitals, see :new-page:`https://web.dev/vitals/` in the Google developer documentation.
 

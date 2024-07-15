@@ -22,7 +22,7 @@ Web Vitals are made up of three metrics that measure user experience:
 
 * LCP (largest contentful paint)
 * CLS (cumulative layout shift)
-* FID (first input delay).
+* INP (Interaction to next paint).
 
 Monitor Web Vitals 
 ======================

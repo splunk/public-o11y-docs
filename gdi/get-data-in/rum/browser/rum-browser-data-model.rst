@@ -93,9 +93,9 @@ The following tables list all of the metrics available in Splunk RUM for Browser
      - ``rum.node.webvitals_lcp.time.ns.p75``
      - The p75 time of the LCP in nanoseconds for the given time range.
    * - ``rum.webvitals_fid.time.ns.p75``
-     - First input delay time (FID)
+     - INP (Interaction to next paint)
      - ``rum.node.rum.webvitals_fid.time.ns.p75``
-     - The p75 time of the FID in nanoseconds for the given time range. 
+     - The p75 time of the INP in nanoseconds for the given time range. 
    * - ``rum.webvitals_cls.score.p75``
      - Cumulative layout shift (CLS) 
      -  ``rum.node.rum.webvitals_cls.score.p75``
