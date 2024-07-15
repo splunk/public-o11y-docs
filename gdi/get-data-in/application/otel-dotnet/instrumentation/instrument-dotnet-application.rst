@@ -96,7 +96,7 @@ Windows
 
          Run your application after setting the attribute.
 
-         .. note:: This command instruments any applications launched in the same powershell session. It won't instrument applications in a different powershell session.
+         .. note:: This command instruments any applications launched in the same PowerShell session. It won't instrument applications in a different PowerShell session.
 
       .. tab:: IIS (ASP.NET)
 
