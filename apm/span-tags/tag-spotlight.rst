@@ -1,17 +1,16 @@
 .. _apm-tag-spotlight:
 
-*****************************************************************************
 Analyze service performance with Tag Spotlight
 *****************************************************************************
 
 .. meta::
    :description: Learn how to view metrics for every indexed span tag for a service in a single window in Splunk Observability Cloud.
 
-Use Tag Spotlight to analyze the performance of your services in Splunk Observability Cloud to discover trends that contribute to high latency or error rates with indexed span tags. You can break down every service by each indexed span tag to view its metrics. When you select span tag values or a time range, you can view relevant traces to learn more about outlying incidents.
+Use Tag Spotlight to analyze the performance of your services in Splunk Observability Cloud to discover trends that contribute to high latency or error rates with span tags you have indexed. You can break down every service by each indexed span tag to view its metrics. When you select span tag values or a time range, you can view relevant traces to learn more about outlying incidents.
 
-For every service, Tag Spotlight provides request, error, and duration (RED) metrics time-series charts for every value of each indexed span tag within the specified time range in the APM navigation menu. Request and error charts display the total number of requests, errors, and root cause errors, and duration charts display p50, p90, and p99 latency. These values are based on Troubleshooting MetricSets (TMS), which Splunk APM generates for every indexed span tag. 
+For every service, Tag Spotlight provides time-series charts for request, error, and duration (RED) metrics for every value of each indexed span tag. Request and error charts display the total number of requests, errors, and root cause errors, and duration charts display p50, p90, and p99 latency. These values are based on Troubleshooting MetricSets (TMS), which Splunk APM generates for every indexed span tag. 
 
-The following image shows the requests and errors of an example ``frontend`` service broken down by the values of indexed span tags. The graph is powered by Troubleshooting MetricSets. 
+The following image shows the a chart for requests and errors and a chart for duration for an example ``frontend`` service. Under the chart there are bar charts for each indexed span tag.
 
    .. image:: /_images/apm/span-tags/tag-spotlight-01.png  
       :alt: This image shows the requests and errors of an example frontend service broken down by indexed span tag.
@@ -31,7 +30,7 @@ You can break down performance for each tag by either requests and errors or lat
 
 Follow these steps to navigate to Tag Spotlight for a specific service:
 
-   #. From the Splunk Observability Cloud landing page, select :guilabel:`APM`.
+   #. From Splunk Observability Cloud, select :guilabel:`APM`.
    #. In the list of services on the APM landing page, select a service you want to drill into. Selecting the service opens the Troubleshooting tab for that service.
    #. Scroll to the :strong:`Tag Spotlight` card in the sidebar to view a preview of top tags with errors and high latency. Select the card to open Tag Spotlight.
    #. View the distribution of all indexed span tags. The RED metrics time-series chart displays requests, errors, root cause errors, or latency for the specified time range. 
