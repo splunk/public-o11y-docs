@@ -107,7 +107,7 @@ APM dashboards for throttling and entitlements
 
 .. note:: These dashboards are for troubleshooting purposes only. For more information, refer to the Subscription Usage page and reports for your organization.
 
-To navigate to the APM usage dashboards, you can either go to :guilabel:`Settings` then :guilabe:`Organization overview`. 
+To navigate to the APM usage dashboards, you can either go to :guilabel:`Settings` then :guilabel:`Organization overview`. 
 
 .. list-table::
   :header-rows: 1
