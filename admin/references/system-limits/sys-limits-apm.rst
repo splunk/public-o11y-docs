@@ -86,7 +86,7 @@ UI limits
   * - :strong:`Limit name`
     - :strong:`Default limit value`
   * - Number of nodes in the service map
-    - 500
+    - 200
   * - Number of traces in trace search 
     - 1000
   * -  Number of spans per trace in trace view
