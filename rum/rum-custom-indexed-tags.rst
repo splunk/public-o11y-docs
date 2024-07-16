@@ -45,7 +45,7 @@ Follow these steps to add custom tags to Tag Spotlight
 
 1. Add a span tag following these steps: :ref:`create-a-span-rum`.
 
-2. In Splunk RUM, select :bold:`RUM MetricSet`. 
+2. In Splunk RUM, select :strong:`RUM MetricSet`. 
 
 .. image:: /_images/rum/rum-metricset.png
       :width: 90%
