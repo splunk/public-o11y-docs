@@ -81,6 +81,82 @@ Learn more about advanced configuration options (including Service Logging) usin
 * :ref:`otel-install-windows-manual`
 * :ref:`otel-windows-config`
 
+.. _windows-msi-env-variables:
+
+MSI env variables
+-----------------------------------------------
+
+You can use the following Splunk-specific environment variables with MSI:
+
+.. list-table::
+    :widths: 15 75 10
+    :width: 100
+    :header-rows: 1
+
+    *   - Name
+        - Description
+        - Default
+
+    *   - ``SPLUNK_ACCESS_TOKEN`` 
+        - The Splunk access token to authenticate requests.
+        - Empty
+
+    *   - ``SPLUNK_API_URL`` 
+        - The Splunk API URL. 
+        - ``https://api.[SPLUNK_REALM].signalfx.com``
+
+    *   - ``SPLUNK_BUNDLE_DIR`` 
+        - The path to the Smart Agent bundle. 
+        - ``[INSTALLDIR]\OpenTelemetry Collector\agent-bundle``
+
+    *   - ``SPLUNK_COLLECTD_DIR``
+        - The path to the collectd config directory for the Smart Agent. For example, ``/usr/lib/splunk-otel-collector/agent-bundle/run/collectd``
+        - Optional. Only added if passed to MsiExec command.
+
+    *   - ``SPLUNK_CONFIG`` 
+        - Destination path of the Collector custom configuration file. 
+        - ``[CommonAppDataFolder]Splunk\OpenTelemetry Collector\[SPLUNK_SETUP_COLLECTOR_MODE]_config.yaml``
+
+    *   - ``SPLUNK_GATEWAY_URL``
+        - URL in Gateway mode.
+        - Optional. Only added if passed to MsiExec command.
+
+    *   - ``SPLUNK_HEC_TOKEN`` 
+        - The Splunk HEC authentication token.
+        - ``[SPLUNK_ACCESS_TOKEN]``
+    
+    *   - ``SPLUNK_HEC_URL`` 
+        - The Splunk HEC endpoint URL. 
+        - ``https://ingest.[SPLUNK_REALM].signalfx.com/v1/log``
+    
+    *   - ``SPLUNK_INGEST_URL`` 
+        - The Splunk ingest URL. 
+        - ``https://ingest.[SPLUNK_REALM].signalfx.com``
+
+    *   - ``SPLUNK_LISTEN_INTERFACE`` 
+        - The network interface the agent receivers listen on. 
+        - Optional. Only added if passed to MsiExec command.
+
+    *   - ``SPLUNK_MEMORY_LIMIT_MIB`` 
+        - Use it to set the memory limit for the ``memory_limiter`` processor. 
+        - Optional. Only added if passed to MsiExec command.
+
+    *   - ``SPLUNK_MEMORY_TOTAL_MIB`` 
+        - Total memory in MiB to allocate to the Collector
+        - Optional. Only added if passed to MsiExec command.
+
+    *   - ``SPLUNK_REALM`` 
+        - Your Splunk realm.
+        - ``us0``
+
+    *   - ``SPLUNK_SETUP_COLLECTOR_MODE`` 
+        - Install property that sets the Collector's deployment mode. Learn more at :ref:`otel-deployment-mode`. 
+        - ``agent``
+
+    *   - ``SPLUNK_TRACE_URL`` 
+        - The Splunk trace endpoint URL. 
+        - ``https://ingest.[SPLUNK_REALM].signalfx.com/v2/trace``
+
 .. _windows-manual-fluentd:
 
 Install Fluentd MSI for log collection
