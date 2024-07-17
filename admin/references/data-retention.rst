@@ -23,7 +23,7 @@ The following table shows the retention time period for each data type in Infras
 
    * - :strong:`Data resolution`
      - :strong:`Retention`
-   * - 1 to 60-second resolution
+   * - 1 second resolution
      - 
        * Standard license edition: 8 days
        * Enterprise license edition: 3 months 
