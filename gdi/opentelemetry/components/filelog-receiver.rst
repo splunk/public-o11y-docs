@@ -197,26 +197,6 @@ Use the following configuration to send logs to Splunk Cloud:
 
   receivers:
     filelog:
-      include: [/home/ubuntu/arlogs/*.log]
-      logs:
-        receivers: [filelog, otlp]
-        processors:
-        - memory_limiter
-        - batch
-        - resourcedetection
-        #- resource/add_environment
-        exporters: [splunk_hec]
-
-  exporters:
-    # Logs
-    splunk_hec:
-      token: "${SPLUNK_HEC_TOKEN}"
-      endpoint: "${SPLUNK_HEC_URL}"
-      source: "otel"
-      sourcetype: "otel"
-
-  receivers:
-    filelog:
       include: [ /output/file.log ]
       operators:
         - type: regex_parser
@@ -227,6 +207,25 @@ Use the following configuration to send logs to Splunk Cloud:
           type: add
           field: body
           value: EXPR(body.parsed.before + "XXX-XXX-XXXX" + body.parsed.after)
+
+  exporters:
+    # Logs
+    splunk_hec:
+      token: "${SPLUNK_HEC_TOKEN}"
+      endpoint: "${SPLUNK_HEC_URL}"
+      source: "otel"
+      sourcetype: "otel"
+
+  service:
+    pipelines:
+      logs:
+        receivers: [filelog, otlp]
+        processors:
+        - memory_limiter
+        - batch
+        - resourcedetection
+        #- resource/add_environment
+        exporters: [splunk_hec]
 
 Send truncated logs to Splunk Enterprise
 --------------------------------------------
