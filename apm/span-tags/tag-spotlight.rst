@@ -10,7 +10,7 @@ Use Tag Spotlight to analyze the performance of your services in Splunk Observab
 
 For every service, Tag Spotlight provides time-series charts for request, error, and duration (RED) metrics for every value of each indexed span tag. Request and error charts display the total number of requests, errors, and root cause errors, and duration charts display p50, p90, and p99 latency. These values are based on Troubleshooting MetricSets (TMS), which Splunk APM generates for every indexed span tag. 
 
-The following image shows the a chart for requests and errors and a chart for duration for an example ``frontend`` service. Under the chart there are bar charts for each indexed span tag.
+The following image shows the a chart for requests and errors and a chart for duration for an example ``frontend`` service. Under the charts there are bar charts with RED metrics for each indexed span tag.
 
    .. image:: /_images/apm/span-tags/tag-spotlight-01.png  
       :alt: This image shows the requests and errors of an example frontend service broken down by indexed span tag.
@@ -20,39 +20,39 @@ To learn how to index span tags to generate Troubleshooting MetricSets, see :ref
 View service performance by indexed span tags with Tag Spotlight
 ================================================================
 
-Access Tag Spotlight from the :strong:`Tag Spotlight` panel of the APM landing page. You can also use the search in the top toolbar to search for Tag Spotlight and select the navigation result to navigate to Tag Spotlight.
+#. You can access Tag Spotlight in several places:
+     * Select the :guilabel:`Tag Spotlight` panel on the APM landing page or in the service map. 
+     * Select the `Tag Spotlight` tab in the service view for your service.
+     * Use the search in the top toolbar to search for Tag Spotlight and select the navigation result to go to Tag Spotlight.
 
 ..  image:: /_images/apm/span-tags/tag-spotlight-02.gif
     :width: 99%
     :alt: This animation shows the user searching for Tag Spotlight. 
 
-You can break down performance for each tag by either requests and errors or latency. 
-
-Follow these steps to navigate to Tag Spotlight for a specific service:
-
-   #. From Splunk Observability Cloud, select :guilabel:`APM`.
-   #. In the list of services on the APM landing page, select a service you want to drill into. Selecting the service opens the Troubleshooting tab for that service.
-   #. Scroll to the :strong:`Tag Spotlight` card in the sidebar to view a preview of top tags with errors and high latency. Select the card to open Tag Spotlight.
-   #. View the distribution of all indexed span tags. The RED metrics time-series chart displays requests, errors, root cause errors, or latency for the specified time range. 
-   #. Adjust the time range to view more or less data in the RED metrics chart. The default time range is for the last 15 minutes, and the data resolution is 10 seconds.
-
-Use the :guilabel:`Service` picker in the top bar of Tag Spotlight to view metrics for a different service. 
+#. Add time range, environment, workflow, service, operation, and tag filters as need to refine the data in your Tag Spotlight view. The default time range is for the last 15 minutes, and the data resolution is 10 seconds.
+#. Use the request & errors and latency time-series charts at the top to see a distribution of your RED metrics.
+#. Use the bar charts under the request & errors and latency time-series charts to view RED metrics for each indexed span tag.
+#. View the distribution of all indexed span tags. The tag bar charts display either request and error distributions or latency distribution. Use the :guilabel:`bar chart display` menu to select the data you want to display in the bars. 
+#. Select the menu on the top left of the bar chart section to select which metrics to display in each tag panel. You can also use this menu to select whether to display tags with no values.
 
 Explore the distribution of span tags and values to find trends
 ----------------------------------------------------------------------
-There are a number of ways to drill down into indexed span tags for a selected service so you can understand the source of an incident:
+
+To understand the source of an incident use 1 of these options to drill down into indexed span tags for a selected service:
 
 - Use the filter bar to filter the requests shown in Tag Spotlight by environment, service, and operation. You can also create a custom filter based on indexed or unindexed tags. The filter context is preserved even when you navigate away from the page. 
 
-- Hover over a span tag value for any indexed span tag to view the performance of the span tag value relative to all other indexed span tags and values. You can also select a span tag value to add a filter to filter the RED metrics chart to spans containing that value. 
+- Select the menu on the top left of the bar chart section to select which metrics to display for any indexed span tag.  
+  
+- Select a span tag value then select :guilabel:`Add to filter` to filter the RED metrics charts to spans containing that value. 
 
-- Hover over the RED metrics chart to view a summary of metrics for the specified time. The resolution of data for the RED metrics chart is 10 seconds. 
+- Hover over the RED metrics charts to view a summary of metrics for the specified time. The resolution of data for the RED metrics chart is 10 seconds. 
 
-- Select within the RED metrics chart to load representative traces for the time you selected.
+- Select within the RED metrics charts to load example traces for the time you selected.
 
-- Select a span tag card header to add the top 5 span tag values in the card to the RED metrics chart.
+- Select a span tag card header to add the top 5 span tag values in the card to the RED metrics charts.
 
-- Control what appears in the RED metrics chart by showing or hiding metrics in the chart's legend. For example, you can select the eye icon beside :guilabel:`Requests` to view only errors. When the slider is set to :guilabel:`Latency`, select the eye icon to hide the p50 latency metric and compare only p90 and p99 values. 
+- Control what appears in the RED metrics chart by showing or hiding metrics in the chart's legend. For example, you can select the eye icon beside :guilabel:`Requests` to view only errors.  
 
 Scenario: Find the root cause of an incident with Tag Spotlight
 ================================================================
