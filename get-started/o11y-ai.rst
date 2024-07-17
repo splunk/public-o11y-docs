@@ -31,19 +31,19 @@ How to access the AI Assistant in Observability Cloud
 ==================================================================================
 To access the AI Assistant in Observability Cloud, select the AI Assistant icon from the toolbar on the right side.
 
-..  image:: /_images/rum/mobile-use-case-overview.png
+..  image:: /_images/ai/ai1.png
     :width: 100%
     :alt: This image shows the location of the AI Assistant for Observability.
 
-Enter your prompt in plain English in the text box. Ask about anything in your environment.
 
+Enter your prompt in plain English in the text box. Ask about anything in your environment.
 
 Alternatively, you can select from the two suggested prompts:
 
 * List active incidents
 * List services experiencing high error rates
 
-..  image:: /_images/rum/mobile-use-case-overview.png
+..  image:: /_images/ai/ai2.png
     :width: 100%
     :alt: This image shows the location of the AI Assistant for Observability.
 
@@ -58,6 +58,10 @@ You can only access the most recent chat interaction within the last thirty days
 ChatId
 ----------------------------------------------------------------------------------
 Chatid is the unique identifier for each AI Assistant in Observability Cloud conversation. Use ChatId when you want to report something about a particular conversation. Find it near the top of the chat below AI Assistant.
+
+..  image:: /_images/ai/ai3.png
+    :width: 100%
+    :alt: This image shows the location of the chatId.
 
 Data sharing and use
 ==================================================================================
@@ -84,9 +88,7 @@ Service limitations
 ==================================================================================
 A Splunk Observability Cloud organization has a limit of 3,000 prompts per month and no more than 10 prompts per minute.
 
-..  image:: /_images/rum/mobile-use-case-overview.png
-    :width: 100%
-    :alt: This image shows the location of the AI Assistant for Observability.
+
 
 
 
