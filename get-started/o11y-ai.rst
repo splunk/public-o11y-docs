@@ -44,7 +44,7 @@ Alternatively, you can select from the two suggested prompts:
 * List services experiencing high error rates
 
 ..  image:: /_images/ai/ai2.png
-    :width: 100%
+    :width: 40%
     :alt: This image shows the location of the AI Assistant for Observability.
 
 Context limitations
@@ -60,7 +60,7 @@ ChatId
 Chatid is the unique identifier for each AI Assistant in Observability Cloud conversation. Use ChatId when you want to report something about a particular conversation. Find it near the top of the chat below AI Assistant.
 
 ..  image:: /_images/ai/ai3.png
-    :width: 100%
+    :width: 40%
     :alt: This image shows the location of the chatId.
 
 Data sharing and use
