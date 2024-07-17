@@ -6,48 +6,58 @@ Monitor Splunk APM billing and subscription usage
 .. meta::
    :description: View APM billing subscription usage information and download usage reports to monitor your organization.
 
-.. note:: Use this topic to understand general aspects of subscription usage for Splunk APM. For more detailed billing-related queries, contact your Splunk Account Team.
+.. note:: Use this topic to understand general aspects of subscription usage for Splunk APM. For more detailed billing-related questions, contact your Splunk Account Team.
 
 The following table lists the Splunk APM billing and subscription usage information that is available for you to use to monitor your organization usage against its subscription plan and limits. 
 
 .. list-table::
    :header-rows: 1
-   :widths: 65, 35
+   :widths: 50, 22, 28
 
    * - :strong:`Subscription usage information`
      - :strong:`Location`
+     - :strong:`Link to documentation`
 
    * - Type of plan
-     - See :ref:`APM subscription usage page<view-apm-subscription-usage>`.
+     - APM subscription usage page
+     - :ref:`view-apm-subscription-usage`
 
-   * - The average usage and the percent of limit for the following aspects of Splunk APM. 
-        * Hosts (for host subscription plans) 
-        * Containers (for host subscription plans) 
+   * - Average usage and the percent of limit for the following aspects of Splunk APM: 
+        * Hosts, for host subscription plans
+        * Containers, for host subscription plans
         * Troubleshooting MetricSets
         * Trace volume
         * Monitoring MetricSets 
-     - See :ref:`APM subscription usage page<view-apm-subscription-usage>`.
+     - APM subscription usage page
+     - :ref:`view-apm-subscription-usage`
 
-   * - The subscription limits for your subscription plan. 
-     - See :ref:`APM subscription usage page<view-apm-subscription-usage>`.
+   * - Subscription limits for your subscription plan
+     - APM subscription usage page
+     - :ref:`view-apm-subscription-usage`
 
-   * - Usage metrics for host subscription plans. See :ref:`host-usage-metrics` for a complete list.
-     - See :ref:`Detailed usage reports<download-apm-usage-reports>`.
+   * - Usage metrics for host subscription plans
+     - Detailed usage reports
+     - :ref:`download-apm-usage-reports`
 
-   * - Usage metrics for trace-analyzed-per-minute (TAPM) subscription plans. See :ref:`tapm-usage-metrics` for a complete list.
-     - See :ref:`Detailed usage reports<download-apm-usage-reports>`.
+   * - Usage metrics for trace-analyzed-per-minute (TAPM) subscription plans
+     - Detailed usage reports
+     - :ref:`download-apm-usage-reports`
 
-   * - Host and container diagnostics.
-     - See :ref:`Host and container dignostic report<host-diagnostics-report-apm>`
+   * - Host and container diagnostics
+     - Host and container diagnostic report
+     - :ref:`host-diagnostics-report-apm`
 
-   * - Expensive services, most-used tag values, and largest ingested traces.
-     - See :ref:`Trace and span statitics<trace-span-statistics>`
+   * - Expensive services, most-used tag values, and largest ingested traces
+     - Trace and span statistics
+     - :ref:`trace-span-statistics`
 
-   * - Throttling and limits metrics.
-     - See :ref:`APM throttling dashboard<apm-throttling-entitlement>`
+   * - Throttling and limits metrics
+     - APM throttling dashboard
+     - :ref:`apm-throttling-entitlement`
   
-   * - Historical subscription usage metrics data.
-     - See :ref:`APM entitlements dashboard<apm-throttling-entitlement>`
+   * - Historical subscription usage metrics data
+     - APM entitlements dashboard
+     - :ref:`apm-throttling-entitlement`
 
 
 Prerequisite
@@ -60,14 +70,18 @@ To view the APM subscription usage page, you must have the admin or usage role.
 View APM subscription usage
 ==================================
 
-Go to :guilabel:`Settings` then :guilabel:`Subscription Usage` and select the :strong:`APM` tab. Depending on your organization subscription, you might need to go to :guilabel:`Settings` then :guilabel:`Billing and Usage`. Select the :guilabel:`APM` tab.
+To view your APM subscription usage, follow these steps:
+
+#. In Splunk Observability Cloud, go to :guilabel:`Settings` and then :guilabel:`Subscription Usage`  or :guilabel:`Billing and Usage`, depending on your organization subscription.
+#. Select the :strong:`APM` tab. 
+#. Select the average usage panels to see per-minute data. 
 
 The subscription usage page displays the following information about your organization's usage:
 
 * The type of plan
-* The average usage and the percent of limit for the following aspects of Splunk APM. The average is also the monthly billed value. Select the panel to see per-minute data. 
-    * Hosts (for host subscription plans) 
-    * Containers (for host subscription plans) 
+* The average usage and the percent of limit for the following aspects of Splunk APM. The average is also the monthly billed value. 
+    * Hosts, for host subscription plans 
+    * Containers, for host subscription plans
     * Troubleshooting MetricSets
     * Trace volume
     * Monitoring MetricSets 
@@ -75,9 +89,11 @@ The subscription usage page displays the following information about your organi
 
 .. note::
 
-   The APM subscription usage page displays a panel for Monitoring MetricSets (MMS), but the metric that powers the chart is not currently available on the subscription usage page. Select :guilabel:`View Detailed Usage Reports` to view your current histogram MMS data. For more information about detailed usage reports, see :ref:`download-apm-usage-reports`.
+   The APM subscription usage page displays a panel for Monitoring MetricSets (MMS), but the metric that powers the chart is not available on the subscription usage page. Select :guilabel:`View Detailed Usage Reports` to view your current histogram MMS data. For more information about detailed usage reports, see :ref:`download-apm-usage-reports`.
 
-For any questions about subscription usage, contact tech support or your sales representative.
+For questions about subscription usage, contact tech support or your sales representative.
+
+The following image shows the APM subscription usage page for a host subscription plan. 
 
   .. image:: /_images/admin/apm-subscription-usage-page.png
     :width: 95%
@@ -90,13 +106,11 @@ Download detailed usage reports
 
 Download detailed usage reports for recent usage periods to better understand your usage. APM usage reports are available as tab-delimited text files. They include metrics and subscription usage for the entire usage period. Follow these steps to view and download a usage report:
 
-1. Go to :guilabel:`Settings` then :guilabel:`Subscription Usage` and select the :strong:`APM` tab. Depending on your organization subscription, you might need to go to :guilabel:`Settings` then :guilabel:`Billing and Usage`.
-
-2. Select :guilabel:`View Detailed Usage Reports`.
-
-3. Select the usage report for the usage period you want to analyze. The usage report opens in a new tab.
-
-4. To download the report, select the usage report and save it as a .txt file.
+1. In Splunk Observability Cloud, go to :guilabel:`Settings` then :guilabel:`Subscription Usage` or :guilabel:`Settings` then :guilabel:`Billing and Usage` depending on your organization subscription.
+2. Select the :strong:`APM` tab.
+3. Select :guilabel:`View Detailed Usage Reports`.
+4. Select the usage report for the usage period you want to analyze. The usage report opens in a new tab.
+5. To download the report, select the usage report and save it as a .txt file.
 
 .. _host-usage-metrics:
 
@@ -109,7 +123,7 @@ Usage reports for host subscription plans include the following information abou
 * The number of billed containers. Container data is available per minute.
 * The billed trace volume. Trace volume data is available per minute.
 * The number of billed Troubleshooting MetricSets (TMS). TMS data is available per minute. 
-* The number of billed Monitoring MetricSets (MMS). MMS data is only available for histogram MMS and is only available in the usage report. MMS data is available at 10-minute intervals.
+* The number of billed Monitoring MetricSets (MMS). MMS data is available only for histogram MMS and is available only in the usage report. MMS data is available at 10-minute intervals.
 * The average number of hosts. Averages are available in usage reports for complete months only.
 * The average number of containers. Averages are available in usage reports for complete months only.
 * The average number of Troubleshooting MetricSets. Averages are available in usage reports for complete months only.
@@ -128,7 +142,7 @@ Usage reports for TAPM subscription plans include the following information abou
 * The number of billed TAPM. TAPM data is available per minute.
 * The billed trace volume. Trace volume data is available per minute.
 * The number of billed Troubleshooting MetricSets (TMS). TMS data is available per minute. 
-* The number of billed Monitoring MetricSets (MMS). MMS data is only available for histogram MMS and is only available in the usage report. MMS data is available at 10-minute intervals.
+* The number of billed Monitoring MetricSets (MMS). MMS data is available only for histogram MMS and is available only in the usage report. MMS data is available at 10-minute intervals.
 * The average number of TAPM. Averages are available in usage reports for complete months only.
 * The average number of Troubleshooting MetricSets. Averages are available in usage reports for complete months only.
 * The average number of Monitoring MetricSets. Averages are available in usage reports for complete months only.
@@ -141,13 +155,16 @@ Download a host and container diagnostic report
 
 For host subscription plans, you can download reports that show which hosts and containers are sending APM data over a specific minute. Use this report to identify which hosts and containers are contributing to your subscription usage. You can generate and download reports within the retention period for traces. See :ref:`apm-data-retention` for more information.
 
-To download a subscription usage report, do the following:
+To download a subscription usage report, do the following steps:
 
-#. Go to :menuselection:`Settings` then :menuselection:`Subscription Usage` and select the :guilabel:`APM` tab.
+#. Go to :menuselection:`Settings` then :menuselection:`Subscription Usage`.
+#. Select the :guilabel:`APM` tab.
 #. Expand the :guilabel:`Hosts` chart or the :guilabel:`Containers` chart.
-#. Select an hour of time in the chart with in the retention period for traces.
+#. Select an hour of time in the chart within the retention period for traces.
 #. Select a specific minute within the hour.
-#. If you've selected a minute that falls within the trace retention period the :guilabel:`Download Data` becomes active and displays the minute you selected. Select the download button to download  the .csv file.
+#. If you've selected a minute that falls within the trace retention period, the :guilabel:`Download Data` becomes active and displays the minute you selected. Select the download button to download  the .csv file.
+
+The following GIF shows the steps to download a subscription usage report.
 
   .. image:: /_images/admin/host-usage-diagnostics.gif
     :width: 95%
@@ -173,15 +190,20 @@ Use this data to troubleshoot and create a plan to mitigate sudden increases in 
 Use the APM throttling and entitlement dashboards to better understand your usage
 ===================================================================================
 
-Select :guilabel:`Dashboards` and search for "APM entitlements" and "APM throttling" to access the :guilabel:`APM entitlements` and :guilabel:`APM throttling` dashboards to further examine your usage. 
+#. Select :guilabel:`Dashboards`.
+#. Search for "APM entitlements" or "APM throttling" to access the :guilabel:`APM entitlements` and :guilabel:`APM throttling` dashboards to further examine your usage. 
 
 The APM entitlements dashboard provides historical data for metrics used on the :guilabel:`Subscription Usage` page. 
+
+The following image shows the APM entitlements dashboard.
 
   .. image:: /_images/admin/apm-entitlements-dashboard.png
     :width: 95%
     :alt: APM entitlements dashboard
 
-The APM throttling dashboard includes metrics that track throttling and limits in your organization. Several metrics in the APM throttling dashboard have detectors set up to send alerts when metrics for your organization are being throttled.
+The APM throttling dashboard includes metrics that track throttling and limits in your organization. Several metrics in the APM throttling dashboard have detectors set up to send alerts when metrics for your organization are being throttled. 
+
+The following image shows the APM throttling dashboard.
 
   .. image:: /_images/admin/apm-throttling-dashboard.png
     :width: 95%
@@ -219,7 +241,7 @@ The following metrics power the charts in your APM Subscription Usage page with 
 
    * - ``sf.org.apm.numSpanBytesReceived``
      - Trace Volume
-     - The number of bytes Splunk APM accepts from ingested span data after decompression, filtering and throttling.
+     - The number of bytes Splunk APM accepts from ingested span data after decompression and discarding invalid and throttled spans.
 
    * - ``sf.org.apm.numTroubleshootingMetricSets``
      - Troubleshooting MetricSets
@@ -254,7 +276,7 @@ The following metrics power the charts in your APM Subscription Usage page with 
 
    * - ``sf.org.apm.numSpanBytesReceived``
      - Trace Volume
-     - The number of bytes Splunk APM accepts from ingested span data after decompression following filtering and throttling.
+     - The number of bytes Splunk APM accepts from ingested span data after decompression and discarding invalid and throttled spans.
 
    * - ``sf.org.apm.numTroubleshootingMetricSets``
      - Troubleshooting MetricSets
@@ -264,4 +286,4 @@ The following metrics power the charts in your APM Subscription Usage page with 
      - Monitoring MetricSets
      - The cardinality of Monitoring MetricSets for each 10-minute window.
 
-To see all of the organization metrics for APM, see :ref:`Usage metrics for Splunk Observability Cloud <org-metrics>`.
+To see all of the organization metrics for APM, see :ref:`org-metrics`.
