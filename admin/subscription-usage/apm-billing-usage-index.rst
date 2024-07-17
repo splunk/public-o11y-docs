@@ -12,13 +12,15 @@ The following table lists the Splunk APM billing and subscription usage informat
 
 .. list-table::
    :header-rows: 1
-   :widths: 65, 35
+   :widths: 50, 22, 28
 
    * - :strong:`Subscription usage information`
      - :strong:`Location`
+     - :strong:`Link to documentation`
 
    * - Type of plan
-     - See :ref:`APM subscription usage page<view-apm-subscription-usage>`.
+     - APM subscription usage page
+     - :ref:`view-apm-subscription-usage`
 
    * - Average usage and the percent of limit for the following aspects of Splunk APM: 
         * Hosts, for host subscription plans
@@ -26,28 +28,36 @@ The following table lists the Splunk APM billing and subscription usage informat
         * Troubleshooting MetricSets
         * Trace volume
         * Monitoring MetricSets 
-     - See :ref:`APM subscription usage page<view-apm-subscription-usage>`.
+     - APM subscription usage page
+     - :ref:`view-apm-subscription-usage`
 
    * - Subscription limits for your subscription plan
-     - See :ref:`APM subscription usage page<view-apm-subscription-usage>`.
+     - APM subscription usage page
+     - :ref:`view-apm-subscription-usage`
 
    * - Usage metrics for host subscription plans
-     - See :ref:`Detailed usage reports<download-apm-usage-reports>`.
+     - Detailed usage reports
+     - :ref:`download-apm-usage-reports`
 
    * - Usage metrics for trace-analyzed-per-minute (TAPM) subscription plans
-     - See :ref:`Detailed usage reports<download-apm-usage-reports>`.
+     - Detailed usage reports
+     - :ref:`download-apm-usage-reports`
 
    * - Host and container diagnostics
-     - See :ref:`Host and container dignostic report<host-diagnostics-report-apm>`
+     - Host and container diagnostic report
+     - :ref:`host-diagnostics-report-apm`
 
    * - Expensive services, most-used tag values, and largest ingested traces
-     - See :ref:`Trace and span statitics<trace-span-statistics>`
+     - Trace and span statistics
+     - :ref:`trace-span-statistics`
 
    * - Throttling and limits metrics
-     - See :ref:`APM throttling dashboard<apm-throttling-entitlement>`
+     - APM throttling dashboard
+     - :ref:`apm-throttling-entitlement`
   
    * - Historical subscription usage metrics data
-     - See :ref:`APM entitlements dashboard<apm-throttling-entitlement>`
+     - APM entitlements dashboard
+     - :ref:`apm-throttling-entitlement`
 
 
 Prerequisite
