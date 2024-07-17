@@ -83,8 +83,8 @@ Learn more about advanced configuration options (including Service Logging) usin
 
 .. _windows-msi-env-variables:
 
-MSI env variables
------------------------------------------------
+Configure the Colector's environment variables with MSI
+==============================================================
 
 You can use the following Splunk-specific environment variables with MSI:
 
@@ -111,7 +111,7 @@ You can use the following Splunk-specific environment variables with MSI:
 
     *   - ``SPLUNK_COLLECTD_DIR``
         - The path to the collectd config directory for the Smart Agent. For example, ``/usr/lib/splunk-otel-collector/agent-bundle/run/collectd``
-        - Optional. Only added if passed to MsiExec command.
+        - Optional. Only added if passed to msiexec command.
 
     *   - ``SPLUNK_CONFIG`` 
         - Destination path of the Collector custom configuration file. 
@@ -119,7 +119,7 @@ You can use the following Splunk-specific environment variables with MSI:
 
     *   - ``SPLUNK_GATEWAY_URL``
         - URL in Gateway mode.
-        - Optional. Only added if passed to MsiExec command.
+        - Optional. Only added if passed to msiexec command.
 
     *   - ``SPLUNK_HEC_TOKEN`` 
         - The Splunk HEC authentication token.
@@ -135,15 +135,15 @@ You can use the following Splunk-specific environment variables with MSI:
 
     *   - ``SPLUNK_LISTEN_INTERFACE`` 
         - The network interface the agent receivers listen on. 
-        - Optional. Only added if passed to MsiExec command.
+        - Optional. Only added if passed to msiexec command.
 
     *   - ``SPLUNK_MEMORY_LIMIT_MIB`` 
         - Use it to set the memory limit for the ``memory_limiter`` processor. 
-        - Optional. Only added if passed to MsiExec command.
+        - Optional. Only added if passed to msiexec command.
 
     *   - ``SPLUNK_MEMORY_TOTAL_MIB`` 
         - Total memory in MiB to allocate to the Collector
-        - Optional. Only added if passed to MsiExec command.
+        - Optional. Only added if passed to msiexec command.
 
     *   - ``SPLUNK_REALM`` 
         - Your Splunk realm.
@@ -156,6 +156,17 @@ You can use the following Splunk-specific environment variables with MSI:
     *   - ``SPLUNK_TRACE_URL`` 
         - The Splunk trace endpoint URL. 
         - ``https://ingest.[SPLUNK_REALM].signalfx.com/v2/trace``
+
+.. _windows-msi-env-variables-examples:
+
+Set the variables using a PowerShell terminal
+-----------------------------------------------
+
+For example, you can set your access token with the following msiexec command: 
+
+  .. code-block:: PowerShell
+
+    Start-Process -Wait msiexec "/i PATH_TO_MSI /qn SPLUNK_ACCESS_TOKEN=<my_access_token>"
 
 .. _windows-manual-fluentd:
 
