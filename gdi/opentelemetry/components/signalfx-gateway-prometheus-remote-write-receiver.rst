@@ -5,29 +5,16 @@ SignalFx Gateway Prometheus remote write receiver
 ***************************************************************************
 
 .. meta::
-      :description: The SignalFx receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics and logs in SignalFx proto format.
+      :description: The SignalFx Gateway Prometheus remote write receiver is the OTel native version of the SignalFx Prometheus remote write gateway.
 
-The SignalFx receiver is a native OpenTelemetry component that allows the Splunk Distribution of OpenTelemetry Collector to collect data in SignalFx proto format. Supported pipeline types are ``metrics`` and ``logs``. See :ref:`otel-data-processing` for more information.
-
-.. note:: While the SignalFx Smart Agent has reached End of Support, OTel native components such as the Smart Agent receiver, the SignalFx receiver, and the SignalFx exporter are available and supported. For information on the exporter, see :ref:`signalfx-exporter`.
-
-The SignalFx receiver accepts:
-
-* Metrics in the SignalFx proto format. For more information, see :new-page:`SignalFx metrics protobuf <https://github.com/signalfx/com_signalfx_metrics_protobuf>`.
-* Events (logs) in the SignalFx proto format. For more information, see :new-page:`Send Traces, Metrics, and Events <https://dev.splunk.com/observability/reference/api/ingest_data/latest>` in the Splunk Developer Program documentation.
+The SignalFx Gateway Prometheus remote write receiver is the OTel native version of the SignalFx Prometheus remote-write gateway. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
 Get started
 ======================
 
-.. note:: 
-  
-  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector in the ``metrics`` and ``logs/signalfx`` pipelines when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information. 
-  
-  For details about the default configuration, see :ref:`otel-kubernetes-config`, :ref:`linux-config-ootb`, or :ref:`windows-config-ootb`. You can customize your configuration any time as explained in this document.
-
 Follow these steps to configure and activate the receiver:
 
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+1. Deploy the Splunk Distribution of the OpenTelemetry Collector to your host or container platform:
   
   - :ref:`otel-install-linux`
   - :ref:`otel-install-windows`
@@ -39,62 +26,71 @@ Follow these steps to configure and activate the receiver:
 Default configuration
 ----------------------
 
-.. caution:: Don't remove the ``signalfx`` receiver from the default configuration. If you need to change its settings, use the existing receiver or create a separate receiver configuration.
-
-To use the ``signalfx`` receiver in the Splunk Distribution of the OpenTelemetry Collector, add the following to your config file:
+To use the ``signalfxgatewayprometheusremotewritereceiver`` receiver in the Splunk Distribution of the OpenTelemetry Collector, add the following to your config file:
 
 .. code-block:: yaml
 
   receivers:
-    signalfx:
-      endpoint: 0.0.0.0:9943
-      # Whether to preserve incoming access token and
-      # use instead of exporter token. Default value is false.
-      # access_token_passthrough: true
+    signalfxgatewayprometheusremotewritereceiver:
 
-Next, configure both the metrics and logs pipelines. Make sure to also add the SignalFx exporter as in the following example:
+To complete the configuration, include the receiver in the required pipeline of the ``service`` section of your configuration file. For example:
 
 .. code-block:: yaml
 
   service:
     pipelines:
       metrics:
-        receivers: [signalfx]
-        processors: [memory_limiter, batch]
-        exporters: [signalfx]
-      logs:
-        receivers: [signalfx]
-        processors: [memory_limiter, batch]
-        exporters: [signalfx]
+        receivers: [signalfxgatewayprometheusremotewritereceiver]
 
-Sample configuration
+Advanced configuration
 --------------------------------------------
 
-This is a sample config for the SignalFx receiver:
+This receiver is configured through standard OpenTelemetry mechanisms. See :new-page:`Collector config go <https://github.com/signalfx/splunk-otel-collector/blob/main/internal/receiver/signalfxgatewayprometheusremotewritereceiver/config.go>` for more details.
 
-.. code-block:: yaml
+You can configure the following parameters:
 
-  signalfx:
-  signalfx/allsettings:
-    # endpoint specifies the network interface and port which will receive
-    # SignalFx metrics.
-    endpoint: localhost:9943
-    access_token_passthrough: true
-  signalfx/tls:
-    tls:
-      cert_file: /test.crt
-      key_file: /test.key
+* ``path``. ``/metrics`` by default. The path in which the receiver responds to Prometheus' remote-write requests. 
 
-Settings
+* ``buffer_size``. ``100`` by default. Buffer for metric translations without blocking further write requests.  
+
+  * Use the Collector's ``confighttp`` options to set up TLS and other features. See more at :new-page:`Collector config http <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/confighttp/confighttp.go#L206>`.
+
+* ``endpoint``. ``localhost:19291`` by default. Interface and port the receiver listens to. 
+
+Known limitations
 ======================
 
-The following table shows the configuration options for the SignalFx receiver:
+This receiver replicates the near-exact behavior of the SignalFx Prometheus remote-write gateway, with a few differences. 
 
-.. raw:: html
+Differences with the Prometheus Remote-Write specification
+---------------------------------------------------------------------------------------
 
-  <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/signalfx.yaml"></div>
+This behavior differs from the Prometheus remote-write specification version 1 in the following ways:
 
-.. caution:: If you use the ``access_token_passthrough`` setting with any exporter other than the SignalFx exporter, the receiver might reveal all organization access tokens. If you activate this setting, you must use the SignalFx receiver with the SignalFx exporter.
+* This receiver doesn't remove suffixes, as this is performed by the :ref:`prometheus-receiver`.
+
+* This receiver transforms histograms into counters.
+
+* This receiver transforms quantiles (summaries) into gauges.
+
+* If the representation of a float can be expressed as an integer without loss, the receiver sets the representation of a float as an integer.
+
+* If the representation of a sample is NaN, the receiver reports an additional counter with the metric name ``prometheus.total_NAN_sample``.
+
+* If the representation of a sample is missing a metric name, the receiver reports an additional counter with the metric name ``prometheus.total_bad_datapoints``.
+
+* Any errors in parsing the request report an additional counter, ``prometheus.invalid_request``.
+
+* Metadata from ``prompb.WriteRequest`` is ignored. 
+  
+Unsupported behavior from the SignalFx gateway
+-------------------------------------------------
+
+The following behavior from SignalFx Gateway is not supported:
+
+* ``request_time.ns`` is no longer reported. ``obsreport`` handles similar functionality.
+
+* ``drain_size`` is no longer reported. ``obsreport`` handles similar functionality.
 
 Troubleshooting
 ======================
