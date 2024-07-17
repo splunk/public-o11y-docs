@@ -1,13 +1,13 @@
-.. _signalfx-receiver:
+.. _signalfx-gateway-prometheus-remote-write-receiver:
 
-*************************
-SignalFx receiver
-*************************
+***************************************************************************
+SignalFx Gateway Prometheus remote write receiver
+***************************************************************************
 
 .. meta::
-      :description: The SignalFx receiver allows the Splunk Distribution of the OpenTelemetry Collector to collect metrics and logs in SignalFx proto format.
+      :description: The SignalFx receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics and logs in SignalFx proto format.
 
-The SignalFx receiver is a native OpenTelemetry component that allows the Splunk Distribution of the OpenTelemetry Collector to collect data in SignalFx proto format. Supported pipeline types are ``metrics`` and ``logs``. See :ref:`otel-data-processing` for more information.
+The SignalFx receiver is a native OpenTelemetry component that allows the Splunk Distribution of OpenTelemetry Collector to collect data in SignalFx proto format. Supported pipeline types are ``metrics`` and ``logs``. See :ref:`otel-data-processing` for more information.
 
 .. note:: While the SignalFx Smart Agent has reached End of Support, OTel native components such as the Smart Agent receiver, the SignalFx receiver, and the SignalFx exporter are available and supported. For information on the exporter, see :ref:`signalfx-exporter`.
 
