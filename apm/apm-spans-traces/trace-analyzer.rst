@@ -123,8 +123,6 @@ You can order both tables by the number of matching traces.
 Trace Analyzer trace limits
 ==================================
 
-Trace Analyzer can search a maximum of 6 hours of data. 
-
 Within the Trace Analyzer interface, there are 3 different display limits, numbered as callouts in the following image. 
 
 #. The limits of the Trace Analyzer chart depend on the filters used and the chart selected:
