@@ -154,27 +154,42 @@ Available regions or realms
 
 Splunk Observability Cloud is available in the following global regions. Each Cloud provider region is mapped to a Splunk Observability Cloud realm, which determines access URLs and endpoints.
 
+Realm to region equivalence
+----------------------------------------------------------
+
+The following table shows which cloud regions correspond to each realm in Splunk Observability Cloud.
+
 .. list-table::
    :header-rows: 1
-   :widths: 25 25 25 25
    :width: 100%
 
-   * - 
-     - :strong:`AWS regions`
-     - :strong:`Google Cloud regions`
-     - :strong:`Splunk Observability Cloud realm`
-   * - Splunk Observability Cloud
+   * - :strong:`Splunk Observability Cloud Realm`
+     - :strong:`AWS Region`
+     - :strong:`GCP Region`
+   * - us0
+     - AWS US East Virginia (us-east-1)
      - 
-        * US: Oregon (us-west-2), Virginia (us-east-1)
-        * Europe: Dublin (eu-west-1), Frankfurt (eu-central-1), London (eu-west-2)
-        * Asia Pacific: Sydney (ap-southeast-2), Tokyo (ap-northeast-1)
+   * - us1
+     - AWS US West Oregon (us-west-2)
      - 
-       * US: Oregon (us-west-1)
+   * - us2
      - 
-        * us0, us1, us2
-        * eu0, eu1, eu2
-        * au0, jp0
-
+     - GCP US Oregon (us-west-1)
+   * - eu0
+     - AWS EU Dublin (eu-west-1)
+     -
+   * - eu1
+     - AWS EU Frankfurt (eu-central-1)
+     -
+   * - eu2
+     - AWS EU London (eu-west-2)
+     -
+   * - au0
+     - AWS AP Sydney (ap-southeast-2)
+     - 
+   * - jp0
+     - AWS AP Tokyo (ap-northeast-1)
+     - 
 
 
 Available components per region or realm
@@ -248,42 +263,6 @@ The following components are available for each global region. Each Cloud provid
        * au0, jp0
 
 
-Realm to region equivalence
-----------------------------------------------------------
-
-The following table shows which cloud regions correspond to each realm in Splunk Observability Cloud.
-
-.. list-table::
-   :header-rows: 1
-   :width: 100%
-
-   * - :strong:`Splunk Observability Cloud Realm`
-     - :strong:`AWS Region`
-     - :strong:`GCP Region`
-   * - us0
-     - AWS US East Virginia (us-east-1)
-     - 
-   * - us1
-     - AWS US West Oregon (us-west-2)
-     - 
-   * - us2
-     - 
-     - GCP US Oregon (us-west-1)
-   * - eu0
-     - AWS EU Dublin (eu-west-1)
-     -
-   * - eu1
-     - AWS EU Frankfurt (eu-central-1)
-     -
-   * - eu2
-     - AWS EU London (eu-west-2)
-     -
-   * - au0
-     - AWS AP Sydney (ap-southeast-2)
-     - 
-   * - jp0
-     - AWS AP Tokyo (ap-northeast-1)
-     - 
 
 For additional information, see:
 
