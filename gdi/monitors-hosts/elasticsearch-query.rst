@@ -8,8 +8,7 @@ Elasticsearch query
 
 :strong:`This integration is in beta.`
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 ``elasticsearch-query`` monitor type to metricize aggregated responses
 from Elasticsearch. The integration constructs Splunk Observability

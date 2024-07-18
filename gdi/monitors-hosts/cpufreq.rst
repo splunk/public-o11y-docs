@@ -6,8 +6,7 @@ CPUFreq
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Collectd cpufreq monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 CPUFreq monitor type to monitor the clock speed of each CPU on a host.
 This is useful for systems that vary the clock speed to save energy.

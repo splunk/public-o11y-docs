@@ -6,8 +6,7 @@ Amazon ECS Task Metadata endpoint
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the ECS metadata monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 ``ecs-metadata`` monitor type to read metadata and Docker stats from
 Amazon ECS Task Metadata Endpoint version 2. This integration does not

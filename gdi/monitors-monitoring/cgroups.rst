@@ -6,8 +6,7 @@ cgroups
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the cgroups monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 cgroups monitor type to report statistics about ``cgroups`` on Linux.
 This receiver supports cgroups version 1, not the newer cgroups version

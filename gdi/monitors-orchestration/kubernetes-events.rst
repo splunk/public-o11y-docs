@@ -6,8 +6,7 @@ Kubernetes events
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Kubernetes events monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 ``kubernetes-events`` monitor type to listen for Kubernetes events. The
 integration calls the Kubernetes API running on manager nodes, and sends

@@ -8,8 +8,7 @@ Memory usage
 
 .. note:: To collect memory utilization metrics only, use the native OTel component :ref:`host-metrics-receiver`.
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 Memory monitor type to send memory usage stats for the underlying host.
 

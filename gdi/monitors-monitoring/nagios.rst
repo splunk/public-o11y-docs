@@ -6,8 +6,7 @@ Nagios
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the nagios monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 Nagios monitor type to run existing Nagios status check scripts through
 the Collector, which acts as the Nagios Remote Plugin Executor (NRPE) or

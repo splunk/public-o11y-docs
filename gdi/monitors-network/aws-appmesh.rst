@@ -6,8 +6,7 @@ AWS AppMesh Envoy Proxy
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the AWS AppMesh Envoy Proxy monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 AppMesh monitor type to report metrics from AWS AppMesh Envoy Proxy.
 

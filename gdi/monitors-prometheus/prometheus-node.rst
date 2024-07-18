@@ -6,8 +6,7 @@ Prometheus Node
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Prometheus Node Exporter monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 ``prometheus/node`` monitor type to wrap the
 :ref:`prometheus-exporter` to export server level and OS level

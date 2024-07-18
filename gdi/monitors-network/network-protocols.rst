@@ -6,8 +6,7 @@ Network protocols
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the protocols monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 Network protocols monitor type to gather metrics about the network
 protocol stacks running on the system.

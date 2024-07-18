@@ -6,8 +6,7 @@ Hadoop JMX
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Collectd Hadoop monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 Hadoop JMX monitor type to collect metrics from Hadoop 2.0 or higher
 clusters.

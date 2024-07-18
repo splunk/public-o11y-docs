@@ -6,8 +6,7 @@ Apache Kafka
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Kafka monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 Apache Kafka monitor type to monitor Kafka instances.
 

@@ -6,8 +6,7 @@ CoreDNS
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the CoreDNS monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 CoreDNS monitor type to scrape Prometheus metrics exposed by CoreDNS.
 

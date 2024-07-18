@@ -6,8 +6,7 @@ SAP HANA
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the SAP HANA monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 ``hana`` monitor type to get metrics from an SAP Hana database.
 

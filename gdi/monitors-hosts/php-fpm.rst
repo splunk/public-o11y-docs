@@ -6,8 +6,7 @@ PHP FPM
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Collectd PHP-FastCGI Process Manager FPM monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 ``collectd/php-fpm`` monitor type to monitor PHP-FastCGI Process Manager
 (FPM) using the pool status URL.

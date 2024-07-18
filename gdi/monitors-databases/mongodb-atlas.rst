@@ -8,8 +8,7 @@ MongoDB Atlas (deprecated)
 
 .. note:: This monitor is deprecated in favor of the Otel native component ``mongodbatlas`` receiver. See :ref:`MongoDB Atlas Receiver <mongodb-atlas-receiver>` for more information.
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 MongoDB Atlas monitor type to provide MongoDB as an on-demand fully
 managed service. Atlas exposes MongoDB cluster monitoring and logging

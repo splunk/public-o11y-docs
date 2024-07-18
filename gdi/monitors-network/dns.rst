@@ -6,8 +6,7 @@ DNS Query Input
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Telegraf DNS monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 DNS Query Input monitor type (an embedded form of the Telegraf DNS Query
 plugin) to collect DNS data.

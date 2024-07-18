@@ -6,8 +6,7 @@ Logstash TCP
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Logstash TCP monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 ``logstash-tcp`` monitor type to monitor the health and performance of
 Logstash deployments through Logstash Monitoring APIs. It fetches events

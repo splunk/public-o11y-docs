@@ -6,8 +6,7 @@ SolrCloud
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the SolrCloud monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 SolrCloud monitor type to monitor Solr instances. You can collect
 metrics only when the instance is running in SolrCloud mode.

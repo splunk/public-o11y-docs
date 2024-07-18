@@ -6,8 +6,7 @@ Couchbase server
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Couchbase monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 Couchbase server monitor type to collect metrics from Couchbase servers.
 

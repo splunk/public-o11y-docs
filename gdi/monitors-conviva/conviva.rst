@@ -6,8 +6,7 @@ Conviva Real-Time/Live video play
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Conviva monitor. See benefits, install, configuration, and metrics, including MetricLens
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 Conviva monitor type to pull ``Real-Time/Live`` video playing experience
 metrics from Conviva.

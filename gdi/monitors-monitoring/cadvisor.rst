@@ -6,8 +6,7 @@ cAdvisor
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the cAdvisor monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 cAdvisor monitor type to pull metrics directly from cAdvisor. By
 default, it runs on port 4194, but it can be configured to any other

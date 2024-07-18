@@ -6,8 +6,7 @@ Kubernetes API server
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the kubernetes-apiserver monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 Kubernetes API server monitor type to retrieve metrics from the API
 server's Prometheus metric endpoint.
