@@ -280,7 +280,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth: 3
 
-   AI Assistant for Observability Cloud <get-started/o11y-ai>
+   AI Assistant in Observability Cloud <get-started/o11y-ai>
 
 .. toctree::
    :maxdepth:   3
