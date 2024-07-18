@@ -7,7 +7,7 @@ Splunk On-Call notification phone numbers
 ************************************************************************
 
 .. meta::
-   :description: About the user roll in Splunk On-Call. VictorOps will contact you for triggered incidents using the below phone numbers and short code. You may add these numbers to your contacts in the Mobile App for both `Android <https://help.victorops.com/knowledge-base/android-devices-victorops/>`__ and `iOS <https://help.victorops.com/knowledge-base/ios-application/>`__ devices by navigating to *Settings >> Help and Support >>* *Add VictorOps to Your Contacts:*
+   :description: Splunk On-Call will contact you for triggered incidents using the below phone numbers and short code. You may add these numbers to your contacts in the Mobile App for both `Android <https://help.victorops.com/knowledge-base/android-devices-victorops/>`__ and `iOS <https://help.victorops.com/knowledge-base/ios-application/>`__ devices by navigating to *Settings >> Help and Support >>* *Add VictorOps to Your Contacts:*
 
 .. image:: /_images/spoc/Add-Contacts-Android-1.png
 
