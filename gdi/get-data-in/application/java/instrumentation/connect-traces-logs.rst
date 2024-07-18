@@ -64,7 +64,7 @@ Before injecting attributes, you must make them available through the Mapped Dia
 
 .. code-block:: shell
 
-   -Dotel.instrumentation.common.mdc.resource-attributes=service.name,environment
+   -Dotel.instrumentation.common.mdc.resource-attributes=service.name,deployment.environment
 
 Configure your logging library
 --------------------------------------------------
@@ -90,7 +90,7 @@ The following examples show how to include additional metadata in log statements
                      <KeyValuePair key="trace_id" value="${ctx:trace_id}"/>
                      <KeyValuePair key="span_id" value="${ctx:span_id}"/>
                      <KeyValuePair key="service.name" value="${ctx:service.name}"/>
-                     <KeyValuePair key="environment" value="${ctx:environment}"/>
+                     <KeyValuePair key="environment" value="${ctx:deployment.environment}"/>
                      <KeyValuePair key="trace_sampled" value="${ctx:trace_flags}"/>
                   </JsonLayout>
                </Console>
@@ -102,7 +102,7 @@ The following examples show how to include additional metadata in log statements
 
       .. code-block:: text
 
-         logging.pattern.console = %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{environment} trace_flags=%X{trace_flags} %n
+         logging.pattern.console = %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{deployment.environment} trace_flags=%X{trace_flags} %n
 
    .. tab:: Logback
 
@@ -115,7 +115,7 @@ The following examples show how to include additional metadata in log statements
          <configuration>
             <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
                <encoder>
-                  <pattern>%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{environment} trace_flags=%X{trace_flags} %n</pattern>
+                  <pattern>%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{deployment.environment} trace_flags=%X{trace_flags} %n</pattern>
                </encoder>
             </appender>
             <root level="info">
@@ -127,7 +127,7 @@ The following examples show how to include additional metadata in log statements
 
       .. code-block:: text
 
-         logging.pattern.console = %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{environment} trace_flags=%X{trace_flags} %n %n
+         logging.pattern.console = %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{deployment.environment} trace_flags=%X{trace_flags} %n %n
 
    .. tab:: JBoss LogManager
 
@@ -138,7 +138,7 @@ The following examples show how to include additional metadata in log statements
          formatter.PATTERN=org.jboss.logmanager.formatters.PatternFormatter
          formatter.PATTERN.properties=pattern
          formatter.PATTERN.constructorProperties=pattern
-         formatter.PATTERN.pattern=%logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{environment} trace_flags=%X{trace_flags}: %m%n
+         formatter.PATTERN.pattern=%logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} service=%X{service.name}, env=%X{deployment.environment} trace_flags=%X{trace_flags}: %m%n
 
 If you're instrumenting a serverless service or application, use environment variables instead. The deployment environment requires that you set an arbitrary environment variable, for example ``OTEL_ENV_NAME``.
 
