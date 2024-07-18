@@ -6,9 +6,7 @@ Kafka producer
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Collectd Java-based Kafka producer monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 ``collectd/kafka_producer`` monitor type to monitor a Java-based Kafka
 producer. It has a set of built-in MBeans to pull metrics from the Kafka
 consumer's JMX endpoint.

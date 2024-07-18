@@ -7,9 +7,7 @@ Microsoft SQL Server
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Microsoft SQL / MSQL monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 Microsoft SQL Server monitor type to send metrics from Microsoft SQL
 Server instances.
 

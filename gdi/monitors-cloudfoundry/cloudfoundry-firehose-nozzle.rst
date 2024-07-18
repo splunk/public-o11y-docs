@@ -6,9 +6,7 @@ Cloud Foundry Loggregator Firehose
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Cloud Foundry Loggregator Firehose monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 Cloud Foundry Loggregator Firehose monitor type to create a Cloud
 Foundry Firehose nozzle. The integration connects to the Cloud Foundry
 Reverse Log Proxy (RLP) Gateway that feeds metrics from the Loggregator.

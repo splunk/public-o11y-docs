@@ -6,9 +6,7 @@ SNMP agent
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the SNMP agent monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 ``snmp`` monitor type to collect metrics from SNMP agents.
 
 This integration is available for Kubernetes, Windows, and Linux.
