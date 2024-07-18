@@ -8,8 +8,7 @@ ASP.NET (deprecated)
 
 .. note:: This integration is deprecated and will be removed in February 2025. To forward data to Splunk Observability Cloud, use the Splunk Distribution of OpenTelemetry .NET. For a full list of collected metrics, refer to :ref:`dotnet-otel-metrics-attributes`. 
 
-The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 ``aspdotnet`` monitor type to retrieve metrics for requests, errors,
 sessions, and worker processes from ASP.NET applications.
 

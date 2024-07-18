@@ -6,8 +6,7 @@ Cassandra
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Cassandra monitor. See benefits, install, configuration, and metrics
 
-The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 Cassandra monitor type to monitor Cassandra.
 
 This integration is only available on Kubernetes and Linux.

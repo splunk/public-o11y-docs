@@ -6,8 +6,7 @@ HTTP
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the HTTP monitor. See benefits, install, configuration, and metrics
 
-The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 ``http`` monitor type to generate metrics based on whether the HTTP
 response from the configured URL matches expectations. For example,
 correct body, status code, and so on.

@@ -6,8 +6,7 @@ Memcached
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Memcached monitor. See benefits, install, configuration, and metrics
 
-The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 Memcached monitor type to collect the following information from
 Memcached nodes:
 

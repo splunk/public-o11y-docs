@@ -6,8 +6,7 @@ JMX
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the JMX monitor. See benefits, install, configuration, and metrics. Run an arbitrary Groovy script to convert JMX MBeans fetched from a remote Java application to SignalFx data points
 
-The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 ``jmx`` monitor type to run an arbitrary Groovy script to convert JMX
 MBeans fetched from a remote Java application to SignalFx data points.
 This is a more flexible alternative to the

@@ -6,8 +6,7 @@ GenericJMX
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the GenericJMX monitor. See benefits, install, configuration, and metrics
 
-The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 ``genericjmx`` monitor to expose metrics on Java Management Extensions
 (JMX), a generic framework to provide and query management information.
 The interface is used by the Java Virtual Machine (JVM) to provide

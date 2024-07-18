@@ -6,8 +6,7 @@ Chrony NTP
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Chrony NTP monitor. See benefits, install, configuration, and metrics
 
-The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 Chrony NTP monitor type to monitor NTP data from a chrony server, such
 as clock skew and per-peer stratum. To talk to chronyd, this integration
 mimics what the chronyc control program does on the wire.

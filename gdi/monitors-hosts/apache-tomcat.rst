@@ -6,8 +6,7 @@ Apache Tomcat
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Collectd Tomcat monitor. See benefits, install, configuration, and metrics
 
-The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 Collectd Tomcat monitor type to monitor Tomcat. You must activate JMX
 Remote to monitor Tomcat remotely. See
 :ref:`GenericJMX <genericjmx>` for more information.

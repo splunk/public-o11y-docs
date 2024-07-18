@@ -6,8 +6,7 @@ Microsoft Windows IIS
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Windows IIS monitor. See benefits, install, configuration, and metrics
 
-The :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 ``windows-iis`` monitor type to report metrics for Windows Internet
 Information Services (IIS) and drive the Windows IIS dashboard content.
 
