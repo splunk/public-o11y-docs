@@ -105,7 +105,7 @@ Make sure you're initializing the agent synchronously and as early as possible. 
 
 .. _browser-rum-break-site:
 
-Browser RUM is causing issues in my site
+Browser RUM is causing issues in your site
 ================================================================
 
 If you think Browser RUM might be causing issues in your website or breaking existing behavior or design, check the following:
@@ -129,3 +129,13 @@ If you think Browser RUM might be causing issues in your website or breaking exi
       }
 
 .. include:: /_includes/troubleshooting-components.rst
+
+There are duplicate API calls in your trace data
+================================================
+
+If the traces from your instrumented application include spans for duplicate
+API calls and the duplicate spans originate from ``SplunkContextManager``, the
+source of the duplicate spans is the RUM instrumentation itself. This is
+because the instrumentation wraps the event handler in a function that generates
+a span and calls the instrumented function, resulting in 1 span from the
+instrumentation and another from the application code.
