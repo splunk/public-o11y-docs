@@ -18,8 +18,8 @@ Connect AWS to Splunk Observability Cloud
   Connect with AWS-managed Metric Streams <aws-console-ms>  
   Connect to AWS using the Splunk API <aws-apiconfig>  
   Connect to AWS with Terraform <aws-terraformconfig>
+  CloudFormation and Terraform templates <aws-cloudformation>
   Send AWS logs to Splunk Platform <aws-logs>
-  CloudFormation templates <aws-cloudformation>
   Next steps <aws-post-install>
   Troubleshoot your AWS integration <aws-troubleshooting>
   Troubleshoot Metric Streams <aws-ts-metric-streams>
@@ -198,7 +198,8 @@ Splunk Observability Cloud also offers secured connectivity with AWS. For more i
     <h2>See also<a name="after-aws-integration" class="headerlink" href="#after-aws-integration" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-* See :ref:`Leverage data from integration with AWS <aws-post-install>` ffor an overview of what you can do after you connect Splunk Observability Cloud to AWS.
+* For a walkthrough of tasks related to using AWS cloud services with your infrastructure, see :ref:`about-collector-configuration-tutorial`.
+* See :ref:`Leverage data from integration with AWS <aws-post-install>` for an overview of what you can do after you connect Splunk Observability Cloud to AWS.
 * Find instructions on how to import AWS metrics and metadata such as tags using namespaces and filters at :ref:`Monitor AWS services <infrastructure-aws>`. 
 * Refer to the AWS official documentation for a list of the available AWS metrics and other data, or read about the metadata Splunk Observability Cloud can provide at :ref:`AWS CloudWatch metadata <aws-infra-metadata>`.
 * To collect traces and metrics of your AWS Lambda functions for Splunk APM, see :ref:`splunk-otel-lambda-layer`.

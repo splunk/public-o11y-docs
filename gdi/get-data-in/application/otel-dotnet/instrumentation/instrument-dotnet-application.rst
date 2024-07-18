@@ -71,11 +71,11 @@ Windows
       # Install the Splunk distribution using the PowerShell module
       Install-OpenTelemetryCore
 
-#. Register the distribution:
+#. Register the distribution according to the type of application you're instrumenting:
 
    .. tabs::
 
-      .. code-tab:: shell .NET application
+      .. code-tab:: shell .NET and .NET Framework Applications
 
          # Set up environment to start instrumentation from the current PowerShell session
          Register-OpenTelemetryForCurrentSession -OTelServiceName "<your-service-name>"
@@ -95,7 +95,7 @@ Windows
 
    .. tabs::
 
-      .. tab:: .NET application
+      .. tab:: .NET and .NET Framework
 
          .. code-block:: powershell
 
@@ -104,7 +104,9 @@ Windows
 
          Run your application after setting the attribute.
 
-      .. tab:: IIS application (ASP.NET)
+         .. note:: This command instruments any applications launched in the same PowerShell session. It won't instrument applications in a different PowerShell session.
+
+      .. tab:: IIS (ASP.NET)
 
          For ASP.NET applications, configure the service name and resource attributes in the ``appSettings`` block of the web.config file:
 
@@ -138,7 +140,7 @@ Windows
          .. note::
             If the ``OTEL_SERVICE_NAME`` or ``OTEL_RESOURCE_ATTRIBUTES`` environment variables are set for a process, settings with the same names from ``appSettings`` block of web.config are ignored.
 
-      .. tab:: IIS application (ASP.NET Core)
+      .. tab:: IIS (ASP.NET Core)
 
          For ASP.NET Core applications hosted in IIS, the service name and resource attributes can be configured using the ``environmentVariables`` block of the :new-page:`web.config file <https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/web-config?view=aspnetcore-8.0#set-environment-variables>`. For example:
 
