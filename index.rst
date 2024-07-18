@@ -278,6 +278,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Service description <get-started/service-description>
 
 .. toctree::
+   :maxdepth: 3
+
+   AI Assistant in Observability Cloud <get-started/o11y-ai>
+
+.. toctree::
    :maxdepth:   3
 
    Get started <get-started/o11y>
