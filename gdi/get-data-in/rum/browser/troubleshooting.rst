@@ -130,12 +130,11 @@ If you think Browser RUM might be causing issues in your website or breaking exi
 
 .. include:: /_includes/troubleshooting-components.rst
 
-There are duplicate API calls in your trace data
-================================================
+Browser developer tools display events from unknown initiator
+=============================================================
 
-If the traces from your instrumented application include spans for duplicate
-API calls and the duplicate spans originate from ``SplunkContextManager``, the
-source of the duplicate spans is the RUM instrumentation itself. This is
-because the instrumentation wraps the event handler in a function that generates
-a span and calls the instrumented function, resulting in 1 span from the
-instrumentation and another from the application code.
+If there are events displayed in your browser developer tools from an unknown
+initiator, it is possible that they originate from the RUM instrumentation. This
+is because the instrumentation wraps your application code and is responsible
+for calling the browser API. As a result, your browser developer tools indicate
+that such events are initiated by the RUM agent.
