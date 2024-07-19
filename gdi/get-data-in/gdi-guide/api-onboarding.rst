@@ -28,10 +28,10 @@ Use Splunk Observability Cloud to access your data
 
 After you've configured your integration to send custom data, you can access your data in the following locations:
 
-* The Splunk APM landing page
-* Splunk APM explorer view
-* Splunk metric finder
-* Splunk Log Observer
+* :ref:`Splunk APM landing page <apm-landing-page>`
+* :ref:`Splunk APM explorer view <apm-service-map>`
+* :ref:`Splunk metric finder <metric-finder>`
+* :ref:`Splunk Log Observer Connect <logs-timeline>`
 
 View traces on the APM landing page
 -----------------------------------------
@@ -48,7 +48,7 @@ Search for metrics with the Metric Finder
 
 You can use the Splunk metric finder to search for your custom metrics. For more information, see :ref:`metric-finder`.
 
-Query logs using Log Observer
+Query logs using Log Observer Connect
 ----------------------------------------------------------
 
-If you chose to ingest logs, you can find logs in Splunk Log Observer. To learn more, see :ref:`logs-timeline`.
+If you chose to ingest logs, you can find logs in Splunk Log Observer Connect. To learn more, see :ref:`logs-timeline`.

@@ -9,6 +9,9 @@ Chapter 3: Instrument user interfaces
 
 You can instrument your user interfaces to send user session data to Splunk RUM. Splunk RUM has several tools that help you monitor the health and behavior of your applications.
 
+.. image:: /_images/rum/use-case-app-summary-dashboard.png
+    :alt: The RUM application summary dashboard in Splunk Observability Cloud shows charts and visualizations with details about your web applications.
+
 Instrument user interfaces to send user sessions
 ==============================================================
 

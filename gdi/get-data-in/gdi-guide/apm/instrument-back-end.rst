@@ -9,6 +9,9 @@ Part 1: Instrument back-end services and applications to send traces, logs, and 
 
 Splunk Application Performance Monitoring (APM) monitors and reports on data from your in-house applications, such as Java, Python, and Ruby applications. Using Splunk APM, you can gain important insights into the behavior of your applications. 
 
+.. image:: /_images/apm/dashboards/dashboard-gif-2.gif
+    :alt: The APM dashboard displays request rate, error rate, and latency of your applications.
+
 Instrumentation is the process of integrating Splunk with these applications. With instrumentation, you can send traces, logs, and metrics to Splunk Observability Cloud.
 
 Instrument your applications
@@ -57,10 +60,10 @@ Search for metrics using metric finder (Java only)
 
 If you've instrumented a Java application, you can see application metrics using the metric finder. See :ref:`metric-finder` for more information.
 
-Query logs in Log Observer
+Query logs in Log Observer Connect
 ----------------------------------------------------------------------------------
 
-If you chose to ingest logs, you can find logs in Splunk Log Observer. To learn how, see :ref:`logs-timeline`.
+If you chose to ingest logs, you can find logs in Splunk Log Observer Connect. To learn how, see :ref:`logs-timeline`.
 
 Next steps
 ===============================

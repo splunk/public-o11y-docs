@@ -9,6 +9,10 @@ Part 1: Configure your infrastructure and cloud services to send data to Splunk 
 
 If you're using cloud services such as AWS, GCP, and Azure for your infrastructure, integrate these services with Splunk Observability Cloud.
 
+   .. image:: /_images/infrastructure/ec2-navigator.gif
+      :width: 100%
+      :alt: This animated GIF shows the EC2 navigator in Splunk Infrastructure Monitoring displaying charts and visualizations of data collected from the EC2 service.
+
 With cloud service integrations, you can send metrics and metadata (such as tags, labels and other properties) to Splunk Infrastructure Monitoring, giving you a detailed analysis of your cloud service data.
 
 Choose a method for cloud service integration

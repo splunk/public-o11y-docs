@@ -33,28 +33,18 @@ You can set up each of Splunk's products, or you can choose individual component
 
 If you're setting up all components, follow each part of each chapter in order. Otherwise, select the chapter or part you'd like to follow.
 
-.. list-table:: 
-    :header-rows: 1
+    * :ref:`infrastructure-onboarding`
 
-    * - Chapter
-      - Parts
-      - Prerequisites
-    * - :ref:`infrastructure-onboarding`
-      - * :ref:`integrate-cloud-services`
-        * :ref:`send-server-cluster-data`
-        * :ref:`configure-third-party-apps`
-      - None.
-    * - :ref:`apm-onboarding`
-      - * :ref:`instrument-back-end-services-apm`
-        * :ref:`instrument-serverless-functions-apm`
-        * :ref:`send-custom-data-apm`
-      - None, but completing chapter 1 first is recommended.
-    * - :ref:`rum-onboarding`
-      - This chapter is standalone.
-      - None.
-    * - :ref:`api-onboarding`
-      - This chapter is standalone.
-      - Complete chapter 1, 2, or 3 before starting.
-    * - :ref:`additional-resources`
-      - This chapter is standalone.
-      - Complete chapter 1, 2, or 3 before starting.
+      - :ref:`integrate-cloud-services`
+      - :ref:`send-server-cluster-data`
+      - :ref:`configure-third-party-apps`
+
+    * :ref:`apm-onboarding`
+
+      - :ref:`instrument-back-end-services-apm`
+      - :ref:`instrument-serverless-functions-apm`
+      - :ref:`send-custom-data-apm`
+
+    * :ref:`rum-onboarding`
+    * :ref:`api-onboarding`
+    * :ref:`additional-resources`
