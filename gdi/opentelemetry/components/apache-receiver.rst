@@ -9,6 +9,13 @@ Apache Web Server receiver
 
 The Apache Web Server receiver fetches stats from a Apache Web Server instance using the ``server-status?auto endpoint``. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
+Prerequisites
+======================
+
+This receiver supports Apache Web Server version 2.4 or higher.
+
+In order to receive server statistics, you must configure the server's ``httpd.conf`` file to enable status support. Learn more at Apache's official documentation :new-page:`Module mod_status <https://httpd.apache.org/docs/2.4/mod/mod_status.html>`.
+
 Get started
 ======================
 
@@ -26,12 +33,14 @@ Follow these steps to configure and activate the component:
 Sample configuration
 --------------------------------
 
-To activate the Kubelet stats receiver, add ``kubeletstats`` to the ``receivers`` section of your configuration file: 
+To activate the Apache Web Server receiver, add ``apache`` to the ``receivers`` section of your configuration file: 
 
 .. code-block:: yaml
 
   receivers:
     apache:
+      endpoint: "http://localhost:8080/server-status?auto"
+      collection_interval: 10s
 
 To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your configuration file:
 
@@ -42,10 +51,27 @@ To complete the configuration, include the receiver in the ``metrics`` pipeline 
       metrics:
         receivers: [apache]
 
+Configuration options
+-----------------------
+
+The following settings are required:
+
+* ``endpoint``. ``"http://localhost:8080/server-status?auto"`` by default. The URL of the httpd status endpoint.
+
+The following settings are optional:
+
+* ``collection_interval``. ``10s`` by default. Sets the interval this receiver collects metrics on. 
+  
+  * This value must be a string readable by Golang's ``time.ParseDuration``. Learn more at Go's official documentation :new-page:`ParseDuration function <https://pkg.go.dev/time#ParseDuration>`.
+  
+  * Valid time units are ``ns``, ``us`` (or ``µs``), ``ms``, ``s``, ``m``, ``h``.
+
+* ``initial_delay``. ``1s`` by default. Determines how long this receiver waits before starting.
+
 Settings
 ======================
 
-The following table shows the configuration options for the Kubelet stats receiver:
+The following table shows the configuration options for the Apache Web Server receiver:
 
 .. raw:: html
 
