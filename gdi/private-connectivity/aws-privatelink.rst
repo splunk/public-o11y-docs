@@ -260,13 +260,17 @@ To delete an endpoint, follow these steps:
 Advanced configuration: AWS PrivateLink with VPC peering 
 ==========================================================================
 
-Examine a scenario where your source region, or region generating your data, is ``ap-south-1`` and your destination region, or region where you have established your VPC connection and want to receive data at, is ``us-east-1``. 
+Examine a scenario where the workloads that you're monitoring with Splunk Observability Cloud are in the AWS ``ap-south-1`` region, and your Splunk Observability Cloud account is in ``AWS us-east-1``. You want to use PrivateLink to ingest observability data, but PrivateLink only works within one AWS region.
 
-In this context, you need to establish a VPC endpoint within your destination region ``us-east-1``. By activating AWS PrivateLink in this region, you obtain a seamless, secure, and private channel to access AWS services available in the your source region, ``ap-south-1``. This arrangement ensures that communication between the two VPCs occurs through an internal network, removing the necessity of routing traffic over the public Internet.
+In this scenario, carry out the following steps:
 
-This enhancement bolsters data integrity and security, aligning with the goal of optimizing inter-region communication while upholding stringent data protection standards.
+#. Ensure that you have a VPC set up in the destination region, in this example ``us-east-1``. If you don't have a VPC in that region, create a new one.
 
-Learn more in the AWS documentation at :new-page:`https://docs.aws.amazon.com/vpc/latest/peering/peering-configurations-full-access.html#two-vpcs-full-access <https://docs.aws.amazon.com/vpc/latest/peering/peering-configurations-full-access.html#two-vpcs-full-access>`.
+#. Use AWS VPC peering to peer the ``ap-south-1`` and the ``us-east-1`` VPCs together.
+
+#. Activate AWS PrivateLink in the ``us-east-1`` VPC.
+
+Learn more about VPC Peering in the AWS documentation at :new-page:`Two VPCs peered together <https://docs.aws.amazon.com/vpc/latest/peering/peering-configurations-full-access.html#two-vpcs-full-access>`.
 
 .. Next steps
 .. ================
