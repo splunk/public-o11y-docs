@@ -74,21 +74,7 @@ Follow these steps:
 
 .. code-block:: PowerShell
 
-<<<<<<< HEAD
-    Start-Service splunk-otel-collector
-
-Learn more about advanced configuration options (including Service Logging) using PowerShell in the following docs: 
-
-* :ref:`otel-install-windows-manual`
-* :ref:`otel-windows-config`
-
-.. _windows-msi-env-variables:
-
-Configure the Colector's environment variables with the MSI
-==============================================================
-=======
     Start-Process -Wait msiexec "/i PATH_TO_MSI /qn SPLUNK_ACCESS_TOKEN=<my_access_token>"
->>>>>>> 81348d067 (Feedback)
 
 You can use the following Splunk-specific environment variables with the MSI:
 
