@@ -83,7 +83,7 @@ Learn more about advanced configuration options (including Service Logging) usin
 
 .. _windows-msi-env-variables:
 
-Configure the Colector's environment variables with MSI
+Configure the Colector's environment variables with the MSI
 ==============================================================
 
 You can use the following Splunk-specific environment variables with the MSI:
