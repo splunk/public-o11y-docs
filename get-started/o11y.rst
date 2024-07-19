@@ -91,7 +91,7 @@ Now that you've explored and familiarized yourself with the data you have coming
 
 - In addition to exploring your data using Infrastructure Monitoring navigators and built-in :ref:`dashboards <dashboard-create-customize>`, you can also create new dashboards and customize existing ones.
 
-- In addition to the built-in data you already have coming into Splunk Observability Cloud, you can also bring in custom data. For more information, see :ref:`Configure and instrument applications to send custom data <gdi-7>` and :ref:`Use the Splunk Observability Cloud API to send custom data <gdi-8>`.
+- In addition to the built-in data you already have coming into Splunk Observability Cloud, you can also bring in custom data. For more information, see :ref:`Configure and instrument applications to send custom data <send-custom-data-apm>` and :ref:`Use the Splunk Observability Cloud API to send custom data <api-onboarding>`.
 
 - Customize your APM experience by setting up business workflows and creating span tags that add metadata to traces sent to APM. For more information, see :ref:`apm-workflows` and :ref:`apm-add-context-trace-span`.
 
