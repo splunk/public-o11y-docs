@@ -63,17 +63,18 @@ Install using a PowerShell terminal
 Follow these steps:
 
 1. Open a PowerShell terminal.
+
 2. Run the following command, where ``PATH_TO_MSI`` is the full path to the downloaded package. For example, ``C:\your\download\folder\splunk-otel-collector-0.4.0-amd64.msi``. 
 
-  .. code-block:: PowerShell
+.. code-block:: PowerShell
 
     Start-Process -Wait msiexec "/i PATH_TO_MSI /qn"  
 
-1. Update all variables in the configuration file as appropriate. See :ref:`windows-config-change-default` for more information.
-2. Start the ``splunk-otel-collector`` service by rebooting the system or by running the following command in a PowerShell terminal:
+3. Update all variables in the configuration file as appropriate.   
 
-  .. code-block:: PowerShell
+.. code-block:: PowerShell
 
+<<<<<<< HEAD
     Start-Service splunk-otel-collector
 
 Learn more about advanced configuration options (including Service Logging) using PowerShell in the following docs: 
@@ -85,6 +86,9 @@ Learn more about advanced configuration options (including Service Logging) usin
 
 Configure the Colector's environment variables with the MSI
 ==============================================================
+=======
+    Start-Process -Wait msiexec "/i PATH_TO_MSI /qn SPLUNK_ACCESS_TOKEN=<my_access_token>"
+>>>>>>> 81348d067 (Feedback)
 
 You can use the following Splunk-specific environment variables with the MSI:
 
@@ -157,16 +161,16 @@ You can use the following Splunk-specific environment variables with the MSI:
         - The Splunk trace endpoint URL. 
         - ``https://ingest.[SPLUNK_REALM].signalfx.com/v2/trace``
 
-.. _windows-msi-env-variables-examples:
+4. Start the ``splunk-otel-collector`` service by rebooting the system or by running the following command in a PowerShell terminal:
 
-Set the variables using a PowerShell terminal
------------------------------------------------
+.. code-block:: PowerShell
 
-For example, you can set your access token with the following msiexec command: 
+    Start-Service splunk-otel-collector
 
-  .. code-block:: PowerShell
+Learn more about advanced configuration options (including Service Logging) using PowerShell in the following docs: 
 
-    Start-Process -Wait msiexec "/i PATH_TO_MSI /qn SPLUNK_ACCESS_TOKEN=<my_access_token>"
+* :ref:`otel-install-windows-manual`
+* :ref:`otel-windows-config`
 
 .. _windows-manual-fluentd:
 
