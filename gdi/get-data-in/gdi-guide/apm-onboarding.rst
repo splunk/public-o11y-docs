@@ -14,7 +14,7 @@ Chapter 2: Send application and function data to Splunk APM
    apm/instrument-serverless-funcs.rst
    apm/send-custom-data.rst
 
-Configure your applications (such as Java, Python, and Ruby) and serverless functions to send data to Splunk APM. Splunk APM receives traces from your applications, allowing you to dive into your application code and find problems with your services. 
+Configure your applications, such as Java, Python, and Ruby, and serverless functions to send telemetry to Splunk APM. Splunk APM receives traces from your applications, allowing you to dive into your application code and find problems with your services. 
 
 Splunk APM also collects metrics and logs from your applications. 
 
