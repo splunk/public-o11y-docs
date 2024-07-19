@@ -65,8 +65,7 @@ To explore your trace data, use the following controls, which are numbered as ca
     :width: 95%
     :alt: Elements of the Trace Analyzer user interface, described in the list after this image.
 
-#. Use the filter bar to refine traces by time range, environment, workflow, services, and tags.
-#. Use the trace view selection to select trace and error counts or duration in the chart.
+#. Use the filter bar to refine the traces by time range, environment, workflow, services, and tags. For tag filters, both equal to (``=``) and not equal to (``!=``) operators are available. 
 #. Use the minimum and maximum trace duration to refine the traces that are included by their duration.
 #. Use the sample ratio to select all traces or 10% of traces. By default the sample ratio is set to 1:10. Once you make a selection, your selection is preserved.
 #. Use the :guilabel:`Errors Only` switch to show only traces with errors.
@@ -135,6 +134,16 @@ Within the Trace Analyzer interface, there are 3 different display limits, numbe
 ..  image:: /_images/apm/trace-analyzer/TraceAnalyzerLimit.png
     :width: 95%
     :alt: Elements of the Trace Analyzer user interface that have trace limits, described in the list after this image.
+
+What to expect in Trace Analyzer when using the visibility filter API
+======================================================================
+
+If you are using the visibility filter API to block specific span tags in Splunk APM, here is what you can expect to see in Trace Analyzer: 
+
+* If you hide tags using the ``hiddenTags`` field in the visibility filter API, then you can't use these tags in the filter bar or trace grouping.  
+* If you specify the visible tags using the ``visibleTags`` field in the visibility filter API, then you can use only the visible tags in the filter bar or trace grouping.  
+
+See :ref:`apm-visibility-filters` and :new-page:`Visibility filters in APM <https://dev.splunk.com/observability/docs/apm/visibility-filter/>` in the Splunk Developer Guide to learn more about visibility filters. 
 
 Learn more
 =====================
