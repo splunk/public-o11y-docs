@@ -90,7 +90,7 @@ If you're not yet implementing full-stack observability as described in the diag
 
 .. _gdi-1:
 
-1. Integrate with cloud services to send metrics and logs
+1. Integrate with cloud services to collect metrics 
 ===================================================================================
 
 If you're using cloud services for your infrastructure, the first step is to integrate these services with Splunk Observability Cloud. Cloud integrations can send metrics and metadata (such as tags, labels and other properties) to Infrastructure Monitoring.
@@ -146,10 +146,9 @@ For example, you might want to use the guided setup if you are setting up just a
 2. Install the OpenTelemetry Collector to send server and cluster data
 =============================================================================================================
 
-Install the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` on any hosts or clusters you're using as a part of your infrastructure, such as servers running in your data center or on a virtual machine running in the cloud to: 
+Install the :ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>` on any hosts or clusters you're using as a part of your infrastructure, such as servers running in your data center or on a virtual machine running in the cloud to: 
 
 - Send metrics to Infrastructure Monitoring
-- Send logs to Log Observer
 - Set up your environment to receive logs and traces from applications instrumented in step :ref:`gdi-4`
 
 After you've installed the Collector and configured your servers and clusters, you can access your data in the following locations:
@@ -253,7 +252,7 @@ See the instrumentation documentation for your application language:
 
 - :ref:`Instrument Node.js applications <get-started-nodejs>`
 
-- :ref:`Instrument .NET applications <get-started-dotnet>`
+- :ref:`Instrument .NET applications <get-started-dotnet-otel>`
 
 - :ref:`Instrument Go applications <get-started-go>`
 

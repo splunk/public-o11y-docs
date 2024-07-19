@@ -6,9 +6,7 @@ Cassandra
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Cassandra monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 Cassandra monitor type to monitor Cassandra.
 
 This integration is only available on Kubernetes and Linux.
@@ -94,7 +92,7 @@ integration:
       - no
       - ``string``
       - This value appears as the service type in the Splunk
-         Observability Cloud UI, which lets you retrieve built-in
+         Splunk Observability Cloud UI, which lets you retrieve built-in
          content for the service. For custom JMX integrations, you can
          set it to any value.
    - 
@@ -162,8 +160,7 @@ integration:
       - This object specifies how to map JMX MBean values to metrics.
          Cassandra comes pre-loaded with a set of mappings. Any mappings
          that you add in this option are merged with the pre-loaded
-         ones. To learn more, see
-         https://collectd.org/documentation/manpages/collectd-java.5.shtml#genericjmx_plugin
+         ones. To learn more, see the :new-page:`Collectd documentation <https://www.collectd.org/documentation/manpages/collectd-java.html>`.
 
 The ``mBeanDefinitions`` configuration option has the following fields:
 

@@ -49,7 +49,7 @@ For example, the following option turns off the ``SqlClient`` instrumentation:
 
    OTEL_DOTNET_AUTO_TRACES_SQLCLIENT_INSTRUMENTATION_ENABLED=false
 
-.. note:: Use Trace Analyzer in Splunk APM to explore the spans from your application and identify instrumentations you don't need. See :ref:`trace-search-concept` for more information.
+.. note:: Use Trace Analyzer in Splunk APM to explore the spans from your application and identify instrumentations you don't need. See :ref:`trace-analyzer` for more information.
 
 Reduce manual instrumentation to a minimum
 ----------------------------------------------------------------

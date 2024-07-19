@@ -25,7 +25,7 @@ Ensure that you give the proxy the ability to resolve the network names and make
 
 .. _otel-connector:
 
-Use the Splunk Distribution of OpenTelemetry Collector
+Use the Splunk Distribution of the OpenTelemetry Collector
 =======================================================================
 
 Use the :new-page:`Splunk Distribution of OpenTelemetry Collector <https://docs.splunk.com/Observability/gdi/opentelemetry/deployment-modes.html>` in data forwarding (gateway) mode. You can forward metrics locally to the Splunk Distribution of OpenTelemetry Collector, which serves as your local store-and-forward service for telemetry.
@@ -163,7 +163,13 @@ If your organization's networking security policies require you to individually 
 
    \*.<YOUR_REALM>.signalfx.com
 
-If you're unable to allow all URLs as shown here, see :ref:`allow-domains`.
+You also need to allow the following URLs:
+
+* packages.treasuredata.com
+* splunk.jfrog.io 
+* jfrog-prod-use1-shared-virginia-main.s3.amazonaws.com
+
+If you're unable to allow all the URLs listed in this section, see :ref:`allow-domains`.
 
 .. _allow-domains:
 
@@ -174,7 +180,7 @@ If you're unable to allow all URLs as described in :ref:`allow-urls`, ensure tha
 
 .. code:: shell
 
-   # Observability Cloud API base URL (https://dev.splunk.com/observability/docs/apibasics/api_list)
+   # Splunk Observability Cloud API base URL (https://dev.splunk.com/observability/docs/apibasics/api_list)
    api.<YOUR_REALM>.signalfx.com
 
    # Splunk Observability Cloud user interface
@@ -202,5 +208,6 @@ If you're unable to allow all URLs as described in :ref:`allow-urls`, ensure tha
    
    # For DEB/RPM collector packages
    splunk.jfrog.io 
+   jfrog-prod-use1-shared-virginia-main.s3.amazonaws.com
    
-.. note:: For more information, see the :new-page:`Endpoint Summary <https://dev.splunk.com/observability/docs/apibasics/api_list>` topic in the Observability Cloud Developer Guide.
+.. note:: For more information, see the :new-page:`Endpoint Summary <https://dev.splunk.com/observability/docs/apibasics/api_list>` topic in the Splunk Observability Cloud Developer Guide.

@@ -34,7 +34,7 @@ The following best practices and techniques might help in reducing overhead caus
 Configure trace sampling
 -----------------------------------------------------------------
 
-The volume of spans processed by the instrumentation might impact agent overhead. You can configure trace sampling to adjust the span volume and reduce resource usage. See :ref:`trace-sampling-settings-java` for more information on sampling settings.
+The volume of spans processed by the instrumentation might impact agent overhead. You can configure trace sampling to adjust the span volume and reduce resource usage. See :ref:`advanced-java-otel-configuration` for more information on sampling settings.
 
 .. _turn-off-java-instrumentations:
 
@@ -45,7 +45,7 @@ Consider turning off instrumentations that you don't need or are producing too m
 
 For example, the following option turns off the JDBC instrumentation: ``-Dotel.instrumentation.jdbc.enabled=false``
 
-.. note:: Use Trace Analyzer in Splunk APM to explore the spans from your application and identify instrumentations you don't need. See :ref:`trace-search-concept` for more information.
+.. note:: Use Trace Analyzer in Splunk APM to explore the spans from your application and identify instrumentations you don't need. See :ref:`trace-analyzer` for more information.
 
 Allocate more memory for the application
 ----------------------------------------------------------------
@@ -91,8 +91,8 @@ Consider taking the following actions to decrease agent overhead:
 - If your application is approaching memory limits, consider giving it more memory.
 - If your application is using all the CPU, you might want to scale it horizontally.
 - Try turning off or tuning CPU or memory profiling. See :ref:`profiling-configuration-java`.
-- Try turning off or tuning metrics. See :ref:`metrics-configuration-java`.
-- Tune trace sampling settings to reduce span volume. See :ref:`trace-sampling-settings-java`.
+- Try turning off or tuning metrics. See :ref:`advanced-java-otel-configuration`.
+- Tune trace sampling settings to reduce span volume. See :ref:`advanced-java-otel-configuration`.
 - Turn off specific instrumentations. See :ref:`turn-off-java-instrumentations`.
 - Review manual instrumentation for unnecessary span generation.
 

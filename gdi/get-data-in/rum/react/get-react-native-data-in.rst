@@ -31,13 +31,15 @@ To generate all the basic installation commands for your environment and applica
 
 2. Open the :new-page:`React Native guided setup <https://login.signalfx.com/#/gdi/scripted/react-native/>`. Optionally, you can navigate to the guided setup on your own:
    
-   3. In the navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+   * In the navigation menu, select :menuselection:`Data Management`. 
+   
+   * Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 
-   4. In the integration filter menu, select :guilabel:`By Use Case`.
+   * In the integration filter menu, select :guilabel:`By Use Case`.
 
-   5. Select the :guilabel:`Monitor user experience` use case.
+   * Select the :guilabel:`Monitor user experience` use case.
 
-   6. Click the :guilabel:`React Native Instrumentation` tile to open the React Native guided setup.
+   * Select the :guilabel:`React Native Instrumentation` tile to open the React Native guided setup.
 
 For detailed installation instructions and requirements, see :ref:`react-rum-install`.
 

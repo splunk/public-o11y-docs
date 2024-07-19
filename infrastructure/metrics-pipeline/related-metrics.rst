@@ -71,7 +71,7 @@ Data point dropping metrics
      - One value per token, number of data points metrics pipeline management dropped when the aggregation metrics are more than the limit configured for your organization
 
    * - ``sf.org.numDatapointsDroppedInTimeout``
-     - Number of data points Splunk Observability Cloud didn't attempt to create because your account was throttled or limited in the previous few seconds, and creation was unlikely to succeed.
+     - Number of data points Splunk Observability Cloud didn't attempt to create because Splunk Observability Cloud throttled or limited your account in the previous few seconds, and creation was unlikely to succeed.
   
    * - ``sf.org.numDatapointsDroppedInTimeoutByToken``
      - Reserved for Infrastructure Monitoring internal use only.
@@ -95,11 +95,10 @@ Data point dropping metrics
      - Number of data points dropped for a specific access token because they didn't follow documented guidelines for data points. For example, the metric name was too long, the metric name included unsupported characters, or the data point contained no values.
   
    * - ``sf.org.numDatapointsDroppedBatchSize``
-     - Number of data points dropped because a single request contained more than 100,000 data points. In this scenario, Observability Cloud drops data points because it perceives sending more than 100,000 data points in a single request as excessive.
+     - Number of data points dropped because a single request contained more than 100,000 data points. In this scenario, Splunk Observability Cloud drops data points because it perceives sending more than 100,000 data points in a single request as excessive.
   
    * - ``sf.org.numDatapointsDroppedBatchSizeByToken``
-     - One value per token, number of data points dropped because a single request contained more than 100,000 data points. In this scenario, Observability Cloud drops data points because it perceives sending more than 100,000 data points in a single request as excessive.
-  
+     - One value per token, number of data points dropped because a single request contained more than 100,000 data points. In this scenario, Splunk Observability Cloud drops data points because it perceives sending more than 100,000 data points in a single request as excessive.
   
 
 Data point retention metrics

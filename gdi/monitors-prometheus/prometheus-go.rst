@@ -6,9 +6,7 @@ Prometheus Go
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Prometheus Go monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 ``prometheus-go`` monitor type to wrap the
 :ref:`prometheus-exporter` to scrape Prometheus Go collector and
 Prometheus process collector metrics for Splunk Observability Cloud.

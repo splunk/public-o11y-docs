@@ -6,9 +6,7 @@ Hadoop JMX
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Collectd Hadoop monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 Hadoop JMX monitor type to collect metrics from Hadoop 2.0 or higher
 clusters.
 
@@ -241,8 +239,7 @@ collectd/hadoopjmx receiver:
       - Specifies how to map JMX MBean values to metrics. Specific
          service monitors such as Cassandra, Kafka, or Activemq, are
          configured with a set of mappings: additional mappings are
-         merged with those. See the official collectd GenericJMX
-         documentation for more details.
+         merged with those. To learn more, see the :new-page:`Collectd documentation <https://www.collectd.org/documentation/manpages/collectd-java.html>`.
    - 
 
       - ``nodeType``

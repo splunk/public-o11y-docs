@@ -4,8 +4,6 @@
 Special cases for spans and traces in Splunk APM
 ***************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn about special cases for spans and traces in Splunk APM.
 

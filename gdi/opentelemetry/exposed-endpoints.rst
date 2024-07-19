@@ -7,7 +7,7 @@ Exposed ports and endpoints
 .. meta::
       :description: Exposed ports and endpoints of the Splunk Distribution of OpenTelemetry Collector.
 
-By default, the Collector exposes several endpoints. The components providing these endpoints will attempt to listen on loopback (localhost) or all interfaces (0.0.0.0), as detailed in this document.
+By default, the Collector exposes several endpoints. The components providing these endpoints attempt to listen on loopback (localhost) or all interfaces (0.0.0.0), as detailed in this document.
 
 The endpoints exposed depend on which mode the Collector is configured in. You can deactivate components, especially receivers, if they are not required for an environment.
 
@@ -31,7 +31,7 @@ See the table for a complete list of exposed ports and endpoints:
   * - ``http(s)://0.0.0.0:[4317|4318]``
     - OTLP receiver using gRPC and http
   * - ``http(s)://0.0.0.0:6060``
-    - :new-page:`HTTP forwarder <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/httpforwarder>` used to receive Smart Agent ``apiUrl`` data
+    - HTTP forwarder used to receive Smart Agent ``apiUrl`` data
   * - ``http(s)://0.0.0.0:7276``
     - SAPM trace receiver
   * - ``http://localhost:8888/metrics``
@@ -43,6 +43,6 @@ See the table for a complete list of exposed ports and endpoints:
   * - ``http(s)://0.0.0.0:9411/api/[v1|v2]/spans``
     - Zipkin receiver supporting V1 and V2
   * - ``http(s)://0.0.0.0:9943``
-    - SignalFx receiver supporting metrics and events
+    - SignalFx receiver supporting metrics and logs, including trace correlation data
 
 For more information, see the :new-page:`agent <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml>` and :new-page:`gateway <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/gateway_config.yaml>` configuration files.

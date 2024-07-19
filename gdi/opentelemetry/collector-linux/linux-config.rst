@@ -14,11 +14,11 @@ The following sections describe available settings for configuring the Splunk Di
 Change the default configuration file
 ===========================================
 
-The Collector comes with a default configuration as explained in :ref:`linux-config-ootb`. 
+The Collector comes with a default configuration as explained in :ref:`linux-config-ootb`.
 
 See :new-page:`full_config_linux.yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/full_config_linux.yaml>` for extended configuration options. This configuration requires using :new-page:`OpenTelemetry Collector Contrib project <https://github.com/open-telemetry/opentelemetry-collector-contrib>` or a similar distribution.
 
-After you modify the configuration, restart the Collector service. For example: 
+After you modify the configuration, restart the Collector service. For example:
 
 .. code-block:: bash
 
@@ -30,3 +30,4 @@ You can view splunk-otel-collector service logs and errors in the systemd journa
 
   sudo journalctl -u splunk-otel-collector   
 
+See :ref:`about-collector-configuration-tutorial` to learn how to configure the Collector.

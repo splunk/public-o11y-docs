@@ -9,14 +9,12 @@ Manually instrument Python applications for Splunk Observability Cloud
 
 Instrumenting applications automatically using the agent of the Splunk Distribution of OpenTelemetry Python covers most needs. Manually instrumenting your application is only necessary when, for example, you need to add custom attributes to spans or need to manually generate spans.
 
-.. _custom-traces-python:
+.. _start-tracing-via-code-python:
 
-Create custom traces
+Start tracing using code
 ===============================
 
-To create custom spans and traces, follow these steps:
-
-1. If you can't use the ``splunk-py-trace`` command, import and configure ``start_tracing``:
+If you can't use the ``splunk-py-trace`` command to launch the application, you can instead import and configure ``start_tracing`` by adding the following snippet to your application code: 
    
    .. code:: python
 
@@ -37,7 +35,39 @@ To create custom spans and traces, follow these steps:
       #    'deployment.environment': '<your_environment>',
       #  })
 
-   As an alternative, you can also import the OpenTelemetry SDK:
+.. note:: Don't add this code to the application if you're using the ``splunk-py-trace`` command to launch the application. 
+
+.. _custom-traces-python:
+
+Create custom traces
+===============================
+
+If you're adding manual instrumentation on top of auto-instrumentation, you can capture additional spans as follows: 
+
+1. Import the OpenTelemetry SDK:
+
+   .. code:: python
+
+      from opentelemetry import trace
+
+2. Create a tracer for your spans:
+
+   .. code:: python
+
+      tracer = trace.get_tracer("tracer.name")
+
+3. Create a span as current span:
+
+   .. code:: python
+
+      def reticulate_splines():
+         with tracer.start_as_current_span("span-name") as span:
+            print("Reticulating splines...")
+            # When the 'with' block goes out of scope, the 'span' is closed
+
+Alternatively, if you're not using auto-instrumentation, use the following steps instead: 
+
+1. Import the OpenTelemetry SDK:
 
    .. code:: python
 
@@ -68,8 +98,8 @@ To create custom spans and traces, follow these steps:
             print("Reticulating splines...")
             # When the 'with' block goes out of scope, the 'span' is closed
 
-For more examples, see the Manual instrumentation docs at https://opentelemetry.io/docs/instrumentation/python/manual/.
 
+For more examples, see the :new-page:`OpenTelemetry official documentation <https://opentelemetry.io/docs/instrumentation/python/manual/>`.
 
 .. _custom-metrics-python:
 
@@ -165,7 +195,7 @@ To create custom metrics, follow the steps depending on the type of metric instr
                description="Mean temperature of the city",
             )
 
-For more examples, see the Manual instrumentation docs at https://opentelemetry.io/docs/instrumentation/python/manual/.
+For more examples, see the :new-page:`OpenTelemetry official documentation <https://opentelemetry.io/docs/instrumentation/python/manual/>`.
 
 
 Frameworks that require manual instrumentation

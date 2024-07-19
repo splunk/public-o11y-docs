@@ -96,14 +96,14 @@ fields:
       - ``clientCertPath``
       - no
       - ``string``
-      - The path to the TLS client cert on the pod’s filesystem, if
+      - The path to the TLS client cert on the pod's filesystem, if
          using ``tls`` authentication.
    - 
 
       - ``clientKeyPath``
       - no
       - ``string``
-      - The path to the TLS client key on the pod’s filesystem, if using
+      - The path to the TLS client key on the pod's filesystem, if using
          ``tls`` authentication.
    - 
 

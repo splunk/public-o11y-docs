@@ -21,7 +21,7 @@ To generate all the basic installation commands for your environment and applica
 
    #. In the navigation menu, select :menuselection:`Data Management`.
 
-   #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+   #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 
    #. In the integration filter menu, select :guilabel:`By Product`.
 
@@ -33,7 +33,7 @@ To generate all the basic installation commands for your environment and applica
 Install the Splunk Distribution of OpenTelemetry Python manually
 ==================================================================
 
-Follow these instructions to install the Splunk Distribution of OpenTelemetry Python:
+If you don't use the guided setup, follow these instructions to manually install the Splunk Distribution of OpenTelemetry Python:
 
 - :ref:`install-enable-python-agent`
 - :ref:`configure-python-instrumentation`
@@ -208,26 +208,25 @@ To send data directly to Splunk Observability Cloud, set the following environme
    .. code-tab:: bash Linux
 
       export SPLUNK_ACCESS_TOKEN=<access_token>
-      export OTEL_TRACES_EXPORTER=jaeger-thrift-splunk
-      export OTEL_EXPORTER_JAEGER_ENDPOINT=https://ingest.<realm>.signalfx.com/v2/trace
+      export OTEL_EXPORTER_OTLP_TRACES_PROTOCOL=http/protobuf
+      export OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=https://ingest.<realm>.signalfx.com/v2/trace/otlp
 
    .. code-tab:: shell Windows PowerShell
 
       $env:SPLUNK_ACCESS_TOKEN=<access_token>
-      $env:OTEL_TRACES_EXPORTER=jaeger-thrift-splunk
-      $env:OTEL_EXPORTER_JAEGER_ENDPOINT=https://ingest.<realm>.signalfx.com/v2/trace
+      $env:OTEL_EXPORTER_OTLP_TRACES_PROTOCOL=http/protobuf
+      $env:OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=https://ingest.<realm>.signalfx.com/v2/trace/otlp
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
-
-#. Open the navigation menu in Splunk Observability Cloud.
-#. Select :menuselection:`Settings`.
-#. Select your username. 
-
-The realm name appears in the :guilabel:`Organizations` section. 
+To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
 .. note:: For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
+
+Specify the source host
+----------------------------------------------------
+
+.. include:: /_includes/gdi/apm-api-define-host.rst
 
 .. _instrument_aws_python_functions:
 

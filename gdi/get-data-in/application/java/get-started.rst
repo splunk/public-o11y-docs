@@ -19,8 +19,10 @@ Instrument Java applications for Splunk Observability Cloud
    Manual instrumentation <instrumentation/java-manual-instrumentation>
    Performance overhead <performance>
    Troubleshoot the Java agent <troubleshooting/common-java-troubleshooting>
-   About Splunk OTel Java <splunk-java-otel-distribution>
+   Migrate to metrics 2.x <migrate-metrics>
    Migrate from SignalFx Java agent <troubleshooting/migrate-signalfx-java-agent-to-otel>
+   Version 1.x (Deprecated) <version1x/get-started-1x>
+   About Splunk OTel Java <splunk-java-otel-distribution>
 
 The Splunk Distribution of OpenTelemetry Java provides a Java Virtual Machine (JVM) agent that automatically adds APM instrumentation to your Java application or service. The instrumentation captures distributed traces and sends them to Splunk Observability Cloud. For more information, see :ref:`splunk-java-otel-dist`.
 
@@ -30,7 +32,5 @@ To instrument your Java application, follow these steps:
 #. Instrument your Java application. See :ref:`instrument-java-applications`.
 #. Configure your instrumentation. See :ref:`configure-java-instrumentation`.
 
-You can also automatically instrument your Java applications along with the Splunk Distribution of OpenTelemetry Collector installation. Automatic instrumentation removes the need to install and configure the Java agent separately. See :ref:`auto-instrumentation-java` for the installation instructions.
-
-.. note:: The SignalFx Java Agent is deprecated and will reach End of Support on December 17th, 2022. To migrate to the Splunk Distribution of OpenTelemetry Java, see :ref:`migrate-signalfx-java-agent-to-otel`.
+You can also automatically instrument your Java applications along with the Splunk Distribution of OpenTelemetry Collector installation. Automatic discovery and configuration removes the need to install and configure the Java agent separately. See :ref:`discovery_mode` for more information.
 

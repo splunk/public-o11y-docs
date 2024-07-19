@@ -13,6 +13,8 @@ Collector for Linux default configuration
 
 The Collector configuration is stored in a :new-page:`YAML file <https://yaml.org/>` and specifies the behavior of the different components and services. See an overview of the elements and pipelines in the default configuration in the following sections.
 
+See :ref:`about-collector-configuration-tutorial` to learn how to configure the Collector.
+
 
 Default configuration 
 ========================================================
@@ -32,6 +34,7 @@ Learn more
 
 See also the following documents:
 
-* :ref:`collector-linux-intro` 
+* :ref:`collector-linux-intro`
 * :ref:`Troubleshooting <otel-troubleshooting>`
 * :ref:`otel-collector-scenario`
+* :ref:`about-collector-configuration-tutorial`

@@ -6,9 +6,7 @@ Apache Zookeeper
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Apache Zookeeper monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 Apache Zookeeper monitor type to keep track of an Apache Zookeeper
 instance using the Zookeeper plugin.
 
@@ -21,7 +19,8 @@ Benefits
 
 .. include:: /_includes/benefits.rst
 
-## Installation
+Installation
+------------
 
 .. include:: /_includes/collector-installation-linux.rst
 

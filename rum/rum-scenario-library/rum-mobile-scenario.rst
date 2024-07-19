@@ -55,7 +55,7 @@ Kai follows these steps to find a root cause of an error:
 
 2. Kai selects :strong:`See all ButtercupMobile` metrics to open the Overview dashboard. The overview page shows a summary of aggregate metrics. From the overview page, Kai can select any link to open Tag Spotlight.
 
-3. Kai searches for sessions associated with the custom event userID by applying a filter like in the following image. 
+3. Kai searches for sessions associated with the custom tag "userID" by applying a filter like in the following image. 
 
     ..  image:: /_images/rum/mobile-use-case-filter.png
         :width: 100%

@@ -6,9 +6,7 @@ Statsd
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Statsd monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 ``statsd`` monitor type to collect statsd metrics. It listens on a
 configured address and port to receive the statsd metrics.
 
@@ -141,18 +139,14 @@ The nested ``converters`` configuration object has the following fields:
       - No
       - ``string``
       - A format to compose a metric name to report to Splunk
-         Observability Cloud.
-
-The Smart Agent and Collector don't do any built-in filtering of metrics
-that come out of this monitor.
+         Splunk Observability Cloud.
 
 Metrics
 -------
 
-The agent does not do any built-in filtering of metrics coming out of
-this monitor.
+By default this monitor has no fixed metrics. Instead, it will create metrics based on your configuration. 
 
-See the section below to learn how metrics can be collected with this
+All metrics are custom. See the section below to learn how metrics can be collected with this
 monitor.
 
 Add dimensions to statsd metrics

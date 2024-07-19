@@ -14,7 +14,7 @@ Prerequisites
 
 Before you begin the setup process, consider the following:
 
-* If you are using multiple components of Splunk Observability Cloud and want to collect host metrics, logs, or other application data in addition to traces, follow the steps in :ref:`get-started-get-data-in` to get data into Observability Cloud. Then see :ref:`verify-apm-data` in this topic to make sure your data is coming into Splunk APM as you expect.
+* If you are using multiple components of Splunk Observability Cloud and want to collect host metrics, logs, or other application data in addition to traces, follow the steps in :ref:`get-started-get-data-in` to get data into Splunk Observability Cloud. Then see :ref:`verify-apm-data` in this topic to make sure your data is coming into Splunk APM as you expect.
 
 * If you have already deployed the OpenTelemetry Collector Contrib project, also known as upstream Collector, you can use your existing deployment to send traces to Splunk APM. See :ref:`using-upstream-otel` for more information. However, note that using the Splunk Distribution of OpenTelemetry Collector provides a more supported experience, customized for Splunk Observability Cloud.
 
@@ -22,7 +22,7 @@ Before you begin the setup process, consider the following:
 
 .. note:: Add span tags to your spans
 
-  Span tags, known as "attributes" in OpenTelemetry, add crucial context to your spans to enable troubleshooting and analysis. You can add tags to your spans either during instrumentation or in a processor added to the YAML configuration file of the OpenTelemetry Collector you're using to aggregate data from multiple services. 
+  Span tags, known as "attributes" in OpenTelemetry, add crucial context to your spans to enable troubleshooting and analysis. You can add tags to your spans either during instrumentation or in a processor added to the YAML configuration file of the OpenTelemetry Collector you're using to aggregate data from multiple services. See :ref:`otel-tags` for more information.
   
   The ``deployment.environment`` tag is particularly useful because it enables you to filter your Splunk APM by deployment environment. To learn more about the environment tag, see :ref:`apm-environments`.
   
@@ -37,10 +37,10 @@ If you are just setting up Splunk APM and want to use the Splunk Distribution of
 
 .. _deploy-connector:
 
-Deploy the Splunk Distribution of OpenTelemetry Collector on your hosts
+Deploy the Splunk Distribution of the OpenTelemetry Collector on your hosts
 --------------------------------------------------------------------------------------------------
 
-To send traces to Splunk APM, first deploy the Splunk Distribution of OpenTelemetry Collector on the hosts in which your applications are running. Splunk Observability Cloud offers OpenTelemetry Collector distributions for Kubernetes, Linux, and Windows. These distributions integrate the collection of data from hosts and data forwarding to Observability Cloud.
+To send traces to Splunk APM, first deploy the Splunk Distribution of OpenTelemetry Collector on the hosts in which your applications are running. Splunk Observability Cloud offers OpenTelemetry Collector distributions for Kubernetes, Linux, and Windows. These distributions integrate the collection of data from hosts and data forwarding to Splunk Observability Cloud.
 
 .. note:: Benefits of the Splunk Distribution of OpenTelemetry Collector
 
@@ -51,9 +51,14 @@ To send traces to Splunk APM, first deploy the Splunk Distribution of OpenTeleme
   - You establish a single configuration point in which you add custom tags and custom processing to your spans.
   - You can batch spans together from many sources. By batching spans, you reduce load on the back end.
 
-To deploy the Splunk Distribution of OpenTelemetry Collector on a host, select :guilabel:`Navigation menu > Data Management` and search for the host type you're using. Then follow the steps in the setup wizard.
+To deploy the Splunk Distribution of OpenTelemetry Collector on a host, follow these steps:
 
-See the following table for more information about deploying the Splunk Distribution of OpenTelemetry Collector on Kubernetes, Linux, and Windows hosts:
+#. Log in to Splunk Observability Cloud.
+#. In the left navigation menu, select :menuselection:`Data Management`.
+#. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
+#. Select the setup wizard for the Collector, and follow the instructions according to your host.
+
+See the following table for more information about deploying the Splunk Distribution of the OpenTelemetry Collector on Kubernetes, Linux, and Windows hosts:
 
 .. list-table::
    :header-rows: 1
@@ -64,15 +69,15 @@ See the following table for more information about deploying the Splunk Distribu
      - :strong:`Documentation`
 
    * - Kubernetes
-     - Splunk Distribution of OpenTelemetry Collector for Kubernetes 
+     - Splunk Distribution of OpenTelemetry Collector for Kubernetes
      - :ref:`get-started-k8s`
 
    * - Linux
-     - Splunk Distribution of OpenTelemetry Collector for Linux 
+     - Splunk Distribution of OpenTelemetry Collector for Linux
      - :ref:`get-started-linux`
 
    * - Windows
-     - Splunk Distribution of OpenTelemetry Collector for Windows 
+     - Splunk Distribution of OpenTelemetry Collector for Windows
      - :ref:`get-started-windows`
 
 .. _instrument-applications:
@@ -115,16 +120,15 @@ In the following table, follow the instrumentation steps for the language that e
      - :ref:`get-started-python`
 
    * - Ruby
-     - Splunk Distribution of OpenTelemetry Ruby
+     - OpenTelemetry instrumentation for Ruby
      - :ref:`get-started-ruby`
 
    * - PHP
-     - SignalFx Tracing Library for PHP
+     - OpenTelemetry instrumentation for PHP
      - :ref:`get-started-php`
 
-After you instrument your applications, you're ready to verify that your data is coming in.
 
-.. note:: To instrument applications or services written in languages other than the ones listed here, see :ref:`apm-instrumentation-other-langs`.
+After you instrument your applications, you're ready to verify that your data is coming in.
 
 .. _verify-apm-data:
 
@@ -138,4 +142,4 @@ If your data is not appearing in APM as you expect, see :ref:`instr-troubleshoot
 Next step
 ===========
 
-Once have data flowing into APM, it's time to do some exploring. See :ref:`apm-orientation`.
+Once data is flowing into APM, it's time to do some exploring. See :ref:`apm-orientation`.

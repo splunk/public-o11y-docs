@@ -6,9 +6,7 @@ Kubernetes proxy
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Kubernetes proxy monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 ``kubernetes-proxy`` monitor type to export Prometheus metrics from the
 kube-proxy metrics in Prometheus format.
 
@@ -24,7 +22,8 @@ Benefits
 
 .. include:: /_includes/benefits.rst
 
-## Installation
+Installation
+------------
 
 .. include:: /_includes/collector-installation.rst
 

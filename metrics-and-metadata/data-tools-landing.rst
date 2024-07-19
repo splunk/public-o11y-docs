@@ -13,18 +13,25 @@ Data tools in Splunk Observability Cloud
 
    Metric finder and metadata catalogue <metrics-finder-metadata-catalog>
    Related Content <relatedcontent>
-   Enable Related Content <enablerelatedcontent>
+   relatedcontent-collector-apm.rst
    Global data links <link-metadata-to-content>
 
-Splunk Observability Cloud provides a wide array of features and tools to help you manage, understand, and leverage your data:
+Splunk Observability Cloud provides a wide array of features and tools to help you manage, understand, and leverage your data. To access them log in to Splunk Observability Cloud and go to :strong:`Navigation menu > Data Management > Data tools`.  
 
-* :ref:`metrics-finder-and-metadata-catalog`
-* :ref:`Metrics pipeline management <use-metrics-pipeline>`
+* :ref:`APM Business workflows <apm-workflows>`
+* :ref:`APM MetricSets <metricset-concept>` 
+* :ref:`APM Services and Traces <apm-traces-spans>`
+* Data Migration management, for example :ref:`java-metrics-migration-guide`
+* :ref:`Metric metadata <metrics-finder-and-metadata-catalog>`
+* :ref:`Metrics pipeline management <metrics-pipeline-intro>`
+* :ref:`RUM URL grouping <rum-rules>`
+
+Other data tools include:
+
 * :ref:`Logs timeline <logs-timeline>`
-* :ref:`get-started-relatedcontent`
+* :ref:`Related Content <get-started-relatedcontent>`
 * :ref:`Metadata global links <link-metadata-to-content>`
-* :ref:`data-visualization-charts` 
-* :ref:`dashboards`
+* :ref:`Charts <data-visualization-charts>` and :ref:`Dashboards <dashboards>`
 * :ref:`signalflow-analytics-intro`
-* :ref:`view-alerts`
-* :ref:`view-detectors`
+* :ref:`Alerts <view-alerts>` and :ref:`Detectors <view-detectors>`
+

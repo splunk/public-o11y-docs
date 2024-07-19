@@ -24,19 +24,6 @@
             height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
-
-<!-- Hotjar Tracking Code for https://docs.splunk.com/observability/ -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:2659668,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-
 <script>
     if(window.location.toString().includes("docs.signalfx")){
         window.location.href = "https://docs.splunk.com/Observability/";
@@ -95,6 +82,7 @@
             eventCallback: parentCallback
         }
 
+        const language = window.location.pathname.includes('/ja/') ? 'ja' : 'en';
         return {
             customTheme,
             sortOptions,
@@ -102,7 +90,8 @@
             facets: "source_name_s,docProduct_s,docVersion_s",
             enableDateRangeFilter: true,
             env: window.location.hostname.includes('splunk') ? 'prod' : 'dev',
-            language: "en",
+            language: language,
+            suiLanguage: language,
             layoutTemplate: "docsResultLayout",
             analytics,
             analyticsConfig: {
@@ -240,7 +229,7 @@
                     </select>
                 </p>
                 <p>
-                    <label for="signalfx_splunk_feedback_email">Enter your email address, and someone from the documentation team will respond to you:</label>
+                    <label for="signalfx_splunk_feedback_email">Enter your email address if you would like someone from the documentation team to reply to your question or suggestion.</label>
                 </p>  <p>	<input  name="signalfx_splunk_feedback_email" id="signalfx_splunk_feedback_email" type="text" maxlength="255" size="30" value="" required/>
             </p>
                 <p>
@@ -397,4 +386,5 @@
 
     {%- endblock %}
 
-    {% block footer %}{% endblock footer %}
+    {% block footer %}
+    {% endblock footer %}

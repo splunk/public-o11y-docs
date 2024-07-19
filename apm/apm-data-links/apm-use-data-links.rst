@@ -19,19 +19,19 @@ Access global data links for a service
 
 **To access global data links for a service on the Overview page:**
 
-#. Open the Observability Cloud main menu.
+#. Open the Splunk Observability Cloud main menu.
 
 #. Select :guilabel:`APM`. The Overview page displays.
 
 #. On the :guilabel:`Services` tab, select the :guilabel:`More` icon for the service you're investigating. The menu displays global data links for the service.
 
-**To view global data links for a service on the Explore page:**
+**To view global data links for a service on the service map:**
 
-#. Open the Observability Cloud main menu.
+#. Open the Splunk Observability Cloud main menu.
 
 #. Select :guilabel:`APM`. The Overview page displays.
 
-#. In the sidebar, select the :guilabel:`Explore` card. The Explore page displays.
+#. In the sidebar, select the :guilabel:`Service Map` card. 
 
 #. In the service map, select the service you're investigating. The service detail drawer displays.
 
@@ -43,7 +43,7 @@ Access global data links for a trace
 
 **To access global data links for a trace:**
 
-#. Open the Observability Cloud main menu.
+#. Open the Splunk Observability Cloud main menu.
 
 #. Select :guilabel:`APM`. The Overview page displays.
 
@@ -59,7 +59,7 @@ Access global data links for a span
 
 **To access global data links for a span:**
 
-#. Open the Observability Cloud main menu.
+#. Open the Splunk Observability Cloud main menu.
 
 #. Select :guilabel:`APM`. The Overview page displays.
 
@@ -79,7 +79,7 @@ Access global data links for a span tag
 
 **To access global data links for a span tag:**
 
-#. Open the Observability Cloud main menu.
+#. Open the Splunk Observability Cloud main menu.
 
 #. Select :guilabel:`APM`. The Overview page displays.
 
@@ -87,6 +87,6 @@ Access global data links for a span tag
 
 #. Select the :guilabel:`Trace ID` value you're investigating.
 
-#. On the ::guilabel:`Waterfall` tab, select a :guilabel:`Service: Operation` value you're interested in.
+#. On the :guilabel:`Waterfall` tab, select a :guilabel:`Service: Operation` value you're interested in.
 
 #. In the :guilabel:`Tags` section, select the :guilabel:`More` icon next to a span tag field-value pair you're interested in. The menu displays global data links for the span tag. The :guilabel:`More` icon displays only if global data links have been created for the span tag.

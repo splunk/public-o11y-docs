@@ -17,10 +17,10 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     Collector for Kubernetes <collector-kubernetes/collector-kubernetes-intro.rst>
     Collector for Linux <collector-linux/collector-linux-intro.rst>
     Collector for Windows <collector-windows/collector-windows-intro.rst>     
-    deployments/otel-deployments.rst  
-    Zero config auto instrumentation <zero-config.rst>
-    Discover metric sources automatically <discovery-mode.rst>
+    Other deployment tools: ECS EC2, Fargate, Nomad, PCF <deployments/otel-deployments.rst>  
+    Automatic discovery and configuration <discovery-mode.rst>
     Use the Universal Forwarder <collector-with-the-uf.rst>
+    Monitor the Collector with built-in dashboards <collector-builtin-dashboard.rst>
     Troubleshooting <troubleshooting.rst>
     Commands reference <otel-commands.rst>
     Migrate from the Smart Agent to the Collector <smart-agent/smart-agent-migration-to-otel-collector.rst>
@@ -36,8 +36,6 @@ Learn more about the Splunk Observability Cloud data model at :ref:`data-model`.
   </embed>
 
 .. include:: /_includes/collector-works.rst
-
-Learn more at :ref:`otel-understand-use`.  
 
 .. raw:: html
 
@@ -90,7 +88,7 @@ Also, the customizations in the Splunk distribution include these additional fea
 
 * Better defaults for Splunk products
 * Discovery mode for metric sources
-* Zero configuration auto instrumentation
+* Automatic discovery and configuration
 * Fluentd for log capture, deactivated by default
 * Tools to support migration from SignalFx products
 
@@ -111,9 +109,9 @@ The following table describes everything you need to start using the Collector:
   *   - Resource
       - Description
   *   - Access token
-      - Use an access token to track and manage your resource usage. Where you see ``<access_token>``, replace it with the name of your access token. See :ref:`admin-org-tokens`.
+      - Use an access token to track and manage your resource usage. Where you see ``<access_token>``, replace it with the name of your access token. Your access token needs to have the ingest authorization scope. See :ref:`admin-org-tokens`.
   *   - Realm
-      - A realm is a self-contained deployment that hosts organizations. You can find your realm name on your profile page in the user interface. Where you see ``<REALM>``, replace it with the name of your organization's realm. See :new-page:`realms <https://dev.splunk.com/observability/docs/realms_in_endpoints/>`.   
+      - A realm is a self-contained deployment that hosts organizations. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
   *   - Ports and endpoints
       - Check exposed ports to make sure your environment doesn't have conflicts and that firewalls are configured. You can change the ports in the Collector configuration. See :ref:`otel-exposed-endpoints`.
 
@@ -159,7 +157,7 @@ Splunk Observability Cloud offers a guided setup to install the Collector:
 
 #. Log in to Splunk Observability Cloud.
 #. In the navigation menu, select :menuselection:`Data Management`.
-#. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+#. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 #. Select one of the platforms in the :guilabel:`Splunk OpenTelemetry Collector` section.
 #. Follow the step-by-step process provided in the platform's guided setup.
 
@@ -187,7 +185,7 @@ See also :ref:`otel-other-configuration-sources`.
     <h2>Monitor the Collector<a name="otel-monitoring" class="headerlink" href="#otel-monitoring" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-The default configuration automatically scrapes the Collector's own metrics and sends the data using the ``signalfx`` exporter. A built-in dashboard provides information about the health and status of Collector instances. In addition, logs are automatically collected for the Collector and Journald processes.
+Splunk Observability Cloud offers you a wide array of monitoring features, including a built-in dashboard which provides out-of-the-box information about the health and status of your deployed OTel Collector instances. Learn more at :ref:`collector-builtin-dashboard`.
 
 The Collector also offers a :ref:`zPages extension <zpages-extension>`, which provides live data about the Collector. zPages are useful for in-process diagnostics without having to depend on any back end to examine traces or metrics.
 
@@ -199,16 +197,15 @@ The Collector also offers a :ref:`zPages extension <zpages-extension>`, which pr
     <h2>Available features for the Collector<a name="otel-using" class="headerlink" href="#otel-using" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-See the features available for the Collector:
+After installing the Collector, read :ref:`otel-understand-use`.  
 
 * See how to perform common actions and tasks with the Collector at :ref:`collector-how-to`. For example, learn how to :ref:`collector-remove-data` to strip data out of your telemetry, including PII.
-* Learn about the discovery mode to detect metrics. See :ref:`discovery_mode`.
-* Activate auto-instrumentation so that the Collector can automatically grab traces from your application, and add metrics for certain types of calls. See :ref:`zero-config`.
+* Learn about automatic discovery and configuration (formerly zero configuration auto instrumentation) to detect telemetry data. Automatic discovery allows the Collector to automatically grab traces from your application, and add metrics for certain types of calls. See :ref:`discovery_mode`.
 
-For more information:
+For more information see also:
 
 - :ref:`otel-troubleshooting`. Try these troubleshooting techniques and learn how to open a support request.
-- Read :ref:`otel-collector-scenario`.
+- :ref:`otel-collector-scenario`.
 
 .. _otel-intro-enterprise:
 
@@ -220,7 +217,7 @@ For more information:
 
 If you want to send data to Splunk Enterprise using the Collector, the following applies:
 
-* For Kubernetes, Splunk Enterprise supports receiving metrics and logs from the Collector. Trace collection is not supported.
-* For Linux and Windows environments (physical hosts and virtual machines), Splunk Enterprise is not compatible with the Collector. Instead, use the Universal Forwarder to send metrics, traces, and logs to the Splunk platform. See more at :ref:`collector-with-the-uf`.
+* For Kubernetes environments, use the Collector to send metrics and logs to Splunk Enterprise. Trace collection is not supported.
+* For Linux and Windows environments (physical hosts and virtual machines), use the Universal Forwarder to send metrics and logs to the Splunk platform. See more at :ref:`collector-with-the-uf`. Alternatively, you can use the Collector to forward data to the Splunk platform, but this option is not supported at the moment.
 
 

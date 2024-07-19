@@ -16,15 +16,15 @@ You can use any of the following observer extensions as listeners for the receiv
 - ``host_observer``: Discovers listening network endpoints of the current host.
 - ``k8s_observer``: Detects and reports Kubernetes pod, port, and node endpoints through the Kubernetes API.
 
-This receiver can use other receivers for applications and hosts, like the ``kubeletstats`` or ``hostmetrics`` receivers. A typical use case of the receiver creator is to collect metrics for infrastructure that is deployed dynamically, such as Kubernetes pods or Docker containers. 
+This receiver can use other receivers for applications and hosts, like the ``kubeletstats`` or ``hostmetrics`` receivers. A typical use case of the receiver creator is to collect metrics for infrastructure that is deployed dynamically, such as Kubernetes pods or Docker containers.
 
 Get started
 ======================
 
 Follow these steps to configure and activate the component:
 
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
-   
+1. Deploy the Splunk Distribution of the OpenTelemetry Collector to your host or container platform:
+
    - :ref:`otel-install-linux`
    - :ref:`otel-install-windows`
    - :ref:`otel-install-k8s`
@@ -43,6 +43,12 @@ To activate the receiver creator receiver, add the desired extensions to the ``e
    extensions:
       # Configures the Kubernetes observer to watch for pod start and stop events.
       k8s_observer:
+        auth_type: serviceAccount
+        # Can be set to the node name to limit discovered endpoints
+        # The value can be obtained using the downward API
+        node: ${env:K8S_NODE_NAME}
+        observe_pods: true
+        observe_nodes: true
 
    receivers:
      receiver_creator/k8skubeletstats:
@@ -87,7 +93,7 @@ The following example shows how to configure the receiver creator using the Dock
    extensions:
      docker_observer:
        # Default is unix:///var/run/docker.sock
-       # Collector must have read access to the Docker Engine API 
+       # Collector must have read access to the Docker Engine API
        endpoint: path/to/docker.sock
        excluded_images: ['redis', 'another_image_name']
        # Docker observer requires Docker API version 1.22 or higher
@@ -119,7 +125,7 @@ The following example shows how to configure the receiver creator using the Kube
      k8s_observer:
        auth_type: serviceAccount
        # Can be set to the node name to limit discovered endpoints
-       # The value can be obtained using the downward API 
+       # The value can be obtained using the downward API
        node: ${env:K8S_NODE_NAME}
        observe_pods: true
        observe_nodes: true

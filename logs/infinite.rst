@@ -70,11 +70,13 @@ Logs pipeline rules execute in the following order:
 
 3. All infinite logging rules
 
-Because infinite logging rules execute last, you can create field extraction rules, then use the resulting fields in infinite logging rules. You can also metricize logs, then archive them via infinite logging without impacting your ingest capacity. For more information, see :ref:`logs-pipeline-sequence`.
+Because infinite logging rules run last, you can create field extraction rules, then use the resulting fields in infinite logging rules. You can also metricize logs, then archive them through infinite logging without impacting your ingest capacity. For more information, see :ref:`logs-pipeline-sequence`.
 
 Prerequisites
 ================================================================================
-You must be a Splunk Observability Cloud admin to create new infinite logging connections. Non-admins can send data to S3 buckets using an existing infinite logging connection, but they cannot create new connections. See AWS documentation for permissions required to create S3 buckets in the AWS Management Console.
+To create new infinite logging S3 connections, You must have an administrator role in Splunk Observability Cloud. If you have a power user role, you can send data to S3 buckets using an existing infinite logging S3 connection, but you cannot create new S3 connections. See AWS documentation for permissions required to create S3 buckets in the AWS Management Console. 
+
+If you have a read_only or usage role, you cannot create new S3 connections or use existing connections to send data to S3 buckets.
 
 Create an infinite logging rule
 ================================================================================
@@ -85,9 +87,9 @@ To create an infinite logging rule, follow these steps:
 
 2. Click :guilabel:`New infinite logging Rule`.
 
-3. Decide where to archive your data. To send your logs to an existing S3 bucket, click the infinite logging connection you want, then skip to step 9.
+3. Decide where to archive your data. To send your logs to an existing S3 bucket, select the infinite logging connection you want, then skip to step 9.
 
-4. If you want to send your data to a new S3 bucket and you are an Observability Cloud admin, click :guilabel:`Create new connection`. The :guilabel:`Establish a New S3 Connection` wizard appears.
+4. If you want to send your data to a new S3 bucket and you are a Splunk Observability Cloud admin, select :guilabel:`Create new connection`. The :guilabel:`Establish a New S3 Connection` guided setup appears.
 
 5. On the :guilabel:`Choose an AWS Region and Authentication Type` tab, do the following:
 
@@ -95,34 +97,34 @@ To create an infinite logging rule, follow these steps:
    b. Select whether you want to use the :guilabel:`External ID` or :guilabel:`Security Token` authentication type.
    c. Click :guilabel:`Next`.
    
-6. On the :guilabel:`Prepare AWS Account` tab, follow the steps in the wizard to do the following in the AWS Management Console:
+6. On the :guilabel:`Prepare AWS Account` tab, follow the steps in the guided setup to do the following in the AWS Management Console:
 
-   a. Create an AWS policy. The wizard provides the exact policy you must copy and paste into AWS.
+   a. Create an AWS policy. The guided setup provides the exact policy you must copy and paste into AWS.
    b. Create a role and associate it with the AWS policy.
    c. Create and configure an S3 bucket.
 
 7. On the :guilabel:`Establish Connection` tab, do the following:
 
    a. Give your new S3 connection a name.
-   b. Paste the Role ARN from the AWS Management Console into the :guilabel:`Role ARN` field in the wizard.
+   b. Paste the Role ARN from the AWS Management Console into the :guilabel:`Role ARN` field in the guided setup.
    c. Give your S3 bucket a name.
-   d. Click :guilabel:`Save`.
+   d. Select :guilabel:`Save`.
 
-8. Choose the Amazon S3 infinite logging connection that you created on the first page of the wizard. Your data will go to your S3 bucket in a file that you configure in the following two steps.
+8. Select the Amazon S3 infinite logging connection that you created on the first page of the guided setup. Your data goes to your S3 bucket in a file that you configure in the following two steps.
 
-9. (Optional) You can add a file prefix, which will be prepended to the front of the file you send to your S3 bucket.
+9. (Optional) You can add a file prefix, which prepend to the front of the file you send to your S3 bucket.
 
 10. (Optional) In :guilabel:`Advanced Configuration Options`, you can select the compression and file formats of the file you will send to your S3 bucket. 
 
-11. Click :guilabel:`Next`.
+11. Select :guilabel:`Next`.
 
-12. On the :strong:`Filter Data` page, create a filter that matches the log lines you want to archive in your S3 bucket. Only logs matching the filter are archived. If you want to index a sample of the logs being sent to the archive, select a percentage in :guilabel:`Define indexing behavior`. Indexing a small percentage of logs in Log Observer allows you to see trends in logs that are stored in S3 buckets. Click :guilabel:`Next`.
+12. On the :strong:`Filter Data` page, create a filter that matches the log lines you want to archive in your S3 bucket. Only logs matching the filter are archived. If you want to index a sample of the logs going to the archive, select a percentage in :guilabel:`Define indexing behavior`. Indexing a small percentage of logs in Log Observer lets you see trends in logs that are in S3 buckets. Select :guilabel:`Next`.
 
 13. Add a name and description for your infinite logging rule.
 
-14. Review your configuration choices, then click :guilabel:`Save`.
+14. Review your configuration choices, then select :guilabel:`Save`.
 
-Your infinite logging setup is now complete. Depending on your selections, your logs will be archived, indexed in Observability Cloud for analysis, or both.
+Your infinite logging setup is now complete. Depending on your selections, your logs are archived, indexed in Splunk Observability Cloud for analysis, or both.
 
 Infinite logging rules limits
 ================================================================================

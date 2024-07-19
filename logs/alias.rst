@@ -13,6 +13,11 @@ An alias is an alternate name that you assign to a field, allowing you to use th
 
 :strong:`Field Aliasing` occurs at search time, not index time, so it does not transform your data. Field Aliasing does not rename or remove the original field name. When you alias a field, you can search for it by its original name or by any of its aliases.
 
+Prerequisites
+================================================================================
+To create field aliases, you must have an administrator or power user role in Splunk Observability Cloud.
+
+
 When to use Field Aliasing
 ================================================================================
 Use Field Aliasing when the following situations are true:
@@ -39,12 +44,14 @@ For example, say your team most frequently uses the ``summary`` field. Add an al
 
 Enabling Related Content
 --------------------------------------------------------------------------------
-For example, say Observability Cloud receives the following telemetry data:
+For example, say Splunk Observability Cloud receives the following telemetry data:
 
 * Splunk APM receives a trace with the metadata field ``trace_id: 2b78e7c951497655``
 * Splunk Log Observer receives a log with the metadata field ``trace.id:2b78e7c951497655``
 
-Although these refer to the same trace ID value, the log and the trace cannot be correlated in Observability Cloud because the field names, ``trace_id`` and ``trace.id`` do not match. In this case, alias your log metadata field ``trace.id`` to ``trace_id`` using Field Aliasing. When the field names in APM and Log Observer match, the trace and the log with the same trace ID value can be correlated in Observability Cloud. Then when you are viewing the trace in APM, you can click directly into the log with the same trace ID value and view the correlated log in Log Observer.
+Although these refer to the same trace ID value, the log and the trace cannot be correlated in Splunk Observability Cloud because the field names, ``trace_id`` and ``trace.id`` do not match. In this case, alias your log metadata field ``trace.id`` to ``trace_id`` using Field Aliasing. When the field names in APM and Log Observer match, the trace and the log with the same trace ID value can be correlated in Splunk Observability Cloud. Then when you are viewing the trace in APM, you can click directly into the log with the same trace ID value and view the correlated log in Log Observer.
+
+To ensure full functionality of both Log Observer and Related Content, verify that your log fields are correctly mapped to the required key names as listed at :ref:`relatedcontent-log-observer`. 
 
 Normalizing field names
 --------------------------------------------------------------------------------

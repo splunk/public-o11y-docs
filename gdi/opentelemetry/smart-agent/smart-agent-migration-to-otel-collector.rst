@@ -1,5 +1,7 @@
 .. _migrate-from-sa-to-otel:
 .. _migrate-sa-to-otel-collector:
+.. _otel-translation-tool:
+.. _translatefx:
 
 ***********************************************************************************************
 Migrate from SignalFx Smart Agent to the Splunk Distribution of OpenTelemetry Collector
@@ -14,9 +16,9 @@ Migrate from SignalFx Smart Agent to the Splunk Distribution of OpenTelemetry Co
    :hidden:
 
    Migration process <smart-agent-migration-process.rst>
-   translation-tool.rst
    smart-agent-migration-monitors.rst
    legacy-otel-mappings.rst
+   monitors-common-config
 
 .. note:: The SignalFx Smart Agent has reached End of Support. While the agent can capture and export telemetry to Splunk Observability Cloud, Splunk no longer provides any support, feature updates, security, or bug fixes. Such requests are not bound by any SLAs.
 
@@ -62,12 +64,10 @@ Learn :ref:`how to use Smart Agent monitors in the Collector <migration-monitors
 .. raw:: html
 
    <embed>
-      <h2>Configuration translation tool and data mapping service<a name="migration-data" class="headerlink" href="#migration-data" title="Permalink to this headline">¶</a></h2>
+      <h2>Data mapping service<a name="migration-data" class="headerlink" href="#migration-data" title="Permalink to this headline">¶</a></h2>
    </embed>
 
-Splunk Observability Cloud provides a :ref:`translation tool <otel-translation-tool>` to help you adapt your Smart Agent YAML configuration file to a YAML that you can use with the Collector. 
-
-Splunk Observability Cloud also has a mapping service that defines equivalencies between legacy Smart Agent metric naming and semantic conventions to the OpenTelemetry names and formats for metrics and metric metadata. See :ref:`Metric mapping service <legacy-otel-mappings>` for more information. 
+Splunk Observability Cloud has a mapping service that defines equivalencies between legacy Smart Agent metric naming and semantic conventions to the OpenTelemetry names and formats for metrics and metric metadata. See :ref:`Metric mapping service <legacy-otel-mappings>` for more information. 
 
 .. raw:: html
 

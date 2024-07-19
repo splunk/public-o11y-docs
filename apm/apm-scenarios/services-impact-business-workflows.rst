@@ -31,7 +31,7 @@ Kai opens the :strong:`APM Overview`, which generates charts of all services and
 Kai opens the service map to find services with root-cause errors
 ====================================================================
 
-Kai selects the :strong:`Explore` card to open the service map. Kai selects nodes with red dots that indicate services with root-cause errors. In this case, :strong:`paymentservice` and :strong:`checkoutservice` nodes are showing root-case errors. 
+Kai selects the :strong:`Service Map` card to open the service map. Kai selects nodes with red dots that indicate services with root-cause errors. In this case, :strong:`paymentservice` and :strong:`checkoutservice` nodes are showing root-cause errors. 
 
 .. _breakdown:
 

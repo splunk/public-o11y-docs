@@ -36,8 +36,8 @@ Optionally, you can navigate to the guided setup on your own:
 
 #. Log in to Splunk Observability Cloud.
 #. On the navigation menu, select :guilabel:`Data Management`.
-#. Select :guilabel:`Add Integration`.
-#. On the Integrate Your Data page, select the tile for :guilabel:`Amazon Fargate`.
+#. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
+#. Select the tile for :guilabel:`Amazon Fargate`.
 #. Follow the steps provided in the guided set-up.
 
 Get started

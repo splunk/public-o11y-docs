@@ -37,13 +37,15 @@ Before you instrument and configure Splunk RUM for your iOS application, underst
 
 1. Log in to Splunk Observability Cloud.
 
-2. In the navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+2. In the navigation menu, select :menuselection:`Data Management`. 
 
-3. In the integration filter menu, select :guilabel:`By Use Case`.
+3. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 
-4. Select the :guilabel:`Monitor user experience` use case.
+4. In the integration filter menu, select :guilabel:`By Use Case`.
 
-5. Select the :guilabel:`iOS Instrumentation` tile to open the iOS Instrumentation guided setup.
+5. Select the :guilabel:`Monitor user experience` use case.
+
+6. Select the :guilabel:`iOS Instrumentation` tile to open the iOS Instrumentation guided setup.
 
 
 .. _rum-ios-install-manually:
@@ -122,13 +124,7 @@ Follow these steps to initialize the iOS RUM package.
          [builder setApplicationName:@"<your_app_name>"];
          [builder build];
 
-   * ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
-
-         1. Open the navigation menu in Splunk Observability Cloud.
-         2. Select :menuselection:`Settings`.
-         3. Select your username.
-
-      The realm name appears in the :guilabel:`Organizations` section.
+   * ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
    * To generate a RUM access token, see :ref:`rum-access-token`.
 
@@ -208,13 +204,7 @@ Initialize the crash reporting module with your configuration parameters:
       // Initialize crash reporting module after the iOS agent
       [SplunkRumCrashReporting start]
 
-* ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
-
-      1. Open the navigation menu in Splunk Observability Cloud.
-      2. Select :menuselection:`Settings`.
-      3. Select your username. 
-
-   The realm name appears in the :guilabel:`Organizations` section.
+* ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
 * To generate a RUM access token, see :ref:`rum-access-token`.
 
@@ -308,3 +298,10 @@ How to contribute
 =========================================================
 
 The Splunk OpenTelemetry Instrumentation for iOS is open-source software. You can contribute to its improvement by creating pull requests in GitHub. To learn more, see the :new-page:`contributing guidelines <https://github.com/signalfx/splunk-otel-ios/blob/main/CONTRIBUTING.md>` in GitHub.
+
+Next steps
+================
+
+* To add custom attributes, adapt the instrumentation to your environment and application, customize sampling, and more, see :ref:`configure-ios-instrumentation`.
+* To check that your data is in your Splunk RUM for Mobile instance, see :ref:`rum-check-mobile-data`.
+* To troubleshoot, see :ref:`common-ios-troubleshooting`.

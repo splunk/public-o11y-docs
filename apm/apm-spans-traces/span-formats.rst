@@ -78,7 +78,7 @@ See :ref:`otel-configuration` for more information on Collector configuration.
 Span formats compatible with the ingest endpoint
 =========================================================
 
-If you can't use or need to bypass the Splunk OpenTelemetry Collector, you can send your span data directly to the ingest API endpoints of Observability Cloud.
+If you can't use or need to bypass the Splunk OpenTelemetry Collector, you can send your span data directly to the ingest API endpoints of Splunk Observability Cloud.
 
 The ingest endpoint for Splunk Observability Cloud at ``https://ingest.<realm>.signalfx.com/v2/trace`` can receive spans directly in the following formats:
 
@@ -96,7 +96,7 @@ In addition, the following endpoints are available:
 
 For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`. 
 
-.. note:: You can also send trace data in OTLP format directly to Observability Cloud using the gRPC endpoint, either directly or from an OpenTelemetry Collector. See :ref:`grpc-data-ingest`.
+.. note:: You can also send trace data in OTLP format directly to Splunk Observability Cloud using the gRPC endpoint, either directly or from an OpenTelemetry Collector. See :ref:`grpc-data-ingest`.
 
 .. _apm-formats-smart-agent:
 

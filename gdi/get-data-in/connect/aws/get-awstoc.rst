@@ -9,21 +9,22 @@ Connect AWS to Splunk Observability Cloud
 
 .. toctree::
   :hidden:
+  :maxdepth: 5
 
   AWS authentication and supported regions <aws-prereqs>
   Compare connection options <aws-compare-connect>
-  Connect to AWS via polling from the Splunk console <aws-connect-polling>
-  Connect to AWS with Metrics Streams from the Splunk console <aws-connect-ms>
-  Connect Metric Streams from the AWS console <aws-console-ms>  
+  Connect via polling <aws-connect-polling>
+  Connect with Splunk-managed Metrics Streams <aws-connect-ms>
+  Connect with AWS-managed Metric Streams <aws-console-ms>  
   Connect to AWS using the Splunk API <aws-apiconfig>  
   Connect to AWS with Terraform <aws-terraformconfig>
-  Collect logs from AWS <aws-logs>
-  CloudFormation templates <aws-cloudformation>
+  CloudFormation and Terraform templates <aws-cloudformation>
+  Send AWS logs to Splunk Platform <aws-logs>
   Next steps <aws-post-install>
-  Troubleshoot your AWS connection <aws-troubleshooting>
+  Troubleshoot your AWS integration <aws-troubleshooting>
   Troubleshoot Metric Streams <aws-ts-metric-streams>
-  Troubleshoot logs <aws-ts-logs>
   GetMetricStatistics API deprecation notice <aws-api-notice>
+  aws-tutorial/about-aws-tutorial.rst
 
 You have several data ingestion and connection methods when it comes to monitoring your Amazon Web Services (AWS) data in Splunk Observability Cloud. 
 
@@ -157,15 +158,27 @@ Learn more at :ref:`Costs for AWS monitoring <aws-costs>`.
 
 To take advantage of the full benefits of the Splunk Observability Cloud platform, install the :ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>`.
 
+.. raw:: html
+
+  <embed>
+    <h3>Track your OpenTelemetry enablement<a name="install-splunk-otel-collector-enablement" class="headerlink" href="#install-splunk-otel-collector-enablement" title="Permalink to this headline">¶</a></h3>
+  </embed>
+
 To track the degree of OpenTelemetry enablement in your AWS integrations: 
 
-1. From Splunk Observability Cloud, go to :guilabel:`Data Management > AWS`.
+1. From Splunk Observability Cloud, go to :guilabel:`Data Management > Deployed integrations > AWS`.
 
-2. Select :guilabel:`OpenTelemetry Enabled` to see whether the OTel Collector is installed on each AWS EC2 instance. This helps you identify the instances that still need to be instrumented. For instances that are successfully instrumented, you can see which version of the OTel Collector is deployed.
+2. Select either the :guilabel:`AWS EC2` or :guilabel:`AWS EKS` tabs to see whether the OTel Collector is installed on each AWS EC2 instance or AWS EKS cluster. This helps you identify the instances that still need to be instrumented. 
 
 ..  image:: /_images/gdi/aws-collector-insights.jpg
   :width: 80%
   :alt: Amount of AWS entities with the Collector installed.
+
+3. For OTel Collector instances that are successfully instrumented, you can see which version of the Collector is deployed.  
+
+..  image:: /_images/gdi/aws-collector-insights-version.png
+  :width: 80%
+  :alt: Collector enablement in AWS EKS, with information on version installed
 
 .. _aws-connection-options-more:
 
@@ -185,8 +198,9 @@ Splunk Observability Cloud also offers secured connectivity with AWS. For more i
     <h2>See also<a name="after-aws-integration" class="headerlink" href="#after-aws-integration" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-* See :ref:`Leverage data from integration with AWS <aws-post-install>` ffor an overview of what you can do after you connect Splunk Observability Cloud to AWS.
-* Find instructions on how to import AWS metrics and metadata or AWS tag and log information using namespaces and filters at :ref:`Monitor AWS services <infrastructure-aws>`. 
+* For a walkthrough of tasks related to using AWS cloud services with your infrastructure, see :ref:`about-collector-configuration-tutorial`.
+* See :ref:`Leverage data from integration with AWS <aws-post-install>` for an overview of what you can do after you connect Splunk Observability Cloud to AWS.
+* Find instructions on how to import AWS metrics and metadata such as tags using namespaces and filters at :ref:`Monitor AWS services <infrastructure-aws>`. 
 * Refer to the AWS official documentation for a list of the available AWS metrics and other data, or read about the metadata Splunk Observability Cloud can provide at :ref:`AWS CloudWatch metadata <aws-infra-metadata>`.
 * To collect traces and metrics of your AWS Lambda functions for Splunk APM, see :ref:`splunk-otel-lambda-layer`.
 

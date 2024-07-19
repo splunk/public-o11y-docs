@@ -9,7 +9,7 @@ Instrument your .NET application for Splunk Observability Cloud (OpenTelemetry)
 
 The Splunk Distribution of OpenTelemetry .NET automatically instruments .NET applications, Windows services running .NET applications, and ASP.NET applications deployed on IIS.
 
-To get started, use the guided setup, follow the instructions manually, or auto-instrument your application. See :ref:`auto-instrumentation-dotnet` for more information.
+To get started, use the guided setup, follow the instructions manually, or automatically instrument your application. See :ref:`discovery_mode` for more information.
 
 Generate customized instructions using the guided setup
 ====================================================================
@@ -20,7 +20,7 @@ To generate all the basic installation commands for your environment and applica
 #. Open the :new-page:`.NET OpenTelemetry guided setup <https://login.signalfx.com/#/gdi/scripted/otel-dotnet-tracing/>`. Optionally, you can navigate to the guided setup on your own:
 
    #. In the navigation menu, select :menuselection:`Data Management`.
-   #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+   #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
    #. In the integration filter menu, select :guilabel:`By Product`.
    #. Select the :guilabel:`APM` product.
    #. Select the :guilabel:`.NET (OpenTelemetry)` tile to open the .NET OpenTelemetry guided setup.
@@ -28,7 +28,7 @@ To generate all the basic installation commands for your environment and applica
 Install the Splunk Distribution of OpenTelemetry .NET manually
 ==================================================================
 
-Follow these instructions to install the Splunk Distribution of OpenTelemetry .NET:
+If you don't use the guided setup, follow these instructions to manually install the Splunk Distribution of OpenTelemetry .NET:
 
 - :ref:`install-dotnet-otel-instrumentation`
 - :ref:`configure-otel-dotnet`
@@ -40,8 +40,16 @@ To install the distribution using the official NuGet packages, see :ref:`otel-do
 Instrument your .NET application
 ---------------------------------------------
 
-Follow these steps to automatically instrument your application:
+Use the following steps to automatically instrument your application.
 
+.. warning::
+
+   In .NET version 8, setting the ``DOTNET_EnableDiagnostics`` runtime environment variable to ``0`` deactivates all diagnostics including the CLR Profiler, which is required for launching the .NET instrumentation if you are not using .NET startup hooks. Make sure that ``DOTNET_EnableDiagnostics`` is set to ``1``. To limit diagnostics to only the CLR Profiler, use the following environment variable settings:
+   
+   * ``DOTNET_EnableDiagnostics=1``
+   * ``DOTNET_EnableDiagnostics_Profiler=1``
+   * ``DOTNET_EnableDiagnostics_IPC=0``
+   * ``DOTNET_EnableDiagnostics_Debugger=0``
 
 Windows
 ^^^^^^^^^^^^
@@ -63,11 +71,11 @@ Windows
       # Install the Splunk distribution using the PowerShell module
       Install-OpenTelemetryCore
 
-#. Register the distribution:
+#. Register the distribution according to the type of application you're instrumenting:
 
    .. tabs::
 
-      .. code-tab:: shell .NET application
+      .. code-tab:: shell .NET and .NET Framework Applications
 
          # Set up environment to start instrumentation from the current PowerShell session
          Register-OpenTelemetryForCurrentSession -OTelServiceName "<your-service-name>"
@@ -87,7 +95,7 @@ Windows
 
    .. tabs::
 
-      .. tab:: .NET application
+      .. tab:: .NET and .NET Framework
 
          .. code-block:: powershell
 
@@ -96,7 +104,9 @@ Windows
 
          Run your application after setting the attribute.
 
-      .. tab:: IIS application (ASP.NET)
+         .. note:: This command instruments any applications launched in the same PowerShell session. It won't instrument applications in a different PowerShell session.
+
+      .. tab:: IIS (ASP.NET)
 
          For ASP.NET applications, configure the service name and resource attributes in the ``appSettings`` block of the web.config file:
 
@@ -109,6 +119,9 @@ Windows
 
          .. note:: 
             If ``OTEL_SERVICE_NAME`` is not set for a web application hosted in IIS, the inferred name based on the site name and virtual directory path is used.
+
+         .. note:: 
+            If multiple applications are running in the same IIS Application Pool do not use the ``appSettings`` block of the web.config file to configure any environment variable. Let the instrumentation infer the name and use the Application Pool environment variables configuration, see below, to set the resource attributes (which will be shared by all applications in the Application Pool).
 
          After modifying the web.config file, restart IIS:
 
@@ -127,7 +140,7 @@ Windows
          .. note::
             If the ``OTEL_SERVICE_NAME`` or ``OTEL_RESOURCE_ATTRIBUTES`` environment variables are set for a process, settings with the same names from ``appSettings`` block of web.config are ignored.
 
-      .. tab:: IIS application (ASP.NET Core)
+      .. tab:: IIS (ASP.NET Core)
 
          For ASP.NET Core applications hosted in IIS, the service name and resource attributes can be configured using the ``environmentVariables`` block of the :new-page:`web.config file <https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/iis/web-config?view=aspnetcore-8.0#set-environment-variables>`. For example:
 
@@ -200,12 +213,31 @@ If no data appears in APM, see :ref:`common-dotnet-otel-troubleshooting`.
 
 .. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your .NET application or service manually. See :ref:`dotnet-otel-manual-instrumentation`.
 
+.. _activate-profiling-dotnet-otel:
+
+Activate AlwaysOn Profiling
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To activate AlwaysOn Profiling, set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
+
+To activate memory profiling, set the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after activating AlwaysOn Profiling.
+
+See :ref:`get-data-in-profiling` for more information. For more settings, see :ref:`profiling-configuration-otel-dotnet`.
+
 .. _configure-otel-dotnet:
 
 Configure the instrumentation
 ---------------------------------------------
 
 For advanced configuration of the .NET automatic instrumentation, like changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
+
+Database Query Performance settings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Starting from version 1.4.0, the .NET OTel instrumentation collects database queries for Database Query Performance. See :ref:`db-query-performance`.
+
+SQL statements might contain sensitive information. To configure this behavior, see ``OTEL_DOTNET_AUTO_SQLCLIENT_SET_DBSTATEMENT_FOR_TEXT`` and ``OTEL_DOTNET_AUTO_ENTITYFRAMEWORKCORE_SET_DBSTATEMENT_FOR_TEXT`` in :ref:`dotnet-otel-instrumentation-settings`.
+
 
 .. _otel-dotnet-nuget-pkg:
 
@@ -271,6 +303,12 @@ Instrument an application running within a Docker container
 
 An example of a Dockerfile that instruments a .NET application running inside a Docker container is available in the :new-page:`splunk/observability-content-contrib <https://github.com/splunk/observability-content-contrib/tree/main/integration-examples/splunk-otel-dotnet-docker>` repository on GitHub.
 
+Instrument Azure Web Apps
+---------------------------------------------------------------
+
+To instrument applications or services running on Azure Web Apps, see :ref:`instrument-dotnet-azure-webapp`.
+
+
 .. _windows-offline-install-otel-dotnet:
 
 Offline installation for Windows
@@ -304,7 +342,7 @@ To install the .NET automatic instrumentation on Windows hosts that are offline,
 .. _export-directly-to-olly-cloud-dotnet-otel:
 
 Send data directly to Splunk Observability Cloud
----------------------------------------------------
+====================================================================
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
@@ -324,13 +362,12 @@ To bypass the OTel Collector and send data directly to Splunk Observability Clou
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
+To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
-#. Open the navigation menu in Splunk Observability Cloud.
-#. Select :menuselection:`Settings`.
-#. Select your username.
+Specify the source host 
+----------------------------------------------
 
-The realm name appears in the :guilabel:`Organizations` section.
+.. include:: /_includes/gdi/apm-api-define-host.rst
 
 .. _uninstall-otel-dotnet:
 

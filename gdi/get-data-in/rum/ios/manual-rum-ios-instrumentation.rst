@@ -130,6 +130,19 @@ The following example shows how to use the OTel Swift API to report on a functio
       span.end() // You can also use defer for this
    }
 
+Alternatively, you can also use the following snippet:    
+
+.. code-block:: swift
+
+   func calculateTax() {
+      let tracer = OpenTelemetry.instance.tracerProvider.get(instrumentationName: "MyApp", instrumentationVersion: nil)
+      let span = tracer.spanBuilder(spanName: "calculateTax").startSpan()
+      span.setAttribute(key: "numClaims", value: claims.count)
+    //...
+    //...
+      span.end() // You can also use defer for this
+   }
+
 This other example shows how to record an event with no duration, that is, which happens in an instant:
 
 .. code-block:: swift
@@ -185,3 +198,10 @@ When generating a value for the ``traceparent`` header, make sure that it matche
    00-([0-9a-f]{32})-([0-9a-f]{16})-01
 
 Server timing headers with values that don't match the pattern are automatically discarded. For more information, see the ``Server-Timing`` and ``traceparent`` documentation on the W3C website.
+
+Next steps
+================
+
+* To add custom attributes, adapt the instrumentation to your environment and application, customize sampling, and more, see :ref:`configure-ios-instrumentation`.
+* To check that your data is in your Splunk RUM for Mobile instance, see :ref:`rum-check-mobile-data`.
+* To troubleshoot, see :ref:`common-ios-troubleshooting`.

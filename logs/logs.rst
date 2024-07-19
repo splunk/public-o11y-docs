@@ -13,9 +13,9 @@ Set up Log Observer
 
 .. include:: /_includes/log-observer-transition.rst
    
-Complete the instructions on this page if you have a Log Observer entitlement in Observability Cloud. If you don't have a Log Observer entitlement in Observability Cloud, see :ref:`logs-intro-logconnect` to set up the integration and begin using Log Observer to query your Splunk platform logs.
+Complete the instructions on this page if you have a Log Observer entitlement in Splunk Observability Cloud. If you don't have a Log Observer entitlement in Splunk Observability Cloud, see :ref:`logs-intro-logconnect` to set up the integration and begin using Log Observer to query your Splunk platform logs.
 
-By default, Log Observer indexes and stores all logs data that you send to Observability Cloud unless you choose to archive some of your logs data in Amazon S3 buckets. See :ref:`logs-infinite` to learn how to archive logs until you want to index and analyze them in Log Observer. If you use Log Observer Connect, your logs data remains in your Splunk platform instance and is never stored in Log Observer or Observability Cloud.
+By default, Log Observer indexes and stores all logs data that you send to Splunk Observability Cloud unless you choose to archive some of your logs data in Amazon S3 buckets. See :ref:`logs-infinite` to learn how to archive logs until you want to index and analyze them in Log Observer. If you use Log Observer Connect, your logs data remains in your Splunk platform instance and is never stored in Log Observer or Splunk Observability Cloud.
 
 What type of data is supported?
 ==================================================
@@ -26,13 +26,13 @@ Prerequisites
 ==================================================
 Before setting up Log Observer, you must meet the following criteria:
 
-- Your Observability Cloud organization must be provisioned with an entitlement for Log Observer.
-- You must be an administrator in an Observability Cloud organization to set up integrations.
+- Your Splunk Observability Cloud organization must be provisioned with an entitlement for Log Observer.
+- You must be an administrator in a Splunk Observability Cloud organization to set up integrations.
 
 
 Start using Log Observer
 ==================================================
-You can use Observability Cloud guided setups to send logs to Log Observer from your hosts, containers, and cloud providers. Use the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` to capture logs from your resources and applications. Decide whether you want to see logs from each data source, only one, or any combination of data sources. The more complete your log collection in Log Observer, the more effective your use of Log Observer can be for troubleshooting your entire environment using logs. You can complete step 1, step 2, or both in the following list, depending on which logs you want to see.
+You can use Splunk Observability Cloud guided setups to send logs to Log Observer from your hosts, containers, and cloud providers. Use the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` to capture logs from your resources and applications. Decide whether you want to see logs from each data source, only one, or any combination of data sources. The more complete your log collection in Log Observer, the more effective your use of Log Observer can be for troubleshooting your entire environment using logs. You can complete step 1, step 2, or both in the following list, depending on which logs you want to see.
 
 To start using Log Observer, complete the following tasks:
 
@@ -52,11 +52,13 @@ To send logs from your hosts and containers to Log Observer, follow these instru
 
 1. Log in to Splunk Observability Cloud.
 
-2. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+2. In the left navigation menu, select :menuselection:`Data Management`. 
 
-3. On the :strong:`Integrate Your Data` page in Observability Cloud, select the tile for the platform you want to import logs from. You can select Windows, Kubernetes, or Linux. The guided setup for your platform appears.
+3. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 
-4. Follow the instructions in the guided setup then see :ref:`work-with-data`.
+4. Select the tile for the platform you want to import logs from. You can select Windows, Kubernetes, or Linux. The guided setup for your platform appears.
+
+5. Follow the instructions in the guided setup then see :ref:`work-with-data`.
 
 After you see data coming into Log Observer from your data source, you can send logs from another data source or continue analyzing logs from the platform you have just set up.
 
@@ -71,10 +73,10 @@ To send logs from Amazon Web Services to Log Observer, follow these instructions
 
 1. Log in to Splunk Observability Cloud.
 
-2. In the left navigation menu, select :menuselection:`Data Management` to display the Integrate Your Data page.
+2. In the left navigation menu, select :menuselection:`Data Management`. 
 
-3. Select :guilabel:`Add Integration`. 
-   
+3. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
+
 4. In the :guilabel:`Cloud Integrations` section, select the the Amazon Web Services tile.
 
 5. Follow the instructions in the guided setup then see :ref:`work-with-data`.
@@ -125,9 +127,9 @@ See :ref:`logs-aggregations` to learn how to perform more aggregations.
 
 .. _severity-key:
 
-Ensure severity key is correctly mapped
+Ensure correct mapping of severity key 
 --------------------------------------------------
-The severity key is a field that all logs contain. It has the values ``Debug``, ``Error``, ``Info``, ``Unknown``, and ``Warning``. Because the ``severity`` field in many logs is called ``level``, Log Observer automatically remaps the log field ``level`` to ``severity``.
+The severity key is a field that all logs contain. It has the values ``DEBUG``, ``ERROR``, ``INFO``, ``UNKNOWN``, and ``WARNING``. Because the ``severity`` field in many logs is called ``level``, Log Observer automatically remaps the log field ``level`` to ``severity``.
 
 If your logs call the ``severity`` key by a different name, that's okay. To ensure that Log Observer can read your field, transform your field name to ``severity`` using a Field Copy Processor. See :ref:`field-copy-processors` to learn how.
 

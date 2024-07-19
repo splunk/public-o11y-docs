@@ -15,6 +15,7 @@ Use the Nomad deployment orchestrator to create a job that provides a unified wa
 
 Get started
 =======================
+
 To run the job files, you need:
 
 - Access to a Nomad cluster
@@ -24,9 +25,8 @@ To start a local dev agent for Nomad and Consul:
 
 1. Download the :new-page:`nomad binary file <https://www.nomadproject.io/downloads>` and the :new-page:`consul binary <https://www.consul.io/downloads>`. 
 2. Run the following commands in two different terminals:
-   
-   .. code-block:: yaml
 
+  .. code-block:: yaml
 
       $ nomad agent -dev -network-interface='{{ GetPrivateInterfaces | attr "name" }}'
 
@@ -36,12 +36,12 @@ To deploy the Collector job on the Nomad cluster, set the environment variable i
 
 .. code-block:: none
 
-   env {
+  env {
     SPLUNK_ACCESS_TOKEN = "<SPLUNK_ACCESS_TOKEN>"
     SPLUNK_REALM = "<SPLUNK_REALM>"
     SPLUNK_MEMORY_TOTAL_MIB = 2048
     // You can specify more environment variables to override default values.
-   }
+  }
 
 You can specify content in the :new-page:`template stanza <https://www.nomadproject.io/docs/job-specification/template>` if you want to use your own Collector configuration file, as shown in the following example:
 
@@ -68,7 +68,6 @@ You can specify content in the :new-page:`template stanza <https://www.nomadproj
    processors:
      batch: null
      memory_limiter:
-       ballast_size_mib: ${SPLUNK_BALLAST_SIZE_MIB}
        check_interval: 2s
        limit_mib: ${SPLUNK_MEMORY_LIMIT_MIB}
    exporters:
@@ -109,7 +108,6 @@ Run the Collector as a gateway by registering a service job, as shown in the fol
 
 .. code-block:: yaml
 
-
    $ git clone https://github.com/signalfx/splunk-otel-collector.git
    $ cd splunk-otel-collector/deployments/nomad
    $ nomad run otel-gateway.nomad
@@ -120,10 +118,10 @@ Service jobs are intended to run until explicitly stopped by an operator. If a s
 
 Run the Collector as an agent
 -----------------------------------
+
 Run the Collector as an agent by registering a system job, as shown in the following example:
 
 .. code-block:: yaml
-
 
    $ git clone https://github.com/signalfx/splunk-otel-collector.git
    $ cd splunk-otel-collector/deployments/nomad

@@ -1,14 +1,16 @@
 .. _redis:
 
-Redis
-=====
+Redis (deprecated)
+=======================================
 
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Redis monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+.. note:: The Redis monitor is deprecated and will reach end of support on January 15, 2025. During this period, only critical security and bug fixes are provided. When the monitor reaches end of support, you won't be able to use it to send data to Splunk Observability Cloud.
+
+   To monitor your Redis databases, you can instead use the native OpenTelemetry Redis receiver. To learn more, see :ref:`redis-receiver`.
+
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 ``redis`` monitor type to capture the following metrics:
 
 -  Memory used

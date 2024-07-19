@@ -9,9 +9,9 @@ Infrastructure Monitoring subscription usage (DPM plans)
 
 .. note:: Read this document if your organization's subscription plan is based on the rate at which you are sending data points to Splunk Infrastructure Monitoring (DPM). If your usage plan is based on the number of hosts or metrics that you're monitoring with Infrastructure Monitoring, see :ref:`monitor-imm-billing-usage`.
 
-   This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team. 
+   This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team.
 
-Observability Cloud provides a summary and detailed subscription usage reports to help you understand and manage the data you monitor with Infrastructure Monitoring. This information is available to Admin users only. 
+Splunk Observability Cloud provides a summary and detailed subscription usage reports to help you understand and manage the data you monitor with Infrastructure Monitoring. This information is available to Admin users only.
 
 .. _dpm-using-page:
 .. _dpm-usage-report:
@@ -19,7 +19,7 @@ Observability Cloud provides a summary and detailed subscription usage reports t
 Access the Subscription Usage page
 =============================================================================
 
-In DPM subscription plans all metrics are categorized as custom, regardless of their origin. 
+In DPM subscription plans all metrics are categorized as custom, regardless of their origin.
 
 Go to :menuselection:`Settings > Subscription Usage > Infrastructure Monitoring` to see a usage chart that shows average and maximum DPM for the current usage period. Hovering over different points in the chart shows actual values below the chart. To see average and maximum usage for a previous period, select the desired period from the dropdown menu.
 
@@ -35,7 +35,7 @@ To view usage reports available for download, go to :guilabel:`View detailed usa
 .. image:: /_images/admin/dpm-report-tab.png
       :width: 85%
 
-Observability Cloud provides you with the following summary reports to help you understand and manage your metrics submission:
+Splunk Observability Cloud provides you with the following summary reports to help you understand and manage your metrics submission:
 
 - :ref:`datapoints-per-minute-detail-report`. Shows the total number of data points sent for each minute of a month (or month to date, for the current month). This information is helpful for understanding whether your rate of data submission has stayed within the limits of your Splunk Infrastructure Monitoring subscription.
 
@@ -57,17 +57,32 @@ This report, available on the Usage tab, shows the total number of data points s
 Report contents
 -------------------------------------------------------------------
 
-The report has five columns:
+The report has the following columns:
 
--  Date: Follows the mm/dd/yy format
+.. list-table:: 
+      :header-rows: 1
 
--  Time: 24 hour hh:mm UTC
-
--  Streaming Datapoints: The number of data points received by Splunk Infrastructure Monitoring through our ingest APIs for the specified date and time. 
-
--  Backfill Datapoints: The number of data points received by Splunk Infrastructure Monitoring through the backfill API for the specified date and time.
-
--  Throttled Datapoints: The number of data points actively dropped by Splunk Infrastructure Monitoring for the specified date and time.
+      * - Column title
+        - Description
+        - Notes
+      * - Date
+        - Date of the report
+        - Follows the `mm/dd/yy` format.
+      * - Time
+        - Time of the report
+        - Follows the 24 hour `hh:mm` UTC format.
+      * - Streaming data points
+        - The number of data points, including archived and histogram data points, received by Splunk Infrastructure Monitoring through the ingest APIs for the specified date and time. 
+        - For billing purposes, 10 archived data points count as 1 real-time data point. 1 histogram data point counts as 8 real-time data points.
+      * - Backfill data points
+        - The number of data points received by Splunk Infrastructure Monitoring through the backfill API for the specified date and time.
+        - None
+      * - Throttled data points
+        - The number of data points actively dropped by Splunk Infrastructure Monitoring for the specified date and time.
+        - None
+      * - Archived metric data points
+        - The number of archived data points stored by Splunk Infrastructure Monitoring for the specified date and time.
+        - 10 archived data points count as 1 real-time data point.
 
 For past months, the report includes streaming, backfill and throttled data points for all of the minutes in that month. For the current month, the report includes the data points for the month-to-date, and updates once per day.
 
@@ -81,7 +96,7 @@ The report shows you the detail of how many data points Splunk Infrastructure Mo
 Aggregate data points per minute detail report
 =============================================================================
 
-If you are working in an Splunk Observability Cloud organization that has a parent-child relationship with other organizations, you see an option for the Datapoints per minute report that includes information on child organizations. 
+If you are working in a Splunk Observability Cloud organization that has a parent-child relationship with other organizations, you see an option for the Datapoints per minute report that includes information on child organizations.
 
 Like the :ref:`datapoints-per-minute-detail-report`, this report shows the number of data points sent to Splunk Infrastructure Monitoring for each minute within the month; including data from all child organizations.
 
@@ -141,7 +156,7 @@ To get a detailed breakdown of the MTS you've created and use, you can request a
 Exceeding your system limits
 =============================================================================
 
-When your DPM rate exceeds your subscription for a sustained period of time, Observability Cloud automatically restricts the data to process and store into the datapoints associated with existing MTS.
+When your DPM rate exceeds your subscription for a sustained period of time, Splunk Observability Cloud automatically restricts the data to process and store into the datapoints associated with existing MTS.
 
 How do I exceed my subscription limits?
 -------------------------------------------------------------------
@@ -153,14 +168,19 @@ If your environment grows significantly after your initial sizing, then your DPM
 What is the user-visible impact when an account is limited?
 -------------------------------------------------------------------
 
-Splunk Observability Cloud organizes the received datapoints into metric time series (MTS). An individual MTS is defined by the unique combination of a metric name and a set of dimensions, and is created and tracked in the Observability Cloud system as part of a datapoint.
+Splunk Observability Cloud organizes the received datapoints into metric time series (MTS). An individual MTS is defined by the unique combination of a metric name and a set of dimensions, and is created and tracked in the Splunk Observability Cloud system as part of a datapoint.
 
 If your account is being limited, datapoints (metric values) for an existing MTS will continue to be processed and stored, and can be used in charts and detectors. However, datapoints for new MTS will not be processed and stored, and charts and detectors that would be expected to include those datapoints will not do so.
 
 I exceeded my system limits. What can I do?
 -------------------------------------------------------------------
 
-If you exceed your system limits, you have two options: 
+If you exceed your system limits, you have two options:
 
 * Reduce your DPM.
 * Change to a pricing plan that is based on the number of hosts or metrics to monitor (Recommended). See more in :ref:`monitor-imm-billing-usage`.
+
+Note on Histograms
+========================
+
+Each histogram DPM is billed as 8 DPM. Learn more about metric categories in :ref:`metrics-category`.

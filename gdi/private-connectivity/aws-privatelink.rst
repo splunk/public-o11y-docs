@@ -7,11 +7,17 @@ Private Connectivity using AWS PrivateLink
 .. meta::
   :description: Connect to AWS using PrivateLink.
 
-You can use Amazon Web Services (AWS) PrivateLink to secure your traffic from your AWS environment to your Splunk Observability Cloud environment without exposing it to the Internet. 
+You can use Amazon Web Services (AWS) PrivateLink to secure your metric and traces traffic from your AWS environment to your Splunk Observability Cloud environment without exposing it to the Internet. 
 
-AWS PrivateLink connects your Virtual Private Cloud (VPC) to your AWS services, treating them as if they were in your VPC. You can create and use VPC endpoints to securely access AWS services and control the specific API endpoints and sites. To learn more, see the AWS PrivateLink documentation at :new-page:`https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html <https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html>`.
+AWS PrivateLink connects your Virtual Private Cloud (VPC) to your AWS services, treating them as if they were in your VPC. You can create and use VPC endpoints to securely access AWS services and control the specific API endpoints and sites. To learn more, see the AWS PrivateLink documentation at :new-page:`What is AWS PrivateLink? <https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html>`.
 
-The following diagram shows an overview of how AWS PrivateLink works: 
+.. note:: 
+  
+  To send logs to Splunk Observability Cloud, use :ref:`lo-connect-landing`. 
+  
+  To send logs securely, use :new-page:`Private connectivity in Splunk Cloud Platform <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/Privateconnectivityenable>`.
+
+The following diagram shows an overview of how AWS PrivateLink for Splunk Observability Cloud works: 
 
 .. source in Lucidchart: https://lucid.app/lucidchart/21f1cd02-7b2c-4654-a1b8-18c80a903fee/edit?shared=true&page=0_0&invitationId=inv_2f660037-6a85-4b98-9025-212b16c6b5a2#
 
@@ -28,12 +34,25 @@ To connect Splunk Observability Cloud to AWS using AWS PrivateLink, you need the
 * An active AWS account
 * A basic understanding of VPC concepts and networking principles
 
+.. _aws-privatelink-endpoint-types:
+
+AWS PrivateLink types of endpoint
+==================================================
+
+You can use any of these endpoints with AWS PrivateLink:
+
+* Ingest endpoint. Use the Ingest endpoint to send data points directly from your applications to Splunk Observability Cloud. Data sent using the Ingest API is handled in the same manner as data gathered by Splunk Observability Cloud through other methods, such as integrations with :ref:`AWS cloud services <get-started-aws>`.
+
+* API endpoint. Use the API endpoint to allow applications to communicate with each other by sending and receiving data. These endpoints serve as the points of interaction with different components like charts, dashboards, dashboard groups... 
+
+* Stream endpoint. Use the Stream endpoint for continuous, real-time transmission of observability data such as logs, metrics, or traces. This endpoint is key for monitoring and analyzing system performance, identifying issues quickly, and maintaining overall system health.
+
 .. _aws-privatelink-regions-names:
 
 AWS PrivateLink availability and service name
 ==================================================
 
-The following tables show the AWS PrivateLink endpoint URLs and service names for each AWS region:
+See the following tables for the AWS PrivateLink endpoint URLs and service names for each AWS region.
 
 .. _aws-privatelink-endpoint-urls:
 
@@ -241,18 +260,22 @@ To delete an endpoint, follow these steps:
 Advanced configuration: AWS PrivateLink with VPC peering 
 ==========================================================================
 
-Examine a scenario where your source region, or region generating your data, is ``ap-south-1`` and your destination region, or region where you have established your VPC connection and want to receive data at, is ``us-east-1``. 
+Examine a scenario where the workloads that you're monitoring with Splunk Observability Cloud are in the AWS ``ap-south-1`` region, and your Splunk Observability Cloud account is in ``AWS us-east-1``. You want to use PrivateLink to ingest observability data, but PrivateLink only works within one AWS region.
 
-In this context, you need to establish a VPC endpoint within your destination region ``us-east-1``. By activating AWS PrivateLink in this region, you obtain a seamless, secure, and private channel to access AWS services available in the your source region, ``ap-south-1``. This arrangement ensures that communication between the two VPCs occurs through an internal network, removing the necessity of routing traffic over the public Internet.
+In this scenario, carry out the following steps:
 
-This enhancement bolsters data integrity and security, aligning with the goal of optimizing inter-region communication while upholding stringent data protection standards.
+#. Ensure that you have a VPC set up in the destination region, in this example ``us-east-1``. If you don't have a VPC in that region, create a new one.
 
-Learn more in the AWS documentation at :new-page:`https://docs.aws.amazon.com/vpc/latest/peering/peering-configurations-full-access.html#two-vpcs-full-access <https://docs.aws.amazon.com/vpc/latest/peering/peering-configurations-full-access.html#two-vpcs-full-access>`.
+#. Use AWS VPC peering to peer the ``ap-south-1`` and the ``us-east-1`` VPCs together.
+
+#. Activate AWS PrivateLink in the ``us-east-1`` VPC.
+
+Learn more about VPC Peering in the AWS documentation at :new-page:`Two VPCs peered together <https://docs.aws.amazon.com/vpc/latest/peering/peering-configurations-full-access.html#two-vpcs-full-access>`.
 
 .. Next steps
 .. ================
 
-.. After you connect Splunk Observability Cloud with AWS, you can use Observability Cloud to track a series of metrics and analyze your AWS data in real time. 
+.. After you connect Splunk Observability Cloud with AWS, you can use Splunk Observability Cloud to track a series of metrics and analyze your AWS data in real time. 
 
 .. - See the AWS official documentation for a list of the available AWS resources.
 ..  - See :ref:`how to leverage data from integration with AWS <aws-post-install>` for more information.

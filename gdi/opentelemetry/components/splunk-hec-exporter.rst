@@ -22,7 +22,7 @@ Get started
 
 .. note:: 
   
-  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector when deploying in host monitoring (agent) mode in the ``logs`` pipeline. See :ref:`otel-deployment-mode` for more information. 
+  This component is included in the default configuration of the Splunk Distribution of the OpenTelemetry Collector when deploying in host monitoring (agent) mode in the ``logs`` pipeline. See :ref:`otel-deployment-mode` for more information.
   
   For details about the default configuration, see :ref:`otel-kubernetes-config`, :ref:`linux-config-ootb`, or :ref:`windows-config-ootb`. You can customize your configuration any time as explained in this document.
 
@@ -37,7 +37,7 @@ Follow these steps to configure and activate the component:
   - :ref:`otel-install-k8s`
 
 2. Configure the exporter as described in this doc.
-3. Restart the Collector.  
+3. Restart the Collector.
 
 Sample configuration
 ----------------------
@@ -73,6 +73,11 @@ Next, add the exporter to the ``services`` section of your configuration file:
          - resourcedetection
          exporters: [splunk_hec]
 
+.. _hec-endpoints:
+
+Splunk HEC token and endpoint
+---------------------------------
+
 The Splunk HEC exporter requires a Splunk HEC token and endpoint. Obtaining a HEC token and choosing a HEC endpoint depends on the target. The following table shows endpoints and instructions for each back end. Use the ``source`` and ``sourcetype`` fields options when sending logs to Splunk Cloud Platform or Splunk Enterprise.
 
 .. list-table::
@@ -93,13 +98,7 @@ The Splunk HEC exporter requires a Splunk HEC token and endpoint. Obtaining a HE
      - See :ref:`admin-org-tokens`.
      - ``https://ingest.<realm>.signalfx.com/v1/log``, where ``<realm>`` is the Splunk Observability Cloud realm, for example ``us0``.
 
-In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
-
-#. Open the navigation menu in Splunk Observability Cloud.
-#. Select :menuselection:`Settings`.
-#. Select your username. 
-
-The realm name appears in the :guilabel:`Organizations` section.
+To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
 
 .. note:: To send Splunk HEC data through a proxy, configure proxy settings as environment variables. See :ref:`configure-proxy-collector` for more information.
 
@@ -128,8 +127,6 @@ If you're using the Collector for log collection and need to send data to Splunk
          sourcetype: "otel"
          # Splunk index, optional name of the Splunk index targeted.
          index: "metrics"
-         # Maximum HTTP connections to use simultaneously when sending data. Defaults to 100.
-         max_connections: 20
          # Whether to deactivate gzip compression over HTTP. Defaults to false.
          disable_compression: false
          # HTTP timeout when sending data. Defaults to 10s.
@@ -170,7 +167,6 @@ To split the log pipelines, configure two separate ``splunk_hec`` entries in the
        source: "otel"
        sourcetype: "otel"
        index: "main"
-       max_connections: 20
        disable_compression: false
        timeout: 10s
        tls:
@@ -318,7 +314,7 @@ Note that to be able to ingest metrics through Splunk HEC you need to declare yo
 Settings
 ======================
 
-The following table shows the configuration options for the Splunk HEC exporter:
+The following table shows the configuration options for the Splunk HEC exporter. For information about HTTP settings, such as ``max_idle_conns`` or ``max_idle_conns_per_host``, refer to :new-page:`HTTP config options for the Collector <https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/confighttp#client-configuration>` in GitHub.
 
 .. raw:: html
 

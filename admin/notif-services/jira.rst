@@ -5,21 +5,21 @@ Send alert notifications to Jira using Splunk Observability Cloud
 ****************************************************************************
 
 .. meta::
-   :description: Configure Observability Cloud to send alerts to Jira when a detector alert condition is met and when the condition clears.
+   :description: Configure Splunk Observability Cloud to send alerts to Jira when a detector alert condition is met and when the condition clears.
 
 You can configure Splunk Observability Cloud to automatically send alert notifications to Jira Cloud or Jira Server to 
 create a new issue when a detector alert condition is met and add a comment to the issue when the alert clears.
 
-To send Observability Cloud alert notifications to Jira, follow these configuration steps:
+To send Splunk Observability Cloud alert notifications to Jira, follow these configuration steps:
 
-.. note:: You must be an Observability Cloud administrator to complete these steps.
+.. note:: You must be a Splunk Observability Cloud administrator to complete these steps.
 
 * :ref:`jira1`
 * :ref:`jira2`
 
 .. _jira1:
 
-Step 1: Create a Jira integration in Observability Cloud
+Step 1: Create a Jira integration in Splunk Observability Cloud
 =================================================================================
 
 The alert notification that this integration sends to Jira can automatically set the following field values:
@@ -39,32 +39,31 @@ The alert notification that this integration sends to Jira can automatically set
 If the Jira project you want to create issues in requires additional field values, you receive an error when you save 
 the integration.
 
-.. note:: You must be an Observability Cloud administrator to complete these tasks.
+.. note:: You must be a Splunk Observability Cloud administrator to complete these tasks.
 
-To create a Jira integration in Observability Cloud, follow these steps:
+To create a Jira integration in Splunk Observability Cloud, follow these steps:
 
 #. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`Jira guided setup <https://login.signalfx.com/#/integrations/jira>`. Optionally, you can navigate to the guided setup on your own: 
 
     #. In the left navigation menu, select :menuselection:`Data Management`.
 
-    #. Select :guilabel:`Add Integration`.
+    #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 
     #. In the integration filter menu, select :menuselection:`All`.
-
    
     #. In the :guilabel:`Search` field, search for :guilabel:`Jira`, and select it.
     
     #. Select :guilabel:`New Integration` to display the configuration options.
 
-#. By default, the name of the integration is :strong:`JIRA`. Give your integration a unique and descriptive name. For 
+#. By default, the name of the integration is :strong:`Jira`. Give your integration a unique and descriptive name. For 
    information about the downstream use of this name, see :new-page-ref:`About naming your integrations <naming-note>`.
-#. In the :strong:`JIRA Base URL` field, enter the Jira server base URL. For example, enter a value that looks something 
+#. In the :strong:`Jira Base URL` field, enter the Jira server base URL. For example, enter a value that looks something 
    like this : ``https://YOUR-DOMAIN.atlassian.net`` or ``http://YOUR-HOSTNAME:PORT``.
-#. If you want to create an integration with Jira Cloud, select :guilabel:`JIRA Cloud` and enter a Jira user email 
+#. If you want to create an integration with Jira Cloud, select :guilabel:`Jira Cloud` and enter a Jira user email 
    address and API token. For information about how to create an Atlassian API token, see :new-page:`Manage API tokens for your Atlassian account <https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/>`.
 
-   If you want to create an integration with Jira server, select :guilabel:`JIRA Server` and enter a Jira username and
+   If you want to create an integration with Jira server, select :guilabel:`Jira Server` and enter a Jira username and
    password.
 
    The user you associate with this integration must have Jira permissions to create issues, add comments, and browse
@@ -93,14 +92,14 @@ To create a Jira integration in Observability Cloud, follow these steps:
 
 .. _jira2:
 
-Step 2: Add a Jira integration as a detector alert recipient in Observability Cloud
+Step 2: Add a Jira integration as a detector alert recipient in Splunk Observability Cloud
 =================================================================================================
 
 ..
   once the detector docs are migrated - this step may be covered in those docs and can be removed from these docs. below 
   link to :ref:`detectors` and :ref:`receiving-notifications` instead once docs are migrated.
 
-To add a Jira integration as a detector alert recipient in Observability Cloud:
+To add a Jira integration as a detector alert recipient in Splunk Observability Cloud:
 
 #. Create or edit a detector that you want to configure to send alert notifications using your Jira integration.
 

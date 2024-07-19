@@ -5,9 +5,9 @@ Configure a Microsoft Entra ID (formerly Azure Active Directory) SSO integration
 **************************************************************************************
 
 .. meta::
-   :description: Configure the Microsoft Entra ID (formerly Azure Active Directory) integration to let users log in to Observability Cloud using their Entra ID account.
+   :description: Configure the Microsoft Entra ID (formerly Azure Active Directory) integration to let users log in to Splunk Observability Cloud using their Entra ID account.
 
-The Microsoft Entra ID (formerly Azure Active Directory) integration lets users log in to Observability Cloud using their Microsoft Entra ID account.
+The Microsoft Entra ID (formerly Azure Active Directory) integration lets users log in to Splunk Observability Cloud using their Microsoft Entra ID account.
 
 Before you begin configuring this integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
 
@@ -44,6 +44,6 @@ signs in. Subsequent login attempts don't require validation.
 
 If you want to turn off the email authentication feature, contact :ref:`support`.
 
-Once you have a custom URL configured, your users can continue to log in using their existing username/password pair, or they can use their Microsoft Entra ID credentials instead. Microsoft Entra ID SSO authentication and Observability Cloud username/password authentication are independent.
+Once you have a custom URL configured, your users can continue to log in using their existing username/password pair, or they can use their Microsoft Entra ID credentials instead. Microsoft Entra ID SSO authentication and Splunk Observability Cloud username/password authentication are independent.
 
 .. include:: /_includes/troubleshooting-components.rst

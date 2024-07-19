@@ -1,3 +1,5 @@
+.. _apm-alert-visualize:
+
 *****************************************************
 Visualize and alert on your application in Splunk APM
 *****************************************************

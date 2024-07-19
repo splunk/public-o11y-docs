@@ -30,13 +30,15 @@ To generate all the basic installation commands for your environment and applica
 
 2. Open the :new-page:`iOS Instrumentation guided setup <https://login.signalfx.com/#/gdi/scripted/ios/step-1?category=use-case-user-experience&gdiState=%7B"integrationId":"ios"%7D>`. Optionally, you can navigate to the guided setup on your own:
    
-   3. In the navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+   * In the navigation menu, select :menuselection:`Data Management`. 
+    
+   * Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 
-   4. In the integration filter menu, select :guilabel:`By Use Case`.
+   * In the integration filter menu, select :guilabel:`By Use Case`.
 
-   5. Select the :guilabel:`Monitor user experience` use case.
+   * Select the :guilabel:`Monitor user experience` use case.
 
-   6. Click the :guilabel:`iOS Instrumentation` tile to open the iOS Instrumentation guided setup.
+   * Select the :guilabel:`iOS Instrumentation` tile to open the iOS Instrumentation guided setup.
 
 For detailed installation instructions and requirements, see :ref:`ios-rum-install`.
 

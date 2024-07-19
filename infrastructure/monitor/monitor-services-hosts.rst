@@ -49,10 +49,10 @@ Splunk Observability Cloud also provides metrics and other data :ref:`for the fo
 Displayed data: Traffic considerations
 ================================================
 
-* Information is displayed only if data is streamed in. If there's no data coming in from a stream for more than 3 hours, that stream stops being counted in Observability Cloud. 
+* Information is displayed only if data is streamed in. If there's no data coming in from a stream for more than 3 hours, that stream stops being counted in Splunk Observability Cloud. 
     
     - Kubernetes monitoring holds tiles in a deactivated state until it goes inactive, which happens 25 hours after the last data point is received.
-* Some metrics, like those related to CPU utilization, are always reported. Observability Cloud uses these metrics on the Navigator summary page.
+* Some metrics, like those related to CPU utilization, are always reported. Splunk Observability Cloud uses these metrics on the Navigator summary page.
 * A few metrics are not sent continuously. For example, metrics related to the number of errors are only sent when errors happen.  
     
     - Don't try to get a list of entities using one of the few metrics not sent continuously, because entities with no errors might be hidden. 

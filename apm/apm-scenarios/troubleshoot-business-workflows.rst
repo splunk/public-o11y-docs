@@ -18,14 +18,14 @@ To understand the impact of errors on business KPIs, Deepu takes the following s
 
 .. _troubleshoot-workflows-tag-spotlight:
 
-Deepu selects the payment service on the service map and opens Tag Spotlight 
-===============================================================================
+Deepu opens Tag Spotlight and selects the affected service
+===================================================================================
 
-Deepu selects the :strong:`paymentservice` node on the service map and then selects :strong:`Tag Spotlight` to look at errors and latency for the :strong:`Workflow` tag.
+Deepu uses search to search for Tag Spotlight and selects the navigation result to go to Tag Spotlight. They select the paymentservice. 
 
-..  image:: /_images/apm/apm-use-cases/TagSpotlightUseCase_OpenTagSpotlight.png
+..  image:: /_images/apm/apm-use-cases/TagSpotlightScenario_OpenTagSpotilght.gif
     :width: 99%
-    :alt: This screenshot shows the payment service in the service map and Tag Spotlight side panel. 
+    :alt: This animation shows the user searching for Tag Spotlight and selecting the payment service in the Tag Spotlight filter. 
 
 .. _troubleshoot-workflows-errors:
 
@@ -43,7 +43,7 @@ Deepu reviews the errors by workflow and notices that the requests for the :stro
 Deepu filters Tag Spotlight to find the subset of traces where most errors occur
 =======================================================================================
 
-Because APM supports infinite cardinality, Deepu adds the :strong:`frontend:/cart/checkout` workflow the filter and applies additional filters for :strong:`version` to ``v350.10`` and :strong:`Kind` to ``SERVER`` to examine the subset of traces where the most errors occur:
+Because APM supports infinite cardinality, Deepu adds the :strong:`frontend:/cart/checkout` workflow to the filter and applies additional filters for :strong:`version` to ``v350.10`` and :strong:`Kind` to ``SERVER`` to examine the subset of traces where the most errors occur:
 
 ..  image:: /_images/apm/apm-use-cases/troubleshoot-business-workflows-02-add-filters.gif 
     :width: 99%

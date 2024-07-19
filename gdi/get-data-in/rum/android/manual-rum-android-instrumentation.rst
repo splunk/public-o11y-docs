@@ -207,3 +207,10 @@ When generating a value for the ``traceparent`` header, make sure that it matche
    00-([0-9a-f]{32})-([0-9a-f]{16})-01
 
 Server timing headers with values that don't match the pattern are automatically discarded. For more information, see the ``Server-Timing`` and ``traceparent`` documentation on the W3C website.
+
+Next steps
+================
+
+* To add custom attributes, adapt the instrumentation to your environment and application, customize sampling, and more, see :ref:`configure-android-instrumentation`.
+* To check that your data is in your Splunk RUM for Mobile instance, see :ref:`rum-check-mobile-data`.
+* To troubleshoot, see :ref:`common-android-troubleshooting`.

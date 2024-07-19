@@ -6,9 +6,7 @@ Apache ActiveMQ
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Apache ActiveMQ monitor type. See benefits, install, configuration, and metrics.
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 Apache ActiveMQ monitor type to track the following information from
 ActiveMQ:
 
@@ -102,7 +100,7 @@ integration:
       - no
       - ``string``
       - This is how the service type is identified in the Splunk
-         Observability Cloud UI so that you can get built-in content for
+         Splunk Observability Cloud UI so that you can get built-in content for
          it. For custom JMX integrations, it can be set to whatever you
          like.
    - 
@@ -169,7 +167,7 @@ integration:
       - Specifies how to map JMX MBean values to metrics. If using a
          specific service monitor such as cassandra, kafka, or activemq,
          they come pre-loaded with a set of mappings, and any that you
-         add in this option will be merged with those.
+         add in this option will be merged with those. To learn more, see the :new-page:`Collectd documentation <https://www.collectd.org/documentation/manpages/collectd-java.html>`.
 
 The **nested** ``mBeanDefinitions`` configuration object has the
 following fields:

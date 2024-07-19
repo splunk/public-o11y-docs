@@ -5,11 +5,11 @@ Send alert notifications to Microsoft Teams using Splunk Observability Cloud
 ********************************************************************************
 
 .. meta::
-      :description: Configure Observability Cloud to send alerts to Microsoft Teams when a detector alert condition is met and when the condition clears.
+      :description: Configure Splunk Observability Cloud to send alerts to Microsoft Teams when a detector alert condition is met and when the condition clears.
 
 You can configure Splunk Observability Cloud to automatically send alert notifications to a Microsoft Teams channel when a detector alert condition is met and when the alert clears.
 
-To send Observability Cloud alert notifications to Microsoft Teams, complete the following configuration tasks:
+To send Splunk Observability Cloud alert notifications to Microsoft Teams, complete the following configuration tasks:
 
 * :ref:`microsoftteams1`
 
@@ -17,7 +17,7 @@ To send Observability Cloud alert notifications to Microsoft Teams, complete the
 
 * :ref:`microsoftteams2`
 
-   You must be an Observability Cloud administrator to complete this task.
+   You must be a Splunk Observability Cloud administrator to complete this task.
 
 * :ref:`microsoftteams3`
 
@@ -26,7 +26,7 @@ For troubleshooting information, see :ref:`Troubleshooting Microsoft Teams<mstea
 ..
   what does the following note mean in the context of the tasks being discussed? Relevant or not?
 
-Existing Office 365 integrations appear in Observability Cloud within the Microsoft Teams tile.
+Existing Office 365 integrations appear in Splunk Observability Cloud within the Microsoft Teams tile.
 
 
 .. _microsoftteams1:
@@ -57,19 +57,19 @@ To get the webhook URL for the Microsoft Team channel:
 
 .. _microsoftteams2:
 
-Step 2: Create a Microsoft Teams integration in Observability Cloud
+Step 2: Create a Microsoft Teams integration in Splunk Observability Cloud
 =================================================================================
 
-You must be an Observability Cloud administrator to complete this task.
+You must be a Splunk Observability Cloud administrator to complete this task.
 
-To create a Microsoft Teams integration in Observability Cloud:
+To create a Microsoft Teams integration in Splunk Observability Cloud:
 
 #. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`Microsoft Teams guided setup <https://login.signalfx.com/#/integrations/office365>`. Optionally, you can navigate to the guided setup on your own:
 
    #. In the left navigation menu, select :menuselection:`Data Management`.
 
-   #. Select :guilabel:`Add Integration`.
+   #. Go to the :guilabel:`Available integrations` tab, or select :guilabel:`Add Integration` in the :guilabel:`Deployed integrations` tab.
 
    #. In the integration filter menu, select :guilabel:`All`.
 
@@ -85,13 +85,13 @@ To create a Microsoft Teams integration in Observability Cloud:
 
 .. _microsoftteams3:
 
-Step 3: Add a Microsoft Teams integration as a detector alert recipient in Observability Cloud
+Step 3: Add a Microsoft Teams integration as a detector alert recipient in Splunk Observability Cloud
 ========================================================================================================
 
 ..
   once the detector docs are migrated - this step may be covered in those docs and can be removed from these docs. below link to :ref:`detectors` and :ref:`receiving-notifications` instead once docs are migrated
 
-To add a Microsoft Teams integration as a detector alert recipient in Observability Cloud:
+To add a Microsoft Teams integration as a detector alert recipient in Splunk Observability Cloud:
 
 #. Create or edit a detector that you want to configure to send alert notifications using your Microsoft Teams integration.
 
@@ -103,7 +103,7 @@ To add a Microsoft Teams integration as a detector alert recipient in Observabil
 
 #. Activate and save the detector.
 
-Observability Cloud sends an alert notification to the Microsoft Teams channel when the detector triggers an alert and when the alert clears.
+Splunk Observability Cloud sends an alert notification to the Microsoft Teams channel when the detector triggers an alert and when the alert clears.
 
 
 .. _msteams-troubleshooting:
@@ -113,9 +113,9 @@ Troubleshoot your Microsoft Teams notification service integration
 
 If the Microsoft Teams channel stops receiving notifications, consider the following troubleshooting tips:
 
-* Verify that the Microsoft Teams notification service integration in Observability Cloud still exists. To troubleshoot, complete the following steps. You must be an Observability Cloud administrator to complete these steps.
+* Verify that the Microsoft Teams notification service integration in Splunk Observability Cloud still exists. To troubleshoot, complete the following steps. You must be a Splunk Observability Cloud administrator to complete these steps.
 
-  #. In the Observability Cloud navigation menu, select :strong:`Data Management`.
+  #. In the Splunk Observability Cloud navigation menu, select :strong:`Data Management > Deployed integrations`.
 
   #. In the :strong:`CATEGORIES` menu, select :strong:`Notification Services`.
 
@@ -127,6 +127,6 @@ If the Microsoft Teams channel stops receiving notifications, consider the follo
 
 * Verify that the Microsoft Teams notification service integration in Splunk Observability Cloud has not been changed to send alert notifications to a different Microsoft Teams channel.
 
-* Verify that the Microsoft Teams notification service integration is still the alert recipient on the detector in Observability Cloud.
+* Verify that the Microsoft Teams notification service integration is still the alert recipient on the detector in Splunk Observability Cloud.
 
-* Verify that the Observability Cloud detector's alert rules have not changed, causing it to send alert notifications for different reasons.
+* Verify that the Splunk Observability Cloud detector's alert rules have not changed, causing it to send alert notifications for different reasons.

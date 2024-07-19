@@ -9,7 +9,7 @@ Sizing and scaling
 
 By default, the Collector is configured to use 512 MB (500 x 2^20 bytes) of memory. 
 
-With a single CPU core, the Collector can receive, process, or export the following: 
+With a single CPU core, the Collector can ingest the following: 
 
 * If handling traces, 15,000 spans per second.
 * If handling metrics, 20,000 data points per second.
@@ -105,7 +105,7 @@ You can configure the ``load-balancing`` exporter to use the list of hosts behin
 Scrapers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To scrape thousands of endpoints you can't simply add more instances with the same configuration, as each Collector would try to scrape the same endpoints as every other Collector in the cluster.
+To scrape thousands of endpoints you can't add more instances with the same configuration, as each Collector would try to scrape the same endpoints as every other Collector in the cluster.
 
 The solution is to shard the endpoints by Collector instances so that if we add another replica of the Collector, each one will act on a different set of endpoints. You can do this by having one configuration file for each Collector so that each Collector would discover only the relevant endpoints for that Collector. Alternatively, you can scale the Prometheus receiver using the Target Allocator.
 
