@@ -11,7 +11,7 @@ Now that you have built-in data from your full stack flowing into Splunk Observa
 
 For many teams, some of the most meaningful data is custom data because you can define these data points to focus on what is most important to you in your specific environment.
 
-For example, if you run an e-commerce site, you might configure your application to send a custom metric about the number of orders placed. You can then create a detector to receive an alert when the number of orders drops significantly. You might also configure your application to send a custom metric about how long payment processing takes. You can then create a detector to issue alerts when the processing time exceeds a threshold.
+For example, if you run an ecommerce site, you might configure your application to send a custom metric about the number of orders placed. You can then create a detector to receive an alert when the number of orders drops significantly. You can also configure your application to send a custom metric about how long payment processing takes. You can then create a detector to issue alerts when the processing time exceeds a threshold.
 
 Configure back-end applications to send custom data
 =======================================================================
