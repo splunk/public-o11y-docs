@@ -6,7 +6,7 @@ Splunk integration for Splunk On-Call
 .. meta::
     :description: Configure the Splunk integration for Splunk On-Call.
 
-The following guide shows how to integrate Splunk On-Call with action alerts from searches in Splunk Enterprise and Splunl Cloud Platform.
+The following guide shows how to integrate Splunk On-Call with action alerts from searches in Splunk Enterprise and Splunk Cloud Platform.
 
 Requirements
 ==================
