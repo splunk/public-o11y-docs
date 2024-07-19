@@ -86,7 +86,7 @@ Learn more about advanced configuration options (including Service Logging) usin
 Configure the Colector's environment variables with MSI
 ==============================================================
 
-You can use the following Splunk-specific environment variables with MSI:
+You can use the following Splunk-specific environment variables with the MSI:
 
 .. list-table::
     :widths: 15 75 10
