@@ -137,4 +137,5 @@ If there are events displayed in your browser developer tools from an unknown
 initiator, it is possible that they originate from the RUM instrumentation. This
 is because the instrumentation wraps your application code and is responsible
 for calling the browser API. As a result, your browser developer tools indicate
-that such events are initiated by the RUM agent.
+that such events are initiated by the RUM agent. For example, the initiator can
+display as ``SplunkContextManager`` or ``splunk-otel-web.js``.
