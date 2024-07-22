@@ -130,12 +130,21 @@ If you think Browser RUM might be causing issues in your website or breaking exi
 
 .. include:: /_includes/troubleshooting-components.rst
 
-Browser developer tools display events from unknown initiator
-=============================================================
+Browser developer tools display events from Splunk instrumentation
+==================================================================
 
-If there are events displayed in your browser developer tools from an unknown
-initiator, it is possible that they originate from the RUM instrumentation. This
-is because the instrumentation wraps your application code and is responsible
-for calling the browser API. As a result, your browser developer tools indicate
-that such events are initiated by the RUM agent. For example, the initiator can
-display as ``SplunkContextManager`` or ``splunk-otel-web.js``.
+If there are network requests displayed in your browser developer tools from
+Splunk OTel instrumentation such as ``splunk-otel-web.js`` or
+``SplunkContextManager``, this is because the application code calls the
+instrumentation, which then calls the browser API. As a result, your browser
+developer tools indicate that such events are initiated by the RUM agent.
+
+You can identify the original application code initiator by navigating to the
+network request and hovering over or clicking the value in the initiator column,
+for example, ``splunk-otel-web.js``. This displays additional events from the
+stack trace. 
+
+It is also possible to configure your browser developer tools to omit the
+instrumentation layers from the initiator list. See your browser documentation
+for details.
+
