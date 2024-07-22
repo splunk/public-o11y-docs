@@ -140,11 +140,10 @@ instrumentation, which then calls the browser API. As a result, your browser
 developer tools indicate that such events are initiated by the RUM agent.
 
 You can identify the original application code initiator by navigating to the
-network request and hovering over or clicking the value in the initiator column,
-for example, ``splunk-otel-web.js``. This displays additional events from the
-stack trace. 
+network request and hovering over or selecting the value in the initiator
+column, for example, ``splunk-otel-web.js``. This displays additional events
+from the stack trace.
 
-It is also possible to configure your browser developer tools to omit the
-instrumentation layers from the initiator list. See your browser documentation
-for details.
+You can also configure your browser developer tools to omit the instrumentation
+layers from the initiator list. See your browser documentation for details.
 
