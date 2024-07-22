@@ -12,6 +12,7 @@ Collector components: Receivers
     :titlesonly:
     :hidden:
 
+    apache-receiver
     azureeventhub-receiver
     carbon-receiver
     cloudfoundry-receiver

@@ -63,16 +63,93 @@ Install using a PowerShell terminal
 Follow these steps:
 
 1. Open a PowerShell terminal.
+
 2. Run the following command, where ``PATH_TO_MSI`` is the full path to the downloaded package. For example, ``C:\your\download\folder\splunk-otel-collector-0.4.0-amd64.msi``. 
 
-  .. code-block:: PowerShell
+.. code-block:: PowerShell
 
     Start-Process -Wait msiexec "/i PATH_TO_MSI /qn"  
 
-1. Update all variables in the configuration file as appropriate. See :ref:`windows-config-change-default` for more information.
-2. Start the ``splunk-otel-collector`` service by rebooting the system or by running the following command in a PowerShell terminal:
+3. Update all variables in the configuration file as appropriate.   
 
-  .. code-block:: PowerShell
+.. code-block:: PowerShell
+
+    Start-Process -Wait msiexec "/i PATH_TO_MSI /qn SPLUNK_ACCESS_TOKEN=<my_access_token>"
+
+You can use the following Splunk-specific environment variables with the MSI:
+
+.. list-table::
+    :widths: 15 75 10
+    :width: 100
+    :header-rows: 1
+
+    *   - Name
+        - Description
+        - Default
+
+    *   - ``SPLUNK_ACCESS_TOKEN`` 
+        - The Splunk access token to authenticate requests.
+        - Empty
+
+    *   - ``SPLUNK_API_URL`` 
+        - The Splunk API URL. 
+        - ``https://api.[SPLUNK_REALM].signalfx.com``
+
+    *   - ``SPLUNK_BUNDLE_DIR`` 
+        - The path to the Smart Agent bundle. 
+        - ``[INSTALLDIR]\OpenTelemetry Collector\agent-bundle``
+
+    *   - ``SPLUNK_COLLECTD_DIR``
+        - The path to the collectd config directory for the Smart Agent. For example, ``/usr/lib/splunk-otel-collector/agent-bundle/run/collectd``
+        - Optional. Only added if passed to msiexec command.
+
+    *   - ``SPLUNK_CONFIG`` 
+        - Destination path of the Collector custom configuration file. 
+        - ``[CommonAppDataFolder]Splunk\OpenTelemetry Collector\[SPLUNK_SETUP_COLLECTOR_MODE]_config.yaml``
+
+    *   - ``SPLUNK_GATEWAY_URL``
+        - URL in Gateway mode.
+        - Optional. Only added if passed to msiexec command.
+
+    *   - ``SPLUNK_HEC_TOKEN`` 
+        - The Splunk HEC authentication token.
+        - ``[SPLUNK_ACCESS_TOKEN]``
+    
+    *   - ``SPLUNK_HEC_URL`` 
+        - The Splunk HEC endpoint URL. 
+        - ``https://ingest.[SPLUNK_REALM].signalfx.com/v1/log``
+    
+    *   - ``SPLUNK_INGEST_URL`` 
+        - The Splunk ingest URL. 
+        - ``https://ingest.[SPLUNK_REALM].signalfx.com``
+
+    *   - ``SPLUNK_LISTEN_INTERFACE`` 
+        - The network interface the agent receivers listen on. 
+        - Optional. Only added if passed to msiexec command.
+
+    *   - ``SPLUNK_MEMORY_LIMIT_MIB`` 
+        - Use it to set the memory limit for the ``memory_limiter`` processor. 
+        - Optional. Only added if passed to msiexec command.
+
+    *   - ``SPLUNK_MEMORY_TOTAL_MIB`` 
+        - Total memory in MiB to allocate to the Collector
+        - Optional. Only added if passed to msiexec command.
+
+    *   - ``SPLUNK_REALM`` 
+        - Your Splunk realm.
+        - ``us0``
+
+    *   - ``SPLUNK_SETUP_COLLECTOR_MODE`` 
+        - Install property that sets the Collector's deployment mode. Learn more at :ref:`otel-deployment-mode`. 
+        - ``agent``
+
+    *   - ``SPLUNK_TRACE_URL`` 
+        - The Splunk trace endpoint URL. 
+        - ``https://ingest.[SPLUNK_REALM].signalfx.com/v2/trace``
+
+4. Start the ``splunk-otel-collector`` service by rebooting the system or by running the following command in a PowerShell terminal:
+
+.. code-block:: PowerShell
 
     Start-Service splunk-otel-collector
 
