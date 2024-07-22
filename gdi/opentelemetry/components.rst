@@ -49,6 +49,9 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
    * - Name
      - Description
      - Pipeline types
+   * - :ref:`apache-receiver` (``apache``) 
+     - Fetches stats from a Apache Web Server.
+     - Metrics
    * - :ref:`azureeventhub-receiver` (``azureeventhub``) 
      - Pulls logs from an Azure event hub.
      - Logs
