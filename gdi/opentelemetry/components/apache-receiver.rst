@@ -66,7 +66,7 @@ The following settings are optional:
   
   * Valid time units are ``ns``, ``us`` (or ``µs``), ``ms``, ``s``, ``m``, ``h``.
 
-* ``initial_delay``. ``1s`` by default. Determines how long this receiver waits before starting.
+* ``initial_delay``. ``1s`` by default. Determines how long this receiver waits before collecting metrics for the first time.
 
 Settings
 ======================
