@@ -12,12 +12,12 @@ For every service, Tag Spotlight provides time-series charts for request, error,
 
 The following image shows the a chart for requests and errors and a chart for duration for an example ``frontend`` service. Under the charts there are bar charts with RED metrics for each indexed span tag.
 
-   .. image:: /_images/apm/span-tags/tag-spotlight-01.png  
-      :alt: This image shows the requests and errors of an example frontend service broken down by indexed span tag.
+   .. image:: /_images/apm/span-tags/tag-spotlight-fy25pi2.png  
+      :alt: This image shows requests and errors and latency charts as well as requests and errors broken down by indexed span tag for an example frontend service.
 
 To learn how to index span tags to generate Troubleshooting MetricSets, see :ref:`apm-index-span-tags`. For a general overview of MetricSets in APM, see :ref:`apm-metricsets`. 
 
-View service performance by indexed span tags with Tag Spotlight
+View service performance by indexed span tags
 ================================================================
 To view service performance broken down by your indexed span tags follow these steps:
 
@@ -25,11 +25,6 @@ To view service performance broken down by your indexed span tags follow these s
      * Select the :guilabel:`Tag Spotlight` panel on the APM landing page or in the service map. 
      * Select the :guilabel:`Tag Spotlight` tab in the service view for your service.
      * Use the search in the top toolbar to search for Tag Spotlight and select the navigation result to go to Tag Spotlight.
-
-     ..  image:: /_images/apm/span-tags/tag-spotlight-02.gif
-         :width: 99%
-         :alt: This animation shows the user searching for Tag Spotlight. 
-
 #. Add time range, environment, workflow, service, operation, and tag filters as need to refine the data in your Tag Spotlight view. The default time range is for the last 15 minutes, and the data resolution is 10 seconds.
 #. Use the request & errors and latency time-series charts at the top to see a distribution of your RED metrics.
 #. Use the bar charts under the request & errors and latency time-series charts to view RED metrics for each indexed span tag.
