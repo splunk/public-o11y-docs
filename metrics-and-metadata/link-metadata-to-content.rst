@@ -25,23 +25,23 @@ In Splunk Observability Cloud, metadata (data about your data) includes :ref:`di
 
 * Dashboards and Splunk Infrastructure Monitoring navigators, in the following locations:
 
-   * List charts
+  * List charts
 
-   * Line charts
+  * Line charts
 
-   * Area charts
+  * Area charts
 
-   * Column charts
+  * Column charts
 
-   * Data tables
+  * Data tables
 
 * Splunk Application Performance Monitoring (APM), in the following locations:
 
-   * Services
+  * Services
 
-   * Traces
+  * Traces
 
-   * Spans
+  * Spans
 
 For example, here is a global data link displaying for a host property on a dashboard. The global data link leads to an :strong:`EC2 Cost and Usage` dashboard in Splunk Observability Cloud, where the system automatically narrows the dashboard is automatically show data that's relevant to the :strong:`server4` host.
 
