@@ -9,6 +9,8 @@ Apache Web Server receiver
 
 The Apache Web Server receiver fetches stats from an Apache Web Server instance using the ``server-status?auto endpoint``. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
+.. note:: Out-of-the-box dashboards and navigators aren't supported for the Apache Web Server receiver yet, but are planned for a future release.
+
 Prerequisites
 ======================
 
