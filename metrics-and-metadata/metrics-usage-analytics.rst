@@ -109,7 +109,7 @@ Manage and reduce your metric usage with MUA
 
 This section contains tips for identifying metrics that you can aggregate, archive, or drop for the purpose of reducing your metric usage. 
 
-Archive unused metrics
+Archive or drop unused metrics
 -----------------------------------------------
 
 Using the metrics table, you can find metrics that aren't used. If you have any unused metrics, you can archive them so they take up less of your usage plan. 
@@ -117,6 +117,8 @@ Using the metrics table, you can find metrics that aren't used. If you have any 
 Archived metrics go to an archival route in Splunk Observability Cloud, where they remain unused and have a lower billing cost. You can bring them out of the archival route whenever you need to use them again.
 
 To learn more about archiving metrics, see :ref:`archived-metrics-intro`.
+
+If you aren't using these metrics and don't plan on using them in the future, consider dropping them to save usage space. To learn more about dropping metrics, see :ref:`mpm-rule-routing`.
 
 Find metrics with low utility scores and aggregate them
 -------------------------------------------------------------
@@ -135,7 +137,9 @@ To learn more about how to aggregate metrics, see :ref:`mpm-rule-agreggation`.
 Reduce the cardinality of your metrics
 --------------------------------------------------------------
 
-If you have metrics with high cardinality, consider modifying their dimensions to reduce their cardinalities.
+If you have metrics with high cardinality, consider using a routing exception rule to reroute specific MTS. For example, you can archive or drop MTS with dimensions that you aren't using.
+
+To learn more about using routing exception rules, see :ref:`mpm-rule-routing-exception`.
 
 
 
