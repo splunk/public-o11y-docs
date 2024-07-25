@@ -145,6 +145,9 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
    * - :ref:`sapm-receiver` (``sapm``)
      - Receives traces from other collectors or from the SignalFx Smart Agent.
      - Traces
+   * - :ref:`signalfx-gateway-prometheus-remote-write-receiver` (``signalfxgatewayprometheusremotewritereceiver``)
+     - OTel native version of the SignalFx Prometheus remote write gateway.
+     - Metrics
    * - :ref:`signalfx-receiver` (``signalfx``)
      - Accepts metrics and logs in the proto format.
      - Metrics, logs

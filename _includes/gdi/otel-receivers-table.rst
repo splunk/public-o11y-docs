@@ -30,6 +30,7 @@
 * :ref:`redis-receiver`
 * :ref:`sapm-receiver`
 * :ref:`simple-prometheus-receiver`
+* :ref:`signalfx-gateway-prometheus-remote-write-receiver`
 * :ref:`signalfx-receiver`
 * :ref:`smartagent-receiver`
 * :ref:`splunk-hec-receiver`

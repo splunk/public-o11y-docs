@@ -44,6 +44,7 @@ Collector components: Receivers
     redis-receiver
     sapm-receiver
     simple-prometheus-receiver
+    signalfx-gateway-prometheus-remote-write-receiver
     signalfx-receiver
     smartagent-receiver
     splunk-hec-receiver
