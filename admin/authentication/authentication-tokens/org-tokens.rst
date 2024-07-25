@@ -158,13 +158,30 @@ To create an access token:
 Rotate an access token
 ==============================
 
-You can rotate an access token using the Splunk Observability Cloud API. This creates a new secret for the token and deactivates the token's previous secret. Optionally, you can provide a grace period before the previous token secret expires.
+You can rotate an access token using the access token menu or the Splunk Observability Cloud API. This creates a new secret for the token and deactivates the token's previous secret. Optionally, you can provide a grace period before the previous token secret expires.
 
 You can't rotate tokens after they expire. If you don't rotate a token before it expires, you must create a new token to replace it.
 
 .. note:: You must be a Splunk Observability Cloud admin to rotate a token. 
 
-To rotate an access token, use the ``POST /token/{name}/rotate`` endpoint in the Splunk Observability Cloud API. An API call to rotate a token looks like this:
+Rotate access tokens using the token menu
+-------------------------------------------------------------------
+
+To rotate a token using the access token menu, follow these steps:
+
+#. In Splunk Observability Cloud, select :guilabel:`Settings`.
+#. Select `Access tokens`. 
+#. In the access tokens menu, select the token you want to rotate.
+#. Select :guilabel:`Rotate token`.
+#. Enter an expiration date for the new token secret, and optionally, a grace period for the current token secret. 
+#. Select :guilabel:`Rotate`.
+
+After you're finished rotating the token, update any of your OpenTelemetry Collector configurations with the new token secret before the grace period ends. 
+
+Rotate access tokens using the Splunk Observability Cloud API
+-------------------------------------------------------------------
+
+To rotate an access token with the API, use the ``POST /token/{name}/rotate`` endpoint in the Splunk Observability Cloud API. An API call to rotate a token looks like this:
 
 .. code-block:: bash
 
