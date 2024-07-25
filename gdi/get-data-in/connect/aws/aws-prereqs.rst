@@ -124,7 +124,7 @@ For example:
 .. code-block:: json
 
   {
-    "Version": "2012-10-17",
+    "Version": "2012-10-17", 
     "Statement": [
       {
         "Effect": "Allow",
@@ -142,6 +142,8 @@ For example:
     ]
   }
 
+Note that the ``Version`` policy element defines the version of the policy language. Learn more in Amazon's documentation at :new-page:`IAM JSON policy elements: Version <https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html>`.
+  
 .. _metricstreams_iampolicy:
 .. _aws-iam-policy-ms:
 
@@ -194,6 +196,8 @@ For example:
     }
   ]
   }
+
+Note that the ``Version`` policy element defines the version of the policy language. Learn more in Amazon's documentation at :new-page:`IAM JSON policy elements: Version <https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html>`.
 
 .. _aws-iam-policy-services:
 
@@ -384,6 +388,8 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
       }
     ]
   }
+
+Note that the ``Version`` policy element defines the version of the policy language. Learn more in Amazon's documentation at :new-page:`IAM JSON policy elements: Version <https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html>`.
 
 .. _aws-iam-policy-reports:
 
