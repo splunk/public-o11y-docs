@@ -32,7 +32,8 @@ The Helm chart works with default configurations of the main Kubernetes distribu
 * :new-page:`Vanilla (unmodified version) Kubernetes <https://endoflife.date/kubernetes>`
 * :new-page:`Amazon Elastic Kubernetes Service <https://endoflife.date/amazon-eks>`
 * :new-page:`Azure Kubernetes Service <https://endoflife.date/azure-kubernetes-service>`
-* :new-page:`Google Kubernetes Engine <https://endoflife.date/google-kubernetes-engine>`
+* :new-page:`Google Kubernetes Engine (GKE) <https://endoflife.date/google-kubernetes-engine>`
+  - GKE Autopilot mode clusters don't support Go autoinstrumentation with the upstream OpenTelemetry Kubernetes Operator because of the elevated permissions that are required.
 * :new-page:`Red Hat OpenShift <https://access.redhat.com/support/policy/updates/openshift#dates>`
 * Minikube. This distribution was made for local developers and is not meant to be used in production. 
    - Minikube was created to spin up various past versions of Kubernetes.
