@@ -14,6 +14,14 @@ Metric names and descriptions are generated dynamically from data provided by Mi
 
 Every metric can either be a counter or a gauge, depending on what dimension is being looked at. If the MTS contains the dimension ``aggregation_type: total`` or ``aggregation_type: count``, then it is sent as a counter. Otherwise, it is sent as a gauge. To learn more, see :ref:`metric-types` and :ref:`metric-time-series`. 
 
+Azure functions metrics
+=================================
+
+Splunk Observability Cloud supports Azure functions metrics. To distinguish them, the dimension ``is_Azure_Function`` is automatically added to them.
+
+Azure Monitor publishes Azure functions metrics under ``Microsoft.Web/sites``. For the full list of metrics, see Microsoft's :new-page:`Supported metrics for Microsoft.Web/sites <https://learn.microsoft.com/en-us/azure/azure-monitor/reference/supported-metrics/microsoft-web-sites-metrics>`.
+
+
 Organization metrics
 =================================
 
