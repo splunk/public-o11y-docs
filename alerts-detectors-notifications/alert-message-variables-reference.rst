@@ -293,13 +293,12 @@ The following is an example of a default message that you can customize:
 
 .. note::
 
-   Only the variables present in the detect condition are available in the alert body. For example, the variables in the following that are used to define ``TRIGGER_CONDITION``, such as ``metric_value``, are not available for use in the body of the alert.
+   Only the variables present in the detect condition are available in the alert body. For example, variable A in the following is not available in the alert body because it is only used in the ``TRIGGER_CONDITION`` and not in the detect condition.
 
    .. code-block::
 
-      TRIGGER_CONDITION = when(recent_min > trigger_threshold and metric_value > ALERTING_LATENCY)
+      A = data('metric').publish('A')
+      B = data('test').publish('B')
+      TRIGGER_CONDITION = when(A > 100)
 
-      detect(TRIGGER_CONDITION, when(recent_max < clear_threshold),
-      event_annotations=generic_event_annotations,
-      auto_resolve_after=RESOLVE_TIME) \
-      .publish('Alert notification')
+      detect(TRIGGER_CONDITION and when(B < 500)).publish('Alert notification')
