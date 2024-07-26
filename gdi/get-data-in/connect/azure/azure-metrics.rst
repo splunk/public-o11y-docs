@@ -24,9 +24,9 @@ Every metric can either be a counter or a gauge, depending on what dimension is 
 Azure functions metrics
 =================================
 
-Splunk Observability Cloud supports Azure functions metrics. To distinguish them, the dimension ``is_Azure_Function`` is automatically added to them.
+Splunk Observability Cloud supports Azure functions metrics. For more information about Azure Functions, refer to Microsoft's :new-page:`Azure Functions documentation <https://learn.microsoft.com/en-us/azure/azure-functions/>`.
 
-Azure Monitor publishes Azure functions metrics under ``Microsoft.Web/sites``. For the full list of metrics, see Microsoft's :new-page:`Supported metrics for Microsoft.Web/sites <https://learn.microsoft.com/en-us/azure/azure-monitor/reference/supported-metrics/microsoft-web-sites-metrics>`.
+Azure Monitor publishes Azure functions metrics under ``Microsoft.Web/sites``. To distinguish specific function metrics, Splunk Observability Cloud automatically adds the dimension ``is_Azure_Function`` to them. For the full list of metrics, see Microsoft's :new-page:`Supported metrics for Microsoft.Web/sites <https://learn.microsoft.com/en-us/azure/azure-monitor/reference/supported-metrics/microsoft-web-sites-metrics>`.
 
 Organization metrics
 =================================
