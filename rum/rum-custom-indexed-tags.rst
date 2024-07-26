@@ -16,7 +16,7 @@ Create custom tags to improve filtering and troubleshooting capabilities in Tag 
  ..
    "How can I add my own tags to Tag Spotlight?", "How can I filter on custom tags?" "How can I troubleshoot with custom tags?
 
-Example 
+Example: 
 ========================================================
 
 Custom span tags are especially useful for tracking workflows that are unique to your organization. For example, customer support, tier, department, or internal geo locations for facilities.  
@@ -48,8 +48,8 @@ Follow these steps to add custom tags to Tag Spotlight
 2. In Splunk RUM, select :strong:`RUM MetricSet`. 
 
 .. image:: /_images/rum/rum-metricset.png
-      :width: 90%
-      :alt: Diagram showing the back and forth flow of an IdP-initiated authentication request
+      :width: 20%
+      :alt: Settings panel for adding metric sets. 
 
 
 3. Select Add MetricSet. 
