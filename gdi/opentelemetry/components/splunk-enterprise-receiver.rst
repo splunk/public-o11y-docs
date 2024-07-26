@@ -7,7 +7,7 @@ Splunk Enterprise receiver
 .. meta::
       :description: The Splunk Enterprise receiver enables you to ingest performance metrics describing the operational status of your Splunk Enterprise deployment.
 
-The Splunk Enterprise receiver is a pull based tool which enables you to ingest performance metrics describing the operational status of your Splunk Enterprise deployment to an appropriate observability tool. The receiver uses several different data sources, including the introspection API endpoint, to gather these metrics and serializes results from ad-hoc searches. For more information, see the :new-page:`REST API Reference Manual https://docs.splunk.com/Documentation/Splunk/9.1.1/RESTREF/RESTintrospect` in Splunk docs.
+The Splunk Enterprise receiver is a pull based tool which enables you to ingest performance metrics describing the operational status of your Splunk Enterprise deployment to an appropriate observability tool. The receiver uses several different data sources, including the introspection API endpoint, to gather these metrics and serializes results from ad-hoc searches. For more information, see the :new-page:`REST API Reference Manual <https://docs.splunk.com/Documentation/Splunk/9.1.1/RESTREF/RESTintrospect>` in Splunk docs.
 
 The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
@@ -111,18 +111,6 @@ See the following configuration example for the Splunk Enterprise receiver:
       metrics:
         receivers: [splunkenterprise]
         exporters: [logging]
-
-Settings
-======================
-
-The following table shows the configuration options for the Splunk Enterprise receiver:
-
-
-NOT available
-
-.. raw:: html
-
-   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/splunkenterprise.yaml"></div>
 
 Metrics
 ======================
