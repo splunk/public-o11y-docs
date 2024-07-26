@@ -33,6 +33,7 @@
 * :ref:`signalfx-gateway-prometheus-remote-write-receiver`
 * :ref:`signalfx-receiver`
 * :ref:`smartagent-receiver`
+* :ref:`splunk-enterprise-receiver`
 * :ref:`splunk-hec-receiver`
 * :ref:`sqlquery-receiver` 
 * :ref:`sshcheck-receiver`

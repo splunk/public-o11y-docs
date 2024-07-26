@@ -47,6 +47,7 @@ Collector components: Receivers
     signalfx-gateway-prometheus-remote-write-receiver
     signalfx-receiver
     smartagent-receiver
+    splunk-enterprise-receiver
     splunk-hec-receiver
     sqlquery-receiver 
     sshcheck-receiver
