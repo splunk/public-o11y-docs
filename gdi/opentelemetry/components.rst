@@ -154,6 +154,9 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
    * - :ref:`smartagent-receiver` (``smartagent``)
      - Uses the existing Smart Agent monitors as Collector metric receivers. Learn more in :ref:`migration-monitors`.
      - Metrics
+   * - :ref:`splunk-enterprise-receiver` (``splunkenterprise``)
+     - Enables the ingestion of performance metrics describing the operational status of a user's Splunk Enterprise deployment.
+     - Metrics
    * - :ref:`splunk-hec-receiver` (``splunk_hec``)
      - Accepts telemetry in the Splunk HEC format.
      - Metrics, logs, traces
