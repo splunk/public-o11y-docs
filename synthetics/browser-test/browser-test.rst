@@ -1,7 +1,7 @@
 .. _browser-test:
 
 ****************************************
-Use a Browser test to test a webpage
+Browser tests for webpages
 ****************************************
 
 .. meta::
@@ -21,7 +21,7 @@ You can configure tests on a schedule so you're continually monitoring your site
 .. raw:: html
 
   <embed>
-    <h2>What happens during a Browser test?</h2>
+    <h2>What does a Browser test monitor?</h2>
   </embed>
 
 During a Browser test, Splunk Synthetic Monitoring continuously collects performance data including metrics, network data, and custom user timings. All requests and responses that occur in the test are captured in a HAR file, which is represented visually in a waterfall chart that illustrates the latency of specific resources on the page. See :ref:`waterfall-chart` to learn more about the waterfall chart, and see :ref:`browser-metrics` to learn about the metrics in a Browser test.

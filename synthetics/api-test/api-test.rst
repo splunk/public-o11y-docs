@@ -1,7 +1,7 @@
 .. _api-test:
 
 ************************************
-Use an API Test to test an endpoint
+API Tests for endpoint
 ************************************
 
 .. meta::
