@@ -1,22 +1,17 @@
 .. _splunk-enterprise-receiver:
 
 *******************************
-Apache Web Server receiver
+Splunk Enterprise receiver
 *******************************
 
 .. meta::
-      :description: The Splunk Enterprise receiver fetches stats from a Apache Web Server instance.
+      :description: The Splunk Enterprise receiver enables you to ingest performance metrics describing the operational status of your Splunk Enterprise deployment.
 
-The Apache Web Server receiver fetches stats from an Apache Web Server instance using the ``server-status?auto endpoint``. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
+The Splunk Enterprise receiver is a pull based tool which enables you to ingest performance metrics describing the operational status of your Splunk Enterprise deployment to an appropriate observability tool. The receiver uses several different data sources, including the introspection API endpoint, to gather these metrics and serializes results from ad-hoc searches. For more information, see the :new-page:`REST API Reference Manual https://docs.splunk.com/Documentation/Splunk/9.1.1/RESTREF/RESTintrospect` in Splunk docs.
 
-.. note:: Out-of-the-box dashboards and navigators aren't supported for the Apache Web Server receiver yet, but are planned for a future release.
+The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
-Prerequisites
-======================
-
-This receiver supports Apache Web Server version 2.4 or higher.
-
-In order to receive server statistics, you must configure the server's ``httpd.conf`` file to enable status support. Learn more at Apache's official documentation :new-page:`Module mod_status <https://httpd.apache.org/docs/2.4/mod/mod_status.html>`.
+.. caution:: This receiver targets those responsible for the maintenance and care of a Splunk Enterprise deployment, and aims to leverage OpenTelemetry and observability toolsets. Be careful when enabling the receiver, since running searches can effect your Splunk Enterprise Deployment and introspection might fail to report for Splunk Cloud deployments. 
 
 Get started
 ======================
@@ -29,20 +24,18 @@ Follow these steps to configure and activate the component:
    - :ref:`otel-install-windows`
    - :ref:`otel-install-k8s`
 
-2. Configure the receiver as described in the next section.
+2. Configure the Splunk Enterprise receiver as described in the next section.
 3. Restart the Collector.
 
 Sample configuration
 --------------------------------
 
-To activate the Apache Web Server receiver, add ``apache`` to the ``receivers`` section of your configuration file: 
+To activate the Splunk Enterprise receiver, add ``splunkenterprise`` to the ``receivers`` section of your configuration file: 
 
 .. code-block:: yaml
 
   receivers:
-    apache:
-      endpoint: "http://localhost:8080/server-status?auto"
-      collection_interval: 10s
+    splunkenterprise:
 
 To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your configuration file:
 
@@ -51,29 +44,78 @@ To complete the configuration, include the receiver in the ``metrics`` pipeline 
   service:
     pipelines:
       metrics:
-        receivers: [apache]
+        receivers: [splunkenterprise]
 
 Configuration options
 -----------------------
 
 The following settings are required:
 
-* ``endpoint``. ``"http://localhost:8080/server-status?auto"`` by default. The URL of the httpd status endpoint.
+* ``basicauth``. A configured stanza for the ``basicauthextension``. Learn more at :ref:`basic-auth-extension`.
+
+* ``auth``.  No default. String name referencing your auth extension.
+
+* ``endpoint``. No default. Your Splunk Enterprise host's endpoint.
 
 The following settings are optional:
 
-* ``collection_interval``. ``10s`` by default. Sets the interval this receiver collects metrics on. 
-  
-  * This value must be a string readable by Golang's ``time.ParseDuration``. Learn more at Go's official documentation :new-page:`ParseDuration function <https://pkg.go.dev/time#ParseDuration>`.
-  
-  * Valid time units are ``ns``, ``us`` (or ``µs``), ``ms``, ``s``, ``m``, ``h``.
+* ``collection_interval``. ``10m`` by default.  The time between scrape attempts.
 
-* ``initial_delay``. ``1s`` by default. Determines how long this receiver waits before collecting metrics for the first time.
+* ``timeout``. ``60s`` by default. The time the scrape function will wait for a response before returning an empty value.
+
+The following applies to the Splunk Enterprise receiver configuration:
+
+* Omitting any of the mandatory settings might cause your receiver to fail to compile or result in 4/5xx return codes during scraping.
+
+* Set these parameters for each Splunk instance type (indexer, search head, or cluster master) from which you wish to pull metrics from. 
+  
+  * Currently only one instance type is accepted per configured receiver instance. Therefore, if you have three different "indexer" type instances to pull metrics you need to configure three different ``splunkenterprise`` receivers, one for each indexer node.
+
+Configuration example
+--------------------------------
+
+See the following configuration example for the Splunk Enterprise receiver: 
+
+.. code-block:: yaml
+
+  extensions:
+    basicauth/indexer:
+        client_auth:
+            username: admin
+            password: securityFirst
+    basicauth/cluster_master:
+        client_auth:
+            username: admin
+            password: securityFirst
+
+  receivers:
+    splunkenterprise:
+        indexer:
+            auth: 
+              authenticator: basicauth/indexer
+            endpoint: "https://localhost:8089"
+            timeout: 45s
+        cluster_master:
+            auth: 
+              authenticator: basicauth/cluster_master
+            endpoint: "https://localhost:8089"
+            timeout: 45s
+
+  exporters:
+    logging:
+      loglevel: info
+
+  service:
+    extensions: [basicauth/indexer, basicauth/cluster_master]
+    pipelines:
+      metrics:
+        receivers: [splunkenterprise]
+        exporters: [logging]
 
 Settings
 ======================
 
-The following table shows the configuration options for the Apache Web Server receiver:
+The following table shows the configuration options for the Splunk Enterprise receiver:
 
 
 NOT available
