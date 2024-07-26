@@ -335,232 +335,7 @@ If your recording contains unsupported steps, you need to edit the step to refor
                      "wait_for_nav": false
                   }
 
-
-                  
-..
-   .. list-table::
-      :header-rows: 1
-      :widths: 50 50 
-      :class: fix-width
-
-      * - :strong:`Google Chrome Recorder snippet`
-      - :strong:`Synthetic snippet`
-
-      * - ``navigate``:
-
-            .. code-block:: javascript
-
-                  {
-                  "type": "navigate",
-                  "url": "www.buttercupgames.com",
-                  "assertedEvents": [
-                     {
-                        "type": "navigation",
-                        "url": "www.buttercupgames.com",
-                        "title": "Buttercup Games"
-                     }
-                  ]
-                  }
-
-      - ``go_to_url`` :
-      
-            .. code-block:: javascript
-
-                  {
-                  "name": "Go to URL",
-                  "type": "go_to_url",
-                  "url": "www.buttercupgames.com",
-                  "wait_for_nav": true
-                  }
-
-      * - ``click`` with resulting navigation:
-
-            .. code-block:: javascript
-
-                  {
-                  "type": "click",
-                  "target": "main",
-                  "selectors": [
-                     [
-                        "div:nth-of-type(2) > div:nth-of-type(2) a > div"
-                     ],
-                     [
-                        "xpath//html/body/main/div/div/div[2]/div[2]/div/a/div"
-                     ]
-                  ],
-                  "offsetY": 211,
-                  "offsetX": 164,
-                  "assertedEvents": [
-                     {
-                        "type": "navigation",
-                        "url": "www.buttercupgames.com/product/example",
-                        "title": "Buttercup Games"
-                     }
-                  ]
-
-      - ``click_element`` with resulting navigation:
-
-            .. code-block:: javascript
-
-                  {
-                     "name": "",
-                     "type": "click_element",
-                     "selector_type": "css",
-                     "selector": "div:nth-of-type(2) > div:nth-of-type(2) a > div",
-                     "wait_for_nav": true
-                  }
-
-      * - ``click`` without resulting navigation:
-
-            .. code-block:: javascript
-
-                  {
-                  "type": "click",
-                  "target": "main",
-                  "selectors": [
-                     [
-                        "div:nth-of-type(2) > div:nth-of-type(2) a > div"
-                     ],
-                     [
-                        "xpath//html/body/main/div/div/div[2]/div[2]/div/a/div"
-                     ]
-                  ],
-                  "offsetY": 211,
-                  "offsetX": 164,
-                  "assertedEvents": []
-                  }
-
-
-
-      - ``click_element`` without resulting navigation:
-
-            .. code-block:: javascript
-
-                  {
-                     "name": "",
-                     "type": "click_element",
-                     "selector_type": "css",
-                     "selector": "div:nth-of-type(2) > div:nth-of-type(2) a > div",
-                     "wait_for_nav": false
-                  }
-
-      * - ``change``:
-
-            .. code-block:: javascript
-
-                  {
-                     "type": "change",
-                     "value": "5",
-                     "selectors": [
-                        [
-                           "#quantity"
-                        ],
-                        [
-                           "xpath///*[@id=\"quantity\"]"
-                        ]
-                     ],
-                     "target": "main"
-                     }
-
-
-      - ``enter_value``:
-
-            .. code-block:: javascript
-
-               {
-                     "name": "",
-                     "type": "enter_value",
-                     "selector_type": "id",
-                     "selector": "quantity",
-                     "option_selector_type": "index",
-                     "option_selector": "5",
-                     "wait_for_nav": false
-                     }
-
-      * - ``waitForElement``:
-
-            .. code-block:: javascript
-
-               {
-                     "type": "waitForElement",
-                     "selectors": [
-                        [
-                           "body",
-                           "#homepage_example",
-                           ".css-4t2fjl",
-                           ".eanm77i0"
-                        ]
-                     ]
-                     }
-
-
-
-      - ``assert_element_present``:
-
-            .. code-block:: javascript
-
-               {
-                     "name": "",
-                     "type": "assert_element_present",
-                     "wait_for_nav": false,
-                     "selector_type": "css",
-                     "selector": "body,#homepage_example, .css-4t2fjl, .eanm77i0"
-                  }
-
-      * - ``waitForElement`` visible false:
-
-            .. code-block:: javascript
-
-               {
-                  "type": "waitForElement",
-                  "selectors": [
-                     [
-                        "body",
-                        "#homepage_product_brand-example",
-                        ".css-4t2fjl",
-                        ".eanm77i0"
-                     ]
-                  ],
-                  "visible": false
-               }
-
-
-      - ``assert_element_not_present``:
-
-            .. code-block:: javascript
-
-               {
-                     "name": "",
-                     "type": "assert_element_not_present",
-                     "wait_for_nav": false,
-                     "selector_type": "css",
-                     "selector": "body,#homepage_product_brand-example"
-                     }
-      * - ``customStep``:
-
-            .. code-block:: javascript
-
-               {
-                  "type": "customStep",
-                  "timeout": 5000,
-                  "target": "main",
-                  "name": "customParam",
-                  "parameters": {}
-               }
-
-
-      - ``run_javascript``:
-
-            .. code-block:: javascript
-
-               {
-                  "name": "Unsupported step customStep",
-                  "type": "run_javascript",
-                  "value": "",
-                  "wait_for_nav": false
-               }
-
-   
+               
 
 View your Browser test
 ====================================
@@ -679,6 +454,27 @@ The following image shows how to configure a test to go to a URL, wait for 10 se
 
 .. image:: /_images/synthetics/wait-times-example.png
    :alt: This image shows a browser test with three steps: go to url, wait 20 seconds, then log in. 
+
+
+
+Here are the limits for each type of wait time. After 30 minutes a run times out. 
+
+.. list-table::
+   :header-rows: 1
+   :widths: 50 50
+
+   * - :strong:`Description`
+     - :strong:`Limit`
+
+   * - Assert steps
+     - 90 seconds 
+
+   * - Wait for navigation    
+     - 20 seconds 
+   
+   * - Global timeout for all runs
+     - 30 minutes
+
 
 
 .. _collect-interactive-metrics:
