@@ -1,11 +1,14 @@
 .. _alert-message-variables-ref:
 
+*********************************
 Alert message variables reference
-************************************
+*********************************
 
 The following tables describe the variables and helper functions you can use when creating a custom message. Use triple braces where indicated so that the variable value is not escaped.
 
-.. Note:: :ref:`Different additional variables may be available<condition-variables>` depending on the alert condition you specify. If you change the alert condition after customizing the message, an icon on the Message preview tab appears.
+.. note:: 
+
+   If you change the alert condition after customizing the message, an icon on the Message preview tab appears.
 
    .. image:: /_images/images-detectors-alerts/message-tab-icon.png
       :width: 20%
@@ -13,10 +16,122 @@ The following tables describe the variables and helper functions you can use whe
 
    This is to remind you to review the message, since some variables you used might no longer apply to the new condition you selected. The icon is removed when you navigate away from the Message preview tab.
 
-|br|
+.. _condition-variables:
+
+Built-in alert rules
+====================
+
+The following tables describe the additional variables you can use when creating a custom message for the given built-in alert rule. You can't use variables other than the ones that are listed.
+
+Resource running out
+---------------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40 60
+
+   *  - :strong:`Variable`
+      - :strong:`Description`
 
 
-:strong:`Detector and rule details`
+   *  - {{inputs.hours_left.value}}
+      - Number of hours remaining before reaching empty or capacity
+
+   *  - {{event_annotations.fire_forecast_ahead}}
+      - Threshold for triggering alert, in hours
+
+   *  - {{event_annotations.clear_forecast_ahead}}
+      - Threshold for clearing alert, in hours
+
+Outlier detection
+-----------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40 60
+
+   *  - :strong:`Variable`
+      - :strong:`Description`
+
+   *  - {{inputs.promoted_population_stream.value}}
+      - Signal being monitored
+
+   *  - {{inputs.fire_bot.value}}
+      - Threshold for triggering alert when value is lower than the threshold
+
+   *  - {{inputs.clear_bot.value}}
+      - Threshold for clearing alert
+
+   *  - {{inputs.fire_top.value}}
+      - Threshold for triggering alert when value is higher than the threshold
+
+   *  - {{inputs.clear_top.value}}
+      - Threshold for clearing alert
+
+Sudden change
+-------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40 60
+
+   *  - :strong:`Variable`
+      - :strong:`Description`
+
+   *  - {{event_annotations.current_window}}
+      - Window being tested for anomalous values
+
+   *  - {{inputs.recent_min.value}}
+      - Minimum value during current window
+
+   *  - {{inputs.recent_max.value}}
+      - Maximum value during current window
+
+   *  - {{inputs.f_bot.value}}
+      - Threshold for triggering alert when value is lower than the threshold
+
+   *  - {{inputs.c_bot.value}}
+      - Threshold for clearing alert
+
+   *  - {{inputs.f_top.value}}
+      - Threshold for triggering alert when value is higher than the threshold
+
+   *  - {{inputs.c_top.value}}
+      - Threshold for clearing alert
+
+Historical anomaly
+------------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40 60
+
+   *  - :strong:`Variable`
+      - :strong:`Corresponds to`
+
+   *  - {{event_annotations.current_window}}
+      - Window being tested for anomalous values
+
+   *  - {{inputs.summary.value}}
+      - Mean value during current window
+
+   *  - {{inputs.fire_bot.value}}
+      - Threshold for triggering alert when value is lower than the threshold
+
+   *  - {{inputs.clear_bot.value}}
+      - Threshold for clearing alert
+
+   *  - {{inputs.fire_top.value}}
+      - Threshold for triggering alert when value is higher than the threshold
+
+   *  - {{inputs.clear_top.value}}
+      - Threshold for clearing alert
+
+Additional variables
+====================
+
+Detector and rule details
+-------------------------
 
 .. list-table::
    :header-rows: 1
@@ -49,11 +164,8 @@ The following tables describe the variables and helper functions you can use whe
    * - {{detectorUrl}}
      - The URL of this detector
 
-
-|br|
-
-
-:strong:`Alert details`
+Alert details
+-------------
 
 .. list-table::
    :header-rows: 1
@@ -88,13 +200,8 @@ The following tables describe the variables and helper functions you can use whe
    * - {{incidentId}}
      - The ID of this incident. The incidentID is the same for both the trigger and the clear alerts.
 
-
-|br|
-
-
-
-
-:strong:`Signal details`
+Signal details
+--------------
 
 .. list-table::
    :header-rows: 1
@@ -122,11 +229,8 @@ The following tables describe the variables and helper functions you can use whe
    * - {{dimensions.[dimension.name.3...]}}
      - The value of other dimensions for the signal being monitored. When dimension names contain dots (.), you must enclose them in square brackets ([]) for the variable to work.
 
-
-|br|
-
-
-:strong:`ORGANIZATION DETAILS`
+Organization details
+--------------------
 
 .. list-table::
    :header-rows: 1
@@ -138,12 +242,8 @@ The following tables describe the variables and helper functions you can use whe
    * - {{organizationId}}
      - The organization ID. You can use this to programmatically reference this organization.
 
-
-|br|
-
-
-
-:strong:`Helper functions`
+Helper functions
+================
 
 .. list-table::
    :header-rows: 1
@@ -160,9 +260,10 @@ The following tables describe the variables and helper functions you can use whe
      - If there are dimensions associated with the signal, e.g.
          {{#notEmpty dimensions}} Signal details: {{{dimensions}}} {{/notEmpty}}
 
+Example message
+===============
 
-
-Here is an example of a default message that you can customize:
+The following is an example of a default message that you can customize:
 
 .. code-block:: none
 
@@ -190,121 +291,15 @@ Here is an example of a default message that you can customize:
    {{#if tip}}Tip: {{{tip}}}{{/if}}
    {{/if}}
 
+.. note::
 
+   Only the variables present in the detect condition are available in the alert body. For example, the variables in the following that are used to define ``TRIGGER_CONDITION``, such as ``metric_value``, are not available for use in the body of the alert.
 
-.. _condition-variables:
+   .. code-block::
 
+      TRIGGER_CONDITION = when(recent_min > trigger_threshold and metric_value > ALERTING_LATENCY)
 
-The following tables describe the additional variables you can use when creating a custom message for specific alert conditions. 
-
-
-
-:strong:`Resource running out`
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40 60
-
-   *  - :strong:`Variable`
-      - :strong:`Description`
-
-
-   *  - {{inputs.hours_left.value}}
-      - Number of hours remaining before reaching empty or capacity
-
-   *  - {{event_annotations.fire_forecast_ahead}}
-      - Threshold for triggering alert, in hours
-
-   *  - {{event_annotations.clear_forecast_ahead}}
-      - Threshold for clearing alert, in hours
-
-
-
-
-
-:strong:`Outlier detection`
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40 60
-
-   *  - :strong:`Variable`
-      - :strong:`Description`
-
-   *  - {{inputs.promoted_population_stream.value}}
-      - Signal being monitored
-
-   *  - {{inputs.fire_bot.value}}
-      - Threshold for triggering alert when value is lower than the threshold
-
-   *  - {{inputs.clear_bot.value}}
-      - Threshold for clearing alert
-
-   *  - {{inputs.fire_top.value}}
-      - Threshold for triggering alert when value is higher than the threshold
-
-   *  - {{inputs.clear_top.value}}
-      - Threshold for clearing alert
-
-
-
-
-:strong:`Sudden change`
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40 60
-
-   *  - :strong:`Variable`
-      - :strong:`Description`
-
-   *  - {{event_annotations.current_window}}
-      - Window being tested for anomalous values
-
-   *  - {{inputs.recent_min.value}}
-      - Minimum value during current window
-
-   *  - {{inputs.recent_max.value}}
-      - Maximum value during current window
-
-   *  - {{inputs.f_bot.value}}
-      - Threshold for triggering alert when value is lower than the threshold
-
-   *  - {{inputs.c_bot.value}}
-      - Threshold for clearing alert
-
-   *  - {{inputs.f_top.value}}
-      - Threshold for triggering alert when value is higher than the threshold
-
-   *  - {{inputs.c_top.value}}
-      - Threshold for clearing alert
-
-
-
-
-:strong:`Historical anomaly`
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40 60
-
-   *  - :strong:`Variable`
-      - :strong:`Corresponds to`
-
-   *  - {{event_annotations.current_window}}
-      - Window being tested for anomalous values
-
-   *  - {{inputs.summary.value}}
-      - Mean value during current window
-
-   *  - {{inputs.fire_bot.value}}
-      - Threshold for triggering alert when value is lower than the threshold
-
-   *  - {{inputs.clear_bot.value}}
-      - Threshold for clearing alert
-
-   *  - {{inputs.fire_top.value}}
-      - Threshold for triggering alert when value is higher than the threshold
-
-   *  - {{inputs.clear_top.value}}
-      - Threshold for clearing alert
+      detect(TRIGGER_CONDITION, when(recent_max < clear_threshold),
+      event_annotations=generic_event_annotations,
+      auto_resolve_after=RESOLVE_TIME) \
+      .publish('Alert notification')
