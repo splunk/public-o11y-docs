@@ -6,6 +6,16 @@ Alert message variables reference
 
 The following tables describe the variables and helper functions you can use when creating a custom message. Use triple braces where indicated so that the variable value is not escaped.
 
+Only the variables present in the detect condition are available in the alert body. For example, variable A in the following is not available in the alert body because it is only used in the ``TRIGGER_CONDITION`` and not in the detect condition.
+
+.. code-block::
+
+   A = data('metric').publish('A')
+   B = data('test').publish('B')
+   TRIGGER_CONDITION = when(A > 100)
+
+   detect(TRIGGER_CONDITION and when(B < 500)).publish('Alert notification')
+
 .. note:: 
 
    If you change the alert condition after customizing the message, an icon on the Message preview tab appears.
@@ -290,15 +300,3 @@ The following is an example of a default message that you can customize:
    {{#if runbookUrl}}Runbook: {{{runbookUrl}}}{{/if}}
    {{#if tip}}Tip: {{{tip}}}{{/if}}
    {{/if}}
-
-.. note::
-
-   Only the variables present in the detect condition are available in the alert body. For example, variable A in the following is not available in the alert body because it is only used in the ``TRIGGER_CONDITION`` and not in the detect condition.
-
-   .. code-block::
-
-      A = data('metric').publish('A')
-      B = data('test').publish('B')
-      TRIGGER_CONDITION = when(A > 100)
-
-      detect(TRIGGER_CONDITION and when(B < 500)).publish('Alert notification')
