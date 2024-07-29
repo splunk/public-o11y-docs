@@ -35,7 +35,6 @@ From the :guilabel:`Detectors & SLOs` page, Kai configures the SLI and sets up a
           
           * ``test = Emby check``
           * ``success = true``
-
         - Kai uses the ``success = true`` filter to count the number of successful requests for the Emby service on the Buttercup Games website
 
       * - :guilabel:`Denominator metric`
@@ -43,7 +42,6 @@ From the :guilabel:`Detectors & SLOs` page, Kai configures the SLI and sets up a
         - Kai adds the following filters for this metric:
 
           * ``test = Emby check``
-
         - Kai uses the same metric name and ``test`` filter to track the same Synthetics Browser test. However, Kai doesn't include the ``success`` dimension filter in order to count the number of total requests for the Emby service on the Buttercup Games website
 
 #. Kai enters the following fields to define a target for their SLO:
