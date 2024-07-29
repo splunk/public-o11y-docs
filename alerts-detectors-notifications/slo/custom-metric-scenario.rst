@@ -22,7 +22,7 @@ From the :guilabel:`Detectors & SLOs` page, Kai configures the SLI and sets up a
 
     .. list-table::
         :header-rows: 1
-        :widths: 20 20 30 30
+        :widths: 10 20 30 40
 
         * - Field
           - Metric name
@@ -48,7 +48,7 @@ From the :guilabel:`Detectors & SLOs` page, Kai configures the SLI and sets up a
 
     .. list-table::
         :header-rows: 1
-        :widths: 33 33 33
+        :widths: 32 30 50
 
         * - Field
           - Value 
