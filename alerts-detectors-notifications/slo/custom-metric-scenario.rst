@@ -12,7 +12,7 @@ Kai, a site reliability engineer at Buttercup Games, has created a Synthetics Br
 
 To measure and track the health metrics of the Emby service, Kai configures a custom metric SLO based on the Synthetics Browser test.
 
-Use request rate as a service level indicator (SLI)
+Use custom metric as service level indicator (SLI)
 ======================================================
 
 From the :guilabel:`Detectors & SLOs` page, Kai configures the SLI and sets up a target for their SLO. Kai follows these steps: 
