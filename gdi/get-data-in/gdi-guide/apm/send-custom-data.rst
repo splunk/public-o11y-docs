@@ -20,18 +20,16 @@ Splunk has client libraries for several types of applications. By instrumenting 
 
 Use the library for your application language:
 
-- :new-page:`Go client library for SignalFx <https://github.com/signalfx/signalfx-go>` on GitHub
+- :new-page:`Go client library for SignalFx <https://github.com/signalfx/signalflow-client-go>` on GitHub
 
 - For Java, use one of these available integrations:
 
       - :ref:`Splunk Distribution of OpenTelemetry Java <get-started-java>`
-      - :new-page:`Java client libraries for SignalFx <https://github.com/signalfx/signalfx-java>` on GitHub
+      - :new-page:`Java client libraries for SignalFx <https://github.com/signalfx/signalflow-client-java>` on GitHub
 
-- :new-page:`Node.js client library for SignalFx <https://github.com/signalfx/signalfx-nodejs>` on GitHub
+- :new-page:`Node.js client library for SignalFx <https://github.com/signalfx/signalflow-client-js>` on GitHub
 
-- :new-page:`Python client library for SignalFx <https://github.com/signalfx/signalfx-python>` on GitHub
-
-- :new-page:`Ruby client library for SignalFx <https://github.com/signalfx/signalfx-ruby>` on GitHub
+- :new-page:`Python client library for SignalFx <https://github.com/signalfx/signalflow-client-python>` on GitHub
 
 Configure serverless functions to send custom data
 =======================================================================
