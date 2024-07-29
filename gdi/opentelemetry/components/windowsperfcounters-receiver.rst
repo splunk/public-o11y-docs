@@ -109,6 +109,7 @@ Metrics can be of type ``sum`` or ``gauge``. Sum metrics support the ``aggregati
 .. list-table::
    :header-rows: 1
    :width: 100%
+   :widths: 20 40 20 20   
 
    - 
 
@@ -154,25 +155,24 @@ The following settings apply to sum metrics:
 
 .. list-table::
    :header-rows: 1
+   :width: 100%
+   :widths: 25 50 25
 
    - 
 
       - Field
       - Description
       - Value
-      - Default
    - 
 
       - ``aggregation``
       - Type of aggregation temporality for the metric
       - ``cumulative`` or ``delta``
-      - 
    - 
 
       - ``monotonic``
       - Whether the metric value can decrease
       - ``false``
-      - 
 
 Gauge metrics
 ----------------------
