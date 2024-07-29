@@ -20,52 +20,51 @@ From the :guilabel:`Detectors & SLOs` page, Kai configures the SLI and sets up a
 #. Kai wants to use custom metrics as the system health indicators, so they select the :guilabel:`Custom metric` from the :guilabel:`Metric type` dropdown menu.
 #. Kai enters the custom metrics they want to measure in the following fields:
 
-.. list-table::
-    :header-rows: 1
-    :widths: 33 33 33
+  .. list-table::
+      :header-rows: 1
+      :widths: 33 33 33
 
-    * - Field
-      - Metric name
-      - Filters
-      - Description 
+      * - Field
+        - Metric name
+        - Filters
+        - Description 
 
-    * - :guilabel:`Numerator metric`
-      - ``synthetics.run.count``
-      - Kai adds the following filters for this metric:
-        
-        * ``test = Emby check``
-        * ``success = true``
+      * - :guilabel:`Numerator metric`
+        - ``synthetics.run.count``
+        - Kai adds the following filters for this metric:
+          
+          * ``test = Emby check``
+          * ``success = true``
 
-      - Kai uses the ``success = true`` filter to count the number of successful requests for the Emby service on the Buttercup Games website
+        - Kai uses the ``success = true`` filter to count the number of successful requests for the Emby service on the Buttercup Games website
 
-    * - :guilabel:`Denominator metric`
-      - ``synthetics.run.count``
-      - Kai adds the following filters for this metric:
+      * - :guilabel:`Denominator metric`
+        - ``synthetics.run.count``
+        - Kai adds the following filters for this metric:
 
-        * ``test = Emby check``
+          * ``test = Emby check``
 
-      - Kai uses the same metric name and ``test`` filter to track the same Synthetics Browser test. However, Kai doesn't include the ``success`` dimension filter in order to count the number of total requests for the Emby service on the Buttercup Games website
+        - Kai uses the same metric name and ``test`` filter to track the same Synthetics Browser test. However, Kai doesn't include the ``success`` dimension filter in order to count the number of total requests for the Emby service on the Buttercup Games website
 
 #. Kai enters the following fields to define a target for their SLO:
 
-.. list-table::
-    :header-rows: 1
-    :widths: 33 33 33
+  .. list-table::
+      :header-rows: 1
+      :widths: 33 33 33
 
-    * - Field
-      - Value 
-      - Description 
+      * - Field
+        - Value 
+        - Description 
 
-    * - :guilabel:`Target (%)`
-      - :guilabel:`99.9`
-      - Kai wants to measure the Emby service successful request rate against a 99.9% target
+      * - :guilabel:`Target (%)`
+        - :guilabel:`99.9`
+        - Kai wants to measure the Emby service successful request rate against a 99.9% target
 
-    * - :guilabel:`Compliance window`
-      - :guilabel:`Last 30 days`
-      - Kai wants to track this SLO over the past 30 days
+      * - :guilabel:`Compliance window`
+        - :guilabel:`Last 30 days`
+        - Kai wants to track this SLO over the past 30 days
 
 #. Kai subscribes to receive an alert whenever there is a breach event for the SLO target.
-
 
 .. image:: /_images/images-slo/custom-metric-slo-scenario.png
     :width: 100%
