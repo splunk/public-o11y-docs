@@ -7,12 +7,12 @@ Configure applications with Prometheus metrics
 .. meta::
       :description: Use the Prometheus receiver to retrieve metrics in Prometheus format from any compatible service. 
 
-The Prometheus receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from any source exposing telemetry in Prometheus format. See more at :ref:`prometheus-receiver`.
+The Prometheus receiver allows the Splunk Distribution of the OpenTelemetry Collector to collect metrics from any source exposing telemetry in Prometheus format. See more at :ref:`prometheus-receiver`.
 
 Benefits
 ========================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the Prometheus receiver in the ``metrics/internal`` pipeline when deployed in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information.
+By default, the Splunk Distribution of the OpenTelemetry Collector includes the Prometheus receiver in the ``metrics/internal`` pipeline when deployed in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information.
 
 This receiver and pipeline enable the collection of the Collector's internal metrics, such as data loss, ingress, egress, that power the built-in Collector dashboard. 
 
