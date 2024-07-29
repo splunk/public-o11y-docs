@@ -5,13 +5,13 @@ Windows Performance Counters receiver
 **************************************
 
 .. meta::
-      :description: The Windows Performance Counters receiver allows the Splunk Distribution of OpenTelemetry Collector to collect system, application, or custom performance counter data from the Windows Registry.
+      :description: The Windows Performance Counters receiver allows the Splunk Distribution of the OpenTelemetry Collector to collect system, application, or custom performance counter data from the Windows Registry.
 
-The Windows Performance Counters receiver allows the Splunk Distribution of OpenTelemetry Collector to collect configured system, application, or custom performance counter data from the Windows Registry. The supported pipeline types are ``metrics``. See :ref:`otel-data-processing` for more information.
+The Windows Performance Counters receiver allows the Splunk Distribution of the OpenTelemetry Collector to collect configured system, application, or custom performance counter data from the Windows Registry. The supported pipeline types are ``metrics``. See :ref:`otel-data-processing` for more information.
 
 Configured metrics consist of a metric description, including unit and type, used by one or more performance counters scraped by the receiver. If a specific performance counter can't be accessed at startup, the receiver emits a warning and continues execution.
 
-The Windows Performance Counters receiver replaces the SmartAgent monitor type of the same name. See :ref:`telegraf-win-perf-counters` for information on the monitor type.
+The Windows Performance Counters receiver replaces the SmartAgent monitor type :ref:`telegraf-win-perf-counters`.
 
 .. note:: The Windows Performance Counters receiver only works on Windows hosts.
 
@@ -20,7 +20,7 @@ Get started
 
 Follow these steps to configure and activate the component:
 
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+1. Deploy the Splunk Distribution of the OpenTelemetry Collector to your host or container platform:
 
    - :ref:`otel-install-linux`
    - :ref:`otel-install-windows`
@@ -71,7 +71,6 @@ To activate the Windows Performance Counters receiver add a ``windowsperfcounter
 
 .. code-block:: yaml
 
-
    receivers:
      windowsperfcounters:
        metrics:
@@ -87,7 +86,7 @@ To activate the Windows Performance Counters receiver add a ``windowsperfcounter
              metric: bytes.committed
 
 To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your
-configuration file. For example:
+configuration file:
 
 .. code-block:: yaml
 
@@ -100,13 +99,12 @@ configuration file. For example:
 
 To collect metrics from Windows performance counters, you need to define metrics using the ``metrics`` field as in the example. You can then reference the metrics you defined from the ``counters.metric`` fields.
 
-Metric format
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Format metrics
+======================
 
 To report metrics in a specific format, define the metric and reference it in the corresponding counter, along with any applicable attributes. By default, the metric name corresponds to the name of the counter.
 
 Metrics can be of type ``sum`` or ``gauge``. Sum metrics support the ``aggregation`` and ``monotonic`` fields.
-
 
 .. list-table::
    :header-rows: 1
@@ -149,6 +147,9 @@ Metrics can be of type ``sum`` or ``gauge``. Sum metrics support the ``aggregati
       - Gauge configuration
       - 
 
+Sum metrics
+----------------------
+
 The following settings apply to sum metrics:
 
 .. list-table::
@@ -173,7 +174,8 @@ The following settings apply to sum metrics:
       - ``false``
       - 
 
-The following settings apply to gauge metrics:
+Gauge metrics
+----------------------
 
 The ``gauge`` configuration doesn't accept settings. The following example emits the ``Memory/Committed Bytes`` counter as the ``bytes.committed`` metric:
 
@@ -198,9 +200,11 @@ The ``gauge`` configuration doesn't accept settings. The following example emits
        metrics:
          receivers: [windowsperfcounters]
 
+Advanced configurations
+============================================
 
 Configure collection interval and counters
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------------------------------------
 
 You can configure the collection interval and which performance counters you want to scrape. For example:
 
@@ -282,7 +286,7 @@ The following example shows how to scrape performance counters using different c
        metrics:
          receivers: [windowsperfcounters/memory, windowsperfcounters/processor]
 
-Instances configuration
+Configure instances
 ---------------------------------
 
 An instance is any entity that produces performance data. Instances can have 1 or more counter values.
@@ -309,7 +313,7 @@ The receiver supports the following values through the ``instances`` field:
 
 .. _total-instance-behavior:
 
-_Total instance behavior and the aggregation counter
+Total instance behavior and the aggregation counter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To avoid dropping the ``_Total`` instance, you must configure the receiver to collect it individually on its own metric.
