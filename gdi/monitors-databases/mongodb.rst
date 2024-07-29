@@ -11,7 +11,7 @@ MongoDB (deprecated)
    To monitor your MongoDB databases, you can instead use the native OpenTelemetry MongoDB receiver. To learn more, see :ref:`mongodb-receiver`.
 
 The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
+:ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>`
 uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
 MongoDB monitor type to capture the following metrics about MongoDB:
 
@@ -199,21 +199,6 @@ monitor:
          default value is ``false``.
 
 .. note:: When using TLS authentication, SCRAM-SHA-256 is not supported. Use SCRAM-SHA-1 authentication.
-
-Metrics
--------
-
-The following metrics are available for this integration:
-
-.. raw:: html
- 
-      <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/collectd/mongodb/metadata.yaml"></div>
-
-
-Notes
-~~~~~
-
-.. include:: /_includes/metric-defs.rst
 
 Troubleshooting
 ---------------
