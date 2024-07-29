@@ -29,7 +29,7 @@ From the :guilabel:`Detectors & SLOs` page, Kai configures the SLI and sets up a
         - Filters
         - Description 
 
-      * - :guilabel:`Numerator metric`
+      * - :guilabel:`Good events (numerator)`
         - ``synthetics.run.count``
         - Kai adds the following filters for this metric:
           
@@ -37,7 +37,7 @@ From the :guilabel:`Detectors & SLOs` page, Kai configures the SLI and sets up a
             * ``success = true``
         - Kai uses the ``success = true`` filter to count the number of successful requests for the Emby service on the Buttercup Games website
 
-      * - :guilabel:`Denominator metric`
+      * - :guilabel:`Total events (denominator)`
         - ``synthetics.run.count``
         - Kai adds the following filters for this metric:
 
