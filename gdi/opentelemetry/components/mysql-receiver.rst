@@ -5,7 +5,7 @@ MySQL receiver
 ****************************
 
 .. meta::
-      :description: The MySQL receiver allows the Splunk Distribution of OpenTelemetry Collector to query and retrieve metrics about MySQL's global status and InnoDB tables.
+      :description: The MySQL receiver allows the Splunk Distribution of the OpenTelemetry Collector to query and retrieve metrics about MySQL's global status and InnoDB tables.
 
 The MySQL receiver queries and retrieves metrics about MySQL's global status and InnoDB tables. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
