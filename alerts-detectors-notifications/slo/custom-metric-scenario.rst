@@ -22,7 +22,7 @@ From the :guilabel:`Detectors & SLOs` page, Kai configures the SLI and sets up a
 
   .. list-table::
       :header-rows: 1
-      :widths: 33 33 33
+      :widths: 20 20 30 30
 
       * - Field
         - Metric name
