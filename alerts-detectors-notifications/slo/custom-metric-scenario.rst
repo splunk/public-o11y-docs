@@ -25,16 +25,26 @@ From the :guilabel:`Detectors & SLOs` page, Kai configures the SLI and sets up a
     :widths: 33 33 33
 
     * - Field
-      - Metric 
+      - Metric name
+      - Filters
       - Description 
 
     * - :guilabel:`Numerator metric`
-      - :guilabel:`G = data('synthetics.run.count', filter=filter('test', 'Monitoring Services - Emby check') and filter('success', 'true'))`
-      - This metric counts the number of successful requests for the Emby service on the Buttercup Games website
+      - ``synthetics.run.count``
+      - Kai adds the following filters for this metric:
+        
+        * ``test = Emby check``
+        * ``success = true``
+
+      - Kai uses the ``success = true`` filter to count the number of successful requests for the Emby service on the Buttercup Games website
 
     * - :guilabel:`Denominator metric`
-      - :guilabel:`T = data('synthetics.run.count', filter=filter('test', 'Monitoring Services - Emby check'))` 
-      - This metric counts the number of total requests for the Emby service on the Buttercup Games website
+      - ``synthetics.run.count``
+      - Kai adds the following filters for this metric:
+
+        * ``test = Emby check``
+
+      - Kai uses the same metric name and ``test`` filter to track the same Synthetics Browser test. However, Kai doesn't include the ``success`` dimension filter in order to count the number of total requests for the Emby service on the Buttercup Games website
 
 #. Kai enters the following fields to define a target for their SLO:
 
@@ -55,6 +65,12 @@ From the :guilabel:`Detectors & SLOs` page, Kai configures the SLI and sets up a
       - Kai wants to track this SLO over the past 30 days
 
 #. Kai subscribes to receive an alert whenever there is a breach event for the SLO target.
+
+
+.. image:: /_images/images-slo/custom-metric-slo-scenario.png
+    :width: 100%
+    :alt: This image shows Kai's SLO configuration using the ``synthetics.run.count`` metric and appropriate filters.
+
 
 Summary
 =======================
