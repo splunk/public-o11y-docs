@@ -7,7 +7,7 @@ Simple Prometheus receiver
 .. meta::
       :description: The Simple Prometheus receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from a single source compatible with the Prometheus format.
 
-The Simple Prometheus is a wrapper around the Prometheus receiver that allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from a single source of telemetry in Prometheus format. The supported pipeline type is ``metrics``.
+The Simple Prometheus is a wrapper around the Prometheus receiver that allows the Splunk Distribution of the OpenTelemetry Collector to collect metrics from a single source of telemetry in Prometheus format. The supported pipeline type is ``metrics``.
 
 To scrape Prometheus metrics from multiple targets that require extensive configuration, use the Prometheus receiver. See :ref:`prometheus-receiver` for more information.
 
@@ -21,7 +21,7 @@ Get started
 
 Follow these steps to configure and activate the component:
 
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+1. Deploy the Splunk Distribution of the OpenTelemetry Collector to your host or container platform:
    
    - :ref:`otel-install-linux`
    - :ref:`otel-install-windows`
