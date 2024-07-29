@@ -8,7 +8,7 @@ Scenario: Kai configures a service level objective (SLO) based on a Synthetics c
 .. meta::
     :description: This Splunk service level objective (SLO) scenario describes how to configure an SLO based on a Synthetics check
 
-Kai, a site reliability engineer at Buttercup Games, has created a Synthetics Browser test for the Emby service on the Buttercup Games website. Kai didn't instrument the Emby service but want to monitor the health of this service.
+Kai, a site reliability engineer at Buttercup Games, has created a Synthetics Browser test for the Emby service on the Buttercup Games website. Kai didn't instrument the Emby service but wants to monitor the health of this service.
 
 To measure and track the health metrics of the Emby service, Kai configures a custom metric SLO based on the Synthetics Browser test.
 
