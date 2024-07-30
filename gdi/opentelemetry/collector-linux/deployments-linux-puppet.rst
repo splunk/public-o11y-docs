@@ -1,4 +1,5 @@
 .. _deployment-linux-puppet:
+.. _linux-puppet:
 
 ********************************************************
 Deploy the Collector with Puppet for Linux 

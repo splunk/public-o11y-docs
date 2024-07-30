@@ -1,4 +1,5 @@
 .. _deployment-linux-ansible:
+.. _linux-ansible:
 
 ********************************************************
 Deploy the Collector with Ansible for Linux

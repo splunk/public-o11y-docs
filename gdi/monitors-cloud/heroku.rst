@@ -4,35 +4,28 @@ Heroku
 ======
 
 .. meta::
-   :description: Use this Splunk Observability Cloud integration for the Heroku monitor. See benefits, install, configuration, and metrics
+   :description: Use this Splunk Observability Cloud integration for the Heroku monitor. See benefits, install, configuration, and metrics.
 
-The Splunk OpenTelemetry Connector for Heroku is a buildpack for the
-Splunk Distribution of OpenTelemetry Collector. The buildpack installs
-and runs the Splunk OpenTelemetry Connector on a Dyno to receive,
-process and export metric and trace data for Splunk Observability Cloud:
+The Splunk OpenTelemetry Connector for Heroku is a buildpack for the Splunk Distribution of the OpenTelemetry Collector. The buildpack installs
+and runs the Splunk OpenTelemetry Connector on a Dyno to receive, process and export metric and trace data for Splunk Observability Cloud:
 
--  Splunk APM through the ``sapm`` exporter. The ``otlphttp`` exporter
-   can be used with a custom configuration.
+-  Splunk APM through the ``sapm`` exporter. The ``otlphttp`` exporter can be used with a custom configuration.
 -  Splunk Infrastructure Monitoring through the ``signalfx`` exporter.
 
-To learn more about the Splunk Distribution of OpenTelemetry Collector,
-see :ref:`otel-intro`
-
-Installation
-------------
+To learn more about the Splunk Distribution of the OpenTelemetry Collector, see :ref:`otel-intro`.
 
 Prerequisites
-~~~~~~~~~~~~~
+----------------
 
 Before you can install the Heroku buildpack to collect metrics, you need
 to have a Heroku app. To learn how to install the Heroku CLI and create
 an app, see the Heroku documentation for developers.
 
 Installation steps
-~~~~~~~~~~~~~~~~~~
+------------------------
 
 Follow these steps to collect metrics with the Heroku buildpack for the
-Splunk Distribution of OpenTelemetry Collector:
+Splunk Distribution of the OpenTelemetry Collector:
 
 1. In the command-line interface, navigate to the Heroku project
    directory.
