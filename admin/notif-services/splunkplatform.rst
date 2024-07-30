@@ -52,6 +52,8 @@ Step 1: Create a Splunk platform integration in Splunk Observability Cloud
 
       * - HEC token
         - Enter the HTTP Event Collector token that allows access to your Splunk platform instance. To learn more, see :new-page:`Set up and use HTTP Event Collector in Splunk Web <https://docs.splunk.com/Documentation/SplunkCloud/9.2.2403/Data/UsetheHTTPEventCollector>`
+          
+   .. note:: Splunk Observability Cloud doesn't support HEC indexer acknowledgement. If you want to use the Splunk platform integration, don't enable HEC indexer acknowledgement in your Splunk Enterprise instance.
 
 #. Select :guilabel:`Next`.
 #. On the :strong:`Customize message` page, you see the default template for a Splunk platform integration. You can customize your payload to make sure responders have the context needed to resolve the issues. To learn more, see :ref:`splunk-platform-variables`.
