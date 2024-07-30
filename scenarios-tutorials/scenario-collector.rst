@@ -7,11 +7,11 @@ Scenario: Kai monitors infrastructure and apps in a cloud environment using the 
 .. meta:: 
    :description: Learn how you can use the Splunk OTel Collector to get data in from your cloud infrastructure and services.
 
-Kai is the lead site reliability engineer in a large fintech company, PonyBank. Their task is to monitor their AWS infrastructure, which consists of several hundred containers running Java applications on Amazon Elastic Kubernetes Service (EKS). Kai also wants to instrument tens of Linux and Windows Elastic Compute Cloud (EC2) instances managed by IT. Kai's primary goal is to extract reliability and performance metrics and logs from each asset, as well as instrumenting the Java application to monitor its performance using Splunk APM.
+Kai is the lead site reliability engineer in a large fintech company, PonyBank. Their task is to monitor their AWS infrastructure, which consists of several hundred containers running Java applications on Amazon Elastic Kubernetes Service (EKS). Kai also wants to instrument tens of Linux and Windows Elastic Compute Cloud (EC2) instances managed by IT. Kai's primary goal is to extract reliability and performance metrics and logs from each asset, as well as to instrument the Java application in order to monitor its performance using Splunk APM.
 
-PonyBank uses Splunk Observability Cloud, which brings data in through the open-source Splunk Distribution of the OpenTelemetry Collector, an agent that can collect and export data from multiple sources. The Collector can also forward logs and traces to enable full software observability.
+PonyBank uses Splunk Observability Cloud, which brings data in through the open-source Splunk Distribution of the OpenTelemetry Collector, an agent that can collect and export data from multiple sources. The Splunk OTel Collector can also forward logs and traces to enable full software observability.
 
-To instrument their infrastructure using the Collector, Kai takes the following steps:
+To instrument their infrastructure using the Splunk OTel Collector, Kai takes the following steps:
 
 #. :ref:`set-up-eks-monitoring`
 #. :ref:`instrument-ec2-instances`
