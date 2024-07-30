@@ -90,10 +90,6 @@ The following deployment and configuration management tools for the Splunk Distr
   * - :strong:`Salt`
     - Use Salt to deploy the Collector. For more information, see :ref:`deployments-linux-salt`.
 
-.. note:: See also :ref:`otel_deployments`.
-
-See more in :ref:`deployments-pivotal-cloudfoundry`.
-
 .. raw:: html
 
   <embed>

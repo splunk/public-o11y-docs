@@ -175,9 +175,17 @@ You can also automatically instrument your Java, Node.js, and .NET applications 
 Options of the installer script for Linux
 ==================================================================
 
-The Linux installer script supports the following options:
+The Linux installer script supports the following options for the Collector, Automatic Discovery for back-end services and Fluentd.
 
-Collector:
+To display all the configuration options supported by the script, use the ``-h`` flag.
+
+.. code-block:: bash
+
+   curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh;
+   sh /tmp/splunk-otel-collector.sh -h
+
+Collector
+----------------------------------
 
 .. list-table::
    :header-rows: 1
@@ -239,7 +247,8 @@ Collector:
      - Removes the Splunk OpenTelemetry Collector for Linux.
      -
 
-Automatic Discovery for back-end services:
+Automatic Discovery for back-end services
+--------------------------------------------------------------------
 
 .. list-table::
    :header-rows: 1
@@ -289,7 +298,8 @@ Automatic Discovery for back-end services:
      - The ``splunk-otel-auto-instrumentation`` package version to install. Note: The minimum supported version for Java and Node.js auto instrumentation is 0.87.0, and the minimum supported version for .NET auto instrumentation is 0.99.0.
      - ``latest``
 
-Fluentd:
+Fluentd
+--------------------------------------------------------------------
 
 .. list-table::
    :header-rows: 1
@@ -305,13 +315,6 @@ Fluentd:
    * - ``--skip-fluentd-repo``
      - By default, a apt/yum repo definition file will be created to download the fluentd deb/rpm package from ``https://packages.treasuredata.com``. Use this option to skip the previous step and use a pre-configured repo on the target system that provides the ``td-agent`` deb/rpm package.
      -
-
-To display all the configuration options supported by the script, use the ``-h`` flag.
-
-.. code-block:: bash
-
-   curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh;
-   sh /tmp/splunk-otel-collector.sh -h
 
 Next steps
 ==================================
