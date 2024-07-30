@@ -51,31 +51,31 @@ The following deployment and configuration management tools for the Splunk Distr
 
 .. list-table::       
   :header-rows: 1
-  :widths: 15 85
+  :widths: 20 80
   :width: 100%
 
   * - Name
     - Description
 
-  * - Amazon ECS EC2 (Prometheus only)
-    - Splunk provides a task definition to deploy the Splunk Distribution of OpenTelemetry Collector to ECS EC2. The task definition is a text file, in JSON format, that describes one or more containers that form your application. See :ref:`deployments-ecs-ec2` for the installation instructions.
+  * - :strong:`Amazon ECS EC2` (Prometheus only)
+    - Splunk provides a task definition to deploy the Splunk Distribution of the OpenTelemetry Collector to ECS EC2. The task definition is a text file, in JSON format, that describes one or more containers that form your application. See :ref:`deployments-ecs-ec2` for the installation instructions.
 
-  * - Amazon Fargate (Prometheus only, no EKS)
-    - Splunk provides a guided setup to deploy the Splunk Distribution of OpenTelemetry Collector on Amazon Fargate as a sidecar (additional container) to Amazon ECS tasks. See :ref:`deployments-fargate` for the installation instructions.
+  * - :strong:`Amazon Fargate` (Prometheus only, no EKS)
+    - Splunk provides a guided setup to deploy the Splunk Distribution of the OpenTelemetry Collector on Amazon Fargate as a sidecar (additional container) to Amazon ECS tasks. See :ref:`deployments-fargate` for the installation instructions.
 
-  * - Ansible
+  * - :strong:`Ansible`
     - Use Splunk's Ansible role to install the package configured to collect data (metrics, traces, and logs) from Linux machines and send it to Splunk Observability Cloud. See :ref:`deployment-linux-ansible` for the instructions to download and customize the role.
 
-  * - Chef
+  * - :strong:`Chef`
     - Use Splunk's cookbook to install the Collector with Chef. See :ref:`deployments-linux-chef` for the installation instructions.
 
-  * - Heroku
-    - The Splunk Distribution of the OpenTelemetry Collector for Heroku is a buildpack for the Collector. The buildpack installs and runs the Collector on a Dyno to receive, process, and export metric and trace data for Splunk Observability Cloud. See :new-page:`Heroku <https://docs.splunk.com/Observability/gdi/heroku/heroku.html>` for the steps to install the buildpack.
+  * - :strong:`Heroku`
+    - The Splunk OpenTelemetry Connector for Heroku is a buildpack for the Splunk Distribution of the OpenTelemetry Collector. The buildpack installs and runs the Splunk OpenTelemetry Connector on a Dyno to receive, process and export metric and trace data for Splunk Observability Cloud. See :ref:`heroku` for the steps to install the buildpack.
 
-  * - Nomad
+  * - :strong:`Nomad`
     - Use Nomad to deploy the Collector. See :ref:`deployments-nomad` for the installation instructions.
 
-  * - Pivotal Cloud Foundry
+  * - :strong:`Pivotal Cloud Foundry`
     - You can use one of these three options to deploy the Collector with Pivotal Cloud Foundry (PCF):
       
         - Collector standalone deployment
@@ -84,10 +84,10 @@ The following deployment and configuration management tools for the Splunk Distr
 
       See more in :ref:`deployments-pivotal-cloudfoundry`.
 
-  * - Puppet
+  * - :strong:`Puppet`
     - Use Splunk's Puppet module to install and configure the package. A module is a collection of resources, classes, files, definition, and templates. To learn how to download and customize the module, see :ref:`deployment-linux-puppet`.
 
-  * - Salt
+  * - :strong:`Salt`
     - Use Salt to deploy the Collector. For more information, see :ref:`deployments-linux-salt`.
 
 .. note:: See also :ref:`otel_deployments`.
