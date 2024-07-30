@@ -7,7 +7,7 @@ Install the Collector for Linux with the installer script
 .. meta::
       :description: Describes how to install the Splunk Distribution of OpenTelemetry Collector for Linux using the script or deployment tools.
 
-The Splunk Distribution of OpenTelemetry Collector for Linux is a package that provides integrated collection and forwarding for all data types.
+The Splunk Distribution of the OpenTelemetry Collector for Linux is a package that provides integrated collection and forwarding for all data types.
 
 Install the package using one of these methods:
 
@@ -92,7 +92,9 @@ To skip these steps and use configured repos on the target system that provide t
 Configure Fluentd
 ---------------------------------------
 
-Fluentd is turned off by default. To install Fluentd for log collection, run the installer script with the ``--with-fluentd`` option. For example:
+Fluentd is turned off by default. If you already installed Fluentd on a host, install the Collector without Fluentd using the ``--without-fluentd`` option. For more information, see :ref:`otel-configuration`.
+
+To install Fluentd for log collection, run the installer script with the ``--with-fluentd`` option. For example:
 
 .. code-block:: bash
 
@@ -108,19 +110,21 @@ The following Fluentd plugins are also installed:
 
 Additionally, the following dependencies are installed as prerequisites for the Fluentd plugins:
 
-Debian-based systems:
+.. tabs:: 
 
-* build-essential
-* libcap-ng0
-* libcap-ng-dev
-* pkg-config
+  .. tab:: Debian-based systems
 
-RPM-based systems:
+    * build-essential
+    * libcap-ng0
+    * libcap-ng-dev
+    * pkg-config
 
-* Development Tools
-* libcap-ng
-* libcap-ng-devel
-* pkgconfig
+  .. tab:: RPM-based systems
+
+    * Development Tools
+    * libcap-ng
+    * libcap-ng-devel
+    * pkgconfig
 
 You can specify the following parameters to configure the package to send log events to a custom Splunk HTTP Event Collector (HEC) endpoint URL:
 
@@ -160,15 +164,18 @@ If the td-agent package is upgraded after initial installation, you might need t
       sudo systemctl daemon-reload
       sudo systemctl restart td-agent
 
-
-If you already installed Fluentd on a host, install the Collector without Fluentd using the ``--without-fluentd`` option. For more information, see :ref:`otel-configuration`.
-
 .. _configure-auto-instrumentation:
 
-Configure automatic discovery
---------------------------------------------
+Configure automatic discovery for back-end applications
+==================================================================
 
-You can also automatically instrument your Java, Node.js, and .NET applications along with the Collector installation. Automatic discovery removes the need to install and configure the instrumentation SDKs separately. See :ref:`linux-backend-auto-discovery` for the installation instructions. For more information on instrumentation, see :ref:`get-started-java`, ref:`get-started-nodejs`, or :ref:`get-started-dotnet-otel`.
+You can also automatically instrument your Java, Node.js, and .NET applications along with the Collector installation. Automatic discovery removes the need to install and configure the instrumentation SDKs separately. See :ref:`linux-backend-auto-discovery` for the installation instructions. 
+
+For more information on instrumentation, see: 
+
+* :ref:`get-started-java` 
+* :ref:`get-started-nodejs`
+* :ref:`get-started-dotnet-otel`
 
 .. _otel-installer-options-linux:
 
