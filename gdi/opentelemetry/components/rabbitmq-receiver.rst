@@ -9,6 +9,8 @@ RabbitMQ receiver
 
 The RabbitMQ receiver fetches stats from a RabbitMQ node using the RabbitMQ Management Plugin. For more information on the plugin refer to RabbitMQ's documentation at :new-page:`Management Plugin <https://www.rabbitmq.com/docs/management>`. The supported pipeline is ``metrics``. See :ref:`otel-data-processing` for more information.
 
+.. note:: Out-of-the-box dashboards and navigators aren't supported for the RabbitMQ receiver yet, but are planned for a future release.
+
 Prerequisites
 ======================
 
