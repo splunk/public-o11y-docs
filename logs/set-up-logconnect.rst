@@ -7,7 +7,9 @@ Set up Log Observer Connect for Splunk Enterprise
 .. meta::
   :description: Connect your Splunk Enterprise instance to Splunk Observability Cloud. Set up Log Observer Connect to investigate logs in context with metrics and traces.
 
-Set up Log Observer Connect by integrating Log Observer with Splunk Enterprise. If you are in a Splunk Cloud Platform environment and want to set up Log Observer Connect, see :ref:`logs-scp`. 
+Set up Log Observer Connect by integrating Log Observer with Splunk Enterprise. When you set up Log Observer Connect, Splunk Observability Cloud uses the Splunk Enterprise search head to authenticate the service account and to run searches.
+
+If you are in a Splunk Cloud Platform environment and want to set up Log Observer Connect, see :ref:`logs-scp`. 
 
 When you set up Log Observer Connect, your Splunk Enterprise logs data remains in Splunk Enterprise. Log Observer Connect does not store or index your logs data. There is no additional charge for Log Observer Connect.
 
