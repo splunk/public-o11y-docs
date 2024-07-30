@@ -167,7 +167,7 @@ In general, upon a non-``Fragment``, non-``Activity`` navigation event, the appl
 
    SplunkRum.getInstance().experimentalSetScreenName(screenName);
 
-which both sends a navigation span to RUM, and remembers the screen name which will then be assigned as an attribute on the later spans.
+This sends a navigation span to RUM and remembers the screen name for subsequent spans.
 
 Once the explicit screen name is set, it overrides the default view livecycle tracking. If your application consists of both ``Activity`` and non-``Activity`` views, then upon exiting the view with non-``Activity`` navigation, the explicit screen name must be cleared:
 
