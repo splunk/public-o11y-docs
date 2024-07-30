@@ -48,12 +48,12 @@ Step 1: Create a Splunk platform integration in Splunk Observability Cloud
         - Give your integration a unique and descriptive name. For information about the downstream use of this name, see :new-page-ref:`About naming your integrations <naming-note>`.
 
       * - URL
-        - Enter the HTTP Event Collector (HEC) URI for your Splunk platform instance. To learn more, see :new-page:`Send data to HTTP Event Collector <https://docs.splunk.com/Documentation/SplunkCloud/9.1.2312/Data/UsetheHTTPEventCollector#Send_data_to_HTTP_Event_Collector>` section in the *Documentation for Splunk Cloud Platform*.
+        - Enter the HTTP Event Collector (HEC) URI for your Splunk platform instance. To learn more, see the :new-page:`Send data to HTTP Event Collector <https://docs.splunk.com/Documentation/SplunkCloud/9.1.2312/Data/UsetheHTTPEventCollector#Send_data_to_HTTP_Event_Collector>` section in the *Documentation for Splunk Cloud Platform*.
 
       * - HEC token
-        - Enter the HTTP Event Collector token that allows access to your Splunk platform instance. To learn more, see :new-page:`Set up and use HTTP Event Collector in Splunk Web <https://docs.splunk.com/Documentation/SplunkCloud/9.2.2403/Data/UsetheHTTPEventCollector>`
+        - Enter the HTTP Event Collector token that allows access to your Splunk platform instance. To learn more, see :new-page:`Set up and use HTTP Event Collector in Splunk Web <https://docs.splunk.com/Documentation/SplunkCloud/9.2.2403/Data/UsetheHTTPEventCollector>`.
           
-   .. note:: Splunk Observability Cloud doesn't support HEC indexer acknowledgement. If you want to use the Splunk platform integration, don't enable HEC indexer acknowledgement in your Splunk Enterprise instance.
+   .. note:: Splunk Observability Cloud doesn't support HEC indexer acknowledgement. If you want to use the Splunk platform integration, don't activate HEC indexer acknowledgement in your Splunk Enterprise instance.
 
 #. Select :guilabel:`Next`.
 #. On the :strong:`Customize message` page, you see the default template for a Splunk platform integration. You can customize your payload to make sure responders have the context needed to resolve the issues. To learn more, see :ref:`splunk-platform-variables`.
