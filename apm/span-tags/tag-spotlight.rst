@@ -28,7 +28,7 @@ To view service performance broken down by your indexed span tags follow these s
 #. Add time range, environment, workflow, service, operation, and tag filters as need to refine the data in your Tag Spotlight view. The default time range is for the last 15 minutes, and the data resolution is 10 seconds.
 #. Use the request & errors and latency time-series charts at the top to see a distribution of your RED metrics.
 #. Use the bar charts under the request & errors and latency time-series charts to view RED metrics for each indexed span tag.
-#. View the distribution of all indexed span tags. The tag bar charts display either request and error distributions or latency distribution. Use the :guilabel:`Bar chart display` menu to select the data you want to display in the bars. 
+#. View the distribution of all indexed span tags. The tag bar charts display either request and error distributions or latency distribution. Use the :guilabel:`Cards display` menu to select the data you want to display in the bars. 
 #. Select the menu on the top left of the bar chart section to select which metrics to display in each tag panel. You can also use this menu to select whether to display tags with no values.
 
 Explore the distribution of span tags and values to find trends
