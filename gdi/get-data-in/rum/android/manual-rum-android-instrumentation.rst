@@ -169,7 +169,7 @@ In general, upon a non-``Fragment``, non-``Activity`` navigation event, the appl
 
 This sends a navigation span to RUM and remembers the screen name for subsequent spans.
 
-Once the explicit screen name is set, it overrides the default view livecycle tracking. If your application consists of both ``Activity`` and non-``Activity`` views, then upon exiting the view with non-``Activity`` navigation, the explicit screen name must be cleared:
+Once the explicit screen name is set, it overrides the default view livecycle tracking. If your application consists of both ``Activity`` and non-``Activity`` views, you must clear the explicit screen name when exiting the non-``Activity`` view:
 
 .. code-block:: java
 
