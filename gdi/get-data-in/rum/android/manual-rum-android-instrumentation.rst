@@ -69,7 +69,7 @@ By default, the Android RUM agent doesn't automatically link traces to users of 
 
 You can identify users by adding global attributes from the OpenTelemetry specification, such as ``enduser.id`` and ``enduser.role``, to your spans.
 
-The following examples show how to add identification metadata as global attributes when initializing the agent or after you've initialized it, depending on whether user data is accessible at initialization:
+The following examples show how to add identification metadata as global attributes when initializing the agent or after initializing it, depending on whether user data is accessible at initialization:
 
 Add identification metadata during initialization
 --------------------------------------------------
@@ -177,19 +177,7 @@ Once the explicit screen name is set, it overrides the default view livecycle tr
    SplunkRum.getInstance().experimentalSetScreenName(null)
    SplunkRum.getInstance().experimentalSetScreenName(null)
 
-And if you'd like to track these in RUM, ``Restarted`` and ``Resumed`` events must then also be signalled explicitly, for example:
-
-.. code-block:: kotlin
-
-   override fun onResume() {
-      super.onResume()
-      // in this case you need to store lastScreen yourself
-      if (lastScreen != null) {
-         SplunkRum.getInstance().experimentalSetScreenName(lastScreen, "Resumed")
-      }
-   }
-
-When using Jetpack Compose, the active route can be used as a screen name, and the code will depend on the implementation, but for a simplified example see:
+When using Jetpack Compose, You can use the active route as a screen name, and the code will depend on the implementation. The following is a simplified example:
 
 .. code-block:: kotlin
 
