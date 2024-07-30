@@ -1,5 +1,6 @@
 .. _deployments-salt:
 .. _deployments-linux-salt:
+.. _linux-salt:
 
 ********************************************************
 Deploy the Collector for Linux with Salt 

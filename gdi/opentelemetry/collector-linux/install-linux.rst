@@ -11,7 +11,7 @@ The Splunk Distribution of OpenTelemetry Collector for Linux is a package that p
 
 Install the package using one of these methods:
 
-* :ref:`Use the installer script <linux-scripts>`
+* :ref:`Use the installer script <linux-scripts>`, as described in this document
 * :ref:`Use deployment and configuration management tools <linux-deployments>`
 * :ref:`Install the Collector for Linux manually <linux-manual>`
 
@@ -170,7 +170,6 @@ Configure automatic discovery
 
 You can also automatically instrument your Java, Node.js, and .NET applications along with the Collector installation. Automatic discovery removes the need to install and configure the instrumentation SDKs separately. See :ref:`linux-backend-auto-discovery` for the installation instructions. For more information on instrumentation, see :ref:`get-started-java`, ref:`get-started-nodejs`, or :ref:`get-started-dotnet-otel`.
 
-
 .. _otel-installer-options-linux:
 
 Options of the installer script for Linux
@@ -313,83 +312,6 @@ To display all the configuration options supported by the script, use the ``-h``
 
    curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh;
    sh /tmp/splunk-otel-collector.sh -h
-
-.. _linux-deployments:
-
-Install the Collector using deployment tools
-====================================================
-
-Splunk offers the configuration management options described in this section.
-
-.. _linux-amazon-ecs-ec2:
-
-Amazon ECS EC2
---------------------------------
-
-.. note::
-
-   Available for Prometheus only.
-
-Splunk provides a task definition to deploy the Splunk Distribution of OpenTelemetry Collector to ECS EC2. The task definition is a text file, in JSON format, that describes one or more containers that form your application. See :ref:`deployments-ecs-ec2` for the installation instructions.
-
-.. _linux-amazon-fargate:
-
-Amazon Fargate
----------------------------
-.. note::
-
-   Available for Prometheus only. Not yet available for Amazon EKS.
-
-Splunk provides a guided setup to deploy the Splunk Distribution of OpenTelemetry Collector on Amazon Fargate as a sidecar (additional container) to Amazon ECS tasks. See :ref:`deployments-fargate` for the installation instructions.
-
-.. _linux-ansible:
-
-Ansible
--------------------
-Splunk provides an Ansible role that installs the package configured to collect data (metrics, traces, and logs) from Linux machines and send that data to Splunk Observability Cloud. See :ref:`deployment-linux-ansible` for the instructions to download and customize the role.
-
-.. _linux-chef:
-
-Chef 
-----------------
-Splunk provides a cookbook to install the Collector using Chef. See :ref:`deployments-chef` for the installation instructions.
-
-.. _linux-heroku:
-
-Heroku
---------------------
-The Splunk Distribution of OpenTelemetry Collector for Heroku is a buildpack for the Collector. The buildpack installs and runs the Collector on a Dyno to receive, process, and export metric and trace data for Splunk Observability Cloud. See :new-page:`Heroku <https://docs.splunk.com/Observability/gdi/heroku/heroku.html>` for the steps to install the buildpack.
-
-.. _linux-nomad:
-
-Nomad 
------------------
-Use Nomad to deploy the Collector. See :ref:`deployments-nomad` for the installation instructions.
-
-.. _linux-pcf:
-
-Pivotal Cloud Foundry
--------------------------------
-
-You can use one of these three options to deploy the Collector with Pivotal Cloud Foundry (PCF):
-
-* Collector standalone deployment.
-* Collector as a sidecar to your app.
-* Tanzu Tile.
-
-See more in :ref:`deployments-pivotal-cloudfoundry`.
-
-.. _linux-puppet:
-
-Puppet
--------------------------------
-Splunk provides a Puppet module to install and configure the package. A module is a collection of resources, classes, files, definition, and templates. See :ref:`deployment-linux-puppet` for the instructions to download and customize the module.
-
-.. _linux-salt:
-
-Salt
----------------
-Splunk provides a Salt formula to install and configure the Collector. See :ref:`deployments-salt` for the instructions.
 
 Next steps
 ==================================

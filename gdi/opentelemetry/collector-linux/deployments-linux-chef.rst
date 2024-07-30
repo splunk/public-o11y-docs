@@ -1,5 +1,6 @@
 .. _deployments-chef:
 .. _deployments-linux-chef:
+.. _linux-chef:
 
 ********************************************************
 Deploy the Collector for Linux with Chef
