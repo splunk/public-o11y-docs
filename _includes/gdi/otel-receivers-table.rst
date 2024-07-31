@@ -1,3 +1,4 @@
+* :ref:`apache-receiver`
 * :ref:`azureeventhub-receiver`
 * :ref:`carbon-receiver`
 * :ref:`cloudfoundry-receiver`
@@ -24,12 +25,15 @@
 * :ref:`otlp-receiver`                
 * :ref:`postgresql-receiver`
 * :ref:`prometheus-receiver`
+* :ref:`rabbitmq-receiver`
 * :ref:`receiver-creator-receiver`
 * :ref:`redis-receiver`
 * :ref:`sapm-receiver`
 * :ref:`simple-prometheus-receiver`
+* :ref:`signalfx-gateway-prometheus-remote-write-receiver`
 * :ref:`signalfx-receiver`
 * :ref:`smartagent-receiver`
+* :ref:`splunk-enterprise-receiver`
 * :ref:`splunk-hec-receiver`
 * :ref:`sqlquery-receiver` 
 * :ref:`sshcheck-receiver`

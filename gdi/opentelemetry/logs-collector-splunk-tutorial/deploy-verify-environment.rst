@@ -4,30 +4,28 @@
 Part 3: Deploy and verify the environment
 *****************************************
 
-Now that you've configured the necessary services, the Collector components, and the Splunk instance, learn how to deploy and verify the log collection pipeline. For an overview of the tutorial, see :ref:`about-logs-collector-splunk-tutorial`.
+Now that you configured the necessary services, the Collector components, and the Splunk instance, deploy and verify the log collection pipeline. For an overview of the tutorial, see :ref:`about-logs-collector-splunk-tutorial`.
 
 Deploy the log collection services
 ==================================
 
-The next step is to run the ``docker-compose.yml`` file that you created in Part 1.
+The next step is to run the docker-compose.yml file that you created in Part 1.
 
-.. note::
+#. From a terminal, navigate to the ``log-collection`` directory.
 
-   Prior to deploying the services in the ``docker-compose.yml`` file, MacOS users with Silicon chips must run ``export DOCKER_DEFAULT_PLATFORM=linux/amd64``, as there is no ``arm64`` version of the ``splunk/spunk`` image.
+#. If you are a macOS user with a Silicon chip, you must run the following command, as there is no ``arm64`` version of the ``splunk/splunk`` image:
 
-#. From inside a terminal, navigate to the ``log-collection`` directory.
+   .. code-block:: bash
 
-#. Start the log collection services defined in the ``docker-compose.yml`` file:
+      export DOCKER_DEFAULT_PLATFORM=linux/amd64
 
-   .. note::
-
-      The splunk service can take from 1 to 2 minutes to start.
+#. Start the log collection services defined in the ``docker-compose.yml`` file, which can take from 1 to 2 minutes to start:
 
    .. code-block:: bash
 
       docker-compose up -d
 
-   Expected output:
+   Verify that your output matches the following example:
 
    .. code-block:: bash
 
@@ -41,32 +39,40 @@ The next step is to run the ``docker-compose.yml`` file that you created in Part
 Verify the log collection pipeline
 ==================================
 
-It is important to verify that everything works as expected. Follow these steps to verify that the Collector gathered the logs and sent them to the Splunk service.
+Next, verify that everything works as expected. Follow these steps to check that the Collector gathered the logs and sent them to the Splunk Enterprise service.
 
-#. Open a web browser and navigate to :samp:`http://localhost:18000`.
+#. In your web browser, go to :samp:`http://localhost:18000`.
 
-#. Log in to the Splunk Web interface using the following credentials:
+#. Log in to Splunk Web using the following credentials:
 
    * Username: ``admin``
    * Password: ``changeme``
 
-#. In the left-side navigation menu, select :guilabel:`Search & Reporting`.
+#. In the left navigation menu, select :guilabel:`Search & Reporting`.
 
-#. In the search bar, query the ``index1`` index using ``index=index1`` to view the logs from the ``logging1`` service:
+#. In the search bar, search the ``index1`` index to view the logs from the ``logging1`` service:
+
+   .. code-block:: 
+
+      index=index1
+
+   The search results show that only the logs from the ``logging1`` service are stored in the ``index1`` index:
 
    .. image:: /_images/gdi/logs-collector-splunk-tutorial/splunk-web-ui-index1.png
       :width: 100%
       :alt: A view of the search result for the index1 index.
 
-   Only the logs from the ``logging1`` service are stored in the ``index1`` index.
+#. In the search bar, search the ``index2`` index to view the logs from the ``logging2`` service:
 
-#. In the search bar, query the ``index2`` index using ``index=index2`` to view the logs from the ``logging2`` service:
+   .. code-block::
+
+      index=index2
+
+   The search results show that only the logs from the ``logging2`` service are stored in the ``index2`` index:
 
    .. image:: /_images/gdi/logs-collector-splunk-tutorial/splunk-web-ui-index2.png
       :width: 100%
       :alt: A view of the search result for the index2 index.
-
-   Only the logs from the ``logging2`` service are stored in the ``index2`` index.
 
 #. To terminate the log collection environment, stop the running services with Docker Compose:
 
@@ -74,7 +80,7 @@ It is important to verify that everything works as expected. Follow these steps 
 
       docker-compose down
 
-   Expected output:
+   Verify that your output matches the following example:
 
    .. code-block:: bash
 

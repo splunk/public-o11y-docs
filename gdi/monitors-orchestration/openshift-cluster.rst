@@ -6,9 +6,7 @@ OpenShift cluster
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the OpenShift cluster monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 ``openshift-cluster`` monitor type to collect cluster-level metrics from
 the Kubernetes API server, which includes all metrics from
 :ref:`kubernetes-cluster` with additional OpenShift-specific

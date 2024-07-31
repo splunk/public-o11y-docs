@@ -4,25 +4,25 @@
 Part 1: Configure the log collection environment
 ************************************************
 
-Learn to configure all the necessary services for the tutorial environment, including the log-producing containers, the OpenTelemetry Collector, and the Splunk Enterprise server. For an overview of the tutorial, see :ref:`about-logs-collector-splunk-tutorial`.
+Configure all the necessary services for the tutorial environment, including the log-producing containers, the Splunk Distribution of the OpenTelemetry Collector, and the Splunk Enterprise server. For an overview of the tutorial, see :ref:`about-logs-collector-splunk-tutorial`.
 
 .. note::
 
-   In :ref:`the next part of the tutorial <collector-splunk>`, you define the Collector components that receive, process, and export the logs from the logging container volumes and you define the indexes that receive and store the processed logging data. For now, it is sufficient simply to create the logging, Collector, and Splunk containers.
+   In this tutorial part, you start by creating the logging, Collector, and Splunk Enterprise containers. In the next part of the tutorial, you will define the Collector components that receive, process, and export the logs from the logging container volumes and the indexes that receive and store the processed logging data.
 
 Create the log collection environment
 =====================================
 
-All the configuration files used in this tutorial reside in a single directory. Follow these steps to create the directory and your first file:
+All the configuration files used in this tutorial are in a single directory. Follow these steps to create the directory and your first file:
 
-#. Create a directory called ``log-collection``.
+#. Create a directory called log-collection.
 
-#. Create a file in the ``log-collection`` directory called ``docker-compose.yml``
+#. Create a file in the log-collection directory called docker-compose.yml.
 
 Add the logging services
 ========================
 
-Docker Compose deploys and manages the services used in ths tutorial. Inside the ``docker-compose.yml`` file, create the logging services and define the logs that they produce.
+Docker Compose deploys and manages the services used in ths tutorial. To configure the log-emitting Bash services, add the following to the ``docker-compose.yml`` file:
 
 .. code-block:: yaml
 
@@ -50,7 +50,7 @@ Docker Compose deploys and manages the services used in ths tutorial. Inside the
 Add the Collector service
 =========================
 
-Create the Collector service that listens for incoming log data from the logging services and runs the Collector components defined in :ref:`the next part of the tutorial <collector-splunk>`. In the ``services`` section, add the following code:
+Create the Collector service that accepts incoming log data from the logging services and runs the Collector components defined in the next part of the tutorial. In the ``services`` section, add the following code:
 
 .. code-block:: yaml
 
@@ -74,10 +74,10 @@ Create the Collector service that listens for incoming log data from the logging
      ports:
        - 18088:8088
 
-Add the Splunk service
-======================
+Add the Splunk Enterprise service
+=================================
 
-Create the Splunk Enterprise service that listens for incoming log data from the Collector service. In the ``services`` section, add the following code:
+Create the Splunk Enterprise service that accepts incoming log data from the Collector service. In the ``services`` section, add the following code:
 
 .. code-block:: yaml
 
@@ -109,18 +109,15 @@ Create the Splunk Enterprise service that listens for incoming log data from the
 
 .. note::
 
-   Be sure to use the ``9.1.2`` tag for the ``splunk/splunk`` image. There is a known issue related to the creation of HEC tokens that you are likely to encounter if you use the ``latest`` tag.
+   Be sure to use the ``9.1.2`` tag for the ``splunk/splunk`` image. There is a known issue related to the creation of HEC tokens that you can encounter if you use the ``latest`` tag.
 
 Next step
 =========
 
-You've now configured the services necessary for using the Collector to gather container logs and send them to a Splunk Enterprise instance. Next, configure the Collector components used for receiving, processing, and exporting the container logs and configure the Splunk indexes where you store the logs for search and retrieval within the Splunk Web interface. To continue, see :ref:`collector-splunk`.
+You've now configured the services needed to use the Collector to gather container logs and send them to a Splunk Enterprise instance. Next, configure the Collector components used to receive, process, and export the container logs. Then, configure the Splunk Enterprise indexes where you store the logs for search and retrieval in Splunk Web. To continue, see :ref:`collector-splunk`.
 
 Learn more
 ==========
 
-* For more information about Docker Compose, see `Docker Compose overview <https://docs.docker.com/compose/>`__ in the official Docker documentation.
-* For more information about using the Collector to monitor Docker container, see :ref:`docker`.
-* For more information about the Splunk container, see the `docker-splunk <https://splunk.github.io/docker-splunk/>`__ documentation and the `Docker-Splunk <https://github.com/splunk/docker-splunk>`__ GitHub repository.
-* For more information about using the Collector to monitor Docker container, see :ref:`docker`.
-* For more information about the Splunk container, see the `docker-splunk <https://splunk.github.io/docker-splunk/>`__ documentation and the `Docker-Splunk <https://github.com/splunk/docker-splunk>`__ GitHub repository.
+* For more information about using the Collector to monitor Docker containers, see :ref:`docker`.
+* For more information about the Splunk Enterprise container, see the `docker-splunk <https://splunk.github.io/docker-splunk/>`__ documentation and the `Docker-Splunk <https://github.com/splunk/docker-splunk>`__ GitHub repository.

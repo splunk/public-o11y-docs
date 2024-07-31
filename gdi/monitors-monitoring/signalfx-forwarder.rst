@@ -8,9 +8,7 @@ SignalFx Forwarder (deprecated)
 
 .. note:: This integration is deprecated. If you're using the Splunk Distribution of the OpenTelemetry Collector and want to forward data to Splunk Observability Cloud, use the native OTLP receiver. See more at :new-page:`OTLP receiver <https://github.com/open-telemetry/opentelemetry-collector/tree/main/receiver/otlpreceiver>` GitHub documentation.
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 ``signalfx-forwarder`` monitor type to run an HTTP server that listens
 for data points and trace spans, and forward them to Splunk
 Observability Cloud. This integration supports the latest formats for

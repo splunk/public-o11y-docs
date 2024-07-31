@@ -7,7 +7,7 @@ Prometheus receiver
 .. meta::
       :description: The Prometheus receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from any scraping source compatible with the Prometheus format.
 
-The Prometheus receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from any source exposing telemetry in Prometheus format. The supported pipeline type is ``metrics``.
+The Prometheus receiver allows the Splunk Distribution of the OpenTelemetry Collector to collect metrics from any source exposing telemetry in Prometheus format. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
 .. note:: To use a simplified version of the Prometheus receiver that supports single endpoints, see :ref:`simple-prometheus-receiver`.
 
@@ -31,7 +31,7 @@ Get started
 
 Follow these steps to configure and activate the component:
 
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+1. Deploy the Splunk Distribution of the OpenTelemetry Collector to your host or container platform:
   
   - :ref:`otel-install-linux`
   - :ref:`otel-install-windows`
@@ -43,7 +43,7 @@ Follow these steps to configure and activate the component:
 Sample configuration
 --------------------------------
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the Prometheus receiver in the ``metrics/internal`` pipeline. 
+By default, the Splunk Distribution of the OpenTelemetry Collector includes the Prometheus receiver in the ``metrics/internal`` pipeline. 
 
 To activate additional Prometheus receivers, add a new ``prometheus`` entry in the ``receivers`` section of the Collector configuration file, as in the following example:
 
@@ -68,7 +68,7 @@ To complete the configuration, include the receiver in the ``metrics`` pipeline 
          receivers:
            - prometheus
 
-.. caution:: Don't remove the ``prometheus/internal`` receiver from the configuration. Internal metrics feed the Splunk Distribution of OpenTelemetry Collector default dashboard.
+.. caution:: Don't remove the ``prometheus/internal`` receiver from the configuration. Internal metrics feed the Splunk Distribution of the OpenTelemetry Collector default dashboard.
 
 Scraper configuration
 ----------------------------------

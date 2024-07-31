@@ -6,15 +6,11 @@ Windows Performance Counters
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Telegraf win_perf_counters monitor for Windows. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
-``telegraf/win_perf_counters`` monitor type to receive metrics from
-Windows performance counters.
+.. note:: For information on the OpenTelemetry receiver based on the Windows Performance Counters input plugin, see :ref:`Windows Performance Counters receiver <windowsperfcounters-receiver>`.
+
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the ``telegraf/win_perf_counters`` monitor type to receive metrics from Windows performance counters.
 
 This monitor is available on Windows.
-
-.. note:: For information on the OpenTelemetry receiver based on the Windows Performance Counters input plugin, see :ref:`Windows Performance Counters receiver <windowsperfcounters-receiver>`.
 
 Benefits
 --------
@@ -34,8 +30,7 @@ Configuration
 Example
 ~~~~~~~
 
-To activate this integration, add the following to your Collector
-configuration:
+To activate this integration, add the following to your Collector configuration:
 
 .. code:: yaml
 
@@ -191,8 +186,7 @@ The nested ``objects`` configuration object has the following fields:
 Metrics
 -------
 
-The Splunk Distribution of OpenTelemetry Collector doesn't filter
-metrics for this receiver.
+The Splunk Distribution of the OpenTelemetry Collector doesn't filter metrics for this receiver.
 
 Troubleshooting
 ---------------

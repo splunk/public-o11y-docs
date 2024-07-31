@@ -49,6 +49,9 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
    * - Name
      - Description
      - Pipeline types
+   * - :ref:`apache-receiver` (``apache``) 
+     - Fetches stats from a Apache Web Server.
+     - Metrics
    * - :ref:`azureeventhub-receiver` (``azureeventhub``) 
      - Pulls logs from an Azure event hub.
      - Logs
@@ -130,6 +133,9 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
    * - :ref:`simple-prometheus-receiver` (``prometheus_simple``)
      - Wraps the ``prometheus`` receiver to provide simplified settings for single targets.
      - Metrics
+   * - :ref:`rabbitmq-receiver` (``rabbitmq``)
+     - Fetches stats from a RabbitMQ node using the RabbitMQ Management Plugin.
+     - Metrics
    * - :ref:`receiver-creator-receiver` (``receiver_creator``)
      - Instantiates other receivers at runtime based on whether observed endpoints match a configured rule. To use the receiver creator, configure one or more observer extensions to discover networked endpoints.
      - N/A
@@ -139,11 +145,17 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
    * - :ref:`sapm-receiver` (``sapm``)
      - Receives traces from other collectors or from the SignalFx Smart Agent.
      - Traces
+   * - :ref:`signalfx-gateway-prometheus-remote-write-receiver` (``signalfxgatewayprometheusremotewritereceiver``)
+     - OTel native version of the SignalFx Prometheus remote write gateway.
+     - Metrics
    * - :ref:`signalfx-receiver` (``signalfx``)
      - Accepts metrics and logs in the proto format.
      - Metrics, logs
    * - :ref:`smartagent-receiver` (``smartagent``)
      - Uses the existing Smart Agent monitors as Collector metric receivers. Learn more in :ref:`migration-monitors`.
+     - Metrics
+   * - :ref:`splunk-enterprise-receiver` (``splunkenterprise``)
+     - Enables the ingestion of performance metrics describing the operational status of a user's Splunk Enterprise deployment.
      - Metrics
    * - :ref:`splunk-hec-receiver` (``splunk_hec``)
      - Accepts telemetry in the Splunk HEC format.

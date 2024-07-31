@@ -40,7 +40,7 @@ Here's a list of the main chart images available for the Splunk Distribution of 
 Images used by default
 ------------------------------------------------
 
-* :new-page:`quay.io/signalfx/splunk-otel-collector`
+* :new-page:`https://quay.io/repository/signalfx/splunk-otel-collector`
 
 .. _helm-chart-images-optional:
 
@@ -48,7 +48,7 @@ Optional add-on feature images
 ------------------------------------------------
 
 * :new-page:`https://quay.io/signalfx/splunk-otel-collector-windows`
-* :new-page:`https://registry.access.redhat.com/ubi9/ubi`
+* :new-page:`https://registry.access.redhat.com`
 * :new-page:`https://ghcr.io/open-telemetry/opentelemetry-operator/opentelemetry-operator`
 * :new-page:`https://quay.io/jetstack/cert-manager-controller`
 * :new-page:`https://quay.io/jetstack/cert-manager-acmesolver`

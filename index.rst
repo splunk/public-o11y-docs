@@ -278,7 +278,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Service description <get-started/service-description>
 
 .. toctree::
-   :maxdepth:   3
+   :maxdepth: 3
 
    Get started <get-started/o11y>
 
@@ -849,6 +849,54 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    Configure your tests TOGGLE <synthetics/test-config/test-config>
 
+.. toctree::
+   :caption: Splunk On-Call
+   :maxdepth:   3
+
+   Introduction to Splunk On-Call TOGGLE </sp-oncall/admin/get-started/getting-started-spoc>
+
+
+.. toctree::
+   :maxdepth:   3
+
+   User management TOGGLE <sp-oncall/user-roles/user-roles-permissions>
+
+.. toctree::
+   :maxdepth:   3
+
+   Create and manage on-call schedules TOGGLE <sp-oncall/on-call-schedules/create-manage-on-call-schedules>
+
+.. toctree::
+   :maxdepth:   3
+
+   Alerts TOGGLE <sp-oncall/alerts/alerts-main>
+
+.. toctree::
+   :maxdepth:   3
+
+   Notifications TOGGLE <sp-oncall/notifications/notification-types>
+
+.. toctree::
+   :maxdepth:   3
+
+   Incidents TOGGLE <sp-oncall/incidents/incident-pane>
+
+
+.. toctree::
+   :maxdepth:   3
+
+   Mobile app TOGGLE <sp-oncall/mobile/mobile-getting-started>
+
+
+.. toctree::
+   :maxdepth:   3
+
+   Reports TOGGLE <sp-oncall/reports/reports-main>  
+
+.. toctree::
+   :maxdepth:   3
+
+   Integrations with Splunk On-Call TOGGLE <sp-oncall/spoc-integrations/integrations-main>   
 
 .. toctree::
    :caption: Reference and Legal

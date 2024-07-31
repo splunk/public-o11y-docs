@@ -7,7 +7,9 @@ Set up Log Observer Connect for Splunk Enterprise
 .. meta::
   :description: Connect your Splunk Enterprise instance to Splunk Observability Cloud. Set up Log Observer Connect to investigate logs in context with metrics and traces.
 
-Set up Log Observer Connect by integrating Log Observer with Splunk Enterprise. If you are in a Splunk Cloud Platform environment and want to set up Log Observer Connect, see :ref:`logs-scp`. 
+Set up Log Observer Connect by integrating Log Observer with Splunk Enterprise. When you set up Log Observer Connect, Splunk Observability Cloud uses the Splunk Enterprise search head to authenticate the service account and to run searches.
+
+If you are in a Splunk Cloud Platform environment and want to set up Log Observer Connect, see :ref:`logs-scp`. 
 
 When you set up Log Observer Connect, your Splunk Enterprise logs data remains in Splunk Enterprise. Log Observer Connect does not store or index your logs data. There is no additional charge for Log Observer Connect.
 
@@ -23,6 +25,8 @@ Prerequisites
 
 To set up Log Observer Connect for Splunk Enterprise, you must have an administrator role in Splunk Observability Cloud. You must also be an administrator in Splunk Enterprise.
 
+You need your service account username, password, Splunk platform URL (search head cluster), and a certificate.
+
 Ensure the following configuration in your Splunk Enterprise instance:
 
 * Token authentication is active on your Log Observer Connect service account. See :new-page:`Securing Splunk Enterprise: Enable or disable token authentication <https://docs.splunk.com/Documentation/Splunk/latest/Security/EnableTokenAuth>` to learn how.
@@ -31,6 +35,7 @@ Ensure the following configuration in your Splunk Enterprise instance:
 
   - us0: ``34.199.200.84``, ``52.20.177.252``, ``52.201.67.203``, ``54.89.1.85``
   - us1: ``44.230.152.35``, ``44.231.27.66``, ``44.225.234.52``, ``44.230.82.104``
+  - us2: ``35.247.113.38/32``, ``35.247.32.72/32``, ``35.247.86.219/32``
   - eu0: ``108.128.26.145``, ``34.250.243.212``, ``54.171.237.247``
   - jp0: ``35.78.47.79``, ``35.77.252.198``, ``35.75.200.181``
   - au0: ``13.54.193.47``, ``13.55.9.109``, ``54.153.190.59``
@@ -53,7 +58,9 @@ In Splunk Observability Cloud, do the following:
 
 Splunk Enterprise
 ----------------------------------------------------------------
-In Splunk Enterprise, follow the instructions in the guided setup for the integration to do the following:
+You must create a user and role in your Splunk Enterprise search head to serve as a service account for Splunk Observability Cloud.
+
+In your Splunk Enterprise search head, follow the instructions in the guided setup for the integration to do the following:
 
 1. To configure a role in Splunk Enterprise for the Log Observer Connect service account, go to :guilabel:`Settings > Roles`.
       

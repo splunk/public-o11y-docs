@@ -23,7 +23,7 @@ The following table shows the retention time period for each data type in Infras
 
    * - :strong:`Data resolution`
      - :strong:`Retention`
-   * - 1 to 60-second resolution
+   * - 1 second resolution
      - 
        * Standard license edition: 8 days
        * Enterprise license edition: 3 months 
@@ -48,7 +48,7 @@ The following table shows the retention time period for each data type in RUM.
    * - Spans 
      - 
        * 8 days
-   * - Metrics 
+   * - :ref:`Troubleshooting MetricSets <troubleshooting-metricsets>` 
      - 
        * 8 days
    * - :ref:`Monitoring MetricSets <monitoring-metricsets>`
@@ -59,7 +59,7 @@ The following table shows the retention time period for each data type in RUM.
 
 Data retention in Application Performance Monitoring (APM)
 =====================================================================
-The following table shows the retention time period for each data type in APM. See :ref:`apm-extended-trace-retention` to learn how to extend the retention of specific traces of interest. 
+The following table shows the retention time period for each data type in APM. 
 
 .. list-table:: 
    :widths: 20 25
@@ -71,7 +71,7 @@ The following table shows the retention time period for each data type in APM. S
    * - Traces
      - 
         * All raw traces: 8 days
-        * Specific traces of interest: up to 13 months
+        * Traces of interest viewed in the Splunk APM user interface: up to 13 months. See :ref:`apm-extended-trace-retention` to learn how to extend the retention of specific traces of interest. 
    * - :ref:`Troubleshooting MetricSets <troubleshooting-metricsets>`
      - 
        * 8 days   

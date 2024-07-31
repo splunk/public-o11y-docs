@@ -55,7 +55,7 @@ Step 2: Get your Splunk On-Call alert routing key
 
 You must be a Splunk On-Call global admin or alert admin to complete this task.
 
-For information about how to get your Splunk On-Call alert routing key, see :new-page:`Create & Manage Alert Routing Keys <https://help.victorops.com/knowledge-base/routing-keys/>`.
+For information about how to get your Splunk On-Call alert routing key, see :new-page:`Create & Manage Alert Routing Keys <https://help.victorops.com/knowledge-base/spoc-routing-keys/>`.
 
 You'll need your alert routing key in :ref:`oncall3`.
 

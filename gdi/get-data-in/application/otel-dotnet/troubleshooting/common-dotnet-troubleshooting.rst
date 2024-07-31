@@ -214,6 +214,24 @@ The thread sampler resumes its activity when any of the buffers is empty.
 
 To avoid the loss of profiling data due to full buffers, check the configuration and the communication layer between your process and the Splunk Distribution of OpenTelemetry Collector.
 
+Assembly version conflicts
+==========================
+
+When installing the .NET instrumentation, you might encounter dependency version conflicts that result in error messages such as:
+
+.. code-block:: bash
+
+   Unhandled exception. System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.Extensions.DependencyInjection.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. The system cannot find the file specified.
+
+   File name: 'Microsoft.Extensions.DependencyInjection.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+      at Microsoft.AspNetCore.Builder.WebApplicationBuilder..ctor(WebApplicationOptions options, Action`1 configureDefaults)
+      at Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(String[] args)
+      at Program.<Main>$(String[] args) in /Blog.Core/Blog.Core.Api/Program.cs:line 26
+
+To resolve this issue, :ref:`install the .NET instrumentation using the NuGet packages <otel-dotnet-nuget-pkg>`, as NuGet automatically installs the correct dependencies that the package requires.
+
+Alternatively, you can update to the latest version of .NET, as this reduces the likelihood of dependency version conflicts.
+
 Uninstall the instrumentation
 ======================================
 
