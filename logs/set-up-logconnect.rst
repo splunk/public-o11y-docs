@@ -25,6 +25,8 @@ Prerequisites
 
 To set up Log Observer Connect for Splunk Enterprise, you must have an administrator role in Splunk Observability Cloud. You must also be an administrator in Splunk Enterprise.
 
+You need your service account username, password, Splunk platform URL (search head cluster), and a certificate.
+
 Ensure the following configuration in your Splunk Enterprise instance:
 
 * Token authentication is active on your Log Observer Connect service account. See :new-page:`Securing Splunk Enterprise: Enable or disable token authentication <https://docs.splunk.com/Documentation/Splunk/latest/Security/EnableTokenAuth>` to learn how.
@@ -56,7 +58,9 @@ In Splunk Observability Cloud, do the following:
 
 Splunk Enterprise
 ----------------------------------------------------------------
-In Splunk Enterprise, follow the instructions in the guided setup for the integration to do the following:
+You must create a user and role in your Splunk Enterprise Search Head to serve as a service account for Splunk Observability Cloud.
+
+In your Splunk Enterprise Search Head, follow the instructions in the guided setup for the integration to do the following:
 
 1. To configure a role in Splunk Enterprise for the Log Observer Connect service account, go to :guilabel:`Settings > Roles`.
       
