@@ -50,9 +50,9 @@ Use the following metrics in the :guilabel:`Service metrics` section to monitor 
 * Service error - The service error chart shows streaming error data for the service. If you have detectors for the service error rate configured, triggered alerts display below the chart. Select the chart to view example traces. Select the alert icon to view alert details.
 * Dependency latency by type - The dependency latency by type chart shows the latency for each of the downstream systems. Select the chart to see details about each system category. Systems are categorized as follows:
    *  Services - instrumented services
-   *  Databases - not yet supported
-   *  Inferred services - uninstrumented, inferred services
-   *  Pub/sub queues - not yet supported
+   *  Databases
+   *  Inferred services - un-instrumented third-party services
+   *  Pub/sub queues - Publisher/subscriber queues
 
 Runtime metrics
 -----------------
@@ -107,6 +107,11 @@ Select :guilabel:`Traces` to view traces for the environment and service you are
 
 Under the charts are lists of :guilabel:`Traces with errors` and :guilabel:`Long traces`. Select the trace ID link to open the trace in trace waterfall view. Select :guilabel:`View more in Trace Analyzer` to search additional traces. See :ref:`trace-analyzer` for more information about using Trace Analyzer to search traces.
 
+View top commands for your databases
+======================================
+
+If you select a Redis or SQL database from the service dropdown menu, you can select :guilabel:`Database Query Performance` to view top commands for your database. See :ref:`db-query-performance` to learn more. 
+
 Go to the code profiling view for your service
 =====================================================
 
@@ -127,6 +132,71 @@ Select :guilabel:`Configure service view` to modify the Log Observer Connect con
 3. Select :guilabel:`Save changes`.
 
 The connection and indices you select are saved for all users in your organization for each unique service and environment combination.
+
+Service view support for various service types
+===============================================
+
+The information available in your service view varies based on the type of service you select. The following table shows which sections are available for each service type.
+
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 20, 20, 20, 20, 20
+
+   * - :strong:`Service view section`
+     - :strong:`Instrumented services`
+     - :strong:`Databases`
+     - :strong:`Pub/sub queues`
+     - :strong:`Inferred services`
+
+   * - Overview
+     - Yes, includes service metrics, runtime metrics, and infrastructure metrics
+     - Yes, includes only service metrics
+     - Yes, includes only service metrics
+     - Yes, includes only service metrics
+
+   * - Tag Spotlight
+     - Yes
+     - Yes
+     - Yes
+     - Yes
+
+   * - Endpoints
+     - Yes
+     - No
+     - No
+     - Yes
+
+   * - Logs
+     - Yes
+     - Yes
+     - Yes
+     - Yes
+
+   * - Traces
+     - Yes
+     - Yes
+     - Yes
+     - Yes
+
+   * - Database Query Performance
+     - No
+     - Yes. Only displays for Redis and SQL databases.
+     - No
+     - No
+
+   * - Code profiling
+     - Yes
+     - No
+     - No
+     - No
+
+   * - Memory profiling
+     - Yes
+     - No
+     - No
+     - No
+
 
 .. _metric-reference:
 
@@ -303,12 +373,3 @@ Infrastructure metrics
      - * ``k8s.container.ready``
        * ``pod_network_receive_bytes_total``
        * ``pod_network_transmit_bytes_total``
-
-
-
-
-
-
-
-
-
