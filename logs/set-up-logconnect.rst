@@ -58,9 +58,9 @@ In Splunk Observability Cloud, do the following:
 
 Splunk Enterprise
 ----------------------------------------------------------------
-You must create a user and role in your Splunk Enterprise Search Head to serve as a service account for Splunk Observability Cloud.
+You must create a user and role in your Splunk Enterprise search head to serve as a service account for Splunk Observability Cloud.
 
-In your Splunk Enterprise Search Head, follow the instructions in the guided setup for the integration to do the following:
+In your Splunk Enterprise search head, follow the instructions in the guided setup for the integration to do the following:
 
 1. To configure a role in Splunk Enterprise for the Log Observer Connect service account, go to :guilabel:`Settings > Roles`.
       
