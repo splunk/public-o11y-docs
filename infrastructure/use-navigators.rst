@@ -113,18 +113,18 @@ The following example shows you how to navigate from the drilldown view of a sin
 Use Navigator PIN filters
 --------------------------
 
-To ensure quick access to commonly-used filters such as Environment, Service, Region, and Zone, many navigators include a curated list of filters that you can apply through buttons on the bar at the top of evewry navigator home screen. These Navigator PIN filter options are built into the navigator interface and persist across coomputing sessions.
+To ensure quick access to commonly-used filters such as (for EC2 navigators) Environment, Service, Region, and Zone, many navigators include a curated list of filters that you can apply through buttons on the bar at the top of evewry navigator home screen. PIN filter options vary from one navigator to another. They're built into the navigator interface and persist across coomputing sessions.
 
 To apply a Navigator PIN filter, do the following:
 
 #. On the Infrastructure Monitoring landing page, select a navigator to open it.
 #. At the navigator home screen (sometimes called a landing page), select the pinned filter you want.
 #. In the drop-down menu of suggested building blocks for that filter, click the checkboxes for the conditions you want to apply. You can select all the conditions at once, or add conditions through individual clicks on those you want.
-#. (Optional) Repeat steps 2 through 4 to apply another PIN filter.
+#. (Optional) Repeat steps 2 and 3 to apply another PIN filter.
 
-Data in the navigator automatically refreshes to reflect the application of whatever filter and conditions you selected. 
+Data in the navigator automatically reflects the application of whatever filter selections you make. 
 
-.. note:: You can apply more than one filter to the dataset for your navigator. Filter settings build on each other.
+.. note:: You can apply more than one filter to the dataset for your navigator. Filter settings build on each other. If you manually apply a filter to a field that is already part of a navigator PIN filter calculation, manually-applied values are added to the values in the PIN filter.
 
 
 .. _dashboard-section:
