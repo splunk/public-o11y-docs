@@ -8,7 +8,7 @@ Use the service view for a complete view of your service health
 
 As a service owners you can use the service view in Splunk APM to get a complete view of your service health in a single pane of glass. The service view includes a service-level indicator (SLI) for availability, dependencies, request, error, and duration (RED) metrics, runtime metrics, infrastructure metrics, Tag Spotlight, endpoints, and logs for a selected service. You can also quickly navigate to code profiling and memory profiling for your service from the service view. 
 
-.. note:: The service view is available for instrumented services that send spans with a ``service.name`` value.
+The service view is available for instrumented services, pub/sub queues, databases, and inferred services.  
 
 Access the service view for your service
 ===========================================
