@@ -124,7 +124,7 @@ To apply a Navigator PIN filter, do the following:
 
 Data in the navigator automatically refreshes to reflect the application of whatever filter and conditions you selected. 
 
-<note>You can apply more than one filter to the dataset for your navigator. </note>
+.. note:: You can apply more than one filter to the dataset for your navigator. Filter settings build on each other.
 
 
 .. _dashboard-section:
