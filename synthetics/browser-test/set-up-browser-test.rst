@@ -441,7 +441,7 @@ Wait times
 Optimize your test coverage by adding custom wait times to capture longer page loads and improve the accuracy of run results. Applications with long load times can cause a Browser test to fail. If you know that there are certain steps in a workflow that take longer than 10 seconds, add a custom wait time to your Browser test. 
 
 * Wait times are available with Browser tests only. 
-* The maximum cumulative wait time for each test is 200 seconds. 
+* The maximum custom wait time for each test is 200 seconds. 
 
 Follow these steps to configure custom wait times for your Browser tests: 
 
@@ -456,8 +456,10 @@ The following image shows how to configure a test to go to a URL, wait for 10 se
    :alt: This image shows a browser test with three steps: go to url, wait 20 seconds, then log in. 
 
 
+Limits and defaults for configurable wait times 
+------------------------------------------------------
+Here are the limits for each type of wait time. The maximum limit for a run is 30 minutes, afterwhich it times out. 
 
-Here are the limits for each type of wait time. After 30 minutes a run times out. 
 
 .. list-table::
    :header-rows: 1
@@ -471,9 +473,22 @@ Here are the limits for each type of wait time. After 30 minutes a run times out
 
    * - Wait for navigation    
      - 20 seconds 
+
+
+.. list-table::
+   :header-rows: 1
+   :widths: 50 50
+
+   * - :strong:`Description`
+     - :strong:`Default`
+
+   * - Wait time for assert
+     - 10 seconds
+
+   * - Wait for navigation
+     - 2 seconds 
    
-   * - Global timeout for all runs
-     - 30 minutes
+
 
 
 
