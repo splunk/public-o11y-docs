@@ -101,11 +101,31 @@ You can click available related resources that navigate to other Splunk Observab
 
 The following example shows you how to navigate from the drilldown view of a single host to Splunk Log Observer view and back:
 
-#. Select :guilabel:`Navigation menu > Infrastructure`.
+#. Select :guilabel:`Navigation menu` then :guilabel:`Infrastructure`.
 #. Select :guilabel:`Hosts` under :guilabel:`My Data Center`.
 #. Click a square to select a host instance you want to drill down into. For instance, you want to look into the details of a host named ``ip-10-0-3-92.us-west-2.compute.internal``.
 #. Once you are in the drilldown view for ``ip-10-0-3-92.us-west-2.compute.internal``, you can navigate to Splunk Log Observer to see all logs for the same host by clicking :guilabel:`Logs for host ip-10-0-3-92.us-west-2.compute.internal` on the related resources navigation menu.
 #. If you click any log on the list, the related resources navigation menu shows up. To navigate back to the drilldown view for the same host instance, click :guilabel:`Host called ip-10-0-3-92.us-west-2.compute.internal` on the related resources navigation menu.
+
+
+.. _nav-pin-filters:
+
+Use Navigator PIN filters
+--------------------------
+
+To ensure quick access to commonly-used filters such as Environment, Service, Region, and Zone, many navigators include a curated list of filters that you can apply through buttons on the bar at the top of evewry navigator home screen. These Navigator PIN filter options are built into the navigator interface and persist across coomputing sessions.
+
+To apply a Navigator PIN filter, do the following:
+
+#. On the Infrastructure Monitoring landing page, select a navigator to open it.
+#. At the navigator home screen (sometimes called a landing page), select the pinned filter you want.
+#. In the drop-down menu of suggested building blocks for that filter, click the checkboxes for the conditions you want to apply. You can select all the conditions at once, or add conditions through individual clicks on those you want.
+#. (Optional) Repeat steps 2 through 4 to apply another PIN filter.
+
+Data in the navigator automatically refreshes to reflect the application of whatever filter and conditions you selected. 
+
+<note>You can apply more than one filter to the dataset for your navigator. </note>
+
 
 .. _dashboard-section:
 
@@ -136,7 +156,7 @@ The control bar within each navigator lets you modify which instances are shown,
 .. _add-filter:
 
 Add filter
-==========
+===========
 
 Click :guilabel:`Add Filter` to create a filter and view a specific slice of your environment based on dimensions or properties you specify. Filtering is particularly useful for viewing only the instances running a specific service, or in a particular availability zone.
 
@@ -145,7 +165,7 @@ Filters that you apply to your host instances also filter dependencies in the na
 .. _customize-time-range:
 
 Customize time range
-====================
+=====================
 
 By default, you see data from the last three hours. You can use the time picker to select a new time range. When you select a new time range, the navigator updates to show the status of instances during that time.
 
@@ -154,7 +174,7 @@ If the time between the end and start dates of your selected time range is more 
 .. _color-by:
 
 Color by
-========
+=========
 
 Use the :guilabel:`Color by` drop-down menu in the control bar to specify the metric you want to use to color the squares. Square color values vary depending on which Color |hyph| by criteria you choose.
 
@@ -170,7 +190,7 @@ For example, if you select :guilabel:`CPU Utilization`, colors range from green 
 .. _group-by:
 
 Group by
-========
+=========
 
 Use the :guilabel:`Group by` drop-down menu in the control bar to partition instances by the selected dimension or property. As you hover over or select the different options in the list, the instances immediately rearrange themselves in the navigator. This feature lets you do a hierarchical grouping of up to two levels.
 
@@ -181,7 +201,7 @@ When you specify a Group |hyph| by field, you can select a group name to filter 
 .. _outliers:
 
 Find outliers
-=============
+==============
 
 Apply outlier detection to identify instance outliers in your data. Outliers are denoted by the color red based on values of the :ref:`color-by` metric.
 
