@@ -107,10 +107,10 @@ Select :guilabel:`Traces` to view traces for the environment and service you are
 
 Under the charts are lists of :guilabel:`Traces with errors` and :guilabel:`Long traces`. Select the trace ID link to open the trace in trace waterfall view. Select :guilabel:`View more in Trace Analyzer` to search additional traces. See :ref:`trace-analyzer` for more information about using Trace Analyzer to search traces.
 
-View top commands for your databases
-======================================
+View top commands or queries for your databases
+===================================================
 
-If you select a Redis or SQL database from the service dropdown menu, you can select :guilabel:`Database Query Performance` to view top commands for your database. See :ref:`db-query-performance` to learn more. 
+If you select a Redis or SQL database from the service dropdown menu, you can select :guilabel:`Database Query Performance` to view top commands or queries for your database. See :ref:`db-query-performance` to learn more. 
 
 Go to the code profiling view for your service
 =====================================================
