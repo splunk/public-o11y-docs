@@ -19,6 +19,8 @@ Benefits
 
 .. include:: /_includes/benefits.rst
 
+.. note:: Instrumentation adds overhead and can cause increases in response time. To learn more, see :new-page:`How to think about instrumentation overhead <https://community.splunk.com/t5/Product-News-Announcements/Observability-How-to-Think-About-Instrumentation-Overhead-White/ba-p/670727>`
+
 Installation
 ------------
 
