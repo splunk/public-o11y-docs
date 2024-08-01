@@ -34,7 +34,7 @@ Splunk On-Call is incident management software that allows teams to maintain a c
 
 
 
-:new-page:`Mobile app download`: :new-page:`iOS <https://itunes.apple.com/us/app/victorops/id696974262?mt=8>`
+:new-page:`iOS <https://itunes.apple.com/us/app/victorops/id696974262?mt=8>`
 
 :new-page:`Android <https://play.google.com/store/apps/details?id=com.victorops.androidclient&hl=en>`
 

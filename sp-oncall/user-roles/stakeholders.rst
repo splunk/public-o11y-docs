@@ -28,7 +28,7 @@ In Splunk On-Call, you may send messages to Stakeholders and Users from the inci
       :width: 99%
       :alt: Within an incident you can send a message to stakeholders.
 
-To POST updates on incidents to your Stakeholder users via the API, see the sendMessage call found in the :new-page:`API documentation` <https://portal.victorops.com/api-docs/#!/Stakeholders/post_api_public_v1_stakeholders_sendMessage>.
+To POST updates on incidents to your Stakeholder users via the API, see the sendMessage call found in the :new-page:`API documentation <https://portal.victorops.com/api-docs/#!/Stakeholders/post_api_public_v1_stakeholders_sendMessage>`.
 
 Stakeholders Notifications
 -----------------------------------

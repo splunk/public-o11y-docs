@@ -40,7 +40,7 @@ Configure CheckMK
    :alt: Configure CheckMK contact
    :width: 95%
 
-See :new-page:`https://docs.checkmk.com/latest/en/notifications_victorops.html` for more information on integrating and testing.
+See :samp:`https://docs.checkmk.com/latest/en/notifications_victorops.html` for more information on integrating and testing.
 
 Legacy CheckMK (Nagios Core) plugin installation
 =====================================================
