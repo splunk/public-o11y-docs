@@ -56,7 +56,7 @@ Before you start, create a plan for how you want to set up your Splunk Observabi
 
 Gather all the data from your environment in Splunk Observability Cloud to achieve full-stack observability. For information about how to get data in, see :ref:`get-started-get-data-in`.
 
-As a part of getting data in, make sure to consider bringing in data in a way that allows :ref:`get-started-relatedcontent`, a feature that automatically correlates data between different views within Splunk Observability Cloud. When turned on, the Related Content bar displays automatically when a you select a relevant element and lets you take a data-driven investigative approach.
+As a part of getting data in, make sure to consider bringing in data in a way that allows :ref:`get-started-relatedcontent`, a feature that automatically correlates data between different views within Splunk Observability Cloud. When turned on, the Related Content bar displays automatically when you select a relevant element and lets you take a data-driven investigative approach.
 
 To learn more about Splunk Observability Cloud's data model, refer to :ref:`data-model`.
 
