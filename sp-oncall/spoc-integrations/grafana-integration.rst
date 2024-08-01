@@ -81,7 +81,7 @@ For those with Enterprise Splunk On-Call features, you can include the Grafana i
       :alt: include grafana image of alert in victorops
       :width: 65%
 
-#. In Splunk On-Call, go to :guilabel:`Settings` then :guilabel:`Alert Rules Engine` and add the following Rules Engine rule to surface the image_url as an annotation to the incident. Ensure that the image is hosted in a publicly accessible location so that Splunk On-Call can display it. For further information, see :new-page:`Enable images in notification <https://grafana.com/docs/grafana/latest/alerting/old-alerting/notifications/#external-image-store>` in Grafana documentation.
+#. In Splunk On-Call, go to :guilabel:`Settings` then :guilabel:`Alert Rules Engine` and add the following Rules Engine rule to surface the image_url as an annotation to the incident. Ensure that the image is hosted in a publicly accessible location so that Splunk On-Call can display it. For further information, see :new-page:`Use images in notifications <https://grafana.com/docs/grafana/latest/alerting/configure-notifications/template-notifications/images-in-notifications/>` in Grafana documentation.
 
    .. image:: /_images/spoc/Screen-Shot-2020-06-24-at-4.37.01-PM.png
       :width: 65%
