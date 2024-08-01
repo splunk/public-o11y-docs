@@ -11,19 +11,12 @@ Troubleshoot the Collector for Kubernetes
     :hidden:
     :maxdepth: 3
 
-    troubleshoot-k8s-general
-    troubleshoot-k8s-containers
+    troubleshoot-k8s
+    troubleshoot-k8s-container
 
-Deploy the Splunk Distribution of the OpenTelemetry Collector in a Kubernetes cluster and start monitoring your Kubernetes platform using Splunk Observability Cloud.
+To troubleshoot the Splunk Distribution of the OpenTelemetry Collector for Kubernetes see:
 
-.. raw:: html
+* :ref:`troubleshoot-k8s`
+* :ref:`troubleshoot-k8s-container`
 
-    <h2> What's in this tutorial </h2>
-
-After completing this tutorial, you can accomplish the following tasks:
-
-* Install and deploy the Splunk Distribution of OpenTelemetry Collector for Kubernetes.
-* Use the Splunk Distribution of OpenTelemetry Collector to send Kubernetes data to Splunk Observability Cloud.
-* View your Kubernetes cluster data in navigators and dashboards.
-* Create a detector to issue alerts about your Kubernetes cluster data.
 
