@@ -1,8 +1,9 @@
 .. _tshoot-k8s-container-runtimes:
 .. _troubleshoot-k8s:
+.. _troubleshoot-k8s-general:
 
 ***************************************************************
-Troubleshoot the Collector for Kubernetes 
+General troubleshooting for the Collector for Kubernetes 
 ***************************************************************
 
 .. meta::
