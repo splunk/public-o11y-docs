@@ -136,7 +136,7 @@ Org Slug” is the organization identifier.
 
 -  In the **Default RelayState** text box add:
 
-:samp:`https://portal.victorops.com/auth/ulm/sso/<your-org-identifier>`
+   :samp:`https://portal.victorops.com/auth/ulm/sso/<your-org-identifier>`
 
 -  In the field **Organization identifier** enter just the
    org-identifier

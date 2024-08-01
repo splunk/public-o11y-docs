@@ -446,7 +446,7 @@ The Content Type field should be set to application/json
 
 The body of each webhook will vary according to the event-type. Be sure
 to replace your org slug (organization id found in the url of victorops,
-e.g. https://portal.victorops.com/dash/<org_slug>/outgoing-webhooks) in
+such as :samp: `https://portal.victorops.com/dash/<org_slug>/outgoing-webhooks`) in
 all instance of <org_slug>.
 
 --------------

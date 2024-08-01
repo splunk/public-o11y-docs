@@ -85,7 +85,7 @@ How to break your SSO linkage
 
 If you are receiving an error when trying to log into Splunk On-Call through SSO you may need to break the linkage between your Splunk On-Call username and password and your SSO provider.
 
-To break the linkage, ensure you are signed in to your IDP and then paste the following link into the address bar of your browser: https://portal.victorops.com/do-defederation . If the link between your Splunk On-Call credentials and your SSO provider is successfully broken, you will see the error, shown below.
+To break the linkage, ensure you are signed in to your IDP and then paste the following link into the address bar of your browser: :samp: `https://portal.victorops.com/do-defederation` . If the link between your Splunk On-Call credentials and your SSO provider is successfully broken, you will see the error, shown below.
 
 .. note:: You may have to paste the defederation link into your browser multiple times before the below error message will appear.
 
