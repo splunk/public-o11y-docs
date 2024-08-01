@@ -290,7 +290,7 @@ On-Prem Instance
 
    <td style="width: 398px;">
 
-https://<host>:8088/services/collector
+:samp:`https://<host>:8088/services/collector`
 
 .. raw:: html
 
@@ -318,7 +318,7 @@ Self-Service Splunk Cloud Instance
 
    <td style="width: 398px;">
 
-https://input-<host>:8088/services/collector
+:samp:`https://input-<host>:8088/services/collector`
 
 .. raw:: html
 
@@ -346,7 +346,7 @@ All Other Splunk Cloud Instances
 
    <td style="width: 398px;">
 
-https://http-inputs-<host>:8088/services/collector
+:samp:`https://http-inputs-<host>:8088/services/collector`
 
 .. raw:: html
 
