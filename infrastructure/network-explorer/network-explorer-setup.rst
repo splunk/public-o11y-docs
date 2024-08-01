@@ -9,7 +9,7 @@ Set up Network Explorer in Kubernetes
 
 .. note:: 
   
-  Network Explorer is no longer covered under Splunk support. Feature updates, security, or bug fixes are not bound by any SLAs.
+  While the Network Explorer navigator is still supported, the upstream OpenTelemetry eBPF Helm chart is no longer covered under official Splunk support. Any feature updates, security, or bug fixes to it are not bound by any SLAs.
   
   If you wish to continue using Network Explorer to see data in Splunk Observability Cloud, point the upstream eBPF Helm chart to the OpenTelemetry Collector running as a gateway. 
 
