@@ -12,7 +12,7 @@ Navigate to related resources with data links
 This topic shows you how to configure data links in charts and dashboards as well as how to use them to navigate to related resources. To learn more about data links, see :ref:`data-link-def`.
 
 .. note::
-    You can configure data links only for dashboards and charts you have write permissions for. For example, you can't configure data links for built-in dashboards and mirrors of dashboards. To learn more, see :ref:`about-permissions`.
+    You can configure data links only for navigators, dashboards, and charts you have write permissions for. For example, you can't configure data links for built-in dashboards and mirrors of dashboards. To learn more, see :ref:`about-permissions`.
 
 .. _local-global:
 
