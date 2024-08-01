@@ -11,12 +11,17 @@ Troubleshoot the Collector for Kubernetes
     :hidden:
     :maxdepth: 3
 
-    troubleshoot-k8s
-    troubleshoot-k8s-container
+    Debugging and logs <troubleshoot-k8s>
+    Sizing <troubleshoot-k8s-sizing>
+    Missing metrics <troubleshoot-k8s-missing-metrics>
+    Container runtime compatibility <troubleshoot-k8s-container>
+    
 
 To troubleshoot the Splunk Distribution of the OpenTelemetry Collector for Kubernetes see:
 
 * :ref:`troubleshoot-k8s`
+* :ref:`troubleshoot-k8s-sizing`
+* :ref:`troubleshoot-k8s-missing-metrics`
 * :ref:`troubleshoot-k8s-container`
 
 

@@ -10,11 +10,15 @@ General troubleshooting for the Collector for Kubernetes
     :description: Describes troubleshooting specific to the Collector for Kubernetes.
 
 .. note:: 
-    
-    For general troubleshooting, see :ref:`otel-troubleshooting`. 
-    To troubleshoot issues with your Kubernetes containers, see :ref:`troubleshoot-k8s-container`.
+  
+  See also:
 
-Debug logging for the Splunk Otel Collector in Kubernetes
+  * :ref:`otel-troubleshooting`  
+  * :ref:`troubleshoot-k8s-sizing`
+  * :ref:`troubleshoot-k8s-missing-metrics`
+  * :ref:`troubleshoot-k8s-container`
+
+Debug logging for the Splunk Opentelemetry Collector in Kubernetes
 =============================================================================================
 
 You can change the logging level of the Collector from ``info`` to ``debug`` to help you troubleshoot. 
@@ -56,27 +60,4 @@ To view logs, use:
 
   kubectl logs {splunk-otel-collector-agent-pod}
 
-Size your Collector instance
-=============================================================================================
 
-Set the resources allocated to your Collector instance based on the amount of data you expecte to handle. For more information, see :ref:`otel-sizing`.
-
-Use the following configuration to bump resource limits for the agent:
-
-.. code-block:: yaml
-
-  agent:
-    resources:
-      limits:
-        cpu: 500m
-        memory: 1Gi
-
-Set the resources allocated to your cluster receiver deployment based on the cluster size. For example, for a cluster with 100 nodes alllocate these resources:
-
-.. code-block:: yaml
-
-  clusterReceiver:
-    resources:
-      limits:
-        cpu: 1
-        memory: 2Gi
