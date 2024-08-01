@@ -82,7 +82,7 @@ The following tables list all of the metrics available in Splunk RUM for Browser
      - The total number of page views and route changes sorted by page for the given time range.
    * - ``rum.page_view.time.ns.p75``
      - Page views and route change duration
-     - ``rum.node.rum.page_view.time.ns.p75``
+     - ``rum.node.page_view.time.ns.p75``
      - The p75 time in nanoseconds of the document load and, or, the route change time for the given time range. Route changes in Splunk RUM are events with zero second durations. For more, see :ref:`browser-rum-data-doc-load`.
    * - ``rum.client_error.count``
      - JavaScript errors
@@ -92,13 +92,13 @@ The following tables list all of the metrics available in Splunk RUM for Browser
      - Largest contentful paint (LCP) Time 
      - ``rum.node.webvitals_lcp.time.ns.p75``
      - The p75 time of the LCP in nanoseconds for the given time range.
-   * - ``rum.webvitals_fid.time.ns.p75``
+   * - ``rum.webvitals_inp.time.ns.p75``
      - INP (Interaction to next paint)
-     - ``rum.node.rum.webvitals_fid.time.ns.p75``
+     - ``rum.node.rum.webvitals_inp.time.ns.p75``
      - The p75 time of the INP in nanoseconds for the given time range. 
    * - ``rum.webvitals_cls.score.p75``
      - Cumulative layout shift (CLS) 
-     -  ``rum.node.rum.webvitals_cls.score.p75``
+     -  ``rum.node.webvitals_cls.score.p75``
      - The p75 time of the CLS in nanoseconds for the given time range. 
    * - ``rum.long_task.count``
      - Long task count 
