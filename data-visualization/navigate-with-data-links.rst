@@ -61,6 +61,7 @@ When you view properties in a chart on a dashboard, either in the data table or 
 #. Select the type of destination to link to:
 
     - Infrastructure Monitoring Dashboard: You have to select the dashboard in a following step.
+    - Infrastructure Monitoring Navigator: You have to select the navigator in a following step.    
     - Splunk: A Splunk search for a property:value pair.
     - Kibana: You have to create the URL template for the link in a following step.
     - Custom URL: Any URL-addressable destination.
