@@ -93,9 +93,9 @@ For information about how to create a global data link for Splunk APM properties
 
     - :strong:`Splunk`: Links to Splunk Cloud Platform or Splunk Enterprise.
 
-    - :strong:`Splunk Observability Cloud Dashboard`: Links to a dashboard in Splunk Observability Cloud. Select :strong:`Choose Dashboard` to select the dashboard you want to link to.
-
     - :strong:`Splunk Observability Cloud Navigator`: Links to a navigator in Splunk Observability Cloud. Select :strong:`Choose Navigator` to select the navigator you want to link to.
+
+    - :strong:`Splunk Observability Cloud Dashboard`: Links to a dashboard in Splunk Observability Cloud. Select :strong:`Choose Dashboard` to select the dashboard you want to link to.
 
     - :strong:`Kibana`: Links to a Kibana log.
 

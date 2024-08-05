@@ -7,7 +7,7 @@ Link APM services, traces, and spans to relevant resources
 .. meta::
    :description: An overview of global data links for services, traces, and spans to other resources.
 
-Create global data links to link Splunk APM properties, such as services, traces, spans, and span tags, to relevant resources. For example, you can link APM properties to Infrastructure Monitoring dashboards and navigators, Splunk instances, Kibana logs, or custom URLs.
+Create global data links to link Splunk APM properties, such as services, traces, spans, and span tags, to relevant resources. For example, you can link APM properties to Infrastructure Monitoring navigators and dashboards, Splunk instances, Kibana logs, or custom URLs.
 
 You can also use global data links to dynamically transfer contextual information about the property you're viewing to the linked resource, helping you get to relevant information faster.
 
@@ -56,6 +56,20 @@ When you create a global data link for an APM property, you can transfer the con
      - A field-value pair that describes the span. Use span tags to describe the span. Specify the tags when you configure instrumentation for the service. You can also specify span tags in the Splunk Distribution of OpenTelemetry Collector (or the Smart Agent, now deprecated) configuration. 
 
 
+Link APM properties to Splunk Infrastructure Monitoring navigators
+=====================================================================
+
+The following task describes how to create a global data link for a service that links to an Infrastructure Monitoring navigator. You can set up a global data link for any service or a specific service.
+
+#. In the Splunk Observability Cloud main menu, select :guilabel:`Settings` then :guilabel:`Global Data Links`.
+#. Select :strong:`New Link`.
+#. Enter a :strong:`Link Label`. This is what you select when you want to use the global data link to drill down into a specific service.
+#. For :strong:`Show On`, select :strong:`Any Value of` and enter :strong:`sf_service` to associate the global data link with every service. If you want to create the global data link for a specific service, select :strong:`Property:Value Pair` and enter :strong:`sf_service:<yourServiceName>` for the service you want to create the global data link for.
+#. If you want the global data link to display based on the :strong:`Show On` value and 1 or more additional conditions, select :strong:`Add Conditions`. To define a condition based on a property name, select :strong:`Any Value of` and enter a property name. To define a condition based on a property name and a specific value, select :strong:`Property:Value Pair` and enter a property name and value pair. If you define multiple conditions, all conditions must be met for the link to display.
+#. Select :strong:`Choose Navigator` and select the navigator you want to associate with the global data link.
+#. Select :strong:`Save`. When you view a service that matches the :strong:`Show On` value, you can carry the entire context of the service to the navigator.
+
+
 Link APM properties to Splunk Infrastructure Monitoring dashboards
 =====================================================================
 
@@ -70,19 +84,6 @@ The following task describes how to create a global data link for a service that
 #. If you want the global data link to display based on the :strong:`Show On` value and 1 or more additional conditions, select :strong:`Add Conditions`. To define a condition based on a property name, select :strong:`Any Value of` and enter a property name. To define a condition based on a property name and a specific value, select :strong:`Property:Value Pair` and enter a property name and value pair. If you define multiple conditions, all conditions must be met for the link to display.
 #. Select :strong:`Choose Dashboard` and select the dashboard you want to associate with the global data link.
 #. Select :strong:`Save`. When you view a service that matches the :strong:`Show On` value, you can carry the entire context of the service to the dashboard.
-
-Link APM properties to Splunk Infrastructure Monitoring navigators
-=====================================================================
-
-The following task describes how to create a global data link for a service that links to an Infrastructure Monitoring navigator. You can set up a global data link for any service or a specific service.
-
-#. In the Splunk Observability Cloud main menu, select :guilabel:`Settings` then :guilabel:`Global Data Links`.
-#. Select :strong:`New Link`.
-#. Enter a :strong:`Link Label`. This is what you select when you want to use the global data link to drill down into a specific service.
-#. For :strong:`Show On`, select :strong:`Any Value of` and enter :strong:`sf_service` to associate the global data link with every service. If you want to create the global data link for a specific service, select :strong:`Property:Value Pair` and enter :strong:`sf_service:<yourServiceName>` for the service you want to create the global data link for.
-#. If you want the global data link to display based on the :strong:`Show On` value and 1 or more additional conditions, select :strong:`Add Conditions`. To define a condition based on a property name, select :strong:`Any Value of` and enter a property name. To define a condition based on a property name and a specific value, select :strong:`Property:Value Pair` and enter a property name and value pair. If you define multiple conditions, all conditions must be met for the link to display.
-#. Select :strong:`Choose Navigator` and select the navigator you want to associate with the global data link.
-#. Select :strong:`Save`. When you view a service that matches the :strong:`Show On` value, you can carry the entire context of the service to the navigator.
 
 
 .. _apm-create-gdl-to-splunk:
@@ -151,6 +152,8 @@ Learn more
 Link databases and inferred services to Infrastructure Monitoring dashboards
 ===============================================================================
 
-Create a global data link specifically for a single inferred service to associate a dashboard with the inferred service as the top-ranked dashboard. The top-ranked dashboard is the :strong:`View Dashboard` option in the :strong:`Monitoring` tab when you view a service from the service list or service map. Triggers for global data links for dashboards that use wildcards (:strong:`*`) for service names can't be top-ranked dashboards for inferred services.
+Create a global data link specifically for a single inferred service to associate a navigator or dashboard with the inferred service as the top-ranked navigator or dashboard. The top-ranked entity is the :strong:`View Navigator/View Dashboard` option in the :strong:`Monitoring` tab when you view a service from the service list or service map. 
 
-For example, a dashboard associated with a global data link that contains a :strong:`Show On` value of ``sf_service:*`` can't be a top-ranked dashboard for an inferred service. To create a global data link that acts as a default dashboard for an inferred service from the :strong:`Monitoring` tab, the :strong:`Show On` value must include the name of the inferred service. For instance, if you are creating a global data link for a default dashboard for the inferred service ``mydb``, the :strong:`Show On` value must be ``sf_service:mydb``.
+Triggers for global data links for navigators or dashboards that use wildcards (:strong:`*`) for service names can't be top-ranked navigators or dashboards for inferred services.
+
+For example, a navigator or dashboard associated with a global data link that contains a :strong:`Show On` value of ``sf_service:*`` can't be a top-ranked navigator or dashboard for an inferred service. To create a global data link that acts as a default navigator or dashboard for an inferred service from the :strong:`Monitoring` tab, the :strong:`Show On` value must include the name of the inferred service. For example, if you are creating a global data link for a default navigator or dashboard for the inferred service ``mydb``, the :strong:`Show On` value must be ``sf_service:mydb``.

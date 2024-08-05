@@ -12,7 +12,7 @@ Navigate to related resources with data links
 This topic shows you how to configure data links in charts and dashboards as well as how to use them to navigate to related resources. To learn more about data links, see :ref:`data-link-def`.
 
 .. note::
-    You can configure data links only for navigators, dashboards, and charts you have write permissions for. For example, you can't configure data links for built-in dashboards and mirrors of dashboards. To learn more, see :ref:`about-permissions`.
+    You can configure data links only for dashboards and charts you have write permissions for. For example, you can't configure data links for built-in dashboards and mirrors of dashboards. To learn more, see :ref:`about-permissions`.
 
 .. _local-global:
 
@@ -60,8 +60,8 @@ When you view properties in a chart on a dashboard, either in the data table or 
 
 #. Select the type of destination to link to:
 
+    - Infrastructure Monitoring Navigator: You have to select the navigator in a following step.
     - Infrastructure Monitoring Dashboard: You have to select the dashboard in a following step.
-    - Infrastructure Monitoring Navigator: You have to select the navigator in a following step.    
     - Splunk: A Splunk search for a property:value pair.
     - Kibana: You have to create the URL template for the link in a following step.
     - Custom URL: Any URL-addressable destination.
@@ -147,9 +147,9 @@ For example, suppose Link C is a local data link triggered by ``service:analytic
 Default links override non-default links
 ----------------------------------------------------------------------------------
 
-If there are multiple, equally-specific triggers that go to Infrastructure Monitoring dashboards for a property, clicking the property value follows the link that has been specified as the default.
+If there are multiple, equally-specific triggers that go to Infrastructure Monitoring navigators or dashboards for a property, clicking the property value follows the link that has been specified as the default.
 
-For example, suppose two links are triggered by any value of ``host``, but they have different destination dashboards. One link is designated as the default; clicking on any value of ``host`` follows the link to the default destination.
+For example, suppose two links are triggered by any value of ``host``, but they have different destination navigators or dashboards. One link is designated as the default; clicking on any value of ``host`` follows the link to the default destination.
 
 To change the default link for a trigger, expand the link for the desired default destination so you can see its settings, then open the :strong:`Actions` menu and select :guilabel:`Make default`.
 
@@ -180,7 +180,7 @@ About defining data links
 
 - If a link target is a Splunk Infrastructure Monitoring dashboard, you can follow the link by clicking on the property value.
 
-- If a property is linked to multiple target dashboards, a few factors determine which dashboard are opened when you click on the property value; see :ref:`click-on-link`.
+- If a property is linked to multiple target navigators or dashboards, a few factors determine which navigators or dashboards are opened when you click on the property value; see :ref:`click-on-link`.
 
 - If your organization has the permissions feature available, you can define or remove local data links only if you have write permissions for the source dashboard. However, you don't need write permissions for the target dashboard. To learn more, see :ref:`about-permissions`.
 
