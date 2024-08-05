@@ -65,7 +65,7 @@ The following table shows third-party service integrations
    * - xMatters
      - See :ref:`xmatters`.
 
-The following table shows Splunk service integrations
+The following table shows Splunk service integrations:
 
 .. list-table::
    :header-rows: 1
