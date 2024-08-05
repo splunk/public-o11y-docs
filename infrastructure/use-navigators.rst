@@ -108,28 +108,6 @@ The following example shows you how to navigate from the drilldown view of a sin
 #. If you click any log on the list, the related resources navigation menu shows up. To navigate back to the drilldown view for the same host instance, click :guilabel:`Host called ip-10-0-3-92.us-west-2.compute.internal` on the related resources navigation menu.
 
 
-.. _nav-pin-filters:
-
-Use Navigator PIN filters
---------------------------
-
-To ensure quick access to commonly-used filters, many navigators include a curated set of filters that you can apply through buttons on the bar at the top of the navigator home screen. Navigator PIN filters are built into the interface.
-
-
-PIN filter options vary from one navigator to another. For example, PIN filters for EC2 navigators (such as Environment, Service, Region, and Zone) are not identical to PIN filters for Kubernetes navigators, because Kubernetes artifacts are sorted by Cluster and Namespace rather than Region and Zone. 
-
-To apply a Navigator PIN filter, do the following:
-
-#. On the Infrastructure Monitoring landing page, select a navigator to open it.
-#. At the navigator home screen (sometimes called a landing page), select the pinned filter you want.
-#. In the drop-down menu of suggested building blocks for that filter, click the checkboxes for the conditions you want to apply. You can select all the conditions at once, or add conditions through individual clicks on those you want.
-#. (Optional) Repeat steps 2 and 3 to apply another PIN filter.
-
-Data in the navigator automatically reflects the application of whatever filter selections you make. 
-
-.. note:: You can apply more than one filter to the dataset for your navigator. Filter settings build on each other. If you manually apply a filter to a field that is already part of a navigator PIN filter calculation, manually-applied values are added to the values in the PIN filter.
-
-
 .. _dashboard-section:
 
 Use the Dashboard section
@@ -155,6 +133,28 @@ Customize navigator display
 -----------------------------
 
 The control bar within each navigator lets you modify which instances are shown, how they are grouped, which metric you are focusing on, and so on.
+
+.. _nav-pin-filters:
+
+Use Navigator pinned filters
+=============================
+
+To ensure quick access to commonly-used filters, many navigators include a curated set of filters that you can apply through buttons on the bar at the top of the navigator home screen. Navigator pinned filters are built into the interface.
+
+
+Pin filter options vary from one navigator to another. For example, pinned filters for EC2 navigators (such as Environment, Service, Region, and Zone) are not identical to the set of pinned filters for Kubernetes navigators, because Kubernetes artifacts are sorted by Cluster and Namespace rather than Region and Zone. 
+
+To apply a Navigator pinned filter, do the following:
+
+#. On the Infrastructure Monitoring landing page, select a navigator to open it.
+#. At the navigator home screen, select the pinned filter you want.
+#. In the drop-down menu of suggested building blocks for that filter, click the checkboxes for the conditions you want to apply. You can select all the conditions at once, or add conditions through individual clicks on those you want.
+#. (Optional) Repeat steps 2 and 3 to pin another relevant filter.
+
+Data in the navigator automatically reflects the application of whatever filter selections you make. 
+
+.. note:: You can apply more than one filter to the dataset for your navigator. Filter settings build on each other. If you manually apply a filter to a field that is already part of a navigator pin filter calculation, the manually-applied values are added to the values in the pin filter.
+
 
 .. _add-filter:
 
