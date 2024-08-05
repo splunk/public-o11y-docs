@@ -72,7 +72,7 @@ If you need to verify and trust your software package, use the following public 
   VbbHBd5Xo9Ge5BjwXOcoDhvUQqNJdLBJruhvhn7Ogy5Paw5TGhdawfjxT2yXeqbE
   Juv6qdo/mSimkpR8lkQT7OsfAQbCPeyFvZKb22hXj6tCTVJncwCJLe/FBdXJhRep
   Y6NEdmKZLGodXv4zLNVr7SkCAwEAAQ==
-  -----END PUBLIC KEY----
+  -----END PUBLIC KEY-----
 
 For older Collector versions, use this public key: 
 
