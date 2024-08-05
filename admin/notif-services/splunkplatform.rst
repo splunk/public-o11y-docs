@@ -246,39 +246,39 @@ Apart from using template variables to customize your payload, you can also use 
        * ``6``: Critical
        * ``empty``: Unknown severity
      
-     - | {{{severityDecoder ok='ok' Major='not_ok' default='empty'}}}
+     - | ``{{{severityDecoder ok='ok' Major='not_ok' default='empty'}}}``
        | This example overrides the default return values and customizes them.
 
    * - ``encodeString``	
      - Escapes quote and newline characters in a string.	
-     - {{{encodeString messageTitle}}}
+     - ``{{{encodeString messageTitle}}}``
    
    * - ``notEmpty``
      - Adds text to a payload only if the value specified is not empty map. This function only works with the ``inputs`` and ``dimensions`` variables.	
      - | This example only prints if dimensions is not empty: {{#notEmpty dimensions}}
-       | {{/notEmpty}}
+       | ``{{/notEmpty}}``
       
    * - ``json``
      - Converts a string to a raw JSON value. Use this function to turn text from a detector into a JSON payload that can be evaluated in third-party integrations.	
-     - {{{json dimensions}}}
+     - ``{{{json dimensions}}}``
    
    * - ``substring``
      - Returns a new character sequence that is a subsequence of this sequence. The subsequence starts with the character at the specified index and ends with the character at the second to last index.	
-     - | {{substring var 1}}
-       | {{substring var 1 3}}
+     - | ``{{substring var 1}}``
+       | ``{{substring var 1 3}}``
 
    * - ``abbreviate``
      - Truncates a string if it is longer than the specified number of characters. Minimum abbreviation width is 4.	
-     - {{abbreviate long_str 5}}
+     - ``{{abbreviate long_str 5}}``
 
    * - ``replace``
      - Replaces each substring of this string that matches the literal target sequence with the specified literal replacement sequence.	
-     - {{replace abbreviated '...' ''}}
+     - ``{{replace abbreviated '...' ''}}``
 
    * - ``eq``
      - Checks if two elements are equal.	
      - | ``{{#eq a b}}yes{{else}}no{{/eq}}``
-       | {{#eq a 2}}yes{{else}}no{{/eq}}
+       | ``{{#eq a 2}}yes{{else}}no{{/eq}}``
 
 
      
