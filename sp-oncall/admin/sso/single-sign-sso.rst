@@ -67,10 +67,10 @@ Azure Active Directory (SAML-based Sign-on)
 
 If you are configuring SSO for Azure Active Directory, use the following values:
 
--  Identifier: https://victorops.com
--  Reply URL: https://sso.victorops.com/sp/ACS.saml2
--  Sign on URL: https://portal.victorops.com/auth/sso/<<org-slug-here>>
--  Relay State: https://portal.victorops.com/auth/sso/<<org-slug-here>>
+-  Identifier: :samp:`https://victorops.com`
+-  Reply URL: :samp:`https://sso.victorops.com/sp/ACS.saml2`
+-  Sign on URL: :samp:`https://portal.victorops.com/auth/sso/<<org-slug-here>>`
+-  Relay State: :samp:`https://portal.victorops.com/auth/sso/<<org-slug-here>>`
 
 
 .. _sso-aws-spoc:

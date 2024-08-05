@@ -74,8 +74,7 @@ In Catchpoint
 .. image:: /_images/spoc/Screenshot-2017-05-18-15.43.31.png
    :alt: An arrow points to a green buttoned stating "Save".
 
-If you're looking for additional variables to add to your payload,
-seek out the Alert Webhook Macros in :new-page:`the support section of the Catchpoint platform <https://support.catchpoint.com/>`.
+If you're looking for additional variables to add to your payload, log into your Catchpoint account and seek out the Alert Webhook Macros.
 You can add as many variables as you want, but customizing the
 parameters of the existing Template might result in degraded
 functionality.
