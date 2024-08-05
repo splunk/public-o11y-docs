@@ -5,7 +5,7 @@ Contribute to Splunk Observability Cloud documentation
 *********************************************************************
 
 .. meta::
-   :description: Anyone can update the the Splunk Observability Cloud documentation by adding examples, documenting new settings, or fixing issues. Read on to learn how to edit the documentation.
+   :description: Anyone can update the Splunk Observability Cloud documentation by adding examples, documenting new settings, or fixing issues. Read on to learn how to edit the documentation.
 
 You can update the Splunk Observability Cloud documentation to fix typos or other issues, add examples, or document new settings. You can also submit deeper changes, such as conceptual explanations, diagrams, and even entire new topics that can benefit all users.
 

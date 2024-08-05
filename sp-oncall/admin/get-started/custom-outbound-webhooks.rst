@@ -143,8 +143,8 @@ Here, select the Event you want the webhook to fire on in addition to the Method
 
 In the “To:” field, you'll paste in your destination URL while replacing the part you'd pasted in the Rules Engine rule with ${{ALERT.vo-webhook-field}}.
 
-In this example, the full destination URL we want the webhook to go to is “https://dev.oscato.com/2tn6xfh” and we'd put “oscato.com” in the Rules Engine rule, so the complete “To:” URL will be
-“https://dev.${{ALERT.vo-webhook-field}}/2tn6xfh”
+In this example, the full destination URL we want the webhook to go to is “:samp:`https://dev.oscato.com/2tn6xfh`” and we'd put “:samp:`oscato.com`” in the Rules Engine rule, so the complete “To:” URL will be
+“:samp:`https://dev.${{ALERT.vo-webhook-field}}/2tn6xfh`”
 
 This will make it so that the URL is only complete (thus allowing the webhook to successfully fire) when the “vo-webhook-field” is present, which will only be present when the Rules Engine matching condition is
 met.
