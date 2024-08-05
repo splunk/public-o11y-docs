@@ -79,4 +79,4 @@ Learn more
 
 For more information about creating an SLO, see :ref:`create-slo`. 
 
-For more information about Synthetics Browser test, see :ref:`browser-test`.
+For more information about the Synthetics Browser test, see :ref:`browser-test`.
