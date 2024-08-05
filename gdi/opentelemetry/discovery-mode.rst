@@ -113,5 +113,8 @@ Automatic discovery supports the following host services and applications:
    * - Kafka
      - Kafka metrics receiver. See :ref:`kafkametrics-receiver`
 
+   * - Microsoft SQL Server
+     - Microsoft SQL Server receiver. See :ref:`mssql-server-receiver`
+
 
 
