@@ -45,7 +45,8 @@ Prerequisites
 
 You need the following resources to use the chart:
 
-* :new-page:`Helm 3 <https://helm.sh/docs/intro/install/>`. Helm 2 is not supported.
+* :new-page:`Helm 3 <https://helm.sh/docs/intro/install/>`. Helm 2 is not supported. For more information on the version skew supported between Helm and Kubernetes see :new-page:`Helm Version Support Policy <https://helm.sh/docs/topics/version_skew/>`.
+
 * Administrator access to your Kubernetes cluster.
 
 .. _collector-k8s-destination:
@@ -70,7 +71,7 @@ Depending on your destination, you need:
    * ``splunkObservability.accessToken``. Your Splunk Observability Cloud org access token with ingest authorization scope. See :ref:`admin-org-tokens`.
    * ``splunkObservability.realm``. Splunk realm to send telemetry data to. The default is ``us0``. See :new-page:`realms <https://dev.splunk.com/observability/docs/realms_in_endpoints/>`.
 
-.. note:: The default Splunk platform index used by the Collector for Kubernetes is ``main``.
+.. note:: The Collector for Kubernetes uses ``main`` as the default Splunk platform index.
 
 Deploy the Helm chart
 ==============================================
@@ -170,7 +171,7 @@ Add this configuration in the resources file for any pods in the deployment:
 Verify the deployment
 ==============================================
 
-If the chart is deployed successfully, the output displays a message informing that the Splunk Distribution of OpenTelemetry Collector for Kubernetes is being deployed in your Kubernetes cluster, the last deployment date, and the status.
+If the chart is deployed successfully, the output displays a message informing that the Splunk Distribution of the OpenTelemetry Collector for Kubernetes is being deployed in your Kubernetes cluster, the last deployment date, and the status.
 
 .. _k8s-operator:
 
@@ -183,14 +184,14 @@ This instance of the Kubernetes Operator is part of the upstream OpenTelemetry O
 
 .. note:: The upstream Kubernetes Operator is not related to the Splunk Operator for Kubernetes, which is used to deploy and operate Splunk Enterprise deployments in a Kubernetes infrastructure.
 
-Splunk Distribution for the Kubernetes Operator (Alpha)
---------------------------------------------------------
+Splunk Distribution of the OpenTelemetry Collector for Kubernetes Operator (Alpha)
+--------------------------------------------------------------------------------------------------------
 
 .. caution::
 
    This project is Alpha. Do not use in production.
 
-The Splunk Distribution of OpenTelemetry Collector for Kubernetes Operator is the Splunk Observability Cloud implementation of a Kubernetes Operator, and it helps deploy and manage the Splunk Distribution of the OpenTelemetry Collector for Kubernetes. See the :new-page:`README file <https://github.com/signalfx/splunk-otel-collector-operator>` in GitHub for installation instructions.
+The Splunk Distribution of the OpenTelemetry Collector for Kubernetes Operator is Splunk Observability Cloud's implementation of a Kubernetes Operator, and it helps deploy and manage the Splunk Distribution of the OpenTelemetry Collector for Kubernetes. See the :new-page:`README file <https://github.com/signalfx/splunk-otel-collector-operator>` in GitHub for installation instructions.
 
 Next steps
 ==================================
