@@ -17,7 +17,7 @@ Use custom metric as service level indicator (SLI)
 
 From the :guilabel:`Detectors & SLOs` page, Kai configures the SLI and sets up a target for their SLO. Kai follows these steps: 
 
-#. Kai wants to use custom metrics as the system health indicators, so they select the :guilabel:`Custom metric` from the :guilabel:`Metric type` dropdown menu.
+#. Kai wants to use custom metrics as the system health indicators, so they select the :guilabel:`Custom metric` from the :guilabel:`Metric type` menu.
 #. Kai enters the custom metrics they want to measure in the following fields:
 
     .. list-table::
