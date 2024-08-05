@@ -60,7 +60,7 @@ From the :guilabel:`Detectors & SLOs` page, Kai configures the SLI and sets up a
 
         * - :guilabel:`Compliance window`
           - :strong:`Last 30 days`
-          - Kai wants to track this SLO over the past 30 days
+          - Kai wants to track this SLO over the past 30 days.
 
 #. Kai subscribes to receive an alert whenever there is a breach event for the SLO target.
 
