@@ -56,7 +56,7 @@ From the :guilabel:`Detectors & SLOs` page, Kai configures the SLI and sets up a
 
         * - :guilabel:`Target (%)`
           - :strong:`99.9`
-          - Kai wants to measure the Emby service successful request rate against a 99.9% target
+          - Kai wants to measure the Emby service successful request rate against a 99.9% target.
 
         * - :guilabel:`Compliance window`
           - :strong:`Last 30 days`
