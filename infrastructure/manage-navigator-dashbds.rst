@@ -21,7 +21,7 @@ Use :guilabel:`Manage navigator dashboards` to find dashboards that you can add 
 
 As an admin user, you can access :guilabel:`Manage navigator dashboards` in either of the following ways:
 
-- From the drop-down menu displayed when you select the gear icon on the Infrastructure Navigabor home page.
+- From the drop-down menu displayed when you select the gear icon on the Infrastructure Navigator home page.
 
 - From the ellipses at the right side of a navigator title bar.
 

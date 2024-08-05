@@ -173,7 +173,7 @@ From the web portal select :guilabel:`Settings`, :guilabel:`Alert Rules`, :guila
 Set the rule to match on the alerts you want to create Jira tickets from. Next, add an Annotation and select the URL type. Give it a name and then build a custom create Jira ticket using documentation from Atlassian here:
 
 `Altassian
-Documentation <https://confluence.atlassian.com/display/JiraKB/Creating+Issues+via+direct+HTML+links>`__
+Documentation <https://confluence.atlassian.com/jirakb/how-to-create-issues-using-direct-html-links-in-jira-server-159474.html>`__
 
 You can use variable expansion within the Rules Engine to build the URL in a way that pulls in information for the ticket dynamically. The exact format of the necessary URL is highly variable based on your specific Jira environment. The following are some examples where we set the Description, Summary and Label fields.
 

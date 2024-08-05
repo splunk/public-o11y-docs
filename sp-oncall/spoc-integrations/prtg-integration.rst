@@ -170,7 +170,7 @@ selecting one, and selecting "simulate error status". This creates through to Sp
 Troubleshooting
 ---------------
 
-Make sure you have the :new-page:`latest version of Powershell <https://docs.microsoft.com/en-us/powershell/scripting/setup/installing-windows-powershell?view=powershell-6>`
+Make sure you have the :new-page:`latest version of Powershell <https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4>`
 running in your PRTG environment for the integration script to work
 best. You can check which version of Powershell you currently have by
 running the following command line:

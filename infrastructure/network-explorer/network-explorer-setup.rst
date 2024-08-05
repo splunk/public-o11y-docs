@@ -7,13 +7,18 @@ Set up Network Explorer in Kubernetes
 .. meta::
     :description: Install and configure Network Explorer on Kubernetes systems using the OpenTelemetry Collector eBPF Helm chart.
 
-You can install and configure Network Explorer as part of the Splunk Distribution of OpenTelemetry Collector Helm chart. You also need the OpenTelemetry Collector eBPF Helm chart.
+.. note:: 
+  
+  While Splunk Observability Cloud fully supports the Network Explorer navigator, the upstream OpenTelemetry eBPF Helm chart is not covered under official Splunk support. Any feature updates, security, or bug fixes to it are not bound by any SLAs. 
+  
+  If you wish to continue using Network Explorer to see data in Splunk Observability Cloud, point the upstream eBPF Helm chart to the OpenTelemetry Collector running as a gateway. 
 
+You can install and configure Network Explorer as part of the Splunk Distribution of the OpenTelemetry Collector Helm chart. You also need the OpenTelemetry Collector eBPF Helm chart.
 
 Prerequisites
 ==============================
 
-To use Network Explorer with Kubernetes, you must meet the following requirements.
+To use Network Explorer with Kubernetes, you must meet the following requirements:
 
 .. list-table::
    :header-rows: 1
@@ -41,7 +46,7 @@ To use Network Explorer with Kubernetes, you must meet the following requirement
 
 .. note:: Network Explorer is not compatible with GKE Autopilot clusters.
 
-To use Network Explorer with OpenShift, you must meet the following requirements.
+To use Network Explorer with OpenShift, you must meet the following requirements:
 
  .. list-table::
     :header-rows: 1
@@ -324,12 +329,12 @@ In this example, each node of an OpenShift cluster runs on Red Hat Enterprise Li
 
 .. _resize-otel-installation:
 
-Change the resource footprint of Splunk Distribution of OpenTelemetry Collector
-==================================================================================
+Change the resource footprint of Splunk Distribution of the OpenTelemetry Collector
+===============================================================================================
 
-Each Kubernetes node has a Splunk Distribution of OpenTelemetry Collector, so you might want to adjust your resources depending on the number of Kubernetes nodes you have.
+Each Kubernetes node has a Splunk Distribution of the OpenTelemetry Collector, so you might want to adjust your resources depending on the number of Kubernetes nodes you have.
 
-You can update the :new-page:`Splunk Distribution of OpenTelemetry Collector values file <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>`, or specify different values during installation.
+You can update the :new-page:`Splunk Distribution of the OpenTelemetry Collector values file <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>`, or specify different values during installation.
 
 These are the default resource configurations:
 
@@ -679,7 +684,7 @@ Additionally, if you had any custom settings in the ``networkExplorer`` section,
 Next steps
 ====================================
 
-Once you set up Network Explorer, you can start monitoring network telemetry metrics coming into your Splunk Infrastructure Monitoring platform using 1 or more of the following options:
+After you've set up Network Explorer, you can start monitoring network telemetry metrics coming into your Splunk Infrastructure Monitoring platform using 1 or more of the following options:
 
 - Built-in Network Explorer navigators. To see the Network Explorer navigators, follow these steps:
 

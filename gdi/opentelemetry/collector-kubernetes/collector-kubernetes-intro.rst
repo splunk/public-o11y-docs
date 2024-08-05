@@ -22,8 +22,7 @@ Get started with the Collector for Kubernetes
    Default Kubernetes metrics <metrics-ootb-k8s.rst>
    Upgrade <kubernetes-upgrade.rst>
    Uninstall <kubernetes-uninstall.rst>
-   Troubleshoot <troubleshoot-k8s.rst>
-   Troubleshoot containers <troubleshoot-k8s-container.rst>
+   Troubleshoot <k8s-troubleshooting/troubleshoot-k8s-landing.rst>
    Support <kubernetes-support.rst>
    Tutorial: Monitor your Kubernetes environment <k8s-infrastructure-tutorial/about-k8s-tutorial.rst>
    Tutorial: Configure the Collector for Kubernetes <collector-configuration-tutorial-k8s/about-collector-config-tutorial.rst>
@@ -75,8 +74,7 @@ To upgrade or uninstall, see:
 
 If you have any installation or configuration issues, refer to: 
 
-* :ref:`otel-troubleshooting` 
-* :ref:`troubleshoot-k8s`
+* :ref:`troubleshoot-k8s-landing` 
 * :ref:`kubernetes-support`
 
 .. raw:: html
