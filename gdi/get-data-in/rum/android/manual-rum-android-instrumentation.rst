@@ -69,7 +69,7 @@ By default, the Android RUM agent doesn't automatically link traces to users of 
 
 You can identify users by adding global attributes from the OpenTelemetry specification, such as ``enduser.id`` and ``enduser.role``, to your spans.
 
-The following examples show how to add identification metadata as global attributes when initializing the agent or after you've initialized it, depending on whether user data is accessible at initialization:
+The following examples show how to add identification metadata as global attributes when initializing the agent or after initializing it, depending on whether user data is accessible at initialization:
 
 Add identification metadata during initialization
 --------------------------------------------------
@@ -153,6 +153,46 @@ For example, the following activity appears with the ``screen.name`` attribute s
    public class MainActivity extends Activity {
       ...
    }
+
+.. _android-rum-manual-navigation-tracking:
+
+Manually track navigation events
+=====================================
+
+By default, the Android RUM agent follows the view lifecycle of ``Fragment`` and ``Activity`` instances, and certain UI frameworks, e.g. Jetpack Compose, do not use that view lifecycle. In that case, starting with the version 1.6.0, :code:`experimentalSetScreenName()` can be used to explitly signal that navigation has occurred. Method name is prefixed with :code:`experimental` to denote that this API might change in the future, possibly even between minor releases.
+
+In general, upon a non-``Fragment``, non-``Activity`` navigation event, the application developer calls:
+
+.. code-block:: java
+
+   SplunkRum.getInstance().experimentalSetScreenName(screenName);
+
+This sends a navigation span to RUM and remembers the screen name for subsequent spans.
+
+Once the explicit screen name is set, it overrides the default view livecycle tracking. If your application consists of both ``Activity`` and non-``Activity`` views, you must clear the explicit screen name when exiting the non-``Activity`` view:
+
+.. code-block:: java
+
+   // doubled to clear both the last view and the previous last view
+   SplunkRum.getInstance().experimentalSetScreenName(null)
+   SplunkRum.getInstance().experimentalSetScreenName(null)
+
+When using Jetpack Compose, You can use the active route as a screen name, and the code will depend on the implementation. The following is a simplified example:
+
+.. code-block:: kotlin
+
+   val navController = rememberNavController()
+   val currentBackEntry by navController.currentBackStackEntryAsState()
+   val currentRoute = currentBackEntry?.destination?.route
+
+   LaunchedEffect(currentRoute) {
+      if (currentRoute != null) {
+         lastRoute = currentRoute
+         SplunkRum.getInstance().experimentalSetScreenName(currentRoute)
+      }
+   }
+
+Finally, a complete example of manually tracking navigation with Jetpack Compose `can be found here <https://github.com/signalfx/splunk-otel-android/blob/v1.6.0/sample-app/src/main/java/com/splunk/android/sample/JetpackComposeActivity.kt>`_.
 
 .. _android-rum-error-reporting:
 
