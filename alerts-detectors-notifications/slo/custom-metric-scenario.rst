@@ -35,7 +35,7 @@ From the :guilabel:`Detectors & SLOs` page, Kai configures the SLI and sets up a
             
               * :strong:`test = Emby check`
               * :strong:`success = true`
-          - Kai uses the :strong:`success = true` filter to count the number of successful requests for the Emby service on the Buttercup Games website
+          - Kai uses the :strong:`success = true` filter to count the number of successful requests for the Emby service on the Buttercup Games website.
 
         * - :guilabel:`Total events (denominator)`
           - :strong:`synthetics.run.count`
