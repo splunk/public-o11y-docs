@@ -86,7 +86,7 @@ Supported variables for Splunk platform integration custom payload
 The following table shows the full list of variables for customization.
 
 .. note:: 
-    * Unless otherwise indicated in the description, all variables are of type string
+    * Unless otherwise indicated in the description, all variables are of type string.
     * When a variable is optional, it means it's not always available. If you use an optional variable that isn't available in the present conditions to construct your payload, Handlebars converts it to an empty string.
 
 .. list-table::
