@@ -13,7 +13,6 @@ General troubleshooting for the Collector for Kubernetes
   
   See also:
 
-  * :ref:`otel-troubleshooting`  
   * :ref:`troubleshoot-k8s-sizing`
   * :ref:`troubleshoot-k8s-missing-metrics`
   * :ref:`troubleshoot-k8s-container`

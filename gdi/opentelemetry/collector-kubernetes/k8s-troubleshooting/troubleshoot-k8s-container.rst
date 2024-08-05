@@ -11,8 +11,7 @@ Troubleshoot Kubernetes and container runtime compatibility
   
   See also:
 
-  * :ref:`otel-troubleshooting`  
-  * :ref:`troubleshoot-k8s`
+  * :ref:`troubleshoot-k8s-general`
   * :ref:`troubleshoot-k8s-sizing`
   * :ref:`troubleshoot-k8s-missing-metrics`
 
