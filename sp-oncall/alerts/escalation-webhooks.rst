@@ -57,7 +57,7 @@ In order to authenticate that the POST requests are arriving to your application
 SSL Certificate Chain Verification
 -----------------------------------------
 
-If your webhook uses a secure connection (i.e. the URL starts with “https://”), the receiving endpoint must use a valid SSL certificate
+If your webhook uses a secure connection (i.e. the URL starts with “:samp:`https://`”), the receiving endpoint must use a valid SSL certificate
 signed by a recognized Certificate Authority.
 
 This recommendation was implemented based on :new-page:`SSL Labs Best Practices <https://www.ssllabs.com/projects/best-practices/index.html>`.

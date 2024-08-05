@@ -34,7 +34,7 @@ The basic components you need are a Splunk On-Call Users group with a user calle
 Zabbix Media Type 5.0
 -------------------------
 
-To get started, download the Splunk On-Call Media Type from the Github repository: :new-page:`https://github.com/victorops/monitoring_tool_releases/blob/master/victorops-Zabbix5.0/victorops_media_type_zabbix_5.xml <https://github.com/victorops/monitoring_tool_releases/blob/master/victorops-Zabbix5.0/victorops_media_type_zabbix_5.xml>`.
+To get started, download the Splunk On-Call Media Type from the Github repository: :new-page:`https://github.com/victorops/monitoring_tool_releases/blob/master/Victorops-Zabbix5.0/victorops_media_type_zabbix_5.xml <https://github.com/victorops/monitoring_tool_releases/blob/master/Victorops-Zabbix5.0/victorops_media_type_zabbix_5.xml>`.
 
 After that's downloaded, go into Zabbix and navigate to your media types. Select :guilabel:`Import`.
 

@@ -7,7 +7,9 @@ Set up Log Observer Connect for Splunk Enterprise
 .. meta::
   :description: Connect your Splunk Enterprise instance to Splunk Observability Cloud. Set up Log Observer Connect to investigate logs in context with metrics and traces.
 
-Set up Log Observer Connect by integrating Log Observer with Splunk Enterprise. If you are in a Splunk Cloud Platform environment and want to set up Log Observer Connect, see :ref:`logs-scp`. 
+Set up Log Observer Connect by integrating Log Observer with Splunk Enterprise. When you set up Log Observer Connect, Splunk Observability Cloud uses the Splunk Enterprise search head to authenticate the service account and to run searches.
+
+If you are in a Splunk Cloud Platform environment and want to set up Log Observer Connect, see :ref:`logs-scp`. 
 
 When you set up Log Observer Connect, your Splunk Enterprise logs data remains in Splunk Enterprise. Log Observer Connect does not store or index your logs data. There is no additional charge for Log Observer Connect.
 
@@ -22,6 +24,8 @@ Prerequisites
 ==============================================================
 
 To set up Log Observer Connect for Splunk Enterprise, you must have an administrator role in Splunk Observability Cloud. You must also be an administrator in Splunk Enterprise.
+
+You need your service account username, password, Splunk platform URL (search head cluster), and a certificate.
 
 Ensure the following configuration in your Splunk Enterprise instance:
 
@@ -54,7 +58,9 @@ In Splunk Observability Cloud, do the following:
 
 Splunk Enterprise
 ----------------------------------------------------------------
-In Splunk Enterprise, follow the instructions in the guided setup for the integration to do the following:
+You must create a user and role in your Splunk Enterprise search head to serve as a service account for Splunk Observability Cloud.
+
+In your Splunk Enterprise search head, follow the instructions in the guided setup for the integration to do the following:
 
 1. To configure a role in Splunk Enterprise for the Log Observer Connect service account, go to :guilabel:`Settings > Roles`.
       

@@ -263,7 +263,7 @@ Dependencies
 The release script requires:
 
 * The :new-page:`BOSH CLI <https://bosh.io/docs/cli-v2-install/>`
-* The :new-page:`Tile generator <https://docs.vmware.com/en/Tile-Developer-Guide/2.10/tile-dev-guide/tile-generator.html>`
+* The :new-page:`Tile generator <https://docs.vmware.com/en/VMware-Tanzu-Operations-Manager/3.0/tile-dev-guide/tile-generator.html>`
 * ``wget``
 * ``jq``
 
