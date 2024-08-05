@@ -277,7 +277,7 @@ Apart from using template variables to customize your payload, you can also use 
 
    * - ``eq``
      - Checks if two elements are equal.	
-     - | {{#eq a b}}yes{{else}}no{{/eq}}
+     - | ``{{#eq a b}}yes{{else}}no{{/eq}}``
        | {{#eq a 2}}yes{{else}}no{{/eq}}
 
 
