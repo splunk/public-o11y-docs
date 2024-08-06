@@ -781,11 +781,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   rum/rum-custom-indexed-tags
-
-.. toctree::
-   :maxdepth:   3
-
    Splunk RUM dashboards TOGGLE <rum/rum-dashboards/rum-dashboards>
 
 .. toctree::
