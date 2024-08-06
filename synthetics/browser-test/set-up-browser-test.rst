@@ -458,7 +458,7 @@ The following image shows how to configure a test to go to a URL, wait for 10 se
 
 Limits and defaults for configurable wait times 
 ------------------------------------------------------
-Here are the limits for each type of wait time. The maximum limit for a run is 30 minutes, afterwhich it times out. 
+Here are the limits for each type of wait time. The maximum limit for a run is 30 minutes, after which it times out. 
 
 
 .. list-table::
