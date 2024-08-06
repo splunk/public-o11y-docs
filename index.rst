@@ -507,6 +507,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Best practices: Detectors <detectors-best-practices>
+
+.. toctree::
+   :maxdepth:   3
+
    Alerts and detectors scenario library TOGGLE <alerts-detectors-notifications/scenarios-detectors-alerts/scenarios-intro>
 
 .. toctree::
