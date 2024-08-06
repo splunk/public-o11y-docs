@@ -19,7 +19,7 @@ To learn how to index span tags to generate Troubleshooting MetricSets, see :ref
 
 View service performance by indexed span tags
 ================================================================
-To view service performance broken down by your indexed span tags follow these steps:
+To view service performance broken down by your indexed span tags, follow these steps:
 
 #. Go to Tag Spotlight. You can access Tag Spotlight in several places:
      * Select the :guilabel:`Tag Spotlight` panel on the APM landing page or in the service map. 
