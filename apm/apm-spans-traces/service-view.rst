@@ -183,7 +183,7 @@ The information available in your service view varies based on the type of servi
 
    * - Database Query Performance
      - No
-     - Yes. Only displays for Redis and SQL databases.
+     - Yes, only displays for Redis and SQL databases.
      - No
      - No
 
