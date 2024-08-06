@@ -161,7 +161,7 @@ Data in the navigator automatically reflects the application of whatever filter 
 Add filter
 ===========
 
-Click :guilabel:`Add Filter` to create a filter and view a specific slice of your environment based on dimensions or properties you specify. Filtering is particularly useful for viewing only the instances running a specific service, or in a particular availability zone.
+Select :guilabel:`Add Filter` to create a filter and view a specific slice of your environment based on dimensions or properties you specify. Filtering is particularly useful for viewing only the instances running a specific service, or in a particular availability zone.
 
 Filters that you apply to your host instances also filter dependencies in the navigator sidebar. To learn more about the navigator sidebar, see  :ref:`navigator-sidebar` in the same topic.
 
