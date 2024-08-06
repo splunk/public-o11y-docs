@@ -79,7 +79,7 @@ Create Monitoring MetricSets to chart and alert on inferred services
 
 .. note:: Only 3rd-party or uninstrumented HTTP services are supported for MMS.
 
-You can create a Monitoring MetricSet (MMS) for inferred services. MMS allow you to chart inferred service metrics in dashboards and create detectors to alert on your inferred services. See :ref:`inferred-service-mms`.
+You can create a Monitoring MetricSet (MMS) for inferred services. MMS enable you to chart inferred service metrics in dashboards and create detectors to alert on your inferred services. See :ref:`inferred-service-mms`.
 
 .. _how-apm-infers-services:
 
