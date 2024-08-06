@@ -29,4 +29,28 @@ A common and easy way to create a detector is to first create a chart, which let
 
 By default, Splunk Observability Cloud chooses a chart display resolution that fits within the time range you choose, and summarizes the data to match that resolution. For example, if you use a metric that reports every 10 seconds, but you look at a 1-day window, then by default the data you see on the chart represents 30-minute intervals. Depending on the rollup or summarization method, this could mean that any peaks or dips average out, which gives you an inaccurate understanding of your signal and what constitutes an appropriate detector threshold. Also, analytics pipelines are applied to the rolled-up data, so the meaning of a calculation might change if the resolution changes. For example, duration parameters, which you can use for timeshifting and smoothing data, have no effect when they are smaller than the resolution.
 
+.. _monitor-signal:
+==========================================================================
+Create detectors that monitor a single signal across a population
+==========================================================================
+Splunk Observability Cloud provides a simple and concise way of defining detectors that monitor a large number of similar items like the CPU utilization for all of the hosts in a given cluster. It accomplishes this through the metadata that is associated with metric time series, which is analogous to how that metadata - dimensions, properties or tags - creates charts.
+
+Let's look at an example. If you have a group of 30 hosts that provide a clustered service like Kafka, it normally includes a dimension like ``service:kafka`` with all of the metrics coming from those hosts. In this case, if you want to track whether CPU utilization remains below 70% for each of those hosts, you can create a single detector for the ``cpu.utilization`` metric that filters hosts using the ``service:kafka`` dimension and evaluates them against the static threshold of 70. This detector triggers individual alerts for each host whose CPU utilization exceeds the threshold - just as if you had 30 separate detectors - but you only need to create one detector, not 30. 
+
+In addition, if the population changes - say, because the cluster grows to 40 hosts - you do not need to make any changes to your detector. As long as you include the ``service:kafka`` dimension for metrics coming from the new hosts, the existing detector finds them and automatically includes them in the threshold evaluation.
+
+Detectors that monitor a single signal work best when all of the members of the population have the same threshold, and the same notification policy. For example, they might publish alerts into the same Slack channel. If you have different thresholds or notification policies, you must create multiple detectors (one for each permutation of threshold and notification) or take advantage of the const function in SignalFlow. In any case, the likely number of such detectors is still fewer than the count of individual members that it monitors. It is important to create a detector for a signal, not for a microservice, in order to avoid accumulating too many detectors that trigger a multitude of alerts.
+
+==========================================================================
+Use aggregation to monitor sub-groups within a population
+==========================================================================
+You can also use detectors to monitor sub-groups within the population. For example, let’s say you have 100 hosts in total, divided among 10 services. You want to make sure the 95th percentile of CPU utilization across the cluster of hosts that provide each of those services remains below 70%. In this case, create a single detector for ``cpu.utilization``, then apply an analytics function of P95, and group by ``service``. The aggregation approach works only if ``service`` is a dimension or property. The aggregation approach does not work if ``service`` is a tag. 
+
+This aggregation detector triggers alerts for each service, just as if you had 10 separate detectors - but you only need to create one detector, not 10. If you add additional services, the detector automatically monitors them as long as you have included a ``service`` dimension or property for the new services' metrics.
+
+Note you can also monitor individual members of a population for deviation from the population norm, optionally grouping by dimensions or properties, with the Outlier Detection built-in alert condition. (population_comparison in the SignalFlow library. See the population_comparison detector in the signalflow-library at :new-page:`https://github.com/signalfx/signalflow-library/tree/master/library/signalfx/detectors/population_comparison`.
+
+
+
+
 
