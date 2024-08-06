@@ -507,7 +507,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Best practices: Detectors <detectors-best-practices>
+   Best practices for detectors <detectors-best-practices>
 
 .. toctree::
    :maxdepth:   3
