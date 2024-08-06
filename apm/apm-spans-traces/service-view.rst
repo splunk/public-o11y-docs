@@ -8,7 +8,7 @@ Use the service view for a complete view of your service health
 
 As a service owners you can use the service view in Splunk APM to get a complete view of your service health in a single pane of glass. The service view includes a service-level indicator (SLI) for availability, dependencies, request, error, and duration (RED) metrics, runtime metrics, infrastructure metrics, Tag Spotlight, endpoints, and logs for a selected service. You can also quickly navigate to code profiling and memory profiling for your service from the service view. 
 
-.. note:: The service view is available for instrumented services that send spans with a ``service.name`` value.
+The service view is available for instrumented services, pub/sub queues, databases, and inferred services. See :ref:`service-type-support` for details on the information available for various service types.
 
 Access the service view for your service
 ===========================================
@@ -43,16 +43,16 @@ Use the following metrics in the :guilabel:`Service metrics` section to monitor 
     :width: 95%
     :alt: This animation shows the service metrics for a service in the service view. The user select a chart to view example traces.
 
-* Availability SLI - The availability service-level indicator (SLI) shows the percentage of time your service was available in the last 30 days. The chart shows successful and unsuccessful requests. If you configured an availability service-level objective (SLO), an additional chart displays availability over the compliance window you specified in your objective. See :ref:`create-slo`.
+* Success rate SLI - The success service-level indicator (SLI) shows the percentage of time requests for your service were successful in the last 30 days. The chart shows successful and unsuccessful requests. If you configured a success rate service-level objective (SLO), an additional chart displays success rate over the compliance window you specified in your objective. See :ref:`create-slo`.
 * Service map - The service map shows the immediate upstream and downstream dependencies for the service you are viewing. The service map in service view is limited to 20 services, sorted by the most number of requests. Hover over the chart and select :guilabel:`View full service map` to go to the service map.
 * Service requests - The service requests chart shows streaming request data for the service. If you have detectors for the service requests configured, triggered alerts display below the chart. Select the chart to view example traces. Select the alert icon to view alert details.
 * Service latency - The service latency chart shows p50, p90, and p99 latency data for the service. If you have detectors for the service latency configured, triggered alerts display below the chart. Select the chart to view example traces. Select the alert icon to view alert details.
 * Service error - The service error chart shows streaming error data for the service. If you have detectors for the service error rate configured, triggered alerts display below the chart. Select the chart to view example traces. Select the alert icon to view alert details.
 * Dependency latency by type - The dependency latency by type chart shows the latency for each of the downstream systems. Select the chart to see details about each system category. Systems are categorized as follows:
    *  Services - instrumented services
-   *  Databases - not yet supported
-   *  Inferred services - uninstrumented, inferred services
-   *  Pub/sub queues - not yet supported
+   *  Databases
+   *  Inferred services - un-instrumented third-party services
+   *  Pub/sub queues - Publisher/subscriber queues
 
 Runtime metrics
 -----------------
@@ -107,6 +107,11 @@ Select :guilabel:`Traces` to view traces for the environment and service you are
 
 Under the charts are lists of :guilabel:`Traces with errors` and :guilabel:`Long traces`. Select the trace ID link to open the trace in trace waterfall view. Select :guilabel:`View more in Trace Analyzer` to search additional traces. See :ref:`trace-analyzer` for more information about using Trace Analyzer to search traces.
 
+View top commands or queries for your databases
+===================================================
+
+If you select a Redis or SQL database from the service dropdown menu, you can select :guilabel:`Database Query Performance` to view top commands or queries for your database. See :ref:`db-query-performance` to learn more. 
+
 Go to the code profiling view for your service
 =====================================================
 
@@ -127,6 +132,73 @@ Select :guilabel:`Configure service view` to modify the Log Observer Connect con
 3. Select :guilabel:`Save changes`.
 
 The connection and indices you select are saved for all users in your organization for each unique service and environment combination.
+
+.. _service-type-support:
+
+Service view support for various service types
+===============================================
+
+The information available in your service view varies based on the type of service you select. The following table shows which sections are available for each service type.
+
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 20, 20, 20, 20, 20
+
+   * - :strong:`Service view section`
+     - :strong:`Instrumented services`
+     - :strong:`Databases`
+     - :strong:`Pub/sub queues`
+     - :strong:`Inferred services`
+
+   * - Overview
+     - Yes, includes service metrics, runtime metrics, and infrastructure metrics
+     - Yes, includes only service metrics
+     - Yes, includes only service metrics
+     - Yes, includes only service metrics
+
+   * - Tag Spotlight
+     - Yes
+     - Yes
+     - Yes
+     - Yes
+
+   * - Endpoints
+     - Yes
+     - No
+     - No
+     - Yes
+
+   * - Logs
+     - Yes
+     - Yes
+     - Yes
+     - Yes
+
+   * - Traces
+     - Yes
+     - Yes
+     - Yes
+     - Yes
+
+   * - Database Query Performance
+     - No
+     - Yes, only displays for Redis and SQL databases.
+     - No
+     - No
+
+   * - Code profiling
+     - Yes
+     - No
+     - No
+     - No
+
+   * - Memory profiling
+     - Yes
+     - No
+     - No
+     - No
+
 
 .. _metric-reference:
 
@@ -303,12 +375,3 @@ Infrastructure metrics
      - * ``k8s.container.ready``
        * ``pod_network_receive_bytes_total``
        * ``pod_network_transmit_bytes_total``
-
-
-
-
-
-
-
-
-
