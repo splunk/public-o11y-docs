@@ -8,7 +8,7 @@ Apache HTTP Server
 
 The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the Apache HTTP Server monitor type to monitor Apache web servers using information ``mod_status`` provides. 
 
-.. note:: The :ref:`apache-receiver` is the corresponding OpenTelemetry Collector receiver to monitor Apache servers.
+.. note:: To monitor Apache servers with the OpenTelemetry Collector using native OTel components refer to the :ref:`apache-receiver`. Out-of-the-box dashboards and navigators aren't supported for the Apache Web Server receiver yet, but are planned for a future release.
 
 Apache worker threads can be in one of the following states:
 
