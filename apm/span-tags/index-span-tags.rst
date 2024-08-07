@@ -1,7 +1,7 @@
 .. _apm-index-span-tags:
 
 ************************************************************
-Index span tags to generate Troubleshooting MetricSets
+Index span tags to create Troubleshooting MetricSets
 ************************************************************
 
 .. meta::
@@ -14,9 +14,9 @@ What are MetricSets?
 
 MetricSets are metric time series (MTS) you can use to track the performance of specific metrics over time. To help you analyze your service performance, APM provides 2 categories of MetricSets: Troubleshooting MetricSets (TMS) and Monitoring MetricSets (MMS). Use Troubleshooting MetricSets for high-cardinality troubleshooting. Use Monitoring MetricSets for real-time monitoring and alerting. 
 
-APM provides a collection of MetricSets by default. You can also index additional span tags or processes to generate additional TMS and, as part of the indexing process, you can opt to create custom dimensionalized Monitoring MetricSets (MMS). See :ref:`apm-MetricSets` for an overview of the types of MetricSets in APM and a list of the MetricSets available by default. 
+APM provides a collection of MetricSets by default. You can also index additional span tags or processes to create additional TMS and, as part of the indexing process, you can opt to create custom dimensionalized Monitoring MetricSets (MMS). See :ref:`apm-MetricSets` for an overview of the types of MetricSets in APM and a list of the MetricSets available by default. 
 
-Use this topic to learn how to index a span tag or process to generate Troubleshooting MetricSets. See :ref:`cmms` to learn how to add custom dimensionalized Monitoring MetricSets. 
+Use this topic to learn how to index a span tag or process to create Troubleshooting MetricSets. See :ref:`cmms` to learn how to add custom dimensionalized Monitoring MetricSets. 
 
 Prerequisites
 ====================================================================================
@@ -29,7 +29,7 @@ Prerequisites
 Use Troubleshooting MetricSets to filter and breakdown metrics 
 =================================================================
 
-Every Troubleshooting MetricSet (TMS) generates the following metrics, also known as Request, Error, and Duration (RED) metrics. The following metrics appear when you select a service from the service map in the :strong:`Troubleshooting` view:
+Every Troubleshooting MetricSet (TMS) creates the following metrics, also known as Request, Error, and Duration (RED) metrics. The following metrics appear when you select a service from the service map in the :strong:`Troubleshooting` view:
 
 - Request rate
 - Error rate
@@ -97,7 +97,7 @@ Follow these steps to index a span tag or process to create a Troubleshooting Me
 Cardinality contribution of indexed span tags and processes
 ================================================================
 
-When you index a new span tag or process to generate Troubleshooting MetricSets, Splunk APM runs a cardinality contribution analysis to calculate the potential total cardinality contribution after indexing the span tag or process. This gives you control of what you index and helps you to account for organization subscription limits.
+When you index a new span tag or process to create Troubleshooting MetricSets, Splunk APM runs a cardinality contribution analysis to calculate the potential total cardinality contribution after indexing the span tag or process. This gives you control of what you index and helps you to account for organization subscription limits.
 
 If you try to index a span tag or process that might increase the total cardinality contribution beyond your limit, you can change the existing cardinality contribution of indexed tags or processes by modifying or removing indexed span tags or processes.
 
@@ -138,7 +138,7 @@ After you've configured custom Troubleshooting MetricSets you can see their stat
      - :strong:`Description`
 
    * - Active
-     - The application is indexing the span tag or process to generate Troubleshooting MetricSets.
+     - The application is indexing the span tag or process to create Troubleshooting MetricSets.
 
    * - Paused
      - You or another administrator paused indexing for the span tag or process. The application isn't generating Troubleshooting MetricSets for the span tag or process, and you can't view any data you previously indexed for it.

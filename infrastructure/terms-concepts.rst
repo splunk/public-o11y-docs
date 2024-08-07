@@ -19,7 +19,7 @@ In the following table, learn about key concepts in Splunk Infrastructure Monito
      - :strong:`Description`
    
    * - :ref:`data-link-def`
-     - A dynamic link available for properties that can take you to a Splunk Infrastructure Monitoring dashboard or an external system, such as a Splunk instance or a custom-defined URL. 
+     - A dynamic link available for properties that can take you to a Splunk Infrastructure Monitoring dashboard or navigator or an external system, such as a Splunk instance or a custom-defined URL. 
 
    * - :ref:`navigator-def`
      - A collection of resources that lets you monitor metrics and logs across various instances of your services and detect outliers in the instance population based on key performance indicators. 
@@ -43,7 +43,9 @@ Data link
 
 Data links are dynamic links available for properties that appear in several locations throughout the application. Data links appear in locations such as a chart's data table, in list charts, and in alert messages.
 
-Data links can take you to a Splunk Infrastructure Monitoring dashboard or an external system, such as a Splunk instance or a custom-defined URL. Data links include the context of the metadata you clicked on. Some examples of how you might use data links include:
+Data links can take you to a Splunk Infrastructure Monitoring dashboard, navigator, or an external system, such as a Splunk instance or a custom-defined URL. Data links include the context of the metadata you clicked on. Some examples of how you might use data links include:
+
+- Move in one click from a property displayed in a dashboard to a navigator showing related data. For example, clicking on a link for the property ``k8s.pod.name`` in the Data Links dashboard opens the Kubernetes pods navigator. 
 
 - Drill down from a property displayed in one dashboard to another dashboard showing related data. For example, clicking on a link for the property ``aws_region`` in one dashboard opens a related dashboard, filtered by the region. 
     

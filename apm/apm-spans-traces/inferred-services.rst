@@ -54,8 +54,6 @@ What information about inferred services is available?
 
 Because inferred services are not instrumented, Splunk APM only has access to spans from instrumented services that call inferred services. Splunk APM places inferred services in their inferred locations in the service map and provides :ref:`Troubleshooting MetricSets<troubleshooting-metricsets>` (TMS), or request, error, and duration (RED) metrics, based on the associated client-side spans. You can continue to troubleshoot with these metrics in :ref:`Tag Spotlight<apm-tag-spotlight>`. If the inferred service is servicing other uninstrumented services, these reported RED metrics might not provide a complete picture of the inferred service's interactions. 
 
-Splunk APM does not create :ref:`Monitoring MetricSets<monitoring-metricsets>` (MMS) for inferred services because MMS are created in real time from spans where ``span.kind = SERVER`` or ``span.kind = CONSUMER``, and Splunk APM does not receive server or consumer-side spans from uninstrumented services. This means that even though inferred services appear in the list of services on the landing page, you can't get real-time MMS data on inferred services in the APM landing page or in dashboards and alerts, and you can't create detectors based on inferred services. 
-
 .. _inferred-service-map:
 
 Viewing inferred services in the service map
@@ -75,6 +73,13 @@ Inferred services, pub/subs, and databases also appear as spans in the Trace Wat
     :alt: This screenshot shows an example of inferred spans appearing in Trace View. 
 
 When you select an inferred span in the Trace Waterfall, it expands to show the metadata of the corresponding parent span. The length of the operation represented as the gray striped bar in the waterfall visualization is also inherited from the parent span and might not be exactly representative of the operation duration in the inferred service.
+
+Create Monitoring MetricSets to chart and alert on inferred services
+-----------------------------------------------------------------------
+
+.. note:: Only 3rd-party or uninstrumented HTTP services are supported for MMS.
+
+You can create a Monitoring MetricSet (MMS) for inferred services. MMS enable you to chart inferred service metrics in dashboards and create detectors to alert on your inferred services. See :ref:`inferred-service-mms`.
 
 .. _how-apm-infers-services:
 
