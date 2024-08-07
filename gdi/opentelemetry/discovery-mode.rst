@@ -116,5 +116,3 @@ Automatic discovery supports the following host services and applications:
    * - Microsoft SQL Server
      - Microsoft SQL Server receiver. See :ref:`mssql-server-receiver`
 
-
-
