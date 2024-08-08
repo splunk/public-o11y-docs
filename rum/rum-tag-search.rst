@@ -93,6 +93,9 @@ Try these steps to troubleshoot:
 * If the environment tag is undefined, try setting it in the instrumentation by following the steps here: :ref:`rum-gdi`. 
 * If the tag is related to a geo location that is calculated based off of an IP address, this data could be missing if the user is on VPN. 
 
+
+.. _search-indexed-tags: 
+
 Search for indexed tags 
 =========================
 

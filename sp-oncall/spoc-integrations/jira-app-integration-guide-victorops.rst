@@ -44,7 +44,7 @@ Configuring Application Settings
 2. In the **API ID** field in the same section, insert the API ID you
    noted in the Splunk On-Call step above.
 3. Copy the Splunk On-Call Org ID displayed in your VictorOps URL
-   (e.g. https://portal.victorops.com/client/%7BOrg_ID}) and paste it in
+   (for example :samp:`https://portal.victorops.com/client/%7BOrg_ID`) and paste it in
    Jira's **Organization ID** field. This is appended to the incident
    link within Jira tickets.
 4. Once all three fields have been populated, click **Connect**.  On

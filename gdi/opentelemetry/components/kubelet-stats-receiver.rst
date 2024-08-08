@@ -198,6 +198,8 @@ For example, to collect only node and pod metrics from the receiver:
          - node
          - pod
 
+.. _kubelet-stats-receiver-optional-parameters:
+
 Configure optional parameters
 --------------------------------------------------------------
 
