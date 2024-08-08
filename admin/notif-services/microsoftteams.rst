@@ -36,19 +36,23 @@ Step 1: Get the webhook URL for the Microsoft Team channel
 
 You must be an owner or administrator of the Microsoft Team to complete this task.
 
-To get the webhook URL for the Microsoft Team channel:
+To get the webhook POST URL for the Microsoft Team channel:
 
 #. Log in to Microsoft Teams and navigate to the list of teams.
 
 #. Select the team that contains the channel you want to send alert notifications to. Expand the list of channels.
 
-#. Find and hover over the channel you want to send alert notifications to. Select :strong:`More options` (...) and then select :strong:`Connectors`.
+#. Find and hover over the channel you want to send alert notifications to. Select :strong:`More options` (...) and then select :strong:`Workflows`.
 
-#. Find the :strong:`Incoming Webhook` connector. Select :strong:`Add`. If the connector has already been added to the channel, select :strong:`Configure`.
+#. Find and select the :strong:`Post to a channel when a webhook request is received` template.
 
-#. Enter a descriptive name for the connector.
+#. Enter a descriptive name for the workflow.
 
-#. Select :strong:`Create`. Microsoft Teams generates a webhook URL.
+#. Select :guilabel:`Next`.
+
+#. Add a team and channel for your workflow.
+
+#. Select :strong:`Add workflow`. Microsoft Teams generates a URL to make a POST request to.
 
 #. Select the :strong:`Copy to Clipboard` icon to copy the webhook URL for use in :ref:`microsoftteams2`.
 
@@ -78,7 +82,7 @@ To create a Microsoft Teams integration in Splunk Observability Cloud:
    #. Select :strong:`New Integration` to display the configuration options.
 
 #. By default, the name of the integration is :strong:`Microsoft Teams`. Give your integration a unique and descriptive name. For information about the downstream use of this name, see :new-page-ref:`About naming your integrations <naming-note>`.
-#. In the :strong:`Webhook URL` field, paste the webhook URL you copied in :ref:`microsoftteams1`. The webhook URL looks similar to this: ``https://<tenantName>.webhook.office.com/webhook2/<GroupExternalObjectGuid>@<TenantExternalGuid>/<ProviderName>/<AlternateGuid>/<GroupOwnerExternalObjectGuid>``.
+#. In the :strong:`Webhook URL` field, paste the webhook URL you copied in :ref:`microsoftteams1`. The webhook POST URL looks similar to this: ``https://<region>.logic.azure.com:<port>/workflows/<workflowId>/triggers/manual/paths/invoke?<apiVersion>&<signature>``.
 #. :strong:`Save`.
 #. If Splunk Observability Cloud can validate the Microsoft Teams webhook URL, a :strong:`Validated!` success message displays. If an error displays instead, make sure that the webhook URL value you entered matches the value displayed in Microsoft Teams in :ref:`microsoftteams1`.
 
@@ -106,27 +110,28 @@ To add a Microsoft Teams integration as a detector alert recipient in Splunk Obs
 Splunk Observability Cloud sends an alert notification to the Microsoft Teams channel when the detector triggers an alert and when the alert clears.
 
 
-.. _msteams-troubleshooting:
+.. _update-msteams-365-connectors-retirement:
 
-Troubleshoot your Microsoft Teams notification service integration
+Update existing Microsoft Teams integration configurations for Office 365 connectors retirement
 =================================================================================================
 
-If the Microsoft Teams channel stops receiving notifications, consider the following troubleshooting tips:
+.. note:: After December 31, 2024, Office 365 connectors in Microsoft Teams will be retired. 
 
-* Verify that the Microsoft Teams notification service integration in Splunk Observability Cloud still exists. To troubleshoot, complete the following steps. You must be a Splunk Observability Cloud administrator to complete these steps.
+To continue using the Microsoft Teams integration in Splunk Observability Cloud without any interruption, follow these steps:
 
-  #. In the Splunk Observability Cloud navigation menu, select :strong:`Data Management > Deployed integrations`.
+#.  Transition from Office 365 connectors to Workflows:
 
-  #. In the :strong:`CATEGORIES` menu, select :strong:`Notification Services`.
+  #. In the Microsoft Teams Workflows app, select the :strong:`Create` tab.
+  #. Find and select the :strong:`Post to a channel when a webhook request is received` template.
+  #. Enter a descriptive name for the workflow.
+  #. Add a team and channel for your workflow.
+  #. Select :guilabel:`Add workflow`. Microsoft Teams generates a URL to make a POST request to.
+  #. Select the :strong:`Copy to Clipboard` icon to copy the webhook POST URL for use in :ref:`microsoftteams2`.
+  #. Select :guilabel:`Done`.
 
-  #. Select the :strong:`Microsoft Teams` tile.
+#. Edit existing Microsoft Teams integration configurations in Splunk Observability Cloud: 
 
-  #. Find your integration and select to expand it.
-
-  #. Select the :strong:`Integrations` menu and select :strong:`Validate`. If you see an error message,  :strong:`Connector configuration not found`, then the :strong:`Incoming Webhook` connector was removed from the Microsoft Teams channel and you must add it back. To do this, see :ref:`microsoftteams2`.
-
-* Verify that the Microsoft Teams notification service integration in Splunk Observability Cloud has not been changed to send alert notifications to a different Microsoft Teams channel.
-
-* Verify that the Microsoft Teams notification service integration is still the alert recipient on the detector in Splunk Observability Cloud.
-
-* Verify that the Splunk Observability Cloud detector's alert rules have not changed, causing it to send alert notifications for different reasons.
+  #. From the Splunk Observability Cloud home page, go to the :strong:`Data Management` page.
+  #. Find the Microsoft Teams connection you want to edit.
+  #. In the :guilabel:`Webhook URL` field, replace the existing URL with the webhook POST URL you copied from the Microsoft Teams Workflows app.
+  #. Select :guilabel:`Save`.
