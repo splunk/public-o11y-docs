@@ -287,7 +287,7 @@ Automatic Discovery for back-end services
      - Set the OTLP endpoint for captured traces, logs, and metrics for all activated SDKs. The value will be set to the ``OTEL_EXPORTER_OTLP_ENDPOINT`` environment variable. If not specified, the default behavior is to defer to the default ``OTEL_EXPORTER_OTLP_ENDPOINT`` value for each activated SDK.
      -
    * - ``--otlp-endpoint-protocol <protocol>``
-     - Set the protocol for the configured OTLP endpoint, for example ``grpc`` or ``http/protobuf``. The value will be set to the ``OTEL_EXPORTER_OTLP_PROTOCOL`` environment variable. If not specified, the default behavior is to defer to the default ``OTEL_EXPORTER_OTLP_PROTOCOL`` value for each activated SDK. This option is only applicable if the ``--otlp-endpoint <host:port>`` option is also specified.
+     - Set the protocol for the OTLP endpoint, for example ``grpc`` or ``http/protobuf``. The value will be set to the ``OTEL_EXPORTER_OTLP_PROTOCOL`` environment variable. If not specified, the default behavior is to defer to the default ``OTEL_EXPORTER_OTLP_PROTOCOL`` value for each activated SDK.
      -
    * - ``--metrics-exporter <exporters>``
      - Comma-separated list of exporters for collected metrics by all activated SDKs, for example ``otlp,prometheus``. Set the value to ``none`` to disable collection and export of metrics. The value will be set to the ``OTEL_METRICS_EXPORTER`` environment variable. The default behavior is to defer to the default ``OTEL_METRICS_EXPORTER`` value for each activated SDK.
