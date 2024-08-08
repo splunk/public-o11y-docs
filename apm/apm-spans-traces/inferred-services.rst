@@ -77,9 +77,9 @@ When you select an inferred span in the Trace Waterfall, it expands to show the 
 Create Monitoring MetricSets to chart and alert on inferred services
 -----------------------------------------------------------------------
 
-.. note:: Only 3rd-party or uninstrumented HTTP services are supported for MMS.
+.. note:: Only third-party or un-instrumented HTTP services are supported for Monitoring MetricSets.
 
-You can create a Monitoring MetricSet (MMS) for inferred services. MMS enable you to chart inferred service metrics in dashboards and create detectors to alert on your inferred services. See :ref:`inferred-service-mms`.
+You can create a Monitoring MetricSet (MMS) for inferred services. Use MMS to chart inferred service metrics in dashboards and create detectors to alert on your inferred services. See :ref:`inferred-service-mms`.
 
 .. _how-apm-infers-services:
 
@@ -88,7 +88,7 @@ How does Splunk APM identify inferred services?
 
 When a client or producer span doesn't have a corresponding server span, Splunk APM checks whether the unpaired span contains tags that indicate interaction with an uninstrumented service. 
 
-To identify an inferred service, Splunk APM first checks for tags that indicate the ``type`` of the inferred service, and then checks for tags that indicate the service ``name``. After Splunk APM identifies a client or producer span with a tag or tags that indicate interaction with one of these service types, it creates an inferred span to represent the operation in the uninstrumented service. 
+To identify an inferred service, Splunk APM first checks for tags that indicate the ``type`` of the inferred service, and then checks for tags that indicate the service ``name``. After Splunk APM identifies a client or producer span with a tag or tags that indicate interaction with 1 of these service types, it creates an inferred span to represent the operation in the uninstrumented service. 
 
 The table in :ref:`inferred-service-types` provides a list of types of inferred services and the tags and the inference methods that Splunk APM uses to identify each type of inferred service. In the case of inferred pub/sub services, the inferred span inherits the metadata from the corresponding client or producer span and is attached directly to that span. 
 
@@ -149,22 +149,25 @@ When Splunk APM infers an HTTP service, it means an instrumented service is talk
 To assign a service name for an inferred HTTP service, Splunk APM does the following:
 
 1. Verify that the ``span.kind`` of the referring span is equal to ``CLIENT``.
-2. If one or more of ``http.host``, ``http.url`` or ``net.peer.name`` exist, and ``peer.service`` exists as well, use ``peer.service`` for the service name. This ensures that the ``peer.service`` is an HTTP service.
-3. Look for the service name in the following tags, in this order:
+2. To ensures that the ``peer.service`` is an HTTP service the following logic is applied: If ``peer.service`` exists and 1 or more of following also exist:
+  * ``http.host``
+  * ``http.url`` (in libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower) or ``full.url`` (in libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher)
+  * ``net.peer.name`` (in libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower) or ``server.address`` (in libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher) 
+4. Look for the service name in the following tags, in this order:
 
     a. ``http.host``: host name extracted as-is
     b. ``peer.hostname``: host name extracted as-is
     c. ``peer.address``: host name is extracted from the URL
-    d. ``http.url``: host name is extracted from the URL
-    e. ``net.peer.name``: host name extracted as-is
+    d. For libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower, host name is extracted from ``http.url``. For libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher, host name is extracted from ``url.full``. 
+    e. For libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower, host name extracted as-is from ``net.peer.name``. For libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher, host name is extracted from ``server.address``. 
 
-4. If any of these tags are found, infer the service name from the first appearing tag. If none of these tags are found, the span is not considered related to an inferred HTTP service.
+5. If any of these tags are found, infer the service name from the first appearing tag. If none of these tags are found, the span is not considered related to an inferred HTTP service.
 
 .. note:: To reduce noise in the service map and managing cardinality, Splunk APM excludes services without a host name or that use their IP address as host name. If you need to turn on IP addresses, contact your sales representative.
 
 .. _rpc-inf-logic:
 
-Inferred RPC services
+Inferred remote procedure call (RPC) services
 ------------------------
 
 When Splunk APM infers an RPC service, it means an instrumented service is making a remote procedure call.
@@ -173,7 +176,10 @@ To infer an RPC service, Splunk APM does the following:
 
 #. Verify that the ``span.kind`` of the referring span is equal to ``CLIENT``.       
 #. Verify that the referring span contains the ``rpc.system`` span tag. This tag is used to identify the remote system, such as ``grpc``, ``java_rmi``, or ``wcf``. 
-#. Look for the service name in the ``rpc.service``, ``net.peer.name`` and ``rpc.system``` tags, in that order.
+#. Look for the service name in the following tags, in that order:
+   * ``rpc.service``
+   * For libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower, ``net.peer.name``. For libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher, ``server.address``.
+   * ``rpc.system``
 #. If any of these tags are found, infer the service name from the first appearing tag. If none of these tags are found, the span is not considered related to an inferred RPC service.
 
 .. _generic-inf-logic:
@@ -222,7 +228,7 @@ To determine the ``name`` of an inferred database, Splunk APM applies this logic
 
 #. If the ``db.system`` tag exists, its value is used to specify the type of database being queried, for example ``mysql``, ``redis``, and so on. If only this tag is present, its value is also used as the ``service.name`` for the inferred database.
 #. If the ``db.name`` tag exists, its value is concatenated with ``db.system`` to form the name of the inferred service: ``db.system:db.name`` (for example ``mysql:sql_db_1``).
-#. If the ``db.connection_string`` tag is present and its value conforms to a known format such as Java database connectivity (JDBC), Splunk APM extracts the database name portion of the url and concatenates it with the value of ``db.system`` to form the database name, such as ``mysql:dbname``. If the value of ``db.connection_string`` does not conform to a known format or the database portion cannot be extracted and ``db.name`` also does not exist, Splunk APM uses the raw value of ``db.connection_string`` as the database name. If ``db.system`` also exists, the two values are concatenated. 
+#. If the ``db.connection_string`` tag is present and its value conforms to a known format such as Java database connectivity (JDBC), Splunk APM extracts the database name portion of the url and concatenates it with the value of ``db.system`` to form the database name, such as ``mysql:dbname``. If the value of ``db.connection_string`` does not conform to a known format or the database portion cannot be extracted and ``db.name`` also does not exist, Splunk APM uses the raw value of ``db.connection_string`` as the database name. If ``db.system`` also exists, the 2 values are concatenated. 
 
 Splunk APM also provides additional analytics for supported SQL databases. See :ref:`db-query-performance` to learn more.
 
