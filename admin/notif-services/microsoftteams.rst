@@ -124,7 +124,7 @@ To continue using the Microsoft Teams integration in Splunk Observability Cloud 
     #. Enter a descriptive name for the workflow.
     #. Add a team and channel for your workflow.
     #. Select :guilabel:`Add workflow`. Microsoft Teams generates a URL to make a POST request to.
-    #. Select the :strong:`Copy to Clipboard` icon to copy the webhook POST URL for use in :ref:`microsoftteams2`.
+    #. Select the :strong:`Copy to Clipboard` icon to copy the webhook POST URL.
     #. Select :guilabel:`Done`.
 
 #. Edit existing Microsoft Teams integration configurations in Splunk Observability Cloud: 
