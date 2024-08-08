@@ -153,23 +153,23 @@ You can also use these additional :ref:`configuration sources <otel-other-config
 .. raw:: html
 
   <embed>
-    <h2>Configure log collection<a name="otel-config-logs" class="headerlink" href="#otel-config-logs" title="Permalink to this headline">¶</a></h2>
+    <h2>Collect logs <a name="otel-config-logs" class="headerlink" href="#otel-config-logs" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-The Collector can capture logs using Fluentd, but this option is deactivated by default.
+To collect logs with the Splunk Distribution of the OpenTelemetry Collector:
 
-* For Kubernetes, native OpenTelemetry log collection is supported by default. See more at :ref:`kubernetes-config-logs`.
+* In Kubernetes environments, native OpenTelemetry log collection is supported by default. See more at :ref:`kubernetes-config-logs`.
 * For Linux and Windows environments (physical hosts and virtual machines), use the Universal Forwarder to send logs to the Splunk platform. See more at :ref:`collector-with-the-uf`.
 
-.. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, make sure Fluentd is installed and enabled in your Collector instance. 
+.. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, install and enable Fluentd in your Collector instance. 
 
 .. raw:: html
 
   <embed>
-    <h3>Configure Fluentd<a name="otel-fluentd-artifacts" class="headerlink" href="#otel-fluentd-artifacts" title="Permalink to this headline">¶</a></h2>
+    <h3>Collect logs using Fluentd <a name="otel-fluentd-artifacts" class="headerlink" href="#otel-fluentd-artifacts" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-You can use the Fluentd receiver to collect logs. 
+The Collector can capture logs using Fluentd, but this option is deactivated by default.
 
 Common sources such as filelog, journald, and Windows Event Viewer are included in the installation. The following table describes the artifacts in the Fluentd directory:
 
