@@ -148,27 +148,26 @@ When Splunk APM infers an HTTP service, it means an instrumented service is talk
 
 To assign a service name for an inferred HTTP service, Splunk APM does the following:
 
-1. Verify that the ``span.kind`` of the referring span is equal to ``CLIENT``.
-2. To ensures that the ``peer.service`` is an HTTP service the following logic is applied: If ``peer.service`` exists and 1 or more of following also exist:
-  * ``http.host``
-  * ``http.url`` (in libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower) or ``full.url`` (in libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher)
-  * ``net.peer.name`` (in libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower) or ``server.address`` (in libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher) 
-4. Look for the service name in the following tags, in this order:
-
-    a. ``http.host``: host name extracted as-is
-    b. ``peer.hostname``: host name extracted as-is
-    c. ``peer.address``: host name is extracted from the URL
-    d. For libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower, host name is extracted from ``http.url``. For libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher, host name is extracted from ``url.full``. 
-    e. For libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower, host name extracted as-is from ``net.peer.name``. For libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher, host name is extracted from ``server.address``. 
-
-5. If any of these tags are found, infer the service name from the first appearing tag. If none of these tags are found, the span is not considered related to an inferred HTTP service.
+#. Verifies that the ``span.kind`` of the referring span is equal to ``CLIENT``.
+#. To ensure that the ``peer.service`` is an HTTP service the following logic is applied: 
+    #. If ``peer.service`` exists, checks that 1 or more of following also exist:
+        #. ``http.host``
+        #. ``http.url`` in libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower or ``full.url`` in libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher
+        #. ``net.peer.name`` in libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower or ``server.address`` in libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher
+#. Looks for the service name in the following tags, in this order:
+    #. ``http.host``: host name extracted as-is
+    #. ``peer.hostname``: host name extracted as-is
+    #. ``peer.address``: host name is extracted from the URL
+    #. For libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower, host name is extracted from ``http.url``. For libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher, host name is extracted from ``url.full``. 
+    #. For libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower, host name extracted as-is from ``net.peer.name``. For libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher, host name is extracted from ``server.address``. 
+#. If any of these tags are found, infers the service name from the first appearing tag. If none of these tags are found, the span is not considered related to an inferred HTTP service.
 
 .. note:: To reduce noise in the service map and managing cardinality, Splunk APM excludes services without a host name or that use their IP address as host name. If you need to turn on IP addresses, contact your sales representative.
 
 .. _rpc-inf-logic:
 
 Inferred remote procedure call (RPC) services
-------------------------
+------------------------------------------------
 
 When Splunk APM infers an RPC service, it means an instrumented service is making a remote procedure call.
 
@@ -177,9 +176,9 @@ To infer an RPC service, Splunk APM does the following:
 #. Verify that the ``span.kind`` of the referring span is equal to ``CLIENT``.       
 #. Verify that the referring span contains the ``rpc.system`` span tag. This tag is used to identify the remote system, such as ``grpc``, ``java_rmi``, or ``wcf``. 
 #. Look for the service name in the following tags, in that order:
-   * ``rpc.service``
-   * For libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower, ``net.peer.name``. For libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher, ``server.address``.
-   * ``rpc.system``
+    #. ``rpc.service``
+    #. For libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower, ``net.peer.name``. For libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher, ``server.address``.
+    #. ``rpc.system``
 #. If any of these tags are found, infer the service name from the first appearing tag. If none of these tags are found, the span is not considered related to an inferred RPC service.
 
 .. _generic-inf-logic:
