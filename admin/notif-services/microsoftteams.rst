@@ -21,8 +21,6 @@ To send Splunk Observability Cloud alert notifications to Microsoft Teams, compl
 
 * :ref:`microsoftteams3`
 
-For troubleshooting information, see :ref:`Troubleshooting Microsoft Teams<msteams-troubleshooting>`.
-
 ..
   what does the following note mean in the context of the tasks being discussed? Relevant or not?
 
