@@ -14,16 +14,17 @@ Supported databases
 
 Database Query Performance provides insights for the following database software:
 
-- MySQL
-- Microsoft SQL Server
-- PostgreSQL
-- Oracle
-- Redis
-- Aurora
-- MariaDB
-- OceanBase
+- Amazon Redshift
 - Db2
+- Google Cloud Spanner
+- MariaDB
+- Microsoft SQL Server
+- MySQL
+- OceanBase
+- Oracle
+- PostgreSQL
 - Presto 
+- Redis
 
 Database Query Performance works with all versions supported by the instrumented applications.
 

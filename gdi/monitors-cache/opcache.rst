@@ -6,9 +6,7 @@ OPcache
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Collectd OPcache monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 ``collectd/opcache`` monitor type to retrieve metrics from OPcache using
 the ``opcache_get_status()`` function, which improves PHP performance by
 storing precompiled script bytecode in shared memory.

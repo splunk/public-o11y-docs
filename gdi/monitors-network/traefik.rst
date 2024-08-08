@@ -6,9 +6,7 @@ Traefik
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Traefik monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 ``traefik`` monitor type to collect metrics from Traefik.
 
 This monitor is available on Kubernetes, Linux, and Windows.

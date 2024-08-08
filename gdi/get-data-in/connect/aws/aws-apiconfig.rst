@@ -85,7 +85,6 @@ These are the required permissions to collect AWS data:
 * :ref:`Permissions for the CloudWatch API <aws-iam-policy-cw>` 
 * :ref:`Permissions for Metric Streams <aws-iam-policy-ms>`
 * :ref:`Permissions for tag and properties collection <aws-iam-policy-services>`
-* :ref:`Permissions for logs <aws-iam-policy-logs>`
 * :ref:`Permissions for usage collection and reports <aws-iam-policy-reports>`
 
 .. _aws-api-setup:

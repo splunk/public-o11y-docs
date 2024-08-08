@@ -27,3 +27,5 @@ To learn how to use SignalFlow, see :ref:`get-started-signalflow`.
 
 For more information on Splunk Infrastructure Monitoring analytics, see :ref:`infrastructure-monitoring-analytics`.
 
+For information about the SignalFlow client libraries, see :new-page:`Client library support <https://dev.splunk.com/observability/docs/signalflow#Client-library-support>`
+in the Splunk Observability Cloud Developer Guide.

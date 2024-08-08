@@ -6,9 +6,7 @@ Exec Input
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Telegraf Exec monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 Exec Input monitor type, an embedded form of the Telegraf Exec plugin,
 to receive metrics or logs from exec files.
 
@@ -385,9 +383,9 @@ fields:
 Metrics
 -------
 
-By default metrics are emitted as gauges. 
+By default this monitor has no fixed metrics. Instead, it will create metrics based on your configuration. All metrics are custom. 
 
-If you have cumulative counter metrics that you want properly typed in Splunk Observability
+Metrics are emitted as gauges. If you have cumulative counter metrics that you want properly typed in Splunk Observability
 Cloud, use one of the following options:
 
 -  Set the configuration option ``signalFxCumulativeCounters`` to the

@@ -127,8 +127,6 @@ If you're using the Collector for log collection and need to send data to Splunk
          sourcetype: "otel"
          # Splunk index, optional name of the Splunk index targeted.
          index: "metrics"
-         # Maximum HTTP connections to use simultaneously when sending data. Defaults to 100.
-         max_connections: 20
          # Whether to deactivate gzip compression over HTTP. Defaults to false.
          disable_compression: false
          # HTTP timeout when sending data. Defaults to 10s.
@@ -169,7 +167,6 @@ To split the log pipelines, configure two separate ``splunk_hec`` entries in the
        source: "otel"
        sourcetype: "otel"
        index: "main"
-       max_connections: 20
        disable_compression: false
        timeout: 10s
        tls:
@@ -317,7 +314,7 @@ Note that to be able to ingest metrics through Splunk HEC you need to declare yo
 Settings
 ======================
 
-The following table shows the configuration options for the Splunk HEC exporter:
+The following table shows the configuration options for the Splunk HEC exporter. For information about HTTP settings, such as ``max_idle_conns`` or ``max_idle_conns_per_host``, refer to :new-page:`HTTP config options for the Collector <https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/confighttp#client-configuration>` in GitHub.
 
 .. raw:: html
 

@@ -12,6 +12,7 @@
 
 .. meta::
     :description: This is what you need to instrument .NET applications for Splunk Observability Cloud.
+    :robots: noindex
 
 Meet the following requirements to instrument .NET applications for Splunk Observability Cloud:
 

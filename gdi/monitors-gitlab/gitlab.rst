@@ -6,9 +6,7 @@ GitLab
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the GitLab monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the
 GitLab monitor type to monitor GitLab.
 
 GitLab is bundled with Prometheus exporters, which can be configured to
@@ -28,6 +26,7 @@ This integration allows you to monitor the following:
    address of the container or host needs to be allowed for the
    collector to access the endpoint. See the ``IP allowlist``
    documentation on GitLab Docs for more information.
+-  GitLab Webservice: It provides the GitLab Rails webserver with two Webservice workers per pod.     
 -  GitLab Workhorse: The GitLab service that handles slow HTTP requests.
    Workhorse includes a built-in Prometheus exporter that this monitor
    hits to gather metrics.
@@ -45,36 +44,25 @@ Installation
 
 .. include:: /_includes/collector-installation.rst
 
-GitLab configuration
---------------------
+Configure GitLab to monitor Prometheus endpoints
+--------------------------------------------------------
 
 Follow the instructions on :new-page:`Monitoring GitLab with Prometheus <https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html>` to configure the GitLab Prometheus exporters to expose metric endpoint targets. 
 
-If you configue GitLab by editing ``/etc/gitlab/gitlab.rb``, you need to
-run the command ``gitlab-ctl reconfigure`` for the changes to take
-effect.
-
-If you configue nginx by editing the file
-``/var/opt/gitlab/nginx/conf/nginx-status.conf``, you need to run the
-command ``gitlab-ctl restart``. Note that changes to the configuration
-file ``/var/opt/gitlab/nginx/conf/nginx-status.conf`` in particular are
-erased by subsequent runs of ``gitlab-ctl reconfigure`` because
-``gitlab-ctl reconfigure`` restores the original configuration file.
-
-The following table shows some of the Prometheus endpoint targets with
-links to their respective configuration pages.
+The following Prometheus endpoint targets are available:
 
 .. list-table::
    :widths: 17 32 11 11
+   :width: 100%
    :header-rows: 1
 
    - 
-
+   
       - Monitor type
       - Reference
       - Default port
       - Standard path
-   - 
+   -
 
       - ``gitlab-exporter``
       - GitLab exporter
@@ -96,14 +84,20 @@ links to their respective configuration pages.
 
       - ``gitlab-sidekiq``
       - GitLab SideKiq
-      - 8082
+      - 3807
       - /metrics
    - 
 
       - ``gitlab-unicorn``
       - GitLab Unicorn
       - 8080
-      - /-/metrics
+      - /metrics
+   - 
+
+      - ``gitlab-webservice``
+      - GitLab Webservice
+      - 8083
+      - /metrics
    - 
 
       - ``gitlab-workhorse``
@@ -141,30 +135,32 @@ links to their respective configuration pages.
       - 9121
       - /metrics
 
-GitLab Prometheus exporters, nginx, and GitLab Runner must be configured
-to accept requests from the host or Docker container of the
-OpenTelemetry Collector. For example, the following configuration in
-``/etc/gitlab/gitlab.rb`` configures the GitLab Postgres Prometheus
-exporter to allow network connections on port ``9187`` from any IP
-address:
+Important notes
+~~~~~~~~~~~~~~~~~~~~~~
+
+* If you configue GitLab by editing ``/etc/gitlab/gitlab.rb``, run the command ``gitlab-ctl reconfigure`` for the changes to take effect.
+
+* If you configue nginx by editing the file ``/var/opt/gitlab/nginx/conf/nginx-status.conf``, run the command ``gitlab-ctl restart``. 
+
+  * Note that changes to the configuration file ``/var/opt/gitlab/nginx/conf/nginx-status.conf`` in particular are erased by subsequent runs of ``gitlab-ctl reconfigure`` because ``gitlab-ctl reconfigure`` restores the original configuration file.
+
+* You need to configure GitLab Prometheus exporters, nginx, and GitLab Runner to accept requests from the host or Docker container of the OpenTelemetry Collector. 
+
+Examples
+~~~~~~~~~~~~~~~~~~~~~~
+
+The following configuration in ``/etc/gitlab/gitlab.rb`` configures the GitLab Postgres Prometheus exporter to allow network connections on port ``9187`` from any IP address:
 
 .. code-block:: yaml
 
-   postgres_exporter['listen_address'] = '0.0.0.0:9187'
+      postgres_exporter['listen_address'] = '0.0.0.0:9187'
 
 Or
+   .. code-block:: yaml
 
-.. code-block:: yaml
+      postgres_exporter['listen_address'] = ':9187'
 
-   postgres_exporter['listen_address'] = ':9187'
-
-The following excerpt from the file
-``/var/opt/gitlab/nginx/conf/nginx-status.conf`` shows the
-``location /metrics`` block for metric related configuration. This file
-configures nginx. The statement ``allow 172.17.0.0/16;`` allows network
-connection in the ``172.17.0.0/16`` IP range. The assumption is that the
-IP address associated with the OpenTelemetry Collector is in that IP
-range.
+The file ``/var/opt/gitlab/nginx/conf/nginx-status.conf`` configures nginx, and the ``location /metrics`` block shows metric-related configuration. Use the statement ``allow 172.17.0.0/16;`` to allow network connection in the ``172.17.0.0/16`` IP range, assuming that the IP address associated with the OpenTelemetry Collector is in that IP range.
 
 .. code-block:: yaml
 
@@ -177,11 +173,7 @@ range.
        }
    }
 
-The following line is part of the global section of the file
-``/etc/gitlab-runner/config.toml``. This file configures GitLab Runner.
-The following statement configures GitLab Runner's Prometheus metrics
-HTTP server to allows network connection on port ``9252`` from any IP
-address:
+The ``/etc/gitlab-runner/config.toml`` file configures GitLab Runner. To configure GitLab Runner's Prometheus metrics HTTP server to allow network connection on port ``9252`` from any IP address use:
 
 .. code-block:: yaml
 
@@ -215,11 +207,11 @@ file:
    receivers:
      smartagent/gitlab-sidekiq:
        type: gitlab
-       host: localhost
-       port: 8082
+       host: gitlab-webservice-default.default
+       port: 3807
      smartagent/gitlab-workhorse:
        type: gitlab
-       host: localhost
+       host: gitlab-webservice-default.default
        port: 9229
 
    # ... Other sections
@@ -239,7 +231,8 @@ Configuration options
 The following table shows the configuration options for this monitor:
 
 .. list-table::
-   :widths: 18 18 18 18
+   :widths: 25 45 15 15
+   :width: 100%   
    :header-rows: 1
 
    - 
@@ -314,7 +307,7 @@ The following table shows the configuration options for this monitor:
       - ``host``
       - **yes**
       - ``string``
-      - Host of the exporter
+      - Host of the exporter. ``gitlab-webservice-default.default`` by default
    - 
 
       - ``port``

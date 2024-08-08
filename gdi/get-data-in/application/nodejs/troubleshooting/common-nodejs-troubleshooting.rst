@@ -26,7 +26,7 @@ Activate diagnostic logging
 
 Diagnostic logs can help you troubleshoot instrumentation issues.
 
-To output instrumentation logs to the console, set the ``OTEL_LOG_LEVEL`` environment variable to ``debug``. 
+To output instrumentation logs to the console, set the ``OTEL_LOG_LEVEL`` environment variable to ``debug`` in the same scope where the application is running. For example, ``OTEL_LOG_LEVEL=<level> node start.js``. Don't add it to the .env file, as it's loaded later.
 
 You can also activate debug logging programmatically by setting the ``logLevel`` argument. For example:
 
@@ -60,7 +60,9 @@ To deactivate debug logging in your code, call ``setLogger()`` as in the followi
 Activate debug metrics
 ---------------------------------
 
-You can activate internal debug metrics by setting the ``SPLUNK_DEBUG_METRICS_ENABLED`` environment variable to true. For more information, see :ref:`nodejs-otel-debug-metrics`.
+You can activate internal debug metrics by setting the ``SPLUNK_DEBUG_METRICS_ENABLED`` environment variable to ``true``  in the same scope where the application is running. For example, ``SPLUNK_DEBUG_METRICS_ENABLED=true node start.js``. Don't add it to the .env file, as it's loaded later.
+
+For more information, see :ref:`nodejs-otel-debug-metrics`.
 
 .. _nodejs-trace-exporter-issues:
 

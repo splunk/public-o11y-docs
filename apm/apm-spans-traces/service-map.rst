@@ -42,6 +42,17 @@ You can also use the service map as a starting point for monitoring or troublesh
 * To get real-time monitoring insights on the service, select :guilabel:`View Dashboard` in the side panel to view the built-in service dashboard. See :ref:`apm-dashboards` to learn more.
 * To do more extensive troubleshooting, select the :guilabel:`Tag Spotlight` tab in the side panel to open Tag Spotlight. See :ref:`apm-tag-spotlight` to learn more.
 
+.. _filter-service-map:
+
+Filter the service map
+===========================================
+
+Select the filter menu to change the maximum or the types of services that display on the service map. The service map shows all service types by default. There is also a default maximum of 50 services. 
+
+..  image:: /_images/apm/spans-traces/filter-service-map.png
+    :width: 95%
+    :alt: The service map filter menu
+
 .. _service-map-breakdowns:
 
 Perform breakdowns in the service map
@@ -51,9 +62,9 @@ The following screenshot shows an example service map in which the ``paymentserv
 
 ..  image:: /_images/apm/spans-traces/service-map-breakdown-global-search-rename.png
     :width: 95%
-    :alt: This screenshot shows an example of the service map in Splunk APM. The ``paymentservice`` node is broken down by endpoint, showing that errors with that service are arising in the ``/Charge`` endpoint.
+    :alt: An example of the service map in Splunk APM. The ``paymentservice`` node is broken down by endpoint, showing that errors with that service are arising in the ``/Charge`` endpoint.
 
-The following screenshot shows the same service map with an additional breakdown on the ``checkoutservice`` by endpoint. This shows that the errors occurring in the ``/Charge`` endpoint of the ``paymentservice`` originate in the ``/placeOrder`` endpoint of the ``checkoutservice``. 
+The following image shows the same service map with an additional breakdown on the ``checkoutservice`` by endpoint. This shows that the errors occurring in the ``/Charge`` endpoint of the ``paymentservice`` originate in the ``/placeOrder`` endpoint of the ``checkoutservice``. 
 
 ..  image:: /_images/apm/spans-traces/service-map-03-breakdown.png
     :width: 95%
@@ -79,7 +90,7 @@ Share your view of the service map
 ======================================
 To share your view of the service map with a colleague, copy and share the URL. Your current filter selections are preserved in the URL.
 
-Service map thresholds
+Service map thresholds and limits
 ===========================================
 
 The following table presents applicable thresholds and limits in the service map:
@@ -99,6 +110,9 @@ The following table presents applicable thresholds and limits in the service map
 
    * - P90 latency in "critical" zone, displayed in red
      - 1 second
+
+   * - Default maximum number of nodes visible in the service map. Use the filter menu on the map to change the maximum number of services to show.
+     - 50 service nodes
 
    * - Maximum number of nodes visible in the service map at once
      - 200 service nodes

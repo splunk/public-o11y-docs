@@ -12,6 +12,7 @@ Collector components: Receivers
     :titlesonly:
     :hidden:
 
+    apache-receiver
     azureeventhub-receiver
     carbon-receiver
     cloudfoundry-receiver
@@ -38,12 +39,15 @@ Collector components: Receivers
     otlp-receiver                
     postgresql-receiver
     prometheus-receiver
+    rabbitmq-receiver
     receiver-creator-receiver
     redis-receiver
     sapm-receiver
     simple-prometheus-receiver
+    signalfx-gateway-prometheus-remote-write-receiver
     signalfx-receiver
     smartagent-receiver
+    splunk-enterprise-receiver
     splunk-hec-receiver
     sqlquery-receiver 
     sshcheck-receiver

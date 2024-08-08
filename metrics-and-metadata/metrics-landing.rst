@@ -58,11 +58,15 @@ For metrics from specific data sources, see:
       <h2>Data management and visualization tools</h2>
    </embed>
 
-Splunk Observability Cloud offers you the following metric access, visualization, and management tools at:
+Splunk Observability Cloud offers you metric access, visualization, and management tools, such as:
 
 * :ref:`metrics-finder-and-metadata-catalog`
-* :ref:`metrics-pipeline`
+* :ref:`metrics-pipeline-intro`
 * :ref:`data-visualization-charts` 
 * :ref:`dashboards`
 * :ref:`get-started-signalflow`
+
+To access them log in to Splunk Observability Cloud and go to :strong:`Navigation menu > Data Management > Data tools`. 
+
+For more information, see :ref:`data-tools-landing`.
 

@@ -28,3 +28,5 @@ Automatic discovery for Kubernetes supports both back-end applications (such as 
 To use automatic discovery for back-end applications, see :ref:`k8s-backend-auto-discovery`. 
 
 To use automatic discovery with third-party applications, see :ref:`k8s-third-party`.
+
+For a walkthrough of how to use automatic discovery to instrument an application in a Kubernetees environment, see :ref:`k8s-advanced-auto-discovery-config`.

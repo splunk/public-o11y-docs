@@ -6,9 +6,7 @@ Consul datastore
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Consul datastore monitor. See benefits, install, configuration, and metrics
 
-The
-:ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`
-uses the :ref:`Smart Agent receiver <smartagent-receiver>` with the
+The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
 Consul datastore monitor type to monitor Consul datastores and collect
 metrics from the following endpoints:
 
