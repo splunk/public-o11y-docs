@@ -119,17 +119,17 @@ To continue using the Microsoft Teams integration in Splunk Observability Cloud 
 
 #.  Transition from Office 365 connectors to Workflows:
 
-  #. In the Microsoft Teams Workflows app, select the :strong:`Create` tab.
-  #. Find and select the :strong:`Post to a channel when a webhook request is received` template.
-  #. Enter a descriptive name for the workflow.
-  #. Add a team and channel for your workflow.
-  #. Select :guilabel:`Add workflow`. Microsoft Teams generates a URL to make a POST request to.
-  #. Select the :strong:`Copy to Clipboard` icon to copy the webhook POST URL for use in :ref:`microsoftteams2`.
-  #. Select :guilabel:`Done`.
+    #. In the Microsoft Teams Workflows app, select the :strong:`Create` tab.
+    #. Find and select the :strong:`Post to a channel when a webhook request is received` template.
+    #. Enter a descriptive name for the workflow.
+    #. Add a team and channel for your workflow.
+    #. Select :guilabel:`Add workflow`. Microsoft Teams generates a URL to make a POST request to.
+    #. Select the :strong:`Copy to Clipboard` icon to copy the webhook POST URL for use in :ref:`microsoftteams2`.
+    #. Select :guilabel:`Done`.
 
 #. Edit existing Microsoft Teams integration configurations in Splunk Observability Cloud: 
 
-  #. From the Splunk Observability Cloud home page, go to the :strong:`Data Management` page.
-  #. Find the Microsoft Teams connection you want to edit.
-  #. In the :guilabel:`Webhook URL` field, replace the existing URL with the webhook POST URL you copied from the Microsoft Teams Workflows app.
-  #. Select :guilabel:`Save`.
+    #. From the Splunk Observability Cloud home page, go to the :strong:`Data Management` page.
+    #. Find the Microsoft Teams connection you want to edit.
+    #. In the :guilabel:`Webhook URL` field, replace the existing URL with the webhook POST URL you copied from the Microsoft Teams Workflows app.
+    #. Select :guilabel:`Save`.
