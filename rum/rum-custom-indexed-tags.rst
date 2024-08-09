@@ -21,8 +21,11 @@ Adding your own tags that are meaningful to your organization like custom tags, 
 
 
 
+
  ..
    "How can I add my own tags to Tag Spotlight?", "How can I filter on custom tags?" "How can I troubleshoot with custom tags?
+
+.. include:: /_includes/synthetics/metricset-def.rst
 
 
 Avoid high cardinality in MetricSets
