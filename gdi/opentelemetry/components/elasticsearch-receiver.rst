@@ -136,10 +136,10 @@ Metrics with versions
 
 The following metric are available with versions:
 
-* ``elasticsearch.indexing_pressure.memory.limit`` >= 7.10
-* ``elasticsearch.node.shards.data_set.size`` >= 7.13
-* ``elasticsearch.cluster.state_update.count`` >= 7.16.0
-* ``elasticsearch.cluster.state_update.time`` >= 7.16.0
+* ``elasticsearch.indexing_pressure.memory.limit``. Available in versions 7.10 or higher.
+* ``elasticsearch.node.shards.data_set.size``. Available in versions 7.13 or higher. 
+* ``elasticsearch.cluster.state_update.count``. Available in versions 7.16.0 or higher.
+* ``elasticsearch.cluster.state_update.time``. Available in versions 7.16.0 or higher.
 
 Troubleshooting
 ======================
