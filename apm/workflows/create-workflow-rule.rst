@@ -11,17 +11,17 @@ Configure Business Workflow rules
 
 :strong:`Available in Enterprise Edition`
 
-I think that there should be a note here that also says that the tag must be indexed per this slidedeck here:
-
-https://docs.google.com/presentation/d/1lSGs2Vg9vVQI5zAdP2g0Zuu9CvrR-j1FD-jsWlsfixY/edit#slide=id.gad62d39fdc_1_0
-
-Thank you!
-
 |hr|
 
 Business Workflow rules use span tags to make trace behavior in transaction processing explicit and transparent.
 
-You can create rules that correlate traces from a specific service or from multiple services that include the same global span tag. You must be an administrator to configure Business Workflow rules.
+You can create rules that correlate traces from a specific service or from multiple services that include the same global span tag. 
+
+Prerequisites
+================
+
+* You must have an admin role to configure Business Workflow rules.
+* To create a Business Workflow rule based on a global span tag you have to first index the tag. See :ref:`apm-index-span-tags` for steps to index a span tag.
 
 The Business Workflow page includes a system-generated rule by default: All traces will be associated with workflows that are identified by the initiating operations of those traces. This is the only default rule. You can't edit the default rule, but you can turn it off.
 
@@ -44,14 +44,13 @@ To configure a new rule from Splunk APM, follow these steps. There is a differen
         - :strong:`Description`
       
       * - Global Tag
-        - Define workflows based on the value of a global tag in spans associated with a trace. This correlates traces that contain spans with the global tag.
-
+        - Define workflows based on the value of a global tag in spans associated with a trace. This correlates traces that contain spans with the global tag. To create a Business Workflow rule based on a global span tag you have to first index the tag. See :ref:`apm-index-span-tags` for steps to index a span tag.
       * - Service
         - Define workflows based on traces that include a service you select. When a trace matches the rule, you also see a specified tag value or endpoint associated with the trace for the service.
 
 4. Select a :strong:`Target Global Tag` or :strong:`Target Service` according to the :strong:`Rule Type` you selected.
 
-   :strong:`Target Global Tag` prompts you to select an indexed global tag. When you select a tag, the rule correlates all traces with the global tag. The rule name is based on the global tag you select.
+   :strong:`Target Global Tag` prompts you to select an indexed global tag. When you select a tag, the rule correlates all traces with the global tag. The rule name is based on the global tag you select. To create a Business Workflow rule based on a global span tag you have to first index the tag. See :ref:`apm-index-span-tags` for steps to index a span tag.
 
    :strong:`Target Service` prompts you to select a service and enter the :strong:`Source of Workflow Name`, which is extra metadata to view about the workflow. You can select to correlate traces for a service by an endpoint for the initiating span or a span tag value.
 
