@@ -11,7 +11,7 @@ The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent rece
 Microsoft SQL Server monitor type to send metrics from Microsoft SQL
 Server instances.
 
-.. note:: To monitor Microsoft SQL servers with the OpenTelemetry Collector using native OpenTelemetry components refer to the :ref:`mssql-server-receiver`.
+.. note:: To monitor Microsoft SQL server instances with the OpenTelemetry Collector using native OpenTelemetry components refer to the :ref:`mssql-server-receiver`.
 
 Benefits
 =================
