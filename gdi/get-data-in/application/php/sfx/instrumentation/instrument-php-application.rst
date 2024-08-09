@@ -78,7 +78,7 @@ Follow these steps to automatically instrument your application:
             # Add the following lines to your Apache configuration file
 
             SetEnv SIGNALFX_SERVICE_NAME="<my-service-name>"
-            SetEnv SIGNALFX_ENDPOINT_URL='http://localhost:9080/v1/trace'
+            SetEnv SIGNALFX_ENDPOINT_URL='http://localhost:9411/api/v2/spans'
             SetEnv SIGNALFX_TRACE_GLOBAL_TAGS="deployment.environment:<my_environment>"
 
       .. tab:: Terminal
