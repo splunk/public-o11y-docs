@@ -11,7 +11,7 @@ The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent rece
 response from the configured URL matches expectations. For example,
 correct body, status code, and so on.
 
-.. note:: To monitor HTTP with the OpenTelemetry Collector using native OpenTelemetry components refer to the :ref:`http-check-receiver`.
+.. note:: To monitor HTTP endpoints with the OpenTelemetry Collector using native OpenTelemetry components refer to the :ref:`http-check-receiver`.
 
 If applicable, TLS information is automatically fetched from the base
 URL or redirection, depending on whether the ``useHTTPS`` parameter is
