@@ -18,6 +18,7 @@ Collector components: Receivers
     cloudfoundry-receiver
     collectd-receiver
     discovery-receiver
+    elasticsearch-receiver
     filelog-receiver   
     fluentd-receiver
     host-metrics-receiver

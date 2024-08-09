@@ -64,9 +64,12 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
    * - :ref:`collectd-receiver` (``collectd``)
      - Receives data exported through the CollectD ``write_http`` plugin. Only supports the JSON format.
      - Metrics
-   * - :ref:`discovery-receiver` (``discovery``)
+   * - :ref:`discovery-receiver` (``discovery``) elasticsearch-receiver
      - Wraps the receiver creator to facilitate the discovery of metric collection targets. See :ref:`discovery_mode`.
      - Logs
+   * - :ref:`elasticsearch-receiver` (``elasticsearch``) 
+     - xxx
+     - xxxx      
    * - :ref:`filelog-receiver` (``filelog``)
      - Tails and parses logs from files.
      - Logs
