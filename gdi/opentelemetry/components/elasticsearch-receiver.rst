@@ -1,13 +1,13 @@
 .. _elasticsearch-receiver:
 
 *************************
-ElasticSearch receiver
+Elasticsearch receiver
 *************************
 
 .. meta::
-      :description: The ElasticSearch receiver queries the Elasticsearch node stats, cluster health and index stats endpoints in order to scrape metrics from a running Elasticsearch cluster.
+      :description: The Elasticsearch receiver queries the Elasticsearch node stats, cluster health and index stats endpoints in order to scrape metrics from a running Elasticsearch cluster.
 
-The ElasticSearch receiver queries ElasticSearch's endpoints node stats, cluster health and index stats to scrape metrics from a running Elasticsearch cluster. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
+The Elasticsearch receiver queries Elasticsearch's endpoints node stats, cluster health and index stats to scrape metrics from a running Elasticsearch cluster. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
 To learn more about the queried endpoints see:
 
@@ -33,7 +33,7 @@ Follow these steps to configure and activate the component:
   - :ref:`otel-install-windows`
   - :ref:`otel-install-k8s`
 
-2. Configure the ElasticSearch receiver as described in the next section.
+2. Configure the Elasticsearch receiver as described in the next section.
 3. Restart the Collector.
 
 Sample configuration
@@ -114,7 +114,7 @@ See the following configuration example:
 Settings
 ======================
 
-The following table shows the configuration options for the ElasticSearch receiver:
+The following table shows the configuration options for the Elasticsearch receiver:
 
 .. raw:: html
 
