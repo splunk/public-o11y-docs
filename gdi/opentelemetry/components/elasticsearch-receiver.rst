@@ -5,9 +5,22 @@ ElasticSearch receiver
 *************************
 
 .. meta::
-      :description: The Jaeger receiver gathers trace data in Jaeger format.
+      :description: The ElasticSearch receiver queries the Elasticsearch node stats, cluster health and index stats endpoints in order to scrape metrics from a running Elasticsearch cluster.
 
-The Jaeger receiver gathers trace data in Jaeger format. The supported pipeline type is ``traces``. See :ref:`otel-data-processing` for more information.
+The ElasticSearch receiver queries ElasticSearch's endpoints node stats, cluster health and index stats to scrape metrics from a running Elasticsearch cluster. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
+
+To learn more about the queried endpoints see:
+
+* :new-page:`Nodes stats API <https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-nodes-stats.html>`
+* :new-page:`Cluster health API <https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-health.html>`
+* :new-page:`Index stats API <https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-stats.html>`
+
+Prerequisites
+======================
+
+This receiver supports Elasticsearch versions 7.9 or higher.
+
+If Elasticsearch security features are enabled, you must have either the monitor or manage cluster privilege. See Elasticsearch's :new-page:`Role-based access control <https://www.elastic.co/guide/en/elasticsearch/reference/current/authorization.html>` and :new-page:`Security privileges <https://www.elastic.co/guide/en/elasticsearch/reference/current/security-privileges.html>` for more information on authorization and security privileges.
 
 Get started
 ======================
@@ -23,83 +36,110 @@ Follow these steps to configure and activate the component:
 2. Configure the ElasticSearch receiver as described in the next section.
 3. Restart the Collector.
 
-Sample configurations
+Sample configuration
 --------------------------------
 
-To activate the Jaeger receiver, add ``jaeger`` to the ``receivers`` section of your configuration file, as in the following sample configurations. By default, the Jaeger receiver doesn't serve any protocol. You must name a protocol under the ``protocols`` object to start the receiver. 
+To activate the receiver, add ``elasticsearch`` to the ``receivers`` section of your configuration file:
 
-See :ref:`jaeger-receiver-settings` for more details.
-
-.. code-block:: yaml
-
+.. code:: yaml
 
   receivers:
-    jaeger:
-      protocols:
-        grpc:
-    jaeger/withendpoint:
-      protocols:
-        grpc:
-          endpoint: 0.0.0.0:14260
+      elasticsearch
 
-Supported protocols
------------------------------------------------
+Next, include the receiver in the ``metrics`` pipeline of the ``service`` section of your configuration file:
 
-The Jaeger receiver supports the following protocols: 
+.. code:: yaml
 
-* ``grpc``. ``0.0.0.0:14250`` is the default endpoint.
-* ``thrift_binary``. ``0.0.0.0:6832`` is the default endpoint.
-* ``thrift_compact``. ``0.0.0.0:6831`` is the default endpoint.
-* ``thrift_http``. ``0.0.0.0:14268`` is the default endpoint.
-
-Optionally, you can configure an ``endpoint``.
+  service:
+    pipelines:
+      metrics:
+        receivers:
+          - elasticsearch
 
 Advanced configuration
 -----------------------------------------------
 
-Use the UDP protocols, currently ``thrift_binary`` and ``thrift_compact``, to set additional server options:
+The following settings are optional:
 
-* ``queue_size``:  Sets the maximum of not yet handled requests for the server. ``1000`` by default.
-* ``max_packet_size``: Sets the maximum UDP packet size. ``65_000`` by default.
-* ``workers``: Sets the number of workers consuming the server queue. ``10`` by default.
-* ``socket_buffer_size``: Sets the buffer size of the connection socket, in bytes. ``0`` by default (no buffer). 
+* ``metrics``. See default behavior at :new-page:`Default metrics settings <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/elasticsearchreceiver/internal/metadata/generated_metrics.go>`. Allows you to enable and disable with metrics to collect.
 
-For example:
+* ``nodes``. ``["_all"]`` by default. Allows you to specify node filters that define which nodes are scraped for node-level and cluster-level metrics. 
 
-.. code-block:: yaml
+  * See Elasticsearch's :new-page:`Cluster APIs Node specification <https://www.elastic.co/guide/en/elasticsearch/reference/7.9/cluster.html#cluster-nodes>` for allowed filters. 
+  
+  * If empty, then the receiver doesn't scrap any node-level metrics, and only metrics related to the cluster's health are scraped at the cluster level.
 
+* ``skip_cluster_metrics``. ``false`` by default. If ``true``, cluster-level metrics are not scraped.
 
-  protocols:
-    thrift_binary:
-      endpoint: 0.0.0.0:6832
-      queue_size: 5_000
-      max_packet_size: 131_072
-      workers: 50
-      socket_buffer_size: 8_388_608
+* ``indices``. ``["_all"]`` by default. Allows you to specify index filters that define which indices are scraped for index-level metrics. 
 
-Additional settings 
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+  * See Elasticsearch's :new-page:`Cluster APIs Path parameters <https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-stats.html#index-stats-api-path-params>` for allowed filters.   
+  
+  * If empty, then the receiver doesn't scrap any index-level metrics.
 
-The Jaeger receiver uses helper files for additional capabilities:
+* ``endpoint``. ``http://localhost:9200`` by default. The base URL of the Elasticsearch API for the cluster to monitor.
 
-* gRPC settings, including CORS. See more in GitHub at :new-page:`gRPC Configuration Settings <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/configgrpc/README.md>`
-* TLS and mTLS settings. Learn more in GitHub at :new-page:`TLS Configuration Settings <https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/configtls/README.md>`.
+* ``username``. No default. Specifies the username used to authenticate with Elasticsearch using basic auth. 
 
-Remote sampling
+* ``password``. No default. Specifies the password used to authenticate with Elasticsearch using basic auth. 
+
+* ``collection_interval``. ``10s`` by default. This receiver collects metrics on an interval determined by this setting. This value must be a string readable by Golang's :new-page:`time.ParseDuration <https://pkg.go.dev/time#ParseDuration>`. 
+  
+  * On larger clusters, you might need to increase this interval, as querying Elasticsearch for metrics takes longer on clusters with more nodes.
+
+* ``initial_delay``. ``1s`` by default. Defines how long this receiver waits before starting.
+
+Configuration example
 -----------------------------------------------
 
-Since version 0.61.0, remote sampling is no longer supported. Instead, since version 0.59.0, use the ``jaegerremotesapmpling`` extension for remote sampling.
+See the following configuration example:
 
-.. _jaeger-receiver-settings:
+.. code:: yaml
+
+  receivers:
+    elasticsearch:
+      metrics:
+        elasticsearch.node.fs.disk.available:
+          enabled: false
+      nodes: ["_local"]
+      skip_cluster_metrics: true
+      indices: [".geoip_databases"]
+      endpoint: http://localhost:9200
+      username: otel
+      password: password
+      collection_interval: 10s
+
+.. _elasticsearch-receiver-settings:
 
 Settings
 ======================
 
-The following table shows the configuration options for the Jaeger receiver:
+The following table shows the configuration options for the ElasticSearch receiver:
 
 .. raw:: html
 
-  <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/jaeger.yaml"></div>
+  <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/elasticsearch.yaml"></div>
+
+Metrics
+=======================
+
+The following metrics, resource attributes, and attributes, are available.
+
+.. raw:: html
+
+  <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/elasticsearchreceiver.yaml"></div>
+
+.. include:: /_includes/activate-deactivate-native-metrics.rst
+
+Metrics with versions
+-----------------------------------------------
+
+The following metric are available with versions:
+
+* ``elasticsearch.indexing_pressure.memory.limit`` >= 7.10
+* ``elasticsearch.node.shards.data_set.size`` >= 7.13
+* ``elasticsearch.cluster.state_update.count`` >= 7.16.0
+* ``elasticsearch.cluster.state_update.time`` >= 7.16.0
 
 Troubleshooting
 ======================

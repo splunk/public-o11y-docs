@@ -68,8 +68,8 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
      - Wraps the receiver creator to facilitate the discovery of metric collection targets. See :ref:`discovery_mode`.
      - Logs
    * - :ref:`elasticsearch-receiver` (``elasticsearch``) 
-     - xxx
-     - xxxx      
+     - Queries the Elasticsearch node stats, cluster health and index stats endpoints to scrape metrics from a running Elasticsearch cluster.
+     - Metrics      
    * - :ref:`filelog-receiver` (``filelog``)
      - Tails and parses logs from files.
      - Logs
