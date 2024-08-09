@@ -11,7 +11,7 @@ The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent rece
 consumer. It has a set of built-in MBeans to pull metrics from the Kafka
 consumer's JMX endpoint.
 
-.. note:: To monitor Kafka with the OpenTelemetry Collector using native OpenTelemetry components refer to the :ref:`kafka-receiver` and :ref:`kafkametrics-receiver`.
+.. note:: To monitor Kafka with the OpenTelemetry Collector using native OpenTelemetry components refer to the :ref:`kafkametrics-receiver`.
 
 This integration is only available on Kubernetes and Linux. It requires
 Kafka version 0.9.0.0 or higher and collects metrics from the new
