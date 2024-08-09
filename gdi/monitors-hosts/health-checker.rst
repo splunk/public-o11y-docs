@@ -6,7 +6,7 @@ Health Checker
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the Health Checker monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the
 Health Checker monitor type to check whether the configured JSON value
 is returned in the response body.
 
