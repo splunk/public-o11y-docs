@@ -169,39 +169,15 @@ To collect logs with the Splunk Distribution of the OpenTelemetry Collector:
     <h3>Collect logs using Fluentd <a name="otel-fluentd-artifacts" class="headerlink" href="#otel-fluentd-artifacts" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-The Collector can capture logs using Fluentd, but this option is deactivated by default.
+The Collector can capture logs using Fluentd, but this option is deactivated by default. To learn more, see :ref:`fluentd-receiver`.
 
-Common sources such as filelog, journald, and Windows Event Viewer are included in the installation. The following table describes the artifacts in the Fluentd directory:
+To activate Fluentd refer to:
 
-.. list-table::
-  :widths: 25 75
-  :header-rows: 1
+* :ref:`Configure Fluentd for log collection in Kubernetes <kubernetes-config-logs-fluentd>`
+* :ref:`Configure Fluentd for log collection in Linux <fluentd-manual-config-linux>`
+* :ref:`Configure Fluentd for log collection in Windows <fluentd-manual-config-windows>`
 
-  * - Configuration
-    - Description
-  * - fluent.conf or td-agent.conf
-    - These are the main Fluentd configuration files used to forward events to the Collector. The file locations are ``/etc/otel/collector/fluentd/fluent.conf`` on Linux and ``C:\opt\td-agent\etc\td-agent\td-agent.conf`` on Windows. By default, these files configure Fluentd to include custom Fluentd sources and forward all log events with the ``@SPLUNK`` label to the Collector.
-  * - conf.d
-    - This directory contains the custom Fluentd configuration files. The location is ``/etc/otel/collector/fluentd/conf.d`` on Linux and ``\opt\td-agent\etc\td-agent\conf.d`` on Windows. All files in this directory ending with the .conf extension are automatically included by Fluentd, including ``\opt\td-agent\etc\td-agent\conf.d\eventlog.conf`` on Windows.
-  * - splunk-otel-collector.conf
-    - This is the drop-in file for the Fluentd service on Linux. Use this file to override the default Fluentd configuration path in favor of the custom Fluentd configuration file for Linux (fluent.conf).
-
-The following is a sample configuration to collect custom logs:
-
-.. code-block:: xml
-
-  <source>
-    @type tail
-    @label @SPLUNK
-    <parse>
-      @type none
-    </parse>
-    path /path/to/my/custom.log
-    pos_file /var/log/td-agent/my-custom-logs.pos
-    tag my-custom-logs
-  </source>
-
-To learn more about the Fluentd receiver, see :ref:`fluentd-receiver`.
+Common sources such as filelog, journald, and Windows Event Viewer are included in the installation. 
 
 .. raw:: html
 

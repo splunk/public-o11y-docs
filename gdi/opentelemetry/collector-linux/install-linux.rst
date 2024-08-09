@@ -85,8 +85,8 @@ To skip these steps and use configured repos on the target system that provide t
    sudo sh /tmp/splunk-otel-collector.sh --realm $SPLUNK_REALM --skip-collector-repo --skip-fluentd-repo \
     -- $SPLUNK_ACCESS_TOKEN
     
-Collect logs
-=================================
+Collect logs for the Collector for Linux
+====================================================================
 
 Use the Universal Forwarder to send logs to the Splunk platform. See more at :ref:`collector-with-the-uf`.
 
@@ -94,7 +94,7 @@ Fluentd is turned off by default. If you already installed Fluentd on a host, re
 
 .. _fluentd-manual-config-linux:
 
-Collect logs with Fluentd
+Collect Linux logs with Fluentd
 ---------------------------------------
 
 If you have a Log Observer entitlement or want to collect logs for the target host with Fluentd, use the ``--with-fluentd`` option to also install Fluentd when installing the Collector. For example:
