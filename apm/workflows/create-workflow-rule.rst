@@ -21,7 +21,7 @@ Prerequisites
 ================
 
 * You must have an admin role to configure Business Workflow rules.
-* To create a Business Workflow rule that uses span tags you have to first index the tag. See :ref:`apm-index-span-tags` for steps to index a span tag.
+* To create a Business Workflow rule that uses span tags, you have to first index the tag. See :ref:`apm-index-span-tags` for steps to index a span tag.
 
 Configure a rule
 ================
@@ -48,9 +48,9 @@ To configure a new rule from Splunk APM, follow these steps. There is a differen
 
 4. Select a :guilabel:`Target Global Tag` or :guilabel:`Target Service` according to the :guilabel:`Rule Type` you selected.
 
-    * :strong:`Target Global Tag` prompts you to select an indexed global tag. When you select a tag, the rule correlates all traces with the global tag. To create a Business Workflow rule that uses span tags you have to first index the tag. See :ref:`apm-index-span-tags` for steps to index a span tag.
+    * :strong:`Target Global Tag` prompts you to select an indexed global tag. When you select a tag, the rule correlates all traces with the global tag. To create a Business Workflow rule that uses span tags, you have to first index the tag. See :ref:`apm-index-span-tags` for steps to index a span tag.
 
-    * :strong:`Target Service` prompts you to select a service and enter the :strong:`Source of Workflow Name`, which is extra metadata to view about the workflow. You can select to correlate traces for a service by an endpoint for the initiating span or a span tag value. To create a Business Workflow rule that uses span tags you have to first index the tag. See :ref:`apm-index-span-tags` for steps to index a span tag.
+    * :strong:`Target Service` prompts you to select a service and enter the :strong:`Source of Workflow Name`, which is extra metadata to view about the workflow. You can select to correlate traces for a service by an endpoint for the initiating span or a span tag value. To create a Business Workflow rule that uses span tags, you have to first index the tag. See :ref:`apm-index-span-tags` for steps to index a span tag.
 
 5. Select :strong:`Create` to save your changes and create the rule.
 
