@@ -37,10 +37,12 @@ Ensure the following configuration in your Splunk Enterprise instance:
   - us1: ``44.230.152.35``, ``44.231.27.66``, ``44.225.234.52``, ``44.230.82.104``
   - us2: ``35.247.113.38/32``, ``35.247.32.72/32``, ``35.247.86.219/32``
   - eu0: ``108.128.26.145``, ``34.250.243.212``, ``54.171.237.247``
+  - eu1: ``3.73.240.7``, ``18.196.129.64``, ``3.126.181.171``
+  - eu2: ``13.41.86.83``, ``52.56.124.93``, ``35.177.204.133``
   - jp0: ``35.78.47.79``, ``35.77.252.198``, ``35.75.200.181``
   - au0: ``13.54.193.47``, ``13.55.9.109``, ``54.153.190.59``
 
-* Expose port ``8089`` to all the IPs of the realms you're using. Log Observer Connect needs to be able to access the search head on port ``8089``. It doesn't need to directly access the deployer or indexers. For example, if you have a search head cluster with load balancer in front of the members of the search head cluster, you would allow the incoming traffic to the load balancer.
+* Expose port ``8089`` to all the IPs of the realms you're using. Log Observer Connect needs to be able to access the search head on port ``8089``. It doesn't need to directly access the deployer or indexers. For example, if you have a search head cluster with load balancer in front of the members of the search head cluster, you allow the incoming traffic to the load balancer.
 
 .. caution:: Check with your security team before you add these IPs to the allow list of your firewall rules or to your security groups in AWS.
 
@@ -86,7 +88,7 @@ In your Splunk Enterprise search head, follow the instructions in the guided set
          :width: 100%
          :alt: This screenshot shows recommended configuration for role search job limit and user search job limit.
 
-6. Now, in the :guilabel:`Role search time window limit` section of the :guilabel:`Resources` tab, select :guilabel:`Custom time` and enter 2592000 seconds (30 days) for the maximum time window for searches for this role. For the earliest searchable event time for this role,  select :guilabel:`Custom time` and enter 7776000 seconds (90 days). In the :guilabel:`Disk space limit` section enter a :guilabel:`Standard search limit` of 1000 MB.
+6. Now, in the :guilabel:`Role search time window limit` section of the :guilabel:`Resources` tab, select :guilabel:`Custom time` and enter 2592000 seconds (30 days) for the maximum time window for searches for this role. For the earliest searchable event time for this role, select :guilabel:`Custom time` and enter 7776000 seconds (90 days). In the :guilabel:`Disk space limit` section enter a :guilabel:`Standard search limit` of 1000 MB.
 
       .. image:: /_images/logs/ResourcesTab2.png
          :width: 100%
@@ -106,4 +108,4 @@ In your Splunk Enterprise search head, follow the instructions in the guided set
 
 Troubleshooting
 ==============================================================
-See :ref:`logs-LOconnect-troubleshoot` to learn how to solve common  issues with Log Observer Connect.
+See :ref:`logs-LOconnect-troubleshoot` to learn how to solve common issues with Log Observer Connect.
