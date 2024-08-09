@@ -11,6 +11,12 @@ Configure Business Workflow rules
 
 :strong:`Available in Enterprise Edition`
 
+I think that there should be a note here that also says that the tag must be indexed per this slidedeck here:
+
+https://docs.google.com/presentation/d/1lSGs2Vg9vVQI5zAdP2g0Zuu9CvrR-j1FD-jsWlsfixY/edit#slide=id.gad62d39fdc_1_0
+
+Thank you!
+
 |hr|
 
 Business Workflow rules use span tags to make trace behavior in transaction processing explicit and transparent.
