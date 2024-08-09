@@ -119,7 +119,9 @@ To continue using the Microsoft Teams integration in Splunk Observability Cloud 
 
 #.  Transition from Office 365 connectors to Workflows:
 
-    #. In the Microsoft Teams Workflows app, select the :strong:`Create` tab.
+    #. Log in to Microsoft Teams and navigate to the list of teams.
+    #. Select the team that contains the channel you want to send alert notifications to. Expand the list of channels.
+    #. Find and hover over the channel you want to send alert notifications to. Select :strong:`More options` (...) and then select :strong:`Workflows`.
     #. Find and select the :strong:`Post to a channel when a webhook request is received` template.
     #. Enter a descriptive name for the workflow.
     #. Add a team and channel for your workflow.
