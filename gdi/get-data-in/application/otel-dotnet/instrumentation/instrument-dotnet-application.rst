@@ -9,7 +9,7 @@ Instrument your .NET application for Splunk Observability Cloud (OpenTelemetry)
 
 The Splunk Distribution of OpenTelemetry .NET automatically instruments .NET applications, Windows services running .NET applications, and ASP.NET applications deployed on IIS.
 
-You can install the .NET instrumentation using the NuGet packages, a guided setup, or manual instructions. The NuGet packages are the best method for avoiding dependency version conflicts, but are not well-suited for instrumenting multiple applications running on the same machine. Review the various installation methods on this page to identify the best method for your application environment.
+You can install the .NET instrumentation manually or using the NuGet packages. The manual instructions include the option to use a guided setup. The NuGet packages are the best method for avoiding dependency version conflicts, but are not well-suited for instrumenting multiple applications running on the same machine. Review the :ref:`pre-checks <dotnet-pre-checks>` and the various installation procedures on this page to identify the best installation method for your application environment.
 
 To learn about automatic discovery, see :ref:`discovery_mode`.
 
@@ -18,7 +18,7 @@ To learn about automatic discovery, see :ref:`discovery_mode`.
 Install the OpenTelemetry .NET instrumentation using the NuGet packages
 =======================================================================
 
-You can deploy the Splunk Distribution of OpenTelemetry .NET instrumentation automatically through the official NuGet packages. Your instrumented application project must support NuGet packages.
+You can deploy the Splunk Distribution of the OpenTelemetry .NET instrumentation automatically using the official NuGet packages. Your instrumented application project must support NuGet packages.
 
 The following scenarios are ideal for using the NuGet packages:
 
@@ -93,8 +93,17 @@ The instrumentation procedure in the previous section produces launch scripts in
      - Windows: ``splunk-launch.cmd dotnet <application>``.
      - Linux: ``splunk-launch.sh dotnet <application>``.
 
+Install the Splunk Distribution of OpenTelemetry .NET manually
+==============================================================
+
+You can deploy the Splunk Distribution of OpenTelemetry .NET instrumentation manually, using either the guided setup or the step-by-step instructions below.
+
+The primary benefit to installing manually is that doing so enables you to instrument multiple .NET applications that run in the same environment. The primary limitation is that there is an increased likelihood of version conflicts between the dependencies used by the application and the automatic instrumentation.
+
+To install the distribution using the official NuGet packages, see :ref:`otel-dotnet-nuget-pkg`.
+
 Generate customized instructions using the guided setup
-=======================================================
+-------------------------------------------------------
 
 To generate all the basic installation commands for your environment and application, use the .NET OpenTelemetry guided setup. To access the .NET OpenTelemetry guided setup, follow these steps:
 
@@ -107,20 +116,15 @@ To generate all the basic installation commands for your environment and applica
    #. Select the :guilabel:`APM` product.
    #. Select the :guilabel:`.NET (OpenTelemetry)` tile to open the .NET OpenTelemetry guided setup.
 
-Install the Splunk Distribution of OpenTelemetry .NET manually
-==============================================================
+.. _install-dotnet-otel-instrumentation:
+
+Instrument your .NET application
+--------------------------------
 
 If you don't use the guided setup, follow these instructions to manually install the Splunk Distribution of OpenTelemetry .NET:
 
 - :ref:`install-dotnet-otel-instrumentation`
 - :ref:`configure-otel-dotnet`
-
-To install the distribution using the official NuGet packages, see :ref:`otel-dotnet-nuget-pkg`.
-
-.. _install-dotnet-otel-instrumentation:
-
-Instrument your .NET application
---------------------------------
 
 Use the following steps to automatically instrument your application.
 
