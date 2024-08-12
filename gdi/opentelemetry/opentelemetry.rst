@@ -70,7 +70,7 @@ Also, the customizations in the Splunk distribution include these additional fea
 .. raw:: html
 
   <embed>
-    <h3>Splunk OpenTelemetry Collector for Kubernetes<a name="splunk-distro-kubernetes" class="headerlink" href="#splunk-distro-kubernetes" title="Permalink to this headline">¶</a></h3>
+    <h3>Data flow in the Splunk OpenTelemetry Collector for Kubernetes<a name="splunk-distro-kubernetes" class="headerlink" href="#splunk-distro-kubernetes" title="Permalink to this headline">¶</a></h3>
   </embed>
 
 The Splunk Distribution of the OpenTelemetry Collector for Kubernetes... 
@@ -79,10 +79,10 @@ The Splunk Distribution of the OpenTelemetry Collector for Kubernetes...
   
   flowchart LR
 
-    accTitle: Splunk Distribution of OpenTelemetry Collector diagram.
+    accTitle: Splunk Distribution of the OpenTelemetry Collector for Kubernetes diagram.
     accDescr: The Splunk Distribution of OpenTelemetry Collector contains receivers, processors, exporters, and extensions. Receivers gather metrics and logs from infrastructure, and metrics, traces, and logs from back-end applications. Receivers send data to processors, and processors send data to exporters. Exporters send data to Splunk Observability Cloud and Splunk Cloud Platform. Front-end experiences send data directly to Splunk Observability Cloud through RUM instrumentation.
 
-    subgraph "\nSplunk Distribution of the OpenTelemetry Collector"
+    subgraph "\nSplunk Distribution of the OpenTelemetry Collector for Kubernetes"
     receivers
     processors
     exporters
@@ -98,6 +98,7 @@ The Splunk Distribution of the OpenTelemetry Collector for Kubernetes...
 
     exporters --> S[Splunk Observability Cloud]
     exporters --> P[Splunk Cloud Platform]
+    exporters -- "metrics, logs, traces not supported" --> U[Splunk Enterprise]
 
 .. raw:: html
 
