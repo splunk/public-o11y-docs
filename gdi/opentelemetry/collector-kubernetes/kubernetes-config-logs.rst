@@ -11,7 +11,7 @@ Configure logs and events for Kubernetes
 
 .. note:: See how to configure the Collector for Kubernetes at :ref:`otel-kubernetes-config` and :ref:`otel-kubernetes-config-advanced`.
 
-Starting on version 0.86.0, the Splunk Distribution of Collector for Kubernetes collects native OpenTelemetry logs by default.
+Starting on version 0.86.0, the Splunk Distribution of the Collector for Kubernetes collects native OpenTelemetry logs by default.
 
 The following applies:
 
@@ -24,17 +24,6 @@ The following applies:
 * Log collection is not supported in GKE Autopilot.
 
 * See also :ref:`other rules and limitations for metrics and dimensions <metric-dimension-names>`. For instance, you can have up to 36 dimensions per MTS, otherwise the data point is dropped.
-
-Use Fluentd to collect logs
-===========================================================================
-
-You can also use Fluentd to collect Kubernetes logs and send them through the Collector, which does all of the necessary metadata enrichment. 
-
-Add the following line to your configuration to use Fluentd to collect logs.
-
-.. code-block:: yaml
-
-  logsEngine: fluentd
 
 Add log files from Kubernetes host machines or volumes
 ===========================================================================
@@ -68,7 +57,7 @@ The following example shows how to add logs from Kubernetes host machines:
 Process multi-line logs
 ===========================================================================
 
-The Splunk Distribution of OpenTelemetry Collector for Kubernetes supports parsing of multi-line logs to help read, understand, and troubleshoot the multi-line logs in a better way. 
+The Splunk Distribution of the OpenTelemetry Collector for Kubernetes supports parsing of multi-line logs to help read, understand, and troubleshoot the multi-line logs in a better way. 
 
 To process multi-line logs, add the following section to your values.yaml configuration:
 
@@ -181,6 +170,19 @@ The following table provides a summary of performance benchmarks run internally:
     - 53,000
 
 The data pipelines for these test runs involved reading container logs as they are being written, then parsing filename for metadata, enriching it with Kubernetes metadata, reformatting the data structure, and sending logs (without compression) to the Splunk HEC endpoint.
+
+.. _kubernetes-config-logs-fluentd:
+
+Use Fluentd to collect Kubernetes logs 
+===========================================================================
+
+Alternatively, you can use Fluentd to collect Kubernetes logs and send them through the Collector, which does all of the necessary metadata enrichment. 
+
+Add the following line to your configuration to use Fluentd to collect logs.
+
+.. code-block:: yaml
+
+  logsEngine: fluentd
 
 .. _otel-k8s-events:
 

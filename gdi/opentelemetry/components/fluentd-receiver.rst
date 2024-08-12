@@ -66,7 +66,7 @@ Troubleshooting
 
 For troubleshooting Fluentd, see:
 
-* :ref:`fluentd-collector-troubleshooting`.
+* :ref:`fluentd-collector-troubleshooting`
 * :ref:`otel-linux-uninstall-both-otel-and-tdagent`
 
 .. caution:: If you have a Log Observer entitlement or wish to collect logs for the target host with Fluentd, make sure Fluentd is installed and turned on in your Collector instance.
