@@ -21,6 +21,7 @@ To learn more about the Collector for Kubernetes Helm chart, see:
 
 * :ref:`kubernetes-helm-architecture`
 * :ref:`kubernetes-helm-releases`
+* :ref:`otel-commands`
 
 .. _helm-chart-supported-distros:
 

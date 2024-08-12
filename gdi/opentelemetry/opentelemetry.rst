@@ -22,7 +22,6 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     Use the Universal Forwarder <collector-with-the-uf.rst>
     Monitor the Collector with built-in dashboards <collector-builtin-dashboard.rst>
     Troubleshooting <troubleshooting.rst>
-    Commands reference <otel-commands.rst>
     Migrate from the Smart Agent to the Collector <smart-agent/smart-agent-migration-to-otel-collector.rst>
     
 Use the Splunk Distribution of the OpenTelemetry Collector to receive, process, and export metric, trace, and log data and metadata for Splunk Observability Cloud.
@@ -32,7 +31,7 @@ Learn more about the Splunk Observability Cloud data model at :ref:`data-model`.
 .. raw:: html
 
   <embed>
-    <h2>How does the Collector work?<a name="collector-intro-how" class="headerlink" href="#collector-intro-how" title="Permalink to this headline">¶</a></h2>
+    <h2>How does the OpenTelemetry Collector work?<a name="collector-intro-how" class="headerlink" href="#collector-intro-how" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 .. include:: /_includes/collector-works.rst
@@ -40,12 +39,41 @@ Learn more about the Splunk Observability Cloud data model at :ref:`data-model`.
 .. raw:: html
 
   <embed>
-    <h2>Understand the Collector distributions<a name="collector-distros" class="headerlink" href="#collector-distros" title="Permalink to this headline">¶</a></h2>
+    <h3>Understand the Collector distributions<a name="collector-distros" class="headerlink" href="#collector-distros" title="Permalink to this headline">¶</a></h3>
   </embed>
     
 The OpenTelemetry Collector is an open-source project that has a core version and a contributions (Contrib) version. The core version provides receivers, processors, and exporters for general use. The Contrib version provides receivers, processors, and exporters for specific vendors and use cases. 
 
-The Splunk Distribution of OpenTelemetry Collector is a distribution of the OpenTelemetry Collector. It sits on top of the Contrib version, and it bundles components from OpenTelemetry Core, OpenTelemetry Contrib, and other sources to provide data collection for multiple source platforms.  
+The Splunk Distribution of the OpenTelemetry Collector is a distribution of the OpenTelemetry Collector. It sits on top of the Contrib version, and it bundles components from OpenTelemetry Core, OpenTelemetry Contrib, and other sources to provide data collection for multiple source platforms.  
+
+.. raw:: html
+
+  <embed>
+    <h2>Why use the Splunk distribution of the Collector?<a name="collector-distros-splunk" class="headerlink" href="#collector-distros-splunk" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
+.. caution::
+
+  Splunk officially supports the Splunk Distribution of the OpenTelemetry Collector. 
+  Splunk only provides best-effort support for the upstream OpenTelemetry Collector. See :ref:`using-upstream-otel` for more information.
+
+While Splunk Observability Cloud would work with any of the Collector versions as it's native OTel, Splunk can provide better support response for the Splunk distribution. Any changes to the Contrib or Base OpenTelemetry Collector are required to go through the open-source vetting process, which can take some time. If you use the Splunk version, updates and hot fixes are under Splunk control. Note that all major additions to the Splunk version of the Collector do eventually make their way into the Contrib version.
+
+Also, the customizations in the Splunk distribution include these additional features:
+
+* Better defaults for Splunk products
+* Discovery mode for metric sources
+* Automatic discovery and configuration
+* Fluentd for log capture, deactivated by default
+* Tools to support migration from SignalFx products
+
+.. raw:: html
+
+  <embed>
+    <h3>Splunk OpenTelemetry Collector for Kubernetes<a name="splunk-distro-kubernetes" class="headerlink" href="#splunk-distro-kubernetes" title="Permalink to this headline">¶</a></h3>
+  </embed>
+
+The Splunk Distribution of the OpenTelemetry Collector for Kubernetes... 
 
 .. mermaid::
   
@@ -54,7 +82,7 @@ The Splunk Distribution of OpenTelemetry Collector is a distribution of the Open
     accTitle: Splunk Distribution of OpenTelemetry Collector diagram.
     accDescr: The Splunk Distribution of OpenTelemetry Collector contains receivers, processors, exporters, and extensions. Receivers gather metrics and logs from infrastructure, and metrics, traces, and logs from back-end applications. Receivers send data to processors, and processors send data to exporters. Exporters send data to Splunk Observability Cloud and Splunk Cloud Platform. Front-end experiences send data directly to Splunk Observability Cloud through RUM instrumentation.
 
-    subgraph "\nSplunk Distribution of OpenTelemetry Collector"
+    subgraph "\nSplunk Distribution of the OpenTelemetry Collector"
     receivers
     processors
     exporters
@@ -74,23 +102,34 @@ The Splunk Distribution of OpenTelemetry Collector is a distribution of the Open
 .. raw:: html
 
   <embed>
-    <h3>Why use the Splunk distribution of the Collector?<a name="collector-distros-splunk" class="headerlink" href="#collector-distros-splunk" title="Permalink to this headline">¶</a></h3>
+    <h3>Splunk OpenTelemetry Collector for Linux and Windows<a name="splunk-distro-linux-windows" class="headerlink" href="#splunk-distro-linux-windows" title="Permalink to this headline">¶</a></h3>
   </embed>
 
-.. caution::
+The Splunk Distribution of the OpenTelemetry Collector for Linux and Windows... 
 
-  Splunk officially supports the Splunk Distribution of the OpenTelemetry Collector. 
-  Splunk only provides best-effort support for the upstream OpenTelemetry Collector. See :ref:`using-upstream-otel` for more information.
+.. mermaid::
+  
+  flowchart LR
 
-While Splunk Observability Cloud would work with any of the Collector versions as it's native OTel, Splunk can provide better support response for the Splunk distribution. Any changes to the Contrib or Base OpenTelemetry Collector are required to go through the open-source vetting process, which can take some time. If you use the Splunk version, updates and hot fixes are under Splunk control. Note that all major additions to the Splunk version of the Collector do eventually make their way into the Contrib version.
+    accTitle: Splunk Distribution of OpenTelemetry Collector diagram.
+    accDescr: The Splunk Distribution of OpenTelemetry Collector contains receivers, processors, exporters, and extensions. Receivers gather metrics and logs from infrastructure, and metrics, traces, and logs from back-end applications. Receivers send data to processors, and processors send data to exporters. Exporters send data to Splunk Observability Cloud and Splunk Cloud Platform. Front-end experiences send data directly to Splunk Observability Cloud through RUM instrumentation.
 
-Also, the customizations in the Splunk distribution include these additional features:
+    subgraph "\nSplunk Distribution of the OpenTelemetry Collector"
+    receivers
+    processors
+    exporters
+    extensions
+    end
 
-* Better defaults for Splunk products
-* Discovery mode for metric sources
-* Automatic discovery and configuration
-* Fluentd for log capture, deactivated by default
-* Tools to support migration from SignalFx products
+    Infrastructure -- "metrics, logs" --> receivers
+    B[Back-end services] -- "traces, metrics, logs" --> receivers
+    C[Front-end experiences] -- "traces" --> S[Splunk Observability Cloud]
+
+    receivers --> processors
+    processors --> exporters
+
+    exporters --> S[Splunk Observability Cloud]
+    exporters --> P[Splunk Cloud Platform]
 
 .. _otel-intro-resources:
 
@@ -125,7 +164,7 @@ See also :ref:`otel-requirements` for information on:
 .. raw:: html
 
   <embed>
-    <h2>Install and configure the Collector<a name="otel-intro-install" class="headerlink" href="#otel-intro-install" title="Permalink to this headline">¶</a></h2>
+    <h2>Install and configure the Splunk Distribution of the Collector <a name="otel-intro-install" class="headerlink" href="#otel-intro-install" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 .. note::
