@@ -56,24 +56,6 @@ You can configure the following settings:
 
 * ``initial_delay``. Optional, ``1s`` by default. Defines how long this receiver waits before starting.
 
-Enable or disable metrics
---------------------------------------------
-
-You can enable or disable metrics by using the `enabled` flag. For example:
-
-.. code:: yaml
-
-  receivers:
-    haproxy:
-      endpoint: http://127.0.0.1:8080/stats
-      metrics:
-        haproxy.connection_rate:
-          enabled: false
-        haproxy.requests:
-          enabled: true    
-
-For the full list of metrics, see :ref:`haproxy-receiver-metrics`.
-
 Settings
 ======================
 
