@@ -17,44 +17,43 @@ Install the package using one of these methods:
 
 .. _linux-otel-packages:
 
-Included packages
-==========================
-
-The Linux installer script installs the following packages:
-
-* Fluentd, if enabled. See :ref:`fluentd-manual-config-linux`.
-* JMX metric gatherer.
-  
-.. _linux-scripts:
-
-Installer script
+Supported versions
 =================================
 
 .. include:: /_includes/requirements/collector-linux.rst
 
+Included packages
+==========================
+
 The installer script deploys and configures these elements:
 
-* The Splunk Distribution of OpenTelemetry Collector for Linux
-* Fluentd, using the td-agent. Turned off by default. See :ref:`fluentd-receiver` for more information
+* The Splunk Distribution of the OpenTelemetry Collector for Linux
+* Fluentd, using the td-agent. Turned off by default. See :ref:`fluentd-manual-config-linux` and :ref:`fluentd-receiver` for more information
+* JMX metric gatherer
+  
+.. _linux-scripts:
 
-To install the package using the installer script, follow these steps:
+Install the Collector using the installer script
+===================================================
+
+To install the Collector package using the installer script, follow these steps:
 
 #. Ensure you have ``systemd``, ``curl`` and ``sudo`` installed.
-#. Download and run the installer script.
-#. Replace the following variables for your environment:
 
-* ``SPLUNK_REALM``: This is the Realm to send data to. The default is ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
-* ``SPLUNK_MEMORY_TOTAL_MIB``: This is the total allocated memory in mebibytes (MiB). For example, ``512`` allocates 512 MiB (500 x 2^20 bytes) of memory.
-* ``SPLUNK_ACCESS_TOKEN``: This is the base64-encoded access token for authenticating data ingest requests. See :ref:`admin-org-tokens`.
+#. Download and run the installer script using this command: 
 
-The command to download and invoke the installer script is as follows:
+  .. code-block:: bash
 
-.. code-block:: bash
+    curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh;
+    sudo sh /tmp/splunk-otel-collector.sh --realm $SPLUNK_REALM --memory $SPLUNK_MEMORY_TOTAL_MIB -- $SPLUNK_ACCESS_TOKEN
 
-   curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh;
-   sudo sh /tmp/splunk-otel-collector.sh --realm $SPLUNK_REALM --memory $SPLUNK_MEMORY_TOTAL_MIB -- $SPLUNK_ACCESS_TOKEN
+  Replacing the following variables for your environment:
 
-.. note:: If you have a Log Observer entitlement or want to collect logs for the target host with Fluentd, use the ``--with-fluentd`` option to also install Fluentd when installing the Collector.
+  * ``SPLUNK_REALM``: This is the Realm to send data to. The default is ``us0``. To find your Splunk realm, see :ref:`Note about realms <about-realms>`.
+  
+  * ``SPLUNK_MEMORY_TOTAL_MIB``: This is the total allocated memory in mebibytes (MiB). For example, ``512`` allocates 512 MiB (500 x 2^20 bytes) of memory.
+  
+  * ``SPLUNK_ACCESS_TOKEN``: This is the base64-encoded access token for authenticating data ingest requests. See :ref:`admin-org-tokens`.
 
 Configure memory allocation
 ----------------------------------
@@ -86,15 +85,19 @@ To skip these steps and use configured repos on the target system that provide t
    sudo sh /tmp/splunk-otel-collector.sh --realm $SPLUNK_REALM --skip-collector-repo --skip-fluentd-repo \
     -- $SPLUNK_ACCESS_TOKEN
     
+Collect logs for the Collector for Linux
+====================================================================
+
+Use the Universal Forwarder to send logs to the Splunk platform. See more at :ref:`collector-with-the-uf`.
+
+Fluentd is turned off by default. If you already installed Fluentd on a host, re-install the Collector without Fluentd using the ``--without-fluentd`` option. 
 
 .. _fluentd-manual-config-linux:
 
-Configure Fluentd
+Collect Linux logs with Fluentd
 ---------------------------------------
 
-Fluentd is turned off by default. If you already installed Fluentd on a host, install the Collector without Fluentd using the ``--without-fluentd`` option. For more information, see :ref:`otel-configuration`.
-
-To install Fluentd for log collection, run the installer script with the ``--with-fluentd`` option. For example:
+If you have a Log Observer entitlement or want to collect logs for the target host with Fluentd, use the ``--with-fluentd`` option to also install Fluentd when installing the Collector. For example:
 
 .. code-block:: bash
 
@@ -179,7 +182,7 @@ For more information on instrumentation, see:
 
 .. _otel-installer-options-linux:
 
-Options of the installer script for Linux
+Options of the installer script of the Collector for Linux
 ==================================================================
 
 The Linux installer script supports the following options for the Collector, Automatic Discovery for back-end services and Fluentd.

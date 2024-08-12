@@ -79,7 +79,7 @@ The Splunk Distribution of OpenTelemetry Collector is a distribution of the Open
 
 .. caution::
 
-  Splunk officially supports the Splunk Distribution of OpenTelemetry Collector. 
+  Splunk officially supports the Splunk Distribution of the OpenTelemetry Collector. 
   Splunk only provides best-effort support for the upstream OpenTelemetry Collector. See :ref:`using-upstream-otel` for more information.
 
 While Splunk Observability Cloud would work with any of the Collector versions as it's native OTel, Splunk can provide better support response for the Splunk distribution. Any changes to the Contrib or Base OpenTelemetry Collector are required to go through the open-source vetting process, which can take some time. If you use the Splunk version, updates and hot fixes are under Splunk control. Note that all major additions to the Splunk version of the Collector do eventually make their way into the Contrib version.
