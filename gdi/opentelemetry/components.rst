@@ -73,6 +73,9 @@ The Splunk Distribution of the OpenTelemetry Collector includes and supports the
    * - :ref:`fluentd-receiver` (``fluentforward``)
      - Runs a TCP server that accepts events through the Fluentd Forward protocol.
      - Logs
+   * - :ref:`haproxy-receiver` (``haproxy``)
+     - Generates metrics by polling periodically the HAProxy process through a dedicated socket or HTTP URL. 
+     - Metrics
    * - :ref:`host-metrics-receiver` (``hostmetrics``)
      - Generates system metrics from various sources. Use this receiver when deploying the Collector as an agent. 
      - Metrics
