@@ -44,7 +44,7 @@ To activate the receiver, add ``elasticsearch`` to the ``receivers`` section of 
 .. code:: yaml
 
   receivers:
-      elasticsearch
+      elasticsearch:
 
 Next, include the receiver in the ``metrics`` pipeline of the ``service`` section of your configuration file:
 
