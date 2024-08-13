@@ -149,12 +149,12 @@ When Splunk APM infers an HTTP service, it means an instrumented service is talk
 To assign a service name for an inferred HTTP service, Splunk APM does the following:
 
 #. Verifies that the ``span.kind`` of the referring span is equal to ``CLIENT``.
-#. To ensure that the ``peer.service`` is an HTTP service the following logic is applied: 
+#. To ensure that the ``peer.service`` is an HTTP service, applies the following logic: 
     #. If ``peer.service`` exists and 1 or more of following also exist, the service name is extracted from ``peer.service``.
         #. ``http.host``
         #. ``http.url`` in libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower or ``url.full`` in libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher
         #. ``net.peer.name`` in libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower or ``server.address`` in libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher
-#. If, step 2 is not true, looks for the service name in the following tags, in order. If any of these tags are found, infers the service name from the first appearing tag. If none of these tags are found, the span is not considered related to an inferred HTTP service.
+#. If step 2 is not true, looks for the service name in the following tags, in order. If any of these tags are found, infers the service name from the first appearing tag. If none of these tags are found, the span is not considered related to an inferred HTTP service.
     #. ``http.host``: host name extracted as-is
     #. ``peer.hostname``: host name extracted as-is
     #. ``peer.address``: host name is extracted from the URL
