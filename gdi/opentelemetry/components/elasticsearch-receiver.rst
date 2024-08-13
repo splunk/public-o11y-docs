@@ -7,7 +7,7 @@ Elasticsearch receiver
 .. meta::
       :description: The Elasticsearch receiver queries the Elasticsearch node stats, cluster health and index stats endpoints in order to scrape metrics from a running Elasticsearch cluster.
 
-The Elasticsearch receiver queries Elasticsearch's endpoints node stats, cluster health and index stats to scrape metrics from a running Elasticsearch cluster. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
+The Elasticsearch receiver queries Elasticsearch's node stats, cluster health and index stats endpoints to scrape metrics from a running Elasticsearch cluster. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
 To learn more about the queried endpoints see:
 
