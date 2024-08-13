@@ -49,7 +49,7 @@ The Splunk Distribution of the OpenTelemetry Collector is a distribution of the 
 .. raw:: html
 
   <embed>
-    <h2>Why use the Splunk distribution of the Collector?<a name="collector-distros-splunk" class="headerlink" href="#collector-distros-splunk" title="Permalink to this headline">¶</a></h2>
+    <h3>Why use the Splunk distribution of the Collector?<a name="collector-distros-splunk" class="headerlink" href="#collector-distros-splunk" title="Permalink to this headline">¶</a></h3>
   </embed>
 
 .. caution::
@@ -70,10 +70,20 @@ Also, the customizations in the Splunk distribution include these additional fea
 .. raw:: html
 
   <embed>
-    <h3>Data flow in the Splunk OpenTelemetry Collector for Kubernetes<a name="splunk-distro-kubernetes" class="headerlink" href="#splunk-distro-kubernetes" title="Permalink to this headline">¶</a></h3>
+    <h2>Data flow in the Splunk Distribution of the OpenTelemetry Collector<a name="splunk-distro-data-flow" class="headerlink" href="#splunk-distro-data-flow" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-The Splunk Distribution of the OpenTelemetry Collector for Kubernetes... 
+Data flow for the Splunk Distribution of the OpenTelemetry Collector depends on your environment. See the sections for Kubernetes, and Linux and Windows.
+
+For more information on how to configure data pipelines, :ref:`otel-data-processing`. 
+
+.. raw:: html
+
+  <embed>
+    <h3>Data flow in the Splunk OpenTelemetry Collector for Kubernetes<a name="splunk-distro-data-flow-kubernetes" class="headerlink" href="#splunk-distro-data-flow-kubernetes" title="Permalink to this headline">¶</a></h3>
+  </embed>
+
+The Splunk Distribution of the OpenTelemetry Collector for Kubernetes ingests, manages and exports data as shown in this diagram: 
 
 .. mermaid::
   
@@ -89,8 +99,8 @@ The Splunk Distribution of the OpenTelemetry Collector for Kubernetes...
     extensions
     end
 
-    Infrastructure -- "metrics, logs" --> receivers
-    B[Back-end services] -- "traces, metrics, logs" --> receivers
+    Infrastructure -- "metrics, logs (native OTel)" --> receivers
+    B[Back-end services] -- "traces, metrics, logs (native OTel)" --> receivers
     C[Front-end experiences] -- "traces" --> S[Splunk Observability Cloud]
 
     receivers --> processors
@@ -98,22 +108,22 @@ The Splunk Distribution of the OpenTelemetry Collector for Kubernetes...
 
     exporters --> S[Splunk Observability Cloud]
     exporters --> P[Splunk Cloud Platform]
-    exporters -- "metrics, logs, traces not supported" --> U[Splunk Enterprise]
+    exporters -- "metrics, logs (traces not supported)" --> U[Splunk Enterprise]
 
 .. raw:: html
 
   <embed>
-    <h3>Splunk OpenTelemetry Collector for Linux and Windows<a name="splunk-distro-linux-windows" class="headerlink" href="#splunk-distro-linux-windows" title="Permalink to this headline">¶</a></h3>
+    <h3>Data flow in the Splunk OpenTelemetry Collector for Linux and Windows<a name="splunk-distro-data-flow-linux-windows" class="headerlink" href="#splunk-distro-data-flow-linux-windows" title="Permalink to this headline">¶</a></h3>
   </embed>
 
-The Splunk Distribution of the OpenTelemetry Collector for Linux and Windows... 
+The Splunk Distribution of the OpenTelemetry Collector for Linux and Windows ingests, manages and exports data as shown in this diagram: 
 
 .. mermaid::
   
   flowchart LR
 
-    accTitle: Splunk Distribution of OpenTelemetry Collector diagram.
-    accDescr: The Splunk Distribution of OpenTelemetry Collector contains receivers, processors, exporters, and extensions. Receivers gather metrics and logs from infrastructure, and metrics, traces, and logs from back-end applications. Receivers send data to processors, and processors send data to exporters. Exporters send data to Splunk Observability Cloud and Splunk Cloud Platform. Front-end experiences send data directly to Splunk Observability Cloud through RUM instrumentation.
+    accTitle: Splunk Distribution of the OpenTelemetry Collector diagram.
+    accDescr: The Splunk Distribution of the OpenTelemetry Collector contains receivers, processors, exporters, and extensions. Receivers gather metrics and logs from infrastructure, and metrics, traces, and logs from back-end applications. Receivers send data to processors, and processors send data to exporters. Exporters send data to Splunk Observability Cloud and Splunk Cloud Platform. Front-end experiences send data directly to Splunk Observability Cloud through RUM instrumentation.
 
     subgraph "\nSplunk Distribution of the OpenTelemetry Collector"
     receivers
@@ -131,6 +141,35 @@ The Splunk Distribution of the OpenTelemetry Collector for Linux and Windows...
 
     exporters --> S[Splunk Observability Cloud]
     exporters --> P[Splunk Cloud Platform]
+    exporters --> Q[Universal Forwarder] 
+
+    Q[Universal Forwarder] --> U[Splunk Enterprise]
+
+.. raw:: html
+
+  <embed>
+    <h3>Collect logs <a name="otel-config-logs" class="headerlink" href="#otel-config-logs" title="Permalink to this headline">¶</a></h3>
+  </embed>
+
+To collect logs with the Splunk Distribution of the OpenTelemetry Collector:
+
+* In Kubernetes environments, native OpenTelemetry log collection is supported by default. See more at :ref:`kubernetes-config-logs`.
+* For Linux and Windows environments (physical hosts and virtual machines), use the Universal Forwarder to send logs to the Splunk platform. See more at :ref:`collector-with-the-uf`.
+
+.. note:: If you have a Log Observer entitlement or wish to collect logs for the target host, install and enable Fluentd in your Collector instance. 
+
+.. _otel-intro-enterprise:
+
+.. raw:: html
+
+  <embed>
+    <h3>Use the Collector to send data to Splunk Enterprise<a name="otel-intro-enterprise" class="headerlink" href="#otel-intro-enterprise" title="Permalink to this headline">¶</a></h3>
+  </embed>
+
+If you want to send data to Splunk Enterprise using the Collector, the following applies:
+
+* For Kubernetes environments, use the Collector to send metrics and logs to Splunk Enterprise. Trace collection is not supported.
+* For Linux and Windows environments (physical hosts and virtual machines), use the Universal Forwarder to send metrics and logs to the Splunk platform. See more at :ref:`collector-with-the-uf`. Alternatively, you can use the Collector to forward data to the Splunk platform, but this option is not supported at the moment.
 
 .. _otel-intro-resources:
 
@@ -247,17 +286,6 @@ For more information see also:
 - :ref:`otel-troubleshooting`. Try these troubleshooting techniques and learn how to open a support request.
 - :ref:`otel-collector-scenario`.
 
-.. _otel-intro-enterprise:
 
-.. raw:: html
-
-  <embed>
-    <h2>Use the Collector to send data to Splunk Enterprise<a name="otel-intro-enterprise" class="headerlink" href="#otel-intro-enterprise" title="Permalink to this headline">¶</a></h2>
-  </embed>
-
-If you want to send data to Splunk Enterprise using the Collector, the following applies:
-
-* For Kubernetes environments, use the Collector to send metrics and logs to Splunk Enterprise. Trace collection is not supported.
-* For Linux and Windows environments (physical hosts and virtual machines), use the Universal Forwarder to send metrics and logs to the Splunk platform. See more at :ref:`collector-with-the-uf`. Alternatively, you can use the Collector to forward data to the Splunk platform, but this option is not supported at the moment.
 
 
