@@ -45,7 +45,7 @@ The SignalFx Tracing Library for PHP instruments the following libraries and fra
      - All supported PHP versions
    * - Drupal
      - 7.x, 8.x, and 9.x
-   * - ElasticSearch
+   * - Elasticsearch
      - 1.x
    * - Eloquent
      - All supported Laravel versions

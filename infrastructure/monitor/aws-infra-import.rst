@@ -209,13 +209,13 @@ Example: Specify namespaces and filters
 
 The following example demonstrates how to specify the following:
 
-* Namespace: Only import data from Amazon ElasticSearch Service and EC2.
+* Namespace: Only import data from Amazon Elasticsearch Service and EC2.
 * Data filters: Only import data from EC2 if it matches a filter.
 * Tag filters: Exclude data from resources that have the AWS tag ``version:canary``.
 
 To create these specifications, follow these steps:
 
-#. From the list of namespaces, select Amazon ElasticSearch Service and EC2.
+#. From the list of namespaces, select Amazon Elasticsearch Service and EC2.
 #. To limit the data Infrastructure Monitoring imports from EC2, select data filters from the list.
 #. To select the filters you want from the following options:
 

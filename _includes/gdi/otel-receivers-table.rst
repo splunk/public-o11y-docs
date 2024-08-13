@@ -4,6 +4,7 @@
 * :ref:`cloudfoundry-receiver`
 * :ref:`collectd-receiver`
 * :ref:`discovery-receiver`
+* :ref:`elasticsearch-receiver`
 * :ref:`filelog-receiver`   
 * :ref:`fluentd-receiver`
 * :ref:`host-metrics-receiver`
