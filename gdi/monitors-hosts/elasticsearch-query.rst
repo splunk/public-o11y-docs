@@ -4,7 +4,7 @@ Elasticsearch query
 ===================
 
 .. meta::
-   :description: Use this Splunk Observability Cloud integration for the ElasticSearch Query monitor. See benefits, install, configuration, and metrics
+   :description: Use this Splunk Observability Cloud integration for the Elasticsearch Query monitor. See benefits, install, configuration, and metrics
 
 :strong:`This integration is in beta.`
 
