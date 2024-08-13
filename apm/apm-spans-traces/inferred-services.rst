@@ -150,17 +150,16 @@ To assign a service name for an inferred HTTP service, Splunk APM does the follo
 
 #. Verifies that the ``span.kind`` of the referring span is equal to ``CLIENT``.
 #. To ensure that the ``peer.service`` is an HTTP service the following logic is applied: 
-    #. If ``peer.service`` exists, checks that 1 or more of following also exist:
+    #. If ``peer.service`` exists and 1 or more of following also exist, the service name is extracted from ``peer.service``.
         #. ``http.host``
         #. ``http.url`` in libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower or ``url.full`` in libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher
         #. ``net.peer.name`` in libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower or ``server.address`` in libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher
-#. Looks for the service name in the following tags, in this order:
+#. If, step 2 is not true, looks for the service name in the following tags, in order. If any of these tags are found, infers the service name from the first appearing tag. If none of these tags are found, the span is not considered related to an inferred HTTP service.
     #. ``http.host``: host name extracted as-is
     #. ``peer.hostname``: host name extracted as-is
     #. ``peer.address``: host name is extracted from the URL
     #. For libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower, host name is extracted from ``http.url``. For libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher, host name is extracted from ``url.full``. 
     #. For libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower, host name extracted as-is from ``net.peer.name``. For libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher, host name is extracted from ``server.address``. 
-#. If any of these tags are found, infers the service name from the first appearing tag. If none of these tags are found, the span is not considered related to an inferred HTTP service.
 
 .. note:: To reduce noise in the service map and managing cardinality, Splunk APM excludes services without a host name or that use their IP address as host name. If you need to turn on IP addresses, contact your sales representative.
 
