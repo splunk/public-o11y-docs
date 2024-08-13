@@ -9,6 +9,8 @@ HAProxy receiver
 
 The HAProxy receiver generates metrics by polling periodically the HAProxy process through a dedicated socket or HTTP URL. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information. 
 
+.. note:: Out-of-the-box dashboards and navigators aren't supported for the HAProxy receiver yet, but are planned for a future release.
+
 Get started
 ======================
 
