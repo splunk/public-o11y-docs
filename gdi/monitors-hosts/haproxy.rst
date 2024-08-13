@@ -6,9 +6,11 @@ HAProxy
 .. meta::
    :description: Use this Splunk Observability Cloud integration for the HAProxy monitor. See benefits, install, configuration, and metrics
 
-The Splunk Distribution of OpenTelemetry Collector uses the Smart Agent receiver with the
+The Splunk Distribution of the OpenTelemetry Collector uses the Smart Agent receiver with the
 HAProxy monitor type to monitor an HAProxy instance. This monitor
 requires HAProxy 1.5+.
+
+.. note:: To monitor your HAProxy instances you can instead use the native OpenTelemetry HAProxy receiver. To learn more, see :ref:`haproxy-receiver`.
 
 Benefits
 --------
