@@ -75,7 +75,7 @@ The following settings are optional:
 
   * See Elasticsearch's :new-page:`Cluster APIs Path parameters <https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-stats.html#index-stats-api-path-params>` for allowed filters.   
   
-  * If empty, then the receiver doesn't scrap any index-level metrics.
+  * If empty, then the receiver doesn't scrape any index-level metrics.
 
 * ``endpoint``. ``http://localhost:9200`` by default. The base URL of the Elasticsearch API for the cluster to monitor.
 
