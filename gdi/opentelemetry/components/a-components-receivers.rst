@@ -18,8 +18,10 @@ Collector components: Receivers
     cloudfoundry-receiver
     collectd-receiver
     discovery-receiver
+    elasticsearch-receiver
     filelog-receiver   
     fluentd-receiver
+    haproxy-receiver
     host-metrics-receiver
     http-check-receiver
     jaeger-receiver    

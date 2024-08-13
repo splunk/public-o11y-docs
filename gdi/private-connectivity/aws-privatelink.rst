@@ -7,7 +7,7 @@ Private Connectivity using AWS PrivateLink
 .. meta::
   :description: Connect to AWS using PrivateLink.
 
-You can use Amazon Web Services (AWS) PrivateLink to secure your metric and traces traffic from your AWS environment to your Splunk Observability Cloud environment without exposing it to the Internet. 
+You can use Amazon Web Services (AWS) PrivateLink to secure your metric and traces traffic from your AWS environment to your Splunk Observability Cloud environment without exposing it to the internet. 
 
 AWS PrivateLink connects your Virtual Private Cloud (VPC) to your AWS services, treating them as if they were in your VPC. You can create and use VPC endpoints to securely access AWS services and control the specific API endpoints and sites. To learn more, see the AWS PrivateLink documentation at :new-page:`What is AWS PrivateLink? <https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html>`.
 
@@ -82,11 +82,23 @@ AWS PrivateLink endpoint URLs
     - Coming soon
     - :new-page:`private-stream.au0.signalfx.com <http://private-stream.au0.signalfx.com/>`
 
+  * - eu-central-1
+    - :new-page:`private-ingest.eu1.signalfx.com <http://private-ingest.eu1.signalfx.com/>`
+    - :new-page:`private-api.eu1.signalfx.com <http://private-api.eu1.signalfx.com/>`
+    - Coming soon
+    - :new-page:`private-stream.eu1.signalfx.com <http://private-stream.eu1.signalfx.com/>`
+
   * - eu-west-1
     - :new-page:`private-ingest.eu0.signalfx.com <http://private-ingest.eu0.signalfx.com/>`
     - :new-page:`private-api.eu0.signalfx.com <http://private-api.eu0.signalfx.com/>`
     - Coming soon
     - :new-page:`private-stream.eu0.signalfx.com <http://private-stream.eu0.signalfx.com/>`
+
+  * - eu-west-2
+    - :new-page:`private-ingest.eu2.signalfx.com <http://private-ingest.eu2.signalfx.com/>`
+    - :new-page:`private-api.eu2.signalfx.com <http://private-api.eu2.signalfx.com/>`
+    - Coming soon
+    - :new-page:`private-stream.eu2.signalfx.com <http://private-stream.eu2.signalfx.com/>`
 
   * - us-east-1
     - :new-page:`private-ingest.us0.signalfx.com <http://private-ingest.us0.signalfx.com/>`
@@ -128,11 +140,23 @@ AWS PrivateLink service names
     - Coming soon
     - com.amazonaws.vpce.ap-southeast-2.vpce-svc-006a9808c3bf97fc1
 
+  * - eu-central-1
+    - com.amazonaws.vpce.eu-central-1.vpce-svc-0163ebbf011db95fa
+    - com.amazonaws.vpce.eu-central-1.vpce-svc-063722bf4a2e858a3
+    - Coming soon
+    - com.amazonaws.vpce.eu-central-1.vpce-svc-022080c55adaeac78
+
   * - eu-west-1
     - com.amazonaws.vpce.eu-west-1.vpce-svc-01c194b2265ecb86e
     - com.amazonaws.vpce.eu-west-1.vpce-svc-07b08296ff84e17a0
     - Coming soon
     - com.amazonaws.vpce.eu-west-1.vpce-svc-0d036df6dbc6ddadb
+
+  * - eu-west-2
+    - com.amazonaws.vpce.eu-west-2.vpce-svc-0f7427a7b9ef925b0
+    - com.amazonaws.vpce.eu-west-2.vpce-svc-0719f35de75c08514
+    - Coming soon
+    - com.amazonaws.vpce.eu-west-2.vpce-svc-0bc5b13127f2916ce
 
   * - us-east-1
     - com.amazonaws.vpce.us-east-1.vpce-svc-0336437d577075951
@@ -212,7 +236,7 @@ To create a VPC endpoint, follow these steps:
 
 5. Select the VPC in which you want to create the endpoint. 
 
-6. Choose the subnet or subnets within the VPC where the endpoint will reside. Make sure to select the subnets from the appropriate availability zones.
+6. Select the subnet or subnets within the VPC where the endpoint will reside. Make sure to select the subnets from the appropriate availability zones.
 
 7. Set the IP address type to ``IPv4``.
 
@@ -226,21 +250,21 @@ To create a VPC endpoint, follow these steps:
 
 9. Review the configuration details and select :guilabel:`Create Endpoint`.
 
-10. Before proceeding to :ref:`aws-privatelink-step4`, confirm with Splunk Customer Support that you created the endpoint, that the service name has been verified, and that Support has enabled the endpoint urls.
+10. Before proceeding to :ref:`aws-privatelink-step4`, confirm with Splunk Customer Support that you created the endpoint, that the service name has been verified, and that Support has activated the endpoint urls.
 
 .. _aws-privatelink-step4:
 
-Step 4: Modify the endpoint to enable a Private DNS Name
+Step 4: Modify the endpoint to activate a Private DNS Name
 ----------------------------------------------------------------
 
-To modify the endpoint to enable a Private DNS Name, follow these steps:
+To modify the endpoint to activate a Private DNS Name, follow these steps:
 
 #. Log in to the AWS Management Console.
 #. Navigate to the :guilabel:`Amazon VPC service` in the region where you have created the VPC endpoint.
 #. On the left navigation pane, select :guilabel:`Endpoints`.
 #. Select the VPC endpoint you want to modify.
 #. Select :guilabel:`Actions`, and then :guilabel:`Modify Endpoint`.
-#. Enable the private DNS names under the :guilabel:`Modify private DNS name` settings.
+#. Turn on the private DNS names under the :guilabel:`Modify private DNS name` settings.
 #. After the process is completed, select :guilabel:`Save Changes`.
 
 You can now start using the AWS PrivateLink URL mentioned in the :ref:`AWS PrivateLink endpoint URLs table <aws-privatelink-endpoint-urls>`.
