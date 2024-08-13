@@ -67,7 +67,7 @@ The following settings are optional:
 
   * See Elasticsearch's :new-page:`Cluster APIs Node specification <https://www.elastic.co/guide/en/elasticsearch/reference/7.9/cluster.html#cluster-nodes>` for allowed filters. 
   
-  * If empty, then the receiver doesn't scrap any node-level metrics, and only metrics related to the cluster's health are scraped at the cluster level.
+  * If empty, then the receiver doesn't scrape any node-level metrics, and only metrics related to the cluster's health are scraped at the cluster level.
 
 * ``skip_cluster_metrics``. ``false`` by default. If ``true``, cluster-level metrics are not scraped.
 
