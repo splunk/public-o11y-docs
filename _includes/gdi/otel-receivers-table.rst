@@ -7,6 +7,7 @@
 * :ref:`elasticsearch-receiver`
 * :ref:`filelog-receiver`   
 * :ref:`fluentd-receiver`
+* :ref:`haproxy-receiver`
 * :ref:`host-metrics-receiver`
 * :ref:`http-check-receiver`
 * :ref:`jaeger-receiver`    
