@@ -61,8 +61,6 @@ Advanced configuration
 
 The following settings are optional:
 
-* ``metrics``. See default behavior at :new-page:`Default metrics settings <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/elasticsearchreceiver/internal/metadata/generated_metrics.go>`. Allows you to enable and disable with metrics to collect.
-
 * ``nodes``. ``["_all"]`` by default. Allows you to specify node filters that define which nodes are scraped for node-level and cluster-level metrics. 
 
   * See Elasticsearch's :new-page:`Cluster APIs Node specification <https://www.elastic.co/guide/en/elasticsearch/reference/7.9/cluster.html#cluster-nodes>` for allowed filters. 
