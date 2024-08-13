@@ -114,178 +114,75 @@ In the following payload, the ``title`` field carries the clickable link and the
 
 For further reference on attaching content and links to Slack using a webhook, see the Slack official documentation.
 
-Multichannel configuration using custom webhooks
-==================================================
+Multichannel configuration using Slack Apps
+======================================
 
-The following instructions require Splunk On-Call Enterprise and administrative privilges in Slack. To configure multichannel with Splunk On-Call you need custom outgoing webhooks. See :ref:`custom-outbound-webhooks` for more information.
+The following instructions require Splunk On-Call Enterprise and administrative privileges in Slack. To configure the multichannel setup with Splunk On-Call, you need custom outgoing webhooks. See :ref:`custom-outbound-webhooks` for more information.  
+The main advantages of this setup are that it allows more than one Splunk On-Call organization to send messages into a single Slack workspace or a single Splunk On-Call organization to send messages into multiple Slack workspaces.  This can be used in tandem with the above Slack App Configuration.
 
-.. note::  Bidirectional communication is not supported outside of the main Splunk On-Call Slack App channel. Multi-channel configuration is Splunk On-Call to Slack only.
+.. note::  Bidirectional communication is not supported via this integration method. Multi-channel configuration is Splunk On-Call to Slack only.
 
-Custom Outgoing Webhooks configuration overview
-----------------------------------------------------
-
-This configuration allows you to segregate Splunk On-Call incidents into their own separate Slack channels based on the ``routing_key`` value in Splunk On-Call Incident-specific chats in Splunk On-Call. The configuration adds the name of the user that acknowledged and resolved the incidents, and provides links in Slack that take the user directly to
-the incidents in Splunk On-Call.
-
-The following sections show how to configure the Slack App for Incoming Webhooks, create Splunk On-Call Outgoing Webhooks, and create new Rules Engine rules to help steer Splunk On-Call incidents and chats into specified Slack
-channels.
-
-Custom Configuration in Slack
+Configuration in Slack
 -------------------------------------------------
 
-Within Slack, in Slack's App Directory, add a new incoming webhook configuration.
+First, navigate to [Slack's Incoming Webhooks documentation](https://api.slack.com/messaging/webhooks) and click :guilabel:`Create your Slack app`.  When prompted on the next screen, select :guilabel:`From scratch`.  Provide a name for the app and select the Slack workspace you'd like to develop the app in.  Click :guilabel:`Create App`.
 
-When creating the new incoming webhook, select your main Splunk On-Call Slack channel as the target for the :guilabel:`Post to Channel` section under :guilabel:`Integration Settings`. This is the Channel that's declared in the Splunk On-Call Slack App integration page. 
+On the following screen, under :guilabel:`Add features and functionality`, select :guilabel:`Incoming Webhooks`.  Toggle :guilabel:`Activate Incoming Webhooks` to :guilabel:`On`.  Toward the bottom of the screen, select :guilabel:`Add New Webhook to Workspace` and choose the channel you'd like to post messages to.  Next, copy the newly-generated Webhook URL and head over to Splunk On-Call.
 
-
-As a final step before saving, copy the Webhook URL and save it for use when you set up the Splunk
-On-Call custom Outgoing Webhooks.
-
-
-Custom configuration in Splunk On-Call
+Configuration in Splunk On-Call
 -------------------------------------------------
 
-Within Splunk On-Call you'll want to leverage our custom Outgoing
-Webhooks and Rules Engine to steer Splunk On-Call incident, shift
-change, and chat activity to designated channels in Slack.
+In Splunk On-Call, navigate to :guilabel:`Integrations`, :guilabel:`Outgoing Webhooks`.  Click on :guilabel:`Add Webhook`.  On the :guilabel:`Event` dropdown menu, select :guilabel:`Incident-Triggered`.  Leave :guilabel:`Method` as :guilabel:`POST` and :guilabel:`Content Type` as :guilabel:`application/json`.  Paste the Webhook URL you'd copied into the :guilabel:`To:` box.
 
-Rules engine
-^^^^^^^^^^^^^^^^^^^^^
+In the Payload section of the webhook, paste in the following alert payload template:
 
-#. In Splunk On-Call, select :guilabel:`Settings`, :guilabel:`Alert Rules Engine`
+.. code-block:: text
+    
+    {
+    "text":"${{ALERT.entity_display_name}},${{ALERT.entity_id}},${{ALERT.state_message}}"
+    }
 
-#. Select :guilabel:`Add a Rule`. Don't check :guilabel:`Stop after this rule has been applied`.
+You're welcome to customize this payload as you see fit to include relevant fields for your use case.  The major limitation from the Slack side is that all of these fields must be included within the text field.  For detailed information on Splunk On-Call Outbound webhooks, see :ref:`custom-outbound-webhooks`.
 
-The first rule adds the slugified version of your organization name, also known as the "org slug", to all incidents. Your org slug is located at the end of the URL. For example, if the URL is ``https://portal.victorops.com/client/my-company``, then the org slug is ``my-company``.
+Optional configuration to only send a Slack message for incidents directed to a specific routing key
+-------------------------------------------------
 
-For the matching condition of this rule, specify:
+With some configuration adjustments, it’s possible to reduce the scope of the Outgoing Webhook so that it only successfully posts a message in Slack when your specified routing key is present in the Splunk On-Call incident.
+
+To start, navigate back to the Outgoing Webhook you created under :guilabel:`Integrations`, :guilabel:`Outgoing Webhooks` and edit the webhook.  Navigate to the :guilabel:`To` field and highlight the portion following the last ``/`` symbol.
+
+It should be a random string looking something like ``X8VM8fMXYoJYgEcupBWFmSD7``.
+
+Copy this random string to your clipboard and replace it with ${{ALERT.slackwebhook-field}}.  The full URL should now look something like
+
+.. code-block:: text
+    https://hooks.slack.com/services/TCUG253D8/B07G6SF7X8P/${{ALERT.slackwebhook-field}}
+
+Save your changes.
+
+Next, navigate to the Alert Rules Engine under :guilabel:`Settings`,:guilabel:`Alert Rules Engine` and click the blue Add Rule button.
+
+In the top line, specify the routing_key you’d like to have trigger the message in Slack.  Next, skip down to the :guilabel:`Transform these alert fields` section and set the slackwebhook-field to the portion of the URL you copied earlier.  The resulting rule should look similar to the below.
 
 .. code-block:: text
 
-   When entity_id matches *
+    When routing_key matches test
+    Set slackwebhook-field to new value X8VM8fMXYoJYgEcupBWFmSD7
 
-The asterisk indicates a wild card, and as such catches all incidents regardless of ``entity_id`` value.
+Click the blue Save button to save the rule.  This optional configuration is now complete.
 
-For the Transform, specify to set the literal value of ``org_slug`` to the new value of your specific org slug:
+When the routing key you’ve specified is present on an alert, this alert rule will apply and create a field called slackwebhook-field with a value of the URL portion you pasted in.  This slackwebhook-field value is then dynamically pulled in on the Outgoing Webhook, completing the URL and giving it a valid destination to send to.  For all alerts that don’t contain this routing key, the webhook will be attempted and will fail as it will be directed to a URL of literally ``https://hooks.slack.com/services/TCUG253D8/B07G6SF7X8P/${{ALERT.slackwebhook-field}}``
 
-.. code-block:: text
+Optional configuration to segment notifications to different Slack channels based on the routing key of the alert
+-------------------------------------------------
 
-   Set org_slug to new value <your_org_slug>
+This largely builds off of the previous “Optional configuration to only send a Slack message for incidents directed to a specific routing key” section.  This takes it a step further and walks through the creation of multiple Slack Apps, each with their own webhooks that direct to different spaces.
 
-As a last step, create rules to associate your Slack channels to their appropriate ``routing_keys`` in Splunk On-Call. In this example, the ``routing key`` is ``ops`` and the name of the Slack channel is ``support``:
+To start, navigate back to the "Configuration in Slack" section of this article and run through the steps again.  This will create a new Slack App with a new Incoming Webhook directed to a different Slack channel.
 
-.. code-block:: text
+Once the new Slack app and Incoming Webhook have been created, navigate back to the Alert Rules Engine in Splunk On-Call.  You will create one more alert rule that is very similar to the rule previously created in the "Optional configuration to only send a Slack message for incidents directed to a specific routing key" section.  The only differences will be the routing_key value the rule is matching on and the URL portion (which will correspond to the newly-generated Incoming Webhook URL).
 
-   When routing_key matches <Your_routing_key>
-
-For the transform, use ``alert field = slack_channel AND new value = (Slack channel name here)``, like in the following example. Don't include a sign before the channel name.
-
-.. image:: /_images/spoc/Transmog2@2x.png
-   :alt: Transform rule
-
-If you have many Slack channels and many routing keys, you need 1 rule per Splunk On-Call routing_key. Configure one Rules Engine rule per routing key to send routed alerts to specific slack channels.
-
-Outgoing webhooks
-^^^^^^^^^^^^^^^^^^^^
-
-#. Navigate to :guilabel:`Integrations`, :guilabel:`Outgoing Webhooks`.
-
-#. Create 4 different outgoing webhooks based on :guilabel:`Event Type`. All of these webhooks use the same URL you copied from Slack in the :guilabel:`To Field:`.
-
-You can copy and paste the following templated payload. To add more variables to your payload, see the :guilabel:`Available Variables` column next to the payload. As long as you have the required Rules Engine rules, no editing of the payload is required.
-
-.. image:: /_images/spoc/Slack-2-MC-5@2x.png
-   :alt: Configuring outgoing webhooks with Splunk On-Call
-
-Configure the following webhooks by selecting :guilabel:`Add Webhook` each time, then scroll down to the new window.
-
-**1) Incident Chats to Slack:**
-
--  Event: Incident-Chats
--  Method: POST
--  Content Type: application/json
--  To: Your Slack URL from step 8 of the basic setup
--  Payload:
-
-   .. code-block::
-
-      { “channel”:
-      “#\ :math:`{{ALERT.slack\_channel}}",  "username": "Splunk On-Call Chat (`\ {{CHAT.USER_ID}})”,
-      “icon_url”:
-      “https://victorops.com/assets/img/branding/logo-yellow-mark.png”,
-      “attachments”: [{ “text”:
-      “:math:`{{CHAT.TEXT}} \\n <https://portal.victorops.com/client/`\ {{ALERT.org_slug}}#/incident/:math:`{{STATE.INCIDENT\_NAME}}|\*#`\ {{STATE.INCIDENT_NAME}}\*:
-      ${{ALERT.monitoring_tool}}: ${{ALERT.entity_display_name}}>”, “color”:
-      “#4dc3ff”, “mrkdwn_in”: [“text”] }] }
-
--  Description: Send incident chats to their appropriate Slack channel
-
-**2) Critical Incidents to Slack:**
-
--  Event: Incident-Triggered
--  Method: POST
--  Content Type: application/json
--  To: Your Slack URL from step 3 of the basic setup
--  Payload:
-
-   .. code-block::
-
-      {
-      “channel”:“#\ :math:`{{ALERT.slack\_channel}}",  "username":"Splunk On-Call",  "icon\_url":"https://victorops.com/assets/img/branding/logo-yellow-mark.png",  "attachments": \[  {  "title":"CRITICAL INCIDENT TRIGGERED",  "text": "<https://portal.victorops.com/client/`\ {{ALERT.org_slug}}#/incident/:math:`{{STATE.INCIDENT\_NAME}}|\*#`\ {{STATE.INCIDENT_NAME}}\*:
-      ${{ALERT.monitoring_tool}}: ${{ALERT.entity_display_name}}>”,
-      “color”:“danger”, “mrkdwn_in”: [“text”] } ] }
-
--  Description: Send triggered incidents to their appropriate Slack
-   channel
-
-**3) Acknowledgements to Slack:**
-
--  Event: Incident-Acknowledged
--  Method: POST
--  Content Type: application/json
--  To: Your Slack URL from step 3 of the basic setup
--  Payload:
-
-   .. code-block::
-
-      { “channel”:“#${{ALERT.slack_channel}}”, “username”:“Splunk On-Call”,
-      “icon_url”:“https://victorops.com/assets/img/branding/logo-yellow-mark.png”,
-      “attachments”: [ { “title”:“ACKNOWLEDGED by
-      :math:`{{STATE.ACK\_USER}}",  "text": "<https://portal.victorops.com/client/`\ {{ALERT.org_slug}}#/incident/:math:`{{STATE.INCIDENT\_NAME}}|\*#`\ {{STATE.INCIDENT_NAME}}\*:
-      ${{ALERT.monitoring_tool}}: ${{ALERT.entity_display_name}}>”,
-      “color”:“warning”, “mrkdwn_in”: [“text”] } ] }
-
--  Description: Send incident acknowledgements to their appropriate
-   Slack channel
-
-**4) Recoveries to Slack:**
-
--  Event: Incident-Resolved
--  Method: POST
--  Content Type: application/json
--  To: Your Slack URL from step 3 of the basic setup
--  Payload:
-
-   .. code-block::
-
-      { “channel”:“#${{ALERT.slack_channel}}”, “username”:“Splunk On-Call”,
-      “icon_url”:“https://victorops.com/assets/img/branding/logo-yellow-mark.png”,
-      “attachments”: [ { “title”:“RESOLVED by
-      :math:`{{STATE.ACK\_USER}}",  "text": "<https://portal.victorops.com/client/`\ {{ALERT.org_slug}}#/incident/:math:`{{STATE.INCIDENT\_NAME}}|\*#`\ {{STATE.INCIDENT_NAME}}\*:
-      ${{ALERT.monitoring_tool}}: ${{ALERT.entity_display_name}}>”,
-      “color”:“good”, “mrkdwn_in”: [“text”] } ] }
-
--  Description: Send incident recovery events to their appropriate Slack
-   channel
-
-End result in Slack
------------------------------
-
-In Slack, each channel see incident activity based on routing key for the configured webhooks. As you can see in the
-following image there's a incoming triggered event, Acknowledged event, Resolved event, and a Chat.
-
-.. image:: /_images/spoc/Slack-2-MC-6@2x.png
-   :alt: Incoming Triggered event, Acknowledged event, Resolved event, and a Chat
+Repeat the creation of Slack Apps, Incoming Webhooks, and Alert Rules for all of the routing keys and Slack channels you'd like to integrate with.  This will allow notifications to hit different Slack channels based on the routing_key values of the alerts.
 
 
 Legacy Slack integration guides
