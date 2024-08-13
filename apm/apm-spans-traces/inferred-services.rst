@@ -152,7 +152,7 @@ To assign a service name for an inferred HTTP service, Splunk APM does the follo
 #. To ensure that the ``peer.service`` is an HTTP service the following logic is applied: 
     #. If ``peer.service`` exists, checks that 1 or more of following also exist:
         #. ``http.host``
-        #. ``http.url`` in libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower or ``full.url`` in libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher
+        #. ``http.url`` in libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower or ``url.full`` in libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher
         #. ``net.peer.name`` in libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower or ``server.address`` in libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher
 #. Looks for the service name in the following tags, in this order:
     #. ``http.host``: host name extracted as-is
