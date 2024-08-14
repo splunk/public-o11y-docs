@@ -57,7 +57,7 @@ Create a prototype architecture solution for Splunk Observability Cloud in your 
 #. Select at least 1 application or service to collect metrics from as part of your prototype. This helps you see the corresponding dashboards and detectors created when your metrics are received by Splunk Observability Cloud. For example, you can use OpenTelemetry receivers to include services like an Nginx server, an Apache web server, or a database such as MySQL. 
 
    See :ref:`nginx`, :ref:`apache-httpserver`, or :ref:`mysql`.
-#. Get familiar with the Splunk Observability Cloud receivers for various applications and services. Each receiver has corresponding dashboards and detectors that are automatically created for each integration after the receiver reaches over 50,000 data points. 
+#. Get familiar with Splunk Observability Cloud receivers for various applications and services. Each receiver has corresponding dashboards and detectors that are automatically created for each integration after the receiver reaches over 50,000 data points. 
 
    See :ref:`monitor-data-sources`, :ref:`built-in-dashboards`, and :ref:`autodetect`.
 

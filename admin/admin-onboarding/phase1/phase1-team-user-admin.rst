@@ -36,7 +36,7 @@ Create a Splunk support request to request a custom URL for your organization, f
 Decide how to manage user access
 ========================================
 
-Choose from these 3 options for managing user access:
+Select from these 3 options for managing user access:
 
 #. Use Splunk Cloud Platform as the unified identity provider. See :ref:`unified-id-unified-identity` for more information.
 #. Use an external Lightweight Directory Access Protocol (LDAP) and control access through Single Sign-On (SSO). See :ref:`sso-label` for more information.
