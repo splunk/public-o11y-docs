@@ -24,7 +24,7 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     Troubleshooting <troubleshooting.rst>
     Migrate from the Smart Agent to the Collector <smart-agent/smart-agent-migration-to-otel-collector.rst>
     
-Use the Splunk Distribution of the OpenTelemetry Collector to receive, process, and export metric, trace, and log data and metadata for Splunk Observability Cloud.
+Use the Splunk Distribution of the OpenTelemetry Collector to ingest, process, and export metric, trace, and log data and metadata in Splunk Observability Cloud.
 
 Learn more about the Splunk Observability Cloud data model at :ref:`data-model`.
 
@@ -42,7 +42,7 @@ Learn more about the Splunk Observability Cloud data model at :ref:`data-model`.
     <h3>Understand the Collector distributions<a name="collector-distros" class="headerlink" href="#collector-distros" title="Permalink to this headline">¶</a></h3>
   </embed>
     
-The OpenTelemetry Collector is an open-source project that has a core version and a contributions (Contrib) version. The core version provides receivers, processors, and exporters for general use. The Contrib version provides receivers, processors, and exporters for specific vendors and use cases. 
+The OpenTelemetry Collector is an open-source project that has a core version and contribution (Contrib) versions. The core version provides receivers, processors, and exporters for general use. The Contrib version provides receivers, processors, and exporters for specific vendors and use cases. 
 
 The Splunk Distribution of the OpenTelemetry Collector is a distribution of the OpenTelemetry Collector. It sits on top of the Contrib version, and it bundles components from OpenTelemetry Core, OpenTelemetry Contrib, and other sources to provide data collection for multiple source platforms.  
 
@@ -80,7 +80,7 @@ For more information on how to configure data pipelines, :ref:`otel-data-process
 .. raw:: html
 
   <embed>
-    <h3>Data flow in the Splunk OpenTelemetry Collector for Kubernetes<a name="splunk-distro-data-flow-kubernetes" class="headerlink" href="#splunk-distro-data-flow-kubernetes" title="Permalink to this headline">¶</a></h3>
+    <h3>Data flow in the Splunk Collector for Kubernetes<a name="splunk-distro-data-flow-kubernetes" class="headerlink" href="#splunk-distro-data-flow-kubernetes" title="Permalink to this headline">¶</a></h3>
   </embed>
 
 The Splunk Distribution of the OpenTelemetry Collector for Kubernetes ingests, manages and exports data as shown in this diagram: 
@@ -113,7 +113,7 @@ The Splunk Distribution of the OpenTelemetry Collector for Kubernetes ingests, m
 .. raw:: html
 
   <embed>
-    <h3>Data flow in the Splunk OpenTelemetry Collector for Linux and Windows<a name="splunk-distro-data-flow-linux-windows" class="headerlink" href="#splunk-distro-data-flow-linux-windows" title="Permalink to this headline">¶</a></h3>
+    <h3>Data flow in the Splunk Collector for Linux and Windows<a name="splunk-distro-data-flow-linux-windows" class="headerlink" href="#splunk-distro-data-flow-linux-windows" title="Permalink to this headline">¶</a></h3>
   </embed>
 
 The Splunk Distribution of the OpenTelemetry Collector for Linux and Windows ingests, manages and exports data as shown in this diagram: 
@@ -132,8 +132,8 @@ The Splunk Distribution of the OpenTelemetry Collector for Linux and Windows ing
     extensions
     end
 
-    Infrastructure -- "metrics, logs" --> receivers
-    B[Back-end services] -- "traces, metrics, logs" --> receivers
+    Infrastructure -- "metrics" --> receivers
+    B[Back-end services] -- "traces, metrics" --> receivers
     C[Front-end experiences] -- "traces" --> S[Splunk Observability Cloud]
 
     receivers --> processors
@@ -141,9 +141,6 @@ The Splunk Distribution of the OpenTelemetry Collector for Linux and Windows ing
 
     exporters --> S[Splunk Observability Cloud]
     exporters --> P[Splunk Cloud Platform]
-    exporters --> Q[Universal Forwarder] 
-
-    Q[Universal Forwarder] --> U[Splunk Enterprise]
 
 .. raw:: html
 
@@ -163,10 +160,10 @@ To collect logs with the Splunk Distribution of the OpenTelemetry Collector:
 .. raw:: html
 
   <embed>
-    <h3>Use the Collector to send data to Splunk Enterprise<a name="otel-intro-enterprise" class="headerlink" href="#otel-intro-enterprise" title="Permalink to this headline">¶</a></h3>
+    <h3>Send data to Splunk Enterprise<a name="otel-intro-enterprise" class="headerlink" href="#otel-intro-enterprise" title="Permalink to this headline">¶</a></h3>
   </embed>
 
-If you want to send data to Splunk Enterprise using the Collector, the following applies:
+If you want to send data to Splunk Enterprise using the Collector:
 
 * For Kubernetes environments, use the Collector to send metrics and logs to Splunk Enterprise. Trace collection is not supported.
 * For Linux and Windows environments (physical hosts and virtual machines), use the Universal Forwarder to send metrics and logs to the Splunk platform. See more at :ref:`collector-with-the-uf`. Alternatively, you can use the Collector to forward data to the Splunk platform, but this option is not supported at the moment.
@@ -179,7 +176,7 @@ If you want to send data to Splunk Enterprise using the Collector, the following
     <h2>Resources and other requirements<a name="otel-intro-resources" class="headerlink" href="#otel-intro-resources" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-The following table describes everything you need to start using the Collector:
+To start using the Collector gather the following resources:
 
 .. list-table::
   :widths: 25 75
@@ -204,12 +201,8 @@ See also :ref:`otel-requirements` for information on:
 .. raw:: html
 
   <embed>
-    <h2>Install and configure the Splunk Distribution of the Collector <a name="otel-intro-install" class="headerlink" href="#otel-intro-install" title="Permalink to this headline">¶</a></h2>
+    <h2>Install and configure the Splunk Distribution of the OpenTelemetry Collector <a name="otel-intro-install" class="headerlink" href="#otel-intro-install" title="Permalink to this headline">¶</a></h2>
   </embed>
-
-.. note::
-
-  Check :ref:`migrate-from-sa-to-otel` to learn how to migrate your data from the SignalFx Smart Agent (deprecated) to the Collector.
 
 .. raw:: html
 
