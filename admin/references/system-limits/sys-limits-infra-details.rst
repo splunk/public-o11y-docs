@@ -490,6 +490,24 @@ Container burst/overage limit
    * :strong:`Customer impact`: If you exceed this limit, Infrastructure Monitoring drops data points from new containers but keeps
      accepting data points for existing containers.
 
+.. _high-resolution-custom-metrics-entitlement:
+
+High resolution custom metrics entitlement
+================================================================================
+
+   * :strong:`Default limit value`: Set by your contract entitlement
+   * :strong:`Notes`: Number of high resolution metrics allowed in your contract
+   * :strong:`Customer impact`: Splunk charges an overage of 1.5 times the normal price for usage that exceeds your contractual entitlement.
+
+.. _high-resolution-custom-metrics-burstoverage-limit:
+
+High resolution custom metrics burst/overage limit
+================================================================================
+
+   * :strong:`Default limit value`: Multiples of entitlement
+   * :strong:`Notes`: This limit is to protect the SaaS platform. It's typically a multiple of your contractual limit. For example, if you purchase 500 hosts, Infrastructure Monitoring might set limit to 800. The multiple decreases as your contractual limit increases.
+   * :strong:`Customer impact`: The system rejects MTS creations for high resolution metrics that exceed the limit.
+
 .. _bundled-mts-limit:
 
 Bundled MTS limit
