@@ -170,7 +170,8 @@ Follow these steps:
 #. Copy this random string to your clipboard and replace it with ${{ALERT.slackwebhook-field}}.  The full URL should now look something like
 
   .. code-block:: text
-      https://hooks.slack.com/services/TCUG253D8/B07G6SF7X8P/${{ALERT.slackwebhook-field}}
+      
+    https://hooks.slack.com/services/TCUG253D8/B07G6SF7X8P/${{ALERT.slackwebhook-field}}
 
 #. Save your changes and navigate to the Alert Rules Engine under :guilabel:`Settings`,:guilabel:`Alert Rules Engine`. Select the blue Add Rule button.
 #. In the top line, specify the routing_key you’d like to have trigger the message in Slack.  Next, skip down to the :guilabel:`Transform these alert fields` section and set the slackwebhook-field to the portion of the URL you copied earlier.  The resulting rule should look similar to the below.
