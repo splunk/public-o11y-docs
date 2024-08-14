@@ -75,6 +75,16 @@ See a comparison of the connection options at :ref:`aws-compare-connect`, and ch
 
 There are constraints to consider in terms of high data volume and filtering.
 
+.. _aws-integration-amount:
+
+.. raw:: html
+
+  <embed>
+    <h4>Amount of installed AWS integrations <a name="aws-integration-amount" class="headerlink" href="#aaws-integration-amount" title="Permalink to this headline">¶</a></h4>
+  </embed>
+
+Splunk Observability Cloud doesn't limit the amount of AWS service integrations you can install. However, if you're using over 100 AWS integrations, contact :ref:`support`.
+
 .. _aws-data-limits:
 
 .. raw:: html
