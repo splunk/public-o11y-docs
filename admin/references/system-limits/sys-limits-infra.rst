@@ -27,9 +27,9 @@ The tables in this document summarize limits for these product areas:
 * :ref:`charts-detectors-and-signalflow-limits`
 * :ref:`data-ingestion-limits`
 * :ref:`mts-metadata-limits`
+* :ref:`time-series-limits`
 * :ref:`subscription-limits`
 * :ref:`web-app-limits`
-* :ref:`time-series-limits`
 
 For each limit, Splunk provides the following:
 
