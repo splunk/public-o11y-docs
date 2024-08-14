@@ -92,7 +92,7 @@ The Splunk Distribution of the OpenTelemetry Collector for Kubernetes ingests, m
     accTitle: Splunk Distribution of the OpenTelemetry Collector for Kubernetes diagram.
     accDescr: The Splunk Distribution of OpenTelemetry Collector contains receivers, processors, exporters, and extensions. Receivers gather metrics and logs from infrastructure, and metrics, traces, and logs from back-end applications. Receivers send data to processors, and processors send data to exporters. Exporters send data to Splunk Observability Cloud and Splunk Cloud Platform. Front-end experiences send data directly to Splunk Observability Cloud through RUM instrumentation.
 
-    subgraph "\nSplunk Distribution of the OpenTelemetry Collector for Kubernetes"
+    subgraph "\nSplunk OpenTelemetry Collector for Kubernetes"
     receivers
     processors
     exporters
@@ -125,7 +125,7 @@ The Splunk Distribution of the OpenTelemetry Collector for Linux and Windows ing
     accTitle: Splunk Distribution of the OpenTelemetry Collector diagram.
     accDescr: The Splunk Distribution of the OpenTelemetry Collector contains receivers, processors, exporters, and extensions. Receivers gather metrics and logs from infrastructure, and metrics, traces, and logs from back-end applications. Receivers send data to processors, and processors send data to exporters. Exporters send data to Splunk Observability Cloud and Splunk Cloud Platform. Front-end experiences send data directly to Splunk Observability Cloud through RUM instrumentation.
 
-    subgraph "\nSplunk Distribution of the OpenTelemetry Collector"
+    subgraph "\nSplunk OpenTelemetry Collector for Linux and Windows"
     receivers
     processors
     exporters
