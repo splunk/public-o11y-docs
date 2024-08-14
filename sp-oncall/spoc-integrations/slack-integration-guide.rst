@@ -117,11 +117,11 @@ For further reference on attaching content and links to Slack using a webhook, s
 Multichannel configuration using Slack Apps
 ==========================================================
 
-The multichannel condifguratiob allows you to set up more than one Splunk On-Call organization to send messages into a single Slack workspace, or a single Splunk On-Call organization to send messages into multiple Slack workspaces. You can use this config in tandem with the above Slack App configuration.
+The multichannel configuration allows you to set up more than one Splunk On-Call organization to send messages into a single Slack workspace, or a single Splunk On-Call organization to send messages into multiple Slack workspaces. You can use this config in tandem with the above Slack App configuration.
 
-.. note::  Bidirectional communication is not supported via this integration method. Multichannel configuration is for Splunk On-Call to Slack only.
+.. note:: This integration doesn't support bidirectional communication. Multichannel configuration is for Splunk On-Call to Slack only.
 
-To configure the multichannel setup with Splunk On-Call, you need:
+To configure the multichannel set-up with Splunk On-Call, you need:
 
 * Splunk On-Call Enterprise and administrative privileges in Slack  
 * Custom outgoing webhooks. See :ref:`custom-outbound-webhooks` for more information  
@@ -165,23 +165,23 @@ With some configuration adjustments, you can reduce the scope of the Outgoing We
 
 Follow these steps:
 
-#. Navigate back to the Outgoing Webhook you created under :guilabel:`Integrations`, :guilabel:`Outgoing Webhooks` and edit the webhook.  
-#. Navigate to the :guilabel:`To` field and highlight the portion following the last ``/`` symbol. It should be a random string looking something like ``X8VM8fMXYoJYgEcupBWFmSD7``.
-#. Copy this random string to your clipboard and replace it with ${{ALERT.slackwebhook-field}}.  The full URL should now look something like
+1. Navigate back to the Outgoing Webhook you created under :guilabel:`Integrations`, :guilabel:`Outgoing Webhooks` and edit the webhook.  
+2. Navigate to the :guilabel:`To` field and highlight the portion following the last ``/`` symbol. It should be a random string looking something like ``X8VM8fMXYoJYgEcupBWFmSD7``.
+3. Copy this random string to your clipboard and replace it with ${{ALERT.slackwebhook-field}}.  The full URL should now look something like
 
   .. code-block:: text
       
     https://hooks.slack.com/services/TCUG253D8/B07G6SF7X8P/${{ALERT.slackwebhook-field}}
 
-#. Save your changes and navigate to the Alert Rules Engine under :guilabel:`Settings`,:guilabel:`Alert Rules Engine`. Select the blue Add Rule button.
-#. In the top line, specify the routing_key you’d like to have trigger the message in Slack.  Next, skip down to the :guilabel:`Transform these alert fields` section and set the slackwebhook-field to the portion of the URL you copied earlier.  The resulting rule should look similar to the below.
+4. Save your changes and navigate to the Alert Rules Engine under :guilabel:`Settings`,:guilabel:`Alert Rules Engine`. Select the blue Add Rule button.
+5. In the top line, specify the routing_key you’d like to have trigger the message in Slack.  Next, skip down to the :guilabel:`Transform these alert fields` section and set the slackwebhook-field to the portion of the URL you copied earlier.  The resulting rule should look similar to the below.
 
   .. code-block:: text
 
       When routing_key matches test
       Set slackwebhook-field to new value X8VM8fMXYoJYgEcupBWFmSD7
 
-#. Select the blue Save button to save the rule. This optional configuration is now complete.
+6. Select the blue save button to save the rule. This optional configuration is now complete.
 
 When the routing key you’ve specified is present on an alert, this alert rule will apply and create a field called slackwebhook-field with a value of the URL portion you pasted in. This slackwebhook-field value is then dynamically pulled in on the Outgoing Webhook, completing the URL and giving it a valid destination to send to. For all alerts that don’t contain this routing key, the webhook will be attempted and will fail as it will be directed to ``https://hooks.slack.com/services/TCUG253D8/B07G6SF7X8P/${{ALERT.slackwebhook-field}}``.
 
@@ -194,7 +194,7 @@ Follow these steps:
 
 #. Navigate back to the "Configuration in Slack" section of this article and run through the steps again. This will create a new Slack App with a new Incoming Webhook directed to a different Slack channel.
 #. After the new Slack app and Incoming Webhook have been created, navigate back to the Alert Rules Engine in Splunk On-Call.  
-#. Create one more alert rule that is very similar to the rule previously created in the "Optional configuration to only send a Slack message for incidents directed to a specific routing key" section. The only differences will be the ``routing_key`` value the rule is matching on and the URL portion (which will correspond to the newly-generated Incoming Webhook URL).
+#. Create one more alert rule that is very similar to the rule previously created in the "Optional configuration to only send a Slack message for incidents directed to a specific routing key" section. The only differences will be the ``routing_key`` value the rule is matching on and the URL portion, which will correspond to the newly-generated Incoming Webhook URL.
 
 Repeat the creation of Slack Apps, Incoming Webhooks, and Alert Rules for all of the routing keys and Slack channels you'd like to integrate with. This will allow notifications to hit different Slack channels based on the ``routing_key`` values of the alerts.
 
